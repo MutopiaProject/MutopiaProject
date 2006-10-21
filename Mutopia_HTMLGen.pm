@@ -286,8 +286,9 @@ sub ALL_PIECES {
   chomp (my $maintaineremail = <CACHE>);
   chomp (my $maintainerweb = <CACHE>);
   chomp (my $extrainfo = <CACHE>);
-  chomp (my $collections = <CACHE>);
   chomp (my $lilypondversion = <CACHE>);
+  chomp (my $collections = <CACHE>);
+  chomp (my $printurl = <CACHE>);
   
   if ($opus eq "") { $opus = "&nbsp;" }
   

@@ -69,6 +69,7 @@ chomp ($maintainerweb = <CACHE>);
 chomp ($moreinfo = <CACHE>);
 chomp ($lilypondversion = <CACHE>);
 chomp ($collections = <CACHE>);
+chomp ($printurl = <CACHE>);
 close(CACHE);
 
 if ($problem == 0) {
@@ -199,6 +200,9 @@ print "height=\"$pngheight\" width=\"$pngwidth\" border=\"0\" ";
 print "alt=\"Music preview\" />\n";
 
 print "<br /><br />\n\n";
+
+# Buy sheet music!
+if ($printurl ne "") { print "<p><b>New!</b> <a href=\"$printurl\">Click to buy printed sheet music of this piece</a></p>"; }
 
 # Main table:
 

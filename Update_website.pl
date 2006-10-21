@@ -91,10 +91,19 @@ sub makeCache {
   or die "cannot open datafiles/collections.dat: $!";
  my @collections;
  my $noOfCollections;
-  for ($noOfCollections = 0; !(eof COLLECTIONS); $noOfCollections++) {
+ for ($noOfCollections = 0; !(eof COLLECTIONS); $noOfCollections++) {
   chomp($collections[$noOfCollections] = <COLLECTIONS>);
  }
  close (COLLECTIONS);
+
+ open (PRINTURLS, '<:utf8', 'datafiles/printurls.dat')
+  or die "cannot open datafiles/printurls.dat: $!";
+ my @printurls;
+ my $noOfPrintUrls;
+ for ($noOfPrintUrls = 0; !(eof PRINTURLS); $noOfPrintUrls++) {
+  chomp($printurls[$noOfPrintUrls] = <PRINTURLS>);
+ }
+ close (PRINTURLS);
  
  open TEMPCACHE, ">:utf8", "datafiles/tempmusiccache.dat"
   or die "cannot open >datafiles/tempmusiccache.dat: $!";
@@ -103,6 +112,7 @@ sub makeCache {
   my ($opus, $name) = m|^(?:\./)?(.*)/([^/]+)/[^/]+.rdf$| or die "invalid piece: $_";
   my @data = Mutopia_Archive::RDFtoCACHE %{ $RDFData{$_} };
   my $allCollections = "";
+  my $printURL = "";
   
   # find the id number of each piece
   my $date;
@@ -121,10 +131,18 @@ sub makeCache {
    }
   }
   
+  # does the piece have a print URL?
+  for (my $loop = 0; $loop < $noOfPrintUrls; $loop++) {
+   if ($printurls[$loop] =~ /^$id:/) {
+    $printURL = substr($printurls[$loop],index($printurls[$loop],":") + 1);
+   }
+  }
+  
   # output to cache file
   print TEMPCACHE "**********\n$id\n$opus/\n$name\n";	
   print TEMPCACHE "$_\n" for @data;
-  print TEMPCACHE substr($allCollections, 0, -1) . "\n";
+  print TEMPCACHE substr($allCollections, 0, -1) . "\n"; 
+  print TEMPCACHE $printURL . "\n";
  }
  close (TEMPCACHE);
     
@@ -154,7 +172,7 @@ sub makeCache {
 	 
 	 $offsets[$piecenumber] = $id . ":" . $offset;
 	 
-	 for (my $i = 0; $i < 29; $i++) { my $null = <TEMPCACHE> } 
+	 for (my $i = 0; $i < 30; $i++) { my $null = <TEMPCACHE> } 
 	 $piecenumber++;
 	} until (eof TEMPCACHE);
    	

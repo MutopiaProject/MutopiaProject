@@ -105,6 +105,7 @@ until (eof CACHE) {
  chomp ($extrainfo = <CACHE>);
  chomp ($lilypondversion = <CACHE>);
  chomp ($collections = <CACHE>);
+ chomp ($printurl = <CACHE>);
  
  # Does the composer match?
  if ( ($FORM{Composer} eq "") or ($midrif =~ /^$FORM{Composer}\//) ) {
