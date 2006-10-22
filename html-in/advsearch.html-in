@@ -10,7 +10,7 @@
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 </head>
 <!-- http://www.cs.helsinki.fi/group/cbrahms/demoengine/ -->
-<body background="bg.jpg" style="background-attachment: fixed;">
+<body background="images/bg.jpg" style="background-attachment: fixed;">
 
 [[ HEAD("advsearch") ]]
 
