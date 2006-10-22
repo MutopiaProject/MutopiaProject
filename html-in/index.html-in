@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Welcome to the Mutopia Project</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+<body background="bg.jpg" style="background-attachment: fixed;">
+
+[[ HEAD("index") ]]
+[[ INDEXHEAD() ]]
+
+<h3 align="center">What is the Mutopia Project?</h3>
+
+<p>Welcome to the Mutopia Project ... a place where music is free for everyone! Download it, print it out, and share it.  Mutopia is similar in spirit to <a href="http://gutenberg.org">Project Gutenberg</a>, but consists of free sheet music.</p>
+
+<p>Broadly speaking, copyright on a creative work expires 70 years after the creator's death.  This means that the works of Bach, Mozart, Beethoven and many other composers are in the public domain - in principle, they may be copied and performed without restriction.</p>
+
+<p>However, you may not normally copy or perform a sheet music edition which you can buy, because an editor also has a copyright on the edition, and an arranger may have, too.  The copyright on the edition only expires when all these people have been dead for 70 years.  Additional restrictions in the USA mean that only works published there prior to 1923 are in the public domain.  Only sufficiently old editions fulfil these criteria, and are therefore in the public domain.</p>
+
+<p>But for a lot of classical music, editions do exist which are old enough, especially in libraries and private collections.  The quality of the editorial work is generally as high as in recent editions, if not higher.  Several composers were also notable as editors.  (For example, Brahms's editions of Mozart works are now in the public domain)</p>
+
+<p>The idea behind the Mutopia Project is that volunteers typeset these editions on a computer, using the GNU Lilypond typesetting software, and make them freely available.</p>
+
+<p>The Mutopia Project also contains a growing number of modern editions, arrangements and new music.  The respective editors, arrangers and composers have chosen to make these works freely available.  All may be freely downloaded, printed, copied, distributed, modified, performed or recorded.</p>
+
+<h3>How is the music made available?</h3>
+
+<p>All music is available as Postscript (.ps) and PDF (.pdf) files, for both A4 and Letter paper sizes, as well as Lilypond's own file format (.ly).  The first two are easy to print out (see the <a href="help.html">help page</a> for more information on how to download and print out the scores), and the third allows you to reformat scores for other page sizes, and to see how the score was put together in the first place - perhaps you'd like to contribute to Mutopia yourself!</p>
+
+<p>Audio previews of the music are available as MIDI (.mid) files; these are computer generated but give a rough idea of what the music sounds like.</p>
+
+<h3>Newsletter mailing list</h3>
+
+<p>To join the Mutopia Project newsletter mailing list, visit the <a href="http://lists.blackcatnetworks.co.uk/cgi-bin/mailman/listinfo/mutopia-announce">Mutopia-Announce information page</a>. You will receive regular e-mails, usually once a month, containing information on all the most recent submissions, and any other news from Mutopia. <a href="newsletters.html">The current (and past) newsletters</a> are available to browse online.</p>
+
+<h4>Discussion mailing list</h4>
+
+<p>A mailing list to discuss topics relating to the Mutopia Archive is also in operation. Anyone who joins can contribute questions and comments about Mutopia. To join, visit the <a href="http://lists.blackcatnetworks.co.uk/cgi-bin/mailman/listinfo/mutopia-discuss">Mutopia-Discuss information page</a>.</p>
+
+<h3>Other information</h3>
+
+<p>The Mutopia Project website is available on the following servers:</p>
+
+<ul>
+<li>In Canada at <a href="http://www.MutopiaProject.org/">http://www.MutopiaProject.org/</a> (the main server)</li>
+<li>In the USA at <a href="http://ibiblio.org/mutopia/">http://ibiblio.org/mutopia/</a></li>
+<li>In Australia at <a href="http://mutopia.planetmirror.com/">http://mutopia.planetmirror.com/</a></li>
+<li>In Europe (Austria) at <a href="http://gd.tuwien.ac.at/art/Mutopia/">http://gd.tuwien.ac.at/art/Mutopia/</a></li>
+<li>In Europe (Portugal) at <a href="http://eremita.di.uminho.pt/mutopia/">http://eremita.di.uminho.pt/mutopia/</a></li>
+</ul>
+
+<p>The archive is also available via ftp:</p>
+
+<ul>
+<li>In the USA at <a href="ftp://ibiblio.org/pub/multimedia/mutopia/">ftp://ibiblio.org/pub/multimedia/mutopia/</a></li>
+</ul>
+
+<h4>Other sheet music sites</h4>
+
+<ul>
+<li>The Choral Public Domain Library: <a href="http://www.cpdl.org/">http://www.cpdl.org/</a> - another open source sheet music site.</li>
+<li>Project Gutenberg's music section: <a href="http://www.gutenberg.org/wiki/Gutenberg:The_Sheet_Music_Project">http://www.gutenberg.org/wiki/Gutenberg:The_Sheet_Music_Project</a></li>
+<li>The Werner Icking Music Archive: <a href="http://icking-music-archive.org/">http://icking-music-archive.org/</a></li>
+</ul>
+
+<p>There are many other sites offering sheet music for download. More comprehensive lists are available at:</p>
+
+<ul>
+<li>The sheet music download section of the Open Directory: <a href="http://dmoz.org/Arts/Music/Resources/Downloadable_Music_Sheets/">http://dmoz.org/Arts/Music/Resources/Downloadable_Music_Sheets/</a></li>
+<li>The links page of the Werner Icking Music Archive: <a href="http://icking-music-archive.org/oth_mus_archives.html">http://icking-music-archive.org/oth_mus_archives.html</a></li>
+</ul>
+
+<h4>Acknowledgements</h4>
+
+<p>All music on this site has been typeset using GNU Lilypond: <a href="http://www.lilypond.org/">http://www.lilypond.org/</a>.</p>
+
+<p>Many thanks to Eric Praetzel at the <a href="http://www.uwaterloo.ca">University of Waterloo</a> for the loan of the web and ftp space on which the Mutopia Project's website and music archive is stored.</p>
+
+<p>Thanks also to all the people who have typeset music so that it can be freely available.  Credits to individual typesetters appear with each piece of music on Mutopia.</p>
+
+<h3>Contact Details</h3>
+
+<p>The team that maintains the Mutopia Project archive currently comprises:</p>
+<ul>
+<li>Chris Sawer &lt;<b>chris (at) MutopiaProject.org</b>&gt;</li>
+<li>David Chan &lt;<b>david (at) MutopiaProject.org</b>&gt;</li>
+</ul>
+
+<p>Questions and comments about legal issues should be addressed to &lt;<b>legal (at) MutopiaProject.org</b>&gt;</p>
+<p>Other general comments and enquiries are welcome to &lt;<b>enquiries (at) MutopiaProject.org</b>&gt;</p>
+<p>Sie könnten uns auf Deutsch schreiben: &lt;<b>deutsch (at) MutopiaProject.org</b>&gt;</p>
+<p>Vous pouvez nous écrire en français: &lt;<b>francais (at) MutopiaProject.org</b>&gt;</p>
+<p>Gewch chi ysgrifennu aton ni yn Gymraeg: &lt;<b>cymraeg (at) MutopiaProject.org</b>&gt;</p>
+
+<p>In the addresses above, <i>(at)</i> should be replaced by the at sign @. If you do not get a reply to your e-mail, particularly if you sent it to the old address, please send it again, as e-mails sometimes get lost in the flood of spam.</p>
+
+[[ TAIL("index") ]]
+
+</body>
+</html>
+
+

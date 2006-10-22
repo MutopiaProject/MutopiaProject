@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+
+<head>
+<title>Mutopia: Search for music in the archive</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+<!-- http://www.cs.helsinki.fi/group/cbrahms/demoengine/ -->
+<body background="bg.jpg" style="background-attachment: fixed;">
+
+[[ HEAD("advsearch") ]]
+
+<p><b>Select the appropriate options and then click on "Display Music Table".</b></p>
+
+<form action="cgibin/make-table.cgi" method="get">
+<ul>
+<li>Options which change the <i>way</i> the music is displayed:
+<ul>
+<li><input type="checkbox" name="preview" value="1" /> Include preview images in page</li>
+</ul>
+</li>
+
+<li>Options which narrow down the range of music which is displayed:
+<ul>
+<li>Search for <input type="text" name="searchingfor" size="30" /></li>
+<li>Display music by <select name="Composer">
+<option value="">all composers</option>
+[[ COMPOSER_OPTIONS() ]]
+</select></li>
+<li>for <select name="Instrument">
+<option value="">any instrument</option>
+[[ INSTRUMENT_OPTIONS() ]]
+</select></li>
+<li>style: <select name="Style">
+<option value="">any</option>
+[[ STYLE_OPTIONS() ]]
+</select></li>
+</ul></li>
+<li><input type="checkbox" name="recent" value="1" /> Display only music that's been added or updated in the last <input type="text" name="timelength" size="3" value="1" /> <select name="timeunit">
+<option value="week">week(s)</option>
+<option value="day">day(s)</option>
+</select></li>
+
+<li><input type="checkbox" name="lilyv" value="1" /> Display only music created with LilyPond version <input type="text" name="lilyversion" size="6" /> (can be a major version, eg. '2', or a more specific version, eg. '2.0' or '2.0.1')</li>
+
+</ul>
+<center><input type="submit" value="Display Music Table" /></center>
+</form>
+
+[[ TAIL("advsearch") ]]
+
+</body>
+</html> 

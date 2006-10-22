@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Mutopia: Browse by Instrument, Composer or Style</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+
+<body background="bg.jpg" style="background-attachment: fixed;">
+
+[[ HEAD("browse") ]]
+
+<p>Some pieces in the archive are organised into collections, a list of which is immediately below. Click on any of the collection titles to display all of the music in that collection.</p>
+
+<p>Below the collections are lists of instruments, composers and musical styles. Click on any of these  
+to display all the relevant music in the archive. The numbers in square brackets
+ indicate how many pieces of music are available in each section.</p>
+
+[[ BROWSE_COLLECTIONS() ]]
+
+[[ BREAK() ]]
+
+<a name="byComposer" />
+<h2 align="center">Browse by Composer</h2>
+[[ BROWSE_BY_COMPOSER() ]]
+
+</td><td valign="top">
+
+<a name="byInstrument" />
+<h2 align="center">Browse by Instrument</h2>
+[[ BROWSE_BY_INSTRUMENT() ]]
+
+</td><td valign="top">
+
+<a name="byStyle" />
+<h2 align="center">Browse by Style</h2>
+[[ BROWSE_BY_STYLE() ]]
+
+[[ TAIL("browse") ]]
+</body>
+</html>

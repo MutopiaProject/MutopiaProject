@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Mutopia: Gunzip information</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+<body background="bg.jpg" style="background-attachment: fixed;">
+
+[[ HEAD("gunzip") ]]
+
+<h2 align="center">Gunzip</h2>
+
+<p>Gunzip is a program for uncompressing gzipped files, which is the method of compression used for PostScript files on Mutopia. It is almost certainly already installed if you have a Unix-like system (eg. Linux), but if you have Windows then uncompressing the files may be slightly harder.</p>
+
+<p>If you have an uncompression package already installed on your system, eg. WinZip, then this may well be able to cope with gzipped files, so just load the file into this program and save out the uncompressed file. If not, however, then a version of gunzip is available <a href="gunzip.exe">here</a> for Windows 95 onwards. Once you have downloaded the program, you need to copy it into the same directory as the files you've downloaded from Mutopia (which should end in .gz) and open a command prompt [DOS] window. In this window, change to the directory containing the files you've downloaded and the gunzip.exe program (using the "cd" command), and then invoke the program using the command:</p>
+
+<p><code>gunzip compressedfile.gz</code></p>
+
+<p>Where "compressedfile.gz" is the name of the file you wish to uncompress.</p>
+
+<p>eg. <code>gunzip fur-elise-a4.ps.gz</code> will uncompress the file "fur-elise-a4.ps.gz" and produce the file "fur-elise-a4.ps" in the same directory.</p>
+
+<p>The version of gunzip on this page was ported to Win32 by K. M. Syring, who has also ported many other common unix utilities - see <a href="http://unxutils.sourceforge.net/">http://unxutils.sourceforge.net/</a> for more information.</p>
+
+[[ TAIL("gunzip") ]]
+</body>
+</html>
