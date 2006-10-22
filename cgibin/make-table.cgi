@@ -140,7 +140,12 @@ until (eof CACHE) {
     if ($maj != $1) { $go = 0; }
    } # else garbage in this field
   }
-
+  
+  # Check that the piece has a printed purchase option
+  if (($go == 1) and ($FORM{printav} == 1)) {
+    if ($printurl eq "") { $go = 0; }
+  }
+  
   # Munge for harp / harpsichord problem
   if (($go == 1) and ($FORM{Instrument} eq "Harp")
   and ($instrument =~ /Harpsichord/))

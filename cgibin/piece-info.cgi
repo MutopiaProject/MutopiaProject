@@ -226,7 +226,7 @@ if ($printurlurl ne "")
  print "<td><a href=\"$printurlurl\">Buy printed sheet music of this piece</a> from $printurlshop.</td>\n";
  if ($printurlimg ne "")
  {
-  print "<td><img src=\"$printurlimg\" width=\"$printurlimgwidth\" height=\"$printurlimgheight\" /></td>\n";
+  print "<td><img src=\"$printurlimg\" width=\"$printurlimgwidth\" height=\"$printurlimgheight\" alt=\"Shop logo\" /></td>\n";
  }
  print "</tr></table>\n";
  print "</td></tr></table>\n\n";

@@ -47,6 +47,7 @@
 
 <li><input type="checkbox" name="lilyv" value="1" /> Display only music created with LilyPond version <input type="text" name="lilyversion" size="6" /> (can be a major version, eg. '2', or a more specific version, eg. '2.0' or '2.0.1')</li>
 
+<li><input type="checkbox" name="printav" value="1" /> Display only music which is available to purchase as a printed copy</li>
 </ul>
 <center><input type="submit" value="Display Music Table" /></center>
 </form>
