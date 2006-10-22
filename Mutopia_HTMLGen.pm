@@ -1,9 +1,6 @@
 #!/usr/bin/perl -w
 #
 # Mutopia_HTMLGen.pm
-# Version 0.0.22
-# Last updated 20/Nov/2004
-#
 # Subroutines to help with generating HTML pages from html-in/* files.
 
 package Mutopia_HTMLGen;
@@ -313,7 +310,7 @@ sub HEAD($) {
        bgcolor="#edfaff" align="center" summary="Mutopia Project logo and
        links to mirrors"><tr>
 
-    <td align="center"><img src="logo-small.png" alt="Mutopia Project Logo"
+    <td align="center"><img src="images/logo-small.png" alt="Mutopia Project Logo"
        width="186" height="61" /></td>
     <td align="center"><b>All music in the Mutopia Project is free to
     download, print out, perform and distribute. There are now <i>
@@ -321,15 +318,15 @@ sub HEAD($) {
     <td align="center">
     <table border="0" cellpadding="0" cellspacing="2">
     <tr><td align="center"><a href="http://www.MutopiaProject.org/">http://www.MutopiaProject.org/</a>
-    </td><td align="center"><a href="http://www.MutopiaProject.org/"><img src="can.png" width="32" height="16" border="0" alt="Use server in Canada" /></a></td></tr>
+    </td><td align="center"><a href="http://www.MutopiaProject.org/"><img src="images/can.png" width="32" height="16" border="0" alt="Use server in Canada" /></a></td></tr>
     <tr><td align="center"><a href="http://ibiblio.org/mutopia/">http://ibiblio.org/mutopia/</a>
-    </td><td align="center"><a href="http://ibiblio.org/mutopia/"><img src="usa.png" width="32" height="17" border="0" alt="Use server in the USA" /></a></td></tr>
+    </td><td align="center"><a href="http://ibiblio.org/mutopia/"><img src="images/usa.png" width="32" height="17" border="0" alt="Use server in the USA" /></a></td></tr>
     <tr><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/">http://mutopia-gd.tuwien.ac.at/</a>
-    </td><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/"><img src="eu.png" width="32" height="21" border="0" alt="Use server in the EU [Austria]" /></a></td></tr>
+    </td><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/"><img src="images/eu.png" width="32" height="21" border="0" alt="Use server in the EU [Austria]" /></a></td></tr>
     <tr><td align="center"><a href="http://eremita.di.uminho.pt/mutopia/">http://eremita.di.uminho.pt/mutopia/</a>
-    </td><td align="center"><a href="http://eremita.di.uminho.pt/mutopia/"><img src="eu.png" width="32" height="21" border="0" alt="Use server in the EU [Portugal]" /></a></td></tr>
+    </td><td align="center"><a href="http://eremita.di.uminho.pt/mutopia/"><img src="images/eu.png" width="32" height="21" border="0" alt="Use server in the EU [Portugal]" /></a></td></tr>
     <tr><td align="center"><a href="http://mutopia.planetmirror.com/">http://mutopia.planetmirror.com/</a>
-    </td><td align="center"><a href="http://mutopia.planetmirror.com/"><img src="aus.png" width="32" height="16" border="0" alt="Use server in Australia" /></a></td></tr></table>
+    </td><td align="center"><a href="http://mutopia.planetmirror.com/"><img src="images/aus.png" width="32" height="16" border="0" alt="Use server in Australia" /></a></td></tr></table>
     </td>
     </tr>
     <tr><td colspan="3" align="center">
@@ -354,7 +351,7 @@ sub HEAD_DE($) {
        bgcolor="#edfaff" align="center" summary="Logo des Mutopia-Projektes
        und Links zu Mirrorsites"><tr>
 
-    <td align="center"><img src="logo-small.png" alt="Logo des Mutopia-Projektes"
+    <td align="center"><img src="images/logo-small.png" alt="Logo des Mutopia-Projektes"
        width="186" height="61" /></td>
     <td align="center"><b>Die gesamte Musik aus dem Mutopia-Projekt kann frei
     heruntergeladen, ausgedruckt, aufgeführt und weitergegeben werden. Bisher
@@ -362,13 +359,13 @@ sub HEAD_DE($) {
     <td align="center">
     <table border="0" cellpadding="0" cellspacing="2">
     <tr><td align="center"><a href="http://www.MutopiaProject.org/">http://www.MutopiaProject.org/</a>
-    </td><td align="center"><a href="http://www.MutopiaProject.org/"><img src="can.png" width="32" height="16" border="0" alt="Use server in Canada" /></a></td></tr>
+    </td><td align="center"><a href="http://www.MutopiaProject.org/"><img src="images/can.png" width="32" height="16" border="0" alt="Use server in Canada" /></a></td></tr>
     <tr><td align="center"><a href="http://ibiblio.org/mutopia/">http://ibiblio.org/mutopia/</a>
-    </td><td align="center"><a href="http://ibiblio.org/mutopia/"><img src="usa.png" width="32" height="17" border="0" alt="Use server in the USA" /></a></td></tr>
+    </td><td align="center"><a href="http://ibiblio.org/mutopia/"><img src="images/usa.png" width="32" height="17" border="0" alt="Use server in the USA" /></a></td></tr>
     <tr><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/">http://mutopia-gd.tuwien.ac.at/</a>
-    </td><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/"><img src="eu.png" width="32" height="21" border="0" alt="Use server in the EU" /></a></td></tr>
+    </td><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/"><img src="images/eu.png" width="32" height="21" border="0" alt="Use server in the EU" /></a></td></tr>
     <tr><td align="center"><a href="http://mutopia.planetmirror.com/">http://mutopia.planetmirror.com/</a>
-    </td><td align="center"><a href="http://mutopia.planetmirror.com/"><img src="aus.png" width="32" height="16" border="0" alt="Use server in Australia" /></a></td></tr></table>
+    </td><td align="center"><a href="http://mutopia.planetmirror.com/"><img src="images/aus.png" width="32" height="16" border="0" alt="Use server in Australia" /></a></td></tr></table>
     </td>
     </tr>
     <tr><td colspan="3" align="center">

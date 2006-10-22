@@ -1,9 +1,6 @@
 #!/usr/bin/perl -T
 #
 # make-table.cgi
-# Version 0.0.18
-# Last updated 28/Jul/2005
-#
 # Creates the table of music for Mutopia
 
 use POSIX;

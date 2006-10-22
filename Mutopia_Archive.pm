@@ -1,8 +1,6 @@
 #!/usr/bin/perl -w
 #
 # Mutopia_Archive.pm
-# Version 0.0.6
-# Last updated 16/Jun/2003
 #
 # This is a perl module (i.e. a library), containing subroutines used
 # by other perl scripts.  Mainly, these subroutines are for reading and

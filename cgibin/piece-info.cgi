@@ -1,9 +1,6 @@
 #!/usr/bin/perl -T
 #
 # piece-info.cgi
-# Version 0.0.20
-# Last updated 08/Aug/2006
-#
 # Creates the table of music for Mutopia
 
 use POSIX;
@@ -96,7 +93,7 @@ $ccmetadata = "";
 if ($licence eq "Public Domain") {
  $licence = "<a href=\"../legal.html#publicdomain\">Public Domain</a>\n &nbsp;&nbsp;&nbsp;" .
             "<a href=\"http://creativecommons.org/licenses/publicdomain/\">" .
-            "<img src=\"../cc.primary.nrr.gif\" alt=\"CC: No rights reserved\" width=\"88\" " .
+            "<img src=\"../images/cc.primary.nrr.gif\" alt=\"CC: No rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/pd.rdf\" type=\"application/rdf+xml\" />\n";
 } elsif ($licence eq "MutopiaBSD") {
@@ -105,26 +102,26 @@ if ($licence eq "Public Domain") {
  $licence = "<a href=\"../legal.html#ccasa\">" .
             "Creative Commons Attribution-ShareAlike</a>\n &nbsp;&nbsp;&nbsp;" .
             "<a href=\"http://creativecommons.org/licenses/by-sa/1.0/\">" .
-            "<img src=\"../cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/asa.rdf\" type=\"application/rdf+xml\" />\n";
 } elsif ($licence eq "Creative Commons Attribution-ShareAlike 2.0") {
  $licence = "<a href=\"../legal.html#ccasa\">" .
             "Creative Commons Attribution-ShareAlike 2.0</a>\n &nbsp;&nbsp;&nbsp;" .
             "<a href=\"http://creativecommons.org/licenses/by-sa/2.0/\">" .
-            "<img src=\"../cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/asa2.rdf\" type=\"application/rdf+xml\" />\n";
 } elsif ($licence eq "Creative Commons Attribution-ShareAlike 2.5") {
  $licence = "<a href=\"../legal.html#ccasa\">" .
             "Creative Commons Attribution-ShareAlike 2.5</a>\n &nbsp;&nbsp;&nbsp;" .
-            "<a href=\"http://creativecommons.org/licenses/by-sa/2.5/\">" .            "<img src=\"../cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<a href=\"http://creativecommons.org/licenses/by-sa/2.5/\">" .            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/asa25.rdf\" type=\"application/rdf+xml\" />\n";
 } elsif ($licence eq "Creative Commons Attribution 2.5") {
  $licence = "<a href=\"../legal.html#cca\">" .
             "Creative Commons Attribution 2.5</a>\n &nbsp;&nbsp;&nbsp;" .
-            "<a href=\"http://creativecommons.org/licenses/by/2.5/\">" .            "<img src=\"../cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<a href=\"http://creativecommons.org/licenses/by/2.5/\">" .            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/a25.rdf\" type=\"application/rdf+xml\" />\n";
 }

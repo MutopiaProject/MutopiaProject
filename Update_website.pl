@@ -1,8 +1,6 @@
 #!/usr/bin/perl -w
 #
 # Update_website.pl (was new-update.pl)
-# Version 0.0.5
-# Last updated 21/Jun/2003
 #
 # Generates datafiles/musiccache.dat (used when displaying music),
 #           datafiles/searchcache.dat (used for searching/sorting),

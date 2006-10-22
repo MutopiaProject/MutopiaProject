@@ -1,8 +1,6 @@
 #!/usr/bin/perl -T
 #
 # make-headers.cgi
-# Version 0.0.6
-# Last updated 28/Jul/2005
 
 use POSIX;
 
