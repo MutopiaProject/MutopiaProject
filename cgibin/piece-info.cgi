@@ -154,6 +154,25 @@ for ($noOfCollections = 0; !($collections eq ""); $noOfCollections++) {
  $collectionName[$noOfCollections] = substr($collectionData,$startOfTitle,$lengthOfTitle);
 }
 
+$printurlshop = "";
+$printurlimg = "";
+$printurlimgwidth = "";
+$printurlimgheight = "";
+$printurlurl = "";
+if ($printurl ne "")
+{
+ $startOfImg = index($printurl, ":") + 1;
+ $startOfWidth = index($printurl, ":", $startOfImg) + 1;
+ $startOfHeight = index($printurl, ":", $startOfWidth) + 1;
+ $startOfURL = index($printurl, ":", $startOfHeight) + 1;
+ 
+ $printurlshop = substr($printurl, 0, $startOfImg - 1);
+ $printurlimg  = substr($printurl, $startOfImg, $startOfWidth - $startOfImg - 1);
+ $printurlimgwidth = substr($printurl, $startOfWidth, $startOfHeight - $startOfWidth - 1);
+ $printurlimgheight = substr($printurl, $startOfHeight, $startOfURL - $startOfHeight - 1);
+ $printurlurl = substr($printurl, $startOfURL);
+}
+
 $upyear = substr $id,8,4;
 $upmonth = substr $id,13,2;
 $upday = substr $id,16,2;
@@ -199,7 +218,20 @@ print "alt=\"Music preview\" />\n";
 print "<br /><br />\n\n";
 
 # Buy sheet music!
-if ($printurl ne "") { print "<p><b>New!</b> <a href=\"$printurl\">Click to buy printed sheet music of this piece</a></p>"; }
+if ($printurlurl ne "")
+{
+ print "<table align=\"center\" border=\"1\" cellpadding=\"0\" cellspacing=\"0\"><tr>\n";
+ print "<td><table border=\"0\" cellpadding=\"5\" cellspacing=\"10\"><tr>\n";
+ print "<td><font size=\"+2\"><b>New!</b></font></td>\n";
+ print "<td><a href=\"$printurlurl\">Buy printed sheet music of this piece</a> from $printurlshop.</td>\n";
+ if ($printurlimg ne "")
+ {
+  print "<td><img src=\"$printurlimg\" width=\"$printurlimgwidth\" height=\"$printurlimgheight\" /></td>\n";
+ }
+ print "</tr></table>\n";
+ print "</td></tr></table>\n\n";
+ print "<br /><br />\n\n";
+}
 
 # Main table:
 
