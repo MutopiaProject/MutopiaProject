@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html
+     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Mutopia: Contact us</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+</head>
+<body background="images/bg.jpg" style="background-attachment: fixed;">
+
+[[ HEAD("contact") ]]
+
+<h2 align="center">Contact Details, Links and Acknowledgements</h2>
+<h3>Contact Details</h3>
+
+<p>To contact the Mutopia Project, please use one of the following addresses:</p>
+<ul>
+<li>General enquiries: &lt;<b>enquiries (at) MutopiaProject.org</b>&gt;</li>
+<li>Legal questions: &lt;<b>legal (at) MutopiaProject.org</b>&gt;</li>
+<li>Contributions: &lt;<b>contributions (at) MutopiaProject.org</b>&gt;</li>
+</ul>
+
+<p>The team that maintains the Mutopia Project archive currently comprises:</p>
+<ul>
+<li>Chris Sawer &lt;<b>chris (at) MutopiaProject.org</b>&gt;</li>
+<li>David Chan &lt;<b>david (at) MutopiaProject.org</b>&gt;</li>
+</ul>
+
+<p>Sie könnten uns auf Deutsch schreiben: &lt;<b>deutsch (at) MutopiaProject.org</b>&gt;</p>
+<p>Vous pouvez nous écrire en françaisus: &lt;<b>francais (at) MutopiaProject.org</b>&gt;</p>
+<p>Gewch chi ysgrifennu aton ni yn Gymraeg: &lt;<b>cymraeg (at) MutopiaProject.org</b>&gt;</p>
+
+<p>In the addresses above, <i>(at)</i> should be replaced by the at sign @. If you do not get a reply to your e-mail, please send it again as e-mails sometimes get lost in the flood of spam.</p>
+
+<h4>Other sheet music sites</h4>
+
+<ul>
+<li>The Choral Public Domain Library: <a href="http://www.cpdl.org/">http://www.cpdl.org/</a> - another open source sheet music site.</li>
+<li>Project Gutenberg's music section: <a href="http://www.gutenberg.org/wiki/Gutenberg:The_Sheet_Music_Project">http://www.gutenberg.org/wiki/Gutenberg:The_Sheet_Music_Project</a></li>
+<li>The Werner Icking Music Archive: <a href="http://icking-music-archive.org/">http://icking-music-archive.org/</a></li>
+</ul>
+
+<p>There are many other sites offering sheet music for download. More comprehensive lists are available at:</p>
+
+<ul><li>The sheet music download section of the Open Directory: <a href="http://dmoz.org/Arts/Music/Resources/Downloadable_Music_Sheets/">http://dmoz.org/Arts/Music/Resources/Downloadable_Music_Sheets/</a></li> 
+<li>The links page of the Werner Icking Music Archive: <a href="http://icking-music-archive.org/oth_mus_archives.html">http://icking-music-archive.org/oth_mus_archives.html</a></li>
+</ul>
+
+<h4>Acknowledgements</h4>
+
+<p>All music on this site has been typeset using GNU Lilypond: <a href="http://www.lilypond.org/">http://www.lilypond.org/</a>.</p>
+<p>Many thanks to Eric Praetzel at the <a href="http://www.uwaterloo.ca">University of Waterloo</a> for the loan of the web and ftp space on which the Mutopia Project's website and music archive is stored.</p>
+
+<p>Thanks also to all the people who have typeset music so that it can be freely available.  Credits to individual typesetters appear with each piece of music on Mutopia.</p>
+
+[[ TAIL("contact") ]]
+</body>
+</html>
