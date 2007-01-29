@@ -13,7 +13,6 @@
 [[ HEAD("contact") ]]
 
 <h2 align="center">Contact Details, Links and Acknowledgements</h2>
-<h3>Contact Details</h3>
 
 <p>To contact the Mutopia Project, please use one of the following addresses:</p>
 <ul>
@@ -29,12 +28,12 @@
 </ul>
 
 <p>Sie könnten uns auf Deutsch schreiben: &lt;<b>deutsch (at) MutopiaProject.org</b>&gt;</p>
-<p>Vous pouvez nous écrire en françaisus: &lt;<b>francais (at) MutopiaProject.org</b>&gt;</p>
+<p>Vous pouvez nous écrire en français: &lt;<b>francais (at) MutopiaProject.org</b>&gt;</p>
 <p>Gewch chi ysgrifennu aton ni yn Gymraeg: &lt;<b>cymraeg (at) MutopiaProject.org</b>&gt;</p>
 
 <p>In the addresses above, <i>(at)</i> should be replaced by the at sign @. If you do not get a reply to your e-mail, please send it again as e-mails sometimes get lost in the flood of spam.</p>
 
-<h4>Other sheet music sites</h4>
+<h3>Other sheet music sites</h3>
 
 <ul>
 <li>The Choral Public Domain Library: <a href="http://www.cpdl.org/">http://www.cpdl.org/</a> - another open source sheet music site.</li>
@@ -48,7 +47,7 @@
 <li>The links page of the Werner Icking Music Archive: <a href="http://icking-music-archive.org/oth_mus_archives.html">http://icking-music-archive.org/oth_mus_archives.html</a></li>
 </ul>
 
-<h4>Acknowledgements</h4>
+<h3>Acknowledgements</h3>
 
 <p>All music on this site has been typeset using GNU Lilypond: <a href="http://www.lilypond.org/">http://www.lilypond.org/</a>.</p>
 <p>Many thanks to Eric Praetzel at the <a href="http://www.uwaterloo.ca">University of Waterloo</a> for the loan of the web and ftp space on which the Mutopia Project's website and music archive is stored.</p>
