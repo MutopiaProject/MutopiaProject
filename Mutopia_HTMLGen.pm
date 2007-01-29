@@ -522,7 +522,8 @@ sub INDEX($) {
                  "legal", "Legal Issues",
                  "contribute", "How to Contribute",
                  "newsletters", "Newsletters",
-                 "projects", "In Progress");
+                 "projects", "In Progress",
+                 "contact", "Contact Us");
 
     # We don't want the current page to be made a link
     for($currpage = 0; $currpage < (@pages); $currpage += 2) {
