@@ -5,7 +5,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-<title>Welcome to the Mutopia Project</title>
+<title>The Mutopia Project</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 </head>
 <body background="images/bg.jpg" style="background-attachment: fixed;">
@@ -32,24 +32,6 @@
 <p>All music is available as Postscript (.ps) and PDF (.pdf) files, for both A4 and Letter paper sizes, as well as Lilypond's own file format (.ly).  The first two are easy to print out (see the <a href="help.html">help page</a> for more information on how to download and print out the scores), and the third allows you to reformat scores for other page sizes, and to see how the score was put together in the first place - perhaps you'd like to contribute to Mutopia yourself!</p>
 
 <p>Audio previews of the music are available as MIDI (.mid) files; these are computer generated but give a rough idea of what the music sounds like.</p>
-
-<h3>Other information</h3>
-
-<p>The Mutopia Project website is available on the following servers:</p>
-
-<ul>
-<li>In Canada at <a href="http://www.MutopiaProject.org/">http://www.MutopiaProject.org/</a> (the main server)</li>
-<li>In the USA at <a href="http://ibiblio.org/mutopia/">http://ibiblio.org/mutopia/</a></li>
-<li>In Australia at <a href="http://mutopia.planetmirror.com/">http://mutopia.planetmirror.com/</a></li>
-<li>In Europe (Austria) at <a href="http://gd.tuwien.ac.at/art/Mutopia/">http://gd.tuwien.ac.at/art/Mutopia/</a></li>
-<li>In Europe (Portugal) at <a href="http://eremita.di.uminho.pt/mutopia/">http://eremita.di.uminho.pt/mutopia/</a></li>
-</ul>
-
-<p>The archive is also available via ftp:</p>
-
-<ul>
-<li>In the USA at <a href="ftp://ibiblio.org/pub/multimedia/mutopia/">ftp://ibiblio.org/pub/multimedia/mutopia/</a></li>
-</ul>
 
 [[ TAIL("index") ]]
 

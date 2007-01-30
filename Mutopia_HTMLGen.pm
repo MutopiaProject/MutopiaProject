@@ -313,20 +313,17 @@ sub HEAD($) {
     <td align="center"><img src="images/logo-small.png" alt="Mutopia Project Logo"
        width="186" height="61" /></td>
     <td align="center"><b>All music in the Mutopia Project is free to
-    download, print out, perform and distribute. There are now <i>
-    [[ NUMBER_OF_PIECES() ]]</i> pieces of music available!</b></td>
+    download, print out, perform and distribute.<br /> 
+    [[ NUMBER_OF_PIECES() ]] pieces of music are now available.</b></td>
     <td align="center">
-    <table border="0" cellpadding="0" cellspacing="2">
-    <tr><td align="center"><a href="http://www.MutopiaProject.org/">http://www.MutopiaProject.org/</a>
-    </td><td align="center"><a href="http://www.MutopiaProject.org/"><img src="images/can.png" width="32" height="16" border="0" alt="Use server in Canada" /></a></td></tr>
-    <tr><td align="center"><a href="http://ibiblio.org/mutopia/">http://ibiblio.org/mutopia/</a>
-    </td><td align="center"><a href="http://ibiblio.org/mutopia/"><img src="images/usa.png" width="32" height="17" border="0" alt="Use server in the USA" /></a></td></tr>
-    <tr><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/">http://mutopia-gd.tuwien.ac.at/</a>
-    </td><td align="center"><a href="http://mutopia-gd.tuwien.ac.at/"><img src="images/eu.png" width="32" height="21" border="0" alt="Use server in the EU [Austria]" /></a></td></tr>
-    <tr><td align="center"><a href="http://eremita.di.uminho.pt/mutopia/">http://eremita.di.uminho.pt/mutopia/</a>
-    </td><td align="center"><a href="http://eremita.di.uminho.pt/mutopia/"><img src="images/eu.png" width="32" height="21" border="0" alt="Use server in the EU [Portugal]" /></a></td></tr>
-    <tr><td align="center"><a href="http://mutopia.planetmirror.com/">http://mutopia.planetmirror.com/</a>
-    </td><td align="center"><a href="http://mutopia.planetmirror.com/"><img src="images/aus.png" width="32" height="16" border="0" alt="Use server in Australia" /></a></td></tr></table>
+      Save our bandwidth - use a mirror!<br />
+      <!-- <a href="http://ibiblio.org/mutopia/" title="Mirror in the USA">USA</a> | -->
+      <a href="http://www.mutopiaproject.org/" title="Main site in Canada"><b>Canada</b></a> |
+      <a href="http://mutopia.planetmirror.com/" title="Mirror in Australia">Australia</a> |
+
+      <!-- <a href="http://gd.tuwien.ac.at/art/Mutopia/" title="Mirror in Austria">Austria</a> | -->
+      <a href="http://eremita.di.uminho.pt/mutopia/" title="Mirror in Portugal">Portugal</a><br />
+      <a href="ftp://ibiblio.org/pub/multimedia/mutopia/" title="FTP in USA">Mutopia Archive via FTP</a>
     </td>
     </tr>
     <tr><td colspan="3" align="center">
