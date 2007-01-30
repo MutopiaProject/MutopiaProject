@@ -521,7 +521,7 @@ sub INDEX($) {
                  "help", "Help",
                  "legal", "Legal Issues",
                  "contribute", "How to Contribute",
-                 "newsletters", "Newsletters",
+                 "newsletters", "Mailing Lists",
                  "projects", "In Progress",
                  "contact", "Contact Us");
 
