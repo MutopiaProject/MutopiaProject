@@ -6,8 +6,8 @@ if [ ! -n "$1" ] ; then
 fi
 
 if [ `ls *-a4.pdf | wc -l` -gt 1 ] ; then
-    gunzip *-a4-ps.gz
-    gunzip *-let-ps.gz
+    gunzip *-a4.ps.gz
+    gunzip *-let.ps.gz
     zip "$1"-a4-pdfs.zip *-a4.pdf
     zip "$1"-a4-pss.zip *-a4.ps
     zip "$1"-let-pdfs.zip *-let.pdf
