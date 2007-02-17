@@ -13,25 +13,27 @@
 [[ HEAD("index") ]]
 [[ INDEXHEAD() ]]
 
-<h3 align="center">What is the Mutopia Project?</h3>
+<h2 align="center">The Mutopia Project: Free sheet music for everyone</h2>
 
-<p>Welcome to the Mutopia Project ... a place where music is free for everyone! Download it, print it out, and share it.  Mutopia is similar in spirit to <a href="http://gutenberg.org">Project Gutenberg</a>, but consists of free sheet music.</p>
+<h3>Classical and Contemporary Music</h3>
 
-<p>Broadly speaking, copyright on a creative work expires 70 years after the creator's death.  This means that the works of Bach, Mozart, Beethoven and many other composers are in the public domain - in principle, they may be copied and performed without restriction.</p>
+<p>The Mutopia Project offers sheet music editions of classical music for free download. These are based on editions in the public domain, and include works by Bach, Beethoven, Chopin, Handel, Mozart, and many others. A team of volunteers are involved in typesetting the music by computer using the <a href="http://lilypond.org">GNU LilyPond</a> software. Why not join them?! See the <a href="contribute.html">page on how to contribute</a> for more information.</p>
 
-<p>However, you may not normally copy or perform a sheet music edition which you can buy, because an editor also has a copyright on the edition, and an arranger may have, too.  The copyright on the edition only expires when all these people have been dead for 70 years.  Additional restrictions in the USA mean that only works published there prior to 1923 are in the public domain.  Only sufficiently old editions fulfil these criteria, and are therefore in the public domain.</p>
+<p>We also host a growing number of modern editions, arrangements and new music. The respective editors, arrangers and composers have chosen to make these works freely available.</p>
 
-<p>But for a lot of classical music, editions do exist which are old enough, especially in libraries and private collections.  The quality of the editorial work is generally as high as in recent editions, if not higher.  Several composers were also notable as editors.  (For example, Brahms's editions of Mozart works are now in the public domain)</p>
+<hr width="60%" />
 
-<p>The idea behind the Mutopia Project is that volunteers typeset these editions on a computer, using the GNU Lilypond typesetting software, and make them freely available.</p>
+<h3>Usage of the Music &nbsp; &nbsp; <a href="http://creativecommons.org/"><img src="images/cc.primary.srr.gif" alt="CC: Some rights reserved" border="0" width="88" height="31" /></a></h3>
 
-<p>The Mutopia Project also contains a growing number of modern editions, arrangements and new music.  The respective editors, arrangers and composers have chosen to make these works freely available.  All may be freely downloaded, printed, copied, distributed, modified, performed or recorded.</p>
+<p>All of the music on Mutopia may be freely downloaded, printed, copied, distributed, modified, performed and recorded. Music is supplied as PDF files for easy printing on either A4 or US Letter paper. The LilyPond source files are also available, which allow you to make your own editions based on ours. Computer-generated audio previews of the music are available as MIDI files, to give you a rough idea of what the music sounds like.</p>
 
-<h3>How is the music made available?</h3>
+<p>Most of our music is distributed under Creative Commons licenses. Each piece clearly lists what license it is distributed under. For precise details of what each license permits, see the <a href="legal.html">license details page</a>.</p>
 
-<p>All music is available as Postscript (.ps) and PDF (.pdf) files, for both A4 and Letter paper sizes, as well as Lilypond's own file format (.ly).  The first two are easy to print out (see the <a href="help.html">help page</a> for more information on how to download and print out the scores), and the third allows you to reformat scores for other page sizes, and to see how the score was put together in the first place - perhaps you'd like to contribute to Mutopia yourself!</p>
+<hr width="60%" />
 
-<p>Audio previews of the music are available as MIDI (.mid) files; these are computer generated but give a rough idea of what the music sounds like.</p>
+<h3>Purchase Printed Copies &nbsp; &nbsp; <a href="http://www.lulu.com/mutopiapublishing"><img src="images/lulu.gif" alt="Lulu" border="0" width="89" height="33" /></a></h3>
+
+<p>High quality printed copies of a selection of Mutopia music are available from <a href="http://www.lulu.com/mutopiapublishing">Mutopia Publishing</a>. This is run in conjunction with <a href="http://www.lulu.com/">LuLu</a>, a professional online publishing service. If you are a contributor to Mutopia and are interested in having your music added to Mutopia Publishing, please <a href="contact.html">contact us</a>.</p>
 
 [[ TAIL("index") ]]
 

@@ -176,6 +176,15 @@ sub COMPOSER_OPTIONS {
     return $html;
 }
 
+sub COMPOSER_LIST {
+    my %comps = Mutopia_Archive::getData("datafiles/composers.dat");
+    my $html = "";
+    for my $k (sort {Mutopia_Archive::byComposer($a,$b)} keys %comps) {
+        $html .= $k . ", ";
+    }
+    return substr($html, 0, -2);
+}
+
 sub INSTRUMENT_OPTIONS {
     my %insts = Mutopia_Archive::getData("datafiles/instruments.dat");
     my $html = "";         
@@ -192,6 +201,15 @@ sub STYLE_OPTIONS {
         $html .= "<option value='$k'>" . $styles{$k} . "</option>\n";
     } 
     return $html;
+}
+
+sub STYLE_LIST {
+    my %styles = Mutopia_Archive::getData("datafiles/styles.dat");
+    my $html = "";
+    for my $k (sort keys %styles) {
+        $html .= $k . ", ";
+    }
+    return substr($html, 0, -2);
 }
 
 sub NUMBER_OF_PIECES {
@@ -379,28 +397,29 @@ sub INDEXHEAD {
     # we might want to put it differently in the CD version. Possibly.
     # I don't know - feel free to move it back!
     my $html = <<____EOH; $html =~ s/^ *//gm; # trim leading whitespace
-    <p align="center"><b>Latest additions</b> (<a href="latestadditions.html">
-       more...</a>)</p>
-    <p>
-    
-    [[ LATEST_ADDITIONS(6) ]]
-    
-    </p>
-    </td>
+<div style="float: right; margin: 10px; width: 30%;">
+<div style="background: white; border: 1px solid black; padding: 10px 10px 1px 10px; margin: 10px;">
 
-    <td align="center">
+<center>
     <form action="cgibin/make-table.cgi" method="get">
-    <input type="text" name="searchingfor" size="30" />
+    <input type="text" name="searchingfor" size="20" />
     <input type="submit" value="Search" />
     </form>
-    <p><a href="piece-list.html">List all music</a></p>
-    <p>Alternatively try an <a href="advsearch.html">advanced search</a>,<br />
-       or browse by... <a href="browse.html#byComposer">Composer</a>,
-       <a href="browse.html#byInstrument">Instrument</a><br />
-       or <a href="browse.html#byStyle">Musical Style</a></p>
-    <!--<p><a href="http://www.cs.helsinki.fi/group/cbrahms/demoengine/">Search by melody with C-Brahms melody-based search</a></p>-->
+</center>
+
+<p><b>Browse by composer:</b> <a href="cgibin/make-table.cgi?Composer=BachJS">Bach</a>, <a href="cgibin/make-table.cgi?Composer=BeethovenLv">Beethoven</a>, <a href="cgibin/make-table.cgi?Composer=ChopinFF">Chopin</a>, <a href="cgibin/make-table.cgi?Composer=DiabelliA">Diabelli</a>, <a href="cgibin/make-table.cgi?Composer=HandelGF">Handel</a>, <a href="cgibin/make-table.cgi?Composer=MozartWA">Mozart</a>, <a href="cgibin/make-table.cgi?Composer=SchumannR">Schumann</a>, <a href="cgibin/make-table.cgi?Composer=SorF">Sor</a>. <a href="browse.html#byComposer">[Full list of composers]</a></p>
+<p><b>Browse by instrument:</b> <a href="cgibin/make-table.cgi?Instrument=Piano">Piano</a>, <a href="cgibin/make-table.cgi?Instrument=Voice">Vocal</a>, <a href="cgibin/make-table.cgi?Instrument=Organ">Organ</a>, <a href="cgibin/make-table.cgi?Instrument=Violin">Violin</a>, <a href="cgibin/make-table.cgi?Instrument=Guitar">Guitar</a>, <a href="cgibin/make-table.cgi?Instrument=Orchestra">Orchestra</a>. <a href="browse.html#byInstrument">[Full list of instruments]</a></p>
+
+<p align="center"><b><a href="piece-list.html">List all music</a></b></p>
+</div>
+<div style="background: white; border: 1px solid black; padding: 1px 10px 1px 10px; margin: 10px;">
+    <h4 align="center"><b>Latest additions</b> [<a href="latestadditions.html">More...</a>]</h4>
+    <p>
+    [[ LATEST_ADDITIONS(8) ]]
+    </p>
+</div>
+</div>
        
-    [[ BREAK() ]]
 ____EOH
     return $html;
 }
@@ -515,12 +534,10 @@ sub INDEX($) {
     my @pages = ("index", "Home",
                  "browse", "Browse the Archive",
                  "advsearch", "Advanced Search",
-                 "help", "Help",
-                 "legal", "Legal Issues",
+                 "legal", "License Details",
                  "contribute", "How to Contribute",
-                 "newsletters", "Mailing Lists",
                  "projects", "In Progress",
-                 "contact", "Contact Us");
+                 "contact", "Contact and Discussion");
 
     # We don't want the current page to be made a link
     for($currpage = 0; $currpage < (@pages); $currpage += 2) {

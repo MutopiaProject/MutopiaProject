@@ -12,53 +12,21 @@
 
 [[ HEAD("legal") ]]
 
-<h2 align="center">Legal Issues</h2>
+<h2 align="center">License Details</h2>
 
-<h3>Is all the music on Mutopia free?</h3>
+<p>All music on Mutopia may be freely downloaded, printed, copied, distributed, modified, performed and recorded.  Details of the licenses used for the music are given below. Follow the links given for more information on the licenses, and the full legal texts.</p>
 
-<p>Yes, all music on Mutopia may be downloaded, printed, copied, distributed, modified, performed and recorded, without payment.  Details of the licenses used for the music are given below.</p>
+<h3><a name="ccasa">Creative Commons Attribution-ShareAlike</a> (<a href="http://creativecommons.org/licenses/by-sa/2.5/">2.5</a> / <a href="http://creativecommons.org/licenses/by-sa/2.0/">2.0</a> / <a href="http://creativecommons.org/licenses/by-sa/1.0/">1.0</a>)</h3>
+<p>This license says that you are free to copy, distribute, display and perform the work, make derivative works, and make commercial use of the work. You must, however, give the original author credit, and if you alter, transform, or build upon the work, you must distribute the resulting work under an identical license. For more information, use the links above to visit the appropriate areas of the Creative Commons website.</p>
 
-<h3>How is it legal to copy the works of Bach, Mozart etc?</h3>
+<h3><a name="cca">Creative Commons Attribution</a> (<a href="http://creativecommons.org/licenses/by/2.5/">2.5</a>)</h3>
+<p>This license says that you are free to copy, distribute, display and perform the work, make derivative works, and make commercial use of the work. You must, however, give the original author credit. For more information, use the link above to visit the appropriate area of the Creative Commons website.</p>
 
-<p>Copyright law gives authors of creative works the right to restrict the reproduction of those works, and to collect royalty fees.  For example, a poet may restrict photocopying and public performances of his poems, and charge a fee for prints and performances.</p>
+<h3><a name="mutopiabsd">MutopiaBSD</a> [being phased out, no longer accepted for new music]</h3>
+<p>This license was written by us before the Creative Commons Attribution license existed, and served a similar purpose. That is, you are free to copy, distribute, display and perform the work, make derivative works, and make commercial use of the work. You must, however, give the original author credit, and there is a notice that must be distributed if you distribute music under this license. It is available for download as a <a href="mutopiabsd.txt">text file</a> or as a <a href="mutopiabsd.pdf">PDF file</a>.</p>
 
-<p>After some time - generally, 70 years after the death of the author - the copyright expires and the work goes into the public domain, which means that all restrictions are lifted.  You may copy, perform and modify the work as much as you like.</p>
-
-<p>This means that the creative work of Bach, Mozart, Beethoven, Lizst, Chopin and many other classical composers is in the public domain, because the composers died more than 70 years ago.</p>
-
-<h3>So why can't I copy sheet music that I've bought?</h3>
-
-<p>When an editor (or arranger, or typesetter) makes changes to a composer's music, the edition he creates is a "derived work".  The editor then has the right to restrict the reproduction of this edition, as well as the composer.  It is not until <i>both</i> the composer and the editor have been dead for 70 years that the copyright on the edition expires and the restrictions on the edition are lifted. Works published after 1922 in the USA may be subject to additional restrictions.</p>
-
-<p>This is why you may not normally make copies of the sheet music which you buy from a shop - the editor's copyright may not have expired yet, even if the composer's has.  Note that you are not normally permitted to perform sheet music in public either - you usually need to pay extra royalties for this.</p>
-
-<h3>So Mutopia's music is typeset from old editions?</h3>
-
-<p>Yes, editions sufficiently old to be in the public domain.  For example, our version of Handel's opera <a href="cgibin/piece-info.cgi?id=119">Giulio Cesare</a> (HWV 17), was edited by Friedrich Chrysander.  Handel died in 1759, and Chrysander died in 1901, so this edition is in the public domain, because both the composer and the editor died more than 70 years ago.</p>
-
-<p>Our collection also contains a few pieces which are not typeset from old editions, but which may be copied for other reasons.  For example, a living composer or editor can give permission for their music to be copied, waiving their right to collect royalty fees.</p>
-
-<h3>Are the laws the same in any country?</h3>
-
-<p>Most countries, including the USA and the EU countries, are signatories of the Berne Convention, an international agreement about copyright.  The copyright laws in these countries are similar.  Sometimes the duration of copyright is shorter, e.g. works enter the public domain 50 years after the death of the author, instead of 70 years.  Works published after 1922 in the USA may be subject to additional restrictions, so music typeset from such editions is not accepted for the Mutopia archive.</p>
-
-<hr width="80%" /><br />
-
-<h3>License details</h3>
-
-<ul>
-<li><b><a name="ccasa">Creative Commons Attribution-ShareAlike</a> (<a href="http://creativecommons.org/licenses/by-sa/1.0/">1.0</a> / <a href="http://creativecommons.org/licenses/by-sa/2.0/">2.0</a> / <a href="http://creativecommons.org/licenses/by-sa/2.5/">2.5</a>)</b> - This license says that you are free to copy, distribute, display and perform the work, make derivative works, and make commercial use of the work. You must, however, give the original author credit, and if you alter, transform, or build upon the work, you must distribute the resulting work under an identical license. For more information, use the links above to visit the appropriate areas of the Creative Commons website.</li>
-
-<li><b><a name="cca">Creative Commons Attribution</a> (<a href="http://creativecommons.org/licenses/by/2.5/">2.5</a>)</b> - This license says that you are free to copy, distribute, display and perform the work, make derivative works, and make commercial use of the work. You must, however, give the original author credit. For more information, use the link above to visit the appropriate area of the Creative Commons website.</li>
-
-<li><b><a name="mutopiabsd">MutopiaBSD</a> [being phased out, no longer accepted for new music]</b> - This license was written by us before the Creative Commons Attribution license existed, and served a similar purpose. That is, you are free to copy, distribute, display and perform the work, make derivative works, and make commercial use of the work. You must, however, give the original author credit, and there is a notice that must be distributed if you distribute music under this license. It is available for download as a <a href="mutopiabsd.txt">text file</a> or as a <a href="mutopiabsd.pdf">PDF file</a>.</li>
-
-<li><b><a name="publicdomain">Public Domain</a></b> - The contributor of this music has dedicated their contribution into the public domain. You can do what you like with this music - print it out, sell it, change it, distribute it, record it, and perform it, etc. For more information, see the Creative Commons website at: <a href="http://creativecommons.org/licenses/publicdomain/">http://creativecommons.org/licenses/publicdomain/</a></li>
-</ul>
-
-<hr width="80%" /><br />
-
-<p>Questions and comments about legal issues should be addressed to &lt;<b>legal (at) MutopiaProject.org</b>&gt;</p>
+<h3><a name="publicdomain">Public Domain</a></h3>
+<p>The contributor of this music has dedicated their contribution into the public domain. You can do what you like with this music - print it out, sell it, change it, distribute it, record it, and perform it, etc. For more information, see the Creative Commons website at: <a href="http://creativecommons.org/licenses/publicdomain/">http://creativecommons.org/licenses/publicdomain/</a></p>
 
 [[ TAIL("legal") ]]
 </body>
