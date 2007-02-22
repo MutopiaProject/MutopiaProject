@@ -7,6 +7,8 @@ package Mutopia_HTMLGen;
 
 # use strict;	# Must declare variables with "my" or "use vars"
 use Mutopia_Archive; # helpful subroutines
+use POSIX qw(strftime);
+use Time::Local;
 use utf8;
 use vars qw(%RDF_DATA);
 
@@ -42,7 +44,28 @@ ________EOM
 
         replace_placeholders(\$_);
 
-	open OUT, ">:utf8", "$OUTPUT_FILE" or die "cannot open >$OUTPUT_FILE: $!";
+        open OUT, ">:utf8", "$OUTPUT_FILE" or die "cannot open >$OUTPUT_FILE: $!";
+        print OUT $_;
+        close OUT;
+
+        undef $OUTPUT_FILE;
+    }
+
+    chdir "html-in" or die "cannot chdir to html-in: $!";
+    @infiles = glob("*.rss-in");
+    chdir "..";
+
+    for my $infile(@infiles) {
+        open (IN, "<:utf8", "html-in/$infile") or die "cannot open $infile: $!";
+        local $_ = join "", <IN>;
+        close IN;
+
+        ($OUTPUT_FILE = $infile) =~ s/\.rss-in$/.rss/
+                or die "invalid filename: $infile";
+
+        replace_placeholders(\$_);
+
+        open OUT, ">:utf8", "$OUTPUT_FILE" or die "cannot open >$OUTPUT_FILE: $!";
         print OUT $_;
         close OUT;
 
@@ -244,7 +267,7 @@ sub LATEST_ADDITIONS($) {
     # generate HTML listing for most recent pieces
     my $html = ""; 
     my $last_piece = (shift) - 1;
-    for my $piece(@recent[0 .. $last_piece]) {
+    for my $piece($recent[0 .. $last_piece]) {
         my($date, $id) = $piece->{id} =~ m|-(\d+/\d+/\d+)-(\d+)$|
                 or die "invalid id: " . $piece->{id};
 
@@ -259,6 +282,48 @@ sub LATEST_ADDITIONS($) {
         $html .= "</a><br />\n";
     }
     return $html;
+}
+
+sub LATEST_ADDITIONS_RSS($) {
+    # returns XML of links to the most recent pieces.
+    # argument is the number of pieces to display
+        
+    #order by ID, most recent first
+    my @recent = sort {
+        $a->{id} =~ /-(\d+)$/ or die "invalid id: ", $a->{id};
+        my $idA = $1;
+        $b->{id} =~ /-(\d+)$/ or die "invalid id: ", $b->{id}; 
+        my $idB = $1;
+        
+        return $idB <=> $idA;
+    } values %RDF_DATA;
+    
+    # generate XML listing for most recent pieces
+    my $xml = "<pubDate>". strftime("%a, %d %b %Y %T %z", localtime()) . "</pubDate>\n";
+    my ($fy, $fm, $fd) = $recent[0]->{id} =~ m|-(\d+)/(\d+)/(\d+)-\d+$|;
+    $xml .= "<lastBuildDate>" . strftime("%a, %d %b %Y %T %z", localtime(timelocal(0, 0, 0, $fd, $fm - 1, $fy))) . "</lastBuildDate>\n\n";
+
+    my $last_piece = (shift) - 1;
+    for my $piece(@recent[0 .. $last_piece]) {
+        my($y, $m, $d, $id) = $piece->{id} =~ m|-(\d+)/(\d+)/(\d+)-(\d+)$|
+                or die "invalid id: " . $piece->{id};
+    
+        $xml .= "<item>\n";
+        $xml .= "<title>" . $piece->{composer} . ": " . $piece->{title} . "</title>\n";
+        $xml .= "<link>http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=" . $id . "</link>\n";
+        $xml .= "<guid>http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=" . $id . "</guid>\n";
+        $xml .= "<description>" . $piece->{title} . ", ";
+        $xml .= $piece->{title} . ", ";
+        if ($piece->{composer} !~ /^(Anonymous|Traditional)$/) {
+            $xml .= "by ";
+        }
+        $xml .= $piece->{composer};
+        $xml .= " - " . $piece->{opus} . " for " . $piece->{for};
+        $xml .= "</description>\n";
+        $xml .= "<pubDate>" . strftime("%a, %d %b %Y %T %z", localtime(timelocal(0, 0, 0, $d, $m - 1, $y))) . "</pubDate>\n";
+        $xml .= "</item>\n\n";
+    }
+    return $xml;
 }
 
 sub ALL_PIECES {
