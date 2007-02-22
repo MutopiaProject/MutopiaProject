@@ -267,7 +267,7 @@ sub LATEST_ADDITIONS($) {
     # generate HTML listing for most recent pieces
     my $html = ""; 
     my $last_piece = (shift) - 1;
-    for my $piece($recent[0 .. $last_piece]) {
+    for my $piece(@recent[0 .. $last_piece]) {
         my($date, $id) = $piece->{id} =~ m|-(\d+/\d+/\d+)-(\d+)$|
                 or die "invalid id: " . $piece->{id};
 
