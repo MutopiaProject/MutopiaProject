@@ -17,7 +17,7 @@
 
 <p>Obviously without all the people contributing music to Mutopia, it wouldn't exist! If you would like to help the world of music by entering some of history's great music, then here's how.</p>
 
-<p>We only accept music typeset using <a href="http://www.lilypond.org">GNU LilyPond</a>. However, if you use other typesetting software which can export in MusicXML format, then you should be able to import the music into LilyPond. See <a href="http://lilypond.org/web/documentation">the LilyPond documentation</a> for more information.</p>
+<p>We only accept music typeset using <a href="http://lilypond.org">LilyPond</a>. However, if you use other typesetting software which can export in MusicXML format, then you should be able to import the music into LilyPond. See <a href="http://lilypond.org/web/documentation">the LilyPond documentation</a> for more information.</p>
 
 <h3>Check Projects in Progress</h3>
 
@@ -38,7 +38,7 @@
 
 <h3>Typeset the Music</h3>
 
-<p>Enter the music using the music typesetting software <a href="http://www.lilypond.org/">GNU LilyPond</a>. It is free in the sense that you don't have to pay for it, and also that the source code is available for you to look at, recompile and even improve. It is available for both Unix-like operating systems (eg. Linux) as well as Mac OS X and Windows. If you need help installing LilyPond then we recommend you subscribe to one or more of the mailing lists dedicated to it - more information is on the LilyPond web pages. If you have already entered music in another free typesetting program then it may be possible to convert it into LilyPond format. Check LilyPond's documentation for more information.</p>
+<p>Enter the music using the music typesetting software <a href="http://lilypond.org/">LilyPond</a>. It is free in the sense that you don't have to pay for it, and also that the source code is available for you to look at, recompile and even improve. It is available for both Unix-like operating systems (eg. Linux) as well as Mac OS X and Windows. If you need help installing LilyPond then we recommend you subscribe to one or more of the mailing lists dedicated to it - more information is on the LilyPond web pages. If you have already entered music in another free typesetting program then it may be possible to convert it into LilyPond format. Check LilyPond's documentation for more information.</p>
 
 <p>Decide what terms you want to release the music under. The three possibilities are described on the <a href="legal.html">license details page</a>. By submitting music to Mutopia, you are declaring that you have the legal right to release the work under the terms chosen.</p>
 
