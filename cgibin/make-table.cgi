@@ -115,10 +115,19 @@ until (eof CACHE) {
   
   # Check if we're searching. If so, check the piece matches
   $FORM{searchingfor} =~ tr/a-z/A-Z/;
-  if ($FORM{searchingfor} eq "") { $go = 1 }
-  elsif ((uc($title . $composer . $opus . $lyricist . $instrument . $date . $style . $metre . $arranger . $source . $copyright . $id . $maintainer . $maintaineremail . $maintainerweb . $extrainfo . $lilypondversion . $collections)) =~ /$FORM{searchingfor}/) { $go = 1 }
-  else { $go = 0 }
-  
+  $go = 1;
+  if ($FORM{searchingfor} ne "")
+  {
+    @searchlist = split(/ /, $FORM{searchingfor});
+    foreach $searchitem (@searchlist)
+    {
+      if (!((uc($title . $composer . $opus . $lyricist . $instrument . $date . $style . $metre . $arranger . $source . $copyright . $id . $maintainer . $maintaineremail . $maintainerweb . $extrainfo . $lilypondversion . $collections)) =~ $searchitem))
+      {
+        $go = 0;
+      }
+    }
+  }
+ 
   # Check lilypond version in file is ok, and parse if it is
   $okToCheckVersion = 1;
   if ($lilypondversion =~ /^([0-9])\.([0-9])\.([0-9]+)/) {
