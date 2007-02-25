@@ -313,7 +313,6 @@ sub LATEST_ADDITIONS_RSS($) {
         $xml .= "<link>http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=" . $id . "</link>\n";
         $xml .= "<guid>http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=" . $id . "</guid>\n";
         $xml .= "<description>" . $piece->{title} . ", ";
-        $xml .= $piece->{title} . ", ";
         if ($piece->{composer} !~ /^(Anonymous|Traditional)$/) {
             $xml .= "by ";
         }
