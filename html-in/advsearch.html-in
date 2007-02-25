@@ -4,7 +4,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-<title>Mutopia: Search for music in the archive</title>
+<title>Mutopia: Advanced search</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link type="text/css" rel="stylesheet" href="mutopia.css" />
 </head>
@@ -13,7 +13,9 @@
 
 [[ HEAD("advsearch") ]]
 
-<p><b>Select the appropriate options and then click on "Display Music Table".</b></p>
+<h2>Advanced search</h2>
+
+<p>Select the appropriate options and then click on "Display Music Table".</p>
 
 <form action="cgibin/make-table.cgi" method="get">
 <ul>

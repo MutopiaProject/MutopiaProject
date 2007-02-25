@@ -4,12 +4,14 @@
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
-<title>Mutopia: Browse by Instrument, Composer or Style</title>
+<title>Mutopia: Browse by instrument, composer or style</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link type="text/css" rel="stylesheet" href="mutopia.css" />
 </head>
 
 <body>
+
+<h2>Browse by instrument, composer or style</h2>
 
 [[ HEAD("browse") ]]
 
