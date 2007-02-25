@@ -1,15 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "DTD/xhtml1-transitional.dtd">
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
 <title>Mutopia: Browse by Instrument, Composer or Style</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" href="mutopia.css" />
 </head>
 
-<body background="images/bg.jpg" style="background-attachment: fixed;">
+<body>
 
 [[ HEAD("browse") ]]
 
@@ -23,21 +23,29 @@ to display all the relevant music in the archive. The numbers in square brackets
 
 [[ BREAK() ]]
 
+<table class="browse_table">
+<tr>
+<th>
 <a name="byComposer" />
-<h2 align="center">Browse by Composer</h2>
-[[ BROWSE_BY_COMPOSER() ]]
-
-</td><td valign="top">
-
+Browse by Composer
+</th>
+<th>
 <a name="byInstrument" />
-<h2 align="center">Browse by Instrument</h2>
-[[ BROWSE_BY_INSTRUMENT() ]]
-
-</td><td valign="top">
-
+Browse by Instrument
+</th>
+<th>
 <a name="byStyle" />
-<h2 align="center">Browse by Style</h2>
+Browse by Style
+</th>
+</tr>
+<tr>
+<td>
+[[ BROWSE_BY_COMPOSER() ]]
+</td><td>
+[[ BROWSE_BY_INSTRUMENT() ]]
+</td><td>
 [[ BROWSE_BY_STYLE() ]]
+</td></tr></table>
 
 [[ TAIL("browse") ]]
 </body>

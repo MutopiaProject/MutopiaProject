@@ -1,23 +1,23 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "DTD/xhtml1-transitional.dtd">
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
 <title>Mutopia: Latest Additions</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" href="mutopia.css" />
 </head>
-<body background="images/bg.jpg" style="background-attachment: fixed;">
+<body>
 
 [[ HEAD("latestadditions") ]]
 
-<h2 align="center">Latest Additions</h2>
+<h2>Latest Additions</h2>
 
-<p>The last twenty pieces added to the archive are:</p>
+<p>The last twenty-five pieces added to the archive are:</p>
 
 <p>
-[[ LATEST_ADDITIONS(20) ]]
+[[ LATEST_ADDITIONS(25) ]]
 </p>
 
 [[ TAIL("latestadditions") ]]

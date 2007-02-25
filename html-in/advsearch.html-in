@@ -1,16 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "DTD/xhtml1-transitional.dtd">
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-
 
 <head>
 <title>Mutopia: Search for music in the archive</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" href="mutopia.css" />
 </head>
 <!-- http://www.cs.helsinki.fi/group/cbrahms/demoengine/ -->
-<body background="images/bg.jpg" style="background-attachment: fixed;">
+<body>
 
 [[ HEAD("advsearch") ]]
 
@@ -49,7 +48,7 @@
 
 <li><input type="checkbox" name="printav" value="1" /> Display only music which is available to purchase as a printed copy</li>
 </ul>
-<center><input type="submit" value="Display Music Table" /></center>
+<p style="text-align: center;"><input type="submit" value="Display Music Table" /></p>
 </form>
 
 [[ TAIL("advsearch") ]]

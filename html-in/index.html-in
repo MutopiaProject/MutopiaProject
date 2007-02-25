@@ -1,20 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "DTD/xhtml1-transitional.dtd">
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
 <title>The Mutopia Project</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" href="mutopia.css" />
 <link rel="alternate" title="Mutopia RSS" href="http://www.mutopiaproject.org/latestadditions.rss" type="application/rss+xml" />
 </head>
-<body background="images/bg.jpg" style="background-attachment: fixed;">
+<body>
 
 [[ HEAD("index") ]]
 [[ INDEXHEAD() ]]
 
-<h2 align="center">The Mutopia Project: Free sheet music for everyone</h2>
+<h2>The Mutopia Project: Free sheet music for everyone</h2>
 
 <h3>Classical and Contemporary Music</h3>
 
@@ -22,23 +22,24 @@
 
 <p>We also host a growing number of modern editions, arrangements and new music. The respective editors, arrangers and composers have chosen to make these works freely available.</p>
 
-<hr width="60%" />
+<hr />
 
-<h3>Usage of the Music &nbsp; &nbsp; <a href="http://creativecommons.org/"><img src="images/cc.primary.srr.gif" alt="CC: Some rights reserved" border="0" width="88" height="31" /></a></h3>
+<h3>Usage of the Music &nbsp; &nbsp; <a href="http://creativecommons.org/"><img src="images/cc.primary.srr.gif" alt="CC: Some rights reserved" class="noborder" width="88" height="31" /></a></h3>
 
 <p>All of the music on Mutopia may be freely downloaded, printed, copied, distributed, modified, performed and recorded. Music is supplied as PDF files for easy printing on either A4 or US Letter paper. The LilyPond source files are also available, which allow you to make your own editions based on ours. Computer-generated audio previews of the music are available as MIDI files, to give you a rough idea of what the music sounds like.</p>
 
 <p>Most of our music is distributed under <a href="http://creativecommons.org/">Creative Commons</a> licenses. Each piece clearly lists what license it is distributed under. For precise details of what each license permits, see the <a href="legal.html">license details page</a>.</p>
 
-<hr width="60%" />
+<hr />
 
-<h3>Purchase Printed Copies &nbsp; &nbsp; <a href="http://www.lulu.com/mutopiapublishing"><img src="images/lulu.gif" alt="Lulu" border="0" width="89" height="33" /></a></h3>
+<h3>Purchase Printed Copies &nbsp; &nbsp; <a href="http://www.lulu.com/mutopiapublishing"><img src="images/lulu.gif" alt="Lulu" class="noborder" width="89" height="33" /></a></h3>
 
 <p>High quality printed copies of a selection of Mutopia music are available from <a href="http://www.lulu.com/mutopiapublishing">Mutopia Publishing</a>. This is run in conjunction with <a href="http://www.lulu.com/">Lulu</a>, a professional online publishing service. If you are a contributor to Mutopia and are interested in having your music added to Mutopia Publishing, please <a href="contact.html">contact us</a>.</p>
+
+<br style="clear: right;" />&nbsp; <!-- Unpleasant hack -->
 
 [[ TAIL("index") ]]
 
 </body>
 </html>
-
 

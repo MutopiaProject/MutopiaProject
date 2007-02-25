@@ -1,18 +1,18 @@
-<?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE html
-     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-    "DTD/xhtml1-transitional.dtd">
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
 
 <head>
 <title>Mutopia: Projects being worked on</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" href="mutopia.css" />
 </head>
-<body background="images/bg.jpg" style="background-attachment: fixed;">
+<body>
 
 [[ HEAD("projects") ]]
 
-<h2 align="center">Projects being worked on</h2>
+<h2>Projects being worked on</h2>
 
 <p>This is a list of all projects that are currently being worked on - hopefully this should avoid two people entering the same piece of music. If you would like to add a project to this list, please send your name, e-mail address and the name of the music you are entering to &lt;<b>contributions (at) MutopiaProject.org</b>&gt;. If you abandon a project part way through, then feel free to e-mail what you've done so far so <b>cancelled</b> can be put by the project - anyone else can then continue it.</p>
 

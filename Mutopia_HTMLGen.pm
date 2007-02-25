@@ -370,8 +370,14 @@ sub ALL_PIECES {
   chomp (my $printurl = <CACHE>);
   
   if ($opus eq "") { $opus = "&nbsp;" }
-  
-  $html .= "<tr><td>".$composer."</td><td><a href=\"cgibin/piece-info.cgi?id=".$idno."\">";
+  my $compLessDates;
+  if (index($composer, "(") > 0) {
+    $compLessDates = substr($composer, 0, index($composer, "(") - 1);;
+  } else {
+    $compLessDates = $composer;
+  }
+ 
+  $html .= "<tr><td>".$compLessDates."</td><td><a href=\"cgibin/piece-info.cgi?id=".$idno."\">";
   $html .= $title."</a></td><td>".$opus."</td><td>".$instrument."</td></tr>\n";
  }
 
@@ -386,18 +392,17 @@ sub HEAD($) {
     my $dontlinkto = shift;
     
     my $html = <<____EOH; $html =~ s/^ *//gm; # trim leading whitespace 
-    <table width="100%" border="0"><tr><td> </td></tr></table>
+    <div class="header_section">
 
-    <table border="1" width="95%" cellpadding="10" cellspacing="0"
-       bgcolor="#edfaff" align="center" summary="Mutopia Project logo and
-       links to mirrors"><tr>
+    <table class="invisible"><tr>
+    <td><img src="images/logo-small.png" alt="Mutopia Project Logo" width="186" height="61" /></td>
 
-    <td align="center"><img src="images/logo-small.png" alt="Mutopia Project Logo"
-       width="186" height="61" /></td>
-    <td align="center"><b>All music in the Mutopia Project is free to
-    download, print out, perform and distribute.<br /> 
-    [[ NUMBER_OF_PIECES() ]] pieces of music are now available.</b></td>
-    <td align="center">
+    <td style="font-weight: bold;">All music in the Mutopia Project is free to download, print out, perform and distribute.<br />
+
+[[ NUMBER_OF_PIECES() ]]
+    pieces of music are now available.</td>
+
+    <td>
       Save our bandwidth - use a mirror!<br />
       <!-- <a href="http://ibiblio.org/mutopia/" title="Mirror in the USA">USA</a> | -->
       <a href="http://www.mutopiaproject.org/" title="Main site in Canada"><b>Canada</b></a> |
@@ -408,9 +413,10 @@ sub HEAD($) {
       <a href="ftp://ibiblio.org/pub/multimedia/mutopia/" title="FTP in USA">Mutopia Archive via FTP</a>
     </td>
     </tr>
-    <tr><td colspan="3" align="center">
 
+    <tr><td colspan="3" style="padding: 5px; border-top: 1px solid black;">
     [[ INDEX("$dontlinkto") ]]
+    </td></tr></table>
 
     [[ BREAK() ]]
 ____EOH
@@ -461,26 +467,27 @@ sub INDEXHEAD {
     # we might want to put it differently in the CD version. Possibly.
     # I don't know - feel free to move it back!
     my $html = <<____EOH; $html =~ s/^ *//gm; # trim leading whitespace
-<div style="float: right; margin: 10px; width: 30%;">
-<div style="background: white; border: 1px solid black; padding: 10px 10px 1px 10px; margin: 10px;">
+<div class="index_rhs_cont">
+<div class="index_rhs">
 
-<center>
-    <form action="cgibin/make-table.cgi" method="get">
-    <input type="text" name="searchingfor" size="20" />
-    <input type="submit" value="Search" />
-    </form>
-</center>
-
-<p><b>Browse by composer:</b> <a href="cgibin/make-table.cgi?Composer=BachJS">Bach</a>, <a href="cgibin/make-table.cgi?Composer=BeethovenLv">Beethoven</a>, <a href="cgibin/make-table.cgi?Composer=ChopinFF">Chopin</a>, <a href="cgibin/make-table.cgi?Composer=DiabelliA">Diabelli</a>, <a href="cgibin/make-table.cgi?Composer=HandelGF">Handel</a>, <a href="cgibin/make-table.cgi?Composer=MozartWA">Mozart</a>, <a href="cgibin/make-table.cgi?Composer=SchumannR">Schumann</a>, <a href="cgibin/make-table.cgi?Composer=SorF">Sor</a>. <a href="browse.html#byComposer">[Full list of composers]</a></p>
-<p><b>Browse by instrument:</b> <a href="cgibin/make-table.cgi?Instrument=Piano">Piano</a>, <a href="cgibin/make-table.cgi?Instrument=Voice">Vocal</a>, <a href="cgibin/make-table.cgi?Instrument=Organ">Organ</a>, <a href="cgibin/make-table.cgi?Instrument=Violin">Violin</a>, <a href="cgibin/make-table.cgi?Instrument=Guitar">Guitar</a>, <a href="cgibin/make-table.cgi?Instrument=Orchestra">Orchestra</a>. <a href="browse.html#byInstrument">[Full list of instruments]</a></p>
-
-<p align="center"><b><a href="piece-list.html">List all music</a></b></p>
-</div>
-<div style="background: white; border: 1px solid black; padding: 1px 10px 1px 10px; margin: 10px;">
-    <h4 align="center"><b>Latest additions</b> [<a href="latestadditions.html">More...</a>]</h4>
-    <p>
-    [[ LATEST_ADDITIONS(8) ]]
+  <form action="cgibin/make-table.cgi" method="get">
+    <p style="text-align: center;">
+      <input type="text" name="searchingfor" size="20" />
+      <input type="submit" value="Search" />
     </p>
+  </form>
+
+  <p><b>Browse by composer:</b> <a href="cgibin/make-table.cgi?Composer=BachJS">Bach</a>, <a href="cgibin/make-table.cgi?Composer=BeethovenLv">Beethoven</a>, <a href="cgibin/make-table.cgi?Composer=ChopinFF">Chopin</a>, <a href="cgibin/make-table.cgi?Composer=DiabelliA">Diabelli</a>, <a href="cgibin/make-table.cgi?Composer=HandelGF">Handel</a>, <a href="cgibin/make-table.cgi?Composer=MozartWA">Mozart</a>, <a href="cgibin/make-table.cgi?Composer=SchumannR">Schumann</a>, <a href="cgibin/make-table.cgi?Composer=SorF">Sor</a>. <a href="browse.html#byComposer">[Full list of composers]</a></p>
+
+  <p><b>Browse by instrument:</b> <a href="cgibin/make-table.cgi?Instrument=Piano">Piano</a>, <a href="cgibin/make-table.cgi?Instrument=Voice">Vocal</a>, <a href="cgibin/make-table.cgi?Instrument=Organ">Organ</a>, <a href="cgibin/make-table.cgi?Instrument=Violin">Violin</a>, <a href="cgibin/make-table.cgi?Instrument=Guitar">Guitar</a>, <a href="cgibin/make-table.cgi?Instrument=Orchestra">Orchestra</a>. <a href="browse.html#byInstrument">[Full list of instruments]</a></p>
+
+  <p style="text-align: center;"><b><a href="piece-list.html">List all music</a></b></p>
+</div>
+<div class="index_rhs">
+  <h4 style="text-align: center;">Latest additions [<a href="latestadditions.html">More...</a>]</h4>
+  <p>
+    [[ LATEST_ADDITIONS(8) ]]
+  </p>
 </div>
 </div>
        
@@ -519,15 +526,9 @@ ____EOH
 sub BREAK {
     # When using HEAD and TAIL, use BREAK to start a new table.
     my $html = <<____EOH; $html =~ s/^ *//gm; # trim leading whitespace
-    </td></tr>
-    </table>
+    </div>
 
-    <!-- Spacer table -->
-    <table width="100%" border="0"><tr><td> </td></tr></table>
-
-    <table border="1" width="98%" cellpadding="10" cellspacing="0"
-       bgcolor="#edfaff" align="center">
-    <tr><td align="left">
+    <div class="main_section">
 ____EOH
     return $html;
 }
@@ -540,22 +541,17 @@ sub TAIL($) {
     my $html = <<____EOH; $html =~ s/^ *//gm; # trim leading whitespace 
     [[ BREAK() ]]
     
-    <!-- XXX Valid XHTML button -->
-    <p align="center">
-    
+    <p class="link_list">
     [[ INDEX("$dontlinkto") ]]
-    
     </p>
-	<p><font size="-1em"><b>Disclaimer: The Mutopia
+    
+    <p class="disclaimer">Disclaimer: The Mutopia
     Project is run by volunteers, and the material within it is provided
     "as-is".  NO WARRANTY of any kind is made, including fitness
-    for any particular purpose.  No claim is made as to the accuracy or the
+    for any particular purpose.<br />No claim is made as to the accuracy or the
     factual, editorial or musical correctness of any of the material
-    provided here.</b></font></p>
-    </td></tr></table>
-
-    <!-- Spacer table -->
-    <table width="100%" border="0"><tr><td> </td></tr></table>
+    provided here.</p>
+    </div>
 
 ____EOH
     return $html;
