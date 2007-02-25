@@ -95,7 +95,7 @@ public class MutopiaPiece
       }
    }
    
-   public void deriveCompileStuff() throws IOException
+   public void deriveCompileStuff(String lilyCommandLine) throws IOException
    {
       String filenameBaseWithDir = lyFilename.substring(0, lyFilename.length() - 3);
       int lastSlash = filenameBaseWithDir.lastIndexOf(File.separatorChar);
@@ -105,7 +105,7 @@ public class MutopiaPiece
       multipleMidFiles = (new File(filenameBaseWithDir + "-mids.zip").exists());
       multiplePdfFiles = (new File(filenameBaseWithDir + "-a4-pss.zip").exists());
       
-      Process lilyProcess = Runtime.getRuntime().exec("lilypond -version");
+      Process lilyProcess = Runtime.getRuntime().exec(lilyCommandLine + " -version");
       try { lilyProcess.waitFor(); } catch (Exception ex) {}
       BufferedReader lilyInput = new BufferedReader(new InputStreamReader(lilyProcess.getInputStream()));
       String longLilyVersion = lilyInput.readLine();
