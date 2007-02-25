@@ -130,7 +130,7 @@ until (eof CACHE) {
  
   # Check lilypond version in file is ok, and parse if it is
   $okToCheckVersion = 1;
-  if ($lilypondversion =~ /^([0-9])\.([0-9])\.([0-9]+)/) {
+  if ($lilypondversion =~ /^([0-9])\.([0-9]+)\.([0-9]+)/) {
    $maj = $1;
    $min = $2;
    $tin = $3;
@@ -141,9 +141,9 @@ until (eof CACHE) {
   # Check the LilyPond version is correct
   if (($okToCheckVersion == 1) and ($FORM{lilyv} == 1) and ($go == 1)) {
    # Parse $FORM{lilyversion}
-   if ($FORM{lilyversion} =~ /^([0-9])\.([0-9])\.([0-9]+)$/) {
+   if ($FORM{lilyversion} =~ /^([0-9])\.([0-9]+)\.([0-9]+)$/) {
     if (($maj != $1) or ($min != $2) or ($tin != $3)) { $go = 0; }
-   } elsif ($FORM{lilyversion} =~ /^([0-9])\.([0-9])$/) {
+   } elsif ($FORM{lilyversion} =~ /^([0-9])\.([0-9]+)$/) {
     if (($maj != $1) or ($min != $2)) { $go = 0; }
    } elsif ($FORM{lilyversion} =~ /^([0-9])$/) {
     if ($maj != $1) { $go = 0; }
