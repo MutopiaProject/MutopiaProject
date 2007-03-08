@@ -1,6 +1,7 @@
 #!/bin/bash
-#compile ly files to ps
+# Compile awkward ly files (eg. landscape) to ps
 
+# Check .ly file has been specified
 if [ ! -r "$1" ] ; then
     echo "Usage: $0 sourcefile.ly"
     exit 1
