@@ -3,13 +3,18 @@ import java.util.*;
 
 public class Mutopia
 {
-   // TODO: Use LILYPOND_BASE environment variable, and handle multiple versions
-   private String lilyCommandLine = "/Applications/LilyPond/LilyPond.app/Contents/Resources/bin/lilypond";
+   private static String lilyCommandLine;
 
    public static void main(String[] args)
    {
       Mutopia mutopia = new Mutopia();
-      
+
+      lilyCommandLine = System.getenv("LILYPOND_BIN");
+      if (lilyCommandLine == null)
+      {
+         throw new RuntimeException("LILYPOND_BIN not set");
+      }
+
       if ((args.length < 2) || (!args[0].startsWith("-")))
       {
          System.err.println("Arguments must be: -d, -f, -c or -r followed by .ly file(s)");
