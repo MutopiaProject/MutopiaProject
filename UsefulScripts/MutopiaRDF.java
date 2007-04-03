@@ -4,7 +4,7 @@ import javax.xml.parsers.*;
 import org.w3c.dom.*;
 
 public class MutopiaRDF
-{   
+{
    private static String xmlIfy(String inputString)
    {
       // Turn URLs into <a href>s*/
@@ -24,6 +24,16 @@ public class MutopiaRDF
       inputString = inputString.replaceAll("&", "&amp;amp;");
       inputString = inputString.replaceAll("<", "&amp;lt;");
       inputString = inputString.replaceAll(">", "&amp;gt;");
+      
+      return inputString;
+   }
+   
+   private static String htmlIfy(String inputString)
+   {
+      // Replace & < > by escaped versions
+      inputString = inputString.replaceAll("&", "&amp;");
+      inputString = inputString.replaceAll("<", "&lt;");
+      inputString = inputString.replaceAll(">", "&gt;");
       
       return inputString;
    }
@@ -71,7 +81,7 @@ public class MutopiaRDF
                             "</mp:maintainerEmail>" : "<mp:maintainerEmail/>"));
       writeln(wr, "    " + (piece.getMaintainerWeb() != null ? "<mp:maintainerWeb>" + piece.getMaintainerWeb() +
                             "</mp:maintainerWeb>" : "<mp:maintainerWeb/>"));
-      writeln(wr, "    " + (piece.getMoreInfo() != null ? "<mp:moreInfo>" + piece.getMoreInfo() +
+      writeln(wr, "    " + (piece.getMoreInfo() != null ? "<mp:moreInfo>" + htmlIfy(piece.getMoreInfo()) +
                             "</mp:moreInfo>" : "<mp:moreInfo/>"));
       writeln(wr, "    <mp:lilypondVersion>" + piece.getLilyVersion() + "</mp:lilypondVersion>");
       writeln(wr, "</rdf:Description>");
