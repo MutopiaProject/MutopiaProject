@@ -134,6 +134,10 @@
  <td>Your home page address, if you have one and want people to know about it.<br />
  Please include the full address, including the http:// at the beginning.</td>
 </tr>
+<tr>
+ <td><i>moreInfo</i> (Optional)</td>
+ <td>Extra information to be included on the piece's page in Mutopia. Markup in XHTML 1.0 format is permitted.</td>
+</tr>
 </table>
 
 [[ TAIL("contribute") ]]
