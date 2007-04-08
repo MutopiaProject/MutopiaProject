@@ -1,0 +1,22 @@
+Building
+========
+To make an A4 PDF score:
+  $ make lwv05
+or:
+  $ lilypond -b null -d dump-tweaks -o out/lwv05 lwv05.ly
+  $ lilypond -o out/lwv05 lwv05.ly 
+
+To make a letter PDF score:
+  $ make lwv05-letter
+or:
+  $ lilypond -b null -d dump-tweaks -d letter -o out/lwv05-letter lwv05.ly
+  $ lilypond -d letter -o out/lwv05-letter lwv05.ly
+
+To use "modern" clefs (ie only G and F clefs), add the "-d modern-clefs"
+option to both lilypond invocations.
+
+Licensing
+=========
+These Scores are licensed under the Creative Commons Attribution 2.5 License.
+Copyright © 2005-2006 Nicolas Sceaux <nicolas.sceaux@free.fr>
+http://nicolas.sceaux.free.fr/

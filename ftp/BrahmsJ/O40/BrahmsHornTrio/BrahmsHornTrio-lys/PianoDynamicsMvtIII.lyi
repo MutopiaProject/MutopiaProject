@@ -1,0 +1,110 @@
+\include "defs.lyi"
+
+pianoDynamicsMvtIII =
+{
+  s2.\p |
+  s2. |
+  s4. s4.\> | s4. s8 s s\! |
+  s2.\p |
+  s2.*2 |
+  s4. s8\> s s\! |
+  s4.\p s8 s\> s |
+  s4. s8 s s\! |
+  s2.-\mEspr |
+  s2.*2 |
+  s8\> s s s s s\! |
+  s2.\p |
+  s2. |
+  s4. s4.\> | s4. s8 s s\! |
+
+  %A
+  s2.*4 |
+  s2.*3-\mPSempreELegato |
+
+  %9/8
+  s4.*3 |
+
+  %6/8
+  s2.\pp |
+  s4. s8 s4-\mDim |
+  s2.*3 |
+
+  %B
+  s4.\pp s4.-\mUnPocoStringendoCresc
+  s2. |
+  s2.\< |
+  \times 2/3 {s16*17 s16\!} |
+  s4.\sfp s8.-\mDim s8. |
+  s2.*2 |
+  s16*11\> s16\! |
+  s4.
+    \once \override TextScript #'padding = #2.0
+    s-\mDim |
+  s16*11\> s16\! |
+  s2.*2-\mInTempo |
+  s4. s\> | s4. s8 s s\! |
+  s2.*3\p |
+  s4. s8\> s s\! |
+  s4. s8 s s\> |
+  s4. s8 s s\! |
+  s2.*3 |
+  s8 s s\> s s s\! |
+  s4.\< s8 s s\! |
+  s4.\> s8 s s\! |
+
+  %C
+  s2.*2\p |
+  s2.*4\pp |
+  s2.*2\pp |
+  \setTextCresc
+  s2.\< | s4. s\! |
+  s2.*4\f |
+  s8. s\< s8 s s\! |
+
+  %D
+  s2.*2\ff |
+  s8\fp s s\> s s s\! |
+  s2.\p |
+  s4 s8-\mDim s4. |
+  s4.*2 |
+  s4. s\< | s s8 s s\! |
+  s2.\sf |
+  s\> |
+  s\p |
+  s |
+}
+
+pianoPedalsMvtIII =
+{
+  s2.*4\unaCorda |
+  s2.*4\treCorde |
+  s2.*2\unaCorda |
+  s2.*4\treCorde |
+  s2.*4\unaCorda |
+
+  %A
+  s2.*7 |
+
+  %9/8
+  s4.*3 |
+
+  %6/8
+  s2.*5 |
+
+  %B
+  \once \override TextScript #'padding = #6.0
+  s2.*11_\mColPed |
+  s2.*16\unaCorda
+
+  %C
+  \once \override TextScript #'padding = #3.5
+  s2.*11_\mColPed |
+  s2.*4 |
+
+  %D
+  s2.*3 |
+
+  %Tempo I
+  s2.*10 |
+}
+

@@ -1,0 +1,187 @@
+\header {
+	title =		"Prelude";
+	composer =	"J.S. Bach (1685-1750)";
+	opus =		"BWV 999";
+	% instrument =	"Guitar";
+
+	% Mutopia file info:
+
+	mutopiatitle =	"Prelude in D Minor";
+	mutopiacomposer =	"J.S. Bach (1685-1750)";
+	mutopiaopus =	"BWV 999";
+	mutopiainstrument =	"Lute, Guitar";
+	style =		"Baroque";
+	copyright =	"Public Domain";
+	filename =	"Bach_Prelude_BWV999.ly";
+	enteredby =	"Jakob Bagterp";
+	maintainer =	"Jakob Bagterp";
+	maintainer_email =	"jakob_bagterp@hotmail.com";
+	lastupdated =	"2001/March/24";
+	footer =	"Mutopia-2001/03/24-60";
+	tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}";
+}
+
+% This version of the Prelude hasn't been fingered yet --- it will soon be done. \Jakob Bagterp
+
+\version "1.3.46";
+\include "paper20.ly";
+\include "deutsch.ly";
+
+global = \notes {
+	\clef treble;
+	\key d \minor;
+	\time 3/4;
+}
+
+melody = \notes \relative c'' \context Voice = melody {
+	\global
+	\stemup
+
+	% 1
+	r16 d f a f d f d r d r d |
+	r d f a f d f d r d r d |
+	r d g b g d g d r d r d |
+	r d g b g d g d r d r d |
+
+	% 5
+	r cis e g e cis e cis r cis r cis |
+	r cis e g e cis e cis r cis r cis |
+	r a d f d a d a r a r a |
+	r a d f d a d a r a r a |
+	r a d f d a d a r a r a |
+
+	% 10
+	r a d f d a d a r a r a |
+	r h d f d h d h r h r h |
+	r h d f d h d h r h r h |
+	r h c e c h c h r h r h |
+	r a c e c a c a r a r a |
+
+	% 15
+	r c e a e c e c r c r c |
+	r h f' a f h, f' h, r h r h |
+	r h d gis d h d h r h r h |
+	r h d gis d h d h r h r h |
+	r c e a e c e c r c r c |
+
+	% 20
+	r d gis h gis d gis d r d r d |
+	r e a c a e a e r e r e |
+	r e gis d' gis, e gis e r e r e |
+	r dis a' c a dis, a' dis, r dis r dis |
+	r d! f h f d f d r d r d |
+
+	% 25
+	r c fis a fis c fis c r c r c |
+	r h d a' d, h d h r h r h |
+	r h d gis d h d h r h r h |
+	r a c fis c a c a r a r a |
+	r gis h f'! h, gis h gis r gis r gis |
+
+	% 30
+	r a c e c a c a r a r a |
+	r a h d h a h a r a r a |
+	r gis h d h gis h gis r gis r gis |
+	r gis h d h gis h gis r gis r gis |
+	r a h d cis a cis a r a r a |
+
+	% 35
+	r h d gis d h d h r h r h |
+	r d gis h gis d gis d r d r d |
+	r cis e a e cis e cis r cis r cis |
+	r cis e g e cis e cis r cis r cis |
+	r a d f d a d a r a r a |
+
+	% 40
+	r gis d' f d gis, d' gis, r gis r gis |
+	r gis d' f d gis, d' gis, r gis r gis |
+	r a cis e cis a cis e f d h gis' |
+	<a,4 cis a'^\fermata> r r \bar "|.";
+}
+
+bass = \notes \relative c' \context Voice = bass {
+	\global
+	\stemdown
+
+	% 1
+	d4 r a'8 f |
+	d4 r a'8 f |
+	d4 r b'8 g |
+	d4 r b'8 g |
+
+	% 5
+	d4 r b'8 g |
+	d4 r b'8 g |
+	d4 r f8 d |
+	c4 r f8 d |
+	b4 r f'8 d |
+
+	% 10
+	a4 r f'8 d |
+	gis,4 r f'8 d |
+	gis,4 r gis'8 e |
+	a,4 r e'8 c |
+	a4 r c8 a |
+
+	% 15
+	f4 r a'8 f |
+	d4 r d8 h |
+	e,4 r e'8 h |
+	e,4 r e'8 h |
+	e,4 r e'8 c |
+
+	% 20
+	e,4 r f'8 d |
+	e,4 r a'8 e |
+	e,4 r h''8 gis |
+	e,4 r a'8 f |
+	e,4 r gis'8 e |
+
+	% 25
+	e,4 r fis'8 dis |
+	e,4 r f'!8 d! |
+	e,4 r e'8 h |
+	e,4 r dis'8 c |
+	e,4 r d'!8 h |
+
+	% 30
+	e,4 r c'8 a |
+	e4 r f'8 d |
+	e,4 r e'8 h |
+	a4 r f'8 d |
+	a4 r e'8 cis |
+
+	% 35
+	a4 r f'8 d |
+	a4 r f'8 d |
+	a4 r a'8 e |
+	a,4 r b'8 g |
+	a,4 r f'8 d |
+
+	% 40
+	a4 r f'8 d |
+	a4 r f'8 d |
+	a4 r r |
+	<a4_\fermata e'> r r |
+}
+
+GuitarStaff = \context Staff <
+	\property Staff.midiInstrument = "acoustic guitar (nylon)"
+	% \property Staff.transposing = -12
+
+	\melody
+	\bass
+>
+
+\score {
+	\GuitarStaff
+
+	\midi {
+		\tempo 4=80;
+	}
+
+	\paper {
+		linewidth = 18.0 \cm;
+	}
+}
+

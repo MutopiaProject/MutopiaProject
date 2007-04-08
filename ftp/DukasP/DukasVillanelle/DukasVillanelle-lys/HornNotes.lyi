@@ -1,0 +1,308 @@
+\include "defs.lyi"
+
+hornNotes = \relative c''
+{
+  %6/8
+  \transposition f
+  r4._"(sans les Pistons)" r4\f \times 2/3 {r16 g( d')} |
+  c4.-^ g-^ |
+  c,2.~-^\fp^\dimMolto | c~\pp | c~ |
+  c8 r r r4 \times 2/3 {r16\p g'( d')} |
+  c4.-_( g-_ |
+  c,2.~-_)_\dim | c2.~\pp |
+  c4~ c16 r r4
+
+  c8\(^(_\pEspress | \tag #'horn \noBreak
+  g'4 g8-.) bes( c d) |
+  e4( d8 c4) e8( |
+  d4) e8( d c b |
+  c4.)( g8)\) r
+
+  c,8\(^( |
+  g'4 g8-.) bes( c d) |
+  e4( d8 c4) e8( |
+  d4) e8( d c b |
+  c4.~) c8\) r
+
+  \once \override PhrasingSlur #'positions = #'(3 . 0)
+  c8\(( |
+  g'4) g8( f4) f8( |
+  e4) e8( f d f |
+  e4) e8( c d e |
+  d4.~) g,8\) r
+
+  \once \override PhrasingSlur #'positions = #'(3 . 0)
+  c8\(( |
+  g'4) g8( f4) f8( |
+  e4) e8( f d f |
+  e4) e8( d c b |
+  c4.~) c8\) r
+
+  c,8\(( |
+  ees4 ees8-.) ges8( aes bes) |
+  c4( bes8 aes4)\) ees8\(( |
+  e4) e8( g a b |
+  c2.~)\) | c8 r r r4. |
+
+  r4. r4 ees,8\(( |
+  e4) e8( g a b |
+  c2.~)\) | c~ |c8 r r r4. |
+
+  r4. r4 \times 2/3 {r16\mf g( d')} |
+  %4/4
+  c2-> g-> |
+  c,4~-> \times 2/3 {c16 r g'8-_( c-_}
+    \times 2/3 {d-_ c-_ d-_}
+    \times 2/3 {d-_ e-_ c-_} |
+  \repeat unfold 2
+  {
+    e8.->(\> d16) c4~\! \breathe c16\< d-_( c-_ d-_ d-_ e-_ c-_ d-_) |
+  }
+  e2.->(\pocosfz c4\> |
+
+  \tag #'horn \break %TODO: This break is because a mark is too long and goes off the page.
+  e2)\p r8 e-_(_\moltoEspress\< e-_ e-_) |
+  \times 2/3 {g-.->(\> f-. e-.} d4~)\!
+    \times 2/3 {d8 e-_( f-_}
+    \times 2/3 {d-_ e-_ f-_} |
+  e8.-_) b16-.( e4-_) r8 e-_(\< e-_ e-_) |
+  \times 2/3 {g-.->(\> f-. e-.} d4~)\!
+    \times 2/3 {d8 e-_( f-_}
+    \times 2/3 {d-_ e-_ f-_} |
+  \setTextCresc
+  f8.)\< c16-.( f4~--) f8. des16( f4~--) |
+
+  %3/2
+  f8. d16( f4~--) f8 e( g fis)
+    \times 2/3 {f[--( e-- ees]--}
+    \times 2/3 {c[-- bes-- aes]--} |
+
+  %2/2
+  g1~->)\mfp | g~ | g~ | g~ | g4 r r2 |
+  R1*19 |
+
+  %B
+  r4 g(\p^"(avec les Pistons)" c d |
+  g f8 e d4 e |
+  c g e a |
+  g f8 e d4 c |
+  g1~-> |
+  g8[) r8 a(_\pocoCresc b] c d e fis |
+  g1~ |
+  g8[) r d( e] fis g a b |
+  c4) b8-. c-. a4-. d-. |
+  c-. b8-. c-. a4-. d-. |
+  c-. b-. a-. d-. |
+  c-. b8-. c-. a4-. b8-. c-. |
+  \setTextCresc
+  d2-> r4 g,->\< |
+  \repeat unfold 2
+  {
+    d'2-> r4 g,-> |
+  }
+  d'2-> r4 g, |
+  \times 2/3 {d'4-.-^\mf c-. b-.} \times 2/3 {a-. b-. g-.} |
+  \times 2/3 {a-. b-. g-.} \times 2/3 {a-. c-. e-.} |
+  \times 2/3 {d-. b-. c-.} \times 2/3 {a-. b-. g-.} |
+  \times 2/3 {a-. f-. g-.} \times 2/3 {e-. f-. d-.} |
+  g,1~-> | g~ | g~ | g~ | g4 r r2 |
+  R1*3 |
+
+  %C
+  r4 c\fRisoluto g' bes |
+  f' ees8 d c4 d |
+  bes g a c |
+  bes a8 g f4 g |
+  a1~ |
+  a8[ r b,( cis] d e fis g |
+  a1~ |
+  a8[) r e( fis] g a b cis |
+  d4) cis8-. d-. b4-. e-. |
+  d4-. cis8-. d-. b4-. e-. |
+  d-. cis-. b-. e-. |
+  \times 2/3 {d4-| cis-| d-|} \times 2/3 {b-| cis-| d-|}
+  fis1~-^ | fis~ |
+  fis8[ r g e] c g e c |
+  g1( |
+  \clef bass c,4) r r2 |
+  \clef treble
+  R1*8 |
+
+  %D
+  r2 r4 \times 2/3 {r8_\pDolce g''( d')} |
+  c1( g c,~ c~ |
+  c4) e(_\pocoCresc g c |
+  c d c d |
+  ees2.\> d4 |
+  c1)\! |
+  r4 d(\p c d |
+  d_\pocoCresc ees c d |
+  ees2.\> d4 |
+  c1)\! |
+  r4 d(_\pocoCresc c d |
+  d ees c d |
+  \setTextDim
+  dis1~->\> dis~ dis |
+  \setTextDim
+  b dis~\p\> dis~ dis~ dis~ | dis4)\! r r2 |
+
+  dis1-_(\<^"(En echo)"_"(Doigtez un 1/2 ton au-dessus)" | dis-_ | << dis-_) {s2. s4\!} >> |
+  %legerement retenu
+  \once \override Score.RehearsalMark #'padding = #2.3
+  \times 2/3 {fis2-_(\> e-_ dis-_} | \tag #'horn \noBreak %NOTE: prevent tempo mark from going off the page.
+  cis1~\! | \tag #'horn \noBreak
+  \times 2/3 {cis2) dis-_ e-_} |
+  \times 2/3 {cis2-_ dis-_ e-_} |
+  dis2.~-_( dis8 ais |
+  dis1~-> |
+  dis4) r dis2-_(\< |
+  dis-_ dis-_) |
+  \times 2/3 {fis2-_(\> e-_ dis-_} |
+  cis1~\! |
+  \times 2/3 {cis2 dis-_ e-_} |
+  \times 2/3 {cis2-_ dis-_ e-_} |
+  e2.~ e8 b |
+  e1~ |
+  e2.~ e8) c(\pp |
+  e1~ |
+  \setTextCresc
+  e2.~\cresc e8) cis( |
+  e1~ |
+  e2 dis |
+  fis e) |
+  %revenez
+  \once \override Score.RehearsalMark #'padding = #1.5
+  \times 2/3 {ees2-_ d-_ des-_} |
+  \times 2/3 {c2-_ bes-_ g-_} |
+  d1~->\mfp |
+  d4 r r2 |
+  R1*6 |
+
+  %E
+  r4 d(\p g a |
+  d c8 b a4 b |
+  g d b e |
+  d c8 b a4 g |
+  \clef bass d1~ |
+  d4) \clef treble g(_\pocoCresc c d |
+  g1~) |
+  g4 c,( g' a |
+  d1~) \repeat unfold 5 {d1~} |
+  d4 c8( bes) aes4-. bes-. |
+  d-. c8( bes) aes4-. bes-. |
+  \setTextDim
+  d1~->\> d~ d~ d~ |
+  d4-.\! r d2-_(\p |
+  d-_\> d-_ |
+  ees2~\pp ees8) r r4 |
+  R1*3 |
+
+  %F
+  r4 ees,-.\p^"Mettez la Sourdine" aes-. bes-. |
+  ees-. des8-. c-. bes4-. c-. |
+  aes-. ees-. c-. f-. |
+  ees-. des8-. c-. bes4-. aes-. |
+  ees-. r r2 |
+  r4 ges-. ces-. des-. |
+  ges-. r r2 |
+  r4 bes,-. ees-. f-. |
+  bes-. r r des8(_\scherzando c |
+  bes4-.) r r des8( c |
+  bes4-.) r r cis8( b |
+  a4-.) r r cis8( b |
+  a4-.) r r c8( b |
+  a4-.) r r c8(_\piuf bes |
+  \setTextCresc
+  aes4-.) r r c8(\< bes |
+  aes4-.) r r bes8( aes |
+  g4-.)\f^"Ôtez la Sourdine" r r2 |
+  R1*5 |
+
+  %G
+  r4 g-^_\piuf c-^ d-^ |
+  g1~-^ |
+  g2 e-^ |
+  c-^ g4-^ e-^ |
+  c1~-^ |
+  c4 r r2 |
+  r4 g'-^ c-^ d-^ | g1-^ |
+  r4 f,-^ c'-^ d-^ | a'1-^ |
+  r4 f,-^ c'-^ d-^ | aes'2.-^( g4) |
+  fis1-> |
+  d1-> |
+  c1-> |
+  a1-> |
+  fis1-> |
+  a1-> |
+  c1-> |
+  e1-> |
+  g4(\f f8 e d4) e-. |
+  c-. g-. e-. a-. |
+  g4( f8 e d4) e-. |
+  c-. g-. e-. a-. |
+  g1~\fp | \tag #'horn \noBreak g~ | g2 r |
+  \tag #'horn \break %TODO: This break is because a mark is too long and goes off the page.
+  r_\markup{\column{"(sans les" "Pistons)"}} g'\(( |
+  
+  %6/8
+  bes4)_\espress bes8-.\) bes( c d |
+  e4 d8 c4) e8( |
+  d4) e8( d c b) |
+  c4.~ c4 \breathe ees8( |
+  d4.~ d4) ees8( |
+  d4.~ d4) \breathe ees8( |
+  d) ees( d~ d) e( d~ |
+  d) e( d) e16( d) e( d) e( d) |
+  \afterGrace d2._\mcresc\startTrillSpan {cis16[( d])\stopTrillSpan} |
+
+  %2/2
+  \tag #'horn \break %TODO: This break is because a mark is too long and goes off the page.
+  g4-|\f r r2 |
+  R1*3 |
+  r2^"(avec les Pistons)" f4-^_\ffmarcato e-^ |
+  d2-^ e-^ |
+  c-^ g-^ |
+  e-^ a-^ |
+  g1~-^ g~ g |
+  a2-^ b-^ |
+  c4-^ r \times 2/3 {e,4(_\sempreff g) c} |
+
+  %H
+  \repeat unfold 2 {\times 2/3 {c4 c c}} |
+  c1~ c~ |
+  c4 r \times 2/3 {e,4( g) c} |
+  \repeat unfold 2 {\times 2/3 {c4 c c}} |
+  c1~ c~ |
+  c4 r \times 2/3 {e,4( g) c} |
+  \repeat unfold 10 {\times 2/3 {c4 c c}} |
+  \times 2/3 {c g a} \times 2/3 {b c d} |
+  \times 2/3 {e b c} \times 2/3 {d e f} |
+  g1~ | g2 r |
+  <<
+    {
+      \times 2/3 {r4 c,,\ff e} \times 2/3 {g c e} |
+      g4 g-^ a-^ b-^ |
+      c-^ r r2 |
+      c,4-^ r r2 |
+      c,4-^ r r2\fermata |
+    }
+    \new Staff \with
+    {
+      \remove "Time_signature_engraver"
+      fontSize = #-3
+      \override StaffSymbol #'staff-space = #(magstep -3)
+    }
+    \relative c'
+    {
+      \set Staff.alignAboveContext = "horn"
+      \clef treble
+      \times 2/3 {r4^"ossia" c\ff e} \times 2/3 {g c e} |
+      g4 r g, r |
+      c r r2 |
+      c,4 r r2 |
+      \clef bass
+      c,4 r r2\fermata |
+    }
+  >>
+}
+

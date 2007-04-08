@@ -1,0 +1,303 @@
+\version "2.4.0"
+% $Revision: 1.2 $
+
+\header {
+     title = "28 melodische Übungsstücke"
+     subtitle = "23."
+     composer = "Anton Diabelli"
+     opus = "Op 149"
+
+     mutopiatitle = "28 melodische Übungsstücke"
+     mutopiacomposer = "Anton Diabelli"
+     mutopiaopus = "Opus 149-23"
+     mutopiainstrument = "Piano, Piano"
+     source = "If I could know..."
+     style = "Classical"
+     copyright = "Creative Commons Attribution-ShareAlike 2.0"
+     maintainer = "Alberto Simões"
+     maintainerEmail = "ambs@cpan.org"
+     maintainerWeb = "http://alfarrabio.di.uminho.pt/~albie"
+     lastupdated = "2005/May/12"
+
+footer = "Mutopia-2005/05/15-556"
+tagline = "\\raisebox{5mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright \\ The Mutopia Project \\& "+ \maintainer + " 2005.} \\makebox[188mm][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License. To view a copy of that license visit} \\makebox[188mm][c]{\\texttt{http://creativecommons.org/licenses/by-sa/2.0/} \\footnotesize or write to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}}"
+}
+
+primoDynamics =  {
+     s2.\p s2. s2. s4 s8\> s4 s8\! s2.\f
+     s2. s2. s2. s2.\p s2. s2. s2.
+     s4. s4.-\markup\italic{cresc.} s2. s2. s2.\f s2.\p s2.
+     s2. s4 s8\> s4 s8\! s2.\f s2. s2. s2.
+}
+
+primoUp =  {
+     \time 3/4
+     \clef treble
+     \key a \major
+     \relative c''' {
+         \override Score.OttavaBracket   #'padding = #2
+	#(set-octavation 1)
+	#(set-accidental-style 'modern)
+	\set fingeringOrientations = #'(left)
+	\repeat volta 2 {
+	    a8-1-. a4->-1 cis16(-3 b a b cis d)
+	    e8-5-. cis-3-. e4.(-5-> cis8)
+	    \acciaccatura e8 d-4-. b-2-. d4.(-4-> b8)
+	    \acciaccatura d8 cis8-3-. a-1-. cis2-3
+	    a8-1-. a4-> cis16(-3 b a b cis d)-4
+
+	    e8-5-. cis-3-. e4.(-> cis8)
+	    b8-2-. b4-> d16(-4 cis) b8-. cis16(-3 b)
+	    a8(-1-. cis16(-3 b) b4(-2-> a8) r
+	}
+	\repeat volta 2 {
+	    cis8-3 cis4-> cis8[ d cis]
+	    cis4( b) r
+	    b8-2 b4-> b8[ cis b]
+	    b4( a) r
+
+	    b8-2 b4-> b8[ cis cis]
+	    e(-5 d) d4.(-> cis8
+	    b8)-2 b4-> b8[ cis b]
+	    b4. e8[(-5-> d-4 b])-2
+	    a8-1-. a4-> cis16(-3 b a-1 b cis d)
+	    e8-5-. cis-3-. e4.(->-5 cis8)
+
+	    \acciaccatura e8 d-4-. b-2-. d4.(-> b8)
+	    \acciaccatura d8 cis-3-. a-. cis2
+	    a8-1-. a4-> cis16(-3 b a-1 b cis d)
+	    e8-.-5 cis-. e4.(-> cis8)
+	    b8-2-. b4-> d16(-4 cis) b8-. cis16(-3 b)
+	    a8-1-. cis16(-3 b) b4(-> a8) r
+	}
+     }
+}
+
+primoDown =  {
+     \time 3/4
+     \clef treble
+     \key a \major
+     \relative c'' {
+	#(set-accidental-style 'modern)
+	\set fingeringOrientations = #'(left)
+	\repeat volta 2 {
+	    <a-5 cis-3>8( e'-1 <a, cis> e' <a, cis> e')
+	    <a, cis>8( e' <a, cis> e' <a, cis> e')
+	    <b-4 d-2>( e <b d> e <b d> e)
+	    <a,-5 cis-3>8( e' <a, cis> e' <a, cis> e')
+	    a,8-5-. a4-> cis16(-3 b a-5 b cis d)
+
+	    e8-1-. cis-3-. e4.(-> cis8)
+	    b8-4-. b4-> d16(-2 cis) b8-. cis16(-3 b)
+	    a8(-5-. cis16(-3 b) b4(-4-> a8) r
+	}
+	\repeat volta 2 {
+	    cis8-3 cis4-> cis8[ d cis]
+	    cis4( b) r
+	    b8-4 b4-> b8[ cis b]
+	    b4( a) r
+
+	    b8-4 b4-> b8[ cis cis]
+	    e(-1 d) d4.(-> cis8
+	    b8)-4 b4-> b8[ cis b]
+	    b4. e8[(-1-> d-2 b])-4
+	    <a-5 cis-3>( e' <a, cis> e' <a, cis> e')
+	    <a, cis>( e' <a, cis> e' <a, cis> e')
+
+	    <b-4 d-2>( e <b d> e <b d> e)
+	    <a,-5 cis-3>( e' <a, cis> e' <a, cis> e')
+	    a,8-5-. a4-> cis16(-3 b a-5 b cis d)
+	    e8-.-1 cis-. e4.(-> cis8)
+	    b8-4-. b4-> d16(-2 cis) b8-. cis16(-3 b)
+	    a8-5-. cis16(-3 b) b4(-> a8) r
+	}
+     }
+}
+
+secondoDynamics =  {
+     s2.\p s2. s2. s2. s2.\f s2.
+     s2. s4 s8\> s8\! s4   s2.\p s2. s2. s2.
+     s2. s2.-\markup\italic{cresc.} s2. s2.\f s2.\p s2.
+     s2. s2. s2.\f s2. s2. s4 s8\> s8\! s4
+}
+
+secondoUp =  {
+     \time 3/4
+     \clef bass
+     \key a \major
+     \relative c' {
+	#(set-accidental-style 'modern)
+	\set fingeringOrientations = #'(left)
+	\set doubleSlurs = ##t
+	\repeat volta 2 {
+	    r8 <a-1 cis-3 e-5>16 <a cis e> <a cis e>8 <a cis e> r <a cis e>
+	    r8 <a cis e>16 <a cis e> <a cis e>8 <a cis e> r <a cis e>
+	    r8 <gis-2 d'-4 e-5>16 <gis d' e> <gis d' e>8 <gis d' e> r <gis d' e>
+	    r8 <a-1 cis-3 e-5>16 <a cis e> <a cis e>8 <a cis e> r <a cis e>
+	    r8 <a-1 cis-3 e-5>16 <a cis e> <a cis e>8 <a cis e> <a cis e> <a cis e>
+	    r8 <a-1 cis-3 e-5>16 <a cis e> <a cis e>8 <a cis e> <a cis e> <a cis e>
+
+	    r8 <a-1 b-2 fis'-5>16 <a b fis'> <a b fis'>8 <a b fis'> r <gis-1 b-2 d-4 e-5>
+	    <a cis-3 e-5> <gis d'-4 e-5> <gis d' e>4( <a-1 cis-3>8) r
+	}
+	\repeat volta 2 {
+	    r8 <a cis-2 fis-4>[ r <a cis fis> r <a cis fis>]
+   	    r8 <b cis-2 gis'-5>[ r <b cis gis'> r <b cis gis'>]
+             r8 <b cis-2 eis-4>[ r <b cis eis> r <b cis eis>]
+             r8 <a cis-2 fis-4>[ r <a cis fis> r <a cis fis>]
+
+             r8 <fis b-2 fis'-5>[ r <fis b fis'> r <ais-2 e'-4 fis-5>]
+             r8 <b d-3 fis-5>[ r <b d fis> r <a cis-3 fis-5>]
+             r8 <a b-2 fis'-5>[ r <a b fis'> r <a b fis'>]
+             <gis b e-5>8. <gis b e>16 <gis b e>8 r8 r4
+             r8 <a cis-3 e-5>16 <a cis e> <a cis e>8 <a cis e> r <a cis e>
+             r8 <a cis-3 e-5>16 <a cis e> <a cis e>8 <a cis e> r <a cis e>
+
+             r8 <gis-2 d'-4 e-5>16 <gis d' e> <gis d' e>8 <gis d' e> r <gis d' e>
+             r8 <a cis-3 e-5>16 <a cis e> <a cis e>8 <a cis e> r <a cis e>
+             r8 <a cis e>16 <a cis e> <a cis e>8 <a cis e> <a cis e> <a cis e>
+             r8 <a cis e>16 <a cis e> <a cis e>8 <a cis e> <a cis e> <a cis e>
+             r8 <a b-2 fis'-5>16 <a b fis'> <a b fis'>8 <a b fis'> r <gis b d-4 e-5>
+             <a cis e> <gis d' e> <gis d' e>4( <a-1 cis-3>8) r
+	}
+     }	
+}	
+
+secondoDown =  {
+     \time 3/4
+     \clef bass
+     \key a \major
+     \relative c {
+	#(set-accidental-style 'modern)
+	\set fingeringOrientations = #'(left)
+	\set doubleSlurs = ##t
+	\repeat volta 2 {
+	    a8-2 r r4 a8 r a r r4 a8 r
+	    <e e'>8 r r4 <e e'>8 r
+	    a-2 r r4 a8-1 r
+	    a,4 a' a a, a'-1 a-2
+
+	    <d, d'>4 r <e e'>
+	    <a-3 e'>8 <e e'> <e e'>4( <a e'>8) r
+	}
+	\repeat volta 2 {
+	    <fis fis'>8[ r <fis fis'> r <fis fis'>] r
+	    <eis eis'>8[ r <eis eis'> r <eis eis'>] r
+             <cis cis'>8[ r <cis cis'> r <cis cis'>] r
+             <fis fis'>8[ r <fis fis'> r <fis fis'>] r
+
+             <d d'>8[ r <d d'> r <cis cis'>] r
+             <b b'>8[ r <b b'> r <cis cis'>] r
+             <d d'>8[ r <d d'> r <dis dis'>] r
+             <e e'>8. <e e'>16 <e e'>8 r r4
+             a8-2 r r4 a8 r
+             a8 r r4 a8 r
+
+             <e e'>8 r r4 <e e'>8 r
+             a8-2 r r4 a8-1 r
+             a,4 a' a
+             a, a'-1 a-2
+             <d, d'>4 r <e e'>
+             <a-3 e'>8 <e e'> <e e'>4( <a e'>8) r
+	}
+     }
+}
+
+\paper{
+     bottommargin = 1\cm
+     footsep = 2\cm
+}
+
+\score{
+     \context PianoStaff  <<
+	\set PianoStaff.instrument = "Secondo     "
+	\context Staff = "up"   \secondoUp
+	\context Dynamics = "dynamics" \secondoDynamics
+	\context Staff = "down" \secondoDown
+>>
+     \layout {
+	\context {
+	    \type "Engraver_group_engraver"
+	    \name Dynamics
+	    \consists "Output_property_engraver"
+
+	    minimumVerticalExtent = #'(-1 . 1)
+
+	    \consists "Script_engraver"
+	    \consists "Dynamic_engraver"
+	    \consists "Text_engraver"
+	
+	    \override TextScript #'font-size = #2
+	    \override TextScript #'font-shape = #'italic
+	    \override DynamicText #'extra-offset = #'(0 . 2.0)
+	    \override Hairpin #'extra-offset = #'(0 . 2.0)
+	
+	    \consists "Skip_event_swallow_translator"
+	
+	    \consists "Axis_group_engraver"
+	}
+	\context {
+	    \PianoStaff
+	    \accepts Dynamics
+	    \override VerticalAlignment #'forced-distance = #7
+	}
+     }
+     \header { piece = "Polonaise." }
+}
+
+
+\score{
+     \context PianoStaff <<
+	\set PianoStaff.instrument = "Primo     "
+	\context Staff = "up"   \primoUp
+	\context Dynamics = "dynamics" \primoDynamics
+	\context Staff = "down" \primoDown
+>>
+
+     \layout {
+	\context {
+	    \type "Engraver_group_engraver"
+	    \name Dynamics
+	    \consists "Output_property_engraver"
+
+	    minimumVerticalExtent = #'(-1 . 1)
+
+	    \consists "Script_engraver"
+	    \consists "Dynamic_engraver"
+	    \consists "Text_engraver"
+	
+	    \override TextScript #'font-size = #2
+	    \override TextScript #'font-shape = #'italic
+	    \override DynamicText #'extra-offset = #'(0 . 2.0)
+	    \override Hairpin #'extra-offset = #'(0 . 2.0)
+	
+	    \consists "Skip_event_swallow_translator"
+	
+	    \consists "Axis_group_engraver"
+	}
+	\context {
+	    \PianoStaff
+	    \accepts Dynamics
+	    \override VerticalAlignment #'forced-distance = #7
+	}
+     }
+     \header { piece = "Polonaise."}
+}
+
+
+
+\score{
+     \context PianoStaff  <<
+	\context Staff = "up"   <<
+	    \applymusic #unfold-repeats \primoUp
+	    \applymusic #unfold-repeats \secondoUp
+	>>
+	\context Staff = "down" <<
+	    \applymusic #unfold-repeats \primoDown
+	    \applymusic #unfold-repeats \secondoDown
+	>>
+>>
+     \midi { \tempo 4 = 80 }
+}
+
+

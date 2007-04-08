@@ -1,0 +1,166 @@
+\include "defs.lyi"
+
+violaMvtI = \relative c'
+{
+  \clef alto
+  \key d \major
+  r4
+  r8 <a fis>\p \repeat unfold 6 <a fis> |
+  \repeat unfold 2
+  {
+    r8 \repeat unfold 7 <a g> |
+  }
+  r8 << {a4 a8} \\ {g8( fis) fis} >> \repeat unfold 4 <a fis> |
+  r8 fis-. d'-. fis-. r a,-. d-. fis-. |
+  r8 b,-. d-. g-. r b,-. e-. g-. |
+  r fis,-. a-. d-. fis-. d-. e-. cis-. |
+  \repeat unfold 2
+  {
+    \repeat tremolo 8 d16 \repeat tremolo 8 e16 |
+  }
+  d'8 cis b a g fis e d |
+  a'4 a, r2 |
+  R1*2 |
+  r2 r8 a'(\p g fis) |
+  e4 r8 a,-. d-. a-. d,-. a''\f |
+  fis fis d' d cis4.( d8) |
+  e-. e,4( fis8) a-. cis,4( e8) |
+  a, fis' d' d cis8. d16 cis8 d |
+  e e, a16( fis) e( g) fis4 r8 a |
+  d,4 r8 a' d, a' d, a' |
+  d, fis a fis d4 r |
+  r8 fis,8\p \repeat unfold 6 fis |
+  \repeat unfold 2
+  {
+    r8 \repeat unfold 7 g |
+  }
+  r8 g( fis) fis-. fis fis fis fis |
+  r8 fis fis fis r d d d |
+  r d d d r d( a') a-. |
+  a r a r a r g r |
+  fis4 r8 a'8\f d,4 r8 a' |
+  d, fis,\p \repeat unfold 6 fis |
+  e4 r8 e'8\f a4 r8 e |
+  a8 a,\p a a e e e e |
+  e8 r e'\f e e r e e |
+  e4 r gis,2(\p |
+  a4) r fis r |
+  e r8 b'\f e gis b gis |
+  e e, e e e4 r |
+
+  r8 e\p e e \repeat unfold 7 {r e e e} |
+  a8\f b16 cis d e fis gis a8 a16 e b'8 b16 e, |
+  cis'8 cis,\p cis cis r a a a |
+  r b b b r fis fis fis |
+  r e e e r b' b b |
+  a8 a4\f a a a8~ |
+  a4 r r8 a\p a a |
+  r a a a r a a a |
+  a e' e e e e e e |
+  e\< e e e e e e e |
+
+  e\f a,16 a a a a a \repeat tremolo 8 b16 |
+  \repeat tremolo 8 a16 \repeat tremolo 8 b16 |
+  a8 cis' a eis fis a fis cis |
+  d8 b'16 cis d8 b e cis16 d e8 e, |
+  e a,16 a a a a a \repeat tremolo 8 b16 |
+  \repeat tremolo 8 a16 \repeat tremolo 8 b16 |
+  a8 cis' a eis fis a fis cis |
+  d8 b'16 cis d8 b e cis16 d e8 e, |
+  a8 cis a eis fis a fis cis |
+  d8 b'16 cis d8 b e cis16 d e8 e, |
+  a a,\p \repeat unfold 14 a |
+  \repeat unfold 18 gis \repeat unfold 6 a |
+  a( cis) cis-. cis-. cis( e) e-. e-. |
+  d r d r e r fis r |
+  fis r b r b r b, r |
+  cis r cis' r b r b r |
+  ais r cis, r b r b r |
+  ais r b r ais r b r |
+  ais4 r r2 |
+
+  r4 d8\f d d d d d |
+  d4 r r2 |
+  r8 d,\p d d r g g g |
+  r g g g r bes bes bes |
+  b b g g fis fis a a |
+  g \repeat unfold 7 g' |
+  \repeat unfold 2
+  {
+    r \repeat unfold 7 fis |
+  }
+  r fis( g) g-. g( e fis dis) |
+  e \repeat unfold 7 g, |
+  \repeat unfold 2
+  {
+    r \repeat unfold 7 a |
+  }
+  a4( g) r2 |
+
+  a8\f cis e a a, cis e a |
+  \repeat unfold 4 {a, d fis a} |
+  \repeat unfold 4 {a, cis e a} |
+  d, a' b a g fis e d |
+  \repeat unfold 2
+  {
+    a8 a'16 b \grace d16 cis8 b16 a d8 a fis d |
+  }
+  e8-. cis16( e a8.) a16-. a4-. r |
+  r8 cis,16( e a8.) a16-. a4-. r |
+  r8. a16 cis8. a16 e8. a16 cis,8. e16 |
+  a,4 r r2 |
+
+  r8 fis\p \repeat unfold 6 fis |
+  \repeat unfold 2
+  {
+    r8 \repeat unfold 7 g |
+  }
+  r8 g( fis) fis-. fis fis fis fis |
+  r fis fis fis r d d d |
+  r d d d r d( a') a-. |
+  a r a r a r g r |
+  fis4 r8 a'8\f d,4 r8 a' |
+  d, fis,\p fis fis r fis fis fis |
+  g4 r8 d'\f g4 r8 d |
+  g g,\p g g r a a a |
+  g4 r8 a'\f g4 r8 a |
+  g g,\p g g r g g g |
+  g2( e~) |
+  e8 a\f cis fis a cis e cis |
+  a a a, a a4 r |
+  r8 e\p e e e e e( g) |
+  r8 \repeat unfold 7 fis |
+  r8 e e e e e e( g) |
+
+  \repeat unfold 2
+  {
+    \repeat unfold 2 {r8 d' d d} |
+    \repeat unfold 2 {r8 cis cis cis} |
+  }
+  d4 r r2 |
+  R1 |
+  r2 r8 a'(\p g fis) |
+  e4 r8 a,-. d-. a-. d,-. r |
+  d4 r r8 a'16( b cis8 d) |
+  b-. g( e d) cis( e) a-. g-. |
+  fis4 d r8 a'8( g fis) |
+  e-. g( fis e) e4( fis8) r |
+  e'4\f r8 e a,4 r8 fis' |
+  e4 r8 cis16 e a,4 r |
+  r8 a\p a a \repeat unfold 3 {r a a a} |
+  r b( c) c-. b4 r8 a( |
+  g4) r8 a8( g4) r |
+  a8 a a a a a' a a |
+  <<
+    {\repeat tremolo 8 a16 \repeat tremolo 8 <a g>}
+    {s1\<}
+  >> |
+  <a fis>8\f d,16 d d d d d \repeat tremolo 8 e16 |
+  \repeat tremolo 8 d16 \repeat tremolo 8 e |
+  d8 ais' b gis a e fis d |
+  g e16 fis g8 e a fis16 g a8 a, |
+  d4 r8 a' d,4 r8 a' |
+  d,4 r8 a' d, a' d, a' |
+  d, fis a fis d4 r |
+}
+

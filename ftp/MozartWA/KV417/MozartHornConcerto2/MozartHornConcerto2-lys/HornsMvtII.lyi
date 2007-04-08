@@ -1,0 +1,20 @@
+\include "defs.lyi"
+
+hornsMvtII = \relative c''
+{
+  \key c \major
+  \transposition ees
+  << { g4.~ | g~ | g8 } \\ { g4.~\pp | g~ | g8 }
+  >> r8 r |
+  r << {d' d} \\ {d g,} >> |
+  R4.*22 |
+  << {d'8 d d | d} \\ {d\p d d | d} >> r8 r |
+  R4.*54 |
+  <<
+    {\voiceOne d4.~}
+    \new Voice {\voiceTwo d4.}
+  >> \oneVoice |
+  <d g,>8 <d g,>\pp <d g,> |
+  <d g,>4 r8 |
+}
+

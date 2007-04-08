@@ -1,0 +1,29 @@
+mcresc = #(make-dynamic-script (markup #:normal-text #:italic "cresc."))
+dolce = #(make-dynamic-script (markup #:normal-text #:italic "dolce"))
+aTwo = "a2"
+
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score.RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \bold $markp }
+#})
+
+outlineMvtI =
+{
+  \time 4/4
+  \tempoMark "Allegro"
+  \partial 4 s4
+  s1*143 |
+  \bar "|."
+}
+
+outlineMvtII =
+{
+  \time 6/8
+  \tempoMark "Allegro"
+  \partial 8 s8
+  s2.*141 |
+  \bar "|."
+}
+

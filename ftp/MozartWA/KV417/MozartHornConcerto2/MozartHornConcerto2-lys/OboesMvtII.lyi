@@ -1,0 +1,51 @@
+\include "defs.lyi"
+
+oboesMvtII = \relative c''
+{
+  \key bes \major
+  <f d>4(\p <g ees>8) |
+  <<
+    \new Voice
+    {
+      \voiceOne
+      f8 bes16( a g f) |
+      bes8( bes, g') |
+    }
+    {
+      \voiceTwo
+      d8 c4 |
+      d8 r d~ |
+    }
+  >> \oneVoice |
+  <f d>8( <ees c> <d bes>) |
+  R4.*21 |
+  <a' f>4(\p <bes g>16 <g e>) |
+  \grace g16
+  <<
+    \new Voice
+    {
+      \voiceOne
+      f8 f f |
+    }
+    {
+      \voiceTwo
+      f8 a, a |
+    }
+  >> \oneVoice |
+  <f' a,>8 r r |
+  R4.*54 |
+  <d bes>4 <ees c>16( <c a>) |
+  \grace <c a>16
+  <<
+    \new Voice
+    {
+      \voiceOne
+      bes8 bes' bes | bes4
+    }
+    {
+      \voiceTwo
+      bes,8 d\pp d | d4
+    }
+  >> \oneVoice r8 |
+}
+

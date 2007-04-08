@@ -1,0 +1,187 @@
+\include "defs.lyi"
+
+hornMvtIII = \relative c''
+{
+  \transposition f
+  %TODO: For some reason if these aren't also here the horn part in the piano
+  %part doesn't get these settings. I'd prefer to only keep these settings in
+  %one place.
+  #(override-auto-beam-setting '(end 1 16 * *) 4 16)
+  #(override-auto-beam-setting '(end 1 16 * *) 8 16)
+  #(override-auto-beam-setting '(end 1 16 * *) 12 16)
+  #(override-auto-beam-setting '(end 1 12 * *) 3 12)
+  #(override-auto-beam-setting '(end 1 12 * *) 6 12)
+  #(override-auto-beam-setting '(end 1 12 * *) 9 12)
+  #(override-auto-beam-setting '(end 1 24 * *) 6 24)
+  #(override-auto-beam-setting '(end 1 24 * *) 12 24)
+  #(override-auto-beam-setting '(end 1 24 * *) 18 24)
+  r2
+  R1*3 |
+  r2 g4-.\p g-. |
+  c2\mcresc c, |
+  b f''\sf |
+  f8(\p e) e( d) d( c) c( b) |
+  d2( c4) g |
+  d'2( e4)-. c-. |
+  g' r r g, |
+  d'2( e4)-. c-. |
+  g' r g,\p g |
+  c2\mcresc c, |
+  b f''\sf |
+  f8(\p e) e( d) d( c) c( b) |
+  d2( c4) g |
+  e'2-\cantabile e4-.( e-.) |
+  d2( g) |
+  c,4.( d16 c) b4( c) |
+  e2( d4) r |
+  R1*3 |
+  r4 d-.\p d-. d-. |
+  << {s4\< s s\> s\!} {d2.( cis4)} >> |
+  d4 d d d |
+  << {s4\< s s\> s\!} {d2.( cis4)} >> |
+  d4 r r2 |
+  R1*2 |
+  r4 d-.( d-. d-.) |
+  d g8( fis) e-. d-. c-. b-. |
+  c4 r r d8-. d-. |
+  d-. b( g' fis) e-. d-. c-. b-. |
+  c4 r r2 |
+  g8-. fis-. g-. a-. b-. c-. d-. dis-. |
+  c4\f c, r2 |
+  r4 d'\p r d |
+  R1 |
+  g,,8-.\f g'-. a-. b-. c-. d-. e-. c-. |
+  b4 r r2 |
+  g2(\p g,) |
+  g'( g,) |
+  g'4( g,) g'( g,) |
+  g'2( g,) |
+  R1*3 |
+  r2 g'4-.\p g-. |
+  c2\mcresc c, |
+  b f''\sf |
+  f8(\p e) e( d) d( c) c( b) |
+  d2( c4) g |
+  d'2( e4)-. c-. |
+  g' r r g, |
+  d'2( e4)-. c-. |
+  g' r r2 |
+  R1 |
+  g,2\mcresc g, |
+  c4 r r2 |
+  r r4 e |
+  e'2 d8( c b a) |
+  b2 e,4 e |
+  a-. a-. a( b8 c) |
+  b2 e2~ |
+  e4-.( e-.) e( ees) |
+  d2. d4( |
+  c) c( a) a( |
+  g) r r2 |
+  R1 |
+  e'4\p e, r2 |
+  R1 |
+  e'4 e, r2 |
+  R1 |
+  c'2( b4) g |
+  R1 |
+  r2 g'4 g |
+  g2 f8( e d cis) |
+  \grace e8 d8( cis d e) f4 f |
+  f4.( e8) d( c b a) |
+  gis( e') e e e e e e |
+  e2 d8( c b a) |
+  f'2. d4( |
+  e-.) e-. e-. e-. |
+  a, r r2 |
+  R1*3 |
+  r4 e\p e e |
+  e'2 d8( c b a) |
+  a2. r4 |
+  r e4 e e |
+  e r r2 |
+  R1*3 |
+  r4 g,\p r g |
+  f''4.\sf e8 d c b a |
+  g4.\sf a8 b c d e |
+  f4.\sf e8 d c b a |
+  \repeat unfold 2 {\grace a8 g fis} g a bes b |
+  c2\p c, |
+  b f'' |
+  f8( e) d( c) b( a) g'( f) |
+  e2( d4) r |
+  R1 |
+  g,2\pcresc g, |
+  c4 r r2 |
+  r2 r4 g' |
+  d'2( e4-.) c-. |
+  g'4 r r g, |
+  d'2( e4-.) c-. |
+  g'4 r r2 |
+  R1 |
+  g,2\mcresc g, |
+  c4 r r2 |
+  r r4 c'~\sf |
+  c c, r c'~\sf |
+  c c, r c'( |
+  g') g8 g g( f) e-. d-. |
+  <<
+    \repeat unfold 3
+    {
+      c4 r \times 2/3 {c,8 c' c} \times 2/3{c c c} |
+    }
+    {s1*2 | s2 s\mcresc |}
+  >>
+  \repeat unfold 2 { \times 2/3 {c,8 c' c} \times 2/3{c c c} } |
+  \repeat unfold 4 { \times 2/3 {g,8 g' g} \times 2/3{g g g} } |
+  g,4\f r r2 |
+  \times 2/3 {g8\ff g'\< g} \times 2/3{g g g} %NOTE: I like a crescendo here.
+    \times 2/3 {g a b} \times 2/3{c d e} |
+  f1~\sf\> |
+  f2\fermata g,4\pp g |
+  c2 c, |
+  b4 r g' g |
+  c2 c, |
+  b4 r g' g |
+  c2\f c, |
+  bes'1\ff |
+  a4 r r2 |
+  R1 |
+  \repeat unfold 2
+  {
+    c8 g'16( e) \times 2/3 {c8-. g-. e-.}
+      c8 g''16 e c g e c |
+    g4 r r2 |
+  }
+  r4 g-. c-. e-. |
+  g-. g-. c-. e-. |
+  g2~ g8( fis f e) |
+  d1\trill |
+  c4 r r2 |
+  R1 |
+  c2\p c8 d e f |
+  g4-.( g-. g-. g-.) |
+  c, r r2 |
+  R1 |
+  c2~ c8( d e f) |
+  fis( g) g-. g-. g-. g-. g-. g-. |
+  c,4 r r2 |
+  R1*2 |
+  \textSpannerDown
+  \override TextSpanner #'edge-text = #'("rallentando " . "")
+  r2 g4\startTextSpan g |
+  c2 c, |
+  b f'' |
+  f8( e) e( d) d( c) c( b)\stopTextSpan |
+  c4\f r \times 2/3 {g8 g' g} \times 2/3 {g g g} |
+  g4 r \times 2/3 {g,8 g' g} \times 2/3 {g g g} |
+  g4 r r2 |
+  \times 2/3 {c,8\ff g' e} \times 2/3 {c e c}
+    \times 2/3 {g c g} \times 2/3 {e g e} |
+  c4 r
+    \clef bass
+    \set Staff.middleCPosition = #-1
+    c, r |
+    c r
+}
+

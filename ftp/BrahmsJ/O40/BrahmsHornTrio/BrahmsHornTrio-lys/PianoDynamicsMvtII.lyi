@@ -1,0 +1,161 @@
+\include "defs.lyi"
+
+pianoDynamicsMvtII =
+{
+  s2.\p |
+  s2.*11 |
+
+  %A
+  s2.\f |
+  s2.*3 |
+  s2.\f |
+  s |
+  s-\mStacc |
+  s2.*22 |
+  s2.\p |
+  s2.*6 |
+  s2.\p |
+  s2.*9 |
+  s2. |
+  s2. |
+
+  %B
+  s2.-\mCresc |
+  s2.*15 |
+  s2.\f |
+  s4 s\> s |
+  s2. |
+  s4 s s\! |
+  s2.\p |
+  s2.*6 |
+  s4 s s\p |
+  s2.*4 |
+  s2.\p |
+  s4\< s s\! |
+  s4\> s s\! |
+  s2. |
+
+  %key change
+  s2.*4-\mCresc
+  s2.*4\f |
+  s2.*4\p |
+  s2.*2\f |
+  s2.*2\p |
+  s2.*8\p |
+
+  %C
+  s2. |
+  s2.*15-\mPLeggiero |
+  s2.*6\p |
+  s4\< s s\! |
+  s4\> s s\! |
+
+  %D
+  s2.*6 |
+  s4\< s s\! |
+  s4\> s s\! |
+
+  %key change
+  s2.*6 |
+  s2.*2-\mCresc |
+  s4 s s\< | s s s\! |
+  s2.*4\f |
+
+  %E
+  s2.*4\f |
+  s2.*2\f |
+  s2.*19-\mStacc |
+  s2.*23\p |
+  s2.*8-\mPocoCresc |
+
+  %F
+  s2.*4\f |
+  s2.*8\f |
+  s4\mf s s\< |
+  s s s\! |
+  s2.*6 |
+  s2.\f |
+  s2.*2\fz |
+  s2.*5\fz |
+
+  %G |
+  s2.\p |
+  s2.\< | s4 s s\! |
+  s2. |
+  s2.\f |
+  s2.\< | s4 s s\! |
+  s2.*5 |
+  s2.*4-\mCresc |
+  s2.*5\f |
+  s2.*6\f |
+  %fine
+
+  s2. |
+  s2.*8-\mPRitPocoAPoco |
+
+  %key change
+  s2.*21\p |
+  s4\< s s\! |
+  s2.\> |
+  s4 s s\! |
+  s2.*3 |
+  s2.*5-\mPocoAPocoCresc |
+
+  %H
+  s2.*4 |
+  s4\< s s\! |
+  s s s\> | s2. | s4 s s\p\< | s\> s s\! |
+  s2.*7 |
+  \setTextCresc
+  s2.*3\< | s2.\! |
+  s2.*3 |
+  s2.*2\f |
+  s4 s s-\mDim |
+  s2.*9 |
+  s2.*3-\mPRit |
+  s2.*4\> | s2.\! |
+}
+
+pianoPedalsMvtII =
+{
+  s2.*12 |
+
+  %A
+  s2.*46 |
+  s2.*2\sustainDown
+
+  %B
+  s2.*36\sustainUp |
+  s2.*24 |
+
+  %C
+  s2.*24 |
+
+  %D
+  s2.*8 |
+  s2.*14 |
+
+  %E
+  s2.*56 |
+
+  %F
+  s2.*28 |
+
+  %G
+  s2.*27 |
+  %Fine
+
+  s2. |
+  s2.*4\sustainDown |
+  s4 s \sustainDown s |
+  s2.*3 |
+
+  %Molto meno Allegro
+  s2.*12\sustainUp |
+  s2.*20_\mColPed |
+
+  %H
+  s2.*44 |
+  %Scherzo D.C. sin'al Fine
+}
+

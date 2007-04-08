@@ -1,0 +1,84 @@
+\include "defs.lyi"
+
+violinIMvtII = \relative c''
+{
+  \key bes \major
+  f4( g8) |
+  f8 bes16( a g f) |
+  bes8 bes, g' |
+  f( ees d) |
+  bes, bes bes |
+  c8.( d32 ees d8) |
+  f4. |
+  d' |
+  \grace c16 bes4 g16( e) |
+  f4 r8 |
+  f4( g8) |
+  f4.~ |
+  f8 r g |
+  f( ees d) |
+  bes' bes bes |
+  c8.( d32 ees d8) |
+  r r bes, |
+  c4 d8 |
+  r f f |
+  r fis fis |
+  r g( aes) |
+  r a( bes16 g) |
+  f'4.( | fis) |
+  g4( aes8) |
+  a4( bes16 g) |
+  g( f) f8 f |
+  f r r |
+  f4.~\p | \repeat unfold 4 f~ | f8 r r |
+  bes,4( e,8) |
+  f r16 a'( g e) |
+  f( a c a g e) |
+  f( c) c-. c-. c-. c-. |
+  c-. c-. c-. c-. c-. c-. |
+  f8 r r |
+  f,4( g8) |
+  f4.~ |
+  f8 r g |
+  f( ees d) |
+  bes bes bes |
+  c8.( d32 ees d8) |
+  ees r ees |
+  f4( g8) |
+  r g g |
+  f4 r8 |
+  ees( d c) |
+  bes r r |
+  \repeat unfold 5 f''4.~ | f8 r r |
+  bes,4( e,8) |
+  f r16 a'( g e) |
+  f( a c a g e) |
+  f( c) c-. c-. c-. c-. |
+  c-. c-. c-. c-. c-. c-. |
+  f8 r r |
+  f,4( g8) |
+  f4.~ |
+  f8 r g |
+  f( ees d) |
+  bes bes bes |
+  c8.( d32 ees d8) |
+  ees r ees |
+  f4( g8) |
+  r g g |
+  f4 r8 |
+  ees'( d c) |
+  \repeat unfold 2
+  {
+    bes4.( | b) |
+    c4 des8 |
+    d8.
+      \set stemLeftBeamCount = #1
+      \set stemRightBeamCount = #2
+      f16(
+      \set stemLeftBeamCount = #2
+      ees c) |
+  }
+  bes8 <bes d,>\pp <bes d,> |
+  <bes d,>4 r8 |
+}
+

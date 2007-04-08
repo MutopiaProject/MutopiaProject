@@ -1,0 +1,211 @@
+\include "defs.lyi"
+
+pianoDynamicsMvtI =
+{
+  %2/4
+  \partial 4 s4 |
+  s s-\mPDolce |
+  s2*15 |
+  \repeat unfold 2 {s4 s\< | s\> s\! |}
+  s s\p |
+  s2*3 |
+  s4 s-\mDim |
+  s2*3 |
+
+  %A
+  s8\p s4.-\mEspr |
+  s2*8 |
+  s8 s4-\mCresc s8 |
+  s2*12 |
+  s2-\mDim |
+  s2
+  s2\< | s4\! s\> | s s\! |
+
+  %B
+  s4 s\p |
+  s2*6 |
+  s2-\mPocoCresc |
+  s2*3 |
+  s2-\mDim |
+  s2*5 |
+  s2-\mSenzaRit |
+  s4 s\> | s2 | s4 s\! |
+
+  %poco più animato
+  s4.*3\mp
+  s4.*3*4 |
+  s4. s s8 s\< s |
+  s4. s s\! |
+  s8 s\> s s4. s8 s s\!
+  s4.*3*2 |
+  s4. s\< s8 s s\! |
+  s4. s\> s8 s s\! |
+  s4.*3*3 |
+  s4.*3-\mFLegato |
+  s4.*3*2 |
+
+  %C
+  s4.*3\p |
+  s4. s\< s8\> s s\!
+  s4.*3 |
+  s4.-\mCresc s\< s8\> s s\! |
+  s4.*3*2 |
+  s4.*3-\mFLegato |
+  s4.*3 |
+  s8*5 s8\< s s s\! |
+  s4.\f s s |
+  s s4 s8-\mPDolce s4. |
+  s4.*3*2 |
+  s4.*3\< | s4.\> s4 s8\! s4. |
+
+  %D
+  s4.*3-\mLegato |
+  s |
+  s-\mSempreCresc |
+  s4.\< s s |
+  s s s |
+  s s s\! |
+  s\> s s8 s s\! |
+  s4.\p\< s s8 s s\! |
+  s4.\sf s s8\> s s\! |
+  s4.\p s s |
+  s s s |
+  s\< s s8 s s\! |
+  s4.\sf\> s s8 s s\! |
+  s4.\p s s |
+  s-\mDim s s |
+  s-\mPocoAPocoRit s s |
+  s4.*3*5 |
+
+  %Tempo I
+  s2-\mPDolce |
+  s2*7
+
+  %E
+  s2*14
+  s2-\mPocoCresc
+  s2*2 |
+  s4 s-\mDim |
+  s2*6 |
+  s4 s-\mSenzaRit |
+  s8 s4.\> |
+  s2 |
+  s4. s8\! |
+
+  %poco piu animato
+  s4.*3\mp |
+  s4.*3*5 |
+  s4. s\< s8 s s\! |
+  s4.\> s8 s s\! s4. |
+  s4. s\< s8 s s\! |
+  s4.*3 |
+  s8 s\> s s4. s8 s s\! |
+  s8*4 s8*5-\mLeggiero
+
+  %F
+  s4.*3*2 |
+  s4.-\mSempreCresc s s8 s s\< |
+  s4.*3*2 |
+  s4. s8 s s\! s4.\> |
+  s4. s s8 s s\! |
+  s4.\p\< s s8 s s\! |
+  s4.\sf\> s s8 s s\! |
+  s4.\p s s |
+  s4.*3 |
+
+  %G
+  s4.\< s s8 s s\! |
+  s4.\sf\> s s8 s s\! |
+  s4.*3\p |
+  s-\mDim |
+  s-\mPocoAPocoRit |
+  s4.*3*5 |
+
+  %Tempo I
+  s4 s\pp |
+  s2*11 |
+  s2-\mPocoCresc |
+  s2*7 |
+
+  %H
+  s2-\mPSempre |
+  s-\mCresc |
+  s |
+  s-\mPocoAnimatoPoiAPoi |
+  s2*10 |
+
+  %ees major
+  s2-\mFLegato |
+  s2*7 |
+  s4 s\> | s s8*2/3 s s\! |
+  s2\> |
+
+  %I
+  s4\! s\p |
+  s2 |
+  s-\mSempreDimRitPoco |
+  s2*13 |
+  s4 s\< | s\! s\> | s\! s |
+  s s\pp |
+  s2*2 |
+}
+
+pianoPedalsMvtI =
+{
+  \partial 4 s4 | s2*28 |
+
+  %A
+  s2*27 |
+
+  %B
+  s2*21
+
+  %9/8 Poco più animato
+  s4.*3*18 |
+
+  %C
+  s4.*3*15 |
+
+  %D
+  s4.*3*17 |
+  s4.*3*2\sustainDown |
+  s4.*3*2\sustainDown |
+
+  %2/4 Tempo I
+  s2*8 |
+
+  %E
+  s2*28 |
+
+  %9/8 Poco più animato
+  s4.*3*12 |
+
+  %F
+  s4.*3*11 |
+
+  %G
+  s4.*3*6 |
+  s4.*3*2\sustainDown |
+  s4.*3*2\sustainDown |
+
+  %2/4 Tempo I
+  s2*20 |
+
+  %H
+  s2*4 |
+  \once \override TextScript #'padding = #4.0
+  s2*10_\mColPed |
+  \once \override TextScript #'padding = #4.0
+  s2*11_\mColPed |
+
+  %I
+  s2*11 |
+  s2\sustainDown |
+  s2\sustainDown |
+  s2*2 |
+  s4 s\sustainDown |
+  s2*3 |
+  s4 s\sustainDown |
+  s2*2 |
+}
+

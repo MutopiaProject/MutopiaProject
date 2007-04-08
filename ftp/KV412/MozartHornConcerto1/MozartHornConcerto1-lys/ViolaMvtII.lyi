@@ -1,0 +1,146 @@
+\include "defs.lyi"
+
+violaMvtII = \relative c'
+{
+  \clef alto
+  \key d \major
+  r8
+  <<
+    {s2.*8\f | s2.*8\p |}
+    \repeat unfold 2
+    {
+      d16 fis \repeat unfold 14 {d fis} \repeat unfold 3 {e g} |
+      d fis g e fis d \repeat unfold 3 {cis e} |
+      \repeat unfold 15 {d fis} \repeat unfold 3 {e g} |
+      d fis d fis e cis d4 r8 |
+    }
+  >>
+  cis'8(\f d) b-. a4 r8 |
+  cis8(\f d) b-. a( cis) a-. |
+  e e, e e e e |
+  e e e e'16( fis e d cis b) |
+  a2.~ | a |
+  d4. e |
+  a4 e8 a,4 r8 |
+  R2. |
+  r4. r4 cis8\f |
+  \repeat tremolo 6 b16 \repeat tremolo 6 cis16 |
+  e8 e e e16( d cis d cis b) |
+  a4 r8 r4. |
+  r4. r4 cis8\f |
+  \repeat tremolo 6 b16 \repeat tremolo 6 cis16\p |
+  cis8( b) d-. cis4 r8 |
+  r e r r a, r |
+  R2.*2 |
+  r4. r4 a16(\p cis) |
+  \repeat unfold 2 {d8 d d d4 r8 |}
+  d4 r8 cis4 r8 |
+  d4 r8 a4 r8 |
+  \repeat unfold 2 {d8 d d d4 r8 |}
+  d4 r8 g,4 r8 |
+  a4 a8 d4 r8 |
+  R2. |
+  r4. r4 a8\f |
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis16( g a fis g e) |
+  e( d cis d cis d) a8 r cis16(\trill b32 cis) |
+  d8 a a a a a |
+  a d cis d fis a |
+  d, d d e e e |
+  fis cis cis cis cis b |
+  b4 r8 r4. |
+  fis'4.~\dolce fis4 b8 |
+  b4. e,4 a8 |
+  a,4 a'8 \grace a16 gis8( fis gis) |
+  a8\p a a g g g |
+  f f f e e e |
+  e d cis d d d |
+  d d d bes4( b8 |
+  cis8) d e d4 r8 |
+
+  d8\f d d e e e |
+  f f f g g g |
+  a bes c f,4.~ |
+  f8( g a) g16( f e d c bes) |
+
+  a4\p r8 e4 r8 |
+  a4.( d4 c8) |
+  \repeat unfold 6 c-. |
+  c4.( bes) |
+  a8-. f-. a-. c-. a-. f-. |
+  d'4.( cis) |
+  d2.( |
+  e8) \repeat unfold 5 <cis e> |
+  c c c c bes c |
+  bes d d bes bes bes |
+  a a a g g g |
+  f f f e e e |
+  f\f c' c c c c |
+
+  \repeat unfold 6 cis |
+  \repeat unfold 6 d |
+  \repeat unfold 6 a |
+  \repeat unfold 4 cis r r |
+
+  r4. a8-.\p b-. cis-. |
+  d4 r8 cis,8-. d-. e-. |
+  f4 r8 f8-. g-. gis-. |
+  a8 r r cis4.(\sf |
+  d8) r r b4.(\p |
+  e,8) r r << {\voiceOne e'4.(} \new Voice {\voiceTwo cis4.\sf} >> \oneVoice |
+  d8) r r d4.(\p |
+  cis8) r d'(\sf cis4\p d8\sf |
+  cis4\p d8\sf cis4)\p r8 |
+  r8 a,\p a a4 r8 |
+  r8 a a a4 r8 |
+  r8 a a r a a |
+  fis8. e16 d8 a'4 r8 |
+  fis2. |
+  a |
+  r8 cis16( d cis d) r8 ais16( b ais b) |
+  a8( fis g) a r r |
+
+  d16\p fis \repeat unfold 14 {d fis} \repeat unfold 3 {e g} |
+  \repeat unfold 3 {d fis} \repeat unfold 3 {cis e} |
+  \repeat unfold 15 {d fis} d g d g b, e |
+  d fis d fis e cis d4 r8 |
+
+  R2. |
+  e,4.~\p e4 r8 |
+  R2. |
+  e4.~ e8 r r |
+  a8\f a d cis cis d |
+  \repeat unfold 6 e |
+  cis4(\p d8 e4 d8) |
+  cis( d d,) a' a'\f a |
+  \repeat unfold 9 a a4 r8 |
+
+  r4. r8 a16(\p gis a gis) |
+  a8-. r r r fis16( eis fis eis) |
+  fis4.( e) |
+  d( cis) |
+  fis,2.( | d) |
+  r8 fis'-. fis-. r e-. e-. |
+  r d-. cis-. d-. r r |
+  \repeat unfold 2 {d-. d16( cis d cis) d8-. d,-. d'-. |}
+  fis16 e d e fis d g fis e a b cis |
+  d8-. fis,-. b-. gis( a) a,-. |
+  <<
+    {s16\p}
+    {
+      \repeat unfold 7 {s16*5( s16)} s4. |
+    }
+    {
+      \repeat unfold 15 {d,16 fis} \repeat unfold 3 {g b} |
+      a fis g fis g a fis4 r8 |
+    }
+  >>
+  <a e'>4.(\p d8) r r |
+  cis4.( d8) r r |
+  <a e'>4.(\p d8) r r |
+  <g, a>4.(\p <a fis>8) r r |
+  <e' cis'>8 <e cis'> <e cis'> <d d'> <d d'> <d d'>
+  g g g <fis a,>4 r8 |
+  d8 fis a d,4 r8 |
+}
+

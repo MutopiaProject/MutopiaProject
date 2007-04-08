@@ -1,0 +1,173 @@
+piup = \markup {\italic più \dynamic p}
+piuf = \markup {\italic più \dynamic f}
+%pocof = \markup {\italic poco \dynamic f}
+pocof = #(make-dynamic-script (markup #:normal-text #:italic "poco" #:dynamic "f"))
+pocosfz = #(make-dynamic-script (markup #:normal-text #:italic "poco" #:dynamic "sfz"))
+pocoCresc = \markup {\italic {poco cresc.}}
+pEspressCresc = \markup {\dynamic p \italic {espress. cresc.}}
+pEspress = \markup {\dynamic p \italic {espress.}}
+moltoEspress = \markup {\italic {molto espress.}}
+espress = \markup {\italic {espress.}}
+pSempre = \markup {\dynamic p \italic sempre}
+sempreff = \markup {\italic sempre \dynamic ff}
+pDolce = \markup {\dynamic p \italic dolce}
+marc = \markup {\italic marc.}
+dim = \markup {\italic dim.}
+%dim = #(make-dynamic-script (markup #:normal-text #:italic "dim."))
+dimMolto = \markup {\italic {dim. molto}}
+pocoMarc = \markup {\italic {poco marc.}}
+pMarc = \markup {\dynamic p \italic marc.}
+fMarc = \markup {\dynamic f \italic marc.}
+fRisoluto = #(make-dynamic-script (markup "f" #:normal-text #:italic "risoluto"))
+suivez = \markup {\italic suivez}
+mcresc = \markup {\italic cresc.}
+marcato = \markup {\italic marcato}
+ffmarcato = \markup {\dynamic ff \italic marcato}
+rinf = \markup {\italic rinf.}
+scherzando = \markup {\italic scherzando}
+pStaccLeggiero = \markup {\dynamic p \italic {stacc. leggiero}}
+mfp = #(make-dynamic-script "mf p")
+fSpaceP = #(make-dynamic-script "f p")
+
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score . RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \smaller \bold $markp }
+#})
+
+outline =
+{
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \time 6/8
+  \tempoMark "Très modéré"
+  s2.*18
+
+  \mark \default
+  s2.*19 \bar "||"
+
+  \time 4/4
+  %TODO: This muddies the score, but should be in here.
+  %\tempoMark "La noire un peu moins lente que la noire pointée précédente"
+  s1*2 |
+  s2 \tempoMark "En serrant un peu" s |
+  s1 |
+  \tempoMark "Retenu  " %TODO: The spaces separate this markup with the next in the piano score.
+  s1 |
+  \tempoMark "au Mouvt"
+  s1 |
+  \tempoMark "Sans trop de rigueur dans la mesure"
+  s1*4 \bar "||"
+
+  \time 3/2
+  s2*3 \bar "||"
+
+  \time 2/2
+  s1*24
+
+  \mark \default
+  s1*28
+
+  \mark \default
+  s1*26
+
+  \mark \default
+  s1*26
+
+  \tempoMark "Légèrement retenu"
+  s1*20
+
+  \tempoMark "Revenez"
+  s1*2
+
+  \tempoMark "au Mouvt"
+  s1*8
+
+  \mark \default
+  s1*26
+
+  \mark \default
+  s1*22
+
+  \mark \default
+  s1*24
+
+  \tempoMark "Retenez beaucoup"
+  s1*4 | \bar "||"
+
+  \time 6/8
+  \tempoMark "Très modéré (comme au début)"
+  s2.*9 | \bar "||"
+
+  \time 2/2
+  \tempoMark "Très animé et en serrant le Mouvt jusqu'à la fin"
+  s1*13 |
+  
+  \mark \default
+  s1*22 | \bar "|."
+}
+
+midiOutline =
+{
+  %6/8
+  %Très modéré
+  \tempo 8=180
+  s2.*18
+
+  %A
+  s2.*19
+
+  %4/4
+  s1*10
+
+  %3/2
+  s2*3
+
+  %2/2
+  \tempo 2=120
+  s1*24
+
+  %B
+  s1*28
+
+  %C
+  s1*26
+
+  %D
+  s1*26
+
+  %Légèrement retenu
+  s1*20
+
+  %Revenez
+  s1*2
+
+  %au Mouvt
+  s1*8
+
+  %E
+  s1*26
+
+  %F
+  s1*22
+
+  %G
+  s1*24
+
+  %Retenez beaucoup
+  s1*4
+
+  %6/8
+  %Très modéré (comme au début)
+  \tempo 8=180
+  s2.*9
+
+  %2/2
+  %Très animé et en serrant le Mouvt jusqu'à la fin
+  \tempo 2=160
+  s1*13 |
+  
+  %H
+  s1*22 |
+}
+

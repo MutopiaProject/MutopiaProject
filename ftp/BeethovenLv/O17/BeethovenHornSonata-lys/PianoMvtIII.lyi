@@ -1,0 +1,468 @@
+pianoRightMvtIII = \relative c''
+{
+  \key f \major
+  c4-. c-.
+  f2( f,) |
+  e bes'' |
+  \override Script #'avoid-slur = #'outside
+  bes8(\prall a) g(\prall f) e(\prall d) c'( bes) |
+  \revert Script #'avoid-slur
+  a2( g4) r |
+  <a,, f>8-. <bes g>-. <c a>-. <d bes>-. <e c>-. <f d>-. <g e>-. <a f>-. |
+  <bes g>-. <c a>-. <d bes>-. <e c>-. <f d>-. <g e>-. <a f>-. <bes g>-. |
+  r <a f> r <d,, bes> r <c a> r <bes g> |
+  r <e bes> r <e bes> <f a,>4 r |
+  R1 |
+  \times 2/3 {c''8( b d} \times 2/3 {c bes a} \times 2/3 {g f e} \times 2/3 {f a f)} |
+  c4 r r2 |
+  \times 2/3 {c'8( b d} \times 2/3 {c bes a} \times 2/3 {g f e} \times 2/3 {d c bes)} |
+  a4 r r2 |
+  <bes bes'>2 <e, e'> |
+  r8 <f f'> r <d bes> r <c a> r <bes g> |
+  r <e bes> r <e bes> <f a,>4 r |
+  \clef bass
+  \repeat unfold 2 {\times 2/3 {c,8( f a} \times 2/3 {c a f)}}
+  \repeat unfold 2 {\times 2/3 {c( e g} \times 2/3 {c g e)}}
+  \times 2/3 {c( f a} \times 2/3 {c a f)} \times 2/3 {c( e bes'} \times 2/3 {c, f a)} |
+  \clef treble
+  \times 2/3 {r f'( g} \times 2/3 {a bes b} \times 2/3 {c d e} \times 2/3 {f g gis)} |
+  a2 a4-.( a-.) |
+  a2.( g4 |
+  f e d c |
+  b) r r2 |
+  r4 \times 2/3 {g'8( a b} \times 2/3 {c b c} \times 2/3 {ees d c} |
+  b4) r r2 |
+  r16 g fis g gis a bes b c d ees d f ees d c |
+  \times 2/3 {b8-. d-. c-.} \times 2/3 {b-. a-. g-.}
+    \times 2/3 {fis-. e-. d-.} \times 2/3 {c-. b-. a-.} |
+  \times 2/3 {b-. d-. c-.} \times 2/3 {b-. a-. g-.}
+    \times 2/3 {fis-. e-. d-.} \times 2/3 {c-. b-. a-.} |
+  \clef bass
+  \times 2/3 {b-. d-. c-.} \times 2/3 {b-. a-. g-.}
+    \times 2/3 {fis-. e-. d-.} \times 2/3 {c-. b-. a-.} |
+  g8 r r4 r2 |
+  R1 |
+  \clef treble
+  f'''4 d'8( c) b-. a-. g-. f-. |
+  e4 r r2 |
+  f8-. d( d') c-. b-. a-. g-. f-. |
+  e4 r r2 |
+  f8( e f g a b c a) |
+  \times 2/3 {g-. c( b)} \times 2/3 {c-. g-. e-.} \times 2/3 {d-. g( fis)} \times 2/3 {g-. f-. d-.} |
+  c,16( c') b,( b') c,( c') d,( d') e,( e') f,( f') g,( g') gis,( gis') |
+  <c c,>2~ <c c,>8 <b b,>-. <c c,>-. <a a,>-. |
+  \times 2/3 {<g g,> e'( d)} \times 2/3 {c-. b-. a-.} \times 2/3 {g-. a( g)} \times 2/3 {f-. e-. d-.} |
+  \times 2/3 {c( g e} \clef bass \times 2/3 {c g e)} \times 2/3 {c( e g} \times 2/3 {c g e)} |
+  \times 2/3 {c( e g} \times 2/3 {c g e} \times 2/3 {c e g} \times 2/3 {c g e)} |
+  \times 2/3 {c( f a} \times 2/3 {c a f} \times 2/3 {c f a} \times 2/3 {c a f)} |
+  r16 e f g a bes c d \clef treble e f g a bes c d e |
+  f2 f, |
+  e bes'' |
+  \override Script #'avoid-slur = #'outside
+  bes8(\prall a) g(\prall f) e(\prall d) c'( bes) |
+  \revert Script #'avoid-slur
+  a2( g4) r |
+  <a,, f>8-. <bes g>-. <c a>-. <d bes>-. <e c>-. <f d>-. <g e>-. <a f>-. |
+  <bes g>-. <c a>-. <d bes>-. <e c>-. <f d>-. <g e>-. <a f>-. <bes g>-. |
+  r <a f> r <d,, bes> r <c a> r <bes g> |
+  r <e bes> r <e bes> <f a,>4 r |
+  R1 |
+  \times 2/3 {c''8( b d} \times 2/3 {c bes a} \times 2/3 {g f e} \times 2/3 {f a f)} |
+  c4 r r2 |
+  c'16 b d c bes a g f e d c b c d ees e |
+  f2 f, |
+  e <e' bes'> |
+  \override Script #'avoid-slur = #'outside
+  bes'8(\prall a) g(\prall f) e(\prall d) c'( bes) |
+  \revert Script #'avoid-slur
+  <g e>2( f4) r |
+  \clef bass
+  \repeat unfold 4 {\times 2/3 {d,,8 f a}} |
+  \repeat unfold 3 {\times 2/3 {cis,8 e a}} \times 2/3 {r8 c,( a')} |
+  \times 2/3 {r8 d,( a')} \times 2/3 {r8 d,( g)} \times 2/3 {r8 d( a')} \times 2/3 {r8 f( a)} |
+  \times 2/3 {r8 e( a)} \times 2/3 {r8 d,( a')} \times 2/3 {r8 cis,( a')} \times 2/3 {r8 <e c>( a)} |
+  \times 2/3 {r8 d,( a')} \times 2/3 {r8 g( cis)} \times 2/3 {r8 f,( d')} \times 2/3 {r8 f,( d')} |
+  \times 2/3 {r8 f,( d')} \times 2/3 {r8 f,( b)} \times 2/3 {r8 e,( c')} \times 2/3 {r8 g( c)} |
+  \times 2/3 {r8 a( d)} \times 2/3 {r8 a( d)} \times 2/3 {r8 f,( b)} \times 2/3 {r8 f( b)} |
+  <c e,>4 \clef treble a'16( e' a e a, f' a f a, g' a g) |
+  <a a,>2 <g g,>8( <f f,> <e e,> <d d,>) |
+  <e e,>2( a,4 a |
+  d <d a>( <e cis g> <f d f,>) |
+  <e e,>2( <a a,>~) |
+  <a a,>4-.( <a a,>-.) <a a,>( <aes aes,>) |
+  <g g,>2. <g e g,>4( |
+  <f d a>-.) <f d a>( <d b f>-.) <d f,>( |
+  <c e,>2) r |
+  \clef bass \repeat unfold 4 {\times 2/3 {fis,,8 a d}} |
+  \times 2/3 {g, bes d} \times 2/3 {g, bes d} \times 2/3 {g, bes cis} \times 2/3 {g bes d} |
+  \times 2/3 {r g,( e')} \times 2/3 {r <cis g>( e)}
+    \times 2/3 {r <a, f>( d)} \times 2/3 {r <gis, d>( d')} |
+  \times 2/3 {r <bes e>( cis)} \times 2/3 {r <a e>( c)}
+    \times 2/3 {r <a f>( d)} \times 2/3 {r <cis g>( e)} |
+  \times 2/3 {f d a} \times 2/3 {d \clef bass a f} \times 2/3 {a f d} \times 2/3 {a' f d} |
+  \repeat unfold 3 {\times 2/3 {bes' e, d}} \times 2/3 {g e d} |
+  \repeat unfold 2 {\times 2/3 {a' f d}} \repeat unfold 2 {\times 2/3 {a' e cis}} |
+  \clef treble
+  \times 2/3 {r8 fis' a} \times 2/3 {c a c} \times 2/3 {fis c fis} \times 2/3 {a fis a} |
+  c2 bes8 a g fis |
+  <<
+    {g4_(}
+    {
+      s8
+      \once \override TextScript #'script-priority = #-100
+      s^\turn^\markup{ \teeny \sharp }
+    }
+  >> g8 a) bes4 bes |
+  bes4.( a8) g( f e d) |
+  cis( a') a-. a-. a-. a-. a-. a-. |
+  a2( g8 f e d) |
+  bes'2. gis4( |
+  a) a a a |
+  d, r \times 2/3 {d,8( ees e} \times 2/3 {f g gis} |
+  a4) r d,16( ees e f fis g aes a |
+  bes4) r \times 2/3 {e,8( f fis} \times 2/3 {g aes a} |
+  bes4) r \times 2/3 {e8( f fis} \times 2/3 {g aes a)} |
+  \times 2/3 {bes8( a aes} \times 2/3 {g fis f} \times 2/3 {e f fis} \times 2/3 {g aes a} |
+  <bes e,>4) r r2 |
+  r4 <e, bes g> r2 |
+  r4 <bes e g bes> r2 |
+  R1 |
+  \times 2/3 {a,8 c f} \times 2/3 {a c f} \times 2/3 {a g f} \times 2/3 {a g f} |
+  \times 2/3 {bes a g} \times 2/3 {f e d} \times 2/3 {c bes a} \times 2/3 {g f e} |
+  \times 2/3 {r f( a)} \times 2/3 {r d,( f)} \times 2/3 {r bes,( d)} \times 2/3 {r g,( bes)} |
+  \times 2/3 {r f' g} \times 2/3 {a b b} \times 2/3 {c bes c} \times 2/3 {d ees e} |
+  f2 f, |
+  e bes'' |
+  \appoggiatura c8 \times 2/3 {bes8( a) a-.}
+    \appoggiatura bes8 \times 2/3 {a8( g) g-.}
+    \appoggiatura a8 \times 2/3 {g8( f) f-.}
+    \appoggiatura g8 \times 2/3 {f8( e) e-.} |
+  <g e>2 f8 r r4 |
+  R1 |
+  \times 2/3 {c'8 b d} \times 2/3 {c bes a} \times 2/3 {g f e} \times 2/3 {f a f} |
+  c4 r r2 |
+  c'16 b d c bes a g f e d c b c d ees e |
+  f2 f, |
+  e <bes'' e,> |
+  \override Script #'avoid-slur = #'outside
+  bes8(\prall a) a(\prall g) g(\prall f) f(\prall e) |
+  \revert Script #'avoid-slur
+  \times 2/3 {f c' a} \times 2/3 {f c' a} \times 2/3 {f ees' c} \times 2/3 {f ees c} |
+  \times 2/3 {f, d' bes} \times 2/3 {f' d bes} \times 2/3 {f d' aes} \times 2/3 {f' d aes} |
+  \times 2/3 {f c' a} \times 2/3 {f' c a} \times 2/3 {f b aes} \times 2/3 {f' b, aes} |
+  \times 2/3 {f c' a} \times 2/3 {f' c a} \times 2/3 {e c' bes} \times 2/3 {e c bes} |
+  f'4 <f, c a f>-. r <f ees c f,>-. |
+  r <f d bes f>-. r <f d aes f>-. |
+  r <f c a f>-. r <f b, aes f>-. |
+  r <f c aes f>-. r <f d aes f>-. |
+  r <e c g e>-. r <f c a f>-. |
+  r <g e bes g>-. r <a f c a>-. |
+  \times 2/3 {bes8( c d)} \times 2/3 {c-. bes-. a-.} \times 2/3 {g-. f-. e-.} \times 2/3 {d-. c-. bes-.} |
+  \times 2/3 {a-. g-. f-.} \times 2/3 {e-. d-. c-.} \clef bass \times 2/3 {bes-. a-. g-.} \times 2/3 {f-. e-. d-.} |
+  c1~ |
+  c2\fermata r |
+  r \clef treble a'''4-. a-. |
+  \times 2/3 {bes8( c d)} \times 2/3 {c-. bes-. a-.} \times 2/3 {g-. f-. e-.} \times 2/3 {d-. c-. bes-.} |
+  a4 r a'4-. a-. |
+  \times 2/3 {bes8( c d)} \times 2/3 {c-. bes-. a-.} \times 2/3 {g-. f-. e-.} \times 2/3 {d-. c-. bes-.} |
+  a4 r r2 |
+  <f' c' ees>2 <f c a> |
+  <bes, f' bes>4 r <f' d'> r |
+  <f a> r <c e g c>-. <c c'>-. |
+  \repeat unfold 2
+  {
+    <f f'>2 <f f,> |
+    <e e,>4 r <c c'>-. <c c'>-. |
+  }
+  \times 2/3 {<f f'>8 c'( a)} \times 2/3 {c-. a( f)}
+    \times 2/3 {a-. f( c)} \times 2/3 {f-. c( a)} |
+  \times 2/3 {c-. a( f)} \times 2/3 {a-. f( c)}
+    \times 2/3 {f-. c( a)} \clef bass \times 2/3 {c-. a( f)} |
+  \times 4/6 {c16( cis d dis e f}
+    \times 4/6 {fis g aes a bes b} \clef treble
+    \times 4/6 {c cis d ees e f}
+    \times 4/6 {fis g aes a bes b} |
+  \times 4/6 {c16( cis d dis e f} \times 4/6 {fis g aes a bes b}
+    c16 cis d dis) \afterGrace e4\trill {d16[ e]} |
+  f4-. f~ f8 e-. d-. c-. |
+  bes-. a-. g-. f-. e-. d-. c-. bes-. |
+  a4 r r2 |
+  R1 |
+  r4 f'16( f') f,( f') f,( f') e,( e') d,( d') c,( c') |
+  bes,( bes') a,( a') g,( g') f,( f') e,( e') d,( d') c,( c') bes,( bes') |
+  <f a,>4 r r2 | %NOTE: Should this be <a a,>?
+  R1 |
+  f'2 f, |
+  e bes'' |
+  bes8( a) g( f) e( d) c'( bes) |
+  a2( g4) r |
+  R1 |
+  <bes bes,>2 <e, e,> |
+  <f f,>4 <d, bes> <c a> <bes g> |
+  \times 2/3 {r8 c''( b)} \times 2/3 {c-. a-. f-.} e4-. r |
+  \times 2/3 {f8-. c'( b)} \times 2/3 {c-. a-. f-.} e4-. r |
+  \times 2/3 {f8-. c'( a)} \times 2/3 {f-. a( f)} \times 2/3 {c-. f( c)} \times 2/3 {a-. c( a)} |
+  f4-. <a c f>-. <c f a>-. <f a c>-. |
+  <a c f>-. r <f c a>-. r | %EDIT: added an a to first beat to conform with last two chords.
+  <f, c a>-. r
+}
+
+pianoLeftMvtIII = \relative c'
+{
+  \key f \major
+  \clef bass
+  r2
+  <a f>2( <c a>) |
+  <bes g> <e, cis> |
+  <f d>4 \clef treble <f' d> <d bes> <g g,> |
+  <f c~>2^( <e c>4) r |
+  \clef bass
+  f,,1 |
+  <c' c,>2. <cis cis,>4 |
+  <d d,>-. bes-. c-. c,-. |
+  f-. c-. f-. r |
+  \times 2/3 {c'8 e g} \times 2/3 {c g e} \times 2/3 {c f a} \times 2/3 {c a f} |
+  \repeat unfold 3{\times 2/3 {c g' bes}} \times 2/3 {c, f a} |
+  \times 2/3 {c, e g} \times 2/3 {c g e} \times 2/3 {c f a} \times 2/3 {c a f} |
+  \repeat unfold 3{\times 2/3 {c g' bes}} \times 2/3 {c, e g} |
+  <f f,>4 r r2 |
+  <c c,>2 <cis cis,> |
+  <d d,>8 r bes r c r c, r |
+  f4 c f r |
+  <f f,>1 |
+  <bes bes,> |
+  <a a,>2( <g g,>4 <f f,>) |
+  <<
+    { r4 <a' f>( <g e>) }
+    \\
+    { c,2 c4 }
+  >> r4 |
+  \times 2/3 {f8 a c} \times 2/3 {f c a} \times 2/3 {f a c} \times 2/3 {e, g cis} |
+  \repeat unfold 2 {\times 2/3 {f, a d} \times 2/3 {e, g cis}} |
+  \times 2/3 {d, f a} \times 2/3 {e g cis} \times 2/3 {f, a d} \times 2/3 {fis, a ees'} |
+  \repeat unfold 2 {\times 2/3 {g, b d} \times 2/3 {g d b}} |
+  \repeat unfold 2 {\times 2/3 {g c e}} \repeat unfold 2{\times 2/3 {g, c ees}} |
+  \repeat unfold 2 {\times 2/3 {g,, b d} \times 2/3 {g d b}} |
+  \repeat unfold 2 {\times 2/3 {g c e}} \repeat unfold 2{\times 2/3 {g, c ees}} |
+  <d b g>4 r r d8. d16 |
+  g4 r r d,8. d16 |
+  \times 2/3 {g8-. d'-. c-.} \times 2/3 {b-. a-. g-.} \times 2/3 {fis-. e-. d-.} \times 2/3 {c-. b-. a-.} |
+  g8 g'( <b d> g <c e> g <d' f> g,) |
+  \repeat unfold 2
+  {
+    <c e>( g <e' g> g, <c e> g <e' g> g,) |
+    <d' f>( g, <b d> g <d' f> g, <b d> g) |
+  }
+  <c e>4 r r2 |
+  <f f,>4 r r <f c' d>8. <f c' d>16 |
+  <g c e>4 r <g b f'> r |
+  c, r r2 |
+  <f c f,>1 
+  <e c g>4 r <f d b g> r |
+  <c c,>1 |
+  <bes bes,> |
+  <a a,> |
+  <g g,> |
+  <f f,>2 <f' a> |
+  <g bes> <e cis> |
+  <f d>4 \clef treble <d' f> <bes d> <g g'> |
+  <c~ f>2^( <c e>4) r |
+  \clef bass
+  f,,1 |
+  <c' c,>2. <cis cis,>4 |
+  <d d,>-. bes-. c-. c,-. |
+  f c f r |
+  \times 2/3 {c'8 e g} \times 2/3 {c g e} \times 2/3 {c f a} \times 2/3 {c a f} |
+  \repeat unfold 3{\times 2/3 {c g' bes}} \times 2/3 {c, f a} |
+  \times 2/3 {c, e g} \times 2/3 {c g e} \times 2/3 {c f a} \times 2/3 {c a f} |
+  <c g' bes>4 r r2 |
+  f,,16 f' g, g' a, a' bes, bes' c, c' d, d' e, e' f, f' |
+  g, g' f, f' e, e' d, d' c, c' bes, bes' a, a' g, g' |
+  <f f,>4 <bes d g> <c f a> <c g' bes> |
+  <f~ bes c~>2( <f a c>4) r |
+  d,1 |
+  a'2.( g4 |
+  f e f d) |
+  cis( b a g' |
+  f e d c' |
+  b g c e, |
+  f d g g, |
+  c) <cis cis'>( <d d'> <e e'>) |
+  \repeat unfold 2 {\times 2/3 {d8 f a} \times 2/3 {d f d}} |
+  \times 2/3 {a cis e} \times 2/3 {a cis d} \times 2/3 {e d cis} \times 2/3 {bes a g} |
+  \times 2/3 {f a g} \times 2/3 {f a f} \times 2/3 {e a e} \times 2/3 {d a' d,} |
+  \times 2/3 {cis e a} \times 2/3 {b, d a'} \times 2/3 {a, cis e} \times 2/3 {g, cis e} |
+  \times 2/3 {f, a d} \times 2/3 {e, g c} \times 2/3 {d, f d'} \times 2/3 {c, f c'} |
+  \times 2/3 {b, b' a} \times 2/3 {g a b} \times 2/3 {c, c' b} \times 2/3 {c d e} |
+  \times 2/3 {f, f' e} \times 2/3 {d e f} \times 2/3 {g, g' fis} \times 2/3 {g a b} |
+  \times 2/3 {c, c' b} \times 2/3 {c g e} c4 r |
+  <d d,>2.( <c c,>4 |
+  <bes bes,> g e d |
+  cis a d bes |
+  a g' f e |
+  d1) |
+  <g g,>2. <bes bes,>4 |
+  <a a,> <a a,> <a a,> <a a,> |
+  <d d,> r r2 |
+  \times 2/3 {d8 fis a} \clef treble \times 2/3 {d fis a} \times 2/3 {d, fis a} \times 2/3 {c, d a'} |
+  \times 2/3 {bes, d g} \clef bass \times 2/3 {g, bes d} \times 2/3 {e, g cis} \times 2/3 {d, g bes} |
+  \times 2/3 {cis, e a} \times 2/3 {cis, e a} \times 2/3 {d, f a} \times 2/3 {bes, d g} |
+  \times 2/3 {a, cis e} \times 2/3 {g, a e'} \times 2/3 {f, a d} \times 2/3 {e, g cis} |
+  \repeat unfold 2 {\times 2/3 {d, f a} \times 2/3 {d f d}} |
+  \repeat unfold 3 {\times 2/3 {g, d' e}} \times 2/3 {bes d e} |
+  \times 2/3 {a, d f} \times 2/3 {a f d} \times 2/3 {a cis e} \times 2/3 {a e cis} |
+  <d d,>4 r r2 |
+  r4 <d f a> r2 |
+  r4 <c g' bes> r2 |
+  r4 <c g' bes> r2 |
+  r4 \clef treble <c' g' bes> r <c g' bes> |
+  r4 <c g' bes>-. r2 |
+  r4 \clef bass <c c,>-. r2 |
+  r4 <c, c,>-. r2 |
+  R1 |
+  f,1 |
+  <c c'>1 |
+  <f f'>4 <d d'> <bes bes'> <g g'> |
+  <c c'> \clef treble << {f''4( e)} \\ {c2} >> r4 |
+  \clef bass \times 2/3 {f,,8-. g-. a-.} \times 2/3 {bes-. c-. d-.} \times 2/3 {e-. f-. g-.} \times 2/3 {a-. g-. f-.} |
+  \times 2/3 {bes8-. a-. g-.} \times 2/3 {f-. e-. d-.} \times 2/3 {c-. bes-. a-.} \times 2/3 {g-. f-. e-.} |
+  \times 2/3 {f c' f} \times 2/3 {bes, d g} \times 2/3 {c, f a} \times 2/3 {c, g' bes} |
+  << {\times 2/3 {r8 c a} \times 2/3 {bes[ c bes]}} \\ {f2 f8} >> r8 r4 |
+  \times 2/3 {c8 e g} \times 2/3 {c g e} \times 2/3 {c f a} \times 2/3 {c a f} |
+  \times 2/3 {c g' bes} \times 2/3 {c, g' bes} \times 2/3 {c, g' bes} \times 2/3 {c, f a} |
+  \times 2/3 {c, e g} \times 2/3 {c g e} \times 2/3 {c f a} \times 2/3 {c a f} |
+  <c g' bes>4 r r2 |
+  f,,16 f' g, g' a, a' bes, bes' c, c' d, d' e, e' f, f' |
+  g, g' f, f' e, e' d, d' c, c' bes, bes' a, a' g, g' |
+  <f f,>4 <bes d g> <c f a> <c g' bes> |
+  <f a> r <a, a,>2(\sf |
+  <bes bes,>4-.) r <b b,>2(\sf |
+  <c c,>4-.) r <des des,>2(\sf |
+  <c c,>4-.) r <c c,> r |
+  f,,16 f' e f e f e f f, a' gis a gis a gis a |
+  bes, bes' a bes a bes a bes b, b' ais b ais b ais b |
+  c, c' b c b c b c des, des' c des c des c des |
+  c, c' b c b c b c b, b' ais b ais b ais b |
+  bes, bes' a bes a bes a bes a, a' gis a gis a gis a |
+  g, g' fis g fis g fis g f, f' e f e f e f |
+  e4 r r2 |
+  r4 \times 2/3 {e'8-. d-. c-.} \times 2/3 {bes-. a-. g-.} \times 2/3 {f-. e-. d-.} |
+  c1~ | c2\fermata r2 |
+  r2 \clef treble f''4-. f-. |
+  \times 2/3 {g8( a bes)} \times 2/3 {a-. g-. f-.} \clef bass \times 2/3 {e-. d-. c-.} \times 2/3 {bes-. a-. g-.} |
+  f4 r \clef treble f'-. f-. |
+  \times 2/3 {g8( a bes)} \times 2/3 {a-. g-. f-.} \clef bass \times 2/3 {e-. d-. c-.} \times 2/3 {bes-. a-. g-.} |
+  f4 r r2 |
+  <ees ees,>2 <ees ees'> |
+  <d d'>4 r <bes bes'> r |
+  <c c'> r <bes bes'> r |
+  <a a'> r r2 |
+  \times 2/3 {bes8( c d)} \times 2/3 {c-. bes-. a-.} \times 2/3 {g-. f-. e-.} \times 2/3 {d-. c-. bes-.} |
+  a4 r r2 |
+  \times 2/3 {bes'8( c d)} \times 2/3 {c-. bes-. a-.} \times 2/3 {g-. f-. e-.} \times 2/3 {d-. c-. bes-.} |
+  a4 r r \times 2/3 {f'''8-. c( a)} |
+  \times 2/3 {c-. a( f)} \times 2/3 {a-. f( c)} \times 2/3 {f-. c( a)} \times 2/3 {c-. a( f)} |
+  c4 r r2 |
+  \repeat unfold 8 {c16 c'} | %NOTE: I liked this better unfolded (original is tremolo).
+  \repeat unfold 4
+  {
+    \times 2/3 {f,8( a c} \times 2/3 {f c a} \times 2/3 {f a c} \times 2/3 {f c a)} |
+    \times 2/3 {f( g bes} \times 2/3 {e bes g} \times 2/3 {f g bes} \times 2/3 {e bes g)} |
+  }
+  <f a c f>2 <f' a> |
+  <g bes> <e cis> |
+  <d f>4 \clef treble <d' f> <bes d> <g g'> |
+  <c~ f>2^( <c e>4) r |
+  R1 |
+  \clef bass
+  <c, c,>2 <cis cis,> |
+  <d d,>4 bes c c, |
+  <f f'> r <c' c'> r |
+  <f, f'> r <c' c'> r |
+  <f, f'> r r2 |
+  r4 <f' f'>-. <c c'>-. <a a'>-. |
+  <f f'>-. r <f f,>-. r |
+  <f f,>-. r
+}
+
+pianoDynamicsMvtIII =
+{
+  s2\p
+  s1*4 |
+  s1\<
+  s2 s4 s\sf |
+  s1*5\p |
+  s1\mcresc |
+  s1\p
+  s2\< s\sf |
+  s1*2\p |
+  s1*8\p |
+  s4 s\< s8*2/3 s s\> s s s\! |
+  s1 |
+  s4\< s s\> s16 s s s\! |
+  s1\f |
+  s1 | %-\staccato %EDIT: staccato marks written out.
+  s1 |
+  s8 s8*7\p |
+  s1 |
+  s1*4\p |
+  s1\f |
+  s1*2\p |
+  s1\f |
+  s1\p |
+  s1*3\p |
+  s1\< |
+  s1*4\p
+  s1\< |
+  s2 s4 s\sf |
+  s1*6\p |
+  s1\mcresc |
+  s1*3 |
+  s1*8\p |
+  s1*19\p |
+  s2.\< s8 s\! |
+  s1*3\p |
+  s2 s\p |
+  s1 |
+  \setTextDim
+  s1*2\> |
+  s1\pp |
+  s4 s\sf s2 |
+  s4 s\sf s2 |
+  s4 s\sf s2 |
+  s1 |
+  s1*5\p |
+  s1*3\mcresc |
+  s1*4\p |
+  s1*7\mcresc |
+  \setTextCresc
+  s1*6\< |
+  s1\f |
+  s\ff |
+  s\sf |
+  s1 |
+  s2 s\pp |
+  s1*4 |
+  s1\ff |
+  s2\p s\pp |
+  s s\< |
+  s1\f |
+  s1*7 |
+  s1*8\p |
+  \override TextSpanner #'edge-text = #'("rallentando " . "")
+  s2\pp s\startTextSpan |
+  s1*2
+  s1*2\pp\stopTextSpan |
+  \override TextSpanner #'edge-text = #'("rallentando " . "")
+  s1\startTextSpan |
+  s4 s\stopTextSpan s2\pp |
+  s1*2\f |
+  s1*3\ff |
+  s2
+}
+
+pianoPedalsMvtIII =
+{
+}
+
+

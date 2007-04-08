@@ -1,0 +1,90 @@
+\include "defs.lyi"
+
+violinMvtIII = \relative c'''
+{
+  \key ges \major
+  \once \override Score.RehearsalMark #'padding = #2.8
+  R2.*4 |
+  ges8(_\mPEspr d ees) ces4( bes8) |
+  ges'( d ees) e4(_\espressivo f8) |
+  g8(\< aes bes) bes4(\> aes8)\! |
+  ees8( des ees fes\> des aes) |
+  aes4( a8) bes4\! r8 |
+  R2. |
+  bes'8( f ges) eeses4(_\espressivo des8) |
+  bes'8( f ges) g4(_\espressivo aes8) |
+  bes8( ces des) des4( ces8) |
+  ges8( fes ges aes\> fes ces) |
+  ees4( d8) ees4\! r8 |
+  R2.*3 |
+
+  %A
+  R2.*2 |
+  f,8(_\mSempreP bes ces bes ees, ges |
+  aes ges ees ges aes bes~) |
+  bes bes,( a bes f' bes~) |
+  bes f( ges f bes, des~) |
+  des( aes' bes aes des, f~) |
+  f( c' des c f, aes~ aes) aes4 |
+  R2. |
+  a8(\p e' fis e a, cis_\mDim |
+  d cis) r r4. |
+  \repeat unfold 2 {d,8( a' bes a) r r |}
+
+  %B
+  d,(\< aes' bes ces\> bes)\! r^\mCresc |
+  r bes( d f ees) r |
+  r8 ees(\< c' ges' f bes,) |
+  ces( ees bes des bes a\! |
+  aes-.) aes,(\p\< bes ces\> bes)\! r |
+  r_\mDim bes( d, f ees) r |
+  r c'( a ges f des) |
+  ces(\< ees bes\> des bes a |
+  aes-.)\! r r r4. |
+  R2.*2 |
+  ees'8(\ppp bes' ces bes ees, ges |
+  aes\> ges ees ges aes bes)\! |
+  R2.*2 |
+  ges'8(_\mPEspr d ees) ces4( bes8) |
+  ges'( d ees) e4(_\espressivo f8) |
+  g8(\< aes bes) bes4(\> aes8)\! |
+  ees8( des ees fes\> des aes) |
+  aes4( a8) bes4\! r8 |
+  R2. |
+  bes'8( f ges) eeses4(_\espressivo des8) |
+  bes'8( f ges) g4(_\espressivo aes8) |
+  bes8( ces des) des4( ces8) |
+  ges8(\< fes ges aes\> fes ces)\! |
+  R2.*2 |
+
+  %C
+  bes,8(^\mMoltoP g bes ees4 f8 |
+  ees4 bes8 g4 g'8) |
+  g,2.~ | g |
+  c8(\pp f g a4 c8 |
+  a4 g8 f4 e8) |
+  d2.~ |
+  d8( a' bes a d, f |
+  g f) d( f4) r8^\mPocoAccel |
+  R2. |
+  g'8(_\mFPassionato d ees) ces4( bes8) |
+  ees4( aes,8) ees'4( ges,8) |
+  ces4( fes,8) ces'4( ees,8) |
+  aes-.( ges-. f-.) ees4( d8) |
+  g'(\< d ees) fes8.( ees16) ces aes\! |
+
+  %D
+  ees''4(\ff ees,8) bes'4( bes,8) |
+  ees4( ees,8) bes'4( bes,8~\< |
+  bes aes4~ aes8\> a4)\! |
+  bes4-.\p r8 bes4-. r8 |
+  R2.*2 |
+  ees4.(\pp d) |
+  r des(\< |
+  ces aes')\! |
+  <bes bes,>2.\sf |
+  <ges bes,>\> |
+  <ees bes>~\p |
+  <ees bes>4 r8 r4. |
+}
+

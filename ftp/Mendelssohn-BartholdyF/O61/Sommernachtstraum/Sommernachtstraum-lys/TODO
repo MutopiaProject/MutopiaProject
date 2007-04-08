@@ -1,0 +1,3 @@
+- use \combineparts for automatic "Solo" and "a due"
+- convert text-only dynamics so that they show up in midi output
+- check against another source

@@ -1,0 +1,10 @@
+	title 				= "Overture"
+	subtitle 			= "\\normalsize zu"
+	subsubtitle			= "\\Large Fidelio"
+	opus				= "Op. 72b"
+	composer			= "L. van Beethoven"
+	
+ 	copyright			= "Public Domain"
+ 	maintainer 			= "Will Oram"
+	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+	footer = "Mutopia-2003/12/13-377"

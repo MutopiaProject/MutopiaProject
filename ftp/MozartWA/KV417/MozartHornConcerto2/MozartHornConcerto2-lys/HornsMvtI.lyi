@@ -1,0 +1,66 @@
+hornsMvtI = \relative c''
+{
+  \key c \major
+  \transposition ees
+  R1*3 |
+  r4 <c c,>2\p <c c,>4 |
+  <c c,>1\fp |
+  <c c,>\fp |
+  <d g,>\f |
+  <c g>4 <d g,> <e c>4. <d c>8 |
+  <d g,>4 <g, g,>8. <g g,>16 <g g,>4 r |
+  R1*3 |
+  <c e,>4\p <c e,> <d g,>2 |
+  <e c>4 r r2 |
+  R1*2 |
+  <c e,>8 <c e,> <c e,> <c e,> <d g,>2 |
+  <e c>4 r r2 |
+  <c c,>1 |
+  <c c,>\f |
+  <c c,>4 <c c,> <c c,> <c c,> |
+  <e c>2 <d g,> |
+  <c e,>4 r <e c>8 <e c> <d g,> <d g,> |
+  <c e,>4 << {c,8. c16 c4} \\ {c8. c16 c4} >> r4 |
+
+  %solo
+  R1*23 |
+  <d' g,>4\p <d g,> << d2 \\ d >> |
+  <d g,>4 r r2 |
+  R1*2 |
+  << {g,1( | c,4)} \\ {g1( | c4)} >> r4 r2 |
+  R1*29 |
+
+  %tutti
+  <d' g,>1\fp |
+  <e c>1\fp |
+  <d g,>1\fp |
+  <d d>1\fp |
+  << {d2 e4 c} \\ {g1} >> |
+  <d' d>1\fp |
+  <d g,>4 r << {d8 d d d} \\ {d d d d} >> |
+  <d g,>4 <g, g,>8. <g g,>16 <g g,>4 r |
+
+  %solo
+  R1*29 |
+  r4 <c c,>2\p <c c,>4 |
+  <c c,>1\fp |
+  <c c,>\fp |
+  <d g,>\f |
+  <c g>4 <d g,> <e c>4. <d c>8 |
+  <d g,>4 <g, g,>8. <g g,>16 <g g,>4 r |
+  R1*24 |
+  <c e,>4\p <c e,> <d g,>2 |
+  <e c>4 r r2 |
+  R1*2 |
+  <c c,>1~ | <c c,>4 r r2 |
+  R1*27 |
+  <c c,>1\fp |
+  <c c,>1\fp |
+  <c c,>1\fp |
+  <d g,>1\f |
+  <e c>4 <e c> <f c> <f c> |
+  <e c>2 <d g,> |
+  <c e,>4 r <e c>8 <e c> <d g,> <d g,> |
+  <c e,>4 << {c,8. c16 c4} \\ {c8. c16 c4} >> r4 |
+}
+

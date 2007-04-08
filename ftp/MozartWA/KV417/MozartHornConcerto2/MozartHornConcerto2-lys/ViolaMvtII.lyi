@@ -1,0 +1,93 @@
+\include "defs.lyi"
+
+violaMvtII = \relative c''
+{
+  \key bes \major
+  \clef alto
+  bes4.~\p |
+  bes8 ees( a,) |
+  bes r g~ |
+  g( a bes) |
+  r r d,, |
+  g( f) f |
+  r a( bes) |
+  r fis( g) |
+  r bes( c) |
+  c16 f,( g a bes c) |
+  bes4.~ |
+  bes8 ees( a,) |
+  bes r g~ |
+  g( a bes) |
+  r g'( f) |
+  e( f bes,) |
+  r r d, |
+  g( f) f |
+  r a a |
+  r c c |
+  r bes( d) |
+  r f( e) |
+  r f f |
+  r ees ees |
+  r d( f) |
+  r f( g16 e) |
+  \grace e16 f8 c c |
+  c r r |
+  f,16(\p a c a c a) |
+  f( bes d bes d bes) |
+  f( c' ees c ees c) |
+  f,( bes d bes d bes) |
+  f( a c a c a) |
+  bes8 r r |
+  bes4( g8) |
+  f8 r16 f'( bes g) |
+  a( f a c bes g) |
+  a( c,) c-. c-. c-. c-. |
+  c-. c-. c-. c-. c-. c-. |
+  c8 r r |
+  bes4.~ |
+  bes8 ees( a,) |
+  bes r g~ |
+  g( a bes) |
+  r r d, |
+  g( f4) |
+  ees8 r bes' |
+  c( bes4) |
+  r8 g( c) |
+  c( bes) r |
+  g( f ees) |
+  d16 d'( c a bes g) |
+  f16( a c a c a) |
+  f( bes d bes d bes) |
+  f( c' ees c ees c) |
+  f,( bes d bes d bes) |
+  f( a c a c a) |
+  bes8 r r |
+  bes4( g8) |
+  f r16 f'( bes g) |
+  a( f a c bes g) |
+  a( c,) c-. c-. c-. c-. |
+  c-. c-. c-. c-. c-. c-. |
+  c8 r r |
+  bes4.~ |
+  bes8 ees( a,) |
+  bes r g~ |
+  g( a bes) |
+  r r d, |
+  g( f4) |
+  ees8 r bes' |
+  c8( bes4) |
+  r8 g( c) |
+  c( bes) r |
+  g'( f ees) |
+  r d d |
+  r d d |
+  r ees( g) |
+  r f( a) |
+  r g( g,) |
+  r aes aes |
+  r g( bes) |
+  bes4 c16( a) |
+  bes8 f\pp f |
+  f r r |
+}
+

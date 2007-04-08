@@ -1,0 +1,238 @@
+\include "defs.lyi"
+
+hornMvtII = \relative c''
+{
+  \key c \major
+  \transposition ees
+  \once \override Score.RehearsalMark #'padding = #2.5
+  R2.*12 |
+
+  %A
+  e2.~\f |
+  \times 3/2 {e4 e,-.} |
+  \times 3/2 {e'( d)} |
+  \times 3/2 {g-. g,-.} |
+  c2.~\f | c4 c-. c-. |
+  c2.~ | c4 b-. c-. |
+  c2.~ | c4 c-. c-. |
+  c2.~ | c4 c-. d-. |
+  ees2. | d | c |
+  g4-. g'-. g-. |
+  ees2. | d | c |
+  g4-. d'-. d-. |
+  d2. | f | g |
+  d4-. d-. d-. |
+  d2. | f |
+  g4-. g2 | g2 g4 |
+  d4-.\fp d-. d~ | d2.
+  d4-. d-. d~ | d2.
+  d4-. d-. d~ | d2.
+  d2 d4~\espressivo | d d2 |
+  c2.~\p | \times 3/2 {c4( d)} |
+  g,2.( | fis) |
+  fis( | c' |
+  b~ | b |
+  a~\< | a |
+  g~ | g) |
+
+  %B
+  \setTextCresc
+  bes(\mf\< | ees) |
+  g2( ees4) |
+  d2( cis4) |
+  d2.( | g,2)\! r4 |
+  d'2.( | a2) r4 |
+
+  \setTextCresc
+  bes2.(\< | ees) |
+  g2( ees4) |
+  d2( cis4) |
+  d2.( | g,2)\! r4 |
+
+  d'2.~ |
+  d4 c a |
+  g2. |
+  R2.*3 |
+  c4-.\p d-. f-. |
+  e-. d-. e-. |
+  d-. c-. d-. |
+  c-. g-. c-. |
+  d-. e-. g-. |
+  f-. e-. f-. |
+  e-. d-. e-. |
+  d-. c-. g-. |
+  e'2.(\< | f~ | f\> | ees2)\! bes4-. |
+  ees-. d-. ees-. |
+  des-. c-. des-. |
+  ces-. bes-. ces-. |
+  bes-. r r |
+
+  \setTextCresc
+  ees2.\< | c | bes | g2 c4-. | bes-.\f r r |
+  R2.*3 |
+  f'2.~ | \times 3/2 {f4 f} |
+  \times 3/2 {e4( f)} | d2. |
+  R2.*2 |
+  \times 3/2 {e4( f)} | d2. |
+  R2.*8 |
+
+  %C
+  c4(_\mPDolce des f~) | f2. |
+  ees4( des ees~) | ees2. |
+  des4( c des~) | des2. |
+  c4( ees c~) | c2. |
+  ees4(\< f aes~) | aes2(\> des,4)\! |
+  c( bes c~) | c2( ees4) |
+  f( ees f~) | f2. |
+  ees4( des ees~) | ees2. |
+  R2.*6 |
+  ees2.~\< | ees4(\> f g)\! |
+
+  %D
+  ees r r |
+  R2.*5 |
+  ees2.~(\< | ees4\> f g)\! |
+  ees4 r r |
+  R2.*7 |
+  r4 b\< c | b c b | c\f r r |
+  R2.*3 |
+
+  %E
+  e2.~\f |
+  \times 3/2 {e4 e,-.} |
+  \times 3/2 {e'( d)} |
+  \times 3/2 {g-. g,-.} |
+  c4-. c-. c-. |
+  c2.~\f | c4 c-. c-. |
+  c4 d-. c-. | c-. c-. c-. |
+  c2.~ | c4 c-. c-. |
+  c2 d4-. |
+  ees2. | d | c |
+  g4-. g'-. g-. |
+  ees2. | d | c |
+  g4-. d'-. d-. |
+  d2. | d4-. d-. d-. |
+  d2. | d4-. d-. d-. |
+  g, r r |
+  R2. |
+  f'4-.\p f-. f~ | f2. |
+  f4-. f-. f~ | f2. |
+  b,2\< f'4~ | f b,2\! |
+  f'2.~(\p | f2 b,4) |
+  c2.( | b) |
+  b~\< | b |
+  c2.~(\> | c4 d c)\! |
+  R2.*2 |
+  g2.(\p fis) |
+  fis~ | fis |
+  g~( | g4 a b) |
+  \setTextCresc
+  \set crescendoText = \markup { \italic "poco a poco cresc." }
+  b2.~\< | b |
+  c2.~ | c4( g c) |
+  c2.~ | c4( g c) |
+  c( g c) |
+  c( g c) |
+
+  %F
+  c4\f r r |
+  R2.*4 |
+  g2.\fz |
+  R2. |
+  g2.\fz |
+  R2.*4 |
+  c2.~ | c~ | c2( aes'4) |
+  g2( fis4) |
+  g2.( | c,2) r4 |
+  g'2.( | g,2) r4 |
+  R2. |
+  c,2.\fz |
+  R2. |
+  c2.\fz |
+  r4 r c-> |
+  r4 r c-> |
+  r4 r c'-> |
+  R2. |
+
+  %G
+  bes2.(\f | ees) |
+  g2( ees4) |
+  des2( bes4) |
+  c4 r r |
+  R2.*6 |
+  g2.\f |
+  \setTextCresc
+  c\< | e | d | c |
+  c4( g) e |
+  g( c) e |
+  g2.\f |
+  g, |
+  e4 r r |
+  R2. |
+  c'4 r r |
+  R2. |
+  c,2.~ | c~ |
+  c4 r r |
+
+  R2.*8 |
+  c'2.\p |
+
+  %Molto meno Allegro
+  \once \override Score.RehearsalMark #'padding = #1.5
+  \key aes \major
+  c2.(_\mPEspr | aes4 bes c) |
+  ees2( des4) | bes2. |
+  des2.( | bes4 c des) |
+  f2( ees4) |
+  c2\< ees4 |
+  g2. |
+  ees4( f g) |
+  aes(\> f d) |
+  f( d b)\! |
+  c2.~(\p |
+  c4 bes aes)
+  R2.*2 |
+  des2.~( | des4 c bes) |
+  R2.*2 |
+  g'2.~( | g4\< f ees) |
+  d2.\> | d\! |
+  << c2.~ {s4\p\< s s\>} >> | c4\! r r |
+  R2.*2 |
+  << des2.~ {s4\< s s\>} >> | des4\! r r |
+  R2.*2 |
+  
+  %H
+  d2.~( | d2 ees4) |
+  ees2.~( ees2 f4) |
+  f2.~ | f( | b,2) r4 |
+  R2. |
+  c2.\espressivo_\mPEspr |
+  aes4( bes c) |
+  ees2( des4) |
+  bes2. | des |
+  bes4( c des) |
+  f2( ees4) |
+  c2. |
+  \setTextCresc
+  ees2.~(\< | ees4 des c) |
+  ees2.~( | ees4 des c) |
+  e2.\! |
+  g4( f e) |
+  e2. |
+  ees4( des c) |
+  f2. |
+  c2( des4) |
+  des2._\mDim |
+  a2( bes4) |
+  c,2.\p |
+  R2. |
+  c2._\mDim |
+  R2. |
+  c2. |
+  R2. |
+  c2. |
+  R2.*8 |
+  R2.^\fermataMarkup |
+  \key ees \major
+}
+

@@ -1,0 +1,641 @@
+\include "defs.lyi"
+
+pianoRightMvtIVBeginning = \relative c'
+{
+  r8 <ees g,>-. <f bes,>-. r <g ees>-. <bes f>-. |
+  r <g ees>-. <f bes,>-. r <ees g,>-. <d g,>-. |
+  r <c g> <g' d g,>-> r <c, g> <d g,> |
+  r <c g> <g' d g,>-> r <c, g> <g' ees g,> |
+  r <f aes,> <g c,> r <aes c,> <c ees, c> |
+  r <g bes,> <a d,> r <bes d,> <d bes d,> |
+  \repeat unfold 2 {r <f d f,>-. bes,-. r f-. bes,-. |}
+
+  %A
+  r <ees' g,>-. <f bes, f>-. r <g ees g,>-. <bes d, bes>-. |
+  r <g ees g,> <f bes, f> r <ees g, ees> <d g, d> |
+  r <c g c,> <g' d g,>-> r <c, g c,> <d g, d> |
+  r <c g c,> <g' d g,>-> r <c, g c,> <g' ees g,> |
+  r <f aes, f> <g c, g> r <aes c, aes> <c aes c,> |
+  r <ees c ees,> <c aes c,> r <ees c ees,> <c aes c,> |
+  r <g bes, g> <a d, a> r <bes g bes,> <d bes d,> |
+  r <f d f,> <d bes d,> r <f d f,> d |
+  g d d g, g d |
+  g d d g, g d |
+  r <d' g, d>[ r <c a ees> r <a fis d>] |
+  r <g ees bes>[ r <f ees c> r <f d bes>] |
+  ees'' bes bes ees, ees bes |
+  ees bes bes ees, ees bes |
+  r <bes' ees, bes>[ r <aes f c> r <f d bes>] |
+  r <ees c g>[ r <a d, a> r <g d bes>] |
+  \repeat unfold 2
+  {
+    %TODO: 'fis' tie should go up, 'a' tie should go down
+    <<
+      \context Voice="1"
+      {
+        \voiceOne
+        \override TieColumn #'tie-configuration =
+          #'((-2.5 . 1) (-8.5 . -1))
+        <fis a,>4.~ <fis a,>4 <g ees>8
+      }
+      {
+        \voiceTwo
+        \once \override NoteColumn #'force-hshift = #1.7
+        d8 cis d ees d g,
+      }
+    >> \oneVoice |
+  }
+  <<
+    \context Voice="1" {\voiceOne <fis' a,>4.}
+    {
+      \voiceTwo
+      \once \override NoteColumn #'force-hshift = #1.7
+      d8^( cis d
+    }
+  >> \oneVoice g eis fis |
+  bes gis a ees' d) <g ees bes g> |
+  \repeat unfold 2
+  {
+    <<
+      \context Voice="1"
+      {
+        \voiceOne
+        \override TieColumn #'tie-configuration =
+          #'((5.5 . 1) (-1.5 . -1))
+        <fis a,>4.~ <fis a,>4 <g ees>8
+      }
+      {
+        \voiceTwo
+        \once \override NoteColumn #'force-hshift = #1.7
+        d8 cis d ees d g,
+      }
+    >> \oneVoice |
+  }
+  <<
+    \context Voice="1" {\voiceOne <fis' a,>4.}
+    {
+      \voiceTwo
+      \once \override NoteColumn #'force-hshift = #1.7
+      d8^( cis d
+    }
+  >> \oneVoice g eis fis |
+  bes gis a ees' cis d) |
+  g d d g, g c, |
+  f c c f, f bes, |
+  ees bes bes \change Staff=LH ees, ees bes |
+  \stemUp ees' bes bes ees, ees bes \stemNeutral |
+
+  %B
+  \change Staff=RH r <ees' g,> <f bes,> r <g ees> <bes f> |
+  r <g ees> <bes f> r <ees g,> <g ees g,> |
+  r <g' ees g,> <ees c ees,> r <ees c ees,> <c aes c,> |
+  r <c aes c,> <aes f aes,> r <aes f c,> <g ees g,> |
+  r <ees' c ees,> <c aes c,> r <c aes c,> <aes f aes,> |
+  r <aes f c,> <g ees g,> r <g ees g,> <f ees f,> |
+  r <f ees f,> <bes d, bes> r4. |
+  R2. |
+}
+
+pianoRightMvtIV = \relative c'
+{
+  \time 6/8
+  \key ees \major
+  \clef treble
+
+  \repeat volta 2
+  {
+    \partial 8 bes8-. |
+    \pianoRightMvtIVBeginning
+    r4. r4 bes8 |
+    bes( des ges bes des ges) |
+    bes4.( aes4 ges8) |
+    <f des>4.( <ees c>4 <des bes>8) |
+    <<
+      {
+        r4 f8( ges4.~) |
+        ges4 f8( ges4.~) |
+        ges4 f8( ges4.~) |
+        ges4.~ ges4 r8 |
+      }
+      \\
+      {
+        <c, a>4.~ <c a>4 <des bes>8( |
+        <c a>4.~) <c a>4 <des bes>8( |
+        <c a>2.~) |
+        <c a>4.~ <c a>4 r8 |
+      }
+    >>
+    r4. r4 bes,8 |
+    bes( des ges bes des ges) |
+    <cis a cis,>4. <b gis b,>4 <a fis a>8 |
+    <a' cis, a>4. <gis b, gis>4 <eis eis,>8 |
+    <fis a, fis>4.~ <fis a, fis>4 <eis gis, eis>8 |
+    <fis a, fis>4.~ <fis a, fis>4 <eis gis, eis>8 |
+    <fis a, fis>8 <eis eis,> <fis fis,>~ <fis fis,> <eis eis,> <fis fis,>~ |
+    <fis fis,> <eis eis,> <fis fis,>~ <fis fis,> <eis eis,> <fis fis,> |
+    \clef bass
+    \repeat unfold 5 {<c,, a ees c>4.} <des f, des> |
+    \clef treble
+    <a' ees a,> <bes f bes,> |
+    <ges' bes, ges> <f bes, f> |
+    <ees bes ees,> <e c bes e,> |
+
+    %C
+    <f c a f>8 r r
+    <<
+      {a,4.(\( | c2.) | b4.~\) b8}
+      \\
+      {a4.~( | a aes | g~) g8}
+    >> d''( g |
+    g,) d[( g] g,) d[( g] |
+    <ees g,>) r r
+    <<
+      {g4.(\( | bes2.) | a4.~\) a8}
+      \\
+      {g4.~( | g ges | f~) f8}
+    >> c''( f |
+    f,) c[( f] f,) c[( f] |
+    ges,4) r8 r4. |
+    r4. <cis' ais cis,>4.( |
+    <d b d,> <fis fis,>4) r8 |
+    <d' b d,>4.( <fis fis,>4) r8 |
+    R2. |
+    r4. <cis, cis,>4.( |
+    <d d,> <f f,>4) r8 |
+    <d, bes>4.( <f d>4) r8 |
+
+    %D
+    f'8( <bes d> f <c' f> d, <g bes>) |
+    d( <a' d> bes, <ees g> bes <f' bes>) |
+    c( c' c, g' c, c') |
+    f,( f' f, c' f, f') |
+    bes,( bes' a, a' g, g' |
+    f, f' ees, ees' d, d') |
+    c,( c' c, bes' c, g' |
+    f, f' f, ees' f, c') |
+  }
+  \alternative
+  {
+    {
+      bes,( bes' d, d' g,, g') |
+      bes,( bes' ees, ees' ges,, ges') |
+      bes,( bes' f f' f,, f') |
+      bes,( bes' ges ges' ees,, ees') |
+      \repeat unfold 2 {bes( bes' bes bes') bes,, bes' |}
+      bes, bes' bes~ <bes f' aes bes>4.~
+      \partial 8*5 <bes f' aes bes>4.~ <bes f' aes bes>8 r |
+    }
+    {
+      d,8( d' f,
+    }
+  }
+  f' bes,, bes') |
+  d,( d' g, g' bes,, bes') |
+  d,( d' a a' a,, a') |
+  d,( d' bes bes' g,, g') |
+
+  %E
+  d( d' d d') d,,( <d' c>) |
+  d,( <d' b> d <e' cis bes>) d,,( <e' cis bes>) |
+  d,( <d' a> d <d' a>) d,,( <d' c>) |
+  d,( <d' b> d <e' cis bes>) d,,( <e' cis bes>) |
+  <d' d,>8 a a d, d a |
+  d a a d, d a |
+  \clef bass
+  r d,-. e-. r fis-. a-. |
+  r fis-. e-. r d-. c-. |
+  \repeat unfold 2 {r b-. fis'-. r b,-. c-. |}
+  \repeat unfold 2 {r b g' r b, c |}
+  \repeat unfold 2 {r b a' r b, c |}
+  \repeat unfold 2 {r b ais' r b, c |}
+  r b b' r b, c |
+  r c c' r c, cis |
+  r cis cis' r4. |
+  R2. |
+  \clef treble
+  <a' fis cis>2.~ | <a fis cis> |
+  <b eis, cis>~ | <b eis, cis> |
+  <bis fis cis>~ | <bis fis cis> |
+  <cis eis, cis>4 r8 r4. |
+  R2. |
+  \clef bass
+  \repeat unfold 2 {r8 ees,,-. bes'-. r ees,-. fes-. |}
+  r ees-. ces'-. r ees,-. e-. |
+  r e b' r e, f |
+  r e c' r e, f |
+  r e c' r f, ges |
+  r f des' r fis, g |
+  r fis d' r g, aes |
+  r g ees' r aes, a |
+  r a bes r bes ces |
+  \clef treble
+  r ces' <ees ees,> r ces' <ees ees,> |
+  r ees, <a a,> r ees' <a a,> |
+
+  %F
+  r <bes bes,>-. f-. r bes,-. f-. |
+  r bes,-. f-. r bes,-. f-. |
+  R2. |
+  bes8( des ges bes des ges) |
+  <bes des, bes>2. |
+  bes,,8( ees ges bes ees ges) |
+  <bes ees, bes>2. |
+  c,,8( ees ges c ees c') |
+  r8 <bes' bes,>-. f-. r bes,-. f-. |
+  r8 bes,-. f-. r bes,-. f-. |
+  R2. |
+  r8 bes'( des ges bes <des des,>~) |
+  <des des,>2. |
+  r8 fis,,( a d fis <a a,>~) |
+  <a a,>2. |
+  d,,8( g bes d g <d' d,>~) |
+  <d d,>2. |
+  e,,8( g bes e bes' e) |
+  r d-. a-. r d,-. a-. |
+  r d-. a-. r d'-. a-. |
+  r d bes r d, bes |
+  r d bes r d' bes |
+  r ees bes r ees, bes |
+  r e bes r e' bes |
+  r f' bes, r f bes, |
+  r f bes, r f' bes, |
+  \pianoRightMvtIVBeginning
+  r4. r4 ees8 |
+  ees( ges ces \clef treble ees ges ces) |
+  ees4.( des4 ces8) |
+  <bes ges>4.( <aes f>4 <g ees>8) |
+  <<
+    {
+      r4 bes8( ces4.~) |
+      ces4 bes8( ces4.~) |
+      ces4 bes8( ces4.~) |
+      ces4.~ ces4 r8 |
+    }
+    \\
+    {
+      <f, d>4.~ <f d>4 <ges ees>8( |
+      <f d>4.~) <f d>4 <ges ees>8( |
+      <f d>2.~) |
+      <f d>4.~ <f d>4 r8 |
+    }
+  >>
+  r4. r4 ees,8 |
+  ees( ges ces ees ges ces) |
+  <fis b, fis>4. <e e,>4 <d d,>8 |
+  #(set-octavation 1)
+  <d' fis, d>4. <cis e, cis>4 <ais ais,>8 |
+  \repeat unfold 2 {<b d, b>4.~ <b d, b>4 <ais cis, ais>8 |}
+  <b d, b> <ais ais,> <b b,>~ <b b,> <ais ais,> <b b,>~ |
+  <b b,> <ais ais,> <b b,>~ <b b,> <ais ais,> <b b,> |
+  #(set-octavation 0)
+  \repeat unfold 4 {<f,, d aes f>4.->} |
+  <f d aes f> <ges bes, ges> |
+  <d' bes d,> <ees bes ees,> |
+  <ces' ees, ces> <bes ees, bes> |
+  <aes ees aes,> <aes ees aes,> |
+
+  %H
+  <bes d, bes>8-. r r d,,4.(~ |
+  <f d>~ <des' bes f des> |
+  <c bes ees, c>) r8 #(set-octavation 1) g''( c |
+  c,) #(set-octavation 0) g( c c,) g( c |
+  <aes c,>) r r c,4.~( |
+  <ees c>~ <ces' aes ees ces> |
+  <bes aes d, bes>) r8 f''( bes |
+  bes,) f( bes bes,) f( bes |
+  b,4) r8 r4. |
+  r4. <fis'' fis,>( |
+  <g e g,> <b b,>4) r8 |
+  <g' e g,>4.( <b b,>4) r8 |
+  R2. |
+  r4. <fis, fis,>( |
+  <g g,> <bes bes,>) |
+  <g, ees bes>( <bes ees, bes>4) r8 |
+  bes'8( <g' ees> bes, <bes' f> g, <ees' c> |
+  g, <g' d> ees, <c' aes> ees, <ees' bes>) |
+  f,( f' f, c' f, f' |
+  bes, bes' bes, f' bes, bes') |
+  #(set-octavation 1)
+  ees,( ees' d, d' c, c' |
+  bes, bes' aes, aes' g, g') |
+  #(set-octavation 0)
+  f,( f' f, ees' f, c' |
+  bes, bes' bes, aes' bes, f') |
+  ees,( ees' g, g' c,, c') |
+  ees,( ees' aes, aes' ces,, ces') |
+  ees,( ees' bes bes' bes,, bes') |
+  ees,( ees' ces ces' aes,, aes') |
+  \repeat unfold 4 {ees( ees' ees ees' ees,, ees') |}
+
+  %I
+  <ees' ges, ees>4 r8 r4. |
+  ges,,8( ces ees ges ces ges') |
+  <g ees g,>2. |
+  bes,,,4. <bes'' aes d, bes> |
+  <ees ges, ees>4 r8 r4. |
+  ges,,8( ces ees ges ces ges') |
+  <g ees g,>2. |
+  bes,,,4. <bes'' aes d, bes> |
+  bes,, <d'' bes d,> |
+  bes,, <bes'' d aes' bes> |
+  <ees,, g,>8-. <ees g,>-. <f bes,>-. <g ees>-. <g ees>-. <bes f>-. |
+  <g ees>-. <g ees>-. <f bes,>-. <ees g,>-. <ees g,>-. bes-. |
+  \clef bass
+  \repeat unfold 2 {r8 <ees ees,>-. <bes g>-.} |
+  \repeat unfold 2 {r8 <ees ees,> <bes g>} |
+  \clef treble
+  r8 <g' g,> <des bes> r <bes' bes,> <g des> |
+  r <des' des,> <bes g> r <g' g,> <ees c> |
+  r <ees ees,> <c aes> r <c' c,> <aes f> |
+  r <aes aes,> <f d> r <d' d,> <bes f> |
+  <g ees g,>-. r r r4 <f d bes f>8-. |
+  <g ees bes g>-. r r r4 <bes f d bes>8-. |
+  <g ees bes g>-. r r r4 <f d bes f>8-. |
+  <g ees bes g>-. r r r4 <bes f d bes>8 |
+  \repeat unfold 2 {<g ees bes g> r <f d bes f> <g ees bes g> r <bes f d bes>8 |}
+  <g ees g,> r <bes f d bes> <g ees g,> r <d' bes f d> |
+  <ees bes g ees> r <d bes f d> <ees bes g ees> r <d bes f d> |
+  <ees bes g ees>4 r8 r4. |
+  <g ees bes g>4 r8 r4. |
+  \change Staff=LH
+  \stemUp
+  <ees,, bes g ees>2.\fermata |
+}
+
+pianoLeftMvtIVBeginning = \relative c,
+{
+  \repeat unfold 2 {ees8[-. r bes]-. ees[-. r bes]-. |}
+  ees[ r bes] ees[ r bes] |
+  ees[ r bes] ees[ r c] |
+  f[ r c] f[ r c] |
+  g'[ r d] g[ r bes,] |
+  bes'-. r bes'[-. f]-. r bes,-. |
+  bes,-. r bes''[-. f]-. r <bes, bes,>-. |
+
+  %A
+  <ees ees,>[-. r <bes bes,>]-. <ees ees,>[-. r <bes bes,>]-. |
+  \repeat unfold 2 {<ees ees,>[ r <bes bes,>] <ees ees,>[ r <bes bes,>] |}
+  <ees ees,>[ r <bes bes,>] <ees ees,>[ r <c c,>] |
+  <f f,>[ r <c c,>] <f f,>[ r <aes, aes,>] |
+  <aes' aes,>[ r <aes, aes,>] <aes' aes,>[ r <c, c,>] |
+  <g' g,>[ r <d d,>] <g g,>[ r <bes, bes,>] |
+  <bes' bes,>[ r <bes, bes,>] <bes' bes,> r d |
+  g d d g, g d |
+  g d d g, g d |
+  <bes' bes,>[ r <c c,> r <d d,>] r |
+  <ees ees,>[ r <aes, aes,> r <bes bes,>] r |
+  ees' bes bes ees, ees bes |
+  ees bes bes ees, ees bes |
+  <g' g,>[ r <aes aes,> r <bes bes,>] r |
+  <c c,>[ r <fis, fis,> r <g g,>] r |
+  \repeat unfold 2 {<d' d,>( cis d ees[ d]) <c c,> |}
+  <d d,>( cis d g eis fis |
+  bes gis a ees'[ d]) <g, g,> |
+  \repeat unfold 2 {<d' d,>( cis d ees[ d]) <g, g,> |}
+  <d' d,>( cis d \clef treble g eis fis |
+  bes gis a ees' cis d) |
+  g d d g, g c, |
+  f c c \clef bass f, f bes, |
+  \stemDown ees bes bes ees, ees bes |
+  ees' bes bes ees, ees bes \stemNeutral |
+
+  %B
+  ees[ r bes] ees[ r <bes' bes,>] |
+  <ees ees,>[ r <bes bes,>] <ees ees,>[ r <ees, ees,>] |
+  <ees' ees,>[ r <aes, aes,>] <aes' aes,>[ r <bes, bes,>] |
+  <bes' bes,>[ r <c, c,>] <c' c,>[ r <c,, c,>] |
+  <c' c,>[ r <f, f,>] <f' f,>[ r <aes, aes,>] |
+  <aes' aes,>[ r <a, a,>] <a' a,>[ r <bes, bes,>] |
+  <bes' bes,>[ r <bes, bes,>] <bes' bes,> r r |
+  R2. |
+}
+
+pianoLeftMvtIV = \relative c,
+{
+  \time 6/8
+  \key ees \major
+  \clef bass
+
+  \repeat volta 2
+  {
+    \partial 8 bes8-. |
+    \pianoLeftMvtIVBeginning
+    r4. r4 bes'8 |
+    bes( des ges \clef treble bes des ges) |
+    <<
+      {
+        bes4.( aes4 ges8) |
+        f4.( ees4 des8) |
+        c4 f8( ges4) des8( |
+        c4) f8( ges4) des8( |
+        c4) f8( ges4.~) |
+        ges4.~ ges4 r8 |
+      }
+      \\
+      {
+        \repeat unfold 4 {bes,2. |}
+        <c bes>2.~ | <c bes>4.~ <c bes>4 r8 |
+      }
+    >>
+    r4. r4 \clef bass bes,8 |
+    bes( des ges bes des ges) |
+    <a,, a,>( cis fis a cis fis) |
+    \clef treble
+    <cis' a>4. <b gis> |
+    \repeat unfold 2 {<a fis>4 <d d,>8 <cis cis,>4 <b gis>8 |}
+    \repeat unfold 4 {<cis a fis cis>4.} |
+    \clef bass
+    \repeat unfold 5 {<a,, ees a,>4.} <bes bes,> |
+    <c c,> <des des,> |
+    <ees bes ees,> <f bes, f> |
+    <ges bes, ges> <g c, bes g> |
+
+    %C
+    \repeat unfold 4
+    {
+      << \repeat unfold 6 {f,,8 f'} {s8( s8*10 s8)} >> |
+    }
+    <ges ges,>4.~ <ges ges,>4 <f f,>8( |
+    \repeat unfold 4 {<ges ges,>4.~) <ges ges,>4 <f f,>8( |}
+    <ges ges,>4.~) <ges ges,>4 <f f,>8~ |
+    <f f,>4.~ <f f,>4 <f f,>8~ |
+    <f f,>4.~( <f f,>4 bes,8) |
+
+    %D
+    \clef treble
+    <d''' bes>4-.( <c a>-. <bes g>-.) |
+    <a f>-.( <g ees>-. <f d>-.) |
+    <g e c bes>2. |
+    <a ees c bes> |
+    <d bes>4-.( <f c>-. <d bes>-. |
+    <d a>-. <bes g>-. <bes f>-.) |
+    <g e c bes>2. |
+    <a ees c bes> |
+  }
+  \alternative
+  {
+    {
+      \clef bass
+      bes,,4 d8~ d g,4 |
+      bes ees8~ ees ges,4 |
+      bes f'8~ f f,4 |
+      bes ges'8~ ges ees,4 |
+      \repeat unfold 2 {bes' bes'8~ bes bes,,4 |}
+      bes'4. <bes' d f aes>~
+      \partial 8*5 <bes d f aes>~ <bes d f aes>8 r
+    }
+    {
+      d,4 f8~
+    }
+  }
+  f8 bes,4 |
+  d4 g8~ g bes,4 |
+  d a'8~ a a,4 |
+  d bes'8~ bes g,4 |
+
+  %E
+  <d' d,>4.~ <d d,>8 <c' d,>4 |
+  <b d,>4. <cis bes g d> |
+  <a d,>4.~ <a d,>8 <c d,>4 |
+  <b d,>4. <cis bes g d> |
+  <d d,>8 a a d, d a |
+  d a a d, d a |
+  <d' d,>-. r r <fis fis,>-. r r |
+  <fis fis,>-. r r <d d,>-. r r |
+  \repeat unfold 4 {<b b,>-. r r} |
+  \repeat unfold 14 {<b b,> r r} |
+  <c c,> r r <c c,> r r|
+  <cis cis,> r r cis r r |
+  r4. <b' b,>( |
+  <a a,>2.)( |
+  <fis fis,>4. <a, a,>) |
+  <cis cis,>2.( |
+  <gis gis,>4. <b b,>) |
+  <a a,>2.( |
+  <gis gis,>4. <fis fis,>) |
+  <cis' cis,>8 r r cis-. r r |
+  d,-. r r d'-. r r |
+  \repeat unfold 6 {<ees ees,>-. r r} |
+  \repeat unfold 4 {<e e,> r r} |
+  \repeat unfold 3 {<f f,> r r}
+  \repeat unfold 2 {<fis fis,> r r}
+  \repeat unfold 2 {<g g,> r r}
+  <aes aes,> r r |
+  <a a,> r r <bes bes,> r r |
+  <ces ees, ces>4 r8 <ces, ees, ces>4 r8 |
+  <f' c f,>4 r8 <f,, f,>4 r8 |
+
+  %F
+  <bes bes,>4 f''8-. bes-. r f,-. |
+  bes-. r f,-. bes-. r r |
+  %NOTE: Ended slur on long note or last note of measure is not consistent in 
+  %the following section. I'm going to just follow my source edition.
+  bes,8( d f bes d f |
+  <ges des bes>2.) |
+  ges,,8( bes des ges bes des |
+  <ees bes ges>2.) |
+  ees,8( ges bes ees ges bes) |
+  <a ees a,>2.
+  <bes bes,>8-. r \clef treble f'-. bes-. r \clef bass f,-. |
+  bes-. r f,-. bes-. r r |
+  bes8( d f bes d f |
+  <ges des bes>2.) |
+  fis,,8( ais cis fis ais cis)
+  <d a fis>2. |
+  d,,8( fis a d fis a) |
+  <g d>2. |
+  g,,8( d' g bes d g~) |
+  <g cis,>2. |
+  <d d,>8-. r a'-. d-. r a,-. |
+  d-. r a'-. d-. r \clef treble a'-. |
+  d-. r bes, d r \clef bass bes, |
+  d r bes' d r \clef treble bes' |
+  ees r bes, ees r \clef bass bes, |
+  e r bes' e r \clef treble bes' |
+  f' r bes,, f' r \clef bass bes,, |
+  f' r bes,, f' r bes, |
+  \pianoLeftMvtIVBeginning
+  r4. r4 ees'8 |
+  ees( ges ces \clef treble ees ges ces) |
+  <<
+    {
+      ees4.( des4 ces8) |
+      bes4.( aes4 ges8) |
+      \repeat unfold 2 {f4( bes8 ces4 ges8) |}
+      f4( bes8 ces4.~) |
+      ces4.~ ces4 r8 |
+    }
+    \\
+    {
+      \repeat unfold 4 {ees,2. |}
+      ees2.~ |
+      ees4.~ ees4 r8 |
+    }
+  >>
+  r4. r4 \clef bass ees,8 |
+  ees( ges ces \clef treble ees ges ces) |
+  \clef bass d,,( fis b \clef treble d fis b) |
+  <fis' d>4. <e cis> |
+  \repeat unfold 2 {<d b>4 <g g,>8 <fis fis,>4 <e cis>8 |}
+  \repeat unfold 4 {<fis d b fis>4.} |
+  \clef bass
+  \repeat unfold 4 {<d,, aes d,>4.} |
+  <d d,> <ees ees,> |
+  <f bes, f> <ges ees ges,> |
+  <aes ees aes,> <bes ees, bes> |
+  <ces ees, ces> <c ees, c> |
+
+  %H
+  \repeat unfold 24 {bes,,8 bes'}
+  \repeat unfold 5 {<b b,>4.~( <b b,>4 <ais ais,>8) |}
+  <b b,>4.~( <b b,>4 <bes bes,>8~) |
+  <bes bes,>4.~ <bes bes,>4 <ees, ees,>8~ |
+  <ees ees,>2.
+  \clef treble
+  <g''' ees>4-.( <f d>-. <ees c>-. |
+  <d bes>-. <c aes>-. <bes g>-.) |
+  <a f ees>2. |
+  <d aes f ees> |
+  <g ees>4-.( <bes f>-. <g ees>-. |
+  <g d>-. <ees c>-. <ees bes>-.) |
+  <c a f ees>2. |
+  <d aes f ees> |
+  \clef bass
+  ees,,4 g8~ g c,4 |
+  ees4 aes8~ aes ces,4 |
+  ees4 bes'8~ bes bes,4 |
+  ees4 ces'8~ ces aes,4 |
+  \repeat unfold 2 {ees'4 ees'8~ ees <ees, ees,>4 |}
+  \repeat unfold 2 {<ees des>4 <des' des,>8~ <des des,> <des, ees, des>4 |}
+
+  %I
+  ces,8( ges' ces ees ges ces) |
+  <ees ges,>4. <des fes,>4( <ces ees>8) |
+  <bes ees, bes>2. |
+  <bes, bes,>4. <aes'' f bes,> |
+  ces,,,8( ges' ces ees ges ces) |
+  <ees ges,>4. <des fes,>4( <ces ees>8) |
+  <bes ees, bes>2. |
+  <bes, bes,>4. <f'' bes,> |
+  \repeat unfold 2 {<bes,, bes,>4. <aes'' f bes,> |}
+  \repeat unfold 2 {<ees, ees,>4 r8 r4 <bes bes,>8 |}
+  \repeat unfold 2 {<des des,>4.-> r4 <bes bes,>8 |}
+  <ees, ees,>4.-> r4 <bes' bes,>8 |
+  <ees, ees,>4.-> r4 <aes aes,>8 |
+  <aes' aes,>4.-> r4 <bes, bes,>8 |
+  <bes' bes,>4.-> r4 <bes, bes,>8-. |
+  <ees ees,>-. r r r4 <bes' bes,>8-. |
+  <ees, ees,>-. r r r4 <bes bes,>8-. |
+  <ees ees,>-. r r r4 <bes' bes,>8-. |
+  <ees, ees,>-. r r r4 <bes bes,>8 |
+  \repeat unfold 2 {<ees ees,> r <bes' bes,> <ees, ees,> r <bes bes,> |}
+  <ees ees,> r <bes bes,> <ees ees,> r <bes' bes,> |
+  <ees, ees,> r <bes' bes,> <ees, ees,> r <bes' bes,> |
+  <ees, ees,>4 r8 r4. |
+  \clef treble
+  <bes'' g ees bes>4 r8 r4. |
+  \clef bass
+  \stemDown
+  <ees,,, ees,>2._\fermata |
+}
+

@@ -1,0 +1,190 @@
+\include "defs.lyi"
+
+violinIMvtII = \relative c''
+{
+  \key d \major
+  a8\f
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  d8. e16 fis8 e4 a,8 |
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  d4( e16 fis) d4 r8 |
+  r8 d\p d d4 r8 |
+  r8 fis fis fis4 r8 |
+  r8 fis( d) r g( e) |
+  d8. e16 fis8 e4 r8 |
+  r8 d d d4 r8 |
+  r8 fis fis fis4 r8 |
+  r8 fis( d) r g( e) |
+  d4( e16 fis) d4 fis8\f |
+
+  e( fis) gis-. a( e) e-. |
+  e-. fis16( e fis gis) a8 r e, |
+  e( d) d-. d( cis) cis-. |
+  b16( d cis e a, cis) b8 r e |
+  e( fis) gis-. a( cis) e-. |
+  e( fis) gis-. a( cis) e-. |
+  fis,( d') cis-. \grace cis16 b8 a gis |
+  a16( gis a cis b gis) a8-. r r |
+
+  e,8(\p fis) d-. cis( d) e-. |
+  e( fis) d-. cis r e'\f |
+  d-. b'16( gis e d) cis8-. a'16( e cis a) |
+  b( e cis e dis fis) e4-. r8 |
+  e,8(\p fis) d-. cis( d) e-. |
+  e( fis) d-. cis r e'\f |
+  d-. b'16( gis e d) cis8-.\p a'16( e cis a) |
+  e'8( d) b-. a4 r8 |
+  r cis r r e r |
+  r4. r4 e16( fis) |
+  g8 g g g e cis |
+  a a a a16( b a fis g e) |
+  \repeat unfold 2
+  {
+    <<
+      {\repeat unfold 2 {s16*5( s16)} |}
+      {d16 fis \repeat unfold 5 {a fis} |}
+    >>
+  }
+  <<
+    {\repeat unfold 2 {s16*5( s16)} |}
+    {\repeat unfold 3 {a16 fis} \repeat unfold 3 {a16 g} |}
+  >>
+  <<
+    {\repeat unfold 2 {s16*5( s16)} |}
+    {fis16 a e g d fis cis e a g fis e |}
+  >>
+  \repeat unfold 2
+  {
+    <<
+      {\repeat unfold 2 {s16*5( s16)} |}
+      {d16 fis \repeat unfold 5 {a fis} |}
+    >>
+  }
+  <<
+    {\repeat unfold 2 {s16*5( s16)} |}
+    {\repeat unfold 3 {a16 fis} \repeat unfold 3 {b16 g} |}
+  >>
+  fis16( a fis a g a) fis8 r a\f |
+
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis16( g a fis g e) |
+  e16( d cis d cis d) a8 r cis'16(\trill b32 cis) |
+  d8 a a a a a |
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis4 e8 |
+  \repeat unfold 2 {d16( cis d fis e cis)} |
+  <<
+    {\repeat unfold 24 s16-. |}
+    {
+      d16 cis d cis b a gis fis e d cis b |
+      a gis a fis gis eis fis gis a b cis dis |
+    }
+  >>
+  e4 r8 r4 e8-.\dolce |
+  fis( d' cis d b gis) |
+  e4( fis16 gis a4) a8-. |
+  a4. \grace cis16 b8( a b) |
+  a4 r8 r4. |
+  R2.*3 |
+  r4. r4 a,8\f |
+  a'4.( g | f16)
+  <<
+    {\repeat unfold 11 s16-. |}
+    {a g f g a bes g e c bes g |}
+  >>
+  f8 g a bes c d |
+  a16( bes b c d c) g4 r8 |
+
+  a'4.(\p g |
+  f) \grace a16 g8( f g) |
+  f4 r8 r4. |
+  f4.( g) |
+  \repeat unfold 6 a8 |
+  bes4.( a~ | a( g) |
+  a4 r8 r4. |
+  a4 a8 a g a |
+  bes4.( g | f e | f g) |
+  f4 r8 r4 a,8\f |
+  a cis e a4 g8 |
+  g16( f e f e f) g( f e f e d) |
+  e4. d8 f d |
+  cis-. e-. a-. a, r r |
+
+  r4. a'4( g8) |
+  g( f) f-. f4( e8) |
+  \grace e16 d8( cis) d-. f-. e-. d-. |
+  cis e(\f gis a a, g') |
+  f r r f,4.(\p |
+  e8) cis'(\f e a a, g') |
+  f8 r r gis,4.(\p |
+  a8) r gis'(\sf a)(\p a,) gis'(\sf |
+  a)(\p a,) gis'(\sf a)(\p a,) r |
+  r4. r8 gis'16(\p a gis a) |
+  r4. r8 eis16( fis eis fis) |
+  r8 cis16( d cis d) r8 dis16( e dis e) |
+  r4. r8 gis16( a gis a) |
+  r4. r8 cis16( d cis d) |
+  r4. r8 gis,16( a gis a) |
+  r4. r8 fis16( g fis g) |
+  r8 d( e) d r a\f |
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  d8. e16 fis8 e4 a,8 |
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  d d e16 fis d4 r8 |
+  <<
+    {\repeat unfold 42 s16-.}
+    {
+      cis,16\p a cis a d a e' a, e' a, d a |
+      cis e cis e b gis a b cis e d e |
+      cis a cis a d a e' a, e' a, d a |
+      cis a e' cis d b
+    }
+  >> a8 r cis'16\f d |
+  e8 e fis g4 fis8 |
+  e e d cis16 d e fis gis a |
+  a,2.~\p |
+  a4.~ a16
+  <<
+    {\repeat unfold 23 s16-.}
+    {
+      a'16\f gis a b cis |
+      d cis d a fis d a a' gis a b cis |
+      d cis d a fis d
+    }
+  >> <a' a,>4 r8 |
+  r8 a16( gis a gis) a8-. r r |
+  r8 fis16( eis fis eis) fis8-. r r |
+  a8( a, a'~) a( a, a'~)  |
+  a8( a, a'~) a( a, a')  |
+  r4. r8 fis16( g) gis( a) |
+  a8-. r r r d,16( e) eis( fis) |
+  fis8-. r r g-. r r |
+  fis r e d r a\f |
+  a( d) d-. d4 a8 |
+  a( fis') fis-. fis4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  <<
+    {\repeat unfold 8 {s16*5( s16)} }
+    {
+      e16 d cis d g fis e d cis b a g |
+      fis16\p a \repeat unfold 14 {fis a} \repeat unfold 3 {b g} |
+    }
+  >>
+  fis4( e8) d r a''\p |
+  gis16( a gis a b cis) d8 r r |
+  r4. r4 a8 |
+  gis16( a gis a cis a) d8 r r |
+  r4. r4 a8 |
+  gis16( a gis a b cis) d( cis b a g fis) |
+  e( fis g e cis e) d4 r8 |
+  \repeat unfold 3 <d, d' d'>8 <d d' d'>4 r8
+}
+

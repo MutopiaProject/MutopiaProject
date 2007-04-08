@@ -1,0 +1,164 @@
+\include "defs.lyi"
+
+violinIIMvtIIIMain = \relative c'
+{
+  g4\p r8 bes4 r8 |
+  bes2.~ |
+  bes4 r8 ees4. |
+  d r |
+  g,4 g8 bes4 ees8 |
+  g4( f8) d4. |
+  ees8 r ees ees r d |
+  ees g, g g4 g'8\f |
+
+  g( bes) bes-. bes( ees) ees-. |
+  g4( f8) d4( ees16 f) |
+  g8( ees) bes a4 ees'8 |
+  d8.(
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    bes16
+    \set stemLeftBeamCount = #2
+    c a) bes4 aes8 |
+  g( bes) bes-. bes( ees) ees-. |
+  ees( g f) d4( ees16 f) |
+  g8 ees ees ees4 d8 |
+}
+
+violinIIMvtIIIMainEnd = \relative c''
+{
+  ees <ees, g,> <ees g,> <ees g,>4 r8 |
+}
+
+violinIIMvtIII = \relative c'
+{
+  \key ees \major
+  r8
+  \violinIIMvtIIIMain
+  \violinIIMvtIIIMainEnd
+
+  r8 g\p g r g g |
+  r g g g( ees' g) |
+  f4 r8 ees4 r8 |
+  d d d d( ees aes,) |
+  \repeat unfold 6 g |
+  g bes ees g4 g8 |
+  f4 r8 ees4 r8 |
+  d4.( ees8) r bes' |
+  bes4.~ bes8 r r |
+  ees,4.( d8) r r |
+  bes4.~ bes8 r r |
+  c'4.( bes8) r r |
+  bes2. |
+  a( |
+  bes |
+  a8) r r ees'4.\fp |
+  d8( f) d-. \appoggiatura d16 c8 bes-. a-. |
+  bes4.( f) |
+  ees2.( |
+  d8 r r f4. |
+  g4( f8 g4 ees8) |
+  d4. f |
+  g4( f8 g4 ees8) |
+  d4 r8 aes'4( g8) |
+  d4( ees8) f'4( ees8) |
+  d16( ees d8) r f,4( ees8) |
+  aes,4( g8) d'4( ees8) |
+  d4.( ees) |
+  d4.( ees) |
+  d r4\fermata r8 |
+
+  \violinIIMvtIIIMain
+  \violinIIMvtIIIMainEnd
+
+  R2. |
+  r8 ees\p ees ees ees ees |
+  ees( d) d-. d( c) c-. |
+  c( b) b-. b r r |
+  R2. |
+  r8 f' f f f f |
+  f( ees) ees-. ees( d) d-. |
+  c4.( ees) |
+  f4.~ f8( ees d) |
+  c4( b8) c4. |
+  b4 r8 r4. |
+  c4.( ees~) |
+  ees2. |
+  d4( g8) g4( fis8) |
+  g4 r8 r4. |
+  r8 g,( c) r c( g') |
+  f4 r8 r4 g8 |
+  f f f r e e |
+  f4 r8 r4. |
+  r8 d( f) r f( bes) |
+  bes4 r8 r4 f8 |
+  ees ees ees r d d |
+  ees4 r8 r4 bes'8 |
+  b4.( c) |
+  d4 r8 r4 ees8 |
+  d4.( c) |
+  b r |
+  r8 d, d r aes' aes |
+  r g g r d d |
+  r c c r b b |
+  c4 r8 r4. |
+  R2. |
+  <d aes>8\f r <d aes>16 <d aes> \repeat unfold 3 {<d aes>8 r <d aes>16 <d aes>} |
+
+  \violinIIMvtIIIMain
+  ees'2.\p |
+  ees, |
+  f |
+  d |
+  ees4. bes |
+  c bes~ |
+  bes g |
+  aes2. |
+
+  ees'4.~ ees8 f g |
+  ees4.~ ees8( d ees) |
+  f( g aes g f ees) |
+  d4.( f8) r r |
+  bes4.~ bes8( aes bes) |
+  c( aes g f g aes) |
+  bes( aes g f g ees) |
+  d2. |
+  ees |
+  d8 r r aes'4.\sf |
+  g8( bes) g-. \appoggiatura g16 f8 ees-. d-. |
+  ees4.( bes) |
+  aes2.( |
+  g8) r r ees'4.~ |
+  ees( d) |
+  ees c~ |
+  c( bes~) |
+  bes g' |
+  aes8( g f) f( ees d) |
+  ees4 bes'8\f g4 bes8 |
+  ees4 f8 g4 f8 |
+  ees8. f16 ees8 d8.\trill c16 d8 |
+  << {s4. s\p} ees2.~ >> | ees~ | ees~ |
+  ees8 g,, g g g g |
+  g4\p g8 g4 ees'8 |
+  g4( f8) d4.( |
+  ees8) r r r4. |
+  ees2. |
+  f4 r8 r4. |
+  bes,4 bes8 bes4 ees8 |
+  g4( f8) d4.( |
+  ees8) r r r4. |
+  ees4 ees8 d4 d8 |
+  ees g, g g4 r8 |
+
+  bes'8\p r bes16 bes
+    \repeat unfold 12 {bes8 r bes16 bes}
+    bes8 r aes\f |
+  g4.:16 bes:16 |
+  bes2.:16 | bes2.:16 |
+  bes8 r r g\p r r |
+  ees r r g r r |
+  g r r <g' bes, ees,>\f r r |
+  <ees, g,> r r <g' bes, ees,> r r |
+  <ees, g,> r r r4. |
+}
+

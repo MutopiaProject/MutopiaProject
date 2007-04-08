@@ -1,0 +1,136 @@
+\include "defs.lyi"
+
+pianoDynamicsMvtIV =
+{
+  \repeat volta 2
+  {
+    \partial 8 s8\p |
+    s2.*2 |
+    s2.*2-\mStacc |
+    s8 s\< s s4. |
+    s4. s8 s s\! |
+    s2.\f |
+    s4. s8 s s\mf |
+
+    %A
+    s2. |
+    s2.*3-\mStacc |
+    s4. s-\mCresc |
+    s2.*2 |
+    s4. s8 s s\f |
+    s2.*16 |
+    s2.*4-\mNonLegato |
+
+    %B
+    s4. s8 s\< s |
+    s4. s8 s s\! |
+    s2.*6\f |
+    s4. s8 s s\p |
+    s4.\< s8 s s\! |
+    s2.*6 |
+    s4. s8 s s\f |
+    s2. |
+    s4.\f\< s8 s s\! |
+    s2.*11-\mMarcato |
+
+    %C
+    s2.*5\fp |
+    s8\< s s\! s\> s s\! |
+    s2.*2 |
+    s2.*2\p |
+    s8\< s s\! s\> s s\! |
+    s4.\pp s8 s s-\mDim |
+    s2. |
+    s4. s\< |
+    s\> s4\! s8\pp |
+    s2. |
+
+    %D
+    s2.*4-\mPDolce |
+    s2.*4-\p |
+  }
+  \alternative
+  {
+    {
+      s2. |
+      s2.*5-\mCresc |
+      s4. s\f \partial 8*5 s8*5 |
+    }
+    {s4.-\mPCresc}
+  }
+  s4. |
+  s2.*3 |
+
+  %E
+  s2.\f |
+  s4. s\fz |
+  s2. |
+  s4. s\fz |
+  s2.*2-\mFNonLegato |
+  s2.*2\fp |
+  s2.*2\p |
+  s2.*16-\mStacc |
+  s2.*3\p |
+  s4. s-\mPocoAPocoCresc |
+  s2. |
+  s2.*7-\mStacc |
+  s2.*2\f |
+
+  %F
+  s2.*2\f |
+  s8\p\< s s s s s\! |
+  s8\< s s s s s\! |
+  s8\< s s s s s\! |
+  s8\< s s s s s\! |
+  s2.\< | s4. s8 s s\! |
+  s2.*2\f |
+  s8\p\< s s s s s\! |
+  s2. |
+  s2.*6-\mDim |
+  s2.*6\p |
+  s4.\f s8 s s\> |
+  s4. s8 s s\p |
+  s2.*2 |
+  s2.*2-\mStacc |
+  s8 s\< s s4. |
+  s4. s8 s s\! |
+  s2.*2\f |
+  s2.*4\mf |
+  s4. s-\mCresc |
+  s2.*2 |
+  s4. s8 s s\f |
+  s2.*16 |
+
+  %G
+  s2.*4-\mNonLegato |
+  s4. s\< |
+  s4. s8 s s\! |
+  s2.*6\f |
+  s4. s8 s s\p |
+  s8\< s s s s s\! |
+  s2.*4 |
+  s8\< s s s s s\! |
+  s8\> s s s s\! s |
+  s2. |
+  s8\< s s s s s\! |
+  s2.\f |
+  s2.*5-\mMarcato |
+  s2.*6\f |
+
+  %H
+  s2.\fp |
+  s8\< s s\! s\> s s\! |
+  s2.*6-\mPDolce |
+  s2.*7\pp |
+  s2.*8-\mPDolce |
+  s2.*8-\mPCresc |
+
+  %I
+  s2.*10\f |
+  s2.*7\f |
+  s4. s8 s s\f |
+  s2.*11 |
+}
+
+%No Pedal markings
+

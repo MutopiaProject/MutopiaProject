@@ -1,0 +1,96 @@
+hornMvtII = \relative c''
+{
+  \key c \major
+  \transposition ees
+  R4.*10 |
+
+  d4 e8 |
+  d g16 fis e d |
+  g8 g, e' |
+  d( c b) |
+  R4.*2 |
+  g8 g g |
+  a8. b32 c b8 |
+  d4. |
+  dis |
+  e4 f8 |
+  fis4 g16 e |
+
+  d4 r8 |
+  R4.*4 |
+  r8 d d |
+  d4 e16( d) |
+  d8( g) g |
+  g16( fis e d e fis) |
+  g8( d) d |
+  d4 e16( d) |
+  d8( g) g, |
+  e' b cis |
+  d4 r8 |
+  R4. |
+  r8 r16 fis( e cis) |
+  d( fis a) fis( e cis) |
+  d( cis d cis d cis) |
+
+  d4 e8 |
+  d8 g16 fis e d |
+  g8 g, e' |
+  d( c b) |
+  R4.*2 |
+  c8 c c |
+  d8. e32 f e8 |
+  c,4 e'8 |
+  %TODO: I don't like this tweak. Find a better way.
+  d8.
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    e16
+    \set stemLeftBeamCount = #2
+    fis g |
+  \times 2/3 {e( c a)} g8 \grace b16 a8 |
+  g4 r8 |
+
+  d'4( e16 d) |
+  d8( g) g |
+  g16( fis e d e fis) |
+  g8( d) d |
+  d4( e16 d) |
+  d8( g) g, |
+  e' b cis |
+  d4 r8 |
+  R4. |
+  r8 r16 fis( e cis) |
+  d( fis a) fis( e cis) |
+  d( cis d cis d cis) |
+
+  d4 e8 |
+  d8 g16 fis e d |
+  g8 g, e' |
+  d( c b) |
+  R4.*2 |
+  c8 c c |
+  d8. e32 f e8 |
+  c,4 e'8 |
+  %TODO: I don't like this tweak. Find a better way.
+  d8.
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    e16
+    \set stemLeftBeamCount = #2
+    fis g |
+  \times 2/3 {e( c a)} g8 \grace b16 a8 |
+  g4 r8 |
+  R4.*3 |
+  g'4.( |
+  f |
+  e4) cis8 |
+  d8.
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    b16(
+    \set stemLeftBeamCount = #2
+    c a) |
+  g8 g,\pp g |
+  g4 r8 | \bar "|."
+}
+

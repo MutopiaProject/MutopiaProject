@@ -1,0 +1,345 @@
+\include "defs.lyi"
+
+pianoRightMvtIII = \relative c'
+{
+  %6/8
+  \key ges \major
+  \clef bass
+  \set Staff.connectArpeggios = ##t
+  << {ees4(\arpeggio d8 ees4\arpeggio des8)} \\ {<bes ges>4.\arpeggio <bes ges>\arpeggio} >>
+  << {ces4(\arpeggio bes8 ces4\arpeggio bes8)} \\ {<ges ees>4.\arpeggio <ges ees>\arpeggio} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ges ees>4.\arpeggio <f d>\arpeggio} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ees ces>4.\arpeggio d\arpeggio} >>
+  \clef treble
+  << {<bes'' ges>8( <aes f> <ges ees> <aes f>4 ges8)} \\ {bes,4. d4 ees8} >> |
+  %TODO: swap the notes in the voices for the last half of this measure. I 
+  %couldn't figure out how to make the slur cross voices.
+  << {<bes' ges>8( <aes f> <ges ees> g4 aes8)} \\ {bes,4. <ces ces'>} >> |
+  << {<ees' bes>4. <ees ees,>} \\ {ees,4. g4( aes8)} >> |
+  <<
+    {
+      <ces ees,>8( <bes des,> <ces ees,>
+      <aes fes des> < fes des aes> \clef bass <des aes fes>)
+    }
+    \\
+    {
+      aes'4
+      \once \override NoteColumn #'force-hshift = #1.7
+      aes8
+    }
+  >> |
+  %TODO: add arpeggi
+  << {aes,4( a8 bes4 f8)} \\ {<ees ces>4. d} >> |
+  << {aes'4( a8 bes4.)} \\ {<ees, ces>4. <des bes>} >> |
+  \clef treble
+  << {des''8( a bes ces4 bes8)} \\ {des,4. aes'4 ges8} >> |
+  << {des'8( a bes eeses4.)} \\ {des,4. ces'4.} >> |
+  << {ges'4. ges} \\ {des8( ces bes) bes4( ces8)} >> |
+  <<
+    {
+      <ees ges,>8\( <des fes,> <ees ges,>
+      <ces aes fes>( <aes fes ces>) <fes ces aes>\)
+    }
+    \\
+    {
+      ces'4
+      \once \override NoteColumn #'force-hshift = #1.7
+      ces8
+    }
+  >> |
+  \clef bass
+  <<
+    {\hideNotes \stemDown ees,4(\arpeggio d8 \stemNeutral \unHideNotes ees4\arpeggio des8)}
+    \\
+    {<ees bes ges>4\arpeggio <d aes f>8 <bes ges>4.\arpeggio}
+  >> |
+  << {ces4(\arpeggio bes8 ces4\arpeggio bes8)} \\ {<ges ees>4.\arpeggio <ges ees>\arpeggio} >> |
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ges ees>4.\arpeggio <f d>\arpeggio} >> |
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ees ces>4.\arpeggio d\arpeggio} >> |
+
+  %A
+  R2.*4 |
+  \clef treble
+  bes'''8( f' ges f bes, des |
+  ees des bes des ees f) |
+  <ges ges,>( <f f,> <des des,>
+    #(set-octavation 1)
+    <f f,> <ges ges,> <aes aes,>) |
+
+  %9/8
+  <bes bes,>( <aes aes,> <f f,> <aes aes,> <bes bes,> <c aes c,>~) <c aes c,> <c aes c,>4 |
+
+  %6/8
+  <des aes des,>4
+    #(set-octavation 0)
+    <des, fes, des>8~ <des fes, des> <des, aes>4 |
+  <cis a>4 <a' cis, a>8~ <a cis, a> <e' a, e>4 |
+  <fis a, fis>4 <a, fis a,>8~ <a fis a,> <a, fis>4 |
+  <d a>4 <a' d, a>8~ <a d, a> <d a d,>4 |
+  <a' d, a>4 <a, d, a>8~ <a d, a> <d, a>4 |
+
+  %B
+  \set subdivideBeams = ##t
+  <<
+    \repeat unfold 9 {<d' aes>16*2/3 <aes' f>}
+    {
+      %The slur becomes wild without this tweak.
+      \once \override Slur #'positions = #'(8 . 0)
+      s16*2/3( s16*2/3*16 s16*2/3)
+    }
+  >> |
+  << \repeat unfold 9 {<bes, ges>16*2/3 <ees ges>} {s16*2/3( s16*2/3*16 s16*2/3)} >> |
+  <<
+    {
+      <ges, ees>16*2/3 \repeat unfold 4 {<c ees> <ges ees>}
+      <bes des> \repeat unfold 4 {<f des> <bes des>}
+    }
+    {s16*2/3( s16*2/3*16 s16*2/3)}
+  >> |
+  %The slur becomes wild without this tweak.
+  \once \override Slur #'positions = #'(6 . 0)
+  <ees, ces>16*2/3( <ges ces> <ees ces>
+    <ges ces> <ees ces> <ges ces>
+    <ees bes> <ges bes> <ees bes>
+    <f bes> <des bes> <f bes>
+    <bes, f> <des f> <bes f>
+    <c f> <a f> <c f>) |
+  <<
+    {
+      \repeat unfold 9 {<aes f>16*2/3 <d f>}
+      \repeat unfold 9 {<ges, ees>16*2/3 <bes ees>}
+    }
+    {s16*2/3( s16*2/3*34 s16*2/3)}
+  >> |
+  <<
+    {
+      <ges ees>16*2/3 \repeat unfold 4 {<c ees> <ges ees>}
+      <bes des> \repeat unfold 4 {<f des> <bes des>}
+    }
+    {s16*2/3( s16*2/3*16 s16*2/3)}
+  >> |
+  <ees, ces>16 <ges ces> <ees ces> <ges ces> <ees bes> <ges bes>
+    <des bes> <f bes> <des bes> f <c a> f |
+  <aes, f>( \repeat unfold 5 {<f' ees> <aes, f>} <f' d>) |
+  \clef bass
+  <aes, f>8( \repeat unfold 4 {<ces ees> <aes f>} <bes d> <aes f> <bes d>) |
+  << {ees4(\arpeggio d8 ees4\arpeggio des8)} \\ {<bes ges>4\arpeggio <aes f>8 <bes ges>4.\arpeggio} >>
+  << {ces4(\arpeggio bes8 ces4\arpeggio bes8)} \\ {ees,4(\arpeggio ges8 ees4\arpeggio ges8)} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ges ees>4.\arpeggio <f d>4.\arpeggio} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ees ces>4.\arpeggio d4.\arpeggio} >>
+  \clef treble
+  << {<bes'' ges>8( <aes f> <ges ees> <aes f>4 ges8)} \\ {bes,4. d4 ees8} >> |
+  << {<bes' ges>8( <aes f> <ges ees> g4 aes8)} \\ {bes,4. <ces ces'>} >> |
+  << {<ees' bes>4. <ees ees,>} \\ {ees,4. g4( aes8)} >> |
+  <<
+    {
+      <ces ees,>8( <bes des,> <ces ees,>
+      <aes fes des> < fes des aes> \clef bass <des aes fes>)
+    }
+    \\
+    {
+      aes'4
+      \once \override NoteColumn #'force-hshift = #1.7
+      aes8
+    }
+  >> |
+  << {aes,4( a8 bes4 f8)} \\ {<ees c>4. d} >> |
+  << {aes'4( a8 bes4.)} \\ {<ees, c>4. <des bes>} >> |
+  \clef treble
+  << {des''8( a bes ces4 bes8)} \\ {des,4. aes'4 ges8} >> |
+  << {des'8( a bes eeses4.)} \\ {des,4. ces'4.} >> |
+  << {ges'4. ges} \\ {des8( ces bes) bes4( ces8)} >> |
+  <<
+    {
+      <ees ges,>8\( <des fes,> <ees ges,>
+      <ces aes fes>( <aes fes ces>) <fes ces aes>\)
+    }
+    \\
+    {ces'4 ces8}
+  >> |
+  <<
+    {
+      <ees ges,>8( <des fes,> <ees ges,>)
+      <ges ees beses>( <fes des aes> <ges ees beses>)
+    }
+    \\
+    {
+      ces,4 ces8
+    }
+  >> |
+  <aes' fes ces>8( <fes ces> <ces aes> <aes fes> <fes ces> <ces aes>) |
+
+  %C
+  bes4 r8 r4. |
+  R2. |
+  c'8( <g' g,> <aes aes,> <g g,> <c, c,> <ees ees,> |
+  <f f,> <ees ees,> <c c,> <ees ees,> <f f,> <g g,>~) |
+  <g g,>( <c c,>4~) <c c,>4.~ |
+  <c c,>4 r8 r4. |
+  <d d,>8( <a' a,> <bes bes,> <a a,> <d, d,> <f f,> |
+  <g g,> <f f,> <d d,> <f f,> <g g,> <a a,>~) |
+  <a a,>4 r8 r8. \clef bass d,,,,16~( <f d>8) |
+  r16 <f d> <d' f,>8 r16 \clef treble <f d>16 <d' f,>8 r16 <f d f,>16 <d' aes f des>8 | 
+  r8. <bes, g>16 <g' ees bes g>8 r8. <fes fes,>16 <bes ges fes bes,>8 |
+  r8. <ees, ces aes>16 <aes ees ces>8 r8. <ees bes ges>16 <ges ees bes>8 |
+  r8. <ces, aes fes>16 <fes ces aes>8 r8. <ces ges ees>16 <ees ces ges>8 |
+  r8. <ees ces aes>16 <aes ees ces>8 r8. <bes, aes f>16 <f' bes, aes>8 |
+  r8. <bes, g>16 <g' ees bes g>8 r8. <ces, aes>16 <ces' aes ees ces>8 |
+
+  %D
+  r8. <ges ees>16 <ees' bes ges ees>8 r8. <des, bes>16 <bes' des, bes> 8 |
+  r8. <ges, ees>16 <ees' bes ges ees>8 r8. <des, bes>16 <bes' des, bes>8 |
+  r8. \clef bass ees,,16~ <ees ees'>8 r8. ees16~ <ees c'>8 |
+  <ees' bes ges ees>4( <d ces aes f>8 <ees bes ges ees>4 <des g, fes>8) |
+  <b fis dis>4( <ais g e>8 <b fis dis>4 <a dis, c>8) |
+  <g e>4.( <fis dis>) |
+  R2. |
+  <f d>4.( <fes des> |
+  <ees ces> <aes ees ces>) |
+  <bes ges ees bes>2. |
+  <ges ees bes> |
+  <ees bes>~ |
+  <ees bes>4 r8 r4. |
+}
+
+pianoLeftMvtIII = \relative c
+{
+  %6/8
+  \key ges \major
+  \clef bass
+  \set Staff.connectArpeggios = ##t
+  << {ees4(\arpeggio d8 ees4\arpeggio des8)} \\ {<bes ges>4.\arpeggio <bes ges>\arpeggio} >>
+  << {ces4(\arpeggio bes8 ces4\arpeggio bes8)} \\ {<ges ees>4.\arpeggio <ges ees>\arpeggio} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ges ees>4.\arpeggio <f d>\arpeggio} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ees ces>4.\arpeggio <d bes>\arpeggio} >>
+  \repeat unfold 3 {ees,16( ees'8) ees' ees,16}
+  d,16( d'8) d' d,16 |
+  des,16( des'8) des' des,16
+  ces16( ces'8) ees ces16 |
+  aes,16( aes'8) aes' aes,16
+  des,,16( des'8) fes, fes'16 |
+  %TODO: add arpeggi
+  << {aes4( a8 bes4 f8)} \\ {<ees ces>4. <f bes,>} >> |
+  << {aes4( a8 ges4.)} \\ {<ees ces>4. ges,} >> |
+  \repeat unfold 3 {ges16( ges'8) ges' ges,16}
+  f,16( f'8) f' f,16 |
+  fes,16( fes'8) fes' fes,16
+  ees,16( ees'8) ees' ees,16 |
+  ces,16( ces'8) ces' ces,16
+  fes,16( fes'8) aes, aes'16 |
+  <bes bes,>4.\arpeggio << {ees4(\arpeggio des8)} \\ <bes ees,>4.\arpeggio >> |
+  << {ces4(\arpeggio bes8 ces4\arpeggio bes8)} \\ {<ges ees>4.\arpeggio <ges ees>\arpeggio} >> |
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ges ees>4.\arpeggio <f d>\arpeggio} >> |
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ees ces>4.\arpeggio bes\arpeggio} >> |
+
+  %A
+  R2.*4 |
+  \clef treble
+  bes'''8( f' ges f bes, des |
+  ees des bes des ees f) |
+  \clef bass
+  bes,,,16( bes' des, des' bes ges des des bes ges des8~) |
+
+  %9/8
+  des16( des' f, f' des bes f f des bes <f' f,>8~) <f f,> <f f,>4 |
+
+  %6/8
+  <fes fes,>4 <fes' des fes,>8~ <fes des fes,> <des' aes fes>4 |
+  <cis a cis,>4 <a cis, a>8~ <a cis, a> <cis, a cis,>4 |
+  <a fis a,>4 <a' cis a,>8~ <a cis a,> <cis a>4 |
+  <d a fis>4 <fis, d fis,>8~ <fis d fis,> <fis, d fis,>4 |
+  <f d f,>4 <f' d f,>8~ <f d f,> <d' f,>4 |
+
+  %B
+  \set subdivideBeams = ##t
+  << \repeat unfold 9 {f,,,16*2/3 f'} {s16*2/3( s16*2/3*16 s16*2/3)} >> |
+  << \repeat unfold 9 {ges,16*2/3 ges'} {s16*2/3( s16*2/3*16 s16*2/3)} >> |
+  <<
+    {
+      c,16*2/3 \repeat unfold 4 {c' c,}
+      des' \repeat unfold 4 {des, des'}
+    }
+    {s16*2/3( s16*2/3*16 s16*2/3)}
+  >> |
+  <<
+    {
+      ees,16*2/3 \repeat unfold 4 {ees' ees,}
+      f' \repeat unfold 4 {f, f'}
+    }
+    {s16*2/3( s16*2/3*16 s16*2/3)}
+  >> |
+  <<
+    {
+      \repeat unfold 9 {f,,16*2/3 f'}
+      \repeat unfold 6 {ges,16 ges'}
+    }
+    {s16*2/3( s16*2/3*17 s16*11 s16)}
+  >> |
+  c,16( c' c, c' c, c' des, des' des, des' des, des' |
+  ees, ees' ees, ees' ees, ees' f, f' f, f' f, f') |
+  f,,( f' f, f' f, f' bes, bes' bes, bes' bes, bes') |
+  f,8( f' f, f' f, f' |
+  bes, f' bes, bes' bes, bes') |
+
+  << {ees4(\arpeggio d8 ees4\arpeggio des8)} \\ {<bes ges>4\arpeggio <aes f>8 <bes ges>4.\arpeggio} >>
+  << {ces4(\arpeggio bes8 ces4\arpeggio bes8)} \\ {ees,4(\arpeggio ges8 ees4\arpeggio ges8)} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ges ees>4.\arpeggio <f d>4.\arpeggio} >>
+  << {aes4(\arpeggio a8 bes4\arpeggio f8)} \\ {<ees ces>4.\arpeggio <d bes>4.\arpeggio} >>
+  \repeat unfold 3 {ees,16( ees'8) ees' ees,16}
+  d,16( d'8) d' d,16 |
+  des,16( des'8) des' des,16
+  ces16( ces'8) ees ces16 |
+  aes,16( aes'8) aes' aes,16
+  des,,16( des'8) fes, fes'16 |
+  << {aes4( a8 bes4 f8)} \\ {<ees c>4. <f bes,>} >> |
+  << {aes4( a8 ges4.)} \\ {<ees c>4. ges,} >> |
+  \repeat unfold 3 {ges16( ges'8) ges' ges,16}
+  f,16( f'8) f' f,16 |
+  fes,16( fes'8) fes' fes,16
+  ees,16( ees'8) ees' ees,16 |
+  ces,16( ces'8) ces' ces,16
+  fes,16( fes'8) aes, aes'16 |
+  \repeat unfold 2 {ces,16( ces'8) ces' ces,16} |
+  fes,,16( fes'8) fes' fes,16~ fes aes,8( aes' aes,16) |
+
+  %C
+  <bes bes'>2. |
+  <bes bes'>2. |
+  <ees, ees'>2.~ | <ees ees'>4.~ <ees ees'>4 <c c'>8~ |
+  <c c'>2. |
+  c'2. |
+  <f f,>2.~ | <f f,>4.~ <f f,>4 <d d,>8~ |
+  \repeat unfold 3 {<d d,>( <a' a,> <bes bes,>)}
+  <d, d,>( <bes' bes,> <ces ces,>) |
+  \set autoBeaming = ##f
+  <ees, ees,>16 <bes'' g ees> <ees bes g>4
+    <des,, des,>16 <bes'' g fes> <fes' bes, g>4 |
+  <ces, ces,>16 <ces' aes ees> <ees ces aes>4
+    <bes, bes,>16 <bes' ges ees> <ees bes ges>4 |
+  <aes,, aes,>16 <aes' fes ces> <ces aes fes>4
+    <ges, ges,>16 <ges' ees ces> <ces ges ees>4 |
+  <f,, f,>16 <f' ees ces> <ces' f, ees>4
+    <bes, bes,>16 <f' bes,> <bes f>4 |
+  <ees, ees,>16 <g ees>[ <bes g>8] <des, des,>
+    <ces ces,>16 <aes' fes>[ <ces aes>8] <aes, aes,> |
+
+  %D
+  <ges ges,>16 \clef treble <ges'' ees bes> <bes ges ees>4
+    \clef bass <f,, f,>16 <des'' bes f> <f des bes>4 |
+  <ees,, ees,>16 <ges' ees> <bes ges>4
+    <des,, des,>16 <des' bes> <f des>4 |
+  <ces, ces,>16 <ees ces>~ <ces' ees, ces>4
+    <c, c,>16 <ees c>~ <c' ees, c>4 |
+
+  %Tempo I
+  \set autoBeaming = ##t
+  <bes bes,>4. <bes bes,> |
+  <b b,> <b b,> |
+  <b b,>4( <ais ais,>8 <b b,>4 <bes bes,>8~) |
+  <bes bes,>4( <a a,>8 <bes bes,>4 <aes aes,>8~) |
+  <aes aes,>4( <g g,>8 <aes aes,>4 <g g,>8 |
+  <aes aes,>4 <g g,>8 <aes aes,>4 <ees ees,>8~) |
+  \repeat unfold 3 {<ees ees,>4( <d d,>8 <ees ees,>4.~) |}
+  <ees ees,>4 r8 r4. |
+}
+

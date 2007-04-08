@@ -1,0 +1,93 @@
+\include "defs.lyi"
+
+startIIIHorn = \relative c'''
+{
+  R2.*4 |
+  g8(_\mPEspr d ees) f( d ees) |
+  g( d ees) e4(_\espressivo f8) |
+  g(\< f e) e4(\! f8) |
+  aes( g aes) f4(\> bes,8) |
+  c4.( g4)\! r8 |
+  R2. |
+  bes4. f'8( d ees) |
+  R2. |
+  ees2._\espressivo |
+}
+
+hornMvtIII = \relative c''
+{
+  \key ees \major
+  \transposition ees
+  \once \override Score.RehearsalMark #'padding = #2.8
+
+  \startIIIHorn
+  R2. |
+  g4.(\pp\> c,4)\! r8 |
+  R2.*3 |
+
+  %A
+  g'8(\p d' ees d g, bes |
+  c bes g bes c d~) |
+  d b( c ees4 c8) |
+  b( c ees c4 bes8~) |
+  bes4( c8 bes4) g16( d' |
+  ees d) g,( bes c bes) g g ees c g8~ |
+  g r r r4. |
+  %9/8
+  R4.*3 |
+  %6/8
+  bes'8(\p f' ges f bes, des |
+  ees des) r r4. |
+  ees,8(^\mDim bes' ces bes ees, ges |
+  aes ges) r fis( b c |
+  b) r r fis( b c |
+  
+  %B
+  b) r r r g(\< b |
+  d\> c)\! r r c(\< ees |
+  g\> fis)\! r r g( d |
+  ees4.\< d |
+  b8-.)\! r r r g(_\mDim b |
+  d c) r r c( ees, |
+  g fis) r r4. |
+  R2. |
+  r8 aes,4~(\< aes8\> g)\! r |
+  r4. aes~( |
+  aes\> g4)\! r8 |
+  \startIIIHorn
+  R2.*3 |
+
+  %C
+  g'8(_\mMoltoP c d e4 g8 |
+  e4 d8 c4 b8) |
+  a2.~ | a |
+  a8(\pp fis a d4 e8 |
+  d4 a8 fis4.) |
+  fis2.~ | fis4 r8 r4. |
+  r4 b8(_\mPocoAccel d4) r8 |
+  R2. |
+  g4(_\mFPassionato e8) des4. |
+  c4 r8 c4 r8 |
+  des4 r8 c4 r8 |
+  c,4.( g')\espressivo |
+  e'8[(\< b c])
+    \set Score.beatLength = #(ly:make-moment 3 16)
+    des8.( c16) f aes |
+    \set Score.beatLength = #(ly:make-moment 3 8)
+
+  %D
+  c4(\ff c,8) g'4( g,8) |
+  c4( c,8) g'4( g,8~)\< |
+  g8 f4~ f8(\> fis4) |
+
+  g4-.\p r8 g4-. r8 |
+  R2.*2 |
+  ees''4.(\pp d) |
+  r des(\< |
+  c c)\! |
+  ees2.\sf |
+  c\> |
+  ees,~\p |
+  ees4 r8 r4. |
+}
+

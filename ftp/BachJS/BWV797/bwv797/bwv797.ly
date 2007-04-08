@@ -1,0 +1,391 @@
+\include "paper20.ly"
+
+\header {
+  title = "Sinfonia 11" 
+  composer = "Johann Sebastian Bach"
+  opus = "BWV 797"
+  mutopiatitle = "Sinfonia 11"
+  mutopiacomposer = "J. S. Bach (1685-1750)"
+  mutopiaopus = "BWV 797"
+  mutopiainstrument = "Piano, Harpsichord"
+  style = "Baroque"
+  copyright = "Public Domain"
+  maintainer = "Olivier Vermersch"
+  lastupdated = "28/february/2002"
+
+  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  footer = "Mutopia-2002/02/28-200"
+}
+
+\version "1.4.9"
+
+%
+% a few macros for fine tuning
+%
+
+% force direction of stems
+u = \stemUp
+d = \stemDown
+b = \stemBoth
+
+
+% force direction of tie
+tu = \tieUp
+td = \tieDown
+tb = \tieBoth
+
+
+% explicit staff change 
+su = \notes{ \translator Staff = up}
+sd = \notes{ \translator Staff = down}
+
+
+% vertical shifting of rests
+rupone   = \property Voice.Rest \override #'staff-position = #1
+ruptwo   = \property Voice.Rest \override #'staff-position = #2
+rupthree = \property Voice.Rest \override #'staff-position = #3
+rupfour  = \property Voice.Rest \override #'staff-position = #4
+rupfive  = \property Voice.Rest \override #'staff-position = #5
+rupsix   = \property Voice.Rest \override #'staff-position = #6
+
+rdwnone   = \property Voice.Rest \override #'staff-position = #-1
+rdwntwo   = \property Voice.Rest \override #'staff-position = #-2
+rdwnthree = \property Voice.Rest \override #'staff-position = #-3
+rdwnfour  = \property Voice.Rest \override #'staff-position = #-4
+rdwnfive  = \property Voice.Rest \override #'staff-position = #-5
+rdwnsix   = \property Voice.Rest \override #'staff-position = #-6
+
+rdft = \property Voice.Rest \revert #'staff-position
+
+
+% same for multimeasure rests
+Rupone   = \property Voice.MultiMeasureRest \override #'staff-position = #1
+Ruptwo   = \property Voice.MultiMeasureRest \override #'staff-position = #2
+Rupthree = \property Voice.MultiMeasureRest \override #'staff-position = #3
+Rupfour  = \property Voice.MultiMeasureRest \override #'staff-position = #4
+Rupfive  = \property Voice.MultiMeasureRest \override #'staff-position = #5
+Rupsix   = \property Voice.MultiMeasureRest \override #'staff-position = #6
+
+Rdwnone   = \property Voice.MultiMeasureRest \override #'staff-position = #-1
+Rdwntwo   = \property Voice.MultiMeasureRest \override #'staff-position = #-2
+Rdwnthree = \property Voice.MultiMeasureRest \override #'staff-position = #-3
+Rdwnfour  = \property Voice.MultiMeasureRest \override #'staff-position = #-4
+Rdwnfive  = \property Voice.MultiMeasureRest \override #'staff-position = #-5
+Rdwnsix   = \property Voice.MultiMeasureRest \override #'staff-position = #-6
+
+Rdft = \property Voice.MultiMeasureRest \revert #'staff-position
+
+
+% horizontal shifting to avoid note collision
+rshift    = \property Voice.NoteColumn \override #'force-hshift = #1
+rrshift   = \property Voice.NoteColumn \override #'force-hshift = #2
+rrrshift  = \property Voice.NoteColumn \override #'force-hshift = #3
+rrrrshift = \property Voice.NoteColumn \override #'force-hshift = #4
+
+lshift    = \property Voice.NoteColumn \override #'force-hshift = #-1
+llshift   = \property Voice.NoteColumn \override #'force-hshift = #-2
+lllshift  = \property Voice.NoteColumn \override #'force-hshift = #-3
+llllshift = \property Voice.NoteColumn \override #'force-hshift = #-4
+
+dftshift = \property Voice.NoteColumn \revert #'force-hshift
+
+
+
+melone = \notes \relative c'' {
+  % bars 1-7
+  \rupfour r16 \rdft d bes g g'8 |
+  f4.|
+  ees |
+  d |
+  c4 d8 |
+  bes8. bes16 ees8 |
+  a,8. bes16 c8 | \break
+
+  % bars 8-14
+  bes4.  |
+  b4 -\prallprall ~ b16 a32 b  |
+  c8. d16 ees8 ~ |
+  ees16 d b g f'8  |
+  ees4. ~  |
+  ees8. d16 c8 ~  |
+  c16 f d bes bes'8 | \break
+
+  % bars 15-22
+  d,8. ees16 c8 |
+  bes4.  |
+  \d bes' ~ |
+  bes16 g ees c bes'8 |
+  a4. ~ |
+  a16 f d bes bes'8 |
+  g4. ~ |
+  g16 e cis a f'8 ~ | \break
+
+  % bars 23-29
+  f16 d bes g e'8 ~ |
+  e16 g, bes e f, d' ~ |
+  d cis e g d f ~ |
+  f e g bes d, a' ~ |
+  a cis, e g b, f' ~ |
+  f a, cis e gis, d' |
+  cis e cis a g'8 | \break
+
+  % bars 30-36
+  \u f4. |
+  ees |
+  d ~  |
+  d16 cis e g bes8 |
+  a8. e16 f8 |
+  d8. e16 cis8 |
+  d4 f8 | \break
+
+  % bars 37-43
+  f4. ~ |
+  f8. d16 ees8  |
+  ees4. ~ |
+  ees8. c16 d8 ~  |
+  d16 bes' g ees c'8 ~ |
+  c16 a f d bes'8 ~  |
+  bes16 g ees c a'8  | \break
+
+  % bars 44-50
+  fis4 g8  |
+  ees8. d16 c8 |
+  d8. bes16 a! c |
+  bes d c ees d a'  |
+  bes,4. ~  |
+  bes16 g ees c bes'8  |
+  a4. ~ | \break
+
+  % bars 51-57
+  a16 f d bes aes'8  |
+  g4. ~  |
+  g16 bes a! c fis, a ~ |
+  a a g bes e, g ~  |
+  g g fis a c8 ~  |
+  c16 bes a c ees8 ~  |
+  ees16 d c bes a g  | \break
+
+  % bars 58-64
+  c bes a g fis e  |
+  d fis a c g bes \td ~ |
+  bes a c ees g, d' ~  |
+  d fis, a c e, bes' ~ |
+  bes d, fis a cis, g' |
+  fis4 \tu ~ fis16 fis |
+  a c ees4 ~  | \break
+
+  % bars 65-72
+  ees16 d bes g g'8  |
+  f4. |
+  ees4.  |
+  d4.  |
+  c4 d8 |
+  bes8. bes16 ees8 |
+  bes8. c16 a8 |
+  g4.-\fermata \bar "|."
+}
+
+meltwo = \notes \relative c'' {
+  % bars 1-7
+  \Rdwnfour R4. \Rdft |
+  r16 a f d d'8 ~ |
+  d8. bes16 c8 ~ |
+  c8. a16 bes8 |
+  a4. ~ |
+  \rrshift a16 \dftshift fis g4 ~  |
+  \rrshift g \dftshift fis8  |
+
+  % bars 8-14
+  g4.  |
+  r16 d b g g'8 ~ |
+  g4. |
+  f4 d8 |
+  r16 g ees c bes'!8 |
+  a4. |
+  f8. bes ~ |
+
+  % bars 15-22
+  bes4 a8 |
+  bes4. |
+  \sd \u \tu r16 d,16 bes g f'8 |
+  ees4. ~ |
+  ees16 ees c a f'8 |
+  d4. ~  |
+  d16 d bes g e'8 |
+  cis8 a d ~  |
+
+  % bars 23-29
+  d cis d |
+  cis4-\prall d8 e4 f8 |
+  g4 f8 |
+  e4 d8 |
+  cis4-\prall b8 |
+  a4. ~ |
+
+  % bars 30-36
+  a16 \su \d \td a' f d d'8 ~  |
+  d8. bes16 c8 ~ |
+  c8. a16 bes8 |
+  g4 f8 ~ |
+  f16 e cis a d8 |
+  f8. g16 e8 |
+  d4 \rdwntwo r8 \rdft |
+
+  % bars 37-43
+  r \rdwntwo r16 \rdft d' b8 |
+  g8. b16 c8 |
+  c4. ~  |
+  c8. a16 bes8 |
+  bes8. bes16 ees8 ~  |
+  ees8. a,16 d8 ~ |
+  d8. g,16 c8 ~   |
+
+  % bars 44-50
+  c16 fis, a c bes8 ~ |
+  bes16 ees, g bes aes8 ~ |
+  aes16 fis g4 ~ |
+  g fis8 |
+  g4. |
+  c,8 bes c |
+  f4. |
+
+  % bars 51-57
+  bes,8 a bes  |
+  ees4. ~ |
+  ees4. |
+  d |
+  c4 r8 |
+  \Rdwnfour R4. \Rdft |
+  \rdwntwo r8 \rdft \sd \u d, e |
+
+  % bars 58-64
+  fis4 g8 |
+  a4 bes8 |
+  c4 bes8 |
+  a4 g8 |
+  fis4 e8 |
+  \rdwnfour r16 \rdft d fis a \d \su d8 ~  |
+  d8. \rdwnsix r16 r8 \rdft |
+
+  % bars 65-72
+  \Rdwnfour R4. \Rdft |
+  r16 a' f d d'8 ~ |
+  d8. bes16 c8 ~ |
+  c8. a16 bes8 |
+  a4. ~ |
+  \rrshift a16 \dftshift fis g4 ~ |
+  g fis8 |
+  g4. \bar "|."
+}
+
+melthree = \notes \relative c' {
+  % bars 1-7
+  g4 ees8  |
+  d4 bes'8 |
+  g4 a8 |
+  bes16 d bes g g'8 ~ |
+  g8.  e16 fis8 |
+  g4 c,8 |
+  d4 d,8 |
+
+  % bars 8-14
+  \u g16 d bes g g'8 \b |
+  f!4. |
+  ees16 g ees c c'8 ~ |
+  c4 b8 |
+  c4. ~ |
+  c16 c a f ees'8 |
+  d8. g16 ees8  |
+  
+  % bars 15-22
+  f4 f,8 |
+  bes16 f d bes a'8 |
+  g4. |
+  c8 bes c |
+  f,4. |
+  bes8 a bes |
+  e,4. |
+  f |
+
+  % bars 23-29
+  g8 a bes  |
+  \td a4. ~ |
+  a4. ~ |
+  a4. ~ |
+  a4. ~ |
+  a4. |
+  a8. g!16 f e |
+
+  % bars 30-36
+  \tu d4 bes8 |
+  g4 a8  |
+  bes16 d bes g g'8 |
+  e8. e'16 d8  |
+  cis4 d8 |
+  bes8 g a |
+  d,16 d, f a d c |
+
+  % bars 37-43
+  b g b d g f  |
+  ees c ees g c bes! |
+  a f a c f ees  |
+  d bes d f bes a  |
+  g4. |
+  f |
+  ees  |
+
+  % bars 44-50
+  d  |
+  c |
+  bes8. d16 c8 |
+  d8. c16 d8 |
+  g,16 d bes g f'!8 |
+  ees4. ~  |
+  ees16 c a f ees'8 |
+
+  % bars 51-57
+  d4. ~  |
+  d16 bes g ees g bes |
+  c4. |
+  bes |
+  a8. fis16 g8 |
+  fis8. a16 c8 |
+  d, d'4 \td ~ |
+
+  % bars 58-64
+  d4. ~ |
+  d4. ~ |
+  d4. ~ |
+  d4. ~ |
+  d4. ~ |
+  \rupfour r16 \rdft d16 ~ d4 ~ |
+  d8. c'16 bes a |
+  
+  % bars 65-72
+  \tu g4 ees8  |
+  d4 bes'8 |
+  g4 a8 |
+  bes16 d bes g g'8 ~ |
+  g8. e16 fis8  |
+  g4 c,8 |
+  d4 d,8 |
+  g,4.-\fermata \bar "|."
+}
+
+
+\score {
+\context PianoStaff
+\notes
+<
+  \context Staff = "up"   <
+    \property Staff.NoteCollision \override #'merge-differently-dotted = ##t
+    \time 3/8 \key g \minor \clef G 
+    \context Voice = VA { \voiceOne \melone }
+    \context Voice = VB { \voiceTwo \meltwo }>
+
+  \context Staff = "down" <
+    \time 3/8 \key g \minor \clef F \melthree>
+>
+\midi {\tempo 4=60}
+\paper {}
+}

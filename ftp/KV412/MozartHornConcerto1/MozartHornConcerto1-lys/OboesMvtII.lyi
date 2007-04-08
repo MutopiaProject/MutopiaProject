@@ -1,0 +1,131 @@
+\include "defs.lyi"
+
+oboesMvtII = \relative c''
+{
+  \key d \major
+  r8
+  <a fis>8^(\f <d fis,>) <d fis,>-. << {d4 a8} \\ {fis4.} >> |
+  <a fis>8( <fis' a,>) <fis a,>-. <fis a,>4 << d8 \\ d >> |
+  <fis a>4. <e g> |
+  <d fis> <cis e>4 r8 |
+  <a fis>8( <d fis,>) <d fis,>-. << {d4 a8} \\ {fis4.} >> |
+  <a fis>8( <fis' a,>) <fis a,>-. <fis a,>4 << d8 \\ d >> |
+  <fis a>4. <e g> |
+  <d fis>4 <a e'>8 <fis d'>4 r8 |
+
+  R2.*7 |
+  r4. r4
+  <<
+    {
+      fis'8 |
+      e( fis) gis-. a( e) e-. |
+      e( fis) gis-.
+    }
+    \\
+    {
+      a,8\f |
+      a4 d8 cis cis cis |
+      a4 d8
+    }
+  >> <cis a'>4 <cis e>8 |
+  <cis e>( <b d>) <b d>-. <b d>( <a cis>) <a cis>-. |
+  <gis b> <a cis> <cis e> <gis b>4 r8 |
+  R2.*2 |
+  <d' fis>4 <cis e>8 \grace e16 <b d>8 <a cis> <gis b> |
+  <a cis>4 <gis b>8 << a4 \\ a >> r8 |
+
+  R2.*2 |
+  <b d>4.\f <a cis> |
+  <gis b>8 <a cis> <fis dis'> <e e'>4 r8 |
+  R2.*2 |
+  <b' d>4.\f <a cis> |
+  R2.*4 |
+  <cis e>4.\f <d fis>4 <a e'>8 |
+  <fis d'>4 r8 r <fis d'>\p <fis d'> |
+  <fis d'>4. r8 <d' fis> <d fis> |
+  <d fis>4.( <e g>) |
+  <d fis>( <cis e>4) r8 |
+
+  R2.*9 |
+  r4. r4 <a e'>8\f |
+  \repeat unfold 2 {<d fis>4 <cis e>8} |
+  <d fis>4. <b gis'> |
+  <a fis'>4 <gis eis'>8 <a fis'>4 <fis dis'>8 |
+  <<
+    {
+      e'2.~ | e4. d~ | d cis |
+    }
+    \\
+    {
+      e,4 r8 r4. | fis2. | e |
+    }
+  >>
+  <a cis>4. \grace <cis e>16 <b d>8( <a cis> <b d>) |
+  <a cis>4 r8 r4. |
+
+  R2.*4 |
+  <d f>4.\f <e g> |
+  <f a> <e bes'> |
+  <f a>8 <e bes'> <ees c'> <d bes'> <c c'> <bes d'> |
+  <a f'>4. <g e'>4 r8 |
+  R2.*13 |
+
+  <cis e>2.\f |
+  <d f> |
+  <e g>4.( <d f>) |
+  <cis e>8 <cis e> <cis e> <cis e> r r |
+  R2.*16 |
+
+  r4. r4
+  <<
+    {
+      a8 |
+      a( d) d-. d4 a8 |
+      a( fis') fis-. fis4 d8 |
+      a'4. e |
+      fis8. g16 a8 e4 a,8 |
+      a( d) d-. d4 a8 |
+      a( fis') fis-. fis4 d8 |
+      a'4.~ a8 g e |
+      d4 e16 fis d4
+    }
+    \\
+    {
+      a8 |
+      a( fis) fis-. fis4 a8 |
+      a( d) d-. d4 d8 |
+      fis4. g4 e8 |
+      d8. e16 fis8 cis4 a8 |
+      a( fis) fis-. fis4 a8 |
+      a( d) d-. d4 d8 |
+      d,4.~ d4 g8 |
+      fis4 g8 fis4
+    }
+  >> r8 |
+
+  R2.*4 |
+  <cis' e>4\f <d fis>8 <e g>4 <d fis>8 |
+  << {e4 d8} \\ {b4.} >> <a cis>4. |
+  R2. |
+  r4. r8 <cis e>8\f <cis e> |
+  <d fis>4. <cis e>8 <cis e> <cis e> |
+  <d fis>4. <cis e>4 r8 |
+
+  R2.*2 |
+  <a a'>2.~\p | <a a'> |
+  R2.*2 |
+  <fis' a>4.\p <e g> |
+  <d fis>4 <cis e>8 << d4 \\ d >> r8 |
+  <a fis>8^(\f <d fis,>) <d fis,>-. << {d4 a8} \\ {fis4.} >> |
+  <a fis>8( <d fis>) <d fis>-. << {fis4 d8} \\ {d4.} >> |
+  << {a'2.~ | a4 g16 fis e4} \\ {d4.( e) | fis4 e16 d cis4} >> r8 |
+  R2.*4 |
+  <cis e>4.(\p <d fis>8) r r |
+  R2. |
+  <e g>4.(\p <d fis>8) r r |
+  R2. |
+  <e g>4.\f <d fis> |
+  <cis e>8 <cis e> <cis e> << d4 \\ d >> r8 |
+  <fis a,>8 <fis a,> <fis a,> <fis a,>4 r8 |
+}
+

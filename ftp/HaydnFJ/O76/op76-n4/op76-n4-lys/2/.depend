@@ -1,0 +1,4 @@
+violin1.ly: ../defs.ly defs.ly violin1_defs.ly i-violin1.ly i-midi.ly ii-violin1.ly ii-midi.ly iii-violin1.ly iii-midi.ly iv-violin1.ly iv-midi.ly
+violin2.ly: ../defs.ly defs.ly violin2_defs.ly i-violin2.ly i-midi.ly ii-violin2.ly ii-midi.ly iii-violin2.ly iii-midi.ly iv-violin2.ly iv-midi.ly
+viola.ly: ../defs.ly defs.ly viola_defs.ly i-viola.ly i-midi.ly ii-viola.ly ii-midi.ly iii-viola.ly iii-midi.ly iv-viola.ly iv-midi.ly
+violoncello.ly: ../defs.ly defs.ly violoncello_defs.ly i-violoncello.ly i-midi.ly ii-violoncello.ly ii-midi.ly iii-violoncello.ly iii-midi.ly iv-violoncello.ly iv-midi.ly

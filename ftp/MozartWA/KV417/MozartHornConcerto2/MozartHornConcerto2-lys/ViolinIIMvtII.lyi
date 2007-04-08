@@ -1,0 +1,102 @@
+\include "defs.lyi"
+
+violinIIMvtII = \relative c'
+{
+  \key bes \major
+  d4(\p ees8) |
+  d( c ees) |
+  d r d'~ |
+  d( c bes) |
+  r r bes, |
+  bes( a bes) |
+  r cis( d) |
+  r a( bes) |
+  r d bes16( g) |
+  a a( bes c d ees) |
+  d4( ees8) |
+  d( c ees) |
+  d r d~ |
+  d( c bes) |
+  r r bes' |
+  bes( a bes) |
+  r r bes, |
+  bes( a bes) |
+  r c c |
+  r ees ees |
+  r d( f) |
+  r f( g16 e) |
+  f8( a) a |
+  r a a |
+  r g( aes) |
+  r a( bes16 g) |
+  \grace g16 f8 <f a,> <f a,> |
+  <f a,> r r |
+  a,16(\p c ees c ees c) |
+  bes( d f d f d) |
+  c( ees f ees f ees) |
+  bes( d f d f d) |
+  a( c ees c ees c) |
+  d8 r r |
+  d4( bes8) |
+  a16 c' c c c c |
+  c c c c c c |
+  c8 r16 c,( bes g) |
+  a( c a c bes g) |
+  a8 r r |
+  d4( ees8) |
+  d( c ees) |
+  d r d~ |
+  d( c bes) |
+  r r bes~ |
+  bes a( aes) |
+  g r ees'~ |
+  ees d( ees) |
+  r ees ees |
+  ees( d) r |
+  c( bes a) |
+  bes16 f'( ees c d bes) |
+  a16( c ees c ees c) |
+  bes( d f d f d) |
+  c( ees f ees f ees) |
+  bes( d f d f d) |
+  a( c ees c ees c) |
+  d8 r r |
+  d4( bes8) |
+  a16 c' c c c c |
+  c c c c c c |
+  c8 r16 c,( bes g) |
+  a( c a c bes g) |
+  a8 r r |
+  d4( ees8) |
+  d( c ees) |
+  d r d~ |
+  d( c bes) |
+  r r bes~ |
+  bes a( aes) |
+  g r ees'~ |
+  ees d( ees) |
+  r ees ees |
+  ees( d) r |
+  c'( bes a) |
+  r bes bes |
+  r aes aes |
+  r g( bes) |
+  bes8.
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    d16(
+    \set stemLeftBeamCount = #2
+    c a) |
+  bes8 d, d |
+  r d d |
+  r ees( e) |
+  f8.
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    d16(
+    \set stemLeftBeamCount = #2
+    ees c) |
+  bes8 bes\pp bes |
+  bes4 r8 |
+}
+

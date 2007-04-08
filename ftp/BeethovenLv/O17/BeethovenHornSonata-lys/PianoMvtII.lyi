@@ -1,0 +1,90 @@
+pianoRightMvtII = \relative c'
+{
+  \key f \minor
+  \clef bass
+  r8 |
+  <c aes f>8-. r <c aes f>-. r |
+  <c g e>-. <c g e>-. \clef treble r8 f'16. f32 |
+  <<
+    {
+      \repeat unfold 2 {aes8[( f16) r32 f]}
+    }
+    \\
+    {
+      \repeat unfold 2 {b,8. r32 b}
+    }
+  >> |
+  <e c'>8-. <c g>-. r4 |
+  \repeat unfold 2 {<f, c>8-. <f c>16.-. <f c>32-.} |
+  <f bes,>8-. <ees bes>-. r <c' f>16.-. <c f>32-. |
+  <ees bes'>8-. <ees bes'>16.-. <ees bes'>32-. <d aes>8-. <d aes>16.-. <d aes>32-. |
+  <ees g,>8 r r4 |
+  \clef bass
+  <bes, ges>8 r <bes ges> r |
+  <bes f>4. <bes f~>8( |
+  <b f>) <b aes> <b g> <b f> |
+  <c e,> r r \clef treble <des' aes'>16. <des aes'>32 |
+  <e g>8 r r <f aes,>16. <f aes,>32 |
+  <e g,>8 r r <d b aes f>16. <d b aes f>32 |
+  \repeat unfold 2 {<c g e>8 <d b aes f>16. <d b aes f>32} |
+  <c~ g e>8 c32( b d c e d f e g fis a g) |
+  <bes~ e,>4\fermata
+    \grace {bes32[( a g fis g a bes c d c bes a g f e d c cis d a] c2)}
+    <bes e,>4\fermata |
+}
+
+pianoLeftMvtII = \relative c,
+{
+  \key f \minor
+  \clef bass
+  r8
+  f8-. r f-. r |
+  <c' c,>-. <c c,>-. r4 |
+  \clef treble
+  <<
+    {
+      \repeat unfold 2 {f'8[( aes16) r32 aes]}
+    }
+    \\
+    {
+      \repeat unfold 2 {des,8. r32 des}
+    }
+  >> |
+  <g c,>8-. <e c>-. r4 |
+  \clef bass
+  f,8-. f16.-. f32-.  ees8-. ees16.-. ees32-. |
+  d8 ees r <aes ees'>16.-. <aes ees'>32-. |
+  <bes g'>8-. <bes g'>16.-. <bes g'>32-. <bes f'>8-. <bes f'>16.-. <bes f'>32-. |
+  <ees, ees'>8-. r r4 |
+  <ees ees,>8 r <ees ees,> r |
+  <des des,>2~ |
+  <des des,>8 <des des,> <des des,> <des des,> |
+  <c c,> r r \clef treble <b' f'>16. <b f'>32 |
+  <c e>8 r r \clef bass <b d>16. <b d>32 |
+  <c e>8 r r <d b aes f>16. <d b aes f>32 |
+  \repeat unfold 2 {<c g e>8 <d b aes f>16. <d b aes f>32} |
+  <c g e>4 \clef treble <g c e>8( <c e g>) |
+  <c g' bes>4\fermata \clef bass <g c,>4\fermata |
+}
+
+pianoDynamicsMvtII =
+{
+  s8
+  s2*4\p |
+  s2\pp |
+  s4. s8\pp |
+  s2*2 |
+  s2
+  s2*2\sf |
+  s4. s8\pp |
+  s4. s8\pp |
+  s4. s8\sf |
+  s s8\sf s s8\sf |
+  s2\< |
+  s2\p
+}
+
+pianoPedalsMvtII =
+{
+}
+

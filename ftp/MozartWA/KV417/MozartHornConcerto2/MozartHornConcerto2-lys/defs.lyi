@@ -1,0 +1,113 @@
+mcresc = #(make-dynamic-script (markup #:normal-text #:italic "cresc."))
+
+afterGraceFraction = #(cons 15 16)
+
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score.RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \bold $markp }
+#})
+
+outlineMvtI =
+{
+  \time 4/4
+  \tempoMark "Allegro maestoso"
+  s1*24 |
+
+  \mark \default
+  s1*9
+
+  \mark \default
+  s1*11
+
+  \mark \default
+  s1*8
+
+  \mark \default
+  s1*15
+
+  \mark \default
+  s1*15
+
+  \mark \default
+  s1*8 |
+
+  \mark \default
+  s1*8 |
+
+  \mark \default
+  s1*18 |
+
+  \mark \default
+  s1*9 |
+
+  \mark \default
+  s1*9 |
+
+  \mark \default
+  s1*12 |
+
+  \mark \default
+  s1*17 |
+
+  \mark \default
+  s1*27 | \bar "|."
+}
+
+outlineMvtII =
+{
+  \time 3/8
+  \tempoMark "Andante"
+  s4.*10 |
+
+  \mark \default
+  s4.*12 |
+
+  \mark \default
+  s4.*18 |
+
+  \mark \default
+  s4.*12 |
+
+  \mark \default
+  s4.*12 |
+
+  \mark \default
+  s4.*21 | \bar "|."
+}
+
+outlineMvtIII =
+{
+  \time 6/8
+  \tempoMark "Rondo"
+  \partial 8
+  s8
+  s2.*16 |
+
+  \mark \default
+  s2.*30 |
+
+  \mark \default
+  s2.*16 |
+
+  \mark \default
+  s2.*34 |
+
+  \mark \default
+  s2.*15 |
+
+  \mark \default
+  s2.*15 |
+
+  \mark \default
+  s2.*28 |
+
+  s8*5
+  %TODO: The "Più Allegro" should go here. For some reason it causes the
+  %measure to have a bunch of blank space.
+  s8 |
+  \tempoMark "Più Allegro"
+  s2.*15 | \bar "|."
+}
+

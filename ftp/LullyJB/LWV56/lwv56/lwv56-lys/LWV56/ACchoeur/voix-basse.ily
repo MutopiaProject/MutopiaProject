@@ -1,0 +1,86 @@
+do'4 do'4 |
+fa2 fa4. fa8 |
+mi4 fa4 re2 |
+do1 |
+r4 sol4 sol4 sol4 |
+re4 re4 re4 re4 |
+la,4 la4 la4 la4 |
+fa4 fa4 fa4. mi8 |
+mi2. mi4 |
+la2 la4. la8 |
+re2 re4. re8 |
+sol2. sol4 |
+do'4 do'4 si4 do'4 |
+la1 |
+sol2. sol4 |
+mi2 mi4 do4 |
+fa2 fa4. re8 |
+la2. la4 |
+si4 si4 do'4. fa8 |
+sol2 ( sol,2 )|
+do2. |
+r4 do'4 do'4 |
+sol2. |
+la2 la4 |
+fa2 fa4 |
+mi2 do4 |
+fa4 fa4 re4 |
+mi4. re8 mi4 |
+la,4 la4 sol4 |
+fa4 mi4 re4 |
+dod2. |
+re2 do4 |
+sib,4. ( la,8 ) sib,4 |
+la,2 la4 |
+fa4 fa4 re4 |
+la4. sol8 la4 |
+re4 re'4 do'4 |
+sib4 la4 sol4 |
+fad2. |
+sol2 fa4 |
+mib4. ( re8 ) mib4 |
+re2 sib,4 |
+mib4 mib4 do4 |
+re4. do8 re4 |
+sol,2 r4 |
+R2.*6 |
+r4 do'4 sib4 |
+la4 sol4 fa4 |
+mi2. |
+fa2 fa4 |
+re2 re4 |
+la2 mi4 |
+fa4 fa4 re4 |
+sol4. fa8 sol4 |
+do2 r4 |
+R2.*8 |
+r4 sol4 fa4 |
+mi2 r4 |
+r4 la4 sol4 |
+fa2 r4 |
+r4 sib4 la4 |
+sol2. |
+la2 la4 |
+re2 re4 |
+sol2 mi4 |
+la4 la4 fa4 |
+sol4. ( fa8 ) sol4 |
+do4 do'4 do'4 |
+si4 sib4 sib4 |
+la2. |
+sol2 sol4 |
+fa2 fa4 |
+mi4 mi4 mi4 |
+re4 re4 re4 |
+do2. |
+si,2 si,4 |
+la,2 la,4 |
+sol,2 sol4 |
+mi4 mi4 do4 |
+fa4. fa8 re4 |
+la2 la4 |
+si2 si4 |
+do'4 do'4 fa4 |
+sol4. fa8 sol4 |
+do4 do'4 do'4 |
+do2. |

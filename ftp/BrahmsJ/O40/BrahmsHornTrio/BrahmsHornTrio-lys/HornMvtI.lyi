@@ -1,0 +1,256 @@
+\include "defs.lyi"
+
+hornMvtI = \relative c''
+{
+  \key c \major
+  \transposition ees
+  \once \override Score.RehearsalMark #'padding = #3.2
+  \partial 4 r4 |
+  R2*7 |
+  r4 g(_\mPDolceEspr |
+  d') cis8-.( d-.) |
+  d4 e8-.( d-.) |
+  d4 b8-.( a-.) |
+  a4 g8-.( a-.) |
+  a4 g8-.( a-.) |
+  a4 g8-.(\< c-.) |
+  c4( d~)\> | d4\! r |
+  \repeat unfold 2 {r4 g,(\< | c\> b\!) |}
+  f'4 e8-.( f-.) |
+  f4 g8-.( f-.) |
+  f4 d8-.( c-.) |
+  c4 b8-.( c-.) |
+  c4 b8-.( c-.) |
+  c4\< g8-.( c,-.) |
+  g'2(\! | f~)\> |
+  
+  %A
+  f4( e)\! |
+  R2*7 |
+  g'2 | f_\mCresc |
+  r8 ees-.( ees-. f-.) |
+  ees4( d) |
+  ees ees,8( ees') |
+  ees2 |
+  r8 g-.( g-. aes-.) |
+  g-.( f-. f-. g-.) |
+  f( ees) ees4 |
+  R2 |
+  g2~\f | g4(\> f)\! |
+  r8 ees-.( ees-. f-.) |
+  ees-.( d-. d-. ees-.) |
+  d4(_\mDim c~) | c( bes) |
+  r8 aes-.( aes-. bes-.)\< |
+  aes-.( a-. a-.\> b-.) |
+  a4(\! g) |
+
+  %B
+  r4 g(\p |
+  aes g\< |
+  ees'\> d)\! |
+  <<
+    {aes'4(\( g)}
+    {
+      \tupletTransparent
+      \times 2/3 {s4\< s\> s\!}
+    } >> |
+  ees( d)\) |
+  f e8-.( f-.) |
+  f4 g8-.( f-.) |
+  f4_\mPocoCresc fis8-.( g-.) |
+  g4 a8-.( g-.) |
+  g4 e8-.( f-.) |
+  f4 e8-.( f-.) |
+  f4_\mDim c8-.( f,-.) |
+  c'4 b8-.( c-.) |
+  c4 b8-.( c-.) |
+  c4 g8-.(\< c,-.) |
+  g'4 g~\> |
+  g f~( |
+  f^\mSenzaRit e)\! |
+  r e |
+  R2*2 |
+
+  \once \override Score.RehearsalMark #'padding = #2.3
+  %"Poco più animato"
+  R4.*3*2 |
+  r4. c'2.(\p\< | b4.\> g4)\! r8 r4. |
+  r4. c2.( | b4. g4) r8 e4.~( |
+  e4 g8)\< e'4( g8) g4.~ |
+  g(\> e c) | b\! r r |
+  R4.*3*9 |
+
+  %C
+  r4. r4 c8~(\< c4\> b8)\! |
+  R4.*3 |
+  r4. r4 f'8~(\< f4\> e8)\! |
+  R4.*3 |
+  r4^\mCresc c8~(\< c4\> b8)\! r4. |
+  r4 f'8~( f4 e8) r4 g8 |
+  f4\f r8 r4. r |
+  R4.*3 |
+  r2. r4 e,8-.\f |
+  e'4-. r8 ees2.~\fp |
+  ees2.~ ees4.~ | ees2.( e4.) |
+  b2.( c4.) |
+  b( d4) r8 a4.(\< |
+  c\> b4)\! r8 r4. |
+
+  %D
+  R4.*3 |
+  r2. g'4.(\p\< |
+  aes2.~\!^\mSempreCresc) aes4.(\< |
+  g2.)\> ees4.~\< |
+  ees2.\> b4.~\< |
+  b2.\> c4.(\! |
+  b2.\> a4.) |
+  g4\p r8 r4. r |
+  c2.~\sf\> c4.~ |
+  c(\p b ais) |
+  b2.( a4.) |
+  g( b\< e4 g8) |
+  g2.(\sf\> fis4.) |
+  e2.(\p b4.) |
+  a2.~_\mDimPocoRit a4. |
+  g2.~ g4. |
+  fis2.~ fis4. |
+  f2.~ f4. |
+  R4.*3*2 |
+  r4. r g(\p |
+  
+  \once \override Score.RehearsalMark #'padding = #1.2
+  %"Tempo I"
+  d'4) cis8-.( d-.) |
+  d4 e8-.( d-.) |
+  d4 b8-.( a-.) |
+  a4 g8-.( a-.) |
+  a4 g8-.( a-.) |
+  a4 g8-.( c-.) |
+  c4(\< d~)\> |
+  d4\! r8 g,_\mDolce |
+
+  %E
+  f'( e) e-.( f-.) |
+  f( g) g-.( f-.) |
+  f4 f~ |
+  f b,~ |
+  b c~ |
+  c e,(\< |
+  g2~)\> |
+  g4\! r |
+  \repeat unfold 2 {r g(\< | c\> b)\! |}
+  f'4 e8-.( f-.) |
+  f4 g8-.( f-.) |
+  f4_\mPocoCresc fis8-.( g-.) |
+  g4 a8-.( g-.) |
+  g4 e8-.( f-.) |
+  f4 e8-.(_\mDim f-.) |
+  f4 c8-.( f,-.) |
+  c'4 b8-.( c-.) |
+  c4 b8-.( c-.) |
+  c4 g8-.( c,-.) |
+  g'4 g~\< |
+  g f~\> |
+  f( e-.\!)\(^\mSenzaRit |
+  r4 e-.\) |
+  r4 ees-.\>\( |
+  r4 ees-.\!\) |
+
+  \once \override Score.RehearsalMark #'padding = #2.3
+  %"Poco più animato"
+  R4.*3*2 |
+  r4. ees'2.(\p\< | d4.\> bes4)\! r8 r4. |
+  r4. ees2.(\p\< | d4.\> bes4)\! r8 g4.~ |
+  g4 g8~(\< g4 bes8)\! bes4.~ |
+  bes g'(\> ees)\! |
+  d r bes(\< |
+  g'2.~)\> g4.(\! |
+  ees4) r8 r4. r |
+  r r4 cis8~(\< cis4 d8) |
+
+  %F
+  ees4.\> r4\! cis8~( cis4 d8) |
+  f4. r4 d8~(\< d4 ees8)\! |
+  \once \override TextScript #'padding = #2.5
+  gis2.~_\mSempreCresc gis4.~\< |
+  gis(\> fis4)\! r8 e4.~(\< |
+  e\> d4)\! r8 c4.~(\< |
+  c\> bes4)\! r8 d4( c8) |
+  bes2.(\> a4.) |
+  g4\! r8 r4. r |
+  ees'2.~\sf\> ees4. |
+  ees(\p d cis) |
+  d2.( c4.) |
+
+  %G
+  bes4.(\< d g4 bes,8) |
+  bes2.(\sf\> a4.) |
+  d2.~\p d4. |
+  c2.~_\mDimPocoRit c4. |
+  bes2.~ bes4. |
+  a2.~ a4. |
+  aes2.~ aes4. |
+  R4.*3*2 |
+  r4. r bes(\pp |
+
+  \once \override Score.RehearsalMark #'padding = #1.5
+  %"Tempo I"
+  f'4) e8-.( f-.) |
+  f4 g8-.( f-.) |
+  f4 d8-.( c-.) |
+  c4 bes8-.( c-.) |
+  c4 bes8-.( c-.) |
+  c4 bes8-.( ees-.) |
+  ees4( f~) |
+  f r |
+  \repeat unfold 2 {r bes,(\< | ees\> d)\! |}
+  \set crescendoText = \markup { \italic "poco cresc." }
+  \set crescendoSpanner = #'dashed-line
+  r c(\< | f e) |
+  r c( | f e) |
+  r d( | g fis) |
+  f( e) |
+  ees( d) |
+
+  %H
+  <<
+    {d(\!^\mEsprSempreCresc_\mAdlib ees | f ees | d) r |}
+    \new Voice {\voiceTwo R2*3 |}
+  >>
+  s1*0_\mPocoAnimatoPoiAPoi R2 |
+  r4 ees( | g aes | bes) r |
+  R2 |
+  r4 g(\f | aes f | des) r |
+  r bes'( | b aes | g f) |
+  <<
+    {d(_\mAdlib g,~ | g) d'(\< | f\> g,)\! |}
+    \new Voice {\voiceTwo R2*3 |}
+  >>
+  r4 d'(\< | g\> c,)\! |
+  r g'(\< | bes\> c,)\! |
+  r e(\< | f\> c)\! |
+  r_\mDim e(\< | f\> c)\! |
+  
+  %I
+  r4 << c-_ \fade >> |
+  r4 << e-_ \fade >> |
+  \once \override TextScript #'padding = #2.5
+  r4_\mSempreDimRitPoco << e-_ \fade >> |
+  r4 << e-_ \fade >> |
+  r4 << f-_ \fade >> |
+  r4 << f-_ \fade >> |
+  r4 << ees-_ \fade >> |
+  r4 e8-.(\> f-.)\! |
+  r4 e8-.(\> f-.)\! |
+  r4 dis8-.(\> e-.)\! |
+  r4 cis8-.(\> d-.)\! |
+  r4 fis8-.(\> g-.)\! |
+  r4 fis8-.(\> g-.)\! |
+  g4(\espressivo c,4) |
+  r4 fis8-.( g-.) |
+  g4(\espressivo c,4) |
+  r4 fis8-.( g-.) |
+  g2\< | g~\> | g4( c,)\! |
+  c2 | c2\fermata |
+}
+

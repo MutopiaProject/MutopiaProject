@@ -1,0 +1,272 @@
+\include "defs.lyi"
+
+violinMvtI = \relative c'
+{
+  \key ees \major
+  \once \override Score.RehearsalMark #'padding = #1.8
+  \partial 4 bes4(\downbow_\mPDolceEspr |
+  f' e8-.( f-.) |
+  f4 g8-.( f-.) |
+  f4 d8-.( c-.) |
+  \repeat unfold 2 {c4 bes8-.( c-.) |}
+  c4 bes8-.( ees-.) |
+  ees4(\< f4~)\> |
+  f4 r8\! bes,8-.( |
+  <aes' bes,>-. <bes bes,>-.) r8 bes,-.( |
+  <aes' bes,>-. <bes bes,>-.) r8 bes,-.( |
+  <aes' bes,>-. <bes bes,>-.) r8 bes,-.( |
+  <f' bes,>-. <bes bes,>-.) r8 bes,-.( |
+  <d bes>-. <bes' bes,>-.) r8 bes,-.( |
+  <ees bes>-. <g bes,>-.) r8 bes,-.( |
+  <ees bes>-.\> <f bes,>-.) r8 bes,-.( |
+  <d bes>-. <f bes,>-.)\! bes4( |
+  ces\< bes | ges'\> f)\! |
+  ces(\(_\espressivo bes) | ges( f)\) |
+  R2*8 |
+
+  %A
+  R2*2 |
+  ees'2 | d |
+  r8 c-.( c-. ees-.) |
+  f4( aes,) |
+  r8 g4(\< c8) |
+  c4(\> ges4) |
+  f4\! r |
+  R2 |
+  des''2_\mCresc | ces2 |
+  r8 bes8-.( bes-. des-.) |
+  ees4( aes,) |
+  r8 ges-.( ges-. aes-.) |
+  ges-.( f-. f-. ges-.) |
+  f4( ees) |
+  R2 |
+  ges,2~(\f\> | ges4 f4)\! |
+  r8 ees-.( ees-. f-.) |
+  ees-.( des-. des-. ees-.) |
+  des4(_\mDim ces~ | ces bes) |
+  r8 aes-.(\< aes-. bes-.) |
+  aes-.( a-.\> a-. bes-.) |
+  a4(\! bes) |
+
+  %B
+  R2 |
+  r4 bes(\p\< | ees\> d)\! |
+  r4 bes(\< | ees\> d)\! |
+  f e8-.( f-.) |
+  f4 cis8-.( d-.) |
+  d4^\mPocoCresc bes8-.( ees-.) |
+  ees( g) fis-.( g-.) |
+  g( ees) ees4~ |
+  ees ees~ |
+  ees ces~ |
+  ces bes~ |
+  bes bes~ |
+  bes bes |
+  R2*5 |
+  \once \override TupletBracket #'direction = #UP
+  \times 2/3 {r8 r
+    \once \override TextScript #'extra-offset = #'(0.0 . -2.0)
+    \once \override Script #'extra-offset = #'(0.0 . 1.3)
+    fis'~(\<\upbow_\mMPEspr} \times 2/3 {fis4\> g8)\!} |
+
+  \key bes \major
+  %"Poco più animato"
+  aes4. r4 fis8~(\< fis4\> g8)\! |
+  bes4. r4 g8~( g4 aes8) |
+  c4.~ c4( d8)\< bes4( c8) |
+  aes4(\> bes8) g4\! ees8( f4 g8) |
+  aes4.~ aes4( bes8) g4( aes8) |
+  f4(\< g8) ees4 bes8~( bes4 c8) |
+  d4.~( d4 g8)\! d'4( g8) |
+  g4.(\> ees c)\! |
+  \repeat unfold 2
+  {
+    a4. \times 3/2 {r8 g'(} \times 3/2 {ees c)} |
+  }
+  a4. \times 3/2 {r8 ees'(} \times 3/2 {c\< a)} |
+  \times 3/2 {d8(\> bes}\times 3/2 {g ees} \times 3/2 {d c)\!} |
+  \repeat unfold 2
+  {
+    d8( fis a) ees( g b d c g) |
+  }
+  f( a c) fis,( a c f ees) <fis, a,>\f |
+  <g g,>4 r8 r4. r |
+  R4.*3*2 |
+
+  %C
+  R4.*3 |
+  r4 d'8~_\espressivo d r ees( f4\< aes8~ |
+  aes4\> g8)\! r4. r |
+  r4 g8~_\mCresc g r aes( bes4\< des8~ |
+  des4\> c8)\! r4 d,8( ees4\< g8~ |
+  g4\> f8)\! r fis8(\< g) r g( bes) |
+  aes2.\f aes4.( |
+  a2.) a4.~(\< |
+  a\> d,4)\! r8 r4 <b d,>8-.\f |
+  <c ees,>4-. r8 a(\fp a, a' a, a' a,) |
+  a'( \repeat unfold 3 {a, a'} a, a') |
+  a( a, a' a, a' a, g' g, g') |
+  ces( ces, ces' ces, ces' ces, bes' bes, bes') |
+  b( b, b' b, b' b, c'\< c, c') |
+  g(\> ees g)\! <fis a,>4 cis'8~(\<^\mDolce cis4\> d8)\! |
+
+  %D
+  e4. r4 cis8~( cis4 d8) |
+  f4. r4 d8~(\< d4 ees8)\! |
+  aes2.~ aes4.(\< |
+  gis)(\> fis)\! e~(\< |
+  e\> d)\! c~(\< |
+  c\> bes)\! d4( c8) |
+  bes2.(\> a4.) |
+  g4\p r8 r4. r |
+  ees'2.~\sf\> ees4.~ |
+  ees(\p d cis |
+  d c a) |
+  g( a\< bes4 d8) |
+  d2.(\sf\> c4.) |
+  bes2.~\p bes4. |
+  a2.~_\mDimPocoRit a4. |
+  g2.~ g4. |
+  fis2.~ fis4. |
+  f2.~ f4 r8 |
+  r4. r bes,(\< |
+  f'2.~)\> f4\! r8 |
+  R4.*3 |
+
+  \key ees \major
+  \once \override Score.RehearsalMark #'padding = #2.2
+  %"Tempo I"
+  R2*7 |
+  r4 bes_\mDolce |
+
+  %E
+  f'8( e) e-.( f-.) |
+  f( g) g-.( f-.) |
+  f( d) d-.( c-.) |
+  c( bes) bes-.( c-.) |
+  c( bes) bes-.( c-.) |
+  c( bes) bes-.( ees-.) |
+  ees4(\< f~) |
+  f\> bes,,(\p |
+  ces bes\< |
+  ges'\> f)\! |
+  ces'( bes |
+  ges f) |
+  f e8-.( f-.) |
+  f4 cis8-.( d-.) |
+  d4 bes8-.( ees-.) |
+  ees8( g) fis-.( g-.) |
+  g( ees) ees4~ |
+  ees ees~ |
+  ees ces~ |
+  ces bes~ |
+  bes bes~ |
+  bes bes |
+  R2*5 |
+  \times 2/3 {r4 a'8~_(_\mMPEspr} \times 2/3 {a4 bes8)} |
+
+  \key des \major
+  %"Poco più animato"
+  ces4. r4 a8~( a4 bes8) |
+  des4. r4 bes8~( bes4 ces8) |
+  ees4.~( ees4 f8) des4( ees8) |
+  ces4( des8) bes4 ges8( aes4 bes8) |
+  ces4.~( ces4 des8) bes4( ces8) |
+  aes4( bes8) ges4 des8~(\< des4 ees8) |
+  f4.~( f4 bes8) f'4(\! bes8) |
+  bes4.(\> ges ees)\! |
+  c r4 des8(\< aes'4 des8)\! |
+  des4.( bes ges) |
+  bes( ges\> ees) |
+  c4\! r8 r4. r |
+
+  %F
+  R4.*3 |
+  r4. r cis,(\< |
+  gis'2.~)\!^\mSempreCresc gis4.~\< |
+  gis(\> fis4)\! r8 e4.~(\< |
+  e\> d4)\! r8 c4.~(\< |
+  c\> bes4)\! r8 des4( c8) |
+  bes2.(\> a4.) |
+  bes4\p r8 r4. r |
+  ges''2.~\sf\> ges4.~ |
+  ges(\p f e |
+  f ees c) |
+
+  %G
+  bes(\< c d4 f8) |
+  f2.(\sf\> ees4.) |
+  des2.~\p des4. |
+  c2.~_\mDimPocoRit c4. |
+  bes2.~ bes4. |
+  a2.~ a4. |
+  aes2.~ aes4 r8 |
+  r4. r des,(\p\< |
+  aes'2.~)\> aes4\! r8 |
+  R4.*3 |
+
+  \key ges \major
+  \once \override Score.RehearsalMark #'padding = #2.2
+  %"Tempo I"
+  R2*8 |
+  r4 des,(\p\< | beses'\> aes)\! |
+  r des(\< | beses\> aes)\! |
+  r ees(_\mPocoCresc | ces' bes) |
+  r ees( | ces bes) |
+  r f'( | des c) |
+  ces( bes) |
+  beses( aes) |
+
+  %H
+  ces4_\mEspr bes8-.( ces-.) |
+  ces2~(_\mSempreCrescAnimato |
+  ces8 c) c( des) |
+  des( ees) ees( e) |
+  e4 dis8-.( e-.) |
+  e2~( |
+  e8 eis) eis( fis) |
+  fis( fisis) fisis( gis) |
+  gis4 fisis8-.( gis-.) |
+  gis2~( |
+  gis8 a) a( gis) |
+  aes4 g8-.( aes-.) |
+  aes2~( |
+  aes8 bes) bes( aes) |
+
+  \key ees \major
+  aes8(_\mFEspr g) g-.( aes-.) |
+  aes( bes) bes-.( aes-.) |
+  aes( f) f-.( ees-.) |
+  ees( d) f-.( a-.) |
+  bes( a) a-.( bes-.) |
+  bes( c) c-.( bes-.) |
+  bes( g) g-.( f-.) |
+  f( d) d-.( ees-.) |
+  f(_\espressivo d) d-.( ees-.) |
+  r d-.( d-. ees-.) |
+  fes(_\espressivo d) d-.( ees-.) |
+
+  %I
+  \once \override TextScript #'extra-offset = #'(0.0 . -3.7)
+  r4_\mEspr <d ees,>8-.(\> <ees ees,>-.)\! |
+  r4 <d ees,>8-.(\> <ees ees,>-.)\! |
+  \once \override TextScript #'extra-offset = #'(0.0 . -3.7)
+  r4_\mSempreDimRitPoco <d ees,>8-.(\> <ees ees,>-.)\! |
+  r4 <c ees,>8-.(\> <des ees,>-.)\! |
+  r4 <b ees,>8-.(\> <c ees,>-.)\! |
+  r4 <ais dis,>8-.(\> <b dis,>-.)\! |
+  r4 <gis b,>8-.(\> <a b,>-.)\! |
+  r4 <g b,>8-.(\> <gis b,>-.)\! |
+  r4 <d bes>-_ |
+  r4 <ees bes>-_ |
+  r4 <ees c>-_ |
+  \repeat unfold 2 {r4 <ees g,>-.( | r4 <d aes>-.) |}
+  r <ees g,> |
+  r <d aes>\< |
+  <d aes>2 |
+  <d aes>~(\> |
+  <d aes>4 <ees g,>)\! |
+  <ees g,>2 |
+  <ees g,>\fermata |
+}
+

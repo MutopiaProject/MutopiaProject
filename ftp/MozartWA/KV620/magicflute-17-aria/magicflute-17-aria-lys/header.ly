@@ -1,0 +1,26 @@
+\version "1.5.66"
+
+\header{
+ mutopiatitle = "The Magic Flute (Die Zauberflote)"
+ mutopiasubtitle = "No. 17 Arie"
+ mutopiacomposer = "W. A. Mozart (1756-1791)"
+ mutopiaopus = "KV620"
+ mutopiainstrument = "Flute, Oboe, Bassoon, Violin, Viola, Cello, Double Bass, Vocal"
+ date = "1791"
+ source = "J. L. Peters 1875, C. F. Peters 18??, Lee & Walker 1870, North & Co. 1879"
+ style = "Classical"
+ copyright = "Public Domain"
+ maintainer = "Deborah Lowrey"
+ maintainerEmail = "drlowrey@karmaresources.com"
+ maintainerWeb = "http://www.karmaresources.com"	
+ lastupdated = "2002/07/27"
+ title = "The Magic Flute (Die Zauberflote)"
+ subtitle = "No. 17 Arie"
+ composer = "W. A. Mozart (1756-1791)"
+ opus = "KV620"
+ meter = "Andante."
+
+% footer = "Public Domain"
+ tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by Deborah Lowrey (\\texttt{http://www.karmaresources.com}).\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+ footer = "Mutopia-2002/07/27-252"
+}

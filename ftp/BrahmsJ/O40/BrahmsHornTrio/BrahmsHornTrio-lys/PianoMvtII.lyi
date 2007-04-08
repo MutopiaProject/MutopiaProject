@@ -1,0 +1,879 @@
+\include "defs.lyi"
+
+pianoRightMvtII = \relative c'
+{
+  \key ees \major
+  \clef treble
+  <ees ees,>4-. <f f,>-. <aes aes,>-. |
+  <g g,>-. <f f,>-. <g g,>-. |
+  <f f,>-. <ees ees,>-. <f f,>-. |
+  <ees ees,> bes-. <ees ees,>-. |
+  <f f,>-. <g g,>-. <bes bes,>-. |
+  <aes aes,>-. <g g,>-. <aes aes,>-. |
+  <g g,>-. <f f,>-. <g g,>-. |
+  <f f,>-. <ees ees,>-. <bes' bes,>-. |
+  <ees ees,>-. <d d,>-. <ees ees,>-. |
+  <d d,>-. a-. <c c,>-. |
+  <bes bes,>-. <g g,>-. <bes bes,>-. |
+  <a a,>-. e-. fis-. |
+
+  %A
+  <g' d b g>2.~ |
+  \times 3/2 {<g d b g>4 <d b g>-.} |
+  \times 3/2 {<e c g> <f c a>}
+  <<
+    d2.
+    \\
+    \times 3/2 {<bes f>4 <aes f>}
+  >> |
+  <g ees>4-. <aes ees>-. <c ees,>-. |
+  <bes ees,>-. <aes ees>-. <bes ees,>-. |
+  <aes ees> <g ees> <aes ees> |
+  <g ees> <f d> <g ees> |
+  <aes ees> <bes ees,> <d ees,> |
+  <c ees,> <bes ees,> <c ees,> |
+  <bes ees,> <aes ees> <bes ees,> |
+  <aes ees> <g ees> <d' bes f> |
+  <ges bes, ges>2. |
+  <f des f,> |
+  <f ees f,> |
+  <d bes f>2 <d bes f>4-. |
+  <ges bes, ges>2. |
+  <f des f,> |
+  <f ees f,> |
+  <d bes f>2 <c a f>4-. |
+  <des f, des>2. |
+  <c aes c,> |
+  <c bes c,> |
+  <c a c,>2 <c a f>4-. |
+  <des f, des>2. |
+  <c aes c,> |
+  <e c bes e,>4 <e c bes e,>2 |
+  <e c bes e,>2 <e c bes e,>4 |
+  <f c a f>4-. r r |
+  R2.*7 |
+  <<
+    {
+      f,4( g bes |
+      a g a |
+      g f g |
+      f ees f) |
+      ees( f g |
+      a bes c) |
+      d( ees f |
+      g a bes) |
+      c( d ees |
+      f g a) |
+      bes( f d |
+      bes f d) |
+    }
+    {
+      f,,4 g bes |
+      a g a |
+      g f g |
+      f ees f |
+      ees f g |
+      a bes c |
+      d ees f |
+      g a bes |
+      c d ees |
+      f g a |
+      bes f d |
+      bes f d |
+    }
+  >>
+
+  %B
+  r4 r <des' ges, des>-. |
+  r r <ges bes, ges>-. |
+  r r <bes ges bes,>-. |
+  r r <e, bes e,>-. |
+  r r <f d bes f> |
+  r r <d bes f> |
+  r r <f ees a, f> |
+  r r <a, ees c> |
+  r r <des ges, des> |
+  r r <ges bes, ges> |
+  r r <bes des, bes> |
+  r r <ges' bes, ges> |
+  r r <f bes, f> |
+  r r <f, bes, f> |
+  r r <f' c a f> |
+  r r <f, c a f> |
+  <bes' bes,>-. <aes aes,>-. <f f,>-. |
+  d-. bes-. aes-. |
+  f-. d-. bes-. |
+  aes-. f-. bes,-. |
+  ees-. r aes-. |
+  ees-. r ees,-. |
+  bes'-. r bes,-. |
+  ees-. r r |
+  aes'-. r ees-. |
+  aes-. r aes,-. |
+  ees'-. r ees,-. |
+  bes'-. r bes''-. |
+  ees-. d-. ees-. |
+  des-. c-. des-. |
+  b-. ais-. b-. |
+  ais-. fis-. r |
+  <ais ais,>2.( |
+  <b b,>~ | <b b,> |
+  <a a,>2) <e' e,>4-. |
+
+  \key b \major
+  <a a,>-. <gis gis,>-. <a a,>-. |
+  <gis gis,>-. <dis dis,>-. <fis fis,>-. |
+  <e e,>-. <cis cis,>-. <e e,>-. |
+  <dis dis,>-. <ais ais,>-. <bis bis,>-. |
+  <cis gis e cis>2.~ |
+  \times 3/2 {<cis gis e cis>4 <gis e cis>-.} |
+  \times 3/2 {<ais fis cis>( <b dis, b>)} |
+  <gis e gis,>2.\trill |
+  R2. |
+  e,,4-. cis'-. e-. |
+  \times 3/2 {dis( gis,)} |
+  cis2. |
+  \times 3/2 {<ais'' fis cis>4( <b dis, b>)} |
+  <gis e gis,>2.\trill |
+  \times 3/2 {dis,4( gis,)} |
+  cis2. |
+  <<
+    {
+      \tupletUp
+      \slurDown
+      \times 3/2 {<ais' cis,>4( <b dis,>)} |
+      \times 3/2 {<gis b,>2} |
+      \times 3/2 {<fis ais,>4( <gis b,>)} |
+      \times 3/2 {<e gis,>2} |
+      \times 3/2 {<dis fis,>4( <e gis,>)} |
+      \slurUp
+      \tupletNeutral
+      %Don't draw brackets here
+      cis2*3/2~ |
+      cis4*3/2( e) |
+      cis2*3/2 |
+      \slurNeutral
+    }
+    \\
+    {
+      \tupletUp
+      \times 3/2 {fis2} |
+      \times 3/2 {e4( dis)} |
+      \times 3/2 {dis2} |
+      \times 3/2 {cis4( b)} |
+      \times 3/2 {b2} |
+      \tupletNeutral
+      %Don't draw brackets here
+      b4*3/2( ais) |
+      gis( e) |
+      b'( ais) |
+    }
+  >>
+
+  %C
+  b4 r r |
+  gis8( e' gis b e b' | <dis, b>4) r r |
+  fis,,8( b dis fis b fis' | <cis ais e>4) r r |
+  e,,8( ais cis e ais fis' | <b, dis,>4) r r |
+  \repeat unfold 2
+  {
+    fis,8( dis' fis b dis b'~ | <b b,>4) r r |
+    gis,,8( e' gis b e b'~ | <b b,>4) r r |
+  }
+  \change Staff=LH b,,,8( fis' b \change Staff=RH dis fis dis') |
+  << {fis,8( dis' eis, cisis' fis, dis'~} \\ {s2 fis,4~} >> |
+  << dis'2.) \\ {\stemUp fis, \stemNeutral} >> |
+  << {e8( cis' dis, bis' e, cis'~} \\ {s2 e,4~} >> |
+  << cis'2.) \\ {\stemUp e, \stemNeutral} >> |
+  << {d8( b' cis, ais' d, b'~} \\ {s2 d,4~} >> |
+  << b'2.) \\ {\stemUp d, \stemNeutral} >> |
+  cis8( ais' b, gis' ais, fis' |
+  cis ais' e cis' gis e') |
+
+  %D
+  << {fis,8( dis' eis, cisis' fis, dis'~} \\ {s2 fis,4~} >> |
+  << dis'2.) \\ {\stemUp fis, \stemNeutral} >> |
+  << {e8( cis' dis, bis' e, cis'~} \\ {s2 e,4~} >> |
+  << cis'2.) \\ {\stemUp e, \stemNeutral} >> |
+  << {d8( b' cis, ais' d, b'~} \\ {s2 d,4~} >> |
+  << b'2.) \\ {\stemUp d, \stemNeutral} >> |
+  cis8( ais' e cis' gis e' |
+  b gis' gis, e' e, cis') |
+
+  \key ees \major
+  \repeat unfold 3
+  {
+    << {ges8( ees' f, d' ges, ees'~} \\ {s2 ges,4~} >> |
+    << ees'2.) \\ {\stemUp ges, \stemNeutral} >> |
+  }
+  << {<c ees,>8( ees <b d,> d <c ees,> ees~)} \\ {s2 <c ees,>4~} >> |
+  << {ees4( <b d,>8 d <c ees,> ees~) } \\ {\stemUp <c ees,>4 \stemDown s4 <c ees,>4~ \stemNeutral} >> |
+  << {ees4( <b d,>8 d <c ees,> ees) } \\ {\stemUp <c ees,>4 \stemNeutral} >> |
+  <b d,>8( d <c ees,> ees) d d' |
+  r <ees ees,> r <d d,> r <ees ees,> |
+  r <d d,> r <a a,> r <c c,> |
+  r <bes bes,> r <g g,> r <bes bes,> |
+  r <a a,> r <e e,> r <fis fis,> |
+
+  %E
+  <g d b g>2.~ |
+  \times 3/2 {<g d b g>4 <d b g>4-.} |
+  \times 3/2 {<e c g>4( <f c a>4)} |
+  <<
+    d2.
+    \\
+    \times 3/2 {<bes f>4 <aes f>}
+  >> |
+  <g ees>4-. <aes ees>-. <c ees,>-. |
+  <bes ees,>-. <aes ees>-. <bes ees,>-. |
+  <aes ees> <g ees> <aes ees> |
+  <g ees> <f d> <g ees> |
+  <aes ees> <bes ees,> <d ees,> |
+  <c ees,> <bes ees,> <c ees,> |
+  <bes ees,> <aes ees> <bes ees,> |
+  <aes ees> <g ees> <d' bes f> |
+  <ges bes, ges>2. |
+  <f des f,> |
+  <f ees f,> |
+  <f d f,>2 <d bes f>4-. |
+  <ges bes, ges>2. |
+  <f des f,> |
+  <f ees f,> |
+  <f d f,>2 <f c a f>4-. |
+  <d bes f>2. |
+  r4 r <f c a f>-. |
+  <d bes f>2. |
+  r4 r <f c a>-. |
+  <bes bes,>-. r r |
+  bes,,-. c-. ees~ | ees2. |
+  d4-. ees-. g~ | g2. |
+  f4-. g-. bes-. |
+  aes-. f-. d-. |
+  %\change Staff=LH %Need tweaking to get right
+  bes4-. aes-. f-. |
+  <bes bes,>4( <c c,> <ees ees,> |
+  <d d,> <c c,> <d d,> |
+  <c c,> <bes bes,> <c c,>
+  <bes bes,> <aes aes,> <bes bes,>) |
+  <aes aes,>( <bes bes,> <c c,> |
+  <d d,> <ees ees,> <f f,>)
+  %\change Staff=RH
+  <g g,>( <aes aes,> <bes bes,> |
+  <c c,> <d d,> <ees ees,>) |
+  <<
+    \context Voice="1"{\voiceOne <f f,>2.~}
+    {\voiceTwo <c a>4} >> \oneVoice |
+  \times 3/2 {<f f,>4 <c c,>} |
+  \times 3/2 {<d d,>( <ees ees,>)} |
+  \afterGrace <c c,>2.\trill {b16[( c])} |
+  <g' g,>2.~ | <g g,> |
+  <f f,>2.~( | <f f,>4 <ees ees,> <d d,>) |
+  r4 <bes bes,>( <c c,> |
+  <d d,> <ees ees,> <f f,>) |
+  <g g,>( <aes aes,> <bes bes,> |
+  <c c,> <d d,> <ees ees,>) |
+  r <aes,, aes,>( <bes bes,> |
+  <c c,> <d d,> <ees ees,>) |
+  <bes bes,>( <d d,> <ees ees,>) |
+  <bes bes,>( <d d,> <ees ees,>) |
+
+  %F
+  <ees' ees,>-. <des des,>-. <bes bes,>-. |
+  g-. ees-. des-. |
+  bes-. g-. ees-. |
+  des-. bes-. g-. |
+  \repeat unfold 2 { ees4( fes aes~) | aes2. | }
+  r4 r <ces' fes, ces>-> |
+  r r <fes aes, fes>-> |
+  r r <aes ces, aes>-> |
+  r r <ces fes, ces>-> |
+  r r <ges ces, ges> |
+  r r <ces ees, ces> |
+  r r <ees ces ees,> |
+  r r <a, ges a,> |
+  r r <bes g ees bes> |
+  r r <ees, bes g> |
+  r r <bes' d, aes> |
+  r r <d, bes f> |
+  \repeat unfold 2
+  {
+    R2. | <f, ees f,>2. |
+  }
+  r4 r <ges ees ges,>-> |
+  r r <ces ees, ces>-> |
+  r r <ees ges, ees>-> |
+  r r <ges ces, ges>-> |
+
+  %G
+  r r <des ges, des>-. |
+  r r <ges bes, ges>-. |
+  r r <bes ges bes,>-. |
+  r r <des, fes,>-. |
+  << ges,2. \\ {r4 r <ees ges,>} >>
+  << ces'2. \\ {r4 r <ges ces,>} >>
+  << {ees'2( ces4)} \\ {r4 r ees,} >>
+  << {beses'2( ges4)} \\ {r4 r <ees ces>} >>
+  r4 r <ces' aes fes> |
+  r r <fes ces fes,> |
+  r r <aes ces, aes> |
+  r r <d, bes aes d,> |
+  r r <bes' ees, bes> |
+  r r <e, c g,> |
+  r r <c' f, ees> |
+  r r <f, ees c f,> |
+  r r <ees' bes g ees> |
+  r r <g, ees g,> |
+  r r <aes f d aes> |
+  r r <d, bes aes d,> |
+  <ees bes g ees> r r |
+  <g' ees bes g> r r |
+  R2. |
+  <g, ees bes g>4 r r |
+  <ees, bes g ees>2.~ | <ees bes g ees>~ | <ees bes g ees>4 r r |
+  R2. |
+  ees''4( des bes |
+  g ees des |
+  bes g ees |
+  des bes g) |
+  r4 ees''( des |
+  bes g ees |
+  des bes g |
+  ees des bes) |
+
+  %Molto meno Allegro
+  \key ces \major
+  \repeat unfold 2
+  {
+    r8 aes''( aes' aes, aes' aes,) |
+    \repeat unfold 2 {r8 aes,( aes' aes, aes' aes,) |}
+
+    %TODO: fix beginning rest, it ends up below the bass part
+    \change Staff=LH r8 aes,( aes' aes, aes' aes,) | \change Staff=RH
+  }
+  r8 bes''( bes' bes, bes' bes,) |
+  \repeat unfold 2 {r8 bes,( bes' bes, bes' bes,) |}
+  %TODO: same as previous
+  \change Staff=LH r8 bes,( bes' bes, bes') r | \change Staff=RH
+  <<
+    {
+      <ees' des>2.( | ces4 des ees) |
+      ges2( fes4) |
+      des2. |
+      fes2.( | des4 ees fes) |
+      aes2( ges4) |
+      ees2 ges4 |
+      bes2. |
+      ges4( aes bes) |
+      ces( aes f) |
+      aes( f d) |
+      <ees des>2.\espressivo |
+      c4( des ees) |
+      ges2( fes4) |
+      ees2( fes4) |
+      e2. |
+      cis4( d e) |
+      g2( f4) |
+      e2( f4) |
+    }
+    \\
+    {
+      <g, bes>8 ees <g bes> ees <g bes> ees |
+      aes ees bes' ees, ces' ees, |
+      ees' aes, ees' aes, des aes |
+      bes aes bes aes bes aes |
+      des aes des aes des aes |
+      bes aes ces aes des aes |
+      fes' aes, fes' aes, ees' aes, |
+      ces aes ces aes ees' aes, |
+      ges' bes, ges' bes, ges' bes, |
+      ees bes f' bes, ges' bes, |
+      aes' bes, f' bes, d bes |
+      f' bes, d aes bes aes |
+      <g bes> ees <g bes> ees <g bes> ees |
+      aes c, bes' des, c' ees, |
+      ees' ges, ees' ges, des' fes, |
+      c' ees, c' ees, des' fes, |
+      <d' b> e, <d' b> e, <d' b> e, |
+      a cis, b' d, c' e, |
+      e' g, e' g, d' f, |
+      c' e, c' e, d' f, |
+    }
+  >>
+
+  %H
+  <<
+    {
+      f'2. |
+      d4( f ges) |
+      <ges fes>2. |
+      ees4( ges aes) |
+      aes2 ces4~ |
+      ces2 bes4~ |
+      bes2 aes4~ |
+      aes2 <ees des>4~ |
+      <ees des>2. |
+      ces4( des ees) |
+      ges2( fes4) |
+      des2. |
+      fes2. |
+      des4( ees fes) |
+      aes2( ges4) |
+      ees2 ges4 |
+    }
+    \\
+    {
+      <ees c>8 f, <ees' c> f, <ees' c> f, |
+      bes f d' f, ees' ges, |
+      des' ges, des' ges, des' ges, |
+      ces ges ees' ges, fes' aes, |
+      d aes d aes d ces |
+      d ces d ces d bes |
+      d bes d bes d aes |
+      d aes d aes <bes g> ees, |
+      <bes' g> ees, g ees g ees |
+      aes ees bes' ees, ces' aes |
+      ees' aes, ees' aes, des aes |
+      bes aes bes aes bes aes |
+      des aes des aes des aes |
+      bes aes c aes des aes |
+      fes' aes, fes' aes, ees' aes, |
+      c aes c aes ees' aes, |
+    }
+  >>
+  <beses' ges beses,>2. |
+  <ges ees ges,>4( <aes fes aes,> <beses ges beses,>) |
+  <beses ges beses,>2. |
+  <ges ees ges,>4( <aes fes aes,> <a fis a,>) |
+  <bes ges bes,>2. |
+  <g bes, g>4( <aes c, aes> <bes des, bes>) |
+  <bes des, bes>2. |
+  <c ees, c>4( <des fes, des,> <ees ges, ees,>) |
+  <fes aes, fes>2( <des fes, des>4) |
+  <beses ges beses,>2( <aes fes aes,>4) |
+  <fes aes, fes>2( <aes fes aes,>4) |
+  <ges ees ges,>2( <fes des fes,>4) |
+  <ees ces ees,>2.( | <ces aes ees>2) r4 |
+  <des g, des>2.( | <bes g des>2) r4 |
+  <ces ees, ces>2.( | <aes ees ces>2) r4 |
+  <bes des, bes>2.( | <g d bes>2) r4 |
+  <<
+    {
+      aes2.( | fes~ | fes | ees~) |
+      ees2.~ | ees( |
+      d~) | d2\fermata
+    }
+    \\
+    {
+      <ces aes>2.~ | <ces aes>~ | <ces aes>~ | <ces aes> |
+    }
+  >>
+  r4 |
+}
+
+pianoLeftMvtII = \relative c,
+{
+  \key ees \major
+  \clef bass
+  ees4-. f-. aes-. |
+  g-. f-. g-. |
+  f-. ees-. f-. |
+  ees-. bes-. ees-. |
+  f-. g-. bes-. |
+  aes-. g-. aes-. |
+  g-. f-. g-. |
+  f-. ees-. bes'-. |
+  ees-. d-. ees-. |
+  d-. <a' a,>-. c,-. |
+  bes-. g-. bes-. |
+  a-. <e' e,>-. <fis fis,>-. |
+
+  %A
+  <g d b g>2.~ |
+  \times 3/2 {<g d b g>4 <d' b g>-.} |
+  \times 3/2 {<c g e c> <f, f,>}
+  <bes aes f bes,>2. |
+  <ees, ees,>4-. <f f,>-. <aes aes,>-. |
+  <g g,>-. <f f,>-. <g g,>-. |
+  <f f,> <ees ees,> <f f,> |
+  <ees ees,> <bes bes,> <ees ees,> |
+  <f f,> <g g,> <bes bes,> |
+  <aes aes,> <g g,> <aes aes,> |
+  <g g,> <f f,> <g g,> |
+  <f f,> <ees ees,> <bes' bes,> |
+  <ees ees,>-. <d d,>-. <ees ees,>-. |
+  <des des,>2. |
+  <ces ces,>4-. <bes bes,>-. <ces ces,> |
+  <bes bes,>2 <bes, bes,>4-. |
+  <ees ees,>-. <d d,>-. <ees ees,>-. |
+  <des des,>2. |
+  <ces ces,>4-. <bes bes,>-. <ces ces,> |
+  <bes bes,>2 <f' f,>4-. |
+  <bes bes,>-. <a a,>-. <bes bes,>-. |
+  <aes aes,>2. |
+  <ges ges,>4-. <f f,>-. <ges ges,>-. |
+  <f f,>2 <f, f,>4-. |
+  <bes bes,>-. <a a,>-. <bes bes,>-. |
+  <aes aes,>-. <g g,>-. <aes aes,>-. |
+  <ges ges,>-. <c, c,>-. <ges' ges,>-. |
+  <c, c,>-. <ges' ges,>-. <c, c,>-. |
+  <f f,>-. r r |
+  f'-. g-. bes~ | bes2. |
+  a4-. bes-. d~ | d2. |
+  c4-. d-. f-. |
+  ees-. c-. a-. f-. ees-. c-. |
+  \repeat unfold 2
+  {
+    <bes bes,>2.~ | <bes bes,>~ | <bes bes,>~ | <bes bes,> |
+  }
+  <bes bes,>2.~ | <bes bes,> | <bes bes,>~ | <bes bes,> |
+
+  %B
+  <ges' bes,>4( bes) r |
+  <des, ges,>( ges) r |
+  <bes, des,>( des) r |
+  <ges, bes,>( bes) r |
+  <d f,>( f) r |
+  f,,( f') r |
+  <c' f,>( f) r |
+  f,,( f') r |
+  <ges bes,>( bes) r |
+  <bes des,>( des) r |
+  <des ges,>( ges) r |
+  <ges bes,>( bes) r |
+  <d, f,>( f) r |
+  <bes f>( d) r |
+  <c, f,>( f) r |
+  <c' f,>( ees) r |
+  <d aes f bes,> r r |
+  \clef treble
+  d'-. bes-. aes-. |
+  f-. d-. \clef bass bes-. |
+  aes-. f-. bes,-. |
+  ees-. r aes,-. |
+  ees'-. r ees,-. |
+  bes'-. r bes,-. |
+  ees-. r r |
+  aes'-. r ees-. |
+  aes-. r aes,-. |
+  ees'-. r ees,-. |
+  bes'-. r \clef treble bes''-. |
+  ees-. d-. ees-. |
+  des-. c-. des-. |
+  b-. ais-. b-. |
+  ais-. fis-. r |
+  \clef bass
+  <fis, fis,>2.( |
+  <g g,> |
+  <gis gis,> |
+  <a a,>2) r4 |
+
+  \key b \major
+  <fis, fis,>2. |
+  <gis gis,> |
+  <cis cis,> |
+  <dis dis,>2 <gis, gis,>4 |
+  <cis gis cis,>2.~ |
+  \times 3/2 {<cis gis cis,>4 cis'-.} |
+  \times 3/2 {<fis, fis,>( <b, b,>)} |
+  <e e,>2. |
+  cis,4-. gis'-. cis-. |
+  r r e-. |
+  \times 3/2 {dis4( gis,)} |
+  cis2. |
+  \times 3/2 {<fis fis,>4( <b, b,>)} |
+  <e e,>2. |
+  \slurDown
+  \times 3/2 {dis4( gis,)} |
+  cis2. |
+  \tupletUp
+  \times 3/2 {fis4( b,)} |
+  \times 3/2 {e( gis)} |
+  \times 3/2 {dis( gis,)} |
+  \times 3/2 {cis( e)} |
+  \times 3/2 {b( e,)} |
+  \slurNeutral
+  \tupletNeutral
+  %Don't draw brackets here
+  fis4*3/2( fis') |
+  e( cis) |
+  fis,( fis') |
+
+  %C
+  b,4 r r |
+  b,8( e b' e gis b | <fis b,>4) r r |
+  fis,,8( b fis' b dis fis | fis,4) r r |
+  fis,8( cis' fis ais cis fis | fis,4) r r |
+  \repeat unfold 2
+  {
+    b,8( fis' b dis fis b | b,4) r r |
+    b,8( e b' e gis b | b,4) r r |
+  }
+  s2. |
+  b,4-. fis'-. b-. |
+  dis-. fis-. <fis, fis,>-.-> |
+  a,-. e'-. a-. |
+  cis-. e-. <e, e,>-.-> |
+  g,-. d'-. g-. |
+  b-. d-. <d, d,>-.-> |
+  fis,-. cis'-. fis-. |
+  cis'-. fis-. fis,-. |
+
+  %D
+  b,-. fis'-. b-. |
+  dis-. fis-. <fis, fis,>-.-> |
+  a,-. e'-. a-. |
+  cis-. e-. <e, e,>-.-> |
+  g,-. d'-. g-. |
+  b-. d-. <d, d,>-.-> |
+  fis,-. cis'-. fis-. |
+  cis'-. fis-. fis,-. |
+
+  \key ees \major
+  ces-. ges'-. ces-. |
+  ees-. ges-. <ges, ges,>-. |
+  bes,-. ges'-. bes-. |
+  ees-. ges-. <ges, ges,>-. |
+  a,-. ges'-. a-. |
+  ees'-. ges-. <ees, ees,>-. |
+  <aes aes,>-. r <c' aes ees>-. |
+  <g, g,>-. r <c' g ees>-. |
+  <ees,, ees,>-. r <c'' g ees>-. |
+  <c,, c,>-. r <d'' d,>-. |
+  <ees ees,>-. <d d,>-. <ees ees,>-. |
+  <d d,>-. <a a,>-. <c c,>-. |
+  <bes bes,>-. <g g,>-. <bes bes,>-. |
+  <a a,>-. <e e,>-. <fis fis,>-. |
+
+  %E
+  <g d b g>2.~ |
+  \times 3/2 {<g d b g>4 <d' b g>-.} |
+  \times 3/2 {<c g c,>( <f, f,>)} |
+  <bes aes f bes,>2. |
+  <ees, ees,>4-. <f f,>-. <aes aes,>-. |
+  <g g,>-. <f f,>-. <g g,>-. |
+  <f f,> <ees ees,> <f f,> |
+  <ees ees,> <bes bes,> <ees ees,> |
+  <f f,> <g g,> <bes bes,> |
+  <aes aes,> <g g,> <aes aes,> |
+  <g g,> <f f,> <g g,> |
+  <f f,> <ees ees,> <bes' bes,> |
+  <ees ees,>-. <d d,>-. <ees ees,>-. |
+  <des des,>2. |
+  <ces ces,>4-. <bes bes,>-. <ces ces,> |
+  <bes bes,>2 <bes, bes,>4-. |
+  <ees ees,>-. <d d,>-. <ees ees,>-. |
+  <des des,>2. |
+  <ces ces,>4-. <bes bes,>-. <ces ces,> |
+  <bes bes,>2 <f' f,>4-. |
+  <bes bes,>-. <a a,>-. <bes bes,>-. |
+  r r <f, f,>-. |
+  <bes bes,>-. <a a,>-. <bes bes,>-. |
+  r r <f' f,>-. |
+  <bes, bes,>-. r r |
+  bes-. c-. ees~ | ees2. |
+  d4-. ees-. g~ | g2. |
+  f4-. g-. bes-. |
+  aes-. f-. d-. |
+  bes-. aes-. f-. |
+  \repeat unfold 3
+  {
+    \repeat unfold 3 {<ees ees,>2.~ |} <ees ees,> |
+  }
+  <ees' ees,>2.~ | <ees ees,> |
+  <d d,>~( | <d d,>4 <c c,> <bes bes,>) |
+  <aes aes,>2.~ | <aes aes,> |
+  <g g,>~( | <g g,>4 <f f,> <ees ees,>) |
+  <g' g,>2.~( | <g g,>4 <f f,> <ees ees,>) |
+  <g g,>( <f f,> <ees ees,>) |
+  <g g,>( <f f,> <ees ees,>) |
+
+  %F
+  <ees, ees,>4-. r r |
+  g''-. ees-. des-. |
+  bes-. g-. ees-. |
+  des-. bes-. g-. |
+  \repeat unfold 2
+  {
+    <ees ees,>( <fes fes,> <aes aes,>~ | <aes aes,>2.) |
+  }
+  <ees ees,>4( <fes fes,> <aes aes,>) |
+  <g g,>( <aes aes,> <ces ces,>) |
+  <bes bes,>( <ces ces,> <fes fes,>) |
+  <ees ees,>( <fes fes,> <aes aes,>) |
+  <ces ges ees>( ees) r |
+  <ges, ces,>( ces) r |
+  <ees, ges,>( ges) r |
+  <ces, ees,>( ees) r |
+  bes,( bes') r |
+  <g' ees bes>( bes) r |
+  <f, bes,>( bes) r |
+  <f' bes,>( bes) r |
+  \repeat unfold 2
+  {
+    <bes, bes,>( <ces ces,> <ees ees,>~) | ees2. |
+  }
+  <bes bes,>4( <ces ces,> <ees ees,>) |
+  <d d,>( <ees ees,> <ges ges,>) |
+  <f f,>( <ges ges,> <ces ces,>) |
+  <bes bes,>( <ces ces,> <ees ees,>) |
+
+  %G
+  <ges, des bes>( bes) r |
+  <des, ges,>( ges) r |
+  <bes, des,>( des) r |
+  <ges, bes,>( bes) r |
+  <ges ces,>( ces) r |
+  <ges ees>( ees') r |
+  <ces ges>( ges') r |
+  <ges ces,>( beses) r |
+  <aes fes ces>( ces) r |
+  <fes, aes,>( aes) r |
+  <ces, fes,>( fes) r |
+  <bes, f>( f') r |
+  <ees g,>( g) r |
+  <c, bes>( bes') r |
+  <f aes,>( aes) r |
+  <f a,>( a) r |
+  <g ees bes>( bes) r |
+  <g' ees bes>( bes) r |
+  <f, bes,>( bes) r |
+  <f, bes,>( bes) r |
+  <ees bes ees,> r r |
+  <g' ees bes g> r r |
+  R2. |
+  <ees bes ees,>4 r r |
+  <ees,, ees,>2.~ | <ees ees,>~ | <ees ees,>4 r r |
+  R2. |
+  \clef treble
+  ees'''4( des bes |
+  g ees des |
+  \clef bass
+  bes g ees |
+  des bes g) |
+  r4 ees''( des |
+  bes g ees |
+  des bes g |
+  ees des bes) |
+
+  %Molto meno Allegro
+  \key ces \major
+  \repeat unfold 2
+  {
+    <aes' aes,>2. |
+    <aes aes,>~ | <aes aes,> |
+    \stemDown aes,2. \stemNeutral |
+  }
+  <bes' bes,>2. |
+  bes,~ | bes |
+  \stemDown bes2. \stemNeutral |
+  <des'' bes g ees>2. |
+  <ces aes ees>4 r <aes, aes,> |
+  << {<ges'' ees>2( <fes des>4)} \\ aes,2. >> |
+  <des bes aes>2. |
+  <fes des aes>2 <aes,, aes,>4 |
+  <<
+    {
+      <des' bes>4( <ees ces> <fes des>) |
+      <aes fes>2( <ges ees>4) |
+      <ees ces>2 <ges ees>4 |
+    }
+    \\
+    {
+      aes,2. | aes
+      aes2 aes4 |
+    }
+  >> |
+  <ges' ees bes>2 <bes,, bes,>4 |
+  \clef treble
+  <<
+    {
+      <ges'' ees>4( <aes f> <bes ges>) |
+      <ces aes>( <aes f> <f d>) |
+      <aes f>( <f d>)
+    }
+    \\
+    {
+      bes,2. | bes | bes2
+    }
+  >> \clef bass <bes bes,>4 |
+  <des bes g ees>2. |
+  <aes aes,>2.~ |
+  <aes aes,>2( <des, des,>4 |
+  <aes' aes,>2 <des, des,>4) |
+  <gis e gis,>2._\espressivo |
+  <a a,>2.~
+  <a a,>2( <d, d,>4 |
+  <a' a,>2 <d, d,>4) |
+
+  %H
+  <a' f a,>2.~(_\espressivo |
+  <bes f bes,>2 <ees, ees,>4) |
+  <bes' ges bes,>2.~(_\espressivo |
+  <ces ges ces,>2 <fes, fes,>4) |
+  <ces' fes, ces>2.( |
+  <fes, fes,> |
+  <f bes, f> |
+  <bes, bes,>) |
+  <des' bes g ees> |
+  <ces ees, aes,>4\arpeggio <des bes> <ees ces> |
+  <<
+    {
+      <ges ees>2( <fes des>4) |
+      <des bes>2. |
+    }
+    \\
+    {
+      aes2. | aes |
+    }
+  >>
+  <fes' des aes>2 aes,,4 |
+  <<
+    {<des' bes>4( <ees c> <fes des>) |}
+    \\
+    {aes,2 aes4 |}
+  >>
+  <aes' fes aes,>2~( <ges ees aes,>4) |
+  <ees c aes>2 <ges ees aes,>4 |
+  \repeat unfold 2
+  {
+    r8 aes,( aes' aes, aes' aes,) |
+    r8 aes,( aes' aes, aes' aes,) |
+    r8 aes,( aes' aes, aes' aes, |
+    aes' aes, aes' aes, aes' aes,) |
+  }
+  \repeat unfold 2
+  {
+    r8 des( des' des, des' des, |
+    des' des, des' des, des' des,) |
+  }
+  \repeat unfold 2
+  {
+    r8 ees( ees' ees, ees' ees, |
+    ees' ees, ees' ees, ees' ees,) |
+  }
+  \repeat unfold 2
+  {
+    %Not slurred in the edition I'm using, but it seems that these should also 
+    %be slurred
+    r8 ees,( ees' ees, ees' ees, |
+    ees' ees, ees' ees, ees' ees,) |
+  }
+  \repeat unfold 2
+  {
+    aes4( aes' aes, | aes' aes, aes') |
+  }
+  <<
+    {
+      <bes' f>2.~ | <bes f>~ | <bes f>~ |
+      <bes f>2 r4 |
+    }
+    \\
+    {
+      bes,,4( bes' bes, |
+      bes' bes, bes' |
+      bes, bes' bes,~) |
+      <bes' bes,>2_\fermata r4 |
+    }
+  >>
+}
+

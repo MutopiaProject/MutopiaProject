@@ -1,0 +1,71 @@
+\include "defs.lyi"
+
+oboesMvtIIIMain = \relative c''
+{
+  r4. r4 <bes g>8\f |
+  <bes g>( <ees bes>) <ees bes>-. <ees bes>( <g ees>) <g ees>-. |
+  <bes g>4( <aes f>8) <f d>4( <g ees>16 <aes f>) |
+  <bes g>8( <g ees>) <ees bes> \grace f16 << {ees8( d ees)} \\ {a,4 ees'8} >> |
+  %TODO: awkward tweak
+  <f d>8.(
+    \set stemLeftBeamCount = #1
+    \set stemRightBeamCount = #2
+    <d bes>16
+    \set stemLeftBeamCount = #2
+    <ees c> <c a>) << bes4 \\ bes >> <bes aes>8 |
+  <bes g>( <ees bes>) <ees bes>-. <ees bes>( <g ees>) <g ees>-. |
+  <g ees>( <bes g> <aes f>) <f d>4( <g ees>16 <aes f>) |
+  <<
+    {bes8 g ees f8. g16 f8}
+    \\
+    {g8 ees ees ees4 d8}
+  >> |
+}
+
+oboesMvtIIIMainEnd = \relative c''
+{
+  <<
+    {ees ees ees ees}
+    \\
+    {ees ees, ees ees}
+  >> r8 r |
+}
+
+oboesMvtIII = \relative c''
+{
+  \key ees \major
+  r8
+  R2.*7 |
+  \oboesMvtIIIMain
+  \oboesMvtIIIMainEnd
+  R2.*29 |
+  r4. r4\fermata r8 |
+  R2.*7 |
+  \oboesMvtIIIMain
+  \oboesMvtIIIMainEnd
+  R2.*41 |
+  \oboesMvtIIIMain
+  << ees4 \\ ees >> r8 r4. |
+  R2.*7 |
+  <ees g,>2.~\p | <ees g,> |
+  <f~ c>_( | <f d>) |
+  <g ees>~ |
+  <<
+    \new Voice {\voiceOne f2.}
+    {\voiceTwo ees4. d}
+  >> \oneVoice
+  <<
+    {g4.( a | bes8)}
+    \\
+    {ees,2. | d8}
+  >> r8 r r4. |
+  R2.*35 |
+  <bes g>8(\f <ees bes>) <ees bes>-. <ees bes>( <g ees>) <g ees>-. |
+  <bes g>4( <aes f>8) <f d>4. |
+  <g ees> <f d>8 <f d> <f d> |
+  <<ees8 \\ ees>> r8 r r4. |
+  R2. |
+  r8 r <ees g,>16\f <ees g,> <ees g,>8
+    \repeat unfold 3 {r <ees g,>16 <ees g,> <ees g,>8} r8 r r4. |
+}
+

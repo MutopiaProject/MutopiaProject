@@ -1,0 +1,115 @@
+hornMvtII = \relative c''
+{
+  \transposition d
+  r8
+  R2.*7 |
+  r4. r4 g8 |
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c8. d16 e8 d4 g,8 |
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c4 d16 e c4 r8 |
+
+  R2.*7 |
+  r4. r4 d8 |
+  d( e) fis-. g( d) d-. |
+  d e16( d e fis) g8 r r |
+  R2. |
+  r4. r4 d8 |
+  d( e) fis-. g( d) d-. |
+  d e16( d e fis) g4 r8 |
+  r4. r8 d d |
+  d c a g4 g16 a |
+  b8 r b16 c d8 r d16 e |
+  f8 f f f d b |
+  g g g g g g |
+  g4 r8 r4 g8 |
+
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c8. d16 e8 d4 g,8 |
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c c d16 e c4 r8 |
+
+  R2.*13 |
+  r4. r4 g8 |
+  c4 ees8 d4 f8 |
+  f ees d ees r g, |
+  c4 ees8 d f ees |
+  d c b c4 r8 |
+  R2.*4 |
+  g'4.( f |
+  ees) \grace g16 f8( ees f) |
+  ees4 r8 r4. |
+  ees4.( f) |
+  g8 g g g g g |
+  aes4.( g~) |
+  g( f) |
+  g4 r8 r4. |
+  g4 g8 g f g |
+  aes4.( f |
+  ees d |
+  ees f) |
+  ees4 r8 r4. |
+
+  R2.*3 |
+  r4. r4 g,8 |
+  g c ees g4 f8 |
+  f ees ees ees4 d8 |
+  c b c ees d c |
+  b4 r8 r4. |
+  r8 c c ees d c |
+  g'4 r8 r4. |
+  r8 c, c ees d c |
+  g2.~ |
+  g4.~ g4 g8-. |
+
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c8. d16 e8 d4 g,8 |
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c4 d16 e c8 r r |
+
+  R2.*7 |
+  r4. r4 e16 f |
+  d8 d e f4 e8 |
+  d d c b16 c d8 e16 f |
+  d8 d e f4 e8 |
+  d b a g4 r8 |
+  R2.*2 |
+  d'8 d e f4 e8 |
+  d e c d4 r8 |
+  R2. |
+  r4. r4 g,8 |
+
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c8. d16 e8 d4 g,8 |
+  g( c) c-. c4 g8 |
+  g( e') e-. e4 c8 |
+  g'( e) c-. g'( f) d-. |
+  c c d16 e c4 r8 |
+
+  R2.*3 |
+  r4. r4 g8 |
+  g( c) c-. c4 g8 |
+  g( e') e-. e c16 d e f |
+  g8( e) c-. g'( f) d-. |
+  c d16 c d e c4 r8 |
+  r4. r4 g8 |
+  g' g16 f e d e4 r8 |
+  r4. r4 g,8 |
+  g' g16 f e d c4 r8 |
+  R2.*3 |
+}
+

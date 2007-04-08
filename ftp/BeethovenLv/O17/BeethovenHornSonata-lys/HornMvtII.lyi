@@ -1,0 +1,23 @@
+\include "defs.lyi"
+
+hornMvtII = \relative c''
+{
+  \transposition f
+  c16.\p c32 %NOTE: This should have a \p to be like the second time this is played.
+  \repeat unfold 2 {ees8[( c16) r32 c]-.} |
+  b8-. d-. r4 |
+  R2 |
+  r4 r8 d16.\pp d32 |
+  \repeat unfold 2 {ees8[-. ees16.-. ees32]-.} |
+  ees8-. d-. r4 |
+  R2 |
+  r4 r8 bes16.\p bes32
+  \repeat unfold 2 {des8[( bes16) r32 bes]-.} |
+  f'4.\sf ees16( d) |
+  d( c) c-. c-. c-. d32( c) b16-. c-. |
+  d8\pp g16. g32 g8 r |
+  r g,16. g32 g8 r |
+  r8 \repeat unfold 4 {g,16.\sf g32 g8} g'^\mcresc g, g |
+  g4\fermata r\fermata |
+}
+

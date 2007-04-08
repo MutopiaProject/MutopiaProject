@@ -1,0 +1,12 @@
+Building good looking scores requires two passes.
+
+To make an A4 PDF score:
+$ lilypond -b null -d write-tweaks lwv05.ly
+$ lilypond lwv05.ly
+
+To make a letter PDF score:
+$ lilypond -b null -d write-tweaks -d letter -o lwv05letter lwv05.ly
+$ lilypond -d letter -o lwv05letter lwv05.ly
+
+To use "modern" clefs (ie only G and F clefs), add the "-d modern-clefs"
+option to both invocations.

@@ -1,0 +1,58 @@
+outline =
+{
+  \time 3/4
+  \set Score.markFormatter = #format-mark-numbers
+
+  s2.*5 \bar "||"
+  s2.*3 \bar "||"
+
+  \mark 1
+  s2.*5 \bar "||"
+  s2.*3 \bar "||"
+
+  \mark \default
+  s2.*14 |
+
+  \mark \default
+  s2.*16 |
+
+  \mark \default
+  s2.*16 | \bar "||"
+
+  \mark \default
+  s2.*32
+
+  \mark \default
+  s2.*22 \bar "||"
+
+  \mark \default
+  s2.*8 | \bar "||"
+
+  \mark \default
+  s2.*16 \bar "||"
+
+  \mark \default
+  s2.*8 \bar "||"
+  s2.*2 \bar "||"
+
+  %\mark \default %TODO: should have a fermata over the bar with the rehersal mark
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \mark \markup {\musicglyph #"scripts.ufermata"}
+  s2.*3 \bar "||"
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \mark \markup { \musicglyph #"scripts.ufermata" }
+  s2.*6 |
+
+  \mark \default
+  s2.*8 \bar "||"
+
+  \mark \default
+  s2.*16
+
+  \mark \default
+  s2.*22 \bar "||"
+
+  \mark \default
+  s2.*32 \bar "|."
+}
+

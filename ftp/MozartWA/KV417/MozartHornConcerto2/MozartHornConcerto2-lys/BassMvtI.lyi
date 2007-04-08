@@ -1,0 +1,187 @@
+\include "defs.lyi"
+
+bassMvtI = \relative c
+{
+  \key ees \major
+  \clef bass
+  ees8\p \repeat unfold 15 ees |
+  \repeat unfold 8 bes |
+  \repeat unfold 8 ees |
+  \repeat unfold 2 {ees\f ees ees ees ees\p ees ees ees |}
+  bes\f \repeat unfold 7 bes |
+  ees ees f f g ees g c |
+  bes4 bes,8. bes16 bes4 r |
+
+  ees4\p r r2 |
+  ees4 r r2 |
+  ees4 c' aes( bes) |
+  \repeat unfold 3 { ees,4 r r2 | }
+  ees4 c' aes( bes) |
+  ees, r r2 |
+  \repeat unfold 16 ees8 |
+  ees\f \repeat unfold 11 ees8 aes aes aes aes |
+  bes bes bes bes bes, bes bes bes |
+  ees4 r bes' bes, |
+  ees ees8. ees16 ees4 r |
+
+  %solo
+  ees8\p \repeat unfold 15 ees8 |
+  \repeat unfold 8 d |
+  ees4 r8 ees-.\f bes-. ees-. aes,-. ees'-. |
+  g,4 r g\p r |
+  aes r aes r |
+  aes2( g4) r |
+  r r8. aes'16 bes4 bes, |
+  ees r16 ees'\f d c bes c bes aes g aes g f |
+  ees4 r r8 ees16\p f g8 ees |
+  d4 r r8 d16 ees f8 d |
+  c c c c c' c bes bes |
+  a a f f g g a a |
+  bes bes bes bes aes aes aes aes |
+  \repeat unfold 8 g |
+  \repeat unfold 8 d |
+  ees ees ees ees ees ees f f |
+  g g g g g g f f |
+  ees r ees r ees r e r |
+  f f, f f f ees'( d c) |
+  bes4 r r2 |
+  bes4 r r2 |
+  r4 g' ees( f) |
+  bes,4 r r2 |
+  bes'4 r r2 |
+  bes,4 r r2 |
+  r4 g'( ees f) |
+  bes,4 r r2 |
+  r4 ees( g f) |
+  ees4 r r2 |
+  r4 d( f ees) |
+  d4 r r2 |
+  c4 r r8 c' a f |
+  bes4 r r8 ees, ees d |
+  c c' c c c bes a g |
+  f f f f f f ees ees |
+  d8 r r4 ees8 r r4 |
+  \repeat unfold 8 f8 |
+  bes,4 bes' r2 |
+
+  %tutti
+  bes,4 bes' bes, bes' |
+  bes, r r2 |
+  R1*2 |
+
+  %solo
+  bes4 bes' bes, bes' |
+  bes, r cis8 r cis r |
+  d r d r e r e r |
+  f2 r |
+  r e8 r e r |
+  f1~ | f~ | f~ |
+  f2 r4 a |
+  bes g ees f |
+  bes, r8 bes'\f g4 ees |
+  d r8 bes'\p g4 ees |
+  d8 r r4 ees8 r r4 |
+  \repeat unfold 8 f8 |
+  f\mcresc \repeat unfold 7 f |
+
+  %tutti
+  \repeat unfold 3 { bes,8\f bes bes bes bes\p bes bes bes | }
+  f'\f \repeat unfold 7 f |
+  bes, bes d d ees ees g g |
+  \repeat unfold 8 f |
+  bes,4 r f' f, |
+  bes bes8. bes16 bes4 r |
+  bes1\p | c | f, | bes | des |
+  c4( bes a2) |
+  bes4( aes g ges |
+  f) f'( ees aes,) |
+  des1 | ees | aes, |
+  des2( bes) |
+  ees1 | f | bes, |
+  ees2( c) |
+  f1 |
+  des2 bes |
+  c1 | f |
+  f,2 fis |
+  g4 r g' r |
+  g, r g' r |
+  g, g' g g |
+  f f f f |
+  bes,\mcresc bes bes bes |
+
+  %tutti
+  ees8 ees\p \repeat unfold 14 ees |
+  \repeat unfold 8 bes |
+  \repeat unfold 8 ees |
+  \repeat unfold 2 { ees\f ees ees ees ees\p ees ees ees| }
+  bes\f \repeat unfold 7 bes |
+  ees ees f f g ees g c |
+  bes4 bes,8. bes16 bes4 r |
+
+  %solo
+  ees8\p \repeat unfold 15 ees8 |
+  \repeat unfold 8 d |
+  ees4 r8 ees-.\f bes-. ees-. aes,-. ees'-. |
+  g,4 r g\p r |
+  aes r aes r |
+  aes2( g4) r |
+  r r8. aes'16 bes4 bes, |
+  ees r16 ees'\f d c bes c bes aes g aes g f |
+  ees4 r r8 ees16\p f g8 ees |
+  d4 r r8 d16 ees f8 d |
+  c c c c c' c bes bes |
+  a a f f g g a a |
+  bes bes bes bes aes aes aes aes |
+  \repeat unfold 8 g |
+  d d d d d d bes bes |
+  ees ees ees ees des des des des |
+  \repeat unfold 8 c |
+  g g g g g' g ees ees |
+  aes r aes r aes r a r |
+  bes bes, bes bes bes aes'( g f) |
+
+  %tutti
+  \repeat unfold 2 { ees4 r r2 | }
+  ees4 c' aes( bes) |
+  \repeat unfold 3 { ees,4 r r2 | }
+  ees4 c'( aes bes) |
+  ees,4 r r2 |
+  aes2.( bes4) |
+  aes4 r r2 |
+  g2.( aes4) |
+  g4 r r2 |
+  f4( ees d c) |
+  bes( aes g f) |
+  ees r aes r |
+  bes r bes r |
+  ees, ees' r2 |
+
+  %tutti
+  ees4 ees' ees, ees' |
+  ees, r r2 |
+  R1*2 |
+
+  %solo
+  ees4 ees' ees, ees' |
+  ees, r fis8 r fis r |
+  g r g r a r a r |
+  bes2 r |
+  r a,8 r a r |
+  bes1~ | bes~ | bes~ |
+  bes2 r4 d4 |
+  ees c aes bes |
+  ees r8 ees\f c4 aes |
+  g r8 ees''8\p c4 aes |
+  g r ees r |
+  \repeat unfold 8 bes8 |
+  bes\mcresc \repeat unfold 7 bes |
+
+  %tutti
+  \repeat unfold 3 { ees8\f ees ees ees ees\p ees ees ees | }
+  bes\f \repeat unfold 7 bes |
+  ees ees ees ees aes aes aes aes |
+  bes bes bes bes bes, bes bes bes |
+  ees4 r bes' bes, |
+  ees ees8. ees16 ees4 r |
+}
+

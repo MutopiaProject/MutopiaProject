@@ -1,0 +1,14 @@
+This is Mozart's String Quartet KV. 464 for two violins, viola and
+cello.  I typeset it using Lilypond 1.6.6 and the aid of GNU M4 to
+conditionally define the repeats in the third and fourth movement,
+since in this piece there are alternatives that are needed in the
+score but unnecessary for the solo parts (e.g. second movement, bar 44
+has an alternative which is needed only in the viola part).
+
+To typeset the score, you have to run m4 on the k464-*.ly.m4 files
+with the -DSOLO=1 option if you are creating a solo part, and run M4
+without options for k464-score.ly.m4.
+
+The provided makefile will do this automatically; type "make help" to
+get a list of possible targets.
+
