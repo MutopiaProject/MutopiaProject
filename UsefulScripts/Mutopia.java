@@ -1,3 +1,21 @@
+/*
+ * Filename:         Mutopia.java
+ * Original author:  Chris Sawer
+ * Subversion:       $Revision:$
+ * Last changed:     $Date:$
+ *
+ * Description:
+ *   Program to perform various useful manipulations of .ly files for Mutopia.
+ *
+ * Options:
+ *   $1 - Switch(es) to use, comprising:
+ *        d - Move .ly files into a sub-directory with the same name
+ *        c - Check consistency of .ly files
+ *        f - Add tagline/footer fields to .ly files
+ *        r - Create .rdf file from .ly files (preview images must exist)
+ *   $@ - File names to process
+ */
+
 import java.io.*;
 import java.util.*;
 
@@ -8,6 +26,7 @@ public class Mutopia
    public static void main(String[] args)
    {
       Mutopia mutopia = new Mutopia();
+      int returnCode = 0;
 
       lilyCommandLine = System.getenv("LILYPOND_BIN");
       if (lilyCommandLine == null)
@@ -17,7 +36,7 @@ public class Mutopia
 
       if ((args.length < 2) || (!args[0].startsWith("-")))
       {
-         System.err.println("Arguments must be: -d, -f, -c or -r followed by .ly file(s)");
+         System.err.println("Arguments must be: -d, -c, -f or -r followed by .ly file(s)");
       }
       else
       {
@@ -41,7 +60,11 @@ public class Mutopia
          {
             for (int i = 1; i < args.length; i++)
             {
-               mutopia.checkFields(args[i]);
+               if (!mutopia.checkFields(args[i]))
+               {
+                  returnCode = 1;
+                  System.out.println("Consistency checks failed on file: " + args[i]);
+               }
             }
          }
          
@@ -53,6 +76,8 @@ public class Mutopia
             }
          }
       }
+
+      System.exit(returnCode);
    }
    
    public void moveIntoDirectory(String filename)
@@ -237,8 +262,10 @@ public class Mutopia
       return year + "/" + (month < 10 ? "0" : "") + month + "/" + (day < 10 ? "0" : "") + day;
    }
    
-   public void checkFields(String filenameIn)
+   public boolean checkFields(String filenameIn)
    {
+      boolean result = false;
+
       try
       {
          // Open files
@@ -256,7 +283,8 @@ public class Mutopia
          }
          in.close();
          
-         myPiece.checkFieldConsistency();
+         // Check field consistency (but not footer)
+         result = myPiece.checkFieldConsistency(false);
       }
       catch (FileNotFoundException ex)
       {
@@ -266,6 +294,8 @@ public class Mutopia
       {
             System.err.println(ex);
       }
+      
+      return result;
    }
    
    public void createRDF(String filenameIn, String filenameOut)
@@ -291,13 +321,20 @@ public class Mutopia
          
          myPiece.deriveCompileStuff(lilyCommandLine);
          
-         if (myPiece.checkFieldConsistency() && myPiece.checkCompileConsistency())
+         if (myPiece.checkFieldConsistency(true)) // Check field consistency (including footer)
          {
-            MutopiaRDF.outputRDF(myPiece, out);
+            if (myPiece.checkCompileConsistency()) // Check compile consistency (image size + lily version)
+            {
+               MutopiaRDF.outputRDF(myPiece, out);
+            }
+            else
+            {
+               System.err.println("Compile consistency checks failed");
+            }
          }
          else
          {
-            System.err.println("Consistency checks failed");
+            System.err.println("Field consistency checks failed");
          }
          
          out.close();

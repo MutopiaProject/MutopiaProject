@@ -1,3 +1,13 @@
+/*
+ * Filename:         MutopiaRDF.java
+ * Original author:  Chris Sawer
+ * Subversion:       $Revision:$
+ * Last changed:     $Date:$
+ *
+ * Description:
+ *   Class to generate an RDF file from a MutopiaPiece object.
+ */
+
 import java.io.*;
 import javax.xml.*;
 import javax.xml.parsers.*;

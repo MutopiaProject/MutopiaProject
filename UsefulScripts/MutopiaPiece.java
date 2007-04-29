@@ -1,3 +1,13 @@
+/*
+ * Filename:         MutopiaPiece.java
+ * Original author:  Chris Sawer
+ * Subversion:       $Revision:$
+ * Last changed:     $Date:$
+ *
+ * Description:
+ *   Class to store information about a Mutopia piece.
+ */
+
 import java.beans.*;
 import java.io.*;
 import java.lang.reflect.*;
@@ -131,7 +141,7 @@ public class MutopiaPiece
       }
    }
       
-   public boolean checkFieldConsistency()
+   public boolean checkFieldConsistency(boolean checkFooter)
    {
       boolean returnValue = true;
       
@@ -148,6 +158,11 @@ public class MutopiaPiece
          returnValue = false;
          System.err.println("Missing composer");
       }
+      else if (!MutopiaMaps.composerMap.keySet().contains(getComposer()))
+      {
+         returnValue = false;
+         System.err.println("Invalid composer: " + getComposer());
+      }
       
       // Instrument is mandatory
       if (getInstrument() == null)
@@ -161,6 +176,11 @@ public class MutopiaPiece
       {
          returnValue = false;
          System.err.println("Missing style");
+      }
+      else if (!MutopiaMaps.styleMap.keySet().contains(getStyle()))
+      {
+         returnValue = false;
+         System.err.println("Invalid style: " + getStyle());
       }
       
       // Source is mandatory
@@ -179,11 +199,11 @@ public class MutopiaPiece
       else if (!MutopiaMaps.licenceMap.keySet().contains(getCopyright()))
       {
          returnValue = false;
-         System.err.println("Invalid copyright (licence)");
+         System.err.println("Invalid copyright (licence): " + getCopyright());
       }
       
       // Footer is mandatory
-      if (getFooter() == null)
+      if (checkFooter && (getFooter() == null))
       {
          returnValue = false;
          System.err.println("Missing footer");
