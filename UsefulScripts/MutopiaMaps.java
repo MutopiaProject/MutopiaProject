@@ -1,8 +1,8 @@
 /*
  * Filename:         MutopiaMaps.java
  * Original author:  Chris Sawer
- * Subversion:       $Revision:$
- * Last changed:     $Date:$
+ * Subversion:       $Revision$
+ * Last changed:     $Date$
  *
  * Description:
  *   Class to set up licence, composer and style maps.
@@ -72,7 +72,7 @@ public class MutopiaMaps
          // Read key/value pairs
          String key = dataFile.readLine();
          String value = dataFile.readLine();
-         do
+         while (key != null) // key == null at end of file
          {
             // Check value and put into map
             if (value != null)
@@ -87,7 +87,6 @@ public class MutopiaMaps
             key = dataFile.readLine();
             value = dataFile.readLine();
          }
-         while (key != null); // key == null at end of file
 
          dataFile.close();
       }
