@@ -2,8 +2,8 @@
 
 # Filename:         mutopia-combine.sh
 # Original author:  Chris Sawer
-# Revision:         $Revision$
-# Last change date: $Date$
+# Subversion:       $Revision$
+# Last changed:     $Date$
 #
 # Description:
 #   Script to combine together multiple .ly/.mid/.pdf/.ps.gz files into the

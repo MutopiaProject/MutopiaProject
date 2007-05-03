@@ -2,8 +2,8 @@
 
 # Filename:         mutopia-svn.sh
 # Original author:  Chris Sawer
-# Subversion:       $Revision: $
-# Last changed:     $Date: $
+# Subversion:       $Revision$
+# Last changed:     $Date$
 #
 # Description:
 #   Quick script to add the current directory and any .ly files it contains to
