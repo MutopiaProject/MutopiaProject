@@ -1,8 +1,11 @@
 % -*- coding: utf-8 -*-
-
+% mai 2007
+%mis doigtés et reporté les notes en conséquence main droite première portée, main gauche seconde portée par \change Staff.
+% simplification score-layout avec utilisation pianoStaff
+% créés midialto et miditenor, le traitement midi n'acceptant pas les changements de portées
 \include "italiano.ly"
 \header {
-  title = \markup\center-align {"Lobt Gott, ihr Christen allzugleich" \fontsize #-1 \normal-text "Orgelbüchlein"}
+  title = \markup\center-align { \fontsize #-1 \normal-text "Orgelbüchlein" "Lobt Gott, ihr Christen allzugleich" \fontsize #-2 \normal-text \italic " Un clavier, pédalier, jeux d'anches"}
   composer = "Bach"
 opus = "BWV 609"
  mutopiatitle = "Lobt Gott, ihr Christen allzugleich"
@@ -16,7 +19,7 @@ opus = "BWV 609"
  maintainer = "Pierre Pouillon"
  maintainerEmail = "pierre@ssji.net"
  lastupdated = "2007/avr/05"
- footer = "Mutopia-2007/04/07-953"
+ footer = "Mutopia-2007/05/13-953"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -28,7 +31,6 @@ bottom-margin = 1.0 \cm
 raggedbottom=##f
 raggedlastbottom=##f
 tagline= ##t
-%system-count = 8
 print-page-number = ##f
 }
 
@@ -37,49 +39,72 @@ print-page-number = ##f
 #(set-default-paper-size "a4" 'landscape)
 #(set-global-staff-size 19)
 
-global = { \key sol \major
+global = {
+%pour doigtés de changement de doigt type "4--5" :
+\override TextScript #'font-name = #"Emmentaler"
+\key sol \major
 \time 4/4
 \partial 4 }
 
 soprano = \relative do''
 {\clef treble
 \global
-sol4
-re' re re re |
+%met doigté à l'extérieur point d'orgue :
+\override Script #'script-priority = #1
+sol4-1
+re'-2-5 re-4-5 re-2-5 re-2-4 |
 %2
-mi re8 do si4 \fermata la |
-re8 dod re4 mi mi |
+mi-2-5 re8-2-4 do-2-5 si4-4  \fermata la-4 |
+%3
+re8-5 dod-1-4 re4-"5----4" mi-5 mi-5 |
 %4
-re2 \fermata ~re4 re |
-re re re si16 do si do |
+re2-"4--5" \fermata  ~re4  re-1-5 |
+%5
+re-1-5 re-2-5 \once \override Fingering #'extra-offset = #'( 0 . 2 ) re-5 si16 do si-1-3  \once \override Fingering #'extra-offset = #'( 0 . 2 ) do-4 |
 %6
-re4 ~re16 re do si la4 \fermata re |
-do4 si la la |
+re4-1-5 ~re16 re-3-5 do si-1-3 la4 \fermata re-5 |
+%7
+do-"4-5" si-"4-5" la-2-4 la-1-5 |
 %8
-sol8 la si do re4 \fermata re |
-do si la la |
+sol8-1-3 la-2-4 si-5 do-2-4 re4-5 \fermata re-2-5 |
+%9
+do-1-4 si-2-3 la-1-4 la-5 |
 %10
-sol2. \fermata
+sol2.-"4-5" \fermata
 }
 
 alto = \relative do''
 {\clef treble
 \global
-
-sol16 si la sol
-la8 si do16 fad, sol la sol8 la si16 do si la |
+\override Fingering #'direction = #UP
+sol16 \once \override Fingering #'extra-offset = #'( 0 . 2 )
+si-3 la sol
+%1
+la8 si do16 fad,-1 sol-2 la-1 sol8 la-1 si16 do si la-1 |
 %2
-sol8 sol8 la16 sol fad mi re fad mi re dod mi re dod |
-si8 mi re16 mi fad8 mi16 fad sol8 ~sol16 si la sol |
+sol8 sol8-1 la16 \once \override Fingering #'extra-offset = #'( 0.0 . 1.5 )  sol-1 fad \once \override Fingering #'extra-offset = #'( 0 . 1 ) mi-1 \change Staff = down \stemUp re \change Staff = up \stemDown fad-2 mi-1 \change Staff = down \stemUp  re dod \change Staff = up \stemDown mi-2 re-1 \change Staff = down \stemUp \once \override Fingering #'direction = #DOWN dod-1 |
+%3
+si8 \change Staff = up \stemDown mi \change Staff = down \stemUp re16 mi \change Staff = up \stemDown fad8-1 \change Staff = down \stemUp mi16 fad \change Staff = up \stemDown sol8-1 ~sol16 si-2 la-1 \change Staff = down \stemUp sol |
 %4
-fad16 sol fad mi re mi fad sol la do si la sol8 fad |
-sol16 si la sol fad sol mi fad re fad sol la si8 fad |
+fad16 \override Fingering #'extra-offset = #'( 0 . 1 )
+\change Staff = up \stemDown sol-1 fad-2 mi-1 \change Staff = down \stemUp re \change Staff = up \stemDown mi-1
+ \override Fingering #'extra-offset = #'( 0 . 0 )
+fad sol la do-4 si la sol8 fad-2 |
+%5
+sol16 si-3 la sol   fad sol-2 mi fad   \change Staff = down \stemUp re \change Staff = up \stemDown fad-2 sol-1 la-2 si8 fad |
 %6
-sol16 do si la sol si la sol fad sol fad mi re8 fad |
-mi16 sol fad mi re mi do re mi8 dod re red |
+sol16 do si la   \change Staff = down \stemUp sol \change Staff = up \stemDown  si la sol \change Staff = down \stemUp fad sol fad mi re8 \change Staff = up \stemDown fad
+\change Staff = down \stemUp
+%7
+mi16 \change Staff = up \stemDown sol-1 fad mi \change Staff = down \stemUp re \change Staff = up \stemDown mi-1 \change Staff = down \stemUp do re \change Staff = up \stemDown mi8 dod-1 re red-2
 %8
-mi16 sol fad mi re si' la sol fad re' do si la do si la |
-sol8 la ~la16 la sol fa mi fa re mi do mi re do |
+\override Fingering #'extra-offset = #'( 0 . 1 )
+mi16 sol-3 fad mi   \change Staff = down \stemUp re \change Staff = up \stemDown si'-3
+\override Fingering #'extra-offset = #'( 0 . 0 )
+la sol \change Staff = down \stemUp fad \change Staff = up \stemDown re' do si la
+do-4 si-3 la-2
+%9
+sol8 la-2 ~la16 la-1-5 sol-3 fa-2 mi fa re mi \change Staff = down \stemUp \once \override Fingering #'direction = #DOWN do-1 \change Staff = up \stemDown mi re do |
 %10
 
 }
@@ -89,42 +114,47 @@ sol8 la ~la16 la sol fa mi fa re mi do mi re do |
   tenor = \relative do'
 {\clef bass
 \global
-\stemDown
-si16 re do si
-la si sol la fad la si do re mi do re si sol la si |
+\override Fingering #'direction = #DOWN
+\stemDown \tieDown
+si16-3 re do si
+%1
+la-4 si-2 sol la fad la-3 si-2 do-1 re-2 mi do re si-4 sol la si |
 %2
-do re si do  la4 ~la16 la sol fad mi8 la
-~ la16 sol8 sol16 la8. la16 si8. si16 dod8. dod16 |
+do-2 re si do   \once \override Fingering #'extra-offset = #'( 0 . -1 ) la4-4 ~la16-1 la-2 sol  fad-1-4 mi8-2-5  \once \override Fingering #'extra-offset = #'( 0 . -1.8 ) la-3
+%3
+~ la16-2 \once \override Fingering #'extra-offset = #'( 0 . -1 ) sol8-4 sol16-5 la8.-2-4 la16-5 si8.-2-4 si16-4 dod8.-3 dod16-1-5 |
 %4
-re si la sol fad sol fad mi re fad sol la si do la si |
-sol re' do si la8 sol la16 do si la sol mi' re do |
+re-2-4 si-1 la sol fad-1-4 sol-2 fad mi re-5 fad-3 sol-2 la-1 si-3 do la si |
+%5
+sol-5 re'-1 do si la8 sol la16-1-4 do si la sol mi'-1 re do |
 %6
-si re mi fad sol8 r8 r16 mi re do si do la si |
-sol8 la si sol ~sol16 si la sol fad sol mi fad |
+si-5 re-4 mi fad sol8-1 r8 r16-2 mi-1-3 re-2-5 do-1-3 si-2-4 do la-5 si-4 |
+%7
+sol8-1-5 la-4 si-1-3 sol-2-5   ~  \once \override Fingering #'extra-offset = #'( -3 . 0 )  sol16-1 si-1 la sol fad sol mi-5 fad |
 %8
-sol mi' re do
+sol-5 [mi'-1 re do] si-2-4
 \clef treble
 \stemUp
-si sol' fad mi re si' la sol fad mi re do |
+sol'-1 [fad mi] re-2-4 si'-1 la-2 sol-3 fad-4 mi-1 re-2 do-3 |
+%9
 \clef bass
 \stemDown
-si do la si sol4 ~sol4. fad!8 |
+si-4 do la-5 si-1 sol4-3 ~sol4. fad!8-4 |
 %10
 \stemUp
-si16 do si la sol si la do si4 \fermata
-
-
+si16 \change Staff = up \stemDown
+\override Fingering #'direction = #UP
+do-1 si-2 la-1 \change Staff = down \stemUp sol \change Staff = up \stemDown si-2 la-1 do-2 si4-1_\fermata
 }
 
 basse = \relative do'
 {\clef bass
+\override Script #'script-priority = #1
 \global
 \partial 4
-
 s4 s1 s1 s1 s1 s1 s1 s1 s1 s1 |
 %10
-sol16 mi re do si re do mi re4 \fermata
-
+sol16_1_2 mi_4 re_1 do_3 si_1_4 re_2 do_3 mi_1 re4_2 \fermata
 }
 
 
@@ -133,63 +163,121 @@ q = \lheel
 
 pieds = \relative do' {
 \clef bass
-\global
-sol4
-fad8 mi re do si la sol fa!
+\key sol \major
+\time 4/4
+\partial 4
+sol4^\q
+fad8^\a mi_\a re_\q do_\a si^\a la_\q sol_\a fa!_\q
 %2
-mi mi' fad! re sol4. fad8 |
-sol8 mi fad re sol mi la la, |
+mi_\a mi'^\q fad!^\a re_\a sol4.^\a fad8_\a |
+sol8^\a mi_\a fad^\a re_\a sol^\a mi_\a la^\a la,_\markup{ \musicglyph #"scripts.dpedaltoe"  "_"  }
+^\markup{" " "_"   \musicglyph #"scripts.dpedaltoe"}  |
 %4
-re,4. mi8 fad re sol la |
-si do re mi fad re sol la |
+re,4._\a mi8_\q fad^\a re_\a sol^\a la^\q |
+si^\a do_\a re_\q mi^\q fad^\a re_\a sol^\a la^\q |
 %6
-si la si do re4 r8 re,, |
-mi fad sol si do la re si |
+si^\a la_\a si^\a do^\q re4^\a r8 re,,_\a |
+mi_\q
+ fad_\a sol_\q si^\a do^\q la_\a re^\a si_\a |
 %8
-mi fad sol la si do re re, |
-mi fad sol si, do la re4 |
+mi^\q fad^\a sol^\a la^\q si^\a do^\q re^\a re,_\a |
+mi_\q fad^\a sol^\q si,_\a do^\a la_\a re4^\a |
 %10
-sol,2. \fermata
-
+sol,2._\a \fermata
 \bar "|."
 }
 
-\score
-{
-% compliqué mais : les barres de mesures traversent en un seul trait les 3 portées :
-\new StaffGroup
-\with{
-\remove System_start_delimiter_engraver
-}
+\score{
+{\new StaffGroup
+\with{ \remove System_start_delimiter_engraver }
 <<
-\new InnerStaffGroup
-\with {systemStartDelimiter = #'SystemStartBrace }
+\new PianoStaff
 <<
-\new Staff
+\new Staff = "up"
 << \soprano \\ \alto>>
-\new Staff
+\new Staff = "down"
 << \tenor \\ \basse >> >>
  \new Staff
-\pieds>>
-
-\layout {
- indent = 1.0\cm }
+\pieds >>
 }
 
+\layout {
+ indent = 2.0\cm
+}}
+
+midialto = \relative do''
+{\clef treble
+\global
+sol16 si-3 la sol
+%1
+la8 si do16 fad,-1 sol-2 la-1 sol8 la-1 si16 do si la-1 |
+%2
+sol8 sol8-1 la16  sol-1 fad  mi-1 re  fad-2 mi-1   re dod  mi-2 re-1   dod-1 |
+%3
+si8 mi re16 mi  fad8-1  mi16 fad sol8-1 ~sol16 si-2 la-1  sol |
+%4
+fad16  sol-1 fad-2 mi-1  re  mi-1
+fad sol la do-4 si la sol8 fad-2 |
+%5
+sol16 si-3 la sol   fad sol-2 mi fad   re  fad-2 sol-1 la-2 si8 fad |
+%6
+sol16 do si la   sol   si la sol fad sol fad mi re8  fad
+%7
+mi16  sol-1 fad mi  re  mi-1  do re  mi8 dod-1 re red-2
+%8
+mi16 sol-3 fad mi  re  si'-3
+la sol  fad re' do si la
+do-4 si-3 la-2
+%9
+sol8 la-2 ~la16 la-1-5 sol-3 fa-2 mi fa re mi  do mi re do |
+%10
+
+}
+
+
+
+  miditenor = \relative do'
+{\clef bass
+\global
+si16-3 re do si
+%1
+la-4 si-2 sol la fad la-3 si-2 do-1 re-2 mi do re si-4 sol la si |
+%2
+do-2 re si do   la4-4 ~la16-1 la-2 sol  fad-1-4 mi8-2-5  la-3
+%3
+~ la16-2  sol8-4 sol16-5 la8.-2-4 la16-5 si8.-2-4 si16-4 dod8.-3 dod16-1-5 |
+%4
+re-2-4 si-1 la sol fad-1-4 sol-2 fad mi re-5 fad-3 sol-2 la-1 si-3 do la si |
+%5
+sol-5 re'-1 do si la8 sol la16-1-4 do si la sol mi'-1 re do |
+%6
+si-5 re-4 mi fad sol8-1 r8 r16-2 mi-1-3 re-2-5 do-1-3 si-2-4 do la-5 si-4 |
+%7
+sol8-1-5 la-4 si-1-3 sol-2-5   ~    sol16-1 si-1 la sol fad sol mi-5 fad |
+%8
+sol-5 [mi'-1 re do] si-2-4
+\clef treble
+sol'-1 [fad mi] re-2-4 si'-1 la-2 sol-3 fad-4 mi-1 re-2 do-3 |
+%9
+\clef bass
+si-4 do la-5 si-1 sol4-3 ~sol4. fad!8-4 |
+%10
+si16 do-1 si-2 la-1  sol  si-2 la-1 do-2 si4-1_\fermata
+}
+
+
 \score {
-<<
-    \new Staff {
-      \set Staff.midiInstrument = "reed organ"
+<<   \new Staff {
+     \set Staff.midiInstrument = "reed organ"
 \soprano
     }
     \new Staff {
+      \midialto
+   }
+  \new Staff {
       \set Staff.midiInstrument = "reed organ"
-      \alto
-    }
-    \new Staff {
-      \set Staff.midiInstrument = "reed organ"
-\tenor
-    }
+\miditenor
+ }
 \new Staff {
       \set Staff.midiInstrument = "reed organ"
 \basse
@@ -199,7 +287,7 @@ sol,2. \fermata
 \set Staff.midiInstrument = "reed organ"
 \pieds
     }
-    \new Staff {
+  \new Staff {
  \transpose do do'
 \set Staff.midiInstrument = "clarinet"
 \soprano
@@ -207,13 +295,13 @@ sol,2. \fermata
     \new Staff {
  \transpose do do'
 \set Staff.midiInstrument = "clarinet"
-      \alto
-    }
+      \midialto
+  }
     \new Staff {
- \transpose do do'
+\transpose do do'
 \set Staff.midiInstrument = "clarinet"
-\tenor
-    }
+\miditenor
+  }
 \new Staff {
  \transpose do do'
 \set Staff.midiInstrument = "clarinet"
@@ -224,13 +312,10 @@ sol,2. \fermata
 \pieds
 }>>
 
-  \midi {
+\midi {
     \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 8)
+     \Score
+      tempoWholesPerMinute = #(ly:make-moment 70 8)
       }
     }
-
-
-
 }
