@@ -1,0 +1,70 @@
+
+Twelve duets (KV 487)
+
+by
+
+W.A. Mozart
+
+
+This is a PD edition for the mutopia project (www.mutopiaproject.org)
+of KV 487, following the edition prepared by Otto St"osser in
+1961. (This edition was graphically reproduced by Masters Music
+Editions, Florida).
+
+
+EDITORIAL REMARKS
+*****************
+
+There are some oddities, which I corrected to my best knowledge.
+
+
+
+* No1, horn 2 ends on low e.  This must be an error, the piece is in
+F-major, and horn 1 plays f'
+
+* No 3: slurring of the appoggiatura in measure 20 is inconsistent
+
+* No 4: uses appoggiatura in measure 20 and 21. I have substituted
+acciaccatura
+
+* No 7, horn 1: uses portato (slur & dot) in measure 8. This is
+inconsistent.
+
+* No 8: measure 35 uses a dotted half note in 2/4 time.
+
+* No 9, horn 1: measure 2 has a printing error, where a 8th note is
+not beamed.
+
+* Finally: the pieces are inconsistent with dynamics. In some pieces,
+the same dynamics are indicated for each staff separately, while in
+other pieces dynamics are shared between staffs.
+
+PERFORMANCE REMARKS
+*******************
+
+Horn-Guru Hans Pizka <Hans.Pizka AT t-online.de> remarks:
+
+	According to Viennese tradition, the Mozart Duets should be
+	played in the following transpositions (or on the respective
+	natural horns): 1 = C, 2 = F, 3 0 C, e = Eflat, 5 = Efl, 6 =
+	C, 7 = C, 8 = Efl, 9 = C, 10 = C, 11 = Efl, 12 = Efl.
+	(numbering according to Mozart Gesamtausgabe Serie XXIV, Nr.58
+	suppl.)
+
+	The transposition is not because of the high notes, but
+	because of the music. They sound just best in these
+	transpositions or played on the respective natural horns.
+
+
+
+REFORMATTING
+************
+
+For reformatting, install LilyPond 2.0 or newer, and issue
+
+	make
+
+
+
+
+12/jan/2004
