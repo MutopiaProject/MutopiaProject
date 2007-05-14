@@ -1,4 +1,4 @@
-#(set! point-and-click line-column-location)
+\version "2.10.10"
 
 \header {
     title = "Quintet KV. 581"
@@ -6,126 +6,86 @@
     composer = "W. A. Mozart (1756-1791)"
         
     mutopiatitle = "Clarinet Quintet KV. 581"
-    mutopiacomposer = "W. A. Mozart (1756-1791)"
-    mutopiaopus = "KV. 581"
+    mutopiacomposer = "MozartWA"
+    mutopiaopus = "KV 581"
     mutopiainstrument = "Clarinet, 2 Violins, Viola, Cello"
     date = "1789"
-    source = "Breitkopf und H\"artel (1883)"
+    source = "Breitkopf und Härtel (1883)"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
-    lastupdated = "2003/Jul/17"
-
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-    footer = "Mutopia-2003/07/17-337"
+    lastupdated = "2007/May/09"
+ footer = "Mutopia-2007/05/14-337"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-% Some useful macros
+%%% Some useful macros
 
-cue = \once \property Voice.Stem \override #'stroke-style = #'()
+cue = \once \override Stem   #'stroke-style = #'()
 
-raiseDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . 1.0)
+raiseDynamics = \once \override DynamicText
+      #'extra-offset = #'(0 . 1.0)
 
-RaiseDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . 1.5)
+RaiseDynamics = \once \override DynamicText
+      #'extra-offset = #'(0 . 1.5)
 
-lowerDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . -1.0)
+lowerDynamics = \once \override DynamicText
+      #'extra-offset = #'(0 . -1.0)
 
-LowerDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . -1.5)
+LowerDynamics = \once \override DynamicText
+      #'extra-offset = #'(0 . -1.5)
 
 cresc = #'(italic "cresc.")
 decresc = #'(italic "decresc.")
 staccato = #'(italic "staccato")
 legato = #'(italic "legato")
 
-raiseSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . 0.5) 0 . 0.5)
+RaiseText = \once \override TextScript
+      #'extra-offset = #'(0 . 3)
 
-lowerSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . -0.5) 0 . -0.5)
+raiseText = \once \override TextScript
+      #'extra-offset = #'(0 . 1)
 
-RaiseSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . 1.2) 0 . 1.2)
+lowerText = \once \override TextScript
+      #'extra-offset = #'(0 . -1)
 
-RAISESLUR = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . 1.8) 0 . 1.8)
+LowerText = \once \override TextScript
+      #'extra-offset = #'(0 . -2)
 
-LowerSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . -1.2) 0 . -1.2)
+raiseBeam = \once \override Stem #'details #'beamed-lengths = #'(4)
 
-slurStemToStem = \once \property Voice.Slur
-    \override #'attachment = #'(stem . stem)
+tupletNum = \override TupletNumber #'transparent = ##f
 
-slurHeadToHead = \once \property Voice.Slur
-    \override #'attachment = #'(head . head)
+noTupletNum = \override TupletNumber #'transparent = ##t
 
-slurHeadToStem = \once \property Voice.Slur
-    \override #'attachment = #'(head . stem)
+tupletBracket = \override Staff.TupletBracket #'bracket-visibility = ##t
 
-slurStemToHead = \once \property Voice.Slur
-    \override #'attachment = #'(stem . head)
+noTupletBracket = \override Staff.TupletBracket #'bracket-visibility = ##f
 
-RaiseText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . 3)
+smartTupletBracket = \override Staff.TupletBracket #'bracket-visibility = #'if-no-beam
 
-raiseText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . 1)
+lowerScript = \once \override Script
+      #'extra-offset = #'(0.0 . -1.0)
 
-lowerText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . -1)
+raiseScript = \once \override Script
+      #'extra-offset = #'(0.0 . 1.0)
 
-LowerText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . -2)
+RaiseScript = \once \override Script
+      #'extra-offset = #'(0.0 . 1.5)
 
-raiseBeam = \once \property Voice.Stem
-    \override #'beamed-lengths = #'(4)
-
-tupletNum = \property Voice.TupletBracket
-    \set #'number-visibility = ##t
-
-noTupletNum = \property Voice.TupletBracket
-    \set #'number-visibility = ##f 
-
-tupletBracket = \property Voice.TupletBracket
-    \set #'bracket-visibility = ##t
-
-noTupletBracket = \property Voice.TupletBracket
-    \set #'bracket-visibility = ##f 
-
-lowerScript = \once \property Voice.Script
-    \override #'extra-offset = #'(0.0 . -1.0)
-
-raiseScript = \once \property Voice.Script
-    \override #'extra-offset = #'(0.0 . 1.0)
-
-RaiseScript = \once \property Voice.Script
-    \override #'extra-offset = #'(0.0 . 1.5)
-
-stemOff = \property Voice.Stem \override #'transparent = ##t
-stemOn = \property Voice.Stem \override #'transparent = ##f
+stemOff = \override Stem   #'transparent = ##t
+stemOn = \override Stem   #'transparent = ##f
 
 blankNotes = {
-    \property Voice.NoteHead \override #'transparent = ##t
-    \property Voice.Stem \override #'transparent = ##t
+    \override NoteHead   #'transparent = ##t
+    \override Stem   #'transparent = ##t
 }
 
 visibleNotes = {
-    \property Voice.NoteHead \override #'transparent = ##f
-    \property Voice.Stem \override #'transparent = ##f
-}
-
-setTrillWave = {
-    \property Voice.TextSpanner \set #'type = #'trill
-    \property Voice.TextSpanner \set #'edge-height = #'(0 . 0)
-    \property Voice.TextSpanner \set #'padding = #1.0
-    \property Voice.TextSpanner \set #'minimum-space = #5.0
-    \property Voice.TextSpanner \set #'edge-text = #'((line
-    (music "scripts-trill") " ") . "")
+    \override NoteHead   #'transparent = ##f
+    \override Stem   #'transparent = ##f
 }
 
 rf = #'(dynamic "rf")
@@ -141,98 +101,107 @@ parentSFP = #'(columns (large "(") (dynamic "sfp") (large ")"))
 parentCresc = #'(columns (upright "(") (italic "cresc.") (upright ")"))
 parentDecresc = #'(columns (upright "(") (italic "decresc.") (upright ")"))
 
-parentShift = \once \property Voice.TextScript
-    \override #'extra-offset = #'(-1.0 . 0.0)
+parentShift = \once \override TextScript
+      #'extra-offset = #'(-1.0 . 0.0)
 
-ParentShift = \once \property Voice.TextScript
-    \override #'extra-offset = #'(-1.5 . 0.0)
+ParentShift = \once \override TextScript
+      #'extra-offset = #'(-1.5 . 0.0)
 
-% General markings and annotations for each movement
+%%% General markings and annotations for each movement
 
 
-markingsI = \notes {
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s4^#'((Large upright) "Allegro.") s4 s2
-%    \skip1*196
-%    \bar "|."
+markingsI =  {
+  \override Score.RehearsalMark #'extra-offset = #'(0.0 . 1.5)
+  \mark \markup { \large \bold "Allegro." }
+  \skip1*79
+  \break
+
+  \skip1*118
+  \bar "|."
 }
 
-markingsII = \notes {
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s4^#'((Large upright) "Larghetto.") s2
-
-    \skip2.*84
-    \bar "|."
+markingsII =  {
+  \override Score.RehearsalMark #'extra-offset = #'(0.0 . 1.0)
+  \mark \markup { \large \bold "Larghetto." }
+  \skip2.*85
+  \bar "|."
 }
 
-markingsIII = \notes {
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s4^#'((Large upright) "Menuetto.")
-    \skip2.*31
+markingsIII =  {
+  \override Score.RehearsalMark #'extra-offset = #'(0.0 . 1.5)
+  \mark \markup { \large \bold "Menuetto." }
+  s4
+  \skip2.*7
+  s2 \break
+  s4
+  \skip2.*23
 
-    s2
-    \once \property Voice.TextScript \override #'extra-offset = #'(-2 . 3)
-    s4^#'((Large upright) "Trio I.")
-    \skip2.*40
+  s2
+  s8
+  \bar ""
+  \mark \markup { \large \bold "Trio I." }
+  s8
+  \skip2.*40
 
-    s2
-    \once \property Voice.TextScript \override #'extra-offset = #'(-2 . 3)
-    s4^#'((Large upright) "Trio II.")
+  s2
+  s8
+  \bar ""
+  \mark \markup { \large \bold "Trio II." }
 }
 
-markingsIIIbis = \notes {
-    s4
-    \skip2.*72
-    s4
-    \once \property Voice.TextScript \override #'extra-offset = #'(-4 . -2)
-    s2_#'((Large upright) "M.D.C.")
-    \skip2.*50
+markingsIIIbis =  {
+  s4
+  \skip2.*72
 
-    s4
-    \once \property Voice.TextScript \override #'extra-offset = #'(-4 . -2)
-    s4_#'((Large upright) "M.D.C.")
+  s2
+  \bar ":|:"
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'self-alignment-X = #right
+  \mark \markup { \large \bold "M.D.C." }
+
+  s4
+  \skip2.*50
+
+  s2
+  \bar ":|"
+  \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \once \override Score.RehearsalMark #'self-alignment-X = #right
+  \mark \markup { \large \bold "M.D.C." }
 }
 
-markingsIV = \notes {
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s2^#'((Large upright) "Allegretto con Variationi.") s2
-    
-    \skip1*15
+markingsIV =  {
+  \override Score.RehearsalMark #'extra-offset = #'(1.0 . 1.5)
+  \mark \markup { \large \bold "Allegretto con Variationi." }
+  \skip1*16
+  \break
 
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s2^#'((Large upright) "Var. I") s2
-    
-    \skip1*15
+  \mark \markup { \large \bold "Var. I"}
+  \skip1*16
+  \break
 
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s2^#'((Large upright) "Var. II") s2
-    
-    \skip1*15
+  \mark \markup { \large \bold "Var. II"}
+  \skip1*16
+  \break
 
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 4)
-    s2^#'((Large upright) "Var. III") s2
-    
-    \skip1*15
+  \mark \markup { \large \bold "Var. III"}
+  \skip1*16
+  \break
 
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s2^#'((Large upright) "Var. IV") s2
-    
-    \skip1*19
+  \mark \markup { \large \bold "Var. IV"}
+  \skip1*20
+  \break
 
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s2^#'((Large upright) "Adagio.") s2
+  \mark \markup { \large \bold "Adagio."}
+  \skip1*21
 
-    \skip1*20
+  \bar "||"
+  \break
 
-    \bar "||"
+  \mark \markup { \large \bold "Allegro."}
+  \skip1*36
 
-    \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s2^#'((Large upright) "Allegro.") s2
-
-    \skip1*35
-    \bar "|."
+  \bar "|."
 }
 
-rbcOne = \property Voice.stemRightBeamCount = #1
-rbcTwo = \property Voice.stemRightBeamCount = #2
-
+rbcOne = \set stemRightBeamCount = #1
+rbcTwo = \set stemRightBeamCount = #2

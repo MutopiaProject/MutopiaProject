@@ -20,42 +20,42 @@ help:
 	@echo "  where TARGET is one of the following:"
 	@echo "  all help clarinet violin1 violin2 viola cello score"
 
-%.ps : %.ly
-	ly2dvi -P -o $@ $<
+%.pdf : %.ly
+	lilypond $<
 
 ############################################################
 
-clarinet: k581-clarinet.ps
+clarinet: k581-clarinet.pdf
 
-k581-clarinet.ps: $(CLARINET_FILES)
-
-############################################################
-
-violin1: k581-violin1.ps $(VIOLIN1_FILES)
-
-k581-violin1.ps: $(VIOLIN1_FILES)
+k581-clarinet.pdf: $(CLARINET_FILES)
 
 ############################################################
 
-violin2: k581-violin2.ps $(VIOLIN2_FILES)
+violin1: k581-violin1.pdf $(VIOLIN1_FILES)
 
-k581-violin2.ps: $(VIOLIN2_FILES)
-
-############################################################
-
-viola: k581-viola.ps $(VIOLA_FILES)
-
-k581-viola.ps: $(VIOLA_FILES)
+k581-violin1.pdf: $(VIOLIN1_FILES)
 
 ############################################################
 
-cello: k581-cello.ps $(CELLO_FILES)
+violin2: k581-violin2.pdf $(VIOLIN2_FILES)
 
-k581-cello.ps: $(CELLO_FILES)
+k581-violin2.pdf: $(VIOLIN2_FILES)
 
 ############################################################
 
-score: k581-score.ps
+viola: k581-viola.pdf $(VIOLA_FILES)
 
-k581-score.ps: $(CLARINET_FILES) $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
+k581-viola.pdf: $(VIOLA_FILES)
+
+############################################################
+
+cello: k581-cello.pdf $(CELLO_FILES)
+
+k581-cello.pdf: $(CELLO_FILES)
+
+############################################################
+
+score: k581-score.pdf
+
+k581-score.pdf: $(CLARINET_FILES) $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
 

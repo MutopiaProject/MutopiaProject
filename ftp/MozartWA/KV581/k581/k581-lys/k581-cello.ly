@@ -1,99 +1,125 @@
-% -*- LilyPond -*-
+%%% -*- LilyPond -*-
 
-\version "1.7.18"
+\version "2.10.10"
 
 \include "defs.ly"
+
+#(set-global-staff-size 17)
 
 \include "cello-i.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
+	\set Staff.instrumentName = "Cello."
 
 	\time 4/4
 
 	\celloFirstMov
-	\context Voice=markings { \markingsI }
-    >
+	\context Voice = "markings" { \markingsI }
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 120 4)
+      }
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 \include "cello-ii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
+	\set Staff.instrumentName = "Cello."
 
 	\time 3/4
 
 	\celloSecondMov
-	\context Voice=markings { \markingsII }
-    >
+	\context Voice = "markings" { \markingsII }
+    >>
 
-    \midi {
-       \tempo 4 = 55
+    
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 55 4)
+      }
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 \include "cello-iii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
+	\set Staff.instrumentName = "Cello."
 
 	\time 3/4
 	\partial 4
 
 	\celloThirdMov
-	\context Voice=markings { \markingsIII }
+	\context Voice = "markings" { \markingsIII }
 	\context Voice=markingsBis { \markingsIIIbis }
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 140
+    
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 140 4)
+      }
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 \include "cello-iv.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
+	\set Staff.instrumentName = "Cello."
 
 	\time 2/2
 
 	\celloFourthMov
-	\context Voice=markings { \markingsIV }
-    >
+	\context Voice = "markings" { \markingsIV }
+    >>
 
-    \midi {
-       \tempo 4 = 140
+    
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 140 4)
+      }
     }
 
-    \paper { }
+
+
+    \layout { }
 }

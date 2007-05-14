@@ -1,99 +1,113 @@
-% -*- LilyPond -*-
+%%% -*- LilyPond -*-
 
-\version "1.7.18"
+\version "2.10.10"
 
 \include "defs.ly"
+
+#(set-global-staff-size 17)
 
 \include "violin1-i.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino I."
+  \context Staff <<
+    \override Score.BarNumber   #'padding = #3
+    \set Score.skipBars = ##t
+    \set Staff.autoBeaming = ##f
+    \set Staff.midiInstrument = #"violin"
+    \set Staff.instrumentName = "Violino I."
 
-	\time 4/4
+    \time 4/4
 
-	\violinIFirstMov
-	\context Voice=markings { \markingsI }
-    >
+    \violinIFirstMov
+    \context Voice = "markings" { \markingsI }
+  >>
 
-    \midi {
-       \tempo 4 = 120
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 120 4)
     }
+  }
 
-    \paper { }
+  \layout { }
 }
 
 \include "violin1-ii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino I."
+  \context Staff <<
+    \override Score.BarNumber   #'padding = #3
+    \set Score.skipBars = ##t
+    \set Staff.autoBeaming = ##f
+    \set Staff.midiInstrument = #"violin"
+    \set Staff.instrumentName = "Violino I."
 
-	\time 3/4
+    \time 3/4
 
-	\violinISecondMov
-	\context Voice=markings { \markingsII }
-    >
+    \violinISecondMov
+    \context Voice = "markings" { \markingsII }
+  >>
 
-    \midi {
-       \tempo 4 = 70
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 70 4)
     }
+  }
 
-    \paper { }
+  \layout { }
 }
 
 \include "violin1-iii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino I."
+  \context Staff <<
+    \override Score.BarNumber   #'padding = #3
+    \set Score.skipBars = ##t
+    \set Staff.autoBeaming = ##f
+    \set Staff.midiInstrument = #"violin"
+    \set Staff.instrumentName = "Violino I."
 
-	\time 3/4
-	\partial 4
+    \time 3/4
+    \partial 4
 
-	\violinIThirdMov
-	\context Voice=markings { \markingsIII }
-	\context Voice=markingsBis { \markingsIIIbis }
-    >
+    \violinIThirdMov
+    \context Voice = "markings" { \markingsIII }
+    \context Voice=markingsBis { \markingsIIIbis }
+  >>
 
-    \midi {
-       \tempo 4 = 140
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 140 4)
     }
+  }
 
-    \paper { }
+  \layout { }
 }
 
 \include "violin1-iv.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino I."
+  \context Staff <<
+    \override Score.BarNumber   #'padding = #3
+    \set Score.skipBars = ##t
+    \set Staff.autoBeaming = ##f
+    \set Staff.midiInstrument = #"violin"
+    \set Staff.instrumentName = "Violino I."
 
-	\time 2/2
+    \time 2/2
 
-	\violinIFourthMov
-	\context Voice=markings { \markingsIV }
-    >
+    \violinIFourthMov
+    \context Voice = "markings" { \markingsIV }
+  >>
 
-    \midi {
-       \tempo 4 = 140
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 140 4)
     }
+  }
 
-    \paper { }
+  \layout { }
 }
