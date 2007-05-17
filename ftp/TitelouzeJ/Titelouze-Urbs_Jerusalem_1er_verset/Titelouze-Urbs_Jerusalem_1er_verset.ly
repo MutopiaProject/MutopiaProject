@@ -1,9 +1,12 @@
 % -*- mode: LilyPond-mode ; coding: utf-8 -*-
 \version "2.10.15"
 \include "italiano.ly" 
+
 %%
-%% Version 0 
-%%
+%% Version 0 du 14 mai 2007
+%% Version 1 du 17 mai 2007 : correction du mutopiatitle, 
+%% mise en page sur deux
+%% pages, correction d'alignement de quelques points.
 %%
 
 \header{
@@ -18,16 +21,16 @@
   lastupdated = "2007-05-17"
   enteredby = "Gérard Gréco"
   maintainer = "Gérard Gréco"
-  mutopiatitle = "Urbs Jesrusalem (1er verset)"
+  mutopiatitle = "Urbs Jerusalem (1er verset)"
   mutopiacomposer = "TitelouzeJ"
   mutopiainstrument = "Organ"
   style="Baroque"
- footer = "Mutopia-2007/05/14-977"
+ footer = "Mutopia-2007/05/17-977"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 %#(set-default-paper-size "a4" 'landscape)
-%#(set-global-staff-size 18)
+#(set-global-staff-size 18)
 
 % macros von Urs Metzger
 adjustSlash = { \once \override TextScript #'extra-offset = #'( -2 . 5 ) }
@@ -162,7 +165,7 @@ alto = \relative do'' {
   r2 mi4 mi4 ~
   mi4 re4 do8 re8 mi4 
   la,4. si8 do2 
-  sib4. la8 sol8 la8 sib4 
+  \dotsDown sib4. \dotsNeutral la8 sol8 la8 sib4 
   %%  5 :
   la4. sol8 fa4 do'4 
   si4 do2 sib4 
@@ -207,7 +210,7 @@ alto = \relative do'' {
   do4 sib4 la4 re8 mi8 
   %% 40 :
   fa4 sol4 r8 fa8 mi8 re8 
-  mi4. re8 do8 re8 mi4 
+  \dotsDown mi4. \dotsNeutral re8 do8 re8 mi4 
   re4 mi4 fa4 r4 
   r4 sol8 la8 si8 do8 si8 la8 
   sol2 sol4. \dotsNeutral sol8 
@@ -255,7 +258,7 @@ tenor = \relative do'' {
   do4 #(silun 0 +3 #t) r4 do4 la4 ~
   la8 si8 do8 re8 sib4 la4 
   fa'8 mi8 re8 do8 sib8 sol8 re'4 
-  do4. si?8 la2 
+  \dotsDown do4. \dotsNeutral si?8 la2 
   %% 20 :
   sib4 la4. si8 do8 re8 
   do4 si8 sol8 do4 mi4 ~
@@ -659,48 +662,43 @@ bassemidi = \relative do' {
 }
 
 \paper {
-  betweensystempadding = 1\mm
-  betweensystemspace = 1\mm
+  %%#(set-paper-size "a4")
+  before-title-space=0\mm
+  after-title-space=15\mm
+  head-separation = 0\mm
+  between-system-padding=6\mm
+  %%between-system-space=25\mm
+  indent = 3\cm
+  bottom-margin = 5\mm 
+  top-margin = 5\mm
   %raggedbottom = ##f
   %raggedlastbottom = ##f
-  headsep = 1\mm
-  %aftertitlespace = 1\mm
-  indent = 1\cm
-  bottommargin = 4\mm 
-  topmargin = 1\mm
 }
 
 \score{
-  \new PianoStaff 
- 
-  <<
- 
-  
-    \new Staff = "dessus" 
-    << 
+  \new PianoStaff <<
+    \override PianoStaff.VerticalAlignment #'forced-distance = #14
+    \new Staff = "dessus" << 
       \clef "violin"
       \set Staff.midiInstrument = "pan flute"
       \soprano
       \alto
     >>
-    
 
-    \new Staff = "basse" 
-    << 
+    \new Staff = "basse" << 
       \clef "bass" 
       \set Staff.midiInstrument = "pan flute"
       \tenor
       << 
 	\new Voice = "bidon" {\basse}
-	 \new Lyrics \lyricsto "bidon" {\cantusfirmus} 
+	\new Lyrics \lyricsto "bidon" {\cantusfirmus} 
       >>
-
     >>
   >>
 
   \layout{
-    \context { \Staff
-	       \override VerticalAxisGroup #'minimum-Y-extent = #'(-0 . 0)
+    \context { \PianoStaff
+	       %\override VerticalAxisGroup #'minimum-Y-extent = #'(-20 . 20)
 	     }
   }
 }
