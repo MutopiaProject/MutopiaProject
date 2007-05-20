@@ -20,7 +20,7 @@
 %#(set-default-paper-size "a4")
 %#(set-default-paper-size "letter")
 
-%#(set-global-staff-size 15)
+#(set-global-staff-size 18.5)
 
 \header {
         title = "Aria con 30 Variazioni"
@@ -37,7 +37,7 @@
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "JD Erickson"
         maintainerEmail = "erickson.jd@gmail.com"
- footer = "Mutopia-2007/05/15-980"
+ footer = "Mutopia-2007/05/20-980"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -113,7 +113,7 @@ soprano = \relative c'' {
 %% Bass Clef
 %%
 
-bassOne = \relative c {
+bass = \relative c {
         \override Script #'padding = #1.0
         %1-5
         \stemUp a8[ b'16 a16 b8 g8 g,8 g'8] 
@@ -162,15 +162,15 @@ bassOne = \relative c {
         \stemUp g16 g,16 a16 b16 \stemDown c16 d16 e16 fis16 g4_\fermata    
 }
 
-bass = << \bassOne >>
-
-%%% Define score - Piano staff in key of G Major, 3/4 time.  %%%%%%%%%%
+%%
+%% Score Layout 
+%%
 
 \score {
     \context PianoStaff <<
         \set PianoStaff.instrumentName = "Clavier  "
         \set PianoStaff.midiInstrument = "harpsichord"
-        \context Staff = "upper" { \clef treble \key g \major \time 3/4 << \soprano >>  }
+        \context Staff = "upper" { \clef treble \key g \major \time 3/4 \soprano }
         \context Staff = "lower"  { \clef bass \key g \major \time 3/4 \bass }
     >>
     \layout{  }
