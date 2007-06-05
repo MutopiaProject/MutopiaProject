@@ -242,7 +242,7 @@ hornNotes = \relative c''
   c-. g-. e-. a-. |
   g1~\fp | \tag #'horn \noBreak g~ | g2 r |
   \tag #'horn \break %TODO: This break is because a mark is too long and goes off the page.
-  r_\markup{\column{"(sans les" "Pistons)"}} g'\(( |
+  r_\markup{\column{"(sans les" "Pistons)"}} g'_(\( | %TODO: I'm not totally happy with the slurs here
   
   %6/8
   bes4)_\espress bes8-.\) bes( c d |

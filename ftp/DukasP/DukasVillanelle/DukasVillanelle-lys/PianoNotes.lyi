@@ -89,7 +89,7 @@ rightHand = \relative c''
   r4 <b f>2.^( |
   \once \override TextScript #'avoid-slur = #'inside
   \break %TODO: The following mark is too long so here we just put it on a new line.
-  <cis a e>2) << \repeat tremolo 6 {cis16*2/3( e)} {s8. s16^\markup{\teeny 12}} >> | %TODO: figure out tuplet tremolos
+  <cis a e>2) << \repeat tremolo 6 {cis16*2/3( e)} {s8 s16^\markup{\teeny \bold 12}} >> | %TODO: figure out tuplet tremolos
   \repeat tremolo 6 {<ees bes>16*2/3( g,)} \repeat tremolo 6 {<d' bes>16*2/3( g,)}
   \repeat tremolo 6 {<a' e cis>16*2/3( g,)} \repeat tremolo 6 {<a' ees>16*2/3( a,)}
   \repeat tremolo 6 {des16*2/3( g,)} \repeat tremolo 6 {<d' bes>16*2/3( g,)}

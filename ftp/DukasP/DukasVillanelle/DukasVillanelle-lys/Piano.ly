@@ -2,7 +2,7 @@
 \include "HornNotes.lyi"
 \include "defs.lyi"
 
-\version "2.11.14"
+\version "2.11.23"
 
 \paper
 {
@@ -77,10 +77,10 @@ instrument = "Piano"
 
       %\override TextScript #'font-size = #2
       %\override TextScript #'font-shape = #'italic
-      \override TextScript #'extra-offset = #'(0 . 1.75)
-      \override DynamicText #'extra-offset = #'(0 . 2.5)
-      \override DynamicTextSpanner #'extra-offset = #'(0 . 2.5)
-      \override Hairpin #'extra-offset = #'(0 . 2.5)
+      %\override TextScript #'extra-offset = #'(0 . 1.75)
+      %\override DynamicText #'extra-offset = #'(0 . 2.5)
+      %\override DynamicTextSpanner #'extra-offset = #'(0 . 2.5)
+      %\override Hairpin #'extra-offset = #'(0 . 2.5)
 
       \consists "Skip_event_swallow_translator"
 
