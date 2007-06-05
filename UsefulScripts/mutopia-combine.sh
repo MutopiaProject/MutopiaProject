@@ -67,7 +67,7 @@ fi
 
 # Create zip files as appropriate
 if [ -d "$BASE_NAME"-lys ]; then
-   zip -r "$BASE_NAME"-lys.zip "$BASE_NAME"-lys
+   zip -r "$BASE_NAME"-lys.zip "$BASE_NAME"-lys -x "*.svn*"
 fi
 
 if [ $A4_PDF_COUNT -gt 1 ]; then
