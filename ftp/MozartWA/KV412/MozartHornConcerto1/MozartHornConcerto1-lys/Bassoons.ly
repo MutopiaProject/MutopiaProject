@@ -19,7 +19,7 @@ instrument = "Fagotti"
     \new Staff
     {
       \set Score.skipBars = ##t
-      << \BassoonsMvtI \outlineMvtI >>
+      << \bassoonsMvtI \outlineMvtI >>
     }
   }
   \score
@@ -27,7 +27,7 @@ instrument = "Fagotti"
     \new Staff
     {
       \set Score.skipBars = ##t
-      << \BassoonsMvtII \outlineMvtII >>
+      << \bassoonsMvtII \outlineMvtII >>
     }
   }
 }
