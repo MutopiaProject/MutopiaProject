@@ -4,7 +4,6 @@ hornMvtIV = \relative c''
 {
   \key c \major
   \transposition ees
-  \once \override Score.RehearsalMark #'padding = #2.8
 
   \repeat volta 2
   {

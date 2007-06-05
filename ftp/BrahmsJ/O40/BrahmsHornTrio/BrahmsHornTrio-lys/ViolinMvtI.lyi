@@ -3,7 +3,6 @@
 violinMvtI = \relative c'
 {
   \key ees \major
-  \once \override Score.RehearsalMark #'padding = #1.8
   \partial 4 bes4(\downbow_\mPDolceEspr |
   f' e8-.( f-.) |
   f4 g8-.( f-.) |
@@ -65,7 +64,6 @@ violinMvtI = \relative c'
   R2*5 |
   \once \override TupletBracket #'direction = #UP
   \times 2/3 {r8 r
-    \once \override TextScript #'extra-offset = #'(0.0 . -2.0)
     \once \override Script #'extra-offset = #'(0.0 . 1.3)
     fis'~(\<\upbow_\mMPEspr} \times 2/3 {fis4\> g8)\!} |
 
@@ -134,7 +132,6 @@ violinMvtI = \relative c'
   R4.*3 |
 
   \key ees \major
-  \once \override Score.RehearsalMark #'padding = #2.2
   %"Tempo I"
   R2*7 |
   r4 bes_\mDolce |
@@ -206,9 +203,9 @@ violinMvtI = \relative c'
   R4.*3 |
 
   \key ges \major
-  \once \override Score.RehearsalMark #'padding = #2.2
   %"Tempo I"
   R2*8 |
+  \set hairpinToBarline = ##f
   r4 des,(\p\< | beses'\> aes)\! |
   r des(\< | beses\> aes)\! |
   r ees(_\mPocoCresc | ces' bes) |
@@ -219,7 +216,7 @@ violinMvtI = \relative c'
 
   %H
   ces4_\mEspr bes8-.( ces-.) |
-  ces2~(_\mSempreCrescAnimato |
+  ces2~(_\mSempreCrescAnimato | \noBreak
   ces8 c) c( des) |
   des( ees) ees( e) |
   e4 dis8-.( e-.) |
@@ -247,10 +244,8 @@ violinMvtI = \relative c'
   fes(_\espressivo d) d-.( ees-.) |
 
   %I
-  \once \override TextScript #'extra-offset = #'(0.0 . -3.7)
   r4_\mEspr <d ees,>8-.(\> <ees ees,>-.)\! |
   r4 <d ees,>8-.(\> <ees ees,>-.)\! |
-  \once \override TextScript #'extra-offset = #'(0.0 . -3.7)
   r4_\mSempreDimRitPoco <d ees,>8-.(\> <ees ees,>-.)\! |
   r4 <c ees,>8-.(\> <des ees,>-.)\! |
   r4 <b ees,>8-.(\> <c ees,>-.)\! |

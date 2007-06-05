@@ -3,7 +3,6 @@
 violinMvtII = \relative c'''
 {
   \key ees \major
-  \once \override Score.RehearsalMark #'padding = #2.8
   R2.*12 |
 
   %A
@@ -146,7 +145,7 @@ violinMvtII = \relative c'''
   g( f g | f ees f) |
   ees( f g | a bes c) |
   d( ees f | g a bes) |
-  c2.~_\mPocoAPocoCresc | c |
+  c2.~_\mPocoAPocoCresc | \noBreak c |
   bes2.~( | bes4 aes g) |
   bes2.~( | bes4 aes g) |
   bes( aes g) |

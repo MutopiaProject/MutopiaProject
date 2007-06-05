@@ -134,7 +134,9 @@ pianoRightMvtIII = \relative c'
   <<
     {
       <ces ees,>8( <bes des,> <ces ees,>
+      \override Score.NonMusicalPaperColumn #'allow-loose-spacing = ##f
       <aes fes des> < fes des aes> \clef bass <des aes fes>)
+      \revert Score.NonMusicalPaperColumn #'allow-loose-spacing
     }
     \\
     {

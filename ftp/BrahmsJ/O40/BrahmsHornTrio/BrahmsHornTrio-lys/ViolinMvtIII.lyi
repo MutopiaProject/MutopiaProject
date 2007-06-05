@@ -3,7 +3,6 @@
 violinMvtIII = \relative c'''
 {
   \key ges \major
-  \once \override Score.RehearsalMark #'padding = #2.8
   R2.*4 |
   ges8(_\mPEspr d ees) ces4( bes8) |
   ges'( d ees) e4(_\espressivo f8) |

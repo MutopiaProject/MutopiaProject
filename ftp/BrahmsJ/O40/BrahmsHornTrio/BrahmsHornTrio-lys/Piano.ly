@@ -1,4 +1,4 @@
-\version "2.9.24"
+\version "2.11.25"
 
 \include "PianoMvtI.lyi"
 \include "PianoDynamicsMvtI.lyi"
@@ -22,10 +22,9 @@ threeToFourPadding = {r8*5}
 
 \paper
 {
-  between-system-padding = #0.1
-  between-system-space = #0.1
+  %between-system-padding = #0.1
+  %between-system-space = #0.1
   ragged-last-bottom = ##f
-  ragged-bottom = ##f
 }
 
 \book
@@ -40,16 +39,23 @@ threeToFourPadding = {r8*5}
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \hornMvtI }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \hornMvtI
+      }
       \new Staff
       \with
       {
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \violinMvtI }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \violinMvtI
+      }
       \new PianoStaff \with {\consists "Span_arpeggio_engraver"}
       <<
+        \override Score.PaperColumn #'keep-inside-line = ##t
         \new Staff="RH"
         {
           #(set-accidental-style 'modern)
@@ -88,12 +94,13 @@ threeToFourPadding = {r8*5}
         \consists "Script_engraver"
         \consists "Dynamic_engraver"
         \consists "Text_engraver"
+      \consists "Text_spanner_engraver"
 
         %\override TextScript #'font-size = #2
         %\override TextScript #'font-shape = #'italic
-        \override TextScript #'extra-offset = #'(0 . 1.75)
-        \override DynamicText #'extra-offset = #'(0 . 2.5)
-        \override Hairpin #'extra-offset = #'(0 . 2.5)
+        %\override TextScript #'extra-offset = #'(0 . 1.75)
+        %\override DynamicText #'extra-offset = #'(0 . 2.5)
+        %\override Hairpin #'extra-offset = #'(0 . 2.5)
 
         \consists "Skip_event_swallow_translator"
 
@@ -120,16 +127,23 @@ threeToFourPadding = {r8*5}
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \hornMvtII }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \hornMvtII
+      }
       \new Staff
       \with
       {
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \violinMvtII }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \violinMvtII
+      }
       \new PianoStaff
       <<
+        \override Score.PaperColumn #'keep-inside-line = ##t
         \new Staff="RH"
         {
           #(set-accidental-style 'modern)
@@ -171,9 +185,9 @@ threeToFourPadding = {r8*5}
 
         %\override TextScript #'font-size = #2
         %\override TextScript #'font-shape = #'italic
-        \override TextScript #'extra-offset = #'(0 . 1.75)
-        \override DynamicText #'extra-offset = #'(0 . 2.5)
-        \override Hairpin #'extra-offset = #'(0 . 2.5)
+        %\override TextScript #'extra-offset = #'(0 . 1.75)
+        %\override DynamicText #'extra-offset = #'(0 . 2.5)
+        %\override Hairpin #'extra-offset = #'(0 . 2.5)
 
         \consists "Skip_event_swallow_translator"
 
@@ -200,16 +214,23 @@ threeToFourPadding = {r8*5}
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \hornMvtIII }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \hornMvtIII
+      }
       \new Staff
       \with
       {
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \violinMvtIII }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \violinMvtIII
+      }
       \new PianoStaff
       <<
+        \override Score.PaperColumn #'keep-inside-line = ##t
         \new Staff="RH" \with {\consists "Span_arpeggio_engraver"}
         {
           #(set-accidental-style 'modern)
@@ -251,9 +272,9 @@ threeToFourPadding = {r8*5}
 
         %\override TextScript #'font-size = #2
         %\override TextScript #'font-shape = #'italic
-        \override TextScript #'extra-offset = #'(0 . 1.75)
-        \override DynamicText #'extra-offset = #'(0 . 2.5)
-        \override Hairpin #'extra-offset = #'(0 . 2.5)
+        %\override TextScript #'extra-offset = #'(0 . 1.75)
+        %\override DynamicText #'extra-offset = #'(0 . 2.5)
+        %\override Hairpin #'extra-offset = #'(0 . 2.5)
 
         \consists "Skip_event_swallow_translator"
 
@@ -280,18 +301,28 @@ threeToFourPadding = {r8*5}
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \hornMvtIV }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \set Staff.voltaOnThisStaff = ##t
+        \hornMvtIV
+      }
       \new Staff
       \with
       {
         fontSize = #-3
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
-      { \violinMvtIV }
+      {
+        \override Score.PaperColumn #'keep-inside-line = ##t
+        \set Staff.voltaOnThisStaff = ##f
+        \violinMvtIV
+      }
       \new PianoStaff
       <<
+        \override Score.PaperColumn #'keep-inside-line = ##t
         \new Staff="RH"
         {
+          \set Staff.voltaOnThisStaff = ##t
           #(set-accidental-style 'modern)
           \set Staff.extraNatural = ##f
           \pianoRightMvtIV
@@ -301,6 +332,7 @@ threeToFourPadding = {r8*5}
 
         \new Staff="LH"
         {
+          \set Staff.voltaOnThisStaff = ##f
           #(set-accidental-style 'modern)
           \set Staff.extraNatural = ##f
           \pianoLeftMvtIV
@@ -329,9 +361,9 @@ threeToFourPadding = {r8*5}
 
         %\override TextScript #'font-size = #2
         %\override TextScript #'font-shape = #'italic
-        \override TextScript #'extra-offset = #'(0 . 1.75)
-        \override DynamicText #'extra-offset = #'(0 . 2.5)
-        \override Hairpin #'extra-offset = #'(0 . 2.5)
+        %\override TextScript #'extra-offset = #'(0 . 1.75)
+        %\override DynamicText #'extra-offset = #'(0 . 2.5)
+        %\override Hairpin #'extra-offset = #'(0 . 2.5)
 
         \consists "Skip_event_swallow_translator"
 

@@ -347,13 +347,11 @@ pianoRightMvtII = \relative c'
     r8 aes''( aes' aes, aes' aes,) |
     \repeat unfold 2 {r8 aes,( aes' aes, aes' aes,) |}
 
-    %TODO: fix beginning rest, it ends up below the bass part
-    \change Staff=LH r8 aes,( aes' aes, aes' aes,) | \change Staff=RH
+    \new Voice {\change Staff=LH \voiceOne r8 aes,( aes' aes, aes' aes,) |}
   }
   r8 bes''( bes' bes, bes' bes,) |
   \repeat unfold 2 {r8 bes,( bes' bes, bes' bes,) |}
-  %TODO: same as previous
-  \change Staff=LH r8 bes,( bes' bes, bes') r | \change Staff=RH
+  \new Voice {\change Staff=LH \voiceOne r8 bes,( bes' bes, bes') r |}
   <<
     {
       <ees' des>2.( | ces4 des ees) |
@@ -761,11 +759,11 @@ pianoLeftMvtII = \relative c,
   {
     <aes' aes,>2. |
     <aes aes,>~ | <aes aes,> |
-    \stemDown aes,2. \stemNeutral |
+    \voiceTwo aes,2. \oneVoice |
   }
   <bes' bes,>2. |
   bes,~ | bes |
-  \stemDown bes2. \stemNeutral |
+  \voiceTwo bes2. \oneVoice |
   <des'' bes g ees>2. |
   <ces aes ees>4 r <aes, aes,> |
   << {<ges'' ees>2( <fes des>4)} \\ aes,2. >> |

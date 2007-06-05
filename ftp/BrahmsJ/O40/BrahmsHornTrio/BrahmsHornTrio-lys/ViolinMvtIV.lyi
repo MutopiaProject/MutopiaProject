@@ -79,7 +79,7 @@ violinMvtIV = \relative c'
     ees4\> d8 g4)\! r8 |
     R2. |
     r4 fis,8( g4 a8) |
-    bes4.~( bes4 b8\< |
+    bes4.~( bes4\< b8 |
     d4\> c8 f4)\! r8 |
     R2. |
     r4 f,8( ges4 a8 |
@@ -196,7 +196,6 @@ violinMvtIV = \relative c'
   r r4 d8(\f |
 
   %G
-  \once \override Score.RehearsalMark #'padding = #1.5
   g4.~) g4 c,8( |
   f4.~) f4 bes,8( |
   ees4) r8 r4 bes8( |

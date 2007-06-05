@@ -1,11 +1,11 @@
-\version "2.11.25"
+\version "2.11.24"
 
 \include "HornMvtI.lyi"
 \include "HornMvtII.lyi"
 \include "HornMvtIII.lyi"
 \include "HornMvtIV.lyi"
 
-instrument = "Horn in Es"
+instrument = "Horn in F"
 
 \paper
 {
@@ -19,18 +19,16 @@ instrument = "Horn in Es"
   {
     \new Staff
     {
-      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
-      << \hornMvtI \outlineMvtI >>
+      << \transpose f ees \hornMvtI \outlineMvtI >>
     }
   }
   \score
   {
     \new Staff
     {
-      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
-      << \hornMvtII \outlineMvtII >>
+      << \transpose f ees \hornMvtII \outlineMvtII >>
     }
     \header { piece = "Scherzo" }
   }
@@ -38,18 +36,16 @@ instrument = "Horn in Es"
   {
     \new Staff
     {
-      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
-      << \hornMvtIII \outlineMvtIII >>
+      << \transpose f ees \hornMvtIII \outlineMvtIII >>
     }
   }
   \score
   {
     \new Staff
     {
-      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
-      << \hornMvtIV \outlineMvtIV >>
+      << \transpose f ees \hornMvtIV \outlineMvtIV >>
     }
     \header { piece = "Finale" }
   }

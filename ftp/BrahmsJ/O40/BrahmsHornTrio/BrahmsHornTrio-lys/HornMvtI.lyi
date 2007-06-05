@@ -4,7 +4,6 @@ hornMvtI = \relative c''
 {
   \key c \major
   \transposition ees
-  \once \override Score.RehearsalMark #'padding = #3.2
   \partial 4 r4 |
   R2*7 |
   r4 g(_\mPDolceEspr |
@@ -14,6 +13,7 @@ hornMvtI = \relative c''
   a4 g8-.( a-.) |
   a4 g8-.( a-.) |
   a4 g8-.(\< c-.) |
+  \set hairpinToBarline = ##f
   c4( d~)\> | d4\! r |
   \repeat unfold 2 {r4 g,(\< | c\> b\!) |}
   f'4 e8-.( f-.) |
@@ -71,7 +71,6 @@ hornMvtI = \relative c''
   r e |
   R2*2 |
 
-  \once \override Score.RehearsalMark #'padding = #2.3
   %"Poco più animato"
   R4.*3*2 |
   r4. c'2.(\p\< | b4.\> g4)\! r8 r4. |
@@ -118,7 +117,6 @@ hornMvtI = \relative c''
   R4.*3*2 |
   r4. r g(\p |
   
-  \once \override Score.RehearsalMark #'padding = #1.2
   %"Tempo I"
   d'4) cis8-.( d-.) |
   d4 e8-.( d-.) |
@@ -156,7 +154,6 @@ hornMvtI = \relative c''
   r4 ees-.\>\( |
   r4 ees-.\!\) |
 
-  \once \override Score.RehearsalMark #'padding = #2.3
   %"Poco più animato"
   R4.*3*2 |
   r4. ees'2.(\p\< | d4.\> bes4)\! r8 r4. |
@@ -171,7 +168,6 @@ hornMvtI = \relative c''
   %F
   ees4.\> r4\! cis8~( cis4 d8) |
   f4. r4 d8~(\< d4 ees8)\! |
-  \once \override TextScript #'padding = #2.5
   gis2.~_\mSempreCresc gis4.~\< |
   gis(\> fis4)\! r8 e4.~(\< |
   e\> d4)\! r8 c4.~(\< |
@@ -193,7 +189,6 @@ hornMvtI = \relative c''
   R4.*3*2 |
   r4. r bes(\pp |
 
-  \once \override Score.RehearsalMark #'padding = #1.5
   %"Tempo I"
   f'4) e8-.( f-.) |
   f4 g8-.( f-.) |
@@ -234,7 +229,6 @@ hornMvtI = \relative c''
   %I
   r4 << c-_ \fade >> |
   r4 << e-_ \fade >> |
-  \once \override TextScript #'padding = #2.5
   r4_\mSempreDimRitPoco << e-_ \fade >> |
   r4 << e-_ \fade >> |
   r4 << f-_ \fade >> |

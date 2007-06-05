@@ -1,4 +1,4 @@
-\version "2.9.24"
+\version "2.11.25"
 
 \include "ViolinMvtI.lyi"
 \include "ViolinMvtII.lyi"
@@ -7,6 +7,12 @@
 
 instrument = "Violin"
 
+\paper
+{
+  ragged-last-bottom = ##f
+  %#(define page-breaking optimal-page-breaks)
+}
+
 \book
 {
   \include "Header.lyi"
@@ -14,6 +20,7 @@ instrument = "Violin"
   {
     \new Staff
     {
+      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
       << \violinMvtI \outlineMvtI >>
     }
@@ -22,6 +29,7 @@ instrument = "Violin"
   {
     \new Staff
     {
+      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
       << \violinMvtII \outlineMvtII >>
     }
@@ -31,6 +39,7 @@ instrument = "Violin"
   {
     \new Staff
     {
+      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
       << \violinMvtIII \outlineMvtIII >>
     }
@@ -39,6 +48,7 @@ instrument = "Violin"
   {
     \new Staff
     {
+      \override Score.PaperColumn #'keep-inside-line = ##t
       \set Score.skipBars = ##t
       << \violinMvtIV \outlineMvtIV >>
     }

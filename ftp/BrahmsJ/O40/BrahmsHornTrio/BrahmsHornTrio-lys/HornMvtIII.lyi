@@ -18,7 +18,6 @@ hornMvtIII = \relative c''
 {
   \key ees \major
   \transposition ees
-  \once \override Score.RehearsalMark #'padding = #2.8
 
   \startIIIHorn
   R2. |

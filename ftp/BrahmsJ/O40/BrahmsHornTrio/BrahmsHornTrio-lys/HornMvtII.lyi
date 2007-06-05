@@ -4,7 +4,6 @@ hornMvtII = \relative c''
 {
   \key c \major
   \transposition ees
-  \once \override Score.RehearsalMark #'padding = #2.5
   R2.*12 |
 
   %A
@@ -178,7 +177,6 @@ hornMvtII = \relative c''
   c'2.\p |
 
   %Molto meno Allegro
-  \once \override Score.RehearsalMark #'padding = #1.5
   \key aes \major
   c2.(_\mPEspr | aes4 bes c) |
   ees2( des4) | bes2. |
@@ -196,9 +194,9 @@ hornMvtII = \relative c''
   R2.*2 |
   g'2.~( | g4\< f ees) |
   d2.\> | d\! |
-  << c2.~ {s4\p\< s s\>} >> | c4\! r r |
+  << c2.~ {s4\p\< s s} >> | c4\> r\! r |
   R2.*2 |
-  << des2.~ {s4\< s s\>} >> | des4\! r r |
+  << des2.~ {s4\< s s} >> | des4\> r\! r |
   R2.*2 |
   
   %H
