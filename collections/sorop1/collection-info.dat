@@ -6,4 +6,4 @@
 <li><a href="../collections/sorop1/boekje.ly">LilyPond file</a></li>
 </ul>
 
-<p><a href="make-table.cgi?collection=sorop1&preview=1">List all works in the collection</a></p>
+<p><a href="make-table.cgi?collection=sorop1&amp;preview=1">List all works in the collection</a></p>
