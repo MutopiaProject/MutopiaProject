@@ -1,21 +1,11 @@
 % -*- mode: LilyPond-mode ; coding: utf-8 -*-
-%{ juin 2007, à partir du fichier de GG, PP a :
-- transcrit en version 2 10 16
-- passé la clef en fa mineur
-- simplifié l'écriture des notes et de la reprise
-- ajouté doigtés
-- mis en format paysage, plus pratique et habituel à l'orgue
-- assuré présentation sur une seule page hors header et tagline
-- précisé "à deux claviers et pédale"%}
-
-
-
-\version "2.10.16"
-\include "italiano.ly"
-
+\version "2.8.1"
+\include "italiano.ly" 
+%% Version 1
+%% 
 \header{
-    title = \markup {\center-align { \small "Petit livre d'orgue" \medium "Ich ruf ' zu dir, Herr Jesu Christ." \small\medium "Je crie vers Toi, Seigneur Jésus." \medium\small "Unto Thee I cry, Lord Jesus." " "} }
-    subtitle = "à deux claviers et pédale"
+    title = \markup {\center-align { \medium "Ich ruf ' zu dir, Herr Jesu Christ." \small\medium "Je crie vers Toi, Seigneur Jésus." \medium\small "Unto Thee I cry, Lord Jesus." " "} }
+    subtitle = ""
     piece = "" 
     instrument = ""
     composer = "Johann Sebastian Bach (1685-1750)"
@@ -23,221 +13,270 @@
     source = "Bach-Gesellschaft Edition, OrgelWerke 1893"
     opus = "BWV 639"
     lastupdated = "2006-05-02"
-    enteredby = "Gérard Gréco,revu Pierre Pouillon"
+    enteredby = "Gérard Gréco"
     maintainer = "Gérard Gréco"
     mutopiatitle = "Ich ruf' zu dir, Herr Jesu Christ"
     mutopiacomposer = "BachJS"
     mutopiainstrument = "Organ"
     style="Baroque"
- footer = "Mutopia-2007/06/12-756"
+    %tagline= ""
+ footer = "Mutopia-2007/07/01-756"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
-#(set-default-paper-size "a4" 'landscape)
+%#(set-default-paper-size "a4" 'landscape)
 #(set-global-staff-size 18)
 
-\paper {
-system-count = #3
-indent = 1\cm
-top-margin = 0\mm
-tagline = ##f
-}
-
-a = \rtoe
-q = \lheel
+% macros von Urs Metzger
+adjustSlash = { \once \override TextScript #'extra-offset = #'( -2 . 5 ) }
+halsdown = { \stemDown \tieDown \slurDown }
+halsneutral = { \stemNeutral \tieNeutral \slurNeutral }
+halsup = { \stemUp \tieUp \slurUp}
+hideBrackets = { \override TupletBracket #'bracket-visibility = ##f }
+hideTripletNumber = { \set tupletNumberFormatFunction = #'() }
+mmrestdown = { \once \override MultiMeasureRest #'staff-position = #-2 }
+mmrestdownn = { \once \override MultiMeasureRest #'staff-position = #-4 }
+mmrestup = { \once \override MultiMeasureRest #'staff-position = #4 }
+mmrestupp = { \once \override MultiMeasureRest #'staff-position = #6 }
+mmrestuppp = { \once \override MultiMeasureRest #'staff-position = #8 }
+mmrestupppp = { \once \override MultiMeasureRest #'staff-position = #10 }
+noflag = { \once \override Stem #'flag-style = #'no-flag }
+restdownnn = { \once \override MultiMeasureRest #'extra-offset = #'( 0.0 . -3.0 ) }
+restright = { \once \override Rest #'extra-offset = #'( 4.0 . 0.0 ) }
+scriptdown = { \once \override Script #'extra-offset = #'(0 . -1.3) }
+scriptdownn = { \once \override Script #'extra-offset = #'(0 . -2.3) }
+scriptdownnn = { \once \override Script #'extra-offset = #'(0 . -3.3) }
+scriptup = { \once \override Script #'extra-offset = #'(0 . 1.3) }
+showBrackets = { \override TupletBracket #'bracket-visibility = ##t }
+showTripletNumber = { \set tupletNumberFormatFunction = #denominator-tuplet-formatter }
+staffdown = { \change Staff = "basse" \halsup }
+staffup = { \change Staff = "dessus" \halsdown }
+std = { \change Staff = "basse" }
+stu = { \change Staff = "dessus" }
 
 
 global = {
-  \key fa \minor
+  \key do \minor
   \time 4/4
 }
 
-choral =
-\relative do'' {
+choral = \relative do'' {
+  % choral au soprano
   \global
-\override Script #'script-priority = #1
-%1
-\repeat volta 2 {
-\partial 4 \once \override TextScript #'extra-offset = #'(-20 . 3) do4-5
-\once \override TextScript #'extra-offset = #'(-7 . 0)   lab4^\markup\tiny\italic{"Choral"}
- sib4 lab8. sol16 fa8.-1 sol16
-%2
-\override TextScript #'font-name = #"Emmentaler"{
-lab16-3 sib lab-1 sib-2  \once \override TextScript #'extra-offset = #'(1 . -1) sib8.^\markup\combine\raise#'1.3 " 3 3 3 " "  2 2 2"  \trill lab32-1 sib-2 \stemUp do4-3 \fermata \stemNeutral do8.-3 reb16
-}
-%3
-mib4-5 \appoggiatura reb16 do8. sib16 lab4-1 sib8-2 do8-1
-%4
-reb4-2 ~ reb16 [ mib32-3 fa32  reb16^\markup\combine\raise#'1.3 " 3 ""2 2"  \prall do16-1 ]
-}
-\alternative{ { do4 \fermata  }
-{
-\set Score.measurePosition = #(ly:make-moment 2 4 )
-do4 \fermata mib4-3 }
-}
-%5
-fa4-4 mib8-3 [ reb32^\markup\combine\raise#'1.3 " 3 ""2 2" \prall do-1 reb16 ] do8-1 sib-3 lab-2 sib
-%6
-do4-4 sib lab \fermata do
-%7
-do-4 do-5 sib lab
-%8
-sol2  fa-1 \fermata
-%9
-lab4-4 sol fa2
-%10
-mib2.-1 \fermata mib4-1
-%11
-lab-2 lab sib sib
-%12
-do2.-4 \fermata reb4-5
-%13
-do sib lab-2 fa8.-1 sol16
-%14
-\partial 2. lab4-3 sol4 fa4 \fermata \bar "|."
-\pageBreak
+  \partial 4 do4   
+  %  1 :
+  \repeat volta 2 {
+    lab4 sib4 lab8. sol16 fa8. sol16 
+    lab16 sib16 lab16 sib16 \once\override Voice.TextScript #'extra-offset = #'(-1 . -0.8) sib8.^\markup{"(" \hspace #0.5 \raise #0.7 \musicglyph #"scripts.prallprall" \hspace #-1 ")"} lab32 sib32 \once\override Voice.TextScript #'extra-offset = #'(1.0 . 0.0) do4^\markup{\musicglyph #"scripts.ufermata"} do8. reb!16 
+    mib4 \appoggiatura reb16 do8. sib16 lab4 sib8 do8 
+  }
+  \alternative {
+    { reb4 ~ reb16 [ mib32 fa32 \once\override Voice.TextScript #'extra-offset = #'(0.5 . 0.2) reb16^\markup{\musicglyph #"scripts.prall"} do16 ] \once\override Voice.TextScript #'extra-offset = #'(-1.6 . -1.0) do4^\markup{"(" \hspace #0.5 \musicglyph #"scripts.ufermata" \hspace #-1 ")"} do4 }
+    { reb4 ~ reb16 [ mib32 fa32 \once\override Voice.TextScript #'extra-offset = #'(0.5 . 0.2) reb16^\markup{\musicglyph #"scripts.prall"} do16 ] \once\override Voice.TextScript #'extra-offset = #'(-1.5 . -1.0) do4^\markup{"(" \hspace #0.5 \musicglyph #"scripts.ufermata" \hspace #-1 ")"} mib4 }
+  }
+  %  6 :
+  fa4 mib8 [ reb32 do32 reb16 ] do8 sib8 lab8 sib8 
+  do4 sib4 lab4^\fermata do4 
+  do4 do4 sib4 lab4 
+  sol2 \once\override Voice.TextScript #'extra-offset = #'(-1.2 . -1.0) fa2^\markup{"(" \hspace #0.5 \musicglyph #"scripts.ufermata" \hspace #-1 ")"} 
+  % 10 :
+  lab4 sol4 fa2 
+  \once\override Voice.TextScript #'extra-offset = #'(-1.3 . -1.0) mib2.^\markup{"(" \hspace #0.5 \musicglyph #"scripts.ufermata" \hspace #-1 ")"} mib4 
+  lab4 lab4 sib4 sib4 
+  \once\override Voice.TextScript #'extra-offset = #'(-1.5 . -1.0) do2.^\markup{"(" \hspace #0.5 \musicglyph #"scripts.ufermata" \hspace #-1 ")"} reb4 
+  do4 sib4 lab4 fa8. sol16 
+  % 15 :
+  \partial 2. lab4 sol4 fa4^\fermata \bar "|."
 }
 
 alto = \relative do' {
-\global
-\clef treble
-\override Fingering #'direction = #DOWN
-\repeat volta 2 {
-\partial 4 \once \override TextScript #'extra-offset = #'(-4 . 0)   lab16-5^\markup\tiny\italic{"sempre legato"}
-
-do fa-1 mi
-|%1
-fa16-1 do-2 lab-4 fa-5   sol-4 sib reb-1 do    fa,-5 lab-4 do-2 sib-3    lab-4 fa-5 lab-4 do
-|%2
-fa-1 mi-4 fa lab-2   sol-1 fa mi fa   mi!-1 do sol sib   lab-5 do-3 fa-1 lab-2
-|%3
-sol-3 mib! lab-2 sol-1   lab-2 mib-5 fa-3 solb   fa reb-5 fa lab-2   sol-1 reb-4 do solb'!-2
-|%4
-fa-1 sib,-5 reb-4 fa-2    sib-1 lab-2 sol-1 lab-2
-}
-\alternative {
-{sol-1 do,-4 mi-1 sib-4}
-{sol'-1 sib,-4 lab-5 fa'-1   sol,-5 reb'-2 lab-4 do-1}
-}
-|%5
-lab-5 do sib reb   sib-5 reb lab'-1 sol   lab16 mib-4 reb-5 sol-1   do,-5 fa lab-1 sol
-|%6
-lab-1 mib lab,-5 solb'-2   fa-1 lab, sol!-5 reb'   do-3 lab-5 do-4 mib    sol!-1 do, sib sol'
-|%7
-la,-5 do-3 fa-1 sol-2    la!-1 fa mib la   reb,-5 sol lab sol   do,-5 fa sol fa
-|%8
-reb-4 fa sol fa     mi-1 sib reb do    lab-5 do fa mi!    fa-1 do-2 lab fa-5
-|%9
-sib-4 fa'-2 sol-1 fa   sib,-5 mib-2 fa mib    do-4 mib fa mib    re-1 sol, si re
-|%10
-sol,-5 do-2 mib-1 reb!-2   sol,-5 sib-3 reb-2 do-1   mib,-5 lab-3 do-1 sib-2    reb-1 sib mib, reb'
-|%11
-fa,-5 lab-3 reb-1 do    fa, lab-3 do-1 sib   fa lab-3 sib-2 lab   sol-5 sib-4 reb-2 do-3
-|%12
-lab-5 do mib-2 lab-1    mib-5 sib'-2 do-1 sib    la-1 mib-3 solb-2 la,!-5    sib-4 sol'-1 lab,-5 fa'-1
-|%13
-sol,-5 mi'-2 fa  mib   fa,-5 reb'-2 mib reb   mib,-5 do'-1 reb-3 do   sib-5 fa'-2 sol-1 fa
-%14
-\partial 2. re!-4 fa sol-1 fa-2    mi-1 reb sib sol-5   la-4 do fa8-1 \fermata
-}
-
-
-basse = \relative do, {
   \global
   \clef "bass"
+  \partial 2. lab16 ( do16 fa16 mi16 )
+  %  1 :
   \repeat volta 2 {
-  \partial 4 \once \override TextScript #'extra-offset = #'(-4 . 0)  fa8_\a ^\markup\tiny\italic{"sempre staccato"} fa
-%1
-    fa'^\a [ fa ] fa^\a [ mi!_\a ] fa^\a [ fa ] fa mib!^\a
-%2
-    reb_\a [ reb ] reb [ reb ] do_\a [ do_\a ] fa^\a fa_\a
-%3
-    do'^\a [ do ] do [ do ] do [ do ] sib^\a la_\a
-%4
-sib^\a [ lab!^\a ] sol^\q [ fa_\a ]
-}
+    fa16 ( do16 lab16 fa16 ) sol16 ( sib16 reb!16 do16 ) fa,16 ( lab16 do16 sib16 ) lab16 fa16 lab16 do16 
+    \clef "violin" fa16 mi!16 fa16 lab16 sol16 fa16 mi16 fa16 mi!16 ( do16 sol16 sib16 ) lab16 ( do16 fa16 lab16 )
+    sol16 ( mib16 lab16 sol16 ) lab16 mib16 fa16 solb16 fa16 ( reb!16 fa16 lab16 ) sol16 ( reb!16 do16 solb'!16 )
+  } 
   \alternative {
-    {     mi!_\a [ do_\a ] }
-    {  mi!_\a [ fa^\a ] do_\a do_\a }
-  }
-  reb_\a [ reb ] mib_\a [ mib_\a ] lab^\a [ mib_\a ] fa^\a reb_\a
-%6
-  mib^\a [ do_\a ] reb_\a [ mib^\a ] lab,_\a [ lab_\a ] mi!_\a mi_\a
-%7
-  fa_\a [ fa_\a ] fa'^\a [ fa^\a ] fa^\a [ mi!_\a ] fa^\a reb_\a
-%8
-  sib_\a [ sol_\a ] do^\a [ do_\a ] reb!_\a [ reb] reb [reb_\a ]
-%9
-re!_\a [ re_\a] mib^\a [mib^\a ] la,!_\a [ la] si_\a [si ]
-%10
-  do^\a [ do^\a] sib!_\a [sib ] lab [ lab] sol [sol_\a ]
-%11
-  fa_ \q [fa_\q] mib_\a [mib_\a] re!_\a [re] mib [mib_\a]
-%12
-  lab^\a [lab^\a] solb_\a [solb] fa [fa_\a] sib^\a [sib^\a]
-%13
-  sib^\a [ lab_\a ] lab_\a [ sol_\a ] sol_\a [ fa_\a ] reb'^\a [ reb^\a ]
-%14
-  \partial 2. si_\a [ si_\a ] do^\a [ do^\a ] fa,4_\a
+    { fa16 ( sib,16 reb!16 fa16 ) sib16 ( lab16 sol16 lab16 ) sol16 do,16 mi16 sib16 \clef "bass" lab16 ( do16 fa16 mi!16 )}
+    { \clef "violin" fa16 ( sib,16 reb!16 fa16 ) sib16 ( lab16 sol16 lab16 ) sol16 ( sib,16 lab16 fa'16 ) sol,16 ( reb'!16 lab16 do16 )}
+  } 
+  %  6 :
+  lab16 do16 sib16 reb!16 sib16 ( reb16 lab'16 sol16 ) lab16 ( mib16 reb!16 sol16 ) do,16 ( fa16 lab16 sol16 )
+  lab16 ( mib16 lab,16 solb'16 ) fa16 ( lab,16 sol!16 reb'!16 ) do16 ( lab16 do16 mib16 ) sol!16 ( do,16 sib16 sol'16 )
+  la,16 ( do16 fa16 sol16 ) la!16 ( fa16 mib16 la16 ) reb,!16 sol16 lab16 sol16 do,16 fa16 sol16 fa16 
+  reb!16 ( fa16 sol16 fa16 ) mi16 ( sib16 reb!16 do16 ) lab16 ( do16 fa16 mi!16 ) fa16 ( do16 lab16 fa16 )
+  % 10 :
+  sib16 ( fa'16 sol16 fa16 ) sib,16 ( mib16 fa16 mib16 ) do16 mib16 fa16 mib16 re!16 sol,16 si16 re16 
+  sol,16 do16 mib16 reb!16 sol,16 ( sib16 reb16 do16 ) \clef "bass" mib,16 lab16 do16 sib16 reb!16 sib16 mib,16 reb'16 
+  fa,16 lab16 reb!16 do16 fa,16 lab16 do16 sib16 fa16 lab16 sib16 lab16 sol16 sib16 reb!16 do16 
+  \clef "violin" lab16 do16 mib16 lab16 mib16 sib'16 do16 sib16 la16 mib16 solb16 la,!16 sib16 sol'!16 lab,16 fa'16 
+  \clef "bass" sol,16 mi'16 fa16 mib16 fa,16 reb'!16 mib16 reb16 mib,16 do'16 reb!16 do16 \clef "violin" sib16 fa'16 sol16 fa16
+  % 15 :
+  \partial 2. re!16 fa16 sol16 fa16 mi16 reb16 sib16 sol16 la16 do16 fa8 
 }
 
+
+basse = \relative do, { 
+  \global
+  \clef "bass"
+  \partial 4 fa8 fa8  
+  %  1 :
+  \repeat volta 2 {
+    fa'8 [ fa8 ] fa8 [ mi!8 ] fa8 [ fa8 ] fa8 mib!8 
+    reb!8 [ reb8 ] reb8 [ reb8 ] do8 [ do8 ] fa8 fa8 
+    do'8 [ do8 ] do8 [ do8 ] do8 [ do8 ] sib8 la!8 
+  }
+  \alternative {
+    { sib8 [ lab!8 ] sol8 [ fa8 ] mi!8 [ do8 ] fa,8 fa8 }
+    { sib'8 [ lab!8 ] sol8 [ fa8 ] mi!8 [ fa8 ] do8 do8 }
+  }
+  reb8 [ reb8 ] mib8 [ mib8 ] lab8 [ mib8 ] fa8 reb8 
+  mib8 [ do8 ] reb8 [ mib8 ] lab,8 [ lab8 ] mi!8 mi8 
+  fa8 [ fa8 ] fa'8 [ fa8 ] fa8 [ mi!8 ] fa8 reb8 
+  sib8 [ sol8 ] do8 [ do8 ] reb!8 [ reb8 reb8 reb8 ]
+  re!8 [ re8 mib8 mib8 ] la,!8 [ la8 si8 si8 ]
+  do8 [ do8 sib!8 sib8 ] lab8 [ lab8 sol8 sol8 ]
+  fa8 fa8 mib8 mib8 re!8 re8 mib8 mib8 
+  lab8 lab8 solb8 solb8 fa8 fa8 sib8 sib8 
+  sib8 [ lab8 ] lab8 [ sol8 ] sol8 [ fa8 ] reb'8 [ reb8 ] 
+  \partial 2. si8 [ si8 ] do8 [ do8 ] fa,4 
+}
+
+choralmidi = \relative do'' {
+  % choral au soprano
+  \global
+  \partial 4 do4   
+  %  1 :
+  \repeat volta 2 {
+    lab4 sib4 lab8. sol16 fa8. sol16 
+    lab16 sib16 lab16 sib16  \times 6/13 {sib32 do32 sib32 do32 sib32 do32 sib32 do32 sib32 do32 sib32 do32 sib32} lab32 sib32 do8. r16 do8. reb!16 
+    mib4 reb16 do8 sib16 lab4 sib8 do8 
+  }
+  \alternative {
+    { reb4 ~ reb16 mib32 fa32 reb32 mib32 do32 r32 do8.. r32 do4 }
+    { reb4 ~ reb16 mib32 fa32 reb32 mib32 do32 r32 do8.. r32 mib4 }
+  }
+  %  6 :
+  fa4 mib8 [ reb32 do32 reb16 ] do8 sib8 lab8 sib8 
+  do4 sib4 lab8. r16 do8. r16 
+  do8. r16 do4 sib4 lab4 
+  sol2 fa4 ~ fa8. r16
+  % 10 :
+  lab4 sol4 fa2 
+  mib2 ~ mib8. r16 mib4
+  lab8. r16 lab4 sib8. r16 sib4 
+  do2 ~ do8. r16 reb4 
+  do4 sib4 lab4 fa8. sol16 
+  % 15 :
+  \partial 2. lab4 sol4 fa4
+}
+
+bassemidi = \relative do, { 
+  \global
+  \clef "bass"
+  \partial 4 fa16 r16 fa8  
+  %  1 :
+  \repeat volta 2 {
+    fa'16 r16 fa16 r16 fa16 r16 mi16 r16 fa16 r16 fa16 r16 fa16 r16 mib16 r16 
+    reb16 r16 reb16 r16 reb16 r16 reb16 r16 do16 r16 do16 r16 fa16 r16 fa16 r16 
+    do'16 r16 do16 r16 do16 r16 do16 r16 do16 r16 do16 r16 sib16 r16 la16 r16 
+  }
+  \alternative {
+    { sib16 r16 lab16 r16 sol16 r16 fa16 r16 mi16 r16 do16 r16 fa,16 r16 fa16 r16 }
+    { sib'16 r16 lab16 r16 sol16 r16 fa16 r16 mi16 r16 fa16 r16 do16 r16 do16 r16 }
+  }
+ reb16 r16 reb16 r16 mib16 r16 mib16 r16 lab16 r16 mib16 r16 fa16 r16 reb16 r16 
+ mib16 r16 do16 r16 reb16 r16 mib16 r16 lab,16 r16 lab16 r16 mi16 r16 mi16 r16 
+ fa16 r16 fa16 r16 fa'16 r16 fa16 r16 fa16 r16 mi16 r16 fa16 r16 reb16 r16 
+ sib16 r16 sol16 r16 do16 r16 do16 r16 reb16 r16 reb16 r16 reb16 r16 reb16 r16 
+ re16 r16 re16 r16 mib16 r16 mib16 r16 la,16 r16 la16 r16 si16 r16 si16 r16 
+ do16 r16 do16 r16 sib16 r16 sib16 r16 lab16 r16 lab16 r16 sol16 r16 sol16 r16 
+ fa16 r16 fa16 r16 mib16 r16 mib16 r16 re16 r16 re16 r16 mib16 r16 mib16 r16 
+ lab16 r16 lab16 r16 solb16 r16 solb16 r16 fa16 r16 fa16 r16 sib16 r16 sib16 r16
+  sib16 r16 lab16 r16 lab16 r16 sol16 r16 sol16 r16 fa16 r16 reb'16 r16 reb16 r16 
+ \partial 2. si16 r16 si16 r16 do16 r16 do16 r16 fa,4 
+}
+
+
+\paper {
+  betweensystempadding = 1\mm
+  betweensystemspace = 1\mm
+  %raggedbottom = ##f
+  %raggedlastbottom = ##f
+  %headsep = 1\mm
+  %aftertitlespace = 1\mm
+  indent = 1\cm
+  bottommargin = 4\mm 
+  topmargin = 2\mm
+}
 
 \score{
-  \new PianoStaff
+  \new PianoStaff 
   <<
     \set PianoStaff.systemStartDelimiterHierarchy = #'(SystemStartBar (SystemStartBrace a b ))
-    \new Staff = "dessus" <<
+    \new Staff = "dessus" << 
       \choral
     >>
-    \new Staff = "basse" {
-      \clef "bass"
+    \new Staff = "basse" { 
+      \clef "bass" 
       \alto
     }
     \new Staff = "pedale" {
-
+      \override VerticalAxisGroup #'minimum-Y-extent = #'(-5 . -10)
       \clef "bass"
       \basse
     }
   >>
 
+  \layout{
+  }
 }
-\layout{  }
 
 
-\score {
+\score { 
   \unfoldRepeats {
   <<
     \new Staff {
-      \set Staff.midiInstrument = "oboe"
-      \choral
+      \set Staff.midiInstrument = "pan flute"
+      \choralmidi
     }
     \new Staff {
-      \set Staff.midiInstrument = "church organ"
+      \set Staff.midiInstrument = "recorder"
+      \transpose do do' 
+      \choralmidi
+      }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
       \alto
     }
-  \new Staff {
-      \set Staff.midiInstrument = "vibraphone"
-      \basse
+    \new Staff {
+      \set Staff.midiInstrument = "recorder"
+      \transpose do do' 
+      \alto
+      }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
+      \bassemidi
     }
 
-    \new Staff       {
-\tempo 8 = 75
-\repeat volta 2 {
-\partial 4 s4
-s1*3            }
-\alternative {
-	{ s4 }
-	{\set Score.measurePosition = #(ly:make-moment 2 4 )  s2 }
-             }
-s1*9
-\partial 2.
-\tempo 8 = 70
-      s2
-\tempo 8 = 60
-s4
-                    }
+    \new Staff { % tempo staff
+      \partial 4 s4
+      \repeat volta 2 {
+	s1*3
+      }
+      \alternative {
+	{ s1 }
+	{ s1 }
+      }
+      s1*9
+      \partial 2. 
+      s4 \tempo 8 = 70 s4 \tempo 8 = 60 s8 \tempo 8 = 20 s8
+    }
   >>
 }
-  \midi{  }
-}
+  \midi{ \tempo 8 = 75 }
 
+}
