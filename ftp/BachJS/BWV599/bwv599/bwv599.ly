@@ -1,5 +1,7 @@
  % -*- coding: utf-8 -*-
-% mai 2007. parti de fichier Urs Metzger existant dans Mutopia. Passé en italiano et version 2 10 16.Ajouté doigté . Notes reparties selon doigté, main droite première portée, gauche seconde portée
+% mai 2007. parti de fichier Urs Metzger existant dans Mutopia. Passé en italiano et version 2 10 16.Ajouté doigté . Notes reparties selon doigté, main droite première portée, gauche seconde portée.
+%juillet 2007 ajouté un dièse au sol de pédale mesure 2
+
 \version "2.10.16"
 \include "italiano.ly"
 
@@ -16,13 +18,13 @@
  copyright = "Public Domain"
  maintainer = "Pierre Pouillon"
  maintainerEmail = "pierre(at)ssji.net"
- lastupdated = "2007 mai"
+ lastupdated = "2007 juillet"
 
  title = "Nun komm' der Heiden Heiland"
  composer = "Johann Sebastian Bach"
  opus="BWV 599"
 
- footer = "Mutopia-2007/06/05-713"
+ footer = "Mutopia-2007/07/02-713"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 ot = {\once \override TextScript #'extra-offset = #'( 0 . 1 )}
@@ -208,7 +210,7 @@ pedal = {
    \relative la, {
 r4 r8 r16 la_\a mi'8.^\a red16_\a mi4_\q
 %2
-fad4_\a sol8^\a la^\q mi8._\q re!16_\a mi8^\a mi,_\a
+fad4_\a sold8^\a la^\q mi8._\q re!16_\a mi8^\a mi,_\a
 %3
 la2_\markup{\transparent{es} "_" \musicglyph #"scripts.dpedaltoe" }
 ^\markup{ \musicglyph #"scripts.dpedaltoe" "_"} r8 r16 la_\a la'8.^\a sol!16^\q
