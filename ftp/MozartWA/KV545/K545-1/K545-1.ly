@@ -6,7 +6,7 @@
   composer = "W. A. Mozart"
   opus = "K 545"
   piece = "Allegro"
-  mutopiatitle = "Sonata Facile"
+  mutopiatitle = "Sonata Facile - First movement"
   mutopiacomposer = "MozartWA"
   mutopiainstrument = "Piano"
   style = "Classical"
@@ -14,7 +14,7 @@
   source = "IMSLP"
   maintainer = "Alejandro Sierra"
   maintainerEmail = "algsierra@gmail.com"
- footer = "Mutopia-2007/07/01-998"
+ footer = "Mutopia-2007/07/03-998"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
   
@@ -97,7 +97,7 @@ strh = {
     \acciaccatura b8-3 \afterGrace a1 \startTrillSpan \( ( {g16 [ a ] )
 							    \stopTrillSpan}
      g4\) g16-2( d g b-4 d-5 b-4 g b-4 c-5 a-3 fis-2 a-4
-     g4-.) g,16-2( d g b-4 d-> b-4 g b-4 c-> a-3 fis-2 a-4
+     g4-.) g,16-2( d g b-4 d_> b-4 g b-4 c-> a-3 fis-2 a-4
      g4-.) <d' b'>-. <b g'-4>-. r4
    }
 }
@@ -119,7 +119,7 @@ dvrh = \relative c'' {
   r16 f-1( c'-5 b a g f e-3 d4-.\sf) r
   r16 e-1( b'-5 a gis f e d-3 c4-.\sf) r
   \break
-  r16 bes-3 d c  b a g f-3  e\> f-1 g a  b c-1 d e\!
+  r16 bes-3 d c  bes a g f-3  e\> f-1 g a  bes c-1 d e\!
 }
 
 ptirh = \relative c'' {
@@ -128,8 +128,8 @@ ptirh = \relative c'' {
   <c f-4>-. r r <b f'-5>-.
   <c-2 e-4>-. r r <c e>-.
 
-  d16-5 d, e f  g a b cis  d a-1 b c  d-1 e f g-1
-  a b c b  a g f e  f g a g  f e d c-2
+  d16-5\( d, e f  g a b cis  d a-1 b cis  d-1 e f g-1
+  a b c b  a g f e  f g a g  f e d c-2\)
 
   \ptrhb
 }
@@ -139,21 +139,21 @@ stvrh = {
   \transpose d g { 
     \strhc
      \relative c'' {  
-       a2\p) \acciaccatura cis8-2 a4-. \acciaccatura cis8 a4-.
+       a2\p) \acciaccatura gis8-2 a4-. \acciaccatura gis8 a4-.
      }
   } 
   \relative c''' {  
-    a2\p) \acciaccatura cis8-2 a4-. \acciaccatura cis8 a4-.
+    a2\p \acciaccatura gis8-2 a4-. \acciaccatura gis8 a4-.
     
-    g8-1\f a16 b c-1 d e d c b-4 a g  f e-3d c
+    g8-1\f( a16 b c-1 d e d c b-4 a g  f e-3d c)
 
     \phrasingSlurDown
     \acciaccatura e8-3 \afterGrace d1 \startTrillSpan \( ({c16[ d])
 							   \stopTrillSpan}
-							 
-    c4-.\) c16-2 g-> c e-4  g e-4 c e-4  f-> d-3 b d-3 c4-.
-    c,16-2 g-> c e-4  g e-4 c e-4  f-> d-3 b d-3 c4-.
-    <e'-1 g-2 c-5>-. c-2 r 
+    \phrasingSlurUp
+    c4-.\) c16-2\( g_> c e-4  g e-4 c e-4  f_> d-3 b d-3 c4-.
+    c,16-2 g-> c e-4  g e-4 c e-4  f-> d-3 b d-3\)
+    c4-. <e'-1 g-2 c-5>-. c-2 r 
 
   }
 }
@@ -243,21 +243,22 @@ dvlh = \relative c {
   a4-.\sf) r r16 b-5( f' e  d c-1 b a
   \clef bass gis4-.\sf) r r16 a-3( c-1 b  a g-1 f e
   
-  b2\sf) <c g' bes>\sf
+  d2\sf) <c g' bes>\sf
 }
   
-ptilha = \relative c {
-  f8-5 g16 a  bes c d-3 e f e d-1 c  bes a-1 g f
-}
+%ptilha = \relative c {
+%  f8-5 g16 a  bes c d-3 e f e d-1 c  bes a-1 g f
+%}
 
 ptilh = \relative c {
   <f f'>4-. r4 r2
-  \ptilha
+  f8-5\( g16 a  bes c d-3 e f e d-1 c  bes a-1 g f  % \ptilha
   e8 f16 g  a b-4 c d  e d c b  a-1 g f e
   d8 e16 f  g a b-3 c  d c b a  g-1 f e d
-  \transpose f c { \ptilha }
+  \transpose f c {   f8-5 g16 a  bes c d-3 e f e d-1 c  bes a-1 g f } % \ptilha }
   
-  <f^2 a-1>1\p  % fixme f /\ 2
+  \once \set fingeringOrientations = #'(right)
+  <f-2 a-1>1\p\) 
   f4.-3 g8 a4. fis8-2
 
   \ptlhb
@@ -271,9 +272,10 @@ stvlh = {
     \clef bass \repeat unfold 8 { <fis, c' ees>8-. }
     \repeat unfold 4 { g16-5 e' c-2 e }
     \repeat unfold 4 { g,16 f' b, f' }
-    <c-2 e-1>4-. r r <g  d' f>
-    <c-3 e-1>-. r r <g, d' f>
-    <c e> <c c'>-. <c c,> r
+    <c-2 e-1>4-. r r <g  d' f>(
+    \slurDown
+    <c_3 e_1>-.) r r <g, d' f>(
+    <c e>) <c c'>-. <c c,> r
   }
 }
 
@@ -281,10 +283,12 @@ stvlh = {
 \score {
   \new PianoStaff <<
     \new Staff { 
+      \override Fingering #'avoid-slur = #'inside
       \keepWithTag #'first
       \repeat volta 2 { \ptrh \strh } \break 
       \repeat volta 2 {
 	\dvrh 
+	\phrasingSlurUp
 	\keepWithTag #'second
 	\transpose c f { \ptrha }
 	\ptirh
@@ -293,6 +297,7 @@ stvlh = {
       }
     }
     \new Staff { 
+      \override Fingering #'avoid-slur = #'inside
       \repeat volta 2 { \ptlh \stlh } 
       \repeat volta 2 {
 	\dvlh 
@@ -304,5 +309,10 @@ stvlh = {
     }
   >>
   \layout {}
-  \midi {}
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 132 4)
+    }
+  }
 }
