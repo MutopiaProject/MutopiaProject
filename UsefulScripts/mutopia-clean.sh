@@ -6,7 +6,7 @@
 # Last changed:     $Date $
 #
 # Description:
-#   (Tiny) script to remove stale .mid/.png/.pdf/.ps.gz/.rdf files for Mutopia.
+#   Script to remove stale .zip/.png/.mid/.pdf/.ps.gz/.rdf files for Mutopia.
 
 rm -f *.png *.mid *-mids.zip *.pdf *-pdfs.zip *.ps.gz *-pss.zip *-lys.zip *.rdf
 
