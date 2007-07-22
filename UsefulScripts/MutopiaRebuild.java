@@ -92,6 +92,7 @@ public class MutopiaRebuild
          if (interactive)
          {
             System.out.println("Recompile file " + lyFile.getName() + "? (Y/N)");
+            // TODO: ? Cat line to see if date has been updated ?
             Scanner scanner = new Scanner(System.in);
             if (!scanner.next().equalsIgnoreCase("Y"))
                return;
