@@ -1,8 +1,8 @@
 /*
  * Filename:         Mutopia.java
  * Original author:  Chris Sawer
- * Subversion:       $Revision:$
- * Last changed:     $Date:$
+ * Subversion:       $Revision$
+ * Last changed:     $Date$
  *
  * Description:
  *   Program to perform various useful manipulations of .ly files for Mutopia.
@@ -184,7 +184,8 @@ public class Mutopia
                      }
                   }
                }
-               else if (nextLine.matches("\\s*copyright\\s*=\\s*\".*\"\\s*")) // Copyright field
+               else if ((nextLine.matches("\\s*copyright\\s*=\\s*\".*\"\\s*")) || 
+                        (nextLine.matches("\\s*mutopiacopyright\\s*=\\s*\".*\"\\s*"))) // Copyright field
                {
                   licence = nextLine.split("\"")[1];
                }
