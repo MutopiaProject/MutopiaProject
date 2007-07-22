@@ -364,10 +364,18 @@ public class Mutopia
       }
       
       String field = unparsedLine.trim().split("\\s*=")[0];
-      String value = unparsedLine.split("\"")[1];
+      String[] valueParts = unparsedLine.split("\"");
+      StringBuilder value = new StringBuilder(valueParts[1]);
+
+      // Handle the possibility of escaped quote marks in the field
+      for (int i = 2; i < valueParts.length && valueParts[i - 1].endsWith("\\"); i++)
+      {
+         value.deleteCharAt(value.length() - 1);
+         value.append("\"");
+         value.append(valueParts[i]);
+      }
       
-      myPiece.populateField(field, value);
-      
+      myPiece.populateField(field, value.toString());
       return true;
    }
 }
