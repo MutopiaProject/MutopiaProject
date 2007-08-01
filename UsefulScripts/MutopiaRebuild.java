@@ -9,7 +9,7 @@
  *
  * Options:
  *   $1 - Switch(es) to use, comprising:
- *        i - Interactive (prompt before doing things)
+ *        n - Non-interactive (don't prompt before doing things)
  */
 
 import java.io.*;
@@ -17,7 +17,7 @@ import java.util.*;
 
 public class MutopiaRebuild
 {
-   private boolean interactive = false;
+   private boolean interactive = true;
    private String mutopiaFtpBase;
    private List<String> updateList = new ArrayList<String>();
 
@@ -25,17 +25,17 @@ public class MutopiaRebuild
    {
       int returnCode = 0;
       MutopiaRebuild rebuild = new MutopiaRebuild();
-      rebuild.mutopiaFtpBase = System.getenv("MUTOPIA_BASE");
+      /*rebuild.mutopiaFtpBase = System.getenv("MUTOPIA_BASE");
       if (rebuild.mutopiaFtpBase == null)
       {
          throw new RuntimeException("MUTOPIA_BASE not set");
       }
 
-      rebuild.mutopiaFtpBase = rebuild.mutopiaFtpBase + "/ftp";
+      rebuild.mutopiaFtpBase = rebuild.mutopiaFtpBase + "/ftp";*/
 
-      if ((args.length > 0) && (args[0].equals("-i")))
+      if ((args.length > 0) && (args[0].equals("-n")))
       {
-         rebuild.interactive = true;
+         rebuild.interactive = false;
       }
 
       rebuild.searchForNewFiles();
@@ -45,8 +45,9 @@ public class MutopiaRebuild
 
    private void searchForNewFiles()
    {
+      // Search for .ly files with outdated or missing RDF file from current dir
       System.out.println("Searching for new/updated .ly files");
-      findNextLyFile(new File(mutopiaFtpBase));
+      findNextLyFile(new File("."));
    }
 
    private void findNextLyFile(File startDirectory)
@@ -56,6 +57,13 @@ public class MutopiaRebuild
          throw new RuntimeException("File passed when directory expected");
       }
 
+      // Check to see if directory ends in -lys, ie. is multiple .ly file container
+      if (startDirectory.getName().endsWith("-lys")
+      {
+	 recompileLyDirectory(startDirectory);
+      }
+
+      // Search recursively for all .ly files
       File[] fileList = startDirectory.listFiles();
       for (File file : fileList)
       {
@@ -68,24 +76,23 @@ public class MutopiaRebuild
             // Search for matching .rdf file
             String filePath = file.getAbsolutePath();
             File rdfFile = new File(filePath.substring(0, filePath.length() - 3) + ".rdf");
-            
-            if (rdfFile.exists())
+
+            // Recompile .ly file if .rdf if missing or out of date
+            if (!rdfFile.exists() || (file.lastModified() > rdfFile.lastModified()))
             {
-               // Compare timestamps
-               if (file.lastModified() > rdfFile.lastModified())
-               {
-                  recompileLyFile(file);
-               }
-            }
-            else
-            {
-               // TODO: Multiple .ly files
+               // TODO: Check for compile flags and warn if not present
+               recompileLyFile(file, startDirectory);
             }
          }
       }
    }
 
-   private void recompileLyFile(File lyFile)
+   private void recompileLyDirectory(File lyDirectory)
+   {
+      // TODO
+   }
+
+   private void recompileLyFile(File lyFile, File workingDirectory)
    {
       try
       {
@@ -99,21 +106,21 @@ public class MutopiaRebuild
          }
 
          System.out.println("Recompiling file " + lyFile.getName());
-      
+
+         // TODO: Check file headers using java Mutopia -c
+
          // Clean directory
-         Process cleanProcess = Runtime.getRuntime().exec("mutopia-clean.sh", null, lyFile.getParentFile());
+         Process cleanProcess = Runtime.getRuntime().exec("mutopia-clean.sh", null, workingDirectory);
          try { cleanProcess.waitFor(); } catch (Exception ex) {}
 
-         // TODO: Check file headers
-
          // Compile file
-         Process compileProcess = Runtime.getRuntime().exec("mutopia-compile.sh " + lyFile.getName(), null, lyFile.getParentFile());
+         Process compileProcess = Runtime.getRuntime().exec("mutopia-compile.sh " + lyFile.getName(), null, workingDirectory);
          try { compileProcess.waitFor(); } catch (Exception ex) {}
 
          // TODO: Check for successful exit
 
          // Create zip files (if necessary) and RDF
-         Process combineProcess = Runtime.getRuntime().exec("mutopia-combine.sh " + lyFile.getName().substring(0, lyFile.getName().length() - 3), null, lyFile.getParentFile());
+         Process combineProcess = Runtime.getRuntime().exec("mutopia-combine.sh " + lyFile.getName().substring(0, lyFile.getName().length() - 3), null, workingDirectory);
          try { combineProcess.waitFor(); } catch (Exception ex) {}
 
          System.out.println("Finished recompiling file " + lyFile.getName());
