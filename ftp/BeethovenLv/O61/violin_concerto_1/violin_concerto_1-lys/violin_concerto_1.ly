@@ -19,7 +19,7 @@
   title = "Concerto for Violin and Orchestra in D Major - Opus 61"
   subtitle = "1st Movement"
   composer =  "Ludwig van Beethoven"
-  mutopiatitle = "Concerto for Violin and Orchestra in D Major - Opus 61"
+  mutopiatitle = "Concerto for Violin and Orchestra in D Major (1st Movement)"
   mutopiacomposer = "BeethovenLv"
   mutopiainstrument = "Violin and Orchestra"
   mutopiaopus = "Op. 61"
