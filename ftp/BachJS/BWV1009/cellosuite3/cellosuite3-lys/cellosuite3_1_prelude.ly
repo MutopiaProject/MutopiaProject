@@ -5,7 +5,7 @@
   composer = "Johann Sebastian Bach"
   mutopiatitle = "Suite No. 3 in C Major"
   mutopiacomposer = "BachJS"
-  mutopiainstrument = "Harpsichord, Piano"
+  mutopiainstrument = "Cello"
   mutopiaopus = "BWV 1009"
   date = "18th Century"
   source = "Bach Gesellschaft"
