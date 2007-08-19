@@ -19,7 +19,7 @@
   maintainer         = "Joel Mayes"
   maintainerEmail    = "joel_mayes@dingoblue.net.au"
 
-  footer = "Mutopia-2001/07/10-99"
+  footer = "Mutopia-2007/08/19-99"
   tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
 }
 
@@ -53,7 +53,7 @@ VoiceI = \notes \relative c'' {
       d2.
    }
    \repeat volta 2 {
-      fis4. g8 a8. g16
+      fis4. g8 a8. fis16
       d4 g4. a16 b
       e,4. [d8 c8. b16]
       c4. b8 a4
@@ -108,7 +108,7 @@ VoiceII = \notes \relative c' { \voiceOne
       r a c4 fis,
       e8 fis~ fis g a4~
       a8 g16 fis g4 r
-      g2.~ g4. e8 fis g
+      g2.~ g4. e8 f g
       a b c2~
       c4 b c
       fis,2.
