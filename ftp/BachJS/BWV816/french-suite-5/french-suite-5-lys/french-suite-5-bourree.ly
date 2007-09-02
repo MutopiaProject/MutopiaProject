@@ -15,7 +15,7 @@
   maintainer         = "Joel Mayes"
   maintainerEmail    = "joel_mayes@dingoblue.net.au"
 
-  footer = "Mutopia-2007/08/19-99"
+  footer = "Mutopia-2007/09/02-99"
   tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
 }
 
