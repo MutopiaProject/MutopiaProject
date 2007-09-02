@@ -104,9 +104,15 @@ StemII ={\notes \relative c' {
   opus              = ""
   composer          = "Johann Kuhnau (1660-1722)"
   meter             = "Allegro (Maestoso)"
-  mutopiatitle      = "Sonatensatz"
-  mutopiacomposer   = "J. Kuhnau (1660-1722)"
-  mutopiainstrument = "Harpsichord"
+
+  %mutopiatitle      = "Sonatensatz"
+  %mutopiacomposer   = "J. Kuhnau (1660-1722)"
+  mutopiatitle      = "Sonata XI from the Essercizi per Gravicembalo"
+  mutopiacomposer   = "ScarlattiD"
+  mutopiaopus       = "K 11"
+  mutopiainstrument = "Harpsichord, Piano"
+  moreInfo          = "This sonata was previously thought to be 'Sonatensatz' by J. Kuhnau."
+
   source            = "P.J. Tonger Musik Verlag, 19th century"
   style             = "Baroque"
   copyright         = "Public Domain"
