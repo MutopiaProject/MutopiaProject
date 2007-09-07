@@ -1,23 +1,21 @@
 ﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%                                                FILE AnDieMusik.ly
+%                                           FICHIER AnDieMusik.ly
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %                   FRANZ SCHUBERT: Gesang "An die Musik", für eine Singstimme mit Klavierbegleitung
-%                                           WITH SEPARATE SCORE AND MIDI OUTPUTS
+%                                           AVEC SORTIES PARTITION ET MIDI SEPAREES
 %                                                  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\version "2.11.27"
+\version "2.11.30"
 \include "italiano.ly"
 
+% PAPIER: FORMAT MIXTE ADAPTÉ POUR A4 ET LETTER US
 \paper {
-
-% #(set-paper-size "letter")
-% #(set-paper-size " a4")
- paper-height = 279\mm
- paper-width = 210\mm
+ %paper-height = 279\mm
+ %paper-width = 210\mm
  line-width = 180\mm
  between-system-padding = #0.5
  between-system-spacing = #0.5
@@ -40,120 +38,109 @@
  copyright = "Public Domain"
  maintainer = "Ph. Raynaud"
  moreInfo = "A source is freely available at http://www.dlib.indiana.edu/variations/scores/"
- footer = "Mutopia-2007/07/12-1001"
+ footer = "Mutopia-2007/09/07-1001"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%                                            COMMANDS AND FUNCTIONS
+%                                           COMMANDES ET FONCTIONS
 %
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                          1. TO IMPROVE THE SCORE      
+%                                           1. POUR AMÉLIORER LA PARTITION
 %
-% SHIFTING A DYNAMIC TO THE RIGHT
-shiftDynR = \once \override DynamicText #'extra-offset = #'(1.5 . 0)
-shiftPinR = \once \override Hairpin #'extra-offset = #'(2 . 0)
-shiftPinL = \once \override Hairpin #'extra-offset = #'(-0.5 . 0)
-shiftCrescR = { \set crescendoText = \markup { \fontsize #-1 \italic "   cresc." } \set crescendoSpanner = #'dashed-line }
+% DEPLACER UNE DYNAMIQUE VERS LA DROITE, LA GAUCHE
+dynamD = \once \override DynamicText #'extra-offset = #'(1.5 . 0)
+pinceD = \once \override Hairpin #'extra-offset = #'(2 . 0)
+pinceG = \once \override Hairpin #'extra-offset = #'(-0.5 . 0)
+cresD = { \set crescendoText = \markup { \italic "   cresc." } \set crescendoSpanner = #'dashed-line }
+% SUPPRESSION DU PointAndClick
+PDFSimple =
+#(define-music-function (parser location) ()
+   (ly:set-option 'point-and-click #f)
+   (make-music 'SequentialMusic 'void #t))
+\PDFSimple
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%                                     2. TO IMPROVE THE MIDI OUTPUT VOLUME      
-%
-% 1. A f (forte) has been "hidden" at the beginning of the melody (for the default volume has no consistency).
-hideDyn = \once \override DynamicText #'transparent = ##t
-% Note: as the "forte-piano" reacts as a "piano" only, it has been changed into "forte + piano"
+%                                           2. POUR AMÉLIORER LE VOLUME DE LA SORTIE MIDI
 
-% 2. A RANGE OF VOLUME HAS BEEN DETERMINED FOR EACH INSTRUMENT.
-%    Example:  \set Staff.midiMinimumVolume = #0.3  \set Staff.midiMaximumVolume = #0.7
-% The volume range for the clarinet has been fully extended from 0 to 1
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                      GENERAL STRUCTURE OF THIS FILE
-%
-%  Melody and both piano staves are cut in three parts : one introduction, one body and one end.
-%  Each part has its own identifier.
-%  Lyrics are made up of two strophes.
-%
-%  Score and midi outputs are dissociated:
-%
-%  A. PREPARING NOTES (SHARED BY BOTH OUTPUTS)
-%     1. MELODY: Notes
-%     2. PIANO RIGHT HAND: Notes
-%     3. PIANO LEFT HAND: Notes
-%  B. PREPARING THE SCORE OUTPUT
-%     4. MELODY: Notes for the score output
-%     5. MELODY: Dynamics for the score output (none)
-%     6. LYRICS
-%     7. PIANO RIGHT HAND: Notes for the score output
-%     8. PIANO LEFT HAND: Notes for the score output
-%     9. PIANO STAVES: Dynamics for the score output
-%    10. SCORE OUTPUT
-%  C. PREPARING THE MIDI OUTPUT
-%    11. MELODY: Notes for the Midi output
-%    12. MELODY: Dynamics for the Midi output (none)
-%    13. PIANO RIGHT HAND: Notes for the Midi output
-%    14. PIANO LEFT HAND: Notes for the Midi output
-%    15. PIANO STAVES: Dynamics for the Midi output
-%    16. MIDI OUTPUT
-%
-% 	                        WELCOME ANY SUGGESTION TO IMPROVE SCORE OR MIDI OR ENCODING
+% Le volume de la mélodie a été étendu en totalité (de 0 à 1)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
-%                                      A. PREPARING NOTES (SHARED BY BOTH OUTPUTS)
+%                                           STRUCTURE GENERALE DU FICHIER
 %
+%  Contrairement à ce que laisse supposer la partition originale, la mélodie est répétée à l'identique;
+%  il n'existe que quelques différences graphiques pour le piano, sans aucun effet sur le jeu:
+%  - mesure 3: l'accord "fad la re" est écrit "fad la" sur la portée du bas, "re" sur celle du haut, et en totalité
+%    sur la portée du haut au 2e passage (mesure 23 de l'original)
+%  - mesure 22, 2e temps: la liaison et les deux points sont au-dessus des notes, tandis qu'ils sont au-dessous
+%    au 2e passage (mesure 42 de l'original).
+%
+%  Aussi la mélodie et les deux portées du piano sont-elles découpées en trois parties : une introduction,
+%  un corps (joué deux fois) et une fin.
+%  Le poème comprend deux strophes.
+%
+%  Les sorties Partition et Midi sont dissociées (le volume de la sortie Midi a été affiné).
+%
+%  A. MELODIE
+%     A1. Notes
+%     A2. Dynamiques pour la sortie Midi
+%  B. POEME
+%  C. PIANO
+%     C1. PIANO HAUT: Notes
+%     C2. PIANO BAS: Notes
+%     C3. PIANO: Dynamiques pour la sortie Partition
+%     C4. PIANO: Dynamiques pour la sortie Midi
+%  D. SORTIE PARTITION
+%  E. SORTIE MIDI
+%
+% 	                BIENVENUE A TOUTE SUGGESTION POUR AMELIORER LA PARTITION, LA SORTIE MIDI OU LE CODAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                                1. MELODY: Notes
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           A1. MELODIE: Notes
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % INTRO
 
-melNoteIntro = \relative do'' {
+meloNoteIntro = \relative do'' {
 
 % 1 - 2
  R1
  R1
 }
- 
-% BODY
 
-melNoteBody = \relative do'' {
+% CORPS
+
+meloNoteCorps = \relative do'' {
  \repeat volta 2 {
- 
+
 % 3 23
- r4\f la re re
+ r4 la re re
 
 % 4 24
- fad,2. si4 %\break
+ fad,2. si4
  \appoggiatura si8 re,4. re8 fad[( mi)] re[( mi)]
  fad4 re r2
  r4 la' si si
 
 % 8 28
- dod,4. dod8 re4. re8 %\break
+ dod,4. dod8 re4. re8
  fad8[( mi)] re[( mi)] fad2
  R1
  r4 re' mi4. sol,8
 
 % 12 32
- fad4( la2) si8[( dod)] %\break
+ fad4( la2) si8[( dod)]
  re4. fad8 mi[( dod)] la[( sol)]
  \appoggiatura sol8 fad4 fad r la
  si4. si8 si4 dod8[( re)]
 
 % 16 36
- re4. re8 fad4. mi8 %\break
+ re4. re8 fad4. mi8
  \appoggiatura mi4 re2 r8 si dod re
  re4( fad,8) fad la4( dod,8) dod
  re2 r2
@@ -165,36 +152,98 @@ melNoteBody = \relative do'' {
  } % fin du repeat
 }
 
-% END
+% FIN
 
-melNoteEnd = \relative do'' {
+meloNoteFin = \relative do'' {
 
 % 43
  R1
  \bar "|."
 }
 
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LA PARTITION
+meloNotePart = {
+ \override DynamicTextSpanner #'dash-period = #-1.0
+ \clef treble
+ \time 2/2
+ \key re \major
+ \set autoBeaming = ##f
+ s1*0^\markup { \bold \large { \hspace #-3.0 \italic Mäßig. } }
+ \meloNoteIntro \meloNoteCorps \meloNoteFin
+}
+
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
+meloNoteMidi = {
+ \set Staff.midiInstrument = "clarinet"
+ \set Staff.midiMinimumVolume = #0
+ \set Staff.midiMaximumVolume = #1
+ \meloNoteIntro \meloNoteCorps \meloNoteCorps \meloNoteFin
+}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                                2. PIANO RIGHT HAND: Notes
-%
+%                                           A2. MELODIE: Dynamiques pour la sortie Midi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+meloDynMidi = {
+ s1\mp
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           B. POEME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% STROPHE 1
+
+poemeUn = \lyricmode {
+ \set fontSize = #-.5
+ \set stanza = "1. "
+
+% 3 - 9
+ Du hol -- de Kunst, in wie -- viel grau -- en Stun -- den,
+ Wo mich des Le -- bens wil -- der Kreis um -- strickt,
+ 
+% 11 - 19
+ Hast du mein Herz zu war -- mer Lieb ent -- zun -- den,
+ Hast mich in ei -- ne beß -- re Welt ent -- rückt,
+ in ei -- ne beß -- re Welt ent -- rückt.
+}
+
+% STROPHE 2
+
+poemeDeux = \lyricmode {
+ \set fontSize = #-.5
+ \set stanza = "2. "
+
+% 23 - 29
+ Oft hat ein Seuf -- zer, dei -- ner Harf ent -- flos -- sen,
+ Ein sü -- ßer, hei -- li -- ger Ak -- kord von dir
+ 
+% 31 - 39
+ Den Him -- mel beß -- rer Zei -- ten mir er -- schlos -- sen,
+ Du hol -- de Kunst, ich dan -- ke dir da -- für,
+ Du hol -- de Kunst, ich dan -- ke dir!
+}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           C1. PIANO HAUT: Notes
+%                   (seulement quelque différences d'écriture: mesures 3/23 et 22/42)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % INTRO
 
-upNoteIntro = \relative do' {
+pianoHautNoteIntro = \relative do' {
 
 % 1
  <la re fad>8[ <la re fad> <la re fad> <la re fad>] <la re fad>[ <la re fad> <la re fad> <la re fad>]
  <la re la'>->[ <la re la'> <la re la'> <la re la'>] <la dod sol'>[ <la dod sol'> <sol la dod mi> <sol la dod mi>]
 }
 
-% BODY
+% CORPS
 
-upNoteBody = \relative do {
+pianoHautNoteCorps = \relative do {
  \repeat volta 2 {
-
+ 
 % 3 23
  <fad la re>8[ <la re fad> <la re fad> <la re fad>] <la re fad>[ <la re fad> <la re fad> <la re fad>]
  
@@ -231,37 +280,52 @@ upNoteBody = \relative do {
  } % fin du repeat
 }
 
-% END
+% FIN
 
-upNoteEnd = \relative do' {
+pianoHautNoteFin = \relative do' {
 
 % 43
  <sol la dod mi>8^>[( <fad la re>) <fad la re>-. <fad la re>-.] <fad la re>4 r4
 }
 
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LA PARTITION
+pianoHautNotePart = {
+ \clef treble
+ \time 2/2
+ \key re \major
+ \set autoBeaming = ##f
+ \pianoHautNoteIntro \pianoHautNoteCorps \pianoHautNoteFin
+}
+
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
+pianoHautNoteMidi = {
+ \set Staff.midiInstrument = "acoustic grand"
+ \pianoHautNoteIntro \pianoHautNoteCorps \pianoHautNoteCorps \pianoHautNoteFin
+}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                                3. PIANO LEFT HAND: Notes
-%
+%                                           C2. PIANO BAS: Notes
+%                              (seulement quelque différences d'écriture: mesure 3/23)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % INTRO
 
-downNoteIntro = \relative do {
+pianoBasNoteIntro = \relative do {
 
 % 1
  r4 la( re) re^.
  fad,2 la4-. la,-.
 }
 
-% BODY
 
-downNoteBody = \relative do, {
+% CORPS
+
+pianoBasNoteCorps = \relative do, {
  \repeat volta 2 {
 
 % 3 23
- re r r2
+ re4 r r2
 
 % 4 24
  r4 fad( si) sold-.
@@ -281,7 +345,7 @@ downNoteBody = \relative do, {
  re2( mi4 fad)
  sol2( sold)
 
-% 16 36 
+% 16 36
  la2( lad)
  si2( sold)
  la2( la,)
@@ -290,135 +354,56 @@ downNoteBody = \relative do, {
 % 20 40
  <sol,, sol'>2 r8 sol'-.[ si-. dod-.]
  <re, re'>2 r8 re'^.[ mi^. fad^.]
-% <sol,, sol'>8 ~ <sol sol'>4. r8 sol'-.[ si-. dod-.]
-% <re, re'>8 ~ <re re'>4. r8 re'^.[ mi^. fad^.]
  <sol, sol'>2 la
  } % fin du repeat
 }
 
 
-% END
+% FIN
 
-downNoteEnd = \relative do, {
+pianoBasNoteFin = \relative do, {
 
 % 43
  <re re'>2. r4
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                           B. PREPARING THE SCORE OUTPUT
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                           4. MELODY: Notes for the Score output
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-scoreMelNoteAll = {
- \override DynamicTextSpanner #'dash-period = #-1.0
- \clef treble
- \time 2/2
- \key re \major
- s1*0^\markup { \bold \large \bigger { \hspace #-3.0 \italic Mäßig. } }
- \melNoteIntro \melNoteBody \melNoteEnd
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                           5. MELODY: Dynamics for the Score output (none)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                           6. LYRICS
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-% FIRST STROPHE
-
-lyrOne = \lyricmode {
- \set fontSize = #-.5
- \set stanza = "1. "
-% 3 - 9
- Du1 hol -- de Kunst, in wie -- viel grau -- en Stun -- den,
- Wo mich des Le -- bens wil -- der Kreis um -- strickt,
- 
-% 11 - 19
- Hast du mein Herz zu war -- mer Lieb ent -- zun -- den,
- Hast mich in ei -- ne beß -- re Welt ent -- rückt,
- in ei -- ne beß -- re Welt ent -- rückt.
-}
-
-% SECOND STROPHE
-
-lyrTwo = \lyricmode {
- \set fontSize = #-.5
- \set stanza = "2. "
-
-% 23 - 29
- Oft hat ein Seuf -- zer, dei -- ner Harf ent -- flos -- sen,
- Ein sü -- ßer, hei -- li -- ger Ak -- kord von dir
- 
-% 31 - 39
- Den Him -- mel beß -- rer Zei -- ten mir er -- schlos -- sen,
- Du hol -- de Kunst, ich dan -- ke dir da -- für,
- Du hol -- de Kunst, ich dan -- ke dir!
-}
- 
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                           7. PIANO RIGHT HAND: Notes for the Score output
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-scoreUpNoteAll = {
- \clef treble
- \time 2/2
- \key re \major
- \upNoteIntro \upNoteBody \upNoteEnd
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                           8. PIANO LEFT HAND: Notes for the Score output
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-scoreDownNoteAll = {
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LA PARTITION
+pianoBasNotePart = {
  \clef bass
  \time 2/2
  \key re \major
- \downNoteIntro \downNoteBody \downNoteEnd
+ \set autoBeaming = ##f
+ \pianoBasNoteIntro \pianoBasNoteCorps \pianoBasNoteFin
 }
 
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
+pianoBasNoteMidi = {
+ \set Staff.midiInstrument = "acoustic grand"
+ \pianoBasNoteIntro \pianoBasNoteCorps \pianoBasNoteCorps \pianoBasNoteFin
+}
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                           9. PIANO STAVES: Dynamics for the Score Output
-%
+%                                           C3. PIANO: Dynamiques pour la sortie Partition
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % INTRO
 
-scorePiaDynIntro = \relative do' {
+pianoDynPartIntro = {
 
 % 1
  s2\p s2
  s1
 }
 
-% BODY
+% CORPS
 
-scorePiaDynBody = \relative do {
+pianoDynPartCorps = {
  \repeat volta 2 {
 
 % 3 23
- \shiftDynR s2\pp s2
+ \dynamD s2\pp s2
 
 % 4 24
  s1  s1  s1  s1
@@ -428,50 +413,104 @@ scorePiaDynBody = \relative do {
  
 % 12 32
  s1  s1  s1
- \shiftCrescR s2\cr s2\!
+ \cresD s2\cr s2\!
 
 % 16 36
- s8 s8\cr s8 s8\! s8 \shiftPinL s8\decr s8 s8\!
+ s8 s8\cr s8 s8\! s8 \pinceG s8\decr s8 s8\!
  s2 s8 s8\p s4
  s1
- \shiftPinR s2\cr s8 s8 s8\! s8
+ \pinceD s2\cr s4 s8\! s8
  
 % 20 40
- \shiftDynR s1\fp
- \shiftDynR s1\fp
+ \dynamD s1\fp
+ \dynamD s1\fp
  s1
  } % fin du repeat
 }
 
 % FIN
 
-scorePiaDynEnd = \relative do' {
+pianoDynPartFin = {
 
 % 43
  s1
 }
 
-scorePiaDynAll = {
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ
+pianoDynPart = {
  \override DynamicTextSpanner #'dash-period = #-1.0
- \scorePiaDynIntro \scorePiaDynBody \scorePiaDynEnd
+ \pianoDynPartIntro \pianoDynPartCorps \pianoDynPartFin
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%                                           C4. PIANO: Dynamiques pour la sortie Midi
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% INTRO
+
+pianoDynMidiIntro = {
+
+% 1
+ s2\p s2
+ s1
+}
+
+% CORPS
+
+pianoDynMidiCorps = {
+
+% 3 23
+ s2\pp s2
+
+% 4 24
+ s1  s1  s1  s1
+ 
+% 8 28
+ s1  s1  s1  s1
+ 
+% 12 32
+ s1  s1  s1
+ s1\cr
+
+% 16 36
+ s2 s2\!\f\decr
+ s2\!\mf s2\p
+ s1
+ s2\cr s4 s4\!\mf
+ 
+% 20 40
+ s8\mf s8\p s2.
+ s8\mf s8\p s2.
+ s1
+}
+
+% FIN
+
+pianoDynMidiFin = {
+% 43
+ s1
+}
+
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ
+pianoDynMidi = {
+ \pianoDynMidiIntro \pianoDynMidiCorps \pianoDynMidiCorps \pianoDynMidiFin
+ }
 
  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                              10. SCORE OUTPUT (no \midi)
-%
+%                                           D. SORTIE PARTITION (pas de \midi)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \score {
  <<
-  \new Voice = "mel" { \autoBeamOff \scoreMelNoteAll }
-  \new Lyrics \lyricsto "mel" \lyrOne
-  \new Lyrics \lyricsto "mel" \lyrTwo
+  \new Voice = "mel" << \meloNotePart >>
+  \new Lyrics \lyricsto "mel" \poemeUn
+  \new Lyrics \lyricsto "mel" \poemeDeux
   \new PianoStaff <<
-	  \new Staff = "up" { \autoBeamOff \scoreUpNoteAll }
-   \new Dynamics = "dynamics" \scorePiaDynAll
-   \new Staff = "down" { \autoBeamOff \scoreDownNoteAll }
+	  \new Staff = "up" << \pianoHautNotePart >>
+   \new Dynamics = "dynamics" \pianoDynPart
+   \new Staff = "down" << \pianoBasNotePart >>
   >>
  >>
  \layout {
@@ -510,142 +549,21 @@ scorePiaDynAll = {
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                        C. PREPARING THE MIDI OUTPUT
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                        11. MELODY: Notes for the midi output
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-midiMelNoteAll = {
- \set Staff.midiInstrument = "clarinet"
- \set Staff.midiMinimumVolume = #0
- \set Staff.midiMaximumVolume = #1
- \clef treble
- \time 2/2
- \key re \major
- \melNoteIntro \melNoteBody \melNoteBody \melNoteEnd
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                        12. MELODY: Dynamics for the Midi output (none)
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                        13. PIANO RIGHT HAND: Notes for the Midi Output
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-midiUpNoteAll = {
- \set Staff.midiInstrument = "acoustic grand"
-% \set Staff.midiMinimumVolume = #0.1
-% \set Staff.midiMaximumVolume = #0.6
- \clef treble
- \time 2/2
- \key re \major
- \upNoteIntro \upNoteBody \upNoteBody \upNoteEnd
-}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                        14. PIANO LEFT HAND: Notes for the Midi Output
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-midiDownNoteAll = {
- \set Staff.midiInstrument = "acoustic grand"
-% \set Staff.midiMinimumVolume = #0.1
-% \set Staff.midiMaximumVolume = #0.4
- \clef bass
- \time 2/2
- \key re \major
- \downNoteIntro \downNoteBody \downNoteBody \downNoteEnd
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                        15. PIANO STAVES: Dynamics for the Midi Output
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% INTRO
-
-midiPiaDynIntro = \relative do' {
-
-% 1
- s2\p s2
- s1
-}
-
-% BODY
-
-midiPiaDynBody = \relative do {
-
-% 3 23
- s2\pp s2
-
-% 4 24
- s1  s1  s1  s1
- 
-% 8 28
- s1  s1  s1  s1
- 
-% 12 32
- s1  s1  s1
- s1\cr
-
-% 16 36
- s2\!\ff s2\decr
- s2\!\mf s2\p
- s1
- s1\cr
- 
-% 20 40
- s8\!\f s8\p s2.
- s8\f s8\p s2.
- s1
-}
-
-% FIN
-
-midiPiaDynEnd = \relative do' {
-
-% 43
- s1
-}
-
-midiPiaDynAll = {
- \midiPiaDynIntro \midiPiaDynBody \midiPiaDynBody \midiPiaDynEnd
-}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                         16. MIDI OUTPUT (no \layout)
-%
+%                                           E. SORTIE MIDI (pas de \layout)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \score {
  <<
-  \new Voice = "mel" { \midiMelNoteAll }
+  \new Voice = "mel" << \meloNoteMidi \meloDynMidi >>
   \new PianoStaff <<
-   \new Staff = "up" << \midiUpNoteAll \midiPiaDynAll >>
-   \new Staff = "down" << \midiDownNoteAll \midiPiaDynAll >>
+   \new Staff = "up" << \pianoHautNoteMidi \pianoDynMidi >>
+   \new Staff = "down" << \pianoBasNoteMidi \pianoDynMidi >>
   >>
  >>
  \midi {
 	 \context {
    \Score
-	  tempoWholesPerMinute = #(ly:make-moment 90 4)
+	  tempoWholesPerMinute = #(ly:make-moment 84 4)
   }
   \context {
    \PianoStaff
@@ -656,7 +574,5 @@ midiPiaDynAll = {
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-%                                                END OF THE FILE AnDieMusik.ly
-%
+%                                           FIN DU FICHIER AnDieMusik.ly
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
