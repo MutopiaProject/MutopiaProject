@@ -2,16 +2,16 @@
 
 \header {
 	title = "Etude"
-	opus = "Op. 2, No. 1"
 	composer = "Alexander Scriabin"
-	mutopiacomposer = "ScriabinA"
+	opus = "Op. 2, No. 1"
 	instrument = "Piano"
+	copyright = "Public Domain"
 	source = "IMSLP"
 	style = "Classical"
-	copyright = "Public Domain"
 	maintainer = "Guy D. Lederfein"
 	maintainerEmail = "glederfein@gmail.com"
- footer = "Mutopia-2007/09/02-1029"
+	mutopiacomposer = "ScriabinA"
+ footer = "Mutopia-2007/09/11-1029"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -111,7 +111,7 @@ upper = {
 	
 	<<
 	\relative {
-		s4 \acciaccatura d'8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes c \unHideNotes \stemUp s4. |
+		s4 \acciaccatura { \slurDown d'8 \slurNeutral } \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes c \unHideNotes \stemUp s4. |
 		c8. bes16 bes2 |
 		\once \override Beam  #'positions = #'(5 . 5) bes8[ c \acciaccatura d c b] \times 2/3 {c g' f} |
 		% bar 20
@@ -141,8 +141,8 @@ upper = {
 	}
 	\\
 	\relative {
-		s4 \stemDown \slurUp \acciaccatura des'8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \hideNotes c \unHideNotes \slurNeutral s4. |
-		s4 \stemDown \once \override Slur #'control-points = #'((1 . -0.9) (1.66 . -1.5) (2.33 . -1.5) (3 . -1.2)) \acciaccatura ces8 \hideNotes beses \unHideNotes \slurNeutral s4. |
+		s4 \stemDown \acciaccatura { \slurUp des'8 \slurNeutral } \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \hideNotes c \unHideNotes \slurNeutral s4. |
+		s4 \stemDown \once \override Slur #'control-points = #'((1 . -0.9) (1.66 . -1.5) (2.33 . -1.5) (3 . -1.2)) \acciaccatura ces8 \slurNeutral s2 |
 	}
 	>>
 	
@@ -150,8 +150,8 @@ upper = {
 	
 	<<
 	\relative {
-		s4 \acciaccatura f8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes ees \unHideNotes \stemUp s4. |
-		s4 \acciaccatura f8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes ees \unHideNotes \stemUp s4. |
+		s4 \acciaccatura { \slurDown f8 \slurNeutral } \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes ees \unHideNotes \stemUp s4. |
+		s4 \acciaccatura { \slurDown f8 \slurNeutral } \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes ees \unHideNotes \stemUp s4. |
 	}
 	\\
 	\relative {
@@ -167,7 +167,7 @@ upper = {
 	<<
 	\relative {
 		% bar 25
-		s4 \acciaccatura e8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes dis \unHideNotes \stemUp s4. |
+		s4 \acciaccatura { \slurDown e8 \slurNeutral } \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes dis \unHideNotes \stemUp s4. |
 		<e, cis'>8 <e dis'> <cis' e> <cis fis> <e gis> <cis e cis'> |
 		b'8. a16 a2 |
 		<fis, cis' fis>8 <a gis'> <fis' a> <cis b'> <fis cis'> <fis cis' fis> |
@@ -182,10 +182,10 @@ upper = {
 		a8. gis16 gis2 |
 		\once \override Beam  #'positions = #'(3 . 3) gis8[ a \acciaccatura b a gis] \times 2/3 {a e' dis} |
 		dis8. gis,16 gis2 |
-		s4 \acciaccatura b8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes a \unHideNotes \stemUp s4. |
-		s4 \acciaccatura gis8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes fis \unHideNotes \stemUp s4. |
+		s4 \acciaccatura { \slurDown b8 \slurNeutral } \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes a \unHideNotes \stemUp s4. |
+		s4 \acciaccatura { \slurDown gis8 \slurNeutral } \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes fis \unHideNotes \stemUp s4. |
 		% bar 40
-		s4 \acciaccatura fis8 \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes e \unHideNotes \stemUp s4. |
+		s4 \acciaccatura { \slurDown fis8 \slurNeutral} \once \override NoteHead #'X-extent = #'(0.0 . 0.0) \stemDown \hideNotes e \unHideNotes \stemUp s4. |
 		e8. dis16 dis4 e |
 		<e, gis cis>8 <e gis dis'> <cis' e> <cis fis> <e gis> <cis e cis'> |
 		b'8. a16 gis4 fis |
@@ -205,7 +205,7 @@ upper = {
 		s8 gis4 cis s8 |
 		<b gis'>8 <gis b> <gis b> <gis b> <e gis> <e gis> |
 		<dis gis>8 gis gis gis <e fisis cis'> <e fisis cis'> |
-		<b dis>8[ <b dis>] <b dis> dis-.[]( dis-. dis-.) |
+		<b dis>8[ <b dis>] <b dis> dis-. \noBeam ( dis-. dis-.) |
 		<bis fis'>8 <cis fis> <cis fis> <cis fis> <cis fis> <cis fis> |
 		% bar 35
 		<cis fis>8 <cis fis> <bis fis'> <bis fis'> <bis fis'> <bis fis'> |
@@ -298,7 +298,7 @@ lower = {
 		ges f e f f bes, |
 		% bar 15
 		c des ges f des c |
-		<f, bes>[ <f bes>] <f bes> f-.[]( f-. f-.) |
+		<f, bes>[ <f bes>] <f bes> \noBeam f-.( f-.[ f-.]) |
 	}
 	\\
 	\relative {
@@ -408,7 +408,7 @@ lower = {
 %%% Dynamics %%%
 
 dynamics = {
-	\override DynamicText #'self-alignment-X = #-0.5
+	\override DynamicText #'self-alignment-X = #-1
 	\override DynamicTextSpanner #'dash-period = #-1
 	s16\p s16\< s2 s8\! |
 	s8\> s s\! s4. |
@@ -491,8 +491,6 @@ dynamics = {
 			\consists "Dynamic_engraver"
 			\consists "Text_engraver"
      
-			\override TextScript #'font-size = #2
-			\override TextScript #'font-shape = #'italic
 			\override DynamicText #'extra-offset = #'(0 . 2.5)
 			\override Hairpin #'extra-offset = #'(0 . 2.5)
 			\override DynamicTextSpanner #'extra-offset = #'(0 . 2.5) 
