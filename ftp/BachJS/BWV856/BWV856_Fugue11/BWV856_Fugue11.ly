@@ -3,9 +3,9 @@
 \header {
   title = "Fugue 11 - BWV 856"
   composer = "Johann Sebastian Bach"
-  mutopiatitle = "Fugue 11 - BWV 856"
+  mutopiatitle = "Das Wohltemperierte Clavier I, Fuga XI"
   mutopiacomposer = "BachJS"
-  mutopiainstrument = "Piano"
+  mutopiainstrument = "Harpsichord, Piano"
   mutopiaopus = "BWV 856"
   date = "18th Century"
   source = "Bach Gesselschaft"

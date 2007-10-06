@@ -8,7 +8,7 @@
   enteredby = 	 "Davide Castellone"
 
   % mutopia headers.
-  mutopiatitle = "Das Wohltemperierte Clavier, Praeludium X"
+  mutopiatitle = "Das Wohltemperierte Clavier I, Praeludium X"
   mutopiacomposer = "BachJS"
   mutopiaopus = "BWV 855"
   mutopiainstrument = "Harpsichord, Piano"

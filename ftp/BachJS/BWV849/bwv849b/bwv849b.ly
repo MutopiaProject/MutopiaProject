@@ -10,7 +10,7 @@
   enteredby = 	 "Davide Castellone"
 
   % mutopia headers.
-  mutopiatitle = "Das Wohltemperierte Clavier, Fuga IV"
+  mutopiatitle = "Das Wohltemperierte Clavier I, Fuga IV"
   mutopiacomposer = "BachJS"
   mutopiaopus = "BWV 849"
   mutopiainstrument = "Harpsichord, Piano"

@@ -3,9 +3,9 @@
 \header {
   title = "Fuga 16 - BWV 861"
   composer = "Johann Sebastian Bach"
-  mutopiatitle = "Das Wohltemperierte Clavier, Fuga XVI"
+  mutopiatitle = "Das Wohltemperierte Clavier I, Fuga XVI"
   mutopiacomposer = "BachJS"
-  mutopiainstrument = "Piano"
+  mutopiainstrument = "Harpsichord, Piano"
   mutopiaopus = "BWV 861"
   date = "18th Century"
   source = "Bach Gesellschaft Edition (1866)"

@@ -3,9 +3,9 @@
 \header {
   title = "Praeludium 11 - BWV 856"
   composer = "Johann Sebastian Bach"
-  mutopiatitle = "Praeludium 11 - BWV 856"
+  mutopiatitle = "Das Wohltemperierte Clavier I, Praeludium XI"
   mutopiacomposer = "BachJS"
-  mutopiainstrument = "Piano"
+  mutopiainstrument = "Harpsichord, Piano"
   mutopiaopus = "BWV 856"
   date = "18th Century"
   source = "Bach Gesselschaft"

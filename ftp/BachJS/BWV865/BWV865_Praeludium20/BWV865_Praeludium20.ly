@@ -3,9 +3,9 @@
 \header {
   title = "Praeludium 20 - BWV 865"
   composer = "Johann Sebastian Bach"
-  mutopiatitle = "Das Wohltemperierte Clavier, Praeludium XX"
+  mutopiatitle = "Das Wohltemperierte Clavier I, Praeludium XX"
   mutopiacomposer = "BachJS"
-  mutopiainstrument = "Piano"
+  mutopiainstrument = "Harpsichord, Piano"
   mutopiaopus = "BWV 865"
   date = "18th Century"
   source = "Bach Gesselschaft Edition (1866)"
