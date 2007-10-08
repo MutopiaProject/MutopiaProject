@@ -30,7 +30,7 @@
 	copyright = "Public Domain"
 	maintainer = "Carl M. Bolstad"
 	maintainerEmail = "ordinaryguy@zipcon.net"
- footer = "Mutopia-2007/08/20-1025"
+ footer = "Mutopia-2007/10/08-1025"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -38,16 +38,29 @@
 
 \include "functions.ly"
 
+\score {
+  \include "music.1.1.ly"
+  \layout {raggedlast = ##t }
+  \midi { }
+}
+
+%% 2nd movement: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
   % The following command is to make LilyPond only typeset the last
   % 5 measures of music, to save lots of time while typesetting.
   % Be sure to comment it out when we're done!!
-%  showLastLength = R1*5
-
+%  showLastLength = R2*5
 
 \score {
 
-  \include "music.1.1.ly"
+  \include "music.1.2.ly"
 
 \layout {raggedlast = ##t }
-\midi { }
+\midi { 
+  \context {
+    \Score
+    tempoWholesPerMinute = #(ly:make-moment 72 8)
+  }
+}
+
 }

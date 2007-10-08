@@ -16,7 +16,7 @@ cbSmaller = {
 cbNormal = {
   \set fontSize = #1
   \revert Stem #'length-fraction
-  \revert Stem #'length-fraction
+  \revert Stem #'stroke-style
   \revert Beam #'thickness
   \revert Beam #'length-fraction
 }
@@ -39,4 +39,13 @@ cbNoDivide = {
 
 % Make a unique dynamic mark, the ffz:
 ffz = #(make-dynamic-script "ffz")
+
+% Move any object (takes the object and a number pair as parameters):
+cbMoveTrillSpanner = #(define-music-function (parser location amount)
+						 (pair?)
+   #{
+	\once \override TrillSpanner #'extra-offset = #$amount
+   #}
+)
+
 

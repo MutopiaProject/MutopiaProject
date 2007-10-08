@@ -97,25 +97,22 @@ a=4( a')
   \\
   {
     r8. a,,='16-. a( g)
-    f-._\markup { \italic poco } g-. |
 	\textSpannerDown
-	\override TextSpanner #'edge-text = #(cons (markup #:italic "a poco crescendo" ) "" )
-	e8\startTextSpan  d16-.
+	\override TextSpanner #'edge-text = #(cons (markup #:italic "poco a poco crescendo " ) "" )
+	\once \override TextSpanner #'staff-padding = #6
+    f-.\startTextSpan g-. |
+	e8 d16-.
 	e-. f8 g16-.
 	f-.  fs8 e!16-.
 	fs-.  g8 d16-. bf-. |
 	c8 b16-. cs-.
 	d8  cs16-. d-. bf8 a16-. bf-. c8 b16-.
 	c-.  |
-	<c ef>8 r fs''='''8^(\stopTextSpan  g16) <bf=''' bf, d,, g,>16^>\sf\arpeggio
+	<c ef>8 r fs''='''8^(\stopTextSpan g16) <bf=''' bf, d,, g,>16^>\sf\arpeggio
    }
 >>
 c,='''16(\f e!) <g bf,>-. <bf d,>-. 
-	\textSpannerDown
-	\override TextSpanner #'edge-text = #(cons (markup #:italic "sempre crescendo" ) "" )
-	%\once \override TextSpanner #'Y-offset = #-2 % puts it up, neg or pos.!
-	\once \override TextSpanner #'staff-padding = #5
-<bf d,>(\startTextSpan <a c,>) <a c,>-.
+<bf d,>(_\markup { \italic { sempre - - } } <a c,>) <a c,>-.
 <f a,>-.
 
 % ********************************************************************************************
@@ -123,7 +120,10 @@ c,='''16(\f e!) <g bf,>-. <bf d,>-.
 % ********************************************************************************************
 
 % measure 18 *********************************************************************************
-bf,=''16( d) <f a,>-. <a c,>-. <a c,>( <g bf,>) <g bf,>-. <e g,>-. 
+	\textSpannerDown
+	\override TextSpanner #'edge-text = #(cons (markup #:italic "crescendo " ) "" )
+	\once \override TextSpanner #'staff-padding = #4
+bf,=''16(\startTextSpan d) <f a,>-. <a c,>-. <a c,>( <g bf,>) <g bf,>-. <e g,>-. 
 <g bf,>( <f a,>) <f a,>-. <d f,>-. <f a,>( <e g,>) <e g,>-. <cs e,>-.
 % measure 19 *********************************************************************************	
 	<cs e,>( <d f,>) <e,='' cs>( <f d>) <cs a>( <d bf>) 
@@ -343,7 +343,7 @@ f='32( d' a' a, f''=''' a, d, f,) a( f' d' a, a'' d, f, a,=')
 \afterGrace a4-- { \cbNoDivide b32[(\< cs d e f g a b cs d e f g a b cs)] \! \cbDivide } |
 % measure 40 *********************************************************************************	
     <d,,=' a' f' d'>4.->_\markup { \hspace #0 \raise #-3 \italic {con tutta forza}}
-    a''8-> \once \override TrillSpanner #'extra-offset = #'(0 . 1)
+    a''8-> \cbMoveTrillSpanner  #'(0 . 1)
     \stemDown <g,, g' d' bf'>4.^>\startTrillSpan \stemNeutral
     a''16(\stopTrillSpan g) |
 % measure 41 *********************************************************************************	
