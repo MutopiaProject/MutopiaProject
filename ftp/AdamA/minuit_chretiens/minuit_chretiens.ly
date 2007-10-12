@@ -20,7 +20,7 @@
   subtitle = "Cantique de Noël"
   subsubtitle =""
   composer = "Adolphe Adam (1803-1856)"
-  poet = "Placide Cappeau (1808-1877)"
+  poet = "Placide Clappeau (1808-1877)"
   instrument = "Voix et Piano"
   % date de composition = "décembre 1847"
   source = "Ed. Léon Grus"
