@@ -1,4 +1,4 @@
-\version "2.10.20"
+\version "2.11.32"
 
 %#(set-default-paper-size "letter")
 
@@ -7,7 +7,7 @@
 	composer = "W. A. Mozart (1756-1791) "
 	mutopiacomposer= "MozartWA"
 	mutopiaopus = "K.299"
-	mutopiainstrument = "Flute "
+	mutopiainstrument = "Flute, Harp"
 	source = "Breitkopf & Härtel (from complete works edition 1877-1883)"
 	style = "Classical"
 	copyright = "Public Domain"
@@ -15,7 +15,7 @@
 	maintainerEmail = "penagos.cesar@gmail.com"
 	
 	
- footer = "Mutopia-2007/08/20-1026"
+ footer = "Mutopia-2007/10/12-1026"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -272,11 +272,8 @@ R1*40
       c4 c c c |
       c4 r r2|
       
-
-
-      
-
 \bar "|."
+
 % END ALLEGRO
 	}
 	
@@ -286,7 +283,7 @@ R1*40
 }
 
       %%ANDANTINO
-      
+     
 \score{
 \relative c''{
 	\time 3/4
@@ -296,140 +293,140 @@ R1*40
 	\tempo 4=75
 	\once \override Score.MetronomeMark #' transparent = ##t
 	%pagina 34
-	R2.*12|
-	
+                                R2.*12|
+                                
 	%pagina 35
-	a'8  \p r a r a r |
-	g4 ~\f ( g8. e16) f8-| r|
-	f2. \p |
-	bes4 ~ (bes8. c32 d c8) r |
-	a4. \f( bes16 c e d c bes) |
-	a8 (g4 a16 bes  d c bes a )|
+                                a'8  \p r a r a r |
+                                g4 ~\f ( g8. e16) f8-| r|
+                                f2. \p |
+                                bes4 ~ (bes8. c32 d c8) r |
+                                a4. \f( bes16 c e d c bes) |
+                                a8 (g4 a16 bes  d c bes a )|
 	
 	%pagina 36
-	g8 ( f4 g16 a bes c d bes )|
-	a4 ( g) r|
-	g4. (a16 g) c (b! a g ) |
-	g8. (a16) g4 r |
-	\grace{d16( } d'4) c16 b a g g8-. g-. |
-	g8. (e16) g4 r|
-	R2.|
-	r4 g8. (a16) g4 |
-	R2. |
+                                g8 ( f4 g16 a bes c d bes )|
+                                a4 ( g) r|
+                                g4. (a16 g) c (b! a g ) |
+                                g8. (a16) g4 r |
+                                \grace{d16( } d'4) c16 b a g g8-. g-. |
+                                g8. (e16) g4 r|
+                                R2.|
+                                r4 g8. (a16) g4 |
+                                R2. |
 	
 	%pagina 37
-	r4 g8. (e16) g8-. g-. |
-	c4 b16 ( a g fis ) fis8-. fis-. |
-	a16(g) g4 b16 (d) c (a  g fis ) |
-	g8. \trill  fis32 g g,4 r|
-	R2.*3|
-	r4 f'! f'16 (  d b f) |
-	e4 e8. \trill d32 e  f8. \trill e32 f |
-	g8. (e16) c'4. g8|
+                                r4 g8. (e16) g8-. g-. |
+                                c4 b16 ( a g fis ) fis8-. fis-. |
+                                a16(g) g4 b16 (d) c (a  g fis ) |
+                                g8. \trill  fis32 g g,4 r|
+                                R2.*3|
+                                r4 f'! f'16 (  d b f) |
+                                e4 e8. \trill d32 e  f8. \trill e32 f |
+                                g8. (e16) c'4. g8|
 	
 	%pagina38
-	g16 (f) a-. f-.  g(e) g-. e-.  e (d) f-. d-. |
-	c4 r r |
-	R2.*2|
-	r4 f8( f'8)~f16 (d b f)|
-	e4 e8. \trill d32 e f8. \trill e32 f |
-	g8. (e16) g4 r |
-	e4 e8. \trill d32 e f8. \trill e32 f |
-	g16 (e) g-. g-. g4 r|
-	c8 (b! a g f e) |
-	d8. \grace{ e32 [ (d cis d) ]} e16 f8. \grace{g32 [(f e d)]} g16 
-	a8. \grace{b 32 [ (a g a)]} b!16|
-	
+                                g16 (f) a-. f-.  g(e) g-. e-.  e (d) f-. d-. |
+                                c4 r r |
+                                R2.*2|
+                                r4 f8( f'8)~f16 (d b f)|
+                                e4 e8. \trill d32 e f8. \trill e32 f |
+                                g8. (e16) g4 r |
+                                e4 e8. \trill d32 e f8. \trill e32 f |
+                                g16 (e) g-. g-. g4 r|
+                                c8 (b! a g f e) |
+                                d8. \grace{ e32 [ (d cis d) ]} e16 f8. \grace{g32 [(f e d)]} g16 
+                                a8. \grace{b 32 [ (a g a)]} b!16|
+                                
 	%pagina 39
-	c16 [g] \grace{b!32} a16 g32 f e4 d \trill |
-	c4 r r |
-	R2.*2 |
-	c'2. \p (|
-	\textSpannerDown
-	\override TextSpanner #'edge-text = # ' ("cresc. " . "")
-	b!2.)\startTextSpan|
-	bes!2. (|
-	a2.) \stopTextSpan \f |
+                                c16 [g] \grace{b!32} a16 g32 f e4 d \trill |
+                                c4 r r |
+                                R2.*2 |
+                                c'2. \p (|
+                                \textSpannerDown
+                                \override TextSpanner #'edge-text = # ' ("cresc. " . "")
+                                b!2.)\startTextSpan|
+                                bes!2. (|
+                                a2.) \stopTextSpan \f |
 	
 	%pagina 40
-	bes4 bes4.. \startTrillSpan a32 \stopTrillSpan bes |
-	a8 r a r a r |
-	g4\f~g8. (e16) f8-|  r|
-     	f2. \p |
-	bes4~bes8.(c32 d c8) r |
-	\grace{ a,16(} a'4.) \f bes16 ( c e d c bes )|
-	a8 (g4 a16 bes d c bes a) |
-        g8 (f4) g16(a bes c d bes)|
-	 	
+                                bes4 bes4.. \startTrillSpan a32 \stopTrillSpan bes |
+                                a8 r a r a r |
+                                g4\f~g8. (e16) f8-|  r|
+                                    f2. \p |
+                                bes4~bes8.(c32 d c8) r |
+                                \grace{ a,16(} a'4.) \f bes16 ( c e d c bes )|
+                                a8 (g4 a16 bes d c bes a) |
+                                    g8 (f4) g16(a bes c d bes)|
+                                    
 	%pagina41
-	a4( g) r|
-	g4.(a16 g) c(b! a g)|
-	g8. (a16) g4 r|
-	\grace{d16( } d'4) c16(b a g ) g8-. g-. |
-	g8.( e16) g4 r|
-	R2.|
-	r4 c8. (d16) c4 |
-	R2.|
-	r4 c8. (a16) c8-. c-. |
-	c16( b!) b8~b16 (c d c b a g f)|
-	f(e a g)  g4  f'16 (e  c b!)|
-	
+                                a4( g) r|
+                                g4.(a16 g) c(b! a g)|
+                                g8. (a16) g4 r|
+                                \grace{d16( } d'4) c16(b a g ) g8-. g-. |
+                                g8.( e16) g4 r|
+                                R2.|
+                                r4 c8. (d16) c4 |
+                                R2.|
+                                r4 c8. (a16) c8-. c-. |
+                                c16( b!) b8~b16 (c d c b a g f)|
+                                f(e a g)  g4  f'16 (e  c b!)|
+                                
 	%pagina42 #76
-	c8. \trill b32 c c,4 r |
-	R2.*3|
-	r4 bes!4 ~bes16 e(g bes) |
-	a4 a8. \trill g32 a bes8. a32 bes |
-	c8. (a16) f'4. c8 |
-	c16 bes d-| bes-. bes (a) c-. a-. a(g) bes-. g-.|
-	f4 r r |
-	R2.*2|
-	r4  bes4~bes16 (g e bes) |
-	
+                                c8. \trill b32 c c,4 r |
+                                R2.*3|
+                                r4 bes!4 ~bes16 e(g bes) |
+                                a4 a8. \trill g32 a bes8. a32 bes |
+                                c8. (a16) f'4. c8 |
+                                c16 bes d-| bes-. bes (a) c-. a-. a(g) bes-. g-.|
+                                f4 r r |
+                                R2.*2|
+                                r4  bes4~bes16 (g e bes) |
+                                
 	%pagina 43 #88
-	a4~\times 2/3{a16 [c (bes]}\times 2/3 {a16[ bes c)] }\times 2/3 {bes16 [(d c ] }
-	\times 2/3 { bes16 c d) }|
-	c4 r r |
-	\tieDotted
-	\grace {a16(} a'4) ~  a16 a bes32 a g a bes16 bes c32 bes a bes |
-	c8. (a16) f4 r4 |
-	\grace{f32(}f'8) e( d c bes a) |
-	fis16 [(g) ] r g-| a [( bes) ] r bes-| cis [(d)] r d-| |
-	c!16. (a32) d32( bes d bes) a4 g \trill |
-	f4 r r |
-	R2.|
-	\tieSolid
-	
+                                a4~\times 2/3{a16 [c (bes]}\times 2/3 {a16[ bes c)] }\times 2/3 {bes16 [(d c ] }
+                                \times 2/3 { bes16 c d) }|
+                                c4 r r |
+                                \tieDotted
+                                \grace {a16(} a'4) ~  a16 a bes32 a g a bes16 bes c32 bes a bes |
+                                c8. (a16) f4 r4 |
+                                \grace{f32(}f'8) e( d c bes a) |
+                                fis16 [(g) ] r g-| a [( bes) ] r bes-| cis [(d)] r d-| |
+                                c!16. (a32) d32( bes d bes) a4 g \trill |
+                                f4 r r |
+                                R2.|
+                                \tieSolid
+                                
 	%pagina 44 #97
-	f2(d'4) |
-	c,, f''8 c a f |
-	g2. \startTrillSpan |
-	 f4 \stopTrillSpan   r r |
-	R2.|
-	r4 f f' |
-	e \fermata  r8. f,16 g4 \trill |
-	f4 r r |
-	g4 \f ~g8.(e16 f8) r8|
-	r4 r r8 r16 f16 \p |
-	bes4 ~bes8. c32 (d c8) r8|
-	
+                                f2(d'4) |
+                                c,, f''8 c a f |
+                                g2. \startTrillSpan |
+                                 f4 \stopTrillSpan   r r |
+                                R2.|
+                                r4 f f' |
+                                e \fermata  r8. f,16 g4 \trill |
+                                f4 r r |
+                                g4 \f ~g8.(e16 f8) r8|
+                                r4 r r8 r16 f16 \p |
+                                bes4 ~bes8. c32 (d c8) r8|
+                                
 	%pagina 45 #108
-	a4. \f (bes16 c  e d c bes) |
-	a8 (g4) a16 (bes) d( c bes a) |
+                                a4. \f (bes16 c  e d c bes) |
+                                a8 (g4) a16 (bes) d( c bes a) |
+                                
+                                g8 (f4)  \slurDotted g16 ( a) 
+                                \slurSolid
+                                bes( c d bes) |
+                                a8. (g16) g4. (a8) \p |
+                                bes8. (c32 d)   f,4 \(\grace{a16(}g4) \) |
+                                f8 f'16 ( e)	e (d) d (c) c (b d c) |
+                                bes!8. (c32 d)  f,4 \( \grace{a16 (} g4) \)|
+                                f8 [(a)]  a8. \trill  g32 a bes8. \trill a32 bes |
+                                c4 r r |
+                                r4 f,8 \pp r f r |
+                                f4  r4 r4 
+                                
 	
-	g8 (f4)  \slurDotted g16 ( a) 
-	\slurSolid
-	bes( c d bes) |
-	a8. (g16) g4. (a8) \p |
-	bes8. (c32 d)   f,4 \(\grace{a16(}g4) \) |
-	f8 f'16 ( e)	e (d) d (c) c (b d c) |
-	bes!8. (c32 d)  f,4 \( \grace{a16 (} g4) \)|
-	f8 [(a)]  a8. \trill  g32 a bes8. \trill a32 bes |
-	c4 r r |
-	r4 f,8 \pp r f r |
-	f4  r4 r4 
-	
-	
-	\bar"|."
+                                \bar"|."
 	
 	%END ANDANTINO		
 	
@@ -459,336 +456,315 @@ R1*40
 	\key c \major
 	\clef treble
 	\relative c' { 	
- % Type notes here 
-      
+ 
  	\set Score.skipBars=##t 
  	\once \override TextScript # ' padding  = #2
+ 	\partial 2
+ 	r2|
  	\override BarNumber #'padding = #2 
  	R1*65^\markup{ \italic \bold "Allegro"}|
 	
 	%pagina 51 #66
-	c'8 b c b c e g e|
-	\grace{ d8 (} c4) c8 b c4 r|
-	
+                                 c'8 b c b c e g e|
+                                 \grace{ d8 (} c4) c8 b c4 r|
+                                
 	%pagina 52 # 68
-	f8 e f e f a c a |
-	fis2 (g4) r|
-	c8 \trill b c d e c g e |
-	f d b' g d' b g f |
-	f(e) g-. e-. e (d) c-. b-.|
-	c-. d-. e-. f-. g-. a-. b-. c-. |
-	d-. c-. b-. a-. g-. f-. e-. d-. |
-	c-. e-. g-. e-.  e-. d-. c-. b-. |
-	c4 r r2 |
-	r1 |
-	r8 c( b c b c e c) |
-	\grace{ b2 (} a1) \trill |
+                                f8 e f e f a c a |
+                                fis2 (g4) r|
+                                c8 \trill b c d e c g e |
+                                f d b' g d' b g f |
+                                f(e) g-. e-. e (d) c-. b-.|
+                                c-. d-. e-. f-. g-. a-. b-. c-. |
+                                d-. c-. b-. a-. g-. f-. e-. d-. |
+                                c-. e-. g-. e-.  e-. d-. c-. b-. |
+                                c4 r r2 |
+                                r1 |
+                                r8 c( b c b c e c) |
+                                \grace{ b2 (} a1) \trill |
 	
 	%page 53 #80
-	g4 c8 e  g( c) g-. e-. |
-	g2 (f) \trill|
-	e8 [g]  g8 \trill fis16 g  f!8 e d c |
-	\grace{b4(} a1) \trill |
-	g8 c e g c e c g |
-	\slurDashed
-	g2 ( f ) \trill |
-	\slurSolid
-	r8 [e] e \trill d16 e f8 [f] f \trill e16 f |
-	g8 [g] g \trill f16 g a8 [a]  a \trill g16 a |
-	b4 ( c) f, e |
-	g4. (e8)  d4 r |
-	d2. b8 c |
-	d4 d d d |
-	
+                                g4 c8 e  g( c) g-. e-. |
+                                g2 (f) \trill|
+                                e8 [g]  g8 \trill fis16 g  f!8 e d c |
+                                \grace{b4(} a1) \trill |
+                                g8 c e g c e c g |
+                                \slurDashed
+                                g2 ( f ) \trill |
+                                \slurSolid
+                                r8 [e] e \trill d16 e f8 [f] f \trill e16 f |
+                                g8 [g] g \trill f16 g a8 [a]  a \trill g16 a |
+                                b4 ( c) f, e |
+                                g4. (e8)  d4 r |
+                                d2. b8 c |
+                                d4 d d d |
+                                
 	%pagina 54 #92
-	d4. (b'8) b2~|
-	b2 d,  |
-	c2. a8 b |
-	c4 c c c |
-	c4. (a'8) a2 ~|
-	a2 c,  |
-	b4 r r2 |
+                                d4. (b'8) b2~|
+                                b2 d,  |
+                                c2. a8 b |
+                                c4 c c c |
+                                c4. (a'8) a2 ~|
+                                a2 c,  |
+                                b4 r r2 |
 	
 	%pagina 55 # 104(112)
-	R1*13 |
-	r4 g' g g | #'(2.1 . 0.4 ) 
-	a4.-\turn (b8)  g4 g |
-	a4. \turn (b8) g4 (c) |
-	b2 (a4) r |
-	
+                                R1*13 |
+                                r4 g' g g | #'(2.1 . 0.4 ) 
+                                a4.-\turn (b8)  g4 g |
+                                a4. \turn (b8) g4 (c) |
+                                b2 (a4) r |
+                                
 	%pagina 56 # 116 
-	r4 a a a |
-	b4.  \turn (c8) a4 a |
-	b4. \turn (c8) a4 (d) |
-	c2 (b4) r |
-	r8 d8 (cis d) c! (b a g) |
-	e'4. (c8) a4-|r |
-	 d4. (b8) g4-| r |
-	 fis4. (a8) c4-. r |
-	 r4 b b b|
-	 b c8 d e4 c8 b |
-	 a1 \startTrillSpan  \grace{g32 \stopTrillSpan [a](} |
-	 g4) r r2 | 
-	 
-	 %pagina 57 # 128
-	 R1*3 |
-	 r8 d'8 (cis d cis d cis d) |
-	 d,1~|
-	 d1~|
-	 d1 |
-	 r8 g (fis g fis g fis g) |
-	 g,2 d'' |
-	 e4 r4 a, c8 e |
-	 d4 r g,  b8 d |
-	 c4 r c, a8 d, |
-	 
+                                r4 a a a |
+                                b4.  \turn (c8) a4 a |
+                                b4. \turn (c8) a4 (d) |
+                                c2 (b4) r |
+                                r8 d8 (cis d) c! (b a g) |
+                                e'4. (c8) a4-|r |
+                                 d4. (b8) g4-| r |
+                                 fis4. (a8) c4-. r |
+                                 r4 b b b|
+                                 b c8 d e4 c8 b |
+                                 a1 \startTrillSpan  \grace{g32 \stopTrillSpan [a](} |
+                                 g4) r r2 | 
+                                 
+	%pagina 57 # 128
+                                 R1*3 |
+                                 r8 d'8 (cis d cis d cis d) |
+                                 d,1~|
+                                 d1~|
+                                 d1 |
+                                 r8 g (fis g fis g fis g) |
+                                 g,2 d'' |
+                                 e4 r4 a, c8 e |
+                                 d4 r g,  b8 d |
+                                 c4 r c, a8 d, |
+                                 
 	 %pagina 58 # 140
-	 g1 | 
-	 g'|
-	 d2 d, |
-	 g4 r r2 |
-	 r1 |
-	 r4 g8-. g-. fis ( a) c-. c-. |
-	 g8 (b) d-. d-.  a (d ) fis-. fis-. |
-	 g4 g,8-. g-. fis (a) c-. c-. |
-	 g (b) d-. d-.  a ( d ) fis-. fis-. |
-	 g4 r r2 |
-	 R1*9 |
+                                 g1 | 
+                                 g'|
+                                 d2 d, |
+                                 g4 r r2 |
+                                 r1 |
+                                 r4 g8-. g-. fis ( a) c-. c-. |
+                                 g8 (b) d-. d-.  a (d ) fis-. fis-. |
+                                 g4 g,8-. g-. fis (a) c-. c-. |
+                                 g (b) d-. d-.  a ( d ) fis-. fis-. |
+                                 g4 r r2 |
+                                R1*9 |
 	 
 	 %pagina 59 # 151 
-	 g2. a8 ( b |
-	 g4) a8 (b g4) a8 (b |
-	 g4) b d2 ~|
-	 d4 c8 b \grace{b 8 (} a4)  g8  a |
+                                 g2. a8 ( b |
+                                 g4) a8 (b g4) a8 (b |
+                                 g4) b d2 ~|
+                                 d4 c8 b \grace{b 8 (} a4)  g8  a |
 	 
 	 %pagina 60 # 163
-      g2~g8 b (a b |
-      g b a b g b a b |
-      g4) b  d2 ~|
-      d4  c8 b \grace{b8(} a4) g8 a |
-      g4 r r2 |
-      r1 |
-      d\p ~|
-      d _\markup {\italic "cresc."}|
-      d' \f ~|
-      d |
-	g,, 4  r r2 | 
+                              g2~g8 b (a b |
+                              g b a b g b a b |
+                              g4) b  d2 ~|
+                              d4  c8 b \grace{b8(} a4) g8 a |
+                              g4 r r2 |
+                              r1 |
+                              d\p ~|
+                              d _\markup {\italic "cresc."}|
+                              d' \f ~|
+                              d |
+                              g,, 4  r r2 | 
 	
 	%pagina 61 # 174
-	r1 |
-	\grace{ a'8 ( } g4) \p fis8 g fis g a g |
-	\grace{ g8 (} f!4) e8 f e f g f |
-	d \f (f e g f4) r4 |
-	d8 \p ( f e g f4) r |
-	d8 \f (f e g  f g e f) |
-	d8 \p (f e g f4) r |
-	r2 e4 \p e |
-	e2 \grace {g8 ( } f4) e8 f |
-	g8 (e) c4 c'4. b8|
-	\grace {b8 (} a4) g c4. b8 |
-	\grace{ b8 (} a4) g c, c |
-	
+                            r1 |
+                            \grace{ a'8 ( } g4) \p fis8 g fis g a g |
+                            \grace{ g8 (} f!4) e8 f e f g f |
+                            d \f (f e g f4) r4 |
+                            d8 \p ( f e g f4) r |
+                            d8 \f (f e g  f g e f) |
+                            d8 \p (f e g f4) r |
+                            r2 e4 \p e |
+                            e2 \grace {g8 ( } f4) e8 f |
+                            g8 (e) c4 c'4. b8|
+                            \grace {b8 (} a4) g c4. b8 |
+                            \grace{ b8 (} a4) g c, c |
+                            
 	%pagina 62 # 186 
-	c2 \grace{ e8 (} d4) c8 d |
-	e4 e4 \grace{ g8 (} f4) e8 f |
-	g4 g a8 (g) f-. e-. |
-	e4 (d) r2 |
-	R1*17|
+                            c2 \grace{ e8 (} d4) c8 d |
+                            e4 e4 \grace{ g8 (} f4) e8 f |
+                            g4 g a8 (g) f-. e-. |
+                            e4 (d) r2 |
+                            R1*17|
 	
 	%pagina 63 # 198 
-	\grace{c16 (} c' 1 ) |
-	a2 f |
-	c2. (f4) |
+                            \grace{c16 (} c' 1 ) |
+                            a2 f |
+                            c2. (f4) |
 	
 	%pagina 64 #210 
-	e4 (d) \trill c2 |
-	r8 f (e f e f g a-|) |
-	fis2 g ~|
-	g8 a (bes a c bes a g) |
-	f!8 \acciaccatura {g16} f ([e] f8 )g-| a \grace{ bes16 (} a16) ([g] a8) bes!-||
-	c,8 (c') c-. c-. c-. c-. c-. c-. |
-	a, (a' ) a-. a-.  f, (f') f-. f-. |
-	c4 c~c8 d (e f) |
-	e4 (d) \trill c2 |
-	r8 c'8 (b! c d c bes a )|
-	fis (g) cis (d) a (bes) fis (g) |
+                            e4 (d) \trill c2 |
+                            r8 f (e f e f g a-|) |
+                            fis2 g ~|
+                            g8 a (bes a c bes a g) |
+                            f!8 \acciaccatura {g16} f ([e] f8 )g-| a \grace{ bes16 (} a16) ([g] a8) bes!-||
+                            c,8 (c') c-. c-. c-. c-. c-. c-. |
+                            a, (a' ) a-. a-.  f, (f') f-. f-. |
+                            c4 c~c8 d (e f) |
+                            e4 (d) \trill c2 |
+                            r8 c'8 (b! c d c bes a )|
+                            fis (g) cis (d) a (bes) fis (g) |
         
         %pagina 65 # 221
-	f!2 g2 \trill |
-	\grace{f32 [(g32)]} f4 r r2 |
-	R1|
-	c'1~|
-	c1~|
-	c1|
-	c4. ( a8) f4-. r|
-	R1*6|
+                            f!2 g2 \trill |
+                            \grace{f32 [(g32)]} f4 r r2 |
+                            R1|
+                            c'1~|
+                            c1~|
+                            c1|
+                            c4. ( a8) f4-. r|
+                            R1*6|
 	
 	%page 66 # 234
-	g,1~|
-	g1|
-	d''8 c b a g f e d |
-	c d e f  g a b c |
-	b a gis  f e d c b |
-	a b c d  e f gis a |
-	g!8 f e d  d bes a g |
-	f4 r r2 |
-	R1|
-	b!8 g a b  c d e fis |
-	g fis g fis  g fis g fis |
-	g1~|
+                            g,1~|
+                            g1|
+                            d''8 c b a g f e d |
+                            c d e f  g a b c |
+                            b a gis  f e d c b |
+                            a b c d  e f gis a |
+                            g!8 f e d  d bes a g |
+                            f4 r r2 |
+                            R1|
+                            b!8 g a b  c d e fis |
+                            g fis g fis  g fis g fis |
+                            g1~|
 	
 	%pagina 67 #246
-	g1~|
-	g1~|
-	g1~|
-	g4  r8 g fis (g fis g) |
-	c4 (bes aes g) |
-	g4. (fis8) fis2~|
-	fis4 ees d c |
-	b8 (d ) g-. g-. g2~|
-	g4 b!8-. d-. c (b) a!-. g-. |
-	g4 (fis) ees'2 ~|
-	ees4 c (ees fis, ) |
-	g4 r c (fis,) |
-	
+                            g1~|
+                            g1~|
+                            g1~|
+                            g4  r8 g fis (g fis g) |
+                            c4 (bes aes g) |
+                            g4. (fis8) fis2~|
+                            fis4 ees d c |
+                            b8 (d ) g-. g-. g2~|
+                            g4 b!8-. d-. c (b) a!-. g-. |
+                            g4 (fis) ees'2 ~|
+                            ees4 c (ees fis, ) |
+                            g4 r c (fis,) |
+                            
 	%pagina 68 # 258 
-	g4 r c (fis,) |
-	g4 r g r |
-	g8 ( fis g fis g fis g fis) |
-	g2. e8 f! |
-	g4 g g g |
-	g4. (e'8) e2~|
-	e2 g, |
-	f2. d8 e |
-	f4 f f f |
-	f4. (d'8) d2 ~|
-	d f, |
-	e4 r r2 | 
-	
+                            g4 r c (fis,) |
+                            g4 r g r |
+                            g8 ( fis g fis g fis g fis) |
+                            g2. e8 f! |
+                            g4 g g g |
+                            g4. (e'8) e2~|
+                            e2 g, |
+                            f2. d8 e |
+                            f4 f f f |
+                            f4. (d'8) d2 ~|
+                            d f, |
+                            e4 r r2 | 
+                            
 	%pagina 69 # 270 
-	R1*13|
-	r4 c c c |
-	d4. (\turn e8) c4 c |
-	d4. (\turn e8) c4 (f) |
-	e2 (d4) r|
-	r4 d d d |
-	e4. ( \turn f8 ) d4 d |
-	e4. ( \turn f8 ) d4 (g)|
-	f2 (e4) r |
-	r8 g8 (fis g) f! (e d c)|
-	a'4. (f8) d4-.  r |
-	g4. (e8) c4-. r |
-	b4. (d8) f4-. r |
-	r4 e4 e e |
-	e4 f8 g a4 f8 e |
-	d1\startTrillSpan \grace{ c32 \stopTrillSpan [(d)]} |
-	
+                            R1*13|
+                            r4 c c c |
+                            d4. (\turn e8) c4 c |
+                            d4. (\turn e8) c4 (f) |
+                            e2 (d4) r|
+                            r4 d d d |
+                            e4. ( \turn f8 ) d4 d |
+                            e4. ( \turn f8 ) d4 (g)|
+                            f2 (e4) r |
+                            r8 g8 (fis g) f! (e d c)|
+                            a'4. (f8) d4-.  r |
+                            g4. (e8) c4-. r |
+                            b4. (d8) f4-. r |
+                            r4 e4 e e |
+                            e4 f8 g a4 f8 e |
+                            d1\startTrillSpan \grace{ c32 \stopTrillSpan [(d)]} |
+                            
 	%pagina48 Bäreiheiter
-	c4 r r2 |
-	R1*3|
-	r8 g' (fis g)  fis (g fis g) |
-	g,1~|
-	g1~|
-	g1|
-	r8 c' (b c)  b (c b c) |
-	e,,2 g' |
-	a4 r d8 cis d b |
-	g4 r c!8 b c a |
-	f4. e8 d c d b |
-	c1 ~|
-	c4 c' c c |
-	g2 g, |
-	c4 r r2 | 
-	R1*5|
-	
+                            c4 r r2 |
+                            R1*3|
+                            r8 g' (fis g)  fis (g fis g) |
+                            g,1~|
+                            g1~|
+                            g1|
+                            r8 c' (b c)  b (c b c) |
+                            e,,2 g' |
+                            a4 r d8 cis d b |
+                            g4 r c!8 b c a |
+                            f4. e8 d c d b |
+                            c1 ~|
+                            c4 c' c c |
+                            g2 g, |
+                            c4 r r2 | 
+                            R1*5|
+                            
 	%pagina 49 
-	g'1 \startTrillSpan ~|
-	g1\stopTrillSpan  |
-	g4 r r2 |
-	r2 g4 (f) |
-	R1 |
-	r2 c4 (b)|
-	R1*3 |
-	r4 g'2 b8. \trill a32 b |
-	c1~|
-	c1 ~| 
-	c1 ~|
-	c1~|
-	c8  (g) g2 f8 e |
-	e8 (d) c2 (b4) |
-	c4 r r2 |
-	R1|
-	r4 c8-. c-. b8 (c) f-. f-. |
-	c(e) g-. g-.  d (g) b-. b-. |
-	c4 c,8-. c-. b (c) f-. f-. |
-	c (e) g-. g-.  d (g) b-. b-. |
-	c4 r r2 |
-	R1*9|
-	c,4 c'2 b8 a |
-	\acciaccatura {a8} g4 f8 e \acciaccatura{e8} d4 c8 b |
-	c4 c'2 b8 a |
-	\acciaccatura{a8} g4 f8 e \acciaccatura{e8} d4 c8 b |
-	c4 r r2 | R1*3 |
-	c'2 \fermata b \startTrillSpan |
-	c4 \stopTrillSpan  r4 r2 |
-	R1*6|
-	c,2 b |
-	c4 g8 e c4 r |
-	c'8 b c b  c4 r |
-	c'8 b c b c4 r |
-	g1~|
-	g2 b, |
-	c4 e f8 e d c |
-	c4 (b) e e |
-	e2 \acciaccatura{g8} f4 e8 f |
-	g8 (e ) c4  c'4. b8 |
-	\acciaccatura{b8} a4 g c4. b8|
-	\acciaccatura{b8} a4 g c, c |
-	c2 \acciaccatura {e8} d4 c8 d |
-	e4 e \acciaccatura{g8} f4 e8 f |
-	g8 e g e g( f) e-. d-. |
-	c4 r r2 | R1 |
-	g'1 \startTrillSpan ~|
-	g1 ~|
-	g1 \stopTrillSpan|
-	g4. e8  c'4  r |
-	R1*4 |
-	
-	% END RONDEU
-	
-	\bar "|."
-	}
-
-}
+                            g'1 \startTrillSpan ~|
+                            g1\stopTrillSpan  |
+                            g4 r r2 |
+                            r2 g4 (f) |
+                            R1 |
+                            r2 c4 (b)|
+                            R1*3 |
+                            r4 g'2 b8. \trill a32 b |
+                            c1~|
+                            c1 ~| 
+                            c1 ~|
+                            c1~|
+                            c8  (g) g2 f8 e |
+                            e8 (d) c2 (b4) |
+                            c4 r r2 |
+                            R1|
+                            r4 c8-. c-. b8 (c) f-. f-. |
+                            c(e) g-. g-.  d (g) b-. b-. |
+                            c4 c,8-. c-. b (c) f-. f-. |
+                            c (e) g-. g-.  d (g) b-. b-. |
+                            c4 r r2 |
+                            R1*9|
+                            c,4 c'2 b8 a |
+                            \acciaccatura {a8} g4 f8 e \acciaccatura{e8} d4 c8 b |
+                            c4 c'2 b8 a |
+                            \acciaccatura{a8} g4 f8 e \acciaccatura{e8} d4 c8 b |
+                            c4 r r2 | R1*3 |
+                            c'2 \fermata b \startTrillSpan |
+                            c4 \stopTrillSpan  r4 r2 |
+                            R1*6|
+                            c,2 b |
+                            c4 g8 e c4 r |
+                            c'8 b c b  c4 r |
+                            c'8 b c b c4 r |
+                            g1~|
+                            g2 b, |
+                            c4 e f8 e d c |
+                            c4 (b) e e |
+                            e2 \acciaccatura{g8} f4 e8 f |
+                            g8 (e ) c4  c'4. b8 |
+                            \acciaccatura{b8} a4 g c4. b8|
+                            \acciaccatura{b8} a4 g c, c |
+                            c2 \acciaccatura {e8} d4 c8 d |
+                            e4 e \acciaccatura{g8} f4 e8 f |
+                            g8 e g e g( f) e-. d-. |
+                            c4 r r2 | R1 |
+                            g'1 \startTrillSpan ~|
+                            g1 ~|
+                            g1 \stopTrillSpan|
+                            g4. e8  c'4  r |
+                            R1*4 |
+                            \bar "|."
+                            
+    % END RONDEU
+                            }
+                }
 
 \header{
       piece = \markup{\bold " [III. RONDEU]"}
       
-      }
-	\midi {
-	}
+                              }
+\midi {}
 
-	\layout  {
-	
-	}
+\layout  {}
+                            
 } 
       
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-      
-\paper{
-
-
- }
+\paper{}
