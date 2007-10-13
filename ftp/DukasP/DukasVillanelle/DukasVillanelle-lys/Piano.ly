@@ -2,7 +2,7 @@
 \include "HornNotes.lyi"
 \include "defs.lyi"
 
-\version "2.11.23"
+\version "2.11.34"
 
 \paper
 {
@@ -29,6 +29,7 @@ instrument = "Piano"
         \override StaffSymbol #'staff-space = #(magstep -3)
       }
       {
+        #(set-accidental-style 'modern)
         \removeWithTag #'horn \hornNotes
       }
     }
@@ -90,7 +91,7 @@ instrument = "Piano"
     {
       \PianoStaff
       \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
+      %\override VerticalAlignment #'forced-distance = #7
     }
   }
 }

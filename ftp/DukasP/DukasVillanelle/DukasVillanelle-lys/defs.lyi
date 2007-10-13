@@ -31,14 +31,23 @@ fSpaceP = #(make-dynamic-script "f p")
 
 tempoMark = #(define-music-function (parser location markp) (string?)
 #{
-  \once \override Score . RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'self-alignment-X = #left
   \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
   \mark \markup { \smaller \bold $markp }
+#})
+
+smallTempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score.RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'direction = #down
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \small $markp }
 #})
 
 outline =
 {
   \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
   \time 6/8
   \tempoMark "Très modéré"
   s2.*18
@@ -48,11 +57,11 @@ outline =
 
   \time 4/4
   %TODO: This muddies the score, but should be in here.
-  %\tempoMark "La noire un peu moins lente que la noire pointée précédente"
+  \smallTempoMark "La noire un peu moins lente que la noire pointée précédente"
   s1*2 |
   s2 \tempoMark "En serrant un peu" s |
   s1 |
-  \tempoMark "Retenu  " %TODO: The spaces separate this markup with the next in the piano score.
+  \tempoMark "Retenu" %TODO: The spaces separate this markup with the next in the piano score.
   s1 |
   \tempoMark "au Mouvt"
   s1 |

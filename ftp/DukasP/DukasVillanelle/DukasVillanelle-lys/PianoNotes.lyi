@@ -88,7 +88,6 @@ rightHand = \relative c''
   <e cis>-> d->) | %EDIT: removed double voices on d
   r4 <b f>2.^( |
   \once \override TextScript #'avoid-slur = #'inside
-  \break %TODO: The following mark is too long so here we just put it on a new line.
   <cis a e>2) << \repeat tremolo 6 {cis16*2/3( e)} {s8 s16^\markup{\teeny \bold 12}} >> | %TODO: figure out tuplet tremolos
   \repeat tremolo 6 {<ees bes>16*2/3( g,)} \repeat tremolo 6 {<d' bes>16*2/3( g,)}
   \repeat tremolo 6 {<a' e cis>16*2/3( g,)} \repeat tremolo 6 {<a' ees>16*2/3( a,)}
@@ -228,7 +227,7 @@ rightHand = \relative c''
   \times 2/3 {<bes c,>-.( <aes ees>-. <ees c>-.)} |
 
   %legerement retenu
-  \repeat unfold 8 {\repeat tremolo 4 {fis16( d)}} |
+  \repeat unfold 8 {\repeat tremolo 4 {fis16( d)}}
   \repeat unfold 2 {\repeat tremolo 4 {fis16( bis,)}} |
   <<
     {r2 r4 r8 dis'( | gis1) |}
@@ -298,7 +297,7 @@ rightHand = \relative c''
   bes4-.) a8( bes b4-.) ais8( b |
   c4) c,-^ f-^ g-^ |
   c1~-^ |
-  %It seems odd to me to mark these as 6-lets when the same rhythm earlier in 
+  %NOTE: It seems odd to me to mark these as 6-lets when the same rhythm earlier in 
   %the piece was two groups of triplets.
   \override TupletNumber #'text = "6"
   \times 2/3 {c4 bes a g a f} |
@@ -350,11 +349,13 @@ rightHand = \relative c''
   g'-> f-> b,-> d-> |
   \clef treble |
   <c' a f c>-.-^ r r2 |
-  R1*4 |
+  R1*3 |
+  %Retenez beaucoup
+  r1 |
   c1( | <d b> | <e bes>) |
 
   %6/8
-  \break %TODO: The following mark is too long so here we just put it on a new line.
+  %Tres modere
   \repeat tremolo 12 {ees32 a,} |
   \repeat tremolo 6 {d32 bes} \repeat tremolo 6 {d32 a} |
   \repeat tremolo 6 {d32 b} \repeat tremolo 6 {c32 bes} |
@@ -362,13 +363,13 @@ rightHand = \relative c''
   \repeat unfold 5 {\repeat tremolo 12 {f'32 b,} |}
 
   %2/2
-  \break %TODO: The following mark is too long so here we just put it on a new line.
+  %Tres anime
   <c f a c>4 r c,2-^ |
   f-^ g-^ |
   c-^ c'-^ |
+  #(set-octavation 1) %NOTE: The octavation didn't look good on one note, so I added the two previous notes also.
   f-^ g-^ |
-  %#(set-octavation 1) %TODO: The octavation doesn't look good on this one note.
-  c-^ %{#(set-octavation 0)%} r |
+  c-^ #(set-octavation 0) r |
   R1*3 |
   <c,,, fis,>1~-^ | <c fis,> |
   <bes e,>1~-^ | <bes e,> |
@@ -633,7 +634,6 @@ leftHand = \relative c''
   \repeat unfold 8 {aes8 ees' aes c aes c aes ees |}
 
   %legerement retenu
-  \once \override Score.RehearsalMark #'padding = #2.0
   <gis, gis,>1~-> | <gis gis,>~ | <gis gis,>~ | <gis gis,> |
   <gis gis,>~ | <gis gis,>~ | <gis gis,>~ | <gis gis,> |
   <gis gis,>~ | <gis gis,>~ | <gis gis,>~ | <gis gis,> |
@@ -815,7 +815,6 @@ pianoDynamics =
 
   %4/4
   s1*2\mf |
-  \once \override Voice.Hairpin #'bound-padding = #2.5
   s2-\pocoMarc s\< |
   s s\! |
   s4\pocosfz\> s2. |

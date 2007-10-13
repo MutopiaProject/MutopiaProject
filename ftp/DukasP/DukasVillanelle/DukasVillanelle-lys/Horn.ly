@@ -1,6 +1,6 @@
 \include "HornNotes.lyi"
 
-\version "2.11.23"
+\version "2.11.34"
 
 \paper
 {
@@ -21,7 +21,7 @@ instrument = "Horn"
   {
     \new Staff = horn
     {
-      \override Score.PaperColumn #'keep-inside-line = ##t
+      #(set-accidental-style 'modern)
       \set Score.skipBars = ##t
       \clef treble
       << \hornNotes \outline >>

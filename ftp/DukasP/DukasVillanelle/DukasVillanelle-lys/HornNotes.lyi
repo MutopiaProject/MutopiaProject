@@ -148,7 +148,6 @@ hornNotes = \relative c''
 
   dis1-_(\<^"(En echo)"_"(Doigtez un 1/2 ton au-dessus)" | dis-_ | << dis-_) {s2. s4\!} >> |
   %legerement retenu
-  \once \override Score.RehearsalMark #'padding = #2.3
   \times 2/3 {fis2-_(\> e-_ dis-_} | \tag #'horn \noBreak %NOTE: prevent tempo mark from going off the page.
   cis1~\! | \tag #'horn \noBreak
   \times 2/3 {cis2) dis-_ e-_} |
@@ -171,7 +170,6 @@ hornNotes = \relative c''
   e2 dis |
   fis e) |
   %revenez
-  \once \override Score.RehearsalMark #'padding = #1.5
   \times 2/3 {ees2-_ d-_ des-_} |
   \times 2/3 {c2-_ bes-_ g-_} |
   d1~->\mfp |
