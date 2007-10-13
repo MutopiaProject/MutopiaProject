@@ -1,0 +1,18 @@
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score . RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \smaller \bold $markp }
+#})
+
+outline =
+{
+  \tempoMark "Moderato"
+  \time 3/4
+  s2.*29 |
+  \tempoMark "un peu plus de Mouvt"
+  s2. | \noBreak s2. | \noBreak s2.*34 |
+  \tempoMark "a tempo"
+  s2.*28 | \bar "|."
+}
+
