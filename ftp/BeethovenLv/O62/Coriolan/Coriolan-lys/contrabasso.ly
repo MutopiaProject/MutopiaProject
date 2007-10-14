@@ -62,7 +62,7 @@ contrabasso =  \notes \relative c {
 	e2\sf r|
 	%45
 	es2\sf r|
-	des2. es4\sf|
+	d2. es4\sf|
 	d2. es4\sf|
 	d2. es4\sf|
 	d2. es4\sf|
