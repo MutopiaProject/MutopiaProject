@@ -5,7 +5,7 @@
 % 
 % typeset by Benjamin Esham <bdesham@gmail.com>
 %
-% This file was last updated on 2007-10-14.
+% This file was last updated on 2007-10-15.
 %
 % This music is part of the Mutopia project (http://www.MutopiaProject.org/).
 % Copyright (c) The Mutopia Project and Benjamin Esham, 2007.
@@ -25,6 +25,7 @@
 % HISTORY
 %
 % - 2007-10-14: initial release.
+% - 2007-10-15: fixed an incorrect note.  Thanks to Urs M. for pointing it out!
 
 soprano = \relative c''' {
 	\key g \major
@@ -129,7 +130,7 @@ bass = \relative c' {
 		g fis e d
 		cis4 b8 cis d4 cis8 d
 		b4 a8 b cis4 b8 cis
-		ais4 gis8 ais b a g f
+		ais4 gis8 ais b a g fis
 		g4 e a a,
 		d a' d2
 	}        
@@ -168,8 +169,8 @@ bass = \relative c' {
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"
 	maintainer = "Benjamin D. Esham"
 	maintainerEmail = "bdesham@gmail.com"
- footer = "Mutopia-2007/10/15-1076"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+	footer = "Mutopia-2007/10/16-1076"
+	tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 %%% for letter paper
