@@ -1,4 +1,7 @@
 % Created on Tue Sep 25 2007
+% 10/19/07 corrected octave f''->f' measure 5
+
+
 \version "2.11.33"
 %#(set-global-staff-size 17)
 \include "english.ly"
@@ -33,7 +36,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/10/14-1073"
+ footer = "Mutopia-2007/10/23-1073"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -89,15 +92,6 @@ F = \markup { \smaller \bold "f"}
 fF = \markup { \smaller \bold "ff"}
 sF = \markup { \smaller \bold "sf"} 
 
-% miscellaneous and reminders
-	harm = \once \override NoteHead #'style = #'harmonic 
-	octavado = \markup { \smaller \italic "arm. 12" }
-	octavados= \markup {\smaller\italic\column {"arm." "12" }}
-	%\mark \markup {\smaller \smaller \musicglyph #"scripts.segno"}
-	%\markup {\smaller \vcenter "to" \hspace #0.7 \smaller \vcenter \musicglyph #"scripts.coda"}
-	% \arpeggioUp \arpeggio
-	%segn = \markup { \smaller \vcenter "to" \hspace #0.7 \vcenter \smaller \musicglyph #"scripts.segno" }
-
 %% End shortcuts
 
 
@@ -117,7 +111,7 @@ upper = {
 		d4 a8 <fs' d> <e cs> <d b> |  %2nd note "cs" in original (!!)
 		cs4  cs8 <e cs>8 <d b> <b gs> |
 		a4. <es' gs,>8(^\> <fs a,>)\! <fs a,>_. |
-		<d fs,>4 <d fs>8 \acciaccatura{cs16[ d]} cs8.^\> b16\! cs8 |
+		<d fs,>4 <d fs,>8 \acciaccatura{cs16[ d]} cs8.^\> b16\! cs8 |
 		<d fs,>4 a8 <fs' a,>4 <fs a,>8 |
 		<fs cs>4 <fs cs>8 <gs cs,>8. fs16 <gs cs,>8 |
 		fs4.
@@ -141,28 +135,6 @@ upper = {
 	}
 }		
 
-middle = {
-	\relative c'' {
-		\override Staff.NoteCollision 
-		#'merge-differently-headed = ##t
-%% middle voice can interfere... use the following
-%		\override Stem #'length-fraction = #0.4
-	\repeat volta 2 {
-		\partial 8*4
-		s8 \grace s16 
-		\stemDown s8*3 |
-		s2.*5 |
-		\grace s8 s2.
-		\grace s8 s2.
-		s4.
-		}
-	\repeat volta 2 {
-		\partial 8*3
-		s4.
-		s2.*3
-	}
-	}
-}
 
 lower = {
 	\relative c' { 
@@ -196,50 +168,24 @@ lower = {
 	}
 }	
 
-staffClassicalGuitarJ = \new Staff 
-
-%%%  this moves the fingering closer to the note than default
-		\with { 
-			\override Fingering #'padding = #0.2 
-		}
-			{
-			\time 6/8
-			\key d \major
-%			\tempo 4 = 72
-%			\set Staff.instrumentName=\markup{\smaller\column{"Classical" "Guitar."}}
-			\set Staff.midiInstrument="acoustic guitar (nylon)"
-		%	\transposition c,
+staffClassicalGuitarJ = \new Staff {
+		\time 6/8
+		\key d \major
+		\set Staff.midiInstrument="acoustic guitar (nylon)"
 	<<
 		\override Staff.NoteCollision 
 		#'merge-differently-headed = ##t
-			\new Voice = A { \voiceOne  \upper }
-%			\new Voice = B { \voiceTwo  \middle }
-			\new Voice = C { \voiceFour  \lower }
+		\new Voice = A { \voiceOne  \upper }
+		\new Voice = C { \voiceFour  \lower }
 	>>
-%		\bar "|."  %% End the piece if no repeat at end
 }
 
 \score { 
 	\staffClassicalGuitarJ
-	}
+}
 
 		
-\layout  {
-		 \context { \Voice
-%%% provides thicker glissando and moves closer to notes
-			 \override Glissando #'thickness = #3
-			 \override Glissando #'gap = #0.05
-
-%%% adjust fingering size, distance from note
-			\override Fingering #'font-size = #-6
-			\override Fingering #'padding = #0.3
-		 	}
-	\context { \Score
-			\override MetronomeMark #'extra-offset = #'(-9 . 0)
-			\override MetronomeMark #'padding = #'3
-			}
-		
-}		
+\layout  {}
 
 \score {
 	\unfoldRepeats
