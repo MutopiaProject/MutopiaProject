@@ -1,4 +1,7 @@
 % Created on Fri Sep 28 2007
+% Correction 10/18/07 meas. 29 e->d (sos)
+% other extraneous material removed
+
 \version "2.11.33"
 %#(set-global-staff-size 17) 
 
@@ -32,7 +35,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/10/14-1061"
+ footer = "Mutopia-2007/10/23-1061"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 			
@@ -158,27 +161,6 @@ upper = {
 	}
 }		
 
-middle = {
-	\relative c'' {
-		\override Staff.NoteCollision 
-		#'merge-differently-headed = ##t
-%% middle voice can interfere... use the following
-%		\override Stem #'length-fraction = #0.4
-	\repeat volta 2 {
-		\partial 8*1
-		s8 |
-		e16 g e g d g e g | f g f g d g f g |
-		e g e g f4 | e16 g e g d4 |
-		e16_\F g e g d g e g | f g f g d g f g |
-		e8 g f d | e g c,
-				}
-	\repeat volta 2 {
-		\partial 8*1
-		s4.
-		s2.*3
-	}
-	}
-}
 
 lower = {
 	\relative c' { 
@@ -203,7 +185,7 @@ lower = {
 		d4 e8_\< | f4 g8\! | a4_\> g8 | f4 e8\! |
 		d4 e8 | d4 e8 | d4 s8 | s4. | e4_\F c8 |
 		d4 d8 | e4 e8 | a,4 a8 | d4 f8 |
-		e4 e8 | 
+		e4 d8 | 
 		<<{
 		\override Stem #'length-fraction = #0.45 
 			f g f}\\{g,4.}>> |
@@ -252,7 +234,6 @@ staffClassicalGuitarD = \new Staff
 		\override Staff.NoteCollision 
 		#'merge-differently-headed = ##t
 			\new Voice = A { \voiceOne  \upper }
-%			\new Voice = B { \voiceTwo  \middle }
 			\new Voice = C { \voiceFour  \lower }
 	>>
 %		\bar "|."  %% End the piece if no repeat at end
@@ -286,7 +267,7 @@ staffClassicalGuitarD = \new Staff
 	  \midi {
 	    \context {
 		    \Score
-	      		tempoWholesPerMinute = #(ly:make-moment 120 4)
+	      		tempoWholesPerMinute = #(ly:make-moment 72 4)
 	    }
 	    \context { 
 		    \Voice 
