@@ -12,7 +12,7 @@
 			\small \line { "This creation is released under a " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution-Share Alike 3.0" "license."}
 		}
 	}
-        mutopiacopyright = "Creative Commons Attribution-ShareAlike 3.0"
+	mutopiacopyright = "Creative Commons Attribution-ShareAlike 3.0"
 	mutopiacomposer = "MagnenatS"
 	mutopiapoet = "John Keats"
 	mutopiainstrument = "SATB choir a capella"
@@ -22,7 +22,7 @@
 	maintainer = "Stéphane Magnenat"
 	maintainerEmail = "stephane at magnenat dot net"
 	maintainerWeb = "http://stephane.magnenat.net"
- footer = "Mutopia-2007/07/22-1005"
+ footer = "Mutopia-2007/10/23-1005"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -188,7 +188,7 @@ tenorMusic =
 	e 2 \mf a 4 a
 	bes 2 f
 	f 4 \< bes c' b
-	c' 1 \!
+	a 1 \!
 	\bar "|."
 }
 
