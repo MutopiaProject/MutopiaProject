@@ -1,31 +1,28 @@
-% Updated to Lilypond 2.2.5 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org>
-% convert-ly -> Lilypond 2.4.2 by Chris Sawer <chris@mutopiaproject.org>
-% Last changed on 2/Jan/2005
+% Updated to Lilypond 2.2.5 by Ruud van Silfhout
+% convert-ly -> Lilypond 2.4.2 by Chris Sawer
+% convert-ly -> Lilypond 2.10.33 by Chris Sawer (plus minor fixes)
 
-\version "2.4.0"
-
-#(ly:set-option 'old-relative)
-% Measures to be fixed:  71
+\version "2.10.33"
 
 \header {
  title = "PEACHERINE RAG."
  composer = "by SCOTT JOPLIN."
 
  mutopiatitle = "Peacherine Rag"
- mutopiacomposer = "S. Joplin (1868-1917)"
+ mutopiacomposer = "JoplinS"
  mutopiainstrument = "Piano"
- date = "C. 1901"
+ mutopiasource = "Reproduction of original edition (1901)"
+ date = "c. 1901"
  style = "Jazz"
  copyright = "Public Domain"
 
  filename = "peacherine.ly"
- maintainer = "Antonio Palam\`a"
+ maintainer = "Antonio Palamà"
  maintainerEmail = "palama@inwind.it"
  maintainerWeb = ""
- lastupdated = "2005/Jan/02"
 
- footer = "Mutopia-2005/01/02-335"
- tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ footer = "Mutopia-2007/10/29-335"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 top =  \relative c'' {
  \override TextScript   #'padding = #2
@@ -42,6 +39,9 @@ top =  \relative c'' {
  c16[ c8 b16] c16[ d ees8] |
 % 4
  bes!8 bes~ bes16[ g aes a] |
+
+\break
+
 \repeat "volta" 2
 {
 % 5
@@ -83,7 +83,7 @@ top =  \relative c'' {
 >>
 |
 % 13
-\stemDown  bes8[ <ees g,>]<d g,>[<c g>] |
+\stemDown  bes,8[ <ees g,>]<d g,>[<c g>] |
 % 14
 <bes g>16[<ees g,>8<d g,>16]~<d g,>16[ c bes g] |
 % 15
@@ -100,7 +100,7 @@ top =  \relative c'' {
   }
 >>
 % 17
-<c ees f>8[ <c ees f>]<c ees fis>[<c ees fis>] |
+<c, ees f>8[ <c ees f>]<c ees fis>[<c ees fis>] |
 % 18
 <bes ees g>16[<bes ees g>8<bes bes'>16]<bes c e aes>8[<bes c e g>8] |
 % 19
@@ -111,7 +111,7 @@ top =  \relative c'' {
   \\ 
   {\stemUp  f'16[( ees)]} 
 >> 
-<aes f'>8
+<aes, f'>8
 }
 \alternative 
 {
@@ -158,7 +158,7 @@ r8 < d[ bes' d>[<d f d'><d f c'>] |
   }
 >>
 % 30
-r8 <a, ees' f>[<a ees' g><a ees' f>] |
+r8 <a ees' f>[<a ees' g><a ees' f>] |
 % 31
 r8 <ees' a c>[<ees a d><ees a c>] |
 % 32
@@ -181,7 +181,7 @@ r <d bes'>[<d a'><d g>] |
     \stemDown <ees, a>8 
   }
 >>
-<ees, a c>8 |
+<ees a c>8 |
 }
 \alternative
 {
@@ -233,7 +233,7 @@ r <d bes'>[<d a'><d g>] |
   r r8}
 >> |
 % 47
-\stemDown  bes8[ <ees g,>]<d g,>[<c g>] |
+\stemDown  bes,8[ <ees g,>]<d g,>[<c g>] |
 % 48
 <bes g>16[<ees g,>8<d g,>16]~<d g,>16[ c bes g] |
 % 49
@@ -250,7 +250,7 @@ r <d bes'>[<d a'><d g>] |
   }
 >>
 % 51
-<c ees f>8[ <c ees f>]<c ees fis>[<c ees fis>] |
+<c, ees f>8[ <c ees f>]<c ees fis>[<c ees fis>] |
 % 52
 <bes ees g>16[<bes ees g>8<bes bes'>16]<bes c e aes>8[<bes c e g>8] |
 % 53
@@ -261,16 +261,19 @@ r <d bes'>[<d a'><d g>] |
   \\ 
   {\stemUp  f'16[( ees)]} 
 >> 
-<aes f'>8 |
+<aes, f'>8 |
 % 54
 <g ees'>4<g des' ees>8 r |
+
+\break
+
 \key aes \major
 \repeat "volta" 2
 {
 % 55
 <ees ees'>16[ c' <ees, ees'> aes] c[ <ees, ees'>8 aes16] |
 % 56
-<ees c'>16[ a <ees c'><ees aes des>]~<ees aes des>[<ees aes c>8 aes16] |
+<ees c'>16[ a <ees c'><ees a des>]~<ees a des>[<ees a c>8 a16] |
 % 57
 <d, f aes! c>8[<d f aes bes>16<d f aes c>]~<d f aes c>[ bes' aes f] |
 % 58
@@ -298,7 +301,7 @@ r <d bes'>[<d a'><d g>] |
 % 63
 <ees, ees'>16[ c' <ees, ees'> aes] c[ <ees, ees'>8 aes16] |
 % 64
-<ees c'>16[ a <ees c'><ees aes des>]~<ees aes des>[<ees aes c>8 aes16] |
+<ees c'>16[ a <ees c'><ees a des>]~<ees a des>[<ees a c>8 a16] |
 % 65
 <d, f aes! c>8[<d f aes bes>16<d f aes c>]~<d f aes c>[ bes' aes f] |
 % 66
@@ -330,15 +333,18 @@ ees8)[ aes16 c] |
 }
 {
 % 71
-<c aes'>2~ | % Problem: Chord shoud have 2 short left ties
+<c, aes'>2~ | % Problem: Chord shoud have 2 short left ties
 % 72
 <c aes'>8 r \stemDown <aes' c aes'>8[ ees] \stemNeutral |
 }
 }
+
+\break
+
 \repeat "volta" 2
 {
 % 73
-\stemDown  g'16[ bes8 c16] des8[ g16 f] \stemNeutral |
+\stemDown  g16[ bes8 c16] des8[ g16 f] \stemNeutral |
 % 74
 <des ees>8<des ees>4ees,8 |
 % 75
@@ -425,7 +431,7 @@ bes!8 bes4 r8 |
 % 12
 \context Voice <<{\stemDown  g8[  <bes ees>] <bes ees>8 r} \\ {\stemUp g4 s4}>> |
 % 13
- ees,8[ <g bes ees>] bes,[ <g' bes ees>] |
+ ees8[ <g bes ees>] bes,[ <g' bes ees>] |
  ees8[ <g bes ees>] bes,[ <g' bes ees>] |
 % 15
  b,8[ <g' d' f>] g,[ <g' d' f>] |
@@ -443,13 +449,13 @@ bes!8 bes4 r8 |
 % 20
 {<ees, ees'>8[<g bes ees>] <g bes ees> r }
 % 21
-{<ees, ees'>8[<bes bes'>]<ees, ees'>[ f] } 
+{<ees ees'>8[<bes bes'>]<ees, ees'>[ f] } 
 }
 \key bes \major
 \repeat "volta" 2
 {
 % 22
- c,8[ <f c' ees>] f,[ <f' c' ees>] |
+ c'8[ <f c' ees>] f,[ <f' c' ees>] |
 % 23
  c8[ <f a ees'>] f,[ <f' a ees'>] |
 % 24
@@ -506,7 +512,7 @@ bes!8 bes4 r8 |
 % 46
 \context Voice <<{\stemDown  g8[  <bes ees>] <bes ees>8 r} \\ {\stemUp g4 s4}>> |
 % 47
- ees,8[ <g bes ees>] bes,[ <g' bes ees>] |
+ ees8[ <g bes ees>] bes,[ <g' bes ees>] |
  ees8[ <g bes ees>] bes,[ <g' bes ees>] |
 % 49
  b,8[ <g' d' f>] g,[ <g' d' f>] |
@@ -562,7 +568,7 @@ bes!8 bes4 r8 |
 }
 {
 % 71
-<aes, aes'>8[<ees ees'>]<f f'>16[<ees ees'>8<c c'>16] |
+<aes aes'>8[<ees ees'>]<f f'>16[<ees ees'>8<c c'>16] |
 % 72
 <aes aes'>8 r <aes aes'> r |
 }
@@ -570,7 +576,7 @@ bes!8 bes4 r8 |
 \repeat "volta" 2
 {
 % 73
-<bes bes'>8[<ees g des'>]<ees, ees'>[<ees' bes' des>] |
+<bes' bes'>8[<ees g des'>]<ees, ees'>[<ees' bes' des>] |
 % 74
 <g, g'>8[<ees' bes' des>]<ees, ees'>[<ees' g des'>] |
 % 75
@@ -621,7 +627,15 @@ bes!8 bes4 r8 |
   \context Staff = "down"
    \bottom
  >>
-\midi { \tempo 4 = 80 }
+
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 80 4)
+      }
+    }
+
+
 \layout {
    textheight = 240.\mm
 }
