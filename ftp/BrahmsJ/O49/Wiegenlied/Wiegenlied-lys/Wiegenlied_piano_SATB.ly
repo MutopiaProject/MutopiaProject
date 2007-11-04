@@ -9,15 +9,16 @@
   mutopiasource = "Indiana University: http://www.dlib.indiana.edu/variations/scores/bgn9130/index1.html"
   mutopiacopyright = "Public Domain"
   maintainer = "森 章吾"
+  moreInfo = "The PDF file downloads include editions for piano/soprano and piano/SATB, the latter contributed by Agnès Zietek."
 
- footer = "Mutopia-2007/09/25-1037"
+ footer = "Mutopia-2007/11/04-1037"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 #(set-global-staff-size 18)
 
   \version "2.10.0"
-  melody = \relative c'' {
+  soprano = \relative c'' {
   \clef treble
   \key es \major
   \time 3/4
@@ -40,6 +41,85 @@
     es'2 c8 as
     bes2 g8 es
     as4( \acciaccatura { bes16[ as] } g4) f4
+    es2 r8 s8
+    \bar ":|"
+  }
+  alto = \relative c'' {
+  \clef treble
+  \key es \major
+  \time 3/4
+    \partial 8
+    r8^"Zart bewegt"
+    r2.
+    r4 r4 es,8 es
+    es4. es8 es4
+    es4 r4 es8[( g])
+    bes4 g4. es8
+    d2 d4
+    d4 d d
+    d4 r d
+    f8[( es]) d4 f
+    g4 r4 es8 es8
+    es2 es8 es
+    es2 es8 es
+    d4 d d 
+    es2 es8 es
+    es2 es8 es
+    es2 es8 es
+    d4 es d
+    bes2 r8 s8
+    \bar ":|"
+  }
+  tenor = \relative c'' {
+  \clef "G_8"
+  \key es \major
+  \time 3/4
+    \partial 8
+    r8^"Zart bewegt"
+    r2.
+    r4 r4 bes,8 bes
+    bes4. bes8 bes4
+    bes4( g4) bes4
+    bes4 bes4. g8
+    aes2 bes4
+    bes4 bes bes
+    bes4 r bes
+    bes4 bes bes
+    bes4 r4 des8 des8
+    c2 es8 c
+    bes4( g4) bes8 bes
+    bes4 bes aes
+    g4( bes4) des8 des
+    c2 es8 c8
+    bes4( g4) bes8 bes
+    bes4 bes aes
+    g2 r8 s8
+    \bar ":|"
+  }
+
+  basse = \relative c'' {
+  \clef bass
+  \key es \major
+  \time 3/4
+    \partial 8
+    r8^"Zart bewegt"
+    r2.
+    r4 r4 es,,8 es
+    g4 es4 es4
+    g4( es4) es4
+    g4 es4 es4
+    f4( bes,) aes'8[( g8])
+    f4 bes,4 aes'8([ g8)]
+    f4( bes,4) aes'8([ g8)]
+    bes4 bes4 bes,4
+    es4 r4 bes'8 bes8
+    aes4( es4) aes8 aes8
+    g4( es4) es8 g8
+    f4 bes, bes
+    es4( g4) bes8 bes8
+    aes4( es4) aes8 aes8
+    g4( es) es8 g
+    f4 bes, bes
     es2 r8 s8
     \bar ":|"
   }
@@ -103,7 +183,17 @@
    Mor- gen früh, wenn Gott will,
    wirst du wie- der ge- weckt,
    Mor- gen früh, wenn Gott will,
-   wirst du wieder ge- weckt,
+   wirst du wieder ge- weckt.
+  }
+  verseOnebis = \lyricmode {
+   Gu- ten A- bend gut' Nacht,
+   mit Ro- sen be- dacht,
+   mit Näg'- lein be- steckt,
+   schlupf' un- ter die Deck':
+   Mor- gen früh, wenn Gott will,
+   wirst du wie- der ge- weckt,
+   Mor- gen früh, wenn Gott will,
+   wirst du wie- der ge- weckt.
   }
   verseTwo = \lyricmode {
    Gu- ten A- bend gut' Nacht,
@@ -113,15 +203,40 @@
    Schlaf nun se- lig und süss,
    schau' im Traum 'spa- ra- dies,
    Schlaf nun se- lig und süss,
-   schau' im Traum'sPa- ra- dies,
+   schau' im Traum'sPa- ra- dies.
+  }
+  verseTwobis = \lyricmode {
+   Gu- ten A- bend gut' Nacht,
+   von Eng'- lein be- wacht,
+   die zei- gen im Traum
+   dir Christ- kind- leins Baum:
+   Schlaf nun se- lig und süss,
+   schau' im Traum 'spa- ra- dies,
+   Schlaf nun se- lig und süss,
+   schau' im Traum's Pa- ra- dies.
   }
   \score {
      <<
      \new Staff = "mel" {<<
       \autoBeamOff
-      \melody >>
+      \soprano >>
     \addlyrics { \verseOne }
-    \addlyrics { \verseTwo }
+     }
+ 
+     \new Staff = "mel2" {<<
+      \autoBeamOff
+      \alto >>
+     }
+
+     \new Staff = "mel3" {<<
+      \autoBeamOff
+      \tenor >>
+    \addlyrics { \verseTwobis }
+     }
+
+     \new Staff = "mel4" {<<
+      \autoBeamOff
+      \basse >>
      }
 
      \new PianoStaff <<
