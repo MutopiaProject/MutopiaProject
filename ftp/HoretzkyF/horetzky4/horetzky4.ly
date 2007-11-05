@@ -21,7 +21,7 @@
 	{\line {Felix Horetzky} 1796-1870}}
 	meter = ""
 % MUTOPIA
- mutopiatitle = "Nº. 2. Russian Air."
+ mutopiatitle = "Nº. 4. The Last Rose of Summer."
  mutopiacomposer = "HoretzkyF"
  mutopiapoet = ""
  mutopiaopus = ""
