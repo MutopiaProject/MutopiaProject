@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/04-1093"
+ footer = "Mutopia-2007/11/05-1093"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -104,7 +104,7 @@ upper = \relative c''{
 			\times 2/3{d'8 c b} \times 2/3{b[ a g]} |
 		g4 r 
 	}
-	\repeat volta 2 {
+	
 		d'8. b16 |
 		<g' b,>4. <g b,>8 fs8. e16 |
 		d4 r d8. d16 |
@@ -118,7 +118,7 @@ upper = \relative c''{
 		<<b4 \\{\override Stem #'length-fraction = #0.23 g8[ e]}>>
 			\times 2/3{d'8[ c b]} \times 2/3{b a g} |
 		g4 r 	
-	}
+	
 }
 
 		
@@ -133,7 +133,7 @@ lower = \relative c' {
 		g,4 <e' c> <fs d> |
 		<b, g> r
 	}
-	\repeat volta 2 {
+	
 		r4 |
 		g8 b d g <c g e>4 |
 		<b g> g, r |
@@ -144,7 +144,7 @@ lower = \relative c' {
 		<g b,> g, b8 d |
 		g,4 <e' c>_\dol <fs d> |
 		<b, g> r
-	}
+	
 		
 }	
 
@@ -157,7 +157,7 @@ staffClassicalGuitar = \new Staff  {
 			\new Voice = A { \voiceOne  \upper }			
 			\new Voice = C { \voiceFour  \lower }
 		>>
-%		\bar "||"   %%  "|."
+		\bar "||"   %%  "|."
 }
 
 \score { 

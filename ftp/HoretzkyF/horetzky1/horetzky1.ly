@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/04-1090"
+ footer = "Mutopia-2007/11/05-1090"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -97,21 +97,18 @@ upper = \relative c''{
 		fs4 e8. fs16 d4 d |
 		e2 a,4 r |
 		d e8. fs16 g8. a16 fs8. g16 |
-		e4 e16_\< a, cs\! e_\f a4 r
-	}
-	\repeat volta 2 {
+		e4 e16_\< a, cs\! e_\f a4 r | \bar "||"
+		
 		\mark \seg
 		fs4 \grace {g16[ fs]} e8. fs16 d4 d |
 		e2 a,4 r |
 		r8. a16 d8. e16 fs8 a16. g32 e8 g16. fs32 |
 		d4 ~ d16 d fs a_\f d4 r^\fin
 	}
-	\repeat volta 2 {
 		<e, cs>4 <cs a>8. <d a>16 <e cs>4 <fs d> |
 		g2 b4 r |
 		fs8. g16 fs4 ~ fs8 e d cs |
 		d8. cs16 b4 bf' a8 r |
-	}
 }
 
 middle = \relative c'' {
@@ -124,19 +121,16 @@ middle = \relative c'' {
 		s1 |
 		s1 |
 		cs4 s cs s |
-	}
-	\repeat volta 2 {
+
 		a g8. a16 s2 |
 		s1 |
 		s1 |
 		s2 fs'4 s |
 	}
-	\repeat volta 2 {
 		s1 |
 		e2 e4 s |
 		d d ~ d8 cs b as |
 		s2 <e' cs>4 s |	
-	}
 }		
 
 lower = \relative c' { 
@@ -149,23 +143,19 @@ lower = \relative c' {
 		<g a,>2_\sf g4 r |
 		<a fs> <cs e,>8. <d d,>16 <e cs,>4 <d d,> |
 		a,2 a4 s
-	}
-	\repeat volta 2 {
+
 		\once \override DynamicText #'extra-offset = #'(-2.5 . 2.5)
 		d2_\p <fs d>4 <fs d> |
 		<g a,>2 g4 r |
 		<fs d>2 <a d,>4 <g a,> |
 		<fs d> r d r |	
 	}
-	\repeat volta 2 {
 		\once \override DynamicText #'extra-offset = #'(-2.5 . 2.5)
 		a2_\p g4 fs |
 		e2 g'4 r |
 		\once \override TextScript #'extra-offset = #'( 2.0 . 2.0 )
 		fs,_\dol fs fs fs |
 		b2 a4. r8_\toseg	
-	}
-
 }	
 
 staffClassicalGuitar = \new Staff  {
@@ -192,7 +182,7 @@ staffClassicalGuitar = \new Staff  {
  } }
 
 \score {
-%%	\unfoldRepeats
+	\unfoldRepeats
 	\staffClassicalGuitar
 	\midi {
 		\context {

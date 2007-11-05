@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/04-1099"
+ footer = "Mutopia-2007/11/05-1099"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -94,8 +94,8 @@ I = \once \override NoteColumn #'ignore-collision = ##t
 
 upper = \relative c''{
 	\set Staff.instrumentName=\markup{ \center-align 
-	{\smaller\bold "Nº. 10  " \smaller\smaller\italic "ANDANTINO. "
-	\tiny\italic"con molta" \tiny\italic"ESPRESS:"}}
+	{\smaller\bold "Nº. 10  " \tiny\smaller\italic 
+	{"ANDANTINO. " "con molta" "ESPRESS:"}}}
 	\repeat volta 2 {
 		\partial 8*1 <c a>16 <d b> |
 		<e c>8. <f d>16 <e c>8 <d b>4 <c a>8 |
@@ -103,7 +103,7 @@ upper = \relative c''{
 		a8. b16 c8 d16 b8. gs8 |
 		a4. a4\rest 
 	}
-	\repeat volta 2 {
+	
 		<c e,>16 <d g,!> |
 		<e c>4 c'8 <b g>4 <a f>8 |
 		g8. e16 <a c,>8 <g c,>4 e8 |
@@ -113,7 +113,7 @@ upper = \relative c''{
 		e4 a,8 gs4 gs8 |
 		a8. b16 c8 d16 b8. gs8 |
 		a4. a4\rest		
-	}
+	
 }
 		
 
@@ -127,7 +127,7 @@ lower = \relative c' {
 		c8. b16 a8 d4 e8 |
 		a, e' c a4
 	}
-	\repeat volta 2 {
+	
 		r8 |
 		<<\voiceFour c4\\{\voiceTwo s4 c'8_\dol c4 c8}>> |
 		<e c>4 f,8 e c r |
@@ -138,7 +138,7 @@ lower = \relative c' {
 		<g c,>4 f16 d e4 d8 |
 		c8. b16 a8 d4 e8 |
 		a, e' c a4
-	}
+	
 }
 
 staffClassicalGuitar = \new Staff  {
@@ -150,7 +150,7 @@ staffClassicalGuitar = \new Staff  {
 			\new Voice = A { \voiceOne  \upper }			
 			\new Voice = C { \voiceFour  \lower }
 		>>
-%%		\bar "||"   %%  "|."
+		\bar "||"   %%  "|."
 }
 
 \score { 
