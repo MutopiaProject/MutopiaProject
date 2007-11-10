@@ -288,7 +288,13 @@ print "<td><b>Date of composition:</b> $date</td></tr>\n";
 print "<tr><td><b>Source:</b> $source</td>\n";
 print "<td><b>Copyright:</b> $licence</td></tr>\n";
 
-print "<tr><td><b>Last updated:</b> $upyear/$month/$upday</td>\n";
+print "<tr><td><b>Last updated:</b> $upyear/$month/$upday";
+
+if (-s "$baseref$midrif$musicnm/$musicnm.log") {
+ print ". <a href=\"$baseref$midrif$musicnm/$musicnm.log\">View change history</a>";
+}
+
+print "</td>\n";
 print "<td><b>Music ID Number:</b> $id</td></tr>\n";
 
 print "<tr><td><b>Typeset using:</b> $software</td>\n";
