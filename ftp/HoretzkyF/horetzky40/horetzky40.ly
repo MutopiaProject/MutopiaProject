@@ -15,7 +15,7 @@
 
 \header {
 	title = "Nº. 40. Polish Air . Krakoviak."
-	subtitle = "from the Ballet of Alfred the Great."
+	subtitle = ""
 	subsubtitle = "60 National Airs of Different Nations"
 	composer = \markup{\column \right-align 
 	{\line {Felix Horetzky} 1796-1870}}
