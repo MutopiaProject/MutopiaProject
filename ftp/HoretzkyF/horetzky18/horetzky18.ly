@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/10-1108"
+ footer = "Mutopia-2007/11/17-1108"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -100,9 +100,9 @@ upper = \relative c''{
 	{\smaller\bold "Nº. 18  " \smaller\smaller\italic "ANDANTINO " 
 	}}
 	\partial 4*1 c8. d16 |
-	<e g,>8. <g g,>16 <d f,>8. <e g,>16 <c e,>8 <b g> <a f> <g e> |
+	<<{e8. g16}\\{g,4}>> <d' f,>8. <e g,>16 <c e,>8 <b g> <a f> <g e> |
 	a4 <d a> <d b> c8 d |
-	<e g,>8. <g g,>16 <d f,>8. <e g,>16 <c e,>8 <b g> <a f> <g e> |
+	<<{e8. g16}\\{g,4}>> <d' f,>8. <e g,>16 <c e,>8 <b g> <a f> <g e> |
 	a4 c c \bar "||"
 	d8 e |
 	\grace {g16}f8 e f g <a c,>4 e8. g16 |
@@ -115,9 +115,9 @@ lower = \relative c' {
 	\override Staff.NoteCollision 
 	#'merge-differently-headed = ##t
 	\partial 4*1 r4 |
-	c2 c |
+\once  \override Voice.NoteColumn  #'force-hshift = #0.4 c2 c |
 	f4 fs g8 f <g e> <g d> |
-	c,2 c |
+	\once \override Voice.NoteColumn  #'force-hshift = #0.4 c,2 c |
 	f4 <g e>8 d <e c>4
 	b'8 bf |
 	a4 a8 g f4 <g c,> |
