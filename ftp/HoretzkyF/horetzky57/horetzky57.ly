@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/14-1154"
+ footer = "Mutopia-2007/11/17-1154"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -108,11 +108,11 @@ upper = \relative c''{
 		<b gs>4 r |
 	}
 	a'8[ a a a] |
-	<fs d> <fs d> <fs d> gs16 as |
+	<fs d>[ <fs d> <fs d>] gs16 as |
 	b8[ b b a] |
-	gs16 a fs gs e8 a |
+	gs16 a fs gs e8\noBeam a |
 	a[ e e d] |
-	\grace d16 <cs a>16. <b d>32 <cs a>16. <d b>32 <e cs>8 <a cs,> |
+	\grace d16 <cs a>16.[ <b d>32 <cs a>16. <d b>32] <e cs>8 <a cs,> |
 	fs b <a cs,> <gs d> |
 	<a cs,>4 r
 }
@@ -128,12 +128,12 @@ lower = \relative c' {
 		e'4 r
 	}
 	<cs' a>8[ <d b> <e cs> <cs a>] |
-	d, fs d r |
+	d,[ fs d] r |
 	<ds' b>8[ <e cs> <fs ds> <fs ds>] |
-	e,,8 b' <gs' e> r |
+	<e,, e''>8 <b' ds'> <gs' e> r |
 	<cs a,>4 <gs e> |
 	a, r8 fs' |
-	d4 e8 e, |
+	<d d'>4 e8 e, |
 	a4 r
 }
 
