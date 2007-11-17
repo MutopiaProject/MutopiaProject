@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/14-1144"
+ footer = "Mutopia-2007/11/17-1144"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -103,7 +103,7 @@ upper = \relative c''{
 	\tiny\smaller\italic "con ESPRESS:"}}
 	\partial 8*1 d8 |
 	g4 fs8. e16 |
-	d4 e8 fs16. g32 |
+	<d g,>4 e8 fs16. g32 |
 	<b, g>8 <b g> c a |
 	g4 r8 d' |
 	<g b,>4 <fs d>8 <e c> |
@@ -149,14 +149,14 @@ lower = \relative c' {
 	g4. <a' fs>8 |
 	e4 a, |
 	fs8 b g a |
-	d4 c8 c |
+	d4 cs8 c |
 	b4 c16 d e fs |
 	g4 c, |
 	d8 e c d |
 	<b g>4 r |
 	<d g,>4. <a' d, fs,>8 |
 	<e e,>4 <a a,> |
-	fs,8 b g a |
+	fs,8 b g a! |
 	<fs' d>4 <g d>8_\cres ds |
 	<b' g e>4. <c a fs>8 |
 	g f <g e>8. cs,16_\fermata |
