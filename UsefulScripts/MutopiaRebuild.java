@@ -58,7 +58,7 @@ public class MutopiaRebuild
       }
 
       // Check to see if directory ends in -lys, ie. is multiple .ly file container
-      if (startDirectory.getName().endsWith("-lys")
+      if (startDirectory.getName().endsWith("-lys"))
       {
 	 recompileLyDirectory(startDirectory);
       }
