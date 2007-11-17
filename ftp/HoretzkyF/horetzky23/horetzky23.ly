@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/10-1113"
+ footer = "Mutopia-2007/11/17-1113"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -141,7 +141,7 @@ lower = \relative c' {
 	<b, g> b\rest |
 	
 	\once \override DynamicText #'extra-offset = #'(-2.5 . 2.5)
-	<e c>2_\f <g d>4 <g e> |
+	<e c>2_\f <g d>4 <c g e> |
 	g2 <g c,> |
 	<g g,>4 c, e, f |
 	<d' g,>2 <b g>4. b8\rest |
@@ -149,8 +149,8 @@ lower = \relative c' {
 	<e c>2. <g c,>4 |
 	<g c,> <g b,> <g c,> <g d> |
 	c,2 g4 c |
-	d c b a |
-	g f e f |
+	<g' d> <g c,> <g b,> <g a,> |
+	g, f e f |
 	<g' g,>2 <b f g,>2 |
 	<e, c>1 |
 }
