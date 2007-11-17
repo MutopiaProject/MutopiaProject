@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/10-1119"
+ footer = "Mutopia-2007/11/17-1119"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -104,10 +104,10 @@ upper = \relative c''{
 	\partial 4*1 g'8. a16 |
 %% segno
 	b4. \times 2/3 {a16 g fs} \grace a16 g4. d8 |
-	fs[ e] d[ c] c b r d |
-	b[ d] g[ a] b4 a8. g16 |
+	fs[ e] d[ c] c16 b8. r8 d |
+	b16[ d8.] g8[ a] b4 a8. g16 |
 	<g d>4 <a fs d> r g8 a |
-	b4. \times 2/3 {a16 g fs} \grace a16 \I g4 r8 <d g,>16 g |
+	b4. \times 2/3 {a16 g fs}\I g4 r8 <d g,>16 g |
 	fs8[ e] d[ c] \grace d16 c b8. r8 d |
 	b16 d8. g8 b d16 b8. a8. b16 |
 	g4\fermata \grace{\slurDown a16[( g fs])}
@@ -116,19 +116,19 @@ upper = \relative c''{
 	d'4 |
 	<d b> <c a>8 <b g> <b g >16 <a fs>8. 
 		<<{\times 2/3{a8 b c}}\\{fs,4}>> |
-	<b g>8[ <g e>] e[ c'] b8. c32 b <a fs d>8 b |
+	<b g>8[ <g e>] e[ c'] b8. c32 b  <a fs d>8 b \noBeam |
 	c4 g8 <b gs> b16 a c b a8 <g e bf> |
 	<g d b>2\fermata \grace{fs32[ g a]} <fs d>4\fermata g8. a16 |
-		b4. \times 2/3 {a16 g fs} \grace a16 g4. d8 |
-	fs[ e] d[ c] c b r d |
-	b[ d] g[ a] b4 a8. g16 |
-	<g d>4 <a fs d> r g8 a |
 	
-	b4. \times 2/3 {a16 g fs} \grace a16 \I g4 r8 <d g,>16 g |
+	b4. \times 2/3 {a16 g fs} \grace a16 g4. d8 |
+	fs[ e] d[ c] c16 b8. r8 d |
+	b16[ d8.] g8[ a] b4 a8. g16 |
+	<g d>4 <a fs d> r g8 a |
+	b4. \times 2/3 {a16 g fs}\I g4 r8 <d g,>16 g |
 	fs8[ e] d[ c] \grace d16 c b8. r8 d |
 	b16 d8. g8 b d16 b8. a8. b16 |
 	g4\fermata \grace{\slurDown a16[( g fs])}
-		\times 2/3{g8 a b} <a c,>8 <g b,>  
+		\times 2/3{g8 a b} <a c,>8 <g b,>
 
 }
  
