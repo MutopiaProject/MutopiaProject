@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/14-1147"
+ footer = "Mutopia-2007/11/17-1147"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -104,7 +104,7 @@ upper = \relative c''{
 	<e cs>4 <cs a>8 <cs a> |
 	<cs a>4. a8 |
 	b[ b b <cs a>] |
-	e8. d16 <cs a>8 r |
+	<<{e8. d16}\\{\override Stem #'length-fraction = #0.8 b4}>> <cs a>8 r |
 	<<{a'4-> gs8 gs16 b}\\
 	{\override Stem #'length-fraction = #0.8 cs,8 e d4}>> |
 	<<{a'4-> gs8 gs16 b}\\
