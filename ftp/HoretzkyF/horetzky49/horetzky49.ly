@@ -32,7 +32,7 @@
  copyright = "Public Domain"
  maintainer = "Stan Sanderson"
  moreInfo = "The Boije collection is found at http://www.muslib.se/ebibliotek/boije/"
- footer = "Mutopia-2007/11/14-1146"
+ footer = "Mutopia-2007/11/17-1146"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -112,7 +112,8 @@ upper = \relative c''{
 	e <e' gs, e> r8. \bar "||"
 	
 	e,16[ e8. e16] |
-	e8.[ fs16 gs8. a16] <<{b4. cs8}\\{ d,2}>> |
+	e8.[ fs16 gs8. a16] <<{b4. cs8}\\
+		{\override Voice.NoteColumn  #'force-hshift = #0.4 d,2}>> |
 	a'4 ~ \times 4/5 {\slurDown a16[ gs_. b( a)_. fs]}\slurUp 
 		<e cs>4 cs'8. b16 ( |
 	a8.[) gs16 fs8. es16(] fs8.)[ gs16 a8. b16] |
@@ -134,11 +135,11 @@ lower = \relative c' {
 	#'merge-differently-headed = ##t
 	\set fingeringOrientations = #'(left)
 	\partial 16*5 e16[ fs8. gs16] |
-	a4 <e a,> <e a>  r |
+	a4 <e a,> <e a,>  r |
 	a, <cs a> <cs a> r |
 	a' \once \override DynamicText #'extra-offset = #'(-3.0 . 2.5) 
 		<cs, a> d4. r8 |
-	a8. gs16 a8. gs16 a4 r |
+	a8.[ gs16 a8. gs16] a4 r |
 	gs' <gs e> <gs d> cs, |
 	b <c' a,> <b gs,> <b gs e,> |
 	a,2 b4 b |
