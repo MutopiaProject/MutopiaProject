@@ -1,0 +1,4 @@
+\lyricmode {
+In -- go -- ia -- te -- lo l'a -- ce -- ra -- te -- lo on -- do -- si vor -- ti -- ci mo -- stri del mar mo -- stri del mar in -- go -- ia -- te -- lo l'a -- ce -- ra -- te -- lo l'a -- ce -- ra -- te -- lo in -- go -- ia -- te -- lo l'a -- ce -- ra -- te -- lo l'a -- ce -- ra -- te -- lo on -- do -- si vor -- ti -- ci mo -- stri del mar mo -- stri del mar on -- do -- si vor -- ti -- ci mo -- stri del mar. 
+Sor -- ge -- te tem -- pe -- ste a -- tro -- ci_e fu -- ne -- ste le mem -- bra bar -- ba -- re a di -- vo -- rar le mem -- bra bar -- ba -- re a di -- vo -- rar sor -- ge -- te_o tem -- pe -- ste a -- tro -- ci_e fu -- ne -- ste le mem -- bra bar -- ba -- re a di -- vo -- rar a di -- vo -- rar a di -- vo -- rar.
+}

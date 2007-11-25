@@ -1,0 +1,4 @@
+\lyricmode {
+Pur ti strin -- go_o mi -- o di -- let -- to pur ti ba -- cio_o ca -- ro ben pur ti strin -- go_o mi -- o di -- let -- to pur ti ba -- cio_o ca -- ro ben ti strin -- go pur ti ba -- cio pur o mio di -- let -- to o ca -- ro ben o ca -- ro ben pur ti strin -- go pur ti ba -- cio pur ti ba -- cio o mio di -- let -- to ca -- ro ca -- ro ca -- ro ben ti ba -- cio o ca -- ro ben ti ba -- cio o ca -- ro ben. 
+Bel -- la gio -- ia del mio pet -- to bell' a -- mo -- re bell' a -- mo -- re del mio sen bel -- la gio -- ia bell' a -- mo -- re del mio pet -- to bel -- la gio -- ia bell' a -- mo -- re del mio sen bel -- la gio -- ia bell' a -- mo -- re del mio sen bell' a -- mo -- re del mio sen.
+}

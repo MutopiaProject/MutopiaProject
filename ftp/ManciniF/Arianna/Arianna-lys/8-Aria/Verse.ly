@@ -1,0 +1,4 @@
+\lyricmode {
+Strug -- gi -- ti_o co -- re_in pian -- to e pian -- gi si -- no_a tan -- to che tu non sia più cor che tu non sia più cor strug -- gi -- ti_o co -- re_in pian -- to e pian -- gi si -- no_a tan -- to che tu non sia più cor che tu non sia piu cor e pian -- gi si -- no_a tan -- to che tu non sia più cor non sia più cor.
+E se non puoi tu so -- lo pian -- ga con il tuo duo -- lo il mio tra -- di -- to tra -- di -- to_a -- mor e se non puoi tu so -- lo pian -- ga con il tuo duo -- lo il mio tra -- di -- to tra -- di -- to_a -- mor pian -- ga con il tuo duo -- lo con il tuo duo -- lo il mio tra -- di -- to tra -- di -- to_a -- mor il mio tra -- di -- to_a -- mor.
+}

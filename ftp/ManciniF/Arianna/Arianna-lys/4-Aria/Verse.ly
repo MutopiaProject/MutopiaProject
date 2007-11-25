@@ -1,0 +1,4 @@
+\lyricmode {
+Strin -- ga si dol -- ce no -- do strin -- ga si dol -- ce no -- do ar -- den -- te a -- mo -- re ne fred -- da ge -- lo -- si -- a ne fred -- da ge -- lo -- si -- a lo sciol -- ga ma -- i strin -- ga si dol -- ce no -- do si dol -- ce no -- do ar -- den -- te_a -- mo -- re ne fred -- da ge -- lo -si -- a ge -- lo -- si -- a lo sciol -- ga ma -- i ne fred -- da ge -- lo -- si -- a ge -- lo -- si -- a lo sciol -- ga ma -- i lo sciol -- ga ma -- i. 
+Più tu -- o che mio sa -- rà que -- sto mio co -- re più mi -- o che tuo mio ben sem -- pre sa -- ra -- i più tu -- o che mio sa -- rà que -- sto mio co -- re più mi -- o che tuo mio ben sem -- pre sa -- ra -- i più mi -- o che tuo mio ben sem -- pre sa -- ra -- i sem -- pre sa -- ra -- i.
+}
