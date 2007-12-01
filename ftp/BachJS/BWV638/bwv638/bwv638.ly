@@ -1,25 +1,23 @@
-\version "2.6.4"
+\version "2.10.33"
 
 \header {
  mutopiatitle = "Es ist das Heil uns kommen her"
  mutopiacomposer = "BachJS"
  mutopiaopus = "BWV 638"
  mutopiainstrument = "Organ"
- date = ""
- source = "Bach-Album, Ernst H. Wolfram (editor), 6787, C. F. Peters, Leipzig"
+ date = "1714"
+ source = "Autograph"
  style = "Baroque"
- copyright = "Public Domain"
+ copyright = "Creative Commons Attribution-ShareAlike 3.0"
  maintainer = "Urs Metzger"
  maintainerEmail = "urs@ursmetzger.de"
- lastupdated = "2006/Mar/17"
+ lastupdated = "2007/Dec/01"
 
  title = "Es ist das Heil uns kommen her"
  composer = "Johann Sebastian Bach"
  opus="BWV 638"
-
- footer = "Mutopia-2006/03/27-709"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
-
+ footer = "Mutopia-2007/12/01-709"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 \include "deutsch.ly"
@@ -28,27 +26,16 @@ global = {
    \key d \major
    \time 4/4
    #(set-accidental-style 'default)
+   \override Score.MetronomeMark #'transparent = ##t
 }
 
 #(set-default-paper-size "a4" 'landscape)
 
-halsup = {
-  \stemUp
-  \tieUp
-}
-
-halsdown = {
-  \stemDown
-  \tieDown
-}
-
-staffup = {
-   \change Staff = "right" \halsdown
-}
-
-staffdown = {
-   \change Staff = "left" \halsup
-}
+halsup        = { \stemUp \tieUp \slurUp }
+halsdown      = { \stemDown \tieDown \slurDown }
+shifttieupp   = { \once \override Tie #'extra-offset = #'( 0 . 0.9 ) }
+staffup       = { \change Staff = "right" \halsdown }
+staffdown     = { \change Staff = "left" \halsup }
 
 sopran = {
    \new Voice \relative a' {
@@ -76,7 +63,7 @@ sopran = {
       a4 g fis\fermata d
       e8 fis g4 fis e
       %% Takt 10 =============================================
-      \once \override Tie #'extra-offset = #'( 0 . 0.4)
+      \shifttieupp
       d4~ d8 cis d4\fermata \bar "|."
    }
 }
@@ -84,7 +71,7 @@ sopran = {
 alt = {
    \new Voice \relative g' {
       \global
-      \halsdown
+      \halsdown \dotsDown
       \partial 4 c,4\rest
       \repeat volta 2 {
          c4\rest e16\rest g fis e d fis e d g8 d~
@@ -103,10 +90,10 @@ alt = {
       d16 a' gis fis e4~ e16 fis e d cis e fis g
       a16 h a g fis8 e16 d cis4 d8. e16
       fis16 h a g fis g fis e d2
-      dis16 fis e dis d8 \staffdown ais h4 h~
-      h8 a g a~ a[ \staffup d8]~ d8. cis16
+      dis16 fis e dis e8 \staffdown ais, h4 h
+      h8 a g[ a~] a[ \staffup d8]~ d8. cis16
       %% Takt 10 =============================================
-      d16 e d c h8 a a4
+      d16 e d c \staffdown h8 a a4
    }
 }
 
@@ -117,7 +104,7 @@ tenor = {
       \repeat volta 2 {
          d16 fis e d cis h a g fis a g fis g c h a
          g16 a g fis e e' d c h d h g r d' cis h
-         a16 h a g fis g fis e d8 fis~ fis e~
+         a16 h a g fis g fis e d8 fis~ fis[ e~]
       }
       \alternative {
          \relative e {
@@ -134,7 +121,7 @@ tenor = {
       fis16 a g fis e g fis e dis e d e fis a g fis
       e16 fis e d \stemDown cis e d cis d fis g a h a h cis
       %% Takt 10 =============================================
-      fis,16 g a8~ a16 e fis g fis4\fermata
+      fis,16 g \halsdown a8~ \tempo 4 = 48 a16 e fis \tempo 4 = 34 g \tempo 4 = 18 fis4
    }
 }
 
@@ -156,12 +143,15 @@ left = {
 pedal = {
    \global
    \clef "bass"
+   #(override-auto-beam-setting '(end * * * *) 1 4)
+   #(override-auto-beam-setting '(end * * * *) 2 4)
+   #(override-auto-beam-setting '(end * * * *) 3 4)
+   #(override-auto-beam-setting '(end * * * *) 4 4)
    \relative d {
       \partial 4 d8 e
       \repeat volta 2 {
-         fis8 g a a, \stemUp d d, e' fis
-         \stemNeutral
-         g8 h, c d g,4 fis8 g
+         fis8 g a a, d d, e' fis
+         g8 h, c d g,4_\fermata fis8 g
          a8 fis h cis d h e d
       }
       \alternative {
@@ -173,10 +163,10 @@ pedal = {
          }
       }
       %% Takt 5 ==============================================
-      fis8 gis a a, e' e, a g
-      fis8 e d e a4 d8 cis
+      fis8 gis a a, e' e, a g!
+      fis8 e d e a4_\fermata d8 cis
       h8 cis d d, g4 d'8 e
-      fis8 h, e e, h'4 h8 a
+      fis8 h, e e, h'4_\fermata h8 a
       g8 fis e a d, d' g, a
       %% Takt 10 =============================================
       h8 fis g a d,4_\fermata
@@ -184,42 +174,52 @@ pedal = {
 }
 
 \score {
-   \new PianoStaff {
-      \set PianoStaff.instrument = \markup { \large \center-align {
-         "" "" "Manuale." "" "" "" "" "" "" "" "Pedale." } \hspace #1.3 }
-      <<
-         \context Staff = right {
-            \context Voice = right \right
-         }
-         \context Staff = left {
-                  \context Voice = left \left
-         }
-         \context Staff = pedal {
-            \context Voice = pedal \pedal
-         }
-      >>
-   }
-   \layout{}
-}
-
-\score {
-   \unfoldRepeats{
+   <<
       \new PianoStaff {
          <<
             \context Staff = right {
-               \set Staff.midiInstrument = "church organ"
                \context Voice = right \right
             }
             \context Staff = left {
-                     \set Staff.midiInstrument = "church organ"
-                     \context Voice = left \left
-            }
-            \context Staff = pedal {
-               \set Staff.midiInstrument = "contrabass"
-               \context Voice = pedal \transpose d d, \pedal
+               \context Voice = left \left
             }
          >>
       }
+      \context Staff = pedal {
+         \context Voice = pedal \pedal
+      }
+   >>
+
+   \layout{
+      indent = 1.0\cm
    }
-   \midi{ \tempo 4 = 62 }
+}
+
+\score {
+   \unfoldRepeats {
+      <<
+         \context Staff = right {
+            \set Staff.midiInstrument = "church organ"
+            \right
+         }
+         \context Staff = left {
+            \set Staff.midiInstrument = "church organ"
+            \left
+         }
+         \new Staff {
+            \set Staff.midiInstrument = "church organ"
+            \pedal
+         }
+         \new Staff {
+            \set Staff.midiInstrument = "recorder"
+            \transpose d d, \pedal
+         }
+      >>
+   }
+   \midi {
+      \context {
+         \Score
+         tempoWholesPerMinute = #(ly:make-moment 62 4)
+      }
+   }
 }
