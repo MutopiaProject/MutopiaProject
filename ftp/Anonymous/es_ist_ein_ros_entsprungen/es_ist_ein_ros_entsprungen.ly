@@ -3,7 +3,7 @@
 \header {
 	title = "Es ist ein Ros’ entsprungen"
 	composer = "arr: Michael Praetorius, 1609"
-	mutopiacomposer = "Traditional"
+	mutopiacomposer = "Anonymous"
 	mutopiaarranger = "arr: Michael Praetorius, 1609"
 	mutopiainstrument = "Voice SATB"
 	date = "1599/1609"
