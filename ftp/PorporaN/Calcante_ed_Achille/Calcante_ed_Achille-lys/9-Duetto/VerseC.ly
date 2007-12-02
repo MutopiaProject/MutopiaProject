@@ -1,0 +1,3 @@
+\lyricmode {
+Ve -- glia_il ciel in mia di -- fe -- sa ve -- glia_il cie -- lo ve -- glia_il cie -- lo_in mia di -- fe -- sa ve -- glia_il cie -- lo_in mia di -- fe -- sa non mi fan d'u -- ma -- na_of -- fe -- sa le mi -- nac -- cie spa -- ven -- tar le mi -- nac -- cie spa -- ven -- tar spa -- ven -- tar Ve -- glia_il cie -- lo_in mia di -- fe -- sa_in mia di -- fe -- sa ve -- glia_il cie -- lo_on mia di -- fe -- sa non mi fan d'u -- ma -- na_of -- fe -- sa le mi -- nac -- cie spa -- ven -- tar le mi -- nac -- cie spa -- ven -- tar spa -- ven -- tar. ti fa -- rò pro -- fan che sei pro -- fan che sei pro -- fan che se -- i i de -- cre -- ti de -- gli de -- i sul mio la -- bro ri -- spet -- tar ri -- spet -- tar ri -- spet -- tar.
+}
