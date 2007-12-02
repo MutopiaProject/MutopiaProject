@@ -141,7 +141,7 @@ if ($licence eq "Public Domain") {
 if ($lilypondversion eq "") {
  $software = "<i>Not known</i>";
 } else {
- $software = "<a href=\"http://www.lilypond.org\">GNU LilyPond</a>, version $lilypondversion";
+ $software = "<a href=\"http://www.lilypond.org\">LilyPond</a>, version $lilypondversion";
 }
 
 @collectionName;
