@@ -29,7 +29,7 @@ sub getRDFFileList {
     my $basedir = shift;
     chomp (my $olddir = `pwd`);
     chdir $basedir or die "Cannot chdir to $basedir: $!";
-    my @files = sort {byFileName($a,$b)} `find -name "*.rdf"`; # XXX File::Find
+    my @files = sort {byFileName($a,$b)} `find . -name "*.rdf"`; # XXX File::Find
     s/\s*//g for @files;
     die "Can't find any *.rdf files below $basedir" unless @files;
     chdir $olddir or die "Cannot return to directory $olddir: $!";
