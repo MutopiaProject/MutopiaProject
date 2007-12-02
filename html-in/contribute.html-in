@@ -14,52 +14,65 @@
 
 <h2>How to contribute to Mutopia</h2>
 
-<p>Obviously without all the people contributing music to Mutopia, it wouldn't exist! If you would like to help the world of music by entering some of history's great music, then here's how.</p>
+<p>The Mutopia archive consists entirely of contributions from people around the world. If you would like to contribute, there are several ways in which you are able to help. These include <a href="#typeset">typesetting music</a> that we don't already have, <a href="#proofread">proofreading music</a> to check for errors, and <a href="#update">updating music</a> to a newer version of LilyPond for better quality output and easier updating.</p>
 
-<p>We only accept music typeset using <a href="http://lilypond.org">LilyPond</a>. However, if you use other typesetting software which can export in MusicXML format, then you should be able to import the music into LilyPond. See <a href="http://lilypond.org/web/documentation">the LilyPond documentation</a> for more information.</p>
+<h3><a name="typeset">Typeset Music</a></h3>
 
-<h3>Check Projects in Progress</h3>
+<p>New contributions to Mutopia are always welcome. Simply typeset the music using the free <a href="http://lilypond.org">LilyPond</a> software, <a href="#technical">add the necessary headers</a>, and send it to us at &lt;<b>contributions (at) MutopiaProject.org</b>&gt;. It is a good idea to check that the music is not already present in Mutopia, and that no one else is working on it (using the <a href="projects.html">projects in progress page</a>). Note that it is vital to check that the source you have used is out of copyright.</p>
 
-<p>It's a good idea to check the archive itself and the <a href="projects.html">projects in progress page</a> to make sure that you're not about to enter some music that someone's already entering or has entered.</p>
+<p>We reserve the right to refuse files submitted to Mutopia if we feel that they are in any way unsuitable.</p>
 
-<h3>Check Copyright Status of Source</h3>
+<h4>Check Copyright Status of Source</h4>
 
-<p>If you are contributing music you have composed yourself, then this section doesn't apply to you. If you are contributing classical music, however, even if it is your own arrangement, then you need to check that the source of the music you're going to enter is out of copyright. For our purposes it has to meet the following criteria:</p>
+<p>If you are contributing music you have composed yourself, then this doesn't apply to you. If you are contributing classical music, however, even if it is your own arrangement, then you need to check that the source of the music you're going to enter is out of copyright. For our purposes it has to meet the following criteria. This ensures that the music is in the public domain in as much of the world as possible.</p>
 
 <ol>
-<li>The composer, lyricist, arranger and editor <b>all</b> must have been dead for more than seventy years.</li>
+<li>The composer, lyricist, arranger and editor must <b>all</b> have been dead for at least seventy complete years.</li>
 <li>The work must have been published prior to 1923.</li>
 </ol>
 
 <p>For example, our version of Handel's opera <a href="cgibin/piece-info.cgi?id=119">Giulio Cesare</a> (HWV 17) was edited by Friedrich Chrysander, and the source edition was published in 1875. Handel died in 1759, and Chrysander died in 1901, so this edition is in the public domain. More information about these rules is available on the <a href="http://en.wikipedia.org/wiki/Public_Domain">Wikipedia Public Domain page</a>.</p>
 
-<p>Incidentally, it is worth remembering that some older editions are heavily edited and can be rather error prone. For all new contributions we insist that you tell us the source you used when transcribing the music. This is to ensure as far as possible that all contributions are from out-of-copyright sources. If you spot any possible copyright violations, please let us know.</p>
+<p>Incidentally, it is worth remembering that some older editions are heavily edited and can be rather error prone. For all new contributions we insist that you tell us the source you used when transcribing the music. This is to ensure as far as possible that all contributions are from public domain sources. Note that contributions listing a facsimile/reproduction source are discouraged as they may have additional legal complications. If you spot any possible copyright violations, please let us know.</p>
 
-<h3>Typeset the Music</h3>
+<h4>Licensing</h4>
 
-<p>Enter the music using the music typesetting software <a href="http://lilypond.org/">LilyPond</a>. It is free in the sense that you don't have to pay for it, and also that the source code is available for you to look at, recompile and even improve. It is available for both Unix-like operating systems (eg. Linux) as well as Mac OS X and Windows. If you need help installing LilyPond then we recommend you subscribe to one or more of the mailing lists dedicated to it - more information is on the LilyPond web pages. If you have already entered music in another free typesetting program then it may be possible to convert it into LilyPond format. Check LilyPond's documentation for more information.</p>
+<p>It is up to the contributor to decide what terms the music is released under. The three possibilities are described on the <a href="legal.html">license details page</a>. By submitting music to Mutopia, you are declaring that you have the legal right to release the work under the terms chosen.</p>
 
-<p>Decide what terms you want to release the music under. The three possibilities are described on the <a href="legal.html">license details page</a>. By submitting music to Mutopia, you are declaring that you have the legal right to release the work under the terms chosen.</p>
+<h4>Why LilyPond?</h4>
 
-<h3>Add Mutopia Headers</h3>
+<p>LilyPond (<a href="http://lilypond.org">lilypond.org</a>) is free in the sense that you don't have to pay for it, and also that the source code is available for you to look at, recompile and even improve. It is available for both Unix-like operating systems (eg. Linux, Mac OS X) as well as Windows. If you have already entered music in another free typesetting program then it may be possible to convert it into LilyPond format. Check LilyPond's documentation for more information.</p>
 
-<p>When you are satisfied that the music is fully entered and looks good, you are ready to add the extra few finishing touches needed for Mutopia. These are detailed on the rest of this page.</p>
+<h3><a name="proofread">Proofread/Check Music</a></h3>
 
-<h3>Send us the Music</h3>
+<p>If you find any errors in the music on Mutopia, please send us an e-mail (&lt;<b>contributions (at) MutopiaProject.org</b>&gt;). Simply describe the mistake in as much detail as necessary. We will check the error and correct the version on Mutopia. No technical knowledge of LilyPond is required, although if you want to supply an updated .ly file you are welcome to do so.</p>
 
-<p>If all this seems a little complicated then please don't be put off - it's not really that hard! We're looking forward to receiving your contribution to the world of free music for all. Contributions should be sent, by e-mail, to &lt;<b>contributions (at) MutopiaProject.org</b>&gt;.</p>
+<p>The same goes for mistakes or inconsistencies in the metadata (eg. piece title, composer, opus, etc.) on Mutopia. If you spot any problems, please do let us know. They are easily corrected.</p>
 
-<p>We reserve the right to refuse files submitted to Mutopia if we feel that they are in any way unsuitable.</p>
+<h3><a name="update">Update LilyPond Syntax</a></h3>
+
+<p>One of the goals of Mutopia is not only to provide free sheet music of high quality, but to enable people to make their own arrangements, transpositions or editions of that sheet music with the minimum of difficulty. This is made challenging by the fact that LilyPond is not entirely backwards compatible with .ly files produced for earlier versions. Although those earlier versions remain available for free, they don't always run easily on modern operating systems.</p>
+
+<p>Consequently, it is helpful if experienced LilyPond users could help us update some of the files in Mutopia which use very old versions of LilyPond. This also allows pieces to take advantage of the improvements in LilyPond's rendering over the last few years. If you are willing and able to do so, please get in touch. Searching for music by LilyPond version is possible from the <a href="advsearch.html">advanced search page</a>.</p>
 
 [[ BREAK() ]]
 
-<p>Firstly, <i>please</i> check that the file compiles cleanly with LilyPond at both Letter and A4 paper sizes. Please consider the users of the music - don't pick a very small font size unless it is necessary, and try to avoid "widowed" lines of music on the last page, and nasty page turns, if possible! If there are any serious problems with the file, we will probably ask you to fix them and resubmit.</p>
+<h2><a name="technical">New Contributions - Technical Notes</a></h2>
 
-<p>The LilyPond <i>version</i> should be defined in the .ly file, using the <code>\version</code> statement.</p>
+<p>Please check that the file compiles cleanly with LilyPond at both Letter and A4 paper sizes. We use the following commands for compiling:</p>
 
-<p>You next need to ensure that the music will generate one or more MIDI files when run through LilyPond. This just means adding a <code>\midi</code> section towards the end of the .ly file; see LilyPond's documentation for more information.</p>
+<ul>
+<li><code>lilypond -dno-point-and-click -dpaper-size=\"a4\" filename.ly</code></li>
+<li><code>lilypond -dno-point-and-click -dpaper-size=\"letter\" filename.ly</code></li>
+</ul>
 
-<p>You also need to make sure that your .ly file <i>does not</i> have any papersize settings which will interfere with the commands we'll use to compile the file (see above). The only exception is if your music should be produced in landscape format, eg. for organ music.</p>
+<p>Please consider the users of the music - don't pick a very small font size unless it is necessary, and try to avoid "widowed" lines of music on the last page, and nasty page turns, if possible! If there are any serious problems with the file, we will probably ask you to fix them and resubmit.</p>
+
+<p>The LilyPond version should be defined in the .ly file, using the <code>\version</code> statement.</p>
+
+<p>Ensure that the music will generate one or more MIDI files when run through LilyPond. This just means adding a <code>\midi</code> section towards the end of the .ly file; see LilyPond's documentation for more information.</p>
+
+<p>Ensure that your .ly file does not have any papersize settings which will interfere with the commands we'll use to compile the file (see above). The only exception is if your music should be produced in landscape format, eg. for organ music.</p>
 
 <p>Finally, define the following headers in the \header section. These will be used for the title, composer, etc. when the music is displayed on Mutopia. Please make sure they're filled in carefully in the described format, in English.</p>
 
@@ -100,7 +113,7 @@
 </tr>
 <tr>
  <td><i>source</i></td>
- <td>The out-of-copyright source edition, with date if possible, eg. "Schirmer, 1880".</td>
+ <td>The public domain source edition, with date if possible, eg. "Schirmer, 1880".</td>
 </tr>
 <tr>
  <td><i>style</i></td>
@@ -139,6 +152,10 @@
  <td>Extra information to be included on the piece's page in Mutopia. Markup in XHTML 1.0 format is permitted.</td>
 </tr>
 </table>
+
+<p>Contributions should be sent, by e-mail, to &lt;<b>contributions (at) MutopiaProject.org</b>&gt;.</p>
+
+<p>We reserve the right to refuse files submitted to Mutopia if we feel that they are in any way unsuitable.</p>
 
 [[ TAIL("contribute") ]]
 </body>
