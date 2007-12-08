@@ -9,13 +9,70 @@ tempoMark = #(define-music-function (parser location markp) (string?)
   \mark \markup { \bold $markp }
 #})
 
+twox = #(define-music-function (parser location x) (ly:music?)
+#{
+  \repeat unfold 2 $x
+#})
+
+threex = #(define-music-function (parser location x) (ly:music?)
+#{
+  \repeat unfold 3 $x
+#})
+
+fourx = #(define-music-function (parser location x) (ly:music?)
+#{
+  \repeat unfold 4 $x
+#})
+
+fivex = #(define-music-function (parser location x) (ly:music?)
+#{
+  \repeat unfold 5 $x
+#})
+
+sixx = #(define-music-function (parser location x) (ly:music?)
+#{
+  \repeat unfold 6 $x
+#})
+
+sevenx = #(define-music-function (parser location x) (ly:music?)
+#{
+  \repeat unfold 7 $x
+#})
+
 outlineMvtI =
 {
   \time 4/4
   \tempoMark "Allegro"
   \partial 4 s4
-  s1*143 |
+  %s1*143 |
+  s1*21 |
+
+  \mark "A"
+  s1*16 |
+
+  \mark "B"
+  s1*13 |
+
+  \mark "C"
+  s1*21 |
+
+  \mark "D"
+  s1*26 |
+
+  \mark "E"
+  s1*16 |
+
+  \mark "F"
+  s1*11 |
+
+  \mark "G"
+  s1*19 |
   \bar "|."
+}
+
+midiOutlineMvtI =
+{
+  \tempo 4 = 112
 }
 
 outlineMvtII =
@@ -23,7 +80,30 @@ outlineMvtII =
   \time 6/8
   \tempoMark "Allegro"
   \partial 8 s8
-  s2.*141 |
+  %s2.*141 |
+  s2.*24 |
+
+  \mark "H"
+  s2.*34 |
+
+  \mark "I"
+  s2.*34 |
+
+  \mark "K"
+  s2.*26 |
+
+  \mark "L"
+  s2.*23 |
   \bar "|."
+}
+
+midiOutlineMvtII =
+{
+  \tempo 4. = 80
+}
+
+spacer =
+{
+  r8*5
 }
 

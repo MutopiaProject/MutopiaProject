@@ -1,0 +1,446 @@
+\include "defs.lyi"
+
+pianoMvtIRight = \relative c''
+{
+  \key d \major
+  a4
+  d4.( fis8 e d cis d) |
+  e4.( cis8 a4) a |
+  e'4.( g8 fis e d e) |
+  e4( fis) r d8( fis) |
+  a2 g8( fis e d) |
+  cis8( b) b2 g'8( e) |
+  a8.( fis16) d8 d d4 \acciaccatura fis16 e16 d e fis |
+  d4 r8 a'16 fis g e cis a g' e cis' a |
+  <d d,>4 r8 a16 fis g e cis a g' e cis' a |
+  d, d' cis, cis' b, b' a, a' g, g' fis, fis' e, e' d, d' |
+  <a a'>4 <a a,>4 r a4 |
+  d8 d fis16( g a fis) e4.( d8) |
+  g8-. b,( cis d e8.) cis16 a8 a |
+  d8 d fis16( g a fis)
+    <<
+      \new Voice {\voiceOne e8.( fis16 e8 fis)}
+      \new Voice {\voiceTwo r8 cis4( d8)}
+    >> |
+  <g b,>8( <b, g> <d fis,> <cis e>) <cis e,>4( <d fis,>8) a |
+  <d fis,>8 <d fis,> << {fis16( g a fis) e4.( fis8)} \\ {d4 cis4.( d8)} >> |
+  <b e g>8( <b e,> <cis e,> <d fis,>) << {e8.( cis16 a8) a} \\ {a4 cis,} >> |
+  <d' d,>8 <d fis,> << {fis16( g a fis)} \\ {d4} >> <e cis>8.( <fis d>16 <e cis>8) <fis d> |
+  <g e b>8 <b, e,> <d fis,>( <cis e,> <d fis, d>) a'16 fis g e a, cis' |
+  d8 a16 fis g e a, cis' d a cis a d a cis a |
+  d8 d,, d d d4 r |
+
+  %A
+  r8 \repeat unfold 7 {<d a fis>8} |
+  r8 \repeat unfold 7 {<cis a g>8} |
+  r8 \repeat unfold 7 {<cis a g>8} |
+  r8 <cis a g>( <d a fis>) \repeat unfold 5 {<d a fis>8} |
+  r8 \repeat unfold 3 {<d a fis>} r8 \repeat unfold 3 {<d a d,>} |
+  r8 \repeat unfold 3 {<d g, d>} r8 <d b>( <e cis a>) <e cis a>-. |
+  <fis d a>8-. r <a fis a,>-. r <fis d a>-. r <cis a g>-. r |
+  <d a fis>8 a''16 fis g e a, cis' d8 a16 fis g e a, cis' |
+  d8 \repeat unfold 7 {<d,, a fis>} |
+  <cis a e> e'16 cis d b e, gis' a8 e16 cis d b e, gis' |
+  a8 \repeat unfold 3 {<e, cis a>} \repeat unfold 4 {<e a, e>} |
+  <e gis, e>8 d'16 gis <b gis>8 <cis a>\trill <d b> d,16 gis b8 <cis a>\trill |
+  <d b>4 r <d,, b gis>2( |
+  <cis a>8) \repeat unfold 3 {<cis a>} r8 \repeat unfold 3 {<dis a>8} |
+  <e gis,>8 e16 e' gis, gis' b, b' e, e' gis, gis' b, b' gis, gis' |
+  e,8 <gis e b> e, e e4 r |
+
+  %B
+  \repeat unfold 2
+  {
+    r8 \repeat unfold 3 {<cis a e>} r8 \repeat unfold 3 {<e a, e>} |
+    \repeat unfold 2
+    {
+      r8 \repeat unfold 3 {<d gis, e>}
+    } |
+  }
+  a'8 b16 cis d e fis gis a8 a16 e b'8 b16 e, |
+  cis'8 \repeat unfold 3 {<a, e cis>} r \repeat unfold 3 {<e cis a>} |
+  r8 \repeat unfold 3 {<a fis b,>} r \repeat unfold 3 {<b, a fis>} |
+  r8 \repeat unfold 3 {<cis a e>} r \repeat unfold 3 {<gis' d b>} |
+  <a cis,>8 a'~ a16 cis b a gis b a gis fis a gis fis |
+  e4 r r8 \repeat unfold 3 {<e, cis a>} |
+  r8 \threex <fis b,a> r \threex <dis c a> |
+  <e cis a> \repeat unfold 7 {<cis' a e>} |
+  << {s1(} {\repeat unfold 4 {<b a>16 e,} \repeat unfold 4 {<b' gis> e,}} >>
+
+  %C
+  a4) r8 e'16 cis d b gis e d' b gis' e |
+  <a a,>4 r8 e16 cis d b gis e d' b gis' e |
+  a a' cis, cis' a, a' eis, eis' fis, fis' a, a' fis, fis' cis, cis' |
+  d,8 r d16 b' d, b' cis, a' cis, a' b, gis' b, gis' |
+  \repeat unfold 2
+  {
+    <a a,>4 r8 e16 cis d b gis e d' b gis' e |
+  }
+  a a' cis, cis' a, a' eis, eis' fis, fis' a, a' fis, fis' cis, cis' |
+  d,8 r d16 b' d, b' cis, a' cis, a' b, gis' b, gis' |
+  a a' cis, cis' a, a' eis, eis' fis, fis' a, a' fis, fis' cis, cis' |
+  d,8 r d16 b' d, b' cis, a' cis, a' b, gis' b, gis' |
+  <a a,>4 r r e |
+  a4.( cis8 b a gis a) |
+  b4.( gis8 e4) e |
+  b'4.( d8 cis b a b) |
+  b4( cis) r a8( cis |
+  e2 d8 cis b a) |
+  a( g) r g g( fis) r e |
+  e( d) r fis r b r eis, |
+  g( fis) r ais r b r eis, |
+  g( fis) r ais r b r eis, |
+  g( fis) r fis r fis r fis |
+
+  %D
+  fis4 r r2 |
+  r4 c'16 a fis a \repeat unfold 4 {c a} |
+  c4 r r2 |
+  r8 \threex <b,, g d> r \threex <d b g> |
+  r \threex <g c, g> r \threex <g cis, bes> |
+  <g d b>4 r r d' |
+  g4.( b8 a g fis g) |
+  a4.( fis8 d4) d |
+  a'4.( c8 b a g a) |
+  a4( b) <b, g>8( <g e> <a fis> <fis dis>) |
+  e \sevenx <e b g> |
+  \twox {r \sevenx <dis b a> |}
+  <dis b~ a>4( <e b g>) r8 \threex g'-. |
+  \twox {g16( a) g fis g( e) cis a} |
+  fis'( g) fis e fis( d) fis( d) <a' fis d a>4 r8 a |
+  \twox {a16( b) a gis a( fis) d a} |
+  g'( a) g fis g( e) cis e <g e cis a>4 r8 g |
+  \twox {g16( a) g fis g( e) cis a} |
+  <fis' d a>8 a16 a' b, b' a, a' g, g' fis, fis' e, e' d, d' |
+  <a a,>8 a16 b \appoggiatura d16 cis8 b16 a d, d' a, a' fis, fis' d, d' |
+  <a a,>8 a'16 b \appoggiatura d16 cis8 b16 a d, d' a, a' fis, fis' d, d' |
+  <a a,>4 r r8 <a e>16( <cis a> <e cis>8.) <e cis>16 |
+  <e cis>4 r r8 <cis a>16( <e cis> <g e>8.) <g e>16 |
+  <g e>4 r8. <cis a g e>16 <cis a g e>4 r8. <e cis a g>16 |
+  <e cis a g>8 <d fis,>-. <cis e,>-. <b d,>-. <a cis,>-. <g b,>-. <fis a,>-. <e g,>-. |
+
+  %E
+  <d fis,> \sevenx <d, a fis> |
+  \twox {r8 \sevenx <cis a g>} |
+  r8 <cis a g>( <d a fis>) \fivex <d a fis> |
+  r8 \threex <d a fis> r \threex <d a d,> |
+  r8 \threex <d b d,> r <d b>( <e cis a>) <e cis a>-. |
+  <fis d a> r <a fis a,> r <fis d a> r <cis a g> r |
+  <d a fis> a''16 fis g e a, cis' d8 a16 fis g e a, cis' |
+  d8 \threex <d,, a d,> r \threex <d a fis> |
+  <d b g> d'16 b c a d, fis' g8 d16 b c a d, fis' |
+  g8 \threex <g, b, g> r \threex <fis b, a> |
+  <e b g>8 e'16 g b8 <dis, b> <e b> e16 g b8 <dis, b> |
+  <e b> \threex <e, b g> r8 \threex <e b g> |
+  << {e2.( d4)} \\ b1 >> |
+  <cis a>8 a16 a' cis, cis' e, e' a, a' cis, cis' e, e' cis, cis' |
+  <a a,>8 <a e cis a> a,, a a4 r |
+
+  %F
+  r8 \fivex <cis a e> <cis a e>( <e a, g>) |
+  r8 \sevenx <d a fis> |
+  r8 \fivex <cis a e> <cis a e>( <e a, g>) |
+  a'16( g) fis-. g-. a8-. a-. a16( b) cis-. d-. a8-. a-. |
+  \twox {b16( a) g-. fis-. e8-. r} |
+  a16( g) fis-. g-. a8-. a-. a16( b) cis-. d-. a8-. a-. |
+  b16( a) g-. fis-. e8-. r b'16( a) g-. fis-. e8-. a,-. |
+  d-. d-. fis16( g a fis) e4.( fis8) |
+  g8-. b,( cis d) e8.( cis16 a8) a-. |
+  d8-. d-. fis16( g a fis)
+    <<
+      \new Voice {\voiceOne e8.( fis16 e8 fis)}
+      \new Voice {\voiceTwo r8 cis4( d8)}
+    >> |
+  <g b,>8( <b, g> <d fis,> <cis e>) <cis e,>4( <d fis,>8) r |
+
+  %G
+  R1*2 |
+  r2 r8 cis,4( d8) |
+  b g( fis e) e4( fis8) a''16 fis |
+  fis( g) e cis a e' a cis cis( d) a fis d fis a fis |
+  fis( g) e cis a e' a cis cis( d) a fis d8 r |
+  \twox {r8 \threex <e, cis a> r8 \threex <fis d a> |}
+  r8 <fis d b> <fis dis c> <fis dis c> <g e b>4 r8 <dis c>8( |
+  <e b>4) r8 <dis c>8( <e b>) <g e>-. <b g>-. <g e>-. |
+  r8 \fourx <fis d a> \threex <fis' d a> |
+  << {s1(} {\fourx {<e d>16 a,} \fourx {<e' cis> g,}} >> |
+  <d' fis,>4) r8 a'16 fis g e cis a g' e cis' a |
+  <d d,>4 r8 a16 fis g e cis a g' e cis' a |
+  #(set-octavation 1)
+  d d' ais, ais' b, b' gis, gis' a, a' e, e' fis, fis' d, d' |
+  #(set-octavation 0)
+  <g, g,>8 r <b g d> r <a fis d> r <cis a g e> r |
+  <d a fis d>8 a16 fis g e a, cis' d8 a16 fis g e a, cis' |
+  d8 a16 fis g e a, cis' \twox {d a cis a} |
+  d8 d,, d d d4 r |
+}
+
+pianoMvtILeft = \relative c
+{
+  \clef bass
+  \key d \major
+  r4
+  d8 \repeat unfold 7 {<fis a d>} |
+  \repeat unfold 2
+  {
+    a,8 \repeat unfold 7 {<g' a cis e>} |
+  }
+  r8 <g a cis e>( <fis a d fis>) \repeat unfold 5 {<fis a d fis>} |
+  \repeat unfold 2 {d fis a d} |
+  g, b d g g, b e g |
+  a, d \clef treble fis a
+    <<
+      \new Voice {\voiceOne <a fis> <fis d> <g e> <e cis>}
+      \new Voice {\voiceTwo a,4 a}
+    >> |
+  \clef bass
+  \repeat unfold 2
+  {
+    \repeat unfold 2 {d,16 fis a d} \repeat unfold 2 {a, cis e a} |
+  }
+  <d d,>8 <cis cis,> <b b,> <a a,> <g g,> <fis fis,> <e e,> <d d,> |
+  <a a'>4 <a a,> r2 |
+  \clef treble
+  d'4 r r8 a'16( b cis8 d) |
+  b8-. g( e d cis e) a8-. g-. |
+  fis4 d r8 a'( g fis |
+  e4) r8 \clef bass a, d-. a-. d,-. r |
+  <d d,>8 <fis d'> <d' fis> <d fis> << {<cis e>4.( <d fis>8)} \\ {r8 a( g fis)} >> |
+  <e e'>8 g a d, cis e a g |
+  fis4 r8 fis16 g a8 a,( g' fis) |
+  e( g a <g a,> <fis d>4) r8 <g e a,> |
+  <fis d>4 r8 <g e a,> <fis d> <g e a,> <fis d> <g e a,> |
+  <fis d> <fis fis,> <a a,> <fis fis,> <d d,>4 r |
+
+  %A
+  <d d,>4 r r2 |
+  r4 a4-. e-. cis |
+  a r r2 |
+  r4 d'-. a-. fis-. |
+  d r fis r |
+  g r g2( |
+  fis8) r d-. r a'-. r <a a,>-. r |
+  <d g d,>4 r8 <g e a,> <fis d>4 r8 <g e a,> |
+  <fis d>4 r <d d,> r |
+  <a a,> r8 <e' b' d> <a cis>4 r8 <e b' d> |
+  <a cis>4 r <cis, cis,> r |
+  <b b,>8 r <b' e> <a e'> <gis e'> r <b e> <a e'> |
+  <gis e'>4 r <e e,>2( |
+  <e a,>4) r <fis fis,> r |
+  <e e,> r8 <b b,> <e e,> <gis gis,> <b b,> <gis gis,> |
+  \repeat unfold 4 {<e e,>8} <e e,>4 r |
+
+  %B
+  \repeat unfold 2 {a,4 r cis r | b r e, r |}
+  a8 b16 cis d e fis gis a8 a16 e b'8 b16 e, |
+  cis'4 r <cis, cis,> r |
+  <d d,> r <dis dis,> r |
+  <e e,> r <eis eis,> r |
+  <fis fis,>8 r <fis fis,> <fis fis,> <e e,> <e e,> <d d,> <d d,> |
+  <cis cis,>4 r <cis cis,> r |
+  <d d,>4 r <fis fis,> r |
+  \repeat unfold 8 {e,8 e'} |
+
+  %C
+  \repeat unfold 2
+  {
+    \repeat unfold 2
+    {
+      \repeat unfold 2 {a,16 cis e a} \repeat unfold 2 {e,16 gis b e} |
+    }
+    <a a,>8 <cis cis,> <a a,> <eis eis,> <fis fis,> <a a,> <fis fis,> <cis cis,> |
+    <d d,> <b' b,>16 <cis cis,> <d d,>8 <b b,> <e e,> <cis cis,>16 <d d,> <e e,>8 <e, e,> |
+  }
+  <a a,> <cis cis,> <a a,> <eis eis,> <fis fis,> <a a,> <fis fis,> <cis cis,> |
+  <d d,> <b' b,>16 <cis cis,> <d d,>8 <b b,> <e e,> <cis cis,>16 <d d,> <e e,>8 <e, e,> |
+  \repeat unfold 2
+  {
+    <a a,>8 \repeat unfold 7 {<a cis e>} |
+  }
+  \repeat unfold 2
+  {
+    <e e,>8 \repeat unfold 7 {<gis b d e>} |
+  }
+  \repeat unfold 2 {<gis b d e>} \repeat unfold 6 {<a cis e>} |
+  a, \repeat unfold 4 {<cis' e>} \repeat unfold 3 {<cis e a>} |
+  <b d e> r <b d> r <ais cis e> r <ais cis fis> r |
+  <b fis'> r <a b dis> r <gis b e> r <g b> r |
+  <fis ais> r <fis cis' e> r <fis b d> r <fis b d> r |
+  <fis ais cis> r <fis cis' e> r <fis b d> r <fis b d> r |
+  <fis ais cis> r <b d> r <fis ais cis> r <b d> r |
+
+  %D
+  <fis ais cis>4 r r2 |
+  <d fis a c>4 \repeat unfold 6 {<d fis a c>8} |
+  <d fis a c>4 r r2 |
+  g,2( f |
+  e ees |
+  d4) \twox <d' g b>8 \twox <d fis a> \twox <d a' c> |
+  g, \sevenx <d' g b> |
+  \twox {d, \sevenx <d' fis a c> |}
+  \twox <d fis a c> \twox <g b> b4 b, |
+  <e e,> r r2 |
+  r4 b-. fis-. dis-. |
+  b-. r r2 |
+  r4 e'-. e,-. r |
+  \fourx {a16 e' cis e} |
+  \twox {\fourx {a, fis' d fis} |}
+  a, e' cis e a, g' e g \twox {a, e' cis e} |
+  \fourx {a,16 e' cis e} |
+  d8 <a' a,> <b b,> <a a,> <g g,> <fis fis,> <e e,> <d d,> |
+  \twox {<a a,> a'16 b \appoggiatura d16 cis8 b16 a <d d,>8 <a a,> <fis fis,> <d d,> |}
+  <a a,>8 cis16( e <a a,>8.) <a a,>16 <a a,>4 r |
+  r8 cis,16( e <a a,>8.) <a a,>16 <a a,>4 r |
+  r8. <a a,>16 <cis cis,>8. <a a,>16 <e e,>8. <a a,>16 <cis, cis,>8. <e e,>16 |
+  <a, a,>4 r r2 |
+
+  %E
+  <d d,>4 r r2 |
+  r4 a-. e-. cis-. |
+  a-. r r2 |
+  r4 d'-. a-. fis-. |
+  d r fis r |
+  g r <g' g,>2( |
+  <fis fis,>8 r <d d,> r a r <a a,> r |
+  <d a d,>4 r8 <g e a,> <fis d>4 r8 <g e a,> |
+  <fis d>4 r <c c,>2( |
+  <b b,>4) r8 <c' a d,> <b g>4 r8 <c a d,> |
+  <b g>4 r a, r |
+  g r8 <fis' a,>8 <e g,>4 r8 <fis a,> |
+  <e g,>4 r g, r |
+  << {g'2( e)} \\ {g,4 g2( gis4)} >> |
+  <a e'>8 <a a,> <cis cis,> <e e,> <a a,> <cis cis,> <e e,> <cis cis,> |
+  <a a,> <a a,> <a, a,> <a a,> <a a,>4 r |
+
+  %F
+  a4 r r2 |
+  d4 r r2 |
+  a4 r r2 |
+  d8 \clef treble \threex <d' fis a> \clef bass fis, \clef treble \threex <d' fis a> |
+  \clef bass e,8 \clef treble \threex <cis' g' a> \clef bass a, \clef treble \threex <cis' g' a> |
+  \clef bass d,8 \clef treble \threex <d' fis a> \clef bass fis, \clef treble \threex <d' fis a> |
+  \clef bass e,8 \clef treble \threex <cis' g' a> \clef bass a, \clef treble \twox <cis' g' a> <cis e g> |
+  <fis d>4 r r8 a16( b cis8 d) |
+  b-. g( e d) cis( e a) g-. |
+  fis4 d r8 a'8( g fis) |
+  e4 r8 \clef bass a,-. d-. a-. d,-. r |
+
+  %G
+  d4 r r8 a'16( b cis8 d) |
+  b-. g( e d) cis( e a) g-. |
+  fis4 d r8 a'8( g fis) |
+  e8 r r a,-. d-. a-. d,-. r |
+  a'16 e' cis e a, g' e g \twox {d a' fis a} |
+  a,16 e' cis e a, g' e g d a' fis a <fis d>8 r |
+  \twox {a,4( g fis2) |}
+  b4( a g) r8 <a' a,>( |
+  <g g,>4) r8 <a a,>8( <g g,>4) r |
+  r a,-. fis-. d-. |
+  \fourx {a'8 a'} |
+  \twox {\twox {d,16 fis a d} \twox {a, cis e a}} |
+  <d d,>8 <ais ais,> <b b,> <gis gis,> <a a,> <e e,> <fis fis,> <d d,> |
+  <g g,> <e e,>16 <fis fis,> <g g,>8 <e e,> <a a,> <fis fis,>16 <g g,> <a a,>8 <a, a,> |
+  <d d,>4 r8 <g e a,> <fis d>4 r8 <g e a,> |
+  <fis d>4 r8 <g e a,> <fis d> <g e a,> <fis d> <g e a,> |
+  <fis d> <fis fis,>-. <a a,>-. <fis fis,> <d d,>4 r4 |
+}
+
+pianoMvtIDynamics =
+{
+  s4_\markup{\dynamic p \italic {con molta espressione}}
+  s1*4
+  s1\< |
+  s4 s2.\!
+  s1 |
+  s\ff |
+  s1*2 |
+  s2. s4\p |
+  s1*3 |
+  s2.. s8\f |
+  s1*6 |
+
+  %A
+  s1\p |
+  s1*6 |
+  s8 s2..\f |
+  s1\p |
+  s8 s2..\f |
+  s1\p |
+  s8 s2..\f |
+  s2 s\p |
+  s1 |
+  s\f |
+  s |
+
+  %B
+  s1\p |
+  s1*3 |
+  s1\ff |
+  s1\p |
+  s1*2 |
+  s1\f |
+  s2 s\p |
+  s1 |
+  s4 s2._\markup{\italic cresc.} |
+  \set crescendoText = \markup {\italic "più cresc. al"}
+  \set crescendoSpanner = #'dashed-line
+  s1\< |
+
+  %C
+  s4 s2.\ff |
+  s1*9 |
+  s8 s2..\p |
+  s1_\markup {\italic espressivo}
+  s1*6 |
+  s4. s8_\markup {\italic cresc.} s2 |
+  s1\< | s\> |
+
+  %D
+  s1\! |
+  s4 s2.\ff |
+  s1 |
+  s1\p |
+  s1 |
+  s4\< s2 s4\p |
+  s1*7 |
+  s2 s\f |
+  s1*11 |
+  s8 s\p\> s2. |
+  s1\pp |
+  s1*5 |
+  s8 s2.._\markup {\italic cresc.} |
+  s8 s2..\f |
+  s8 s2..\p |
+  s8 s2..\f |
+  s8 s2..\p |
+  s8 s2..\f |
+  s8 s2..\p |
+  s1_\markup {\italic cresc.} |
+  s8 s2..\f |
+  s1 |
+
+  %F
+  s1\p |
+  s1*2 |
+  s1_\markup {\italic grazioso} |
+  s1*7 |
+
+  %G
+  s1*3 |
+  s2.. s8\f |
+  s1*2 |
+  s1\p |
+  s1 |
+  s4 s2._\markup {\italic cresc.} |
+  \set crescendoText = \markup {\italic "più cresc. al"}
+  \set crescendoSpanner = #'dashed-line
+  s1\< |
+  s1*2 |
+  s1\ff |
+  s1*6 |
+}
+
+pianoMvtIPedals =
+{
+}
+

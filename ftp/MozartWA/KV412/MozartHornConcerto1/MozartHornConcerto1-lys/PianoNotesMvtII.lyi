@@ -1,0 +1,442 @@
+\include "defs.lyi"
+
+pianoMvtIIRight = \relative c''
+{
+  \key d \major
+  a8
+  a( <d fis,>) <d fis,>-. << {d4 a8} \\ fis4. >> |
+  <a fis>8( <a fis'>) <a fis'>-. <a fis'>4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  d8. e16 fis8 e4 a,8 |
+  a( <d fis,>) <d fis,>-. << {d4 a8} \\ fis4. >> |
+  <a fis>8( <a fis'>) <a fis'>-. <a fis'>4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  d4( << {\voiceOne e16 fis d4)} \new Voice {\voiceTwo a8 fis4} >> \oneVoice r8 |
+  \repeat unfold 15 {<fis d>16 a,} \threex {<g' e> a,} |
+  <fis' d> a, <g' e> a, <fis' d> a, <e' cis> cis' e cis a g |
+  \repeat unfold 15 {<fis d>16 a,} \threex {<g' e> a,} |
+  <fis' d> a, <fis' d> a, <g' cis,> a, <fis' d>4 <fis' a,>8 |
+  <<
+    {
+      e8( fis) gis-. a( e) e-. |
+      e-. fis16( e fis gis a8)
+    }
+    \\
+    {
+      a,4 d8 cis cis cis |
+      a4 d8 cis
+    }
+  >> r8 <cis e>-. |
+  <cis e>( <b d>) <b d>-. <b d>( <a cis>) <a cis>-. |
+  <gis b>-. <a cis>-. <cis e>-. <gis b>16( <fis a> <e gis> <d fis> <cis e> <b d>) |
+  <e cis>8( <fis d>) <gis b,>-. <a cis,>( <cis e,>) <e cis>-. |
+  <e cis>( <fis d>) <gis b,>-. <a a,>( <cis e,>) <e cis>-. |
+  <fis, d>( <d' fis,>) <cis e,>-. \appoggiatura <cis e,>16 <b d,>8 <a cis,> <gis b,> |
+  <a cis,>16( <gis b,> <a cis,> <cis e,> <b d,> <gis b,>) <a a,>8 r r |
+
+  %H
+  \repeat unfold 2
+  {
+    <e, cis>8( <fis d>) <d b>-. <cis a>( <d b>) <e cis>-. |
+    <e cis>8( <fis d>) <d b>-. <cis a> r <a' cis e> |
+    <b d>-. b'16( gis e d) cis8-. a'16( e cis a) |
+  }
+  \alternative
+  {
+    {
+      <b gis>8-. <cis a>-. <dis a fis>-. << {e4 r8} \\ {<gis, e>16( <fis d> <e cis> <fis d> <e cis> <d b>)} >> |
+    }
+    {
+      <e' cis>8( <d b>) <b gis>-. a4 r8 |
+    }
+  }
+  r8 <cis a e>-. r r <e cis a>-. r |
+  r4. r4 e16( fis) |
+  g8-. g-. g-. g << {\voiceOne e cis} \new Voice {\voiceTwo r8 e,16( fis)} >> \oneVoice |
+  <a g>8 <a g> <a g> <a fis>16( <b g> <a fis> <fis d> <g e> <e a,>) |
+  \repeat unfold 15 {<fis d>16 a,} \threex {<g' e> a,} |
+  <fis' d> a, <e' cis> a, <fis' d> a, <e' cis>8 <a cis,>16( <g e> <fis d> <e cis>) |
+  \repeat unfold 15 {<fis d>16 a,} \threex {<g' e> a,} |
+  <fis' d> a, <fis' d> a, <g' cis,> a, <fis' d>8 r a8 |
+  a( d) d-. d4 a8 |
+  a( <fis' d>) <fis d>-. <fis d>16( g a fis g e) |
+  <<
+    {
+      s4. fis16( g a fis g e) |
+      e( d cis d cis d) a8 r cis |
+      d r r a a cis16(\trill b32 cis) |
+    }
+    \\
+    {
+      e16( d cis d cis d a8) r cis
+      a4 r8 fis16( g a fis g e) |
+      e( d cis d cis d) d4 a'8 |
+    }
+  >>
+  <a d> <a' d fis> <a d fis> <a d fis>4 <a e'>8 |
+  <d fis,>16( <cis e,> <d fis,> <fis a,> <e g,> <cis e,>) <d fis,>( <cis e,> <d fis,> <fis a,> <e g,> <cis e,>) |
+  <d fis,>-. <cis e,>-. <d fis,>-. <cis e,>-. <b d,>-. <a cis,>-. <gis b,>-. <fis a,>-. <e gis,>-. <d fis,>-. <cis e,>-. <b d,>-. |
+  << {a16-. gis-. a-. fis-. gis-. eis-.} \\ {cis8} >> fis16-. <gis eis>-. <a fis>-. <b gis>-. <cis a>-. <dis fis,>-. |
+  <e e,>8 e e e e e |
+  <<
+    {fis( d' cis d b gis) | e4( fis16 gis a4) a8 | a4.}
+    \\
+    {e4. d | d cis4 cis8 | cis4.}
+  >> \appoggiatura <e cis'>16 <d b'>8( <cis a'> <d b'>) |
+  <cis a'> a a \threex g |
+
+  %I
+  \threex <a f> \threex <g e> |
+  <g e> <f d> <e cis> \threex <f d> |
+  \threex <f d> <g bes,>4( <f b,>8) |
+  <g cis, a> <f d a> <e cis a> d4 a'8 |
+  a'4.( g |
+  f16) a-. g-. f-. g-. a-. bes-. g-. e-. c-. bes-. g-. |
+  f8 <g e> <a ees> <bes d,> <c c,> <d bes,> |
+  << {a16( bes b c d c)} \\ {f,8 e f} >> <g e>16( <f d> <e c> <d bes> <c a> <bes g>) |
+  a8-. c-. f-. bes,-. c-. e-. |
+  a,-. d-. f-. \appoggiatura c16 bes8( a bes) |
+  a8 \fivex <c a>-. |
+  a8-. c-. f-. bes,-. c-. e-. |
+  \twox {a,8-. c-. f-.} |
+  g,-. bes-. d-. cis-. e-. a-. |
+  bes,-. d-. f-. bes,-. d-. g-. |
+  cis, <e cis> \fourx <a e cis> |
+  \fourx <fis c> <fis bes,> <fis c> |
+  <g bes,> \twox <g d bes> \threex <d bes> |
+  \threex <c a> \threex <bes g> |
+  \threex <a f> \threex <bes e,> |
+  <a f> r r r4 a'8 |
+  a cis e a4 g8 |
+  g16( f e f e f) g( f e f e d) |
+  e4. d8 f d |
+  cis-. e-. a-. a,-. r r |
+  r4. a'4( g8) g( f) f <f a,>4( <e g,>8) |
+  \appoggiatura e16 <d f,>8 <cis e,> <d d,> <f f,> <e e,> <d d,> |
+  <cis cis,> e( gis a a, g' |
+  f) r r <f, d b>4.( |
+  <e cis>8) cis'( e a a, g' |
+  f) r r <gis, f d>4.(
+  <a e c>8) r \threex {gis'( a)( a,)} r8 |
+
+  %K
+  r4. r8 gis'16( a gis a) |
+  r4. r8 eis16( fis eis fis) |
+  r8 cis16( d cis d) r8 dis16( e dis e) |
+  d,8. e16 d8 cis8 gis''16( a gis a) |
+  r8 cis,16( d cis d) r8 cis'16( d cis d) |
+  r8 gis,,16( a gis a) r8 gis'16( a gis a) |
+  fis,4.( b8) fis'16( g fis g) |
+  r8 <d a fis>( <e cis g> <d fis,>) r8 a |
+  a( <d fis,>) <d fis,>-. <d fis,>4 a8 |
+  <a fis>8( <d fis>) <d fis>-. <d fis>4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  <fis d>8. <g e>16 <a fis>8 <e cis>4 a,8 |
+  a( <d fis,>) <d fis,>-. <d fis,>4 a8 |
+  <a fis>8( <d fis>) <d fis>-. <d fis>4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  d8 d e16( fis) d4 r8 |
+  cis,16-. a-. cis-. a-. d-. a-. e'-. a,-. e'-. a,-. d-. a-. |
+  cis-. e-. cis-. e-. b-. gis-. a-. b-. cis-. e-. d-. e-. |
+  cis-. a-. cis-. a-. d-. a-. e'-. a,-. e'-. a,-. d-. a-. |
+  cis-. a-. e'-. cis-. d-. b-. a8 r cis'16-. d-. |
+  <<
+    {e8 e fis g4 fis8 | e8 e d}
+    \\
+    {cis16 a cis a d a e' a, e' a, d a | b8 b b}
+  >> cis16 d e fis gis a |
+  <<
+    {a,2. | a4.}
+    \\
+    {<e cis>4( <fis d>8 <g e>4 <fis d>8) | <e cis>( <fis d>) d}
+  >> <a' cis,>16 a'-. gis-. a-. b-. cis-. |
+  d-. cis-. d-. a-. fis-. d-. a-. a'-. gis-. a-. b-. cis-. |
+  d-. cis-. d-. a-. fis-. d-. <a' a,>4 r8 |
+  
+  %L
+  r8 <a fis>16( <gis eis> <a fis> <gis eis>) <a fis>8-. r r |
+  r8 <fis d>16( <eis cis> <fis d> <eis cis>) <fis d>8-. r r |
+  \threex {a8( a, a'~)} a( a, a') |
+  r8 fis,16( g) gis( a) a8 fis'16( g) gis( a) |
+  a8-. d,,16( e) eis( fis) fis8 d'16( e) eis( fis) |
+  <a fis>4. <g e> |
+  <fis d>4 <e cis>8 d r a |
+  <a fis>( <d a fis>) <d a fis>-. <d a fis>4 <a fis>8 |
+  <a fis>( <fis' d a>) <fis d a>-. <fis d a>4 d8 |
+  a'( fis) d-. a'( g) e-. |
+  e16( d cis d g fis) e( d cis b a g) |
+  \fivex {fis16( a fis a fis a)} b( g b g b g) |
+  <fis d>4( <e cis>8) d r a'' |
+  gis16( a gis a b cis) d8 r r |
+  <e,, cis>4.( <fis d>8) r a' |
+  gis16( a gis a cis a) d8 r r |
+  <e,, cis a g>4.( <d a fis>8) r a''8 |
+  gis16( a gis a b cis) d( cis b a g fis) |
+  e( fis g e cis e) d4 r8 |
+  \threex <d fis a d>-. <d fis a d>4 r8 |
+}
+
+pianoMvtIILeft = \relative c
+{
+  \clef bass
+  \key d \major
+  r8
+  \fivex
+  {
+    <<
+      { \threex {fis16 a} }
+      \\
+      { \threex d,8 }
+    >>
+  }
+  <<
+    { \threex {g16 a} }
+    \\
+    { \threex cis,8 }
+  >> |
+  <<
+    { fis16 a e a d, a' a, a' cis, a' e g }
+    \\
+    { d8 a d a4. }
+  >> |
+  \fivex
+  {
+    <<
+      { \threex {fis'16 a} }
+      \\
+      { \threex d,8 }
+    >>
+  }
+  <<
+    { \threex {b16 e} }
+    \\
+    { \threex g,8 }
+  >> |
+  <<
+    { \twox {d'16 fis} cis g' fis4 }
+    \\
+    { \threex a,8 d4 }
+  >> r8 |
+  \fivex {<d d,>4 r8} <cis cis,>4 r8 |
+  <d d,>4 r8 <a a,>4 r8 |
+  \fivex {<d d,>4 r8} <g g,>4 r8 |
+  <a a,>4 <a, a,>8 <d a b,>4 r8 |
+  <cis' cis,>8( <d d,>) <b b,>-. <a a,>4 r8 |
+  <cis cis,>8( <d d,>) <b b,>-. <a a,>( <cis cis,>) <a a,>-. |
+  \threex { \threex <e e,>8 } <e e,>4 r8 |
+  <a a,>2.~ | <a a,> |
+  <d, d,>4. <e e,> |
+  <a a,>4 <e e,>8 <a, a,> r r |
+
+  %H
+  R2. |
+  r4. r4 <a' a,>8 |
+  \threex {<gis b d>16 e} \threex {<a cis> e} |
+  \threex {e, e'} e,4 r8 |
+  a'4 r8 r4. |
+  r r4 <a a,>8 |
+  \threex {<gis b d>16 e} \threex {<a cis> e} |
+  <e e'>8 <e e'> <e d'> <a cis>4 r8 |
+  r a-. r r <a a,>-. r |
+  R2.*2 |
+  r4. r4 a,16( cis) |
+  d8 <d d,> <d d,> <d d,>4 r8 |
+  \threex <d d,>8 <d d,>4 r8 |
+  <d d,>4 r8 <cis cis,>4 r8 |
+  <d d,>4 r8 <a a,>4 r8 |
+  \twox {\threex <d d,>8 <d d,>4 r8 |}
+  <d d,>4 r8 <g, g,>4 r8 |
+  <a a,>4 <a a,>8 <d a d,>8 r r |
+  R2. |
+  r4. r4 \clef treble a'8 |
+  a( <d fis>) <d fis>-. <d fis>4 \clef bass a,8 |
+  a( <d fis>) <d fis>-. <d fis>4 a8 |
+  a( fis') fis-. fis16( g a fis g e) |
+  e( d cis d cis d) a8 r \appoggiatura d'32 cis16( b32 cis) |
+  d8 \fivex <a a,> |
+  <d d,> \twox <d, d,> \threex <e e,> |
+  \twox <fis fis,> <gis eis cis> fis fis <a b,> |
+  <gis e> r r r4 cis8( |
+  d4. b gis4 e8 a4) a,8 |
+  \threex <e' a cis> <e gis d'> \twox <e e'> |
+  <a e'> \repeat unfold 5 a,8 |
+  
+  %I
+  \repeat unfold 9 a d4 c8 |
+  bes4. g4( gis8) |
+  a4 a8 d4 r8 |
+  \threex <f a d> \threex <e a cis> |
+  \threex <d f a d> \threex <c e g bes> |
+  << {a'8 bes c f,4. | f8 g a g4} \\ {f4. bes, | c c4} >> r8 |
+  f4.( c |
+  d bes4 c8 |
+  f,4) r8 r4. |
+  f'4 r8 c4 r8 |
+  <f f,>4 r8 r4. |
+  g,4.( a | bes2.) |
+  a4 r8 r4. |
+  d2.( |
+  g,4.) bes4.( |
+  c2.~) | c |
+  f,8 \fivex <f' a c> |
+  \sixx <e a cis> |
+  \sixx <d f a d> |
+  \threex <cis g' a cis> \threex <d f a d> |
+  \threex <a' cis> <a a,>-. <b b,>-. <cis cis,>-. |
+  <d d,>4 r8 <cis a>8-. <d b>-. <e cis>-. |
+  d4 r8 <cis, a>8-. <d b>-. <e cis>-. |
+  <f d>4 r8 <a, f>-. <bes g>-. <b gis>-. |
+  a-. r r <cis' e>4.(\sf |
+  <d f>8) r r gis,,4.( |
+  a8) r r <c e g bes>4.(\sf |
+  <d f a>8) r r bes4.( |
+  a8 r \clef treble <f'' d>8( <e cis>4 <f d>8
+  <e cis>4 <f d>8 <e cis>4) r8 \clef bass
+
+  %K
+  << \twox {r8 \twox <d, fis a>8 <d fis a>4 r8 |} {s8 s\p} >>
+  d <fis a> <fis a> cis <g' a> <g a> |
+  << {fis8. e16 d8 a'4} \\ {d,4 r8 a4} >> r8 |
+  << {fis'2. | a |} \\ {\fourx {d,4 r8}} >> |
+  r8 cis'16( d cis d) g,8 ais16( b ais b) |
+  a8 gis16( a gis a) d,4 r8 |
+  <<
+    {
+      \repeat unfold 15 {fis16 a} \threex {g a} |
+      \threex {fis16 a} e a e a g e |
+      \repeat unfold 15 {fis16 a} d, g d g e g |
+      fis a fis a g a fis4
+    }
+    \\
+    {
+      \repeat unfold 15 d8 \threex cis |
+      \threex d \threex a |
+      \repeat unfold 12 d |
+      d4 c8 b4 <b g>8 |
+      <d a>4 <cis a>8 d4
+    }
+  >> r8 |
+  R2. |
+  a'4 e8 <e a,>4 r8 |
+  R2. |
+  a,8 cis e a,4 r8 |
+  a'8 a d cis cis d |
+  <g, b e> <g b e> <gis b e> \threex <a cis e> |
+  a,4.~( a4 d8) |
+  a d fis a a, <g' a cis> |
+  <fis a d> d fis a a, <g' a cis> |
+  <fis a d> d fis <a cis>4 r8 |
+
+  %L
+  r4. r8 <fis' a>16( <eis gis> <fis a> <eis gis>) |
+  <fis a>8-. r r r <d fis>16( <cis e> <d fis> <cis e>) |
+  <d fis>4.( <cis e>) |
+  << {fis4. <e cis>4 r8 | fis,2. |} \\ {d'8. cis16 d8 a( g e)| d4 r8 r4. |} >>
+  d2. |
+  \clef treble
+  d'8 \twox <fis a> g, \twox <e' g> |
+  a, <d fis> <cis e> d \clef bass fis,-. a-. |
+  \twox {d, d'16( cis d cis) d8-. d,-. d'-. |}
+  fis,16 e d e fis d g fis e a b cis |
+  d8-. fis,-. b-. gis( a) a,-. |
+  \fivex {d16( fis d fis d fis)} g( b g b g b) |
+  << {a( fis g fis g a) fis8} \\ {a,4 a8 d} >> r8 r |
+  \twox
+  {
+    \clef treble
+    <a' e' g>4.( <d fis>8) r r |
+    \clef bass
+    a,4.( d8) r r |
+  }
+  \threex <a cis e g> <d fis> \twox <d fis a> |
+  \threex <a cis e g> <d fis>4 r8 |
+  <d d,>8-. <fis fis,>-. <a a,>-. <d, d,>4 r8 |
+}
+
+pianoMvtIIDynamics =
+{
+  s8\f
+  s2.*8 |
+  s2._\markup{\dynamic p \italic legato} |
+  s2.*6 |
+  s4. s4 s8\f |
+  s2.*8 |
+
+  %H
+  s2.\p |
+  s4. s4 s8\f |
+  s2. |
+  s4. s\> |
+  s2.\! |
+  s4. s4 s8\f |
+  s4. s\p |
+  s2. |
+  s8 s_\markup {\italic cresc.} s s4. |
+  s2. |
+  s\> |
+  s4.\f s_\markup{\italic dim.} |
+  s2.\p |
+  s2.*6 |
+  s4. s4 s8\f |
+  s2. |
+  s4. s4 s8\f |
+  s2.*7 |
+  s8 s8_\markup {\italic dolce} s s4. |
+  s2.*2 |
+  s4.\< s\> |
+  s2.\p |
+
+  %I
+  s2.*3 |
+  s4. s4 s8\f |
+  s2.*4 |
+  s2.\p |
+  s2.*8 |
+  s8 s_\markup {\italic cresc.} s s4. |
+  s2.*2 |
+  s4. s4 s8\f |
+  s2.*3 |
+  s4. s\> |
+  s\! s\p |
+  s2. |
+  s\< |
+  s8 s\f s s4. |
+  s4. s\p |
+  s8 s\f s s4. |
+  s4. s\p |
+  s4 s8\sf s4\p s8\sf |
+  s4\p s8\sf s4\p s8 |
+
+  %K
+  s4. s8 s\p s |
+  s2.*6 |
+  s4. s4 s8\f |
+  s2.*8 |
+  s2.\p |
+  s2.*2 |
+  s4. s4 s8\f |
+  s2. |
+  s4. s\> |
+  s2.\p |
+  s4. s16 s\f s8 s |
+  s2.*2 |
+
+  %L
+  s8 s\p s s4. |
+  s2.*6 |
+  s4. s4 s8\ff |
+  s2.*3 |
+  s4. s\> |
+  s2.\p |
+  s2.*2 |
+  s4. s4 s8\p |
+  s2.*2 |
+  s2._\markup {\italic cresc.} |
+  s4. s4 s8\ff |
+  s2.*3 |
+}
+
+pianoMvtIIPedals =
+{
+}
+

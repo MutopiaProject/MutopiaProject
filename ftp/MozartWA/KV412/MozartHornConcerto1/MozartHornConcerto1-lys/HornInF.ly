@@ -18,6 +18,7 @@ instrument = "Corno in F"
   {
     \new Staff
     {
+      \key d \major
       \set Score.skipBars = ##t
       << \transpose f d \hornMvtI \outlineMvtI >>
     }
@@ -26,6 +27,7 @@ instrument = "Corno in F"
   {
     \new Staff
     {
+      \key d \major
       \set Score.skipBars = ##t
       << \transpose f d \hornMvtII \outlineMvtII >>
     }

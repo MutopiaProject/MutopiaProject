@@ -1,5 +1,6 @@
 hornMvtI = \relative c''
 {
+  #(define afterGraceFraction (cons 31 32))
   \transposition d
   r4
   R1*20 |
