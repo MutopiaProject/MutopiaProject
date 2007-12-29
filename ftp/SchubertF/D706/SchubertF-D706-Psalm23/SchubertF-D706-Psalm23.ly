@@ -28,6 +28,10 @@
  subtitle = "(Nach einer Reinschrift von Franz Schubert)"
  subsubtitle = "(Wienbibliothek im Rathaus)"
  composer = \markup \center-align { \fontsize #3 \bold "Franz Schubert" \small "(1797-1828)" "D 706 (Op. pos., 1820)" }
+ poet = \markup { \column {
+  \line { "Deutsche Übersetzung des" \bold " 23. Psalms Davids" }
+  \line { "von" \bold " Moses Mendelssohn " "(1729-1786)" } } }
+
 % MUTOPIA
  mutopiatitle = "Psalm 23"
  mutopiacomposer = "SchubertF"
@@ -40,7 +44,7 @@
  copyright = "Public Domain"
  maintainer = "Ph. Raynaud"
  moreInfo = "A source is freely available at http://www.schubert-online.at/"
- footer = "Mutopia-2007/11/10-1135"
+ footer = "Mutopia-2007/12/29-1135"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -59,7 +63,7 @@
 %  E. SORTIE PARTITION
 %  F. SORTIE MIDI
 %
-% 	                BIENVENUE A TOUTE SUGGESTION POUR AMELIORER LA PARTITION, LA SORTIE MIDI OU LE CODAGE
+%                  BIENVENUE A TOUTE SUGGESTION POUR AMELIORER LA PARTITION, LA SORTIE MIDI OU LE CODAGE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -444,14 +448,7 @@ notePartSopranoH = {
  \sopranoH
 }
 
-%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
-noteMidiSopranoH = {
- \KEYTIME
- \set Staff.midiInstrument = "trumpet"
- \set Staff.midiMinimumVolume = #0.2
- \set Staff.midiMaximumVolume = #1
- \sopranoH
-}
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI: Voir SORTIE MIDI
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -575,14 +572,7 @@ notePartSopranoB = {
  \sopranoB
 }
 
-%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
-noteMidiSopranoB = {
- \KEYTIME
- \set Staff.midiInstrument = "trumpet"
- \set Staff.midiMinimumVolume = #0.2
- \set Staff.midiMaximumVolume = #1
- \sopranoB
-}
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI: Voir SORTIE MIDI
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -707,14 +697,7 @@ notePartAltoH = {
  \altoH
 }
 
-%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
-noteMidiAltoH = {
- \KEYTIME
- \set Staff.midiInstrument = "clarinet"
- \set Staff.midiMinimumVolume = #0.2
- \set Staff.midiMaximumVolume = #0.8
- \altoH
-}
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI: Voir SORTIE MIDI
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -839,14 +822,7 @@ notePartAltoB = {
  \altoB
 }
 
-%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
-noteMidiAltoB = {
- \KEYTIME
- \set Staff.midiInstrument = "clarinet"
- \set Staff.midiMinimumVolume = #0.2
- \set Staff.midiMaximumVolume = #0.8
- \altoB
-}
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI: Voir SORTIE MIDI
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1148,13 +1124,7 @@ notePartPianoH = {
  << \pianoPartHI \pianoHII\pianoHIII \pianoHIV >>
 }
 
-%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
-noteMidiPianoH = {
- \set Staff.midiInstrument = "acoustic grand"
- \set Staff.midiMinimumVolume = #0.2
- \set Staff.midiMaximumVolume = #1
- \unfoldRepeats { << \pianoMidiHI \pianoHII \pianoHIII \pianoHIV >> }
-}
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI: Voir SORTIE MIDI
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1432,13 +1402,7 @@ notePartPianoB = {
  << \pianoPartBI \pianoBII >>
 }
 
-%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI
-noteMidiPianoB = {
- \set Staff.midiInstrument = "acoustic grand"
- \set Staff.midiMinimumVolume = #0.2
- \set Staff.midiMaximumVolume = #1
- \unfoldRepeats { << \pianoMidiBI \pianoBII >> }
-}
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LE MIDI: Voir SORTIE MIDI
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -2164,8 +2128,8 @@ dynMidiPiano = {
  s1
  s2 \! \f  \decr s2
  s2 \! \pp  s2 \cr
- s4 \! \mp \decr s4 \! \pp  s2
- \tempo 16=80 s1
+ s4 \! \mp \decr s4 \! \pp  \tempo 4=60 s4 \tempo 4=50 s4
+ \tempo 8=68 s4 \tempo 8=56 s16 \tempo 8=44 s8. s2
 }
 
 
@@ -2192,17 +2156,17 @@ dynMidiPiano = {
    \set PianoStaff.connectArpeggios = ##t
    
    \new Dynamics = "updyn" \dynPartPianoH
-	 \new Staff = "up" << \notePartPianoH >>
+  \new Staff = "up" << \notePartPianoH >>
    \new Dynamics = "dynamics" \dynPartPianoCom
    \new Staff = "down" << \notePartPianoB >>
    \new Dynamics = "downdyn" \dynPartPianoB
    >>
  >>
  \layout {
- 	\context {
+  \context {
    \Score
-	  \override SpacingSpanner #'spacing-increment = #1
-	 }
+   \override SpacingSpanner #'spacing-increment = #1
+  }
   \context {
    \type "Engraver_group"
    \name Dynamics
@@ -2215,9 +2179,7 @@ dynMidiPiano = {
    \consists "Script_engraver"
    \consists "Dynamic_engraver"
    \consists "Text_engraver"
-
    \consists "Skip_event_swallow_translator"
-
    \consists "Axis_group_engraver"
   }
   \context {
@@ -2231,37 +2193,82 @@ dynMidiPiano = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %                                           F. SORTIE MIDI (pas de \layout)
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%%%%%% RÉSUMÉ DES NOTES POUR LE MIDI 
+noteMidiSopranoH = {
+ \KEYTIME
+ \set Staff.midiInstrument = "clarinet"
+ \set Staff.midiMinimumVolume = #0.2
+ \set Staff.midiMaximumVolume = #1
+ \sopranoH
+}
+
+noteMidiSopranoB = {
+ \KEYTIME
+ \set Staff.midiInstrument = "clarinet"
+ \set Staff.midiMaximumVolume = #1
+ \sopranoB
+}
+
+noteMidiAltoH = {
+ \KEYTIME
+ \set Staff.midiInstrument = "flute"
+ \set Staff.midiMinimumVolume = #0.2
+ \set Staff.midiMaximumVolume = #0.8
+ \altoH
+}
+
+noteMidiAltoB = {
+ \KEYTIME
+ \set Staff.midiInstrument = "flute"
+ \set Staff.midiMinimumVolume = #0.2
+ \set Staff.midiMaximumVolume = #0.8
+ \altoB
+}
+
+noteMidiPianoH = {
+ \set Staff.midiInstrument = "acoustic grand"
+ \set Staff.midiMinimumVolume = #0.2
+ \set Staff.midiMaximumVolume = #1
+ \unfoldRepeats { << \pianoMidiHI \pianoHII \pianoHIII \pianoHIV >> }
+}
+
+noteMidiPianoB = {
+ \set Staff.midiInstrument = "acoustic grand"
+ \set Staff.midiMinimumVolume = #0.2
+ \set Staff.midiMaximumVolume = #1
+ \unfoldRepeats { << \pianoMidiBI \pianoBII >> }
+}
+
+
 %%%%%%%%%%%%%%%%%%%% REDÉFINITION DES VOLUMES RESPECTIFS ATTRIBUÉS AUX DYNAMIQUES 
-% volumes par défaut:
-% sf     1.00  (127)   mp     0.609 (77)    fp: 0.50 (63)
-% ffff   0.914 (116)   p      0.547 (69)
-% fff    0.844 (107)   pp     0.492 (62)
-% ff     0.80  (101)   ppp    0.422 (53)
-% f      0.75   (95)   pppp   0.344 (43)
-% mf     0.68   (86)   ppppp  0.25  (31)
+% volumes par défaut (LilyPond\usr\share\lilypond\current\scm\midi.scm):
+% sf    1.00     ff  0.80     mp   0.61     ppp    0.42     fp: 0.50
+% ffff  0.92     f   0.75     p    0.55     pppp   0.34
+% fff   0.85     mf  0.68     pp   0.49     ppppp  0.25
 
 #(define my-absolute-volume-alist '())
 #(set! my-absolute-volume-alist (append '(
-	("sf" .    1.00)
-	("ffff" .  1.00)
-	("fff" .   1.00)
-	("ff" .    0.70)
-	("f" .     0.60)
-	("mf" .    0.50)
-	("mp" .    0.40)
-	("p" .     0.32)
-	("pp" .    0.26)
-	("ppp" .   0.22)
-	("pppp" .  0.16)
-	("ppppp" . 0.16) )
+ ("sf" .    1.00)
+ ("ffff" .  1.00)
+ ("fff" .   1.00)
+ ("ff" .    0.70)
+ ("f" .     0.60)
+ ("mf" .    0.50)
+ ("mp" .    0.40)
+ ("p" .     0.32)
+ ("pp" .    0.26)
+ ("ppp" .   0.22)
+ ("pppp" .  0.16)
+ ("ppppp" . 0.16) )
  my-absolute-volume-alist))
 
 %%%%%%%%%%%%%%%%%%%% CHAQUE DYNAMIQUE RENCONTRÉE PRENDRA LE NOUVEAU VOLUME SPÉCIFIÉ
 
 #(define (my-dynamic-absolute-volume s)
  (let ((entry (assoc s my-absolute-volume-alist)))
-  (if entry
-   (cdr entry))))
+  (if entry (cdr entry))
+))
 
 %%%%%%%%%%%%%%%%%%%% SILENCE AVANT MIDI (IL Y A PARFOIS UN CRAQUEMENT À L'OUVERTURE D'UN FICHIER MIDI)
 SILENCE = { \KEYTIME s1 }
@@ -2276,11 +2283,11 @@ SILENCE = { \KEYTIME s1 }
   \new Staff = "down"        { \SILENCE << \noteMidiPianoB   \dynMidiPiano   >> }
  >>
  \midi {
-	\context {
+ \context {
    \Score
 % ÉCHELLE DU VOLUME DE SORTIE MIDI
-    dynamicAbsoluteVolumeFunction = #my-dynamic-absolute-volume
-	  tempoWholesPerMinute = #(ly:make-moment 80 4)
+   dynamicAbsoluteVolumeFunction = #my-dynamic-absolute-volume
+   tempoWholesPerMinute = #(ly:make-moment 68 4)
   }
  }
 }
