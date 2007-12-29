@@ -21,7 +21,7 @@
  b''4( a''4_\markup { \italic "cresc." }~ a''16[ ais'' b'' ais''] cis'''[ b'' a'' g''])
  g''8\p( fis'')~ fis''16( a'' g'' e'') e''8( d'')~ d''16( fis'' e'' cis'') d''8 r8 r4 r2
  a''4~ a''16( b'' cis''' d''') d'''( cis''') b''\staccato a''\staccato a''( g'') fis''\staccato e''\staccato d''8 r8 r4 r2
- a''16( gis'' a'' gis'') a''( fis''' e''' d''') d'''( cis''') b''\staccato a''\staccato a''( gis'') fis''\staccato e''\staccato
+ a''16( gis'' a'' gis'') a''( fis''' e''' d''') d'''( cis''') b''\staccato a''\staccato a''( g'') fis''\staccato e''\staccato
  d''4 r16 d''16\staccato[ cis''\staccato d''\staccato] e''\staccato fis''\staccato g''\staccato a''\staccato
  b''16\staccato g''\staccato e''\staccato cis''\staccato e''8( d'') r16 d''16( cis'') d''( e'') fis''( g'') a''( b'') g''( e'') cis''(
  e'') d''( cis'') d''( e'') fis''( g'') a''( bes'') b''( d''') c'''!( b'') a''( g'') fis''( e'') d''( cis'') c''( b') d''( c'') a'
