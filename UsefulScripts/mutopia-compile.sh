@@ -13,6 +13,7 @@
 # Options:
 #   $1 - Switch to use, comprising:
 #        -l - Use landscape hack
+#        -s - Separate A4 and Letter versions (-a4.ly [specified] and -let.ly)
 #   $@ - File names to process
 
 #############
@@ -75,6 +76,14 @@ else
    LANDSCAPE_HACK=0
 fi
 
+# Compile separately if necessary
+if [ "$1" = "-s" ]; then
+   COMPILE_SEPARATELY=1
+   shift
+else
+   COMPILE_SEPARATELY=0
+fi
+
 # Run .ly files through LilyPond
 for parameter in "$@"
 do
@@ -87,16 +96,23 @@ do
    cd "$dirname"
 
    if [ "$LANDSCAPE_HACK" = 1 ]; then
-      # Compile separate A4 and Letter files
+      # Compile separate A4 and Letter files (created using hack)
       LY_BASE_NAME="$TARGET_BASE_NAME-a4"
-      sed -e 's/set-default-paper-size "letter"/set-default-paper-size "a4"/g' < "$TARGET_BASE_NAME.ly" > "$LY_BASE_NAME.ly"
+      sed -e 's/set-default-paper-size "letter"/set-default-paper-size "a4"/g' < "$TARGET_BASE_NAME.ly" | sed -e 's/set-paper-size "letter"/set-paper-size "a4"/g' > "$LY_BASE_NAME.ly"
       f_compile_a4
       rm -f "$LY_BASE_NAME.ly"
 
       LY_BASE_NAME="$TARGET_BASE_NAME-let"
-      sed -e 's/set-default-paper-size "a4"/set-default-paper-size "letter"/g' < "$TARGET_BASE_NAME.ly" > "$LY_BASE_NAME.ly"
+      sed -e 's/set-default-paper-size "a4"/set-default-paper-size "letter"/g' < "$TARGET_BASE_NAME.ly" | sed -e 's/set-paper-size "a4"/set-paper-size "letter"/g' > "$LY_BASE_NAME.ly"
       f_compile_let
       rm -f "$LY_BASE_NAME.ly"
+   elif [ "$COMPILE_SEPARATELY" = 1 ]; then
+      # Compile separate A4 and Letter files
+      TARGET_BASE_NAME="`echo \"$LY_BASE_NAME\" |sed 's/-a4$//'`"
+      [ ! "$TARGET_BASE_NAME-a4.ly" = "$filename" ] && echo "Error: for separate compilation, name must end -a4.ly" && exit 1
+      f_compile_a4
+      LY_BASE_NAME="$TARGET_BASE_NAME-let"
+      f_compile_let
    else
       # Standard compilation
       f_compile_a4
