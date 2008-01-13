@@ -1,8 +1,8 @@
-\version "2.11.15"
+\version "2.10.30"
 
 \header {
   title             = "Flat"
-  piece             = "by Ramana, for Delia"
+  composer          = "Ramana Kumar"
   mutopiatitle      = "Flat"
   mutopiacomposer   = "KumarR"
   mutopiainstrument = "Piano"
@@ -13,9 +13,9 @@
   maintainer        = "Ramana Kumar"
   maintainerEmail   = "ramana.kumar@gmail.com"
   maintainerWeb     = "http://xrchz.net"
-  lastupdated       = "2007/July/15"
- footer = "Mutopia-2007/07/22-1004"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+  lastupdated       = "2008/January/13"
+ footer = "Mutopia-2008/01/13-1004"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 onceStem =
@@ -51,7 +51,7 @@ onceStem =
           {<fis' d'>2 eis' e'4 g' <gis' dis'> <ais' g'>}
         \\{gis4 b bis2 cis' ais4 cis'}
         >> | <<                                             %--05
-          {g'4 bes' bes' d'' f' a' a' c''}
+          {g'4 bes' bes' des'' f' a' a' c''}
         \\{<ees' c'' ees''>2 fis' <d' d''> e'}
         >> | <<
           {a'4 c'' c'' cis'' cis''2 <e' e''>}
@@ -264,9 +264,10 @@ onceStem =
         >> | <<                                            %--80
           {dis'2 b b cis'}
         \\{gis2 s g a}
+        >> | <<
+          {<fis dis'>1 b2 cis'}
+        \\{ais2 ais e1}
         >> |
-          <ais' dis'>1 b2 cis'
-           |
           <dis dis'>2 <fis fis'> <fis fis'>1
      \bar "|."
 
@@ -292,7 +293,7 @@ onceStem =
           {e2 gis b s}
         \\{e,2 cis cis dis2}
         >> |                                               %--05
-          gis,2 <ais d'> ais, <fis c'>
+          gis,2 <ais cis'> ais, <fis c'>
            | <<
           {c'2 des' d' c'}
         \\{f2 ees d1}
@@ -479,10 +480,9 @@ onceStem =
            | <<
           {b,1 e}
         \\{e,1 cis}
-        >> | <<                                            %--80
-          {e2 fis gis ais}
-        \\{fis,\breve}
-        >> |
+        >> |                                               %--80
+          <gis, dis>1 <fis, cis>
+           |
           <b,, fis, b,>\breve
      \bar "|."
       } >>
