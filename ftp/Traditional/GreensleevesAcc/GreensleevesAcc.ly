@@ -29,7 +29,7 @@
     lastupdated = "2008/Jan/12"
 
     moreInfo="This piece is a simple version of the well known song for the standard bass accordion. It is an adaption of mutopias piano version."
- footer = "Mutopia-2008/01/13-1265"
+ footer = "Mutopia-2008/01/20-1265"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -78,9 +78,9 @@ accordionA = \context Staff \relative c''\new Voice {
     a2.
 
     g'2. g4. 
-    f8 e4 d2 b4 g4. a8 b4
+    fis8 e4 d2 b4 g4. a8 b4
     c2 a4 a4. gis8 a4 b2 gis4 e2.
-    g'2. g4. f8 e4 
+    g'2. g4. fis8 e4 
     d2 b4 g4. a8 b4 
     c4. b8 a4 gis4. fis8 gis4 
     a2. a2. 
@@ -166,7 +166,7 @@ textA = \lyricmode {
   C c c
   G c c
   D g g
-  g g g
+  G g g
   F f f
   C f f
   E "e7" "e7"
@@ -175,7 +175,7 @@ textA = \lyricmode {
   C c c
   G c c
   D g g
-  g g g
+  G g g
   F f f
   E "e7" "e7"
   A am am
