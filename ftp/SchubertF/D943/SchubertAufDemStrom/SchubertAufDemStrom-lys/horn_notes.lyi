@@ -1,0 +1,213 @@
+horn = \relative c''
+{
+  \transposition e
+  R1 |
+  r2 r4 g\p |
+  e'2.( d8 c) |
+  d2. g,4 |
+  f'2.( e8 d) |
+  e2. e4( |
+  g1~)\< |
+  g2.(\f\> fis8 e) |
+  fis1\p |
+  f\pp |
+  e4(\< g~) g8(\> f c a)\! |
+  g2.( a16 b c d) |
+  e2 d\trill |
+  c8(\< e g4~) g8(\> f c a)\! |
+  g2.( a16 b c d) |
+  e2~ e8( f a, b) |
+  d2( c8) r r4 |
+  r c8.(\p e16 g4 f) |
+  e2( c4) r |
+  r e,8.( g16 c8 e d c) |
+  f2(\> e4)\! d8( c) |
+  d2(\> c4)\! r |
+  r4 c8.( e16 g4 f) |
+  e2( c4) r |
+  r e,8.( g16 << c4 {s8 s^\turn} >> d8 e) |
+  fis,2(\> g4)\! a8( b) |
+  a2(\> g4)\! r |
+  \repeat unfold 2
+  {
+    g4.\fp b8 b4 b |
+    c8( b c d) ees4(\> c8)\! r |
+    g'4(\> f8\! ees d2) |
+  }
+  R1 |
+  bes4 bes_\markup{\italic cresc.} bes8( ees) ees( d) |
+  d(\< c) c( f) f-.( f-. f-. f-.) |
+  f2\f f8(\p d b d) |
+  d(\< c) e,( g) g( f) a(\> f') |
+  f4( e2\! d4) |
+  c4 r r2 |
+  R1 |
+  r2 r4 g |
+  f'2.( e8 d) |
+  e2. e4( |
+  g1~)\< |
+  g2.(\> fis8\! e) |
+  fis1\> |
+  f2.\! f4\p |
+  e( f16 e d e f4 d)_\markup{\italic cresc.} |
+  c2 b |
+  a4 r r2 |
+  a4.\mf a8 a( gis a b) |
+  c(\< b a b) c4(\> b8 a)\! |
+  a2( gis4) r |
+  b4. b8 b\< b b b |
+  d2(\> b4)\! r |
+  d4. d8 d\< d d d |
+  f2(\> e4)\! r |
+  e2(\pp f |
+  e d) |
+  << e1 {s2\< s\>} >> |
+  e4.(\! cis8 e4 d) |
+  cis2( b) |
+  a4 r r2 |
+  R1 |
+  a4.\mf a8 a( gis a b) |
+  c(\< b a b c4\> b8 a)\! |
+  a2( gis4) r |
+  b4. b8 b\< b b b |
+  d2(\> b4)\! r |
+  d4. d8 d\< d d d |
+  f2(\> e4)\! r |
+  e2(\pp g4 f) |
+  e2( d)\trill |
+  << e1 {s2\< s\>} >> |
+  e4.(\pp cis8 e d fis d) |
+  cis2 b\trill |
+  a4 r r2 |
+  R1 |
+  r2 r4 e4 |
+  d'2.( c8 b) |
+  c2. c8(\< e) |
+  g2~ g8(\> f c a)\! |
+  g2.( a16 b c d) |
+  e2( \afterGrace d)\trill {c16[ d]} |
+  c8(\pp\< e g4.) f8(\> c a) |
+  g2.(\! a16 b c d) |
+  e2~ e8( f a, b) |
+  c2. r4 |
+  r c8.( e16 g4 f) |
+  e2( c4) r |
+  r4 e,8.( g16 c8 e d c) |
+  f2(\> e4)\! d8( c) |
+  b2(\> c4)\! r |
+  r c8.( e16 g4 f) |
+  e2( c4) r |
+  r e,8.( g16 << c4 {s8 s\turn} >> d8 e) |
+  fis,2(\> g4)\! a8( b) |
+  a2(\> g4)\! r |
+  r4 g8.(\pp a16 b8 d b g) |
+  fis2(\> g4)\! a8( b) |
+  a2(\> g4)\! r |
+  \repeat unfold 2
+  {
+    g4.\fp b8 b4 b |
+    c8( b c d) ees4(\> c8)\! r |
+    g'4(\> f8 ees d2)\! |
+  }
+  R1 |
+  bes4. bes8_\markup{\italic cresc.} bes( ees) ees( d) |
+  c(\< f) f-. f-. f-. f( ees f) |
+  << {g2( aes)} {s4\ff-> s s-> s} >> | %NOTE: decrescendi are written, but accents look better to me here.
+  g2(\< f4 ees8 f) |
+  g1\> |
+  g4-.(\! g-. g-. g-.) |
+  g2.(\p f4) |
+  d( b d f) |
+  e2. e4 e(\< f16 e d e f4\> d) |
+  c2\! b\trill |
+  a4 r r2 |
+  a4.\mf a8 a( gis a b) |
+  c(\< b a b c4\> b8 a)\! |
+  a2( gis4) r |
+  R1 |
+  r2 r4 b8. b16 |
+  b4.\< b8 b4 d |
+  f2(\> e4)\! r |
+  c,4.\pp b8 a4 f |
+  g2. g4 |
+  aes1\fz\> |
+  a4.\p\< cis8 d4 f |
+  e2.\f\> e4\! |
+  a,2 r |
+  R1 |
+  a'4.\p a8 a( gis a b) |
+  c(\< b a b c4\> b8 a)\! |
+  a2( gis4) r |
+  R1*2 |
+  b4. b8 b4\< d |
+  f2(\> e4)\! r |
+  c,4.\pp b8 a4 f |
+  g2. g4 |
+  aes1\fz\> |
+  a4.\p\< cis8 d4 f |
+  e2.\f\> e4\! |
+  a,2 r |
+  R1 |
+  r2 r4 e'4 |
+  d'2.( c8 b) |
+  c2. c8( e) |
+  g2~\pp\< g8(\> f c a)\! |
+  g2.( a16 b c d) |
+  e2( d) |
+  g2~\pp\< g8(\> f c a)\! |
+  g2.( a16 b c d) |
+  e2~ e8( f a, b) |
+  c2 r |
+  r4 c8.(\p e16 g4 f) |
+  e2( c4) r |
+  r e,8.( g16 c8 e d c) |
+  f2(\> e4)\! d8( c) |
+  d2(\> c4)\! r |
+  r4 c8.( e16 g4 f) |
+  e2( c4) r |
+  r e,8.( g16 << c4 {s8 s^\turn} >> d8 e) |
+  fis,2(\> g4)\! a8( b) |
+  a2(\> g4)\! r |
+  \repeat unfold 2
+  {
+    g4.\fp b8 b4 b |
+    c8( b c d) e4(\> c8)\! r |
+    g'4(\> f8\! e d2) |
+  }
+  R1 |
+  bes4. bes8_\markup{\italic cresc.} bes8( ees) ees( d) |
+  d(\< c) c( f) f-.( f-. f-. f-.) |
+  f2~\f\> f8( d b d) |
+  d(\pp c) e,( g) g(\< f) a( f') |
+  f4(\> e2 d4)\! |
+  c2 r2 |
+  c2.(\pp d8 e) |
+  g,2. g4 |
+  g2.( a8 b) |
+  b4( c) r2 |
+  R1*3 |
+  r2 g4-.( g-.) |
+  c( b a g) |
+  g( f) f( g8 a) |
+  g4( f e d) |
+  d( c) r2 |
+  r2 e'4.(\p\< f8) |
+  f4(\> e)\! r2 |
+  r e4.(\< f8) |
+  f4(\> e)\! a,4.\f f8 |
+  e4.(\< g8 c4 e8 c) |
+  g'4(\> f e d) |
+  c2\! d4-.(\p d-.) |
+  d4( e8) r d4-.( d-.) |
+  d4( c8) r d4-.(\pp d-.) |
+  d2~ d8( f e d) |
+  << g1~ {s2\< s\>} >> |
+  g8(\! f_\markup{\italic ritard.} d b g f d g) |
+  c4 r
+    \clef bass
+    \set Staff.middleCPosition = #-1
+    c,,2 |
+  c c |
+  << {c1\fermata} {s2\< s4..\> s16\!} >> |
+}
+

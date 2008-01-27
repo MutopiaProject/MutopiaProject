@@ -1,0 +1,231 @@
+voice = \relative c''
+{
+  \autoBeamOff
+  \key e \major
+  R1*16 |
+  r2 r4 gis8. b16 |
+  e4 e dis e8[ fis] |
+  e4.( b8) gis4 e'8. fis16 |
+  gis4 e b a8[ gis] |
+  cis2 b4 r |
+  r2 r4 gis8. b16 |
+  e4 e dis e8[ fis] |
+  e4.( b8) gis4 e'8. fis16 |
+  gis4 e b a8[ gis] |
+  e'2 dis4 r |
+  R1 |
+  b4. fis8 fis4 fis |
+  g8[ fis] g[ a] b4 g8 r |
+  R1 |
+  b4. fis8 fis4 fis |
+  g8[ fis] g[ a] b4 g8 r |
+  R1 |
+  b4 b b b |
+  b8[ a] b[ c] d4 dis8. dis16 |
+  e4. e8 g[ fis] e[ fis] |
+  fis4.( dis8) b4.( a8) |
+  a[ gis] e'[ dis] dis[ cis] a'[ fis] |
+  fis4( e2) dis4 |
+  e2 r |
+  R1*9 |
+  r2 r4 gis,8. gis16 |
+  cis4. cis8 cis[ bis] cis[ dis] |
+  e2 cis4 cis8. cis16 |
+  cis8[ dis] e[ fis] gis4 fis8[ e] |
+  e2 dis4 r |
+  R1*2 |
+  dis4. dis8 dis8. dis16 dis8. dis16 |
+  fis4.( dis8) bis4 dis8 dis |
+  e4. dis8 cis4 fis |
+  e2 dis |
+  dis2. eis8 fis |
+  eis4. cis8 ais4 dis |
+  cis2( bis) |
+  cis4 r r gis8. gis16 |
+  cis4. cis8 \grace {cis16[ dis]} cis8[ bis] cis[ dis] |
+  e2 cis4 cis8. cis16 |
+  cis8[ dis] e[ fis] gis4 fis8[ e] |
+  e2 dis4 r |
+  R1*2 |
+  dis4. dis8 dis8. dis16 dis8. dis16 |
+  fis4.( dis8) bis4 r |
+  e4. dis8 cis4 fis |
+  e2~ e8[ dis] cis[ dis] |
+  dis2. eis8 fis |
+  eis4. cis8 ais[ dis] fis[ dis] |
+  cis2 \afterGrace bis\trill {ais16[ bis]} |
+  cis2 r |
+  R1*10 |
+  r2 r4 gis8. b16 |
+  e4 e dis e8[ fis] |
+  e4.( b8) gis4 e'8. fis16 |
+  gis4 e b a8[ gis] |
+  cis2 b4 r |
+  r2 r4 gis8. b16 |
+  e4 e dis e8[ fis] |
+  e4.( b8) gis4 e'8. fis16 |
+  gis4 e b a8[ gis] |
+  e'2 dis4 r |
+  r2 r4 dis8. e16 |
+  fis4 dis b fis |
+  e'2 dis4 r |
+  R1 |
+  b4. fis8 fis4 fis |
+  g8[ fis] g[ a] b4 g8 r |
+  R1 |
+  b4. fis8 fis4 fis |
+  g8[ fis] g[ a] b4( g8) r |
+  R1 |
+  b4. b8 b4 b |
+  b8[ a] b[ c] d4 dis8 dis |
+  e4. e8 g[ fis] e[ fis] |
+  g2 e4. e8 |
+  d4( g8) g g[ fis] e[ fis] |
+  g2. r4 |
+  R1*5 |
+  r2 r4 gis,8. gis16 |
+  cis4. cis8 cis[ bis] cis[ dis] |
+  e2 cis4 cis8. cis16 |
+  cis8[ dis] e[ fis] gis4 fis8[ e] |
+  e2 dis4 dis8. dis16 |
+  dis4. dis8 dis4. dis8 |
+  fis4.( dis8) bis4 fis'8. fis16 |
+  fis4. fis8 fis4. dis8 |
+  bis2 dis4 r |
+  e4. dis8 cis4 a |
+  b2. b4 |
+  bis2 bis4 r |
+  cis4. eis8 fis4 a |
+  gis2. gis,4 |
+  cis2 r4 gis8. gis16 |
+  cis4. cis8 cis[ bis] cis[ dis] |
+  e2 cis4 cis8. cis16 |
+  cis8[ dis] e[ fis] gis4 fis8[ e] |
+  e2 dis4 r |
+  dis4. dis8 dis4 dis |
+  fis4. dis8 bis4 r |
+  fis'4. fis8 fis4 dis |
+  bis4. dis8 dis4 r |
+  e4. dis8 cis4 a |
+  b2. b4 |
+  bis1 |
+  cis4. eis8 fis4 a |
+  gis2. gis,4 |
+  cis2 r |
+  R1*10 |
+  r2 r4 gis8. b16 |
+  e4 e dis4 e8[ fis] |
+  e4.( b8) gis4 e'8. fis16 |
+  gis4 e b a8[ gis] |
+  cis2 b4 r |
+  r2 r4 gis8. b16 |
+  e4 e dis e8[ fis] |
+  e4.( b8) gis4 e'8. fis16 |
+  gis4 e b a8[ gis] |
+  e'2 dis4 r |
+  R1 |
+  b4. fis8 fis4 fis |
+  gis8[ fis] gis[ a] b4 gis |
+  R1 |
+  b4. fis8 fis4 fis |
+  gis8[ fis] gis[ a] b4 gis |
+  R1 |
+  b4. b8 b4 b |
+  b8[ a] b[ c] d4 dis8. dis16 |
+  e4. e8 g[ fis] e[ fis] |
+  fis4.( dis8) b4.( a8) |
+  a[ gis] e'[ dis] dis[ cis] a'[ fis] |
+  fis4( e2) dis4 |
+  e2 r |
+  R1*3 |
+  r2 b4 b |
+  e dis cis b |
+  b a a b8[ cis] |
+  \grace cis8 b4. a8 gis4 fis |
+  fis gis b cis8[ dis] |
+  e4. e8 e4 fis8[ gis] |
+  b,2 b4. b8 |
+  b4. b8 b4 cis8[ dis] |
+  dis4( e) e4. cis8 |
+  b4. e8 gis4. fis8 |
+  fis4( e) e4. cis8 |
+  b4. e8 gis4. fis8 |
+  fis4( e) a4. cis,8 |
+  b2~ b8[ e] e[ gis] |
+  gis4( fis) << {\voiceOne b( dis,)} \new Voice {\voiceTwo e( dis)} >> \oneVoice |
+  e2 r |
+  R1*4 |
+  r2 dis4. dis8 |
+  \grace fis8 e4 e << b4( {s8 s\turn} >> dis16[ cis]) b8 |
+  gis2 r |
+  R1^\fermataMarkup |
+}
+
+text = \lyricmode
+{
+  Nimm die letz -- ten Ab -- schieds -- küs -- se,
+  und die we -- hen -- den, die Grü -- sse,
+  die ich noch ans U -- fer sen -- de,
+  eh' dein Fuss sich schei -- dend wen -- de!
+  Schon wird von des Stro -- mes Wo -- gen
+  rasch der Na -- chen fort -- ge -- zo -- gen,
+  doch den thrä -- nen -- dunk -- len Blick
+  zieht die Sehn -- sucht stets zu -- rück,
+  zieht,
+  zieht die Sehn -- sucht stets zu -- rück!
+
+  Und so trägt mich denn die Wel -- le
+  fort mit un -- er -- fleh -- ter Schnel -- le.
+  Ach, schon ist die Flur ver -- schwun -- den,
+  wo ich se -- lig Sie ge -- fun -- den,
+  ach, wo ich se -- lig Sie ge -- fun -- den!
+  E -- wig hin, ihr Won -- ne -- ta -- ge,
+  e -- wig hin, ihr Won -- ne -- ta -- ge!
+  Hoff -- nung -- sleer ver -- hallt die Kla -- ge
+  um das schö -- ne Hei -- math -- land,
+  wo ich ih -- re, ih -- re Lie -- be fand.
+
+  Sieh, wie flieht der Strand vor -- ü -- ber,
+  Und wie drängt es mich hin -- ü -- ber,
+  zieht mit un -- nenn -- ba -- ren Ban -- den,
+  an der Hüt -- te dort zu lan -- den,
+  in der Lau -- be dort zu wei -- len;
+  doch des Stro -- mes Wel -- len ei -- len
+  wei -- ter oh -- ne Rast und Ruh,
+  ei -- len oh -- ne Rast und Ruh,
+  füh -- ren mich dem Welt -- meer zu,
+  füh -- ren mich dem Welt -- meer zu!
+
+  Ach, vor je -- ner dunk -- len Wü -- ste,
+  fern von je -- der hei -- tern Kü -- ste,
+  wo kein Ei -- land zu er -- schau -- en,
+  wo kein Ei -- land zu er -- schau -- en,
+  o, wie fasst mich zit -- ternd Grau -- en,
+  o, wie fasst mich zit -- ternd Grau'en!
+  Weh -- muths -- thrä -- nen sanft zu brin -- gen,
+  kann kein Lied vom U -- fer drin -- gen;
+  nur der Sturm weht kalt dah -- er,
+  nur der Sturm weht kalt dah -- er
+  durch das grau -- ge -- hob' -- ne Meer,
+  durch das grau -- ge -- hob' -- ne Meer!
+
+  Kann des Au -- ges seh -- nend Schwei -- fen
+  kei -- ne U -- fer mehr er -- grei -- fen,
+  nun so schau' ich zu den Ster -- nen
+  auf in je -- nen heil' -- gen Fer -- nen!
+  Ach, bei ih -- rem mil -- den Schei -- ne
+  nannt' ich sie zu -- erst die Mei -- ne;
+  dort viel -- leicht, o trö -- stend Glück!
+  dort be -- gegn' ich ih -- rem Blick,
+  dort, dort be -- gegn' ich ih -- rem Blick.
+
+  Bei der Ster -- ne mil -- dem Schei -- ne nannt'
+  ich sie zu -- erst die Mei -- ne;
+  dort viel -- leicht, o trö -- stend Glück!
+  dort be -- gegn' ich ih -- rem Blick,
+  dort viel -- eicht, o trö -- stend Glück!
+  dort be -- gegn' ich ih -- rem Blick,
+  dort be -- gegn' ich ih -- rem Blick,
+  dort be -- gegn' ich ih -- rem Blick.
+}
+
