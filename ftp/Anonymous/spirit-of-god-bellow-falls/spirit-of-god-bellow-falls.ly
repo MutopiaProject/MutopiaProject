@@ -24,7 +24,7 @@
 	style = "Hymn"
 	copyright = "Public Domain"
 	maintainer = "David Bolton"
-	maintainerEmail = "dbolton graceland edu"
+	maintainerWeb = "http://davidbolton.info/"
 	lastupdated = "2005/Aug/16"
 
 	piece = " "
