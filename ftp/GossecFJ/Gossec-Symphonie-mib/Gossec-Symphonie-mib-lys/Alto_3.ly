@@ -4,8 +4,8 @@
 \clef alto
 \key ees \major
 \time 6/8
-
-
+\override Score.MetronomeMark #'transparent = ##t
+\tempo 4.=60
 
 
 R2.
@@ -70,7 +70,7 @@ bes bes
 bes r4 r8
 aes,4 aes'8 aes g f
 bes4 aes8 g4 es8
-aes,4. bes \bar "||" \override Score.RehearsalMark #'break-align-symbols = #'(time-signature) \override Score.RehearsalMark #'self-alignment-X = #left \override Score.RehearsalMark #'padding = #2.0 \time 3/8 \mark \markup {\bold "Presto"}
+aes,4. bes \bar "||" \override Score.RehearsalMark #'break-align-symbols = #'(time-signature) \override Score.RehearsalMark #'self-alignment-X = #left \override Score.RehearsalMark #'padding = #2.0 \time 3/8 \mark \markup {\bold "Presto"} \tempo 4.=90
 ees4 g16 ees
 c8 c c
 c4 ees16 c
