@@ -4,7 +4,7 @@
 \header {
 	title = "Gavotta"
 	composer = "G. F. Händel (1685-1758)"
-	mutopiatitle = "Gavotta , Aria from Atalanta"
+	mutopiatitle = "Gavotta from Atalanta"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 35"
 	mutopiainstrument = "Trumpets, Timpani"
