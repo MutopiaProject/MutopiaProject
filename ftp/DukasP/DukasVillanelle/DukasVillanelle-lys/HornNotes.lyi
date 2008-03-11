@@ -4,6 +4,7 @@ hornNotes = \relative c''
 {
   %6/8
   \transposition f
+  \override Script #'avoid-slur = #'inside
   r4._"(sans les Pistons)" r4\f \times 2/3 {r16 g( d')} |
   c4.-^ g-^ |
   c,2.~-^\fp^\dimMolto | c~\pp | c~ |
@@ -12,7 +13,7 @@ hornNotes = \relative c''
   c,2.~-_)_\dim | c2.~\pp |
   c4~ c16 r r4
 
-  c8\(^(_\pEspress | \tag #'horn \noBreak
+  c8\(^(_\pEspress |
   g'4 g8-.) bes( c d) |
   e4( d8 c4) e8( |
   d4) e8( d c b |
@@ -38,7 +39,7 @@ hornNotes = \relative c''
   e4) e8( d c b |
   c4.~) c8\) r
 
-  c,8\(( |
+  c,8^\(( |
   ees4 ees8-.) ges8( aes bes) |
   c4( bes8 aes4)\) ees8\(( |
   e4) e8( g a b |
@@ -60,7 +61,6 @@ hornNotes = \relative c''
   }
   e2.->(\pocosfz c4\> |
 
-  \tag #'horn \break %TODO: This break is because a mark is too long and goes off the page.
   e2)\p r8 e-_(_\moltoEspress\< e-_ e-_) |
   \times 2/3 {g-.->(\> f-. e-.} d4~)\!
     \times 2/3 {d8 e-_( f-_}
@@ -101,7 +101,7 @@ hornNotes = \relative c''
     d'2-> r4 g,-> |
   }
   d'2-> r4 g, |
-  \times 2/3 {d'4-.-^\mf c-. b-.} \times 2/3 {a-. b-. g-.} |
+  \times 2/3 {d'4-.-^\mf^"(légèrement)" c-. b-.} \times 2/3 {a-. b-. g-.} |
   \times 2/3 {a-. b-. g-.} \times 2/3 {a-. c-. e-.} |
   \times 2/3 {d-. b-. c-.} \times 2/3 {a-. b-. g-.} |
   \times 2/3 {a-. f-. g-.} \times 2/3 {e-. f-. d-.} |
@@ -124,7 +124,9 @@ hornNotes = \relative c''
   fis1~-^ | fis~ |
   fis8[ r g e] c g e c |
   g1( |
-  \clef bass c,4) r r2 |
+  \clef bass
+    \set Staff.middleCPosition = #-1
+    c,4) r r2 |
   \clef treble
   R1*8 |
 
@@ -144,30 +146,30 @@ hornNotes = \relative c''
   \setTextDim
   dis1~->\> dis~ dis |
   \setTextDim
-  b dis~\p\> dis~ dis~ dis~ | dis4)\! r r2 |
+  b dis~\p\> dis~ dis~^\markup{\italic perdendosi} dis~ | dis4)\! r r2 |
 
-  dis1-_(\<^"(En echo)"_"(Doigtez un 1/2 ton au-dessus)" | dis-_ | << dis-_) {s2. s4\!} >> |
-  %legerement retenu
-  \times 2/3 {fis2-_(\> e-_ dis-_} | \tag #'horn \noBreak %NOTE: prevent tempo mark from going off the page.
-  cis1~\! | \tag #'horn \noBreak
-  \times 2/3 {cis2) dis-_ e-_} |
-  \times 2/3 {cis2-_ dis-_ e-_} |
-  dis2.~-_( dis8 ais |
-  dis1~-> |
-  dis4) r dis2-_(\< |
-  dis-_ dis-_) |
+  dis1-_(\<^"(En echo)"_\markup{\smaller "(Doigtez un 1/2 ton au-dessus)"} | dis-_ | << dis-_) {s2. s4\!} >> |
+  %légèrement retenu
   \times 2/3 {fis2-_(\> e-_ dis-_} |
-  cis1~\! |
+  cis1~)\! |
   \times 2/3 {cis2 dis-_ e-_} |
   \times 2/3 {cis2-_ dis-_ e-_} |
+  dis2.~-_( dis8 ais |
+  dis1~->) |
+  dis4 r dis2-_(\< |
+  dis-_ dis-_) |
+  \times 2/3 {fis2-_(\> e-_ dis-_} |
+  cis1~)\! |
+  \times 2/3 {cis2( dis-_ e-_} |
+  \times 2/3 {cis2-_ dis-_ e-_} |
   e2.~ e8 b |
-  e1~ |
-  e2.~ e8) c(\pp |
-  e1~ |
+  e1~) |
+  e2.~( e8 \breathe c\pp^"Ouvert" |
+  e1~)( |
   \setTextCresc
-  e2.~\cresc e8) cis( |
-  e1~ |
-  e2 dis |
+  e2.~\< e8 \breathe cis |
+  e1~) |
+  e2( dis |
   fis e) |
   %revenez
   \times 2/3 {ees2-_ d-_ des-_} |
@@ -181,7 +183,9 @@ hornNotes = \relative c''
   d c8 b a4 b |
   g d b e |
   d c8 b a4 g |
-  \clef bass d1~ |
+  \clef bass
+    \set Staff.middleCPosition = #-1
+    d1~ |
   d4) \clef treble g(_\pocoCresc c d |
   g1~) |
   g4 c,( g' a |
@@ -193,10 +197,10 @@ hornNotes = \relative c''
   d4-.\! r d2-_(\p |
   d-_\> d-_ |
   ees2~\pp ees8) r r4 |
-  R1*3 |
+  R1*3_"Mettez la Sourdine" |
 
   %F
-  r4 ees,-.\p^"Mettez la Sourdine" aes-. bes-. |
+  r4\p ees,-._\markup{\italic "léger (en forçant un peu le son)"} aes-. bes-. |
   ees-. des8-. c-. bes4-. c-. |
   aes-. ees-. c-. f-. |
   ees-. des8-. c-. bes4-. aes-. |
@@ -238,8 +242,7 @@ hornNotes = \relative c''
   c-. g-. e-. a-. |
   g4( f8 e d4) e-. |
   c-. g-. e-. a-. |
-  g1~\fp | \tag #'horn \noBreak g~ | g2 r |
-  \tag #'horn \break %TODO: This break is because a mark is too long and goes off the page.
+  g1~\fp | g~ | g2 r |
   r_\markup{\column{"(sans les" "Pistons)"}} g'_(\( | %TODO: I'm not totally happy with the slurs here
   
   %6/8
@@ -254,7 +257,6 @@ hornNotes = \relative c''
   \afterGrace d2._\mcresc\startTrillSpan {cis16[( d])\stopTrillSpan} |
 
   %2/2
-  \tag #'horn \break %TODO: This break is because a mark is too long and goes off the page.
   g4-|\f r r2 |
   R1*3 |
   r2^"(avec les Pistons)" f4-^_\ffmarcato e-^ |
@@ -299,6 +301,7 @@ hornNotes = \relative c''
       c r r2 |
       c,4 r r2 |
       \clef bass
+      \set Staff.middleCPosition = #-1
       c,4 r r2\fermata |
     }
   >>

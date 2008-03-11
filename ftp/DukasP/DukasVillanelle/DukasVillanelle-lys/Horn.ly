@@ -1,6 +1,6 @@
 \include "HornNotes.lyi"
 
-\version "2.11.34"
+\version "2.11.40"
 
 \paper
 {

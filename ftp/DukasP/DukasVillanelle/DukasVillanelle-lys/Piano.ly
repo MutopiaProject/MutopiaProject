@@ -2,7 +2,7 @@
 \include "HornNotes.lyi"
 \include "defs.lyi"
 
-\version "2.11.34"
+\version "2.11.40"
 
 \paper
 {
@@ -40,7 +40,7 @@ instrument = "Piano"
       {
         #(set-accidental-style 'modern)
         \set Staff.extraNatural = ##f
-        \rightHand
+        << \rightHand \outline >>
       }
 
       \new Dynamics = "dynamics" \pianoDynamics
@@ -51,10 +51,6 @@ instrument = "Piano"
         \set Staff.extraNatural = ##f
         \leftHand
       }
-
-      %\new Dynamics = "pedals" \pianoPedals
-
-      \outline
     >>
   >>
   \layout
@@ -67,6 +63,7 @@ instrument = "Piano"
       \consists "Output_property_engraver"
 
       \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+      \override DynamicLineSpanner #'Y-offset = #0
       pedalSustainStrings = #'("Ped." "*Ped." "*")
       pedalUnaCordaStrings = #'("una corda" "" "tre corde")
 

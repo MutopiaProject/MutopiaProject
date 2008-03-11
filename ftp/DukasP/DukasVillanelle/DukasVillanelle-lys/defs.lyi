@@ -44,6 +44,12 @@ smallTempoMark = #(define-music-function (parser location markp) (string?)
   \mark \markup { \small $markp }
 #})
 
+#(define (format-mark-a-tempo mark context)
+  (make-bold-markup
+    (make-left-align-markup (make-column-markup
+      `(,(make-markletter-markup (1- mark))
+      ,(make-smaller-markup "a Tempo"))))))
+
 outline =
 {
   \override Score.PaperColumn #'keep-inside-line = ##t
@@ -93,11 +99,18 @@ outline =
   s1*8
 
   \mark \default
-  s1*26
+  s1*22
 
+  \tempoMark "Poco rit."
+  s1*4
+
+  \once \override Score.RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \set Score.markFormatter = #format-mark-a-tempo
   \mark \default
   s1*22
 
+  \set Score.markFormatter = #format-mark-letters
   \mark \default
   s1*24
 
