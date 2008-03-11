@@ -1,0 +1,126 @@
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \smaller \bold $markp }
+#})
+
+outlineMvtI =
+{
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \set Score.skipBars = ##t
+  \time 4/4
+  \tempoMark "Allegro"
+  \repeat volta 2
+  {
+    s1*56 |
+  }
+  \repeat volta 2
+  {
+    s1*79 |
+  }
+}
+
+midiOutlineMvtI =
+{
+  \tempo 4 = 120
+  \repeat volta 2
+  {
+    s1*56 |
+  }
+  \repeat volta 2
+  {
+    s1*79 |
+  }
+}
+
+outlineMvtII =
+{
+  %TODO: These beam rules don't apply globally but only to the current staff.
+  %These are replicated in each part.
+  %
+  %These extra rules arent perfect and break some beams would should be left
+  %together.
+  %
+  %#(override-auto-beam-setting '(end 1 32 * *) 1 8)
+  %#(override-auto-beam-setting '(end 1 32 * *) 2 8)
+  %#(override-auto-beam-setting '(end 1 24 * *) 1 8)
+  %#(override-auto-beam-setting '(end 1 24 * *) 2 8)
+  \time 3/8
+  \tempoMark "Andante"
+  \repeat volta 2
+  {
+    s4.*44 |
+  }
+  \repeat volta 2
+  {
+    s4.*69 |
+  }
+}
+
+midiOutlineMvtII =
+{
+  \tempo 8 = 80
+  \repeat volta 2
+  {
+    s4.*44 |
+  }
+  \repeat volta 2
+  {
+    s4.*69 |
+  }
+}
+
+outlineMvtIII =
+{
+  \time 2/4
+  \tempoMark "Allegro"
+  \repeat volta 2
+  {
+    \partial 4 s4
+    s2*72 |
+    s4
+  }
+  \repeat volta 2
+  {
+    s4 |
+    s2*7 |
+    s4
+  }
+  \repeat volta 2
+  {
+    \grace s16 %NOTE: Needed for violin grace synchronization.
+    s4 |
+    s2*23 |
+    s4
+  }
+  s4 |
+  s2*83 | \bar "|."
+}
+
+midiOutlineMvtIII =
+{
+  \tempo 4 = 120
+  \repeat volta 2
+  {
+    \partial 4 s4
+    s2*72 |
+    s4
+  }
+  \repeat volta 2
+  {
+    s4 |
+    s2*7 |
+    s4
+  }
+  \repeat volta 2
+  {
+    s4 |
+    s2*23 |
+    s4
+  }
+  s4 |
+  s2*83 |
+}
+
