@@ -1,0 +1,4 @@
+\lyricmode {
+Vor -- rei spie -- gar l'af -- fan -- no na -- scon -- der -- lo vor -- re -- i na -- scon -- der -- lo vor -- re -- i e men -- tre_i dub -- bi mie -- i co -- si cre -- scen -- do van -- no tut -- to spie -- gar non o -- so tut -- to non sò ta -- cer non sò ta -- cer non sò spie -- gar non sò spie -- gar tut -- to non so non so ta -- cer Vor -- rei spie -- gar l'af -- fan -- no na -- scon -- der -- lo vor -- re -- i e men -- tre_i dub -- bi mie -- i co -- si cre -- scen -- do van -- no tut -- to spie -- gar non o -- so tut -- to non so ta -- cer ta -- cer non so non so spie -- gar spie -- gar non so non so ta -- cer tut -- to non so ta -- cer non non non so non so ta -- cer.
+Sol -- le -- ci -- to dub -- bio -- so pen -- so ram -- men -- to ram -- men -- to e ve -- do e_agl' oc -- chi miei non cre -- do non cre -- do non cre -- do al mio pen -- sier non cre -- do al mio pen -- sier.
+}

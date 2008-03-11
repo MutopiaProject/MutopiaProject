@@ -1,0 +1,5 @@
+\lyricmode {
+Tra -- di -- ta, sprez -- za -- ta che pian -- go? che par -- lo? Tra -- di -- ta che pian -- go? sprez -- za -- ta che par -- lo? Se pie -- no d'or -- go -- glio non cre -- de non cre -- de_il do -- lor non cre -- de_il do -- lor. Che pos -- sa pro -- var -- lo quell' a -- ni -- ma_in -- gra -- ta, quel pet -- to di sco -- glio quel bar -- ba -- ro, bar -- ba -- ro, bar -- ba -- ro cor, quel bar -- ba -- ro cor. Tra -- di -- ta, sprez -- za -- ta, sprez -- za -- ta, tra -- di -- ta che pian -- go? che par -- lo? che par -- lo? Che pos -- sa pro -- var -- lo quell' a -- ni -- ma_in -- gra -- ta, quel pet -- to di sco -- glio quel bar -- ba -- ro, bar -- ba -- ro, bar -- ba -- ro, quel bar -- ba -- ro cor, quel bar -- ba -- ro cor.
+Sen -- tir -- si mo -- ri -- re do -- len -- te_e per -- du -- ta! Tro -- var -- si_in -- no -- cen -- te,_in -- no -- cen -- te! Non es -- ser cre -- du -- ta, non es -- ser cre -- du -- ta! Chi giun -- ge_a sof -- fri -- re tor -- men -- to mag -- gior? Chi giun -- ge sof -- fri -- re tor -- men -- to mag -- gior, mag -- gior tor -- men -- to, tor -- men -- to mag -- gior, tor -- men -- to mag -- gior?
+Tra
+}

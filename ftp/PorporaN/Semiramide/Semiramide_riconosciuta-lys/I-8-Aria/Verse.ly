@@ -1,0 +1,4 @@
+\lyricmode {
+Co -- me_all' a -- mi -- che_a -- re -- ne_all' a -- mi -- che_a -- re -- ne l'on -- da rin -- cal -- za l'on -- da co -- sì sa -- nar con -- vie -- ne co -- sì con -- vien sa -- na -- re a -- mor a -- mor a -- mo -- re per a -- mo -- re per a -- mor. Co -- me_all' a -- mi -- che_a -- re -- ne_all' a -- mi -- che_a -- re -- ne l'on -- da rin -- cal -- za l'on -- da rin -- cal -- za l'on -- da, co -- sì sa -- nar con -- vie -- ne, co -- sì con -- vien sa -- na -- re a -- mor, a -- mor, a -- mo -- re con a -- mor, co -- sì, co -- sì sa -- nar con -- vie -- ne a -- mor, a -- mor, a -- mo -- re con a -- mor.
+Pia -- ga d'a -- cu -- to_ac -- cia -- ro, d'a -- cu -- to_ac -- cia -- ro, sa -- na l'ac -- cia -- ro i -- stes -- so ed un ve -- le -- no è spes -- so ri -- pa -- ro all' al -- tro_an -- cor, ri -- pa -- ro all' al -- tro_an -- cor, all' al -- tro_an -- cor.
+}

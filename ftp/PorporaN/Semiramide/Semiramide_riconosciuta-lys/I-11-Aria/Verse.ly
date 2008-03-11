@@ -1,0 +1,5 @@
+\lyricmode {
+Se_in -- ten -- de sì po -- co sì po -- co che_ho l'al -- ma pia -- ga -- ta, tu dil -- le_il mio fo -- co tu dil -- le_il mio fo -- co tu par -- la per me per me tu par -- la tu par -- la tu par -- la per me tu  par -- la per me. "(So" -- spi -- ra l'in -- gra -- ta, con -- ten -- ta non è non è con -- ten -- ta con -- ten -- ta non è.) Se_in -- ten -- de sì po -- co sì po -- co che_ho l'al -- ma ho l'al -- ma pia -- ga -- ta pia -- ga -- ta, tu dil -- le_il mio fo -- co tu par -- la per me tu dil -- le_il mio fo -- co tu par -- la per me. "(So" -- spi -- ra l'in -- gra -- ta) tu dil -- le_il mio fo -- co tu par -- la par -- la tu par -- la per me tu par -- la per me "(con" -- ten -- ta non è non è con -- ten -- ta con -- ten -- ta non è.)
+Sai pur che l'a -- do -- ro, che pe -- no, che mo -- ro, che tut -- ta si fi -- da si fi -- da quest' al -- ma quest' al -- ma di te di te di te. "(Si" tur -- ba l'in -- fi -- da con -- ten -- ta non è non è con -- ten -- ta con -- ten -- ta con -- ten -- ta non è con -- ten -- ta non è.)
+Se_in
+}

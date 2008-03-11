@@ -1,0 +1,4 @@
+\lyricmode {
+Quan -- do_un fal -- lo è stra -- da al re -- gno non pro -- du -- ce_al -- cun ros -- so -- re, non pro -- du -- ce_al -- cun ros -- so -- re, son del tro -- no al -- lo splen -- do -- re no -- mi va -- ni, no -- mi va -- ni o -- no -- re_e fé, o -- no -- re_e fé. Quan -- do_un fal -- lo è stra -- da al re -- gno, è stra -- da al re -- gno non pro -- du -- ce_al -- cun ros -- so -- re, non pro -- du -- ce_al -- cun ros -- so -- re, son del tro -- no al -- lo splen -- do -- re no -- mi va -- ni o -- no -- re_e fé, no -- mi va -- ni o -- no -- re_e fé, o -- no -- re_e fé.
+Se ac -- cop -- piar l'in -- cau -- to in -- ge -- gno, l'in -- cau -- to in -- ge -- gno la vir -- tù spe -- ra_all' er -- ro -- re, la vir -- tù spe -- ra_all' er -- ro -- re, non a -- dem -- pie al -- cun di -- se -- gno, non è giu -- sto, non è giu -- sto e reo non è, reo non è, reo non è.
+}

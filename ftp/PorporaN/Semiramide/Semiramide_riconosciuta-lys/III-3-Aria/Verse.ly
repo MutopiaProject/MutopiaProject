@@ -1,0 +1,4 @@
+\lyricmode {
+Il ciel mi vuo -- le_op -- pres -- so, mi vuo -- le_op -- res -- so; ma su le mi -- e ru -- i -- ne, ma su le mi -- e ru -- i -- ne il vin -- ci -- to -- re_is -- tes -- so im -- pal -- li -- dir fa -- rò, im -- pal -- li -- dir fa -- rò, il vin -- ci -- tor im -- pal -- li -- dir fa -- rò, im -- pal -- li -- dir fa -- rò. Il ciel mi vuo -- le_op -- pres -- so, op -- pres -- so; ma su le mi -- e ru -- i -- ne, ma su le mi -- e ru -- i -- ne il vin -- ci -- to -- re_is -- tes -- so im -- pal -- li -- dir fa -- rò, im -- pal -- li -- dir fa -- rò, im -- pal -- li -- dir fa -- rò, im -- pal -- li -- dir fa -- rò.
+E se l'in -- giu -- sto fa -- to, l'in -- giu -- sto fa -- to vor -- rà ch'io ca -- da, ch'io ca -- da_al fi -- ne, ca -- drò, ca -- drò, ma ven -- di -- ca -- to, ven -- di -- ca -- to, ma so -- lo no, no, non ca -- drò, no, non ca -- drò, no, non ca -- drò.
+}

@@ -1,0 +1,4 @@
+\lyricmode {
+Vie -- ni, che poi se -- re -- no al -- la tua bel -- la_in se -- no ti tro -- ve -- rà l'au -- ro -- ra quan -- do ri -- por -- ta_il dì, ti tro -- ve -- rà quan -- do ri -- por -- ta_il dì, ri -- por -- ta il dì. Vie -- ni, che poi se -- re -- no al -- la tua bel -- la_in se -- no ti tro -- ve -- rà l'au -- ro -- ra, al -- la tua bel -- la_in se -- no ti tro -- ve -- rà quan -- do ri -- por -- ta, ri -- por -- ta_il dì. Vie -- ni, che poi se -- re -- no ti tro -- ve -- rà l'au -- ro -- ra quan -- do ri -- por -- ta, ri -- por -- ta_il dì.
+Fa -- rai d'in -- vi -- dia_al -- lo -- ra im -- pal -- li -- dir gli_a -- man -- ti; e senz' af -- fan -- ni_e pian -- ti tu go -- de -- rai co -- sì, co -- sì, tu go -- de -- rai, senz' af -- fan -- ni tu go -- de -- rai co -- sì, go -- de -- rai co -- sì.
+}

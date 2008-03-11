@@ -1,0 +1,4 @@
+\lyricmode {
+O -- di quel fa -- sto? Scor -- gi quel fo -- co, quel fo -- co, quel fo -- co? Tut -- to fra po -- co ve -- drai man -- car. Tut -- to fra po -- co ve -- drai man -- car, ve -- drai man -- car, ve -- drai man -- car, ve -- drai man -- car, ve -- drai man -- car. O -- di quel fa -- sto? Scor -- gi quel fo -- co, quel fo -- co, quel fo -- co? Tut -- to fra po -- co ve -- drai man -- car. Tut -- to fra po -- co ve -- drai man -- car, ve -- drai man -- car, ve -- drai man -- car, ve -- drai man -- car, ve -- drai man -- car.
+Al gran con -- tra -- sto ve -- der -- si_ap -- pres -- so, ve -- der -- si_ap -- pres -- so, al gran con -- tra -- sto non è l'i -- stes -- so che mi -- nac -- ciar, non, non, non è l'i -- stes -- so che mi -- nac -- ciar, che mi -- nac -- ciar, ve -- dra -- i, ve -- dra -- i, non è l'i -- stes -- so, non è l'i -- stes -- so che mi -- nac -- ciar, che mi -- nac -- ciar.
+}

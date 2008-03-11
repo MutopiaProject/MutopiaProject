@@ -1,0 +1,4 @@
+\lyricmode {
+Tu mi di -- sprez -- zi, mi di -- sprez -- zi_in -- gra -- to ma non an -- dar -- ne_al -- te -- ro, non an -- dar -- ne, non an -- dar -- ne_al -- te -- ro; tre -- ma tre -- ma d'a -- ver mi -- ra -- to su -- per -- bo, su -- per -- bo il mio ros -- sor, su -- per -- bo_il mio ros -- sor. Tu mi di -- sprez -- zi, mi di -- sprez -- zi_in -- gra -- to, in -- gra -- to ma non an -- dar -- ne_al -- te -- ro non an -- dar -- ne al -- te -- ro; tre -- ma, tre -- ma d'a -- ver mi -- ra -- to su -- per -- bo, su -- per -- bo il mio ros -- sor, su -- per -- bo_il mio ros -- sor.
+Chi vuol di me l'im -- pe -- ro pas -- si quel co -- re_in -- de -- gno, quel co -- re_in -- de -- gno. Vo -- glia che sia lo sde -- gno fo -- rie -- ro, dell' a -- mor fo -- rie -- ro, fo -- rie -- ro dell' a -- mor.
+}
