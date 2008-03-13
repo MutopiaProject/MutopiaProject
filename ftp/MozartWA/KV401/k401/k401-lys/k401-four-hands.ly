@@ -1,4 +1,4 @@
-\version "2.1.27"
+\version "2.11.38"
 
 \include "header.ly"
 
@@ -14,38 +14,37 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \score {
-    <<
-	\new PianoStaff <<
-	    \set GrandStaff.instrument = "Primo    "
-	    
-	    \context Staff = up <<
-		\context Voice = marks \markings
-		\apply #(remove-tag 'two-hands) \context Voice = one \voiceI
-	    >>  
-	    \context Staff = down <<
-		\apply #(remove-tag 'two-hands) \context Voice = two \voiceII
-	    >>  
-	>>
-
-	\new PianoStaff <<
-	    \set GrandStaff.instrument = "Secondo  "
-	    
-	    \context Staff = up <<
-		\clef bass
-		\apply #(remove-tag 'two-hands) \context Voice = three \voiceIII
-	    >>  
-	    \context Staff = down <<
-		\clef bass
-		\apply #(remove-tag 'two-hands) \context Voice = four \voiceIV
-	    >>  
-	>>
+  <<
+    \new PianoStaff <<
+      \set PianoStaff.instrumentName = "Primo    "
+      
+      \context Staff = "up" <<
+	\context Voice = "marks" \markings
+	\removeWithTag #'two-hands \context Voice = "one" \voiceI
+      >>  
+      \context Staff = "down" <<
+	\removeWithTag #'two-hands \context Voice = "two" \voiceII
+      >>  
     >>
 
-    \paper { 
-	\translator { 
-	    \GrandStaffContext \consists "Instrument_name_engraver" 
-	}
-    }  
-
-    \midi { \tempo 4 = 110 }
+    \new PianoStaff <<
+      \set PianoStaff.instrumentName = "Secondo  "
+      
+      \context Staff = "up" <<
+	\clef bass
+	\removeWithTag #'two-hands \context Voice = "three" \voiceIII
+      >>  
+      \context Staff = "down" <<
+	\clef bass
+	\removeWithTag #'two-hands \context Voice = "four" \voiceIV
+      >>  
+    >>
+  >>
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 110 4)
+    }
+  }
 }

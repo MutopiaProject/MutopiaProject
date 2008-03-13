@@ -1,4 +1,6 @@
-markings = \notes {
+\version "2.11.38"
+
+markings =  {
     s1*95
 
     \once \override TextScript #'extra-offset = #'(0 . 2)
@@ -7,7 +9,7 @@ markings = \notes {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceI = \notes\relative d'' {
+voiceI = \relative d'' {
     \tag #'two-hands { \voiceOne }
     \key g \minor
 
@@ -135,7 +137,7 @@ voiceI = \notes\relative d'' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceII = \notes\relative g' {
+voiceII = \relative g' {
     \key g \minor
     \tag #'two-hands { \voiceTwo }
 
@@ -262,7 +264,7 @@ voiceII = \notes\relative g' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceIII = \notes\relative d' {
+voiceIII = \relative d' {
     \tag #'two-hands { \voiceOne }
     \key g \minor
 
@@ -386,7 +388,7 @@ voiceIII = \notes\relative d' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceIV = \notes\relative g {
+voiceIV = \relative g {
     \key g \minor
     \tag #'two-hands { \voiceTwo }
 

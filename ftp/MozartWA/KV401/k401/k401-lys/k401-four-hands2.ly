@@ -1,4 +1,4 @@
-\version "2.1.27"
+\version "2.11.38"
 
 \include "header.ly"
 
@@ -15,21 +15,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \score {
-    \context PianoStaff <<
-	\set GrandStaff.instrument = "Secondo  "
+  \new PianoStaff <<
+    \set GrandStaff.instrumentName = "Secondo  "
 
-	\context Staff = up <<
-	    \context Voice = pagebreaks \pageBreaks
+    \new Staff = "up" <<
+      \new Voice = "pagebreaks" \pageBreaks
 
-	    \context Voice = marks \markings
-	    \clef bass
-	    \apply #(remove-tag 'two-hands) \context Voice = one \voiceIII
-	>>  
-	\context Staff = down <<
-	    \clef bass
-	    \apply #(remove-tag 'two-hands) \context Voice = four \voiceIV
-	>>  
-    >>
-    \paper { }  
-    \midi { \tempo 4 = 110 }
+      \new Voice = "marks" \markings
+      \clef bass
+      \removeWithTag #'two-hands \new Voice = "one" \voiceIII
+    >>  
+    \new Staff = "down" <<
+      \clef bass
+      \removeWithTag #'two-hands \new Voice = "four" \voiceIV
+    >>  
+  >>
+  \layout { }  
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 110 4)
+    }
+  }
 }

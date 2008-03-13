@@ -1,4 +1,4 @@
-\version "2.1.27"
+\version "2.11.38"
 
 \include "header.ly"
 
@@ -15,17 +15,25 @@
 
 \score {
     \context PianoStaff <<
-	\context Staff = up <<
-	    \context Voice = marks \markings
-	    \apply #(remove-tag 'four-hands) \context Voice = one \voiceI
-	    \apply #(remove-tag 'four-hands) \context Voice = two \voiceII
+	\context Staff = "up" <<
+	    \context Voice = "marks" \markings
+	    \removeWithTag #'four-hands \context Voice = "one" \voiceI
+	    \removeWithTag #'four-hands \context Voice = "two" \voiceII
 	>>  
-	\context Staff = down <<
+	\context Staff = "down" <<
 	    \clef bass
-	    \apply #(remove-tag 'four-hands) \context Voice = three \voiceIII
-	    \apply #(remove-tag 'four-hands) \context Voice = four \voiceIV
+	    \removeWithTag #'four-hands \context Voice = "three" \voiceIII
+	    \removeWithTag #'four-hands \context Voice = "four" \voiceIV
 	>>  
     >>
-    \paper { }  
-    \midi { \tempo 4 = 110 }
+    \layout { }  
+    
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 110 4)
+      }
+    }
+
+
 }

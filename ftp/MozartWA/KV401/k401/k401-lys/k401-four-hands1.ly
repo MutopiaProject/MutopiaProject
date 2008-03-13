@@ -1,10 +1,9 @@
-\version "2.1.27"
+\version "2.11.38"
 
 \include "header.ly"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-% Let's make the score a little smaller than the default
 #(set-global-staff-size 18)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -15,19 +14,27 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \score {
-    \context PianoStaff <<
-	\set GrandStaff.instrument = "Primo    "
+  \new PianoStaff <<
+    \set GrandStaff.instrumentName = "Primo    "
 
-	\context Staff = up <<
-	    \context Voice = pagebreaks \pageBreaks
+    \new Staff = "up" <<
+      \new Voice = "pagebreaks" \pageBreaks
 
-	    \context Voice = marks \markings
-	    \apply #(remove-tag 'two-hands) \context Voice = one \voiceI
-	>>  
-	\context Staff = down <<
-	    \apply #(remove-tag 'two-hands) \context Voice = three \voiceII
-	>>  
-    >>
-    \paper { }
-    \midi { \tempo 4 = 110 }
+      \new Voice = "marks" \markings
+      \removeWithTag #'two-hands \context Voice = "one" \voiceI
+    >>  
+    \new Staff = "down" <<
+      \removeWithTag #'two-hands \context Voice = "three" \voiceII
+    >>  
+  >>
+  \layout { }
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 110 4)
+    }
+  }
+
+
 }
