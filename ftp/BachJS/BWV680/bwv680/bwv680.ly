@@ -1,7 +1,7 @@
 \version "2.10.33"
 
 \header {
-   mutopiatitle = "Wir glauben all an einem Gott"
+   mutopiatitle = "Wir glauben all an einen Gott"
    mutopiacomposer = "BachJS"
    mutopiaopus = "BWV 680"
    mutopiainstrument = "Organ"
@@ -13,11 +13,11 @@
    maintainerEmail = "urs@ursmetzger.de"
    lastupdated = "2008/Mar/28"
 
-   title = "Wir glauben all an einem Gott"
+   title = "Wir glauben all an einen Gott"
    subtitle = "In Organo pleno"
    composer = "Johann Sebastian Bach"
    opus="BWV 680"
- footer = "Mutopia-2008/03/31-1376"
+ footer = "Mutopia-2008/04/16-1376"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
