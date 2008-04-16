@@ -40,12 +40,10 @@ cbNoDivide = {
 % Make a unique dynamic mark, the ffz:
 ffz = #(make-dynamic-script "ffz")
 
-% Move any object (takes the object and a number pair as parameters):
-cbMoveTrillSpanner = #(define-music-function (parser location amount)
-						 (pair?)
-   #{
-	\once \override TrillSpanner #'extra-offset = #$amount
-   #}
-)
-
-
+% Add markup above the note and move it from the default placement:
+cbMarkUp = 
+#(define-music-function (parser location music text vert horiz) (ly:music? string? number? number?)
+#{
+  \once \override TextScript #'extra-offset = #($vert . $horiz)
+  $music \markup { $text }
+#})

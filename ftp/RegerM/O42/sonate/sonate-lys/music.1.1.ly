@@ -343,7 +343,7 @@ f='32( d' a' a, f''=''' a, d, f,) a( f' d' a, a'' d, f, a,=')
 \afterGrace a4-- { \cbNoDivide b32[(\< cs d e f g a b cs d e f g a b cs)] \! \cbDivide } |
 % measure 40 *********************************************************************************	
     <d,,=' a' f' d'>4.->_\markup { \hspace #0 \raise #-3 \italic {con tutta forza}}
-    a''8-> \cbMoveTrillSpanner  #'(0 . 1)
+    a''8-> \once \override TrillSpanner #'extra-offset = #'(0 . 1)
     \stemDown <g,, g' d' bf'>4.^>\startTrillSpan \stemNeutral
     a''16(\stopTrillSpan g) |
 % measure 41 *********************************************************************************	
@@ -442,12 +442,14 @@ r16 b,='-- \<
     d16( cs!) b!-. cs-. e( d) cs-. d-. fs( e) ds-. e-. g( fs) es-. fs-. |
 % measure 55 (upper voice - start) ***********************************************************
     a( g!) fs-. g-.
+\stemDown
 <g='' b,>16( <b d,>) <b d,>-. <e g,>-. a,!=''( cs) e-. <g b,>-. <g b,>(
 <fs=''' a,>) <fs a,>-. <d fs,>-. |
 % measure 56 (upper voice) *******************************************************************
 g,=''16( b) d-.
 <fs=''' a,>-. <fs=''' a,>( <e g,>) <e g,>-. <cs e,>-. <e g,>( <d fs,>)
 <d fs,>-. <b d,>-. <d fs,>( <cs e,>) <cs e,>-. <as cs,>-. |
+\stemNeutral
   }
   \\
   {
