@@ -1,0 +1,3 @@
+\lyricmode {
+Ma se l'al -- ma sem -- pre ge -- me nell' a -- mor ar -- sa_e con -- sun -- ta, nell' a -- mor ar -- sa_e con -- sun -- ta, ar -- sa, ar -- sa_e con -- sun -- ta,_e con -- sun -- ta nell' a -- mor, ma se l'al -- ma sem -- pre ge -- me nell' a -- mor ar -- sa_e con -- sun -- ta, nell' a -- mor ar -- sa_e con -- sun -- ta,_e con -- sun -- ta, ar -- sa_e con -- sun -- ta, e con -- sun -- ta, que -- sto_av -- vien per -- ch'ar -- de_e te -- me, dal tuo cor es -- ser dis -- giun -- ta,_es -- ser dis -- giun -- ta, quest' av -- vien per -- ch'ar -- de_e te -- me, dal tuo cor es -- ser dis -- giun -- ta, quest' av -- vien per -- ch'ar -- de_e te -- me, dal tuo cor es -- ser dis -- giun -- ta.
+}
