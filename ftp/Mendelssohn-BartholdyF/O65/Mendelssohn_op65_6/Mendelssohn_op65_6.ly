@@ -26,8 +26,9 @@ al = {} te = {} ba = {} nu = {}
  composer = \markup\fontsize #3 \bold \center-align{  " " " " " "  " " " "" " "FélixMendelssohn" "Opus 65 n°6"}
  subtitle = \markup\fontsize #3 \center-align{ " " " "  " " "pour orgue à un clavier et pédale"}
 
- footer = "Mutopia-2008/04/16-1383"
+ footer = "Mutopia-2008/04/21-1383"
  copyright = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+breakbefore = ##t
 }
 
 
@@ -144,7 +145,7 @@ sol4.-5 ~sol8 \b mi-3 [ dod-1]
 |%28
 la'4.-5~   la8 \b sol-4 [ fad-3 ]
 |%29
-mi-2 re-1 dod-4   re-5 fad,-2 sol-3
+mi-2 re-1 dod-4   re-5 fad,-2 si-5
 |%30soprano
 la-4 sol-3 mi-1   re4-2 \b  fad8-2-4
 |%31
