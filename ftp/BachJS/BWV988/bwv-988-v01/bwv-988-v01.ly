@@ -26,7 +26,7 @@
         title = "Aria con 30 Variazioni"
         subtitle = "\"Goldbergsche Variationen\""
         piece = "Variatio 1. a 1 Clav."
-        mutopiatitle = "Goldberg Variations - Variation 1"
+        mutopiatitle = "Goldberg Variations - 1"
         composer = "Johann Sebastian Bach (1685-1750)"
         mutopiacomposer = "BachJS"
         opus = "BWV 988"
