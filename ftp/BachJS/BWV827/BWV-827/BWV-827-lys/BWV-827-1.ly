@@ -1,3 +1,30 @@
+% This file prints Bach BWV 827, movement 1. Prelude
+
+\version "2.10.33"
+
+\header
+{
+  title    	    = "Keyboard partita in A minor"
+  composer 	    = "Johann Sebastian Bach"
+  opus     	    = "BWV 827"
+  mutopiacomposer   = "BachJS"
+  mutopiainstrument = "Piano"
+  source	    = "Bach-Gesellschaft Ausgabe 1851-1899 Band 43 (1894)"
+  sourceurl         = "http://imslp.org/wiki/Notebook_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)"
+  sourceurltwo      = "http://world.std.com/~swmcd/steven/music/bach/Bach-AnnaMagdalena1725.pdf"
+  style	            = "Baroque"
+  copyright	    = "Public Domain"
+  maintainer	    = "Steven McDougall"
+  maintainerEmail   = "swmcd@world.std.com"
+  maintainerWeb     = "http://world.std.com/~swmcd/steven/"
+ footer = "Mutopia-2008/05/18-1080"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+}
+
+% Acknowledgments
+%
+% Wolfgang Suppan <wsu@chello.at>
+
 \include "english.ly"
 
 upper = \relative c'
@@ -68,7 +95,7 @@ upper = \relative c'
   fs,4. \prall ~       | % 54
   fs16 b e ds e g      | % 55
 
-  e16 g a, fs' g e     | % 56
+  c,16 e a, fs' g e    | % 56
   fs16 a d, cs d fs    | % 57
   b,16 d g, e' fs ds   | % 58
   e16 g c, b c e       | % 59
@@ -151,7 +178,7 @@ lower =
   r16 a b gs a c'      	 | % 3
   d16 b e d c b,       	 | % 4
   c8 e a ~             	 | % 5
-  a8 fs b ~            	 | % 6
+  a8 gs b ~            	 | % 6
   b16 a gs a b c'      	 | % 7
 
   d'16 f' b f' e' d'   	 | % 8
@@ -160,7 +187,7 @@ lower =
   e'8 c' f             	 | % 11
   d'16 b c' a b d'     	 | % 12
   g'16 a b g a c'      	 | % 13
-  f'16 fs a fs gs b    	 | % 14
+  f'16 gs a fs gs b    	 | % 14
   e'16 a d' e f d      	 | % 15
 
   e8 gs e              	 | % 16
@@ -245,7 +272,7 @@ lower =
   f8 a f                 | % 87
 
   b,8 d b,               | % 88
-  e8 fs e                | % 89
+  e8 gs e                | % 89
   a8 c' a                | % 90
   f8 e d                 | % 91
   cs8 b, cs              | % 92

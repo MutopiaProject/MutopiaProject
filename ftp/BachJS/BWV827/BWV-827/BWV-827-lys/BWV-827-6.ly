@@ -1,3 +1,30 @@
+% This file prints Bach BWV 827, movement 6. Gigue
+
+\version "2.10.33"
+
+\header
+{
+  title    	    = "Keyboard partita in A minor"
+  composer 	    = "Johann Sebastian Bach"
+  opus     	    = "BWV 827"
+  mutopiacomposer   = "BachJS"
+  mutopiainstrument = "Piano"
+  source	    = "Bach-Gesellschaft Ausgabe 1851-1899 Band 43 (1894)"
+  sourceurl         = "http://imslp.org/wiki/Notebook_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)"
+  sourceurltwo      = "http://world.std.com/~swmcd/steven/music/bach/Bach-AnnaMagdalena1725.pdf"
+  style	            = "Baroque"
+  copyright	    = "Public Domain"
+  maintainer	    = "Steven McDougall"
+  maintainerEmail   = "swmcd@world.std.com"
+  maintainerWeb     = "http://world.std.com/~swmcd/steven/"
+ footer = "Mutopia-2008/05/18-1080"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+}
+
+% Acknowledgments
+%
+% Wolfgang Suppan <wsu@chello.at>
+
 \include "english.ly"
 
 bc = % bass cleff
@@ -42,7 +69,7 @@ sn = { \stemNeutral }
       {
 	\partial 8 e8 			        			   | 
 	a,8 c e    a   gs a   b, d  e   a  gs a 			   | % 1
-	c,8 e gs   a   b  c   d, c' a   bf d  a 			   | % 2				
+	c,8 e gs   a   b  c   d, c' a   bf d  a 			   | % 2
 
 	<< {     gs4. ~         gs8 fs g       a4. ~         a8 b  c  } \\
 	   { \bc e,, gs b   \tc e   ds e   \bc fs, a b   \tc e  ds! e } >> | % 3
@@ -53,8 +80,8 @@ sn = { \stemNeutral }
 	<< { c'8 b a   b   fs' a, ~   a   g fs   g4. ~  } \\
 	   { ds4. ~    ds8 cs  ds     e4. ~      e8 b d } >>		   | % 5
 
-	<< { g8 a g    a   d g, ~   g f e   f4. ~  } \\
-	   { cs4. ~    cs8 b cs     d4. ~   d8 a c } >>			   | % 6
+	<< { g8 a g    a   e' g, ~   g f e   f4. ~  } \\
+	   { cs4. ~    cs8 b  cs     d4. ~   d8 a c } >>		   | % 6
 
 	<< { f8 f e    f d'       f, ~ f   e d    e d' e, } \\
 	   { b4   c8   b4 \bc \su a8   gs4   b8   gs4.    } >>		   | % 7
@@ -93,7 +120,7 @@ sn = { \stemNeutral }
 	<< { d'8 c b   c4 gs8   a4. ~   a4 a8 } \\
 	   { e2. ~              e4 a,8  d4. ~ } >>			   | % 18
 
-	<< { d'2. ~             d8 b' gs   e  b d  } \\
+	<< { d'2. ~             d8 b' gs   e  b e  } \\
 	   { d,4 a'8   gs b a   b4    r8   r4   r8 } >>			   | % 19
 
 	<< { a8 c e   a gs a   b, d e   a gs a } \\
@@ -138,7 +165,7 @@ sn = { \stemNeutral }
 					      { ds, b' a}  >>		   | % 43
 
 	<< { g8 r r   	r fs' g   gs4. ~ \prall gs8 fs! gs!  } \\
-	   { e8 b g   	e ds e    d'! b fs      e   ds! e    } >>	   | % 44
+	   { e8 b g   	e ds e    d'! b gs      e   ds! e    } >>	   | % 44
 
 	<< { a'4. ~     a8 b  c   d,4   f!8   	b,4     gs'8 } \\
 	   { c,8 a f!   e  gs a   f   d b     	gs  e'  d    } >>	   | % 45
@@ -188,11 +215,11 @@ sn = { \stemNeutral }
 	e8   g  c'    c  e  g    fs, a,  c    fs  a   fs   			 | % 12
 	ds8  fs b     b, ds fs   e,  g,  b,   e   ds! e	   			 | % 13
 	fs,8 a, b,    e  ds e    g,  b,  ds   e   fs  g	   			 | % 14
-	a,8  a  e     f! a  e    ds4. ~       ds8 cs  ds!  			 | % 15
+	a,8  g  e     f! a  e    ds4. ~       ds8 cs  ds!  			 | % 15
 	e,8  g, b,    e  g  e    cs4. ~       cs8 b,  cs   			 | % 16
 	d,8  f, a,    d  f  d    b,4. ~       b,8 a,  b,   			 | % 17
 	c,8  e, g,    c  e  c    f,  a,  c    f   a   f    			 | % 18
-	b,8  d  f     b  d' b    e   fs  b    e'  gs' e'   			 | % 19
+	b,8  d  f     b  d' b    e   gs  b    e'  gs' e'   			 | % 19
 	c'2.                     d'4     c'8  b4.          			 | % 20
 	a4. ~         a4    g!8  f2.                       			 | % 21
 	e4      r8    r4    r8   a,  c   e    a   c'  a    			 | % 22
@@ -222,8 +249,8 @@ sn = { \stemNeutral }
 	<< { d8  r  r    r4      r8   r8 d  e    gs  b  d   } \\		       
 	   { a,8 f  d    b,  fs, a,   gs,2.                 } >> 		 | % 31
 										       
-	<< { c8  e  f    a   c'  e    d  fs g    g   d' f   } \\		       
-	   { a,4. ~      a,8 f,  a,   b,4. ~     b,8 g, g,  } >>		 | % 32
+	<< { c8  e  f    a   c'  e    d  fs g    b   d' f   } \\		       
+	   { a,4. ~      a,8 f,  a,   b,4. ~     b,8 g, b,  } >>		 | % 32
 										       
 	<< { e8  gs a    c'  e'  g    f  a  bf   d'  f' a   } \\		       
 	   { c4. ~     	 c8  a,  cs   d2. ~       	    } >>		 | % 33
@@ -238,7 +265,7 @@ sn = { \stemNeutral }
 	   { a,4    r8   r4      r8   r2.		    } >>		 | % 36
 										       
 	<< { r8  b, d    g   a   b    c' g  a    e   fs g   } \\		       
-	   { a,4    r8   r4      r8   r2.		    } >>		 | % 37
+	   { g,4    r8   r4      r8   r2.		    } >>		 | % 37
 										       
 	<< { r8  a, c    fs  g   a    b  fs g    ds  e  fs! } \\
 	   { fs,4   r8   r4      r8   r2.		    } >>		 | % 38
@@ -249,7 +276,7 @@ sn = { \stemNeutral }
 		       { d  cs d  } >>   g, b, d   g fs! g			 | % 40
 
 	<< { \tc e' 8 cs' \bc as   e  ds e    e'  cs' b     as! gs as } \\
-	   {     cs,8 e,      g,   cs b, cs   fs, as, cs!   fs  e  fs } >>	 | % 41
+	   {     cs,8 e,      g,   cs b, cs   fs, as, cs!   fs  es fs } >>	 | % 41
 
 	<< { fs4.    r4    r8   b4.    r4      r8  } \\
 	   { d 4. ~  d8 cs d    ds4. ~ ds8 cs! ds! } >>				 | % 42

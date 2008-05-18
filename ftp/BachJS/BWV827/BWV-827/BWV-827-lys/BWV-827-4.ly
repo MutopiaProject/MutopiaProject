@@ -1,3 +1,30 @@
+% This file prints Bach BWV 827, movement 4. Sarabande
+
+\version "2.10.33"
+
+\header
+{
+  title    	    = "Keyboard partita in A minor"
+  composer 	    = "Johann Sebastian Bach"
+  opus     	    = "BWV 827"
+  mutopiacomposer   = "BachJS"
+  mutopiainstrument = "Piano"
+  source	    = "Bach-Gesellschaft Ausgabe 1851-1899 Band 43 (1894)"
+  sourceurl         = "http://imslp.org/wiki/Notebook_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)"
+  sourceurltwo      = "http://world.std.com/~swmcd/steven/music/bach/Bach-AnnaMagdalena1725.pdf"
+  style	            = "Baroque"
+  copyright	    = "Public Domain"
+  maintainer	    = "Steven McDougall"
+  maintainerEmail   = "swmcd@world.std.com"
+  maintainerWeb     = "http://world.std.com/~swmcd/steven/"
+ footer = "Mutopia-2008/05/18-1080"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+}
+
+% Acknowledgments
+%
+% Wolfgang Suppan <wsu@chello.at>
+
 \include "english.ly"
 
 voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
@@ -21,7 +48,7 @@ upper = \relative c''
     << { c'8 b   r a   gs a } \\
        { a 8 gs  r c,  b  c } >> | % 2
 
-    << { d'8 c   r a   gs b } \\
+    << { d'8 c   r a   gs a } \\
        { a 8 a   r c,  b  c } >> | % 3
 
     << { f'8 e   r e   e e  } \\
@@ -125,7 +152,7 @@ lower =
     e8[ \times 2/3 { f16 e d] }  e8 e,  e,  e,  | % 2
     e8[ \times 2/3 { f16 e d] }  e8 e,  e,  e,  | % 3
     e8[ \times 2/3 { f16 e d] }  e8 e'  fs' gs' | % 4
-    g'8 a   a  g'  g' a                         | % 5
+    a'8 a   a  a'  a' a                         | % 5
     e'8 e   e  e'  e' e                         | % 6
     f 8 e   d  g   c' f                         | % 7
     g 8 g,  g, g   g  g,			| % 8

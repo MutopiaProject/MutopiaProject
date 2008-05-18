@@ -1,3 +1,30 @@
+% This file prints Bach BWV 827, movement 5. Menuet
+
+\version "2.10.33"
+
+\header
+{
+  title    	    = "Keyboard partita in A minor"
+  composer 	    = "Johann Sebastian Bach"
+  opus     	    = "BWV 827"
+  mutopiacomposer   = "BachJS"
+  mutopiainstrument = "Piano"
+  source	    = "Bach-Gesellschaft Ausgabe 1851-1899 Band 43 (1894)"
+  sourceurl         = "http://imslp.org/wiki/Notebook_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)"
+  sourceurltwo      = "http://world.std.com/~swmcd/steven/music/bach/Bach-AnnaMagdalena1725.pdf"
+  style	            = "Baroque"
+  copyright	    = "Public Domain"
+  maintainer	    = "Steven McDougall"
+  maintainerEmail   = "swmcd@world.std.com"
+  maintainerWeb     = "http://world.std.com/~swmcd/steven/"
+ footer = "Mutopia-2008/05/18-1080"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+}
+
+% Acknowledgments
+%
+% Wolfgang Suppan <wsu@chello.at>
+
 \include "english.ly"
 
 bc = % bass cleff
@@ -43,8 +70,8 @@ voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
 	   { d,4         c8[ b]   c[  d]  } \\
 	   { f4          e        a8  r   } >>               | % 7
 
-	<< { gs4.   fs8 e4          } \\
-	   { e8 f e d   c \bc g \tc } >>                     | % 8
+	<< { gs4.   fs8 e4      } \\
+	   { e8 f e d   c \bc b } >>                         | % 8
 
 	<< { c'2. ~                       } \\
 	   { r8 e,16 f  f8. e32 f  g8 c,  } >>               | % 9
@@ -86,8 +113,8 @@ voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
 	b8[ c]  c[ \prall b16 c]  d8 b               	     | % 18
 	f8 e f d e b'                                	     | % 19
 
-	<< { cs8[ d]  d[ \prall cs16 d]  e8[ c] } \\
-	   { e,8[ f]  f[        e16  f]  g8  r  } >> 	     | % 20
+	<< { cs8[ d]  d[ \prall cs16 d]  e8[ cs] } \\
+	   { e,8[ f]  f[        e16  f]  g8  r   } >> 	     | % 20
 
 	<< { bf8  a  bf g a g' } \\
 	   { cs,,4   cs   cs   } \\

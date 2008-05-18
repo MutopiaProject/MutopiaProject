@@ -1,3 +1,30 @@
+% This file prints Bach BWV 827, movement 3. Courante
+
+\version "2.10.33"
+
+\header
+{
+  title    	    = "Keyboard partita in A minor"
+  composer 	    = "Johann Sebastian Bach"
+  opus     	    = "BWV 827"
+  mutopiacomposer   = "BachJS"
+  mutopiainstrument = "Piano"
+  source	    = "Bach-Gesellschaft Ausgabe 1851-1899 Band 43 (1894)"
+  sourceurl         = "http://imslp.org/wiki/Notebook_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)"
+  sourceurltwo      = "http://world.std.com/~swmcd/steven/music/bach/Bach-AnnaMagdalena1725.pdf"
+  style	            = "Baroque"
+  copyright	    = "Public Domain"
+  maintainer	    = "Steven McDougall"
+  maintainerEmail   = "swmcd@world.std.com"
+  maintainerWeb     = "http://world.std.com/~swmcd/steven/"
+ footer = "Mutopia-2008/05/18-1080"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+}
+
+% Acknowledgments
+%
+% Wolfgang Suppan <wsu@chello.at>
+
 \include "english.ly"
 
 voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
@@ -106,7 +133,7 @@ lower =
     d,8. b,16  c8. e,16  f,8. d16      		 | % 13
     e4 ~  e8. a16  gs8. d'16           		 | % 14
     c'4  r8 r16 b16  c'8. a16          		 | % 15
-    gs4  r8 r16 a16  b8. g16           		 | % 16
+    gs4  r8 r16 a16  b8. gs16          		 | % 16
     a8. g!16  f4.  e16 f               		 | % 17
     e16 gs b gs  e2 ~                  		 | % 18
     e16 gs b gs << { r8 r16 gs!16  a8. fs16 } \\
@@ -119,7 +146,7 @@ lower =
   \repeat volta 2
   {
     r4    	       	       		      	 | % 20
-    e,8 r fs, r b, r 	       	       	      	 | % 21
+    e,8 r gs, r b, r 	       	       	      	 | % 21
     e8 r gs r b r    	       	       	      	 | % 22
     e'8. a16  d'8. f'16  gs4 ~ 	       	      	 | % 23
     gs16 e fs gs  a b c' b  a c' g c'  	      	 | % 24
@@ -139,7 +166,7 @@ lower =
     a8. a,16  b,8. b16  c'8. c16       	      	 | % 38
     d8. d'16  e'8. e16  f8. f'16       	      	 | % 39
     g8. f'16  e'8. g16  f8. d'16       	      	 | % 40
-    c'8. c16  a8. f16  g8. g,16        	      	 | % 41
+    c'8. e16  a8. f16  g8. g,16        	      	 | % 41
     c16 c, e, g,  c4 ~  c16 e f g      	      	 | % 42
     cs4 ~  cs16 e f g  f e d cs        	      	 | % 43
     d16 d, f, a,  d4 ~  d16 f g a      	      	 | % 44
