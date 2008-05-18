@@ -19,7 +19,7 @@
         mutopiatitle = "Goldberg Variations - 13"
         composer = "Johann Sebastian Bach (165-1750)"
         mutopiacomposer = "BachJS"
-        opus = "BWV 9"
+        opus = "BWV 988"
         date = "1741"
         mutopiainstrument = "Clavier"
         style = "Baroque"
@@ -28,18 +28,18 @@
         maintainer = "Hajo Dezelski"
         maintainerEmail = "dl1sdz@gmail.com"
 	
- footer = "Mutopia-2008/05/13-1411"
+ footer = "Mutopia-2008/05/18-1411"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
      soprano =   \relative b' {
     \repeat volta 2 { %begin repeated section
-		b32 [ c b a b8 ~ ] b32 [ fis g a b16 c ] \grace d32  c16 [ b16 a g ] | % 1
-        d'32 [ e d cis d8 ~ ] d32 [ cis d e fis16 g ] \grace a32 g16 [ fis e d ] | % 2
+		b32 [ c b a b8 ~ ] b32 [ fis g a b16 c ] \appoggiatura d32  c16 [ b16 a g ] | % 1
+        d'32 [ e d cis d8 ~ ] d32 [ cis d e fis16 g ] \appoggiatura  a32 g16 [ fis e d ] | % 2
         g32 [ a g fis g8 ~ ] g32 [ fis e fis g16 e ] a, [ b' a g ] | % 3
-        \grace g32 fis32 [ e fis e d8 ~ ] d32 [ cis d e fis16 g ] a [ b32 c b16 a ] | % 4
+        \appoggiatura  g32 fis32 [ e fis e d8 ~ ] d32 [ cis d e fis16 g ] a [ b32 c b16 a ] | % 4
         g32 [ f e16 f8 ~ \prallmordent ] f32 [ d g a b c d16 ] c [ b a g ] | % 5
-        f32 [ e d16 \grace d16 e8 ~ ] e32 [ d c b c d e16 ] d [ g e c ] | % 6
+        f32 [ e d16 \appoggiatura  d16 e8 ~ ] e32 [ d c b c d e16 ] d [ g e c ] | % 6
         b32 [ a g16 a8 ~ ] a32 [ g a b c fis, g a ] d, [ fis e d a' g fis c' ] | % 7
         c32 [ b a16 b8 ~ ] b32 [ a g fis g b d fis ] g [ fis32 e d fis a b c ] | % 8
         b32 [ a g16 ~] g32 [ fis e16 ~] e32 [ dis e16 ~ ] e32 [fis g16 ~ ] g32 [ a b16 ~ ] b32 [ g fis e ] | % 9
@@ -53,16 +53,16 @@
     } %end of repeated section
   
     \repeat volta 2 { %begin repeated section<
-        fis'32 [ g fis e fis8 ~ ] fis32 [ e fis g a16 b ~ ] \grace c32 b16 [ a g fis ] | % 17
-        g32 [ a g fis g8 ~ ] g32 [ fis, g a b16 c ~ ] \grace d32 c16 [ b a g ] | % 18
+        fis'32 [ g fis e fis8 ~ ] fis32 [ e fis g a16 b ~ ] \appoggiatura  c32 b16 [ a g fis ] | % 17
+        g32 [ a g fis g8 ~ ] g32 [ fis, g a b16 c ~ ] \appoggiatura  d32 c16 [ b a g ] | % 18
         e'32 [ fis e dis e8 ~ ] e16 [ gis gis a ] a [ b b c ]  | % 19
         e,32 [ dis cis16 dis8 ~ \prallprall ] dis8 ~ [ dis32 dis e fis ] e [ dis cis b a g a fis' ] | % 20
         g,32 [ e' ~ dis e f e dis e ] fis [ e g e a e b' e, ] c' [ e, d' e, c' e, b' e, ] | % 21
         c'32 ~ [ e, dis e f e dis e ] c' [ e, b' e, a e g e ] fis [ e g e a e dis cis ] | % 22
         dis32 [ a' ( g a b a g a )] b, [ g' ( fis g a g fis g ) ] a, [ fis'( e fis g a g fis ) ] | % 23
         g16  [( dis ) dis  (e ) ] e [( a,) a ( g ) ] < g e >8 ~ \prallmordent [ g32 b c d ] | % 24
-        e32 [ f e dis e8 ~ ] e16 [ a, \grace b32  a16 g ] \grace a32  g16 [ fis fis e' ] | % 25
-        d32 [ e d cis d8 ~ ] d16 [ g, \grace a32 g16 f ] \grace g32 f16 [ e e d' ] | % 26
+        e32 [ f e dis e8 ~ ] e16 [ a, \appoggiatura  b32  a16 g ] \appoggiatura  a32  g16 [ fis fis e' ] | % 25
+        d32 [ e d cis d8 ~ ] d16 [ g, \appoggiatura  a32 g16 f ] \appoggiatura  g32 f16 [ e e d' ] | % 26
         c32 [ b a16 ~ a32 g fis16 ~ ] fis32 [ e d16 ~ d32 e fis16 ~ ] fis32 [ g a16 ~ a32 b c16 ~] | % 27
         c32 [ d c b c g' fis e ] fis [ b a g a d c b ] c [ b a g fis e d c ] | % 28
         b32 [ g' ( fis g a g fis g ) ] c, [ fis ( e fis g fis e fis ) ] d [ f (e f g f e d ) ] | % 29
