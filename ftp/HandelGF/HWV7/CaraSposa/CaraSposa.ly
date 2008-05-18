@@ -1,5 +1,5 @@
 % Created on Thu Jan 31 20:24:55 CET 2008
-\version "2.10.33"
+\version "2.11.44"
 
 \header {
 	title = "Cara sposa, amanta cara"
@@ -16,7 +16,7 @@
 	maintainer = "Björn Sothmann"
 	maintainerEmail = "bjoerns@tp3.rub.de"
 	maintainerWeb = "http://www.tp3.rub.de/~bjoerns"
- footer = "Mutopia-2008/02/19-1308"
+ footer = "Mutopia-2008/05/18-1308"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -314,7 +314,7 @@ staffViola = \new Staff  {
 		fis dis' h |
 		h8 c h4 h |
 		g4\fermata \bar "||" \time 4/4 r r2 |
-		r8 d16 d d8 d r d16 d e8 e |
+		r8 d'16 d d8 d r d16 d e8 e |
 		r fis16 fis d8 d r d16 d c8 c16 c |
 		d d e fis g a h c d8 d,16 d d8 d |
 		r2 r8 d16 d d8 d |
@@ -327,7 +327,7 @@ staffViola = \new Staff  {
 
 }
 staffSoprano = \new Staff  {
-	\set Staff.instrumentName="Rinaldo"
+	\set Staff.instrumentName=\markup {\smallCaps Rinaldo}
 	\set Staff.midiInstrument="oboe"
 	\key e \minor
 	\clef treble
