@@ -1,4 +1,4 @@
-\version "2.10.33"
+\version "2.11.44"
 
 \paper {
     page-top-space = #0.0
@@ -28,7 +28,7 @@
         maintainer = "Hajo Dezelski"
         maintainerEmail = "dl1sdz@gmail.com"
 	
- footer = "Mutopia-2008/04/22-1403"
+ footer = "Mutopia-2008/05/18-1403"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -76,7 +76,7 @@ sopranoTwo =   \relative bes {
         r16 bes'16 [ a g ] fis [ g a fis ] d8 [ e16 f ] g8 [ c, ] | % 9
         r16 g'16 [ f es ] d [ f es g ] f8 g as4 ~  | % 10
         a16 [ g as bes ] es, [ d es g ] c, [ d es c ] f8 [ bes, ~ ] | % 11
-        bes8 [ as16 g ] as8  [ f'8 ~ ] f [ es16 d ] es8 ] r8 | % 12
+        bes8 [ as16 g ] as8  [ f'8 ~ ] f [ es16 d ] es8 r8 | % 12
         r16 fis,16 [ g a ] g [ fis es d ] d' [ c d8 ] g, r8 | % 13
         r8 es'16 [ d ] c [ bes a g ] fis8  r8 r8 d'8 ~ | % 14
         d8 [ c ] b [ c16 d ] es8 [ g, fis d' ~ ] | % 15
