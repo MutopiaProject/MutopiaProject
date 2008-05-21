@@ -1,4 +1,4 @@
-\version "2.9.9"
+\version "2.10.10"
 \include "italiano.ly"
 
 \header {
@@ -19,7 +19,7 @@
   maintainer = "Davide Castellone"
   mantainerweb = "www.liceonovello.it/Members/kastel/music"
   lastupdated =	 "2005/May/07"
- footer = "Mutopia-2007/01/07-563"
+ footer = "Mutopia-2008/05/21-563"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -62,7 +62,7 @@ right = \relative do'' { \acy \stemUp \set Staff.tupletNumberFormatFunction = #'
 		sib,4. lab'8 re,4. mib16 fa sib,4. do16 re! |
 		mib4. reb16 dob reb2 << reb \\ <mib, sib'> >> |
 		<< { reb'4. dob16 sib dob2 dob\arpeggio } \\ { <mib, sib'>4. r8 r2 <mib lab>\arpeggio } >> |
-			\acn
+			\acn \set Staff.connectArpeggios = ##t
 		<< { dob'4.\arpeggio sib16 lab } \\
 			{ <fa lab>4.\arpeggio } >> \acy fa'4. dob8 sib4.\trill dob16 lab |
 		\tieUp <mib solb>2\arpeggio ~ solb16 mib fa solb lab sib do re mib fa solb lab solb fa solb mib |
@@ -118,7 +118,7 @@ left = \relative do' { \staffOne \stemDown
 		fab,4 ~ fab16 fab' mib reb mib4. reb8 mib4. mib,8 |
 		lab2 r4 r8 dob'8 fa,4. solb16 lab |
 	%20
-		re,!4. mib16 fab sib,4. lab'8 re,!4. mib16 fa |
+		re,!4. mib16 fa sib,4. lab'8 re,!4. mib16 fa |
 		solb,2 sol!4. sib'8 sol!4. mib8 |
 		lab,2 r4 r8 dob'8 lab4. fa8 |
 		<re! fa lab>2\arpeggio <re fa sib>\arpeggio <re fa sib>\arpeggio |
@@ -151,7 +151,7 @@ left = \relative do' { \staffOne \stemDown
 \score {
 	 \context PianoStaff << #(set-accidental-style 'piano)
 		\override PianoStaff.Arpeggio #'staff-position = #4.0
-		\context Staff = "one" { \set Staff.extraNatural = ##t
+		\context Staff = "one" \with {\consists "Span_arpeggio_engraver"} { \set Staff.extraNatural = ##t
 		\clef treble
 		\key mib \minor
 		\time 3/2
@@ -166,6 +166,14 @@ left = \relative do' { \staffOne \stemDown
 		\bar "|." }
 	>>
 
-	\midi { \tempo 4 = 80 }
+	
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 80 4)
+      }
+    }
+
+
 	\layout { }
 }
