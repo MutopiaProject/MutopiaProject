@@ -139,7 +139,7 @@
 </tr>
 <tr>
  <td><i>maintainerEmail</i> (Optional)</td>
- <td>Your e-mail address, so people can contact you with comments.<br />
+ <td>Your e-mail address, so people can contact you with comments. You may wish to obfuscate it in some way to reduce spam, as .ly files are archived by search engines.<br />
  If you don't want your e-mail address to be stored on the website, just let us know.</td>
 </tr>
 <tr>
