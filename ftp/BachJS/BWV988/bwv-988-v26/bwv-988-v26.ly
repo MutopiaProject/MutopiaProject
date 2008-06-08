@@ -26,31 +26,33 @@
         source = "Bach-Gesellschaft Edition 1853 Band 3"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "Hajo Dezelski"
-        maintainerEmail = "dl1sdz@gmail.com"
+	comment = "With the help of Neil Puttock"
+        maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/06/02-1446"
+ footer = "Mutopia-2008/06/08-1446"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 
 sopranoOne =   \relative g {
-	    \repeat volta 2 { %begin repeated section
-		    \clef "bass"  
-		    \compressMusic #'(4 . 6) {
+	    \repeat volta 1 { %begin repeated section
+          \clef "bass"
+		      \compressMusic #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3 4)   
-				\stemDown 
+				  \oneVoice
 			    g16 [ a g  d  e fis ] g16 [ fis g  a  g a ] b16 [ a b  c  b cis ] 
 			    \clef "treble" | % 1
-				\stemUp 
+				
 			    d16 [ e d a b cis ] d16 [ cis d e d e ] fis16 [ e fis g e fis ] | % 2
-			    g16 [ a g b, e fis ] g16 [ fis g a g a ] \stemDown b16 [ a b cis b cis ] | % 3
+			    g16 [ a g b, e fis ] g16 [ fis g a g a ] b16 [ a b cis b cis ] | % 3
 			    d16 [ e d a b cis ]  d16 [ cis d e d e ]  fis16 [ e fis g e fis ] | % 4
 			    g16 [ fis g d c d ]  b16 [ g fis g b d ]  f16 [ e f d b d ] | % 5
 			    e16 [ d e c b c ]  g16 [ e d e g c ]  e16 [ d e c a c ] | % 6
-			    d16 [ c d a g a ] \stemUp fis16 [ d cis d fis a ]  c16 [ b c a fis a ] | % 7
+			    d16 [ c d a g a ]  fis16 [ d cis d fis a ]  c16 [ b c a fis a ] | % 7
 			    b16 [ a b g fis g ] d16 [ b a b d g ]  b16 [ g fis g b d ] | % 8
 		    }
+        \voiceOne
 		    \time 3/4 
 		    g8. [ fis32 e32 ] d4 r8 b'8 | % 9
 		    a4 a4 r8 a8 | % 10
@@ -59,9 +61,9 @@ sopranoOne =   \relative g {
 		    g8. [ e16 ] fis4 r8 a8 | % 13
 		    b8. [ fis16 ] g4 r8 g8 | % 14
 		    g4 cis,4 r8 a8 | % 15
-		    a8. [ e16 ] fis4 r4 | % 16
+		    a8. [ e16 ] fis4 r4 \bar ":|:" % 16
 	    } %end of repeated section
-	    
+	    \oneVoice
 	    \repeat volta 2 { %begin repeated section
 		    \compressMusic #'(4 . 6) {
 			    \time 18/16
@@ -77,24 +79,29 @@ sopranoOne =   \relative g {
 				g16 [ fis g b a b ] e,16 [ dis e g b dis ] e16 [ c b a g fis ] | % 24
 		    }
 		 \time 3/4 
-		 e8 r8 r8 r16 g'16 fis8. [ e16 ] | % 25
+		 e8 \voiceOne r8 r8 r16 g'16 fis8. [ e16 ] | % 25
 		 d4 ~ d8. [ f16 ] e8. [ d16 ] | % 26	
 		 c2 ~ c8. [ c16 ] | % 27
+     \voiceTwo
 		\compressMusic #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3 4) 
-				fis,16 [ g fis cis d e ] fis16 [ e fis g fis g ] a16 [ g a  b g a ] | % 28		
-				b16 [ c b  fis  g a ] b16 [ a b c b c ]  d16 [ c d  e c d ] | % 29
-				e16 [ f e  b c d ] e16 [ d e  fis e fis ] g16 [ fis g a  fis g ]| % 30
+				fis,16 [ g fis cis d e ] \oneVoice fis16 [ e fis g fis g ] a16 [ g a  b g a ] | % 28		
+				b16 [ c b  fis  g a ] b16 [ a b c b c ]  \voiceOne d16 [ c d  e c d ] | % 29
+				e16 [ f e  b c d ] \oneVoice e16 [ d e  fis e fis ] g16 [ fis g a  fis g ]| % 30
 				a16 [ b a  fis g a ] b16 [ a b d c b ]  a16 [ g fis e  d c ] | % 31
-				b16 [ a g fis g d ] b8 r8 r8 r4.| % 32
+				b16 [ a g fis g d ] b8 r8 r8 r4. \bar ":|" % 32
+        
+        % Place a fermata over the final barline
+        \override Staff.RehearsalMark #'break-visibility = #begin-of-line-invisible
+        \mark \markup \musicglyph #"scripts.ufermata"
 		}
     } %end repeated section
 
 }
 
 sopranoTwo =   \relative b' {
-	\repeat volta 2 { %begin repeated section
+	\repeat volta 1 { %begin repeated section
 		\stemDown
 		\clef "bass" 		    
 		\compressMusic #'(4 . 6) {
@@ -141,7 +148,7 @@ sopranoTwo =   \relative b' {
 		\compressMusic #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3 4) 
-				\stemUp c8 s1*10/16 \stemDown fis,8 s1*4/16 | % 28
+				\voiceOne c8 s1*10/16 \voiceTwo fis,8 s1*4/16 | % 28
 				g8 s1*10/16 b8 s1*4/16 | % 29
 				c8 s1*16/16  | % 30
 				s1*18/16 | % 31
@@ -158,7 +165,7 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 %% 
 
 bassOne = \relative b' {
-	    \repeat volta 2 { %begin repeated section
+	    \repeat volta 1 { %begin repeated section
 		    \clef "treble" 	
 		    \time 3/4 
 		    b4 b4 r8 b8 | % 1
@@ -170,22 +177,23 @@ bassOne = \relative b' {
 		    g8. [ e16 ] c4 r8 e8 | % 6
 		    a,8. [ b16 ] c4 r8 d8 | % 7
 		    d8. [ b16 ] g4 r4  | % 8
+        \oneVoice
 		    \compressMusic #'(4 . 6) {
 			    \time 18/16
 			    \set Timing.measureLength = #(ly:make-moment 3 4)
 			    g,16 [ a g  d e fis ] g16 [ fis g  a g a ]  b16 [ a b c b cis ] | % 9
-			    d16 [ e d  a b cis ] \stemDown d16 [ cis d e d e ] fis16 [ e fis g e fis ]| % 10
+			    d16 [ e d  a b cis ] d16 [ cis d e d e ] fis16 [ e fis g e fis ]| % 10
 			    g16 [ a g  b, e fis ] g16 [ fis g a g a ]  b16 [ a b cis a b ] | % 11
-			    cis16 [ d cis  e, a b ] \stemUp
+			    cis16 [ d cis  e, a b ]
 			    \clef "treble" 
 			    cis16 [ b cis  d  cis d ] e16 [ d e fis d e ] | % 12
 			    fis16 [ e fis  a g a ] d,16 [ cis d fis a b ] c16 [ b c a fis a ] | % 13
 			    g16 [ fis g b a b ] e,16 [ dis e g b cis ]  d16 [ cis d  b g b ] | % 14
 			    cis16 [ b cis  e d e ] a,16 [ gis a cis e fis ]  g16 [ fis g e cis e ] | % 15
-			    fis16 [ e fis a g a ] d,16 [ cis d fis a cis ] d4. \prallmordent | % 16
+			    fis16 [ e fis a g a ] d,16 [ cis d fis a cis ] d4. \prallmordent \bar ":|:" % 16
 		    }
 	    } %end of repeated section
-	    
+	    \voiceOne
 		\repeat volta 2 { %begin repeated section
 			\time 3/4  
 			fis,,8. [ e16 ] fis4 r8 d8 | % 17
@@ -195,11 +203,24 @@ bassOne = \relative b' {
 			g8. [ fis16 ] e4 r8 g8 | % 21
 			g4 f4 r8 a8 | % 22
 			a8. [ fis16 ] dis4 r8 fis8 | % 23
-			fis8. [ dis16 ] e4 
+			fis8. [ dis16 ] e4
+      \oneVoice
 			\compressMusic #'(4 . 6) {
-				    \time 18/16
-					\set Timing.measureLength = #(ly:make-moment 3 4) 
-					\clef "bass" s1*6/16 | % 24
+        \set Timing.measureLength = #(ly:make-moment 3 4)
+        
+        % Fix ugly space in upper stave, two options
+        % 1. The more complicated method, but with best spacing
+        \once \override Staff.Clef #'extra-spacing-width = #'(+inf.0 . -inf.0)
+        \once \override Staff.Clef #'stencil = #ly:text-interface::print
+        \once \override Staff.Clef #'text = \markup \override #'(baseline-skip . 0) {
+          \musicglyph #"clefs.F_change" \lower #1 \with-dimensions #'(0 . 3.5) #'(0 . 0) \number \column  { 18 16 }
+        }
+        \once \override Staff.TimeSignature #'stencil = ##f
+        % 2. A bit more elegant, but places time signature too close to rest (difficult to fix easily)
+        %\once \override Staff.TimeSignature #'extra-spacing-width = #'(+inf.0 . -inf.0)
+        %\once \override Staff.Clef #'space-alist #'time-signature = #'(extra-space . 0.5)
+        
+          \clef "bass" \time 18/16 s1*6/16 | % 24
 					c,16 [ b c f e d ] c16 [ d c  b c b ] a16 [ b a g a fis ] | % 25
 					b16 [ a b e d c ] b16 [ c b a b a ] g16 [ a g fis g e ] | % 26
 					a16 [ g a d c b ]  a16 [ b a g a g ] fis16 [ g fis e fis e ] | % 27
@@ -207,15 +228,22 @@ bassOne = \relative b' {
 					g16 [ fis g c b a ] g16 [ a g f g f ] e16 [ f e d e d ] | % 29
 					c8. [ g'16 a b ] c16 [ b c d c d] e16 [ d c b a g ] | % 30
 					fis16 [ e fis d e fis ] g16 [ fis g a b c ] d16 [ cis d e fis d ] | % 31
-					g8 r8 r8 r16 a16 [ g fis g d ] g,4. | % 32
+					g8 r8 r8 r16 a16 [ g fis g d ] g,4.
+          
+          % Place a fermata under the final barline
+          \override Staff.RehearsalMark #'break-visibility = #begin-of-line-invisible
+          \override Staff.RehearsalMark #'direction = #DOWN
+          \mark \markup \musicglyph #"scripts.dfermata"
+
+          \bar ":|" % 32
 			}
     } %end repeated section
 
 }
 	
 bassTwo = \relative g' {
-		\repeat volta 2 { %begin repeated section
-			\stemDown	    
+		\repeat volta 1 { %begin repeated section
+				    
 			\clef "treble"  
 			\time 3/4 
 			g4 d4 r8 g8 | % 1
@@ -252,6 +280,7 @@ bassTwo = \relative g' {
 			a8. [ b16 ] c4 r8 c8 | % 22
 			b4 a4 r8 a8 | % 23
 			a8. [ fis16 ] g4 
+      \oneVoice
 			\compressMusic #'(4 . 6) {
 				    \time 18/16
 					\set Timing.measureLength = #(ly:make-moment 3 4) 
@@ -282,12 +311,18 @@ bass = << \bassOne \\ \bassTwo>>
      \Score
      \remove "Timing_translator"
      \remove "Default_bar_line_engraver"
+     % removed from Score context to allow rehearsal marks (in this case, fermatas)
+     % on each stave
+     \remove "Mark_engraver"
+
    }
    \context {
      \Staff
      \consists "Timing_translator"
      \consists "Default_bar_line_engraver"
+     \consists "Mark_engraver"
+     
    }
  }
- 	 \midi { }
+  \midi { }
 }
