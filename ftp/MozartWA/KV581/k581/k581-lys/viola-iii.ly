@@ -43,8 +43,8 @@ violaThirdMov =  \relative e' {
 	|  e,8[( dis e dis e  dis)]
 	| e4 r r
 	|  e'8[( dis e dis e  dis)]
-	| e4 r e
-	| e2.\f ~
+	| e4 r e\f
+	| e2.~
 	| e4 r e\p ~
 	| e( fis  b,)
 	|  cis8[( d]  e4) e\f ~

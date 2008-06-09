@@ -67,7 +67,7 @@ violaFirstMov =  \relative cis {
 	|  a) a4 a a a8 ~
 	| a a4 a a a8(
 	|  g) g4 g g g8 ~
-	| << { \voiceTwo g g4 g g g8( | f) f4 f f f8( | \oneVoice d) } \\
+	| << { \voiceTwo g g4 g g g8( | f) f4 f f f8( | \oneVoice d) } 
 	     { \voiceOne a'8 a4 a a a8 ~ | a a4 a a a8( 
 	       | \oneVoice d,) } >> g4 g g g8 ~
         | \lowerText  g[\cresc g g g] g4 r
@@ -82,7 +82,7 @@ violaFirstMov =  \relative cis {
 	|  b8[ b b b]  b[ b b b]
 	| b4 r gis\p gis
 	| a4.( b8  cis[ b a  gis)]
-	|  gis[( fis]  a4) gis r
+	|  gis[( fis]  e4) gis r
 	| a r b r
 	| b2 gis4 gis
 
@@ -233,7 +233,7 @@ violaFirstMov =  \relative cis {
 	| cis4 r cis2(\p
 	| b  a)
 	| fis4( e d  fis)
-	| d2 gis4.(-\trill-\f  fis16[  gis)]
+	| e2 gis4.(-\trill-\f  fis16[  gis)]
 	| a4 a' a, r
     }
 }
