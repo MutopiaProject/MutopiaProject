@@ -19,7 +19,7 @@
         mutopiatitle = "BWV 1003 Grave"
         composer = "Johann Sebastian Bach (1685-1750)"
         mutopiacomposer = "BachJS"
-        opus = "BWV 1001"
+        opus = "BWV 1003"
         date = "1720"
         mutopiainstrument = "Violine"
         style = "Baroque"
