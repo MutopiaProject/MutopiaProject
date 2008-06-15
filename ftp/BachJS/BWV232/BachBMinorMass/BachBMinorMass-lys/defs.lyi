@@ -1,0 +1,27 @@
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \smaller \bold $markp }
+#})
+
+outlineAria =
+{
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \set Score.skipBars = ##t
+  \time 3/4
+  \tempoMark "Aria"
+  s2.*127 | \bar "|."
+  \tempoMark "Vivace"
+  s2. |
+}
+
+midiOutlineAria =
+{
+  \tempo 4 = 80
+  s2.*127 |
+  %vivace
+  s2. |
+}
+
