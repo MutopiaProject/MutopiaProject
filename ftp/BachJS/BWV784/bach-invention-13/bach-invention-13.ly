@@ -11,16 +11,16 @@
   source =  "Bach-Gesellschaft"
   lastupdated = "2005/12/25"
 
-  mutopiainstrument = "Harpsichord,Clavichord"
+  mutopiainstrument = "Harpsichord, Piano"
   mutopiatitle =      "Invention 13"
   mutopiacomposer =   "BachJS"
-  mutopiaopus =       "BWV784"
+  mutopiaopus =       "BWV 784"
 
- footer = "Mutopia-2005/12/27-59"
+ footer = "Mutopia-2008/06/15-59"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "2.6.4"
+\version "2.11.46"
 
 voiceone =  \relative c' {
    \set Staff.midiInstrument = "harpsichord"
@@ -92,7 +92,15 @@ voicetwo =  \relative c {
   >>
 
   \layout{ }
-  \midi { \tempo 4 = 100 }
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 100 4)
+      }
+    }
+
+
 }
 
 %{
@@ -105,6 +113,6 @@ midiInstrument none = "harpsichord"
 
 %{
 changes by Chris Sawer, 2005/12/27
-remove linewidth command in layout section
+remove line-width command in layout section
 %}
 
