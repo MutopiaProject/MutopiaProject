@@ -1,93 +1,40 @@
-\include "paper20.ly"
+#(set-global-staff-size 20)
 
 \header {
   title = "Sinfonia 12" 
   composer = "Johann Sebastian Bach"
   opus = "BWV 798"
   mutopiatitle = "Sinfonia 12"
-  mutopiacomposer = "J. S. Bach (1685-1750)"
+  mutopiacomposer = "BachJS"
   mutopiaopus = "BWV 798"
-  mutopiainstrument = "Piano, Harpsichord"
+  mutopiainstrument = "Harpsichord, Piano"
   style = "Baroque"
+  source = "Unknown"
   copyright = "Public Domain"
   maintainer = "Olivier Vermersch"
+  maintainerEmail = "olivier.vermersch (at) wanadoo.fr"
   lastupdated = "30/December/2001"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer = "Mutopia-2001/12/30-144"
+ footer = "Mutopia-2008/06/15-144"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "1.4.9"
+\version "2.11.46"
 
 %
 % a few macros for fine tuning
 %
 
-% force direction of stems
-u = \stemUp
-d = \stemDown
-b = \stemBoth
-
-
 % force direction of tie
 tu = \tieUp
 td = \tieDown
-tb = \tieBoth
+tb = \tieNeutral
 
 
 % explicit staff change 
-su = \notes{ \translator Staff = up}
-sd = \notes{ \translator Staff = down}
+su = { \change Staff = up}
+sd = { \change Staff = down}
 
-
-% vertical shifting of rests
-rupone   = \property Voice.Rest \override #'staff-position = #1
-ruptwo   = \property Voice.Rest \override #'staff-position = #2
-rupthree = \property Voice.Rest \override #'staff-position = #3
-rupfour  = \property Voice.Rest \override #'staff-position = #4
-rupfive  = \property Voice.Rest \override #'staff-position = #5
-rupsix   = \property Voice.Rest \override #'staff-position = #6
-
-rdwnone   = \property Voice.Rest \override #'staff-position = #-1
-rdwntwo   = \property Voice.Rest \override #'staff-position = #-2
-rdwnthree = \property Voice.Rest \override #'staff-position = #-3
-rdwnfour  = \property Voice.Rest \override #'staff-position = #-4
-rdwnfive  = \property Voice.Rest \override #'staff-position = #-5
-rdwnsix   = \property Voice.Rest \override #'staff-position = #-6
-
-rdft = \property Voice.Rest \revert #'staff-position
-
-
-% same for multimeasure rests
-Rupone   = \property Voice.MultiMeasureRest \override #'staff-position = #1
-Ruptwo   = \property Voice.MultiMeasureRest \override #'staff-position = #2
-Rupthree = \property Voice.MultiMeasureRest \override #'staff-position = #3
-Rupfour  = \property Voice.MultiMeasureRest \override #'staff-position = #4
-Rupfive  = \property Voice.MultiMeasureRest \override #'staff-position = #5
-Rupsix   = \property Voice.MultiMeasureRest \override #'staff-position = #6
-
-Rdwnone   = \property Voice.MultiMeasureRest \override #'staff-position = #-1
-Rdwntwo   = \property Voice.MultiMeasureRest \override #'staff-position = #-2
-Rdwnthree = \property Voice.MultiMeasureRest \override #'staff-position = #-3
-Rdwnfour  = \property Voice.MultiMeasureRest \override #'staff-position = #-4
-Rdwnfive  = \property Voice.MultiMeasureRest \override #'staff-position = #-5
-Rdwnsix   = \property Voice.MultiMeasureRest \override #'staff-position = #-6
-
-Rdft = \property Voice.MultiMeasureRest \revert #'staff-position
-
-
-% horizontal shifting to avoid note collision
-rshift    = \property Voice.NoteColumn \override #'force-hshift = #1
-rrshift   = \property Voice.NoteColumn \override #'force-hshift = #2
-rrrshift  = \property Voice.NoteColumn \override #'force-hshift = #3
-rrrrshift = \property Voice.NoteColumn \override #'force-hshift = #4
-
-lshift    = \property Voice.NoteColumn \override #'force-hshift = #-1
-llshift   = \property Voice.NoteColumn \override #'force-hshift = #-2
-lllshift  = \property Voice.NoteColumn \override #'force-hshift = #-3
-llllshift = \property Voice.NoteColumn \override #'force-hshift = #-4
-
-dftshift = \property Voice.NoteColumn \revert #'force-hshift
 
 %
 % Warning: if you change papersize you may tune the last tie on bar 17/18.
@@ -95,7 +42,7 @@ dftshift = \property Voice.NoteColumn \revert #'force-hshift
 % the collisions.
 %
 
-melone = \notes \relative c'' {
+melone =  \relative c'' {
   % bars 1-3
   a8 gis16 a b8 a16 gis a4 ~ a16 b gis a |
   b e, cis' e, d' e, e'8 cis16 b a b cis dis e fis |
@@ -142,27 +89,27 @@ melone = \notes \relative c'' {
   cis16 b a b cis d e fis b, a gis a b cis d e |
 
   % bars 28-31
-  a, gis fis gis a b cis d gis, b gis e \d e'4 ~ \tu |
+  a, gis fis gis a b cis d gis, b gis e \stemDown e'4 ~ \tu |
   e16 e cis a a'4 ~ a16 b, d fis gis4 ~ |
-  gis16 a, cis e fis4 ~ fis16 e dis e \u fis8 \ruptwo r \rdft |
-  cis8. d16 b8. a16 a2-\fermata \bar "|."
+  gis16 a, cis e fis4 ~ fis16 e dis e \stemUp fis8 r |
+  cis8. d16 b8. a16 a2\fermata \bar "|."
 }
 
-meltwo = \notes \relative c' {
+meltwo =  \relative c' {
   % bars 1-3
-  \Rdwnsix R1 \Rdft |
-  \Rdwnsix R1 \Rdft |
+   R1 |
+   R1 |
   e8 dis16 e fis8 e16 dis e4 ~ e16 fis dis e |
 
   % bars 4-6
   fis b, gis' b, a' b, b'8 gis16 a b a gis fis e d |
-  cis cis' fis8 ~ \rrshift fis16 dis e8 ~ e16 cis d8 ~ d16 b cis8 \dftshift |
+  cis cis' fis8 ~ fis16 dis e8 ~ e16 cis d8 ~ d16 b cis8  |
   gis a4 gis8 a4. a8 |
 
   % bars 7-9
   gis4. gis8 fis2 |
   r16 dis' cis b a gis fis e dis8 e4 dis8 |
-  e4 \rdwntwo r \rdft r8 gis16 a b8 a16 gis |
+  e4 r r8 gis16 a b8 a16 gis |
 
   % bars 10-12
   a2 ~ a8 fis16 gis a8 gis16 fis |
@@ -172,21 +119,20 @@ meltwo = \notes \relative c' {
   % bars 13-15
   eis8 eis16 fis gis8 fis16 eis fis4 e |
   dis fis2 eis4 |
-  fis16 r \rdwnthree r8 \rdft \rdwnfour r4 \rdft \ruptwo r16 \rdft cis' b8 ~ \rrshift b16 b a8 \dftshift |
+  fis16 r r8 r4 r16 cis' b8 ~ b16 b a8 |
 
   % bars 16-18
   eis fis4 eis8 fis4. a8 |
-  % /!\ bestial hack to avoid collision between note and tie (bad with other paper size) - if you find better please send an email
-  \property Voice.Tie \override #'control-points = #'((1 . 0) (3 . -1.2) (5 . -1.2) (8 . 0))  
-  d4 ~ d8 b \property Voice.Tie \revert #'control-points 
-  \property Voice.Tie \override #'control-points = #'((1 . 0.5) (3 . -1.2) (5 . -1.2) (8 . 0.5))  
-  e4 ~ e8 cis \property Voice.Tie \revert #'control-points
-  \property Voice.Tie \override #'control-points = #'((1 . 1) (1 . -2) (16 . -2) (17 . 1))  
-  fis2 ~ fis8 b,16 cis d8 cis16 b  \property Voice.Tie \revert #'control-points
+  \once \override Tie #'staff-position = #-1.0
+  d4 ~ d8 b 
+  \once \override Tie #'staff-position = #-0.0
+  e4 ~ e8 cis 
+  \once \override Tie #'staff-position = #-0.0
+  fis2 ~ fis8 b,16 cis d8 cis16 b  
 
   % bars 19-21
   cis8 cis16 dis e8 dis16 cis dis8 dis16 e fis8 e16 dis |
-  e2 \rdwntwo r \rdft |
+  e2 r |
   r8 a,16 b cis8 b16 a gis!2 ~ |
 
   % bars 22-24
@@ -196,17 +142,17 @@ meltwo = \notes \relative c' {
 
   % bars 25-27
   d8 cis b4 e16 cis d8 ~ d16 b cis8 ~ |
-  cis16 \sd \u \tu a b gis a4 ~ a16 gis a4 gis8 |
-  a8 \su \d \td cis fis4 ~ fis8 b, e4 ~ |
+  cis16 \sd \stemUp \tu a b gis a4 ~ a16 gis a4 gis8 |
+  a8 \su \stemDown \td cis fis4 ~ fis8 b, e4 ~ |
 
   % bars 28-31
-  e8 \sd \u \tu a, d4 ~ d8 b16 cis d8 cis16 b |
+  e8 \sd \stemUp \tu a, d4 ~ d8 b16 cis d8 cis16 b |
   cis8 a16 b cis8 b16 a b8 gis16 a b8 a16 gis |
-  a8 fis16 gis a8 gis16 fis gis8 r \su \d \td a' \ruptwo r \rdft |
+  a8 fis16 gis a8 gis16 fis gis8 r \su \stemDown \td a' r |
   a8. b16 gis4 a2 |
 }
 
-melthree = \notes \relative c' {
+melthree =  \relative c' {
   % bars 1-3
   a8 r gis r fis r cis r |
   d r e r a, a' gis fis |
@@ -243,38 +189,46 @@ melthree = \notes \relative c' {
   d, a' e a d, a' cis, a' b, gis' cis, gis' d gis b, gis' |
 
   % bars 22-24
-  cis, gis' d gis cis, gis' b, gis' \u ais, fis' b, fis' cis fis ais, fis' |
-  b, fis' cis fis b, fis' a,! fis' gis, e' e, e' fis, e' gis, e' \b |
+  cis, gis' d gis cis, gis' b, gis' \stemUp ais, fis' b, fis' cis fis ais, fis' |
+  b, fis' cis fis b, fis' a,! fis' gis, e' e, e' fis, e' gis, e' \stemNeutral|
   a,8 gis16 a b8 a16 gis a4 ~ a16 b gis a |
 
   % bars 25-27
-  b e, cis' e, \u d' e, e'8 cis \d fis4 eis8 |
-  fis4. e!8 [d cis] [b e] |
+  b e, cis' e, \stemUp d' e, e'8 cis \stemDown fis4 eis8 |
+  fis4. e!8  d[ cis]  b[ e] |
   a,4 r8 a' gis4. gis8 |
 
   % bars 28-31
   \td fis4. fis8 e2 ~ |
   e1 ~ |
   e2 ~ e16 e gis b c gis a dis,  |
-  e8 r \u e, r a2-\fermata |
+  e8 r \stemUp e, r a2\fermata |
 }
 
 
 \score {
 \context PianoStaff
-\notes
-<
-  \property Score.TimeSignature \override #'style = #'C
-  \context Staff = "up"   <
-    \property Staff.NoteCollision \override #'merge-differently-dotted = ##t
+
+<<
+  \override Score.TimeSignature   #'style = #'C
+  \context Staff = "up"   <<
+    \override Staff.NoteCollision   #'merge-differently-dotted = ##t
     \time 4/4 \key a \major \clef G 
     \context Voice = VA { \voiceOne \melone }
-    \context Voice = VB { \voiceTwo \meltwo }>
+    \context Voice = VB { \voiceTwo \meltwo }>>
 
-  \context Staff = "down" <
-    \time 4/4 \key a \major \clef F \melthree>
->
-\midi {\tempo 4=80}
-\paper {}
+  \context Staff = "down" <<
+    \time 4/4 \key a \major \clef F \melthree>>
+>>
+
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 80 4)
+      }
+    }
+
+
+\layout {}
 }
 

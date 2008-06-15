@@ -1,129 +1,75 @@
-\include "paper20.ly"
+#(set-global-staff-size 20)
 
 \header {
   title = "Sinfonia 13" 
   composer = "Johann Sebastian Bach"
   opus = "BWV 799"
   mutopiatitle = "Sinfonia 13"
-  mutopiacomposer = "J. S. Bach (1685-1750)"
+  mutopiacomposer = "BachJS"
   mutopiaopus = "BWV 799"
-  mutopiainstrument = "Piano, Harpsichord"
+  mutopiainstrument = "Harpsichord, Piano"
   style = "Baroque"
+  source = "Unknown"
   copyright = "Public Domain"
   maintainer = "Olivier Vermersch"
+  maintainerEmail = "olivier.vermersch (at) wanadoo.fr"
   lastupdated = "07/March/2002"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer = "Mutopia-2002/03/07-206"
+ footer = "Mutopia-2008/06/15-206"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "1.4.9"
+\version "2.11.46"
 
 %
 % a few macros for fine tuning
 %
 
-% force direction of stems
-u = \stemUp
-d = \stemDown
-b = \stemBoth
-
-
 % force direction of tie
 tu = \tieUp
 td = \tieDown
-tb = \tieBoth
+tb = \tieNeutral
 
 
 % explicit staff change 
-su = \notes{ \translator Staff = up}
-sd = \notes{ \translator Staff = down}
-
-
-% vertical shifting of rests
-rupone   = \property Voice.Rest \override #'staff-position = #1
-ruptwo   = \property Voice.Rest \override #'staff-position = #2
-rupthree = \property Voice.Rest \override #'staff-position = #3
-rupfour  = \property Voice.Rest \override #'staff-position = #4
-rupfive  = \property Voice.Rest \override #'staff-position = #5
-rupsix   = \property Voice.Rest \override #'staff-position = #6
-
-rdwnone   = \property Voice.Rest \override #'staff-position = #-1
-rdwntwo   = \property Voice.Rest \override #'staff-position = #-2
-rdwnthree = \property Voice.Rest \override #'staff-position = #-3
-rdwnfour  = \property Voice.Rest \override #'staff-position = #-4
-rdwnfive  = \property Voice.Rest \override #'staff-position = #-5
-rdwnsix   = \property Voice.Rest \override #'staff-position = #-6
-
-rdft = \property Voice.Rest \revert #'staff-position
-
-
-% same for multimeasure rests
-Rupone   = \property Voice.MultiMeasureRest \override #'staff-position = #1
-Ruptwo   = \property Voice.MultiMeasureRest \override #'staff-position = #2
-Rupthree = \property Voice.MultiMeasureRest \override #'staff-position = #3
-Rupfour  = \property Voice.MultiMeasureRest \override #'staff-position = #4
-Rupfive  = \property Voice.MultiMeasureRest \override #'staff-position = #5
-Rupsix   = \property Voice.MultiMeasureRest \override #'staff-position = #6
-
-Rdwnone   = \property Voice.MultiMeasureRest \override #'staff-position = #-1
-Rdwntwo   = \property Voice.MultiMeasureRest \override #'staff-position = #-2
-Rdwnthree = \property Voice.MultiMeasureRest \override #'staff-position = #-3
-Rdwnfour  = \property Voice.MultiMeasureRest \override #'staff-position = #-4
-Rdwnfive  = \property Voice.MultiMeasureRest \override #'staff-position = #-5
-Rdwnsix   = \property Voice.MultiMeasureRest \override #'staff-position = #-6
-
-Rdft = \property Voice.MultiMeasureRest \revert #'staff-position
-
-
-% horizontal shifting to avoid note collision
-rshift    = \property Voice.NoteColumn \override #'force-hshift = #1
-rrshift   = \property Voice.NoteColumn \override #'force-hshift = #2
-rrrshift  = \property Voice.NoteColumn \override #'force-hshift = #3
-rrrrshift = \property Voice.NoteColumn \override #'force-hshift = #4
-
-lshift    = \property Voice.NoteColumn \override #'force-hshift = #-1
-llshift   = \property Voice.NoteColumn \override #'force-hshift = #-2
-lllshift  = \property Voice.NoteColumn \override #'force-hshift = #-3
-llllshift = \property Voice.NoteColumn \override #'force-hshift = #-4
-
-dftshift = \property Voice.NoteColumn \revert #'force-hshift
+su = { \change Staff = up}
+sd = { \change Staff = down}
 
 
 % force number of beams on left and right of the note
-lbeamoff = \property Voice.stemLeftBeamCount = # 0
-lbeamone = \property Voice.stemLeftBeamCount = # 1
-lbeamtwo = \property Voice.stemLeftBeamCount = # 2
-lbeamthree = \property Voice.stemLeftBeamCount = # 3
-lbeamfour = \property Voice.stemLeftBeamCount = # 4
-lbeamfive = \property Voice.stemLeftBeamCount = # 5
+lbeamoff = \set stemLeftBeamCount = # 0
+lbeamone = \set stemLeftBeamCount = # 1
+lbeamtwo = \set stemLeftBeamCount = # 2
+lbeamthree = \set stemLeftBeamCount = # 3
+lbeamfour = \set stemLeftBeamCount = # 4
+lbeamfive = \set stemLeftBeamCount = # 5
 
-rbeamoff = \property Voice.stemRightBeamCount = # 0
-rbeamone = \property Voice.stemRightBeamCount = # 1
-rbeamtwo = \property Voice.stemRightBeamCount = # 2
-rbeamthree = \property Voice.stemRightBeamCount = # 3
-rbeamfour = \property Voice.stemRightBeamCount = # 4
-rbeamfive = \property Voice.stemRightBeamCount = # 5
+rbeamoff = \set stemRightBeamCount = # 0
+rbeamone = \set stemRightBeamCount = # 1
+rbeamtwo = \set stemRightBeamCount = # 2
+rbeamthree = \set stemRightBeamCount = # 3
+rbeamfour = \set stemRightBeamCount = # 4
+rbeamfive = \set stemRightBeamCount = # 5
 
 % tuning the grace notes
-grstem = \property Grace.Stem \override #'flag-style = #'()
+grstem = \override Grace.Stem   #'stroke-style = #'()
 
 % typeset on/off
-typeskip = \property Score.skipTypesetting = ##t
-typenoskip = \property Score.skipTypesetting = ##f
+typeskip = \set Score.skipTypesetting = ##t
+typenoskip = \set Score.skipTypesetting = ##f
 
 
-melone = \notes \relative c'' {
+melone =  \relative c'' {
   % bars 1-6
   a4 b8 |
   c4 d8 |
-  c8 b4-\prall |
+  c8 b4\prall |
   a16 b c d e fis |
   g fis g a b c |
   b a g fis e dis |
 
   % bars 7-12
-  [e fis] [dis8. e16] |
+   e[ fis]  dis8.[ e16] |
   e4 g8 ~ |
   g16 bes a g f! e |
   f4. ~ |
@@ -133,7 +79,7 @@ melone = \notes \relative c'' {
   % bars 13-18
   a4. ~ |
   a8. \lbeamone \rbeamtwo b16 \lbeamtwo c d |
-  \d e f e d c b \u |
+  \stemDown e f e d c b \stemUp |
   c4. |
   b |
   a16 g a b c d |
@@ -159,7 +105,7 @@ melone = \notes \relative c'' {
   d16 a b! cis d e |
   f4 g8 |
   a4 bes8 |
-  a g4-\prall |
+  a g4\prall |
   f16 a32 g f16 a e a |
 
   % bars 37-41
@@ -179,11 +125,11 @@ melone = \notes \relative c'' {
 
   % bars 48-53
   b16 a8 a gis16 |
-  \d a \rbeamtwo c \lbeamtwo \rbeamone e a8 gis16 |
+  \stemDown a \rbeamtwo c \lbeamtwo \rbeamone e a8 gis16 |
   a \rbeamtwo e \lbeamtwo \rbeamone c a8 gis16 |
   a c e a gis b |
   e,8 a, b |
-  \u c4 d8 |
+  \stemUp c4 d8 |
   
   % bars 54-58
   e4 f8 |
@@ -201,12 +147,12 @@ melone = \notes \relative c'' {
   a4. \bar "|."
 }
 
-meltwo = \notes \relative c' {
+meltwo =  \relative c' {
   % bars 1-6
-  \Rdwnfour R4. |
   R4. |
   R4. |
-  R4. \Rdft |
+  R4. |
+  R4. |
   e4 fis8 |
   g4 a8 |
 
@@ -220,10 +166,10 @@ meltwo = \notes \relative c' {
   
   % bars 13-18
   c b c d e f |
-  e d c \sd \u b a gis |
-  a b gis4-\prall |
-  a8 \su \d e' a ~ |
-  \rrshift a \dftshift d, g ~ |
+  e d c \sd \stemUp b a gis |
+  a b gis4\prall |
+  a8 \su \stemDown e' a ~ |
+  a d, g ~ |
   g f16 g a b |
 
   % bars 19-24
@@ -232,19 +178,19 @@ meltwo = \notes \relative c' {
   c e, f |
   g4 a8 |
   g8 f4 |
-  e8 r \rdwntwo r \rdft |
+  e8 r r |
 
   % bars 25-30 
   r c' d |
   e4 f8 |
   e8 d4 ~ |
-  \rrshift d16 \dftshift d c bes a g |
+  d16 d c bes a g |
   f8 a4 ~ |
   a8 a cis |
 
   % bars 31-36
   d4 cis8 |
-  d8 \ruptwo r \rdft r |
+  d8 r r |
   r d e |
   f4 g8 |
   f e4 ~ |
@@ -255,10 +201,10 @@ meltwo = \notes \relative c' {
   g,8 c b |
   c16 c32 b a16 c g c |
   fis,8 g fis |
-  g4 \rdwntwo r8 \rdft |
+  g4 r8 |
 
   % bars 42-47
-  \rdwnsix r \rdft g, a |
+  r g, a |
   b4 c8 |
   b a4 ~ |
   a16 g a g a b |
@@ -266,16 +212,16 @@ meltwo = \notes \relative c' {
   e8 d4 |
 
   % bars 48-53
-  c8 \sd \u b b |
+  c8 \sd \stemUp b b |
   e, a b |
   c4 d8 |
   c b4 ~ |
   b16 e, fis gis a gis |
-  a \rbeamtwo c \su \d \lbeamtwo \rbeamone e a8 gis16 |
+  a \rbeamtwo c \su \stemDown \lbeamtwo \rbeamone e a8 gis16 |
 
   % bars 54-58
-  a \rbeamtwo e \sd \u \lbeamtwo \rbeamone c a8 gis16 |
-  a c \su \d e a gis a |
+  a \rbeamtwo e \sd \stemUp \lbeamtwo \rbeamone c a8 gis16 |
+  a c \su \stemDown e a gis a |
   a, c'32 b a16 c g! c |
   fis, b32 a gis16 b fis b |
   e,4. ~ |
@@ -289,11 +235,11 @@ meltwo = \notes \relative c' {
   cis4. \bar "|."
 }
 
-melthree = \notes \relative c {
+melthree =  \relative c {
   % bars 1-6
   a8 a' gis |
   a e f |
-  \u d e e, \d |
+  \stemUp d e e, \stemDown |
   a a'16 b c a |
   e'8 e, dis' |
   e b c |
@@ -307,7 +253,7 @@ melthree = \notes \relative c {
   R4. |
 
   % bars 13-18
-  \u a,4 b8 \d |
+  \stemUp a,4 b8 \stemDown |
   c4 d8 |
   c8 b4 |
   a16 b c d e fis |
@@ -320,14 +266,14 @@ melthree = \notes \relative c {
   c,16 \rbeamtwo e \lbeamtwo \rbeamone g c8 b16 |
   c \rbeamtwo g \lbeamtwo \rbeamone e c8 b16 |
   c e g c b c |
-  c,8 c' b \clef G \u |
+  c,8 c' b \clef G \stemUp |
 
   % bars 25-30
   a16 a' g f e d |
   c \rbeamtwo e \lbeamtwo \rbeamone g c8 b16 |
   c c, c' b a b |
   c8 c, cis |
-  d16 g f e d cis \clef F \d |
+  d16 g f e d cis \clef F \stemDown |
   d e d c! bes a |
 
   % bars 31-36
@@ -343,12 +289,12 @@ melthree = \notes \relative c {
   b,8 c g' |
   c16 e32 d c16 e b e |
   a,8 b d |
-  \u g, g, a |
+  \stemUp g, g, a |
 
   % bars 42-47
   b4 c8 |
   b8 a4 |
-  \d g8 g' fis |
+  \stemDown g8 g' fis |
   g4 f!8 |
   e4 d8 |
   c16 e fis e fis gis |
@@ -364,32 +310,40 @@ melthree = \notes \relative c {
   % bars 54-58
   c4 d8 |
   c8 b4 |
-  \u a8 c a |
+  \stemUp a8 c a |
   d b a |
   gis a g |
 
   % bars 59-64
   fis f f' |
-  \d e4. ~ |
+  \stemDown e4. ~ |
   e16 e32 d c16 e b e |
   a, b'32 a gis16 b e, gis |
   c,8 d e |
-  \u a,4. \bar "|."
+  \stemUp a,4. \bar "|."
 }
 
 
 \score {
 \context PianoStaff
-\notes
-<
-  \context Staff = "up"   <
+
+<<
+  \context Staff = "up"   <<
     \time 3/8 \key a \minor \clef G 
     \context Voice = VA { \voiceOne \melone }
-    \context Voice = VB { \voiceTwo \meltwo }>
+    \context Voice = VB { \voiceTwo \meltwo }>>
 
-  \context Staff = "down" <
-    \time 3/8 \key a \minor \clef F \melthree>
->
-\midi {\tempo 4=55}
-\paper {}
+  \context Staff = "down" <<
+    \time 3/8 \key a \minor \clef F \melthree>>
+>>
+
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 55 4)
+      }
+    }
+
+
+\layout {}
 }
