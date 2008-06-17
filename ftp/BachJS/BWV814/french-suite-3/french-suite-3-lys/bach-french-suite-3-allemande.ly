@@ -1,4 +1,4 @@
-\version "1.4.3"
+\version "2.11.46"
 
 \header {
   title        = "French Suite 3: Allemande"
@@ -10,140 +10,99 @@
   lastupdated  = "2001/Aug/01"
   date         = "1722"
 
-  mutopiatitle       = "allemande"
-  mutopiacomposer    = "J. S. Bach (1685-1750)"
+  mutopiatitle       = "French Suite no. 3 in B minor"
+  mutopiacomposer    = "BachJS"
   mutopiaopus        = "BWV 814"
   mutopiainstrument  = "Harpsichord, Piano"
+  mutopiasource      = "Unknown"
   maintainer         = "Joel Mayes"
   maintainerEmail    = "joel_mayes@dingoblue.net.au"
 
-  footer = "Mutopia-2001/08/01-100"
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+ footer = "Mutopia-2008/06/17-100"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 Global = {
-   \notes
+   
    \key b \minor
    \time 4/4
    \partial 16*3
-   \property Staff.autoBeamSettings \override
-       #'(end * * * *) = #(make-moment 1 4)
 }
 
-VoiceI = \notes \relative c' {
+VoiceI =  \relative c' {
    \repeat volta 2 {
-      fis16 b ais
-      b8.-\mordent cis16 d b e b fis'8 b,~ b16 b e d
-      g e ais b cis, g' fis e d fis b, ais b d g, fis
-      g8 b'~ b16 g e d cis e a, g a cis fis, e
-      fis8 a'~ a16 fis d cis b d g, fis g b e d
-      e8. e,16 fis a d cis d8. b16 e g b cis,
-      d fis, b ais b4~ b16 ais e' d e4~
-      e16 d gis fis gis4~ gis16 cis, fis eis fis a gis fis
-      eis8 cis fis8. e16 d fis, b a b4~
-      b16 a gis b eis, d' cis b a e fis b gis8.-\prallprall fis16
-      fis2~ fis16 b e d e ais, d cis
-      d gis, cis b cis4~ cis16 fis, d' cis eis,8.-\prall fis16
-      \tieUp fis2~ fis4 r16
+      fis16 b ais	%-1
+      b8.\mordent cis16 d b e b fis'8 b,~ b16 b e d	%1
+      g e ais b cis, g' fis e d fis b, ais b d g, fis	%2
+      g8 b'~ b16 g e d cis e a, g a cis fis, e	%3
+      fis8 a'~ a16 fis d cis b d g, fis g b e d	%4
+      e8. e,16 fis a d cis d8. b16 e g b cis,	%5
+      d fis, b ais b4~ b16 ais e' d e4~	%6
+      e16 d gis fis gis4~ gis16 cis, fis eis fis a gis fis	%7
+      eis8 cis fis8. e16 d fis, b a b4~	%8
+      b16 a gis b eis, d' cis b a e fis b gis8.\prallprall fis16	%9
+      fis2~ fis16 b e d e ais, d cis	%10
+      d gis, cis b cis4~ cis16 fis, d' cis eis,8.\prall fis16	%11
+      <<\relative fis' { fis2^~ fis4 r16}\\ \relative e' {r16 e d cis d8 cis16 b cis4 r16}>>	%12
    \repeat volta 2 {
-      cis'16 gis a 
-      ais8. cis16 fis, fis' cis e d8. fis16 bis, bis' fis a
-      g e  b d c g' fis a dis,8-\prall b r16 e b d
-      c e a, c b e g, b a e' fis, a g e' e, g
-      fis e' dis a'
-      fis8.-\prall e16 e4~ e16 g b, d
-      cis8. e16 a, a' e g fis4~ fis16 d ais cis
-      b8. d16 g, g' d fis e4~ e16 cis gis b
-      ais8. cis16 fis, fis' cis e d4~ d16 b fis a
-      g b e, d' cis e g b, ais cis fis,8~ fis16 b fis a
-      g b e, g fis b d, fis e b' cis, e d b' b, d
-      cis b' ais e' cis8.-\prall b16 b g fis' dis e4~
-      e16 b gis' eis fis8. e16 d cis d b ais8. b16
-      b2~ b4 r16
+      cis'16 gis a 	
+      ais8. cis16 fis, fis' cis e d8. fis16 bis, bis' fis a	%13
+      g e  b d c g' fis a dis,8\prall b r16 e b d	%14
+      c e a, c b e g, b a e' fis, a g e' e, g	%15
+      fis e' dis a' fis8.\prall e16 e4~ e16 g b, d	%16
+      cis8. e16 a, a' e g fis4~ fis16 d ais cis	%17
+      b8. d16 g, g' d fis e4~ e16 cis gis b	%18
+      ais8. cis16 fis, fis' cis e d4~ d16 b fis a	%19
+      g b e, d' cis e g b, ais cis fis,8~ fis16 b fis a	%20
+      g b e, g fis b d, fis e b' cis, e d b' b, d	%21
+      cis b' ais e' cis8.\prall b16 b g fis' dis e4~	%22
+      e16 b gis' eis fis8. e16 d cis d b ais8. b16	%23
+      <<\relative b'{b2~ b4 r16}\\ \relative dis' {r8 dis~ dis16 e dis cis dis4 r16}>>	%24
    }
    }
 }
 
-VoiceIb = \notes \relative c' {
-   \stemDown \tieDown
+
+VoiceII =  \relative c {
    \repeat volta 2 {
-      s8.
-      s1*11
-      r16 e d cis d8 cis16 b cis4 r16
+      r16 r8	%-1
+      r16 fis b ais b8 cis d16 b g' fis g8.\mordent fis16	%1
+      e8 cis fis fis, b cis d b	%2
+      e,16 b' e d cis8 b a g fis e		%3
+      d16 a' d cis b8 a g fis e d		%4
+      cis16 e a g a8. fis16 b, fis' b a g8 a	%5
+      d,4~ d16 b g' fis g8 cis,~ cis16 fis b ais	%6
+      b8 b,~ b16 eis a gis a4~ a16 fis b a	%7
+      b d cis b a fis b ais b8 a gis16 eis d' cis	%8
+      d8 b gis eis fis b, cis cis,	%9
+      r16 fis' e' d e fis, d' cis d fis, cis' b cis fis, b ais 	%10
+      b4~ b16 eis,16 a gis a8 fis8 cis' cis,	%11
+      <<\relative ais {r8 ais8~ ais16 b ais gis ais4 r16}\\ \relative fis {\tieDown fis2~ fis4 r16}>>	%12
    }
    \repeat volta 2 {
-      s8.
-      s1*11
-      r8 dis~ dis16 e dis cis dis4 r16
+      r16 r8	%
+      r16 fis' cis e d8 ais8 r16 b fis a g8 dis	%13
+      e g a c r16 b fis a g8 e	%14
+      a fis g e c' a b g	%15
+      a fis b,16 b' fis a g b dis, fis e8 g	%16
+      a16 a' e g fis8 cis r16 d ais cis b8 fis	%17
+      g16 g' d fis e8 b r16 cis gis b ais8 eis		%18
+      fis16 fis' cis e d8 ais r16 b fis a g8 dis	%19
+      <<\relative e{ e8 g r2.}\\ \relative e{ e8 d e cis r16 fis cis e d8 b}>>		%20
+      e8 cis d b g' e fis d	%21
+      e cis fis fis, g4~ g16 e cis' ais	%22
+      b4~ b16 ais e' cis g'8 e fis fis,	%23
+      <<\relative a{r16 a g fis g8 fis16 e fis4 r16}\\ \relative b, {b2~ b4 r16}>> 	%24
    }
 }
 
-VoiceII = \notes \relative c {
-   \repeat volta 2 {
-      r16 r8
-      r16 fis b ais b8 cis d16 b g' fis g8.-\mordent fis16
-      e8 cis fis fis, b cis d b
-      e,16 b' e d cis8 b a g fis e
-      d16 a' d cis b8 a g fis e d
-      cis16 e a g a8. fis16 b, fis' b a g8 a
-      d,4~ d16 b g' fis g8 cis,~ cis16 fis b ais
-      b8 b,~ b16 eis a gis a4~ a16 fis b a
-      b d cis b a fis b ais b8 a gis16 eis d' cis
-      d8 b gis eis fis b, cis cis,
-      r16 fis' e' d e fis, d' cis d fis, cis' b cis fis, b ais 
-      b4~ b16 eis,16 a gis a8 fis8 cis' cis,
-      \tieDown fis2~ fis4 r16
-   }
-   \repeat volta 2 {
-      r16 r8
-      r16 fis' cis e d8 ais8 r16 b fis a g8 dis
-      e g a c r16 b fis a g8 e
-      a fis g e c' a b g
-      a fis b,16 b' fis a g b dis, fis e8 g
-      a16 a' e g fis8 cis r16 d ais cis b8 fis
-      g16 g' d fis e8 b r16 cis gis b ais8 eis
-      fis16 fis' cis e d8 ais r16 b fis a g8 dis
-      e d e cis r16 fis cis e d8 b
-      e8 cis d b g' e fis d
-      e cis fis fis, g4~ g16 e cis' ais
-      b4~ b16 ais e' cis g'8 e fis fis,
-      \stemDown b2~ b4 r16
-   }
-}
-
-VoiceIIb = \notes \relative c' {
-   \stemUp
-   \tieUp
-   \repeat volta 2 {
-      s8.
-      s1*11
-      r8 ais8~ ais16 b ais gis ais4 r16
-   }
-   \repeat volta 2 {
-      s8.
-      s1*7
-      e8 g r2.
-      s1*3
-      r16 a g fis g8 fis16 e fis4 r16
-   }
-}
 
 \score {
-   \context PianoStaff <
-      \context Staff = Upper <
-         \Global
-	 \clef treble
-         \context Voice = i \VoiceI
-         \context Voice = ii \VoiceIb
-      >
-      \context Staff = Lower <
-         \Global
-	 \clef bass
-	 \context Voice = iii \VoiceII
-	 \context Voice = iv \VoiceIIb
-      >
-   >
-   \paper { }
+   \new PianoStaff <<
+      \new Staff << \Global \VoiceI >>
+      \new Staff << \Global \clef bass \VoiceII >>
+   >>
+   \layout { }
    \midi { }
 }
 
