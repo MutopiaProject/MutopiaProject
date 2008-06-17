@@ -1,3 +1,5 @@
+\version "2.11.46"
+
 \header {
   title        = "French Suite V: Loure"
   composer     = "J. S. Bach (1685-1750)"
@@ -8,64 +10,81 @@
   lastupdated  = "2001/Jul/07"
   date         = "1722"
 
-  mutopiatitle       = "Loure"
-  mutopiacomposer    = "J. S. Bach (1685-1750)"
+  mutopiatitle       = "French Suite no. 5 in G major"
+  mutopiacomposer    = "BachJS"
   mutopiaopus        = "BWV 816"
   mutopiainstrument  = "Harpsichord, Piano"
+  mutopiasource      = "Unknown"
   maintainer         = "Joel Mayes"
   maintainerEmail    = "joel_mayes@dingoblue.net.au"
 
-  footer = "Mutopia-2007/09/02-99"
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+ footer = "Mutopia-2008/06/17-99"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 
 Global = {
-  \notes
+  
   \key g \major
   \time 6/4
   \partial 8*3
-  \property PianoStaff.connectArpeggios = ##t
+  \set PianoStaff.connectArpeggios = ##t
 }
 
 StaffUp = {
-  \translator Staff = Upper
+  \change Staff = Upper
   \stemDown
 }
 
 StaffDown = {
-  \translator Staff = Lower
+  \change Staff = Lower
   \stemUp
 }
 
 NoCut = {
-  \property Grace.Stem \override #'flag-style = #'()
+  \override Grace.Stem   #'stroke-style = #'()
 }
-VoiceI = \notes \relative c'' { \voiceOne
+VoiceI =  \relative c'' { \voiceOne
   \repeat volta 2 {
     d8 b4
-    \grace { \NoCut a8} g2.~ g4. a8 b4
+    \grace {
+\override Stem   #'stroke-style = #"grace"
+   \NoCut a8
+  \revert Stem #'stroke-style }
+ g2.~ g4. a8 b4
     a2.~ a4. b8 c4
-    d4. g8 e4 c4.-\prall b8 c16 a b8
-    b4.-\prall a8 g4 g4.\arpeggio b8 d4
-    g4.-\mordent a8 b4 \grace{ \NoCut d,8} c4. e8 a4
+    d4. g8 e4 c4.\prall b8 c16 a b8
+    b4.\prall a8 g4 g4.\arpeggio b8 d4
+    g4.\mordent a8 b4 \grace {
+\override Stem   #'stroke-style = #"grace"
+   \NoCut d,8
+  \revert Stem #'stroke-style }
+ c4. e8 a4
     dis,16 e fis g a c b a g a fis8 g2.~
     g4. e8 fis 4 a, b cis 
     d2.~ d4.
   }
   \repeat volta 2 {
     a'8 fis4
-    \grace { \NoCut e8} d2.~ d4. e8 fis4
+    \grace {
+\override Stem   #'stroke-style = #"grace"
+   \NoCut e8
+  \revert Stem #'stroke-style }
+ d2.~ d4. e8 fis4
     g2.~ g4. a8 b4
-    c16 b a gis a8. e16 f4 \grace { \NoCut c8} b4. f'8 e4
-    c4.-\prall b8 a4 a4~ a16 c b a e'4
+    c16 b a gis a8. e16 f4 \grace {
+\override Stem   #'stroke-style = #"grace"
+   \NoCut c8
+  \revert Stem #'stroke-style }
+ b4. f'8 e4
+    c4.\prall b8 a4 a4~ a16 c b a e'4
     fis,4. a8 c4~ <c d,>~ d,16 fis e d b'4
     a4. e'8 a4~ a~ a16 a g fis g4
     c,16 b a g fis e' d c d4 d, e fis g2.~ g4.
   }
 }
 
-VoiceXa = \notes \relative c' {
+VoiceXa =  \relative c' {
   \shiftOn
   \repeat volta 2 {
    s4.
@@ -78,16 +97,15 @@ VoiceXa = \notes \relative c' {
   \repeat volta 2 {
     s4.
     s1.
-    \property Voice.Rest \override #'extra-offset = #'(0.0 . -5.0)
     \stemUp \tieUp \shiftOff
-    r8 [d8 b g] s1
-    \property Voice.Rest \revert #'extra-offset
+    b8 \rest  d8[ b g] s1
+    \revert Rest #'extra-offset
     s1.*5
     \shiftOn
     d2.~ d4.
   }
 }
-VoiceXb = \notes \relative c'' {
+VoiceXb =  \relative c'' {
   \repeat volta 2 {
     s4.
     s1.*7
@@ -99,11 +117,11 @@ VoiceXb = \notes \relative c'' {
     s4.
     s1.
     s4
-    \property Voice.Stem \override #'thickness = #0.0
-    \property Voice.NoteHead \override #'transparent  = ##t
+    \override Stem   #'thickness = #0.0
+    \override NoteHead   #'transparent  = ##t
     b4 ~
-    \property Voice.Stem \revert #'thickness
-    \property Voice.NoteHead \revert #'transparent
+    \revert Stem #'thickness
+    \revert NoteHead #'transparent
     \shiftOnn
     b~ b4  s2
     s1.*5
@@ -111,7 +129,7 @@ VoiceXb = \notes \relative c'' {
   }
 }
 
-VoiceXc = \notes \relative c'' {
+VoiceXc =  \relative c'' {
   \repeat volta 2 {
     s4.
     s1.*7
@@ -123,28 +141,36 @@ VoiceXc = \notes \relative c'' {
     s4.
     s1.
     s8
-    \property Voice.Stem \override #'thickness = #0.0
-    \property Voice.NoteHead \override #'transparent  = ##t
-    \property Voice.Dots \override #'transparent = ##t
+    \override Stem   #'thickness = #0.0
+    \override NoteHead   #'transparent  = ##t
+    \override Dots   #'transparent = ##t
     d4.~
-    \property Voice.Stem \revert #'thickness
-    \property Voice.NoteHead \revert #'transparent
-    \property Voice.Dots \revert #'transparent
+    \revert Stem #'thickness
+    \revert NoteHead #'transparent
+    \revert Dots #'transparent
     \shiftOn
     d4~ d4 s2
     s1.*5
     s1 s8
     }
 }
-VoiceII = \notes \relative c' { \voiceTwo
+VoiceII =  \relative c' { \voiceTwo
   \repeat volta 2 {
     s4.
-    \StaffDown \stemDown r4 r8 d8 b4 \grace { \NoCut a8} g4. fis8 g16 b \StaffUp d g
+    \StaffDown \stemDown r4 r8 d8 b4 \grace {
+\override Stem   #'stroke-style = #"grace"
+   \NoCut a8
+  \revert Stem #'stroke-style }
+ g4. fis8 g16 b \StaffUp d g
     fis2.~ fis4. g8 a4~
     a g2~ g4 fis 2
     g2. b,4.\arpeggio s
     s2. e2 s4
-    s2. r4 r8 e'8 cis4 \grace{ \NoCut b8} a2. g4 fis e
+    s2. r4 r8 e'8 cis4 \grace {
+\override Stem   #'stroke-style = #"grace"
+   \NoCut b8
+  \revert Stem #'stroke-style }
+ a2. g4 fis e
     fis2.~ fis4.
   }
   \repeat volta 2 {
@@ -152,7 +178,7 @@ VoiceII = \notes \relative c' { \voiceTwo
      r4 r8 a fis4~ fis4. g8 a4
      \tieDown
      d,4. g8~ g4~ g4 s2
-     \tieBoth
+     \tieNeutral
      r4 r a~ a2 gis4
      a2 s1
      s1.
@@ -162,17 +188,21 @@ VoiceII = \notes \relative c' { \voiceTwo
    }
 }
 
-VoiceIII = \notes \relative c { \voiceThree
+VoiceIII =  \relative c { \voiceThree
   \repeat volta 2 {
     r8 r4
     s1.
     r4 r8
-    a fis4 \grace { \NoCut e8} d4. d'8 c4
+    a fis4 \grace {
+\override Stem   #'stroke-style = #"grace"
+   \NoCut e8
+  \revert Stem #'stroke-style }
+ d4. d'8 c4
     b e c a16 c b a d4 d,4
     g b d g2 r4
     r16 g, a b c d e fis g b a g g4~ g16 b a g fis g e8
     fis4 dis b \stemDown r16 e g fis e d cis d e cis d e
-     fis,2 s4 s \stemBoth g a
+     fis,2 s4 s \stemNeutral g a
     d4. a8 fis4 d4.
   }
   \repeat volta 2 { \stemDown
@@ -181,21 +211,21 @@ VoiceIII = \notes \relative c { \voiceThree
   s2. f'2.
   e4 f d e2.
   r4 e c a b c
-  \stemBoth
+  \stemNeutral
   d,8 a' d e16 fis e8 fis16 g fis8 g16 a d,8 fis \stemDown \tieDown g4~
- [ g8 g fis e dis e] dis e16 fis s2
+  g8[ g fis e dis e] dis e16 fis s2
   r4 r8 fis c4 b c d
   g,4. b8 d4 g4.
 
   }
 }
 
-VoiceXd = \notes \relative c {
+VoiceXd =  \relative c {
   \stemUp
   \repeat volta 2 {
   s4.
   s1.*6
-  r8 [a b cis d e] fis4 s2
+  r8  a[ b cis d e] fis4 s2
   s1 s8
   }
   \repeat volta2 {
@@ -214,23 +244,23 @@ VoiceXd = \notes \relative c {
 
 
 \score {
-  \context PianoStaff <
-    \context Staff = Upper <
+  \context PianoStaff <<
+    \context Staff = Upper <<
       \Global
       \clef treble
-      \context Voice = i \VoiceI
-      \context Voice = ia \VoiceXa
-      \context Voice = ib \VoiceXb
-      \context Voice = ic \VoiceXc
-      \context Voice = ii \VoiceII
-    >
-    \context Staff = Lower <
+      \context Voice = "i" \VoiceI
+      \context Voice = "ia" \VoiceXa
+      \context Voice = "ib" \VoiceXb
+      \context Voice = "ic" \VoiceXc
+      \context Voice = "ii" \VoiceII
+    >>
+    \context Staff = Lower <<
       \Global
       \clef bass
-      \context Voice = iiia \VoiceIII
-      \context Voice = iiib \VoiceXd
-    >
-  >
-  \paper { }
+      \context Voice = "iiia" \VoiceIII
+      \context Voice = "iiib" \VoiceXd
+    >>
+  >>
+  \layout { }
   \midi { }
 }
