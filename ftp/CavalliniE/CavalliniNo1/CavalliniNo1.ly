@@ -10,13 +10,13 @@
   maintainerWeb = "http://blog.donnael.com/"
   title = "Thirty Caprices: No. 1"
   composer = "Ernesto Cavallini"
- footer = "Mutopia-2008/06/23-1463"
+ footer = "Mutopia-2008/07/13-1463"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 #(set-global-staff-size 17)
 
-clarinetOne = \relative c'' {
+ECCapriceOne = \relative c'' {
   #(override-auto-beam-setting '(end 1 8 2 4) 4 8)
   
   a4.-.\mark \markup{Allegro mosso} b8-. | c8-. d-. e-. f-. | e4-. a-. | b4( e,) |
@@ -75,7 +75,7 @@ clarinetOne = \relative c'' {
       \set beatLength = #(ly:make-moment 4 8)
       \set Staff.midiInstrument = "clarinet"
       \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-2 . 2)
-      \clarinetOne
+      \ECCapriceOne
     }
     
     \layout {
