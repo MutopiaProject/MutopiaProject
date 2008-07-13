@@ -25,10 +25,12 @@
         style = "Baroque"
         source = "Bach-Gesellschaft Edition 1879 Band 27.1"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
+		comment = "Thanks to Pietro who found a wrong note"
         maintainer = "Hajo Dezelski"
+		maintainerWeb = "http://www.roxele.de"
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/06/15-1456"
+ footer = "Mutopia-2008/07/13-1456"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -43,7 +45,7 @@ melodyOne = \relative e' {
 		c,16 [ c d a ] b [ c d e ] f [ a g f ] | % 7
 		e8 r8 r16 d16 [ c b ] a [ g fis32 g32 e16 ] | % 8
 		fis16 [ d e fis ] g32 [( b a c b d c e )] d4 | % 9
-		a,16 [ e''32 (d c d e16) ] b8 ~ [b32 c64  b a32 b ] c8 [ a \trill ] | % 10
+		c,16 [ e'32 (d c d e16) ] b8 ~ [b32 c64  b a32 b ] c8 [ a \trill ] | % 10
 	} % end repeat
 	
 	\alternative {
