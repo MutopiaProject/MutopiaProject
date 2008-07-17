@@ -7,13 +7,13 @@
 
 
 \header {
-  title = "String Quartet Opus 53 No. 3 - Part II"
+  title = "String Quartet Opus 59 No. 3 - Part II"
   subtitle = "dedicated to Prince Rassoumovsky"
   composer = "Ludwig van Beethoven"
-  mutopiatitle = "String Quartet Opus 53 No. 3 - Part II"
+  mutopiatitle = "String Quartet Opus 59 No. 3 - Part II"
   mutopiacomposer = "BeethovenLv"
   mutopiainstrument = "String Quartet"
-  mutopiaopus = "Op. 53"
+  mutopiaopus = "Op. 59"
   date = "1817"
   source = "Breitkopf and Hartel"
   style = "Classical"
