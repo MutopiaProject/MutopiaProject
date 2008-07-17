@@ -10,14 +10,14 @@
   maintainerWeb = "http://blog.donnael.com/"
   title = "Thirty Caprices: No. 7"
   composer = "Ernesto Cavallini"
- footer = "Mutopia-2008/07/14-1479"
+ footer = "Mutopia-2008/07/17-1479"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 #(set-global-staff-size 17)
 
 ECCapriceSeven = \relative c' {
-  a16( e') c-. f-. e( c) a-. e-. c'( a) e'( c) | 
+  a16( \mark \markup{Allegro assai} e') c-. f-. e( c) a-. e-. c'( a) e'( c) | 
   a16( e') c-. f-. e( c) a-. e-. c'( a) e'( a,) |
   \repeat unfold 2 { gis( d') b-| f'-| e( d) b-| gis-| e( e') d-| b-| | }
   a( e') c-| f-| e( c) a-| e-| c'( a) e'-| c-| | 
@@ -92,7 +92,7 @@ ECCapriceSeven = \relative c' {
     }
     
     \layout {
-      #(layout-set-staff-size 15)
+      #(layout-set-staff-size 17)
     }
     
     \midi {
