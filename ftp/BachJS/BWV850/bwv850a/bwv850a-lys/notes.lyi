@@ -1,0 +1,91 @@
+
+rightHand = {
+	\time 4/4
+	\key d \major
+	\clef "treble"
+	
+	\relative c'' {
+	r16 d e fis a, fis' e d a' d,  e fis  a, fis' e d |	
+	g e fis g b, d cis b cis e fis g a, g' fis e |
+	fis d e fis a, cis b a b d e fis b, a' gis fis |
+	gis e fis gis b, d cis b a cis d e fis, e' d cis |
+	d b cis d fis, a gis fis gis b cis d e, d' cis b | %5
+	cis a b cis e, g fis e fis a b cis fis, e' dis cis |
+	dis b cis dis fis, a g fis e g a b cis, d' cis b | 
+	ais e fis g cis, g' fis e d b' cis d fis, a gis fis |
+	eis gis a b eis, d' cis b gis' eis fis gis cis, b' a gis |
+	a fis gis a cis, e dis cis dis fis g a  b, a' g fis | %10
+	g e fis g b, d c b c dis e fis a, c b a |
+	g e' fis g b, d cis b cis e fis g a, g' fis e |
+	fis	d e fis a, c b a b g a b cis, b' a g |
+	fis d e fis a, c b a b d e fis b, a' gis fis |
+	gis e fis gis b, d c b a c d e a, g' fis e | %15
+	dis a b c fis, c' b a g e' fis g b, d cis b |
+	ais cis d e ais, g' fis e cis' ais b cis  fis, e' d cis |
+	d b cis d fis, a gis fis gis b c d e, d' c b | 
+	c a b c e, g fis e fis a b c d, c' b a |
+	b g a b d, b' a g d' g, a b d, b' a g | %20
+	c a b c e, g fis e fis a b c d, c' b a |
+	b g a b d, fis e d e g a b e, d' cis b |
+	cis a b cis e, g fis e d fis g a b, a' g fis | 
+	g e fis g b, d cis b cis e fis g a, g' fis e |
+	fis d e fis a, fis' e d a' fis g a d, c' b a | %25
+	b g a b d, b' a g d' b cis d gis, f' e d |
+	cis a b cis e, g fis e a d e fis b, a' g fis  | 
+	g cis, d e a, g' fis e fis b, cis d gis, fis' e d |
+	cis g a bes e, g f e f d' e f cis e d cis |
+	d bes' a g f e d cis d f e d b' gis a b | %30
+	f d e f b, gis a b e, fis gis a b cis d e |
+	<< { \mergeDifferentlyDottedOn f4. e8 ~ e d ~ d cis } \\ {f16 cis d a bes g e' g, a f d' f, g e cis' e, }  >> |
+  	<< { <d'>4\arpeggio ~ d32 [ cis b a gis fis e fis ] gis [ a b cis d e f e ] d [ cis b a gis fis e d ] } \\ {< d f gis b d >4\arpeggio} >> |
+	<< { <cis' e g bes>8\arpeggio r8 <d f gis b>8 r8 d4 cis4} \\ { < cis, e g bes>8\arpeggio r8 <d f gis b>8 r8 <e a>2} >> |
+	<fis a d>1\fermata | \bar "|." %35
+	}
+}
+
+leftHand = {
+	\time 4/4
+	\key d \major
+	\clef "bass"
+	
+	\relative c {
+	
+	d8 r d' r fis, r d' r | 
+	e, r d' r a r cis r |
+	d, r d' r d, r d' r |
+	d, r gis r cis, r a' r | 
+	b, r a' r e r gis r | %5
+	a, r a' r a, r a' r | 
+	a, r dis r g, r e' r |
+	fis, r fis' r fis, r fis' r |
+	fis, r fis' r fis, r fis' r | 
+	fis, r fis' r b, r dis r | %10
+	e, r e' r e, r dis' r |
+	e, r e' r a, r cis r |
+	d, r d' r d, r d' r |
+	d, r d' r d, r d' r |
+	d, r gis' r c, r fis r | %15
+	b, r dis r e r g r |
+	b, r e r  g r ais r |
+	b, r b' r e, r gis r | 
+	a, r a' r d, r fis r |
+	g, r g' r b, r g' r | %20
+	a, r g' r d r fis r |
+	g, r g' r g, r g' r |
+	g, r cis r fis, r d' r | 
+	e, r d' r a r cis r  | %<--
+	d, r d' r fis, r a' r  | %25
+	g, r g' r b, r d' r |
+	<< { a, r g' r fis r d r } \\ { a1 ~ } >> |
+	<< { e'8 r cis r d r b r  } \\ { a1 ~ } >> |
+	<< 	{ r16 e' fis g cis, e d cis d f g a e g f e } \\ {a,1} >> |
+	f'16 d e f a, c bes a gis2 ~ | %30
+	gis1 |
+	<< {r8 a' g cis, f  d e g} \\ {a,1} >> |
+	<< { <d f gis b>4\arpeggio r4 r2 } \\ {<a>4\arpeggio r4 r2} >> |
+	s2 << {a'2} \\ {e4 g} \\ {a,2}>> |
+	<d fis a>1_\fermata | \bar "|." %35
+	}
+}
+
+% vim: ft=lilypond
