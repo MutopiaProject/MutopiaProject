@@ -8,7 +8,7 @@
 	mutopiatitle = "4 Sting"
 	mutopiacomposer = "PapezikR"
 	mutopiaopus = "Op. 2"
-	mutopiainstrument = "guitar"
+	mutopiainstrument = "Guitar"
 	date = "2003"
 	source = "Original Composition"
 	style = "Modern"
