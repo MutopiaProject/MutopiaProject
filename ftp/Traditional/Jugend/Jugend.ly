@@ -1,8 +1,9 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 15.5) 
+#(ly:set-option 'point-and-click #f) 
 
-\version "2.9" 
+\version "2.10" 
 
 global = { \key b \major \time 3/4 \tempo 4.=80 } 
 
@@ -141,7 +142,7 @@ die Ju -- gend kommt nicht mehr.
 % composer = "Folksong"
  opus = ""
  meter = \markup {}
- arranger = "Arrangement by Engelbert Humperdinck (1854-1921)"
+ arranger = "Arrangement by Engelbert Humperdinck (1854–1921)"
  poet = ""
  
  mutopiatitle = "Schön ist die Jugend"
@@ -152,12 +153,12 @@ die Ju -- gend kommt nicht mehr.
  date = "1910s"
  source = "Leipzig : C. F. Peters, 1915"
  style = "Romantic"
- copyright = "Creative Commons Attribution 2.5"
+ copyright = "Creative Commons Attribution 3.0"
  maintainer = "Klaus Rettinghaus"
- lastupdated = "2006/November/15"
+ lastupdated = "2008/August/1"
  
- footer = "Mutopia-2006/12/01-855"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/2.5" http://creativecommons.org/licenses/by/2.5 } } } }
+ footer = "Mutopia-2008/08/12-855"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 } 
 
 \score {
@@ -224,6 +225,7 @@ indent = 0.0\cm
 \remove "Bar_number_engraver"
 \override MetronomeMark #'transparent = ##t 
 \override DynamicTextSpanner #'dash-period = #-1.0 
+\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 \context {\Staff 
 \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
@@ -233,7 +235,6 @@ indent = 0.0\cm
 \midi {
 \context { \Voice 
 \remove "Dynamic_performer" 
-\remove "Span_dynamic_performer" 
 }
 }
 
