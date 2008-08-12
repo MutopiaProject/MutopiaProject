@@ -1,6 +1,5 @@
-\include "deutsch.ly" 
-
 #(set-global-staff-size 15.5) 
+#(ly:set-option 'point-and-click #f) 
 
 \version "2.10" 
 
@@ -8,12 +7,12 @@ global = { \key a \major \time 4/4 \tempo 4=104 }
 
 SKamerad = \relative a' { 
 \partial 4 
-e8( e) a4 cis8( cis8) cis4 h a2 e4 
-a8( h8) cis4 e8( e) e4 d cis2 \oneVoice r4 \voiceOne 
-a8[ h] cis4-. cis-. cis-. h-. cis4.( d8) e4 
-d8[ cis] h4 h h h8[ a] h4.( cis8) d4 
-e4 cis cis h h8[ cis] a2 
-h2 cis4 e h h8[ cis] a2 \oneVoice r4 \voiceOne 
+e8( e) a4 cis8( cis8) cis4 b a2 e4 
+a8( b8) cis4 e8( e) e4 d cis2 \oneVoice r4 \voiceOne 
+a8[ b] cis4-. cis-. cis-. b-. cis4.( d8) e4 
+d8[ cis] b4 b b b8[ a] b4.( cis8) d4 
+e4 cis cis b b8[ cis] a2 
+b2 cis4 e b b8[ cis] a2 \oneVoice r4 \voiceOne 
 \bar "|." 
 } 
 
@@ -22,8 +21,8 @@ AKamerad = \relative a' {
 e8( e) e4 e8( e8) a4 gis e2 e4 
 a8( a8) a4 e8( e) fis4 fis8[ gis] a2 s4 
 e4 e e e e e2 a4 
-h8[ a] gis4 fis e dis8[ fis] e2 gis4 
-h4 a a gis gis a2 
+b8[ a] gis4 fis e dis8[ fis] e2 gis4 
+b4 a a gis gis a2 
 gis2 a4 e e e8[ d] cis2 s4 
 \bar "|." 
 } 
@@ -31,10 +30,10 @@ gis2 a4 e e e8[ d] cis2 s4
 TKamerad = \relative a { 
 \partial 4 
 e8( e) cis'4 a8( a8) e'4 d cis2 cis4 
-cis8( d8) e4 a,8( a) a4 h a2 \oneVoice r4 \voiceOne 
-e'8[ d] cis4-. a-. a-. gis-. a4.( h8) cis4 
-e4 e h8[ a] gis4 fis gis4.( a8) h4 
-h4 e e d d cis2 
+cis8( d8) e4 a,8( a) a4 b a2 \oneVoice r4 \voiceOne 
+e'8[ d] cis4-. a-. a-. gis-. a4.( b8) cis4 
+e4 e b8[ a] gis4 fis gis4.( a8) b4 
+b4 e e d d cis2 
 e2 cis4 a a gis a2 \oneVoice r4 \voiceOne 
 \bar "|." 
 } 
@@ -42,9 +41,9 @@ e2 cis4 a a gis a2 \oneVoice r4 \voiceOne
 BKamerad = \relative a { 
 \partial 4 
 e8( e) a4 a,8( cis8) e4 e a2 a4 
-fis8( fis8) e4 d8( cis) h4 e <<e2 a,>> s4 
+fis8( fis8) e4 d8( cis) b4 e <<e2 a,>> s4 
 cis8[ e] a4 gis8[ fis] e4 e a2 a,4 
-a8[ cis] e4 dis e h4 e2 e4 
+a8[ cis] e4 dis e b4 e2 e4 
 fis8[ gis] a4 a e e fis2 
 e2 a4 cis,8[ d] e4 e <<e2 a,>> s4 
 \bar "|." 
@@ -94,8 +93,8 @@ mein gu -- ter Ka -- me -- rad!
 % composer = "Folksong"
  opus = ""
  meter =  \markup {Frisch}
- arranger = "Arrangement by Hermann Suter (1870-1926)"
- poet = "Ludwig Uhland (1787-1862), 1809"
+ arranger = "Arrangement by Hermann Suter (1870–1926)"
+ poet = "Ludwig Uhland (1787–1862), 1809"
  
  mutopiatitle = "Der gute Kamerad"
  mutopiacomposer = "SuterH"
@@ -105,12 +104,12 @@ mein gu -- ter Ka -- me -- rad!
  date = "1910s"
  source = "Leipzig : C. F. Peters, 1915"
  style = "Romantic" 
- copyright = "Creative Commons Attribution 2.5"
- maintainer = "Klaus Rettinghaus" 
- lastupdated = "2006/October/5"
+ copyright = "Creative Commons Attribution 3.0"
+ maintainer = "Klaus Rettinghaus"
+ lastupdated = "2008/August/1"
  
- footer = "Mutopia-2006/12/01-730"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/2.5" http://creativecommons.org/licenses/by/2.5 } } } }
+ footer = "Mutopia-2008/08/12-730"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 } 
 
 \score { 
@@ -163,6 +162,7 @@ indent = 0.0\cm
 \remove "Bar_number_engraver"
 \override MetronomeMark #'transparent = ##t 
 \override DynamicTextSpanner #'dash-period = #-1.0 
+\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 \context {\Staff 
 \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
@@ -172,7 +172,6 @@ indent = 0.0\cm
 \midi {
 \context { \Voice 
 \remove "Dynamic_performer" 
-\remove "Span_dynamic_performer" 
 }
 }
 
