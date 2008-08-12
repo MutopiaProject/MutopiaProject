@@ -1,10 +1,11 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 17) 
+#(ly:set-option 'point-and-click #f) 
 
-\version "2.8" 
+\version "2.10" 
 
-global = { \key h \major \time 4/4 } 
+global = { \key h \major \time 4/4 \tempo 4=90 } 
 
 TASandmann = \relative h 
 { 
@@ -79,7 +80,7 @@ h4\pp fisis gis fis8[ e] dis4 gis, fis fis h2 s4
 } 
 
 LSandmannA = \lyricmode {
-\set stanza = "1. " 
+\set stanza = "1." 
 Die Blü -- me -- lein, sie schla -- fen schon längst im Mon -- den -- schein, 
 sie ni -- cken mit den Köpf -- chen auf ih -- ren Stän -- ge -- lein. 
 Es rüt -- telt sich der Blü -- ten -- baum, er säu -- selt wie im Traum: 
@@ -89,7 +90,7 @@ Es rüt -- telt sich der Blü -- ten -- baum, er säu -- selt wie im Traum:
 }
 
 LSandmannB = \lyricmode {
-\set stanza = "2. " 
+\set stanza = "2." 
 Die Vö -- ge -- lein, sie san -- gen so süß im Son -- nen -- schein, 
 sie sind zur Ruh ge -- gan -- gen in ih -- re Nest -- chen klein. 
 Das Heim -- chen in dem Äh -- ren -- grund, es tut al -- lein sich kund 
@@ -99,7 +100,7 @@ Das Heim -- chen in dem Äh -- ren -- grund, es tut al -- lein sich kund
 }
 
 LSandmannC = \lyricmode {
-\set stanza = "3. " 
+\set stanza = "3." 
 Sand -- männ -- chen kommt ge -- schli -- chen und guckt durchs Fen -- ster -- lein, 
 ob ir -- gend noch ein Lieb -- chen nicht mag zu Bet -- te sein. 
 Und wo er noch ein Kind -- chen fand, streut er ins Aug ihm Sand: 
@@ -124,25 +125,25 @@ Es leuch -- tet mor -- gen mir Will -- komm das Äu -- ge -- lein so fromm!
  
  title = "Sandmännchen"
  subtitle = ""
- composer = "Wilhelm von Zuccalmaglio (1803-1864), 1840"
+ composer = "Wilhelm von Zuccalmaglio (1803–1864), 1840"
  opus = ""
  meter = "Heimlich, nicht schleppend."
- arranger = "Ernst Rudorff (1840-1916)"
+ arranger = "Arrangement by Ernst Rudorff (1840–1916)"
 % poet = "Volkslied, 1604"
  
  mutopiatitle = "Sandmännchen"
  mutopiacomposer = "RudorffE"
  mutopiapoet = ""
- mutopiainstrument = "Voice (TTBB)"
+ mutopiainstrument = "Choir (TTBB)"
  date = "1900s"
  source = "Leipzig : C. F. Peters, 1907"
  style = "Romantic"
- copyright = "Creative Commons Attribution 2.5"
+ copyright = "Creative Commons Attribution 3.0"
  maintainer = "Klaus Rettinghaus"
- lastupdated = "2006/August/1"
+ lastupdated = "2008/August/1"
  
- footer = "Mutopia-2006/08/07-801"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/2.5" http://creativecommons.org/licenses/by/2.5 } } } }
+ footer = "Mutopia-2008/08/12-801"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 }
 
 \score {
@@ -192,16 +193,21 @@ Es leuch -- tet mor -- gen mir Will -- komm das Äu -- ge -- lein so fromm!
 }
 
 \layout {
-\context {\Score \remove "Bar_number_engraver"}
-\context {\Staff \override VerticalAxisGroup #'minimum-Y-extent = #'(-3 . 3) }
+indent = 0.0\cm
+\context {\Score 
+\remove "Bar_number_engraver"
+\override MetronomeMark #'transparent = ##t 
+\override DynamicTextSpanner #'dash-period = #-1.0 
+\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
+}
+\context {\Staff 
+\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+}
 }
 
 \midi {
-\tempo 4 = 90
-\context {
-\Voice
-\remove "Dynamic_performer"
-\remove "Span_dynamic_performer"
+\context { \Voice 
+\remove "Dynamic_performer" 
 }
 }
 
