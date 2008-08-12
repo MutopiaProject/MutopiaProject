@@ -1,12 +1,12 @@
 #(set-global-staff-size 17) 
+#(ly:set-option 'point-and-click #f) 
 
-\version "2.8" 
+\version "2.10" 
 
-global = { \key f \minor \time 2/4 } 
+global = { \key f \minor \time 2/4 \tempo 4=48 } 
 
 TAGrablied = 
 { 
-\override DynamicTextSpanner #'dash-period = #-1.0
 c'4\p des'8 bes8 
 c'8[ f'8] g'8 aes'8 
 g'4 f'8 e'8 
@@ -95,7 +95,6 @@ a4. \oneVoice r8 \voiceOne
 
 BBGrablied = 
 { 
-\override DynamicTextSpanner #'dash-period = #-1.0
 f4\p f8 f8 
 f4 f8 f8 
 c4 c8 c8 
@@ -125,7 +124,7 @@ f4.-\fermata\p s8
 } 
 
 LGrabliedA = \lyricmode {
-\set stanza = "1. " 
+\set stanza = "1." 
 Pil -- ger auf Er -- den, so ra -- ste am Zie -- le, 
 hier la -- be dich Frie -- den nach lan -- ger Fahrt! 
 Was auch dein Herz -- weh, was auch dein Leid war, 
@@ -135,7 +134,7 @@ nun ru -- he im Schos -- se der Er -- de aus!
 }
 
 LGrabliedB = \lyricmode {
-\set stanza = "2. " 
+\set stanza = "2." 
 Pil -- ger auf Ster -- nen, un -- sterb -- li -- che See -- le, 
 du schweb -- est zum Him -- mel auf gold -- nem Pfad, 
 ba -- dest im Glanz -- meer gött -- li -- cher Klar -- heit; 
@@ -152,26 +151,26 @@ ge -- lei -- te zur e -- wi -- gen Hei -- mat dich!
  
  title = "Grablied"
  subtitle = ""
- composer = "Peter Cornelius (1824-1874), 1869"
+ composer = "Peter Cornelius (1824–1874), 1869"
  opus = "Op. 9, No. 4"
  meter = "Gemessen, nicht schleppend"
  arranger = ""
- poet = "Peter Cornelius (1824-1874), 1869"
+ poet = "Peter Cornelius (1824–1874), 1869"
  
  mutopiatitle = "Grablied"
  mutopiacomposer = "CorneliusP"
  mutopiapoet = "CorneliusP"
  mutopiaopus = "Op. 9, No. 4"
- mutopiainstrument = "Voice (TTBB)"
+ mutopiainstrument = "Choir (TTBB)"
  date = "1869"
  source = "Leipzig : C. F. Peters, 1907"
  style = "Romantic"
- copyright = "Creative Commons Attribution 2.5"
+ copyright = "Creative Commons Attribution 3.0"
  maintainer = "Klaus Rettinghaus"
- lastupdated = "2006/August/1"
+ lastupdated = "2008/August/1"
  
- footer = "Mutopia-2006/08/08-799"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/2.5" http://creativecommons.org/licenses/by/2.5 } } } }
+ footer = "Mutopia-2008/08/12-799"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 } 
 
 \score {
@@ -219,16 +218,21 @@ ge -- lei -- te zur e -- wi -- gen Hei -- mat dich!
 }
 
 \layout {
-\context {\Score \remove "Bar_number_engraver"}
-\context {\Staff \override VerticalAxisGroup #'minimum-Y-extent = #'(-3 . 3) }
+indent = 0.0\cm
+\context {\Score 
+\remove "Bar_number_engraver"
+\override MetronomeMark #'transparent = ##t 
+\override DynamicTextSpanner #'dash-period = #-1.0 
+\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
+}
+\context {\Staff 
+\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+}
 }
 
 \midi {
-\tempo 4 = 90
-\context {
-\Voice
-\remove "Dynamic_performer"
-\remove "Span_dynamic_performer"
+\context { \Voice 
+\remove "Dynamic_performer" 
 }
 }
 
