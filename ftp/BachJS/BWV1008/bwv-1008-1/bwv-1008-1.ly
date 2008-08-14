@@ -21,15 +21,15 @@
         mutopiacomposer = "BachJS"
         opus = "BWV 1008"
         mutopiainstrument = "Cello"
-		arrangement = "Hajo Dezelski"
+	arrangement = "Hajo Dezelski"
         style = "Baroque"
         source = "Bach-Gesellschaft Edition 1879 Band 27"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "Hajo Dezelski"
-		maintainerWeb = "http://www.roxele.de/"
+	maintainerWeb = "http://www.roxele.de/"
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/07/30-1487"
+ footer = "Mutopia-2008/08/14-1487"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -43,7 +43,7 @@ melody = \relative c {
 	a16 [(c e g)] c8. bes16 a [(g f e)] | % 7
 	d16 [(f a c)] bes [g a f] e [(f a f)] | % 8
 	g,16 [(bes d f)] bes8. a16 g [(f e g)] | % 9
-	a,16 [(c e g)] c [( a e g)] f [(a d, ces)] | % 10
+	a,16 [(c e g)] c [( a e g)] f [(a d, ees)] | % 10
 	d16 [(a bes d)] g [(bes a c)] bes [g d' f,] | % 11
 	e16 [(b c e)] g [d e c] bes [g e' bes] | % 12
 	f8 [a ] c4 ~ c16 [bes (a g)]  | % 13
