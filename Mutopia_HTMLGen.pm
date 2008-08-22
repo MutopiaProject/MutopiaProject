@@ -406,7 +406,7 @@ sub HEAD($) {
       Save our bandwidth - use a mirror!<br />
       <a href="http://www.ibiblio.org/mutopia/" title="Mirror in the USA">USA</a> |
       <a href="http://www.mutopiaproject.org/" title="Main site in Canada"><b>Canada</b></a> |
-      <a href="http://mutopia.planetmirror.com/" title="Mirror in Australia">Australia</a> |
+      <!-- <a href="http://mutopia.planetmirror.com/" title="Mirror in Australia">Australia</a> | -->
 
       <!-- <a href="http://gd.tuwien.ac.at/art/Mutopia/" title="Mirror in Austria">Austria</a> | -->
       <a href="http://eremita.di.uminho.pt/mutopia/" title="Mirror in Portugal">Portugal</a><br />
