@@ -16,7 +16,7 @@
   mutopiacomposer =   "BachJS"
   mutopiaopus =       "BWV 786"
 
- footer = "Mutopia-2008/06/15-68"
+ footer = "Mutopia-2008/08/23-68"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -73,7 +73,7 @@ voicetwo =  \relative c {
   b[ cis b a]  gis[ b a gis]  a8[ a' g! fis] |
   e[ e' d cis]  b[ b, a gis] |
   fis[ fis'16 g!]  a8[ b]  e,[ e,16 fis]  g8[ a] |
-  d8[ b'16 ais]  b8[ fis]  g[\prall fis]  b[ fis] |
+  d,8[ b''16 ais]  b8[ fis]  g[\prall fis]  b[ fis] |
   fis[ e]  cis'[ e,]  e[\prall d16 cis]  d[ b cis d] |
   e[ fis e cis]  d[ e d b]  cis[ d cis b]  ais[ cis b ais] |
   b8[ b'16 ais]  b8[ g]  d16[ fis e g]  fis8[ fis,] |
