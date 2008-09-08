@@ -18,8 +18,13 @@
  maintainerEmail = "kurt.holtrop@juno.com"
  lastupdated = "2004/Mar/28"
  
+
  footer = "Mutopia-2008/09/08-441"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+}
+
+\paper {
+	ragged-last-bottom=##f
 }
 
 blanknotes = { \override NoteHead
@@ -46,7 +51,8 @@ top =  \relative c' {
  
   \repeat volta 2 {
   << {
-     d8 bes' g f ees c'4 cis8 |				%5	
+     d8 bes' g f ees c'4 cis8 |				%5
+%\break
      d8 f, bes d, g8 f4. |					%6
      } \\ {
      d2-\mf( ees2)( |						%5
@@ -60,7 +66,8 @@ top =  \relative c' {
   <<{<d f>8 <d f>4 <d f>8 ~ f8 g8 <d f>4 |} \\
     {s8 s4 \once \override Stem
          #'transparent = ##t
-       d8 ~ d4 s4 |}>>						%8		
+       d8 ~ d4 s4 |}>>						%8
+%\break	
   << {
      d8 bes' g f ees c'4 cis8 |					%9	
      d8 f, bes d g8 bes4. |					%10
@@ -70,6 +77,7 @@ top =  \relative c' {
      } 
   >>
   a'8 c d <ees fis,>8 ~ <ees fis,>8 d <fis, a>4 |		%11
+%\break
   <<{  
      c'8_\markup {\dynamic f \italic sempre } bes a 		
      bes8 ~ bes4. s8 |						%12
@@ -81,36 +89,45 @@ top =  \relative c' {
   >>	
   << {ees'4 ees8 d8 ~ d8 f,8 s4 |} \\
        {c'8 g8 a8 bes8 ~ bes8 s8 <d f>4  | }>>			%14
+%\break
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |			%15
   << {ees'4 ees8 d8 ~ d4. s8 | s1} \\
        {c8 g8 a8 bes8 ~ bes4. <ees bes'>8 ~ |			 %16
        \tieNeutral  <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |  }>>   %17
+%\break
   << {ees'4 ees8 d8 ~ d8 f,8 s4 |} \\
        {c'8 g8 a8 bes8 ~ bes8 s8 <d f>4 | }>>			%18
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |
   } 
   \alternative {   
     {<< {ees'4 ees8 d8 ~ d8 s8 s4 |} \\
-       {c8 g8 a8 bes8 ~ bes8 g8 f8 ees8 | }>> }	%20
-    {<< {ees'4 ees8 d8 ~ d4 s4 |} \\
-       {c8 g8 a8 bes8 ~ bes4 s4 | }>> }			%21
+       {c8 g8 a8 bes8 ~ bes8[ g8 f8 ees8] | }>> }	%20
+    { << {ees'4 ees8 d8 ~ d4 } \\
+       {c8 g8 a8 bes8 ~ bes4 }>> s4 | }			%21
   }
+\bar "||" 
+\pageBreak
+%Page 2
 
-  s2 <fis a d>4^> s4 |						%22
+  \partial 4 <fis a d>4^> |						%22
   \repeat volta 2 {
     \acciaccatura { g16[ a] }bes8-\mf a g bes ~ bes a g4 |	%23
     <<{s2 r8 d'8 a'4} \\ {a,4 g8 fis ~ fis2}>> | 		%24
     \acciaccatura {s16 a16[ bes] }c8 bes a c ~ c bes a4 |	%25
     <<{s2 r8 d8 bes'4} \\ {bes,4 a8 g ~ g2}>> |			%26
+\break
     \acciaccatura { g16[ a] }bes8 a g a bes c4 d8 |		%27
     <<{s2 r8 g8 ees'4} \\ {ees,4_\f d8 c ~ c2}>> |		%28
     \acciaccatura { c16[ d] }ees8 d c bes a g4 a8 |		%29
-    fis4 a8 <fis d'> ~ <fis d'>2 |				%30
+\break
+    fis4 a8 <fis d'> ~ <fis d'>2 |					%30
     \acciaccatura { g16[ a] } bes8-\mf a g bes ~ bes a g4 |	%31
     <<{s2 r8 d'8 a'4} \\ {a,4 g8 fis ~ fis2}>> | 		%32
+\break
     \acciaccatura { a16[ bes] }c8 bes a c ~ c bes a4|		%33
     <<{bes4 a8 g ~ g2} \\ {s2 r8 d'8 bes'4}>> |			%34
     \acciaccatura { g,16[ a] }bes8 a g a bes c4 d8 |		%35
+\break
     <<{s2 r8 g8 ees'4} \\ {ees,4-\f d8 c ~ c2}>> |		%36
     \acciaccatura { bes16[ c] }d8 c bes a ~ a c bes a |		%37				
   } \alternative {   
@@ -118,27 +135,35 @@ top =  \relative c' {
      {g,4 a8 bes c4~c8. c32( cis32}				%39
   }
 
+\pageBreak
+% Page Three
+
   \repeat volta 2 {
     d4)-\mf r4 <g, c>8 <bes cis>4 <f bes d>8 ~ |			%40				
     <f bes d>4 <cis' g'>8 <d f> ~ <d f> <d bes'>8 ~ <d bes'>8. c32( cis |
     d4)  r4 <g, c>8 <bes cis>4 <f bes d>8 ~ |			
-    \cresc <f bes d>2. \endcresc <bes d f>4 |
+    \cresc <f bes d>2. \endcresc <bes d f>4 |			% 43
+%\break
     \stemUp <bes ees g>8-\f bes' <bes, ees g>4 <f bes d>8 f' <f, bes d>4 |
     <bes, ees g>8 bes' <bes, ees g>4 <f bes d>8 f' <f, bes d>4 | %45
     <fis' c'>8-\mf <g bes>4 <g bes>8 ~ <g bes>2 |
     <<{d'8 c4 bes8 ~ bes8 c g4} \\ {g4. g8 ~ g8 s4.}>> |
+%\break
     <cis, g'>8 <d f>4 <d bes'>8 ~ <d bes'>2 ~ |
     <d bes'>4 d8 f bes c d f |	
     \stemDown <a, ees' g>8-\f b c <a ees' f> ~ <a ees' f>2 ~ |   %50
     <a ees' f>4 g'8 <a, ees' f> ~ <a ees' f> g' <a, ees' f>4 |
+%\break
     \acciaccatura { bes16[ d] }<bes d g>8 cis d <bes d f> ~ <bes d f>2 ~ |
     <bes d f>8 g' <gis, d' f> <a ees'> ~ <a ees'> f' <a,  ees'>8. c32(cis |
     d4)-\mf  r4 \stemUp <g, c>8 <bes cis>4 <f bes d>8 ~ |
     <f bes d>4 \stemDown <cis' g'>8 <d f> ~ <d f> <d bes'> ~ <d bes'>8. c32(cis |
+%\break
     d4)-\mf  r4 \stemUp <g, c>8 <bes cis>4 <f bes d>8 ~ |	%56
     \cresc <f bes d>2. \endcresc \stemDown <bes d f>4 |  
     \stemUp <bes ees g>8-\f bes' <bes, ees g>4 <f bes d>8 f' <f, bes d>4 | 
     <bes, ees g>8 bes' <bes, ees g>4 <f bes d>8 f' <f, bes d>4 |
+\break
     bes8 c4 d8 ~ d8 c bes4 |   %60
     \stemDown d'8 c4 bes8 ~ bes a g4 |
     \acciaccatura { bes16[ d] }<bes d g>8 f' <bes, d> <a ees'> ~ <a ees'> f' g, a |      			
@@ -147,12 +172,17 @@ top =  \relative c' {
      {bes2. c4}						%64
   }
 
+\bar "||"
   \key des \major
+\pageBreak
+%Page Four
+
   des2. bes8 c |
   des2. bes8 c |					%66
   \repeat volta 2 {
     <<{\stemDown des2_\mf  ees2} \\ 
       {\stemUp s8 f\< bes des s8 ges, bes\! ees}>> |
+%\break
     <<{\stemDown des,4. c8 bes4 f} \\ 
       {\stemUp s8 <f' bes des> ~ \tieNeutral <f bes des> 
         <f a c> <f bes>4 bes,}>> |			%68
@@ -160,11 +190,13 @@ top =  \relative c' {
       {\stemUp a'4 g8 ges ~ ges g a4}>> |
     <<{\stemDown <ees ges>1} \\ 
       {\stemUp c'4 bes8 a ~ a bes c4}>> |		%70  
+%\break
     b4-> c2-> des4-> |
     d4-> ees-> e-> f-> |				%72
     <ges, c ges'>4-> <bes c ees>2-> <bes c e>4-> |
     <<{\stemUp f'1} \\ 
-      {\stemDown <a, c>4 c8_\ff bes a bes a4}>> |		%74 
+      {\stemDown << <a, c>4 {s8 s8\ff } >> c8 bes a bes a4}>> |		%74 
+%\break
     <<{\stemDown des2_\mf ees2} \\ 
       {\stemUp s8 f\< bes des r8 ges, bes\! ees}>> |   
     <<{\stemDown des,4. c8 bes4 c} \\ 
@@ -172,12 +204,14 @@ top =  \relative c' {
         <f a c> <f bes>4 <f c'>}>> |			%76  
     <des f des'>8_\mf <c c'> <des des'> <ees ees'> ~ <ees ees'>
          <des des'> <bes bes'>4 |
+%\break
     <<{\stemDown <c ges'>4. des8 ~ des4 des4 } \\ 
       {\stemUp bes'8 aes ges f ~ f aes f4}>> |		%78  
     <<{c'1} \\ 
        {f,8 e4 f8 ~ f8 g aes4}>> |
     <<{c2 ~ c4 <f,, aes c f>->} \\ 
-       {e'8 g4 f8 ~ f4 s4}>> |				%80			
+       {e'8 g4 f8 ~ f4 s4}>> |				%80
+%\break
   } \alternative {   
      {<ges, bes ees ges>4 <f bes des f> <ees' a c>8 a f <des f bes> ~ |
       <des f bes>8 f des bes a bes c4 |}		%82
@@ -188,6 +222,9 @@ top =  \relative c' {
   }
 
   \key bes \major
+\pageBreak
+% Page Five
+
   \repeat volta 2 {
   << {
      d8-\mf bes' g f ees c'4 cis8 |				%85	
@@ -201,6 +238,7 @@ top =  \relative c' {
     {s8 s4 \once \override Stem
          #'transparent = ##t
        ees8 ~ ees4 s4 |}>>					%87
+%\break
   <<{<d f>8 <d f>4 <d f>8 ~ f8 g8 <d f>4 |} \\
     {s8 s4 \once \override Stem
          #'transparent = ##t
@@ -213,6 +251,7 @@ top =  \relative c' {
      d2) d'2 |							%90
      } 
   >>
+%\break
   a'8 c d <ees fis,>8 ~ <ees fis,>8 d <fis, a>4 |		%91
   <<{  
      c'8_\markup {\dynamic f \italic sempre } bes a 		
@@ -222,13 +261,15 @@ top =  \relative c' {
      g2 ~ g4. <bes ees,>8 ~ \tieNeutral|				%92
      <bes ees,>8 bes, <ees g> g, bes <d f>4 f,8 |		%93							%13						%13
      } 
-  >>	
+  >>
+%\break
   << {ees'4 ees8 d8 ~ d8 f,8 s4 |} \\
        {c'8 g8 a8 bes8 ~ bes8 s8 <d f>4  | }>>			%94
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |			%95
   << {ees'4 ees8 d8 ~ d4. s8 | s1} \\
        {c8 g8 a8 bes8 ~ bes4. <ees bes'>8 ~ | 			%96
        \tieNeutral  <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |  }>>   %97
+%\break
   << {ees'4 ees8 d8 ~ d8 f,8 s4 |} \\
        {c'8 g8 a8 bes8 ~ bes8 s8 <d f>4 | }>>			%98
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |			%99
@@ -239,6 +280,7 @@ top =  \relative c' {
     {<<{ees'4 ees8 d ~ d4 d8 ees |} \\
        {c8 g a bes ~ bes4 bes8 c |}>> }				%101
   }
+\break
 
   <<{f4 g2 ges4} \\ {d4 ees2 ees4}>> |					%102
   <<{ges8 f bes <f bes d> ~ <f bes d> <d bes'> <ees a c>4} \\
@@ -247,6 +289,7 @@ top =  \relative c' {
     {<bes, f'>4 d'4 bes f}>> |						%104
   <<{f4 f8 e f4 d8 ees} \\
     {d4 d8 cis d4 s8 s8}>> |						%105
+%\break
   f4 g2 ges4 |								%106
   ges8 f bes <f bes d> ~ <f bes d> <d bes'> <ees a c>4 |
   <<{bes'1} \\ {d,4 <bes' f'>8 bes' <bes, e> bes' <bes, ees> bes'}>> |
@@ -294,10 +337,10 @@ bottom =  \relative c {
   } 
   \alternative {   
     {<f f,>4 <f a ees'> <bes bes,> <f a> | }	%20
-    {<f f,>4 <f a ees'> <bes bes,> s4 | }	%21	
+    {<f f,>4 <f a ees'> <bes bes,> s4 }	%21	
   }
 
-  s2 <d, d,>4^> s4 |					%22
+  \partial 4 <d, d,>4^> |					%22
   \repeat volta 2 {
     \grace s8 <g g,>4 <g bes d> <d d,> <g bes d> |	%23
     <fis fis,>4 <fis c' d> < d d,> <fis c' d> |		%24
@@ -444,7 +487,7 @@ bottom =  \relative c {
  >>
  
  \midi {
-  tempoWholesPerMinute = #(ly:make-moment 72 4)
+%  \tempo 4 = 72
   \context {
    \Voice
    \remove Dynamic_performer
