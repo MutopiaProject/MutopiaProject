@@ -1,4 +1,4 @@
-\version "2.2.0"
+\version "2.10.10"
 
 \header {
  title = "Magnetic Rag"
@@ -6,19 +6,20 @@
  piece = "INTRO"
  
  mutopiatitle = "Magnetic Rag"
- mutopiacomposer = "S. Joplin (1868-1917)"
+ mutopiacomposer = "JoplinS"
  mutopiainstrument = "Piano"
- date = "C. 1914"
+ date = "c. 1914"
  style = "Jazz"
  copyright = "Public Domain"
+ source = "Original edition"
  
  filename = "magnetic.ly"
  maintainer = "Kurt Holtrop"
  maintainerEmail = "kurt.holtrop@juno.com"
  lastupdated = "2004/Mar/28"
  
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2004/03/28-441"
+ footer = "Mutopia-2008/09/08-441"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 blanknotes = { \override NoteHead
@@ -30,7 +31,7 @@ unblanknotes = { \revert NoteHead
                  \revert Stem
  #'transparent }
 
-top = \notes \relative c' {
+top =  \relative c' {
  \override TextScript   #'padding = #2
 
  \key bes \major
@@ -74,7 +75,7 @@ top = \notes \relative c' {
      bes8 ~ bes4. s8 |						%12
      s1 |							%13
      } \\ {
-     g2 ~ g4. <bes ees,>8 ~ \tieBoth|				%12
+     g2 ~ g4. <bes ees,>8 ~ \tieNeutral|				%12
      <bes ees,>8 bes, <ees g> g, bes <d f>4 f,8 |		%13							%13						%13
      } 
   >>	
@@ -83,7 +84,7 @@ top = \notes \relative c' {
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |			%15
   << {ees'4 ees8 d8 ~ d4. s8 | s1} \\
        {c8 g8 a8 bes8 ~ bes4. <ees bes'>8 ~ |			 %16
-       \tieBoth  <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |  }>>   %17
+       \tieNeutral  <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |  }>>   %17
   << {ees'4 ees8 d8 ~ d8 f,8 s4 |} \\
        {c'8 g8 a8 bes8 ~ bes8 s8 <d f>4 | }>>			%18
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |
@@ -104,7 +105,7 @@ top = \notes \relative c' {
     \acciaccatura { g16[ a] }bes8 a g a bes c4 d8 |		%27
     <<{s2 r8 g8 ees'4} \\ {ees,4_\f d8 c ~ c2}>> |		%28
     \acciaccatura { c16[ d] }ees8 d c bes a g4 a8 |		%29
-    fis4 a8 <f d'> ~ <fis d'>2 |					%30
+    fis4 a8 <fis d'> ~ <fis d'>2 |				%30
     \acciaccatura { g16[ a] } bes8-\mf a g bes ~ bes a g4 |	%31
     <<{s2 r8 d'8 a'4} \\ {a,4 g8 fis ~ fis2}>> | 		%32
     \acciaccatura { a16[ bes] }c8 bes a c ~ c bes a4|		%33
@@ -153,7 +154,7 @@ top = \notes \relative c' {
     <<{\stemDown des2_\mf  ees2} \\ 
       {\stemUp s8 f\< bes des s8 ges, bes\! ees}>> |
     <<{\stemDown des,4. c8 bes4 f} \\ 
-      {\stemUp s8 <f' bes des> ~ \tieBoth <f bes des> 
+      {\stemUp s8 <f' bes des> ~ \tieNeutral <f bes des> 
         <f a c> <f bes>4 bes,}>> |			%68
     <<{\stemDown <c, ees>1\mf} \\ 
       {\stemUp a'4 g8 ges ~ ges g a4}>> |
@@ -167,7 +168,7 @@ top = \notes \relative c' {
     <<{\stemDown des2_\mf ees2} \\ 
       {\stemUp s8 f\< bes des r8 ges, bes\! ees}>> |   
     <<{\stemDown des,4. c8 bes4 c} \\ 
-      {\stemUp s8 <f bes des> ~ \tieBoth <f bes des> 
+      {\stemUp s8 <f bes des> ~ \tieNeutral <f bes des> 
         <f a c> <f bes>4 <f c'>}>> |			%76  
     <des f des'>8_\mf <c c'> <des des'> <ees ees'> ~ <ees ees'>
          <des des'> <bes bes'>4 |
@@ -218,7 +219,7 @@ top = \notes \relative c' {
      bes8 ~ bes4. s8 |						%92
      s1 |							%93
      } \\ {
-     g2 ~ g4. <bes ees,>8 ~ \tieBoth|				%92
+     g2 ~ g4. <bes ees,>8 ~ \tieNeutral|				%92
      <bes ees,>8 bes, <ees g> g, bes <d f>4 f,8 |		%93							%13						%13
      } 
   >>	
@@ -227,7 +228,7 @@ top = \notes \relative c' {
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |			%95
   << {ees'4 ees8 d8 ~ d4. s8 | s1} \\
        {c8 g8 a8 bes8 ~ bes4. <ees bes'>8 ~ | 			%96
-       \tieBoth  <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |  }>>   %97
+       \tieNeutral  <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |  }>>   %97
   << {ees'4 ees8 d8 ~ d8 f,8 s4 |} \\
        {c'8 g8 a8 bes8 ~ bes8 s8 <d f>4 | }>>			%98
   <ees bes'>8 bes <ees g> g, bes <d f>4 f,8 |			%99
@@ -254,7 +255,7 @@ top = \notes \relative c' {
  \bar "|."
 }
  
-bottom = \notes \relative c {
+bottom =  \relative c {
   \key bes\major
   \time 4/4
   \clef bass
@@ -324,7 +325,7 @@ bottom = \notes \relative c {
   <bes, bes,>4 <d d,> <ees ees,> <e e,> |
   <f f,>4 bes8 c \clef treble d8 f aes8. f32(fis32 |
   g4^>) ~ g8. c,32(cis32 d4^>) ~ d8. \clef bass f,32(fis32 |
-  g4^>) ~ g8. \stemDown c,32(cis32 d2^>) \stemBoth |		%45
+  g4^>) ~ g8. \stemDown c,32(cis32 d2^>) \stemNeutral |		%45
   <ees ees,>4 <g bes ees> <bes, bes,> <g' bes ees> |
   <ees ees,>4 <g bes ees> <g g,> <ees ees,> |
   <bes bes,>4 <f' bes> f, <f' bes> |
@@ -338,7 +339,7 @@ bottom = \notes \relative c {
   <bes, bes,>4 <d d,> <ees ees,> <e e,> |
   <f f,>4 bes8 c \clef treble d8 f aes8. f32(fis32 |
   g4^>) ~ g8. c,32(cis32 d4^>) ~ d8. \clef bass f,32(fis32 |
-  g4^>) ~ g8. \stemDown c,32(cis32 d2^>) \stemBoth|
+  g4^>) ~ g8. \stemDown c,32(cis32 d2^>) \stemNeutral|
   g,8 a4 bes8 ~ bes8 c d4 |			%60
   bes'8 a4 g8 ~ g8 f <e bes' cis>4 |
   <f f,>4 <f bes d> <f f,> <f a ees'> |
@@ -424,28 +425,28 @@ bottom = \notes \relative c {
 }
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
    \top
   \context Staff = "down"
    \bottom
  >>
 
-\paper {}
+\layout {}
 }
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
-   \apply #unfold-repeats \top 
+   \applyMusic #unfold-repeats \top 
   \context Staff = "down"
-   \apply #unfold-repeats \bottom
+   \applyMusic #unfold-repeats \bottom
  >>
  
  \midi {
-  \tempo 4 = 72
+  tempoWholesPerMinute = #(ly:make-moment 72 4)
   \context {
-   \VoiceContext
+   \Voice
    \remove Dynamic_performer
   }
  }
