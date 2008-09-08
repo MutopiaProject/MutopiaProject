@@ -1,0 +1,3 @@
+\lyricmode {
+Mo -- ra_il ne -- mi -- co a -- hi las -- so man -- ca_il cor lan -- gue_il piè va -- cil -- la_il pas -- so dun -- que gar -- zon im -- bel -- le o -- sò del vi -- ver mi -- o tron -- car lo sta -- me ohi ver -- go -- gna_in -- au -- di -- ta, ahi ca -- so in -- fa -- me e tu mi -- se -- ro_Er -- nan -- do al di cui preg -- gio ce -- de sov -- ven -- te o -- gni guer -- rie -- ra spa -- da scher -- ni -- to,_e vi -- li -- pe -- so sen gia -- ce_in -- vol -- to el te -- me -- ra -- rio ar -- di -- re a ca -- sti -- gar a rin -- tuz -- zar non cor -- ri mo -- ra mo -- ra mo -- ra_il ne -- mi -- co a -- hi las -- so man -- ca_il cor lan -- gue_il piè va -- cil -- la il pas -- so va -- cil -- la_il pas -- so.
+}
