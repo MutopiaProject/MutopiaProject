@@ -1,4 +1,4 @@
-\version "2.10.20"
+\version "2.11.56"
 
 \header {
 	title = "Mentre dormi amor"
@@ -15,8 +15,8 @@
 	maintainer = "Björn Sothmann"
 	maintainerEmail = "bjoerns@tp3.rub.de"
 	maintainerWeb = "http://www.tp3.rub.de/~bjoerns"
- footer = "Mutopia-2007/12/02-1181"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2008/09/08-1181"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 \include "deutsch.ly"
@@ -103,7 +103,7 @@ staffViolin = \new Staff  {
 		e'32 d c8. g'32 f e8. c'16 g g g g g g g |
 		c8 e,16. f32 d4\trill c,2 |
 		g' e'32 d c8. g'32 f e8. |
-		fis32 e d8. a'32 g fis8. h32 a g8. d32 c h8. |
+		fis32 e d8. a'32 g fis8. b32 a g8. d32 c b8. |
 		e32 d c8. g'32 f e8. a32 g f8. r4 |
 		g2 a |
 		b c16 c \appoggiatura d c32 b c16 r b \appoggiatura c b32 as b16 |
@@ -249,15 +249,15 @@ staffSoprano = \new Staff  {
 		a c16[ a] \appoggiatura g8 f4 f8 |
 		d'\melisma \appoggiatura c b4\trill\melismaEnd d8 c \appoggiatura b a4\trill c8 |
 		b8\melisma \appoggiatura a8 g4\trill\melismaEnd b8 a16[ g] f8 r f16 f |
-		d'8 \appoggiatura c h \appoggiatura a g f f e g h |
+		d'8 \appoggiatura c h \appoggiatura a g f f e g b |
 		a\melisma \appoggiatura b a32[ g a16] \times 2/3 {r f[ g]} \times 2/3 {a[ h c]} h8 \appoggiatura c h32[ a h16] \times 2/3 {r g[ a]} \times 2/3 {h[ c d]} |
 		c2\melismaEnd d8 \appoggiatura c h \appoggiatura a g f |
 		e c' e,8[ d16\trill] c c4 r |
 		R1*2 |
 		r2 c |
 		g' c8.[ h32 c] c,8 c' |
-		d,[ fis] a[ c] h32[ a] g16 r8 r h |
-		c,[ e] f[ b] a32[ g] f16 r8 f f |
+		d,[ fis] a[ c] b32[ a] g16 r8 r b |
+		c,[ e] g[ b] a32[ g] f16 r8 f f |
 		f e16[ f] g8 g g f16[ g] a8 a |
 		a g16[ a] b8 b \times 2/3 {as16[\melisma c b]} \times 2/3 {as[ g f]} \times 2/3 {g[ b as]} \times 2/3 {g[ f e]} |
 		\times 2/3 {as[ c b]} \times 2/3 {as[ g f]} \times 2/3 {g[ b as]} \times 2/3 {g[ f e]} f8~ f32[ g a b] c8\melismaEnd r |
@@ -271,7 +271,7 @@ staffSoprano = \new Staff  {
 		f8 d a' a a a a a |
 		d c16[ b] a[ g] f[ e] f8 e16[ d] e8. d16 |
 		d4 a'8 a a a c a |
-		c gis e e f4~ f16[\melisma d' h a] |
+		a gis e e f4~ f16[\melisma d' h a] |
 		gis4~ gis16[ e gis h] c8\melismaEnd h16[ a] gis8. a16 |
 		a1 |
 		}
@@ -349,4 +349,5 @@ staffCello = \new Staff  {
 
 \paper {
 }
+
 
