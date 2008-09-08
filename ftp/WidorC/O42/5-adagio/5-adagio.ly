@@ -15,7 +15,7 @@
 	maintainer = "Bart Golsteijn"
 	maintainerEmail = "bartgolsteijn@hotmail.com"
 	lastupdated = "2006/October/13"
- footer = "Mutopia-2008/01/04-1201"
+ footer = "Mutopia-2008/09/08-1201"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -79,7 +79,7 @@ staffChurchOrgan = <<
 					   {d,4 e4. d16 b a8.\f\> r16\! | r8 \pp as4 as16 bes c4 des | ges4 f8 des16 bes c8 as4 bes16 c |}
 					>> 
 					<< {as'8 g16 f es8 bes'4 as16 g f8 c'~ | c c bes16 c d4 d d8~ | d b c4 c2 | b4 d2 r4 |} \\
-					   {d,4 es8 d16 es e4 f8 e16 f | fis8 es16 fis g8 fis16 g gis8 fisis16 gis a8 gis16 a | d,1~ | d2.~ d8 c |}
+					   {d,4 es8 d16 es e4 f8 e16 f | fis8 eis16 fis g8 fis16 g gis8 fisis16 gis a8 gis16 a | d,1~ | d2.~ d8 c |}
 					>> 
 					<< {r16 c' b fis a8 g a16 g fis a g4 | r16 bes a e g8 f g16 f e g f4 | r16 es f d es8 c16 d es8 c' d f,16 es |} \\
 					   {b2.~ b8 bes | a2.~ a8 as | g1~ |}
