@@ -1,6 +1,6 @@
 \include "deutsch.ly" 
 
-#(set-global-staff-size 17) 
+#(set-global-staff-size 15.5) 
 #(ly:set-option 'point-and-click #f) 
 
 \version "2.10" 
@@ -110,13 +110,14 @@ da wärs auf ein -- mal still. __
 \header { 
  kaisernumber = "491"
  comment = "Vers 5 langsamer und schwächer, und das Ende pp"
+ footnote = ""
  
  dedication = "" 
  title = "Untreue" 
  subtitle = "" 
  composer = "Friedrich Glück (1793–1840), 1814" 
  opus = "" 
- meter = "In ruhiger Bewegung" 
+ meter = \markup {In ruhiger Bewegung} 
  arranger = "Arrangement by Friedrich Silcher (1789–1860), 1825" 
  poet = "Joseph Freiherr von Eichendorff (1788–1857), 1810" 
 
@@ -129,9 +130,9 @@ da wärs auf ein -- mal still. __
  style = "Romantic"
  copyright = "Creative Commons Attribution 3.0"
  maintainer = "Klaus Rettinghaus"
- lastupdated = "2008/August/1"
+ lastupdated = "2008/August/20"
  
- footer = "Mutopia-2008/08/12-622"
+ footer = "Mutopia-2008/09/12-622"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 }
 

@@ -6,52 +6,52 @@
 global = { \key g \major \time 6/8 \tempo 4.=48 } 
 
 SUntreue = \relative c' 
-	{ 
-	\partial 8 
-	d8\mp b'4 b8 b[ a] b c4( a8) fis4 
-	d8 g4 g8 g[ fis] g a4.~ a8 \oneVoice r \voiceOne 
-	a8 a4 a8 a[ b] c d4. e,4 
-	a8 g4 g8 a[ g] a b4.~ b8 \oneVoice r \voiceOne 
-	b8 b[ a] a\< a[ b] c d4(\! g8) e[ c] 
-	a8 g4 g8 b4\> a8 g4.~ g8\! \oneVoice r \voiceOne 
-	\bar "|." 
-	} 
+{ 
+\partial 8 
+d8\mp b'4 b8 b[ a] b c4( a8) fis4 
+d8 g4 g8 g[ fis] g a4.~ a8 \oneVoice r \voiceOne 
+a8 a4 a8 a[ b] c d4. e,4 
+a8 g4 g8 a[ g] a b4.~ b8 \oneVoice r \voiceOne 
+b8 b[ a] a\< a[ b] c d4(\! g8) e[ c] 
+a8 g4 g8 b4\> a8 g4.~ g8\! \oneVoice r \voiceOne 
+\bar "|." 
+} 
 
 AUntreue = \relative c' 
-	{ 
-	\partial 8 
-	d8 g4 g8 g[ fis] f e4. d4 
-	a8 d4 d8 b4 b8 d4.~ d8 s 
-	fis8 e4 e8 e4 e8 fis4( f8) e4 
-	e8 d4 d8 fis[ e] fis g4.~ g8 s 
-	g8 g[ fis] fis fis4 fis8 fis8( g4) g 
-	e8 d4 d8 g4 fis8 d4.~ d8 s 
-	\bar "|." 
-	} 
+{ 
+\partial 8 
+d8 g4 g8 g[ fis] f e4. d4 
+a8 d4 d8 b4 b8 d4.~ d8 s 
+fis8 e4 e8 e4 e8 fis4( f8) e4 
+e8 d4 d8 fis[ e] fis g4.~ g8 s 
+g8 g[ fis] fis fis4 fis8 fis8( g4) g 
+e8 d4 d8 g4 fis8 d4.~ d8 s 
+\bar "|." 
+} 
 
 TUntreue = \relative c' 
-	{ 
-	\partial 8 
-	d8 d4 d8 d[ c] d c4. a4 
-	fis8 g4 g8 g4 g8 fis4.~ fis8 \oneVoice r \voiceOne 
-	d'8 a4 a8 a[ gis] a a4( as8) g4 
-	c8 b4 b8 d4 d8 d4.~ d8 \oneVoice r \voiceOne 
-	d8 d4 d8 d4 d8 d4. c8[ e] 
-	c8 b4 b8 cis4 c8 b4.~ b8 \oneVoice r \voiceOne 
-	\bar "|." 
-	} 
+{ 
+\partial 8 
+d8 d4 d8 d[ c] d c4. a4 
+fis8 g4 g8 g4 g8 fis4.~ fis8 \oneVoice r \voiceOne 
+d'8 a4 a8 a[ gis] a a4( as8) g4 
+c8 b4 b8 d4 d8 d4.~ d8 \oneVoice r \voiceOne 
+d8 d4 d8 d4 d8 d4. c8[ e] 
+c8 b4 b8 cis4 c8 b4.~ b8 \oneVoice r \voiceOne 
+\bar "|." 
+} 
 
 BUntreue = \relative c 
-	{ 
-	\partial 8 
-	d8\mp g4 g8 g4 gis8 a4. d,4 
-	c8 b4 b8 e4 e8 d4.~ d8 s 
-	d8 cis4 cis8 c[ b] a d[ c b] c4 
-	a8 d4 d8 d4 d8 g4.~ g8 s 
-	g8 d4 d8\< c[ b] a b4.\! c4 
-	c8 d4 d8 d4\> d8 g4.~ g8\! s 
-	\bar "|." 
-	} 
+{ 
+\partial 8 
+d8\mp g4 g8 g4 gis8 a4. d,4 
+c8 b4 b8 e4 e8 d4.~ d8 s 
+d8 cis4 cis8 c[ b] a d[ c b] c4 
+a8 d4 d8 d4 d8 g4.~ g8 s 
+g8 d4 d8\< c[ b] a b4.\! c4 
+c8 d4 d8 d4\> d8 g4.~ g8\! s 
+\bar "|." 
+} 
 
 
 LUA = \lyricmode { 
@@ -123,7 +123,7 @@ da wärs auf ein -- mal still. __
  mutopiacomposer = "RegerM"
  mutopiapoet = "J. von Eichendorff (1788-1857)"
  mutopiaopus = ""
- mutopiainstrument = "Voice, (SATB)"
+ mutopiainstrument = "Choir (SATB)"
  date = "1913"
  source = "Leipzig : C. F. Peters, 1915"
  style = "Romantic" 
@@ -131,7 +131,7 @@ da wärs auf ein -- mal still. __
  maintainer = "Klaus Rettinghaus" 
  lastupdated = "2008/August/1"
  
- footer = "Mutopia-2008/08/12-621"
+ footer = "Mutopia-2008/09/12-621"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 } 
 

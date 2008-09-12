@@ -1,4 +1,4 @@
-#(set-global-staff-size 17) 
+#(set-global-staff-size 15.5) 
 #(ly:set-option 'point-and-click #f) 
 
 \version "2.10" 
@@ -21,7 +21,7 @@ cis8.\! cis16 cis8 a cis\> b a2\!
 TBFerne = \relative c' 
 { 
 \partial 4 
-c8 c c4. g8 a g f8.[ e16] e4 
+c8 c c4. g8 a f f8.[ e16] e4 
 g8 c b4. c8 b8. c16 b2 
 a8. a16 a8.[ g16] g4 
 a8. a16 a8.[ g16] g4 s 
@@ -37,7 +37,7 @@ e8 f g4. e8 f c c4 c
 e8 g g4. g8 g8. g16 g2 
 fis8. fis16 g4 d 
 fis8. fis16 g4 d \oneVoice r \voiceOne 
-e8. e16 f8 e g a g4( c a) 
+e8. e16 f!8 e g g g4( c a) 
 g8. g16 g8 e g f e2 
 \bar "|." 
 } 
@@ -97,12 +97,13 @@ o, wie ger -- ne kehrt ich um.
 \header {
  kaisernumber = "222"
  comment = ""
+ footnote = ""
  
  title = "In der Ferne"
  subtitle = ""
- composer = "Friedrich Silcher (1789–1860), 1853-55"
+ composer = "Friedrich Silcher (1789–1860), 1853–55"
  opus = ""
- meter = "Andante"
+ meter = \markup {Andante}
  arranger = ""
  poet = "Albert Graf Schlippenbach (1800–1886), 1833"
  
@@ -116,9 +117,9 @@ o, wie ger -- ne kehrt ich um.
  style = "Romantic"
  copyright = "Creative Commons Attribution 3.0"
  maintainer = "Klaus Rettinghaus"
- lastupdated = "2008/August/1"
+ lastupdated = "2008/August/20"
  
- footer = "Mutopia-2008/08/12-800"
+ footer = "Mutopia-2008/09/12-800"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 } 
 

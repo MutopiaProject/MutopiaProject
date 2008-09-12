@@ -1,11 +1,11 @@
 \include "deutsch.ly" 
 
-#(set-global-staff-size 17) 
+#(set-global-staff-size 15.5) 
 #(ly:set-option 'point-and-click #f) 
 
 \version "2.10" 
 
-global = { \key g \major \time 3/4 \tempo 4=90 } 
+global = { \key g \major \time 3/4 \tempo 4=72 } 
 
 TAHeimatAbschied = \relative g' 
 { 
@@ -77,12 +77,13 @@ denk ich doch stets an euch zu -- rück.
 \header {
  kaisernumber = "217"
  comment = ""
+ footnote = ""
  
  title = "Abschied"
  subtitle = ""
  composer = "Wenzel Müller (1767–1835), 1828"
  opus = ""
- meter = "Innig"
+ meter = \markup {Innig}
  arranger = "Arrangement by Robert Radecke (1830–1911)"
  poet = "Ferdinand Raimund (1790–1836), 1828"
  
@@ -96,9 +97,9 @@ denk ich doch stets an euch zu -- rück.
  style = "Romantic"
  copyright = "Creative Commons Attribution 3.0"
  maintainer = "Klaus Rettinghaus"
- lastupdated = "2008/August/1"
+ lastupdated = "2008/August/20"
  
- footer = "Mutopia-2008/08/12-797"
+ footer = "Mutopia-2008/09/12-797"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 }
 
