@@ -4,7 +4,7 @@
 
  title="WALL STREET \"RAG\""
  composer="SCOTT JOPLIN"
- piece=\markup { \column { \override #'(box-padding . 1.0) 
+ piece=\markup { \column { \override #'(box-padding . 0.5) 
 		\override #'(extra-offset . #'( 12 . 2 )) \left-align \box 
 		\column { \right-align { "NOTE: Do not play this piece fast." "It is never right to play Ragtime fast." \italic { \line { "Composer." \hspace #1.0 } } } } } }
 
@@ -17,9 +17,9 @@
  maintainer = "Benjamin Bloomfield"
  maintainerEmail = "bhb123@gmail.com"
  copyright = "Public Domain"
- lastupdated = "2008/September/09"
+ lastupdated = "2008/September/12"
 
- footer = "Mutopia-2008/09/12-1543"
+ footer = "Mutopia-2008/09/19-1543"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -29,13 +29,13 @@
 
 
 \paper {
-	between-system-padding = #0.1
-       between-system-space = #0.1
+	between-system-padding = #0
+	between-system-space = #0.1
 	ragged-last-bottom=##f
-	top-margin = 2\mm
-	bottom-margin = 3\mm
+	top-margin = 1\mm
+	bottom-margin = 1\mm
 	between-title-space = 0\mm
-	page-top-space = 2\mm
+	page-top-space = 1\mm
 }
 
      upper = \relative c'' {
