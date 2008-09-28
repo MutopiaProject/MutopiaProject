@@ -1,8 +1,8 @@
 /*
  * Filename:         MutopiaPiece.java
  * Original author:  Chris Sawer
- * Subversion:       $Revision:$
- * Last changed:     $Date:$
+ * Subversion:       $Revision$
+ * Last changed:     $Date$
  *
  * Description:
  *   Class to store information about a Mutopia piece.
@@ -115,12 +115,7 @@ public class MutopiaPiece
       multipleMidFiles = (new File(filenameBaseWithDir + "-mids.zip").exists());
       multiplePdfFiles = (new File(filenameBaseWithDir + "-a4-pss.zip").exists());
       
-      Process lilyProcess = Runtime.getRuntime().exec(lilyCommandLine + " -version");
-      try { lilyProcess.waitFor(); } catch (Exception ex) {}
-      BufferedReader lilyInput = new BufferedReader(new InputStreamReader(lilyProcess.getInputStream()));
-      String longLilyVersion = lilyInput.readLine();
-      lilyInput.close();
-      lilyVersion = longLilyVersion.substring(longLilyVersion.lastIndexOf(' ') + 1);
+      lilyVersion = getLilyVersion(lilyCommandLine);
       
       String previewFilename = filenameBaseWithDir + "-preview.png";
       if (new File(previewFilename).exists())
@@ -140,7 +135,17 @@ public class MutopiaPiece
          previewHeight = new Integer(imgString.substring(heightStart, heightEnd));
       }
    }
-      
+
+   public static String getLilyVersion(String lilyCommandLine) throws IOException
+   {
+      Process lilyProcess = Runtime.getRuntime().exec(lilyCommandLine + " -version");
+      try { lilyProcess.waitFor(); } catch (Exception ex) {}
+      BufferedReader lilyInput = new BufferedReader(new InputStreamReader(lilyProcess.getInputStream()));
+      String longLilyVersion = lilyInput.readLine();
+      lilyInput.close();
+      return longLilyVersion.substring(longLilyVersion.lastIndexOf(' ') + 1);
+   }
+
    public boolean checkFieldConsistency(boolean checkFooter)
    {
       boolean returnValue = true;
@@ -196,7 +201,7 @@ public class MutopiaPiece
          returnValue = false;
          System.err.println("Missing copyright (licence)");
       }
-      else if (!MutopiaMaps.licenceMap.keySet().contains(getCopyright()))
+      else if (!MutopiaMaps.licenceMapNew.keySet().contains(getCopyright()))
       {
          returnValue = false;
          System.err.println("Invalid copyright (licence): " + getCopyright());
