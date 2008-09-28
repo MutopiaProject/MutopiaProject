@@ -33,7 +33,7 @@
  mutopiatitle = "Du bist die Ruh"
  mutopiacomposer = "SchubertF"
  mutopiapoet = "Friedrich Rückert (1788-1866)"
- mutopiaopus = "D 776 (Op. 59, No 3)"
+ mutopiaopus = "D.776 (Op. 59, No. 3)"
  mutopiainstrument = "Voice, Piano"
  date = "1823"
  source = "C.F. Peters (Band I)"

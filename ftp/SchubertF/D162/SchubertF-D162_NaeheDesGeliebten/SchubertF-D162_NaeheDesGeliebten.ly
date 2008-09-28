@@ -36,7 +36,7 @@
  mutopiatitle = "Nähe des Geliebten"
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
- mutopiaopus = "D162"
+ mutopiaopus = "D.162"
  mutopiainstrument = "Voice, Piano"
  date = "1815"
  source = "Erste Fassung: Handschrift von Franz Schubert; Zweite Fassung: Breitkopf & Härtel (IMSLP)"

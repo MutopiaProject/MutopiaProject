@@ -31,7 +31,7 @@
  mutopiatitle = "Impromptu in f-moll"
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
- mutopiaopus = "D 935 (Op. 142 No1.)"
+ mutopiaopus = "D.935 (Op. 142, No. 1)"
  mutopiainstrument = "Piano"
  date = "1827"
  source = "Breitkopf & Härtel, 1888"

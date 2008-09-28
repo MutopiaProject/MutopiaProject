@@ -31,7 +31,7 @@
  mutopiatitle = "Impromptu in As-dur"
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
- mutopiaopus = "D 935 (Op. 142 No2.)"
+ mutopiaopus = "D.935 (Op. 142, No. 2)"
  mutopiainstrument = "Piano"
  date = "1827"
  source = "Breitkopf & Härtel, 1888"

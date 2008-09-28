@@ -13,9 +13,9 @@
         
     mutopiatitle = "Gretchen am Spinnrade"
     mutopiacomposer = "Franz Schubert (1798-1828)"
-    mutopiaopus = "Op. 2"
+    mutopiaopus = "D.118 (Op. 2)"
     mutopiainstrument = "Voice and piano"
-    date = "1810s"
+    date = "1814"
     source = "C.F. Peters (Band I)"
     style = "Classical"
     copyright = "Public Domain"

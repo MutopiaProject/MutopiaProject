@@ -36,7 +36,7 @@
  mutopiatitle = "Sängers Morgenlied"
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
- mutopiaopus = "D163 & D165"
+ mutopiaopus = "D.163 & D.165"
  mutopiainstrument = "Voice, Piano"
  date = "1815"
  source = "D163: Handschrift von Franz Schubert; D165: Breitkopf & Härtel (IMSLP)"

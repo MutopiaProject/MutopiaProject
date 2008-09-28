@@ -34,7 +34,7 @@
  mutopiatitle = "Auf dem Wasser zu singen"
  mutopiacomposer = "SchubertF"
  mutopiapoet = "Graf Friedrich Leopold zu Stolberg-Stolberg (1750-1819)"
- mutopiaopus = "D 774 (Op. 72)"
+ mutopiaopus = "D.774 (Op. 72)"
  mutopiainstrument = "Voice, Piano"
  date = "1823"
  source = "C.F. Peters (Band I)"

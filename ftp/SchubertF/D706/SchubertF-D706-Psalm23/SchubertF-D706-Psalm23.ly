@@ -36,7 +36,7 @@
  mutopiatitle = "Psalm 23"
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
- mutopiaopus = "D 706"
+ mutopiaopus = "D.706"
  mutopiainstrument = "Choir SSAA, Piano"
  date = "1820"
  source = "Handschrift von Franz Schubert"

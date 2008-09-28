@@ -22,7 +22,7 @@
   mutopiatitle = "Moments Musicaux No. 3 in F Minor"
   mutopiacomposer = "SchubertF"
   mutopiainstrument = "Piano"
-  mutopiaopus = "D 780 (Op. 94, No. 3)"
+  mutopiaopus = "D.780 (Op. 94, No. 3)"
   
 
  footer = "Mutopia-2007/08/11-1023"

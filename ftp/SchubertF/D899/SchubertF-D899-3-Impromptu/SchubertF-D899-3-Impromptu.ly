@@ -35,7 +35,7 @@
  mutopiatitle = "Impromptu in Ges-dur"
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
- mutopiaopus = "D 899 (Op. 90 No3.)"
+ mutopiaopus = "D.899 (Op. 90, No. 3)"
  mutopiainstrument = "Piano"
  date = "1827"
  source = "Breitkopf & Härtel, 1888"

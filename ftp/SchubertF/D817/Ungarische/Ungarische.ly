@@ -8,7 +8,7 @@
   
  mutopiatitle = "Ungarische Melodie"
  mutopiacomposer = "SchubertF"
- mutopiaopus = "D 817"
+ mutopiaopus = "D.817"
  mutopiainstrument = "Piano"
  date = "1824/Sep/02"
  source = "Neue Schubert Ausgabe BA 5521"

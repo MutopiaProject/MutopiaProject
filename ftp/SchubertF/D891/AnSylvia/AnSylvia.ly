@@ -4,7 +4,7 @@ enteredby = "Peter Chubb";
 composer = "Franz Schubert";
 poet =	  "Original text by William Shakespeare\\\\" +
 	  "German text by Eduard von Bauernfeld";
-opus = "D. 891";
+opus = "D.891";
 date = "1826";
 title = "An Sylvia";
 subtitle = "(Who Is Sylvia)";

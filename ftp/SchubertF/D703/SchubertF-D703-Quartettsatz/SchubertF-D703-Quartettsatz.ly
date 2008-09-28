@@ -29,7 +29,7 @@
  mutopiatitle = "Streichquartett No. 12 “Quartettsatz” in c-moll"
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
- mutopiaopus = "D 703"
+ mutopiaopus = "D.703"
  mutopiainstrument = "String Quartett"
  date = "1820"
  source = "Breitkopf & Härtel, 1894"

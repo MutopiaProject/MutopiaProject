@@ -32,7 +32,7 @@
  mutopiatitle = "Erlkönig"
  mutopiacomposer = "SchubertF"
  mutopiapoet = "Johann Wolfgang von Goethe (1749-1832)"
- mutopiaopus = "D 328 (Op. 1)"
+ mutopiaopus = "D.328 (Op. 1)"
  mutopiainstrument = "Voice, Piano"
  date = "1815"
  source = "C.F. Peters (Band I)"
