@@ -89,7 +89,7 @@ KEYA = { \key mib \major }
 KEYB = { \key re \major }
 TIME = { \time 3/4 }
 %----- MOUVEMENT
-MOVEMENT = \markup { \bold \large  { \hspace #-5 "Allegro." } }
+MOVEMENT = \markup { \bold \large  { \hspace #-5 \italic "Allegro." } }
 
 %----- CACHER LE NOMBRE OU LE CROCHET D'UN NOLET
 TUPNNO = \override TupletNumber #'transparent = ##t
@@ -530,8 +530,8 @@ mib2.
 \times 2/3 { mib8[ \STAFFDO dob sib] } \times 2/3 { lab[ solb fa] } mib8 r
 %--- 280-283
 \STAFFUP
-mi'4-| mi-| mi-|
-mi4-| mi-| mi-|
+mib'4-| mib-| mib-|
+mib4-| mib-| mib-|
 <re! fa sib re!>4 r4 r4
 <mib solb sib mib>4 r4 r4
 \bar "|."
