@@ -1,0 +1,340 @@
+staffUp = {
+	\change Staff = "RH"
+	\stemDown
+	\slurUp
+	\tieDown
+}
+
+staffDown = {
+	\change Staff = "LH"
+	\stemUp
+	\slurDown
+	\tieUp
+}
+
+soprano = {
+	\time 4/4
+	\key b \minor
+	\clef "treble"
+	
+	\relative c'' {
+		R1 | s1*11 | 
+		r8 b a fis d' b e dis |
+		a gis f' e b 
+		\once \override NoteColumn #'force-hshift = #0.7
+		ais g' fis |
+		eis fis d b cis2 ~ |%15
+		cis16 cis d e fis g b, ais b2 ~ |
+		b16 eis, fis gis a b cis fis, d' e fis8 ~ fis e16 d |
+		cis d e8 ~ e d16 cis b cis d8 ~ d cis16 b |
+		a4 r8 fis' ~ fis e16 d cis d e8 ~ |
+		e d16 cis b cis d8 ~ d cis16 b ais b cis8 ~ |%20
+		cis b16 ais b4 ~ b16 ais b d cis4 |
+		b a gis \tieDown fis ~ |
+		\override Beam #'positions = #'(1.8 . 1.5)
+		fis8 eis 
+		\revert Beam #'positions
+		fis4 fis16 gis a b cis d fis, eis | 
+		fis4 \tieUp fis' ~ fis8 e dis fis |
+		g2 ~ g8 fis eis gis  | %25
+		cis, d16 e d e fis8 ~ fis e16 d cis d e8 ~ |
+		e d16 cis b cis d8 ~ d cis16 b ais b cis8 ~ |
+		cis b r b' ~ b a16 g fis g a8 ~ |
+		a g16 fis e fis g8 ~ g fis16 e dis e fis8 ~ |
+		fis e16 dis e fis g b a8 g fis4 | %30
+		e d cis b16 cis d e | 
+		d cis8. b4 ~ b16 cis d e fis g b, ais | 
+		d2 cis4. dis8 |
+		eis4 r8 fis8 ~ fis16 eis fis a gis4 | 
+		r8 fis d b g' fis b ais | %35
+		e dis g4 ~ g16 fis gis ais b g fis eis |
+		fis4 f ~ f16 e fis gis a b e, dis |
+		e e, g a b cis d fis e cis d fis g e fis ais |
+		b4 a gis fis ~ |
+		fis16 eis fis eis fis4 ~ fis16 a, b cis d e fis, eis |%40
+		fis8 fis' d b g' fis b ais |
+		e dis r e ~ e16 dis e g fis4 |
+		e16 d cis b a b cis e d b cis e fis d e gis |
+		a g fis e d cis b a g e fis a b g a cis |
+		d e d e fis g a fis d f e d c b c d | %45
+		c b8. a4 ~ a8 d16 e fis g a, gis |
+		e' fis g, fis d' e fis, e cis' b cis d e fis g e |
+		a2 g4 f |
+		e d ~ d16 cis d cis d4 ~ |
+		d16 e fis g a b d, cis d2 ~ | %50
+		d4 cis8 fis ~ fis16 b, cis d e fis b, ais |
+		d4 cis8 b cis2 |
+		r16 fis, gis a b cis fis, eis a4 r |
+		r gis' fis e |
+		dis 
+		\once \override Tie #'staff-position = #1
+		\tieDown cis ~ cis8 \tieUp bis cis4 ~ | %55
+		cis16 dis e fis gis a cis, bis e2 ~ |
+		e16 e fis gis a b dis, cis dis4 r |
+		r fis  e d |
+		cis b ~ b16 ais b ais b4 ~ |
+		b16 cis d e fis g b, ais d4 ~ d16 cis d cis | %60
+		e d fis e g4 ~ g8. fis16 a4 ~ |
+		a8. gis16 b8 a gis4 ~ gis16 eis fis8 ~ |
+		fis16 fis gis a b gis fis eis a2 ~ |
+		a ~ a16 fis g a b c fis, e |
+		fis4 ~ fis16 fis d b g' a b8 ~ b a16 g | %65
+		fis g a8 ~ a g16 fis e fis g8 ~ g fis16 e | 
+		d4 ~ d16 e fis8 ~ fis e16 d cis d e8 ~ |
+		e8 d16 cis b cis d8 ~ d cis16 b ais b cis8 ~ |
+		cis16 fis, gis ais b cis d fis e cis d fis g e fis ais |
+		b a g fis e d c b a fis g b c a b dis | % 70
+		e4 d cis b ~ |
+		b16 ais b ais b4 ~ b16 cis d e fis g b, ais |
+		b d e fis g a c, b c e fis g ais b d, cis |
+		d2 cis2 ~ |
+		cis4 c16 ais b8 ~ b4 ais! | 
+		b1\fermata | \bar "|."
+	}
+}
+
+alto = {
+	\time 4/4
+	\key b \minor
+	\clef "treble"
+
+	\relative c' {
+		\slurUp
+		\tieUp
+		r8 fis d b g'( fis) b( ais) |
+		e( dis) c'( b) fis( eis) d'( cis) |
+		bis cis a fis \stemUp gis2^\trill |
+		fis8. eis16 fis gis a cis b gis a c fis4 |
+		e4 d cis b ~ | %5
+		b8 ais b4 ~ b16 cis d e fis g b, ais | 
+		d2 ~ d8 c b dis |
+		e2 ~ e8 d cis eis |
+		fis8. g16 fis e d b cis e d b fis8 fis' ~ |
+		fis8. g16 fis e dis cis b[ cis32 d cis8] ~ cis16 b a d |%10
+		gis,4 a 
+		\once \override Tie #'staff-position = #2.5
+		b2 ~ |
+		b4 a g2 |
+		\tieDown\stemDown fis2 eis8 dis r dis' |
+		\override Beam #'positions = #'(-2.5 . -2.5)
+		dis e 
+		\revert Beam #'positions
+		r4 r8 e d16 cis d b | 
+		cis4 b8 fis g2 ~ | %15
+		g8 cis, ~ cis4 fis gis ~ |
+		gis fis8 r r2 |
+		r1 |
+		r8
+		\staffDown fis d b r2 | 
+		\once \override MultiMeasureRest #'staff-position = #4
+		R1 | %20
+		\staffUp r8 fis' d b g' fis b ais! |
+		e dis c' b fis eis d' cis |
+		bis cis a << {
+		  \once \override Stem #'transparent = ##t % magic to get a cross-voice tie
+		  \tieDown fis ~ s16 s8. s4
+		} \\ {fis8 gis2} >> |
+		a2 ~ a8 c b dis |
+		e2 ~ e8 d cis eis | %25
+		fis4 r8 b,16 a g a b8 ~ b a16 g|
+		fis g a8 ~ a g16 fis e fis g8 ~ g fis16 e |
+		d e fis8 ~ fis e16 d c d e8 ~ e d16 c |
+		b c d8 ~ d c16 b a b c8 ~ c b16 a |
+		g4 r8 e'16( dis) dis( e fis g) a g a b | %30
+		c a b8 ~ b16 a gis fis e g fis ais b4 ~ |
+		b8 b16 ais r16 a g fis e2 |
+		r16 fis gis ais b cis fis, eis a2 |
+		gis8 cis a fis d' cis fis eis |
+		b ais r b ~ b16 ais b d cis4 ~ | %35
+		cis8 b e ais, b2 ~ |
+		b16 ais b cis d e a, gis a2 ~ |
+		a8 g fis4 r2 |
+		r16 fis' a g fis e dis cis b d cis b a gis a fis |
+		gis4 r16 e' d cis b a gis a b4 ~ | %40
+		b8 ais r  b ~ b16 ais b d cis4 |
+		r8 b g e c' b e dis |
+		a gis a4 ~ a8 gis cis b |
+		e r r fis, d4 r8 g |
+		a d c4 b a ~ | %45
+		a8 a16 gis a g fis e d cis b cis d4 |
+		cis b a2 |
+		s1*3 | %50
+		r16 e' fis g a b e, dis g2 ~| 
+		g8 fis eis gis ~ gis16 eis fis gis a b d, cis |
+		dis4 eis8 
+		\once \override Tie #'staff-position = #-5
+		gis ~ gis16 gis fis eis fis gis a cis |
+		b gis a cis b d cis b cis d e d cis b ais gis |
+		fis a gis bis cis dis e fis e dis r a gis b a gis | %55
+		fis2 gis2 ~ |
+		gis16 cis, dis e fis gis a b a fis gis a b cis dis e |
+		fis dis e gis fis cis b a b cis d cis b a gis fis |
+		e g fis e d cis d b cis4 r16 a' g fis |
+		e4 r8 
+		\once \override Tie #'staff-position = #-2
+		cis' ~ cis16 
+		cis b ais b4 | %60
+		cis8 d r16 e d cis b ais b8 r16 fis' e dis |
+		cis bis cis8 r16 gis'8 fis16 ~ fis fis eis gis cis,8. d16 |
+		b2 cis2 ~ |
+		cis16 fis, g a b c e, dis e2 ~ |
+		e16 e d cis d8 r r e'16 d cis d e8 ~ | %65
+		e8 d16 cis b cis d8 ~ d cis16 b ais b cis8 ~|
+		cis4 b8 a g16 a b8 ~ b a16 g |
+		fis g a8 ~ a g16 fis e fis g8 ~ g fis16 e |
+		d4 b' ~ b8 ais d cis |
+		fis8 r r4 r r8 b, ~ | %70
+		b16 cis b a gis4 r16 g fis8 ~ fis16 e d e |
+		cis4 r16 fis e d cis2 |
+		b4 r8 fis' e4 r |
+		r8 fis d b g' fis b ais |
+		e dis r 
+		\stemDown <gis d>8 \stemUp << \new Voice { \shiftOn fis[ eis] fis8.[ e16] } \\ { cis2 } >> | %75
+		<< dis1 \\ b1 >> | \bar "|."
+	}
+}
+
+tenore = {
+	\time 4/4
+	\key b \minor
+	\clef "bass"
+	
+	\relative c {
+		R1*3 |
+		\slurDown
+		r8 b' a fis d'( b) \staffUp e( dis) |
+		\staffDown a( gis) \staffUp f'( e) \staffDown b( ais)  \staffUp g'( fis) | %5
+		eis fis d \staffDown b cis2 |
+		b16 \staffUp fis' gis ais b cis fis, eis a2 ~ |
+		a8 g fis ais b2 ~ |
+		b8 ais b4 r cis |
+		b a gis fis ~ | %10
+		fis8 eis fis4 ~ fis16 gis a b cis d fis, eis |
+		fis2 ~ fis4 \staffDown e ~ |
+		e8. d16 cis b a fis gis b a fis c'8 b16 a |
+		b2 e,4 b'8 a |
+		gis fis fis' d e2 ~ | %15
+		e8 cis ais fis d'2 |
+		cis2 ~ cis8 b16 a gis a b8 ~ |
+		b8 a16 gis fis gis a8 ~ a gis16 fis eis fis gis8 |
+		fis16 \staffUp b' 
+		cis8 ~ cis b16 a g a b8 ~ b a16 g |
+		fis g a8 ~ a g16 fis e fis g8 ~ g fis16 e | %20
+		d4 \staffDown r r2 |
+		s1*6 | 
+		r8 b g e r2 |
+		s1 |
+		r8 b' g e c' b e dis | %30	
+		\stemDown a gis f' e b ais g' fis |
+		eis fis d b cis2 |
+		b2 r16 cis dis eis fis gis cis, bis |
+		cis b a gis fis gis a cis b gis a cis d b cis eis |
+		\clef "treble" \stemUp fis e d cis b cis d fis e cis d fis g e fis ais | %35
+		b a g fis e d e cis \tieDown d2 ~ |
+		d8 cis b d \clef "bass" \tieUp c2 ~ |
+		c8 b r b ~ b16 ais b d cis4 |
+		fis, r r2 |
+		s1*4 |
+		r8 a fis d b' a d cis |
+		g fis ees' d a gis f' e | %45
+		dis e cis a b2 ~ |
+		b8 a4 g8 ~ g fis e cis | 
+		\staffUp r16 g''' fis e d c b c d e d c b cis d b |
+		g bes a g f e f d e4 r16 c' b a |
+		g fis e d \staffDown cis b a g fis a b cis d e a, gis | %50
+		a2 b8 ais16 b cis8 e, |
+		b' r r4 r16 cis, dis eis fis gis a eis! |
+		fis4 gis r8 cis a fis |
+		\stemDown d' cis fis eis b ais g' fis |
+		cis bis a' gis fisis gis e cis | %55
+		dis2 ~ dis16 gis, ais bis cis dis fis, e |
+		fis4 r r2 |
+		\once \override MultiMeasureRest #'staff-position = #4
+		R1*2 |
+		\override Rest #'staff-position = #4
+		r2 r8 
+		\revert Rest #'staff-position
+		\clef "treble" \stemUp fis' d b | %60
+		g' fis b ais e dis c' b |
+		fis eis d' cis bis cis a fis |
+		gis2 ~ gis16 cis, dis eis fis gis b, a |
+		b1 |
+		\clef "bass" \stemDown ais8 fis b d e g a cis, | %65
+		d fis g b, cis e fis ais,|
+		b16 fis g a b c e, dis e8 g a cis |
+		d fis, g b cis e, fis ais |
+		b fis d b g' fis b ais |
+		\stemUp e dis e2 fis4 | %70
+		e r16 b' cis d e8. e16 d cis b a |
+		gis8 fis ~ fis16 a g fis e2 |
+		fis4 r8 a g4 r8 b |
+		ais16 fis gis ais b cis d b ~ b b ais b cis d e cis |
+		fis4 r r16 b,, cis d e cis fis8 ~ | %75
+		fis1 | \bar "|."
+		 
+	}
+}
+
+basso = {
+	\time 4/4
+	\key b \minor
+	\clef "bass"
+	
+	\relative c {
+		R1*8 |
+		\slurUp
+		r8 fis d b  g'( fis) b( ais) |
+		e( dis) c'( b) fis eis d' cis | %10
+		bis cis a fis gis2 |
+		fis16 fis g a b c e, dis e fis g e ais b d, cis |
+		d8 b fis'2 fis4 |
+		e d cis b ~ |
+		b8 ais b4 ~ b16 cis d e fis g b, ais | %15
+		d2 ~ d16 ais b cis d e fis, eis |
+		fis4 fis'8 a b d, e gis |
+		a cis, d fis gis b, cis eis |
+		fis a, b d e g, a cis |
+		d fis, g b cis e, fis ais | %20
+		b4 ~ b16 cis d fis e cis d fis g e fis ais |
+		b g fis e dis8. cis16 d e d cis b a gis fis |
+		gis b a gis fis a d cis b8 gis cis cis, |
+		fis'16 g a b c d e, dis \tieUp g2 ~ |
+		g16 b, cis d e fis b, ais \tieDown b2 ~ | %25
+		b8 ais b d e g, a cis |
+		d fis, g b cis e, fis ais |
+		b d e g a c d fis, |
+		g b c e, fis a b dis, |
+		e4 r r2 | %30
+		s1*7 |
+		r8 e d b g' fis b ais |
+		e dis c' b fis eis d' cis |
+		bis cis a fis gis2 | %40
+		fis16 e d cis b cis d fis e cis d fis g e fis ais |
+		b a g fis e fis g b a fis g b c a b dis |
+		e8 e, cis a fis' e a gis |
+		d cis d2. ~ |
+		d4 r r2 | %45
+		r1 |
+		r2 r8 d cis a |
+		fis' d g fis c b a' gis |
+		d cis bes' a gis a fis d |
+		e2 d4 r8 b | %50
+		a4 r8 fis' e4 r8 cis |
+		b16 fis gis a b cis fis, eis a2 ~ |
+		a4 gis fis8 r r4 |
+		s1*3 |
+		r2 r8 b gis e | 
+		cis' b e dis a gis f' e |
+		b ais g' fis eis fis d b |
+		cis2 b8 r r4 | %60
+		s1*9 |
+		r8 b g e c' b e dis | %70
+		a gis f' e b ais g' fis |
+		eis fis d b cis2 |
+		d4 r8 dis e4 r8 eis |
+		fis1 ~ |
+		fis16 ais, b cis dis eis fis, eis fis2 | %75
+		b1_\fermata | \bar "|."
+	}
+}
+% vim: ft=lilypond
