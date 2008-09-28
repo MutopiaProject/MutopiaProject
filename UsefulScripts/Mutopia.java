@@ -171,7 +171,7 @@ public class Mutopia
                      out.newLine();
                      
                      // Write out tagline
-                     if ((licence == null) || (!MutopiaMaps.licenceMap.keySet().contains(licence)))
+                     if ((licence == null) || (!MutopiaMaps.licenceMapNew.keySet().contains(licence)))
                      {
                         System.out.println("Warning: Writing empty tagline");
                         out.write(" tagline = \"\"");
@@ -179,7 +179,25 @@ public class Mutopia
                      }
                      else
                      {
-                        out.write(" " + MutopiaMaps.licenceMap.get(licence));
+                        // Decide whether to use old or new licence - new required from 2.11.57 onwards
+                        String lilyVersion = "9.9.9";
+                        try { lilyVersion = MutopiaPiece.getLilyVersion(lilyCommandLine); } catch (IOException ex) {}
+                        String[] versionArrayS = lilyVersion.split("\\.");
+                        int[] versionArray = { Integer.parseInt(versionArrayS[0]), Integer.parseInt(versionArrayS[1]), Integer.parseInt(versionArrayS[2]) };
+                        boolean useOldString = false;
+
+                        if (versionArray[0] < 2) useOldString = true;
+                        if ((versionArray[0] == 2) && (versionArray[1] < 11)) useOldString = true;
+                        if ((versionArray[0] == 2) && (versionArray[1] == 11) && (versionArray[2] < 57)) useOldString = true;
+
+                        if (useOldString)
+                        {
+                           out.write(" " + MutopiaMaps.licenceMapOld.get(licence));
+                        }
+                        else
+                        {
+                           out.write(" " + MutopiaMaps.licenceMapNew.get(licence));
+                        }
                         out.newLine();
                      }
                   }
