@@ -3,7 +3,7 @@
 \include "notes.ly"
 
 \score {
-	\keepWithTag #'CornoOnePart \music
+	\keepWithTag #'ViolinoPiccoloOriginalPart \music
 	\layout {}
 	\midi {\context {
 			\Score 

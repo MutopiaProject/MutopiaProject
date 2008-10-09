@@ -1,13 +1,13 @@
 \version "2.10.20"
-\include "piece.ly"
+\include "definitions.ly"
+\include "notes.ly"
 
 \score {
-    \keepWithTag #'fagotto \music
-    \layout {
-	indent = #24
+	\keepWithTag #'FagottoPart \music
+	\layout {}
+	\midi {\context {
+			\Score 
+			tempoWholesPerMinute = #(ly:make-moment 90 4)
+		}
 	}
 }
-
-
-
-
