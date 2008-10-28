@@ -1,12 +1,16 @@
-\version "2.7.40"
+\version "2.11.62"
 
 \include "bach-air-notes.ly"
+
+\paper {
+  ragged-last-bottom = ##f
+}
 
 \book {
    \score {
       \context Staff {
          \set Staff.midiInstrument = "violin"
-         \set Staff.instrument = "Violino II"
+         \set Staff.instrumentName = "Violino II"
          \clef "treble"
          <<
             {\violintwo}
@@ -14,7 +18,13 @@
          >>
       }
       \layout{}
-      \midi { \tempo 4=30 }
-   }
+      
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 30 4)
+      }
+    }
+  }
 }
 
