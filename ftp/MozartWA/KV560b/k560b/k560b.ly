@@ -1,6 +1,6 @@
-\version "1.4.7"
+\version "2.11.62"
 
-%\include "paper16.ly"
+%#(set-global-staff-size 15)
 
 \header {
     title = "O du eselhafter Martin (Jakob)"
@@ -8,7 +8,7 @@
     composer = "W. A. Mozart (1756-1791)"
         
     mutopiatitle = "O du eselhafter Martin (Jakob)"
-    mutopiacomposer = "W. A. Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV 560b"
     mutopiainstrument = "Voice"
     date = "1785"
@@ -17,13 +17,12 @@
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
-    lastupdated = "2002/Mai/18"
-
-    tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-    footer = "Mutopia-2002/05/18-240"
+    lastupdated = "2008/Oct/24"
+ footer = "Mutopia-2008/10/28-240"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-melody = \notes \relative c'' {
+melody =  \relative c'' {
     \key g \major
     \clef soprano
 
@@ -45,11 +44,11 @@ melody = \notes \relative c'' {
     | g2 r8 g a b
     | \mark "3" c4 c8 a fis a d, fis
     | g2 r8 g a b
-    | c4. a8 [fis a] [d,( )fis]
+    | c4. a8  fis[ a]  d,[(  fis)]
     | g4 g g'2 ~
     | g4 g, g'2 ~
     | g4 b, d8 b g fis
-    | \property Voice.Slur = \turnOff e4( c' )b a
+    | e4 \melisma c'  b \melismaEnd a
     | g2 r2
     | \mark "4" a4 a8 a c4 r8 a
     | g8. a16 b4 r r8 g
@@ -61,15 +60,16 @@ melody = \notes \relative c'' {
     | b2 r2^\fermata \bar "|."
 }
 
-primText = \lyrics {
+primText = \lyricmode {
 
     O du ei -- sel -- saf -- ter Mar -- tin!  O du Mar -- ti -- ni --
     scher E -- sel!  Du bist so faul als wie ein Gaul, der we -- der
     Kopf noch Kra -- gen hat.  Mit dir ist gar nichts an -- zu -- fan
     -- gen: ich seh dich noch am Gal -- gen han -- gen.  Du dum -- mer
-    Paul, halt du nur's Maul.  Ich schei\ss dir auf's Maul, so hoff'
+    Paul, halt du nur's Maul.  Ich scheiß dir auf's Maul, so hoff'
     ich wirst doch er -- wa -- chen.  O lie -- ber Lip -- erl, ich bit
-    -- te dich recht sch\"on, o leck mich doch ge -- schwind in Arsch!
+    -- te dich recht schön, o leck mich doch ge -- schwind in Arsch!
+
     O leck, o leck, o leck mich doch ge -- schwind im Arsch.  O lie --
     ber Freund, ver -- zei -- he mir, den Arsch, den Arsch, pet
     -- schier ich dir.  Li -- perl!  Mar -- tin!  Li -- Perl!  ver --
@@ -77,15 +77,15 @@ primText = \lyrics {
 
 }
 
-newText = \lyrics {
+newText = \lyricmode {
 
     O du ja -- ko -- bi -- scher E -- sel!  O du Mar -- ti -- ni --
     scher E -- sel!  Du bist so faul als wie ein Gaul, der we -- der
     Kopf noch Kra -- gen hat.  Mit dir ist gar nichts an -- zu -- fan
     -- gen: ich seh dich noch am Gal -- gen han -- gen.  Du dum -- mer
-    Paul, halt du nur's Maul.  Ich schei\ss dir auf's Maul, so hoff'
+    Paul, halt du nur's Maul.  Ich scheiß dir auf's Maul, so hoff'
     ich wirst doch er -- wa -- chen.  O lie -- ber Lip -- erl, ich bit
-    -- te dich recht sch\"on, o leck mich doch ge -- schwind in Arsch!
+    -- te dich recht schön, o leck mich doch ge -- schwind in Arsch!
     O leck, o leck, o leck mich doch ge -- schwind im Arsch.  O lie --
     ber Freund, ver -- zei -- he mir, den Arsch, den Arsch, pet
     -- schier ich dir.  Li -- perl!  Ja -- kob!  Li -- Perl!  ver --
@@ -93,55 +93,66 @@ newText = \lyrics {
 
 }
 
-\score {
-    \simultaneous {
-    \addlyrics
-        \context Staff = mel {
-	    \property Staff.noAutoBeaming = ##t
-	    \property Staff.automaticMelismata = ##t
+\book {
+  \score {
+    \new Staff {
+      \set Staff.instrumentName = "Voice"
+      \set Staff.shortInstrumentName = "V."
+      \set Staff.midiInstrument = "voice oohs"
 
-	    \property Staff.midiInstrument = #"voice oohs"
-
-	    \melody
-	}
-
-	\context Lyrics \primText
+      \context Voice = primVoice {
+        \autoBeamOff \melody
+      }
+      \addlyrics { \primText }
     }
 
     \header {
-    opus = "KV 560b"
-    piece = "Primitive text (O du eselhafter Martin)"
-    note = "This is the original text crossed out by Mozart"
+      opus = "KV 560b"
+        piece = "Primitive text (O du eselhafter Martin)"
+        note = "This is the original text crossed out by Mozart"
     }
 
-    \midi { \tempo 4 = 100 }
-    \paper { }
-}
+    \midi {
+      \context {
+        \Score
+          tempoWholesPerMinute = #(ly:make-moment 100 4)
+      }
+    }
 
+    \layout { }
+  }
 
-\score {
-    \simultaneous {
-    \addlyrics
-        \context Staff = mel {
-	    \property Staff.noAutoBeaming = ##t
-	    \property Staff.automaticMelismata = ##t
+  \pageBreak
 
-	    \property Staff.midiInstrument = #"voice oohs"
+  \score {
+    \new Staff {
+      \set Staff.instrumentName = "Voice"
+      \set Staff.shortInstrumentName = "V."
+      \set Staff.midiInstrument = "voice oohs"
 
-	    \melody
-	}
-
-	\context Lyrics \newText
+      \context Voice = newVoice {
+        \autoBeamOff \melody
+      }
+      \addlyrics { \newText }
     }
 
     \header {
-    opus = "KV 560b"
-    piece = "Definitive text (O du jakobischer Esel)"
-    note = "This is Mozart's definitive text (the music is unchanged)"
+      opus = "KV 560b"
+        piece = "Definitive text (O du jakobischer Esel)"
+        note = "This is the final text with Mozart's corrections"
     }
 
-    \midi { \tempo 4 = 100 }
-    \paper { }
+    \midi {
+      \context {
+        \Score
+          tempoWholesPerMinute = #(ly:make-moment 100 4)
+      }
+    }
+
+    \layout { }
+  }
+
+  \paper {
+    ragged-bottom = ##t
+  }
 }
-
-
