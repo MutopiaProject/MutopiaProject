@@ -1,0 +1,332 @@
+\version "2.11.62"
+
+\include "defs.lyi"
+
+pianoRight = \relative c'
+{
+  #(override-auto-beam-setting '(end * * * *) 1 4)
+  #(override-auto-beam-setting '(end * * * *) 2 4)
+  #(override-auto-beam-setting '(end * * * *) 3 4)
+  \key des \major
+  <f des aes f>2\arpeggio <f des aes f>4\arpeggio |
+  <f des aes f>2\arpeggio <f des aes>4\arpeggio |
+  <f des bes>2\arpeggio <f des aes>4\arpeggio |
+  <f des bes>2.\arpeggio |
+  bes,2( beses4) |
+  aes2 << {\times 2/3 {des8 <ees c> <f ces>}} \\ des4 >> |
+  <f des bes>2 << {\times 2/3 {des8 <ees c> <f ces>}} \\ des4 >> |
+  <f des bes>4( <ges bes,>2) |
+  <bes ees, bes>2 <bes ges des>4 |
+  << {bes2( aes4)} \\ <ees c>2. >> |
+  <aes des, aes>4 <bes, ges> <ees c aes> |
+  <aes des, aes> <bes, g> << {bes8( c)} \\ ges4 >> |
+  << <des' f,>2 \\ {bes4( aes)} >> r4 |
+  des( cis) b |
+  \clef bass
+  << {\voiceOne a8( <b gis>} \new Voice {\voiceTwo a4} >> \oneVoice <cis a g>2) |
+  <e b g>4\arpeggio \clef treble <e' e'>( <g b>) |
+  \clef bass
+  << {\voiceOne a,,8( <b gis>} \new Voice {\voiceTwo a4} >> \oneVoice <cis a g>2) |
+  <e bes g>4\arpeggio \clef treble <e' c'>( <c g'>) |
+  <ges' bes>4 \times 2/3 {bes,8 <ges' bes> bes,} \times 2/3 {<f' bes> bes, <f' bes>} |
+  \times 2/3 {aes, <ees' aes> aes,} \times 2/3 {<ees' ges> ges, <ees' ges>} \times 2/3 {ges, <ees' ges> ges,} |
+  <bes f'>4 \times 2/3 {f8 <bes f'> f} \times 2/3 {<a f'> f <a f'>} |
+  \times 2/3 {ees <bes' ees> ees,} \times 2/3 {<bes' des> des, <bes' des>} \times 2/3 {des, <bes' des> des,} |
+
+  r4 \times 2/3 {<g e>8 c <e g>} \times 2/3 {c' <g e> r} |
+  r4 \times 2/3 {<g, ees>8 c <ees g>} \times 2/3 {c' <g ees> r} |
+  << {\voiceOne aes,,8( <bes g>} \new Voice {\voiceTwo aes4} >> \oneVoice <c aes ges>2) |
+  <bes' ges'>8( <f' aes> <ees bes'>) <des bes'> << {ees'8.( bes16)} \\ {c,8( des)} >> |
+  << {des'4 c4.( ges8)} \\ {ees2 des4} >> |
+  << {bes'4 aes4.( des,8)} \\ {c2 bes4} >> |
+  <aes f'>2 <ges ees'>4~ |
+  <ges ees'> << {des'4.( ges,8)} \\ ges2 >> |
+  bes2 ges4~ |
+  ges ees4.( bes8) |
+  des2 \clef bass bes4~ |
+  bes ges4.( des8) |
+  f2 \times 2/3 {ees8( d des)} |
+  \times 2/3 {c( des b)} \times 2/3 {c( des d)} \times 2/3 {ees( e f)}
+  aes4-> \times 2/3 {g8( ges f)} \times 2/3 {ges( g aes)}
+  <<
+    {
+      \times 2/3 {ces8( beses aes} \times 2/3 {bes ces c)} \times 2/3 {des( c ces)} |
+      \times 2/3 {bes8( c a} \times 2/3 {bes ces c)} \times 2/3 {des( c ces)} |
+      \times 2/3 {bes8( c a} \times 2/3 {bes c des} \times 2/3 {ees e f)} |
+    }
+    \\
+    {
+      fes,2 f4 |
+      f2 f4 |
+      f2. |
+    }
+  >>
+  \times 2/3 {bes8( c bes} \times 2/3 {c bes c} \times 2/3 {bes a bes)} |
+  \times 2/3 {beses8( aes beses} \times 2/3 {aes bes
+    %NOTE: Workaround for Lilypond issue 110
+    \override Score.NonMusicalPaperColumn #'allow-loose-spacing = ##f
+    aes)} \clef treble
+  <<
+    {
+      \times 2/3 {des8( ees f)} |
+      f2 \times 2/3 {des8( ees f)} |
+      f4 \times 2/3 {ges8( aes ges)} \times 2/3 {f( ges f)} |
+      \times 2/3 {ees( f ees} \times 2/3 {d ees d)} \times 2/3 {des( ees des)} |
+      <aes aes'>2 <a a'>4 |
+    }
+    \\
+    {
+      \times 2/3 {des8( c ces)} |
+      \times 2/3 {bes8( ces bes} \times 2/3 {c bes des)} \times 2/3 {des8( c ces)} |
+      \times 2/3 {bes( ces bes~)} bes4 ces |
+      bes2 bes4 |
+      \times 2/3 {c8( des ees} \times 2/3 {des c des~)} \times 2/3 {des8( c des)} |
+    }
+    >> |
+    \revert Score.NonMusicalPaperColumn #'allow-loose-spacing
+    \times 2/3 {bes8 <ees bes'> bes} \times 2/3 {<ees bes'> bes <ees bes'>} \times 2/3 {aes, <f' aes> aes,} |
+    \clef bass
+    \times 2/3 {<bes f'> f <bes f'>} \times 2/3 {f <bes f'> f} \times 2/3 {<bes ees> ees, <beses' ees>} |
+    \times 2/3 {f <aes c> f} \times 2/3 {<aes c> f <aes c>} \times 2/3 {f <aes bes> f} |
+    \repeat tremolo 12 {bes32 ges} |
+    \repeat tremolo 4 {<bes des>32 ges} \repeat tremolo 8 {<bes des ges>32 ges} |
+    \repeat tremolo 12 {<bes des f>32 ges} |
+    <ges aes c f>8 r r4 \clef treble \times 2/3 {ees'8 c' aes'} |
+    <des, f,>8^( <ees aes,> << {\voiceOne f8) f bes8.( f16)} \new Voice {\voiceTwo des4 <des f>} >> |
+    \oneVoice
+    <c ees aes>4 << {ges'4.( des8)} \\ {<des bes>2} >> |
+    <aes des f>2
+    <<
+      {<bes des>4 | <c ees> <des ges> <ges bes> | <bes des>}
+      \\
+      {
+        \times 2/3 {des,,8( f des)} |
+        \times 2/3 {ees( aes ees)} \times 2/3 {ges( bes ges)} \times 2/3 {bes( ees bes)} |
+      }
+    >> r2 |
+    R2.*4 |
+    \clef bass
+    <aes, c f>4 <ges c ees>4.( <f aes des>8) |
+    <f aes des>2
+      \clef treble
+      \set tieWaitForNote = ##t
+      \times 2/3 {\change Staff=LH \stemUp des'8 \change Staff=RH aes'~ f'~} |
+    << \new Voice {\voiceOne des'2.\fermata} {\voiceTwo <f, aes,>2.} >> |
+}
+
+pianoLeft = \relative c
+{
+  \key des \major
+  \clef bass
+  <des aes des,>2\arpeggio <des aes des,>4\arpeggio |
+  <des aes des,>2\arpeggio <f des>4\arpeggio |
+  <f des ges,>2\arpeggio <f des>4\arpeggio |
+  <f des g,>2.\arpeggio |
+  <<
+    {ees4( des c) | c8.( des16) des4}
+    \\
+    {ges,2. | f2}
+  >> <des' des,>4 |
+  <des ges,>2-> <des des,>4 |
+  << {des2( d4)} \\ ges,2. >> |
+  <ees' ges,>2 <ees ees,>4 |
+  <ges aes,>2. |
+  <f aes,>4 <des aes> << <ees c>4 \\ {aes,8 ges} >> |
+  <f des' f>4 <ees des'> <aes c> |
+  r8 des,( aes' des f aes) |
+  R2. |
+
+  \times 2/3 {r8 a,( e} \times 2/3 {a, e' a} \times 2/3 {a e' a,)} |
+  \override Score.NonMusicalPaperColumn #'allow-loose-spacing = ##f
+  \times 2/3 {e( b' e)} \clef treble << {b''2->} \\ {g4( e)} >> |
+  \revert Score.NonMusicalPaperColumn #'allow-loose-spacing
+  \clef bass
+  \times 2/3 {r8 a,,( e} \times 2/3 {a, e' a} \times 2/3 {a e' a,)} |
+  \override Score.NonMusicalPaperColumn #'allow-loose-spacing = ##f
+  \times 2/3 {c,( g' c)} \clef treble << {bes''2->} \\ {g4( e)} >> |
+  \revert Score.NonMusicalPaperColumn #'allow-loose-spacing
+  \clef bass
+
+  <<
+    {
+      \times 2/3 {r8 ees, c'} \times 2/3 {ges' c, ees,} \times 2/3 {ees' ces d,} |
+      \times 2/3 {ees'8 bes ees,} \times 2/3 {bes' ees, aes,} aes8 r |
+      \times 2/3 {r8 g' bes} \times 2/3 {des bes g} \times 2/3 {c a ges} |
+      \times 2/3 {f8 bes f} \times 2/3 {bes f des} \times 2/3 {f des aes} |
+    }
+    \\
+    {
+      aes2.~ | aes4 s s |
+      aes2.~ | aes4 s s |
+    }
+  >>
+  <<
+    {
+      \times 2/3 {bes8 <e g> c'~_(} <c g e>2) |
+      \times 2/3 {a,8 <ees' g> c'~_(} <c g ees>2) |
+    }
+    \\
+    {
+      bes,2. | a |
+    }
+  >>
+  \times 2/3 {r8 aes( ees} \times 2/3 {aes, ees' aes} \times 2/3 {aes ees' aes)} |
+  <<
+    {
+      <ges bes ees>2.\arpeggio |
+      \times 2/3 {aes,8( ees' c'} \times 2/3 {ees, c' ees,} \times 2/3 {aes, f' des')} |
+      \times 2/3 {aes,8( ges' ees'} \times 2/3 {ges, ees' ges,} \times 2/3 {aes, g' des')} |
+    }
+    \\
+    {
+      r8 ees,( \times 2/3 {aes,8 ees' ges} \times 2/3 {bes ges ees)} |
+      aes,2 aes4 |
+      aes2 aes4 |
+    }
+  >>
+  aes8( aes' \times 2/3 {c8 aes c)} << {\voiceOne a4(} \new Voice {\voiceTwo \times 2/3 {a8 c a}} >> \oneVoice |
+  \times 2/3 {c8 a c)} \times 2/3 {bes( des bes} \times 2/3 {des bes des)} |
+  \times 2/3 {c8( ees c} \times 2/3 {ees c ees)} \times 2/3 {bes( des bes} |
+  \times 2/3 {des bes des)} \times 2/3 {ges,( bes ges} \times 2/3 {bes ges ees)} |
+  \times 2/3 {ees8( ges ees} \times 2/3 {ges ees ges)} \times 2/3 {c,( ees c} |
+  \times 2/3 {ees c ees)} \times 2/3 {bes( des bes} \times 2/3 {des bes ges)} |
+  \repeat tremolo 6 {ges16 bes} |
+  \repeat tremolo 6 {ges16 a} |
+  \repeat tremolo 6 {beses16 des} |
+  \repeat tremolo 4 {g,16 des'} <des aes des,>4 |
+  <des bes ges>2 <des aes des,>4 |
+  <des bes g>2. |
+  <<
+    {
+      ees4( des c) |
+      c8( des) des4
+    }
+    \\
+    {
+      ges,2. |
+      f2
+    }
+  >> <des' des,>4 |
+  <des ges,>2 <des des,>4 |
+  << {des2 d4} \\ {ges,2.} >> |
+  <ges ees'>2 <ges bes e>4 |
+  <aes des f>2 <f des' f>4 |
+  \times 2/3 {ges8 des' ges,} \times 2/3 {ces ges ces} \times 2/3 {f, des' f,} |
+  \times 2/3 {des' ges, des'} \times 2/3 {ges, des' ges,} \times 2/3 {c ges c} |
+  \times 2/3 {f, c' f,} \times 2/3 {des'-> f, des'} \times 2/3 {f, d'-> f,} |
+  \repeat tremolo 12 {ees32 ees'} |
+  \repeat tremolo 12 {ees,32 ees'} |
+  \repeat tremolo 12 {aes,,32 aes'} |
+  \times 2/3 {<aes aes,>8 aes, aes'} \times 2/3 {aes ges' c} s4 |
+  \times 2/3 {f,8( aes, des,} \times 2/3 {aes' des, aes'} \times 2/3 {des, aes' des,)} |
+  \times 2/3 {aes'( des, aes'} \times 2/3 {des, aes' des,} \times 2/3 {aes' des, aes')} |
+  \times 2/3 {des,( aes' f'} \times 2/3 {aes des f)} <bes, f des>4 |
+  <des, aes' c> <des bes' des> <des bes' ees> |
+  <<
+    \new Voice
+    {
+      <des bes' des f>
+    }
+    {
+      %TODO: This is fixed in 2.11.20 remove the '%' when it comes out.
+      \change Staff=RH
+      \times 2/3 {des''8( f des} \change Staff=LH
+      \clef treble \times 2/3 {bes8 f des} \times 2/3 {f bes des} |
+    }
+  >>
+  f4) r r |
+  R2.*3 |
+  \clef bass
+  <f,,, f,>4 <aes aes,>4.( <des des,>8) |
+  <<
+    {
+      des2
+    }
+    \\
+    {
+      des,4 \times 2/3 {des8 aes' f'}
+    }
+  >> des'4~ |
+  des2.\fermata |
+}
+
+pianoDynamics =
+{
+  \dimTextDim
+  s2.*2\f\> |
+  \dimHairpin
+  s2.*2\p |
+  s4 s2\> |
+  s2\! s4\< |
+  s2\! s4\< |
+  s2.\! |
+  s2.\< |
+  s2.\f |
+  s2 s4\> |
+  s4\mf-\collaParte s s\> |
+  s2.\p
+
+  %a tempo
+  s2. |
+  s4\mf s2\< |
+  s4\f s2\> |
+  s4\p s2\< |
+  s4\! s2\< |
+  s2.\f |
+  s2. |
+  s4 s2\> |
+  s2.\! |
+  \crescTextCresc
+  \once \override DynamicTextSpanner #'dash-period = #-1.0
+  s4\p s2\< |
+  \crescHairpin
+  s2. |
+  s4\mf s2\< |
+  s2.\! |
+  \dimTextDim
+  \once \override DynamicTextSpanner #'dash-period = #-1.0
+  s2.\> |
+  \dimHairpin
+  s2.\! |
+  s2.*2 |
+  \crescTextCresc
+  \once \override DynamicTextSpanner #'dash-period = #-1.0
+  s2.\< |
+  \crescHairpin
+  s2.*3 |
+  s2.\f-\agitato |
+  s2.\< |
+  s4\! s2\< |
+  s2\> s4\p-\tranquillo |
+  s2.*2 |
+  s4 s2\> |
+  s2\! s4\< |
+  s2\> s4\< |
+  s4\!
+  \crescTextCresc
+  \once \override DynamicTextSpanner #'dash-period = #-1.0
+    s2\< |
+  \crescHairpin
+  s2. |
+  s2 s4\ff |
+  s2.-\legato |
+  s2.\f |
+  s2.\mf |
+  \crescTextCresc
+  s2.\p\< |
+  \crescHairpin
+  s2. |
+  s2.\f\> |
+  s2.\p-\collaParte |
+
+  %a tempo
+  s2.*9 |
+  s2.\mf |
+  s4 s2\> |
+  s2.\! |
+}
+
+pianoPedals =
+{
+}
+

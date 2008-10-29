@@ -1,0 +1,43 @@
+mdim = \markup {\italic dim.}
+rall = \markup {\italic rall.}
+pocorall = \markup {\italic {poco rall.} }
+sempref = \markup {\italic sempre \dynamic f}
+dolce = \markup {\italic dolce}
+agitato = \markup {\italic agitato}
+bouche = \markup {\italic bouché}
+morendo = \markup {\italic morendo}
+tranquillo = \markup {\italic tranquillo}
+legato = \markup {\italic legato}
+collaParte = \markup {\italic {colla parte}}
+menof = #(make-dynamic-script (markup #:normal-text #:italic "meno" #:dynamic "f"))
+
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score . RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \bold $markp }
+#})
+
+outline =
+{
+  \time 3/4
+  \tempoMark "Andantino"
+  s2.*11 |
+  s4 \tempo "poco rit." s2 |
+  s2. |
+  \tempo "a tempo"
+  s2.*15 |
+  \tempo "string."
+  s2.*9 |
+  \tempo "rit."
+  s2 \tempo "Tempo I" s4 |
+  s2.*14 |
+  s4 \tempo "rit." s2 |
+  s2.*12 | \bar "|."
+}
+
+midiOutline =
+{
+  \tempo 4=66
+}
+
