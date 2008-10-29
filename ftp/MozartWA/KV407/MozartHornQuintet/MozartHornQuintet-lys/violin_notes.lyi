@@ -238,7 +238,8 @@ violinMvtII = \relative c''
   bes8(\f ees g) |
   bes8.\fermata a32( g f8) |
   r16. g32 bes,8 \appoggiatura d32 c8\trill |
-  bes16( g') g8. a16 |
+  %NOTE: The f8. is different from the source. This matches the following horn echo.
+  bes16( g') f8. a16 |
   bes16( g) f8. a,16 |
   bes8 r r |
   R4. |
