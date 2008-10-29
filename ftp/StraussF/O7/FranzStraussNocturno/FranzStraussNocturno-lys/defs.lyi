@@ -1,0 +1,40 @@
+tempoMark = #(define-music-function (parser location markp) (string?)
+#{
+  \once \override Score.RehearsalMark #'self-alignment-X = #left
+  \once \override Score.RehearsalMark #'extra-spacing-width = #'(+inf.0 . -inf.0)
+  \mark \markup { \bold $markp }
+#})
+
+outline =
+{
+  \override Score.PaperColumn #'keep-inside-line = ##t
+  \override Score.NonMusicalPaperColumn #'keep-inside-line = ##t
+  \time 4/4
+  \tempoMark "Andante quasi Adagio"
+  s1*32 |
+
+  s1^\markup{\italic "più animato e marcato"} |
+  s1*6 |
+
+  \override TextSpanner #'bound-details #'left #'text = "accel."
+  s1\startTextSpan |
+  s1 |
+
+  \tempoMark "Tempo I"
+  s1\stopTextSpan
+  s1*8 |
+
+  \override TextSpanner #'bound-details #'left #'text = "rit."
+  s4 s2\startTextSpan s16*3 s16\stopTextSpan
+  s1^\markup{\italic "a tempo"}
+  s1*6 |
+
+  s8*5 s4\startTextSpan s16 s\stopTextSpan
+  s1^\markup{\italic "a tempo"}
+  s1*28 |
+
+  s2 s16*7\startTextSpan s16\stopTextSpan
+  s1^\markup{\italic "a tempo"}
+  s1*3 | \bar "|."
+}
+
