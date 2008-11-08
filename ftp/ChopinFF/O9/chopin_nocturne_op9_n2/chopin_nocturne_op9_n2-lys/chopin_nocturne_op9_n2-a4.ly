@@ -1,17 +1,14 @@
+%Score version: 1.1 A4
 \version "2.11.62"
 \include "english.ly"
 \paper {
-%%%Note: if you use Letter paper make sure to set global-staff-size
-%%%at 18.00 or it won't fit in three pages
-%#( set-paper-size "letter")
-#(set-global-staff-size 18.50)
 between-system-padding = 1
 between-system-space = 3
   %ragged-bottom=##f
   ragged-last-bottom=##f
 #(ly:set-option 'point-and-click #f)
 }
-#(set-global-staff-size 18.00)
+#(set-global-staff-size 18.52)
 \header {
  title =  "Nocturne"
  composer = "Frédéric Chopin"
@@ -19,11 +16,10 @@ between-system-space = 3
  dedication = \markup \italic { "A M.me Marie Pleyel" }
  
  % MUTOPIA
- mutopiaopus = "Op. 9 N. 2"
  mutopiatitle = "Nocturne"
  mutopiacomposer = "ChopinFF"
  mutopiapoet = ""
- mutopiaopus = "Op. 9 N. 2"
+ mutopiaopus = "Op. 9, No. 2"
  mutopiainstrument = "Piano"
  date = "1833"
  source = "G. Schirmer, New York, 1881"
@@ -34,8 +30,8 @@ between-system-space = 3
  maintainerWeb = "http://www.nightpassage.org"
  moreInfo = "Made from scans available at Library Of Congress http://memory.loc.gov"
 
- footer = "Mutopia-2008/11/05-1590"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2008/11/08-1590"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 %%%Il gruppetto cromatico%%%
