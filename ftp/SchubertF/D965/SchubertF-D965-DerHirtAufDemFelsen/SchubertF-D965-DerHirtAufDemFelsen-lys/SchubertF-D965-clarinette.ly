@@ -368,7 +368,7 @@ mi4-> r
 %--- 335
 r16 fad,[ la do] mib[ fad la do]
 mib2(
-mi16)[ re do si] la[ sol fa mi]
+mi!16)[ re do si] la[ sol fa mi]
 re16[ do si la] sol[ fa mi re]
 do16[ mi sol do] si[ sol' fa re]
 do16[ sol' mi re] dod[ la' sol mi]
