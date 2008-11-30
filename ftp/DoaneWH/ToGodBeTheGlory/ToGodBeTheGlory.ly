@@ -6,33 +6,32 @@
 	date="1875"
 	title = "To God be the Glory"
 	metre = "11 11 11 11 and refrain"
-	meter = \metre
+	meter = "11 11 11 11 and refrain"
 	copyright = "Public Domain"
 	style = "Hymn"
-	mutopiacomposer = \composer
-	mutopiapoet=\poet
+	mutopiacomposer = "DoaneWH"
+	mutopiapoet = "F. Crosby (1820-1915)"
+	mutopiainstrument = "Voice (SATB)"
+	mutopiasource = "Unknown"
 	maintainer = "Peter Chubb"
-	maintainerEmail = "peter@chubb.wattle.id.au"
-	lastupdated = "2002/Feb/26"
+	maintainerEmail = "mutopia@chubb.wattle.id.au"
+	lastupdated = "2008/Nov/25"
 
-        tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-        footer = "Mutopia-2002/02/26-195"
+ footer = "Mutopia-2008/11/30-195"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "1.4.0"
+\version "2.11.62"
 
-% $Log: ToGodBeTheGlory.ly,v $
-% Revision 1.6  2002/02/27 01:47:05  peterc
-% Added mutopia headers and chorus words.
-%
 
-line=\notes{
+line = {
 	\skip 4
 	\skip 2.*3
 	\skip 2
 	\bar "||" 
 }
-global = \notes {
+
+global =  {
 	\key as \major
 	\time 3/4
 	\partial 4
@@ -47,8 +46,7 @@ global = \notes {
 	\line
 }
 
-sop = \context Voice = "sop" \notes \relative c' {
-	\voiceOne
+sop = \relative c' {
 	es4 |
 	es2 f8 g |
 	as4 es as |
@@ -100,10 +98,9 @@ sop = \context Voice = "sop" \notes \relative c' {
 	as2
 }
 
-alto=\context Voice = "alto" \notes \relative c' {
-	\voiceTwo
+alto=\relative c' {
 	c4 |
-	c () es des8 des |
+	c ( es) des8 des |
 	c4 c es |
 	es es es |
 	es2 
@@ -115,7 +112,7 @@ alto=\context Voice = "alto" \notes \relative c' {
 	es2 
 
 	des!4 |
-	c4 () es4 des8 des |
+	c4 ( es4) des8 des |
 	c4 c es |
 	es es es |
 	es2 
@@ -138,7 +135,7 @@ alto=\context Voice = "alto" \notes \relative c' {
 	es2
 
 	des4 |
-	c4 () es des8 des |
+	c4 ( es) des8 des |
 	c4 c es |
 	es es es |
 	es2 
@@ -148,8 +145,7 @@ alto=\context Voice = "alto" \notes \relative c' {
 	c2
 }	
 	
-tenor = \context Voice = "tenor" \notes \relative c' {
-	\voiceOne
+tenor =  \relative c' {
 	as4
 	as2 bes8 bes |
 	as4 c as |
@@ -159,7 +155,7 @@ tenor = \context Voice = "tenor" \notes \relative c' {
 	as4 |
 	as as as |
 	as as as |
-	as f bes8 ()as |
+	as f bes8 ( as) |
 	g2 
 
 	g4 |
@@ -198,10 +194,9 @@ tenor = \context Voice = "tenor" \notes \relative c' {
 	as2
 }
 	
-bass = \context Voice = "bass" \notes \relative c {
-	\voiceTwo
+bass = \relative c {
 	as4 |
-	as () c es8 es |
+	as ( c) es8 es |
 	as,4 as c |
 	es es es |
 	as,2
@@ -213,7 +208,7 @@ bass = \context Voice = "bass" \notes \relative c {
 	es2
 
 	es4 |
-	as,4 () c  es8 es |
+	as,4 ( c)  es8 es |
 	as,4 as c |
 	es es es |
 	as,2
@@ -237,7 +232,7 @@ bass = \context Voice = "bass" \notes \relative c {
 	as2 
 
 	es'4 |
-	as,4 () c es8 es |
+	as,4 ( c) es8 es |
 	as,4 as c |
 	es es es |
 	as,2
@@ -249,46 +244,130 @@ bass = \context Voice = "bass" \notes \relative c {
 	as,2
 }
 
-chorus=\lyrics{
+accomp=\chordmode {
+	as4 |
+	as as es:7 |
+	as as as |
+	es es es |
+	as as 
+
+	as |
+	des des des |
+	as as as |
+	bes bes bes |
+	es4 es 
+
+	es:7 |
+	as as es |
+	as as as 
+	es es es 
+	as as 
+
+	as:7 |
+	des des des |
+	as es as |
+	as as es:7 |
+	as as 
+
+	as |
+	as as as |
+	as as as |
+	as es:7 as |
+	es es es |
+	es:7 es:7 es 
+	es:7 es:7 es:7 
+	as as es |
+	as as 
+
+	es:7 |
+	as as es:7 |
+	as as as |
+	es es es |
+	as as as:7
+	des bes:m/+des des |
+	as es as |
+	es es es:7
+	as as
+}
+
+chorus=\lyricmode{
 	Praise the Lord!
 	Praise the Lord!
-	Let the earth hear his voice.
+	Let the earth hear His voice.
 	Praise the Lord!
 	Praise the Lord!
-	Let the Peo -- ple re -- joice.
-	O Come to the fa -- ther through Je -- sus the Son,
-	And give Him the glo -- ry, great things he has done.
+	Let the peo -- ple re -- joice.
+	Oh, come to the Fa -- ther, through Je -- sus the Son,
+	And give Him the glo -- ry; great things He hath done.
+}
+
+stanzaa = \lyricmode { 
+	To God be the glo -- ry great things He hath done
+	So lov'd He the world that He gave us His Son
+	Who yield -- ed His life an a -- tone -- ment for sin,
+	And o -- pened the Life Gate that all may go in.
+}
+
+stanzab = \lyricmode {
+	Oh, per -- fect re -- demp -- tion, the pur -- chase of blood,
+	To ev' -- ry be -- liev -- er the pro -- mise of God;
+	The vil -- est of -- fen -- der who tru -- ly be -- lieves,
+	That mo -- ment from Je -- sus a par -- don re -- ceives.
+}
+
+stanzac = \lyricmode {
+	Great things He hath taught us, great things He hath done,
+	And great our re -- joi -- cing through Je -- sus the Son;
+	But pur -- er, and high -- er, and great -- er will be
+	Our won -- der, our trans -- port, when Je -- sus we see.
 }
 
 \score {
-	% My pianist can't cope with a-flat, so put the tune into G.
-	\notes \transpose b \context ChoirStaff <
-		\property ChoirStaff.automaticMelismata = ##t
-		\addlyrics 
-		\context Staff ="upper" { \clef "G" <
-			\global
-			\sop
-			\alto
-		>}
-		% \repeat unfold 44 "" doesn't work properly
-		\context Lyrics \lyrics {
-			_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-			_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ 
-			_ _ _ _ _ _ _ _  
-			\chorus 
-		}
-			
-		\context Staff = "lower" { \clef "F"<
-			\global
-			\tenor
-			\bass
-		>}
-	>
-	\paper{
-		indent = 0.0\pt
-	}
-	\midi {
-		\tempo 4 = 120
-	}
+  % My pianist can't cope with a-flat, so put the tune into G.
+  % This also means the guitarist can cope without a capo,
+  % and the top note is d'' --- good for congregational singing.
+  \transpose c' b 
+  \context ChoirStaff <<
+    \context ChordNames \accomp
+    \unset ChoirStaff.melismaBusyProperties 
+    \context Staff ="upper"  { \clef "G"
+			       <<
+				 \global
+				 \context Voice= sop { \voiceOne \sop }
+				 \context Voice = alto {\voiceTwo \alto }
+			       >>
+			     }
+    \lyricsto "sop" \context Lyrics = "stanza-1" {
+      \set stanza = "1."   \stanzaa \chorus 
+    }
+    \lyricsto "sop" \context Lyrics = "stanza-2" {
+      \set stanza = "2." \stanzab 
+    }
+    \lyricsto "sop" \context Lyrics = "stanza-3" {
+      \set stanza = "3." \stanzac 
+    }
+    \context Staff = "lower"  { \clef "F"
+				<<
+				  \global
+				  \context Voice = tenor { \voiceOne \tenor }
+				  \context Voice = bass { \voiceTwo \bass }
+				>>
+			      }
+  >>
+  \layout{
+    indent = 0.0\pt
+    \context {
+      \ChordNames
+      \override ChordName  #'style = #'american
+      chordChanges = ##t
+    }
+  }
+
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 120 4)
+    }
+  }
 }
 
