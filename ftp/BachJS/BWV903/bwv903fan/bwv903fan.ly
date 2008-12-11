@@ -15,6 +15,7 @@
     mutopiacomposer = "BachJS"
     mutopiaopus = "BWV 903"
     mutopiainstrument = "Harpsichord"
+    mutopiadate = "1730"
     style = "Baroque"
     source = "BachGesellschaftAusgabe 1890"
     copyright = "Public Domain"
