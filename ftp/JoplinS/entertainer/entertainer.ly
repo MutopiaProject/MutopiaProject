@@ -1,4 +1,4 @@
-\version "2.0.0"
+\version "2.10.33"
 
 \header {
  title = "The Entertainer"
@@ -7,33 +7,32 @@
  piece = "INTRO"
  
  mutopiatitle = "The Entertainer"
- mutopiacomposer = "S. Joplin (1868-1917)"
+ mutopiacomposer = "JoplinS"
  mutopiainstrument = "Piano"
- date = "C. 1902"
+ date = "c. 1902"
  style = "Jazz"
  copyright = "Public Domain"
+ source = "Reproduction of original edition (1902)"
  
- filename = "entertainer.ly"
  maintainer = "Chris Sawer"
- maintainerEmail = "chris@sawer.uklinux.net"
- maintainerWeb = "http://www.sawer.uklinux.net/"
- lastupdated = "2004/Feb/03"
+ maintainerEmail = "chris@mutopiaproject.org"
+ maintainerWeb = "http://www.whitewillow.co.uk/"
  
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2004/02/03-263"
+ footer = "Mutopia-2008/12/21-263"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-blanknotes = { \property Voice.NoteHead
-               \override #'transparent  = ##t
-               \property Voice.Stem
-               \override #'transparent = ##t }
-unblanknotes = { \property Voice.NoteHead
-                 \revert #'transparent
-                 \property Voice.Stem
-                 \revert #'transparent }
+blanknotes = { \override NoteHead
+                 #'transparent  = ##t
+               \override Stem
+                 #'transparent = ##t }
+unblanknotes = { \revert NoteHead
+ #'transparent
+                 \revert Stem
+ #'transparent }
 
-top = \notes \relative c' {
- \property Voice . TextScript \override #'padding = #2
+top =  \relative c' {
+ \override TextScript   #'padding = #2
 
  \key c \major
  \time 2/4
@@ -41,32 +40,28 @@ top = \notes \relative c' {
  
  \stemUp
   d''16^\markup {\large "Not fast"} e c a ~ a b g8 |				%1
- \stemBoth
+ \stemNeutral
  d16 e c a ~ a b g8 |
  \stemUp
   d16 e c
-  \translator Staff = "down"
+  \change Staff = "down"
    a ~ a b a as |
-   g8 r
-  \translator Staff = "up"
- \stemBoth
- \property Voice . DynamicLineSpanner \override #'padding = #1.5
+   g8
+   \once \override Rest #'direction = #UP
+   r
+  \change Staff = "up"
+ \stemNeutral
  <g'' d b g>^^ d,16-(-\> dis-)-\! |
- \property Voice . DynamicLineSpanner \revert #'padding
  
  \repeat volta 2 {
   e16-\p c'8 e,16 c'8 e,16 c' ~ |						%5
   c4 ~ c16-\< <c' e, c> <d f, d> <dis fis, dis>-\! |
   <e g, e>-\f <c e, c> <d f, d> <e g, e> ~ <e g, e> <b d, b> <d f, d>8 |
-  \property Voice . DynamicLineSpanner \override #'padding = #2
   <c e, c>4 ~ <c e, c>8-\> d,,16-( dis-)-\! |
-  \property Voice . DynamicLineSpanner \revert #'padding
   e16-\p c'8 e,16 c'8 e,16 c' ~ |						%9
   c4 ~ c8-\< <a' c, a>16 <g c, g>-\! |
   <fis c fis,>16-\f <a a,> <c c,> <e e,> ~ <e e,> <d d,> <c c,> <a a,> |
-  \property Voice . DynamicLineSpanner \override #'padding = #2
   <d f,! d>4 ~ <d f, d>8-\> d,,16-(-[ dis-)-]-\! |
-  \property Voice . DynamicLineSpanner \revert #'padding
   e16-\p c'8 e,16 c'8 e,16 c' ~ |						%13
   c4 ~ c16-\< <c' e, c> <d f, d> <dis fis, dis>-\! |
   <e g, e>-\f <c e, c> <d f, d> <e g, e> ~ <e g, e> <b d, b> <d f, d>8 |
@@ -76,9 +71,7 @@ top = \notes \relative c' {
   <e g, e> <c e, c> <d f, d> <e g, e> ~ <e g, e> <b d, b> <d f, d>8 |
  } \alternative {
   {
-   \property Voice . DynamicLineSpanner \override #'padding = #2
    <c e, c>4 ~ <c e, c>8-\> d,,16-( dis-)-\!
-   \property Voice . DynamicLineSpanner \revert #'padding
   }
   { <c'' e, c>4 ~ <c e, c>16 <e, c e,> <f d f,> <fis dis fis,> }		%21
  }
@@ -111,15 +104,11 @@ top = \notes \relative c' {
  e16-\p c'8 e,16 c'8 e,16 c' ~ |
  c4 ~ c16-\< <c' e, c> <d f, d> <dis fis, dis>-\! |
  <e g, e>-\f <c e, c> <d f, d> <e g, e> ~ <e g, e> <b d, b> <d f, d>8 |		%41
- \property Voice . DynamicLineSpanner \override #'padding = #2
  <c e, c>4 ~ <c e, c>8-\> d,,16-( dis-)-\! |
- \property Voice . DynamicLineSpanner \revert #'padding
  e16-\p c'8 e,16 c'8 e,16 c' ~ |
  c4 ~ c8-\< <a' c, a>16 <g c, g>-\! |
  <fis c fis,>16-\f <a a,> <c c,> <e e,> ~ <e e,> <d d,> <c c,> <a a,> |		%45
- \property Voice . DynamicLineSpanner \override #'padding = #2
  <d f,! d>4 ~ <d f, d>8-\> d,,16-(-[ dis-)-]-\! |
- \property Voice . DynamicLineSpanner \revert #'padding
  e16-\p c'8 e,16 c'8 e,16 c' ~ |
  c4 ~ c16-\< <c' e, c> <d f, d> <dis fis, dis>-\! |
  <e g, e>-\f <c e, c> <d f, d> <e g, e> ~ <e g, e> <b d, b> <d f, d>8 |		%49
@@ -145,9 +134,7 @@ top = \notes \relative c' {
   <f d>16 e <f d>8 ~ <f d> <a f d> |						%65
   << { <bes g d>4 ~ <bes g d>8. g16 } \\ { r8 g,16 fis g a bes8 } >> |
   d8 g16 d ~ d g d8 |
-  \property Voice . DynamicLineSpanner \override #'padding = #-0.1
   c4-\< <f b, gis>8.-\fz-\!-\> f16-\! |
-  \property Voice . DynamicLineSpanner \revert #'padding
   << { \stemDown <a c, a>16-\f <c c,>8 <g bes,>16 ~ \stemUp g c, d e }
   \\ { s8. \blanknotes bes4*1/4 ~ \unblanknotes bes8 bes } >> |			%69 - slight kludge
  } \alternative {
@@ -162,7 +149,7 @@ top = \notes \relative c' {
  
  c,8 a16 c ~ c a c a |
  g c e g ~ g e c g |								%73
- <a fis>8 <c fis> <e f,>16 <d f,>8 <c e,>16 ~ |
+ <a fis>8 <c fis,> <e f,>16 <d f,>8 <c e,>16 ~ |
  <c e,>4 <c' g e c>8 r |
 
  \repeat volta 2 {
@@ -188,22 +175,24 @@ top = \notes \relative c' {
  \bar "|."
 }
 
-bottom = \notes \relative c {
+bottom =  \relative c {
  \key c \major
  \time 2/4
  \clef bass
- \translator Staff = "up"
+ \change Staff = "up"
   \stemDown
    d''16 \f e c a ~ a b g8 |			%1
-  \stemBoth
- \translator Staff = "down"
+  \stemNeutral
+ \change Staff = "down"
  d16 e c a ~ a b g8 |
  \stemDown
   d16 e c a ~ a b a as |
-  g8 r
+  g8
+  \once \override Rest #'direction = #DOWN
+  r
  \stemUp <g g,>^^ <b' g>
 
- \stemBoth
+ \stemNeutral
  \repeat volta 2 {
   c, <c' g e> <g g,> <c bes g> |		%5
   <f, f,> <c' a> <e, e,> <c' g> |
@@ -320,28 +309,28 @@ bottom = \notes \relative c {
 }
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
    \top
   \context Staff = "down"
    \bottom
  >>
 
-\paper {}
+\layout {}
 }
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
-   \apply #unfold-repeats \top 
+   \applyMusic #unfold-repeats \top 
   \context Staff = "down"
-   \apply #unfold-repeats \bottom
+   \applyMusic #unfold-repeats \bottom
  >>
  
  \midi {
-  \tempo 4 = 72
-  \translator {
-   \VoiceContext
+  tempoWholesPerMinute = #(ly:make-moment 72 4)
+  \context {
+   \Voice
    \remove Dynamic_performer
   }
  }
