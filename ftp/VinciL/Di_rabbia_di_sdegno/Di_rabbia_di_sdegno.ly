@@ -6,7 +6,7 @@
 	composer = "Leonardo Vinci (1690-1730)"
 	mutopiatitle = "Di rabbia, di sdegno, Aria from Semiramide"
 	mutopiacomposer = "VinciL"
-	mutopiainstrument = "Alto, Strings, Basso Continuo"
+	mutopiainstrument = "Ensemble: Alto, Strings, Basso Continuo"
 	source = "Conservatorio S. Pietro a Majella, DM02032202162"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"
