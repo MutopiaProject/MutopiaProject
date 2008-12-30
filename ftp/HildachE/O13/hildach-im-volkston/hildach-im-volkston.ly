@@ -22,7 +22,7 @@
 	mutopiacomposer = "HildachE"
 	mutopiapoet = "Anna Hildach (1852-1935)"
 	mutopiaopus = "O 13"
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "19th century"
 	source = "The University Society, 1904"
 	style = "Romantic"

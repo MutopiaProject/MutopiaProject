@@ -20,7 +20,7 @@
 	mutopiacomposer = "GriegE"
 	mutopiapoet = "H. C. Andersen"
 	mutopiaopus = "O 5"
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "1864"
 	source = "Oliver Ditson, 1907"
 	style = "Romantic"

@@ -20,7 +20,7 @@
 	mutopiacomposer = "CorneliusP"
 	mutopiapoet = "P. Cornelius (1824-1874)"
 	mutopiaopus = ""
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "19th Century"
 	source = "The University Society, 1909"
 	style = "Romantic"

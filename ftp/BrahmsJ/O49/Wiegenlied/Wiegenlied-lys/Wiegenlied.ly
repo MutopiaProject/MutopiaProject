@@ -4,7 +4,7 @@
 
   mutopiacomposer = "BrahmsJ"
   mutopiaopus = "Op. 49, No. 4"
-  mutopiainstrument = "Voice, Piano"
+  mutopiainstrument = "Voice and Piano"
   mutopiastyle = "Romantic"
   mutopiasource = "Indiana University: http://www.dlib.indiana.edu/variations/scores/bgn9130/index1.html"
   mutopiacopyright = "Public Domain"

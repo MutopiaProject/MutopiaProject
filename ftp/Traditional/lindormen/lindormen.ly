@@ -17,7 +17,7 @@
     mutopiatitle = "Lindormen"
 
     mutopiacomposer = "Traditional"
-    mutopiainstrument = "Voice, Piano"
+    mutopiainstrument = "Voice and Piano"
     style = "Folk"
     copyright = "Creative Commons Attribution-ShareAlike 2.5"
     maintainer = "Erik Sjölund"

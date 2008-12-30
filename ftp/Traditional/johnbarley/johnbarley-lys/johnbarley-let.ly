@@ -10,7 +10,7 @@
  mutopiatitle = "John Barleycorn"
  mutopiacomposer = "Traditional"
  mutopiaarranger = "trad. arr. Gustav von Holst"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  date = "1909"
  source = "Folk-Songs from Hampshire"
  style = "Folk"

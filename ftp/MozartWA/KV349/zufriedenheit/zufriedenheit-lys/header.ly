@@ -5,7 +5,7 @@
  mutopiacomposer = "W. A. Mozart (1756-1791)"
  mutopiapoet = "Johann Martin Miller (1750-1814)"
  mutopiaopus = "KV 349"
- mutopiainstrument = "Voice, Mandolin"
+ mutopiainstrument = "Voice and Mandolin"
  instrument = \Instrument
  date = "1781/Mar"
  source = "Neue Mozartausgabe"

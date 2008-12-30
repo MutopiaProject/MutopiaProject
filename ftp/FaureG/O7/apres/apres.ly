@@ -12,7 +12,7 @@
   mutopiacomposer = "Gabriel Faure (1845-1924)"
   mutopiapoet = "Romain Bussine"
   mutopiaopus = "0 7"
-  mutopiainstrument = "Voice, Piano"
+  mutopiainstrument = "Voice and Piano"
   date = "1877"
   source = "Choudens, 1880"
   style = "Romantic"

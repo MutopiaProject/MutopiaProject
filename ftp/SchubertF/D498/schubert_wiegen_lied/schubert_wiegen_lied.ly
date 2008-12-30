@@ -3,7 +3,7 @@ title = "Wiegenlied"  composer = "F. Schubert(1797-1828)" tagline = ""
 % MUTOPIA
  mutopiatitle = "Wiegenlied"
  mutopiacomposer = "SchubertF"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  mutopiaopus = "D.498 (Op. 98, No. 2)"
  mutopiapoet = "Matthias Claudius (1740-1815)"
  mutopiadate = "1816"

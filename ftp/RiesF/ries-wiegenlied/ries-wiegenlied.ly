@@ -18,7 +18,7 @@
 	mutopiacomposer = "RiesF"
 	mutopiapoet = ""
 	mutopiaopus = ""
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "19th century"
 	source = "The University Society, 1904"
 	style = "Romantic"

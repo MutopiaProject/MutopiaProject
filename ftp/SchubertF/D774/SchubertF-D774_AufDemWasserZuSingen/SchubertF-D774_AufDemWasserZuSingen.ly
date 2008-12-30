@@ -35,7 +35,7 @@
  mutopiacomposer = "SchubertF"
  mutopiapoet = "Graf Friedrich Leopold zu Stolberg-Stolberg (1750-1819)"
  mutopiaopus = "D.774 (Op. 72)"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  date = "1823"
  source = "C.F. Peters (Band I)"
  style = "Romantic"

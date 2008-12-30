@@ -23,7 +23,7 @@
 	mutopiacomposer = "LaloE"
 	mutopiapoet = "T. Gautier (1811-1872)"
 	mutopiaopus = ""
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "1872"
 	source = "The University Society, 1904"
 	style = "Romantic"

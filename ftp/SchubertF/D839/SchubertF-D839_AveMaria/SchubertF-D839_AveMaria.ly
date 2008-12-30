@@ -36,7 +36,7 @@
  mutopiacomposer = "SchubertF"
  mutopiapoet = "Aus Walter Scotts “Fraülein vom See”"
  mutopiaopus = "D.839 (Op. 52, No. 6)"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  date = "1825"
  source = "C.F. Peters (Band I)"
  style = "Romantic"

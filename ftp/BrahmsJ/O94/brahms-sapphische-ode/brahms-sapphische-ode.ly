@@ -20,7 +20,7 @@
 	mutopiacomposer = "BrahmsJ"
 	mutopiapoet = "H. von Schmidt (1856-1923)"
 	mutopiaopus = "O 94"
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "1884"
 	source = "The University Society, 1904"
 	style = "Romantic"

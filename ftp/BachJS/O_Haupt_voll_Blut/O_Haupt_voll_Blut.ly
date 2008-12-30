@@ -6,7 +6,7 @@
   
   mutopiatitle = "Matth&auml;us Passion, Choral &quot;O Haupt voll Blut und Wunden&quot;"
   mutopiacomposer = "J. S. Bach (1685-1750)"
-  mutopiainstrument = "Voice, Piano"
+  mutopiainstrument = "Voice (SATB) and Piano"
   date = "1729"
   source = "Edition Peters"
   style = "Baroque"

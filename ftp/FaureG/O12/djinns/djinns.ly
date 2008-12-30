@@ -11,7 +11,7 @@
   mutopiacomposer = "FaureG"
   mutopiapoet = "V. Hugo (1802-1885)"
   mutopiaopus = "O 12"
-  mutopiainstrument = "Voice, Piano"
+  mutopiainstrument = "Voice and Piano"
   source = "Hamelle, 1891"
   style = "Romantic"
   copyright = "Public Domain"

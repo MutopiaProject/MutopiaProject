@@ -12,7 +12,7 @@
  mutopiacomposer = "R. Schumann (1810 -- 1856)"
  mutopiapoet = "H. Heine  (1797-1856)"
  mutopiaopus = "O 48 n°7"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  date = "1840"
  source = "Breitkopf & Härtel, 1882"
  style = "Romantic"

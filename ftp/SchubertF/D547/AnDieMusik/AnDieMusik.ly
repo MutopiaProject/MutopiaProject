@@ -31,7 +31,7 @@
  mutopiacomposer = "SchubertF"
  mutopiapoet = "Franz von Schober (1798-1882)"
  mutopiaopus = "D.547 (Op. 88, No. 4)"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  date = "1817"
  source = "C.F. Peters (Band I)"
  style = "Romantic"

@@ -18,7 +18,7 @@
  mutopiapoet = "W. Müller (1794-1827)"
  mutopiaopus = "D.911-12 (Op. 89)"
  mutopiadate = "1827"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  source = "Breitkopf & Härtel, 1895"
  style = "Romantic"
  copyright = "Public Domain"

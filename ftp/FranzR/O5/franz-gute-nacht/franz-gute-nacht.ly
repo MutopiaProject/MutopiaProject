@@ -19,7 +19,7 @@
 	mutopiacomposer = "FranzR"
 	mutopiapoet = "Joseph von Eichendorff (1788-1857)"
 	mutopiaopus = "O 5"
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "19th century"
 	source = "The University Society, 1904"
 	style = "Romantic"

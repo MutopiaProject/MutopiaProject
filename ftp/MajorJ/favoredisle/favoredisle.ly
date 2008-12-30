@@ -6,7 +6,7 @@
  mutopiatitle = "Britain's Favored Isle"
  mutopiacomposer = "John Major"
  mutopiapoet = "John Major"
- mutopiainstrument = "Piano, Voice"
+ mutopiainstrument = "Voice and Piano"
  date = "<1860"
  source = "Original Sheet Music"
  style = "Song"

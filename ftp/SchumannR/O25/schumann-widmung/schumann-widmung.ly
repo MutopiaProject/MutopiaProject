@@ -14,7 +14,7 @@
 	mutopiacomposer = "SchumannR"
 	mutopiapoet = "Friedrich Rückert (1788-1866)"
 	mutopiaopus = "O 25"
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "1840"
 	source = "The University Society, 1909"
 	style = "Romantic"

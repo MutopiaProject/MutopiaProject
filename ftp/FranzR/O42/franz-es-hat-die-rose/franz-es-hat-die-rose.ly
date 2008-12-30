@@ -20,7 +20,7 @@
 	mutopiacomposer = "FranzR"
 	mutopiapoet = "Friedrich von Bodenstedt (1819–1892)"
 	mutopiaopus = "Op 42, No 5"
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "19th century"
 	source = "Oliver Ditson Company, 1902"
 	style = "Romantic"

@@ -14,7 +14,7 @@
     mutopiatitle = "Die Forelle"
     mutopiacomposer = "Franz Schubert (1798-1828)"
     mutopiaopus = "D.550 (Op. 32)"
-    mutopiainstrument = "Voice and piano"
+    mutopiainstrument = "Voice and Piano"
     date = "1817"
     source = "C.F. Peters (Band I)"
     style = "Classical"

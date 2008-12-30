@@ -34,7 +34,7 @@
  mutopiacomposer = "SchubertF"
  mutopiapoet = "Friedrich Rückert (1788-1866)"
  mutopiaopus = "D.776 (Op. 59, No. 3)"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  date = "1823"
  source = "C.F. Peters (Band I)"
  style = "Romantic"

@@ -19,7 +19,7 @@
 	mutopiacomposer = "MullenJW"
 	mutopiapoet = "Mary Mark Lemon"
 	mutopiaopus = ""
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "1885"
 	source = "The University Society, 1909"
 	style = "Romantic"

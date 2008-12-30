@@ -6,7 +6,7 @@
   mutopiatitle = "Oh! Boatman, Haste!"
   mutopiacomposer = "D. D. Emmett (1815-1904)"
   mutopiapoet = "G. P. Morris (1802-1864)"
-  mutopiainstrument = "Voice, Piano, Mixed Voices"
+  mutopiainstrument = "Mixed Voices and Piano"
   date = "1843"
   source = "Atwill, 1843"
   style = "Song"

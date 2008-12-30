@@ -12,7 +12,7 @@
 	mutopiacomposer = "FaureG"
 	mutopiapoet = "T. Gautier (1811-1872)"
 	mutopiaopus = "O 2"
-	mutopiainstrument = "Voice, Piano"
+	mutopiainstrument = "Voice and Piano"
 	date = "ca. 1870"
 	source = "Hamelle, 1879"
 	style = "Romantic"

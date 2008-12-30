@@ -29,7 +29,7 @@
 %		\\end{minipage}"
 %
 	mutopiapoet = "M. S. B. Dana (1810-1883)"
-        mutopiainstrument = "Voice, Piano"
+        mutopiainstrument = "Voice and Piano"
         style = "Song"
         
 	footer = "Mutopia-2005/11/25-376"

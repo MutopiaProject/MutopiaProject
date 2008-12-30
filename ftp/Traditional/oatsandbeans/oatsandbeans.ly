@@ -8,7 +8,7 @@
  mutopiatitle = "Oats and Beans"
  mutopiacomposer = "Traditional"
  mutopiaarranger = "L. E. Broadwood (1858-1929)"
- mutopiainstrument = "Piano, Voice"
+ mutopiainstrument = "Voice and Piano"
  date = "1893"
  source = "English County Songs"
  style = "Folk"

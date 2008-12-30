@@ -7,7 +7,7 @@
     mutopiatitle = "The Water of Tyne"
     mutopiacomposer = "Traditional"
     mutopiaarranger = "J. A. Fuller-Maitland (1856-1936)"
-    mutopiainstrument = "Voice, Piano"
+    mutopiainstrument = "Voice and Piano"
     date = "1893"
     source = "English County Songs"
     editor = "L. Broadwood & J. Maitland"

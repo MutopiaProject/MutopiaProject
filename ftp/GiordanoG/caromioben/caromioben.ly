@@ -11,7 +11,7 @@ tagline = "\\\\This music is part of the
             encouraged --- copy this music and share it!";
 mutopiatitle = "Caro Mio Ben (Come Once Again)";
 mutopiacomposer = "G. Giordiano (1748-1798)";
-mutopiainstrument = "voice piano";
+mutopiainstrument = "Voice and Piano";
 date="1780s";
 source="Boosey and Hawkes 1903, as corrected from other editions";
 style="classical";

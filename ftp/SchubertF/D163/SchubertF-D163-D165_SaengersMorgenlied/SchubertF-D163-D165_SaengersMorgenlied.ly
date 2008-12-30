@@ -37,7 +37,7 @@
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
  mutopiaopus = "D.163 & D.165"
- mutopiainstrument = "Voice, Piano"
+ mutopiainstrument = "Voice and Piano"
  date = "1815"
  source = "D163: Handschrift von Franz Schubert; D165: Breitkopf & Härtel (IMSLP)"
  style = "Romantic"

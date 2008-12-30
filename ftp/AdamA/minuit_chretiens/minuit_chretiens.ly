@@ -31,7 +31,7 @@
   lastupdated = "2005-11-29"
   
   mutopiacomposer = "AdamA"
-  mutopiainstrument = "Voice, Piano"
+  mutopiainstrument = "Voice and Piano"
   style = "Hymn"
   license = "Public Domain"
   

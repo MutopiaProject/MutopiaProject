@@ -22,7 +22,7 @@
 	mutopiacomposer = "DvorakA"
 	mutopiapoet = ""
 	mutopiaopus = "O 55"
-	mutopiainstrument = "Piano, Voice"
+	mutopiainstrument = "Voice and Piano"
 	date = "1880"
 	source = "The University Society, 1904"
 	style = "Romantic"
