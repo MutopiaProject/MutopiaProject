@@ -11,7 +11,7 @@
 	mutopiatitle = "Das Wohltemperierte Clavier I, Fuga XXIV"
 	mutopiacomposer = "BachJS"
 	mutopiaopus = "BWV 869"
-	mutopiainstrument = "Harpsicord, Piano"
+	mutopiainstrument = "Harpsichord, Piano"
 	source = "Breitkopf & Härtel, 1866"
 
 	style= "Baroque"

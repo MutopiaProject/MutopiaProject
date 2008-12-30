@@ -11,7 +11,7 @@
 	mutopiatitle = "Das Wohltemperierte Clavier I, Praeludium V"
 	mutopiacomposer = "BachJS"
 	mutopiaopus = "BWV 850"
-	mutopiainstrument = "Harpsicord, Piano"
+	mutopiainstrument = "Harpsichord, Piano"
 	source = "Breitkopf & Härtel, 1866"
 
 	style= "Baroque"
