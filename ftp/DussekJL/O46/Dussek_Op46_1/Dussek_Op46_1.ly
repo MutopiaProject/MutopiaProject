@@ -1,5 +1,5 @@
 \header {
-  filename=  "Dussek_Op46_1_2"
+  filename=  "Dussek_Op46_1"
   title =    \markup \center-align {"Six sonates faciles pour le Piano Forte" "avec accompagnement de Violon Ad Libitum" " "}
   opus =     "Opus 46 no. 1 (Craw 17)"
   subtitle=  "Sonate I"
@@ -7,14 +7,14 @@
   source="Six SONATES Faciles Pour le Piano Forte AVEC ACCOMPAGNEMENT de Violon Ad Libitum; à Paris Chez RICHAULT, Editeur de Musique, Boulevard Poissonnière N° 26 au Ier 663.R. (undated, apparently first half 19th Century)"
   copyright="Creative Commons Attribution-ShareAlike 3.0"
   style = "Classical"
-  mutopiatitle = "Six sonates faciles pour le Piano Forte"
+  mutopiatitle = "Six sonates faciles pour le Piano Forte (I)"
   mutopiacomposer = "DussekJL"
   mutopiainstrument = "Piano"
   maintainer = "Kris Van Bruwaene"
   maintainerEmail = "kris.vanbruwaene@gmail.com"
-  lastupdated = "2008-12-11"
- footer = "Mutopia-2008/12/21-1605"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+  lastupdated = "2008-12-23"
+ footer = "Mutopia-2009/01/05-1605"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 \version "2.10.33"
 
@@ -24,7 +24,7 @@ globalAllegro = {
 }
 
 TopVoiceAllegro = \relative g' {
-g'4.^\markup{\large \bold Allegro} e8 c[ c d e] | d4 d8[ e] c4 r | c'4. g8 e[ e f g] |
+g'4. e8 c[ c d e] | d4 d8[ e] c4 r | c'4. g8 e[ e f g] |
 % m4
 f4 f8[ g] e4 r8 g | a8.[ f16] c4 a'16[ c b c] d[ c b c] |
 % m6
@@ -135,7 +135,8 @@ b8[ d] g,4 r8 g'[ a b] |
 % 62
 <e g>4 f16[ f' f, f'] e,[ e' e, e'] d,[ d' d, d'] |
 % 63
-c,4 <e c'> <e c'> r \fermata \bar ":|"
+\override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+c,4 <e c'> <e c'> r \bar ":|"\mark \markup { \musicglyph #"scripts.ufermata" }
 }
 
 BottomVoiceAllegro = \relative a { \clef treble
@@ -327,6 +328,7 @@ g' g fis g \times 2/3 {b[ a g] }  \times 2/3 {b[ a g] } |
 %17
 \times 2/3 {r c e } \times 2/3 {r c e } c8 \bar ":|"
 }
+
 TopVoiceVarTwo =  \relative g' {
 % 2e var.
 \partial 8*1 g|
@@ -398,7 +400,8 @@ g'8 g r16 g\turn b g |
 %16
 c g e g g f e d |
 %17
-c e c e c8 \bar":|" 
+\override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+c e c e c8 \bar":|"\mark \markup { \musicglyph #"scripts.ufermata" }
 }
 
 
@@ -571,6 +574,7 @@ g,8 g g r | \clef treble
    }
   >>
   \layout {}
+  \header { piece = \markup{\bold Allegro} }
   \midi { 
     \context {
       \Score tempoWholesPerMinute = #(ly:make-moment 120 4)
@@ -593,7 +597,7 @@ g,8 g g r | \clef treble
      \BottomVoiceThema
    }
   >>
-  \header {piece = "Andante moderato Con variat."}
+  \header {piece = \markup{\bold {Andante moderato Con variat.}} }
   \layout {}
   \midi { 
     \context {
@@ -616,7 +620,7 @@ g,8 g g r | \clef treble
      \BottomVoiceVarOne
    }
   >>
-  \header {piece = "1re Var."}
+  \header {piece = \markup {\bold "1re Var."}}
   \layout {}
   \midi { 
     \context {
@@ -639,7 +643,7 @@ g,8 g g r | \clef treble
      \BottomVoiceVarTwo
    }
   >>
-  \header {piece = "2e Var."}
+  \header {piece = \markup {\bold "2e Var." }}
   \layout {}
   \midi { 
     \context {
@@ -662,7 +666,7 @@ g,8 g g r | \clef treble
      \BottomVoiceVarThree
    }
   >>
-  \header {piece = "3e Var."}
+  \header {piece = \markup {\bold "3e Var."}}
   \layout {}
   \midi { 
     \context {
