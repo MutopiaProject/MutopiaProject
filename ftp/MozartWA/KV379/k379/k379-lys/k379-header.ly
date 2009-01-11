@@ -10,7 +10,7 @@
     mutopiatitle = "Sonate for Violin and Piano K 379"
     mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
     mutopiaopus = "KV 379"
-    mutopiainstrument = "Violin and piano"
+    mutopiainstrument = "Violin and Piano"
     date = "1781"
     source = "Schirmer, 1906, ed. H. Schradieck"
     style = "Classical"

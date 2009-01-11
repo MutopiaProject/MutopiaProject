@@ -15,7 +15,7 @@
 	mutopiacopyright = "Creative Commons Attribution-ShareAlike 3.0"
 	mutopiacomposer = "MagnenatS"
 	mutopiapoet = "John Keats"
-	mutopiainstrument = "SATB choir a capella"
+	mutopiainstrument = "Voice (SATB)"
 	date = "2007"
 	source = "own work"
 	style = "Romantic"

@@ -5,7 +5,7 @@
  mutopiacomposer = "W. A. Mozart (1756-1791)"
  mutopiapoet = "Lorenzo da Ponte"
  mutopiaopus = "KV 527"
- mutopiainstrument = "Baritone, Mandolin, Violin, Viola, 'Cello"
+ mutopiainstrument = "Ensemble: Baritone, Mandolin, Violin, Viola, 'Cello"
  instrument = \Instrument
  date = "1787/Oct"
  source = "Neue Mozartausgabe"

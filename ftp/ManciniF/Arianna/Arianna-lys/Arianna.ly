@@ -6,7 +6,7 @@
 	composer = "Francesco Mancini (1672-1737)"
 	mutopiatitle = "Ebra d'Amor fuggia, Cantata a voce sola di Soprano"
 	mutopiacomposer = "ManciniF"
-	mutopiainstrument = "Soprano, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano) and Basso Continuo"
 	source = "Conservatorio S. Pietro a Majella, DM90132501375"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"

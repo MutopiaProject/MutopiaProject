@@ -7,7 +7,7 @@
 	mutopiatitle = "Ciaccona"
 	mutopiacomposer = "MarcelloB"
 	mutopiaopus = "Op. 2, No. 13"
-	mutopiainstrument = "Recorder, Basso Continuo"
+	mutopiainstrument = "Recorder and Basso Continuo"
 	source = "Gieddes Samling I,51 mu 6208.0385 U68"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"

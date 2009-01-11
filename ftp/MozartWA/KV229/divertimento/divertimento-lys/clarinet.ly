@@ -9,7 +9,7 @@
    mutopiatitle = "DIVERTIMENTO II for Oboe, Clarinet and Bassoon"
    mutopiacomposer = "W.A.Mozart"
    mutopiaopus = "K.V.A. 229"
-   mutopiainstrument = "Oboe, Clarinet, Bassoon"
+   mutopiainstrument = "Ensemble: Oboe, Clarinet, Bassoon"
    source = "Boosey & Hawkes"
    style = "Classical"
    copyright = "Public Domain"

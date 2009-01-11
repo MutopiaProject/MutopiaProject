@@ -15,7 +15,7 @@
   mutopiatitle = "Die Verschweigung"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 518"
-  mutopiainstrument = "Voice and piano"
+  mutopiainstrument = "Voice and Piano"
   date = "20th May 1787"
   source = "Breitkopf & Härtel (serie 7 n. 27)"
   style = "Classical"

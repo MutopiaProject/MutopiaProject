@@ -5,7 +5,7 @@
 \header {
 	mutopiatitle = "La Bayadère - Variation de Nikya"
  	mutopiacomposer = "MinkusLA"
- 	mutopiainstrument = "Piano, Flute, Horn"
+ 	mutopiainstrument = "Piano, Flute and Horn"
  	source = "New arrangement"
  	style = "Classical"
  	copyright = "Public Domain"

@@ -5,7 +5,7 @@
 \header {
 	mutopiatitle = "La Bayadère - Allegretto delicato"
  	mutopiacomposer = "MinkusLA"
- 	mutopiainstrument = "Piano, Flute"
+ 	mutopiainstrument = "Piano and Flute"
  	source = "New arrangement"
  	style = "Classical"
  	copyright = "Public Domain"

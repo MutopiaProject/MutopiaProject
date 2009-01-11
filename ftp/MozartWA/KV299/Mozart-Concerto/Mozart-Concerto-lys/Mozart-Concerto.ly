@@ -7,7 +7,7 @@
 	composer = "W. A. Mozart (1756-1791) "
 	mutopiacomposer= "MozartWA"
 	mutopiaopus = "K.299"
-	mutopiainstrument = "Flute, Harp"
+	mutopiainstrument = "Flute and Harp"
 	source = "Breitkopf & Härtel (from complete works edition 1877-1883)"
 	style = "Classical"
 	copyright = "Public Domain"

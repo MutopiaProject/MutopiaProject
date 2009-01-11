@@ -15,7 +15,7 @@
   mutopiatitle = "Das Lied der Trennung"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 519"
-  mutopiainstrument = "Voice and piano"
+  mutopiainstrument = "Voice and Piano"
   date = "23th May 1787"
   source = "Breitkopf & Härtel (serie 7 n. 28)"
   style = "Classical"

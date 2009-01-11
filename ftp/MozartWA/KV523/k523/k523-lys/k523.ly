@@ -14,7 +14,7 @@
   mutopiatitle = "Abendempfindung"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 523"
-  mutopiainstrument = "Voice and piano"
+  mutopiainstrument = "Voice and Piano"
   date = "24th June 1787"
   source = "Breitkopf & Härtel (serie 7 n. 30)"
   style = "Classical"

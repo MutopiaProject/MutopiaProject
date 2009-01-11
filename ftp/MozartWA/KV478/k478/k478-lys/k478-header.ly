@@ -6,7 +6,7 @@
     mutopiatitle = "Piano Quartet KV 478 in G Minor"
     mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
     mutopiaopus = "KV 477"
-    mutopiainstrument = "Orchestra"
+    mutopiainstrument = "Ensemble: Violin, Viola, Cello, Piano"
     date = "1785"
     source = "Breitkopf & Haertel (1880s)"
     style = "Classical"

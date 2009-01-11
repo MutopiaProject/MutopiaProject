@@ -15,7 +15,7 @@
   mutopiatitle = "Die Alte"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 517"
-  mutopiainstrument = "Voice and piano"
+  mutopiainstrument = "Voice and Piano"
   date = "18th May 1787"
   source = "Breitkopf & Härtel (serie 7 n. 26)"
   style = "Classical"

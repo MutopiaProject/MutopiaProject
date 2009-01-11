@@ -14,7 +14,7 @@
   mutopiatitle = "Als Luise die Briefe ihres ungetreuen Liebhabers verbrannte"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 520"
-  mutopiainstrument = "Voice and piano"
+  mutopiainstrument = "Voice and Piano"
   date = "26th May 1787"
   source = "Breitkopf & Härtel (serie 7 n. 29)"
   style = "Classical"
