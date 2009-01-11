@@ -5,7 +5,7 @@
 %\header {
 % mutopiatitle = "Sonata a due viola da gamba n°6"
 % mutopiacomposer = "August KUHNEL (1645-1700)"
-% mutopiainstrument = "Basso, viola da gamba, viola da gamba"
+% mutopiainstrument = "Ensemble: Basso, viola da gamba, viola da gamba"
 % date = "1698"
 % source = "fac simile"
 % style = "Baroque"

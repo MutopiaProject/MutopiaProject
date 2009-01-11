@@ -5,7 +5,7 @@
  mutopiacomposer = "J. B. Lully (1632-1687)"
  mutopiapoet = "P. Quinault (1635-1688)"
  mutopiaopus = "LWV 71"
- mutopiainstrument = "Strings, Tenor, B.C."
+ mutopiainstrument = "Voice (Tenor), String Ensemble, Basso Continuo"
  source = "Ballard, 1686"
  style = "Baroque"
  copyright = "Public Domain"

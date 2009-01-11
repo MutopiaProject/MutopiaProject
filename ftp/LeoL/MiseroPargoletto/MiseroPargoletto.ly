@@ -6,7 +6,7 @@
 	composer = "L. Leo (1694-1744)"
 	mutopiatitle = "Misero pargoletto, Aria from Demofoonte"
 	mutopiacomposer = "LeoL"
-	mutopiainstrument = "Voice (Soprano), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), String Ensemble, Basso Continuo"
 	date = "1735"
 	source = "Copy, 1740-1760"
 	style = "Baroque"
