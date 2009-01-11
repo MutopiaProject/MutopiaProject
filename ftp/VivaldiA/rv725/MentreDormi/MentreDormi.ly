@@ -5,7 +5,7 @@
 	composer = "A. Vivaldi (1678-1741)"
 	mutopiatitle = "Mentre dormi amor, Aria from L'Olimpiade"
 	mutopiacomposer = "VivaldiA"
-	mutopiainstrument = "Soprano, Horn, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), Horn, String Ensemble, Basso Continuo"
 	mutopiapoet = "P. Metastasio (1698-1782)"
 	mutopiaopus = "RV 725" 
 	date = "1734"

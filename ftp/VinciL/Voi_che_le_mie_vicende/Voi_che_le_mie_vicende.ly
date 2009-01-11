@@ -6,7 +6,7 @@
 	composer = "Leonardo Vinci (1690-1730)"
 	mutopiatitle = "Voi che le mie vicende, Aria from Semiramide"
 	mutopiacomposer = "VinciL"
-	mutopiainstrument = "Tenore, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Tenor), String Ensemble, Basso Continuo"
 	source = "Conservatorio S. Pietro a Majella, DM02032202162"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"

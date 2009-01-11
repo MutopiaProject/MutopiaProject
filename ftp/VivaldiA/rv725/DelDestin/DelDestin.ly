@@ -5,7 +5,7 @@
 	composer = "A. Vivaldi (1678-1741)"
 	mutopiatitle = "Del destin non vi lagnate, Aria from L'Olimpiade"
 	mutopiacomposer = "VivaldiA"
-	mutopiainstrument = "Voice (Tenor), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Tenor), String Ensemble, Basso Continuo"
 	mutopiapoet = "P. Metastasio (1698-1782)"
 	mutopiaopus = "RV 725" 
 	date = "1734"

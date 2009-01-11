@@ -6,7 +6,7 @@
 	composer = "L. Vinci (1690-1730)"
 	mutopiatitle = "Al fiero mio sospetto, Aria from Caduta dei Decemviri"
 	mutopiacomposer = "VinciL"
-	mutopiainstrument = "Voice (Bass), Viola, Bassoon, Basso Continuo"
+	mutopiainstrument = "Voice (Bass), Viola, Bassoon and Basso Continuo"
 	date = "1727"
 	source = "Copy, 1710-1740"
 	style = "Baroque"

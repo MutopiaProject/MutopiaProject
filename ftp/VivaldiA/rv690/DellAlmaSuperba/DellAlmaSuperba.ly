@@ -5,7 +5,7 @@
 	composer = "A. Vivaldi (1648-1741)"
 	mutopiatitle = "Quell'alma superba, Aria from Serenata a tre"
 	mutopiacomposer = "VivaldiA"
-	mutopiainstrument = "Voice (Tenor), Bassoon, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Tenor), Bassoon, String Ensemble, Basso Continuo"
 	mutopiaopus = "RV 690" 
 	date = "1718?"
 	source = "Autograph, 1718?"

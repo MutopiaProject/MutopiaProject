@@ -5,7 +5,7 @@
 	composer = "A. Vivaldi (1678-1741)"
 	mutopiatitle = "Siam navi all'onde algenti, Aria from L'Olimpiade"
 	mutopiacomposer = "VivaldiA"
-	mutopiainstrument = "Soprano, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), String Ensemble, Basso Continuo"
 	mutopiapoet = "P. Metastasio (1698-1782)"
 	mutopiaopus = "RV 725" 
 	date = "1734"

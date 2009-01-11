@@ -6,7 +6,7 @@
 	composer = "Leonardo Vinci (1690-1730)"
 	mutopiatitle = "Ride il ciel per me sereno, Aria from Siface"
 	mutopiacomposer = "VinciL"
-	mutopiainstrument = "Soprano, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), String Ensemble, Basso Continuo"
 	source = "Conservatorio S. Pietro a Majella, DM02032202163"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"

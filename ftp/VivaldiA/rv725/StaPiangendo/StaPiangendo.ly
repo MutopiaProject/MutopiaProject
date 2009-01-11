@@ -6,7 +6,7 @@
 	composer = "A. Vivaldi (1678-1741)"
 	mutopiatitle = "Sta piangendo la tortorella, Aria from L'Olimpiade"
 	mutopiacomposer = "VivaldiA"
-	mutopiainstrument = "Soprano, Horns, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), Horns, String Ensemble, Basso Continuo"
 	mutopiapoet = "P. Metastasio (1698-1782)"
 	mutopiaopus = "RV 725" 
 	date = "1734"
