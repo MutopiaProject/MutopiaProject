@@ -6,7 +6,7 @@
   mutopiaopus = "Gimo 297"
   mutopiatitle = "Concerto Per Mandolino, Violino Primo, Violino Secondo e Basso"
   mutopiacomposer = "Vito Ugolino"
-  mutopiainstrument = "Mandolin, 2 Violins, 'Cello, Guitar"
+  mutopiainstrument = "Ensemble: Mandolin, 2 Violins, 'Cello, Guitar"
   date = "c.1760"
   source = "Gimo Music Collection 297"
   style = "Baroque"

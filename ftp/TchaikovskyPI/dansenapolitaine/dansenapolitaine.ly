@@ -5,7 +5,7 @@
 \header {
 	mutopiatitle = "Napolitan Dance (Swan Lake)"
  	mutopiacomposer = "TchaikovskyPI"
- 	mutopiainstrument = "Piano, Trumpet, Percussion"
+ 	mutopiainstrument = "Trumpet, Percussion and Piano"
  	source = "New arrangement"
  	style = "Classical"
  	copyright = "Public Domain"

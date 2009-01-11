@@ -10,7 +10,7 @@
   maintainer = "Simone Brun"
   maintainerEmail = "brunsim@gmail.com"
   mutopiacomposer = "Traditional"
-  mutopiainstrument = "SATB"
+  mutopiainstrument = "Voice (SATB)"
   style = "Gospel"
   license = "Public Domain"
 
