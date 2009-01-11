@@ -6,7 +6,7 @@
 	composer = "Andrea Amendola"
 	mutopiatitle = "Giacea nel proprio sangue, Cantata di Basso"
 	mutopiacomposer = "AmendolaA"
-	mutopiainstrument = "Voice (Bass), Basso Continuo"
+	mutopiainstrument = "Voice (Bass) and Basso Continuo"
 	date="1715"
 	source = "Manuscript 1710-1740"
 	style = "Baroque"

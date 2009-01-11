@@ -5,7 +5,7 @@
 	composer = "arr: Michael Praetorius, 1609"
 	mutopiacomposer = "Anonymous"
 	mutopiaarranger = "arr: Michael Praetorius, 1609"
-	mutopiainstrument = "Voice SATB"
+	mutopiainstrument = "Voice (SATB)"
 	date = "1599/1609"
 	source = "Musae Sioniae Michaëlis Praetorij, C. deutscher geistlicher in de christlichen Kirchen ublicher Psalmen und Lieder mit 4 Stimmen Sechster Theil. Wolfenbüttel 1609, Nr. 53."
 	style = "Renaissance"
