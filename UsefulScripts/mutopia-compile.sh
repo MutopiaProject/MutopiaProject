@@ -60,12 +60,12 @@ fi
 
 # LilyPond version specific fixes
 # Note - these will need to be updated as the default version changes
-# Currently assumed default version: 2.10
-if [[ $LILYPOND_VERSION = 2\.11 ]] || [[ $LILYPOND_VERSION = 2\.11\.? ]] || [[ $LILYPOND_VERSION = 2\.11\.?? ]]; then
+# Currently assumed default version: 2.12
+if [[ $LILYPOND_VERSION = 2\.10 ]] || [[ $LILYPOND_VERSION = 2\.10\.? ]] || [[ $LILYPOND_VERSION = 2\.10\.?? ]]; then
    # NB. This changed mid-way through 2.11
-   PREVIEW=-dpreview;
-else
    PREVIEW=--preview;
+else
+   PREVIEW=-dpreview;
 fi
 
 # Switch on landscape hack if necessary
