@@ -6,7 +6,7 @@
 	composer = "Friedrich II. (1712-1786)"
 	mutopiatitle = "Sinfonia"
 	mutopiacomposer = "FriedrichII"
-	mutopiainstrument = "Flutes, Oboes, Horns, Strings, Basso Continuo"
+	mutopiainstrument = "Ensemble: Flutes, Oboes, Horns, Strings, Basso Continuo"
 	source = "Gieddes Samling X,1 U150 mu 6208.0485"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"

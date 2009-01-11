@@ -12,7 +12,7 @@ composer =  \markup{\column {\line {" "}"Gabriel Faure"
 					}
 	mutopiatitle = "Berceuse"
  	mutopiacomposer = "FaureG"
- 	mutopiainstrument = "Flute, Guitar"
+ 	mutopiainstrument = "Flute and Guitar"
  	mutopiaopus = "Op. 56"
  	source = "New adaptation from Paris: J. Hamelle"
  	style = "Romantic"
