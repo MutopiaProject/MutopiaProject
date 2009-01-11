@@ -159,6 +159,11 @@ until (eof CACHE) {
   if (($go == 1) and ($FORM{Instrument} eq "Harp")
   and ($instrument =~ /Harpsichord/))
   { $go = 0; }
+
+  # Check if solo instruments only are required
+  if (($go == 1) and ($FORM{solo} == 1)
+  and (($instrument =~ /[Dd]uet/) or ($instrument =~ /[Tt]rio/) or($instrument =~ /[Qq]uartet/) or ($instrument =~ /[Qq]uintet/) or ($instrument =~ /Orchestra/) or ($instrument =~ /[Ee]nsemble/) or ($instrument =~ / and /) or ($instrument =~ /SATB/) or ($instrument =~ /accompan/) or ($instrument =~ /[0-9]/)))
+  { $go = 0; }
   
   # Do the instrument, style, ID, recency and collections match?
   if ( ($go == 1)
