@@ -11,7 +11,7 @@ composer =  \markup{\column {\line {"J.S. Bach "}
 				 { \italic "(1685 - 1750)"} } }
 	mutopiatitle = "Air ('on the G string')"
  	mutopiacomposer = "BachJS"
- 	mutopiainstrument = "Flute, Guitar"
+ 	mutopiainstrument = "Flute and Guitar"
  	mutopiaopus = "BWV 1068"
  	source = "New adaptation from Bach-Gesellschaft"
  	style = "Baroque"

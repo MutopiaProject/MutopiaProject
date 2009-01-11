@@ -61,7 +61,7 @@
 	 mutopiatitle = "Brandenburg Concerto No. 5 in D Major"
 	 mutopiacomposer = "BachJS"
 	 mutopiaopus = "BWV 1050"
-	 mutopiainstrument = "String, Harpsichord, Flute, Baroque Chamber,  chamber orchestras, violins, piano, viola, cello, double bass"
+	 mutopiainstrument = "Ensemble: Flute, Two Violins, Violas, 'Cello, Bass and Harpsichord"
 	 date = "1719?"
 	 source = "Dover From the Bach-Gesellschaft Edition"
 	 style = "Baroque"

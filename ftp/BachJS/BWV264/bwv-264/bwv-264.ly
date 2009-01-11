@@ -10,7 +10,7 @@
 title = "Als der gütige Gott vollenden wollt sein Wort"
 composer = "J.S. Bach"
 opus = "BWV 264"
-instrument = "SATB"
+instrument = "Voice (SATB)"
 source = "www.jsbchorales.net"
 copyright = "Creative Commons Attribution 3.0"
 style = "Baroque"

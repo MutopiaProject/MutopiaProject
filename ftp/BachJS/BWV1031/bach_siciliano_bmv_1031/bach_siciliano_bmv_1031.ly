@@ -13,7 +13,7 @@ composer =  \markup{\column {\line {"J.S. Bach "}
 					}
 	mutopiatitle = "Siciliano"
  	mutopiacomposer = "BachJS"
- 	mutopiainstrument = "Flute, Guitar"
+ 	mutopiainstrument = "Flute and Guitar"
  	mutopiaopus = "BWV 1031"
  	source = "New adaptation from Bach-Gesellschaft"
  	style = "Baroque"

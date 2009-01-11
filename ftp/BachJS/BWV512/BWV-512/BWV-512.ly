@@ -7,7 +7,7 @@
   composer 	    = "Johann Sebastian Bach"
   opus     	    = "BWV 512"
   mutopiacomposer   = "BachJS"
-  mutopiainstrument = "piano"
+  mutopiainstrument = "Piano"
   source	    = "Bach-Gesellschaft Ausgabe 1851-1899 Band 43 (1894)"
   sourceurl         = "http://imslp.org/wiki/Notebook_for_Anna_Magdalena_Bach_(Bach,_Johann_Sebastian)"
   style	            = "Baroque"

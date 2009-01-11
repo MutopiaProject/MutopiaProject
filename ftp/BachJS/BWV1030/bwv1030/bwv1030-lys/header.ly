@@ -4,7 +4,7 @@
  mutopiatitle = "Sonata in B minor for flute and harpsichord"
  mutopiacomposer = "BachJS"
  mutopiaopus = "BWV 1030"
- mutopiainstrument = "Flute, Harpsichord"
+ mutopiainstrument = "Flute and Harpsichord"
  title = "Sonate h Moll"
  subtitle = "Sonata a Cembalo obligato e Travers. solo di J. S. Bach"
  source = "Autograph"

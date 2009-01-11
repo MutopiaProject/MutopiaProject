@@ -20,7 +20,7 @@
         composer = "Johann Sebastian Bach (1685-1750)"
         mutopiacomposer = "BachJS"
         opus = "BWV 1087"
-        mutopiainstrument = "Violin, Viola, Cello"
+        mutopiainstrument = "Violin and Viola"
         style = "Baroque"
         source = "Photocopy of Autograph"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
