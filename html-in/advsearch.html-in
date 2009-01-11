@@ -36,6 +36,7 @@
 <option value="">any instrument</option>
 [[ INSTRUMENT_OPTIONS() ]]
 </select></li>
+<li><input type="checkbox" name="solo" value="1" /> Solo music only</li>
 <li>style: <select name="Style">
 <option value="">any</option>
 [[ STYLE_OPTIONS() ]]
