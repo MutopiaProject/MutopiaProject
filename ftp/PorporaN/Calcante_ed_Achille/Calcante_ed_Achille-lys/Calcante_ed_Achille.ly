@@ -5,7 +5,7 @@
 	composer = "Nicola Porpora (1686-1768)"
 	mutopiatitle = "Calcante ed Achille, Cantata a due Voci per Soprano e Basso"
 	mutopiacomposer = "PorporaN"
-	mutopiainstrument = "Soprano, Basso, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), Basso, String Ensemble, Basso Continuo"
 	source = "Conservatorio S. Pietro a Majella, DM90133200439"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"

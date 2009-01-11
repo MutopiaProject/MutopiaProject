@@ -6,7 +6,7 @@
 	composer = "N. Porpora (1686-1768)"
 	mutopiatitle = "Senti se l'ingannai, Aria from Agrippina"
 	mutopiacomposer = "PorporaN"
-	mutopiainstrument = "Voice (Alto), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Alto), String Ensemble, Basso Continuo"
 	date = "1708"
 	source = "Copy of various copyists, 1700-1710"
 	style = "Baroque"

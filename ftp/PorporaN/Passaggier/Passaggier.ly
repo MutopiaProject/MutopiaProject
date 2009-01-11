@@ -5,7 +5,7 @@
 	composer = "N. Porpora (1686-1768)"
 	mutopiatitle = "Passaggier che su la sponda, Aria from Semiramide riconosciuta"
 	mutopiacomposer = "PorporaN"
-	mutopiainstrument = "Voice (Soprano), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), String Ensemble, Basso Continuo"
 	date = "1729"
 	source = "Copy of various copyists, 1710-1740"
 	style = "Baroque"

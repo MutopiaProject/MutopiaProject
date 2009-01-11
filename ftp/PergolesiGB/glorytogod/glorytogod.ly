@@ -17,7 +17,7 @@
 \header {
  mutopiatitle = "Glory to God in the highest"
  mutopiacomposer = "G. B. Pergolesi (1710 -1736)"
- mutopiainstrument = "Voice (SATB), Organ"
+ mutopiainstrument = "Voice (SATB) and Organ"
  date = "1700s"
  source = "G Shirmer, Inc., 1904"
  style = "Classical"

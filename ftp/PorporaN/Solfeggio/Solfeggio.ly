@@ -6,7 +6,7 @@
 	composer = "N. Porpora (1686-1768)"
 	mutopiatitle = "Solfeggio"
 	mutopiacomposer = "PorporaN"
-	mutopiainstrument = "Voice (Soprano), Basso Continuo"
+	mutopiainstrument = "Voice (Soprano) and Basso Continuo"
 	source = "Levesque, Bêche: Solfèges d'Italie avec la basse chiffrée (ca. 1800)"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"
