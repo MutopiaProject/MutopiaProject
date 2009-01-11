@@ -10,7 +10,7 @@
   composer = "Ludwig van Beethoven"
   mutopiatitle = "Variations - Opus 66"
   mutopiacomposer = "BeethovenLv"
-  mutopiainstrument = "'Cello, Piano"
+  mutopiainstrument = "Cello and Piano"
   mutopiaopus = "Op. 66"
   date = "1798"
   source = "Breitkopf and Hartel"

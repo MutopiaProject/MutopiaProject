@@ -10,7 +10,7 @@
   composer = "Ludwig van Beethoven"
   mutopiatitle = "Violin Sonata No. 9 in A Major, 3rd Movement: Presto"
   mutopiacomposer = "BeethovenLv"
-  mutopiainstrument = "Violin, Piano"
+  mutopiainstrument = "Violin and Piano"
   mutopiaopus = "Op. 47"
   date = "19th Century"
   source = "Breitkopf and Hartel"

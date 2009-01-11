@@ -10,7 +10,7 @@
   composer = "Ludwig van Beethoven"
   mutopiatitle = "Violin Sonata No. 9 in A Minor, 1st Movement: Adagio sostenuto - Presto - Adagio"
   mutopiacomposer = "BeethovenLv"
-  mutopiainstrument = "Violin, Piano"
+  mutopiainstrument = "Violin and Piano"
   mutopiaopus = "Op. 47"
   date = "1802-1803"
   source = "Breitkopf and Hartel (1862-1865)"
