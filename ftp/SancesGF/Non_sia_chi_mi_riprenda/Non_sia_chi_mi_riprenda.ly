@@ -6,7 +6,7 @@
 	composer = "G. F. Sances (1600-1679)"
 	mutopiatitle = "Cantata. Non sia chi mi riprende"
 	mutopiacomposer = "SancesGF"
-	mutopiainstrument = "Voice (Soprano), Basso Continuo"
+	mutopiainstrument = "Voice (Soprano) and Basso Continuo"
 	date = "1636"
 	source = "Il quarto libro delle cantate et arie a voce sola, Venetia, Vincetini, 1636"
 	style = "Baroque"

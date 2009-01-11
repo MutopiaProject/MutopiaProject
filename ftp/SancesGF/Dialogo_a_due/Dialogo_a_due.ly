@@ -6,7 +6,7 @@
 	composer = "G. F. Sances (1600-1679)"
 	mutopiatitle = "Dialogo a due. Pastor e Ninfa"
 	mutopiacomposer = "SancesGF"
-	mutopiainstrument = "Voice (Soprano, Tenor), Basso Continuo"
+	mutopiainstrument = "Voice (Soprano, Tenor) and Basso Continuo"
 	date = "1649"
 	source = "Capricci poetici di Gioan Felice Sances, Venetia, Gardano, 1649"
 	style = "Baroque"

@@ -12,7 +12,7 @@
 \header {
   title = "There's Music in the Air"
   composer = "Geo. F. Root (1820-1895)"
-  instrument = "Quartette and Piano"
+  instrument = "Voice (SATB) and Piano"
   source = "Boston: Russell and Richardson:1857"
   copyright = "Public Domain"
   enteredby = "Stan Sanderson"

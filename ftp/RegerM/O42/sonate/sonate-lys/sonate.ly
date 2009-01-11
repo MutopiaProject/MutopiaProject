@@ -24,7 +24,7 @@
 	mutopiatitle = "Four Sonatas for Unaccompanied Violin"
 	mutopiacomposer = "RegerM"
 	mutopiaopus = "42, Heft 1 No. 1"
-	mutopiainstrument = "violin"
+	mutopiainstrument = "Violin"
 	source = "Jos. Aibl Verlag G.m.b.H Leipzig, 1900"
 	style = "Classical"
 	copyright = "Public Domain"

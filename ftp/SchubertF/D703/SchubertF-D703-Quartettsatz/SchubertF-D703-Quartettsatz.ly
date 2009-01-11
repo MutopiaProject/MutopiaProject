@@ -30,7 +30,7 @@
  mutopiacomposer = "SchubertF"
  mutopiapoet = ""
  mutopiaopus = "D.703"
- mutopiainstrument = "String Quartett"
+ mutopiainstrument = "String Quartet"
  date = "1820"
  source = "Breitkopf & Härtel, 1894"
  style = "Romantic"

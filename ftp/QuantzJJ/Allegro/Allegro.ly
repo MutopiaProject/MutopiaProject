@@ -6,7 +6,7 @@
 	composer = "Johann Joachim Quantz (1697-1773)"
 	mutopiatitle = "Allegro"
 	mutopiacomposer = "QuantzJJ"
-	mutopiainstrument = "Flute, Basso Continuo"
+	mutopiainstrument = "Flute and Basso Continuo"
 	source = "Gieddes Samling I,17 mu 6310.0860"
 	style = "Baroque"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"
