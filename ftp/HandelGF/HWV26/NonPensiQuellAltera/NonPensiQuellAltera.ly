@@ -7,7 +7,7 @@
 	mutopiacomposer = "HandelGF"
 	mutopiapoet = "Giacomo Rossi"
 	mutopiaopus = "HWV 26"
-	mutopiainstrument = "Voice (Tenor), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Tenor), String Ensemble, Basso Continuo"
 	date = "1729"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 77, 1879"
 	style = "Baroque"

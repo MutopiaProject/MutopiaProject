@@ -7,7 +7,7 @@
 	mutopiatitle = "Corri, vola, a' tuoi trofei , Aria from Giustino"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 37"
-	mutopiainstrument = "Voice (Soprano), Oboes, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), Oboes, String Ensemble, Basso Continuo"
 	date = "1736/37"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 88, 1883"
 	style = "Baroque"

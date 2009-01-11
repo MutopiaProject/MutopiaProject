@@ -6,7 +6,7 @@
 	composer = "J. A. Hasse (1699-1783)"
 	mutopiatitle = "Se del fiume , Aria from Artaserse"
 	mutopiacomposer = "HasseJA"
-	mutopiainstrument = "Voice (Soprano), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), String Ensemble, Basso Continuo"
 	date = "1730"
 	source = "Copy, 1760-1790"
 	style = "Baroque"

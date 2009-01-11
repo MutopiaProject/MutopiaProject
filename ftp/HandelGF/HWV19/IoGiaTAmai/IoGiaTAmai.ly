@@ -7,7 +7,7 @@
 	mutopiatitle = "Io già t'amai , Aria from Rodelinda"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 19"
-	mutopiainstrument = "Voice (Tenor), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Tenor), String Ensemble, Basso Continuo"
 	date = "1724-25"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 70, 1876"
 	style = "Baroque"

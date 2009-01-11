@@ -7,7 +7,7 @@
 	mutopiatitle = "Impara, ingrata , Aria from Atalanta"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 35"
-	mutopiainstrument = "Voice (Basso), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Basso), String Ensemble, Basso Continuo"
 	date = "1736"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 87, 1882"
 	style = "Baroque"

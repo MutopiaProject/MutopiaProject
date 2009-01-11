@@ -7,7 +7,7 @@
 	mutopiatitle = "Se potessero i sospir' miei , Aria from Imeneo"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 41"
-	mutopiainstrument = "Voice (Alto), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Alto), String Ensemble, Basso Continuo"
 	date = "1738-1740"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 93, 1885"
 	style = "Baroque"

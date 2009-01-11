@@ -8,7 +8,7 @@
 	mutopiacomposer = "HandelGF"
 	mutopiapoet = "Giacomo Rossi"
 	mutopiaopus = "HWV 7"
-	mutopiainstrument = "Voice (Soprano), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), String Ensemble, Basso Continuo"
 	date = "1711"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 58, 1874"
 	style = "Baroque"

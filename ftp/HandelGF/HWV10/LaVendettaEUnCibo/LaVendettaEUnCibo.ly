@@ -7,7 +7,7 @@
 	mutopiatitle = "La vendetta e un cibo , Aria from Silla"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 10"
-	mutopiainstrument = "Voice (Alto), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Alto), String Ensemble, Basso Continuo"
 	date = "1713?"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 61, 1875"
 	style = "Baroque"

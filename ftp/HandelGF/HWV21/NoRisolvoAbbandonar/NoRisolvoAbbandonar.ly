@@ -7,7 +7,7 @@
 	mutopiatitle = "No! Risolvo abbandonar , Aria from Alessandro"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 21"
-	mutopiainstrument = "Voice (Alto), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Alto), String Ensemble, Basso Continuo"
 	date = "1726"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 72, 1877"
 	style = "Baroque"

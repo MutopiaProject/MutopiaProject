@@ -7,7 +7,7 @@
 	mutopiatitle = "Ecco il sol , Aria from La Resurrezione"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 47"
-	mutopiainstrument = "Voice (Tenor), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Tenor), String Ensemble, Basso Continuo"
 	date = "1708"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 39, 1887"
 	style = "Baroque"

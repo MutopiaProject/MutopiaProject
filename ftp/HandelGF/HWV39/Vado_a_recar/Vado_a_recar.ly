@@ -7,7 +7,7 @@
 	mutopiatitle = "Vado a recar la morte , Aria from Faramondo"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 39"
-	mutopiainstrument = "Voice (Basso), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Basso), String Ensemble, Basso Continuo"
 	date = "1737"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 91, 1884"
 	style = "Baroque"

@@ -8,7 +8,7 @@
 	mutopiacomposer = "HandelGF"
 	mutopiapoet = "Paolo Antonio Rolli (1687-1765)"
 	mutopiaopus = "HWV 42"
-	mutopiainstrument = "Voice (Alto), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Alto), String Ensemble, Basso Continuo"
 	date = "1740"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 94, 1885"
 	style = "Baroque"

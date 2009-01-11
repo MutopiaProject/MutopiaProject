@@ -8,7 +8,7 @@
 	mutopiacomposer = "HandelGF"
 	mutopiapoet = "Nicola Haym (1678-1729)"
 	mutopiaopus = "HWV 22"
-	mutopiainstrument = "Voice (Bass), Oboes, Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Bass), Oboes, String Ensemble, Basso Continuo"
 	date = "1727"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 73, 1877"
 	style = "Baroque"

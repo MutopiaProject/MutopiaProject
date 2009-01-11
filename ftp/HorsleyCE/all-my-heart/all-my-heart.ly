@@ -19,7 +19,7 @@
 	mutopiacomposer = "HorsleyCE"
 	mutopiapoet = "Paul Gerhardt (1607-1676)"
 	mutopiaopus = ""
-	mutopiainstrument = "Voice (SATB), Organ"
+	mutopiainstrument = "Voice (SATB) and Organ or Piano"
 	date = "1862"
 	source = "Melbourne: C. E. Horsley, c. 1862"
 	copyright = "Public Domain"

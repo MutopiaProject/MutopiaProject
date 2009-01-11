@@ -8,7 +8,7 @@
 	mutopiacomposer = "HandelGF"
 	mutopiapoet = "Nicola Giuvo (1680-1748)"
 	mutopiaopus = "HWV 72"
-	mutopiainstrument = "Voice (Bass), Strings, Basso Continuo"
+	mutopiainstrument = "Voice (Bass), String Ensemble, Basso Continuo"
 	date = "1708"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 53, 1892"
 	style = "Baroque"

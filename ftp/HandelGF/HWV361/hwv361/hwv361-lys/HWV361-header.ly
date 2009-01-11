@@ -9,7 +9,7 @@
  mutopiatitle = "Sonata for Violin and Piano HWV 361"
  mutopiacomposer = "HandelGF"
  mutopiaopus = "HWV 361"
- mutopiainstrument = "Violin, Piano"
+ mutopiainstrument = "Violin and Piano"
  source = "Peters Edition - Editor: Hans Sitt (1850-1922)"
  style = "Baroque"
  copyright = "Creative Commons Attribution-ShareAlike 2.5"

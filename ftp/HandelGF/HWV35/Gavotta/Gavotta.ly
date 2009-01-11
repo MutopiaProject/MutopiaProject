@@ -7,7 +7,7 @@
 	mutopiatitle = "Gavotta from Atalanta"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 35"
-	mutopiainstrument = "Trumpets, Timpani"
+	mutopiainstrument = "Ensemble: Trumpets, Timpani"
 	date = "1736"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 87, 1882"
 	style = "Baroque"

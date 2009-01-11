@@ -7,7 +7,7 @@
 	mutopiatitle = "Voglio che sia l'indegno, Aria from Faramondo"
 	mutopiacomposer = "HandelGF"
 	mutopiaopus = "HWV 39"
-	mutopiainstrument = "Voice (Soprano), Strings and Basso Continuo"
+	mutopiainstrument = "Voice (Soprano), String Ensemble, Basso Continuo"
 	date = "1737"
 	source = "G. F. Händels Werke, für die Deutsche Händegesellschaft herausgegeben von Friedrich Chrysander, Bd.: 91, 1884"
 	style = "Baroque"
