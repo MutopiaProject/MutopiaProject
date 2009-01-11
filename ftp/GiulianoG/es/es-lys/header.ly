@@ -7,7 +7,7 @@
   composer = "Giuseppe Giuliani (17??-?)"
   mutopiacomposer = "Giuseppe Giuliano (17??-?)"
   mutopiaopus = ""
-  mutopiainstrument = "Mandolin, Bass"
+  mutopiainstrument = "Mandolin and Bass"
   date = "18th c."
   source = "Facsimile from The Music Library of Sweden"
   style = "Baroque"

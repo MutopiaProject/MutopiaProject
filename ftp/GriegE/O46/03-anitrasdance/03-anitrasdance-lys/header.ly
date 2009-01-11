@@ -6,7 +6,7 @@
  mutopiacomposer = "E. Grieg (1843-1907)"
  mutopiapoet = "Henrik Ibsen"
  mutopiaopus = "O 46 No. 3 - Peer Gynt Suite I"
- mutopiainstrument = "Violin, Viola, Cello, Double Bass, Triangle"
+ mutopiainstrument = "String Ensemble: Violin, Viola, Cello, Double Bass, Triangle"
  date = "1874-76 - rescored by Grieg 1886"
 title = "Anitra's Dance (Tanz)"
 subtitle = "La Danse D'Anitra"

@@ -6,7 +6,7 @@
   composer = "Giovanni Battista Gervasio (c.1725-c.1785)"
   mutopiacomposer = "G. B. Gervasio (c.1725-c.1785)"
   mutopiaopus = "Gimo 145"
-  mutopiainstrument = "Mandolin, 'Cello, Guitar"
+  mutopiainstrument = "Mandolin and Bass"
   date = "c.1760"
   source = "Gimo Music Collection"
   style = "Baroque"

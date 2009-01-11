@@ -6,7 +6,7 @@
   composer = "Giuseppe Giuliano (c. 1750)"
   mutopiacomposer = "Giuseppe Giuliano (c. 1750)"
   instrument = \Instrument
-  mutopiainstrument = "Mandolin, Violin, 'Cello"
+  mutopiainstrument = "Ensemble: Mandolin, Violin, 'Cello"
   date = "c.1760"
   source = "Gimo Music Collection"
   style = "Baroque"
