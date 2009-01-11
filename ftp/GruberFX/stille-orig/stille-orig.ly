@@ -5,13 +5,14 @@
   enteredby = "Peter Chubb";
   composer = "Franz Xavier Gruber";
   poet = "Joseph Mohr";
-  source="http://www.oberndorf.co.at/museum/StilleNacht/images/altenoten.jpg";
+  %source="http://www.oberndorf.co.at/museum/StilleNacht/images/altenoten.jpg";
+  source = "http://www.mutopiaproject.org/ftp/GruberFX/altenoten.jpg";
 
   mutopiatitle = "Stille Nacht";
   
   mutopiacomposer = "F. X. Gruber (1787--1863)";
   mutopiapoet = "J. Mohr (1792--1848)";
-  mutopiainstrument = "Voice (SA), Guitar";
+  mutopiainstrument = "Voice (SA) and Guitar";
   date = "1816";
   firstperformeddate = "1818/Dec/24";
 
