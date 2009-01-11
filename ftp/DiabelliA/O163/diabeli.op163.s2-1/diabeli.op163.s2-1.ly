@@ -5,7 +5,7 @@
     mutopiatitle = "Jugendfreuden - Sechs Sonatinen"
     mutopiacomposer = "DiabelliA"
     mutopiaopus = "Opus 163-2"
-    mutopiainstrument = "Piano, Piano"
+    mutopiainstrument = "Piano Duet"
     source = "Unknown"
     style = "Classical"
     copyright = "Creative Commons Attribution-ShareAlike 3.0"
