@@ -6,7 +6,7 @@
   composer = "Domenico Caudioso (17??-?)"
   mutopiacomposer = "Domenico Caudioso (17??-?)"
   instrument = \Instrument
-  mutopiainstrument = "Mandolin, 2 Violins, 'Cello"
+  mutopiainstrument = "Ensemble: Mandolin, 2 Violins, 'Cello"
   date = "c.1760"
   source = "Gimo Music Collection"
   style = "Baroque"

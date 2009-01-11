@@ -6,7 +6,7 @@
    
    mutopiatitle      = "Fughetta"
    mutopiacomposer   = "CarulliF"
-   mutopiainstrument = "Guitar, Guitar"
+   mutopiainstrument = "Guitar Duet"
    date              = "19th C."
    source            = "Manuscript"
    style             = "Classical"

@@ -1,7 +1,7 @@
 \header {
   mutopiatitle = "Precatio ad Deum"
   mutopiacomposer = "CouperinF"
-  mutopiainstrument = "Basse-tailles, Basse, Basse Continue"
+  mutopiainstrument = "Ensemble: Basse-tailles, Basse, Basse Continue"
   source = "Philidor Laisné, Ca 1705"
   style = "Baroque"
   copyright = "Creative Commons Attribution 3.0"

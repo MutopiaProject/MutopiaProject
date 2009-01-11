@@ -1,7 +1,7 @@
 \header {
   mutopiatitle = "Salvum me fac Deus"
   mutopiacomposer = "CouperinF"
-  mutopiainstrument = "Basse, Violons, Flûtes, Basse Continue"
+  mutopiainstrument = "Ensemble: Basse, Violons, Flûtes, Basse Continue"
   source = "Philidor Laisné, Ca 1705"
   style = "Baroque"
   copyright = "Creative Commons Attribution 3.0"

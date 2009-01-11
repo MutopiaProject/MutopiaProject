@@ -6,7 +6,7 @@
   composer = "Carlo Cecere (1706-1761)"
   mutopiacomposer = \composer
   instrument = \Instrument
-  mutopiainstrument = "Mandolin, 2 Violins, 'Cello"
+  mutopiainstrument = "Ensemble: Mandolin, 2 Violins, 'Cello"
   date = "1762"
   source = "Gimo Music Collection"
   style = "Baroque"
