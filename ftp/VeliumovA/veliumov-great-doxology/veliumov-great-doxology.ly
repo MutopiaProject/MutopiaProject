@@ -1,29 +1,64 @@
-\version "2.11.41"
+\version "2.12.0"
 
-#(set-global-staff-size 18)
+%{
+http://notes.tarakanov.net/composers/v.htm
+
+ChangeLog:
+2008-Feb-26
+	Submitted to mutopiaproject.org
+2009-Jan-09
+	Updated to Lilypond 2.12.0
+	Changed fonts to Free UCS (http://www.gnu.org/software/freefont/)
+	Fixed Cyrillic textual error
+	Corrected octave errors in mm. 25, 184, 191 and wrong tenor note in 232
+	Added transliteration
+%}
+
+%{
+Text translation:
+	Glory to God in the highest, and on earth peace, good will among men.
+	We hymn thee, we bless thee, we worship thee, we glorify thee, we give thanks unto thee for thy great glory.
+	O Lord King, heavenly God, Father Almighty; O Lord, the only-begotten Son, Jesus Christ; and the Holy Spirit.
+	O Lord God, Lamb of God, Son of the Father, that takest away the sin of the world, have mercy on us, thou that takest away the sins of the world.
+	Receive our prayer, thou that sittest at the right hand of the Father, and have mercy on us.
+	For thou only art holy, thou only art the Lord, O Jesus Christ, to the glory of God the Father.  Amen.
+	Every day will I bless thee, and I will praise thy name forever; yea, forever and ever.
+	Vouchsafe, O Lord, to keep us this day without sin.
+	Blessed art thou, O Lord, the God of our fathers, and praised and glorified is thy name forever.  Amen.
+	Let thy mercy be upon us, O Lord, even as we have set our hope on thee.
+	Blessed art thou, O Lord: teach me thy statutes. (thrice)
+	Lord, thou hast been our refuge from generation to generation.  I said:  Lord, be merciful unto me; heal my soul, for I have sinned against thee.
+	Lord, I have fled unto thee; teach me to do thy will, for thou art my God.
+	For with thee is the fountain of life; in thy light shall we see light.
+	O continue thy mercy unto them that know thee.
+	Holy God, Holy Mighty, Holy Immortal: have mercy on us. (thrice)
+	Glory to the Father and to the Son and to the Holy Spirit, both now and ever, and unto ages of ages.  Amen.
+	Holy Immortal: have mercy on us.
+	Holy God, Holy Mighty, Holy Immortal: have mercy on us.
+%}
+
+#(set-global-staff-size 20)
 #(ly:set-option 'point-and-click #f)
 
 dtDown = { \once\override DynamicText #'extra-offset = #'(0 . -1) }
 hpLeftDown = { \once\override Hairpin #'extra-offset = #'(-3 . -1.5) }
 hpRightDown = { \once\override Hairpin #'extra-offset = #'(2 . -1.5) }
 hpLeftDownExtra = { \once\override Hairpin #'extra-offset = #'(-3 . -2.5) }
-hpRightDownExtra = { \once\override Hairpin #'extra-offset = #'(2 . -2.5) }
 hpDown = { \once\override Hairpin #'extra-offset = #'(0 . -1) }
 hpHalfDown = { \once\override Hairpin #'extra-offset = #'(0 . -0.5) }
 
 \paper {
-	#(define fonts (make-pango-font-tree "DejaVu Serif Condensed" "DejaVu Sans Condensed" "DejaVu Sans Mono" 0.9))
+	#(define fonts (make-pango-font-tree "FreeSerif" "FreeSans" "FreeMono" 1))
 	ragged-last-bottom = ##f
 	between-system-padding = 0
-	page-count = 12
-	system-count = 36
 }
 
 \header {
-	title = "Славословіе великое"
-	composer = "А. Велиумов"
+	title = "Славословіе великое — Great Doxology"
+	composer = "A. Veliumov" %А. Велиумов
+	%tagline = ""
 	copyright = "Public Domain"
-	
+
 	%mutopia-specific headers:
 	mutopiatitle = "Great Doxology"
 	mutopiacomposer = "VeliumovA"
@@ -33,9 +68,9 @@ hpHalfDown = { \once\override Hairpin #'extra-offset = #'(0 . -0.5) }
 	style = "Romantic"
 	maintainer = "Daniel Johnson"
 	maintainerEmail = "il.basso.buffo at gmail.com"
-	lastupdated = "2008/Feb/27"
- footer = "Mutopia-2008/03/05-1362"
- %tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+	lastupdated = "2009/Jan/09"
+ footer = "Mutopia-2009/01/12-1362"
+ %tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 global = {
@@ -44,7 +79,7 @@ global = {
 
 sopNotes = {
 	\global \clef treble
-	s1*0^\markup{\hspace #-6 \large\bold "Умѣренно." }
+	s1*0^\markup{\hspace #-6 \large\bold  "Moderato" } %"Умѣренно."
 	%1
 	g'8([ a' bes' c''] d''4) | g'2. | a'8([\< bes'\! c'' d''] ees''[\> c'']) | a'2.\! |
 	%5
@@ -59,14 +94,14 @@ sopNotes = {
 	%22
 	c''4. bes'8 a'\> g'\! | f'4\< g'8([ a']) bes'([ c''])\! | d''4 d'' d'' |
 	%25
-	ees''4 ees' ees' | d''2(\> c''4)\! | bes'2 a'4 | g'4 g' d'' | d''2\< d''4 | c''4(\! d''4) \hpLeftDown ees''\> | d''4( g'') fis'' | g''2.\!\fermata |
+	ees''4 ees'' ees'' | d''2(\> c''4)\! | bes'2 a'4 | g'4 g' d'' | d''2\< d''4 | c''4(\! d''4) \hpLeftDown ees''\> | d''4( g'') fis'' | g''2.\!\fermata |
 	
 	%33
 	d''4.\p\< d''8 d'' d''\! | d''2 d''4 | d''2 d''4 |
 	%36
-	fis''( g'') ees'' | d''4( c'') bes' | a'4(\< bes') b'\! | \once\override TextScript #'X-offset = #-3 c''2^\markup{\small\bold "Замедляя."} cis''4\> | d''8\! r8
+	fis''( g'') ees'' | d''4( c'') bes' | a'4(\< bes') b'\! | c''2^\markup{\small\italic "rit."} %{ Замедляя %} cis''4\> | d''8\! r8
 	%40
-	d''4^\markup{\hspace #-1 \override #'(baseline-skip . 1.5) { \column {\large\bold "Прежній" \line { \hspace #1 \large\bold "темръ."}}}} d''8 d'' | d''4 d'' d'' | c''!4(\< f'') ees''\! | d''2. |
+	d''4^\markup{\small\italic "a tempo"} %{ Прежній темръ. %} d''8 d'' | d''4 d'' d'' | c''!4(\< f'') ees''\! | d''2. |
 	%44
 	c''4\> c'' c''\! | bes'4 bes' a' | bes'4 bes'\p bes' | a'2. | a'2\> a'4\! |
 	
@@ -77,19 +112,17 @@ sopNotes = {
 	%59
 	a'4 a' a' | bes'4 a' bes' | c''2\> c''4\! | bes'2 bes'4 | g'2 c''4\< | e''4 e''\!
 	%65
-	e''4 | f''4\f f'' f'' | e''4 e'' e'' | f''2 f''4 | f''2\> e''4\! | f''2.^\fermata |
+	e''4 | f''4\f f'' f'' | e''4 e'' e'' | f''2 f''4 | \hpLeftDown f''2\> e''4 | f''2.\!^\fermata |
 	
 	%70
-	\break \overrideProperty #"Score.NonMusicalPaperColumn" #'line-break-system-details #'((alignment-offsets . (0 -5.75 -12 -17.75 -24 -29.75 -36 -42.75)))
-	<a' d''>2\pp^\markup{\large\bold "Рѣже."} <a' d''>4 | <a' d''>2 <a' d''>4 | <a' d''>4 <a' d''> \hpLeftDown <a' d''>\< | \hpRightDown <a' d''>2.\!\>^\fermata |
+	<a' d''>2\pp^\markup{\large\bold "Meno mosso."} %{ Рѣже %} <a' d''>4 | <a' d''>2 <a' d''>4 | <a' d''>4 <a' d''> \hpLeftDown <a' d''>\< | \hpRightDown <a' d''>2.\!\>^\fermata |
 	%74
 	r4\! <a' e''>4\pp <a' e''> | <a' e''>2 <a' e''>4 | <a' e''>2 <a' e''>4 |
 	%77
-	\break \overrideProperty #"Score.NonMusicalPaperColumn" #'line-break-system-details #'((alignment-offsets . (0 -5.75 -12 -17.75 -24 -29.75 -36 -42.25)))
 	<a' d''>4 <a' d''> <a' d''> | <a' cis''>2 <a' cis''>4 | <a' d''>4 <a' d''> <a' d''> | d''4 c''! bes' | a'2.\> | a'2.\! | g'2^\fermata \bar "" \break
 	
 	%84
-	d''4\mf^\markup{\large\bold "Прежній темръ."} \bar "||" \key ees \major ees''2. | bes'2. | bes'4 bes' bes' | bes'2\> bes'4\! | bes'4 g' bes' | ees''2. |
+	d''4\mf^\markup{\large\bold "Tempo primo." } %{ "Прежній темръ." %} \bar "||" \key ees \major ees''2. | bes'2. | bes'4 bes' bes' | bes'2\> bes'4\! | bes'4 g' bes' | ees''2. |
 	%90
 	d''4 ees'' f'' | ees''2 ees''4 | ees''4 ees'' ees'' | \once\override Hairpin #'extra-offset = #'(-3 . -0.75) ees''2(\> d''4) | ees''2\!^\fermata
 	%95
@@ -125,12 +158,12 @@ sopNotes = {
 	%173
 	g'4.\p g'8 g' g' | a'4 a' a' | bes'4 bes' bes' | d''4 d'' d'' | fis''2. | g''2. ~ | g''2 g''4 | fis''2 r4 |
 	%181
-	r4 d''4\mf g'' | g''2 g''4 | g''2 f''4 | ees''2 ees'4 | d''2 d''4 | c''2\> c''4\! |
+	r4 d''4\mf g'' | g''2 g''4 | g''2 f''4 | ees''2 ees''4 | d''2 d''4 | c''2\> c''4\! |
 	%187
-	b'4 d'' d'' | ees''2. | ees''4 ees'' ees'' | d''4 d'' d'' | c''2^\markup{\small\bold "Замедляя."} c''4 | c''4 bes'!\> bes' | bes'2\! a'4 | g'2.^\fermata |
+	b'4 d'' d'' | ees''2. | ees''4 ees'' ees'' | d''4 d'' d'' | c''2^\markup{\small\italic "rit."} c''4 | c''4 bes'!\> bes' | bes'2\! a'4 | g'2.^\fermata |
 	
 	%195
-	d''4.\p^\markup{\large\bold "Прежній темръ."} d''8 d'' c'' | bes'4 bes' a' | g'4 g' a' | bes'4 bes' c'' | bes'2 bes'4 |
+	d''4.\p^\markup{\small\italic "a tempo."} d''8 d'' c'' | bes'4 bes' a' | g'4 g' a' | bes'4 bes' c'' | bes'2 bes'4 |
 	%200
 	bes'4 bes' bes' | bes'4 bes' bes' | a'4 bes' c'' | d''2( c''4) | bes'2. |
 	%205
@@ -140,18 +173,19 @@ sopNotes = {
 	%216
 	<d'' g''>2 <d'' f''>4 | <c'' ees''>2. | <d'' f''>2 <d'' f''>4 | << { <ees'' g''>2. ~ \noBreak <ees'' g''>2 } { \dtDown \hpDown s2\ff\< s4\! s4\> s4\! } >> r4^\fermata |
 	%221
-	<a' d''>2.\mf | <a' c''>2. | bes'2. | r4 r a'4\p | bes'2 bes'4 | d''4 c'' bes' | c''2. | c''4(\> bes'! a' | bes'2.\! | a'4) a'4\> a'\! | g'2.^\fermata \bar "||:"
+	<a' d''>2.\mf | <a' c''>2. | bes'2. | r4 r a'4\p | bes'2 bes'4 | d''4 c'' bes' | c''2. | c''4(\> bes'! a' | bes'2.\! | a'4) a'4\> a'\! | g'2^\fermata \bar "||:"
 	
 	%232
-	\set Timing.measurePosition = #(ly:make-moment -1 4) \override Score.BarNumber #'stencil = ##f
-	fis'4\p^\markup{\hspace #-7.5 \line { "[" \hspace #0.5 \musicglyph #"scripts.segno" "]" \hspace #1 \small\bold "(трижды.)" }} | g'8([\< a' bes'\! c''\> d'' bes'\!]) | g'4 g' g' | a'8([\< bes' c''\! d''\> ees'' c''\!]) | a'4 a' a' |
+	%\set Timing.measurePosition = #(ly:make-moment -1 4) \override Score.BarNumber #'stencil = ##f
+	fis'4\p^\markup{\hspace #-7.5 \line { "[" \hspace #0.5 \musicglyph #"scripts.segno" "]" \hspace #1 \small\bold "Tre volte." %{ трижды %} }} | g'8([\< a' bes'\! c''\> d'' bes'\!]) | g'4 g' g' | a'8([\< bes' c''\! d''\> ees'' c''\!]) | a'4 a' a' |
 	%236
 	g'8([ a' bes' c'']) d''4 | ees''4 d''8([ c'']) bes'([ a']) | g'2( bes'4 | a'4 g') fis' | g'2.^\markup{ \hspace #3 \small\italic "[Fine.]" } \bar ":|"
 	%241
+	\break
 	\override Staff.TimeSignature #'stencil = ##f \time 26/8
 	fis'8 fis'\breve fis'8 g'2.^\fermata \bar "||" \break
 	%242
-	fis'4 | \time 3/4 g'8([\< a' bes' c''])\! d''4 | ees''4\> d''8\!([ c'']) bes'([ a']) | g'2( bes'4 | a'4\> g') fis'\! | \once\override DynamicText #'X-offset = #-4 g'2.*5/6\p^\fermata s8^\markup{\hspace #-11 \small\italic "[D.S. al Fine]"} \bar "|."
+	fis'4 | \time 3/4 g'8([\< a' bes' c''])\! d''4 | ees''4\> d''8\!([ c'']) bes'([ a']) | g'2( bes'4 | a'4\> g') fis'\! | \once\override DynamicText #'x-offset = #-4 g'2.*5/6\p^\fermata s8^\markup{\hspace #-11 \small\italic "[D.S. al Fine]"} \bar "|."
 }
 
 altNotes = {
@@ -175,9 +209,9 @@ altNotes = {
 	%33
 	fis'4.\p\< fis'8 fis' fis'\! | g'2 fis'4 | g'2 g'4 |
 	%36
-	a'4( bes') g' | g'4( fis') g' | a'4(\< g') g'\! | g'2 g'4\> | fis'8\! r8 
+	a'4( bes') g' | g'4( fis') g' | a'4(\< g') g'\! | g'2^\markup{\small\italic "rit."} g'4\> | fis'8\! r8 
 	%40
-	fis'4 fis'8 fis' | g'4 g' d' | f'2\< f'4\! | f'2. |
+	fis'4^\markup{\small\italic "a tempo"} fis'8 fis' | g'4 g' d' | f'2\< f'4\! | f'2. |
 	%44
 	g'4\> g' g'\! | f'4 f' f' | f' f'\p f' | ees'2. | d'2\> d'4\! |
 	
@@ -188,7 +222,7 @@ altNotes = {
 	%59
 	f'4 f' f' | f'4 f' f' | f'2\> f'4\! | f'2 f'4 | e'2 e'4\< | g'4 g'\!
 	%65
-	g'4 | \dtDown a'4\f a' a' | g'4 g' g' | a'2 a'4 | g'2\> bes'4\! | a'2.^\fermata |
+	g'4 | \dtDown a'4\f a' a' | g'4 g' g' | a'2 a'4 | \hpLeftDown g'2\> bes'4 | a'2.\!^\fermata |
 	
 	%70
 	f'2\pp f'4 | f'2 f'4 | f'4 f' \hpLeftDown f'\< | \hpRightDown f'2.\!^\fermata\> |
@@ -218,7 +252,7 @@ altNotes = {
 	%135
 	bes2.\pp | d'2 d'4 | ees'2. | bes2 f'4 | ees'4\< f' g'\! |
 	%140
-	f'4( g') aes' | g'2 g'4 | g'2 g'4 | g'4( f') ees' | f'4(\> ees') d' | ees'2.\! |
+	f'4( g') aes' | g'2 g'4 | g'2 g'4 | g'4( f') ees' | f'4(\> ees') d' | ees''2.\! |
 	%146
 	g'4\p g' g' | g'4 f' ees' | f'2 f'4 | ees'4 f' ees' | f'2 f'4 | ees'4( f') ees' | g'2 g'4 | \hpLeftDown fis'2\> fis'4 | g'2.\!^\fermata |
 	%155
@@ -249,7 +283,7 @@ altNotes = {
 	%216
 	<g' b'>2 <g' b'>4 | g'2. | bes'!2 bes'4 | << { bes'2. ~ bes'2 } { \dtDown \hpDown s2\ff\< s4\! s4\> s4\! } >> r4^\fermata |
 	%221
-	fis'2.\mf | fis'2. | g'2. | r4 r4 fis'4\p | g'2 g'4 | g'4 g' g' | g'2. | g'2.(\> ~ | g'2.\! | fis'4) fis'\> fis'\! | d'2.^\fermata 
+	fis'2.\mf | fis'2. | g'2. | r4 r4 fis'4\p | g'2 g'4 | g'4 g' g' | g'2. | g'2.(\> ~ | g'2.\! | fis'4) fis'\> fis'\! | d'2^\fermata 
 
 	%232
 	d'4\p | d'2. | g'8([ fis']) g'([ a']) bes'([ g']) | fis'2. | fis'8([ g']) a'([ bes']) c''([ a']) |
@@ -283,9 +317,9 @@ tenNotes = {
 	%33
 	\dtDown \hpHalfDown a4.\p\< a8 a a\! | bes2 a4 | d'2 bes4 |
 	%36
-	c'4( bes) a | d'2 d'4 | d'2\< d'4\! | c'4( bes) bes8([\> a]) | a8\! r8
+	c'4( bes) a | d'2 d'4 | d'2\< d'4\! | c'4(^\markup{\small\italic "rit."} bes) bes8([\> a]) | a8\! r8
 	%40
-	a4 a8 a | bes4 bes bes | c'2\< c'4\! | bes2. |
+	a4^\markup{\small\italic "a tempo"} a8 a | bes4 bes bes | c'2\< c'4\! | bes2. |
 	%44
 	bes4\> bes ees'\! | d'4 d' c' | d'4 d'\p d' | c'2. | fis2\> fis4\! |
 	
@@ -296,7 +330,7 @@ tenNotes = {
 	%59
 	c'4 c' c' | bes4 ees' d' | ees'2\> ees'4\! | d'2 d'4 | c'2 c'4\< | c'4 c'\!
 	%65
-	c'4 | c'4\f c' c' | c'4 c' c' | c'2 c'4 | c'2\> c'4\! | c'2.^\fermata |
+	c'4 | c'4\f c' c' | c'4 c' c' | c'2 c'4 | \hpLeftDown c'2\> c'4 | c'2.\!^\fermata |
 	
 	%70
 	<a d'>2\pp <a d'>4 | <a d'>2 <a d'>4 | <a d'>4 <a d'> \hpLeftDown <a d'>\< | \hpRightDown <a d'>2.\!^\fermata\> |
@@ -332,7 +366,7 @@ tenNotes = {
 	%155
 	d'2.\p | << \context Voice = tenVoice { \voiceOne d'2 \oneVoice } \\ { d'4( c') } >> <bes d'>4 | <a c'>2 <a c'>4 | <g bes>2. |
 	%159
-	d'2 d'4 | << \context Voice = tenVoice { \voiceOne d'2 \oneVoice } \\ { d'4( c') } >> <bes d'>4 | <a c'>2 <a c'>4\< | <g bes>2 <g bes>4\! |
+	d'2 d'4 | << { d'2 } \\ \context Voice = tenVoice { \voiceTwo d'4( c') \oneVoice } >> <bes d'>4 | <a c'>2 <a c'>4\< | <g bes>2 <g bes>4\! |
 	%163
 	b2 d'4 | g'2 f'4 | ees'4( d') c' | bes4( a) bes | c'2\> c'4 | bes2.\! |
 	%169
@@ -344,7 +378,7 @@ tenNotes = {
 	%181
 	r4 d'4\mf d' | ees'2 ees'4 | d'2 d'4 | c'2 c'4 | b2 b4 | c'2\> c'8([\! d']) |
 	%187
-	d'4 bes! bes | bes2. | bes4 bes bes | bes4 bes b | c'4( d') ees | << { d'2.( } { s4 s2\> } >> | c'2)\! c'4 | bes2.^\fermata |
+	d'4 bes! bes | bes2. | bes4 bes bes | bes4 bes b | c'4( d') ees' | << { d'2.( } { s4 s2\> } >> | c'2)\! c'4 | bes2.^\fermata |
 	
 	%195
 	bes4.\p bes8 a8 a8 | d'4 d' c' | bes4 bes c' | d'4 d' ees' | d'2 d'4 |
@@ -357,10 +391,10 @@ tenNotes = {
 	%216
 	R2. | ees'2. | <d' f'>2. | << { <ees' g'>2. ~ <ees' g'>2 } { \dtDown \hpDown s2\ff\< s4\! \hpHalfDown s4\> s4\! } >> r4^\fermata |
 	%221
-	<a c'>2.\mf | <a d'>2. | <bes d'>2. | r4 r4 d'4\p | d'2 d'4 | b4 c' d' | ees'2. | c'4(\> d' ees' | d'2.\! ~ | d'4) d'4\> c'\! | bes2.^\fermata
+	<a c'>2.\mf | <a d'>2. | <bes d'>2. | r4 r4 d'4\p | d'2 d'4 | b4 c' d' | ees'2. | c'4(\> d' ees' | d'2.\! ~ | d'4) d'4\> c'\! | bes2^\fermata
 	
 	%232
-	a4 | bes2( ~ bes8[ g]) | g8([ a]) bes([ c']) d'([ bes]) | a2. | a8([ bes]) c'([ d']) ees'([ c']) |
+	a4\p | bes2( ~ bes8[ a]) | g8([ a]) bes([ c']) d'([ bes]) | a2. | a8([ bes]) c'([ d']) ees'([ c']) |
 	%236
 	bes2 d'4 | g'4 f'8([ ees']) d'([ c']) | bes2( d'4 | c' bes) a4 | bes2.^\fermata |
 	%241
@@ -391,9 +425,9 @@ basNotes = {
 	%33
 	d4.\p\< d8 d d\! | g2 d4 | bes2 g4 |
 	%36
-	d2 <c c'>4 | <bes, bes>4( <a, a>) <g, g> | <fis, fis>4(\< <g, g>) <f, f>\! | <e, e>2 <ees, ees>4\> | d8\! r8
+	d2 <c c'>4 | <bes, bes>4( <a, a>) <g, g> | <fis, fis>4(\< <g, g>) <f, f>\! | <e, e>2^\markup{\small\italic "rit."} <ees, ees>4\> | d8\! r8
 	%40
-	d4 d8 d | g4 g g | a2\< a4\! | bes2. |
+	d4^\markup{\small\italic "a tempo"} d8 d | g4 g g | a2\< a4\! | bes2. |
 	%44
 	ees4\> ees ees\! | f4 f f | bes,4 bes,\p bes, | c2. | d2\> d4\! |
 	
@@ -404,14 +438,14 @@ basNotes = {
 	%59
 	f4 f ees | d4 c bes, | a,2\> a,4\! | bes,2 bes,4 | c2 c4\< | c4 c\!
 	%65
-	c4 | f4\f a f | c'4 c c | f4( a) f | c'2\> c4\! | f2.^\fermata |
+	c4 | f4\f a f | c'4 c c | f4( a) f | \once\override Hairpin #'extra-offset = #'(-3 . -0.5)  c'2\> c4 | f2.\!^\fermata |
 	
 	%70
-	<d, d>2\pp <d, d>4 | <d, d>2 <d, d>4 | <d, d>4 <d, d> \hpLeftDownExtra <d, d>\< | \hpRightDownExtra <d, d>2.\!^\fermata\> |
+	d2\pp d4 | d2 d4 | d4 d \hpLeftDown d\< | \hpRightDown d2.\!^\fermata\> |
 	%74
-	r4\! \dtDown <cis, cis>4\pp <cis, cis> | <cis, cis>2 <cis, cis>4 | <cis, cis>2 <cis, cis>4 |
+	r4\! cis4\pp cis | cis2 cis4 | cis2 cis4 |
 	%77
-	<d, d>4 <d, d> <f, f> | <a, a>2 <g, g>4 | <f, f>4 d c | bes,4 a, g, | c2.\> | d2.\! | <g, d>2^\fermata
+	d4 d <f, f> | <a, a>2 <g, g>4 | <f, f>4 d c | bes,4 a, g, | c2.\> | d2.\! | <g, d>2^\fermata
 	
 	%84
 	bes,4\mf | \key ees \major ees2. | g2. | f4 f f | aes2\> aes4\! | g4 ees g | bes2. |
@@ -465,7 +499,7 @@ basNotes = {
 	%216
 	R2. | c'2. | bes2. | << { <ees bes>2. ~ <ees bes>2 } { \dtDown \hpDown s2\ff\< s4\! \hpHalfDown s4\> s4\! } >> r4^\fermata |
 	%221
-	d2.\mf | d2. | g2. | r4 r4 d4\p | g2 g4 | f4 ees d | c2. | \hpHalfDown ees4(\> d c | d2.\! ~ | d4) d\> d\! | <g, g>2.^\fermata
+	d2.\mf | d2. | g2. | r4 r4 d4\p | g2 g4 | f4 ees d | c2. | \hpHalfDown ees4(\> d c | d2.\! ~ | d4) d\> d\! | <g, g>2^\fermata
 	
 	%232
 	d4\p | <g, g>2. | <g, g>4 <g, g> g, | d2. | d4 d d |
@@ -479,126 +513,171 @@ basNotes = {
 }
 
 sopText = \lyricmode {
-	Сла -- ва, сла -- ва,
-	сла -- ва, сла -- ва в~выш -- нихъ Бо -- гу,
-	и на зем -- ли, на зем -- ли миръ,
-	въ~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е.
+	Сла -- ва, сла -- ва, сла -- ва, сла -- ва въ~выш -- нихъ Бо -- гу,
+	и на зем -- ли, на зем -- ли миръ, въ~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е.
 	%19
-	Хва -- лимъ Тя, бла -- го -- сло -- вимъ Тя,
-	кла -- ня -- ем -- ти -- ся, сла -- во -- сло -- вимъ Тя,
+	Хва -- лимъ Тя, бла -- го -- сло -- вимъ Тя, кла -- ня -- ем -- ти -- ся, сла -- во -- сло -- вимъ Тя,
 	бла -- го -- да -- римъ __ Тя ве -- ли -- кі -- я ра -- ди сла -- вы Тво -- е -- я.
 	%33
-	Гос -- по -- ди Ца -- рю не -- бес -- ный,
-	Бо -- же От -- че Все -- дер -- жи -- те -- лю,
-	Гос -- по -- ди Сы -- не Е -- ди -- но -- род --
-	ный І -- и -- су -- се Хри -- сте и Свя -- тый Ду -- ше.
+	Гос -- по -- ди Ца -- рю не -- бес -- ный, Бо -- же От -- че Все -- дер -- жи -- те -- лю,
+	Гос -- по -- ди Сы -- не Е -- ди -- но -- род -- ный І -- и -- су -- се Хри -- сте и Свя -- тый Ду -- ше.
 	%49
-	Гос -- по -- ди Бо -- же, Аг -- нче Бо -- жій, Сы -- не О -- течь,
-	взем -- ляй греѣхъ мі -- ра, по -- ми -- луй насъ:
+	Гос -- по -- ди Бо -- же, Аг -- нче Бо -- жій, Сы -- не О -- течь, взем -- ляй грѣхъ мі -- ра, по -- ми -- луй насъ:
 	взем -- ляй грѣ -- хи мі -- ра, прі -- и -- ми мо -- лит -- ву на -- шу.
 	Сѣ -- дяй о -- дес -- ну -- ю От -- ца, по -- ми -- луй насъ.
 	%70
-	Я -- ко Ты е -- си е -- динъ Свят;
-	Ты е -- си е -- динъ Гос --
-	подь, І -- и -- сусъ Хри -- стосъ, въ~сла -- ву Бо -- га От -- ца. А -- минь.
+	Я -- ко Ты е -- си е -- динъ Свят; Ты е -- си е -- динъ Гос -- подь, І -- и -- сусъ Хри -- стосъ, въ~сла -- ву Бо -- га От -- ца. А -- минь.
 	%84
-	На всякъ день бла -- го -- сло -- влю Тя, и вос -- хва -- лю
-	и -- мя Тво -- е во вѣкъ и въ~вѣкъ вѣ -- ка.
+	На всякъ день бла -- го -- сло -- влю Тя, и вос -- хва -- лю и -- мя Тво -- е во вѣкъ и въ~вѣкъ вѣ -- ка.
 	Спо -- до -- би Гос -- по -- ди, въ~день сей безъ __ грѣ -- ха со хра -- ни -- ти -- ся намъ.
-	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди Бо -- же о -- тецъ
-	на -- шихъ, и хваль -- но и про -- слав -- ле -- но и -- мя Тво -- е во вѣ -- ки, а -- минь.
+	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди Бо -- же о -- тецъ на -- шихъ, и хваль -- но и про -- слав -- ле -- но и -- мя Тво -- е во вѣ -- ки, а -- минь.
 	%115
 	Бу -- ди, Гос -- по -- ди, ми -- лость Тво -- я на насъ,
-	я -- ко -- же, я -- ко -- же у -- по -- ва -- хомъ на Тя,
-	у -- по -- ва -- хомъ, у -- по -- ва -- хомъ на Тя.
+	я -- ко -- же, я -- ко -- же у -- по -- ва -- хомъ на Тя, у -- по -- ва -- хомъ, у -- по -- ва -- хомъ на Тя.
 	%135
-	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи мя,
-	на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
+	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи мя, на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
 	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
-	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди
-	на -- у -- чи мя, на -- у -- чи мя,
-	на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ,
-	оп -- рав -- да -- ні -- емъ Тво -- имъ.
+	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи __ мя, на -- у -- чи мя, на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ, оп -- рав -- да -- ні -- емъ Тво -- имъ.
 	%173
 	Гос -- по -- ди, при -- бѣ -- жи -- ще былъ е -- си намъ въ~родъ и родъ, въ~родъ __ и родъ.
-	Азъ рѣхъ: Гос -- по -- ди, по -- ми -- луй мя, по -- ми -- луй
-	мя, ис -- цѣ -- ли ду -- шу мо -- ю, я -- ко со -- грѣ -- шихъ, со -- грѣ -- шихъ Те -- бе.
+	Азъ рѣхъ: Гос -- по -- ди, по -- ми -- луй мя, по -- ми -- луй мя,
+	ис -- цѣ -- ли ду -- шу мо -- ю, я -- ко со -- грѣ -- шихъ, со -- грѣ -- шихъ Те -- бе.
 	%195
-	Гос -- по -- ди, къ~Те -- бѣ при -- бѣ -- гохъ, на -- у -- чи мя тво -- ри -- ти
-	во -- лю Тво -- ю я -- ко Ты е -- си Богъ __ мой,
-	я -- ко у Те -- бѣ ис -- точ -- никъ
-	жи -- во -- та, __ во свѣ --
-	тѣ Тво -- емъ уз -- римъ свѣтъ, __
+	Гос -- по -- ди, къ~Те -- бѣ при -- бѣ -- гохъ, на -- у -- чи мя тво -- ри -- ти во -- лю Тво -- ю я -- ко Ты е -- си Богъ __ мой,
+	я -- ко у __ Те -- бѣ ис -- точ -- никъ жи -- во -- та, __ во свѣ -- тѣ Тво -- емъ уз -- римъ свѣтъ, __
 	уз -- римъ свѣтъ, про -- ба -- ви мил -- ость Тво -- ю вѣ -- ду -- щимъ Тя.
 	%232
-	Свя -- тый __ Бо -- же, Свя -- тый __ Крѣп -- кій, Свя --
-	тый __ Без -- смерт -- ный, по -- ми -- луй насъ.
-	Слава Отцу  и  Сыну  и  Святому  Духу,   и  нынѣ  и  присно  и  во  вѣки  вѣковъ, а -- минь.
+	Свя -- тый __ Бо -- же, Свя -- тый __ Крѣп -- кій, Свя -- тый __ Без -- смерт -- ный, по -- ми -- луй насъ.
+	Слава Отцу__и__Сыну__и__Святому__Духу,__и__нынѣ__и__присно__и__во__вѣки__вѣковъ, а -- минь.
 	Свя -- тый __ Без -- смерт -- ный, по -- ми -- луй насъ.
 }
-altText = \lyricmode {
-	Сла -- ва, сла -- ва,
-	сла -- ва, сла -- ва в~выш -- нихъ Бо -- гу,
-	и на зем -- ли, на зем -- ли
-	миръ, в~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е.
+
+sopXLitText = \lyricmode {
+	Sla -- va, sla -- va, sla -- va, sla -- va v~vɨš -- niḫ Bo -- ğu,
+	i na zʲem -- lʲi, na zʲem -- lʲi mʲir, fče -- lo -- vʲe -- ʦʲeḫ bla -- ğo -- vo -- lʲe -- nʲi -- je.
 	%19
-	Хва -- лимъ Тя, бла -- го -- сло -- вимъ Тя,
-	кла -- ня -- ем -- ти -- ся, сла -- во -- сло -- вимъ Тя,
+	Ḫva -- lʲim Tja, bla -- ğo -- slo -- vʲim Tja, kla -- nja -- jem -- ti -- sja, sla -- vo -- slo -- vʲim Tja,
+	bla -- ğo -- da -- rʲim __ Tja vʲe -- lʲi -- ki -- ja ra -- dʲi sla -- vɨ Tvo -- je -- ja.
+	%33
+	Ğos -- po -- dʲi Tsa -- rju nʲe -- bʲes -- nɨj, Bo -- že Ot -- če Fsʲe -- dʲer -- ži -- tʲe -- lju,
+	Ğos -- po -- dʲi Sɨ -- nʲe Je -- dʲi -- no -- rod -- nɨj I -- ji -- su -- sʲe Ḫri -- stʲe i Svja -- tɨj Du -- še.
+	%49
+	Ğos -- po -- dʲi Bo -- že, Ağ -- nše Bo -- žɨj, Sɨ -- nʲe O -- teć, vzʲem -- ljaj ğrʲeḫ mʲi -- ra, po -- mʲi -- luj nas:
+	vzʲem -- ljaj ğrʲe -- ḫi mʲi -- ra, prʲi -- i -- mʲi mo -- lʲit -- vu na -- šu.
+	Sʲe -- djaj o -- dʲes -- nu -- ju Ot -- ʦa, po -- mʲi -- luj nas.
+	%70
+	Ja -- ko Tɨ je -- sʲi je -- dʲin Svjat; Tɨ je -- sʲi je -- dʲinʹ Ğos -- podʹ, I -- ji -- sus Ḫri -- stos, f~sla -- vu Bo -- ga Ot -- ʦa. A -- mʲinʹ.
+	%84
+	Na fsjak dʲenʹ bla -- ğo -- slo -- vlju Tja, i vos -- ḫva -- lju i -- mja Tvo -- je vo vʲek i v~vʲek vʲe -- ka.
+	Spo -- do -- bʲi Ğos -- po -- dʲi, v~dʲenʹ sʲej bʲez __ ğrʲe -- ḫa so ḫra -- nʲi -- tʲi -- sja nam.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi Bo -- že o -- teʦ na -- šiḫ, i ḫvalʹ -- no i pro -- slav -- lʲe -- no i -- mja Tvo -- je vo vʲe -- ki, a -- mʲinʹ.
+	%115
+	Bu -- dʲi, Ğos -- po -- dʲi, mʲi -- lostʹ Tvo -- ja na nas,
+	ja -- ko -- že, ja -- ko -- že u -- po -- va -- ḫom na Tja, u -- po -- va -- ḫom, u -- po -- va -- ḫom na Tja.
+	%135
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či mja, na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či __ mja, na -- u -- či mja, na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim, op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	%173
+	Ğos -- po -- dʲi, prʲi -- bʲe -- žiš -- če bɨl je -- si nam v~rod i rod, v~rod __ i rod.
+	Az rʲeḫ: Ğos -- po -- dʲi, po -- mʲi -- luj mja, po -- mʲi -- luj mja,
+	is -- ʦe -- lʲi du -- šu mo -- ju, ja -- ko so -- ğrʲe -- šiḫ, so -- ğrʲe -- šiḫ Tʲe -- bʲe.
+	%195
+	Ğos -- po -- dʲi, k~Tʲe -- bʲe prʲi -- bʲe -- ğoḫ, na -- u -- či mja tvo -- rʲi -- tʲi vo -- lju Tvo -- ju ja -- ko Tɨ je -- si Boğ __ moj,
+	ja -- ko u __ Tʲe -- bʲe jis -- toč -- nik ži -- vo -- ta, __ vo svʲe -- tʲe Tvo -- jem uz -- rim svʲet, __
+	uz -- rʲim svʲet, pro -- ba -- vʲi mʲil -- ostʹ Tvo -- ju vʲe -- duš -- čim Tja.
+	%232
+	Svja -- tɨj __ Bo -- že, Svja -- tɨj __ Krʲep -- kij, Svja -- tɨj __ Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+	Slava Otʦu___i__Sɨnu___i__Svjatomu__Duḫu,___i__nɨnʲe___i__prʲisno___i__vo__vʲeki__vʲekov, a -- mʲinʹ.
+	Svja -- tɨj __ Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+}
+
+altText = \lyricmode {
+	Сла -- ва, сла -- ва, сла -- ва, сла -- ва въ~выш -- нихъ Бо -- гу,
+	и на зем -- ли, на зем -- ли миръ, въ~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е.
+	%19
+	Хва -- лимъ Тя, бла -- го -- сло -- вимъ Тя, кла -- ня -- ем -- ти -- ся, сла -- во -- сло -- вимъ Тя,
 	бла -- го -- да -- римъ __ Тя ве -- ли -- кі -- я ра -- ди сла -- вы Тво -- е -- я.
 	%33
-	Гос -- по -- ди Ца -- рю не -- бес -- ный,
-	Бо -- же От -- че Все -- дер -- жи -- те -- лю,
-	Гос -- по -- ди Сы -- не Е -- ди -- но -- род --
-	ный І -- и -- су -- се Хри -- сте и Свя -- тый Ду -- ше.
+	Гос -- по -- ди Ца -- рю не -- бес -- ный, Бо -- же От -- че Все -- дер -- жи -- те -- лю,
+	Гос -- по -- ди Сы -- не Е -- ди -- но -- род -- ный І -- и -- су -- се Хри -- сте и Свя -- тый Ду -- ше.
 	%49
-	Гос -- по -- ди Бо -- же, Аг -- нче Бо -- жій, Сы -- не О -- течь,
-	взем -- ляй греѣхъ мі -- ра, по -- ми -- луй насъ:
+	Гос -- по -- ди Бо -- же, Аг -- нче Бо -- жій, Сы -- не О -- течь, взем -- ляй грѣхъ мі -- ра, по -- ми -- луй насъ:
 	взем -- ляй грѣ -- хи мі -- ра, прі -- и -- ми мо -- лит -- ву на -- шу.
 	Сѣ -- дяй о -- дес -- ну -- ю От -- ца, по -- ми -- луй насъ.
 	%70
-	Я -- ко Ты е -- си е -- динъ Свят;
-	Ты е -- си е -- динъ Гос --
-	подь, І -- и -- сусъ Хри -- стосъ, въ~сла -- ву Бо -- га От -- ца. А -- минь.
+	Я -- ко Ты е -- си е -- динъ Свят; Ты е -- си е -- динъ Гос -- подь, І -- и -- сусъ Хри -- стосъ, въ~сла -- ву Бо -- га От -- ца. А -- минь.
 	%84
-	На всякъ день бла -- го -- сло -- влю Тя, и вос -- хва -- лю
-	и -- мя Тво -- е во вѣкъ и въ~вѣкъ вѣ -- ка.
+	На всякъ день бла -- го -- сло -- влю Тя, и вос -- хва -- лю и -- мя Тво -- е во вѣкъ и въ~вѣкъ вѣ -- ка.
 	Спо -- до -- би Гос -- по -- ди, въ~день сей безъ __ грѣ -- ха со хра -- ни -- ти -- ся намъ.
-	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди Бо -- же о -- тецъ
-	на -- шихъ, и хваль -- но и про -- слав -- ле -- но и -- мя Тво -- е во вѣ -- ки, а -- минь.
+	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди Бо -- же о -- тецъ на -- шихъ, и хваль -- но и про -- слав -- ле -- но и -- мя Тво -- е во вѣ -- ки, а -- минь.
 	%115
 	Бу -- ди, __ Гос -- по -- ди, ми -- лость Тво -- я на насъ,
-	я -- ко -- же, я -- ко -- же у -- по -- ва -- хомъ на Тя,
-	у -- по -- ва -- хомъ, у -- по -- ва -- хомъ на Тя.
+	я -- ко -- же, я -- ко -- же у -- по -- ва -- хомъ на Тя, у -- по -- ва -- хомъ, у -- по -- ва -- хомъ на Тя.
 	%135
-	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди
-	на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
 	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
-	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди
-	на -- у -- чи мя, на -- у -- чи мя,
-	на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ,
-	оп -- рав -- да -- ні -- емъ Тво -- имъ.
+	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
+	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи __ мя, на -- у -- чи мя, на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ, оп -- рав -- да -- ні -- емъ Тво -- имъ.
 	%173
 	Гос -- по -- ди, при -- бѣ -- жи -- ще, Гос -- по -- ди, при -- бѣ -- жи -- ще былъ е -- си намъ въ~родъ и родъ.
-	Азъ рѣхъ: Гос -- по -- ди, по -- ми -- луй мя, по -- ми -- луй
-	мя, ис -- цѣ -- ли ду -- шу мо -- ю, я -- ко со -- грѣ -- шихъ __ Те -- бе.
+	Азъ рѣхъ: Гос -- по -- ди, по -- ми -- луй мя, по -- ми -- луй мя,
+	ис -- цѣ -- ли ду -- шу мо -- ю, я -- ко со -- грѣ -- шихъ __ Те -- бе.
 	%195
-	Гос -- по -- ди, къ~Те -- бѣ при -- бѣ -- гохъ, на -- у -- чи мя тво -- ри -- ти
-	во -- лю Тво -- ю я -- ко Ты е -- си Богъ мой,
-	я -- ко у Те -- бѣ ис -- точ -- ник
-	жи -- во -- та, __ во свѣ --
-	тѣ Тво -- емъ уз -- римъ свѣтъ, __
+	Гос -- по -- ди, къ~Те -- бѣ при -- бѣ -- гохъ, на -- у -- чи мя тво -- ри -- ти во -- лю Тво -- ю я -- ко Ты е -- си Богъ мой,
+	я -- ко у Те -- бѣ ис -- точ -- ник жи -- во -- та, __ во свѣ -- тѣ Тво -- емъ уз -- римъ свѣтъ, __
 	уз -- римъ свѣтъ, про -- ба -- ви мил -- ость Тво -- ю вѣ -- ду -- щимъ Тя.
 	%232
-	Свя -- тый Бо -- же, Свя -- тый Крѣп -- кій, Свя --
-	тый Без -- смерт -- ный, по -- ми -- луй насъ.
-	Слава Отцу  и  Сыну  и  Святому  Духу,   и  нынѣ  и  присно  и  во  вѣки  вѣковъ, а -- минь.
+	Свя -- тый Бо -- же, Свя -- тый Крѣп -- кій, Свя -- тый Без -- смерт -- ный, по -- ми -- луй насъ.
+	Слава Отцу__и__Сыну__и__Святому__Духу,__и__нынѣ__и__присно__и__во__вѣки__вѣковъ, а -- минь.
 	Свя -- тый __ Без -- смерт -- ный, по -- ми -- луй насъ.
 }
+
+altXLitText = \lyricmode {
+	Sla -- va, sla -- va, sla -- va, sla -- va v~vɨš -- niḫ Bo -- ğu,
+	i na zʲem -- lʲi, na zʲem -- lʲi mʲir, fče -- lo -- vʲe -- ʦʲeḫ bla -- ğo -- vo -- lʲe -- nʲi -- je.
+	%19
+	Ḫva -- lʲim Tja, bla -- ğo -- slo -- vʲim Tja, kla -- nja -- jem -- ti -- sja, sla -- vo -- slo -- vʲim Tja,
+	bla -- ğo -- da -- rʲim __ Tja vʲe -- lʲi -- ki -- ja ra -- dʲi sla -- vɨ Tvo -- je -- ja.
+	%33
+	Ğos -- po -- dʲi Tsa -- rju nʲe -- bʲes -- nɨj, Bo -- že Ot -- če Fsʲe -- dʲer -- ži -- tʲe -- lju,
+	Ğos -- po -- dʲi Sɨ -- nʲe Je -- dʲi -- no -- rod -- nɨj I -- ji -- su -- sʲe Ḫri -- stʲe i Svja -- tɨj Du -- še.
+	%49
+	Ğos -- po -- dʲi Bo -- že, Ağ -- nše Bo -- žɨj, Sɨ -- nʲe O -- teć, vzʲem -- ljaj ğrʲeḫ mʲi -- ra, po -- mʲi -- luj nas:
+	vzʲem -- ljaj ğrʲe -- ḫi mʲi -- ra, prʲi -- i -- mʲi mo -- lʲit -- vu na -- šu.
+	Sʲe -- djaj o -- dʲes -- nu -- ju Ot -- ʦa, po -- mʲi -- luj nas.
+	%70
+	Ja -- ko Tɨ je -- sʲi je -- dʲin Svjat; Tɨ je -- sʲi je -- dʲinʹ Ğos -- podʹ, I -- ji -- sus Ḫri -- stos, f~sla -- vu Bo -- ga Ot -- ʦa. A -- mʲinʹ.
+	%84
+	Na fsjak dʲenʹ bla -- ğo -- slo -- vlju Tja, i vos -- ḫva -- lju i -- mja Tvo -- je vo vʲek i v~vʲek vʲe -- ka.
+	Spo -- do -- bʲi Ğos -- po -- dʲi, v~dʲenʹ sʲej bʲez __ ğrʲe -- ḫa so ḫra -- nʲi -- tʲi -- sja nam.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi Bo -- že o -- teʦ na -- šiḫ, i ḫvalʹ -- no i pro -- slav -- lʲe -- no i -- mja Tvo -- je vo vʲe -- ki, a -- mʲinʹ.
+	%115
+	Bu -- dʲi, Ğos -- po -- dʲi, mʲi -- lostʹ Tvo -- ja na nas,
+	ja -- ko -- že, ja -- ko -- že u -- po -- va -- ḫom na Tja, u -- po -- va -- ḫom, u -- po -- va -- ḫom na Tja.
+	%135
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či mja, op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či __ mja, na -- u -- či mja, na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim, op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	%173
+	Ğos -- po -- dʲi, prʲi -- bʲe -- žiš -- če, Ğos -- po -- dʲi, prʲi -- bʲe -- žiš -- če bɨl je -- si nam v~rod i rod.
+	Az rʲeḫ: Ğos -- po -- dʲi, po -- mʲi -- luj mja, po -- mʲi -- luj mja,
+	is -- ʦe -- lʲi du -- šu mo -- ju, ja -- ko so -- ğrʲe -- šiḫ __ Tʲe -- bʲe.
+	%195
+	Ğos -- po -- dʲi, k~Tʲe -- bʲe prʲi -- bʲe -- ğoḫ, na -- u -- či mja tvo -- rʲi -- tʲi vo -- lju Tvo -- ju ja -- ko Tɨ je -- si Boğ moj,
+	ja -- ko u Tʲe -- bʲe jis -- toč -- nik ži -- vo -- ta, __ vo svʲe -- tʲe Tvo -- jem uz -- rim svʲet, __
+	uz -- rʲim svʲet, pro -- ba -- vʲi mʲil -- ostʹ Tvo -- ju vʲe -- duš -- čim Tja.
+	%232
+	Svja -- tɨj Bo -- že, Svja -- tɨj Krʲep -- kij, Svja -- tɨj Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+	Slava Otʦu___i__Sɨnu___i__Svjatomu__Duḫu,___i__nɨnʲe___i__prʲisno___i__vo__vʲeki__vʲekov, a -- mʲinʹ.
+	Svja -- tɨj Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+
+}
+
 tenText = \lyricmode {
 	Сла -- ва, сла -- ва,
-	сла -- ва, сла -- ва в~выш -- нихъ Бо -- гу,
+	сла -- ва, сла -- ва въ~выш -- нихъ Бо -- гу,
 	и на зем -- ли, на зем -- ли
-	миръ, в~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е. __
+	миръ, въ~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е. __
 	%19
 	Хва -- лимъ Тя, бла -- го -- сло -- вимъ Тя,
 	кла -- ня -- ем -- ти -- ся, сла -- во -- сло -- вимъ Тя,
@@ -610,7 +689,7 @@ tenText = \lyricmode {
 	ный І -- и -- су -- се Хри -- сте и Свя -- тый Ду -- ше.
 	%49
 	Гос -- по -- ди Бо -- же, Аг -- нче Бо -- жій, Сы -- не О -- течь,
-	взем -- ляй греѣхъ мі -- ра, по -- ми -- луй насъ:
+	взем -- ляй грѣхъ мі -- ра, по -- ми -- луй насъ:
 	взем -- ляй грѣ -- хи мі -- ра, прі -- и -- ми мо -- лит -- ву на -- шу.
 	Сѣ -- дяй о -- дес -- ну -- ю От -- ца, по -- ми -- луй насъ.
 	%70
@@ -628,13 +707,9 @@ tenText = \lyricmode {
 	я -- ко -- же, я -- ко -- же у -- по -- ва -- хомъ на Тя,
 	у -- по -- ва -- хомъ, у -- по -- ва -- хомъ на Тя.
 	%135
-	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди
-	на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
 	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
-	Бла -- го -- сло -- венъ е -- си,
-	на -- у -- чи мя, на -- у -- чи мя,
-	на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ,
-	оп -- рав -- да -- ні -- емъ Тво -- имъ.
+	Бла -- го -- сло -- венъ е -- си, Гос -- по -- ди на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ.
+	Бла -- го -- сло -- венъ е -- си, на -- у -- \once\override LyricText #'self-alignment-X = #LEFT чи __ мя, на -- у -- чи мя, на -- у -- чи мя оп -- рав -- да -- ні -- емъ Тво -- имъ, оп -- рав -- да -- ні -- емъ Тво -- имъ.
 	%173
 	Гос -- по -- ди, при -- бѣ -- жи -- ще былъ е -- си намъ въ~родъ и родъ, въ~родъ и родъ.
 	Азъ рѣхъ: Гос -- по -- ди, по -- ми -- луй мя, по -- ми -- луй
@@ -649,14 +724,56 @@ tenText = \lyricmode {
 	%232
 	Свя -- тый __ Бо -- же, Свя -- тый Крѣп -- кій, Свя --
 	тый Без -- смерт -- ный, по -- ми -- луй насъ.
-	Слава Отцу  и  Сыну  и  Святому  Духу,   и  нынѣ  и  присно  и  во  вѣки  вѣковъ, а -- минь.
+	Слава Отцу__и__Сыну__и__Святому__Духу,__и__нынѣ__и__присно__и__во__вѣки__вѣковъ, а -- минь.
 	Свя -- тый Без -- смерт -- ный, по -- ми -- луй насъ.
 }
+
+tenXLitText = \lyricmode {
+	Sla -- va, sla -- va, sla -- va, sla -- va v~vɨš -- niḫ Bo -- ğu,
+	i na zʲem -- lʲi, na zʲem -- lʲi mʲir, fče -- lo -- vʲe -- ʦʲeḫ bla -- ğo -- vo -- lʲe -- nʲi -- je. __
+	%19
+	Ḫva -- lʲim Tja, bla -- ğo -- slo -- vʲim Tja, kla -- nja -- jem -- ti -- sja, sla -- vo -- slo -- vʲim Tja,
+	bla -- ğo -- da -- rʲim __ Tja vʲe -- lʲi -- ki -- ja ra -- dʲi sla -- vɨ Tvo -- je -- ja.
+	%33
+	Ğos -- po -- dʲi Tsa -- rju nʲe -- bʲes -- nɨj, Bo -- že Ot -- če Fsʲe -- dʲer -- ži -- tʲe -- lju,
+	Ğos -- po -- dʲi Sɨ -- nʲe Je -- dʲi -- no -- rod -- nɨj I -- ji -- su -- sʲe Ḫri -- stʲe i Svja -- tɨj Du -- še.
+	%49
+	Ğos -- po -- dʲi Bo -- že, Ağ -- nše Bo -- žɨj, Sɨ -- nʲe O -- teć, vzʲem -- ljaj ğrʲeḫ mʲi -- ra, po -- mʲi -- luj nas:
+	vzʲem -- ljaj ğrʲe -- ḫi mʲi -- ra, prʲi -- i -- mʲi mo -- lʲit -- vu na -- šu.
+	Sʲe -- djaj o -- dʲes -- nu -- ju Ot -- ʦa, po -- mʲi -- luj nas.
+	%70
+	Ja -- ko Tɨ je -- sʲi je -- dʲin Svjat; Tɨ je -- sʲi je -- dʲinʹ Ğos -- podʹ, I -- ji -- sus Ḫri -- stos, f~sla -- vu Bo -- ga Ot -- ʦa. A -- mʲinʹ.
+	%84
+	Na fsjak dʲenʹ bla -- ğo -- slo -- vlju Tja, i vos -- ḫva -- lju i -- mja Tvo -- je vo vʲek i v~vʲek vʲe -- ka.
+	Spo -- do -- bʲi Ğos -- po -- dʲi, v~dʲenʹ sʲej bʲez __ ğrʲe -- ḫa so ḫra -- nʲi -- tʲi -- sja nam.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi Bo -- že o -- teʦ na -- šiḫ, i ḫvalʹ -- no i pro -- slav -- lʲe -- no i -- mja Tvo -- je vo vʲe -- ki, a -- mʲinʹ.
+	%115
+	Bu -- dʲi, Ğos -- po -- dʲi, mʲi -- lostʹ Tvo -- ja na nas,
+	ja -- ko -- že, ja -- ko -- že u -- po -- va -- ḫom na Tja, u -- po -- va -- ḫom, u -- po -- va -- ḫom na Tja.
+	%135
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či mja, op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen je -- si, na -- u -- \once\override LyricText #'self-alignment-X = #LEFT či __ mja, na -- u -- či mja, na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim, op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	%173
+	Ğos -- po -- dʲi, prʲi -- bʲe -- žiš -- če bɨl je -- si nam v~rod i rod, v~rod i rod.
+	Az rʲeḫ: Ğos -- po -- dʲi, po -- mʲi -- luj mja, po -- mʲi -- luj mja,
+	is -- ʦe -- lʲi du -- šu mo -- ju, ja -- ko so -- ğrʲe -- šiḫ __ Tʲe -- bʲe.
+	%195
+	Ğos -- po -- dʲi, k~Tʲe -- bʲe prʲi -- bʲe -- ğoḫ, na -- u -- či mja tvo -- rʲi -- tʲi vo -- lju Tvo -- ju ja -- ko Tɨ je -- si Boğ __ moj,
+	ja -- ko u Tʲe -- bʲe jis -- toč -- nik ži -- vo -- ta, vo svʲe -- tʲe Tvo -- jem uz -- rim svʲet, __
+	uz -- rʲim svʲet, pro -- ba -- vʲi mʲil -- ostʹ Tvo -- ju vʲe -- duš -- čim Tja.
+	%232
+	Svja -- tɨj __ Bo -- že, Svja -- tɨj Krʲep -- kij, Svja -- tɨj Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+	Slava Otʦu___i__Sɨnu___i__Svjatomu__Duḫu,___i__nɨnʲe___i__prʲisno___i__vo__vʲeki__vʲekov, a -- mʲinʹ.
+	Svja -- tɨj Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+
+}
+
 basText = \lyricmode {
 	Сла -- ва, сла -- ва,
-	сла -- ва в~выш -- нихъ Бо -- гу,
+	сла -- ва въ~выш -- нихъ Бо -- гу,
 	и на зем -- ли миръ,
-	в~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е. __
+	въ~че -- ло -- вѣ -- цѣхъ бла -- го -- во -- ле -- ні -- е. __
 	%19
 	Хва -- лимъ Тя, бла -- го -- сло -- вимъ Тя,
 	кла -- ня -- ем -- ти -- ся, сла -- во -- сло -- вимъ Тя,
@@ -668,7 +785,7 @@ basText = \lyricmode {
 	ный І -- и -- су -- се Хри -- сте и Свя -- тый Ду -- ше.
 	%49
 	Гос -- по -- ди Бо -- же, Аг -- нче Бо -- жій, Сы -- не О -- течь,
-	взем -- ляй греѣхъ мі -- ра, по -- ми -- луй насъ:
+	взем -- ляй грѣхъ мі -- ра, по -- ми -- луй насъ:
 	взем -- ляй грѣ -- хи мі -- ра, прі -- и -- ми мо -- лит -- ву на -- шу.
 	Сѣ -- дяй о -- дес -- ну -- ю От -- ца, __ по -- ми -- луй насъ.
 	%70
@@ -705,42 +822,90 @@ basText = \lyricmode {
 	уз -- римъ свѣтъ, __
 	уз -- римъ свѣтъ, про -- ба -- ви мил -- ость Тво -- ю вѣ -- ду -- щимъ Тя.
 	%232
-	Свя -- тый __ Бо -- же, Свя -- тый Крѣп -- кій, Свя --
-	тый Без -- смерт -- ный, по -- ми -- луй насъ.
-	Слава Отцу  и  Сыну  и  Святому  Духу,   и  нынѣ  и  присно  и  во  вѣки  вѣковъ, а -- минь.
+	Свя -- тый Бо -- же, Свя -- тый Крѣп -- кій, Свя -- тый Без -- смерт -- ный, по -- ми -- луй насъ.
+	Слава Отцу__и__Сыну__и__Святому__Духу,__и__нынѣ__и__присно__и__во__вѣки__вѣковъ, а -- минь.
 	Свя -- тый Без -- смерт -- ный, по -- ми -- луй насъ.
 }
 
+
+basXLitText = \lyricmode {
+	Sla -- va, sla -- va, sla -- va v~vɨš -- niḫ Bo -- ğu,
+	i na zʲem -- lʲi mʲir, fče -- lo -- vʲe -- ʦʲeḫ bla -- ğo -- vo -- lʲe -- nʲi -- je. __
+	%19
+	Ḫva -- lʲim Tja, bla -- ğo -- slo -- vʲim Tja, kla -- nja -- jem -- ti -- sja, sla -- vo -- slo -- vʲim Tja,
+	bla -- ğo -- da -- rʲim __ Tja vʲe -- lʲi -- ki -- ja ra -- dʲi sla -- vɨ Tvo -- je -- ja.
+	%33
+	Ğos -- po -- dʲi Tsa -- rju nʲe -- bʲes -- nɨj, Bo -- že Ot -- če Fsʲe -- dʲer -- ži -- tʲe -- lju,
+	Ğos -- po -- dʲi Sɨ -- nʲe Je -- dʲi -- no -- rod -- nɨj I -- ji -- su -- sʲe Ḫri -- stʲe i Svja -- tɨj Du -- še.
+	%49
+	Ğos -- po -- dʲi Bo -- že, Ağ -- nše Bo -- žɨj, Sɨ -- nʲe O -- teć, vzʲem -- ljaj ğrʲeḫ mʲi -- ra, po -- mʲi -- luj nas:
+	vzʲem -- ljaj ğrʲe -- ḫi mʲi -- ra, prʲi -- i -- mʲi mo -- lʲit -- vu na -- šu.
+	Sʲe -- djaj o -- dʲes -- nu -- ju Ot -- ʦa, po -- mʲi -- luj nas.
+	%70
+	Ja -- ko Tɨ je -- sʲi je -- dʲin Svjat; Tɨ je -- sʲi je -- dʲinʹ Ğos -- podʹ, I -- ji -- sus Ḫri -- stos, f~sla -- vu Bo -- ga Ot -- ʦa. A -- mʲinʹ.
+	%84
+	Na fsjak dʲenʹ bla -- ğo -- slo -- vlju Tja, i vos -- ḫva -- lju i -- mja Tvo -- je vo vʲek i v~vʲek vʲe -- ka.
+	Spo -- do -- bʲi Ğos -- po -- dʲi, v~dʲenʹ sʲej bʲez ğrʲe -- ḫa so ḫra -- nʲi -- tʲi -- sja nam.
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi Bo -- že o -- teʦ na -- šiḫ, i ḫvalʹ -- no i pro -- slav -- lʲe -- no i -- mja Tvo -- je vo vʲe -- ki, a -- mʲinʹ.
+	%115
+	Bu -- dʲi, Ğos -- po -- dʲi, mʲi -- lostʹ Tvo -- ja na nas,
+	ja -- ko -- že, ja -- ko -- že u -- po -- va -- ḫom na Tja, u -- po -- va -- ḫom, u -- po -- va -- ḫom na Tja.
+	%135
+	Bla -- ğo -- slo -- vʲen je -- si, Ğos -- po -- dʲi na -- u -- či mja, op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen, na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	Bla -- ğo -- slo -- vʲen je -- si, na -- u -- či mja, na -- u -- či mja, na -- u -- či mja op -- rav -- da -- nʲi -- jem Tvo -- jim, op -- rav -- da -- nʲi -- jem Tvo -- jim.
+	%173
+	Ğos -- po -- dʲi, prʲi -- bʲe -- žiš -- če bɨl je -- si nam v~rod i rod.
+	Az rʲeḫ: Ğos -- po -- dʲi, Ğos -- po -- dʲi, po -- mʲi -- luj mja, po -- mʲi -- luj mja,
+	is -- ʦe -- lʲi du -- šu mo -- ju, ja -- ko so -- ğrʲe -- šiḫ __ Tʲe -- bʲe.
+	%195
+	Ğos -- po -- dʲi, k~Tʲe -- bʲe prʲi -- bʲe -- ğoḫ, na -- u -- či mja tvo -- rʲi -- tʲi vo -- lju Tvo -- ju ja -- ko Tɨ je -- si Boğ __ moj,
+	ja -- ko u Tʲe -- bʲe jis -- toč -- nik ži -- vo -- ta, vo svʲe -- tʲe Tvo -- jem uz -- rim svʲet, __
+	uz -- rʲim svʲet, pro -- ba -- vʲi mʲil -- ostʹ Tvo -- ju vʲe -- duš -- čim Tja.
+	%232
+	Svja -- tɨj Bo -- že, Svja -- tɨj Krʲep -- kij, Svja -- tɨj Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+	Slava Otʦu___i__Sɨnu___i__Svjatomu__Duḫu,___i__nɨnʲe___i__prʲisno___i__vo__vʲeki__vʲekov, a -- mʲinʹ.
+	Svja -- tɨj Bʲez -- smʲert -- nɨj, po -- mʲi -- luj nas.
+}
+
 \score {
-	\new ChoirStaff
 	<<
-	\new Staff { \set Staff.instrumentName = "С" \new Voice = sopVoice \sopNotes }
-	\new Lyrics \lyricsto sopVoice \sopText
-	\new Staff { \set Staff.instrumentName = "А" \new Voice = altVoice \altNotes }
-	\new Lyrics \lyricsto altVoice \altText
-	\new Staff { \set Staff.instrumentName = "Т" \new Voice = tenVoice \tenNotes }
-	\new Lyrics \lyricsto tenVoice \tenText
-	\new Staff { \set Staff.instrumentName = "Б" \new Voice = basVoice \basNotes }
-	\new Lyrics \lyricsto basVoice \basText
+		\new ChoirStaff
+		<<
+			\new Staff { \set Staff.instrumentName = "S" \new Voice = sopVoice \sopNotes }
+			\new Lyrics \lyricsto sopVoice \sopText
+			\new Lyrics \lyricsto sopVoice \sopXLitText
+			\new Staff { \set Staff.instrumentName = "A" \new Voice = altVoice \altNotes }
+			\new Lyrics \lyricsto altVoice \altText
+			\new Lyrics \lyricsto altVoice \altXLitText
+			\new Staff { \set Staff.instrumentName = "T" \new Voice = tenVoice \tenNotes }
+			\new Lyrics \lyricsto tenVoice \tenText
+			\new Lyrics \lyricsto tenVoice \tenXLitText
+			\new Staff { \set Staff.instrumentName = "B" \new Voice = basVoice \basNotes }
+			\new Lyrics \lyricsto basVoice \basText
+			\new Lyrics \lyricsto basVoice \basXLitText
+		>>
 	>>
 	
 	\layout {
+		system-count = 36
 		\context {
 			\Score
-			\override NonMusicalPaperColumn #'line-break-system-details = #'((alignment-offsets . (0 -5.75 -12 -17.75 -24 -29.75 -36 -41.75)))
+			\override NonMusicalPaperColumn #'line-break-system-details = #'((alignment-offsets . (
+				  0    -5.5  -8
+				-15.5 -21   -23.5
+				-31   -36.5 -39
+				-46.5 -52   -54.5
+			)))
 		}
 		\context {
 			\Voice
-			hairpinToBarline = ##f
+			\override Hairpin #'to-barline = ##f
 			\override DynamicText #'X-offset = #-2
-		}
-		\context {
-			\Staff
-			\override InstrumentName #'self-alignment-X = #RIGHT
 		}
 	}
 }
-
+%{
 \score {
 	<<
 	\new Staff {
@@ -765,3 +930,4 @@ basText = \lyricmode {
 		\context { \Voice \remove Dynamic_performer }
 	}
 }
+%}
