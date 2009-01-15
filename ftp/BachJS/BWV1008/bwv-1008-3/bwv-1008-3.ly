@@ -1,4 +1,4 @@
-\version "2.11.52"
+﻿\version "2.12.1"
 
 \paper {
     page-top-space = #0.0
@@ -29,8 +29,8 @@
 		maintainerWeb = "http://www.roxele.de/"
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/07/30-1489"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2009/01/15-1489"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 melody = \relative d' {
@@ -69,7 +69,7 @@ melody = \relative d' {
 		g,16 [d' (g a)] bes [g' a, f'] g, [e' f, d'] | % 27
 		cis16 [d e cis] a [cis bes cis] a [cis g cis]  | % 28
 		f,16 [d' (e f] e [d cis d)] g, [d' a d]  | % 29
-		bes16 [d (e f] e [d ais d)] bes [d a d] | % 30
+		bes16 [d (e f] e [d cis d)] bes [d a d] | % 30
 		gis,16 [d' (e f] e [d cis d)] a [d a cis] | % 31
 		d16 [a f a] d, [f a, d] d,8. s16 | % 32
 		
