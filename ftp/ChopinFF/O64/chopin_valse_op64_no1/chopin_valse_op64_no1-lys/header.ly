@@ -31,7 +31,7 @@
     mutopiaopus = "O64"
     mutopiainstrument = "Piano"
     date = "1847"
-    source = "Edition Peters (http://www.sheetmusicarchive.net/)"
+    source = "Edition Peters"
     style = "Classical"
     enteredby = "Magnus Lewis-Smith"
     maintainer = "Magnus Lewis-Smith"

@@ -24,7 +24,7 @@
     mutopiaopus = "O28"
     mutopiainstrument = "Piano"
     date = "1838/39"
-    source = "Edition Peters (http://www.sheetmusicarchive.net/)"
+    source = "Edition Peters"
     style = "Classical"
     enteredby = "Magnus Lewis-Smith"
     maintainer = "Magnus Lewis-Smith"
