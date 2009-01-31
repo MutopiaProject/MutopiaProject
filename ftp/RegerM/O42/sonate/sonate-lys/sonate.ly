@@ -21,7 +21,7 @@
     composer = "Max Reger, Op. 42, Heft 1 No. 1"
     arranger = "ed. Willy Burmester"
    % Mutopia Project specific headers:
-	mutopiatitle = "Four Sonatas for Unaccompanied Violin"
+	mutopiatitle = "Sonata 1 for Unaccompanied Violin"
 	mutopiacomposer = "RegerM"
 	mutopiaopus = "42, Heft 1 No. 1"
 	mutopiainstrument = "Violin"
