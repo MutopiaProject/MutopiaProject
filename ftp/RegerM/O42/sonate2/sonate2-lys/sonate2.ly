@@ -3,12 +3,12 @@
 % by Max Reger, Op 42
 % 7/25/2008 CB
 
-\version "2.10.33"
+\version "2.12.0"
 
 \include "english.ly"
 
 \paper {
-  %#(set-paper-size "letter")
+  #(set-paper-size "letter")
   top-margin = 		0.25\in
   bottom-margin = 	0.25\in
   left-margin = 	0.7\in
@@ -18,12 +18,11 @@
 }
 
 \header {
-    title = "Vier Sonaten für Violine allein"
-    subtitle = "Sonate II"
+    title = "Sonata 2 für Violine allein"
     composer = "Max Reger, Op. 42, Heft 1 No. 2"
     arranger = "ed. Willy Burmester"
    % Mutopia Project specific headers:
-	mutopiatitle = "Four Sonatas for Unaccompanied Violin (2)"
+	mutopiatitle = "Sonata 2 for Unaccompanied Violin"
 	mutopiacomposer = "RegerM"
 	mutopiaopus = "42, Heft 1 No. 1"
 	mutopiainstrument = "Violin"
@@ -32,8 +31,8 @@
 	copyright = "Public Domain"
 	maintainer = "Carl M. Bolstad"
 	maintainerEmail = "ordinaryguy@zipcon.net"
- footer = "Mutopia-2008/08/18-1522"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2009/01/31-1522"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \include "functions.ly"
@@ -43,7 +42,7 @@
   % Be sure to comment it out when we're done!!
 % showLastLength = R2*10
 
-
+\markup { Allegro con grazia }
 \score {
   \include "music.1.ly"
   \layout { raggedlast = ##t }
@@ -57,20 +56,23 @@
 
 %% 2nd movement: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%{
+\markup { \hspace #0 \raise #-5 Andantino }
 \score {
 
   \include "music.2.ly"
 
 \layout { raggedlast = ##t }
+
 \midi { 
   \context {
     \Score
-    tempoWholesPerMinute = #(ly:make-moment 72 8)
+    tempoWholesPerMinute = #(ly:make-moment 108 8)
   }
 }
+
 }
 
+%{
 %% 3rd movement: %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \score {

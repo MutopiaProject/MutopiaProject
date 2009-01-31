@@ -1,3 +1,4 @@
+\version "2.12.0"
 % Max Reger Sonatas for anaccompanied violin,
 % #2, 4th movement.
 % Carl M. Bolstad, 7/25/2008.

@@ -1,3 +1,4 @@
+\version "2.12.0"
   \relative { 
     \time 2/4
     \key a \major
@@ -6,7 +7,7 @@
 
 % This is to allow for the 1st & 2nd endings toward the middle of the piece:
 \repeat volta 2 {
-\partial 8*3 e'=''8(\p\<\upbow^\markup { Allegro con grazia. } a) e16-. fs-.\! |
+\partial 8*3 e'=''8(\p\<\upbow a) e16-. fs-.\! |
 cs( b) cs-.\> d-. e8\! cs'([ \sf |
 ds,])\< e16-. fs-. gs( b) e,-. gs-.\! |
 cs,( \f ds) e-. b-. a( b) gs-. fs-. |
@@ -40,7 +41,7 @@ e8\>( ds16 fs b,8)\!
 
 <<
    {
-	\stemDown b'='8-.^\markup { \hspace #-3 \raise #1 \italic espress. } \p |
+	\stemDown b'='8-.^\markup { \hspace #-3 \raise #0 \italic espress. } \p |
 	\stemUp
 	gs4.-- a16(^\> as) |
 	b4.--\! e16( bs) |
@@ -93,14 +94,15 @@ as([ b)] b,-. e-. gs(\> a) fs-. gs-.\!
 
 c16( b) c-. d-. e8-. c'16-.[ a-.] |
 ef( \set crescendoText = \markup { \italic "poco a poco crescendo" }
-\set crescendoSpanner = #'dashed-line
+\set crescendoSpanner = #'text
 f)\< d-. ef-. c( d) bf-. c-. |
 
 %%%%% measure 41 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 d( e) f-. a-. bf( d) f-. d-. |
 b( d) d-. a-. gs( b) gs-. fs-. |
 e( gs) e-. d-. <e c>8.(\f <gs b,>16) |
-<e c>8-> a,,=64([\< b c e a c e gs)] <a f>8.-> \ff <bf g>16-> |
+\crescHairpin 
+<e c>8-> a,,=64([b \< c e a c e gs)] <a f>8.-> \ff <bf g>16-> |
 
 %%%%% measure 45 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 <a f>8-> d,,='64([\< e f a d f a cs)]\! <d f,>8.-> <c e,>16-> |
@@ -119,12 +121,12 @@ e( gs) e-. d-. <e c>8.(\f <gs b,>16) |
     g e)] g([ e fs e)] ds([ fs] |
     \stemDown as b) 
     \set crescendoText = \markup { \italic "crescendo" }
-    \set crescendoSpanner = #'dashed-line
+    \set crescendoSpanner = #'text
     as'(\< b c) b,,( c) <ds b'>( |
     <e c'>) <b'' ds,>( <c e,>) <cs e,>( <d f,>)\ff <cs, e,>( <d f,>)\> <cs' e,>( |
 
 %%%%% measure 53 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-    <d f,>) e,-. \p \< <d' f,>-. d,-. <d' f,>-. g,,='( b d) |
+    <d f,>) \crescHairpin e,-. \p \< <d' f,>-. d,-. <d' f,>-. g,,='( b d) |
     <e c'>-. d <e c'>-. c-. <e c'>-. fs,( a c) |
     <d b'>-. c-. <d b'>-. b-. <d b'>-. e,( gs b)\! \stemNeutral |
   }
@@ -149,7 +151,7 @@ e( gs) e-. d-. <e c>8.(\f <gs b,>16) |
 %%%%% measure 56 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   <c'='' a'>16-. \f css,( ds) <c' a'>( <b gs'>) ds,( e) <b' gs'>( |
   \set crescendoText = \markup { \italic "crescendo" }
-  \set crescendoSpanner = #'dashed-line
+  \set crescendoSpanner = #'text
   <bf g'>) \< bs,( cs) <bf' g'>( <a fs'>) cs,( d) <a' fs'>( |
   <af f'>) \ff	as,( b) <af' f'>( <g e'>) b,( c)\> e( |
   f) a-. d,-. b-.\!
@@ -169,7 +171,7 @@ e( gs) e-. d-. <e c>8.(\f <gs b,>16) |
 
 %%%%% measure 61 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
   <d='' b'>16( \f a') gs-.\> fs-. <e gs>( fs) e-. d-.\! |
-  cs(\p d) e8( a)\< e16-. fs-.\! |
+  cs(\p d) e8( \crescHairpin a)\< e16-. fs-.\! |
   cs( b) cs-.\> d-. e8-.\! cs'([ \sf |
   ds,])\< e16-. fs-. gs( b) e,-. fs-.\! |
 
@@ -189,7 +191,7 @@ e( gs) e-. d-. <e c>8.(\f <gs b,>16) |
 %%%%% measure 74 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
   <gs e>8-.)\noBeam <a fs>-. <cs a>8.(\! <bs gs>16 |
   <cs a>8-.) fs16-.[ \p ds-.] bs( ds) cs-. gs-. |
-  e( cs) bs-. ds-. \setHairpinCresc cs(\< gs) e-. cs-. |
+  e( cs) bs-. ds-. \crescHairpin cs(\< gs) e-. cs-. |
   a'8-. gs-. fs16( as)\! b-. cs-. |
   d8-. \f cs-. b8.( a16) |
    
@@ -224,7 +226,7 @@ e( gs) e-. d-. <e c>8.(\f <gs b,>16) |
       }
   >>
 
-gs='16( \p b) e-. gs-. e,(\< b') d,-. b'-. \! |
+gs='16( \pp b) e-. gs-. e,(\< b') d,-. b'-. \! |
    
 %%%%% measure 88 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% 
 cs,16.([\< \f es32 gs cs es gs)] \! <a cs,>8.( <gs b,>16) |

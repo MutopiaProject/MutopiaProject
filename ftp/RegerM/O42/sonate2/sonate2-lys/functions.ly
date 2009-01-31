@@ -1,6 +1,7 @@
 % homemade functions for the Max Reger
 % violin sonatas:
 
+\version "2.12.0"
 % Function Definitions:
 
 % To make a 'homemade' grace note:
