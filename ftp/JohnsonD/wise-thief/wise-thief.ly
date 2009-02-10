@@ -1,4 +1,4 @@
-\version "2.11.27"
+\version "2.12.0"
 
 \header {
 	title = "The Wise Thief"
@@ -16,18 +16,19 @@
 	style = "Hymn"
 	maintainer = "Daniel Johnson"
 	maintainerEmail = "il.basso.buffo at gmail dot com"
-	lastupdated = "2007/Jul/26"
+	lastupdated = "2009/Feb/08"
 	moreInfo = "According to Russian Orthodox practice, this text is sung at Matins of Good Friday (also known as the service of the Twelve Passion Gospels), and in the Russian tradition it is the emotional high point of the service. The text should be sung thrice, and since the 19th century (?) it has become customary to sing it at least once as a trio."
- footer = "Mutopia-2007/07/26-1012"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+
+ footer = "Mutopia-2009/02/10-1012"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \paper {
 	system-count = 3
-	between-system-padding = 0
+	between-system-padding = 10
 	between-system-spacing = 0
-	ragged-last-bottom = ##f
-	%#(define fonts (make-pango-font-tree "Utopia" "Sans" "Mono" 1))
+	%ragged-last-bottom = ##f
+	%#(define fonts (make-pango-font-tree "Goudy Bookletter 1911" "Sans" "Mono" 1))
 }
 
 hpDown = { \once\override Hairpin #'extra-offset = #'(0 . -0.75) }
@@ -35,7 +36,7 @@ dtDown = { \once\override DynamicText #'extra-offset = #'(0 . -0.75) }
 
 
 sopNotes = {
-	s1*0^\markup { \hspace #-3 \large \bold "Andante teneroso" }
+	s1*0^\markup { \hspace #-3 \large \bold "Adagio teneroso" }
 	\clef treble \time 4/4 \key e \minor \partial 4 \dynamicUp
 	b'4\p | b'1 | b'2.
 	b'4 | c''2\< d''\! | e''2\> d''4\! b' | c''2 d'' | b'1 |
@@ -62,7 +63,7 @@ tenNotes = {
 	e'4 e' dis' dis' | e'( cis') cis' e' | dis'2\fermata
 	
 	\dtDown b'4\mf b' | g'2 fis'4 dis' | e'2( d'!4)
-	d'4 | e'4. e'8 cis'4 e' | dis'4(\> fis' e') a\!\p | b2( c' | b1) | g1 |
+	d'4 | e'4. e'8 cis'4 e' | dis'4(\> fis' e') a\!\p | b2( c' | a2 b4 a) | g1 |
 }
 
 text = \lyricmode {
@@ -103,6 +104,10 @@ text = \lyricmode {
 		\context {
 			\Score
 			tempoWholesPerMinute = #(ly:make-moment 60 4)
+		}
+		\context {
+			\Lyrics
+			\remove Lyric_performer
 		}
 	}
 	\layout {
