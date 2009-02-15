@@ -48,3 +48,53 @@ cbMarkUp =
   \once \override TextScript #'extra-offset = #($vert . $horiz)
   $music \markup { $text }
 #})
+
+% the first 7 measures of Max Reger violin sonata 2.3:
+cbRefrain = {
+<<
+  {
+    e16( gs a fs e d) cs8-. cs-. cs-. |
+    cs16( gs' b gs cs, b) a8-. a'-. a,-. |
+    %%%%% measure 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    a8( a'-.) a,-. a( a') a,-. |
+    a16( b fs') b-. a-. gs-. fs( e ds) cs-. b-. a-. |
+    gs8-. e'-.[ e-.] e-. e-. e-. |
+  }
+  \\
+  {
+    cs8-. \f r \> r a-. \p \< gs-. fs-. \! |
+    es r \> r fs-.[ \p \crescTextCresc r \< fs-.]
+
+    %%%%% measure 3 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    f-.[ r f-.] e-.[ r e-.] \crescHairpin |
+    ds-. \ff \< r r r4*1/2 \! s8 \> r8 |
+    r8 \! e-. \p \< fs-. gs-. a-. b-. \! |
+  }
+>>
+
+%%%%% measure 6 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<<
+  {
+    e=''16( gs a fs e d) cs8-. cs-. cs-. |
+    cs-. cs-.( cs-.) 
+  }
+  \\
+  {
+    cs8-. \f r \> r r \p ds,-. \< es-. |
+    fs-. gs-.( a-.) \!
+  }
+>>
+
+<b,= a' d>16( \f \< as' b) cs-. d-. fs-.
+}
+
+%% more repeated notes, starting 2nd 8th of measure 41:
+cbFortyOne = {
+\times 2/3 { a,,=16(\<[ fs' cs' } \times 2/3 { fs cs' fs)] } 
+    <g b, d,, g,>4->\ff <g b,>16( <b, d,>) |
+<b d,>4-> <b d,>16(\> <g b,>) <g as,>8-> <fs b, d,>( <b d,>)\!
+
+%%%%% measure 43 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+<a cs, e,>(\<\mf <gs b,>) <a cs,>-. <gs b, e,>( <fss as,>) <gs b,>-. |
+<fs a, fs>( <es gs,>) <fs a,>-. <e d gs,>( b') <e, d gs,>-. |
+}
