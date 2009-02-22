@@ -10,7 +10,7 @@
   lastupdated =	"2007/Mar/17"
 
   mutopiainstrument = "Violin"
-  mutopiatitle =      "Johnny Cock thy Beaver: A Scotch Tune to a Ground"
+  mutopiatitle =      "23. Johnny Cock thy Beaver: A Scotch Tune to a Ground"
   mutopiacomposer =   "Anonymous"
   maintainer = "Allen Garvin"
   maintainerEmail = "allen.garvin@dal.tribalddb.com"
