@@ -16,9 +16,9 @@ composer = "Georg Philipp Telemann (1681-1767)"
  	maintainer = "Moulun Stephane"
 	maintainerEmail = ""
 	maintainerWeb = ""
- 	lastupdated = "2009/01/24"
+ 	lastupdated = "2009/02/20"
 
- footer = "Mutopia-2009/01/26-1618"
+ footer = "Mutopia-2009/02/22-1618"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 } %end header
 
@@ -85,11 +85,11 @@ d4 d'( | d8)[ c16 b] c8[ b16 a] | b8[ a16 g] a8[ g16 fis] | g8 b c d | g,4 r | g
 % 60 
 b4 e, | dis8[ b g' e] | b'4 e, | dis8 b g'4| fis\trill b,8 cis16 b | ais8 fis d'4 |
 % 66
-cis4 b8 cis16 b | ais8 fis d4 | cis4 \trill  b8 cis16 d | e8 d16 cis d8 e16 fis | g4^\staccatissimo fis^\staccatissimo | e8[ b'(ais a)] |
+cis4 b8 cis16 b | ais8 fis d'4 | cis4 \trill  b8 cis16 d | e8 d16 cis d8 e16 fis | g4^\staccatissimo fis^\staccatissimo | e8[ b'(ais a)] |
 %72
 gis[(g fis) b,] | | e4^\staccatissimo d^\staccatissimo | cis8 b16 ais b8 fis'| fis,8[ fis' fis, fis'] | fis e16 d e8 d16 cis |
 % 77
-d8 cis16 b cis8 b16 ais | b8[ d e fis ] |  b4 r8 a | g a16 b c! e d c | d8 g4 fis8 |
+d8 cis16 b cis8 b16 ais | b8[ d, e fis ] |  b4 r8 a | g a16 b c! e d c | d8 g4 fis8 |
 % 82
 b,8 e4 d8 | g,8 c4 b8 | e4 ^\staccatissimo d ^\staccatissimo | c8 b16 a b8 g | fis4 \trill  g ^\staccatissimo | a8[ d b g] | d4 r |
 % 89 
