@@ -1,0 +1,287 @@
+﻿\version "2.11.61"      %Rossini Eduardo e Cristina - Tambour
+
+
+\relative c{
+\clef bass
+
+
+
+\Atime \AstringTempo \tag #'midi {\AmidiTempo}
+\partial 16 r16\f
+r4\fermata r8 r
+r4\fermata r8 r
+r4\fermata r8 r
+R2 * 18	%%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+% 
+<< \tag #'partie << {\set fontSize = #-4 \stemUp r4 r8 f'(^"Basson"
+		e8) des8( c) e( f) bes,16. bes32 c8 c, \unset fontSize} \\ {R2 * 3} >>
+	 \tag #'score {R2 * 3} >>
+\mark #1 \repeat unfold 4 {c8_\prallprall\f r r4}
+%
+%
+%
+c16 r r8 c16 r r8
+c16 r r8 c16 r r8
+c2:32
+c16 r r8 r4
+\repeat unfold 3 {c16_\prall r r8 r4}
+%
+%
+R2 * 4
+%
+%
+%
+r4 c8\p r
+c r c r \bar "||"
+\Btime \BstringTempo \tag #'midi {\BmidiTempo} c4\fermata r r2
+R1 * 18	%%% 21 dont 3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \stemUp \transpose c c' \relative c 
+			{r2 r4 r8 g16(^"Flute" a) | ais4.( b8) e, r r e16( fis) | g8 r r g16( a) b8 r r b16( cis)} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+\mark #2 c1:32 ~ 
+c: ~
+c8 r r4 r2
+R1
+c1:32\f ~
+c: ~
+c8 r r4 r2
+R1
+c1:32 ~ 
+c: ~
+c8 r r4 r2
+R1
+c1:32
+R1 * 3
+%
+%
+r2 c2:32
+c8 r r4 r2
+c8 r r4 r2
+c1:32 ~
+c8 r \repeat unfold 15 c4
+%
+%
+%
+c4 r r2
+R1
+c4 r r2
+R1
+r2 r\fermata
+\mark #3 R1 * 21 	%% 24 dont 3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \stemUp \transpose c c' \relative c 
+			{e,4^"Flute" fis8. gis16 a8. b16 cis8. d16 | e8 cis d e e d b d | d( cis) a cis cis( b) fis gis} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+<< 	\context Voice = "rep" 
+			{ r2 c8_\prall\p r r4 
+				\repeat unfold 7 {r2 c8_\prall r r4} }
+		\context Voice = "rep" 
+			{ \compteRepetes \repeat percent 8 { s1 } }
+>>
+%
+%
+<< 	\context Voice = "rep" 
+			{c8_\markup{\italic "cresc."} r r4 c8 r r4 
+				\repeat unfold 7 {c8 r r4 c8 r r4} }
+		\context Voice = "rep" 
+			{ \compteRepetes \repeat percent 8 { s1 } }
+>>
+%
+%
+c2:32 ~ c8 r r4
+c2:32 ~ c8 r r4
+c1:32 ~
+c:
+c2 ~ c8 r r4
+c2 ~ c8 r r4
+c1:32 ~
+c1:
+\repeat unfold  8 c4
+%
+c1:32
+c:
+c8 r r4 r2
+r2 r4 c
+c8 r r4 r2
+r2 r4 c
+\repeat unfold 8 c4
+%
+c4 r r2
+R1 * 9
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #4 R1 * 18	%%% 21 dont 3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \stemUp \transpose c c' \relative c 
+			{r2 r4 r8 g16(^"Flute" a) | ais4.( b8) e, r r e16( fis) | g8 r r g16( a) b8 r r b16( cis)} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+c1:32\f ~
+c: ~
+c8 r r4 r2
+R1
+c1:32\f ~
+c: ~
+c8 r r4 r2
+R1
+c1:32\f ~
+c: ~
+c8 r r4 r2
+R1
+r2 c2:32 ~ 
+c8 r r4 c2:32 ~ 
+c8 r r4 c2:32 ~ 
+c8 r r4 c2:32 ~
+c8 r \repeat unfold 15 c4
+%
+%
+%
+c4 r r2
+R1
+c4 r r2
+R1
+c2\fermata r
+\mark #5 R1 * 21	%% 24 dont 3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \stemUp \transpose c c' \relative c 
+			{a4^"Flute" b8. cis16 d8. e16 fis8. g16 | a8( fis) g a a( g) e g | g( fis) d fis fis( e) d e }  \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+<< 	\context Voice = "rep" 
+			{ r2 c8\p r r4 
+				\repeat unfold 7 {r2 c8 r r4} }
+		\context Voice = "rep" 
+			{ \compteRepetes \repeat percent 8 { s1 } }
+>>
+%
+%
+<< 	\context Voice = "rep" 
+			{c8_\markup{\italic "cresc."} r r4 c8 r r4 
+				\repeat unfold 7 {c8 r r4 c8 r r4} }
+		\context Voice = "rep" 
+			{ \compteRepetes \repeat percent 8 { s1 } }
+>>
+%
+%
+c2:32 ~ c8 r r4
+c2:32 ~ c8 r r4
+c1:32 ~
+c1:
+c2:32 ~ c8 r r4
+c2 ~ c8 r r4
+c1:32 ~
+c1:
+\repeat unfold  8 c4
+%
+c1:32 ~
+c: ~
+c8 r r4 r2
+r2 r4 c
+c8 r r4 r2
+r2 r4 c
+\repeat unfold 8 c4
+%
+\repeat unfold 8 {c8 r r4}
+%
+%
+%
+c1:32 ~
+c1:32 ~
+c1:32 ~
+c1:32 
+c4 r8. c16 c4 c
+c2 c
+c1\fermata \bar "|."
+}
+

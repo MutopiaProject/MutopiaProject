@@ -1,0 +1,287 @@
+﻿\version "2.11.61"      %Rossini Eduardo e Cristina - Flûte 2
+
+\relative c''{
+\clef treble
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo}
+\partial 16 d16\f
+d4\fermata r8. e16\f
+e4\fermata r8. cis16\f
+cis4\fermata ~ cis8 r
+R2 * 8	%% 9 + 1 citation
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' {c8^"Hautbois" a'4 gis8} \unset fontSize} \\ R2>>  \tag #'score R2 >>
+r8 bes'4-> a16. a32
+d,8 r r4
+R2
+c'!4. bes8
+a( g f) r
+R2
+r8 a16. a32 g8 r
+R2 * 5
+% 
+%
+%
+%
+\mark #1 f8\f r r4
+f8\f r r4
+g8\f r r4
+g8\f r r4
+fis16\f r r8 f16\f r r8
+e16\f r r8 d16\f r r8
+f16.\f f32 f16. f32 f16. f32 f16. f32
+e16 r r8 r4
+a,16 r r8 r4
+a16 r r8 r4
+f'16 r r8 r4
+R2 * 4
+%
+%
+%
+r4 cis'8\p r
+cis r cis r \bar "||"
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo} cis4\fermata r r2		%%
+R1 * 18 	%% 19 + 1 citation
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 r2 r4 r8 g16( a)^"Flûte1" \unset fontSize} \\ R1>>  \tag #'score R1 >>
+ais4.(->\f b8) e, r r e16( fis)
+g8 r r g16( a) b8 r r b16( cis)
+\mark #2 fis,1\f ~
+\repeat unfold 4 {fis8. fis16}
+fis1-> ~
+fis8 r r4 r2
+e1 ~
+\repeat unfold 4 {e8. e16}
+e1-> ~
+e8 r r4 r2
+fis1-> ~
+\repeat unfold 4 {fis8. fis16}
+fis1-> ~
+fis8 r r4 r2
+gis1 ~
+\repeat unfold 4 {gis8. gis16}
+gis1 ~
+gis8 r r4 r2
+\repeat unfold 4 {r4 a2 r4}
+%
+%
+%
+r8. gis,16 gis8. a16 a8. b16 b8. c16
+c8. e16 e8. e16 e8. dis16 dis8. e16
+e8 r16 gis, gis8. a16 a8. b16 b8. c16
+c8. e16 e8. e16 e8. dis16 dis8. e16
+b4\p r8 e16 e \repeat unfold 12 e8
+%
+e4\f r8 e16 e \repeat unfold 12 e8
+%
+e2 r\fermata
+\mark #3 R1 * 36	%% 37 + 1 citation
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c' \relative c'' {b8^"Flûte1" cis d4. e,8 gis a} \unset fontSize} \\ R1>>  \tag #'score R1 >>
+b8 cis d4. e,8 gis a
+r fis' eis fis gis fis eis fis
+e! d cis d cis b a gis
+a'1\f 
+a
+a
+a
+a ~
+a ~
+a ~
+a
+\repeat unfold 8 {a8. a16}
+%
+cis!1
+b
+a8 r bes2\f r4
+r2 r4 b!8.\f b16
+a8 r bes2 r4
+r2 r4 b!8.\f b16
+a4 gis \repeat unfold 3 {a gis}
+%
+a4 r8 cis16 cis cis8 cis cis cis
+cis4 r r2
+r4 r8 cis16 cis cis8 cis cis cis
+cis4 r r2
+R1 * 6
+%
+%
+%
+%
+%
+\mark #4 R1 * 19
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r4 r8 e,16( fis)
+g8 r r g16( a) b8 r r b16( cis)
+bes1\f ~
+\repeat unfold 4 {bes8. bes16}
+bes1-> ~
+bes8 r r4 r2
+c1-> ~
+\repeat unfold 4 {c8. c16}
+c1-> ~
+c8 r r4 r2
+bes1-> ~
+\repeat unfold 4 {bes8. bes16}
+bes1-> ~
+bes8 r r4 r2
+\repeat unfold 4 {r4 d2 r4}
+%
+%
+%
+r8. a,16  a8. b!16 b8. cis!16 cis8. d16
+d8. e16 e8. f16 f8. d16 d8. cis!16
+cis8. a16  a8. b16 b8. cis!16 cis8. d16
+d8. e16 e8. f16 f8. d16 d8. cis!16
+cis4 r8 a'16 a \repeat unfold 12 a8
+%
+a4 r8 a16 a \repeat unfold 12 a8
+%
+a2\fermata r
+\mark #5 R1 * 37	%% 38 + 1 citation
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' {e8^"Piccolo" fis g4. a,8 cis d} \unset fontSize} \\ R1>>  \tag #'score R1 >>
+e8 b' ais b cis b ais b
+a! g fis g fis e d cis
+<< {fis1\f ~ 
+	fis ~ fis ~ 
+	fis ~ fis ~ 
+	fis ~ fis ~ 
+	fis } 
+\\
+ { \compteRepetes \repeat percent 8 { s1 } } 
+>>
+\repeat unfold 8 {f8. f16}
+%
+fis!1
+e
+d8 r bes'2 r4
+r2 r4 e,8.\f e16
+fis8 r bes2 r4
+r2 r4 e,8. e16
+\repeat unfold 4 {fis4 e}
+%
+\repeat unfold 8 {fis8 r r4}
+%
+%
+%
+fis8 e \repeat unfold 15 {fis e}
+%
+%
+%
+fis4 r8. fis16 fis4 fis
+fis2 fis
+fis1\fermata \bar "|."
+}
+

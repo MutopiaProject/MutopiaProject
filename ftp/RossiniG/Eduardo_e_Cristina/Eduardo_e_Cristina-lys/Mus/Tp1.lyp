@@ -1,0 +1,287 @@
+﻿\version "2.11.61"      %Rossini Eduardo e Cristina - Trompette 1
+
+\relative c''{
+\clef treble
+
+
+\crescTextCresc 
+
+\Atime \AstringTempo \tag #'midi {\AmidiTempo} 						%%% \Akey non utilisé, saisie en ut
+\partial 16 d16\f
+d4\fermata r8. g,16\f
+g4\fermata r8. e'16\f
+e4\fermata ~ e8 r
+R2 * 18	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+% 
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' {r4 r8 f'(^"Basson"
+		e8) des8( c) e( f) bes,16. bes32 c8 c, \unset fontSize}} \\ {R2 * 3} >>
+	 \tag #'score {R2 * 3} >>
+\mark #1 c8\f r r4
+c8\f r r4
+g8\f r r4
+g8\f r r4
+c16\f r r8 d16\f r r8
+g,16\f r r8 c16\f r r8
+R2
+c16 r r8 r4
+c16 r r8 r4
+c16 r r8 r4
+c16 r r8 r4
+R2 * 4
+%
+%
+%
+r4 c8\p r
+c r c r \bar "||"
+\Btime \BstringTempo \tag #'midi {\BmidiTempo} c4\fermata r r2
+R1 * 18	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c' \relative c'' 
+			{r2 r4 r8 g16(^"Flute" a) | ais4.( b8) e, r r e16( fis) | g8 r r g16( a) b8 r r b16( cis)} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+\mark #2 c1\f ~
+\repeat unfold 4 {c8. c16}
+c1-> ~
+c8 r r4 r2
+c1 ~
+\repeat unfold 4 {c8. c16}
+c1-> ~
+c8 r r4 r2
+c1-> ~
+\repeat unfold 4 {c8. c16}
+c1-> ~
+c8 r r4 r2
+d1 ~
+\repeat unfold 4 {d8. d16}
+d1 ~
+d8 r r4 r2
+\repeat unfold 4 {r4 c2 r4}
+%
+%
+%
+r8. g16 \repeat unfold 15 {g8. g16}
+%
+%
+%
+g4 r8 g16 g \repeat unfold 12 g8
+%
+g4 r8 g16 g \repeat unfold 12 g8
+%
+g2 r\fermata
+\mark #3 R1 * 21	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c' \relative c'' 
+			{e,4^"Flute" fis8. gis16 a8. b16 cis8. d16 | e8 cis d e e d b d | d( cis) a cis cis( b) fis gis} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+r8 c\p c c c c c c
+r8 c4.:8 c2:8
+r8 c4.:8 c2:8
+r8 c4.:8 c2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8
+r8 c4.:8 c2:8
+r8 c4.:8 c2:8
+r8 c4.:8 c2:8
+r8 c4.:8 c2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8
+<<  \context Voice = "rep"  {r4 r8. e16\f e2
+			\repeat unfold 7 {r4 r8. e16 e2} } 
+\\
+		\tag #'partie	{	\context Voice = "rep" {	{\set countPercentRepeats = ##t \override PercentRepeat #'transparent = ##t	\override PercentRepeatCounter #'staff-padding = #1 } 
+			\repeat percent 8 { s1 } } }
+>>
+%
+%
+\repeat unfold 8 {c8. c16}
+%
+e1
+d
+c8 r r4 r2
+r2 r4 d8.\f d16
+e8 r r4 r2
+r2 r4 d8.\f d16
+\repeat unfold 4 {e4 d}
+%
+e4 r8 c16 c c8 c c c
+c4 r r2
+r4 r8 e16 e e8 e e e
+e4 r r2
+R1 * 6
+%
+%
+%
+%
+%
+\mark #4 R1 * 18	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c' \relative c'' 
+			{r2 r4 r8 g16(^"Flute" a) | ais4.( b8) e, r r e16( fis) | g8 r r g16( a) b8 r r b16( cis)} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+\once \override TextScript #'padding = #2 c1\f^\markup \box {\large \bold "in RE"} ~
+\repeat unfold 4 {c8. c16}
+c1-> ~
+c8 r r4 r2
+g1-> ~
+\repeat unfold 4 {g8. g16}
+g1-> ~
+g8 r r4 r2
+c1-> ~
+\repeat unfold 4 {c8. c16}
+c1-> ~
+c8 r r4 r2
+\repeat unfold 4 {r4 c2 r4}
+%
+%
+%
+r8. g16  \repeat unfold 15 {g8. g16}
+%
+%
+%
+g4 r8 g16 g \repeat unfold 12 g8
+%
+g4 r8 g16 g \repeat unfold 12 g8
+%
+g2\fermata r
+\mark #5 R1 * 21	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c' \relative c'' 
+			{a4^"Flute" b8. cis16 d8. e16 fis8. g16 | a8( fis) g a a( g) e g | g( fis) d fis fis( e) d e }  \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+r8 g\p g g g g g g
+r8 g4.:8 g2:8-\tag #'partie ^"2" 
+r8 g4.:8 g2:8-\tag #'partie ^"3"
+r8 g4.:8 g2:8-\tag #'partie ^"4"
+r8 g4.:8 g2:8-\tag #'partie ^"5"
+r8 g4.:8 g2:8-\tag #'partie ^"6"
+r8 g4.:8 g2:8-\tag #'partie ^"7"
+r8 g4.:8 g2:8-\tag #'partie ^"8"
+r8\< g4.:8 g2:8-\tag #'partie ^"9"
+r8 g4.:8 g2:8-\tag #'partie ^"10"
+r8 g4.:8 g2:8-\tag #'partie ^"11"
+r8 g4.:8 g2:8-\tag #'partie ^"12"
+r8 d'4.:8 d2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8
+r8 d4.:8 d2:8\!
+r8 c4.:8\f c2:8
+r8 c4.:8 c2:8-\tag #'partie ^"2"
+r8 c4.:8 c2:8-\tag #'partie ^"3"
+r8 c4.:8 c2:8-\tag #'partie ^"4"
+r8 c4.:8 c2:8-\tag #'partie ^"5"
+r8 c4.:8 c2:8-\tag #'partie ^"6"
+r8 c4.:8 c2:8-\tag #'partie ^"7"
+r8 c4.:8 c2:8-\tag #'partie ^"8"
+\repeat unfold 8 {c8. c16}
+%
+e1
+d
+c8 r r4 r2
+r2 r4 g8. g16
+c8 r r4 r2
+r2 r4 g8. g16
+\repeat unfold 4 {c4 d}
+%
+\repeat unfold 8 {c8 r r4}
+%
+%
+%
+c8 d \repeat unfold 15 {c d}
+%
+%
+%
+c4 r8. g16 g4 g
+g2 g
+g1\fermata \bar "|."
+}
+

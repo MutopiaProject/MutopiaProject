@@ -1,0 +1,24 @@
+﻿
+
+cCompositeur = \markup { "Giacchino ROSSINI" }
+cDatesCompositeur = "(1792-1868)"
+cTitre = "Eduardo e Cristina"
+cSousTitre = "Ouverture"
+cRefConcert = "1044"
+
+%%%% Mouvements
+
+AstringTempo = {\stringTempoOnKey	\mark \markup {\hspace #+10.0 {\smaller \bold "Moderato"}}}
+AmidiTempo = {\override Score.MetronomeMark #'transparent = ##t  
+						\tempo 8=60}
+Atime = \time 2/4
+Akey = \key d \minor
+
+BstringTempo = {\stringTempoOnKey \mark \markup {\hspace #+20.0 {\smaller \bold "Allegro Brillante"}}}
+BmidiTempo = {\override Score.MetronomeMark #'transparent = ##t  
+						\tempo 2=60}
+Btime = \time 4/4
+Bkey = \key d \major
+
+
+

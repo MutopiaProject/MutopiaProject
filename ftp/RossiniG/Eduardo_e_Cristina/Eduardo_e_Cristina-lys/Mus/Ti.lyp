@@ -1,0 +1,287 @@
+﻿\version "2.11.61"      %Rossini Eduardo e Cristina - Timbales
+
+\relative c{
+\clef bass
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo} 
+\partial 16 d16\f
+d4\fermata r8. d16\f
+d4\fermata r8. a16\f
+a4\fermata ~ a8 r
+R2 * 18	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+% 
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c {r4 r8 f'(^"Basson"
+		e8) des8( c) e( f) bes,16. bes32 c8 c, \unset fontSize}} \\ {R2 * 3} >>
+	 \tag #'score {R2 * 3} >>
+\mark #1 a8\f r r4
+a8 r r4
+R2 * 2
+%
+a16\f r r8 d16\f r r8
+a16\f r r8 d16\f r r8
+d2:32\f
+a16 r r8 a8.\p a16
+d16\f r r8 d8.\p d16
+a16 r r8 r4
+d16\f r r8 r4
+R2 * 4
+%
+%
+%
+r4 a8\p r
+a r a r \bar "||"
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo} a4\fermata r r2
+R1 * 18	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+			{r2 r4 r8 g16(^"Flute" a) | ais4.( b8) e, r r e16( fis) | g8 r r g16( a) b8 r r b16( cis)} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+\mark #2 d1:32\f ~ 
+d: ~
+d8 r r4 r2
+R1
+a1:32\f ~
+a: ~
+a8 r r4 r2
+R1
+d1:32 ~ 
+d: ~
+d8 r r4 r2
+R1
+d1:32 ~ 
+d: ~
+d8 r r4 r2
+R1
+\repeat unfold 4 {a2:32 ~ a8 r r4}
+%
+%
+%
+r4 \repeat unfold 15 a4
+%
+%
+%
+a4 r r2
+R1
+d4 r r2
+R1
+d2 r\fermata
+\mark #3 R1 * 21	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+			{e,4^"Flute" fis8. gis16 a8. b16 cis8. d16 | e8 cis d e e d b d | d( cis) a cis cis( b) fis gis} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+<<  \context Voice = "rep"  {\repeat unfold 16 {a1:32 ~} }
+\\
+		\context Voice = "rep" {	{\set countPercentRepeats = ##t \override PercentRepeat #'transparent = ##t	\override PercentRepeatCounter #'staff-padding = #1 } 
+			\repeat percent 16 { s1 } } 
+>>
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+a2:32 ~ a8 r r4
+a2:32 ~ a8 r r4
+a1:32 ~
+a1:
+a2 ~ a8 r r4
+a2 ~ a8 r r4
+a1:32 ~
+a1:
+\repeat unfold  8 a4
+%
+a1:32
+d:
+a8 r r4 r2
+r2 r4 d8. d16
+a8 r r4 r2
+r2 r4 d8. d16
+\repeat unfold 4 {a4 d}
+%
+a4 r r2
+R1 * 9
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #4 R1 * 18	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+			{r2 r4 r8 g16(^"Flute" a) | ais4.( b8) e, r r e16( fis) | g8 r r g16( a) b8 r r b16( cis)} \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+d1:32\f ~
+d: ~
+d8 r r4 r2
+R1
+a1:32\f ~
+a: ~
+a8 r r4 r2
+R1
+d1:32\f ~
+d: ~
+d8 r r4 r2
+R1
+\repeat unfold 4 {d2 ~ d8 r r4}
+%
+%
+%
+r4 \repeat unfold 15 a4
+%
+%
+%
+a4 r r2
+R1
+a4 r r2
+R1
+a2\fermata r
+\mark #5 R1 * 21	%% +3 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+			{a4^"Flute" b8. cis16 d8. e16 fis8. g16 | a8( fis) g a a( g) e g | g( fis) d fis fis( e) d e }  \unset fontSize} \\ {R1 * 3} >>
+	 \tag #'score {R1 * 3} >>
+<<  \context Voice = "rep"  {a1:32\p ~
+\repeat unfold 15 {a1:32 ~} }
+\\
+		\context Voice = "rep" {	{\set countPercentRepeats = ##t \override PercentRepeat #'transparent = ##t	\override PercentRepeatCounter #'staff-padding = #1 } 
+			\repeat percent 16 { s1 } } 
+>>
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+d2:32 ~ d8 r r4
+d2:32 ~ d8 r r4
+d1:32 ~
+d1:
+d2:32 ~ d8 r r4
+d2 ~ d8 r r4
+d1:32 ~
+d1:
+\repeat unfold  8 d4
+%
+a1:32 ~
+a: ~
+d8 r r4 r2
+r2 r4 a8. a16
+d8 r r4 r2
+r2 r4 a8.\f a16
+\repeat unfold 4 {d4 a}
+%
+<<  \context Voice = "rep"  {\repeat unfold 16 {d8 r r4} }
+\\
+		\context Voice = "rep" {	{\set countPercentRepeats = ##t \override PercentRepeat #'transparent = ##t	\override PercentRepeatCounter #'staff-padding = #1 } 
+			\repeat percent 8 { s1 } } 
+>>
+%
+%
+%
+d4 r8. d16 d4 d
+d2 d
+d1\fermata \bar "|."
+}
+

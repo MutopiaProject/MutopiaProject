@@ -1,0 +1,287 @@
+﻿\version "2.11.61"      %Rossini Eduardo e Cristina - Violon2 
+
+\relative c''{
+\clef treble
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo} 
+\partial 16 <d f>16\f
+<d f>4\fermata r8. <d e>16
+<d e>4\fermata r8. <a e>16
+<a e>4\fermata ~ <a e>8 r
+r4 f(\p
+e2)
+e8 f d e
+r e16. e32 e8 dis
+e c d( b
+c16) r r8 r4
+R2 * 4
+%
+%
+%
+d'4.(\p c8
+bes a g) r
+R2
+r4 r8 ees'              %%%SOURCE: e
+d ees d ees 
+d( a32 a a a) d8( a32 a a a)
+d8:32 ees: d: c:
+bes8 r r des(
+c) des c des
+c f8:32 e: c:
+c: des: c: bes:
+\mark #1 <a, f'>32\fp <a f'> <a f'> <a f'> <a f'>8:32 <a f'>4:32
+<a f'>: <a f'>:
+<bes g'>: <bes g'>:
+<bes g'>: <bes g'>:
+<a fis'>:\fp <g f'>:
+<g e'>:\fp <a f'>:
+gis':\fp gis:
+a16 \grace {a,64[( b cis b)]} a32 e' cis a' e cis' a16 r r8
+d,16\fp \grace {d64[( e f e)]} d32 a' f d' a f' d16 r r8
+a16\fp \grace {a,64[( b cis b)]} a32 e' cis a' e cis' a16 r r8
+d,16\fp \grace {d64[( e f e)]} d32 a' f d' a f' d16 r r8
+R2
+r32\pizz e, dis d cis c b bes a bes a bes a bes a bes
+a16 r r8 r4
+R2
+r4 <cis e>8\arco r
+<cis e> r <cis e> r \bar "||"
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo} <cis e>4\fermata r r2
+r8 <a d>\p <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <a, d> <a d> r r <g e'> <g e'> r
+r <ais fis'> <ais fis'> <ais fis'> <ais fis'> r r4
+r8 <a! d> <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <cis, e> <cis e> r r <a g'> <a g'> r
+r  <a fis'> <a fis'> <a fis'> <a fis'> r r4
+r8 <cis e> <cis e> r r <cis e> <cis e> r
+r <cis e> <cis e> <cis e> <cis e> r r4
+r8 <g e'> <g e'> r r <g e'> <g e'> r
+r <g e'> <g e'> <g e'> <g e'> r r4
+R1 * 2
+%
+r8 <a d> <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <a, d> <a d> r r <g e'> <g e'> r
+r <ais fis'> <ais fis'> <ais fis'> <ais fis'> r r4
+r8 <a! d> <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <cis, e> <cis e> r r <a g'> <a g'> r
+\mark #2 <fis' a>2:16\f <fis a>:
+<fis a>: <fis a>:
+<fis a>8 r d8:16 cis: e: d: g: fis:
+b: a: gis: a: g: fis: e: d:
+<cis a'>2:16 <cis a'>: 
+<cis a'>: <cis a'>:
+<cis a'>8 r e8:16 dis: fis: e: g: fis:
+a: g: cis: b: a: g: fis: e:
+<fis a>2:16 <fis a>:
+<fis a>: <fis a>:
+<fis a>8 r d8:16 cis: e: d: g: fis:
+b: a: gis: a: d: cis: b: a:
+<b, gis'>2:16 <b gis'>:
+<b gis'>: <b gis'>:
+<b gis'>8 r gis'8:16 fis: a: gis: b: a:
+cis: b: gis': fis: e: d: cis: b:
+<c, a'>2:16 <c a'>:
+<c a'>: <c a'>:
+<c a'>: <c a'>:
+<c a'>: <c a'>:
+gis'8. gis16 gis8. a16 a8. b16 b8. c16
+c8. e16 e8. e16 e8. a16 a8. gis16
+gis8 r16 gis,, gis8. a16 a8. b16 b8. c16 
+c8. e16 e8. e16 e8. a16 a8. gis16
+gis4 r8 <e e'>16 <e e'> <e e'>8 <e e'> <e e'> <e e'>
+<e e'>2:8 <e e'>:
+<e e'>4 r8^\markup {"4e corde"} e16 e e8 e e e 
+e2:8 e:
+e2 r\fermata
+\mark #3 cis4\pizz cis cis cis
+cis cis cis cis
+cis cis cis cis
+<b d> <b d> <b d> <b d>
+<cis e> <cis e> <cis e> <cis e> 
+cis cis cis cis
+b b b b
+cis cis cis cis
+b b b b
+b b b b
+a a b b
+cis cis b b
+cis cis cis cis
+cis cis cis cis
+cis cis cis cis
+<b d> <b d> <b d> <b d>
+<cis e> <cis e> <cis e> <cis e> 
+cis cis cis cis
+b b b b
+cis cis cis cis
+b b b b
+b b b b
+<cis e> <cis e> b b
+cis cis b b
+<cis e>2:16^\markup {"Arco sul ponticello"} <cis e>:
+<cis e>: <cis e>:
+<cis e>: <cis e>:
+<cis e>: <cis e>:
+<d e>: <d e>: 
+<d e>: <d e>: 
+<d e>: <d e>: 
+<d e>: <d e>: 
+<cis e>:_\markup{\italic "cresc."} <cis e>:
+<cis e>: <cis e>:
+<cis e>: <cis e>:
+<cis e>: <cis e>:
+<d e>: <d e>: 
+<d e>: <d e>: 
+<d e>: <d e>: 
+<d e>: <d e>: 
+<cis' a'>2:16\ff \repeat unfold 15 <cis a'>:
+%
+%
+%
+%
+%
+%
+%
+<c a'>8. <c a'>16 \repeat unfold 7 {<c a'>8. <c a'>16}
+%
+<cis! a>2:16 <cis a'>:
+<b gis'>: <b gis'>:
+<cis a'>8 r <f, bes>2.\f\> ~ 
+<f bes>2 r4\! <e d'>8. <e d'>16
+<e cis'>8 r <f bes>2.\f\> ~ 
+<f bes>2 r4\! <e d'>8.\f <e d'>16
+\repeat unfold 4 {<e cis'>4:16 <e d'>:}
+%
+<e cis'>4 r r2
+r4 r8 a,16(\p b) cis8-. cis16( d) e8-. e16( fis)
+g4 r r2
+r4 r8 a,16( b) cis8-. cis16( d) e8-. e16( fis)
+g4 r r2
+R1 * 5
+%
+%
+%
+%
+\tag #'partie \pageBreak \mark #4 r8 <a, d>\p <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <a, d> <a d> r r <g e'> <g e'> r
+r <ais fis'> <ais fis'> <ais fis'> <ais fis'> r r4
+r8 <a! d> <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <cis, e> <cis e> r r <a g'> <a g'> r
+r  <a fis> <a fis> <a fis> <a fis> r r4
+r8 <cis e> <cis e> r r <cis e> <cis e> r
+r <cis e> <cis e> <cis e> <cis e> r r4
+r8 <g e'> <g e'> r r <g e'> <g e'> r
+r <g e'> <g e'> <g e'> <g e'> r r4
+R1 * 2
+%
+r8 <a d> <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <a, d> <a d> r r <g e'> <g e'> r
+r <ais fis'> <ais fis'> <ais fis'> <ais fis'> r r4
+r8 <a! d> <a d> r r <a d> <a d> r
+r g' g g g r r4
+r8 <cis, e> <cis e> r r <a g'> <a g'> r
+<d bes'>2:16\f <d bes'>:
+<d bes'>: <d bes'>:
+<d bes'>8 r bes'8:16 a: c: bes: d: c:
+ees: d: g: f: ees: d: c: bes:
+<c, a'>2:16 <c a'>:
+<c a'>: <c a'>:
+<c a'>8 r c'8:16 bes: d: c: ees: d:
+f: ees: d: c: bes: a: g: fis!:
+<bes, g'>2:16 <bes g'>:
+<bes g'>: <bes g'>:
+<bes g'>8 r g'8:16 fis!: a: g: bes: a:
+c: bes: d: cis: e!: d: f: e:
+<f, d'>2:16 <f d'>:
+<f d'>: <f d'>:
+<f d'>: <f d'>:
+<f d'>: <f d'>:
+cis'!8. cis,16  cis8. d16 d8. e16 e8. f16
+f8. a16 a8. a16 a8. d16 d8. cis!16
+cis8. cis,16  cis8. d16 d8. e16 e8. f16
+f8. a16 a8. a16 a8. d16 d8. cis!16
+cis4 r8 <a a'>16 <a a'> \repeat unfold 12 <a a'>8
+%
+<a a'>4 r8 <a, a'>16 <a a'> \repeat unfold 12 <a a'>8
+%
+<a a'>2 r\fermata
+\mark #5 a4\p\pizz a a a
+a a a a
+a a a a
+<cis e> <cis e> <cis e> <cis e> 
+d d d d
+d d d d
+e e e e
+d d d d
+e e e e
+e e e e           %%%% SOURCE: fis fis fis fis     voir mes.228
+d d e e
+d d cis cis
+a a a a
+a a a a
+a a a a
+<cis e> <cis e> <cis e> <cis e> 
+d d d d
+d d d d
+e e e e
+d d d d
+e e e e
+e e e e
+d d e e
+d d cis cis
+<a fis'>2:16^\markup {" Arco sul ponticello"} <a fis'>:
+<a fis'>: <a fis'>:
+<a fis'>: <a fis'>:
+<a fis'>: <a fis'>:
+<a g'>: <a g'>:
+<a g'>: <a g'>:
+<a g'>: <a g'>:
+<a g'>: <a g'>:
+<a fis'>:_\markup{\italic "cresc."} <a fis'>:
+<a fis'>: <a fis'>:
+<a fis'>: <a fis'>:
+<a fis'>: <a fis'>:
+<a g'>: <a g'>:
+<a g'>: <a g'>:
+<a g'>: <a g'>:
+<a g'>: <a g'>:
+<d' a'>:\f <d a'>:
+<d a'>: <d a'>:
+<d a'>: <d a'>:
+<d a'>: <d a'>:
+<b b'>: <b b'>:
+<b b'>: <b b'>:
+<b b'>: <b b'>:
+<b b'>: <b b'>:
+f'8. f16 \repeat unfold 7 {f8. f16}
+%
+<d fis!>2:16 <d fis>:
+<cis e>: <cis e>
+d8 r bes,2.\> ~ 
+bes2 r4\! <a g'>8.\f <a g'>16
+<a fis'>8 r bes2.\> ~ 
+bes2 r4 <a' g'>8.\f <a g'>16
+\repeat unfold 4 {<a fis'>4:16 <a g'>:}
+%
+<a fis'>8 d16( cis d cis d cis) d8 a16( gis a gis a gis)
+a8 fis16( eis fis eis fis eis) fis8 d16( cis d cis d cis)
+d8 d16( cis d cis d cis) d8 a16( gis a gis a gis)
+a8 fis'16( eis fis eis fis eis) fis8 d16( cis d cis d cis)
+d8 e fis e fis e fis e
+fis cis' d cis d cis d cis
+d e fis e fis e fis e
+fis e fis e fis e fis e
+fis4 r8. <a, fis'>16 <a fis'>4 <a fis'>
+<d, a' fis'>2 <d a' fis'>2
+<d d>1\fermata \bar "|."
+}
+

@@ -1,0 +1,288 @@
+﻿\version "2.11.49"      %Rossini Eduardo e Cristina - Clarinette 2
+
+\relative c''{
+\clef treble
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo} 
+\partial 16 f16\f
+f4\fermata r8. f16
+f4\fermata r8. e16
+e4\fermata ~ e8 r
+R2 * 5
+%
+%
+%
+%
+c2 ~
+c4 b ~
+b8 c aes b
+bes g' f aes, ~
+aes f g e
+f r r4
+r4 r8 bes!16. bes32
+bes8 r r4
+R2 * 4
+%
+%
+%
+r8 a-> bes r
+R2 * 3
+%
+%
+\mark #1 ees8\f r c4\p
+ees8\f r c4\p
+bes'8\f r des,4\p
+bes'8\f r des,4\p
+ees16\f r r8 d16\f r r8
+des16 r r8 c16 r r8
+f16.\f f32 \repeat unfold 3 {f16. f32}
+e!16 r r8 r4
+f16\f r r8 r4
+e16\f r r8 r4
+c16 r r8 r4
+c16 r r8 c16 r c r
+c r r8 e,16 r f r
+e16\f r r8 r4
+R2
+r4 g8 r
+g r g r \bar "||"
+\Btime \Akey \BstringTempo \tag #'midi {\BmidiTempo} g4\fermata r r2	%% reste avec 1 bémol
+R1 * 21
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #2 f'1\f ~
+\repeat unfold 4 {f8. f16}
+f1-> ~
+f8 r r4 r2
+e1 ~
+\repeat unfold 4 {e8. e16}
+e1-> ~
+e8 r r4 r2
+f1 ~
+\repeat unfold 4 {f8. f16}
+f1-> ~
+f8 r r4 r2
+d1 ~
+\repeat unfold 4 {d8. d16}
+d1 ~
+d8 r r4 r2
+\repeat unfold 4 {r4 eis2 r4}
+%
+%
+%
+r8. d16 d8. eis16 eis8. f16 f8. g16
+g8. g16 g8. g16 g8. c,16 c8. b16
+b8 r16 b b8. c16 c8. d16 d8. g16
+g8. g16 g8. g16 g8. c,16 c8. b16
+b4\p r8 g'16 g \repeat unfold 12 g8
+%
+g4\f r8 g16 g \repeat unfold 12 g8
+%
+g2 r\fermata
+\mark #3 R1 * 38
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r8 a gis a b a gis a
+g! f e f e d c b
+e1\f
+e
+e
+e
+e ~
+e ~
+e ~
+e
+\repeat unfold 8 {ees8. ees16}
+%
+e!1
+d
+e8 r des2\f r4
+r2 r4 b8.\f b16
+c8 r des2 r4
+r2 r4 b8.\f b16
+\repeat unfold 4 {e4 d}
+%
+e4 r8 e16 e e8 e e e
+e4 r r2
+r4 r8 e16 e e8 e e e
+e4 r r2
+R1 * 6
+%
+%
+%
+%
+%
+\mark #4 R1 * 21
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+f1\f ~
+\repeat unfold 4 {f8. f16}
+f1-> ~
+f8 r r4 r2
+ees1 ~
+\repeat unfold 4 {ees8. ees16}
+ees1-> ~
+ees8 r r4 r2
+des1 ~
+\repeat unfold 4 {des8. des16}
+des1-> ~
+des8 r r4 r2
+\repeat unfold 4 {r4 f2 r4}
+%
+%
+%
+r8. e,16  e8. f16 f8. g16 g8. aes16
+aes8. e'16 e8. f16 f8. f16 f8. e16
+e8. e,16  e8. f16 f8. g16 g8. aes16
+aes8. e'16 e8. f16 f8. f16 f8. e16
+e4 r8 c16 c \repeat unfold 12 c8
+%
+c4 r8 c16 c \repeat unfold 12 c8
+%
+c2\fermata r
+\mark #5 R1 * 38
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+g'8 d' cis d e d cis d
+c! bes a bes a g f e
+f1\f
+f
+f
+f
+f ~
+f ~
+f ~
+f
+\repeat unfold 8 {f8. f16}
+%
+f1
+e
+f8 r des2 r4
+r2 r4 e8.\f e16
+f8 r des2 r4
+r2 r4 e8.\f e16
+\repeat unfold 4 {f4 g}
+%
+\repeat unfold 8 {f8 r r4}
+%
+%
+%
+a,8 g \repeat unfold 3 {a g}
+a e' \repeat unfold 11 {f e}
+%
+%
+f4 r8. f16 f4 f
+f2 f
+f1\fermata \bar "|."
+
+}
+

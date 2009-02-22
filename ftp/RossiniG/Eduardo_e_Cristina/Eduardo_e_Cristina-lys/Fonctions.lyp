@@ -1,0 +1,20 @@
+﻿
+
+arco = ^\markup{"Arco"}
+pizz = ^\markup{"Pizz."}
+
+%%%% Repères en format lettre encadrée
+reperes = {\set Score.markFormatter = #format-mark-box-alphabet
+					\override Score.RehearsalMark #'padding = #3.0 }
+
+silencesMulti = \set Score.skipBars = ##t
+
+stringTempoOnKey = {\once \override Score.RehearsalMark #'break-align-symbols = #'(key-signature) }
+stringTempoOnBar = {\once \override Score.RehearsalMark #'break-align-symbols = #'(staff-bar) }
+
+%%% compte les mesures répétées 
+%%% utilisation: \compteRepetes \repeat percent n {...}
+compteRepetes = {	\set countPercentRepeats = ##t
+									\override PercentRepeat #'transparent = ##t
+									\override PercentRepeatCounter #'staff-padding = #2 }
+%%

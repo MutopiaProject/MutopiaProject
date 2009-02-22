@@ -1,0 +1,287 @@
+﻿\version "2.11.61"      %Rossini Eduardo e Cristina - Violoncelle 
+
+\relative c{
+\clef bass
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo} 
+\partial 16 gis'16\f
+gis4\fermata r8. g16
+g4\fermata r8. a16
+a4\fermata ~ a8 r
+R2
+a4.(\p g8)
+f8( bes e, a)
+d,( b a f')
+e4 e,
+a8 r r4
+R2 * 7
+%
+%
+%
+%
+%
+%
+\clef tenor  r4 r8 g''(\>
+fis)\! g( fis) g(
+fis) ees( d) fis(
+g) c,16. c32 d8\> d,\!
+g8 r r f'(
+e) f( e) f(\<
+e8\> des(\! c) e(	
+f) bes,16. bes32 c8 c, \clef bass	
+\mark #1  f,16\f f'\p r8 r4
+f,16\f f'\p r8 r4
+e,16\f e'\p r8 r4
+e,16\f e'\p r8 r4
+ees16\f ees'\p r8 d,16\f d'\p r8
+cis,16\f cis'\p r8 d,16\f d'\p r8
+bes,16\f \grace {bes64([ c d c)]} bes32-. f'-. d-. bes'-.f-. d'-. bes-. f'-. d-. f-. bes,-. f-. d-. bes-.
+a'2:32\fp
+a:\fp
+a:\fp
+a:\fp
+a16\f r r8 r4
+R2
+r32\pizz e' dis d cis c b bes a bes a bes a bes a bes
+a\noBeam e dis d cis c b bes a bes a bes a bes a bes
+a8\arco r a' r
+e r cis r \bar "||"
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo} a4\fermata r r2
+d8\p r r4 d8 r r4
+cis8 r r4 r2
+d8 r r4 e8 r r4
+fis8 r r4 r2
+d8 r r4 d8 r r4
+g8 r r4 r2
+a,8 r r4 a'8 r r4
+d,8 r r4 r2
+a8 r r4 a8 r r4
+a8 r r4 r2
+c8 r r4 c8 r r4
+c8 r r4 r2
+R1 * 2
+%
+d8 r r4 d8 r r4
+cis8 r r4 r2
+r2 r4 r8 ais'16( b)
+bis4.(\f cis8) fis, r r4
+d8 r r4 d8 r r4
+g8 r r4 e8 r r4
+a,8 r r4 a8 r r4
+\mark #2 d8\f d' cis b a g fis e
+d r r4 d'8 cis16 b a g fis e
+d8 r d8:16 cis: e: d: g: fis:
+b: a: gis: a: g: fis: e: d:
+a8 a' gis fis e d cis b
+a r r4 a'8 g!16 fis e d cis b
+a8 r e'8:16 dis: fis: e: g: fis:
+a: g: cis: b: a: g: fis: e:
+d8 d' cis b a g fis e
+d r r4 d'8 cis16 b a g fis e
+d8 r d8:16 cis: e: d: g: fis:
+b: a: gis: a: d: cis: b: a:
+e8 e' d cis b a gis fis
+e8 r r4 e'8 d16 cis b a gis fis
+e8 r gis8:16 fis: a: gis: b: a:
+cis: b: gis': fis: e: d: cis: b:
+f8\f r f16(\> e f e)\! f4 r
+r e16(\> dis e dis)\! e4 r
+r d!16( cis! d cis) d4 r
+r dis16(\> cisis dis cisis)\! dis4 r
+\repeat unfold 2 {r8. e16 \repeat unfold 7 {e8. e16}}
+%
+%
+%
+e4 r8 e'16 e e8 e e e
+e e e e e e e e
+e4 r8 e,16 e e8 e e e 
+e e e e e e e e
+e2 r\fermata
+\mark #3 a,4\pizz a a a
+a a a a
+a a a a
+a a a a
+a a a a
+fis fis a a
+cis cis cis cis
+fis, fis a a
+cis cis cis cis
+d d d d
+cis cis d d
+e e e, e
+a a a a
+a a a a
+a a a a
+a a a a
+a a a a
+fis fis a a
+cis cis cis cis
+fis, fis a a
+cis cis cis cis
+d d d d
+cis cis d d
+e e e e
+a,8\arco r r4 r2
+a8 r r4 r2
+a8 r r4 r2
+a8 r r4 r2
+e'8 r r4 r2
+e8 r r4 r2
+e8 r r4 r2
+e8 r r4 r2
+a8_\markup{\italic "cresc."} e a e \repeat unfold 14 {a e}
+%
+%
+%
+\repeat unfold 16 {gis e}
+%
+%
+%
+a8\f b cis4. e,8 fis gis
+a b cis4. e,8 fis gis
+a e' dis e fis e dis e
+d! cis bis cis b a gis a
+fis gis a4. cis,8 dis eis
+fis gis a4. cis,8 dis eis
+fis cis' bis cis d cis bis cis
+b a gis a gis fis eis fis
+dis4 fis a c
+dis, fis a c
+e,2:8\f e:
+e: e:
+a8 r d,2.\f\> ~ 
+d2 r4\! e4
+a,8 r d2.\f\> ~ 
+d2 r4\! e4
+a e a e
+a e a e
+a,4 r r2
+r4 r8 a16(\p b) cis8-. cis16( d) e8-. e16( fis)
+g4 r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageBreak \mark #4 d8\pizz r r4 d8 r r4
+cis8 r r4 r2
+d8 r r4 e8 r r4
+fis8 r r4 r2
+d8 r r4 d8 r r4
+g8 r r4 r2
+a8 r r4 a,8 r r4
+d8 r r4 r2
+a8 r r4 a'8 r r4
+a,8 r r4 r2
+c8 r r4 c8 r r4
+c8 r r4 r2
+R1 * 2
+%
+d8\arco r r4 d8 r r4
+cis8 r r4 r2
+r2 r4 r8 ais'16( b)
+bis4.(\f cis8) fis, r r4
+d8 r r4 d8 r r4
+g8 r r4 r2
+a,8 r r4 a'8 r r4
+bes,8\f bes' a g f ees d c
+bes r r4 bes'8 a16 g f ees d c
+bes8 r \clef tenor bes'8:16 a: c: bes: d: c:
+ees: d: g: f: ees: d: c: bes: \clef bass
+f,8 f' ees d c bes a g
+f r r4 f'8 ees16 d c bes a g
+f8 r \clef tenor c''8:16 bes: d: c: ees: d:
+f: ees: d: c: bes: a: g: fis!: \clef bass
+g,8 g' f ees d c bes a
+g8 r r4 g'8 f16 ees d c bes a
+g8 r \clef tenor g'8:16 fis!: a: g: bes: a:
+c: bes: d: cis: e!: d: f: e:
+d8 r \clef bass bes16( a bes a) bes8 r r4
+r a16( gis a gis) a8 r r4
+r g!16( fis! g fis) g4 r
+r gis16( fisis gis fisis) gis4 r
+r8. a,16  \repeat unfold 15 {a8. a16}
+%
+%
+%
+a4 r8 a'16 a \repeat unfold 12 a8
+%
+a,4 r8 a16 a \repeat unfold 12 a8
+%
+a2 r\fermata
+\mark #5 d4\p\pizz d d d
+d d d d
+d d d d
+d d d d
+d d d d
+b b d d
+fis fis fis, fis
+b b d d
+fis fis fis fis
+g g g g
+fis fis g g
+a a a, a
+d d d d
+d d d d
+d d d d
+d d d d
+d d d d
+b b d d
+fis fis fis, fis
+b b d d
+fis fis fis fis
+g g g g
+fis fis g g
+a a a, a
+d8\p\arco r r4 r2
+d8 r r4 r2
+d8 r r4 r2
+d8 r r4 r2
+a8 r r4 r2
+a8 r r4 r2
+a8 r r4 r2
+a8 r r4 r2
+d8_\markup{\italic "cresc."} a d a \repeat unfold 14 {d a}
+%
+%
+%
+\repeat unfold 16 {cis a}
+%
+%
+%
+d8\f e fis4. a,8 b cis
+d e fis4. a,8 b cis
+d a' gis a b a gis a
+g! fis eis fis e d cis d
+b cis d4. fis,8 gis ais
+b cis d4. fis,8 gis ais
+b fis' eis fis g fis eis fis
+e! d cis d cis b ais b
+gis4 b d f
+gis, b d f
+a,2:8 a:
+a: a:
+d8 r g2.\> ~ 
+g2 r4\! a8.\f a16
+d,8 r g2.\> ~ 
+g2 r4 a8.\f a16
+d,8 fis a a, d fis a a,
+d fis a a, d fis a a,
+d8 d'16( cis d cis d cis) d8 a16( gis a gis a gis)
+a8 fis16( eis fis eis fis eis) fis8 d16( cis d cis d cis)
+d8 d'16( cis d cis d cis) d8 a16( gis a gis a gis)
+a8 fis16( eis fis eis fis eis) fis8 d16( cis d cis d cis)
+\repeat unfold 16 {d8 a}
+%
+%
+%
+d4 r8. d'16 a4 fis
+d2 d2
+d1\fermata \bar "|."
+}
+

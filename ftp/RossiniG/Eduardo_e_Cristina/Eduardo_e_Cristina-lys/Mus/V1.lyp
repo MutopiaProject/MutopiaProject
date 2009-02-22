@@ -1,0 +1,287 @@
+﻿\version "2.11.61"      %Rossini Eduardo e Cristina - Violon1 
+
+\relative c''{
+\clef treble
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo} 
+\partial 16 <b b'>16\f
+<b b'>4\fermata r8. <bes bes'>16
+<bes bes'>4\fermata r8. <cis a'>16
+<cis a'>4\fermata ~ <cis a'>8 r
+R2
+r4 a\p ~
+a g(
+f8 d' c a)
+r f4-> e16. e32
+e16 r r8 r4
+R2 * 5 
+%
+%
+%
+%
+g'4.(\p f8
+e d c) r
+r4 r8 c'-> ~
+c c4-> c8 ~ 
+c cis( d c
+bes a g fis)
+g r r bes ~
+bes bes4-> bes8 ~
+bes b( c) bes
+a g->( f) e
+\mark #1 f16\fp \grace {f,64[( g a g)]} f32 c' a f' c a' f c' gis a e f b, c
+f,16\fp \grace {f64[( g a g)]} f32 c' a f' c a' f c' gis a e f b, c
+g16\fp \grace {g64[( a bes a)]} g32 des' bes g' e bes' g des' a bes fis g dis e
+g,16\fp \grace {g64[( a bes a)]} g32 des' bes g' e bes' g des' a bes fis g dis e
+fis,16\fp \grace {fis64[( g a g)]} fis32 c' a ees' c fis f,16\fp \grace {f64([ g aes g)]} f32 b f d' gis, f'!
+e,16\fp \grace {e64([ f g f)]} e32 bes' g cis bes e d,16\fp \grace {d64([ e f e)]} d32 a' f d' a f'
+d16\noBeam\f d'8 d d d16\noBeam
+cis\f r r8 r4
+<d,, a' f' d'>16\f r r8 r4
+<a' e' cis'>16 r r8 r4
+<d, f' d'>16 r r8 r4
+r32\pizz e' dis d cis c b bes a bes a bes a bes a bes
+a16 r r8 r4
+R2 * 2
+%
+r4 a8\arco r
+a r a r \bar "||"
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo} a4\fermata r r r8 fis16(\p g)
+\repeat unfold 4 {a-.} a8\noBeam d16( e) \repeat unfold 4 {fis-.} fis8\noBeam g16( a)
+ais4:16\f^\markup{"...."} ais16 ais b  b e,8\noBeam r r d16( e)
+fis4:16^\markup{"...."} fis8\noBeam e16( d) cis4:16^\markup{"...."} cis8\noBeam ais16( b)
+bis4:16\f^\markup{"...."} bis16 bis cis cis fis,8 r r fis16( g)
+a4:16^\markup{"...."} a8\noBeam d16( e) fis4:16^\markup{"...."} fis8\noBeam g16( a)
+ais4:16^\markup{"...."} ais16 ais b b e,8 r r e16( fis)
+g4:16-. g8\noBeam g,16( a) b4:16^\markup{"...."} b8\noBeam  b16( cis)
+d4:16^\markup{"...."} d16 d fis fis d8 r r a16( b)
+cis4:16^\markup{"...."} cis8\noBeam cis16( d) e4:16^\markup{"...."} e8\noBeam e16( fis)
+g2:16-> e8 r r c16( d)           %%%% SOURCE: cis16( d)
+e4:16^\markup{"...."} e8\noBeam e16( f) g4:16^\markup{"...."} g8\noBeam g16( a)
+bes2:16 g8 r r4
+e2:16 cis8 r r4
+bes2:16 g8 r r fis16( g)
+a4:16^\markup{"...."} a8\noBeam d16( e) fis4:16^\markup{"...."} fis8\noBeam g16( a)
+ais4:16^\markup{"...."}\p-> ais16 ais b b e,8 r r d16( e)
+fis4:16^\markup{"...."} fis8\noBeam e16( d) cis4:16^\markup{"...."} cis8\noBeam ais16( b)
+bis4:16^\markup{"...."}\f bis16 bis cis cis fis,8 r r fis16( g)
+a4:16^\markup{"...."} a8\noBeam d16( e) fis4:16^\markup{"...."} fis8\noBeam g16( a)
+ais4:16^\markup{"...."}\f-> ais16 ais b b e,8 r r e16( fis)
+g4:16^\markup{"...."} g8\noBeam g,16( a) b4:16^\markup{"...."} b8\noBeam b16( cis)
+\mark #2 d4\f r r8 a'16 a a8 a
+d8( cis16 b a g fis e) d8( cis16 b a g fis e)
+d8 r d16 d cis cis e8:16 d: g: fis:
+b: a: gis: a: g: fis: e: d:
+a'4 r r8 e'16 e e8 e
+a( g16 fis e d cis b) a8( g16 fis e d cis b)
+a8 r e'8:16 dis: fis: e: g: fis:
+a: g: cis: b: a: g: fis: e:
+d4 r r8 a''16 a a8 a
+d8( cis16 b a g fis e) d8( cis16 b a g fis e)
+d8 r d8:16 cis: e: d: g: fis:
+b: a: gis: a: d: cis: b: a:
+gis4 r r8 b'16 b b8 b
+e( d16 cis b a gis fis) e8( d16 cis b a gis fis)
+e8 r gis8:16 fis: a: gis: b: a:
+cis: b: gis' fis: e: d: cis: b:
+a8 r c'2\f-> c,,16( b c b)
+\repeat unfold 2 {c8 r c''2\f-> c,,16( b c b)}
+%
+c8 r c''2 \acciaccatura c8 b8. a16
+e8. e16 e8. fis16 fis8. gis16 gis8. a16
+a8. b16 b8. c16 c8. dis16 dis8. e16
+e8 r16 e,, e8. fis16 fis8. gis16 gis8. a16
+a8. b16 b8. c16 c8. dis16 dis8. e16
+e4 r8 <e e'>16 <e e'> \repeat unfold 12 {<e e'>8}
+%
+<e e'>4 r8^\markup {"4e corde"} e,16 e \repeat unfold 12 e8
+%
+e2 r\fermata
+\tag #'partie \pageBreak \mark #3 e4\pizz e e e
+e e e e
+e e e e
+gis gis gis gis
+a a a a
+a a fis fis
+fis fis eis eis
+a a fis fis
+fis fis eis eis
+e! e e e
+e e fis fis
+a a gis gis
+e e e e
+e e e e
+e e e e
+gis gis gis gis
+a a a a
+a a fis fis
+fis fis eis eis
+a a fis fis
+fis fis eis eis
+e! e e e
+e e fis fis
+e e d d 
+cis r^\markup {"Arco sul ponticello"} r8 e8:16 fis: gis:
+a: b: cis: cis: cis: e,: fis: gis:
+a: e': dis: e: fis: e: dis: e:
+d!: cis: bis: cis: b!: a: gis: a:
+b: cis: d: d: d: e,: gis: a:
+b: cis: d: d: d: e,: gis: a:
+b: fis': eis: fis: gis: fis: eis: fis:
+e!: d: cis: d: cis: b: a: gis:
+a:_\markup{\italic "cresc."} b: cis: cis: cis: e,: fis: gis:
+a: b: cis: cis: cis: e,: fis: gis:
+a: e': dis: e: fis: e: dis: e:
+d!: cis: bis: cis: b: a: gis: a:
+b: cis: d: d: d: e,: gis: a:
+b: cis: d: d: d: e,: gis a:
+b: fis': eis: fis: gis: fis: eis: fis
+e!: d: cis: d: cis: b: a: gis:
+<e' cis'>2:16\f \repeat unfold 7 <e cis'>:
+%
+%
+%
+\repeat unfold 8 <fis cis'>:
+%
+%
+%
+fis'8. fis16 \repeat unfold 7 {fis8. fis16}
+%
+\times 2/3 {e8 d cis!} \repeat unfold 3 {\times 2/3 {e d cis}}
+\repeat unfold 4 {\times 2/3 {d cis b}}
+a8 r bes,4\f ~ bes8 c16( d ees f g a)
+bes( a bes c d c d ees f8) r gis,8.\f gis16
+a8 r bes,4\f ~ bes8 c16( d ees f g a)
+bes( a bes c d c d ees f8) r gis,8.\f gis16
+\repeat unfold 4 {a( cis) b-. a-. gis( d') b-. gis-.}
+%
+a4 r r2
+r4 r8 a,,16(\p b) cis8-. cis16( d) e8-. e16( fis)
+g4 r r2
+r4 r8 a16( b) cis8-. cis16( d) e8-. e16( fis)
+g4 r r r8 cis,16(\p d
+e4) r r r8 g,16( a
+b4) r r r8 cis,16( d
+e4) r r r8 d16( e
+fis4) r r r8 e16( fis
+g4) r r r8 fis16( g)
+\mark #4 \repeat unfold 4 {a-.} a8\noBeam d16( e) \repeat unfold 4 {fis-.} fis8\noBeam g16( a)
+ais4:16\f^\markup{"...."} ais16 ais b  b e,8\noBeam r r d16(\p e)
+fis4:16^\markup{"...."} fis8\noBeam e16( d) cis4:16^\markup{"...."} cis8\noBeam ais16( b)
+bis4:16\f^\markup{"...."} bis16 bis cis cis fis,8 r r fis16(\p g)
+a4:16^\markup{"...."} a8\noBeam d16( e) fis4:16^\markup{"...."} fis8\noBeam g16( a)
+ais4:16\f^\markup{"...."} ais16 ais b b e,8 r r e16(\p fis)
+g4:16-. g8\noBeam g,16( a) b4:16^\markup{"...."} b8\noBeam  b16( cis)
+d4:16\f^\markup{"...."} d16 d fis fis d8 r r a16(\p b)
+cis4:16^\markup{"...."} cis8\noBeam cis16( d) e4:16^\markup{"...."} e8\noBeam e16( fis)
+g2:16-> e8 r r c16( d)           %%%% SOURCE: cis16( d)
+e4:16^\markup{"...."} e8\noBeam e16( f) g4:16^\markup{"...."} g8\noBeam g16( a)
+bes2:16 g8 r r4
+e2:16 cis8 r r4
+bes2:16 g8 r r fis16( g)
+a4:16^\markup{"...."} a8\noBeam d16( e) fis4:16^\markup{"...."} fis8\noBeam g16( a)
+ais4:16^\markup{"...."}\f-> ais16 ais b b e,8 r r d16( e)
+fis4:16^\markup{"...."} fis8\noBeam e16( d) cis4:16^\markup{"...."} cis8\noBeam ais16( b)
+bis4:16^\markup{"...."}\f bis16 bis cis cis fis,8 r r fis16( g)
+a4:16^\markup{"...."} a8\noBeam d16( e) fis4:16^\markup{"...."} fis8\noBeam g16( a)
+ais4:16\f^\markup{"...."}\f-> ais16 ais b b e,8 r r e16( fis)
+g4:16^\markup{"...."} g8\noBeam g,16( a) b4:16^\markup{"...."} b8\noBeam b16( cis)
+bes4\f r r8 f'16 f f8 f
+bes( a16 g f ees d c) bes8( a16 g f ees d c)
+bes8 r bes'8:16 a: c: bes: d: c:
+ees: d: g: f: ees: d: c: bes:
+f'4 r r8 c'16 c c8 c
+f( ees16 d c bes a g) f8( ees16( d c bes a g)
+f8 r c'8:16 bes: d: c: ees: d:
+f: ees: d: c: bes: a: g: fis!:
+g4 r r8 d'16 d d8 d
+g( f16 ees d c bes a) g8( f16 ees d c bes a)
+g8 r g'8:16 fis!: a: g: bes: a:
+c: bes: d: cis: e!: d: f: e:
+d8 r d'2 d,,16( cis! d cis)
+d8 r d''2 d,,16( cis d cis)
+d8 r d''2 d,,16( cis d cis)
+d8 r f''2 \acciaccatura f8 e8. d16
+a8. a,16  a8. b!16 b8. cis!16 cis8. d16
+d8. e16 e8. f16 f8. gis16 gis8. a16
+a8. a,16  a8. b16 b8. cis16 cis8. d16
+d8. e16 e8. f16 f8. gis16 gis8. a16
+a4 r8 <a, a'>16 <a a'> \repeat unfold 3 <a a'>2:8
+%
+<a a'>4 r8 <a, a'>16 <a a'> \repeat unfold 3 <a a'>2:8
+%
+<a a'>2 r\fermata
+\tag #'partie \pageBreak \mark #5 fis'!4\pizz fis fis fis
+fis fis fis fis
+fis fis fis fis
+g g g g 
+fis fis fis fis
+fis fis b b
+b b ais ais
+fis fis b b
+b b ais ais
+a! a a a
+a a g g
+fis fis e e
+fis fis fis fis
+fis fis fis fis
+fis fis fis fis
+g g g g
+fis fis fis fis
+fis fis b b 
+b b ais ais
+fis fis b b 
+b b ais ais
+a! a a a
+a a g g 
+fis fis e e
+d r^\markup {" Arco sul ponticello"} r8 a'8:16 b: cis:
+d: e: fis: fis: fis: a,: b: cis: d: a': gis: a: b: a: gis: a:
+g!: fis: eis: fis: e: d: cis: d:
+e: fis: g: g: g: a,: cis: d:
+e: fis: g: g: g: a,: cis: d:
+e: b': ais: b: cis: b: ais: b:
+a!: g: fis: g: fis: e: d: cis:
+d:_\markup{\italic "cresc."}  e: fis: fis: fis: a,: b: cis:
+d: e: fis: fis: fis: a,: b: cis:
+d: a': gis: a: b: a: gis: a:
+g!: fis: eis: fis: e: d: cis: d:
+e: fis: g: g: g: a,: cis: d: 
+e: fis: g: g: g: a,: cis: d: 
+e: b': ais: b: cis: b: ais: b:
+a!: g: fis: g: fis: e: d: cis:
+<fis d'>2:16\f \repeat unfold 15 <fis d'>:
+%
+%
+%
+%
+%
+%
+%
+%
+d'8. d16 \repeat unfold 7 {d8. d16}
+%
+\repeat unfold 4 {\times 2/3 {fis8 e d}}
+\repeat unfold 4 {\times 2/3 {e8 d cis}}
+d8 r ees,,4 ~ ees8 f16( g aes bes c d)
+ees( d ees f g  f g aes bes8) r cis,!8.\f cis16
+d8 r ees,4 ~ ees8 f16( g aes bes c d)
+ees( d ees f g  f g aes bes8) r cis!8.\f cis16
+\repeat unfold 4 {d16( fis) e-. d-. cis( g') e-. cis-.}
+%
+d8 d16( cis d cis d cis) d8 a16( gis a gis a gis)
+a8 fis16( eis fis eis fis eis) fis8 d16( cis d cis d cis)
+d8 d16( cis d cis d cis) d8 a16( gis a gis a gis)
+a8 fis16( eis fis eis fis eis) fis8 d16( cis d cis d cis)
+d8 cis' d cis d cis d cis
+d e fis e fis e fis e
+fis a a a a a a a
+a cis d cis d cis d cis
+d4 r8. <fis, d'>16 <fis d'>4 <fis d'>
+<fis d'>2 <fis d'>2
+<d, d>1\fermata \bar "|."
+}
+
