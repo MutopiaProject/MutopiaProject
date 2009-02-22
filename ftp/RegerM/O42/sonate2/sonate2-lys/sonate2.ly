@@ -26,6 +26,7 @@
 	mutopiacomposer = "RegerM"
 	mutopiaopus = "42, Heft 1 No. 1"
 	mutopiainstrument = "Violin"
+	date = "1900"
 	source = "Jos. Aibl Verlag G.m.b.H Leipzig, 1900"
 	style = "Classical"
 	copyright = "Public Domain"
