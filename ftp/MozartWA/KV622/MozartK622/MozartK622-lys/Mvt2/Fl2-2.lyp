@@ -1,0 +1,110 @@
+﻿%% Mozart Cto Clarinette -II- - Flûte 2
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo}
+R2.*8
+%
+%
+%
+%
+%
+%
+%
+a4(\f\tutti d4. fis8) |
+fis( e) d4 r |
+fis2( d8 fis) |
+e4( d) r |
+cis2( d4) |
+cis4.( e8 fis d) |
+cis2 \grace e32 d8.( cis16) |
+cis4 r r |
+R2.*8
+%
+%
+%
+%
+%
+%
+%
+R2.\tutti  |
+g'4.(\f fis8 e dis) |
+e4 r r |
+a4.( gis8 fis eis) |
+fis4 r r |
+r e!4( d! |
+b a cis) |
+d4 r r |
+R2.*20
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+		{\afterGrace b2._(\trill {a32[^"Clar." b])} \unset fontSize}} \\ {R2._"(21)"} >>
+	 \tag #'score {R2.} >> |
+\mark #12 cis2.\f ~ |																%%%% L
+cis8 r r4 r |
+gis'2.\f ~ |
+gis8 r r4 r |
+g!2.\f ~ |
+g4 r r^\markup {\center-column {(Cad.) \musicglyph #"scripts.ufermata"}}
+R2.*16
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+R2.\tutti |
+g4.(\f fis8 e dis) |
+e4 r r |
+a4.( gis8 fis eis) |
+fis4 r r |
+r bes,( c |
+b! a cis!) |
+\mark #13 d4 r r\solo |															%%%% M
+R2.*13
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+fis2.\pp ~ |
+fis4 r r \bar "|."
+}
+

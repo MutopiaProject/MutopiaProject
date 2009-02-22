@@ -1,0 +1,110 @@
+﻿%% Mozart Cto Clarinette -II- - Cor 2
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Btime \BstringTempo \tag #'midi {\BmidiTempo}
+R2.*8
+%
+%
+%
+%
+%
+%
+%
+e,4(\f\tutti e4. g8) |
+g4( e) r |
+e4.( g8 c e) |
+d4( c) r |
+g2( c4) |
+g2( c4) |
+d2. |
+g,4 r r |
+R2.*8
+%
+%
+%
+%
+%
+%
+%
+c,2.\f\tutti ~ |
+c4 r r |
+R2.*2
+%
+e'4.( d8 c d) |
+c4 g2 |
+r4 c g |
+e r r |
+R2.*12\solo
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+g,2.\p ~
+g ~
+g ~
+g
+R2.*5
+%
+%
+%
+%
+\mark #12 g2.\f ~ |																%%%% L
+g8 r r4 r |
+d''2.\f ~ |
+d8 r r4 r |
+g,,2.\f ~ |
+g4 r r^\markup {\center-column {(Cad.) \musicglyph #"scripts.ufermata"}}
+R2.*15
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {R2.^"(16)"} \\ {\set fontSize = #-4 \transpose c c \relative c' 
+		{d8_"V.II" b'( a g fis e) \unset fontSize}} >>
+	 \tag #'score {R2.} >> |
+c2\f\tutti r4 |
+R2.\un
+d'2 r4 |
+R2.\un
+g,2. |
+c,2 g'4 |
+r c g |
+\mark #13 e r r\solo |															%%%% M
+R2.*13
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+c2.\pp ~ |
+c4 r r \bar "|."
+}
+

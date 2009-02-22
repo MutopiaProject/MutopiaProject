@@ -1,0 +1,371 @@
+﻿%% Mozart Cto Clarinette -I- - Violon 1
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo}
+e2\p cis 4.( d8) |
+fis( e) d-. cis-. cis4 r |
+d( b8) r d4( b8) r |
+a2( gis8) r r4 |
+a2 ~ a8( gis a fis) |
+e( d') d4. cis8( d b) |
+e( a gis d) cis( e b fis') |
+a,4.( b16 a gis8)\noBeam b(\f cis d) |
+e2 cis 4.( d8) |
+fis( e) d-. cis-. cis4 r |
+d(\p b8) r d4( b8) r |
+a2( gis8) r r4 |
+a'4\f ~ a16( cis b a) gis( b a gis) fis( a gis fis) |
+e4 d16( fis e d) cis( e d cis) b( d cis b) |
+a4 a'8.( b16) b4.(\trill a16 b) |
+a4 r8 cis16( a) e8-. e-. e-. e-. |
+e( d') d4. cis16( b cis b a gis) |
+b8( a) r cis16( a) e8-. e-. e-. e-. |
+e( d') d4. cis16( b cis b a gis) |
+a( gis b a cis b a gis) fis( eis gis fis a8) r |
+fis16( eis gis fis a gis fis e) d( cis e d fis8) r |
+d16( cis e d fis e d cis) b( ais cis b d cis b a) |
+gis-. e-. fis-. gis a b cis dis e fis gis a b gis b gis |
+e4-. <e, b' gis'>-. <e b' e>-. r
+\mark #1 R1\un |																												%%%%% A
+a'2\p gis4.( a8) |
+cis( b) a-. gis-. fis4.( gis8) |
+a( cis) b16( a gis fis) fis8( e) e( dis) |
+e( fis) d!4 r8 b( cis d) |
+e( fis e16 d cis b) a4 gis |
+a r r2 |
+e''2\f cis4..( d16) |
+e4-. a,-. r2
+e'2 cis4..( d16) |
+e4 r8 cis16 cis cis8 cis cis cis |
+d4-. <a, a'>-. <d, a' fis'>-. r |
+fis4.(\p gis16 ais b8 cis d e) |
+fis ais,( b d) a4( gis) |
+a8 a'( gis d) cis cis'16(\trill b32 cis) d8 r |
+r a( gis d) cis cis'16(\trill b32 cis) d8 r |
+r a( gis d) cis cis'16(\trill b32 cis) d8 r |
+r cis16(\trill\< b32 cis) d8 r r cis16(\trill b32 cis) d8\! r |
+r a16(\f\trill gis32 a b8) b16(\trill a32 b cis8) cis-. d-. d-. |
+\mark #2 e4 ~ e16 d-. cis-. b-. a-. gis-. fis-. e-. d-. cis-. b-. a-. |			%%%%% B
+g8 g4-. g8( eis) eis4(-. eis8)-. |
+fis4-. a'-. r dis,, |
+e!8. fis16-. gis-. a-. b-. cis-. d! e fis gis a b cis d |
+e8 cis16 a e8 cis16 a e4 <e b' gis'> |
+<e cis' a'> r a'(\p cis8) r |
+fis,4( a8) r b,8.(-. b16)-. cis8.(-. cis16)-. |
+e4( d8) r d4( fis8) r |
+b,4( d8) r fis,8.(-. fis16)-. gis8.(-. gis16)-. |
+a16 cis e cis a e cis e fis d fis a gis fis gis b |
+a\< cis e cis a e cis e fis d fis a gis e gis b\! |
+a\f e cis e a e a e cis' a cis a e' cis e cis |
+a4 <e cis' a'> a, r |
+cis'2\p\solo a4.( b8) |
+d( cis) b-. a-. a4-. r |
+fis( d8) r fis4( d8) r |
+cis2( b4) r |
+e2( d4 cis) |
+b b'2( a4) |
+b r8 fis16( d) cis8( e d e) |
+cis-.[ e-.] a-. b16(\trill a32 b) cis8-.[ a-.] cis-. d16(\trill cis32 d) |
+e2 <<{s4 s4\turn} \\ {cis4.^( d8^)}>> |
+fis8( e) d-. cis-. cis4 r |
+d( b8) r d4( b8) r |
+a2( gis4) r |
+b, r r8 e e e |
+r d d d r b' b b |
+cis4 r r2 |
+r4 a2( gis4) |
+a8 a a a r a a a |
+r a a a a a gis gis |
+\mark #3 a16\f\tutti e cis e a e a e cis' a cis a e' cis e cis |					%%%%% C
+a'4 r a,\p r |
+d r gis, r |
+a\solo r c, r |
+f r b, r |
+c8-. e-. c-. e-. c4 r |
+r f2\f f4 |
+f r f\p r |
+f1 ~ |
+f4 r r2 |
+r4 e-. e-. r |
+f8( g f g f g f g) |
+e( g e g e g e g) |
+f( g f g f g f g) |
+e( g e g e g e g) |
+d( g d g d g d g) |
+cis,!4 ais'2( b4) |
+cis g2 g4 ~ |
+g g r8 g( fis e) |
+dis dis'16(\( e fis8) g\)-. a2( |
+g4) g8.(-. g16)-. g4.(\trill fis16 g |
+fis8) dis,16(\( e fis8) g\)-. a2( |
+g4) g8.(-. g16)-. g4.(\trill fis16 g) |
+\mark #4 fis4 r8 b-.\f g-. r <b, g' e'>-. r |												%%%%% D
+<b fis' dis'>4 r8 b'-. g-. r <b g'>-. r |
+<b fis'>4\solo r r2 |
+dis,2(\p cis |
+b a4 dis |
+e) r r8 dis( fis a) |
+gis b b b r b b b | 
+b4 r r8 a( gis fis) |
+gis b b b r b b b |
+b4 r r8 a( gis fis) |
+gis4 r8 b( a4) r8 b( |
+cis4) r8 gis( fis4) r8 gis( |
+a4) r8 eis( fis4) r8 e |
+dis1( |
+e4) r r b'( |
+cis) r r2 | 
+r4 cis( b dis) |
+e8( gis, e gis e gis e gis) |
+fis( gis fis gis fis gis fis gis) |
+e( gis e gis e gis e gis ) |
+dis( gis dis gis dis gis dis gis) |
+e( gis e gis e gis e gis ) |
+fis( gis fis gis fis gis fis gis) |
+e( gis e gis e gis e gis ) |
+dis( gis dis gis dis gis dis gis) |
+e( gis e gis) e4 r |
+a2( b4) r |
+a2. r4 |
+a8 a4 a a a8 |
+a4 r r2\fermata | \pageTurn
+\mark #5 b2(\p gis4. a8) |																							%%%%% E
+cis( b) a-. gis-. fis4.( gis8) |
+b( a) gis-. fis-. e4.( fis8) |
+gis( a16 b a gis fis e) dis4-. cis-. |
+b-. dis-. r8 fis( gis a) |
+b( cis b16 a gis fis) fis8( e) e( dis) |
+e-. e'( dis a) gis gis'16(\trill fis32 gis) a8 r |
+r e( dis a) gis  gis'16(\trill fis32 gis) a8 r |
+r e( dis a) gis  gis'16(\trill fis32 gis) a8 r |
+r gis16(\trill fis32 gis) a8 r r gis16(\trill fis32 gis) a8 r |
+r b,-. b-. b-. b4.( e8) |
+e( cis) cis-. cis-. cis4.( e8) |
+e( b) gis-. b-. b( a) gis-. fis-. |
+e4 r r2 |
+d!1( |
+cis4) r8 d'16(\trill cis32 d) cis8-. cis-. d-. d-. |
+cis4 r8 d,16(\trill cis32 d) cis8-. cis-. d-. d-. |
+cis4 r r8 e-. e-. e-. |
+fis4 r r8 fis-. fis-. fis-. |
+g4 r r8 g-. g-. g-. |
+gis!4 r r r8 dis-. |
+e-. fis-. gis-. a-. b-. dis-. e-. fis-. |
+gis4 r gis r |
+e r b r |
+gis8 gis gis gis gis gis gis gis |
+fis2:16\< fis: |
+<e b' e>4\!\f\tutti r8 gis'16( e) b8-. b-. b-. b-. |
+b'( a) a4. b16( a gis fis e dis) |
+fis8( e) r gis16( e) b8-. b-. b-. b-. |
+b b'16( a) a4. b16( a gis fis e dis) |
+e( dis fis e gis fis e dis) cis( bis dis! cis e8) r |
+cis16( bis dis cis e dis cis b) a( gis b a cis8) r |
+a16( gis b a cis b a gis) fis( eis gis fis a gis fis e) |
+dis-. cis-. b-. cis-. dis e fis gis a gis fis gis a b cis dis |
+e8 gis16 e b'8-.( gis,-.) a4 cis' |
+b8 gis16 e b8 gis16 e b4 <b fis' dis'> |
+<b gis' e'> r e'(\p gis8) r |
+cis,4( e8) r fis,8. fis16 gis8. gis16 |
+b4( a8) r a'4( cis8) r |
+fis,4( a8) r cis,8. cis16 dis8. dis16 |
+e gis b gis e b gis b cis a cis e dis b dis fis |
+e\< gis b gis e b gis b cis a cis e dis b dis fis\! |
+e\f b e b gis e gis b e b e gis b gis b gis |
+e4 <e, b' gis'> <e b' e> r |
+gis2\p\solo e4.( fis8) |
+a( gis) gis-. gis-. gis4 r |
+r dis4.( e8 fis gis |
+a4) fis-. r a |
+gis2 e4.( fis8) |
+a( gis) gis-. gis-. gis4 r |
+r dis4.( e8 fis gis |
+a4) fis-. r a |
+gis8 b gis4 r2 |
+r4 a r fis |
+gis8 b gis4 r2 |
+r4 a r fis |
+gis8 b gis4 r2 |
+b8 b b4 r2 |
+e8 e e4 r2 |
+r4 fis,( eis fis) |
+eis8 r eis r eis r eis r |
+eis8 r eis r eis r eis r |
+fis a4 a a a8 |
+r gis gis gis r gis gis gis |
+\mark #6 gis4\tutti r gis'4:16\f gis: |												%%%%% F
+a: a: bis: bis: |
+cis4 r\solo r2 |
+r4 cis,(-.\p cis-. cis-.) |
+d r r2 |
+r4 d-.( d-. d-.) |
+d1( |
+cis) |
+d8( a fis a) fis( a fis a) |
+g( a g a g a g a) |
+fis( a fis a fis a fis a) |
+g( a g a g a g a) |
+fis( a fis a fis a fis a) |
+e(a e a e a e a) |
+dis, a'' a a a a a a |
+gis gis, gis gis gis gis gis gis |
+gis gis' gis gis g g g g |
+fis fis, fis fis fis fis fis fis |
+fis-. d'-. d4-. r2 |
+gis,8-. eis'-. eis4-. r2 |
+fis8 r r4 gis8 r r4 |
+a8 r fis r d r b r |
+r a a a r gis gis gis |
+\mark #7 a'16\f a eis eis fis fis cis cis d d ais ais b b fis fis |			%%%%% G
+g4 d-.(\p d-. d-.) |
+r g'-.( g-. g-.) |
+r d,-.( d-. d-.) |
+r a''-.( a-. a-.) |
+a8 fis, fis4 r2 |
+a8 a a4 r2 |
+fis'8 fis fis4 r2 |
+r8 a a a a a a a |
+a4 cis,, r2 |
+r8 b' b b r a a a |
+gis4 r <gis eis' cis'>\f r |
+fis'16\tutti fis eis8:16 fis: gis: a: gis: a: b: |
+cis: bis: cis: d: cis: b: a: gis: |
+fis8-.\p eis-. fis-. gis-. a-. gis-. a-. b-. |
+cis-. bis-. cis-. d-. cis-. b-. a-. gis-. |
+fis-. eis-. fis-. gis-. a-. gis-. a-. b-. |
+c-. b-. ais-. c-.  b-. gis-. a-. fis-. |
+e16\f e dis8:16 e: fis: g: fis: g: a: |
+b: ais: b: c: b: a: g: fis: |
+e8-.\p dis-. e-. fis-. g-. fis-. g-. a-. |
+b-. ais-. b-. c-. b-. a-. g-. fis-. |
+e-. dis-. e-. fis-. g-. fis-. g-. a-. |
+bes-. a-. gis!-. bes-. a-. fis-. g-. e-. |
+<d, d'>4\f r8 fis'16( d) a8-. a-. a-. a-. |
+a'( g) g4. a16( g fis e d cis) |
+e8( d) r fis16( d) a8-. a-. a-. a-. |
+a a'16( g) g4. fis16( g a g fis e) |
+fis( e g fis a g fis e) d( cis e d fis8) r |
+d16( cis e d fis e d cis) b( ais cis b d8) r |
+b16( ais cis b d cis b a) gis!( fis a gis b a gis fis |
+e8) r d'2 cis8.(\trill b32 cis) | 
+b16-. e,-. fis-. gis-. a b cis dis e fis gis a b  gis b gis |
+e4\solo r r2 |
+r4 e,8-.\p e-. fis-. fis-. gis-. gis-. |
+a-. a-. b-. b-. cis-. cis-. d-. d-. |
+cis2 a4.( b8) |
+d( cis) b-. a-. a4 r |
+fis( d8) r8 fis4( d8) r |
+cis2( b4) r |
+e2( d4 cis) |
+b b'2( a4) |
+b r8 fis16( d) cis8( e d e) |
+cis-. e-. a-. b16(\trill a32 b) cis8-. a-. cis-. d16(\trill cis32 d) |
+e2 <<{s4 s4\turn} \\ {cis4.^( d8^)}>> |
+fis8( e) d-. cis-. cis4 r |
+d( b8) r d4( b8) r |
+a2( gis4) r |
+b, r r8 e e e |
+r d d d r b' b b |
+cis4 r r2 |
+r4 a2( gis4) |
+a8 a a a r a a a |
+r a a a a a gis gis |
+\mark #8 a16\f\tutti e cis e a e a e cis' a cis a e' cis e cis |					%%%%% H
+a'4 r a,\p r |
+d r gis, r |
+a\solo r c r |
+f r b, r |
+c r g' r |
+a r d, r |
+e r r8 e8( fis g) |
+fis( a c2 b8 a) |
+a2( gis! |
+g e) |
+d8 r g, r f r a r |
+a1 |
+gis8-. gis16\(( a b8) c-.\) d2( |
+c4) c8.-.( c16-.) c4.(\startTrillSpan b16\stopTrillSpan c |
+b8-.) gis16\(( a b8) c-.\) d2( |
+c4) c8.-.( c16-.) c4.(\startTrillSpan b16\stopTrillSpan c) |
+\mark # 9 b4 r8 e-.\f\tutti c-. r <e, c' a'>-. r |					%%%%% I
+<e b' gis'>4 r8 e'-. c-. r c'-. r |
+b4\solo r r2 | \pageTurn
+gis,2(\p fis |
+e d4 gis |
+a) r d, r |
+cis8 e e e r e e e |
+e4 r r8 d( cis b) |
+cis e' e e r e e e |
+e4 r r8 d,( cis b) |
+cis4 r8 e( fis4) r8 eis( |
+fis4) r8 cis( d4) r8 cis( |
+d4) r8 ais'( b4) r8 fis( |
+e4) r gis2( |
+a4) r r e( |
+fis) r r2 |
+r4 fis( e fis) |
+a r r8 a( gis fis) |
+eis( gis b4.) b8( a gis) |
+cis( a fis4) r8 d d d |
+r cis cis cis r gis' gis gis |
+a4 r r8 cis-. cis-. cis-. |
+cis4. cis8( d dis e eis) |
+eis( fis cis4) r8 fis,( gis a) |
+a( gis) gis4. d'8( cis b) |
+b16( a gis fis) fis4 r2 |
+a2( gis4) r |
+a2( gis4) r |
+gis8 gis4 gis gis gis8 |
+gis4 r r2\fermata |
+\mark #11 R1 |																	%%%%% K
+a'2\p gis4.( a8) |
+cis( b) a-. gis-. fis4.( gis8) |
+a( b16 cis b a gis fis) fis8( e) e( dis) |
+e fis d!4 r8 gis,( a b) |
+a4 gis16( fis e d) d8( cis) cis( b) |
+r a''( gis d) cis cis'16(\trill b32 cis) d8 r |
+r a( gis d) cis cis'16(\trill b32 cis) d8 r |
+r a( gis d) cis cis'16(\trill b32 cis) d8 r |
+r cis16(\trill b32 cis) d8 r r cis,16(\trill b32 cis) d8 gis16(\trill fis32 gis) |
+a8( e) e-. e-. e4.( a8) |
+a( fis) fis-. fis-. fis4.( a8) |
+a( e cis e) e( d cis b) |
+a4 r r2 |
+g1( |
+fis4) r8 g'16(\trill fis32 g) fis8-. fis-. g-. g-. |
+fis4 r8 g,16(\trill fis32 g) fis8-. fis-. g-. g-. |
+fis4 r8 e16(\trill d32 e) d8-. d-. e-. e-. |
+d4 r r8 fis-. fis-. fis-. |
+gis!4 r r8 gis-. gis-. gis-. |
+a4 r r8 a-. a-. a-. |
+a a a a r cis cis cis |
+r e e e r a a a |
+a r cis,-. cis-. cis-. r cis-. cis-. |
+cis-. r a-. a-. a-. r e-. e-. |
+e cis cis cis cis cis cis cis |
+b2:16\< b: |
+a4\!\f\tutti r8 cis''16( a) e8-. e-. e-. e-. |
+e( d') d4. cis16( b cis b a gis) |
+b8( a) r cis16( a) e8-. e-. e-. e-. |
+e( d') d4. cis16( b cis b a gis) |
+e'4 ~ e16 d-. cis-. b-. a-. gis-. fis-. e-. d-. cis-. b-. a-. |
+g8 g4-. g8( eis) eis4-.( eis8-.) |
+fis4-. a'-. r dis,, |
+e8. fis16 gis! a b cis d! e fis gis a b cis d |
+e8 cis16 a e8 cis16 a e4 <e b' gis'> |
+<e cis' a'> r a'(\p cis8) r |
+fis,4( a8) r b,8.-.( b16-.) cis8.-.( cis16-.) |
+e4( d8) r d4( fis8) r |
+b,4( d8) r fis,8.-.( fis16-.) gis8.( gis16-.) |
+a cis e cis a e cis e fis d fis a gis e gis b |
+a\< cis e cis a e cis e fis d fis a gis e gis b |
+a\!\f e cis e a e a e cis' a cis a e' cis e cis |
+a4 <e cis' a'> a, r \bar "|." \pageBreak
+}
+

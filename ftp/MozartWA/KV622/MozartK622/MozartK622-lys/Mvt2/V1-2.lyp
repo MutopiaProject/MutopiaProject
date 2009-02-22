@@ -1,0 +1,110 @@
+﻿%% Mozart Cto Clarinette -II- - Violon 1
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo}
+fis,8(\p a fis a fis a) |
+g( a fis a fis a) |
+fis( a fis a fis a) |
+e( a fis a fis a) |
+e( a e a fis a) |
+e( a e a d, fis) |
+cis( e cis e d e) |
+cis4 r r |
+a'(\f\tutti d4. fis8) |
+fis( e) d4 r |
+a4.( d8 fis a) |
+a( g) fis4 r |
+e4. a8( fis a) |
+e4. a8( b, fis') |
+a,2 \grace cis32 b8.( a16) |
+a8\noBeam b(\p a g fis e) |
+fis(\solo d fis d fis d) |
+d b'4( a8 g fis) |
+g( e g e g e) |
+e cis'4( b8 a gis) |
+a( cis, b e cis g'!) |
+fis( d e a d, a') |
+e( g fis a cis, e) |
+d4 r r |
+fis'4.(\f\tutti e8 d cis) |
+b4 r r |
+g'4.( fis8 e d) |
+cis4 r r |
+a'4.( g8 fis e) |
+d8.( g16) g4.( fis8) |
+e16( b' g e) d4 \grace fis32 e8.( d16) |
+d8\noBeam b(\p a g fis e) |
+r\solo fis fis fis fis fis |
+r e e e e e |
+r d4 fis8( e d) |
+b8.( bis16) cis4 r |
+r8 a'-. e-. a-. e-. a-. |
+r fis-. d-. fis-. d-. fis-. |
+r g-. e-. g-. e-. g-. |
+r a-. fis-. a-. fis-. a-. |
+r b-. d,-. b'-. d,-. b'-. |
+cis, r a' r fis r |
+r e( cis e d b) |
+gis'4( a8) cis,4( d8)|
+e r e'-. r a-. r |
+r4 fis8-. r b-. r |
+r4 g!8-. r cis-. r |
+r4 a8-. r d-. r |
+r4 d,8-. r b'-. r |
+r cis,,( e a cis e) |
+r d,( fis b d fis) |
+r cis, cis cis cis cis |
+b4:16\< b: b:\! |
+\mark #12 a8\f a'4 cis e8 |																			%%%% L
+a\noBeam cis,,\p cis cis cis cis |
+d\f gis4 b d8 |
+gis\noBeam d,\p d d d d |
+cis\f g'!4 cis e8 |
+g4 r r^\markup {\center-column {(Cad.) \musicglyph #"scripts.ufermata"}}
+fis,8(\pp a fis a fis a) |
+g( a fis a fis a) |
+fis( a fis a fis a) |
+e( a fis a fis a) |
+e( a e a fis a) |
+e( a e a d, fis) |
+cis( e cis e d e) |
+cis\noBeam b'( a g fis e) |
+fis( d fis d fis d) |
+d b'4( a8 g fis) |
+g( e g e g e) |
+e cis'4( b8 a gis) |
+a( cis, b e cis g'!) |
+fis( d e a d, a') |
+e( g fis a cis, e) |
+d4 r r |
+fis'4.(\f\tutti e8 d cis) |
+b4 r r |
+g'4.( fis8 e d) |
+cis4 r r |
+a'4.( g8 fis e) |
+d8.( g16) g4.( fis8) |
+e16( b' g e) d4 \grace fis32 e8.( d16) |
+\mark #13 d8\noBeam a\p a a a\solo a |															%%%% M
+r a a a a a |
+r a\pp a a a a |
+r g fis fis cis cis |
+d d d d d d |
+r e\menop e e d d |
+r g'\pp g g fis fis |
+e4 r8 g,(\< a b)\! |
+r fis\mf fis fis fis fis |
+e4:16 e: e: |
+d4 r b8.(\p g'16) |
+fis2( f8 e) |
+d4 r b''8\pp r |
+a r fis r e r |
+d r d, r d r |
+d4 r r \bar "|." \pageTurn
+}
+

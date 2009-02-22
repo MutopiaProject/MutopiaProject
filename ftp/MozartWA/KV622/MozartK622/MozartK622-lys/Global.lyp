@@ -1,0 +1,29 @@
+﻿\version "2.12.1"
+
+cCompositeur = "W.A. MOZART"
+cDatesCompositeur = "(1756-1791)"
+cTitre = "Konzert für Klarinette in A dur"
+cSousTitre = "K.622"
+cRefConcert = "511"
+
+%%%% Mouvements
+%% I	----------------------------------------------------------------------------------
+AstringTempo = {\stringTempoOnKey	\mark \markup {\hspace #+10.0 {\smaller \bold "Allegro"}}}
+AmidiTempo = {\override Score.MetronomeMark #'transparent = ##t  
+						\tempo 4=116}
+Atime = \time 4/4
+Akey = \key a \major
+
+%% II	-----------------------------------------------------------------------------------
+BstringTempo = {\stringTempoOnKey \mark \markup {\hspace #+10.0 {\smaller \bold "Adagio"}}}
+BmidiTempo = {\override Score.MetronomeMark #'transparent = ##t  
+						\tempo 4=50}
+Btime = \time 3/4
+Bkey = \key d \major	
+
+%% III	---------------------------------------------------------------------------------
+CstringTempo = {\stringTempoOnKey \mark \markup {\hspace #+20.0 {\smaller \bold "Rondo - Allegro"}}}
+CmidiTempo = {\override Score.MetronomeMark #'transparent = ##t  
+						\tempo 4.=76}
+Ctime = \time 6/8
+Ckey = \key a \major

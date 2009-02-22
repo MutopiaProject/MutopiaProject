@@ -1,0 +1,365 @@
+﻿%% Mozart Cto Clarinette -III- - Basson 2
+
+\relative c{
+\clef bass
+
+
+
+
+\Ctime \Ckey \CstringTempo \tag #'midi {\CmidiTempo}
+\partial 8 r8
+R2.*8
+%
+%
+%
+%
+%
+%
+%
+r8\tutti  cis'8-.\p cis-.\< cis-. cis-. cis-.\! |
+gis4.(\f a8) r r |
+R2.*2
+%
+r8  cis8-.\p cis-.\< cis-. cis-. cis-.\! |
+b4.(\f a8) r r |
+R2.*2
+%
+R2.*14\solo
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #14 a2.(\p\tutti |				%%%% N
+gis |
+a\< |
+b) |
+cis4\! r8 r4 r8\solo |
+R2.*4
+%
+%
+%
+cis,8\f\tutti cis cis cis cis cis |
+d d d d d d |
+e e e e e e |
+a,4\solo r8 r4 r8 |
+R2.*7
+%
+%
+%
+%
+%
+%
+cis'2.\f\tutti |
+cis4( a8) b4( gis8) |
+cis2. |
+cis4( a8) b4( gis8) |
+a4 r8 a4 r8 |
+a,4 r8 r4 r8 |
+R2.*16\solo |
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #15 e''2.\p\tutti  |							%%%% O
+dis4.( d |
+cis c |
+b4) r8 r4 r8
+R2.*20
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #16 << \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c {r8 <e e'>^"Cor" <e e'> <e e'> <e e'> <e e'> \unset fontSize}} \\ {R2._"(21)"} >> \tag #'score {R2.} >> |									%%%% P
+d4.(\sfp b4( gis8)|
+a4 r8 r4 r8 |
+R2.*2
+%
+gis4.(\sfp ~ gis4 b8) |
+a4 r8 r4 r8 |
+R2.*17
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+cis2.\f\tutti |
+cis4( a8) b4( gis8) |
+cis2. |
+cis4( a8) b4( gis8) |
+a4 r8 r4 r8 |
+R2.*2
+%
+cis,2. |
+a8 a a a a a |
+a a a a a a |
+d b' cis ais b gis! |
+a! fis gis eis fis a |
+dis dis dis d d d |
+cis cis cis cis cis cis |
+cis cis cis cis cis cis |
+cis cis, cis cis cis cis |
+cis4 r8 r4 r8\solo |
+R2.*19
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #17 << \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c {cis8^"Bassi" r cis cis cis cis \unset fontSize}} \\ {R2._"(20)"} >> \tag #'score {R2.} >> |									%%%% Q
+r8 r e'\f e e e |
+e4 r8 r4 r8 |
+R2.*10
+%
+%
+%
+%
+%
+%
+%
+%
+%
+cis2.\p(  |
+fis,4) r8 r4 r8 |
+b2.( |
+e,4) r8 r4 r8 |
+a2.( |
+d,4) r8 r4 r8 |
+R2.*10
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #18 r4 r8 gis!\f gis gis |							%%%% R
+gis4 r8 r4 r8 |
+R2.*31
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r8 r4 r8\fermata |
+R2.\un
+r4 r8 r4 r8\fermata |
+\mark #19 R2.*8								%%%% S
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c {r8 <e e'>^"Cor" <e e'> <e e'> <e e'> <e e'> \unset fontSize}} \\ {R2._"(21)"} >> \tag #'score {R2.} >> |
+d'4.(\sfp b4) gis8 |
+a4 r8 r4 r8 |
+R2.*2
+%
+gis4.\sfp ~ gis4 b8 |
+a4 r8 r4 r8 |
+R2.*17
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+		{a4(^"Clar." cis8) a4 cis16( d) \unset fontSize}} \\ {R2._"(18)"} >>
+	 \tag #'score {R2.} >> |
+r8\tutti cis-.\p cis-.\< cis-. cis-. cis-.\! |
+gis4.(\f a8) r r |
+R2.*2
+%
+r8 cis-.\p cis-.\< cis-. cis-. cis-.\! |
+b4.(\f a8) r r |
+R2.*2
+%
+R2.*14\solo
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #20 a2.(\p\tutti |							%%%% T
+gis
+a\< |
+b) |
+cis4\! r8 r4 r8\solo |
+R2.*4
+%
+%
+%
+cis,8\f\tutti cis cis cis cis cis |
+d d d d d d |
+e e e e e e |
+a,4\solo r8 r4 r8 |
+R2.*7
+%
+%
+%
+%
+%
+%
+cis'2.\f\tutti |
+cis4( a8) b4( gis8) |
+cis2. |
+cis4( a8) b4( gis8) |
+a4\solo r8 r4 r8 |
+R2.*5 |
+%
+%
+%
+%
+e4.\f r4 r8 |
+R2.\un
+e4.\f r4 r8 |
+R2.*30
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+		{fis16^"Clar." e d cis b a gis a b cis d gis, \unset fontSize}} \\ {R2._"(31)"} >>
+	 \tag #'score {R2.} >> |
+cis'2.\p |
+b4.( gis)
+cis2. |
+a\< ~ |
+a4. gis\! |
+cis2.\f\tutti |
+cis4( a8) b4( gis8) |
+cis2. |
+cis4( a8) b4( gis8) |
+a4 r8 r4 e'8-. |
+a,-. cis-. e,-. a-. cis,-. e-.|
+a,4 r8 a4 r8 |
+a4 r8 r4 r8 \bar "|."
+}
+

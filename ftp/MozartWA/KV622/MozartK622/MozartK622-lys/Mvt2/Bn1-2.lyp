@@ -1,0 +1,110 @@
+﻿%% Mozart Cto Clarinette -II- - Basson 1
+
+\relative c{
+\clef bass
+
+
+
+
+
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo}
+R2.*8
+%
+%
+%
+%
+%
+%
+%
+a'2.\f\tutti ~ |
+a |
+a ~ |
+a |
+a ~ |
+a2( d4) |
+cis2( b4) |
+a4 r r |
+R2.*8
+%
+%
+%
+%
+%
+%
+%
+a2\f\tutti r4 |
+r c( b) |
+b4.( a8 g fis) |
+e r d'4( cis!) |
+cis4.( b8 a g) |
+fis( g) cis,4( d) |
+g, a a |
+d4 r r |
+R2.*20
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+		{\afterGrace b2._(\trill {a32[^"Clar." b])} \unset fontSize}} \\ {R2._"(21)"} >>
+	 \tag #'score {R2.} >> |
+\mark #12 e'2.\f ~ |																%%%% L
+e8 r r4 r |
+d2.\f ~ |
+d8 r r4 r |
+e2.\f ~ |
+e4 r r^\markup {\center-column {(Cad.) \musicglyph #"scripts.ufermata"}}
+R2.*15
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+		{d8^"V.II" b'( a g fis e) \unset fontSize}} \\ {R2._"(16)"} >>
+	 \tag #'score {R2.} >> |
+fis4.(\f\tutti e8 d cis) |
+b r c4( b) |
+g'4.( fis8 e d) |
+cis! r d4( cis) |
+cis8( a4) g'8( fis e) |
+d8.( g16) g4.( fis8) |
+e4( a, cis) |
+\mark #13 d r r\solo |															%%%% M
+R2.*13
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+a2.\pp ~ |
+a4 r r \bar "|."
+}
+

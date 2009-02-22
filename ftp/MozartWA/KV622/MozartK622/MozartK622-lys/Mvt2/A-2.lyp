@@ -1,0 +1,110 @@
+﻿%% Mozart Cto Clarinette -II- - Alto
+
+\relative c'{
+\clef alto
+
+
+
+
+
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo}
+a2.\p ~ |
+a ~ |
+a ~ |
+a ~ |
+a ~ |
+a2 fis4 |
+e2. ~ |
+e8\noBeam g'(\f fis e d cis) |
+d(\tutti a d a d a) |
+cis( a d a d a) |
+d( a d a d a) |
+cis( a d a d a) |
+cis( a cis a d a) |
+cis( a cis a b d) |
+a( cis a cis gis b) |
+a4 r r |
+fis2.\p\solo |
+g4 c( b8 a) |
+g2. |
+a4 d( cis!8 b) |
+a4( g a) |
+b( cis d) |
+g,8 b( a4. g8) |
+fis\noBeam g'(\f fis e d cis) |
+d(\tutti fis, d' cis b a) |
+g g'4( fis8 e dis) |
+e g,( b a g fis) |
+e a'4( gis8 fis eis) |
+fis( a, cis b a g!) |
+fis( d' a e' a, d) |
+b( e a, fis' cis e) |
+d4 r r |
+r8\solo a\p a a a a |
+r a a a a a |
+r gis4 gis gis8 ~ |
+gis e e4 r |
+a2. ~ |
+a ~ |
+a ~ |
+a |
+e ~ |
+e8 r a r b r |
+e,2. |
+b'4( a8) a( gis fis) |
+e-. e'-. cis-. e-. cis-. e-. |
+r d-. b-. fis'-. d-. fis-. |
+r e-. cis-. g'!-. e-. g-. |
+r fis-. d-. a'-. fis-. a-. |
+r b,-. e,-. e'-. b-. b'-. |
+a,4 r r |
+fis r r |
+r8 e e e e e |
+e\< e e e d d\! |
+\mark #12 cis\f cis'4 e a8 |																			%%%% L
+cis4 r r |
+gis,8\f b4 d gis8 |
+b4 r r |
+e,,8\f cis'4 e g!8 |
+cis4 r r^\markup {\center-column {(Cad.) \musicglyph #"scripts.ufermata"}}
+a,2.\pp ~ |
+a ~ |
+a ~ |
+a ~ |
+a ~ |
+a2 fis4 |
+e2. ~ |
+e4 r r |
+fis2. |
+g4 c( b8 a) |
+g2. |
+a4 d( cis!8 b) |
+a4( g a) |
+b( cis d) |
+g,8( b) a4.( g8) |
+fis\noBeam g'(\f fis e d cis) |
+a\tutti a4 a8( b cis) |
+d g4( fis8 e dis) |
+e b4 b8( cis d!) |
+e a4( gis8 fis eis) |
+fis cis4 cis8( d e!) |
+fis( g! d bes c a) |
+g( b!) a4( cis!) |
+\mark #13 d8\noBeam d\p d d d\solo d	|														%%%% M
+r e e e d d |
+r e\pp e e d d |
+r b a a g g |
+fis fis fis fis fis fis |
+r g\menop g g fis fis |
+r a'\pp a a a a |
+g4 r r |
+r8 a,\mf a a a a |
+a4:16 a: g: |
+fis4 r r |
+R2.\un |
+r4 r e'8\pp r |
+fis r a r a, r |
+d r fis, r fis r |
+fis4 r r \bar "|." \pageTurn
+}
+

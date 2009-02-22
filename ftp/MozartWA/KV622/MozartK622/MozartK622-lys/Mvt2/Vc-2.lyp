@@ -1,0 +1,110 @@
+﻿%% Mozart Cto Clarinette -II- - Violoncelle
+
+\relative c{
+\clef bass
+
+
+
+
+
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo}
+d2.\p |
+a4 d r |
+d2. |
+a4 d r |
+a2. ~ |
+a2 d4 |
+e e e |
+a, r r |
+d\f\tutti r d |
+a d r |
+d r d |
+a d r |
+a' r r |
+a r d, |
+e e e |
+a, r r |
+d2.\p\solo |
+g4( a b) |
+e,2. |
+a4( b cis) |
+fis,( g a) |
+b( cis d) |
+g, a a, |
+d4 r r |
+d4.(\f\tutti e8 fis4) |
+g( a b) |
+e, e,8( fis g gis) |
+a4( b cis) |
+fis,4.( g8 a ais) |
+b4( cis d) |
+g, a! a |
+d r r |
+d\p\solo r r |
+a r r |
+e'2. ~ |
+e4 a,8 a'( e d) |
+cis4 r r |
+d r r |
+e r r |
+fis r r |
+gis,2. |
+a8 r cis r d r |
+e2. |
+eis4( fis8\noBeam fis,( e! d) |
+cis4 r r |
+d r r |
+e r r |
+fis r r |
+gis2. |
+a4 r r |
+d r r |
+e r r |
+e\< e e\! |
+\mark #12 a\f e cis |																			%%%% L
+a r r |
+a'\f a, a' |
+a, r r |
+a'\f e cis |
+a r r^\markup {\center-column {(Cad.) \musicglyph #"scripts.ufermata"}}
+d2.\pp |
+a4 d r |
+d2. |
+a4 d r |
+a2. ~ |
+a2 d4 |
+e e e |
+a, r r |
+d2. |
+g4( a b) |
+e,2. |
+a4( b cis) |
+fis,( g a) |
+b( cis d) |
+g, a a, |
+d4 r r |
+d4.\f\tutti cis8( b a) |
+g4( a b) |
+e4. d8( cis b) |
+a4( b cis) |
+fis4. e8( d cis) |
+b4( bes a) |
+g a a |
+\mark #13 d r r |														%%%% M
+cis'2(\p\solo d4) |
+cis2(\pp d4) |
+g, a a, |
+d r r |
+cis2(\menop d4) |
+cis2(\pp d4) |
+g, r r |
+a\mf r r |
+a a a |
+b r r |
+R2.\un |
+r4 r g(\pp |
+a2.) |
+d8-. r a-. r fis-. r |
+d4 r r \bar "|." \pageTurn
+}
+

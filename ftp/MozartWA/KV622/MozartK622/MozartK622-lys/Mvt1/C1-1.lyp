@@ -1,0 +1,371 @@
+﻿%% Mozart Cto Clarinette -I- - Cor 1
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Atime \AstringTempo \tag #'midi {\AmidiTempo}
+R1*8
+%
+%
+%
+%
+%
+%
+%
+c2\f c4. c8 |
+c4 c c r |
+R1\un
+g2\p ~ g8 r r4 |
+c\f r r2 |
+g'4 r r2 |
+r4 e d2 |
+c4 r8 c c c c c |
+d4 d2 d4 |
+e r8 c c c c c |
+d4 d2 d4 |
+e r8 c c4 r8 c |
+c4 r r2 |
+R1\un
+g4 r8 d' d d d d |
+d4-. d-. g,-. r |
+\mark #1 R1*6 |																												%%%%% A
+%
+%
+%
+%
+%
+c2\f r |
+e r |
+c r|
+e r |
+c4 r8 c16 c c8 c c c |
+c4-. c-. c-. r |
+R1*2
+%
+r2 r4 d8-.\p r |
+e-. r r4 r d8-. r |
+e-. r r4 r d8-. r |
+e-.\< r d-. r e-. r d-. r\! |
+c\f c d d e e d d |
+\mark #2 c2 c4 c | 								%%%%% B
+c2 c |
+c4 c8. c16 c4 c |
+g4 g8. g16 g8 g g g |
+g4 e'8. e16 e8-. e-. d-. d-. |
+c4 r r2 |
+R1*5
+%
+%
+%
+%
+c4\f c8. c16 c8 c c c |
+c4 c c r |
+R1*18\solo
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #3 c4\f\tutti c8. c16 c8 c c c |					%%%%% C
+c4 r r2 |
+R1\un
+R1*19\solo|
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+		{g4^"V.I" g8. g16 g4._(\trill fis16 g) \unset fontSize}} \\ {R1_"(20)"} >>
+	 \tag #'score {R1} >> |
+\mark #4 r2\tutti d8-.\f r d-. r |												%%%%% D
+d4 r d8-. r d-. r |
+d4\solo r r2 |
+R1*26
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r\fermata
+\mark #5 R1*25 |																							%%%%% E
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+		{\afterGrace a1_(\trill {g16[^"Clar." a])} \unset fontSize}} \\ {R1_"(26)"} >>
+	 \tag #'score {R1} >> |
+g,4\f\tutti r8 d' d d d d |
+d4 d2 d4 |
+d r8 d d d d d |
+d4 d2 d4 |
+d r8 g, g4 r8 g |
+g4 r r2 |
+R1\un
+d'1 ~ |
+d4 g, g g |
+d' d8. d16 d8 d d d |
+d4 r r2 |
+R1*5
+%
+%
+%
+%
+d4\f d8. d16 d8 d d d |
+d4 d d r |
+R1*19\solo |
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {R1^"(20)"} \\ {\set fontSize = #-4 \transpose c c \relative c' 
+		{d2_"Clar." dis \unset fontSize}} >>
+	 \tag #'score {R1} >> |
+\mark #6 e1\f\tutti ~ |												%%%%% F
+e |
+e4 r\solo r2 |
+R1*3
+%
+%
+c1\p ~ |
+c |
+c4 r r2 |
+R1*14
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #7 R1*9 |										%%%%% G
+%
+\pageTurn
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+		{e4^"Clar." r8 dis' e f fis g \unset fontSize}} \\ {R1_"(10)"} >>
+	 \tag #'score {R1} >> |
+e,1\p ~ |
+e\< |
+e4\!\f\tutti r r2 |
+e'4 r r2 |
+c4 r r2 |
+R1*3
+%
+%
+g4\f r r2 |
+d'4 r r2 |
+g,4 r r2 |
+R1*3
+%
+%
+c4\f r8 c c c c c |
+c4 c2 c4 |
+c r8 c c c c c |
+c4 c2 c4 |
+c r8 c c4 r |
+R1*2 |
+%
+r4 g8. g16 g8 g g g |
+g4 r8 d' d d d d |
+d4\solo r r2 |
+g,1\p ~ |
+g |
+c,4 r r2 |
+R1*17
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #8 c'4\f\tutti c8. c16 c8 c c c |					%%%%% H
+c4 r r2 |
+R1\un |
+R1*14\solo
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark # 9 r8\tutti g\f g g g r g r |					%%%%% I
+g g g g g r g r |
+g4\solo r r2 |
+R1*26
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r\fermata
+\mark #11 R1*24																	%%%%% K
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+		{g8^"Clar." e16( dis e dis e dis) e8 c16( b c b c b)  \unset fontSize}} \\ {R1_"(25)"} >>
+	 \tag #'score {R1} >> |
+g1\p ~ |
+g\< |
+g4\!\f\tutti r8 c c c c c |
+d4 d2 d4 |
+e r8 c c c c c |
+d4 d2 d4 |
+c2 c4 c |
+c2 c | 
+c4 c8. c16 c4 c |
+g4 g8. g16 g8 g g g |
+g4 e'8. e16 e8-. e-. d-. d-. |
+c4 r r2 |
+R1*5
+%
+%
+%
+%
+c4\f c8. c16 c8 c c c |
+c4 c c r \bar "|." 
+}
+

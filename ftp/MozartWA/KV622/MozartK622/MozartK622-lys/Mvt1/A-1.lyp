@@ -1,0 +1,371 @@
+﻿%% Mozart Cto Clarinette -I- - Alto
+
+\relative c'{
+\clef alto
+
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo}
+a8\p a a a a a a a |
+a a a a a a a a |
+b4 r b r |
+e,2 ~ e8 r r4 |
+e'1 ~ |
+e |
+e2 ~ e8 r d( fis,) |
+e( dis e dis) e4 r |
+a'8\f a a a a a a a |
+a a a a a a a a |
+b,4\p r b r |
+e,2 ~ e8 r r4 |
+e'8\f e e e d d cis cis |
+b b a a gis gis fis fis |
+e e cis' cis fis fis( e d) |
+cis e4 e e e8 ~ |
+e e4 e e e8 ~ |
+e e4 e e e8 ~ |
+e e4 e e e8 |
+e4 r8 e( d4) r8 a' |
+a4 r8 cis,( b4) r8 fis' |
+fis4 r8 fis fis4 r8 fis |
+b,4 r16 b cis dis e fis gis a b gis b gis |
+e4-. e'-. e,-. r |
+\mark #1 r2 e\p |																							%%%%% A
+cis4.( d!8) fis( e) d-. cis-. |
+b4.( cis8) e( d) cis-. b-. |
+a4.( cis8) b4-. b-. |
+b-. b-. r e ~ |
+e8( d b) fis'-. e4 e, |
+cis'2\f a4..( b16) |
+cis a b cis d e fis gis a cis b a gis fis e d |
+cis2 a4..( b16) |
+cis a b cis d e fis gis a cis b a gis fis e d |
+cis a b cis d e fis gis a gis a b g fis g a |
+fis4-. cis-. d-. r |
+fis,4.(\p gis16 ais b8 cis d e) |
+fis ais,( b d) a4( gis) |
+cis16( e) e-. e-. d( e) e-. e-. cis( e) e-. e-. b( e) e-. e-. |
+a,( e') e-. e-. b( e) e-. e-. cis( e) e-. e-. b( e) e-. e-. |
+a,( e') e-. e-. b( e) e-. e-. cis( e) e-. e-. b( e) e-. e-. |
+e-.\< cis'-. a-. cis-. e,-. d'-. b-. d-. e,-. cis'-. a-. cis-. e,-. d'-. b-. d-. |
+cis8\!\f e, gis e a e b' e, |
+\mark #2 cis' cis, cis cis cis cis cis cis |			%%%%% B
+e e e e cis cis cis cis |
+d d d d fis fis fis fis |
+e( dis d cis b d cis a) |
+e' e e e e e e e |
+a,4 r r2 |
+r d8-.\p r e-. r |
+fis4 r r2 |
+r b,8-. r e-. r |
+a,4 r b8-. r b-. r |
+a4 r b8-.\< r b-. r |
+a a'-.\!\f cis-. a-. e-. a-. cis,-. e-. |
+a,4 a' a, r |
+R1  * 2 \solo|
+ \pageTurn
+d,4\p r d r |
+r8 e e e e4 r |
+R1\un |
+r4 e'( eis fis) |
+d r8 d, e4 e |
+a r r2 |
+<< \voiceOne {\stemUp e'2 cis4.^( d8) | fis^( e) d-. cis-. cis4 } \\ \voiceThree {\stemDown cis2 a4._( b8) | d_( cis) b-. a-. a4} \\
+\voiceTwo {s2 s4 s4^\turn | s2.} \\ \voiceFour {s2 s4 s4_\turn | s2.} >> \stemNeutral r4 |
+\oneVoice b4 r b r |
+e2. r4 |
+e, r r2 |
+r r8 e' e e |
+e4 r r2 |
+r4 dis( e e,) |
+a8 cis cis cis r d! d d |
+r a a fis' fis fis e d |
+\mark #3 cis\noBeam\tutti a'\f cis a e a cis, e |					%%%%% C
+a,4 r cis\p r |
+b r b r |
+a\solo r f r |
+a r e r |
+e8-. e-. e-. e-. e4 r |
+r aes8.\f aes16 g8. g16 aes8. aes16 |
+g4 r d'\p r |
+d1 ~ |
+d4 r r2 |
+r4 c,-. c-. r |
+R1 * 3 |
+%
+%
+e'1( |
+d) |
+cis!4 e2 e4 ~ |
+e cis2( b4) |
+ais ais r8 e( dis e) |
+fis4 r r2 |
+R1 * 3 |
+%
+%
+\mark #4 r8 b-.\f\tutti cis-. dis-. e16 dis e fis g fis g a |												%%%%% D
+b8 b,-. cis-. dis-. e16 dis e fis g fis g a |
+b4\solo r r2 |
+R1\un |
+r2 fis,2(\p |
+e4) r b'2 ~ |
+b8 e e e r e e e |
+fis4 r r b, ~ |
+b8 e e e r e e e |
+fis4 r r b, ~ |
+b r8 gis( a4) r8 gis( |
+a4) r8 eis( fis4) r8 eis( |
+fis4) r8 gis( a4) r8 ais |
+fis1( |
+gis4) r r gis( |
+a) r r2 |
+r4 ais( b2) |
+e,4 r r2 |
+R1 * 8 |
+%
+%
+%
+%
+%
+%
+%
+fis'2. r4 |
+fis2. r4 |
+fis8 fis4 fis fis fis8 |
+fis4 r r2\fermata |
+\mark #5 r2 b,2\p |																			%%%%% E
+gis4.( a8) cis( b) a-. gis-. |
+fis4.( gis8) b( a) gis-. fis-. |
+e4 r8 e fis4-. e-. |
+dis-. b'-. r b ~ |
+b r8 cis b4 b |
+b-. r r2 |
+r8 b'4 b b b8 ~ |
+b b4 b b b8 ~ |
+b b4 b b b8 |
+b4 e, r e |
+r a, r a |
+r b r b |
+gis r r2 |
+e1 ~ |
+e8 e'-. e2. ~ |
+e8 e,-. e2. ~ |
+e4 r r8 a-. a-. a-. |
+dis4 r r8 dis-. dis-. dis-. |
+e4 r r8 e-. e-. e-. |
+e4 r r2 |
+R1\un |
+b'4 r b r |
+b, r b r |
+b8 b b b b b b b |
+b16\< b b b b b b b a a a a a a a a |
+gis8\!\f\tutti b4 b b b8 ~ |
+b b4 b b b8 ~ |
+b b4 b b b8 ~ |
+b b4 b b b8 |
+b4 r8 b'( a4) r8 e |
+e4 r8 gis( fis4) r8 cis |
+cis4 r8 cis cis4 r8 cis |
+fis, b4 dis dis8( fis) fis-. |
+gis gis gis gis a a ais ais |
+b b gis e b b b b |
+e4 r r2 |
+r a,8-.\p r b-. r |
+cis4 r r2 |
+r fis8-. r fis-. r |
+e4 r fis8-. r fis-. r |
+e4 r fis8-.\< r fis-. r |
+e\!\f e e e b e gis, b |
+e,4 e' e, r |
+e'8\p\solo e e e e e e e |
+e e e e e4 r |
+b1 ~ |
+b4 r b r |
+e8 e e e e e e e |
+e e e e e4 r |
+b1 ~ |
+b4 r b r |
+b8 b b4 r2 |
+b4 r b r |
+b8 b b4 r2 |
+b4 r b r |
+b8 b b4 r2 |
+e8 e e4 r2 |
+gis8 gis gis4 r2 |
+r4 b,2 b4 ~ |
+b8 r b r b r b r |
+b r b r b r b r |
+a4 r r2 |
+R1\un |
+\mark #6 cis'8\f\tutti cis cis cis cis cis cis cis  |												%%%%% F
+cis cis cis cis a a fis fis |
+gis4 r\solo r2 |
+r4 eis-.(\p eis-. eis-.) |
+eis r r2 |
+r4 gis-.( gis-. gis-.) |
+a1( |
+g) |
+fis4 r r2 |
+R1 * 3 |
+%
+%
+fis1( |
+e) |
+dis4 r r2 |
+dis1( |
+cis4) r r2 |
+cis1( |
+b8) b'-. b4-. r2 |
+cis,8-. cis'-. cis4-. r2 |
+cis8 r r4 cis,8 r r4 |
+fis8 r a, r b r d r |
+r cis cis cis r cis cis cis |
+\mark #7 fis,\noBeam\f gis' a ais b cis d ais |			%%%%% G
+b4 r r2 |
+e,,4\p r r2 |
+fis4 r r2 |
+fis4 r r2 |
+cis'8 cis cis4 r2 |
+cis8 cis cis4 r2 |
+cis'8 cis cis4 r2 |
+R1\un |
+r4 cis, r2 |
+cis4 r cis r |
+cis8\< cis cis cis cis cis cis cis |
+fis-.\!\f\tutti eis-. fis-. gis-. a-. gis-. a-. b-. |
+cis-. bis-. cis-. d-. cis-. b-. a-. gis-. |
+fis4 r r2 |
+gis2.(\p b4) |
+a r fis2 ~ |
+fis2. b8-. a-. |
+g-.\f dis-. e -. fis-. g-. fis-. g-. a-. |
+b-. ais-. b-. c-. b-. a-. g-. fis-. |
+e4 r r2 |
+fis2.(\p a4) |
+g r e2 ~ |
+e2. a8 g |
+fis\f a, d a d a d a |
+cis a cis a e' a, e' a, |
+d a d a d a d a |
+e' a, e' a, cis a cis a |
+d4 r8 cis( d4) r8 cis( |
+b4) r8 ais( b4) r8 d |
+d4 r8 fis( e4) r8 dis( |
+e4) r16 e,-. fis-. gis-. a-. gis-. a-. b-. cis b cis dis |
+e4 r16 b cis dis e fis gis a b gis b gis |
+e4\solo r r2 |
+r4 e8-.\p e-. dis-. dis-. d-. d-. |
+cis-. cis-. b-. b-. a-. a-. gis-. gis-. |
+a4 r r2 |
+R1\un | \pageTurn
+d,4 r d r |
+r8 e e e e r r4 |
+R1\un |
+r4 e'(eis fis) |
+d r8 d, e4 e |
+a r r2 |
+<< \voiceOne {\stemUp e'2 cis4.^( d8) | fis^( e) d-. cis-. cis4 } \\ \voiceThree {\stemDown cis2 a4._( b8) | d_( cis) b-. a-. a4} \\
+\voiceTwo {s2 s4 s4^\turn | s2.} \\ \voiceFour {s2 s4 s4_\turn | s2.} >> \stemNeutral r4 |
+\oneVoice b4 r b r |
+e2. r4 |
+e, r r2 |
+r r8 e' e e |
+e4 r r2 |
+r4 dis( e e,) |
+a8 cis cis cis r d! d d |
+r a a fis' fis fis e d |
+\mark #8 cis\noBeam\tutti a'-.\f cis-. a-. e-. a-. cis,-. e-. |					%%%%% H
+a,4 r cis\p r |
+b r b r |
+a\solo r f' r |
+d r e r |
+a, r e' r |
+f r g r |
+c, r e r |
+e r dis r |
+e1 ~  |
+e2 a ~ |
+a8 r a, r a r a r |
+d2( b) |
+b4 r r2 |
+R1 * 3 |
+%
+%
+\mark # 9 r8 e,\f\tutti fis gis a16 gis a b c b c d |					%%%%% I
+e8 e fis gis a16 gis a b c b c d |
+e4\solo r r2 |
+R1\un |
+r2 b,2(\p |
+a4) r e r |
+e8 a a a r a a a |
+b4 r r e, ~ |
+e r a' r |
+b r r e,,( |
+a) r8 e( d4) r8 cis( |
+d4) r8 fis fis4 r8 fis |
+fis4 r8 cis'( d4) r8 dis,( |
+e4) r e'2 ~ |
+e4 r r cis,( |
+d) r r2 |
+r4 dis( e2) |
+a4 r r2 |
+R1\un |
+r2 fis( |
+eis cis) |
+fis4 r r2 |
+R1\un |
+r2 cis'( |
+d) gis, |
+fis8( a fis a) fis4 r |
+b2. r4 |
+b2. r4 |
+e8 e4 e e e8 |
+e4 r r2\fermata
+\mark #11 r2 e2\p |																	%%%%% K
+cis4.( d8) fis( e) d-. cis-. |
+b4.( cis8) e( d) cis-. b-. |
+a2 b4-. a-. |
+gis-. e'-. r d( |
+cis) b-. e-. e,-. |
+a16( e') e-. e-. d16( e) e-. e-. cis16( e) e-. e-. b16( e) e-. e-. |
+a,16( e') e-. e-. b16( e) e-. e-. cis16( e) e-. e-. b16( e) e-. e-. |
+a,8 r b r a r e r |
+a r e r a r e r |
+a r e' r cis r a r |
+d, r a' r fis r d r |
+e( a cis a) e' r e, r |
+a4 r r2 |
+a1 ~ |
+a8 a'-. a2. ~ |
+a8 a,-. a2. ~ |
+a4 r8 g16(\trill fis32 g) fis8-. fis-. g-. g-. |
+fis4 r r8 d'-. d-. d-. |
+e4 r r8 e-. e-. e-. |
+fis4 r r8 fis-. fis-. fis-. |
+e e e e r e e e |
+r a a a r cis cis cis |
+cis r e,-. e-. e-. r e-. e-. |
+e-. r e-. e-. e-. r a,-. a-. |
+a4 r r2 |
+e16\< e e e e e e e d d d d d d d d |
+cis8\!\f\tutti e'4 e e e8 ~ |
+e e4 e e e8 ~ |
+e e4 e e e8 ~ |
+e e4 e e e8 ~ |
+e cis cis cis cis cis cis cis |
+e e e e cis cis cis cis |
+d d d d fis fis fis fis |
+e( dis d cis b d cis a) |
+e' e e e e e e e |
+a,4 r r2 |
+r2 d8-.\p r e-. r |
+fis4 r r2 |
+r b,8-. r e-. r |
+a,4 r b8-. r b-. r |
+a4 r b8-.\< r b-. r\! |
+a\noBeam a'-.\f cis-. a-. e-. a-. cis,-. e-. |
+a,4 a' a, r \bar "|."
+}
+

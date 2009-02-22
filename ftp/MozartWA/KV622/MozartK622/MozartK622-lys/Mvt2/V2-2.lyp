@@ -1,0 +1,110 @@
+﻿%% Mozart Cto Clarinette -II- - Violon 2
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Btime \Bkey \BstringTempo \tag #'midi {\BmidiTempo}
+d,8(\p a d a d a) |
+cis( a d a d a) |
+d( a d a d a) |
+cis( a d a d a) |
+cis( a cis a d a) |
+cis( a cis a b d) |
+a( cis a cis gis b) |
+a\noBeam b'(\f a g! fis e) |
+fis8(\tutti a fis a fis a) |
+g( a fis a fis a) |
+fis( a fis a fis a) |
+e( a fis a fis a) |
+e( a e a fis a) |
+e( a e a d, fis) |
+cis( e cis e d e) |
+cis\noBeam g'!(\p fis e d cis) |
+d(\solo a d a d a) |
+b g'4( fis8 e dis) |
+e( b e b e b) |
+cis a'4( gis8 fis eis) |
+fis( a, b4 a8 cis) |
+d( b a e' a, d) |
+b( e d fis a, cis) |
+d\noBeam b'(\f a g fis e) |
+fis(\tutti d fis e d cis) |
+b b'4( a8 g fis) |
+g( e g fis e d) |
+cis cis'4( b8 a gis) |
+a( cis, a' g! fis e) |
+d( b e a d, a') |
+b( g fis a g a) |
+fis\noBeam g(\p fis e d cis) |
+r\solo d d d d d |
+r cis cis cis cis cis |
+r b4 d8( cis b) |
+gis4( a) r |
+r8 e'-. cis-. e-. cis-. e-. |
+r d-. b-. d-. b-. d-. |
+r a-. cis-. a-. cis-. a-. |
+r fis'-. d-. fis-. d-. fis-. |
+r d-. b-. d-. b-. e-. |
+a, r e' r d r |
+r cis( a cis b gis) |
+d'4( cis8) a4( b8)|
+cis-. a'-. e-. a-. e-. a-. |
+r fis-. d-. b'-. fis-. b-. |
+r8 g!-. e-. cis'-. g-. cis-. |
+r a-. fis-. d'-. a-. d-. |
+r e,-. b-. b'-. e,-. d'-. |
+r a,( cis e a cis) |
+r b,( d fis b d) |
+r a, a a a a |
+a4:16\< gis: gis:\! |
+\mark #12 a8\f e'4 a cis8 |																			%%%% L
+e\noBeam a,,\p a a a a |
+b\f d4 gis b8 |
+d\noBeam gis,,\p gis gis gis gis |
+g!\f e'4 g cis8 |
+e4 r r^\markup {\center-column {(Cad.) \musicglyph #"scripts.ufermata"}}
+d,8(\pp a d a d a) |
+cis( a d a d a) |
+d( a d a d a) |
+cis( a d a d a) |
+cis( a cis a d a) |
+cis( a cis a b d) |
+a( cis a cis gis b) |
+a\noBeam g'!( fis e d cis) |
+d( a d a d a) |
+b g'4( fis8 e dis) |
+e( b e b e b) |
+cis a'4( gis8 fis eis) |
+fis( a, b4 a8 cis) |
+d( b a e' a, d) |
+b( e d fis a, cis) |
+d\noBeam b'(\f a g fis e) |
+fis\tutti fis4 fis fis8 |
+g b4( a8 g fis) |
+g g4 g gis8 |
+a cis4( b8 a gis) |
+a a4 a a8 |
+a( g! d') d,( dis c') |
+b( e,16 g) fis8( a g a) |
+\mark #13 fis8\noBeam fis\p fis fis fis\solo fis |															%%%% M
+r g g g fis fis |
+r g\pp g g fis fis |
+r e d d a a |
+a a a a a a |
+r a\menop a a a a |
+r e''\pp e e d d |
+b4 r8 e,(\< fis g)\! |
+r d\mf d d d d |
+d4:16 cis: cis: |
+d4 r g,\p |
+a2 ~ a8( ais) |
+b4 r g''8\pp r |
+fis r d r g, r |
+fis r a, r a r |
+a4 r r \bar "|." \pageBreak
+}
+

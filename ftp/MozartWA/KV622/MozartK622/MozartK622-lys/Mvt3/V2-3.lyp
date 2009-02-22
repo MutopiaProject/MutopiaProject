@@ -1,0 +1,365 @@
+﻿%% Mozart Cto Clarinette -III- - Violon 1
+
+\relative c''{
+\clef treble
+
+
+
+
+\Ctime \Ckey \CstringTempo \tag #'midi {\CmidiTempo}
+\partial 8 r8
+a\p r a-.( a-. a-. a-.) |
+gis4.( a8) r r |
+d,-. d-. r fis-. fis-. r |
+e-. e-. e-. e r r |
+a8 r a-.( a-. a-. a-.) |
+b4.( a8) r r |
+fis r r b, r r |
+a a a a r a'16(\p\tutti b) |
+cis8-.\<  cis-. cis-. cis-. cis-. cis-.\! |
+d4.(\f cis8) r fis16(\p e) |
+d8-. r d16( cis) b8-. r b16( a) |
+gis8-. gis16( a fis a) gis8 r a16( b) |
+cis8-.\<  cis-. cis-. cis-. cis-. cis-.\! |
+\once \set doubleSlurs = ##t <b gis'>4.(\f <a a'>8) r cis16(\p e) |
+d8-. r fis,16( a) gis8-. r b,16( d) |
+cis4( e8) cis4 r8\solo |
+r b\p b b b b |
+r a a a a a  |
+r fis' fis fis fis fis |
+e4 r8 r4 a,8-. |
+gis4 r8 r4 a8-. |
+gis4 r8 r4 r8 |
+r e'( fis gis a b) |
+a r a-.( a-. a-. a-.) |
+gis4.( a8) r r |
+fis-. fis-. r fis-. fis-. r |
+e-. e-. e-. e r r |
+a r a-.( a-. a-. a-.) |
+b4.( a8) r r |
+fis r r b, r r |
+\mark #14 a\tutti r r r4 r8 |				%%%% N
+R2.\un
+r8 a'16(\< gis fis e d cis b a gis a |
+b8) b'16( a gis fis e d cis b a b |
+cis8)\! r r r4 r8\solo |
+cis2.(\p |
+d) |
+e4 r8 e4 r8 |
+eis eis eis fis r r |
+e!16\f\tutti a \repeat unfold 5 { e a} |
+\repeat unfold 5 {fis a} fis b|
+a8-. cis16( b cis a) gis8-. b16( a b gis) |
+a4\solo r8 r4 r8 |
+b2.(\p |
+a8) r r fis r r |
+cis-. cis-. cis-. e( cis e) |
+a4 r8 r4 r8 |
+e4.( gis) |
+a8 r r b r r |
+a r r d, d d |
+<cis' a'>2.:16\f\tutti |
+<cis a'>8 cis16 cis a a gis gis b b d d |
+<cis a'>2.:16 |
+<cis a'>8 cis16 cis a a gis gis b b d d |
+cis4 r8 <e, cis' a'>4 r8 |
+<cis e a>4 r8 r4 r8 |
+a'2.\p\solo ~ |
+a8 a-. a-. a-. a-. a-. |
+a r r a r r |
+a4 r8 a,-. cis-. a-. |
+b4 r8 r b-. b-. |
+cis4 r8 r cis-. a-. |
+d4. d8( cis b) |
+e e e e( d b) |
+a4.( \grace cis16 b8 a b) |
+cis2.( |
+d8) r r fis r r |
+cis4 r8 r cis' cis |
+b4 r8 dis,4.( |
+e4) r8 r4 r8 |
+cis4 r8 r4 fis8 |
+dis dis dis e r r |
+\mark #15 e4(\tutti g8 c4 e,8) |				%%%% O		part: \mark #15 e4(\mf
+dis4( fis8 b4 d,8) |
+cis!4( e8 ais4 c,8) |
+b4 r8 r4 r8 |
+r4\solo r8 c4.\p ~ |
+c4( b8) b4. ~  |
+b4( a8) a4. ~ |
+a4( g8) g4. ~ |
+g4 c8 c4. |
+b4( cis!16 dis e4) r8 |
+r e e  r dis dis |
+r b b r e e |
+r dis dis r dis dis |
+r b b r e e |
+r dis dis r dis dis |
+e4 r8 r e e |
+cis4 r8 r e e |
+e e e dis dis dis |
+e4 r8 r e-. e-. |
+e4 r8 r e-. cis-. |
+cis2. ~ |
+cis8 dis( e g dis e) |
+gis! e e e e e |
+e e e dis dis dis |
+\mark #16 e\< e e e e e\!	|										%%%% P
+<gis b>2.(\sfp |
+a4) r8 r4 r8 |
+R2.\un \pageTurn
+r8 e\< e e e e\! |
+f'4.\sfp ~ f8( e d) |
+c4 r8 r4 r8 |
+r gis,( a c b a) |
+gis4 r8 r4 r8 |
+r4 r8 c'( b a) |
+gis8 r r r4 r8 |
+r4 r8 c,( b a) |
+gis8 r r r4 r8 |
+r a'( g) f-. f( e) |								%%% part: \cresc.
+dis2.( |														%%% part: \decresc.
+e8)\! e( fis!) gis!-. gis( a) |			%%% part: \cresc.
+b2.( |															%%% part: \decresc.
+a8) r a-.( a-. a-. a-.) |
+gis4.( a8) r r |
+d,-. d-. r fis-. fis-. r |
+e-. e-. e-. e r r |
+a8 r a-.( a-. a-. a-.) |
+b4.( a8) r r |
+fis r r b, r r |
+<cis' a'>2.:16\f\tutti |
+<cis a'>8 cis16 cis a a gis gis b b d d |
+<cis a'>2.:16 |
+<cis a'>8 cis16 cis a a gis gis b b d d |
+cis8 r r b8:16 e,: d': |
+cis: a: e: b': e,: d': |
+cis: a: e: gis: cis,: b': |
+a: fis: cis: gis': cis,: b': |
+a: fis: d: e: cis': e: |
+a,: fis: d: e: cis': e: |
+d: fis: cis: e: b: d: |
+a: cis: gis: b: fis: cis': |
+fis: eis: fis: a: gis: fis: |
+eis: gis: cis,: a': fis: gis: |
+eis: gis: cis,: a': fis: gis: |
+eis8 cis, cis cis cis cis |
+cis4 r8 r4 r8\solo |
+r a(\p fis' a) a-.( a-.) |
+r b,( gis' b) b-.( b-.) |
+r cis,( eis gis) gis-.( gis-.) |
+r fis( b a) a-.( a-.) |
+b( cis b a cis a) |
+b( cis b a cis a) |
+d,2. |
+cis4( eis8 fis4) b,8( |
+a) a a a a a |
+r gis gis gis gis gis |
+r gis gis gis gis gis |
+r a( b a) a-.( a-.) |
+R2.\un
+r8 a a r ais ais |
+r8 b b r bis bis |
+cis eis' eis eis eis eis |
+fis4 r8 r4 r8 |
+r eis eis eis eis eis |
+fis4 r8 r4 r8 |
+\mark #17	r4 cis,8 cis cis cis |												%%%% Q
+cis r <a' e'>\f <a e'> <a e'> <a e'> |
+<a e'>4 r8 r4 r8 |
+<cis, e>2.\p |											%%% part: \fp
+r8 d( e fis) fis-.( fis-.) |
+r8 fis( g a) a-.( a-.) |
+r d( e fis) r d,( |
+cis) r r a'( b bis |
+cis) cis,( d e) e-.( e-.) |
+r a( b cis) cis-.( cis-.) |
+r cis( d e) r cis,( |
+d) r r d'-. e-. fis-. |
+g4 r8 r4 r8 |
+r <e g> <e g> <e g> <e g> <e g>  |
+fis4 r8 r4 r8 |
+r <d fis> <d fis> <d fis> <d fis> <d fis>  |
+e4 r8 r4 r8 |
+r <cis e> <cis e> <cis e> <cis e> <cis e> |
+d d, d r e e |
+r fis fis r e e |
+r d d cis r a' |
+fis'-. r fis-. g16( fis eis fis g fis) |
+fis4.( e!) |
+d4 r8 r4 r8 |
+r fis,( g gis a ais) |
+b8-. r b-. cis16( b ais b d cis) |
+cis4.( b) ~ |
+b a ~ |
+a8 r a-. b16( a gis! a b a) |
+\mark #18 gis8\noBeam gis-.\f b-. e-. gis-. b-. |				%%%% R
+<e,, b' e>4 r8 r4 r8 |
+a2.\p ~ |
+a8 a-. a-. a-. a-. a-. |
+a r r a r r |
+a4 r8 a,-. cis-. a-. |
+b4 r8 r b-. b-. 
+cis4 r8 r cis-. a-. |
+d4. d8( cis b) |
+e e e e( d cis) |
+a4 a'8 \appoggiatura c16 b8( a b) |
+c2. ~ |
+c8. d16 c8 b4( a8) |
+gis!4( g8 fis4 f8) |
+e4 r8 r4 r8 |
+e4. \appoggiatura g16 f8( e f) |
+g4.( a) |
+b4. ~ b4 cis!8 |
+d4. \appoggiatura f16 e8( d e) |
+f2. ~ |
+f8. g16 f8 e4( d8) |
+cis4 r8 r4 r8 |
+r f,-. f-. r d-. d-. |
+b r r g'( a b) |
+r e,-. e-. r c-. c-. |
+a r r a'4. |
+r8 b-. b-. r f-. f-. |
+e r r e( fis! gis!) |
+R2.*4
+%
+%
+%
+a4(\p c8 f4 a,8) |
+gis!8 r r g r r\fermata |
+R2.\un
+r4 r8 r4 r8\fermata |
+\mark #19 r4 r8 bes,4.\p ~  |					%%%% S
+bes4( a8) a4. ~ |
+a8 dis dis dis dis dis |
+dis r r a r r |
+gis e' e r e e |
+r dis dis r dis dis |
+r e e r e e |
+r dis dis r dis dis |
+e4 r8 r4 r8 |
+<gis b>2.(\sfp |
+a4) r8 r4 r8 |
+R2.
+r8 e e e e e |										%%% part: \cresc.
+f'4.\sfp ~ f8( e d) |
+c4 r8 r4 r8 |
+r gis,( a c b a) |
+gis4 r8 r4 r8 |
+r4 r8 \appoggiatura d''16 c8-.\p b-. a-. |
+gis4 r8 r4 r8 |
+r4 r8 \appoggiatura d16 c8-. b-. a-. |				%%% part: c\pp
+gis8 r r r4 r8 |
+r8 a'( g) f-. f( e) |										%%% part: \cresc.
+dis2.( |																%%% part: \decresc.
+e8) e( fis!) gis!-. gis( a) |						%%% part: \cresc.
+b2.( |																	%%% part: \decresc.
+a8) r a-.( a-. a-. a-.) |
+gis4.( a8) r r |
+d,-. d-. r fis-. fis-. r |
+e-. e-. e-. e r r |
+a8 r a-.( a-. a-. a-.) |
+b4.( a8) r r |
+fis r r b, r r |
+a a a a r a'16(\p\tutti b) |
+cis8-. cis-.\< cis-. cis-. cis-. cis-.\! |
+d4.(\f cis8) r fis16(\p e) |
+d8-. r d16( cis) b8-. r b16( a) |
+gis8-. gis16( a fis a) gis8 r a16( b) |
+cis8-. cis-.\< cis-. cis-. cis-. cis-.\! |
+\once \set doubleSlurs = ##t <b gis'>4.(\f <a a'>8) r cis16(\p e) |
+d8-. r fis,16( a) gis8-. r b,16( d) |
+cis4( e8) cis4 r8\solo |
+r b\p b b b b |
+r a a a a a  |
+r fis' fis fis fis fis |
+e4 r8 r4 a,8-. |
+gis4 r8 r4 a8-. |
+gis4 r8 r4 r8 |
+r e'( fis gis a b) |
+a r a-.( a-. a-. a-.) |
+gis4.( a8) r r |
+fis-. fis-. r fis-. fis-. r |
+e-. e-. e-. e r r |
+a r a-.( a-. a-. a-.) |
+b4.( a8) r r |
+fis r r b, r r |
+\mark #20 a\tutti r r r4 r8 |				%%%% T
+R2.\un \pageTurn
+r8 a'16(\< gis fis e d cis b a gis a |
+b8) b'16( a gis fis e d cis b a b |
+cis8)\! r r r4 r8\solo |
+cis2.\p |
+d |
+e4 r8 e4 r8 |
+eis eis eis fis r r |
+e!16\f\tutti a \repeat unfold 5 { e a} |
+\repeat unfold 5 {fis a} fis b |
+a8-. cis16( b cis a) gis8-. b16( a b gis) |
+a4\solo r8 r4 r8 |
+b2.(\p |
+a8) r r fis r r |
+cis-. cis-. cis-. e( cis e) |
+a4 r8 r4 r8 |
+e4.( gis) |
+a8 r r b r r |
+a r r d, d d |
+<cis' a'>2.:16\f\tutti |
+<cis a'>8 cis16 cis a a gis8:16 b: d: |
+<cis a'>2.:16 |
+<cis a'>8 cis16 cis a a gis8:16 b: d: |
+cis8\noBeam\solo a,\p a r b b |
+r cis cis r b( gis) |
+r cis cis r d d |
+r e e r d( b) |
+r a' a r b b |
+r cis cis r b( gis) |
+a-.\f a-. d-. cis4 r8 |
+r d,\p d r gis, gis |
+a-.\f a-. d-. cis4 r8 |
+r a\p a r gis gis |
+a a' \repeat unfold 16 a  |
+%
+%
+a e e e e e |
+\repeat unfold 6 <cis e> |
+d d d d d d |
+c c c c c c |
+cis! cis cis cis r r |
+cis r r cis r r |
+cis-. cis-. e-. a-. cis-. cis-. |
+\repeat unfold 6 gis |
+a-. r cis-. d16( cis bis cis d cis) |
+cis4.( b! |
+a8) r a-. b16( a gis a b a) |
+a4.( gis |
+fis8-.) r fis'-. gis16( fis eis fis gis fis) |
+fis4.( e!) |
+d8 d, d d d d |
+d-. r cis-. a-. r b-. |
+b r e e e e |
+e r e e e e |
+gis r r gis r r |
+gis4 r8 r4 r8 |
+a r a a a a |
+gis4.( a8) r r |
+d,-. d-. r fis-. fis-. r |
+e-. e-. e-. e r r |
+a r a a a a |
+b4.( a8) r r |
+fis r r b, r r |
+r cis-. e-. a-. cis-. e-. |
+r b-. b-. r gis-. gis-. |
+r cis,-. e-. a-. cis-. e-. |
+a,2.:16\< |
+a4.:16 gis:\! |
+<cis a'>2.:16\f\tutti |
+<cis a'>8 cis16 cis a a gis8:16 b: d: |
+<cis a'>2.:16 |
+<cis a'>8 cis16 cis a a gis8:16 b: d: |
+cis8 cis'16 cis e, e a8:16 cis,: e: |
+a,: cis: e,: a: cis,: e: |
+a,4 r8 <a' cis e>4 r8 |
+<e cis' a'>4 r8 r4 r8 \bar "|."
+}
+

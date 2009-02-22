@@ -1,0 +1,371 @@
+﻿%% Mozart Cto Clarinette -I- - Basson 2
+
+\relative c{
+\clef bass
+
+
+
+
+
+\Atime \Akey \AstringTempo \tag #'midi {\AmidiTempo}
+R1*7 |
+%
+%
+%
+%
+%
+%
+r2 r8 gis'(\f a b) |
+cis2 a4.( b8) |
+d( cis) b-. a-. a4 r |
+R1*2 |
+%
+cis2(\f b4 a) |
+gis( fis e d) |
+cis8 r fis fis d d e e |
+a e a e a e a e |
+gis e gis e b' e, d' e, |
+cis' e, cis' e, a e a e |
+gis e gis e b' e, d' e, |
+cis'4 r8 cis( d4) r8 cis( |
+d4) r8 ais( b4) r8 ais( |
+b4) r8 fis( d4) r8 dis( |
+e4) r16 b cis dis e fis gis a b gis b gis |
+e4-. e'-. e,-. r |
+\mark #1 R1*6 |																												%%%%% A
+%
+%
+%
+%
+%
+a2\f fis4..( gis16) |
+a4 r r2 |
+a2 fis4..( gis16) |
+a4 r r2 |
+a,8 b16 cis d e fis gis a gis a b g fis g a |
+fis4-. cis-. d-. r |
+R1*2 |
+%
+r4 d'8-.\p r cis-. r r4 |
+r4 d8-. r cis-. r r4 |
+r4 d8-. r cis-. r r4 |
+cis8-.\< r d-. r cis-. r d-. r\! |
+e\f e, gis e a e b' e, |
+\mark #2 cis' cis cis cis cis cis cis cis |			%%%%% B
+e e e e cis cis cis cis |
+d d d d fis fis fis fis |
+e( dis d cis b d cis a) |
+e e e e e e e e |
+a,4 r r2 |
+R1*5 |
+%
+%
+%
+%
+cis'4\f cis8. cis16 cis8 cis cis cis |
+cis4 cis cis r |
+R1*7\solo
+%
+%
+%
+%
+%
+%
+r8 cis4(\p b8) a-. e4( d8) |
+cis4 r r2 |
+R1*9
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #3 cis'4\f\tutti cis8. cis16 cis8 cis cis cis |					%%%%% C
+cis4 r r2 |
+R1\un |
+R1*19\solo|
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+		{g4^"V.I" g8. g16 g4._(\trill f16 g) \unset fontSize}} \\ {R1_"(20)"} >>
+	 \tag #'score {R1} >> |
+\mark #4 r8 b,-.\f\tutti cis-. dis-. e16 dis e fis g fis g a |												%%%%% D
+b8 b,-. cis-. dis-. e16 dis e fis g fis g a |
+b4\solo r r2 | 
+R1*26 |
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r2\fermata |
+\mark #5 R1*25 |																							%%%%% E
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+		{\afterGrace fis1_(\trill {e16[^"Clar." fis])} \unset fontSize}} \\ {R1_"(26)"} >>
+	 \tag #'score {R1} >> |
+e,8\!\f\tutti b e b e b e b |
+dis b dis b fis' b, a' b, |
+gis' b, gis' b, e b e b |
+dis b dis b fis' b, a' b, |
+gis'4 r8 gis( a4) r8 gis( |
+a4) r8 eis( fis4) r8 eis( |
+fis4) r8 cis( a4) r8 ais |
+b b b b a! a a a |
+gis gis gis' gis a a ais ais |
+b b gis e b b b b |
+e4 r r2 |
+R1*5 |
+%
+%
+%
+%
+e8\!\f e' e e b e gis, b |
+e,4 e e r |
+R1*19\solo |
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+		{b2^"Clar." bis \unset fontSize}} \\ {R1_"(20)"} >>
+	 \tag #'score {R1} >> |
+\mark #6 cis'8\f\tutti \repeat unfold 15 cis8 |												%%%%% F
+%
+cis4 r\solo r2 |
+R1*2 |
+%
+r4 gis-.(\p gis-. gis-.) |
+a1( |
+a,) |
+d4 r r2 |
+R1*14 |
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #7 r8 eis'\f fis cis d ais b fis | |			%%%%% G
+g4 r r2 |
+R1*8 |
+%
+%
+%
+%
+%
+%
+%
+r2 fis\p ~|
+fis\< eis |
+fis8-.\f\tutti eis-. fis-. gis-. a-. gis-. a-. b-. |
+cis-. bis-. cis-. d-. cis-. b-. a-. gis-. |
+fis4 r r2 |
+R1*3
+%
+%
+e!8-.\f dis-. e-. fis-. g-. fis-. g-. a-. |
+b-. ais-. b-. c-. b-. a-. g-. fis-. |
+e4 r r2 |
+R1*3
+%
+%
+d8\f a d a d a d a |
+cis a cis a e' a, e' a, |
+d a d a d a d a |
+e' a, e' a, cis a cis a |
+d4 r8 g( fis4) r8 ais( |
+b4) r8 e,( d4) r8 fis( |
+gis!4) r8 dis'( e4) r8 a,( |
+gis4) r16 e-. fis-. gis-. a gis a b cis b cis dis |
+e4 r16 b, cis dis e fis gis a b gis b gis |
+e4\solo r r2 |
+r4 e'(\p dis d |
+cis b a gis
+a) r r2
+R1*6
+%
+%
+%
+%
+%
+r8 cis4(\p b8) a-. e4( d8) |
+cis4 r r2 |
+R1*9
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #8 cis'4\f\tutti cis8. cis16 cis8 cis cis cis |					%%%%% H
+cis4 r r2 |
+R1\un |
+R1*14\solo |
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark # 9 r8 e,\f\tutti fis gis a16 gis a b c b c d |					%%%%% I
+e8 e, fis gis a16 gis a b c b c d |
+e4\solo r r2 | 
+R1*26 |
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r2\fermata |
+\mark #11 R1*17 |																	%%%%% K
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r8 e,-.\p d-. d-. e-. e-. |
+d4 r r2 |
+R1*8 |
+%
+%
+%
+%
+%
+%
+%
+a'8\f\tutti e a e a e a e |
+gis e gis e b' e, d' e, |
+cis' e, cis' e, a e a e |
+gis e gis e b' e, d' e, |
+cis' cis cis cis cis cis cis cis |
+e e e e cis cis cis cis |
+d d d d fis fis fis fis |
+e( dis d cis b d cis a) |
+e e e e e e e e |
+a,4 r r2 |
+R1*5 |
+%
+%
+%
+%
+cis'4\f cis8. cis16 cis8 cis cis cis |
+cis4-. cis-. cis-. r \bar "|." \pageTurn
+}
+
