@@ -1,0 +1,26 @@
+
+% Source file for caoyuansong.eps
+
+% To compile this on Linux, you need to install the Chinese TeX Live CD
+% (see http://ubuntuforums.org/showthread.php?t=350101 )
+% and do:   latex caoyuansong.tex && dvips caoyuansong.dvi && ps2epsi caoyuansong.ps && mv caoyuansong.epsi caoyuansong.eps
+
+\documentclass{article}
+\usepackage{CJK}
+\usepackage{graphics}
+
+% we must put our title at the bottom left of
+% the paper.  (BoundingBox can correct for
+% positioning elsewhere, but Lilypond doesn't
+% seem to take the left and bottom parts of the
+% boundingbox into account when doing its spacing.)
+\usepackage[a4paper,lmargin=0mm,rmargin=0mm,tmargin=0mm,bmargin=0mm]{geometry}
+\begin{document}
+\pagestyle{empty}
+~ \vfill \par \noindent
+
+\begin{CJK}{UTF8}{song}
+\bf 草原颂
+\end{CJK}
+
+\end{document}
