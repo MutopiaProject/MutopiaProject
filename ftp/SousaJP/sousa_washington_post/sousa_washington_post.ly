@@ -1,4 +1,5 @@
-﻿\version "2.11.39"
+﻿%Score version: 2.0
+\version "2.12.2"
 \include "english.ly"
 
 \paper {
@@ -9,11 +10,8 @@
 
 
 \header {
-%title = \markup { \override #'(font-name . "Century Gothic Bold") \fontsize #3 "The Washington Post"}
 title = "The Washington Post"
-%subtitle = \markup { \override #'(font-name . "Century Gothic") "March"}
 subtitle = "March"
-%composer = \markup { \override #'(font-name . "Century Gothic") "John Philip Sousa"}
 composer = "John Philip Sousa"
   mutopiatitle = "The Washington Post"
   mutopiacomposer = "SousaJP"
@@ -25,10 +23,11 @@ composer = "John Philip Sousa"
   maintainerEmail = "rebiolca@gmail.com"
   maintainerWeb = "http://www.nightpassage.org"
   moreInfo = "Made from scans available at National Library of Australia http://www.musicaustralia.org"
-
- footer = "Mutopia-2008/02/19-1321"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ 
+ footer = "Mutopia-2009/03/19-1321"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
+
  dis = \override DynamicLineSpanner #'staff-padding = #3
  dit = \override TextScript #'staff-padding = #2
  ddd = \once \override DynamicLineSpanner #'staff-padding = #2
