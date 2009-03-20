@@ -1,14 +1,16 @@
-%Score version: 1.1 A4
-\version "2.11.62"
+%Score version: 2.0
+\version "2.12.2"
 \include "english.ly"
 \paper {
+%#(set-paper-size "letter")
 between-system-padding = 1
 between-system-space = 3
   %ragged-bottom=##f
   ragged-last-bottom=##f
 #(ly:set-option 'point-and-click #f)
 }
-#(set-global-staff-size 18.52)
+
+#(set-global-staff-size 18.26)
 \header {
  title =  "Nocturne"
  composer = "Frédéric Chopin"
@@ -29,9 +31,9 @@ between-system-space = 3
  maintainerEmail = "rebiolca@gmail.com"
  maintainerWeb = "http://www.nightpassage.org"
  moreInfo = "Made from scans available at Library Of Congress http://memory.loc.gov"
-
- footer = "Mutopia-2008/11/08-1590"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ 
+ footer = "Mutopia-2009/03/19-1590"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 %%%Il gruppetto cromatico%%%
@@ -204,13 +206,13 @@ bf8-4 [ af c, d-3)]} \cadenzaOff \bar "|" \normalsize		%32
        \partial 8 r8	
 	   
  
-ef,-.\ped  <g' ef'>  ( <bf ef  g>)\pes \once \override TextScript #'extra-offset = #'( 0.0 . 3.0 ) ef,-.\ped <af d> (<cf d af'>)\pes  ef,,-.\ped <g' ef'> (<bf ef g>)\pes d,,-.\ped  <g' ef'> (<bf ef g>)\pes	%1
+ef,-.\ped  <g' ef'>  ( <bf ef  g>)\pes  ef,-.\ped <af d> (<cf d af'>)\pes  ef,,-.\ped <g' ef'> (<bf ef g>)\pes d,,-.\ped  <g' ef'> (<bf ef g>)\pes	%1
 	   
-c,,-.\ped <g'' e'> (<bf e g>)\pes   c,-.\ped <g' e'> (<c e bf'>)\pes f,,-.\ped <f' df'> (<bf d e>)\pes \once \override TextScript #'extra-offset = #'( 0.0 . 3.0 ) f,-.\ped <f' c'> (<af c f>)\pes	%2
+c,,-.\ped <g'' e'> (<bf e g>)\pes   c,-.\ped <g' e'> (<c e bf'>)\pes f,,-.\ped <f' df'> (<bf d e>)\pes  f,-.\ped <f' c'> (<af c f>)\pes	%2
 	   
 bf,-.\ped <f' d'!> (<bf d af'>)\pes b,-.\ped <g' f'> (<d' f g>)\pes c,-.\ped <g' ef'> (<c ef g>)\pes a,-.\ped <gf' ef'> (<c ef gf>)\pes	%3
 		
-bf,-.\ped <f' ef'> (<bf ef af!>)\pes  \once \override TextScript #'extra-offset = #'( 0.0 . 2.0 ) bf,,-.\ped  <f'' d'> (<bf af'>)\pes  ef,,-.\ped   <g' ef'> (<bf ef g>) ef,-. <g ef'> (<bf ef g>)	%4
+bf,-.\ped <f' ef'> (<bf ef af!>)\pes   bf,,-.\ped  <f'' d'> (<bf af'>)\pes  ef,,-.\ped   <g' ef'> (<bf ef g>) ef,-. <g ef'> (<bf ef g>)	%4
 		
 ef,-. <g ef'>  (<bf ef g>)\pes \once \override TextScript #'extra-offset = #'( 0.0 . 3.0 ) ef,-.\ped <af d> (<cf d af'>)\pes ef,-.\ped <g ef'> (<bf ef g>)\pes \once \override TextScript #'extra-offset = #'(0.0 . 2.0 )d,-.\ped <g ef'> (<bf ef g>)\pes %5
 		
