@@ -11,7 +11,7 @@
   subtitle = "March"
   composer = "John Philip Sousa"
   mutopiacomposer = "SousaJP"
-  instrument = "Piccolo in Db"
+  instrument = "Eb Clarinet"
   date = "1908"
   source = "John Church, 1908"
   style = "March"
@@ -24,12 +24,13 @@
 }
 
 
+
 \score {
   \new Staff { 
-    \set Staff.midiInstrument = "piccolo" 
+    \set Staff.midiInstrument = "clarinet" 
     \override Score.RehearsalMark #'break-align-symbol = #'time-signature
     \mark "Marziale"
-    \piccoloInDb
+    \clarinetInEb
   }
   
   \layout {}
@@ -40,3 +41,4 @@
     }
   }
 }
+

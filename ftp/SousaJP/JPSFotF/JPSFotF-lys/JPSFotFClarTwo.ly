@@ -11,7 +11,7 @@
   subtitle = "March"
   composer = "John Philip Sousa"
   mutopiacomposer = "SousaJP"
-  instrument = "Piccolo in Db"
+  instrument = "2nd & 3rd Bb Clarinets"
   date = "1908"
   source = "John Church, 1908"
   style = "March"
@@ -24,12 +24,15 @@
 }
 
 
+
 \score {
   \new Staff { 
-    \set Staff.midiInstrument = "piccolo" 
-    \override Score.RehearsalMark #'break-align-symbol = #'time-signature
-    \mark "Marziale"
-    \piccoloInDb
+    <<
+      \set Staff.midiInstrument = "clarinet" 
+      \override Score.RehearsalMark #'break-align-symbol = #'time-signature
+      \mark "Marziale"
+      \partcombine \clarinetInBbTwo \clarinetInBbThree
+    >>
   }
   
   \layout {}
@@ -40,3 +43,4 @@
     }
   }
 }
+
