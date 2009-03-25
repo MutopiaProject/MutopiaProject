@@ -290,9 +290,9 @@ print "<td><b>Copyright:</b> $licence</td></tr>\n";
 
 print "<tr><td><b>Last updated:</b> $upyear/$month/$upday";
 
-if (-s "$baseref$midrif$musicnm/$musicnm.log") {
+#if (-s "$baseref$midrif$musicnm/$musicnm.log") {
  print ". <a href=\"$baseref$midrif$musicnm/$musicnm.log\">View change history</a>";
-}
+#}
 
 print "</td>\n";
 print "<td><b>Music ID Number:</b> $id</td></tr>\n";
@@ -371,20 +371,20 @@ if ($moreinfo ne "") {
 if ($noOfCollections > 0) {
  for ($collection = 0; $collection < $noOfCollections; $collection++) {
   if (-r "../collections/" . $collectionKey[$collection] . "/collection-info.dat") {
-  print "<table align=\"center\" border=\"1\" width=\"90%\" bgcolor=\"#e8ffe8\" ";
-  print "cellpadding=\"5\" cellspacing=\"0\">\n<tr><td>";
-  
-  print "<center><b>" . $collectionName[$collection] . "</b></center>";
-  
-  open(COLLECTIONDATA, "../collections/" . $collectionKey[$collection] . "/collection-info.dat");
-  do {
-   chomp ($collectionLine = <COLLECTIONDATA>);
-   print $collectionLine . "\n";
-  } until (eof COLLECTIONDATA);
-  close(COLLECTION);
-  
-  print "</td></tr></table>\n\n";
-  print "<br /><br />\n\n";
+   print "<table align=\"center\" border=\"1\" width=\"90%\" bgcolor=\"#e8ffe8\" ";
+   print "cellpadding=\"5\" cellspacing=\"0\">\n<tr><td>";
+   
+   print "<center><b>" . $collectionName[$collection] . "</b></center>";
+   
+   open(COLLECTIONDATA, "../collections/" . $collectionKey[$collection] . "/collection-info.dat");
+   do {
+    chomp ($collectionLine = <COLLECTIONDATA>);
+    print $collectionLine . "\n";
+   } until (eof COLLECTIONDATA);
+   close(COLLECTION);
+   
+   print "</td></tr></table>\n\n";
+   print "<br /><br />\n\n";
   }
  }
 }
