@@ -1,0 +1,330 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm %Cor2 - 4ème mvt
+
+\relative c''{
+\clef treble
+%%\key a \minor
+
+
+ 
+
+\Dtime \DstringTempo  
+\partial 4. r8 r4 
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r8 g\f g g
+aes( g) g-. g-. g4 r
+r2 r8 g g g
+aes( g) g-. g-. g4 r
+R1 * 13	%% +1
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r8 c^"Clarinettes" c c \grace {c32[( d])} ees8 c c c} \unset fontSize} \\ {R1} >>
+	 \tag #'score {R1} >>
+\mark #1 b!4\f c d r
+R1
+b!4 c d r
+r c\ff d r
+r c d r
+R1 * 2
+%
+r4 c c c
+c c r2
+r2 r4 c
+c c c r
+r2 r4 c
+c c c r
+r c c r
+r c c r
+r c c c
+bes r r2
+r r4 g
+g r r g
+g r r g
+g r r2
+bes1 ~
+bes4 r r2
+R1 * 62	%% +3
+%
+\tag #'partie \pageTurn
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{r2 r8 bes^"Flûte" bes bes | a4 r r8 a a a | gis4 r r8 gis gis gis} \unset fontSize} \\ {R1*3} >>
+	 \tag #'score {R1*3} >>
+r8 d\f d d d4 d
+g, r r2
+R1 * 10
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r8 d' d d d4 d
+g, r r2
+r r8 d' d d
+d4 r r2
+r r8 d d d
+R1 * 4
+%
+%
+%
+r2 r8 bes bes bes
+bes bes bes bes bes4 bes
+bes r r8 bes bes bes
+bes bes bes bes bes4 bes
+R1 * 23
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r8 c\p c c
+\crescTextCresc c2 ~ c8\< c c c
+\repeat unfold 5 {c2 ~ c8 c c c}
+%
+%
+%
+%
+c1\ff ~
+c8 c c c c2 ~
+c1 ~
+c8 c c c c4 r
+r2 r8 c, c c
+c1\> ~
+c^\markup{\italic "dol."} ~
+c2.\! r4
+R1 * 12
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r4 bes'\ff
+bes bes bes r
+r2 r4 bes
+bes bes bes r
+r bes bes r
+r bes bes r
+r bes bes bes
+aes1 ~
+aes4 a bes c
+d d r2
+R1 * 4
+%
+%
+%
+r4 c d r
+r c d r
+R1 * 2
+%
+r2 r8 c c c
+c4 r r8 c c c
+c4 r r8 c c c
+c4 r r8 c c c
+bes1 ~
+bes ~
+bes4 r r2
+R1 * 28	%% +1
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c 
+			{\clef bass d8^"Basses" d, d d ees( d) d d \clef treble} \unset fontSize} \\ {R1} >>
+	 \tag #'score {R1} >>
+r8 g-.\p^\markup{"Solo"} g-. g-. aes( g) g-. g-.
+g4 r r2
+r8 g g g aes( g) g-. g-.
+g4 r r2
+r8 g g g aes( g) g-. g-.
+g4 r r2
+R1 * 25
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r8 g\f g g g4 g
+c, r r2
+R1 * 12
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r8 g' g g
+g4 r r2
+r r8 g g g
+fis1\sfz
+fis2 fis4\ff fis
+fis1
+fis2 fis4 fis
+g8\noBeam g g g aes( g) g-. g-.
+g4 r r2
+r8 g g g aes( g) g-. g-.
+g4 r r2
+R1 * 8
+%
+%
+%
+%
+%
+%
+%
+r2 r4 g
+g r r g
+c, r r g'
+g r r g
+c, r r2
+r4 d' c d
+c g c g
+c r r2 \bar "|." 
+}

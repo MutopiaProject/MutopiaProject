@@ -1,0 +1,298 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm %Hautbois2 - 1er mvt
+ 
+\relative c''{
+\clef treble
+
+
+
+
+
+\Atime \Akey \AstringTempo  
+bes1\f ~
+bes4 r r2
+r4 bes8. bes16 d4 bes
+a a r2
+fis'1 ~
+fis4 r r2
+r4 a,8. a16 c4 a
+g g r d'8. d16
+g,1 ~
+g4 c,8 d ees4 c'8. c16
+c4. d8 ees4. e8
+d4 d,8 ees d4 d'8. d16
+bes'2 g
+ees4. ees8 c4 a
+bes g d a'
+bes r8 d( cis d ees d)
+d4 a bes g'
+fis r8 d( cis d ees d)
+d4 a bes g'
+fis r8 ees,( d ees f! ees)
+ees4 r8 ees( d ees f ees)
+ees4 r8 ees( d ees f ees)
+ees4 r8 ees( d ees f ees)
+d4 a' r2
+R1 * 7 
+%
+%
+%
+%
+%
+%
+r4 r8 d'\f( cis d ees d)
+c!( bes a bes) a( g fis g)
+f!( ees d ees) d( c bes a)
+c( bes a g) d'4 a
+\mark #1 bes1 ~                       %%%% A 36
+bes4 r r2
+r4 g8. g16 g4 g4
+g2 r
+f'1 ~
+f4 r r2
+r4 f,8. f16 f4 f
+f2 r
+des'1 ~
+des4 r r2
+r4 g8. g16 g4 g
+f r r2
+R1 * 4 
+%
+%
+%
+r4 f8._\markup{\italic "dolce"} f16 f4 r
+r f8._\markup{\italic "cresc."} f16 f4 r
+\repeat unfold 3 {r f8. f16 f4 r}
+%
+%
+f4 r8 r32 c(\ff d e f4) r8 r32 c( d e
+f4) r8 r32 c( d e f4) r8 r32 c( d e 
+\mark #2 f4) r r2                          %%%%% B 59
+R1 * 26	%% +1 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r4^"Clar.1" r8 d( ees) f g a | bes[ c d]} \unset fontSize} \\ {R1 | r4 r8} >>
+	 \tag #'score {R1 | r4 r8} >>
+ bes,\ff c d ees f
+g a bes d, ees f g a
+bes c d fis, g a bes d, 
+ees f g b, c d ees c
+\mark #3 a4 r8 c( des c des c)           %%%% C  91
+des1
+c4 r8 c( des c des c)
+des1
+c8 r r4 r2
+r8 bes a g f r r4
+r8 bes a g f r r4
+r r8 e' f g a b
+c r r e, f g a b
+c r r4 r2
+R1 * 10 
+%
+%
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageTurn
+\mark #4 bes,1\f ~                    %%%% D  111
+bes4 r r2
+r4 des8. des16 f4 des
+c c r2
+a'1 ~
+a4 r r2
+r4 a,8. a16 a4 c
+bes bes r4 f'8. f16
+bes,1 ~
+bes4 ees,8 f ges4 ees'8. ees16
+ees4. f8 ges4. g8
+f4 f,8 ges f4 f'8. f16
+des'2 bes
+ges ees
+des4 bes f c'
+des r r2
+R1 * 4 
+%
+%
+%
+r2 des,4( c)
+r2 ees4( des)
+r2 bes'4( a)
+r2 c4\< ees,
+des\! r r2
+R1 * 3 
+%
+%
+r4 r8 des'-.\mf des-. des-. des-. des-.
+bes r r4 r2
+R1 * 2 
+%
+f'4.\f f8 f2:8          % SOURCE: f4 f f2:8   Hb1, Cl, cors: f4. f8 f2:8 
+f4 f2\sfz e8 f          % SOURCE: \ff
+g4 r r8 c,-. bes-. g-.
+e g16( f e8) e16( d c4) r
+\mark #5 aes'4. aes8 aes2              %%% E     147
+aes4 r r2
+R1
+\afterGrace g'1_(\trill {fis32[ g)]}
+g4. g8 g2:8
+g4 g2\sfz fis8 g        % SOURCE: \ff
+a2 r8 d, c a
+fis a16( g fis8) fis16( e d4) r
+bes'4. bes8 bes2:8
+bes4 r r2
+R1
+\afterGrace a'1_(\trill {gis32[ a)]}
+a4 r fis2(
+e4) r cis2 
+d fis(
+e4) r cis2
+d fis(
+e4) r cis2
+d a
+a a
+a4 r r2
+R1 * 26	%% +1 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r4^"Oboe 1" r8 b( c) d e fis | g[ a b]} \unset fontSize} \\ {R1 | r4 r8} >>
+	 \tag #'score {R1 | r4 r8} >>
+ g\ff a b c d
+e fis g b, c d e fis
+g a b dis, e fis g b,         % SOURCE: g a b dis, e fis g bes, 
+c d e gis, a b c a
+fis4 r8 fis'( g fis g fis)    % SOURCE: f( g f g f)   
+g1
+fis4 r8 fis( g fis g fis)
+\mark #7 g1 ~                  %%%% G 202
+g4 r r2
+R1 * 11 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+g,1\f ~
+g4 r r2
+r4 g8. g16 bes4 bes
+a a r2
+fis'1 ~
+fis4 r r2
+r4 a,8. a16 fis4 a
+g g r2
+R1 * 4 
+%
+%
+%
+ees'8 d ees f g ees f g
+aes g aes bes c aes bes c 
+des r r4 r2
+R1
+r8 c bes a g a g f
+ees f ees d cis d cis c
+bes a g bes d4 fis
+g r r2
+R1 * 8 
+%
+%
+%
+%
+%
+%
+%
+r2 r8 fis, fis( g)
+g4 r r2
+r4 r8 a a( c) c( bes)
+\mark #8 bes1\ff ~              %%% H 246
+bes4 bes2 bes8. bes16
+bes1 ~
+bes4 bes2 bes8. bes16
+bes4 r8 g'( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d)
+bes4 r r2
+R1 * 8 
+%
+%
+%
+%
+%
+%
+%
+r2 r8 fis, fis( g)
+g4_\markup{\italic "cresc."} r r8 fis fis( g)
+g4 r r8 fis' fis( g)
+g1\ff ~
+g4 g2 g8. g16
+g1 ~
+g4 g2 g8. g16
+g4 r8 g( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis  d ees d)
+g,2 g
+g g4 g
+g8 bes d4 ~ d8 bes g4
+g8 bes d,4 ~ d8 g bes, d
+g,4 bes bes bes
+bes1 ~
+bes2 r \bar "|." 
+}
+

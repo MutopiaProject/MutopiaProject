@@ -1,0 +1,123 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  %Hautbois2 - 2e mvt
+ 
+\relative c''{
+\clef treble
+
+
+
+
+\Btime \BAkey \BstringTempo  
+\partial 8 r8 
+R2 * 7
+
+r4 r8 \bar "||" \mark #1 r          %%% A 8
+R2 * 19
+
+r4 r8 \bar "||" \mark #2 r                %%% B 28
+R2 * 15
+
+r4 r8 \bar "||" \mark #3 \BBkey r \BBstringTempo      %%% C 44
+R2 * 7
+
+r4 r8 \bar "||" \mark #4 r                   %%% D 52
+R2 * 11
+
+r4 r8 \bar "||" \mark #5 r                %%% E 64
+R2 * 6	%% +1 citation
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{des8.^"Violon 1" ces16 bes8 a | a4( bes8)} \unset fontSize} \\ {R2 | r4 r8} >>
+	 \tag #'score {R2 | r4 r8} >>
+ \bar "||" \mark #6 r               %%% F 72
+r f(-> e) r
+r f(-> e) r
+R2 * 9
+
+r4 r8 \bar "||" \mark #7 r      %%% G 84
+R2 * 7
+
+r4 r8 \bar "||" \mark #8 r      %%% H 92
+\BAkey \BAstringTempo R2
+R2 * 6
+
+r4 r8 f,(\p
+bes) f( a) f(
+bes) f( c') r
+R2 * 5
+
+r4 r8 \bar "||" \mark #9 r             %%% I 108
+R2 * 20
+
+r4 r8 \bar "||" \mark #11 r         %%% K 129
+R2 * 8	%% +1
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{b4(^"Violon 1" c8) ees16.( d32) | d4( ees8)} \unset fontSize} \\ {R2 | r4 r8} >>
+	 \tag #'score {R2 | r4 r8} >>
+ c8(\fp ~
+c b c) ees(\fp ~
+ees d ees) r
+R2 * 7
+
+r4 r8 \bar "||" \mark #12 r         %%% L 149
+R2 * 7
+
+
+r4 r8 \bar "||" \mark #13 r         %%% M 157
+a,4\ff bes
+c r
+a bes
+c r
+c r
+c r
+R2 * 11
+
+r4 r8 \bar "||" \mark #14 d'(\f        %%% N 175
+c) a g bes(
+a) f e a ~
+a g16 a bes8 g
+f4( e8) d'(
+c) a g bes(
+a) f e a ~
+a g16 a bes8 e,
+e4( f8) r
+R2 * 3
+
+r4 r8 f
+bes a c bes
+ees4 d8 c
+bes a g a
+bes r r4
+R2 * 11
+
+r8 c,16.(\mf bes32) bes8 bes16.(_\markup{\italic "cresc."} a32)
+a2
+a8\ff a r4
+R2 * 2
+r4 r8 f
+f f f r
+R2 * 5
+
+r4 r8 f( 
+bes) f( a) f(
+bes) f( c') f\ff
+bes a c bes
+ees4 d8 c
+bes a g a
+bes r r4
+R2 * 3
+
+r8 f(\f d) r
+r d(\f bes) r
+r f'( d) r
+r d( bes) r
+R2 * 7
+
+ees2(\p\>
+d4)\! r
+R2 * 4 
+
+\bar "|." 
+}

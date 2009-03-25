@@ -1,0 +1,165 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm  %Hautbois1 - 3ème mvt
+
+\relative c''{
+\clef treble
+
+
+
+
+\Ctime \CAkey \CstringTempo  
+\partial 4 r4
+R2. * 15
+
+
+r4 r \bar "||" r
+
+
+R2. * 23
+
+
+r4 r8 \bar "|." \CBkey  \break \CBstringTempo 			%% Trio
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' {d8( e^"Clar. 1" fis | g a b c d e | fis[ g a])} \unset fontSize} \\ {r8 r4 | R2. | r4 r8} >> \tag #'score {r8 r4 | R2. | r4 r8} >>
+ d( e fis)
+g2.
+fis4 r r
+R2.
+r4 e2\mf ~
+e4 r r
+r r8 e,( fis gis
+a b c d e fis)
+gis( a b e, fis gis
+a c, d e f dis)
+e2. ~
+e2. ~
+e2. ~
+e4 e\f fis
+g4. \bar ":|:" r8 r4
+R2. * 9
+%
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageBreak
+r4 r8 cis,_\markup{\italic "dol."} d e
+fis g a r r4
+R2. * 2
+%
+r4 r8 des,\p c bes
+aes c ees des c bes
+aes c des r r4
+R2.
+r4 r8 ees_\markup{\italic "dol."} d c
+bes d f ees d c
+bes d f r r4
+r4 r8 f\mf e d
+c e g r r4
+r4 r8 g\f fis e
+d fis a r r4
+d,\ff r r
+d r r
+d\mf r r
+d\p r r
+R2.
+r4 r8 d(_\markup{\italic "dol."} e fis)
+g2.
+fis4 r r
+g\f r r
+g r r
+g d\ff fis
+g r \bar ":|" \CAkey r
+r4 r bes,\p
+a d d
+d d d
+d r r
+r r bes
+a d d
+d d d
+d r r
+R2.
+r4 r bes
+d r fis
+g r r
+R2.
+r4 r bes,
+d r fis
+g r \bar "||" r
+r r bes
+c r r
+r r c
+bes r r
+r r e,
+fis g a
+bes c cis
+d r r
+r r bes
+c r r
+r r c
+bes r r
+r r e,
+fis g a
+bes c cis
+d r r
+r r bes
+d r bes
+g r a
+bes r r
+r r bes
+d r bes
+g r a
+g r r
+r r bes
+bes2-> bes4
+bes2-> g4
+g2.-> ~
+g ~
+g ~
+g ~
+g2 ees4 
+ees ees ees
+ees2 d4
+ees d fis
+g r r
+r r bes
+bes2-> bes4
+bes2-> g4
+g2.-> ~
+g ~
+g ~
+g ~
+g2 ees4 
+ees ees ees
+ees2 d4
+ees d fis
+g r r
+R2. * 2
+%
+r4 r\mf fis(\>
+a g)\! r
+R2. * 2
+%
+r4 r fis(\>
+a g)\! d(\>
+ees d)\! r
+r r d(\>
+ees d)\! r
+r r d(\p
+ees\< d ees
+d ees)\! d\f
+ees d fis
+g r r
+R2. * 3
+%
+%
+r4 d\f g
+d g d
+g d g
+d g d
+g r r
+R2. * 2
+%
+d4\ff g d
+g r r \bar "|." \tag #'partie \pageBreak
+}

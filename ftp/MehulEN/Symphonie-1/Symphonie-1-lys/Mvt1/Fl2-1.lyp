@@ -1,0 +1,297 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  		Flute2 - 1er mvt
+ 
+ 
+\relative c''{
+\clef treble
+
+
+
+
+\Atime \Akey \AstringTempo  
+R1
+g'1\f ~
+g4 r r2
+R1 * 2 
+%
+a1 ~
+a4 r r2
+R1
+r2 d
+c4r r2
+c4. d8 ees4. e8
+d4 r r2
+R1
+ees4. ees8 c4 a
+bes g d a'
+bes r r2
+r4 r8 d( cis d ees d)
+d4 r r2
+r4 r8 d( cis d ees d)
+d4 r r2
+r4 b r2
+r4 c r2
+r4 cis r2
+r4 d r2
+R1 * 9 
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r8 ees( d c bes a
+c bes a g d'4) a
+\mark #1 bes r4 r2           %%%% A 36
+g1 ~
+g4 r r2
+R1 * 2 
+%
+c1(
+a4) r r2
+R1 * 2 
+%
+bes1(
+g4) r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+r2 r4 g8._\markup{\italic "dolce"} g16
+g4_\markup{\italic "cresc."} a r ees'8. c16
+a4 bes r g8. g16
+a4 r8 r32 c(\ff d e f4) r8 r32 c( d e
+f4) r8 r32 c( d e f4) r8 r32 c( d e
+\mark #2 f4) r r2                   %%%%% B 59
+R1 * 25	%%25 +2 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{r2 r8 bes(^"Flute 1" c d | ees f g f ees2) | d4} \unset fontSize} \\ {R1 * 2 | r4} >>
+	 \tag #'score {R1 * 2 | r4} >>
+	r8 bes,,\ff c d ees f |
+g a bes d, ees f g a
+bes c d fis, g a bes d,
+ees f g b, c d es c
+\mark #3 a4 r8 a'( bes a bes a)            %%%% C 91
+bes1
+a4 r8 a( bes a bes a)
+bes1
+a8 r r4 r2
+R1*15
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageBreak
+\mark #4 R1         								%%%% D 111
+bes1\ff ~
+bes4 r r2
+R1 * 2
+%
+c1 ~
+c4 r r2
+R1
+r2 f2
+ees4 r r2
+ees4. f8 ges4. g8
+f4 r r2
+R1
+ges2 ees
+des4 bes f c
+des r r2
+R1 * 4
+%
+%
+%
+r2 des4( c)
+r2 ees4( des)
+r2 bes'4( a)
+r2 c4( ees,)\<
+des r\! r2
+R1 * 5
+%
+%
+%
+%
+r4 r8 a'-|\mf a2:8-|
+a8 r r4 r2
+r r8 bes\f f des'
+bes4 r r8 aes g f
+\afterGrace e1(\trill {d32[ e])}
+g4 r r2
+\mark #5 f'2 \afterGrace f,2(\trill {e32[ f])}     %%% E 147
+aes1
+g8 b16( a g8) d'16( c b4) r4
+r8 d16( c b8) b16( a g4) r4
+r2 r8 c g ees'
+c4 r r8 bes a g
+\afterGrace fis1(\trill {e32[ fis])}
+a4 r r2
+g'2 \afterGrace g,2(\trill {fis32[ g])}
+bes1
+a8 cis16( b a8) e'16( d cis4) r4
+r8 e16( d cis8) cis16( b a4) r4
+R1
+bes1
+a2 r
+bes1
+a2 r
+bes1
+a4 r8 r32 a( b cis d4) r8 r32 a( b cis
+d4) r8 r32 a( b cis d4) r8 r32 a( b cis
+d4) r r2
+R1 * 25	%%25 +2 citations
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{r2 r8 g(^"Flute 1" a b | c d e d c2) |  \unset fontSize}} \\ {R1 * 2 } >>
+	 \tag #'score {R1 * 2 } >>
+b4 r8 \ottava #+1 g\ff a b c d			%%%
+e fis g b, c d e fis
+g a b dis, e fis g b,
+c d e gis, a b c a
+fis4 fis \ottava #0 r2			%%%
+r4 r8 ees g ees g ees
+fis4 r r2
+\mark #7 r4 r8 e g e g e               %%% G 202
+g1\> ~
+g ~
+g4\! r r2
+R1 * 10
+%
+%
+%
+%
+%
+%
+%
+%
+%
+g1 ~
+g4 r r2
+R1 * 2
+%
+a1 ~
+a4 r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+\ottava #+1 des8 c des d ees d ees e
+f e f fis g fis g a
+bes r8 r4 r2
+r8 f ees d cis d cis c
+bes a g bes d4 a
+bes \ottava #0 r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+r2 r8 fis fis( g)
+g4 r r2
+R1 * 2
+%
+\mark #8 r8 g,\ff bes d g bes d g         %%% H 246
+bes2. r4
+r8 g,, bes ees g bes ees g 
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d) 
+bes4 r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+r2 r8 fis_\markup{\italic "cresc."} fis( g)
+g4 r r8 fis fis( g)
+g4 r8 bes a( c) c( bes)
+bes4. a8 a( c) c( bes)
+bes g,\ff bes d g bes d g
+bes2. r4
+r8 g,, bes ees g bes ees g 
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d)
+cis4 r8 g'( fis g a g)
+d4 r8 d( cis d ees d)
+cis4 r8 g'( fis g a g)
+d4 r8 d( cis d ees d)
+cis4 r8 g'( fis g a g)
+d4 r8 d( cis d ees d)
+g,2 bes
+bes bes4 bes
+bes2 bes
+bes bes4 bes
+bes bes bes bes
+bes1 ~
+bes2 r \bar "|." 
+}

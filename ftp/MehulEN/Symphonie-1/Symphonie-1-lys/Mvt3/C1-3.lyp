@@ -1,0 +1,61 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm %Cor1 - 3ème mvt
+                       
+\relative c''{
+\clef treble
+%%\key a \minor
+
+
+
+
+\Ctime \CstringTempo  
+\partial 4 r4 
+R2. * 15
+
+r4 r \bar "||" r
+
+R2. * 23
+
+r4 r8 \bar "|." \break \CBstringTempo r8 r4
+R2. * 15
+
+r4 r8 \bar ":|:"  r8 r4
+R2. * 35
+
+r4 r \bar ":|"  r
+R2. * 15
+
+r4 r \bar "||" r
+R2. * 39	%% +8
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+		{g2.^"Hautbois 1" ~ | g ~ | g ~ | g ~ | g2 c,4 | c c c | c2 bes4 | ees d fis | g} \unset fontSize} 
+		\\ {R2. * 8 | r4} >> \tag #'score {R2. * 8 | r4} >>
+	r4 c\mf
+c2-> c4
+c2-> c4
+c2-> c4
+c2-> c4
+c2-> c4
+c2-> c4
+c2 c4
+c2. ~
+c ~
+c ~
+c ~
+c2 c4\p
+c c\< c
+c c c\f
+c c c
+c r g
+c r g
+c r g
+c r g
+c g c
+g c g
+c g c
+g c g
+c r r
+R2.
+r4 g c
+g c g
+c r r \bar "|." 
+}

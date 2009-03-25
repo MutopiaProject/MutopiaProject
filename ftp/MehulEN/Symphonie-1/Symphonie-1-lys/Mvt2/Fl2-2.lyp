@@ -1,0 +1,118 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  		Flute2 - 2e mvt
+ 
+
+\relative c''{
+\clef treble
+
+
+
+\Btime \BAkey \BstringTempo  
+\partial 8 r8 
+R2 * 7
+%
+r4 r8 \bar "||" \mark #1 r          %%% A 8
+R2 * 19
+%
+r4 r8 \bar "||" \mark #2 r                %%% B 28
+R2 * 15
+%
+r4 r8 \bar "||" \mark #3 \BBkey r \BBstringTempo      %%% C 44
+R2 * 7
+%
+r4 r8 \bar "||" \mark #4 r                   %%% D 52
+R2 * 11
+%
+r4 r8 \bar "||" \mark #5 r                %%% E 64
+R2 * 6	%% +1 citation
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{des8.^"Violon 1" ces16 bes8 a | a4( bes8)} \unset fontSize} \\ {R2 | r4 r8} >>
+	 \tag #'score {R2 | r4 r8} >>
+	\bar "||" \mark #6 des'(            %%% F 72
+c b-> c des
+c b-> c des)
+c( f ~ f16 e f g
+f4 e8) r
+R2 * 7
+%
+r4 r8 \bar "||" \mark #7 r      %%% G 84
+R2 * 7
+%
+r4 r8 \bar "||" \mark #8 r      %%% H 92
+\BAkey \BAstringTempo R2
+R2 * 6
+%
+r4 r8 f,(\p
+bes) f( a) f(
+bes) f( c') r
+R2 * 5
+%
+r4 r8 \bar "||" \mark #9 r             %%% I 108
+R2 * 20
+%
+\tag #'partie \pageBreak
+r4 r8 \bar "||" \mark #11 r         %%% K 129
+R2 * 3
+%
+%
+r4 r8 d
+c bes a g
+f ees d c
+bes r r4
+bes'4( a8) r
+R2 * 11
+%
+r4 r8 \bar "||" \mark #12 r         %%% L 149
+R2 * 7
+%
+r4 r8 \bar "||" \mark #13 r         %%% M 157
+a4\ff bes
+c r
+a bes
+c r
+c r
+c r
+R2
+r4 r8 e,32(\mf f g f)
+des8( c) r e32( f g f)
+bes8( a) r4
+R2 * 7
+%
+r4 r8 \bar "||" \mark #14 r         %%% N 175
+R2 * 7
+%
+r4 r8 f
+bes a c bes
+ees4 d8 c
+bes a g f
+ees f16. ees32 d8 r
+R2 * 10
+%
+r8 bes'16.( a32) a8 r
+r bes16.( a32) a8 r
+R2
+r4 r8 f16.( ees32)
+ees2_\markup{\italic "cresc."} ~
+ees ~
+ees8 ees16.( d32) d8 d16.( c32)
+c8\ff c r4
+R2 * 7
+%
+r4 r8 f(
+bes) f( a) f(
+bes) f( c') r
+R2 * 10
+%
+r8 d(\f bes) r
+R2
+r8 d( bes) r
+R2 * 3
+%
+r8 f( d) f(
+d4) r
+R2 * 8 
+%
+\bar "|." 
+}

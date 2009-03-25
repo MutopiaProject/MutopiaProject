@@ -1,0 +1,297 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  %Clarinette2 - 1er mvt
+  
+\relative c''{
+\clef treble
+
+
+
+
+
+\Atime \Akey \AstringTempo  
+R1
+g1\f ~
+g4 r r2
+R1 * 2 
+%
+a1 ~
+a4 fis8. fis16 fis4 a
+g g r d'8. d16
+g,1 ~
+g4 c,8 d ees4 c'8. c16
+c4. d8 ees4. e8
+d4 d,8 ees d4 d'8. d16
+bes'2 g
+ees4. ees8 c4 a
+bes g d a'
+bes r r2
+r4 r8 d( cis d ees d)
+d4 r r2
+r4 r8 d( cis d ees d)
+d4 r r r8 g(
+fis g a g) g4 r8 g(
+fis g a g) g4 r8 g(
+fis g a g) g4 r8 g(
+fis g a g) fis4 r4
+R1 * 7 
+%
+%
+%
+%
+%
+%
+r4 r8 d(\f cis d ees d)
+c!( bes a bes) a( g fis g)
+f!( ees d ees d c bes a)
+c( bes a g) d'4 a'
+\mark #1 bes1 ~                       %%%% A  36
+bes4 r r2
+r4 bes8. bes16 bes4 bes
+c2 r
+c1 ~
+c4 r r2
+r4 a8. a16 a4 a
+bes2 r
+des1(
+e4) r r2
+r4 e8. e16 e4 e
+f r r2
+R1 * 4 
+%
+%
+%
+r2 r4 f,8._\markup{\italic "dolce"} f16
+f4 r r f8._\markup{\italic "cresc."} f16
+f4 r r f8. f16
+f4 r r f8. f16
+f4 r r f8. f16
+f2\ff a
+a a
+\mark #2 a4 r r2                         %%%%% B 59
+R1 * 10 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+ees'1(
+d2) r 
+R1 * 15 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r8 bes\ff c d ees f
+g a bes d, ees f g a
+bes c d fis, g a bes d,
+ees f g b, c d ees c
+\mark #3 a4 r8 a( bes a bes a)            %%%% C  91
+bes1
+a4 r8 a( bes a bes a)
+bes1
+a8 bes a g f r r4
+r8 bes a g f r r4
+r8 bes a g f r r4
+r2 r4 r8 f'
+ees des c bes a r r4
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageBreak
+\mark #4 bes1\f ~                   %%%% D  111
+bes4 r r2
+r4 bes8. bes16 des4 bes
+a! f r2
+R1
+c'1 ~
+c4 a8. a16 a4 c
+bes bes r2
+R1
+r2 r4 ees,8. ees16
+ees4. f8 ges4. g8
+f4 f8 ges f4 f'8. f16
+des'2 bes
+ges ees
+des4 bes f c'
+des8 r r4 r2
+R1 * 4 
+%
+%
+%
+des,4( c) r2
+ees4( des) r2
+bes'4( a) r2
+c4( a) r2
+R1 * 2 
+%
+r4 r8 a\mf a2:8
+c8 r r4 r2
+bes\f \afterGrace bes,2\trill( {a32[ bes)]}
+des2. c8 bes
+a r r4 r2
+R1
+des'4.\f des8 des2:8
+des4 r r2
+R1
+\afterGrace c1\trill( {b32[ c)]}
+\mark #5 c4. c8 c2:8            %%% E     147
+c4 c2\sfz b8 c 
+d2 r8 g f d
+b b16( c) d8 g,16( a) b4 r
+ees4. ees8 ees2:8
+ees4 r r2
+R1
+\afterGrace d1\trill( {cis32[ d)]}
+d4. d8 d2:8
+d4 d2\sfz cis8 d
+e2 r8 a g e
+cis cis16( d e8) a,16( bes cis4) r
+R1
+bes'1
+a2 r
+bes1 
+a2 r
+bes1
+a8 d,,32( e fis g a4) r8 r32 a( b cis d4)
+r8 d32( e fis g a4) r8 r32 a( bes cis d4)
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+c,1(\p
+b2) r
+R1 * 14	%% +1
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r4^"Oboe 1" r8 b( c) d e fis | g[ a b]} \unset fontSize} \\ {R1 | r4 r8} >>
+	 \tag #'score {R1 | r4 r8} >>
+ g\ff a b c d
+e fis g b, c d e fis
+g a b dis, e fis g b,
+c d e gis, a b c a
+fis4 r8 fis(\ff g fis g fis)
+g1
+fis4 r8 fis( g fis g fis)
+\mark #7 g1 ~                 %%%% G 202
+g4 r r2
+R1
+r2 g(\p 
+a bes
+a4) r r2
+R1 * 7 
+%
+%
+%
+%
+%
+%
+g1\f ~
+g4 r r2
+r4 g8. g16 bes4 bes
+a a r2
+R1
+a1 ~
+a4 r r2
+R1 * 7 
+%
+%
+%
+%
+%
+%
+des8 c des d ees d ees e
+f e f fis g fis g a
+bes ees, d c bes c bes aes
+g aes g f e fis e ees
+d c bes g' bes4 a
+bes r r2
+R1 * 9 
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r8 fis fis( g)
+g4 r r8 fis fis( g)
+\mark #8 g\ff g, bes d g bes d g              %%% H 246
+bes2. r4
+r8 g,, bes ees g bes ees g
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d)
+bes4 r r2
+R1 * 10 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r8 fis fis( g)
+g\ff g, bes d g bes d g
+bes2. r4
+r8 g,, bes ees g bes ees g
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+g,2 bes
+bes bes4 bes
+g'8 bes d4 ~ d8 bes g4 ~
+g8 bes d,4 ~ d8 g bes, d
+g,4 bes bes bes
+bes1 ~ bes2 r \bar "|." 
+}
+

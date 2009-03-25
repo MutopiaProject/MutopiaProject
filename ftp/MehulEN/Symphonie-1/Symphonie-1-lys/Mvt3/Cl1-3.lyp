@@ -1,0 +1,165 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm  %Clarinette1 - 3ème mvt
+
+\relative c''{
+\clef treble
+
+
+
+
+\Ctime \CAkey \CstringTempo  
+\partial 4 r4 
+R2. * 15
+
+
+r4 r \bar "||" r
+
+
+R2. * 23
+
+
+r4 r8 \bar "|." \CBkey \break d,8(\mf \CBstringTempo e fis
+g a b c d e
+fis g a d, e fis
+g b, c d e cis)
+d2. ~
+d4 r r
+R2.
+r4 e\f gis
+a r r
+R2. * 6
+%
+%
+%
+%
+%
+r4 e\f fis
+g4. \bar ":|:" r8 r4
+R2. * 10
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r8 cis,_\markup{\italic "dol."} d e
+fis g a r r4
+R2.
+r4 r8 g,\p aes bes
+c4 r8 g a! bes
+c4. r8 r4
+R2.
+r4 r8 a_\markup{\italic "dol."} bes c
+d bes f a bes c
+d bes f r r4
+r4 r8 b! c d
+e! c g r r4
+r r8 cis\f d e
+fis d a r r4
+d\ff r r
+d r r
+d\mf r r
+d\p r8 d,(\mf e fis
+g a b c d e
+fis g a d, e fis
+g b, c d e cis)
+d2. ~
+d ~
+d ~
+d4 e\ff fis
+g r \bar ":|" \CAkey g,
+bes d g
+fis d c
+bes a g
+fis d g
+bes d g
+fis d c
+bes a g
+fis d g,
+bes d g
+bes d g
+bes g d
+bes g g,
+bes d g
+bes d g
+bes g d
+bes g \bar "||" g,
+bes d g
+g, c ees
+g c ees
+g bes g
+fis f e
+ees! d c
+bes a g
+fis d g,
+bes d g
+g, c ees
+g c ees
+g bes g
+fis f e
+ees! d c
+bes a g
+fis d g,
+bes d g
+bes d g
+bes g d
+bes g g,
+bes d g
+bes d g
+bes g d
+bes g g'\f
+g2-> g4
+g2-> g4
+g2-> g4
+g2.-> ~
+g ~
+g ~
+g ~
+g2 c,4
+c c c
+c2 bes4
+ees d fis
+g r g
+g2-> g4
+g2-> g4
+g2-> g4
+g2.-> ~
+g ~
+g ~
+g ~
+g2 c,4
+c c c
+c2 bes4
+ees d fis
+g r r
+R2.
+r4 r\mf d(\>
+ees d)\! r
+R2. * 2
+%
+r4 r d(\> 
+ees d)\! r
+R2.
+r4 r fis(\>
+a g)\! r
+r r fis(\>
+a g)\! d(\p
+ees\< d ees
+d\! ees)\f d
+ees d fis
+g r r
+R2. * 3
+%
+%
+b,2.\f ~
+b ~
+b ~
+b ~
+b4 r r
+g' g g
+g2.\fp ~
+g ~
+g4 r r \bar "|." %%\tag #'partie \pageBreak
+}

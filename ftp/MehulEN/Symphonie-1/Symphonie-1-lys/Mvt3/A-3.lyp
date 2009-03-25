@@ -1,0 +1,194 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm  %Alto - 3ème mvt
+
+\relative c'{
+\clef alto
+
+
+
+
+\Ctime \CAkey \CstringTempo  
+\partial 4 r4 
+R2.
+r4\pizz r a'\p
+g fis g
+a r r
+R2.
+r4 r a
+g fis g
+a r r
+R2. * 2
+%
+r4 r d
+d r r
+R2. * 2
+%
+r4 r d
+d r \bar "||" g,
+g g g
+g g g
+g g g
+g r bes
+a d g,
+c bes ees
+d d d
+d r g,
+g g g
+g g g
+g g g
+g r r
+R2.
+r4 r fis
+g a bes
+a r r
+R2. * 2
+%
+r4 r d
+d r r
+R2.
+r4 r bes
+d d d
+d r8 \bar "|." \CBkey  \break \CBstringTempo r8 r4
+R2. * 7
+%
+%
+%
+%
+%
+%
+r4 r8 e,,(\mf\arco fis gis
+a b c d e fis)
+gis( a b e, fis gis)
+a( c, d e f dis)
+e2. ~
+e ~
+e ~
+e4 e\f d
+<g, d'>4. \bar ":|:" r8 r4
+R2. * 3
+%
+%
+r4 r8 fis(\mf g gis
+a b c fis, g a
+bes b c cis d dis
+e fis g gis a g)
+fis4 r r
+r r8 cis\f d e
+fis g a r r4
+R2.
+r4 r8 c,\ff bes a
+g bes d c bes a
+g bes ees2\fp ~
+ees2. ~
+ees4. des8\ff c bes
+aes c ees des c bes
+a! c f2\fp ~
+f2. ~
+f4. ees8\f d c
+b d g2\fp ~
+g4. f8\f e! d
+cis e a2\fp ~
+a4. g8\ff fis! e
+d fis a\f g fis e
+d fis a\f g fis e
+d fis a\f g fis e
+d4 r r
+R2. * 3
+%
+%
+r4 r8 c\p b a
+g b d c\< b a
+g b d c b a\!
+g4 g'\ff <d a'>
+<g, d' b'> r \bar ":|" \CAkey r
+R2. \tag #'partie \pageTurn
+r4\pizz r a'\p
+g fis g
+a r r
+R2.
+r4 r a
+g fis g
+a r r
+R2. * 2
+%
+r4 r d
+d r r
+R2. * 2
+%
+r4 r d
+d r \bar "||" g,
+g g g
+g g g
+g g g
+g r r
+R2.
+r4 r fis
+g a bes
+a r g
+g g g
+g g g
+g g g
+g r r
+R2.
+r4 r fis
+g a bes 
+a r r
+R2. * 2
+%
+r4 r d
+d r r
+R2.
+r4 r bes
+d d d
+d r r
+R2. * 3
+%
+%
+r4 r c,\ff\arco
+c2 b4
+b2 bes4
+bes2 a4
+a2 c'4
+c c c
+c2 bes4
+g g <d a'>
+<d bes'> r r
+R2. * 3
+%
+%
+r4 r c\ff
+c2 b4
+b2 bes4
+bes2 a4
+a2 c'4
+c c c
+c2 bes4
+g g <d a'>
+<d bes'> r r
+R2. * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r << \voiceOne { d(\p | ees\< d ees | d ees d)\f | ees d }
+      \\
+        \voiceTwo { b( | c b c | b c b) | c bes } >> <a fis'>
+<bes g'>2. ~
+<bes g'>2. ~
+<bes g'>2. ~
+<bes g'>4 r r
+<g d'>2. ~
+<g d'>2. ~
+<g d'>2. ~
+<g d'>2. ~
+<g d'>4 r r
+<b d>\ff <b d> <b d>
+<b d> r r
+g2.\p ~
+g4 r r \bar "|." 
+}

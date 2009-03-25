@@ -1,0 +1,164 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm %Flute2 - 3ème mvt
+
+
+\relative c''{
+\clef treble
+
+
+
+\Ctime \CAkey \CstringTempo  
+\partial 4 r4 
+R2. * 15
+
+r4 r \bar "||" r
+
+
+R2. * 23
+
+
+r4 r8 \bar "|." \CBkey  \break \CBstringTempo r8 r4						%%% Trio
+R2. * 6
+%
+%
+%
+%
+%
+r4 c\f b
+c r r 
+R2. * 6
+%
+%
+%
+%
+%
+r4 c'\f a
+b4. \bar ":|:" r8 r4
+R2. * 22	%% +2
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{r4 r8 cis^"Flûte 1" d e | fis[ d a] r4 r8 \unset fontSize}} \\ {R2.*2 } >>
+	 \tag #'score {R2.*2} >>
+fis4\ff r r
+fis r r
+fis\mf r r
+fis\p r r
+R2. * 4
+%
+%
+%
+b4\f r r
+b r r
+b d\ff a
+b r \bar ":|" \CAkey r
+R2. * 15
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r \bar "||" r
+R2. * 24	%% +1
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{r4 r <g bes>^"Oboe" | <g bes>2 \unset fontSize}} \\ {R2. | r2 } >>
+	 \tag #'score {R2. | r2} >>
+ g4
+g2-> ees'4
+ees2.-> ~
+ees ~
+ees ~
+ees ~
+ees2 fis4 
+fis fis fis
+fis2 g4
+c, bes a
+bes r r
+R2.
+r4 r g
+g2-> ees'4
+ees2.-> ~
+ees ~
+ees ~
+ees ~
+ees2 fis4 
+fis fis fis
+fis2 g4
+c, bes a
+bes r r
+R2. * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r b(\p
+c\< b c
+b c)\! b\f
+c bes! a
+bes r r
+R2. * 5
+%
+%
+%
+%
+r4 d\f g
+d g d
+g r r
+R2. * 2
+%
+r4 r d\ff
+g r r \bar "|." 
+}

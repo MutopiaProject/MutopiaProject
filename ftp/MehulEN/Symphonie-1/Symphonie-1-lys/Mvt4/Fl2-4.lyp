@@ -1,0 +1,329 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm  %Flute2 - 4ème mvt
+
+
+\relative c''{
+\clef treble
+
+
+
+\Dtime \Dkey \DstringTempo  
+\partial 4. r8 r4 
+R1
+g'4\p bes g r
+R1
+fis4 a fis r
+R1 * 15	%% +2
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r2 r8 d^"Violon 1" d d | ees( d) d d g d bes' d, \unset fontSize}} \\ {R1*2 } >>
+	 \tag #'score {R1*2} >>
+g4 bes g r
+R1
+fis4 a fis r
+R1 * 4
+%
+%
+%
+r2 r8 \ottava #+1 c'-.\f c-. c-.
+\appoggiatura {c32[ d]} \mark #1 ees8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r2 r8 c-. c-. c-.
+\appoggiatura {c32[ d]} ees8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c8 ees-. ees-. ees-. \ottava #0
+ees1 ~
+ees4 d c bes
+bes bes r2
+r2 r8 \ottava #+1 g'-. g-. g-.
+\appoggiatura {g32[ a]} bes8 bes-. bes-. bes-. \appoggiatura {bes32[ a]} g4 r
+r2 r8 g-. g-. g-.
+\appoggiatura {g32[ a]} bes8 bes-. bes-. bes-. \appoggiatura {bes32[ a]} g4 r
+r8 bes-. bes-. bes-. \appoggiatura {bes32[ a]} g4 r
+r8 bes-. bes-. bes-. \appoggiatura {bes32[ a]} g4 r
+r8 bes-. bes-. bes-. \appoggiatura {bes32[ a]} g4 \ottava #0 r
+r a, g f
+f r r8 \ottava #+1 f'-. f -. f-.
+\appoggiatura {f32[ e]} d4 r r8 f-. f -. f-.
+\appoggiatura {f32[ e]} d4 r r8 f-. f -. f-.
+\appoggiatura {f32[ e]} d4 r r8 d-. d-. d-. \ottava #0
+c1 ~
+c4 r r8 c-. c-. c-.
+\appoggiatura {c32[ d e]} f8 a,-. a-. a-. \appoggiatura {a32[ bes]} c8 f,-. f-. f-.
+\appoggiatura {f32[ g]} a8 d,-. d-. d-. \appoggiatura {d32[ e]} f8 b,-. b-. b-.
+\appoggiatura {b32[ cis]} d8 gis,-. gis-. gis-. a4 r
+R1 * 5
+%
+%
+%
+%
+d'4\p f d r
+R1
+cis4 e cis r
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageBreak
+r8 cis,(_\markup{\italic "dol."} d e) e( f) f( g)
+f4 r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+r2 d'\sfz
+e4 c bes! a8 gis
+a4 r r2
+R1 * 3
+%
+%
+r4 fis(\p g) r
+r fis( g) r
+r fis( g) r
+R1 * 21	%% +1
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{ges2^"Oboe 1" ~ ges8 ees ees ees | d2 ~ d8 \unset fontSize}} \\ {R1 | r2 r8 } >>
+	 \tag #'score {R1 | r2 r8} >>
+ bes\f bes bes
+a4 r r8 a a a
+gis4 r r8 gis gis gis
+a4 f e e
+f r r2
+R1 * 3
+%
+%
+g1\ff ~
+g ~
+g
+c
+bes2 bes
+a1
+gis
+a4 f e e
+d8\noBeam d'-. d-. d-. f( d) d-. d-.
+a( d) d-. d-. d4 cis
+d8\noBeam d-. d-. d-. f( d) d-. d-.
+a( d) d-. d-. d4 cis
+R1 * 4
+%
+%
+%
+r8 bes\f bes bes des( bes) bes-. bes-.
+f( bes) bes-. bes-. bes4 a
+bes8\noBeam bes bes bes des( bes) bes-. bes-.
+f( bes) bes-. bes-. bes4 a
+R1 * 17
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 b4 d
+c r r2
+r c4 ees!
+des r r2
+r cis4 e
+d! r r2 
+r \crescTextCresc d4\< f
+ees r r2
+r c4 a
+b r r2
+r b4 d
+c2 r
+r c4 a 
+b2\! r8 g\ff g g
+g4. a8 b c d ees
+ees2( d8)\noBeam g, g g
+g4. a8 b c d ees
+ees2( d4) r
+R1
+r2 r8 g,\pp g g
+c2( b4) r
+R1
+c4 ees c r
+R1
+b4 d b r
+R1 * 8
+%
+%
+%
+%
+%
+%
+%
+r2 r4 f\ff
+b c d r
+r2 r4 f,
+b c d r
+r c b r
+r c b r
+r d c b
+c8 aes-. aes-. aes-. \appoggiatura {aes32[ bes]} c8 aes-. aes-. aes-.
+c4 r r2
+r8 c c c \appoggiatura {c32[ d]} ees4 r
+r2 r8 c-. c-. c-.
+\appoggiatura {c32[ d]} ees8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r2 r8 c-. c-. c-.
+\appoggiatura {c32[ d]} ees8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r8 ees-. ees-. ees-. \appoggiatura {ees32[ d]} c4 r
+r4 d c bes
+bes r r cis
+d r r d
+e r r d
+cis r r bes
+bes1 ~
+bes ~
+bes4 r r2
+r4 bes,( c cis
+d) r r2
+R1
+g4\p bes g r
+R1
+fis4 a fis r
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r8 fis(\p g a) a( bes) bes( c)
+bes4 r r2
+R1 * 5
+%
+%
+%
+%
+r2 g
+a4 f'2( e8 d)
+cis4 c b bes
+a aes g2
+fis4 r r2
+R1 * 24
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%  
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{<aes c>2^"Oboe" ~ <aes c>8 \unset fontSize}} \\ {r2 r8 } >>
+	 \tag #'score {r2 r8} >>
+ c\ff c c
+c4 aes' r8 aes aes aes
+aes4 aes r8 aes aes aes
+aes4 f' r8 f f f
+ees4 ees r8 ees ees ees
+d4 d r8 d d d
+cis4 cis r8 cis cis cis
+d4 bes a a
+bes r r2
+R1 * 3
+%
+%
+r2 r8 c,\ff c c
+c4 aes' r8 aes aes aes
+aes4 aes r8 aes aes aes
+aes4 f' r8 f f f
+ees4 ees r8 ees ees ees
+d4 d r8 d d d
+cis4 cis r8 cis cis cis
+d4 bes a a
+bes r r2
+r8 g g g g4 fis
+g r r2
+r8 g g g g4 fis
+e1 ~
+e4 r r2
+R1
+r8 g'-. g-. g-. a( g) g-. g-.
+fis4 r r2
+r2 r8 fis,-. fis-. fis-.
+g( fis) fis-. fis-. fis4 r
+r2 r8 fis-. fis-. fis-.
+g4 r r2
+r8 g-. g-. g-. a( g) g-. g-.
+bes4 r r2
+r8 g-. g-. g-. a( g) g-. g-.
+bes4 r r2
+r8 g-. g-. g-. a( g) g-. g-.
+bes( g) g-. g-. bes bes-. bes-. bes-.
+g4 r r8 a a a
+bes4 r r2
+r r4 a
+bes r r2
+r r4 a
+bes r r2
+r4 d d d
+d a bes a
+bes r r2 \bar "|." 
+}

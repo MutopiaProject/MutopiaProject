@@ -1,0 +1,297 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  %Timbales - 1er mvt
+ 
+\relative c{
+\clef bass
+
+
+
+
+
+\Atime \AstringTempo  			%%saisie en ut
+g1:16\f
+g4 r r2
+R1 * 2 
+%
+d'1:16
+d4 r r2
+R1 * 8
+%
+%
+%
+%
+%
+%
+%
+r2 r4 d
+g, r r2
+r r4 g
+d' r r2
+r r4 g,
+d' r r2
+g,4 r r2
+g4 r r2
+g4 r r2
+d'4 r r2
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #1  g,1:16\f         %%%% A 36
+g4 r r2
+R1 * 21 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #2 R1 * 32           %%%%% B 59
+% 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #3  R1 * 20         %%%% C 91
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #4 R1 * 36        %%%% D 111
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #5 R1 * 2            %%% E 147
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c {
+			d'2^"Basson" \afterGrace g,_(\trill {fis32[ g)]} | f'1 |
+			ees8 ees16( d c8) g'16( f ees4) r |
+			r8 g16( f ees8) ees16( d c4) r |
+			r8 fis,16( e d8) a'16( g fis4) r |
+			r8 fis16( g a8) d,16( e fis8) d e fis |
+			g4. g8 g2:8 | g4 r r2
+			e'2 \afterGrace a,_(\trill {gis32[ a)]} | g'1
+			} \unset fontSize} \\ {R1 * 10 } >>
+		\tag #'score {R1 * 10 } >>
+d'4 r d r	
+d r r2
+d4 r d r
+d r r2
+d4 r d r
+d r r2
+d4 r d r
+d1:16
+d4 r r2
+R1 * 27	%% +5
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {R1 * 5} \\ {\set fontSize = #-4 \transpose c c \relative c'' {\clef treble
+			\stemUp b4^"Violons" r8 g, a b c d | e fis g b, c d e fis | g a b dis, e fis g b, |  
+			c d e gis, a b c a | <a fis'>4 <a fis' d'> r2
+			\stemNeutral \clef bass} \unset fontSize} >>
+	 \tag #'score {R1 * 5} >>
+d1:16\f
+d4 r r2
+\mark #7  d1:16            %%% G 202
+d4 r r2
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+g,1:16
+g4 r r2
+R1 * 2
+%
+d'1:16
+d4 r r2
+R1 * 12
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r2 r4 d
+g, r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+g1:16\pp
+g:_\markup{\italic "cresc."}
+g:
+g:
+\mark #8  g4\f r8 g\p g4 r8 g       %%% H 246
+g4 r8 g_\markup{\italic "cresc."} g4 r8 g
+g4 r8 g g4 r8 g
+g4 r8 g g4 r8 g
+g4\ff g g r
+g g g r
+d' d d r
+d d d r
+g, r r r8 d'\pp
+d4 r8 d d4 r8 d
+g,4 r r r8 d'
+d4 r8 d d4 r8 d
+g,4 r r r8 d'
+d4 r8 d d4 r8 d
+g,4 r r r8 d'
+d4 r8 d d4 r8 d
+g,1:16_\markup{\italic "cresc."}
+g:
+g:
+g:
+g8\f g\p g r r g_\markup{\italic "cresc."} g r
+r g g r r g g r
+r g g r r g g r
+r g g r r g g g
+g4\ff g g r
+g g g r
+d' d d r
+d d d d
+g, g r g
+d' d d d
+g, g r g
+d' d d d
+g, g r g
+d' d d d
+g, r r g
+g r g g
+g r g r 
+g r g g
+g g g g
+g1:16
+g4 r r2 \bar "|." 
+}

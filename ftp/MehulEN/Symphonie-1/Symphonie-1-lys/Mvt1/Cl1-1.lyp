@@ -1,0 +1,298 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm %Clarinette1 - 1er mvt
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Atime \Akey \AstringTempo  
+R1
+bes1\f ~
+bes4 r r2
+R1 * 2 
+%
+c1 ~
+c4 a8. a16 a4 c
+bes bes r d8. d16
+g2 f!
+ees4 c,8 d ees4 c'8. c16
+c'4. bes8 a4. g8
+fis4 d,8 ees d4 d'8. d16
+bes'2 g
+ees4. ees8 c4 a
+bes g d fis'
+g r r2
+r4 r8 d( cis d ees d)
+d4 r r2
+r4 r8 d( cis d ees d)
+d4 r r r8 g(
+fis g a g) g4 r8 g(
+fis g a g) g4 r8 g(
+fis g a g) g4 r8 g(
+fis g a g) fis4 r4
+R1 * 7 
+%
+%
+%
+%
+%
+%
+r4 r8 d(\f cis d ees d)
+c!( bes a bes) a( g fis g)
+f!( ees d ees d c bes a)
+c( bes a g) d'4 fis'
+\mark #1 g1 ~                       %%%% A  36
+g4 r r2
+r4 d8. d16 d4 d
+ees2 r
+f1 ~
+f4 r r2
+r4 c8. c16 c4 c
+d2 r
+f1
+g4 r r2
+r4 g8. g16 g4 g
+a r r2
+R1 * 4 
+%
+%
+%
+r2 r4 f,8._\markup{\italic "dolce"} f16
+f4 r r f8._\markup{\italic "cresc."} f16
+f4 r r f8. f16
+f4 r r f8. f16
+f4 r r f8. f16
+f2\ff f'
+f f
+\mark #2 f4 r r2                         %%%%% B 59
+R1 * 4 
+%
+%
+\tag #'partie \pageBreak
+r2 fis(\fp
+g f!4 e)
+f2( ees!
+d4) r r2
+R1 * 2 
+%
+g2( ges
+f) r 
+R1 * 3 
+%
+%
+r4 r8 bes,-| c-| d-| ees-| f-|
+g-| r r4 r2
+r4 r8 bes,-| c-| d-| ees-| f-|
+g-| r r4 r2
+R1 * 2 
+%
+r4 ees4.-> d8-. c-. bes-.
+a g f r r2
+r r8 bes( c d
+ees f g f ees2)
+d4 r r2
+r4 r8 d( ees) f-. g-. a-.
+bes-. c-. d-. bes,\ff c d ees f
+g a bes d, ees f g a
+bes c d fis, g a bes d,
+ees f g b, c d ees c
+\mark #3 a4 r8 c( des c des c)            %%%% C  91
+des1
+c4 r8 c( des c des c)
+des1
+c8 des c bes a r r4
+r8 des c bes a r r4
+r8 des c bes a r r4
+r2 r4 r8 f'
+ees des c bes a r r4
+R1 * 8 
+%
+%
+%
+%
+%
+%
+%
+r2 a2(\fp
+bes a4 g
+a bes c2)
+\mark #4 des1\f ~                   %%%% D  111
+des4 r r2
+r4 des8. des16 f4 des
+c c r2
+R1
+ees1 ~
+ees4 c8. c16 f4 ees
+des des r2
+R1
+r2 r4 ees,8. ees16
+ees'4. des8 c4. bes8
+a!4 f8 ges f4 f'8. f16
+des'2 bes
+ges ees
+des4 bes f a'
+bes r8 f( e f ges f)
+f1 ~
+f4 r8 f( e f ges f)
+f1 ~
+f4 r r2
+bes,4( a) r2
+c4( bes) r2
+des4( c) r2
+ees4( c) r2
+R1 * 2 
+%
+r4 r8 c\mf c2:8
+c8 r r4 r2
+bes\f \afterGrace bes,2\trill( {a32[ bes)]}
+des2. c8 bes
+a r r4 r2
+r8 d'!( ees f ges g aes a)
+bes4.\f bes8 bes2:8
+bes4 r r2
+R1
+\afterGrace c,1\trill( {b32[ c)]}
+\mark #5 c4. aes'8 aes2:8            %%% E     147
+aes4 c,2\sfz b8 c 		%%\tag #'partie \pageBreak
+d2 r8 g f d
+b b16( c) d8 g,16( a) b4 r
+c'4. c8 c2:8
+c4 r r2
+R1
+\afterGrace d,1\trill( {cis32[ d)]}
+d4. bes'8 bes2:8
+bes4 d,2\sfz cis8 d
+e2 r8 a g e
+cis cis16( d e8) a,16( bes cis4) r
+R1
+bes'1
+a2 r
+bes1 
+a2 r
+bes1
+a8 d,,32( e fis g a4) r8 r32 a( b cis d4)
+r8 d32( e fis g a4) r8 r32 a( b cis d4)
+R1 * 5 
+%
+%
+%
+%
+r2 dis,(\fp
+e d!4 cis
+d2 c!
+b4) r r2
+R1 * 2 
+%
+e2(\p ees
+d) r
+R1 * 3 
+%
+%
+r4 r8 g,-| a-| b-| c-| d-|
+e-| r r4 r2
+r4 r8 g,-| a-| b-| c-| d-|
+e-| r r4 r2
+R1
+r4 b4. a8 g fis
+e d c r r2
+r4 d'4. cis8-. c-. a-.
+ais-. b-. g r r2                 %%% SOURCE: ais bes
+r4 r8 b( c) d-. e-. fis-.
+g-. a-. b r r2
+R1
+r4 r8 g,\ff a b c d
+e fis g b, c d e fis
+g a b dis, e fis g b,            %%% SOURCE: g a b dis, e fis g bes, 
+c d e gis, a b c a
+fis4 r8 a(\ff bes! a bes a)
+bes1
+a4 r8 a( bes a bes a)
+\mark #7 bes1 ~                 %%%% G 202
+bes4 r r2
+R1
+r2 g'(\p 
+a bes
+a4) r r2
+R1 * 4 
+%
+%
+%
+r2 fis,(\fp
+g fis4 e
+fis g a2)
+bes!1\f ~
+bes4 r r2
+r4 bes8. bes16 d4 g
+fis a r2
+R1
+c,1 ~
+c4 r r2
+R1 * 7 
+%
+%
+%
+%
+%
+%
+des8 c des d ees d ees e
+f e f fis g fis g a
+bes ees, d c bes c bes aes
+g aes g f e fis e ees
+d c bes g' bes4 a
+bes r r2
+R1 * 3 
+%
+\tag #'partie \pageBreak
+r4 r8 d(_\markup{\italic "dolce"} cis d ees d)
+d2. fis4
+g r8 d( cis d ees d)
+d2. fis4
+g r r2
+R1
+r2 r8 a, a( bes)
+bes4 r r8 a a( bes)
+\mark #8 bes\ff g, bes d g bes d g              %%% H 246
+bes2. r4
+r8 g,, bes ees g bes es g
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d)
+bes4 r r2
+R1 * 3 
+%
+%
+r4 r8 d(_\markup{\italic "dolce"} cis d ees d)
+d2. fis4
+g r8 d( cis d ees d)
+d2. fis4 
+g r r2
+R1 * 2
+%
+r2 r8 a, a( bes)
+bes\ff g,  bes d g bes d g
+bes2. r4
+r8 g,,  bes ees g bes ees g
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+cis4 r8 g( fis g a g)
+d'4 r8 d( cis d ees d)
+g,2 g'
+g g4 g
+g8 bes d4 ~ d8 bes g4 ~
+g8 bes d,4 ~ d8 g bes, d
+g,4 g' g g
+g1 ~ 
+g2 r \bar "|." 
+}
+

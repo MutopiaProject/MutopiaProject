@@ -1,0 +1,298 @@
+﻿\version "2.11.49"      %Méhul - Symphonie 1 solm %Violon1 - 1er mvt
+  
+\relative c''{
+\clef treble
+
+
+
+
+
+\Atime \Akey \AstringTempo  
+g'2\f g,
+bes'4 g8 d bes g d bes
+g4 g''8. g16 bes4 <bes, g'>
+<a fis'> <d, a' a'> r2
+a''2 d,
+c'4 a8 fis d c a fis    %%% SOURCE: c a fis d a f
+d4 fis'8. fis16 a4 <d,, c'>
+<d bes'> <d bes'> r d'8. d16
+g4. g8 f!4. f8
+ees4 c,8-| d-| ees4-| r
+c'4. d8 ees4. e8
+d4 r r d8. d16
+bes'4. bes8 g4. g8
+ees4. ees8 c4 a
+bes g d <d a' fis'>
+<g, d' bes' g'> r8 d''( cis d ees d)
+d4 fis g bes
+a r8 d,( cis d ees d)
+d4 fis g bes
+a r r2
+r4 <b, b'> r2
+r4 <c c'> r2
+r4 <cis cis'> r2           %%% SOURCE: <c cis>
+r4 <d d'> r2
+r8 d-|\p fis4 r8 d-| fis4
+r8 d g4 r2
+r8 d-| fis4 r8 d-| fis4
+r8 d g d( cis d ees d)
+c! bes a d c bes a d
+bes a g d' cis( d ees d)
+c! bes a d c bes a d
+bes a g d'(\ff cis d ees d)
+c!( bes a bes) a( g fis g)
+f!( ees d ees) d( c bes a)
+c( bes a g) d'4 <d a' fis'>
+\appoggiatura {d32[ bes']} \mark #1 g'2 g,                %%%% A 36
+bes'4 g8 d bes g d bes
+g4 bes'8. bes16 d4 g
+ees2 r
+c' f,
+ees'4 c8 a f ees c a
+f4 a8. a16 c4 f
+d2 r
+bes' bes,
+des'4 bes8 g e des bes g         %%% SOURCE: des bes g e d bes g
+e4 <e' g>8. <e g>16 <e g>4 <e g>      %%% SOURCE: <ees g>
+f r r c8.\pp c16
+f4 c r c8. c16
+f4 c r c8. c16
+ees4 c r c8. c16
+ees4 c r a8. a16
+c4_\markup{\italic "cresc."} bes r bes8. bes16
+des4 c r c8. c16
+ees4 des r e8. e16
+g4 f r a8. a16
+c4 bes r des8. des16
+c8\ff f,,32( g a bes c4) r8 r32 c( d e f4)
+r8 f32( g a bes c4) r8 r32 c( d e f4)
+\mark #2 r r8 f,,(\p g a bes c)                          %%%%% B 59
+d1( ~
+d4 e f g)
+c,( d ees! f
+d) r8 f,( g a bes c)
+d1( ~
+d4 e f g)
+c,( d ees! c)
+bes r8 bes( c) d-. ees-. f-.
+g4. a8-| bes-| c-. d-. ees-.
+f4( d8) bes,(\noBeam c) d-. ees-. f-.
+g4. a8-| bes-| c-. d-. ees-.
+f4( d8) r r4 f,,8-| a-|
+bes-| d-| f-| r r2  
+r r4 c8-| e-|
+f-. a-. c-. r r2
+r4 r8 bes,-. c-. d-. ees-. f-.
+g r r a bes c d ees
+f4( d8) bes,\noBeam-| c-| d-| ees-| f-|
+g r r a-| bes-| c-| d-| ees-|
+f4( d8) r r2
+r4 d4.-> c8-| bes-| a-|
+g-| f-| ees r r2
+r4 f'4.-> e8-| ees-| c-|
+cis-| d-| bes r r bes,( c d 
+ees f g f) ees2
+d4 r r8 bes( c d
+ees f g f) ees2
+d4 r8 bes,\ff c d ees f
+g a bes d, ees f g a
+bes c d fis, g a bes d,
+ees f g b, c d ees c
+\mark #3 a4 f' r2            %%%% C  91
+r4 r8 e'-. g-. e-. g-. e-.
+f4 r r2
+r4 r8 e-. g-. e-. g-. e-.
+f4 r8 e-. f-. g-. a-. b-.
+c r r e,-. f-. g-. a-. b-.
+c r r e,-. f-. g-. a-. b-.
+c r r e,-. f-. g-. a-. b-.
+c r r e,-. f-. g-. a-. b-.
+c r r bes(\p a) r r e(\p
+f) r r4 r2
+R1  
+r4 r8 f,(\p g a bes c)
+d1( ~
+d4 e f g )
+c,( d ees! f)
+d r r2
+R1 * 2
+%
+r4 r8 f\f fis g gis a
+\mark #4 bes2 bes,                              %%%% D  111
+des'4 bes8 f des bes f des         %%% SOURCE: des bes f d bes f d
+bes4 bes'8. bes16 des4 bes
+a c r2
+c' f,
+ees'4 c8 a f ees c a
+f4 c'8. c16 f4 ees
+des des r f8. f16
+bes4. bes8 aes4. aes8
+ges4 ees,8-| f-| ges4 r        %%% SOURCE: ges ees f g
+ees'4. f8 ges4. g8
+f4 r r f8. f16
+des'4. des8 bes4. bes8
+ges4. ges8 ees4. ees8
+des4 bes f <f c' a'>
+<f des' bes'> r r2
+r8 f-.\p a!4 r8 f-| bes4
+r8 f-| f'4 r2
+r8 f,-| a4 r8 f-| bes4
+r8 f-| f'4 r r8 f,(
+e f ges f) bes4( a8) f(
+e f ges f) c'4( bes8) f(
+e f ges f) des'4( c8) f,(
+e f ges f) ees'4\< c
+bes r\! r2
+R1 * 2
+\tag #'partie \pageTurn
+r8 d8:16\f ees: f: ges: g: aes: a:
+bes8 des16( c bes8) f'16( ees des4) r
+R1
+f2\ff \afterGrace f,(\trill {e32[ f)]}
+ges2. f8 ees
+des4 r r8 bes' f des'
+bes f16( ees des8) des16( c bes8) aes g f
+\afterGrace e1(\trill\sfz {d32[ e)]}
+g4 r r2
+\mark #5 f'2\ff \afterGrace f,(\trill {ees32[ f)]}              %%% E     147
+aes1
+g8 b16( a g8) d'16( c b4) r
+r8 b'16( c d8) g,16( a b8) g a b
+c2 r8 c-. g-. ees'-.
+c g16( f ees8) ees16( d c8) bes a g
+\afterGrace fis1(\trill\sfz {e32[ fis)]}
+a4 r r2
+g'\ff \afterGrace g,(\trill {fis32[ g)]}
+bes1
+a8 cis16( b a8) e'16( d cis4) r
+r8 cis'16( d e8) a,16( b cis8) a-. b-. cis-.
+d4 r r2
+bes cis,
+d r
+bes' cis,
+d r
+bes' cis,
+d8 d,32( e fis g a4) r8 r32 a( b cis d4)
+r8 d32( e fis g a4) r8 r32 a( b cis d4)
+r r8 d,,(\p e fis g a)
+b1( ~
+b4 cis d e)
+a,( b c! d)       %%% SOURCE: a bes c d
+b r8 d,( e fis g a)     %%% SOURCE: bes
+b1( ~
+b4 cis d e)
+a,( b c! a)
+g r8 g_( a) b-| c-| d-|
+e4. fis8-. g-. a-. b-. c-.
+d4( b8) g,\noBeam_( a) b-. c-. d-.
+e4. fis8 g-. a-. b-. c-.
+d4( b8) r r4 d,,8-. fis-.
+g-. b-. d-. r r2
+r r4 a8-. cis-.
+d-. fis-. a-. r r2
+r4 r8 g,-| a-| b-| c-| d-|
+e r r fis-. g-. a-. b-. c-.
+d4-.( b8) g,\noBeam-. a-. b-. c-. d-.
+e r r fis-. g-. a-. b-. c-.
+d4( b8) r r2
+r4 b4.-> a8-. g-. fis-.
+e-. d-. c r r2
+r4 d'4. cis8-. c-. a-.
+ais-. b-. g-. r r g,( a b        %%% SOURCE: ais bes g
+c d e d) c2
+b4 r r8 g( a b 
+c d e d) c2
+b4 r8 g,\ff a b c d        %%% SOURCE: b r g, a bes c d
+e fis g b, c d e fis
+g a b dis, e fis g b,
+c d e gis, a b c a
+<a fis'>4 <a fis' d'> r2         
+r4 r8 cis'-. e-. cis-. e-. cis-.
+d4 r r2
+\mark #7 r4 r8 cis-. e-. cis-. e-. cis-.              %%%% G 202
+e1\> ~
+e ~
+e ~
+e
+d4\! r8 d,(\p e fis g a)
+b1( ~
+b4 cis d e)
+a,( b c d)           %%% SOURCE: a bes c d
+b r r2
+R1 * 2
+%
+r4 r8 d\f ees! e f fis
+g2 g,
+bes'4 g8 d bes g d bes
+g4 bes'8. bes16 d4 <bes g'>
+<d, a' fis'> <d a' a'> r2
+a''2 d,
+c'4 a8 fis d c a fis                                    %%% SOURCE : c'4 a8 fis d c a f
+d4 <a' fis'>8. <a fis'>16 <a a'>4 <a c'>
+<bes bes'> <bes bes'> r d8. d16
+g,1 ~
+g4 r r2
+f' ees!
+d4. c8 bes4. aes8
+g4. aes8 bes g aes bes
+ees,!1
+des8 c' des d ees d ees e
+f e f fis g fis g a
+bes8:16 c: bes: a: g: a: g: f!:
+ees: f: ees: d: cis: d: cis: c:
+bes: a: g: bes: d4 <d, a' fis'>
+<d bes' g'> r r2
+r8 d'-|\pp c'4 r8 d,-| c'4
+r8 d,-| bes'4 r2
+r8 d,-| c'4 r8 d,-| c'4
+r8 d,-| bes'4 r2
+r8 d,-| c'4 r8 d,-| c'4
+r8 d,-| bes'4 r2
+r8 d,-| c'4 r8 d,-| c'4
+r8 d,-| bes' g,_\markup{\italic "cresc."} fis( a) a( g)
+g( bes) r bes a( c) c( bes)
+bes( d) r d c( ees) ees( d)
+d( g) g( fis) fis( a) a( g)
+\mark #8 g\ff bes g d bes g d bes             %%% H 246
+g4 <bes' g'>2 <bes g'>8. <bes g'>16
+<bes g'>8 bes' g ees bes g ees bes           %%% SOURCE: <bes g'> bes' g ees bes g d bes
+g4 <bes' g'>2 <bes g'>8. <bes g'>16
+<bes g'>4 <bes g'> <bes g'> r
+<bes g'> <bes g'> <bes g'> r
+<d, bes' g'> <d bes' g'> <d bes' g'> r
+<d a' fis'> <a' fis'> <a fis'> <d, a' fis'>
+<g, d' bes' g'> r r2
+r8 d''-|\pp c'4 r8 d,-| c'4
+r8 d,-| bes'4 r2
+r8 d,-| c'4 r8 d,-| c'4
+r8 d,-| bes'4 r2
+r8 d,-| c'4 r8 d,-| c'4
+r8 d,-| bes'4 r2
+r8 d,-| c'4 r8 d,-| c'4
+r8 d,-| bes' g,_\markup{\italic "cresc."} fis( a) a( g)
+g( bes) r bes a( c) c( bes)
+bes( d) r d c( ees) ees( d)
+d( g) g( fis) fis( a) a( g)
+g\ff bes g d bes g d bes
+g4 <bes' g'>2 <bes g'>8. <bes g'>16
+<bes g'>8 bes' g ees bes g ees bes 
+g4 <bes' g'>2 <bes g'>8. <bes g'>16
+<bes g'>4 <bes g'> <bes g'> r
+<bes g'> <bes g'> <bes g'> r
+<d, bes' g'> <d bes' g'> <d bes' g'> r
+<d a' fis'> <a' fis'> <a fis'> <a fis'>
+<bes g'> <bes g'> r <bes g'>
+<bes g'> <bes g'> <a fis'> <a fis'>
+<bes g'> <bes g'> r <bes g'>
+<bes g'> <bes g'> <a fis'> <a fis'>
+<bes g'> <bes g'> r <bes g'>
+<d, bes' g'> <bes' g'> <d, a' fis'> <a' fis'>
+<bes g'>8 bes' d4 ~ d8 bes g4 ~
+g8 bes d,4 ~d8 g bes, d
+g, bes d4 ~d8 bes g4 ~
+g8 bes d,4 ~d8 g bes, d
+g,4 <g g'> <g g'> <g g'>
+<g g'>2 <g g'>
+<g g'> r \bar "|." \tag #'partie \pageBreak
+}
+

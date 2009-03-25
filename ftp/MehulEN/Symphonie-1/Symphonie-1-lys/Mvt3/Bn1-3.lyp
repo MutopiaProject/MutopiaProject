@@ -1,0 +1,165 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm %Basson1 - 3ème mvt
+
+\relative c{
+\clef bass
+
+
+
+
+\Ctime \CAkey \CstringTempo  
+\partial 4 r4 
+R2. * 15
+
+
+r4 r \bar "||" r
+
+
+R2. * 23
+
+
+r4 r8 \bar "|." \CBkey \break \clef tenor d8(\mf \CBstringTempo e fis
+g a b c d e
+fis g a d, e fis
+g b, c d e cis)
+d2. ~
+d4 r r
+R2. * 4
+%
+%
+\tag #'partie \pageTurn
+r4 r8 e(\mf fis gis)
+a2.
+gis4 r r
+R2. * 3
+%
+%
+r4 r8 \bar ":|:" \clef bass d(\mf e d
+c b a c b a
+g b a g fis a
+g fis e g fis e)
+d2. ~
+d ~
+d ~
+d ~
+d4 r r
+R2.
+r4 r8 cis'_\markup{\italic "dol."} d e
+fis g a r r4
+R2. * 2
+%
+r4 r8 des,\p c bes
+aes c ees des c bes
+aes c ees r r4
+R2.
+r4 r8 ees d c
+bes d f ees d c
+bes d f r r4
+r r8 f\mf e d
+c e g r r4
+r r8 g\f fis e
+d fis a r r4
+R2. * 3
+%
+%
+r4 r8 \clef tenor d,,( e fis
+g a b c d e
+fis g a d, e fis
+g b, c d e cis)
+d2. ~
+d ~
+d ~
+d4 d d\ff
+g, r \bar ":|" \CAkey r
+R2. * 15
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r \bar "||" r
+R2. * 3
+%
+%
+r4 r g'
+fis f e
+ees d c
+bes a g
+fis d r
+R2. * 3
+%
+%
+r4 r g'
+fis f e
+ees d c
+bes a g
+fis d r \clef bass
+R2. 
+r4 r g
+bes g d
+bes g r
+R2.
+r4 r g' 
+bes g d 
+bes g \clef tenor g''\ff
+g2-> g4
+g2-> g4
+g2-> g4
+g2.-> ~
+g ~
+g ~
+g ~
+g2 r4
+R2. * 3
+%
+%
+r4 r g
+g2-> g4
+g2-> g4
+g2-> g4
+g2.-> ~
+g ~
+g ~
+g ~
+g2 r4
+R2. * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r d(\>
+ees d)\! r
+r r d(\>
+ees d)\! r
+r r d(\p
+ees\< d ees
+d\! ees)\f d
+ees d fis
+g r r
+R2.
+r4 r d
+g r d
+g d g
+d g d
+g d g
+d g d
+g r r
+R2.
+r4 d g
+d g d
+g r r \bar "|." \tag #'partie \pageBreak
+}

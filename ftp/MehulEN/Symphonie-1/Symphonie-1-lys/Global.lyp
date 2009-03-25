@@ -1,0 +1,35 @@
+﻿\version "2.12.1"
+
+cCompositeur = "Etienne MEHUL"
+cDatesCompositeur = "(1763-1817)"
+cTitre = "Symphonie en sol mineur"
+cRefConcert = "1063"
+cCopyright = \markup {\concat {
+		\char #169  "2009-" \italic {"Le Concert - "} \cRefConcert " / " \cCompositeur " - " \cTitre}}
+
+%%%% Mouvements
+%% I	----------------------------------------------------------------------------------
+AstringTempo = {\stringTempoOnKey	\mark \markup {\hspace #+10.0 {\smaller \bold "Allegro"}}}
+Atime = \time 4/4
+Akey = \key g \minor
+
+%% II	-----------------------------------------------------------------------------------
+BstringTempo = {\stringTempoOnKey \mark \markup {\hspace #+10.0 {\smaller \bold "Andante"}}}
+Btime = \time 2/4
+BAkey = \key bes \major				%% mesure 1, mesure 93 (après H)
+BBkey = \key f \minor					%% mesure 44 (C)
+BBstringTempo = {\stringTempoOnKey \mark \markup {\null \hspace #-15.0 {\smaller "Mineur"}}}
+BAstringTempo = {\stringTempoOnKey \mark \markup {\hspace #-10.0 {\smaller "Majeur"}}}
+
+%% III	---------------------------------------------------------------------------------
+CstringTempo = {\stringTempoOnKey \mark \markup {\hspace #+20.0 {\smaller \bold "Allegro moderato"}}}
+Ctime = \time 3/4
+CAkey = \key g \minor
+CBkey = \key g \major
+CBstringTempo = {\stringTempoOnKey \mark \markup {\null \hspace #-5.0 {\bold "Trio"}}}
+
+%% IV	------------------------------------------------------------------------------------
+DstringTempo = {\stringTempoOnKey \mark \markup {\hspace #+20.0 {\smaller \bold "Allegro Agitato"}}}
+Dtime = \time 2/2
+Dkey = \key g \minor
+

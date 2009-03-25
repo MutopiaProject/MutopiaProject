@@ -1,0 +1,329 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm %Contrebasse - 4ème mvt
+
+\relative c{
+\clef bass
+
+
+
+
+\Dtime \Dkey \DstringTempo  
+\partial 4. r8 r4 
+g'\p bes g r
+g,2. r4
+fis' a fis r
+d2. d4(\<
+g a bes2)\!
+a4(\> g fis)\! d(\<
+g a bes2)\!
+a4(\> g fis)\! d(
+g a bes b
+c d ees) r
+r2 r4 bes(
+a g fis8)\noBeam \f d d d
+ees( d) d-. d-. d4 r
+r2 r8 d\f d d
+ees( d) d-. d-. d4 r
+r2 r8 d\p d d
+d(\fp ees) ees-. ees-. ees2 ~
+ees r8 e e e
+e(\fp f) f-. f-. f2 ~
+f r8 fis fis fis
+g4 bes g r
+g,2. r4
+fis'4 a fis r
+d2. d4(
+g a bes) r
+r2 r4 d,(
+g a bes b
+c d ees) r
+r2 r4 c\ff
+\mark #1 a g fis r
+r2 r4 c'
+a g fis r
+r g a8\noBeam c-. c-. c-.
+\appoggiatura {c32[ d]} ees4 g, a r
+r fis g a
+bes1\sfz ~
+bes4 b, c d
+e e r2
+r r4 g
+e d cis r
+r2 r4 g'
+e d cis r
+r d e8\noBeam g-. g-. g-.
+\appoggiatura {g32[ a]} bes4 d, e r
+r cis d e
+f fis g a
+bes r r bes,
+a r r a
+gis r r a
+b r r b
+c1 ~
+c4 r r8 c'-. c-. c-.
+\appoggiatura {c32[ d e]} f8 a,-. a-. a-. \appoggiatura {a32[ bes]} c8 f,-. f-. f-.
+\appoggiatura {f32[ g]} a8 d,-. d-. d-. \appoggiatura {d32[ e]} f8 b,-. b-. b-.
+\appoggiatura {b32[ cis]} d8 gis,-. gis-. gis-. a4 r
+r2 r8 a\p a a
+bes(\> a)\! a-. a-. a4 r
+r2 r8 a\p a a
+bes(\> a)\! a-. a-. a4 r
+d4\pizz f d r
+R1																					\tag #'partie \pageTurn
+cis4 e cis r
+r2 r4\arco a(\<
+d e f2)\!
+e4(\> d cis)\!a(\<
+d e f2)\!
+e4(\> d cis)\! r
+d4\pizz f d r
+R1
+cis4 e cis r
+r2 r4\arco r8 r32 a(\f b cis
+d4) f\p d r
+R1 * 3
+%
+%
+r8 r32 a(\f b cis d4) r2
+r2 r4 r8 r32 a(\pp b cis
+d4) r r r8 r32 c!( d e
+f4) r r2
+r8 r32 e(\f f g a4) r2
+r r4 r8 r32 e,(\pp fis gis
+a4) r r r8 r32 g!( a b
+c4) r r2
+R1
+r2 r8 r32 f( g a bes4)
+a8\noBeam a,\p a a bes(\> a)\! a-. a-.
+a4 r r2
+r8 a a a bes(\> a)\! a-. a-.
+a4 r r2
+r8 a a a bes(\> a)\! a-. a-.
+a4 r r2
+r8 a a a bes(\> a)\! a-. a-.
+d2(\< e)\!
+f(\> e)\!
+d2(\< e)\!
+f(\> e)\!
+d2(\< e)\!
+f(\> g)\!
+r8 a( gis a) r a,( gis a)
+d2(\< e)\!
+f(\> e)\!
+d2(\< e)\!
+f(\> e)\!
+d2(\< e)\!
+f(\> g)\!
+r8 a( gis a) r a,( gis a)
+d4 r f,2(\pp
+g a
+bes a)\<
+g( f)
+ees!8\!\noBeam g'\ff g g bes4 g
+r8 ees ees ees g4 ees
+r8 c c c ees4 c
+r8 a a a c4 a
+r8 bes' bes bes bes,4 bes'
+r8 bes bes bes bes,4 bes'
+r8 bes bes bes bes,4 bes'
+r8 a a a a,4 a'
+d,4 r f,2(\pp
+g a
+bes a)\<
+g( f)
+ees!8\!\noBeam g'\ff g g bes4 g
+r8 ees ees ees g4 ees
+r8 c c c ees4 c
+r8 a a a c4 a
+r8 bes' bes bes bes,4 bes'
+r8 bes bes bes bes,4 bes'
+r8 bes bes bes bes,4 bes'
+r8 a a a a,4 a'
+d,4 r r8 d' d d
+f( d) d-. d-. a4 a,
+d r r8 d' d d
+f( d) d-. d-. a4 a,
+a'2(\> aes\!
+g2.)\p g,4\f
+g'2(\> ges\!
+f2.)\p f,4\f
+bes r r8 bes'\ff bes bes
+des( bes) bes-. bes-. f4 f,
+bes r r8 bes' bes bes
+des( bes) bes-. bes-. f4 f,
+f'2(\> fes\!
+ees2.)\p ees,4\f
+ees'2(\> d\!
+cis2.)\p cis4\f
+fis8\noBeam a\p a a cis4 a
+fis r r2
+r8 a a a cis4 a
+fis r r2
+r8 fis fis fis a4 fis
+d r r2
+r8 fis fis fis a4 fis
+d1
+g8 bes bes bes d4 bes
+g r r2
+r8 g g g bes4 g
+ees1 ~
+ees
+e1 ~
+e
+f1 ~
+f
+fis1 ~
+fis \crescTextCresc
+g1\< ~
+g ~
+g ~
+g ~
+g ~
+g ~
+g ~
+g8\!\noBeam g, g\ff g g2 ~
+g1 ~
+g8 g g g g2 ~
+g1 ~
+g8 g g g g4 r
+R1 * 2
+%
+r8 g_\markup{\italic "dol."} g g g4 r
+c\p ees c r
+c,2. r4
+b' d b r
+g2. g4(\< 
+c d ees2)\!
+d4(\> c b)\! g4(\< 
+c d ees2)\! 
+d4(\> c b)\! g(
+c d ees) r
+r2 r4 g,(
+c d ees e
+f g aes) r
+r2 r4 f\ff
+d c b r
+r2 r4 f'
+d c b r
+r c d r
+r c d r
+r b c d
+ees1 ~
+ees4 e f g
+a! a r2
+r r4 c
+a g fis r
+r2 r4 c'
+a g fis r
+r g a8\noBeam c c c
+\appoggiatura {c32[ d]} ees4 g, a r
+r fis, g a
+bes b c d
+e r r e
+d r r d
+cis r r d
+e r r e
+f1 ~
+f8\noBeam bes bes bes \appoggiatura {bes32[ c]} d8 bes bes bes
+\appoggiatura {bes32[ c]} d4 r r2
+r4 \appoggiatura {g,32[ a]} bes4\sfz \appoggiatura {fis32[ g]} a4\sfz \appoggiatura {e32[ fis]} g4\sfz
+\appoggiatura {d32[ e]} fis4\sfz \appoggiatura {c32[ d]} ees!4\sfz \appoggiatura {bes32[ c]} d4\sfz \appoggiatura {a32[ bes]} c4\sfz
+\appoggiatura {bes32[ a]} g4 bes\p g r
+g2. r4
+fis' a fis r
+d2. d4(\<
+g a bes2)\!
+a4(\> g fis)\! d(\<
+g a bes2)\!
+a4(\> g fis)\! r
+g\pizz bes g r
+R1
+fis4 a fis r
+r2 r4\arco r8 r32 d( e fis
+g4) bes\p g r
+R1
+r8 g-._\markup{\italic "dol."} g-. g-. bes( g) g-. g-.
+fis( d) d( c) c( bes) bes( a)
+g8 r32 d'(\f e fis g4) r2
+r r4 r8 r32 d(\pp e fis
+g4) r r r8 r32 f!( g a
+bes4) r r2
+r8 r32 a,( bes c d4) r2
+r r4 r8 r32 a( b cis
+d4) r r r8 r32 c!( d e
+f4) r r2
+R1
+r2 r8 r32 bes,( c d ees4)
+d8\p\noBeam d,-. d-. d-. ees(-> d) d-. d-.
+d4 r r2
+r8 d-. d-. d-. ees(-> d) d-. d-.
+d4 r r2
+r8 d-. d-. d-. ees(-> d) d-. d-.
+d4 r r2
+r8 d'-. d-. d-. ees( d) d-. d-.
+g2(\< a)\!
+bes(\> a)\!
+g2(\< a)\!
+bes(\> a)\!
+g2(\< a)\!
+bes(\> c)\!
+r8 d( cis d) r d,( cis d)
+g,2(\< a)\!
+bes(\> a)\!
+g2(\< a)\!
+bes(\> a)\!
+g2(\< a)\!
+bes(\> c)\!
+r8 d( cis d) r d( cis d)
+g4 r bes,2(\p
+c d
+ees d)\<
+c( bes)
+aes8\!\noBeam c'\ff c c ees4 c
+r8 aes aes aes c4 aes
+r8 f f f aes4 f
+r8 d d d f4 d
+\repeat unfold 3 {r8 ees ees ees ees,4 ees'}
+%
+%
+r8 d d d d,4 d'
+g, r bes2(\pp
+c d
+ees d)\<
+c( bes)
+aes8\!\noBeam c'\ff c c ees4 c
+r8 aes aes aes c4 aes
+r8 f f f aes4 f
+r8 d d d f4 d
+\repeat unfold 3 {r8 ees ees ees ees,4 ees'}
+%
+%
+r8 d d d d,4 d'
+g, r r8 g' g g
+bes( g) g g d4 d
+g r r8 g g g
+bes( g) g-. g-. d4 d
+cis2.. g'32( f e d)
+cis2 cis4 cis
+cis2.. g'32( f e d)
+cis2 cis4 cis
+d r r2
+r8 d-. d-. d-. ees( d) d-. d-.
+d4 r r2
+r8 d-. d-. d-. ees( d) d-. d-.
+g,4 r r2
+R1
+r4 g'( fis f)
+e2( ees
+d4) r r2
+R1
+r2 r8 bes' bes bes
+g4 r r8 d d d
+g,4 r r d'
+g r r d
+g, r r d'
+g r r d
+g, d' g, d'
+g, r r2
+r4 d' g, d'
+g, r r2 \bar "|." 
+}

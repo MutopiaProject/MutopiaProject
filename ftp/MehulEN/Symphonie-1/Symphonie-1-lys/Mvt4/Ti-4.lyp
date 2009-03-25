@@ -1,0 +1,44 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm  %Timbales - 3ème mvt
+
+\relative c{
+\clef bass
+
+
+
+
+
+\Dtime \DstringTempo  
+\partial 4. r8 r4 
+R1 * 165	%% +7
+
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' {\clef treble 
+			r2^"Cors" r8 c c c | c2 ~ c8 c c c | \repeat unfold 5 {c2 ~ c8 c c c} \clef bass	}		
+			\unset fontSize} \\ {R1*7} >>
+	 \tag #'score {R1*7} >>
+g4\ff r r2
+r r8 g\ff g g
+g2:16\> g4\! r
+r2 r8 g\f g g
+g1:16\>
+g:
+g:
+g2:16\! g4 r
+R1 * 115	%% +15
+
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' {\clef treble 
+			e8(^"Violon 1" g) g-. g-. a( g) g g | g1 ~ | g8 g-. g-. g-. a( g) g-. g-. |
+			fis4 r r8 a,-. a-. a-. | bes( a) a-. a-. a4 r | r2 r8 a-. a-. a-. |
+			bes( a) a-. a-. a4 r | r bes( a aes) | g8\noBeam g' g g a( g) g-. g-. |
+			bes4 r r2 | r8 g g g a( g) g-. g-. | bes4 bes,( a aes) |
+			g8\noBeam g' g g a( g) g-. g-. | bes( g) g-. g-. bes( g) g-. g-. | bes( g) g-. g-. bes( fis) fis-. fis-.
+			\clef bass } \unset fontSize} \\ {R1*15} >>
+	 \tag #'score {R1*15} >>
+g4\f r r d'
+g, r r d'
+g, r r d'
+g, r r d'
+g, d' g, d'
+g, r r2
+r4 d'\ff g, d'
+g, r r2 \bar "|." 
+}

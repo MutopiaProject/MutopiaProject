@@ -1,0 +1,162 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm %Clarinette1 - 2e mvt
+ 
+\relative c''{
+\clef treble
+
+
+
+
+\Btime \BAkey \BstringTempo  
+\partial 8 r8 
+R2 * 7
+
+r4 r8 \bar "||" \mark #1 r          %%% A 8
+R2 * 4
+
+r8 a16.(\p b32) c8 r
+r f,16.( g32) a8 r
+R2 * 13
+
+r4 r8 \bar "||" \mark #2 r                %%% B 28
+R2	%% +2
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r8^"Violon 1" d( cis) a ~ | a g16( a bes8.) g16 | f4( e8) } \unset fontSize} \\ {R2*2 | r4 r8} >>
+	 \tag #'score {R2*2 | r4 r8} >>
+ d(\p
+c) r r bes(
+a) r r4
+R2 * 9
+
+r4 r8 \bar "||" \mark #3 \BBkey r \BBstringTempo      %%% C 44
+R2 * 7
+
+r4 r8 \bar "||" \mark #4 r                   %%% D 52
+R2 * 11
+
+r4 r8 \bar "||" \mark #5 r                %%% E 64
+R2 * 6	%% +1 citation
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{des8.^"Violon 1" ces16 bes8 a | a4( bes8)} \unset fontSize} \\ {R2 | r4 r8} >>
+	 \tag #'score {R2 | r4 r8} >>
+ \bar "||" \mark #6 des(->               %%% F 72
+c) r r des(->
+c) r r des(
+c4 bes8 aes ~
+aes g16 f g8) r
+R2 * 2
+
+r8 c,( d g ~
+g4) r
+r8 g( a d ~
+d4) r
+R2
+r4 r8 \bar "||" \mark #7 r      %%% G 84
+R2 * 6
+
+bes4.\p ees8
+ees4( des8) \bar "||" \mark #8 r      %%% H 92
+\BAkey \BAstringTempo R2
+R2 * 8
+
+%%\tag #'partie \pageBreak
+r4 r8 f,(\p
+bes) f( c') f,(
+d') f,( f') r
+R2 * 3
+
+r4 r8 \bar "||" \mark #9 r             %%% I 108
+R2
+r8_\markup{\italic "dol."} f(\< ges\!\> f)\!
+R2
+r8 f(\< ges\!\> f)\!
+r f(\< ges\!\> f)\!
+R2
+r4 ees8( ~ \times 2/3 {ees16[\> des c\!]}
+bes8 a) r4
+r4 ees'8( ~ \times 2/3 {ees16[\> des c\!]}
+bes8 a) r4
+R2 * 10
+%
+r4 r8 \bar "||" \mark #11 r         %%% K 129
+R2 * 11	%% +1
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r4^"Flûte 1" r8 f16. f32} \unset fontSize} \\ {R2} >>
+	 \tag #'score {R2} >>
+r16 f32(\mf g a bes c d ees8) d
+c4( bes8) r
+r16 f32( g a bes c d ees8) d
+c4( bes8) r
+r16 f32( g a bes c d ees8) d
+c4 bes8 r
+r16 f32 g a bes c d ees8 c
+bes r r \bar "||" \mark #12 r         %%% L 149
+R2 * 7
+
+r4 r8 \bar "||" \mark #13 r         %%% M 157
+f'4\ff e
+ees! r
+f e
+ees! r
+ees r
+ees r
+R2
+r4 r8 e,32(\mf f g f)
+bes8( a) r e32( f g f)
+des'8( c) r4
+R2 * 7
+
+r4 r8 \bar "||" \mark #14 r        %%% N 175
+R2 * 7
+
+r4 r8 f,
+bes a c bes
+ees4 d8 c
+bes a g f
+ees f16. ees32 d8 f
+bes a c bes
+ees4 d8 c
+bes a g a
+bes r r4
+R2 * 6
+%
+r8 des16.( c32) c8 r
+r des16.( c32) c8 r
+R2 * 2
+
+r8 a16.( g32) g8_\markup{\italic "cresc."} g16.( fis32)
+fis2 ~
+fis
+fis8\ff fis r4
+R2
+r8 ees'16.(\p c32) a8 r
+R2 * 5
+
+r4 r8 f(
+bes) f( c') f,(
+d') f,( f') r
+R2
+r4 r8 f16.\ff ees32
+d( f ees d c bes c d ees e f ees d ees f fis)      %%% SOURCE: d( f ees d c bes c d ees e f e d e f fis)
+g( f! ees f g f g a bes a g f ees c f ees
+d f ees d c bes c d ees d ees g f ees d c)
+bes8 r r4
+R2 * 3
+%
+r8 f(\f bes) r
+R2
+r8 f( bes) r
+R2 * 2
+r4 r8 a(\p
+bes) r r4 
+R2 * 4
+
+r8 a( c a
+bes4) r
+R2
+r8 f,( bes d
+f) bes d f
+bes4 r \bar "|." \tag #'partie \pageBreak
+}

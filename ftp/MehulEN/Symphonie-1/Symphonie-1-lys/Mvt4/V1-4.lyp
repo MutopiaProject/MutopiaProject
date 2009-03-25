@@ -1,0 +1,329 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  %Violon1 - 4ème mvt
+
+\relative c''{
+\clef treble
+
+
+
+
+\Dtime \Dkey \DstringTempo  
+\partial 4. d8-.\p d-. d-. 
+ees( d) d-. d-. g d bes' d,
+g4 r r8 d-. d-. d-.
+ees( d) d-. d-. a' d, c' d,
+a' d, d d d4 r
+r2 r4 d(\>
+fis g a)\! r
+r2 r4 d,(\>
+fis g a)\! r
+R1
+r2 r4 g(
+c d ees d
+c bes a8)\noBeam d,,\f d d
+ees( d) d-. d-. d4 d'(\p
+a' g fis8)\noBeam d,\f d d
+ees( d) d-. d-. d4 d'(\p
+a' g fis) r
+R1 * 3
+%
+\tag #'partie \pageTurn
+r2 r8 d-. d-. d-.
+ees( d) d-. d-. g d bes' d,
+g d d d ees( d) d-. d-.
+ees( d) d-. d-. a' d, c' d,
+a'4 r r2
+r r4 d,(
+g a bes) r
+r2 r8 g g g
+ees g b, d c4 r
+r2 r4 c\ff
+\mark #1 fis g a r
+r2 r4 c,
+fis g a r
+r g fis r
+r g fis r
+r a g fis
+g8 es ees-. ees-. \appoggiatura {ees32[ f]} g8 g g-. g-.
+\appoggiatura {ees32[ f]} g4 f! ees d
+cis cis r2
+r r4 g
+cis\f d e r
+r2 r4 g,\f 
+cis d e r
+r d cis r
+r d cis r
+r e\f d cis
+d c! bes a
+gis8\noBeam d-. d-. d-. \appoggiatura {d32[ e]} f4 gis'
+a8\noBeam d,,-. d-. d-.  \appoggiatura {d32[ e]} f4 a'
+b8\noBeam d,,-. d-. d-.  \appoggiatura {d32[ e]} f4 a'
+gis8\noBeam d,-. d-. d-.  \appoggiatura {d32[ e]} f4 gis'
+a8 f-. f-. f-. \appoggiatura {f32[ g]} a8 f f-. f-.
+\appoggiatura {f32[ g]} a8 f-. f-. f-. \appoggiatura {f32[ g]} a8 c,-. c-. c-.
+\appoggiatura {c32[ d e]} f8 a,-. a-. a-. \appoggiatura {a32[ bes]} c8 f,-. f-. f-.
+\appoggiatura {f32[ g ]} a8 d,-. d-. d-. \appoggiatura {d32[ e]} f8 b,-. b-. b-.
+\appoggiatura {b32[ cis]} d8 gis,-. gis-. gis-. a4 r
+r2 r4 a'(\p
+e' d cis) r
+r2 r4 a(\p
+e' d cis8)\noBeam a-. a-. a-.
+bes( a) a-. a-. d a f' a,
+d a-. a-. a-. bes( a) a-. a-.
+bes( a) a-. a-. e' a, g' a,
+e'4 r r2
+r r4 a,(\>
+cis d e)\! r
+r2 r4 a,(\>
+cis d e)\! r
+R1 
+f,4\pizz a f r
+R1
+e4 g e r
+r8 d'-.\arco_\markup{\italic "dolce"} d-. d-. f( d) d-. d-.
+cis( a) a( g) g( f) f( e)
+d4 r r r8 r32 e'(\f fis gis)
+a4 bes\p a r
+r2 r4 r8 r32 c,,(\pp d e
+f4) r r8 r32 e'( fis gis a4)
+r8 r32 a( b cis d4) r2
+r8 r32 c( d e f4) r2
+r r4 r8 r32 g,,( a b
+c4) r r8 r32 b'( c d e4)
+r8 r32 e,( fis gis a4) r2
+r8 r32 g!( a b c4) r2
+r8 r32 e,( fis gis a4) r r8 r32 g,,( a b
+c4) r r2
+R1 
+r8 a'' a a  bes( a) a-. a-.
+a4 r r2
+r8 a a a  bes( a) a-. a-.
+a4 r r2
+r8 a a a  bes( a) a-. a-.
+a4 r r2 
+r8 f(\> e d)\! r d(\> c bes)\!
+a1
+r8 f'(\> e d)\! r d(\> c bes)\!
+a1
+r8 f'(\> e d)\! r d(\> c bes)\!
+a2 g
+f4 d'2 cis4
+d8\noBeam f(\> e d)\! r d(\> c bes)\!
+a1
+r8 f'(\> e d)\! r d(\> c bes)\!
+a1
+r8 f'(\> e d)\! r d(\> c bes)\!
+a2 g 
+f4 d'2 cis4
+d8\noBeam d,\pp d d \repeat unfold 5 {f( d) d-. d-.}
+%
+%
+f(\< ees) ees-. ees-. bes'( aes) aes-. aes-.
+g4\! r r8 ees'\ff ees ees
+ees4 g r8 g g g
+g4 c r8 c c c
+c4 ees r8 ees ees ees
+d4 d r8 bes bes bes
+a!4 a r8 a a a
+gis4 gis r8 gis gis gis
+a4 <f d'> <e d'> <e cis'>
+<f d'>8\noBeam d,\pp d d \repeat unfold 5 {f( d) d-. d-.}
+%
+%
+f(\< ees) ees-. ees-. bes'( aes) aes-. aes-.
+g4\! r r8 ees'\ff ees ees
+ees4 <ees g> r8 g g g
+g4 <ees c'> r8 c' c c
+c4 ees r8 ees ees ees
+d4 d r8 bes bes bes
+a4 a r8 a a a
+gis4 gis r8 gis gis gis
+a4 <f d'> <e d'> <e cis'>
+<f d'>8\noBeam d d d f( d) d-. d-.
+a( d) d-. d-. <a f'>4 <a a'>
+<a f'>8 d-. d-. d-. f( d) d-. d-.
+a( d) d-. d-. <a f'>4 <a a'>
+fis'1(\fp
+g4) r r g\f
+e1(\fp
+f4) r r f\f
+des8 bes bes bes des( bes) bes-. bes-.
+f( bes) bes-. bes-. <f des'>4 <f c' f>
+<f des'>8 bes bes bes des( bes) bes-. bes-.
+f( bes) bes-. bes-. <f des'>4 <f c' f>
+d'!1(\fp
+ees4)\f r r ees\f
+c1(\fp
+cis4) r r cis\f
+a r r2
+r8 a'\p a a cis4 a
+fis r r2
+r8 fis fis fis a4 fis
+d r r2
+r8 fis fis fis a4 fis
+d r r2
+r8 fis fis fis a4 c,!
+bes! r r2
+r8 g' g g bes4 g
+ees! r r2
+r8 g g g bes4 des,
+ces r r2
+r8 gis' gis gis b4 d,!
+c! r r2
+r8 a' a a c4 ees,!
+des r r2
+r8 bes' bes bes des4 e,
+d! r r2
+r8 b'_\markup{\italic "cresc. poco a poco"} b b d4 f,!
+ees!2 r
+r8 c' c c ees4 fis,
+g2 r
+r8 b b b d4 f,!
+ees!2 r
+r8 c' c c ees4 fis,
+g2 r8 g\ff g g
+g4. a8 b c d ees
+ees2( d8)\noBeam g, g g
+g4. a8 b c d ees
+ees2( d4) r
+r8 g, g g g4 r
+R1  \tag #'partie \pageTurn
+r2 r8 g,\p g g
+aes( g) g-. g-. c g ees' g,
+c g g g aes( g) g-. g-.             %%% SOURCE: a( g)
+aes( g) g g d' g, f' g,
+d' g, g g aes( g) g g
+g4 r r g( 
+b c d) r
+r2 r4 g,(
+b c d) r
+r2 r4 g,(
+c d ees) r
+r2 r8 c c c
+aes( c) e,-. g-. f4 r
+r2 r4 f\ff
+b c d r
+r2 r4 f,\ff
+b c d r
+r c b r
+r c b r
+r d c b
+c8 aes aes aes \appoggiatura {aes32[ bes]} c8 aes aes aes
+c4 bes aes g
+fis fis r8 c-. c-. c-. 
+\appoggiatura {c32[ d]} ees4 r r c'
+fis g a8\noBeam c,,-. c-. c-.
+\appoggiatura {c32[ d]} ees4 r r c'
+fis g a r
+r g fis r
+r g fis r
+r a g fis
+g f! ees d
+cis8\noBeam g,-. g-. g-. \appoggiatura { g32[ a]} bes4 cis'       %SOURCE: \appoggiatura { g32[ bes]}
+d8\noBeam g,,-. g-. g-. \appoggiatura { g32[ a]} bes4 d'
+e8\noBeam g,,-. g-. g-. \appoggiatura { g32[ a]} bes4 d'
+cis8\noBeam g,-. g-. g-. \appoggiatura { g32[ a]} bes4 cis'
+d8 bes-. bes-. bes-. \appoggiatura {bes32[ c]} d8 bes-. bes-. bes-.
+\appoggiatura {bes32[ c]} d8 bes'-. bes-. bes-. \appoggiatura {bes32[ c]} d8 bes bes bes
+\appoggiatura {bes32[ c]} d4 \appoggiatura {bes32[ c]} des4\sfz \appoggiatura {g,32[ a]} bes4\sfz \appoggiatura {e,32[ f]} g4\sfz
+\appoggiatura {cis,32[ d]} e4\sfz r r2
+r r8 d-.\p d-. d-.
+ees( d) d-. d-. g d bes' d,
+g d d d ees( d) d-. d-.
+ees( d) d-. d-. a' d, c' d,
+a'4 r r2
+r r4 d,(\>
+fis g a)\! r
+r2 r4 d,(\>
+fis g a)\! r
+R1
+bes,4\pizz d bes r
+R1
+a4 c a r
+r8g'\arco_\markup{\italic "dolce"} g g bes( g) g-. g-.
+fis( d) d( c) c( bes) bes( a)
+g4 r r r8 r32 a'(\f b cis
+d4) ees\p d r
+r2 r4 r8 r32 f,,(\p g a
+bes4) r r8 r32 a'( b cis d4)
+r8 r32 d( e fis g4) r2
+r8 r32 f,( g a bes4) r2
+r2 r4 r8 r32 c,,( d e
+f4) r r8 r32 e'( f g a4)
+r8 r32 a( b cis d4) r2
+r8 r32 c!( d e f4) r2
+r8 r32 a,( b cis d4) r r8 r32 c,,( d e
+f4) r r2
+R1 
+r8 d'-. d-. d-. ees( d) d-. d-.
+d4 r r2
+r8 d-. d-. d-. ees( d) d-. d-.
+d4 r r2
+r8 d-. d-. d-. ees( d) d-. d-.
+d4 r r2
+r8 bes'(\> a g)\! r g(\> f ees)\!
+d1
+r8 bes'(\> a g)\! r g(\> f ees)\!
+d1
+r8 bes'(\> a g)\! r g(\> f ees)\!
+d2 c
+bes4 g'2 fis4
+g8\noBeam bes(\> a g)\! r g(\> f ees)\!
+d1
+r8 bes'(\> a g)\! r g(\> f ees)\!
+d1
+r8 bes'(\> a g)\! r g(\> f ees)\!
+d2 c
+bes4 g'2 fis4
+g8\noBeam g,\pp g g \repeat unfold 5 {bes( g) g-. g-.}
+%
+%
+bes( aes) aes-. aes-. ees'( des) des-. des-.
+c4 r r8 aes\ff aes aes
+aes4 c r8 c c c
+c4 f r8 f f f
+f4 aes r8 aes aes aes
+g4 g r8 ees ees ees
+d4 d r8 d d d
+cis4 cis r8 cis cis cis
+d4 <bes g'> <a g'> <a fis'>
+<bes g'>8\noBeam g\pp g g \repeat unfold 5 {bes( g) g-. g-.}
+%
+%
+bes(\< aes) aes-. aes-. ees'( des) des-. des-.
+c4\! r r8 aes\ff aes aes
+aes4 c r8 c c c
+c4 f r8 f f f
+f4 aes r8 aes aes aes
+g4 g r8 ees ees ees
+d4 d r8 d d d
+cis4 cis r8 cis cis cis
+d4 <bes g'> <a g'> <d, a' fis'>
+<d bes' g'>8\noBeam g g g bes( g) g-. g-.
+d( g) g-. g-. <d bes'>4 <d d'>
+<d bes'>8\noBeam g g g bes( g) g-. g-.
+d( g) g-. g-. <d bes'>4 <d d'>
+e'1\ff
+e8( g) g-. g-. a( g) g g
+g1\ff ~
+g8 g-. g-. g-. a( g) g-. g-.
+fis4 r r8 a,-. a-. a-.
+bes( a) a-. a-. a4 r
+r2 r8 a-. a-. a-.
+bes( a) a-. a-. a4 r
+r bes( a aes)
+g8\noBeam g' g g a( g) g-. g-.
+bes4 r r2
+r8 g g g a( g) g-. g-.
+bes4 bes,( a aes)
+g8\noBeam g' g g a( g) g-. g-.
+bes( g) g-. g-. bes( g) g-. g-.
+bes( g) g-. g-. bes( fis) fis-. fis-.
+g\noBeam d, g bes d4 <d c'>
+<d bes'>8\noBeam d, g bes d4 <d, a' fis'>
+<d bes' g'>8\noBeam d g bes d4 <d c'>
+<d bes'>8\noBeam d, g bes d4 <d, a' fis'>
+<d bes' g'>4 <d a' fis'> <d bes' g'> <d a' fis'>
+<d bes' g'> r r2
+r4 <d a' fis'> <d bes' g'> <d a' fis'>
+<g, d' bes' g'> r r2 \bar "|." 
+}

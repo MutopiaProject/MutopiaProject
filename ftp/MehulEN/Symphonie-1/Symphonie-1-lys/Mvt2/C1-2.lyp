@@ -1,0 +1,89 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm %Cor1 - 2e mvt
+                       
+\relative c''{
+\clef treble
+%%\key c \major
+
+
+
+\Btime \BstringTempo  
+\partial 8 r8 
+R2 * 7
+
+r4 r8 \bar "||" \mark #1 r          %%% A 8
+R2 * 19
+
+r4 r8 \bar "||" \mark #2 r                %%% B 28
+R2 * 15
+
+r4 r8 \bar "||" \mark #3  r \BBstringTempo      %%% C 44
+R2 * 7
+
+r4 r8 \bar "||" \mark #4 r                   %%% D 52
+R2 * 11
+
+r4 r8 \bar "||" \mark #5 r                %%% E 64
+R2 * 7
+
+r4 r8 \bar "||" \mark #6 r               %%% F 72
+R2 * 11
+
+r4 r8 \bar "||" \mark #7 r      %%% G 84
+R2 * 7
+
+r4 r8 \bar "||" \mark #8 r      %%% H 92
+\BAstringTempo R2
+R2 * 14
+
+r4 r8 \bar "||" \mark #9 r             %%% I 108
+R2 * 20
+
+r4 r8 \bar "||" \mark #11 r         %%% K 129
+R2 * 19
+
+r4 r8 \bar "||" \mark #12 r         %%% L 149
+R2 * 7
+
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c' 
+			{e16.^"Violon 1" e32 e16. e32 f8 \bar "||" \mark #13 e32( f g f)} \unset fontSize} 
+			\\ {r4. \bar "||" \mark #13 r8 } >>
+	 \tag #'score {r4. \bar "||" \mark #13 r8 } >>
+							%%% r4 r8 \bar "||" \mark #13 r                %%% M 157
+g8\ff r a r
+b!4 r
+g8 r a r
+b!4 r
+b! r
+b! r
+R2 * 11
+
+r4 r8 \bar "||" \mark #14 r        %%% N 175
+R2 * 30	%% +1
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{r8^"Hautbois 1" ees16.( c32 a8) r | r8^"Flûte 1" ees''16.( c32 a8) } \unset fontSize} 
+			\\ {R2 | r4 r8} >>
+	 \tag #'score {R2 | r4 r8} >>
+ d\p
+d d d d
+d4. r8
+R2 * 11
+
+r8 g,(\p c) r
+R2
+r8 g( c) r
+R2
+r4 r8 d\ff
+c r r d
+c r r d
+c r r d
+c4 g(\p
+c) r
+R2 * 4
+
+\clef bass r4 c,\ff ~
+c2\> ~
+c ~
+c ~
+c4\! r
+R2 * 2 \bar "|." 
+}

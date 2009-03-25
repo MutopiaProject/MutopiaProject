@@ -1,0 +1,195 @@
+﻿\version "2.11.61"      %Méhul - Symphonie 1 solm  %Violoncelle - 3ème mvt
+
+\relative c{
+\clef bass
+
+
+
+
+\Ctime \CAkey \CstringTempo  
+\partial 4 g'4\p\pizz 
+bes d g
+fis d c
+bes a g
+fis d g
+bes d g
+fis d c
+bes a g
+fis d g,
+bes d g
+bes d g
+bes g d
+bes g g,
+bes d g
+bes d g
+bes g d
+bes g \bar "||" g,
+bes d g
+g, c ees 
+g c ees
+g bes g
+fis f e
+ees! d c
+bes a g
+fis d g,
+bes d g
+g, c ees
+g c ees
+g bes g
+fis f e
+ees! d c
+bes a g
+fis d g,
+bes d g
+bes d g
+bes g d
+bes g g,
+bes d g
+bes d g
+bes g d
+bes g8 \bar "|." \CBkey  \break \CBstringTempo r8 r4
+R2. * 3 
+%
+%
+r4\arco r8 c\p b a
+g b d c b a
+g b e d c b
+a4 a e
+a, r r
+R2. * 3 
+%
+															\tag #'partie \pageTurn
+r4 r8 d'\p c b
+a c e d\< c b
+a c e d c b
+a4\! a\f d,
+g,4. \bar ":|:" d'8(\mf e d
+c b a c b a
+g b a g fis a
+g fis e g fis e)
+d2. ~
+d2. ~
+d2. ~
+d2. ~
+d4 r8 cis'\f d e
+fis g a r r4
+R2. * 2
+%
+r4 r8 c,\ff bes a
+g bes d c bes a
+g bes ees2\fp ~
+ees2.
+aes4 r8 des,\ff c bes
+aes c ees des c bes
+a! c f2\fp ~
+f2.
+bes4 r8 ees,\f d c
+b! d g2\fp
+c4 r8 f,\f e! d
+cis e a2\fp
+d4 r8 g,\ff fis e
+d fis a g fis e 
+d fis a g fis e
+d fis a g fis e
+d4 r r
+R2. * 3 
+%
+%
+r4 r8 c'\p b a
+g b d\< c b a
+g b d c b a\!
+g4 g\ff d
+g, r \bar ":|" \CAkey g'\pizz
+bes d g
+fis d c
+bes a g
+fis d g
+bes d g
+fis d c
+bes a g
+fis d g,
+bes d g
+bes d g
+bes g d
+bes g g,
+bes d g
+bes d g
+bes g d
+bes g \bar "||" g,
+bes d g
+g, c ees 
+g c ees
+g bes g
+fis f e
+ees! d c
+bes a g
+fis d g,
+bes d g
+g, c ees
+g c ees
+g bes g
+fis f e
+ees! d c
+bes a g
+fis d g,
+bes d g
+bes d g
+bes g d
+bes g g,
+bes d g
+bes d g
+bes g d
+bes g r
+R2. * 3 
+%
+%
+r4\arco r c,\ff
+c2 b4
+b2 bes4
+bes2 a4
+a2 a4
+a a a
+a2 bes4
+c d d
+g, r r
+R2. * 3 
+%
+
+r4 r c\f
+c2 b4
+b2 bes4
+bes2 a4
+a2 a4
+a a a
+a2 bes4
+c d d
+g,2.\fp ~
+g2.^\markup{"2."} ~
+g2.^\markup{"3."} ~
+g2.^\markup{"4."} ~
+g2.^\markup{"5."} ~
+g2.^\markup{"6."} ~
+g2.^\markup{"7."} ~
+g2.^\markup{"8."} ~
+g2 g4
+g2-> g4
+g2-> g4
+g2-> g4
+g2-> g4\p
+g\< g g
+g g\! g\f
+g g g
+g2. ~
+g2.^\markup{"2."} ~
+g2.^\markup{"3."} ~
+g2.^\markup{"4."} ~
+g2.^\markup{"5."} ~
+g2.^\markup{"6."} ~
+g2.^\markup{"7."} ~
+g2.^\markup{"8."} ~
+g4 r r
+g\ff g g
+g2.\fp ~
+g2. ~
+g4 r r \bar "|." 
+}

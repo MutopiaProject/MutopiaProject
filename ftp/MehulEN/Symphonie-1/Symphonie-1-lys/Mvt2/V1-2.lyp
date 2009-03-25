@@ -1,0 +1,252 @@
+﻿\version "2.11.49"      %Méhul - Symphonie 1 solm  %Violon1 - 2e mvt
+ 
+\relative c''{
+\clef treble
+
+
+
+
+\Btime \BAkey \BstringTempo  
+\partial 8 f,8\p 
+bes(\< a c bes)\!
+ees4(\> d8 c)\!
+bes( a g f)
+e( f16. ees32 d8) f
+bes(\< a c bes)\!
+ees4(\> d8 c)\!
+bes( aes g a)
+bes d bes \bar "||" \mark #1 d(          %%% A 8
+c) a-. g-. bes(
+a) f-. e-. a( ~
+a g16 a bes8) g
+f4( e8) d'(
+c) a-. g-. bes(
+a) f-. e-. a( ~
+a g16 a bes8) bes,
+bes4( a8) f'16.( g32)
+a8-. bes-. c-. d16.( e32)
+f4. g16.( a32)
+bes4( ~ bes16 g ees c)
+bes4( a8) f'
+ees d c bes
+a g f ees
+d( ees16 f) g( b c ees)
+d4( c8) f,
+bes(\< a c bes)\!
+ees4(\> d8 c)\!
+bes( aes g a)
+bes d bes \bar "||" \mark #2 r                %%% B 28
+r f'( e) c-.
+r d( cis) a( ~
+a g16 a bes8.) g16
+f4( e8) r
+r d'( c) r
+r bes( a4) ~
+a8 g16( a bes8) e,
+e4( f8) c'16.(-> b32)
+b4( c8) ees16.(-> d32)
+d4( ees8) ges16.(-> f32)
+f4. bes16.(-> a32)
+a4. f,8
+bes(\< a c bes)\!
+ees4(\> d8 c)\!
+bes( aes g a)
+bes d bes \bar "||" \mark #3 \BBkey r \BBstringTempo      %%% C 44
+bes4( ~ bes16 a bes c)
+des8( f) c( f)
+bes,( c16 des ees8) des
+des4( c8) f
+des( f) c( f)
+bes,4( ~ bes16 a bes c)
+des8. ces16 bes8 a
+a4( bes8) \bar "||" \mark #4 des(->                   %%% D 52
+c) f,(-> g) des'(->
+c) f,(-> g) des'(
+c) f( ~ f16 e f g)
+f4( e8) r
+R2 * 2
+%
+r8 aes,( d,) g(
+c,) r r4
+R2
+r8 g''( c,) f(
+bes,) r r bes'(
+e,4 f8) \bar "||" \mark #5 r                %%% E 64
+bes,4( ~ bes16 a bes c)
+des8( f c f)
+bes,( c16 des ees8) des
+des4( c8) f(
+des) ges16( f) c8 ges'16( f)
+bes,4( ~ bes16 a bes c)
+des8. ces16 bes8 a
+a4( bes8) \bar "||" \mark #6 des(->               %%% F 72
+c) f,(-> g) des'(->
+c) f,(-> g) des'(
+c) f( ~ f16 e f g)
+f4( e8) r
+f,4( ~ f16 e f g)
+aes4( ~ aes16 g aes bes)
+c4( ~ c16 b c d)
+ees4( ~ ees16 d ees f)
+g4( ~ g16 fis g a)
+bes4( ~ bes16 a bes c)
+d4( ~ d16 c d e)
+f4. \bar "||" \mark #7 f,8(      %%% G 84
+des! f c f)
+bes,4( ~ bes16 a bes c)
+des8( c16 des ees8) des
+des4( c8) r
+bes4( ~ bes16 a bes c)
+des8[ \times 2/3 {f16( ees des)]} c8 f32( ees des c)
+bes8 aes16( ges f8) a
+a4( bes8) \bar "||" \mark #8 r      %%% H 92
+\BAkey \BAstringTempo R2
+r16 f( g a bes c d bes)
+a( bes c d e f g a)
+g4( f8) r
+R2
+r4 r8 bes,
+f'( e g f)
+bes4( a8) r
+R2 * 3
+%
+%
+r4 r8 f,
+bes( a c bes)
+ees4( d8 c)
+bes( a g a)
+bes d bes \bar "||" \mark #9 \times 2/3 {f16\ff f f}             %%% I 108
+<a f'>8 \times 2/3 {f16 f f} <bes e>8 \times 2/3 {f16 f f}
+<f ees'!>4 r8 \times 2/3 {f16 f f}
+<a f'>8 \times 2/3 {f16 f f} <bes e>8 \times 2/3 {f16 f f}
+<f ees'!>4 r8 \times 2/3 {f16 f f}
+<f ees'>4 r8 \times 2/3 {f16 f f}
+<f ees'>4 r
+R2 * 4
+%
+%
+\tag #'partie \pageTurn
+r4 ees'8-> ~ \times 2/3 {ees16 des c}
+bes8( a) r4
+r4 r8 f(
+bes a c bes)
+ees4( d8 c)
+bes( a g f)
+e( ees d) f(
+bes a c bes)
+ees4( d8 c)
+bes( aes g a)
+bes d bes \bar "||" \mark #11 \times 2/3 {r16 f( g)}         %%% K 129
+\times 4/6 {a( g a bes a bes)} \times 4/6 {c( a bes c d e)}
+\times 4/6 {f( e f) r e( f)} \times 4/6 {r e( f g aes a)}
+bes4( ~ \times 4/6 {bes16 fis g d ees c)}
+bes4( a8) f'
+ees d c bes
+a g f ees
+\times 4/6 {d16( c d ees e f)} \times 4/6 {g( a bes b c ees)}
+d4( c8) c16.(\> b32)\!
+b4( c8) ees16.(\> d32)\!
+d4( ees8) ges16.(\> f32)\!
+f4. bes16.(\> a32)\!
+a4. f,16. f32
+bes16. bes32 a16. a32 c16. c32 bes16. bes32 
+ees16. ees32 ees16. ees32 d16. d32 c16. c32 
+bes16. bes32 a16. a32 g16. g32 f16. f32 
+e16. e32 ees16. ees32 d16. d32 f16. f32 
+bes16. bes32 a16. a32 c16. c32 bes16. bes32 
+ees16. ees32 ees16. ees32 d16. d32 c16. c32 
+bes16. bes32 a16. a32 g16. g32 a16. a32 
+bes16 a32 g f ees d c bes8 \bar "||" \mark #12 d'16. d32         %%% L 149
+c16. c32 a16. a32 g16. g32 bes16. bes32 
+a16. a32 f16. f32 e16. e32 a16. a32 
+a16. a32 g16. a32 bes16. bes32 g16. g32 
+f16. f32 f16. f32 e16. e32 d'16. d32 
+c16. c32 a16. a32 g16. g32 bes16. bes32 
+a16. a32 f16. f32 e16. e32 a16. a32 
+a16. a32 g16. a32 bes16. bes32 g16. g32 
+e16. e32 e16. e32 f8 \bar "||" \mark #13 e!32(\ff f g f)         %%% M 157
+<a f'>8 e32( f g f) <bes e>8 e,32( f g f)
+<f ees'!>8 r r e32( f g f) 
+<a f'>8 e32( f g f) <bes e>8 e,32( f g f)
+<f ees'!>8 r r e32( f g f) 
+<f ees'!>8 r r e32( f g f)
+<f ees'!>8 r r4
+r8 e'32(\f\> f g f)\! r4
+r8 e32(\mf\> f g f)\! r4
+r8 e32(\p\> f g f)\! r4
+r8 e32( f g f) r4
+r32 bes\f c d ees d c bes a g f ees d c bes a
+g f ees d ees f g a bes b c d ees e f ees
+d c d e f fis g a bes b c bes a bes c d
+g, a bes c bes a g a bes d c bes a g f ees
+d ees f g f ees d c bes a g a bes c d bes
+g f ees d ees f g a bes b c d ees e f ees
+d ees f g a bes c d ees d c bes a g f ees
+d ees f ees d ees c d bes8 \bar "||" \mark #14 d'(        %%% N 175
+c) a g bes(
+a) f e a ~
+a g16 a bes8 g
+f4( e8) d'(
+c) a g bes(
+a) f e a ~
+a g16 a bes8 e,
+e4( f8) f,
+bes a c bes
+ees4 d8 c
+bes a g f
+ees f16. ees32 d8 f'
+bes a c bes
+ees4 d8 c
+bes a g a
+bes32 bes,, c d ees f g a bes8 f16.\p g32
+bes( a g a) c( bes a bes) d( c bes a) bes( c d e)
+f( e f fis) g( fis g a) bes( a bes b) c( b c cis)
+d8( ~ d32 c!bes a) c( bes a g) f( ees d c)
+bes4( a8) c16.(\fp b32)
+b4( c8) ees16.(\fp d32)
+d4( ees8) ges16.(\fp f32)
+f4. ges16.(\fp f32)
+f4. f16.(\f\> ees32\!)
+ees4. f16.(\f\> ees32\!)
+ees4. f16.(\p\> ees32\!)
+ees8_\markup{\italic "cresc."} ees4 ees8 ~
+ees32 ees( d ees) ees8 ~ ees32( ees d ees) ees8 ~
+ees ees16.( d32) d8 d16.( c32)
+c8\ff c r c\p
+c4 r8 c
+c4 r
+r8 ees'16.( c32) a8 r
+r4 r8 f(\pp
+bes a c) f16.( ees32)
+d8 ees16.( c32) a8 f ~
+f4. a16.( c32)
+bes8 c16.( d32) ees8 r
+r4 r8 f,,16.( ees32)
+d8 ees16.( d32) c8 r
+R2 
+r4 r8 f\ff
+bes a c bes
+ees4 d8 c
+bes a g a
+bes r r4
+r8 bes(\p ees4)
+d8 r r4
+r8 bes( ees4)
+d8 r r <f c'>\ff
+<f d'> r r <c a'>
+<d bes'> r r <f c'>
+<f d'> r r <f, c' a'>
+<f d' bes'>4 r
+R2
+r8 f'\p bes r
+r4 <d,, bes'>
+<d bes'> r
+r8 a'( c a)
+bes4 r
+r8 a( c a)
+bes2
+bes4 bes
+bes2
+bes4 bes
+bes r \bar "|." \tag #'partie \pageBreak
+}

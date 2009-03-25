@@ -1,0 +1,298 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  %Basson2 - 1er mvt
+ 
+\relative c{
+\clef bass
+
+
+
+
+
+\Atime \Akey \AstringTempo  
+g'1\f ~
+g4 r r2
+R1 * 2 
+%
+fis1 ~
+fis4 r r2
+R1 * 2 
+%
+r2 r8 b( c d
+es d ees d c4) r
+R1 * 2 
+%
+g,8 fis g a bes a bes b
+c b c d ees e f fis
+g a bes g d4 d
+g, r r2
+r4 r8 d''( cis d ees d)       %%% SOURCE: manque liaison
+d4 r r2
+r4 r8 d( cis d ees d)
+d4 r8 ees( d ees f ees)
+ees4 r8 ees( d ees f ees)
+ees4 r8 ees( d ees f ees)
+ees4 r8 ees( d ees f ees)
+d4 r r2
+R1 * 7 
+%
+%
+%
+%
+%
+%
+r4 r8 d( cis d ees d)
+c!( bes a bes) a( g fis g)
+f!( ees d ees) d( c bes a)
+c( bes a g) d'4 d
+\mark #1 g1 ~                    %%%% A 36
+g4 r r r8 r32 d'( e fis
+g4) d8 bes g d bes g
+c2 r
+a'1 ~
+a4 r r r8 r32 c( d e
+f4) c8 a f c a f
+bes2 r
+des'1
+e4 r r r8 c32( d e! f
+g4) e8 c bes g e c
+f4 r r2
+f1\pp ~
+f ~
+f ~
+f ~
+f_\markup{\italic "cresc."} ~
+f ~
+f ~
+f ~
+f
+a2\ff a
+a a
+\mark #2 a4 r r2                         %%%%% B 59
+R1 * 10 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\clef tenor ees'1(
+d2) r
+R1 * 15
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\clef bass r4 r8 bes,\ff c d ees f
+g a bes d, ees f g a
+bes c d fis, g a bes d,
+ees f g b, c d ees c
+\mark #3 a4 r8 a'( bes a bes a)           %%%% C  91
+bes1
+a4 r8 a( bes a bes a)
+bes1
+a8 bes a g f r r4
+r8 bes a g f r r4
+r8 bes a g f r \clef tenor r d'!
+ees e f g a r r d,
+ees e f g a r r4
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageTurn
+\mark #4 des,1\f ~                   %%%% D  111
+des4 r r2
+R1 * 2
+%
+\clef bass a1 ~
+a4 r r2
+R1 * 2
+%
+\clef tenor r2 r8 d!( ees f
+ges f ges f ees4) r
+R1 * 2
+%
+\clef bass bes,8 a! bes c des c des d
+ees d ees f ges g aes a
+bes c des2 c4
+bes r r r8 f\p
+a r r f bes r r f
+a r r4 r r8 f
+a r r f bes r r f
+a r r4 r2
+des,4( c) r2
+ees4( des) r2
+bes'4( a) r2
+c4( a) r2
+r4 r8 des\mf des2:8
+bes8 r r4 r2
+R1 * 3
+%
+%
+r8 a( bes c des d ees e
+f4) r r2
+R1
+bes,2\ff \afterGrace bes,_(\trill {a32[ bes])}
+des1
+c8 e16( d! c8) g'16( f e4) r
+r8 e16( f g8) c,16( d e8) c-. d-. e-.
+\mark #5 f4. f8 f2:8             %%% E     147
+f4 r r2
+d'2\ff \afterGrace g,_(\trill {fis32[ g)]}
+f'1
+ees8 ees16( d c8) g'16( f ees4) r
+r8 g16( f ees8) ees16( d c4) r
+r8 fis,16( e d8) a'16( g fis4) r
+r8 fis16( g a8) d,16( e fis8) d e fis
+g4. g8 g2:8
+g4 r r2
+e'2\ff \afterGrace a,_(\trill {gis32[ a)]}      %%%SOURCE: ees
+g'1
+\clef tenor fis4 r fis2
+e1
+fis2 fis
+e1
+fis2 fis
+e1
+fis2 fis,         %%% SOURCE: fis f
+fis fis
+fis4 r r2
+R1 * 10
+%
+%
+%
+%
+%
+%
+%
+%
+%
+c'1(
+b2) r
+R1 * 7
+%
+%
+%
+%
+%
+%
+r4 r8 g' fis e d c
+\clef bass b4. a8 g fis e d
+c4. b8 a g fis e
+d4. e8 fis g a fis
+g4 r8 g'( a b c d
+e d c b a4) d,
+g r8 g( a b c d
+e d c b a4) d,
+g r8 g,\ff a b c d
+e fis g b, c d e fis
+g a b dis, e fis g b,
+c d e gis, a b c a
+fis4 r8 fis'( g fis g fis)       %%% SOURCE: fis r f g f g f
+g1
+fis4 r8 fis( g fis g fis)
+\mark #7 g1 ~                %%%% G 202
+g4 r r2
+R1 
+r2 bes(\p 
+a g 
+fis4) r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+g1\f ~
+g4 r r2
+R1 * 2
+%
+fis1 ~
+fis4 r r2
+R1 * 4
+%
+%
+%
+f8 e f g a f g a
+bes a bes c d bes c d
+ees r r4 r2
+R1 * 3
+%
+%
+bes,8\f a bes c d c des d
+ees d ees f g fis g a
+bes c d bes g4 d
+g, r r2
+R1
+\clef tenor r4 r8 d''(\p cis d ees d)
+d2. fis4
+g r8 d( cis d ees d)
+d2. fis4
+g r8 d( cis d ees d)
+d2. fis4
+g g,2. ~
+g1_\markup{\italic "cresc."} ~
+g ~
+g \clef bass
+\mark #8 g,4.\ff g8 bes4. bes8              %%% H 246
+cis4. cis8 d4. d8
+ees4. ees8 g4. g8
+bes4. bes8 cis4. cis8
+e4 e e r
+e e e r
+d d d r
+d, d d d
+g, r r2
+R1
+\clef tenor r4 r8 d''(\p cis d ees d)
+d2. fis4
+g r8 d( cis d ees d)
+d2. fis4
+g r8 d( cis d ees d)
+d2. fis4
+g g,2. ~
+g1_\markup{\italic "cresc."} ~
+g ~
+g 
+\clef bass g,4.\ff g8 bes4. bes8
+cis4. cis8 d4. d8
+ees4. ees8 g4. g8
+bes4. bes8 cis4. cis8
+e4 e e r
+e, e e r
+d d d r
+d d d d
+e e r e
+d d d d
+e e r e
+d d d d
+e e r e 
+d d d d
+g,2 g
+g g4 g
+bes'2 bes
+bes bes4 bes
+bes bes bes bes
+bes1 ~
+bes2 r \bar "|." 
+}
+

@@ -1,0 +1,297 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm 		Flute1 - 1er mvt
+
+\relative c''{
+\clef treble
+
+
+
+
+
+\Atime \Akey \AstringTempo  
+R1
+bes'1\f ~
+bes4 r r2
+R1 * 2 
+%
+c1 ~
+c4 r r2
+R1
+r2 d
+c4r r2
+c4. d8 ees4. e8
+d4 r r2
+R1
+ees4. ees8 c4 a
+bes g d fis'
+g r r2
+r4 r8 d( cis d ees d)
+d4 r r2
+r4 r8 d( cis d ees d)
+d4 r r2
+r4 b r2
+r4 c r2
+r4 cis r2
+r4 d r2
+R1 * 3 
+%
+%
+r4 r8 d(\pp cis d ees d)
+d1 ~
+d4 r8 d( cis d ees d)
+d1 ~
+d4 r r2
+R1
+r4 r8 ees( d c bes a
+c bes a g d'4) fis
+\mark #1 g r4 r2           %%%% A 36
+bes,1 ~
+bes4 r r2
+R1 * 2 
+%
+ees1(
+c4) r r2
+R1 * 2 
+%
+des1(
+bes4) r r2
+R1 * 7
+%
+%
+%
+%
+%
+%
+r2 r4 e8._\markup{\italic "dolce"} e16
+e4_\markup{\italic "cresc."} f r ges8. ges16
+ges4 f r e8. e16
+f4 r8 r32 c(\ff d e f4) r8 r32 c( d e
+f4) r8 r32 c( d e f4) r8 r32 c( d e
+\mark #2 f4) r r2                   %%%%% B 59
+R1 * 3
+%
+%
+r4 r8 f,(\p g a bes c)
+d1( ~
+d4 e f g
+c, d ees c
+bes) r r2
+R1 * 4
+%
+%
+%
+f'4(\> d8)\! r r2
+g4(\> ees8)\! r r2
+ees4( c8) r r2
+d4( bes8) r r2
+r4 r8 a-| bes-| c-| d-| ees-|
+f4( d8) r r2
+r4 r8 a-| bes-| c-| d-| ees-|
+f4( d8) r r2
+R1 * 5
+%
+%
+%
+\tag #'partie \pageBreak
+r2 r8 bes( c d
+ees f g f ees2)
+d4 r8 bes,\ff c d ees f
+g a bes d, ees f g a
+bes c d fis, g a bes d,
+ees f g b, c d es c
+\mark #3 a4 r8 c'( des c des c)            %%%% C 91
+des1
+c4 r8 c( des c des c)
+des1
+c8 r r4 r2
+R1
+r2 r4 r8 f
+ees des c bes a r r f'
+ees des c bes a r r4
+R1 * 7
+%
+%
+%
+%
+%
+%
+r4 r8 f(\p g a bes c)
+d1( ~
+d4 e f g
+c, d ees c)
+\mark #4 bes r4 r2         %%%% D 111
+des1\ff ~
+des4 r r2
+R1 * 2
+%
+ees1 ~
+ees4 r r2
+R1
+r2 f2
+ees4 r r2
+ees4. f8 ges4. g8
+f4 r r2
+R1
+ges2 ees
+des4 bes f a
+bes r r2
+r8 f\p a4 r8 f bes4
+r8 f f'4 r2
+r8 f, a4 r8 f bes4
+r8 f f'4 r2
+r bes,4( a)
+r2 c4( bes)
+r2des4( c)
+r2 ees4( c)\<
+bes r\! r2
+R1 * 5
+%
+%
+%
+%
+r4 r8 a-|\mf c2:8
+c8 r r4 r2
+r r8 bes\f f des'
+bes4 r r8 aes g f
+\afterGrace e1(\trill {d32[ e])}
+g4 r r2
+\mark #5 f'2 \afterGrace f,2(\trill {e32[ f])}     %%% E 147
+aes1
+g8 b16( a g8) d'16( c b4) r4
+r8 d16( c b8) b16( a g4) r4
+r2 r8 c g ees'
+c4 r r8 bes a g
+\afterGrace fis1(\trill {e32[ fis])}
+a4 r r2
+g'2 \afterGrace g,2(\trill {fis32[ g])}
+bes1
+a8 cis16( b a8) e'16( d cis4) r4
+r8 e16( d cis8) cis16( b a4) r4
+R1
+bes1
+a2 r
+bes1
+a2 r
+bes1
+a4 r8 r32 a( b cis d4) r8 r32 a( b cis
+d4) r8 r32 a( b cis d4) r8 r32 a( b cis
+d4) r r2
+R1 * 3
+%
+%
+r4 r8 d,(\p e fis g a)
+b1( ~
+b4 cis d e
+a, b c! a
+g) r r2
+R1 * 4
+%
+%
+%
+d'4( b8) r r2
+e4( c8) r r2
+d4( a8) r r2
+b4( g8) r r2
+r4 r8 fis-| g-| a-| b-| c-|
+d4( b8) r r2
+r4 r8 fis-| g-| a-| b-| c-|
+d4( b8) r r2
+R1 * 5
+%
+%
+%
+%
+r2 r8 g( a b
+c d e d c2)
+b4 r8 g\ff a b c d
+\ottava #+1 e fis g b, c d e fis
+g a b dis, e fis g b,
+c d e gis, a b c a 
+fis4 d' \ottava #0 r2
+r4 r8 cis e cis e cis
+d4 r r2
+\mark #7 r4 r8 cis e cis e cis         %%%%  G 202
+e1 ~
+e ~
+e4 r r2
+r4 r8 cis-| e-| cis-| e-| cis-|
+d4 r r2
+R1 * 3
+%
+%
+r4 r8 d,(\p e fis g a)
+b1( ~
+b4 cis d e
+a, b c a
+g) r r2
+bes1 ~
+bes4 r r2
+R1 * 2
+%
+c1 ~
+c4 r r2
+R1 * 7
+%
+%
+%
+%
+%
+\tag #'partie \pageBreak 
+\ottava #+1 des8 c des d ees d ees e
+f e f fis g fis g a
+bes r8 r4 r2
+r8 f ees d cis d cis c
+bes a g bes d4 fis
+g \ottava #0 r r2
+R1 * 5
+%
+%
+%
+%
+r4 r8 d(\mf cis d ees d)
+d2. fis4
+g r r8 ees ees( d)
+d4 r r2
+R1 * 2
+%
+\mark #8 r8 g,,\ff bes d g bes d g         %%% H 246
+bes2. r4
+r8 g,, bes ees g bes ees g 
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d) 
+bes4 r r2
+R1 * 5
+%
+%
+%
+%
+r4 r8 d(\mf cis d ees d)
+d2. fis4
+g r r8 ees_\markup{\italic "cresc."} ees( d)
+d4 r r8 ees ees( d)
+d4 r8 d c( ees) ees( d)
+d( g) g( fis) fis( a) a( g)
+g\ff g,, bes d g bes d g
+bes2. r4
+r8 g,, bes ees g bes ees g 
+bes2. r4
+r r8 g,( fis g a g)
+bes4 r8 g( fis g a g)
+bes4 r8 d( cis d ees d)
+a4 r8 d( cis d ees d) 
+cis4 r8 g'( fis g a g)
+d4 r8 d( cis d ees d)
+cis4 r8 g'( fis g a g)
+d4 r8 d( cis d ees d)
+cis4 r8 g'( fis g a g)
+d4 r8 d( cis d ees d)
+g,2 g'
+g g4 g
+g2 g
+g g4 g
+g g g g
+g1 ~
+g2 r \bar "|." 
+}

@@ -1,0 +1,297 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm %Cor2 - 1er mvt
+
+\relative c''{
+\clef treble
+
+
+ 
+ 
+
+\Atime \AstringTempo  					%%% \Akey non utilisé, saisie en ut
+c1\f ~
+c4 r r2
+R1 * 2 
+%
+e,1 ~
+e4 r r2
+r4 e8. e16 e4 e
+e e r2
+R1 * 25	%% +2 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{r4 r8 ees(^"Flûtes" d c bes a | c bes a g d'4) <a fis'>} \unset fontSize} \\ {R1 * 2 } >>
+	 \tag #'score {R1 * 2 } >>
+\mark #1  c'1\f ~         %%%% A 36
+c4 r r2
+R1 * 2 
+%
+g1 ~
+g4 r r2
+R1 * 2 
+%
+c1 ~
+c4 r r2
+r4 d8. d16 d4 d
+g, r r2
+R1 * 4
+%
+%
+%
+g8._\markup{\italic "cresc."} g16 g4 r2
+g8. g16 g4 r2
+g8. g16 g4 r2
+g8. g16 g4 r2
+g8. g16 g4 r2
+g2\ff g
+g g
+\mark #2 g4 r r2                 %%%%% B 59
+R1 * 27	%% +4 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c''' 
+			{d4^"Flutes" r8 bes, c d ees f | g a bes d, ees f g a | bes c d fis, g a bes d, | ees f g b, c d ees c} 
+			\unset fontSize} \\ {R1 * 4} >>
+	 \tag #'score {R1 * 4} >>
+\mark #3 g4\ff g2. ~          %%%% C 91
+g4 r r2
+g4 g2. ~
+g4 r r2
+g2 g
+g g
+g g
+g r
+R1 * 12 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #4 c,1\f ~         %%%% D 111
+c4 r r2
+r4 g'8. g16 g4 g
+g g r2
+g1 ~
+g4 r r2
+r4 g8. g16 g4 g
+g g r2
+R1 * 16 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+c,1\f
+R1
+g'1\f
+R1
+c1\f
+R1
+g1\f
+R1
+c,4.\f c8 c2:8
+c4 r r2
+R1 * 2
+%
+\mark #5 g'4. g8 g2:8             %%% E 147
+g4 r r2
+R1 * 2
+%
+d'4. d8 d2:8
+d4 r r2
+R1 * 2
+%
+c4. c8 c2:8
+c4 r r2
+R1 * 2
+%
+e,2\ff e,
+R1
+e'2 e,
+R1
+e'2 e,
+R1
+e'2 e
+e e
+e4 r r2
+R1 * 27	%% °4 
+%
+\tag #'partie \pageTurn
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+<< \tag #'partie << {R1 * 4} \\ {\set fontSize = #-4 \transpose c c \relative c'' 
+			{\stemUp b4^"Violons" r8 g, a b c d | e fis g b, c d e fis | g a b dis, e fis g b, | c d e gis, a b c a  
+			\stemNeutral } \unset fontSize} >>
+	 \tag #'score {R1 * 4} >>
+e4\ff e2. ~
+e4 r r2
+e4 e2. ~
+\mark #7  e4 r r2             %%% G 202
+R1 * 12
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+c'1\f ~
+c4 r r2
+R1 * 2 
+%
+e,1 ~
+e4 r r2
+r4 e8. e16 e4 e
+e e r2
+R1 * 23 
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+\mark #8  a2\f r       %%% H 246
+a r
+a r
+a r
+a4 a a r
+a a a r
+a a a r
+e e e e
+a r r2
+R1 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+a4.\ff a8 a4. a8
+a1
+a4. a8 a4. a8
+a1
+a4 a a r
+a a a r
+a a a r
+e e e e
+a a r a
+a a e e
+a a r a 
+a a e e
+a a r a
+a a e e
+c'2 c 
+c c4 c
+c2 c
+c c4 c
+c c c c
+c1 ~
+c2 r \bar "|." 
+}

@@ -1,0 +1,252 @@
+﻿\version "2.12.1"      %Méhul - Symphonie 1 solm  		Flute1 - 2e mvt
+ 
+
+\relative c''{
+\clef treble
+
+
+
+\Btime \BAkey \BstringTempo  
+\partial 8 r8 
+R2 * 3
+%
+%
+r4 r8 f(\p
+bes\< a c bes\!
+ees4\> d8 c)\!
+bes( aes g a
+bes) d-. bes-. \bar "||" \mark #1 r          %%% A 8
+R2 * 3
+%
+%
+r4 r8 d(\p
+ c) r r bes(
+a) r r a( ~
+a g16 a bes8) e,
+e4( f8) r
+R2 * 3
+%
+%
+r4 r8 f'\pp
+ees d c bes
+a g f ees
+d( ees16 f g b c ees
+d4 c8) r
+R2 * 3
+%
+%
+r4 r8 \bar "||" \mark #2 r                %%% B 28
+R2 * 4
+%
+%
+%
+r8 d(\p c) r
+r bes( a) r
+R2 * 5
+%
+%
+%
+%
+r4 r8 f(\p
+bes a c bes
+ees4 d8 c
+bes aes g a
+bes d bes) \bar "||" \mark #3 \BBkey r \BBstringTempo      %%% C 44
+R2 * 7
+%
+%
+%
+%
+%
+%
+r4 r8 \bar "||" \mark #4 r                   %%% D 52
+R2 * 11
+%
+%
+%
+%
+%
+%
+%
+%
+%
+%
+r4 r8 \bar "||" \mark #5 r                %%% E 64
+R2 * 6	%% +1 citation
+%
+%
+%
+<< \tag #'partie << {\set fontSize = #-4 \transpose c c \relative c'' 
+			{des8.^"Violon 1" ces16 bes8 a | a4( bes8)} \unset fontSize} \\ {R2 | r4 r8} >>
+	 \tag #'score {R2 | r4 r8} >>
+	\bar "||" \mark #6 des(            %%% F 72
+c b-> c des
+c b-> c des)
+(c f ~ f16 e f g
+f4 e8) r
+R2 * 6
+%
+%
+%
+%
+%
+r4 r8 bes( ~
+bes16 a! bes c) a8 \bar "||" \mark #7 r      %%% G 84
+R2
+bes4( ~ bes16 a! bes c)
+des8( c16 des ees8 des)
+des4( c8) r
+R2
+des8[ \times 2/3 {f16( ees des)]} c8[ f32( ees des c)]
+bes8 aes16( ges) f8 a! 
+a!4( bes8) \bar "||" \mark #8 r      %%% H 92
+\BAkey \BAstringTempo R2
+R2 * 6
+%
+%
+%
+%
+%
+r4 r8 f(\p
+bes) f( c') f,(
+d') f,( ees') r
+R2 * 5
+%
+%
+%
+%
+r4 r8 \bar "||" \mark #9 r             %%% I 108
+R2 * 6
+%
+%
+%
+%
+%
+r4 ees8(\< ~ \times 2/3 {ees16[\> des c]}
+bes8\! a) r4
+r4 ees'8( ~ \times 2/3 {ees16[\> des c]}
+bes8\! a) r4
+R2 * 10
+%
+%
+%
+%
+%
+%
+%
+%
+\tag #'partie \pageBreak
+r4 r8 \bar "||" \mark #11 r         %%% K 129
+R2 * 3
+%
+%
+r4 r8 f'
+ees d c bes
+a g f es
+\times 4/6 {d16([ c d ees e f]} \times 4/6 {g[ a bes b c ees)]}
+d4( c8) r
+R2 * 3
+%
+%
+r4 r8 f,16. f32
+bes16. bes32 a16. a32 c16. c32 bes16. bes32
+ees16. ees32 ees16. ees32 d16. d32 c16. c32
+bes16. bes32 a16. a32 g16. g32 f16. f32
+e16. e32 ees16. ees32 d16. d32 f16. f32
+bes16. bes32 a16. a32 c16. c32 bes16. bes32
+ees16. ees32 ees16. ees32 d16. d32 c16. c32
+bes16. bes32 a16. a32 g16. g32 a16. a32
+bes16 a32 g f ees d c bes8 \bar "||" \mark #12 r         %%% L 149
+R2 * 7
+%
+%
+%
+%
+%
+%
+r4 r8 \bar "||" \mark #13 r         %%% M 157
+f''4\ff e
+ees! r
+f e
+ees! r
+ees r
+ees r
+R2
+r4 r8 e,32(\mf f g f)
+bes8( a) r e32( f g f)
+des'8( c) r4
+R2 * 7
+%
+%
+%
+%
+%
+%
+r4 r8 \bar "||" \mark #14 r         %%% N 175
+R2 * 7
+%
+%
+%
+%
+%
+%
+r4 r8 f,
+bes a c bes
+ees4 d8 c
+bes a g f
+ees f16. ees32 d8 r
+R2 * 7
+%
+%
+%
+%
+%
+%
+r4 r8 c'16.(\fp b32)
+b4( c8) ees16.(\fp d32)
+d4( ees8) r
+r des16.( c32) c8 r
+r des16.( c32) c8 r
+R2
+r4 r8 f,16.( ees32)
+ees2_\markup{\italic "cresc."} ~
+ees ~
+ees8 ees16.( d32) d8 d16.( c32)
+c8\ff c r4
+R2
+r8 ees'16.(\p c32) a8 r
+R2 * 5
+%
+%
+%
+%
+r4 r8 f(
+bes) f( c') f,(
+d') f,( f') r
+R2 * 5
+%
+%
+%
+%
+r8 f,( bes) r
+R2
+r8 f( bes) r
+R2 * 2
+%
+r8 d(\f f) r
+R2
+r8 d( f) r
+r4 r8 ees(\p
+d) r r4
+R2
+r8 f,( bes) f(
+bes4) r
+r a8( c
+bes4) r
+r a8( c
+bes4) r
+R2
+r8 f,( bes d
+f) bes d f
+bes4 r \bar "|." 
+}
