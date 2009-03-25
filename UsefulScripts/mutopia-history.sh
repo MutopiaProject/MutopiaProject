@@ -15,26 +15,19 @@ do
    LYDIR=`echo "$RDFNAME" | sed 's/\.rdf$/-lys/'`
    LOGFILE=`echo "$RDFNAME" | sed 's/\.rdf$/\.log/'`
 
-   # Generate temporary log file
+   # Generate log file
+   echo "Mutopia change history for $TITLE" > "$LOGFILE"
+   echo "Note: only changes made since 2007-04-08 are listed" >> "$LOGFILE"
+   echo "" >> "$LOGFILE"
+
    if [ -f "$LYFILE" ]; then
       echo "Found .ly: $LYFILE"
-      svn log --incremental -rHEAD:80 "$LYFILE" > "$LOGFILE.TEMP"
+      svn log --incremental -rHEAD:80 "$LYFILE" >> "$LOGFILE"
    elif [ -d "$LYDIR" ]; then
       echo "Found -lys dir: $LYDIR"
-      svn log --incremental -rHEAD:80 "$LYDIR" > "$LOGFILE.TEMP"
+      svn log --incremental -rHEAD:80 "$LYDIR" >> "$LOGFILE"
    else
       echo "WARNING: Unable to find .ly files for RDF: $RDFNAME"
    fi
-
-   # Create final log file if temporary file has non-zero length
-   if [ -s "$LOGFILE.TEMP" ]; then
-      echo "Mutopia change history for $TITLE" > "$LOGFILE"
-      echo "Note: only changes made since 2007/Apr/08 are listed" >> "$LOGFILE"
-      echo "" >> "$LOGFILE"
-      cat "$LOGFILE.TEMP" >> "$LOGFILE"
-   fi
-
-   # Remove temporary logfile
-   rm "$LOGFILE.TEMP"
 done
 
