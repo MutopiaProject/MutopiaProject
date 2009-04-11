@@ -1,36 +1,35 @@
-#(ly:set-option 'old-relative)
 \header{
 	title = "Old 100th"
 	meter = "88 88"
 	composer = "Genevan Psalter 1551"
 	enteredby = "Peter Chubb"
 	source = "Geneva Psalter 1551"
-	mutopiacomposer = "attributed to L. Bourgeous (1510--1561)"
+
+	mutopiatitle = "Old 100th (original version)"
+	%mutopiacomposer = "attributed to L. Bourgeous (1510--1561)"
+	mutopiacomposer = "Anonymous"
+	mutopiainstrument = "Voice (SATB)"
+	mutopiastyle = "Hymn"
 	date = "1551"
 	copyright = "Public Domain"
+	moreInfo = "<p>This tune is attributed to L. Bourgeous (1510-1561).</p><p>For some information on its history, see <a href=\"http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm\">http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm</a> and especially appendix 9.</p>"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
-	lastupdated = "2004/Apr/11"
 
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2004/04/11-194"
+ footer = "Mutopia-2009/04/11-194"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-%{
-	For some information on the history of this tune, see 
-	http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm
-	and especially appendix 9.
-%}
-\version "2.1.33"
+\version "2.12.0"
 
-oneline=\notes{
+oneline={
 	\skip 1
 	\skip 2*8
 	\skip 1
 	\bar "||"
 }
 
-global = \notes{
+global = {
        \key g \major
        \time 4/2
        \partial 1
@@ -40,7 +39,7 @@ global = \notes{
        \oneline
 }
 
-sop= \notes\relative c'' {
+sop= \relative c'' {
 	g1 |
 	g2  fis e d |
 	g1 a |
@@ -63,7 +62,7 @@ sop= \notes\relative c'' {
 }
 
 
-alt=\notes\relative c'{
+alt = \relative c'{
 	d1 |
 	d2 d b b |
 	b1 d |
@@ -85,7 +84,7 @@ alt=\notes\relative c'{
 	g1
 }
 
-ten = \notes\relative c' {
+ten = \relative c' {
 	b1 |
 	b2 a g fis |
 	g1 fis |
@@ -108,7 +107,7 @@ ten = \notes\relative c' {
 }
 
 
-bass=\notes\relative c'{
+bass = \relative c' {
 	g1 |
 	g2 d e b |
 	e1 d |
@@ -134,15 +133,15 @@ bass=\notes\relative c'{
 upper=\context Staff = "upper" <<
 	\clef "treble"
 	\global
-	\context Voice = sop {\voiceOne \sop}
-	\context Voice = alto {\voiceTwo \alt}
+	\context Voice = "sop" {\voiceOne \sop}
+	\context Voice = "alto" {\voiceTwo \alt}
 >>
 
 lower=\context Staff = "lower" <<
 	\clef "bass"
 	\global
-	\context Voice = tenor {\voiceOne \ten}
-	\context Voice = bass {\voiceTwo \bass}
+	\context Voice = "tenor" {\voiceOne \ten}
+	\context Voice = "bass" {\voiceTwo \bass}
 >>
 
 \score {
@@ -150,16 +149,20 @@ lower=\context Staff = "lower" <<
 		\upper
 		\lower
 	>>
-	\paper{
+	\layout{
 		indent = 0.0\pt
 		\context {
-		    \StaffContext
+		    \Staff
 		    \remove "Time_signature_engraver"
 		}
 	}
-	\midi {
-		\tempo 2 = 120
-	}
+	
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 120 2)
+      }
+    }
+
+
 }
-
-
