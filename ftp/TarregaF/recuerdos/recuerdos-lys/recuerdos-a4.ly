@@ -42,21 +42,21 @@ padMarkup = #(define-music-function (parser location padding) (number?)
 {
 	%Mutopia headers
 	mutopiatitle = "Recuerdos de la Alhambra"
-	mutopiacomposer = "F. Tárrega (1852-1909)"
+	mutopiacomposer = "TarregaF"
 	mutopiainstrument = "Guitar"
 	source = "Orfeo Tracio Edition"
 	style = "Romantic"
 	maintainer = "Stewart Holmes"
 	lastupdated = "2006/August/21"
 
-	dedication = "Hommage á l'eminent artiste Alfred Cottin"
+	dedication = "Hommage à l'éminent artiste Alfred Cottin"
 	title = "Recuerdos de la Alhambra"
 	composer =  "Francisco Tárrega (1852-1909)"
 	
-	copyright = \markup { \teeny \center-align { "Copyright © 2006" "Licensed under the Creative Commons Attribution-ShareAlike 2.5 License" "http://creativecommons.org/licenses/by-sa/2.5." } }
+	copyright = \markup { \teeny \center-align { "Copyright © 2009" "Licensed under the Creative Commons Attribution-ShareAlike 3.0 License" "http://creativecommons.org/licenses/by-sa/3.0." } }
 	tagline = \markup { \teeny \center-align { "Typeset by Stewart Holmes" "Music from The Mutopia Project (www.mutopiaproject.org)" "Engraving by Lilypond (www.lilypond.org)" } }
-	footer = "Mutopia-2006/10/18-810"
-	%copyright = "Creative Commons Attribution-ShareAlike 2.5"
+	footer = "Mutopia-2009/05/09-810"
+	mutopiacopyright = "Creative Commons Attribution-ShareAlike 3.0"
 	
 	printlink = "http://www.stewartholmes.com/publishing/viewpiece.php?piece_id=1"
 }
