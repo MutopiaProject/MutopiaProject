@@ -11,7 +11,7 @@
   subtitle = "March"
   composer = "John Philip Sousa"
   mutopiacomposer = "SousaJP"
-  instrument = "Solo & 1st Bb Clarinet"
+  instrument = "Eb Baritone Saxophone"
   date = "1908"
   source = "John Church, 1908"
   style = "March"
@@ -27,10 +27,10 @@
 
 \score {
   \new Staff { 
-    \set Staff.midiInstrument = "clarinet" 
+    \set Staff.midiInstrument = "baritone sax"
     \override Score.RehearsalMark #'break-align-symbol = #'time-signature
     \mark "Marziale"
-    \clarinetInBbSOne
+    \baritoneSaxophoneInEb
   }
   
   \layout {}
