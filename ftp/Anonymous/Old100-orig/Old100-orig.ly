@@ -12,7 +12,7 @@
 	mutopiastyle = "Hymn"
 	date = "1551"
 	copyright = "Public Domain"
-	moreInfo = "<p>This tune is attributed to L. Bourgeous (1510-1561).</p><p>For some information on its history, see <a href=\"http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm\">http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm</a> and especially appendix 9.</p>"
+	moreInfo = "<p>This tune is attributed to L. Bourgeous (1510-1561).</p><!--<p>For some information on its history, see <a href=\"http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm\">http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm</a> and especially appendix 9.</p>-->"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
 
