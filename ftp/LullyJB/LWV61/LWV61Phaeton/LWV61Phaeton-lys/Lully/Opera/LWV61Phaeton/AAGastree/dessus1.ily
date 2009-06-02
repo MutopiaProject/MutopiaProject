@@ -1,0 +1,7 @@
+\includeNotes "dessus-a"
+s4*0^"Hautbois" \includeNotes "dessus-b1"
+s4*0^"Tous" \includeNotes "dessus-c"
+s4*0^"Hautbois" \includeNotes "dessus-d1"
+s4*0^"Tous" \includeNotes "dessus-e"
+s4*0^"Hautbois" \includeNotes "dessus-f1"
+s4*0^"Tous" \includeNotes "dessus-g"

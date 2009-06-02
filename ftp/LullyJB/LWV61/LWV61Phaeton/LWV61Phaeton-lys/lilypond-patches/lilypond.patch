@@ -1,0 +1,41 @@
+diff --git a/lily/page-turn-page-breaking.cc b/lily/page-turn-page-breaking.cc
+index 97b5846..ce2de75 100644
+--- a/lily/page-turn-page-breaking.cc
++++ b/lily/page-turn-page-breaking.cc
+@@ -125,12 +125,7 @@ Page_turn_page_breaking::calc_subproblem (vsize ending_breakpoint)
+       int p_num = robust_scm2int (book_->paper_->c_variable ("first-page-number"), 1);
+       if (start > 0)
+         {
+-	  /* except possibly for the first page, enforce the fact that first_page_number_
+-	     should always be even (left hand page).
+-	     TODO: are there different conventions in right-to-left languages?
+-	  */
+ 	  p_num = state_[start-1].first_page_number_ + state_[start-1].page_count_;
+-	  p_num += p_num % 2;
+         }
+ 
+       Line_division min_division;
+@@ -252,10 +247,6 @@ Page_turn_page_breaking::make_pages (vector<Break_node> const &soln, SCM systems
+     {
+       for (vsize j = 0; j < soln[i].page_count_; j++)
+ 	lines_per_page.push_back (soln[i].system_count_[j]);
+-
+-      if (i + 1 < soln.size () && (soln[i].first_page_number_ + soln[i].page_count_) % 2)
+-	/* add a blank page */
+-	lines_per_page.push_back (0);
+     }
+ 
+   /* this should only actually modify first-page-number if
+diff --git a/scm/layout-page-layout.scm b/scm/layout-page-layout.scm
+index ffd6d63..5e195b6 100644
+--- a/scm/layout-page-layout.scm
++++ b/scm/layout-page-layout.scm
+@@ -87,7 +87,7 @@
+ 	 ; the system heights are estimated, we aren't using skyline distances
+ 	 ; yet, etc. If we overstretch because of underestimation, the result
+ 	 ; is very bad. So we stick in some extra space, just to be sure.
+-	 (buffer (/ height 10.0))
++	 (buffer 0);(/ height 10.0))
+ 	 (total-system-height (+ (apply + (map height-estimate systems))
+ 				 (total-padding systems)))
+ 	 (height-left (- height total-system-height buffer)))
