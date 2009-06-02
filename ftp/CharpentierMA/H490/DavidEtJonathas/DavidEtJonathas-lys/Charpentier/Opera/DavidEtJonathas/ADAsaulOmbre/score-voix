@@ -1,0 +1,7 @@
+\score {
+  \new Staff \withLyrics <<
+    \keepWithTag #'didascalies \global
+    \includeNotes "saul-ombre"
+  >> \includeLyrics "paroles"
+  \layout { }
+}

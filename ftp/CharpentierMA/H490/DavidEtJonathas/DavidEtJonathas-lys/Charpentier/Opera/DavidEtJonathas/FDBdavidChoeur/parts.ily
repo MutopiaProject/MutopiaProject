@@ -1,0 +1,7 @@
+\piecePartSpecs #`((dessus1 #:score "score-dessus1")
+                   (dessus2 #:score "score-dessus2")
+                   (haute-contre)
+                   (taille)
+                   (basse)
+                   (voix)
+                   (basse-continue #:score "score-basse-continue"))

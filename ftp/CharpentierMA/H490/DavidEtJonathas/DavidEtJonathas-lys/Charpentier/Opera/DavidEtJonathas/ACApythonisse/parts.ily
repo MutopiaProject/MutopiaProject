@@ -1,0 +1,8 @@
+\piecePartSpecs #`((dessus1 #:tag-global ())
+                   (dessus2 #:tag-global ())
+                   (haute-contre #:tag-global ())
+                   (taille #:tag-global ())
+                   (basse #:tag-global ())
+                   (basse-continue #:score "score-basse-continue")
+                   (voix)
+                   (silence #:tag-global ()))
