@@ -1,0 +1,343 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+bassMvtIII = \relative c
+{
+  \key ees \major
+  \clef bass
+  r4 |
+  R2.*13 |
+  r4 bes-. bes-._\mSempreStaccato |
+  \repeat unfold 3 {bes-. bes-. bes-.} |
+  bes-. bes-. aes'-. |
+  g-. d-. d-. |
+  ees-. d-. c-. |
+  bes-. d'-. c-. |
+  bes-. d-. c-. |
+  bes-. bes-. c-. |
+  d-. a-. b-. |
+  c-. g-. a-. |
+  bes-. f-. g-. |
+  ees-. c-. f-. |
+  bes,-. bes-. bes-. |
+  bes-. ces-. bes-. |
+  ces-. bes-. ces-. |
+
+  \repeat volta 2
+  {
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    bes-.\semprePP ces-. bes-. |
+    ces-. ces-. c-. |
+    c-. des-. c-. |
+    des-. c-. des-. |
+    c des c |
+    des des c |
+    c des des |
+    des d d |
+    d ees ees |
+    ees e e |
+    \repeat unfold 4 {f r r |}
+    \repeat unfold 2 {c r r | f r r |}
+    R2.*2 |
+    c2.-> |
+    f4-. a-. c-. |
+    R2.*2 |
+    d,2.-> |
+    g4( bes) g-. |
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    fis-.\semprePP d-. c'-. |
+    bes-. g-. ees-. |
+    d-. a'-. fis-. |
+    g-. bes-. ees-. |
+    d-. cis-. d-. |
+    a-. bes-. fis-. |
+    g-. d-. ees-. |
+    d-. ees-. cis-. |
+    \repeat unfold 6 {d-. cis-.} |
+    d-. r r |
+    R2.*3 |
+    bes4-.\pp bes-. bes-. |
+    \repeat unfold 11 {bes-. bes-. bes-. |}
+    bes d' c |
+    bes d c |
+    bes bes c |
+    d a b |
+    c g a |
+    bes f g |
+    ees c f |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    bes,-.\< c-. d-. |
+    \crescHairpin
+    ees\ff g bes |
+    ees, g bes |
+    ees ees ees |
+    ees ees ees |
+    ees( f8 ees d c) |
+    bes2. |
+    aes\sf |
+    g4( bes) g-. |
+    f( bes) f-. |
+    ees-. g-. bes-. |
+    aes2.\sf |
+    g4( bes) g-. |
+    f( aes) f-. |
+    ees-. aes-. ees-. |
+    des2.\sf |
+    c4( ees) c-. |
+    ees-. bes-. ees-. |
+    aes,-. aes'-. aes,-. |
+    g'-. g,-. g'-. |
+    aes,-. f'-. aes,-. |
+    bes-. g'-. bes,-. |
+    bes'-. bes,-. bes'-. |
+    ees,-. g'2-.\sf |
+    ees4-. bes2-.\sf |
+    g4-. ees2-.\sf |
+    bes4 r aes(\trill |
+    g) r r |
+    R2. |
+    r4 bes\p bes |
+    bes bes bes |
+    ees-. g'2\sf |
+    ees4 bes2\sf |
+    g4 ees2\sf |
+    bes4 r aes(\trill |
+    g) r r |
+    R2.*13 |
+    r4 aes'-.\p ees-. |
+    aes-. ees-. aes-. |
+    ees-. r r |
+    R2.*7 |
+    ees4-.\p g-. d-. |
+    ees-. b-. c-. |
+    aes-. aes'-. e-. |
+    f-. cis-. d-. |
+    \crescTextCresc
+    bes-.\< bes'-. fis-. |
+    \crescHairpin
+    g-. d-. ees-. |
+    c-. g-. aes-. |
+    f-. cis'-. d-. |
+    bes\ff f' d |
+    bes d' bes |
+    bes, f'' d |
+    bes c d |
+  }
+  \alternative
+  {
+    {
+      ees\f r r |
+      bes,\f r bes |
+      bes-.\f ces-.\p bes-. |
+      ces-. bes-. ces-. |
+    }
+    {
+      ees'4\f r r |
+      bes,\f r r |
+      ees\f bes' g |
+      ees r
+    }
+  }
+
+  %trio
+  r4 |
+  R2.*6 |
+  r4 ees\p ees |
+  bes r r |
+  R2.*6 |
+  r4 bes\p bes |
+  ees r r |
+  R2.*6 |
+  r4 ees\p ees |
+  bes r r |
+  R2.*5 |
+  r4 bes\p bes |
+  ees r r |
+  r r aes\f |
+
+  \repeat volta 2
+  {
+    r4 r g |
+    r r des' |
+    c aes r |
+    r r f |
+    r r e |
+    r r bes'-. |
+    aes f r |
+    R2.*12 |
+    r4 g(\p f) |
+    aes( f ees |
+    d) r r |
+    \crescTextCresc
+    r aes'(\< f |
+    \crescHairpin
+    d) r r |
+    r aes'( f |
+    d) bes'(\f g |
+    ees) r r |
+    R2.*5 |
+    r4 ees\p ees |
+    bes r r |
+    R2.*6 |
+    r4 r aes(\p |
+    a2.~)\sf\> | a( |
+    bes2\! b4 |
+    c) r r |
+    R2.*3 |
+    r4 r aes(\pp |
+    a2.~) |
+    a2 a4( |
+    bes2.~) |
+    bes4 r r |
+    R2.*2 |
+    R2. |
+  }
+  \alternative
+  {
+    {
+      R2.*3 |
+      r4 bes\pp bes |
+      ees r r |
+      r r aes\f |
+    }
+    {
+      r4 b,-.\pp c-. |
+    }
+  }
+  b-. c-. b-. |
+  c-. b-. c-. |
+  b-. c-. d-. |
+  ees-. r r |
+  R2.*12 |
+  r4 bes\p bes |
+  \repeat unfold 3 {bes bes bes |}
+  bes bes aes' |
+  g d d |
+  ees d c |
+  bes d' c |
+  bes d c |
+  bes bes c |
+  d a b |
+  c g a |
+  bes f g |
+  ees c f |
+  bes, bes bes-. |
+  bes-. ces-. bes-. |
+  ces-. bes-. ces-. |
+  bes-. ces-. bes-. |
+  ces-. ces-. c-. |
+  c-. des-. c-. |
+  des c des |
+  c des c |
+  des des c |
+  c des des |
+  des d d |
+  d ees ees |
+  ees e e |
+  \repeat unfold 4 {f r r |}
+  \repeat unfold 2 {c r r | f r r |}
+  R2.*2 |
+  c2.-> |
+  f4-. a-. c-. |
+  R2.*2 |
+  d,2.-> |
+  g4( bes) g-. |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  fis-.\semprePP d-. c'-. |
+  bes-. g-. ees-. |
+  d-. a'-. fis-. |
+  g-. bes-. ees-. |
+  d-. cis-. d-. |
+  a-. bes-. fis-. |
+  g-. d-. ees-. |
+  d-. ees-. cis-. |
+  \repeat unfold 6 {d-. cis-.} |
+  d-. r r |
+  R2.*3 |
+  bes4\pp bes bes |
+  \repeat unfold 11 {bes bes bes} |
+  bes d' c |
+  bes d c |
+  bes bes c |
+  d a b |
+  c g a |
+  bes f g |
+  ees c f |
+  \crescTextCresc
+  bes,\< c d |
+  \crescHairpin
+  ees\ff g bes |
+  ees, g bes |
+  ees ees ees |
+  ees ees ees |
+  ees( f8 ees d c) |
+  bes2. |
+  aes\sf |
+  g4( bes) g-. |
+  f( bes) f-. |
+  ees-. g-. bes-. |
+  aes2.\sf |
+  g4( bes) g-. |
+  f( aes) f-. |
+  ees-. aes-. ees-. |
+  des2.\sf |
+  c4( ees) c-. |
+  ees-. bes-. ees-. |
+  aes,-. aes'-. aes,-. |
+  g' g, g' |
+  aes, f' aes, |
+  bes g' bes, |
+  bes' bes, bes' |
+  ees,-. g'2\sf |
+  ees4-. bes2\sf |
+  g4-. ees2\sf |
+  bes4 r aes(\trill |
+  g) r r |
+  R2. |
+  r4 bes\p bes |
+  bes bes bes |
+
+  %alla breve
+  ees4\f r g'2-.\ff |
+  ees-. bes-. |
+  g-. ees-. |
+  bes-. aes-. |
+
+  %3/4
+  g4-. r r |
+  R2.*13 |
+  r4 aes'-.\p ees-. |
+  aes-. ees-. aes-. |
+  ees-. r r |
+  R2.*7 |
+  ees4-.\p g-. d-. |
+  ees-. b-. c-. |
+  aes-. aes'-. e-. |
+  f-. cis-. d-. |
+  \crescTextCresc
+  bes-. bes'-.\< fis-. |
+  \crescHairpin
+  g-. d-. ees-. |
+  c-. g-. aes-. |
+  f-. cis'-. d-. |
+  bes\ff f' d |
+  bes d' bes |
+  bes, f'' d |
+  bes c d |
+  ees\f r r |
+  bes,\f r r |
+  R2.*12 |
+  \crescTextCresc
+  r4 bes\< ees |
+  \crescHairpin
+  bes ees bes |
+  ees\f bes ees |
+  bes ees bes |
+  ees\ff r r |
+  bes\ff r r |
+  ees\ff r r |
+  R2.^\fermataMarkup |
+}
+

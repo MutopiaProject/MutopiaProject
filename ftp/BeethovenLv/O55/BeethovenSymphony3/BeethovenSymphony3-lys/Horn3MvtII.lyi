@@ -1,0 +1,140 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+hornThreeMvtII = \relative c''
+{
+  \transposition ees
+  r8 |
+  R2*8 |
+  c2\p | c |
+  c4 c8 c |
+  R2*3 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \dimTextDecresc
+  r8 g\> g g |
+  c\p c16. c32 c8 r |
+  R2*20 |
+  c2\p |
+  g |
+  \crescTextCresc
+  c4\< g |
+  g8 r16. e'32-.\f e4 |
+  r d8(\p c) |
+  \dimHairpin
+  c4.\> c8 |
+  e\! r r4 |
+  R2*5 |
+  \dimTextDecresc
+  r4\> d |
+  d\< e\sf |
+  d8\p r r4 |
+  f2 |
+  f4.\< f8 |
+  e-.\f d-. r4 |
+  \crescHairpin
+  \dimHairpin
+  r8 c(\< d)\> d |
+  c\p r r4 |
+  R2*4 |
+  c2\sf\> |
+  c8\p e4 e8 |
+  e r r4 |
+  c8 e4 e8 |
+  e r r4 |
+  r4 r8 e-.\f |
+  c-.\p r r4 |
+  R2 |
+
+  %Maggiore
+  R2*7 |
+  e4.\ff e8-.\sf |
+  e4. e8-.\sf |
+  e-. e-.\sf e-. e-.\sf |
+  e-. r r4 |
+  g,2~\p |
+  g4. e'8-. |
+  d r r4 |
+  R2*3 |
+  e4\p e |
+  e e |
+  e8 r r4 |
+  R2*7 |
+  \times 2/3 {r16 e\f e}
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    \times 2/3 {e\semprePiuF e e} \times 2/3 {\repeat tremolo 6 e16} |
+  e4. e8 |
+  e4.\ff e8-.\sf |
+  e4. e8-.\sf |
+  e-. e-.\sf e-. e-.\sf |
+  e-. r r4 |
+  R2*3 |
+
+  %Minore
+  \grace {s32*3}
+  R2*25 |
+  d2\ff |
+  g, |
+  g4. e'8 |
+  f r d4~ |
+  d8 g,4 g8 |
+  c4(\ff d8 e) |
+  f4.(\sf e8) |
+  d4( e8 f) |
+  g4.(\sf f8) |
+  e4 e,8 e |
+  e r r4 |
+  r f'4~\sf |
+  f d~ |
+  e8 e e4~ |
+  e8 e, g e |
+  R2*4 |
+  r8 g-. g-. g-. |
+  g-. r r4 |
+  R2*9 |
+  c2\ff |
+  c4 c8.. c32 |
+  c2\sf |
+  c4 c8.. c32 |
+  c2~\sf |
+  c8 c c c |
+  f2~\ff |
+  f8 f f f |
+  f r r4 |
+  R2*4 |
+  r8 c16.\p c32 c8 c |
+  r8 c16. c32 c8 c |
+  r8 c16. c32 c8 c |
+  r8 c16. c32 e8 e |
+  r8 f16. f32 f8 f |
+  \crescTextCresc
+  r8 f16.\< f32 f8 f |
+  \dimTextDecresc
+  g8\> g,16. g32 g8 g16. g32 |
+  c8\p c16. c32 c8 r |
+  c2 |
+  \crescTextCresc
+  g\< |
+  R2*2 |
+  e'4(\p d8 c) |
+  \dimHairpin
+  c4\< c\> |
+  e8\p r r4 |
+  R2*6 |
+  r4 e\sf\> |
+  d8\p f16. f32 f8 f |
+  r8 f16. f32 f8 f |
+  r8 f16.\< f32 f8 f16. f32 |
+  e8-.\f d-. r c~\p |
+  c8 e4\> e8\! |
+  e r r4 |
+  R2*5 |
+  c4(\p d |
+  c8) r r16 e e e |
+  c4(\< d) |
+  c8\p r r4 |
+  R2*36 |
+  r8 c4\sf\> c8 |
+  c4.\p\fermata
+}
+

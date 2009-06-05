@@ -1,0 +1,215 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+clarinetTwoMvtIII = \relative c'
+{
+  \transposition bes
+  \key f \major
+  r4
+  R2.*30 |
+  \repeat volta 2
+  {
+    R2.*62 |
+
+    %A
+    f4\ff f f |
+    f f f |
+    f( g8 f e d) |
+    c2. |
+    \repeat unfold 2
+    {
+      bes'\sf |
+      a4( c) a-. |
+      g( c) g-. |
+      f-. a-. c-. |
+    }
+    bes2. |
+    bes |
+    a |
+    bes4-. d-. f-. |
+    a,2. |
+    d4-. d-. d-. |
+    c-. c-. c-. |
+    bes-. bes-. bes-. |
+    a-. a-. a-. |
+    bes-. bes-. bes-. |
+    a-. r r |
+    R2.*3 |
+    r4 a\p a |
+    g g gis |
+    a a a |
+    bes bes bes |
+    a-.\f a2\sf |
+    f4 c2\sf |
+    a'4 f2\sf |
+    c4 r bes'(\trill |
+
+    %B
+    a) r r |
+    R2.*7 |
+    r4 bes-.\p a-. |
+    bes-. a-. bes-. |
+    a-. r r |
+    R2. |
+    r4 bes-.\p a-. |
+    bes-. a-. bes-. |
+    a-. bes-. a-. |
+    bes-. a-. bes-. |
+    a-. r r |
+    R2.*7 |
+    a4\p r r |
+    a r r |
+    bes, r r |
+    g' r r |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    a-.\< dis,-. e-. |
+    f-. g-. a-. |
+    bes-. r r |
+    r bes\< bes |
+    bes\ff e, e |
+    e g g |
+    g bes bes |
+    bes a g |
+  }
+  \alternative
+  {
+    {
+      f\f r r |
+      g\f r r |
+      g\f r r |
+      R2. |
+    }
+    {
+      f4\f r r |
+      g\f r r |
+      a\f r r |
+      r r
+    }
+  }
+
+  %trio
+  r4 |
+  R2.*30 |
+  r4 r f\f |
+  f2 f4 |
+
+  \repeat volta 2
+  {
+    f2 f4 |
+    f2 f4 |
+    f'( d c |
+    bes) r d, |
+    d2 d4 |
+    d2 d4 |
+    d'( bes a |
+    g-.) r r |
+    R2.*32 |
+    r4 r f~\p |
+    f2.~\sf\> |
+    f2.~( |
+    f2(\! e4 |
+    f) r r |
+    R2.*3 |
+    r4 r f~\pp |
+    f2.~ |
+    f2 f4~ |
+    f2.~ |
+    f4 r r |
+    R2.*3 |
+  }
+  \alternative
+  {
+    {
+      R2.*4 |
+      r4 r f\f |
+      f2 f4 |
+    }
+    {
+      R2. |
+    }
+  }
+  R2.*95 |
+
+  %C
+  f4\ff f f |
+  f f f |
+  f( g8 f e d) |
+  c2. |
+  \repeat unfold 2
+  {
+    bes'\sf |
+    a4( c) a-. |
+    g( c) g-. |
+    f-. a-. c-. |
+  }
+  bes2. |
+  bes |
+  a |
+  bes4-. d-. f-. |
+  a,2. |
+  d4 d d |
+  c c c |
+  bes bes bes |
+  a a a |
+  bes bes bes |
+  a r r |
+  R2.*3 |
+  r4 a-.\p a-. |
+  g-. g-. gis-. |
+  a-. a-. a-. |
+  bes-. bes-. bes-. |
+
+  %alla breve
+  a-.\f r a2-.\ff |
+  f-. c-. |
+  a'-. f-. |
+  c-. bes'-. |
+
+  %3/4
+  a4-. r r |
+  R2.*7 |
+  r4 bes-.\p a-. |
+  bes-. a-. bes-. |
+  a-. r r |
+  R2. |
+  r4 bes-.\p a-. |
+  bes-. a-. bes-. |
+  a-. bes-. a-. |
+  bes-. a-. bes-. |
+  a-. r r |
+  R2.*7 |
+  a4\p r r |
+  a r r |
+  bes, r r |
+  g' r r |
+  a-.\< dis,-. e-. |
+  f-. g-. a-. |
+  bes r r |
+  r bes bes |
+  bes\ff e, e |
+  e g g |
+  g bes bes |
+  bes a g |
+  f\f r r |
+  g\f r r |
+
+  %coda
+  R2.*6 |
+  \crescHairpin
+  ees2.(\pp\< |
+  e\> |
+  f4)\! r r |
+  R2.*3 |
+  \crescTextCresc
+  r4 e\< f |
+  e f e |
+  f\f g a |
+  g a g |
+  a\ff r r |
+  bes\ff r r |
+  a\ff r r |
+  R2.^\fermataMarkup |
+}
+

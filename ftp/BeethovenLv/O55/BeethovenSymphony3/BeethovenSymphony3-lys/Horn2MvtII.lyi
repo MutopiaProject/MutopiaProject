@@ -1,0 +1,157 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+hornTwoMvtII = \relative c''
+{
+  \transposition c
+  r8 |
+  R2*8 |
+  g2\p | g |
+  g4 g8 g |
+  g4. r8 |
+  R2 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  f'2~\p\< |
+  f8 r r4 |
+  R2*5 |
+  r4 c,8-.(\p c-.) |
+  c4. c8 |
+  \crescHairpin
+  g'2\pp | g | g~\< |
+  g4.\> g8\! |
+  g8 r r4 |
+  R2*2 |
+  r4 c,\sf |
+  c\p r |
+  R2*9 |
+  c2~\fp |
+  c8 c\> c c |
+  g'2\p | g | g\< | g~\> |
+  g8\! r r4 |
+  R2*3 |
+  f'2\p | f |
+  \crescTextCresc
+  d4.\< d8 |
+  c,-.\f c-. r4 |
+  r8 g'4\sf\> g8 |
+  c,\p r r4 |
+  R2*3 |
+  c'4\f c8.. c32 |
+  c4.\sf\> c,8 |
+  c4(\p g') |
+  c,8 r r4 |
+  c4( g') |
+  c,8 r r4 |
+  r4 r8 g'-.\f |
+  c,-.\p r c-. r |
+  c-. r r4 |
+
+  %maggiore
+  c'2~\p | c |
+  c~ | c |
+  g( | d'8) r r e,~ |
+  e r r d' |
+  g,4.\ff g8-.\sf |
+  g4. g8-.\sf |
+  g-. g-.\sf g-. g-.\sf |
+  g-. r r4 |
+  c,2~\p |
+  c8 c c c |
+  c4\< c | c c~ | c8\p r r4 |
+  R2 |
+  s1*0\p \repeat unfold 2 {g'4 \times 2/3 {c,16 e g} \times 2/3 {c e, c} |}
+  g'2~ | g |
+  c,4(\p e | g2) |
+  c,~ | c8 c16. c32 c8 c |
+  r c' r g |
+  r c, r c |
+  e\f
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    c'4\semprePiuF e16( c) |
+  g4. g8 |
+  e4.\ff g8-.\sf |
+  e4. g8-.\sf |
+  e-. g-.\sf e-. g-.\sf |
+  e-. r r4 |
+  R2*3 |
+
+  %minore
+  \grace {s32*3}
+  R2*20 |
+  r8 g4\f g8 |
+  g,4 g8 g |
+  g4.\sf g8 |
+  g g g g'~ |
+  g c, c c |
+  c\ff r f'4 |
+  f2 |
+  c,4. c8 |
+  c r r4 |
+  R2*6 |
+  c2~\ff |
+  c4 f'~\sf |
+  f d~ |
+  d g( |
+  g,) g |
+  d'8 d4.~\sf |
+  d2~ | d~ | d~ |
+  d8 g,-. g-. g-. |
+  g-. r r4 |
+  R2*8 |
+  c,2\ff |
+  c | c4 c8.. c32 |
+  c2\sf | c4 c8.. c32 |
+  c2~\sf | c8 c c c |
+  f'2~\ff | f8 f f f |
+  f r r4 |
+  R2*4 |
+  r8 g,16.\p g32 g8 g |
+  \repeat unfold 3 {r8 g16. g32 g8 g |}
+  r8 f'16. f32 f8 f |
+  r8 f16.\< f32 f8 f |
+  f8\p r r4 |
+  R2*4 |
+  r4 \clef "bass^8" c,,~\p | c2~ | << {s4\< s\>} {c2} >> |
+  \crescHairpin
+  \clef treble g'2\p | g | g\< | g4.\> g8 |
+  g\! r r4 |
+  R2*2 | r4 c4\sf\> |
+  c8\p f'16. f32 f8 f |
+  r8 f16. f32 f8 f |
+  r8 f16. f32 f8 f16. f32 |
+  c,8-.\f c-. r c~\p |
+  c c4\> g'8\! |
+  c, r r4 |
+  R2*3 |
+  c'4\f c8.. c32 |
+  c2\sf\> |
+  c,4(\p g' |
+  c,8) r r4 |
+  \crescTextCresc
+  c4(\< g'8) g |
+  c,\f r r4 |
+  R2*13 |
+  c2\pp | c |
+  c4.\< c8 |
+  c4 c8 c |
+  c c c c |
+  c2\p\< |
+  r4 c8\p r |
+  r4 c4( |
+  \crescHairpin
+  << {s4\< s\>} {b2)(} >> |
+  c8)\! r r4 |
+  << {s4\< s\>} {b2(} >> |
+  c8)\! r r4 |
+  \dimTextDecresc
+  b2~ | b~ | b~\> |
+  R2*4 |
+  g'2(\pp | c,4) r |
+  g'2( | c,4) r |
+  \dimHairpin
+  r8 c4\sf\> c8 |
+  c4.\p\fermata
+}
+

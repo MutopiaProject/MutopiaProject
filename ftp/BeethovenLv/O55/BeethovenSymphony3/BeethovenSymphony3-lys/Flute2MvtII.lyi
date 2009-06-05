@@ -1,0 +1,122 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+fluteTwoMvtII = \relative c'''
+{
+  \key c \minor
+  \partial 8 r8 |
+  R2*44 |
+  g4\p\< g~ |
+  g4.(\> fis8) |
+  g\! r r4 |
+  R2*2 |
+  r4 g4\sf |
+  f8\p r r4 |
+  R2 |
+  r4 r8 aes8 |
+  g-.\f aes-. r4 |
+  r8 c,\< d d16.\> f32 |
+  ees8\p r r4 |
+  R2*3 |
+  c'4\f c8.. c32 |
+  c4.(\sf\> ees,8) |
+  ees4(\p f) |
+  ees8 r r4 |
+  c'4( b8.. c32) |
+  c8 r r ees,(\sf |
+  c) aes'16.\f f32 d8-. g-. |
+  c,-.\p r c-. r |
+  c-. r r4 |
+
+  %Maggiore
+  \key c \major
+  R2*7 |
+  g'4.\ff b8-.\sf |
+  g4. b8-.\sf |
+  g-. b-.\sf g-. b-.\sf |
+  g-. r r4 |
+  R2 |
+  bes2(\p |
+  a8) r r4 |
+  R2*13 |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  r8 c4(\semprePiuF e8) |
+  b4. b16.( f32) |
+  e4.\ff g8-.\sf |
+  e4. g8-.\sf |
+  e-. g-.\sf e-. g-.\sf |
+  e-. r r4 |
+  R2*3 |
+
+  %Minore
+  \key c \minor
+  \grace {s32*3}
+  R2*12 |
+  c'2\f |
+  aes\sf |
+  b4.\sf \afterGrace b8(\trill {a16[ b])} |
+  c4. c8 |
+  c r r4 |
+  R2 |
+  r8 g( aes c~) |
+  c r r4 |
+  R2*5 |
+  f,4(\ff g8 aes) |
+  bes4.\sf aes8 |
+  g( des' c bes) |
+  aes2~ |
+  aes8 d,( ees f) |
+  g r r4 |
+  R2*5 |
+  r16 f-. g-. aes-. bes-. c-. d-. ees-. |
+  f8 r r4 |
+  r8 r16 g,-. a-. b-. c-. d-. |
+  ees8 g,4 g16( cis,) |
+  d8 r d'4~\sf |
+  d c~\sf |
+  c bes~\sf |
+  bes a~ |
+  a8 g g( bes) |
+  bes-. r r4 |
+  R2*2 |
+  r4 d,4~\p |
+  d8 r r4 |
+  R2*11 |
+  b'2~\ff |
+  b4 \times 2/3 {d,16-. f-. aes-.} \times 2/3 {b,16-. d-. f-.} |
+  aes8 r r4 |
+  R2*7 |
+  r8 fis4(\sf g8) |
+  R2*8 |
+  r4 c,4~\p |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  c8\< c( fis8\sf\> ees16 c |
+  b8)\p r r4 |
+  R2 |
+  \crescHairpin
+  r4 g'~\< |
+  g4.(\> fis8) |
+  g8\! r r4 |
+  R2*5 |
+  r4 r8 d |
+  g-.\f c,-. r4 |
+  r8 c'8(\p\> b) b16.(\! f32) |
+  ees8 r r4 |
+  R2*3 |
+  c'4\f c8.. c32 |
+  c4.\sf\> r8 |
+  g2\p |
+  R2 |
+  \crescTextCresc
+  c4(\< f,8.. ees32) |
+  ees8 r r4 |
+  R2*16 |
+  c4.\p\< c8 |
+  c-. c-. c-. c-. |
+  c-.\p r r4 |
+  R2*18 |
+  r4.\fermata
+}
+

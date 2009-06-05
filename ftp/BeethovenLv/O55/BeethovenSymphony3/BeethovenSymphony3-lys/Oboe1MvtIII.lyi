@@ -1,0 +1,309 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+oboeOneMvtIII = \relative c'''
+{
+  \key ees \major
+  r4
+  R2.*6 |
+  bes4-.\pp bes-. bes-. |
+  bes-. bes-. bes-. |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes r r |
+  R2.*3 |
+  r4 r d-.\pp |
+  ees-. f-. fis-. |
+  g-. aes-. a-. |
+  bes4-.\pp bes-. bes-. |
+  bes-. bes-. bes-. |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes r r |
+  R2.*2 |
+  \repeat volta 2
+  {
+    R2.*21 |
+    c2.-> |
+    d4 r r |
+    R2.*2 |
+    d2.-> |
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    d4\semprePP r fis-. |
+    g-. bes-. g-. |
+    fis-. r a-. |
+    g-. g-. g-. |
+    fis-. r r |
+    R2.*18 |
+    r4 r c-.\p |
+    bes-. c-. bes-. |
+    c-. bes-. d-. |
+    ees-. f-.\p fis-. |
+    g-. aes-. a-. |
+    bes-. bes-. bes-. |
+    bes-. bes-. bes-. |
+    bes( c8 bes a g) |
+    f2. |
+    ees |
+    d4( f) d-. |
+    c( ees) c-. |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    bes-.\< c-. d-. |
+    ees\ff ees ees |
+    ees ees ees |
+    ees( f8 ees d c) |
+    bes2. |
+    \repeat unfold 2
+    {
+      aes'\sf |
+      g4( bes) g-. |
+      f( bes) f-. |
+      ees-. g-. bes-. |
+    }
+    aes2.\sf |
+    aes |
+    g |
+    aes |
+    g |
+    aes4-. c-. c-. |
+    bes bes bes |
+    aes aes aes |
+    g g g |
+    aes aes aes |
+    g r r |
+    R2.*3 |
+    r4 ees\p ees |
+    f f fis |
+    g g g |
+    aes aes aes |
+    g-.\f g2\sf |
+    ees4 bes2\sf |
+    g4 ees'2\sf |
+    bes4 r r |
+    r f'-.\p ees-. |
+    f-. ees-. f-. |
+    ees r r |
+    R2. |
+    r4 ees-.\p d-. |
+    ees-. d-. ees-. |
+    d r r |
+    R2. |
+    r4 aes'-.\p g-. |
+    aes-. g-. aes-. |
+    g-. r r |
+    R2. |
+    r4 aes-.\p g-. |
+    aes-. g-. aes-. |
+    g-. aes-. g-. |
+    aes-. g-. aes-. |
+    g-. r r |
+    R2.*7 |
+    g4\p r r |
+    g r r |
+    f-. c-. cis-. |
+    d-. e-. f-. |
+    g-. r r |
+    R2.*2 |
+    r4 aes\< aes |
+    aes\ff d, d |
+    d f f |
+    f aes aes |
+    aes g f |
+  }
+  \alternative
+  {
+    {
+      ees\f r r |
+      f\f r r |
+      aes\f r r |
+      R2. |
+    }
+    {
+      ees4\f r r |
+      f\f r r |
+      ees\f r r |
+      r r
+    }
+  }
+
+  %trio
+  r4 |
+  R2.*6 |
+  r4 g\p g |
+  f r r |
+  R2.*6 |
+  r4 aes\p f |
+  g r r |
+  R2.*16 |
+
+  \repeat volta 2
+  {
+    R2.*2 |
+    r4 r c,\f |
+    \repeat unfold 3 {c2 c4 |}
+    c4 r r |
+    r r
+      \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+      f\pDolce |
+    f(^\mSempreLegato d c |
+    bes d c |
+    ees a, c |
+    f, ees' d |
+    f d c |
+    bes d c |
+    ees a, c |
+    f, ees' d |
+    f d c |
+    bes) r r |
+    R2.*14 |
+    r4 g'\p g |
+    f r r |
+    R2.*22 |
+  }
+  \alternative
+  {
+    {
+      R2.*3 |
+      r4 f\pp f |
+      g r ees\f |
+      ees2 ees4 |
+    }
+    {
+      R2. |
+    }
+  }
+  R2.*9 |
+  bes'4-.\p bes-. bes-. |
+  bes-. bes-. bes-. |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes r r |
+  R2.*3 |
+  r4 r d-.\p |
+  ees-. f-. fis-. |
+  g-. aes-. a-. |
+  bes-. bes-. bes-. |
+  bes-. bes-. bes-. |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes r r |
+  R2.*23 |
+  c2.-> |
+  d4 r r |
+  R2.*2 |
+  d2.-> |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  d4\semprePP r fis-. |
+  g-. bes-. g-. |
+  fis-. r a-. |
+  g-. g-. g-. |
+  fis-. r r |
+  R2.*18 |
+  r4 r c-.\p |
+  bes-. c-. bes-. |
+  c-. bes-. d-. |
+  ees-. f fis |
+  g aes a |
+  bes bes bes |
+  bes bes bes |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes\< c-. d-. |
+  ees\ff ees ees |
+  ees ees ees |
+  ees( f8 ees d c) |
+  bes2. |
+  \repeat unfold 2
+  {
+    aes'2.\sf |
+    g4( bes) g-. |
+    f( bes) f-. |
+    ees-. g-. bes-. |
+  }
+  aes2.\sf |
+  aes |
+  g |
+  aes |
+  g\sf |
+  aes4 c c |
+  bes bes bes |
+  aes aes aes |
+  g g g |
+  aes aes aes |
+  g r r |
+  R2.*3 |
+  r4 ees-.\p ees-. |
+  f-. f-. fis-. |
+  g-. g-. g-. |
+  aes-. aes-. aes-. |
+
+  %alla breve
+  g2-.\f g-.\ff |
+  ees-. bes-. |
+  g-. ees'-. |
+  bes-. aes-. |
+
+  %3/4
+  g4 f'-.\p ees-. |
+  f-. ees-. f-. |
+  ees-. r r |
+  R2. |
+  r4 ees-.\p d-. |
+  ees-. d-. ees-. |
+  d-. r r |
+  R2. |
+  r4 aes'-.\p g-. |
+  aes-. g-. aes-. |
+  g-. r r |
+  R2. |
+  r4 aes-.\p g-. |
+  aes-. g-. aes-. |
+  g-. aes-. g-. |
+  aes-. g-. aes-. |
+  g-. r r |
+  R2.*7 |
+  g4\p r r |
+  g r r |
+  f-. c-. cis-. |
+  d-. e-. f-. |
+  g-.\< r r |
+  R2.*2 |
+  r4 aes aes |
+  aes\ff d, d |
+  d f f |
+  f aes aes |
+  aes g f |
+  ees\f r r |
+  f\f r r |
+
+  %coda
+  R2.*10 |
+  r4 f\p\< g |
+  f g f |
+  g f g |
+  f g f |
+  g\f bes bes |
+  bes bes bes |
+  bes\ff r r |
+  f\ff r r |
+  ees\ff r r |
+  R2.^\fermataMarkup |
+}
+

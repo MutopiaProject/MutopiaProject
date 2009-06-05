@@ -1,0 +1,176 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+timpaniMvtIV = \relative c
+{
+  \clef bass
+  \key c \minor
+  \grace {s16 s}
+  R2*6 |
+  bes4\ff r |
+  bes-. bes-. |
+  bes-. r |
+  bes\sf r |
+  bes8\sf r r4\fermata |
+  R2*17 |
+  bes8-.\ff bes-. bes-. r |
+  R2 |
+  bes8\p r\fermata r r |
+  R2*5 |
+  bes8-.\ff bes-. bes-. r |
+  R2 |
+  bes8\p r\fermata r r |
+  R2*5 |
+  \repeat volta 2
+  {
+    R2*6
+  }
+  \alternative
+  {
+    { R2*2 | }
+    { r4 r8 }
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*3 |
+    r4.\fermata r8 |
+    R2*3 |
+    r4 r8
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*7 |
+    r4 r8
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*3 |
+    r4.\fermata r8 |
+    R2*3 |
+    r4 r8
+  }
+
+  r8 |
+  R2*8 |
+  ees4\f r |
+  bes r |
+  bes r |
+  ees r |
+  ees bes |
+  ees8\sf r r4 |
+  r8 bes ees ees |
+  bes r bes r |
+  R2*3 |
+  r4.\fermata r8 |
+  R2*4 |
+  bes8\f r r4 |
+  bes8 bes bes r |
+  bes r bes r |
+  bes\f r8 r\fermata r |
+  ees8 r r4 |
+  ees8 r r4 |
+  bes8 r bes r |
+  ees r r4 |
+  R2*207 |
+  ees4\ff r |
+  bes r |
+  bes r |
+  ees r |
+  bes r |
+  bes r |
+  R2 |
+  r4 ees |
+  ees ees |
+  ees r |
+  R2 |
+  r8 bes bes bes |
+  \repeat tremolo 8 ees16 |
+  \repeat unfold 4 {bes4 r |}
+  R2*2 |
+  \repeat unfold 4 {bes4 bes |}
+  bes2~\startTrillSpan | bes~ | bes~ | bes |
+  bes8\stopTrillSpan r bes r |
+  bes r bes r |
+  bes r r4 |
+  r r8. bes16 |
+  bes4 r8. bes16 |
+  bes4 r8. bes16 |
+  bes4.\fermata
+
+  %poco andante
+  r8 |
+  R2*17 |
+  r4 bes8\pp bes |
+  R2 |
+  r4 bes8\pp bes |
+  r4 bes8 bes |
+  r4 bes8 bes |
+  r8\< bes r\> bes |
+  bes\! r r4 |
+  R2 |
+  r4 bes8\pp bes |
+  R2 |
+  r4 bes8\pp bes |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  r4 bes8\< bes |
+  r4 bes8 bes |
+  r8 bes\p r bes |
+  bes r r4 |
+  r8 bes\ff bes r |
+  \repeat unfold 3 {r bes bes r |}
+  bes r bes r |
+  bes4\sf r8 bes |
+  bes2\trill |
+  bes8 bes bes r |
+  bes r r4 |
+  bes8 bes bes r |
+  bes r r4 |
+  bes8 bes bes r |
+  ees8 ees ees r |
+  r ees ees r |
+  ees r bes r |
+  ees r r4 |
+  R2*17 |
+  ees8\f r ees r |
+  ees r r4 |
+  R2*15 |
+
+  %presto
+  R2*8 |
+  ees8\ff r r4 |
+  bes8 r r4 |
+  ees8 r r4 |
+  bes8 r r4 |
+  ees8 r ees r |
+  bes r bes r |
+  ees ees bes bes |
+  ees ees bes bes |
+  \repeat unfold 3 {ees r ees r |}
+  r4 bes8 bes |
+  ees8\sf r ees r |
+  r4 bes8 bes |
+  ees8 r r4 |
+  ees8 r r4 |
+  ees8 r ees r |
+  ees8 r ees r |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  ees8\semprePiuF r r8. \times 2/3 {bes32 bes bes} |
+  ees8 r r8. \times 2/3 {bes32 bes bes} |
+  \repeat unfold 4 {ees16 bes} |
+  \repeat tremolo 4 {ees16 bes} |
+  ees4\ff r |
+  ees r |
+  \repeat unfold 4 {ees8 r} |
+  \repeat unfold 2 {ees8 r r4} |
+  \repeat unfold 4 {ees8 r} |
+  ees2~\startTrillSpan | ees |
+  ees8\stopTrillSpan r r4 |
+  ees8 r r4 |
+  ees4 r\fermata |
+}
+

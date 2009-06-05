@@ -1,0 +1,204 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+oboeOneMvtII = \relative c''
+{
+  \key c \minor
+  \partial 8 r8 |
+  R2*7 |
+  r4 r8 g16.\p g32 |
+  g4 \acciaccatura d'8\( c16. b32 c16. d32\) |
+  ees4( c8) r |
+  g'4 f32( ees16.) d32( c16.) |
+  << {s8\< s\> s\!} {ees4( d8)} >> d16. d32 |
+  d4 d16.( ees32 f16. g32) |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  aes2~\< |
+  \dimTextDecresc
+  aes8 f(\> ees d) |
+  ees8\p ees16. ees32 ees8 r |
+  R2*19 |
+  r4 r8 bes8\p |
+  ees4( d8 c) |
+  \crescHairpin
+  bes4~ bes16 bes32-.\< c-. d-. ees-. f-. g-. |
+  \crescTextCresc
+  aes4(\< g8 f) |
+  e8 r16. bes'32-.\f bes4 |
+  r4 aes8(\p g) |
+  \dimHairpin
+  fis4( c'8.\> fis,16) |
+  g2~\p | g |
+  \crescHairpin
+  g4(\< d8 f |
+  ees4\> d8 c) |
+  b8\! r r4 |
+  R2*2 |
+  r4 r8 c16.c32 |
+  c4\p \acciaccatura g'8\( f16. e32 f16. g32\) |
+  aes4( f8) r |
+  \crescTextCresc
+  f4\< ees32( d16.) c32( b16.) |
+  c8-.\f aes'-. r fis~\p |
+  \crescHairpin
+  fis g4(\< f16.\> d32) |
+  c8\p r r4 |
+  R2*3 |
+  aes'4\f aes8.. aes32 |
+  \dimHairpin
+  a2\sf\> |
+  ees8\p g4 g8 |
+  g8 r r4 |
+  ees8 g4 g8 |
+  g r r4 |
+  R2*3 |
+
+  %maggiore
+  \key c \major
+  c,4(\p e) |
+  g4~ \times 2/3 {g16( f) e-.} \times 2/3 {d-. c-. b-.} |
+  b16( a8.) r4 |
+  R2*2 |
+  \crescTextCresc
+  r8 f'4(\< e16 d) |
+  d( c b a) g( d' c a) |
+  b4.\ff b'8-.\sf |
+  g4. b8-.\sf |
+  g-. b-.\sf g-. b-.\sf |
+  g-. r r4 |
+  c,2~\p |
+  c4.( e8) |
+  \times 2/3 {f16-.\< a,-. c-.} \times 2/3 {f-. a-. c-.}
+    \times 2/3 {r bes-. g-.} \times 2/3 {e-. c-. bes-.} |
+  \times 2/3 {r16-. a-. c-.} \times 2/3 {f-. a-. c-.}
+    \times 2/3 {r bes-. g-.} \times 2/3 {e-. c-. bes-.} |
+  a8\p r r4 |
+  r8 bes'( a) a |
+  d, r \times 2/3 {c,16-. e-. g-.} \times 2/3 {c-. e-. c-.} |
+  g'8 r \times 2/3 {c,,16-. e-. g-.} \times 2/3 {c-. e-. c-.} |
+  g'8 r r4 |
+  g,4.( a16 b) |
+  c4(\p e |
+  g2) |
+  f4(\< a) |
+  c4~ c16( a f d) |
+  d8( c4 b16 g') |
+  g( fis g gis a f e d) |
+  c8\f
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    e4(\semprePiuF g8) |
+  g4. f16.( d32) |
+  c4.\ff g'8-.\sf |
+  e4. g8-.\sf |
+  e8-. g-.\sf e-. g-.\sf |
+  e-. r r4 |
+  R2*3 |
+
+  %minore
+  \key c \minor
+  \grace {s32*3}
+  R2*15 |
+  e4(\f f8 g) |
+  f8 r r4 |
+  R2 |
+  r8 g,( aes c~) |
+  c r r4 |
+  R2*5 |
+  f4(\ff g8 aes) |
+  bes4.\sf aes8 |
+  g8( e f g) |
+  aes2~ |
+  aes8( c bes aes) |
+  g r r4 |
+  R2*2 |
+  r4 ees~\sf |
+  ees4.( d8) |
+  c g'16-. f-. ees-. d-. c-. bes-. |
+  aes8 r r4 |
+  r16 aes'-. aes-. g-. f-. ees-. d-. c-. |
+  b8 r r g'~ |
+  g16( fis g a bes8 g) |
+  fis r r d~ |
+  d c16( bes aes8\sf c~) |
+  c bes16( a g8\sf bes~) |
+  bes a16( g fis8\sf a~) |
+  a d d( g) |
+  g-. r r4 |
+  R2*2 |
+  r4 c,(\p |
+  bes8) r r4 |
+  R2*11 |
+  f'2~\ff |
+  f8 f f f |
+  f r r4 |
+  R2*4 |
+  c4\p \acciaccatura d8\( c16. b32 c16. d32\) |
+  ees4( c8) r |
+  g'4 f32( ees16.) d32( c16.) |
+  ees4( d8) r |
+  d4 d16.( ees32 f16. g32) |
+  \crescTextCresc
+  aes2~\< |
+  \dimTextDecresc
+  aes8(\> f ees d) |
+  ees8\p ees16. ees32 ees8 r |
+  R2*4 |
+  bes'4(\p aes8 g) |
+  \dimHairpin
+  fis4(\< c'8.\sf\> fis,16) |
+  g8\p r r4 |
+  g4( f8 ees) |
+  \crescHairpin
+  d4.(\< f8) |
+  ees4(\> d8 c) |
+  b8\! r r4 |
+  R2 |
+  \crescTextCresc
+  r16 d-.(\< ees-. d-. ees-. e-. f-. fis-.) |
+  g4. c,16. c32 |
+  c4\p \acciaccatura g'8\( f16. e32 f16. g32\) |
+  aes4( f8) r |
+  f4\< ees32( d16.) c32( b16.) |
+  c8-.\f aes'-. r fis~\p |
+  \dimHairpin
+  fis g4\p\> f16.(\! d32) |
+  c8 r r4 |
+  R2 |
+  r4 r8 fis~\> |
+  fis8.(\! g16) g8 r |
+  aes4\f aes8.. aes32 |
+  a2\sf\> |
+  g2\p |
+  g8 fis4(\> g8) |
+  ees4(\< d8.. c32) |
+  c8\f r r4 |
+  R2*5 |
+  \crescHairpin
+  aes'2~\pp\< |
+  aes~\> |
+  aes8\! r r4 |
+  R2*6 |
+  r4 r8 b(\p |
+  c4 g8 bes) |
+  \crescTextCresc
+  aes4(\< g8 f) |
+  e( f g aes) |
+  g2\p\< |
+  r4\! f8\p r |
+  r4 ees8 r |
+  R2 |
+  r8 g4(_\mEspr aes8) |
+  aes8(\> b,16)\! r r4 |
+  r8 g'~ g16( aes) aes-.( aes-.) |
+  aes8(\> b,16)\! r r4 |
+  R2*6 |
+  f'2(\pp |
+  ees4) r |
+  f2( |
+  ees8) r r4 |
+  r8 g4(\sf\> ees8) |
+  c4.\p\fermata
+}
+

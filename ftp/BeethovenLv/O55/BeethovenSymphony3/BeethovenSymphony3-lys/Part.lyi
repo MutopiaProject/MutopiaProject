@@ -1,0 +1,54 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+\paper
+{
+  ragged-last-bottom = ##f
+}
+
+\book
+{
+  \include "Header.lyi"
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \keepWithTag #'part \notesMvtI \outlineMvtI >>
+    }
+    \header { piece = \MvtI }
+  }
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \keepWithTag #'part \notesMvtII \outlineMvtII >>
+    }
+    \header { piece = \MvtII opus = ""}
+  }
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \keepWithTag #'part \notesMvtIII \outlineMvtIII >>
+    }
+    \header { piece = \MvtIII opus = ""}
+  }
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \keepWithTag #'part \notesMvtIV \outlineMvtIV >>
+    }
+    \header { piece = \MvtIV opus = ""}
+  }
+}
+

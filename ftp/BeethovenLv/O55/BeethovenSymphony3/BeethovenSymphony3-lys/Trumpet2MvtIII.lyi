@@ -1,0 +1,118 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+trumpetTwoMvtIII = \relative c'
+{
+  \transposition ees 
+  r4
+  R2.*30 |
+  \repeat volta 2
+  {
+    R2.*62 |
+    c4\ff c c |
+    c c c |
+    c2.~ |
+    c4 c c |
+    \repeat unfold 7 {g2. |}
+    g4 c c |
+    \repeat unfold 5 {c2. |}
+    \repeat unfold 4 {c4 c c |}
+    g g g |
+    c r r |
+    R2.*7 |
+    r4 e2\sf |
+    c4 g2\sf |
+    e'4 c2\sf |
+    g4 r g |
+    e' r r |
+    R2.*23 |
+    c4\p r r |
+    c r r |
+    R2.*2 |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    g4\< r r |
+    g r r |
+    c r r |
+    g g g |
+    g\ff g g |
+    \repeat unfold 3 {g g g |}
+  }
+  \alternative
+  {
+    {
+      c4\f r r |
+      g\f r r |
+      g\f r r |
+      R2. |
+    }
+    {
+      c4\f r r |
+      g\f r r |
+      c4\f r r |
+      r4 r
+    }
+  }
+
+  %Trio
+  r4 |
+  R2.*32 |
+
+  \repeat volta 2
+  {
+    R2.*56 |
+  }
+  \alternative
+  {
+    {
+      R2.*6 |
+    }
+    {
+      R2. |
+    }
+  }
+  R2.*95 |
+  c4\ff c c |
+  c c c |
+  c2.~ |
+  c4 c c |
+  \repeat unfold 7 {g2. |}
+  g4 c c |
+  \repeat unfold 5 {c2. |}
+  \repeat unfold 4 {c4 c c |}
+  g g g |
+  c r r |
+  R2.*7 |
+
+  %Alla breve
+  r2 e\ff-. |
+  c-. g-. |
+  e'-. c-. |
+  g-. g-. |
+
+  %3/4
+  e'4 r r |
+  R2.*23 |
+  c4\p r r |
+  c r r |
+  R2.*2 |
+  g4\< r r |
+  g r r |
+  c r r |
+  g g g |
+  g\ff g g |
+  \repeat unfold 3 {g g g |}
+  c\f r r |
+  g\f r r |
+  R2.*12 |
+  r4 g\< c |
+  g c g |
+  c g c |
+  g c g |
+  c\ff r r |
+  g\ff r r |
+  c\ff r r |
+  R2.^\fermataMarkup |
+}
+

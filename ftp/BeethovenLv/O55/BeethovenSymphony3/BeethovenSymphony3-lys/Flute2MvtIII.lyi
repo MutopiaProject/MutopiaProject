@@ -1,0 +1,171 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+fluteTwoMvtIII = \relative c'''
+{
+  \key ees \major
+  r4
+  R2.*30 |
+
+  \repeat volta 2
+  {
+    R2.*28 |
+    r4 r c-. |
+    bes-. bes-. cis-. |
+    d-. r r |
+    R2.*31 |
+    ees4\ff ees ees |
+    ees ees ees |
+    ees( f8 ees d c) |
+    bes2. |
+    aes\sf |
+    g4( bes) g-. |
+    f( bes) f-. |
+    ees-. g-. bes-. |
+    \repeat unfold 3 {bes2.} |
+    bes4 ees ees |
+    \repeat unfold 5 {ees2.} |
+    ees4-. c-. c-. |
+    bes bes bes |
+    c c c |
+    bes bes bes |
+    bes bes bes |
+    bes r r |
+    R2.*4 |
+    r4 c\p c |
+    bes bes bes |
+    bes bes bes |
+    bes-.\f g2\sf |
+    ees4 bes'2\sf |
+    g4 ees2\sf |
+    bes4 r aes(\trill |
+    g4) r r |
+    R2.*13 |
+    r4 c'-.\p bes-. |
+    c-. bes-. c-. |
+    bes-. r r |
+    R2.*7 |
+    bes4\p r r |
+    c r r |
+    c r r |
+    aes r r |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    d\< r r |
+    bes r r |
+    c r r |
+    r bes bes |
+    bes\ff \repeat unfold 11 bes |
+  }
+  \alternative
+  {
+    {
+      bes\f r r |
+      d\f r r |
+      aes\f r r |
+      R2. |
+    }
+    {
+      bes4\f r r |
+      d\f r r |
+      g,\f r r |
+      r r
+    }
+  }
+
+  %trio
+  r |
+  R2.*22 |
+  r4 ees\p ees |
+  d r r |
+  R2.*6 |
+  r4 r ees'\f |
+  ees2 ees4 |
+
+  \repeat volta 2
+  {
+    ees2 ees4 |
+    ees2 ees4 |
+    ees4( c bes |
+    aes-.) r c |
+    c2 c4 |
+    c2 c4 |
+    c( aes g |
+    f-.) r r |
+    R2.*48 |
+  }
+  \alternative
+  {
+    {
+      R2.*4 |
+      r4 r ees'\f |
+      ees2 ees4 |
+    }
+    {
+      R2. |
+    }
+  }
+  R2.*61 |
+  r4 r c-. |
+  bes-. bes-. cis-. |
+  d-. r r |
+  R2.*31 |
+  ees4\ff ees ees |
+  ees ees ees |
+  ees( f8 ees d c) |
+  bes2. |
+  aes\sf |
+  g4( bes) g-. 
+  f( bes) f-. |
+  ees-. g-. bes-. |
+  \repeat unfold 3 {bes2.} |
+  bes4-. ees-. ees-. |
+  \repeat unfold 5 {ees2.} |
+  ees4 c c |
+  bes bes bes |
+  c c c |
+  bes bes bes |
+  bes bes bes |
+  bes r r |
+  R2.*4 |
+  r4 c-.\p c-. |
+  bes-. bes-. bes-. |
+  bes-. bes-. bes-. |
+
+  %alla breve
+  bes4-. r g2-.\ff |
+  ees-. bes'-. |
+  g-. ees-. bes-. aes-. |
+
+  %3/4
+  g4 r r |
+  R2.*13 |
+  r4 c'-.\p bes-. |
+  c-. bes-. c-. |
+  bes-. r r |
+  R2.*7 |
+  bes4\p r r |
+  c r r |
+  c r r |
+  aes r r |
+  d\< r r |
+  bes r r |
+  c r r |
+  r bes bes |
+  bes\ff \repeat unfold 11 bes |
+  bes\f r r |
+  d\f r r |
+
+  %coda
+  R2.*12 |
+  r4 f,\< g |
+  f g f |
+  g\f d' ees |
+  d ees d |
+  ees\ff r r |
+  d\ff r r |
+  ees\ff r r |
+  R2.^\fermataMarkup
+}
+

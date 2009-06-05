@@ -1,0 +1,147 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+oboeTwoMvtII = \relative c''
+{
+  \key c \minor
+  \partial 8 r8 |
+  R2*11 |
+  << {s8\< s\> s\!} {c4( b8)} >> r8 |
+  b4 r |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  d4\< r |
+  \dimTextDecresc
+  r8 bes4\> bes8 |
+  bes8\p c16. c32 bes8 r |
+  R2*22 |
+  r4 r8 c |
+  d8 r16. g32-.\f g4 |
+  r4 f8(\p ees) |
+  ees8 r c4->( |
+  b8) r r4 |
+  c4(\p b8 c) |
+  d4 r |
+  R2*3 |
+  r8 f-.(\> f-. f-.) |
+  f4(\< e)\sf |
+  f8\p r r4 |
+  R2 |
+  \crescTextCresc
+  f,4.\< d8 |
+  g8-.\f c-. r4 |
+  R2*5 |
+  c4\f c8.. c32 |
+  \dimHairpin
+  c2\sf\> |
+  c4(\p d) |
+  ees8 r r4 |
+  c4( b8.. c32) |
+  c8 r r4 |
+  R2*3 |
+
+  %maggiore
+  \key c \major
+  R2*7 |
+  g4.\ff d'8-.\sf |
+  b4. d8-.\sf |
+  b-. d-.\sf b-. d-.\sf |
+  b-. r r4 |
+  bes2~\p |
+  bes |
+  a8\< c r c |
+  r c r c |
+  c8\p r r4 |
+  r8 g( a) a |
+  b r r4 |
+  R2*9 |
+  c8\f
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    c4(\semprePiuF e8) |
+  f4. d16.( b32) |
+  e,4.\ff e'8-.\sf |
+  c4. e8-.\sf |
+  c8-. e-.\sf c-. e-.\sf |
+  c-. r r4 |
+  R2*3 |
+
+  %minore
+  \key c \minor
+  \grace {s32*3}
+  R2*15 |
+  r8 c4\f c8 |
+  c8 r r4 |
+  R2 |
+  r8 g( aes c~) |
+  c r r4 |
+  R2*5 |
+  f4(\ff g8 aes) |
+  bes4.\sf aes8 |
+  g8( e f g) |
+  aes8( g f ees) |
+  d4( ees8 f) |
+  g r r4 |
+  R2*2 |
+  r4 ees~\sf |
+  ees4.( d8) |
+  c ees16-. d-. c-. bes-. aes-. g-. |
+  f8 r r4 |
+  r16 f'-. f-. ees-. d-. c-. b-. a-. |
+  g8 r r g~ |
+  g16( fis g a bes8 g) |
+  fis r r d'~ |
+  d c16( bes aes8\sf c~) |
+  c bes16( a g8\sf bes~) |
+  bes a16( g fis8\sf a~) |
+  a d g,( bes) |
+  e-. r r4 |
+  R2*2 |
+  r4 c(\p |
+  bes8) r r4 |
+  R2*11 |
+  d2~\ff |
+  d8 d d d |
+  d r r4 |
+  R2*7 |
+  r8 fis,4(\sf g8) |
+  R2 |
+  \crescTextCresc
+  r4 f'4~\< |
+  \dimTextDecresc
+  f8(\> bes, bes bes) |
+  bes8\p c16. c32 bes8 r |
+  R2*4 |
+  g'4(\p f8 ees) |
+  \dimHairpin
+  ees8(\< << {s8 s\>} {c4} >> ees8) |
+  b8\p r r4 |
+  s1*0\! R2*6 |
+  r4 bes\< |
+  aes8\p r r4 |
+  R2 |
+  r4 r8 d |
+  g,8-.\f c-. r4 |
+  \dimHairpin
+  r8 ees(\p\> b) d16.(\! b32) |
+  c8 r r4 |
+  R2*3 |
+  c4\f c8.. c32 |
+  c2\sf\> |
+  ees4(\p f) |
+  ees8 r r4 |
+  c8(\< g g g) |
+  c8\f r r4 |
+  R2*16 |
+  c4.\< c8 |
+  c( c e f) |
+  e4(\p\< ees) |
+  R2*13 |
+  b2(\pp |
+  c4) r |
+  b2( |
+  c8) r r4 |
+  r8 c4(\sf\> c8) |
+  c4.\p\fermata
+}
+

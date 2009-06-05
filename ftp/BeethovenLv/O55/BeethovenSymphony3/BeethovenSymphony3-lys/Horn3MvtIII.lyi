@@ -1,0 +1,164 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+hornThreeMvtIII = \relative c''
+{
+  \transposition ees
+  r4
+  R2.*30 |
+
+  \repeat volta 2
+  {
+    R2.*62 |
+    c4\ff c c |
+    c c c |
+    c2.~ |
+    c4 c c |
+    \repeat unfold 7 {g2.} |
+    g4 c c |
+    \repeat unfold 5 {c2.} |
+    c4 c c |
+    c c c |
+    d d d |
+    e e e |
+    f f f |
+    e r r |
+    R2.*43 |
+    g,4\ff g g |
+    g g g |
+    g g g |
+    g g g |
+  }
+  \alternative
+  {
+    {
+      c4\f r r |
+      g\f r r |
+      f'\f r r |
+      R2. |
+    }
+    {
+      c4\f r r |
+      g\f r r |
+      c\f r r |
+      r r
+    }
+  }
+
+  %trio
+  \repeat unfold 2
+  {
+    e, |
+    e2.~\sf |
+    e2 g4 |
+    g2 c4 |
+    c2 e4 |
+    e2 c4 |
+    g2 c4 |
+    b r r |
+    R2. |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    r4 r g-.\< |
+    g( e) c'-. |
+    c( g) e'-. |
+    e( c) g'-. |
+    e-. r e\f |
+    f r d |
+    c r
+  }
+  \alternative
+  {
+    {r | r r}
+    {c\f |}
+  }
+  c2 c4 |
+
+  \repeat volta 2
+  {
+    c2 c4 |
+    c2 c4 |
+    c4 r r |
+    R2.*22 |
+    r4 r e, |
+    e2.~\sf |
+    e2 g4 |
+    g2 c4 |
+    c2 e4 |
+    e2 c4 |
+    g2 c4 |
+    b4 r r |
+    R2. |
+    r4 r g-.\< |
+    g( e) c'-. |
+    c( g) c-. |
+    c2.~\sf\> |
+    c |
+    c2\! c4 |
+    c r r |
+    R2.*3 |
+    r4 r c |
+    c2.~\sf\> |
+    c |
+    c2\! c4 |
+    c r r |
+    R2.*3 |
+    r4 r c~ |
+    c2.~\sf\> |
+    c~ |
+    c~ |
+  }
+  \alternative
+  {
+    {
+      c\! |
+      b2.~\pp |
+      b~ |
+      b |
+      c4 r c\f |
+      c2 c4 |
+    }
+    {
+      %second ending
+      c4\repeatTie\pp r r |
+    }
+  }
+  R2.*95 |
+  c4\ff c c |
+  c c c |
+  c2.~ |
+  c4 c c |
+  \repeat unfold 7 {g2.} |
+  g4 c c |
+  \repeat unfold 5 {c2.} |
+  c4 c c |
+  c c c |
+  d d d |
+  e e e |
+  f f f |
+  e r r |
+  R2.*7 |
+
+  %alla breve
+  R1*4 |
+
+  %3/4
+  R2.*32 |
+  g,4\ff g g |
+  g g g |
+  g g g |
+  g g g |
+  c\f r r 
+  g\f r r |
+  R2.*12 |
+  r4 g\< g |
+  g g g |
+  g\f g g |
+  g g g |
+  g\ff r r |
+  g\ff r r |
+  c\ff r r |
+  R2.^\fermataMarkup |
+}
+

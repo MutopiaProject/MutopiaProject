@@ -1,0 +1,109 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+timpaniMvtIII = \relative c
+{
+  \clef bass
+  \key ees \major
+  r4
+  R2.*30 |
+  \repeat volta 2
+  {
+    R2.*62 |
+    ees4\ff ees ees |
+    ees ees ees |
+    \repeat unfold 2 {\repeat tremolo 6 ees8 |}
+    \repeat unfold 7 {bes4 r r |}
+    bes4 ees ees |
+    \repeat unfold 5 {ees4 r r |}
+    \repeat unfold 3 {ees4 ees ees |}
+    bes2.~\startTrillSpan | bes |
+    ees4\stopTrillSpan r r |
+    R2.*7 |
+    ees4\f r r |
+    ees\f r r |
+    ees r r |
+    bes r bes |
+    R2.*24 |
+    ees4\p r r |
+    ees r r |
+    R2.*2 |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    bes4\< r r |
+    bes r r |
+    ees r r |
+    bes bes bes |
+    bes2.~\startTrillSpan | bes~ | bes~ | bes |
+  }
+  \alternative
+  {
+    {
+      ees4\f\stopTrillSpan r r |
+      bes\f r r |
+      bes\f r r |
+      R2. |
+    }
+    {
+      ees4\f r r |
+      bes\f r r |
+      ees\f r r |
+      r4 r
+    }
+  }
+
+  %trio
+  r4 |
+  R2.*32 |
+  \repeat volta 2
+  {
+    R2.*56 |
+  }
+  \alternative
+  {
+    { R2.*6 | }
+    { R2. | }
+  }
+  R2.*95 |
+  ees4\ff ees ees |
+  ees4 ees ees |
+  \repeat unfold 2 {\repeat tremolo 6 ees8 |}
+  \repeat unfold 7 {bes4 r r |}
+  bes ees ees |
+  \repeat unfold 5 {ees r r |}
+  \repeat unfold 3 {ees ees ees |}
+  bes2.~\startTrillSpan | bes |
+  ees4\stopTrillSpan r r |
+  R2.*7 |
+
+  %alla breve
+  ees4\f r r2 |
+  ees4 r r2 |
+  ees4 r r2 |
+  bes1\trill |
+
+  %3/4
+  R2.*24 |
+  ees4\p r r |
+  ees4 r r |
+  R2.*2 |
+  bes4\< r r |
+  bes r r |
+  ees r r |
+  bes bes bes |
+  bes2.~\ff\startTrillSpan | bes~ | bes~ | bes |
+  ees4\f\stopTrillSpan r r |
+  bes\f r r |
+  ees4\pp \repeat unfold 11 {bes ees} bes |
+  ees\< \repeat unfold 5 {bes ees} bes |
+  ees8 bes ees\< bes ees bes |
+  \repeat unfold 3 {ees bes} |
+  ees\f bes ees bes ees bes |
+  \repeat unfold 3 {ees bes} |
+  ees4\ff r r |
+  bes\ff r r |
+  ees\ff r r |
+  R2.^\fermataMarkup |
+}
+

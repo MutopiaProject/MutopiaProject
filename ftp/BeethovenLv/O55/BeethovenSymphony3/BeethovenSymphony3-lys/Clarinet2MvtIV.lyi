@@ -1,0 +1,340 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+clarinetTwoMvtIV = \relative c''
+{
+  \transposition bes
+  \key f \major
+  \grace {s16 s}
+  \tag #'score \voiceTwo
+  R2*6 |
+  g4\ff r |
+  g-. g-. |
+  g-. g-.\sf |
+  r g\sf |
+  bes2\sf\fermata |
+  R2*8 |
+  r4 f8\p r |
+  r4 c'8 r |
+  r4 c,8 r |
+  r4 f8 r |
+  r f r e |
+  r f r fis |
+  g-. e-. f-. b,-. |
+  c4 r |
+  R2 |
+  c'8-.\ff c-. c-. r |
+  R2 |
+  c4.\p\fermata r8 |
+  R2*5 |
+  c8-.\ff c-. c-. r |
+  R2 |
+  c4.\p\fermata r8 |
+  r4 a8 r |
+  r4 bes8 r |
+  r c r c |
+  r4 f,8 r |
+  R2 |
+  \repeat volta 2
+  {
+    R2*6
+  }
+  \alternative
+  {
+    {R2*2 |}
+    {r4 r8}
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*3 |
+    r4.\fermata r8 |
+    R2*3 |
+    r4 r8
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*7 |
+    r4 r8
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*3 |
+    r4.\fermata r8 |
+    R2*3 |
+    r4 r8
+  }
+  r8 |
+  R2*4 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  a4-.(\< bes-.) |
+  f8( a4\sf c8~) |
+  \dimTextDecresc
+  bes4(\> a8 aes) |
+  a(\p b c) r |
+  r8 a-.\f a-. a-. |
+  \repeat unfold 2 {r8 bes-. bes-. bes-. |}
+  r8 a-. a-. a-. |
+  a a bes bes |
+  a\sf a a a |
+  g bes a aes |
+  a a g r |
+  R2 |
+  e'8-.\f e-. e-. r |
+  R2 |
+  bes4.\p\fermata r8 |
+  c,4.( f8) |
+  f4. f8 |
+  f4( e) |
+  f8 r r4 |
+  r8 c'-.\f c-. c-. |
+  c-. c-. c-. r |
+  r c16( d e f g f) |
+  e4.\f\fermata r8 |
+  r8 a,-. a-. a-. |
+  r g g g |
+  a a bes bes |
+
+  %A
+  a r r4 |
+  R2*5 |
+  r8 a\f b b |
+  a a b b |
+  a4-.\ff cis-. |
+  a-. r |
+  R2*28 |
+  d2\< |
+  a'~\f |
+  a8 a, d d, |
+  d4 d |
+  \repeat unfold 2
+  {
+    d4. d8 |
+    \repeat tremolo 4 d8 |
+  }
+  d8 r r4 |
+  r g4~\sf |
+  g c, |
+  R2*2 |
+  r4 c'~\f |
+  c4( bes |
+  a4 aes8 b) |
+  c2 |
+  b4( bes) |
+  a8 r r4 |
+  R2*4 |
+  b2\f |
+  e8-. e,-. r4 |
+  R2 |
+  e2~\f | e~ | e~ | e |
+
+  %B
+  e4\p r |
+  R2*23 |
+  r4 \times 2/3 {a8\sf a a} |
+  r4 \times 2/3 {fis8\sf fis fis} |
+  r4 \times 2/3 {a8\sf a a} |
+  r4 \times 2/3 {fis8 fis fis} |
+  r4 \times 2/3 {b8 b b} |
+  r4 \times 2/3 {cis8 cis cis} |
+  b8 r a r |
+  gis r r4 |
+  gis2\ff |
+  a4 ais( |
+  b) a |
+  gis8 r r4 |
+
+  %C
+  R2*15 |
+  r16 d(\ff e f g a b cis) |
+  d4-. d8.-. d16-. |
+  d8( cis) cis8.-. d16-. |
+  e8.-. e16-. e8.-. e16-. |
+  e4( d8) r |
+  d2\sf |
+  d\sf |
+  d4-. d-. |
+  c16 d,(\ff e f g a b cis) |
+  d4-. d8.-. d16-. |
+  d8( cis) cis8.-. d16-. |
+  e8.-. e16-. e8.-. e16-. |
+  e4( d8) r |
+  d2\sf |
+  d\sf |
+  d4 d |
+  cis d~\sf |
+  d2 |
+  d\sf |
+  d4 d |
+  c8. e,16 \repeat unfold 7 {e8. e16} |
+  \repeat unfold 4 {a8-. a-. b-. b-.} |
+
+  %D
+  a4 r |
+  a r |
+  R2*20 |
+  \dimHairpin
+  c,2\> |
+  \dimTextDecresc
+  f8\! r r4 |
+  R2*36 |
+  r4 f~\ff |
+
+  %E
+  f2 |
+  c' |
+  c, |
+  f4. a8-. |
+  g-. f-. e-. g-. |
+  f4. a8-. |
+  g-. f-. e-. g-. |
+  f-. e-. d-. f-. |
+  ees d c ees |
+  d c bes d |
+  c bes a c |
+  bes bes' aes bes |
+  aes a bes b |
+  c4 r |
+  f,2\sf |
+  bes4-. bes,-. |
+  R2 |
+  r8 a'-. d-. d,-. |
+  r g-. c-. c,-. |
+  r a'4( g8~) |
+  g8( f4 e8~) |
+  e d8 g4 |
+  f4 e8-. g-. |
+  g b b e |
+  e r c c, |
+  e' e, g' g, |
+  g'-. g-. g-. g-. |
+  g8-. bes,4.~ |
+  bes2~ |
+  bes4 r |
+  R2 |
+  r4 g~\sf |
+  g e'~\sf |
+  e4.\fermata
+
+  %poco andante
+  r8 |
+  a,4\p a8..( g32) |
+  g4. g8 |
+  g4 r |
+  R2 |
+  c4-.(\< bes8.. a32) |
+  \dimHairpin
+  a4.\sf\> c8 |
+  bes\p bes a b~ |
+  \crescHairpin
+  << {s8\< s\> s\!} {b8..( c32) c8 r} >> |
+  R2*4 |
+  \crescTextCresc
+  r4 g'8..(\< f32) |
+  f4.\sf\> f8~ |
+  f\p c8~ c b~ |
+  \crescHairpin
+  << {s8\< s\> s\!} {b8.. c32 c8 r} >> |
+  R2*6 |
+  f,4(\p\< e8.\> g16) |
+  f8\! r r4 |
+  \repeat unfold 8 {\times 2/3 {bes,16 c e} \times 2/3 {g e c}} |
+  \crescTextCresc
+  << {s1*0\<} {\repeat unfold 2 {\times 2/3 {a16 c f} \times 2/3 {a f c}}} >> |
+  \repeat unfold 2 {\times 2/3 {bes16 d g} \times 2/3 {bes g d}} |
+  \crescHairpin
+  \times 2/3 {a\p\< c f} \times 2/3 {a f c} \times 2/3 {bes\> c e} \times 2/3 {g e bes} |
+  \crescTextCresc
+  a8\! r r f'\ff |
+
+  %F
+  a4.\sf f8 |
+  e4.\sf g8 |
+  bes4.\sf g8 |
+  f4.\sf a8 |
+  c4-. c-. |
+  c4.\sf a8 |
+  c16( bes) g8-. bes16( a) f8-. |
+  a4( g8) c,16( b) |
+  c-. d-. e-. f-. g-. a-. bes-. a-. |
+  bes8-. bes-. bes-. c,16( b) |
+  c-. d-. e-. f-. g-. a-. bes-. a-. |
+  bes4.( b8) |
+  c4.\sf a8 |
+  g4.\sf d'8 |
+  f,4(\sf a8. g16) |
+
+  %G
+  << {s1*0\fp} {\repeat unfold 4 {\times 2/3 {a,16 c f} \times 2/3 {a f c}}} >> |
+  \times 2/3 {bes e g} \times 2/3 {bes g e} bes8 r |
+  R2 |
+  << {s1*0\p} {\repeat unfold 4 {\times 2/3 {a16 c f} \times 2/3 {a f c}}} >> |
+  \times 2/3 {bes e g} \times 2/3 {bes g e} bes8 r |
+  R2*5 |
+  \crescTextCresc
+  f'4-.\< f-. |
+  f2 |
+  f4-. f-. |
+  f2 |
+  aes4-.\< aes-. |
+  aes2 |
+  aes4-.\f aes-. |
+  aes2 |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  gis4-.\semprePiuF gis-. |
+  gis2 |
+  a\ff |
+  a4 gis |
+  a8 r r4 |
+  R2*10 |
+
+  %presto
+  a2~\ff |
+  a16 g' f e f e d c |
+  d c b a bes a g f |
+  e f g f e c d e |
+  f8 r r4 |
+  R2 |
+  r8. a16 c8.(\sf a16) |
+  g8[ r16 bes] e8.(\sf bes16) |
+  \repeat tremolo 4 a16 c8.(\sf a16) |
+  g16( bes) bes-. bes-. e8.(\sf bes16) |
+  a16( c) c-. c-. a8.(\sf c16) |
+  bes16 g g g e8.(\sf g16) |
+  a16-. a-. a-. a-. f(\sf a) a a |
+  bes-. g-. g-. g-. e(\sf g) g-. g-. |
+  \repeat unfold 2 {a\sf a f a bes\sf g e g |}
+  a16 f g a bes\sf a bes b |
+  c\sf b c cis d\sf cis d e |
+  f8 d r bes |
+  r g r c |
+  r d\sf r bes |
+  r g r c |
+  f,16-. c-. f-. c-. f-. c-. a'-.\sf f-. |
+  a-. f-. a-. f-. a f c'\sf a |
+  c a f\sf c f c a'\sf f |
+  a f a\sf f a f a\sf f |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  f2\semprePiuF |
+  f |
+  f16 f g a bes c d e |
+  f f, g a bes c d e |
+  f4\ff r |
+  a, r |
+  a8 r a r |
+  a r a r |
+  a r r4 |
+  c8 r r4 |
+  c8 r c r |
+  c r c r |
+  c16 f, g a bes c d e |
+  f f, g a bes c d e |
+  f8 r r4 |
+  c8 r r4 |
+  a4 r\fermata |
+}
+

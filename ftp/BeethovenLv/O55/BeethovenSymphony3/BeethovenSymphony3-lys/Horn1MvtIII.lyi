@@ -1,0 +1,221 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+hornOneMvtIII = \relative c''
+{
+  \transposition ees
+  \partial 4 r4
+  R2.*30 |
+  \repeat volta 2
+  {
+    R2.*52 |
+
+    r4 g-.\p g-. |
+    g-. g-. g-. |
+    g-. r r |
+    R2.*7 |
+    c4\ff e g |
+    c, e g |
+    c, e g |
+    c, c c |
+    \repeat unfold 7 {g'2.} |
+    g4 c, c |
+    c2. |
+    f |
+    e |
+    f |
+    e |
+    f4 c c |
+    \repeat unfold 3 {c c c |}
+    d d d |
+    c r r |
+    R2.*3 |
+    r4 c\p c |
+    c c c |
+    c e e |
+    d d d |
+    c\f e2\sf |
+    c4 g2\sf |
+    e4 c'2\sf |
+    g4 r g |
+    e' r r |
+    R2.*7 |
+    r4 c-.\p c-. |
+    c-. c-. c-. |
+    c-. r r |
+    R2. |
+    r4 c-.\p c-. |
+    \repeat unfold 3 {c-. c-. c-. |}
+    c r r |
+    R2.*7 |
+    c4\p r r |
+    c r r |
+    d r r |
+    d r r |
+    e r r |
+    e r r |
+    c r r |
+    g g g |
+    g\ff g g |
+    g d' d |
+    d f f |
+    f e d |
+  }
+  \alternative
+  {
+    {
+      c4\f r r |
+      d\f r r |
+      d\f r r |
+      R2. |
+    }
+    {
+      c4\f r r |
+      d\f r r |
+      c\f r r |
+      r4 r
+    }
+  }
+
+  g4 |
+  g2.~\f |
+  g2 c4 |
+  c2 e4 |
+  e2 g4 |
+  g2 e4 |
+  c2 e4 |
+  d4 r r |
+  R2.*2 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  r4 r e4-.\< |
+  e( c) g'-. g2.~\sf |
+  g4 r g\f |
+  a r b |
+  c r r |
+
+  r4 r g, |
+  g2.~\sf |
+  g2 c4 |
+  c2 e4 |
+  e2 g4 |
+  g2 e4 |
+  c2 e4 |
+  d4 r r |
+  R2.*2 |
+  r4 r e4-.\< |
+  e( c) g'-. g2.~\sf |
+  g4 r g\f |
+  a r b |
+  c r r |
+  R2. |
+
+  \repeat volta 2
+  {
+    R2.*25 |
+    r4 r g, |
+    g2.~\sf |
+    g2 c4 |
+    c2 e4 |
+    e2 g4 |
+    g2 e4 |
+    c2 e4 |
+    d4 r r |
+    R2.*2 |
+    r4 r e4-.\< |
+    e( c) g'-. |
+    g2.~\sf\> |
+    g2. |
+    f2\! e4 |
+    d4 r r |
+    R2.*3 |
+    r4 r g-. |
+    g2.~\sf\> |
+    g2. |
+    f2\! e4 |
+    d4 r r |
+    R2.*3 |
+    r4 r e( |
+    f2.~)\sf\> |
+    f2.~ |
+    f2.~ |
+  }
+  \alternative
+  {
+    { f2.\! | f~ | f~ | f | e4 r r | R2. | }
+    { f4\repeatTie r r | }
+  }
+
+  R2.*84 |
+  r4 r g, |
+  g g g |
+  g g g |
+  g r r |
+  R2.*7 |
+  c4\ff e g |
+  c, e g |
+  c, e g |
+  c, c c |
+  \repeat unfold 7 {g'2.} |
+  g4 c, c |
+  \repeat unfold 5 {c2.} |
+  \repeat unfold 4 {c4 c c} |
+  d d d |
+  c r r |
+  R2.*3 |
+  r4 c\p c |
+  c c c |
+  c e e |
+  d d d |
+
+  %Alla breve
+  c2 e | \tag #'part \noBreak
+  c g |
+  e c' |
+  g g |
+
+  %3/4
+  e'4 r r |
+  R2.*7 |
+  r4 c\p c |
+  c c c |
+  c r r |
+  R2. |
+  r4 c\p c |
+  c c c |
+  c c\p c |
+  c c c |
+  c r r |
+  R2.*7 |
+  c4\p r r |
+  c r r |
+  d r r |
+  d r r |
+  e\< r r |
+  e r r |
+  c r r |
+  g g g |
+  g\ff g g |
+  g d' d |
+  d f f |
+  f e d |
+  c\f r r |
+  d\f r r |
+
+  %coda
+  R2.*8 |
+  r4 d\p\< e |
+  d e d |
+  e d e |
+  d e d |
+  e d\< e |
+  d e d |
+  e\f d e |
+  d e d |
+  e\ff r r |
+  d\ff r r |
+  c\ff r r |
+  R2.^\fermataMarkup |
+}
+

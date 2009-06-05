@@ -1,0 +1,172 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+trumpetOneMvtIV = \relative c''
+{
+  \transposition ees
+  \grace {s16 s}
+  \tag #'score \voiceOne
+  R2*6 |
+  g4\ff r |
+  g-. g-. |
+  g-. r |
+  g\sf r |
+  g2\sf\fermata |
+  R2*17 |
+  g8-.\ff g-. g-. r |
+  R2 |
+  g4.\p\fermata r8 |
+  R2*5 |
+  g8-.\ff g-. g-. r |
+  R2 |
+  g4.\p\fermata r8 |
+  R2*5 |
+
+  \repeat volta 2
+  {
+    R2*6
+  }
+  \alternative
+  {
+    {
+      R2*2
+    }
+    {
+      r4.
+    }
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*3 |
+    r4.\fermata r8 |
+    R2*3 |
+    r4.
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*7 |
+    r4.
+  }
+  \repeat volta 2
+  {
+    r8 |
+    R2*3 |
+    r4.\fermata r8 |
+    R2*3 |
+    r4.
+  }
+  r8 |
+  R2*8 |
+  c,2\f |
+  g' |
+  g, |
+  c |
+  c'4 g |
+  c8\sf r r4 |
+  r8 g c c |
+  g r g r |
+  R2*3 |
+  r4.\fermata r8 |
+  R2*4 |
+  g8\f r r4 |
+  g8 g g r |
+  g r g r |
+  g4.\f\fermata r8 |
+  c2 |
+  c |
+  g4 g |
+  c,8 r r4 |
+  R2*7 |
+  e4-.\ff e-. |
+  e-. r |
+  R2*197 |
+  r4 c'~\ff |
+  c2 |
+  g |
+  g |
+  c4. g8 |
+  \repeat tremolo 4 g8 |
+  g4. e'8 |
+  \repeat tremolo 4 e8 |
+  e4. c8 |
+  \repeat tremolo 4 c8 |
+  c4 r |
+  R2 |
+  r8 g4 g8 |
+  g c c c |
+  g2 |
+  c4 c, |
+  R2*4 |
+  \repeat unfold 4 {g'4 g |}
+  \repeat unfold 4 {g8 g, g' g, |}
+  d''2~ |
+  d~ |
+  d4 r |
+  r r8. g,16 |
+  g4 r8. g16 |
+  g4 r8. g16 |
+  g4.\fermata r8 |
+  R2*32 |
+  r8 g-.\ff g4~\sf |
+  \repeat unfold 3 {g8 g-. g4~\sf |}
+  g8 c r d |
+  c\sf g16 g g g g g |
+  \repeat tremolo 8 g16 |
+  g4 g8 r |
+  r g-. g4~\sf |
+  g8 g-. g4~\sf |
+  g8 g g g~ |
+  g g g4~ |
+  g8 c c4~\sf |
+  c8 c c4~\sf |
+  c16 g g g r g g g |
+  e8 r r4 |
+  R2*17 |
+  c'4\f c |
+  c2 |
+  R2*2 |
+  e2\ff |
+  R2*12 |
+
+  %Presto
+  e2~\ff |
+  e8 r e r |
+  R2*6 |
+  c8\ff r r4 |
+  g8 r r4 |
+  c16 g g g g4~\sf |
+  g16 g g g g4~\sf |
+  \repeat tremolo4 g8 |
+  \repeat unfold 3 {<< {\repeat tremolo 4 g8 |} {s2\sf |} >>}
+  g8 r c\sf r |
+  c\sf r c\sf r |
+  c r c r |
+  r4 g8 g |
+  c\sf r c r |
+  r4 g8 g |
+  c8 r r4 |
+  c8 r r4 |
+  r8 c,16\sf g c g e'\sf c |
+  e c g'\sf e g e c'\sf g |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  c2\semprePiuF |
+  c2 |
+  \repeat unfold 2 {\repeat tremolo 4 c8 |}
+  c4\ff r |
+  c r |
+  c8 r c r |
+  c r c r |
+  c r r4 |
+  g8 r r4 |
+  g8 r g r |
+  g r g r |
+  c2~ |
+  c16 c c c \repeat tremolo 4 c16 |
+  c,8 r r4 |
+  c'8 r r4 |
+  c4 r\fermata |
+}
+

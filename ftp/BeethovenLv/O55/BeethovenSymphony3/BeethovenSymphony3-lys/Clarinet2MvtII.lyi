@@ -1,0 +1,167 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+clarinetTwoMvtII = \relative c'
+{
+  \transposition bes
+  \key d \minor
+  \partial 8 r8 |
+  R2*8 |
+  f2\p | f |
+  f4 a8 a |
+  a(\< f\> e)\! r |
+  e4 r |
+  g8 r r4 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \dimTextDecresc
+  r8 g(\> f e) |
+  f8\p f16. f32 f8 r |
+
+  %A
+  R2*20 |
+  a4(\p g8 f) |
+  e2 |
+  \crescTextCresc
+  bes'4(\< a8 bes) |
+  fis8 r16. c'32-.\f c4 |
+  r4 bes8-.(\p a-.) |
+  gis2( |
+  a8) r r4 |
+  a4( g8 f) |
+  \crescHairpin
+  e4\< e8( g |
+  \dimHairpin
+  f4\> e8 d) |
+  a'8\! r r4 |
+  r4 r8 a |
+  \dimTextDecresc
+  g4(\> f |
+  \crescTextCresc
+  e)\< d\sf |
+  \crescTextCresc
+
+  %B
+  d4\p r |
+  g r |
+  g4.\< e8 |
+  a-.\f g-. r gis~\p |
+  \crescHairpin
+  \dimHairpin
+  gis a(\< g)\> g8 |
+  f8\p r r4 |
+  R2*3 |
+  bes4\f bes8.. bes32 |
+  b2\sf\> |
+  f4(\p g) |
+  f8 r r4 |
+  a4( g8.. f32) |
+  f8 r r f(\sf |
+  d) bes'16.\f g32 e8-. a-. |
+  d,-.\p r f-. r |
+  f-. r r 4 |
+
+  %Maggiore
+  \key d \major %D major makes more sense here than C major
+  R2*10 |
+
+  %C
+  R2*18 |
+  \crescTextCresc
+  g2\f\< |
+  fis4.\ff a8-.\sf |
+  fis4. a8-.\sf |
+  fis8-. a-.\sf fis8-. a-.\sf |
+  fis8-. r r4 |
+  R2*3 |
+
+  %Minore
+  \key d \minor
+  \grace {s32*3}
+  R2*16 |
+  g'2\f |
+  ees\sf |
+  fis4.\sf \afterGrace fis8(\trill {e32[ fis])} |
+  g8 r r4 |
+  R2*5 |
+
+  %D
+  g,4(\ff a8 bes) |
+  c4.\sf bes8 |
+  a( ees' d c) |
+  bes( a g f) |
+  e4( f8 g) |
+  f4(\ff g8 a) |
+  bes4.(\sf a8) |
+  g4( a8 bes) |
+  c4.(\sf bes8) |
+  a4( b8 cis) |
+  d,2~ |
+  d16 g-. a-. bes-. c-. d-. e-. f-. |
+  g-. bes,-. bes-. a-. g-. f'-. e-. d-. |
+  cis8 r16 a-. b-. cis-. d-. e-. |
+  R2 |
+  r4 r8 e8~ |
+  e d16( c bes8\sf d~) |
+  d c16( b a8\sf c~) |
+  c b16( a gis8\sf b~) |
+  b a16( b c8) a |
+
+  %E
+  a-. r r4 |
+  R2*2 |
+  r4 gis4(\p |
+  a8) r r4 |
+  R2*11 |
+  bes2~\ff |
+  bes8 bes bes bes |
+  bes r r4 |
+  R2*4 |
+
+  %F
+  R2*5 |
+  \crescTextCresc
+  r4 g~\< |
+  \dimTextDecresc
+  g8 g(\> f e) |
+  f8\p f16. f32 f8 r |
+  R2*4 |
+  c'4\p bes8 a~ |
+  \dimHairpin
+  gis4\< d\sf\> |
+  cis8\p r r4 |
+  R2 |
+  \crescHairpin
+  r4\< r8 a'~ |
+  a4.(\> gis8) |
+  a8\! r r4 |
+  R2*2 |
+  r4 r8 d,16. d32 |
+
+  %G
+  c4\p \appoggiatura a'8\( g16. fis32 g16. a32\) |
+  bes4( g8) r |
+  \crescTextCresc
+  g4\< f32( e16.) d32( cis16.) |
+  d8-.\f bes'-. r gis~\p |
+  gis a(\> g) g16.( g32) |
+  f8\! r r4 |
+  R2*3 |
+  bes4\f bes8.. bes32 |
+  b2\sf\> |
+  f4(\p g) |
+  f8 gis4(\> a8) |
+  a4(\< g8.. f32) |
+
+  %H
+  f8\f r r4 |
+  R2*17 |
+  r8 bes(\< a8 g) |
+  fis4\p\< d' |
+  r4\! bes8\p r |
+  r4 f8 r |
+  R2*15 |
+  r8 a4\sf\> f8 |
+  f4.\p\fermata
+}
+

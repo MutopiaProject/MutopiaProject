@@ -1,0 +1,74 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+trumpetTwoMvtII = \relative c'
+{
+  \key c \major
+  \transposition c
+  \partial 8 r8 |
+  R2*68 |
+
+  %Maggiore
+  R2*7 |
+  g4.\ff g8-.\sf |
+  g4. g8-.\sf |
+  g-. g-.\sf g-. g-.\sf |
+  g-. r r4 |
+  R2*11 |
+  r8 c16.\p c32 c8 c |
+  c8 r r4 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  r8 c16.\< c32 c8 c |
+  \crescHairpin
+  c c r g |
+  r c r c |
+  c8\f r
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    \times 2/3 {c16\semprePiuF g c} \times 2/3 {e c e} |
+  g4. g,8 |
+  c4.\ff e8-.\sf |
+  c4. e8-.\sf |
+  c-. e-.\sf c-. e-.\sf |
+  c-. r r4 |
+  R2*3 |
+
+  %Minore
+  \grace {s32*3}
+  R2*24 |
+  r8 c\f c c |
+  f'2\ff |
+  f |
+  c,4. c8 |
+  c r r4 |
+  R2*6 |
+  c2~\ff |
+  c4 f'~\sf |
+  f d~ |
+  d g( |
+  g,) g |
+  d'8 r r4 |
+  R2*2 |
+  r4 d~ |
+  d8 g,,-. g-. g-. |
+  g-. r r4 |
+  R2*9 |
+  c2\ff |
+  c4 c8.. c32 |
+  c2\sf |
+  c4 c8.. c32 |
+  c2~\sf |
+  c8 c c c |
+  f'2~\ff |
+  f8 f f f |
+  f r r4 |
+  R2*4 |
+  g,,2\p |
+  g |
+  g4 g |
+  g4. r8 |
+  R2*70 |
+  r4.\fermata
+}
+

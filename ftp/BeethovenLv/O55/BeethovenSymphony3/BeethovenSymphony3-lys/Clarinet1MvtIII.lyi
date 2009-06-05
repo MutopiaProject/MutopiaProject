@@ -1,0 +1,248 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+clarinetOneMvtIII = \relative c''
+{
+  \transposition bes
+  \key f \major
+  r4
+  R2.*30 |
+  \repeat volta 2
+  {
+    R2.*49 |
+    r4 r bes-.\p |
+    a-. bes-. a-. |
+    bes-. a-. bes-. |
+    a-. g-. gis-. |
+    a-. bes-. b-. |
+    \repeat unfold 6 c-. |
+    c4( d8 c b a) |
+    g2. |
+    f2. |
+    e4( g) e-. |
+    d( f) d-. |
+    \override DynamicTextSpanner #'dash-period = #-1.0
+    \crescTextCresc
+    c-.\< d-. e-. |
+
+    %A
+    f\ff f' f |
+    f f f |
+    f( g8 f e d) |
+    c2. |
+    \repeat unfold 2
+    {
+      bes\sf |
+      a4( c) a-. |
+      g( c) g-. |
+      f-. a-. c-. |
+    }
+    ees2.\sf |
+    d4( f) d-. |
+    c( f) c-. |
+    bes-. d-. f-. |
+    ees2.\sf |
+    d4-. \repeat unfold 11 f-. |
+    e-. e-. e-. |
+    f-. r r |
+    R2.*3 |
+    r4 f\p \repeat unfold 7 f |
+    e e e |
+    f-.\f a2\sf |
+    f4 c2\sf |
+    a4 f'2\sf |
+    c4 r bes(\trill |
+
+    %B
+    a) bes-.\p a-. |
+    bes-. a-. bes-. |
+    a-. r r |
+    R2. |
+    r4 aes-.\p g-. |
+    aes-. g-. aes-. |
+    g-. r r |
+    R2. |
+    r4 f'-.\p f-. |
+    f-. f-. f-. |
+    f-. r r |
+    R2. |
+    r4 f-.\p f-. |
+    f-. f-. f-. |
+    f-. d-. c-. |
+    d-. c-. d-. |
+    c-. r r |
+    R2.*7 |
+    f4\p r r |
+    d r r |
+    d r r |
+    e r r |
+    e-.\< dis-. e-. |
+    f-. g-. a-. |
+    bes-. r r |
+    r c,\< c |
+    c\ff e e |
+    e g g |
+    g g g |
+    g f bes, |
+  }
+  \alternative
+  {
+    {
+      a\f r r |
+      e'\f r r |
+      e\f r r |
+      R2. |
+    }
+    {
+      a,4\f r r |
+      e'\f r r |
+      f\f r r |
+      r r
+    }
+  }
+
+  %trio
+  r4 |
+  R2.*30 |
+  r4 r f\f |
+  f2 f4 |
+
+  \repeat volta 2
+  {
+    f2 f4 |
+    f2 f4 |
+    f( d c |
+    bes) r d |
+    d2 d4 |
+    d2 d4 |
+    d( bes a |
+    g-.) r r |
+    R2.*32 |
+    r4 r f'~\p |
+    f2.~\sf\> |
+    f2.~( |
+    f2(\! e4 |
+    f) r r |
+    R2.*3 |
+    r4 r f~\pp |
+    f2.~ |
+    f2 f4~ |
+    f2.~ |
+    f4 r r |
+    R2.*3 |
+  }
+  \alternative
+  {
+    {
+      R2.*4 |
+      r4 r f\f |
+      f2 f4 |
+    }
+    {
+      R2. |
+    }
+  }
+  R2.*82 |
+  r4 r bes,-.\p |
+  a-. bes-. a-. |
+  bes-. a-. bes-. |
+  a-. g-. gis-. |
+  a-. bes-. b-. |
+  c c c |
+  c c c |
+  c( d8 c b a) |
+  g2. |
+  f2. |
+  e4( g) e |
+  d( f) d-. |
+  c-.\< d-. e-. |
+
+  %C
+  f\ff f' f |
+  f f f |
+  f( g8 f e d) |
+  c2. |
+  \repeat unfold 2
+  {
+    bes\sf |
+    a4( c) a-. |
+    g( c) g-. |
+    f-. a-. c-. |
+  }
+  ees2.\sf |
+  d4( f) d-. |
+  c( f) c-. |
+  bes-. d-. f-. |
+  ees2.\sf |
+  d4 \repeat unfold 11 f |
+  e e e |
+  f r r |
+  R2.*3 |
+  r4 f-.\p f-. |
+  f-. f-. f-. |
+  f-. f-. f-. |
+  e-. e-. e-. |
+
+  %alla breve
+  f-.\f r a2-.\ff |
+  f-. c-. |
+  a-. f'-. |
+  c-. bes-. |
+
+  %3/4
+  a4-.bes-.\p a-. |
+  bes-. a-. bes-. |
+  a r r |
+  R2. |
+  r4 aes-.\p g-. |
+  aes-. g-. aes-. |
+  g-. r r |
+  R2. |
+  r4 f'-.\p f-. |
+  f-. f-. f-. |
+  f-. r r |
+  R2. |
+  r4 f-.\p f-. |
+  f-. f-. f-. |
+  f-. d-. c-. |
+  d-. c-. d-. |
+  c-. r r |
+  R2.*7 |
+  f4\p r r |
+  d r r |
+  d r r |
+  e r r |
+  e-.\< dis-. e-. |
+  f-. g-. a-. |
+  bes r r |
+  r c, c |
+  c\ff e e |
+  e g g |
+  g g g |
+  g f bes, |
+  a\f r r |
+  e'\f r r |
+
+  %coda
+  R2.*2 |
+  \crescHairpin
+  ees2.(\pp\< |
+  e\> |
+  f4)\! r r |
+  R2. |
+  ees2.(\pp\< |
+  \crescTextCresc
+  e\> |
+  f4)\! r r |
+  R2.*3 |
+  r4 g,\< a |
+  g a g |
+  a\f e' f |
+  e f e |
+  f\ff r r |
+  g\ff r r |
+  f\ff r r |
+  R2.^\fermataMarkup |
+}
+

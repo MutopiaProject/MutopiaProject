@@ -1,0 +1,17 @@
+Please send all comments and error reports to horndude77@gmail.com or to the
+Mutopia mailing list (http://news.gmane.org/gmane.music.mutopia.discuss).
+
+For latest source see: http://github.com/horndude77/open-scores/tree/master
+
+To build full score:
+> lilypond ScoreMvt<Movement>.ly
+
+To build individual part:
+> lilypond <name of part>.ly
+
+TODO:
+- Add cues to parts.
+- Assess the page turning situation for each part.
+- Improve visual look of scores.
+- Use part combine function to reduce clutter in scores.
+

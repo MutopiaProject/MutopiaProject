@@ -1,0 +1,427 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+violinOneMvtIII = \relative c'
+{
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \key ees \major
+  bes4-._\mSemprePianissimoStaccato |
+  bes-. c-. bes-. |
+  c-. bes-. c-. |
+  bes-. c-. bes-. |
+  c-. bes-. d-. |
+  ees-. f-. fis-. |
+  g-. aes-. a-. |
+  \repeat unfold 6 {bes-.} |
+  bes4( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes r bes-._\mSempreStaccato |
+  \repeat unfold 5 {bes-. c-.} bes-. d-. |
+  ees-. f-. fis-. |
+  g-. aes-. a-. |
+  \repeat unfold 6 {bes-.} |
+  bes4( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes-. r bes-. |
+  bes-. ces-. bes-. |
+  ces-. bes-. ces-. |
+  
+  \repeat volta 2
+  {
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    bes-.\semprePP ces-. bes-. |
+    ces-. ces-. c-. |
+    c-. des-. c-. |
+    des-. c-. des-. |
+    c des c |
+    des des c |
+    c des des |
+    des d d |
+    d ees ees |
+    ees e e |
+    f f' f |
+    f f f |
+    f( g8 f e d) |
+    c2. |
+    bes |
+    a4( c) a-. |
+    g( bes) g-. |
+    f-. a-. c-. |
+    R2.*2 |
+    c'2.-> |
+    c2.-> |
+    R2.*2 |
+    d2.-> |
+    d2.-> |
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    d4-.\semprePP a-. fis-. |
+    g-. bes-. cis,-. |
+    d-. fis-. a-. |
+    bes-. g-. cis-. |
+    d-. cis-. d-. |
+    a-. bes-. fis-. |
+    g-. d-. ees-. |
+    d-. ees-. cis-. |
+    \repeat unfold 6 {d-. cis-.} |
+    d-. r r |
+    R2.*6 |
+    r4 r bes,-.\pp |
+    \repeat unfold 8 {bes-. c-.} bes-. d-. |
+    ees f fis |
+    g aes a |
+    bes bes bes |
+    bes bes bes |
+    bes( c8 bes a g) |
+    f2. |
+    ees |
+    d4( f) d-. |
+    c( ees) c-. |
+    \crescTextCresc
+    bes-.\< c-. d-. |
+    \crescHairpin
+    ees\ff <ees' g,> <ees g,> |
+    <ees g,> <ees g,> <ees g,> |
+    <ees g,>( f8( ees d c) |
+    bes2. |
+    \repeat unfold 2
+    {
+      aes'\sf |
+      g4( bes) g-. |
+      f( bes) f-. |
+      ees-. g-. bes-. |
+    }
+    des2.\sf |
+    c4( ees) c-. |
+    bes( ees) bes-. |
+    aes-. c-. ees-. |
+    des2.\sf |
+    c4( ees) c-. |
+    ees-. bes-. ees-. |
+    aes,-. ees'-. aes,-. |
+    ees'-. g,-. ees'-. |
+    f,-. d'-. f,-. |
+    <g ees'>-. g2-.\sf |
+    ees4-. bes2-.\sf |
+    g4-. ees2-.\sf |
+    bes4 r aes(\trill |
+    g) r r |
+    R2. |
+    r4 g'\p g |
+    aes aes aes |
+    g-.\f g'2\sf |
+    ees4 bes2\sf |
+    g4 ees2\sf |
+    bes4 r aes(\trill |
+    g) r r |
+    R2. |
+    r4 bes''-.\p aes |
+    bes-. aes-. bes-. |
+    aes-. r r |
+    R2. |
+    \repeat unfold 2
+    {
+      r4 aes-.\p g-. |
+      aes-. g-. aes-. |
+      g-. r r |
+      R2. |
+    }
+    r4 ees-.\p ees-. |
+    ees-. ees-. ees-. |
+    ees-. g-. d-. |
+    ees-. b-. c-. |
+    aes-. aes'-. e-. |
+    f-. cis-. d-. |
+    bes-. bes'-. fis-. |
+    g-. d-. ees-. |
+    c-. g-. aes-. |
+    f-. d-. bes'-. |
+    g8\p g bes bes b b |
+    c c d d ees ees |
+    f f c c cis cis |
+    d d e e f f |
+    \crescTextCresc
+    g\< g cis, cis d d |
+    \crescHairpin
+    ees ees f f g g |
+    <<
+      {s2.*2 | s2.*3\ff |}
+      \repeat unfold 5 {\repeat tremolo 6 aes8 |}
+    >>
+    aes8 aes g g f f |
+  }
+  \alternative
+  {
+    {
+      ees4\f r r |
+      <f bes, d,>\f r r |
+      <aes bes, d,>\f ces,,-.\p bes-. |
+      ces-. bes-. ces-. |
+    }
+    {
+      ees'4\f r r |
+      <f bes, d,>\f r r |
+      <ees ees, g,>\f r r |
+      r r
+    }
+  }
+
+  %Trio
+  r4 |
+  R2.*6 |
+  r4 g,\p g |
+  f r r |
+  R2.*6 |
+  r4 c'\p d |
+  ees r r |
+  R2.*6 |
+  r4 g,\p g |
+  f r r |
+  R2.*5 |
+  r4 aes\p aes |
+  g r ees-.\f |
+  aes( ees) c'-. |
+
+  \repeat volta 2
+  {
+    bes( ees,) des'-. |
+    g,( ees) bes'-. |
+    aes r c-. |
+    f( c) aes'-. |
+    g( c,) bes'-. |
+    e,( c) g'-. |
+    f r r |
+    R2.*10 |
+    r4 bes,(\p aes |
+    c aes g |
+    f) r r |
+    R2. |
+    r4 f'( d |
+    bes) r r |
+    \crescTextCresc
+    r f'(\< d |
+    bes)\! r r |
+    \crescHairpin
+    r bes(\f g |
+    ees) r r |
+    R2.*5 |
+    r4 g\p g |
+    f r r |
+    R2.*6 |
+    r4 r f(\p |
+    fis2.~)\sf\> |
+    fis( |
+    g2\! aes4 |
+    g) r r |
+    R2.*3 |
+    r4 r f(\pp |
+    fis2.~) |
+    fis2 fis4( |
+    g2.~) |
+    g4 r r |
+    R2.*2 | %double bar
+    R2. |
+  }
+  \alternative
+  {
+    {
+      R2.*3 |
+      r4 f\pp f |
+      g r ees-.\f |
+      aes( ees) c'-. |
+    }
+    {r4 b,-.\pp c-.}
+  }
+  b-. c-. b-. |
+  c-. b-. c-. |
+  b-. c-. d-. |
+  \repeat unfold 3 {ees-. ees-. ees-. |}
+  ees ees d |
+  ees f fis |
+  g aes a |
+  bes\pp_\mSempreStaccato bes bes |
+  bes bes bes |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes-. r bes-. |
+  bes-. c-. bes-. |
+  c-. bes-. c-. |
+  bes-. c-. bes-. |
+  c-. bes-. d-. |
+  ees-. f-. fis-. |
+  g-. aes-. a-. |
+  bes-. bes-. bes-. |
+  bes-. bes-. bes-. |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  bes-. r bes-. |
+  bes-. ces-. bes-. |
+  ces-. bes-. ces-. |
+  bes-. ces-. bes-. |
+  ces-. ces-. c-. |
+  c-. des-. c-. |
+  des c des |
+  c des c |
+  des des c |
+  c des des |
+  des d d |
+  d ees ees |
+  d e e |
+  f f' f |
+  f f f |
+  f( g8 f e d) |
+  c2. |
+  bes |
+  a4( c) a-. |
+  g( bes) g-. |
+  f-. a-. c-. |
+  R2.*2 |
+  c'2.-> |
+  c2.-> |
+  R2.*2 |
+  d2.-> |
+  d2.-> |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  d4-.\semprePP a-. fis-. |
+  g-. bes-. cis,-. |
+  d-. fis-. a-. |
+  bes -. g-. cis-. |
+  d-. cis-. d-. |
+  a-. bes-. fis-. |
+  g-. d-. ees-. |
+  d-. ees-. cis-. |
+  \repeat unfold 2
+  {
+    d-. cis-. d-. |
+    cis-. d-. cis-. |
+  }
+  d-. r r |
+  R2.*6 |
+  r4 r bes,-.\pp |
+  bes-. c-. bes-. |
+  c-. bes-. c-. |
+  bes-. c-. bes-. |
+  c bes c |
+  bes c bes |
+  c bes d |
+  ees f fis |
+  g aes a |
+  bes bes bes |
+  bes bes bes |
+  bes( c8 bes a g) |
+  f2. |
+  ees |
+  d4( f) d-. |
+  c( ees) c-. |
+  \crescTextCresc
+  bes\< c d |
+  \crescHairpin
+  ees\ff <ees' g,> <ees g,>
+  <ees g,> <ees g,> <ees g,> |
+  <ees g,>( f8 ees d c) |
+  bes2. |
+  aes'\sf |
+  g4( bes) g-. |
+  f( bes) f-. |
+  ees-. g-. bes-. |
+  aes2.\sf |
+  g4( bes) g-. |
+  f( bes) f-. |
+  ees-. g-. bes-. |
+  des2.\sf |
+  c4( ees) c-. |
+  bes( ees) bes-. |
+  aes-. c-. ees-. |
+  des2.\sf |
+  c4( ees) c-. |
+  ees-. bes-. ees-. |
+  aes,-. ees'-. aes,-. |
+  ees'-. g,-. ees'-. |
+  f,-. d'-. f,-. |
+  <g ees'>-. g2\sf |
+  ees4-. bes2\sf |
+  g4-. ees2\sf |
+  bes4 r aes(\trill |
+  g) r r |
+  R2. |
+  r4 g'\p g |
+  aes aes aes |
+
+  %alla breve
+  g4\f r g'2-.\ff |
+  ees-. bes-. |
+  g-. ees-. |
+  bes-. aes-. |
+
+  %3/4
+  g4-. r r |
+  R2. |
+  r4 bes''-.\p aes-. |
+  bes-. aes-. bes-. |
+  aes-. r r |
+  R2. |
+  r4 aes-.\p g-. |
+  aes-. g-. aes-. |
+  g-. r r |
+  R2. |
+  r4 aes-.\p g-. |
+  aes-. g-. aes-. |
+  g-. r r |
+  R2. |
+  r4 ees-.\p ees-. |
+  ees-. ees-. ees-. |
+  ees-. g-. d-. |
+  ees-. b-. c-. |
+  aes-. aes'-. e-. |
+  f-. cis-. d-. |
+  bes-. bes'-. fis-. |
+  g-. d-. ees-. |
+  c-. g-. aes-. |
+  f-. d-. bes'-. |
+  g8\p g bes bes b b |
+  c c d d ees ees |
+  f f c c cis cis |
+  d d e e f f |
+  \crescTextCresc
+  g g cis,\< cis d d |
+  \crescHairpin
+  ees ees f f g g |
+  <<
+    \repeat unfold 5 {\repeat tremolo 6 aes8 |}
+    {s2.*2 | s2.*3\ff |}
+  >>
+  aes8 aes g g f f |
+  ees4\f r r |
+  <d, bes' f'>\f r r |
+  R2.*2 |
+  r4 des\pp\< des |
+  d d\> d |
+  ees r\! r |
+  R2. |
+  r4 des'\< des |
+  d d\> d |
+  ees r\! r |
+  R2.*3 |
+  \crescTextCresc
+  r4 d'8\< d ees ees |
+  d d ees ees d d |
+  ees\f ees d d ees ees |
+  d d ees ees d d |
+  ees4\ff r r |
+  <bes bes, d,>\ff r r |
+  <g bes, ees, g,>\ff r r |
+  R2.^\fermataMarkup
+}
+

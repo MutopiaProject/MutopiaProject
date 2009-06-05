@@ -1,0 +1,315 @@
+\version "2.12.2"
+
+\include "defs.lyi"
+
+violinOneMvtII = \relative c'
+{
+  \key c \minor
+  \partial 8 g16.\pp g32 |
+  g4 \acciaccatura d'8\( c16. b32 c16. d32\) |
+  ees4( c8) r |
+  g'4 f32( ees16.) d32( c16.) |
+  ees4( d8) r |
+  d4 d16.( ees32 f16. g32) |
+  aes4.(\sf\> g16 f)\! |
+  f16( ees) f-.( d-.) c8( d16. b32) |
+  c8 c16. c32 c8 r16 \times 2/3 {ees32 ees ees} |
+  \repeat unfold 2 {ees8 r r8. \times 2/3 {ees32 ees ees}} |
+  ees8 r16 \times 2/3 {ees32 ees ees} g8 r16 \times 2/3 {g32 g g} |
+  g8\< r16 \times 2/3 {a32 a a} b8\> r16 \times 2/3 {d,32\! d d} |
+  d8 r r8. \times 2/3 {f32 f f} |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  f8 r r8. \times 2/3 {aes32\< aes aes} |
+  \dimTextDecresc
+  aes8 r16 \times 2/3 {aes32\> aes aes} g8 r16 \times 2/3 {aes32 aes aes} |
+  g8\p r r bes,\p |
+  ees4( d8 c) |
+  \crescHairpin
+  bes4~ bes16 bes32-.\< c-. d-. ees-. f-. g-. |
+  \crescTextCresc
+  aes4(\< g8 f) |
+  e8 r16. bes'32\f bes4 |
+  r4 aes8(\p g) |
+  \dimHairpin
+  fis4( c'8.\sf\> fis,16) |
+  g2~\p |
+  \crescHairpin
+  g4. g8 |
+  g'4(\< d8 f |
+  ees4\> d8 c) |
+  b8\! r r4 |
+  R2*2 |
+  r4 r8 c,16.\sf c32 |
+  c4\p \acciaccatura g'8 f16.( e32 f16. g32) |
+  aes4( f8) r |
+  \crescTextCresc
+  f'4\< ees32( d16.) c32( b16.) |
+  c8-.\f aes-. r fis~\p\< |
+  fis g4(\sf\> f16. d32) |
+  c8\p r r8. \times 2/3 {<bes aes'>32 <bes aes'> <bes aes'>} |
+  <bes g'>8 r r8. \times 2/3 {ees32 ees ees} |
+  f8 r r8. \times 2/3 {f32 f f} |
+  aes8\< r16 \times 2/3 {aes32 aes aes} g8 r16 \times 2/3 {f32 f f} |
+  e8 r16 \times 2/3 {bes'32 bes bes} bes8\f r16 \times 2/3 {bes32 bes bes} |
+  bes8\p r16 \times 2/3 {bes32 bes bes} aes8 r16 \times 2/3 {g32 g g} |
+  fis8 r16 \times 2/3 {fis32 fis fis} fis8-> r16 \times 2/3 {fis32 fis fis} |
+  g8 r r8. \times 2/3 {g32 g g} |
+  g8 r r8. \times 2/3 {g32 g g} |
+  \crescHairpin
+  g8\< r r8. \times 2/3 {g32 g g} |
+  g8\> r16 \times 2/3 {g32 g g} g8 r16 \times 2/3 {g32 g g} |
+  g8\! r r4 |
+  R2*2 |
+  r4 r8. \times 2/3 {bes32\sf bes bes} |
+  aes8\p r r8. \times 2/3 {aes32 aes aes} |
+  aes8 r r8. \times 2/3 {aes32 aes aes} |
+  \crescTextCresc
+  aes8\< r16 \times 2/3 {aes32 aes aes} b8 r16 \times 2/3 {b32 b b} |
+  c8-.\f aes-. r8. \times 2/3 {ees32\p ees ees} |
+  \crescHairpin
+  ees8\< r16 \times 2/3 {ees32 ees ees} f8\> r16 \times 2/3 {b32 b b} |
+  c4(\p g) |
+  ees8( g c4) |
+  d4( ees8.\sf d32 c) |
+  c8( b16) r b8-. r |
+  R2 |
+  r4 r8. \times 2/3 {a32\p a a} |
+  g8 r16 \times 2/3 {g32 g g} g8 r16 \times 2/3 {g32 g g} |
+  g8 fis'4(\sf g8) |
+  g,8 r16 \times 2/3 {g32 g g} g8 r16 \times 2/3 {g32 g g} |
+  g8 aes'(\sf g ees\sf |
+  c8) aes16.\f f32 d8-. g-. |
+  c,-.\p r ees-. r |
+  c-. r r4 |
+
+  %maggiore
+  \key c \major
+  << {s2\p} {\repeat unfold 8 {\times 2/3 {g'16( c) e-.}} |} >>
+  \repeat unfold 8 {\times 2/3 {a,16( c) d-.}} |
+  \crescTextCresc
+  << {s2 | s8 s4.\<} {\repeat unfold 8 {\times 2/3 {b16( d) f-.}} |} >>
+  \times 2/3 {a,16( c) e-.} \times 2/3 {e,( a) c-.}
+    \times 2/3 {d,16( g) b-.} \times 2/3 {d,( fis) a-.} |
+  <<
+    {s2\ff}
+    \repeat unfold 2
+    {\times 4/6 {g32 g' g g g g} \times 4/6 {\repeat tremolo 6 g32} g8-. r |}
+  >>
+  <g b, d, g,>8-. r <g b, d, g,>-. r |
+  <g b, d, g,>4(\sf\> f16 e f d) |
+  c4(\p e8 g) |
+  bes4.( e,8) |
+  \crescTextCresc
+  f8(\< a bes e,) |
+  f( a bes e,) |
+  \times 2/3 {f16-.\p gis( a)} \times 2/3 {r16 a( g)}
+    \times 2/3 {r16 g( f)} \times 2/3 {r16 f( e)} |
+  \times 2/3 {r16 e( d)} \times 2/3 {r16 d( cis)}
+    \times 2/3 {r16 cis( d)} \times 2/3 {r16 d( cis)} |
+  \times 2/3 {b16-. b-. d-.} \times 2/3 {g-. a-. b-.}
+    c8-. \times 2/3 {r16 r
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+                      c,\sempreP} |
+  \times 2/3 {g16 b d} \times 2/3 {g16 a b}
+    \times 2/3 {c16 g e} \times 2/3 {g16 e c} |
+  \repeat unfold 4 {\times 2/3 {g16 g g}} |
+  \times 2/3 {f'16-. e-. f-.} \times 2/3 {d16-. cis-. d-.}
+    \times 2/3 {b16-. ais-. b-.} \times 2/3 {f16-. e-. f-.} |
+  \repeat unfold 4 {\times 2/3 {e16( g) c-.}} |
+  \repeat unfold 4 {\times 2/3 {g16( c) e-.}} |
+  << {s1*0\<} \repeat unfold 4 {\times 2/3 {f16( c) a-.}} >> |
+  \repeat unfold 4 {\times 2/3 {a'16( f) c-.}} |
+  \repeat unfold 2 {\times 2/3 {g'16( e) c-.}}
+    \repeat unfold 2 {\times 2/3 {g'16( d) b-.}} |
+  \repeat unfold 2 {\times 2/3 {g'16( e) c-.}}
+    \repeat unfold 2 {\times 2/3 {a'16( f) c-.}} |
+  <<
+    {
+      s8\f
+      \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+      s\semprePiuF
+    }
+    {\times 4/6 {c16 \repeat unfold 5 <e c'>} \times 4/6 {\repeat tremolo 6 <e c'>} |}
+  >> |
+  \repeat unfold 2 {\times 4/6 {\repeat tremolo 6 <d b'>16}} |
+  s1*0\ff
+  \repeat unfold 2
+  {
+    \repeat unfold 2 {\times 4/6 {\repeat tremolo 6 <e c'>32}} <e c'>8-. r |
+  } |
+  \repeat unfold 2 {<c' e, g, c,>8-. r} |
+  c2\fp( |
+  aes4. f8) |
+  des8(\< aes16. f32) des8-. c-. |
+  b8\p r r g16. g32 |
+
+  %minore
+  \key c \minor
+  \grace {s32*3}
+  g4\p^\sottoVoce \acciaccatura d'8 c16.( b32 c16. d32) |
+  ees4( c8) r |
+  g'4 f32( ees16.) d32( c16.) |
+  ees4( d8) r |
+  d4 d16.( ees32 f16. g32) |
+  aes2 |
+  g4 g16.( aes32 bes16. c32) |
+  \dimHairpin
+  des4.(\sf\> c16 bes) |
+  bes(\p aes) bes-.( g-.) f8( g16. e32) |
+  f8\f r r4 ||
+  R2*2 |
+  c'4(\f d8 ees) |
+  f4.\sf \afterGrace ees8(\trill {d32[ ees])} |
+  d8( aes' g\sf f) |
+  e( des' c\sf bes) |
+  aes16-. c,-. des-. c-. bes-. aes-. g-. f-. |
+  e-. f-. g-. f-. e-. c-. f-. c-. |
+  bes'-. c,-. bes'-. c,-. aes'-. c,-. g'-. c,-. |
+  f8 f'16( g) aes4~\sf |
+  aes8 g4 f8~ |
+  f ees( f g) |
+  aes4.\sf g8 |
+  f f( g aes) |
+  g16-. bes-. g-. aes-. bes-. c-. d-. e-. |
+  f2\ff |
+  des\sf |
+  e4. \afterGrace e8(\trill {d32[ e])} |
+  f4 f,8(\sf g16 aes) |
+  bes2~ |
+  bes8 r r4 |
+  r16 aes,-. bes-. c-. d-. ees-. f-. g-. |
+  aes8 r r4 |
+  r16 bes,-. c-. d-. ees-. f-. g-. aes-. |
+  bes8-. b-. c-. d-. |
+  ees-. r r4 |
+  r4 aes,4~\sf |
+  aes8 f16( ees) d8 r |
+  r4 g4~ |
+  g16 fis-. g-. a-. bes-. b-. c-. cis-. |
+  << {s4 s\sf} \repeat unfold 2 {\times 4/6 {\repeat tremolo 6 d16}} >> |
+  << {s4 s\sf} \repeat unfold 2 {\times 4/6 {\repeat tremolo 6 ees16}} >> |
+  \times 2/3 {ees( d) d} \times 2/3 {d d d} \times 4/6 {\repeat tremolo 6 d} |
+  \times 2/3 {d( c) c} \times 2/3 {c c c} \times 4/6 {\repeat tremolo 6 c} |
+  \times 2/3 {c c c} \times 2/3 {bes bes bes} \times 4/6 {\repeat tremolo 6 bes} |
+  bes8-. r <g, bes,>4~\sf |
+  <g bes,>8 <g bes,>-. <g bes,>-. <g bes,>-. |
+  \dimTextDecresc
+  <g a,>2\> |
+  <fis a,>2\p |
+  g4 \acciaccatura a8 g16.( fis32 g16. a32) |
+  bes4( g8) r |
+  d'4( b8) r |
+  aes'2 |
+  R2 |
+  <ees, c>2\ff |
+  \repeat unfold 4 {\times 4/6 {\repeat tremolo 6 <ees c>16}} |
+  \times 2/3 {<ees c> <ees c'> <ees c'>} \times 2/3 {<ees c'> <ees c'> <ees c'>}
+    \repeat unfold 5 {\times 4/6 {\repeat tremolo 6 <ees c'>16}} |
+  \times 2/3 {a16-. c-. ees-.} \times 2/3 {fis-. a-. c-.} ees8-. r |
+  \repeat unfold 2 {\times 4/6 {\repeat tremolo 6 <d,, b'>16}} |
+  \times 2/3 {d16-. f-. aes-.} \times 2/3 {b-. d-. f-.} \times 4/6 {\repeat tremolo 6 aes} |
+  << {s8 s\>} {\times 4/6 {\repeat tremolo 6 aes16}} >> \times 2/3 {aes aes aes} \times 2/3 {g g g} |
+  \times 2/3 {r fis\p fis} \times 2/3 {r g g} \times 2/3 {r aes aes} \times 2/3 {r g g} |
+  \times 2/3 {r f f} \times 2/3 {r ees ees} \times 2/3 {r d d} \times 2/3 {r c c} |
+  \times 2/3 {r b b} \times 2/3 {r aes aes} \times 2/3 {r g g} \times 2/3 {r b b} |
+  \times 2/3 {r g g} \times 2/3 {r d'-> d} \times 2/3 {r g, g} \times 2/3 {r g'-> g} |
+  \repeat unfold 2
+  {
+    \times 2/3 {r g, g} \times 2/3 {r aes-> aes} \times 2/3 {r g g} \times 2/3 {r c-> c} |
+    \times 2/3 {r g g} \times 2/3 {r ees'-> ees} \times 2/3 {r g, g} \times 2/3 {r g'-> g} |
+  }
+  \times 2/3 {r f, f} \times 2/3 {r d'-> d} \times 2/3 {r b b} \times 2/3 {r f'-> f} |
+  \times 2/3 {r d d} \times 2/3 {r aes'\< aes} \times 2/3 {r aes aes} \times 2/3 {r aes aes} |
+  \times 2/3 {r aes\> aes} \times 2/3 {r f, f} \times 2/3 {r g g} \times 2/3 {r aes aes} |
+  \times 2/3 {r g\p g} \times 2/3 {r aes aes} g8 bes, |
+  ees4( d8 c) |
+  bes4~\< bes16 bes32-. c-. d-. ees-. f-. g-. |
+  \dimHairpin
+  bes8.(\> aes16 g8 f) |
+  e8 r16. bes'32-.\f bes4 |
+  r4 aes8(\p g) |
+  fis4(\< c'8.\sf\> fis,16) |
+  <<
+    {s1*0\p}
+    \repeat unfold 2
+    {
+      \times 4/6 {\repeat tremolo 6 g16} \times 2/3 {r g g} \times 2/3 {r g g}
+    }
+  >> |
+  g'4(\< d8 f |
+  ees4\> d8 c) |
+  b32\! g g g r aes aes aes r g g g r c c c |
+  r b b b r ees ees ees r d d d r c c c |
+  \crescTextCresc
+  r b\< b b b b b b r aes aes aes aes aes aes aes |
+  \crescHairpin
+  r g g g g g g g <e g,>\sf <e g,> <e g,> <e g,> <e g,> <e g,> <e g,> <e g,> |
+  f\p aes aes aes \repeat unfold 7 {r aes aes aes} |
+  \crescTextCresc
+  r aes\< aes aes r aes aes aes r b b b r b b b |
+  \crescHairpin
+  r c\f c c aes aes aes aes aes aes aes aes fis\p fis fis fis |
+  \crescTextCresc
+  fis\< fis fis fis g\> g g g r g\p g g r b b b |
+  \crescHairpin
+  c4( g) |
+  ees8( g c4) |
+  d4( ees8.\sf d32 c) |
+  c8( b16) r b8 r |
+  << {s32 s\f} {\repeat unfold 4 {r32 d( c d)}} >> |
+  << {s32 s\sf\>} {\repeat unfold 4 {r32 ees( c ees)}} >> |
+  r\p c( ees, c') r c( ees, c') r b( f b) r b( f b) |
+  r c( ees, c' ees, c' ees, c') ees,( c' ees, c' ees, c' ees, c') |
+  \crescTextCresc
+  r32 c(\< ees, c') r c( ees, c') r b( f b) r b( f b) |
+  \crescHairpin
+  <aes, ees' c'>8\f r r4 |
+  R2 |
+  r8 c-.\p aes-. c-. |
+  aes-. c-. aes-. c'-. |
+  aes4.(\pp c8 |
+  ees c aes ges~) |
+  ges16 f8 aes des f16~ |
+  f ees8 c aes ges16~ |
+  ges( f) r f( e) f r f~ |
+  f( f) r f'~\sf f( f,) r f~ |
+  f( ees) r ees~ ees( ees) r ees~ |
+  \crescTextCresc
+  ees( ees') r ees~\sf\< ees( ees,) r ees~ |
+  \dimTextDecresc
+  ees( d) r d(\> cis d) r d~ |
+  \dimHairpin
+  d(\pp d) r d~ d( d) r d |
+  c2~\pp |
+  c4. b'8( |
+  c4\<  g8 bes) |
+  aes4( g8 f) |
+  e( f g aes) |
+  g2\p\< |
+  f8\p r r4 |
+  e8 r r4 |
+  \crescHairpin
+  \dimHairpin
+  << {s4\< s\>} {d4.( f16 ees)} >> |
+  c8~\! \times 2/3 {c16 c'( b)} \times 2/3 {d( c) ees-.} \times 2/3 {c-. g-. ees-.} |
+  << {s4\< s\>} {d4.( f16 ees)} >> |
+  \times 2/3 {c16\! c'( b)} \times 2/3 {d( c) ees-.} \times 2/3 {c-. g'-. ees-.} \times 2/3 {c-. g-. ees-.} |
+  d8~ \times 2/3 {d16 f( ees)} \times 2/3 {d-. aes'( g)} \times 2/3 {f-. d'( c)} |
+  \crescTextCresc
+  \times 2/3 {b-. f'( ees)} \times 2/3 {d-.\< aes'( g)} \times 2/3 {f-. f( ees)} \times 2/3 {d-. f( ees)} |
+  \dimTextDecresc
+  d16-.\> c-. b-. aes-. g-. f-. ees-. d-. |
+  r4 c^\sottoVoce |
+  \acciaccatura d8 c16.( b32 c16. d32) r4 |
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  ees8(\semprePiuP c) r16 g'-. f-. ees-. |
+  d-. c-. ees32( d) r16 r ees-. f-. g-. |
+  r8 aes4( g16 f) |
+  r4 f16( ees) f-. d-. |
+  r4 r16 c d b |
+  r8 c\pp r8 c16 c |
+  c8 r <g ees' c'>\f r |
+  c4.\p\fermata
+}
+
