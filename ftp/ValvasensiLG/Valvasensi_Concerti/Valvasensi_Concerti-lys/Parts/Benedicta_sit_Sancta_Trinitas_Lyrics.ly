@@ -1,0 +1,3 @@
+\lyricmode {
+Be -- ne -- dic -- ta sit Sanc -- ta Tri -- ni -- tas Be -- ne -- dic -- ta sit Sanc -- ta Tri -- ni -- tas ar -- que in -- di -- vi -- sa u -- ni -- tas qui -- a fe -- cit no -- bis -- cum mi -- se -- ri -- cor -- di -- am su -- am te in -- vo -- ca -- mus te lau -- da -- mus te a -- do -- ra -- mus o Be -- a -- ta Tri -- ni -- tas spes nos -- tra te in -- vo -- ca -- mus te Lau -- da -- mus te a -- do -- ra -- mus ò Be -- a -- ta Tri -- ni -- tas ò Be -- a -- ta Tri -- ni -- tas spes nos -- tra ò Be -- a -- ta Tri -- ni -- tas spes nos -- tra a -- mor nos -- ter ho -- nor nos -- ter ò Be -- a -- ta Tri -- ni -- tas ò Be -- a -- ta Tri -- ni -- tas ò Be -- a -- ta Tri -- ni -- tas.
+}

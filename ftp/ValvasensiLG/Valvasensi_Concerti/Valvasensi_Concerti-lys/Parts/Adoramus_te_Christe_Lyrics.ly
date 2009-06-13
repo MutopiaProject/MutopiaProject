@@ -1,0 +1,3 @@
+\lyricmode {
+A -- do -- ra -- mus  te Chris -- te A -- do -- ra -- mus te Chris -- te et Be -- ne -- di -- ci -- mus ti -- bi et Be -- ne -- di -- ci -- mus ti -- bi qui -- a per Sanc -- tam Cru -- cem tu -- am qui -- a per Sanc -- tam cru -- cem tu -- am qui -- a per Sanc -- tam Cru -- cem tu -- am et Pas -- si -- o -- nem tu -- am et Pas -- si -- o -- nem tu -- am re -- de -- mis -- ti re -- de -- mis -- ti mun -- dum re -- de -- mis -- ti re -- de -- mis -- ti mun -- dum Do -- mi -- ne Do -- mi -- ne mi -- se -- re -- re no -- bis mi -- se -- re -- re no -- bis mi -- se -- re -- re mi -- se -- re -- re no -- bis mi -- se -- re -- re no -- bis.
+}

@@ -1,0 +1,3 @@
+\lyricmode {
+O quam me -- tu -- en -- dus est ò quam me -- tu -- en -- dus est ò quam me -- tu -- en -- dus est lo -- cus i -- ste ve -- re ve -- re ò quam me -- tu -- en -- dus est lo -- cus i -- ste ve -- rè ve -- rè ve -- rè ve -- rè me -- tu -- en -- dus est Hæc est Do -- mus Do -- mi -- ni fir -- mi -- ter fir -- mi -- ter fir -- mi -- ter æ -- di -- fi -- ca -- ta be -- ne fun -- da -- ta be -- ne fun -- da -- ta est su -- pra fir -- mam pe -- tram ò quam me -- tu -- en -- dus est lo -- cus i -- ste ve -- rè ve -- rè ve -- rè non est hic a -- li -- ud ve -- rè non est ve -- rè non est hic a -- li -- ud ni -- si Do -- mus De -- i et por -- ta cæ -- li et por -- ta cæ -- li.
+}
