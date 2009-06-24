@@ -11,10 +11,10 @@
     lastupdated = "2009-06-16"
     source = "Edition Peters Nr. 3980"
     title = "Großer Gott, wir loben dich"
-    composer = "Max Reger (1873 - 1916)"
+    composer = "Max Reger (1873 - 1916)" 
     opus = "op. 135a, Nr. 10"
     copyright = ##f
- footer = "Mutopia-2009/06/23-1686"
+ footer = "Mutopia-2009/06/24-1686"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -26,7 +26,7 @@ tempoMark = #(define-music-function (parser location markp) (string?)
 \paper {
     system-count = #3
     pagetopspace = #0.0
-    top-margin= #3.2
+    top-margin= #5.2
     bottom-margin= #5.5
     between-system-padding = #0.1
     between-system-space = #0.1
@@ -41,7 +41,7 @@ tempoMark = #(define-music-function (parser location markp) (string?)
 }
 
 #(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 18)
+#(set-global-staff-size 17)
 
 global = { 
     \key g \major
@@ -248,4 +248,6 @@ satztrackd = \relative c {
         }
     }
 }
+
+
 
