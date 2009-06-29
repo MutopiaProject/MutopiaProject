@@ -20,7 +20,7 @@
   maintainerWeb = ""
   moreInfo = "This file was created from a public domain scan of the work's first edition which is located in the Petrucci Music Library, http://imslp.org/."
 
- footer = "Mutopia-2009/06/01-1650"
+ footer = "Mutopia-2009/06/29-1650"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 }
 
@@ -33,13 +33,14 @@
   \set Staff.extraNatural = ##f
 
     \partial 2 \stemUp \once \override TextScript #'extra-offset = #'(-4.0 . 0.0) <aes des f>4
-		^\( _\markup { \small \italic "Cantabile con divozione." } <bes des f>		|
+		^\( _\markup { \small \whiteout \italic "Cantabile con divozione." }
+                <bes des f>									|
     aes'8 ges f4 es^\< bes'8.\arpeggio aes16\!							| % 1
     aes2.\arpeggio f4\)										| % 2
     b8\rest des4^\( c8^~ c bes4 aes8_~								| % 3
     aes8 ges4 f8 f2\)										| % 4
     es4.^(^\( e8) f4 f										| % 5
-    aes8 ges f4 f^\< bes8.\arpeggio aes16\!							| % 6
+    aes8 ges f4 es^\< bes'8.\arpeggio aes16\!							| % 6
     aes2.\arpeggio f4\)										| % 7
     b8\rest des4^\( c8^~ c8 bes4 ces8^~								| % 8
     ces bes4 a8 bes2\)										| % 9
@@ -49,11 +50,13 @@
     beses4. aes8 aes fes' es des								| % 13
     des4.\arpeggio^(^\> c8)\!\) cis4^_ b^_							| % 14
     b8[^( a]) a[^( g]) g[^( fis!]) fis[^( eis])							| % 15
-    \stemUp fis2 <a, d fis>^\( _\markup { \small \italic "marcato ed espressivo il basso" }	| % 16
+    \stemUp fis2 <a, d fis>^\( _\markup { \small \whiteout \italic
+        "marcato ed espressivo il basso" }							| % 16
     <b d e> <b d g>										| % 17
     <g e'>\) <aes! des! f!>									| % 18
     <bes des es> < bes des ges>									| % 19
-    <ges es'>^\fermata <f c' f>4^\( <f des' f> _\markup { \small \italic "stringendo" }		| % 20
+    <ges es'>^\fermata <f c' f>4^\( <f des' f> _\markup { \whiteout \small \italic
+        "stringendo" }										| % 20
     \stemUp aes'8 ges f4_\< aes\)^\( aes							| % 21
     b8 a gis4\) b^\(\! b									| % 22
     d4. c8 c\) bes!4 a8										| % 23
