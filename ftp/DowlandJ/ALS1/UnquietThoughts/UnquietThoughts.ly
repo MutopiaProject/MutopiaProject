@@ -1,24 +1,22 @@
-#(ly:set-option 'old-relative)
-\header{
+\header {
 	title = "Unquiet Thoughts your civil slaughter stint"
 	composer = "John Dowland"
 	source = "The First book of Songes or Ayres"
 	opus = "Ayres and Lute Songs I"
 	date = "1597"
-	enteredby = "mutopia@chubb.watle.id.au"
+	enteredby = "mutopia@chubb.wattle.id.au"
 
 	mutopiatitle="Unquiet Thoughts"
-	mutopiacomposer="J. Dowland (1563--1626)"
+	mutopiacomposer="DowlandJ"
 	mutopiainstrument="Voice (SATB)"
 	style="Renaissance"
-	copyright = "Public Domain"
+	copyright="Public Domain"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
-	maintainerWeb = "http://www.chubb.wattle.id.au"
-	lastupdated = "2005/Sep/20"
-        
-        footer = "Mutopia-2005/09/25-21"
-        tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+	lastupdated = "2009/Aug/5"
+
+ footer = "Mutopia-2009/08/05-21"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 %{
 	Updated after comments from Laura Conrad:
@@ -48,12 +46,18 @@
 	right way up.
 	None of these parts have bar lines, or more than the first
 	verse.
+
+	All the slurs are my editorial additions, in order to show 
+	the textual underlay.   I may have got them wrong!
 %}
 
-\version "2.6.0"
-#(set-global-staff-size 16)
+\version "2.12.0"
+% fit to two pages
+#(set-global-staff-size 18)
+
 global= {
 	\key g \minor
+	\set Staff.midiInstrument = "recorder"
 	\time 2/1
 	\skip 1*16
 	\repeat volta 2 {
@@ -70,7 +74,7 @@ cantus=\relative c'' {
 	es4 d2 c4 d bes a2 |
 %5
 	r2 r4 c4 bes g bes2 |
-	a4 d4. c8 bes4 c c d2 |
+	a4 d4. c8( bes4) c c d2 |
 	r4 a4 bes d2 c2 g4 |
 	fis bes a4. a8 g1 |
 	\repeat volta 2 {
@@ -80,46 +84,47 @@ cantus=\relative c'' {
 		c c g g bes bes f f |
 		bes4 g a a
 	} \alternative {
-	  {  g1 | }  
+	  {  g1  }  
 	  {  g1  }
 	}
 }
 
 cantusWords=\lyricmode{
-	Un2 -- qui4 -- et thoughts1 |
-	""4 your2 ci2 -- vill4 slaugh4. -- ter8 |
-	stint2 ""4 and wrap your wrongs2 |
-	with4 -- in2 a4 pen -- sive hart:2 |
-	""2 ""4 And you my tongue2 |
-	that4 maks4. my4. mouth4 a minte,2 |
-	""4 and stamps my2 thoughts2 to4 |
-	coyne4 them words4. by8 arte:1 |
-	\repeat volta 2 {
-		""4 Be2 still for4 if you |
-		ev -- er doo the like,2 ""4 Ile |
-		cut the string, Ile cut the string, that | 
-		maks4 the ham -- mer
-	} \alternative {
-	{
-		 strike.1 |
-	}{
-		 strike.1 
-	}}
+	Un -- qui -- et thoughts 
+	your ci -- vill slaugh -- ter 
+	stint
+	and wrap your wrongs 
+	with -- in a pen -- sive hart: 
+	And you my tongue 
+	that maks my mouth a minte, 
+	and stamps my thoughts to 
+	coyne them words by arte: 
+%	\repeat volta 2 {
+		Be still for if you 
+		ev -- er doo the like,
+		Ile 
+		cut the string, Ile cut the string, that 
+		maks the ham -- mer
+%	} \alternative {
+%	{
+		 strike. 
+%	}{
+		 strike. 
+%	}}
 }
 	
 
 altus=\relative c''{
  	\set autoBeaming = ##f
-
 	bes2 bes4 bes g1 |
-	d2 d4 e fis g2 fis4 |
+	d2 d4 e fis( g2) fis4 |
 	g2 r4 fis4 g a bes4. bes8 |
 	a4 fis g4. g8 fis4 r8 g a4 c |
 %5
 	bes g g fis g4. g8 d2 |
 	f4 bes4. a8 g4 a8 bes4 a8 bes4 r8 bes |
-	a4 fis g4. fis8  d8[ e] f4 es2 |
-	d d4. c8 b2 r4 g'4 |
+	a4 fis g4. fis8  d8([ e] f4) es2 |
+	d d4.( c8) b2 r4 g'4 |
 	\repeat volta 2 {
 		fis4 a d, g f2. c4 |
 		d d g4. g8 fis2 r4 c4 |
@@ -127,30 +132,34 @@ altus=\relative c''{
 		d c4. a8 d4
 	} 
 	\alternative { 
-		{  b2 r4 g'4 | } 
-		{  b1 }
+		{  b2 r4 g'4 } 
+		{  b,1 }
 	} 
 }
 altusWords=\lyricmode {
-	Un2 -- qui4 -- et thoughts,1 |
-	your2 ci4 -- vill slaugh2.-- ter4 |
-	stint2 	""4 and wrap your wrongs4. with8 -- |
-	in4 a pen4. -- sive8 hart,4 ""8 and8 you4 my |
-	toung that makes my mouth4. a8 minte,2  |
-	my4 toung4. that8 makes4 my8 mouth4 a8 	minte,4	""8 and8 | 
-	stamps4 my thoughts4. to8 coine4. __ ""8 them2 |
-	 words by4. __ ""8 art2 ""4 be |
-	 \repeat volta 2 {
-	 	 still be still for if2. you4 |
-		 ev4 -- er do4. the8 like2 ""4 Ile |
+	Un -- qui -- et thoughts, 
+	your ci -- vil slaugh -- ter 
+	stint 
+	and wrap your wrongs with -- 
+	in a pen -- sive hart, and you my 
+	toung that makes my mouth a minte, 
+	my toung that makes my mouth a
+ 	minte, and
+	stamps my thoughts to coine __  them
+	 words by __  art 
+	be
+% \repeat volta 2 {
+	 	 still be still for if you
+		 ev -- er do the like
+		 Ile |
 		 cut the string Ile cut the string that |
-		 makes4 the4.  ham8 -- mer4 
-	} \alternative {
-	{
-		strike.2 ""4 Be |
-	} { 
-		strike.1
-	}}
+		 makes the  ham -- mer
+%	} \alternative {
+%	{
+		strike.  Be 
+%	} { 
+		strike.
+%	}}
 }
 
 tenor=\relative c' {
@@ -159,7 +168,7 @@ tenor=\relative c' {
 	f2 g4  f8[ bes,] bes1 |
 	bes2. a2 g4 d'4. c8 |
 	b2 r4 d4 d f f4. d8 |
-	c c bes4. a8 g4 a r8 bes c4 a |
+	c c bes4. a8( g4) a r8 bes c4 a |
 %5
 	d2 r4 bes4 d2 r4 bes4 |
 	c g  bes8[ c d bes] f'4 g,2 r8 bes8 |
@@ -167,33 +176,33 @@ tenor=\relative c' {
 	a4 g g fis g2 es'2  |
 	\repeat volta 2 { 
 		d4. c8  bes[ a] g4 bes2 a4 f4 ~ |
-		f4 bes4. a8 g4 a a a a |
-		g g g g f f bes a4 ~ |
-		a8 g8 g2 fis4 
+		f4 bes4.( a8 g4) a a a a |
+		g g g g f f bes( a4 ~ |
+		a8) g8 g2 fis4 
 	} 
 	\alternative{ 
-		      { g2 es'2 | } 
-		      { g1  } 
+		      { g2 es'2  } 
+		      { g,1  } 
 	}
 }
 tenorWords=\lyricmode{
-	Un2 qui4 -- et thoughts,1 |
-	your2. civ2 -- ile4 slaugh4. -- ter8 |
-	stint,2 ""4 and4 wrap your wrongs4. with8 -- |
-	in a pen4. -- sive hart,4 ""8 and you4 my |
-	tonge2 ""4 my4 tonge2 ""4 that |
-	makes my mouth4. __ ""8  a4 mint,2 ""8 and |
-	stampes4 my thoughts,4. my8 thoughts4 to8. __ ""16 coine4. to8 |
-	coin4 them words by  art,2 be2 | 
-	\repeat volta 2 {
-		still4. for8 if4 you4 ev2 -- er4 do4 ""4 the2. __
-		like4 ile4 cut the | string  
-		ile cut the string that makes4 the4. __ % should be the2 
-		""8  ham2 --  mer4 
-	} \alternative {
-		{ strike.2 Be2 | }
-		{ strike.1  }
-	}
+	Un qui -- et thoughts, 
+	your civ -- ile slaugh -- ter 
+	stint,  and wrap your wrongs with -- 
+	in a pen -- sive hart  and you my 
+	tonge  my tonge that 
+	makes my mouth __   a mint, and 
+	stampes my thoughts, my thoughts to __  coine to 
+	coin them words by  art, be2 
+%	\repeat volta 2 {
+		still for if you ev -- er do the __
+		like ile cut the  string  
+		ile cut the string that makes the __ % should be the2 
+		ham --  mer 
+%	} \alternative {
+		{ strike. Be  }
+		{ strike.   }
+%	}
 }
 
 
@@ -210,7 +219,7 @@ bassus=\relative c' {
 	d2. d4 g,2 r2 
 	\repeat volta 2 {
 		r1 r2 f'2 |
-		d4 g4. f8 es4 
+		d4 g4.( f8) es4 
 		d4 d  f  f| c c es es 
 		bes bes  d  d |g es d d }
 	\alternative{ {g2 r2} {g1}
@@ -218,51 +227,52 @@ bassus=\relative c' {
 }
 
 bassusWords=\lyricmode{
-	Un2 -- qui4 -- et thoughts,1 |
-	your2 civ -- ile slaugh4 -- ters |
-	stint,2 ""4 and4 wrap your wrongs with -- |
-	in a pens4. -- ive8 hart,4 wrongs2 with4 -- |
-	in a pens4. -- ive8 hart,2 ""4 that4 |
-	makes my mouth2 a mint |
-	""1	""4 to coine them |
-	words2. by4 
-	arte,2 ""2 |
-	\repeat volta 2 {
-		""1 ""2 ev2 -- |
-		er4 do4. __ ""8 the4 like,4 Ile cut the |
-		string, Ile cut the string, the string that |
-		makes4 the ham -- mer
-	} \alternative { 
-		{ strike2 ""2 | }
-		{ strike1  } 
-	}
+	Un -- qui -- et thoughts,
+	your civ -- ile slaugh -- ters
+	stint,  and wrap your wrongs with --
+	in a pens -- ive hart, wrongs with --
+	in a pens -- ive hart,  that
+	makes my mouth a mint
+	to coine them
+	words by 
+	arte,
+%	\repeat volta 2 {
+		 ev -- 
+		er do __  the like, Ile cut the 
+		string, Ile cut the string, the string that 
+		makes the ham -- mer
+%	} \alternative { 
+		{ strike.  }
+		{ strike.  } 
+%	}
 }
 
 
-\score {
-       \context ChoirStaff <<
+FullScore =  \context ChoirStaff <<
 		\context Staff ="cantus" <<
 			{\clef "G2"\global}
-			\cantus
-			\context Lyrics = "cantus" \cantusWords
+			\context Voice = "cantus" \cantus
 		>>
+		\lyricsto "cantus" \context Lyrics = "cantus" \cantusWords
 		\context Staff ="altus" <<
 			 {\clef "G2"\global}
-			 \altus
-			 \context Lyrics = "altus" \altusWords
+			 \context Voice = "altus" \altus
 		>>
+		\lyricsto "altus" \context Lyrics = "altus" \altusWords
 		\context Staff ="tenor" <<
 			 {\clef "G2_8"\global}
-			 \tenor
-			 \context Lyrics="tenor" \tenorWords
+			 \context Voice = "tenor" \tenor
 		>>
+		\lyricsto "tenor" \context Lyrics = "tenor" \tenorWords
 		\context Staff = "bass" <<
 			 {\clef "F"\global}
-			 \bassus
-			 \context Lyrics = "bass" \bassusWords
+			 \context Voice = bass \bassus
 		 >>		
+		\lyricsto "bass" \context Lyrics = "bass" \bassusWords
      >>
-%{
+
+%{ 
+% Original clefs, etc.
 
 	       \context ChoirStaff <<
 		\context Staff ="cantus" <<
@@ -285,16 +295,22 @@ bassusWords=\lyricmode{
 		 >>		
      >>
 %}
+\score {
+  \FullScore
     \layout{
 	indent=0.0\mm
-%	crescendo_height = \staffheight/6.0
-
+%	crescendo_height = \staff-height/6.0
 	% Mutopia guidelines
-	linewidth = 18.0\cm
-
-    }
-    \midi {
-	\tempo 4=120
+	line-width = 18.0\cm
     }
 }
 
+\score {
+    \unfoldRepeats \FullScore
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 120 4)
+      }
+    }
+}
