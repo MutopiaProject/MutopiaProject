@@ -1,19 +1,22 @@
 \header {
 	filename = "bonne_heure-song.ly"
 	enteredby = "Peter Chubb"
-	composer = "Anonymous\\\\ c.1470"
+	composer = \markup {\column {Anonymous}{ c.1470}}
 	year = "c. 1470"
-	title = "Il Est de Bonne Heure N\\'e"
-	mutopiatitle = "Il Est de Bonne Heure N&eeq;"
+	title = "Il Est de Bonne Heure Né"
+	mutopiatitle = "Il Est de Bonne Heure Né"
 	mutopiacomposer = "Anonymous"
+	mutopiainstrument = "Voice (SATB)"
+	mutopiadate = "c. 1470"
 	maintainer="Peter Chubb"
 	maintainerEmail="mutopia@chubb.wattle.id.au"
 	style="Renaissance"
-	lastupdated="2004/Apr/24"
+	lastupdated="2009/Aug/5"
 	copyright = "Public Domain"
-	
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2004/04/24-198"
+	source = "Unknown"
+
+ footer = "Mutopia-2009/08/05-198"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 %{
@@ -27,6 +30,13 @@
 
 %{
 	$Log: bonne_heure-song.ly,v $
+	Revision 1.8  2009-08-05 09:23:14  peterc
+	Updated to 2.12.2.  New \lyricsto allowed simpler score; but had to
+	convert from TeX-style accents to UTF.  Hope it all worked!
+
+	Revision 1.7  2004-04-24 21:48:29  peterc
+	Changed version to 2.2.0
+
 	Revision 1.6  2004/04/24 10:28:10  peterc
 	Updated to Lilypond 2.2; fixed translation printout.
 	
@@ -38,7 +48,6 @@
 	
 	Revision 1.3  2002/02/24 09:17:33  peterc
 	Updated to current LilyPond; added MIDI output.
-	
 %}
 
 %{
@@ -58,18 +67,21 @@ I do not love you a bit.
 
 %}
 
-\version "2.2.0"
+\version "2.12.0"
 
 
-#(set-global-staff-size 16)
+#(set-global-staff-size 18)
 
-global = \notes {
+global =  {
+  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \override Score.RehearsalMark #'self-alignment-X = #RIGHT  
 	\key a \minor
 	\time 2/2
 	\partial 2
 	\skip 2*13
 	\time 3/2
 	\skip 1*1
+	\mark \markup {\italic {"Fine"}}
 	\bar "||"
 	\skip 2*1
 	\time 2/2
@@ -79,10 +91,11 @@ global = \notes {
 	\time 2/2
 	\skip 2*19
 	\bar "||"
+	\mark \markup {\italic {"D.C. al Fine"}}
 }
 
 
-sopOne= \notes\relative c'' {
+sopOne= \relative c'' {
 	\bar "" \tempo 2=100
 	\partial 2
 	a4 a |
@@ -93,9 +106,9 @@ sopOne= \notes\relative c'' {
 %5
 	d4.(  b8) c4( b~ |
 	 b8[  a)] a2(  gis4) |
-	a1^" Fine" 
+	a1
 }
-sopTwo=\notes\relative c'' {
+sopTwo=\relative c'' {
 	c4 c |
 	b2 a |
 	b4 c d c |
@@ -113,12 +126,13 @@ sopTwo=\notes\relative c'' {
 	 g4) g b b |
 %20
 	c e2 d4 |
-	c2^"D.C. al Fine"
+	c2
+
 }
 
-soprano = \notes{\sopOne\sopTwo}
+soprano = {\sopOne\sopTwo}
 
-altoOne = \notes\relative c'' {
+altoOne = \relative c'' {
         \partial 2
 	e4 e |
 	g g a a |
@@ -130,7 +144,7 @@ altoOne = \notes\relative c'' {
 	a  f) e2~ |
 	e1 
 }
-altoTwo=\notes\relative c''' {
+altoTwo=\relative c''' {
 	a4 a |
 	g2 e |
 %10
@@ -151,9 +165,9 @@ altoTwo=\notes\relative c''' {
 	a2
 }
 
-alto = \notes {\altoOne\altoTwo}
+alto =  {\altoOne\altoTwo}
 
-tenorOne = \notes\relative c' {
+tenorOne = \relative c' {
 	\partial 2
 	r2 |
 	r2 a4 a |
@@ -165,7 +179,7 @@ tenorOne = \notes\relative c' {
 	c a b2 |
 	a1
 }
-tenorTwo=\notes\relative c' {
+tenorTwo=\relative c' {
 	a4 a |
 	b2 c |
 	d4 c b a |
@@ -186,9 +200,9 @@ tenorTwo=\notes\relative c' {
 	a2
 }
 
-tenor = \notes {\tenorOne\tenorTwo}
+tenor =  {\tenorOne\tenorTwo}
 
-bassOne = \notes\relative c' {
+bassOne = \relative c' {
 	\clef "bass"
 	\partial 2
 	a4 a |
@@ -201,7 +215,7 @@ bassOne = \notes\relative c' {
 	f a  e2) |
 	a,1
 }
-bassTwo=\notes\relative c {
+bassTwo=\relative c {
 	a4 a |
 	e'2 a |
 %10
@@ -222,111 +236,48 @@ bassTwo=\notes\relative c {
 	a,2
 }
 
-bass=\notes {\bassOne\bassTwo}
+bass= {\bassOne\bassTwo}
 
-sopWords = \lyrics{
-	\partial 2
-	Il4 est | de bonne heu -- re |
-	n\'e,2 Qui4 tient |
-	sa dame en un |
-	pr\'e,2 Sur4 l'her -- |
-	be4. __ _8 jo2*3/2 -- li2*3/2 -- | e.1
-	Ma4 tr\`es douce2 a -- |
-	mi4 -- e, Dieu vous |
-	doint2*3/2 bon4 |
-	jour,1 Qu'a4 -- vez |
-	en2 pen -- | s\'e, di4 -- tes |
-	qu'a2 -- vez | vous, Par4 ma |
-	foy mon bel a -- | my,2 Le4 con -- |
-	seil8 en est tout
-	pris,2 __ | _4 Je4 ne vous | ai -- me2 
-	mi-4 __ | e.2
-}
-
-altWords = \lyrics{
-	\partial 2
-	Il4 est | de bonne heu -- re |
-	n\'e,2 Qui4 tient |
-	sa dame en un |
-	pr\'e,2 Sur4 l'her -- |
-	be4 jo -- li1 -- e.1 __ _2
-	Ma4 tr\`es douce2 a -- |
-	mi4 -- e, Dieu vous |
-	doint2 bon2 |
-	jour,1 Qu'a4 -- vez |
-	en2 pen -- | s\'e, di4 -- tes |
-	qu'a2 -- vez | vous, Par4 ma |
-	foy mon bel a -- | my,2 Le4 con -- |
-	seil4 en est tout
-	pris,4 Je4 ne vous ai -- me 
-	mi2 -- e.2
-}
-
-tenorWords = \lyrics{
-	\partial 2
-	""2 | ""2 Il4 est | de bonne heu -- re |
-	n\'e,2 Qui4 tient |
-	sa dame en un |
-	pr\'e,2 Sur4 l'her -- |
-	be jo -- li2 -- | e.1
-	Ma4 tr\`es douce2 a -- |
-	mi4 -- e, Dieu vous |
-	doint2 bon |
-	jour,1 Qu'a4 -- vez |
-	en2 pen -- | s\'e, di4 -- tes |
-	qu'a2 -- vez | vous, Par4 ma |
-	foy mon bel a -- | my,2 Le4 con -- |
-	seil en est tout |
-	pris, Je ne vous | ai -- me 
-	mi2 -- | e.
-}
-
-bassWords = \lyrics{
-	\partial 2
-	Il4 est | de bonne heu -- re |
-	n\'e,2 Qui4 tient |
-	sa dame en un |
-	pr\'e,2 Sur4 l'her -- |
-	be2 jo4 -- li1 -- _4| e.1
-	Ma4 tr\`es douce2 a -- |
-	mi4 -- e, Dieu vous |
-	doint2 bon2 |
-	jour,1 Qu'a4 -- vez |
-	en2 pen -- | s\'e, di4 -- tes |
-	qu'a2 -- vez | vous, Par4 ma |
-	foy mon bel a -- | my,2 Le4 con -- |
-	seil8 en est tout
-	pris,2 Je4 ne vous ai -- me 
-	mi2. -- e.2
+words = \lyrics {
+	Il est de bonne heu -- re né, 
+	Qui tient sa dame en un pré, 
+	Sur l'her -- be __  jo -- li --  e
+	Ma trés douce a -- mi -- e, 
+	Dieu vous doint bon -- 	jour, 
+	Qu'a -- vez en pen --  sé, 
+	di -- tes qu'a -- vez  vous, 
+	Par ma 	foy mon bel a --  my, 
+	Le con -- seil en est tout pris, __ 
+	Je ne vous  ai -- me mi --  e.
 }
 
 sopstaff = \context Staff ="Soprano" <<
-	\set Staff.instrument = "S"
+	\set Staff.instrumentName = "S"
 	\global
-	\soprano
-	\context Lyrics="Soprano" \sopWords
+	\context Voice = sop \soprano
+	\lyricsto sop \words
 >>
 
 altstaff = \context Staff ="Alto" <<
-	\set Staff.instrument = "A"
+	\set Staff.instrumentName = "A"
 	\global
-	\notes \transpose c' c \alto
-	\context Lyrics="Alto" \altWords
+	 \transpose c' c \context Voice = alto \alto
+	\lyricsto alto \words
 >>
 
 tenstaff = \context Staff="tenor" <<
-	\set Staff.instrument = "T"
+	\set Staff.instrumentName = "T"
 	\clef "G_8"
 	\global
-	\tenor
-	\context Lyrics="tenor" \tenorWords
+	\context Voice = tenor \tenor
+	\lyricsto tenor \words
 >>
 
 bassstaff = \context Staff="bass" <<
-	\set Staff.instrument = "B"
+	\set Staff.instrumentName = "B"
 	\global
-	\bass
-	\context Lyrics="bass" \bassWords
+	\context Voice = bass \bass
+	\lyricsto bass \words
 >>
 
 % This prints out the full score, for singing to.
@@ -337,13 +288,12 @@ bassstaff = \context Staff="bass" <<
 		\tenstaff
 		\bassstaff
 	>>
-	\paper{
-		\paperSixteen
+	\layout {
 		indent = 0.0\mm
-	}
+      }
 }
 
-translation = \lyrics {
+translation = \lyricmode {
     << 
 	\new Lyrics { "He was born at a lucky time,"}
 	\new Lyrics { "He who holds his lady in a field" }
@@ -366,23 +316,23 @@ translation = \lyrics {
 % First print out a practicestaff, then a translation.
 \score {
 
-	\new GrandStaff \with { fontSize = #-4 \override StaffSymbol #'staff-space = #(magstep -4)
+	\new GrandStaff \with { fontSize = #-2 \override StaffSymbol #'staff-space = #(magstep -2)
 } <<
 		\context Staff ="RH"<<
 			\global
-			\context Voice=sop {\voiceOne\soprano}
-			\context Voice=alt \notes {\transpose c' c {\voiceTwo\alto}}
+			\context Voice = "sop" {\voiceOne\soprano}
+			\context Voice = "alt"  {\transpose c' c {\voiceTwo\alto}}
 		>>
 		\context Staff ="LH" <<
 			\clef "bass"
 			\global
-			\context Voice=tenor \notes {\voiceOne\tenor}
-			\context Voice=bass  {\voiceTwo\bass}
+			\context Voice = "tenor"  {\voiceOne\tenor}
+			\context Voice = "bass"  {\voiceTwo\bass}
 		>>
 	>>
-	\header { piece = "\it Piano Practice Staff"}
-	\paper{
+	\header { piece = \markup { \italic {Piano Practice Staff}}}
 
+	\layout{
 	    indent = 0.0\mm
 	}
 }
@@ -390,13 +340,14 @@ translation = \lyrics {
 
 \score {
 	\translation
-	\header { piece = "\\it Translation\\\\"}
-	\paper{ 
-		\paperSixteen
+	\header { piece = \markup \column {\line { \italic \bold { Translation}}
+					   \line {Courtesy of Francois Montagner}}
+}
+	\layout{ 
 		indent = 0.0\pt
-		linewidth = 10.0\cm
+		line-width = 10.0\cm
 		\context{
-			\ScoreContext
+			\Score
 			\remove "Bar_number_engraver"
 		}
 	}
@@ -406,10 +357,10 @@ translation = \lyrics {
 \score {
 	\context StaffGroup <<
 		\global
-		\context Staff=sop \notes{\sopOne\sopTwo\sopOne}
-		\context Staff=alt \notes {\altoOne\altoTwo\altoOne}
-		\context Staff=tenor \notes \transpose c' c  {\tenorOne\tenorTwo\tenorOne}
-		\context Staff=bass \notes{\bassOne\bassTwo\bassOne}
+		\context Staff = "sop" {\sopOne\sopTwo\sopOne}
+		\context Staff = "alt"  {\altoOne\altoTwo\altoOne}
+		\context Staff = "tenor"  \transpose c' c  {\tenorOne\tenorTwo\tenorOne}
+		\context Staff = "bass" {\bassOne\bassTwo\bassOne}
 	>>
 	\midi {
 	}
