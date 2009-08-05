@@ -1,37 +1,35 @@
 \header {
 	title = "Hymn of Eve"
 	subtitle = "(Uxbridge)"
-	composer = "Arne's {\it Death of Abel,} 1755"
+	composer = \markup { Arne's \italic { Death of Abel,} 1755}
 	poet = "Charles Wesley"
 	date = "1755"
 	filename = "Uxbridge.ly"
-	piece = "\\thispagestyle{plain}"
 
 	mutopiatitle = "Hymn of Eve (Uxbridge)"
-	mutopiacomposer = "Dr T. Arne (1710-1788)"
+	mutopiacomposer = "ArneT"
 	mutopiapoet = "C. Wesley (1707-1788)"
-	mutopiainstrument = "Voice, (SATB)"
+	mutopiainstrument = "Voice (SATB)"
 	source = "Methodist Hymn Book, 1933, No. 648"
 	metre = "8.8.8.8. D."
-	meter = \metre
+	meter = "8.8.8.8. D."
 	copyright = "Public Domain"
 	style = "Hymn"
 	maintainer = "Peter Chubb"
-	maintainerEmail = "peterc@sw.oz.au"
-	lastupdated = "2001/June/9"
-        
-        tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-        footer = "Mutopia-2001/06/09-97"
+	maintainerEmail = "mutopia@chubb.wattle.id.au"
+	lastupdated = "2009/August/5"
+ footer = "Mutopia-2009/08/05-97"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-% $Id: Uxbridge.ly,v 1.3 2001/06/09 03:56:10 peterc Exp $
+% $Id: Uxbridge.ly,v 1.7 2009-08-05 03:58:04 peterc Exp $
 
 % fit onto one page
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
-\version "1.3.148"
+\version "2.12.0"
 
-global=\notes{
+global={
 	\key d \major
 	\time 3/4
 	\partial 4
@@ -43,41 +41,41 @@ global=\notes{
 	}
 }
 
-sop=\notes\relative c'' {
+sop=\relative c'' {
 	\autoBeamOff
 	a4 |
 	fis4. e8 d4 |
 	d'4. cis8 b4 |
-	b( )a  [a8()g] |
+	b(  a)   a8[( g)] |
 	fis4. g8 a4 |
-	b4 [d8()b] [a()fis] |
-	fis4()e 
+	b4  d8[( b)]  a[( fis)] |
+	fis4( e)
 
 	a4 |
 	fis4. e8 d4 |
 %8
 	d'4. cis8 b4 |
-	cis2 
+	cis2
 	d4 |
 	e4 a, d |
 	cis4. d8 b4 |
-	a2 
+	a2
 
 	a4 |
 	a4. g8 fis4 |
 	a4. b8 c4 |
-	b2 
+	b2
 
 	b4 |
 %16
 	gis4. fis8 e4 |
 	b'4. cis8 d4 |
-	cis2 
+	cis2
 
 	a4 |
 	fis4. e8 d4 |
 	c'4. b8 a4 |
-	b2 
+	b2
 
 	cis4 |
 	d d, g |
@@ -85,19 +83,19 @@ sop=\notes\relative c'' {
 	d2
 }
 
-alto=\notes\relative c' {
+alto=\relative c' {
 	d4 |
 	d4. cis8 d4 |
 	d4. d8 d4 |
-	d2 
+	d2
 
 	e4 |
 	d4. d8 d4 |
 	d4 d d |
-	d () cis
+	d ( cis)
 
 	e |
-	d4. cis8 d4 |
+	d4. cis8 d4 | %8
 	e e e |
 	e2
 	a4 |
@@ -108,9 +106,9 @@ alto=\notes\relative c' {
 	e4 |
 	fis4. d8 d4 |
 	d4. d8 d4 |
-	d2 
+	d2
 
-	fis4|
+	fis4|	   %16
 	e4. dis8 e4 |
 	e4. e8 e4 |
 	e2
@@ -118,47 +116,48 @@ alto=\notes\relative c' {
 	e4 |
 	d4. cis8 d4 |
 	d4. d8 d4 |
-	d2 
+	d2
 	g4 |
 	fis d d |
 	d4. e8 cis4 |
 	d2
 }
-	
 
-ten=\notes\relative c {
+
+ten=\relative c {
 	fis4 |
 	a4. g8 a4 |
 	b4. a8 g4 |
-	g () fis 
+	g ( fis)
 	a |
 	a4. b8 fis4 |
 	g4 g fis |
-	a2 
+	a2
 
 	a4 |
-	a4. g8 a4 |
+	a4. g8 a4 | %8
 	b a gis |
-	a2 
+	a2
 
-	a4 a a a |
+	a4 |
+	a a a |
 	a a gis |
 	a2
 
 	a4 |
 	a4. b8 a4 |
 	fis4. g8 a4 |
-	g2 
+	g2
 
-	b4 |
+	b4 |    %16
 	b4. a8 gis4 |
 	gis4. a8 b4 |
-	a2 
+	a2
 
 	a4 |
 	a4. g8 fis4 |
 	a4. g8 fis4 |
-	g2 
+	g2
 
 	a4 |
 	a a b |
@@ -166,7 +165,7 @@ ten=\notes\relative c {
 	fis2
 }
 
-bass=\notes\relative c {
+bass=\relative c {
 	d4 |
 	d4. e8 fis4 |
 	g4. g8 g4 |
@@ -178,9 +177,9 @@ bass=\notes\relative c {
 	a2
 
 	cis4 |
-	d4. e8 fis4 |
+	d4. e8 fis4 | %8
 	gis a e |
-	a2 
+	a2
 
 	fis4 |
 	cis cis d |
@@ -192,10 +191,10 @@ bass=\notes\relative c {
 	d4. d8 d4 |
 	g2
 
-	dis4 |
+	dis4 | %16
+	e4. e8 e4 | 
 	e4. e8 e4 |
-	e4. e8 e4 |
-	a2 
+	a2
 
 	cis,4 |
 	d4. d8 d4 |
@@ -209,7 +208,7 @@ bass=\notes\relative c {
 }
 
 
-VerseOne=\lyrics {
+VerseOne=\lyricmode {
 	A -- way with our sor -- row and fear!
 	We soon shall re -- co -- ver our home,
 	The ci -- ty of saints shall ap -- pear
@@ -220,7 +219,7 @@ VerseOne=\lyrics {
 	The pa -- lace of an -- gels and God.
 }
 
-VerseTwo = \lyrics {
+VerseTwo = \lyricmode {
 	Our mourn -- ing is all at an end,
 	When, raised by the life -- gi -- ving word,
 	We see the new ci -- ty de -- scend,
@@ -231,7 +230,7 @@ VerseTwo = \lyrics {
 	No sha -- dow of e -- vil is there.
 }
 
-VerseThree = \lyrics {
+VerseThree = \lyricmode {
 	By faith we al -- rea -- dy be -- hold
 	That love -- ly Je -- ru -- sa -- lem here:
 	Her walls are of jas -- per and gold,
@@ -242,7 +241,7 @@ VerseThree = \lyrics {
 	And flames with the glo -- ry of God.
 }
 
-VerseFour = \lyrics {
+VerseFour = \lyricmode {
 	No need of the sun in that day,
 	Which ne -- ver is fol -- lowed by night,
 	Where Je -- sus's _ beau -- ties dis -- play
@@ -253,63 +252,66 @@ VerseFour = \lyrics {
 	And bright in ef -- ful -- gence di -- vine.
 }
 
-Words = \context Lyrics = sop <
-	\context LyricsVoice = "sop-1" { 
-		\property LyricsVoice . stanza = "1." 
+Words = \context Lyrics = "sop" <<
+	\context Lyrics = "sop-1" {
+		\set stanza = "1."
 		\VerseOne
 	}
-	\context LyricsVoice = "sop-2" { 
-		\property LyricsVoice . stanza = "2." 
+	\context Lyrics = "sop-2" {
+		\set stanza = "2."
 		\VerseTwo
 	}
-	\context LyricsVoice = "sop-3" { 
-		\property LyricsVoice . stanza = "3." 
+	\context Lyrics = "sop-3" {
+		\set stanza = "3."
 		\VerseThree
 	}
-	\context LyricsVoice = "sop-4" { 
-		\property LyricsVoice . stanza = "4." 
+	\context Lyrics = "sop-4" {
+		\set stanza = "4."
 		\VerseFour
 	}
->
+>>
 
-upper = \context Staff = "upper" <
-	\clef "treble" \property Staff.midiInstrument = "recorder"
-	\property Staff.automaticMelismata = ##t
+upper = \context Staff = "upper" <<
+	\clef "treble" \set Staff.midiInstrument = "recorder"
+	 \unset Staff.melismaBusyProperties
 	\global
-	\addlyrics
-		\context Voice = sop {\voiceOne \sop}
-		\Words
-	\context Voice = alto {\voiceTwo \alto}
->
+	\context Voice = "sop" {\voiceOne \sop}
+	\lyricsto sop \Words
+	\context Voice = "alto" {\voiceTwo \alto}
+>>
 
-lower=\context Staff = "lower" <
-	\clef "bass" 
-	\property Staff.midiInstrument = "acoustic bass"
+lower=\context Staff = "lower" <<
+	\clef "bass"
+	\set Staff.midiInstrument = "acoustic bass"
 	\global
-	\context Voice = tenor {\voiceOne \ten}
-	\context Voice = bass {\voiceTwo \bass}
->
+	\context Voice = "tenor" {\voiceOne \ten}
+	\context Voice = "bass" {\voiceTwo \bass}
+>>
 
 \score {
 
 	% Transposing down a tone gives a range c' -> d''
-	% which is good for mixed-voice untrained singers 
+	% which is good for mixed-voice untrained singers
 	% (i.e., congregations)
-       \notes \transpose bes \context ChoirStaff <
-		\upper 
+        \transpose c' bes \context ChoirStaff <<
+		\upper
 		\lower
-	>
+	>>
 
-	\paper{
-%		linewidth = 180.0\mm
+	\layout{
+%		line-width = 180.0\mm
 		indent = 0.0\pt
-		\translator {
-		    \StaffContext
+		\context {
+		    \Staff
 		    \remove "Time_signature_engraver"
 		}
 	}
 
-	\midi {
-		\tempo 4 = 180
-	}
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 180 4)
+      }
+    }
 }
+
