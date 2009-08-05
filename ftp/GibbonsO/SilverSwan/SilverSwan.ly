@@ -1,37 +1,38 @@
 \header {
 	composer = "Orlando Gibbons"
 	title = "The Silver Swan"
-	enteredby = "music@chubb.wattle.id.au"
+	enteredby = "mutopia@chubb.wattle.id.au"
 
 	mutopiatitle = "The Silver Swan"
-	mutopiainstrument = "Voice"
+	mutopiacomposer = "GibbonsO"
+	mutopiainstrument = "Voice (SAATB)"
 	date = "1612"
 	source = "http://www.musicaviva.com/ensemble/choir/music.tpl?filnavn=gibbons-silver-swan AND the Penguin Book of Madrigals"
 	style = "Renaissance"
-	copyright = "MutopiaBSD"
+	copyright = "Public Domain"
 	maintainer = "Peter Chubb"
-	maintainerEmail = "music@chubb.wattle.id.au"
-	lastupdated = "2003/May/9"
-	
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and released under the MutopiaBSD licence by " + \maintainer + ".} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
-	footer = "Mutopia-2003/05/09-302"
+	maintainerEmail = "mutopia@chubb.wattle.id.au"
+	lastupdated = "2009/Aug/5"
+
+ footer = "Mutopia-2009/08/05-302"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "1.6.5"
+\version "2.12.0"
 
-global = \notes {
+global =  {
 	\time 4/4
 	\key f \major
 	\dynamicUp
-	\property Staff.automaticMelismata = ##t
+	 \unset Staff.melismaBusyProperties 
 	\mark "A"
 	\skip 1*6
 	\mark "B"
 	\skip 1*7 \mark "C"
 }
 
-cantusMusic = \notes\relative c'' {
-	\property    Staff.midiInstrument = "recorder" 
+cantusMusic = \context Voice = cantus \relative c'' {
+	\set Staff.midiInstrument = "recorder" 
 	\clef "treble"
 	r4 c4 \mp c d | 
 	e2. f4 |
@@ -47,7 +48,7 @@ cantusMusic = \notes\relative c'' {
 	b! c d4. c8 |
 	c2 r4 g'4 |
 	c, f bes, d |
-	g, [a8\> () bes] c4. \! bes8 |
+	g,  a8[\> ( bes)] c4.  bes8\! |
 	a2 r2 |
 %15
 	r4 f'4. \p f8 e4 |
@@ -56,11 +57,11 @@ cantusMusic = \notes\relative c'' {
 	c2 r4 g' |
 	c,4 f bes, d\> |
 %20
-	g,  [a8( )bes] c4. \! bes8 |
-	a1-\fermata \pp \bar "|."
+	g,   a8[(  bes)] c4.  bes8\! |
+	a1\fermata \pp \bar "|."
 }
 
-cantusWords = \lyrics{
+cantusWords = \lyricmode{
 	The sil -- ver swan,
 	who liv -- ing had no note,
 	When death ap -- proached un -- locked her si -- lent throat.
@@ -73,36 +74,36 @@ cantusWords = \lyrics{
 
 	More geese than swans now live, more fools than wise.
 }
-quintusMusic = \notes\relative c'{
+quintusMusic = \context Voice = quintus \relative c'{
         \clef "G"
-	\property    Staff.midiInstrument = "recorder" 
+	\set Staff.midiInstrument = "recorder" 
 	r4 c4 \mp f f |
 	e4. f8  g4 a|
-	f4. e8 ( )d4 c4 ~ |
-	[c8 d e f] g4 g, ~ |
+	f4. e8 (  d4) c4 ~ |
+	 c8[ d e f] g4 g, ~ |
 %5
-	g d'4. e8 ()f4 |
-	e4 f2 () e4 |
+	g d'4. e8 ( f4) |
+	e4 f2 ( e4) |
 	f4 a4. \mf a8 g4 |
-	f4 [d8( e] [f g ] )a4 |
-	d,4. e8 [f( g )a f] |
+	f4  d8[( e]  f[ g ]  a4) |
+	d,4. e8  f[( g  a) f] |
 %10
 	g2. g4 |
 	e f g4. g8 |
 	a4 f g4. f8 |
-	e4 f2 ( \> )e4 |
-	\! f4 a4. \p a8 g4 |
+	e4 f2 ( \>  e4) |
+	 f4\! a4. \p a8 g4 |
 %15
-	f4 [d8( e] [f g] )a4 |
-	d,4. e8 [f g( a )f] |
+	f4  d8[( e]  f[ g]  a4) |
+	d,4. e8  f[ g( a  f)] |
 	g2. g4 |
 	e4 f g4. g8 |
 	a4 f g4. f8 |
-	e4 f2( ) e4 |
-	f1-\fermata \bar "|."
+	e4 f2(  e4) |
+	f1\fermata \bar "|."
 }
 
-quintusWords = \lyrics{
+quintusWords = \lyricmode{
 	The sil -- ver swan, who liv -- ing had no note,
 	When death ap -- proached un -- locked her si -- lent throat.
 	Lean -- ing her breast a -- gainst the reed -- y shore,
@@ -111,8 +112,8 @@ quintusWords = \lyrics{
 	More geese than swans now live, more fools than wise, than __ wise
 }
 
-altusMusic = \notes\relative c {
-	\property    Staff.midiInstrument = "recorder" 
+altusMusic = \context Voice = altus \relative c {
+	\set Staff.midiInstrument = "recorder" 
 	   \clef "G2_8" 
 	   r4 c' c b! |
 	   c2. c4 |
@@ -122,25 +123,25 @@ altusMusic = \notes\relative c {
 	   d4. c8 bes4 f |
 	   g a g g |
 	   a2 r4 c \mp ~  |
-	   [c8 c] bes4 a a |
-	   bes4. c8( [d e f )c] |
+	    c8[ c] bes4 a a |
+	   bes4. c8(  d[ e f  c)] |
 %10
 	   es4 es d2 |
 	   g4 c, d c ~ | 
-	   c [d8( )f] es4 d |
+	   c  d8[(  f)] es4 d |
 	   c2 c |
 	   c r4 c4 ~ |
 %15
-	   [c8 c] bes4 a a |
-	   bes4. c8( [d e f )c] |
+	    c8[ c] bes4 a a |
+	   bes4. c8(  d[ e f  c)] |
 	   es4 es d2 |
 	   g4 c, d c ~ |
-	   c [d8 () f] es4 d4 |
+	   c  d8[ ( f)] es4 d4 |
 	   c2 c |
 	   c1
 }	   
 
-altusWords = \lyrics {
+altusWords = \lyricmode {
 	The sil -- ver swan, who liv -- ing had no note,
 	When death ap -- proached un -- locked her si -- lent throat;
 	Lean -- ing her breast a -- gainst the __  reed -- y shore,
@@ -151,43 +152,57 @@ altusWords = \lyrics {
 	more fools than wise.
 }
 
-tenorMusic = \notes\relative c {
+tenorMusic =\context Voice = tenor \relative c {
 	  \clef "bass"
-	\property    Staff.midiInstrument = "recorder" 
-	  r4 a' \mp a [g8 f]
+	\set Staff.midiInstrument = "recorder" 
+	  r4 a' \mp a  g8( f)
 	  g4. f8 e4 c |
-	  d4. e8( [f g a )bes] 
-	  c4 c,4 [c8 d] [e f]|
+	  d4. e8(  f[ g a  bes)] 
+	  c4 c,4( ~ c8[ d])  e[ f]|
 	  g2 d |
-	  [e8 c] c'4 d c |
+	   e8[( c]) c'4 d c |
 	  c2. c,4 \mf |
-	  f4. g8 [a bes] c4 |
+	  f4. g8  a[( bes]) c4 |
 	  d2 r2
 %10
 	g,4 c2 b!4 |
 	c a bes c |
-	a d [g,8 g] bes4 ~|
-	bes a g2 |
+	a d  g,8[ g] bes4 ~|
+	bes a( g2) |
 	f2 r4 c \p  |
 %15
-	f4. g8 a bes c4 |
+	f4. g8 a bes( c4) |
 	d2 r2 |
 	g,4 c2 b!4 |
 	c a bes c |
 	a d g,8 g bes4 ~ |
-	bes a( )g2 |
-	f1-\fermata \bar "|."
+	bes a(  g2) |
+	f1\fermata \bar "|."
 }	   
+tenorWords=\lyrics {
+  The sil -- ver __ swan,
+  who liv -- ing had no __
+  note
+  when __ death ap -- proached
+  un -- locked her __ si -- lent throat
+  a -- gainst the read -- y shore
+  thus sung her first and last,
+  and sung no more, and sung no __ more.
+  Fare -- well all joys, O __ death __
+  come close mine eyes;		
+  more geese than swans now live,
+  more fools than __ wise.
+}
 
-bassMusic = \notes\relative c {
-	\property    Staff.midiInstrument = "cello" 
+bassMusic = \context Voice = bass \relative c {
+	\set Staff.midiInstrument = "cello" 
 	\clef "bass"	
 	r4 f \mp f d |
 	c2. a4 |
 	bes4. c8 d4 f |
 	c4. d8 e f g4 |
 %5
-	g, bes4. c8 ()d4 |
+	g, bes4. c8 ( d4) |
 	c4 a bes c |
 	f, f'4. \mf f8 e4 |
 	d2. c4 |
@@ -207,10 +222,10 @@ bassMusic = \notes\relative c {
 	f4 d es bes |
 %20
 	c2. c4 |
-	f,1-\fermata\pp
+	f,1\fermata\pp
 }
 
-bassWords = \lyrics {
+bassWords = \lyricmode {
 	The sil -- ver swan, who liv -- ing had no note, 
 	When death ap -- proached un -- locked __ her __ si -- lent, si -- lent throat;
 
@@ -222,26 +237,28 @@ bassWords = \lyrics {
 }
 	
 \score {
-       \notes <
-        \addlyrics
-		\context Staff = Cantus \notes< \global\cantusMusic >
-		\context Lyrics = Cantus  \cantusWords
-	\addlyrics
-		\context Staff = Quintus \notes< \global\quintusMusic >
-		\context Lyrics = Quintus  \quintusWords
-	\addlyrics
-		\context Staff = Altus \notes <\global\altusMusic >
-		\context Lyrics = Altus \altusWords
-	\context Staff = Tenor \notes< \global\tenorMusic >
-	\addlyrics 
-		\context Staff = Bass \notes< \global\bassMusic >
-		\context Lyrics = Bass \bassWords
-	>
+        <<
+		\context Staff = Cantus << \global\cantusMusic >>
+		\lyricsto cantus \context Lyrics = Cantus  \cantusWords
+		\context Staff = Quintus << \global\quintusMusic >>
+		\lyricsto quintus \context Lyrics = Quintus  \quintusWords
+		\context Staff = Altus  <<\global\altusMusic >>
+		\lyricsto altus \context Lyrics = Altus \altusWords
+		\context Staff = Tenor  <<\global\tenorMusic >>
+		\lyricsto tenor \context Lyrics = Tenor \tenorWords
+		\context Staff = Bass << \global\bassMusic >>
+		\lyricsto bass \context Lyrics = Bass \bassWords
+	>>
 
-	\paper {
+	\layout {
 	       indent=0.0\mm
 		textheight = 240.0\mm 
 	}
-	\midi { \tempo 4=100 }
+	
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 100 4)
+      }
+    }
 }
-
