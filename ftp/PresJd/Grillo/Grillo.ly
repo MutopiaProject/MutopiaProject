@@ -1,28 +1,34 @@
+#(ly:set-option 'old-relative)
 \header {
     title = "El Grillo"
-    subtitle = "The Cricket \\\\ (a Madrigal)"
-    composer = "Josquin de Pres"
-
+    subtitle = \markup {
+      \column {
+	\line {"The Cricket" }
+	\line { "a Madrigal" }
+	}
+      }
+    composer = "Josquin de Pres (c1440–1521)"
     mutopiatitle = "El Grillo"
-    mutopiacomposer = "Josquin de Pres (c1440--1521)"
-    mutopiainstrument = "Voice (SATB) or Recorder"
+    mutopiacomposer = "PresJd"
+    mutopiainstrument = "Voice (SATB)"
     date = "1504"
-    source = "Petruccio {\it Tertio de Frottole} (1504)"
+    source = \markup { "Petruccio" \italic " Tertio de Frottole"  " (1504)"}
+    mutopiasource = "Petruccio Tertio de Frottole (1504)"
     style = "Renaissance"
     copyright = "Public Domain"
     maintainer = "Peter Chubb"
     maintainerEmail = "mutopia@chubb.wattle.id.au"
-    lastupdated = "2003/July/21"
+    lastupdated = "2009/Aug/6"
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-    footer = "Mutopia-2003/07/21-339"
+ footer = "Mutopia-2009/08/16-339"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "1.6.0"
-\include "paper16.ly"
+\version "2.12.0"
+#(set-global-staff-size 16)
 
-global=\notes {
-    \property Staff.midiInstrument = "Recorder"
+global= {
+    \set Staff.midiInstrument = "Recorder"
     \time 2/2
     \skip 1*21
 %    \bar "||"
@@ -36,29 +42,29 @@ global=\notes {
     \skip 1*10
     \bar "||"
 }
-#(define note '(columns (music "noteheads-1" ((kern . -0.1) "flags-stem"))))
 
-sop=\notes\relative c'' {
-    a1^#`((columns (font-relative-size . -1)) ,note " =120") |
-    g2 () f |
+sop=\context Voice = sop \relative c'' {
+  \tempo 4 = 120
+    a1
+    g2 ( f) |
     e r4 g4 |
     g g8 g fis4 fis |
     g2 g4 g |
     g g g g|
     g1 ~ | g ~ g |
-    g-\fermata
+    g\fermata
 
     \repeat unfold 4 { a4 a r2 | }
 
     \repeat unfold 12 { a8 }
     g4 g \breathe |
     a1 |
-    g2 ( ) f | e r4 g4 |
+    g2 (  f) | e r4 g4 |
     g g8 g fis4 fis |
-    g2 g-\fermata^"Fine" |
+    g2 g\fermata^"Fine" |
 
     g4 g g2 |
-    g ()e4 e fis fis |
+    g ( e4) e fis fis |
     g2 g a4 a |
     a2 a4 g g fis |
     g2 g |
@@ -70,12 +76,15 @@ sop=\notes\relative c'' {
     f2 e |
     d4 d r e 
     f2 e |
-    d4.( e8 ) f4 e ~ |
+    d4.( e8  f4) e ~ |
     e d2 cis4 |
-    d1^"D.C. al Fine"
+    d1
+  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+  \override Score.RehearsalMark #'self-alignment-X = #RIGHT  
+  \mark "D.C. al Fine"
 }
 
-alto=\notes\relative c' {
+alto=\relative c' {
     f1 |
     d2 d |
     g, r4 d'4|
@@ -84,8 +93,8 @@ alto=\notes\relative c' {
     e e e e |
     e2 ( c4. d8 |
     e2 c4. d8 |
-    e2 c4. ) d8 |
-    e1-\fermata |
+    e2 c4.  d8) |
+    e1\fermata |
 
     \repeat unfold 4 { f4 f r2 }
     \repeat unfold 12 { f8 }
@@ -94,46 +103,46 @@ alto=\notes\relative c' {
     d2 d |
     g, r4 d'
     d d8 d d4 d |
-    d2 d-\fermata
+    d2 d\fermata
 
     e4 e e2 |
-    e ()g4 g d d |
+    e ( g4) g d d |
     d2 d f4 f |
     f2 f4 d d d|
     d2 d |
 
     d2 d |
     d g,
-    a4 d2() cis4 |
+    a4 d2( cis4) |
     d4 d r cis |
     d2 cis |
     d4 d r cis |
-    d2 cis d4( c8 b )a4
-    b c()a a2 |
-    a1-\fermata
+    d2 cis d4( c8 b  a4)
+    b c( a) a2 |
+    a1\fermata
 }
 
 
-tenor=\notes\relative c' {
+tenor=\context Voice = tenor \relative c' {
     c1 |
     b2 a4.(b8 |
-    )c2 r4 b4 |
+     c2) r4 b4 |
     b b8 b a4 a |
     g2 g4 g |
     g g c c|
     c4. ( d8 e2 |
     c4. d8 e2 |
-    c4. d8 )e2 
-    c1-\fermata
+    c4. d8  e2) 
+    c1\fermata
 
     \repeat unfold 4 { r2 c4 c | }
     \repeat unfold 12 { c8 }
     c4 c
     \breathe |
-    c1 b2( a4. )b8 |
+    c1 b2( a4.  b8) |
     c2 r4  b4 |
     b b8 b a4 a |
-    g2 g-\fermata |
+    g2 g\fermata |
 
     g4 g c2 |
     c2. c4 a a |
@@ -148,13 +157,13 @@ tenor=\notes\relative c' {
     a2 a |
     a4 a r a |
     a2 a |
-    a4 ~ a()d g, ~|
-    g8 f(e)d e2 |
-    d1-\fermata
+    a4 ~ a( d) g, ~|
+    g8 f(e d) e2 |
+    d1\fermata
 }
-bassus=\notes\relative c {
+bassus=\context Voice = bass \relative c {
     f1 |
-    g2()d|
+    g2( d)|
     c r4 g4 |
     g g8 g d'4 d |
     g,2 g4 g |
@@ -162,7 +171,7 @@ bassus=\notes\relative c {
     c1 ~ |
     c ~ |
     c |
-    c-\fermata |
+    c\fermata |
     \repeat unfold 4 { r2 f4 f |}
     \repeat unfold 12 { f8 }
     c4 c  \breathe |
@@ -170,12 +179,12 @@ bassus=\notes\relative c {
     g2 d |
     c r4 g |
     g g8 g d'4 d |
-    g,2 g-\fermata_"Fine"
+    g,2 g\fermata_"Fine"
 
     c4 c c2 |
     c2. c4 d d |
     g,2 g f'4 f |
-    f4.()e8 f4 g d d |
+    f4.( e8) f4 g d d |
     g,2 g
 
     g d' |
@@ -186,11 +195,11 @@ bassus=\notes\relative c {
     d4 d r a |
     d2 a |
     d4 d r e |
-    c() d a2 |
-    d1-\fermata
+    c( d) a2 |
+    d1\fermata
 }
 
-words=\lyrics {
+words=\lyricmode {
     El gril -- lo.
     El gril -- lo e buon can -- tor -- e che -- tie -- ne long -- o ver -- so.
     Dal -- le Be -- ve
@@ -200,12 +209,12 @@ words=\lyrics {
     El gril -- lo,
     el gril -- lo e buon can -- tor -- e.
 
-    \context Lyrics  < \lyrics {
+    \context Lyrics  << \lyricmode {
 	Ma -- non fa -- co -- me gl'alt -- "ri u" -- cel -- li
 	com -- e -- li -- tor can -- ta -- tum  po -- co
 	}
-      \lyrics { Van' de fat -- to -- in alt -- ro lo -- co sem -- pre el gril -- lo sta -- pur sal -- do }
-      >
+      \lyricmode { Van' de fat -- to -- in alt -- ro lo -- co sem -- pre el gril -- lo sta -- pur sal -- do }
+      >>
 
     Quan -- do la mag -- gior el cal -- do 
     Al hor can -- ta sol per a -- mor -- e __ per a -- mor -- e
@@ -224,19 +233,37 @@ Translation:
    he sings solely for love.
 %}
 \score {
-    \context ChoirStaff <
-	\addlyrics \context Staff = sop \notes < \global \sop > \context Lyrics = words \words
-	\context Staff = alto \notes <{ \clef "G_8" \global } \alto>
-	\addlyrics \context Staff = tenor \notes < { \clef "G_8" \global } \tenor> \context Lyrics = bassWords \words
-	\context Staff = bassus \notes < { \clef "F" \global } \bassus>
-    >
-    \paper {
+    \context ChoirStaff <<
+	\context Staff = "sop"  << \global \sop >> 
+	\lyricsto sop \context Lyrics = "words" \words
+	\context Staff = "alto"  <<{ \clef "G_8" \global } \alto>>
+	\context Staff = "tenor"  << { \clef "G_8" \global } \tenor>> 
+	\lyricsto tenor \context Lyrics = bassWords \words
+	\context Staff = "bassus"  << { \clef "F" \global } \bassus>>
+    >>
+    \layout {
 	indent=0.0\mm
-    }
-    \midi {
-	\tempo 1=60
+}
+    
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 60 1)
+      }
     }
 }
 
-
-
+\markup {
+  \column  {
+    \line {\italic {Translation}}
+    \line {   The cricket is a good singer }
+    \line { Who sings for a long time }
+    \line { The cricket sings just for fun}
+    \line { The cricket is a good singer}
+    \line {But unlike the birds}
+    \line { who fly off when they've sung a bit,}
+    \line { The cricket just stays where he is}
+    \line { When the weather is really hot,}
+    \line  { he sings solely for love.}
+  }
+}
