@@ -1,21 +1,20 @@
 \version "2.10.3"
 
  \header {
-  title = "Fur Elise"
+  title = "Für Elise"
   subtitle = "Clavierstuck in A Minor - WoO 59"
-  composer = "Ludwig Van Beethoven"
-  mutopiatitle = "Fur Elise"
+  composer = "Ludwig van Beethoven"
+  mutopiatitle = "Für Elise"
   mutopiacomposer = "BeethovenLv"
   mutopiaopus = "WoO 59"
   mutopiainstrument = "Piano"
   date = "1810"
-  source = "Breitkopf & Hartel"
+  source = "Breitkopf & Härtel"
   style = "Classical"
   copyright = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2007/February/24"
-  version = "2.10.3"
- footer = "Mutopia-2007/02/25-931"
+
+ footer = "Mutopia-2009/08/31-931"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -85,7 +84,7 @@
  \alternative { { a,16 e a r r8 } { a,16[ e a] <bes c'>[ <a c'> <g bes c'>] } }
 
  f16 a c' a c' a f bes d' bes d' bes f e' <f g bes> e' <f g bes> e' f a c' a c' a f a c' a c' a e a c' a <d d'> f
- g16 e' g f' g f' \clef treble <c' e'>8 r16 <f' g'>[ <e' g'> <d' f' g'>] <c' e' g'>8 \clef bass <f a>8[ <g b>]
+ g16 e' g e' g f' \clef treble <c' e'>8 r16 <f' g'>[ <e' g'> <d' f' g'>] <c' e' g'>8 \clef bass <f a>8[ <g b>]
  \clef treble c'8 r16 <f' g'>[ <e' g'> <d' f' g'>] <c' e' g'>8 \clef bass <f a>8[ <g b>] <gis b>8 r r R4.
  R4. R4. R4. a,16 e a r16 r8 e,16\sustainDown e gis r r8\sustainUp a,16\sustainDown e a r r8\sustainUp
  R4. a,16\sustainDown e a r r8\sustainUp e,16\sustainDown e gis r r8\sustainUp a,16 e a r r8
