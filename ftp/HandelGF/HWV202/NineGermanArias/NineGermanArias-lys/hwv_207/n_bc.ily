@@ -1,0 +1,59 @@
+\relative c {
+b8 c d es d f g d  |
+es8 c f f, b b' a g  |
+f8 a b g f es d c  |
+h8 a h g c g' c b  |
+a8 g a f b a g f  |
+es8 d c b es d c b  |
+a8 b f' f, b c d es  |
+d8 f g d es c f f,  |
+b8 c d es d f g d  |
+es8 c f f, b c d es  |
+d8 f g d es c f f,  |
+b8 b' a g f a b g  |
+f8 a b g a f g c,  |
+f8 g a b c c, f b,  |
+c8 c' a f b a g f  |
+e8 c a' f g f e c  |
+f8 a c a f e f d  |
+g8 g, g' f e d e c  |
+f8 e d c16 b f'8 f, a b  |
+c8 b' a b c f, b, c  |
+d8 a b c f g a b  |
+a8 c d a b g c c,  |
+f8 es d es d f g d  |
+es8 c f f, b c d b  |
+f'8 a b g f g a f  |
+b8 a b g f es f d  |
+g8 f g c, f es f b,  |
+es8 d es c d c d es  |
+f8 es d es f a b es,  |
+f8 es d c h a h g  |
+c8 g' c b a g a f  |
+b8 b, b' a g c a f  |
+b8 a g f16 es d8 es f f,  |
+b8 c d b es d c b  |
+f'8 g a f b a g f  |
+es8 d c b f' es d c  |
+h8 g c c' f, b g es  |
+f8 es f f, b c d es  |
+d8 b d es d b d es  |
+d8 b d es f f, b g'  |
+f8 es f f, b c d es  |
+d8 f g d es c f f,  |
+b8 b' a g f a b g  |
+f8 es d c h a h g  |
+c8 g' c b a g a f  |
+b8 a g f es d c b  |
+es8 d c b a b f' f,  |
+b4 \fermata r2 b'8 g  |
+c8 b a g d' c b a  |
+g8 f es d c d es c  |
+f8 es d c b a' g f  |
+e8 g a d, cis h cis a  |
+d8 c b a g a b g  |
+c8 b a g f f' f e  |
+d8 g e b' a cis, d d'  |
+b8 a b g a cis d g,  |
+a8 g a a, d es d c  |
+}
