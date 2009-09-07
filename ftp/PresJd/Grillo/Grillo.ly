@@ -1,4 +1,3 @@
-#(ly:set-option 'old-relative)
 \header {
     title = "El Grillo"
     subtitle = \markup {
@@ -18,14 +17,16 @@
     copyright = "Public Domain"
     maintainer = "Peter Chubb"
     maintainerEmail = "mutopia@chubb.wattle.id.au"
-    lastupdated = "2009/Aug/6"
+    lastupdated = "2009/Sep/7"
 
- footer = "Mutopia-2009/08/16-339"
+ footer = "Mutopia-2009/09/07-339"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \version "2.12.0"
-#(set-global-staff-size 16)
+
+% Fit music onto two pages; an extra page for the translation.
+#(set-global-staff-size 19)
 
 global= {
     \set Staff.midiInstrument = "Recorder"
@@ -44,7 +45,7 @@ global= {
 }
 
 sop=\context Voice = sop \relative c'' {
-  \tempo 4 = 120
+  \tempo 4 = 240
     a1
     g2 ( f) |
     e r4 g4 |
@@ -63,11 +64,13 @@ sop=\context Voice = sop \relative c'' {
     g g8 g fis4 fis |
     g2 g\fermata^"Fine" |
 
+  \context Voice =sopOne {
     g4 g g2 |
     g ( e4) e fis fis |
     g2 g a4 a |
     a2 a4 g g fis |
     g2 g |
+    }
 
     g2 f |
     g e |
@@ -144,12 +147,13 @@ tenor=\context Voice = tenor \relative c' {
     b b8 b a4 a |
     g2 g\fermata |
 
+    \context Voice = tenorOne {
     g4 g c2 |
     c2. c4 a a |
     g2 g c4 c |
     c2 c4 b a a |
     g2 g |
-
+    }
     g2 a |
     b c  |
     r4 a4 a2 |
@@ -199,7 +203,7 @@ bassus=\context Voice = bass \relative c {
     d1\fermata
 }
 
-words=\lyricmode {
+wordsOne = \lyrics {
     El gril -- lo.
     El gril -- lo e buon can -- tor -- e che -- tie -- ne long -- o ver -- so.
     Dal -- le Be -- ve
@@ -209,16 +213,22 @@ words=\lyricmode {
     El gril -- lo,
     el gril -- lo e buon can -- tor -- e.
 
-    \context Lyrics  << \lyricmode {
-	Ma -- non fa -- co -- me gl'alt -- "ri u" -- cel -- li
-	com -- e -- li -- tor can -- ta -- tum  po -- co
-	}
-      \lyricmode { Van' de fat -- to -- in alt -- ro lo -- co sem -- pre el gril -- lo sta -- pur sal -- do }
-      >>
+% Repeated section fits in here.
 
     Quan -- do la mag -- gior el cal -- do 
     Al hor can -- ta sol per a -- mor -- e __ per a -- mor -- e
 }
+
+wordsTwo = \new Lyrics <<
+  \lyrics  {
+	Ma -- non fa -- co -- me gl'alt -- "ri u" -- cel -- li
+	com -- e -- li -- tor can -- ta -- tum  po -- co
+  }
+  \lyrics { Van' de fat -- to -- in alt -- ro lo -- co sem -- pre 
+	  el gril -- lo sta -- pur sal -- do 
+  }
+>>
+
 
 %{
 Translation:
@@ -232,25 +242,28 @@ Translation:
    When the weather is really hot,
    he sings solely for love.
 %}
+
 \score {
-    \context ChoirStaff <<
-	\context Staff = "sop"  << \global \sop >> 
-	\lyricsto sop \context Lyrics = "words" \words
-	\context Staff = "alto"  <<{ \clef "G_8" \global } \alto>>
-	\context Staff = "tenor"  << { \clef "G_8" \global } \tenor>> 
-	\lyricsto tenor \context Lyrics = bassWords \words
-	\context Staff = "bassus"  << { \clef "F" \global } \bassus>>
-    >>
-    \layout {
-	indent=0.0\mm
-}
+  \context ChoirStaff <<
+    \context Staff = "sop"  << \global \sop >> 
+    \lyricsto sop \wordsOne
+    \lyricsto sopOne \wordsTwo
+    \context Staff = "alto"  <<{ \clef "G_8" \global } \alto>>
+    \context Staff = "tenor"  << { \clef "G_8" \global } \tenor>> 
+    \lyricsto tenor \wordsOne
+    \lyricsto tenorOne \wordsTwo
+    \context Staff = "bassus"  << { \clef "F" \global } \bassus>>
+  >>
+  \layout {
+    indent=0.0\mm
+  }
     
   \midi {
     \context {
       \Score
       tempoWholesPerMinute = #(ly:make-moment 60 1)
-      }
     }
+  }
 }
 
 \markup {
