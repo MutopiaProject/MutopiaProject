@@ -3,24 +3,23 @@
 #(set-global-staff-size 15.5) 
 #(ly:set-option 'point-and-click #f) 
 
-\version "2.10" 
+\version "2.12" 
 
 global = { \key b \major \time 6/8 \tempo 4.=48 } 
 
-TAUntreue = \relative c 
-{ 
+TAUntreue = \relative c { 
+\revert Rest #'direction 
 \partial 8 
 d8 h'4 h8 h[ a] h c4( a8) fis4 
-d8 g4 g8 g[ fis] g a4.~ a8 \oneVoice r \voiceOne 
+d8 g4 g8 g[ fis] g a4.~ a8 r 
 a8 a4 a8 a[ h] c d4. e,4 
-a8 g4 g8 a[ g] a h4.~ h8 \oneVoice r \voiceOne 
+a8 g4 g8 a[ g] a h4.~ h8 r 
 h8 h[ a] a a[ h] c d4( g8) e[ c] 
-a8 g4 g8 h4 a8 g4.~ g8 \oneVoice r \voiceOne 
+a8 g4 g8 h4 a8 g4.~ g8 r 
 \bar "|." 
 } 
 
-TBUntreue = \relative c 
-{ 
+TBUntreue = \relative c { 
 \partial 8 
 f8 b4 b8 b[ a] b c4( a8) f4 
 f8 f4 f8 g4 b8 a4.~ a8 s 
@@ -31,26 +30,25 @@ g8 f4 f8 b4 a8 f4.~ f8 s
 \bar "|." 
 } 
 
-BAUntreue = \relative c 
-{ 
+BAUntreue = \relative c { 
 \partial 8 
 f8 f4 f8 f4 f8 f4. f4 
-f8 f4 d8 d4 e8 f4.~ f8 \oneVoice r \voiceOne 
+f8 f4 d8 d4 e8 f4.~ f8 s 
 f8 f4 f8 f4 f8 f4. es4 
-es8 d4 d8 f4 f8 f4.~ f8 \oneVoice r \voiceOne 
+es8 d4 d8 f4 f8 f4.~ f8 s 
 f8 f4 f8 f4 f8 f4. es8[ g] 
-es8 d4 d8 f4 es8 d4.~ d8 \oneVoice r \voiceOne 
+es8 d4 d8 f4 es8 d4.~ d8 s 
 \bar "|." 
 } 
 
-BBUntreue = \relative c 
-{ 
+BBUntreue = \relative c { 
+\revert Rest #'direction 
 f8 b,4 b8 b4 b8 a4( c8) f4 
-es8 d4 b8 g4 g8 f4.~ f8 s 
+es8 d4 b8 g4 g8 f4.~ f8 r 
 f'8 f4 f8 es[ d] c b4( d8) es4 
-es8 f4 f8 f4 f8 b,4.~ b8 s 
+es8 f4 f8 f4 f8 b,4.~ b8 r 
 b8 f'4 f8 es[ d] c b4( d8) es4 
-es8 f4 f8 f,4 f8 b4.~ b8 s 
+es8 f4 f8 f,4 f8 b4.~ b8 r 
 \bar "|." 
 } 
 
@@ -80,9 +78,9 @@ LUC = \lyricmode {
 Ich möcht als Spiel -- mann rei -- sen 
 weit in die Welt hin -- aus __ 
 und sin -- gen mei -- ne Wei -- sen 
-und gehn von Haus zu Haus, __ 
+und gehn von Haus zu Haus, 
 und sin -- gen mei -- ne Wei -- sen 
-und gehn von Haus zu Haus. __ 
+und gehn von Haus zu Haus. 
 } 
 
 LUD = \lyricmode { 
@@ -90,57 +88,59 @@ LUD = \lyricmode {
 Ich möcht als Rei -- ter flie -- gen 
 wohl in die blut -- ge Schlacht, 
 um stil -- le Feu -- er lie -- gen 
-im Feld bei dunk -- ler Nacht, __ 
+im Feld bei dunk -- ler Nacht, 
 um stil -- le Feu -- er lie -- gen 
-im Feld bei dunk -- ler Nacht. __
+im Feld bei dunk -- ler Nacht. 
 } 
 
 LUE = \lyricmode { 
 \set stanza = "5." 
 Hör ich das Mühl -- rad ge -- hen, 
-ich weiß nicht, was ich will, __ 
-ich möcht am lieb -- sten ster -- ben, 
-da wärs auf ein -- mal still, __ 
-ich möcht am lieb -- sten ster -- ben, 
-da wärs auf ein -- mal still. __
+ich weiss nicht, was ich will, __ 
+ich möcht am liebs -- ten ster -- ben, 
+da wär's auf ein -- mal still, __ 
+ich möcht am liebs -- ten ster -- ben, 
+da wär's auf ein -- mal still. __ 
 } 
 
 %--------------------
 
 \header { 
- kaisernumber = "491"
- comment = "Vers 5 langsamer und schwächer, und das Ende pp"
- footnote = ""
+kaisernumber = "491" 
+comment = "Vers 5 langsamer und schwächer, und das Ende pp" 
+footnote = "" 
  
- dedication = "" 
- title = "Untreue" 
- subtitle = "" 
- composer = "Friedrich Glück (1793–1840), 1814" 
- opus = "" 
- meter = \markup {In ruhiger Bewegung} 
- arranger = "Arrangement by Friedrich Silcher (1789–1860), 1825" 
- poet = "Joseph Freiherr von Eichendorff (1788–1857), 1810" 
+dedication = "" 
+title = "Untreue" 
+% subtitle = "Das zerbrochene Ringlein" 
+composer = "Friedrich Glück (1793–1840), 1814" 
+opus = "" 
+meter = \markup {In ruhiger Bewegung} 
+arranger = "Bearbeitung von Friedrich Silcher (1789-1860), 1825" 
+poet = "Joseph Freiherr von Eichendorff (1788–1857), 1810" 
 
- mutopiatitle = "Untreue"
- mutopiacomposer = "SilcherF"
- mutopiapoet = "J. von Eichendorff (1788-1857)"
- mutopiainstrument = "Choir (TTTB)"
- date = "1825"
- source = "Leipzig : C. F. Peters, 1907"
- style = "Romantic"
- copyright = "Creative Commons Attribution 3.0"
- maintainer = "Klaus Rettinghaus"
- lastupdated = "2008/August/20"
+mutopiatitle = "Untreue" 
+mutopiacomposer = "SilcherF" 
+mutopiapoet = "J. von Eichendorff (1788–1857)" 
+mutopiainstrument = "Choir (TTTB)" 
+date = "1825" 
+source = "Leipzig : C. F. Peters, 1907" 
+style = "Romantic" 
+copyright = "Creative Commons Attribution 3.0" 
+maintainer = "Klaus Rettinghaus" 
+lastupdated = "2009/August/1" 
  
- footer = "Mutopia-2008/09/12-622"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
-}
+ footer = "Mutopia-2009/09/08-622"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+} 
 
 \score {
+{
 \context ChoirStaff 
 	<< 
 	\context Staff = TenorStaff 
 	<< 
+	#(set-accidental-style 'voice) 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G_8" 
 			\context Voice = TenorA { \voiceOne 
@@ -162,6 +162,7 @@ da wärs auf ein -- mal still. __
 	\context Lyrics = versefive 
 	\context Staff = BassStaff 
 	<< 
+	#(set-accidental-style 'voice) 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = BassA { \voiceOne 
@@ -183,6 +184,7 @@ da wärs auf ein -- mal still. __
 	\context Lyrics = versefour \lyricsto TenorA \LUD 
 	\context Lyrics = versefive \lyricsto TenorA \LUE 
 	>> 
+}
 
 \layout {
 indent = 0.0\cm

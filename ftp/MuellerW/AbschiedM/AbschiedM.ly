@@ -1,24 +1,22 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
+#(ly:set-option 'point-and-click #f)
 
-\version "2.10" 
+\version "2.12" 
 
 global = { \key g \major \time 3/4 \tempo 4=72 } 
 
-TAHeimatAbschied = \relative g' 
-{ 
+TAHeimatAbschied = \relative g' { 
 \partial 4. 
 d8\p\< cis d\! e4. a,8 c\> fis,\! g4. 
-d'8\mf\< cis d\! fis4. e8\> d c h4.\p 
-d8\< cis d fis4.\> d8\< e fis g4.\> 
-h,8\p a h e4. d8\> c a\! g4. 
+d'8\mf\< cis d\! fis4. e8\> d c\! h4.\p 
+d8\< cis d\! fis4.\> d8\< e fis g4.\> 
+h,8\p a h e4. d8^\markup{\large\italic "poco rit."}\> c a\! g4. 
 \bar "|." 
 } 
 
-TBHeimatAbschied = \relative g 
-{ 
+TBHeimatAbschied = \relative g { 
 \partial 4. 
 h8 ais h c4. a!8 fis d d4. 
 h'8 g h b4. b8 a a g4. 
@@ -27,8 +25,7 @@ g8 g g g4. gis8 a fis g4.
 \bar "|." 
 } 
 
-BAHeimatAbschied = \relative g 
-{ 
+BAHeimatAbschied = \relative g { 
 \partial 4. 
 g8 g g g4. e8 d c h4. 
 g'8 g g g4. g8 fis d d4. 
@@ -37,18 +34,17 @@ g8 g f e4. e8 e d h4.
 \bar "|." 
 } 
 
-BBHeimatAbschied = \relative g 
-{ 
+BBHeimatAbschied = \relative g { 
 \partial 4. 
 g8\p\< g g\! c,4. c8 d\> d\! g,4. 
-g'8\mf\< e d cis4.\! cis8\> d fis, g4.\p 
-g'8\< g g d4.\> d8\< d d e4.\> 
-e8\p e d c4. h8\> a d\! g,4. 
+g'8\mf\< e d\! cis4. cis8\> d fis,\! g4.\p 
+g'8\< g g\! d4.\> d8\< d d e4.\> 
+e8\p e d c4. h8_\markup{\large\italic "poco rit."}\>\> a d\! g,4. 
 \bar "|." 
 } 
 
 
-LHeimatAbschiedA = \lyricmode {
+LHeimatAbschiedA = \lyricmode { 
 \set stanza = "1." 
 So leb denn wohl, du stil -- les Haus! 
 Ich zieh be -- trübt von dir hin -- aus; 
@@ -56,15 +52,15 @@ ich zieh be -- trübt und trau -- rig fort,
 noch un -- be -- stimmt, an wel -- chen Ort. 
 } 
 
-LHeimatAbschiedB = \lyricmode {
+LHeimatAbschiedB = \lyricmode { 
 \set stanza = "2." 
 So leb denn wohl, du schö -- nes Land, 
 in dem ich ho -- he Freu -- de fand! 
 Du zogst mich groß, du pfleg -- test mein, 
-und nim -- mer -- mehr ver -- geß ich dein. 
+und nim -- mer -- mehr ver -- gess ich dein. 
 } 
 
-LHeimatAbschiedC = \lyricmode {
+LHeimatAbschiedC = \lyricmode { 
 \set stanza = "3." 
 So lebt denn, all ihr Lie -- ben, wohl, 
 von de -- nen ich jetzt schei -- den soll! 
@@ -74,34 +70,34 @@ denk ich doch stets an euch zu -- rück.
 
 %--------------------
 
-\header {
- kaisernumber = "217"
- comment = ""
- footnote = ""
+\header { 
+kaisernumber = "217" 
+comment = "" 
+footnote = "" 
  
- title = "Abschied"
- subtitle = ""
- composer = "Wenzel Müller (1767–1835), 1828"
- opus = ""
- meter = \markup {Innig}
- arranger = "Arrangement by Robert Radecke (1830–1911)"
- poet = "Ferdinand Raimund (1790–1836), 1828"
+title = "Abschied" 
+subtitle = "" 
+composer = "Wenzel Müller (1767–1835), 1828"
+opus = "" 
+meter = \markup {Innig} 
+arranger = "Bearbeitung von Robert Radecke (1830–1911)" 
+poet = "Nach Ferdinand Raimund (1790–1836), 1828" 
  
- mutopiatitle = "Abschied von der Heimat"
- mutopiacomposer = "MuellerW"
- mutopiapoet = "F. Raimund (1790-1836)"
- mutopiaopus = ""
- mutopiainstrument = "Choir (TTBB)"
- date = "1900s"
- source = "Leipzig : C. F. Peters, 1907"
- style = "Romantic"
- copyright = "Creative Commons Attribution 3.0"
- maintainer = "Klaus Rettinghaus"
- lastupdated = "2008/August/20"
+mutopiatitle = "Abschied von der Heimat" 
+mutopiacomposer = "MuellerW" 
+mutopiapoet = "F. Raimund (1790–1836)" 
+mutopiaopus = "" 
+mutopiainstrument = "Voice (TTBB)" 
+date = "1900s" 
+source = "Leipzig : C. F. Peters, 1907" 
+style = "Romantic" 
+copyright = "Creative Commons Attribution 3.0" 
+maintainer = "Klaus Rettinghaus" 
+lastupdated = "2008/August/1" 
  
- footer = "Mutopia-2008/09/12-797"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
-}
+ footer = "Mutopia-2009/09/08-797"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+} 
 
 \score {
 {
@@ -110,6 +106,7 @@ denk ich doch stets an euch zu -- rück.
 	\context Lyrics = extra 
 	\context Staff = TenorStaff 
 	<< 
+	#(set-accidental-style 'voice) 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G_8" 
 			\context Voice = TenorA { \voiceOne 
@@ -121,6 +118,7 @@ denk ich doch stets an euch zu -- rück.
 			\context Voice = TenorB { \voiceTwo 
  				<< 
 				\autoBeamOff 
+				\dynamicDown 
 				{ \global \TBHeimatAbschied } 
 				>> } 
 			>> 
@@ -129,11 +127,13 @@ denk ich doch stets an euch zu -- rück.
 	\context Lyrics = versethree 
 	\context Staff = BassStaff 
 	<< 
+	#(set-accidental-style 'voice) 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = BassA { \voiceOne 
 				<< 
 				\autoBeamOff 
+				\dynamicUp 
 				{ \global \BAHeimatAbschied } 
 				>> } 
 			\context Voice = BassB { \voiceTwo 

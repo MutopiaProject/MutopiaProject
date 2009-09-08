@@ -1,27 +1,29 @@
 #(set-global-staff-size 15.5) 
+#(ly:set-option 'point-and-click #f) 
 
-\version "2.10"
+\version "2.12" 
 
 global = { \key as \major \time 4/4 \tempo 4=76 } 
 
 SWaisenklage = \relative as' { 
+%\revert Rest #'direction 
 \partial 4 
 ees4\p 
 as4 as c bes8[ as] 
-\setTextCresc 
+\crescTextCresc 
 bes4-> bes \oneVoice r4 \voiceOne g8(\< as) 
 bes4 bes8 bes bes[ des] c[ bes] 
 c2 \oneVoice r4 \voiceOne c8( bes) 
 as4 bes c8(\> c8) bes as 
-bes4\p bes \oneVoice r2 \voiceOne  
-\setTextCresc 
-des2\< ees2 
+bes4\p bes \oneVoice r2 \voiceOne 
+des!2\< ees2 
 c2. c4 
 c4(\> bes) bes2 
 ees2.\p\! r4 
+\crescHairpin 
 des2\< ees2 
 c2.\> c4 
-c4(\p-> bes) bes2 
+c4(\p-> bes)^\markup {\large\italic ritard.} bes2 
 as2.\fermata 
 \bar "|." 
 } 
@@ -30,10 +32,10 @@ AWaisenklage = \relative as' {
 \partial 4 
 ees4 
 ees4 c d8[ ees] f4 
-f4-> g s ees8\( ees\) 
+f4-> g s ees8( ees) 
 f4 f8 f bes4 g4 
-g2 s4 e8\( e\) 
-f4 g8[ bes] bes\( as\) g as 
+g2 s4 e8( e) 
+f4 g8[ bes] bes( as) g as 
 f4 g s2 
 as2 bes4.( ees,8) 
 ees4( e) f( ges) 
@@ -50,12 +52,12 @@ TWaisenklage = \relative as' {
 \partial 4 
 es8[ des] 
 c4 ees4 as,8[ g] f[ bes] 
-as4-> g4 \oneVoice r4 \voiceOne ees'8( ees) 
-des4 des8 d8 ees4 ees8[ des8] 
-c4( g4) \oneVoice r4 \voiceOne c8( c8) 
-c4 des4 ees8( ees8) ees8 ees8 
+as4-> g4 \oneVoice r4 \voiceOne ees'!8\( ees\) 
+des!4 des8 d8 ees4 ees8[ des8] 
+c4( g4) \oneVoice r4 \voiceOne c8\( c8\) 
+c4 des4 ees8\( ees8\) ees8 ees8 
 ees8[ d8] ees4 \oneVoice r2 \voiceOne 
-des2 bes2 
+des!2 bes2 
 c4( bes) as( a) 
 a4( bes) des( f) 
 ees2. r4 
@@ -69,20 +71,20 @@ BWaisenklage = \relative as {
 \partial 4 
 ees4\p 
 as,4 as'8[ g] f[ ees8] d4 
-\setTextCresc 
+\crescTextCresc 
 d4-> ees s des'8(\< c) 
 bes8[ c] bes as g4 ees4 
 e2 s4 c8( c) 
-f4 ees4 as8(\> as) bes c 
+f4 ees!4 as8(\> as) bes c 
 bes4\p ees,4 s2 
-\setTextCresc 
 f2\< g2 
 as4( g4) f4( ees4) 
 des2.\> des4 
 des'2(\p c4) r4 
+\crescHairpin 
 bes4(\< as) g4( ees4) 
 f2\> c2 
-des2\p-> ees2 
+<<des2\p-> {s4 s_\markup {\large\italic ritard.}}>> ees2 
 as,2.\fermata 
 } 
 
@@ -99,7 +101,7 @@ weil ich so ver -- las -- sen bin.
 LWaisenklageB = \lyricmode {
 \set stanza = "2." 
 Mein El -- tern sind ge -- stor -- ben, 
-die Ge -- schwi -- ster sind al -- le tot, 
+die Ge -- schwis -- ter sind al -- le tot, 
 und die Freun -- de ha -- ben mich ver -- las -- sen; 
 in der Welt find ich kein Trost, 
 in der Welt find ich kein Trost! 
@@ -116,34 +118,34 @@ schließ mir auf die Him -- mels -- tür!
 
 %--------------------
 
-\header {
- kaisernumber = "138"
- comment = ""
- footnote = ""
+\header { 
+kaisernumber = "138" 
+comment = "" 
+footnote = "" 
  
- title = "Waisenklage"
- subtitle = ""
- composer = "Folksong"
- opus = ""
- meter = \markup {Langsam}
- arranger = "Arrangement by Max Bruch (1838-1920)"
- poet = ""
+title = "Waisenklage" 
+subtitle = "" 
+composer = "Volksweise aus der Badischen Pfalz," 
+opus = "" 
+meter = \markup {Langsam} 
+arranger = "bearbeitet von Max Bruch (1838–1920)" 
+poet = "Neueres Volkslied" 
  
- mutopiatitle = "Waisenklage"
- mutopiacomposer = "BruchM"
- mutopiapoet = ""
- mutopiaopus = ""
- mutopiainstrument = "Choir (SATB)"
- date = "1910s"
- source = "Leipzig : C. F. Peters, 1915"
- style = "Romantic"
- copyright = "Creative Commons Attribution 3.0"
- maintainer = "Klaus Rettinghaus"
- lastupdated = "2006/May/23"
+mutopiatitle = "Waisenklage" 
+mutopiacomposer = "BruchM" 
+mutopiapoet = "" 
+mutopiaopus = "" 
+mutopiainstrument = "Choir (SATB)" 
+date = "1910s" 
+source = "Leipzig : C. F. Peters, 1915" 
+style = "Romantic" 
+copyright = "Creative Commons Attribution 3.0" 
+maintainer = "Klaus Rettinghaus" 
+lastupdated = "2009/September/1" 
  
- footer = "Mutopia-2007/05/24-985"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
-}
+ footer = "Mutopia-2009/09/08-985"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+} 
 
 \score {
 {
@@ -186,9 +188,9 @@ schließ mir auf die Him -- mels -- tür!
 				{ \global \BWaisenklage } 
 				>> } 
 		>> 
-	\context Lyrics = verseone \lyricsto Alt \LWaisenklageA 
-	\context Lyrics = versetwo \lyricsto Alt \LWaisenklageB 
-	\context Lyrics = versethree \lyricsto Alt \LWaisenklageC 
+	\context Lyrics = verseone \lyricsto Tenor \LWaisenklageA 
+	\context Lyrics = versetwo \lyricsto Tenor \LWaisenklageB 
+	\context Lyrics = versethree \lyricsto Tenor \LWaisenklageC 
 	>> 
 }
 
@@ -198,6 +200,7 @@ indent = 0.0\cm
 \remove "Bar_number_engraver"
 \override MetronomeMark #'transparent = ##t 
 \override DynamicTextSpanner #'dash-period = #-1.0 
+\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 \context {\Staff 
 \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
@@ -205,6 +208,9 @@ indent = 0.0\cm
 }
 
 \midi {
+\context { \Voice 
+\remove "Dynamic_performer" 
+}
 }
 
 }
