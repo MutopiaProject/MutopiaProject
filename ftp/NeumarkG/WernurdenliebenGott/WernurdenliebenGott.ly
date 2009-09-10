@@ -46,17 +46,17 @@ c'4 g a e2 f4 d2 e4\> a,2.\!
 
 
 LGuterGottA = \lyricmode { 
-\set stanza = "1." 
-Wer nur den lie -- ben Gott läßt wal -- ten 
+\set stanza = "1. " 
+Wer nur den lie -- ben Gott lässt wal -- ten 
 und hof -- fet auf ihn al -- le -- zeit, 
 den wird er wun -- der -- bar er -- hal -- ten 
 in al -- ler Not und Trau -- rig -- keit. 
-Wer Gott, dem Al -- ler -- höch -- sten, traut, 
+Wer Gott, dem Al -- ler -- höchs -- ten, traut, 
 der hat auf kei -- nen Sand ge -- baut. 
 } 
 
 LGuterGottB = \lyricmode { 
-\set stanza = "2." 
+\set stanza = "2. " 
 Was hel -- fen uns die schwe -- ren Sor -- gen, 
 was hilft uns un -- ser Weh und Ach! 
 Was hilft es, daß wir al -- le Mor -- gen 
@@ -66,9 +66,9 @@ nur grö -- ßer durch die Trau -- rig -- keit.
 } 
 
 LGuterGottC = \lyricmode { 
-\set stanza = "3." 
+\set stanza = "3. " 
 Es sind ja Gott ge -- rin -- ge Sa -- chen, 
-und ist dem Höch -- sten al -- les gleich, 
+und ist dem Höchs -- ten al -- les gleich, 
 den Rei -- chen arm und klein zu ma -- chen, 
 den Ar -- men a -- ber groß und reich. 
 Gott ist der rech -- te Wun -- der -- mann, 
@@ -76,13 +76,13 @@ der bald er -- höhn, bald stür -- zen kann.
 } 
 
 LGuterGottD = \lyricmode { 
-\set stanza = "4." 
+\set stanza = "4. " 
 Sing, bet und geh auf Got -- tes We -- gen, 
 ver -- richt das Dei -- ne nur ge -- treu 
 und trau des Him -- mels rei -- chem Se -- gen, 
 so wird er bei dir wer -- den neu; 
 denn wel -- cher sei -- ne Zu -- ver -- sicht 
-auf Gott setzt, den ver -- läßt er nicht. 
+auf Gott setzt, den ver -- lässt er nicht. 
 } 
 
 %--------------------
@@ -92,7 +92,7 @@ kaisernumber = "18a"
 comment = "" 
 footnote = "Nach G. Neumarks Satz eingerichtet von K. Lütge" 
  
-title = "Wer nur den lieben Gott läßt walten" 
+title = "Wer nur den lieben Gott lässt walten" 
 subtitle = "" 
 composer = "Georg Neumark (1621–1681), 1657" 
 opus = "" 
@@ -113,7 +113,7 @@ copyright = "Creative Commons Attribution 3.0"
 maintainer = "Klaus Rettinghaus" 
 lastupdated = "2009/September/1" 
  
- footer = "Mutopia-2009/09/08-637"
+ footer = "Mutopia-2009/09/10-637"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 } 
 
