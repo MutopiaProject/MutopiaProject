@@ -131,7 +131,7 @@ mutopiatitle = "Heidenröslein"
 mutopiacomposer = "WernerH" 
 mutopiapoet = "J. W. von Goethe (1749–1832)" 
 mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
+mutopiainstrument = "Choir (TTBB)" 
 date = "1829" 
 source = "Leipzig : C. F. Peters, 1915" 
 style = "Romantic" 
@@ -139,7 +139,7 @@ copyright = "Creative Commons Attribution 3.0"
 maintainer = "Klaus Rettinghaus" 
 lastupdated = "2009/August/1" 
  
- footer = "Mutopia-2009/09/08-1706"
+ footer = "Mutopia-2009/09/10-1706"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 } 
 
