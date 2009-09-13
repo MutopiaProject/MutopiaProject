@@ -1,21 +1,22 @@
-#(set-global-staff-size mystaffsize)
+#(define is-letter? (string=? (ly:get-option 'paper-size ) "letter"))
+#(set-global-staff-size (if is-letter? (- mystaffsize 1) (* mystaffsize )))
+
 \paper{
 %size
 	#(set-default-paper-size "a4" )
-%	paper-height = 297\mm
-%	paper-width = 210\mm
-	
+
 %margin
 	top-margin = 10 \mm
+	bottom-margin = 10 \mm
 	left-margin = 15 \mm
 	right-margin = 15 \mm
-	bottom-margin = 10 \mm
 %linewidth
-	#(define line-width (- paper-width left-margin right-margin))
+	line-width = #(- paper-width (+ left-margin right-margin))
+
 %fonts
 	#(define fonts
-		(make-pango-font-tree "Minion Pro"
-		"Myriad Pro"
+		(make-pango-font-tree "Georgia"
+		"Trebuchet"
 		"Courier"
 		(/ mystaffsize 20)))
 %footer
@@ -38,10 +39,9 @@
 						((end 1 16 * *) . ,(ly:make-moment 3 4))
 						((end 1 16 * *) . ,(ly:make-moment 4 4)))
 						default-auto-beam-settings)
-
 %	bass figures settings
-	\override BassFigure #'font-size = #+1
-	\override BassFigure #'font-name = #'"Minion Pro"
+%	\override BassFigure #'font-size = #+1
+	\override BassFigure #'font-name = #'"Georgia"
  	alignBassFigureAccidentals = ##t
 	figuredBassAlterationDirection = #RIGHT
 	figuredBassPlusDirection = #RIGHT
