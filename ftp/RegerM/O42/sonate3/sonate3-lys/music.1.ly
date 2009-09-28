@@ -3,9 +3,10 @@
     \time 2/4
     \key b \minor
     \set Staff.midiInstrument = "trumpet"
+    \set Score.tempoHideNote = ##t
 
-\tempo \markup { \bold { Pesante } } 8 = 66
-    <b= fs' d' as'>16(\ff b''32) r64 b'-> fs32.([ e64)] g( fs e d)
+\tempo 8 = 66
+    <b= fs' d' as'>16(^\markup { \bold { Pesante } } \ff b''32) r64 b'-> fs32.([ e64)] g( fs e d)
     cs([ d e d cs b as! b)] fs([ e d as b fs d b)] |
 
 %%%%% measure 2 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -66,8 +67,8 @@ bs64([ gs' ds' gs a gs fs d)] gs([ d e bs cs gs fs e)]
 as16([ b)] es,([\> fs]) d[( b]) as16..[(\startTrillSpan \grace { gs16[ as]\stopTrillSpan } b64)]\p \bar "||"
 
 %% "Allegro con brio" section
-\tempo \markup { \bold { Allegro con brio } } 8 = 80
-<b fs' d' as'>16(\ff\< b''32 fs'-.) e32( d cs b)\!
+\tempo 8 = 80
+<b fs' d' as'>16(^\markup { \bold { Allegro con brio } } \ff\< b''32 fs'-.) e32( d cs b)\!
    fs( d fs gs) as16( b32 cs) |
 b8--[\trill a16(\> r32 g-.)] fs8-.\p \times 4/6 { d'32\sf\>([ cs b a g fs)] } |
 
