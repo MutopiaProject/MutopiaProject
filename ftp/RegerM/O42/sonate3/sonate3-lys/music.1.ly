@@ -179,16 +179,15 @@ fs32( a) cs,(\> fs) a,( cs) fs,( a) bs,16([^\markup { \italic { rit. } } cs)] bs
 \stemNeutral
 <cs, e, a,>8-.\noBeam a32(\p\<[ b cs d] e fs gs a) \! |
 <a c, f,>8(\mp gs) <a c,>-.
+<a b, d,>(_\markup { \italic { poco a poco } } gs) <a b,>-. |
 
 %%%%%%%% The following is to make the 'written-out' crescendo:
-\set crescendoText = \markup { \italic { poco a poco crescendo } }  %% sets words for the cresc.
+\set crescendoText = \markup { \italic { crescendo } }  %% sets words for the cresc.
 \set crescendoSpanner = #'text
-\override DynamicTextSpanner #'style = #'dashed-line		    %% stretches it out with dashes.
-
-<a b, d,>(\< gs) <a b,>-. |
+\override DynamicTextSpanner #'style = #'dashed-line	%% stretches it out with dashes.
 
 %%%%% measure 59 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<g b, e,>( fs) <g b,>-. |
+<g b, e,>(\< fs) <g b,>-. |
 \slurUp
 <g a, cs,>( fs) <g a,>^.
 <fs a, d,>( es) <fs a,>^.
