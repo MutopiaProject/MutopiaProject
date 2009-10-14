@@ -20,7 +20,7 @@
   maintainerWeb = ""
   moreInfo = "This file was created from a public domain scan of the work's first edition which is located in the Petrucci Music Library, http://imslp.org/."
 
- footer = "Mutopia-2009/05/31-1647"
+ footer = "Mutopia-2009/10/14-1647"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 }
 
@@ -171,68 +171,68 @@
 
   \new Staff = "down" \relative c << { \time 4/4 \key des \major \clef bass
 
-    r8 f8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 1
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 2
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 3
-    r8 g,8*7/11[_\( des' bes f' des bes g des' bes f' des]\)					| % 4
-    r8 ges,!8*7/11[_\( c aes f' c aes ges c aes es' c]\)					| % 5
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 6
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 7
-    r8 g,8*7/11[_\( des' bes f' des bes g des' bes f' des]\)					| % 8
-    r8 g,8*3/5[_\( des' bes f' des]\) r8 g,8*3/5[_\( des' bes e c]\)				| % 9
-    r8 aes8*7/11[_\( f' c aes' f c aes f' c aes' f]\)						| % 10
-    r8 aes,8*7/11[_\( f' c aes' f c aes f' c aes' f]\)						| % 11
-    r8 aes,8*7/11[_\( d ces aes' d, ces aes d ces aes' d,]\)					| % 12
-    r8 ges,8*7/11[_\( es' bes ges' es bes ges es' bes ges' es]\)				| % 13
+    r8*8/12 f[_\( des' aes f' des aes f des' aes f' des]\)					| % 1
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 2
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 3
+    r g,[_\( des' bes f' des bes g des' bes f' des]\)						| % 4
+    r ges,![_\( c aes f' c aes ges c aes es' c]\)						| % 5
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 6
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 7
+    r g,[_\( des' bes f' des bes g des' bes f' des]\)						| % 8
+    r g,[_\( des' bes f' des]\) r g,[_\( des' bes e c]\)					| % 9
+    r aes[_\( f' c aes' f c aes f' c aes' f]\)							| % 10
+    r aes,[_\( f' c aes' f c aes f' c aes' f]\)							| % 11
+    r aes,[_\( d ces aes' d, ces aes d ces aes' d,]\)						| % 12
+    r ges,[_\( es' bes ges' es bes ges es' bes ges' es]\)					| % 13
     d,1\rest											| % 14
-    r8 f8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 15
+    r8*8/12 f[_\( des' aes f' des aes f des' aes f' des]\)					| % 15
     d,1\rest											| % 16
-    r8 g8*3/5[_\( des' bes f' des]\) r8 ges,8*3/5[_\( c aes es' c]\)				| % 17
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 18
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 19
-    r8 g,8*7/11[_\( des' bes f' des bes g des' bes f' des]\)					| % 20
-    r8 ges,!8*7/11[_\( c aes f' c aes ges c aes es' c]\)					| % 21
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 22
-    r8 f,8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 23
-    r8 g,8*7/11[_\( des' bes f' des bes g des' bes f' des]\)					| % 24
-    r8 g,8*3/5[_\( des' bes f' des]\) r8 g,!8*3/5[_\( des' bes e c]\)				| % 25
-    r8 aes8*7/11[_\( f' c aes' f c aes f' c aes' f]\)						| % 26
-    r8 aes,8*7/11[_\( f' c aes' f c aes f' c aes' f]\)						| % 27
-    r8 bes,8*7/11[_\( e c g' e c bes e c g' e]\)						| % 28
-    r8 aes,8*7/11[_\( f' c aes' f c aes f' c aes' f]\)						| % 29
-    r8 bes,8*7/11[_\( e c g' e c bes e c g' e]\)						| % 30
-    r8 a,8*7/11[_\( f' c a' f c a f' c a' f]\)							| % 31
-    r8 a,8*3/5[_\( f' c a' f]\) r8 a,8*3/5[_\( f' c a' f]\)					| % 32
-    r8 a,8*7/11[_\( e' c a' e c a e' c a' e]\)							| % 33
-    r8 gis,8*3/5[_\( e' b gis' e]\) d,2\rest							| % 34
-    r8 \clef treble c'8*7/11[_\( a' e c' a e c a' e c' a]\)					| % 35
-    b8\rest d,8*7/11[_\( gis e b' gis e d gis e b' gis]\)					| % 36
-    r8 c,8*7/11[_\( a' e c' a e c a' e c' a]\) \clef bass					| % 37
-    r8 \clef treble d,8*7/11[_\( gis e b' gis e d gis e b' gis]\) \clef bass			| % 38
-    r8 \clef treble cis,8*7/11[_\( a' e cis' a e cis a' e cis' a]\) \clef bass			| % 39
-    r8 \clef treble cis,8*3/5[_\( a' e cis' a]\) \clef bass r8 \clef treble cis,8*3/5[_\(
+    r8*8/12 g[_\( des' bes f' des]\) r ges,[_\( c aes es' c]\)					| % 17
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 18
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 19
+    r g,[_\( des' bes f' des bes g des' bes f' des]\)						| % 20
+    r ges,![_\( c aes f' c aes ges c aes es' c]\)						| % 21
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 22
+    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 23
+    r g,[_\( des' bes f' des bes g des' bes f' des]\)						| % 24
+    r g,[_\( des' bes f' des]\) r g,![_\( des' bes e c]\)					| % 25
+    r aes[_\( f' c aes' f c aes f' c aes' f]\)							| % 26
+    r aes,[_\( f' c aes' f c aes f' c aes' f]\)							| % 27
+    r bes,[_\( e c g' e c bes e c g' e]\)							| % 28
+    r aes,[_\( f' c aes' f c aes f' c aes' f]\)							| % 29
+    r bes,[_\( e c g' e c bes e c g' e]\)							| % 30
+    r a,[_\( f' c a' f c a f' c a' f]\)								| % 31
+    r a,[_\( f' c a' f]\) r a,[_\( f' c a' f]\)							| % 32
+    r a,[_\( e' c a' e c a e' c a' e]\)								| % 33
+    r gis,[_\( e' b gis' e]\) d,2\rest								| % 34
+    r8*8/12 \clef treble c'[_\( a' e c' a e c a' e c' a]\)					| % 35
+    b\rest d,[_\( gis e b' gis e d gis e b' gis]\)						| % 36
+    r c,[_\( a' e c' a e c a' e c' a]\) \clef bass						| % 37
+    r \clef treble d,[_\( gis e b' gis e d gis e b' gis]\) \clef bass				| % 38
+    r \clef treble cis,[_\( a' e cis' a e cis a' e cis' a]\) \clef bass				| % 39
+    r \clef treble cis,[_\( a' e cis' a]\) \clef bass r \clef treble cis,[_\(
 		a' e cis' a]\) \clef bass							| % 40
-    r8 \clef treble des,!8*7/11[_\( aes' f des' aes f \clef bass des aes f des' aes]\)		| % 41
-    r8 ges8*7/11[_\( es' c aes' es c ges es' c aes' es]\)					| % 42
-    r8 f,8*7/11[_\( des' aes aes' des, aes f des' aes aes' des,]\)				| % 43
-    r8 f,8*7/11[_\( des' aes aes' des, aes f des' aes aes' des,]\)				| % 44
-    r8 des,8*3/5[_\( bes' g f' bes,]\) r2							| % 45
-    r8 des,8*3/5[_\( c' aes ges'! c,]\) r2							| % 46
-    \stemDown r8 des,8*7/11[^\( aes' \clef treble f' des bes' aes f' des bes' aes f		| % 47
-    des8*2/3 bes aes f \clef bass des aes f des' aes f' des aes]\)				| % 48
-    \stemUp r8 g8*7/11[_\( des' bes f' des bes g des' bes f' des]\)				| % 49
-    r8 ges,!8*7/11[_\( c aes f' c aes ges c aes es' c]\)					| % 50
-    r8 f,8*7/11[_\( des' ces aes' des, ces f, des' ces aes' des,]\)				| % 51
-    d,8\rest f8*6/10[_\( des' ces aes' des, ces f, des' ces aes' \change Staff="up"
-		\stemDown des,8]\)								| % 52
-    \change Staff="down" \stemUp r8 des,8*7/11[_\( bes' ges ges' bes, ges des bes' ges ges'
+    r \clef treble des,![_\( aes' f des' aes f \clef bass des aes f des' aes]\)			| % 41
+    r ges[_\( es' c aes' es c ges es' c aes' es]\)						| % 42
+    r f,[_\( des' aes aes' des, aes f des' aes aes' des,]\)					| % 43
+    r f,[_\( des' aes aes' des, aes f des' aes aes' des,]\)					| % 44
+    r des,[_\( bes' g f' bes,]\) r2								| % 45
+    r8*8/12 des,[_\( c' aes ges'! c,]\) r2							| % 46
+    \stemDown r8*8/12 des,[^\( aes' \clef treble f' des bes' aes f' des bes' aes f		| % 47
+    des bes aes f \clef bass des aes f des' aes f' des aes]\)					| % 48
+    \stemUp r g[_\( des' bes f' des bes g des' bes f' des]\)					| % 49
+    r ges,![_\( c aes f' c aes ges c aes es' c]\)						| % 50
+    r f,[_\( des' ces aes' des, ces f, des' ces aes' des,]\)					| % 51
+    d,\rest f[_\( des' ces aes' des, ces f, des' ces aes' \change Staff="up"
+		\stemDown des,]\)								| % 52
+    \change Staff="down" \stemUp r des,[_\( bes' ges ges' bes, ges des bes' ges ges'
 		bes,]\)										| % 53
-    \change Staff="down" \stemUp r8 des,8*7/11[_\( bes' ges ges' bes, ges des bes' ges ges'
+    \change Staff="down" \stemUp r des,[_\( bes' ges ges' bes, ges des bes' ges ges'
 		bes,]\)										| % 54
-    d,8\rest des8*7/11[_\( beses' fes fes' beses, fes des beses' fes fes' beses,]\)		| % 55
+    d,\rest des[_\( beses' fes fes' beses, fes des beses' fes fes' beses,]\)			| % 55
     s1												| % 56
-    r8 f8*7/11[_\( des' aes f' des aes f des' aes f' des]\)					| % 57
-    r8 f,8*3/5[_\( des' aes f' des]\) r8 f,8*3/5[_\( des' aes f' des]\)				| % 58
+    r8*8/12 f[_\( des' aes f' des aes f des' aes f' des]\)					| % 57
+    r f,[_\( des' aes f' des]\) r f,[_\( des' aes f' des]\)					| % 58
     s1												| % 59
     s												| % 60
     s												| % 61
