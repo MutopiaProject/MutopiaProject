@@ -1,0 +1,3 @@
+\lyricmode {
+Dun -- que_a -- ma -- te re -- li -- quie_un mar di pian -- to Non da -- ran que -- sti lu -- mi_al no -- bil se -- no D'un fred -- do sas -- so Ec -- co l'af -- flit -- to Glau -- co Fa ris -- so -- nar Co -- rin -- na'il mar e'l Cie -- lo Far ris -- so -- nar Co -- rin -- na_il mar e'l cie -- lo Di -- ca -- no_i ven -- ti_ogn' hor di -- ca la ter -- ra Di -- ca -- no_i ven -- ti_ogn' hor di -- ca la ter -- ra Di -- ca -- no_i ven -- ti_ogn' hor di -- ca la ter -- ra Di -- ca -- no_i ven -- ti_ogn' hor di -- ca la ter -- ra Ce -- da -- no_al pian -- to_i det -- ti a -- ma -- to se -- no A te dia pa -- ce_il ciel pa -- ce_a te Glau -- co Pre -- ga_ho -- no -- ra -- ta Tom -- ba_e sa -- cra ter -- ra.
+}

@@ -1,0 +1,3 @@
+\lyricmode {
+O chio -- me d'or ne -- ve gen -- til ne -- ve gen -- til del se -- no O gi -- gli de la man ch'in -- vi -- do_il cie -- lo Ne ra -- pì quan -- do chiu -- se_in cie -- ca tom -- ba Chi vi nas -- con -- de? quan -- do chiu -- se_in cie -- ca tom -- ba chi vi nas -- con -- de oi -- me oi -- me Nas -- con -- de ah mu -- se ah mu -- se ah mu -- se qui sgor -- ga -- te_il pian -- to ah mu -- se qui sgor -- ga -- te_il pian -- to ah mu -- se qui sgor -- ga -- te_il pian -- to ah mu -- se qui qui sgor -- ga -- te_il pian -- to.
+}

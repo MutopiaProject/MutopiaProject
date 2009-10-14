@@ -1,0 +1,3 @@
+\lyricmode {
+In -- ce -- ne -- ri -- te spo -- glie a -- va -- ra Tom -- ba Fat -- ta del mio bel sol ter -- re -- no Cie -- lo Ahi las -- so Ahi las -- so i' ve -- gno_ad in -- chi -- nar -- vi_in ter -- ra Con voi chiu -- s'è'l mio cor' a marm in se -- no Con voi chiu -- s'è'l mio cor' a marm in se -- no E not -- te_e gior -- no vi -- ve_in pian -- t'in fo -- co In duo -- lo_in i -- ra_il tor -- men -- ta -- to Glau -- co In duo -- lo_in i -- ra_il tor -- men -- ta -- to Glau -- co In duo -- lo_in i -- ra_il tor -- men -- ta -- to Glau -- co.
+}
