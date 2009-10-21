@@ -43,7 +43,7 @@
   source = "A. Vanderghinste & K. Vanderauwera, Brussel, 1891. (V&V.161)"
 %  meter = "Moderato"
   style = "Classical"
- footer = "Mutopia-2009/10/15-1718"
+ footer = "Mutopia-2009/10/21-1718"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -123,7 +123,7 @@ dis2.\)-> \breathe dis4\p\( e dis |
 % 35
 cis2\> dis4\!^\markup {\italic { rall.} } cis-- ais-- b-- |
 % 36
-cis1.\)\fermata
+cis1.\)\fermata  \bar"|."
 }
 
 alt = \relative c' {
@@ -197,7 +197,7 @@ fis2.\)-> \breathe fis4\p\( fis fis |
 % 35
 fis2\> fis4\! dis-- dis-- dis-- |
 % 36
-fis1.\)\fermata
+fis1.\)\fermata  \bar"|."
 }  
 
 tenor = \relative c' {
@@ -271,7 +271,8 @@ b2.\)-> \breathe b4\p\( b b |
 % 35
 ais2\> ais4\! fis-- fis-- fis-- |
 % 36
-fis1.\)\fermata}  
+fis1.\)\fermata  \bar"|."
+}  
 
 bas = \relative c {
 \clef bass
@@ -344,7 +345,8 @@ b,2.->\) \breathe b4\p\( b b |
 % 35
 fis'2\> fis4\! b,-- b-- b-- |
 % 36
-<cis fis,>1.\)\fermata}
+<cis fis,>1.\)\fermata  \bar"|."
+}
 
 tekst = \lyricmode {
 Here Ha -- le -- wijn sanc een lie -- de -- kijn;
@@ -416,7 +418,7 @@ cis4(\p ais b |
 << { cis'4( b ais gis4 fis gis\< ais b cis \! dis2.->)} \\ { fis,2. dis2.  fis2. fis2.} >>
 % 34+ .. 36
 << {dis'4( e dis cis2\> dis4\! cis-- ais-- b-- <cis fis,>1.)\fermata} \\ 
-{fis,2.\p fis2. dis cis1.} >> |
+{fis,2.\p fis2. dis cis1.} >>  \bar"|."
 }
 
 organDown = \relative c {
@@ -496,7 +498,7 @@ r2 r4 |
 << {s2 s4^\markup {\italic { rall.} } s2 s4 } \\
 {<ais' fis>2. <fis b,>2.} >> |
 % 36
-<fis cis fis,>1.)\fermata |
+<fis cis fis,>1.)\fermata  \bar"|."
 }
 
 \score {
