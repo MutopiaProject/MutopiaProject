@@ -1,64 +1,21 @@
 % -*- mode: LilyPond-mode ; coding: utf-8 -*-
-%{ juin 2007, à partir du fichier de GG, PP a :
-- transcrit en version 2 10 16
-- passé la clef en fa mineur
-- simplifié l'écriture des notes et de la reprise
-- ajouté doigtés
-- mis en format paysage, plus pratique et habituel à l'orgue
-- assuré présentation sur une seule page hors header et tagline
-- précisé "à deux claviers et pédale"%}
-
-
-
-\version "2.10.16"
-\include "italiano.ly"
-
-\header{
-    title = \markup {\center-align { \small "Petit livre d'orgue" \medium "Ich ruf ' zu dir, Herr Jesu Christ." \small\medium "Je crie vers Toi, Seigneur Jésus." \medium\small "Unto Thee I cry, Lord Jesus." " "} }
-    subtitle = "à deux claviers et pédale"
-    piece = "" 
-    instrument = ""
-    composer = "Johann Sebastian Bach (1685-1750)"
-    copyright = "Creative Commons Attribution-ShareAlike 3.0"
-    source = "Bach-Gesellschaft Edition, OrgelWerke 1893"
-    opus = "BWV 639"
-    lastupdated = "2006-05-02"
-    enteredby = "Gérard Gréco,revu Pierre Pouillon"
-    maintainer = "Pierre Pouillon"
-    mutopiatitle = "Ich ruf' zu dir, Herr Jesu Christ"
-    mutopiacomposer = "BachJS"
-    mutopiainstrument = "Organ"
-    style="Baroque"
- footer = "Mutopia-2007/06/12-997"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
-}
+\version "2.12.0"
+\include "italiano.ly" 
 
 #(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 18)
-
-\paper {
-system-count = #3
-indent = 1\cm
-top-margin = 0\mm
-tagline = ##f
-}
+#(set-global-staff-size 16.1)
 
 a = \rtoe
 q = \lheel
 
+global = {  \key fa \minor   \time 4/4 }
 
-global = {
-  \key fa \minor
-  \time 4/4
-}
-
-choral =
-\relative do'' {
-  \global
+choral = \relative do'' {   \global
 \override Script #'script-priority = #1
 %1
 \repeat volta 2 {
-\partial 4 \once \override TextScript #'extra-offset = #'(-20 . 3) do4-5
+\partial 4
+ do4-5
 \once \override TextScript #'extra-offset = #'(-7 . 0)   lab4^\markup\tiny\italic{"Choral"}
  sib4 lab8. sol16 fa8.-1 sol16
 %2
@@ -95,10 +52,9 @@ do2.-4 \fermata reb4-5
 do sib lab-2 fa8.-1 sol16
 %14
 \partial 2. lab4-3 sol4 fa4 \fermata \bar "|."
-\pageBreak
 }
 
-alto = \relative do' {
+altop = \relative do' {
 \global
 \clef treble
 \override Fingering #'direction = #DOWN
@@ -142,11 +98,12 @@ sol,-5 mi'-2 fa  mib   fa,-5 reb'-2 mib reb   mib,-5 do'-1 reb-3 do   sib-5 fa'-
 }
 
 
-basse = \relative do, {
+basse = \relative do, { \pageBreak
   \global
-  \clef "bass"
+\clef "bass"
   \repeat volta 2 {
   \partial 4 \once \override TextScript #'extra-offset = #'(-4 . 0)  fa8_\a ^\markup\tiny\italic{"sempre staccato"} fa
+
 %1
     fa'^\a [ fa ] fa^\a [ mi!_\a ] fa^\a [ fa ] fa mib!^\a
 %2
@@ -181,27 +138,57 @@ re!_\a [ re_\a] mib^\a [mib^\a ] la,!_\a [ la] si_\a [si ]
   \partial 2. si_\a [ si_\a ] do^\a [ do^\a ] fa,4_\a
 }
 
+titre = "Ich ruf zu Dir, Herr Jesus Christ "
 
-\score{
-  \new PianoStaff
-  <<
-    \set PianoStaff.systemStartDelimiterHierarchy = #'(SystemStartBar (SystemStartBrace a b ))
-    \new Staff = "dessus" <<
-      \choral
-    >>
-    \new Staff = "basse" {
-      \clef "bass"
-      \alto
-    }
-    \new Staff = "pedale" {
+\header{
+    title = \markup {\center-column { """""""""""""" \small "Petit livre d'orgue" \medium "Ich ruf ' zu dir, Herr Jesu Christ." \small\medium "Je crie vers Toi, Seigneur Jésus." \medium\small "Unto Thee I cry, Lord Jesus." " "} }
+    subtitle = "à deux claviers et pédale"
+    source = "Bach-Gesellschaft Edition, OrgelWerke 1893"
+    lastupdated = "2006-05-02"
+    enteredby = "Gérard Gréco,revu Pierre Pouillon"
+    maintainer = "Pierre Pouillon"
+    mutopiatitle = "Ich ruf' zu dir, Herr Jesu Christ"
+    mutopiacomposer = "BachJS"
+    mutopiainstrument = "Organ"
+    style="Baroque"
+    composer = \markup\column {  "Johann Sebastian Bach (1685-1750)" "BWV 639" }
 
-      \clef "bass"
-      \basse
-    }
-  >>
-
+ mutopiaopus = "BWV 639"
+ mutopiacopyright = "Creative Commons Attribution-ShareAlike 3.0"
+ footer = "Mutopia-2009/11/01-997"
+ copyright = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
-\layout{  }
+
+
+
+\paper {%annotate-spacing = ##t
+ page-top-space = 0\mm
+head-separation = 0\mm
+between-system-space = 0.1\cm
+between-system-padding = #0
+system-count = #4
+tagline = ##f
+print-page-number = ##f
+print-first-page-number = ##f
+foot-separation = 0
+evenFooterMarkup = \markup { \bold \fontsize #-1 \titre }
+ragged-bottom = ##f
+ragged-last-bottom = ##f
+top-margin = 0.4\cm
+bottom-margin = 0.4\cm
+}
+
+
+\score{ \new StaffGroup \with { systemStartDelimiter = #'SystemStartBar  }
+<<  \new PianoStaff\with {  \override VerticalAlignment #'forced-distance = #8
+ }
+ <<
+    \new Staff = "dessus"   \choral
+    \new Staff {      \clef "bass"  \altop } >>
+    \new Staff {  \clef "bass"  \basse }
+  >>
+\header { breakbefore = ##t }
+\layout{  }}
 
 
 \score {
@@ -213,7 +200,7 @@ re!_\a [ re_\a] mib^\a [mib^\a ] la,!_\a [ la] si_\a [si ]
     }
     \new Staff {
       \set Staff.midiInstrument = "church organ"
-      \alto
+      \altop
     }
   \new Staff {
       \set Staff.midiInstrument = "vibraphone"
@@ -240,4 +227,3 @@ s4
 }
   \midi{  }
 }
-
