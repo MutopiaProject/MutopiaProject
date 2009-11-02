@@ -38,7 +38,7 @@
   copyright = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Kris Van Bruwaene"
   maintainerEmail = "krvbr@yahoo.co.uk"
-  lastupdated = "2009-10-24"
+  lastupdated = "2009-10-29"
   title =   "6 Oude Nederlandsche Liederen"
   subtitle = "3. Het wasser te nacht also soete nacht"
   poet = "16de eeuw"
@@ -46,7 +46,7 @@
   source = "A. Vanderghinste & K. Vanderauwera, Brussel, 1891. (V&V.161)"
 %  meter = "Andante"
   style = "Classical"
- footer = "Mutopia-2009/11/01-1719"
+ footer = "Mutopia-2009/11/02-1719"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -124,7 +124,7 @@ bes8[(^\markup {\italic {rall.}} a g]) f e4 f |
 }
 % 32
 \alternative {
-    {g2\> f4\!\) }
+    {\partial 4*3 g2\> f4\!\) }
     {g2 f2\)\fermata\bar"|."}
 }
 }
@@ -195,7 +195,7 @@ d4.^\markup {\italic {rall.}} d8 c4 f8[( c]) |
 % 32
 }
 \alternative {
-{d4( e) c }
+{\partial 4*3 d4( e) c }
 {d4( e) c2\fermata\bar"|." }
 }
 }
@@ -269,7 +269,7 @@ g8[(^\markup {\italic {rall.}} a]) bes4 c8[( bes]) a4 |
 % 32
 }
 \alternative {
-{ g4( c8[ bes]) a4 }
+{ \partial 4*3 g4( c8[ bes]) a4 }
 { g4( c8[ bes]) a2\fermata\bar"|." }
 }
 }
@@ -339,7 +339,7 @@ g'4.^\markup {\italic {rall.}} g8 c,4 d8[( a]) |
 }
 % 32
 \alternative {
-{ bes4( c) f, }
+{ \partial 4*3 bes4( c) f, }
 { bes4( c) f,2\fermata\bar"|." }
 }
 }
@@ -348,7 +348,7 @@ refrein = \lyricmode {
 Het was -- ser te nacht, al -- so soe -- te nacht,
 dat al -- le die vo -- ghe -- len son -- ghen;
 die fie -- re nach -- te -- gael hief op een liet
-met sijn -- der wil -- der ton -- ghen.
+met sijn -- der wil -- der 
 }
 
 strofeEenA = \lyricmode {
@@ -383,6 +383,7 @@ sopLyricsEen = \lyricmode {
     \strofeEenC 
     \strofeEenD 
     \refrein
+    ton -- ghen.
 }
 
 sopLyricsTwee = \lyricmode {
@@ -391,6 +392,8 @@ sopLyricsTwee = \lyricmode {
     \strofeTweeC 
     \strofeTweeD 
     \refrein
+    \skip 4 \skip 4
+    ton -- ghen.
 }
 
 
@@ -399,6 +402,7 @@ altLyricsEen = \lyricmode {
     \strofeEenC 
     \strofeEenD 
     \refrein
+    ton -- ghen.
 }
 
 altLyricsTwee = \lyricmode {
@@ -406,6 +410,8 @@ altLyricsTwee = \lyricmode {
     \strofeTweeC 
     \strofeTweeD 
     \refrein
+    \skip 4 \skip 4
+    ton -- ghen.
 }
 
 tenLyricsEen = \lyricmode {
@@ -413,6 +419,7 @@ tenLyricsEen = \lyricmode {
     \strofeEenB 
     \strofeEenD 
     \refrein
+    ton -- ghen.
 }
 
 tenLyricsTwee = \lyricmode {
@@ -420,6 +427,8 @@ tenLyricsTwee = \lyricmode {
     \strofeTweeB 
     \strofeTweeD 
     \refrein
+    \skip 4 \skip 4
+    ton -- ghen.
 }
 
 basLyricsEen = \lyricmode {
@@ -427,6 +436,7 @@ basLyricsEen = \lyricmode {
     \strofeEenC 
     \strofeEenD 
     \refrein
+    ton -- ghen.
 }
 
 basLyricsTwee = \lyricmode {
@@ -434,6 +444,8 @@ basLyricsTwee = \lyricmode {
     \strofeTweeC 
     \strofeTweeD 
     \refrein
+    \skip 4 \skip 4
+    ton -- ghen.
 }
 
 organUp = \relative c'' {
@@ -501,7 +513,7 @@ f4-"tempo."\p g4 g8 f d4 d8 s} >>
 {e4 d2^\markup {\italic {rall.}} e4 f8[ c] } >> 
 }
 \alternative {
-        { << {g'2 f4) } \\ {d4\> e c\!} >> }
+        { << {\partial 4*3 g'2 f4) } \\ {\partial 4*3 d4\> e c\!} >> }
         { << { g'2 f2\fermata\bar"|." } \\ {d4 e c2} >> }
     }
 }
@@ -577,7 +589,7 @@ g4 c, f) a,( e'8[ g f e] d4)
 {c,4( g'4. g8 c,4 d8[ a] } >>
 }
 \alternative {
-        {<< {g'4 c8[ bes] a4 } \\ {bes,4 c f,) } >> }
+        {<< {\partial 4*3 g'4 c8[ bes] a4 } \\ {\partial 4*3 bes,4 c f,) } >> }
         {<< {g'4 c8[ bes] a2\fermata\bar"|." } \\ {bes,4 c f,2\fermata } >> }
     }
 }
