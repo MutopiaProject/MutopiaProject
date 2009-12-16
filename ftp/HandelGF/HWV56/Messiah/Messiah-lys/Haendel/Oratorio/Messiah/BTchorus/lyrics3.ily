@@ -1,0 +1,30 @@
+Let us break their bonds a -- sun -- der,
+let us, let us break their bonds a -- sun -- der,
+let us, let us break,
+let us break their bonds a -- sun -- der,
+let us break their bonds a -- sun -- der,
+and cast a -- way __ their yokes from us,
+and cast a -- way their yokes from us,
+and cast a -- way their yokes from us,
+and cast a -- way,
+and cast a -- way their yokes from us,
+and cast a -- way their yokes from us.
+Let us break their bonds,
+let us break their bonds a -- sun -- der,
+let us break their bonds,
+let us break their bonds a -- sun -- der,
+let us break, let us break their bonds,
+let us break their bonds a -- sun -- der,
+and cast a -- way, __
+and cast a -- way, __
+and cast a -- way their yokes from us,
+and cast a -- way their yokes from us.
+Let us break their bonds a -- sun -- der,
+and cast and cast a -- way,
+and cast a -- way their yokes from us,
+and cast a -- way,
+and cast a -- way their yokes,
+let us break their bonds a -- sun -- der,
+their bonds a -- sun -- der,
+and cast a -- way,
+and cast a -- way their yokes from us.

@@ -1,0 +1,7 @@
+\piecePartSpecs #(let ((breaks #{ s1*13 \break #}))
+                  `((violino1 #:music ,breaks)
+                    (violino2 #:music ,breaks)
+                    (viola #:music ,breaks)
+                    (bassi #:music ,breaks)
+                    (keyboard)
+                    (vocal-keyboard #:score-template "score-keyboard")))

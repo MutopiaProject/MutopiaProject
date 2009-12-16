@@ -1,0 +1,32 @@
+sol4 sol, r2 |
+r4 r8 sol, sol8. fa16 mib8. re16 |
+re4 sol8. do16 re4 re, |
+sol,1 ~|
+sol,4. sol,8 sol8. fa16 mib8. re16 |
+re2 ~ re4. re8 |
+re'8. do'16 sib8. la16 la4. re8 |
+sol4 sol8. la16 sib4. la8 |
+sol4. sol8 fa2 ~|
+fa1 ~|
+fa4. fa8 fa8. mi16 re8. do16 |
+do2 ~ do4. do8 |
+re4 do8. sib,16 la,4 r8 la |
+sib4 la8. sol16 la4 r8 sib |
+do'4 do fa r8 fad |
+sol8. fa16 mib8. re16 re4 r8 sol |
+mib4 do sol \clef "treble" sib' |
+%{%}<< sib'2 \\ { r4 r8 re' } >> mib'8. sol'16 fa'8 \clef "bass" sib, |
+mib8. sol16 fa8. lab16 sol8 sib4 sib,8 |
+mib8. sol16 fa8. lab16 sol8 sib4 lab8 |
+sol4 re8. mib16 sib,4 \clef "treble" re'' |
+sib' la'8. sol'16 << re''2 \\ { r4 r8 re' } >> |
+sol'8. sib'16 la'8 \clef "bass" re sol8. sib16 la8. do'16 |
+sib8 re'4 re8 sol8. sib16 la8. do'16 |
+sib8 re'4 do'8 sib4 fad8 sol |
+re1 ~|
+re4 r8 sib, do4 do8 do |
+re4 sol, re re, |
+sol,1 ~|
+sol,4. sol,8 sol8. fa16 mib8. re16 |
+re4 sol, re re, |
+sol,1 |

@@ -1,0 +1,2 @@
+\piecePartSpecs #`(;;(vocal)
+                   (bassi))

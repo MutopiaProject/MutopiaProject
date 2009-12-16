@@ -1,0 +1,18 @@
+Thou art gone up on high, thou art gone up on high,
+thou hast led cap -- ti -- vi -- ty cap -- tive,
+thou hast led cap -- ti -- vi -- ty cap -- tive,
+and re -- cei -- ved gifts __ for __ men,
+yea e -- ven for __ thine en -- e -- mies,
+yea e -- ven for thine en -- e -- mies,
+that the Lord God might dwell a -- mong them,
+that the Lord God might dwell __ a -- mong them,
+might __ dwell a -- mong them.
+Thou art gone up on high, thou art gone up on high,
+thou hast led cap -- ti -- vi -- ty cap -- tive,
+thou hast led cap -- ti -- vi -- ty cap -- tive,
+and re -- cei -- ved, and re -- cei -- ved gifts for men,
+and re -- cei -- ved gifts for thine en -- e -- mies,
+that the Lord God might dwell a -- mong them,
+and might dwell __ a -- mong them,
+that the Lord God __ might dwell __ a -- mong them,
+that the Lord, the Lord God might dwell __ a -- mong them.

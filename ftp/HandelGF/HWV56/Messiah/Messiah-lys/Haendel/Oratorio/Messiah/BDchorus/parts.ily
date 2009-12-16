@@ -1,0 +1,7 @@
+\piecePartSpecs #`((violino1)
+                   (violino2)
+                   (viola)
+                   (vocal #:indent 0)
+                   (vocal-keyboard #:indent 0)
+                   (keyboard #:indent 0)
+                   (bassi))
