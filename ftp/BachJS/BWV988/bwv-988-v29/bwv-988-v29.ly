@@ -1,4 +1,4 @@
-\version "2.11.44"
+\version "2.13.9"
 
 \paper {
  page-top-space = #0.0
@@ -29,8 +29,8 @@
  maintainer = "Hajo Dezelski"
  maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/05/18-1421"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2009/12/21-1421"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 
@@ -129,12 +129,12 @@ sopranoOne = \relative a'' {
 		\times 2/3 { g16 [ fis16 e16 ] }
 		\times 2/3 { dis16 [ c16 b16 ] }
 		\times 2/3 { a16 [g16 fis16 ] } | % 23
-		e16 [ e'16 ] r16 e16 r16 c16 r16 c16 r16 g16 r16 g16 | % 24
-		\times 2/3 { r16 c16 [ d16 ] }
-		\times 2/3 { dis16 [ e16 eis16 ] }
-		\times 2/3 { r16 g16 [ a16 ] }
-		\times 2/3 { b16 a16 g16 ] }
-		\times 2/3 { c,,16 [ d16 e16 ]  }
+		e16 [ e'16 ] r16 e16 r16 c16 r16 c16 r16 g16 r16 g16 \clef "bass" | % 24
+		\times 2/3 { r16 e,16 [ f16 ] }
+		\times 2/3 { fis16 [ g16 gis16 ] }
+		\times 2/3 { r16 b16 [ c16 ] }
+		\times 2/3 { d16 c16 b16 ] } \clef "treble"
+		\times 2/3 { c16 [ d16 e16 ]  }
 		\times 2/3 { fis16[  g16 a16 ] } \clef "bass" | % 25		
 		\times 2/3 { r16 d,,16 [ es16 ] }
 		\times 2/3 { e16 [ f16 fis16 ] }
@@ -168,11 +168,11 @@ sopranoOne = \relative a'' {
 		\times 2/3 { r16 r16 d16 }
 		\times 2/3 { c16 [ a16 ] r16 } | % 30
 		\times 2/3 { r16 a16 [ b16 ] }
-		\times 2/3 { c16 [ d16 e16 ] }
+		\times 2/3 { c16 [ d16 e16 ~] }
 		\times 2/3 { e16 [ d16 c16 ] }
-		\times 2/3 { b16 [ a16 g16 ] }
+		\times 2/3 { b16 [ a16 g16 ~] }
 		\times 2/3 { g16 [ fis16 g16 ] }
-		\times 2/3 { a16 [ b16 c16 ] }| % 32
+		\times 2/3 { a16 [ b16 c16 ] }| % 31
 		\grace c8 b r16 g'16 r16 g16 r16 g16 r4 
 
  } %end repeated section
@@ -318,22 +318,22 @@ bassOne = \relative g {
 		c,,8 [ c'8 ] \clef "treble" dis'16 [ r16 dis16 ] r16 g,16 [ r16 dis'16 ] r16 \clef "bass" | % 22
 		a,8 [ dis,8 e8 a8 b8 b,8 ] | % 23
 		r8 \clef "treble" dis''16 r16 b16 [ r16 b16 ] r16 fis16 [ r16 fis16 ] r16 \clef "bass" | % 24
-		c8 [ b8 a8 gis8 a8 c,8 ] | % 25
-		b8 [ a'8 g8 fis8 g8 b,8 ] \clef "treble" | % 26
-		\times 2/3 { e'16 [ fis'16 ] r16 }
-		\times 2/3 { r16 r16 g16  }
+		c,8 [ b'8 a8 gis8 a8 c,8 ] | % 25
+		b8 [ a'8 g8 fis8 g8 b,8 ] | % 26
+		\times 2/3 { a16 [ a'16 ] r16 }
+		\times 2/3 { r16 r16 b16  }
+		\times 2/3 { a16 [ c16 ] r16 }
+		\times 2/3 { r16 r16 g16 }
 		\times 2/3 { fis16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 e16 }
-		\times 2/3 { dis16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 c16 } | % 27
-		\times 2/3 { b16 [ b'16 ] r16 }
-		\times 2/3 { r16 r16 c16  }
+		\times 2/3 { r16 r16 e16 } | % 27
+		\times 2/3 { d16 [ d'16 ] r16 }
+		\times 2/3 { r16 r16 e16  }
+		\times 2/3 { d16 [ fis16 ] r16 }
+		\times 2/3 { r16 r16 c16 }
 		\times 2/3 { b16 [ d16 ] r16 }
+		\times 2/3 { r16 r16 a16 } | % 28
+		\times 2/3 { g16 [ g'16 ] r16 } \clef "treble"
 		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 fis16 } | % 28
-		\times 2/3 { e16 [ d'16 ] r16 }
-		\times 2/3 { r16 r16 a,16 }
 		\times 2/3 { g16 [ b16 ] r16 }
 		\times 2/3 { r16 r16 f16 }
 		\times 2/3 { e16 [ g16 ] r16 }
@@ -392,11 +392,11 @@ bassTwo = \relative a {
 		s4 \clef "treble" 
 		<fis a>16 r16 <fis a>16 r16 g,16 r16 <fis' a>16 r16 \clef "bass" | % 22
 		s1*3/4 | % 23
-		e8 \clef "treble" 
-		<fis a>16 r16 <dis fis>16 r16 <dis fis>16 r16 <a d>16 r16 <a d>16 r16 \clef "bass" | % 24
+		e,8 \clef "treble" 
+		<fis' a>16 r16 <dis fis>16 r16 <dis fis>16 r16 <a dis>16 r16 <a dis>16 r16 \clef "bass" | % 24
 	 	s1*3/4 | % 25
 		s1*3/4 | % 26
-		s1*3/4 \clef "treble" | % 27
+		s1*3/4 | % 27
 		s1*3/4 | % 28
 		s1*3/4 | % 29
 		s1*3/4 | % 30
