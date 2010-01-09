@@ -9,8 +9,8 @@ global={\key a \minor }
 %spacing issues
 	ragged-last-bottom = ##f
 %	system-count = #40
-%	page-count = #12
-	%	indent = .75\cm
+%	page-count = #9
+%	indent = .75\cm
 }
 \score {
 \new GrandStaff

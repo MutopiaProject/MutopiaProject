@@ -1,4 +1,4 @@
-\version "2.13.8"
+\version "2.13.9"
 mystaffsize = #18
 %default settings page,font,layout
 \include "style.ily"
@@ -33,8 +33,32 @@ mPageBreak = \break
 mLineBreak= \break
 mSBreak = {}
 
-global={
+globalA={
+	\key c \dorian 
+	\set Score.skipBars = ##t
+}
+globalB={
 	\key b \major 
+	\set Score.skipBars = ##t 
+}
+globalC={
+	\key g \dorian 
+	\set Score.skipBars = ##t
+}
+globalD={
+	\key d \minor 
+	\set Score.skipBars = ##t
+}
+globalE={
+	\key a \minor 
+	\set Score.skipBars = ##t
+}
+globalF={
+	\key e \minor 
+	\set Score.skipBars = ##t
+}
+globalG={
+	\key c \dorian 
 	\set Score.skipBars = ##t
 }
 
@@ -43,7 +67,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./A_ad_pedes/layout.ily"}
-			\new Voice {\global \clef treble \include "./A_ad_pedes/n_v1.ily"}
+			\new Voice {\globalA \clef treble \include "./A_ad_pedes/n_v1.ily"}
 	>>
 	\header { title = "No.1 - Ad pedes" composer = ##f }
 	}
@@ -51,7 +75,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./B_ad_genua/layout.ily"}
-			\new Voice {\global \clef treble \include "./B_ad_genua/n_v1.ily"}
+			\new Voice {\globalB \clef treble \include "./B_ad_genua/n_v1.ily"}
 	>>
 	\header { title = "No.2 - Ad Genua"  composer = ##f }
 	}
@@ -59,7 +83,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./C_ad_manus/layout.ily"}
-			\new Voice {\global \clef treble \include "./C_ad_manus/n_v1.ily"}
+			\new Voice {\globalC \clef treble \include "./C_ad_manus/n_v1.ily"}
 	>>
 	\header { title = "No.3 - Ad Manus"  composer = ##f }
 	}
@@ -67,7 +91,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./D_ad_latus/layout.ily"}
-			\new Voice {\global \clef treble \include "./D_ad_latus/n_v1.ily"}
+			\new Voice {\globalD \clef treble \include "./D_ad_latus/n_v1.ily"}
 	>>
 	\header { title = "No.4 - Ad Latus"  composer = ##f }
 	}
@@ -75,7 +99,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./E_ad_pectus/layout.ily"}
-			\new Voice {\global \clef treble \include "./E_ad_pectus/n_v1.ily"}
+			\new Voice {\globalE \clef treble \include "./E_ad_pectus/n_v1.ily"}
 	>>
 	\header { title = "No.5 - Ad Pectus" composer = ##f }
 	}
@@ -86,7 +110,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./G_ad_faciem/layout.ily"}
-			\new Voice {\global \clef treble \include "./G_ad_faciem/n_v1.ily"}
+			\new Voice {\globalG \clef treble \include "./G_ad_faciem/n_v1.ily"}
 	>>
 	\header { title = "No.7 - Ad Faciem"  composer = ##f }
 	}
@@ -98,7 +122,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./A_ad_pedes/layout.ily"}
-			\new Voice {\global \clef treble \include "./A_ad_pedes/n_v2.ily"}
+			\new Voice {\globalA \clef treble \include "./A_ad_pedes/n_v2.ily"}
 	>>
 	\header { title = "No.1 - Ad pedes" composer = ##f }
 	}
@@ -106,7 +130,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./B_ad_genua/layout.ily"}
-			\new Voice {\global \clef treble \include "./B_ad_genua/n_v2.ily"}
+			\new Voice {\globalB \clef treble \include "./B_ad_genua/n_v2.ily"}
 	>>
 	\header { title = "No.2 - Ad Genua"  composer = ##f }
 	}
@@ -114,7 +138,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./C_ad_manus/layout.ily"}
-			\new Voice {\global \clef treble \include "./C_ad_manus/n_v2.ily"}
+			\new Voice {\globalC \clef treble \include "./C_ad_manus/n_v2.ily"}
 	>>
 	\header { title = "No.3 - Ad Manus"  composer = ##f }
 	}
@@ -122,7 +146,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./D_ad_latus/layout.ily"}
-			\new Voice {\global \clef treble \include "./D_ad_latus/n_v2.ily"}
+			\new Voice {\globalD \clef treble \include "./D_ad_latus/n_v2.ily"}
 	>>
 	\header { title = "No.4 - Ad Latus"  composer = ##f }
 	}
@@ -130,7 +154,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./E_ad_pectus/layout.ily"}
-			\new Voice {\global \clef treble \include "./E_ad_pectus/n_v2.ily"}
+			\new Voice {\globalE \clef treble \include "./E_ad_pectus/n_v2.ily"}
 	>>
 	\header { title = "No.5 - Ad Pectus" composer = ##f }
 	}
@@ -141,7 +165,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./G_ad_faciem/layout.ily"}
-			\new Voice {\global \clef treble \include "./G_ad_faciem/n_v2.ily"}
+			\new Voice {\globalG \clef treble \include "./G_ad_faciem/n_v2.ily"}
 	>>
 	\header { title = "No.7 - Ad Faciem"  composer = ##f }
 	}
@@ -152,7 +176,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./A_ad_pedes/layout.ily"}
-			\new Voice {\global \clef bass \include "./A_ad_pedes/n_vn.ily"}
+			\new Voice {\globalA \clef bass \include "./A_ad_pedes/n_vn.ily"}
 	>>
 	\header { title = "No.1 - Ad pedes" composer = ##f }
 	}
@@ -160,7 +184,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./B_ad_genua/layout.ily"}
-			\new Voice {\global \clef bass \include "./B_ad_genua/n_vn.ily"}
+			\new Voice {\globalB \clef bass \include "./B_ad_genua/n_vn.ily"}
 	>>
 	\header { title = "No.2 - Ad Genua"  composer = ##f }
 	}
@@ -168,7 +192,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./C_ad_manus/layout.ily"}
-			\new Voice {\global \clef bass \include "./C_ad_manus/n_vn.ily"}
+			\new Voice {\globalC \clef bass \include "./C_ad_manus/n_vn.ily"}
 	>>
 	\header { title = "No.3 - Ad Manus"  composer = ##f }
 	}
@@ -176,7 +200,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./D_ad_latus/layout.ily"}
-			\new Voice {\global \clef bass \include "./D_ad_latus/n_vn.ily"}
+			\new Voice {\globalD \clef bass \include "./D_ad_latus/n_vn.ily"}
 	>>
 	\header { title = "No.4 - Ad Latus"  composer = ##f }
 	}
@@ -184,7 +208,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./E_ad_pectus/layout.ily"}
-			\new Voice {\global \clef bass \include "./E_ad_pectus/n_vn.ily"}
+			\new Voice {\globalE \clef bass \include "./E_ad_pectus/n_vn.ily"}
 	>>
 	\header { title = "No.5 - Ad Pectus" composer = ##f }
 	}
@@ -195,7 +219,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./G_ad_faciem/layout.ily"}
-			\new Voice {\global \clef bass \include "./G_ad_faciem/n_vn.ily"}
+			\new Voice {\globalG \clef bass \include "./G_ad_faciem/n_vn.ily"}
 	>>
 	\header { title = "No.7 - Ad Faciem"  composer = ##f }
 	}
@@ -209,7 +233,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./F_ad_cor/layout.ily"}
-			\new Voice {\global \clef treble \include "./F_ad_cor/n_vg1.ily"}
+			\new Voice {\globalF \clef treble \include "./F_ad_cor/n_vg1.ily"}
 	>>
 	\header { title = "No.6 - Ad Cor"  composer = ##f }
 	}
@@ -219,7 +243,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./F_ad_cor/layout.ily"}
-			\new Voice {\global \clef alto \include "./F_ad_cor/n_vg2.ily"}
+			\new Voice {\globalF \clef alto \include "./F_ad_cor/n_vg2.ily"}
 	>>
 	\header { title = "No.6 - Ad Cor"  composer = ##f }
 	}
@@ -229,7 +253,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./F_ad_cor/layout.ily"}
-			\new Voice {\global \clef alto \include "./F_ad_cor/n_vg3.ily"}
+			\new Voice {\globalF \clef alto \include "./F_ad_cor/n_vg3.ily"}
 	>>
 	\header { title = "No.6 - Ad Cor"  composer = ##f }
 	}
@@ -239,7 +263,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./F_ad_cor/layout.ily"}
-			\new Voice {\global \clef bass \include "./F_ad_cor/n_vg4.ily"}
+			\new Voice {\globalF \clef bass \include "./F_ad_cor/n_vg4.ily"}
 	>>
 	\header { title = "No.6 - Ad Cor"  composer = ##f }
 	}
@@ -249,7 +273,7 @@ global={
  \score { \new Staff 
 	<< 
 			\new Voice {\include "./F_ad_cor/layout.ily"}
-			\new Voice {\global \clef bass \include "./F_ad_cor/n_vg5.ily"}
+			\new Voice {\globalF \clef bass \include "./F_ad_cor/n_vg5.ily"}
 	>>
 	\header { title = "No.6 - Ad Cor"  composer = ##f }
 	}
@@ -262,7 +286,7 @@ global={
 	<< 
 			\new Voice {\include "./A_ad_pedes/layout.ily"}
 			\new Voice {\include "./A_ad_pedes/n_fig.ily" }
-			\new Voice {\global \clef bass \include "./A_ad_pedes/n_bc.ily"}
+			\new Voice {\globalA \clef bass \include "./A_ad_pedes/n_bc.ily"}
 	>>
 	\header { title = "No.1 - Ad pedes" composer = ##f }
 	}
@@ -271,7 +295,7 @@ global={
 	<< 
 			\new Voice {\include "./B_ad_genua/layout.ily"}
 			\new Voice {\include "./B_ad_genua/n_fig.ily" }
-			\new Voice {\global \clef bass \include "./B_ad_genua/n_bc.ily"}
+			\new Voice {\globalB \clef bass \include "./B_ad_genua/n_bc.ily"}
 	>>
 	\header { title = "No.2 - Ad Genua" composer = ##f }
 	}
@@ -280,7 +304,7 @@ global={
 	<< 
 			\new Voice {\include "./C_ad_manus/layout.ily"}
 			\new Voice {\include "./C_ad_manus/n_fig.ily" }
-			\new Voice {\global \clef bass \include "./C_ad_manus/n_bc.ily"}
+			\new Voice {\globalC \clef bass \include "./C_ad_manus/n_bc.ily"}
 	>>
 	\header { title = "No.3 - Ad Manus" composer = ##f }
 	}
@@ -289,7 +313,7 @@ global={
 	<< 
 			\new Voice {\include "./D_ad_latus/layout.ily"}
 			\new Voice {\include "./D_ad_latus/n_fig.ily" }
-			\new Voice {\global \clef bass \include "./D_ad_latus/n_bc.ily"}
+			\new Voice {\globalD \clef bass \include "./D_ad_latus/n_bc.ily"}
 	>>
 	\header { title = "No.4 - Ad Latus" composer = ##f }
 	}
@@ -298,7 +322,7 @@ global={
 	<< 
 			\new Voice {\include "./E_ad_pectus/layout.ily"}
 			\new Voice {\include "./E_ad_pectus/n_fig.ily" }
-			\new Voice {\global \clef bass \include "./E_ad_pectus/n_bc.ily"}
+			\new Voice {\globalE \clef bass \include "./E_ad_pectus/n_bc.ily"}
 	>>
 	\header { title = "No.5 - Ad Pectus" composer = ##f }
 	}
@@ -307,7 +331,7 @@ global={
 	<< 
 			\new Voice {\include "./F_ad_cor/layout.ily"}
 			\new Voice {\include "./F_ad_cor/n_fig.ily" }
-			\new Voice {\global \clef bass \include "./F_ad_cor/n_bc.ily"}
+			\new Voice {\globalF \clef bass \include "./F_ad_cor/n_bc.ily"}
 	>>
 	\header { title = "No.6 - Ad Cor"  composer = ##f }
 	}
@@ -316,7 +340,7 @@ global={
 	<< 
 			\new Voice {\include "./G_ad_faciem/layout.ily"}
 			\new Voice {\include "./G_ad_faciem/n_fig.ily" }
-			\new Voice {\global \clef bass \include "./G_ad_faciem/n_bc.ily"}
+			\new Voice {\globalG \clef bass \include "./G_ad_faciem/n_bc.ily"}
 	>>
 	\header { title = "No.7 - Ad Faciem" composer = ##f }
 	}

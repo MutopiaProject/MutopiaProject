@@ -39,13 +39,13 @@ global={\key e \minor }
 		\new Staff 
 		<< 
 			%\set Staff.shortInstrumentName =#"Vg"
-			\addIncipitClefII #"tenor" #"Viola" #"da gamba 4"
+			\addIncipitClefII #"bass" #"Viola" #"da gamba 4"
 			\new Voice {\global \clef bass \include "./F_ad_cor/n_vg4.ily"}
 		>>
 		\new Staff 
 		<< 
 			%\set Staff.shortInstrumentName =#"Vg"
-			\addIncipitClefII #"tenor" #"Viola" #"da gamba 5"
+			\addIncipitClefII #"bass" #"Viola" #"da gamba 5"
 			\new Voice {\global \clef bass \include "./F_ad_cor/n_vg5.ily"}
 		>>
 	>>

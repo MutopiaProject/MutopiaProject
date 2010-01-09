@@ -24,13 +24,13 @@
 %titling
 \markup \override #'(baseline-skip . 4) \column {
   \fill-line { \column { \vspace #10
-                         \fill-line { \abs-fontsize #26  \smallCaps "D i e t e r i c h   B u x t e h u d e" }
+                         \fill-line { \abs-fontsize #26  \caps "D i e t e r i c h   B u x t e h u d e" }
                          \fill-line { " " \postscript #"-60 0 moveto 120 0 rlineto stroke" " " }
                         }}
   \fill-line { \column { \vspace #8
                          \fill-line { \abs-fontsize #18  ""  }
                          \vspace #1.5
-                         \fill-line { \abs-fontsize #26 \bold \smallCaps "Membra Jesu nostri patientis sanctissima"  }
+                         \fill-line { \abs-fontsize #26 \bold \caps "Membra Jesu nostri patientis sanctissima"  }
                          \vspace #1.5
                          \fill-line { \abs-fontsize #18 \italic "C.C.A.T.B 2 Violini 5 Viola da gamba"  }
                          \vspace #2

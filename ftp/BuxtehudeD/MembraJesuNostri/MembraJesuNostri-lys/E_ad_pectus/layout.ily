@@ -2,7 +2,7 @@
 \markUpBegin \mark \markup { \bold "Sonata" } 
 s1*12
 \bar "||"
-\mPageBreak 
+\mLineBreak 
 
 %Tutti
 \newSpacingSection
