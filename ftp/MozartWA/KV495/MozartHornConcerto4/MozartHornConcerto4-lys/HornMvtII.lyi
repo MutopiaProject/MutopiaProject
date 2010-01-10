@@ -1,0 +1,108 @@
+\version "2.13.10"
+
+hornMvtII = \relative c''
+{
+  \transposition ees
+  \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+  d2.\pConEspressione^\solo |
+  \times 2/3 {e8( fis g)} g4~( g16 fis e d) |
+  \times 2/3 {c8( d e)} e4~( e16 d c b) |
+  d8( c b4) r |
+  g2. |
+  c |
+  b8( d) d4. fis16( d) |
+  g8( d) d4. fis16( d) |
+  g8(\< d b g) e'(\> c) |
+  b4(\! a) r |
+
+  %N
+  g2.~\f^\tutti |
+  g~ |
+  g |
+  d'4 d r |
+  R2.*6 |
+
+  %O
+  d4.\p^\solo e16( d) d8 d |
+  d( cis) cis2 |
+  d8( c) c4. b16( a) |
+  \times 2/3 {g8( a b} a4) r |
+  d4. e16( d) d8 d |
+  g8( e cis2) |
+  d8 c4( d16 c b8 a) |
+  \times 2/3 {g8( a b)} a4 r |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  b4\< cis d |
+  dis e f |
+  fis4.\> g8( e cis) |
+  d4\! r e |
+  fis4. g8( e cis) |
+  \crescHairpin
+  d4 r8 dis-.\< e-. f-. |
+  fis4.\> g8( e cis) |
+  d2.~\! |
+  d2( dis4) |
+  \times 2/3 {e8( fis g)} g4~( g16 fis e d) |
+  \times 2/3 {c8( d e)} e4~( e16 d c b) |
+  d8( c b4) r |
+  g2. |
+  c |
+  b8( d) d4. fis16( d) |
+  g8(\< fis e d cis d) |
+  d16( b e c) b4\> a |
+  g\! r r |
+  s1*0^\tutti R2.*3 |
+
+  %P
+  r4
+    \once \override Staff.DynamicText #'self-alignment-X = #LEFT
+    b\pEspress^\solo dis |
+  e2( b4) |
+  c8( b) b4 r |
+  fis'2( b,4) |
+  c8( b) b4 r |
+  g'2( b,4) |
+  d8( c) r c c c |
+  c4. d16( e) d8( c) |
+  d( c) b4 r |
+  g2( f'4) |
+  f8( e) r e e( d) |
+  \crescTextCresc
+  d(\< cis) cis4.( g'8) |
+  g8( fis)\! r fis fis( e) |
+  e( dis4 c8 b a) |
+  g4 g'4. fis16( e) |
+  d8( cis) cis4 cis |
+  d4 r8 g(\> e cis) |
+  d4\! r8 g(\> ees cis) |
+  d2.~(\! |
+  d2 dis4) |
+  \times 2/3 {e8( fis g)} g4~( g16 fis e d) |
+  \times 2/3 {c8( d e)} e4~( e16 d c b) |
+  d8( c b4) r |
+  g2. |
+  c |
+  b8( d) d4. fis16( d) |
+  \crescTextCresc
+  g8(\< fis e d cis d) |
+  \crescHairpin
+  d16(\< b e\> c)
+    \dimTextDim
+    b4\> a |
+
+  %Q
+  g\p r r |
+  R2. |
+  r4 r8 c16( e g8) g |
+  g( fis e d e fis) |
+  fis( g) d4 r |
+  R2. |
+  r4 r8 c16( e g8) g |
+  g( fis e d e fis) |
+  g4 r8 d-. e-. fis-. |
+  g4 r8 d( ees16 e f fis) |
+  g4 g, g |
+  g r r |
+}
+

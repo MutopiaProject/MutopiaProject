@@ -1,0 +1,21 @@
+\version "2.13.10"
+
+\include "defs.lyi"
+
+pianoMvtIRight = \relative c''
+{
+}
+
+pianoMvtILeft = \relative c
+{
+  \clef bass
+}
+
+pianoMvtIDynamics =
+{
+}
+
+pianoMvtIPedals =
+{
+}
+

@@ -1,0 +1,89 @@
+\version "2.13.10"
+
+oboeOneMvtIIITutti = \relative c''
+{
+  ees2.\f |
+  d4. f |
+  g a |
+  bes8 bes bes bes4 r8 |
+  ees,2. |
+  d4. f |
+  ees4 g8 \grace g16 f8 ees f |
+  ees ees ees ees r r |
+}
+
+oboeOneMvtIII = \relative c''
+{
+  \key ees \major
+  r8 |
+  R2.*8 |
+  \oboeOneMvtIIITutti
+
+  %R
+  R2.*19 |
+  f8\f g f ees f ees |
+  d ees d c d c |
+  bes4 r8 r4. |
+  R2.*7 |
+
+  %S
+  r4. d8\f r r |
+  ees r r f r r |
+  g4 r8 r4. |
+  R2.*3 |
+  r4. d8\f r r |
+  ees r r f r r |
+  g4 r8 r4. |
+  R2.*13 |
+
+  %T
+  R2.*8 |
+  \oboeOneMvtIIITutti
+
+  %U
+  R2.*37 |
+
+  %V
+  R2.*8 |
+  \oboeOneMvtIIITutti
+
+  %W
+  R2.*14 |
+  bes8\f c bes aes bes aes |
+  g aes g f g f |
+  ees4 r8 r4. |
+  R2.*7 |
+
+  %X
+  r4. f8\f r r |
+  g r r d r r |
+  ees r r r4. |
+  R2.*5 |
+  r4. f8\f r r |
+  g r r d r r |
+  ees r r r4. |
+  R2.*6 |
+  aes4.~\f aes8\fermata r r |
+
+  %Y
+  R2.*6 |
+  r4. r4 bes,8\f |
+  ees ees ees ees ees ees |
+  d( f bes) bes( aes f) |
+  e( g c) c( bes g) |
+  aes-. c-. e,-. f-. aes-. c,-. |
+  d-. f-. a,-. bes-. f'-. aes-. |
+  \repeat unfold 3 {g2. | f |}
+  c' |
+
+  %Z
+  R2.*8 |
+  d,2.(\p |
+  ees4) r8 r4. |
+  d2.( |
+  ees4) r8 r4. |
+  aes2.( |
+  g8) ees\f ees ees ees ees |
+  ees4 r8 g4 r8 |
+  ees4 r8 r4. |
+}

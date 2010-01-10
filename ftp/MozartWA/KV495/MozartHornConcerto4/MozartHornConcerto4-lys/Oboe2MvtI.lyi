@@ -1,0 +1,147 @@
+\version "2.13.10"
+
+oboeTwoMvtI = \relative c''
+{
+  \key ees \major
+  g1\f |
+  bes |
+  g'2~ g4. ees8 |
+  d4.( ees16 f) ees8 ees4 ees8 |
+  ees1 |
+  g |
+  c,2 d4. f8 |
+  ees4 d bes ees~ |
+  ees4 d c2 |
+  bes8 d d d r ees ees ees |
+  r d d d r ees ees ees |
+  bes bes' bes, bes bes4 r |
+
+  %A
+  R1*2 |
+  bes1~\p |
+  bes4 g'( f d) |
+  ees1 |
+  f |
+  g |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  aes2 aes,\< |
+  g4 d' ees f |
+  g b, c d |
+  ees1~\f |
+  ees |
+  g2 ees4 d |
+  ees2 bes |
+  aes ges' |
+  g8 ees ees4 r8 ees ees4 |
+  r8 ees ees r ees r ees r |
+  ees r bes4 ees, g |
+  ees' ees8. ees16 d4 d8. d16 |
+
+  %B
+  ees4 r r2 |
+  R1*7 |
+  r8 bes\f bes bes g g bes bes |
+  ees bes bes bes ees ees bes bes |
+  g4 bes g r |
+
+  %C |
+  R1*11 |
+  r8 bes bes bes g g bes bes |
+  ees bes bes bes ees ees bes bes |
+  g4 r r2 |
+  R1*7 |
+  r8 f'\f f f f4 r |
+
+  %D
+  R1*20 |
+  r2 bes,\p |
+  << c {s4 s\<} >> a2 |
+
+  %E
+  bes4\f d2. |
+  ees1 |
+  d |
+  bes2 a4. c8 |
+  bes4 a f bes |
+  bes2 des |
+  d4 bes8. bes16 a4 a8. a16 |
+  bes4 r r2 |
+  R1*2 |
+
+  %F
+  R1*15 |
+
+  %G
+  R1*18 |
+
+  r2 d4.(\p\startTrillSpan c16\stopTrillSpan d) |
+  ees4 r8 g f f ees ees |
+
+  %H
+  d4 r r2 |
+  R1 |
+  r2 r4 bes\p |
+  c4.( d8) ees4 ees |
+  cis8( d) d2\< d4~ |
+  d d8.\f d16 d4 d |
+
+  %I
+  d r r2 |
+  R1*2 |
+  g4(\p f ees d) |
+  ees r r2 |
+  R1*2 |
+  r2 r8 ees(\f f g) |
+  aes1 |
+  g |
+  c,2 d4. f8 |
+  ees4 d bes r |
+  R1*3 |
+  r8 bes\f bes bes g g bes bes |
+  ees bes bes bes ees ees bes bes |
+
+  %K
+  g4 r r2 |
+  R1*5 |
+  r8 bes'\f bes bes f bes d, f |
+  bes,4 r r2 |
+  R1*2 |
+  r8 g'\p g g g( f) f( ees) |
+  R1*7 |
+
+  %L
+  R1*2 |
+  bes1~ |
+  bes4 g'( f d) |
+  ees4 r r2 |
+  R1*9
+  r2 ees\p |
+  d1\< |
+  ees4\f ees ees2~ |
+  ees1~ |
+  ees8( g) ees-. ees-. ees2~ |
+  ees1~ |
+  ees8( g) ees-. ees-. ees2~ |
+  ees1~ |
+  ees1~ |
+  ees1~ |
+  ees2 r\fermata |
+  g1\f |
+  aes |
+  g |
+  c,2 d4. f8 |
+  ees2 des |
+  c ges' |
+  g4 ees8. ees16 d4 d8. d16 |
+
+  %M
+  ees4 r r2 |
+  R1*7 |
+  r8 bes\f bes bes g g bes bes |
+  ees bes bes bes ees ees bes bes |
+  g4 r g bes |
+  g r g bes |
+  g r bes r |
+  g2 r |
+}

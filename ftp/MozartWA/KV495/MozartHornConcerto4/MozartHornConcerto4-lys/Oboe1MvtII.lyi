@@ -1,0 +1,44 @@
+\version "2.13.10"
+
+oboeOneMvtII = \relative c''
+{
+  \key bes \major
+  R2.*10 |
+
+  %N
+  f2. |
+  \times 2/3 {g8( a bes)} bes4~ bes16( a g f) |
+  \times 2/3 {ees8( f g)} g4~ g16( f ees d) |
+  f8( ees d4) r |
+  R2.*2 |
+  f2. |
+  ees2 d4 |
+  c' bes a |
+  bes bes, r |
+
+  %O
+  R2.*25 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  r4 f'\< f |
+  c8.\f d16 ees4( d) |
+  c8. d16 ees4( d8) bes'~ |
+  bes( g f d ees c) |
+
+  %P
+  bes4 r r |
+  R2.*4 |
+  bes'2.~\p |
+  bes |
+  a~ |
+  a4( bes) r |
+  R2.*19 |
+
+  %Q
+  R2.*7 |
+  a2.( |
+  bes4) f( ees |
+  d f ees) |
+  d bes'\pp bes |
+  bes r r |
+}

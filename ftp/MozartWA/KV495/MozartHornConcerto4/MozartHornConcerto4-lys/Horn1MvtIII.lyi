@@ -1,0 +1,85 @@
+\version "2.13.10"
+
+hornOneMvtIIITutti = \relative c''
+{
+  c2.\f |
+  d8 d d d d d |
+  c4. c |
+  d8 d d d r r |
+  c2. |
+  d8 d d d d d |
+  e4 e8 d c d |
+  c c c c r r |
+}
+
+hornOneMvtIII = \relative c''
+{
+  \transposition ees
+  r8 |
+  R2.*8 |
+  \hornOneMvtIIITutti
+
+  %R
+  R2.*19 |
+  d2.\f |
+  d4. d |
+  g,4 r8 r4. |
+  R2.*7 |
+
+  %S
+  r8 g\f g g g g |
+  g g g g g g |
+  g4 r8 r4. |
+  R2.*3 |
+  r8 g\f g g g g |
+  g g g g g g |
+  g4 r8 r4. |
+  R2.*13 |
+
+  %T
+  R2.*8 |
+  \hornOneMvtIIITutti
+
+  %U
+  R2.*37 |
+
+  %V
+  R2.*8 |
+  \hornOneMvtIIITutti
+
+  %W
+  R2.*14 |
+  r8 g\f g g g g |
+  g g g g g g |
+  c4 r8 r4. |
+  R2.*7 |
+
+  %X
+  r8 g\f g g g g |
+  g g g g g g |
+  g8 r r r4. |
+  R2.*5 |
+  r8 g\f g g g g |
+  g g g g g g |
+  g8 r r r4. |
+  R2.*6 |
+  g4.~\f g8\fermata r r |
+
+  %Y
+  R2.*6 |
+  r4. r8 r g\f |
+  c c c c c c |
+  g4 r8 r4. |
+  R2.*2 |
+  r4. r4 d'8 |
+  \repeat unfold 3 {e2. | d |}
+  d |
+
+  %Z
+  R2.*7 |
+  c2.~\p |
+  \repeat unfold 5 {c~ |}
+  c8 c\f c c c c |
+  c4 r8 g4 r8 |
+  g4 r8 r4. |
+}

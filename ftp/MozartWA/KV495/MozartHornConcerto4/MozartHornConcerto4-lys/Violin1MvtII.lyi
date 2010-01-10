@@ -1,0 +1,105 @@
+\version "2.13.10"
+
+\include "defs.lyi"
+
+violinOneMvtII = \relative c'
+{
+  \key bes \major
+  d2.\p |
+  \times 2/3 {ees8( f g)} g4~ g16( f ees d) |
+  \times 2/3 {c8( d ees)} ees4~ ees16( d c bes) |
+  d8( c) bes4 r |
+  r4 bes2 |
+  r4 ees2 |
+  d2( c4) |
+  d2( c4) |
+  d4. f8 g( ees') |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  d4( c8\< d ees e) |
+
+  %N
+  f2.\f |
+  \times 2/3 {g8( a bes)} bes4~ bes16( a g f) |
+  \times 2/3 {ees8( f g)} g4~ g16( f ees d) |
+  f8( ees d4) r |
+  bes2. |
+  ees |
+  d8( f bes d c bes) |
+  a4.( bes16 c) bes( f ees d) |
+  d( c ees g) bes,4 \grace d16 c8. bes16 |
+  bes4 bes, r |
+
+  %O
+  r8 f'\p f f f f |
+  r e e e e e |
+  r ees ees ees ees'( a,) |
+  bes( d) c f( e f) |
+  r f, f f f f |
+  r e e e e e |
+  r ees ees ees'( d c) |
+  bes( d) c f( e f) |
+  r d, r e r f |
+  r fis r g r aes |
+  a4 r g( |
+  f) r f |
+  f r e8( g) |
+  f4 r f |
+  f r e8( g) |
+  f( a, bes c d ees) |
+  f4 d2 |
+  \times 2/3 {ees8( f g)} g4~ g16( f ees d) |
+  \times 2/3 {c8( d ees)} ees4~ ees16( d c bes) |
+  d8( c) bes4 r |
+  r4 bes2 |
+  r4 ees2 |
+  d2( c4) |
+  d4 r8 f'( e f) |
+  f( ees) d r c r |
+  bes( d f\< bes d bes) |
+  ees4~\f ees16( c a c) bes( f d' bes) |
+  ees4~ ees16( c a c) bes( d) f,( fis) |
+  g( bes) c,( ees) d( f bes, d) c( ees a, c) |
+
+  %P
+  bes4 r r |
+  r8 d,\p d d d d |
+  \repeat unfold 4 {r d d d d d |}
+  r ees ees ees ees ees |
+  r <ees c> <ees c> <ees c> <ees c> <ees c> |
+  r c( d) d d d |
+  r aes' aes aes aes aes |
+  r g g g b b |
+  r c c c bes bes |
+  r a a a cis cis |
+  r d d( ees d c) |
+  r bes bes bes bes bes |
+  r c, c c c c |
+  c4( d bes) |
+  a8( c des4 bes) |
+  a4 bes8( c d ees) |
+  d2. |
+  \times 2/3 {ees8( f g)} g4~ g16( f ees d) |
+  \times 2/3 {c8( d ees)} ees4~ ees16( d c bes) |
+  d8( c bes4) r |
+  r4 bes2 |
+  r4 ees2 |
+  d2( c4) |
+  d4 r8 f'( e f) |
+  f( ees) d r c r |
+
+  %Q
+  bes4 r r |
+  r8 f'16 g aes8 f c d |
+  << {s8 s\turn} {ees8. f16} >> g4 r |
+  r8 f,( f') f f f |
+  f8.( d16) bes4 r |
+  r8 f'16 g aes8 f c d |
+  << {s8 s\turn} {ees8. f16} >> g4 r |
+  r8 f,( f') f f f |
+  f f,4 f f8~ |
+  f f4 f f8~ |
+  f4 d\pp d |
+  d r r |
+}
+

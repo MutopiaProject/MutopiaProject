@@ -1,0 +1,35 @@
+\version "2.13.10"
+
+hornOneMvtII = \relative c''
+{
+  \transposition ees
+  R2.*10 |
+
+  %N
+  g2.~\f |
+  g~ |
+  g |
+  d'4 d r |
+  R2.*3 |
+  d2 d4 |
+  e4 d d |
+  d r r |
+
+  %O
+  R2.*26 |
+  d2.\f |
+  d2 d8 g~ |
+  g e d4 d |
+
+  %P
+  d r r |
+  R2.*27 |
+
+  %Q
+  g,8\p g g g g g |
+  \repeat unfold 7 {g g g g g g |}
+  g4 r r |
+  R2. |
+  r4 g\pp g |
+  g r r |
+}

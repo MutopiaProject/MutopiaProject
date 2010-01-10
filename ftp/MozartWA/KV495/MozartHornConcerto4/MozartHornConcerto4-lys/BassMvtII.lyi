@@ -1,0 +1,99 @@
+\version "2.13.10"
+
+\include "defs.lyi"
+
+bassMvtII = \relative c
+{
+  \clef bass
+  \key bes \major
+  bes4\p bes bes |
+  \repeat unfold 2 {r bes' bes, |}
+  f' bes,8 bes' f d |
+  bes4 d( ees) |
+  r c( f) |
+  bes,( d ees) |
+  d( bes ees) |
+  d( bes ees) |
+  f( f,) r |
+
+  %N
+  bes\f bes bes |
+  bes bes bes |
+  bes bes bes |
+  f' bes,8 bes' f d |
+  bes4 d( ees) |
+  r c( f) |
+  bes, r bes' |
+  c( f, bes) |
+  ees, f f, |
+  bes r r |
+
+  %O
+  f'\p r r |
+  f r r |
+  f r r |
+  f f, r |
+  f' r r |
+  f r r |
+  f r r |
+  f f, r |
+  bes( g a |
+  c bes b) |
+  c r cis( |
+  d) r b( |
+  c) r cis( |
+  d) r b( |
+  c) r c |
+  f4.( ees8 d c) |
+  bes4 bes bes |
+  r bes' bes, |
+  r bes' bes, |
+  f' bes,8 bes' f d |
+  bes4 d( ees) |
+  r ges( f) |
+  bes,( d ees) |
+  d r r |
+  bes'8 ees, f r f, r |
+  bes4 r r |
+  c'\f f, bes |
+  c f, bes |
+  ees, f f, |
+
+  %P
+  bes r r |
+  g'\p r r |
+  fis r r |
+  d r r |
+  g r r |
+  g r r |
+  c, r r |
+  f r r |
+  bes, r r |
+  d2. |
+  ees2( des4) |
+  c2( e4) |
+  f2( ees4) |
+  d2( fis4) |
+  g2. |
+  c, |
+  f~ |
+  f~ |
+  f8 ees d c bes a |
+  bes4 bes bes |
+  r bes' bes, |
+  r bes' bes, |
+  f' bes,8 bes' f d |
+  bes4 d( ees) |
+  r ges( f) |
+  bes,( d ees) |
+  d r r |
+  bes'8 ees, f r f, r |
+
+  %Q
+  \repeat unfold 8 {bes2.~ |}
+  bes4 r f'( |
+  bes) r f( |
+  bes,) bes\pp bes |
+  bes r r |
+}
+

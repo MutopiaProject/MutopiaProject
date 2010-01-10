@@ -1,0 +1,109 @@
+\version "2.13.10"
+
+\include "defs.lyi"
+
+violaMvtII = \relative c'
+{
+  \clef alto
+  \key bes \major
+  bes2.~\p |
+  bes~ |
+  bes |
+  f4 f r |
+  r f( ees) |
+  r g( a) |
+  bes f2~ |
+  f2.~ |
+  f4 bes4.( g'8) |
+  f4( f,) r |
+
+  %N
+  <d' f>2.\f |
+  \times 2/3 {<ees g>8( <f a> <g bes>)} <g bes>4~ <g bes>16( <f a> <ees g> <d f>) |
+  \times 2/3 {<c ees>8( <d f> <ees g>)} <ees g>4~ <ees g>16( <d f> <c ees> <bes d>) |
+  <d f>8( <c ees> <bes d>4) r |
+  r f'( ees) |
+  r bes( c) |
+  d f2~ |
+  f4 f2 |
+  ees4 f a, |
+  bes bes r |
+
+  %O
+  r8 f\p f f f f |
+  r g g g g g |
+  r a a a a( c) |
+  d( bes) f'4 r |
+  r8 f, f f f f |
+  r g g g g g |
+  r a a a( bes ees) |
+  d( bes) f'4 r |
+  r8 f, r g r c, |
+  r a' r bes r d |
+  c4 r e( |
+  f) r b,( |
+  c) r cis,( |
+  d) r b'( |
+  c) r c~ |
+  c8 f,4 f f8 |
+  f4 bes2~ |
+  bes2.~ |
+  bes |
+  f4 f r |
+  r f( ees) |
+  r ees( f) |
+  f2.~ |
+  f4 r r |
+  f'8( g) f r ees r |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  d <bes f'>4\< <bes f'> <bes f'>8 |
+  c4\f f, bes |
+  c f, bes |
+  ees f f, |
+
+  %P
+  bes4 r r |
+  r8 g\p g g g g |
+  r a a a a a |
+  r fis fis fis fis fis |
+  r g g g g g |
+  r g g g g g |
+  r g g g g g |
+  r f f f f f |
+  r f f f f f |
+  r bes bes bes bes bes |
+  r bes bes bes f f |
+  r g g g c c |
+  r c c c g g |
+  r a a a d d |
+  r d d d d d |
+  r g, g g g g |
+  f2.~ |
+  f~ |
+  f2~ f8( a) |
+  bes2.~ |
+  bes~ |
+  bes |
+  f4 f r |
+  r f( ees) |
+  r ees( f) |
+  f2.~ |
+  f4 r r |
+  f'8( g) f r ees r |
+
+  %Q
+  d4 r8 d16( ees f8) f |
+  f2. |
+  ees2~ ees8( d) |
+  c2.( |
+  bes4) r8 d16( ees f8) f |
+  f2. |
+  ees2~ ees8( d) |
+  c2.( |
+  bes4) f( c' |
+  bes f c') |
+  bes f\pp f |
+  f r r |
+}
+

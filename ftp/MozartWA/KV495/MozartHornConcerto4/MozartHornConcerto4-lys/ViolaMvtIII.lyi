@@ -1,0 +1,239 @@
+\version "2.13.10"
+
+\include "defs.lyi"
+
+violaMvtIII = \relative c'
+{
+  \clef alto
+  \key ees \major
+  r8 |
+  bes4\p r8 ees,4 r8 |
+  bes'4 r8 bes4 r8 |
+  bes4 r8 ees,4 r8 |
+  f4 r8 r4. |
+  bes4 r8 ees,4 r8 |
+  bes'4 r8 bes4 r8 |
+  bes4 r8 bes4 r8 |
+  bes8 bes bes bes r r |
+  g'4\f r8 bes4 r8 |
+  aes4 r8 f4 r8 |
+  g4 r8 <a ees>4 r8 |
+  <bes d,>4 r8 bes16 c bes aes g f |
+  g4 r8 bes4 r8 |
+  aes4 r8 f4 r8 |
+  ees4 g8 \grace bes16 aes8 g aes |
+  g bes, bes bes r r |
+
+  %R
+  r8 bes\p bes bes bes bes |
+  r bes bes bes bes bes |
+  r f f r f f |
+  r ees ees ees ees ees |
+  r bes' bes bes bes bes |
+  r bes bes bes bes bes |
+  r bes bes bes bes bes |
+  bes4 <ees g>8( <d f>4 <c ees>8) |
+  <b d>4( <c ees>8 <d f>4 <b g'>8) |
+  <c ees>4( <d f>8 <c ees>4 <bes d>8) |
+  <a c>4( <bes d>8 <c ees>4 <a f'>8) |
+  <bes d>4 r8 r4. |
+  bes2.( |
+  c4) r8 r4. |
+  d4. bes |
+  c4 f,8 f( g f) |
+  e4 e8 e4 e8 |
+  f4 f8 f( g f) |
+  e4 e8 e4 e8 |
+  f\f g' f ees f ees |
+  d ees d c d c |
+  bes4.~ bes~\p |
+  bes2.~ |
+  bes |
+  c |
+  bes~ |
+  bes~ |
+  bes |
+  f |
+
+  %S
+  r8 bes'\f bes aes bes aes |
+  g f ees d c bes |
+  ees4 r8 r4. |
+  ees,2.\p |
+  f4. g4( g'8) |
+  r f f r f f |
+  r bes\f bes aes bes aes |
+  g f ees d c bes |
+  ees4 r8 r4. |
+  r8 bes\p bes bes4.~ |
+  bes8 f f f r r |
+  f f f f r r |
+  f'( g e) f( g e) |
+  f f f ees ees ees |
+  d4 r8 r4. |
+  ees4. c4 a8 |
+  f'2. |
+  ees4. c4 f8 |
+  f4. d4 bes8 |
+  bes'4( aes8 g aes bes) |
+  bes,2.~ |
+  bes |
+
+  %T
+  g4 r8 ees4 r8 |
+  bes'4 r8 bes4 r8 |
+  bes4 r8 ees,4 r8 |
+  f4 r8 r4. |
+  bes4 r8 ees,4 r8 |
+  bes'4 r8 bes4 r8 |
+  bes4 r8 bes4 r8 |
+  bes8 bes bes bes r r |
+  g'4\f r8 bes4 r8 |
+  aes4 r8 f4 r8 |
+  g4 r8 <a ees,>4 r8 |
+  <bes d,>4 r8 bes16 c bes aes g f |
+  g4 r8 bes4 r8 |
+  aes4 r8 f4 r8 |
+  ees4 g8 \grace bes16 aes8 g aes |
+  g8 bes, bes bes r r |
+
+  %U
+  R2. |
+  r8 c\p c c c c |
+  r d d d d d |
+  r c c c c c |
+  c,4.( f |
+  ees b' |
+  c aes) |
+  g4 r8 r4. |
+  R2. |
+  r8 c c c c c |
+  r d d d d d |
+  r d( ees d c bes) |
+  r bes bes r ees, ees |
+  r ees ees r aes aes |
+  r aes( f) r ees( des) |
+  c4 <c' ees>8( <bes des>4 <aes c>8) |
+  <g bes>4( <aes c>8 <bes des>4 <g ees'>8) |
+  <aes c>4 <ees' f>8 <des f>( <c ees> <bes des>) |
+  <a c>4( <bes des>8 <c ees>4 <a f'>8) |
+  <bes d>4 <f' g>8 <ees g>( <d f> <c ees>) |
+  <b d>4( <c ees>8 <d f>4 <b g'>8) |
+  <c ees>4 r8 r4. |
+  r4 c8 c( bes c) |
+  d( c d) ees( d ees) |
+  c( bes c) d( c d) |
+  g,4 r8 r4. |
+  ees'4.( d4 c8) |
+  bes4 r8 r4. |
+  R2.*2 |
+  des4.( c4 bes8) |
+  aes4 r8 r4. |
+  R2.*2 |
+  ces4.( bes4 aes8) |
+  g4 r8 r4. |
+  R2. |
+
+  %V
+  bes4 r8 ees,4 r8 |
+  bes'4 r8 bes4 r8 |
+  bes4 r8 ees,4 r8 |
+  f4 r8 r4. |
+  bes4 r8 ees,4 r8 |
+  bes'4 r8 bes4 r8 |
+  bes4 r8 bes4 r8 |
+  bes8 bes bes bes r r |
+  g'4\f r8 bes4 r8 |
+  aes4 r8 f4 r8 |
+  g4 r8 <a ees>4 r8 |
+  <bes d,>4 r8 bes16 c bes aes g f |
+  g4 r8 bes4 r8 |
+  aes4 r8 f4 r8 |
+  ees4 g8 \grace bes16 aes8 g aes |
+  g bes, bes bes r r |
+
+  %W
+  r8 bes\p bes bes bes bes |
+  r bes bes bes bes bes |
+  r f f r f f |
+  r ees ees ees ees ees |
+  r ges ges ges ges ges |
+  ges2.~ |
+  ges8 ges ges ges ges ges |
+  ges2.~ |
+  ges8 ges ges ges ges ges |
+  ges4.( ees) |
+  f8 bes bes bes( c bes) |
+  a a a a( g a) |
+  bes bes bes bes( c bes) |
+  a a a a( g a) |
+  bes\f c bes aes bes aes |
+  g aes g f g f |
+  ees4.~ ees~\p |
+  ees2.~ |
+  ees |
+  f |
+  ees~ |
+  ees~ |
+  ees4( g8) bes4( ees8) |
+  f4( ees8 d ees f) |
+
+  %X
+  r8 ees\f ees d bes d |
+  ees bes ees f bes, f' |
+  g4 r8 r4. |
+  r8 g,\p g g g g |
+  r f f f f f |
+  r f f f f f |
+  ees4.( f) |
+  bes2. |
+  r8 ees\f ees d bes d |
+  ees bes ees f bes, f' |
+  g4 r8 r4. |
+  r8 g,\p g g g g |
+  r f f f f f |
+  r f f f f f |
+  ees4 r8 r4. |
+  aes4 r8 r4. |
+  bes4 r8 r4. |
+  bes4.~\f bes8\fermata r8 r |
+
+  %Y
+  bes4\p r8 ees,4 r8 |
+  bes'4 r8 bes4 r8 |
+  bes4 r8 ees,4 r8 |
+  f4 r8 r4. |
+  bes4 r8 ees,4 r8 |
+  bes'4 r8 bes 4 r8 |
+  bes4 g8 aes g aes |
+  g\f ees' ees ees ees ees |
+  d( f bes) bes( aes f) |
+  e( g c) c( bes g) |
+  aes-. c-. e,-. f-. aes-. c,-. |
+  d-. f-. a,-. bes-. d-. bes-. |
+  ees d ees c bes c |
+  aes g aes bes aes bes |
+  ees c ees c' bes c |
+  aes g aes bes aes bes |
+  ees d ees c bes c |
+  aes g aes bes a bes |
+  c2. |
+
+  %Z
+  a,2.(\p |
+  f') |
+  bes, |
+  ees,4.( aes |
+  bes c) |
+  ces8 r r bes r r |
+  bes r r bes r r |
+  \repeat unfold 3
+  {
+    ees,( g bes ees, g bes) |
+    f( aes bes f aes bes) |
+  }
+  bes\f bes bes bes bes bes |
+  bes4 r8 ees4 r8 |
+  ees,4 r8 r4. |
+}
+

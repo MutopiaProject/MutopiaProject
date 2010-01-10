@@ -1,0 +1,35 @@
+\version "2.13.10"
+
+hornTwoMvtII = \relative c'
+{
+  \transposition ees
+  R2.*10 |
+
+  %N
+  g2.~\f |
+  g~ |
+  g |
+  d''4 g, r |
+  R2.*3 |
+  d'2 g,4 |
+  g4 d' d |
+  g, r r |
+
+  %O
+  R2.*26 |
+  d'2.\f |
+  d2 g,4~ |
+  g d' d |
+
+  %P
+  g, r r |
+  R2.*27 |
+
+  %Q
+  g,8\p g g g g g |
+  \repeat unfold 7 {g g g g g g |}
+  g4 r r |
+  R2. |
+  r4 g\pp g |
+  g r r |
+}

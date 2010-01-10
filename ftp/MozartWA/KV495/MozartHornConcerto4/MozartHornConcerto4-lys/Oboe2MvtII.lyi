@@ -1,0 +1,44 @@
+\version "2.13.10"
+
+oboeTwoMvtII = \relative c''
+{
+  \key bes \major
+  R2.*10 |
+
+  %N
+  d2. |
+  \times 2/3 {ees8( f g)} g4~ g16( f ees d) |
+  \times 2/3 {c8( d ees)} ees4~ ees16( d c bes) |
+  d8( c bes4) r |
+  R2.*2 |
+  f2. |
+  a2 bes4 |
+  ees d ees |
+  d bes r |
+
+  %O
+  R2.*25 |
+  \override DynamicTextSpanner #'dash-period = #-1.0
+  \crescTextCresc
+  r4 f\< f |
+  a8.\f bes16 c4( bes) |
+  a8. bes16 c4( bes8) d |
+  ees4 d8( bes c a) |
+
+  %P
+  bes4 r r |
+  R2.*4 |
+  d2.\p |
+  ees~ |
+  ees~ |
+  ees4( d) r |
+  R2.*19 |
+
+  %Q
+  R2.*7 |
+  ees2.( |
+  d4) d( c |
+  bes d c) |
+  bes d\pp d |
+  d r r |
+}

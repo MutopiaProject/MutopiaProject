@@ -1,0 +1,41 @@
+\version "2.13.10"
+
+\include "defs.lyi"
+
+\paper
+{
+  ragged-last-bottom = ##f
+}
+
+\book
+{
+  \include "header.lyi"
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \mvtI \outlineMvtI >>
+    }
+  }
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \mvtII \outlineMvtII >>
+    }
+  }
+  \score
+  {
+    \new Staff
+    {
+      #(set-accidental-style 'modern)
+      \set Score.skipBars = ##t
+      << \mvtIII \outlineMvtIII >>
+    }
+  }
+}
+
