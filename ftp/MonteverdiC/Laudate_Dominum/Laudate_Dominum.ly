@@ -14,8 +14,8 @@
 	maintainerEmail = "bjoern.sothmann@rub.de"
 	maintainerWeb = "http://www.thp.uni-due.de/~bjoerns"
 
- footer = "Mutopia-2009/09/08-1711"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2010/01/31-1711"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2010. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 \include "deutsch.ly"
@@ -234,7 +234,7 @@ staffBasso = \new Staff  {
 		g1 c,2 d1. |
 		g,1 g'2 fis1 fis2 |
 		g h, c d1 d2 |
-		\set Score.measureLength = #(ly:make-moment 3 1)
+		\set Score.measureLength = #(ly:make-moment 6 1)
 		g,2 g' g g d1 e2 h1 c2 d1 |
 		\set Score.measureLength = #(ly:make-moment 3 1)
 		g,2 g' g g d1 |
@@ -305,6 +305,107 @@ staffBasso = \new Staff  {
 
 }
 
+BC = \new FiguredBass {
+	\figuremode {
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s1 <_+> s |
+		\time 3/2
+		\tempo 4=360
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve.*5 |
+		s1. s2 <_+>1 |
+		s\breve. |
+		\set Score.measureLength = #(ly:make-moment 6 1)
+		s\breve.*2 |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve.*4
+		\set Score.measureLength = #(ly:make-moment 12 1)
+		s\breve.*4 |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve.*6 |
+		\set Score.measureLength = #(ly:make-moment 6 1)
+		s\breve.*2 |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve.*7 |
+		s1. <_+>1 s2 |
+		\set Score.measureLength = #(ly:make-moment 6 1)
+		<_+>1 <_+>2 s1 <_+>2 s\breve. |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s1. s2 <_+>1 |
+		s\breve. |
+		\set Score.measureLength = #(ly:make-moment 9 1)
+		s\breve. s1. s2 <_+>1 s\breve. |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve <_+>1 |
+		s\breve. |
+		s1. <_+>1 s2 |
+		s\breve. |
+		s1. <_+>1 s2 |
+		s\breve.*7 |
+		s1. <_+>1 s2 |
+		\set Score.measureLength = #(ly:make-moment 6 1)
+		s\breve <_+>1 s\breve <_+>1 |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve <_+>1 |
+		s\breve. |
+		s\breve <_+>1 |
+		s\breve <_+>1 |
+		s\breve <_+>1 |
+		s\breve <_+>1 |
+		s\breve <_+>1 |
+		s\breve <_+>1 |
+		\set Score.measureLength = #(ly:make-moment 6 1)
+		s\breve <_+>1 s\breve <_+>1 |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve <_+>1 |
+		s\breve. |
+		s\breve <_+>1 |
+		s\breve <_+>1 |
+		s\breve <_+>1 |
+		s\breve. |
+		s\breve <_+>1 |
+		\set Score.measureLength = #(ly:make-moment 6 1)
+		s\breve <_+>1 s\breve <_+>1 |
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		s\breve.*3 |
+		\time 4/4
+		\tempo 4=160
+		\set Score.measureLength = #(ly:make-moment 4 2)
+		s\breve |
+		<_+>1 <_+>1 |
+		\set Score.measureLength = #(ly:make-moment 4 4)
+		<_+>2 s2 |
+		s1*2 |
+		\set Score.measureLength = #(ly:make-moment 4 2)
+		<_+>2 <_+>2 s1 |
+		\set Score.measureLength = #(ly:make-moment 4 4)
+		<_+>1 |
+		\time 3/2
+		\tempo 4=360
+		\set Score.measureLength = #(ly:make-moment 3 1)
+		<_+>\breve <_+>1 |
+		<_+>1 s1 <_+>1 |
+		s\breve.*3 |
+		\set Score.measureLength = #(ly:make-moment 6 1)
+		s\breve.*2 |
+		\time 4/4
+		\tempo 4=120
+		s1 |
+		\set Score.measureLength = #(ly:make-moment 4 2)
+		s\breve |
+		\set Score.measureLength = #(ly:make-moment 4 4)
+		s1 |
+		\time 3/2
+		\tempo 4=360
+		s\breve.*2 |
+		\time 4/4
+		\tempo 4=120
+		s1 |
+		\set Score.measureLength = #(ly:make-moment 9 1)
+		s1 s\breve s\breve s\longa |
+	\bar "|."
+	}
+}
 
 \score {
 	<<
@@ -312,6 +413,7 @@ staffBasso = \new Staff  {
 		\context Lyrics = "lmelodyCan" \lyricmode  { \lyricsto "melodyCan" \verse }
 		
 		\staffBasso
+		\BC
 	>>
 	
 	\midi {
