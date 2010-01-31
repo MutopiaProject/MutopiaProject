@@ -1,4 +1,4 @@
-\version "2.11.45"
+\version "2.13.10"
 
 \paper {
     page-top-space = #0.0
@@ -7,8 +7,6 @@
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 }
-
-% #(set-default-paper-size "a4")
 
 #(set-global-staff-size 19)
 
@@ -28,16 +26,18 @@
         maintainer = "Hajo Dezelski"
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/05/27-1426"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2010/01/31-1426"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2010. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 
 % The score definition
 
+voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
 
 melodyOne =  \relative a' {
-	s4 a4. a8 | % 1 
+	\voiceOne
+	a4. a8 | % 1 
 	e'4 e4. e8 | % 2
 	f4 d4. c8 | % 3
 	bes4 a g16 [( f e f ) ] | % 4
@@ -52,7 +52,7 @@ melodyOne =  \relative a' {
 	f8 s8  s2 | % 13 - Var 03
 	e8 r8 e8 r8 s4 | % 14
 	e8 r8  d8. [ f16 ] e8. [ cis16 ] | % 15
-	f8. [ g16 ] d4 ( cis8.)  [ d16 ] | % 16
+	d8. [ e16 ] d4 ( cis8.)  [ d16 ] | % 16
 	d8. [ e16 ] f8. [ g32 a ] bes8. [ f16 ] | % 17 
 	e8. [ bes'16 ] a8. [ g16 ] a8. [ fis16 ]  | % 18
 	g8. [ f16 ] e8. [ d32 cis ] d8. [ e16 ] | % 19
@@ -93,11 +93,9 @@ melodyOne =  \relative a' {
 	e,16 [ c, e g ] c [ g c e ] a, [ f' ( g a ) ] | % 54
 	d,16 [ bes, d f ] bes [ f bes d ] g, [ e' ( f g ) ] | % 55
 	cis,16 [ a cis e ] a [ e a cis ] e [ g, ( f e ) ] | % 56
-	\autoBeamOff
 	f8 s4 f8 g8 s8 | % 57 
 	e8 s4 e8 f8 s8 | % 58
 	d8 s4 d8 e8 s8 | % 59
-	\autoBeamOn
 	s4. a8 a16 [ ( g ) a (e) ] | % 60
 	f8 s8 d8 s8 s4 | % 61 
 	e8 s8 c8 s8 s4 | % 62
@@ -175,7 +173,7 @@ melodyOne =  \relative a' {
 	d4 fis,4. g8 | % 133 
 	e4 fis4. ( g16 [ a ] ) | % 134
 	d,4 e4. ( fis16 [ g ] ) | % 135
-    	fis8 [ e ] e4. a8 | % 136
+    fis8 [ e ] e4. a8 | % 136
 	fis4 b8 [ a g fis ] | %  137
 	e4 fis16 ( [ g a g ] fis 8 ) [ e ] | % 138
 	d4 e8 [ g16 fis ] e8 [ d ] | % 139
@@ -197,22 +195,23 @@ melodyOne =  \relative a' {
 	b16 [ gis'' d b ] gis [ b gis e ] b [ d cis b ] | % 155
 	a16 [ b cis d ] e [ cis a cis ] e [ g fis e ] | % 156
 	fis16 [ d a d ] fis [ d a' fis ] 
-	\stemDown d' [ a fis' d ] | % 157
+	d' [ a fis' d ] | % 157
 	a'16 [ e cis e ] a [ e cis' a ] e' [ cis fis cis ] | % 158
 	d16 [ fis d b ] fis [ b d, fis ] b, [ d cis b ] | % 159
-	cis16 [ e cis a ] \stemUp e [ a cis, e ] a, [ cis e g ] | % 160
+	cis16 [ e cis a ] 
+    e [ a cis, e ] a, [ cis e g ] | % 160
 	fis16 [ d a'' a ] a [ fis d a ] fis [ d a d ] | % 161
 	e16 [ cis a'' a ] a [ e cis a ] e [ cis a cis ] | % 162
 	d16 [ b a'' a ] a [ fis d b ] d [ gis b gis ] | % 163
 	a16 [ e a a ] a [ cis, e e ] e [ a, cis g ] | % 164
 	fis16 [ d a' a ] a [ fis d fis ] a [ d fis b,, ] | % 165
-	cis16 [ d a' a ] a [ e c e ] a [ cis e a,, ] | % 166
+	cis16 [ d a' a ] a [ e cis e ] a [ cis e a,, ] | % 166
 	b16 [ d a' a ] a [ d, b d ] gis [ b d e, ] | % 167
 	a,16 [ e' a a ] a [ e a cis ] e [ cis a g ] | % 168
-	s4 s16 a'16 [ a fis ] fis [ d d fis ]  | % 169
-	e16 r16 r8 r16 a16 [ a e ]  e [ cis cis e ]  | % 170
-	d16 r16 r8 r16 b'16 [ b gis ] gis [ e e gis ] | % 171
-	a16 r16 r8 r16  a16 [ a a ] a [ g g g ] | % 172
+	fis16 [ a, a a ] a16 a''16 [ a fis ] fis [ d d fis ]  | % 169
+	e16 a,,16 [ a a ] a a''16 [a e ] e [ cis cis e ]  | % 170
+	d16 a,16 [ a a ] a b''16 [ b gis ] gis [ e e gis ] | % 171
+	a16 a,, [ a a ] a  a''16 [ a a ] a [ g g g ] | % 172
 	fis16 r16 r8 s2 | % 173
 	d16 r16 r8 r16 d'16 [ d d ] d [ c c c ] | % 174
 	b16 r16 r8 r16 b16 [ b b ] cis16 [ d d d ]  | % 175
@@ -226,8 +225,8 @@ melodyOne =  \relative a' {
 	a8 [fis ] b [ a g fis ] | % 183
 	e8 [ d ] cis4. d8 | % 184
 	d4 a4. a8 | % 185
-    	a4 a4. a8 | % 186
-    	b4 b4. b8 | % 187
+    a4 a4. a8 | % 186
+    b4 b4. b8 | % 187
 	cis8 [ d  ] d4. cis8 | % 188
 	d4  fis4. fis8 | % 189
 	fis4 fis4. fis8 | % 190
@@ -247,9 +246,9 @@ melodyOne =  \relative a' {
 	b4 e,8 [ fis ] g4 | % 204
 	g4 fis fis | % 205
 	fis4 e e | % 206
-    	e4 e e | % 207
+    e4 e e | % 207
 	d8 [b' ] s2 | % 208
-    	\key f \major d,4 bes4. bes8 | % 209
+    \key d \minor d,4 bes4. bes8 | % 209
 	bes8. [ e16 ] bes [ ( g a e ) ] c8 [ a' ] | % 210
 	a8. [ d16 ] a [ ( fis g d ) ] bes8 [ g'8 ] | % 211
 	g8. [ e'16 ] cis [ ( a bes g ) ] cis,8 [ a'8 ] | % 212
@@ -324,7 +323,7 @@ melodyOne =  \relative a' {
 	\times 2/3 { e16 ) [  e ( d  ] }
 	\times 2/3 { cis16 ) [  cis ( b  ] } | % 247
 	a16 ) [ ( b32 cis d e f g ] a [ b cis d e f g f ] e [ d cis b a g f e ]  | % 248
-    	d8 ) r8 a'4. a8 | % 249
+    d8 ) r8 a'4. a8 | % 249
 	e'4 e4. e8 | % 250
 	f4 d4. c8 | % 251
 	bes4 a g16 [ ( f e f ) ] | % 252
@@ -332,13 +331,13 @@ melodyOne =  \relative a' {
 	d4 c bes | % 254
 	cis,16 [ ( e g bes ] a [ g e' g, ])  f4 | % 255
 	s8 e8 e4. d8 | % 256
-	d2. | % 257
+	d2.\fermata \bar "|." % 257
     }
 
 
 melodyTwo =  \relative f' {
-	\stemUp 
-	s4 f2 | % 1
+	\voiceThree 
+	f2 | % 1
 	bes4 a2 | % 2
 	a4 s2 | % 3    
 	g4 f4 s4 | % 4
@@ -354,14 +353,14 @@ melodyTwo =  \relative f' {
 	bes8 s8 a8 s8 s4 | % 14   
 	a8 s8 s2 | % 15    
 	f8. [ g16 ] e2 | % 16
-  	d8 s8 s4 r8. d'16 | % 17
-    	s2. | % 18
+  	d8 s8 s2 | % 17
+    s2. | % 18
 	s2. | % 19
 	s2. | % 20
 	s2. | % 21
 	s2. | % 22
 	s2 s8 s16 d16 | % 23  
-    	d4 e s4 | % 24   
+    d4 e s4 | % 24   
 	s2. | % 25
 	s2. | % 26
 	s2. | % 27
@@ -426,10 +425,10 @@ melodyTwo =  \relative f' {
 	s2. | % 86
 	s2. | % 87
 	s2. | % 88
-	s4 f,2 | % 89  
+	s4 f2 | % 89  
  	e2 cis'4 | % 90
 	d,2 a'4 | % 91
-	b8 [ a g f  e d ] | % 92
+	bes8 [ a g f  e d ] | % 92
 	f2. | % 93
 	fis2. | % 94
 	g4 f e | % 95
@@ -472,13 +471,13 @@ melodyTwo =  \relative f' {
 	s4  e2 | % 132 
 	\key d \major 
 	s2.| % 133    
-	s2. | % 134
+	s4 cis4 s4 | % 134
 	s2. | % 135
 	s2. | % 136
 	s4 fis4 s4 | % 137 
 	s2. | % 138
 	s2. | % 139
-	g8 [ fis ] e4. a8| % 140
+	g8 [ fis ] s2| % 140
 	s2. | % 141
 	e4 e4. g8 | % 142
 	fis4 b4. g8 | % 143
@@ -507,11 +506,11 @@ melodyTwo =  \relative f' {
 	s2. | % 166
 	s2. | % 167
 	s2. | % 168
-	s4 s16 s8 d'16 d [ a a d ] | % 169 
-	cis16 r16 r8 r16 r8 cis16 cis [ a a cis ] | % 170
-	gis16 r16 r8 r16 r8 b16 b [ d d d ] | % 171
-	cis16 r8 r8 a16 [ a a ] b [ b cis cis ] | % 172 
-	d16  d, [ d d ] d [ a' a a ] b  [ b cis cis ]  | % 173
+	s2. | % 169 
+	s2. | % 170
+	s2. | % 171
+	s2. | % 172 
+	d'16  d, [ d d ] d [ a' a a ] b  [ b cis cis ]  | % 173
 	fis,16 d [ d d ] d s16 s8 s4 | % 174 
 	g'16 d,16 [ d d ] d s16 s8 s4 | % 175 
 	s4 e'16 [ d d d ] d [ cis cis cis ] | % 176
@@ -539,7 +538,7 @@ melodyTwo =  \relative f' {
 	e4 fis4. fis8 | % 198
 	g8 [ d ] d4. d8 | % 199
 	d4 cis4. cis8 | % 200
-	d4 a a | % 201
+	s4 a4 a | % 201
 	b4 b b | % 202
 	b4 cis cis | % 203
 	d4 d cis | % 204
@@ -547,9 +546,9 @@ melodyTwo =  \relative f' {
 	b4 b8 [ cis ] d4 | % 206
 	d4 cis cis | % 207
 	s8 d8 cis4. d8 | % 208
-	\key f \major s4 f,2 | % 209
-    	e8. s16 s4 s8 e8 | % 210
-	d8. s16 s4 s8 b8 | % 211
+	\key d \minor s4 f,2 | % 209
+    e8. s16 s4 s8 e8 | % 210
+	d8. s16 s4 s8 bes8 | % 211
 	s4 s4 s8 e8 | % 212
 	s2. | % 213
 	bes'8. s16 s2 | % 214
@@ -560,21 +559,21 @@ melodyTwo =  \relative f' {
 	s2.| % 219
 	s2.| % 220
 	s2.| % 221
-    	s2. | % 222
+    s2. | % 222
 	s2. | % 223
 	s2. | % 224
 	s2. | % 225
 	s2. | % 226
 	s2. | % 227
 	s2. | % 228
-    	s2. | % 229
+    s2. | % 229
 	s2. | % 230
 	s2. | % 231
 	s2. | % 232
 	s2. | % 233
 	s2. | % 234
 	s2. | % 235
-    	s2. | % 236
+    s2. | % 236
 	s2. | % 237
 	s2. | % 238
 	s2. | % 239
@@ -587,19 +586,20 @@ melodyTwo =  \relative f' {
 	s2. | % 246
 	s2. | % 247
 	s2. | % 248
-    	s4 f2 | % 249
-    	bes4 a2 | % 250
-    	a4 f2 | % 251
-    	g4 f s4 | % 252
-    	s4 f4 f | % 253
-    	g4 fis g | % 254
-    	s2. | % 255
-    	s2. | % 256
-    	s2. | % 257
+    s4 f2 | % 249
+    bes4 a2 | % 250
+    a4 f2 | % 251
+    g4 f s4 | % 252
+    s4 f4 fis | % 253
+    g4 fis g | % 254
+   	s2. | % 255
+    s2. | % 256
+    s2. | % 257
   }
 
 melodyThree =  \relative d' {
-	s2. | % 1
+	\voiceFive
+	s2 | % 1
 	g4 g2 | % 2
 	f4 f2 | % 3
 	s2. | % 4
@@ -707,7 +707,7 @@ melodyThree =  \relative d' {
 	g2 f4 | % 106
 	f2 g4 | % 107
 	a4 e2 | % 108
-	s4 a4 s4 | % 109
+	d4 a'4 s4 | % 109
 	s2. | % 110
 	s2. | % 111
 	s2. | % 112
@@ -731,6 +731,7 @@ melodyThree =  \relative d' {
 	g4 g s4 | % 130
 	s2. | % 131
 	s2. | % 132
+	\key d \major 
 	s2. | % 133
    	s2. | % 134
 	s2. | % 135
@@ -799,7 +800,7 @@ melodyThree =  \relative d' {
 	s2. | % 198
 	s2. | % 199
 	s4 e4. e8 | % 200
-	d4 d d | % 201
+	r4 d4 d | % 201
 	d4 d d | % 202
 	d4 e e | % 203
 	e4 e e | % 204
@@ -807,7 +808,7 @@ melodyThree =  \relative d' {
 	d4 e e | % 206
 	e4 e8 [ fis ] g4 | % 207
 	fis8 [ e ] e2 | % 208
-	\key f \major s2. | % 209
+	\key d \minor s2. | % 209
 	s2. | % 210
 	s2. | % 211
 	s2. | % 212
@@ -825,8 +826,8 @@ melodyThree =  \relative d' {
 	s2. | % 224
 	s2. | % 225
 	s2. | % 226
-     	s2. | % 227
-     	s2. | % 228
+    s2. | % 227
+    s2. | % 228
 	s2. | % 229
 	s2. | % 230
 	s2. | % 231
@@ -859,7 +860,8 @@ melodyThree =  \relative d' {
    }
 
 melodyFour =  \relative f' {
-	s4 d2 | % 1
+	\voiceTwo
+	d2 | % 1
 	d4 cis2 | % 2
 	d4 bes2 | % 3
 	g4 a cis | % 4
@@ -875,9 +877,9 @@ melodyFour =  \relative f' {
 	d8 r8 cis8 r8 s4 | % 14
 	d8 r8 bes8 r8 r8. bes16 | % 15
 	a8. [ g16 ] a2 | % 16
-	d8 s8 s2 | % 17
-	cis'4 c r8. c16 | % 18
-	b4 bes4 r8. b16 | % 19
+	d8 s8 s4 r8. d'16  | % 17
+	cis4 c r8. c16 | % 18
+	b4 bes4 r8. bes16 | % 19
 	a8. [ b16 ] cis8. [ d16 ] e8. [ cis16 ] | % 20
    	d8. s2 d16 | % 21
 	cis4 c r8 r16 c16 | % 22
@@ -886,9 +888,7 @@ melodyFour =  \relative f' {
 	d8 s8 s2 | % 25
 	d8 s8 s2 | % 26
 	d8 s8 s2 | % 27
-	\autoBeamOff
-	s8 g,8 a8 s8 s4 | % 28
-	\autoBeamOn
+	s8 g,8 a16 s8. s4 | % 28
 	d16 s16 s8 s2 | % 29
 	s2. | % 30
 	s2. | % 31
@@ -927,7 +927,7 @@ melodyFour =  \relative f' {
 	s2. | % 64
 	d16 s16 s8 s2 | % 65
 	c16 s16 s8 s2  | % 66
-	b16 s16 s8 s2  | % 67
+	bes16 s16 s8 s2  | % 67
 	s2. | % 68
 	s2. | % 69
 	s2. | % 70	
@@ -973,13 +973,13 @@ melodyFour =  \relative f' {
 	d4 d e | % 110
 	f4 fis g | % 111
 	gis4 a2  | % 112
-	d,4 b' a | % 113
+	d,4 bes' a | % 113
 	gis4 a g | % 114
 	fis4 g f | % 115
 	e4 f e | % 116
 	d a b | % 117
 	c4 g a | % 118
-	b4 b a | % 119
+	bes4 bes a | % 119
 	gis4 a2 | % 120
 	s2. | % 121
 	s2. | % 122
@@ -994,15 +994,15 @@ melodyFour =  \relative f' {
 	a,,4 bes a8 [ d' ] | % 131
 	gis,,8 [ d'' ] a,2 | % 132 
 	\key d \major d4 d2 | % 133
-	c4 a2 | % 134
+	cis4 a2 | % 134
 	b4 g2| % 135
 	a4 cis 2 | % 136
 	d4 d4. d8 | % 137
-	c8 [ b ] a4. a8 | % 138
+	cis8 [ b ] a4. a8 | % 138
 	b8 [ a ] g4. g8 | % 139
 	a4 a2 | % 140
 	d4 d4. d8| % 141
-	c4 a4. a8 | % 142
+	cis4 a4. a8 | % 142
 	b4 g4. g8 | % 143
 	a4 a4. a8 | % 144
 	d8 s8 d8 [ e fis g ] | % 145
@@ -1029,11 +1029,11 @@ melodyFour =  \relative f' {
 	s8 a16 [ a ] a s16 s8 s4  | % 166
 	s8 a16 [ a ] a s16 s8 s4  | % 167
 	s8 a16 [ a ] a s16 s8 s4 | % 168
-	fis16 [ a, a a ] a s8 s16 s4 | % 169
-	r16  a [ a a ] a s8 s16 s4  | % 170
-	r16  a [ a a ] a s8 s16 s4  | % 171
-	r16  a [ a a ] a s8 s16 s4  | % 172
-	r16  d [ d d ] d [ a' a a ] a  [ g g g ] | % 173
+	s4 s16 r16 r16 d16 d [ a a d ] | % 169
+	cis16  s4 r16 r16 cis16 cis [ a a cis ]  | % 170
+	gis16 s4 r16 r16 b16 b [ d d d ]| % 171
+	cis16 s4 a16 [ a a ] b [ b cis cis ]  | % 172
+	r16  d, [ d d ] d [ a' a a ] a  [ g g g ] | % 173
 	r16  d16 [ d d ] d  d' [ d d ] e [ e fis fis ] | % 174
 	s16 d,16 [ d d ] d g'  [ g g ] g [ fis fis fis ] | % 175
 	fis [ e e e ] s16 fis,16 [ fis fis ] g [ a a a ] | % 176
@@ -1069,14 +1069,14 @@ melodyFour =  \relative f' {
 	g,4 g gis  | % 206
 	a4 a ais | % 207
 	b8 g a2 | % 208
-	\key f \major 
+	\key d \minor 
 	d4 d2| % 209
 	c4 s4 s8 c8 | % 210
-	bes4 s4 s8 s8 | % 211
+	bes8. s16 s4 s8 s8 | % 211
 	a4 s4 s8 cis8 | % 212
 	d8. s16 s2 | % 213
 	g,8. s16 s2 | % 214
-	b8. s16 s2 | % 215
+	bes8. s16 s2 | % 215
 	a8 [ g ] a8. s16 s4 | % 216
 	s2. | % 217
 	s2. | % 218
@@ -1087,8 +1087,8 @@ melodyFour =  \relative f' {
 	s2. | % 223
 	s2. | % 224
 	s2. | % 225
-     	s2. | % 226
-     	s2. | % 227
+    s2. | % 226
+    s2. | % 227
 	s2. | % 228
 	d16 [ s16 a'16 ] s16 bes16 [ s16 a16 ] s16 g16 [ s16 f ] s16  | % 229
 	c16 [ s16 bes'16 ] s16 a16 [ s16 g16 ] s16 f16 [ s16 e ] s16 | % 230
@@ -1110,7 +1110,7 @@ melodyFour =  \relative f' {
 	s2. | % 246
 	s2. | % 247
 	s2. | % 248
-	d4 d2 | % 249
+	s4 d2 | % 249
 	d4 cis2 | % 250
 	d4 bes2 | % 251
 	g4 a cis | % 252
@@ -1128,7 +1128,7 @@ melody = << \melodyOne \\ \melodyTwo \\ \melodyThree \\ \melodyFour >>
 \score {
 	\context Staff << 
         \set Staff.instrumentName = "Violine"
-        { \clef treble \key f \major \time 3/4  \autoBeamOff \melody  }
+        { \clef treble \key d \minor \time 3/4  \partial 2 \melody  }
     >>
 	\layout { }
  	 \midi { }
