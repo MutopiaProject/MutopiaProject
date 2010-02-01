@@ -14,7 +14,7 @@
 	maintainer = "Björn Sothmann"
 	maintainerEmail = "bjoern.sothmann@rub.de"
 	maintainerWeb = "http://www.thp.uni-due.de/~bjoerns"
- footer = "Mutopia-2010/01/31-1738"
+ footer = "Mutopia-2010/02/01-1738"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2010. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -70,7 +70,7 @@ staffTenoreI = \new Staff  {
 			\set Score.measureLength = #(ly:make-moment 4 4)
 			d[ b c a] b[ g a f] g[ a b c] d32[ e f d] es[ c d b] |
 			\set Score.measureLength = #(ly:make-moment 4 2)
-			c4.\melismaEnd c8 b2 d,16[\melisma e f g] a[ b c a]\melismaEnd b8.[\melisma g16] b16[ a g f]\melismaEnd |
+			c4.\melismaEnd c8 b2 d,16[\melisma e f g] a[ b c a]\melismaEnd b8.[\melisma a16] b16[ a g f]\melismaEnd |
 			g4 g8 g a8.[\melisma g16] a[ g f e]\melismaEnd f2 d'16[\melisma c b c] d[ e f d]\melismaEnd |
 			\set Score.measureLength = #(ly:make-moment 4 4)
 			es8.[\melisma d16] es[ d c b]\melismaEnd c8.[\melisma b16] a8.[ g16] |
@@ -317,7 +317,7 @@ staffTenoreIII = \new Staff  {
 }
 
 staffBassoContinuo = \new Staff  {
-	\set Staff.instrumentName="Basso"
+	\set Staff.instrumentName=\markup{\column{"Bassus" \line {"generalis"}}}
 	\set Staff.midiInstrument="harpsichord"
 	\key f \major
 	\clef bass
@@ -347,7 +347,7 @@ staffBassoContinuo = \new Staff  {
 		\set Score.measureLength = #(ly:make-moment 4 4)
 		b g |
 		\set Score.measureLength = #(ly:make-moment 4 2)
-		f b, d g |
+		f b, d g, |
 		c f, b g |
 		\set Score.measureLength = #(ly:make-moment 4 4)
 		c f,~ |
