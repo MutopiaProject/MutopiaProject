@@ -14,7 +14,7 @@
 	maintainerEmail = "bjoern.sothmann@rub.de"
 	maintainerWeb = "http://www.thp.uni-due.de/~bjoerns"
 
- footer = "Mutopia-2010/01/31-1711"
+ footer = "Mutopia-2010/02/01-1711"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2010. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
@@ -155,6 +155,7 @@ staffCanto = \new Staff  {
 			g4\melismaEnd c, c4. h8 |
 			\time 3/2
 			\tempo 4=360
+                        \set Score.measureLength = #(ly:make-moment 3 1)
 			c\breve c2. h4 |
 			a2 fis r1 d'2. c4 |
 			\time 4/4
@@ -293,6 +294,7 @@ staffBasso = \new Staff  {
 		c g' |
 		\time 3/2
 		\tempo 4=360
+                \set Score.measureLength = #(ly:make-moment 3 1)
 		c,\breve a1 |
 		d\breve h1 |
 		\time 4/4
@@ -397,6 +399,7 @@ BC = \new FiguredBass {
 		s1 |
 		\time 3/2
 		\tempo 4=360
+                \set Score.measureLength = #(ly:make-moment 3 1)
 		s\breve.*2 |
 		\time 4/4
 		\tempo 4=120
