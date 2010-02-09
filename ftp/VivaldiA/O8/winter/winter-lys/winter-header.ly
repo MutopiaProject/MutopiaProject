@@ -1,22 +1,22 @@
-\version "1.7.13"
+\version "2.12.3"
 \header {
 	title = "L'Inverno  /  Winter"
 	subtitle = "Il Cimento dell' Armonia e dell' Inventione -- Concerto IV"
-	composer = "Antonio Vivaldi"
+	composer = "Antonio Vivaldi (1678-1741)"
 	%opus = "Op. 8, No. 4"
 
  mutopiatitle = "L'Inverno / Winter"
- mutopiacomposer = "A. Vivaldi (1678-1741)"
+ mutopiacomposer = "VivaldiA"
  mutopiaopus = "Op. 8, No. 4"
  mutopiainstrument = "Violin, String"
  date = "1725"
  source = "Performers' Facsimiles"
  style = "Baroque"
- copyright = "MutopiaBSD"
- maintainer = "Anonymous" % John Williams (there are too many of us in the world...)
- maintainerEmail = "williams@tni.com"
- lastupdated = "2003/Apr/02"
+ copyright = "Creative Commons Attribution-ShareAlike 3.0"
+ maintainer = "Anonymous" % John Williams (don't say it...)
+ maintainerEmail = "smailliw@gmail.com"
+ lastupdated = "2010/Jan/31"
 
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been anonymously typeset and released under the MutopiaBSD licence.} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
- footer = "Mutopia-2003/08/26-351"
+ footer = "Mutopia-2010/02/08-351"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2010. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }

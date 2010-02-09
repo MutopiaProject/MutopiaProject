@@ -1,9 +1,10 @@
-\version "1.7.13"
+\version "2.12.3"
 \include "spring1.ly"
 \include "spring1a.ly"
 \include "spring1b.ly"
 \include "spring1c.ly"
 \include "spring1d.ly"
+\include "spring1f.ly"
 \include "spring2.ly"
 \include "spring2a.ly"
 \include "spring2b.ly"
@@ -14,144 +15,213 @@
 \include "spring3b.ly"
 \include "spring3c.ly"
 \include "spring3d.ly"
+\include "spring3f.ly"
 \include "spring-sonnet.ly"
 \include "spring-header.ly"
 
-\score {<
-	\property Score.skipBars = ##t
+% part=x
+%% score-only settings
+	#(set-global-staff-size 18)  % or bigger paper for score?
+\paper {
+	ragged-bottom = ##t
+}
+% end
+
+\score {<<
+	\set Score.skipBars = ##t
 % part=solo
-	\context Staff = solo <
-		\property Staff.instrument = \markup { \column << "Violino" "Principale" >> }
-		\property Staff.midiInstrument = "violin"
+	% helps sonnet lines
+	\override Score.PaperColumn #'keep-inside-line = ##t
+	\new Staff = "solo" 
+	\with { \consists Mark_engraver }
+	<<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Principale" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoPrincipaleSpringOne
 		\SonnetSpringOne
-	>
+	>>
 % end
 % part=1violin
-	\context Staff = violin1 <
-		\property Staff.instrument = \markup { \column << "Violino" "Primo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violinone <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Primo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoPrimoSpringOne
-	>
+	>>
 % end
 % part=2violin
-	\context Staff = violin2 <
-		\property Staff.instrument = \markup { \column << "Violino" "Secondo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violintwo <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Secondo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoSecondoSpringOne
-	>
+	>>
 % end
 % part=viola
-	\context Staff = viola <
-		\property Staff.instrument = \markup { \column << "Alto" "Viola" >> }
-		\property Staff.midiInstrument = "viola"
+	\context Staff = "viola" <<
+		\set Staff.instrumentName = \markup { \column { "Alto" "Viola" } }
+		\set Staff.midiInstrument = "viola"
 		\AltoViolaSpringOne
-	>
+	>>
 % end
 % part=cello
-	\context Staff = cello <
-		\property Staff.instrument = \markup { \column << "Organo e" "Violoncello" >> }
-		\property Staff.midiInstrument = "cello"
+	\context Staff = "cello" <<
+		\set Staff.instrumentName = \markup { \column { "Organo e" "Violoncello" } }
+		\set Staff.midiInstrument = "cello"
+		\FiguredBassSpringOne
 		\VioloncelloSpringOne
-	>
+	>>
 % end
->
+>>
 % part=x
-	\midi { \tempo 4 = 115 }
+	
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 115 4)
+    }
+  }
+
+
 % end
-	\paper {}
+  \layout {
+% part=solo
+    \context {
+	\Score
+	\remove Mark_engraver 
+    }
+% end
+  }
 	\header { piece = "Allegro" }
 }
 
-\score {<
-	\property Score.skipBars = ##t
+\score {<<
+	\set Score.skipBars = ##t
 % part=solo
-	\context Staff = solo <
-		\property Staff.instrument = \markup { \column << "Violino" "Principale" >> }
-		\property Staff.midiInstrument = "violin"
+	\override Score.PaperColumn #'keep-inside-line = ##t
+	\new Staff = "solo" 
+	\with { \consists Mark_engraver }
+	<<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Principale" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoPrincipaleSpringTwo
 		\SonnetSpringTwo
-	>
+	>>
 % end
 % part=1violin
-	\context Staff = violin1 <
+	\context Staff = violinone <<
 		\ViolinoPrimoSpringTwo
-		\property Staff.instrument = \markup { \column << "Violino" "Primo" >> }
-		\property Staff.midiInstrument = "violin"
-	>
+		\set Staff.instrumentName = \markup { \column { "Violino" "Primo" } }
+		\set Staff.midiInstrument = "violin"
+	>>
 % end
 % part=2violin
-	\context Staff = violin2 <
-		\property Staff.instrument = \markup { \column << "Violino" "Secondo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violintwo <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Secondo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoSecondoSpringTwo
-	>
+	>>
 % end
 % part=viola
-	\context Staff = viola <
-		\property Staff.instrument = \markup { \column << "Alto" "Viola" >> }
-		\property Staff.midiInstrument = "viola"
+	\context Staff = "viola" <<
+		\set Staff.instrumentName = \markup { \column { "Alto" "Viola" } }
+		\set Staff.midiInstrument = "viola"
 		\AltoViolaSpringTwo
-	>
+	>>
 % end
 % part=cello
-	\context Staff = cello <
-		\property Staff.instrument = \markup { \column << "Organo e" "Violoncello" >> }
-		\property Staff.midiInstrument = "cello"
+	\context Staff = "cello" <<
+		\set Staff.instrumentName = \markup { \column { "Organo e" "Violoncello" } }
+		\set Staff.midiInstrument = "cello"
 		\VioloncelloSpringTwo
-	>
+	>>
 % end
->
+>>
 % part=x
-	\midi { \tempo 4 = 50 }
+	
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 50 4)
+      }
+    }
+
+
 % end
-	\paper {}
+	\layout {
+		% seems to need both to make cello mmrest fill line
+		ragged-last = ##f
+		ragged-right = ##f
+% part=solo
+    \context {
+	\Score
+	\remove Mark_engraver 
+    }
+% end
+	}
 	\header { piece = "Largo" }
 }
 
-\score {<
-	\property Score.skipBars = ##t
+\score {<<
+	\set Score.skipBars = ##t
 % part=solo
-	\context Staff = solo <
-		\property Staff.instrument = \markup { \column << "Violino" "Principale" >> }
-		\property Staff.midiInstrument = "violin"
+	\override Score.PaperColumn #'keep-inside-line = ##t
+	\new Staff = "solo" 
+	\with { \consists Mark_engraver }
+	<<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Principale" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoPrincipaleSpringThree
 		\SonnetSpringThree
-	>
+	>>
 % end
 % part=1violin
-	\context Staff = violin1 <
-		\property Staff.instrument = \markup { \column << "Violino" "Primo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violinone <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Primo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoPrimoSpringThree
-	>
+	>>
 % end
 % part=2violin
-	\context Staff = violin2 <
-		\property Staff.instrument = \markup { \column << "Violino" "Secondo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violintwo <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Secondo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoSecondoSpringThree
-	>
+	>>
 % end
 % part=viola
-	\context Staff = viola <
-		\property Staff.instrument = \markup { \column << "Alto" "Viola" >> }
-		\property Staff.midiInstrument = "viola"
+	\context Staff = "viola" <<
+		\set Staff.instrumentName = \markup { \column { "Alto" "Viola" } }
+		\set Staff.midiInstrument = "viola"
 		\AltoViolaSpringThree
-	>
+	>>
 % end
 % part=cello
-	\context Staff = cello <
-		\property Staff.instrument = \markup { \column << "Organo e" "Violoncello" >> }
-		\property Staff.midiInstrument = "cello"
+	\context Staff = "cello" <<
+		\set Staff.instrumentName = \markup { \column { "Organo e" "Violoncello" } }
+		\set Staff.midiInstrument = "cello"
+		\FiguredBassSpringThree
 		\VioloncelloSpringThree
-	>
+	>>
 % end
->
+>>
 % part=x
-	\midi { \tempo 4 = 144 } % actually 4. = 96
+	
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 144 4)
+      }
+    }
+
+ % actually 4. = 96
 % end
-	\paper {}
+  \layout {
+% part=solo
+    \context {
+	\Score
+	\remove Mark_engraver 
+    }
+% end
+  }
 	\header { piece = "Danza Pastorale" }
 }
 

@@ -1,46 +1,46 @@
-\version "1.7.13"
-ViolinoSecondoSummerOne = \notes {
+\version "2.12.3"
+ViolinoSecondoSummerOne =  {
 \key g \minor
 \clef violin
 \time 3/8
 
 \relative g'' {
 \mark "A"
-r8_"Allegro non molto - Pianissimo"^" "^"Languideza per il caldo" g fis |
+r8_"Allegro non molto - Pianissimo"^"Languideza per il caldo" g fis |
 r g, fis |
-r a16 () bes c8 |
-r fis,16 () g a8 |
+r a16 ( bes) c8 |
+r fis,16 ( g) a8 |
 g'4 r8 |	% 5
-a,8 () g fis |
+a,8 ( g) fis |
 a'4 r8 |
-bes,8 () a g |
+bes,8 ( a) g |
 bes'4 r8 |
-c,8 () bes a |	% 10
+c,8 ( bes) a |	% 10
 c,4.^\fermata |
 g''8 ( fis ees! |
-d c ) bes |
+d c  bes) |
 a4. ~ |
 a4. |	% 15
 a'8 ( g fis |
-ees! d ) c |
+ees! d  c) |
 bes4. ~ |
 bes4. ~ |
 bes4 r8 |	% 20
-r8 g'16 () a bes8 |
-r8 c,16 () d ees8 |
-r8 bes16 () c d8 |
-r8 a16 () bes c8 |
+r8 g'16 ( a) bes8 |
+r8 c,16 ( d) ees8 |
+r8 bes16 ( c) d8 |
+r8 a16 ( bes) c8 |
 r8 bes4 |	% originally written bes4 r8	% 25
-r8 g16 () a bes8 |
-r8 c,16 () d ees8 |
-r8 bes16 () c d8 |
-r8 a16 () bes c8 |
+r8 g16 ( a) bes8 |
+r8 c,16 ( d) ees8 |
+r8 bes16 ( c) d8 |
+r8 a16 ( bes) c8 |
 r8 bes4 |	% 30
 }
 \bar "||"
 \mark "B"
 \time 4/4
-< { R1*18 } s1_"Allegro" > |  % "s_" puts Allegro under mmRest but screws up horizontal spacing for the rest of the movement
+<< { R1*18 } { s_"Allegro" } >> |
 \relative d'' {
 r16 d_"Forte" d d d d bes d 	g, d' d d d d bes d |  % 50
 d, a' a a a a g a 	d, a' a a a a g a |
@@ -51,28 +51,29 @@ d, a' a a a a fis a 	d, a' a a a a fis! a |
 \relative g' {
 bes8_"Pianissimo" g' fis |
 r8 g, fis |
-r8 g'16 () a bes8 |  
-r8 c,16 () d ees8 |  % 55
-r8 bes16 () c d8 |
-r8 a16 () bes c8 |
+r8 g'16 ( a) bes8 |  
+r8 c,16 ( d) ees8 |  % 55
+r8 bes16 ( c) d8 |
+r8 a16 ( bes) c8 |
 r8 bes4 |
 }
 \mark "C"
 R4.*12
 \relative g'' {
-\property Voice.tupletSpannerDuration = #(ly:make-moment 1 8)
+\set tupletSpannerDuration = #(ly:make-moment 1 8)
 \times 2/3 {
-\property Voice.autoBeamSettings \override #'(end 1 24 * *) = #(ly:make-moment 1 8)
-g16_"Piano" ( a ) bes 	g ( a ) bes 	g ( a ) bes |
+g16_"Piano"[( a bes]) 	g[( a bes]) 	g[( a bes]) |
 }
 g4 r8 |
 R4.*5 |
 \mark "D"
+#(override-auto-beam-setting '(end 1 24 3 8) 1 8)
+#(override-auto-beam-setting '(end 1 24 3 8) 2 8)
 \times 2/3 {
-g16_"Piano" ( a ) bes	g ( a ) bes	g ( a ) bes |
-fis ( g ) a	fis ( g ) a 	fis ( g ) a |
-g16 ( a ) bes	g ( a ) bes	g ( a ) bes |  % 80
-fis ( g ) a	fis ( g ) a 	fis ( g ) a |
+g16_"Piano" ( a  bes)	g ( a  bes)	g ( a  bes) |
+fis ( g  a)	fis ( g  a) 	fis ( g  a) |
+g16 ( a  bes)	g ( a  bes)	g ( a  bes) |  % 80
+fis ( g  a)	fis ( g  a) 	fis ( g  a) |
 }
 g16. a32 g16. a32 g16. a32 |
 g16._"Pianissimo" a32 g16. a32 g16. a32 |
@@ -82,8 +83,9 @@ e16._"Piano" f32 e16. f32 e16. f32 |
 e16._"Pianissimo" f32 e16. f32 e16. f32 |
 d16._"Piano" e32 d16. e32 d16. e32 |
 d16._"Pianissimo" e32 d16. e32 d16. e32 |
-\property Voice.autoBeamSettings \override #'(end 1 32 * *) = #(ly:make-moment 1 8)
-d32_"Forte"^" "^" "^"Venti" bes' a g	f bes a g	f e d cis |  % 90
+#(override-auto-beam-setting '(end 1 32 3 8) 1 8)
+#(override-auto-beam-setting '(end 1 32 3 8) 2 8)
+d32_"Forte"^"Venti" bes' a g	f bes a g	f e d cis |  % 90
 d f e d 	cis f e! d 	cis! b a g |
 f8	d32 e f d 	f g a f |
 a8	d32 e f d	f g a f |
@@ -105,10 +107,10 @@ d a d a 	d a d a 	d a d a |
 cis a cis a 	cis a cis a 	cis a cis a |
 f8_"Pianissimo" d' cis |  % 110
 r e d |
-r8 bes16 () c d8 |
-r8 g,16 () a bes8 |
-r8 f16 () g a8 |
-r8 e16 () f g8 |  % 115
+r8 bes16 ( c) d8 |
+r8 g,16 ( a) bes8 |
+r8 f16 ( g) a8 |
+r8 e16 ( f) g8 |  % 115
 \mark "E"
 f4 r8 |
 R4.*38 |

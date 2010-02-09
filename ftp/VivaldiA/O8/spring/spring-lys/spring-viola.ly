@@ -1,9 +1,10 @@
-\version "1.7.13"
+\version "2.12.3"
 \include "spring1.ly"
 \include "spring1a.ly"
 \include "spring1b.ly"
 \include "spring1c.ly"
 \include "spring1d.ly"
+\include "spring1f.ly"
 \include "spring2.ly"
 \include "spring2a.ly"
 \include "spring2b.ly"
@@ -14,48 +15,56 @@
 \include "spring3b.ly"
 \include "spring3c.ly"
 \include "spring3d.ly"
+\include "spring3f.ly"
 \include "spring-sonnet.ly"
 \include "spring-header.ly"
 
-\score {<
-	\property Score.skipBars = ##t
+
+\score {<<
+	\set Score.skipBars = ##t
 % part=viola
-	\context Staff = viola <
-		\property Staff.instrument = \markup { \column << "Alto" "Viola" >> }
-		\property Staff.midiInstrument = "viola"
+	\context Staff = "viola" <<
+		\set Staff.instrumentName = \markup { \column { "Alto" "Viola" } }
+		\set Staff.midiInstrument = "viola"
 		\AltoViolaSpringOne
-	>
+	>>
 % end
->
-	\paper {}
+>>
+  \layout {
+  }
 	\header { piece = "Allegro" }
 }
 
-\score {<
-	\property Score.skipBars = ##t
+\score {<<
+	\set Score.skipBars = ##t
 % part=viola
-	\context Staff = viola <
-		\property Staff.instrument = \markup { \column << "Alto" "Viola" >> }
-		\property Staff.midiInstrument = "viola"
+	\context Staff = "viola" <<
+		\set Staff.instrumentName = \markup { \column { "Alto" "Viola" } }
+		\set Staff.midiInstrument = "viola"
 		\AltoViolaSpringTwo
-	>
+	>>
 % end
->
-	\paper {}
+>>
+	\layout {
+		% seems to need both to make cello mmrest fill line
+		ragged-last = ##f
+		ragged-right = ##f
+	}
 	\header { piece = "Largo" }
 }
 
-\score {<
-	\property Score.skipBars = ##t
+\score {<<
+	\set Score.skipBars = ##t
 % part=viola
-	\context Staff = viola <
-		\property Staff.instrument = \markup { \column << "Alto" "Viola" >> }
-		\property Staff.midiInstrument = "viola"
+	\context Staff = "viola" <<
+		\set Staff.instrumentName = \markup { \column { "Alto" "Viola" } }
+		\set Staff.midiInstrument = "viola"
 		\AltoViolaSpringThree
-	>
+	>>
 % end
->
-	\paper {}
+>>
+  \layout {
+  }
 	\header { piece = "Danza Pastorale" }
 }
 

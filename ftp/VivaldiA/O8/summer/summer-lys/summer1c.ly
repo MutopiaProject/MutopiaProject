@@ -1,5 +1,5 @@
-\version "1.7.13"
-AltoViolaSummerOne = \notes {
+\version "2.12.3"
+AltoViolaSummerOne =  {
 \key g \minor
 \clef alto
 \time 3/8
@@ -19,11 +19,11 @@ g4 a,8 |
 a4.^\fermata |
 R4.*2
 fis'8 ( ees! d |
-c16 bes a8 ) g |
+c16 bes a8  g) |
 fis4. ~ |
 fis4. |
 bes'8 ( a g |
-fis16 ees! d8 ) c |
+fis16 ees! d8  c) |
 bes4 r8 |
 r d d |
 r ees ees |
@@ -39,7 +39,7 @@ r d4 |
 \bar "||"
 \mark "B"
 \time 4/4
-< R1*18 s1_"Allegro" > |  % "s_" puts Allegro under mmRest, but screws up horizonal space for the rest of the movement
+<< { R1*18 } { s_"Allegro" } >> |
 \relative g' {
 r16 bes_"Forte" bes bes bes bes g bes 	d, bes' bes bes bes bes g bes |
 d, d d d d d a d 	a d d d d d a d |	% second a should be fis?
@@ -119,7 +119,8 @@ d d d d d bes |
 g g g g g g |
 e' e f f g g |
 a, a a a a d |
-\property Voice.autoBeamSettings \override #'(end 1 32 * *) = #(ly:make-moment 1 8)
+#(override-auto-beam-setting '(end 1 32 3 8) 1 8)
+#(override-auto-beam-setting '(end 1 32 3 8) 2 8)
 d32 g f ees	d ees d c	bes c bes a |  % 175
 g g' f ees	d ees d c 	bes c bes a |
 g g' f ees	d ees d c 	bes c bes a |

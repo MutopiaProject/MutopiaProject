@@ -1,5 +1,5 @@
-\version "1.7.13"
-ViolinoPrimoSummerThree = \notes {
+\version "2.12.3"
+ViolinoPrimoSummerThree =  {
 \clef violin
 \key g \minor
 \time 3/4 
@@ -26,14 +26,14 @@ g g g g 	g g g g 	g g g g |
 g d'' c bes	a g fis e 	d c bes a |	
 g g g g 	g g g g 	g g g g |
 d' g, g g 	d' g, g g 	d' g, g g |  % 20
-d16 ( a' bes c 	d e fis ) g	a8 r |
-r16 a, ( bes c 	d e fis ) g	a8 r |
-r16 bes, ( c d 	ees! fis g ) a	bes8 r |
-r16 d, ( e fis	g a bes ) c 	d8 r |
-r16 d, ( e fis	g a bes ) c 	d8 r |  % 25
-r16 a, ( bes c 	d e fis ) g	a8 r |
-r16 bes, ( c d 	ees! fis g ) a	bes8 r |
-r16 d, ( e fis	g a bes ) c 	d8 r |
+d16 ( a' bes c 	d e fis  g)	a8 r |
+r16 a, ( bes c 	d e fis  g)	a8 r |
+r16 bes, ( c d 	ees! fis g  a)	bes8 r |
+r16 d, ( e fis	g a bes  c) 	d8 r |
+r16 d, ( e fis	g a bes  c) 	d8 r |  % 25
+r16 a, ( bes c 	d e fis  g)	a8 r |
+r16 bes, ( c d 	ees! fis g  a)	bes8 r |
+r16 d, ( e fis	g a bes  c) 	d8 r |
 bes16 g d bes	bes' g d bes	bes' g d bes |
 d bes g d	d' bes g d 	d' bes g d |  % 30
 g d bes g	g' d bes g	g' d bes g |

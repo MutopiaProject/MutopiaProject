@@ -1,14 +1,17 @@
-\version "1.7.13"
-ViolinoPrimoSpringTwo = \notes {
+#(ly:set-option 'old-relative)
+\version "2.12.3"
+ViolinoPrimoSpringTwo =  {
 \clef violin
 \key cis \minor
 \time 3/4
 
-\property Voice.autoBeamSettings \override #'(end * * * *) = #(ly:make-moment 1 4)
-\property Voice.autoBeamSettings \override #'(end * * * *) = #(ly:make-moment 1 4)
+%% hack beam settings...
+#(revert-auto-beam-setting '(end 1 32 3 4) 1 8)
+#(revert-auto-beam-setting '(end 1 32 3 4) 3 8)
+#(revert-auto-beam-setting '(end 1 32 3 4) 5 8)
 \mark "F"
 \relative e' {
-[ gis16._"Largo e Pianissimo Sempre"^"Mormorio di frondi, e piante" a32 gis16. a32 ]  [ gis16. a32 gis16. a32 ]  [ gis16. cis32 b16. a32 ] |
+ gis16.[_"Largo e Pianissimo Sempre"^"Mormorio di frondi, e piante" a32 gis16. a32 ]   gis16.[ a32 gis16. a32 ]   gis16.[ cis32 b16. a32 ] |
 gis16. a32 gis16. a32  gis16. a32 gis16. a32  gis16. cis32 b16. a32 |
 gis16. a32 gis16. a32  gis16. a32 gis16. a32  gis16. a32 bis16. cis32 |
 dis16. e32 dis16. e32  dis16. e32 dis16. e32  dis16. gis32 fis16. e32 |

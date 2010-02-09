@@ -1,5 +1,5 @@
-\version "1.7.13"
-ViolinoSecondoSummerTwo = \notes {
+\version "2.12.3"
+ViolinoSecondoSummerTwo =  {
 \clef violin
 \key g \minor
 \time 4/4 

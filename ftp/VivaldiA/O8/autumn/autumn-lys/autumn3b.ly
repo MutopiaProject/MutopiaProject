@@ -1,7 +1,6 @@
-\version "1.7.13"
-%TODO: fix beaming
+\version "2.12.3"
 
-ViolinoSecondoAutumnThree = \notes {
+ViolinoSecondoAutumnThree =  {
 \clef violin
 \key f \major
 \time 3/8
@@ -67,13 +66,13 @@ c4 r8 |
 R4.
 \mark "G"
 r8^"Scioppi e Cani" r c |
-\property Voice.autoBeaming = ##f
+\set autoBeaming = ##f
 r r16 c c r32 c |
-\property Voice.autoBeaming = ##t
-\property Voice.autoBeamSettings \set #'(begin 1 32 * *) = #(ly:make-moment 1 8)
-\property Voice.autoBeamSettings \set #'(end 1 32 * *) = #(ly:make-moment 1 8)
-c d c d 	c d c d 	c d c d |
-c d c d 	c d c d 	c d c d |
+\set autoBeaming = ##t
+%%%#(XXXOLD_override_auto_beam_setting '(begin 1 32 * *)  1 8)
+%%%#(XXXOLD_override_auto_beam_setting '(end 1 32 * *)  1 8)
+c[ d c d] 	c[ d c d] 	c[ d c d] |
+c[ d c d] 	c[ d c d] 	c[ d c d] |
 c4 r8 |
 f4 r8 |
 fis4 r8 |
@@ -81,13 +80,13 @@ g4 r8 |
 gis4 r8 |
 a4 r8 |
 r r g, |
-\property Voice.autoBeaming = ##f
+\set autoBeaming = ##f
 r r16 g g r32 d' |
-\property Voice.autoBeaming = ##t
-d g d g 	d g d g 	d g d g |
-d g d g 	d g d g 	d g d g |
-\property Voice.autoBeamSettings \set #'(begin 1 32 * *) = #(ly:make-moment 3 8)
-\property Voice.autoBeamSettings \set #'(end 1 32 * *) = #(ly:make-moment 3 8)
+\set autoBeaming = ##t
+d[ g d g] 	d[ g d g] 	d[ g d g] |
+d[ g d g] 	d[ g d g] 	d[ g d g] |
+%%%#(XXXOLD_override_auto_beam_setting '(begin 1 32 * *)  3 8)
+%%%#(XXXOLD_override_auto_beam_setting '(end 1 32 * *)  3 8)
 d8 r r |
 c'16. g'32 c,8 c |
 c16. g'32 c,8 c |
@@ -117,21 +116,21 @@ f16. c'32 f,8 f |
 f16. a32 g8 f |
 c4 r8 |
 R4.*3 |
-\property Voice.autoBeamSettings \set #'(begin 1 32 * *) = #(ly:make-moment 1 8)
-\property Voice.autoBeamSettings \set #'(end 1 32 * *) = #(ly:make-moment 1 8)
-f32 c f c	f c f c 	f c f c |
-f32 c f c	f c f c 	f c f c |
+%%%#(XXXOLD_override_auto_beam_setting '(begin 1 32 * *)  1 8)
+%%%#(XXXOLD_override_auto_beam_setting '(end 1 32 * *)  1 8)
+f32[ c f c]	f[ c f c] 	f[ c f c] |
+f32[ c f c]	f[ c f c] 	f[ c f c] |
 \mark "H"
 f4. |
-e32 c e c	e c e c 	e c e c |
+e32[ c e c]	e[ c e c] 	e[ c e c] |
 e4 r8 |
-f32 a, f' a,	f' a, f' a,	f' a, f' a, |
+f32[ a, f' a,]	f'[ a, f' a,]	f'[ a, f' a,] |
 f'4 r8 |
-e32 c e c	e c e c 	e c e c |
+e32[ c e c]	e[ c e c] 	e[ c e c] |
 e4 r8 |
 R4.*6 |
-\property Voice.autoBeamSettings \set #'(begin 1 32 * *) = #(ly:make-moment 3 8)
-\property Voice.autoBeamSettings \set #'(end 1 32 * *) = #(ly:make-moment 3 8)
+%%%#(XXXOLD_override_auto_beam_setting '(begin 1 32 * *)  3 8)
+%%%#(XXXOLD_override_auto_beam_setting '(end 1 32 * *)  3 8)
 f'8 f16 f f g |
 a8 f f |
 f,8 f16 f f g |

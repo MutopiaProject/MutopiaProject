@@ -1,13 +1,11 @@
-\version "1.7.13"
+\version "2.12.3"
 
-AltoViolaAutumnThree = \notes {
+AltoViolaAutumnThree =  {
 \clef alto
 \key f \major
 \time 3/8
 
 \mark "E"
-%\property Voice.autoBeamSettings \override #'(begin 1 32 * *) = #(ly:make-moment 1 8)
-%\property Voice.autoBeamSettings \override #'(end 1 32 * *) = #(ly:make-moment 1 8)
 \relative c' {
 a8_"Allegro"^"La Caccia" c8 a |
 a c a |
@@ -64,11 +62,11 @@ c4 r8 | % 80
 R4. |
 \mark "G"
 r8^"Scioppi e Cani" c r |
-\property Voice.autoBeaming = ##f
+\set autoBeaming = ##f
 r16 c c8 r16 g |
-\property Voice.autoBeaming = ##t
-[ g32 bes g bes ]	[ g bes g bes ]	[ g bes g bes ] |
-[ g32 bes g bes ]	[ g bes g bes ]	[ g bes g bes ] |  % 85
+\set autoBeaming = ##t
+ g32[ bes g bes ]	 g[ bes g bes ]	 g[ bes g bes ] |
+ g32[ bes g bes ]	 g[ bes g bes ]	 g[ bes g bes ] |  % 85
 g4 r8 |
 f'4 r8 |
 fis4 r8 |
@@ -76,11 +74,11 @@ g4 r8 |
 gis4 r8 |  % 90
 a4 r8 |
 r8 g, r |
-\property Voice.autoBeaming = ##f
+\set autoBeaming = ##f
 r16 g g8 r16 b |
-\property Voice.autoBeaming = ##t
-[ bes32 g bes g ]	[ bes g bes g ]	[ bes g bes g ] |
-[ bes32 g bes g ]	[ bes g bes g ]	[ bes g bes g ] |  % 95
+\set autoBeaming = ##t
+ bes32[ g bes g ]	 bes[ g bes g ]	 bes[ g bes g ] |
+ bes32[ g bes g ]	 bes[ g bes g ]	 bes[ g bes g ] |  % 95
 g4 r8 | 	% extra 8th rest written here
 e'8 g e |
 e g e |
@@ -110,15 +108,15 @@ a c a |
 a d d |
 e4 r8 |
 R4.*3 |
-[ f32 c f c ]	[ f c f c ]	[ f c f c ] |
-[ f32 c f c ]	[ f c f c ]	[ f c f c ] |
+ f32[ c f c ]	 f[ c f c ]	 f[ c f c ] |
+ f32[ c f c ]	 f[ c f c ]	 f[ c f c ] |
 \mark "H"
 f4 r8 |
-[ e32 c e c ]	[ e c e c ]	[ e c e c ] |  % 130
+ e32[ c e c ]	 e[ c e c ]	 e[ c e c ] |  % 130
 e4 r8 |
-[ f32 a, f' a, ]	[ f' a, f' a, ]	[ f' a, f' a, ] |
+ f32[ a, f' a, ]	 f'[ a, f' a, ]	 f'[ a, f' a, ] |
 f'4 r8 |
-[ e32 c e c ]	[ e c e c ] 	[ e c e c ] |
+ e32[ c e c ]	 e[ c e c ] 	 e[ c e c ] |
 e4 r8 |
 R4.*6 |
 c'8 c16 c c g |

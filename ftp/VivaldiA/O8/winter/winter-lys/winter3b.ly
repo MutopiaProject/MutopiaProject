@@ -1,50 +1,47 @@
-\version "1.7.13"
-ViolinoSecondoWinterThree = \notes {
+\version "2.12.3"
+ViolinoSecondoWinterThree =  {
 \clef violin
 \key f \minor
 \time 3/8
 
 \mark "F"
 \relative f'' {
-<
-R4.*20
-s4._"Allegro"
->
+<< { R4.*20 } { s4._"Allegro" } >>
 R4.
-bes16 ( aes g f e ) d |
-c ( d e f g ) aes |
-bes16 ( aes g f e ) d |
+bes16 ( aes g f e  d) |
+c ( d e f g  aes) |
+bes16 ( aes g f e  d) |
 % 25
 \mark "G"
-e!8 ( g ) bes |
-c ( bes ) aes |
-g ( f ) e |
-c' ( bes ) aes |
-g ( f ) e |
+e!8 ( g  bes) |
+c ( bes  aes) |
+g ( f  e) |
+c' ( bes  aes) |
+g ( f  e) |
 % 30
-f-| ( f-| ) f-| |
-f-| ( f-| ) f-| |
-f-| ( f-| ) f-| |
-f-| ( f-| ) f-| |
-e-| ( c-| ) c-| |
+f-| ( f-|  f)-| |
+f-| ( f-|  f)-| |
+f-| ( f-|  f)-| |
+f-| ( f-|  f)-| |
+e-| ( c-|  c)-| |
 % 35
-des-| ( des-| ) des-| |
-d-| ( d-| ) d-| |
-ees-| ( ees-| ) ees-| |
-e-. ( e-. ) e-. |
+des-| ( des-|  des)-| |
+d-| ( d-|  d)-| |
+ees-| ( ees-|  ees)-| |
+e-. ( e-.  e)-. |
 f4 r8 |
 % 40
 \mark "H"
 f16 ees des c bes aes |
 g f e d c8 |
-bes''-| \( bes-| \) bes-| |
-bes-| \( bes-| \) bes-| |
-aes-| \( aes-| \) aes-| |
+bes''-| \( bes-|  bes\)-| |
+bes-| \( bes-|  bes\)-| |
+aes-| \( aes-|  aes\)-| |
 % 45
-aes-| \( aes-| \) aes-| |
-g-| \( g-| \) g-| |
-g-| \( g-| \) g-| |
-f16^"Cader à terra" ees des c bes aes |
+aes-| \( aes-|  aes\)-| |
+g-| \( g-|  g\)-| |
+g-| \( g-|  g\)-| |
+f16^"Cader Ã  terra" ees des c bes aes |
 g f e d c bes |
 % 50
 aes8 bes c |
@@ -75,8 +72,7 @@ b b b |
 bes! bes bes |
 a a a |
 aes! aes aes |
-[ g16 g ] g,8 r |
-\property Voice.autoBeamSettings \override #'(end 1 16 * *) = #(ly:make-moment 1 8)
+ g16[ g ] g,8 r |
 r16 g' g,8 r |
 % 75
 r16 g' g,8 r |
@@ -84,17 +80,14 @@ r16 g' g,8 r |
 r16 g' g,8 r |
 r16 g' g,8 r |
 r16 g' g,8 r |
-% revert does not seem to work, at least for autoBeamSettings
-\property Voice.autoBeamSettings \revert #'(end 1 16 * *)
-\property Voice.autoBeamSettings \override #'(end 1 16 * *) = #(ly:make-moment 3 8)
 % 80
 R4.*5 |
 R4.
-f''16 ( ees d c b ) a |
+f''16 ( ees d c b  a) |
 % vivaldi remembered to mark the b natural in this measure
 % but it's not marked in the violin solo and violin I parts
-g ( a b c d ) ees |
-f ( ees d c b ) a |
+g ( a b c d  ees) |
+f ( ees d c b  a) |
 \mark "L"
 g8 r8 r32 b c d |
 % 85
@@ -104,12 +97,13 @@ ees8 f g |
 c,4 r8 |
 R4.*7 |
 \mark "M"
-ees'8^"Vento Sirocco" ( d ) c |
-bes ( c ) d |
-ees ( d ) c |
-bes ( c ) d |
+\newSpacingSection
+<< { ees'8( d  c) } { s^"Vento Sirocco" } >> |
+bes8( c d) |
+ees( d c) |
+bes( c d) |
 % 105
-ees ( f ) g |
+ees( f g) |
 f r r |
 ees r r |
 d r r |
@@ -118,20 +112,20 @@ f ees r |
 ees, d r |
 g' f r |
 f, ees r |
-ees' ( f ) g |
-r aes,16 ( bes ) c8 |
+ees'( f g) |
+r aes,16( bes c8) |
 % 115
-r f16 ( ees ) d8 |
+r f16( ees d8) |
 ees4 r8
-ees ( f ) g |
-r aes,16 ( bes ) c8 |
-r f16 ( ees ) d8 | % vivaldi had f e(nat) des; should be f ees d(nat) based on current key (ees major) and measure 115 
+ees( f g) |
+r aes,16( bes c8) |
+r f16( ees d8) | % vivaldi had f e(nat) des; should be f ees d(nat) based on current key (ees major) and measure 115 
 % 120
 \mark "N"
+#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
+#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
 ees4 r8
 R4.*3
-\property Voice.autoBeamSettings \override #'(begin 1 32 * * ) = #(ly:make-moment 1 8 )
-\property Voice.autoBeamSettings \override #'(end 1 32 * * ) = #(ly:make-moment 1 8 )
 des32 des des des 	des des des des 	des des des des |
 g,4 r8 |
 R4.

@@ -1,72 +1,85 @@
-\version "1.7.13"
+\version "2.12.3"
 % TODO:
 % figure out how to avoid printing words on top of the other parts' notes
 % figure out how to wrap the text at the end of the line
 
-% Aggiacciato tremar tr‡ nevi algenti
+% Aggiacciato tremar tr√† nevi algenti
 % Al Severo Spirar d'orrido Vento,
 % Correr battendo i piedi ogni momento;
 % E pel Soverchio gel batter i denti;
 % 
 % Passar al foco i di quieti e contenti
 % Mentre la pioggio fuor bagna ben cento;
-% Caminar Sopra'l giaccio, e ‡ passo lento
+% Caminar Sopra'l giaccio, e √† passo lento
 % Per timor di cader gersene intenti;
 % 
-% Gir forte Sdruzziolar, cader ‡ terra,
+% Gir forte Sdruzziolar, cader √† terra,
 % Di nuovo ir Sopra 'l giaccio e correr forte
 % Sin ch'il giaccio Si rompe, e Si disserra;
 % 
 % Sentir uscir dalle ferrate porte
 % Sirocco, Borea, e tutti i Venti in guerra
-% Quest'Ë 'l verno, m‡ tal, che gioja apporte. 
+% Quest'√® 'l verno, m√† tal, che gioja apporte. 
 
-SonnetWinterOne = \notes {
+SonnetWinterOne = \new Voice {
+\override TextScript #'outside-staff-priority = #9999
 % mark "A" : measure 1
-s1^#'(lines "Aggiacciato tremar tr‡ nevi algenti" " " " ")
+s1^\markup {"Aggiacciato tremar tr√† nevi algenti"}
+\noBreak
 s1*10
 % mark "B" : measure 12
 % solo part also marked "Orrido Vento"
-s1^#'(lines "Al Severo Spirar d'orrido Vento," " " " ")
+s1^\markup {\translate #'(1 . 0) "Al Severo Spirar d'orrido Vento,"}
+\noBreak
 s1*9 s2
 % mark "C" : measure 22 1/2
-s2^#'(lines "Correr battendo i piedi ogni momento;" " " " ")
+s2^\markup {"Correr battendo i piedi ogni momento;"}
+\noBreak
 s1*24
 % mark "D" : measure 47
-s1^#'(lines "E pel Soverchio gel batter i denti;" " " " ")
+s1^\markup {"E pel Soverchio gel batter i denti;"}
 s1*16
 }
 
-SonnetWinterTwo = \notes {
+SonnetWinterTwo = \new Voice {
+\override TextScript #'outside-staff-priority = #9999
 % mark "E" : 
-s1^#'(lines "Passar al foco i di quieti e contenti Mentre la pioggio fuor bagna ben cento;" " " " ")
+s1^\markup {"Passar al foco i di quieti e contenti Mentre la pioggio fuor bagna ben cento;"}
 s1*17
 }
 
-SonnetWinterThree = \notes {
+SonnetWinterThree = \new Voice {
+\override TextScript #'outside-staff-priority = #9999
 % mark "F" : measure 1
-s4.^#'(lines "Caminar Sopra'l giaccio," " " " ")
+s4.^\markup {"Caminar Sopra'l giaccio,"}
 s4.*23
 % mark "G" : measure 25
-s4.^#'(lines "e ‡ passo lento Per timor di cader gersene intenti;" " " " ")
+s4.^\markup {\translate #'(1 . 0) "e √† passo lento Per timor di cader gersene intenti;"}
+\noBreak
 s4.*14
 % mark "H" : measure 40
-s4.^#'(lines "Gir forte Sdruzziolar, cader ‡ terra," " " " ")
+s4.^\markup {\translate #'(1 . 0) "Gir forte Sdruzziolar, cader √† terra,"}
+\noBreak
 s4.*10
 % mark "I" : measure 51
-s4.^#'(lines "Di nuovo ir Sopra 'l giaccio e correr forte" " " " ")
+s4.^\markup {"Di nuovo ir Sopra 'l giaccio e correr forte"}
+\noBreak
 s4.*37
 % mark "L" : measure 89
-s4.^#'(lines "Sin ch'il giaccio Si rompe, e Si disserra;" " " " ")
+s4.^\markup {"Sin ch'il giaccio Si rompe, e Si disserra;"}
+\noBreak
 s4.*11
 % mark "M" : measure 101
-s4.^#'(lines "Sentir uscir dalle ferrate porte" " " " ")
+s4.^\markup {\translate #'(1 . 0) "Sentir uscir dalle ferrate porte"}
+\noBreak
 s4.*18
 % mark "N" : measure 120
-s4.^#'(lines "Sirocco, Borea, e tutti i Venti in guerra" " " " ")
+s4.^\markup {\translate #'(1 . 0) "Sirocco, Borea, e tutti i Venti in guerra"}
+\noBreak
 s4.*29
 % 4 measures from end
-s4.^#'(lines "Quest'Ë 'l verno, m‡ tal, che gioja apporte." " " " ")
+s4.^\markup {"Quest'√® 'l verno, m√† tal, che gioja apporte."}
+\noBreak
 s4.*3
 }
 

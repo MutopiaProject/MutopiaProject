@@ -1,12 +1,12 @@
-\version "1.7.13"
-ViolinoPrimoAutumnOne = \notes {
+\version "2.12.3"
+ViolinoPrimoAutumnOne =  {
 \clef violin
 \key f \major
 \time 4/4
 
 \relative f'' {
 \mark "A"
-a8_"Allegro"^"Ballo e Canto dè Villanelli" a a bes	a4 a8 bes |
+a8_"Allegro"^"Ballo e Canto dÃ¨ Villanelli" a a bes	a4 a8 bes |
 a a a a 	bes4 a8 bes |
 a g16 a bes8 a 	g4 r |
 a,8_"Piano" a a bes	a4 a8 bes |
@@ -33,10 +33,10 @@ r2	a8 a a bes |  % 40
 a4 r	r16^"Vbriachi" g, b d g4 |
 r2	r16 f, a c f4 |
 r2	r16 e, gis b e4 |
-r2	d8_"Piano" ( c b ) a |
-gis ( fes e ) d	gis,4 r |	% 45
+r2	d8_"Piano" ( c b  a) |
+gis ( f e  d)	gis,4 r |	% 45  (vivaldi had fes instead of f in all four parts, but modern editions agree on f)
 r16 a'_"Forte" cis e a4	r2 |
-e8_"Piano" ( d cis bes! 	a g f ) e |
+e8_"Piano" ( d cis bes! 	a g f  e) |
 a,4 r	r16 d_"Forte" fis a d4 |
 r2	d,4 r |
 d4 r	r2 |  % 50
@@ -75,7 +75,7 @@ c c c c 	bes bes bes bes |  % 90
 bes bes bes bes	aes aes aes aes |
 aes? aes aes aes 	g g g g |  % vivaldi forgot accidental at start of measure
 aes aes aes aes	aes! aes aes aes |
-c_"Più Piano" c c c 	c c c c |
+c_"PiÃ¹ Piano" c c c 	c c c c |
 bes bes bes bes	bes bes bes bes |  % 95
 aes aes aes aes	aes aes aes aes |
 g_"Pianissimo" g16 f g8 g	r g16 f g8 c |

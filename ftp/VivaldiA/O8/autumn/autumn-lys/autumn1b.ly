@@ -1,12 +1,12 @@
-\version "1.7.13"
-ViolinoSecondoAutumnOne = \notes {
+\version "2.12.3"
+ViolinoSecondoAutumnOne =  {
 \clef violin
 \key f \major
 \time 4/4
 
 \relative f'' {
 \mark "A"
-f8_"Allegro"^"Ballo e Canto dè Villanelli" f f g	f4 f8 g |
+f8_"Allegro"^"Ballo e Canto dÃ¨ Villanelli" f f g	f4 f8 g |
 f f f f 	g4 f8 g |
 f e16 f g8 f 	e4 r |
 f,8_"Piano" f f g	f4 f8 g |
@@ -33,10 +33,10 @@ r2	f8 f f g |
 f4 r	r16^"Vbriachi" g, b d g4 |
 r2	r16 f, a c f4 |
 r2	r16 e, gis b e4 |
-r2	d8_"Piano" ( c b ) a |
-gis ( fes e ) d	gis,4 r |	
+r2	d8_"Piano" ( c b  a) |
+gis ( f e  d)	gis,4 r |	
 r16 a'_"Forte" cis e a4	r2 |
-e8_"Piano" ( d cis bes! 	a g f ) e |
+e8_"Piano" ( d cis bes! 	a g f  e) |
 a,4 r	r16 d_"Forte" fis a d4 |
 r2	d,4 r |
 d4 r	r2 |
@@ -75,7 +75,7 @@ aes? aes aes aes 	g g g g |	% a not marked flat here
 g g g g 	f f f f |
 f f f f 	e e e e |
 f f f f 	f f f f |
-aes_"Più Piano" aes aes aes	aes aes aes aes |
+aes_"PiÃ¹ Piano" aes aes aes	aes aes aes aes |
 g g g g		g g g g |
 f f f f 	f f f f |
 c_"Pianissimo" e16 d e8 e	r e16 d e8 e |

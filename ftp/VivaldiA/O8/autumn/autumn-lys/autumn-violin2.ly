@@ -1,4 +1,4 @@
-\version "1.7.13"
+\version "2.12.3"
 \include "autumn1.ly"
 \include "autumn2.ly"
 \include "autumn3.ly"
@@ -14,49 +14,56 @@
 \include "autumn1d.ly"
 \include "autumn2d.ly"
 \include "autumn3d.ly"
+\include "autumn1f.ly"
+\include "autumn2f.ly"
+\include "autumn3f.ly"
 \include "autumn-sonnet.ly"
 \include "autumn-header.ly"
 
 
-\score {<
-	\property Score.skipBars = ##t
+
+\score {<<
+	\set Score.skipBars = ##t
 % part=2violin
-	\context Staff = violin2 <
-		\property Staff.instrument = \markup { \column << "Violino" "Secondo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violintwo <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Secondo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoSecondoAutumnOne
-	>
+	>>
 % end
->
-	\paper {}
+>>
+  \layout {
+  }
 	\header { piece = "Allegro" }
 }
 
-\score {<
-	\property Score.skipBars = ##t
+\score {<<
+	\set Score.skipBars = ##t
 % part=2violin
-	\context Staff = violin2 <
-		\property Staff.instrument = \markup { \column << "Violino" "Secondo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violintwo <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Secondo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoSecondoAutumnTwo
-	>
+	>>
 % end
->
-	\paper {}
+>>
+  \layout {
+  }
 	\header { piece = "Adagio Molto" }
 }
 
-\score {<
-	\property Score.skipBars = ##t
+\score {<<
+	\set Score.skipBars = ##t
 % part=2violin
-	\context Staff = violin2 <
-		\property Staff.instrument = \markup { \column << "Violino" "Secondo" >> }
-		\property Staff.midiInstrument = "violin"
+	\context Staff = violintwo <<
+		\set Staff.instrumentName = \markup { \column { "Violino" "Secondo" } }
+		\set Staff.midiInstrument = "violin"
 		\ViolinoSecondoAutumnThree
-	>
+	>>
 % end
->
-	\paper {}
+>>
+  \layout {
+  }
 	\header { piece = "Allegro" }
 }
 

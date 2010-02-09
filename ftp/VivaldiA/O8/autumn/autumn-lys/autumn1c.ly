@@ -1,12 +1,12 @@
-\version "1.7.13"
-AltoViolaAutumnOne = \notes {
+\version "2.12.3"
+AltoViolaAutumnOne =  {
 \clef alto
 \key f \major
 \time 4/4
 
 \relative f' {
 \mark "A"
-a8_"Allegro"^"Ballo e Canto dè Villanelli" a a e	a4 a8 e |
+a8_"Allegro"^"Ballo e Canto dÃ¨ Villanelli" a a e	a4 a8 e |
 a a a e 	a4 a8 e |
 a a d, d 	e4 r |
 a,8_"Piano" a a e	a4 a8 e |
@@ -34,9 +34,9 @@ c4 r	r r16^"Vbriachi" g' d b! |
 g4 r	r r16 f' c a |
 f4 r 	r r16 e' b! gis |
 e4 r	d''8_"Piano" ( c b a |
-gis fes e ) d	gis,4 r |
+gis f e  d)	gis,4 r |
 r r16 a'_"Forte" e cis	a4 r |
-e''8_"Piano" ( d cis bes!	a g f ) e |
+e''8_"Piano" ( d cis bes!	a g f  e) |
 a,4 r	r r16 d'_"Forte" a fis |
 d4 r	d r |
 d r	r2 |

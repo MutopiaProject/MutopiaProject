@@ -1,15 +1,12 @@
-\version "1.7.13"
-AltoViolaAutumnTwo = \notes {
+\version "2.12.3"
+AltoViolaAutumnTwo =  {
 \clef alto
 \key d \minor
 \time 3/4
 
 \mark "D"
 \relative c' {
-<
-s2._"Adagio Sordini"^"Molto Dormienti Vbriachi"
-R2.
->
+<< { R2. } { s2._"Adagio Sordini"^"Molto Dormienti Vbriachi" } >>
 bes2. ~ |
 bes2. ~ |
 bes2. ~ |
@@ -19,8 +16,8 @@ e2.
 d2. |
 b'2. |
 c2. ~ |
-c2. ()
-cis2. ~ |
+c2. (
+cis2.) ~ |
 cis2. |
 b2. ~ |
 b2. ~ |
@@ -43,7 +40,7 @@ a2. ~ |
 a2._"Piano" |
 cis2. |
 a2. ~ |
-a2._"Più Piano" ~ |
+a2._"PiÃ¹ Piano" ~ |
 a2. |
 cis2. |
 a2. ~ |

@@ -1,5 +1,5 @@
-\version "1.7.13"
-AltoViolaWinterTwo = \notes {
+\version "2.12.3"
+AltoViolaWinterTwo =  {
 \clef alto
 \key ees \major
 \time 4/4
@@ -19,11 +19,11 @@ f1 ~ |
 f4 bes4 bes2 |
 c2 d2 |
 ees,2 f2 |
-aes,1 ~ |
-aes1 ~ |
-aes1 ~ |
-aes1 ~ |
-aes1^\fermata |
+bes,1 ~ |
+bes1 ~ |
+bes1 ~ |
+bes1 ~ |
+bes1^\fermata |
 \bar "||"
 }
 

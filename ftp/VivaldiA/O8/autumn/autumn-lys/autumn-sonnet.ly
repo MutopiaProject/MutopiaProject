@@ -1,50 +1,56 @@
-\version "1.7.13"
+\version "2.12.3"
 % Celebra il Vilanel con balli e Canti
 % Del felice raccolto il bel piacere
 % E del liquor di Bacco accesi tanti
 % Finiscono col Sonno il lor godere.
 % 
-% F‡ ch'ogn'uno tralasci e balli canti
-% L'aria che temperata d‡ piacere,
+% F√† ch'ogn'uno tralasci e balli canti
+% L'aria che temperata d√† piacere,
 % E la Staggion ch'invita tanti e tanti
 % 
-% I cacciator alla nov'alba ‡ caccia
+% I cacciator alla nov'alba √† caccia
 % Con corni, Schioppi, e canni escono fuore
 % Fugge la belua, e Seguono la traccia;
 % 
-% Gi‡ Sbigottita, e lassa al gran rumore
+% Gi√† Sbigottita, e lassa al gran rumore
 % De'Schioppi e canni, ferita minaccia
-% Languida di fuggir, m‡ oppressa muore.
+% Languida di fuggir, m√† oppressa muore.
 
-SonnetAutumnOne = \notes {
+SonnetAutumnOne = \new Voice {
+\override TextScript #'outside-staff-priority = #9999
 % mark "A" : measure 1
-s1^#'(lines "Celebra il Vilanel con balli e Canti  Del felice raccolto il bel piacere" " " " ")
+s1^ \markup{"Celebra il Vilanel con balli e Canti  Del felice raccolto il bel piacere"}
 s1*30
 % mark "B" : measure 32
-s1^#'(lines "E del liquor di Bacco accesi tanti" " " " ")
+s1^ \markup{"E del liquor di Bacco accesi tanti"}
 s1*56
 % mark "C" : measure 89
-s1^#'(lines "Finiscono col Sonno il lor godere." " " " ")
+s1^ \markup{"Finiscono col Sonno il lor godere."}
 s1*26
 }
 
-SonnetAutumnTwo = \notes {
+SonnetAutumnTwo = \new Voice {
+\override TextScript #'outside-staff-priority = #9999
 % mark "D"
-s2.^#'(lines "F‡ ch'ogn'uno tralasci e balli canti  L'aria che temperata d‡ piacere,  E la Staggion ch'invita tanti e tanti" " " " ")
+%s2.^ \markup{ \column {"F√† ch'ogn'uno tralasci e balli canti"  "L'aria che temperata d√† piacere,"  "E la Staggion ch'invita tanti e tanti"}}
+s2.^ \markup{\hspace #-10 \smaller "F√† ch'ogn'uno tralasci e balli canti  L'aria che temperata d√† piacere,  E la Staggion ch'invita tanti e tanti"}
 s2.*44
 }
 
-SonnetAutumnThree = \notes {
+SonnetAutumnThree = \new Voice {
+\override TextScript #'outside-staff-priority = #9999
 % mark "E"
-s4.^#'(lines "I cacciator alla nov'alba ‡ caccia  Con corni, Schioppi, e canni escono fuore" " " " ")
+s4.^ \markup{"I cacciator alla nov'alba √† caccia  Con corni, Schioppi, e canni escono fuore"}
 s4.*74
 % mark "F" : measure 76
-s4.^#'(lines "Fugge la belua, e Seguono la traccia;" " " " ")
+s4.^ \markup{"Fugge la belua, e Seguono la traccia;"}
 s4.*5
 % mark "G" : measure 82
-s4.^#'(lines "Gi‡ Sbigottita, e lassa al gran rumore  De'Schioppi e canni, ferita minaccia" " " " ")
+\break
+s4.^ \markup{"Gi√† Sbigottita, e lassa al gran rumore  De'Schioppi e canni, ferita minaccia"}
 s4.*46
 % mark "H" : measure 129
-s4.^#'(lines "Languida di fuggir, m‡ oppressa muore." " " " ")
+s4.^ \markup{\hspace #1 "Languida di fuggir, m√† oppressa muore."}
+\noBreak
 s4.*27
 }

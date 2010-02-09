@@ -1,12 +1,13 @@
-\version "1.7.13"
-AltoViolaSpringThree = \notes {
+#(ly:set-option 'old-relative)
+\version "2.12.3"
+AltoViolaSpringThree =  {
 \clef alto
 \key e \major
 \time 12/8
 
 \mark "G"
 \relative b' {
-b1._"Allegro"^\markup{"" \translate #(cons -0.5 1) "Danza Pastorale"} ~ |
+b1._"Allegro"^"Danza Pastorale" ~ |
 b1. ~ |
 b1. ~ |
 b1. ~ |
@@ -28,8 +29,8 @@ gis4. e b' gis ~ |
 gis a gis2. |
 gis4._"Piano" e b' gis ~ |
 gis a gis2. |
-gis4._"Forte" cis 	cis8 ( b ) cis  cis ( b ) a |
-b2. ~ 	b8 ( a ) b  b ( a ) gis |
+gis4._"Forte" cis 	cis8 ( b  cis)  cis ( b  a) |
+b2. ~ 	b8 ( a  b)  b ( a  gis) |
 dis2. b |
 dis b |
 fis'1. |

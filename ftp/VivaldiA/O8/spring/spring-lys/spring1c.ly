@@ -1,5 +1,6 @@
-\version "1.7.13"
-AltoViolaSpringOne = \notes {
+#(ly:set-option 'old-relative)
+\version "2.12.3"
+AltoViolaSpringOne =  {
 \clef alto
 \key e \major
 \time 4/4
@@ -42,18 +43,18 @@ b,4 b	e8 b4 fis'8 |
 b,4 b	e8 b4 fis'8 |
 e8 b dis ais'	fis4 fis |
 \mark "D"
-[ dis16 b32^"Tuoni" b b b b b ]	[ b b b b b b b b ] 	[ b b b b b b b b ] 	[ b b b b b b b b ] |
+ dis16[ b32^"Tuoni" b b b b b ]	 b[ b b b b b b b ] 	 b[ b b b b b b b ] 	 b[ b b b b b b b ] |
 b8 r b r	b r b r |
-[ b32 b b b b b b b ] 	[ b b b b b b b b ] 	[ a a a a a a a a ] 	[ a a a a a a a a ]  |
+ b32[ b b b b b b b ] 	 b[ b b b b b b b ] 	 a[ a a a a a a a ] 	 a[ a a a a a a a ]  |
 gis4 r r2 |
-[ a32 a a a a a a a ] [ a a a a a a a a ] 	ais4 r |
-r2	[ b32 b b b b b b b ] [ b b b b b b b b ] | 
+ a32[ a a a a a a a ]  a[ a a a a a a a ] 	ais4 r |
+r2	 b32[ b b b b b b b ]  b[ b b b b b b b ] | 
 bis4 r 	r2 |
-[ cis32 cis cis cis cis cis cis cis ] [ cis cis cis cis cis cis cis cis ] 	cis4 r |
-[ b32 b b b b b b b ] [ b b b b b b b b ] 	a4 r | 
-[ gis'32 gis gis gis gis gis gis gis ] [ gis gis gis gis gis gis gis gis ] 	fis4 r | 
-[ e32 e e e e e e e ] [ cis cis cis cis cis cis cis cis ]	[ gis gis gis gis gis gis gis gis ] [ gis gis gis gis gis gis gis gis ]
-[ gis gis gis gis gis gis gis gis ] [ gis gis gis gis gis gis gis gis ] 	cis4 r8 gis' |
+ cis32[ cis cis cis cis cis cis cis ]  cis[ cis cis cis cis cis cis cis ] 	cis4 r |
+ b32[ b b b b b b b ]  b[ b b b b b b b ] 	a4 r | 
+ gis'32[ gis gis gis gis gis gis gis ]  gis[ gis gis gis gis gis gis gis ] 	fis4 r | 
+ e32[ e e e e e e e ]  cis[ cis cis cis cis cis cis cis ]	 gis[ gis gis gis gis gis gis gis ]  gis[ gis gis gis gis gis gis gis ]
+ gis[ gis gis gis gis gis gis gis ]  gis[ gis gis gis gis gis gis gis ] 	cis4 r8 gis' |
 cis,4 cis	fis8 cis4 gis'8 |
 cis,4 cis	fis8 cis4 gis'8 |
 fis8 cis fis bis	gis4 gis |

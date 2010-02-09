@@ -1,5 +1,6 @@
-\version "1.7.13"
-AltoViolaSpringTwo = \notes {
+#(ly:set-option 'old-relative)
+\version "2.12.3"
+AltoViolaSpringTwo =  {
 \clef alto
 \key cis \minor
 \time 3/4

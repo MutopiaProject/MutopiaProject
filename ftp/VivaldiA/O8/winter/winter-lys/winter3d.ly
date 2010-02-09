@@ -1,7 +1,6 @@
-\version "1.7.13"
-\include "figured-accidentals.ly"
+\version "2.12.3"
 
-VioloncelloWinterThree = \notes {
+VioloncelloWinterThree =  {
 \clef bass
 \key f \minor
 \time 3/8
@@ -33,7 +32,7 @@ f4. ~ |
 f4. ~ |
 % 20
 f4. |
-c4._"Tasto Solo" ~ |
+c4. ~ |
 c4. ~ |
 c4. ~ |
 c4. ~ |
@@ -76,7 +75,7 @@ aes8 bes c |
 f,4 r8 |
 R4.*9 |
 % 61
-c'4._"Tasto Solo" ~ |
+c'4. ~ |
 c4. ~ |
 c4. ~ |
 c4. ~ |
@@ -90,7 +89,7 @@ c4. ~ |
 c4. ~ |
 c4. ~ |
 c4. |
-g4._"Tasto Solo" ~ |
+g4. ~ |
 g4. ~ |
 % 75
 g4. ~ |
@@ -126,30 +125,31 @@ ees'' c aes |
 f d b |
 g4 r8 |
 \mark "M"
-\property Staff.MultiMeasureRest \set #'minimum-length = #48
+\newSpacingSection
+%\override Staff.MultiMeasureRest   #'minimum-length = #48
 R4.*19 |
 % 120
 \mark "N"
+#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
+#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
 ees'4 r8 |
 R4.*3
-\property Voice.autoBeamSettings \override #'(begin 1 32 * * ) = #(ly:make-moment 1 8 )
-\property Voice.autoBeamSettings \override #'(end 1 32 * * ) = #(ly:make-moment 1 8 )
 bes32^"Venti" bes bes bes 	bes bes bes bes 	bes bes bes bes |
 % 125
-c4^#`(columns ,fignatural) r8 |
+c4 r8 |
 R4. |
 f32 f f f	f f f f 	f f f f |
 f4 r8 |
 bes,32 bes bes bes 	bes bes bes bes 	bes bes bes bes |
 % 130
-bes4^#'(lines "6") r8 |
+bes4 r8 |
 c32 c c c	c c c c 	c c c c |
-c4^#'(lines "6") r8 |
+c4 r8 |
 des32 des des des	des des des des 	des des des des |
-des4^#'(lines "6") r8 |
+des4 r8 |
 % 135
 e32 e e e	e e e e 	e e e e |
-c4^#`(lines "7" (columns ,fignatural)) r8 |
+c4 r8 |
 f32 f f f	f f f f 	f f f f |
 f4 r8 |
 R4. |
@@ -157,8 +157,8 @@ R4. |
 c32 c c c 	c c c c 	c c c c |
 bes32 bes bes bes	bes bes bes bes 	bes bes bes bes |
 aes32 f f f 	f f f f 	f f f f |
-c32^#'(lines "5" "4") c c c 	c c c c 	c c c c |
-c32^#`(columns ,fignatural) c c c 	c c c c 	c c c c |
+c32 c c c 	c c c c 	c c c c |
+c32 c c c 	c c c c 	c c c c |
 % 145
 f f f f 	f f f f 	f f f f	|
 f4 r8 |
@@ -167,8 +167,8 @@ c'32 c c c 	c c c c 	c c c c |
 bes bes bes bes	bes bes bes bes	bes bes bes bes |
 % 150
 aes32 f f f 	f f f f 	f f f f |
-c32^#'(lines "5" "4") c c c 	c c c c 	c c c c |
-c32^#`(columns ,fignatural) c c c 	c c c c 	c c c c |
+c32 c c c 	c c c c 	c c c c |
+c32 c c c 	c c c c 	c c c c |
 f4.^\fermata
 }
 \bar "|."

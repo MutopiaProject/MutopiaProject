@@ -1,7 +1,6 @@
-\version "1.7.13"
-\include "figured-accidentals.ly"
+\version "2.12.3"
 
-VioloncelloAutumnThree = \notes {
+VioloncelloAutumnThree =  {
 \clef bass
 \key f \major
 \time 3/8 
@@ -21,13 +20,13 @@ f,8 f' f |
 f,8 f' f |
 f,8 f' f |
 f,4 r8 |
-f'8 f16 f f c^#'(lines "7") |
+f'8 f16 f f c |
 f8 f,16 f f f |
-f'8 f16 f f c^#'(lines "7") |
+f'8 f16 f f c |
 f8 f,16 f f f |
-f'8 f16 f f c^#'(lines "7") |
+f'8 f16 f f c |
 f8 f,16 f f f |
-f'8 f16 f f c^#'(lines "7") |
+f'8 f16 f f c |
 f8 f,16 f f f |
 f8 f' f |
 f,8 f' f |
@@ -65,16 +64,16 @@ b4 r8 |
 c4 r8 |
 cis4 r8 |
 d4 r8 |
-g8^#`(lines "7" (columns ,fignatural)) g,16 g g g |
+g8 g,16 g g g |
 g4 r8 |
-g'8^#'(lines "6" "5") g,16 g g g |
-g4^#'(lines "6" "4") r8 |
-g'8^#`(lines "5" (columns "3" ,fignatural)) g,16 g g g |
-g4^#'(lines "6" "4") r8 |
-g'8^#`(lines "5" (columns "3" ,fignatural)) g,16 g g g |
-g4^#'(lines "6" "4") r8 |
-g'8^#'(lines "5" "4") g,16 g g g |
-g'8^#`(columns "3" ,fignatural) g,16 g g g |
+g'8 g,16 g g g |
+g4 r8 |
+g'8 g,16 g g g |
+g4 r8 |
+g'8 g,16 g g g |
+g4 r8 |
+g'8 g,16 g g g |
+g'8 g,16 g g g |
 c8 c' c |
 c,8 c' c |
 c,8 f fis |
@@ -90,20 +89,20 @@ R4. |
 c4 r8 |
 R4. |
 \mark "G"
-c8^"Scioppi e Cani" r r16 c |
+c8^\markup{\translate #'(1 . 0) "Scioppi e Cani"} r r16 c |
 c8 r r16 c |
-[ c32 g c g ]	[ c g c g ] 	[ c g c g ]|
-[ c32 g c g ]	[ c g c g ] 	[ c g c g ]|
+ c32[ g c g ]	 c[ g c g ] 	 c[ g c g ]|
+ c32[ g c g ]	 c[ g c g ] 	 c[ g c g ]|
 c4 r8 |
 f4 r8 |
 fis4 r8 |
 g4 r8 |
 gis4 r8 |
 a4 r8 |
-g,8^#`(columns ,fignatural) r r16 g |
+g,8 r r16 g |
 g8 r r16 g |
-[ g32 b g b ]	[ g b g b ]	[ g b g b ] |
-[ g32 b? g b ]	[ g b g b ]	[ g b g b ] |	% b not marked flat in this measure
+ g32[ b g b ]	 g[ b g b ]	 g[ b g b ] |
+ g32[ b? g b ]	 g[ b g b ]	 g[ b g b ] |	% b not marked flat in this measure
 g8 r r |
 c8 c' c |
 c, c' c |
@@ -117,9 +116,9 @@ R4. |
 f8 r r |
 R4. |
 bes,8 r r |
-a^#`(lines "7" (columns ,figsharp)) r r |
+a r r |
 d r r |
-e^#`(lines "7" (columns ,figsharp)) r r |
+e r r |
 a, r r |
 g r r |
 f' r r |
@@ -135,25 +134,25 @@ c4 r8 |
 f4 r8 |
 bes,4 r8 |
 c4 r8 |
-[ f32 c f c ]	[ f c f c ] 	[ f c f c ] |
-[ f32 c f c ]	[ f c f c ] 	[ f c f c ] |
+ f32[ c f c ]	 f[ c f c ] 	 f[ c f c ] |
+ f32[ c f c ]	 f[ c f c ] 	 f[ c f c ] |
 \mark "H"
 f4 r8 |
-[ e32 c e c ]	[ e c e c ] 	[ e c e c ] |
+ e32[ c e c ]	 e[ c e c ] 	 e[ c e c ] |
 e4 r8 |
-[ f32 a, f' a, ]	[ f' a, f' a, ]	[f' a, f' a, ] |
+ f32[ a, f' a, ]	 f'[ a, f' a, ]	 f'[ a, f' a, ] |
 f'4 r8 |
-[ e32 c e c ]	[ e c e c ] 	[ e c e c ] |
+ e32[ c e c ]	 e[ c e c ] 	 e[ c e c ] |
 e4 r8 |
-f8^#`(columns ,figflat) ( ees ) des |
-c4._"Tasto Solo" ~ |
+f8 ( ees  des) |
+c4. ~ |
 c4. ~ |
 c4. |
 f,4 r8 |
 r8 c'' c, |
-f8 f16 f f c^#'(lines "7") |
+f8 f16 f f c |
 f8 f,16 f f f |
-f'8 f16 f f c^#'(lines "7") |
+f'8 f16 f f c |
 f8 f,16 f f f |
 f8 f' f |
 f, f' f |

@@ -1,5 +1,5 @@
-\version "1.7.13"
-AltoViolaSummerThree = \notes {
+\version "2.12.3"
+AltoViolaSummerThree =  {
 \clef alto
 \key g \minor
 \time 3/4
