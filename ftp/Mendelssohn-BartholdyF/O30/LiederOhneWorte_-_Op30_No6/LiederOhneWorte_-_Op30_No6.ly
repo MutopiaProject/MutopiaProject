@@ -10,7 +10,7 @@
 	mutopiatitle = "Lieder ohne Worte: Venetianisches Gondellied, Op.30 No.6"
 	mutopiacomposer = "Mendelssohn-BartholdyF"
 	mutopiaopus = "Op. 30, No. 6"
-	mutopiainstrument = "piano"
+	mutopiainstrument = "Piano"
 	date = "1833-1834" % date found on wikipedia at http://en.wikipedia.org/wiki/Songs_without_Words
 	source = "Breitkopf & Härtel, 1874-1877"
 	style = "Romantic"
