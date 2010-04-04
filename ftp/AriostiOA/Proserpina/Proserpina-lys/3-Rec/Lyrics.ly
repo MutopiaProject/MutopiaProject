@@ -1,0 +1,3 @@
+\lyricmode {
+Giun -- to_all' a -- me -- no suo -- lo_il Rè d'A -- ver -- no ar -- res -- tò_il car -- ro, e rup -- pe l'om -- bra den -- sa, che lo chiu -- dea d'in -- tor -- no pal -- li -- da di pa -- u -- ra la bel -- la Cin -- zia_all' o -- ra al -- zò gri -- da d'or -- ro -- re, e lo spa -- ven -- to la bion -- da chio -- ma le dis -- per -- se al ven -- to vo -- lea fug -- gir mà le to -- ro -- se brac -- cia Plu -- ton dis -- te -- se, e se la strin -- se_al se -- no tras -- se -- la_in un ba -- le -- no, sul ne -- ro car -- ro, e col -- le tor -- ve lu -- ci sù quel bel vol -- to fis -- se d'A -- mor com -- po -- se_i la -- bri_ir -- su -- ti, e dis -- se.
+}
