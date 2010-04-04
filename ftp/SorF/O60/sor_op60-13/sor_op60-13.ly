@@ -8,6 +8,7 @@
         subtitle = "Opus 60"
         piece = "No. 13"
         composer = "Fernando Sor"
+        mutopiatitle = "25 Progressive Studies, No. 13"
         mutopiacomposer = "SorF"
         mutopiainstrument = "Guitar"
         style = "Baroque"
