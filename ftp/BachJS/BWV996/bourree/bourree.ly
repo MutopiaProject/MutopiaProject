@@ -16,7 +16,7 @@
   maintainerWeb = "http://www.larces.uece.br/~rudy/"
   moreInfo = "Other Public Domain Sheet Music: http://imslp.org/wiki/Lute_Pieces,_BWV_995-1000_(Bach,_Johann_Sebastian)"
 
- footer = "Mutopia-2010/04/04-1743"
+ footer = "Mutopia-2010/05/17-1743"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -116,7 +116,7 @@ bassAend = { g2. \dn }
   \dt a8 e' fis4   g,8 dis' e4 |
 
   a4   b8 fis g4  fis8 e |
-  f,8 cis' dis4   e, a |
+  fis,8 cis' dis4   e, a |
 
   dis4   e8 fis g4   fis8 e |
   b4  a4  b2 |
