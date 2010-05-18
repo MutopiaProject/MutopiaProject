@@ -1,7 +1,7 @@
-\version "2.11.44"
+\version "2.13.16"
 
 \paper {
-	page-top-space = #0.0
+	top-system-spacing #'space = #0.0
 	%indent = 0.0
 	line-width = 18.0\cm
 	ragged-bottom = ##f
@@ -27,8 +27,8 @@
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"
 	maintainer = "Hajo Dezelski"
 	maintainerEmail = "dl1sdz (at) gmail.com"
- footer = "Mutopia-2008/05/18-1419"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2010/05/18-1419"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2010. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 soprano = \relative d'' {
@@ -140,7 +140,7 @@ bassTwo = \relative g {
 	\repeat volta 2 { %begin repeated section
 		\stemDown	 
 		g4 r8 g8 [ g g ] | % 1
-		g8 [ fis ] e, \rest fis' fis [ fis ] | % 2
+		g8 [ fis ] b, \rest f' [ f f ] | % 2
 		f8 [ e ] r8 es8 [ es es ] | % 3
 		d4 r8 es8 [ d  c ] | % 4
 		bes4 r8 bes8 [ b b ] | % 5
