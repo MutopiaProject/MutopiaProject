@@ -12,11 +12,14 @@
   copyright = "Public Domain"
   source = "Band I: J.S. Bach: Compositionen für die Laute, Denkmäler alter Lautenkunst Wolfenbüttel: Julius Zwißlers Verlag, 1921. Plate Band I. (among other sources)"
   maintainer = "Rudy Matela"
+  % with contributions and corrections from:
+  %   Thomas Scharkowski
+  %   Paul Umfahrer-Vass
   maintainerEmail = "rudy [dot] matela [at] gmail [dot] com"
-  maintainerWeb = "http://www.larces.uece.br/~rudy/"
+  maintainerWeb = "http://matela.com.br/"
   moreInfo = "Other Public Domain Sheet Music: http://imslp.org/wiki/Lute_Pieces,_BWV_995-1000_(Bach,_Johann_Sebastian)"
 
- footer = "Mutopia-2010/05/17-1743"
+ footer = "Mutopia-2011/04/01-1743"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -78,7 +81,7 @@ bassAend = { g2. \dn }
 
   % 10th
   e4   b8 d c4  \ut b8 a |
-  c4 eis, fis \dt d' |
+  c4 gis a \dt d |
 
   gis4   a8 b c4   b8 a |
   e4 a, e' e, |
