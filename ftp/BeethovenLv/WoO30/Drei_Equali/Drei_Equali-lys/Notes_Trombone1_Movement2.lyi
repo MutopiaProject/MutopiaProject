@@ -1,0 +1,16 @@
+\version "2.14.0"
+
+TromOneMvtTwo = \relative c'
+{
+  %  \clef alto
+  fs1 g2 fs fs2. e4 e r r2
+  g1 a2 g g2. fs4 fs r r2
+  r1 r1 r2 g4 e c2 d c b e1 f2 e e2. d4 d r r2
+  g1 a2 g g2. fs4 fs r r2
+  f1 g4 r r2 f1 g4 r r2
+  fs1 g2 fs f2. e4 e r e2 g2. fs4 fs r r2
+  e2. d4 d r r2
+  g2. fs4 fs2. e4 e2. d4 d2 d d1
+  \fermata
+}
+

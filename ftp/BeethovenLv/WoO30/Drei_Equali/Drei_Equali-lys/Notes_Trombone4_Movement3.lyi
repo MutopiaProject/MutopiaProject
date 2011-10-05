@@ -1,0 +1,11 @@
+\version "2.14.0"
+
+TromFourMvtThree = \relative c
+{
+  %  \clef bass
+  bf2 bf r a a r g c2. ef4 d1. g,4 r r2 r
+  ef'2 ef r c c r c df2. df4 a2 bf2. bf4 f' r r
+  f a f bf2. bf4 bf bf af2. r4 r2
+  r2 r4 f4 a f bf2 ef, r r4 ef f2 f bf,1.
+}
+

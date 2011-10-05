@@ -1,0 +1,20 @@
+\version "2.14.0"
+
+TromFourMvtOne = \relative c
+{
+  %  \clef bass
+  d1\p d2.\< f4 a1\p r1
+  r2 e4 f g2 g g1 c,4 r r2
+  r2 f4 g a2 a a1 d, a'\< d,2.\> f4\! a2 r
+  \textCresc
+  r1 r2 g2 ~ g4 f e d c2\< c4 c c1\sf bf\sf
+  r2 bf\p c\< c' c1\sf bf\sf 
+  \useHairpins
+  r2 bf,\p a a d1 d2.\< f4 a1\p
+  r1 r2 e4 f g2 g g1 c,4 r r2 r1
+  r2 d4\f e f2 f\sf e\sf d\sf g1\ff
+  r2 g\p a r a, r 
+  \textCresc
+  d1 ~ d2\< c bf4 c d2\p d\> d d\pp r d r d1\fermata
+}
+

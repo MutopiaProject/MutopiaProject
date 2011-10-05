@@ -1,0 +1,13 @@
+\version "2.14.0"
+
+TromFourMvtTwo = \relative c
+{
+  % \clef bass
+  d1 cs2 d d2. a4 a r r2
+  a1 ~ a2 b4 cs4 cs2. d4 d r d' b
+  gs2 g fs f e c4 e a2 f g g, c1 b2 c c2. g4 g r r2
+  g'1 fs2 g g2. d4 d r r2 d1 cs4 r r2 d1 cs4 r r2
+  d1 cs2 d gs2. gs4 gs r g2 cs,2. d4 d4 r r2
+  a2. d4 d r r2 cs2. d4 d2. a4 a2. d4 d2 d2 d1\fermata
+}
+

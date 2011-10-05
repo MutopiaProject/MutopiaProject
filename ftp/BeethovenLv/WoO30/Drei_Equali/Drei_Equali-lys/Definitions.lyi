@@ -1,0 +1,45 @@
+\include "english.ly"
+
+textCresc = {
+  \crescTextCresc 
+  \dimTextDecresc 
+  \set decrescendoText = \markup { \italic { dim. } }  % was dimin. but crashes into pp
+  \override DynamicTextSpanner #'dash-period = #-1.0
+}
+useHairpins = {
+  \crescHairpin
+  \dimHairpin
+}
+
+% Names of Movements
+MvtI   = \markup{\bold \column {"Nº 1." "Andante"}}
+MvtII  = \markup{\bold \column {"Nº 2." "Poco Adagio"}}
+MvtIII = \markup{\bold \column {"Nº 3." "Poco Sostenuto"}}
+
+% Structural outlines of movements
+
+outlineMvtI =
+{
+  \time 2/2
+  \key d \minor
+  s1*50
+  \bar "|."
+}
+
+outlineMvtII =
+{
+  \time 2/2
+  \key d \major
+  s1_\markup{\italic dolce}
+  s1*37
+  \bar "|."
+}
+
+outlineMvtIII =
+{
+  \time 3/2
+  \key bf \major
+  s1.*16
+  \bar "|."
+}
+

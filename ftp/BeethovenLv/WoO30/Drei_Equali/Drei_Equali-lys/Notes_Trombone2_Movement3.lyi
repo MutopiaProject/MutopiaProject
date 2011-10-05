@@ -1,0 +1,13 @@
+\version "2.14.0"
+
+TromTwoMvtThree = \relative c'
+{
+  %  \clef alto
+  bf2 bf r c c r 
+  d ef2. c4 d1. d4 r r2 r
+  ef2 ef r ef ef r ef df2. df4 c2 df2. df4 c r r2 r
+  r2 r4 ef g ef af2. c,4 ef c a2. ef'4 ef ef
+  d2 ef r r4 ef d2 c d1.
+  
+}
+

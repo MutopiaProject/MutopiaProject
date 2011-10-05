@@ -1,0 +1,11 @@
+\version "2.14.0"
+
+TromOneMvtThree = \relative c'
+{
+  %  \clef alto
+  d2 d r f f r g2 g2. g4 fs1. g4 r r2 r
+  g2 g r gf gf r gf f2. f4 f2 f2. f4 f r r2 r
+  r2 r4 g bf g c2. ef,4 gf ef f2. f4 f f 
+  f2 g r r4 g f2 f f1.
+}
+

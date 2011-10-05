@@ -1,0 +1,21 @@
+\version "2.14.0"
+
+TromTwoMvtOne = \relative c'
+{
+  %  \clef alto
+  d1\p d2.\< d4 cs1\p
+  r1 r2 e d d d1 c4 r r2
+  r2 f e e e1 d cs d2. d4 cs2 r
+  \textCresc
+  r2 d ~ d4 c bf a g2 a4 b
+  c4 c\< d e ef1\sf d\sf 
+  r2 f\p f\< e fs1\sf g\sf
+  \useHairpins
+  r2 d2\p d cs d1 d2.\< d4 cs1\p
+  r1 r2 e d d d1 c4 r c\f d 
+  ef2 ef d f4 g c,2 f\sf g\sf f\sf g1\ff
+  \textCresc
+  r2 e\p d r cs r 
+  r2 a4 bf c2.\< d4 d2 d\p d\> d d\pp r d r d1\fermata
+}
+

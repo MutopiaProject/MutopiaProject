@@ -1,0 +1,12 @@
+\version "2.14.0"
+
+TromThreeMvtThree = \relative c
+{
+  %  \clef tenor
+  f2 f r f f r
+  b2 c2. g4 a1. bf4 r r2 r
+  bf2 bf  r af af r af af2. f4 f2 f2. bf4 
+  a4 r r a c a df2. df4 df df c2. r4 r2
+  r2 r4 a c a bf2 bf r r4 bf bf2 a bf1.
+}
+

@@ -1,0 +1,27 @@
+
+lilypond -dno-point-and-click -dpaper-size=\"a4\" Part_Trombone1.ly
+mv Part_Trombone1.pdf Part_Trombone1-a4.pdf
+lilypond -dno-point-and-click -dpaper-size=\"letter\" Part_Trombone1.ly
+mv Part_Trombone1.pdf Part_Trombone1-letter.pdf
+
+lilypond -dno-point-and-click -dpaper-size=\"a4\" Part_Trombone2.ly
+mv Part_Trombone2.pdf Part_Trombone2-a4.pdf
+lilypond -dno-point-and-click -dpaper-size=\"letter\" Part_Trombone2.ly
+mv Part_Trombone2.pdf Part_Trombone2-letter.pdf
+
+lilypond -dno-point-and-click -dpaper-size=\"a4\" Part_Trombone3.ly
+mv Part_Trombone3.pdf Part_Trombone3-a4.pdf
+lilypond -dno-point-and-click -dpaper-size=\"letter\" Part_Trombone3.ly
+mv Part_Trombone3.pdf Part_Trombone3-letter.pdf
+
+lilypond -dno-point-and-click -dpaper-size=\"a4\" Part_Trombone4.ly
+mv Part_Trombone4.pdf Part_Trombone4-a4.pdf
+lilypond -dno-point-and-click -dpaper-size=\"letter\" Part_Trombone4.ly
+mv Part_Trombone4.pdf Part_Trombone4-letter.pdf
+
+
+lilypond -dno-point-and-click -dpaper-size=\"a4\" Score_Drei_Equali.ly
+mv Score_Drei_Equali.pdf Score_Drei_Equali-a4.pdf
+lilypond -dno-point-and-click -dpaper-size=\"letter\" Score_Drei_Equali.ly
+mv Score_Drei_Equali.pdf Score_Drei_Equali-letter.pdf
+

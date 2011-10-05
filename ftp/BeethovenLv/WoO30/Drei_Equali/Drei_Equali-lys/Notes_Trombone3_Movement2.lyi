@@ -1,0 +1,17 @@
+\version "2.14.0"
+
+TromThreeMvtTwo = \relative c'
+{
+  %  \clef tenor
+  a1 a2 a a2. a4 a r r2
+  a1 a2 a a2. a4 a r r2
+  r2 e'4 cs a2 g c g4 g e2 f e d
+  r2 g g g g2. g4 g r r2
+  bf1 c2 bf bf2. a4 a r r2
+  a1 a4 r r2
+  a1 a4 r r2
+  a1 a2 a b2. b4 b r bf2 a2. a4 a r r2
+  g2. fs4 fs r r2 a2. a4 a2. g4 g2. fs4 fs2 fs fs1
+  \fermata
+}
+

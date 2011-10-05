@@ -1,0 +1,22 @@
+\version "2.14.0"
+
+TromOneMvtOne = \relative c'
+{
+  %  \clef alto
+  f1\p f2.\< f4 e1\p r2 e4 f 
+  g2 g g2. f4 f1 e4 r f g
+  a2 a a2. g4 g1 f e\<  f2.\> f4\! 
+  e2 a2 ~ a4 g f e d2 e4 fs g2. f4
+  \textCresc
+  e4 e\< f g a1\sf bf1\sf
+  r2 g\p g\< g a1\sf bf\sf
+  \useHairpins
+  r2 g\p f e f1 f2.\< f4 e1\p
+  r2 e4 f g2 g g2. f4 f1 e4 r4 r2
+  r2 g4\f a bf2 bf a a\sf a\sf a\sf bf1\ff
+  \textCresc
+  r2 g\p f r e r 
+  d1 ~ d2\< e4 fs g2 g\p 
+  fs\> g fs\pp r fs r fs1\fermata
+}
+

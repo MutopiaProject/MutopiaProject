@@ -1,0 +1,20 @@
+\version "2.14.0"
+
+TromThreeMvtOne = \relative c'
+{
+  %  \clef tenor
+  a1\p a2.\< a4 a1\p r1
+  r2 c b b b g g4 r r2
+  r2 d' cs cs cs a a gs a1\< a2.\> a4\! a2 r
+  \textCresc 
+  r1 r1 r2 c ~ c4 bf\< a g fs1\sf g\sf
+  r2 d'\p c\< c ef1\sf d\sf
+  \useHairpins
+  r2 g,\p a a a1 a2.\< a4 a1\p 
+  r1 r2 c b b b g g4 r r2
+  r1 r1 r2 a4\f b cs2\sf d\sf d1\ff
+  \textCresc
+  r2 bf\p a r a r 
+  r2 fs4 g a2.\< a4 bf2 bf\p a\> bf a\p r a r a1\fermata
+}
+
