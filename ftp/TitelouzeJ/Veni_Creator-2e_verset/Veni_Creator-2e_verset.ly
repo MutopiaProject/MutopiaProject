@@ -1,24 +1,42 @@
-\version "2.4.2"
+\version "2.14.2"
 \include "italiano.ly"
 
-% Écrit avec l'aide très secourable de lyqi ! Essayez-le !
+% Ã‰crit avec l'aide trÃ¨s secourable de lyqi ! Essayez-le !
 % Written with the most secourable help of lyqi ! Try it !
 
+% Version 2 du 17 septembre 2011 pour la version 2.14.0.
+% Quelques corrections typographiques.
+% Modification des instruments midi.
+
 \header{
-     title = "Veni Creator"
-     subtitle = "2e verset" % version 1.
-     piece = ""
-     instrument = "Orgue -- Organ"
-     composer = "Jean Titelouze (1563-1633)"
-     copyright = "Public domain -- Domaine public."
-     source = "Edition Schott 1869 - Alexandre Guilmant"
-     opus = ""
-     lastupdated = "2005-04-16"
-     enteredby = "Gérard Gréco"
-     maintainer = "Gérard Gréco"
-     
-     footer = "Mutopia-2005/04/17-551"
-     tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+  title = "Veni Creator"
+  subtitle = \markup{\center-align{\line{3\super{e} verset}}}
+  piece = ""
+  instrument = \markup{\center-align{\line{Orgue â€” Organ}}}
+  composer = "Jean Titelouze (1563-1633)"
+  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  source = "Archives des maÃ®tres de l'orgue, vol.1, 1897, Alexandre Guilmant"
+  opus = ""
+  lastupdated = "2011-09-17"
+  % lastupdated = "2005-04-16"
+  enteredby = "GÃ©rard GrÃ©co"
+  maintainer = "GÃ©rard GrÃ©co"
+
+  mutopiatitle = "Veni Creator (2e verset)"
+  mutopiacomposer = "TitelouzeJ"
+  mutopiainstrument = "Organ"
+  mutopiastyle = "Baroque"
+ footer = "Mutopia-2011/09/18-551"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright Â© 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+}
+
+\paper {
+  print-page-number = ##f
+  indent = 10\mm
+  left-margin = 15\mm
+  line-width = 18\cm
+  bottom-margin = 15\mm
+  top-margin = 15\mm 
 }
 
 global = {
@@ -32,8 +50,12 @@ themeduchoral = \relative do''{
    do1 si?1 do1 do1 la1 sol1 la1 do1 re1
    do1. re1. mi1. mi1.
    re1 R1
-   do1 re1 mi1 do1 si1 la1 sol1 re'1 sol,1
-   la1 si1 do1 si1 do1 la1 sol1 fa1 la1 la1
+   do1 re1 mi1 do1 si1 
+   \once \override NoteColumn #'force-hshift = #1.5 la1
+   sol1 re'1 sol,1
+   la1 si1 do1 si1 do1 la1
+   \once \override NoteColumn #'force-hshift = #1.5 sol1
+   fa1 la1 la1
    sib1 la1 sol1 fad1 sol1 ~ sol1 ~ sol1 ~
    sol1^\fermata
 }
@@ -71,7 +93,7 @@ alto = \relative do'{
 do4
    | fa8 [ sol8 la8 ] sol4 fad8 sol2 sol4\rest
    | sol8 [ la8 si8 do8 ] si4 la8 [ sol8 fa8 ] mi4 fa8
-   | sol4. si8 [ do8 si8 ] do4 si8 [ la8 sol8 la8 ]
+   | \dotsUp sol4. \dotsNeutral si8 [ do8 si8 ] do4 si8 [ la8 sol8 la8 ]
    % Passage en binaire.
    \once \override Score.MetronomeMark #'transparent = ##t \tempo 4 = 120
    | \bar "||" \time 4/4 si4 sol4. sol8 fad4
@@ -123,7 +145,7 @@ tenor = \relative do' {
    | sol4 fa4 sib4 sib4 ~
    | sib4 la4 sol4 do,4
    | re4 r8 sol8 mi4 mi'8 [ re8 ]
-   | do8 [ si8 la8 mi8 ] la4. sol8
+   | do8 [ si8 la8 mi8 ] \dotsDown la4. \dotsNeutral sol8
    | fa4 mi4 la8 [ si8 ] do4 ~
    | do4 la4 r4 fa4 ~
    | fa4 mi4 re4. mi8
@@ -154,7 +176,7 @@ tenor = \relative do' {
    | si4 do4. do8 sib4
    | la2 sib2
    | la2 r4 la8 [ sol8 ]
-   | la8 [ si8 ] do4 la4 fa4 ~
+   | la8 [ si?8 ] do4 la4 fa4 ~
    | fa4 sol4 re2
    | r2 la'8 [ sol8 la8 si?8 ]
    | do4 sol4 sol4. la8
@@ -219,7 +241,7 @@ basse = \relative do{
    | sol,4 do2 si4
    | do4 re4 mi4 do4
    | sol'1
-   | \override Script #'padding = # 2  sol,1_\fermata
+   | \override Script #'padding = # 1  sol,1_\fermata
 }
 
 \score {
@@ -228,14 +250,12 @@ basse = \relative do{
 	\context Staff = "dessus" <<
 	  \global
 	  \clef violin
-	  \set Staff.midiInstrument = "Church organ"
 	  \context Voice = "choral" {\voiceOne \themeduchoral}
-	  \context Voice = "alto" {\voiceTwo \alto}
+	  \context Voice = "alto"   {\voiceTwo \alto}
 	>>
 	\context Staff = "basse" <<
 	  \global
 	  \clef bass
-	  \set Staff.midiInstrument = "Church organ"
 	  \context Voice = "tenor" {\voiceOne \tenor}
 	  \context Voice = "basse" {\voiceTwo \basse}
 	>>
@@ -244,6 +264,63 @@ basse = \relative do{
        \bar "|."
      }
      \layout {}
-     \midi{ \tempo 4 = 120  }
+}
+
+\score { 
+  <<
+    \new Staff {
+      \set Staff.midiInstrument = "tenor sax"
+      \themeduchoral
+    }
+    \new Staff {
+      \set Staff.midiInstrument = "baritone sax"
+      \transpose do do' 
+      \themeduchoral
+    }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
+      \alto
+    }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
+      \transpose do do' 
+      \alto
+    }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
+      \tenor
+    }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
+      \transpose do do' 
+      \tenor
+    }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
+      \basse
+    }
+    \new Staff {
+      \set Staff.midiInstrument = "pan flute"
+      \transpose do do' 
+      \basse
+    }
+%%$    \new Staff { % tempo staff
+%%$      \tempo 4 = 110 s1 * 52
+%%$      \tempo 4 = 100 s4
+%%$      \tempo 4 = 90  s4
+%%$      \tempo 4 = 80  s2
+%%$      \tempo 4 = 50  s1 
+%%$    }
+
+  >>
+     
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 120 4)
+      }
+    }
+
+
 
 }
