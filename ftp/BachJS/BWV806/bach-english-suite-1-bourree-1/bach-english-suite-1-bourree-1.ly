@@ -17,11 +17,12 @@
 	mutopiatitle =      "English Suite I: Bourree I"
 	mutopiacomposer =   "BachJS"
 	mutopiaopus =       "BWV 806"
- footer = "Mutopia-2008/06/17-85"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+
+ footer = "Mutopia-2011/06/15-85"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "2.11.46"
+\version "2.14.0"
 
 voiceone =  \relative c' {
 	\key a \major
@@ -31,7 +32,7 @@ voiceone =  \relative c' {
 	\time 2/2
 
 	\partial 4 e4					|
-	a8[(  gs) b(  a)]  cs[(  d) a(  gs)]			|
+	a8[(  gs) b(  a)]  cs[(  b) a(  gs)]			|
 
 	\repeat "volta" 2 {
 		a4 e  cs8[ e a b]					|
@@ -60,7 +61,7 @@ voiceone =  \relative c' {
 		b'8[(  a) cs(  b)]  d[(  cs)] e4			|
 		cs\prall  b8[ cs]  a[ b cs d]				|
 		e[(  d) fs(  e)]  g[(  fs)] a4				|
-		fs\prall  e8[ fs] d4 fs				|
+		fs\prall^\markup{\tiny \natural}  e8[ fs] d4 fs		|
 		fs8[( d cs  b)]  d[(  cs) e(  d)]			|
 		e[( cs b  as)]  cs[(  b) d(  cs)]			|
 		e[(  d) cs(  b)]  d[(  cs) b(  as)]			|
@@ -84,7 +85,7 @@ voiceone =  \relative c' {
 		e8[( cs b  a)]  cs[(  b) d(  cs)]			|
 		d[( b a  gs)]  b[(  a) cs(  b)]				|
 		d[( cs b  a)]  cs[( b a  gs)]				|
-		a[ e fs gs]  a[ b cs d]				|
+		a[ e( fs gs])  a[ b cs d]				|
 		e[( cs b  a)]  cs[(  b) d(  cs)]			|
 		d[( b a  gs)]  b[(  a) cs(  b)]				|
 		d[( cs b  a)]  cs[( b a  gs)]				|
@@ -109,7 +110,7 @@ voicetwo =  \relative c {
 		cs[(  b) d(  cs)]  e[(  d) cs(  a)]			|
 		d[(  cs) e(  d)]  fs[(  e) ds(  b)]			|
 		e[(  fs) e(  d!)]  cs[(  b) cs(  a)]			|
-		e'[(  ds)(  fs) e]  gs[(  fs) e(  d)]			|
+		e'[(  ds)  fs( e)]  gs[(  fs) e(  d)]			|
 		cs[(  b) d(  cs)]  e[(  d) cs(  b)]			|
 		cs[( d cs  b)] a4 e					|
 		a8[(  gs) b(  a)]  cs[(  b) a(  gs)]			|
@@ -119,7 +120,7 @@ voicetwo =  \relative c {
 		a[(  gs) fs(  e)] b'4 b,				|
 	}
 	\alternative {
-		{  e8[ ds fs e]  gs[ fs e d] | cs4\prall  b8[ cs] a4 r }
+		{  e8[( ds) fs( e])  gs[( fs e d]) | cs4\prall  b8[ cs] a4 r }
 		{ <<
 			{ \voiceOne e'2. \stemNeutral }
 			{ \new Voice { \voiceTwo r4 b e, } } >> } }
@@ -134,7 +135,7 @@ voicetwo =  \relative c {
 		g d e fs						|
 		b,8[(  as) cs(  b)]  d[(  cs)] e4			|
 		ds2\prall r4 b					|
-		e8[(  d) fs(  e)]  gs[(  fs)] a4			|
+		e8[(  ds) fs(  e)]  gs[(  fs)] a4			|
 		gs2\prall r4 e					|
 		a8[(  gs) b(  a)]  cs[(  b)] e4				|
 		cs\prall d cs b					|
