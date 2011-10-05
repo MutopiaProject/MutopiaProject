@@ -1,39 +1,42 @@
- \version "2.10.16"
+\version "2.12.3"
 
- \paper { between-system-padding = #1
+ \paper{ between-system-padding = #0
 	ragged-bottom=##f
-	ragged-last-bottom=##f
+	ragged-last-bottom=##f	
+	#(define page-breaking ly:minimal-breaking)
 	}
 
-     \header {
-       title = "Album pour la jeunesse"
-       subsubtitle = "-----"
-       composer = "Robert Schumann (1810-1856)"
-       opus = "Opus 68 N°3"
-       instrument = "Chanson fredonnée"
-       copyright = "Creative Commons Attribution-ShareAlike 2.5"
+ \header {
+	title = "Album pour la jeunesse"
+	subtitle = "40 (43) pièces de piano"
+	subsubtitle = "-----"
+	composer = "Robert Schumann (1810-1856)"
+	opus = "Opus 68 N°3"
+	instrument = "Chanson fredonnée"
+	copyright = "Creative Commons Attribution-ShareAlike 3.0"
      
        % These are headers used by the Mutopia Project
        % http://www.mutopiaproject.org/
-      mutopiatitle = "Album pour la jeunesse - 3.Chanson fredonnée "
+       mutopiatitle = "Album pour la jeunesse - 3.Chanson fredonnée"
        mutopiacomposer = "SchumannR"
-       mutopiaopus = "O 68 n°3 "
+       mutopiaopus = "O 68 n°3"
        mutopiainstrument = "Piano"
        date = "1848"
        source = "Peters"
        style = "Romantic"
-       copyright = "Creative Commons Attribution-ShareAlike 2.5"
+       copyright = "Creative Commons Attribution-ShareAlike 3.0"
        maintainer = "Philippe Hézaine"
        maintainerEmail = "philippe.hezaine@free.fr"
        lastupdated = "2006/Jun/20"
 
 
 
- footer = "Mutopia-2007/02/11-651"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/2.5" http://creativecommons.org/licenses/by-sa/2.5 } } } }
+ footer = "Mutopia-2011/09/18-651"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
      }
 
-     upper = \relative c'' {
+
+upper = \relative c'' {
        \clef treble
        \key c \major
        \time 4/4
@@ -45,11 +48,12 @@
 	f4^4( g e f |
 	d f c d) |
 	\once \override Fingering #'extra-offset = #'(-0.7 . 0)
-	e^3( d c d
+	e^3( d c d |
 	 e f g2) |
 	\once \override Fingering #'extra-offset = #'(-0.7 . 0)
 	f4^4( g e f |
-	d2 c4) r \bar"||"
+	d2 c4) r |
+	\bar"||"
 	\voiceOne
 	<<
 	{
@@ -104,8 +108,9 @@
 	f( g e f |
 	d2 c4) a\rest |
      }
-     
-     lower = \relative c' {
+
+
+lower = \relative c' {
        \clef treble
        \key c \major
        \time 4/4
@@ -172,79 +177,69 @@
 	c,( g' b, g' a, g' b, g' |
 	c, g' d g e g f g) |
 	d( g b, g' c, g' a, g' |
-	b, g' b, f' <c e>4) b'\rest \bar "|."
+	b, g' g, f' <c e>4) b'\rest 
+	\bar "|."
      }
-     
-     dynamics = {
+
+
+dynamics = {
        s8\p s8 s4 s2 s1*23
      }
-     
-%     pedal = {
-%     }
-     
-     \score {
-       \context PianoStaff <<
-   \set PianoStaff.instrumentName = \markup{ \fontsize #4 { "3." } \hspace #1.0
-}
-         \context Staff=upper \upper
-         \context Dynamics=dynamics \dynamics
-         \context Staff=lower <<
-           \clef bass
-           \lower
-         >>
-%         \context Dynamics=pedal \pedal
-       >>
-       \layout {
-         \context {
-           \type "Engraver_group"
-           \name Dynamics
-           \alias Voice % So that \cresc works, for example.
-           \consists "Output_property_engraver"
-     
-           \override VerticalAxisGroup #'minimum-Y-extent = #'(-5 . 5)
-%           pedalSustainStrings = #'("Ped." "*Ped." "*")
-%           pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-     
-%           \consists "Piano_pedal_engraver"
-           \consists "Script_engraver"
-           \consists "Dynamic_engraver"
-           \consists "Text_engraver"
-     
-           \override TextScript #'font-size = #2
-           \override TextScript #'font-shape = #'italic
-           \override DynamicText #'extra-offset = #'(0 . 2.5)
-           \override Hairpin #'extra-offset = #'(0 . 2.5)
-     
-           \consists "Skip_event_swallow_translator"
-     
-           \consists "Axis_group_engraver"
-         }
-         \context {
-           \PianoStaff
-           \accepts Dynamics
-           \override VerticalAlignment #'forced-distance = #4.5
-         }
-       }
-     }
-     \score {
-       \context PianoStaff <<
-         \context Staff=upper << \upper \dynamics >>
-         \context Staff=lower << \lower \dynamics >>
-%         \context Dynamics=pedal \pedal
-       >>
-       \midi {
-	\context {  \Score
-	tempoWholesPerMinute = #(ly:make-moment 70 4)
-	     }
 
-         \context {
-           \type "Performer_group"
-           \name Dynamics
-%           \consists "Piano_pedal_performer"
-         }
-         \context {
-           \PianoStaff
-           \accepts Dynamics
-         }
-       }
+pedal = {
      }
+
+
+\score {
+	\new PianoStaff = "PianoStaff_pf" <<
+	  \set PianoStaff.instrumentName = \markup{ \fontsize #6 {"3. "} \hspace #1.0 }
+	  \new Staff = "Staff_pfUpper" \upper
+	  \new Dynamics = "Dynamics_pf" \dynamics
+	  \new Staff = "Staff_pfLower" << \lower >>
+%	  \new Dynamics = "pedal" \pedal
+  >>
+
+  \layout {      % define Dynamics context
+    \context {
+      \type "Engraver_group"
+      \name Dynamics
+      \alias Voice
+      \consists "Output_property_engraver"
+%      \consists "Piano_pedal_engraver"
+      \consists "Script_engraver"
+      \consists "New_dynamic_engraver"
+      \consists "Dynamic_align_engraver"
+      \consists "Text_engraver"
+      \consists "Skip_event_swallow_translator"
+      \consists "Axis_group_engraver"
+      pedalSustainStrings = #'("Ped." "*Ped." "*")
+      pedalUnaCordaStrings = #'("una corda" "" "tre corde")
+      \override DynamicLineSpanner #'Y-offset = #0
+      \override TextScript #'font-size = #2
+      \override TextScript #'font-shape = #'italic
+      \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+    }
+    % modify PianoStaff context to accept Dynamics context
+    \context {
+      \PianoStaff
+      \accepts Dynamics
+     }
+   }
+ }
+
+\score {
+	\unfoldRepeats
+	\new PianoStaff = "PianoStaff_pf" <<
+	\new Staff = "Staff_pfUpper" << \upper \dynamics \pedal >>
+	\new Staff = "Staff_pfLower" << \lower \dynamics \pedal >>
+	>>
+
+  \midi {
+  \context {
+	tempoWholesPerMinute = #(ly:make-moment 70 4)
+	   }
+	 }
+       }
+
+
+
