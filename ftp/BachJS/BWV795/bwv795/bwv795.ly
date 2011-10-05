@@ -1,4 +1,4 @@
-\version "2.11.46"
+\version "2.14.0"
 #(set-global-staff-size 20)
 
 \header {
@@ -15,8 +15,8 @@
   maintainer = "Olivier Vermersch"
   maintainerEmail = "olivier.vermersch (at) wanadoo.fr"
 
- footer = "Mutopia-2008/06/15-199"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2011/06/14-199"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 
@@ -56,8 +56,8 @@ melone =  \relative c'' {
   a g aes8 r bes16 c32 des! c8. bes16 g4\prall |
 
   % bars 13-15
-  aes8 ees g f r f aes! g |
-  r aes d  ees ~ ees d16 c bes8 aes |
+  aes8 ees ges f d'\rest f, aes! g |
+  d'\rest aes d  ees ~ ees d16 c bes8 aes |
   g bes des! c r c ees d |
 
   % bars 16-18
@@ -77,7 +77,7 @@ melone =  \relative c'' {
 
   % bars 25-27
   bes beses aes8 des4 c8 |
-  des aes c bes r bes des! c |
+  des aes ces bes r bes des! c |
   r des g aes ~ aes g16 f ees8 des |
 
   % bars 28-31
@@ -89,14 +89,14 @@ melone =  \relative c'' {
   % bars 32-35
   r bes e f ~ f ees16 des c8 bes |
   aes4 r8 \std bes16 c32 des des16 b c8 r c'16 a |
-  ges e f8 \stb r g,!16 aes32 bes aes8. g16 e8. f16 |
+  ges e f8 \stb d\rest g,!16 aes32 bes aes8. g16 e8. f16 |
   f1\fermata \bar "|."
 }
 
 meltwo =  \relative c' {
   % bars 1-3
-  r8 f( aes g) r g( bes a) |
-  r8 bes e f ~ f ees16 des c8 bes |
+  r8 f^( aes g^) r g^( bes a^) |
+  bes8\rest bes e f^~ f ees16 des c8 bes |
   aes4 c b bes |
 
   % bars 4-6
@@ -208,7 +208,8 @@ melthree =  \relative c, {
   ges e f8 r g!16 aes32 bes aes8 bes c c, |
   \std f,4 \stb f' e ees |
   d des c8 bes c c, |
-  f1\fermata \bar "|."
+  \once \override Script #'padding = #1.5
+  f1_\fermata \bar "|."
 }
 
 
