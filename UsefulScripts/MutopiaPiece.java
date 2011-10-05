@@ -124,7 +124,7 @@ public class MutopiaPiece
          String imgString = imgInput.readLine();
          imgInput.close();
          
-         int widthStart = imgString.indexOf("image, ") + 7;
+         int widthStart = imgString.indexOf("image data, ") + 12;
          int widthEnd = imgString.indexOf(" ", widthStart);
          previewWidth = new Integer(imgString.substring(widthStart, widthEnd));
          
