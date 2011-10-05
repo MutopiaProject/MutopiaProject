@@ -1,4 +1,4 @@
-\version "2.12.1"
+\version "2.14.0"
 \include "english.ly"
 
 \header
@@ -15,7 +15,8 @@
   maintainer	    = "Steven McDougall"
   maintainerEmail   = "swmcd@world.std.com"
   maintainerWeb     = "http://world.std.com/~swmcd/steven/"
- footer = "Mutopia-2009/01/06-1613"
+
+ footer = "Mutopia-2011/06/15-1613"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -96,7 +97,7 @@ lower = \relative c
     c4 f ef                        | % 17
     d4 g ef                        | % 18
     d4 c b                         | % 19
-    c4 bf! b                       | % 20
+    c4 bf! a                       | % 20
     b4 c bf                        | % 21
     a4 af g                        | % 22
     ef'4 f g                       | % 23
