@@ -2,8 +2,6 @@
 
 # Filename:         mutopia-history.sh
 # Original author:  Chris Sawer
-# Subversion:       $Revision$
-# Last changed:     $Date$
 #
 # Description:
 #   Script to generate .log files for part (or all) of the Mutopia archive.

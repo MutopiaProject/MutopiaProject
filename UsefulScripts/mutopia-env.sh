@@ -2,8 +2,6 @@
 
 # Filename:         mutopia-env.sh
 # Original author:  Chris Sawer
-# Subversion:       $Revision$
-# Last changed:     $Date$
 #
 # Description:
 #   Script to set up the appropriate LilyPond and Mutopia environment variables

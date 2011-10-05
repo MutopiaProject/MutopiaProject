@@ -1,8 +1,6 @@
 /*
  * Filename:         MutopiaRebuild.java
  * Original author:  Chris Sawer
- * Subversion:       $Revision$
- * Last changed:     $Date$
  *
  * Description:
  *   Program to rebuild (parts of) the Mutopia archive where necessary.

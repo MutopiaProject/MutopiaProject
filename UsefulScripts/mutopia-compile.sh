@@ -2,8 +2,6 @@
 
 # Filename:         mutopia-compile.sh
 # Original author:  Chris Sawer
-# Subversion:       $Revision$
-# Last changed:     $Date$
 #
 # Description:
 #   Script to compile .ly files into .mid/.pdf/.ps.gz files.

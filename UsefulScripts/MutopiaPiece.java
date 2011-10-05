@@ -1,8 +1,6 @@
 /*
  * Filename:         MutopiaPiece.java
  * Original author:  Chris Sawer
- * Subversion:       $Revision$
- * Last changed:     $Date$
  *
  * Description:
  *   Class to store information about a Mutopia piece.

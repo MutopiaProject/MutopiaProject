@@ -1,8 +1,6 @@
 /*
  * Filename:         Mutopia.java
  * Original author:  Chris Sawer
- * Subversion:       $Revision$
- * Last changed:     $Date$
  *
  * Description:
  *   Program to perform various useful manipulations of .ly files for Mutopia.

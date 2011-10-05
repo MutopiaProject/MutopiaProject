@@ -1,8 +1,6 @@
 /*
  * Filename:         MutopiaMaps.java
  * Original author:  Chris Sawer
- * Subversion:       $Revision$
- * Last changed:     $Date$
  *
  * Description:
  *   Class to set up licence, composer and style maps.
