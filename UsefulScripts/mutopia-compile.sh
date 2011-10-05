@@ -58,12 +58,12 @@ fi
 
 # LilyPond version specific fixes
 # Note - these will need to be updated as the default version changes
-# Currently assumed default version: 2.12
-if [[ $LILYPOND_VERSION = 2\.13 ]] || [[ $LILYPOND_VERSION = 2\.13\.? ]] || [[ $LILYPOND_VERSION = 2\.13\.?? ]]; then
+# Currently assumed default version: 2.14
+if [[ $LILYPOND_VERSION = 2\.12 ]] || [[ $LILYPOND_VERSION = 2\.12\.? ]] || [[ $LILYPOND_VERSION = 2\.12\.?? ]]; then
+   PS_AND_PDF=
+else
    # NB. This changed with 2.13.4
    PS_AND_PDF="--ps --pdf"
-else
-   PS_AND_PDF=
 fi
 
 if [[ $LILYPOND_VERSION = 2\.10 ]] || [[ $LILYPOND_VERSION = 2\.10\.? ]] || [[ $LILYPOND_VERSION = 2\.10\.?? ]]; then
