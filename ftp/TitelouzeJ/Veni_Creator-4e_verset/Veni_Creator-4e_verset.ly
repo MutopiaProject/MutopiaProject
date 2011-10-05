@@ -1,25 +1,43 @@
-\version "2.4.2"
+%-*-coding:utf-8-dos-*-
+\version "2.14.2"
 \include "italiano.ly" 
 
-%% Version 2.0 Les pauses sont centrées et positionnées sur la portée comme
-%%             dans l'édition originale.
+%% Version 2.0 Les pauses sont centrÃ©es et positionnÃ©es sur la portÃ©e comme
+%%             dans l'Ã©dition originale.
+%% Version 3.0 Mise Ã  jour pour la version 2.14.0. Quelques ajustements 
+%%             de silences. Modification de la mise en page.
 
 \header{
     title = "Veni Creator"
-    subtitle = "4e verset"
-    piece = "Choral" 
-    instrument = "Orgue -- Organ"
+    subtitle = \markup{\center-align{\line{4\super{e} verset}}}
+    piece = \markup{\line{\hspace #8.0 Choral}} 
+    instrument = \markup{\center-align{\line{Orgue â€” Organ}}}
     composer = "Jean Titelouze (1563-1633)"
-    copyright = "Public Domain -- Domaine public."
-    source = "Edition Schott 1869 - Alexandre Guilmant"
+    copyright = "Creative Commons Attribution-ShareAlike 3.0"
+    source = "Archives des maÃ®tres de l'orgue, vol.1, 1897, Alexandre Guilmant"
     opus = ""
     %lastupdated = "2004-09-04 Sainte Rosalie "
-    lastupdated = "2005-05-16 lundi de Pentecôte "
-    enteredby = "Gérard Gréco"
-    maintainer = "Gérard Gréco"
+    %lastupdated = "2005-05-16 lundi de PentecÃ´te "
+    lastupdated =  "2011-09-13 Saint Jean Chrysostome"
+    enteredby = "GÃ©rard GrÃ©co"
+    maintainer = "GÃ©rard GrÃ©co"
 
-footer = "Mutopia-2005/05/21-476"
-tagline = "\\raisebox{5mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+  mutopiatitle = "Veni Creator (4e verset)"
+  mutopiacomposer = "TitelouzeJ"
+  mutopiainstrument = "Organ"
+  mutopiastyle = "Baroque"
+
+ footer = "Mutopia-2011/09/18-476"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright Â© 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+}
+
+\paper {
+  print-page-number = ##f
+  indent = 15\mm
+  left-margin = 15\mm
+  line-width = 18\cm
+  bottom-margin = 15\mm
+  top-margin = 15\mm 
 }
 
 global = {
@@ -48,7 +66,7 @@ soprano =  \relative do'' {
   re4 re2 dod4 |
   %%15:
   re4 do8[ si] la[ si] do4 |
-  R1 %re1\rest |
+  \once\override MultiMeasureRest  #'staff-position = #+2 R1 %re1\rest |
   re2 mi4. re8 |
   do8[ re mi re] sol4 fad |
   sol8 fa mi re mi4 fa ~ |
@@ -62,11 +80,11 @@ soprano =  \relative do'' {
   dod4 re mi2 |
   la,4 re4. do8 si4 ~ |
   si4 do re2\rest |
-  fa2\rest r4 sol4 |
+  fa2\rest \once\override Rest #'extra-offset = #'(0.0 . -1.0) r4 sol4 |
   mi2 re8 do fa4 |
   %%30:
   mi2 r4 re4 |
-  do4. re8 mi[ fa sol fa] |
+  \once\override Dots #'staff-position = #2.0 do4. re8 mi[ fa sol fa] |
   mi4 re2 do4 ~ |
   do si4 la2 |
   re4\rest do4 la2 |
@@ -97,7 +115,7 @@ soprano =  \relative do'' {
   %%55:
   si8 do re4 sol, do ~ |
   do4 sib la2 ~ |
-  la4 si dod re8 do |
+  la4 si? dod re8 do |
   si2 la4 si |
   mi2 re4. si8 |
   %%60:
@@ -120,8 +138,8 @@ soprano =  \relative do'' {
 alto = \relative do' {
   \stemDown
   %%1 :
-  R1
-  R1
+  \once\override MultiMeasureRest  #'staff-position = #-2 R1
+  \once\override MultiMeasureRest  #'staff-position = #-2 R1
   R1
   R1 %si1 \rest
   %%5:
@@ -152,7 +170,7 @@ alto = \relative do' {
   la8 sol fad4 sol mi |
   fad4. sol8 la4 sol4 ~ |
   sol sol la sol8 sib |
-  la8 si do2 si4 | 
+  la8 si? do2 si4 | 
   r4 do4 la2 |
   %%30:
   sol4 la si sib ~ |
@@ -194,7 +212,7 @@ alto = \relative do' {
   sol4 fad sol re |
   mi4. re8 do4 fa | 
   mi4 la4. fa8 sol4 |
-  la4 si8 do la2 |
+  la4 si?8 do la2 |
   la4\rest si4 do la |
   %%65:
   sol2 fa4. sol8 |
@@ -286,10 +304,10 @@ tenor = \relative do' {
   sol4 do la8[ sol la si] |
   do2 re4. mi8 |
   fa8[mi re do] re[ do si la] |
-  si4 mi r4 r8 la,8 |
+  si4 mi \once\override Rest #'extra-offset = #'(0.0 . -1.0) r4 r8 la,8 |
   %%65:
   do8[ sol] do2 sib4 |
-  la4 re4. do8 si!4 |
+  la4 re4. do8 si?4 |
   la4 sol4. fad16[ mi] fad4 |
   sol2 do4 sol8 la |
   si8 do re4 sol,8 la si4 |
@@ -304,7 +322,7 @@ basse = \relative do {
   \override MultiMeasureRest  #'staff-position = #-2 R1 |
   R1 |
   R1 |
-  R1 |
+  \once\override MultiMeasureRest  #'staff-position = #-4 R1 |
   R1 |
   \override MultiMeasureRest  #'staff-position = #-4 R1 |
   R1 |
@@ -324,15 +342,15 @@ basse = \relative do {
   R1
   sol'2 la4. sol8 |
   fa8[ sol la fa] do'4 sol |
-  re'4 do8[ si] la[ sol] fa4 |
+  re'4 do8[ si?] la[ sol] fa4 |
   mi4 re2 dod4 |
   re4. mi8 fad4 sol |
-  r4 mi4 fa sol |
+  \once\override Rest #'extra-offset = #'(0.0 . 2.0) r4 mi4 fa sol |
   la2 sol |
   R1
   R1
   R1
-  r4 sol4 mi2 |
+  \once\override Rest #'extra-offset = #'(0.0 . +2.0) r4 sol4 mi2 |
   re4 sol la re, |
   la'4 la, fa'2 |
   mi4 do re2 |
@@ -371,7 +389,7 @@ basse = \relative do {
   si4 do4. re8[ mi fa] |
   sol4. fa8 mi4 re |
   do4 sol'2 do,4 |
- \override Script #'padding = # 3 sol'1^\fermata |
+ \override Script #'padding = # 3 <<sol'1^\fermata sol,>> |
 }
 
 \score {
@@ -380,14 +398,16 @@ basse = \relative do {
       \context Staff = "dessus" <<
         \global
         \clef violin 
-	\set Staff.midiInstrument = "Church organ"
+	\set Staff.midiInstrument = "pan flute"
+	%\set Staff.midiInstrument = "Church organ"
 	\context Voice = "soprano" {\voiceOne \soprano}
 	\context Voice = "alto" {\voiceTwo \alto}
       >>
       \context Staff = "basse" <<
         \global    
         \clef bass
-	\set Staff.midiInstrument = "Church organ"
+	\set Staff.midiInstrument = "pan flute"
+	%\set Staff.midiInstrument = "Church organ"
 	\context Voice = "tenor" {\voiceOne \tenor} 
 	\context Voice = "basse" {\voiceTwo \basse}
       >>
@@ -395,7 +415,13 @@ basse = \relative do {
     \bar "|."
   }
   \layout { }
-  \midi{ \tempo 4 = 92  }
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 92 4)
+      }
+    }
 }
 
 
