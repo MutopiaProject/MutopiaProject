@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.14.2"
 
 prelude = \context Staff \relative c' {
 
@@ -19,7 +19,7 @@ prelude = \context Staff \relative c' {
 	e,(cis' d e) d( cis b a) g'(fis e) d' cis b a g |
 	fis(e d) d' a d fis, a d, e fis a g fis e d |
 	% 11
-	gis d( f e) f d gis d a' d,( f e) f d gis d |
+	gis d( f e) f d gis d b' d,( f e) f d gis d |
 	c(e a b) c( a e d) c(e a b) c( a fis! e) |
 	dis(fis) dis fis a( fis a fis) dis(fis) dis fis a( fis a fis) |
 	g(fis e) g fis g a fis g fis e d c b a g |
@@ -48,8 +48,8 @@ prelude = \context Staff \relative c' {
 	fis a d, a' e a fis a <<{s a[ s a] s a[ s a]}
 		\\ {g[ s a] s b[ s d,] s}>> |
 	<<{s a'[ s a] s a[ s a] s a[ s a] s a[ s a]}
-		\\ {a[ s b] s c[ s d,] s b[ s c] s d[ s b] s}>> |
-	<<{s a'[ s a] s a[ s a] s a[ s a] s a[ s a]}
+		\\ {a[ s b] s c[ s d,] s b'[ s c] s d[ s b] s}>> |
+	<<{s a[ s a] s a[ s a] s a[ s a] s a[ s a]}
 		\\ {c[ s b] s c[ s a] s b[ s a] s b[ s g] s}>> |
 	% 36
 	<<{s a[ s a] s a[ s a]} \\ {a[ s g] s a[ s fis] s}>> g a fis a g a e a |

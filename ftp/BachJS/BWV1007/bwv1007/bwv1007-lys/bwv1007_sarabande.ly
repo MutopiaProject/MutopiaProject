@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.14.2"
 
 sarabande = \context Staff \relative c'' {
 
@@ -7,7 +7,7 @@ sarabande = \context Staff \relative c'' {
 	\set Staff.midiInstrument = "cello"
 
 	% 1
-	\acciaccatura g,8 <b' d,>4 \acciaccatura g,8 <<{c'4.( b8)} \\ {e,4}>> |
+	\acciaccatura g,8 <b' d,>4 \acciaccatura g,8 <<{c'4.( b8)} \\ {e,4}>> 
 	fis16(a b c) \acciaccatura g,8 <b' d,>4^\trill( a8 g) |
 	d'[( f,]) e8.[(~e64 d c b] c8[) e] |
 	fis!16( c' b g) \acciaccatura <a, d,>8 fis'4^\trill( e8 d) |

@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.14.2"
 
 allemande = \context Staff \relative c'' {
 
@@ -7,7 +7,7 @@ allemande = \context Staff \relative c'' {
 	\set Staff.midiInstrument = "cello"
 
 	% 1
-	\partial 16 b16 |
+	\set Score.measurePosition = #(ly:make-moment 15 16) b16 |
 	\acciaccatura g,16 <b' d,>4~<b d,>16[ a( g fis]) g16[(d e fis] g[a b c)] |
 	d[(b g fis]) g[( e d c]) b[(c) d e] fis[g a b] |
 	c[(a g fis] g[) e( fis g] a,[) d( fis g] a[ b) c a] |

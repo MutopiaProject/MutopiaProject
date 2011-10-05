@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.14.2"
 
 courante = \context Staff \relative c'' {
 
@@ -7,7 +7,8 @@ courante = \context Staff \relative c'' {
 	\set Staff.midiInstrument = "cello"
 
 	% 1
-	\partial 8 g8 | g d g,[b'16(c] d c b a) |
+	\set Score.measurePosition = #(ly:make-moment 5 8) g8 |
+	g d g,[b'16(c] d c b a) |
 	b8 d, g,[g'16(a] b8 g) | e c c,[a''16(b] c b a g) |
 	% 4
 	fis8 d d,[d'16 e] fis(g a b) | c( b c) a c( b c) a d,( c' b a) |

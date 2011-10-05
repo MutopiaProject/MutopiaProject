@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.14.2"
 
 \header {
 	title = "Suite 1 for Cello Solo"
@@ -15,10 +15,10 @@
 	copyright = "Public Domain"
 	maintainer = "Andreas Scherer"
 	maintainerEmail = "andreas_mutopia@freenet.de"
-	lastupdated = "2005/Jan/14"
+	lastupdated = "2011/Sep/18"
 
- footer = "Mutopia-2005/01/14-517"
- tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + " and Chris Sawer.} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ footer = "Mutopia-2011/09/21-517"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \include "bwv1007_prelude.ly"
@@ -33,7 +33,7 @@
 
 \score { { \clef "bass" \transpose c c, { \prelude } }
 	\layout { %{ Use LilyPond defaults %} }
-	\header { piece = "Pr�lude" }
+	\header { piece = "Prélude" }
 }
 
 \score { { \clef "bass" \transpose c c, { \allemande } }
