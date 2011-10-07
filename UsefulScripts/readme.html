@@ -15,7 +15,7 @@ ul li { margin-bottom: 0px; }
 <p>[NEW] - relevant to new pieces<br />
 [UPD] - relevant to updated pieces</p>
 
-<p><b>Last update: 11 September 2011</b></p>
+<p><b>Last update: 7 October 2011</b></p>
 
 <hr />
 
@@ -23,7 +23,7 @@ ul li { margin-bottom: 0px; }
 
 <ol>
 <li>
-<b>Checked out version of archive:</b> TODO once git/svn repository is available - for now just grab the <a href="http://www.mutopiaproject.org/datafiles/">datafiles</a> directory and ensure it is accessible under the MUTOPIA_BASE environment variable (see below).
+<b>Checked out version of archive:</b> Retrieve from github - see <a href="https://github.com/chrissawer/The-Mutopia-Project/">https://github.com/chrissawer/The-Mutopia-Project/</a> for checkout options. Ensure it is accessible under the MUTOPIA_BASE environment variable (see below).
 </li>
 
 <li>
@@ -39,8 +39,7 @@ MUTOPIA_BASE=~/Mutopia                     [path to checked out version of Mutop
 <li>mutopia-combine.sh - Combines multiple PDF/MIDI files into zip files and generates RDF</li>
 <li>mutopia-compile.sh - Compiles a piece from .ly file(s)</li>
 <li>mutopia-env.sh - Sets up environment variables</li>
-<li>mutopia-history.sh - Generates .log file from svn, TODO update for git</li>
-<li>mutopia-svn.sh - Adds .ly file(s) to svn, TODO update for git</li>
+<li>mutopia-history.sh - Generates .log file from git</li>
 <li>Mutopia.java, MutopiaMaps.java, MutopiaPiece.java, MutopiaRDF.java, MutopiaRebuild.java - Java software to deal with .ly files, mostly header extraction and processing</li>
 <li>mutopia.py - Start of a rewrite of Mutopia(etc.).java in Python</li>
 </ul>
@@ -137,8 +136,8 @@ We aim to be consistent with opus references for a given composer, this is usual
 
 <ol>
 <li>
-[NEW/UPD] <b>Check in:</b> TODO: Check into git/svn.<br />
-Not currently possible. For now, the .log file (commit message) needs updating manually. For new pieces I usually use:
+[NEW/UPD] <b>Check in:</b> If you have read/write git access, push to github. If not, send Chris a patch or contact him for read/write access.<br />
+The commit message should be sensible, and include the name of the person who contributed the piece or correction. For new pieces I usually use:
 
 <pre>Initial version of piece_name
 (Contributor Name)</pre>

@@ -20,10 +20,10 @@ do
 
    if [ -f "$LYFILE" ]; then
       echo "Found .ly: $LYFILE"
-      svn log --incremental -rHEAD:80 "$LYFILE" >> "$LOGFILE"
+      git log --abbrev-commit --pretty=medium 9743e4379b2e12d0763b216e01abb92e2057853d..HEAD "$LYFILE" >> "$LOGFILE"
    elif [ -d "$LYDIR" ]; then
       echo "Found -lys dir: $LYDIR"
-      svn log --incremental -rHEAD:80 "$LYDIR" >> "$LOGFILE"
+      git log --abbrev-commit --pretty=medium 9743e4379b2e12d0763b216e01abb92e2057853d..HEAD "$LYDIR" >> "$LOGFILE"
    else
       echo "WARNING: Unable to find .ly files for RDF: $RDFNAME"
    fi
