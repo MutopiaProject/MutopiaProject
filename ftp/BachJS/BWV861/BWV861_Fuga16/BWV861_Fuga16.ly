@@ -1,4 +1,4 @@
-\version "2.8.0"
+\version "2.14.2"
 
 \header {
   title = "Fuga 16 - BWV 861"
@@ -12,10 +12,10 @@
   style = "Classical"
   copyright = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2006/August/15"
-  version = "2.6.0"
+  lastupdated = "2011/Sep/21"
+  
  footer = "Mutopia-2006/08/17-805"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {\small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org         \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \score {
@@ -80,8 +80,9 @@
  a,8 c d d, g,8 g16 a bes8 a16 g d'8 d16 ees f8 ees16 d ees,8 ees16 f g8 f16 ees
  bes8 bes,16 c d8 c16 bes, c,8 c16 d ees8 d16 c g8 g,16 a, bes,8 a,16 g, ees2
  << { b2\rest c'8\rest d'8 ees' g fis4 g a8\rest a16 bes c'8 bes16 a } \\
- { d4 b,4\rest b,2\rest g,8\rest d8 ees g, fis,4 g, } >>
- << { bes2 ~ bes8 b16 a g8 a16 b c'4 b4\rest a2\rest R1
+ { d4 b,4\rest b,2\rest g,8\rest d8 ees g, fis,4 a, } >>
+ << { \once \override NoteColumn #'ignore-collision = ##t
+       bes2 ~ bes8 b16 a g8 a16 b c'4 b4\rest a2\rest R1
  d'8\rest d'8 ees' g fis4 g a8\rest a16 bes c'8 bes16 a b2 } \\
  { \new Voice { \stemUp d,8[ \stemDown d16 c] bes,8 c16 d } ees2 ~
  ees8 ees16 d c8 d16 ees fis,8 a,16 g, fis,8 g,16 a, d,8 d16 c bes,8 c16 d ees8 c a, fis
@@ -96,6 +97,14 @@
    }
  }
 
- \midi { \tempo 4 = 68 }
+ 
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 68 4)
+      }
+    }
+
+
 
 }

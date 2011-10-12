@@ -1,7 +1,7 @@
-\version "2.12.3"
+\version "2.14.2"
 
 \header {
-  mutopiatitle = "Primiere Arabesque"
+  mutopiatitle = "Première Arabesque"
   mutopiacomposer = "DebussyC"
   mutopiaopus = "L66 No.1"
   mutopiainstrument = "Piano"
@@ -9,13 +9,14 @@
   style = "Modern"
   copyright = "Public Domain"
   maintainer = "Keith OHara"
-  title = "Primière Arabeque"
+  title = "Première Arabesque"
   subtitle = "des Deux Arabesques"
   composer = "Claude Debussy"
+  lastupdated = "2011/Sep/18"
  footer = "Mutopia-2010/12/21-1777"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {\small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org         \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
-\pointAndClickOff
+%\pointAndClickOff
 \paper {
   %{ comment out for mutopiaproject }
   #set-paper-size "letter")
@@ -25,7 +26,8 @@
   bottom-margin =12
   %annotate-spacing = ##t
   %{ %}
-  between-system-padding = 0
+  %obsolete-between-system-padding = 0  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
+  page-count = #5
   ragged-last-bottom = ##f
 }
 % Definitios to override page-breaking
@@ -33,7 +35,7 @@ myLineBreak = {
   \break
 }
 myBreakForFivePages = {
-  \pageBreak
+%  \pageBreak
 }
 myBreakForThreePages = {
 %  \pageBreak
@@ -77,7 +79,7 @@ rhUpE = \relative c'' {
   r4 \times2/3{e8\( fs cs} e8*2/3 b cs gs b fs |
   gs8*2/3 e gs ds2 cs4 |
   b8\) r e'8*2/3\( fs cs e b cs gs b fs |
-  gs8*2/3 e gs ds2 cs4\) |
+  gs8*2/3 e gs ds2 cs4\) | \noBreak
   \times2/3{b8( a b} cs4~cs8 e ds e cs4) gs'2( e4) |
   \times2/3{ds8( cs ds} e4~e8 gs fs gs |
   \barNumberCheck#13
@@ -87,12 +89,12 @@ rhUpE = \relative c'' {
   gs4.( fs8) gs-- fs4-- gs8--|
   \barNumberCheck#17
   \stemUp a2\( gs |
-  fs2 e\) |\myBreakForFivePages
+  fs2 e\) |%\myBreakForFivePages
 
   \stemNeutral
   ds2\(\< e4 gs8 b\) |
   ds,2\(\>~ds8\! cs e gs\) |
-  b,2\(~b8 a cs e |
+  b,2\(~b8 a cs e |\noBreak
   gs,2\) \times2/3{r8 a\( cs} \times2/3{e gs fs} |
   ds4 gs,\) r8 fs\(\< a cs\! |
   e,2\) \times2/3{r8 fs\( a} \times2/3{cs e d} |
@@ -168,9 +170,9 @@ lhUpE = {
   \stemNeutral
   b,8*2/3\(\< fs a \clef treble cs' ds' fs' a'cs'' ds''\! cs'' b' a'\)|
   \clef bass e,8(\pp b, e gs b gs e b,) |
-  e,8( b, e gs cs' gs e b,) |
+  e,8( cs e gs cs' gs e b,) |
   e,8( b, e gs b gs e b,) |
-  e,8( b, e gs cs' gs e b,) |
+  e,8( cs e gs cs' gs e b,) |
   \set crescendoText="poco a poco cresc."
   \set crescendoSpanner=#'text
   fs,8(\< cs e fs a fs e cs)\! |
@@ -229,12 +231,12 @@ lhDownE = {
 rhUpA = \relative c''{
   \key a \major
   \tempo\markup{"Tempo Rubato" \smaller "(un peu moins vite)"}
-  \times2/3{e8(\p d e} cs4~ cs8 b b cs |
-  a4 fs2 gs4) |
-  fs8\( e\< fs'2\> e4\)\! |
-  fs,8\(e\<gs'4\sf ~ gs8\> b^- a^- fs^-\)\! |
-  \times2/3{e8\( d e} cs4~cs8 b b cs |
-  a4 fs\)~fs8 fs(^\< fs gs)\! |
+  \times2/3{e8(\p d e} cs4~ cs8 b b cs | \noBreak
+  a4 fs2 gs4) |\noBreak
+  fs8\( e\< fs'2\> e4\)\! |\noBreak
+  fs,8\(e\<gs'4\sf ~ gs8\> b^- a^- fs^-\)\! |\noBreak
+  \times2/3{e8\( d e} cs4~cs8 b b cs | \noBreak
+  a4 fs\)~fs8 fs(^\< fs gs)\! | \noBreak
   \times2/3{fs8( e b^\>} cs2 <cs e>4)\! |
   <b e>2. r4 |
   \barNumberCheck#47
@@ -248,12 +250,12 @@ rhUpA = \relative c''{
   \override TextSpanner #'(bound-details left text) ="rit."
   fs8( e d cs) d(\startTextSpan cs b a)\stopTextSpan |
   \clef bass
-  \times2/3{d,,8(\p fs a} cs8*2/3 b a) gs(\< b d fs e d) |
+  \times2/3{d,,8(\p fs a} cs8*2/3 b a) gs(\< b d fs e d) | \noBreak
   \clef treble
-  cs8*2/3( e gs b a gs) fs( a cs e d cs) |
+  cs8*2/3( e gs b a gs) fs( a cs e d cs) |\noBreak
   \set crescendoSpanner=#'hairpin
-  b8*2/3(\< d fs) a4\f ~ a8 gs fs gs |
-  b,8*2/3(\< d fs) a4\f ~ a8 gs fs gs |
+  b8*2/3(\< d fs) a4\f ~ a8 gs fs gs | \noBreak
+  b,8*2/3(\< d fs) a4\f ~ a8 gs fs gs | \noBreak
   \barNumberCheck#55
   \times2/3{e8(\p d e} cs4~ cs8 b b cs |
   a4 fs2 gs4) |
@@ -375,7 +377,7 @@ lhDownA = {
   <c e,>4 <c f,>2 g,4 |
   a,4 b,2 a,4 |
   g,4 f, e, <d, d> |
-  b,,8 g, d f g b d' f' |
+  g,,8 g, d f g b d' f' |
   \clef treble
   s1*2 |
   \stemDown
