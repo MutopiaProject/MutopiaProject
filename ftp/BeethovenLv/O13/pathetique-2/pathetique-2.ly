@@ -7,7 +7,7 @@
  opus = "Op. 13"
  piece = "Adagio cantabile"
 
- mutopiatitle = "Sonata No. 8 \"Pathétique\" (2nd Movement: Adagio cantabile)"
+ mutopiatitle = "Sonata No. 8 “Pathétique” (2nd Movement: Adagio cantabile)"
  mutopiacomposer = "BeethovenLv"
  mutopiainstrument = "Piano"
  source = "Berners, 1908 (edited by A. Winterberger); Peters, 1910"
@@ -27,11 +27,11 @@
 
  filename = "pathetique-2.ly"
  maintainer = "Chris Sawer"
- maintainerEmail = "chris@sawer.uklinux.net"
- maintainerWeb = "http://www.sawer.uklinux.net/"
- lastupdated = "2011/Sep/05"
- footer = "Mutopia-2003/04/02-295"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column {\small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org         \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ maintainerEmail = "chris@mutopiaproject.org"
+ maintainerWeb = "http://cjsawer.whitewillow.co.uk/"
+
+ footer = "Mutopia-2011/10/25-295"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \paper{
