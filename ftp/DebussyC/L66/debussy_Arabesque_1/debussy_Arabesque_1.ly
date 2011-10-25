@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.12.3"
 
 \header {
   mutopiatitle = "Première Arabesque"
@@ -13,12 +13,12 @@
   subtitle = "des Deux Arabesques"
   composer = "Claude Debussy"
   lastupdated = "2011/Oct/19"
- footer = "Mutopia-2010/12/21-1777"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2011/10/25-1777"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 \pointAndClickOff
-\paper {
 
+\paper {
   %{ comment out for mutopiaproject }
   #(set-paper-size  "letter")
   ragged-bottom = ##t
@@ -27,9 +27,7 @@
   bottom-margin =12
   %annotate-spacing = ##t
   %{ %}
-  %obsolete-between-system-padding = 0  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
-  min-systems-per-page = #5
-  system-count = #24
+  between-system-padding = 0
   ragged-last-bottom = ##f
 }
 % Definitios to override page-breaking
@@ -97,7 +95,7 @@ rhUpE = \relative c'' {
   ds2\(\< e4 gs8 b\) |
   ds,2\(\>~ds8\! cs e gs\) |
   b,2\(~b8 a cs e |
-  gs,2\) \times2/3{r8 a\( cs} \times2/3{e gs fs} | \myLineBreak
+  gs,2\) \times2/3{r8 a\( cs} \times2/3{e gs fs} |
   ds4 gs,\) r8 fs\(\< a cs\! |
   e,2\) \times2/3{r8 fs\( a} \times2/3{cs e d} |
   gs,4 fs2 d4\) |
@@ -123,7 +121,7 @@ rhDownE = \relative c' {
   \ohn cs8*2/3\( s s \times3/3{cs' e fs} \times3/3{gs ds b} s s \ohn b,\)|
   \ohn a8*2/3\( s s a' cs ds e b gs s s \ohn gs,\) |
 
-  s4 cs'8*2/3 fs, a~a4 cs8*2/3 fs, a~| \myLineBreak
+  s4 cs'8*2/3 fs, a~a4 cs8*2/3 fs, a~|
   a4 cs8*2/3 fs, a~a4 a'8*2/3 a, cs |
   \override TextSpanner #'(bound-details left text) = "rit."
   s2 s4\startTextSpan s8*2/3 s s\stopTextSpan|
