@@ -2,6 +2,7 @@
 
 \header {
   title = "24 Studies for the Guitar"
+  mutopiatitle = "24 Studies for the Guitar, No. 1"
   source = "Statens musikbibliotek - The Music Library of Sweden"
   composer = "Mauro Giuliani"
   opus = "Op. 100"
