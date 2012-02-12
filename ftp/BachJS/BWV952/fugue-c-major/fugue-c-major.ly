@@ -6,7 +6,7 @@
     mutopiatitle = "Fugue in C Major"
     mutopiacomposer = "J. S. Bach (1685-1750)"
     mutopiainstrument = "Harpsichord, Piano"
-    mutopiaopus = "BWV 953"
+    mutopiaopus = "BWV 952"
     style = "Baroque"
     copyright = "Public Domain"
     maintainer = "Jacob Lee"

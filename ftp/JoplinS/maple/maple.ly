@@ -1,4 +1,4 @@
-\version "2.0.1"
+\version "2.14.2"
 
 \header {
  title = "Maple Leaf Rag"
@@ -6,24 +6,31 @@
  piece = "Tempo di marcia"
 
  mutopiatitle = "Maple Leaf Rag"
- mutopiacomposer = "S. Joplin (1868-1917)"
+ mutopiacomposer = "JoplinS"
  mutopiainstrument = "Piano"
- date = "C. 1899"
+ date = "c. 1899"
  style = "Jazz"
  copyright = "Public Domain"
+ source = "Reproduction of original edition (1899)"
 
- filename = "maple.ly"
  maintainer = "Chris Sawer"
- maintainerEmail = "chris@sawer.uklinux.net"
- maintainerWeb = "http://www.sawer.uklinux.net/"
- lastupdated = "2004/Jan/02"
+ maintainerEmail = "chris@mutopiaproject.org"
+ maintainerWeb = "http://cjsawer.whitewillow.co.uk/"
 
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
- footer = "Mutopia-2004/01/02-23"
+ footer = "Mutopia-2011/11/13-23"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-top = \notes \relative c' {
- \property Voice . TextScript \override #'padding = #2
+\paper {
+  top-margin = 15
+  bottom-margin = 10
+  min-systems-per-page = #4
+  max-systems-per-page = #5
+  system-system-spacing #'padding = #8
+}
+
+top =  \relative c' {
+ \override TextScript   #'padding = #2
  
  \key as \major
  \time 2/4
@@ -37,9 +44,9 @@ top = \notes \relative c' {
   <es' es,>16 g, bes <es es,> ~ <es es,>8 r16 <es es,> |
   r16 as, ces <fes fes,> r16 <es es,> r16 <es es,> |
   r16 as, ces <fes fes,> r16 <es es,> r8 |
-  \translator Staff = "down"
-   \stemUp r16^\p as,,,-( ces as'-) r as-( ces as'-) \stemBoth |
-  \translator Staff = "up"
+  \change Staff = "down"
+   \stemUp r16^\p as,,,-( ces as'-) r as-( ces as'-) \stemNeutral |
+  \change Staff = "up"
   r16 as-( ces as'-) r as-( ces as'-) |
   <as as,>8-\mf \< <as as,> <as as,> <as as,>16 <as as,> ~ |
   <as as,> \! es f c es <f as,>8 <as, fes>16 ~ |
@@ -82,9 +89,9 @@ top = \notes \relative c' {
  <es' es,>16 g, bes <es es,> ~ <es es,>8 r16 <es es,> |
  r16 as, ces <fes fes,> r16 <es es,> r16 <es es,> |
  r16 as, ces <fes fes,> r16 <es es,> r8 |
- \translator Staff = "down"
-  \stemUp r16^\p as,,,-( ces as'-) r as-( ces as'-) \stemBoth |
- \translator Staff = "up"
+ \change Staff = "down"
+  \stemUp r16^\p as,,,-( ces as'-) r as-( ces as'-) \stemNeutral |
+ \change Staff = "up"
  r16 as-( ces as'-) r as-( ces as'-) |
  <as as,>8-\mf \< <as as,> <as as,> <as as,>16 <as as,> ~ |
  <as as,> \! es f c es <f as,>8 <as, fes>16 ~ |
@@ -145,7 +152,7 @@ top = \notes \relative c' {
 }
 
 
-bottom = \notes \relative c {
+bottom =  \relative c {
  \key as \major
  \time 2/4
  \clef bass
@@ -158,7 +165,7 @@ bottom = \notes \relative c {
   <bes bes,> <des g, es> <des g, es> <es, es,> |
   <fes fes,>4 <es es,>8 <es es,> |
   <fes fes,>4 <es es,>8 r |
-  \stemDown as,, r as' r \stemBoth |
+  \stemDown as,, r as' r \stemNeutral |
   as' r as' r \clef treble |
   <b as f d> <b as f d> <b as f d> <b as f d> |
   <c as es> <c as es> <c as es> <c as es> |
@@ -199,7 +206,7 @@ bottom = \notes \relative c {
  <bes bes,> <des g, es> <des g, es> <es, es,> |
  <fes fes,>4 <es es,>8 <es es,> |
  <fes fes,>4 <es es,>8 r |
- \stemDown as,, r as' r \stemBoth |
+ \stemDown as,, r as' r \stemNeutral |
  as' r as' r \clef treble |
  <b as f d> <b as f d> <b as f d> <b as f d> |
  <c as es> <c as es> <c as es> <c as es> |
@@ -258,28 +265,31 @@ bottom = \notes \relative c {
 }
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
    \top 
   \context Staff = "down"
    \bottom
  >>
  
- \paper {}
+ \layout {}
+
 }
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
-   \apply #unfold-repeats \top 
+   \applyMusic #unfold-repeats \top 
   \context Staff = "down"
-   \apply #unfold-repeats \bottom
+   \applyMusic #unfold-repeats \bottom
  >>
  
  \midi {
-  \tempo 4 = 104
-  \translator {
-   \VoiceContext
+  \context {
+   \Score tempoWholesPerMinute = #(ly:make-moment 120 4)
+  }
+  \context {
+   \Voice
    \remove Dynamic_performer
   }
  }

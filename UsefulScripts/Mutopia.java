@@ -182,13 +182,22 @@ public class Mutopia
                         try { lilyVersion = MutopiaPiece.getLilyVersion(lilyCommandLine); } catch (IOException ex) {}
                         String[] versionArrayS = lilyVersion.split("\\.");
                         int[] versionArray = { Integer.parseInt(versionArrayS[0]), Integer.parseInt(versionArrayS[1]), Integer.parseInt(versionArrayS[2]) };
+                        boolean useVOldString = false;
                         boolean useOldString = false;
 
-                        if (versionArray[0] < 2) useOldString = true;
-                        if ((versionArray[0] == 2) && (versionArray[1] < 11)) useOldString = true;
-                        if ((versionArray[0] == 2) && (versionArray[1] == 11) && (versionArray[2] < 57)) useOldString = true;
+                        // Nasty hack! CS Nov 2011
+                        if (versionArray[0] < 2) useVOldString = true;
+                        if ((versionArray[0] == 2) && (versionArray[1] < 11)) useVOldString = true;
+                        if ((versionArray[0] == 2) && (versionArray[1] == 11) && (versionArray[2] < 57)) useVOldString = true;
 
-                        if (useOldString)
+                        if (versionArray[0] < 2) useOldString = true;
+                        if ((versionArray[0] == 2) && (versionArray[1] < 14)) useOldString = true;
+
+                        if (useVOldString)
+                        {
+                           out.write(" " + MutopiaMaps.licenceMapVOld.get(licence));
+                        }
+                        else if (useOldString)
                         {
                            out.write(" " + MutopiaMaps.licenceMapOld.get(licence));
                         }
