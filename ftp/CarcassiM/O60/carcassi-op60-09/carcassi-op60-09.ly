@@ -1,11 +1,13 @@
-% Updated to Lilypond 2.4.2 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org>
-% Last changed on 31/Jan/2005
-\version "2.4.0"
+% Updated to Lilypond 2.4.2 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org> (31/Jan/2005)
+% Corrected Opus Number by Nick Payne, updated to v2.14.2 by Javier Ruiz-Alma
+
+\version "2.14.2"
 
 \header {
     title =       "Etude 9"
     opus =        "Op. 60, No. 9"
-    composer =    "Matteo Carcassi"
+    composer =    "Matteo Carcassi (1792-1853)"
+    piece =       "Allegretto grazioso"
     
     mutopiatitle = "Etude 9"
     mutopiacomposer = "CarcassiM"
@@ -18,131 +20,172 @@
     maintainer = "Jeff Covey"
     maintainerEmail = "jeff.covey@pobox.com"
     maintainerWeb = "http://pobox.com/~jeff.covey/"
-    lastupdated = "2005/Jan/31"
+    lastupdated = "2012/Feb/16"
+    
+ footer = "Mutopia-2012/02/16-306"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ }
 
-    footer = "Mutopia-2005/01/31-306"
-    tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+
+% {{{ global stuff
+
+globalA =  {
+  \clef violin \time 4/4 \key a \major \skip 1*8 \bar "|."
+}
+globalB =  {
+  \skip 1*8 \bar "||" \key c \major
+}
+globalC =  {
+  \bar "||" \key a \major \skip 1*8
+}
+midiStuff = \context Staff = "guitar" {
+  \set Staff.midiInstrument = "acoustic guitar (nylon)"
+  \transposition c  % guitar music actually sounds an
+                    % octave lower than written.
 }
 
-global = {
-    \set Staff.midiInstrument = "acoustic guitar (nylon)"
-    \transposition c  % guitar music actually sounds an
-                      % octave lower than written.
-    \set Staff.instrument = "Guitar"
-  {
-    \clef violin \time 4/4 \key a \minor
-	  \override TextScript   #'padding = #3
-  	s1^\markup { "Allegro" }
-	  \skip 1*7 \bar "||:" \break
-	  \repeat volta 2 { \skip 1*20 }  
-  }
+% }}}
+% {{{ melody
+
+melodyA =  \relative c'' {
+  \stemUp
+   bis16[( cis) bis( cis)]  fis8[ e]  dis16[( e) dis16( e)]  b'8[ a]
+   gis[ d'16( cis)]  b[( a) gis( fis)]  e8[ gis16( fis)]  e[( d) cis( b)]
+   bis16[( cis) bis( cis)]  fis8[ e]  cisis16[( dis) cisis16( dis)]  gis8[ fis]
+   e[ fis16 gis]  a[( b) cis dis] e4 r
+  %5
+   bis,16[( cis) bis( cis)]  fis8[ e]  dis16[( e) dis16( e)]  b'8[ a]
+   eis16[( fis) eis( fis)]  cis'8[ b]  ais16[( b) ais( b)]  e8[ d]
+   cis8[ d16( cis)]  b[( a) gis( fis)]  e8[ gis16( fis)]  e[( d) cis( b)]
+   a[ b cis( d)]  e[ fis gis a] a,4 r
+}
+melodyB =  \relative c {
+  \stemUp
+   e8[ fis16( gis)]  a[ b( cis) dis]  e8[ gis]  cis16[( b) cis( b)]
+  <b a>8[ b16 cis]  dis[( e) fis gis] a4 r
+   b,,8[ cis16 dis]  e[( fis) gis( a)]  b8[ dis]  gis16[( fis) gis( fis)]
+   e8[ fis16 gis]  a[( b) cis dis] e4 r
+  %13
+   fisis,16[( gis) fisis( gis)]  a8[ gis]  gis[ bis] dis4
+   fisis,16[( gis) fisis( gis)]  a8[ gis]  gis[ cis] e4
+   fis,8[ a] cis4  dis,8[ fis] b4
+   e,8[ fis16 gis]  a[( b) cis dis]  e8[ e, e e]
+  %21
+   e16[( f) e( f)]  a8[ g]  e[ c g e]
+   e16[( f) e( f)]  a8[ g]  f[ d b g]
+   c[ g']  fis16[( g) fis( g)]  d8[ g]  fis16[( g) fis( g)]
+   e8[ g]  fis16[( g) fis( g)]  b[( c) b( c)]  dis[( e) dis( e)]
+  <e d>8[ gis]  fisis16[( gis) fisis( gis)] <e d>8[ b']  ais16[( b) ais( b)]
+  <c, e>8[ a']  gis16[( a) gis( a)] <c, e>8[ c']  b16[( c) b( c)]
+  <dis a>8[ <dis a>]  fis,,[ <dis'' a>] <dis a>[ c, b a]
+  %24
+  <e' gis,>[ e]  f16[( e) f( e)]  e8[ e']  e,,,[ <d''' b>]
+  <c a>[ e,]  f16[( e) f( e)]  e8[ c']  e,,,[ <a'' dis, c >]
+  <gis e b>[ e]  f16[( e) f( e)]  fis[( e) fis( e)]  gis[( e) gis( e)]
+   b'[( e,) e e]  d'[( e,) e e]  fis[( e) d( b)]  gis[ e( d) b]
 }
 
-dim =  {
-    \set decrescendoText = \markup { \italic "dim." }
-    \set decrescendoSpanner = #'nil
+% }}}
+% {{{ bass
+
+bassA =  \relative c' {
+  \stemDown
+  a2 a e e a fis' e,2. \skip 4*1
+  a2 a d d e, e a a4 \skip 4*1
 }
-cresc =  {
-    \set crescendoText = \markup { \italic "cresc." }
-    \set crescendoSpanner = #'nil
+bassB =  \relative c {
+  \stemDown
+  \skip 4*3
+  < e' gis >4 fis8 \skip 8*1 \skip 4*3
+  r2 r4 < a b>4 < gis b >8 \skip 8*1 \skip 4*3
+  %13
+  r2 <bis dis>8 r8 r4 r2 <cis e>8 r8 r4
+  <a, cis'>8 r8 r4 <b a'>8 r8 r4 <e gis>8
+  \skip 8*1 \skip 4*3
+  %21
+  \skip 1*2
+  e,4 r g r c \skip 4*3 e,2 e a a fis'4 fis  fis8[ c d dis]
+  e,2. e4 e2. e4 e1 \skip 1*1
 }
 
-melody =  \relative c' {
-    \stemUp
+% }}}
         
-     a16[ a' a a]  c,[ a' a a]  f[ a a a]  e[ a a a]
-     d,[ a' f' a,] c, a' e' a,]  b,[ gis' d' gis,]  a,[ a' c a]
-     d,[ a' b a]  dis,[ a' b a]  e[ a b a]  f[ a b a]
-     e[ a c a]  e,[ a' c a]  e[ a b a]  e,[ gis' e' gis,]
+aSectionMusic = <<
+        \globalA
+        \context Voice = melodyVoiceA { \melodyA }
+        \context Voice = bassVoiceA { \bassA}
+>>
+aSectionFingerings = <<
+%       \context Voice = melody_voice_a { \fingerings_melody_a }
+%       \context Voice = bass_voice_a { \fingerings_bass_a }
+      >>
 
-				% 5
-    
-    \override TextSpanner #'style = #'nil
-    \override TextSpanner #'edge-height = #'(0 . 1.5)
-    \override TextSpanner #'edge-text = #'("poco riten. " . "")
-    \override TextSpanner #'font-shape = #'italic
-    
-     a,[ a' a a]  c,[ a' a a]  f[ a a a]  e[ a a a]
-     d,[ a' f' a,] c, a' e' a,]  b,[ gis' d' gis,]  a,[ a' c a]
-     d,[ a' b a]  dis,[ a' b a]  e[ a c a]  e,[ gis' b e] 
-     r \startTextSpan a,[ c e]  f[ ( e) dis e] a4 \stopTextSpan r
-    
-				% 9
+bSectionMusic = <<
+        \globalB
+        \context Voice = melodyVoiceB { \melodyB }
+        \context Voice = bassVoiceB { \bassB }
+>>
+bSectionFingerings = <<
+%       \context Voice = melody_voice_b { \fingerings_melody_b }
+%       \context Voice = bass_voice_b { \fingerings_bass_b }
+>>
 
-    \override TextSpanner #'edge-text = #'("a tempo " . "")
+cSectionMusic = <<
+        \globalC
+        \context Voice = melodyVoiceA { \melodyA }
+        \context Voice = bassVoiceA { \bassA }
+>>
 
-     c,,16[ \startTextSpan c' c c]  e,[ c' c c]
-     a[ c c c]  g[ c c c \stopTextSpan ]
-     f,[ a d a]  e[ cis' e cis]  d,[ d' f d]  d,[ c' fis c]
-     g[ b g' b,]  g,[ g' g' g,]  a,[ g' fis' g,]  b,[ g' f' g,]
-     c,[ g' e' g,]  d[ g d' g,]  e[ g c g]  c,[ g' e' g,]
-     f[ a a a]  e[ cis' cis cis]  d,[ d' d d]  fis,[ c' c c]
-     g[ b b b]  f?[ dis' dis dis]  e,[ e' e e]  gis,[ d' d d]
-     a[ c c c]  a,[ c' c c]  d,[ b' b b]  dis,[ a' a a]
+%% dvi output =  with fingerings
+%\score {
+%    \context Staff = "guitar" <<
+%    { 
+%      \aSectionMusic
+%      \bSectionMusic
+%      \cSectionMusic
+%    }
+%    { 
+%      \aSectionFingerings
+%      \bSectionFingerings 
+%    }
+%  >>
+%  \layout {
+%  }
+%}
 
-				% 16
-
-     e16[ gis b e]  f[ ( e) e e]  gis[ ( e) e e]  b'[ ( e,) e e]
-     a[ ( e) e e]  f[ ( e) dis e]  d[ e c e]  b[ e a, e']
-     e,[ gis b e]  f[ ( e) e e]  gis[ ( e) e e]  b'[ ( e,) e e]
-     a[ ( e) e e]  f[ ( e) dis e]  d[ e c e]  b[ e a, e']
-     gis,8[ f16 e']  e,[ e' dis, e']  e,[ e' d, e']  c,[ e' b, e']
-
-				% 21
-
-    \override TextSpanner #'edge-text = #'("poco riten. " . "")
-    
-     a,,16[ a' a a]  c,[ a' a a]  f[ a a a]  e[ a a a]
-     d,[ a' f' a,] c, a' e' a,]  b,[ gis' d' gis,]  a,[ a' c a]
-     d,[ f bes f]  d[ f bes f]  e[ g cis g]  e[ g cis g]
-     f[ a d a]  cis,[ a' e' a,]  d,[ a' e' a,]  e[ a e' a,]
-     fis[ dis' dis dis]  a[ dis dis dis]  gis,[ e' e e]  e,[ d' d d]
-     a[ c c c]  e,[ b' b b]  f[ a a a]  c,[ a' c a]
-     d,[ a' b a]  dis,[ a' b a]  e[ a c a]  e,[ gis' b e]
-     r \startTextSpan a,[ c e]  f[ ( e) dis e] a4 \stopTextSpan r
-    
+% dvi output without fingerings
+ \score {
+     \context Staff = "guitar"      { 
+       \aSectionMusic
+       \repeat volta 2 {
+         \bSectionMusic
+         \cSectionMusic
+       }
+     }
+   \layout {
+   }
 }
-
-bass =  \relative c' {
-    \stemDown
-    
-    a4_\f c f e |
-    \dim d \> c  b a \! |
-    d \cresc dis \< e f \! | e e, \dim e'\> e, \! |
-    a_\f c f e | d c b a |
-    d \< dis \dim e\!\>  e, a2\!_\p r
-
-				% 9
-
-    c4_\f e a g | f e d d |
-    g g, a b | c_\mf d e c | 
-    f e\>  d\! fis \> | g\! f \>  e\! gis \> | a\! \cresc a, \< d dis \!
-
-				% 16
-
-    e_\mf s s s   e,2 d''8 c b a
-    e4 s s s  e,2 d''8 c b a 
-    \cresc gis \< f e dis e d c b \!
-
-				% 21
-
-    a4_\f c f e d c b a
-    d_\mf d e e f cis d \< e 
-    fis\!_\sf a gis e
-    a e \>  f\! c
-    d dis \< e  e,\! \> \!
-    a2_\p r
-        
-}
-
-
+ 
+%{
+here i make a separate \score command so that the midi output =  follows
+the actual course of the music, with the second section repeated.
+%}
 \score {
-    \context Staff = "guitar" << 
-        \global 
-        \context Voice = "melody" { \melody }
-      	\context Voice = "bass"   { \bass   }
-    >>
-    \layout { }
-    \midi  { \tempo 4=110 }
-}
+  { 
+    \midiStuff
+    \aSectionMusic
+    \bSectionMusic
+    \cSectionMusic
+    \bSectionMusic
+    \cSectionMusic
+  }
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 120 4)
+      }
+    }
 
+
+}
