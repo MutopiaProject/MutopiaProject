@@ -8,58 +8,82 @@
 % I don't know if there's a piano arrangement which is out of copyright.
 
 \header {
-    \include "header.ly";
-    subtitle =	"for violin and strings (Violin 1)";
+    \include "header.ly"
+    subtitle =	"for violin and strings (Violin 1)"
     % Want "Violin 1" to appear in subtitle
-    filename = "violin1.ly";
+    filename = "violin1.ly"
 }
 
-\version "1.2.17";
+\version "2.14.0"
 \include "violin1_1.ly"
 \include "violin1_2.ly"
 \include "violin1_3.ly"
 \include "common-defs.ly"
 
+
 % 1st movement, printed version
 \score {
-    \header { piece = \$piece1 ; opus = "" ; }
-    \notes \context Voice = ViolinI {
-        \key e \major; \time 2/2;
-        \$violin1_1
+     \context Voice = ViolinI {
+        \key e \major \timeB
+        \violinBB
     }
-    \paper { \translator { \VoiceContext beamAutoEnd = "1/4"; } }
+    \header {
+        piece = \pieceB
+        opus = ""
+    }
 }
 
 % 1st movement, midi version
 \score {
-    \notes \context Voice = ViolinI {
-	\property Staff.midiInstrument = \$violin_midi_instrument
-        \key e \major;  \time 2/2;
-        \$violin1_1_midi
+     \context Voice = ViolinI {
+	\set Staff.midiInstrument = \violinMidiInstrument
+        \key e \major \timeB
+        \violinBBMidi
     }
-    \midi { \tempo 4 = 110; }
+    \midi {
+      \context {
+        \Score
+        tempoWholesPerMinute = #(ly:make-moment 110 4)
+      }
+    }
 }
 
 % 2nd movement
 \score {
-    \header { piece = \$piece2 ; opus = "" ; }
-    \notes \context Voice = ViolinI {
-        \property Staff.midiInstrument = \$violin_midi_instrument
-	\key e \major; \time 3/4;
-        \$violin1_2
+     \context Voice = ViolinI {
+        \set Staff.midiInstrument = \violinMidiInstrument
+	\key e \major \timeC
+        \violinBC
     }
-    \paper { \translator { \VoiceContext beamAutoEnd = "1/4"; } }
-    \midi { \tempo 4 = 50; }
+    \header {
+        piece = \pieceC
+        opus = ""
+        }
+    \layout {}
+    \midi {
+      \context {
+        \Score
+        tempoWholesPerMinute = #(ly:make-moment 50 4)
+        }
+    }
 }
 
 % 3rd movement
 \score {
-    \header { piece = \$piece3 ; opus = "" ; }
-    \notes \context Voice = ViolinI {
-        \property Staff.midiInstrument = \$violin_midi_instrument
-	\key e \major; \time 3/8;
-        \$violin1_3
+     \context Voice = ViolinI {
+        \set Staff.midiInstrument = \violinMidiInstrument
+	\key e \major \timeD
+        \violinBD
     }
-    \paper {}
-    \midi { \tempo 4 = 120; }
+    \header {
+        piece = \pieceD
+        opus = ""
+        }
+    \layout {}
+    \midi {
+      \context {
+        \Score
+        tempoWholesPerMinute = #(ly:make-moment 120 4)
+      }
+    }
 }
