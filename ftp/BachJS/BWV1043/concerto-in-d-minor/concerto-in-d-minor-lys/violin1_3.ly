@@ -1,7 +1,8 @@
+\version "2.14.0"
 %Violin 1, 3rd movement
 
-violin1_3 = \notes \relative c' {
-    \partial 8;
+violinBD =  \relative c' {
+    \partial 8
     
     d'16 cis |
     d8 r r d16 cis d8 r |
@@ -18,11 +19,11 @@ violin1_3 = \notes \relative c' {
     cis, r r4 r |
     d8 r r4 r |
     e8 r r4 r |
-    f16-. a,( g )a bes-. a( g )a bes8-. g-. |
-    d'16-. a( g )a f-. a( g )a a8-. f-. |
-    g16-. f( e )f g-. f( e )f g8-. e-. |
-    f a d f \grace { a( } )gis8.-\trill fis32 gis |
-    [a8 e f d a cis] |
+    f16-. a,( g  a) bes-. a( g  a) bes8-. g-. |
+    d'16-. a( g  a) f-. a( g  a) a8-. f-. |
+    g16-. f( e  f) g-. f( e  f) g8-. e-. |
+    f a d f \appoggiatura a gis8.(\trill fis32 gis) |
+     a8[ e f d a cis] |
     d16 a bes g a f g e f d e cis |
     d4 r r |
     R2. |
@@ -49,8 +50,8 @@ violin1_3 = \notes \relative c' {
     r e'16 d e b gis b e,8 r |
     r a16 gis a e c e a,8 r |
     r16 d g f g d b' a b g b d |
-    e16 [c, f e] f c a' g a f a c |
-    d [b, e d] e b gis' fis gis e gis b |
+    e16  c,[ f e] f c a' g a f a c |
+    d  b,[ e d] e b gis' fis gis e gis b |
     c8 r r4 r |
     R2. |
     R |
@@ -70,11 +71,11 @@ violin1_3 = \notes \relative c' {
     r4 r8 b,16 a b8 r |
     a8 r r4 r |
     b8 r r4 r |
-    c16-. e,( d )e f-. e( d )e f'8-. d-. |
-    a'16-. e,( d )e c-. e( d )e e'8-. c-. |
-    d16-. c,( b )c d-. c( b )c d'8-. b-. |
-    c e a c dis,8.-\trill( cis32 )dis |
-    [e8 b c a e gis] |
+    c16-. e,( d  e) f-. e( d  e) f'8-. d-. |
+    a'16-. e,( d  e) c-. e( d  e) e'8-. c-. |
+    d16-. c,( b  c) d-. c( b  c) d'8-. b-. |
+    c e a c dis,8.\trill( cis32  dis) |
+     e8[ b c a e gis] |
     a8 a'16 gis a8 r r4 |
     R2. |
     r8 f16 e d8 r r4 |
@@ -135,8 +136,8 @@ violin1_3 = \notes \relative c' {
     r a'16 g a e cis e a,8 r |
     r d'16 cis d a f a d,8 r |
     r16 g c bes c g e' d e c e g |
-    a [f, bes a] bes f d' c d bes d f |
-    g [e, a g] a e cis' b cis a d cis |
+    a  f,[ bes a] bes f d' c d bes d f |
+    g  e,[ a g] a e cis' b cis a d cis |
     d8 r r d16 cis d8 r |
     r bes16 a bes8 r r cis16 a |
     d8 r r f16 e g8 r |
@@ -151,13 +152,13 @@ violin1_3 = \notes \relative c' {
     cis, r r4 r |
     d8 r r4 r |
     e8 r r4 r |
-    f16-. a,( g )a bes-. a( g )a bes8-. g-. |
-    d'16-. a( g )a f-. a( g )a a8-. f-. |
-    g16-. f( e )f g-. f( e )f g8-. e-. |
-    f a d f \grace { a( } )gis8.-\trill( fis32 )gis |
-    [a8 e f d a cis] |
+    f16-. a,( g  a) bes-. a( g  a) bes8-. g-. |
+    d'16-. a( g  a) f-. a( g  a) a8-. f-. |
+    g16-. f( e  f) g-. f( e  f) g8-. e-. |
+    f a d f \appoggiatura a gis8.(\trill fis32 gis) |
+     a8[ e f d a cis] |
     d16 a bes g a f g e f d e cis |
     d4^\fermata r r |
-    \bar "|.";
+    \bar "|."
 }
 
