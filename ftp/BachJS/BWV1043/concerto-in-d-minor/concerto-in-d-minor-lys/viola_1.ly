@@ -1,14 +1,15 @@
+\version "2.14.0"
 %Viola, 1st movement
 
-viola_1 = \notes \relative c' {
+violaB =  \relative c' {
     f4. g8 a e cis r |
     r fis16 g a8 d, g16 fis g a g f e d |
     cis d e f g a bes g a8 cis, d4 ~ |
     d cis d8 a ~ a16 b c d |
     e8 c a4 b8 e gis4 |
-    a8 [e e' a,] r a a, d |
+    a8  e[ e' a,] r a a, d |
     r f b d r gis, e a |
-    e f4 e16 d c8 [e a a,] |
+    e f4 e16 d c8  e[ a a,] |
     e'4 r8 e, a4 r8 cis |
     a'16 g f e d cis d e a,8 e' g e |
     r a a, a' r d, g b, |
@@ -23,7 +24,7 @@ viola_1 = \notes \relative c' {
     bes a bes a g8 g, e'16 cis d e f g a8 |
     a, d bes' a f4 r |
     
-    d8-\p r e r f r r4 |
+    d8\p r e r f r r4 |
     bes,8 r fis' r g r r4 |
     r1 |
     r |
@@ -31,7 +32,7 @@ viola_1 = \notes \relative c' {
     g8 r a r bes r r4 |
     r1 |
     r |
-    d,16-\f e f g a8 d b g r4 |
+    d,16\f e f g a8 d b g r4 |
     c,16 d e f g8 c a f r4 |
     r1 |
     r |
@@ -39,7 +40,7 @@ viola_1 = \notes \relative c' {
     e,16 fis gis a b8 e cis a r4 |
     r1 |
     r |
-    a,8-\p r b r c r r4 |
+    a,8\p r b r c r r4 |
     f8 r cis r d r r4 |
     r1 |
     r |
@@ -48,20 +49,20 @@ viola_1 = \notes \relative c' {
     r1 |
     r |
 
-    e8-\f c a4 b8 e gis4 |
+    e8\f c a4 b8 e gis4 |
     a8 e e' a, r a a, d |
     r f b, d r gis, e a |
     e' f4 e16 d c4 r |
-    e1-\p ~ |
+    e1\p ~ |
     e2. r4 |
     a,1 ~ |
-    a2. r8 a-\f |
+    a2. r8 a\f |
     a4 r8 a d4 r8 fis |
     d'16 c bes a g fis g a d,8 a' c a |
     r d d, d' r g, c e, |
     f fis4 g8 a a, bes c |
     d es a, d bes4 r |
-    d1-\p ~ |
+    d1\p ~ |
     d2. r4 |
     g,1 ~ |
     g2. r4 |
@@ -87,10 +88,10 @@ viola_1 = \notes \relative c' {
     g8 r a r bes r r4 |
     r1 |
     r |
-    a2-\f ~ a8 e cis4 |
-    d8 [a a' d,] r d' d, g |
+    a2\f ~ a8 e cis4 |
+    d8  a[ a' d,] r d' d, g |
     r bes e, g r cis, a d |
     a' bes4 a16 g fis2^\fermata |
-    \bar "|.";
+    \bar "|."
 }
 

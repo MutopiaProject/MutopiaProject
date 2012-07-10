@@ -1,7 +1,8 @@
+\version "2.14.0"
 %Violin 2, 3rd movement
 
-violin2_3 = \notes \relative c' {
-    \partial 8;
+violinCD =  \relative c' {
+    \partial 8
 
     a'16 g |
     a8 r r bes16 g a8 r |
@@ -21,8 +22,8 @@ violin2_3 = \notes \relative c' {
     d4 r8 d, d d |
     d4 r8 d d d |
     d4 r8 e cis e |
-    [d f a d e b] |
-    [e cis a a f e] |
+     d[ f a d e b] |
+     e[ cis a a f e] |
     f g16 e f d e cis d a bes g |
     a4 r r |
     R2. |
@@ -73,8 +74,8 @@ violin2_3 = \notes \relative c' {
     a4 r8 a, a a |
     a4 r8 a a a |
     a4 r8 b' gis b |
-    [e, a c e fis b,] |
-    [b gis a e c b] |
+     e,[ a c e fis b,] |
+     b[ gis a e c b] |
     c r r e'16 d e8 r |
     R2. |
     r4 r8 b16 a g8 r |
@@ -83,11 +84,11 @@ violin2_3 = \notes \relative c' {
     R2. |
     r4 r8 a16 g f8 r |
     R2. |
-    r8 [f f f f f] |
-    r [e e e e e] |
-    r [d d d d d] |
-    r [c c c c c] |
-    r [bes bes bes bes bes] |
+    r8  f[ f f f f] |
+    r  e[ e e e e] |
+    r  d[ d d d d] |
+    r  c[ c c c c] |
+    r  bes[ bes bes bes bes] |
     r a a a a d'16 c |
     bes8 r r es16 c d8 r |
     r c16 a bes8 r r c16 a |
@@ -122,8 +123,8 @@ violin2_3 = \notes \relative c' {
     R2. |
     r4 r8 d16 c bes8 r |
     R2. |
-    r8 [bes bes bes bes bes] |
-    r [a a a a a] |
+    r8  bes[ bes bes bes bes] |
+    r  a[ a a a a] |
     g4 r r |
     r r r8 a'16 g |
     a8 r r bes16 g a8 r |
@@ -154,9 +155,9 @@ violin2_3 = \notes \relative c' {
     d4 r8 d, d d |
     d4 r8 d d d |
     d4 r8 e cis e |
-    [d f a d e b] |
-    [e cis a a f e] |
+     d[ f a d e b] |
+     e[ cis a a f e] |
     f bes16 g a f g e f d e cis |
     d4^\fermata r r |
-    \bar "|.";
+    \bar "|."
 }

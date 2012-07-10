@@ -5,85 +5,78 @@
 
 \header {
     \include "header.ly"
-    subtitle =	"for two violins and strings (Solo Violin 2)";
+    subtitle =	"for two violins and strings (Solo Violin 2)"
     % Want "Solo Violin 2" to appear in subtitle
-    filename = "solo_violin2.ly";
+    filename = "solo_violin2.ly"
 }
 
 \include "solo_violin2_1.ly"
 \include "solo_violin2_2.ly"
 \include "solo_violin2_3.ly"
 
-\version "1.2.17";
+\version "2.14.0"
 
 % 1st movement
 \score {
+     \context Voice = SoloViolinII {
+        \set Staff.midiInstrument = "violin"
+        \key d \minor
+        \time 4/4
+        \soloViolinCB
+    }
     \header {
-	piece = "Vivace"; opus = "";
+	piece = "Vivace"
+        opus = ""
     }
-
-    \notes \context Voice = SoloViolinII {
-        \property Staff.midiInstrument="violin"
-        \key d \minor;
-        \time 4/4;
-        \$solo_violin2_1
-    }
-    
-    \paper { linewidth = 18.0 \cm;
-	\translator { \StaffContext \consists "Bar_number_engraver"; }
-        \translator { \ScoreContext skipBars = 1; }
-    }
-    
+    \layout {}
     \midi {
-	\tempo 4 = 100;
+      \context {
+        \Score
+        tempoWholesPerMinute = #(ly:make-moment 100 4)
+      }
     }
 }
 
 
 % 2nd movement
 \score {
+     \context Voice = SoloViolinII {
+        \set Staff.midiInstrument = "violin"
+        \key f \major
+        \time 12/8
+        \soloViolinCC
+    }
     \header {
-	piece = "Largo ma non tanto"; opus = "";
+	piece = "Largo ma non tanto"
+        opus = ""
     }
-
-    \notes \context Voice = SoloViolinII {
-        \property Staff.midiInstrument="violin"
-        \key f \major;
-        \time 12/8;
-        \$solo_violin2_2
-    }
-        
-    \paper { linewidth = 18.0 \cm;
-	\translator { \StaffContext \consists "Bar_number_engraver"; }
-        \translator { \ScoreContext skipBars = 1; }
-    }
-        
+    \layout {}
     \midi {
-	\tempo 4 = 48;
+      \context {
+        \Score
+        tempoWholesPerMinute = #(ly:make-moment 48 4)
+      }
     }
 }
 
 
 % 3rd movement
 \score {
+     \context Voice = SoloViolinII {
+        \set Staff.midiInstrument = "violin"
+        \key d \minor
+        \time 3/4
+        \soloViolinCD
+    }
     \header {
-	piece = "Allegro"; opus = "";
+	piece = "Allegro"
+        opus = ""
     }
-
-    \notes \context Voice = SoloViolinII {
-        \property Staff.midiInstrument="violin"
-        \key d \minor;
-        \time 3/4;
-        \$solo_violin2_3
-    }
-        
-    \paper { linewidth = 18.0 \cm;
-    	\translator { \VoiceContext beamAutoEnd = "1/4"; }
-	\translator { \StaffContext \consists "Bar_number_engraver"; }
-	\translator { \ScoreContext skipBars = 1; }
-    }
-    
+    \layout {}
     \midi {
-	\tempo 4 = 110;
+      \context {
+        \Score
+        tempoWholesPerMinute = #(ly:make-moment 110 4)
+      }
     }
 }
