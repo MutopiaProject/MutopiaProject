@@ -1,10 +1,17 @@
-\version "1.5.66"
+\version "2.14.2"
 
-piccolo = \notes \relative c'' {
-	\time 2/4
-	\key c \major
-	
-	c4.\p^#'(italic "sempre pianissimo") d16 b
+mfp=\markup{\dynamic mfp}
+msegno=\markup{\musicglyph #"scripts.segno"}
+
+markings = {
+	\time 2/4 \key c \major
+	s2^\markup{sempre pianissimo} s2*8 \bar "||" \mark \msegno
+	s2*40 \bar "||" \mark \msegno
+}
+incmidi = "midi.ly"
+
+piccolo = \relative c''' {
+	c4.\p d16 b
 	c8 d16 b c8 d16 b
 	c8-. g-. c-. b-.
 	a-. g-. a-. b-.
@@ -13,31 +20,23 @@ piccolo = \notes \relative c'' {
 	c d c b c d e f
 	g a g fis g f e d
 
-	c4( )c'8 r
-	\bar "||"
+	c4( c'8) r
 
-	r2^\segno r r r
+	R2*4
 	c,16 d e f g e f d
 	c4 r
-	r2
-% 2
-	r
-	r
-	r
-	r
+	R2*5
 	g'4. a16 fis
 	g8 a16 fis g8 fis16 dis
 	g8 fis16 dis e8 c'16 a
 	g fis e d cis d e f
 
 	g4 r4
-	r2
-	r
-	r
-	d4_#'( bold ( italic (Large "mfp"))) ~ d16 e d cis
+	R2*3
+	d4_\mfp ~ d16 e d cis
 	d8-. c-. b-. a-.
 	g16 d e fis g a b c
-	d4_#'( bold ( italic (Large "mfp"))) ~ d16 e d cis
+	d4_\mfp ~ d16 e d cis
 	d e c d b c a b
 % 3
 	g a b c d e f d
@@ -46,9 +45,7 @@ piccolo = \notes \relative c'' {
 	c d c b c d e f
 	g a g fis g e f d
 	c d c b c d e f
-	g a g fis g e f d
-	c d c b c d e f
-
+	g a g fis g e f d c d c b c d e f 
 	g a g fis g e f d
 	c4. d16 b
 	c8 d16 b c8 b'16 gis
@@ -56,14 +53,10 @@ piccolo = \notes \relative c'' {
 	c b a g fis g a b
 	c d e f g e f d
 	c b a g fis g a b
-	c8-. e-. c-. r^\segno
-	\bar "||"
+	c8-. e-. c-. r
 }
 
-flauto = \notes \relative c''' {
-	\time 2/4
-	\key c \major
-
+flauto = \relative c''' {
 	c4.\p d16 b
 	c8 d16 b c8 d16 b
 	c8-. g-. c-. b-.
@@ -75,28 +68,21 @@ flauto = \notes \relative c''' {
 
 	c4 r
 
-	r2 r r r 
+	R2*4
 	c,16 d e f g e f d
 	c4 r
-	r2
-% 2
-	r
-	r 
-	r
-	r
+	R2*5
 	g''4. fis8
 	g fis g dis
 	e dis e c16 a
 	g fis e d cis d e f
 
 	g4 r4
-	r2
-	r
-	r
-	d'4_#'( bold ( italic (Large "mfp"))) ~ d16 e d cis
+	R2*3
+	d'4_\mfp ~ d16 e d cis
 	d8-. c-. b-. a-.
 	g16 d e fis g a b c
-	d4_#'( bold ( italic (Large "mfp"))) ~ d16 e d cis
+	d4_\mfp ~ d16 e d cis
 	d8-. c-. b-. a-.
 % 3
 	g16 a b c d e f d
@@ -118,9 +104,7 @@ flauto = \notes \relative c''' {
 	c8-. e-. c-. r
 }
 
-clarinettiI = \notes \relative c'' {
-	\time 2/4
-	\key c \major
+clarinettiI = \relative c'' {
 	\slurUp
 	\stemUp
 
@@ -130,37 +114,29 @@ clarinettiI = \notes \relative c'' {
 	a-. g-. a-. b-.
 	c4 r
 	d2( 
-	)e4 r
+	e4) r
 	d2(
 
-	)e4 r
+	e4) r
 
-	r2 r r r
+	R2*4
 	c16 d e f g e f d
 	c4 r 
-	r2
-% 2
-	r
-	r
-	r
-	r
+	R2*5
 	b4. a8
 	b8-. a-. b-. dis-.
 	e-. dis-. e-. c-.
 	c2( 
-	)b4 r
-	r2
-	r
-	r
-	fis'2_#'( bold ( italic (Large "mfp"))) ~
+	b4) r
+	R2*3
+	fis'2_\mfp ~
 	fis( 
-	)g4 r
-	fis2_#'( bold ( italic (Large "mfp"))) ~
+	g4) r
+	fis2_\mfp ~
 	fis( 
 % 3
-	)g4 r
-	r2
-	r
+	g4) r
+	R2*2
 	r8 e e e
 	r f f f
 	r e e e
@@ -172,14 +148,12 @@ clarinettiI = \notes \relative c'' {
 	g g4 e8 ~
 	e e4 f8
 	b,2( 
-	)c4 r8 a'
+	c4) r8 a'
 	b,2
 	c8-. e-. c-. r
 }
 
-clarinettiII = \notes \relative c'' {
-	\time 2/4
-	\key c \major
+clarinettiII = \relative c'' {
 	\slurDown
 	\stemDown
 
@@ -189,38 +163,30 @@ clarinettiII = \notes \relative c'' {
 	a g a b
 	c4 r
 	b2( 
-	)c4 r
+	c4) r
 	b2( 
 
-	)c4 r	
+	c4) r	
 
-	r2 r r r 
+	R2*4
 	c16 b c d e c d b
 	c4 r 
-	r2
-% 2
-	r
-	r
-	r
-	r
+	R2*5
 	g4. fis8
 	g f g a
 	g a g a
 	a2( 
 	
-	)g4 r
-	r2
-	r
-	r
+	g4) r
+	R2*3
 	c2 ~
 	c( 
-	)b4 r
+	b4) r
 	c2 ~
 	c( 
 % 3
-	)b4 r
-	r2
-	r
+	b4) r
+	R2*2
 	r8 c c c
 	r b b b
 	r c c c
@@ -232,14 +198,12 @@ clarinettiII = \notes \relative c'' {
 	c b c gis
 	a gis a a
 	f2( 
-	)e4 r8 a
+	e4) r8 a
 	f2
 	e8-. g-. e-. r
 }
 
-fagottoI = \notes \relative c' {
-	\time 2/4
-	\key c \major
+fagottoI = \relative c' {
 	\slurUp
 	\stemUp
 
@@ -248,37 +212,29 @@ fagottoI = \notes \relative c' {
 	e2
 	f8-. e-. f-. e-.
 	e4 r
-	f2 ( ) e4 r
-	f2 ( )
+	f2( e4) r
+	f2(
 
-	e4 r
+	e4) r
 
 	r2 r r r
 	e4. d8
 	c4 r
-	r2
-% 2
-	r
-	r
-	r
-	r
+	R2*5
 	d2
 	d4. fis8
-	[e-. fis-. e-. e-.]
+	e[-. fis-. e-. e-.]
 	d2 ~
 	d4 r
-	r2
-	r
-	r
-	fis2_#'( bold ( italic (Large "mfp"))) ~
+	R2*3
+	fis2_\mfp ~
 	fis( 
-	)g4 r
-	fis2_#'( bold ( italic (Large "mfp"))) ~
+	g4) r
+	fis2_\mfp ~
 	fis( 
 % 3
-	)g4 r
-	r2
-	r
+	g4) r
+	R2*2
 	r8
 \clef alto
 	g8 g g
@@ -292,14 +248,12 @@ fagottoI = \notes \relative c' {
 	b b4 g8 ~
 	g g4 a8
 	f2( 
-	)g4 r8 a8
+	g4) r8 a8
 	f2
 	e8-. g-. e-. r	
 }
 
-fagottoII = \notes \relative c' {
-	\time 2/4
-	\key c \major
+fagottoII = \relative c' {
 	\slurDown
 	\stemDown
 
@@ -308,39 +262,31 @@ fagottoII = \notes \relative c' {
 	c ~
 	c
 	c4 r
-	g2 ( )
-	c4 r
-	g2 ( )
+	g2(
+	c4) r
+	g2(
 	
-	c4 r
+	c4) r
 
-	r2 r r r
+	R2*4
 	c4. g8
 	c,4 r
-	r2
-% 2
-	r
-	r
-	r
-	r
+	R2*5
 	b'4. c8
-	[b-. c-. b-. b-.]
+	b[-. c-. b-. b-.]
 	b4. a8
 	d,2
 
 	g4 r
-	r2
-	r
-	r
+	R2*3
 	c2 ~
 	c( 
-	)b4 r
+	b4) r
 	c2 ~
 	c
 % 3
 	b4 r 
-	r2
-	r
+	R2*2
 	r8
 \clef alto
 	e e e
@@ -354,15 +300,12 @@ fagottoII = \notes \relative c' {
 	g a g f
 	e f e c
 	b2( 
-	)e4 r8 f8
+	e4) r8 f8
 	b,2
 	g8-. b-. g-. r
 }
 
-violinoI = \notes \relative c'' {
-	\time 2/4
-	\key c \major
-
+violinoI = \relative c'' {
 	c4.\p d16 b
 	c8 d16 b c8 d16 b
 	c8-. g-. c-. b-.
@@ -372,7 +315,7 @@ violinoI = \notes \relative c'' {
 	c d c b c d e f
 	g a g fis g f e d
 
-	c4( )c'8 r
+	c4( c'8) r
 
 	c4. d16 b
 	c8 d16 b
@@ -391,16 +334,16 @@ violinoI = \notes \relative c'' {
 	g8 a16 fis g8 fis16 dis
 	e8 fis16 dis
 	e8 c'16 a
-	g( )fis e-. d-. cis( )d e-. f-.
+	g( fis) e-. d-. cis( d) e-. f-.
 
 	g4 r
 	r8 b, b b
 	b r a r
 	g16 a g fis g a b c
-	d_#'( bold ( italic (Large "mfp"))) ( e d cis d e d )cis
+	d_\mfp( e d cis d e d cis)
 	d-. e-. c-. d-. b-. c-. a-. b-.
 	g d e fis g a b c
-	d_#'( bold ( italic (Large "mfp"))) ( e d cis d e d )cis
+	d_\mfp( e d cis d e d cis)
 	d-. e-. c-. d-. b-. c-. a-. b-.
 % 3
 	g a b c d e f d
@@ -422,10 +365,7 @@ violinoI = \notes \relative c'' {
 	c8-. e-. c-. r
 }
 
-violinoII = \notes \relative c' {
-	\time 2/4
-	\key c \major
-
+violinoII = \relative c' {
 	e16\p e e e e e f f
 	e e f f e e f f 
 	e c e c e c e c
@@ -457,13 +397,13 @@ violinoII = \notes \relative c' {
 	r8 g g g
 	g r fis r
 	g4 r
-	a,2_#'( bold ( italic (Large "mfp"))) ~
+	a,2_\mfp ~
 	a( 
-	)b4 r
-	a2_#'( bold ( italic (Large "mfp"))) ~
+	b4) r
+	a2_\mfp ~
 	a2( 
 % 3
-	)b4 r
+	b4) r
 	e16 e e e e e f f 
 	e e f f e e f f 
 	e e c c e e c c 
@@ -482,9 +422,7 @@ violinoII = \notes \relative c' {
 	e8-. g-. e-. r
 }
 
-viola = \notes \relative c'' {
-	\time 2/4
-	\key c \major
+viola = \relative c'' {
 	\clef "alto"
 
 	g16\p g g g g g g g
@@ -519,13 +457,13 @@ viola = \notes \relative c'' {
 	r8 d d d
 	d r c r
 	b4 r
-	fis2_#'( bold ( italic (Large "mfp"))) ~
+	fis2_\mfp ~
 	fis( 
-	)g4 r
-	fis2_#'( bold ( italic (Large "mfp"))) ~
+	g4) r
+	fis2_\mfp ~
 	fis( 
 % 3
-	)g4 r
+	g4) r
 	g'16 g g g g g g g 
 	g g g g g g g g 
 	g g e e g g e e
@@ -544,10 +482,7 @@ viola = \notes \relative c'' {
 	c8-. c-. c-. r
 }
 
-violoncello = \notes \relative c' {
-	\time 2/4
-	\key c \major
-
+violoncello = \relative c' {
 	c16\p c c c c c c c
 	c c c c c c c c
 	c c c c c c c c
@@ -580,10 +515,10 @@ violoncello = \notes \relative c' {
 	r8 g g g 
 	g r d r
 	g,4 r
-	d'2_#'( bold ( italic (Large "mfp"))) ~
+	d'2_\mfp ~
 	d
 	g4 r
-	d2_#'( bold ( italic (Large "mfp"))) ~
+	d2_\mfp ~
 	d2
 % 3
 	g4 r
@@ -605,10 +540,7 @@ violoncello = \notes \relative c' {
 	c,8-. c'-. c,-. r
 }
 
-contrabasso = \notes \relative c' {
-	\time 2/4
-	\key c \major
-
+contrabasso = \relative c' {
 	c16\p c c c c c c c
 	c c c c c c c c
 	c c c c c c c c
@@ -641,10 +573,10 @@ contrabasso = \notes \relative c' {
 	r8 g g g 
 	g r d r
 	g,4 r
-	d'2_#'( bold ( italic (Large "mfp"))) ~
+	d'2_\mfp ~
 	d
 	g4 r
-	d2_#'( bold ( italic (Large "mfp"))) ~
+	d2_\mfp ~
 	d2
 % 3
 	g4 r
@@ -666,28 +598,24 @@ contrabasso = \notes \relative c' {
 	c,8-. c'-. c,-. r
 }
 
-monostatos = \addlyrics \notes \relative c'' {
-	\time 2/4
-	\key c \major
-	\property Voice.automaticMelismata = ##t
+monostatos = \relative c'' {
+	\unset melismaBusyProperties 
 
-	r2 r r r r r r r r
+	R2*9
 
-	c4. d16 ( ) b
-	c8 d16 ( ) b c8 d16 ( ) b
+	c4. d16( b)
+	c8 d16( b) c8 d16( b)
 	c8 g c b
 	a g a b c4 r
-	c4. d16 ( ) b
-	c8 d16 ( ) b c8 d16 ( ) b
+	c4. d16( b)
+	c8 d16( b) c8 d16( b)
 % 2
 	c8 g c b
 	a8. a16 d8. d16
 	b8 r c8. b16
 	a8. a16 d8. d16
 	g,4 r
-	r2
-	r
-	r
+	R2*3
 
 	r4 g8 a
 	b4 r
@@ -700,23 +628,19 @@ monostatos = \addlyrics \notes \relative c'' {
 	d d e fis
 % 3
 	g4 r
-	c4. d16( )b
-	c8 d16( )b c8 d16( )b
+	c4. d16( b)
+	c8 d16( b) c8 d16( b)
 	c8 g c e
-	g, g g a16( )b
+	g, g g a16( b)
 	c4 c8 e
-	g, g g a16( )b
+	g, g g a16( b)
 	c4 c8 e
 
-	g, g g a16( )b
+	g, g g a16( b)
 	c4 r
-	r2
-	r r r r r
+	R2*6
 }
-
-\context Lyrics \lyrics {
-<
-\context LyricsVoice = "one" {
+\addlyrics {
 	Al -- les
 	fuhlt der Lie -- be
 	Freu -- den, schna -- belt,
@@ -726,35 +650,36 @@ monostatos = \addlyrics \notes \relative c'' {
 	sollt' die Lie -- be 
 % 2
 	meiden, _ weil ein
-	Schwar -- zer H\"ass -- lich ist, weil ein 
-	Schwar -- zer h\"ass -- lich ist!
+	Schwar -- zer Häss -- lich ist, weil ein 
+	Schwar -- zer häss -- lich ist!
 
 	Ist mir 
 	denn
-	kein Herz ge-
+	kein Herz ge --
 	ge -- ben?
 	Ich bin
-	anch den M\"ad -- chen
+	anch den Mäd -- chen
 	gut,
 	ich bin
-	auch den M\"ad -- chen
+	auch den Mäd -- chen
 % 3
 	gut! 
 	Im -- mer
 	oh -- ne Weib -- chen
-	le -- ben, w\"a -- re
-	wahr -- lich H\"ol -- len-
-	gluth, w\"a -- re
-	wahr -- lich H\"ol -- len-
-	gluth, w\"a -- re
+	le -- ben, wä -- re
+	wahr -- lich Höl -- len --
+	gluth, wä -- re
+	wahr -- lich Höl -- len --
+	gluth, wä -- re
 
-	wahr lich H\"ol -- len gluth! }
-\context LyricsVoice = "two" {
+	wahr lich Höl -- len gluth!
+}
+\addlyrics {
 	Drum so
 	will ich, weil ich
 	le -- be
-	schn\"a -- beln,
-	k\"us -- sen, z\"art -- lich
+	schnä -- beln,
+	küs -- sen, zärt -- lich
 	sein!
 	Lie -- ber
 	gu -- ter Mond, ver-
@@ -766,16 +691,16 @@ monostatos = \addlyrics \notes \relative c'' {
 	ein.
 
 	Weiss ist 
-	sch\"on,
+	schön,
 	ich muss sie
-	k\"us -- sen:
+	küs -- sen:
 	Mond, ver-
 	ste -- cke dich da -- zu,
 	Mond, ver-
 	ste -- cke dich da-
 	zu!
 	Sollt' es 
-	dich zu sehr ver-
+	dich zu sehr ver --
 	dries -- sen, o so
 	mach die Au -- gen
 	zu, o so
@@ -783,5 +708,5 @@ monostatos = \addlyrics \notes \relative c'' {
 	zu, o so
 
 	mach die Au -- gen
-	zu!  } >
+	zu!
 }
