@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "7.ly"
 
-viiViolaGlobal =  \notes {
+viiViolaGlobal =   {
   \clef "alto"
   \key g\major
   \time 2/2
@@ -14,19 +14,24 @@ viiViolaGlobal =  \notes {
   }
 }
 
-viiViolaScripts =  \notes{
+viiViolaScripts =  {
 }
 
-viiViolaStaff =  \context Staff <
-  \notes \transpose f \viiStaff
+viiViolaStaff =  \context Staff <<
+   \transpose c' f \viiStaff
   \viiViolaGlobal
   \viiViolaScripts
->
+>>
 
 \score {
   \viiViolaStaff
-  \paper { }
-  \midi { \tempo 4 = 140 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 140
+    }
+
+
   \header {
     piece = "Tempo di Borea"
     opus = ""

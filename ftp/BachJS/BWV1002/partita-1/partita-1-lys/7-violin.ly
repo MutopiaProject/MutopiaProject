@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "7.ly"
 
-viiViolinGlobal =  \notes {
+viiViolinGlobal =   {
   \clef "treble"
   \key d\major
   \time 2/2
@@ -14,19 +14,24 @@ viiViolinGlobal =  \notes {
   }
 }
 
-viiViolinScripts =  \notes{
+viiViolinScripts =  {
 }
 
-viiViolinStaff =  \context Staff <
+viiViolinStaff =  \context Staff <<
   \viiStaff
   \viiViolinGlobal
   \viiViolinScripts
->
+>>
 
 \score {
   \viiViolinStaff
-  \paper { }
-  \midi { \tempo 4 = 140 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 140
+    }
+
+
   \header {
     piece = "Tempo di Borea"
     opus = ""
