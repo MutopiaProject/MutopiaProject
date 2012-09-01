@@ -1,15 +1,15 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "2.ly"
 
-iiCelloGlobal =  \notes {
+iiCelloGlobal =   {
   \clef "bass"
   \key g\major
 
   % Time signature: To get the right C symbol, we need 2/2,
-  % then beatlength needs to be modified to group notes correctly.
+  % then baseMoment needs to be modified to group notes correctly.
   \time 2/2
-  \property Score.beatLength = #(make-moment 1 4)
+  \set Timing.baseMoment = #(ly:make-moment 1 4)
 
   \repeat "volta" 2 {
     \partial 16
@@ -20,19 +20,24 @@ iiCelloGlobal =  \notes {
   }
 }
 
-iiCelloScripts =  \notes{
+iiCelloScripts =  {
 }
 
-iiCelloStaff =  \context Staff <
-  \notes \transpose f, \iiStaff
+iiCelloStaff =  \context Staff <<
+   \transpose c' f, \iiStaff
   \iiCelloGlobal
   \iiCelloScripts
->
+>>
 
 \score {
   \iiCelloStaff
-  \paper { }
-  \midi { \tempo 4 = 76 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 76
+    }
+
+
   \header {
     piece = "Double"
     opus = ""

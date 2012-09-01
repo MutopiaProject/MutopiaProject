@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "3.ly"
 
-iiiCelloGlobal =  \notes {
+iiiCelloGlobal =   {
   \clef "bass"
   \key g\major
   \time 3/4
@@ -16,19 +16,24 @@ iiiCelloGlobal =  \notes {
   }
 }
 
-iiiCelloScripts =  \notes{
+iiiCelloScripts =  {
 }
 
-iiiCelloStaff =  \context Staff <
-  \notes \transpose f, \iiiStaff
+iiiCelloStaff =  \context Staff <<
+   \transpose c' f, \iiiStaff
   \iiiCelloGlobal
   \iiiCelloScripts
->
+>>
 
 \score {
   \iiiCelloStaff
-  \paper { }
-  \midi { \tempo 4 = 130 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 130
+    }
+
+
   \header {
     piece = "Corrente"
     opus = ""

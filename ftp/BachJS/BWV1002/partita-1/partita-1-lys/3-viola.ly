@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "3.ly"
 
-iiiViolaGlobal =  \notes {
+iiiViolaGlobal =   {
   \clef "alto"
   \key g\major
   \time 3/4
@@ -16,19 +16,24 @@ iiiViolaGlobal =  \notes {
   }
 }
 
-iiiViolaScripts =  \notes{
+iiiViolaScripts =  {
 }
 
-iiiViolaStaff =  \context Staff <
-  \notes \transpose f \iiiStaff
+iiiViolaStaff =  \context Staff <<
+   \transpose c' f \iiiStaff
   \iiiViolaGlobal
   \iiiViolaScripts
->
+>>
 
 \score {
   \iiiViolaStaff
-  \paper { }
-  \midi { \tempo 4 = 130 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 130
+    }
+
+
   \header {
     piece = "Corrente"
     opus = ""
