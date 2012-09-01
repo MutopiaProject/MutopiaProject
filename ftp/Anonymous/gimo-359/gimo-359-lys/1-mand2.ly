@@ -1,7 +1,7 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "1-shared.ly"
 
-IMandII = \notes \relative c'' {
+IMandII =  \relative c'' {
   \clef "treble"
   \key c\major
   \time 4/4
@@ -12,13 +12,13 @@ IMandII = \notes \relative c'' {
   %5
   f d16 e f8 d e c16 d e8 c | d b16 c d8 b c16 d c b c d e f | \ISharedB
   %9 page 3
-  b8 g'4 b,8 c g'4 c,8 | b g'4 b,8 c g'4 e8 | cis a'4 cis,!8 d a'4 d,8 |
+  b,8 g'4 b,8 c g'4 c,8 | b g'4 b,8 c g'4 e8 | cis a'4 cis,!8 d a'4 d,8 |
   cis a'4 cis,8 d d, fis'16 g g a | a8 a, g fis g b d g |
   %14 page 4
   \ISharedC d8 a g fis | g b c fis g g,16 a g8 fis |
   %16
   g4 g' ~ g16 e cis e a, e' d cis! |
-  d8 f, f'4 ~ f16 d c d <b16 \\ {g16 d' c b}> |
+  d8 f, f'4 ~ f16 d c d <<b16 \\ {g16 d' c b}>> |
   c!8 d g16 e d c b16 a g8 r4 |
   c4 e16 d c b c8 c, e g | c4 e16 d c b c8 c, e g |
   %21 page 5
@@ -32,5 +32,3 @@ IMandII = \notes \relative c'' {
   %33 page 7
   c4 <b' d, g,> <c e, g,> r^\fermata \bar "|."
 }
-
-
