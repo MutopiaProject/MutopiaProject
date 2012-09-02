@@ -1,71 +1,54 @@
-%\version "1.4.9.uu1"
-\include "paper16.ly"
+\version "2.16.0"
+#(set-global-staff-size 16)
 \include "nederlands.ly"
 \header {
   title             = "Consolation"
   subtitle          = "Trost"
-  composer          = "Johann Friedrich Franz Burgmüller (1806-1874)"
+  composer          = "Johann Friedrich Franz BurgmÃ¼ller (1806-1874)"
   opus              = "Opus 100."
   piece             = "25 Etudes faciles"
   meter             = "Allegro moderato"
   copyright         = "Public Domain"
   mutopiatitle      = "Consolation"
-  mutopiacomposer   = "J.F.F. Burgmüller (1806-1874)"
+  mutopiacomposer   = "BurgmullerJFF"
   mutopiainstrument = "Piano"
   date              = "19th century"
   source            = "Collection Litolff, 19th century"
   style             = "Romantic"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@zonnet.com"
-  lastupdated       = "2002/Apr/5"
+  lastupdated       = "2012/Sep/2"
 
-  tagline           = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer            = "Mutopia-2002/04/05-224"
+  footer            = "Mutopia-2012/09/02-224"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-Global = \notes {\key c\major \time 4/4}
-staffUp = \translator Staff = "up"
-staffDown = \translator Staff = "down"
+Global =  {\key c\major \time 4/4}
+staffUp = \change Staff = "up"
+staffDown = \change Staff = "down"
 Treble = \clef treble
 Bass = \clef bass
 
-crescendo = #'(italic "cresc.")
-dimrit = #'(italic "dim. e poco rit.")
-atempo = #'(italic "a tempo")
+dimrit = \markup{\italic "dim. e poco rit."}
+atempo = \markup{\italic "a tempo"}
 
-tsUpIIh = \property Voice.TextScript \override #'extra-offset = #'(0 . 2.5)
-tsUpII = \property Voice.TextScript \override #'extra-offset = #'(0 . 2)
-tsUpIh = \property Voice.TextScript \override #'extra-offset = #'(0 . 1.5)
-tsUpI = \property Voice.TextScript \override #'extra-offset = #'(0 . 1)
-tsUph = \property Voice.TextScript \override #'extra-offset = #'(0 . 0.5)
-tsZero = \property Voice.TextScript \revert #'extra-offset
-tsDownh = \property Voice.TextScript \override #'extra-offset = #'(0 . -0.5)
-tsDownI = \property Voice.TextScript \override #'extra-offset = #'(0 . -1)
-tsDownII = \property Voice.TextScript \override #'extra-offset = #'(0 . -2)
+VoiceI =  \relative c'' {
+  \stemUp \slurUp r8 d-4 ( e-5 d e d e  d)
+  r c-3 ( d-4 c d c d  c)
+  r f-4 ( g f g f g  f)
+  r e-3 ( f e f e f  e)
 
-dtUpII = \property Voice.DynamicText \override #'extra-offset = #'(0 . 2)
-dtUpI = \property Voice.DynamicText \override #'extra-offset = #'(0 . 1)
-dtZero = \property Voice.DynamicText \revert #'extra-offset
-dtDownI = \property Voice.DynamicText \override #'extra-offset = #'(0 . -1)
-dtDownII = \property Voice.DynamicText \override #'extra-offset = #'(0 . -2)
-
-
-VoiceI = \notes \relative c'' {
-  \stemUp \slurUp r8 d^"4" ( \tsUpI e^"5" \tsZero d e d e ) d
-  r c^"3" ( \tsUpI d^"4" \tsZero c d c d ) c
-  r f^"4" ( g f g f g ) f
-  r e^"3" ( f e f e f ) e
-
-  r e^"4" ( f e dis e f ) e
-  \scriptDown \stemBoth e^"4"-> ( \scriptBoth d cis d^"1" \tsUpI b'^"5" \property Voice.TextScript \set #'extra-offset = #'(-2 . -1) a_#'(italic "smorz.") \tsZero f d
-  c!^"3" g_#'(italic "rall.") b^"2" c \stemUp e4 ) d
+  r e-4 ( f e dis e f  e)
+  \stemNeutral e-4-> (
+  d cis d-1 b'-5 a_ \markup{\italic "smorz."} f d
+  c!-3 g_ \markup{\italic "rall."} b-2 c \stemUp e4  d)
 
   \repeat volta 2 {
 
-  r8 s \property Voice.TextScript \override #'extra-offset = #'(-5 . 1) c4^\atempo \tsZero d e
+  r8 s c4^\atempo d e
   e d cis d
   c! ( b a b
-  d ) c s2
+  d  c) s2
 
   a8 g c4 d e
   e b c b
@@ -75,50 +58,50 @@ VoiceI = \notes \relative c'' {
 
   \repeat volta 2 {
 
-  \stemBoth d4^"4"^\atempo ( cis d b
-  ) c ( b c a
-  ) b^"2" ( c^"1" \tsUph cis^"2" \tsZero d
-  \tsUpI c!^"1" \tsZero d dis ) e
+  \stemNeutral d4-4^\atempo ( cis d b
+   c) ( b c a
+   b)-2 ( c-1 cis-2 d
+  c!-1 d dis  e)
 
-  \stemUp \tsDownII d4^"2" ( cis^"2" d^"2" b^"1"
-  \tsZero c! b c a
-  \stemBoth \tsUpI ) b8^"1" ( \tsZero c d e f d a b
+  \stemUp d4-2 ( cis-2 d-2 b-1
+  c! b c a
+  \stemNeutral b8)-1 ( c d e f d a b
   }
 
   \alternative {
-    {) c8 g ( e' g, ) c4 r}
-    {c8 g ( e' g, \tsUpIh d'^"5" a^"2" \tsZero b g}
+    { c8) g ( e' g,  c4) r}
+    {c8 g ( e' g, d'-5 a-2 b g}
   }
 
-  ) c g ( e' g, d' a b g
-  ) c^"3" b ( \tsUph c^"1" \tsZero \tsUpI e^"3" g^"5" \tsZero dis^"2" e^"1" g^"2"
-  \property Voice.TextScript \override #'extra-offset = #'(0.5 . 0.5) ) c4^"5" r r2
+   c) g ( e' g, d' a b g
+   c)-3 b ( c-1 e-3 g-5 dis-2 e-1 g-2
+  c4)-5 r r2
   \bar "|."
   }
 
-VoiceII = \notes \relative c'' {
-  \stemDown \property Voice.TextScript \override #'extra-offset = #'(1.5 . -2) \dtDownII g1_\p_#'(italic "dolce lusingando")
-  \tsZero \dtZero g
-  \tsDownII b_\crescendo
-  \tsZero c_"1"
+VoiceII =  \relative c'' {
+  \stemDown g1_\p_ \markup{\italic "dolce lusingando"}
+  g
+  b_\cresc
+  c_1\!
 
   a
   s
   s2 e'8 g, d' g,
 
-  \slurUp \property Voice.Slur \override #'y-free = #3 s8 g_\p\cr ( c g d' g, e' g,\rc
-  e' g, d' g, cis g d' ) g, \property Voice.Slur \set #'y-free = #2
+  \slurUp s8 g_\p\< ( c g d' g, e' g,\!
+  e' g, d' g, cis g d'  g,)
   c g b g a g b g
-  d' g, c g \stemBoth a8_"2" ( g fis_"2" g_"1"
+  d' g, c g \stemNeutral a8-2 ( g fis-2 g-1
 
-  \stemDown \tsDownII a_\crescendo \tsZero g c g d' g, e' g,
+  \stemDown a_\cresc g\! c g d' g, e' g,
   e' g, b g c g b g
-  \stemBoth \tsDownh b^"3" \property Voice.TextScript \set #'extra-offset = #'(-2.5 . -2) ais_\dimrit \tsZero b c b^"1" a'^"5" g fis
-  ) e \property Voice.Slur \set #'y-free = #1 b ( g' b, ) e4 r
+  \stemNeutral b-3 ais_\dimrit b c b-1 a'-5 g fis
+   e) b ( g' b,  e4) r
 
-  \dtDownII \staffDown \stemUp f,8^"2"_\p g e g f g d g
+  \staffDown \stemUp f,8-2_\p g e g f g d g
   e g d g e g c, g'
-  \tsUpIIh d^\crescendo \tsZero g e g e g f g
+  d^\cresc g\! e g e g f g
   e g b, g' b, g' c, g'
 
   \staffUp \stemDown d' g cis, g' d g b, g'
@@ -133,60 +116,64 @@ VoiceII = \notes \relative c'' {
   s
   }
 
-VoiceIII = \notes \relative c' {
-  \stemBoth \slurBoth <g1 f'>
+VoiceIII =  \relative c' {
+  \stemNeutral \slurNeutral <g f'>1
   <g e'>
   <g d'>
   <g c>
 
-  <g_"2"_"4"_"5" a cis>
-  <f_"1"_"3"_"5" a d>
-  <g2 c e> <g b f'>
+  <g-5 a-4 cis-2>
+  <f-5 a-3 d-1>
+  <g c e>2 <g b f'>
 
-  \Treble <c1 e>
+  \Treble <c e>1
   <b f'>
   <g f'>
   <c e>
 
   <c e>
-  <b_"1"_"4" e>
-  \tieBoth <b2_"3"_"5" dis> ~ <b8 dis> fis'_"2" ( \tsUpI b_"1" \tsZero a
-  <) e2._"3"_"5" g> r4
+  <b e>-1-4
+  \tieNeutral <b dis>2-3-5 ~ <b dis>8 fis'-2 ( b-1 a
+  <e g>2.)-3-5 r4
 
   \stemDown f4 e f d
   e d e c
   d e e f
   e b b c
 
-  \dtUpII \stemBoth f^\mf ( e f d
-  e d e ) c
-  d2^"2" ( g,
+  \stemNeutral f^\mf ( e f d
+  e d e  c)
+  d2-2 ( g,
 
-    <) c2. e> r4
-    <c2 e> <g ( f'>
+    <c e>2. r4)
+    <c e>2 <g  f'>(
 
-  <) c e> <g ( f'>
-  \tsUpIIh <) c e^\dimrit > r
+  <c e>) <g  f'>(
+  <c e >)^\dimrit r
   \Bass c,4^\p r r2
   }
 
-\score {\notes {
-\context PianoStaff <
-  \property PianoStaff.midiInstrument = "acoustic grand"
-  \property PianoStaff.instrument = #'(Large "13. ")
-  \context Staff = "up" <
+\score { {
+\context PianoStaff <<
+  \set PianoStaff.midiInstrument = "acoustic grand"
+  \set PianoStaff.instrumentName = \markup{\large "13."}
+  \context Staff = "up" <<
     \Global \clef treble
     \context Voice=VcI \VoiceI
     \context Voice=VcII \VoiceII
-  >
-  \context Staff = "down" <
-    \property Staff.VoltaBracket = \turnOff
+  >>
+  \context Staff = "down" <<
     \Global \clef bass
     \context Voice=VcIII \VoiceIII
-  >
->
+  >>
+>>
 }
-\paper {}
-\midi {\tempo 4=152}
+\layout {}
+
+  \midi {
+    \tempo 4 = 152
+    }
+
+
 }
 
