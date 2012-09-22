@@ -1,17 +1,15 @@
-\version "1.6.0"
+\version "2.16.0"
 
 % toggles tuplet spanner duration
-six = \property Staff.tupletSpannerDuration = #(make-moment 1 2)
-three = \property Staff.tupletSpannerDuration = #(make-moment 1 4)
+six = \set Staff.tupletSpannerDuration = #(ly:make-moment 1 2)
+three = \set Staff.tupletSpannerDuration = #(ly:make-moment 1 4)
 
-IIVlnII = \notes \relative c'' {
+IIVlnII =  \relative c'' {
   \clef "treble"
   \key c\major
   \time 2/2
 
   % end beams on quarters by default
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
 
   %1 page 24
   \three \times 2/3 {e8 c g e c g c c c c c c |
@@ -26,23 +24,23 @@ IIVlnII = \notes \relative c'' {
   \times 2/3 {g,8 g' g g, g' g g, f'! f g, f' f |
   g, e' e g, e' e g, d' d g, d' d} |
   %11
-  <d4 b> r c' c, ~ |
+  <d b>4 r c' c, ~ |
   c c c r |
-  \six \times 4/6 {[e'8 g f e d c] [d f e d c b]} |
-  \three c4. es16 d [c8. bes16 as8. g16] |
-  fis4. d'16 c [bes8. a16 g8. fis16] |
+  \six \times 4/6 { e'8[ g f e d c]  d[ f e d c b]} |
+  \three c4. es16 d  c8.[ bes16 as8. g16] |
+  fis4. d'16 c  bes8.[ a16 g8. fis16] |
   \times 2/3 {e8 g b! a c f e g c, d f b, |
   c c e e c c c g g g e e |
-  e c c c e e} <\times 2/3 {e e e e e e} \\ {g,4 g}> |
-  <e'2 c e,> r2^\fermata |
+  e c c c e e} <<\times 2/3 {e e e e e e} \\ {g,4 g}>> |
+  <e'' c e,>2 r2^\fermata |
   %20
   g,4 g g g | c c c c | c b  d, f | e g g g |
   fis2 g | e fis | g4 r r g~ | g g g a |
   %28
-  <a4 fis> \times 2/3 {fis8 fis fis} g4 \times 2/3 {g8 g g} |
-  <a4 fis> \times 2/3 {fis8 fis fis} g4 \times 2/3 {g8 g g} |
-  fis4 r <a2 \\ fis> |
-  <b4 \\ g> b2 a4 ~ |
+  <a fis>4 \times 2/3 {fis8 fis fis} g4 \times 2/3 {g8 g g} |
+  <a fis>4 \times 2/3 {fis8 fis fis} g4 \times 2/3 {g8 g g} |
+  fis4 r <<a2 \\ fis>> |
+  <<b4 \\ g>> b2 a4 ~ |
   a g2 fis4 |
   g1 ~ |
   %34
@@ -82,11 +80,11 @@ IIVlnII = \notes \relative c'' {
   g4 r d2 |
   R1 |
   %65
-  \times 2/3 {e'8 c g e c g} <\times 2/3 {e' e e e e e} \\ \times 2/3 {g, g g g g g}> |
-  \times 2/3 {a' f c a f d} <\times 2/3 {f f f f f f} \\ \times 2/3 {a, a a a a a}> |
-  \times 2/3 {e'8 c g e c g} <\times 2/3 {e' e e e e e} \\ \times 2/3 {g, g g g g g}> |
+  \times 2/3 {e'8 c g e c g} \times 2/3 {<e' g,> q q q q q} |
+  \times 2/3 {a' f c a f d} \times 2/3 {<f a,> q q q q q} |
+  \times 2/3 {e'8 c g e c g} \times 2/3 {<e' g,> q q q q q} |
   \times 2/3 {d' b f d b g d' d d d d d} |
-  e4 \times 2/3 {g'8 e bes} \six \times 4/6 {[a f' e f e d]} |
+  e4 \times 2/3 {g'8 e bes} \six \times 4/6 { a[ f' e f e d]} |
   %70
   \three c4. es16 d c8. bes16 as8. g16 |
   fis4. d'16 c b!8. a16 g8. f!16 |
@@ -94,5 +92,5 @@ IIVlnII = \notes \relative c'' {
   c c e e c c c g g g e e |
   e c c c c c c c c c c c} |
   %75
-  <e'2 c g> r2^\fermata \bar "|."
+  <e' c g>2 r2^\fermata \bar "|."
 }
