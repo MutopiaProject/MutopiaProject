@@ -1,25 +1,26 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "3-shared.ly"
 
-IIIVlnI = \notes \relative c''' {
+IIIVlnI =  \relative c''' {
   \clef "treble"
   \key a\major
   \time 3/8
 
-  \property Voice.tupletSpannerDuration = #(make-moment 1 8)
+  \set tupletSpannerDuration = #(ly:make-moment 1 8)
 
   % beams can start anywhere
-  \property  Voice.autoBeamSettings \override
-    #'(start * * * *) = #(make-moment 1 8)
   % separate triplet beams by default
-  \property  Voice.autoBeamSettings \override
-    #'(end 1 24 * *) = #(make-moment 1 8)
+  \set Timing.beamExceptions = #'((end . (
+    ((1 . 8) . (3))
+    ((1 . 24) . (3 3 3))
+    ((1 . 32) . (12))
+  )))
 
   %1 page 19
   \times 2/3 {a16 gis fis} e8 e |
   e8. d16 cis8 |
   \times 2/3 {d16 e fis} e,16. gis32 b16. d32 |
-  \times 2/3 {[cis16 d e} e8] r |
+  \times 2/3 { cis16[ d e} e8] r |
   %5 page 20
   \times 2/3 {d16 e fis} e,16. gis32 b16. d32 |
   \times 2/3 {cis16 b a} a4 |
@@ -67,7 +68,7 @@ IIIVlnI = \notes \relative c''' {
   b8. a16 gis8 |
   \IIISharedI
   %59 page 25
-  gis,8 gis gis |
+  gis8 gis gis |
   gis gis gis |
   \IIISharedJ
   %65
