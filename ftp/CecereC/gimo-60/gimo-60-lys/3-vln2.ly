@@ -1,25 +1,26 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "3-shared.ly"
 
-IIIVlnII = \notes \relative c''' {
+IIIVlnII =  \relative c''' {
   \clef "treble"
   \key a\major
   \time 3/8
 
-  \property Voice.tupletSpannerDuration = #(make-moment 1 8)
+  \set tupletSpannerDuration = #(ly:make-moment 1 8)
 
   % beams can start anywhere
-  \property  Voice.autoBeamSettings \override
-    #'(start * * * *) = #(make-moment 1 8)
   % separate triplet beams by default
-  \property  Voice.autoBeamSettings \override
-    #'(end 1 24 * *) = #(make-moment 1 8)
+  \set Timing.beamExceptions = #'((end . (
+    ((1 . 8) . (3))
+    ((1 . 24) . (3 3 3))
+    ((1 . 32) . (12))
+  )))
 
   %1 page 19
   \times 2/3 {a16 e d} cis8 cis |
   cis8. b16 a8 |
   \times 2/3 {b16 cis d} e,16. gis32 b16. d32 |
-  \times 2/3 {[a16 b cis} e8] r |
+  \times 2/3 { a16[ b cis} e8] r |
   %5 page 20
   \times 2/3 {b16 cis d} e,16. gis32 b16. d32 |
   \times 2/3 {cis16 b a} a4 |
@@ -28,14 +29,14 @@ IIIVlnII = \notes \relative c''' {
   cis8 b e |
   \IIISharedB
   %15
-  d'8 d4 |
+  d8 d4 |
   \times 2/3 {cis16 b a gis a b} a8 |
   \IIISharedD
   %18 page 21
-  [a'8 r16 a, cis e] |
+  a'8[ r16 a, cis e] |
   \IIISharedF
   %21
-  \grace {\noStroke e8} d4. |
+  \grace e8 d4. |
   e8 d16 cis b a |
   \times 2/3 {d16 cis b cis b a gis a b} | 
   %24
@@ -75,7 +76,7 @@ IIIVlnII = \notes \relative c''' {
   gis8. fis16 e8 |
   \IIISharedI
   %59 page 25
-  e,8 e e |
+  e8 e e |
   e e e |
   \IIISharedJ
   %65
@@ -119,14 +120,14 @@ IIIVlnII = \notes \relative c''' {
   cis8. b16 a8 |
   %104 page 29
   \times 2/3 {b16 cis d} e,16. gis32 b16. d32 |
-  \times 2/3 {[a16 b cis} cis8] r |
+  \times 2/3 { a16[ b cis} cis8] r |
   \times 2/3 {b16 cis d} e,16. gis32 b16. d32 |
-  \times 2/3 {[a16 b cis} cis8] r |
+  \times 2/3 { a16[ b cis} cis8] r |
   a16 b cis d cis d |
-  \grace {[cis16 d]} e4. |
+  \grace {cis16[ d]} e4. |
   fis16 a cis, e d8 |
   b16 cis dis e dis e |
-  \grace {[d16 e]} fis4. |
+  \grace {d!16[ e]} fis4. |
   gis16 b dis, fis e8 |
   e,16 fis gis a gis a |
   b4. |
