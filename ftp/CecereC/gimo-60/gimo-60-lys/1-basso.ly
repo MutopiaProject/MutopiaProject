@@ -1,15 +1,13 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IBasso = \notes \relative c' {
+IBasso =  \relative c' {
   \clef "bass"
   \key a\major
   \time 4/4
 
-  \property Score.skipBars = ##t
+  \set Score.skipBars = ##t
 
   % end beams on halfs by default
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 2)
 
   \partial 8 r8 |
   %1 page 2
@@ -21,8 +19,8 @@ IBasso = \notes \relative c' {
   %6 page 3
   a a a a gis gis gis gis |
   a a a a gis gis gis gis |
-  [a a] [g g] [fis fis] [b a] |
-  [gis gis] gis r b b b b |
+   a[ a]  g[ g]  fis[ fis]  b[ a] |
+   gis[ gis] gis r b b b b |
   gis gis gis gis a a e e |
   %11 page 4
   a, a a r b b b b | 
@@ -35,8 +33,8 @@ IBasso = \notes \relative c' {
   %30 page 8
   a a b b e, e gis gis |
   a a a a e e gis gis |
-  [a b] [dis, dis] [e dis!] [e e] |
-  [e dis] [e gis] a a b b, |
+   a[ b]  dis,[ dis]  e[ dis!]  e[ e] |
+   e[ dis]  e[ gis] a a b b, |
   e4 r r2 |
   %35 page 9
   R1*17

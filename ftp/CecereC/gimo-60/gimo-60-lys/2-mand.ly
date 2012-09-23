@@ -1,16 +1,17 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "2-shared.ly"
 
-IIMand = \notes \relative c'' {
+IIMand =  \relative c'' {
   \clef "treble"
   \key e\major
   \time 4/4
 
-  \property Voice.tupletSpannerDuration = #(make-moment 1 4)
+  \set tupletSpannerDuration = #(ly:make-moment 1 4)
 
   % end beams on quarters by default
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
+  \set Timing.beamExceptions = #'((end . (
+    ((1 . 8) . (2 2 2 2))
+  )))
 
   \IISharedA
   \IISharedB
@@ -19,9 +20,9 @@ IIMand = \notes \relative c'' {
   %7 page 15
   \times 4/6 {e16_"Solo" dis e e dis e e b' a gis fis eis
     fis eis fis fis, fis' eis fis a gis fis e dis |
-  e dis e e, e' dis e gis fis gis fis e} [fis32( e dis )cis]
-    \times 2/3 {[b16 dis b]} \times 4/6 {b, fis'' gis a gis fis} |
-  \times 2/3 {gis fis e} e8 r e \grace fis gis fis16 e gis8 ais |
+  e dis e e, e' dis e gis fis gis fis e}  fis32[( e dis  cis)]
+    \times 2/3 { b16[ dis b]} \times 4/6 {b, fis'' gis a gis fis} |
+  \times 2/3 {gis fis e} e8 r e \slashedGrace fis gis fis16 e gis8 ais |
   b8 \times 2/3 {b,16 b b} \times 4/6 {b e fis gis fis e} \grace fis8 e dis ~
     \times 4/6 {dis16 cis dis e dis cis |
   %11 page 16
