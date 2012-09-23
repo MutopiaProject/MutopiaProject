@@ -1,4 +1,4 @@
-\version "2.6.3"
+\version "2.16.0"
 
 \header {
    title = "Menuet in G"
@@ -17,11 +17,11 @@
    copyright = "Public Domain"
    maintainer = "Yannick KIRSCHHOFFER"
    maintainerEmail = "alcibiade@alcibiade.org"
-   lastupdated = "2006/Feb/26"
+   lastupdated = "2012/Sep/23"
    source = "Mutopia"
 
-   footer = "Mutopia-2006/03/08-695"
-   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+   footer = "Mutopia-2012/09/23-695"
+   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 partGtrAa = {
@@ -97,7 +97,7 @@ partGtrAb = {
 			\time 3/4
 			\key g \major
 			\clef treble
-			\set Staff.instrument = "Guitar    "
+			\set Staff.instrumentName = "Guitar    "
 			\set Staff.midiInstrument = "pad 2 (warm)"
 
 			% Hide fingering number
@@ -127,7 +127,12 @@ partGtrAb = {
 		>>
 	>>
 
-	\midi  { \tempo 4=130 }
+	
+  \midi {
+    \tempo 4 = 130
+    }
+
+
 	\layout {}
 }
 
