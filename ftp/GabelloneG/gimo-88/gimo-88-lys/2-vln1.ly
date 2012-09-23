@@ -1,20 +1,18 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "2-shared.ly"
 
-IIVlnI = \notes \relative c'' {
+IIVlnI =  \relative c'' {
   \clef "treble"
   \key bes\major
 
-  \property Voice.tupletSpannerDuration = #(make-moment 1 4)
+  \set tupletSpannerDuration = #(ly:make-moment 1 4)
 
   % end beams on quarters by default
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
 
   \IISharedA \IISharedB
   r4 |
   %11 page 19
-  f''8_#'(italic "do:") f f f g g g g |
+  f8_ \markup{\italic "do:"} f f f g g g g |
   %12 page 20
   g f f d c c c es | d d d d c c c es | d d d4 d8 f f f |
   %15 page 21
@@ -22,7 +20,7 @@ IIVlnI = \notes \relative c'' {
   %17 page 22
   r2 g2 | f g | f4 r a8 a g g | a4 r a8 a g g |
   %21 page 23
-  [f16 f] [f f]
+   f16[ f]  f[ f]
   \IISharedC \IISharedD
   %29 page 25
   %Note: The r4 looks like a r8
@@ -44,7 +42,7 @@ IIVlnI = \notes \relative c'' {
   %42 I have omitted bar 42, "bes4 r bes r".
   \IISharedE
   %46 page 30
-  bes'16 bes bes bes r d, f bes
+  bes16 bes bes bes r d, f bes
   \IISharedF \IISharedG
 }
 
