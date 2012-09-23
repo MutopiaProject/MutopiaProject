@@ -1,4 +1,4 @@
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = "Mandolin"
 \include "header.ly"
@@ -6,25 +6,25 @@ Instrument = "Mandolin"
 \include "2-mand.ly"
 \include "3-mand.ly"
 
-\include "paper13.ly"
+#(set-global-staff-size 13)
 
 \score {
   \context Staff = Mand \IMand
 
   \header {piece = "Allegro" opus = "Gimo 88"}
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = Mand \IIMand
 
   \header {piece = "Largo"}
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = Mand \IIIMand
 
   \header {piece = "Allegro"}
-  \paper {}
+  \layout {}
 }

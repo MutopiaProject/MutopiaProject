@@ -1,11 +1,11 @@
-\version "1.6.0"
+\version "2.16.0"
 
 %Note: The original of the basso part is messed up. I have added half bars in different places in order to make it sound all right.
 
-IBasso = \notes \relative c {
+IBasso =  \relative c {
   \clef "bass"
   \key f\major
-  \property Score.skipBars = ##t 
+  \set Score.skipBars = ##t 
 
   \partial 8 r8 |
   %1 page 2
@@ -28,9 +28,9 @@ IBasso = \notes \relative c {
   %24 page 5
   f f f f f f f f | bes, bes bes bes f' f f f | c c c c f f f,4 | R1*2 |
   %29
-  r8 \clef "tenor" f'' f f r e e e | [d d] \clef "bass" [g, g] c, e f fis |
+  r8 \clef "tenor" f'' f f r e e e |  d[ d] \clef "bass"  g,[ g] c, e f fis |
   %31 page 6
-  r8 [g16. a32] [g8 f!] e e e e | e e e e b? b b b |
+  r8  g16.[ a32]  g8[ f!] e e e e | e e e e b? b b b |
   b? b b b c r c r | d r d r e r e r | f4 r g8 f e f | g g g, g c4 r |
   %37 page 7
   % Note: Bars 37-42 were originally 5 bars: R1*3 | r2 r8 c e g | c,4 r r8 c e g |
@@ -39,7 +39,7 @@ IBasso = \notes \relative c {
   cis8 cis cis cis d2: |
   cis8 cis cis cis d4 r8 d |
   %45 page 8
-  b b b b [c c] [f f] | r g e c f d g e | a f b? g c4 r8 f, | g g g, g c4 f |
+  b b b b  c[ c]  f[ f] | r g e c f d g e | a f b? g c4 r8 f, | g g g, g c4 f |
   g8 g g, g c r c r | c c' g e c4 r |
   %51 page 9
   c4 r8 g' c,4 r8 g' | c, c c c c4 r | R1*5 |
@@ -47,7 +47,7 @@ IBasso = \notes \relative c {
   r8 c c c c r c r | r c c c c r c r | r c c c c r c r |
   f f f f c' c, c'16 bes a g |
   %62 page 11
-  f8 r f r [f f] [f f] | f f f f bes bes bes bes | f f f f c c c c |
+  f8 r f r  f[ f]  f[ f] | f f f f bes bes bes bes | f f f f c c c c |
   f f f4 a,8 r a r | bes r bes r a r a r |
   %67 page 12
   bes4 r b8 r b r | c r c r b r b r | c r c r c4 c | c r c c | c r c c |
