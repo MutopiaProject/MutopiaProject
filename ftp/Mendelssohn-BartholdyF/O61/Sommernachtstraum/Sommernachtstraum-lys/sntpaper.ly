@@ -1,23 +1,24 @@
-\version "1.3.120"
-\paper {
-	% Mandatory Mutopia settings:
-	textheight = 270.0\mm;
-	linewidth = 180.0\mm;
+\version "2.16.0"
+\layout {
+%{	% Mandatory Mutopia settings:
+	textheight = 270.0\mm
+	line-width = 180.0\mm
 
-	\translator {
-		\HaraKiriStaffContext
-		\consists "Mark_engraver";
+	\context {
+		\Staff \RemoveEmptyStaves
+		\consists "Mark_engraver"
 	}
-	\translator  {
-		\OrchestralScoreContext
+	\context  {
+		\Score
 		skipBars = ##t 
 
 		soloText = #"I."
 		soloIIText = #"II."
-		devNullThread = #'never
+		devNullVoice = #'never
 		
-		TimeSignature \override #'style = #'C
-		BarNumber \override #'padding = #3
-		RestCollision \override #'maximum-rest-count = #1
+	 \override TimeSignature #'style = #'C
+	 \override BarNumber #'padding = #3
+	 \override RestCollision #'maximum-rest-count = #1
 	}
+%}
 }
