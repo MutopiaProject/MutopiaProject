@@ -1,14 +1,14 @@
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 \header {
  mutopiatitle = "O How Amiable Are Thy Dwellings"
- mutopiacomposer = "Thomas Weelkes"
+ mutopiacomposer = "WeelkesT"
  mutopiainstrument = "Voice"
  style = "Classical"
  copyright = "MutopiaBSD"
  maintainer = "Robert de Vries"
  maintainerEmail = "rhdv@xs4all.nl"
- lastupdated = "2002/Jan/24"
+ lastupdated = "2012/Aug/19"
 
   title = "O How Amiable Are Thy Dwellings"
   composer = "Thomas Weelkes"
@@ -16,14 +16,14 @@
 
 %  footer = "VVE 2002"
 %  tagline = "VAK Vokaal Ensemble 2002"
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and released under the MutopiaBSD license by" + \maintainer + ".\\\\You should have received a copy of the license with this music. If not, it is available at the above website.}"
-  footer = "Mutopia-2002/01/24-170"
+  footer = "Mutopia-2012/08/19-170"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2012. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the MutopiaBSD License, for details see: \hspace #-0.5 \with-url #"http://mutopiaproject.org/mutopiabsd.txt" http://mutopiaproject.org/mutopiabsd.txt } } } }
 }
 
-\version "1.4.9"
+\version "2.14.0"
 
 
-sopraan = \notes\relative c'' {
+sopraan = \relative c'' {
 \clef "violin"
 \key es \major
 %1
@@ -33,38 +33,38 @@ d4. c8 bes4 d4 | es2 bes2 ~ | bes2 r2 | r2 bes2 ~ | bes4 bes4 c4. c8 |
 %10
 d8 es8 f2 e4 | f4. c8 d4 c4 | bes1 | r4 c4 d4. c8 | bes4 bes4 es4. d8 |
 %15
-c4 c4 f4. es8 | d4 c4. bes8 bes4 ~ | bes4 a4 bes2 | bes4. c8 () d8 es8 () c4 | bes2 r2 |
+c4 c4 f4. es8 | d4 c4. bes8 bes4 ~ | bes4 a4 bes2 | bes4. c8 ( d8) es8 ( c4) | bes2 r2 |
 %20
 r1 | r1 | bes2 c4 es4 ~ | es8 es8 d4 c2 | bes2 r2 | 
 %25
 r2 r4 as4 | c4 es4. es8 d4 | c4 c4 d4 f4 ~ | f8 f8 es4 d4 c4 | es8 es8 d4 c8 c8 bes4 | 
 %30
-as4 [g8 as8] bes4 bes4 ~ | bes4 a4 bes4 f4 | bes4 bes8 as8 g4 g4 | c4 c8 bes8 a8 g8 () a4 | bes2. bes4 | 
+as4  g8[ as8] bes4 bes4 ~ | bes4 a4 bes4 f4 | bes4 bes8 as8 g4 g4 | c4 c8 bes8 a8 g8 ( a4) | bes2. bes4 | 
 %35
-bes4. bes8 bes2 | bes4 es4 es8 d8 c4 | c4 f4 f8 es8 d8 c8 ( | ) bes2 es4 as,8 as8 | c4 c4 c2 | 
+bes4. bes8 bes2 | bes4 es4 es8 d8 c4 | c4 f4 f8 es8 d8 c8 ( |  bes2) es4 as,8 as8 | c4 c4 c2 | 
 %40
 r4 c2 c4 | f2 es2 | d2 r2 | f,4. g8 a8 bes8 c4 ~ | c8 es8 d8 d8 c4 bes4 ~ | 
 %45
 bes4 a4 bes2 | r4 bes4. c8 d8 es8 | f2 f2 | f4. f8 f2 | c4 c4 d2 | 
 %50
-r2 r4 f4 ~ | [f8 es8] d4 c4 es4 | d4 c4 bes4 des4 | c2 r2 | r2 r4 es4 ~ |
+r2 r4 f4 ~ |  f8[ es8] d4 c4 es4 | d4 c4 bes4 des4 | c2 r2 | r2 r4 es4 ~ |
 %55
-[es8 d8 c8 f8] ~ [f8 es8 d8 c8] | d4 es4 bes2 ~ | bes2 bes2 ^\fermata |
+ es8[ d8 c8 f8] ~  f8[ es8 d8 c8] | d4 es4 bes2 ~ | bes2 bes2 ^\fermata |
 }
 
-altoone = \notes\relative c'' {
+altoone = \relative c'' {
 \clef "violin"
 \key es \major
 %1
 r1 | r1 | r1 | es,2. es4 |
 %5
-f4. f8 g8 as8 bes4 | as4 g4 f4 es8 f8 | g4 f4 es4. c8 | g'4 f4. es8 () d4 | g4 f8 g8 as4. as8 |
+f4. f8 g8 as8 bes4 | as4 g4 f4 es8 f8 | g4 f4 es4. c8 | g'4 f4. es8 ( d4) | g4 f8 g8 as4. as8 |
 %10
 g4 d4 es8 f8 g4 | a2 r4 as4 | g2. d4 | f2. f4 | g4. f8 es4 es4 |
 %15
- f4 c4 d8 bes8 () a4 | bes4 f4 f2 ~ | f4 c'4 bes4 f'4 | g4 bes4. bes8 as4 | g4 f8 es8 () d4 c4 | 
+ f4 c4 d8 bes8 ( a4) | bes4 f4 f2 ~ | f4 c'4 bes4 f'4 | g4 bes4. bes8 as4 | g4 f8 es8 ( d4) c4 | 
 %20
-[bes8 c8 d8 es8] d4 c4 | es4 d8 d8 es2 | es4 bes4 es4 es4 | g4 bes4. bes8 as4 | g2 f2 |
+ bes8[ c8 d8 es8] d4 c4 | es4 d8 d8 es2 | es4 bes4 es4 es4 | g4 bes4. bes8 as4 | g2 f2 |
 %25
  bes,2 f'2 | r4 es4 g4 bes4 ~ | bes8 bes8 as4 g4 f4 | d4 es4 f2 | bes,8 c8 d4 es4. d8 |
 %30
@@ -72,16 +72,16 @@ g4 d4 es8 f8 g4 | a2 r4 as4 | g2. d4 | f2. f4 | g4. f8 es4 es4 |
 %35
  es4 d4 es2 ~ | es2 es4 as4 | as8 g8 f4 f4 bes4 | bes8 as8 g8 f8 es4 c4 | c4. c8 c2 |
 %40
- r4 f2 c4 | d2 es4. f8 ( | ) g4 f4 f2 | d2 c4 f,4 ~ | f8 g8 a8 bes8 c8 es8 d8 d8 | 
+ r4 f2 c4 | d2 es4. f8 ( |  g4) f4 f2 | d2 c4 f,4 ~ | f8 g8 a8 bes8 c8 es8 d8 d8 | 
 %45
 c2 d4 bes4 | es2 bes4. c8 | d8 es8 f8 f4 g8 as8 bes8 | c4 a4 a8 a8 bes4 | bes4 a4 bes4 bes4 ~ | 
 %50
-[bes8 as8] g4 f4 d4 ~ | [d8 c8 g'8 f8] es2 | r4 as4. g8 f4 | e8 f4 e8 f4. es8 | [d8 es8] f4 [g8 f8 es8 d8] |
+ bes8[ as8] g4 f4 d4 ~ |  d8[ c8 g'8 f8] es2 | r4 as4. g8 f4 | e8 f4 e8 f4. es8 |  d8[ es8] f4  g8[ f8 es8 d8] |
 %55
-[c8 bes8] c4 [d8 es8 f8 g8] | f4 g2 f4 | es2 d2 ^\fermata |
+ c8[ bes8] c4  d8[ es8 f8 g8] | f4 g2 f4 | es2 d2 ^\fermata |
 }
 
-altotwo = \notes\relative c'' {
+altotwo = \relative c'' {
 \clef "violin"
 \key es \major
 %1
@@ -91,7 +91,7 @@ altotwo = \notes\relative c'' {
 %10
  d4 bes'4 as4 g4 | f4. g8 a4 f4 | bes,2 es4 d4 | c2 r2 | r2 r4 g'4 | 
 %15
- a4. g8 f4 c4 | d8 bes8 () c4 f2 | f2 d2 ~ | d2 f4. c8 ( | ) es4 d4 f2 |
+ a4. g8 f4 c4 | d8 bes8 ( c4) f2 | f2 d2 ~ | d2 f4. c8 ( |  es4) d4 f2 |
 %20
  g4 bes4. bes8 as4 | g4 f as g | g f es c | bes8 c d es f2 | bes,2 r4 c4 |
 %25
@@ -99,18 +99,18 @@ altotwo = \notes\relative c'' {
 %30
  f8 f es4 d8 d d4 | c4 c bes2 ~ | bes2 r4 bes4 | es4 es8 d c4 c | f f8 es d c bes4 ~ | 
 %35
- bes bes bes bes | g2 r4 es'4 | as4 as8 g f4 f | bes bes8 as g () f f4 ~ | f e f2 |
+ bes bes bes bes | g2 r4 es'4 | as4 as8 g f4 f | bes bes8 as g ( f) f4 ~ | f e f2 |
 %40
- r4 as2 g4 | f2 g4 () c, | d bes4. c8 d es | f4 f,4. g8 a bes | c4 d f8 c f4 | 
+ r4 as2 g4 | f2 g4 ( c,) | d bes4. c8 d es | f4 f,4. g8 a bes | c4 d f8 c f4 | 
 %45
  f4. f8 f4 es8 f | g as bes4 f f | f4. g8 as bes c4 | f, f4. es8 d4 | c f f2 |
 %50
- d4 es d f | r4 bes4. as8 g4 | f4 c4 [d8 es] f4 | c2 r4 f4 ~ | [f8 es] d4 es g |
+ d4 es d f | r4 bes4. as8 g4 | f4 c4  d8[ es] f4 | c2 r4 f4 ~ |  f8[ es] d4 es g |
 %55
- f2 g4 [f8 es] | [d c bes as] [g as] bes4 ~ | bes2 bes ^\fermata |
+ f2 g4  f8[ es] |  d[ c bes as]  g[ as] bes4 ~ | bes2 bes ^\fermata |
 }
 
-tenor = \notes\relative c' {
+tenor = \relative c' {
 \clef "violin_8"
 \key es \major
 %1
@@ -120,13 +120,13 @@ bes2. f4 | c'2 f,4 bes4 ~ | bes4 bes4 c4. c8 | d4. c8 bes4 bes4 | es4 d4 c4 f,4 
 %10
 bes2 c2 ~ | c4 c4 f4. c8 | es4 d4. c8 bes4 | f2 bes4 d4 | es4. d8 c2 ~ |
 %15
-c4 a4 bes4 c4 | f4. es8 () d2 | c4 f,4 f2 | r2 f2 | g4 bes4. bes8 as4 |
+c4 a4 bes4 c4 | f4. es8 ( d2) | c4 f,4 f2 | r2 f2 | g4 bes4. bes8 as4 |
 %20
 g4 g4 f2 | bes4. f8 c'4. c8 | bes4 bes2 a4 | bes2 r2 | r4 bes4 d4 f4 ~ | 
 %25
-f8 f8 es4 d4 c4 | es4 bes4. c8 d8 bes8 | c4 c8 c8 bes4 bes4 | bes2 r4 f4 | g8 as8 () bes4 c4 g4 |
+f8 f8 es4 d4 c4 | es4 bes4. c8 d8 bes8 | c4 c8 c8 bes4 bes4 | bes2 r4 f4 | g8 as8 ( bes4) c4 g4 |
 %30
-[as8 bes8] c4 f,4 f4 ~ | f4 f4 f2 | f4 bes4 bes8 as8 g4 | g4 c4 c8 bes8 a8 g8 | f2. g4 |
+ as8[ bes8] c4 f,4 f4 ~ | f4 f4 f2 | f4 bes4 bes8 as8 g4 | g4 c4 c8 bes8 a8 g8 | f2. g4 |
 %35
 f4. f8 g4 bes4 | es4 es8 d8 c4 c4 | f4 f8 es8 d8 c8 bes4 ~ | bes4 bes2 as 4 | g2 a2 | 
 %40
@@ -134,12 +134,12 @@ r4 c2 c4 ~ | c4 bes2 a4 | bes2 r4 f4 ~ | f8 g8 a8 bes8 c4 c4 | f4 f,4 a4 bes4 |
 %45
 c2 bes2 | bes4. c8 d8 es8 f4 | d2 c2 | a4 c2 f4 ~ | f4 c4 bes2 |
 %50
-f4 c'4 f,4. g8 | a4 bes4 c4 c4 ~ | [c8 bes8] a4 bes4 bes4 ~ | [bes8 as8] g4 f2 | r4 bes4. as8 g4 | 
+f4 c'4 f,4. g8 | a4 bes4 c4 c4 ~ |  c8[ bes8] a4 bes4 bes4 ~ |  bes8[ as8] g4 f2 | r4 bes4. as8 g4 | 
 %55
-a8 bes4 a8 [bes8 c8 d8 es8] | f4 bes,4 bes4. as8 | [g8 f8] g4 f2 ^\fermata |
+a8 bes4 a8  bes8[ c8 d8 es8] | f4 bes,4 bes4. as8 |  g8[ f8] g4 f2 ^\fermata |
 }
 
-bas = \notes {
+bas =  {
 \clef "bass"
 \key es \major
 %1
@@ -165,10 +165,10 @@ f4. f8 bes,4 es4 ~ | es8 f8 g8 as8 bes4 bes,4 ~ | bes,8 c8 d8 es8 f2 ~ | f4 f4 f
 %50
 bes,4 c4 d4 bes,4 | f4 g4 c2 | f2 bes,2 | c4. bes,8 a,2 | bes,2 es2 |
 %55
-f2 bes,4 bes4 ~ | [bes8 as8 g8 f8] es4 d4 | es2 bes,2 ^\fermata \bar "|."
+f2 bes,4 bes4 ~ |  bes8[ as8 g8 f8] es4 d4 | es2 bes,2 ^\fermata \bar "|."
 }
 
-soptext = \lyrics {
+soptext = \lyricmode {
 _1 _1 _2 O2. __ how4 a4. -- mi8 
 %5
 -- a4. -- ble8 are4 Thy4 dwel2 -- lings,1 __
@@ -196,7 +196,7 @@ in4 Thee,2 | _4 bles4. -- sed8 is the | man2 that | put4. -- teth8 his2 | trust4
 _2. A4*9 -- | men,2 _2 | _2. A4*11 -- men.2 |
 }
 
-altoonetext = \lyrics {
+altoonetext = \lyricmode {
 %1
 _1 | _1 | _1 | O2. how4 |
 %5
@@ -221,7 +221,7 @@ his2 trust4 in | Thee,2 bles4. -- sed8 | is the man, bles4 -- sed8 is the | man4
 men,2 | _4 A4*5 -- men,4. A8*29 -- men.2 |
 }
 
-altotwotext = \lyrics {
+altotwotext = \lyricmode {
 _1 | _2 O2. __ how4 a4. -- mi8 -- | a8 -- ble8 are2 Thy4 |
 %5
 dwel4. -- lings,8 O4 how4 | a2 -- mi4 -- a4. -- ble8 are2 Thy4 | dwel4 -- lings,4 are4 Thy | dwel -- lings, O how |
@@ -245,7 +245,7 @@ trust4. in8 Thee,4 bles8 -- sed | is the man,4 the man, | bles4. -- sed8 is the 
 A4*3 -- men,4 | _4 A4*7 -- | men,2 _4 A4*5 -- | men,2 A1*2 -- men.2 |
 }
 
-tentext = \lyrics {
+tentext = \lyricmode {
 %1
 O2. how4 a4. -- mi8 -- a4. -- ble8 are4 Thy4 dwel1. -- |
 %5
@@ -270,7 +270,7 @@ in2 Thee, | bles4. -- sed8 is the man4 | that2 put -- | teth4 his2 trust2 __ in4
 A1. -- men,4 A2. -- men,4 A2. -- men,2 | _4 A1*2 -- men,4 A1 -- men.2 |
 }
 
-bastext = \lyrics {
+bastext = \lyricmode {
 %1
 _1 | _1 | _1 | _1 | 
 %5
@@ -296,54 +296,62 @@ A1.. -- men,2 | A1*3 -- | men,2 A1*2 -- men.2 |
 }
 
 \score {
-    \context ChoirStaff = coro <
-	\property Score.BarNumber \override #'padding = #3
-	\context Staff = soprano <
-	    \property Staff.noAutoBeaming = ##t
-	    \property Staff.automaticMelismata = ##t
-	    \property Staff.midiInstrument = #"flute"
-	    \property Staff.instrument = #`("Soprano")
+    \context ChoirStaff = "coro" <<
+	\override Score.BarNumber   #'padding = #3
+	\context Staff = "soprano" <<
+	    \set Staff.autoBeaming = ##f
+	     \unset Staff.melismaBusyProperties 
+	    \set Staff.midiInstrument = #"flute"
+	    \set Staff.instrumentName = #"Soprano"
 	    \sopraan
-	    \context Lyrics = soprano \soptext
-	>
+	    \context Lyrics = "soprano" \soptext
+	>>
 
-	\context Staff = altoone <
-	    \property Staff.noAutoBeaming = ##t
-	    \property Staff.automaticMelismata = ##t
-	    \property Staff.midiInstrument = #"flute"
-	    \property Staff.instrument = #`("Alto 1")
+	\context Staff = "altoone" <<
+	    \set Staff.autoBeaming = ##f
+	     \unset Staff.melismaBusyProperties 
+	    \set Staff.midiInstrument = #"flute"
+	    \set Staff.instrumentName = #"Alto 1"
 	    \altoone
-	    \context Lyrics = altoone \altoonetext
-	>
+	    \context Lyrics = "altoone" \altoonetext
+	>>
 
-	\context Staff = altotwo <
-	    \property Staff.noAutoBeaming = ##t
-	    \property Staff.automaticMelismata = ##t
-	    \property Staff.midiInstrument = #"flute"
-	    \property Staff.instrument = #`("Alto 2")
+	\context Staff = "altotwo" <<
+	    \set Staff.autoBeaming = ##f
+	     \unset Staff.melismaBusyProperties 
+	    \set Staff.midiInstrument = #"flute"
+	    \set Staff.instrumentName = #"Alto 2"
 	    \altotwo
-	    \context Lyrics = altotwo \altotwotext
-	>
+	    \context Lyrics = "altotwo" \altotwotext
+	>>
 
-	\context Staff = tenoren <
-	    \property Staff.noAutoBeaming = ##t
-	    \property Staff.automaticMelismata = ##t
-	    \property Staff.midiInstrument = #"flute"
-	    \property Staff.instrument = #`("Tenor")
+	\context Staff = "tenoren" <<
+	    \set Staff.autoBeaming = ##f
+	     \unset Staff.melismaBusyProperties 
+	    \set Staff.midiInstrument = #"flute"
+	    \set Staff.instrumentName = #"Tenor"
 	    \tenor
-	    \context Lyrics = tenoren \tentext
-	>
+	    \context Lyrics = "tenoren" \tentext
+	>>
 
-	\context Staff = bassen <
+	\context Staff = "bassen" <<
 
-	    \property Staff.noAutoBeaming = ##t
-	    \property Staff.automaticMelismata = ##t
-	    \property Staff.midiInstrument = #"flute"
-	    \property Staff.instrument = #`("Bass")
+	    \set Staff.autoBeaming = ##f
+	     \unset Staff.melismaBusyProperties 
+	    \set Staff.midiInstrument = #"flute"
+	    \set Staff.instrumentName = #"Bass"
 	    \bas
-	    \context Lyrics = bassen \bastext
-	>
-    >
-    \midi  { \tempo 2=55 }
-    \paper { }
+	    \context Lyrics = "bassen" \bastext
+	>>
+    >>
+    
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 55 2)
+      }
+    }
+
+
+    \layout { }
 }
