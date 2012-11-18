@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Trumpet"
 
@@ -7,9 +6,9 @@ instrument = "Trumpet"
 \include "global.ly"
 \include "trombe.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\trombeStaff 
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
-

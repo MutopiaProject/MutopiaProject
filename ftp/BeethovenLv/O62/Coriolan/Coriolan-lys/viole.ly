@@ -1,56 +1,52 @@
 
-\version "1.3.120";
+\version "2.16.0"
 
 \include "viola-1.ly"
 \include "viola-2.ly"
 
 %{
-violeGroup =  \context PianoStaff = viole_group \notes <
-        \property PianoStaff.aDueText = #""
+violeGroup =  \context PianoStaff = viole_group  <<
+        \set PianoStaff.aDueText = #""
 	\context Staff=oneViole {
-		\property Staff.midiInstrument = #"viola"
-		\property Staff.instrument = #"Viola"
-		\property Staff.instr = #"Vla."
+		\set Staff.midiInstrument = #"viola"
+		\set Staff.instrumentName = #"Viola"
+		\set Staff.shortInstrumentName = #"Vla."
 		
-		\clef "alto";
-		%\property Staff.clefGlyph = #"clefs-C"
-		%\property Staff.clefPosition = #0
+		\clef "alto"
+		%\set Staff.clefGlyph = #"clefs.C"
+		%\set Staff.clefPosition = #0
 
 		\global
 	}
 	\context Staff=twoViole {
-		\property Staff.midiInstrument = #"viola"
-		\property Staff.instrument = #"Viola II"
-		\property Staff.instr = #"Vla. II"
+		\set Staff.midiInstrument = #"viola"
+		\set Staff.instrumentName = #"Viola II"
+		\set Staff.shortInstrumentName = #"Vla. II"
 		
-		\clef "alto"; 
-		%\property Staff.clefGlyph = #"clefs-C"
-		%\property Staff.clefPosition = #0
+		\clef "alto" 
+		%\set Staff.clefGlyph = #"clefs.C"
+		%\set Staff.clefPosition = #0
 
 		\global
 	}
 
-	\context Staff=oneViole \partcombine Staff
-		\context Voice=one \violaI
-		\context Voice=two \violaII
->
+	\context Staff=oneViole \partcombine \violaI \violaII
+>>
 %}
 
-violeGroup =  \notes \context Staff = viole <
-        \property Staff.aDueText = #""
-	\context Staff=viole {
-		\property Staff.midiInstrument = #"viola"
-		\property Staff.instrument = #"Viola"
-		\property Staff.instr = #"Vla."
+violeGroup =   \context Staff = "viole" <<
+        \set Staff.aDueText = #""
+	\context Staff = "viole" {
+		\set Staff.midiInstrument = #"viola"
+		\set Staff.instrumentName = #"Viola"
+		\set Staff.shortInstrumentName = #"Vla."
 
-		\clef "alto"; 
-		%\property Staff.clefGlyph = #"clefs-C"
-		%\property Staff.clefPosition = #0
+		\clef "alto" 
+		%\set Staff.clefGlyph = #"clefs.C"
+		%\set Staff.clefPosition = #0
 
 		\global
 	}
-	\context Voice=one \partcombine Voice
-		\context Thread=one \violaI
-		\context Thread=two \violaII
->
+	\context Voice = "one" \partcombine \violaI \violaII
+>>
 

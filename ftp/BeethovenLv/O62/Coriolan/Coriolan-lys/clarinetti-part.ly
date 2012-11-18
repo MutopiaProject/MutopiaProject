@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Clarinet"
 
@@ -7,9 +6,10 @@ instrument = "Clarinet"
 \include "global.ly"
 \include "clarinetti.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\clarinettiStaff
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
 

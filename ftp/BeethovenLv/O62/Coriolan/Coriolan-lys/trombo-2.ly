@@ -1,7 +1,7 @@
 
-\version "1.3.120";
+\version "2.16.0"
 
-tromboII =  \notes \relative c {
+tromboII =   \relative c {
 	R1*2|
 	c'4-.\ff r r2|
 	R1*3|
@@ -16,13 +16,11 @@ tromboII =  \notes \relative c {
 	R1*6|
 	r4 c-.\f r2|
 	R1*2|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	r2 c4\p\< r|
+	r2 c4\p\cresc r|
 	r2 c4 r|
 	r2 c4 r|
 	c r c r|
-	\!c1\ff ~|
+	 c1\!\ff ~|
 	c8 r g r g r g r|
 	g4. r8 g4. r8|
 	g4. r8 c4. r8|
@@ -108,19 +106,17 @@ tromboII =  \notes \relative c {
 	c4 r r2|
 	R1*18|
 	c1\f~|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	c\p\< ~|
+	c\p\cresc ~|
 	c~|
 	c~|
 	c~|
-	\!c4.\ff c8 c2~|
+	 c4.\!\ff c8 c2~|
 	c4. c8 c2~|
 	c4. c8 c2~|
 	c4. c8 c2~|
 	c4. c8 c2|
 	r4 r8 g'8 g2|
-	c,4-"sempre"\ff r c r|
+	c,4\ffsempre r c r|
 	g r r2|
 	c4 r c r|
 	g r r2|
@@ -141,11 +137,9 @@ tromboII =  \notes \relative c {
 	R1|
 	c,4-. c-. r2|
 	c4-. c-. r2|
-	\property Voice.decrescendoText = #'(lines " " "dim." " ")
-	\property Voice.decrescendoSpanner = #'dashed-line
-	c4\> r g r|
+	c4\dim r g r|
 	R1|
-	\!g4\p r r2|
+	 g4\!\p r r2|
 	R1|
 	g4 r r2|
 	R1|

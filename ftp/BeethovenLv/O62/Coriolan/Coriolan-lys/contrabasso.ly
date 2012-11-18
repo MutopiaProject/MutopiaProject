@@ -1,7 +1,6 @@
+\version "2.16.0"
 
-\version "1.3.120";
-
-contrabasso =  \notes \relative c {
+contrabasso =   \relative c {
 	% copied 21 from cello
 	c1\ff~|
 	c|
@@ -21,12 +20,10 @@ contrabasso =  \notes \relative c {
 	c4 r4 r2|
 	c4 r4 r2|
 	R1|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	c'4.\< c8 bes4. bes8|
+	c'4.\cresc c8 bes4. bes8|
 
 	%20
-	as4. as8 \!g4\f r4|
+	as4. as8  g4\!\f r4|
 	R1|
 
 	bes,4\p r4 r2|
@@ -37,19 +34,17 @@ contrabasso =  \notes \relative c {
 
 	% copied 14 from cello
 
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	bes'4.\< bes8 as4. as8|
-	g4 \!g4-.\f r2|
+	bes'4.\cresc bes8 as4. as8|
+	g4  g4-.\f r2|
 	R1
 	as4.\p as8 g4. g8|
-	f2.-"cresc" g4|
+	f2.\cresc g4\!|
 	f2. g4|
 	f4. g8 f4. g8|
 	f4. g8 f4. g8|
 	as1\ff ~|
 	%35
-	as4(g f)es|
+	as4(g f es)|
 	d4. r8 c4. r8|
 	b4. r8 c4. r8|
 	bes4. r8 as4. r8|
@@ -70,38 +65,32 @@ contrabasso =  \notes \relative c {
 	d4 r r2|
 	R1
 	es'4\p r r r8 es(|
-	)as,4 r r r8 as(|
-	)g4 r r r8 g(|
-	)d'4 r r r8 d(|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	)es4\< r r r8 es(|
-	)as,4 r r r8 as(|
-	)g4 r r r8 g(|
-	)d'4 r r r8 d(|
+	 as,4) r r r8 as(|
+	 g4) r r r8 g(|
+	 d'4) r r r8 d(|
+	 es4)\cresc r r r8 es(|
+	 as,4) r r r8 as(|
+	 g4) r r r8 g(|
+	 d'4) r r r8 d(|
 	%60
-	)es4 r r r8 es(|
-	)as,4 r r r8 as(|
-	\!)g2\ff f|
+	 es4) r r r8 es(|
+	 as,4) r r r8 as(|
+	 g2\!)\ff f|
 	e c'|
 	f,4\p r r r8 f(|
 	%65
-	)bes4 r r r8 bes(|
-	)as4 r r r8 as(|
-	)e4 r r r8 e(|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	)f4\< r r r8 f(|
-	)bes4 r r r8 bes(|
+	 bes4) r r r8 bes(|
+	 as4) r r r8 as(|
+	 e4) r r r8 e(|
+	 f4)\cresc r r r8 f(|
+	 bes4) r r r8 bes(|
 	%70
-	\!)as2\ff g|
+	 as2)\ff g|
 	fis d'|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	g,4\p\< r r r8 g(|
-	)c4 r r r8 c(|
-	% )<b1\sf\> { s2 s4 \!s8}>|
-	\!)b1\sf|
+	g,4\p\cresc r r r8 g(|
+	 c4) r r r8 c(|
+	% )<<b1\sf\> { s2 s4  s8\!}>>|
+	 b1\!)\sf|
 	%75
 	% copied 3 from cello
 	c4\p r d r|
@@ -110,23 +99,21 @@ contrabasso =  \notes \relative c {
 	d4\pp r d r|
 	d r d r|
 	%80
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	d r d\< r|
+	d r d\cresc r|
 	d r d r|
 	d r d r|
 	d r d r|
 	% copied 8 from cello
-	\!c'2.\ff()bes4|
+	 c'2.\ff( bes4)|
 	%85
-	a(g a)g|
-	c2.()bes4|
-	a(g a)g|
-	f2.()es4|
-	d(c d)c|
+	a(g a g)|
+	c2.( bes4)|
+	a(g a g)|
+	f2.( es4)|
+	d(c d c)|
 	%90
-	f2.()es4|
-	d(c d)c|
+	f2.( es4)|
+	d(c d c)|
 	c4 r r2|
 	c4 r r2|
 	c4 r r2|
@@ -149,10 +136,10 @@ contrabasso =  \notes \relative c {
 	R1*3|
 	% copied 8 from cello
 	%110
-	[g'8:8 bes d es][f, a cis d]|
-	[es,8: g: b: c:][d,: f: a: bes:]|
-	[c,: es: g: a:][cis,: e: g: bes:]|
-	[d,: g: bes: d:][d,: fis: a: d:]|
+	 g'8[ bes d es] f,[ a cis d]|
+	 es,8[ g b c] d,[ f a bes]|
+	 c,[ es g a] cis,[ e g bes]|
+	 d,[ g bes d] d,[ fis a d]|
 	g,,2 ~ g4. g8|
 	%115
 	g2 ~ g4. g8|
@@ -164,20 +151,20 @@ contrabasso =  \notes \relative c {
 	%120 - 1
 	R1*21|
 	% copied 4 frorm cello
-	[des'8\f f a bes][c, es g as]|
-	[bes,8:8 des: f: ges:][as,: c: e: f:]|
-	[g,: bes: c: des:][f,: bes: c: des:]|
-	[e,: g: bes: des:][c: e: g: c:]|
+	 des'8[\f f a bes] c,[ es g as]|
+	 bes,8[ des f ges] as,[ c e f]|
+	 g,[ bes c des] f,[ bes c des]|
+	 e,[ g bes des] c[ e g c]|
 	f,4\p r r2|
 	R1*3|
 	% copied 10 from cello|
-	[f8:\ff as: c: des:][es,: g: b: c:]|
-	[des,: f: a: bes:][c,: es: g: as:]|
+	 f8[\ff as c des] es,[ g b c]|
+	 des,[ f a bes] c,[ es g as]|
 	%150
-	% r[des,16 des][e e g g]r8[c,16 c][e e f f]|
-	[bes, des e g][as, c e f]|
-	% r8[des16 des][f f g g][c, c e e][g g c c]|
-	[bes, des f g][c, e g c]|
+	% r des,16[ des] e[ e g g]r8 c,16[ c] e[ e f f]|
+	 bes,[ des e g] as,[ c e f]|
+	% r8 des16[ des] f[ f g g] c,[ c e e] g[ g c c]|
+	 bes,[ des f g] c,[ e g c]|
 	f,1\ff ~|
 	f|
 	bes,4-. r r2
@@ -193,48 +180,44 @@ contrabasso =  \notes \relative c {
 	bes2\sf r|
 	R1*2|
 	r2 r4 bes\ff(|
-	)as2. bes4\sf(|
-	)as2. bes4\sf(|
-	)as2. bes4\sf(|
-	)as2. c4\sf(|
-	)b2. c4\sf(|
-	)b2. c4\sf(|
-	)b2. c4\sf(|
-	)b2. c4\sf(|
-	)b4 r r2|
+	 as2.) bes4\sf(|
+	 as2.) bes4\sf(|
+	 as2.) bes4\sf(|
+	 as2.) c4\sf(|
+	 b2.) c4\sf(|
+	 b2.) c4\sf(|
+	 b2.) c4\sf(|
+	 b2.) c4\sf(|
+	 b4) r r2|
 	R1|
 	c4\p r r r8 c(|
-	)f,4 r r r8 f(|
+	 f,4) r r r8 f(|
 	%180
-	)e4 r r r8 e(|
-	)b'4 r r r8 b(|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	)c4\< r r r8 c(|
-	)f,4 r r r8 f(|
-	)e4 r r r8 e'(|
+	 e4) r r r8 e(|
+	 b'4) r r r8 b(|
+	 c4)\cresc r r r8 c(|
+	 f,4) r r r8 f(|
+	 e4) r r r8 e'(|
 	%185
-	)b4 r r r8 b(|
-	)c4 r r r8 c(|
-	)f,4 r r r8 f(|
-	\!)e2\ff d'|
+	 b4) r r r8 b(|
+	 c4) r r r8 c(|
+	 f,4) r r r8 f(|
+	 e2)\ff d'|
 	cis a|
 	%190
 	d4\p r r r8 d(|
-	)g,4 r r r8 g(|
-	)f4 r r r8 f(|
-	)cis'4 r r r8 cis(|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	)d4\< r r r8 d(|
+	 g,4) r r r8 g(|
+	 f4) r r r8 f(|
+	 cis'4) r r r8 cis(|
+	 d4)\cresc r r r8 d(|
 
 	%195
-	)g,4 r r r8 g(|
-	\!)d2\ff e'|
+	 g,4) r r r8 g(|
+	 d2)\ff e'|
 	dis b|
 	e4\p r r r8 es(|
-	)a,4 r r r8 a(|
-	)g1|
+	 a,4) r r r8 a(|
+	 g1)|
 
 	%200
 	f|
@@ -247,24 +230,22 @@ contrabasso =  \notes \relative c {
 	%205
 	g r g r|
 	g r g r|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	g r g\< r|
+	g r g\cresc r|
 	g r g r|
 	
 	%210
 	g r g r|
 	g r g r|
-	\!f2.\ff()es4|
-	d( c d )c|
-	f2.\ff()es4|
+	 f2.\ff( es4)|
+	d( c d  c)|
+	f2.\ff( es4)|
 
 	%215
-	d( c d )c|
-	bes2.\ff()as4|
-	g( f g )f|
-	bes2.\ff()as4|
-	g( f g )f|
+	d( c d  c)|
+	bes2.\ff( as4)|
+	g( f g  f)|
+	bes2.\ff( as4)|
+	g( f g  f)|
 
 	%220
 	f4 r r2|
@@ -289,45 +270,41 @@ contrabasso =  \notes \relative c {
 	R1*3|
 
 	%copied 59 from cello
-	[c8\f es g as][bes, d fis g]|
+	 c8[\f es g as] bes,[ d fis g]|
 
 	%240
-	[as, c e f][g, bes d es]|
+	 as,[ c e f] g,[ bes d es]|
 	f4 r r2|
 	R1*3|
 	c4\p r r r8 c(|
 
 	%245
-	)f4 r r r8 f(|
-	)e4 r r r8 e(|
-	)b4 r r r8 b(|
-	)c4 r r r8 c(|
-	)f4 r r r8 f(|
+	 f4) r r r8 f(|
+	 e4) r r r8 e(|
+	 b4) r r r8 b(|
+	 c4) r r r8 c(|
+	 f4) r r r8 f(|
 
 	%250
-	)es4 r r r8 es(|
-	)b4 r r r8 b(|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	)c4\< r r r8 c(|
-	)f4 r r r8 f,(|
-	)es1|
+	 es4) r r r8 es(|
+	 b4) r r r8 b(|
+	 c4)\cresc r r r8 c(|
+	 f4) r r r8 f,(|
+	 es1)|
 	
 	%255
-	\!ges\f|
+	 ges\f|
 	f\p|
 	as\f|
 	g\p|
 	bes\f|
 
 	%260
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	as4.\p\< as'8 g4. g8|
+	as4.\p\cresc as'8 g4. g8|
 	f4. f8 es4. es8|
 	as4. as8 g4. g8|
 	f4. f8 es4. es8|
-	\!f,4.\ff f'8 f2\sf|
+	 f,4.\ff f'8 f2\sf|
 	
 	%265
 	f,4. f'8 f2\sf|
@@ -337,14 +314,14 @@ contrabasso =  \notes \relative c {
 	b,4. b'8 b2\sf|
 	
 	%270
-	[c,8-"sempre"\ff b c d][es d es c]|
-	[b c d c][b c b g]|
-	[c8 b c d][es d es c]|
-	[b c d c][b c b g]|
-	[c b c g][c b c g]|
+	 c,8[\ffsempre b c d] es[ d es c]|
+	 b[ c d c] b[ c b g]|
+	 c8[ b c d] es[ d es c]|
+	 b[ c d c] b[ c b g]|
+	 c[ b c g] c[ b c g]|
 
 	%275
-	[c b c g][c b c g]|
+	 c[ b c g] c[ b c g]|
 	c1 ~|
 	c|
 	f,4-. r r2|
@@ -365,13 +342,11 @@ contrabasso =  \notes \relative c {
 	f,4-. g-. r2|
 
 	%290
-	\property Voice.decrescendoText = #'(lines " " "dim." " ")
-	\property Voice.decrescendoSpanner = #'dashed-line
-	as4\> r b r|
+	as4\dim r b r|
 	R1|
-	\!c4\p r r2|
+	 c4\p r r2|
 	R1|
-	g4-#'((font-shape . upright) "pizz.") r r2|
+	g4-"pizz." r r2|
 	
 	%295
 	R1|

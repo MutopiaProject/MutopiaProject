@@ -1,4 +1,5 @@
-\version "1.3.120"
-\midi{ 
-	\tempo 4 = 150; 
+\version "2.16.0"
+
+\midi {
+	\tempo 4 = 150
 }

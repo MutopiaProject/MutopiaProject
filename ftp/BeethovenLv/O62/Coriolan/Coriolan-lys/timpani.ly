@@ -1,7 +1,6 @@
+\version "2.16.0"
 
-\version "1.3.120";
-
-timpani =  \notes \relative c {
+timpani =   \relative c {
 	R1*2|
 	c4-.\ff r r2|
 	R1*3|
@@ -16,13 +15,11 @@ timpani =  \notes \relative c {
 	R1*6|
 	r4 c-.\f r2|
 	R1*2|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	r2 c4-.\p\< r|
+	r2 c4-.\p\cresc r|
 	r2 c4-. r|
 	r2 c4-. r|
 	c r c r|
-	\!c1\ff-\trill|
+	 c1\!\ff\trill|
 	c8 r g r g r g r|
 	g4 r g r|
 	g r c r|
@@ -108,7 +105,7 @@ timpani =  \notes \relative c {
 	c4 r r2|
 	c4 r r2|
 	g4 r r2|
-	c4-"sempre"\ff r c r|
+	c4\ffsempre r c r|
 	g r r2|
 	c4 r c r|
 	g r r2|
@@ -124,11 +121,9 @@ timpani =  \notes \relative c {
 	R1|
 	c4-. c-. r2|
 	c4-. c-. r2|
-	\property Voice.decrescendoText = #'(lines " " "dim." " ")
-	\property Voice.decrescendoSpanner = #'dashed-line
-	c4\> r g r|
+	c4\dim r g r|
 	R1|
-	\!c4\p r r2|
+	 c4\!\p r r2|
 	R1|
 	g4 r r2|
 	R1|
@@ -136,14 +131,13 @@ timpani =  \notes \relative c {
 	R1*18|
 }
 
-timpaniStaff =  \context Staff = timpani <
-	\property Staff.midiInstrument = #"timpani"
-	\property Staff.instrument = #"Timpani in C-G  "
-	\property Staff.instr = #"Timp."
-	\clef "bass";
+timpaniStaff =  \context Staff = "timpani" <<
+	\set Staff.midiInstrument = #"timpani"
+	\set Staff.instrumentName = #"Timpani in C-G"
+	\set Staff.shortInstrumentName = #"Timp."
+	\clef "bass"
 	\Time
-	\notes { \key c \major; }
-	\context Voice=timpani
-	\timpani
->
+	 { \key c \major }
+	\context Voice = "timpani" 	\timpani
+>>
 

@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "French Horn"
 
@@ -7,10 +6,9 @@ instrument = "French Horn"
 \include "global.ly"
 \include "corni.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\corniStaff
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
-
-
