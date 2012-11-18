@@ -1,28 +1,28 @@
-\version "1.6.9"
+\version "2.14.2"
 Instrument = "Viola d'amore"
 \include "header.ly"
 \include "1-amore.ly"
 \include "2-amore.ly"
 \include "3-amore.ly"
 
-\include "paper16.ly"
+#(set-global-staff-size 17)
 
 \score {
   \context Staff=A \IAmore
   \header { piece = "Allegro" opus = "RV 540" }
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff=A \IIAmore
 
   \header { piece = "Largo" }
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff=A \IIIAmore
 
   \header { piece = "Allegro" }
-  \paper {}
+  \layout {}
 }

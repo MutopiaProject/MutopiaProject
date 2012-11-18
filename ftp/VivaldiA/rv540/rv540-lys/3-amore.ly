@@ -1,13 +1,16 @@
-\version "1.6.9"
+\version "2.14.2"
 
-IIIAmore = \notes\relative c'' {
+IIIAmore = \relative c'' {
   \key f \major
   \time 3/8 
-  \property Score.skipBars = ##t
-  \property Staff.autoBeamSettings \override
-    #'(end 1 32 * *) = #(make-moment 1 8)
+  \set Timing.beamExceptions = #'(
+    (end . (
+      ((1 . 16) . (6))
+      ((1 . 32) . (4 4 4))
+    )))
+  \set Score.skipBars = ##t
 
-  \property Score.currentBarNumber = #196
+  \set Score.currentBarNumber = #196
   R4.*20 |
   d32 e f g a16 d, e cis |
   % 217
@@ -59,11 +62,11 @@ IIIAmore = \notes\relative c'' {
   % 253
   R4. |
   % 254
-  <g,16. d ><g32 d ><g16. d ><g32 d ><a16. d, ><g32 d >|
+  <g, d >16.<g d >32<g d >16.<g d >32<a d, >16.<g d >32|
   % 255
-  <fis16. d ><fis32 d ><fis16. d ><fis32 d ><g16. d ><a32 d, >|
+  <fis d >16.<fis d >32<fis d >16.<fis d >32<g d >16.<a d, >32|
   % 256
-  <bes8 d, ><a d, > r8 |
+  <bes d, >8<a d, > r8 |
   % 257
   R4. |
   % 258 
@@ -79,11 +82,11 @@ IIIAmore = \notes\relative c'' {
   % 263 
   R4.*17 |
   % 280
-  d32( cis d )e d( cis d )e f( e f )g |
+  d32( cis d  e) d( cis d  e) f( e f  g) |
   % 281
   a16 f d a f d |
   % 282
-  f'32( e f )g f( e f )g f( e f )g |
+  f'32( e f  g) f( e f  g) f( e f  g) |
   % 283
   a4 r8 |
   % 284
@@ -93,11 +96,11 @@ IIIAmore = \notes\relative c'' {
   % 286
   d32 cis d e d cis d e d cis d e |
   % 287
-  <cis16 a >a' a <cis, a ><cis a ><d a >|
+  <cis a >16a' a <cis, a ><cis a ><d a >|
   % 288
   <d a >a' a <d, a ><d a ><cis a >|
   % 289
-  <cis8 a > r8 r |
+  <cis a >8 r8 r |
   % 290
   r32 d32 d d g d d d bes' d, d d |
   % 291
@@ -119,7 +122,7 @@ IIIAmore = \notes\relative c'' {
   % 299
   R4. |
   % 300
-  <f,4._#'(italic "Arpeggio") a d f> |
+  <f, a d f>4._\markup{\italic "Arpeggio"} |
   <a cis e> | <f a d f> | <a cis e> |
 %{
   f,16 a d f d a |
@@ -135,9 +138,9 @@ IIIAmore = \notes\relative c'' {
   %308
   d32 cis d e f e f g a8 |
   % 309
-  <{f16 g e8.^\trill d16} \\ {a8 a4}> |
+  <<{f16 g e8.^\trill d16} \\ {a8 a4}>> |
   % 310
-  <d4 a d, f> r8 |
+  <d a d, f>4 r8 |
   % 311
   R4.
   % 312
@@ -149,21 +152,17 @@ IIIAmore = \notes\relative c'' {
   % 315
   cis, a cis e cis a cis e cis a cis e |
   % 316
-  f( e )f g f( e )f g f( e )f g |
+  f( e  f) g f( e  f) g f( e  f) g |
   % 317
   a16. bes32 a16. bes32 a16. bes32 |
   % 318
-  \property Voice.TextSpanner \set #'type = #'trill
-  \property Voice.TextSpanner \set #'edge-height = #'(0 . 0)
-  \property Voice.TextSpanner \set #'edge-text = #'((line (music "scripts-trill") " ") . "")
-
-  a16 g32 f e8.\spanrequest \start "text" d16 \spanrequest \stop "text" |
+  a16 g32 f e8.\startTrillSpan d16\stopTrillSpan |
   % 319
-  d32( cis )d e d( cis )d e d( cis )d e |
+  d32( cis  d) e d( cis  d) e d( cis  d) e |
   % 320
   f16. g32 f16. g32 f16. g32 |
   % 321
-  f16 e32 d cis8.\spanrequest \start "text" d16\spanrequest \stop "text"  |
+  f16 e32 d cis8.\startTrillSpan d16\stopTrillSpan |
   % 322
   d4 r8 |
   % 323

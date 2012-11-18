@@ -1,4 +1,4 @@
-\version "1.6.9"
+\version "2.14.2"
 Instrument = ""
 \include "header.ly"
 \include "1-amore.ly"
@@ -18,52 +18,76 @@ Instrument = ""
 \include "3-basso.ly"
 
 
-\include "paper13.ly"
+#(set-global-staff-size 13)
 
 \score {
-  <
-    \context Staff=A <\property Staff.instrument = "Viola d'amore" \IAmore>
-    \context Staff=B <\property Staff.instrument = "Lute" \ILute>
-   \context StaffGroup <
-    \context Staff=C <\property Staff.instrument = "Violin I" \IVlnI>
-    \context Staff=D <\property Staff.instrument = "Violin II" \IVlnII>
-   >
-    \context Staff=E <\property Staff.instrument = "Viola" \IVla>
-    \context Staff=F <\property Staff.instrument = "Basso Continuo" \IBasso>
+  <<
+    \context Staff=A <<\set Staff.instrumentName = "Viola d'amore" \IAmore>>
+    \context Staff=B <<\set Staff.instrumentName = "Lute" \ILute>>
+   \context StaffGroup <<
+    \context Staff=C <<\set Staff.instrumentName = "Violin I" \IVlnI>>
+    \context Staff=D <<\set Staff.instrumentName = "Violin II" \IVlnII>>
+   >>
+    \context Staff=E <<\set Staff.instrumentName = "Viola" \IVla>>
+    \context Staff=F <<\set Staff.instrumentName = "Basso Continuo" \IBasso>>
     \context FiguredBass \IFigures
-  >
+  >>
   \header { piece = "Allegro" opus = "RV 540" }
-  \paper {}
-  \midi { \tempo 4 = 81 }
+  \layout {}
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 81 4)
+      }
+    }
+
+
 }
 
 \score {
-  <
-    \context Staff=A <\property Staff.instrument = "Viola d'amore" \IIAmore>
-    \context Staff=B <\property Staff.instrument = "Lute" \IILute>
-   \context StaffGroup <
-    \context Staff=C <\property Staff.instrument = "Violins I + II" \IIVln>
-   >
-  >
+  <<
+    \context Staff=A <<\set Staff.instrumentName = "Viola d'amore" \IIAmore>>
+    \context Staff=B <<\set Staff.instrumentName = "Lute" \IILute>>
+   \context StaffGroup <<
+    \context Staff=C <<\set Staff.instrumentName = "Violins I + II" \IIVln>>
+   >>
+  >>
 
   \header { piece = "Largo" }
-  \paper {}
-  \midi { \tempo 4 = 32 }
+  \layout {}
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 32 4)
+      }
+    }
+
+
 }
 
 \score {
-  <
-    \context Staff=A <\property Staff.instrument = "Viola d'amore" \IIIAmore>
-    \context Staff=B <\property Staff.instrument = "Lute" \IIILute>
-   \context StaffGroup <
-    \context Staff=C <\property Staff.instrument = "Violin I" \IIIVlnI>
-    \context Staff=D <\property Staff.instrument = "Violin II" \IIIVlnII>
-   >
-    \context Staff=E <\property Staff.instrument = "Viola" \IIIVla>
-    \context Staff=F <\property Staff.instrument = "Basso Continuo" \IIIBasso>
+  <<
+    \context Staff=A <<\set Staff.instrumentName = "Viola d'amore" \IIIAmore>>
+    \context Staff=B <<\set Staff.instrumentName = "Lute" \IIILute>>
+   \context StaffGroup <<
+    \context Staff=C <<\set Staff.instrumentName = "Violin I" \IIIVlnI>>
+    \context Staff=D <<\set Staff.instrumentName = "Violin II" \IIIVlnII>>
+   >>
+    \context Staff=E <<\set Staff.instrumentName = "Viola" \IIIVla>>
+    \context Staff=F <<\set Staff.instrumentName = "Basso Continuo" \IIIBasso>>
     \context FiguredBass \IIIFigures
-  >
+  >>
   \header { piece = "Allegro" }
-  \midi { \tempo 4 = 78 }
-  \paper {}
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 78 4)
+      }
+    }
+
+
+  \layout {}
 }

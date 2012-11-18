@@ -1,11 +1,11 @@
-\version "1.6.9"
+\version "2.14.2"
 
 % 2nd movement tacet. Common for viola and basso.
-\score { \context Staff \notes {
+\score { \context Staff  {
   \Clef
   \key f \major
   \time 4/4
-  \property Score.skipBars = ##t
+  \set Score.skipBars = ##t
   \repeat "volta" 2 {
     \partial 8 r8 | R1*6 | r2 r4
   }
@@ -15,5 +15,5 @@
   }
 
   \header { piece = "Largo" }
-  \paper {}
+  \layout {}
 }

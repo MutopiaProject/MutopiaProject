@@ -1,29 +1,29 @@
-\version "1.6.9"
+\version "2.14.2"
 Instrument = "Basso Continuo"
 \include "header.ly"
 \include "1-basso.ly"
 \include "3-basso.ly"
 
-\include "paper16.ly"
+#(set-global-staff-size 17)
 
 \score {
-  < 
+  << 
     \context Staff=A \IBasso
     \context FiguredBass \IFigures
-  >
+  >>
 
   \header { piece = "Allegro" opus = "RV 540" }
-  \paper {}
+  \layout {}
 }
 
 Clef = \clef "bass"
 \include "2-tacet.ly"
 
 \score {
-  <
+  <<
     \context Staff=A \IIIBasso
     \context FiguredBass \IIIFigures
-  >
+  >>
   \header { piece = "Allegro" }
-  \paper {}
+  \layout {}
 }
