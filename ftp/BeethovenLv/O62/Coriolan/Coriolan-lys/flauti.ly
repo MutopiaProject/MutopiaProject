@@ -1,16 +1,14 @@
 
-\version "1.3.120";
+\version "2.16.0"
 
 \include "flauto-1.ly"
 \include "flauto-2.ly"
 
-flautiStaff =  \notes \context Staff = flauti <
-	\property Staff.midiInstrument = #"flute"
-	\property Staff.instrument = #"Flauti"
-	\property Staff.instr = #"Fl."
+flautiStaff =   \context Staff = "flauti" <<
+	\set Staff.midiInstrument = #"flute"
+	\set Staff.instrumentName = #"Flauti"
+	\set Staff.shortInstrumentName = #"Fl."
 	\global
-	\context Voice=one \partcombine Voice
-		\context Thread=one \flautoI
-		\context Thread=two \flautoII
->
+	\context Voice = "one" \partcombine \flautoI \flautoII
+>>
 

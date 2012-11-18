@@ -1,4 +1,4 @@
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Violoncello and Contrabass"
 
@@ -6,9 +6,9 @@ instrument = "Violoncello and Contrabass"
 \include "global.ly"
 \include "bassi.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\bassiGroup
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
-

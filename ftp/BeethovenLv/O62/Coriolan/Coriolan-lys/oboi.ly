@@ -1,15 +1,13 @@
 
-\version "1.3.120";
+\version "2.16.0"
 
 \include "oboe-1.ly"
 \include "oboe-2.ly"
 
-oboiStaff =  \context Staff = oboi <
-	\property Staff.midiInstrument = #"oboe"
-	\property Staff.instrument = #"Oboi"
-	\property Staff.instr = #"Ob."
+oboiStaff =  \context Staff = "oboi" <<
+	\set Staff.midiInstrument = #"oboe"
+	\set Staff.instrumentName = #"Oboi"
+	\set Staff.shortInstrumentName = #"Ob."
 	\global
-	\context Voice=one \partcombine Voice
-		\context Thread=one \oboeI
-		\context Thread=two \oboeII
->
+	\context Voice = "one" \partcombine \oboeI \oboeII
+>>

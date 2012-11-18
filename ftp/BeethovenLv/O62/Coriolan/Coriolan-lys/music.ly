@@ -1,4 +1,3 @@
-\version "1.3.120"
 flauto-1.ly
 flauto-2.ly
 oboe-1.ly
