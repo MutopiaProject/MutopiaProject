@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IMand = \notes \relative c''' {
+IMand =  \relative c''' {
   \clef "treble"
   \time 4/4
   \key d\major
@@ -9,14 +9,14 @@ IMand = \notes \relative c''' {
   \partial 8 a8 |
   %1 page 1
   fis16 e fis g fis e fis g fis8 d a' g | 
-  <fis4 a, d,> r8 d16 c b8 g' fis cis | d d, r d'16 c b8 b' a cis, |
-  d,32 e fis g a b cis d d,8 r <fis'4 \\ d> fis16 d fis d |
-  <e4 \\ cis> e16 cis e cis <d4 fis,> b'16 d, b' d, |
+  <fis a, d,>4 r8 d16 c b8 g' fis cis | d d, r d'16 c b8 b' a cis, |
+  d,32 e fis g a b cis d d,8 r <<fis'4 \\ d>> fis16 d fis d |
+  <<e4 \\ cis>> e16 cis e cis <d fis,>4 b'16 d, b' d, |
   %6
-  <cis4 e,> a'16 cis, a' cis, b8 cis16 d cis8 b |
-  a4 a,8 r <fis''4 \\ d> d16 fis a fis |
-  <e4 \\ cis> cis16 e a e <d4 fis,> d16 gis b d, |
-  <cis4 e,> cis16 e a e b8 cis16 d cis8 b |
+  <cis e,>4 a'16 cis, a' cis, b8 cis16 d cis8 b |
+  a4 a,8 r <<fis''4 \\ d>> d16 fis a fis |
+  <<e4 \\ cis>> cis16 e a e <d fis,>4 d16 gis b d, |
+  <cis e,>4 cis16 e a e b8 cis16 d cis8 b |
   %10
   a16 cis e a a e cis e a, cis e a a e cis e |
   a, d fis a a fis d fis a, d fis a a fis d fis |
@@ -31,16 +31,16 @@ IMand = \notes \relative c''' {
   a' gis fis e d cis b a fis' e d cis d cis b a |
   %19 Note: the stems were omitted in the chords of the following bars.
   % I assumed that :16 is the correct interpretation.
-  b a gis fis e4 <{d'16 d d d} {e, e e e_#'(italic "Simi:")}>
-    <{b'4:16 | b: s: s: a: | a: s: s: b: | b: s: s: a: | a: a:}
+  b a gis fis e4 <<{d'16 d d d} {e, e e e_ \markup{\italic "Simi:"}}>>
+    <<{b''4:16 | b: s: s: a: | a: s: s: b: | b: s: s: a: | a: a:}
     {d, | d d cis cis | cis cis d d | d d cis cis | cis cis}
-    {e, | e e e e | e e e e | e e e e | e e}> a16 gis fis e d cis b a |
+    {e, | e e e e | e e e e | e e e e | e e}>> a'16 gis fis e d cis b a |
   %24
   a'16 gis fis e d cis b a fis'8 d4 cis16 b |
-  e8 cis4 b16 a \grace g'!8 fis e16 d cis8 b |
-  a a, r a'' f_#'(italic "d.") d4 c16 b |
+  e8 cis4 b16 a \slashedGrace g'!8 fis e16 d cis8 b |
+  a a, r a'' f_ \markup{\italic "d."} d4 c16 b |
   %27 page 3
-  e8 c4 b16 a \grace g'8 f e16 d c8 b | 
+  e8 c4 b16 a \slashedGrace g'8 f e16 d c8 b | 
   a e'16 cis! fis!8_\f fis16 d gis8_\f gis16 e a8_\f e16 cis |
   fis8-| fis16 d gis8 gis16 e a gis fis e d cis b a |
   a' gis fis e d cis b a e e e e b' b b b |
@@ -66,11 +66,11 @@ IMand = \notes \relative c''' {
   fis d e fis g e fis g a fis g a b g a b |
   %45
   a fis g a g e fis g fis d e fis e cis d e |
-  d b cis d e d cis b a4 r8 <{g' | g4_#'(italic "d.") e8 g fis4 s8 fis} \\
-    {e8 | e4 cis8 e d4 d8 d}>
+  d b cis d e d cis b a4 r8 <<{g' | g4_ \markup{\italic "d."} e8 g fis4 s8 fis} \\
+    {e8 | e4 cis8 e d4 d8 d}>>
   %48
-  e8 fis16 g b,8 cis d d, r <{g' | g4 s f s8 f! | e f16 g} \\
-    {e8 e4 e8 g d4 d8 d | cis4}> f8 e d4 a'16 fis? a fis |
+  e8 fis16 g b,8 cis d d, r <<{g' | g4 s f s8 f! | e f16 g} \\
+    {e8 e4 e8 g d4 d8 d | cis4}>> f8 e d4 a'16 fis? a fis |
   %51
   g, b' b b e,, g' g g fis, a' a a d,, fis' fis fis |
   e, g' g g cis,, e' e e d4 a'16 f a f |
@@ -79,11 +79,11 @@ IMand = \notes \relative c''' {
   %55 page 5
   a b cis d d,8. b'16 a b a g fis g fis e |
   fis' e fis g fis e fis g fis8 d a' g | 
-  <fis4 a, d,> r8 d16 c b8 g' fis cis |
+  <fis a, d,>4 r8 d16 c b8 g' fis cis |
   d8 d, r d'16 c b8 b' a cis, | d d, r a' d4 f8 d |
   %60
   e16 d cis b a8 a' a4 f8 d | e16 d cis b a4 fis'16_\f a fis d a8 fis |
-  fis'16_#'(italic "d.") a fis d a8 fis g'16_\f b g d b8 g |
+  fis'16_ \markup{\italic "d."} a fis d a8 fis g'16_\f b g d b8 g |
   g'16 b g d b8 g fis'16_\f a fis d a8 fis |
   %64
   fis'16 a fis d a8 fis e'16 g e cis g8 e | 

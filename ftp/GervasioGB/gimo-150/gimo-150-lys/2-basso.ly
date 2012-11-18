@@ -1,8 +1,8 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIBasso = \notes \relative c {
+IIBasso =  \relative c {
   \clef "bass"
-  \property Voice.tupletSpannerDuration = #(make-moment 1 4)
+  \set tupletSpannerDuration = #(ly:make-moment 1 4)
   \key g\major
   \time 2/2
 %page 4

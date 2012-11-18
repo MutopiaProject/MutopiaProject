@@ -1,4 +1,4 @@
-\version "1.6.0"
+\version "2.16.0"
 
 % Contains the full score.
 Instrument = "Basso"
@@ -8,27 +8,27 @@ Instrument = "Basso"
 \include "2-basso.ly"
 \include "3-basso.ly"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 \score {
   \context Staff = C \IBasso
 
   \header {piece = "Allegro spiritoso assai" opus = "Gimo 149"}
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = C \IIBasso
 
   \header {piece = "Larghetto Andantino" }
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = C \IIIBasso
 
   \header {piece = "Allegro assai spiritoso" }
-  \paper {}
+  \layout {}
 }
 
 
