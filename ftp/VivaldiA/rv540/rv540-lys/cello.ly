@@ -1,15 +1,15 @@
-\version "1.6.9"
+\version "2.14.2"
 Instrument = "Cello"
 \include "header.ly"
 \include "1-basso.ly"
 \include "3-basso.ly"
 
-\include "paper16.ly"
+#(set-global-staff-size 17)
 
 \score {
   \context Staff=A \IBasso
   \header { piece = "Allegro" opus = "RV 540" }
-  \paper {}
+  \layout {}
 }
 
 Clef = \clef "bass"
@@ -18,5 +18,5 @@ Clef = \clef "bass"
 \score {
   \context Staff=A \IIIBasso
   \header { piece = "Allegro" }
-  \paper {}
+  \layout {}
 }

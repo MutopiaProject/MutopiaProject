@@ -1,12 +1,15 @@
-\version "1.6.9"
+\version "2.14.2"
 
-IVla = \notes\relative c'' {
+IVla = \relative c'' {
   \clef "alto"
   \key f \major
   \time 2/4 
-  \property Score.skipBars = ##t
-  \property Staff.autoBeamSettings \override
-    #'(end 1 8 * *) = #(make-moment 1 2)
+  \set Timing.beamExceptions = #'(
+    (end . (
+      ((1 . 8) . (4))
+      ((1 . 16) . (4 4))
+    )))
+  \set Score.skipBars = ##t
 
   \partial 8 r8 |
   r8 a g f |

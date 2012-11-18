@@ -1,26 +1,26 @@
-\version "1.6.9"
+\version "2.14.2"
 Instrument = "Lute"
 \include "header.ly"
 \include "1-lute.ly"
 \include "2-lute.ly"
 \include "3-lute.ly"
 
-\include "paper16.ly"
+#(set-global-staff-size 17)
 
 \score {
   \context Staff=A \ILute
   \header { piece = "Allegro" opus = "RV 540" }
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff=A \IILute
   \header { piece = "Largo" }
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff=A \IIILute
   \header { piece = "Allegro" }
-  \paper {}
+  \layout {}
 }
