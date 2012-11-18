@@ -1,8 +1,8 @@
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = ""
 \include "header.ly"
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 \include "1-mand.ly"
 \include "2-mand.ly"
@@ -12,31 +12,46 @@ Instrument = ""
 \include "3-basso.ly"
 
 \score {
-  \context StaffGroup <
+  \context StaffGroup <<
     \context Staff = Mand \IMand
     \context Staff = Basso \IBasso
-  >
+  >>
   \header {piece = "Allegro" opus="Gimo 145"}
-  \paper {\translator{\ScoreContext BarNumber \set #'extra-offset = #'(0 . 1)} \translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi { \tempo 4=100 }
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 100
+    }
+
+
 }
 
 \score {
-  \context StaffGroup <
+  \context StaffGroup <<
     \context Staff = Mand \IIMand
     \context Staff = Basso \IIBasso
-  >
+  >>
   \header {piece = "Larghetto. Andantino grazioso."}
-  \paper {\translator{\ScoreContext BarNumber \set #'extra-offset = #'(0 . 1)} \translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi { \tempo 4=80 }
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 80
+    }
+
+
 }
 
 \score {
-  \context StaffGroup <
+  \context StaffGroup <<
     \context Staff = Mand \IIIMand
     \context Staff = Basso \IIIBasso
-  >
+  >>
   \header {piece = "Allegro con molto Spirito"}
-  \paper {\translator{\ScoreContext BarNumber \set #'extra-offset = #'(0 . 1)} \translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi { \tempo 4=140 }
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 140
+    }
+
+
 }

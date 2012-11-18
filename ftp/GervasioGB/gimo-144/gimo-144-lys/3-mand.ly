@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIMand = \notes \relative c''' {
+IIIMand =  \relative c''' {
   \clef "treble"
   \time 6/8
   \key d\major
@@ -36,10 +36,10 @@ IIIMand = \notes \relative c''' {
   gis e dis e dis e | gis e dis e dis e | b cis dis dis e fis |
   fis gis a a gis fis | e b g e4 r8 | e fis gis gis a b |
   %52
-  b cis d d cis b | cis4. <{fis8 e fis | e fis e <gis b,> fis <gis b,> |
-    <a4. cis,> fis8 e fis} \\ {d8 cis d | cis d cis s4. | s d8 cis d}> |
+  b cis d d cis b | cis4. <<{fis8 e fis | e fis e <gis b,> fis <gis b,> |
+    <a cis,>4. fis8 e fis} \\ {d8 cis d | cis d cis s4. | s d8 cis d}>> |
   %56 page 11
-  <{e8 fis e <gis b,> fis <gis b,>} \\ {cis,8 d cis}> | a4. r4 b,8 |
+  <<{e8 fis e <gis b,> fis <gis b,>} \\ {cis,8 d cis}>> | a'4. r4 b,8 |
   a b g fis g e | a' fis d g e cis | a' fis d r d c | b b' a g fis e |
   %62
   a fis d r d c | b b' a g fis e | d a fis d4. | d'8 e f g a bes |

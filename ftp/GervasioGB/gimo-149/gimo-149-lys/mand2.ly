@@ -1,4 +1,4 @@
-\version "1.6.0"
+\version "2.16.0"
 
 % Contains the full score.
 Instrument = "Mandolin II"
@@ -8,26 +8,26 @@ Instrument = "Mandolin II"
 \include "2-mand2.ly"
 \include "3-mand2.ly"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 \score {
   \context Staff = B \IMandII
 
   \header {piece = "Allegro spiritoso assai" opus = "Gimo 149"}
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = B \IIMandII
 
   \header {piece = "Larghetto Andantino" }
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = B \IIIMandII
 
   \header {piece = "Allegro assai spiritoso" }
-  \paper {}
+  \layout {}
 }
 
