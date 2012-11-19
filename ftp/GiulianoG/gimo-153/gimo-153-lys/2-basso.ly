@@ -1,10 +1,10 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIBasso = \notes \relative c {
+IIBasso =  \relative c {
   \clef "bass"
   \time 2/2
   \key d \minor
-  \property Score.skipBars = ##t 
+  \set Score.skipBars = ##t 
 
   %page 2
   %page 20
@@ -25,5 +25,3 @@ IIBasso = \notes \relative c {
   %39
   d4 a8. a16 d4 r4^\fermata \bar "|."
 }
-
-

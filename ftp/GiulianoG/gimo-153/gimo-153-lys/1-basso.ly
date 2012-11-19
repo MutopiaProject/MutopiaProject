@@ -1,10 +1,10 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IBasso = \notes \relative c' {
+IBasso =  \relative c' {
   \clef "bass"
   \key bes\major
   \time 4/4
-  \property Score.skipBars = ##t 
+  \set Score.skipBars = ##t 
 
   %page 2
   %page 20
