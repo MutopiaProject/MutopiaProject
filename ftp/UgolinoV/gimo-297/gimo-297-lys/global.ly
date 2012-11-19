@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IGlobal = \notes {
+IGlobal =  {
   \time 2/4
   \repeat "volta" 2 {
     s2*54
@@ -10,12 +10,12 @@ IGlobal = \notes {
   }
 }
 
-IIGlobal = \notes { 
+IIGlobal =  { 
   \time 4/4
   s1 * 8 \bar "|."
 }
 
-IIIGlobal = \notes {
+IIIGlobal =  {
   \time 3/8
   \repeat "volta" 2 {
     s4.*46

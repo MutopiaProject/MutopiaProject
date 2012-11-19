@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIViolinII = \notes \relative c'' {
+IIViolinII =  \relative c'' {
   \clef "treble"
   \key e\minor
   g8 g g g r b b b | b g16 a b8 b e e a, fis | d' d d d g, g e' e |
@@ -9,4 +9,3 @@ IIViolinII = \notes \relative c'' {
   %7
   g g fis fis e2 | dis r2^\fermata
 } 
-
