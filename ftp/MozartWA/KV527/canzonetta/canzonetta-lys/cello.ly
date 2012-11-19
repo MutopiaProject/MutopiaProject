@@ -1,15 +1,15 @@
 % Violoncello part.
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = "Violincello and Double Bass"
 \include "header.ly"
-\include "paper20.ly"
+#(set-global-staff-size 20)
 \include "notes.ly"
 
 \score {
   \context Staff = Cello \CelloStaff
 
-  \paper {}
+  \layout {}
   % no midi here, use score.ly for midi output.
 }
 

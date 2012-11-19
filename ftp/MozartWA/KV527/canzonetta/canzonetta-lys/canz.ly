@@ -1,30 +1,32 @@
 % This file contains the full score.
-\version "1.6.6"
+\version "2.16.0"
 
 Instrument = ""
 \include "header.ly"
-\include "paper16.ly"
+#(set-global-staff-size 16)
 \include "notes.ly"
 
 \score {
-  \context StaffGroup = Strings <
-    \context Staff = Mandolin <
-      \property Staff.midiInstrument = #"koto"
-      \property Staff.instrument = "Mandolin"
+  \context StaffGroup = Strings <<
+    \context Staff = Mandolin <<
+      \set Staff.midiInstrument = #"koto"
+      \set Staff.instrumentName = "Mandolin"
       \MandolinStaff
-    >
-    \addlyrics
-      \context Staff = DonGiovanni <
-        \property Staff.midiInstrument = #"koto"
-        \property Staff.instrument = "Don Giovanni"
+    >>
+      \context Staff = DonGiovanni <<
+        \set Staff.midiInstrument = #"koto"
+        \set Staff.instrumentName = "Don Giovanni"
         \DonGiovanniStaff
-      >
-      \context Lyrics \DonGiovanniLyrics
-  >
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi{
-    \tempo 4=72
-  }
+      >>
+    \addlyrics \DonGiovanniLyrics
+  >>
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 72
+    }
+
+
 }
 
 

@@ -1,15 +1,15 @@
 % Mandolin part.
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = "Mandolin"
 \include "header.ly"
-\include "paper16.ly"
+#(set-global-staff-size 16)
 \include "notes.ly"
 
 \score {
   \context Staff = Mandolin \MandolinStaff
 
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
+  \layout {\context {\Staff \override VerticalAxisGroup #'minimum-Y-extent = #'(-4 . 4) }}
   % no midi here, use score.ly for midi output.
 }
 
