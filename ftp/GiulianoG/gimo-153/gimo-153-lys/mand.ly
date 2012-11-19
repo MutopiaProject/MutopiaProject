@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 Instrument = "Mandolin"
 \include "header.ly"
@@ -9,30 +9,45 @@ Instrument = "Mandolin"
 \include "3-mand.ly"
 
 \score {
-  \context Staff = Mand <
+  \context Staff = Mand <<
     \IMand
-  >
+  >>
 
   \header {piece = "Maestoso" opus = "Gimo 153"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4 = 66}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 66
+    }
+
+
 }
 
 \score {
-  \context Staff = Mand <
+  \context Staff = Mand <<
      \IIMand
-  >
+  >>
 
   \header {piece = "Larghetto"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4=66}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 66
+    }
+
+
 }
 
 \score {
-  \context Staff = Mand <
+  \context Staff = Mand <<
     \IIIMand
-  >
+  >>
   \header {piece = "Allegro"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 8=108}
+  \layout {}
+  
+  \midi {
+    \tempo 4. = 36
+    }
+
+
 }
