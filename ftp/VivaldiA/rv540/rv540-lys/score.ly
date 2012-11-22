@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 Instrument = ""
 \include "header.ly"
 \include "1-amore.ly"
@@ -36,10 +36,7 @@ Instrument = ""
   \layout {}
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 81 4)
-      }
+    \tempo 4 = 81
     }
 
 
@@ -58,10 +55,7 @@ Instrument = ""
   \layout {}
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 32 4)
-      }
+    \tempo 4 = 32
     }
 
 
@@ -82,10 +76,7 @@ Instrument = ""
   \header { piece = "Allegro" }
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 78 4)
-      }
+    \tempo 4 = 78
     }
 
 

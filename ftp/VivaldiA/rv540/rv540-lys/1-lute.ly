@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 ILute = \relative c {
   \key f \major
@@ -167,5 +167,5 @@ ILute = \relative c {
   % 153 
   R2*29 |
   % 182
-  R2^\fermata
+  R2^\fermataMarkup
 }

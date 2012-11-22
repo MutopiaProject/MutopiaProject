@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 IAmore = \relative c {
   \key f \major
@@ -179,5 +179,5 @@ IAmore = \relative c {
   % 153
   R2*29 |
   % 182
-  R2^\fermata
+  R2^\fermataMarkup
 }

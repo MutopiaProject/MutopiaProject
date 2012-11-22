@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 IIILute = \relative c'' {
   \key f \major
@@ -166,5 +166,5 @@ IIILute = \relative c'' {
   % 323
   R4.*6 |
   % 329
-  R4.^\fermata \bar "|."
+  R4.^\fermataMarkup \bar "|."
 }
