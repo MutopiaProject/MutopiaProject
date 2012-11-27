@@ -10,13 +10,15 @@
   source =	"Bach-Gesellschaft"
   lastupdated =	"2010/Oct/30"
 
-  mutopiainstrument = "Harpsichord,Clavichord,Piano"
+  mutopiainstrument = "Harpsichord, Piano, Clavichord"
   mutopiatitle =      "Menuet"
   mutopiacomposer =   "BachJS"
   mutopiaopus =       "BWV Anh. 114"
+  mutopiadate =       "1725"
+  mutopiamoreInfo =  "<p>A guitar arrangement and a trumpet duet transcription of this piece can both be found in the Mutopia archive.</p>"
 
- footer = "Mutopia-2012/02/08-75"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2012/11/27-75"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \pointAndClickOff
@@ -121,8 +123,6 @@ voicetwo =  \relative c' {
 }
 
 \paper{
-  top-margin = 3\mm
-  bottom-margin = 3\mm
 }
   
 \score {
@@ -135,7 +135,7 @@ voicetwo =  \relative c' {
     >>
   >>
 
-  \layout{ line-width = 18.0 \cm }
+  \layout{}
   
   \midi {
     \context {
