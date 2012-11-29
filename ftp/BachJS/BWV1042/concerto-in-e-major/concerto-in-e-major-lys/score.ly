@@ -12,7 +12,7 @@
     filename = "score.ly"
 }
 
-\version "2.14.0"
+\version "2.16.0"
 
 \include "solo_violin_1.ly"
 \include "violin1_1.ly"
@@ -99,10 +99,7 @@
 	}
     >>
     \midi {
-      \context {
-        \Score
-        tempoWholesPerMinute = #(ly:make-moment 110 4)
-      }
+      \tempo 4 = 110
     }
 }
 
@@ -150,10 +147,7 @@
     }
     \layout {}
     \midi {
-      \context {
-        \Score
-        tempoWholesPerMinute = #(ly:make-moment 60 4)
-      }
+      \tempo 4 = 60
     }
 }
 
@@ -199,9 +193,6 @@
     }
     \layout {}
     \midi {
-      \context {
-        \Score
-        tempoWholesPerMinute = #(ly:make-moment 110 4)
-      }
+      \tempo 4 = 110
     }
 }
