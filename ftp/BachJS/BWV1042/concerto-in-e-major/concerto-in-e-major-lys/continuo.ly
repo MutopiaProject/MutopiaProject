@@ -18,7 +18,7 @@
 \include "continuo_2.ly"
 \include "continuo_3.ly"
 \include "common-defs.ly"
-\version "2.14.0"
+\version "2.16.0"
 
 % 1st movement, printed version
 \score {
@@ -40,10 +40,7 @@
         \continuoBMidi
     }
     \midi {
-      \context {
-        \Score
-        tempoWholesPerMinute = #(ly:make-moment 110 4)
-      }
+      \tempo 4 = 110
     }
 }
 
@@ -60,10 +57,7 @@
     }
     \layout {}
     \midi {
-      \context {
-        \Score
-        tempoWholesPerMinute = #(ly:make-moment 50 4)
-      }
+      \tempo 4 = 50
     }
 }
 
@@ -80,9 +74,6 @@
     }
     \layout {}
     \midi {
-      \context {
-        \Score
-        tempoWholesPerMinute = #(ly:make-moment 120 4)
-      }
+      \tempo 4 = 120
     }
 }

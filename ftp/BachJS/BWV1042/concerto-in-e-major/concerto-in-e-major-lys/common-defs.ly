@@ -1,4 +1,4 @@
-\version "2.14.0"
+\version "2.16.0"
 % Various stuff common to the score and the different solo parts,
 % put in one place to ensure consistency.
 
