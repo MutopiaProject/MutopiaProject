@@ -8,7 +8,7 @@
   opus = \markup{\smallCaps "Op 149"}
 
   mutopiatitle = "28 melodische Übungsstücke"
-  mutopiacomposer = "Anton Diabelli"
+  mutopiacomposer = "DiabelliA"
   mutopiaopus = "Opus 149-4"
   mutopiainstrument = "Piano, Piano"
   source = "If I could know..."
