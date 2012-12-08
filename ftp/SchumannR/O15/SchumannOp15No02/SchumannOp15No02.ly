@@ -1,6 +1,6 @@
 % PaulLiu
-% 
-\version "2.0.0"
+%
+\version "2.16.0"
 \header {
  title = "Kinderscenen"
  subtitle = "Curiose Geschichte"
@@ -17,25 +17,25 @@
  maintainerEmail = "PaulLiu.bbs@bbs.cis.nctu.edu.tw"
  maintainerWeb = "http://www.cis.nctu.edu.tw/~is86007/"
  lastupdated = "2003/Oct/08"
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and released under the MutopiaBSD licence by " + \maintainer + ".} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
+ tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and released under the MutopiaBSD licence by " + \maintainer + ".} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
  footer = "Mutopia-2003/10/08-355"
 }
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
-stemDown = \property Voice.Stem \override #'direction = #-1
-stemUp = \property Voice.Stem \override #'direction = #1
-stemBoth = \property Voice.Stem \revert #'direction
-slurUp = \property Voice.Slur \set #'direction = #1
-pslurUp = \property Voice.PhrasingSlur \set #'direction = #1
-slurDown = \property Voice.Slur \set #'direction = #-1
-pslurDown = \property Voice.PhrasingSlur \set #'direction = #-1
-tripletbr = \property Voice.TupletBracket \set #'tuplet-bracket-visibility = ##t
+stemDown = \override Stem   #'direction = #-1
+stemUp = \override Stem   #'direction = #1
+stemNeutral = \revert Stem #'direction
+slurUp = \override Slur   #'direction = #1
+pslurUp = \override PhrasingSlur   #'direction = #1
+slurDown = \override Slur   #'direction = #-1
+pslurDown = \override PhrasingSlur   #'direction = #-1
+tripletbr = \override TupletBracket   #'tuplet-bracket-visibility = ##t
 
-repeattr = \notes {
+repeattr =  {
 	\relative c {
 		\partial 4
-		\context Voice = repeattr {
+		\context Voice = "repeattr" {
 			s4 |
 			 s2. s2. s2. s2. s2. s2. s2. s2. s2. s2.
 			 s2. s2. s2. s2. s2. s2. s2. s2. s2. s2.
@@ -46,9 +46,9 @@ repeattr = \notes {
 	}
 }
 
-dynamictr = \notes {
+dynamictr =  {
 	\relative c {
-		\context Voice = dynamicctr {
+		\context Voice = "dynamicctr" {
 			s4\mf
 			s2.
 			s2.
@@ -92,17 +92,17 @@ dynamictr = \notes {
 			s4\> s4\!
 		}
 	}
-}			
+}
 
-viola = \notes {
-	\relative c' { 
-		\context Voice = viola {
+viola =  {
+	\relative c' {
+		\context Voice = "viola" {
 %			\stemUp
 			\pslurUp
 			\slurUp
 			<d fis>4 ( | \grace { b'16 [a16]  }
 			<cis, g'>8 ) [ r16 <cis fis>16 ]  <cis g'>4 <cis b'> (
-			<d a'>2 ) <a' d>4 ( 
+			<d a'>2 ) <a' d>4 (
 			<g cis>8 ) [ r16 <fis b>16 ] <e a>4 \stemDown <g a g'>^\accent (
 			<fis d' fis>8 ) [ r16 <g cis e>16 ] <a d>4 \stemUp <d, fis>4 (
 			\grace { b'16 [a16] } <cis, g'>8 ) [r16 <cis fis>16]  <cis g'>4 <cis b'> (
@@ -110,28 +110,28 @@ viola = \notes {
 			cis8 \( [d e fis ] fis8. [ gis16 ]
 			gis4  a \) <d,, fis>4 ( \grace {  b'16 [a16 ]  }
 			<cis, g'>8 ) [r16 <cis fis>16 ] <cis g'>4 <cis b'>(
-			<d a'>2 ) <a' d>4 ( 
+			<d a'>2 ) <a' d>4 (
 			<g cis>8) [r16 <fis b>16 ] <e a>4 \stemDown <g a g'>^\accent (
 			<fis d' fis>8) [r16 <g cis e>16 ] <a d>4 \stemUp <d, fis>4 (
 			\grace { b'16 [a16] } <cis, g'>8 ) [r16 <cis fis>16 ]  <cis g'>4 <cis b'> (
-			<d a'>2 ) d'8. ( cis16 ) 
+			<d a'>2 ) d'8. ( cis16 )
 			cis8 \( [d e fis ] fis8. [ gis16 ]
 			gis4 a \) e8 \( fis
-			g a g fis g fis 
-			e2 \) d8 \( c 
+			g a g fis g fis
+			e2 \) d8 \( c
 			b4 c b
 			a2 \) fis4 ( \grace { b16 [a] }
 			<cis, g'>8 ) [r16 <cis fis>16 ] <cis g'>4 <cis b'>(
 			<d a'>2) <a' d>4(
-			<g cis>8) [r16 <fis b>16 ] <e a>4 \stemDown <g a g'>^\accent ( 
+			<g cis>8) [r16 <fis b>16 ] <e a>4 \stemDown <g a g'>^\accent (
 			<fis d' fis>8) [r16 <g cis e>16 ] <a d>4 \stemUp <d, fis>( \grace { b'16 [a] }
 			<cis, g'>8) [r16 <cis fis>16 ] <cis g'>4 b'8. ( a16 )
 			<d, a'>8\( [b' cis d ] d [e]
 			fis2^"ritard." e4 ~
 			e4  d4^"(a tempo)" \) e8 \( fis8
-			g a g fis g fis 
+			g a g fis g fis
 			e2 \) d8 \( c
-			b4 c b 
+			b4 c b
 			a2 \) fis4 ( \grace { b16 [a16] }
 			<cis, g'>8) [r16 <cis fis>16 ] <cis g'>4 <cis b'>(
 			<d a'>2) <a' d>4(
@@ -145,11 +145,11 @@ viola = \notes {
 	}
 }
 
-oboes = \notes {
-	\relative c'' { 
-		\context Voice = oboe {
-			\stemBoth
-			\translator Staff=up
+oboes =  {
+	\relative c'' {
+		\context Voice = "oboe" {
+			\stemNeutral
+			\change Staff=up
 			s4 s2. s2. s2. s2.
 			s2. s2 \stemDown\slurDown a4 a2 d4 ( d4 ) cis s4
 			s2. s2. s2. s2.
@@ -164,33 +164,33 @@ oboes = \notes {
 	}
 }
 
-oboestwo = \notes {
-	\relative c' { 
-		\context Voice = oboetwo {
-			\stemBoth
-			\translator Staff=up
+oboestwo =  {
+	\relative c' {
+		\context Voice = "oboetwo" {
+			\stemNeutral
+			\change Staff=up
 			s4 s2. s2. s2. s2.
 			s2. s2. s2. s2.
 			s2. s2. s2. s2.
 			s2. s2. s2. s2.
 			s2. s2. s2. s2.
 			s2. s2. s2. s2.
-			s2. \translator Staff=down \stemUp a8 \( b cis d d e fis g \translator Staff=up \stemDown a b b  cis \) s2.
+			s2. \change Staff=down \stemUp a8 \( b cis d d e fis g \change Staff=up \stemDown a b b  cis \) s2.
 			s2. s2. s2. s2.
 			s2. s2. s2. s2.
-			s2. \translator Staff=down \stemUp a,8 \( b cis d d e fis g \translator Staff=up \stemDown a b b cis \) s2
+			s2. \change Staff=down \stemUp a,8 \( b cis d d e fis g \change Staff=up \stemDown a b b cis \) s2
 
 		}
 	}
 }
 
-oboesthree = \notes {
-	\relative c' { 
-		\context Voice = oboethree {
+oboesthree =  {
+	\relative c' {
+		\context Voice = "oboethree" {
 			\stemUp
 			\slurUp
 			\pslurUp
-			\translator Staff=down
+			\change Staff=down
 			s4 s2. s2. s2. s2.
 			s2. | s2 a8 b |  cis \( [d e fis ] \clef violin fis8. [gis16 ] | gis4  a4\) \clef bass s4 |
 			s2. s2. s2. s2.
@@ -206,9 +206,9 @@ oboesthree = \notes {
 }
 
 
-bassvoices = \notes {
+bassvoices =  {
 	\relative c {
-		\context Voice = bassvoice {
+		\context Voice = "bassvoice" {
 			\stemDown
 			\pslurDown
 			\slurDown
@@ -220,7 +220,7 @@ bassvoices = \notes {
 			<e a>8) [r16 <dis a'>16 ] <e a>4 <g a>(
 			<fis a>8) [r16 <eis a>16 ] <fis a>4 fis (
 			e4 ) s4 e'4~
-			e a, <d, a'>( 
+			e a, <d, a'>(
 			<e a>8) [r16 <dis a'>16 ] <e a>4 <g a>(
 			<fis a>8) [r16 <eis a>16 ] <fis a>4 <fis a>(
 			<e a>8) [r16 <d a'>16 ] <cis a'>4 <a a'>(
@@ -243,7 +243,7 @@ bassvoices = \notes {
 			d2 \) a4 \(
 			b2 b4
 			c8 [b a g]\) g \( [fis]
-			g fis e fis g d 
+			g fis e fis g d
 			<d a'>2\) d8 ( dis
 			<e a>8) [r16 <d a'>16 ] <e a>4 <g a>(
 			<fis a>8) [r16 <eis a>16 ] <fis a>4 <fis a>(
@@ -260,16 +260,16 @@ bassvoices = \notes {
 
 
 \score {
-	\context PianoStaff \notes <<
-		\context Staff = up <<
-			\key d \major 
+	\context PianoStaff  <<
+		\context Staff = "up" <<
+			\key d \major
 			\time 3/4
 			\viola
 			\oboes
 			\repeattr
 			\dynamictr
 		>>
-		\context Staff = down <<
+		\context Staff = "down" <<
 			\clef bass
 			\key d \major
 			\time 3/4
@@ -278,21 +278,21 @@ bassvoices = \notes {
 			\bassvoices
 		>>
 	>>
-	\paper {
+	\layout {
 	}
 }
 
 \score {
-	\context PianoStaff \notes <<
-		\context Staff = up <<
-			\key d \major 
+	\context PianoStaff  <<
+		\context Staff = "up" <<
+			\key d \major
 			\time 3/4
 			\viola
 			\oboes
 			\repeattr
 			\dynamictr
 		>>
-		\context Staff = down <<
+		\context Staff = "down" <<
 			\clef bass
 			\key d \major
 			\time 3/4
@@ -302,9 +302,9 @@ bassvoices = \notes {
 			\dynamictr
 		>>
 	>>
-	\midi {
-		\tempo 4 = 112
-	}
+
+  \midi {
+    \tempo 4 = 112
+    }
+
 }
-
-
