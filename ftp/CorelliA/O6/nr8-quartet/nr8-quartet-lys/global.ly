@@ -1,13 +1,16 @@
-\version "1.6.6"
+\version "2.16.0"
 \include "english.ly"
 
-padtext = \property Voice.TextScript \override #'padding = #'1.5
-padbarnos = \property Score.BarNumber \override #'padding = #'2.0
+padtext = \override TextScript   #'padding = #'1.5
+padbarnos = \override Score.BarNumber   #'padding = #'2.0
 
-textUp = \property Voice.TextScript \override #'direction = #1
+textUp = \override TextScript   #'direction = #1
+
+pesp = \markup {\dynamic p \italic espress.}
+mfesp = \markup {\dynamic mf \italic espress.}
 
 \header {
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by Ian Bailey-Mortimer.} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
- footer = "Mutopia-2003/03/18-298"
+\include "header.ly"
+ footer = "Mutopia-2012/12/09-298"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
-

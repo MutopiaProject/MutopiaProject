@@ -1,89 +1,78 @@
+\version "2.16.0"
 \include "global.ly"
 
 \include "mvmts.ly"
 
 \include "clo.ly"
 
-\score {
-    \notes \context Staff <
-        \clef bass
-        \context Voice = vm \mI
-        \context Voice = clo { \padtext \textUp \cloIa \cloIb }
-    >
-    \header {
-        \include "header.ly"
-        instrument = "Cello"
-        piece = "1."
-    }
-    \paper { }
+\header {
+    instrument = "Cello"
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef bass
-        \context Voice = vm \mII
-        \context Voice = clo { \padtext \textUp \cloIIa \cloIIb }
-    >
+        \padtext \textUp \cloI
+    >>
+    \header {
+        piece = "1."
+    }
+    \layout { }
+}
+
+\score {
+     \context Staff <<
+        \clef bass
+        \padtext \textUp \cloII
+    >>
     \header {
         piece = "2."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef bass
-        \context Voice = vm \mIII
-        \context Voice = clo {
-            \padtext \textUp
-            \cloIIIa %\break
-            \cloIIIb %\break
-            \cloIIIc \cloIIId
-        }
-    >
+        \context Voice = "vm" \mIII
+        \padtext \textUp \cloIII
+    >>
     \header {
         piece = "3."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef bass
-        \context Voice = vm \mIV
-        \context Voice = clo { \padtext \textUp \cloIVa \cloIVb }
-    >
+        \padtext \textUp \cloIV
+    >>
     \header {
         piece = "4."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef bass
-        \context Voice = vm \mV
-        \context Voice = clo {
-            \padtext \textUp
-            \cloVa \break
-            \cloVb \cloVc \cloVd
-        }
-    >
+        \padtext \textUp \cloV
+    >>
     \header {
         piece = "5."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef bass
-        \context Voice = vm \mVI
-        \context Voice = clo { \padtext \textUp \cloVI }
-    >
+        \padtext \textUp \cloVI
+    >>
     \header {
         piece = "6. Pastorale"
     }
-    \paper { }
+    \layout { }
 }
 
