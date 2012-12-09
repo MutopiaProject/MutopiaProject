@@ -1,4 +1,7 @@
+\version "2.16.0"
 \include "global.ly"
+
+\include "mvmts.ly"
 
 \include "vi.ly"
 \include "vii.ly"
@@ -6,8 +9,8 @@
 \include "clo.ly"
 
 \score {
-    \notes {
-        <
+     {
+        <<
             {
                 \tempo 4=100
                 s2.*7
@@ -15,47 +18,35 @@
                 s4
                 \tempo 4=100
                 s2
-            }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                \viIa 
-            }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                \viiIa 
-            }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                \vlaIa
-            }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                \cloIa 
-            }
-        >
-        <
-            {
                 \tempo 4=50
                 s1*13
             }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                \viIb 
+            \context Staff = "vi" { 
+                \set Staff.midiInstrument = #"violin"
+                \viI 
             }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                \viiIb 
+            \context Staff = "vii" { 
+                \set Staff.midiInstrument = #"violin"
+                \viiI
             }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                \vlaIb
+            \context Staff = "vla" { 
+                \set Staff.midiInstrument = #"viola"
+                \vlaI
             }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                \cloIb 
+            \context Staff = "clo" { 
+                \set Staff.midiInstrument = #"cello"
+                \cloI
             }
-        >
-        <
+        >>
+    }
+    
+  \midi {
+    }
+}
+
+\score {
+     {
+        <<
             {
                 \tempo 4=130
                 s1*21 s1*21
@@ -63,24 +54,32 @@
                 \tempo 4=110
                 s2. s1
             }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                { \viIIa \viIIa \viIIb \viIIb }
+            \context Staff = "vi" { 
+                \set Staff.midiInstrument = #"violin"
+                \unfoldRepeats { \viII }
             }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                { \viiIIa \viiIIa \viiIIb \viiIIb }
+%{            \context Staff = "vii" { 
+                \set Staff.midiInstrument = #"violin"
+                \unfoldRepeats { \viiII }
             }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                { \vlaIIa \vlaIIa \vlaIIb \vlaIIb }
+            \context Staff = "vla" { 
+                \set Staff.midiInstrument = #"viola"
+                \unfoldRepeats { \vlaII }
             }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                { \cloIIa \cloIIa \cloIIb \cloIIb }
-            }
-        >
-        <
+            \context Staff = "clo" { 
+                \set Staff.midiInstrument = #"cello"
+                \unfoldRepeats { \cloII }
+            }%}
+        >>
+    }
+    
+  \midi {
+    }
+}
+
+%{\score {
+     {
+        <<
             {
                 \tempo 8=60
                 s1*7 s2
@@ -88,50 +87,10 @@
                 s8
                 \tempo 8=53
                 s4.
-            }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                \viIIIa
-            }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                \viiIIIa
-            }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                \vlaIIIa
-            }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                \cloIIIa
-            }
-        >
-        <
-            {
                 \tempo 2=65
                 s1*12 s2
                 \tempo 2=40
                 s2
-            }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                \viIIIb
-            }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                \viiIIIb
-            }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                \vlaIIIb
-            }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                \cloIIIb
-            }
-        >
-        <
-            {
                 \tempo 8=60
                 s1*7 s2
                 \tempo 8=55
@@ -146,24 +105,32 @@
                 s4 s4
                 s1*2
             }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                \viIIIc \viIIId
+            \context Staff = "vi" { 
+                \set Staff.midiInstrument = #"violin"
+                \viIII
             }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                \viiIIIc \viiIIId
+            \context Staff = "vii" { 
+                \set Staff.midiInstrument = #"violin"
+                \viiIII
             }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                \vlaIIIc \vlaIIId
+            \context Staff = "vla" { 
+                \set Staff.midiInstrument = #"viola"
+                \vlaIII
             }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                \cloIIIc \cloIIId
+            \context Staff = "clo" { 
+                \set Staff.midiInstrument = #"cello"
+                \cloIII
             }
-        >
-        <
+        >>
+    }
+    
+  \midi {
+    }
+}
+
+\score {
+     {
+        <<
             {
                 \tempo 4=170
                 s2.*8 s2.*8
@@ -173,24 +140,32 @@
                 \tempo 4=155
                 s2.*2
             }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                { \viIVa \viIVa \viIVb \viIVb }
+            \context Staff = "vi" { 
+                \set Staff.midiInstrument = #"violin"
+                \unfoldRepeats { \viIV }
             }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                { \viiIVa \viiIVa \viiIVb \viiIVb }
+            \context Staff = "vii" { 
+                \set Staff.midiInstrument = #"violin"
+                \unfoldRepeats { \viiIV }
             }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                { \vlaIVa \vlaIVa \vlaIVb \vlaIVb }
+            \context Staff = "vla" { 
+                \set Staff.midiInstrument = #"viola"
+                \unfoldRepeats { \vlaIV }
             }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                { \cloIVa \cloIVa \cloIVb \cloIVb }
+            \context Staff = "clo" { 
+                \set Staff.midiInstrument = #"cello"
+                \unfoldRepeats { \cloIV }
             }
-        >
-        <
+        >>
+    }
+    
+  \midi {
+    }
+}
+
+\score {
+     {
+        <<
             {
                 \tempo 2=120
                 s2 s1*23 s2 s2 s1*23 s2
@@ -200,24 +175,32 @@
                 \tempo 1=30
                 s1
             }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
-                { \viVa \viVa \viVb \viVc \viVb \viVd }
+            \context Staff = "vi" { 
+                \set Staff.midiInstrument = #"violin"
+                \unfoldRepeats { \viV }
             }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
-                { \viiVa \viiVa \viiVb \viiVc \viiVb \viiVd }
+            \context Staff = "vii" { 
+                \set Staff.midiInstrument = #"violin"
+                \unfoldRepeats { \viiV }
             }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
-                { \vlaVa \vlaVa \vlaVb \vlaVc \vlaVb \vlaVd }
+            \context Staff = "vla" { 
+                \set Staff.midiInstrument = #"viola"
+                \unfoldRepeats { \vlaV }
             }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
-                { \cloVa \cloVa \cloVb \cloVc \cloVb \cloVd }
+            \context Staff = "clo" { 
+                \set Staff.midiInstrument = #"cello"
+                \unfoldRepeats { \cloV }
             }
-        >
-        <
+        >>
+    }
+    
+  \midi {
+    }
+}
+
+\score {
+     {
+        <<
             {
                 \tempo 4=75
                 s1.*23
@@ -226,24 +209,25 @@
                 \tempo 4=75
                 s1
             }
-            \context Staff = vi { 
-                \property Staff.midiInstrument = #"violin"
+            \context Staff = "vi" { 
+                \set Staff.midiInstrument = #"violin"
                 { \viVI }
             }
-            \context Staff = vii { 
-                \property Staff.midiInstrument = #"violin"
+            \context Staff = "vii" { 
+                \set Staff.midiInstrument = #"violin"
                 { \viiVI }
             }
-            \context Staff = vla { 
-                \property Staff.midiInstrument = #"viola"
+            \context Staff = "vla" { 
+                \set Staff.midiInstrument = #"viola"
                 { \vlaVI }
             }
-            \context Staff = clo { 
-                \property Staff.midiInstrument = #"cello"
+            \context Staff = "clo" { 
+                \set Staff.midiInstrument = #"cello"
                 { \cloVI }
             }
-        >
+        >>
     }
-    \midi { \tempo 4=100 }
-}
-
+    
+  \midi {
+    }
+}%}

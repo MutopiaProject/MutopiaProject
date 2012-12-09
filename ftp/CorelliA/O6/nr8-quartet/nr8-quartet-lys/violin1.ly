@@ -1,87 +1,59 @@
+\version "2.16.0"
 \include "global.ly"
 
 \include "mvmts.ly"
 
 \include "vi.ly"
 
+\header {
+    instrument = "Violin 1"
+}
+
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mI
-        \context Voice = vi { \padtext \textUp \viIa \viIb }
-    >
+    \new Staff { \padtext \textUp \viI }
     \header {
-        \include "header.ly"
-        instrument = "Violin 1"
         piece = "1."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mII
-        \context Voice = vi { \padtext \textUp \viIIa \viIIb }
-    >
+    \new Staff { \padtext \textUp \viII }
     \header {
-        piece = "\\newpage 2."
+        piece = "2."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mIII
-        \context Voice = vi {
-            \padtext \textUp
-            \viIIIa %\break
-            \viIIIb %\break
-            \viIIIc \viIIId
-        }
-    >
+    \new Staff { \padtext \textUp \viIII }
     \header {
-        piece = "\\newpage 3."
+        piece = "3."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mIV
-        \context Voice = vi {
-            \padtext \textUp
-            \viIVa %\break
-            \viIVb
-        }
-    >
+    \new Staff { \padtext \textUp \viIV }
     \header {
-        piece = "\\newpage 4."
+        piece = "4."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mV
-        \context Voice = vi {
-            \padtext \textUp
-            \viVa \newpage
-            \viVb
-            \viVc \viVd }
-    >
+    \new Staff { \padtext \textUp \viV }
     \header {
-        piece = "\vfil 5."
+        piece = "5."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mVI
-        \context Voice = vi { \padtext \textUp \viVI }
-    >
+    \new Staff { \padtext \textUp \viVI }
     \header {
-        piece = "\\newpage 6. Pastorale"
+        piece = "6. Pastorale"
     }
-    \paper { }
+    \layout { }
 }
 

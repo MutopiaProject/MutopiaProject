@@ -1,85 +1,78 @@
+\version "2.16.0"
 \include "global.ly"
 
 \include "mvmts.ly"
 
 \include "vla.ly"
 
-\score {
-    \notes \context Staff <
-        \clef alto
-        \context Voice = vm \mI
-        \context Voice = vla { \padtext \textUp \vlaIa \vlaIb }
-    >
-    \header {
-        \include "header.ly"
-        instrument = "Viola"
-        piece = "1."
-    }
-    \paper { }
+\header {
+    instrument = "Viola"
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef alto
-        \context Voice = vm \mII
-        \context Voice = vla { \padtext \textUp \vlaIIa \vlaIIb }
-    >
+        \padtext \textUp \vlaI
+    >>
+    \header {
+        piece = "1."
+    }
+    \layout { }
+}
+
+\score {
+     \context Staff <<
+        \clef alto
+        \padtext \textUp \vlaII
+    >>
     \header {
         piece = "2."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef alto
-        \context Voice = vm \mIII
-        \context Voice = vla {
-            \padtext \textUp
-            \vlaIIIa %\break
-            \vlaIIIb %\break
-            \vlaIIIc \vlaIIId
-        }
-    >
+        \context Voice = "vm" \mIII
+        \padtext \textUp \vlaIII
+    >>
     \header {
         piece = "3."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef alto
-        \context Voice = vm \mIV
-        \context Voice = vla { \padtext \textUp \vlaIVa \vlaIVb }
-    >
+        \padtext \textUp \vlaIV
+    >>
     \header {
         piece = "4."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef alto
-        \context Voice = vm \mV
-        \context Voice = vla { \padtext \textUp \vlaVa \vlaVb \vlaVc \vlaVd }
-    >
+        \padtext \textUp \vlaV
+    >>
     \header {
         piece = "5."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
+     \context Staff <<
         \clef alto
-        \context Voice = vm \mVI
-        \context Voice = vla { \padtext \textUp \vlaVI }
-    >
+        \padtext \textUp \vlaVI
+    >>
     \header {
         piece = "6. Pastorale"
     }
-    \paper { }
+    \layout { }
 }
 
