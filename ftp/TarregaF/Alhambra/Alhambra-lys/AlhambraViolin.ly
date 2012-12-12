@@ -1,10 +1,13 @@
-\version "2.2.0"
+\version "2.16.1"
 \include "Header.ly"    
 \include "Violin.ly"
 
-       
 \score {
-\notes{ \ViolinStaff } 
-\midi { \tempo 4=80 }
-\paper {}
+  { \ViolinStaff } 
+
+  \midi {
+    \tempo 4 = 80
+  }
+
+  \layout {}
 }
