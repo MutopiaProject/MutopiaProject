@@ -1,6 +1,6 @@
 % PaulLiu
 % 
-\version "2.0.0"
+\version "2.16.0"
 \header {
  title = "Kinderscenen"
  subtitle = "Hasche-Mann"
@@ -17,24 +17,33 @@
  maintainerEmail = "PaulLiu.bbs@bbs.cis.nctu.edu.tw"
  maintainerWeb = "http://www.cis.nctu.edu.tw/~is86007/"
  lastupdated = "2003/Nov/01"
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and released under the MutopiaBSD licence by " + \maintainer + ".} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
+ tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and released under the MutopiaBSD licence by " + \maintainer + ".} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
  footer = "Mutopia-2003/11/01-365"
 }
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
-stemDown = \property Voice.Stem \override #'direction = #-1
-stemUp = \property Voice.Stem \override #'direction = #1
-stemBoth = \property Voice.Stem \revert #'direction
-slurUp = \property Voice.Slur \set #'direction = #1
-pslurUp = \property Voice.PhrasingSlur \set #'direction = #1
-slurDown = \property Voice.Slur \set #'direction = #-1
-pslurDown = \property Voice.PhrasingSlur \set #'direction = #-1
-tripletbr = \property Voice.TupletBracket \set #'tuplet-bracket-visibility = ##t
+\layout {
+  \context {
+    \Score
+    % add space between staves in piano staff
+    \override StaffGrouper #'staff-staff-spacing #'padding = #5
+  }
+}
 
-repeattr = \notes {
+
+stemDown = \override Stem   #'direction = #-1
+stemUp = \override Stem   #'direction = #1
+stemNeutral = \revert Stem #'direction
+slurUp = \override Slur   #'direction = #1
+pslurUp = \override PhrasingSlur   #'direction = #1
+slurDown = \override Slur   #'direction = #-1
+pslurDown = \override PhrasingSlur   #'direction = #-1
+tripletbr = \override TupletBracket   #'tuplet-bracket-visibility = ##t
+
+repeattr =  {
 	\relative c {
-		\context Voice = repeattr {
+		\context Voice = "repeattr" {
 			
 			s2 s2 s2 s2 s2 s2 s2 s2 
 			\repeat volta 2 { s2 s2
@@ -45,22 +54,22 @@ repeattr = \notes {
 	}
 }
 
-dynamictr = \notes {
+dynamictr =  {
 		s2 s2 s2 s2 s2 s2 s2 s2
 		s2 s2 s2 s2 s2 s2 s2 s16\< s16 s8 s8 s16\! s16
 		s2 s2 s2 s2 s2
 }
 
-pedaltr = \notes {
+pedaltr =  {
 			s2 s2 s2 s2 s2 s2 s2 s2
-			s2 s2 s2 s2 s2 s2 s4 s4\sustainDown
-			s4 s8 s16 s16\sustainUp
+			s2 s2 s2 s2 s2 s2 s4 s4\sustainOn
+			s4 s8 s16 s16\sustainOff
 			s2 s2 s2 s2 s2
 }			
 
-viola = \notes {
+viola =  {
 	\relative c'' { 
-		\context Voice = viola {
+		\context Voice = "viola" {
 			\stemUp
 			\pslurUp
 			\slurUp
@@ -94,9 +103,9 @@ viola = \notes {
 	}
 }
 
-violatwo = \notes {
+violatwo =  {
 	\relative c' { 
-		\context Voice = violatwo {
+		\context Voice = "violatwo" {
 			\stemUp
 			\pslurUp
 			\slurUp
@@ -104,50 +113,50 @@ violatwo = \notes {
 	}
 }
 
-oboes = \notes {
+oboes =  {
 	\relative c' { 
-		\context Voice = oboe {
-			\stemBoth
+		\context Voice = "oboe" {
+			\stemNeutral
 			\slurDown
-			\translator Staff=up
-			fis16 (d) \translator Staff=down b-. fis-. s4
+			\change Staff=up
+			fis16 (d) \change Staff=down b-. fis-. s4
 			s2
-			\translator Staff=up b'16 (g) \translator Staff=down e-. b-. s4
+			\change Staff=up b'16 (g) \change Staff=down e-. b-. s4
 			s2
-			\translator Staff=up fis'16 (d) \translator Staff=down b-. fis-. s4
+			\change Staff=up fis'16 (d) \change Staff=down b-. fis-. s4
 			s2
-			\translator Staff=up b'16 (g) \translator Staff=down e-. b-. s4
+			\change Staff=up b'16 (g) \change Staff=down e-. b-. s4
 			s2
-			\translator Staff=up d'16 (b) \translator Staff=down g-. d-. s4
+			\change Staff=up d'16 (b) \change Staff=down g-. d-. s4
 			s2
-			\translator Staff=up e16 (b) \translator Staff=down g-. e-. s4
+			\change Staff=up e16 (b) \change Staff=down g-. e-. s4
 			s2
-			\translator Staff=up c'16 (g) \translator Staff=down e-. c-. \translator Staff=up \stemDown d'8 b8 \stemBoth
-			\translator Staff=up c16 (g) \translator Staff=down e-. c-. \translator Staff=up \stemDown f'8 d8 \stemBoth
-			\translator Staff=up g16 (e) \translator Staff=down c-. g-. \translator Staff=up \stemDown ais' (e) \stemBoth s8
+			\change Staff=up c'16 (g) \change Staff=down e-. c-. \change Staff=up \stemDown d'8 b8 \stemNeutral
+			\change Staff=up c16 (g) \change Staff=down e-. c-. \change Staff=up \stemDown f'8 d8 \stemNeutral
+			\change Staff=up g16 (e) \change Staff=down c-. g-. \change Staff=up \stemDown ais' (e) \stemNeutral s8
 			s2
-			fis16 (d) \translator Staff=down b-. fis-. s4
+			fis16 (d) \change Staff=down b-. fis-. s4
 			s2
-			\translator Staff=up b'16 (g) \translator Staff=down e-. b-. s4
+			\change Staff=up b'16 (g) \change Staff=down e-. b-. s4
 			s2
 			s2
 		}
 	}
 }
 
-oboestwo = \notes {
+oboestwo =  {
 	\relative c' { 
-		\context Voice = oboetwo {
-			\stemBoth
-			\translator Staff=up
+		\context Voice = "oboetwo" {
+			\stemNeutral
+			\change Staff=up
 		}
 	}
 }
 
 
-bassvoices = \notes {
+bassvoices =  {
 	\relative c {
-		\context Voice = bassvoice {
+		\context Voice = "bassvoice" {
 			\stemDown
 			\pslurDown
 			\slurDown
@@ -179,9 +188,9 @@ bassvoices = \notes {
 	}
 }
 
-bassvoicestwo = \notes {
+bassvoicestwo =  {
 	\relative c' {
-		\context Voice = bassvoicetwo {
+		\context Voice = "bassvoicetwo" {
 			\stemUp
 			\pslurUp
 			\slurUp
@@ -194,8 +203,8 @@ bassvoicestwo = \notes {
 
 
 \score {
-	\context PianoStaff \notes <<
-		\context Staff = up <<
+	\context PianoStaff  <<
+		\context Staff = "up" <<
 			\key d \major 
 			\time 2/4
 			\viola
@@ -204,8 +213,8 @@ bassvoicestwo = \notes {
 			\repeattr
 %			\dynamictr
 		>>
-		\context Dynamics = dynamics \dynamictr
-		\context Staff = down <<
+		\context Dynamics = "dynamics" \dynamictr
+		\context Staff = "down" <<
 			\clef bass
 			\key d \major
 			\time 2/4
@@ -214,48 +223,23 @@ bassvoicestwo = \notes {
 			\bassvoices
 %			\pedaltr
 		>>
-		\context Dynamics = pedal \pedaltr
+		\context Dynamics = "pedal" \pedaltr
 	>>
-	\paper {
-		\translator {
-			\type "Engraver_group_engraver"
-			\name Dynamics
-			\consists "Output_property_engraver"
-			
-			minimumVerticalExtent = #'(-1 . 1)
-			
-			\consists "Piano_pedal_engraver"
-			\consists "Script_engraver"
-			\consists "Dynamic_engraver"
-			\consists "Text_engraver"
-
-			TextScript \override #'font-relative-size = #1
-			TextScript \override #'font-shape = #'italic
-			DynamicText \override #'extra-offset = #'(0 . 2.5)
-			Hairpin \override #'extra-offset = #'(0 . 2.5)
-			
-			\consists "Skip_event_swallow_translator"
-
-			\consistsend "Axis_group_engraver"
-		}
-		\translator {
-			\PianoStaffContext
-			\accepts Dynamics
-			VerticalAlignment \override #'forced-distance = #7
-		}
-	}
+	\layout { }
 	\midi {
 		\tempo 4 = 116
-		\translator {
-			\type "Performer_group_performer"
+%{
+		\context {
+			\type "Performer_group"
 			\name Dynamics
 			\consists "Piano_pedal_performer"
-			\consists "Span_dynamic_performer"
+%			\consists "Span_dynamic_performer"
 			\consists "Dynamic_performer"
 		}
-		\translator {
-			\PianoStaffContext
+		\context {
+			\PianoStaff
 			\accepts Dynamics
 		}
+%}
 	}
 }
