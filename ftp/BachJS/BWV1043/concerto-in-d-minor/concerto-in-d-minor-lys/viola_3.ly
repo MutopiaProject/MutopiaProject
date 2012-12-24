@@ -1,7 +1,8 @@
+\version "2.16.0"
 %Viola, 3rd movement
 
-viola_3 = \notes \relative c' {
-    \partial 8;
+violaD =  \relative c' {
+    \partial 8
     
     f16 e |
     f8 r r g16 e f8 r |
@@ -21,8 +22,8 @@ viola_3 = \notes \relative c' {
     a4 r8 d, d d |
     d4 r8 d d d |
     d4 r8 b e, a |
-    [a d f a b e,] |
-    [e a d, d d a] |
+     a[ d f a b e,] |
+     e[ a d, d d a] |
     a4 r16 a bes g a f g e |
     
     f4 r r |
@@ -74,8 +75,8 @@ viola_3 = \notes \relative c' {
     e4 r8 a, a a |
     a4 r8 a a a |
     a4 r8 f' b, e |
-    [e c e a c fis,] |
-    [e e e e e e] |
+     e[ c e a c fis,] |
+     e[ e e e e e] |
     e r r4 r8 c'16 b |
     cis8 r r4 r |
     r r r8 es,!16 d |
@@ -84,11 +85,11 @@ viola_3 = \notes \relative c' {
     b8 r r4 r |
     r r r8 d,16 c |
     bes8 r r4 r |
-    r8 [f' f f f f |
-    r [e e e e e] |
-    r [d d d d d] |
-    r [c c c c c] |
-    r [bes bes bes bes bes] |
+    r8  f'[ f f f f] |
+    r  e[ e e e e] |
+    r  d[ d d d d] |
+    r  c[ c c c c] |
+    r  bes[ bes bes bes bes] |
     r a a a a bes16 c |
     d8 r r c'16 a bes8 r |
     r a16 fis g8 r r a16 fis |
@@ -123,8 +124,8 @@ viola_3 = \notes \relative c' {
     e8 r r4 r |
     r r r8 g,16 f |
     es8 r r4 r |
-    r8 [bes' bes bes bes bes] |
-    r [a a a a a] |
+    r8  bes'[ bes bes bes bes] |
+    r  a[ a a a a] |
     g4 r r |
     r r r8 f'16 g |
     f8 r r g16 e f8 r |
@@ -155,12 +156,12 @@ viola_3 = \notes \relative c' {
     a4 r8 d, d d |
     d4 r8 d d d |
     d4 r8 bes e, a |
-    [a d f a b e,] |
-    [e a d, d d a] |
+     a[ d f a b e,] |
+     e[ a d, d d a] |
     a4 r16 a16 bes g a f g e |
     f4^\fermata r4 r |
 
-    \bar "|.";
+    \bar "|."
 }
 
 

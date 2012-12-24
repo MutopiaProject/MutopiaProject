@@ -1,27 +1,24 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IVlnII = \notes \relative c''' {
+IVlnII =  \relative c''' {
   \clef "treble"
   \key g\major
   \time 4/4
 
-  \property Score.skipBars = ##t
+  \set Score.skipBars = ##t
 
   % end beams on quarters by default, and on halfs for eights.
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
-  \property  Staff.autoBeamSettings \override
-    #'(end 1 8 * *) = #(make-moment 1 2)
 
   %1 page 23
-  <g8 b, d,> [g,16 a] [b8 b] <{\grace c b a16 g \grace b8 a g16 fis} \\ {d2}> |
-  <g'8 b, d,> [g,16 a] [b8 b] <{\grace c b a16 g \grace b8 a g16 fis} \\ {d2}> |
-  g8 g, r d'' e16( c b )c e( c b )c |
+  <g b, d,>8  g,16[ a]  b8[ b] <<{\slashedGrace c 
+ b a16 g \slashedGrace b8 a g16 fis} \\ {d2}>> |
+  <g' b, d,>8  g,16[ a]  b8[ b] <<{\slashedGrace c b a16 g \slashedGrace b8 a g16 fis} \\ {d2}>> |
+  g8 g, r d'' e16( c b  c) e( c b  c) |
   e8 e r e r g g, g' |
   g,16 b a b g b a b g8 d' r d |
   r d g g, g fis g g |
   a fis' r fis r fis a, fis |
-  <g4 b,> r r r8 \times 2/3 {b'16 a g} |
+  <g b,>4 r r r8 \times 2/3 {b'16 a g} |
   g8 g4 \times 2/3 {b16 a g} g8 g4 g8 ~ |
   %10
   g g4 e8 a,16 g fis8 r16 d'16 e fis |
@@ -34,8 +31,8 @@ IVlnII = \notes \relative c''' {
   r r8 g g'16 g g g g4:16 |
   g: g: g: fis: |
   g16 b a g fis e d c b8. a32 g g8 g |
-  fis4 g8 b, [c e'] [d, <fis' a, d,>] |
-  <g b, d,> \times 2/3 {[b,,16 c d]} g,4 g8 g' b, g' |
+  fis4 g8 b,  c[ e']  d,[ <fis' a, d,>] |
+  <g b, d,> \times 2/3 { b,,16[ c d]} g,4 g8 g' b, g' |
   %21
   g,4 g g'8 g, g' g, |
   g4 g g2:8 |
@@ -71,16 +68,16 @@ IVlnII = \notes \relative c''' {
   %49
   a2 d8 d'16 e fis8 fis |
   %50
-  \grace g fis e16 d \grace fis8 e d16 cis d8 d16 e \grace g8 fis e16 d |
-  \grace fis8 e d16 cis \grace e8 d cis16 b a8 d16 e fis8 fis |
-  \grace g fis e16 d \grace fis8 e d16 cis d8 fis, fis d' |
+  \slashedGrace g fis e16 d \slashedGrace fis8 e d16 cis d8 d16 e \slashedGrace g8 fis e16 d |
+  \slashedGrace fis8 e d16 cis \slashedGrace e8 d cis16 b a8 d16 e fis8 fis |
+  \slashedGrace g fis e16 d \slashedGrace fis8 e d16 cis d8 fis, fis d' |
   d d d4 r8 b b'4 |
   d,8 d d4 r8 a a'4 |
   r8 b, e16 d cis b a b cis d e d e cis |
   d e fis e d cis b a b cis d cis b a g fis |
   g a b a g fis e d g a b g a8 a, |
-  d4 [<fis'8 a, d,> a] [<g b, d,> b] [<e, cis e,> a] |
-  [<fis8 a, d,> d16. d32] [d8 d] <d4 fis, a,> r4 |
+  d4 <fis' a, d,>8[ a] <g b, d,>[ b] <e, cis e,>[ a] |
+  <fis a, d,>8[ d16. d32]  d8[ d] <d fis, a,>4 r4 |
   %60
   d8 d, d' d, d4 d |
   d8 d d d d2: |
@@ -108,8 +105,8 @@ IVlnII = \notes \relative c''' {
   b d e fis b,4 d |
   e fis b, r |
   %82
-  <g''8 b, d,> [g,16 a] [b8 b] \grace c8 b a16 g \grace b8 a g16 fis |
-  <g'8 b, d,> [g,16 a] [b8 b] \grace c8 b a16 g \grace b8 a g16 fis |
+  <g'' b, d,>8  g,16[ a]  b8[ b] \slashedGrace c8 b a16 g \slashedGrace b8 a g16 fis |
+  <g' b, d,>8  g,16[ a]  b8[ b] \slashedGrace c8 b a16 g \slashedGrace b8 a g16 fis |
   g8 g, r d'' e16 c b c e c b c |
   e8 e r e r g g, g' |
   g,16 g fis g g g fis g g8 g' r d |
@@ -124,7 +121,7 @@ IVlnII = \notes \relative c''' {
   g r g' r d a bes fis! |
   g d es cis d fis d fis |
   %96
-  <fis'4 a, d,> fis,16 a g fis g,8 g' g, g' |
+  <fis' a, d,>4 fis,16 a g fis g,8 g' g, g' |
   g,4 g' g,2:8 | 
   g: g8. b'16 a g fis e |
   d8 d' d, d' d,4 d' |
@@ -137,7 +134,7 @@ IVlnII = \notes \relative c''' {
   d4 e d8 d d4 |
   R1*2 |
   %108
-  r2 g2_#'(italic "d.") ~ |
+  r2 g2_ \markup{\italic "d."} ~ |
   g4 r r2 |
   r2 b, ~ |
   b2. r4 |
@@ -154,22 +151,22 @@ IVlnII = \notes \relative c''' {
   b g' fis r |
   R1 |
   %123
-  r2 <g'8 b, d,> [g,16 a] b8 b |
-  \grace c8 b a16 g \grace b8 a g16 fis g8 g16 a b8 b |
-  \grace c8 b a16 g \grace b8 a g16 fis g8 b, g4 |
+  r2 <g' b, d,>8  g,16[ a] b8 b |
+  \slashedGrace c8 b a16 g \slashedGrace b8 a g16 fis g8 g16 a b8 b |
+  \slashedGrace c8 b a16 g \slashedGrace b8 a g16 fis g8 b, g4 |
   c'8 e, g,4 b'8 d, g,4 |
   a'8 fis' g, b fis16 fis e fis fis8 g16 fis |
   %128 Note: The 16th triplets were written as 32th triplets in the manuscript.
   g4 r8 \times 2/3 {b'16 a g} g8 g4 \times 2/3 {b16 a g} |
   g8 g4 g g e8 |
-  \times 2/3 {a,16 g fis} fis8 r16 d' e fis [g8 d' b g] |
+  \times 2/3 {a,16 g fis} fis8 r16 d' e fis  g8[ d' b g] |
   %131 Note: The f? is a fis! in the manuscript.
-  [e c' a fis] g d'16 b g8 f? |
+   e[ c' a fis] g d'16 b g8 f? |
   e c'16 a g8 fis! g8. fis32 e d8 cis |
   g'8. fis32 e d8 cis d d, r d' |
   c!8. b32 c a'8 c, b8. a32 b g'8 g,~ |
   g g4 fis8 g4 r |
   b16 c d e fis g a b d,,4 <fis' a, d,> |
   %137
-  <g8 b, d,> [<d,16 g,> <d g,>] [<d8 g,> <d g,>] <g'4 b, d, g,> r4^\fermata \bar "|."
+  <g b, d,>8 <d, g,>16[ <d g,>] <d g,>8[ <d g,>] <g' b, d, g,>4 r4^\fermata \bar "|."
 }

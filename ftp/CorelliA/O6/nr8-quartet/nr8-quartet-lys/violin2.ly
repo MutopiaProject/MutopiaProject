@@ -1,79 +1,59 @@
+\version "2.16.0"
 \include "global.ly"
 
 \include "mvmts.ly"
 
 \include "vii.ly"
 
-\score {
-    \notes \context Staff <
-        \context Voice = vm \mI
-        \context Voice = vii { \padtext \textUp \viiIa \viiIb }
-    >
-    \header {
-        \include "header.ly"
-        instrument = "Violin 2"
-        piece = "1."
-    }
-    \paper { }
+\header {
+    instrument = "Violin 2"
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mII
-        \context Voice = vii { \padtext \textUp \viiIIa \viiIIb }
-    >
+    \new Staff { \padtext \textUp \viiI }
+    \header {
+        piece = "1."
+    }
+    \layout { }
+}
+
+\score {
+    \new Staff { \padtext \textUp \viiII }
     \header {
         piece = "2."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mIII
-        \context Voice = vii {
-            \padtext \textUp
-            \viiIIIa %\break
-            \viiIIIb %\break
-            \viiIIIc \viiIIId
-        }
-    >
+    \new Staff { \padtext \textUp \viiIII }
     \header {
         piece = "3."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mIV
-        \context Voice = vii { \padtext \textUp \viiIVa \viiIVb }
-    >
+    \new Staff { \padtext \textUp \viiIV }
     \header {
         piece = "4."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mV
-        \context Voice = vii { \padtext \textUp \viiVa \viiVb \viiVc \viiVd }
-    >
+    \new Staff { \padtext \textUp \viiV }
     \header {
         piece = "5."
     }
-    \paper { }
+    \layout { }
 }
 
 \score {
-    \notes \context Staff <
-        \context Voice = vm \mVI
-        \context Voice = vii { \padtext \textUp \viiVI }
-    >
+    \new Staff { \padtext \textUp \viiVI }
     \header {
         piece = "6. Pastorale"
     }
-    \paper { }
+    \layout { }
 }
 

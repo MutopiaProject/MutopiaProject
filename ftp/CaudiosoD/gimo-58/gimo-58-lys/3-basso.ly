@@ -1,16 +1,12 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIBasso = \notes \relative c' {
+IIIBasso =  \relative c' {
   \clef "bass"
   \key g\major
   \time 2/4
 
-  \property Score.skipBars = ##t
+  \set Score.skipBars = ##t
   % end beams on quarters by default, but beam four eights together
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
-  \property  Staff.autoBeamSettings \override
-    #'(end 1 8 * *) = #(make-moment 1 2)
 
   %1 page 6
   r8 g b c | d d, b c | a4 fis' | g8 g, g'4~ | g8 g fis fis |
@@ -30,7 +26,7 @@ IIIBasso = \notes \relative c' {
   d'8 e fis g | a a fis g | e4 cis | d d'~ | d cis | d d,8 d' |
   cis cis d d | cis4 d | cis d | cis d | cis r8 a |
   %96
-  b4 e, | a a | d,8 cis d e | a,4 a'16( g! fis )e |
+  b4 e, | a a | d,8 cis d e | a,4 a'16( g! fis  e) |
   d8 e fis g | a a fis fis | g g g g | e e e e | e e c! c |
   %105
   d d fis fis | g g g g | fis fis fis fis | e4 d |

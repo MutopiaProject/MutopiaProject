@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "3.ly"
 
-iiiViolinGlobal =  \notes {
+iiiViolinGlobal =   {
   \clef "treble"
   \key d\major
   \time 3/4
@@ -16,19 +16,24 @@ iiiViolinGlobal =  \notes {
   }
 }
 
-iiiViolinScripts =  \notes{
+iiiViolinScripts =  {
 }
 
-iiiViolinStaff =  \context Staff <
+iiiViolinStaff =  \context Staff <<
   \iiiStaff
   \iiiViolinGlobal
   \iiiViolinScripts
->
+>>
 
 \score {
   \iiiViolinStaff
-  \paper { }
-  \midi { \tempo 4 = 130 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 130
+    }
+
+
   \header {
     piece = "Corrente"
     opus = ""

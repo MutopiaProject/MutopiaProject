@@ -1,190 +1,181 @@
+\version "2.16.0"
+
 \header {
-  title = "Stille Nacht";
-  subtitle = "(Silent Night)";
-  filename = "stille-orig.ly";
-  enteredby = "Peter Chubb";
-  composer = "Franz Xavier Gruber";
-  poet = "Joseph Mohr";
-  %source="http://www.oberndorf.co.at/museum/StilleNacht/images/altenoten.jpg";
-  source = "http://www.mutopiaproject.org/ftp/GruberFX/altenoten.jpg";
+  title = "Stille Nacht"
+  subtitle = "(Silent Night)"
+  filename = "stille-orig.ly"
+  enteredby = "Peter Chubb"
+  composer = "Franz Xavier Gruber"
+  poet = "Joseph Mohr"
+  %source="http://www.oberndorf.co.at/museum/StilleNacht/images/altenoten.jpg"
+  source = "http://www.mutopiaproject.org/ftp/GruberFX/altenoten.jpg"
 
-  mutopiatitle = "Stille Nacht";
+  mutopiatitle = "Stille Nacht"
   
-  mutopiacomposer = "F. X. Gruber (1787--1863)";
-  mutopiapoet = "J. Mohr (1792--1848)";
-  mutopiainstrument = "Voice (SA) and Guitar";
-  date = "1816";
-  firstperformeddate = "1818/Dec/24";
+  mutopiacomposer = "GruberFX"
+  mutopiapoet = "J. Mohr (1792--1848)"
+  mutopiainstrument = "Voice (SA) and Guitar"
+  date = "1816"
+  firstperformeddate = "1818/Dec/24"
 
-  style = "Hymn";
-  copyright = "Public Domain";
-  maintainer = "Peter Chubb";
-  maintainer_email = "peterc@sw.oz.au";
-  lastupdated =	 "2001/Apr/04";
-  mutopiapublicdomain = "\\parbox{\hsize}{\\thefooter\\quad\\small
-    \\\\This music is part of the Mutopia project,
-    \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset
-    and placed in the public domain by " + \maintainer +
-    ".\\\\Unrestricted modification and redistribution is permitted
-    and encouraged---copy this music and share it.}";
- tagline = \mutopiapublicdomain;
- footer = "Mutopia-2001/04/04-81";
+  style = "Hymn"
+  copyright = "Public Domain"
+  maintainer = "Peter Chubb"
+  maintainerEmail = "peterc@sw.oz.au"
+  lastupdated =	 "2012/11/29"
+
+  footer = "Mutopia-2012/11/29-81"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } ‚Ä¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-global = \notes {
-	\key d \major;
-	\time 6/8;
-	\mark "Largo";
+global =  {
+	\key d \major
+	\time 6/8
+	\mark "Largo"
 	s8 \p
 	s4  s4.
-	\skip 4.; s4. \mp s4.
-	s4.-"cresc"
-	\skip 4.*20;
-	\bar "|.";
+	\skip 4. s4. \mp s4.
+	s4.-\markup{\italic "cresc."}
+	\skip 4.*20
+	\bar "|."
 }
 
-sop=\notes\relative c'' {
+sop=\relative c'' {
 %1
-	\property Voice.noAutoBeaming = ##t
-	[a8.()b16] a8 fis4 r8 |
-	[a8.() b16] a8 fis4 r8 |
-	[e'8.() dis16] e8 cis4 r8 |
-	[d!8.() cis16] d8 a4 r8 |
+	\set autoBeaming = ##f
+	 a8.[( b16)] a8 fis4 r8 |
+	 a8.[( b16)] a8 fis4 r8 |
+	 e'8.[( dis16)] e8 cis4 r8 |
+	 d!8.[( cis16)] d8 a4 r8 |
 %5
-	[b8.() cis16] b8 [d8.() cis16] b8 |
+	 b8.[( cis16)] b8  d8.[( cis16)] b8 |
 	a8. b16 a8 fis4 r8 |
-	[b8.() cis16] b8 [d8.() cis16] b8 |
+	 b8.[( cis16)] b8  d8.[( cis16)] b8 |
 	a8. b16 a8 fis4 r8 |
 	cis'8. cis16 cis8 e d cis |
 %10
-	d4.( )fis4 r8 |
+	d4.(  fis4) r8 |
 	d8. a16 fis8 a8. g16 e8 |
 	d4 r8 r4. |
 	R2.
 }
 
-alt=\notes\relative c' {
-	[fis8. g16] fis8 d4 r8 |
-	[fis8. g16] fis8 d4 r8 |
-	[g8. fis16] g8 e4 r8 |
-	[fis8. e16] fis8 fis4 r8 |
+alt=\relative c' {
+	 fis8.[ g16] fis8 d4 r8 |
+	 fis8.[ g16] fis8 d4 r8 |
+	 g8.[ fis16] g8 e4 r8 |
+	 fis8.[ e16] fis8 fis4 r8 |
 %5
-	[g8. a16] g8 [b8. a16] g8 |
+	 g8.[ a16] g8  b8.[ a16] g8 |
 	fis8. g16 fis8 d4 r8 |
-	[g8. a16] g8 [b8. a16] g8 |
+	 g8.[ a16] g8  b8.[ a16] g8 |
 	fis8. g16 fis8 d4 r8 |
 	e8. e16 e8 g fis e |
 %10
-	fis4. () a4 r8 |
+	fis4. ( a4) r8 |
 	fis8. fis16 d8 fis8. e16 cis8 |
 	%d4 r8 r4. |
 	s4 r8 r4.
 	R2.
 }
 
-accomp=\context Voice \notes\relative c{
-	\property Staff.instrument= "Guitar"
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	% Ideally these would be `percent' repeats
-	% but a LilyPond problem prevents me.
+accomp=\relative c {
+	\set Staff.instrumentName = "Guitar"
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
 
-	\repeat unfold 4 { d8 <a' d fis><a d fis> } % D
-	\repeat unfold 2 { g,8  <g' b g'> <g b g'> } %G
-	\repeat unfold 2 { d8 <a' d fis><a d fis> } %D
-	\repeat unfold 2 { g,8  <g' b g'> <g b g'> } %G
-	\repeat unfold 2 { d8 <a' d fis><a d fis> } %D
-	\repeat unfold 2 { g,8  <g' b g'> <g b g'> } %G
-	\repeat unfold 2 { d8 <a' d fis><a d fis> } %D
+	\repeat percent 4 { d8 <a' d fis><a d fis> } % D
+	\repeat percent 2 { g,8  <g' b g'> <g b g'> } %G
+	\repeat percent 2 { d8 <a' d fis><a d fis> } %D
+	\repeat percent 2 { g,8  <g' b g'> <g b g'> } %G
+	\repeat percent 2 { d8 <a' d fis><a d fis> } %D
+	\repeat percent 2 { g,8  <g' b g'> <g b g'> } %G
+	\repeat percent 2 { d8 <a' d fis><a d fis> } %D
 	\repeat unfold 2 { a,16 a' <cis e> a <cis g'> a}
-	 < \context Thread = foo { \property Thread.Tie \override #'direction = #1
- fis'2. ~ fis4. } \context Thread = bah { 
-		<fis,,2. \arpeggio( a d a' d > 
-	 <)a4. d a' d > }> <a,,4. e' a cis g'> |
+
+	\set doubleSlurs = ##t
+	<fis, a d a' d fis>2.(\arpeggio
+	<a d a' d fis>4.) <a e' a cis g'>4.
 	\repeat unfold 2 { a16 a' <cis e> a <cis g'> a}
-	<d16 fis> a <cis g> a <cis e> a 
-	<a8 cis g' > <d, a' d fis> r
+	<d fis>16 a <cis g> a <cis e> a 
+	<a cis g' >8 <d, a' d fis> r
 }
 
-
-vOne =  \lyrics {
-       Stil4 -- le8 Nacht!4. heil'4 -- ge8 Nacht!4. 
-       Al4 -- les8 schl\"aft,4. ein4 -- sam8 wacht4.
-       Nur4 das8 trau4 -- te,8 hoch8. -- heil16 ige8 Paar,4.
-       Hold4 -- er8 Knabe4 im8 lock8. -- i16 -- gen8 Haar4. 
-       Schlaf8. __ ""16 in8 himm8 -- li8 -- scher8 Ruh'!2.
-       Schlaf8. __ ""16 in8 himm8. -- li16 -- scher8 Ruh'!4
+vOne =  \lyricmode {
+       Stil -- le Nacht! heil' -- ge Nacht! 
+       Al -- les schl√§ft, ein -- sam wacht
+       Nur das trau -- te, hoch -- heil -- ige Paar,
+       Hold -- er Knabe im lock -- i -- gen Haar 
+       Schlaf __ _ in himm -- li -- scher Ruh'!
+       Schlaf __ _ in himm -- li -- scher Ruh'!
 }
 
-vTwo =  \lyrics {
-       Stil4 -- le8 Nacht!4. heil'4 -- ge8 Nacht!4. 
-       Go4 -- ttes8 Sohn,4. o4 -- wie8 lacht4.
-       Lieb'4 aus8 dei4 -- nem8 g\"ott8. -- li16 -- chen8 Mund,4.
-       Da4 uns8 schl‰gt4 die8 ret4 -- tende8 Stund'.4. 
-       Je8. -- sus16 in8 Dei8 -- ner Ge8 -- burt!2.
-       Je8. -- sus16 in8 Dei8. -- ner16 Ge8 -- burt!4
-}
-vThree= \lyrics {
-      Stil4 -- le8 Nacht!4. heil'4 -- ge8 Nacht!4. 
-      Die4 der8 Welt4. Heil4 ge8 -- bracht,4.
-      Aus4 des8 Himm4 -- els8 gol8. -- den16 -- en8 Hˆhn4.
-      Uns4 der8 Gna4 den8 F¸8. -- lle16 l‰ﬂt8 sehn:4.
-      Je8. -- sum16 in8 Mensch8 -- en -- ge8 -- stalt,2.
-      Je8. -- sum16 in8 Mensch8. -- en16 -- ge8 -- stalt4
-}
-vFour = \lyrics {
-      Stil4 -- le8 Nacht!4. heil'4 -- ge8 Nacht!4. 
-      Wo4 sich8 heut4. all4 -- e8 Macht4.
-      V‰4 -- ter8 -- li4 -- cher8 Lie8. -- be16 er8 -- goﬂ4.
-      Und4 als8 Bru4 -- der8 huld8.-- voll16 um8 -- schloﬂ4.
-      Je8. -- sus16 die8 Vˆl8 ker der8 Welt!2.
-      Je8. -- sus16 die8 Vˆl8. ker16 der8 Welt!4
-}
-vFive=\lyrics {
-      Stil4 -- le8 Nacht!4. heil'4 -- ge8 Nacht!4. 
-      Lan4 -- ge8 schon4. uns4 be8 -- dacht,4.
-      Als4 der8  Herr4 vom8 Gri8. -- mme16 be8 -- freit4.
-      In4 der8 V‰4 -- ter8 ur8. -- gra16 -- uer8 Zeit4.
-      A8. -- ller16 Welt8 Scho8 -- nung ver8 -- hieﬂ!2.
-      A8. -- ller16 Welt8 Scho8. -- nung16 ver8 -- hieﬂ!4
-}
-vSix =  \lyrics {
-      Stil4 -- le8 Nacht!4. heil'4 -- ge8 Nacht!4. 
-      Hir4 -- ten8 erst4. kund4 ge8 -- macht4.
-      Durch4 der8 En4 -- gel8 Ha8. -- lle16 -- lu8 ja4.
-      T\"ont4 es8 laut4 von8 fern4 und8 nah:4.
-      "``Je"8. -- sus16 der8 Ret8 -- ter, ist8 "da!''"2.
-      "``Je"8. -- sus16 der8 Ret8. -- ter,16 ist8 "da!''"4
+vTwo =  \lyricmode {
+       Stil -- le Nacht! heil' -- ge Nacht!
+       Go -- ttes Sohn, o -- wie lacht
+       Lieb' aus dei -- nem g√∂tt -- li -- chen Mund,
+       Da uns schl√§gt die ret -- ten -- de Stund'.
+       Je -- sus in Dei -- ner Ge -- burt!
+       Je -- sus in Dei -- ner Ge -- burt!
 }
 
+vThree= \lyricmode {
+      Stil -- le Nacht! heil' -- ge Nacht!
+      Die der Welt Heil ge -- bracht,
+      Aus des Himm -- els gol -- den -- en H√∂hn
+      Uns der Gna -- den F√º -- lle l√§√üt sehn:
+      Je -- sum in Mensch -- en -- ge -- stalt,
+      Je -- sum in Mensch -- en -- ge -- stalt
+}
 
-GermanWords=\context Lyrics=top \lyrics{<
-	\vOne
-	\vTwo
-	\vThree
-	\vFour
-	\vFive
-	\vSix
-> ""8 ""4. ""4. ""4. }
+vFour = \lyricmode {
+      Stil -- le Nacht! heil' -- ge Nacht!
+      Wo sich heut all -- e Macht
+      V√§ -- ter -- li -- cher Lie -- be er -- go√ü
+      Und als Bru -- der huld -- voll um -- schlo√ü
+      Je -- sus die V√∂l -- ker der Welt!
+      Je -- sus die V√∂l -- ker der Welt!
+}
+
+vFive=\lyricmode {
+      Stil -- le Nacht! heil' -- ge Nacht!
+      Lan -- ge schon uns be -- dacht,
+      Als der  Herr vom Gri -- mme be -- freit
+      In der V√§ -- ter ur -- gra -- uer Zeit
+      A -- ller Welt Scho -- nung ver -- hie√ü!
+      A -- ller Welt Scho -- nung ver -- hie√ü!
+}
+
+vSix =  \lyricmode {
+      Stil -- le Nacht! heil' -- ge Nacht! 
+      Hir -- ten erst kund ge -- macht
+      Durch der En -- gel Ha -- lle -- lu -- ja
+      T√∂nt es laut von fern _ und nah:
+      ''Je -- sus der Ret -- ter, ist da!''
+      ''Je -- sus der Ret -- ter, ist da!''
+}
 
 \score {
 
-	<
-	    \context Staff = voice <
-		\property Staff.instrument = "Voice"
-		\property Staff.midiInstrument = "synth voice" 
-		\global \voiceOne 
-		\context Voice=Top \sop 
-		\context Voice=Top \alt 
-	    >
-	    \context LyricsVoice \GermanWords
-	    \context Staff = guitar < \clef "G_8"; \global \accomp >
-	>
-	\paper {
-		linewidth = 180.0\mm;
-		\translator { \StaffContext \consists "Instrument_name_engraver"; }
-		\translator {\ThreadContext \consists "Tie_engraver";}
+	<<
+	    \new Staff = "voice" <<
+		\set Staff.instrumentName = "Voice"
+		\set Staff.midiInstrument = "synth voice" 
+		\global
+		\new Voice = "top" \sop 
+		\context Voice = "top" \alt 
+	    >>
+	    \new Lyrics \lyricsto "top" \vOne
+	    \new Lyrics \lyricsto "top" \vTwo
+	    \new Lyrics \lyricsto "top" \vThree
+	    \new Lyrics \lyricsto "top" \vFour
+	    \new Lyrics \lyricsto "top" \vFive
+	    \new Lyrics \lyricsto "top" \vSix
+	    \new Staff = "guitar" << \clef "G_8" \global \accomp >>
+	>>
+	\layout {
 	}
+	
 	\midi {
-		\tempo 4.=60;
+	    \tempo 4. = 60
 	}
 }

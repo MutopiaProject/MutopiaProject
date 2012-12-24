@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIBasso = \notes \relative c' {
+IIBasso =  \relative c' {
   \clef "bass"
   \time 6/8
   \key g\minor
@@ -8,7 +8,7 @@ IIBasso = \notes \relative c' {
   \partial 8 r8 |
   %1 page 6
   g4 r8 fis4 r8 | g4 r8 bes a g | g f es d c bes | c4 r8 d4 r8 |
-  g f es d c bes | c4 r8 d4 r8 | g,4 g'8 g,4 f'16( )es | d4 r8 a'4 r8 |
+  g f es d c bes | c4 r8 d4 r8 | g,4 g'8 g,4 f'16(  es) | d4 r8 a'4 r8 |
   %9
   bes4 r8 d8 c bes | bes a g f es d | es4 r8 f4 r8 | bes a g f es d |
   es4 r8 f4 r8 | bes,4. r4 r8 | c'4 r8 a4 r8 | bes4 r8 r4 r8 |

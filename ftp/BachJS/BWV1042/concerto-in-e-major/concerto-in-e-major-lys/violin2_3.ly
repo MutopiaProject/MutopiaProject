@@ -1,6 +1,7 @@
+\version "2.16.0"
 %Violin 2, 3rd movement
 
-violin2_3_theme_body = \notes { % first bar intentionally missing!
+violinCDThemeBody =  { % first bar intentionally missing!
     %{ gis'4 r8 | %} b8 a b |
     b4 r8 | b cis dis |
     e b ais | b fis gis |
@@ -11,42 +12,42 @@ violin2_3_theme_body = \notes { % first bar intentionally missing!
     b cis b | b4. |
 }
 
-violin2_3_theme1 = \notes \relative c' { % without an "\f" at the start
-    gis'4 r8 | \$violin2_3_theme_body
+violinCDThemeB =  \relative c' { % without an "\f" at the start
+    gis'4 r8 | \violinCDThemeBody
 }
 
-violin2_3_theme2 = \notes \relative c' { % with an "\f" at the start
-    gis'4-\f r8 | \$violin2_3_theme_body
+violinCDThemeC =  \relative c' { % with an "\f" at the start
+    gis'4\f r8 | \violinCDThemeBody
 }
 
-violin2_3a = \notes \relative c' {
+violinCDa =  \relative c' {
     R4. * 16 |
 }
 
-violin2_3b = \notes \relative c' {
-    e8-\p( e )e | gis( gis )gis |
-    a( a )a | gis( bis )bis |
+violinCDb =  \relative c' {
+    e8\p( e  e) | gis( gis  gis) |
+    a( a  a) | gis( bis  bis) |
     cis4. ~ | cis |
     b ~ | b4 gis8 |
-    gis( gis )gis | gis( gis )gis |
-    gis( gis )gis | bis( bis )bis |
-    cis( cis )cis ~ | cis cis16( )b a8 |
+    gis( gis  gis) | gis( gis  gis) |
+    gis( gis  gis) | bis( bis  bis) |
+    cis( cis  cis) ~ | cis cis16(  b) a8 |
     gis gis fis | e4. |
 }
 
-violin2_3c = \notes \relative c' {
-    b'4.-\p | d |
+violinCDc =  \relative c' {
+    b'4.\p | d |
     cis8 b b | cis4 r8 |
     b4. ~ | b8 cis gis |
     e a ais | b4 r8 |
-    a4. ~ | a8 gis b16( )a |
-    b4. ~ | b8 a cis16( )b |
+    a4. ~ | a8 gis b16(  a) |
+    b4. ~ | b8 a cis16(  b) |
     cis8 fis r | e gis, r |
     cis d b | cis4 r8 |
 }
 
-violin2_3d = \notes \relative c' {
-    gis'8-\p b a | gis gis4 ~ |
+violinCDd =  \relative c' {
+    gis'8\p b a | gis gis4 ~ |
     gis8 a b | a4 r8 |
     ais cis b | ais ais4 ~ |
     ais8 b cis | b4 r8 |
@@ -65,15 +66,15 @@ violin2_3d = \notes \relative c' {
     a b cis | fis,4 r8 |    
 }
 
-violin2_3 = \notes {
-    \$violin2_3_theme1
-    \$violin2_3a
-    \$violin2_3_theme2
-    \$violin2_3b
-    \$violin2_3_theme2
-    \$violin2_3c
-    \$violin2_3_theme2
-    \$violin2_3d
-    \$violin2_3_theme2
-    \bar "|.";
+violinCD =  {
+    \violinCDThemeB
+    \violinCDa
+    \violinCDThemeC
+    \violinCDb
+    \violinCDThemeC
+    \violinCDc
+    \violinCDThemeC
+    \violinCDd
+    \violinCDThemeC
+    \bar "|."
 }

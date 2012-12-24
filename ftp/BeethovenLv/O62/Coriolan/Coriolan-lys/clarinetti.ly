@@ -1,22 +1,19 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 \include "clarinetto-1.ly"
 \include "clarinetto-2.ly"
 
-clarinettiStaff = \context Staff = clarinetti <
-	\property Staff.midiInstrument = #"clarinet"
+clarinettiStaff = \context Staff = "clarinetti" <<
+	\set Staff.midiInstrument = #"clarinet"
 
-	\property Staff.instrument = #`("Clarinetti in B" ,text-flat)
+	\set Staff.instrumentName = #"Clarinetti in B"
 	
-	\property Staff.instr = #`(lines "Cl."  (rows "(B" ,text-flat ")"))
-	\property Staff.transposing = #-2
+	\set Staff.shortInstrumentName = \markup {\center-column {Cl. \line{ "B" \smaller \flat}}}
+	\transposition ais 
 	
 	\Time
-	\notes { \key f \major; }
+	 { \key f \major }
 	\End
-	\context Voice=one \partcombine Voice
-		\context Thread=one \clarinettoI
-		\context Thread=two  \clarinettoII
->
+	\context Voice = "one" \partcombine \clarinettoI \clarinettoII
+>>
 

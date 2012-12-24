@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "4.ly"
 
-ivViolaGlobal =  \notes {
+ivViolaGlobal =   {
   \clef "alto"
   \key g\major
   \time 3/4
@@ -16,19 +16,24 @@ ivViolaGlobal =  \notes {
   }
 }
 
-ivViolaScripts =  \notes{
+ivViolaScripts =  {
 }
 
-ivViolaStaff =  \context Staff <
-  \notes \transpose f \ivStaff
+ivViolaStaff =  \context Staff <<
+   \transpose c' f \ivStaff
   \ivViolaGlobal
   \ivViolaScripts
->
+>>
 
 \score {
   \ivViolaStaff
-  \paper { }
-  \midi { \tempo 4 = 109 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 109
+    }
+
+
   \header {
     piece = "Double"
     opus = ""

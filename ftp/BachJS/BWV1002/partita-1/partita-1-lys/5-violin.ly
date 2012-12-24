@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "5.ly"
 
-vViolinGlobal =  \notes {
+vViolinGlobal =   {
   \clef "treble"
   \key d\major
   \time 3/4
@@ -10,7 +10,7 @@ vViolinGlobal =  \notes {
     s2.*7 |
   }
   \alternative {
-    { \partial 2. s2. }
+    { s2. }
     { s2. }
   }
   \repeat "volta" 2 {
@@ -18,19 +18,24 @@ vViolinGlobal =  \notes {
   }
 }
 
-vViolinScripts =  \notes{
+vViolinScripts =  {
 }
 
-vViolinStaff =  \context Staff <
+vViolinStaff =  \context Staff <<
   \vStaff
   \vViolinGlobal
   \vViolinScripts
->
+>>
 
 \score {
   \vViolinStaff
-  \paper { }
-  \midi { \tempo 4 = 55 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 55
+    }
+
+
   \header {
     piece = "Sarabande"
     opus = ""

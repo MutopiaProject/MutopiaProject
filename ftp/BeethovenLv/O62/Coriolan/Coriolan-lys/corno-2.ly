@@ -1,7 +1,6 @@
+\version "2.16.0"
 
-\version "1.3.120";
-
-cornoII =  \notes \relative c {
+cornoII =   \relative c {
 	R1*2|
 	d''4-.\ff r r2|
 	R1*3|
@@ -18,14 +17,12 @@ cornoII =  \notes \relative c {
 	R1*2|
 	% `a 2
 	% urg, yes this is a-deux, but lily doesn't know about I. / a2 yet.
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	r8 f'\p\< f2 e4|
+	r8 f'\p\cresc f2 e4|
 	r8 f f2 e4|
 	f4. e8 f4. e8|
 	f4. e8 f4. e8|
-	\!d1\ff ~|
-	d4(e d)c|
+	 d1\ff ~|
+	d4(e d c)|
 	d4. r8 c4. r8|
 	e,4. r8 e4. r8|
 	e'4. r8 d4. r8|
@@ -121,26 +118,22 @@ cornoII =  \notes \relative c {
 	e~|
 	e~|
 	e~|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	e\<~|
+	e\cresc~|
 	e~|
 	e~|
 	e~|
 	e~|
 	e|
-	\!e2\ff d'|
+	 e2\ff d'|
 	R1*17|
 	%a deux|
 	r4 r8 e,\p e4. e8|
 	r4 r8 e e4. e8|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	r4 r8 e\< e4. e8|
+	r4 r8 e\cresc e4. e8|
 	r4 r8 e e4. e8|
 	r4 r8 e e4. e8|
 	r4 r8 e e4. e8|
-	\!d'2.\ff c4|
+	 d'2.\ff c4|
 	d c d c|
 	d2.\ff c4|
 	d c d c|
@@ -148,10 +141,10 @@ cornoII =  \notes \relative c {
 	g, d' g, d'|
 	g,2. d'4|
 	g, d' g, d'|
-	r4 r8 d d4\sf()es|
-	r4 r8 d d4\sf()es|
-	r4 r8 d d4\sf()es|
-	r4 r8 d d4\sf()es|
+	r4 r8 d d4\sf( es)|
+	r4 r8 d d4\sf( es)|
+	r4 r8 d d4\sf( es)|
+	r4 r8 d d4\sf( es)|
 	d2 d|
 	%a deux|
 	e d~|
@@ -181,27 +174,25 @@ cornoII =  \notes \relative c {
 	e~|
 	e~|
 	e~|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	e\<~|
+	e\cresc~|
 	e~|
 	e|
 	%a deux|
-	\!c'1\f|
+	 c'1\f|
 	d\p|
 	d\f|
 	e\p|
 	e\f|
 	d4\p r r2|
 	R1*3|
-	%a deux; urg: copied corno|
-	d\ff|
+	%a deux urg: copied corno|
+	d1\ff|
 	d|
 	e|
 	e|
 	f|
 	e|
-	e4.-"sempre"\ff e8 e4. e8|
+	e4.\ffsempre e8 e4. e8|
 	e4. e8 e4. e8|
 	e4. e8 e4. e8|
 	e4. e8 e4. e8|

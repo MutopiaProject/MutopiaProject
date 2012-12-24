@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "7.ly"
 
-viiCelloGlobal =  \notes {
+viiCelloGlobal =   {
   \clef "bass"
   \key g\major
   \time 2/2
@@ -14,19 +14,24 @@ viiCelloGlobal =  \notes {
   }
 }
 
-viiCelloScripts =  \notes{
+viiCelloScripts =  {
 }
 
-viiCelloStaff =  \context Staff <
-  \notes \transpose f, \viiStaff
+viiCelloStaff =  \context Staff <<
+   \transpose c' f, \viiStaff
   \viiCelloGlobal
   \viiCelloScripts
->
+>>
 
 \score {
   \viiCelloStaff
-  \paper { }
-  \midi { \tempo 4 = 140 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 140
+    }
+
+
   \header {
     piece = "Tempo di Borea"
     opus = ""

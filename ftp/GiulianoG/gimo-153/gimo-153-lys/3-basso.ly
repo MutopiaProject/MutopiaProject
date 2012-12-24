@@ -1,10 +1,10 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIBasso = \notes \relative c' {
+IIIBasso =  \relative c' {
   \clef "bass"
   \time 3/8
   \key bes \major
-  \property Score.skipBars = ##t 
+  \set Score.skipBars = ##t 
   
   %page 3
   %page 21
@@ -35,14 +35,13 @@ IIIBasso = \notes \relative c' {
   %111
   g bes g | g d fis | g g g | fis d d | g g bes | fis d d | g g bes |
   %118
-  c d d, | g g g | c d d, | [g f!16 es d c] | bes4 r8 |
+  c d d, | g g g | c d d, |  g[ f!16 es d c] | bes4 r8 |
   %123
   R4.*23 |
   %146
   bes8 bes bes | bes bes bes | bes bes bes | bes bes bes | bes r r |
   %151
-  r d d | es4 r8 | r d f | [bes,8 bes16 bes bes bes] |
+  r d d | es4 r8 | r d f |  bes,8[ bes16 bes bes bes] |
   %155
-  [bes8 bes16 bes bes bes] | bes4 r8^\fermata \bar "|."
+   bes8[ bes16 bes bes bes] | bes4 r8^\fermata \bar "|."
 }
-

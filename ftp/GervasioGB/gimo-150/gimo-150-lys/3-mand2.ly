@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIMandII = \notes \relative c' {
+IIIMandII =  \relative c' {
   \clef "treble"  
   \key d\major
   \time 6/8
@@ -15,7 +15,7 @@ IIIMandII = \notes \relative c' {
   fis g fis e d cis |
   %8
   d b a g fis e |
-  d8 [d' e] fis e d |
+  d8  d'[ e] fis e d |
   cis4 e8 fis e d |
   cis b a b a gis |
   %12

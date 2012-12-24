@@ -1,3 +1,5 @@
+\version "2.14.0"
+
 \header {
 title = "Fuga I"
 subtitle = "a 3 voci"
@@ -12,21 +14,21 @@ maintainer = "Jarle Fagerheim"
 maintainerEmail = "jarle_fagerheim@yahoo.co.uk"
 lastupdated = "2002/March/16"
 
-tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
 footer = "Mutopia-2002/03/16-209"
+tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-dux = \notes \relative g' \context Voice = dux {
+dux =  \relative g' \context Voice = "dux" {
 	\stemUp
 	r8 g16 f g8 c, |
-	a'4-\mordent g |
+	a'4\mordent g |
 	r8 f16 e f g e f |
 	d f e f g a f g |
 	e d e f e f d e |
 	c b c d c d b c |
 	a b c d e fis g8~|
 	g fis16 e fis4 |
-	\translator Staff = treble
+	\change Staff = treble
 	\stemDown \tieDown
 	g2~ |
 	g16 e f8~ f16 d e8~ |
@@ -40,21 +42,21 @@ dux = \notes \relative g' \context Voice = dux {
 	c8 e16 d e8 a |
 	d,2~ |
 	d8 c16 b a8 b~ |
-	b \translator Staff = bass
-	\stemUp \tieBoth
+	b \change Staff = bass
+	\stemUp \tieNeutral
 	a16 g a8 d, |
-	\translator Staff = treble
+	\change Staff = treble
 	\stemDown \tieDown
 	b'4 a |
-	\translator Staff = bass
-	\stemUp \tieBoth
+	\change Staff = bass
+	\stemUp \tieNeutral
 	r8 g16 f g a f g |
-	e \translator Staff = treble \stemDown g f g a bes g a |
-	f \translator Staff = bass \stemUp e f g f g e f |
+	e \change Staff = treble \stemDown g f g a bes g a |
+	f \change Staff = bass \stemUp e f g f g e f |
 	d c d e d e c d |
 	\clef violin
 	b16 c d e fis gis a8~|
-	a gis16 fis gis4-\trill |
+	a gis16 fis gis4\trill |
 	a16 gis a b a b g a |
 	fis e fis g fis g e fis |
 	g fis g a g a f g |
@@ -65,7 +67,7 @@ dux = \notes \relative g' \context Voice = dux {
 	c8 f16 e f g e f |
 	d c d e d e c d |
 	b a b c b c a b |
-	\translator Staff = treble \stemDown \tieDown
+	\change Staff = treble \stemDown \tieDown
 	c4. b8~ |
 	b16 b a8~ a16 a g8~ |
 	g g fis g~ |
@@ -78,11 +80,11 @@ dux = \notes \relative g' \context Voice = dux {
 	a'4 g |
 	r8 f16 e f g e f |
 	d f e f g a f g |
-	e \translator Staff = bass \stemUp
+	e \change Staff = bass \stemUp
 	d e f e f d e |
 	c b c d c d b c |
 	a b c d e fis g8~ |
-	g \translator Staff = treble \stemDown
+	g \change Staff = treble \stemDown
 	g4 fis8 |
 	g4 r4 |
 	r8 g16 f g8 d |
@@ -109,7 +111,8 @@ dux = \notes \relative g' \context Voice = dux {
 	\clef violin
 	c bes16 a bes8 e |
 	f4 e |
-	r2 |
+	\once \override Rest #'direction = #LEFT
+	e2\rest |
 	r8 d16 c d8 g, |
 	r8 b c d |
 	e b e e |
@@ -117,7 +120,7 @@ dux = \notes \relative g' \context Voice = dux {
 	s2 \bar "|."
 												 
 	}
-comes = \notes \relative c'' \context Voice = comes {
+comes =  \relative c'' \context Voice = "comes" {
 	\stemDown
 	\tieUp
 	R2 |
@@ -125,7 +128,7 @@ comes = \notes \relative c'' \context Voice = comes {
 	R2 |
 	R2 |
 	r8 c16 b c8 g |
-	e'4-\mordent d |
+	e'4\mordent d |
 	r8 c16 b c d b c |
 	\stemUp
 	a c b c d e c d |
@@ -157,7 +160,7 @@ comes = \notes \relative c'' \context Voice = comes {
 	b a b c b c a b |
 	g8 c16 b c d bes c |
 	a16 g a bes a bes g a |
-	f2-\trill~ |
+	f2\trill~ |
 	f8 d'16 c d8 f, |
 	e16 d e f e f d e |
 	c8. c16 b8. b16 |
@@ -199,15 +202,16 @@ comes = \notes \relative c'' \context Voice = comes {
 	\clef violin
 	e g16 f g8 c, |
 	a'4 g |
-	r8 f16 e f8 d |
+	\once \override Rest #'direction = #RIGHT
+	f'8\rest f,16 e f8 d |
 	g4 f |
-	<c8 e> <f aes> <e g> <aes b> |
+	<c e>8 <f aes> <e g> <aes b> |
 	<g c> <d f> c c' |
 	d, c' f, b |
-	<c,2 e g c> \bar "|."
+	<c, e g c>2 \bar "|."
 	}
 
-bassdux = \notes \relative g \context Voice = bassdux {
+bassdux =  \relative g \context Voice = "bassdux" {
 	\stemDown
 	s2 |
 	s |
@@ -219,7 +223,7 @@ bassdux = \notes \relative g \context Voice = bassdux {
 	s |
 	\clef bass
 	r8 g16 f g8 c, |
-	a'4-\mordent g |
+	a'4\mordent g |
 	r8 f16 e f g e f |
 	d f e f g a f g |
 	e d e f e f d e | 
@@ -252,8 +256,8 @@ bassdux = \notes \relative g \context Voice = bassdux {
 	\tieDown
 	g2~ |
 	g2~ |
-	g2~ |
-	\tieBoth
+	g2 |
+	\tieNeutral
 	r4 r8 b8 |
 	c a d d, |
 	g,16 fis g a b c a b |
@@ -283,20 +287,20 @@ bassdux = \notes \relative g \context Voice = bassdux {
 	b c b a g f e d |
 	c c' d c e c f c |
 	g' c, aes' c, g' c, b c |
-	<f,8 a'> r8 <g g'> r8 |
+	<f, a'>8 r8 <g g'> r8 |
 	c,2 \bar "|."
 	}
 
 \score {
-	\context PianoStaff \notes <
-		\context Staff = treble < \time 2/4 \clef violin
+	\context PianoStaff  <<
+		\context Staff = "treble" << \time 2/4 \clef violin
 			\comes
-		>
-		\context Staff = bass < \time 2/4 \clef violin
+		>>
+		\context Staff = "bass" << \time 2/4 \clef violin
 			\dux
 			\bassdux
-		>
-	>
+		>>
+	>>
 	\midi { }
-	\paper {}
+	\layout {}
 }

@@ -4,13 +4,13 @@
 % I don't know if there's a piano arrangement which is out of copyright.
 
 \header {
-    \include "header.ly";
-    subtitle = "for two violins and strings (Score)";
+    \include "header.ly"
+    subtitle = "for two violins and strings (Score)"
     % Want "Score" to appear in subtitle
-    filename = "score.ly";
+    filename = "score.ly"
 }
 
-\version "1.2.17";
+\version "2.16.0"
 
 \include "solo_violin1_1.ly"
 \include "solo_violin2_1.ly"
@@ -36,170 +36,158 @@
 
 % 1st movement
 \score {
-    \header {
-	piece = "Vivace"; opus = "";
-    }
-
-    \context StaffGroup = fullscore \notes <
+    \context StaffGroup = "fullscore"  <<
 	\context Voice = SoloViolinI {
-	    \property Staff.midiInstrument="violin"
-	    \key d \minor;
-	    \time 4/4;
-	    \$solo_violin1_1
+	    \set Staff.midiInstrument = "violin"
+	    \key d \minor
+	    \time 4/4
+	    \soloViolinBB
 	}
 	\context Voice = SoloViolinII {
-	    \property Staff.midiInstrument="violin"
-    	    \key d \minor;
-	    \time 4/4;
-    	    \$solo_violin2_1
+	    \set Staff.midiInstrument = "violin"
+    	    \key d \minor
+	    \time 4/4
+    	    \soloViolinCB
 	}
 	\context Voice = ViolinI {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key d \minor;
-	    \time 4/4;
-    	    \$violin1_1
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key d \minor
+	    \time 4/4
+    	    \violinBB
 	}
 	\context Voice = ViolinII {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key d \minor;
-	    \time 4/4;
-    	    \$violin2_1
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key d \minor
+	    \time 4/4
+    	    \violinCB
 	}
 	\context Voice = Viola {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key d \minor;
-	    \time 4/4;
-	    \clef "alto";
-    	    \$viola_1
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key d \minor
+	    \time 4/4
+	    \clef "alto"
+    	    \violaB
 	}
 	\context Voice = Continuo {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key d \minor;
-	    \time 4/4;
-	    \clef "bass";
-    	    \$continuo_1
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key d \minor
+	    \time 4/4
+	    \clef "bass"
+    	    \continuoB
 	}
-    >
-    
-    \paper { linewidth = 18.0 \cm;
-	\translator { \ScoreContext \consists "Bar_number_engraver"; }
+    >>
+    \header {
+	piece = "Vivace"
+        opus = ""
     }
-    
+    \layout {}
     \midi {
-	\tempo 4 = 100;
+      \tempo 4 = 100
     }
+
+
 }
 
 
 % 2nd movement
 \score {
-    \header {
-	piece = "Largo ma non tanto"; opus = "";
-    }
-
-    \context StaffGroup = fullscore \notes <
+    \context StaffGroup = "fullscore"  <<
 	\context Voice = SoloViolinI {
-	    \property Staff.midiInstrument="violin"
-	    \key f \major;
-	    \time 12/8;
-	    \$solo_violin1_2
+	    \set Staff.midiInstrument = "violin"
+	    \key f \major
+	    \time 12/8
+	    \soloViolinBC
 	}
 	\context Voice = SoloViolinII {
-	    \property Staff.midiInstrument="violin"
-    	    \key f \major;
-	    \time 12/8;
-    	    \$solo_violin2_2
+	    \set Staff.midiInstrument = "violin"
+    	    \key f \major
+	    \time 12/8
+    	    \soloViolinCC
 	}
 	\context Voice = ViolinI {
-	    \property Staff.midiInstrument="harpsichord"
-	    \key f \major;
-	    \time 12/8;
-	    \$violin1_2
+	    \set Staff.midiInstrument = "harpsichord"
+	    \key f \major
+	    \time 12/8
+	    \violinBC
 	}
 	\context Voice = ViolinII {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key f \major;
-	    \time 12/8;
-    	    \$violin2_2
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key f \major
+	    \time 12/8
+    	    \violinCC
 	}
 	\context Voice = Viola {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key f \major;
-	    \time 12/8;
-	    \clef "alto";
-    	    \$viola_2
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key f \major
+	    \time 12/8
+	    \clef "alto"
+    	    \violaC
 	}
 	\context Voice = Continuo {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key f \major;
-	    \time 12/8;
-	    \clef "bass";
-    	    \$continuo_2
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key f \major
+	    \time 12/8
+	    \clef "bass"
+    	    \continuoC
 	}
-    >
-    
-    \paper { linewidth = 18.0 \cm;
-	\translator { \ScoreContext \consists "Bar_number_engraver"; }
+    >>
+    \header {
+	piece = "Largo ma non tanto" opus = ""
     }
-    
+    \layout {}
     \midi {
-	\tempo 4 = 48;
+      \tempo 4 = 48
     }
 }
 
 % 3rd movement
 \score {
-    \header {
-	piece = "Allegro"; opus = "";
-    }
-
-    \context StaffGroup = fullscore \notes <
+    \context StaffGroup = "fullscore"  <<
 	\context Voice = SoloViolinI {
-	    \property Staff.midiInstrument="violin"
-	    \key d \minor;
-	    \time 3/4;
-	    \$solo_violin1_3
+	    \set Staff.midiInstrument = "violin"
+	    \key d \minor
+	    \time 3/4
+	    \soloViolinBD
 	}
 	\context Voice = SoloViolinII {
-	    \property Staff.midiInstrument="violin"
-    	    \key d \minor;
-	    \time 3/4;
-    	    \$solo_violin2_3
+	    \set Staff.midiInstrument = "violin"
+    	    \key d \minor
+	    \time 3/4
+    	    \soloViolinCD
 	}
 	\context Voice = ViolinI {
-	    \property Staff.midiInstrument="harpsichord"
-	    \key d \minor;
-	    \time 3/4;
-	    \$violin1_3
+	    \set Staff.midiInstrument = "harpsichord"
+	    \key d \minor
+	    \time 3/4
+	    \violinBD
 	}
 	\context Voice = ViolinII {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key d \minor;
-	    \time 3/4;
-    	    \$violin2_3
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key d \minor
+	    \time 3/4
+    	    \violinCD
 	}
 	\context Voice = Viola {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key d \minor;
-	    \time 3/4;
-	    \clef "alto";
-    	    \$viola_3
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key d \minor
+	    \time 3/4
+	    \clef "alto"
+    	    \violaD
 	}
 	\context Voice = Continuo {
-	    \property Staff.midiInstrument="harpsichord"
-    	    \key d \minor;
-	    \time 3/4;
-	    \clef "bass";
-    	    \$continuo_3
+	    \set Staff.midiInstrument = "harpsichord"
+    	    \key d \minor
+	    \time 3/4
+	    \clef "bass"
+    	    \continuoD
 	}
-    >
-    
-    \paper { linewidth = 18.0 \cm;
-    	\translator { \VoiceContext beamAutoEnd = "1/4"; }
-	\translator { \ScoreContext \consists "Bar_number_engraver"; }
+    >>
+    \header {
+	piece = "Allegro"
+        opus = ""
     }
-    
+    \layout {}
     \midi {
-	\tempo 4 = 110;
+      \tempo 4 = 110
     }
 }
