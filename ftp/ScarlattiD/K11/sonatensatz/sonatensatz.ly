@@ -1,4 +1,4 @@
-\version "2.14.0"
+\version "2.16.0"
 #(set-global-staff-size 16)
 
 Algemeen = { {\key c\minor \time 8/8}}
@@ -99,10 +99,7 @@ StemII ={ \relative c' {
 \layout {}
 
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 120 4)
-      }
+    \tempo 4 = 120
     }
 
 
