@@ -23,6 +23,12 @@
         piece = "1."
     }
     \layout {
+        %Needed in version 2.16.1, otherwise notes are too tight
+        \context {
+            \Score
+            \override StaffGrouper #'staff-staff-spacing #'padding = #4
+            \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 16)
+        }
     }
 }
 
