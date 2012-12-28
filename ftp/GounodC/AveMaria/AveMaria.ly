@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 
 \header {
   title = "Ave Maria"
@@ -55,13 +55,10 @@
       \bar "|."
     }
   }
-  \header { piece = "moderato" opus = "" }
+  \header { piece = "Moderato" opus = "" }
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-      }
+    \tempo 4 = 100
     }
 
 
