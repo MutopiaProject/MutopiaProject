@@ -10,7 +10,7 @@ continuoBaMain =  \relative c' {
     e,16 fis gis a b cis dis e cis8 cis'4 b8 |
     a a,4 gis8 fis fis'4 e8 |
     dis2 ~ dis16 e fis dis b8 dis |
-     e[ gis a b] cis gis16 gis a a b b |
+     e[ gis a b] cis\noBeam gis16 gis a a b b |
     cis cis gis gis a a b b cis cis b b cis cis dis dis |
      e8[ cis a b] e,4 r |
     r2 e4-.\p gis-. |

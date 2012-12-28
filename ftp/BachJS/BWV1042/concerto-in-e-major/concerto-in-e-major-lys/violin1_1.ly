@@ -10,7 +10,7 @@ violinBBa =  \relative c' {
     gis16 gis gis gis gis gis gis gis  a( b cis  a) gis( a b  gis) |
     fis( gis a  fis) e( fis gis  e) dis( e fis  dis) a( b cis  a) |
     fis( gis a  fis) dis( e fis  dis) b4 r8 fis''16( gis32  a) |
-    gis8.\trill fis32(  e) gis16(  fis) e(  dis) e8 b16 b cis cis dis dis |
+    gis8.\trill fis32(  e) gis16(  fis) e(  dis) e8\noBeam b16 b cis cis dis dis |
     e e b b cis cis dis dis e fis gis e a fis b8 |
     gis\trill fis16 e gis(  fis) e(  dis) e4 r8 gis,16\p a |
 

@@ -10,7 +10,7 @@ soloViolinBa =  \relative c' {
     gis gis gis gis gis gis gis gis  a( b cis  a) gis( a b  gis) |
     fis( gis a  fis) e( fis gis  e) dis( e fis  dis) a( b cis  a) |
     fis( gis a  fis) dis( e fis  dis) b4 r8 fis''16( gis32  a) |
-    gis8.\trill fis32(  e) gis16(  fis) e(  dis) e8 b16 b cis cis dis dis |
+    gis8.\trill fis32(  e) gis16(  fis) e(  dis) e8\noBeam b16 b cis cis dis dis |
     e e b b cis cis dis dis e fis gis e a fis b8 |
     gis\trill fis16 e gis(  fis) e(  dis) e4 r |
 
@@ -22,7 +22,7 @@ soloViolinBa =  \relative c' {
     a16( b cis  a) gis( a b  gis) fis-"Solo"( a  b) dis fis dis cis b |
     a( b  dis) fis a gis fis e dis( e fis  dis) b( dis cis  b) |
     a'\p gis fis e dis( e fis  dis) b( dis cis  b) a'\pp gis fis e |
-    dis( e fis  dis) b8 dis16\f^"Tutti" e fis8 dis16 e fis8 b |
+    dis( e fis  dis) b8\noBeam dis16\f^"Tutti" e fis8 dis16 e fis8 b |
     fis fis16 e dis8 dis16 cis fis-"Solo" b fis e dis( fis  dis) cis |
     b a' fis e dis( fis  dis) cis b gis' e dis cis( e  cis) b |
     ais( cis  e) gis fis8. e16 dis( fis ais  b) cis,( e ais  b) |
@@ -42,7 +42,7 @@ soloViolinBa =  \relative c' {
     r2 b,16( d  e) gis b gis fis e |
     d( e  gis) b d cis b a gis( a b  gis) e( gis fis  e) |
     d'\p cis b a gis( a b  gis) e( gis fis  e) d'\pp cis b a |
-    gis( a b  gis) e8 gis16\f a b8 gis16 a b8 e |
+    gis( a b  gis) e8\noBeam gis16\f a b8 gis16 a b8 e |
     b b16 a gis8 fis16 e b' e b a gis( b  gis) fis |
     e d' b a gis( b  gis) fis e cis' a gis fis( a  fis) e |
     dis( fis  a) cis b8. a16 gis( b dis  e) fis,( a dis  e) |
@@ -86,7 +86,7 @@ soloViolinBb =  \relative c' {
     gis8 e16 fis gis8 cis gis gis16 fis e8 dis16 cis |
     ais'-"Solo" e( dis  cis) fis, cis'( dis  e)
 	    ais e( dis  cis) fis, cis'( dis  e) |
-    b' fis dis b' fis dis b fis' dis b fis dis b8 dis'16 e |
+    b' fis dis b' fis dis b fis' dis b fis dis b8\noBeam dis'16 e |
     fis8 dis16 e fis8 b fis fis16 e dis8 cis16 b |
     gis' d( cis  b) e, b'( cis  d) gis d( cis  b) e, b'( cis  d) |
     a' e cis a' e cis a e' cis a e cis a8 cis16 d |
@@ -131,7 +131,7 @@ soloViolinBcUpper = \context Staff  \relative c' {
     fis fis fis fis fis4 r |
     e8 e e e e r a a |
     a fis16 gis a8 gis16 fis gis8 r gis gis |
-    gis a16 gis \stemNeutral fis(  e) dis(  cis) b(  gis) a(  fis) b,8 a'' |
+    gis a16 gis \stemNeutral fis(  e) dis(  cis) b(  gis) a(  fis) b,8\noBeam a'' |
 }
 
 soloViolinBd =  \relative c' {
