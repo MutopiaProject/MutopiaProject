@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.16.0"
 #(set-global-staff-size 16)
 \include "nederlands.ly"
 \header {
@@ -130,10 +130,7 @@ VoiceIII =  \relative c' {
 \layout {}
 
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 84 4)
-      }
+    \tempo 4 = 84
     }
 
 
