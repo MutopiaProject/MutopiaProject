@@ -1,15 +1,15 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "2.ly"
 
-iiViolaGlobal =  \notes {
+iiViolaGlobal =   {
   \clef "alto"
   \key g\major
 
   % Time signature: To get the right C symbol, we need 2/2,
-  % then beatlength needs to be modified to group notes correctly.
+  % then baseMoment needs to be modified to group notes correctly.
   \time 2/2
-  \property Score.beatLength = #(make-moment 1 4)
+  \set Timing.baseMoment = #(ly:make-moment 1 4)
 
   \repeat "volta" 2 {
     \partial 16
@@ -20,19 +20,24 @@ iiViolaGlobal =  \notes {
   }
 }
 
-iiViolaScripts =  \notes{
+iiViolaScripts =  {
 }
 
-iiViolaStaff =  \context Staff <
-  \notes \transpose f \iiStaff
+iiViolaStaff =  \context Staff <<
+   \transpose c' f \iiStaff
   \iiViolaGlobal
   \iiViolaScripts
->
+>>
 
 \score {
   \iiViolaStaff
-  \paper { }
-  \midi { \tempo 4 = 76 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 76
+    }
+
+
   \header {
     piece = "Double"
     opus = ""

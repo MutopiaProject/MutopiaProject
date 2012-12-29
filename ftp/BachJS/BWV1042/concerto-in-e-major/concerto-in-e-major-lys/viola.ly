@@ -8,58 +8,72 @@
 % I don't know if there's a piano arrangement which is out of copyright.
 
 \header {
-    \include "header.ly";
-    subtitle =	"for violin and strings (Viola)";
+    \include "header.ly"
+    subtitle =	"for violin and strings (Viola)"
     % Want "Viola" to appear in subtitle
-    filename = "viola.ly";
+    filename = "viola.ly"
 }
 
 \include "viola_1.ly"
 \include "viola_2.ly"
 \include "viola_3.ly"
 \include "common-defs.ly"
-\version "1.2.17";
+\version "2.16.0"
 
 % 1st movement, printed version
 \score {
-    \header { piece = \$piece1 ; opus = "" ; }
-    \notes \context Voice = Viola {
-        \key e \major; \time 2/2; \clef "alto";
-        \$viola_1
+     \context Voice = Viola {
+        \key e \major \timeB \clef "alto"
+        \violaB
     }
-    \paper { \translator { \VoiceContext beamAutoEnd = "1/4"; } }
+    \header {
+        piece = \pieceB
+        opus = ""
+    }
 }
 
 % 1st movement, midi version
 \score {
-    \notes \context Voice = Viola {
-	\property Staff.midiInstrument = \$viola_midi_instrument
-        \key e \major; \time 2/2; \clef "alto";
-        \$viola_1_midi
+     \context Voice = Viola {
+	\set Staff.midiInstrument = \violaMidiInstrument
+        \key e \major \timeB \clef "alto"
+        \violaBMidi
     }
-    \midi { \tempo 4 = 110; }
+    \midi {
+      \tempo 4 = 110
+    }
 }
 
 % 2nd movement
 \score {
-    \header { piece = \$piece2 ; opus = "" ; }
-    \notes \context Voice = Viola {
-        \property Staff.midiInstrument = \$viola_midi_instrument
-	\key e \major; \time 3/4; \clef "alto";
-        \$viola_2
+     \context Voice = Viola {
+        \set Staff.midiInstrument = \violaMidiInstrument
+	\key e \major \timeC \clef "alto"
+        \violaC
     }
-    \paper { \translator { \VoiceContext beamAutoEnd = "1/4"; } }
-    \midi { \tempo 4 = 50; }
+    \header {
+        piece = \pieceC
+        opus = ""
+    }
+    \layout {}
+    \midi {
+      \tempo 4 = 50
+    }
 }
 
 % 3rd movement
 \score {
-    \header { piece = \$piece3 ; opus = "" ; }
-    \notes \context Voice = Viola {
-        \property Staff.midiInstrument = \$viola_midi_instrument
-	\key e \major; \time 3/8; \clef "alto";
-        \$viola_3
+     \context Voice = Viola {
+        \set Staff.midiInstrument = \violaMidiInstrument
+	\key e \major \timeD \clef "alto"
+        \violaD
     }
-    \paper {}
-    \midi { \tempo 4 = 120; }
+    \header {
+        piece = \pieceD
+        opus = ""
+    }
+    \layout {}
+    \midi {
+      \tempo 4 = 120
+    }
 }

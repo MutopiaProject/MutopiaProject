@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIMand = \notes \relative c' {
+IIMand =  \relative c' {
   \clef "treble"
   \time 6/8
   \key c\major

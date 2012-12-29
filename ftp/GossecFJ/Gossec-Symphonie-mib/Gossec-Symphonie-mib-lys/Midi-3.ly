@@ -1,4 +1,4 @@
-﻿\version "2.10.25"       %N°mesure = N°ligne - 10
+\version "2.16.0"       %N°mesure = N°ligne - 10
 
 
 \score {

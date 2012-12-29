@@ -1,12 +1,12 @@
 \header{
-filename =	"Sommernachtstraum.ly";
-enteredby =	"Felix Braun";
-copyright =	"Public Domain";
+filename =	"Sommernachtstraum.ly"
+enteredby =	"Felix Braun"
+copyright =	"Public Domain"
 }
 
-\version "1.3.122";
+\version "2.16.0"
 
-\include "paper13.ly"
+#(set-global-staff-size 13)
 \include "sntglobal.ly"
 
 \include "flaucla.ly"
@@ -21,31 +21,31 @@ copyright =	"Public Domain";
 
 \include "sntheader.ly" % must come last
 
-violini = \context GrandStaff = violini_group <
+violini = \context GrandStaff = violini_group <<
 	\violinoBStaff
 	\violinoCStaff
->
+>>
 
-bassi = \context GrandStaff = bassi_group <
+bassi = \context GrandStaff = bassi_group <<
 	\violoncelloStaff
 	\contrabassoStaff
->
+>>
 
 \score{
-        < 
-	  \context StaffGroup <
+        << 
+	  \context StaffGroup <<
 		\flautiStaff
 		\oboiStaff
 		\clarinettiStaff
 		\fagottiStaff
 		\corniStaff
-	  >
-	  \context StaffGroup <
+	  >>
+	  \context StaffGroup <<
 		\violini
 		\violaStaff
 		\bassi
-	   >
->
+	   >>
+>>
 	\include "sntpaper.ly"
 	\include "sntmidi.ly"
 }

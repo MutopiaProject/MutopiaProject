@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "4.ly"
 
-ivCelloGlobal =  \notes {
+ivCelloGlobal =   {
   \clef "bass"
   \key g\major
   \time 3/4
@@ -16,19 +16,24 @@ ivCelloGlobal =  \notes {
   }
 }
 
-ivCelloScripts =  \notes{
+ivCelloScripts =  {
 }
 
-ivCelloStaff =  \context Staff <
-  \notes \transpose f, \ivStaff
+ivCelloStaff =  \context Staff <<
+   \transpose c' f, \ivStaff
   \ivCelloGlobal
   \ivCelloScripts
->
+>>
 
 \score {
   \ivCelloStaff
-  \paper { }
-  \midi { \tempo 4 = 109 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 109
+    }
+
+
   \header {
     piece = "Double"
     opus = ""

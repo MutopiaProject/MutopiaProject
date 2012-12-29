@@ -1,2 +1,3 @@
-\midi{\tempo 4 = 170;}
+\version "2.16.0"
 
+\midi{\tempo 4 = 170}

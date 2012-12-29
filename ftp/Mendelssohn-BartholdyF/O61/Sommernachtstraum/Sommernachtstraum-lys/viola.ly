@@ -1,86 +1,62 @@
 \header{
-filename =	"viola.ly";
-enteredby =	"Felix Braun";
-copyright =	"Public Domain";
+filename =	"viola.ly"
+enteredby =	"Felix Braun"
+copyright =	"Public Domain"
 }
 
-\version "1.3.122";
+\version "2.16.0"
 \include "deutsch.ly"
 
-violaB = \notes \relative c' {
-	c2.:16\mf | c\< | \!d:\sf\> | \!c:\< | \!d:\sf\> | \!c: | a: | a: |
-	<h: e:> | <c4.: e:> <cis: e:> | d:\sf\> h: | \!c!:\< cis: |
-	\!d:\sf\>h | \!c!:-"cresc." cis: | a2.: | a4.:-"dim." h: | h: c: |
-	a2.:\p | < h: {s2 s4-"cresc."} > | 
+viola =  \relative c' {
+	c2.:16\mf | c\< |  d:\!\sf\> |  c:\!\< |  d:\!\sf\> |  c:\! | a: | a: |
+	<h: e:> | <c: e:>4. <cis: e:> | d:\sf\> h: |  c!:\!\< cis: |
+	 d:\!\sf\>h |  c!:\!-"cresc." cis: | a2.: | a4.:-"dim." h: | h: c: |
+	a2.:\p | << h: {s2 s4-"cresc."} >> | 
 %% 20
 	a2.: | h: | a: | a:\f | a:-"dim." | a4.: g: | fis2.:\p | g: | fis: | g: |
 %% 30
-	fis:-"cresc." | a:\f | a:\> | \!g:\p | g4.: <fis: a:> | 
-	g8:\< h: \!e: d:\> c: \!h: | c: h: a: h: a: gis: | a4.: c:\< | c2.: |
-	\!d:\> | 
+	fis:-"cresc." | a:\f | a:\> |  g:\!\p | g4.: <fis: a:> | 
+	g8:\< h:  e:\! d:\> c:  h:\! | c: h: a: h: a: gis: | a4.: c:\< | c2.: |
+	 d:\!\> | 
 %% 40	
-	\!d: | h4.: c8: e,: gis: | a: f:-"cresc." a: b: g!: h: | 
-	c: a: cis: d: b: d: | e2.:\< | e: | \!es:\> | es: | \!d: | d: | 
+	 d:\! | h4.: c8: e,: gis: | a: f:-"cresc." a: b: g!: h: | 
+	c: a: cis: d: b: d: | e2.:\< | e: |  <es c>:\!\> | q: |  <d b>:\! | q: | 
 %% 50	
-	d: | d: | c: | c: | a: | a: | h: | c: | h: | c: | 
+	q: | <d h!>: | <c a>: | q: | a: | a: | <h gis>: | <c a>: | <h gis>: | <c a>: | 
 %% 60	
-	h4.: c:-"dim." | h: c: | gis: a: | gis: a: | gis8 r r r4 r8 |
-	d' r r r4 r8 | d r r r4 r8 | d r r r4 r8 | d r r r4 r8 | R2.*4 |
+	<h gis>4.: <c a>:-"dim." | <h gis>: <c a>: | gis: a: | gis: a: | gis8 r r r4 r8 |
+	<d' h> r r r4 r8 | q r r r4 r8 | q r r r4 r8 | q r r r4 r8 | R2.*4 |
 %% 73
-	r4 r8 d-"pizz."	r r | c4.:-"arco" e: | d: h: | c4.: e: | d: h: |
-	c4.: cis4.: | a2.: | 
+	r4 r8 q-"pizz."	r r | <c a>4.:-"arco" <e a,>: | <d a>: <h a>: | <c a>4.: <e a,>: | <d a>: <h a>: |
+	<c a>4.: <cis a>4.: | <a f>2.: | 
 %% 80	
-	a2.: | h2.: | a: | a4.:-"cresc." h: | g2.: | a:\sf | R*5 |
+	q2.: | <h e,>2.: | <a c,>: | <a d,>4.:-"cresc." <h d,>: | <g e>2.: | <a f>:\sf | R2.*5 |
 %% 91
-	b: | a4.: h!: | a8 r r r4 r8 | R2.*5 | b:\pp | 
+	<b f>2.: | <a e>4.: <h! e,>: | <a e>8 r r r4 r8 | R2.*5 | <b f>2.:\pp | 
 %% 100	
-	b4.:\< \!a:\> | \!b2.: | b4.: a: | b2.:-"cresc." | gis : | 
-	a4.: b:-"cresc." | a: gis: | a: b:-"cresc." | a: gis: |
+	q4.:\<  <a f>:\!\> |  <b f>2.\!: | q4.: <a f>: | <b f>2.:-"cresc." | gis : | 
+	<a e>4.: <b f>:-"cresc." | <a e>: <gis e>: | <a e>: <b f>:-"cresc." | <a e>: <gis e>: |
 	g!:\f f: | 
 %% 110	
-	a: gis: | 
-	a2.:\p-"cresc."\< | a: | \!a:\f\> | a: | \!a:\p | a: | e: | gis: | 
+	<a e>: <gis e>: | 
+	a2.:\p-"cresc."\< | a: |  a:\!\f\> | a: |  <a e>:\!\p | q: | e: | <gis e>: | 
 	a:\p-"cresc."\< | 
 %% 120	
-	a: | \!a:\f\> | a: | \!a:\p 
-	| a8 r r a r r | r4 r8 a r r | 
-	r4 r8 gis r r | a r r r4 r8 | r4 r8 f'4-"pizz."  r8 | e4  r8 r4 r8 |
+	a: |  a:\!\f\> | a: | <a e>:\!\p |
+	q8 r r q r r | r4 r8 q r r | 
+	r4 r8 <gis e> r r | <a e> r r r4 r8 | r4 r8 <f' d>4-"pizz."  r8 | <e c>4  r8 r4 r8 |
 %% 130
-	r4 r8 d4-"dim." r8 | c4 r8 r4 r8 | r2. | r4 r8 gis4 r8 | a4 r8 f4 r8 |
-	e4 r8 r4 r8 | R2.*5 | c8 r r r4 r8 |
+	r4 r8 <d h>4-"dim." r8 | c4 r8 r4 r8 | r2. | r4 r8 gis4 r8 | a4 r8 <f d>4 r8 |
+	<e c>4 r8 r4 r8 | R2.*5 | c8 r r r4 r8 |
 }
 
-violaC = \notes \relative c' {
-	\skip 2.*45; | c2.:16 | c: | b: | b: | 
-%% 50	
-	b: | h!: | a: | a: | \skip 2.*2; | gis: | a: | gis: | a: |
-%% 60
-	gis4.: a: | gis: a: | \skip 2.*3; | h8 s4 s4. | h8 s4 s4. | 
-	h8 s4 s4. | h8 s4 s4. | \skip 2.*4; | s4. h8 s4 | 
-	a4.: a: | a: a: |
-	a: a: | a: a: | a: a: |
-	f2.: | f2.: | e: | c2.: | d4.: d: |
-	e2.: | f: | \skip 2.*5; | f2.: | e4.: e: | e8 s4 s4. | \skip 2.*5; |
-	f2.: | f4.: f: | f2.: | f4.: f: | f2.: | s | e4.: f: | e: e: | e: f:|
-	e: e: | s2. | e4.: e: | \skip 2.*4; | e2.: | e: | s | e: |
-	s | 
-%%120	
-	s | s | s | e: | 
-        e8 s4 e8 s4 | s4. e8 s4 | 
-	s4. e8 s4 | e8 s4 s4. | s4. d'4  s8 | c4 s8 s4. |
-	s h4 s8 | \skip 2.*3; | s4. d,4 s8 | c4 s8 s4. |
-}	
-
-violaStaff = \context Staff = viola <
-	\property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = #"Viola"
-	\property Staff.instr = #"Vla."
-	\clef "alto";
-	\notes< 
+violaStaff = \new Staff = "viola" <<
+	\set Staff.midiInstrument = #"viola"
+	\set Staff.instrumentName = #"Viola"
+	\set Staff.shortInstrumentName = #"Vla."
+	\clef "alto"
+	<< 
 		\global
-		\context Voice=violai
-			\violaB
-		\context Voice=violai
-			\violaC
-	>
->
+		\viola
+	>>
+>>

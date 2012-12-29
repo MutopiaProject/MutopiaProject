@@ -1,15 +1,20 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "3-shared.ly"
 
-IIIVlnI = \notes \relative c'' {
+IIIVlnI =  \relative c'' {
   \clef "treble"
   \key f\major
   \time 3/8
-  \property Score.skipBars = ##t
+  \set Score.skipBars = ##t
 
   % Triplets are in groups of 3.
-  \property Voice.tupletSpannerDuration = #(make-moment 1 8)
-  \property Voice.autoBeamSettings \override #'(end 1 24 * *) = #(make-moment 1 8)
+  \set tupletSpannerDuration = #(ly:make-moment 1 8)
+  \set Timing.beamExceptions = #'((end . (
+    ((1 . 8) . (3))
+    ((1 . 16) . (6))
+    ((1 . 24) . (3 3 3))
+    ((1 . 32) . (12))
+  )))
 
   %1 page 32
   \IIISharedA \IIISharedB \IIISharedC \IIISharedD \IIISharedE \IIISharedF

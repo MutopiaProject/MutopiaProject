@@ -1,4 +1,4 @@
-\version "2.10.25"      %Gossec - Symphonie si bémol
+\version "2.16.0"      %Gossec - Symphonie si bÃ©mol
                         %Alto - 3e mvt  
 \relative c'{
 \clef alto
@@ -149,7 +149,7 @@ f ees d
 c r r
 f,4. ~
 f ~
-f ~
+f
 bes8 bes bes
 g g g
 f ees ees

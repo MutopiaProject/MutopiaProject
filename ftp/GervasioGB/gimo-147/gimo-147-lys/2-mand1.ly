@@ -1,11 +1,9 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIMandI = \notes \relative c' {
+IIMandI =  \relative c' {
   \clef "treble"
   \key es\major
   \time 2/4
-
-  \property Staff.autoBeamSettings \override #'(end 1 8 * *) = #(make-moment 1 2)
 
   \repeat "volta" 2 {
   es16 es es es g g g g |
@@ -24,7 +22,7 @@ IIMandI = \notes \relative c' {
   d, d d d f f f f |
   %12
   d d d d f f f f |
-  <es2 g,> |
+  <es g,>2 |
   bes'8 g es bes' |
   c as es c' |
   %16
@@ -35,7 +33,7 @@ IIMandI = \notes \relative c' {
   %20
   bes g es bes' |
   as f d bes |
-  <es2 g,>
+  <es g,>2
   }
 
   \repeat "volta" 2 {
@@ -48,21 +46,21 @@ IIMandI = \notes \relative c' {
   %28
   g bes, g' bes |
   as f d bes |
-  <es4 g,> es'16 es es es |
+  <es g,>4 es'16 es es es |
   c c c c as as as as |
   %32
   g g g g bes bes bes bes |
   d, d d d f f f f |
   es es es es es8. es16 |
-  [es8 es es es] |
+   es8[ es es es] |
   %36
-  <es4 g,> es'16 es es es |
+  <es g,>4 es'16 es es es |
   c c c c as as as as |
   g g g g bes bes bes bes |
   d, d d d f f f f |
   %40
   es es es es es8. es16 |
   es8 es es es |
-  <es2 g,> \bar "|."
+  <es g,>2 \bar "|."
   }
 }

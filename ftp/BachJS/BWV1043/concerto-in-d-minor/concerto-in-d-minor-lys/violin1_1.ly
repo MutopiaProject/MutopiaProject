@@ -1,6 +1,7 @@
+\version "2.16.0"
 %Violin 1, 1st movement
 
-violin1_1 = \notes \relative c' {
+violinBB =  \relative c' {
 
     r1 |
     r1 |
@@ -9,7 +10,7 @@ violin1_1 = \notes \relative c' {
     a'16 b c d e8 a gis e b d |
     cis a g'!4. fis16 e fis8 d |
     b d f a, gis e' a, d |
-    c4 b-\trill a16 gis a b c d e f |
+    c4 b\trill a16 gis a b c d e f |
     %9
     g8 g, g'4 ~ g8 e a, g' |
     f16 e d e f e d g a2 ~ |
@@ -24,8 +25,8 @@ violin1_1 = \notes \relative c' {
     d e f g a8 d cis a e g |
     fis d c'!4. b16 a b8 g |
     e g bes! d, cis a' d, g |
-    f4 e-\trill d r |
-    d8-\p r cis r d r r4 |
+    f4 e\trill d r |
+    d8\p r cis r d r r4 |
     d8 r d r d r r4 |
     r1 |
     r |
@@ -33,7 +34,7 @@ violin1_1 = \notes \relative c' {
     g8 r fis r g r r4 |
     r1 |
     r |
-    d,16-\f e f g a8 d b g r4 |
+    d,16\f e f g a8 d b g r4 |
     c,16 d e f g8 c a f r4 |
     r1 |
     r |
@@ -41,7 +42,7 @@ violin1_1 = \notes \relative c' {
     e,16 fis gis a b8 e cis a r4 |
     r1 |
     r |
-    a8-\p r gis r a r r4 |
+    a8\p r gis r a r r4 |
     a8 r a r a r r4 |
     r1 |
     r |
@@ -50,21 +51,21 @@ violin1_1 = \notes \relative c' {
     r1 |
     r |
     %47
-    a16-\f b c d e8 a gis e b d |
+    a16\f b c d e8 a gis e b d |
     cis a g'!4 ~ g8 fis16 e fis8 d |
     b d f! a, gis e' a, d |
-    c4 b-\trill a r |
-    e1-\p ~ |
+    c4 b\trill a r |
+    e1\p ~ |
     e2. r4 |
     a,1 ~ |
-    a2. r8 d-\f |
+    a2. r8 d\f |
     e16 d e f e fis g e fis e fis g fis g a fis |
     g8 d' r bes' a16 g fis e fis d e fis |
     g2 ~ g16 f! g a g bes a g |
     a2 ~ a16 g fis e d c bes a |
     %58
     bes8. c16 a8. g16 g4 r |
-    d1-\p ~ |
+    d1\p ~ |
     d2. r4 |
     g,1 ~ |
     g2. r4 |
@@ -90,10 +91,10 @@ violin1_1 = \notes \relative c' {
     g8 r fis r g r r4 |
     r1 |
     r |
-    d16-\f e f g a8 d cis a e g |
+    d16\f e f g a8 d cis a e g |
     fis d c'!4 ~ c8 b16 a b8 g |
     e g bes! d, cis a' d, g |
     f4 e d2^\fermata |
-    \bar "|.";
+    \bar "|."
 }
 

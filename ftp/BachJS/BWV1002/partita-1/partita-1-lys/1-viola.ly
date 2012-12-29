@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "1.ly"
 
-iViolaGlobal =  \notes {
+iViolaGlobal =   {
   \clef "alto"
   \key g\major
   \time 4/4
@@ -11,7 +11,7 @@ iViolaGlobal =  \notes {
     s16 | s1*11 |
   }
   \alternative {
-    { \partial 1 s1 }
+    { s1 }
     { s1 }
   }
 
@@ -19,24 +19,29 @@ iViolaGlobal =  \notes {
     s1*11
   }
   \alternative {
-    { \partial 1 s1 }
+    { s1 }
     { s16*15 \bar "|." }
   }
 }
 
-iViolaScripts =  \notes{
+iViolaScripts =  {
 }
 
-iViolaStaff =  \context Staff <
-  \notes \transpose f \iNotes
+iViolaStaff =  \context Staff <<
+   \transpose c' f \iNotes
   \iViolaGlobal
   \iViolaScripts
->
+>>
 
 \score {
   \iViolaStaff
-  \paper { }
-  \midi { \tempo 4 = 45 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 45
+    }
+
+
   \header {
     piece = "Allemanda"
     opus = ""

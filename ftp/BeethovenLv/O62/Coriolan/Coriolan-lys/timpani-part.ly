@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Timpani"
 
@@ -7,9 +6,9 @@ instrument = "Timpani"
 \include "global.ly"
 \include "timpani.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\timpaniStaff 
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
-

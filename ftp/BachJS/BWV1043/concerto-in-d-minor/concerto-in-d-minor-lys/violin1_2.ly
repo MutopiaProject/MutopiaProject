@@ -1,6 +1,7 @@
+\version "2.16.0"
 %Violin 1, 2nd movement
 
-violin1_2 = \notes \relative c' {
+violinBC =  \relative c' {
 
     a'4 r8 bes4 r8 c4 r8 d4 r8 |
     e8 c f ~ f d e f4 c8 c4 b8 |
@@ -48,10 +49,10 @@ violin1_2 = \notes \relative c' {
     g'4 g8 f4 d8 c4 r8 r r c ~ |
     c bes r r r bes ~ bes a r r r a ~ |
     a g r r r g f4 r8 r4. |
-    r2. r4. r8 r c''-\p ~ |
+    r2. r4. r8 r c''\p ~ |
     c bes r r r bes ~ bes a r r r a ~ |
-    a g r r r g ~ g f bes,-\f a bes g |
+    a g r r r g ~ g f bes,\f a bes g |
     f4. r r2. |
-    \bar "|.";
+    \bar "|."
 }
 

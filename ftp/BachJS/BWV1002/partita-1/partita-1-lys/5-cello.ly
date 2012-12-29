@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "5.ly"
 
-vCelloGlobal =  \notes {
+vCelloGlobal =   {
   \clef "bass"
   \key g\major
   \time 3/4
@@ -10,7 +10,7 @@ vCelloGlobal =  \notes {
     s2.*7 |
   }
   \alternative {
-    { \partial 2. s2. }
+    { s2. }
     { s2. }
   }
   \repeat "volta" 2 {
@@ -18,19 +18,24 @@ vCelloGlobal =  \notes {
   }
 }
 
-vCelloScripts =  \notes{
+vCelloScripts =  {
 }
 
-vCelloStaff =  \context Staff <
-  \notes \transpose f, \vStaff
+vCelloStaff =  \context Staff <<
+   \transpose c' f, \vStaff
   \vCelloGlobal
   \vCelloScripts
->
+>>
 
 \score {
   \vCelloStaff
-  \paper { }
-  \midi { \tempo 4 = 55 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 55
+    }
+
+
   \header {
     piece = "Sarabande"
     opus = ""

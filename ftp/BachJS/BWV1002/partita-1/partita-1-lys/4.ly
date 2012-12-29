@@ -1,8 +1,8 @@
 % Movement 4, Double
 
-\version "1.4.0"
+\version "2.16.0"
 
-ivA = \notes { 
+ivA =  { 
   b'16 |
   % 1
   b'8  a'16  g'16  fis'16  e'16  d'16  cis'16  b16  d'16  
@@ -99,9 +99,9 @@ ivA = \notes {
   cis''16  d''16  fis'16  b'16  d''16  |
   % 32
   cis''16  b'16  ais'16  gis'16  fis'16  ais'16  cis''16  
-  eis''16  \property Voice.noAutoBeaming=##t fis''8.
+  eis''16  \set autoBeaming = ##f fis''8.
 
-  \property Voice.noAutoBeaming=##f cis''16  |
+  \set autoBeaming = ##t cis''16  |
   % 33
   cis''16  fis'16  gis'16  ais'16  b'16  cis''16  d''16  
   e''16  fis''16  gis''16  ais''16  fis''16  |
@@ -223,20 +223,20 @@ ivA = \notes {
   b'16  g'16  b'16  d''16  fis''16  e''16  d''16  cis''16  
   b'16  a'!16  gis'16  fis'16  |
   % 73
-  e'16(  fis'16  )e'16  d''16  b''16(  a''16  )b''16  d''16
-  e'16(  fis'16  )e'16  d''16  |
+  e'16(  fis'16   e'16)  d''16  b''16(  a''16   b''16)  d''16
+  e'16(  fis'16   e'16)  d''16  |
   % 74
   cis''16  a'16  cis''16  e''16  g''16  fis''16  e''16  d''16 
   cis''16  b'16  ais'16  gis'16  |
   % 75
-  fis'16(  g'!16 )fis'16  e''16  cis'''16(  b''16  )cis'''16  e''16
-  fis'16(  g'16  )fis'16  e''16  |
+  fis'16(  g'!16  fis'16)  e''16  cis'''16(  b''16   cis'''16)  e''16
+  fis'16(  g'16   fis'16)  e''16  |
   % 76
   dis''16  b'16  dis''16  fis''16  a''16  g''16  fis''16  
   e''16  dis''16  c'''16  b''16  a''16  |
   % 77
-  g''16(  )fis''16  eis''16(  )fis''16  cis''16(  )d''16  ais'16(  
-  )b'16  eis'16(  )fis'16  ais'16(  )b'16  |
+  g''16(   fis''16)  eis''16(   fis''16)  cis''16(   d''16)  ais'16(  
+   b'16)  eis'16(   fis'16)  ais'16(   b'16)  |
   % 78
   e''!16  ais''16  cis'''16  e''16  d''16  b''16  cis''16  
   b'16  fis'16  cis''16  b''16  ais''16  |
@@ -248,6 +248,6 @@ ivA = \notes {
   b8.
 } 
 
-ivStaff = \context Staff <
+ivStaff = \context Staff <<
   \context Voice=A \ivA
->
+>>

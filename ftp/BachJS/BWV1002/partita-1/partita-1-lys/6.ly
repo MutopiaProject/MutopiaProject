@@ -1,7 +1,7 @@
 
-\version "1.4.0"
+\version "2.16.0"
 
-viA = \notes  { 
+viA =   { 
   b'8  d''8  fis''8  g''8  e''8  d''8  cis''8  a''8  g''8  |
   % 2
   fis''8  d''8  cis''8  d''8  a'8  fis'8  d'8  d''8  cis''8  |
@@ -72,6 +72,6 @@ viA = \notes  {
   b8  d'8  fis'8  b'8  d''8  fis''8  b''4.
 } 
 
-viStaff = \context Staff <
+viStaff = \context Staff <<
   \context Voice=A \viA
->
+>>

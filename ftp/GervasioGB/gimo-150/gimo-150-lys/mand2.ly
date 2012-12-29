@@ -1,8 +1,8 @@
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = "Mandolin II"
 \include "header.ly"
-\include "paper16.ly"
+#(set-global-staff-size 16)
 \include "1-mand2.ly"
 \include "2-mand2.ly"
 \include "3-mand2.ly"

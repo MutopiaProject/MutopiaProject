@@ -1,11 +1,9 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIMandII = \notes \relative c' {
+IIMandII =  \relative c' {
   \clef "treble"
   \key es\major
   \time 2/4
-
-  \property Staff.autoBeamSettings \override #'(end 1 8 * *) = #(make-moment 1 2)
 
   \repeat "volta" 2 {
   g16 g g g bes bes bes bes |
@@ -23,7 +21,7 @@ IIMandII = \notes \relative c' {
   bes bes bes bes d d d d |
   %12
   bes bes bes bes d d d d |
-  <es2 g,> |
+  <es g,>2 |
   g,16 bes g bes g bes g bes |
   as c as c as c as c |
   %16
@@ -34,7 +32,7 @@ IIMandII = \notes \relative c' {
   %20
   g bes g bes g bes g bes |
   g as bes g d' es f d |
-  <es2 g,> |
+  <es g,>2 |
   }
 
   \repeat "volta" 2 {
@@ -47,20 +45,20 @@ IIMandII = \notes \relative c' {
   %28
   es g es g es g es g |
   bes, d f as f d f d |
-  <es4 bes> es'16 es es es |
+  <es bes>4 es'16 es es es |
   c c c c as as as as |
   %32
   g g g g es es es es |
   bes bes bes bes d d d d |
-  es4 <{g8. g16 | [g8 g g g]} \\ {bes,4 | bes2}> |
+  es4 <<{g8. g16 |  g8[ g g g]} \\ {bes,4 | bes2}>> |
   %36
-  <es4 g,> es'16 es es es |
+  <es g,>4 es'16 es es es |
   c c c c as as as as |
   g g g g es es es es |
   bes bes bes bes d d d d |
-  %40 Note: the bes,4 is connected to the g16 in 148, so the bar looks like "es8 es es es g8. <g16 bes,>"
-  es es es es <{g8. g16} \\ bes,4> |
-  <{g8 g g g} \\ bes,2> |
-  <es2 g,> \bar "|."
+  %40 Note: the bes,4 is connected to the g16 in 148, so the bar looks like "es8 es es es g8. <g bes,>16"
+  es es es es <<{g8. g16} \\ bes,4>> |
+  <<{g'8 g g g} \\ bes,2>> |
+  <es g,>2 \bar "|."
   }
 }

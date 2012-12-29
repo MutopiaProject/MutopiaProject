@@ -1,4 +1,4 @@
-\version "2.10.25"      %Gossec - Symphonie si bémol
+\version "2.16.0"      %Gossec - Symphonie si bÃ©mol
                         %Violon1 - 3e mvt  
 \relative c''{
 \clef treble
@@ -45,7 +45,7 @@ e-. e-. e-.
 d-. d-. d-.
 c-. c-. c-.
 c( bes a)
-g16 f e d) c8
+g16( f e d) c8
 <c' c'>4.:32
 \repeat unfold 5 {<c c'>:}
 %

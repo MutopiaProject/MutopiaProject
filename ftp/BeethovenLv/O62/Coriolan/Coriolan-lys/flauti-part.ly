@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Flute"
 
@@ -7,9 +6,9 @@ instrument = "Flute"
 \include "global.ly"
 \include "flauti.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\flautiStaff
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
-

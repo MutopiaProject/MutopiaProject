@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "1.ly"
 
-iCelloGlobal =  \notes {
+iCelloGlobal =   {
   \clef "bass"
   \key g\major
   \time 4/4
@@ -11,7 +11,7 @@ iCelloGlobal =  \notes {
     s16 | s1*11 |
   }
   \alternative {
-    { \partial 1 s1 }
+    { s1 }
     { s1 }
   }
 
@@ -19,27 +19,31 @@ iCelloGlobal =  \notes {
     s1*11
   }
   \alternative {
-    { \partial 1 s1 }
+    { s1 }
     { s16*15 \bar "|." }
   }
 }
 
-iCelloScripts =  \notes{
+iCelloScripts =  {
 }
 
-iCelloStaff =  \context Staff <
-  \notes \transpose f, \iNotes
+iCelloStaff =  \context Staff <<
+   \transpose c' f, \iNotes
   \iCelloGlobal
   \iCelloScripts
->
+>>
 
 \score {
   \iCelloStaff
-  \paper { }
-  \midi { \tempo 4 = 32 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 32
+    }
+
+
   \header {
     piece = "Allemanda"
     opus = ""
   }
 }
-

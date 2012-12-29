@@ -1,7 +1,7 @@
 
-\version "1.3.120";
+\version "2.16.0"
 
-flautoII =  \notes \relative c {
+flautoII =   \relative c {
 	R1 *2|
 	as'''4-.\ff r r2|
 	R1 *3|
@@ -18,7 +18,7 @@ flautoII =  \notes \relative c {
 	r4 c r2|
 	R1*6|
 	c1 ~|
-	c4( es, des)c|
+	c4( es, des c)|
 	g'4. r8 g4. r8|
 	d4. r8 es4. r8|
 	c'4. r8 c4. r8|
@@ -35,18 +35,18 @@ flautoII =  \notes \relative c {
 	bes4 bes2.~|
 	bes4 r r2|
 	R1*33|
-	a2.\ff()bes4|
-	c(bes c)bes|
-	a2.()bes4|
-	c(bes c)bes|
-	b2.()c4|
-	f,(es f)es|
-	b'2.()c4|
-	f,(es f)es|
-	r2 c'4\sf()bes|
-	r2 c4\sf()bes|
-	r2 c4\sf()bes|
-	r2 c4\sf()bes|
+	a2.\ff( bes4)|
+	c(bes c bes)|
+	a2.( bes4)|
+	c(bes c bes)|
+	b2.( c4)|
+	f,(es f es)|
+	b'2.( c4)|
+	f,(es f es)|
+	r2 c'4\sf( bes)|
+	r2 c4\sf( bes)|
+	r2 c4\sf( bes)|
+	r2 c4\sf( bes)|
 	R1|
 	r2 g2|
 	as2 c,~|
@@ -89,17 +89,17 @@ flautoII =  \notes \relative c {
 	des2\sf r|
 	R1*35|
 	e,1(|
-	)d|
+	 d)|
 	c4\f r r2|
 	R1*9|
-	d2.\ff()es4|
-	b(c b)c|
-	d2.\ff()es4|
-	b(c b)c|
-	g'2.()as4|
-	bes( as bes)as|
-	g2.()as4|
-	bes( as bes)as|
+	d2.\ff( es4)|
+	b(c b c)|
+	d2.\ff( es4)|
+	b(c b c)|
+	g'2.( as4)|
+	bes( as bes as)|
+	g2.( as4)|
+	bes( as bes as)|
 	% 220 a deux?|
 	R1*5|
 	r2 a|
@@ -123,20 +123,18 @@ flautoII =  \notes \relative c {
 	bes\f~|
 	bes\p|
 	c1\f~|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	c\p\<~|
+	c\p\cresc~|
 	c~|
 	c~|
 	c~|
-	\!c\ff~|
+	 c\!\ff~|
 	c~|
 	c~|
 	c~|
 	c|
 	d|
 	%a deux urg: copied flauto-1(270,277)|
-	es4.-"sempre"\ff b8 c4. as8|
+	es4.\ffsempre b8 c4. as8|
 	g4. as8 g4. f'8|
 	es4. b8 c4. as8|
 	g4. as8 g4. f'8|
@@ -158,11 +156,9 @@ flautoII =  \notes \relative c {
 	R1|
 	c4-. g'-. r2|
 	as4-. e-. r2|
-	\property Voice.decrescendoText = #'(lines " " "dim." " ")
-	\property Voice.decrescendoSpanner = #'dashed-line
-	f4\> r f r|
+	f4\dim r f r|
 	R1|
-	\!es4\p r r2|
+	 es4\!\p r r2|
 	R1|
 	b4 r r2|
 	R1|

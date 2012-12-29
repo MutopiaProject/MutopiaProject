@@ -1,4 +1,4 @@
-\version "2.10.25"      %Gossec - Symphonie si bémol
+\version "2.16.0"      %Gossec - Symphonie si bÃ©mol
                         %Violon2 - 2e mvt  
 \relative c''{
 \clef treble
@@ -29,7 +29,7 @@ ees-.( ees-. ees-. ees-. ees-. ees-.) ees-.( ees-. ees-. ees-. c'-. c-.)
 f,( g f g f ees) d-.( d-. d-. d-. d-. d-.)
 ees-.( ees-. ees-. ees-. ees-. ees-.) ees-.( ees-. ees-. ees-. c'-. c-.)
 f,4 f16 d b( c b c d ees)
-e( f fis g a bes) fis( g d ees b c)     % SIEBER: 10e double-croche, e bécarre
+e( f fis g a bes) fis( g d ees b c)     % SIEBER: 10e double-croche, e bÃ©carre
 d-.( d-. d-. d-. d-. d-.) ees-.( ees-. ees-. ees-. ees-. ees-.)
 d( bes d bes d bes) r bes( d bes d bes)
 r bes( d bes d bes) r bes( d bes d bes)

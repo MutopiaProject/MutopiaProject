@@ -1,12 +1,13 @@
-\version "1.6.9"
+\version "2.16.0"
 
-IVlnI = \notes\relative c''' {
+IVlnI = \relative c''' {
   \key f \major
   \time 2/4 
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
-  \property  Staff.autoBeamSettings \override
-    #'(end 1 8 * *) = #(make-moment 1 2)
+  \set Timing.beamExceptions = #'(
+    (end . (
+      ((1 . 8) . (4))
+      ((1 . 16) . (4 4))
+    )))
 
   \partial 8 a8 |
   d,8 a d16. e32 f16. g32 |
@@ -15,25 +16,25 @@ IVlnI = \notes\relative c''' {
   % 3
   g a, e16. f32 g16. a32 |
   % 4
-  f8 d r8 a''16( )f |
+  f8 d r8 a''16(  f) |
   % 5
-  e8 a r8 a16( )cis, |
+  e8 a r8 a16(  cis,) |
   % 6
-  d8 bes' r8 g16( )bes |
+  d8 bes' r8 g16(  bes) |
   % 7
   cis,8 a r8 a' |
   % 8
-  f8.(^\trill e32 )f f8.(^\trill e32 )f |
+  f8.(^\trill e32  f) f8.(^\trill e32  f) |
   % 9
   g8 c, r8 bes' |
   % 10
-  g8.(^\trill f32 )g g8.(^\trill f32 )g |
+  g8.(^\trill f32  g) g8.(^\trill f32  g) |
   % 11
   a8 a a a |
   % 12
-  c32( )bes c( )bes a16 r c32( )bes c( )bes a16 r |
+  c32(  bes) c(  bes) a16 r c32(  bes) c(  bes) a16 r |
   % 13
-  c32( )bes c( )bes a16 r c32( )bes c( )bes a16 r |
+  c32(  bes) c(  bes) a16 r c32(  bes) c(  bes) a16 r |
   % 14
   r16 d, c bes a g f e |
   % 15
@@ -41,13 +42,13 @@ IVlnI = \notes\relative c''' {
   % 16
   f4 r8 a'16 g |
   % 17
-  g4( )fis8 e16 d |
+  g4(  fis8) e16 d |
   % 18
   e8 fis g a |
   % 19
   bes g r8 g16 f |
   % 20
-  f4( )e8 d16 c |
+  f4(  e8) d16 c |
   % 21
   d8 e f g |
   % 22
@@ -59,13 +60,13 @@ IVlnI = \notes\relative c''' {
   % 25
   d g, f gis, |
   % 26
-  a g'' \times 2/3 {f16( g )a} cis,8 |
+  a g'' \times 2/3 {f16( g  a)} cis,8 |
   % 27
-  d g \times 2/3 {f16( g )a} cis,,8 |
+  d g \times 2/3 {f16( g  a)} cis,,8 |
   % 28
-  d g' \times 2/3 {f16( g )a} cis,8 |
+  d g' \times 2/3 {f16( g  a)} cis,8 |
   % 29
-  d g \times 2/3 {f16( g )a} cis,,8 |
+  d g \times 2/3 {f16( g  a)} cis,,8 |
   % 30
   d4 r8 d8\p |
   % 31
@@ -115,19 +116,19 @@ IVlnI = \notes\relative c''' {
   % 53
   f'\f c f16. g32 a16. bes32 |
   % 54
-  [c8 c,] [c, d] |
+   c8[ c,]  c,[ d] |
   % 55
   bes c' g16. a32 bes16. c32 |
   % 56
   a8 f r8 a'16 g |
   % 57
-  g4( )fis8 e16 d |
+  g4(  fis8) e16 d |
   % 58
   e8 fis g a |
   % 59
   bes g r8 g16 f |
   % 60
-  f4( )e8 d16 c |
+  f4(  e8) d16 c |
   % 61
   d8 e f g |
   % 62
@@ -137,13 +138,13 @@ IVlnI = \notes\relative c''' {
   % 64
   bes f'' d bes, |
   % 65
-  a bes'' \times 2/3 {a16( bes )c} e,8 |
+  a bes'' \times 2/3 {a16( bes  c)} e,8 |
   % 66
-  f bes \times 2/3 {a16( bes )c} e,,8 |
+  f bes \times 2/3 {a16( bes  c)} e,,8 |
   % 67
-  f bes' \times 2/3 {a16( bes )c} e,8 |
+  f bes' \times 2/3 {a16( bes  c)} e,8 |
   % 68
-  f bes \times 2/3 {a16( bes )c} e,,8 |
+  f bes \times 2/3 {a16( bes  c)} e,,8 |
   % 69
   f\p f f f |
   % 70
@@ -211,13 +212,13 @@ IVlnI = \notes\relative c''' {
   % 101
   d g, f gis, |
   % 102
-  a g'' \times 2/3 {f16( g )a} cis,8 |
+  a g'' \times 2/3 {f16( g  a)} cis,8 |
   % 103
-  d g \times 2/3 {f16( g )a} cis,,8 |
+  d g \times 2/3 {f16( g  a)} cis,,8 |
   % 104
-  d g' \times 2/3 {f16( g )a} cis,8 |
+  d g' \times 2/3 {f16( g  a)} cis,8 |
   % 105
-  d g \times 2/3 {f16( g )a} cis,,8 |
+  d g \times 2/3 {f16( g  a)} cis,,8 |
   % 106
   d4 r4 |
   % 107
@@ -311,25 +312,25 @@ IVlnI = \notes\relative c''' {
   % 155
   g a, e16. f32 g16. a32 |
   % 156
-  f8 d r8 a''16( )f |
+  f8 d r8 a''16(  f) |
   % 157
-  e8 a r8 a16( )cis, |
+  e8 a r8 a16(  cis,) |
   % 158
-  d8 bes' r8 g16( )bes |
+  d8 bes' r8 g16(  bes) |
   % 159
   cis,8 a r8 a' |
   % 160
-  f8.(^\trill e32 )f f8.(^\trill e32 )f |
+  f8.(^\trill e32  f) f8.(^\trill e32  f) |
   % 161
   g8 c, r8 bes' |
   % 162
-  g8.(^\trill f32 )g g8.(^\trill f32 )g |
+  g8.(^\trill f32  g) g8.(^\trill f32  g) |
   % 163
   a8 a a a |
   % 164
-  c32( )bes c( )bes a16 r c32( )bes c( )bes a16 r |
+  c32(  bes) c(  bes) a16 r c32(  bes) c(  bes) a16 r |
   % 165
-  c32( )bes c( )bes a16 r c32( )bes c( )bes a16 r |
+  c32(  bes) c(  bes) a16 r c32(  bes) c(  bes) a16 r |
   % 166
   r16 d, c bes a g f e |
   % 167
@@ -337,13 +338,13 @@ IVlnI = \notes\relative c''' {
   % 168
   f4 r8 a'16 g |
   % 169
-  g4( )fis8 e16 d |
+  g4(  fis8) e16 d |
   % 170
   e8 fis g a |
   % 171
   bes g r8 g16 f |
   % 172
-  f4( )e8 d16 c |
+  f4(  e8) d16 c |
   % 173
   d8 e f g |
   % 174
@@ -355,13 +356,13 @@ IVlnI = \notes\relative c''' {
   % 177
   d g, f gis, |
   % 178
-  a g'' \times 2/3 {f16( g )a} cis,8 |
+  a g'' \times 2/3 {f16( g  a)} cis,8 |
   % 179
-  d g \times 2/3 {f16( g )a} cis,,8 |
+  d g \times 2/3 {f16( g  a)} cis,,8 |
   % 180
-  d g' \times 2/3 {f16( g )a} cis,8 |
+  d g' \times 2/3 {f16( g  a)} cis,8 |
   % 181
-  d g \times 2/3 {f16( g )a} cis,,8 |
+  d g \times 2/3 {f16( g  a)} cis,,8 |
   % 182
   d4^\fermata r \bar "|."
 }

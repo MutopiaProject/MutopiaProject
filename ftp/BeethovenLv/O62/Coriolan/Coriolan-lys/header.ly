@@ -1,32 +1,31 @@
-% Ugh, we need to override some LaTeX titling stuff
+\version "2.16.0"
 \header {
-  title =	"Ouvert�re\\vrule width0pt height 0pt depth 1ex";
-  subtitle =	"\\normalsize Zu Heinrich Joseph v. Collins Trauerspiel\\vrule width0pt height 0pt depth 1ex";
-  subsubtitle =	"\\Large\\bf Coriolan";
-  opus =  "Op. 62";
-  piece = "\\hspace*{30mm}\\normalfont\\large Allegro con brio";
-  composer = 	 "Ludwig van Beethoven (1770-1827)";
-  enteredby = 	 "JCN";
-  instrument = \instrument;
+  title =	"Ouvertüre"
+  subtitle =	"Zu Heinrich Joseph v. Collins Trauerspiel"
+  subsubtitle =	"Coriolan"
+  opus =  "Op. 62"
+  composer = 	 "Ludwig van Beethoven (1770-1827)"
+  enteredby = 	 "JCN"
+  instrument = \instrument
 
   % mutopia headers.
-  mutopiatitle = "Ouverture Coriolan";
-  mutopiacomposer = "L.v.Beethoven (1770-1827)";
-  mutopiaopus = "O62";
-  mutopiainstrument = \instrument;
-  date = "1807";
+  mutopiatitle = "Ouverture Coriolan"
+  mutopiacomposer = "BeethovenLv"
+  mutopiaopus = "O62"
+  mutopiainstrument = \instrument
+  date = "1807"
 
-  source = "Six Great Overtuers in Full Score, Ludwig van Beethoven; Dover
+  source = "Six Great Overtuers in Full Score, Ludwig van Beethoven Dover
    Publications INC, New York (1985).  Unabridged republication of
-   Beethoven's Werke, Ouverturen fuer Orchester:  No. 18-21, 26-27;
-   Breitkopf and Haertel, Leipzig, n.d. [1862-1865].";
+   Beethoven's Werke, Ouverturen fuer Orchester:  No. 18-21, 26-27
+   Breitkopf and Haertel, Leipzig, n.d. [1862-1865]."
 
   %{
 
-  i.  Six Great Overtuers in Full Score, Ludwig van Beethoven; Dover
+  i.  Six Great Overtuers in Full Score, Ludwig van Beethoven Dover
       Publications INC, New York (1985).  Free of copyright and
       copyright marks.  Reprint.  Originally published: Breitkopf and
-      Haertel, n.d. [1862-1865] (Ludwig van Beethoven's Werke; Ser 3)
+      Haertel, n.d. [1862-1865] (Ludwig van Beethoven's Werke Ser 3)
       No. 18-21, 26-27.
       M1004.B4097
       ISBN 0-486-24789-9
@@ -44,7 +43,7 @@
          are modernised to a quarter note, a tie, and an eight note,
          ie:
 
-	     \partial 4; c4.  ->  c4 ~ | c8
+	     \partial 4 c4.  ->  c4 ~ | c8
 
 	 GNU LilyPond 1.3.136 can not handle the old notation.  When
 	 this old notation will be supported, it should be fairly
@@ -68,7 +67,7 @@
 
       2. Accidentals are not repeated within one bar, in
 
-           \key es\major; b2 b
+           \key es\major b2 b
 
 	 only the first b gets an accidental.  Note that not in all
 	 cases these accidentals are consistently repeated, however,
@@ -77,12 +76,12 @@
 
       3. Reminder accidentals are not printed, in
 
-           \key es\major; b1 | bes
+           \key es\major b1 | bes
 
 	 no flat is printed with the bes.
 
-      4. Stem.default-neutral-direction and
-         Beam.default-neutral-direction are 1 (up).
+      4. Stem.neutral-direction and
+         Beam.neutral-direction are 1 (up).
 
       5. Beam-dir-algorithm is 'majority.
 
@@ -98,15 +97,15 @@
   Other editions.
     
   ii.  Edition Eulenburg No.626 Coriolan, Overture for Orchestra
-       Op. 62; Ernst Eulenburg LTD, (not dated).  Edited 1936 by
+       Op. 62 Ernst Eulenburg LTD, (not dated).  Edited 1936 by
        dr. Max Unger from and following score autograph and original
        published parts, ie, Stimmen-Drucke N.Simrock Bonn (most
-       probably from 1807) and Industriekontor Vienna (1807).
+       probably from 1807 and) Industriekontor Vienna (1807).
   
-  iii.  Beethoven's Werke -- Ouverturen fuer Orchester; Breitkopf
+  iii.  Beethoven's Werke -- Ouverturen fuer Orchester Breitkopf
         u. Haertel, Leipzig (not dated, but very old and worn).
   
-  iv.  Beethoven Werke II,1 -- Ouverturen und Wellingtons Sieg;
+  iv.  Beethoven Werke II,1 -- Ouverturen und Wellingtons Sieg
        G. Henle Verlag, Muenchen (1974).  Veroeffentlichung des
        Beethovenhauses in Bonn.  Die ausgabe wurde durch die
        Unterstuetzung des Landes Nordrhein-Westfalen ermoeglicht.
@@ -125,11 +124,11 @@
   and Haertel, this is the only score edition to abbreviate (LilyPond
   source notation)
 
-      [es16 es g g] [b b c c]
+       es16[ es g g]  b[ b c c]
   
   using the notation
   
-      [es8:16 g: b: c:]
+       es8:16[ g: b: c:]
 
   editions of individual parts by Breitkopf and Haertel use this
   common practice abbreviation too.
@@ -141,7 +140,7 @@
 
   Edition Beethoven Werke by G. Henle was a new study based upon the
   three main sources, the score autograph, the published parts
-  Stimmen-Drucke N.Simrock Bonn (most probably from 1807) and
+  Stimmen-Drucke N.Simrock Bonn (most probably from 1807 and)
   Industriekontor Vienna (1807).  They reinforce the assumptions made
   by Unger that both published parts were first prints, noting that
   both must have worked from a different copy of the autograph (and
@@ -160,33 +159,28 @@
 
   b. Don't repeat accidentals within the same measure:
   
-       \key es \major; b4 c b! c |   ->   \key es \major; b4 c b c
+       \key es \major b4 c b! c |   ->   \key es \major b4 c b c
 
      We think that also other changes may have been made, see i.b.3
      above.
   
   c. Start slurring from first tied note, not from second:
 
-       c4 ~ c8 ( d ) e   ->   c4 ( ~ c8 d ) e
+       c4 ~ c8 ( d  e)   ->   c4 ( ~ c8 d  e)
 
   From these deviations, the third is the only one unique to this
-  edition, but these are easy to spot and mostly parenthesed; the
+  edition, but these are easy to spot and mostly parenthesed the
   other two deviations are standard modern day music notation practice
   and thus common to all editions.
 
   %}
     
-  style = "Classical";
-  copyright = "Public Domain";
-  maintainer = "Jan Nieuwenhuizen";
-  maintainer_email = "janneke@gnu.org";
-  lastupdated =	 "2007/Oct/14";
-  mutopiapublicdomain = "\\parbox{\hsize}{\\thefooter\\quad\\small
-    \\\\This music is part of the Mutopia project,
-    \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset
-    and placed in the public domain by " + \maintainer +
-    ".\\\\Unrestricted modification and redistribution is permitted
-    and encouraged---copy this music and share it.}";
- tagline = \mutopiapublicdomain;
- footer = "Mutopia-2007/10/14-57";
+  style = "Classical"
+  copyright = "Public Domain"
+  maintainer = "Jan Nieuwenhuizen"
+  maintainerEmail = "janneke@gnu.org"
+  lastupdated =	 "2007/Oct/14"
+ footer = "Mutopia-2007/10/14-57"
+  mutopiapublicdomain = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \mutopiapublicdomain
 }
