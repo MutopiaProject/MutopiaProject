@@ -1,4 +1,4 @@
-﻿\version "2.10.25"       %N°mesure = N°ligne - 10
+\version "2.16.0"       %N°mesure = N°ligne - 10
 
 
 \score {
@@ -36,9 +36,6 @@
    >>
 
 \midi {
-     \context { 
-       \Score
-       tempoWholesPerMinute = #(ly:make-moment 60 2)
-       }
+     \tempo 2 = 60
      }
 }
