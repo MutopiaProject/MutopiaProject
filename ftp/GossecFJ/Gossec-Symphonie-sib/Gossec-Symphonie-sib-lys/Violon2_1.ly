@@ -1,4 +1,4 @@
-﻿\version "2.10.25"      %Gossec - Symphonie si bémol
+\version "2.16.0"      %Gossec - Symphonie si bémol
                         %Violon2 - 1er mvt
 \relative c''{
 \clef treble
@@ -132,8 +132,8 @@ a( c a c a c a c)
 bes8( d bes d bes g bes g)
 a( c a c a c a c)
 bes4\f bes8 bes g4 e
-<<{a,1}\\{\stemUp f'4 f8 f f4 f}>>
-<a, f'>2 r
+<<{f4 f8 f f4 f}\\{a,1}>>
+<a f'>2 r
 \set Score.skipBars = ##t R1 * 5
 %
 %

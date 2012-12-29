@@ -1,11 +1,11 @@
-﻿\version "2.10.25"
+\version "2.16.0"
 
 \paper{ #(define page-breaking ly:page-turn-breaking)
          top-margin = 3.0
          bottom-margin = 3.0
-         before-title-space = 3.0
-         page-top-space = 5.0
-         between-system-padding = 3.0
+         obsolete-before-title-space = 3.0  score-markup-spacing #'basic-distance = #(/ obsolete-before-title-space staff-space)
+         obsolete-page-top-space = 5.0  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)
+         obsolete-between-system-padding = 3.0  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
          oddFooterMarkup = \markup {\tiny {"Gossec - Symphonie n°1 en si bémol "}}
          #(set-global-staff-size 24)  
          first-page-number = 2

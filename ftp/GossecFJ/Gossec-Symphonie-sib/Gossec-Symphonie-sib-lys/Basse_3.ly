@@ -1,4 +1,4 @@
-\version "2.10.25"      %Gossec - Symphonie si bémol
+\version "2.16.0"      %Gossec - Symphonie si bÃ©mol
                         %Basse - 3e mvt  
 \relative c{
 \clef bass
@@ -24,7 +24,7 @@ ees f f,
 bes4 r8
 bes' f d
 bes4 r8
-bes4^\markup{\italic "pizz."}r8     %reprise arco non précisée dans Sieber; en mesure 31 ? (cello seul)
+bes4^\markup{\italic "pizz."}r8     %reprise arco non prÃ©cisÃ©e dans Sieber; en mesure 31 ? (cello seul)
 bes4 r8
 bes4 r8
 bes4 r8

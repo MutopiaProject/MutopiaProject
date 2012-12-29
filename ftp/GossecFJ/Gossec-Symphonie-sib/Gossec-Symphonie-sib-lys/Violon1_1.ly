@@ -1,4 +1,4 @@
-﻿\version "2.10.25"      %Gossec - Symphonie si bémol
+\version "2.16.0"      %Gossec - Symphonie si bémol
                         %Violon1 - 1er mvt
 \relative c''{
 \clef treble
@@ -108,9 +108,9 @@ bes4 r8 r16 bes d4 r8 r16 d
 <g, d' bes'>4 r r2
 <a fis' c'>4r r2
 <g d' bes'>4 r r2
-<<{a'1}\\{\stemUp fis'4 fis8 fis fis4 fis}>>
-<<{d1}\\{\stemUp c'2:16 c:}>>
-<d, b'>4 b'8 b b4 b
+<<{fis''4 fis8 fis fis4 fis}\\{a,1}>>
+<<{c'2:16 c:}\\{d,1}>>
+<d b'>4 b'8 b b4 b
 <f d'>2.:16 f4:16
 <<{e4 e8 e e4 e}\\{e4 e8 e e4 e}>>
 <bes g'>2.:16 bes4:16

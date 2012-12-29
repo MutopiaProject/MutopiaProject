@@ -1,5 +1,5 @@
-\version "2.10.25"      %Gossec - Symphonie si bémol
-                        %Hautbois2 - 2e mvt  (ou flûte2)
+\version "2.16.0"      %Gossec - Symphonie si bÃ©mol
+                        %Hautbois2 - 2e mvt  (ou flÃ»te2)
 \relative c''{
 \clef treble
 \key ees \major
