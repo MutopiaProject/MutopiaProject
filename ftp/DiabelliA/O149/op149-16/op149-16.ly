@@ -1,26 +1,38 @@
-\version "2.4.0"
+\version "2.16.1"
 % $Revision: 1.1 $
 
 \header {
-    title = "28 melodische Übungsstücke"
+    title = "28 melodische ÃœbungsstÃ¼cke"
     subtitle = "16."
     composer = "Anton Diabelli"
     opus = "Op 149"
 
-    mutopiatitle = "28 melodische Übungsstücke"
-    mutopiacomposer = "Anton Diabelli"
+    mutopiatitle = "28 melodische ÃœbungsstÃ¼cke"
+    mutopiacomposer = "DiabelliA"
     mutopiaopus = "Opus 149-16"
     mutopiainstrument = "Piano, Piano"
     source = "If I could know..."
     style = "Classical"
     copyright = "Creative Commons 2.0"
-    maintainer = "Alberto Simões"
+    maintainer = "Alberto SimÃµes"
     maintainerEmail = "ambs@cpan.org"
     maintainerWeb = "http://alfarrabio.di.uminho.pt/~albie"
     lastupdated = "2005/Jan/17"
 
-    footer = "Mutopia-2005/01/17-520"
-tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright "+ \maintainer + " 2004.} \\makebox[188mm][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License. To view a copy of that license visit} \\makebox[188mm][c]{\\texttt{http://creativecommons.org/licenses/by-sa/2.0/} \\footnotesize or write to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}}"
+ footer = "Mutopia-2012/12/30-520"
+ tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright "+ \maintainer + " 2004.} \\makebox[188mm][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License. To view a copy of that license visit} \\makebox[188mm][c]{\\texttt{http://creativecommons.org/licenses/by-sa/2.0/} \\footnotesize or write to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}}"
+}
+
+\paper {
+  % add space between composer and the first staff
+  markup-system-spacing #'padding = #4
+}
+\layout {
+  \context {
+    \Score
+    % add space between staves in piano staff
+    \override StaffGrouper #'staff-staff-spacing #'padding = #5
+  }
 }
 
 primoDynamics =  {
@@ -29,14 +41,14 @@ primoDynamics =  {
     s4. s4. s4. s8\< s4 s4 s8\! s4.\f s4.
 
     s8 s8-\markup\bold{1} s8 s8 s8 s8\pp s4.
-    s4.  s8 s8-\markup\bold{1} s8 s4. s4. 
+    s4.  s8 s8-\markup\bold{1} s8 s4. s4.
     s4.  s8 s8-\markup\bold{1} s8 s4. s4. s4. s4.
 
     s8\< s8 s8\! s4.\f s8 s8\> s8\! s8 s8-\markup\bold{1} s8
     s4 s8\p s4. s4. s8 s8-\markup\bold{1} s8 s4. s4.
 
     s4.  s8 s8-\markup\bold{1} s8 s4. s8\< s4 s4 s8\! s4.\f
-    s4. s4. s4. s4. 
+    s4. s4. s4. s4.
 }
 
 primoUp =  {
@@ -45,8 +57,8 @@ primoUp =  {
     \key d \major
     \relative c''' {
         \override Score.OttavaBracket   #'padding = #2
-	#(set-octavation 1)
-	#(set-accidental-style 'modern)
+	\ottava #1
+	\accidentalStyle "modern"
 	\repeat volta 2 {
 	    r4 r8 % queria por uma pausa generica... :)
 	    r8 r8 fis-3-.
@@ -103,7 +115,8 @@ primoUp =  {
 	}
 	\alternative {
 	    { d4 r8}
-	    { \partial 2*8 d4 \bar "|."}% FIXME!!! ligadura deve ser prolongada para ambas as repetições
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      d4 \bar "|."}% FIXME!!! ligadura deve ser prolongada para ambas as repetiÃ§Ãµes
 	}
     }
 }
@@ -113,7 +126,7 @@ primoDown =  {
     \clef treble
     \key d \major
     \relative c'' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\repeat volta 2 {
 	    r4 r8 % queria por uma pausa generica... :)
 	    r8 r8 fis-3-.
@@ -170,7 +183,8 @@ primoDown =  {
 	}
 	\alternative {
 	    { d4 r8}
-	    { \partial 2*8 d4  \bar "|."} % FIXME!!! ligadura deve ser prolongada para ambas as repetições
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      d4  \bar "|."} % FIXME!!! ligadura deve ser prolongada para ambas as repetiÃ§Ãµes
 	}
     }
 }
@@ -189,7 +203,7 @@ secondoUp =  {
     \clef treble
     \key d \major
     \relative c' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    <d fis a>16[-5-. <d fis a>]-.  <d fis a>8-. <d eis gis>-4-.
@@ -248,17 +262,19 @@ secondoUp =  {
         }
 	\alternative {
 	    { <a d fis>8[ <a a'> <a a'>] }
-	    { \partial 2*8 <a d fis>4-- \bar "|."}
+
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      <a d fis>4-- \bar "|."}
 	}
-    }	
-}	
+    }
+}
 
 secondoDown =  {
     \time 3/8
-    \clef bass   
+    \clef bass
     \key d \major
     \relative c, {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\repeat volta 2 {
 	    <d d'>4 r8
 	    <d d'>4 r8
@@ -280,14 +296,14 @@ secondoDown =  {
 	\repeat volta 2 {
 	    <f' f'>4 r8
 	    <f  f'>4 r8
-	    
+
 	    <c c'>4 r8
 	    <c c'>4 r8
 	    <c c'>4 r8
 	    <c c'>4 r8
 	    <f f'>4 r8
 	    <f f'>4 r8
-	    <f f'>4 r8 
+	    <f f'>4 r8
 	    <f f'>4 r8
 	    <e e'>4 r8
 	    <e e'>4 r8
@@ -315,84 +331,32 @@ secondoDown =  {
         }
 	\alternative {
 	    { <d d'>4 r8 }
-	    { \partial 2*8 <d d'>4 \bar "|."}
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      <d d'>4 \bar "|."}
 	}
     }
 }
 
 \score{
     \context PianoStaff  <<
-	\set PianoStaff.instrument = "Secondo     " 
+	\set PianoStaff.instrumentName = "Secondo     "
 	\context Staff = "up"   \secondoUp
 	\context Dynamics = "dynamics" \secondoDynamics
 	\context Staff = "down" \secondoDown
     >>
-    \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	    
-	    \consists "Skip_event_swallow_translator"
-	    
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-    }
+    \layout { }
     \header { piece = "Scherzo. Allegro vivace." }
 }
 
 
-\score{    
+\score{
     \context PianoStaff <<
-	\set PianoStaff.instrument = "Primo     " 
+	\set PianoStaff.instrumentName = "Primo     "
 	\context Staff = "up"   \primoUp
 	\context Dynamics = "dynamics" \primoDynamics
 	\context Staff = "down" \primoDown
     >>
-
-    \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	    
-	    \consists "Skip_event_swallow_translator"
-	    
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-    }
+    \layout { }
     \header { piece = "Scherzo. Allegro vivace."}
 }
 
@@ -401,15 +365,20 @@ secondoDown =  {
 \score{
     \context PianoStaff  <<
 	\context Staff = "up"   <<
-	    \applymusic #unfold-repeats \primoUp
-	    \applymusic #unfold-repeats \secondoUp
+	    \applyMusic #unfold-repeats \primoUp
+	    \applyMusic #unfold-repeats \secondoUp
 	>>
 	\context Staff = "down" <<
-	    \applymusic #unfold-repeats \primoDown
-	    \applymusic #unfold-repeats \secondoDown
+	    \applyMusic #unfold-repeats \primoDown
+	    \applyMusic #unfold-repeats \secondoDown
 	>>
     >>
-    \midi { \tempo 4 = 70 }
+
+  \midi {
+    \tempo 4 = 70
+    }
+
+
 }
 
 
@@ -418,10 +387,10 @@ secondoDown =  {
 
 
 primoTrioDynamics =  {
-    s8\p s4. s4. s4. s4. s4. s4. s4. s4. s4. s4. 
+    s8\p s4. s4. s4. s4. s4. s4. s4. s4. s4. s4.
     s4. s8\< s8 s8\! s4.\f s4. s4. s4
     s8\p s4. s4. s4. s4. s4.
-    s4. s4. s4. s4 s4.-\markup\italic{cresc.} s8 s8\< s8 s8\! s4. s4\f 
+    s4. s4. s4. s4 s4.-\markup\italic{cresc.} s8 s8\< s8 s8\! s4. s4\f
     s1._\markup{Scherzo da Capo senza replica.}
 }
 
@@ -431,20 +400,22 @@ primoTrioUp =  {
     \clef treble
     \key g \major
     \relative c''' {
-	#(set-octavation 1)
-	#(set-accidental-style 'modern)
+	\ottava #1
+	\accidentalStyle "modern"
 	\repeat volta 2 {
-	    \partial 8 d8-1-.
+	  \set Timing.measureLength = #(ly:make-moment 1 8)
+	    d8-1-.
+	  \set Timing.measureLength = #(ly:make-moment 3 8)
 	    g-4-. g-. g-.
 	    g-. g-. g-.
 	    g(-. fis g)
 	    d4.
 	    d8-. d-. d-.
-	    d-. d-. d-. 
+	    d-. d-. d-.
 	    d(-1 fis-3 g)
 	    a4 d,8-1-.
 	    g8-4-. g-. g-.
-	    g-. g-. g-. 
+	    g-. g-. g-.
 
 	    g( fis g)
 	    d4.
@@ -453,7 +424,9 @@ primoTrioUp =  {
 	    d,4.( d8) r
 	}
 	\repeat volta 2 {
-	    \partial 8 d8-.
+	    \set Timing.measureLength = #(ly:make-moment 1 8)
+	    d8-.
+	    \set Timing.measureLength = #(ly:make-moment 3 8)
 	    a'4-5-> d,8-.
 	    a'4-> d,8-.
 	    d-. e-. fis-.
@@ -472,7 +445,8 @@ primoTrioUp =  {
 	    g4.(
 	}
 	\alternative{
-	    { \partial 4 g8) r8 }
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      g8) r8 }
 	    { g8 r8 r8 \bar "|."}
 	}
     }
@@ -483,15 +457,17 @@ primoTrioDown =  {
     \clef treble
     \key g \major
     \relative c'' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\repeat volta 2 {
-	    \partial 8 d8-5-.
+	    \set Timing.measureLength = #(ly:make-moment 1 8)
+	    d8-5-.
+	    \set Timing.measureLength = #(ly:make-moment 3 8)
 	    g-2-. g-. g-.
 	    g-. g-. g-.
 	    g(-. fis g)
 	    d4.
 	    d8-. d-. d-.
-	    d-. d-. d-. 
+	    d-. d-. d-.
 	    d(-5 fis-3 g)
 	    a4 d,8-5-.
 	    g8-2-. g-. g-.
@@ -501,10 +477,12 @@ primoTrioDown =  {
 	    d4.
 	    a'8-1-. a-. a-.
 	    a-. a-. a-.
-	    d,4.( d8) r 
+	    d,4.( d8) r
         }
 	\repeat volta 2 {
-	    \partial 8 d8-.
+	    \set Timing.measureLength = #(ly:make-moment 1 8)
+	    d8-.
+	    \set Timing.measureLength = #(ly:make-moment 3 8)
 	    a'4-1-> d,8-.
 	    a'4-> d,8-.
 	    d-. e-. fis-.
@@ -523,7 +501,8 @@ primoTrioDown =  {
 	    g4.(
 	}
 	\alternative{
-	    { \partial 4 g8) r8 }
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      g8) r8 }
 	    { g8 r8 r8 \bar "|."}
 	}
     }
@@ -542,10 +521,12 @@ secondoTrioUp =  {
     \clef bass
     \key g \major
     \relative c' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
-	    \partial 8 r8
+	  \set Timing.measureLength = #(ly:make-moment 1 8)
+	    r8
+	  \set Timing.measureLength = #(ly:make-moment 3 8)
 	    <g-1 b-3>-. <a c>-. <b d>-.
 	    <a-1 c-3>-. <b d>-. <c e>-.
 	    r8 <g b d-5> <g b d>
@@ -563,11 +544,15 @@ secondoTrioUp =  {
 	    <fis-3 a-5>-. <e g-4>-. <d fis-3>-.
 	    \clef bass
 	    <g,-1 e'-5> <a-1 fis'-5> <g-1 e'-5>
-	    <fis-2 a-3 d-5>[ <fis a d> <fis a d>]
-	    \partial 4 <fis a d> r8
+	    <fis-2 a-3 d-5>[ <fis a d> <fis a d> ]
+	     \set Timing.measureLength = #(ly:make-moment 2 8)
+	    <fis a d>8 r8
+	     \set Timing.measureLength = #(ly:make-moment 3 8)
 	}
         \repeat volta 2 {
-	    \partial 8 r8
+	  \set Timing.measureLength = #(ly:make-moment 1 8)
+	    r8
+	  \set Timing.measureLength = #(ly:make-moment 3 8)
 	    <fis-2 a-3>-. <g-1 b-4>-. <a-3 c-5>-.
 	    <fis a>-. <g b>-. <a c>-.
 	    r8 <g b-3 d-5> <g b d>
@@ -585,8 +570,9 @@ secondoTrioUp =  {
 	    r8 <a-2 c-4 d-5> <a c d>
 	    <g-1 b-3 d-5>[ <g b d> <g b d>]
 	}
-        \alternative { 
-	    {\partial 4 <g b d>8 r8 }
+        \alternative {
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      <g b d>8 r8 }
 	    { <g b d>8 r8 r8 }
 	}
    }
@@ -594,12 +580,14 @@ secondoTrioUp =  {
 
 secondoTrioDown =  {
     \time 3/8
-    \clef bass   
+    \clef bass
     \key g \major
     \relative c {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\repeat volta 2 {
-	    \partial 8 r8
+	  \set Timing.measureLength = #(ly:make-moment 1 8)
+	    r8
+	  \set Timing.measureLength = #(ly:make-moment 3 8)
 	    g4-3 r8
 	    g4 r8
 	    g4 r8
@@ -616,10 +604,14 @@ secondoTrioDown =  {
 	    a4-2 r8
 	    a4 r8
 	    d8[-. a-.-2 fis]-.-3
-	    \partial 4 d8 r8
+	    \set Timing.measureLength = #(ly:make-moment 2 8)
+	    d8 r8
+	    \set Timing.measureLength = #(ly:make-moment 3 8)
 	}
 	\repeat volta 2 {
-	    \partial 8 r8
+	  \set Timing.measureLength = #(ly:make-moment 1 8)
+	    r8
+	  \set Timing.measureLength = #(ly:make-moment 3 8)
 	    d'4 r8
 	    d4 r8
 	    g,4-2 r8
@@ -637,7 +629,8 @@ secondoTrioDown =  {
 	    g[-1-. d-2-. b]-4-.
 	}
 	\alternative {
-	    { \partial 4 g8 r8 }
+	    { \set Timing.measureLength = #(ly:make-moment 2 8)
+	      g8 r8 }
 	    { g8 r8 r8 \bar "|."}
 	}
     }
@@ -645,83 +638,25 @@ secondoTrioDown =  {
 
 \score{
     \context PianoStaff  <<
-	\set PianoStaff.instrument = "Secondo     " 
+	\set PianoStaff.instrumentName = "Secondo     "
 	\context Staff = "up"   \secondoTrioUp
 	\context Dynamics = "dynamics" \secondoTrioDynamics
 	\context Staff = "down" \secondoTrioDown
     >>
-    \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	    
-	    \consists "Skip_event_swallow_translator"
-	    
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-    }
+    \layout { }
     \header { piece = "Trio." }
 }
 
 
-\score{    
+\score{
     \context PianoStaff <<
-	\set PianoStaff.instrument = "Primo     " 
+	\set PianoStaff.instrumentName = "Primo     "
 	\context Staff = "up"   \primoTrioUp
 	\context Dynamics = "dynamics" \primoTrioDynamics
 	\context Staff = "down" \primoTrioDown
     >>
 
-    \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	    
-	    \consists "Skip_event_swallow_translator"
-	    
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-    }
+    \layout { }
     \header { piece = "Trio." }
 }
 
@@ -730,18 +665,20 @@ secondoTrioDown =  {
 \score{
     \context PianoStaff  <<
 	\context Staff = "up"   <<
-	    \applymusic #unfold-repeats \primoTrioUp
-	    \applymusic #unfold-repeats \secondoTrioUp
+	    \applyMusic #unfold-repeats \primoTrioUp
+	    \applyMusic #unfold-repeats \secondoTrioUp
 	>>
 	\context Staff = "down" <<
-	    \applymusic #unfold-repeats \primoTrioDown
-	    \applymusic #unfold-repeats \secondoTrioDown
+	    \applyMusic #unfold-repeats \primoTrioDown
+	    \applyMusic #unfold-repeats \secondoTrioDown
 	>>
     >>
-    \midi { \tempo 4 = 120 }
+
+  \midi {
+    \tempo 4 = 120
+    }
+
 }
 
 
 %%%% END TRIO
-
-
