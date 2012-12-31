@@ -1,33 +1,46 @@
-\version "2.4.0"
+\version "2.16.1"
 % $Revision: 1.1 $
 
 \header {
-     title = "28 melodische Übungsstücke"
+     title = "28 melodische ÃœbungsstÃ¼cke"
      subtitle = "21."
      composer = "Anton Diabelli"
      opus = "Op 149"
 
-     mutopiatitle = "28 melodische Übungsstücke"
-     mutopiacomposer = "Anton Diabelli"
+     mutopiatitle = "28 melodische ÃœbungsstÃ¼cke"
+     mutopiacomposer = "DiabelliA"
      mutopiaopus = "Opus 149-21"
      mutopiainstrument = "Piano, Piano"
-     source = "If I could know..."
+     source = "Unknown"
      style = "Classical"
      copyright = "Creative Commons Attribution-ShareAlike 2.0"
-     maintainer = "Alberto Simões"
+     maintainer = "Alberto SimÃµes"
      maintainerEmail = "ambs@cpan.org"
      maintainerWeb = "http://alfarrabio.di.uminho.pt/~albie"
-     lastupdated = "2005/May/09"
+     lastupdated = "2012/12/31"
 
 footer = "Mutopia-2005/05/15-554"
 tagline = "\\raisebox{5mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright \\ The Mutopia Project \\& "+ \maintainer + " 2005.} \\makebox[188mm][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License. To view a copy of that license visit} \\makebox[188mm][c]{\\texttt{http://creativecommons.org/licenses/by-sa/2.0/} \\footnotesize or write to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}}"
 }
 
+\paper {
+  % add space between composer and the first staff
+  markup-system-spacing #'padding = #4
+}
+\layout {
+  \context {
+    \Score
+    % add space between staves in piano staff
+    \override StaffGrouper #'staff-staff-spacing #'padding = #5
+  }
+}
+
 primoDynamics =  {
+  \override DynamicTextSpanner #'style = #'none
      s4\f s4\p s4 s4  s4\> s4\! s2 s4\> s4\! s2 s1
      s4\f s4\p s2 s1 s2 s8\< s4 s8\!   s2\f s8\> s4 s8\! s2\f s8 s8\> s8 s8\!
      s4\f s4\p s8 s8\< s8 s8\! s2 s8 s8\< s8 s8\! s4\f s4\p s8 s8\< s8 s8\! s1
-     s1-\markup\italic{cresc.} s2 s8 s8\p\< s8 s8\! s1 s1\f
+     \once\crescTextCresc s1\< s2 s8 s8\p\< s8 s8\! s1 s1\f
      s2\p s2-\markup\italic{dolce} s1 s1 s1\pp s4 s8 s16 s16\ff s2
 }
 
@@ -37,8 +50,8 @@ primoUp =  {
      \key a \major
      \relative c''' {
          \override Score.OttavaBracket   #'padding = #2
-	#(set-octavation 1)
-	#(set-accidental-style 'modern)
+	\ottava #1
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    <cis-3 e-5>4.( <b d>8 <a cis>) <a cis> <a cis> <a cis>
@@ -47,7 +60,7 @@ primoUp =  {
 	    b4.(-2 d16 cis b8) r r4
 
 	    <cis-3 e-5>4.( <b d>8 <a cis>) <a cis> <a cis> <a cis>
-	    <cis-3 e-5>4( <b d>2 <a-1 cis-3>4(
+	    <cis-3 e-5>4( <b d>2 <a-1 cis-3>4
              b4.)-2 b8 b( cis16 b) a8. b16
 	}
 	\alternative {
@@ -80,7 +93,7 @@ primoDown =  {
      \clef treble
      \key a \major
      \relative c'' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    <cis-1 e-3>4.( <b d>8 <a cis>) <a cis> <a cis> <a cis>
@@ -89,7 +102,7 @@ primoDown =  {
 	    b4.(-4 d16 cis b8) r r4
 
 	    <cis-1 e-3>4.( <b d>8 <a cis>) <a cis> <a cis> <a cis>
-	    <cis-1 e-3>4( <b d>2 <a-3 cis-5>4(
+	    <cis-1 e-3>4( <b d>2 <a-3 cis-5>4
              b4.)-4 b8 b( cis16 b) a8. b16
 	}
 	\alternative {
@@ -118,13 +131,14 @@ primoDown =  {
 }
 
 secondoDynamics =  {
+  \override DynamicTextSpanner #'style = #'none
      s8\f s8\p s4 s2 s1 s1
      s2 s8\< s4 s8\! s8\f s8\p s4 s2 s8\< s4 s8\! s8\> s4 s8\!
      s8\f s8\p s4 s4 s16\< s8 s16\! s16\> s8 s16\! s4 s16\< s8 s8 s8 s16\!
      s8\f s8\p s4 s4 s16\< s8 s16\!
      s8\f s8\p s4 s4 s16\< s8 s16\! s16\> s8 s16\! s4 s16\< s8 s8 s8 s16\!
      s8\f s8\p s4 s4 s16\< s8 s16\!
-     s16\> s8 s16\! s4 s4 s4 s1-\markup\italic{cresc.} s2 s4 s16\p\< s8 s16\!
+     s16\> s8 s16\! s4 s4 s4 \once\crescTextCresc s1\< s2 s4 s16\p\< s8 s16\!
      s1 s1\f s1\p s1 s8 s8\sf s4 s8 s8\sf s4 s1\pp s4 s8 s16 s16\ff s2
 }
 
@@ -133,7 +147,7 @@ secondoUp =  {
      \clef bass
      \key a \major
      \relative c' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    a16(-1 cis-3 e-5 cis) a( cis e cis) a( cis e cis) a( cis e cis)
@@ -170,21 +184,21 @@ secondoUp =  {
 	a(-2 e' e, e' e, e' e, e') a,(-2 e' e, e' e, e' e, e')
 	a,(-2 cis-4 e-5 cis) a( cis e cis) a(-1 cis-3 e-5 cis) a( cis e cis)
 	a4 r8. <a cis e>16 <a cis e>2\fermata\bar"|."
-     }	
-}	
+     }
+}
 
 secondoDown =  {
      \time 4/4
      \clef bass
      \key a \major
      \relative c {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    a8-5 r cis-3 r e-1 r r4
 	    e,8 r e'4-> r e,8 r8
 	    a,8 r a'4-> r cis-2
-	
+
 	    e4 e, e'8(-1 <d-2 e> <cis-3 e> <b-4 e>)
 	    a8-5 r cis r e r r4
 	    e,8 r <e e'>4 <eis eis'> <fis fis'>
@@ -205,7 +219,7 @@ secondoDown =  {
 	    d,8 r d' r d, r r4
 
 	    r8 e8 e' e <e, b' e>2
-	}		
+	}
          \alternative{
 	    { a4-3 r16 a(-1 e-2 cis-3 a8) r8 r4}
 	    { a'8-3 r r4 r4 e4->-5 }
@@ -219,77 +233,24 @@ secondoDown =  {
 
 \score{
      \context PianoStaff  <<
-	\set PianoStaff.instrument = "Secondo     "
+	\set PianoStaff.instrumentName = "Secondo "
 	\context Staff = "up"   \secondoUp
 	\context Dynamics = "dynamics" \secondoDynamics
 	\context Staff = "down" \secondoDown
->>
-     \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	
-	    \consists "Skip_event_swallow_translator"
-	
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-     }
+      >>
+     \layout {}
      \header { piece = "Andante amoroso." }
 }
 
 
 \score{
      \context PianoStaff <<
-	\set PianoStaff.instrument = "Primo     "
+	\set PianoStaff.instrumentName = "Primo "
 	\context Staff = "up"   \primoUp
 	\context Dynamics = "dynamics" \primoDynamics
 	\context Staff = "down" \primoDown
->>
-
-     \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	
-	    \consists "Skip_event_swallow_translator"
-	
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-     }
+      >>
+     \layout {}
      \header { piece = "Andante amoroso."}
 }
 
@@ -298,16 +259,15 @@ secondoDown =  {
 \score{
      \context PianoStaff  <<
 	\context Staff = "up"   <<
-	    \applymusic #unfold-repeats \primoUp
-	    \applymusic #unfold-repeats \secondoUp
+	    \applyMusic #unfold-repeats \primoUp
+	    \applyMusic #unfold-repeats \secondoUp
 	>>
 	\context Staff = "down" <<
-	    \applymusic #unfold-repeats \primoDown
-	    \applymusic #unfold-repeats \secondoDown
+	    \applyMusic #unfold-repeats \primoDown
+	    \applyMusic #unfold-repeats \secondoDown
 	>>
->>
-     \midi { \tempo 4 = 70 }
+      >>
+     \midi {
+       \tempo 4 = 70
+     }
 }
-
-
-
