@@ -10,7 +10,7 @@
     mutopiatitle = "28 melodische Übungsstücke (No. 1)"
     mutopiacomposer = "DiabelliA"
     mutopiaopus = "Opus 149-1"
-    mutopiainstrument = "Piano Duet"
+    mutopiainstrument = "Piano, Piano"
     source = "Unknown"
     style = "Classical"
     copyright = "Creative Commons Attribution-ShareAlike 2.5"
