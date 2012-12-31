@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 % $Revision: 1.1 $
 
 \header {
@@ -36,9 +36,10 @@
 }
 
 primoDynamics =  {
+    \override DynamicTextSpanner #'style = #'none
     s2\p s2 s2 s2 s2 s2 s2 s2
     s2\f s2 s2 s2 s2 s2 s2 s2
-    s2\p s2 s2 s2 s2-\markup\italic{cresc.} s8\< s4 s8\! s2\f s2 s2
+    s2\p s2 s2 s2 \once\crescTextCresc s2\< s8\< s4 s8\! s2\f s2 s2
     s2\p s2 s2\f s2 s2\p s2
     s2\f s2 s2 s2 s2 s2
 }
@@ -159,9 +160,10 @@ primoDown =  {
 }
 
 secondoDynamics =  {
+  \override DynamicTextSpanner #'style = #'none
     s2\p s2 s2 s2 s2 s2 s2 s2
     s2\f s2 s2 s2 s2 s2 s2 s2 s2\p
-    s2 s2 s2 s2-\markup\italic{cresc.} s8 s8\< s8 s8\! s2\f s2 s2
+    s2 s2 s2 \once\crescTextCresc s2\< s8 s8\< s8 s8\! s2\f s2 s2
     s2\p s2 s2\f s2 s2\p s2
     s2\f s2 s2 s2 s2 s2
 }
