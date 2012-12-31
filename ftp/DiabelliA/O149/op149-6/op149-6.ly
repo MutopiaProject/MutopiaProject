@@ -4,8 +4,8 @@
 \header {
   title = "28 melodische Übungsstücke"
   subtitle = "6."
-  composer = \markup{\smallCaps "Anton Diabelli"}
-  opus = \markup{\smallCaps "Op 149"}
+  composer = "Anton Diabelli"
+  opus = "Op 149"
 
   mutopiatitle = "28 melodische Übungsstücke"
   mutopiacomposer = "DiabelliA"
@@ -235,7 +235,7 @@ secondoAllegroDown =  {
     \context Staff = "down" \secondoAllegroDown
   >>
   \layout { }
-  \header { piece = \markup{\smallCaps "Allegro." }}
+  \header { piece = "Allegro."
 }
 
 
@@ -247,7 +247,7 @@ secondoAllegroDown =  {
     \context Staff = "down" \primoAllegroDown
   >>
   \layout { }
-  \header { piece = \markup{\smallCaps "Allegro." }}
+  \header { piece = "Allegro."
 }
 
 \score{
@@ -395,7 +395,7 @@ secondoTrioDown =  {
     \context Staff = "down" \secondoTrioDown
   >>
   \layout { }
-  \header { piece = \markup{\smallCaps "Trio." }}
+  \header { piece = "Trio."
 }
 
 
@@ -407,7 +407,7 @@ secondoTrioDown =  {
     \context Staff = "down" \primoTrioDown
   >>
   \layout { }
-  \header { piece = \markup{\smallCaps "Trio." }}
+  \header { piece = "Trio."
 }
 
 
