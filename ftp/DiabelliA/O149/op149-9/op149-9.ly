@@ -4,11 +4,11 @@
 \header {
   title = "28 melodische Übungsstücke"
   subtitle = "9."
-  composer = \markup{\smallCaps "Anton Diabelli"}
-  opus = \markup{\smallCaps "Opus 149-9"}
+  composer = "Anton Diabelli"
+  opus = "Opus 149-9"
 
   mutopiatitle = "28 melodische Übungsstücke"
-  mutopiacomposer =  "DiabelliA"
+  mutopiacomposer = "DiabelliA"
   mutopiaopus = "Op 149"
   mutopiainstrument = "Piano, Piano"
   source = "If I could know..."
@@ -229,7 +229,7 @@ secondoDown =  {
     \context Staff = "down" \secondoDown
   >>
   \layout { }
-  \header { piece = \markup{\smallCaps "Allegretto."} }
+  \header { piece = "Allegretto."
 }
 
 
@@ -242,7 +242,7 @@ secondoDown =  {
   >>
 
   \layout { }
-  \header { piece = \markup{\smallCaps "Allegretto."} }
+  \header { piece = "Allegretto."
 }
 
 
