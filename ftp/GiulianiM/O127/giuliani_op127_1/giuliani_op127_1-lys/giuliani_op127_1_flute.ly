@@ -59,11 +59,10 @@
 				%16
       b( c) cis-. d-. dis fis16( e d c b  a) |
       g2( fis8) r8 g'8.\mf a16|
-      b4. b8 ais b \grace {
-	\override Flag #'stroke-style = #"grace"
-	d
-	\revert Flag #'stroke-style }
-      c8. b16|
+      b4. b8 ais[ b \grace {
+	\once\override Flag #'stroke-style = #"grace"
+	d }
+      c8. b16] |
       b2 \times 2/3 {r8 a b} \times 2/3 {c e, a}|
       a( g) fis-. g-.  b( a) d-. c-.|
 				%21
