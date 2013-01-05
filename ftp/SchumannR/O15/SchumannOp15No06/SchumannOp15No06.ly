@@ -7,18 +7,17 @@
  composer = "Robert Alexander Schumann"
  mutopiatitle = "Kinderscenen - Wichtige Begebenheit"
  mutopiacomposer = "SchumannR"
- mutopiaopus = "O 15 N 6"
+ mutopiaopus = "Op. 15, No. 6"
  mutopiainstrument = "Piano"
  date = "18th C."
  source = "Leichte Stucke, 1900"
  style = "Romantic"
- copyright = "MutopiaBSD"
+ copyright = "Creative Commons Attribution 3.0"
  maintainer = "Ying-Chun Liu"
  maintainerEmail = "PaulLiu.bbs@bbs.cis.nctu.edu.tw"
  maintainerWeb = "http://www.cis.nctu.edu.tw/~is86007/"
- lastupdated = "2003/Nov/29"
- tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and released under the MutopiaBSD licence by " + \maintainer + ".} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
- footer = "Mutopia-2003/11/29-374"
+ footer = "Mutopia-2013/01/05-374"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
 }
 
 #(set-global-staff-size 16)
