@@ -235,7 +235,7 @@ secondoAllegroDown =  {
     \context Staff = "down" \secondoAllegroDown
   >>
   \layout { }
-  \header { piece = "Allegro."
+  \header { piece = "Allegro." }
 }
 
 
@@ -247,7 +247,7 @@ secondoAllegroDown =  {
     \context Staff = "down" \primoAllegroDown
   >>
   \layout { }
-  \header { piece = "Allegro."
+  \header { piece = "Allegro." }
 }
 
 \score{
@@ -395,7 +395,7 @@ secondoTrioDown =  {
     \context Staff = "down" \secondoTrioDown
   >>
   \layout { }
-  \header { piece = "Trio."
+  \header { piece = "Trio." }
 }
 
 
@@ -407,7 +407,7 @@ secondoTrioDown =  {
     \context Staff = "down" \primoTrioDown
   >>
   \layout { }
-  \header { piece = "Trio."
+  \header { piece = "Trio." }
 }
 
 

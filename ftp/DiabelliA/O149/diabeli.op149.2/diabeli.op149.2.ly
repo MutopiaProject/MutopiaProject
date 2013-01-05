@@ -25,7 +25,7 @@
 
 \paper {
   % add space between composer and the first staff
-  markup-system-spacing #'padding = #4
+  markup-system-spacing #'padding = #6
 }
 \layout {
   \context {

@@ -234,7 +234,7 @@ secondoDown =  {
     \context Staff = "down" \secondoDown
   >>
   \layout { }
-  \header { piece = "Allegretto."
+  \header { piece = "Allegretto." }
 }
 
 
@@ -246,7 +246,7 @@ secondoDown =  {
     \context Staff = "down" \primoDown
   >>
   \layout { }
-  \header { piece = "Allegretto."
+  \header { piece = "Allegretto." }
 }
 
 \score{

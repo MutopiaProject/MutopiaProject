@@ -262,7 +262,7 @@ secondoUp =  {
       \context Staff = "down" \secondoDown
     >>
     \layout { }
-    \header { piece = "Allegro."
+    \header { piece = "Allegro." }
   }
 
   \score{
@@ -274,7 +274,7 @@ secondoUp =  {
     >>
 
     \layout { }
-    \header { piece = "Allegro."
+    \header { piece = "Allegro." }
   }
 
   \score{

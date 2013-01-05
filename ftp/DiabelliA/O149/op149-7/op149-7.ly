@@ -209,7 +209,7 @@ secondoMarciaDown =  {
     \context Staff = "down" \secondoMarciaDown
   >>
   \layout { }
-  \header { piece = "Marcia."
+  \header { piece = "Marcia." }
 }
 
 
@@ -221,7 +221,7 @@ secondoMarciaDown =  {
     \context Staff = "down" \primoMarciaDown
   >>
   \layout { }
-  \header { piece = "Marcia."
+  \header { piece = "Marcia." }
 }
 
 
@@ -385,7 +385,7 @@ secondoTrioDown =  {
     \context Staff = "down" \secondoTrioDown
   >>
   \layout { }
-  \header { piece = "Trio."
+  \header { piece = "Trio." }
 }
 
 \score{
@@ -396,7 +396,7 @@ secondoTrioDown =  {
     \context Staff = "down" \primoTrioDown
   >>
   \layout { }
-  \header { piece = "Trio."
+  \header { piece = "Trio." }
 }
 
 

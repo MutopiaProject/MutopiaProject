@@ -185,7 +185,7 @@ secondoAllegrettoDown =  {
     \context Staff = "down" \secondoAllegrettoDown
   >>
   \layout { }
-  \header { piece = "Polonaise. Allegretto."
+  \header { piece = "Polonaise. Allegretto." }
 }
 
 
@@ -198,7 +198,7 @@ secondoAllegrettoDown =  {
   >>
 
   \layout { }
-  \header { piece = "Polonaise. Allegretto"
+  \header { piece = "Polonaise. Allegretto" }
 }
 
 
@@ -373,7 +373,7 @@ secondoTrioDown =  {
     \context Staff = "down" \secondoTrioDown
   >>
   \layout { }
-  \header { piece = "Polonaise. Trio."
+  \header { piece = "Polonaise. Trio." }
 }
 
 
@@ -386,7 +386,7 @@ secondoTrioDown =  {
   >>
 
   \layout { }
-  \header { piece = "Polonaise. Trio."
+  \header { piece = "Polonaise. Trio." }
 }
 
 

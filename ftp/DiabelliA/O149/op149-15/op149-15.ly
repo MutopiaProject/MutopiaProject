@@ -300,7 +300,7 @@ secondoDown =  {
     \context Staff = "down" \secondoDown
   >>
   \layout { }
-  \header { piece = "Andante cantabile."
+  \header { piece = "Andante cantabile." }
 }
 
 
@@ -313,7 +313,7 @@ secondoDown =  {
   >>
 
   \layout { }
-  \header { piece = "Andante cantabile."
+  \header { piece = "Andante cantabile." }
 }
 
 
