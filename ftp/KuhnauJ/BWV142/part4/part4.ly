@@ -1,12 +1,12 @@
 \version "2.16.1"
 
 \header {
-  mutopiatitle = "Uns ist ein Kind geboren"
+  mutopiatitle = "Uns ist ein Kind geboren: 4. Coro"
   mutopiacomposer = "KuhnauJ"
-  mutopiainstrument = "Voice"
+  mutopiainstrument = "Voice (SATB)"
   style = "Classical"
   source = "Unknown"
-  copyright = "MutopiaBSD"
+  copyright = "Creative Commons Attribution 3.0"
   maintainer = "Robert de Vries"
   maintainerEmail = "rhdv@xs4all.nl"
   lastupdated = "2002/Oct/10"
@@ -19,8 +19,8 @@
   %  footer = "VVE 2002"
   %  tagline = "VAK Vokaal Ensemble 2002"
 
-  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small This music is part of the Mutopia project, \\texttt{http://www.MutopiaProject.org/}\\\\It has been typeset and released under the MutopiaBSD license by" + \maintainer + ".\\\\You should have received a copy of the license with this music. If not, it is available at the above website.}"
-  footer = "Mutopia-2002/10/10-282"
+ footer = "Mutopia-2013/01/05-282"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
 }
 
 global = {
