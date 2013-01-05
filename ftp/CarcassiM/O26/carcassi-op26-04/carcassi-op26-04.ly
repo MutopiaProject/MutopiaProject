@@ -272,6 +272,7 @@ lowerVoice = \relative c {
       \context Voice = "upperVoice" \upperVoice
       \context Voice = "lowerVoice" \lowerVoice
     >>
+%{
     \new TabStaff = "guitar tab" \with {
       restrainOpenStrings = ##t
     }
@@ -280,7 +281,6 @@ lowerVoice = \relative c {
       \context TabVoice = "upperVoice" \upperVoice
       \context TabVoice = "lowerVoice" \lowerVoice
     >>
-%{
 %}
   >>
   \layout {}
