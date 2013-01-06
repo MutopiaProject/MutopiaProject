@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 %#(set-global-staff-size 16)
 
@@ -10,7 +10,7 @@
         
     mutopiatitle = "Sonata in C major (fragment)"
     mutopiacomposer = "MozartWA"
-    mutopiaopus = "K^6 deest"
+    mutopiaopus = "K6 deest"
     mutopiainstrument = "Piano"
     date = "1771?"
     source = "Autograph"
@@ -18,10 +18,11 @@
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
-    lastupdated = "2012/Nov/19"
 
-    footer = "Mutopia-2012/11/19-241"
-  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+    moreInfo = "<p>Some interesting information about this fragment was revealed by Dennis Pajot. Thanks to him for allowing us to quote it here.</p><blockquote><p>The fragment you post on is not in Koechel, but it is printed in the Neue Mozart Ausgabe (NMA). It is in the 2nd volume of Piano Sonatas, as Anhang II Nr.1 (page 173).</p><p>Briefly stated this 25 measure movement in C stands on the first page of the autograph with the later composed final chorus of the Grabmusik K42/35a, however the piano movement is crossed out--apparently by Mozart himself. According to Wolfgang Plath its probable origin time is 1771 in Salzburg. In a 1986 article Wolfgang Rehm states the fragment is in connection with the 4 Piano Sonatas known only by their incipits (K.Anh 199-202/K6 = K33d-g).</p></blockquote>"
+
+ footer = "Mutopia-2013/01/06-241"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 rightHand =  \relative g' \context Voice = rightHand {
