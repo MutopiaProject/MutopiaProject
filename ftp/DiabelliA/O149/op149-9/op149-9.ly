@@ -11,7 +11,7 @@
   mutopiacomposer = "DiabelliA"
   mutopiaopus = "Op 149"
   mutopiainstrument = "Piano, Piano"
-  source = "If I could know..."
+  source = "Unknown"
   style = "Classical"
   copyright = "MutopiaBSD"
   maintainer = "Alberto Simões"
@@ -25,13 +25,14 @@
 
 \paper {
   % add space between composer and the first staff
-  markup-system-spacing #'padding = #4
+  markup-system-spacing #'padding = #2
 }
 \layout {
   \context {
     \Score
     % add space between staves in piano staff
     \override StaffGrouper #'staff-staff-spacing #'padding = #5
+    \override StaffGrouper #'staff-staff-spacing #'basic-distance = #14
   }
 }
 
@@ -177,6 +178,7 @@ secondoUp =  {
     <g, b d-4>2.  \fermata
     \bar "|."
   }
+  \pageBreak
 }
 
 secondoDown =  {

@@ -32,6 +32,7 @@ tagline = "\\raisebox{5mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " 
     \Score
     % add space between staves in piano staff
     \override StaffGrouper #'staff-staff-spacing #'padding = #5
+    \override StaffGrouper #'staff-staff-spacing #'basic-distance = #14
   }
 }
 

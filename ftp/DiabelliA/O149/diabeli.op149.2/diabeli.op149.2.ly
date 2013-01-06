@@ -24,14 +24,29 @@
 }
 
 \paper {
+%  annotate-spacing = ##t
   % add space between composer and the first staff
-  markup-system-spacing #'padding = #6
+  markup-system-spacing =
+  #'((basic-distance . 24)
+  (minimum-distance . 12)
+  (padding . 1)
+  (stretchability . 30))
+
+  system-system-spacing =
+  #'((basic-distance . 22)
+  (minimum-distance . 16)
+  (padding . 1)
+  (stretchability . 60))
+
+  top-margin = #16
 }
+
 \layout {
   \context {
     \Score
     % add space between staves in piano staff
     \override StaffGrouper #'staff-staff-spacing #'padding = #5
+    \override StaffGrouper #'staff-staff-spacing #'basic-distance = #20
   }
 }
 
@@ -159,6 +174,7 @@ secondoUp =  {
 	}
 	\bar "|."
     }
+    \pageBreak
 }
 
 secondoDown =  {
@@ -201,6 +217,7 @@ secondoDown =  {
     }
 
 }
+
 \score{
     \context PianoStaff <<
 	\set PianoStaff.instrumentName = "Secondo   "
@@ -225,7 +242,6 @@ secondoDown =  {
     \layout {}
     \header { piece = "Andante Cantabile." }
 }
-
 
 \score{
     \context PianoStaff  <<

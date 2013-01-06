@@ -23,18 +23,6 @@
   footer = "Mutopia-2004/01/17-408"
 }
 
-\paper {
-  % add space between composer and the first staff
-  markup-system-spacing #'padding = #4
-}
-\layout {
-  \context {
-    \Score
-    % add space between staves in piano staff
-    \override StaffGrouper #'staff-staff-spacing #'padding = #6
-    \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 8)
-  }
-}
 
 primoAllegroDynamics =  {
   s2.\p s4\< s4 s4\! s4\> s4 s4\! s2. s2. s2. s4\> s4 s4\! s2.\f s2.

@@ -26,12 +26,14 @@ tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent "
 \paper {
   % add space between composer and the first staff
   markup-system-spacing #'padding = #4
+  ragged-bottom = ##t
 }
 \layout {
   \context {
     \Score
     % add space between staves in piano staff
-    \override StaffGrouper #'staff-staff-spacing #'padding = #5
+    \override StaffGrouper #'staff-staff-spacing #'padding = #8
+    \override StaffGrouper #'staff-staff-spacing #'basic-distance = #16
   }
 }
 
@@ -201,6 +203,7 @@ secondoUp =  {
         <d-1 e-2 a-5>8-. <d e a>16-. <d e a>-. <cis-2 e-3 a-5>8-. <cis e a>-.
 	<d-1 f-3 a-5>4-- r \bar "|."
     }
+    \pageBreak
 }
 
 secondoDown =  {

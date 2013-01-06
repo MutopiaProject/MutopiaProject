@@ -31,7 +31,7 @@
   \context {
     \Score
     % add space between staves in piano staff
-    \override StaffGrouper #'staff-staff-spacing #'padding = #8
+    \override StaffGrouper #'staff-staff-spacing #'padding = #6
   }
 }
 

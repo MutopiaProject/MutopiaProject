@@ -26,12 +26,14 @@
 \paper {
   % add space between composer and the first staff
   markup-system-spacing #'padding = #4
+  ragged-bottom = ##t
 }
 \layout {
   \context {
     \Score
     % add space between staves in piano staff
     \override StaffGrouper #'staff-staff-spacing #'padding = #5
+    \override StaffGrouper #'staff-staff-spacing #'basic-distance = #16
   }
 }
 
@@ -167,6 +169,7 @@ secondoUp =  {
     <g,-1 bes-3>4 r8 <g bes>4 r8
     <g bes>2. \fermata \bar "|."
   }
+  \pageBreak
 }
 
 secondoDown =  {
