@@ -1,5 +1,5 @@
-\version "1.4.9.uu1"
-\include "paper16.ly"
+\version "2.16.0"
+#(set-global-staff-size 16)
 \include "nederlands.ly"
 \header {
   title             = "Menuett"
@@ -8,7 +8,7 @@
   tagline           = "Public Domain"
   copyright         = "Public Domain"
   mutopiatitle      = "Rondo"
-  mutopiacomposer   = "I.J. Pleyel (1757-1831)"
+  mutopiacomposer   = "PleyelIJ"
   mutopiainstrument = "Piano"
   date              = "18th century"
   source            = "Unknown, late 19th century"
@@ -16,87 +16,87 @@
   copyright         = "Public Domain"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@zonnet.com"
-  lastupdated       = "2002/Feb/25"
+  lastupdated       = "2012/Nov/18"
 
-  tagline           = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer            = "Mutopia-2002/02/25-191"
+  footer            = "Mutopia-2012/11/18-191"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-Global = \notes {\key c\major \time 3/4}
-slurUp = \property Voice.Slur \set #'direction = #1
-slurDown = \property Voice.Slur \set #'direction = #-1
-phraseUp = \property Voice.PhrasingSlur \set #'direction = #1
-phraseDown = \property Voice.PhrasingSlur \set #'direction = #-1
+Global =  {\key c\major \time 3/4}
+slurUp = \override Slur   #'direction = #1
+slurDown = \override Slur   #'direction = #-1
+phraseUp = \override PhrasingSlur   #'direction = #1
+phraseDown = \override PhrasingSlur   #'direction = #-1
 
-VoiceI = \notes \relative c' {
+VoiceI =  \relative c' {
   \repeat volta 2 {
-  \stemBoth <e4 c'> <e c'> <e c'>
-  \slurDown \phraseUp <e2 ( c' \( > <) d4-. \) b'>
+  \stemNeutral <e c'>4 <e c'> <e c'>
+  \slurDown \phraseUp <e  c'  >2(\( <d b'>4\))-.
   <f a> <f a> <f a>
-  <f2 ( a \( > <) e4-. \) g>
+  <f  a  >2(\( <e g>4\))-.
   
   <c' e> <c e> <c e>
-  \slurUp <c2 e (> <d4 f>
-  <e g> <d f> <c ) e>
-  <c2 e (> <b4 ) d>
+  \slurUp <c e >2( <d f>4
+  <e g> <d f> <c e>)
+  <c e >2( <b d>4)
   }
   
   \repeat volta 2 {
   <b d> <b d> <cis e>
-  <cis2 e (> <d4 ) f-.>
+  <cis e >2( <d f>4)-.
   <a c!> <a c> <b d>
-  \slurDown <b2 ( d \(> <) c4 \) e-.>
+  \slurDown <b  d >2(\( <c e>4\))-.
   
   <e, c'> <e c'> <e c'>
-  <e2 c'> <f4 d'>
-  <g2 e'> <f4 d'>
-  <e c'> r_#'(large (italic (lines (" " "Fine.")))) r
+  <e c'>2 <f d'>4
+  <g e'>2 <f d'>4
+  <e c'> r_ \markup{\large {\italic {"Fine."}}} r
   }
   
   \repeat volta 2 {
   \slurUp f'8-> ( e d c bes a
   g4 a bes
-  ) a8 ( g a bes c d
+   a8) ( g a bes c d
   e4 f g
   
-  ) f-. e8-> ( g e c
-  ) f4-. e8-> ( g e c
+   f)-. e8-> ( g e c
+   f4)-. e8-> ( g e c
   f c <e g> c <f a> c
-  <f2 a> <e4 ) g>
+  <f a>2 <e g>4)
   }
   
   \repeat volta 2 {
   c8 ( d e f g e
   c4 bes a
-  ) g g8 ( a bes g
-  f4 a ) c
+   g) g8 ( a bes g
+  f4 a  c)
   
   g ( a bes
   c8 a f a c a
   bes g a f g e
-  ) f2 r4
+   f2) r4
   }
   }
-VoiceII = \notes \relative c {
-  \stemBoth \slurUp c4 ( e c
-  g'8 fis g fis ) g4-.
+VoiceII =  \relative c {
+  \stemNeutral \slurUp c4 ( e c
+  g'8 fis g fis  g4)-.
   f! ( a b
-  c8 b c b ) c4-.
+  c8 b c b  c4)-.
   
   c, ( c' b
   a g f
   e f fis
-  g8 fis g fis ) g4 
+  g8 fis g fis  g4) 
   
   g ( g' e
-  d8 cis d e ) d4-.
+  d8 cis d e  d4)-.
   f, ( f' d
-  c8 b c d ) c4-.
+  c8 b c d  c4)-.
   
   c, ( c' b
   a g f
   \phraseDown e8 f g4 g,
-  ) c-. \( g-. \) c,-. 
+   c)-. \( g-.  c,\)-. 
   
   <f' a> r r
   e8 c' f, c' g c
@@ -116,23 +116,25 @@ VoiceII = \notes \relative c {
   e, c' f, c' g c
   a2 r4
   bes ( c c,
-  ) f-._#'(large (italic (lines(" " "D.C. al Fine.")))) c-. f,-.
+   f)-._ \markup{\large {\italic {"D.C. al Fine."}}} c-. f,-.
   }
 
-\score {\notes {
-\context PianoStaff <
-  \property PianoStaff.midiInstrument = "bright acoustic"
-  \context Staff = "up" <
+\score { {
+\context PianoStaff <<
+  \set PianoStaff.midiInstrument = "bright acoustic"
+  \context Staff = "up" <<
     \Global \clef treble
     \context Voice=VcI \VoiceI
-  >
-  \context Staff = "down" <
+  >>
+  \context Staff = "down" <<
     \Global \clef bass
     \context Voice=VcII \VoiceII
-  >
->
+  >>
+>>
 }
-\paper {}
-\midi {\tempo 4=104}
-}
+\layout {}
 
+  \midi {
+    \tempo 4 = 104
+    }
+}
