@@ -1,42 +1,46 @@
 \header {
-  lastupdated = "Time-stamp: \"milan-pavan2.ly was last updated on Sun, 17 Oct 1999 06:07am\"";
-  filename =    "milan-pavan2.ly";
-  title =       "Pavan 2";
-  piece =       "Andante";
-  opus =        "";
-  composer =    "Luis Milan (1536-1561)";
+  filename =    "milan-pavan2.ly"
+  title =       "Pavan 2"
+  piece =       "Andante"
+  opus =        ""
+  composer =    "Luis Milan (1536-1561)"
 
 %{ 
 i know that 
-  piece = "tempo";
+  piece = "tempo"
 isn't correct, but it looks better than attaching it to the first
 note.
 %}
     
   % needed by mutopia:
 
-  mutopiainstrument =  "Vihuela, Guitar";
-  mutopiacomposer =    "Luis Milan (1536-1561)";
-  date =               "16th C.";
-  style =              "Renaissance";
-  copyright =          "public domain";  
-  maintainer =         "jeff covey <jeff.covey@pobox.com>";
-  tagline =            "\\\\This music is part of the Mutopia project, http://sca.uwaterloo.ca/Mutopia/\\\\It has been typeset and placed in the public domain by jeff covey.\\\\Unrestricted modification and redistribution is permitted and encouraged - copy this music and share it!";
+  mutopiainstrument =  "Vihuela, Guitar"
+  mutopiacomposer =    "MilanL"
+  date =               "16th C."
+  style =              "Renaissance"
+  source =             "Not known"
+  copyright =          "Public Domain"  
+  maintainer =         "jeff covey <jeff.covey@pobox.com>"
+  lastupdated =        "2012/11/29"
+
+  footer =             "Mutopia-2012/11/29-24"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "1.2.0";
+\version "2.16.0"
 
 
 % {{{ global settings
 
-global = \notes {
-  \key d; \time 3/2;
-  \skip 1.*24;
-  \bar ":|";
+global =  {
+  \key d \major \time 3/2
+\repeat volta 2 {
+  s1.*24
 }
-midi_stuff = \context Staff = guitar {
-  \property Staff.midiInstrument = "acoustic guitar (nylon)"
-  \property Staff.transposing = -12 % guitar music actually sounds an
+}
+midiStuff = \context Staff = "guitar" {
+  \set Staff.midiInstrument = "acoustic guitar (nylon)"
+  \transposition c  % guitar music actually sounds an
                                     % octave lower than written.
 }
 
@@ -44,63 +48,113 @@ midi_stuff = \context Staff = guitar {
   
 % {{{ melody
 
-melody = \notes \relative c'' {
-  \stemup
-  
-  fis2 fis g fis1 g2 fis e d cis4 d cis b a gis
-  e'2 e d4 cis b1 a2 d1 cis2 d1.
-  fis4 g a fis g2
-  fis4 g a fis g2
-  fis2 e d cis1. e2 e d4 cis b a b cis d2 a' a1 d,1.
+melody =  \relative c'' {
+  \voiceOne
+  fis2 fis g |
+  fis1 g2 |
+  fis e d |
+  cis4 d cis b a gis |
+  e'2 e d4 cis |
+  b1 a2 |
+  d1 cis2 |
+  d1. |
+  fis4 g a fis g2 |
+  fis4 g a fis g2 |
+  fis2 e d |
+  cis1. |
+  e2 e d4 cis |
+  b a b cis d2 |
+  a' a1 |
+  d,1.
 
-  fis1 g2 fis1 g2 fis e d cis1.
-  e2 e d4 cis b1 e2 d1 cis2 d1.
-      
+  fis1 g2 |
+  fis1 g2 |
+  fis e d |
+  cis1.
+  e2 e d4 cis |
+  b1 e2 |
+  d1 cis2 |
+  d1. |
 }
 
 % }}}
 % {{{ middle voice
 
-middlevoice = \notes \relative c'' {  
-  \stemup
+middlevoice =  \relative c'' {  
+\context Voice = "melody" {
+  <a d>2 <a d> <b d> |
+  <a d>1 <b d>2 |
+  <a d> a gis |
+}
+\context Voice = "bass" {
+  <e a>1 r2 |
+  \new Voice {\voiceFour a4 d cis b} fis2 |
+}
+\context Voice = "melody" {
+  <d g>1 fis2 |
+}
+\context Voice = "bass" {
+  g <e a>1 |
+  <fis a>1.
   
-  <a2 d> <a d> <b d> <a1 d> <b2 d> <a d> a gis <e1 a> r2
-  \stemdown
-  a4 d cis b fis2 <d1 g> 
-  \stemup
-  fis2
-  \stemdown
-  g <e1 a> <fis1. a>
+  d'1 \new Voice {\voiceFour b4 cis} |
+  d1 \new Voice {\voiceFour b4 cis |
+  <a d>2 g s |
+  a4 e fis gis a gis |
+  a2 a} fis |
+}
+\context Voice = "melody" {
+  g4 s2.
+}
+\new Voice {\voiceFour
+  a4 g
+  <<{fis2 e1} \new Voice {d'1 cis2}>>
   
-  d'1 b4 cis d1 b4 cis
-  <a2 d> g fis a4 e fis gis a gis a2 a fis
-  \stemup
-  g4 \skip 4*3;
-  \stemdown
-  a g <{fis2 e1} {d'1 cis2}>
-  
-  \skip 1.*2; d'1 d2 r4 d cis a2 gis4
-  a gis fis e fis gis a b cis a fis2
-  \skip 1*1; a4 g
-  fis2 <a1 e> <a1. fis>
-
+  s1.*2 |
+  d1 d2 |
+  r4 d cis a2 gis4 |
+  a gis fis e fis gis |
+  a b cis a fis2 |
+  s1 a4 g |
+}
+\context Voice = "bass" {
+  fis2 <a e>1 |
+  <a fis>1.
+}
 }
 
 % }}}
 % {{{ bass
 
-bass = \notes \relative c' {
-  \stemdown
+bass =  \relative c' {
+  \voiceTwo
   
-  d2 d g, d'1 g,2 d' cis b a1.
-  a1 d2 g,4 a b c d2 b a1 d1.
+  d2 d g, |
+  d'1 g,2 |
+  d' cis b |
+  a1. |
+  a1 d2 |
+  g,4 a b c d2 |
+  b a1 |
+  d1. |
   
-  d1 e2 d1 e2 
-  d1 fis2 a,1. a4 b cis a b2 <g1 d'> d'2 \skip 2*1; a1 d1.
+  d1 e2 |
+  d1 e2 |
+  d1 fis2 |
+  a,1. |
+  a4 b cis a b2 |
+  <g d'>1 d'2 |
+  s2 a1 |
+  d1. |
   
-  d'4 cis b a b cis
-  d,4 c b a b c
-  d2 a b a1. \skip 1.*1; g'4 fis e d cis2 d a1 d1.
+  d'4 cis b a b cis |
+  d,4 c b a b c |
+  d2 a b |
+  a1. |
+  s1. |
+  g'4 fis e d cis2 |
+  d a1 |
+  d1. |
 
 }
 
@@ -108,27 +162,28 @@ bass = \notes \relative c' {
         
 \score {
  
-      \context Staff = guitar < 
+      \new Staff = "guitar" << 
         \global 
-        \context Voice=melody      { \melody      }
-        \context Voice=middlevoice { \middlevoice }
-        \context Voice=bass        { \bass        }
-      >
+        \new Voice = "melody"      { \melody      }
+        \new Voice = "middlevoice" { \middlevoice }
+%\new Voice <<\melody \middlevoice>>
+        \new Voice = "bass"        { \bass        }
+      >>
 
-  \paper {
-    linewidth = 18.0 \cm;
-    gourlay_maxmeasures =4.;
-    \translator { \BarNumberingStaffContext }
+  \layout {
   }
 }
 
 \score {
-  \context Staff = guitar < 
-    \midi_stuff
+  \context Staff = "guitar" << 
+    \midiStuff
     \global 
     \melody
     \middlevoice
     \bass
-  >
-  \midi { \tempo 4=150; }
+  >>
+  
+  \midi {
+    \tempo 4 = 150
+    }
 }
