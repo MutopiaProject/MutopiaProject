@@ -3,24 +3,27 @@
 \header {
  mutopiatitle = "O How Amiable Are Thy Dwellings"
  mutopiacomposer = "WeelkesT"
- mutopiainstrument = "Voice"
+ mutopiainstrument = "Voice (SATB)"
+ mutopiapoet = "Psalm 84, vv. 1, 2 and 13"
+ mutopiasource = "Unknown"
+ mutopiastyle = "Hymn"
  style = "Classical"
- copyright = "MutopiaBSD"
+ copyright = "Creative Commons Attribution 3.0"
  maintainer = "Robert de Vries"
  maintainerEmail = "rhdv@xs4all.nl"
- lastupdated = "2012/Aug/19"
 
-  title = "O How Amiable Are Thy Dwellings"
-  composer = "Thomas Weelkes"
-  piece = "Psalm 84, vv. 1, 2 and 13."
+ title = "O How Amiable Are Thy Dwellings"
+ composer = "Thomas Weelkes"
+ piece = "Psalm 84, vv. 1, 2 and 13."
 
 %  footer = "VVE 2002"
 %  tagline = "VAK Vokaal Ensemble 2002"
-  footer = "Mutopia-2012/08/19-170"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2012. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the MutopiaBSD License, for details see: \hspace #-0.5 \with-url #"http://mutopiaproject.org/mutopiabsd.txt" http://mutopiaproject.org/mutopiabsd.txt } } } }
+
+ footer = "Mutopia-2013/01/06-170"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
 }
 
-\version "2.14.0"
+\version "2.16.1"
 
 
 sopraan = \relative c'' {
@@ -346,10 +349,7 @@ A1.. -- men,2 | A1*3 -- | men,2 A1*2 -- men.2 |
     >>
     
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 55 2)
-      }
+    \tempo 2 = 55
     }
 
 
