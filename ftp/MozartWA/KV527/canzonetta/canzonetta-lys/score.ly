@@ -1,62 +1,58 @@
 % This file contains the full score.
-\version "1.6.6"
+\version "2.16.0"
 
 Instrument = ""
 \include "header.ly"
-\include "paper13.ly"
+#(set-global-staff-size 13)
 \include "notes.ly"
 
 \score {
-  <
-    \context Staff = Mandolin <
-      \property Staff.midiInstrument = #"acoustic guitar (nylon)"
-      \property Staff.instrument = "Mandolin"
-      \property Staff.instr = "Mand."
+  <<
+    \context Staff = Mandolin <<
+      \set Staff.midiInstrument = #"acoustic guitar (nylon)"
+      \set Staff.instrumentName = "Mandolin"
+      \set Staff.shortInstrumentName = "Mand."
       \MandolinStaff
-    >
-    \addlyrics
-      \context Staff = DonGiovanni <
-        \property Staff.midiInstrument = #"cello"
-        \property Staff.instrument = "Don Giovanni"
-	\property Staff.instr = "D.G."
+    >>
+      \context Staff = DonGiovanni <<
+        \set Staff.midiInstrument = #"cello"
+        \set Staff.instrumentName = "Don Giovanni"
+	\set Staff.shortInstrumentName = "D.G."
         \DonGiovanniStaff
-      >
-      \context Lyrics \DonGiovanniLyrics
-    \context StaffGroup = Strings <
-      \context Staff = ViolinI <
-	\property Staff.midiInstrument = #"pizzicato strings"
-        \property Staff.instrument = "Violin I"
-	\property Staff.instr = "V. I"
+      >>
+    \addlyrics \DonGiovanniLyrics
+    \context StaffGroup = Strings <<
+      \context Staff = ViolinI <<
+	\set Staff.midiInstrument = #"pizzicato strings"
+        \set Staff.instrumentName = "Violin I"
+	\set Staff.shortInstrumentName = "V. I"
 	\ViolinIStaff
-      >
-      \context Staff = ViolinII < 
-	\property Staff.midiInstrument = #"pizzicato strings"
-        \property Staff.instrument = "Violin II"
-	\property Staff.instr = "V. II"
+      >>
+      \context Staff = ViolinII << 
+	\set Staff.midiInstrument = #"pizzicato strings"
+        \set Staff.instrumentName = "Violin II"
+	\set Staff.shortInstrumentName = "V. II"
 	\ViolinIIStaff
-      >
-      \context Staff = Viola <
-	\property Staff.midiInstrument = #"pizzicato strings"
-        \property Staff.instrument = "Viola"
-	\property Staff.instr = "Va."
+      >>
+      \context Staff = Viola <<
+	\set Staff.midiInstrument = #"pizzicato strings"
+        \set Staff.instrumentName = "Viola"
+	\set Staff.shortInstrumentName = "Va."
 	\ViolaStaff
-      >
-      \context Staff = Cello <
-	\property Staff.midiInstrument = #"pizzicato strings"
-        \property Staff.instrument = "Violoncello e Basso"
-	\property Staff.instr = "Vc. e B."
+      >>
+      \context Staff = Cello <<
+	\set Staff.midiInstrument = #"pizzicato strings"
+        \set Staff.instrumentName = "Violoncello e Basso"
+	\set Staff.shortInstrumentName = "Vc. e B."
 	\CelloStaff
-      >
-    >
-  >
-  \paper {
-   \translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }
-   linewidth = 18.0 \cm
-  }
-  \midi{
-    \tempo 4=72
-  }
+      >>
+    >>
+  >>
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 72
+    }
+
+
 }
-
-
-

@@ -1,18 +1,15 @@
 % Don Giovanni part.
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = "Don Giovanni"
 \include "header.ly"
-\include "paper20.ly"
+#(set-global-staff-size 20)
 \include "notes.ly"
 
 \score {
-  \addlyrics
     \context Staff = DonGiovanni \DonGiovanniStaff
-    \context Lyrics \DonGiovanniLyrics
+  \addlyrics \DonGiovanniLyrics
 
-  \paper {}
+  \layout {}
   % no midi here, use score.ly for midi output.
 }
-
-

@@ -1,25 +1,28 @@
-\version "1.6.4"
+\version "2.16.0"
 
 Instrument = ""
 \include "header2.ly"
 \include "notes2.ly"
 
-\include "paper20.ly"
+#(set-global-staff-size 20)
 
 \score {
-  <
-    \addlyrics
-      \context Staff = Voice <
-        \property Staff.midiInstrument = "cello"
-%        \property Staff.instrument = ""
+  <<
+      \context Staff = Voice <<
+        \set Staff.midiInstrument = "cello"
+%        \set Staff.instrumentName = ""
         \Voice
-      >
-      \context Lyrics \Lyr
+      >>
+    \addlyrics \Lyr
     \Piano
-  >
+  >>
 
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4=100}
-  \header { piece = "M\\\"a\\ss ig" }
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 100
+    }
+
+
+  \header { piece = "Mäßig" }
 }
-
