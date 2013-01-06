@@ -1,4 +1,4 @@
-\version "1.4.2"
+\version "2.16.0"
 
 \header {
    title = "Menuet in G"
@@ -9,28 +9,28 @@
 
    % mutopia headers
    mutopiatitle = "Menuet in G"
-   mutopiaopus = "BWV Anh. 114"
-   mutopiacomposer = "J. S. Bach (1685-1750)"
+   mutopiaopus = "BWVAnh114"
+   mutopiacomposer = "BachJS"
    mutopiainstrument = "Guitar"
 
    style = "Baroque"
    copyright = "Public Domain"
    maintainer = "Emre Akbas"
    maintainerEmail = "emreakbas@yahoo.com"
-   lastupdated = "2001/Aug/12"
+   lastupdated = "2012/Sep/23"
 
-   tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-   footer = "Mutopia-2001/08/13-102"
+   footer = "Mutopia-2001/09/23-102"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \score {
-   \notes
+   
    \relative c'' \sequential {
    	\time 3/4
 	\key g \major
 
-	\context Staff \notes\relative c'' <
-		\context Voice=one {
+	\context Staff \relative c'' <<
+		\context Voice = "one" {
 		   \stemUp 
 		   \repeat volta 2 {
 			d4 g,8 a b c |
@@ -56,18 +56,17 @@
 		   }
 		% second part 
 		   \repeat volta 2 {
-		   	\property Voice.TextSpanner \set #'edge-text = #'("1/2 CV " ."")
-		   	\property Voice.TextSpanner \set #'type = #'line
-		   	\property Voice.TextSpanner \set #'edge-height = #'(0 . 0.5)
-			b'4 \spanrequest \start "text"  
-			g8 a b g \spanrequest \stop "text" |
-			\property Voice.TextSpanner \override #'edge-text = #'("1/2 CIV " ."")
-			a4 \spanrequest \start "text"
-			d,8 e fis d \spanrequest \stop "text" |
+		   	\override TextSpanner #'(bound-details left text) = "1/2 CV"
+		   	\override TextSpanner #'style = #'line
+			\override TextSpanner #'(bound-details right text) = \markup { \draw-line #'(0 . -0.5) }
+
+			b'4 \startTextSpan g8 a b g \stopTextSpan |
+		   	\override TextSpanner #'(bound-details left text) = "1/2 CIV"
+			a4 \startTextSpan d,8 e fis d \stopTextSpan |
 			g4 e8 fis g d |
 			cis4 b8 cis a4 |
 			\break
-			[a8 b] [cis d] [e fis] |
+			 a8[ b]  cis[ d]  e[ fis] |
 			g4 fis e |
 			fis4 a, cis |
 			d2. |
@@ -77,7 +76,7 @@
 			d'4 c b |
 			a8 g fis g a4 |
 			\break
-			[d,8 e] [fis g] [a  b] |
+			 d,8[ e]  fis[ g]  a[  b] |
 			c4 b a |
 			b8 d g,4 fis |
 			g2.
@@ -86,7 +85,7 @@
 		   \bar "|."
 		}
 
-		\context Voice=two {
+		\context Voice = "two" {
 			\stemDown
 			g,2 a4 |
 			b2. | c2. | b2. |
@@ -119,10 +118,13 @@
 			g b, d |
 			g, d' g, |
 		}
-	>
+	>>
    }
-   \midi {
-       \tempo 4 = 136
-   }
-   \paper { }
+   
+  \midi {
+    \tempo 4 = 136
+    }
+
+
+   \layout { }
 }
