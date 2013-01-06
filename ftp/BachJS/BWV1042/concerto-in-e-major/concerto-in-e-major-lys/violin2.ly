@@ -8,13 +8,13 @@
 % I don't know if there's a piano arrangement which is out of copyright.
 
 \header {
-    \include "header.ly";
-    subtitle =	"for violin and strings (Violin 2)";
+    \include "header.ly"
+    subtitle =	"for violin and strings (Violin 2)"
     % Want "Violin 2" to appear in subtitle
-    filename = "violin2.ly";
+    filename = "violin2.ly"
 }
 
-\version "1.2.17";
+\version "2.16.0"
 \include "violin2_1.ly"
 \include "violin2_2.ly"
 \include "violin2_3.ly"
@@ -22,44 +22,58 @@
 
 % 1st movement, printed version
 \score {
-    \header { piece = \$piece1 ; opus = "" ; }
-    \notes \context Voice = ViolinII {
-        \key e \major; \time 2/2;
-        \$violin2_1
+     \context Voice = ViolinII {
+        \key e \major \timeB
+        \violinCB
     }
-    \paper { \translator { \VoiceContext beamAutoEnd = "1/4"; } }
+    \header {
+        piece = \pieceB
+        opus = ""
+    }
 }
 
 % 1st movement, midi version
 \score {
-    \notes \context Voice = ViolinII {
-	\property Staff.midiInstrument = \$violin_midi_instrument
-        \key e \major;  \time 2/2;
-        \$violin2_1_midi
+     \context Voice = ViolinII {
+	\set Staff.midiInstrument = \violinMidiInstrument
+        \key e \major  \timeB
+        \violinCBMidi
     }
-    \midi { \tempo 4 = 110; }
+    \midi {
+      \tempo 4 = 110
+    }
 }
 
 % 2nd movement
 \score {
-    \header { piece = \$piece2 ; opus = "" ; }
-    \notes \context Voice = ViolinII {
-        \property Staff.midiInstrument = \$violin_midi_instrument
-	\key e \major; \time 3/4;
-        \$violin2_2
+     \context Voice = ViolinII {
+        \set Staff.midiInstrument = \violinMidiInstrument
+	\key e \major \timeC
+        \violinCC
     }
-    \paper { \translator { \VoiceContext beamAutoEnd = "1/4"; } }
-    \midi { \tempo 4 = 50; }
+    \header {
+        piece = \pieceC
+        opus = ""
+    }
+    \layout {}
+    \midi {
+      \tempo 4 = 50
+    }
 }
 
 % 3rd movement
 \score {
-    \header { piece = \$piece3 ; opus = "" ; }
-    \notes \context Voice = ViolinII {
-        \property Staff.midiInstrument = \$violin_midi_instrument
-	\key e \major; \time 3/8;
-        \$violin2_3
+     \context Voice = ViolinII {
+        \set Staff.midiInstrument = \violinMidiInstrument
+	\key e \major \timeD
+        \violinCD
     }
-    \paper {}
-    \midi { \tempo 4 = 120; }
+    \header {
+        piece = \pieceD
+        opus = ""
+    }
+    \layout {}
+    \midi {
+      \tempo 4 = 120
+    }
 }

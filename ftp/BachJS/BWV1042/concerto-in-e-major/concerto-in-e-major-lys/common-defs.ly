@@ -1,17 +1,30 @@
+\version "2.16.0"
 % Various stuff common to the score and the different solo parts,
 % put in one place to ensure consistency.
 
-piece1 = "Allegro"
-piece2 = "Adagio"
-piece3 = "Allegro Assai"
-violin_midi_instrument = "violin"
-viola_midi_instrument = "viola"
-continuo_midi_instrument = "cello"
-accomp_midi_instrument = "harpsichord"
+pieceB = "Allegro"
+pieceC = "Adagio"
+pieceD = "Allegro Assai"
+violinMidiInstrument = "violin"
+violaMidiInstrument = "viola"
+continuoMidiInstrument = "cello"
+accompMidiInstrument = "harpsichord"
+timeB = {
+  \time 2/2
+  \set Timing.beamExceptions = #'(
+    (end . (
+    ((1 . 16) . (4 4 4 4))
+    )))
+}
+timeC = {
+  \time 3/4
+  \set Timing.beamExceptions = #'(
+    (end . (
+    ((1 . 8) . (2 2 2))
+    )))
+}
+timeD = \time 3/8
 
-\paper {
-    linewidth = 18.0 \cm;
-    \translator { \StaffContext \consists "Bar_number_engraver"; }
-    \translator { \StaffContext timeSignatureStyle = "C"; }
-    \translator { \ScoreContext skipBars = 1; }
+\layout {
+    \context { \Score skipBars = ##t }
 }
