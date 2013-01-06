@@ -201,7 +201,6 @@ until (eof CACHE) {
    if ($source ne "") { print "<td>$source</td>\n"; }
    else { print "<td>&nbsp;</td>\n"; }
    if ($copyright eq "Public Domain") { print "<td><a href=\"../legal.html#publicdomain\">Public Domain</a></td>\n"; }
-   elsif ($copyright eq "MutopiaBSD") { print "<td><a href=\"../legal.html#mutopiabsd\">MutopiaBSD</a></td>\n"; }
    elsif ($copyright eq "Creative Commons Attribution-ShareAlike") {
     print "<td><a href=\"../legal.html#ccasa\">";
     print "Creative Commons Attribution-ShareAlike</a></td>\n";

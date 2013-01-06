@@ -96,8 +96,6 @@ if ($licence eq "Public Domain") {
             "<img src=\"../images/cc.primary.nrr.gif\" alt=\"CC: No rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/pd.rdf\" type=\"application/rdf+xml\" />\n";
-} elsif ($licence eq "MutopiaBSD") {
- $licence = "<a href=\"../legal.html#mutopiabsd\">MutopiaBSD</a>";
 } elsif ($licence eq "Creative Commons Attribution-ShareAlike") {
  $licence = "<a href=\"../legal.html#ccasa\">" .
             "Creative Commons Attribution-ShareAlike</a>\n &nbsp;&nbsp;&nbsp;" .
