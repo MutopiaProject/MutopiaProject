@@ -1,37 +1,31 @@
 \header {
- mutopiatitle = "Anke van Tharaw"
- mutopiacomposer = "F. Silcher (1789-1860)"
- mutopiapoet = "J. S. Dach (1605-1659)"
- mutopiainstrument = "Choir SATB"
- date = "1827"
- source = "http://ingeb.org/"
- style = "Romantic"
- copyright = "Public Domain"
- maintainer = "Kris Van Bruwaene"
- maintainerEmail = "krvbr@yahoo.co.uk"
- lastupdated = "2002/aug/05"
+  mutopiatitle = "Anke van Tharaw"
+  mutopiacomposer = "SilcherF"
+  mutopiapoet = "J. S. Dach (1605-1659)"
+  mutopiainstrument = "Choir SATB"
+  date = "1827"
+  source = "http://ingeb.org/"
+  style = "Romantic"
+  copyright = "Public Domain"
+  maintainer = "Kris Van Bruwaene"
+  maintainerEmail = "krvbr@yahoo.co.uk"
+  lastupdated = "2012/12/28"
   title="Anke van Tharaw"
   composer="Friedrich Silcher (1827)"
   poet="Johann Simon Dach (1636)"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer = "Mutopia-2002/08/05-262"
+  footer = "Mutopia-2012/12/28-262"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "1.4.0"
-global = \notes {
+\version "2.16.0"
+global =  {
    \time 3/4
    \key bes \major
    \skip 1*18 \bar "|."
 }
-trackXvoiceA = \notes {}
 
-trackX = <
-	\context Voice = trackXvoiceA \trackXvoiceA
->
- % track@
-
-sopranoMelody = \notes \relative c' 
+sopranoMelody =  \relative c' 
 	{ 
 	f4. g8 f4 f bes bes c4. d8 c4 bes2 r4 a a a
 	c4. bes8 a4 g4. a8 g4 f2 r4 
@@ -41,7 +35,7 @@ sopranoMelody = \notes \relative c'
 	bes c a4 bes2 r4
 	}
 
-altoMelody = \notes \relative c' {
+altoMelody =  \relative c' {
 	d4. es8 d4 d d d es4. f8 es4 d2 r4 c c c
 	c4. c8 c4 c4. c8 c4 c2 r4 
 	d4. es8 d4 d d d es4. f8 es4 d2 r4 c c c
@@ -49,7 +43,8 @@ altoMelody = \notes \relative c' {
 	f4 c e f f e f f f f2 r4 f4 es bes' bes4. bes8 g4 
 	f g f f2 r4  
 	}
-tenorMelody = \notes \relative g {
+
+tenorMelody =  \relative g {
 	f4. f8 f4 f f f a4. a8 a4 bes2 r4 f f f
 	a4. g8 f4 bes4. bes8 bes4 a2 r4 
 	f4. f8 f4 f f f a4. a8 a4 bes2 r4 f f f
@@ -57,7 +52,8 @@ tenorMelody = \notes \relative g {
 	a c c c a c c d d es2 r4 d4 es f es4. f8 es4 
 	f es c d2 r4
 	}
-bassMelody = \notes \relative c {
+
+bassMelody =  \relative c {
 	bes4. bes8 bes4 bes bes bes f'4. f8 f4 bes,2 r4 f' f, f'
 	a4. g8 f4 c4. c8 c4 f2 r4 
 	bes,4. bes8 bes4 bes bes bes f'4. f8 f4 bes,2 r4 f' f, f'
@@ -65,85 +61,84 @@ bassMelody = \notes \relative c {
 	f, a c f a g f d bes f2 r4 bes' a gis g4. f8 es4 
 	d c f bes,2 r4
 	}
-tekst = \lyrics {
-	An -- ke van Tha -- raw \"o\ss, de my ge -- f\"olt,
-	Se \"o\ss mihn Le -- wen, mihn Goet on mihn G\"olt.
+
+tekst = \lyricmode {
+	An -- ke van Tha -- raw öß, de my ge -- fölt,
+	Se öß mihn Le -- wen, mihn Goet on mihn Gölt.
 	An -- ke van Tha -- raw heft wed -- der eer Hart
-	Op my ge -- r\"och -- tet \"on L\"ow on \"on Schmart.
+	Op my ge -- röch -- tet ön Löw on ön Schmart.
 	An -- ke van Tha -- raw mihn Rihk -- dom, mihn Goet,
 	Du mih -- ne see -- le, mihn Fleesch on mihn Bloet.
 }
+
 sopranoTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = soprano { 
-                \property Staff.instrument = "S"
-	      	\property Staff.midiInstrument = "voice oohs"
+	      \context Staff = "soprano" { 
+                \set Staff.instrumentName = "S"
+	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "violin"
-		\property Staff.automaticMelismata = ##t
-				\notes \context Voice=soprano< 
+				 \context Voice=soprano<< 
 						\global
 						\sopranoMelody
-						>
+						>>
 					}
-		     \context Lyrics = "soprano" \tekst
+		     \new Lyrics \lyricsto "soprano" { \tekst }
 	      }
 
 altoTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = alto { 
-                \property Staff.instrument = "A"
-	      	\property Staff.midiInstrument = "voice oohs"
+	      \context Staff = "alto" { 
+                \set Staff.instrumentName = "A"
+	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "violin"
-		\property Staff.automaticMelismata = ##t
-				\notes \context Voice=alto< 
+				 \context Voice=alto<< 
 						\global
 						\altoMelody
-						>
+						>>
 					}
-		     \context Lyrics = "alto" \tekst
+		     \new Lyrics \lyricsto "alto" { \tekst }
 	      }
 
 tenorTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = tenor { 
-                \property Staff.instrument = "T"
-	      	\property Staff.midiInstrument = "voice oohs"
+	      \context Staff = "tenor" { 
+                \set Staff.instrumentName = "T"
+	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "violin_8"
-		\property Staff.automaticMelismata = ##t
-				\notes \context Voice=tenor< 
+				 \context Voice=tenor<< 
 						\global
 						\tenorMelody
-						>
+						>>
 					}
-		     \context Lyrics = "tenor" \tekst
+		     \new Lyrics \lyricsto "tenor" { \tekst }
 	      }
 
 bassTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = bass { 
-                \property Staff.instrument = "B"
-	      	\property Staff.midiInstrument = "voice oohs"
+	      \context Staff = "bass" { 
+                \set Staff.instrumentName = "B"
+	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "bass"
-		\property Staff.automaticMelismata = ##t
-				\notes \context Voice=bass< 
+				 \context Voice=bass<< 
 						\global
 						\bassMelody
-						>
+						>>
 					}
-		     \context Lyrics = "bass" \tekst
+		     \new Lyrics \lyricsto "bass" { \tekst }
 	      }
 
         
 \score {
-     \context ChoirStaff = choir <
+     \context ChoirStaff = "choir" <<
        \sopranoTotal
        \altoTotal
        \tenorTotal
        \bassTotal
-     >
+     >>
 
-  \paper { interscoreline = 3 }
-  \midi  { \tempo 4=120 }
+  \layout {
+    #(layout-set-staff-size 19.5)
+  }
+  
+  \midi {
+    \tempo 4 = 120
+  }
 }
 
 % EOF
