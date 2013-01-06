@@ -7,20 +7,19 @@
   composer = "Anton Diabelli"
   opus = "Op 149"
 
-  mutopiatitle = "28 melodische Übungsstücke"
+  mutopiatitle = "28 melodische Übungsstücke (No. 10)"
   mutopiacomposer = "DiabelliA"
-  mutopiaopus = "Opus 149-10"
-  mutopiainstrument = "Piano, Piano"
-  source = "If I could know..."
+  mutopiaopus = "Op. 149"
+  mutopiainstrument = "Piano Duet"
+  source = "Unknown"
   style = "Classical"
-  copyright = "MutopiaBSD"
+  copyright = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Alberto Simões"
   maintainerEmail = "ambs@cpan.org"
   maintainerWeb = "http://alfarrabio.di.uminho.pt/~albie"
-  lastupdated = "2004/Mar/04"
 
-  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and released under the MutopiaBSD licence by " + \maintainer + ".} \\makebox[\\textwidth][c]{You should have received a copy of the licence with this music. If not, it is available at the above website.}}"
-  footer = "Mutopia-2004/03/04-416"
+ footer = "Mutopia-2013/01/06-416"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 \paper {
