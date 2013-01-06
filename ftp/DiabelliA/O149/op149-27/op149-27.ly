@@ -1,26 +1,38 @@
-\version "2.4.0"
+\version "2.16.1"
 % $Revision: 1.2 $
 
 \header {
-     title = "28 melodische Übungsstücke"
+     title = "28 melodische ÃœbungsstÃ¼cke"
      subtitle = "27."
      composer = "Anton Diabelli"
      opus = "Op 149"
 
-     mutopiatitle = "28 melodische Übungsstücke"
-     mutopiacomposer = "Anton Diabelli"
+     mutopiatitle = "28 melodische ÃœbungsstÃ¼cke"
+     mutopiacomposer = "DiabelliA"
      mutopiaopus = "Opus 149-27"
      mutopiainstrument = "Piano, Piano"
-     source = "If I could know..."
+     source = "Unknown"
      style = "Classical"
      copyright = "Creative Commons Attribution-ShareAlike 2.0"
-     maintainer = "Alberto Simões"
+     maintainer = "Alberto SimÃµes"
      maintainerEmail = "ambs@cpan.org"
      maintainerWeb = "http://alfarrabio.di.uminho.pt/~albie"
-     lastupdated = "2005/May/15"
+     lastupdated = "2012/12/31"
 
 footer = "Mutopia-2005/05/15-560"
 tagline = "\\raisebox{5mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright \\ The Mutopia Project \\& "+ \maintainer + " 2005.} \\makebox[188mm][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License. To view a copy of that license visit} \\makebox[188mm][c]{\\texttt{http://creativecommons.org/licenses/by-sa/2.0/} \\footnotesize or write to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}}"
+}
+
+\paper {
+  % add space between composer and the first staff
+  markup-system-spacing #'padding = #4
+}
+\layout {
+  \context {
+    \Score
+    % add space between staves in piano staff
+    \override StaffGrouper #'staff-staff-spacing #'padding = #5
+  }
 }
 
 primoDynamics =  {
@@ -36,7 +48,7 @@ primoUp =  {
      \key e \major
      \relative c''' {
          \override Score.OttavaBracket   #'padding = #2
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    b4..(-5-> gis16-3 e4)-1 r8. gis16
@@ -68,7 +80,7 @@ primoDown =  {
      \clef treble
      \key e \major
      \relative c'' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    <gis-3 b-1>2 r8 <gis b>8(-. <gis b>-. <gis b>)-.
@@ -111,7 +123,7 @@ secondoUp =  {
      \clef bass
      \key e \major
      \relative c' {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    r16 gis(-2 b-3 e-5 b-3 gis b e) r gis,( b e b gis b e)
@@ -145,7 +157,7 @@ secondoDown =  {
      \clef bass
      \key e \major
      \relative c, {
-	#(set-accidental-style 'modern)
+	\accidentalStyle "modern"
 	\set fingeringOrientations = #'(left)
 	\repeat volta 2 {
 	    <e e'>4 r e8 r e' r
@@ -176,77 +188,25 @@ secondoDown =  {
 
 \score{
      \context PianoStaff  <<
-	\set PianoStaff.instrument = "Secondo     "
+	\set PianoStaff.instrumentName = "Secondo     "
 	\context Staff = "up"   \secondoUp
 	\context Dynamics = "dynamics" \secondoDynamics
 	\context Staff = "down" \secondoDown
->>
-     \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	
-	    \consists "Skip_event_swallow_translator"
-	
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-     }
+      >>
+     \layout {}
      \header { piece = "Andante." }
 }
 
 
 \score{
      \context PianoStaff <<
-	\set PianoStaff.instrument = "Primo     "
+	\set PianoStaff.instrumentName = "Primo     "
 	\context Staff = "up"   \primoUp
 	\context Dynamics = "dynamics" \primoDynamics
 	\context Staff = "down" \primoDown
->>
+      >>
 
-     \layout {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-
-	    minimumVerticalExtent = #'(-1 . 1)
-
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.0)
-	    \override Hairpin #'extra-offset = #'(0 . 2.0)
-	
-	    \consists "Skip_event_swallow_translator"
-	
-	    \consists "Axis_group_engraver"
-	}
-	\context {
-	    \PianoStaff
-	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
-	}
-     }
+     \layout {}
      \header { piece = "Andante."}
 }
 
@@ -255,15 +215,17 @@ secondoDown =  {
 \score{
      \context PianoStaff  <<
 	\context Staff = "up"   <<
-	    \applymusic #unfold-repeats \primoUp
-	    \applymusic #unfold-repeats \secondoUp
+	    \applyMusic #unfold-repeats \primoUp
+	    \applyMusic #unfold-repeats \secondoUp
 	>>
 	\context Staff = "down" <<
-	    \applymusic #unfold-repeats \primoDown
-	    \applymusic #unfold-repeats \secondoDown
+	    \applyMusic #unfold-repeats \primoDown
+	    \applyMusic #unfold-repeats \secondoDown
 	>>
->>
-     \midi { \tempo 4 = 70 }
+      >>
+     \midi {
+       \tempo 4 = 70
+     }
 }
 
 
