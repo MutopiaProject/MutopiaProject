@@ -1,15 +1,15 @@
-%\version "1.4.9.uu1"
-\include "paper16.ly"
+\version "2.16.0"
+
+#(set-global-staff-size 17)
 \include "nederlands.ly"
 \header {
   title             = "Sonatine"
-  composer          = "Johann André (1741-1799)"
+  composer          = "Johann AndrÃ© (1741-1799)"
   opus              = "Opus 34. I."
   meter             = "Moderato ma con moto."
   copyright         = "Public Domain"
-  tagline           = "Public Domain"
   mutopiatitle      = "Sonatine"
-  mutopiacomposer   = "J. André (1741-1799)"
+  mutopiacomposer   = "AndreJ"
   mutopiainstrument = "Piano"
   date              = "18th century"
   source            = "Unknown, late 19th century"
@@ -17,133 +17,131 @@
   copyright         = "Public Domain"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@zonnet.com"
-  lastupdated       = "2002/Feb/27"
+  lastupdated       = "2012/Aug/30"
 
-  tagline           = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer            = "Mutopia-2002/02/27-207"
+  footer            = "Mutopia-2012/08/30-207"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-Global = \notes {\key c\major \time 2/2}
-tieUp = \property Voice.Tie \override #'direction = #1
-tieBoth = \property Voice.Tie \override #'direction = #0
-tieDown = \property Voice.Tie \override #'direction = #-1
-slurUp = \property Voice.Slur \override #'direction = #1
-slurBoth = \property Voice.Slur \override #'direction = #0
-slurDown = \property Voice.Slur \override #'direction = #-1
+Global =  {\key c\major \time 2/2}
 Treble = \clef treble
 Bass = \clef bass
 
-VoiceI = \notes \relative c'' {
+VoiceI =  \relative c'' {
   \repeat volta 2 {
-  \stemBoth \slurBoth \property Voice.DynamicLineSpanner \override #'padding = #2.5 g4\fp ( c b c
+  \stemNeutral \slurNeutral g4( c b c
   d2 f
   e4 c d b
-  c2 ) g (
+  c2  g) (
   
-  ) e'4 ( b c a
+   e'4) ( b c a
   d a b2
-  ) a4 \property Voice.DynamicLineSpanner \set #'padding = #1 <a\cr ( c> <g b> <)fis a>
-  <fis2\rc\decr ( a> ) g4\rced r
+   a4) <a c>( <g b> <fis a>)
+  <fis a>2(  g4) r
   }
   
   \repeat volta 2 {
-  g ( d' c d
-  e2 c \property Voice.TextScript \override #'extra-offset = #'(0 . -3)
-  ) g4_#'(italic "cresc.") ( e' d e
+  g( d' c d
+  e2 c
+  g4)( e' d e
   f2 d
   
-  ) g,4-. \tieUp g'2->\cr ( f4 ~
-  f e2 d4\rc \property Voice.TextScript \set #'extra-offset = #'(0 . -1.5)
-  c_#'(italic "decresc.") b a d
-  c8-> b a g fis g a ) g-.
+   g,4)-. \tieUp g'2-> ( f4 ~
+  f e2 d4
+  c b a d
+  c8-> b a g fis g a  g)-.
   
-  \property Voice.TextScript \set #'extra-offset = #'(0 . -2.5) g4_#'(italic "dolce") ( c b c
+  g4_ \markup{\italic "dolce"} ( c b c
   d2 f
   e4 c b c
-  d2 ) f (
+  d2  f) (
   
-  \property Voice.TextScript \set #'extra-offset = #'(0 . -1) e4 ) c_#'(italic "cresc.") ( f c
-  fis d g4. ) f8 (
-  ) e4 <d f (> <c ) e> <f, d'>
-  \property Voice.DynamicLineSpanner \set #'padding = #3 <f2\decr ( d'> <) e4\rced c'> r
+  e4  c) ( f c
+  fis d g4.  f8) (
+   e4) <d f >( <c e>) <f, d'>
+  <f  d'>2( <e c'>4 r)
   }
   
   \repeat volta 2 {
-  \time 2/4 \property Voice.DynamicText \override #'extra-offset = #'(0 . -1)
-  \property Voice.TextScript \revert #'extra-offset \property Voice.DynamicLineSpanner \set #'padding = #2 \partial 4 c'8\p^#'(large (lines ("Allegretto" " ")))^#'(Large "Rondo") ( b16 c
-  ) d8-. d-. b16 ( c d b
-  c8 ) g-. c\cr ( b16 c
-  ) d8-. <a-. c> <g-. b> <fis-.\rc a>
+  \time 2/4
+  \set Timing.measurePosition = #(ly:make-moment -1 4)
+  c'8^\markup{\center-column{Rondo \line{Allegretto}}} ( b16 c
+   d8)-. d-. b16 ( c d b
+  c8  g)-. c( b16 c
+   d8)-. <a c>-. <g b>-. <fis a>-.
   
-  g4 \property Voice.DynamicText \set #'extra-offset = #'(0 . 1) c8\f ( b16 c
-  ) d8-. d-. b16 ( c d b
-  c8 ) g-. \property Voice.DynamicLineSpanner \set #'padding = #1 c16\cr ( d ) e-. c-.\rc
-  a8-. <d f-.> <c e-.> <b d-.>
-  \partial 4 c4
+  g4 c8( b16 c
+   d8)-. d-. b16 ( c d b
+  c8  g)-. c16 ( d  e)-. c-.
+  a8-. <d f>-. <c e>-. <b d>-.
+  c4
   }
   
   \repeat volta 2 {
-  \partial 4 \property Voice.DynamicText \revert #'extra-offset <c8\p\cr e-.> <c e-.>
+  <c e>8-. <c e>-.
   
-  <b4\rc d-> > \Bass <c,8\cr e-.> <c e-.>
-  <b4\rc d-> > \Treble <c'8\f e-.> <c e-.>
-  <b d-.> <b d-.> <a c-.> <a c-.>
-  <g4 b> \property Voice.DynamicText \override #'extra-offset = #'(0 . -1.5) <g8-.\p a> <g-. a>
+  <b d >4-> \Bass <c, e>8-. <c e>-.
+  <b d >4-> \Treble <c' e>8-. <c e>-.
+  <b d>-. <b d>-. <a c>-. <a c>-.
+  <g b>4 <g a>8-. <g a>-.
   
-  <\context Voice=VA <\voiceOne\stemUp\slurUp {b8-. c () b-. a-.}> 
-   \context Voice=VB <\voiceTwo\stemDown\slurDown {g8 \property Voice.DynamicLineSpanner \override #'padding = #-1 g4\decr fis8\rced}>>
-  g4 b16\cr ( c d e\rc
-  ) f8-. <d f-.> <c e-.> <c e-.>
-  <b4 d> \Bass b,16\cr ( c d e\rc
+  <<\stemUp\slurUp {b8-. c( b)-. a-.} \\ 
+  \stemDown\slurDown {g8 g4 fis8} >>
+  g4 b16( c d e
+   f8)-. <d f>-. <c e>-. <c e>-.
+  <b d>4 \Bass b,16( c d e
   
-  ) f8-. <d f-.> <c e-.> <c e-.>
-  <b4 d> r
-  f'16 ( e d c ) b8-. r
-  \Treble f''16-> ( e d c b\cr c d e
+   f8)-. <d f>-. <c e>-. <c e>-.
+  <b d>4 r
+  f'16 ( e d c  b8)-. r
+  \Treble f''16-> ( e d c b c d e
   
-  f e f e f e f e\rc
-  ) f8-. r d-.\p r
-  b4->\fermata c8\p ( b16 c
-  ) d8-. d-. b16 ( c d b
+  f e f e f e f e
+   f8)-. r d-. r
+  b4->_\fermata c8 ( b16 c
+   d8)-. d-. b16 ( c d b
   
-  c8 ) g-. c\cr ( b16 c
-  ) d8-. <a c-.> <g b-.> <fis\rc a-.>
-  g4 \property Voice.DynamicText \revert #'extra-offset c8\f ( b16 c
-  ) d8-. d-. b16\cr ( c d b\rc
+  c8  g)-. c ( b16 c
+   d8)-. <a c>-. <g b>-. <fis a>-.
+  g4 c8( b16 c
+   d8)-. d-. b16 ( c d b
   
-  c8 ) g-. c16 ( d ) e-. c-.
-  a8-. <d f-.> <c e-.> <b d-.>
-  \partial 4 c4
+  c8  g)-. c16 ( d  e)-. c-.
+  a8-. <d f>-. <c e>-. <b d>-.
+  c4
   }
   
-  \partial 4 \property Voice.DynamicText \override #'extra-offset = #'(0 . -1) c16\pp ( d e c
-  ) g8-. g-. c16 ( d e c
-  ) g8-. g-. c16\f ( d ) e-. c-.
-  a8 <d f-.> <c e-.> <f, b d-.>
-  \partial 4 <e4 c'>
+  c16( d e c
+   g8)-. g-. c16 ( d e c
+   g8)-. g-. c16( d  e)-. c-.
+  a8 <d f>-. <c e>-. <f, b d>-.
+  <e c'>4
   \bar "|."
   }
 
-VoiceII = \notes \relative c {
-  \stemBoth \slurBoth r4 e ( d c
+VoiceII =  \relative c {
+  \repeat volta 2 {
+  \stemNeutral \slurNeutral r4 e ( d c
   b d b g
   c e f g
-  e g e ) c
+  e g e  c)
   
   r gis' ( a g
   fis2 g4 e
   c a d d,
-  g d ) g, r
+  g d  g,) r
+  }
   
+  \repeat volta 2 {
   r b'' ( a b
-  c g e' ) g,
+  c g e'  g,)
   r c ( b c
-  d g, b ) g
+  d g, b  g)
   
   r e' ( g, d'
-  g, c g ) b (
+  g, c g  b) (
   a2 d,
-  ) g r
+   g) r
   
   r4 e8 ( g d g c, g'
   b, g' d g b, g' d g
@@ -152,71 +150,150 @@ VoiceII = \notes \relative c {
   
   c, c' bes c a c a c
   d, d' c d b! d b d
-  ) c4 f, ( g g,
-  c g ) c, r
+   c4) f, ( g g,
+  c g  c,) r
+  }
   
+  \repeat volta 2 {
+  \set Timing.measurePosition = #(ly:make-moment -1 4)
   \Treble \time 2/4 e''8 ( g
   f g d g
-  ) e4 e8 ( c
-  ) b-. c-. d-. d-.
+   e4) e8 ( c
+   b)-. c-. d-. d-.
   
   \Bass g,16 ( f! e d e g e g
   f g f g d g d g
-  e g e g e d ) c-. e-.
+  e g e g e d  c)-. e-.
   f8-. d-. g-. g,-.
   c4
+  }
   
+  \repeat volta 2 {
   \Treble c'16 ( d e f
-  ) g8-. g,-. \Bass c,16 ( d e f
-  ) g8-. g,-. c16 ( d e fis
-  g a b c ) d8-. dis-.
+   g8)-. g,-. \Bass c,16 ( d e f
+   g8)-. g,-. c16 ( d e fis
+  g a b c  d8)-. dis-.
   e4-> cis16 ( d e cis
   
-  ) d8-. e () d-. d,-.
+   d8)-. e ( d)-. d,-.
   g4 g16 ( a b c
-  ) d8-. b-. c-. c,-.
+   d8)-. b-. c-. c,-.
   g'4-> r
   
-  r8 [b,-. c-. c,-.]
+  r8  b,[-. c-. c,-.]
   g'4-> g16 ( a b c
-  ) d8-. r \Treble g16 ( a b c
-  ) d8-. r g16 ( a b c
+   d8)-. r \Treble g16 ( a b c
+   d8)-. r g16 ( a b c
   
   d cis d cis d cis d cis
-  ) d8-. r b-. r
+   d8)-. r b-. r
   g4->\fermata e8 ( g
   f g d g
   
-  ) e4 e8 ( c
-  ) b c-. d-. d-.
+   e4) e8 ( c
+   b) c-. d-. d-.
   \Bass g,16 ( f! e d e g e g
   f g f g d g d g
   
-  e g e g e d ) c-. e-.
+  e g e g e d  c)-. e-.
   f8-. d-. g-. g,-.
   c4
+  }
   
   \Treble r
-  <b'8-. f'> <b-. f'> <c-. e> r
-  \Bass <b, f'-.> <b f'-.> e16 ( d ) c-. e-.
+  <b' f'>8-. <b f'>-. <c e>-. r
+  \Bass <b, f'>-. <b f'>-. e16 ( d  c)-. e-.
   f8-. d-. g-. g,-.
   c4
   }
 
-\score {\notes {
-\context PianoStaff <
-  \property PianoStaff.midiInstrument = "acoustic grand"
-  \context Staff = "up" <
-    \Global \clef treble
-    \context Voice=VcI \VoiceI
-  >
-  \context Staff = "down" <
-    \Global \clef bass
-    \context Voice=VcII \VoiceII
-  >
->
-}
-\paper {}
-\midi {\tempo 4=104}
+Dyns = \new Dynamics {
+  \repeat volta 2 {
+  s4\fp s2. |
+  s1*5 |
+  s4 s4\< s2 |
+  s2\> s4\! s |
+  }
+  
+  \repeat volta 2 {
+  s1*2 |
+  s4 s\cresc s s\! |
+  s1 |
+  s4 s2\< s4 |
+  s2. s4\! |
+  s\decresc s s\! s |
+  s1*5 |
+  s4 s\cresc s s\! |
+  s1*2 |
+  s2\> s4\! s
+  }
+  
+  \repeat volta 2 {
+  \time 2/4
+  \set Timing.measurePosition = #(ly:make-moment -1 4)
+  s4 |
+  s2 |
+  s4 s8\< s |
+  s4. s8\! |
+  s4 s8\f s |
+  s2 |
+  s4 s16\< s s s16\! |
+  s2 |
+  s4
+  }
+  
+  \repeat volta 2 {
+  s8\p\< s8 |
+  
+  s4\! s8\< s |
+  s4\! s8\f s |
+  s2 |
+  s4 s8\p s |
+  
+  s8 s4\> s8\! |
+  s4 s16\< s s s\! |
+  s2 |
+  s4 s16\< s s s\! |
+  
+  s2*3 |
+  s4 b16\< s s8 |
+  
+  s s s s16 s\! |
+  s4 s8\p s |
+  s4 s8\p s |
+  s2 |
+  
+  s4 s8\< s |
+  s4 s8 s\! |
+  s4 s8\f s |
+  s4 s16\< s s s\! |
+  
+  s2*2 |
+  s4
+  }
+  
+  s16\pp s s8 |
+  s2 |
+  s4 s16\f s16 s8 |
 }
 
+\score { {
+\context PianoStaff <<
+  \set PianoStaff.midiInstrument = "acoustic grand"
+  \new Staff = "up" {
+    \Global \clef treble
+    \new Voice=VcI \VoiceI
+  }
+  \Dyns
+  \new Staff = "down" {
+    \Global \clef bass
+    \new Voice=VcII \VoiceII
+  }
+>>
+}
+\layout {}
+
+  \midi {
+    \tempo 4 = 104
+    }
+}
