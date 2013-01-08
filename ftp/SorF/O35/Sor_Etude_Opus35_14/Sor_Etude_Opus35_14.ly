@@ -1,52 +1,52 @@
 \header {
-	title =		"Etude";
-	composer =	"Fernando Sor";
-	opus =		"Opus 35, No. 14";
-	% instrument =	"Guitar";
+	title =		"Etude"
+	composer =	"Fernando Sor"
+	opus =		"Opus 35, No. 14"
+	% instrument =	"Guitar"
 
 	% Mutopia file info:
 
-	mutopiatitle =	"Etude";
-	mutopiacomposer =	"Fernando Sor (1778-1839)";
-	mutopiaopus =	"Opus 35, No. 14";
-	mutopiainstrument =	"Guitar";
-	style =		"Classical";
-	copyright =	"Public Domain";
-	filename =	"Sor_Etude_Opus35_14.ly";
-	enteredby =	"Jakob Bagterp";
-	maintainer =	"Jakob Bagterp";
-	maintainer_email =	"jakob_bagterp@hotmail.com";
-	lastupdated =	"2001/March/29";
-	footer =	"Mutopia-2001/03/29-64";
-	tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}";
+	mutopiatitle =	"Etude"
+	mutopiacomposer =	"SorF"
+	mutopiaopus =	"Opus 35, No. 14"
+	mutopiainstrument =	"Guitar"
+	style =		"Classical"
+	copyright =	"Public Domain"
+	filename =	"Sor_Etude_Opus35_14.ly"
+	enteredby =	"Jakob Bagterp"
+	maintainer =	"Jakob Bagterp"
+	maintainerEmail =	"jakob_bagterp@hotmail.com"
+	lastupdated =	"2012/Aug/30"
+	footer =	"Mutopia-2012/08/30-64"
+	tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 % This score has been optimized for A4 paper layout. /Jakob Bagterp
 
-\version "1.3.46";
-\include "paper20.ly";
-\include "deutsch.ly";
+\version "2.16.0"
+\include "deutsch.ly"
 
-global = \notes {
-	\clef treble;
-	\key a \minor;
-	\time 4/4;
+global =  {
+	\clef treble
+	\key a \minor
+	\time 4/4
 }
 
-melody = \notes \relative c'' \context Voice = melody {
+melody =  \relative c'' \context Voice = "melody" {
+	\tempo "Andante"
 	\global
-	\stemup
+	\stemUp
 
 	\repeat volta 2 {
 
-		\partial 4;
-		c8.^1^"\bf Andante" h16^0 |
+		\partial 4
+		c8.^1 h16^0 |
 
 		% 1
 		a8.^2 h16^0 c8.^1 d16^4 e4^0 f^2^1 |
 		h,^0 e2^0 d4^1^4 |
-		c^2^1 h^0^0 a8.^3^2 c16^1 \slurdown \times 2/3 { c8( )h a^3 } \break |
-		gis4^1 h r \grace { d8 } c8. h16 |
+		c^2^1 h^0^0 a8.^3^2 c16^1 \slurDown \times 2/3 { c8(  h) a^3 } \break |
+		gis4^1 h r \slashedGrace d8 c8. h16 |
 
 		% 5
 		a8. h16 c8. d16 e4 fis^1^2 |
@@ -69,37 +69,37 @@ melody = \notes \relative c'' \context Voice = melody {
 
 		% 15
 		d4 e8. e16 c4 e8. c16^1 |
-		<gis4 h^1^0> e' r \grace { d8 } c8. h16 |
+		<gis h^1^0>4 e' r \slashedGrace d8 c8. h16 |
 		a8. h16 c8. d16 e4 f |
 		h, e2 d4^4 |
-		c h a8. c16 \times 2/3 { c8( )h a } |
+		c h a8. c16 \times 2/3 { c8(  h) a } |
 
 		% 20
 		gis4 h r c8. h16 |
 		a8. h16 c8. d16 e4 a,^1 |
 		b8.^3 d16^4 f2^1 d8. b16 |
 		a8.^3 c16^1 e2 gis,8.^1 h16 |
-		\partial 2.; a4^3 <e c'^2^1> a |
+		a4^3 <e c'^2^1> a
 	}
 }
 
-bass = \notes \relative c' \context Voice = bass {
+bass =  \relative c' \context Voice = "bass" {
 	\global
-	\stemdown
+	\stemDown
 	\repeat volta 2 {
 
-		\partial 4;
+		\partial 4
 		r4 |
 
 		% 1
 		a2 r4 <d a'> |
-		<e2_1_2 gis> e,4 gis' |
+		<e_1_2 gis>2 e,4 gis' |
 		a g! f d |
 		e2_2 e,4 r |
 
 		% 5
 		a2 r4 <d c'> |
-		<g2 h> c4_1 e,_2 |
+		<g h>2 c4_1 e,_2 |
 		f2_3 g |
 		c,8._3 g'16 e8._2 g16 c,4
 	}
@@ -113,14 +113,14 @@ bass = \notes \relative c' \context Voice = bass {
 		f4_1 f8. e16_2 d4_0 r |
 		h'4.._2 a16_2 g4_0 g8. f16_3 |
 		e4_2 e8. d16_0 c4_3 r |
-		<h2_2 gis'> <a a'> |
+		<h_2 gis'>2 <a a'> |
 		<d gis> <c_3 a'> |
 
 		% 15
 		<h gis'> <a a'> |
 		e4 e'_2 e, r |
 		a4 r r <d a'> |
-		< { e2_3_2 ~ e_1 } { a gis } > |
+		<< { e2_3_2 ~ e_1 } { a gis } >> |
 		a4 g! f d |
 
 		% 20
@@ -128,26 +128,25 @@ bass = \notes \relative c' \context Voice = bass {
 		a4 r r c_2 |
 		d2_0 d |
 		e_2 e, |
-		\partial 2.; a2 a4 |
+		a2 a4
 	}
 }
 
-GuitarStaff = \context Staff <
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\property Staff.transposing = -12
+GuitarStaff = \context Staff <<
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	\transposition c 
 
 	\melody
 	\bass
->
+>>
 
 \score {
 	\GuitarStaff
 
-	\midi {
-		\tempo 4=80;
-	}
+	
+  \midi {
+    \tempo 4 = 80
+    }
 
-	\paper {
-		linewidth = 18.0 \cm;
-	}
+	\layout{}
 }
