@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 
 \include "8.ly"
 
-viiiCelloGlobal =  \notes {
+viiiCelloGlobal =   {
   \clef "bass"
   \key g\major
   \time 2/2
@@ -14,19 +14,24 @@ viiiCelloGlobal =  \notes {
   }
 }
 
-viiiCelloScripts =  \notes{
+viiiCelloScripts =  {
 }
 
-viiiCelloStaff =  \context Staff <
-  \notes \transpose f, \viiiStaff
+viiiCelloStaff =  \context Staff <<
+   \transpose c' f, \viiiStaff
   \viiiCelloGlobal
   \viiiCelloScripts
->
+>>
 
 \score {
   \viiiCelloStaff
-  \paper { }
-  \midi { \tempo 4 = 160 }
+  \layout { }
+  
+  \midi {
+    \tempo 4 = 160
+    }
+
+
   \header {
     piece = "Double"
     opus = ""
