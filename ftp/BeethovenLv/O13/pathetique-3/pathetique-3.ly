@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header {
  title = "Sonata No. 8 \"Pathétique\""
@@ -7,26 +7,22 @@
  opus = "Op. 13"
  piece = "Rondo"
 
- mutopiatitle = "Sonata No. 8 \"Pathétique\" (3rd Movement: Rondo)"
+ mutopiatitle = "Sonata No. 8 “Pathétique” (3rd Movement: Rondo)"
  mutopiacomposer = "BeethovenLv"
  mutopiainstrument = "Piano"
  source = "Berners, 1908 (edited by A. Winterberger)"
  
- % I haven't typeset all of Winterberger's additions, by a long way - no
- % fingering is included, and much of the phrasing, dynamics and performance
- % directions have also been omitted.
+ moreInfo = "I haven't typeset all of Winterberger's additions, by a long way - no fingering is included, and much of the phrasing, dynamics and performance directions have also been omitted."
  
  style = "Classical"
  copyright = "Public Domain"
 
  filename = "pathetique-3.ly"
  maintainer = "Chris Sawer"
- maintainerEmail = "chris@sawer.uklinux.net"
- maintainerWeb = "http://www.sawer.uklinux.net/"
- lastupdated = "2012/Aug/31"
+ maintainerEmail = "chris@mutopiaproject.org"
 
- footer = "Mutopia-2012/08/31-296"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2013/01/08-296"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 top =  \relative c' {
