@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header {
  title = "Original Rags"
@@ -7,18 +7,18 @@
  mutopiatitle = "Original Rags"
  mutopiacomposer = "JoplinS"
  mutopiainstrument = "Piano"
- %date = "C. 1907"
+ mutopiadate = "c. 1907"
  style = "Jazz"
  copyright = "Public Domain"
+ source = "Unknown"
 
  filename = "original.ly"
  maintainer = "Tom Harke"
  maintainerEmail = "tom.harke@acm.org"
  maintainerWeb = "http://www.cse.ogi.edu/~harke"
- lastupdated = "2012/Dec/08"
 
- footer = "Mutopia-2012/12/08-345"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2012. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the MutopiaBSD License, for details see: \hspace #-0.5 \with-url #"http://mutopiaproject.org/mutopiabsd.txt" http://mutopiaproject.org/mutopiabsd.txt } } } }
+ footer = "Mutopia-2013/01/08-345"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 top =  \relative c' {
