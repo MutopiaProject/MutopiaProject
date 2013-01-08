@@ -1,6 +1,4 @@
-\version "1.7.17"
-
-\include "paper20.ly"
+\version "2.16.0"
 
 \header {
   title = "Praeludium II"
@@ -17,13 +15,13 @@
   copyright = "Public Domain"
   maintainer = "Jesse Mehrbach"
   maintainerEmail = "jam@uchicago.edu"
-  lastupdated = "2003/June/21"
+  lastupdated = "2012/Sep/23"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2003/06/21-316"
+  footer = "Mutopia-2012/09/23-316"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-upper = \notes\relative c'' {
+upper = \relative c'' {
   \repeat volta 2 {
   r16 g f g aes f ees f g ees d ees f d c d |
   ees8 c' f, c' ees, c' d, b' |
@@ -32,28 +30,27 @@ upper = \notes\relative c'' {
   
   %5
   ees c bes c d bes aes bes c bes aes g f r r8 |
-  d'16 bes aes bes c aes g aes bes aes g f ees r r8 \stemBoth |
-  c'16 aes g aes bes g f g aes f ees f aes8-\mordent aes |
-  aes16 g f g aes8-\mordent aes aes16 d f ees d c bes aes |
+  d'16 bes aes bes c aes g aes bes aes g f ees r r8 \stemNeutral |
+  c'16 aes g aes bes g f g aes f ees f aes8\mordent aes |
+  aes16 g f g aes8\mordent aes aes16 d f ees d c bes aes |
   g bes ees g f ees f d ees bes aes bes c aes g aes |
   
   %10
   bes g f g aes f ees f g ees d ees c8 aes' | \break
   bes, g' aes, f' g,16 bes ees g ~ g f ees d |
-  < {ees16 g c8 <<bes g>> <<aes f>>} \\ 
-    {\once \property Voice.Slur \set #'attachment = #'(head . stem)
-    ees4( )ees16 ees8 d16} \\ 
+  << {ees16 g c8 <bes g> <aes f>} \\ 
+    { ees4(  ees16) ees8 d16} \\ 
     {s8 \stemDown c'16 f, s4}
-  >
-  <<bes, ees g>>2 }
+  >>
+  <bes, ees g>2 }
   
   \repeat volta 2 {
   r16 bes' a bes ees bes a bes f' bes, a bes aes'! bes, a bes |
-  g'8 ees c16-\trill b c8 f d b16-\trill a b8 |
+  g'8 ees c16\trill b c8 f d b16\trill a b8 |
   
   %15
   ees16 ees, d ees g ees d ees bes' ees, d ees des' ees, d! ees |
-  c'8 aes f16-\trill e f8 bes g e!16-\trill d e8 |
+  c'8 aes f16\trill e f8 bes g e!16\trill d e8 |
   aes16 c b c des c b! c g c b! c des! c b! c |
   f, c' d! e f bes,! a bes g' f e! d c bes aes g |
   aes f e f c' aes g aes f' ees! des c bes aes g f |
@@ -67,16 +64,16 @@ upper = \notes\relative c'' {
   
   %25
   f'16 ees d c d f aes c, b f' d b g b c d |
-  < {r8 g c2 ~ c16 c bes aes} \\
+  << {r8 g c2 ~ c16 c bes aes} \\
     {ees4 ~ ees16 bes' aes g f g aes f d8 r}
-  > |
+  >> |
   g16 aes bes g c, des' c bes aes bes c aes d,! ees' d! c |
-  < {b g c d ees8 d <<ees, g c>>2} \\
-    {s8 c' ~ \stemUp \property Voice.Beam \set #'transparent = ##t c-[ b!-]} \\
-    {\stemDown s4 r16 g8 f16 s2} > }
+  << {b g c d s4 <ees, g c>2} \\
+    {s8 c' ~ \voiceOne <ees c>[ <d b!>]} \\ \\
+    {s4 r16 g,8 f16 s2} >>}
 }
 
-lower = \notes\relative c {
+lower = \relative c {
   \repeat volta 2 {
   c8 c' f, c' ees, c' d, b' |
   c,16 g' f g aes f ees f g ees d ees f d c d |
@@ -86,41 +83,41 @@ lower = \notes\relative c {
   %5
   \stemUp
   c16
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   aes' g aes
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   bes,
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   g' f g
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   aes,8 r
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   r16 ees' d c |
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   bes
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   g' f g
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   aes,
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   f' ees f
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   g,8 r
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   r16 des' c bes |
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   aes
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   f' ees f
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   g,
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   ees' d ees
-  \translator Staff = lower \stemUp
+  \change Staff = lower \stemUp
   f,
-  \translator Staff = upper \stemDown
+  \change Staff = upper \stemDown
   d' c d
-  \translator Staff = lower \stemBoth
+  \change Staff = lower \stemNeutral
   ees, c' bes c |
   d bes aes bes c aes g aes bes,8 bes' r d, |
   ees c aes bes ees, ees' aes ees | 
@@ -156,22 +153,27 @@ lower = \notes\relative c {
 }
 
 \score {
-  \context PianoStaff <
+  \context PianoStaff <<
     \time 4/4
-    \context Staff = upper <
-      \property Staff.midiInstrument = "harpsichord"
-      \notes 
+    \context Staff = "upper" <<
+      \set Staff.midiInstrument = "harpsichord"
+       
       \key c \minor
       \upper
-    >  
-    \context Staff = lower <
-      \property Staff.midiInstrument = "harpsichord"
-      \notes 
+    >>  
+    \context Staff = "lower" <<
+      \set Staff.midiInstrument = "harpsichord"
+       
       \key c \minor
       \clef bass
       \lower
-    >  
-  >
-  \paper { }  
-  \midi { \tempo 4 = 120 }  
+    >>  
+  >>
+  \layout { }  
+  
+  \midi {
+    \tempo 4 = 120
+    }
+
+  
 }
