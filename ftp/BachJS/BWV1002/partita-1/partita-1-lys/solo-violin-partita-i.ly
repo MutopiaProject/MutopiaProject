@@ -1,8 +1,8 @@
-\version "1.4.0"
+\version "2.16.0"
 \include "header.ly"
 
 \paper {
-linewidth = 180.\mm
+	line-width = 180.\mm
 }
 
 I = "1-" + \instr + ".ly"
@@ -22,6 +22,3 @@ VIII = "8-" + \instr + ".ly"
 \include \VI
 \include \VII
 \include \VIII
-
-
-
