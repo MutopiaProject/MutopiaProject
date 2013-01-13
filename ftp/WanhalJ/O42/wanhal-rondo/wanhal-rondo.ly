@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 #(set-global-staff-size 16)
 \include "nederlands.ly"
 \header {
@@ -7,20 +7,19 @@
   opus              = "Opus 42, No. 1"
   meter             = "Allegretto"
   copyright         = "Public Domain"
-  tagline           = "Public Domain"
+  %tagline           = "Public Domain"
   mutopiatitle      = "Rondo"
   mutopiacomposer   = "WanhalJ"
   mutopiainstrument = "Piano"
-  date              = "18th century"
-  source            = "Unknown, late 19th century"
+  date              = "18th Century"
+  source            = "Unknown, late 19th Century"
   style             = "Classical"
   copyright         = "Public Domain"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@zonnet.com"
-  lastupdated       = "2002/Feb/25"
 
-  tagline           = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer            = "Mutopia-2002/02/25-192"
+ footer = "Mutopia-2013/01/13-192"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 Global =  {\key c\major \time 2/4}
