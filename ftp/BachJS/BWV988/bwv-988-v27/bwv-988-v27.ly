@@ -1,7 +1,7 @@
-\version "2.10.0"
+\version "2.16.1"
 
 \paper {
-    page-top-space = #0.0
+    %obsolete-page-top-space = #0.0  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)
     %indent = 0.0
     line-width = 18.0\cm
     ragged-bottom = ##f
@@ -9,6 +9,7 @@
 }
 
 % #(set-default-paper-size "a4")
+% #(set-default-paper-size "letter")
 
 #(set-global-staff-size 19)
 
@@ -21,15 +22,15 @@
         mutopiacomposer = "BachJS"
         opus = "BWV 988"
         date = "1741"
-        mutopiainstrument = "Clavier"
+        mutopiainstrument = "Harpsichord,Clavichord"
         style = "Baroque"
         source = "Bach-Gesellschaft Edition 1853 Band 3"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "Hajo Dezelski"
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/04/21-1390"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2013/01/08-1390"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 % Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -72,11 +73,13 @@ soprano =   \relative a' {
         e16 [ gis a b c d ] e [ d c d e8 ] | % 25
         a,8 r8 r8 fis'8 r8 r8 | % 26
         b,8 [ c16 d e fis ] g [ a g fis g e ] | % 27
-        c'16 [ b a g fis e ] d4. | % 28
+        c'16 [ b a g fis e ] d4. ~ | % 28
         d16 [ c d e fis g ] a [ e c a b c ] | % 29
         fis,16 [ g a b c a ] b [ d g8 ] r8 | % 30
         r8 e8 [ d8 ] c8 [ d16 c b a ] | % 31
         b16 [ d b g a fis ] g4. _\mordent % 32
+        \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
+	\mark \markup { \musicglyph #"scripts.ufermata" }
     } %end repeated section
 }
 
@@ -113,15 +116,16 @@ bass = \relative g {
         a16 [ g a c b a ] b [ e b g e g ] | % 22
         cis,16 [ dis e g fis e ] fis8 [ fis8. _\prallprall e32 fis32] | % 23
         g16 [ a b a g8 ] gis4. ^\turn ~| % 24
-        g16 [ e fis gis a b ] c [ b a g fis e ] | % 25
+        gis16 [ e fis gis a b ] c [ b a g fis e ] | % 25
         d16 [ fis g a b c ] d [ c b c d8 ] | % 26
         g,8 r8 r8 \clef "treble" e'8 r8 r8  | % 27
-        a,8 [ b16 c d e ] fis [ g fis e fis d ]  ~ | % 28
+        a,8 [ b16 c d e ] fis [ g fis e fis d ]  | % 28
         b'16 [ a g fis e d ] c4. ~ | % 29
         c16 [ b c d e fis ] g [ d b g a b ] | % 30
         e,16 [ fis g a b g ] a [ c fis8 ] r8 | % 31
         r8 d8 [ c8 ] b8 [ c16 b a g ] % 32
-  
+        \override Staff.RehearsalMark #'direction = #DOWN
+	\mark \markup { \musicglyph #"scripts.dfermata" }
     } %end repeated section
 }
 
@@ -130,10 +134,9 @@ bass = \relative g {
 
 \score {
     \context PianoStaff <<
-        \set PianoStaff.instrumentName = "Clavier  "
         \set PianoStaff.midiInstrument = "harpsichord"
         \context Staff = "upper" { \clef treble \key g \major \time 6/8 \soprano  }
-        \context Staff = "lower"  { \clef bass \key g \major \time 6/8 \bass }
+        \context Staff = "lower" \with { \consists "Mark_engraver" } { \clef bass \key g \major \time 6/8 \bass }
     >>
     \layout{  }
     \midi { }
