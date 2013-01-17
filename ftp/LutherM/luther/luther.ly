@@ -3,7 +3,7 @@
 	meter = "8.7. 8.7. 8 8.7."
 	enteredby = "Peter Chubb"
 	source = "Methodist Hymnbook 1904, number 846"
-	mutopiacomposer = "Attributed to M. Luther (1483--1546)"
+	mutopiacomposer = "LutherM" % Attributed to M. Luther (1483--1546)
 
 	date = "1535"
 	style = "Hymn"
@@ -12,7 +12,7 @@
 	maintainerEmail = "peter_chubb@hotmail.com"
 	lastupdated = "2002/Feb/26"
 
-        tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+        tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
         footer = "Mutopia-2002/02/26-201"
 }
 
@@ -21,40 +21,39 @@
 Traditionally sung to `Great God, What do I see and hear?' translated by Rev. B. Collyer and others (1802 for verse 1, 1812 for verses 2--4) 
 %}
 
-\version "1.4.0"
+\version "2.16.0"
 
-global=\context Thread=timing\notes{
-	\property Staff.autoBeamSettings \override #'(end * * * *) = #(make-moment 1 4)
+global={
 	\key g \major
 	\time 4/4
 	\partial 4
 	s4 |
-	\skip 1*3 |
+	s1*3 |
 	s2 s4
 	\bar "||"
 	s4 |
-	\skip 1*3 |
+	s1*3 |
 	s2 s4 \bar "||"
 	s4 |
-	\skip 1*3
+	s1*3
 	s2 s4 \bar "||"
 	s4 |
 	s1 |
-	s2 s4-\fermata
+	s2 s4
 	\bar "||"
 }
 
-sopA=\notes\relative c''{
+sopA=\relative c''{
 	g4 |
 	g b a g |
 	a a b
 }
-sopB=\notes\relative c''{
+sopB=\relative c''{
 	g |
 	b c d b |
 	a2 g4
 }
-sop= \notes\relative c'' {
+sop= \relative c'' {
 	\sopA
 	\sopB
 	\sopA
@@ -69,17 +68,17 @@ sop= \notes\relative c'' {
 
 	\sopB
 }
-altA=\notes\relative c' {
+altA=\relative c' {
 	d4 |
 	d g fis g |
 	g fis g
 }
-altB=\notes\relative c'{
+altB=\relative c'{
 	d4 |
 	d g fis g |
-	g () fis g
+	g ( fis) g
 }
-alt=\notes\relative c' {
+alt=\relative c'' {
 	\altA
 	\altB
 	\altA
@@ -88,93 +87,96 @@ alt=\notes\relative c' {
 	g g fis e |
 	dis e fis d |
 	d c d d |
-	b8()g' fis()e dis4
-	\altB
+	b8([ g')] fis( e) dis4
+	<<\altB {s4 | s1 | s2 s4\fermata}>>
 }
 
-tenA=\notes\relative c' {
+tenA=\relative c' {
 	b4 |
 	g d' d b |
 	e d d
 }
-ten=\notes\relative c' {
+ten=\relative c' {
 	\tenA
 	b4  |
 	d g, a g |
-	e'( d8 )c b4
+	e'( d8  c) b4
 	\tenA
-	d8()c |
-	b()a g4 a g |
-	e'4( d8)c b4
+	d8( c) |
+	b( a) g4 a g |
+	e'4( d8 c) b4
 
 	d4 |
 	e d d b |
 	b b d! d |
-	b c b b8()a |
+	b c b b8( a) |
 	g4 e fis
 
-	e8()fis |
+	e8( fis) |
 	g4 g d'4. e8 |
-	a,4( d8 )c b4
+	a,4( d8  c) b4
 }
 
-bassA=\notes\relative c{
+bassA=\relative c{
 	g4 |
 	b g d' e |
 	c d g
 }
-bass=\notes\relative c{
+bass=\relative c'{
 	\bassA
 	g4 |
 	g e d e |
-	c()d g
+	c( d) g
 
 	\bassA
-	b8()a |
-	g()fis e4 d e |
-	c()d g4
+	b8( a) |
+	g( fis) e4 d e |
+	c( d) g4
 
 	g |
-	e b8()c d4 e |
+	e b8( c) d4 e |
 	b e d g
-	b a g g8()fis |
+	b a g g8( fis) |
 	e4 c d 
 
 	c |
 	g d' b4. c8 |
-	d2 g4
+	d2 g4\fermata
 
 }
 
-upper=\context Staff = "upper" <
+upper=\new Staff = "upper" <<
 	\clef "treble"
 	\global
-	\context Voice = sop {\voiceOne \sop}
-	\context Voice = alto {\voiceTwo \alt}
->
+	\new Voice = "sop" {\voiceOne \sop}
+	\new Voice = "alto" {\voiceTwo \alt}
+>>
 
-lower=\context Staff = "lower" <
+lower=\new Staff = "lower" <<
 	\clef "bass"
 	\global
-	\context Voice = tenor {\voiceOne \ten}
-	\context Voice = bass {\voiceTwo \bass}
->
+	\new Voice = "tenor" {\voiceOne \ten}
+	\new Voice = "bass" {\voiceTwo \bass}
+>>
 
 \score {
-       \context ChoirStaff <
+       \new ChoirStaff <<
 		\upper
 		\lower
-	>
-	\paper{
+	>>
+	\layout{
 		indent = 0.0\pt
-		\translator {
-		    \StaffContext
+		\context {
+		    \Staff
 		    \remove "Time_signature_engraver"
 		}
 	}
-	\midi {
-		\tempo 4 = 120
-	}
+	
+  \midi {
+    \tempo 4 = 120
+    }
+
+
 }
 	
 
