@@ -1,13 +1,13 @@
-\version "1.4.9.uu1"
-\include "paper20.ly"
+\version "2.16.0"
+#(set-global-staff-size 20)
 \header {
   title             = "Menuet I"
   subtitle          = "from the Aylesford Pieces"
-  composer          = "Georg Friedrich Händel (1685-1759)"
+  composer          = "Georg Friedrich HÃ¤ndel (1685-1759)"
   meter             = "Allegretto"
-  tagline           = "Typeset using Lilypond 1.4.9.uu1"
+  tagline           = "Typeset using Lilypond 1.4.10"
   mutopiatitle      = "Menuet I"
-  mutopiacomposer   = "G. F. Handel (1685-1759)"
+  mutopiacomposer   = "HandelGF"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "Edition Schott 1930"
@@ -17,16 +17,16 @@
   maintainerEmail   = "basvanlola@hotmail.com"
   lastupdated       = "2002/Jan/07"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/01/07-163"
   }
 
-Global = \notes {\key f\major \time 3/8 \partial 8}
+Global =  {\key f\major \time 3/8 \partial 8}
 
 
-MDI = \notes \relative c'' {
+MDI =  \relative c'' {
   \repeat volta 2 {
-  \stemUp c8
+  c8
   
   a16. bes32 c8 c-.
   a16. bes32 c8 c-.
@@ -36,10 +36,10 @@ MDI = \notes \relative c'' {
   d-. c16 b a g
   g'8 f16 e d c
   c8 e16 d c d
-  \partial 4 c4
+  c4
   }
   
-  \partial 8 c8
+  c8 |
   
   f-. f16 e f d
   g8-. c, bes
@@ -49,10 +49,10 @@ MDI = \notes \relative c'' {
   d-. c16 bes a g
   f e f8 bes-.
   a16 g g8. f16
-  \partial 4 f4
+  f4
   \bar "||"
   
-  \partial 8 c'8
+  c'8 |
   
   f-. f16 e f d
   g8-. c, bes
@@ -65,8 +65,8 @@ MDI = \notes \relative c'' {
   f4.\fermata
   \bar "|."
   }
-MDII = \notes \relative c'' {
-  \stemDown a8
+MDII =  \relative c'' {
+  a8
   
   f a a-.
   f a a-.
@@ -88,7 +88,7 @@ MDII = \notes \relative c'' {
   f,-. d-. e-.
   d-. bes-. c-.
   f8 f e
-  \partial 4 a,4
+  a,4
   
   e'8-.
   
@@ -104,8 +104,8 @@ MDII = \notes \relative c'' {
   
   }
 
-MSI = \notes \relative c {
-  \stemBoth f8
+MSI =  \relative c {
+  f8
   
   f, f' f-.
   f, f' f-.
@@ -115,49 +115,51 @@ MSI = \notes \relative c {
   f-. d-. g-.
   e-. g-. a-.
   f-. g-. g,-.
-  [c-. c'-.]
+   c[-. c'-.]
   
   bes8-.
   
   a-. g-. f-.
   e-. c16 d e c
   f8-. e-. d-.
-  <c c'-.> <bes bes'-.> <a a'-.>
+  <c c'>-. <bes bes'>-. <a a'>-.
   
-  \stemDown <bes bes'> bes-. c-.
+  <bes bes'> bes-. c-.
   d-. d-. e-.
-  \stemUp f-. c-. c,-.
+  f-. c-. c,-.
   f4
   
-  <bes8 bes'-.>
+  <bes bes'>8-.
   
-  <a-. a'> <g-. g'> <f-. f'>
-  <e-. e'> c'16 d e c
+  <a a'>-. <g g'>-. <f f'>-.
+  <e e'>-. c'16 d e c
   f8-. e-. d-.
-  c-. <bes bes'-.> <a a'-.>
+  c-. <bes bes'>-. <a a'>-.
   
-  <bes-. bes'> <bes,-. bes'> <c-. c'>
-  <d-. d'> <d-. d'> <e-. e'>
-  <f-. f'> <c-. c'> c-.
-  <f,4.\fermata f'> 
+  <bes bes'>-. <bes, bes'>-. <c c'>-.
+  <d d'>-. <d d'>-. <e e'>-.
+  <f f'>-. <c c'>-. c-.
+  <f,\fermata f'>4. 
   }
 
-\score {\notes {
-  \context PianoStaff <
-    \property PianoStaff.midiInstrument = "harpsichord"
-    \context Staff = "up" <
-      \property Staff.TimeSignature \override #'style = #'C
+\score { {
+  \new PianoStaff <<
+    \set PianoStaff.midiInstrument = "harpsichord"
+    \new Staff = "up" <<
       \Global \clef treble
-      \context Voice=One {\voiceOne\MDI}
-      \context Voice=Two {\voiceTwo\MDII}
-    >
-    \context Staff = "down" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef bass
-      \context Voice=One {\voiceOne\MSI}
-    >
-  >
+      \new Voice=One {\voiceOne\MDI}
+      \new Voice=Two {\voiceTwo\MDII}
+    >>
+    \new Staff = "down" <<
+      \Global \clef bass \MSI
+    >>
+  >>
 }
-\midi {\tempo 4=108}
-\paper {}
+
+  \midi {
+    \tempo 4 = 108
+    }
+
+
+\layout {}
 }
