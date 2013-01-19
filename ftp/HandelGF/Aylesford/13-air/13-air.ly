@@ -1,13 +1,13 @@
-\version "1.4.9.uu1"
-\include "paper20.ly"
+\version "2.16.0"
+#(set-global-staff-size 20)
 \header {
   title             = "Air"
   subtitle          = "from the Aylesford Pieces"
-  composer          = "Georg Friedrich Händel (1685-1759)"
+  composer          = "Georg Friedrich HÃ¤ndel (1685-1759)"
   meter             = "Allegretto"
-  tagline           = "Typeset using Lilypond 1.4.9.uu1"
+  tagline           = "Typeset using Lilypond 1.4.10"
   mutopiatitle      = "Air"
-  mutopiacomposer   = "G. F. Handel (1685-1759)"
+  mutopiacomposer   = "HandelGF"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "Edition Schott 1930"
@@ -17,16 +17,16 @@
   maintainerEmail   = "basvanlola@hotmail.com"
   lastupdated       = "2002/Jan/11"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/01/11-162"
   }
 
-Global = \notes {\key bes\major \time 3/8}
+Global =  {\key bes\major \time 3/8}
 
 
-MDI = \notes \relative c''' {
+MDI =  \relative c''' {
   \repeat volta 2 {
-  \stemBoth bes8-. a16 g f es
+  bes8-. a16 g f es
   d4 es8
   f-. es16 d c bes
   a4 bes8
@@ -38,8 +38,8 @@ MDI = \notes \relative c''' {
 
   c-. g16 a bes g
   a8 c,-. f-.
-  <d16 g> a' <g,8. e'\prall> f'16
-  <a,4. f'>
+  <d g>16 a' <g, e'\prall>8. f'16
+  <a, f'>4.
   }
 
   \repeat volta 2 {
@@ -50,8 +50,8 @@ MDI = \notes \relative c''' {
 
   bes'8-. a16 g fis e
   d8 g-. <fis, c'>
-  \stemUp bes16 a a8. g16
-  \stemBoth g4.
+  <<{bes16 a a8. g16} \\ {g8 fis8. g16}>>
+  g4.
 
   g'16 f es d c bes
   a4 c8
@@ -60,56 +60,18 @@ MDI = \notes \relative c''' {
 
   bes16 a g f es d
   g f es d c bes
-  <g8 c> <c,8. a'\prall> bes'16
+  <g c>8 <c, a'\prall>8. bes'16
   }
 
   \alternative {
-  {<d,4. bes'>}
-  {<d,4. bes'\fermata>}
+  {<d, bes'>4.}
+  {<d bes'\fermata>4.}
   }
   \bar "|."
   }
-MDII = \notes \relative c'' {
-  s4.
-  s
-  s
-  s
 
-  s
-  s
-  s
-  s
-
-  s
-  s
-  s
-  s
-
-  s
-  s
-  s
-  s
-
-  s
-  s
-  \stemDown g8 fis8. g16
-  s4.
-
-  s
-  s
-  s
-  s
-
-  s
-  s
-  s
-
-  s
-  s
-  }
-
-MSI = \notes \relative c {
-  \stemBoth bes4.
+MSI =  \relative c {
+  bes4.
   bes'8-. a16 g f es
   d4 es8
   f8-. es16 d c bes
@@ -145,30 +107,28 @@ MSI = \notes \relative c {
 
   bes,-. d-. f-.
 
-  <bes,4.\fermata bes'>
+  <bes,\fermata bes'>4.
 
   }
 
-\score {\notes {
-  \context PianoStaff <
-    \property PianoStaff.midiInstrument = "harpsichord"
-    \context Staff = "up" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \property Staff.VoltaBracket \set #'extra-offset = #'(0 . 1)
-      \Global \clef treble
-      \context Voice=One {\voiceOne\MDI}
-      \context Voice=Two {\voiceTwo\MDII}
-    >
-    \context Staff = "down" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \property Staff.VoltaBracket = \turnOff
-      \Global \clef bass
-      \context Voice=One {\voiceOne\MSI}
-    >
-  >
+\score { {
+  \new PianoStaff <<
+    \set PianoStaff.midiInstrument = "harpsichord"
+    \new Staff = "up" <<
+      \Global \clef treble \MDI
+    >>
+    \new Staff = "down" <<
+      \Global \clef bass \MSI
+    >>
+  >>
 }
-\midi {\tempo 4=108}
-\paper {}
+
+  \midi {
+    \tempo 4 = 108
+    }
+
+
+\layout {}
 }
 
 %{
