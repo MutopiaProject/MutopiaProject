@@ -1,13 +1,13 @@
-\version "1.4.9.uu1"
-\include "paper16.ly"
+\version "2.16.0"
+#(set-global-staff-size 16)
 \header {
   title             = "Preludio"
   subtitle          = "from the Aylesford Pieces"
-  composer          = "Georg Friedrich Händel (1685-1759)"
+  composer          = "Georg Friedrich HÃ¤ndel (1685-1759)"
   meter             = "Allegro moderato"
-  tagline           = "Typeset using Lilypond 1.4.9.uu1"
+  tagline           = "Typeset using Lilypond 1.4.10"
   mutopiatitle      = "Ouvertuere"
-  mutopiacomposer   = "G. F. Handel (1685-1759)"
+  mutopiacomposer   = "HandelGF"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "Edition Schott 1930"
@@ -17,106 +17,55 @@
   maintainerEmail   = "basvanlola@hotmail.com"
   lastupdated       = "2002/Jan/06"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/01/06-156"
 }
 
-Global = \notes {\key d\minor \time 4/4}
+Global =  {\key d\minor \time 4/4}
 
 
-MDI = \notes \relative c'' {
-  \stemBoth d16 f cis e d f a, d bes d a d bes d f, a
+MDI =  \relative c'' {
+  d16 f cis e d f a, d bes d a d bes d f, a
   g bes f a g bes e, f g a e g f a d, f
   e f e d cis d cis b a r r8 r4
   r1
   
   r
   r16 d f g a g a e f4 e
-  d16 a' bes c d c d a <g8-. bes> <f-. a> <e4 g>
-  f16 c' d e f e f c <f,4 bes d> d'16 c d a
+  d16 a' bes c d c d a <g bes>8-. <f a>-. <e g>4
+  f16 c' d e f e f c <f, bes d>4 d'16 c d a
   
-  bes d e f g f g d <a4 cis> a'16 f g a
+  bes d e f g f g d <a cis>4 a'16 f g a
   bes a g f e8.\prall d16 d a f a d,4
   d'8-. f-. e-. d-. a'16 f e f g f g a
   f b, a b cis b cis d a f e f g f g a
   
   f d cis d e d e f d g f g e f g a
-  f g a bes <cis,8 g'> <d-. f> <cis-. e> cis'-. b-. a-.
+  f g a bes <cis, g'>8 <d f>-. <cis e>-. cis'-. b-. a-.
   d16 b a b cis b cis d e f d e cis8.\prall d16
-  \stemUp d4 r \stemBoth a8-. cis-. b-. a-.
+  <<{d4 r} \\ {d,8-. f-. e-. d-.}>> a'8-. cis-. b-. a-.
   
-  d16 b a b cis b cis d \stemUp e4 r
-  \stemBoth f,8-. f'-. e-. d-. a'16 f e f g f g a
-  f8-. e-. \stemUp d4 <a8 cis-.> a-. g-. a-.
-  \stemBoth f16 d cis d e d e f a8 cis-. b-. a-.
+  d16 b a b cis b cis d <<{e4 r} \\ {cis8 e,16 f g f g a}>> |
+  f8-. f'-. e-. d-. a'16 f e f g f g a |
+  f8-. e-. <<{d4 <a cis>8-. a-. g-. a-.} \\ {f4 e8 e16 f d8 cis} \\ \\ {a'8. b16}>> |
+  f16 d cis d e d e f a8 cis-. b-. a-. |
   
-  d16 b a b cis b cis d \stemUp f8 e16 d cis8. d16
-  d2 r\fermata
+  d16 b a b cis b cis d 
+  <<{
+    f8 e16 d cis8. d16 |
+    d2
+  } \\ {
+    a8 g <e a>4 |
+    r16 a f a d,4
+  }>>
+  r2\fermata |
   \bar "|."
   }
-MDII = \notes \relative c' {
-  s1
-  s
-  s
-  s
   
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  \stemDown d8-. f-. e-. d-. s2
-  
-  s2 cis'8 e,16 f g f g a
-  s1
-  s4 f e8 e16 f d8 cis
-  s1
-  
-  s2 a'8 g <e4 a>
-  r16 a f a d,4
-  }
-MDIII = \notes \relative c'' {
-  s1
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s4 \stemDown \shiftOn a8. b16 s2
-  s1
-  
-  s
-  s
-  }
-  
-MSI = \notes \relative c' {
+MSI =  \relative c' {
   r1
   r
-  r2 \translator Staff = "up" \stemBoth a16 \translator Staff = "down" e f g f g f e
+  r2 \change Staff = "up" \voiceTwo a16 \change Staff = "down" \oneVoice e f g f g f e
   d f cis e d f a, d bes d a d bes d f, d'
   
   g, bes a g f g f e d f g e a8. a16
@@ -140,56 +89,25 @@ MSI = \notes \relative c' {
   d16 b a b cis b cis d cis8 a-. b-. cis-.
   
   f,16 d cis d e d e f d8-. g-. a-. a,-.
-  \stemUp  r4 \property Voice.Rest \override #'extra-offset = #'(0 . 3) r16 a' f a d,4 d,8 r\fermata
-  }
-MSII = \notes \relative c {
-  s1
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  \stemDown d2 s2
+  <<{r4 r16 a' f a} \\ d,2>> d4 d,8 r\fermata |
   }
 
-\score {\notes {
-  \context PianoStaff <
-    \property PianoStaff.midiInstrument = "harpsichord"
-    \context Staff = "up" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef treble
-      \context Voice=One {\voiceOne\MDI}
-      \context Voice=Two {\voiceTwo\MDII}
-      \context Voice=Three {\voiceThree\MDIII}
-    >
-    \context Staff = "down" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef bass
-      \context Voice=One {\voiceOne\MSI}
-      \context Voice=Two {\voiceTwo\MSII}
-    >
-  >
+\score { {
+  \new PianoStaff <<
+    \set PianoStaff.midiInstrument = "harpsichord"
+    \new Staff = "up" <<
+      \Global \clef treble \MDI
+    >>
+    \new Staff = "down" <<
+      \Global \clef bass \MSI
+    >>
+  >>
 }
-\midi {\tempo 4=104}
-\paper {}
+
+  \midi {
+    \tempo 4 = 104
+    }
+
+
+\layout {}
 }
