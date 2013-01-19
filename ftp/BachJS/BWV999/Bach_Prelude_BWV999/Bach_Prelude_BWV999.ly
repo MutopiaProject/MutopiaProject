@@ -1,41 +1,41 @@
 \header {
-	title =		"Prelude";
-	composer =	"J.S. Bach (1685-1750)";
-	opus =		"BWV 999";
-	% instrument =	"Guitar";
+	title =		"Prelude"
+	composer =	"J.S. Bach (1685-1750)"
+	opus =		"BWV 999"
+	% instrument =	"Guitar"
 
 	% Mutopia file info:
 
-	mutopiatitle =	"Prelude in D Minor";
-	mutopiacomposer =	"J.S. Bach (1685-1750)";
-	mutopiaopus =	"BWV 999";
-	mutopiainstrument =	"Lute, Guitar";
-	style =		"Baroque";
-	copyright =	"Public Domain";
-	filename =	"Bach_Prelude_BWV999.ly";
-	enteredby =	"Jakob Bagterp";
-	maintainer =	"Jakob Bagterp";
-	maintainer_email =	"jakob_bagterp@hotmail.com";
-	lastupdated =	"2001/March/24";
-	footer =	"Mutopia-2001/03/24-60";
-	tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}";
+	mutopiatitle =	"Prelude in D Minor"
+	mutopiacomposer =	"BachJS"
+	mutopiaopus =	"BWV 999"
+	mutopiainstrument =	"Lute, Guitar"
+	style =		"Baroque"
+	copyright =	"Public Domain"
+	filename =	"Bach_Prelude_BWV999.ly"
+	enteredby =	"Jakob Bagterp"
+	maintainer =	"Jakob Bagterp"
+	maintainerEmail =	"jakob_bagterp@hotmail.com"
+	lastupdated =	"2001/March/24"
+	footer =	"Mutopia-2001/03/24-60"
+	tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
 }
 
 % This version of the Prelude hasn't been fingered yet --- it will soon be done. \Jakob Bagterp
 
-\version "1.3.46";
-\include "paper20.ly";
-\include "deutsch.ly";
+\version "2.16.0"
+#(set-global-staff-size 20)
+\include "deutsch.ly"
 
-global = \notes {
-	\clef treble;
-	\key d \minor;
-	\time 3/4;
+global =  {
+	\clef "treble_8"
+	\key d \minor
+	\time 3/4
 }
 
-melody = \notes \relative c'' \context Voice = melody {
+melody =  \relative c' {
 	\global
-	\stemup
+	\voiceOne
 
 	% 1
 	r16 d f a f d f d r d r d |
@@ -96,12 +96,12 @@ melody = \notes \relative c'' \context Voice = melody {
 	r gis d' f d gis, d' gis, r gis r gis |
 	r gis d' f d gis, d' gis, r gis r gis |
 	r a cis e cis a cis e f d h gis' |
-	<a,4 cis a'^\fermata> r r \bar "|.";
+	<a, cis a'>4^\fermata r r \bar "|."
 }
 
-bass = \notes \relative c' \context Voice = bass {
+bass =  \relative c {
 	\global
-	\stemdown
+	\voiceTwo
 
 	% 1
 	d4 r a'8 f |
@@ -162,26 +162,27 @@ bass = \notes \relative c' \context Voice = bass {
 	a4 r f'8 d |
 	a4 r f'8 d |
 	a4 r r |
-	<a4_\fermata e'> r r |
+	<a e'>4_\fermata r r |
 }
 
-GuitarStaff = \context Staff <
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	% \property Staff.transposing = -12
+GuitarStaff = \context Staff <<
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	% \transposition c 
 
 	\melody
 	\bass
->
+>>
 
 \score {
 	\GuitarStaff
 
-	\midi {
-		\tempo 4=80;
-	}
+	
+  \midi {
+    \tempo 4 = 80
+    }
 
-	\paper {
-		linewidth = 18.0 \cm;
+
+
+	\layout {
 	}
 }
-
