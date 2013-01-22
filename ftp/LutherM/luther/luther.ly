@@ -3,17 +3,19 @@
 	meter = "8.7. 8.7. 8 8.7."
 	enteredby = "Peter Chubb"
 	source = "Methodist Hymnbook 1904, number 846"
-	mutopiacomposer = "LutherM" % Attributed to M. Luther (1483--1546)
+
+	% Attributed to M. Luther (1483--1546)
+	mutopiacomposer = "LutherM"
+	mutopiainstrument = "Voice (SATB)"
 
 	date = "1535"
 	style = "Hymn"
 	copyright = "Public Domain"
 	maintainer = "Peter Chubb"
-	maintainerEmail = "peter_chubb@hotmail.com"
-	lastupdated = "2002/Feb/26"
+	maintainerEmail = "mutopia@chubb.wattle.id.au"
 
-        tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-        footer = "Mutopia-2002/02/26-201"
+ footer = "Mutopia-2013/01/22-201"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 
@@ -21,7 +23,7 @@
 Traditionally sung to `Great God, What do I see and hear?' translated by Rev. B. Collyer and others (1802 for verse 1, 1812 for verses 2--4) 
 %}
 
-\version "2.16.0"
+\version "2.16.1"
 
 global={
 	\key g \major
