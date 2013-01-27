@@ -42,7 +42,8 @@
         maintainer = "JD Erickson"
         maintainerEmail = "erickson.jd@gmail.com"
         moreInfo = "It should be noted that, evenly-spaced, this piece lays out best in Letter size. In A4, it breaks the page between alternate endings on the first volta repeat. If you want an A4 layout you should switch out the paper block above for the one that is commented out. The pages won't be evenly filled but the repeat won't be broken in an annoying way."
- footer = "Mutopia-2013/01/24-981"
+
+ footer = "Mutopia-2013/01/27-981"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
