@@ -18,9 +18,9 @@
 }
 
 \paper {
-%{ uncomment for note entry
   line-width = 18.0\cm
   markup-system-spacing #'padding = #2
+%{ uncomment for note entry
   ragged-bottom = ##t
   ragged-last = ##t
 %}
@@ -66,7 +66,7 @@ upperVoice = \relative c {
   e16 gis e' gis, e-1 b' gis' b, e, b' gis' b, e, b' gis' b, |
   fis16-2 b-4 a' b, eis,-1 b' gis'-3 b, fis-2 b a'-4 b, dis,-1 b' fis'-3 b, |
   \barNumberCheck #18
-  e16 b gis' b, gis, b' e b b, b' e b e, b' e b |
+  e,16 b' gis' b, gis, b' e b b, b' e b e, b' e b |
   fis16 a e' a, fis a dis a dis, a' b a fis' a, b a |
   e16 gis e' gis, e b' gis' b, e, b' gis' b, e, b' gis' b, |
   \barNumberCheck #21
@@ -117,8 +117,10 @@ upperVoice = \relative c {
   a,16 gis' d' gis, e' gis, d' gis, f' gis, d' gis, e' gis, d' gis, |
   a,16\pp gis' d' gis, e' gis, d' gis, fis'! gis, d' gis, e' gis, d' gis, |
   \barNumberCheck #56
-  a,16 a' cis a e' a, cis a e a cis a cis, a' cis a |
-  a,16 a' cis a e' a, cis a e a cis a cis, a' cis e |
+  \override TextSpanner #'(bound-details left text) = "rall."
+  \textSpannerDown
+  a,16\startTextSpan a' cis a e' a, cis a e a cis a cis, a' cis a |
+  a,16 a' cis a e' a, cis a e a cis a cis, a' cis e\stopTextSpan |
   <a cis, a e>2^\fermata b,2\rest |
 
   \bar "||"
