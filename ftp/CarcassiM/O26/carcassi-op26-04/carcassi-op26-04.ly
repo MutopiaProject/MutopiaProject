@@ -2,11 +2,12 @@
 
 \header {
   title = "Caprice No. 4"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
+  source = "Mainz: B. Schott's Söhne"
+  % Statens musikbibliotek - The Music Library of Sweden
   % Boije 91
   composer = "Mateo Carcassi"
   opus = "Op. 26 No. 4"
-  year = "19th Century"
+  year = "ca. 1827"
   mutopiacomposer = "CarcassiM"
   mutopiainstrument = "Guitar"
   style = "Classical"
