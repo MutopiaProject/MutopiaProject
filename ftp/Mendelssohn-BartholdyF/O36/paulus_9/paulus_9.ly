@@ -1,48 +1,47 @@
-#(ly:set-option 'old-relative)
 %#(set-global-staff-size 16)
 \header {
-  mydate = 
-  "Time-stamp: \"2002-06-20\""
   filename =    "paulus_9.ly"
   opus =        "Opus 36"
   title=	"Dir, Herr, dir will ich mich ergeben"
   subtitle="\\textit{Paulus}, Oratorio Nr. 9: (Recitativ und) Choral"
   composer="Felix Mendelssohn-Bartholdy (1809-1847)"
-  copyright="public domain"
+  copyright="Public Domain"
   source = "Kalmus Edition K06298"
-  style = "Early Romantic"
+  style = "Romantique" % Early Romantic
   copyright = "Public Domain"
   maintainer = "Kris Van Bruwaene"
   maintainerEmail = "krvbr@yahoo.co.uk"
+  mutopiacomposer="Mendelssohn-BartholdyF"
+  mutopiaopus =        "O36"
   lastupdated = "2002-06-20"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/11/02-491"
 }
 
-\version "2.2.0"
+\version "2.12.0"
 
-global = \notes {
+global =  {
    \time 4/4
    \key f \minor
    \skip 1*14 \bar "|."
 }
 
-sopranoMelody = \notes \relative c' {
+sopranoMelody =  \relative c' {
    r4 c\p f  f8[ ( g)] as4 g f g e c2\fermata es4 es des c f f e f\fermata
    c f g as g f g e c ~ c\fermata es es des c f f e f\fermata 
    g\cresc as\endcresc bes c c bes bes as\fermata c\pp bes as g  f8[ ( g)] as4
    g f2 r  
 }
 
-altoMelody = \notes \relative c' {
+altoMelody =  \relative c' {
    r4 c\p f  f8[ ( g)] as4 g f g e c2\fermata es4 es des c f f e f\fermata
    c f g as g f g e c ~ c\fermata es es des c f f e f\fermata 
    g\cresc as\endcresc bes c c bes bes as\fermata c\pp bes as g  f8[ ( g)] as4
    g f2 r  
 }
 
-tenorMelody = \notes \relative g {
+tenorMelody =  \relative g {
    r4 as\p as as c e, f bes g c2\fermata c4 g  as8[ ( bes)] bes4 as
     ges8[ ( des')]  c[ ( bes)] as4\fermata as as des c es  es8[ ( des)] 
     c[ ( b)] c4 c ~ c\fermata c c  f,8[ ( g)] as4 as g bes as\fermata
@@ -50,91 +49,91 @@ tenorMelody = \notes \relative g {
    des4 f,  f8[ ( e)] f2 r
 }
 
-bassMelody = \notes \relative c {
+bassMelody =  \relative c {
    r4 f\p f f f c des bes c c2\fermata as4 es' f8( g) as4 des, bes c f\fermata 
    f des bes as c des des c c~c\fermata c8( bes) as4 bes c des bes c 
    f\fermata e\cresc f\endcresc des c a bes es as,\fermata as\pp bes c des8( c) bes4 
    c c f2 r
 }
 
-tekst = \lyrics {
+tekst = \lyricmode {
   Dir,4 Herr, dir will ich mich er -- ge -- ben, dir, des -- sen 
   Ei -- gen -- thum ich bin. Du nur al -- lein, du bist mein Le -- ben, __ 
-  und ster -- ben wird mir dann Ge -- winn. Ich le --be dir, ich ster -- be
-  dir. Sei du nur mein, so g'n\"ugt es mir.  
+  und ster -- ben wird mir dann Ge -- winn. Ich le -- be dir, ich ster -- be
+  dir. Sei du nur mein, so g'nügt es mir.  
 }
 
-sopranoTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = soprano { 
-                \set Staff.instrument = "Soprani"
+sopranoTotal = <<
+	      \context Staff = "soprano" { 
+                \set Staff.instrumentName = "Soprani"
 	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "violin"
-		 \unset Staff.melismaBusyProperties 
-				\notes \context Voice=soprano<< 
+				 \context Voice="soprano"<< 
 						\global
 						\sopranoMelody
 						>>
 					}
-		     \context Lyrics = "soprano" \tekst
-	      }
+		     \new Lyrics \lyricsto "soprano" \tekst
+     >>
 
-altoTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = alto { 
-                \set Staff.instrument = "Alti"
+altoTotal = <<
+	      \context Staff = "alto" { 
+                \set Staff.instrumentName = "Alti"
 	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "violin"
-		 \unset Staff.melismaBusyProperties 
-				\notes \context Voice=alto<< 
+				 \context Voice="alto"<< 
 						\global
 						\altoMelody
 						>>
 					}
-		     \context Lyrics = "alto" \tekst
-	      }
+		     \new Lyrics \lyricsto "alto" \tekst
+     >>
 
-tenorTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = tenor { 
-                \set Staff.instrument = "Tenori"
+tenorTotal = <<
+	      \context Staff = "tenor" { 
+                \set Staff.instrumentName = "Tenori"
 	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "violin_8"
-		 \unset Staff.melismaBusyProperties 
-				\notes \context Voice=tenor<< 
+				 \context Voice="tenor"<< 
 						\global
 						\tenorMelody
 						>>
 					}
-		     \context Lyrics = "tenor" \tekst
-	      }
+		     \new Lyrics \lyricsto "tenor" \tekst
+     >>
 
-bassTotal = \simultaneous {
-              \addlyrics
-	      \context Staff = bass { 
-                \set Staff.instrument = "Bassi"
+bassTotal = <<
+	      \context Staff = "bass" { 
+                \set Staff.instrumentName = "Bassi"
 	      	\set Staff.midiInstrument = "voice oohs"
 		\clef "bass"
-		 \unset Staff.melismaBusyProperties 
-				\notes \context Voice=bass<< 
+				 \context Voice="bass"<< 
 						\global
 						\bassMelody
 						>>
 					}
-		     \context Lyrics = "bass" \tekst
-	      }
+		     \new Lyrics \lyricsto "bass" \tekst
+     >>
 
         
 \score {
-     \context ChoirStaff = choir <<
+     \context ChoirStaff = "choir" <<
        \sopranoTotal
        \altoTotal
        \tenorTotal
        \bassTotal
      >>
 
-  \paper { interscoreline = 3 }
-  \midi  { \tempo 4=40 }
+  \layout { interscoreline = 3 }
+  
+  \midi {
+    \context {
+      \Score
+      tempoWholesPerMinute = #(ly:make-moment 40 4)
+      }
+    }
+
+
 }
 
 % EOF
