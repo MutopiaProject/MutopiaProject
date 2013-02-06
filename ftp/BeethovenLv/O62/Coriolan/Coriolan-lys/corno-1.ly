@@ -1,7 +1,6 @@
+\version "2.16.0"
 
-\version "1.3.120";
-
-cornoI =  \notes \relative c {
+cornoI =   \relative c {
 	R1*2|
 	f''4-.\ff r r2|
 	R1*3|
@@ -17,14 +16,12 @@ cornoI =  \notes \relative c {
 	r4 g-.\f r2|
 	R1*2|
 	% `a 2
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	r8 f\p\< f2 e4|
+	r8 f\p\cresc f2 e4|
 	r8 f f2 e4|
 	f4. e8 f4. e8|
 	f4. e8 f4. e8|
-	\!f1\ff % ~|
-	f4 ( e f )e
+	 f1\ff % ~|
+	f4 ( e f  e)
 	e4. r8 	e4. r8|
 	e4. r8 	e4. r8|
 	e4. r8  d4. r8|
@@ -40,7 +37,7 @@ cornoI =  \notes \relative c {
 	g2. g4\sf
 	g r4 r2|
 	R1|
-	g\p~|
+	g1\p~|
 	g~|
 	g~|
 	g~|
@@ -122,13 +119,11 @@ cornoI =  \notes \relative c {
 	R1*17|
 	r4 r8 e,8 e4. e8|
 	r4 r8 e8 e4. e8|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	r4 r8 e8\< e4. e8|
+	r4 r8 e8\cresc e4. e8|
 	r4 r8 e8 e4. e8|
 	r4 r8 e8 e4. e8|
 	r4 r8 e8 e4. e8|
-	\!f'2.\ff e4|
+	 f'2.\ff e4|
 	d e d e|
 	f2. e4|
 	d e d e|
@@ -166,13 +161,11 @@ cornoI =  \notes \relative c {
 	e~|
 	e~|
 	e~|
-	\property Voice.crescendoText = #'(lines " " "cresc." " ")
-	\property Voice.crescendoSpanner = #'dashed-line
-	e\<~|
+	e\cresc~|
 	e~|
 	e|
 	%a deux|
-	\!c\f|
+	 c\f|
 	d\p|
 	d\f|
 	e\p|
@@ -180,13 +173,13 @@ cornoI =  \notes \relative c {
 	d4\p r r2|
 	R1*3|
 	%a deux|
-	d\ff|
+	d1\ff|
 	d|
 	e|
 	e|
 	f|
 	e|
-	e4.-"sempre"\ff e8 e4. e8|
+	e4.\ffsempre e8 e4. e8|
 	e4. e8 e4. e8|
 	e4. e8 e4. e8|
 	e4. e8 e4. e8|

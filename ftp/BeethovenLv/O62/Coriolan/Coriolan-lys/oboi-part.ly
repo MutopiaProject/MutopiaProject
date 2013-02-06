@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Oboe"
 
@@ -7,9 +6,9 @@ instrument = "Oboe"
 \include "global.ly"
 \include "oboi.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\oboiStaff 
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
-

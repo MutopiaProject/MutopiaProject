@@ -1,4 +1,3 @@
-\version "1.3.120"
 flauti.ly
 oboi.ly
 clarinetti.ly

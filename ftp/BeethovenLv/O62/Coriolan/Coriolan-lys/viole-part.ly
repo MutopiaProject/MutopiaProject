@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Viola"
 
@@ -7,9 +6,9 @@ instrument = "Viola"
 \include "global.ly"
 \include "viole.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\violeGroup
-	\include "coriolan-part-paper.ly"
+	\layout {}
 	\include "coriolan-midi.ly"
 }
-

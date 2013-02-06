@@ -1,19 +1,15 @@
 
-\version "1.3.120";
+\version "2.16.0"
 
 \include "fagotto-1.ly"
 \include "fagotto-2.ly"
 
-fagottiStaff =  \context Staff = fagotti <
-	\property Staff.midiInstrument = #"bassoon"
-	\property Staff.instrument = #"Fagotti"
-	\property Staff.instr = #"Fg."
-	\clef "bass";
-	%\property Staff.clefGlyph = #"clefs-F"
-	%\property Staff.clefPosition = #2
+fagottiStaff =  \context Staff = "fagotti" <<
+	\set Staff.midiInstrument = #"bassoon"
+	\set Staff.instrumentName = #"Fagotti"
+	\set Staff.shortInstrumentName = #"Fg."
+	\clef "bass"
 	\global
-	\context Voice=one \partcombine Voice
-		\context Thread=one \fagottoI
-		\context Thread=two \fagottoII
->
+	\context Voice = "one" \partcombine \fagottoI \fagottoII
+>>
 

@@ -1,56 +1,54 @@
-\version "1.3.120";
+\version "2.16.0"
 
 \include "violoncello.ly"
 \include "contrabasso.ly"
 
 %{
-bassiGroup =  \context PianoStaff = bassi_group \notes <
+bassiGroup =  \context PianoStaff = bassi_group  <<
         \staffCombinePianoStaffProperties
 	\context Staff=oneBassi {
-		\property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = #'(lines
+		\set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = #'(lines
     		  "Violoncello" "    e" "Contrabasso")
 
-    		\property Staff.instr = #"Vc."
-		\clef "bass";
-		%\property Staff.clefGlyph = #"clefs-F"
-		%\property Staff.clefPosition = #2
+    		\set Staff.shortInstrumentName = #"Vc."
+		\clef "bass"
+		%\set Staff.clefGlyph = #"clefs.F"
+		%\set Staff.clefPosition = #2
 
 		\global
 	}
 	\context Staff=twoBassi {
-		\property Staff.midiInstrument = #"contrabass"
-		\property Staff.instrument = #"Contrabasso"
-		\property Staff.instr = #"Cb."
-		\property Staff.transposing = #-12
-	 	\clef "bass"; 
-		%\property Staff.clefGlyph = #"clefs-F"
-		%\property Staff.clefPosition = #2
+		\set Staff.midiInstrument = #"contrabass"
+		\set Staff.instrumentName = #"Contrabasso"
+		\set Staff.shortInstrumentName = #"Cb."
+		\transposition c 
+	 	\clef "bass" 
+		%\set Staff.clefGlyph = #"clefs.F"
+		%\set Staff.clefPosition = #2
 
 		\global
 	}
-	\context Staff=oneBassi \partcombine Staff
-		\context Voice=oneBassi \violoncello
-		\context Voice=twoBassi \contrabasso
->
+	\context Staff=oneBassi \partcombine \violoncello \contrabasso
+>>
 %}
 
-bassiGroup =  \context PianoStaff = bassi_group \notes <
-	\context Staff=violoncelloStaff <
-		\property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = #"Violoncello   "
-    		\property Staff.instr = #"Vc.  "
-		\clef "bass";
+bassiGroup =  \context PianoStaff = "bassi_group"  <<
+	\context Staff=violoncelloStaff <<
+		\set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = #"Violoncello   "
+    		\set Staff.shortInstrumentName = #"Vc.  "
+		\clef "bass"
 		\global
 		\violoncello
-	>
-	\context Staff=contrabassoStaff <
-		\property Staff.midiInstrument = #"contrabass"
-		\property Staff.instrument = #"Contrabasso   "
-		\property Staff.instr = #"Cb.  "
-		\property Staff.transposing = #-12
-	 	\clef "bass"; 
+	>>
+	\context Staff=contrabassoStaff <<
+		\set Staff.midiInstrument = #"contrabass"
+		\set Staff.instrumentName = #"Contrabasso   "
+		\set Staff.shortInstrumentName = #"Cb.  "
+		\transposition c 
+	 	\clef "bass" 
 		\global
 		\contrabasso
-	>
->
+	>>
+>>
