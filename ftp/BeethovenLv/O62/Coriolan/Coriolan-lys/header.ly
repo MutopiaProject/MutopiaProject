@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 \header {
   title =	"Ouvertüre"
   subtitle =	"Zu Heinrich Joseph v. Collins Trauerspiel"
@@ -179,8 +179,10 @@
   copyright = "Public Domain"
   maintainer = "Jan Nieuwenhuizen"
   maintainerEmail = "janneke@gnu.org"
-  lastupdated =	 "2007/Oct/14"
- footer = "Mutopia-2007/10/14-57"
-  mutopiapublicdomain = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
- tagline = \mutopiapublicdomain
+
+  mutopiasource = "Beethoven's Werke, Ouverturen fuer Orchester:  No. 18-21, 26-27, Breitkopf and Haertel, Leipzig, n.d. [1862-1865]"
+  mutopiainstrument = "Orchestra: Flutes, Oboes, Clarinets, Bassoons, French Horns, Trumpets, Percussion (Timpani), Violins, Violas, 'Cello, Double Bass"
+
+ footer = "Mutopia-2013/02/06-57"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
