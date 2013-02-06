@@ -1,5 +1,4 @@
-
-\version "1.3.120";
+\version "2.16.0"
 
 instrument = "Bassoon"
 
@@ -7,9 +6,9 @@ instrument = "Bassoon"
 \include "global.ly"
 \include "fagotti.ly"
 
+\include "coriolan-part-paper.ly"
 \score{
 	\fagottiStaff
-	\include "coriolan-part-paper.ly"
+	\layout{}
 	\include "coriolan-midi.ly"
 }
-

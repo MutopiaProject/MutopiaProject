@@ -1,21 +1,18 @@
 
-\version "1.3.120";
+\version "2.16.0"
 
 \include "trombo-1.ly"
 \include "trombo-2.ly"
 
-trombeStaff =  \context Staff = trombe <
-	\context Staff=trombe {
-		\property Staff.midiInstrument = #"trumpet"
+trombeStaff =  \context Staff = "trombe" <<
+	\context Staff = "trombe" {
+		\set Staff.midiInstrument = #"trumpet"
 
-		\property Staff.instrument = #"Trombe in C"
-		\property Staff.instr = #`(lines "Tbe." (rows "(C)"))
+		\set Staff.instrumentName = #"Trombe in C"
+		\set Staff.shortInstrumentName = \markup {\center-column {Tbe. \line{ "C"}}}
 
-		\notes { \key c \major; }
+		 { \key c \major }
 		\End
 	}
-	\context Voice=one \partcombine Voice
-		\context Thread=one \tromboI
-		\context Thread=two \tromboII
->
-
+	\context Voice = "one" \partcombine \tromboI \tromboII
+>>
