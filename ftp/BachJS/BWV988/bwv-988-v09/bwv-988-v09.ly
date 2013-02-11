@@ -22,7 +22,7 @@
         mutopiacomposer = "BachJS"
         opus = "BWV 988"
         date = "1741"
-        mutopiainstrument = "Clavier"
+        mutopiainstrument = "Harpsichord,Clavichord"
         style = "Baroque"
         source = "Bach-Gesellschaft Edition 1853 Band 3"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
