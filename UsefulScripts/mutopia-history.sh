@@ -8,10 +8,10 @@
 
 for RDFNAME in `find . -name "*.rdf"`
 do
-   TITLE=`basename "$RDFNAME" | sed 's/\.rdf$//'`
-   LYFILE=`echo "$RDFNAME" | sed 's/\.rdf$/\.ly/'`
-   LYDIR=`echo "$RDFNAME" | sed 's/\.rdf$/-lys/'`
-   LOGFILE=`echo "$RDFNAME" | sed 's/\.rdf$/\.log/'`
+   TITLE=$(basename "$RDFNAME" .rdf)
+   LYFILE="${RDFNAME%.rdf}.ly"
+   LYDIR="${RDFNAME%.rdf}-lys"
+   LOGFILE="${RDFNAME%.rdf}.log"
 
    # Generate log file
    echo "Mutopia change history for $TITLE" > "$LOGFILE"
