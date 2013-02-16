@@ -45,8 +45,8 @@ f_compile_let() {
 ########################
 
 # Check environment variables are set up
-if [ -z "$LILYPOND_BASE" ] || [ -z "$LILYPOND_BIN" ]; then
-   echo "LILYPOND_BASE and LILYPOND_BIN environment variables must be set"
+if [ -z "$LILYPOND_BIN" ]; then
+   echo "LILYPOND_BIN environment variables must be set"
    exit 1
 fi
 
