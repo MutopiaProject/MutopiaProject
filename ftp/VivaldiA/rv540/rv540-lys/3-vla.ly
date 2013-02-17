@@ -1,11 +1,11 @@
-\version "1.6.9"
+\version "2.16.0"
 
-IIIVla = \notes\relative c'' {
+IIIVla = \relative c'' {
   \clef "alto"
   \key f \major
   \time 3/8
-  \property Score.skipBars = ##t
-  \property Score.currentBarNumber = #196
+  \set Score.skipBars = ##t
+  \set Score.currentBarNumber = #196
 
   a8 d, a' |
   % 197

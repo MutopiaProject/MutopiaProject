@@ -1,12 +1,12 @@
-\version "1.6.9"
+\version "2.16.0"
 
-IILute = \notes\relative c'' {
+IILute = \relative c'' {
   \key f \major
   \time 4/4
   \repeat "volta" 2 {
   \partial 8 r8 |
-  \property Score.currentBarNumber = #183
-  <c2_#'(italic "Arpeggio") f a> <e g bes> |
+  \set Score.currentBarNumber = #183
+  <c f a>2_\markup{\italic "Arpeggio"} <e g bes> |
   %184
   <e g bes> <c f a> |
   %185
@@ -15,19 +15,19 @@ IILute = \notes\relative c'' {
   %187
   <d f a> <f, d' f> |
   %188
-  <f d' f> <cis'4 e a> <d f a> |
-  <cis2 e a> <d4 f a>
+  <f d' f> <cis' e a>4 <d f a> |
+  <cis e a>2 <d f a>4
   }
   \repeat "volta" 2 {
   r4 |
   %190
-  <d2 fis a> <d g bes> |
+  <d fis a>2 <d g bes> |
   <e g bes> <c f a> |
   %192
   <c f a> <c e g> |
   <c f a> <e g bes> |
-  <c4 f a> <c e g> <c f a> <c e g> |
-  <c f a> <c e g> <a2 c f a>
+  <c f a>4 <c e g> <c f a> <c e g> |
+  <c f a> <c e g> <a c f a>2
   }
 %{
   c16 f a f c f a f e g bes 
@@ -48,7 +48,7 @@ IILute = \notes\relative c'' {
   f, d' f d f, d' f d cis e 
   a e d f a f |
   % 189
-  cis e a e cis e a e <a4 d, f >
+  cis e a e cis e a e <a d, f >4
   }
   \repeat "volta" 2 {
   r4 |
@@ -68,7 +68,7 @@ IILute = \notes\relative c'' {
   c, f a f c e g e c f a 
   f c e g e |
   % 195
-  c f a f c e g e <a2^\fermata f a, c >
+  c f a f c e g e <a f a, c >2^\fermata
   }
 %}
 }

@@ -1,14 +1,15 @@
-\version "1.6.9"
+\version "2.16.0"
 
-ILute = \notes\relative c {
+ILute = \relative c {
   \key f \major
   \time 2/4 
-  \property Score.skipBars = ##t
-  \property Staff.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
-  \property Staff.autoBeamSettings \override
-    #'(end 1 8 * *) = #(make-moment 1 2)
-  \property Voice.tupletSpannerDuration = #(make-moment 1 8)
+  \set Timing.beamExceptions = #'(
+    (end . (
+      ((1 . 8) . (4))
+      ((1 . 16) . (4 4))
+    )))
+  \set Score.skipBars = ##t
+  \set tupletSpannerDuration = #(ly:make-moment 1 8)
 
   \partial 8 r8 |
   R2*37 |
@@ -40,12 +41,9 @@ ILute = \notes\relative c {
   % 51
   \times 2/3 {a16 bes c d d e f f g a a bes} |
   % 52
-  \property Staff.TextSpanner \set #'type = #'trill
-  \property Staff.TextSpanner \set #'edge-height = #'(0 . 0)
-  \property Staff.TextSpanner \set #'edge-text = #'((line (music "scripts-trill") " ") . "")
-  c8 f,16 g <g4\spanrequest \start "text" {s8. s16\spanrequest \stop "text"}> |
+  c8 f,16 g g4\startTrillSpan |
   % 53
-  f8 r r4 |
+  f8\stopTrillSpan r r4 |
   % 54
   R2*26 |
   % 80
@@ -81,9 +79,9 @@ ILute = \notes\relative c {
   % 95
   R2*13 |
   % 108
-  <d,8 a f> d16 e f d a' cis, |
+  <d, a f>8 d16 e f d a' cis, |
   % 109
-  <d8 a f> d16 e f d a' cis, |
+  <d a f>8 d16 e f d a' cis, |
   % 110
   d4 r |
   % 111 
@@ -97,15 +95,15 @@ ILute = \notes\relative c {
   % 115
   \times 2/3 {r16 d e f e d g d e f e d} |
   % 116
-  <e8 c ><e c ><e c ><e c >|
+  <e c >8<e c ><e c ><e c >|
   % 117
   \times 2/3 {r16 c d e d c f c d e d c} |
   % 118
-  <d8 bes ><d bes ><d bes ><d bes >|
+  <d bes >8<d bes ><d bes ><d bes >|
   % 119
   \times 2/3 {r16 b cis d cis b e b cis d cis b} |
   % 120
-  <cis8 a ><cis a ><cis a ><cis a >|
+  <cis a >8<cis a ><cis a ><cis a >|
   % 121
   \times 2/3 {r16 d e f e d a' d, e f e d} |
   % 122
@@ -143,11 +141,11 @@ ILute = \notes\relative c {
   % 140
   d4 r |
   % 141
-  <d8 a d, f >e16 f e8 d |
+  <d a d, f >8e16 f e8 d |
   % 142
   R2 |
   % 143
-  <f8 a, d, f >g16 a g8 f |
+  <f a, d, f >8g16 a g8 f |
   % 144
   r4 \times 2/3 {a16 f g a g f} |
   % 145
@@ -169,5 +167,5 @@ ILute = \notes\relative c {
   % 153 
   R2*29 |
   % 182
-  R2^\fermata
+  R2^\fermataMarkup
 }
