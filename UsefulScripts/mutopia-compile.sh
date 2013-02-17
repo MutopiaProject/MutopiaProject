@@ -37,7 +37,7 @@ f_compile_let() {
    mv "$LY_BASE_NAME.midi" "$TARGET_BASE_NAME.midi" # TODO see comment above
    gzip "$TARGET_BASE_NAME-let.ps"
 
-   for t in *.midi; do mv "$t" "`echo \"$t\" |sed 's/.midi$/.mid/'`"; done
+   for t in *.midi; do mv "$t" "${t%.midi}.mid"; done
 }
 
 ########################
@@ -45,8 +45,8 @@ f_compile_let() {
 ########################
 
 # Check environment variables are set up
-if [ -z "$LILYPOND_BASE" ] || [ -z "$LILYPOND_BIN" ]; then
-   echo "LILYPOND_BASE and LILYPOND_BIN environment variables must be set"
+if [ -z "$LILYPOND_BIN" ]; then
+   echo "LILYPOND_BIN environment variables must be set"
    exit 1
 fi
 
@@ -94,7 +94,7 @@ for parameter in "$@"
 do
    filename="`basename \"$parameter\"`"
    dirname="`dirname \"$parameter\"`"
-   LY_BASE_NAME="`echo \"$filename\" |sed 's/\.ly$//'`"
+   LY_BASE_NAME="${filename%.ly}"
    TARGET_BASE_NAME="$LY_BASE_NAME"
    [ ! "$LY_BASE_NAME.ly" = "$filename" ] && echo "Error: name must end .ly" && exit 1
 
@@ -113,7 +113,7 @@ do
       rm -f "$LY_BASE_NAME.ly"
    elif [ "$COMPILE_SEPARATELY" = 1 ]; then
       # Compile separate A4 and Letter files
-      TARGET_BASE_NAME="`echo \"$LY_BASE_NAME\" |sed 's/-a4$//'`"
+      TARGET_BASE_NAME="${LY_BASE_NAME%-a4}"
       [ ! "$TARGET_BASE_NAME-a4.ly" = "$filename" ] && echo "Error: for separate compilation, name must end -a4.ly" && exit 1
       f_compile_a4
       LY_BASE_NAME="$TARGET_BASE_NAME-let"
