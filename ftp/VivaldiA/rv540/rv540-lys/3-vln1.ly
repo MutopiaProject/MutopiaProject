@@ -1,10 +1,10 @@
-\version "1.6.9"
+\version "2.16.0"
 
-IIIVlnI = \notes\relative c'' {
+IIIVlnI = \relative c'' {
   \key f \major
   \time 3/8
-  \property Score.skipBars = ##t
-  \property Score.currentBarNumber = #196
+  \set Score.skipBars = ##t
+  \set Score.currentBarNumber = #196
 
   d8 d,16 g' f e |
   % 197
@@ -16,7 +16,7 @@ IIIVlnI = \notes\relative c'' {
   % 200
   f8 d16 a' g f |
   % 201
-  <f8^\trill a,> <e a,> r |
+  <f a,>8^\trill <e a,> r |
   % 202
   a a,,16 a'' g f |
   % 203
@@ -26,13 +26,13 @@ IIIVlnI = \notes\relative c'' {
   % 205
   e cis a e cis8 |
   % 206
-  a''16 a, a8( )bes |
+  a''16 a, a8(  bes) |
   % 207
-  g'16 g, g8( )a |
+  g'16 g, g8(  a) |
   % 208
-  f'16 f, f8( )g |
+  f'16 f, f8(  g) |
   % 209
-  e'16 e, e8( )f |
+  e'16 e, e8(  f) |
   % 210
   d'16 f, g bes a cis |
   % 211
@@ -84,13 +84,13 @@ IIIVlnI = \notes\relative c'' {
   % 234
   e8 c16 bes' a g |
   % 235
-  a c, c8( )d |
+  a c, c8(  d) |
   % 236
-  bes'16 bes, bes8( )c |
+  bes'16 bes, bes8(  c) |
   % 237
-  a'16 a, a8( )bes |
+  a'16 a, a8(  bes) |
   % 238
-  g'16 g, g8( )a |
+  g'16 g, g8(  a) |
   % 239
   f'16 a, bes d c e |
   % 240
@@ -152,9 +152,9 @@ IIIVlnI = \notes\relative c'' {
   % 268
   f8 d,16 a'' g f |
   % 269
-  <{[f8^\trill e]} \\ {[a, a]}> r8 |
+  <<{ f8[^\trill e]} \\ { a,[ a]}>> r8 |
   % 270
-  a a,,16 a'' g f |
+  a' a,,16 a'' g f |
   % 271
   g8 a,,16 g'' f e |
   % 272

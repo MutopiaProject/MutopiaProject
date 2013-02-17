@@ -1,14 +1,17 @@
-\version "1.6.9"
+\version "2.16.0"
 
-IIILute = \notes\relative c'' {
+IIILute = \relative c'' {
   \key f \major
   \time 3/8
+  \set Timing.beamExceptions = #'(
+    (end . (
+      ((1 . 16) . (6))
+      ((1 . 32) . (4 4 4))
+    )))
 
-  \property Score.skipBars = ##t
-  \property Staff.autoBeamSettings \override
-    #'(end 1 32 * *) = #(make-moment 1 8)
+  \set Score.skipBars = ##t
 
-  \property Score.currentBarNumber = #196
+  \set Score.currentBarNumber = #196
   R4.*21 |
   d32 e f g a16 d, e cis |
   % 218
@@ -58,11 +61,11 @@ IIILute = \notes\relative c'' {
   % 255
   R4. |
   % 256
-  <g16. d ><g32 d ><g16. d ><g32 d ><a16. d, ><g32 d >|
+  <g d >16.<g d >32<g d >16.<g d >32<a d, >16.<g d >32|
   % 257
-  <fis16. d ><fis32 d ><fis16. d ><fis32 d ><g16. d ><a32 d, >|
+  <fis d >16.<fis d >32<fis d >16.<fis d >32<g d >16.<a d, >32|
   % 258
-  <bes8 d, ><g d > r |
+  <bes d, >8<g d > r |
   % 259
   R4.*3 |
   % 262
@@ -118,7 +121,7 @@ IIILute = \notes\relative c'' {
   % 300
   R4.*4 |
   % 304
-  <d,4._#'(italic "Arpeggio") f a> |
+  <d, f a>4._\markup{\italic "Arpeggio"} |
   <cis e a> | <d f a> | <cis e a> |
 %{
   d,16 f a f d f |
@@ -150,21 +153,18 @@ IIILute = \notes\relative c'' {
   % 317
   f16. g32 f16. g32 f16. g32 |
   % 318
-  \property Voice.TextSpanner \set #'type = #'trill
-  \property Voice.TextSpanner \set #'edge-height = #'(0 . 0)
-  \property Voice.TextSpanner \set #'edge-text = #'((line (music "scripts-trill") " ") . "")
 
-  f16 e32 d cis8.\spanrequest \start "text" a'16\spanrequest \stop "text"  |
+  f16 e32 d cis8.\startTrillSpan a'16\stopTrillSpan  |
   % 319
   f32 e f g f e f g f e f g |
   % 317
   a16. bes32 a16. bes32 a16. bes32 |
   % 321
-  a16 g32 f e8.\spanrequest \start "text" d16 \spanrequest \stop "text" |
+  a16 g32 f e8.\startTrillSpan d16\stopTrillSpan |
   % 322
   d4 r8 |
   % 323
   R4.*6 |
   % 329
-  R4.^\fermata \bar "|."
+  R4.^\fermataMarkup \bar "|."
 }

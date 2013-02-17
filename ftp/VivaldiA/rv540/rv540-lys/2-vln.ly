@@ -1,11 +1,11 @@
-\version "1.6.9"
+\version "2.16.0"
 
-IIVln = \notes\relative c' {
+IIVln = \relative c' {
   \key f \major
   \time 4/4
   \repeat "volta" 2 {
   \partial 8 r8 |
-  \property Score.currentBarNumber = #183
+  \set Score.currentBarNumber = #183
   r8 f f f r8 c c c |
   % 184
   r8 c c c r8 f f f |
