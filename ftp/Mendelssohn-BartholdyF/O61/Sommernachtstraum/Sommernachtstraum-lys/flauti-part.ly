@@ -1,17 +1,21 @@
 \header{
-filename =	 "flauti-part.ly";
-enteredby =	"Felix Braun";
-copyright =	 "Public Domain";
+filename =	 "flauti-part.ly"
+enteredby =	"Felix Braun"
+copyright =	 "Public Domain"
 }
 
-\version "1.3.122";
+\version "2.16.0"
 
 \include "sntglobal.ly"
 \include "flaucla.ly"
 \include "sntheader.ly"
 
+\header {
+	instrument = "Flauti"
+}
+
 \score {
 	\flautiStaff
 	\include "sntpart-paper.ly"
 	\include "sntmidi.ly"
-	}
+}
