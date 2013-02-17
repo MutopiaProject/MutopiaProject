@@ -1,61 +1,66 @@
+\version "2.16.0"
+
 \header{
 
-	title = "Suite in C Minor for Lute (trans. to A minor)";
-	subtitle = "1. Prelude";
-	opus = "BWV 997";
-	composer = "Johann Sebastian Bach (1685-1750)";
-	instrument= "Guitar";
+	title = "Suite in C Minor for Lute (trans. to A minor)"
+	subtitle = "1. Prelude"
+	opus = "BWV 997"
+	composer = "Johann Sebastian Bach (1685-1750)"
+	instrument= "Guitar"
 
-	mutopiatitle = "Lute Suite BWV 997: 1. Prelude";
-	mutopiacomposer = "J. S. Bach";
-	mutopiainstrument = "Lute, Guitar";
-	date = "ca.1740-41";
-	style = "Baroque";
-	copyright = "Public Domain";
-	filename = "bmv997-01prelude.ly";
-	lastupdated = "2001/Feb/24";
-	tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by David Megginson.\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}";
-        footer = "Mutopia-2001/02/24-50";
+	mutopiatitle = "Lute Suite BWV 997: 1. Prelude"
+	mutopiacomposer = "BachJS"
+	mutopiainstrument = "Lute, Guitar"
+	date = "ca.1740-41"
+	style = "Baroque"
+	copyright = "Public Domain"
+	filename = "bmv997-01prelude.ly"
+	lastupdated = "2001/Feb/24"
+	maintainer = "David Megginson"
+        footer = "Mutopia-2001/02/24-50"
 
 }
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
-Treble = \notes \context Voice = $Treble {
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 4/4;
-	\key a \minor;
-	\clef treble;
-	\stemUp r8 [a'16 b' c''8 e''] gis''( )a'' r a'' |
-	r [a'16 b' c''8 e''] gis''( )a'' r a'' |
-	r [a'16 b' c''8 e''] gis''( )a'' r a'' |
-	r16 g'' f'' e'' d'' c'' b' a' gis'( )a' b' f' e'8 d'' |
+Treble = {
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	\time 4/4
+	\key a \minor
+	\clef "treble_8"
+	\voiceOne
+	\slurDown
+
+	r8  a'16[ b' c''8 e''] gis''(  a'') r a'' |
+	r  a'16[ b' c''8 e''] gis''(  a'') r a'' |
+	r  a'16[ b' c''8 e''] gis''(  a'') r a'' |
+	r16 g'' f'' e'' d'' c'' b' a' gis'(  a') b' f' e'8 d'' |
 %5
-	c''16( b' )a'8 r16 gis' a' b' c'' e'' d'' c'' f'' e'' d'' c'' |
+	c''16( b'  a'8) r16 gis' a' b' c'' e'' d'' c'' f'' e'' d'' c'' |
 	d'' f'' g'8 r16 a' b' c'' d'' f'' e'' d'' g'' f'' e'' d'' |
-	e'' d'' e'' g'' b' a' b' g'' c''( )b' c'' g'' d''( )c'' d'' f'' |
+	e'' d'' e'' g'' b' a' b' g'' c''(  b') c'' g'' d''(  c'') d'' f'' |
 	e'' d'' e'' c'' e'' b' e'' a' gis' fis' gis' fis'' gis' e'' gis' d'' |
-	c'' b' c'' e'' a''8 c'''( )c'''16 e'' dis''8( )dis''16 e'' fis'' g'' |
+	c'' b' c'' e'' a''8 c'''(  c'''16) e'' dis''8(  dis''16) e'' fis'' g'' |
 %10
-	a'' c'' b'8( )b'16 cis'' dis'' e'' fis'' gis' a'8( )a'16 c'' b' a' |
+	a'' c'' b'8(  b'16) cis'' dis'' e'' fis'' gis' a'8(  a'16) c'' b' a' |
 	g' b' e'' dis'' e'' b' c'' ais' b' dis'' fis'' e'' fis'' b' c'' ais' |
-	b' e'' g'' fis'' g'' b' c'' ais' b' fis'' a''8( )a''16 c'' b' a' |
-	g' b' e'' fis'' g''8 fis'' \trill e''16 a' gis'8( )gis'16 b' c'' d'' |
-	c'' f' e'8( )e'16 g' a' b' a' e' dis'8( )dis'16 c''' b'' a'' |
+	b' e'' g'' fis'' g'' b' c'' ais' b' fis'' a''8(  a''16) c'' b' a' |
+	g' b' e'' fis'' g''8 fis'' \trill e''16 a' gis'8(  gis'16) b' c'' d'' |
+	c'' f' e'8(  e'16) g' a' b' a' e' dis'8(  dis'16) c''' b'' a'' |
 %15
-	g'' a'' b'' e'' g'' fis'' e'' dis'' e'' g'' ais'8( )ais'16 cis'' b' ais' |
+	g'' a'' b'' e'' g'' fis'' e'' dis'' e'' g'' ais'8(  ais'16) cis'' b' ais' |
 	b' cis'' dis'' e'' fis''8 a' g' e'' fis' dis'' |
-	r e'16 fis' g'8 b' dis''( )e'' r e'' |
-	r e'16 fis' g'8 b' dis''( )e'' r e'' |
-	r e'16 fis' g'8 b' dis''( )e'' r e'' |
+	r e'16 fis' g'8 b' dis''(  e'') r e'' |
+	r e'16 fis' g'8 b' dis''(  e'') r e'' |
+	r e'16 fis' g'8 b' dis''(  e'') r e'' |
 %20
-	r16 d'' c'' b' a' g' fis' e' dis'( )e' fis' c' b8 a' |
+	r16 d'' c'' b' a' g' fis' e' dis'(  e') fis' c' b8 a' |
 	g'16 fis' e'8 r16 dis' e' fis' g' a' b' g' c'' b' a' g' |
 	a' c'' b' a' gis' a' b' c'' d'' f'' e'' d'' e'' d'' c'' b' |
 	c'' b' a'8 r16 gis' a' b' c'' e'' d'' c'' f'' e'' d'' c'' |
 	d'' f'' e'' d'' cis'' d'' e'' f'' g'' bes'' a'' g'' a'' g'' f'' e'' |
 %25
-	f''( e'' )f'' a'' cis''( b' )cis'' a'' d''( cis'' )d'' a'' e''( d'' )e'' g'' |
+	f''( e''  f'') a'' cis''( b'  cis'') a'' d''( cis''  d'') a'' e''( d''  e'') g'' |
 	f'' e'' d'' e'' f'' d'' f'' c'' bes' a' bes' a'' bes' g'' bes' f'' |
 	e'' d'' c'' d'' e'' c'' e'' bes' a' g' a' g'' a' f'' a' e'' |
 	d'' c'' bes' c'' d'' bes' d'' a' g' f' g' f'' g' e'' g' d'' |
@@ -68,10 +73,10 @@ Treble = \notes \context Voice = $Treble {
 	r e''16 c'' gis'8 a' r dis''16 e'' gis''8 a'' |
 %35
 	r16 g'' f'' e'' d'' c'' b' a' gis' a' b' f' e' d'' c'' b' |
-	c''( b' )c'' e'' gis'( fis' )gis' e'' a'( gis' )a' e'' b'( a' )b' d'' |
-	c'' b' a' b' c'' a' c'' g' f'( e' )f' e'' f' d'' f' c'' |
-	b' a' g' a' b' g' b' f' e'( d' )e' d'' e' c'' e' b' |
-	a' g' f' g' a' f' a' e' dis'( cis' )dis' c'' dis' b' dis' a' |
+	c''( b'  c'') e'' gis'( fis'  gis') e'' a'( gis'  a') e'' b'( a'  b') d'' |
+	c'' b' a' b' c'' a' c'' g' f'( e'  f') e'' f' d'' f' c'' |
+	b' a' g' a' b' g' b' f' e'( d'  e') d'' e' c'' e' b' |
+	a' g' f' g' a' f' a' e' dis'( cis'  dis') c'' dis' b' dis' a' |
 %40
 	gis' f'' e'' d'' b'' f'' e'' d'' gis' f'' e'' d'' b'' f'' e'' d'' |
 	cis'' bes' a' g' e'' bes' a' g' cis' bes' a' g' e'' bes' a' g' |
@@ -79,27 +84,29 @@ Treble = \notes \context Voice = $Treble {
 	b' aes' g' f' d'' aes' g' f' b aes' g' f' d'' aes' g' f' |
 	e' des'' c'' bes' g'' des'' c'' bes' e' des'' c'' bes' g'' des'' c'' bes' |
 %45
-	a' g' a' cis'' d''8 f''( )f''16 a' gis'8( )gis'16 a' b' c'' |
-	d'' f' e'8( )e'16 fis' gis' a' b' cis' d'8( )d'16 f' e' d' |
+	a' g' a' cis'' d''8 f''(  f''16) a' gis'8(  gis'16) a' b' c'' |
+	d'' f' e'8(  e'16) fis' gis' a' b' cis' d'8(  d'16) f' e' d' |
 	c' e' a' gis' a' e' f' dis' e' gis' b' a' b' e' f' dis' |
-	e' a' c'' b' c'' e' f' dis' e' b' d''8( )d''16 f'' e'' d'' |
-	c'' e'' a'' b'' c'''8 b'' \trill a''16 d'' cis''8( )cis''16 e'' f'' g'' |
+	e' a' c'' b' c'' e' f' dis' e' b' d''8(  d''16) f'' e'' d'' |
+	c'' e'' a'' b'' c'''8 b'' \trill a''16 d'' cis''8(  cis''16) e'' f'' g'' |
 %50
-	f'' bes' a'8( )a'16 c'' d'' e'' d'' a' gis'8( )gis'16 f'' e'' d'' |
+	f'' bes' a'8(  a'16) c'' d'' e'' d'' a' gis'8(  gis'16) f'' e'' d'' |
 	c'' d'' c'' b' c'' f'' e'' dis'' e'' f'' e'' dis'' e'' bes'' a'' gis'' |
 	a''8 e'' d'''16 c''' b'' a'' a'' b'' c''' a'' c''' b'' a'' g'' |
-	fis'' g'' a'' fis'' a'' g'' fis'' e'' <b'4 dis'' a''> r |
+	fis'' g'' a'' fis'' a'' g'' fis'' e'' <b' dis'' a''>4 r |
 	<b' e'' gis''> r16 e'' fis'' gis'' a'' b'' c''' d''' e''' d''' f''' e''' |
 %55
 	d''' c''' b'' a'' gis'' f'' e'' d'' c''8 a'' b' gis'' \trill |
-	<c''4 e'' a''> r r2 \bar "|.";
+	<c'' e'' a''>4 r r2 \bar "|."
 }
-Bass = \notes \context Voice = $Bass {
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 4/4;
-	\key a \minor;
-	\clef treble;
-	\stemDown a4 r r g' |
+Bass = {
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	\time 4/4
+	\key a \minor
+	\clef "treble_8"
+	\voiceTwo
+
+	a4 r r g' |
 	f' r r e' |
 	d' r r c' |
 	d' r e r |
@@ -160,30 +167,29 @@ Bass = \notes \context Voice = $Bass {
 %50
 	d' c' b e |
 	a r8 b c'4 r8 d' |
-	c' a e' e' <fis'4 dis''> r |
+	c' a e' e' <fis' dis''>4 r |
 	<a' c''> r b r |
 	d' r c' r |
 %55
 	<gis' b' e''> r a'8 f' d' e' |
-	<a4 a'> s s2 \bar "|.";
+	<a a'>4 s s2 \bar "|."
 }
 
-GuitarStaff = \context Staff = GuitarStaff <
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\property Staff.transposing = -12                           
+GuitarStaff = \new Staff = GuitarStaff <<
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
 
-	\Treble
-	\Bass
->
+	\transpose c' c \Treble
+	\transpose c' c \Bass
+>>
 
 \score {
-	<
+	<<
 		\GuitarStaff
-	>
-	\paper {
-		linewidth = 18.0 \cm;
+	>>
+	\layout {
 	}
-	\midi {
-		\tempo 4 = 60;
-	}
+	
+  \midi {
+    \tempo 4 = 60
+    }
 }
