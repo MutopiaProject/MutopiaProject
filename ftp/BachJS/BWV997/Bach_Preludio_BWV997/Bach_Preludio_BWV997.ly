@@ -1,38 +1,39 @@
 \header 
 {
-  title     =  "Preludio";
-  opus      =  "BWV 997";
-  composer  =  "Johann Sebastian Bach (1685-1750)";
-  enteredby =  "Ian C. Williamson";
+  title     =  "Preludio"
+  opus      =  "BWV 997"
+  composer  =  "Johann Sebastian Bach (1685-1750)"
+  enteredby =  "Ian C. Williamson"
 
   % mutopia headers.
-  mutopiatitle = "Prelude to Suite in C Major";
-  mutopiacomposer = "J.S.Bach";
-  mutopiaopus = "BWV997";
-  mutopiainstrument = "Guitar";
-  style = "baroque";
-  copyright = "Public Domain";
-  tagline =   "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by Ian C. Williamson.\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}";
-  maintainer = "Ian C. Williamson";
-  maintainer_email = "iwilliamson@home.com";
-  lastupdated = "2001/Jan/31";
+  mutopiatitle = "Prelude to Suite in C Major"
+  mutopiacomposer = "BachJS"
+  mutopiaopus = "BWV997"
+  mutopiainstrument = "Guitar"
+  style = "Baroque"
+  copyright = "Public Domain"
+  tagline =   "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by Ian C. Williamson.\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  maintainer = "Ian C. Williamson"
+  maintainerEmail = "iwilliamson@home.com"
+  lastupdated = "2001/Jan/31"
   
-  footer = "Mutopia-2001/01/31-44";
+  footer = "Mutopia-2001/01/31-44"
 }
 
-\version "1.3.42";
-\include "paper16.ly";
+\version "2.16.0"
+#(set-global-staff-size 16)
 
-global = \notes 
+global =  
 {
-  \key c;
-  \time 4/4;
+  \key c \major
+  \time 4/4
+  \clef "treble_8"
 }
 
-melody = \notes \relative c'' \context Voice = melody
+melody =  \relative c'' \new Voice = "melody" 
 {
    \global
-   \stemup
+   \voiceOne
 
    % 1
    r8 a16 b c8 e gis a r a |
@@ -94,19 +95,19 @@ melody = \notes \relative c'' \context Voice = melody
    c e a b c8 b a16 d, cis8 ~ cis16 e f g |
 
    % 50
-   f bes, a8( )a16 c d e d a gis8 ~ gis16 f' e d |
+   f bes, a8(  a16) c d e d a gis8 ~ gis16 f' e d |
    c d c b c f e dis e f e dis e bes' a gis |
    a8 e d'16 c b a a b c a c b a g |
-   fis g a fis a g fis e <dis2 a'2> |
-   <b4 e4 gis4> r16 e, fis gis a b c d e d f e |
+   fis g a fis a g fis e <dis a'>2 |
+   <b e gis>4 r16 e, fis gis a b c d e d f e |
    d c b a gis f e d c8 a'' b, gis' |
-   <c,4 e4 a4> s2. \bar "|.";
+   <c, e a>4 s2. \bar "|."
 }
 
-bass = \notes \relative c' \context Voice = bass
+bass =  \relative c' \new Voice = "bass" 
 {
    \global
-   \stemdown
+   \voiceTwo
 
    % 1
    a2. g'4 |
@@ -169,23 +170,20 @@ bass = \notes \relative c' \context Voice = bass
 
    % 50
    a4. b8 c4. d8 |
-   c a e' e <fis2 dis'2> |
-   <a2 c2> b,2 |
-   d2 <c2 e2> |
-   <gis2 e'2> a8 f' d e, |
+   c a e' e <fis dis'>2 |
+   <a c>2 b,2 |
+   d2 <c e>2 |
+   <gis e'>2 a8 f' d e, |
    a4 s2. 
 }
 
-guitar_staff = \context Staff
-<
-   % guitar music actually sounds an octave lower than written.
-   \property Staff.midiInstrument = "acoustic guitar (nylon)"
-   \property Staff.transposing = -12                           
-   \property Staff.tieVerticalDirection = \down
+guitar_staff = \new Staff
+<<
+   \set Staff.midiInstrument = "acoustic guitar (nylon)"
 
-   \melody
-   \bass
->
+   \transpose c' c \melody
+   \transpose c' c \bass
+>>
 
 \score 
 { 
@@ -193,14 +191,13 @@ guitar_staff = \context Staff
    \guitar_staff
 
    % Paper output
-   \paper 
+   \layout 
    {
-     linewidth = 18.0 \cm;
    }
 
    % Midi output
-   \midi 
-   { 
-      \tempo 4 = 80; 
-   }
+   
+  \midi {
+    \tempo 4 = 80
+    }
 }

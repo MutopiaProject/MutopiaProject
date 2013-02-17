@@ -1,51 +1,54 @@
+\version "2.16.0"
+
 \header{
 
-	title = "Suite in C Minor for Lute (trans. to A minor)";
-	subtitle = "3. Sarabande";
-	opus = "BWV 997";
-	composer = "Johann Sebastian Bach (1685-1750)";
-	instrument= "Guitar";
+	title = "Suite in C Minor for Lute (trans. to A minor)"
+	subtitle = "3. Sarabande"
+	opus = "BWV 997"
+	composer = "Johann Sebastian Bach (1685-1750)"
+	instrument= "Guitar"
 
-	mutopiatitle = "Lute Suite BWV 997: 3. Sarabande";
-	mutopiacomposer = "J. S. Bach";
-	mutopiainstrument = "Lute, Guitar";
-	date = "ca.1740-41";
-	style = "Baroque";
-	copyright = "Public Domain";
-	filename = "bmv997-03sarabande.ly";
-	lastupdated = "2001/Feb/25";
-	tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by David Megginson.\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}";
-        footer = "Mutopia-2001/02/25-52";
+	mutopiatitle = "Lute Suite BWV 997: 3. Sarabande"
+	mutopiacomposer = "BachJS"
+	mutopiainstrument = "Lute, Guitar"
+	date = "ca.1740-41"
+	style = "Baroque"
+	copyright = "Public Domain"
+	filename = "bmv997-03sarabande.ly"
+	lastupdated = "2001/Feb/25"
+	maintainer = "David Megginson"
+        footer = "Mutopia-2001/02/25-52"
 
 }
 
-\include "paper16.ly"
-Treble = \notes \context Voice = $Treble {
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 3/4;
-	\key a \minor;
-	\clef treble;
+#(set-global-staff-size 16)
+Treble = \new Voice = "treble" {
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	\time 3/4
+	\key a \minor
+	\clef "treble_8"
+	\voiceOne
 \repeat "volta" 2 {
-	\stemUp a''8. b''32( )c''' b''8 a'' gis'' a'' |
+	a''8. b''32(  c''') b''8 a'' gis'' a'' |
 	d''2. |
 	d''16 f'' e'' d'' b''8. a''16 gis'' f'' e'' d'' |
 	c'' b' c'' b' a' e' a' b' c'' d'' e'' f'' |
 %5
-	g'' e'' cis''8( )cis'' r r4 |
+	g'' e'' cis''8(  cis'') r r4 |
 	f'16 cis'' d'' gis'' a'' f' e' d' e' d'' cis'' gis'' |
 	a'' e' dis' cis' dis' fis' a' cis'' b' gis' a' fis'' |
-	<dis'4 a' c''> <gis' b'> r |
-	c''16( d'' )e'' e'' e''( f'' )g'' g'' g''( a'' )bes'' bes'' |
+	<dis' a' c''>4 <gis' b'> r |
+	c''16( d''  e'') e'' e''( f''  g'') g'' g''( a''  bes'') bes'' |
 %10
-	bes''( )g'' g''( )e'' e''( )c'' c''( )bes' bes'( a' )bes' g'' |
-	a'( bes' )c'' c'' c''( d'' )e'' e'' e''( f'' )g'' g'' |
-	g''( )e'' e''( )cis'' cis''( )a' a'( )g' g'( f' )g' e'' |
+	bes''(  g'') g''(  e'') e''(  c'') c''(  bes') bes'( a'  bes') g'' |
+	a'( bes'  c'') c'' c''( d''  e'') e'' e''( f''  g'') g'' |
+	g''(  e'') e''(  cis'') cis''(  a') a'(  g') g'( f'  g') e'' |
 	f' e' d' e' f' g' a' b' c'' b' a' c'' |
 	b' a' g' a' b' c'' d'' e'' f'' e'' d'' f'' |
 %15
 	e'' g'' f'' a'' g'' c'' b' c'' f'' e'' d'' c'' |
 } \alternative {{
-	<e'2. g' c''> |
+	<e' g' c''>2. |
 }{
 	<e' g' c''> |
 }}
@@ -55,37 +58,38 @@ Treble = \notes \context Voice = $Treble {
 	g''8. a''32 b'' a''16 g'' fis'' e'' d'' b' c'' a'' |
 %20
 	c'' b' c'' d'' b'4 <g'' b''> |
-	<g''8 b''> <fis'' a''> <fis'' a''> <e'' g''> <e'' g''> <dis'' fis''> |
-	fis'' g''16 a'' c''4( )b' |
+	<g'' b''>8 <fis'' a''> <fis'' a''> <e'' g''> <e'' g''> <dis'' fis''> |
+	fis'' g''16 a'' c''4(  b') |
 	b'16 cis'' dis'' e'' fis'' a'' g'' fis'' g'' e'' fis'' dis'' |
 	e''4 g''2 |
 %25
-	g''16( f'' )e'' e'' e''( d'' )cis'' cis'' cis''( b' )a' a' |
-	a'( )cis'' cis''( )e'' e''( )g'' g''( )bes'' a''( )g'' f''( )e'' |
-	f''( e'' )d'' d'' d'' c'' b' b' b'( a' )g' g' |
-	g'( )b' b'( )d'' d''( )f'' f''( )a'' g''( )f'' e''( )d'' |
-	e'' f''( e'' d'' c'' b' a' gis' )a' c'' e'' gis' |
+	g''16( f''  e'') e'' e''( d''  cis'') cis'' cis''( b'  a') a' |
+	a'(  cis'') cis''(  e'') e''(  g'') g''(  bes'') a''(  g'') f''(  e'') |
+	f''( e''  d'') d'' d'' c'' b' b' b'( a'  g') g' |
+	g'(  b') b'(  d'') d''(  f'') f''(  a'') g''(  f'') e''(  d'') |
+	e'' f''( e'' d'' c'' b' a' gis'  a') c'' e'' gis' |
 %30
 	f' d'' e' c'' d' b' c' a' b gis' d'' f'' |
 	e'' gis'' a'' f'' dis'' e'' gis' a' d'' c'' b' a' |
 } \alternative {{
-	<c'2. e' a'> |
+	<c' e' a'>2. |
 }{
-	<c' e' a'> \bar "|.";
+	<c' e' a'> \bar "|."
 }}
 }
-Middle = \notes \context Voice = $Middle {
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 3/4;
-	\key a \minor;
-	\clef treble;
+Middle = {
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	\time 3/4
+	\key a \minor
+	\clef "treble_8"
+	\voiceFour
 \repeat "volta" 2 {
-	\stemBoth <c''4 e''> d''8 c'' b' c'' |
-	<f'2. b'> |
-	<f'4 b'> <gis' d''> r |
+	<c'' e''>4 d''8 c'' b' c'' |
+	<f' b'>2. |
+	<f' b'>4 <gis' d''> r |
 	s s s |
 %5
-	r8 g'( )g'16 bes' a' g' a' g' f' e' |
+	r8 g'(  g'16) bes' a' g' a' g' f' e' |
 	s4 s s |
 	s s s |
 	s s s |
@@ -105,16 +109,16 @@ Middle = \notes \context Voice = $Middle {
 }}
 \repeat "volta" 2 {
 	<g' c''> a'8 g' f' e' |
-	<d'2. a'> |
-	<g'4 d''> e'' r8 a' |
+	<d' a'>2. |
+	<g' d''>4 e'' r8 a' |
 %20
-	<d'4 a'> g' r |
+	<d' a'>4 g' r |
 	s s s |
 	d''8 e'' a'2 |
-	r4 r r |
-	<g' b'> r8 bes' bes' a' |
+	s4 s s |
+	\voiceThree <g' b'> r8 bes' bes' a' |
 %25
-	<e'4 a'> r r |
+	<e' a'>4 r r |
 	s s s |
 	s s s |
 	s s s |
@@ -128,14 +132,15 @@ Middle = \notes \context Voice = $Middle {
 	s s s |
 }}
 }
-Bass = \notes \context Voice = $Bass {
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\time 3/4;
-	\key a \minor;
-	\clef treble;
+Bass = {
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
+	\time 3/4
+	\key a \minor
+	\clef "treble_8"
+	\voiceTwo
 \repeat "volta" 2 {
-	\stemDown c'4 a a |
-	a8. b32( )c' b8 a gis a |
+	c'4 a a |
+	a8. b32(  c') b8 a gis a |
 	g4 a a |
 	a r r |
 %5
@@ -153,7 +158,7 @@ Bass = \notes \context Voice = $Bass {
 %15
 	c' b e f g g |
 } \alternative {{
-	c' c' c'( )b b( )a |
+	c' c' c'(  b) b(  a) |
 }{
 	c'2. |
 }}
@@ -177,29 +182,30 @@ Bass = \notes \context Voice = $Bass {
 	d' e' d' c' b b |
 	c' b c' f e e |
 } \alternative {{
-	a a a( )b b( )c' |
+	a a a(  b) b(  c') |
 }{
-	a2. \bar "|.";
+	a2. \bar "|."
 }}
 }
 
-GuitarStaff = \context Staff = GuitarStaff <
-	\property Staff.midiInstrument = "acoustic guitar (nylon)"
-	\property Staff.transposing = -12                           
+GuitarStaff = \new Staff = GuitarStaff <<
+	\set Staff.midiInstrument = "acoustic guitar (nylon)"
 
-	\Treble
-	\Middle
-	\Bass
->
+	\transpose c' c \Treble
+	\transpose c' c \Middle
+	\transpose c' c \Bass
+>>
 
 \score {
-	<
+	<<
 		\GuitarStaff
-	>
-	\paper {
-		linewidth = 18.0 \cm;
+	>>
+	\layout {
 	}
-	\midi {
-		\tempo 4 = 45;
-	}
+	
+  \midi {
+    \tempo 4 = 45
+    }
+
+
 }
