@@ -1,11 +1,11 @@
-\version "2.11.44"
+\version "2.16.1"
 
 \paper {
-    page-top-space = #0.0
-    %indent = 0.0
-    line-width = 18.0\cm
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
+    markup-system-spacing #'basic-distance = #19
+    top-system-spacing #'basic-distance = #18
+    system-system-spacing #'basic-distance = #26
+    ragged-bottom = ##t
+    ragged-last-bottom = ##t
 }
 
 % #(set-default-paper-size "a4")
@@ -21,15 +21,15 @@
         mutopiacomposer = "BachJS"
         opus = "BWV 988"
         date = "1741"
-        mutopiainstrument = "Clavier"
+        mutopiainstrument = "Harpsichord,Clavichord"
         style = "Baroque"
         source = "Bach-Gesellschaft Edition 1853 Band 3"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "Hajo Dezelski"
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/04/25-1407"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2013/02/03-1407"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 
@@ -40,16 +40,16 @@ soprano =   \relative b' {
     g8. \mordent [ fis16 g8 ] a,8. [ e'16 g8 ] | % 3
     fis8. \prall [ e16 fis8 ] d4. ~ | % 4
     d4 e32 ([ fis g a ] b8. ) [ g16 d8 ] | % 5
-    e4 fis32 [ g a b ] c8. [ a16 e8 ] | % 6
-    fis8. [ d16 g8 ] a,8. [ b16 c8 ] | % 7
-    \grace c8 b4. ~ b8. [ a16 g fis ] | % 8
+    e4 fis32 [\( g a b ] c8. \) [ a16 e8 ] | % 6
+    fis8. [ d16 g8 ] \stemUp a,8. [ b16 c8 ] | % 7
+    \grace c8 b4.~ \stemNeutral b8. [ a16 g fis ] | % 8
     g4 d'8 g4. ~ \prallmordent | % 9
     g8 [ a16 g fis e ] fis4. ( \prallmordent | % 10
     fis8. ) [ g16 fis8 ] e8. [ cis16 d8 ] | % 11
     cis8. \prall [ d16 e8 ] a,4. ~ | % 12
     a4 b32 ( [ cis d e ] fis8. ) [ d16 a8 ] | % 13
-    b4 cis32 [ d e fis ] g8. [ e16 b8 ] | % 14
-    cis8. [ a16 a'8 ] d,8. [ e16 cis8 ] | % 15
+    b4 cis32 \( [ d e fis ] g8. \) [ e16 b8 ] | % 14
+    \grace b8 cis8. [ a16 a'8 ] d,8. [ e16 cis8 ] | % 15
     \grace cis d4. ~ d4. | % 16
     } %end of repeated section
   
@@ -59,7 +59,7 @@ soprano =   \relative b' {
     e,4 fis32 ( [ g a b ] c16 ) [ b a g fis e ] | % 19
     dis8. \prall [ cis16 dis8 ] b4. ~  | % 20
     b8. [ b'16 fis8 ] g8. [ dis16 e8 ] | % 21
-    c8. [ e16 gis8 ] a4 [ b32 ( a  g fis  ) ]  | % 22
+    c8. [ e16 gis8 ] a4 b32 ( [ a  g fis  ) ]  | % 22
     g8. [ a16 b8 ] e,8. [ fis16 dis8 ] | % 23
     e8. [ b16 g8 ] e4 b'8 | % 24
     b8. [ gis16 a8 ] d8 [ e16 d c b ] | % 25
@@ -104,8 +104,8 @@ bass = \relative g {
     b8. \prall [ a16 b8 ] g8. [ a16 b8 ] | % 18
     c8. [ d16 b8 ] a8. [ b16 c8 ] | % 19
     b4 b,8 b'8. [ a16 b8 ] | % 20
-    g4 a32 [ b cis dis ] e8. [ b16 g8 ] | % 21
-    a4 b32 [ c d e ] f8. [ e16 dis8 ] | % 22
+    g4 a32 \( [ b cis dis ] e8. \) [ b16 g8 ] | % 21
+    a4 b32 \( [ c d e ] f8. \) [ e16 dis8 ] | % 22
     e4 g,8 c8. [ a16 b8 ] | % 23
     e,4. ~ e8. [ e'16 d8 ] | % 24
     c8. \prall [ b16 c8 ] gis8. [ b16 e,8 ] | % 25
@@ -124,7 +124,6 @@ bass = \relative g {
 
 \score {
     \context PianoStaff <<
-        \set PianoStaff.instrumentName = "Clavier  "
         \set PianoStaff.midiInstrument = "harpsichord"
         \new Staff = "upper" { \clef treble \key g \major \time 6/8 \soprano  }
         \new Staff = "lower"  { \clef bass \key g \major \time 6/8 \bass }
