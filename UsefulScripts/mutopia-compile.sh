@@ -18,9 +18,18 @@
 # Functions #
 #############
 
+# f_check_papersize - Compare actual paper size in .ps to $PAPERSIZE
+f_check_papersize() {
+   grep -q "^%%DocumentMedia:" "$LY_BASE_NAME.ps"|| echo "Warning: Couldn't detect paper size."
+   grep -q "^%%DocumentMedia: $PAPERSIZE" "$LY_BASE_NAME.ps" ||
+        echo "Warning: Couldn't detect paper size $PAPERSIZE."
+}
+
 # f_compile_a4 - Compile A4 version of .ly file (and preview images)
 f_compile_a4() {
+   PAPERSIZE=a4
    $LILYPOND_BIN $PREVIEW $PS_AND_PDF -dno-include-book-title-preview -dresolution=72 -dno-point-and-click -dpaper-size=\"a4\" "$LY_BASE_NAME.ly"
+   f_check_papersize
    mv "$LY_BASE_NAME.ps" "$TARGET_BASE_NAME-a4.ps"
    mv "$LY_BASE_NAME.pdf" "$TARGET_BASE_NAME-a4.pdf"
    mv "$LY_BASE_NAME.preview.png" "$TARGET_BASE_NAME-preview.png"
@@ -31,7 +40,9 @@ f_compile_a4() {
 
 # f_compile_let - Compile Letter version of .ly file (and fix .midi -> .mid)
 f_compile_let() {
+   PAPERSIZE=letter
    $LILYPOND_BIN $PS_AND_PDF -dno-point-and-click -dpaper-size=\"letter\" "$LY_BASE_NAME.ly"
+   f_check_papersize
    mv "$LY_BASE_NAME.ps" "$TARGET_BASE_NAME-let.ps"
    mv "$LY_BASE_NAME.pdf" "$TARGET_BASE_NAME-let.pdf"
    mv "$LY_BASE_NAME.midi" "$TARGET_BASE_NAME.midi" # TODO see comment above
