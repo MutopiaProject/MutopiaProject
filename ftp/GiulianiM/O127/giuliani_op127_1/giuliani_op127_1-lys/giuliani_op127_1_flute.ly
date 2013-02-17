@@ -43,11 +43,7 @@
 				%6
       a4. d8 cis e fis g |
       fis4 a4.( g8[) b,8. e16] |
-      e4 d2 cis4^\trill \bar "" \grace {
-	\override Flag #'stroke-style = #"grace"
-	b16[ cis]
-	\revert Flag #'stroke-style }
-      \bar "|"
+      e4 d2 \afterGrace cis4^\trill {b16[ cis]} |
       d4\f r8 d^\turn e fis g gis |
       b4( a8.) fis16-. a4( g8.) e16-.|
 				%11
@@ -59,19 +55,12 @@
 				%16
       b( c) cis-. d-. dis fis16( e d c b  a) |
       g2( fis8) r8 g'8.\mf a16|
-      b4. b8 ais[ b \grace {
-	\once\override Flag #'stroke-style = #"grace"
-	d }
-      c8. b16] |
+      b4. b8 ais[ b \slashedGrace d c8. b16] |
       b2 \times 2/3 {r8 a b} \times 2/3 {c e, a}|
       a( g) fis-. g-.  b( a) d-. c-.|
 				%21
       ais2( b8) r g,8. a16|
-      ais8( b) \grace {
-	\override Flag #'stroke-style = #"grace"
-	d
-	\revert Flag #'stroke-style }
-      c b \stemDown b ais16-. b-. \stemNeutral cis-. dis-. e-. fis-.|
+      ais8( b) \slashedGrace d c b \stemDown b ais16-. b-. \stemNeutral cis-. dis-. e-. fis-.|
       g2 fis16( g) c-. b-. a-. g-. fis-. e-.|
       e( d) c-. b-. d( c) b-. a-. \stemDown c( b) a-. g-. \stemNeutral b( a) g-. fis-.|
 
@@ -119,11 +108,7 @@
       c( b) a-. b-. \stemDown d( c) e,-. a-. \stemNeutral|
       a4 g2 b16( a gis a)|
       ais4 b r8 e^\turn fis gis|
-      \grace {
-	\override Flag #'stroke-style = #"grace"
-	b
-	\revert Flag #'stroke-style }
-      a16( gis a  b) c4 r8 d,^\turn e fis|
+      \slashedGrace b a16( gis a  b) c4 r8 d,^\turn e fis|
       g16( b a g fis g a  g) fis( e d c b a c  e)|
 				%61
       e4( d8) g16 fis-. a( g) fis-. e-. d-. c-. b-. a-.|
