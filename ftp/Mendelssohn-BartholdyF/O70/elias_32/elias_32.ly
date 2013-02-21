@@ -4,20 +4,21 @@
   title="Wer bis an das Ende beharrt"
   subtitle=\markup {{\italic Elias}, Oratorio: Choral}
   composer="Felix Mendelssohn Bartholdy (1809-1847)"
-  mutopiapoet="Mt. 10,22"
+  mutopiapoet="Mt. 10, 22"
   meter="Andante sostenuto"
   source="Breitkopf & Härtel"
-  copyright="Creative Commons Attribution-ShareAlike 2.5"
+  copyright="Creative Commons Attribution-ShareAlike 3.0"
   style = "Romantique" % Early Romantic
   maintainer = "Kris Van Bruwaene"
   maintainerEmail = "kris.vanbruwaene@gmail.com"
   mutopiacomposer="Mendelssohn-BartholdyF"
-  lastupdated = "2005-08-26"
+  mutopiainstrument = "Voice (SATB)"
+  mutopiastyle = "Romantic"
   
-  footer = "Mutopia-2005/11/08-598"
-  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright \\ The Mutopia Project \\& "+ \maintainer + " 2005.} \\makebox[188mm][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License. To view a copy of that license visit} \\makebox[188mm][c]{\\texttt{http://creativecommons.org/licenses/by-sa/2.5/} \\footnotesize or write to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}}"
+ footer = "Mutopia-2013/02/21-598"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
-\version "2.16.0"
+\version "2.16.1"
 
 global = {
    \time 4/4
