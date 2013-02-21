@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 #(set-global-staff-size 16)
 \include "nederlands.ly"
 \header {
@@ -11,15 +11,15 @@
   mutopiatitle      = "Sonatine I - Andante"
   mutopiacomposer   = "KuhlauF"
   mutopiainstrument = "Piano"
-  date              = "Early 19th century"
-  source            = "B. Schott's Söhnen, 19th century"
+  mutopiaopus       = "O 20, No. 1: 2"
+  date              = "Early 19th Century"
+  source            = "B. Schott's Söhnen, 19th Century"
   style             = "Classical"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@zonnet.com"
-  lastupdated       = "2002/Apr/10"
 
-  tagline           = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer            = "Mutopia-2002/04/10-233"
+ footer = "Mutopia-2013/02/21-233"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 Global =  {\key f\major \time 6/8 \partial 8}
