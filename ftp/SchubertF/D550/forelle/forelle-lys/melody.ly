@@ -1,3 +1,4 @@
+\version "2.16.0"
 melody = \relative as' {
     \key des \major
     \time 2/4

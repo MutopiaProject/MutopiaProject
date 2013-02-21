@@ -1,6 +1,4 @@
-\version "2.4.0"
-\encoding "latin1"
-\include "defs.ly"
+\version "2.16.0"
 
 #(set-global-staff-size 18)
 
@@ -12,7 +10,7 @@
     piece = "Nicht zu geschwind."
         
     mutopiatitle = "Gretchen am Spinnrade"
-    mutopiacomposer = "Franz Schubert (1798-1828)"
+    mutopiacomposer = "SchubertF"
     mutopiaopus = "D.118 (Op. 2)"
     mutopiainstrument = "Voice and Piano"
     date = "1814"
@@ -42,20 +40,19 @@
 		\override StaffSymbol #'staff-space = #(magstep -2)
 	    }
 	    <<
-		\set Staff.minimumVerticalExtent = #'(-2 . 2)
+		\override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-2 . 2)
 		\context Voice = mel {
 		    \set Staff.midiInstrument = #"clarinet"
-		    \set Staff.instrument = \markup { "Singstimme." }
+		    \set Staff.instrumentName = \markup { "Singstimme." }
 
 		    \autoBeamOff
 		    \melody
 		}
 		\lyricsto mel \new Lyrics { \text }
 	    >>
-	    
 	    \new PianoStaff <<
 		\set PianoStaff.midiInstrument = #"acoustic grand"
-		\set PianoStaff.instrument = \markup { "Pianoforte." }
+		\set PianoStaff.instrumentName = \markup { "Pianoforte." }
 		
 		\context Staff = up \upper
 		\context Dynamics=dynamics \dynamics
@@ -67,46 +64,15 @@
 	>>
 	  
 	\layout {
-	    \context {
-		\type "Engraver_group_engraver"
-		\name Dynamics
-		\alias Voice % So that \cresc works, for example.
-		\consists "Output_property_engraver"
-		
-		minimumVerticalExtent = #'(-1 . 1)
-		pedalSustainStrings = #'("Ped." "*Ped." "*")
-		pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-		
-		\consists "Piano_pedal_engraver"
-		\consists "Script_engraver"
-		\consists "Dynamic_engraver"
-		\consists "Text_engraver"
-		
-		\override TextScript #'font-size = #2
-		\override TextScript #'font-shape = #'italic
-		\override DynamicText #'extra-offset = #'(0 . 2.5)
-		\override Hairpin #'extra-offset = #'(0 . 2.5)
-		
-		\consists "Skip_event_swallow_translator"
-		
-		\consists "Axis_group_engraver"
-	    }
-	    \context {
-		\PianoStaff
-		\accepts Dynamics
-		\override VerticalAlignment #'forced-distance = #7
-	    }
-	    
-	    \context { \RemoveEmptyStaffContext }
+	    \context { \Staff \RemoveEmptyStaves }
 	}  
 
 	\midi
 	{
 	    \context {
-		\type "Performer_group_performer"
+		\type "Performer_group"
 		\name Dynamics
 		\consists "Piano_pedal_performer"
-		\consists "Span_dynamic_performer"
 		\consists "Dynamic_performer"
 	    }
 	    \context {

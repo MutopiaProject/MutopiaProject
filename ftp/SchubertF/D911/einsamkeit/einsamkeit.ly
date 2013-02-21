@@ -1,39 +1,38 @@
 \include "catalan.ly"
 #(set-global-staff-size 16)
-\paper  {
-	linewidth = 17.0 \cm
+\layout  {
 	interscoreline = 20
 }
-\version "2.2.0"
+\version "2.16.0"
 
 \header {
 	title = "Einsamkeit"
 	composer = "Franz SCHUBERT"
-	poet = "Wilhelm MÜLLER"
-	opus = "Opus 89 n°12b"
-	piece = "\\hspace*{30mm}\\normalfont\\large Langsam"
+	poet = "Wilhelm MÃœLLER"
+	opus = "Opus 89 nÂ°12b"
 	tagline = ""
  mutopiatitle = "Einsamkeit"
  mutopiacomposer = "SchubertF"
- mutopiapoet = "W. Müller (1794-1827)"
+ mutopiapoet = "W. MÃ¼ller (1794-1827)"
  mutopiaopus = "D.911-12 (Op. 89)"
  mutopiadate = "1827"
  mutopiainstrument = "Voice and Piano"
- source = "Breitkopf & Härtel, 1895"
+ source = "Breitkopf & HÃ¤rtel, 1895"
  style = "Romantic"
  copyright = "Public Domain"
  maintainer = "L. Sardain"
  % with some lyric corrections by Roland Goretzki
  lastupdated = "2004/Sep/17"
 
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+ tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
  footer = "Mutopia-2004/09/17-373"
 }
 
-melody = \notes \relative do' {
-	\set Staff.instrument = #"Singstimme."
+melody =  \relative do' {
+	\set Staff.instrumentName = #"Singstimme."
 	\time 2/4
 	\key si \minor
+	\tempo "Langsam"
 	R2*5
 	r4 r8 fad |
 	fad8. sol16 fad[ sol] fad[ si] |
@@ -79,18 +78,18 @@ melody = \notes \relative do' {
 	R2 | R2 \bar "|."
 }
 
-text = \lyrics {
-  Wie ei -- ne trü -- be __ Wol -- ke durch heit' -- re Lüf -- te geht,
-  wenn in der Tan -- nen Wip -- fel ein mat -- tes Lüft -- chen weht:
-  so zieh' ich mei -- ne __ Stra -- sse da -- hin mit __ trä -- gem Fuss,
+text = \lyricmode {
+  Wie ei -- ne trÃ¼ -- be __ Wol -- ke durch heit' -- re LÃ¼f -- te geht,
+  wenn in der Tan -- nen Wip -- fel ein mat -- tes LÃ¼ft -- chen weht:
+  so zieh' ich mei -- ne __ Stra -- sse da -- hin mit __ trÃ¤ -- gem Fuss,
   durch hel -- les, fro -- hes __ Le -- ben ein -- sam und oh -- ne Gruss,
   Ach, dass die Luft so _ ru -- hig! Ach, dass die Welt so _ licht!
-  Als noch die Stür -- me tob -- ten, war ich so e -- lend, so e -- lend nicht.
+  Als noch die StÃ¼r -- me tob -- ten, war ich so e -- lend, so e -- lend nicht.
   Ach, dass die Luft so _ ru -- hig! ach, dass die Welt so _ licht!
-  Als noch die Stür -- me tob -- ten, war ich so e -- lend, so e -- lend nicht.
+  Als noch die StÃ¼r -- me tob -- ten, war ich so e -- lend, so e -- lend nicht.
 }
 
-upper = \notes\relative do' {
+upper = \relative do' {
 	\key si \minor
 	r4 <re si'>8(-. <re si'>8)-. |
 	r4 <re fad>8(-. <re fad>8)-. |
@@ -124,9 +123,9 @@ upper = \notes\relative do' {
 	\times 2/3 {<si re si'>[ <si re si'> <si re si'>] <re sol si re>[ <re sol si re> <re sol si re>]
 		<mib sol do mib>[ <mib sol do mib> <mib sol do mib>] <la do mib fa>[ <la do mib fa> <la do mib fa>] }
 	\clef violin <si re sol>8-. <re fa si re>-. r8 \clef bass <fa, si re> |
-	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemBoth <mi, do' mi>8( <fa si re>) |
-	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemBoth <mi, do' mi>8( <mid si' re>) |
-	<<{\stemDown fad4} \\ {\stemUp<re' fad!>8( <dod! mi>16 <si re>)}>> \stemBoth <fad re' fad>8( <mi fad dod'>) |
+	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemNeutral <mi, do' mi>8( <fa si re>) |
+	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemNeutral <mi, do' mi>8( <mid si' re>) |
+	<<{\stemDown fad4} \\ {\stemUp<re' fad!>8( <dod! mi>16 <si re>)}>> \stemNeutral <fad re' fad>8( <mi fad dod'>) |
 	<re fad si> si( re mid |
 	fad sol si re) |
 	\clef violin \repeat "tremolo" 16 {do64 la'64} |
@@ -138,15 +137,15 @@ upper = \notes\relative do' {
 	\times 2/3 {<si re si'>[ <si re si'> <si re si'>] <re sol si re>[ <re sol si re> <re sol si re>]
 		<mib sol do mib>[ <mib sol do mib> <mib sol do mib>] <la do mib fa>[ <la do mib fa> <la do mib fa>] }
 	\clef violin <si re sol>8-. <re fa si re>-. r8 \clef bass <fa, si re> |
-	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemBoth <mi, do' mi>8( <fa si re>) |
-	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemBoth <mi, do' mi>8( <mid si' re>) |
-	<<{\stemDown fad4} \\ {\stemUp<re' fad!>8( <dod! mi>16 <si re>)}>> \stemBoth <fad re' fad>8( <mi fad dod'>) |
+	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemNeutral <mi, do' mi>8( <fa si re>) |
+	<<{\stemDown mi4} \\ {\stemUp<do' mi>8( re16 do)}>> \stemNeutral <mi, do' mi>8( <mid si' re>) |
+	<<{\stemDown fad4} \\ {\stemUp<re' fad!>8( <dod! mi>16 <si re>)}>> \stemNeutral <fad re' fad>8( <mi fad dod'>) |
 	<re fad si> r <re si'> <re si'> |
 	r4 <re si'>8 <re si'> |
 	<re si'>2 \bar "|."
 }
 
-nuances = \notes {
+nuances =  {
 	s2\pp
 	s2*3 s4 s4\fp
 	s2*17 s2-"cresc."
@@ -176,7 +175,7 @@ nuances = \notes {
 	s2-"dimin."
 }
 
-lower = \notes\relative do {
+lower = \relative do {
 	\clef bass
 	\key si \minor
 	<si fad'>8-.( <si fad'>-.) r4 |
@@ -233,65 +232,27 @@ lower = \notes\relative do {
 
 \score {
   <<
-    \addlyrics
-      \context Staff = mel {
-        \set Staff.autoBeaming = ##f
-         \unset Staff.melismaBusyProperties 
-        \melody
-      }
-      \context Lyrics \text
+      \melody
+      \addlyrics \text
 
     \context PianoStaff <<
-      \set PianoStaff.instrument = #"Pianoforte.   "
-      \context Staff = upper \upper
-      \context Dynamics = dynamics \nuances
-      \context Staff = lower \lower
+      \set PianoStaff.instrumentName = #"Pianoforte."
+      \context Staff = "upper" \upper
+      \context Dynamics = "dynamics" \nuances
+      \context Staff = "lower" \lower
     >>
   >>
-  \paper {
-    % The following are taken from LilyPond's piano-dynamics.ly.
-    \context {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \consists "Output_property_engraver"
-
-      minimumVerticalExtent = #'(-1 . 1)
-      pedalSustainStrings = #'("Ped." "*Ped." "*")
-      pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-
-      \consists "Piano_pedal_engraver"
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      \override TextScript #'font-size = #2
-      \override TextScript #'font-shape = #'italic
-      \override DynamicText #'extra-offset = #'(0 . 1.2)
-      \override Hairpin #'extra-offset = #'(0 . 1.2)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consistsend "Axis_group_engraver"
-    }
-    \context {
-      \PianoStaffContext
-      \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
-    }
-  }
+  \layout {}
   \midi {
     \context {
-      \type "Performer_group_performer"
+      \type "Performer_group"
       \name Dynamics
       \consists "Piano_pedal_performer"
-      \consists "Span_dynamic_performer"
       \consists "Dynamic_performer"
     }
     \context {
-      \PianoStaffContext
+      \PianoStaff
       \accepts Dynamics
     }
   }
 }
-
-
