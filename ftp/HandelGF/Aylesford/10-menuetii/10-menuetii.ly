@@ -1,13 +1,13 @@
-\version "1.4.9.uu1"
-\include "paper20.ly"
+\version "2.16.0"
+#(set-global-staff-size 20)
 \header {
   title             = "Menuet II (Trio)"
   subtitle          = "from the Aylesford Pieces"
-  composer          = "Georg Friedrich Händel (1685-1759)"
+  composer          = "Georg Friedrich HÃ¤ndel (1685-1759)"
   meter             = "Ruhig (pomposo)"
-  tagline           = "Typeset using Lilypond 1.4.9.uu1"
+  tagline           = "Typeset using Lilypond 1.4.10"
   mutopiatitle      = "Menuet II (Trio)"
-  mutopiacomposer   = "G. F. Handel (1685-1759)"
+  mutopiacomposer   = "HandelGF"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "Edition Schott 1930"
@@ -17,14 +17,14 @@
   maintainerEmail   = "basvanlola@hotmail.com"
   lastupdated       = "2002/Jan/06"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/01/06-158"
   }
 
-Global = \notes {\key d\major \time 3/4}
+Global =  {\key d\major \time 3/4}
 
 
-MDI = \notes \relative c'' {
+MDI =  \relative c'' {
   \repeat volta 2 {
   fis4 g fis
   fis8 e fis cis d cis
@@ -63,8 +63,8 @@ MDI = \notes \relative c'' {
   }
   
   }
-MDII = \notes \relative c'' {
-  <a4 d> <g cis> <a d>
+MDII =  \relative c'' {
+  <a d>4 <g cis> <a d>
   b fis fis
   b <a d> <a cis>
   <a d> <a cis> fis
@@ -72,12 +72,12 @@ MDII = \notes \relative c'' {
   <a d> <g cis> <a d>
   b fis fis
   b <a d> <a cis>
-  <fis2. a> 
+  <fis a>2. 
   
   a4 d <d fis>
   <d fis> r r
   r b <b e>
-  <a2. e'>
+  <a e'>2.
   
   a
   a
@@ -95,19 +95,19 @@ MDII = \notes \relative c'' {
   b fis fis
   
   b <a d> <a cis>
-  <fis2. a>
+  <fis a>2.
   }
 
-MSI = \notes \relative c {
-  \stemBoth d4-. e-. fis-.
+MSI =  \relative c {
+  d4-. e-. fis-.
   g-. a-. b-.
   g-. a-. a,-.
   d-. a-. d,-.
   
-  <d-. d'> <e-. e'> <fis-. fis'>
-  <g-. g'> <a a'-.> <b b'-.>
-  <g-. g'> <a-. a'> a-.
-  <d,-. d'> a'-. d,-.
+  <d d'>-. <e e'>-. <fis fis'>-.
+  <g g'>-. <a a'>-. <b b'>-.
+  <g g'>-. <a a'>-. a-.
+  <d, d'>-. a'-. d,-.
   
   d'4-. fis-. a-.
   d2.-.
@@ -126,29 +126,31 @@ MSI = \notes \relative c {
   
   g-. a-. a,-.
   d-. a'-. b-.
-  <d,,-. d'> <e-. e'> <fis-. fis'>
-  <g-. g'> <a a'-.> <b b'-.>
+  <d,, d'>-. <e e'>-. <fis fis'>-.
+  <g g'>-. <a a'>-. <b b'>-.
   
-  <g-. g'> <a-. a'> <a,-. a'>
-  <d2.\fermata d'> 
+  <g g'>-. <a a'>-. <a, a'>-.
+  <d d'>2.\fermata
   }
 
-\score {\notes {
-  \context PianoStaff <
-    \property PianoStaff.midiInstrument = "harpsichord"
-    \context Staff = "up" <
-      \property Staff.TimeSignature \override #'style = #'C
+\score { {
+  \new PianoStaff <<
+    \set PianoStaff.midiInstrument = "harpsichord"
+    \new Staff = "up" <<
       \Global \clef treble
-      \context Voice=One {\voiceOne\MDI}
-      \context Voice=Two {\voiceTwo\MDII}
-    >
-    \context Staff = "down" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef bass
-      \context Voice=One {\voiceOne\MSI}
-    >
-  >
+      \new Voice=One {\voiceOne\MDI}
+      \new Voice=Two {\voiceTwo\MDII}
+    >>
+    \new Staff = "down" <<
+      \Global \clef bass \MSI
+    >>
+  >>
 }
-\midi {\tempo 4=72}
-\paper {}
+
+  \midi {
+    \tempo 4 = 72
+    }
+
+
+\layout {}
 }

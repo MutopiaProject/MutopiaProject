@@ -1,13 +1,13 @@
-\version "1.4.9.uu1"
-\include "paper20.ly"
+\version "2.16.0"
+#(set-global-staff-size 20)
 \header {
   title             = "Impertinence"
   subtitle          = "from the Aylesford Pieces"
-  composer          = "Georg Friedrich Händel (1685-1759)"
+  composer          = "Georg Friedrich HÃ¤ndel (1685-1759)"
   meter             = "Vivace"
-  tagline           = "Typeset using Lilypond 1.4.9.uu1"
+  tagline           = "Typeset using Lilypond 1.4.10"
   mutopiatitle      = "Impertinence"
-  mutopiacomposer   = "G. F. Handel (1685-1759)"
+  mutopiacomposer   = "HandelGF"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "Edition Schott 1930"
@@ -17,16 +17,16 @@
   maintainerEmail   = "basvanlola@hotmail.com"
   lastupdated       = "2002/Jan/05"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/01/05-154"
   }
 
-Global = \notes {\key g\minor \time 4/4 \partial 4}
+Global =  {\key g\minor \time 4/4 \partial 4}
 
 
-MDI = \notes \relative c' {
+MDI =  \relative c' {
   \repeat volta 2 {
-  \stemBoth d4-.
+  d4-.
   
   g bes a g8 fis
   g2 d
@@ -34,13 +34,19 @@ MDI = \notes \relative c' {
   bes2 g
   
   bes8 c d4-. c-. bes-.
-  <a2 c> f4-. d'-.
-  \stemUp es2 \times 2/3 {[c8 d c} d16 c bes c]
-  \partial 4*3 d2.
+  <a c>2 f4-. d'-.
+  <<{
+    \override TupletBracket #'stencil = ##f
+    es2 \times 2/3 { c8[ d c} d16 c bes c] |
+    d2.
+  } \\ {
+    g,2 g |
+    fis2.
+  }>>
   }
   
   \repeat volta 2 {
-  \partial 4 \stemBoth d4-.
+  d'4-. |
   
   d8 es f!4-. es-. d-.
   es2 c
@@ -50,16 +56,16 @@ MDI = \notes \relative c' {
   bes8 c d4-. c-. bes-.
   a8 bes c4-. bes-. a-.
   bes-. a8 bes g4-. g'-.
-  <a,2 d fis> <g d'>
+  <a, d fis>2 <g d'>
   
   g'4 a bes8 a g fis
   g2 d
-  es8 d c bes \times 4/6 {[a16 bes a bes a bes]} [a8 r16 g]
-  \partial 4*3 g2.\fermata
+  es8 d c bes \times 4/6 { a16[ bes a bes a bes]}  a8[ r16 g]
+  g2.\fermata
   }
   
   }
-MDII = \notes \relative c'' {
+MDII =  \relative c'' {
   s4
   
   s1
@@ -69,8 +75,6 @@ MDII = \notes \relative c'' {
   
   s
   s
-  \stemDown g2 g
-  fis2.
   
   s4
   
@@ -90,10 +94,10 @@ MDII = \notes \relative c'' {
   s2.
   }
 
-MSI = \notes \relative c {
+MSI =  \relative c {
   r4
   
-  \stemBoth
+  \stemNeutral
   r2 r4 d4-.
   g a bes a8 g 
   fis2 d
@@ -102,7 +106,7 @@ MSI = \notes \relative c {
   d-. bes-. a-. g-.
   f-. f'-. es-. d-.
   c2 <es g>
-  <d2. a'>
+  <d a'>2.
   
   r4
   
@@ -118,26 +122,26 @@ MSI = \notes \relative c {
   
   es'-. c-. d-. d'-.
   es-. d8 c bes4-. g-.
-  c-. a-. <d fis-.> d,-.
-  g2.\fermata
+  c-. a-. <d fis>-. d,-.
+  g2._\fermata
   }
 
-\score {\notes {
-  \context PianoStaff <
-    \property PianoStaff.midiInstrument = "harpsichord"
-    \context Staff = "up" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef treble
-      \context Voice=One {\voiceOne\MDI}
-      \context Voice=Two {\voiceTwo\MDII}
-    >
-    \context Staff = "down" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef bass
-      \context Voice=One {\voiceOne\MSI}
-    >
-  >
+\score { {
+  \new PianoStaff <<
+    \set PianoStaff.midiInstrument = "harpsichord"
+    \new Staff = "up" <<
+      \Global \clef treble \MDI
+    >>
+    \new Staff = "down" <<
+      \Global \clef bass \MSI
+    >>
+  >>
 }
-\midi {\tempo 4=104}
-\paper {}
+
+  \midi {
+    \tempo 4 = 104
+    }
+
+
+\layout {}
 }

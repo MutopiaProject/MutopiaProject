@@ -1,13 +1,13 @@
-\version "1.4.9.uu1"
-\include "paper16.ly"
+\version "2.16.0"
+#(set-global-staff-size 16)
 \header {
   title             = "Concerto"
   subtitle          = "from the Aylesford Pieces"
-  composer          = "Georg Friedrich Händel (1685-1759)"
+  composer          = "Georg Friedrich HÃ¤ndel (1685-1759)"
   meter             = "Allegro moderato"
-  tagline           = "Typeset using Lilypond 1.4.9.uu1"
+  tagline           = "Typeset using Lilypond 1.4.10"
   mutopiatitle      = "Concerto"
-  mutopiacomposer   = "G. F. Handel (1685-1759)"
+  mutopiacomposer   = "HandelGF"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "Edition Schott 1930"
@@ -17,16 +17,16 @@
   maintainerEmail   = "basvanlola@hotmail.com"
   lastupdated       = "2002/Jan/06"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/01/06-155"
 }
 
 
-Global = \notes {\key g\major \time 4/4}
+Global =  {\key g\major \time 4/4}
 
 
-MDI = \notes \relative c'' {
-  \stemBoth g8 b d <b g'> <a fis'> d <g, g'> b
+MDI =  \relative c'' {
+  g8 b d <b g'> <a fis'> d <g, g'> b
   c e,-. fis-. d'-. b-. g-. r b'
   a-. fis-. d-. fis-. g-. e,-. r g'
   fis-. d-. b-. d e-. c,-. r e'
@@ -36,15 +36,15 @@ MDI = \notes \relative c'' {
   b16 a g fis e d cis b cis8-. a-. cis-. e-.
   a16 g fis e d cis b a b d cis d a d cis d
   
-  g, g' fis g e g d g cis,8 <cis b'-.> <d a'-.> <e g-.>
-  <d8. fis> e16 <cis8. e\prall> d16 <fis,4 a d> r
+  g, g' fis g e g d g cis,8 <cis b'>-. <d a'>-. <e g>-.
+  <d fis>8. e16 <cis e\prall>8. d16 <fis, a d>4 r
   d'8 fis a <fis d'> <e cis'> a <d, d'> fis
   g b,-. cis-. a'-. fis-. d-. r a'
   
-  fis d-. d16 e d8-. g-. d-. \times 4/6 {[e16 d e d cis d]}
-  a'8-. d,-. \times 4/6 {[e16 d e d cis d]} b'8-. <b, d-.> <b16 d> <c e> <d8 fis-.>
-  <b16 d> <c e> <d8 fis-.> <b16 d> <c e> <d8 fis-.> <b16 d> <c e> <d8 fis-.> <b16 d> <c e> <d8 fis-.>
-  <b16 d> <c e> <d8 fis-.> <a8-. c> <g-. b> a-. a' fis d
+  fis d-. d16 e d8-. g-. d-. \times 4/6 { e16[ d e d cis d]}
+  a'8-. d,-. \times 4/6 { e16[ d e d cis d]} b'8-. <b, d>-. <b d>16 <c e> <d fis>8-.
+  <b d>16 <c e> <d fis>8-. <b d>16 <c e> <d fis>8-. <b d>16 <c e> <d fis>8-. <b d>16 <c e> <d fis>8-.
+  <b d>16 <c e> <d fis>8-. <a c>8-. <g b>-. a-. a' fis d
   
   b' g-. c4 r8 fis,-. b4
   r16 e,16 fis g a g fis e dis b' a b fis b a b
@@ -57,76 +57,40 @@ MDI = \notes \relative c'' {
   b' d, fis d g d a' c, b d e fis g8 d
   
   e16 c b a a' e d c d b a g g' d c b
-  c b c a b a b g <fis8-. a> d-. r4
+  c b c a b a b g <fis a>8-. d-. r4
   g8 b d <b g'> <a fis'> d <g, g'> b
   c e,-. fis-. d'-. b-. g-. r d'
   
-  e8 c32 d e16-. \times 4/6 {[fis e fis e d e]} fis8-. d32 e fis16 \times 4/6 {[g fis g fis e fis]}
-  g8-. e32 fis g16-. \times 4/6 {[a16 g a g fis g]} a8-. d,-. r a'-.
+  e8 c32 d e16-. \times 4/6 { fis[ e fis e d e]} fis8-. d32 e fis16 \times 4/6 { g[ fis g fis e fis]}
+  g8-. e32 fis g16-. \times 4/6 { a16[ g a g fis g]} a8-. d,-. r a'-.
   b8\prall a16 b c8 b16 a b8\prall a16 b c8 b16 a
   b8\prall a16 b c8 b16 a b8 d, g b,
   
-  e8-. g,-. \stemUp c4 ~ c8 d-. b-. a-.
-  g8. a16 a8.\prall g16 \stemBoth <b,4 d g> r8 a'-.
-  b8\prall a16 b c8 b16 a b8\prall a16 b c8 b16 a
-  b8\prall a16 b c8 b16 a b8 d <b g'> b
+  e8-. g,-.
+  <<{
+    c4 ~ c8 d-. b-. a-. |
+    g8. a16 a8.\prall g16
+  } \\ {
+    r8 e8-. d-. fis-. g4 |
+    g4 fis
+  }>>
+  <b, d g>4 r8 a'-. |
+  b8\prall a16 b c8 b16 a b8\prall a16 b c8 b16 a |
+  b8\prall a16 b c8 b16 a b8 d <b g'> b |
   
-  <g e'-.> g-. \stemUp c4 ~ c8 d-. b-. a-.
-  a4. ~ g8 g2\fermata
+  <g e'>-. g-.
+  <<{
+    c4 ~ c8 d-. b-. a-. |
+    a4.( g8) g2\fermata |
+  } \\ {
+    r8 e d fis <d g> e |
+    <d g>4 <c fis> <b d>2 |
+  }>>
   \bar "|."
   }
-MDII = \notes \relative c' {
-  s1
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s
-  s
-  s
-  s
-  
-  s4 \stemDown r8 e8-. d-. fis-. g4
-  g4 fis s2
-  s1
-  s
-  
-  s4 r8 e d fis <d g> e
-  <d4 g> <c fis> <b2 d>
-  }
 
-MSI = \notes \relative c' {
-  \stemBoth g4 b8 g d' c b g
+MSI =  \relative c' {
+  g4 b8 g d' c b g
   a c,-. d-. fis-. g-. b-. d-. g-.
   fis4 r8 d, e g-. b-. e-.
   d4 r8 b, c e-. g-. c-.
@@ -141,10 +105,10 @@ MSI = \notes \relative c' {
   d8 d, fis d a' g fis d
   e g-. a-. a,-. d-. fis-. a-. d-.
   
-  <c!4 d> r <b d> r
+  <c! d>4 r <b d> r
   <fis d'> r <g d'> r8 d'-.
   g-. d-. b-. d-. g-. d-. b-. d-.
-  g-. b,-. c-. g-. <d'4 fis> r8 fis,
+  g-. b,-. c-. g-. <d' fis>4 r8 fis,
   
   g e a c, d4 r8 g-.
   c4 r8 a b4 r8 dis
@@ -162,7 +126,7 @@ MSI = \notes \relative c' {
   a c,-. d-. fis-. g-. g,-. b-. g
   
   c8 a'-. r c, d d'-. r c
-  b a-. b-. g-. <d'4 fis> \clef violin r8 fis'
+  b a-. b-. g-. <d' fis>4 \clef violin r8 fis'
   g8 fis16 g a8 g16 fis g8 fis16 g a8 g16 fis
   g8 fis16 g a8 g16 fis g8 r r \clef bass g,,
   
@@ -171,26 +135,26 @@ MSI = \notes \relative c' {
   g8 fis16 g a8 g16 fis g8 fis16 g a8 g16 fis
   g8 fis16 g a8 g16 fis g8 r r \clef bass <g,, g'>
   
-  <c c'-.> <b b'-.> <a a'-.> <g g'> <fis-. fis'> <d-. d'> <g-. g'> <c,-. c'>
-  <d4 d'> <d, d'> <g2\fermata g'>
+  <c c'>-. <b b'>-. <a a'>-. <g g'> <fis fis'>-. <d d'>-. <g g'>-. <c, c'>-.
+  <d d'>4 <d, d'> <g\fermata g'>2
   }
 
-\score {\notes {
-  \context PianoStaff <
-    \property PianoStaff.midiInstrument = "harpsichord"
-    \context Staff = "up" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef treble
-      \context Voice=One {\voiceOne\MDI}
-      \context Voice=Two {\voiceTwo\MDII}
-    >
-    \context Staff = "down" <
-      \property Staff.TimeSignature \override #'style = #'C
-      \Global \clef bass
-      \context Voice=One {\voiceOne\MSI}
-    >
-  >
+\score { {
+  \new PianoStaff <<
+    \set PianoStaff.midiInstrument = "harpsichord"
+    \new Staff = "up" <<
+      \Global \clef treble \MDI
+    >>
+    \new Staff = "down" <<
+      \Global \clef bass \MSI
+    >>
+  >>
 }
-\midi {\tempo 4=104}
-\paper {}
+
+  \midi {
+    \tempo 4 = 104
+    }
+
+
+\layout {}
 }
