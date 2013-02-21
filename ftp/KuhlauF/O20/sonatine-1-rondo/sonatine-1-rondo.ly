@@ -1,4 +1,4 @@
-\version "2.11.62"
+\version "2.16.0"
 #(set-global-staff-size 18)
 \header
 {
@@ -109,7 +109,7 @@ VoiceI =  \relative c''
   d c b a gis8 gis
   a a16 b c8 c16 d
    e8[ e e] e16[ fis]
-  \override DynamicTextSpanner #'dash-period = #-1.0
+  \override DynamicTextSpanner #'style = #'none
   \crescTextCresc
   gis8\< gis16 a b8 b16 c 
   \crescHairpin
@@ -125,7 +125,7 @@ VoiceI =  \relative c''
   e_\f e a g! f e d! c
   
   b a g f e d c b
-  \override DynamicTextSpanner #'dash-period = #-1.0
+  \override DynamicTextSpanner #'style = #'none
   \dimTextDim
   a b c a gis\> a b gis
   \dimHairpin
@@ -135,7 +135,7 @@ VoiceI =  \relative c''
   a4 r8 a'16 g
   f4 r8 f16 e
   d4 r8 f'16_\markup{\italic "a tempo"} e
-  \override DynamicTextSpanner #'dash-period = #-1.0
+  \override DynamicTextSpanner #'style = #'none
   \crescTextCresc
   d cis e d\< c b d c
   \crescHairpin
@@ -185,7 +185,7 @@ VoiceI =  \relative c''
   g a b g fis g a fis
   g a b g fis g a fis
   
-  \override DynamicTextSpanner #'dash-period = #-1.0
+  \override DynamicTextSpanner #'style = #'none
   \dimTextDim
   g8 g16\> fis g fis g fis
   \dimHairpin
@@ -211,7 +211,7 @@ VoiceI =  \relative c''
   b8 <b g'> <b g'> <b g'>
   c8_\p c16 b a g f e
   d c b a g a b g
-  \override DynamicTextSpanner #'dash-period = #-1.0
+  \override DynamicTextSpanner #'style = #'none
   \crescTextCresc
   c8 e'16\< d c b a g
   \crescHairpin
@@ -224,7 +224,7 @@ VoiceI =  \relative c''
   <c d> r <b g'> r
   <c e> c''16_\p b a g f e
   d c b a g a b g
-  \override DynamicTextSpanner #'dash-period = #-1.0
+  \override DynamicTextSpanner #'style = #'none
   \crescTextCresc
   c8 e'16 d c\< b a g
   \crescHairpin
@@ -515,11 +515,7 @@ VoiceII =  \relative c'
   }
   \midi
   {
-    \context
-    {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 120 4)
-    }
+    \tempo 4 = 120
   }
 }
 
