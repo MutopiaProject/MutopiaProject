@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.16.0"
 Renaud = {
 	\relative c'{
 	\clef alto
@@ -70,15 +70,15 @@ Renaud = {
 	
 RenaudL = \lyricmode{
 	Plus j'ob -- ser -- ve ces lieux, et plus je les ad -- mi -- re. Ce Fleu
-	-- ve cou -- le len -- te -- ment, Et s'é -- loigne à re -- gret
+	-- ve cou -- le len -- te -- ment, Et s'Ã© -- loigne Ã  re -- gret
 	d'un se -- jour si char -- mant. Les plus ai -- ma -- bles fleurs et le
 	plus doux ze -- phi -- re Par -- fu -- ment l'air qu'on y re -- spi --
 	re. Non, je ne puis quit -- ter des ri -- va --ges si beaux. Un son har
 	-- mo -ni -- eux se mesle au bruit des eaux. Un son har -- mo -- ni --
 	eux se mesle au bruit des eaux. Les Oy -- seaux en -- chan -- tez se tai
 	-- sent pour l'en -- ten -- dre. Des char -- mes du som -- meil j'ay
-	peine à me def -- fen -- dre. Ce ga -- zon, cét om -- bra -- ge frais,
-	Tout m'in -- vite au re -- pos sous ce feül -- lage es -- pais. Ce ga --
-	zon, cét om -- bra -- ge frais; Tout  in -- vite au re -- pos Sous
-	ce feüil -- lage es -- pais. 
+	peine Ã  me def -- fen -- dre. Ce ga -- zon, cÃ©t om -- bra -- ge frais,
+	Tout m'in -- vite au re -- pos sous ce feÃ¼l -- lage es -- pais. Ce ga --
+	zon, cÃ©t om -- bra -- ge frais; Tout  in -- vite au re -- pos Sous
+	ce feÃ¼il -- lage es -- pais. 
 	}

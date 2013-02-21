@@ -1,28 +1,25 @@
-\version "2.4.0"
+\version "2.16.0"
 
 \header {
  mutopiatitle = "Armide"
- mutopiacomposer = "J. B. Lully (1632-1687)"
+ mutopiacomposer = "LullyJB"
  mutopiapoet = "P. Quinault (1635-1688)"
  mutopiaopus = "LWV 71"
  mutopiainstrument = "Voice (Tenor), String Ensemble, Basso Continuo"
  source = "Ballard, 1686"
  style = "Baroque"
  copyright = "Public Domain"
- maintainer = "Björn Sothmann"
+ maintainer = "BjÃ¶rn Sothmann"
  maintainerEmail = "bjoernsothmann@aol.com"
  lastupdated = "2005/Feb/2"
  
  title="ACTE II SCENE III."
  subsubtitle="Renaud seul."
- %footer="Created 9.2.05 by Björn Sothmann Bjoernsothmann@aol.com"
+ %footer="Created 9.2.05 by BjÃ¶rn Sothmann Bjoernsothmann@aol.com"
  
  footer = "Mutopia-2005/02/10-532"
  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
-
-blankslur = \override Slur   #'transparent = ##t
-unblankslur = \revert Slur #'transparent
 
 \include "Dessus.ly"
 \include "Haute.ly"
@@ -36,16 +33,15 @@ unblankslur = \revert Slur #'transparent
 \score{
 {
 	<<
-	\context Staff = Dessus \dessus
-	\context Staff = Haute \haute
-	\context Staff = Taille \taille
-	\context Staff = Quinte \quinte
+	\new Staff = Dessus \dessus
+	\new Staff = Haute \haute
+	\new Staff = Taille \taille
+	\new Staff = Quinte \quinte
 	
-	\oldaddlyrics
-	\context Staff = Renaud <<\Renaud  \unset Staff.melismaBusyProperties >>
-	\context Lyrics = RenaudL \RenaudL
+	\new Staff = Renaud \Renaud
+	\addlyrics \RenaudL
 	
-	\context Staff = Basse \basse
+	\new Staff = Basse \basse
 	>>	
 }
 	\layout{}
@@ -54,28 +50,30 @@ unblankslur = \revert Slur #'transparent
 
 \score{
 {
-	\applymusic #unfold-repeats
+	\applyMusic #unfold-repeats
 	<<
-	\context Staff = Dessus 
+	\new Staff = Dessus 
 	<<\dessus
 	\set Staff.midiInstrument = #"violin">>
-	\context Staff = Haute
+	\new Staff = Haute
 	<<\haute
 	\set Staff.midiInstrument = #"violin">>
-	\context Staff = Taille
+	\new Staff = Taille
 	<<\taille
 	\set Staff.midiInstrument = #"violin">>
-	\context Staff = Quinte
+	\new Staff = Quinte
 	<<\quinte
 	\set Staff.midiInstrument = #"violin">>
-	\context Staff = Renaud 
+	\new Staff = Renaud 
 	<<\Renaud
 	\set Staff.midiInstrument = #"oboe">>
-	\context Staff = Basse
+	\new Staff = Basse
 	<<\basse
 	\set Staff.midiInstrument = #"harpsichord">>
 	>>	
 }
-	\midi{\tempo 4=80 }
 	
+  \midi {
+    \tempo 4 = 80
+    }
 }

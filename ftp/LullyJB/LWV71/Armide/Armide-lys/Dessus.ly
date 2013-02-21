@@ -1,11 +1,11 @@
-\version "2.4.0"
+\version "2.16.0"
 dessus = {
 	\relative c'''{
 	\clef french
 	\time 3/4
 	\key f \major
 		{
-		bes8^\markup{\tiny{Il faut joüer cecy avec des
+		bes8^\markup{\tiny{Il faut joÃ¼er cecy avec des
 		Sourdines.}}_\markup{PRELUDE.} a bes a g fis
 		g a g fis g a
 		fis4. fis8 g a
