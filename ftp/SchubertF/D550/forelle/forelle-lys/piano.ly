@@ -1,7 +1,4 @@
-longStem = \override Stem #'length = #22
-normalStem = \revert Stem #'length
-noFlag = \override Stem #'flag-style = #'no-flag
-normalFlag = \revert Stem #'flag-style
+\version "2.16.0"
 
 upper = \relative f' {
     \key des \major
@@ -101,7 +98,7 @@ lower = \relative des {
     | << { \repeat unfold 4 { <f as>4 } } \\
 	 { \noTupletNum \noTupletBracket
 	   \repeat unfold 2 { \times 4/6 { r16 des,( f ges! g as } des8-> as) } } >>
-    | << { \longStem <f' as>4. } \\ { <des, as' des>4.\arpeggio } >> r8
+    | << { \crossStaff <f' as>4. } \\ { <des, as' des>4.\arpeggio } >> r8
     | \repeat unfold 2 { des' <f as> des <f as des> }
     | \repeat unfold 4 { as, <ges' as c> }
     | \repeat unfold 2 { des <f as> des <f as des> }
@@ -162,12 +159,12 @@ lower = \relative des {
     | r16 <ges! es'>-.-( <ges es'>-. <ges es'>-.-) <ges es'>-. r r8
     | <f f'>8 r16 f'[-. es8]-. r16 es-.
     | \voiceTwo d8 r16 d[ des8]-. r16 des % The first d is NOT staccato
-    | << { \longStem \noFlag \autoBeamOff \repeat unfold 6 { <es as es'>16 } 
-	   <ges! as> <ges as> \autoBeamOn \normalStem \normalFlag } \\ 
+    | << { \autoBeamOff \crossStaff { \repeat unfold 6 { <es as es'>16 } 
+	   <ges! as> <ges as> } \autoBeamOn } \\ 
 	 { c,16 c c c c c c c } >>
-    | << { \longStem \noFlag \autoBeamOff <f as> <f as> <f as> <f as>
+    | << { \autoBeamOff \crossStaff { <f as> <f as> <f as> <f as>
 	   <es as> <es as> <ges as> <ges as>
-	   \autoBeamOn \normalStem \normalFlag } \\
+	   } \autoBeamOn } \\
 	 { des des f, f as as as, as } >>
     | des'8 <f as des> des <f as des>
     | \repeat unfold 2 { ges, <ges' bes des> }
@@ -186,16 +183,13 @@ lower = \relative des {
 	   { \noTupletNum \noTupletBracket
 	     \times 4/6 { r16 des,( f ges g as } des8-> as) } >>
     }
-    | << { \longStem <f' as>2 \normalStem } \\
+    | << { \crossStaff <f' as>2\arpeggio } \\
 	 { <des, as' des>-\arpeggio-\fermata } >>
 
     \bar "|."
 }
 
 dynamics = {
-    \override Voice.TextScript #'extra-offset = #'(0 . 2)
-    \override Voice.TextSpanner #'extra-offset = #'(0 . 2)
-    
     s4-\p s4
     | s2*2
     | s4-\pp s4

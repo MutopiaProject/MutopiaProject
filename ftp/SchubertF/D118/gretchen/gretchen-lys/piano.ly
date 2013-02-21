@@ -1,3 +1,5 @@
+\version "2.16.0"
+
 upper = \relative f' {
     \key d \minor
     \time 6/8
@@ -324,13 +326,11 @@ lowerII = \relative d {
 }
 
 dynamics = {
-    \override Voice.TextScript #'extra-offset = #'(0 . 2)
-    \override Voice.TextSpanner #'extra-offset = #'(0 . 2)
     
     s8-\pp s4 s4.
     | s2.*4
-    | s4. s4.\cresc
-    | s2.
+    | s4. s4.
+    | s2.\cresc
     | s8-\f-\> s8-\! s8 s4.
     | s2.
     | s8-\> s8-\! s8 s4.
@@ -339,14 +339,14 @@ dynamics = {
     | s4.-\pp s4.
     | s2.*4
     | s4.-\mf s4.
-    | s2.*3
-    | s4. s4.\cresc
-    | s2.*3
+    | s2.*4
+    | s4.\cresc s4.
+    | s2.*2
     | s4.-\f s4.
     | s4.-\markup { \italic "cresc." } s4.
     | s8-\> s8-\! s8 s4.
-    | s4. s4.\dim
     | s2.
+    | s4.\dim s4.
     | s4.-\pp s4.
     | s2.*4
     | s4.-\markup { \italic "cresc." } s4.
@@ -358,9 +358,9 @@ dynamics = {
     | s4.-\pp s4.
     | s2.*8
     | s4.-\pp s4.
-    | s2.*3
-    | s4. s4.\cresc
     | s2.*4
+    | s4.\cresc s4.
+    | s2.*3
     | s4.-\f s4.
     | s2.
     | s4.-\markup { \italic "cresc." } s4.
@@ -372,15 +372,16 @@ dynamics = {
     | s4.-\sf-\> s4.-\!
     | s4.-\pp s4.
     | s2.*8
-    | s4.\cresc s4.
+    | s4. s4.\cresc
     | s8-\f-\> s8-\! s8 s4.
     | s2.
     | s8-\> s8-\! s8 s4.
     | s4. s4.-\markup { \italic "decresc." }
     | s2.
     | s4.-\p s4.
-    | s4. s4.\cresc
-    | s2.*4
+    | s2.
+    | s4.\cresc s4.
+    | s2.*3
     | s4.-\markup { \italic "accelerando" } s4.
     | s4.-\f s4.
     | s2.

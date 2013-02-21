@@ -1,3 +1,5 @@
+\version "2.16.0"
+
 melody = \relative f' {
     \key d \minor    
     \time 6/8
@@ -142,7 +144,7 @@ melody = \relative f' {
     | R2.
 
 % 120
-    | R2.-\fermata
+    | R2.-\fermataMarkup
 
     \bar "|."
 }
