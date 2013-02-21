@@ -7,23 +7,23 @@
 %
 %   lilypond -f ps k574.ly
 
-\version "2.4.2"
-\encoding "latin1"
+\version "2.16.0"
+
 
 #(set-global-staff-size 17)
 
 \header {
     title = "Gigue in G Major"
-    composer = "W. A. Mozart (1756­1791)"
+    composer = "W. A. Mozart (1756Â­1791)"
     opus = "KV 574"
     meter = "Allegro."
         
     mutopiatitle = "Gigue in G Major"
-    mutopiacomposer = "W. A. Mozart (1756­1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV 574"
     mutopiainstrument = "Piano"
     date = "1789"
-    source = "Breitkopf Und Härtel edition (1880s)"
+    source = "Breitkopf Und HÃ¤rtel edition (1880s)"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
@@ -34,11 +34,9 @@
  tagline = "\\raisebox{0mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
 
-voiceI = \new Voice \relative g'' {
+voiceI = \new Voice = "one" \relative g'' {
+    \voiceOne
     \repeat volta 2 {
-        \stemUp
-        \tieUp
-        \slurUp
 
         \partial 8
         d8 | % NOT d8-.
@@ -46,11 +44,11 @@ voiceI = \new Voice \relative g'' {
         f( e) gis,-. a-. c-. b-. |
         a-.[ r fis'(] e) d'-. cis-. |  % NOT e)-.
         e,( dis) a'-. g-. cis,-. d-. |
-        r4 \slurNeutral cis8( d) \slurUp g-.( fis)-. |
+        r4 cis8( d) g-.( fis)-. |
         b,4 d8 c-. fis,-. g-. ~ |
         g a4 ~ a8 b4 ~ |
         b8 c4 ~ c8 d4 ~ |
-        \stemNeutral \slurNeutral \tieNeutral d8 b( e) b'-. cis,( fis) |
+        \oneVoice d8 b( e) b'-. cis,( fis) |
         cis'-. d,( g) d'-. e,-. a-. |
         fis-. d-. d'( cis) gis-. a-. |
         \voiceOne a4. a4. |
@@ -107,7 +105,7 @@ voiceII = \new Voice \relative g' {
         a8( gis) e ~ e-. es-. d-. |
         e4 eis8 fis4. |
         g4 gis8 a4 ais 8 |
-        b8 \change Staff = Down \voiceOne r8 b, e4 cis8 |
+        \context Voice = "one" b8 \change Staff = Down \voiceOne r8 b, e4 cis8 |
         fis4 d8 g4 e8 |
         fis8 r gis a r a |
         \change Staff = Up \voiceTwo fis-. d-. d'( cis) gis-. a-. |
@@ -213,9 +211,12 @@ voiceIII = \new Voice \relative g' {
 	>>
     >>
 
-    \midi {
-       \tempo 4 = 140
+    
+  \midi {
+    \tempo 4 = 140
     }
+
+
 
     \layout { 
 	indent = 0\cm
