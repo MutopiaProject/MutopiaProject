@@ -1,23 +1,21 @@
-\version "2.16.0"
+\version "2.16.1"
 \header {
   title             = "Gavotte"
   subtitle          = "from the Aylesford Pieces"
   composer          = "Georg Friedrich Händel (1685-1759)"
   meter             = "Allegretto"
-  tagline           = "Typeset using Lilypond 1.4.10"
   mutopiatitle      = "Gavotte"
-  mutopiacomposer   = "HandelG"
-  mutopiainstrument = "Harpsichord"
-  date              = "18th century"
+  mutopiacomposer   = "HandelGF"
+  mutopiainstrument = "Harpsichord, Piano"
+  date              = "18th Century"
   source            = "Edition Schott 1930"
   style             = "Baroque"
   copyright         = "Public Domain"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@hotmail.com"
-  lastupdated       = "2002/Jan/05"
 
-  tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer = "Mutopia-2002/01/05-151"
+ footer = "Mutopia-2013/02/21-151"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
   }
   
 Global =  {\key g\major \time 4/4 \partial 4}
