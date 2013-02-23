@@ -1,12 +1,14 @@
+\version "2.16.0"
+
 \header {
 mutopiatitle = "Ases Tod"
 mutopiasubtitle = "La Mort D'Ase"
 mutopiacomposer = "E. Grieg (1843-1907)"
 mutopiapoet = "Henrik Ibsen"
-mutopiaopus = "O 46 No. 2"
+mutopiaopus = "O46"
 mutopiainstrument = "Piano"
 date = "1874-76 - rescored by Grieg 1886"
-style = "Romantic"
+style = "Romantique"
 title = "Ases Tod"
 subtitle = "La Mort D'ase"
 composer = "Edvard Grieg (1843 - 1907)"
@@ -15,13 +17,11 @@ opus = "Op. 46 No. 2 - from Peer Gynt Suite I"
 copyright = "Public Domain"
 source = "Kunkel Brothers 1891 - Kunkel's Musical Review, May 1893"
 filename = "lamortdase.ly"
-tagline = "Public Domain"
 maintainer = "Deborah Lowrey"
 maintainerEmail = "drlowrey@karmaresources.com"
 maintainerWeb = "http://www.karmaresources.com"
-lastupdated = "2002/07/05"
 % footer = "Public Domain"
- tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by Deborah Lowrey (\\texttt{http://www.karmaresources.com}).\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+ tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by Deborah Lowrey (\\texttt{http://www.karmaresources.com}).\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/07/05-246"
 }
 
@@ -30,263 +30,280 @@ lastupdated = "2002/07/05"
 %	This Piano piece's main source was from the Kunkel Brothers 1891,	%
 %	reprinted in 1893. Many of the slurs and fingerings were extremely	%
 %	excessive (and unnecessary), and so, were omitted. Many of the		%
-%	dynamics and (de)crescendi were left as entered	to help reduce		%
-%	file size and make the sheetmusic (and file) less busy. If you are	%
+%	dynamics and (de crescendi) were left as entered to help reduce		%
+%	file size and make the sheetmusic (and file less) busy. If you are	%
 %	interested in the fingering for this piece, please email your		%
 %	request to the address @maintainerEmail. Karmically, Deborah		%
 %										%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Global = \notes {\key d\major \time 4/4}
+Global =  {\key d\major \time 4/4}
 
-rightHand = \notes \relative c {
+rightHand =  \relative c {
 \clef "bass"
-\context Staff <
-\context Voice = VA {
-	d4\p\cr fis fis2\rc 
-	d4\cr fis fis2\rc
-	d4\cr e8 fis g4 fis\rc
-	e\decr fis8 gis <cis,4.\rced ais'> r8 
+\context Staff <<
+\new Voice = VA {
+	d4\p\< fis fis2\!
+	d4\< fis fis2\!
+\voiceTwo
+	d4\< e8 fis g4 fis\!
+	e\> fis8 gis <cis, ais'>4.\! r8 
+\oneVoice
 	d4\pp fis eis2
 % 5
 	d4 fis eis2
+\voiceTwo
 	e4 fis8 gis cis,4 gis'8 g
-	fis e <d2 fis> r4 
+	fis e <d fis>2 r4 
 \clef treble
-	a'\mf\cr cis cis2\rc 
-	a4\cr cis cis2\rc
+\oneVoice
+	a'\mf\< cis cis2\!
+	a4\< cis cis2\!
 % 10
-\stemDown
-	a4\cr b8 cis d4 cis4\rc
-	b\decr cis8 dis <gis,4.\rced eis'4.> r8
-\stemBoth
-	a4\cr cis bis2\rc 
-	a4\cr cis bis2\rc
-\stemDown
-	b4_#'( bold ( italic "cresc.")) cis8 dis <gis,4 eis'> dis'8 d
+\voiceTwo
+	a4\< b8 cis d4 cis4\!
+	b\> cis8 dis <gis, eis'>4.\! r8
+\oneVoice
+	a4\< cis bis2\!
+	a4\< cis bis2\!
+\voiceTwo
+	b4_ \markup{\bold {\italic "cresc."}} cis8 dis <gis, eis'>4 dis'8 d
 % 15
-\tieDown
-	cis8 b <a2 cis> ~ <a8 cis> r8
-\stemBoth
-	<fis4\f\cr b> b cis2\rc
-	<fis,4\cr b> b cis2\rc
-\stemDown
-	d4\cr [e8 fis] g4 fis
-	e [fis8 gis] ais4.\rc r8 
+	cis8 b <a cis>2 ~ <a cis>8 r8
+\oneVoice
+	<fis b>4\f\< b cis2\!
+	<fis, b>4\< b cis2\!
+\voiceTwo
+	d4\<  e8[ fis] g4 fis
+	e  fis8[ gis] ais4.\! r8 
 % 20
-\property Voice.DynamicText \override #'extra-offset = #'(0 . 1.0)
-	<fis,4 b\ff > b\cr <cis2 eis\rc>
-	<fis,4 b\cr > b <cis2 eis\rc>
-\property Voice.DynamicText \revert #'extra-offset
-	e4 fis8 gis ais4 <d,8 gis> <e g>
-	fis8 e <b2 d> r4
-	eis'2_\p\decr <d\rced fis>
+\oneVoice
+	<fis, b >4\ff b\< <cis eis>2\!
+	<fis, b>4\< b <cis eis>2\!
+\voiceTwo
+	e4 fis8 gis ais4 <d, gis>8 <e g>
+	fis8 e <b d>2 r4
+	eis'2_\p\> <d fis>\!
 % 25
-	eis\decr <d\rced fis>
-	eis\cr <fis\rc a>
-	<b,\decr eis> <ais4.\rced cis> r8
-	ais2\decr <g\rced b>
-	ais\decr <g\rced b>
+	eis\> <d fis>\!
+	eis\< <fis a>\!
+	<b, eis>\> <ais cis>4.\! r8
+	ais2\> <g b>\!
+	ais\> <g b>\!
 % 30
-	ais\cr <b\rc d>
-	<e,\decr ais> <d4.\rced fis> r8
-	eis2_#'(bold (italic "pi\\`u")) <d fis>
-	eis\decr <d\rced fis>
-	eis\cr <fis\rc a>
+	ais\< <b d>\!
+	<e, ais>\> <d fis>4.\! r8
+	eis2_ \markup{\bold {\italic "più"}} <d fis>
+	eis\> <d fis>\!
+	eis\< <fis a>\!
 % 35
-	<b,\decr eis> <ais4.\rced cis> r8
+	<b, eis>\> <ais cis>4.\! r8
 	\clef bass
-	ais2\decr <g\rced b>
-	ais\decr <g\rced b>
-	ais\cr <b\rc d>
-	<e,\decr ais> <d4.\rced fis> r8
+	ais2\> <g b>\!
+	ais\> <g b>\!
+	ais\< <b d>\!
+	<e, ais>\> <d fis>4.\! r8
 % 40
-	<e2\decr ais> <d4.\rced fis> r8
-	<e1 ais>
-	d2\pp\decr ~ d8 r8 r4
-	d2 ~ d8\rced r8 r4
+	<e ais>2\> <d fis>4.\! r8
+	<e ais>1
+	d2\pp\> ~ d8 r8 r4
+	d2 ~ d8\! r8 r4
 	d1\ppp }
 
-\context Voice = VB {
+\new Voice = VB {
 	\clef bass
-\stemDown
-	fis4 b <ais2 cis>
-	fis4 b <ais2 cis>
-\stemUp
+\voiceOne
+\context Voice = VA {
+	fis4 b <ais cis>2
+	fis4 b <ais cis>2
+}
 	d4 cis b cis8 d
 	e4 d cis4. s8
-\stemDown
-	fis,4 b <b2 cis^\accent>
+\context Voice = VA {
+	fis,4 b <b cis>2->
 % 5
-	fis4 b <b2 cis^\accent>
-\stemUp
-	<b4 e> <b d> <ais cis> <b8 d> <cis e>
+	fis4 b <b cis>2->
+}
+	<b e>4 <b d> <ais cis> <b d>8 <cis e>
 	ais4 b2 s4
 	\clef treble
-	cis4 fis <eis2 gis>
-	cis4 fis <eis2 gis>
+\context Voice = VA {
+	cis4 fis <eis gis>2
+	cis4 fis <eis gis>2
+}
 % 10
 	a4 gis fis gis8 a
 	b4 a gis4. s8
-	cis,4 fis <fis2 gis>
-	cis4 fis <fis2 gis>
-	<fis4 b> <fis a> gis <fis8 a> <gis b>
+\context Voice = VA {
+	cis,4 fis <fis gis>2
+	cis4 fis <fis gis>2
+}
+	<fis b>4 <fis a> gis <fis a>8 <gis b>
 % 15
-\tieUp
 	eis4 fis2 ~ fis8 s8
-	<d4 fis> <fis b> <fis2 cis'>
-	<d4 fis> <fis b> <fis2 cis'>
-	d'4 <cis,4 cis'> <b b'> [<cis8 cis'8> <d8 d'8>]
-	e'4 <d,4 d'> <cis4. cis'> s8
+\context Voice = VA {
+	<d fis>4 <fis b> <fis cis'>2
+	<d fis>4 <fis b> <fis cis'>2
+}
+	d'4 <cis, cis'>4 <b b'> <cis cis'>8[ <d d'>8]
+	e'4 <d, d'>4 <cis cis'>4. s8
 % 20
-	<d4 fis> <fis b> <b2 cis^\accent>
-	<d,4 fis> <fis b> <b2 cis^\accent>
-	<b4 e^\accent> <d, d'^\accent> <cis cis'> <b'8 d^\accent> <cis e^\accent>
-	<ais,4 ais'> <fis'2 b^\accent> s4 
-	<b b'> <cis bes'> <a'2>
+\context Voice = VA {
+	<d fis>4 <fis b> <b cis>2->
+	<d, fis>4 <fis b> <b cis>2->
+}
+	<b e>4-> <d, d'>-> <cis cis'> <b' d>8-> <cis e>->
+	<ais, ais'>4 <fis' b>2-> s4 
+	<b b'> <cis bes'> <a'>2
 % 25
-	<b,4 b'> <cis bes'> <a'2>
-	<b,4 b'> <cis bes'> d cis8 c
+	<b, b'>4 <cis bes'> <a'>2
+	<b, b'>4 <cis bes'> d cis8 c
 	a'4 g fis4. s8
-	<e,4 e'> <fis ees'> d'2
-	<e,4 e'> <fis ees'> d'2
+	<e, e'>4 <fis ees'> d'2
+	<e, e'>4 <fis ees'> d'2
 % 30
-	<e,4 e'> <fis ees'> g fis8 f
+	<e, e'>4 <fis ees'> g fis8 f
 	d'4 cis b4. s8
-	<b,4 b'> <cis\p bes'> a'2
-	<b,4 b'> <cis bes'> a'2
-	<b,4 b'> <cis bes'> d cis8 c
+	<b, b'>4 <cis bes'>\p a'2
+	<b, b'>4 <cis bes'> a'2
+	<b, b'>4 <cis bes'> d cis8 c
 % 35
 	a'4 g fis4. s8
 	\clef bass
-	<e,4 e'> <fis ees'> d'2
-	<e,4 e'> <fis ees'> d'2
-	<e,4 e'> <fis ees'> g fis8 f
+	<e, e'>4 <fis ees'> d'2
+	<e, e'>4 <fis ees'> d'2
+	<e, e'>4 <fis ees'> g fis8 f
 	d'4 cis b4. s8
 % 40
 	d4 cis b4. s8
-\slurUp
-	d2\decr ( ) cis\rced
+	d2\> (  cis)\!
 	b2 ~ b8 s8 s4
 	b2 ~ b8 s8 s4
-	b1 } >
+	b1 } >>
 }
 
-leftHand = \notes \relative c, {
-\context Staff <
-\context Voice = VA {
-\stemUp
+leftHand =  \relative c, {
+\context Staff <<
+\new Voice = VA {
 	b4 d fis2 
 	b,4 d fis2
-\stemDown
+\voiceTwo
 	b,4 cis8 d e4 d
 	cis4 d8 e fis4. s8
-\stemUp
+\oneVoice
 	b,4 d g2 
 % 5
 	b,4 d g2
-\stemDown 
+\voiceTwo
 	cis,4 d8 e fis4 e 
 	d8 cis b2 s4
-\stemUp
+\oneVoice
 	fis'4 a cis2 
 	fis,4 a cis2 
 % 10
-\stemDown
+\voiceTwo
 	fis,4 gis8 a b4 a
 	gis a8 b cis4. s8
-\stemUp
+\oneVoice
 	fis,4 a d2 
 	fis,4 a d2
-\stemDown
+\voiceTwo
 	gis,4 a8 b cis4 b
 % 15
-\tieDown
 	a8 gis fis2 ~ fis8 s8
-\stemUp
-	b,4 d <fis2 cis'>
-	b,4 d <fis2 cis'>
-\stemDown
+\oneVoice
+	b,4 d <fis cis'>2
+	b,4 d <fis cis'>2
+\voiceTwo
 	b,4 cis8 d e4 d
 	cis d8 e fis4. s8 
 % 20
-\stemUp
-	b,4 d <g2 cis>
-	b,4 d <g2 cis>
-\stemDown
-	cis,4_\accent <d8_\accent b'> e_\accent fis4_\accent e_\accent
-	d8_\accent cis_\accent b2_\accent r4
+\oneVoice
+	b,4 d <g cis>2
+	b,4 d <g cis>2
+\voiceTwo
+	cis,4-> <d b'>8-> e-> fis4-> e->
+	d8-> cis-> b2-> r4
 \clef treble
-\stemUp
-	g'''2( )d
+\oneVoice
+	g'''2(  d)
 % 25
-	g( )d
+	g(  d)
 	g( d
-	cis )fis4. s8
+	cis  fis4.) s8
 \clef bass
-\stemDown
-	c2( )g
-	c2( )g
+	c2(  g)
+	c2(  g)
 % 30
 	c( g
-	fis )b4. s8
-\stemUp
-	g,2( )d
-	g( )d
+	fis  b4.) s8
+	g,2(  d)
+	g(  d)
 	g( d
 % 35
-	cis )fis4. s8
-	c2( )g
-	c( )g
+	cis  fis4.) s8
+	c2(  g)
+	c(  g)
 	c( g
-	fis )b4. s8
+	fis  b4.) s8
 % 40
-	fis2( )b4. s8
+	fis2(  b4.) s8
 	fis1
-\stemDown
-\tieDown
+\voiceTwo
 	b2 ~ b8 s8 s4
 	b2 ~ b8 s8 s4
+\oneVoice
 	b1 
 }
 
-\context Voice = VB {
-\stemUp
+\new Voice = VB {
+\voiceOne
+\context Voice = VA {
 	b'4 b cis2
 	b4 b cis2
+}
 	b2 b2
 	b2 fis4. r8
-	b4 b cis2^\accent
+\context Voice = VA {
+	b4 b cis2->
 % 5
-	b4 b cis2^\accent
+	b4 b cis2->
+}
 	cis4 d8 e fis4 e
 	d8 cis b2 r4
+\context Voice = VA {
 	fis'4 fis gis2
 	fis4 fis gis2
+}
 % 10
 	fis2 fis
 	fis cis4. r8
-	fis4 fis gis2^\accent
-	fis4 fis gis2^\accent
-\stemUp
+\context Voice = VA {
+	fis4 fis gis2->
+	fis4 fis gis2->
+}
 	gis4 a8 b cis4 b
 % 15
 	a8 gis fis2 ~ fis8 r8
+\context Voice = VA {
 	b,4 d ais'2
 	b,4 d ais'2
+}
 	b,4 b b b
-	b b <cis4. ais'> r8
+	b b <cis ais'>4. r8
 % 20
+\context Voice = VA {
 	b4 d b'2
 	b,4 d b'2
-	<b,4 cis> d8 e fis4 e
-	d8 cis <fis,2 b> r4
+}
+	<b, cis>4 d8 e fis4 e
+	d8 cis <fis, b>2 r4
 \clef treble
 	s1
 % 25
 	s s s s s
 % 30
-\stemUp
+\context Voice = VA {
 	s s g'2 d
 	g d
 	g d
@@ -299,15 +316,15 @@ leftHand = \notes \relative c, {
 % 40
 	fis2 b4. r8
 	fis1
-\tieUp
+}
 	fis2 ~ fis8 r8 r4
 	fis2 ~ fis8 r8 r4
-	fis1 }>
+\context Voice = VA {
+	fis1 }}>>
 }
 
-pedals = \notes {
-	\stemUp
-	r8_#'( bold ( italic "Pedale")) g r g r g4.
+pedals =  {
+	r8_ \markup{\bold {\italic "Pedale"}} g r g r g4.
 	r8 g r g r g4.
 	r8 g r8. g16 r8 g r g
 	r g r r16 g r8 g4 r8
@@ -357,37 +374,36 @@ pedals = \notes {
 % 40
 	r8 g r g r g4 r8
 	r4 g r g
-	r g( )g8 r r4
-	r g( )g8 r8 r4
+	r g(  g8) r r4
+	r g(  g8) r8 r4
 	r g2. 
 }
 \score {
 
-<
-  \context PianoStaff <
-    \context Staff = "up" <
-  \property PianoStaff.midiInstrument = "acoustic grand"
+<<
+  \context PianoStaff <<
+    \context Staff = "up" <<
+  \set PianoStaff.midiInstrument = "acoustic grand"
      \Global \clef treble 
 
-	\context Voice=one \rightHand
-		>
-\context Staff = "down" < 
-  \property PianoStaff.midiInstrument = "acoustic grand"
+	\context Voice = "one" \rightHand
+		>>
+\context Staff = "down" << 
+  \set PianoStaff.midiInstrument = "acoustic grand"
 	\Global \clef bass 
-	\context Voice = one \leftHand
->
-  >
-  \context RhythmicStaff <
+	\context Voice = "one" \leftHand
+>>
+  >>
+  \context RhythmicStaff <<
     	\stemUp
 	\pedals
-	>
->
-\midi {
- \tempo 4=50 
-	}
-\paper {
-\translator{
-      \RhythmicStaffContext
-    	}
+	>>
+>>
+
+  \midi {
+    \tempo 4 = 50
     }
+
+
+\layout { }
 }
