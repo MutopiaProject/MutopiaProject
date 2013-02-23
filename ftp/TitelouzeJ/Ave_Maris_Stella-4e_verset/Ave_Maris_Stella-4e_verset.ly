@@ -1,40 +1,42 @@
-\version "2.2.0"
-\include "italiano.ly" 
+\version "2.16.1"
+\include "italiano.ly"
 
 %% Version 1.1
 
 \header{
     title = "Ave Maris Stella -- 4e verset"
+    mutopiatitle = "Ave Maris Stella (4e verset)"
     subtitle = ""
-    piece = "" 
+    piece = ""
     instrument = "Orgue -- Organ"
+    mutopiainstrument = "Organ"
+    style = "Baroque"
     composer = "Jean Titelouze (1563-1633)"
-    copyright = "Public domain -- Domaine public."
+    mutopiacomposer = "TitelouzeJ"
+    copyright = "Public Domain"
     source = "Edition Schott 1869 -- Alexandre Guilmant"
     opus = ""
-    lastupdated = "2004-10-08"
-    enteredby = "Gérard Gréco"
-    maintainer = "Gérard Gréco"
+    lastupdated = "2012-02-23"
+    enteredby = "GÃ©rard GrÃ©co"
+    maintainer = "GÃ©rard GrÃ©co"
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-    footer = "Mutopia-2004/10/08-480"
+ footer = "Mutopia-2013/02/23-480"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
-global = \notes {
+global =  {
   \key do \major
   \time 4/2
 }
 
 staffUp = {
-  \context Staff = up
-  \stemDown\tieDown
+  \context Staff = "up"   \stemDown\tieDown
 }
 staffDown = {
-  \context Staff = down
-  \stemUp\tieUp
+  \context Staff = "down"   \stemUp\tieUp
 }
 
-soprano =  \context Voice=one \notes \relative do'' {
+soprano =  \context Voice = "one"  \relative do'' {
   \voiceOne
   \override NoteHead #'style = #'baroque
 
@@ -47,13 +49,13 @@ R\breve
 si1\rest re,1
 % - 5 :
 la'1 si2 sol
-la2. si4 do re do2 ~ 
-do2 si4 la sol mi la2 ~ 
+la2. si4 do re do2 ~
+do2 si4 la sol mi la2 ~
 la2 sold si1\rest
 la2 re1 do2
 % - 10 :
 si1 la
-re1\rest la2 re2 ~ 
+re1\rest la2 re2 ~
 re2 do si do |
 la1. la2 |
 sol2 la1 sold2 |
@@ -126,14 +128,12 @@ fa4 mi re do |
 sib2 la4 fa' |
 re4 sol fa8[ re] fa4 ~ |
 fa4 mi re4. do8 si!2 la4 si8[ do] |
-% not very clean ; bar check error 
-\set Score.timing = ##f
-\override Script #'padding = # 1.2 re\breve^\fermata 
+\override Script #'padding = # 1.2 re\breve^\fermata
 
 }
 
-alto =  \context Voice=two \notes  \relative do' {
-  \voiceTwo 
+alto =  \context Voice = "two"   \relative do' {
+  \voiceTwo
   \override NoteHead #'style = #'baroque
   \stemDown
 %- 1 :
@@ -223,7 +223,7 @@ alto =  \context Voice=two \notes  \relative do' {
   fad\breve |
 }
 
-tenor = \context Voice=three \notes \relative do {
+tenor = \context Voice = "three"  \relative do {
   \voiceThree
   \override NoteHead #'style = #'baroque
   \stemUp
@@ -237,10 +237,10 @@ tenor = \context Voice=three \notes \relative do {
   R\breve
   la2 re1 do2
   si1 la2 si
-  do2 la mi'1 ~ 
+  do2 la mi'1 ~
 % - 10  :
   mi2 re2 dod re
-  do si la1 ~ 
+  do si la1 ~
   la1 sol |
   fa\breve |
   R\breve |
@@ -311,21 +311,22 @@ tenor = \context Voice=three \notes \relative do {
   la4 sol2 fad4 ~ |
   fad4 sol re'8[ do] si4 |
 % - 70  :
-   \override Script #'padding = # 1.2 la\breve^\fermata
+  \override Script #'padding = # 1.2
+  la\breve^\fermata
 }
 
-basso = \context Voice=four \notes \relative do {
-\voiceFour 
+basso = \context Voice = "four"  \relative do {
+\voiceFour
 \stemDown
 \override NoteHead #'style = #'baroque
   %%1 :
 \repeat unfold 5 {
     R\breve
 }
-%- 6 : 
+%- 6 :
 r1 la1
 re1 mi2 do
-re2 mi fad sol ~ 
+re2 mi fad sol ~
 sol2 fa mi la
 % - 10  :
 sold1 la2 fa
@@ -335,11 +336,12 @@ r1 la,2 re2 ~ |
 re2 do si1 |
 % - 15  :
 \repeat unfold 18 {
-    la\breve ~ |
+  la\breve ~ |
 }
-\repeat unfold 23 {
+\repeat unfold 22 {
     la1 ~ |
 }
+    la1 |
 \repeat unfold 14 {
     re1 ~ |
 }
@@ -351,30 +353,31 @@ re\breve
 
 
 \score {
-\notes {
+ {
   <<
     \context PianoStaff <<
-      \context Staff = up <<
+      \context Staff = "up" <<
         \global
-        \clef violin 
+        \clef violin
 	\set Staff.midiInstrument = "Church organ"
         \soprano
 	\alto
       >>
-      \context Staff = down <<
-	  \global    
+      \context Staff = "down" <<
+	  \global
 	  \clef bass
 	  \set Staff.midiInstrument = "Church organ"
 	  \tenor
 	  \basso
       >>
     >>
-  >>  
+  >>
 
   \bar "|."
 }
-  \paper { }
-  \midi{ \tempo 2 = 120  }
-  
-}
+  \layout { }
 
+  \midi {
+    \tempo 2 = 120
+    }
+}
