@@ -1,3 +1,5 @@
+\version "2.16.0"
+
 \header{
   title = "Sun Flower Slow Drag"
   subtitle = "Rag Time Two Step"
@@ -8,7 +10,7 @@
   piece = "Not Fast"
 
   mutopiatitle = "Sun Flower Slow Drag"
-  mutopiacomposer = "S. Joplin (1868-1917)"
+  mutopiacomposer = "JoplinS"
 % ... and "Scott Hayden (1882-1915)"
   mutopiainstrument = "Piano"
 
@@ -16,7 +18,7 @@
   style = "Jazz"
   copyright = "Public Domain"
 
-  maintainer = "Daniel Skarda"
+  maintainer = "Daniel Škarda"
   maintainerEmail = "0rfelyus@ucw.cz"
 
 % This file is maintained using GNU Arch (http://www.gnuarch.org):
@@ -24,7 +26,7 @@
 %  Archive and version: 0rfelyus@hobitin.ucw.cz--2004-music/joplin-sun-flower-slow-drag--main--1.0
 %  ArchiveLocation:     http://www.ucw.cz/~0rfelyus/{archives}/0rfelyus@hobitin.ucw.cz--2004-music
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} "
+  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} "
     + "This music is part of the Mutopia project: \\hspace{\\stretch{1}} "
     + "\\texttt{http://www.MutopiaProject.org/}\\\\ "
     + "\\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by "
@@ -33,8 +35,6 @@
     + "Unrestricted modification and redistribution is permitted and encouraged---"
     + "copy this music and share it!}}"
   footer = "Mutopia-2004/10/21-465"
-
-  lastupdated = "2004/Oct/21"
 
 % Changes:
 %
@@ -57,10 +57,7 @@
 % ---- Helpers ... ---------------------------------------------------
 
 mergeDiffHeads = { \override Staff.NoteCollision #'merge-differently-headed = ##t }
-startInvisible =  { \set Score.skipTypesetting = ##t }
-endInvisible =  { \set Score.skipTypesetting = ##f }
 
-#(ly:set-point-and-click 'line)
 
 % line breaks in original. Define to {} if you want to overide original line breaks.
 %oBreak = \break
@@ -68,7 +65,7 @@ oBreak = {}
 
 % ---- Upper ... -----------------------------------------------------
 
-upper = \notes \relative c'' {
+upper =  \relative c'' {
   \clef treble
   \key bes \major
   \time 2/4
@@ -91,7 +88,7 @@ upper = \notes \relative c'' {
 
     <bes bes'> d f <a, a'> ~ <a a'> <g g'>8 <bes d>16 |			%9
     <f f'> <bes d> <g g'> <f f'> ~ <f f'> d' bes f |
-    c' b c d \stemUp c bes a g \stemBoth |
+    c' b c d \stemUp c bes a g \stemNeutral |
     f c' es! <g g,> ~<g g,> <a a,>8 <es f>16 |
 
     <bes bes'> d f <a, a'> ~ <a a'> <g g'>8 <bes d>16 |			%13
@@ -119,7 +116,7 @@ upper = \notes \relative c'' {
 
   \repeat volta 2 {
     \bar "|:"
-    \stemBoth
+    \stemNeutral
     r8 <a' es' g>  [ <a es' g> <a es' g> ] |				%23
     <a es' f>16 <a es' a>8 <a es' g>16 ~ <a es' g> f' es c |
     bes8 <bes d g> <bes d g> <bes d g> |
@@ -150,7 +147,7 @@ upper = \notes \relative c'' {
       <d bes'>2 |
     }
     {
-      <d bes'>8 <f f'>^^ \stemBoth <g g'>-^ [ <a a'>-^ ] | \bar "||"
+      <d bes'>8 <f f'>^^ \stemNeutral <g g'>-^ [ <a a'>-^ ] | \bar "||"
     }
   }
 
@@ -166,7 +163,7 @@ upper = \notes \relative c'' {
     \oBreak
 
     <f f,> <d bes> <g g,> <f f,> ~ <f f,> d bes f |			%45
-    c' b c d \stemUp  c bes a g \stemBoth |
+    c' b c d \stemUp  c bes a g \stemNeutral |
     f c' es! <g g,> ~ <g g,> <a a,>8 <es f> 16 |
     <bes bes'> d f <a a,> ~ <a a,> <g g,>8 <d bes>16 |
     <f f,> <d bes> <g g,> <f f,> ~ <f f,> d bes f |
@@ -181,7 +178,7 @@ upper = \notes \relative c'' {
     \oBreak
 
     <d bes'>2 ~ |							%54
-    <d bes'>8 r \stemBoth <bes' d f bes> r | \bar "||"
+    <d bes'>8 r \stemNeutral <bes' d f bes> r | \bar "||"
   }
   {
     \key es \major
@@ -196,12 +193,12 @@ upper = \notes \relative c'' {
 
 
     \stemDown <g es'>2 |						%58
-    <g es'>8 r8 r4 \stemBoth |
+    <g es'>8 r8 r4 \stemNeutral |
   }
 
   \repeat volta 2 {
     <es a d>8 <es a c>16 <es a d> ~ <es a d> c' a f |
-    \stemBoth <as! d g>8 <as d f>16 <as d g> ~ <as d g> f' d bes |
+    \stemNeutral <as! d g>8 <as d f>16 <as d g> ~ <as d g> f' d bes |
     <f' f'> <g bes> <es es'> <d d'> ~ <d d'> <c c'>8  <es g>16 |
 
     \oBreak
@@ -215,7 +212,7 @@ upper = \notes \relative c'' {
     \oBreak
 
     \stemUp <d, a es>8 <c a es>16 <d a es> ~ <d a es> c a f |		%68
-    \stemBoth <g' d as!>8 <f d as>16 <g d as> ~ <g d as> f d bes |
+    \stemNeutral <g' d as!>8 <f d as>16 <g d as> ~ <g d as> f d bes |
     <f' f'> <g bes> <es es'> <d d'> ~ <d d'> <c c'>8  <es g>16 |
     <bes bes'> <es g> <c c'> <bes bes'> ~ <bes bes'> es g <bes bes,> |
 
@@ -260,7 +257,7 @@ upper = \notes \relative c'' {
 
 % ---- Lower ... -----------------------------------------------------
 
-lower = \notes \relative c' {
+lower =  \relative c' {
   \clef bass
   \key bes \major
   \time 2/4
@@ -272,17 +269,17 @@ lower = \notes \relative c' {
 
   \repeat volta 2 {							%5
     \stemDown <bes bes,>8-^ <f' bes d> f,  <f' bes d> |
-    \stemBoth bes, <f' bes d>   d <f bes d> |
+    \stemNeutral bes, <f' bes d>   d <f bes d> |
     <es es'> <bes bes'> <c c'> <cis cis'> |
     <d d'> <f f,> <es es,> <c c,>
 
     \stemDown <bes bes,>-^ <f' bes d> f, <f' bes d> |			%9
-    \stemBoth bes, <f' bes d> d des |
+    \stemNeutral bes, <f' bes d> d des |
     c <a' c f> c, <g' bes c e> |
     <f a c> <f f,>-^ <es! es,!>-^ <c c,>-^ |
 
     \stemDown <bes bes,>-^ <f' bes d> f, <f' bes d> |			%13
-    \stemBoth bes, <f' bes d> d <f bes d> |
+    \stemNeutral bes, <f' bes d> d <f bes d> |
     <es es'> <bes bes'> <c c'> <cis cis'> |
     <d d'> <es es'> <f f'> <es es'> |
     <d d'> <f bes d> g, <g' b d f> |
@@ -368,7 +365,7 @@ lower = \notes \relative c' {
   \repeat volta 2 {
     <f f,>4 <a a,> |
     <bes bes,> <d d,> |
-    \stemBoth <es es,>8 <bes' es g> bes, <bes' es g> |
+    \stemNeutral <es es,>8 <bes' es g> bes, <bes' es g> |
 
     es, <bes' es g> g, <bes' es g> |					%63
     as, <c' es as> as, <ces' es as> |
@@ -418,7 +415,7 @@ lower = \notes \relative c' {
 
 % --- Dynamics ... ---------------------------------------------------
 
-dynamics = \notes {
+dynamics =  {
   \repeat unfold 4 { s2 | }
   \repeat volta 2 {
     \repeat unfold 14 { s2 | }
@@ -460,64 +457,30 @@ dynamics = \notes {
 \score {
 
   \context PianoStaff <<
-    \context Staff=upper \upper
-    \context Dynamics=dynamics \dynamics
-    \context Staff=lower \lower
+    \context Staff = "upper" \upper
+    \context Dynamics = "dynamics" \dynamics
+    \context Staff = "lower" \lower
   >>
 
-  \paper {
-    \context {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \alias Voice % So that \cresc works, for example.
-      \consists "Output_property_engraver"
-
-      minimumVerticalExtent = #'(-1 . 1)
-
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      \override TextScript #'font-size = #2
-      \override TextScript #'font-shape = #'italic
-      \override DynamicText #'extra-offset = #'(0 . 2.5)
-      \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consistsend "Axis_group_engraver"
-    }
-    \context {
-      \PianoStaffContext
-      \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
-    }
-  }
+  \layout { }
 }
 
 \score {
   \context PianoStaff <<
-    \context Staff = upper
-     \apply #unfold-repeats
-      \upper
-    \context Dynamics = dynamics
-     \apply #unfold-repeats
-      \dynamics
-    \context Staff = lower
-     \apply #unfold-repeats
-      \lower
+    \context Staff = "upper" \unfoldRepeats \upper
+    \context Dynamics = "dynamics" \unfoldRepeats \dynamics
+    \context Staff = "lower" \unfoldRepeats \lower
    >>
 
   \midi {
    \tempo 4 = 72
     \context {
-      \type "Performer_group_performer"
+      \type "Performer_group"
       \name Dynamics
-      \consists "Span_dynamic_performer"
       \consists "Dynamic_performer"
     }
     \context {
-      \PianoStaffContext
+      \PianoStaff
       \accepts Dynamics
     }
   }
