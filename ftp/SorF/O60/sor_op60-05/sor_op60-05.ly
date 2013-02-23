@@ -1,4 +1,4 @@
-\version "2.6.5"
+\version "2.16.0"
 \header {
  title    = "25 Progressive Lessons"
  opus     = "Opus 60.5"
@@ -14,19 +14,17 @@
  copyright         = "Creative Commons Attribution-ShareAlike 2.5"
  maintainer        = "Fabrice De Volder"
  maintainerEmail   = "fabrice.devolder@fr.sfr.com"
- lastupdated       = "2006/02/13"
  filename          = "sor_op60_05.ly"
 
  source            = "http://fernandosor.free.fr/op60/sorf-op60-n05.gif"
  enterdby          = "Fabrice De Volder"
 
  footer  = "Mutopia-2006/02/16-673"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/2.5" http://creativecommons.org/licenses/by-sa/2.5 } } } }
+ tagline = ""
 }
 
 basse = \relative c' {
-  \stemDown
-  \tieDown
+  \voiceTwo
   \set fingeringOrientations = #'(down)
   \repeat volta 2 {
     a2.
@@ -80,13 +78,9 @@ basse = \relative c' {
 }
 
 melodie = \relative c' {
-  \stemUp
-  \tieUp
-  \slurUp
-  \override Staff.NoteCollision
-    #'merge-differently-headed = ##t
-  \override Staff.NoteCollision
-    #'merge-differently-dotted = ##t
+  \voiceOne
+  \override Staff.NoteCollision #'merge-differently-headed = ##t
+  \override Staff.NoteCollision #'merge-differently-dotted = ##t
   \repeat volta 2 {
     a8\segno a'-2 b c-1 d-4 e
     d, d'-4 e f-1 d-4 b
@@ -95,32 +89,32 @@ melodie = \relative c' {
     a, a'-2 b c-1 d-4 e
     d, d'-4 e f-1 d-4 b
     e,-2 gis-1 b a-3 e-2 c'-1
-    b gis e' e,,4 r8
+    b gis e' \oneVoice e,,4 r8
   }
   \repeat volta 2 {
-    e'8-2  gis-1 b e d-4 b
+    \voiceOne e'8-2  gis-1 b e d-4 b
     c-1 a-2 c-1 e c a
     e, gis'-1 b e d-4 b
     a, c'-1 b a-2 c-1 e
     d, f'-1 f g, b b
     c, e' e f, a-2 a
     d, b' b e, gis-1 gis
-    a, a'-3 e-2 a,4 r8
+    a, a'-3 e-2 \oneVoice a,4 r8
     \mark "Fin."
   }
   \repeat volta2 {
     \key a \major
-    a8 cis'-2 a-1 e'4.
+    \voiceOne a8 cis'-2 a-1 e'4.
     e,,8 d''-2 cis-1 b4.
     e,,8 cis''-1 b a-1 b cis-2
     b e dis-4 fis-1( e) d-2
     a, cis'-1 e-2 e4.
     e,,8 d''-2 cis-1 b4.
     e,,8 cis''-2 e d-4 b-0 gis-1
-    a, a'-2 cis-3 a,4 r8 
+    a, a'-2 cis-3 \oneVoice a,4 r8 
   }
   \repeat volta 2 {
-    e8 gis'-1 b d4.-4
+    \voiceOne e8 gis'-1 b d4.-4
     e,,8 cis''-2 e a4.-4
     e,,8 gis''-3 fis-1 fis e d-2
     cis-1 d-2 dis-3 e-0 cis-3 a-2
@@ -137,7 +131,7 @@ melodie = \relative c' {
     a, cis'-1 d-2 e4.~
     e8 d-2 fis-1 a4.-4~
     a8 e cis-2~ cis d-4 b
-    a-3 e-2 cis'-4 a,4 r8\segno
+    a-3 e-2 cis'-4 \oneVoice a,4 r8\segno
    }
 }
 
@@ -153,5 +147,10 @@ melodie = \relative c' {
         \context Voice = "bass"   { \basse  }
       >>
   \layout {}
-\midi { \tempo 4=80}
+
+  \midi {
+    \tempo 4 = 80
+    }
+
+
 }
