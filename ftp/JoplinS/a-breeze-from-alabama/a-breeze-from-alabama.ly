@@ -1,3 +1,5 @@
+\version "2.16.0"
+
 \header{
   title = "A Breeze From Alabama"
   subtitle = "March and Two-Step"
@@ -8,14 +10,14 @@
   piece = "Not Fast"
 
   mutopiatitle = "Sun Flower Slow Drag"
-  mutopiacomposer = "S. Joplin (1868-1917)"
+  mutopiacomposer = "JoplinS"
   mutopiainstrument = "Piano"
 
   date = "C. 1902"
   style = "Jazz"
   copyright = "Public Domain"
 
-  maintainer = "Daniel Skarda"
+  maintainer = "Daniel Škarda"
   maintainerEmail = "0rfelyus@ucw.cz"
 
 % This file is maintained using GNU Arch (http://www.gnuarch.org):
@@ -23,9 +25,7 @@
 %  Archive and version: 0rfelyus@hobitin.ucw.cz--2004-music/joplin-a-breeze-from-alabama--main--1.0
 %  ArchiveLocation:     http://www.ucw.cz/~0rfelyus/{archives}/0rfelyus@hobitin.ucw.cz--2004-music
 
-  lastupdated = "2004/Oct/16"
-
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} "
+  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} "
     + "This music is part of the Mutopia project: \\hspace{\\stretch{1}} "
     + "\\texttt{http://www.MutopiaProject.org/}\\\\ "
     + "\\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by "
@@ -36,50 +36,46 @@
   footer = "Mutopia-2004/10/16-485"
 }
 
+% TODO: Fix warnings about clashing note columns when lily can typeset slurs to individual notes of a chord
+
 % ---- Helpers ... ---------------------------------------------------
 
-markFermata = \notes { \mark \markup { \musicglyph #"scripts-ufermata" } }
+markFermata =  { \mark \markup { \musicglyph #"scripts.ufermata" } }
 
 mergeDiffHeads = { \override Staff.NoteCollision #'merge-differently-headed = ##t }
-startInvisible =  { \set Score.skipTypesetting = ##t }
-endInvisible =  { \set Score.skipTypesetting = ##f }
-
-#(ly:set-point-and-click 'line)
 
 % line breaks in original. Define to {} if you want to overide original line breaks.
 oBreak = \break
 % oBreak = {}
 
-barRest = \notes { s2 | }
-
-noStem = { \once \override Stem #'transparent = ##t }
+barRest =  { s2 | }
 
 % --- INTRO ... ------------------------------------------------------
 
-introCommon = \notes {
+introCommon =  {
    \key c \major
    \time 2/4
 }
 
 % --- PART ZERO ... --------------------------------------------------
 
-partZeroGlobal = \notes {
+partZeroGlobal =  {
     \partial 8 s8 | \barRest | \barRest | \barRest | \barRest  |
     % \bar "||" is in partOne as ||:
     \oBreak
 }
 
-partZeroRHnotes = \notes \relative c' {
+partZeroRHnotes =  \relative c' {
     \partial 8 <e g>8 |									% 0 - 4
     << { c'8 a16 gis a16 b c8 | s2  | s2 | } \\
        { <c dis,>8 r r <c e,> ~ |
 	 <c e,>16 g e dis \stemUp e f g8 ~ |
 	 g16 f d cis e d b a | } >>
     g8 r \stemDown <g' b d g>-^ g |
-    \stemBoth
+    \stemNeutral
 }
 
-partZeroLHnotes = \notes \relative c' {
+partZeroLHnotes =  \relative c' {
     c8 |										% 0 - 4
     << { c a16 gis a b c8 | s2 | s2 | }
     \\ { <c a fis>8 r r <c g> ~ |
@@ -89,16 +85,16 @@ partZeroLHnotes = \notes \relative c' {
     g8 r <g g,>^^ r |
 }
 
-partZeroDynamics = \notes {
+partZeroDynamics =  {
    s8 |	\barRest | \barRest | \barRest | \barRest |					% 0 - 4
 }
 
-partZeroRH = \notes { << \partZeroGlobal \partZeroRHnotes >> }
-partZeroLH = \notes { << \partZeroGlobal \partZeroLHnotes >> }
+partZeroRH =  { << \partZeroGlobal \partZeroRHnotes >> }
+partZeroLH =  { << \partZeroGlobal \partZeroLHnotes >> }
 
 % --- PART ONE ... ---------------------------------------------------
 
-partOneGlobal = \notes {
+partOneGlobal =  {
     \repeat volta 2 {
 	\bar "||:"
 	\barRest | \barRest | \barRest | \barRest | \barRest |				% 5 - 9
@@ -125,7 +121,7 @@ partOneGlobal = \notes {
     }
 }
 
-partOneRHnotes = \notes \relative c'' {
+partOneRHnotes =  \relative c'' {
     \repeat volta 2 {
 	<g e'>16 <fis dis'> <g e'> <e c'> ~ <e c'> e f fis |				% 5 - 9
 	g c e <g e g,> ~ <g e g,> <fis dis fis,> <g e g,>8 |
@@ -149,7 +145,7 @@ partOneRHnotes = \notes \relative c'' {
 		 \stemUp <c e,>16 g e dis e f g8 ~ |
 		 g16 f d cis e d b a | } >>
 	    g8 r \stemDown <g' b d g> g |
-	    \stemBoth
+	    \stemNeutral
 	}
 	{										% 21 - 24
 	    a16 gis a b c b c d |
@@ -157,15 +153,14 @@ partOneRHnotes = \notes \relative c'' {
     }
     {
 	e 8 <f cis g>4 <e cis g>8 |
-	<e c! fis,> <e b f>4 \stemDown <d b f>8 \stemBoth |
+	<e c! fis,> <e b f>4 \stemDown <d b f>8 \stemNeutral |
 	<c e,> r
-	  << { \appoggiatura { g'16 [a b ] } \noStem c8 } \\
-	     { <e, c'>^^ } >>
+	  << { \appoggiatura { g'16 [a b ] } c4*1/2-^ } \new Voice e, >>
 	  r  |
     }
 }
 
-partOneLHnotes = \notes \relative c {
+partOneLHnotes =  \relative c {
     \repeat volta 2 {
 
 	\repeat unfold 4 { c <g' c e> g, <g' c e> | }					% 5 - 9
@@ -193,12 +188,12 @@ partOneLHnotes = \notes \relative c {
     }
     {
 	<g c e> <a a,> <a, a,>4 |
-	\stemDown <d d,>8 <g g,> \stemBoth <g, g,>4 |
+	\stemDown <d d,>8 <g g,> \stemNeutral <g, g,>4 |
 	< c c,>8 r <c c,>^^ r |
     }
 }
 
-partOneDynamics = \notes {
+partOneDynamics =  {
     \repeat volta 2 {
 	s2 \f |										% 5 - 9
 	s2 | s2 | s2 |
@@ -218,12 +213,12 @@ partOneDynamics = \notes {
     { s2 | s2 | s2 | }
 }
 
-partOneRH = \notes { << \partOneGlobal \partOneRHnotes >> }
-partOneLH = \notes { << \partOneGlobal \partOneLHnotes >> }
+partOneRH =  { << \partOneGlobal \partOneRHnotes >> }
+partOneLH =  { << \partOneGlobal \partOneLHnotes >> }
 
 % --- PART TWO ... ---------------------------------------------------
 
-partTwoGlobal = \notes {
+partTwoGlobal =  {
     \repeat volta 2 {
 	\bar "||:" \barRest | \barRest | \barRest | \barRest | \barRest |		% 25 - 29
 	\oBreak
@@ -241,7 +236,7 @@ partTwoGlobal = \notes {
     \oBreak
 }
 
-partTwoRHnotes = \notes \relative c''' {
+partTwoRHnotes =  \relative c''' {
     \repeat volta 2 {
 	<a f a,>8 <c a c,>4 <a f a,>8 |							% 25 - 29
 	<a f a,> <g e g,>4. |
@@ -264,14 +259,13 @@ partTwoRHnotes = \notes \relative c''' {
     } \alternative {
 	{ <c g e> <g g'>16 <g g'> <g g'>8 <g g'> | }
 	{ <c g e>8 r
-	  << { \appoggiatura { g'16 [a b] } \noStem c } \\
-	     { <c e,>8^^ } >>
+	  << { \appoggiatura { g'16 [a b] } c4*1/2-^ } \new Voice e,8 >>
 	  r8
       }
     }
 }
 
-partTwoLHnotes = \notes \relative c {
+partTwoLHnotes =  \relative c {
     \repeat volta 2 {
 	f,8 <a' c f> a, <a' c f> |							% 25 - 29
 	c, <g' c e> e <g c e> |
@@ -289,14 +283,14 @@ partTwoLHnotes = \notes \relative c {
 	c, <g' c e> e <g c e> |
 	f <a c d> fis <a c dis> |
 	g <c e> e, <g c e> |
-	d <g d'> \stemDown <g g,>4 \stemBoth |
+	d <g d'> \stemDown <g g,>4 \stemNeutral |
     } \alternative {
 	{ <c, c,>8 r8 r4 | }
 	{ <c c,>8 r <c c,>^^ r | }
     }
 }
 
-partTwoDynamics = \notes {
+partTwoDynamics =  {
     \repeat volta 2 {
 	s2 \f | s2 | s2 | s2 | s2 |							% 25 - 29
 
@@ -312,12 +306,12 @@ partTwoDynamics = \notes {
     }
 }
 
-partTwoRH = \notes { << \partTwoGlobal \partTwoRHnotes >> }
-partTwoLH = \notes { << \partTwoGlobal \partTwoLHnotes >> }
+partTwoRH =  { << \partTwoGlobal \partTwoRHnotes >> }
+partTwoLH =  { << \partTwoGlobal \partTwoLHnotes >> }
 
 % --- Part Three ... ---------------------------------------------------
 
-partThreeGlobal = \notes {
+partThreeGlobal =  {
     \key as \major
 
     \repeat volta 2 {
@@ -346,7 +340,7 @@ partThreeGlobal = \notes {
     }
 }
 
-partThreeRHnotes = \notes \relative c'' {
+partThreeRHnotes =  \relative c'' {
 
     \repeat volta 2 {
 	<c es c'>8 <c es c'> ~ <c es c'>16 es as bes |					% 42 - 45
@@ -381,7 +375,7 @@ partThreeRHnotes = \notes \relative c'' {
     }
 }
 
-partThreeLHnotes = \notes \relative c' {
+partThreeLHnotes =  \relative c' {
 
     \repeat volta 2 {
 	<as as,>8 <es as c> <es es,> <es as c> |					% 42 - 45
@@ -397,7 +391,7 @@ partThreeLHnotes = \notes \relative c' {
 	e8 <gis b> e <gis b> |								% 50 - 54
 	% DIFF: ... bes, ..... |  in original there is no cancel (imho there should be)
 	dis <fis b> b, <dis! fis b> |
-	\stemDown fis, <e' fis ais> fis, <e' fis ais> \stemBoth |
+	\stemDown fis, <e' fis ais> fis, <e' fis ais> \stemNeutral |
 	<b dis fis b> r r4 |
 	es8 <gis b> es <gis b> |
 
@@ -416,7 +410,7 @@ partThreeLHnotes = \notes \relative c' {
     }
 }
 
-partThreeDynamics = \notes {
+partThreeDynamics =  {
     \repeat volta 2 {
 	s2 | s2 | s2 | s2 |								% 42 - 45
 	s2 | s2 | s2 | s2 |								% 46 - 49
@@ -434,12 +428,12 @@ partThreeDynamics = \notes {
     }
 }
 
-partThreeRH = \notes { << \partThreeGlobal \partThreeRHnotes >> }
-partThreeLH = \notes { << \partThreeGlobal \partThreeLHnotes >> }
+partThreeRH =  { << \partThreeGlobal \partThreeRHnotes >> }
+partThreeLH =  { << \partThreeGlobal \partThreeLHnotes >> }
 
 % --- PART FOUR ... --------------------------------------------------
 
-partFourGlobal = \notes {
+partFourGlobal =  {
     \key f \major
 
     \repeat volta 2 {
@@ -465,7 +459,7 @@ partFourGlobal = \notes {
     }
 }
 
-partFourRHnotes = \notes \relative c''{
+partFourRHnotes =  \relative c''{
     \repeat volta 2 {
 	\stemDown <bes g>8. c16 <bes g>8. c16 |						% 63 - 64
 	r e d c bes a bes g |
@@ -493,16 +487,15 @@ partFourRHnotes = \notes \relative c''{
 
     {
 	s2 | s2 |									% 80 - 83
-	\stemBoth
+	\stemNeutral
 	\acciaccatura b,8 a16 g fis g gis a ais b |
-	\stemDown c8 \stemBoth r
-	   << { \appoggiatura { g'16 [ a b ] } \noStem c8 } \\
-	      { <e, c'>^^ } >>
+	c8 r
+	   << { \appoggiatura { g'16 [ a b ] } c4*1/2-^ } \new Voice e, >>
 	   r
     }
 }
 
-partFourLHnotes = \notes \relative c {
+partFourLHnotes =  \relative c {
 
     \repeat volta 2 {
 	e8 <g bes c> c, <g' bes c> |							% 63 - 64
@@ -543,7 +536,7 @@ partFourLHnotes = \notes \relative c {
     }
 }
 
-partFourDynamics = \notes {
+partFourDynamics =  {
 
     \repeat volta 2 {
 	s2 \p | s2 |									% 63 - 64
@@ -568,14 +561,14 @@ partFourDynamics = \notes {
     }
 }
 
-partFourRH = \notes { << \partFourGlobal \partFourRHnotes >> }
-partFourLH = \notes { << \partFourGlobal \partFourLHnotes >> }
+partFourRH =  { << \partFourGlobal \partFourRHnotes >> }
+partFourLH =  { << \partFourGlobal \partFourLHnotes >> }
 
 % --- PART FIVE ... --------------------------------------------------
 
 	% .... is almost identical carbon copy of PART TWO ....
 
-partFiveGlobal = \notes {
+partFiveGlobal =  {
     \key c \major
 
     \repeat volta 2 {
@@ -597,8 +590,8 @@ partFiveGlobal = \notes {
     \markFermata |
 }
 
-partFiveRHnotes = \notes \relative c''' {
-    \stemBoth
+partFiveRHnotes =  \relative c''' {
+    \stemNeutral
     \repeat volta 2 {
 	<a f a,>8 <c a c,>4 <a f a,>8 |							% 84 - 89
 	<a f a,> <g e g,>4. |
@@ -617,18 +610,17 @@ partFiveRHnotes = \notes \relative c''' {
 	<g e> <f d> <e c> <f d> <g e> <e c'>8 <e c'>16 |				% 95 - 100
 	<d d'>8 <d d'> ~ <d d'>16 c' b a |
 	<e a>8 <e g> ~ <e g>16 c d e |
-	<b g'>8 <b f'>4 \stemUp <b g f>8 \stemBoth |
+	<b g'>8 <b f'>4 \stemUp <b g f>8 \stemNeutral |
     } \alternative {
 	{ <c g e> <g g'>16 <g g'> <g g'>8 <g g'> | }
-	{ \stemUp <c g e>8 \stemBoth r
-	  << { \appoggiatura { g'16 [a b] } \noStem c } \\
-	     { <c e,>8^^ } >>
+	{ <c g e>8 r
+	  << { \appoggiatura { g'16 [a b] } c4*1/2-^ } \new Voice e,8>>
 	  s  |
         }
     }
 }
 
-partFiveLHnotes = \notes \relative c {
+partFiveLHnotes =  \relative c {
     \repeat volta 2 {
 	f,8 <a' c f> a, <a' c f> |							% 84 - 89
 	c, <g' c e> e <g c e> |
@@ -646,14 +638,14 @@ partFiveLHnotes = \notes \relative c {
 	c, <g' c e> e <g c e> |								% 95 - 100
 	f <a c d> fis <a c dis> |
 	g <c e> e, <g c e> |
-	d <g d'> \stemDown <g g,>4 \stemBoth |
+	d <g d'> \stemDown <g g,>4 \stemNeutral |
     } \alternative {
 	{ <c, c,>8 r8 r4 | }
 	{ <c c,>8 r <c c,>  s | }
     }
 }
 
-partFiveDynamics = \notes {
+partFiveDynamics =  {
     \repeat volta 2 {
 	s2 \f | s2 | s2 | s2 | s2 | s2 |						% 84 - 89
 
@@ -670,12 +662,12 @@ partFiveDynamics = \notes {
     }
 }
 
-partFiveRH = \notes { << \partFiveGlobal \partFiveRHnotes >> }
-partFiveLH = \notes { << \partFiveGlobal \partFiveLHnotes >> }
+partFiveRH =  { << \partFiveGlobal \partFiveRHnotes >> }
+partFiveLH =  { << \partFiveGlobal \partFiveLHnotes >> }
 
 % --- Combine .... ---------------------------------------------------
 
-rightHand = \notes {
+rightHand =  {
     \clef treble
     \introCommon
 
@@ -687,7 +679,7 @@ rightHand = \notes {
     \partFiveRH
 }
 
-leftHand = \notes {
+leftHand =  {
     \clef bass
     \introCommon
 
@@ -699,7 +691,7 @@ leftHand = \notes {
     \partFiveLH
 }
 
-dynamics = \notes {
+dynamics =  {
     \partZeroDynamics
     \partOneDynamics
     \partTwoDynamics
@@ -713,67 +705,33 @@ dynamics = \notes {
 \score {
 
   \context PianoStaff <<
-%    #(set-accidental-style 'piano)
-%    #(set-accidental-style 'default)
+%    \accidentalStyle "piano"
+%    \accidentalStyle "default"
 
     \context Staff = RH \rightHand
-    \context Dynamics = dynamics \dynamics
+    \context Dynamics = "dynamics" \dynamics
     \context Staff = LH \leftHand
   >>
 
-  \paper {
-    \context {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \alias Voice % So that \cresc works, for example.
-      \consists "Output_property_engraver"
-
-      minimumVerticalExtent = #'(-1 . 1)
-
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      \override TextScript #'font-size = #2
-      \override TextScript #'font-shape = #'italic
-      \override DynamicText #'extra-offset = #'(0 . 2.5)
-      \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consistsend "Axis_group_engraver"
-    }
-    \context {
-      \PianoStaffContext
-      \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
-    }
-  }
+  \layout { }
 }
 
 \score {
   \context PianoStaff <<
-    \context Staff = RH
-     \apply #unfold-repeats
-      \rightHand
-    \context Dynamics = dynamics
-     \apply #unfold-repeats
-      \dynamics
-    \context Staff = LH
-     \apply #unfold-repeats
-      \leftHand
+    \context Staff = RH \unfoldRepeats \rightHand
+    \context Dynamics = "dynamics" \unfoldRepeats \dynamics
+    \context Staff = LH \unfoldRepeats \leftHand
    >>
 
   \midi {
    \tempo 4 = 82
     \context {
-      \type "Performer_group_performer"
+      \type "Performer_group"
       \name Dynamics
-      \consists "Span_dynamic_performer"
       \consists "Dynamic_performer"
     }
     \context {
-      \PianoStaffContext
+      \PianoStaff
       \accepts Dynamics
     }
   }
