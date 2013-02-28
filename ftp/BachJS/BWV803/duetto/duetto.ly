@@ -1,34 +1,43 @@
-\version "2.0.1"
-\include "paper20.ly"
+\version "2.16.1"
 
 \header {
 	title = "Duetto II"
-	subtitle = "from the Clavierübung Part III" 
+	subtitle = "from the ClavierÃ¼bung Part III"
 	composer = "J.S.Bach (1685-1750)"
 	opus = "BWV 803"
 
-	mutopiatitle = "Duetto II (from the Clavierübung Part III)" 
-	mutopiacomposer = "BachJS" 
-	mutopiaopus = "BWV 803" 
+	mutopiatitle = "Duetto II (from the ClavierÃ¼bung Part III)"
+	mutopiacomposer = "BachJS"
+	mutopiaopus = "BWV 803"
 	mutopiainstrument = "Harpsichord, Organ"
-	date = "?" 
-	source = "Edition Peters" 
-	style = "Baroque" 
+	date = "?"
+	source = "Edition Peters"
+	style = "Baroque"
 	copyright = "Public Domain"
-	maintainer = "Vit Reichel" 
-	maintainerEmail = "vit.reichel@volny.cz" 
-	maintainerWeb = "www.volny.cz/respiro" 
-	lastupdated = "2003/Oct/08" 
+	maintainer = "Vit Reichel"
+	maintainerEmail = "vit.reichel@volny.cz"
+	maintainerWeb = "www.volny.cz/respiro"
+	lastupdated = "2003/Oct/08"
 
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2003/10/08-360"
+ footer = "Mutopia-2013/02/28-360"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
+\layout {
+  \context {
+    % This vertical spacing override is needed to make space for an
+    % appropriate beam sloping in bar 112
+    \Staff
+    \override VerticalAxisGroup #'staff-staff-spacing =
+      #'((basic-distance . 12)
+         (padding . 2)
+         (minimum-distance . 8))
+  }
+}
 
-
-One = \notes { 
+One =  {
 \key f \major  \time 2/4 \clef  violin
-\property Staff.midiInstrument = "harpsichord"
+\set Staff.midiInstrument = "harpsichord"
 
 % Bar 1
   f'4 a'
@@ -364,7 +373,7 @@ One = \notes {
   d''4\mordent b'\turn
 
 % Bar 112
-  c''4 r
+  c''4 c''4\rest
 
 % Bar 113
   f'4 a'
@@ -475,12 +484,12 @@ One = \notes {
   c'4 g''\downmordent
 
 % Bar 149
-  f''4\fermata r \bar "|." 
+  f''4\fermata r \bar "|."
 }
 
-Two = \notes { 
+Two =  {
 \key f \major  \time 2/4 \clef bass
-\property Staff.midiInstrument = "harpsichord"
+\set Staff.midiInstrument = "harpsichord"
 
 % Bar 1 - 4
   R2*4
@@ -807,10 +816,10 @@ Two = \notes {
   \appoggiatura g f8 ees16 f g8 g,
 
 % Bar 112
-  c16 \translator Staff=up a' g' f' \stemDown e' \translator Staff=down \stemUp d' c' bes
+  c16 \change Staff=up a' g' f' \stemDown e' \change Staff=down \stemUp d' c' bes
 
 % Bar 113
-  \stemBoth a16 f' e' d' c' bes a g
+  \stemNeutral a16 f' e' d' c' bes a g
 
 % Bar 114
   f16 bes a g f ees d c
@@ -918,22 +927,27 @@ Two = \notes {
   c'4 c
 
 % Bar 149
-  f4\fermata r \bar "|." 
+  f4\fermata r \bar "|."
 
 }
 
-\score { << 
-	\context PianoStaff << 
-		\context Staff = up << 
+\score { <<
+	\context PianoStaff <<
+		\context Staff = "up" <<
 			\One
-		>> 
-		\context Staff = down << 
+		>>
+		\context Staff = "down" <<
 			\Two
-		>> 
+		>>
 	>>
 >>
 
-\midi { \tempo 4 = 106 }
-\paper { }
+
+  \midi {
+    \tempo 4 = 106
+    }
+
+
+\layout { }
 
 }
