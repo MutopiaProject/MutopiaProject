@@ -73,18 +73,18 @@ bass =  \relative f' \context Voice = "bass" {
 	cis d g, a | bes c f,_\fermata \bar "||"
 }
 
-\paper{
-  left-margin = 1.5 \cm
+\paper {
+	system-system-spacing #'basic-distance = #15
+	markup-system-spacing #'basic-distance = #15
 }
 
 \score {
   <<
    \global
-    \override Score.BarNumber   #'padding = #3
     \new StaffGroup = "coro" <<
       \new Staff = "women" <<
         \set Staff.midiInstrument = #"choir aahs"
-        \set Staff.instrumentName = \markup { \column { "SOPRANO." "ALTO." } }
+        \set Staff.instrumentName = \markup { \smaller \column { "SOPRANO." "ALTO." } }
         \Key
         \new Voice = "melody" \melody
         \new Voice = "alt" \alt
@@ -92,7 +92,7 @@ bass =  \relative f' \context Voice = "bass" {
       \new Staff = "men" <<
         \clef bass
         \set Staff.midiInstrument = #"choir aahs"
-        \set Staff.instrumentName = \markup { \column { "TENORE." "BASSO." } }
+        \set Staff.instrumentName = \markup { \smaller \column { "TENORE." "BASSO." } }
         \set Staff.autoBeaming = ##f
         \Key
         \new Voice = "tenor" \tenor
@@ -102,8 +102,7 @@ bass =  \relative f' \context Voice = "bass" {
     >>
   >>
   \layout {
-        line-width = 17.5 \cm
-        interscoreline = 1.5 \cm
+        indent = 2 \cm
   }
   
   \midi {
