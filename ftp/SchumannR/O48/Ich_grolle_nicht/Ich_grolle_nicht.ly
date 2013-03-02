@@ -63,20 +63,20 @@ chant =  \relative do' \context Voice = "chant" {
     r2 r8 mi\f re8. do16 fa2 r8 fa fa fa lab2. ~ lab8 sol mi2 r4 r8 mi\p mi4. mi8 si'4. si8
     la4 la r8 la\< la la la la la la mi'4. mi8\! re4 re r8 re re re re^\markup { \italic "cresc." }
     re re re
-      <<
-      {
-      \autoBeamOff
-      \dynamicUp
+    <<
+    {
+      \voiceOne
       la'4. la8 sol2 ( fa8)
       \override TextSpanner #'(bound-details left text) = \markup {\italic ritard.}
       fa \startTextSpan fa fa fa fa fa fa mi4. re8 \stopTextSpan 
       do4 }
-      \\
-      {
+    \new Voice
+    {
+      \voiceTwo
       \autoBeamOff
-      \dynamicUp
       re4. re8 re2 ( dod8) dod dod dod do! do do do si4. si8 do4 }
-      >>
+    >>
+    \oneVoice
     r r8 si\f si si la2 r8 sol sol sol 
     do,1 ~ do2 r2 R1 R r4 s2.
     \bar "|."
