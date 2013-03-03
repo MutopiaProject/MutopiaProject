@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header{
   title = "Sun Flower Slow Drag"
@@ -13,8 +13,10 @@
   mutopiacomposer = "JoplinS"
 % ... and "Scott Hayden (1882-1915)"
   mutopiainstrument = "Piano"
+  mutopiasource = "Reproduction of original edition (1901)"
+  mutopiamoreInfo = "This piece was written with Scott Hayden (1882-1915)."
 
-  date = "C. 1901"
+  date = "c. 1901"
   style = "Jazz"
   copyright = "Public Domain"
 
@@ -25,16 +27,6 @@
 %
 %  Archive and version: 0rfelyus@hobitin.ucw.cz--2004-music/joplin-sun-flower-slow-drag--main--1.0
 %  ArchiveLocation:     http://www.ucw.cz/~0rfelyus/{archives}/0rfelyus@hobitin.ucw.cz--2004-music
-
-  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} "
-    + "This music is part of the Mutopia project: \\hspace{\\stretch{1}} "
-    + "\\texttt{http://www.MutopiaProject.org/}\\\\ "
-    + "\\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by "
-    + "Daniel \v{S}karda" % \maintainer
-    + ".} \\makebox[\\textwidth][c]{"
-    + "Unrestricted modification and redistribution is permitted and encouraged---"
-    + "copy this music and share it!}}"
-  footer = "Mutopia-2004/10/21-465"
 
 % Changes:
 %
@@ -52,6 +44,9 @@
 %   minor fixies:
 %	beams (LH 22, L+R 39)
 %	stem orientation (LH 35, 43, 47, 54, 67, 72)
+
+ footer = "Mutopia-2013/03/03-465"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 % ---- Helpers ... ---------------------------------------------------
