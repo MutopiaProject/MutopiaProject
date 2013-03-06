@@ -25,7 +25,7 @@
         mutopiacomposer = "BachJS"
         opus = "BWV 988"
         date = "1741"
-        mutopiainstrument = "Clavier"
+        mutopiainstrument = "Harpsichord,Clavichord"
         style = "Baroque"
         source = "Bach-Gesellschaft Edition 1853 Band 3"
 		comment = "Kollidierende Notenspalten ignorieren."
@@ -431,7 +431,6 @@ bass = << \bassOne \\ \bassTwo \\ \breaks >>
 
 \score {
     \context PianoStaff <<
-        \set PianoStaff.instrumentName = "Clavier  "
         \set PianoStaff.midiInstrument = "harpsichord"
         \new Staff = "upper" \with { \consists "Span_arpeggio_engraver" }
 	        { \clef treble \key g \major \time 2/2 \soprano  }
