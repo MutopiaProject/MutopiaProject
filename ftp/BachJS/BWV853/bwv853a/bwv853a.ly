@@ -17,6 +17,7 @@
   style = "Baroque"
   copyright = "Public Domain"
   maintainer = "Davide Castellone"
+  maintainerEmail = "davide.castellone@gmail.com"
   mantainerweb = "www.liceonovello.it/Members/kastel/music"
   lastupdated =	 "2005/May/07"
  footer = "Mutopia-2008/05/21-563"

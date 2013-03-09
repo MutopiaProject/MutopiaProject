@@ -21,6 +21,7 @@
   style = "Baroque"
   copyright = "Public Domain"
   maintainer = "Davide Castellone"
+  maintainerEmail = "davide.castellone@gmail.com"
   mantainerweb = "www.liceonovello.it/Members/kastel/music"
   lastupdated =	 "2005/Aug/26"
   

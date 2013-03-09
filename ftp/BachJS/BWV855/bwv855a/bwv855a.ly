@@ -18,6 +18,7 @@
   style = "Baroque"
   copyright = "Public Domain"
   maintainer = "Davide Castellone"
+  maintainerEmail = "davide.castellone@gmail.com"
   mantainerweb = "www.liceonovello.it/Members/kastel"
   lastupdated =	 "2005/Mar/29"
   mutopiapublicdomain = \markup { \column { { This music is part of the Mutopia project,
