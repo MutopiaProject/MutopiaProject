@@ -1,11 +1,11 @@
-﻿\version "2.10.33"
+\version "2.16.1"
 
 %\markup \override #'(font-name . "Verdana")
 
 \header {
-	title = \markup { \fontsize #3 "4 Sting" }
+	title = \markup { \fontsize #3 "Recuerdos" }
 	composer = "Radan Papežík"
-	mutopiatitle = "4 Sting"
+	mutopiatitle = "Recuerdos"
 	mutopiacomposer = "PapezikR"
 	mutopiaopus = "Op. 2"
 	mutopiainstrument = "Guitar"
@@ -16,8 +16,9 @@
 	maintainer = "Vitr"
 	maintainerEmail = "radanpapezik@centrum.cz"
 	moreInfo = "I wrote this piece as a tribute to Sting after I had seen The South Bank Show with him playing Tárrega's Recuerdos de la Alhambra on his classical guitar."
- footer = "Mutopia-2008/07/30-1495"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+
+ footer = "Mutopia-2013/03/09-1495"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 
@@ -69,7 +70,7 @@ guitarOne = {
 
 		R2.
 		
-		\time 5/4 \override Slur #'attachment = #'(stem . stem) e8[ fis gis] e4 fis8( e4) fis \pageBreak
+		\time 5/4 e8[ fis gis] e4 fis8( e4) fis \pageBreak
 		\time 6/4 e8[ fis gis] e4 fis8[ e dis] \times 2/3 {e4 dis e}
 		\time 5/4 e8[ fis gis] e4 fis8( e4) fis
 		e8[ fis gis] e4 fis8( e4) h \break
@@ -98,7 +99,7 @@ guitarOne = {
 		
 		\noteTransparent e,8[ fis' h ais] cis, h'
 		\noteTransparent gis,[ fis' h ais] h, ais'
-		\noteTransparent e,8[ fis' h ais] cis, h'  \set subdivideBeams = ##t \set Voice.beatLength = #(ly:make-moment 1 8)
+		\noteTransparent e,8[ fis' h ais] cis, h'  \set subdivideBeams = ##t \set Voice.baseMoment = #(ly:make-moment 1 8)  \set Voice.beatStructure = #'(2 2 2 2)
 		gis,32[ fis'' fis fis fis, fis' fis fis h, fis' fis fis ais, fis' fis fis h,, fis'' fis fis ais, fis' fis fis]
 		e,,[ fis'' fis fis fis, fis' fis fis h, fis' fis fis ais, fis' fis fis cis, gis'' gis gis h, gis' gis gis]
 		gis,,[ ais'' ais ais fis, ais' ais ais h, ais' ais ais ais, ais' ais ais h,, cis'' cis cis ais, cis' cis cis]
@@ -274,7 +275,7 @@ guitarFour = \relative c' {
 	<< gis2 fis' >> h,4
 	e,2 cis'4
 	gis2 h4
-	e,2 cis'4 \set Score.beatLength = #(ly:make-moment 1 4) #(override-auto-beam-setting '(end * * * *) 1 4)#(override-auto-beam-setting '(end * * * *) 2 4)
+	e,2 cis'4 \set Timing.beamExceptions = #'()
 	gis8 fis' h ais h, ais'
 	e, fis' h ais cis, h'
 	gis, fis' h ais h, ais'
@@ -320,10 +321,7 @@ guitarFour = \relative c' {
 	
 	>>
 	\midi { 
-		\context {
-     			 \Score
-      			tempoWholesPerMinute = #(ly:make-moment 88 4)
-      	}
+		\tempo 4 = 88
 }
 	\layout {}
 
