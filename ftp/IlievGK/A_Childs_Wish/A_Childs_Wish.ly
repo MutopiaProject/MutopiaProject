@@ -42,6 +42,7 @@
     maintainerEmail = "gr.iliev@gmail.com"
     maintainerWeb = "www.grigoriliev.com"
     lastupdated = "2013/03/20"
+    moreinfo = "The composer has also recorded <a href=\"../ftp/IliefGK/A_Childs_Wish/A_Childs_Wish.mp3\">an MP3 of the piece</a>"
 
  footer = "Mutopia-2013/03/20-727"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
