@@ -1,12 +1,12 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header {
 mutopiatitle = "Ases Tod"
-mutopiasubtitle = "La Mort D'Ase"
-mutopiacomposer = "E. Grieg (1843-1907)"
+mutopiacomposer = "GriegE"
 mutopiapoet = "Henrik Ibsen"
-mutopiaopus = "O46"
+mutopiaopus = "O 46, No. 2"
 mutopiainstrument = "Piano"
+mutopiastyle = "Romantic"
 date = "1874-76 - rescored by Grieg 1886"
 style = "Romantique"
 title = "Ases Tod"
@@ -19,10 +19,12 @@ source = "Kunkel Brothers 1891 - Kunkel's Musical Review, May 1893"
 filename = "lamortdase.ly"
 maintainer = "Deborah Lowrey"
 maintainerEmail = "drlowrey@karmaresources.com"
-maintainerWeb = "http://www.karmaresources.com"
+maintainerWeb = "http://www.karmaresources.com/"
 % footer = "Public Domain"
- tagline = "\\parbox{\paper-width}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by Deborah Lowrey (\\texttt{http://www.karmaresources.com}).\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
-  footer = "Mutopia-2002/07/05-246"
+moreInfo = "This Piano piece's main source was from the Kunkel Brothers 1891, reprinted in 1893. Many of the slurs and fingerings were extremely excessive (and unnecessary), and so, were omitted. Many of the dynamics and (de)crescendi were left as entered to help reduce file size and make the sheetmusic (and file) less busy. If you are interested in the fingering for this piece, please email your request to the address @maintainerEmail. Karmically, Deborah."
+
+ footer = "Mutopia-2013/03/22-246"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
