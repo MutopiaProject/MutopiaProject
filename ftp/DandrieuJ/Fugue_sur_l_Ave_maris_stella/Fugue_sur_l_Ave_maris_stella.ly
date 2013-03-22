@@ -1,4 +1,4 @@
-\version "2.4.2"
+\version "2.16.0"
 \include "italiano.ly" 
 
 %% Version 1.
@@ -8,13 +8,14 @@
     subtitle = "Premier livre d'Orgue"
     piece = "" 
     instrument = "Orgue -- Organ"
-    composer = "Jean-François Dandrieu (1681-1738)"
-    copyright = "Public Domain -- Domaine public"
-    source = "Édition d'Alexandre Guilmant - 1905"
+    composer = "Jean-FranÃ§ois Dandrieu (1681-1738)"
+    copyright = "Public Domain"
+    source = "Ã‰dition d'Alexandre Guilmant - 1905"
     opus = ""
-    lastupdated = "2005-05-22 Fête de la Trinité"
-    enteredby = "Gérard Gréco"
-    maintainer = "Gérard Gréco"
+    mutopiainstrument = "Organ"
+    mutopiacomposer = "DandrieuJ"
+    enteredby = "GÃ©rard GrÃ©co"
+    maintainer = "GÃ©rard GrÃ©co"
 
 footer = "Mutopia-2005/05/22-566"
 tagline = "\\raisebox{5mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
@@ -23,12 +24,12 @@ tagline = "\\raisebox{5mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer +
 global = {
   \key do \major
   \time 4/4
+  \tempo "Majestueusement"
 }
 
 soprano =  \relative do' {
-  % \markup{\bold \large Majestueusement}
   s1*15
-  si'2\rest re,2 
+  \voiceOne r2 re2 
   la'2. la4 
   si4 sol4 la4 si4 
   do2.^\mordent \tieUp si4 ~
@@ -43,7 +44,7 @@ soprano =  \relative do' {
   re'2\rest r4 la4 ~
   la4 sol2 fad4^\downprall 
   sol2 si2\rest 
-  \override MultiMeasureRest  #'staff-position = #2 R1 R1 R1 R1 R1
+  R1*5
   si4\rest re,4 sol2 ~
   sol2 fa4^\prallprall mi4 
   do'2\rest la2 
@@ -55,24 +56,23 @@ soprano =  \relative do' {
 }
 
 alto = \relative do' {
-  \stemUp 
-  \override MultiMeasureRest  #'staff-position = #2 R1^\markup { "" \raise #2.0 \large \bold "Majestueusement" } R1 R1 R1 R1
-  si'2\rest la,2 re2. re4 
+  R1*5
+  r2 la2 re2. re4 
   mi4 do4 re4 mi4 
-  fa2.^\mordent mi4 ~
-  mi4 re2 dod4^\downprall
+  fa2.\mordent mi4 ~
+  mi4 re2 dod4\downprall
   re2. mi4 
-  fa4^\mordent la4 sol4 fa4 
-  mi4^\prallprall sol4 fa4 mi4 
+  fa4\mordent la4 sol4 fa4 
+  mi4\prallprall sol4 fa4 mi4 
   re4 fa4 mi4 re4 
-  dod2.^\prallprall mi4 
-  la,1 ~
-  \stemDown la4 mi'4 fa2 ~
+  dod2.\prallprall mi4 
+  \voiceTwo la,1 ~
+  la4 mi'4 fa2 ~
   fa1 
   r4 mi4 re2 
   do2 si4 mi4 
   do4_\prallprall si4 la2 
-  fad'1_\markup{ "" \hspace #0.01 \raise #-0.02 \musicglyph #"scripts-\prallprall"}
+  fad'1\prallprall
   sol2 la4 sib4
   mi,4 fa4 mi2 
   fa4 mi4 re2 
@@ -84,7 +84,7 @@ alto = \relative do' {
   re'1 ~
   re2 do2 ~
   do4 la4 sib4 do4 
-  re2.^\markup{ "" \raise #-1. \musicglyph #"scripts-mordent"} do4 ~
+  re2.^\markup{ "" \raise #-1. \musicglyph #"scripts.mordent"} do4 ~
   do4 sib4 la4 re4 
   sib2. sib4 
   la1 
@@ -97,14 +97,13 @@ alto = \relative do' {
 }
 
 tenor = \relative do' {
-  \stemDown
   re,2\rest re2 
   la'2. la4 
   si4 sol4 la4 si4 
   do2.^\mordent si4 ~
-  si4 la2 sold4^\markup{ "" \raise #1 \musicglyph #"scripts-downprall"}
+  si4 la2 sold4^\markup{ "" \raise #1 \musicglyph #"scripts.downprall"}
   la4 sol4 fa4 mi4 
-  fa4^\markup{ "" \raise #1 \musicglyph #"scripts-mordent"} re4 sib'2 ~
+  fa4^\markup{ "" \raise #1 \musicglyph #"scripts.mordent"} re4 sib'2 ~
   sib2. sib4 
   la4 re4 sol,4 do4 
   fa,4 sib4 mi,4 la4 
@@ -114,15 +113,16 @@ tenor = \relative do' {
   sib2_\mordent sol2 
   la4 sib4 la4 sol4 
   fa4 mi4 fa4 re4 
-  \stemUp dod4_\prallprall la4 \stemDown re4 \stemUp re,4 
-  sol2. \stemDown sol'4 
+  dod4_\prallprall la4 re4 re,4 
+  sol2. sol'4 
   la4 do4 fad,4 sold4 
   la2 mi2 
-  \stemUp la,2. la4 
-  \stemDown re2. re4 
+  la,2. la4 
+  re2. re4 
   sol4 mi4 fa4 sol4
+  \voiceOne
   la1 ~
-  \stemUp la4 sol4 fa2 
+  la4 sol4 fa2 
   do'1 ~
   do2 si4 dod4 
   la2 sol2 
@@ -133,10 +133,12 @@ tenor = \relative do' {
   la4 fa4 sol4 la4 
   sib2. la4 ~
   la4 sol2 fad4^\prallprall 
-  \stemDown sol4 fa4 mi4 re4 
+  \oneVoice
+  sol4 fa4 mi4 re4 
   dod1 
+  \voiceOne
   la'1 ~
-  \stemUp la2 si2 
+  la2 si2 
   dod4 mi4 fa4 dod4 
   re2 mi4 fa4 ~
   fa4. mi8 mi2^\prallprall 
@@ -172,26 +174,29 @@ basse = \relative do {
 
 \score {
   {
-    \context PianoStaff <<
-      \context Staff = "dessus" <<
+    \new PianoStaff <<
+      \new Staff = "dessus" <<
         \global
         \clef violin 
 	\set Staff.midiInstrument = "Church organ"
-	\context Voice = "soprano" {\voiceOne \soprano}
-	\context Voice = "alto" {\voiceTwo \alto}
+	\new Voice = "soprano" {\soprano}
+	\new Voice = "alto" {\alto}
       >>
-      \context Staff = "basse" <<
+      \new Staff = "basse" <<
         \global    
         \clef bass
 	\set Staff.midiInstrument = "Church organ"
-	\context Voice = "tenor" {\voiceOne \tenor} 
-	\context Voice = "basse" {\voiceTwo \basse}
+	\new Voice = "tenor" {\tenor} 
+	\new Voice = "basse" {\voiceTwo \basse}
       >>
     >>
     \bar "|."
   }
   \layout { }
-  \midi{ \tempo 4 = 100 }
+  
+  \midi {
+    \tempo 4 = 100
+    }
+
+
 }
-
-
