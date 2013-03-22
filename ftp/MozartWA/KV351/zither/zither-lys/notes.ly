@@ -1,53 +1,49 @@
-\version "1.6.6"
+\version "2.16.0"
 
-Marks = \notes {
+Marks =  {
   \context Voice = A
-  s2.*2 | s4. s4 \mark #'(music "scripts-segno") s8 |
+  s2.*2 | s4. s4 \mark \markup{\musicglyph #"scripts.segno"} s8 |
   s2.*19 |
   s2 
-  \property Staff.TextScript \set #'self-alignment-X = #1
+  \override Staff.TextScript   #'self-alignment-X = #1
   s16
-  \mark #'(music "scripts-segno")
+  \mark \markup{\musicglyph #"scripts.segno"}
   s32._"dal segno" s64 \bar "|."
 }
 
-% I like slightly dashed lines better than dotted, at least with dot frequency of 1.6.6
-slurDashed = \property Voice.Slur \set #'dashed = #5
-
-Voice = \notes \relative c'' {
-  \context Voice
+Voice =  \relative c'' {
   \clef "treble"
   \key c\major
   \time 6/8
-  \property Voice.autoBeaming = ##f
+  \set autoBeaming = ##f
 
   R2.*2 |
   %3
   r4 r8 r4 g8 |
-  c4 c8 [c b] c |
+  c4 c8  c[ b] c |
   a4 r8 r4 a8 |
-  [d f] d [b a] b |
+   d[ f] d  b[ a] b |
   %7
-  b4()c8 g4 r8 |
+  b4( c8) g4 r8 |
   c4.~c8 b a |
-  [d g] b, [d c] a |
+   d[ g] b,  d[ c] a |
   g4. r4 r8 | R2.
   %12
   r4 r8 r4 g8 |
-  d'4 d8 [d c d] |
+  d'4 d8  d[ c d] |
   e4. c4 b8 |
-  [a()b] c \slurDashed [d()e] f |
-  \slurSolid c4()d8 b r g |
+   a[( b)] c \slurDashed  d[( e)] f |
+  \slurSolid c4( d8) b r g |
   %17
-  e'4.~[e8()d] c |
+  e'4.~ e8[( d)] c |
   a4 d8 c4 b8 |
   e4.~e8 d c |
-  d4 [e16 f] c4 b8 |
+  d4  e16[ f] c4 b8 |
   %21
   c4 r8 r4 r8 | R2. | r4 r8 r4
 }
 
-LyrI = \context Lyrics \lyrics {
+LyrI = \lyricmode {
   Komm,4 lie -- be Zi -- ther, komm,
   du Freun -- din stil -- ler Lie -- be,
   du __ sollst auch mei -- ne Freun -- din sein.
@@ -57,19 +53,17 @@ LyrI = \context Lyrics \lyrics {
   ", dir" ver -- trau' ich mei -- ne Pein.
 }
 
-LyrII = \context Lyrics \lyrics {
+LyrII = \lyricmode {
   Sag'4 ihr an mei -- ner Statt,
   Ich darf's ihr noch nicht sa -- gen,
-  Wie ihr so ganz mein Herz ge -- h\\\"ort;
+  Wie ihr so ganz mein Herz ge -- hört;
   Sag' ihr an mei -- ner Statt,2
   Ich4 darf's ihr noch nicht kla -- gen,
-  Wie sich f\\\"ur sie mein Herz ver -- zehrt __
-  ", sich" f\\\"ur sie mein Herz ver -- zehrt.
+  Wie sich für sie mein Herz ver -- zehrt __
+  ", sich" für sie mein Herz ver -- zehrt.
 }
 
-Lyr = <\LyrI \LyrII>
-
-Mand = \notes \relative c'' {
+Mand =  \relative c'' {
   \context Voice = A
   \clef "treble"
   \key c\major
@@ -77,13 +71,13 @@ Mand = \notes \relative c'' {
 
   c8 e g c16 a g f e d |
   c e a, c g c f, a d f g, b |
-  c8 <{c c c4} {e,8 e e4} {c8 c c4}> r8 |
-  e,16 c' g' c, e, c' e, c' g' c, e, c' |
-  f,8 <{[f8 f] f4} {c'8 c c4} {a'8 a a4}> r8 |
-  f16 d' a' d, f, d' g, d' b' d, g, d' |
+  c8 <<{c c c4} {e,8 e e4} {c8 c c4}>> r8 |
+  e16 c' g' c, e, c' e, c' g' c, e, c' |
+  f,8 <<{ f8[ f] f4} {c'8 c c4} {a'8 a a4}>> r8 |
+  f,16 d' a' d, f, d' g, d' b' d, g, d' |
   g, b c d e f e f e d c b |
-  <{fis'8 fis fis fis4} {a,8 a a a4} {d,8 d d d4}> r8 |
-  g,16 b d b g b d, fis a fis d fis |
+  <<{fis'8 fis fis fis4} {a,8 a a a4} {d,8 d d d4}>> r8 |
+  g16 b d b g b d, fis a fis d fis |
   g g' b g fis g e g d g c, g' |
   b, g' g g e g c, a' a a d, fis |
   g e d c b a g4 r8 |
@@ -97,7 +91,7 @@ Mand = \notes \relative c'' {
   f,, d' f d f, d' g, c e c g g |
   c c e c b c a c g c f, c' |
   e, g c e g c a f d b g b | 
-  c8 <{c c c4} {e,8 e e4} {c8 c c4}>
+  c8 <<{c c c4} {e,8 e e4} {c8 c c4}>>
 }
 
 
