@@ -1,12 +1,14 @@
-\include "paper16.ly"
+\version "2.16.0"
+
+#(set-global-staff-size 16)
 \include "catalan.ly"
 
 \header {
 	title = "Les Tendres Plaintes"
 	composer = "Jean-Philippe Rameau"
-	subtitle = "Pi\`eces de Clavecin"
+	subtitle = "Pièces de Clavecin"
 	mutopiatitle = "Les Tendres Plaintes"
-	mutopiacomposer = "J. P. Rameau (1683-1764)"
+	mutopiacomposer = "RameauJP"
 	mutopiainstrument = "Harpsichord, Piano"
 	date = "1724"
 	source = "Durand, 1895"
@@ -14,13 +16,12 @@
 	copyright = "Public Domain"
 	maintainer = "Ludovic Sardain"
 	maintainerEmail = "ludovicsardain@hotmail.com"
-	lastupdated = "2004/Fev/25"
 
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+	tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
 	footer = "Mutopia-2004/02/25-414"
 }
 
-droite = \notes \relative do''{
+droite =  \relative do''{
 	\time 3/4
 	\key re \minor
 	fa2 la4 |
@@ -78,17 +79,17 @@ droite = \notes \relative do''{
 	sol2-\prall fa4 |
 	do' do do |
 	\grace re8( do2)-\trill sib8 la |
-	<< {	\stemUp re2 mi8 fa |
+	<< {	re2 mi8 fa |
 		do2 mi8 fa |
 		sib,2 do8 sol |
 		la4. sib8 do la |
 		re4 sol, sol |
-		\grace la8( sol2.~)-\trill |
+		\slurDown \appoggiatura la8 sol2.~-\trill |
 		sol4.-\trill la8 sol la |
 		sib la sib re sib fa' |
 		sib, do sib mi sib sol' |
 		la,4.-\prall sib8 do4 }
-	\\ {	\stemDown r8 sib la sol~ sol4~ |
+	\\ {	r8 sib la sol~ sol4~ |
 		sol8 la sol fa~ fa4~ |
 		fa8 la sol fa mi4 |
 		fa2.~ |
@@ -98,7 +99,7 @@ droite = \notes \relative do''{
 		fa |
 		sol |
 		fa } >>
-	\stemBoth re'4 \grace la8( sol4.)-\trill fa8 |
+	re'4 \grace la8( sol4.)-\trill fa8 |
 	<<{fa2.} \\ {r8 do~ <la do>2} >>
 % mesure 65
 	fa''2 la4 |
@@ -120,7 +121,7 @@ droite = \notes \relative do''{
 	\bar "|."
 }
 
-gauche = \notes \relative do' {
+gauche =  \relative do' {
 	\clef violin
 	\key re \minor
 	re8([ la' fa re)] la([ sol')] |
@@ -224,27 +225,23 @@ gauche = \notes \relative do' {
 }
 
 \score {
-	\context PianoStaff \notes <<
-		\context Staff = up <<
-			\property Staff.minimumVerticalExtent = #'(-4 . 6)
+	\context PianoStaff  <<
+		\context Staff = "up" <<
 			\droite
 		>>
-		\context Staff = down <<
-			\property Staff.minimumVerticalExtent = #'(-6 . 4)
+		\context Staff = "down" <<
 			\gauche
 		>>
 	>>
 
-\paper {
-	linewidth = 17.0 \cm
-	textheight = 24.0 \cm
-	\translator {
-		\PianoStaffContext
-		VerticalAlignment \override #'forced-distance = #10
-	}
-}
+\layout { }
 
 
-\midi { \tempo 4 = 80 }
+
+  \midi {
+    \tempo 4 = 80
+    }
+
+
 
 }
