@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIBasso = \notes \relative c {
+IIBasso =  \relative c {
   \clef "bass"
   \time 6/8
   \key d\minor
@@ -19,7 +19,3 @@ IIBasso = \notes \relative c {
   %44
   d r4 r8^\fermata \bar "|."
 }
-
-
-
-
