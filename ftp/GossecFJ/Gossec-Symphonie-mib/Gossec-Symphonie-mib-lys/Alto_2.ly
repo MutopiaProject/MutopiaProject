@@ -1,4 +1,4 @@
-﻿\version "2.10.25"      %Gossec - Symphonie mi bémol
+\version "2.16.0"      %Gossec - Symphonie mi bémol
                         %Alto - 2ème mvt
 \relative c'{
 \clef alto
@@ -105,16 +105,16 @@ aes aes aes r
    \\
    \voiceTwo { s1 | g1 | g4 } >> r4 r2
 R1
-<< \voiceOne { bes1( | aes2 g) | aes4) } 
+<< \voiceOne { bes1( | aes2 g) | aes4 } 
    \\
    \voiceTwo { g1 | f2 e | f4 } >> r4 r2
 R1
-<< \voiceOne { aes1( | g2 f) | g4) } 
+<< \voiceOne { aes1( | g2 f) | g4 } 
    \\
    \voiceTwo { f1 | ees2 d | ees4 } >> r4 r2
 r r4 c'8. aes16
 f4 aes8. f16 d4 f8. d16
-b4 r << \voiceOne { f'2( | ees d) | ees) } 
+b4 r << \voiceOne { f'2( | ees d) | ees } 
    \\
    \voiceTwo { d2 | c b | c\f } >> r2
 r4 c d ees

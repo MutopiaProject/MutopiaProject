@@ -1,4 +1,4 @@
-﻿\version "2.10.25"      %Gossec - Symphonie mi bémol
+\version "2.16.0"      %Gossec - Symphonie mi bémol
                         %Basse - 2ème mvt
 \relative c{
 \clef bass

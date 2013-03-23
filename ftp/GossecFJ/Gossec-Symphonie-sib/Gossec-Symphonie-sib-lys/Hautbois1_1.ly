@@ -1,4 +1,4 @@
-﻿\version "2.10.25"      %Gossec - Symphonie si b�mol
+\version "2.16.0"      %Gossec - Symphonie si bémol
                         %Hautbois1 - 1er mvt
 \relative c''{
 \clef treble
