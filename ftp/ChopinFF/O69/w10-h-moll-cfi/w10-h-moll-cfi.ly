@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header{
   filename      =       "w10-h-moll-cfi.ly"
@@ -8,7 +8,7 @@
 
  mutopiatitle = "Walzer h-moll"
  mutopiacomposer = "ChopinFF"
- mutopiaopus = "O 69"
+ mutopiaopus = "Op. 69, No. 2"
  mutopiainstrument = "Piano"
  date = "1829-1835"
  source = "Peters, Herrmann Scholtz, 1900a"
@@ -17,8 +17,8 @@
  maintainer = "Roland Goretzki"
  maintainerEmail = "roland@roland-goretzki.de"
 
-  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2004/12/15-511"
+ footer = "Mutopia-2013/03/23-511"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 \include "deutsch.ly"
