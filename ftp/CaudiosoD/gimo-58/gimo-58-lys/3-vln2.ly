@@ -1,23 +1,18 @@
-\version "1.6.0"
+\version "2.16.0"
 
-noStroke = {\property Voice.Stem \set #'stroke-style = #'()}
 
-IIIVlnII = \notes \relative c'' {
+IIIVlnII =  \relative c'' {
   \clef "treble"
   \key g\major
   \time 2/4
 
-  \property Score.skipBars = ##t
+  \set Score.skipBars = ##t
 
   % end beams on quarters by default, but beam four eights together
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
-  \property  Staff.autoBeamSettings \override
-    #'(end 1 8 * *) = #(make-moment 1 2)
 
   %1 page 13
-  d4 \grace {[e16 fis]} g4 |
-  \grace g8 fis16 e d8 r e |
+  d4 \grace{e16[ fis]} g4 |
+  \slashedGrace g8 fis16 e d8 r e |
   c a d, c' |
   b16 c d8 r e |
   c a d, c' |
@@ -26,14 +21,14 @@ IIIVlnII = \notes \relative c'' {
   b'8 b, b'4 | r8 a, a'4 | r8 b, d32 cis b8. | a32 b cis8. a,4 |
   e''32 d cis8. e32 d cis8. | d32 e fis8. r8 a, |
   %13
-  b b \grace {\noStroke fis} e4 | d r8 g' | <fis, d> fis' <g, g,> b |
-  <fis'4 a, d,> r8 g | <a, fis> fis' <g, g,> b | <fis'4 a, d,> r8 d |
+  b b \grace fis e4 | d r8 g' | <fis, d> fis' <g, g,> b |
+  <fis' a, d,>4 r8 g | <a, fis> fis' <g, g,> b | <fis' a, d,>4 r8 d |
   %19
   d g,4 g8 | a4 fis' | g, b8 g~ | g g g fis | g2 | a4 fis' |
   g, b8 g~ | g g g fis | g b16 c b8 c | d b16 c b8 c | d e a, a |
   %30
-  \grace c b a16 g \grace b8 a g16 fis | g8 b16 c b8 c | d b16 c b8 c |
-  d e a, a | \grace c b a16 g \grace b8 a g16 fis | g4 <b d, g,> |
+  \slashedGrace c b a16 g \slashedGrace b8 a g16 fis | g8 b16 c b8 c | d b16 c b8 c |
+  d e a, a | \slashedGrace c b a16 g \slashedGrace b8 a g16 fis | g4 <b d, g,> |
   <e c e,> <fis a, d,> | <g b, d,> r |
   %38
   r8 g,, b cis | d d b b | c c a a | b b g g | a2:8 | g4 r8 b | c2: | b: |
@@ -45,7 +40,7 @@ IIIVlnII = \notes \relative c'' {
   a r8 a' | a,2 | d | g | a4 a, | d4. fis8 |
   cis2 | d | g,~ | g4 r | cis cis | d8 fis g a |
   %85 Note: The grace notes were not in the manuscript. Added them to make vln2 and the others unison (and we conclude from bar 1 that unisonity includes grace notes)
-  d4 \grace {[b'16 c]} d4 | cis32 b a8. r8 b | g d b g' |
+  d4 \grace{b'16[ c]} d4 | cis32 b a8. r8 b | g d b g' |
   fis32 g a8. r8 b | g e a, g' | fis16 e d8 r fis | e a, fis' a, | e' a, a' a, |
   %93
   a' a, fis' a, | e' a, a' a, | a' a, b cis | d fis, gis a |
@@ -59,14 +54,15 @@ IIIVlnII = \notes \relative c'' {
   ais r | cis cis | cis r | cis r | ais r | cis cis | cis cis | b r |
   R2*6 |
   %139
-  b4 b~ | b ais | b r | d \grace {[e16 fis]} g4 | fis16 e d8 r e | c a d, c' |
+  b4 b~ | b ais | b r | d \grace{e16[ fis]}
+ g4 | fis16 e d8 r e | c a d, c' |
   %145 Note: The e has a dot over it, but I assume it's just a drop of ink that got there by mistake.  
   b16 c d8 r e | c a d, c' | b16 a g8 a a | bes2 | a4 as | g2 | f | g4 es |
-  [d8 d'] [bes g] | <fis'4 a, d,> <g bes, d,> |
+   d8[ d']  bes[ g] | <fis' a, d,>4 <g bes, d,> |
   %155 page 28
-  <fis8 a, d,> d bes g | <fis'4 a, d,> <g bes, d,> | <fis8 a, d,> d bes g |
+  <fis a, d,>8 d bes g | <fis' a, d,>4 <g bes, d,> | <fis a, d,>8 d bes g |
   %158
-  <fis'4 a, d,> r^\fermata | r8 g,, b cis | d4 b | c a | b b | a fis' | g b, |
+  <fis' a, d,>4 r^\fermata | r8 g,, b cis | d4 b | c a | b b | a fis' | g b, |
   %165
   c2:8 | b: | a4 g | d' d16 c b a | b2: | c8 d b g | c d b g | c4 r8 bes |
   %173
@@ -84,6 +80,6 @@ IIIVlnII = \notes \relative c'' {
   d e a, a | g b fis a | b b16 c b8 c | d b16 c b8 c | d e a, a | g b fis a |
   g4 <g' b, d,> | <e c e,> <fis a, d,> | <g b, d,> b,8 g | g,4 b8 d |
   %235 Note: One bar somewhere should be removed.
-  <g'2 b, d,> \bar "|."
+  <g' b, d,>2 \bar "|."
 }
 

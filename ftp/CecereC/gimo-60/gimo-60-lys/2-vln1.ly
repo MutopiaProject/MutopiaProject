@@ -1,26 +1,27 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "2-shared.ly"
 
-IIVlnI = \notes \relative c'' {
+IIVlnI =  \relative c'' {
   \clef "treble"
   \key e\major
   \time 4/4
 
-  \property Voice.tupletSpannerDuration = #(make-moment 1 4)
+  \set tupletSpannerDuration = #(ly:make-moment 1 4)
 
   % end beams on quarters by default
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
+  \set Timing.beamExceptions = #'((end . (
+    ((1 . 8) . (2 2 2 2))
+  )))
 
   \IISharedA
   \IISharedB
   \IISharedC
   e8 a,16. cis32 b8 b, |
   %7 page 15
-  r8 [e gis b] [a a, a a] |
+  r8  e[ gis b]  a[ a, a a] |
   gis gis gis a b b fis' fis |
-  [e gis b gis] [e e e fis] |
-  r [dis! dis dis] [dis dis dis dis] |
+   e[ gis b gis]  e[ e e fis] |
+  r  dis![ dis dis]  dis[ dis dis dis] |
   %11 page 16
   dis dis dis ais'
   \IISharedD
@@ -38,5 +39,5 @@ IIVlnI = \notes \relative c'' {
   \IISharedI
   \IISharedJ
   \IISharedK
-  <e'4 b e,> r^\fermata \bar "|."
+  <e b e,>4 r^\fermata \bar "|."
 }

@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIMandI = \notes \relative c'' {
+IIIMandI =  \relative c'' {
   \clef "treble"
   \time 3/4
   \key g\major
@@ -8,16 +8,16 @@ IIIMandI = \notes \relative c'' {
   %page 8
 
   \repeat "volta" 2 {
-  <d2 d, g,> <g4 b,> | <g b,> <fis a,> <e a,> |
+  <d d, g,>2 <g b,>4 | <g b,> <fis a,> <e a,> |
   %3
   % Note: the first d8 e are d16 e in the original, but that makes the measure too short.
-  <{d8 e d4 c | c b a | b8. a32 b c4 a | b8. a32 b c4 a} \\
-    {d,2. | d | d | d}> |
+  <<{d8 e d4 c | c b a | b8. a32 b c4 a | b8. a32 b c4 a} \\
+    {d,2. | d | d | d}>> |
   %7
-  b8 d g d c b | b8. a16 a2 | <d d,> <fis4 a,> |
-  <fis8 a,> e d cis d4 | <fis2 a, d,> a4 | <a8 a,> g fis e <fis4 d,> |
+  b'8 d g d c b | b8. a16 a2 | <d d,> <fis a,>4 |
+  <fis a,>8 e d cis d4 | <fis a, d,>2 a4 | <a a,>8 g fis e <fis d,>4 |
   %13
-  <ais, d,> b c | gis a g' | fis8 a fis d a cis | <d2 d,> <d4 d,> |
+  <ais, d,> b c | gis a g' | fis8 a fis d a cis | <d d,>2 <d d,>4 |
   <ais d,> b c | gis a <a' a,> | fis8 a fis d e cis | d4 d,2
   }
 
@@ -29,10 +29,10 @@ IIIMandI = \notes \relative c'' {
   %32 page 9
   d'4. e8 fis4 | b, g e | c'4. d8 e4 | a, fis d | b'4. c8 c4 |
   %37
-  <d2 d, g,> <{g4 | g e e | d8. d16 d4 c | c b a | b8. a32 b c4 a |
-    b8. a32 b c4 a} \\ {b4 | b a c | d,2. | d | d | d}> |
+  <d d, g,>2 <<{g4 | g e e | d8. d16 d4 c | c b a | b8. a32 b c4 a |
+    b8. a32 b c4 a} \\ {b4 | b a c | d,2. | d | d | d}>> |
   %43
-  b8 d b g a fis | <g2 g,> g,4
+  b'8 d b g a fis | <g g,>2 g,4
   }
 
   %45
@@ -53,9 +53,9 @@ IIIMandI = \notes \relative c'' {
   %68 page 10
   fis4 es8 fis d4 | g4 bes! d | es2 d4 | fis,2 g4 | a2 d,4 | g bes! d |
   %74
-  es!2 d4 | c8 es! d c bes a | g2 g'4 | es!( )c g' | d( )bes! g' |
+  es!2 d4 | c8 es! d c bes a | g2 g'4 | es!(  c) g' | d(  bes!) g' |
   %79
-  c,8 es d c bes a | a4( )bes g-| | es!( )c g'-| | d bes! g'-|
+  c,8 es d c bes a | a4(  bes) g-| | es!(  c) g'-| | d bes! g'-|
   c,8 es d c bes a | g2. \bar "|."
   }
 }

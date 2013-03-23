@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIMandI = \notes \relative c'' {
+IIIMandI =  \relative c'' {
   \clef "treble"
   \key c\major
   \time 3/8
@@ -15,9 +15,9 @@ IIIMandI = \notes \relative c'' {
   d, a' gis a d, a' | cis, a' gis a cis, a' |
   fis e d e fis g | a fis d c! a c |
   %20 page 12
-  b8 c d | e fis g | \times 2/3 {[e16 d c]} [b8 a] | g4. | c | d |
+  b8 c d | e fis g | \times 2/3 { e16[ d c]}  b8[ a] | g4. | c | d |
   e16 f g a g e | d8 e f | e16 f g a g e | d8 e f | e16 c b c e, c' |
   f, c' b c fis, c' | g a b c d e | f8 e d | e16 g f e d c |
   %35 page 13
-  d8 c b | <c4 e, g,> r8^\fermata \bar "|."
+  d8 c b | <c e, g,>4 r8^\fermata \bar "|."
 }

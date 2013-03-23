@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 Instrument = "Basso"
 \include "header.ly"
@@ -9,30 +9,45 @@ Instrument = "Basso"
 \include "3-basso.ly"
 
 \score {
-  \context Staff = Basso <
+  \context Staff = Basso <<
     \IBasso
-  >
+  >>
 
   \header {piece = "Maestoso" opus = "Gimo 153"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4 = 66}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 66
+    }
+
+
 }
 
 \score {
-  \context Staff = Basso <
+  \context Staff = Basso <<
      \IIBasso
-  >
+  >>
 
   \header {piece = "Larghetto"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4=66}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 66
+    }
+
+
 }
 
 \score {
-  \context Staff = Basso <
+  \context Staff = Basso <<
     \IIIBasso
-  >
+  >>
   \header {piece = "Allegro"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 8=108}
+  \layout {}
+  
+  \midi {
+    \tempo 4. = 36
+    }
+
+
 }

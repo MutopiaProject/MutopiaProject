@@ -1,20 +1,18 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IVMandI = \notes \relative c'' {
+IVMandI =  \relative c'' {
   \clef "treble"
   \time 2/4
   \key g\minor
-
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 2)
+  \set Timing.baseMoment = #(ly:make-moment 1 2)
 
   %page 10
   \repeat "volta" 2 {
   \partial 4 d8-. g-. | d d d es | d d d es |
   %3
-  <{d-. c-. bes-. a-. | bes g d' g} \\ {d,2 | d4}> | d8 d d es | d d d es |
+  <<{d-. c-. bes-. a-. | bes g d' g} \\ {d,2 | d4}>> | d'8 d d es | d d d es |
   %7
-  <{d c bes a} \\ d,2> | <g4 g,> r8
+  <<{d c bes a} \\ d,2>> | <g g,>4 r8
   }
   
   \repeat "volta" 2 {
@@ -51,24 +49,24 @@ IVMandI = \notes \relative c'' {
 
   %57 page 12  
   \repeat "volta" 2 {
-  r4 d''8 g | d d d es | d d d es | <{d c bes a} \\ d,2> |
+  r4 d''8 g | d d d es | d d d es | <<{d c bes a} \\ d,2>> |
   %61
-  <bes8 d,> g d' g |
+  <bes' d,>8 g d' g |
   % Note: the d, in <d d, g,> looks like an es, but d makes more sense.
   <d d, g,> d d es | <d d, g,> d d es |
-  <{d c bes a} \\ d,2> | g4 r8 bes8 | f' f f d | es es es c | d d d b |
+  <<{d c bes a} \\ d,2>> | g4 r8 bes8 | f' f f d | es es es c | d d d b |
   %69
   c c c a | f' f f d | es es es c | d bes c a | bes4 d8 g | d d d es |
   %75
-  d d d es | <{d c bes a} \\ d,2> | <bes8 d,> g d' g |
-  <{d d d es | d d d es} {d, d d s | d d s s }> | <{d c bes a} \\ d,2> |
+  d d d es | <<{d c bes a} \\ d,2>> | <bes' d,>8 g d' g |
+  <<{d d d es | d d d es} \\ {d, d d s | d d s s }>> | <<{d' c bes a} \\ d,2>> |
   %81
-  bes8 g <d' bes> g | <d d, g,> d d es | <d d, g,> d d es |
-  <{d c bes a} \\ d,2> | g2 | es | cis4 d8 c' |
+  bes'8 g <d' bes> g | <d d, g,> d d es | <d d, g,> d d es |
+  <<{d c bes a} \\ d,2>> | g2 | es | cis4 d8 c' |
   %88 page 13
   bes a g fis | g2 | es | cis4 d8 c' | bes a g fis | g4 d8 b |
   %94
-  <{g''4 g | g} {b,! b! | b!} {d, d | d} {g, g | g}> r4^\fermata \bar "|."
+  <<{g''4 g | g} {b,! b! | b!} {d, d | d} {g, g | g}>> r4^\fermata \bar "|."
   }
 }
 

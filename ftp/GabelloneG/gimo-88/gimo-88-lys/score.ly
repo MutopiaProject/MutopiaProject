@@ -1,4 +1,4 @@
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = ""
 \include "header.ly"
@@ -15,69 +15,84 @@ Instrument = ""
 \include "3-vln2.ly"
 \include "3-basso.ly"
 
-\include "paper13.ly"
+#(set-global-staff-size 13)
 
 \score {
-  \context StaffGroup <
-    \context Staff <
-      \property Staff.instrument = "Mandolin"
-      \property Staff.midiInstrument = "acoustic guitar (nylon)" \IMand>
-    \context Staff = ViolinI <
-      \property Staff.instrument = "Violin I"
-      \property Staff.midiInstrument = "violin" \IVlnI>
-    \context Staff = ViolinII <
-      \property Staff.instrument = "Violin II"
-      \property Staff.midiInstrument = "violin" \IVlnII>
-    \context Staff = Basso <
-      \property Staff.instrument = "Cello"
-      \property Staff.midiInstrument = "cello" \IBasso>
-  >
+  \context StaffGroup <<
+    \context Staff <<
+      \set Staff.instrumentName = "Mandolin"
+      \set Staff.midiInstrument = "acoustic guitar (nylon)" \IMand>>
+    \context Staff = ViolinI <<
+      \set Staff.instrumentName = "Violin I"
+      \set Staff.midiInstrument = "violin" \IVlnI>>
+    \context Staff = ViolinII <<
+      \set Staff.instrumentName = "Violin II"
+      \set Staff.midiInstrument = "violin" \IVlnII>>
+    \context Staff = Basso <<
+      \set Staff.instrumentName = "Cello"
+      \set Staff.midiInstrument = "cello" \IBasso>>
+  >>
 
   \header {piece = "Allegro" opus = "Gimo 88"}
-  \paper {\translator{\ScoreContext BarNumber \set #'extra-offset = #'(0 . 1)} \translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4 = 80}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 80
+    }
+
+
 }
 
 \score {
-  \context StaffGroup <
-    \context Staff <
-      \property Staff.instrument = "Mandolin"
-      \property Staff.midiInstrument = "acoustic guitar (nylon)" \IIMand>
-    \context Staff = ViolinI <
-      \property Staff.instrument = "Violin I"
-      \property Staff.midiInstrument = "violin" \IIVlnI>
-    \context Staff = ViolinII <
-      \property Staff.instrument = "Violin II"
-      \property Staff.midiInstrument = "violin" \IIVlnII>
-    \context Staff = Basso <
-      \property Staff.instrument = "Cello"
-      \property Staff.midiInstrument = "cello" \IIBasso>
-  >
+  \context StaffGroup <<
+    \context Staff <<
+      \set Staff.instrumentName = "Mandolin"
+      \set Staff.midiInstrument = "acoustic guitar (nylon)" \IIMand>>
+    \context Staff = ViolinI <<
+      \set Staff.instrumentName = "Violin I"
+      \set Staff.midiInstrument = "violin" \IIVlnI>>
+    \context Staff = ViolinII <<
+      \set Staff.instrumentName = "Violin II"
+      \set Staff.midiInstrument = "violin" \IIVlnII>>
+    \context Staff = Basso <<
+      \set Staff.instrumentName = "Cello"
+      \set Staff.midiInstrument = "cello" \IIBasso>>
+  >>
 
   \header {piece = "Largo"}
-  \paper {\translator{\ScoreContext BarNumber \set #'extra-offset = #'(0 . 1)} \translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4=66}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 66
+    }
+
+
 }
 
 \score {
-  \context StaffGroup <
-    \context Staff <
-      \property Staff.instrument = "Mandolin"
-      \property Staff.midiInstrument = "acoustic guitar (nylon)" \IIIMand>
-    \context Staff = ViolinI <
-      \property Staff.instrument = "Violin I"
-      \property Staff.midiInstrument = "violin" \IIIVlnI>
-    \context Staff = ViolinII <
-      \property Staff.instrument = "Violin II"
-      \property Staff.midiInstrument = "violin" \IIIVlnII>
-    \context Staff = Basso <
-      \property Staff.instrument = "Cello"
-      \property Staff.midiInstrument = "cello" \IIIBasso>
-  >
+  \context StaffGroup <<
+    \context Staff <<
+      \set Staff.instrumentName = "Mandolin"
+      \set Staff.midiInstrument = "acoustic guitar (nylon)" \IIIMand>>
+    \context Staff = ViolinI <<
+      \set Staff.instrumentName = "Violin I"
+      \set Staff.midiInstrument = "violin" \IIIVlnI>>
+    \context Staff = ViolinII <<
+      \set Staff.instrumentName = "Violin II"
+      \set Staff.midiInstrument = "violin" \IIIVlnII>>
+    \context Staff = Basso <<
+      \set Staff.instrumentName = "Cello"
+      \set Staff.midiInstrument = "cello" \IIIBasso>>
+  >>
 
   \header {piece = "Allegro"}
-  \paper {\translator{\ScoreContext BarNumber \set #'extra-offset = #'(0 . 1)} \translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 8=160}
+  \layout {}
+  
+  \midi {
+    \tempo 8 = 160
+    }
+
+
 }
 
 

@@ -1,4 +1,4 @@
-\version "1.6.0"
+\version "2.16.0"
 
 Instrument = "Violin II"
 \include "header.ly"
@@ -6,25 +6,25 @@ Instrument = "Violin II"
 \include "2-vln2.ly"
 \include "3-vln2.ly"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 \score {
   \context Staff = ViolinII \IVlnII
 
   \header {piece = "Allegro" opus = "Gimo 88"}
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = ViolinII \IIVlnII
 
   \header {piece = "Largo"}
-  \paper {}
+  \layout {}
 }
 
 \score {
   \context Staff = ViolinII \IIIVlnII
 
   \header {piece = "Allegro"}
-  \paper {}
+  \layout {}
 }

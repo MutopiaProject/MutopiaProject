@@ -1,7 +1,6 @@
-\version "1.6.0"
-noStroke = \property Voice.Stem \set #'stroke-style = #'()
+\version "2.16.0"
 
-IBasso = \notes \relative c {
+IBasso =  \relative c {
   \clef "bass"
   \time 4/4
   \key g\major
@@ -20,15 +19,15 @@ IBasso = \notes \relative c {
   \time 4/4 cis e d cis r d g a | r d, g a d, g a a, |
   %15
   r b g a b fis' g a | d, d' d,4 r8 d f bes |
-  r a \grace {\noStroke g} c a r bes a g | r f e d r d f! bes | r a cis a d,4 g |
+  r a \grace g c a r bes a g | r f e d r d f! bes | r a cis a d,4 g |
   %20
   r8 a, a' a, a a a a | 
     % NOTE: c! c c c according to one edition
     d4 r cis8 cis cis cis |
-  d8.( )fis16 g8.( )a16 d, fis a d d, fis a d |
+  d8.(  fis16) g8.(  a16) d, fis a d d, fis a d |
   %23
   a, cis e a a, cis e a d, fis a d d, fis a d |
-  r4 [g,8 a] [d, e] [fis g] | [a b] [g a] [d, fis g a] | d,4 r8 s2
+  r4  g,8[ a]  d,[ e]  fis[ g] |  a[ b]  g[ a]  d,[ fis g a] | d,4 r8 s2
   }
 
   \repeat "volta" 2 {
@@ -45,7 +44,7 @@ IBasso = \notes \relative c {
   r8 bes' c a r a bes g | r c, d d, g g' g,4 | 
   r8 bes' c a r a bes g | r c, d d, g g' fis d |
   %45
-  r b' a g r a g fis | g8.( )b,16 c8 d g, b c d |
+  r b' a g r a g fis | g8.(  b,16) c8 d g, b c d |
   g, a b c d e c d | e b c d g,4 r |
   %49
   d'16 fis a d d, fis a d g,, b d g g, b d g | c,8 c c d g,16 b d g g, b d g |
