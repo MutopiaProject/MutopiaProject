@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header {
   filename      =       "10-02-i.ly"
@@ -11,7 +11,7 @@
 
  mutopiatitle = "Etüde a-moll"
  mutopiacomposer = "ChopinFF"
- mutopiaopus = "O 10"
+ mutopiaopus = "Op. 10, No. 2"
  mutopiainstrument = "Piano"
  date = "1828-1831"
  source = "Peters, Herrmann Scholtz, 1900b"
@@ -20,10 +20,9 @@
  maintainer = "Roland Goretzki"
  maintainerEmail = "roland@roland-goretzki.de"
  moreInfo        = "Proofread by Hildegard Böhme"
- lastupdated = "2004/November/27"
 
- footer = "Mutopia-2004/11/27-508"
- tagline = "\\raisebox{-2mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by Roland Goretzki and proofread by Hildegard Böhme.} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ footer = "Mutopia-2013/03/23-508"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 \include "deutsch.ly"
