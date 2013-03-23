@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.16.0"
 \header {
  title = "2. Intermezzo"
  composer = "J. Brahms"
@@ -15,15 +15,15 @@
  maintainer = "Aron Fay"
  maintainerEmail = "mutopia.5.uigrad@spamgourmet.com"
  maintainerWeb = "http://www.uigrad.com/mutopia"
- lastupdated = "2005/February/16"
  
  footer = "Mutopia-2005/02/16-535"
  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
 
+% TODO: Reduce distance between slur and tuplet bracket e.g. in bar 49
 
-u = { \change Staff = up  \stemDown \slurDown }
-m = { \change Staff = down \stemUp  \slurUp   }
+u = { \change Staff = up  \voiceTwo }
+m = { \change Staff = down \voiceOne   }
 
 upper = \transpose c c' {
   \time 3/4
@@ -34,8 +34,8 @@ upper = \transpose c c' {
     \context Voice = UpTop
     {
       \voiceOne
-      \phrasingSlurUp
-      \tieUp
+      \mergeDifferentlyHeadedOn
+      \mergeDifferentlyDottedOn
       cis'8( b) |
       <fis d'>2 cis'8( b) |
       <fis a'>2\arpeggio a8.\(( b16) |
@@ -44,25 +44,21 @@ upper = \transpose c c' {
 
       % measure 5, v1
       <a d'>2 cis'8( b) |
-      \stemDown <a b fis' a'>2 \stemUp cis'8.\(( dis'16) |
+      <a b fis' a'>2 cis'8.\(( dis'16) |
       dis'8.( e'16) e'4 <a, dis fis> |
       <a, dis a> <gis, e gis>\) cis'8( b) |
 
       % measure 9, v1
       <fis d'>2 cis'8( b) |
       <fis a'>2\arpeggio <fis a>8.\(( <f b>16) |
-      <f b>8.(
-          \once \override Score.SeparationItem #'padding = #0.6
-        <e e'>16)
-%         \once \override NoteColumn #'force-hshift = #1.5
+      <f b>8.( <e e'>16)
         <e e'>4 <fis d'>\) |
       <cis a>( <b, gis>) cis'8( b) |
 
       % measure 13, v1
       <a d'>2 cis'8( b) |
-      \stemDown <a b fis' a'>2 \stemUp <gis cis'>8.\(( <fis b dis'>16) |
+       <a b fis' a'>2  <gis cis'>8.\(( <fis b dis'>16) |
       <fis b dis'>8.( <e bis e'>16)
-          \once \override Score.SeparationItem #'padding = #0.6
         <e e'>4 <a, dis>8( a)\) |
       <a, dis a>4( <gis, e gis>) e( |
 
@@ -96,7 +92,7 @@ upper = \transpose c c' {
       <d' fis'!>2) gis'8( a' |
       b2) b8.( cis'16) |
       cis'8.( d'16) d'8( cis' d' gis) |
-      <d gis>4(  <cis a>) a^\markup { "" \raise #2.5 \italic { "cresc., un poco animato" } } \( |
+      <d gis>4(  <cis a>) a \( |
 
       % measure 39, v1
       b  a \) a\( |
@@ -108,20 +104,19 @@ upper = \transpose c c' {
       b  a)   a( |
       b  a) <d fis a>( |
       fis'->) d'4.( b8) |
-      gis4( a) e~->^\markup { \bold \italic "più lento" }  |
+      gis4( a) e~->^\markup { \bold \italic "piÃ¹ lento" }  |
       e2 e4~-> |
       e2 cis'4~\( |   %    \bar "||" 
 
       % measure 49, v1
-          \break
-          \repeat volta 2 {  \stemNeutral
+      \repeat volta 2 {  
       cis'8 fis' e'4 d' |
       cis' b8 d' gis' fis' |
       b4 a8 cis' fis' e' |
       a gis e' d' b gis\) |
 
       % measure 53, v1
-      <a cis'>\( a' gis'4 fis' | \stemUp
+      <a cis'>\( a' gis'4 fis' | 
       e' a8 cis' e' d' |
       cis'4 fis8 gis a fis |
       eis4 gis4._\markup { \italic \large "rit." } cis'8~\)\( |
@@ -129,7 +124,7 @@ upper = \transpose c c' {
       }
 
       % measure 57, v1
-      cis'8^\markup { \bold \italic "più lento" } fis' <eis ais eis'>4 <dis ais dis'> |
+      cis'8^\markup { \bold \italic "piÃ¹ lento" } fis' <eis ais eis'>4 <dis ais dis'> |
       <cis ais cis'> <fis ais fis'> <eis ais eis'> |
       <fis ais dis> <cis ais cis'> <c ges bes c'>~ |
       <f a! c'!> cis'2~ |
@@ -141,9 +136,8 @@ upper = \transpose c c' {
       cis'4\) cis'4.\fermata r8 |
 
       % measure 65, v1
-      r4^\markup { \bold \large {Tempo I} } 
-%         \once \override DynamicText #'extra-offset = #0.0
-          cis'( fis' |
+      \tempo "Tempo I"
+      r4 cis'( fis' |
       e' d') r |
       d' cis' r |
       cis' b r |
@@ -155,10 +149,11 @@ upper = \transpose c c' {
       a!( fis d bis, cis \m eis,!) |
 
       % measure 73, v1
-      \u \stemUp \slurUp
+      \u \oneVoice
       r4 \times 2/3 { r8 a,([ cis] fis a cis') } |
       <e e'>4( <d d'>) r4 |
       d( cis) s4 |
+      \voiceOne
       cis'4.\fermata( b8) cis'^\markup { \italic { a tempo } }([ b]) |
 
       % measure 77, v1
@@ -203,7 +198,7 @@ upper = \transpose c c' {
       <d' fis'!>2 gis'8( a') |
       b2 b8.( cis'16) |
       cis'8.( d'16) d'8( cis' d' gis) |
-      <d gis>4(  <cis a>) a^\markup { "" \raise #2.5 \italic { "cresc. un poco animato" } } \( |
+      <d gis>4(  <cis a>) a \( |
 
       % measure 107, v1
       b( a)\) a\( |
@@ -215,7 +210,7 @@ upper = \transpose c c' {
       b  a)   a( |
       b  a)   <d fis a>( |
       fis'->) d'4.( b8 |
-      gis4 a) e->~^\markup { "" \raise #2.0 \bold \italic "più lento" }  |
+      gis4 a) e->~^\markup { \bold \italic "piÃ¹ lento" }  |
       e2 e4~ |
       e2 \bar "|."
 
@@ -237,30 +232,22 @@ upper = \transpose c c' {
 
       % measure 9, v2
       fis8[( d8) \m a,8( fis,)] \u a gis |
-      s2
-          \once \override NoteColumn #'force-hshift = #2.4
-        a4 |
-          \once \override NoteColumn #'force-hshift = #2.2
-      gis
-          \once \override Score.SeparationItem #'padding = #1
-        gis8( a) s4 |
+      s2 a4 |
+      gis gis8( a) s4 |
       s s e_\markup { \italic "dolce" } |
 
       % measure 13, v2
       fis8[( d8) \m a,8( fis,)] \u <e a>4 |
       s2. |
-      s4 bis8( cis')
-          \once \override Staff.NoteCollision
-          #'merge-differently-headed = ##t
-        a,4 |
+      s4 bis8( cis') a,4 |
       s2 <g, c>4~ |
 
       % measure 17, v2
       <g, c>2   <g,! cis>4~  |
       <g, cis>2
-        <gis, d>4~          | \slurUp
+        <gis, d>4~          | 
       <d e>4 <d e>  <d e>(  |
-      d2) <c f>4~           | \slurDown
+      d2) <c f>4~           | 
 
       % measure 21, v2
       <c f>2 <c! dis>4~     |
@@ -275,9 +262,7 @@ upper = \transpose c c' {
       \u cis'( e cis \m e, g cis) |
 
       % measure 29, v2
-      \u  \once \override Staff.NoteCollision
-          #'merge-differently-headed = ##t
-      a( d \m a, e,, e, gis,!) |
+      \u a( d \m a, e,, e, gis,!) |
       \u s2 s4 |
       <a, b,>2 <e, a,>4 |
       <fis, a,>2 <a, e>4_\markup { \italic "dim." } |
@@ -292,9 +277,7 @@ upper = \transpose c c' {
 
       % measure 39, v2
       fis2 <d fis>4~ |
-      <d fis>2
-%         \once \override Stem #'transparent = ##t
-        <d fis a>4~ |
+      <d fis>2 <d fis a>4~ |
       <fis a> <e gis>2 |
       d4 cis <cis fis>~ |
 
@@ -347,8 +330,8 @@ upper = \transpose c c' {
 
       % measure 73, v2
       s2. |
-      a2 s4 | \slurDown \tupletDown
-      \m e,,4~ \times 2/3 { e,,8[ e,( a,] cis \u e a~) } |
+      \voiceTwo a2 s4 |
+      \m \oneVoice \tupletDown e,,4~  \times 2/3 { e,,8[ e,( a,] cis \u \voiceTwo e a~) } |
       <dis fis a>2_\markup { \italic { dolce } } <d gis>4 |
 
       % measure 77, v2
@@ -367,9 +350,9 @@ upper = \transpose c c' {
       % measure 85, v2
       <g, c>2   <g,! cis>4~  |
       <g, cis>2
-        <gis, d>4~          | \slurUp
+        <gis, d>4~          | 
       <d e>4 <d e>  <d e>(  |
-      d2) <c f>4~           | \slurDown
+      d2) <c f>4~           | 
 
       % measure 89, v2
       <c f>2 <c! dis>4~     |
@@ -384,8 +367,6 @@ upper = \transpose c c' {
       \u cis'( e cis \m e, g cis) |
 
       % measure 97, v2
-          \once \override Staff.NoteCollision
-          #'merge-differently-headed = ##t
       \u a( d \m a, e,, e, gis,!) |
       \u s2 s4 |
       <a, b,>2 \m <e, a,>4 |
@@ -401,9 +382,7 @@ upper = \transpose c c' {
 
       % measure 107, v2
       fis2 <d fis>4~ |
-      <d fis>2
-          \once \override Stem #'transparent = ##t
-        <d fis>4( |
+      <d fis>2 <d fis>4( |
       <fis a>) <e gis>2 |
       d4 cis <cis fis>~ |
 
@@ -429,26 +408,20 @@ lower = {
     \context Voice = DownTop
     {
       \voiceThree
+      \mergeDifferentlyHeadedOn
+      \mergeDifferentlyDottedOn
       s4 |
       s4 s4 s4 |
       s4 s4 s4 |
       s4 s4 s4 |
-      s4
-          \once \override Staff.NoteCollision
-          #'merge-differently-headed = ##t
-        e8( fis) g4  |
+      s4 e8( fis) g4  |
 
       % measure 5, v3
       s4 s4 s4 |
       s4 s4 s4 |
-      s4 s4
-          \once \override Staff.NoteCollision
-          #'merge-differently-headed = ##t
-        b, |
+      s4 s4 b, |
       e,8( b,4 e8)~ e4 |
 
-\override Staff.NoteCollision
-#'merge-differently-headed = ##t
       % measure 9, v3
       s4 s4 s4 |
       s4 s4 s4 |
@@ -460,21 +433,17 @@ lower = {
       s4 s4 s4 |
       s4 s4 s4 |
       b,8[( gis)] fis[( a)] b,8[( fis)] |
-          \once \override Staff.NoteCollision
-          #'merge-differently-headed = ##f
       e,[( b, e b,)] e,( g, |
 
       % measure 17, v3
       c[ e c g,]) e,( g,    |
       cis[ e cis g,]) b, e |
-      gis4 a b            | \phrasingSlurUp
-\override Staff.NoteCollision
-#'merge-differently-headed = ##f
+      gis4 a b            | 
       a,8[ e gis e] a,[\( c |
 
       % measure 21, v3
       f a f c\)] f,[\( c      |
-      dis a dis c\)] dis,\( c | \stemNeutral
+      dis a dis c\)] dis,\( c | 
       a dis a c' fis' c'\)    |
       a\( c' a e c a,\)
 
@@ -495,15 +464,13 @@ lower = {
       % measure 35, v3
       s2. |
       s2. |
-      s2. | \stemUp
+      s2. | 
       a,8([ e a gis]) fis8 [(a |
 
       % measure 39, v3
       cis' a fis e)] e[( fis |
       a fis d cis)] b,[( d |
       fis a)] e [(gis b d')]
-\override Staff.NoteCollision
-#'merge-differently-headed = ##t
       a,4 s fis, |
 
       % measure 43, v3
@@ -541,8 +508,6 @@ lower = {
       s2. |
       s2. |
       
-\override Staff.NoteCollision
-#'merge-differently-headed = ##t
       % measure 65, v3
       s4 e'! d'!^\markup { \italic { cresc. } } |
       cis' b8([ \u d' a' gis']) |
@@ -556,8 +521,8 @@ lower = {
       cis' a gis |
 
       % measure 73, v3
-      \m <b, gis>( <a, fis>) r | \slurDown \tupletDown
-      s \times 2/3 { r8 fis,([ a, d fis \u a~]) } |
+      \m \voiceOne <b, gis>( <a, fis>) \oneVoice r |
+      s \tupletDown \times 2/3 { r8 fis,([ a, d fis \u a~]) } |
       a2 \m s4 |
       s2. |
 
@@ -571,21 +536,17 @@ lower = {
       s4 s4 s4 |
       s4 s4 s4 |
       b,8[ e] e[ fis] fis[ a] |
-          \once \override Staff.NoteCollision
-          #'merge-differently-headed = ##f
       e,[ b, e b,] e, g, |
 
       % measure 85, v3
       c[ e c g,] e, g,    |
       cis[ e cis g,] b, e |
-      gis4 a b            | \phrasingSlurUp
-\override Staff.NoteCollision
-#'merge-differently-headed = ##f
+      gis4 a b            | 
       a,8[ e gis e] a,[\( c |
 
       % measure 89, v3
       f a f c\)] f,[\( c      |
-      dis a dis c\)] dis,\( c | \stemNeutral
+      dis a dis c\)] dis,\( c | 
       a dis a c' fis' c'\)    |
       a\( c' a e c a,\)
 
@@ -597,7 +558,7 @@ lower = {
 
       % measure 97, v3
       fis,4 s2 |
-      s2 a,4~ |
+      \voiceThree s2 a,4~ |
       a,8 a,4 a,8~ a,4~ |
       a,8 a,4 a,8~ a,4~ |
       a,8 a,4 a,8~ a,4~ |
@@ -606,15 +567,13 @@ lower = {
       % measure 103, v3
       s2. |
       s2. |
-      s2. | \stemUp
+      s2. | 
       a,8([ e a gis]) fis8 [(a |
 
       % measure 107, v3
       cis' a fis e)] e[( fis |
       a fis d cis)] b,[( d |
       fis a)] e [(gis b d')]
-\override Staff.NoteCollision
-#'merge-differently-headed = ##t
       a,4 s fis, |
 
       % measure 111, v3
@@ -629,34 +588,29 @@ lower = {
     }
     \context Voice = DownBottom
     {
-      \voiceFour
-      \stemUp
-      \phrasingSlurDown
-      \override Staff.TupletBracket #'padding = #2.6 % default is 1.1
+      \override TupletBracket #'outside-staff-priority = #'0
       <a, e>4 |
       a,, s4 <a, d> |
       a,,8[( d) a,( fis,)] d,( d) |
-      \stemDown \slurUp <d e gis>8[( b)] <cis e>[( a)]
-          \stemUp \slurDown b,,( d) |
-      e,[( e)] \stemDown e4 e4 \stemNeutral |
+      <d e gis>8[( b)] <cis e>[( a)] b,,( d) |
+      e,[( e)] \voiceFour e4 e4  |
 
       % measure 5, v4
-      fis,4 s4 e,4 |
-      dis,8[( b,)] \slurUp <dis fis>[( b)] <a, b,>( a) |
-      <gis, b,>[( gis)] <a, fis>[( a)] b, fis |
-      \stemDown e,2 a,4 \stemNeutral \slurNeutral |
+      \oneVoice fis,4 s4 e,4 |
+      dis,8[( b,)]  <dis fis>[( b)] <a, b,>( a) |
+      <gis, b,>[( gis)] <a, fis>[( a)] \voiceFour b, fis |
+       e,2 a,4   |
 
       % measure 9, v4
-      a,, s4 <a, d> |
+      \oneVoice a,, s4 <a, d> |
       a,,8[( d) a,( fis,)] d,( d) |
-      \stemDown \slurUp <d f gis>8[( b)] <cis e b>[( a)]
-          \stemUp \slurDown b,,( d) |
-      e,[( e)] \stemDown e4 e4 \stemNeutral |
+      <d f gis>8[( b)] <cis e b>[( a)] b,,( d) |
+      e,[( e)] \voiceFour e4 e4  |
 
       % measure 13, v4
-      fis,4 s4 e,4 |
-      dis,8[( b,)] \slurUp <dis fis>[( b)] <a, b,>( a) |
-      \stemDown gis,4 a, b, |
+      \oneVoice fis,4 s4 e,4 |
+      dis,8[( b,)]  <dis fis>[( b)] <a, b,>( a) |
+      \voiceFour gis,4 a, b, |
       e,2 e,4~  |
 
       % measure 17, v4
@@ -679,18 +633,17 @@ lower = {
 
       % measure 29, v4
       s2. |
-      d,8([ fis <d a> <fis d'>])  \slurDown
-           cis,8( b,, |
+      d,8([ fis <d a> <fis d'>]) cis,8( b,, |
       d,2) cis,8( b,, |
       d,2) cis,8( b,, |
       d,2) c,8(   b,, |
-      d,2) <cis! e a e'>4 |
+      d,2) \oneVoice <cis! e a e'>4 |
 
       % measure 35, v4
       <d,   a,> <d fis!>8( a) <cis e a e'> 4 |
       <dis, b,> <dis fis>8([ a)] e,( e) |
       <e gis>[ cis'] <b fis>[ b] <e, b,>[ e] |
-      a,2 a,4~ |
+      \voiceFour a,2 a,4~ |
 
       % measure 39, v4
       a,2 a,4~ |
@@ -743,23 +696,16 @@ lower = {
 
       % measure 65, v4
       \times 2/3 {
-        fis,8_\markup { "" \raise #-4.0 \italic { tre corde } } ([ cis a!]) e'([ a fis]) d'([ a fis]) } |
-      \times 2/3 {
-        cis'([ a fis]) b([ fis b,] b,, b, d) } |
-      \times 2/3 {
-        b([ fis cis]) a([ fis a,] a,, a, cis) } |
-      <b, d>4 \times 2/3 {
-        gis,8([ b fis]) cis,([ eis cis]) } |
+        fis,8_\markup { \italic { tre corde } } ([ cis a!]) e'([ a fis]) d'([ a fis]) } |
+      \times 2/3 { cis'([ a fis]) b([ fis b,] b,, b, d) } |
+      \times 2/3 { b([ fis cis]) a([ fis a,] a,, a, cis) } |
+      <b, d>4 \times 2/3 { gis,8([ b fis]) cis,([ eis cis]) } |
 
       % measure 69, v4
-      \times 2/3 {
-        fis,8([ cis a] cis'[ a fis] a[ fis cis]) } |
-      \times 2/3 {
-        d,([ a, d] fis[ a d] fis ais d) } |
-      \times 2/3 {
-        b,,([ fis, b,] d[ fis b,] d g b,) } |
-      \times 2/3 {
-        cis,([ cis a,] fis[ cis cis,]) eis( b, cis,) } |
+      \times 2/3 { fis,8([ cis a] cis'[ a fis] a[ fis cis]) } |
+      \times 2/3 { d,([ a, d] fis[ a d] fis ais d) } |
+      \times 2/3 { b,,([ fis, b,] d[ fis b,] d g b,) } |
+      \times 2/3 { cis,([ cis a,] fis[ cis cis,]) eis( b, cis,) } |
 
       % measure 73, v4
       fis,2 s4 |
@@ -771,12 +717,12 @@ lower = {
       a,, s4 <a, d> |
       a,,8[( d) a,( fis,)] d,( d) |
       d4 cis b,,8( d) |
-      e,[( e)] \stemDown e4 e4 \stemNeutral |
+      e,[( e)]  e4 e4  |
 
       % measure 81, v4
       fis,4 s4 e,4 |
-      <dis, b,>8[( dis)] <fis, b,>[( fis)] \slurUp <a, b,>( b) |
-      \stemDown gis,4 a, b, |
+      <dis, b,>8[( dis)] <fis, b,>[( fis)]  <a, b,>( b) |
+       gis,4 a, b, |
       e,2 e,4~  |
 
       % measure 85, v4
@@ -799,7 +745,7 @@ lower = {
 
       % measure 97, v4
       s2. |
-      d,8([ fis <d a> <fis d'>])  \slurDown
+      d,8([ fis <d a> <fis d'>])  
            cis,8( b,, |
       d,2) cis,8( b,, |
       d,2) cis,8( b,, |
@@ -890,9 +836,7 @@ dynamics = {
   s8\< s8   s8   s8   s8   s8   |
   s8   s8   s8   s8   s8   s8\! |
   s8   s8   s8   s8   s8   s8\> |
-  s8   s8   s8   s8\! 
-      \once \override DynamicText  #'extra-offset = #'(0.0 .  0.0) % default is 0.0 2.5 (set from main block)
-                      s8\p s8   | % piano dynamic lowered
+  s8   s8   s8   s8\!  s8\p s8  |
   s2. | 
   s4 s4 s4\p |
 
@@ -911,9 +855,8 @@ dynamics = {
 
   }
 
-\override DynamicText  #'extra-offset = #'(0.0 .  2.5) % Attempting to raise rit.- -  text
+\crescTextCresc
 \set crescendoText = \markup { \italic "rit." }
-\set crescendoSpanner = #'dashed-line
   % measure 57
   s4\pp s4    s4 |
   s4    s4    s4 |
@@ -921,7 +864,6 @@ dynamics = {
   s8 s8\< s8 s8 s8 s8\! |
 
 \set crescendoText = \markup { \italic "rit." }
-\set crescendoSpanner = #'dashed-line
   % measure 61
   s4\pp s4    s4 |
   s4    s4    s4 |
@@ -943,11 +885,11 @@ dynamics = {
   % measure 73
   s8 s8 s8\> s8 s8 s8\! |
 \set crescendoText = \markup { \italic "rit." }
-\set crescendoSpanner = #'dashed-line
   s8\p s8\< s8 s8 s8 s8 |
   s2. | 
   s8\! s8 s8 s8 s8\pp s8 |
 
+\crescHairpin
   % measure 77
   s2. | 
   s8 s8 s8 s8 s8\f s8 |
@@ -1002,16 +944,13 @@ dynamics = {
   s8\< s8 s8 s8 s8 s8 |
   s8 s8 s8 s8 s8 s8\! |
   s8 s8 s8 s8 s8 s8\> |
-  s8 s8 s8 s8\! 
-      \once \override DynamicText  #'extra-offset = #'(0.0 .  0.0) % default is 0.0 2.5 (set from main block)
-                 s8\p s8 |
+  s8 s8 s8 s8\!  s8\p s8 |
   s2. |
   s2
 
 }
 
 dynamicsB = {
-  \override Dynamics.Hairpin  #'extra-offset = #'(0.0 . -1.0) % lower all
   \override Dynamics.Hairpin  #'height = #0.5
   \partial 4 s4  | s2. | s2. | s2. | s2. |
 
@@ -1030,11 +969,8 @@ dynamicsB = {
   % measure 17
   s8\> s8\! s8   s8   s8\< s8\! |
   s8\> s8\! s8   s8   s8   s8   |
-      \override Dynamics.Hairpin  #'extra-offset = #'(0.0 . -0.3)
   s8   s8   s8\< s8   s8\! s8   |
-  s8\> s8\! s8   
-      \override Dynamics.Hairpin  #'extra-offset = #'(0.0 .  0.0) 
-                 s8   s8\< s8\! |
+  s8\> s8\! s8   s8   s8\< s8\! |
 
   % measure 21
   s8\> s8\! s8   s8   s8\< s8\! |
@@ -1060,7 +996,7 @@ dynamicsB = {
   s2. |
   s2. |
   s2. |
-  s8   s8   s8   s8   s8\< s8\! |
+  s8   s8   s8   s8   s8^\markup { \italic { "cresc. un poco animato" } }\< s8\! |
 
   % measure 39
   s8\> s8\! s8   s8   s8\< s8\! |
@@ -1068,8 +1004,8 @@ dynamicsB = {
   s2. | 
   s2. | 
 
+\crescTextCresc
 \set crescendoText = \markup { \italic "rit." }
-\set crescendoSpanner = #'dashed-line
   % measure 43
   s2. | 
   s2. | 
@@ -1165,7 +1101,9 @@ dynamicsB = {
   s2. | 
   s2. | 
   s2. | 
-  s16 s16 s16 s16  s16 s16 s16 s16  s16\< s16 s16\! s16  |
+\crescHairpin
+  s16 s16 s16 s16  s16 s16 s16 s16  s16^\markup { \italic { "cresc. un poco animato" } }\<
+  s16 s16\! s16  |
 
   % measure 107
   s16\> s16 s16\! s16  s16 s16 s16 s16  s16\< s16 s16\! s16  |
@@ -1173,9 +1111,8 @@ dynamicsB = {
   s2. | 
   s2. | 
 
+\crescTextCresc
 \set crescendoText = \markup { \italic "rit." }
-\set crescendoSpanner = #'dashed-line
-\override Dynamics.Hairpin  #'extra-offset = #'(0.0 . -2.0) % lower all
   % measure 111
   s2. | 
   s2. | 
@@ -1199,49 +1136,19 @@ dynamicsB = {
 %   \context Dynamics = "pedal" \pedal
   >>
   \layout {
-    \context {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \alias Voice % So that \cresc works, for example.
-      \consists "Output_property_engraver"
-
-      minimumVerticalExtent = #'(-1 . 1)
-%     pedalSustainStrings = #'("Ped." "*Ped." "*")
-%     pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-
-%     \consists "Piano_pedal_engraver"
-%     \remove   "Piano_pedal_engraver"
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      \override TextScript #'font-size = #2
-      \override TextScript #'font-shape = #'italic
-      \override DynamicText #'extra-offset = #'(0 . 2.5)
-      \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consists "Axis_group_engraver"
-    }
-    \context {
-      \PianoStaff
-      \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
-    }
   }
 }
 
 \score
 {
-  \unfoldrepeats
+  \unfoldRepeats
   \context PianoStaff
   <<
     \context Staff = "up" \upper
     \context Staff = "down" \lower
   >>
-  \midi
-  {
+  
+  \midi {
     \tempo 4 = 80
-  }
+    }
 }
