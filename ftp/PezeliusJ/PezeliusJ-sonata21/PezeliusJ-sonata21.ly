@@ -1,5 +1,5 @@
 %edited with lilypondbeans
-\version "2.12.0"
+\version "2.16.1"
 \header {
     title = "Sonata 21"
     composer = "Johannes Pezelius"
@@ -13,14 +13,12 @@
     moreInfo = "edited by U. Weigelt"
    % arranger = \markup { \tiny "edited by U.Weigelt"}
 
- footer = "Mutopia-2009/06/01-1649"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2013/03/20-1649"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 \paper {
     %#(set-paper-size "a4")
-    between-system-padding = #8.0
-    between-system-space = #30.0
 }
 
 PartPOneVoiceOne =  \relative c'' {
@@ -32,20 +30,20 @@ PartPOneVoiceOne =  \relative c'' {
         r4 fis4 g2 g2 | % 3
         r4 b4 e2. fis4 | % 4
         dis2. ( cis4 ) b2 | % 5
-        d4 ( [c8 d8] e4 ) e4 fis4 ( b,4 ) | % 6
+        d4 ( c8[ d8] e4 ) e4 fis4 ( b,4 ) | % 6
         a4 ( g4 ) g2. fis4 | % 7
         g1. | % 8
         r1. r r r r r | % 14
-        fis4 ( [e8 fis8] g4 ) g4 a4 ( d,4 ) | % 15
+        fis4 ( e8[ fis8] g4 ) g4 a4 ( d,4 ) | % 15
         e4. e8 b'4 ( a4 ) g4 ( a4 ) | % 16
         g2 g2. fis4 | % 17
         g1. | % 18
         r1. | % 19
-        e4 ( [d8 e8] fis4 ) fis4 g2 | \barNumberCheck #20
-        a4 ( [g8 a8] b4 ) b4 c4 ( d4 ) | % 21
+        e4 ( d8[ e8] fis4 ) fis4 g2 | \barNumberCheck #20
+        a4 ( g8[ a8] b4 ) b4 c4 ( d4 ) | % 21
         b4 d4 d2. cis4 | % 22
         d2 r2 r2 | % 23
-        c4. c8 g'4 fis4 e4 ( [fis8 e8]  | % 24
+        c4. c8 g'4 fis4 e4 ( fis8[ e8]  | % 24
         d2 ) r2 r4 e4 | % 25
         d2. c4 b4 a4 | % 26
         g2 fis1 | % 27
@@ -97,7 +95,7 @@ PartPTwoVoiceOne =  \relative as' {
         r4 b4 b2. a4 | % 4
         b2. ( a4 ) b2 | % 5
         r1. r r | % 8
-        g4 ( [fis8 g8] a4 ) a4 b4 ( e,4
+        g4 ( fis8[ g8] a4 ) a4 b4 ( e,4
         ) | % 9
         fis4 ( e4 ) e2. dis4 | \barNumberCheck #10
         e1. | % 11
@@ -105,14 +103,14 @@ PartPTwoVoiceOne =  \relative as' {
         e'4. e8 d4 ( c4 ) b4 ( c4 ) | % 16
         b2 a1 | % 17
         b1. | % 18
-        d4 ( [c8 d8] e4 ) e4 fis4 fis4 | % 19
+        d4 ( c8[ d8] e4 ) e4 fis4 fis4 | % 19
         g2 r2 r2 | \barNumberCheck #20
         d,2 g4 ( fis4 ) e4 ( fis4 ) | % 21
         e2 e1 | % 22
-        d4. d8 a'4 g4 fis4 ( [g8 fis8] )
+        d4. d8 a'4 g4 fis4 ( g8[ fis8] )
         | % 23
         e2 r2 r2 | % 24
-        b'4 ( [a8 b8] c4 ) c4 d4 ( g,4 ) | % 25
+        b'4 ( a8[ b8] c4 ) c4 d4 ( g,4 ) | % 25
         fis2. fis4 fis2 | % 26
         e2 e2. dis4 | % 27
         e1. }
@@ -168,19 +166,19 @@ PartPThreeVoiceOne =  \relative c' {
         e2 d4 ( c4 ) b2 | % 9
         c2 b1 | \barNumberCheck #10
         b1. | % 11
-        g4. g8 d'4 ( c4 ) b4 ( [c8 b8] )  | % 12
-        a4. a8 e'4 ( d4 ) c4 ( [d8 c8] )  | % 13
+        g4. g8 d'4 ( c4 ) b4 ( c8[ b8] )  | % 12
+        a4. a8 e'4 ( d4 ) c4 ( d8[ c8] )  | % 13
         b4 ( d4 ) d2. cis4 | % 14
         d1 r2 | % 15
         c2 b2. a4 | % 16
         d4 e4 d1 | % 17
         b1. | % 18
-        d4. d8 c4 b4 a4 ( [b8 a8] )  | % 19
-        g4. g8 d'4 ( c4 ) b4 ( [c8 b8] )  | \barNumberCheck #20
+        d4. d8 c4 b4 a4 ( b8[ a8] )  | % 19
+        g4. g8 d'4 ( c4 ) b4 ( c8[ b8] )  | \barNumberCheck #20
         a2 r2 r2 | % 21
         b2 a2 g2 | % 22
         fis2 r2 r2 | % 23
-        c'4 ( [b8 c8] d4 ) d4 e4 ( a,4 ) | % 24
+        c'4 ( b8[ c8] d4 ) d4 e4 ( a,4 ) | % 24
         b8 (  c8 d4 ) c4 a4 fis4 ( b4 ) | % 25
         b1. | % 26
         b2 b1 | % 27
@@ -243,14 +241,14 @@ PartPFourVoiceOne =  \relative as {
         fis4. fis8 e4 ( g4 ) a2 | % 13
         b2 e,1 | % 14
         fis2 r2 r2 | % 15
-        e4 ( [d8 e8] fis4 ) fis4 g4 ( c,4 ) | % 16
+        e4 ( d8[ e8] fis4 ) fis4 g4 ( c,4 ) | % 16
         g'2 d1 | % 17
         d1. | % 18
-        fis4 ( [e8 fis8] g4 ) g4 a4 ( d,4 ) | % 19
+        fis4 ( e8[ fis8] g4 ) g4 a4 ( d,4 ) | % 19
         e2 d4 ( a'4 ) d,2 | \barNumberCheck #20
         d2 r4 b'4 a2 | % 21
         g2 e2. a4 | % 22
-        d,4 ( [c8 d8] e4 ) e4 fis4 ( b,4 ) | % 23
+        d,4 ( c8[ d8] e4 ) e4 fis4 ( b,4 ) | % 23
         e2 d2 r4 d4 | % 24
         d2 a'2 d,4 ( g4 ) | % 25
         d2. e4 d2 | % 26
@@ -312,19 +310,19 @@ PartPFourVoiceTwo =  \relative f, {
         e2 fis2 g2 | % 12
         d'2 c4 b4 a2 | % 13
         g2 a1 | % 14
-        d4 ( [c8 d8] e4 ) e4 fis4 ( b,4 ) | % 15
-        c4 ( [b8 c8] d4 ) d4 e4 ( a,4
+        d4 ( c8[ d8] e4 ) e4 fis4 ( b,4 ) | % 15
+        c4 ( b8[ c8] d4 ) d4 e4 ( a,4
         ) | % 16
         b4 ( c4 ) d1 | % 17
         g,1. | % 18
-        <d d'>4. <d d'>8 a'4 g4 fis4 ( [g8 fis8] )  | % 19
-        e4. e8 b'4 a4 g4 ( [a8 g8] )  | \barNumberCheck #20
-        fis4 ( [e8 fis8] g4 ) g4 a4 ( <d, d'>4 ) | % 21
+        <d d'>4. <d d'>8 a'4 g4 fis4 ( g8[ fis8] )  | % 19
+        e4. e8 b'4 a4 g4 ( a8[ g8] )  | \barNumberCheck #20
+        fis4 ( e8[ fis8] g4 ) g4 a4 ( <d, d'>4 ) | % 21
         g2 a1 | % 22
-        b4 ( [a8 b8] c4 ) c4 d4 ( g,4
+        b4 ( a8[ b8] c4 ) c4 d4 ( g,4
         ) | % 23
-        a4 ( [g8 a8] b4 ) b4 c4 ( fis,4 ) | % 24
-        g4 ( [fis8 g8] a4 ) a4 b4 ( e,4 ) | % 25
+        a4 ( g8[ a8] b4 ) b4 c4 ( fis,4 ) | % 24
+        g4 ( fis8[ g8] a4 ) a4 b4 ( e,4 ) | % 25
         b'2. c4 d2 | % 26
         e2 b1 | % 27
         e,1. }
@@ -388,9 +386,6 @@ PartPFourVoiceTwo =  \relative f, {
     }
     \layout { }
     \midi {
-        \context {
-            \Score
-            tempoWholesPerMinute = #(ly:make-moment 180 4)
-        }
+        \tempo 4 = 180
     }
 }

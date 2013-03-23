@@ -9,41 +9,54 @@
    5th Floor, San Francisco, California, 94105, USA.
 %}
 
-\version "2.8.1"
+\version "2.16.1"
 
 \paper {
-  top-margin=0
-  bottom-margin=6
+  top-margin = 12
+  bottom-margin = 8
+  %{ In origin submission the author specified Times-Roman fonts.
+     DejaVu is a reasonable (and free) substitution.
+     -gl Wed Mar 20 10:43:57 2013
+  %}
+  myStaffSize = #20
+  #(define fonts
+    (make-pango-font-tree
+     "DejaVu Serif"
+     "DejaVu Sans"
+     "DejaVu Mono" (/ myStaffSize 20)))
 }
 
 \book {
   \header {
-    title = \markup { \override #'(font-name . "Times New Roman Bold") { "A Child's Wish" } }
-    composer = \markup { \override #'(font-name . "Times New Roman") \override #'(font-size . -1) { "Grigor Iliev" } }
-    
+    title = \markup { "A Child's Wish" }
+    composer = \markup \override #'(font-size . -1) { "Grigor Iliev" }
+
     mutopiatitle = "A Child's Wish"
-    mutopiacomposer = "G. K. Iliev (1977-)"
+    mutopiacomposer = "IlievGK"
     mutopiainstrument = "Piano"
     date = "2006"
     source = "Grigor Iliev"
     style = "Classical"
-    copyright = "Creative Commons Attribution 2.5"
+    copyright = "Creative Commons Attribution 3.0"
     maintainer = "Grigor Iliev"
     maintainerEmail = "gr.iliev@gmail.com"
     maintainerWeb = "www.grigoriliev.com"
-    lastupdated = "2006/April/6"
+    lastupdated = "2013/03/20"
+    moreinfo = "The composer has also recorded <a href=\"../ftp/IliefGK/A_Childs_Wish/A_Childs_Wish.mp3\">an MP3 of the piece</a>"
 
- footer = "Mutopia-2006/04/09-727"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/2.5" http://creativecommons.org/licenses/by/2.5 } } } }
+ footer = "Mutopia-2013/03/20-727"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
   }
 
   \score {
-    
-    \new PianoStaff \with { \override VerticalAlignment #'forced-distance = #11 } <<
+
+    \new PianoStaff \with {
+%      \override VerticalAlignment #'forced-distance = #11
+    } <<
       \new Staff {
         \key e \minor \time 6/8
         %1
-        << { b''4.^\markup { \override #'(font-name . "Times New Roman") \override #'(font-size . -1)  { "Adagio" } }~ b''4 c'''8 } \\ { r8 e'' fis'' g'' e''4 } >>
+        << { b''4.^\markup { \override #'(font-size . -1) { "Adagio" } }~ b''4 c'''8 } \\ { r8 e'' fis'' g'' e''4 } >>
         << { b''4.~ b''4 c'''8 } \\ { r8 fis'' a'' a'' fis''4 } >>
         << { b''4.~ b''8 a'' c''' } \\ { r8 d'' fis'' g''4. } >>
         << { b''8 a''4~ a''4. } \\ { fis''4 g''8 fis'' g'' e'' } >>
@@ -241,6 +254,9 @@
     >>
 
     \layout { }
-    \midi { \tempo 4 . = 54 }
+
+  \midi {
+    \tempo 4. = 54
+    }
   }
 }
