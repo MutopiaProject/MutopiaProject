@@ -1,16 +1,11 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IBasso = \notes \relative c {
+IBasso =  \relative c {
   \clef "bass"
   \key g\major
   \time 4/4
 
-  \property Score.skipBars = ##t
-
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
-  \property  Voice.autoBeamSettings \override
-    #'(end 1 8 * *) = #(make-moment 1 2)
+  \set Score.skipBars = ##t
 
   %1 page 2
   g4 r8 g d'4 d, |
@@ -84,7 +79,7 @@ IBasso = \notes \relative c {
   %107
   g r8 g c,4 d |
   e fis g fis |
-  e r8 c [b cis] [d fis] |
+  e r8 c  b[ cis]  d[ fis] |
   g b, c! d g4 fis |
   e d8 c b cis d fis |
   g g, d' d, g g'16 a bes8 g |

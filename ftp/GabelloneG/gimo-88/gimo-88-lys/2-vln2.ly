@@ -1,15 +1,13 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "2-shared.ly"
 
-IIVlnII = \notes \relative c'' {
+IIVlnII =  \relative c'' {
   \clef "treble"
   \key bes\major
 
-  \property Voice.tupletSpannerDuration = #(make-moment 1 4)
+  \set tupletSpannerDuration = #(ly:make-moment 1 4)
 
   % end beams on quarters by default
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
 
   \partial 8 d8 | 
   %1 page 17
@@ -23,7 +21,7 @@ IIVlnII = \notes \relative c'' {
   \IISharedB
   r4 |
   %11 page 19
-  d'8 d d d es es es es |
+  d8 d d d es es es es |
   %12 page 20
   es d d bes a a a c | bes bes bes bes a a a c | bes bes bes4 d8 d d4 |
   %15 page 21 Note: All notes in this bar are quite clear d:s in the manuscript, which doesn't make sense.
@@ -33,13 +31,13 @@ IIVlnII = \notes \relative c'' {
   %21 page 23
   f16 f f f r f, a c bes bes bes bes r bes e g |
   f f f f r c f a \times 4/6 {f e e e bes bes bes g g g f e |
-  %23 Note: The second group of 6 notes, [a g g a g f], is very unclearly written, looks like a g f g g f but could be just anything.
-  [f' c c c a a] [a g g a g f] [g' e e e bes bes] [bes g g g f e]} |
+  %23 Note: The second group of 6 notes,  a[ g g a g f], is very unclearly written, looks like a g f g g f but could be just anything.
+   f'[ c c c a a]  a[ g g a g f]  g'[ e e e bes bes]  bes[ g g g f e]} |
   %24 page 24
   f a a c c8 f, f e r g' |
   \IISharedD
   %29 page 25
-  f,4 r [a8 a a a] |
+  f,4 r  a8[ a a a] |
   %30 Note: The music gets out of sync here. Bars 30-31 were originally:
   %bes bes bes bes bes a a f' | e e e g, f4 r |
   %and have now been changed into three bars:
@@ -55,7 +53,7 @@ IIVlnII = \notes \relative c'' {
   %42 Note: I have omitted bar 42, "g4 r g r".
   \IISharedE
   %46 page 30
-  d'16 d d d r bes d f es es es es r f, a c |
+  d16 d d d r bes d f es es es es r f, a c |
   bes bes bes bes r f bes d c8 a16 c c a c a |
   bes8 \times 2/3 {bes16 c d} c8 bes bes a r c |
   \IISharedG
