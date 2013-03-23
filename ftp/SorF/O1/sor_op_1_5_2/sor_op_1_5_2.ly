@@ -1,17 +1,18 @@
-\version "2.16.0"
+\version "2.16.1"
 \header {
   mutopiatitle = "Divertissements pour la guitare, n°5.2"
   mutopiacomposer = "SorF"
   mutopiaopus = "O 1.5.2"
   mutopiainstrument = "Guitar"
+  mutopiasource = "Danish Royal Library early 19th Century edition"
   date = "1820s"
   source = "Golden Music Press/GFA/Frederic Noad facsimile edition"
   style = "Classical"
   copyright = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Mark Van den Borre"
-  maintainerEmail = "mark@markvdb.be"
-  maintainerWeb = "http://markvdb.be"
-  moreInfo = "This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not required in an audio derivative of this work."
+  maintainerEmail = "mvdborre@gmail.com"
+  maintainerWeb = "http://markvdb.be/"
+  moreInfo = "<p>The maintainer has created MP3 and OGG Vorbis audio files from the MIDI output (which is available above). These are computer generated but will probably sound better than playing the MIDI file on your own system, depending on your setup. Download them:</p><ul><li><a href=\"../ftp/SorF/O1/sor_op_1_5_2/sor_op_1_5_2.mp3\">sor_op_1_5_2.mp3</a></li><li><a href=\"../ftp/SorF/O1/sor_op_1_5_2/sor_op_1_5_2.ogg\">sor_op_1_5_2.ogg</a></li></ul>"
   filename = "sor_op1_5_2.ly"
   dedication = "Composés et dédiés à Mrs Davenport"
   title = "Six divertissements pour la guitare"
@@ -21,8 +22,9 @@
   meter = ""
   composer = "Fernando Sor (1778-1839)"
   enteredby = "Mark Van den Borre"
-  tagline =	"\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright " + \maintainer + " 2004.} \\makebox[\\textwidth][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[\\textwidth][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[\\textwidth][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}"
-  footer = 	"Mutopia-2004/05/01-456"
+
+ footer = "Mutopia-2013/03/23-456"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 upperVoice =  \relative c' {
