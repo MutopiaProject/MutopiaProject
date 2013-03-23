@@ -2,9 +2,9 @@
    Copyright (C) 2006 Grigor Iliev <info@grigoriliev.com>
 
    This work is licensed under the
-   Creative Commons Attribution 2.5 License.
+   Creative Commons Attribution 3.0 License.
    To view a copy of this license, visit
-   http://creativecommons.org/licenses/by/2.5/ or
+   http://creativecommons.org/licenses/by/3.0/ or
    send a letter to Creative Commons, 543 Howard Street,
    5th Floor, San Francisco, California, 94105, USA.
 %}
@@ -40,12 +40,11 @@
     copyright = "Creative Commons Attribution 3.0"
     maintainer = "Grigor Iliev"
     maintainerEmail = "gr.iliev@gmail.com"
-    maintainerWeb = "www.grigoriliev.com"
-    lastupdated = "2013/03/20"
-    moreinfo = "The composer has also recorded <a href=\"../ftp/IliefGK/A_Childs_Wish/A_Childs_Wish.mp3\">an MP3 of the piece</a>"
+    maintainerWeb = "http://www.grigoriliev.com"
+    moreInfo = "The composer has also recorded <a href=\"../ftp/IlievGK/A_Childs_Wish/A_Childs_Wish.mp3\">an MP3 of the piece</a>"
 
- footer = "Mutopia-2013/03/20-727"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
+ footer = "Mutopia-2013/03/23-727"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
   }
 
   \score {
