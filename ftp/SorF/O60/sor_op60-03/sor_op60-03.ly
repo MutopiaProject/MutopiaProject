@@ -1,4 +1,4 @@
-\version "2.6.5"
+\version "2.16.0"
 \header {
  title    = "25 Progressive Lessons"
  opus     = "Opus 60.3"
@@ -14,17 +14,16 @@
  copyright         = "Creative Commons Attribution-ShareAlike 2.5"
  maintainer        = "Fabrice De Volder"
  maintainerEmail   = "fabrice.devolder@fr.sfr.com"
- lastupdated       = "2006/02/10"
  filename          = "sor_op60_03.ly"
 
  source            = "http://fernandosor.free.fr/op60/sorf-op60-n03.gif"
  enterdby          = "Fabrice De Volder"
 
  footer  = "Mutopia-2006/02/16-671"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/2.5" http://creativecommons.org/licenses/by-sa/2.5 } } } }
+ tagline = ""
 }
 
-oneVoice = \relative c' {
+notes = \relative c' {
   \repeat volta 2 {
     c4-2 b-1 c-2 e-1
     g g,-2 g' f-2
@@ -64,9 +63,13 @@ oneVoice = \relative c' {
     \key c \major
     \clef violin
     \set Staff.midiInstrument ="acoustic guitar (nylon)"
-    \transposition c
-    \oneVoice
+    \transposition c \notes
   >>
 \layout {}
-\midi { \tempo 4=160}
+
+  \midi {
+    \tempo 4 = 160
+    }
+
+
 }
