@@ -1,4 +1,4 @@
-﻿\version "2.10.25"      %Gossec - Symphonie mi bémol
+\version "2.16.0"      %Gossec - Symphonie mi bémol
                         %Hautbois2 - 1er mvt
 \relative c''{
 \clef treble
@@ -69,7 +69,7 @@ r4 aes8 bes aes4 aes f' ees
 d2 r r
 g,4 r ees' r g r
 c, r d r ees r
-\times 2/3 {\appoggiatura bes'8 aes4([ g f)]} ees2 d\trill
+\times 2/3 {\appoggiatura bes'8 aes4( g f)} ees2 d\trill
 g,1.\< ~
 g2 r\! r
 ees'1.\< ~
@@ -78,7 +78,7 @@ r4 g-. g-. g-. g-. g-.
 g4. f8 ees2 r
 R1.
 r2 r4 bes-| ees-| g-|
-\times 2/3 {\appoggiatura d8 c4([ bes aes)]} g2 f }
+\times 2/3 {\appoggiatura d8 c4( bes aes)} g2 f }
 \alternative { {g2 r r | R1.} 
    {g2 r r } }
 \set Score.skipBars = ##t R1. * 3

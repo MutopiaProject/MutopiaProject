@@ -1,16 +1,19 @@
-﻿\version "2.10.25"
+\version "2.16.0"
+
+#(set-global-staff-size 14)  
+
 \paper{ %#(define page-breaking ly:page-turn-breaking)
          top-margin = 5\mm
          bottom-margin = 5\mm
-         before-title-space = 5\mm
-         page-top-space = 5\mm
+         obsolete-before-title-space = 5\mm  score-markup-spacing #'padding = #(/ obsolete-before-title-space staff-space)  score-markup-spacing #'padding = #(/ obsolete-before-title-space staff-space)
+         obsolete-page-top-space = 5\mm  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)  top-system-spacing #'basic-distance = #(/ obsolete-page-top-space staff-space)
          head-separation = 5\mm
-         between-system-padding = 5\mm
-         between-system-space = 5\mm
+         obsolete-between-system-padding = 5\mm  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
+         obsolete-between-system-space = 5\mm  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
          oddFooterMarkup = \markup { \tiny {\italic{"Le Concert - 1032 "} "Gossec: Symphonie n°2 en mi bémol"}}
 }
+
 \book{
-           #(set-global-staff-size 14)  
 \header {
     title = \markup {\fontsize #2 "Symphonie n°2"}
     subtitle =	\markup {\fontsize #2 "mi bémol"}
@@ -32,7 +35,7 @@
             \relative c'' {\include "Hautbois2_1.ly"}
        }     
       \new Staff {
-         \set Staff.instrumentName = \markup {"Cor Mi" \musicglyph #"accidentals.M2" " I-II"}
+         \set Staff.instrumentName = \markup {"Cor Mi" \musicglyph #"accidentals.flat" " I-II"}
          \set Staff.shortInstrumentName = "C."
          \partcombine 
             \relative c'' {\include "Cor1_1.ly"}
@@ -78,7 +81,7 @@
             \relative c'' {\include "Hautbois2_2.ly"}
        }     
       \new Staff {
-         \set Staff.instrumentName = \markup {"Cor Mi" \musicglyph #"accidentals.M2" " I-II"}
+         \set Staff.instrumentName = \markup {"Cor Mi" \musicglyph #"accidentals.flat" " I-II"}
          \set Staff.shortInstrumentName = "C."
          \partcombine 
             \relative c'' {\include "Cor1_2.ly"}
@@ -124,7 +127,7 @@
             \relative c'' {\include "Hautbois2_3.ly"}
        }     
       \new Staff {
-         \set Staff.instrumentName = \markup {"Cor Mi" \musicglyph #"accidentals.M2" " I-II"}
+         \set Staff.instrumentName = \markup {"Cor Mi" \musicglyph #"accidentals.flat" " I-II"}
          \set Staff.shortInstrumentName = "C."
          \partcombine 
             \relative c'' {\include "Cor1_3.ly"}
