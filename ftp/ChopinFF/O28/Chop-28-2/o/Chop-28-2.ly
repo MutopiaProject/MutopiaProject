@@ -1,46 +1,57 @@
 %% Chopin, op-28-2 first shot.
-%% Based on the piano-staff layout from "The NÃ©rÃ©ides" example.
+%% Based on the piano-staff layout from "The Néréides" example.
 %% There may be some things which I do not know why are here ...
 %% especially in the score section.
 
 
 %% #(ly:set-option 'old-relative)
-\version "2.16.1"
-
+\version "2.4.0"
+\encoding "latin1"
 \header {
     composer = "Chopin"
-    title = "PrÃ©lude"
+    title = "Prélude"
     subtitle = "No 2."
     enteredby = "Donald Axel"
     piece = ""
-    copyright = "Creative Commons Attribution-ShareAlike 3.0"
+    copyright = "Public domain"
+
 
   % mutopia headers.
-  mutopiatitle = "Prelude: Op. 28, No. 2"
-  mutopiacomposer = "ChopinFF"
-  mutopiaopus = "Op. 28"
+  mutopiatitle = "Prelude op 28.2"
+  mutopiacomposer = "Chopin, Frederic"
+  mutopiaopus = "28.2"
   mutopiainstrument = "Piano"
-  date = "c. 1837"
+  date = "ca. 1837"
   source = "Edition Peters"
-  style = "Romantic"
+  style = "Classical"
   
   maintainer = "Donald Axel"
   maintainerEmail = "dax2@tele2adsl.dk"
+  lastupdated =  "2004/Nov/12"
 
- footer = "Mutopia-2013/03/23-494"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright Â© 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+  footer = "Mutopia-2004/11/12-494"
+  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\thefooter\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright \\ The Mutopia Project \\& "+ \maintainer + " 2004.} \\makebox[188mm][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[188mm][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[188mm][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}}"
 }
+
+
+#(ly:set-point-and-click 'line-column)
+#(define (make-text-checker text)
+  (lambda (elt) (equal? text (ly:get-grob-property elt 'text))))
+
+
+% explicit staff change (yet not used here)
+staffOne = { \change Staff = treble}
+staffTwo = { \change Staff = bass}
+
 
 
 
 treble = \new Voice {
     \key a \minor
-    \tempo "Lento"
-    \set PianoStaff.connectArpeggios = ##t
-    \phrasingSlurUp
     
     %% bar 1-2
-    s1*2 |
+    s4 ^\markup { \large { "Lento" }} s4*3   |
+    s1
     
     %% bar 3
     e'2..(                       b8 |
@@ -49,6 +60,7 @@ treble = \new Voice {
     d'1)
     
     %% bar 5
+    \slurUp
     d'4.\(      \acciaccatura fis'16 
                  e'8   d'4.      a8 |
     
@@ -59,6 +71,7 @@ treble = \new Voice {
     r2                  b'4.( fis'8 |  a'1)
 
     %% bar 10
+    \slurUp
     a'4.\(    \acciaccatura cis''16 
                  b'8   a'4.     e'8 | 
     %% bar 11
@@ -68,6 +81,7 @@ treble = \new Voice {
     r1
 
     %% bar 13
+    \phrasingSlurUp
     r4       a'2.~\(                |
 
     %% bar 14
@@ -86,34 +100,52 @@ treble = \new Voice {
     d'2                r2           |
 
     %% bar 19
-    d'4.\(  \acciaccatura f'16  e'8   d'4. a8 ~   
+    d'4.\(  \acciaccatura f'16  e'8   d'4.    << {\stemUp \tieDown a8~   
     %% bar 20
-    <<\new Voice {\voiceOne b4 b8. b16} {\voiceTwo a2}>>
+    \stemDown a2} \\   { s8 \stemUp b4   b8. b16} >>
 
-    \clef bass \voiceOne
+    \clef bass \stemUp
     <e gis b>4    <dis fis b>4      |
 
-    %% bar 21 - 23
+    %% bar 21 - 23, many subtle problems.
     <e gis b>2\)     
-    << { b4.(  c'8  <c e a>1\arpeggio )} \\
-    <d e gis>2
-    >>
+    << { 
+     \stemDown <d e gis>2 
+    } 
+    \\ 
+    {\stemUp 
+     \phrasingSlurUp
+     \set PianoStaff.connectArpeggios = ##t
+      b4.\(  c'8  <c e a>1\arpeggio \)
+     }  >>
+
+    %% bar 23
+    %% <c e a>1\)
     
     \bar "||"
+}
+
+trebleTwo = \new Voice {
+    \stemDown
+    \slurDown
 }
 
 bass = \new Voice {
     \key a \minor
     
-    \voiceTwo
-    %% bar 1  %% remove sustainOn, only to be used much later
-    e,8\sustainOn g    e,     g
+    \override Score.SeparationItem #'padding = #0.4
+    \slurDown
+    \dynamicUp
+    \stemDown
+    %% bar 1  %% remove sustainDown, only to be used much later
+    \override Voice.Stem #'beamed-lengths = #'(4.0 4.0 4.0)
+    e,8\p\sustainDown g    e,     g
     e,                g    e,     g
     %% bar 2
     e,8               g    e,     g
     e,                g    e,     g
     %% bar 3
-    \oneVoice
+    \revert Staff.AccidentalPlacement #'right-padding 
     <e, b,>\(        <g ais,>    <e, b,>     <g g,>
     <e, b,>          <g ais,>    <e, b,>     <g g,>
     %% bar 4
@@ -179,7 +211,13 @@ bass = \new Voice {
 }
 
 bassTwo = \new Voice {
-    \voiceOne
+    \stemUp
+    \slurUp
+    %% stem length must be increased so as to go free from lower
+    \override Voice.Stem #'beamed-lengths = #'(5.0 5.0 5.0)
+    %% sharp before a must be adjusted to the left to clear stems
+    %% from the other bass voice
+    \override Staff.AccidentalPlacement #'right-padding = #'1.0
     %% bar 1
     b,8(          ais,     b,     g,
     b,8           ais,     b,     g,
@@ -189,13 +227,15 @@ bassTwo = \new Voice {
 }
 
 middleDynamics = {
-    s4\p s2. |
-    s1*11
+    %% dax: outcommented the line below (from Nereides)
+    %% \override Dynamics.TextScript  #'padding = #-1 %tweak
+    %% TODO: If possible raise dynamics clear of phrasing slurs
+    %% The padding above did not change this.
+    s1*12
     %% bar 13 
     s2
-    \crescTextCresc
     \set decrescendoText = \markup { \italic "dimin" }
-    \set decrescendoSpanner = #'text
+    \set decrescendoSpanner = #'dashed-line
     s2 \>
     s1  s1  s1\!
     s1^\markup { "slentando" }
@@ -208,15 +248,12 @@ middleDynamics = {
     s1
 }
 
-\paper {
-    ragged-last-bottom = ##f
-}
-
 theScore = \score{
     \context PianoStaff <<
         \context Staff = "treble" <<
             \clef treble
 	    \treble
+	    \trebleTwo
         >>
 	\new Dynamics <<
 	    \middleDynamics
@@ -228,18 +265,37 @@ theScore = \score{
         >>
     >>
     \layout {
-        \context {
-            \PianoStaff
-            \override StaffGrouper #'staff-staff-spacing #'basic-distance = #15
+	\context {
+	    \Score
+	    pedalSustainStrings = #'("Ped." "*Ped." "*")
+	    %% \remove Bar_number_engraver
+        }
+	\context {
+	    \type "Engraver_group_engraver"
+	    \name Dynamics
+	    \consists "Output_property_engraver"
+	    minimumVerticalExtent = #'(-1 . 1)
+
+	    \consists "Script_engraver"
+	    \consists "Dynamic_engraver"
+	    \consists "Text_engraver"
+
+	    \override TextScript #'font-size = #2
+	    \override TextScript #'font-shape = #'italic
+
+	    \consists "Skip_event_swallow_translator"
+
+	    \consists "Axis_group_engraver"
+    	}
+
+	\context {
+	    \PianoStaff
+	    \accepts Dynamics
+	    \override VerticalAlignment #'forced-distance = #7
         }
     }
     
-    
-  \midi {
-    \tempo 4 = 72
-    }
-
-
+    \midi { \tempo 4 = 72 }
 }
 			   
 \book{
@@ -249,3 +305,4 @@ theScore = \score{
 %%% Local variables:
 %%% LilyPond-indent-level:4
 %%% End:
+
