@@ -1,28 +1,29 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header{
     title = "Ich grolle nicht"
     subtitle = "excerpt from Dichterliebe, opus 48"
     composer = "Robert Schumann (1810 - 1856)"
     poet = "Heinrich Heine (1797 - 1856)"
-    tagline = ""
     piece = "Nicht zu schnell."
     arranger = "opus 48, n° 7"
+
  mutopiatitle = "Ich grolle nicht"
  mutopiacomposer = "SchumannR"
- mutopiapoet = "H. Heine  (1797-1856)"
- mutopiaopus = "O48"
+ mutopiapoet = "H. Heine (1797-1856)"
+ mutopiaopus = "Op. 48, No. 7"
  mutopiainstrument = "Voice, Piano"
+ mutopiaarranger = " "
  date = "1840"
  source = "Breitkopf & Härtel, 1882"
  style = "Romantic"
  copyright = "Public Domain"
  maintainer = "Alexandre Benéteau"
  maintainerEmail = "alexandre-beneteau@fr.st"
- maintainerWeb = "http://www.alexandre-beneteau.fr.st"
+ maintainerWeb = "http://www.alexandre-beneteau.fr.st/"
  
- tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
- footer = "Mutopia-2003/05/23-309"
+ footer = "Mutopia-2013/03/23-309"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 
