@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 \header {
   filename      =       "op-25-01.ly"
@@ -6,11 +6,10 @@
   composer      =       "Frédéric Chopin (1810 - 1849)"
   opus          =       "Opus 25, Nr. 1"
   enteredby     =       "Roland Goretzki"
-  tagline       =       ""
 
  mutopiatitle = "Etüde As-Dur"
  mutopiacomposer = "ChopinFF"
- mutopiaopus = "O 25"
+ mutopiaopus = "Op. 25, No. 1"
  mutopiainstrument = "Piano"
  date = "1828-1831"
  source = "Peters, Herrmann Scholtz, 1900b"
@@ -19,7 +18,8 @@
  maintainer = "Roland Goretzki"
  maintainerEmail = "roland@roland-goretzki.de"
 
-  footer = "Mutopia-2004/10/30-489"
+ footer = "Mutopia-2013/03/23-489"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 \include "deutsch.ly"
