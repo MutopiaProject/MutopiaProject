@@ -1,22 +1,26 @@
-\version "2.4.0"
-\include "italiano.ly" 
+\version "2.16.1"
+\include "italiano.ly"
 
 %% Version 1.0
 
 \header{
     title = "Veni Creator -- 1er verset"
+    mutopiatitle = "Veni Creator (1er verset)"
     subtitle = ""
-    piece = "1er verset" 
+    piece = "1er verset"
     instrument = "Orgue -- Organ"
+    mutopiainstrument = "Organ"
+    style = "Baroque"
     composer = "Jean Titelouze (1563-1633)"
-    copyright = "Public domain -- Domaine public."
+    mutopiacomposer = "TitelouzeJ"
+    copyright = "Public Domain"
     source = "Edition Schott 1869 Alexandre Guilmant"
     opus = ""
-    lastupdated = "2005-02-12"
-    enteredby = "G. Gréco"
-    maintainer = "G. Gréco"
-    
-    footer = "Mutopia-2005/02/12-534"
+    lastupdated = "2012-02-23"
+    enteredby = "G. GrÃ©co"
+    maintainer = "G. GrÃ©co"
+
+    footer = "Mutopia-2012/02/23-534"
     tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
 
@@ -27,7 +31,7 @@ global =  {
 
 staffUp = {
   \context Staff = "up"   \stemDown\tieDown
-  \set Staff.minimumVerticalExtent = #'(-1 . 1)
+  \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
 }
 staffDown = {
   \context Staff = "down"   \stemUp\tieUp
@@ -49,7 +53,7 @@ soprano =  \context Voice = "one"  \relative do'' {
   re4 mi8[ fa] sol[ mi] re4 |
   mi2 mi2 |
   fa4 re8[ mi] fa[ sol] fa4 |
-  %%10: 
+  %%10:
   mi2 re2\rest |
   re4 mi2 re4 |
   do4 re mi fa |
@@ -98,15 +102,14 @@ soprano =  \context Voice = "one"  \relative do'' {
   sol4. fa!8 mi2 |
   re4 do2 si8[ la] |
   %%50:
-  % not very clean ; bar check error 
-  \set Score.timing = ##f
+  \set Timing.measureLength = #(ly:make-moment 8 4)
   \override Script #'padding = # 1.2
   si\breve^\fermata |
 
 }
 
 alto =  \context Voice = "two"   \relative do' {
-  \voiceTwo 
+  \voiceTwo
   %\set Staff.midiInstrument = "alto sax"
   \override NoteHead #'style = #'baroque
   \stemDown
@@ -164,18 +167,19 @@ alto =  \context Voice = "two"   \relative do' {
   re8[ do sib la ] sol2 |
   la2 mi4\rest la4 |
   %%45:
-  si4 do2 
+  si4 do2
   % The following comman does not walk ? why ? if anyone can tell me why ?
   % It would be necessary, anyway.
-  % \once \override NoteColumn  #'force-hshift = #100  
+  % \once \override NoteColumn  #'force-hshift = #100
   sib4 |
   la4 si!8[ do] la[ sol] la4 |
   sol4 fa8[ mi] re4 sol8[ la] |
   si8 do re2 do4 |
   si8[ la sol fa] mi8[re mi fad] |
   %%50:
+  \set Timing.measureLength = #(ly:make-moment 8 4)
   sol\breve |
-  
+
 }
 
 tenor = \context Voice = "three"  \relative do'' {
@@ -184,9 +188,9 @@ tenor = \context Voice = "three"  \relative do'' {
   \override NoteHead #'style = #'baroque
   \stemUp
   %%1 :
-  r1 r1 r1 r1 
+  r1 r1 r1 r1
   %%5 :
-  r1 
+  r1
   r1 |
   si2\rest si4\rest sol4 ~ |
   sol4 la 2 sol4 |
@@ -240,13 +244,14 @@ tenor = \context Voice = "three"  \relative do'' {
   re4 si do8[ re mi fa] |
   sol8[ fa mi re] do[ si] do4 |
   %%50:
+  \set Timing.measureLength = #(ly:make-moment 8 4)
   re\breve^\fermata |
- 
+
 }
 
 
 basso = \context Voice = "four"  \relative do' {
-\voiceFour 
+\voiceFour
 %\set Staff.midiInstrument = "alto sax"
 \override NoteHead #'style = #'baroque
 \stemDown
@@ -263,9 +268,9 @@ basso = \context Voice = "four"  \relative do' {
 }
 
 choral=\lyricmode{
-    Ve- --  -ni Cre- -- \skip 1  -a- -- -tor \skip 1 Spi- -- \skip 1 \skip 1 -ri- -- -tus: 
-    Men- -- \skip 1 -tes tu- -- -o- -- -rum \skip 1 vi- -- \skip 1 -si- -- -ta, 
-    Im- -- -ple- \skip 1 su- -- \skip 1 -per- -- \skip 1 -na gra- -- \skip 1 -ti- -- -a, 
+    Ve- --  -ni Cre- -- \skip 1  -a- -- -tor \skip 1 Spi- -- \skip 1 \skip 1 -ri- -- -tus:
+    Men- -- \skip 1 -tes tu- -- -o- -- -rum \skip 1 vi- -- \skip 1 -si- -- -ta,
+    Im- -- -ple- \skip 1 su- -- \skip 1 -per- -- \skip 1 -na gra- -- \skip 1 -ti- -- -a,
     Qu\ae \skip 1 tu cre- -- \skip 1 -a- --  -sti \skip 1 \skip 1 pe- -- -cto- -- -ra.
 }
 
@@ -275,28 +280,30 @@ choral=\lyricmode{
 	    \context PianoStaff <<
 		\context Staff = "up" <<
 		    \global
-		    \clef violin 
+		    \clef violin
 		    \set Staff.midiInstrument = "Church organ"
 		    \soprano
 		    \alto
 		>>
 		\context Staff = "down" <<
-		    \global    
+		    \global
 		    \clef bass
-		    \set Staff.minimumVerticalExtent = #'(-2 . 2)
+		    \override Staff.VerticalAxisGroup #'minimum-Y-extent = #'(-2 . 2)
 		    \set Staff.midiInstrument = "Church organ"
 		    \tenor
 		    \basso
-		>> 
+		>>
 	    >>
 	    \lyricsto "four" \new Lyrics \choral
-	>>  
-	
-	
+	>>
+
+
 	\bar "|."
     }
     \layout {}
-    \midi{ \tempo 4 = 110  }
-    
-}
 
+  \midi {
+    \tempo 4 = 110
+    }
+
+}

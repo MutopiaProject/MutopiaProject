@@ -1,24 +1,28 @@
-\version "2.4.2"
+\version "2.16.1"
 \include "italiano.ly"
 
-% Écrit avec l'aide très secourable de lyqi ! Essayez-le !
+% Ã‰crit avec l'aide trÃ¨s secourable de lyqi ! Essayez-le !
 % Written with the most secourable help of lyqi ! Try it !
 
 \header{
      title = "Ave Maris Stella"
-     subtitle = "1er verset" % version 1.
+     mutopiatitle = "Ave Maris Stella (1er verset)"
+     subtitle = "1er verset"
      piece = ""
      instrument = "Orgue -- Organ"
      composer = "Jean Titelouze (1563-1633)"
-     copyright = "Public domain -- Domaine public."
+     mutopiainstrument = "Organ"
+     mutopiacomposer = "TitelouzeJ"
+     style = "Baroque"
+     copyright = "Public Domain"
      source = "Edition Schott 1869 - Alexandre Guilmant"
      opus = ""
-     lastupdated = "2005-04-24"
-     enteredby = "Gérard Gréco"
-     maintainer = "Gérard Gréco"
-     
-     footer = "Mutopia-2005/05/02-552"
-     tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+     lastupdated = "2012-02-23"
+     enteredby = "GÃ©rard GrÃ©co"
+     maintainer = "GÃ©rard GrÃ©co"
+
+ footer = "Mutopia-2013/02/23-552"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } â€¢ \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 global = {
@@ -180,9 +184,9 @@ cantusfirmus=\lyricmode{
 				% Atque semper virgo
 				% Felix coeli porta.
 				% --
-				% Salut, étoile des mers,
-				% Auguste Mère de Dieu, salut,
-				% ô toujours Vierge,
+				% Salut, Ã©toile des mers,
+				% Auguste MÃ¨re de Dieu, salut,
+				% Ã´ toujours Vierge,
 				% heureuse porte du Ciel.
 				% --
 				% Hail, O Star of the ocean,
@@ -190,12 +194,12 @@ cantusfirmus=\lyricmode{
 				% ever sinless Virgin,
 				% gate of heav'nly rest.
 
-     A -- ve \skip 1 \skip 1 ma -- ris \skip 1 \skip 1 \skip 1 stel -- 
+     A -- ve \skip 1 \skip 1 ma -- ris \skip 1 \skip 1 \skip 1 stel --
 \skip 1
      \skip 1 \skip 1 la,
      De -- i Ma -- \skip 1 ter \skip 1 al -- ma,
      At -- que sem -- per Vir -- go, \skip 1
-     \skip 1 \skip 1 \skip 1 \skip 1 Fe -- lix coe -- li por -- \skip 1 
+     \skip 1 \skip 1 \skip 1 \skip 1 Fe -- lix coe -- li por -- \skip 1
 ta.
 
 }
@@ -220,11 +224,13 @@ ta.
 	  >>
 	>>
 	\lyricsto "basse" \new Lyrics \cantusfirmus
->> 	
+>>
        \bar "|."
      }
      \layout {}
-     \midi{ \tempo 4 = 120  }
+
+  \midi {
+    \tempo 4 = 120
+    }
 
 }
-
