@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 \header {
  title    = "25 Progressive Lessons"
  opus     = "Opus 60.3"
@@ -11,7 +11,7 @@
  source            = "http://fernandosor.free.fr/op60/sorf-op60-n03.gif"
  date              = "19th C."
  style             = "Classical"
- copyright         = "Creative Commons Attribution-ShareAlike 2.5"
+ copyright         = "Creative Commons Attribution-ShareAlike 3.0"
  maintainer        = "Fabrice De Volder"
  maintainerEmail   = "fabrice.devolder@fr.sfr.com"
  filename          = "sor_op60_03.ly"
@@ -19,8 +19,8 @@
  source            = "http://fernandosor.free.fr/op60/sorf-op60-n03.gif"
  enterdby          = "Fabrice De Volder"
 
- footer  = "Mutopia-2006/02/16-671"
- tagline = ""
+ footer = "Mutopia-2013/03/23-671"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 notes = \relative c' {
