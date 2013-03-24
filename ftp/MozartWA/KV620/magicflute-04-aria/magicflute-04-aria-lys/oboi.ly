@@ -1,46 +1,15 @@
-\version "1.5.66"
+\version "2.14.2"
 
 \include "header.ly"
 
-\include "allegromaestoso.ly"
-\score {
-\context Staff = oboi {
-	\property Staff.midiInstrument = #"oboe"
-	\property Staff.instrument = #"    Oboi     "
-	\property Staff.instr = #"Ob.  "
-	\context Voice=one \partcombine Voice
-		\context Thread=one \oboeI
-		\context Thread=two \oboeII
-}
-\include "paper.ly"
+\include "MF4-Allegromaestoso.ly"
+\include "oboi.ily"
+\include "piece.ly"
 
-\midi { \tempo 4=150 }
-}
+\include "MF4-Arielarghetto.ly"
+\include "oboi.ily"
+\include "piece.ly"
 
-\include "arielarghetto.ly"
-\score {
-\context Staff = oboi {
-	\property Staff.midiInstrument = #"oboe"
-	\property Staff.instrument = #"    Oboi     "
-	\property Staff.instr = #"Ob.  "
-	\context Voice=one \partcombine Voice
-		\context Thread=one \oboeI
-		\context Thread=two \oboeII
-}
-\include "paper.ly"
-\midi { \tempo 4=72 }
-}
-
-\include "allegromoderato.ly"
-\score {
-\context Staff = oboi {
-	\property Staff.midiInstrument = #"oboe"
-	\property Staff.instrument = #"    Oboi     "
-	\property Staff.instr = #"Ob.  "
-	\context Voice=one \partcombine Voice
-		\context Thread=one \oboeI
-		\context Thread=two \oboeII
-}
-\include "paper.ly"
-\midi { \tempo 4=130 }
-}
+\include "MF4-Allegromoderato.ly"
+\include "oboi.ily"
+\include "piece.ly"
