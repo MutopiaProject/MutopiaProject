@@ -32,15 +32,14 @@ violinIOverridesIV = {}
   }
 }
 
-\include "../defs.ly"
-\include "defs.ly"
-\include "violin1_defs.ly"
+\include "../defs.ily"
+\include "defs.ily"
+\include "violin1_defs.ily"
 
-\include "i-violin1.ly"
+\include "i-violin1.ily"
 
 \score {
   \new Staff <<
-%    \override Score.BarNumber #'padding = #3
     \set Staff.midiInstrument = #"violin"
     \set Staff.instrumentName = "Violin I"
 
@@ -51,14 +50,14 @@ violinIOverridesIV = {}
     \new Voice = "override" { \violinIOverridesI }
   >>
 
-  \include "i-midi.ly"
+  \include "i-midi.ily"
   \header {
     piece = \headerI
   }
   \layout {}
 }
 
-\include "ii-violin1.ly"
+\include "ii-violin1.ily"
 
 \score {
   \new Staff <<
@@ -72,7 +71,7 @@ violinIOverridesIV = {}
     \new Voice = "override" { \violinIOverridesII }
   >>
 
-  \include "ii-midi.ly"
+  \include "ii-midi.ily"
 
   \header {
     piece = \headerII
@@ -82,7 +81,7 @@ violinIOverridesIV = {}
   \layout {}
 }
 
-\include "iii-violin1.ly"
+\include "iii-violin1.ily"
 
 \score {
   \new Staff <<
@@ -96,7 +95,7 @@ violinIOverridesIV = {}
     \new Voice = "override" { \violinIOverridesIII }
   >>
 
-  \include "iii-midi.ly"
+  \include "iii-midi.ily"
 
   \header {
     piece = \headerIII
@@ -106,7 +105,7 @@ violinIOverridesIV = {}
   \layout {}
 }
 
-\include "iv-violin1.ly"
+\include "iv-violin1.ily"
 
 \score {
   \new Staff <<
@@ -120,7 +119,7 @@ violinIOverridesIV = {}
     \new Voice = "override" { \violinIOverridesIV }
   >>
 
-  \include "iv-midi.ly"
+  \include "iv-midi.ily"
 
   \header {
     piece = \headerIV

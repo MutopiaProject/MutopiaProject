@@ -3,7 +3,7 @@ celloSecondMov =  \relative f {
   \key c \major
   \clef bass
 
-  \LowerText c4(-\markup { \italic {a mezza voce} } g)
+  c4(-\markup { \italic {a mezza voce} } g)
   | a8.( g16 f8 e)
   | d( <c c'> b' b-.)
   | c( e g4)

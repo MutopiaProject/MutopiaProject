@@ -8,13 +8,13 @@ markingsII = {}
 markingsIII = {}
 markingsIV = {}
 
-\include "defs.ly"
-\include "../defs.ly"
+\include "defs.ily"
+\include "../defs.ily"
 
-\include "i-violin1.ly"
-\include "i-violin2.ly"
-\include "i-viola.ly"
-\include "i-violoncello.ly"
+\include "i-violin1.ily"
+\include "i-violin2.ily"
+\include "i-viola.ily"
+\include "i-violoncello.ily"
 
 #(set-global-staff-size 12)
 
@@ -68,7 +68,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "i-midi.ly"
+  \include "i-midi.ily"
 
   \header {
     piece = \headerI
@@ -77,10 +77,10 @@ markingsIV = {}
   \layout { }
 }
 
-\include "ii-violin1.ly"
-\include "ii-violin2.ly"
-\include "ii-viola.ly"
-\include "ii-violoncello.ly"
+\include "ii-violin1.ily"
+\include "ii-violin2.ily"
+\include "ii-viola.ily"
+\include "ii-violoncello.ily"
 
 \score {
   <<
@@ -124,7 +124,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "ii-midi.ly"
+  \include "ii-midi.ily"
 
   \header {
     piece = \headerII
@@ -133,10 +133,10 @@ markingsIV = {}
   \layout { }
 }
 
-\include "iii-violin1.ly"
-\include "iii-violin2.ly"
-\include "iii-viola.ly"
-\include "iii-violoncello.ly"
+\include "iii-violin1.ily"
+\include "iii-violin2.ily"
+\include "iii-viola.ily"
+\include "iii-violoncello.ily"
 
 \score {
   <<
@@ -180,7 +180,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "iii-midi.ly"
+  \include "iii-midi.ily"
 
   \header {
     piece = \headerIII
@@ -189,10 +189,10 @@ markingsIV = {}
   \layout { }
 }
 
-\include "iv-violin1.ly"
-\include "iv-violin2.ly"
-\include "iv-viola.ly"
-\include "iv-violoncello.ly"
+\include "iv-violin1.ily"
+\include "iv-violin2.ily"
+\include "iv-viola.ily"
+\include "iv-violoncello.ily"
 
 \score {
   <<
@@ -237,7 +237,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "iv-midi.ly"
+  \include "iv-midi.ily"
 
   \header {
     piece = \headerIV

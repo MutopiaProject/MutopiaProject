@@ -3,7 +3,7 @@ violaSecondMov =  \relative g {
   \key c \major
   \clef alto
 
-  \LowerText g4(-\markup { \italic {a mezza voce} } f)
+  g4(-\markup { \italic {a mezza voce} } f)
   | e4( f8 g)
   | a( e16. f32 g8 g)-.
   | g2

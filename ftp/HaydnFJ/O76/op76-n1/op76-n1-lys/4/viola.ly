@@ -32,15 +32,14 @@ violaOverridesIV = {}
   }
 }
 
-\include "../defs.ly"
-\include "defs.ly"
-\include "viola_defs.ly"
+\include "../defs.ily"
+\include "defs.ily"
+\include "viola_defs.ily"
 
-\include "i-viola.ly"
+\include "i-viola.ily"
 
 \score {
   \new Staff <<
-%    \override Score.BarNumber #'padding = #3
     \set Staff.midiInstrument = #""
     \set Staff.instrumentName = "Viola"
 
@@ -51,14 +50,14 @@ violaOverridesIV = {}
     \new Voice = "override" { \violaOverridesI }
   >>
 
-  \include "i-midi.ly"
+  \include "i-midi.ily"
   \header {
     piece = \headerI
   }
   \layout {}
 }
 
-\include "ii-viola.ly"
+\include "ii-viola.ily"
 
 \score {
   \new Staff <<
@@ -72,7 +71,7 @@ violaOverridesIV = {}
     \new Voice = "override" { \violaOverridesII }
   >>
 
-  \include "ii-midi.ly"
+  \include "ii-midi.ily"
 
   \header {
     piece = \headerII
@@ -82,7 +81,7 @@ violaOverridesIV = {}
   \layout {}
 }
 
-\include "iii-viola.ly"
+\include "iii-viola.ily"
 
 \score {
   \new Staff <<
@@ -96,7 +95,7 @@ violaOverridesIV = {}
     \new Voice = "override" { \violaOverridesIII }
   >>
 
-  \include "iii-midi.ly"
+  \include "iii-midi.ily"
 
   \header {
     piece = \headerIII
@@ -106,7 +105,7 @@ violaOverridesIV = {}
   \layout {}
 }
 
-\include "iv-viola.ly"
+\include "iv-viola.ily"
 
 \score {
   \new Staff <<
@@ -120,7 +119,7 @@ violaOverridesIV = {}
     \new Voice = "override" { \violaOverridesIV }
   >>
 
-  \include "iv-midi.ly"
+  \include "iv-midi.ily"
 
   \header {
     piece = \headerIV

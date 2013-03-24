@@ -32,15 +32,14 @@ markingsIV = {}
   }
 }
 
-\include "../defs.ly"
-\include "defs.ly"
-\include "@INST@_defs.ly"
+\include "../defs.ily"
+\include "defs.ily"
+\include "@INST@_defs.ily"
 
-\include "i-@INST@.ly"
+\include "i-@INST@.ily"
 
 \score {
   \new Staff <<
-%    \override Score.BarNumber #'padding = #3
     \set Staff.midiInstrument = #"@MIDI_INST@"
     \set Staff.instrumentName = "@STAFF_INST@"
 
@@ -51,14 +50,14 @@ markingsIV = {}
     \new Voice = "override" { \@LILY_INST@OverridesI }
   >>
 
-  \include "i-midi.ly"
+  \include "i-midi.ily"
   \header {
     piece = \headerI
   }
   \layout {}
 }
 
-\include "ii-@INST@.ly"
+\include "ii-@INST@.ily"
 
 \score {
   \new Staff <<
@@ -72,7 +71,7 @@ markingsIV = {}
     \new Voice = "override" { \@LILY_INST@OverridesII }
   >>
 
-  \include "ii-midi.ly"
+  \include "ii-midi.ily"
 
   \header {
     piece = \headerII
@@ -82,7 +81,7 @@ markingsIV = {}
   \layout {}
 }
 
-\include "iii-@INST@.ly"
+\include "iii-@INST@.ily"
 
 \score {
   \new Staff <<
@@ -96,7 +95,7 @@ markingsIV = {}
     \new Voice = "override" { \@LILY_INST@OverridesIII }
   >>
 
-  \include "iii-midi.ly"
+  \include "iii-midi.ily"
 
   \header {
     piece = \headerIII
@@ -106,7 +105,7 @@ markingsIV = {}
   \layout {}
 }
 
-\include "iv-@INST@.ly"
+\include "iv-@INST@.ily"
 
 \score {
   \new Staff <<
@@ -120,7 +119,7 @@ markingsIV = {}
     \new Voice = "override" { \@LILY_INST@OverridesIV }
   >>
 
-  \include "iv-midi.ly"
+  \include "iv-midi.ily"
 
   \header {
     piece = \headerIV
