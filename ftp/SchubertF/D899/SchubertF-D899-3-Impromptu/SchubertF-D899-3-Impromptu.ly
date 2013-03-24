@@ -18,7 +18,7 @@
 %#(set-paper-size "a4")
 %#(set-paper-size "letter")
  line-width = 190\mm
- obsolete-between-system-padding = #0.8  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
+ top-system-spacing #'minimum-distance = #15
  oddHeaderMarkup  = \markup \fill-line {
   " " { \italic "♫  Franz Schubert: Impromptu in Ges-dur (D 899-3)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
