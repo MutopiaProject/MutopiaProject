@@ -709,8 +709,8 @@ basIj = \relative do, { \voiceOne
 %81-83
  \voiceOne
  reb1 reb4_( reb') (fa lab)
- r4 <sib, reb>( <dob mib>_> <sib reb>) sib,4_( reb') (fa lab)
- r4 <sib, reb>( <dob mib>_> <sib reb>) sib,4_( reb') (lab' dob)
+ r4 <sib, reb>( <dob mib>_> <sib reb>) reb,4_( reb') (fa lab)
+ r4 <sib, reb>( <dob mib>_> <sib reb>) reb,4_( reb') (lab' dob)
 %84
  \oneVoice
  <solb, reb'>1^( <solb reb'>2^. <solb reb'>^.)
