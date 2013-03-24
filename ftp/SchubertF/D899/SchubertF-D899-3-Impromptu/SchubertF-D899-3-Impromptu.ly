@@ -1,4 +1,4 @@
-﻿%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %
 %                                           FICHIER SchubertF-D899-3-Impromptu.ly
 %
@@ -9,7 +9,7 @@
 %                                                  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\version "2.11.34"
+\version "2.16.0"
 \include "italiano.ly"
 
 #(set-global-staff-size 18)
@@ -18,7 +18,7 @@
 %#(set-paper-size "a4")
 %#(set-paper-size "letter")
  line-width = 190\mm
- between-system-padding = #0.8
+ obsolete-between-system-padding = #0.8  system-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)  score-system-spacing #'padding = #(/ obsolete-between-system-padding staff-space)
  oddHeaderMarkup  = \markup \fill-line {
   " " { \italic "♫  Franz Schubert: Impromptu in Ges-dur (D 899-3)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
@@ -28,9 +28,9 @@
 
 
 \header {
- title = \markup \center-align { \fontsize #1.5 "Impromptu in Ges-dur" " " }
+ title = \markup \center-column { \fontsize #1.5 "Impromptu in Ges-dur" " " }
  subtitle = \markup { \fontsize #2.5 "D 899-3 (Opus 90 No 3.)" }
- composer = \markup \center-align { \fontsize #3 \bold "Franz Schubert" \small "(1797-1828)" "D 899 (Op. 90 No3., 1827)" }
+ composer = \markup \center-column { \fontsize #3 \bold "Franz Schubert" \small "(1797-1828)" "D 899 (Op. 90 No3., 1827)" }
 % MUTOPIA
  mutopiatitle = "Impromptu in Ges-dur"
  mutopiacomposer = "SchubertF"
@@ -44,7 +44,7 @@
  maintainer = "Ph. Raynaud"
  moreInfo = ""
  footer = "Mutopia-2007/12/29-1193"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = ""
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -77,31 +77,31 @@ TUPBNO = \override TupletBracket #'transparent = ##t
 TUPNO  = { \TUPNNO \TUPBNO }
 % VARIER LA HAUTEUR D'UNE BARRE DE LIGATURE
 BEAMPOS = #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Beam #'positions = #$beg-end #})
+ #{ \once \override Beam #'positions = #beg-end #})
 % DÉPLACER UNE DYNAMIQUE OU MODIFIER SON LIBELLÉ
 DYNEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override DynamicText #'extra-offset = #$beg-end #})
+ #{ \once \override DynamicText #'extra-offset = #beg-end #})
 PINEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Hairpin #'extra-offset = #$beg-end #})
-CRESC =   { \set crescendoText   = \markup { \italic "cresc." }   \set crescendoSpanner = #'dashed-line }
-DECRESC = { \set decrescendoText = \markup { \italic "decresc." } \set decrescendoSpanner = #'dashed-line }
-DIMIN =   { \set decrescendoText = \markup { \italic "dimin." }   \set decrescendoSpanner = #'dashed-line }
+ #{ \once \override Hairpin #'extra-offset = #beg-end #})
+CRESC =   { \set crescendoText   = \markup { \italic "cresc." }   \set crescendoSpanner = #'text }
+DECRESC = { \set decrescendoText = \markup { \italic "decresc." } \set decrescendoSpanner = #'text }
+DIMIN =   { \set decrescendoText = \markup { \italic "dimin." }   \set decrescendoSpanner = #'text }
 %----- CRESCENDO SPÉCIAL
-CREScendo = { \set crescendoText = \markup { \italic "cres    " } \set crescendoSpanner = #'dashed-line }
-cresCENdo = { \set crescendoText = \markup { \italic "cen    " }  \set crescendoSpanner = #'dashed-line }
-crescenDO = { \set crescendoText = \markup { \italic "do" }   \set crescendoSpanner = #'dashed-line }
+CREScendo = { \set crescendoText = \markup { \italic "cres    " } \set crescendoSpanner = #'text }
+cresCENdo = { \set crescendoText = \markup { \italic "cen    " }  \set crescendoSpanner = #'text }
+crescenDO = { \set crescendoText = \markup { \italic "do" }   \set crescendoSpanner = #'text }
 %----- REMPLACEMENT DE LA MESURE 4/2
 NOTEEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override NoteHead #'extra-offset = #$beg-end #})
+ #{ \once \override NoteHead #'extra-offset = #beg-end #})
 RESTEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Rest #'extra-offset = #$beg-end #})
+ #{ \once \override Rest #'extra-offset = #beg-end #})
 TIMESIGNO = \override Staff.TimeSignature #'transparent = ##t
 TSCREXO = #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override TextScript #'extra-offset = #$beg-end #})
+ #{ \once \override TextScript #'extra-offset = #beg-end #})
 TIMESIGOK = \markup { \musicglyph #"timesig.C22" \musicglyph #"timesig.C22" }
 KEYTIME = { \key solb \major \TIMESIGNO \time 4/2 \TSCREXO #'(-4 . -10.5) s1*0 ^\TIMESIGOK }
 KEYTIMEB = { \key solb \major \TIMESIGNO \time 4/2 \TSCREXO #'(-4 . -3.5) s1*0 ^\TIMESIGOK }
@@ -892,7 +892,7 @@ notePartBas = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 dynPartCom = {
- \override DynamicTextSpanner #'dash-period = #-1.0
+ \override DynamicTextSpanner #'style = #'none
  
 %1-4
 s1 \pp s1
@@ -901,21 +901,21 @@ s1*2
 \times 4/6 { s8 s8 \cr s4. s8 \! }   \times 4/6 { s8 s4 \decr s8 s8 \! s8 } s1
 %5-8
 s1*2
-s1 s4 \setTextCresc s2 \cr s4 \! 
+s1 s4 \crescTextCresc s2 \cr s4 \! 
 s1*2
 s1*2 \p
 %9-12
 s1*4
-s1 \times 4/6 { s8 \setTextCresc s4 \cr s4 s8 \! }  \times 4/6 { s2 \cr s8 s8 \! }
+s1 \times 4/6 { s8 \crescTextCresc s4 \cr s4 s8 \! }  \times 4/6 { s2 \cr s8 s8 \! }
 \times 4/6 { s4 s8 \decr s4. }  \times 4/6 { s2 s8 \! s8 }  s1
 %13-16
 s1 \pp s1
 s1 \DIMIN s4 \decr s4 \! s2
 s1*2
-s1 \times 4/6 { s4 \setTextCresc s2 \cr } s2 \! 
+s1 \times 4/6 { s4 \crescTextCresc s2 \cr } s2 \! 
 %17-20
 s1*4
-\times 4/6 { s8 \setTextCresc s2 \cr s8 \! } s2 s1
+\times 4/6 { s8 \crescTextCresc s2 \cr s8 \! } s2 s1
 s1*2
 %21-24
 s1 \pp s1
@@ -938,7 +938,7 @@ s1 \ppp s1
 %37-40
 s1 \pp s1
 \times 8/12 { s8 s8 \cr s2 s2 s8 s8 \! } \times 4/6 { s8 \fz s8 \decr s4 s8 s8 \! } s2
-s1 \pp s2 \times 4/6 { s8 \setTextCresc s4 \cr s4 \! s8 }
+s1 \pp s2 \times 4/6 { s8 \crescTextCresc s4 \cr s4 \! s8 }
 s1 \f s1
 %41-44
 s1*2
@@ -952,24 +952,24 @@ s1*4
 %49-51
 s1*6
 %52-56
-s1 \times 4/6 { s8 \DTSDASHOK \setTextCresc s4 \cr s4. } s2
+s1 \times 4/6 { s8 \DTSDASHOK \crescTextCresc s4 \cr s4. } s2
 s1 s1 \!
 s1 s2 s2 \pp
 s1*4
 %57-60
-s1 \setTextCresc s2 \cr s2 \!
+s1 \crescTextCresc s2 \cr s2 \!
 s1 s1 \p
 s1*4
 %61-64
 s1*8
 %65-68
-\times 4/6 { s8 \setTextCresc s4 \cr s4 s8 \! } s2 s1
+\times 4/6 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
 s1*2
 s1 \pp s1
 s2 \DIMIN s4 \decr s4 \! s1
 %69-72
 s1*2
-\times 4/6 { s8 \setTextCresc s4 \cr s4 s8 \! } s2 s1
+\times 4/6 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
 s1 \fp s1 \pp
 s1 \DIMIN s4 \decr s4 \! s2
 %73-76
@@ -979,8 +979,8 @@ s1 \times 4/6 { s4. \DTSDASHOK \CREScendo s8 \cr s4 } s2
 s1 \DYNEXO #'(1 . 0) s1 \fz
 %77-80
 s1*2 \p
-s1 \times 4/6 { s8 \setTextCresc s2 \cr s8 } s2 \!
-s2 \times 4/6 { s8 \setTextCresc s2 \cr s8 } s1 \!
+s1 \times 4/6 { s8 \crescTextCresc s2 \cr s8 } s2 \!
+s2 \times 4/6 { s8 \crescTextCresc s2 \cr s8 } s1 \!
 s1 s1 -\FFZ
 %81-86
 s1 \p \DYNEXO #'(0.5 . -1) s1 \pp
@@ -1070,7 +1070,7 @@ s1*12
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 dynPartBas = {
- \override DynamicTextSpanner #'dash-period = #-1.0
+ \override DynamicTextSpanner #'style = #'none
  
 %1-24
 s1*48
@@ -1334,7 +1334,7 @@ s1 \! \ppp s1
 s1*4
 }
 
-pedal = { s1 \sustainDown }
+pedal = { s1 \sustainOn }
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1358,28 +1358,6 @@ pedal = { s1 \sustainDown }
    \override SpacingSpanner #'spacing-increment = #1.0
    \override SpacingSpanner #'shortest-duration-space = #1.4
    pedalSustainStrings = #'("Ped." "*Ped." "*")
-  }
-  \context {
-   \type "Engraver_group"
-   \name Dynamics
-   \alias Voice % So that \CRESC works, for example.
-   \consists "Output_property_engraver"
-
-   \override VerticalAxisGroup #'minimum-Y-extent = #'(-0.5 . 0.5)
-   \override DynamicLineSpanner #'Y-offset = #0
-   pedalSustainStrings = #'("Ped." "*Ped." "*")
-   pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-
-   \consists "Piano_pedal_engraver"
-   \consists "Script_engraver"
-   \consists "Dynamic_engraver"
-   \consists "Text_engraver"
-   \consists "Skip_event_swallow_translator"
-   \consists "Axis_group_engraver"
-  }
-  \context {
-   \PianoStaff
-   \accepts Dynamics
   }
  }
 }
