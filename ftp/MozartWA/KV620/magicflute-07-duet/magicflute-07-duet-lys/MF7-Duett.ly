@@ -2,6 +2,7 @@
 
 markings = {\time 6/8 s2.*49 \bar "|."}
 incmidi = "midi.ly"
+pLyrics = {}
 
 clarinettibI = \relative c''' {
 	\partial 4. r4 r8

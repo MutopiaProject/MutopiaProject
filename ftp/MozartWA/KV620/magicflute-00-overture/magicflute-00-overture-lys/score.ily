@@ -76,7 +76,6 @@ stringGroup = \new StaffGroup = "string_group" <<
 	\brassGroup
 	\timpaniStaff
 	\stringGroup
-	\bassiGroup
 >>
 	\layout {}
 	\include \incmidi
