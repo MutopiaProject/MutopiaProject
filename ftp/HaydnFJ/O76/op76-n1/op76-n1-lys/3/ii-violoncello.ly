@@ -1,11 +1,7 @@
-\version "2.6.0"
+\version "2.16.0"
 celloSecondMov =  \relative g {
   \key g \major
   \clef bass
-
-  #(override-auto-beam-setting '(end 1 16 * *)  1 4)
-  #(override-auto-beam-setting '(end 1 16 * *)  2 4)
-  #(override-auto-beam-setting '(end 1 16 * *)  3 4)
 
   g4\p r
   | r2 fis4( g)

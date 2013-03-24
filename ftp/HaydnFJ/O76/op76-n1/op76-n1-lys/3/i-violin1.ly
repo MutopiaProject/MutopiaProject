@@ -1,14 +1,10 @@
-\version "2.6.3"
+\version "2.16.0"
 violinIFirstMov =  \relative g'' {
   \key c \major
   \clef violin
 
   \noTupletBracket
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 1 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 3 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 5 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 7 8)
 
   \repeat volta 2 {
     g8-.\f
@@ -137,8 +133,8 @@ violinIFirstMov =  \relative g'' {
     | d,,-. r <g, g'>-. r <c e>4 r
     | R1
     | r4 r16. g'32 a16. b32 c16. d32 e16. f32 g8 c-.
-    | \grace { \graceStroke b8 } a4( g8) c,-. 
-    \grace { \graceStroke b8 } a4( g16.) g'32 e16. c32
+    | \slashedGrace b8 a4( g8) c,-. 
+    \slashedGrace b8 a4( g16.) g'32 e16. c32
     | b16.\fz c32 d16. e32 f16. e32 f16. a32 
     e16. g32 d16. f32 c16. g'32 e16. c32
 
@@ -180,11 +176,11 @@ violinIFirstMov =  \relative g'' {
     | g,2. f8( d)
     | c4\f r8 c'-. b-. f'-. e-. d-.
     | c-. e-. g-. c-. b-. f'-. e-. d-.
-    | #(set-octavation 1) c-. e-. g-. c-. b16 g b g b g b g
+    | \ottava #1 c-. e-. g-. c-. b16 g b g b g b g
 
     % 120
     | c8 c c c b16 g b g b g b g
-    | c8 c c #(set-octavation 0) e,, f8.(\trill e32 f) g8-. b,-.
+    | c8 c c \ottava #0 e,, f8.(\trill e32 f) g8-. b,-.
   }
 
   \alternative {

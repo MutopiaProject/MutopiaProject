@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIFourthMov =  \relative g' {
   \key g \minor
   \clef violin
@@ -65,10 +65,10 @@ violinIFourthMov =  \relative g' {
     | d8) r \grace { f32[( es d] } es4)->( 
     d8) r \grace { f32[( es d] } es4)->( 
     | d8) r r4 r d8. d16
-    | \cresc g2 r4 d8. d16
+    | g2\cresc r4 d8. d16
     | bes'2 r4 bes8. bes16
     | es2 r4 es8. es16
-    | \endcresc \times 2/3 { es8[\f d c] bes[ a g] 
+    | \times 2/3 { es8[\f d c] bes[ a g] 
     f[ g a] bes[ c d] }
 
     % 50
@@ -77,8 +77,7 @@ violinIFourthMov =  \relative g' {
     | \times 2/3 { es,\ff g' g g g g e, g' g g g g }
     | \times 2/3 { f,[ bes d] f[ d bes] } f4 \afterGrace c'4(\trill {bes16[ c)]} 
     | bes4-. es,,2(\fz f4)-.
-    | \acciaccatura as8 ges4\p( f 
-    \grace { \graceStroke as8 } ges4 f)
+    | \acciaccatura as8 ges4\p( f \slashedGrace as8 ges4 f)
     | ges2( f4 es)
     | des-. es2(\fz f4)-.
     | ges4(\trill f8) r ges4(\trill f8) r

@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIISecondMov =  \relative c' {
   \key c \major
   \clef violin
@@ -37,10 +37,10 @@ violinIISecondMov =  \relative c' {
   | g g g g g g g g
   | d d d d d d d d
   | d d d d d d d d
-  | \cresc es es es es g g g g
+  | es\cresc es es es g g g g
 
   % 30
-  | \endcresc <g b>16\f <g b> <g b> <g b> <g b>8 r
+  | <g b>16\f <g b> <g b> <g b> <g b>8 r
   | R2
   | g8\p r a r
   | g4(-\markup { \italic m.v. } fis)
@@ -58,8 +58,8 @@ violinIISecondMov =  \relative c' {
   | a gis gis gis g g g g
   | g32( fis g fis g bes a g) fis4
   | f32( e f e f a g f) e( dis e dis e e' d! c)
-  | \cresc b8[ ~ b32 f'( e d)] c( b c b) c( e d c)
-  | \endcresc b(\f cis d cis) e( d f e) d( cis f e) d( cis f e)
+  | b8[\cresc ~ b32 f'( e d)] c( b c b) c( e d c)
+  | b(\f cis d cis) e( d f e) d( cis f e) d( cis f e)
   | d( e) f( e) f(-\> e) f-. e-. d-. c!-. b-. a-. g-. f-. e-. d-.-\!
   | c4(\p b)
 
@@ -107,8 +107,8 @@ violinIISecondMov =  \relative c' {
   | e g g g g g g g
   | g g g g g g g g
   | g g g g g g g g
-  | \cresc as as as as c, c c c
-  | \endcresc <c e!>\f <c e> <c e> <c e> <c e>8 r
+  | as\cresc as as as c, c c c
+  | <c e!>\f <c e> <c e> <c e> <c e>8 r
   | R2
   | c'8\p r f, r
   | <g, e'>16 <g e'> <g e'> <g e'> <g f'> <g f'> <g f'> <g f'>

@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIThirdMov =  \relative d'' {
   \key d \minor
   \clef violin
@@ -117,10 +117,10 @@ violinIThirdMov =  \relative d'' {
     | cis( d) e( fis g a)
     | b( a) d( cis b a)
     | g( a) b-. cis-. d-. e-.
-      #(set-octavation 1)
+      \ottava #1
     | fis( g) a-.\p a-. a-. a-.
     | g( a) b-. b-. b-. b-.
     | a( b) cis-. cis-. cis-. cis-.
-    | d4-. #(set-octavation 0) r
+    | d4-. \ottava #0 r
   }
 }

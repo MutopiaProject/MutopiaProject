@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinISecondMov =  \relative e' {
   \key c \major
   \clef violin
@@ -37,11 +37,10 @@ violinISecondMov =  \relative e' {
   | r a-. r g-. r e'-. r d-. r c-. r b-. r a-. r g-.
   | r gis-. r gis-. r gis-. r gis-. r a-. r a-. r a-. r a-.
   | r bes-. r bes-. r bes-. r bes-. r bes16 bes32 r bes16 bes32
-  | r \cresc <bes, bes'>16 <bes bes'> <bes bes'> <bes bes'>32
-  r <bes bes'>16 <bes bes'> <bes bes'> <bes bes'>32
+  | r <bes, bes'>16\cresc q q q32 r q16 q q q32
 
   % 30
-  | r32 \endcresc <b!-\f b'>16 <b b'> <b b'> <b b'>32
+  | r32 <b! b'>16\! <b b'> <b b'> <b b'>32
   r g'-.-[ d-. b'-.-] g-. b-. g-. d'-.
   | b d b g' d-\markup { \italic dim. } g d b' g b g d b d g d
   | b'8-\p r fis,, r
@@ -60,8 +59,8 @@ violinISecondMov =  \relative e' {
   | r32 e,-. fis-. gis-. a-. b-. c!-. dis-. e-( dis e dis e f! e d-)
   | cis4 c32-( b c b c e d c-)
   | b4 c32-( b c b c g' f e-)
-  | \cresc d-( cis d cis-) d-( a' g f-) e-( dis e dis-) e-( g f e-)
-  | \endcresc d!-( e f e-) g-( f a g-) f-( e a g-) f-( e a g-)
+  | d-(\cresc cis d cis-) d-( a' g f-) e-( dis e dis-) e-( g f e-)
+  | d!-(\! e f e-) g-( f a g-) f-( e a g-) f-( e a g-)
   | f-( gis-) a-( gis-) a-(-\> gis-) a-. g-. f-. e-. d-. c-. b-. a-. g-. f-.-\!
   | e4-(-\p d-)
 
@@ -109,9 +108,8 @@ violinISecondMov =  \relative e' {
   | r d r c r a' r g r f r e r d r c
   | r cis r cis r cis r cis r d r d r d r d
   | r es r es r es r es r es16-[ es32-] r es16-[ es32-]
-  | r \cresc <es, es'>16-[ <es es'> <es es'> <es es'>32-]
-  r <es es'>16-[ <es es'> <es es'> <es es'>32-]
-  | r \endcresc <e! e'!>16-[-\f <e e'> <e e'> <e e'>32-]
+  | r <es, es'>16-[\cresc q q q32-] r q16-[ q q q32-]
+  | r <e! e'!>16-[-\f <e e'> <e e'> <e e'>32-]
   r c'-.-[ g-. e'-.-] c-. g'-. e-. c'-.
   | g e' c e c-\markup { \italic dim. } g' e g e g c g c g c g
 

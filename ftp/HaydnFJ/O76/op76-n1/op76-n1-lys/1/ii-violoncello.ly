@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 celloSecondMov =  \relative f {
   \key c \major
   \clef bass
@@ -35,10 +35,10 @@ celloSecondMov =  \relative f {
   | b b b b b b b b
   | fis fis fis fis fis fis fis fis
   | g g g g f! f f f
-  | \cresc es es es es es, es es es
+  | es\cresc es es es es, es es es
 
   % 30
-  | \endcresc d\f d d d d8 r
+  | d\f d d d d8 r
   | R2
   | d''8\p r d, r
   | g,4(-\markup { \italic m.v. } d')
@@ -106,8 +106,8 @@ celloSecondMov =  \relative f {
   | e e e e e e e e
   | b b b b b b b b
   | c c c c bes bes bes bes
-  | \cresc as as as as as as as as
-  | \endcresc g\f g g g g8 r
+  | as\cresc as as as as as as as
+  | g\f g g g g8 r
 
   % 90
   | R2

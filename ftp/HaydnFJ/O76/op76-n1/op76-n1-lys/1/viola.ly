@@ -1,6 +1,6 @@
 % -*- LilyPond -*-
 
-\version "2.6.0"
+\version "2.16.0"
 
 markingsI = {}
 markingsII = {}
@@ -23,6 +23,15 @@ violaOverridesIV = {}
 
 #(set-global-staff-size 16.0)
 
+\layout {
+  \compressFullBarRests
+  \context {
+    \Score
+    \override BarNumber #'font-size = #1
+    \override BarNumber #'padding = #3
+  }
+}
+
 \include "../defs.ly"
 \include "defs.ly"
 \include "viola_defs.ly"
@@ -30,18 +39,16 @@ violaOverridesIV = {}
 \include "i-viola.ly"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
+%    \override Score.BarNumber #'padding = #3
     \set Staff.midiInstrument = #""
-    \set Staff.instrument = "Viola"
+    \set Staff.instrumentName = "Viola"
 
     \timeI
     \violaFirstMov
-    \context Voice = "breaks" { \violaBreakI }
-    \context Voice = "markings" { \markingsI }
-    \context Voice = "override" { \violaOverridesI }
+    \new Voice = "breaks" { \violaBreakI }
+    \new Voice = "markings" { \markingsI }
+    \new Voice = "override" { \violaOverridesI }
   >>
 
   \include "i-midi.ly"
@@ -54,19 +61,15 @@ violaOverridesIV = {}
 \include "ii-viola.ly"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #""
-    \set Staff.instrument = "Viola"
+    \set Staff.instrumentName = "Viola"
 
     \timeII
     \violaSecondMov
-    \context Voice = "breaks" { \violaBreakII }
-    \context Voice = "markings" { \markingsII }
-    \context Voice = "override" { \violaOverridesII }
+    \new Voice = "breaks" { \violaBreakII }
+    \new Voice = "markings" { \markingsII }
+    \new Voice = "override" { \violaOverridesII }
   >>
 
   \include "ii-midi.ly"
@@ -82,19 +85,15 @@ violaOverridesIV = {}
 \include "iii-viola.ly"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #""
-    \set Staff.instrument = "Viola"
+    \set Staff.instrumentName = "Viola"
 
     \timeIII
     \violaThirdMov
-    \context Voice = "breaks" { \violaBreakIII }
-    \context Voice = "markings" { \markingsIII }
-    \context Voice = "override" { \violaOverridesIII }
+    \new Voice = "breaks" { \violaBreakIII }
+    \new Voice = "markings" { \markingsIII }
+    \new Voice = "override" { \violaOverridesIII }
   >>
 
   \include "iii-midi.ly"
@@ -110,19 +109,15 @@ violaOverridesIV = {}
 \include "iv-viola.ly"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #""
-    \set Staff.instrument = "Viola"
+    \set Staff.instrumentName = "Viola"
 
     \timeIV
     \violaFourthMov
-    \context Voice = "breaks" { \violaBreakIV }
-    \context Voice = "markings" { \markingsIV }
-    \context Voice = "override" { \violaOverridesIV }
+    \new Voice = "breaks" { \violaBreakIV }
+    \new Voice = "markings" { \markingsIV }
+    \new Voice = "override" { \violaOverridesIV }
   >>
 
   \include "iv-midi.ly"

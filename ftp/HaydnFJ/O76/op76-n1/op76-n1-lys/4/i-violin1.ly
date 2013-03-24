@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIFirstMov =  \relative e' {
   \key bes \major
   \clef violin
@@ -215,7 +215,7 @@ violinIFirstMov =  \relative e' {
   | bes'-. r a-. r bes-. r a-. r
   | bes\ff-| bes-| a-| a-| bes-| bes-| a-| a-| 
   | bes,16 bes' bes, bes' c, c' c, c' d, d' d, d' es, es' es, es'
-  | \grace { \graceStroke f,8 } f'1\fermata
+  | \slashedGrace f,8 f'1\fermata
   | g,,1\p ~
   | g ~
   | g4.( fis8 g fis g bes)

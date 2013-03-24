@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violaFourthMov =  \relative g {
   \key g \minor
   \clef alto
@@ -61,7 +61,7 @@ violaFourthMov =  \relative g {
     | f8 r r4 r f'->\p ~
     | f8 r f4-> ~ f8 r f4-> ~
     | f8 r r4 r2
-    | r4 \cresc \times 2/3 { bes8[ a g] f[ es d] c[ bes a!] }
+    | r4 \times 2/3 { bes8[\cresc a g] f[ es d] c[ bes a!] }
     | \times 2/3 { g[ bes es] g[-> f es] d[ c bes] as[ g f] }
     | \times 2/3 { es[ g c] es[ g c] } es4 d
     | c\f es d2

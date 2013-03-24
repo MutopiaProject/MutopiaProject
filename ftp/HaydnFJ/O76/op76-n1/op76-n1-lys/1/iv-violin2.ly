@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIIFourthMov =  \relative g' {
   \key g \minor
   \clef violin
@@ -61,10 +61,10 @@ violinIIFourthMov =  \relative g' {
     | d8) r r4 r c->(\p
     | d8) r c4->( d8) r c4(->
     | d8) r r4 r bes8. bes16
-    | \cresc bes2 r4 bes8. bes16
+    | bes2\cresc r4 bes8. bes16
     | g'2 r4 d8. d16
     | g2 r4 g8. g16
-    | \endcresc f1\f
+    | f1\f
 
     % 50
     | f
@@ -170,7 +170,7 @@ violinIIFourthMov =  \relative g' {
   | bes1(
   | a2) r
   | R1*2
-  | R1\fermata
+  | r1\fermata
   | r2\fermata r4
 
   \key g \major

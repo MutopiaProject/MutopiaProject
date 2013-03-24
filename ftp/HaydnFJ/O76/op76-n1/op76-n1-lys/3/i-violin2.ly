@@ -1,14 +1,10 @@
-\version "2.6.3"
+\version "2.16.0"
 violinIIFirstMov =  \relative d'' {
   \key c \major
   \clef violin
 
   \noTupletBracket
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 1 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 3 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 5 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 7 8)
 
   \repeat volta 2 {
     d8-.\f

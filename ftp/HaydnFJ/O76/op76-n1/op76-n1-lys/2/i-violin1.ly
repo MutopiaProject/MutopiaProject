@@ -1,13 +1,10 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIFirstMov =  \relative a' {
   \key d \minor
   \clef violin
 
   \noTupletBracket
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
-  #(override-auto-beam-setting '(end 1 16 * *)  1 4)
-  #(override-auto-beam-setting '(end 1 16 * *)  2 4)
-  #(override-auto-beam-setting '(end 1 16 * *)  3 4)
 
   \repeat volta 2 {
     a2\f d,
@@ -30,7 +27,7 @@ violinIFirstMov =  \relative a' {
     | c16 d, e fis g a bes c d8-. d-. d-. g-.
     | e4.\trill( d16 e) f8( a) c-. c-.
     | c( b) b-. b-. r bes-. bes-. bes-.
-    | bes( a) a-. a-. \grace { \graceStroke d,8 } d'4 c16( bes a g)
+    | bes( a) a-. a-. \slashedGrace d,8 d'4 c16( bes a g)
     | f4.( g16 f) e8-. c16 d e f g a
 
     % 20

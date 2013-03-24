@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 celloFourthMov =  \relative e, {
   \key g \minor
   \clef bass
@@ -56,7 +56,7 @@ celloFourthMov =  \relative e, {
     | \times 2/3 { bes,[ d f] bes[-> a g] f[ es d] c[\p bes a] }
     | \times 2/3 { bes[ c bes] a[ c f] bes,[ c bes] a[ c f] }
     | \times 2/3 { bes,[ d f] bes[-> a g] f[ es d] c[ bes a] }
-    | \cresc \times 2/3 { g[ bes d] g[ f es] d[ c bes] a![ g f] }
+    | \deprecatedcresc \times 2/3 { g[ bes d] g[ f es] d[ c bes] a![ g f] }
     | \times 2/3 { es[ g bes] es[ d c] bes[ as g] f[ es d] }
     | \times 2/3 { c[ es g] c[ es g] c[ d c] bes[ c bes] }
     | a2\f bes

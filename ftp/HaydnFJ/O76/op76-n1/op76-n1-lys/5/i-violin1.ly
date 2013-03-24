@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIFirstMov =  \relative a' {
   \key d \major
   \clef violin
@@ -49,8 +49,8 @@ violinIFirstMov =  \relative a' {
   | a( g) g'( e c bes) a( bes c d e f)
   | g8( bes) e,-. f-. r r
   | g16-. a-. bes-. c-. d-. e-. f8 r r
-  | #(set-octavation 1) g16-. a-. bes-. c-. d-. e-. f8 
-  #(set-octavation 0) r r
+  | \ottava #1 g16-. a-. bes-. c-. d-. e-. f8 
+  \ottava #0 r r
   | R2.*2
   | r8 r d,, g8.( fis16 g8)
 

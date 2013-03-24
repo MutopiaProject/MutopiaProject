@@ -1,12 +1,9 @@
-\version "2.6.3"
+\version "2.16.0"
 violinIISecondMov =  \relative b {
   \key g \major
   \clef violin
 
   \noTupletBracket
-  #(override-auto-beam-setting '(end 1 16 * *)  1 4)
-  #(override-auto-beam-setting '(end 1 16 * *)  2 4)
-  #(override-auto-beam-setting '(end 1 16 * *)  3 4)
 
   b4.(\p d8
   | g4 fis a g)

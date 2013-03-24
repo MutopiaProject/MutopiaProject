@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIFourthMov =  \relative cis''' {
   \key d \major
   \clef violin
@@ -118,11 +118,11 @@ violinIFourthMov =  \relative cis''' {
   | b a b cis d e fis gis
   | a gis fis e d cis b a
   | b a b cis d e fis gis
-  | a8-. r #(set-octavation 1) b-. r
+  | a8-. r \ottava #1 b-. r
   | cis-. r d-. r
 
   % 110
-  | e4-. #(set-octavation 0) r
+  | e4-. \ottava #0 r
   | R2
   | fis,,16( gis fis eis) fis( gis fis eis)
   | fis8( gis a fis)

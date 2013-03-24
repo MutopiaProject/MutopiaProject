@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violaSecondMov =  \relative g {
   \key es \major
   \clef alto
@@ -37,10 +37,10 @@ violaSecondMov =  \relative g {
   | es4 r r
   | bes2.(
   | a4.) a8[ a a]
-  | a2.(-\>
+  | a2.(\>
 
   % 30
-  | bes4)-\! r r
+  | bes4)\! r r
   | d,( c d)
   | es( f ges)
   | f2. ~

@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violinIThirdMov =  \relative c'' {
   \key c \major
   \clef violin
@@ -125,7 +125,7 @@ violinIThirdMov =  \relative c'' {
 
     % 90
     | fis'( d b)
-    | a2( \grace { \graceStroke cis8 } b4)
+    | a2( \slashedGrace cis8 b4)
     | a4 r e
     | c'!2( a4)
     | f!2( d4)

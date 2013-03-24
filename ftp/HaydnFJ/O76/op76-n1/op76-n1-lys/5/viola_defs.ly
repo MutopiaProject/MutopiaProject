@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 
 violaBreakI = {
   s8
@@ -6,9 +6,3 @@ violaBreakI = {
 }
 
 violaBreakBeforeIV = ##t
-
-violaOverridesII = {
-  s4
-  s1*31
-  \lowerDynamics s1 % 32
-}

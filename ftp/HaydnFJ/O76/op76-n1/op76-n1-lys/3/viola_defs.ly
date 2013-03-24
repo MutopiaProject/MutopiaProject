@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 
 violaBreakII = {
   s2
@@ -8,9 +8,4 @@ violaBreakII = {
 
 violaBreakIV = {
   s1*83\pageBreak
-}
-
-violaOverridesIV = {
-  s1*86
-  s4 \once \override DynamicText #'extra-offset = #'(-1 . 0) s2. % 87
 }

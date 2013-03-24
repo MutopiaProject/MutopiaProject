@@ -1,14 +1,10 @@
-\version "2.6.0"
+\version "2.16.0"
 violaFirstMov =  \relative g' {
   \key c \major
   \clef alto
 
   \noTupletBracket
   \set tupletSpannerDuration = #(ly:make-moment 1 4)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 1 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 3 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 5 8)
-  #(revert-auto-beam-setting '(end 1 32 4 4) 7 8)
 
   \repeat volta 2 {
     g8-.\f

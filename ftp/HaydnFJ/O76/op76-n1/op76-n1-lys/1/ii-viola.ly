@@ -1,4 +1,4 @@
-\version "2.6.0"
+\version "2.16.0"
 violaSecondMov =  \relative g {
   \key c \major
   \clef alto
@@ -35,10 +35,10 @@ violaSecondMov =  \relative g {
   | d, d d d d d d d
   | d d d d c c c c
   | bes bes bes bes as as as as
-  | \cresc g g g g cis cis cis cis
+  | g\cresc g g g cis cis cis cis
 
   % 30
-  | \endcresc d\f <g, d'> <g d'> <g d'> <g d'>8 r
+  | d\f <g, d'> <g d'> <g d'> <g d'>8 r
   | R2
   | d'8\p r d r
   | d4(-\markup { \italic m.v. } c)
@@ -56,8 +56,8 @@ violaSecondMov =  \relative g {
   | b b b b b-[ b-] bes-[ g'32( f!)-]
   | e32( dis e dis e g f! e) d4
   | d32( cis d cis d f e d) c4
-  | \cresc f32( e f e) f( b, c d) e8-[ ~ e32 c( d e)-]
-  | \endcresc f4\f r
+  | f32(\cresc e f e) f( b, c d) e8-[ ~ e32 c( d e)-]
+  | f4\f r
   | R2
   | g,4\p( f)
 
@@ -105,8 +105,8 @@ violaSecondMov =  \relative g {
   | g c c c c c c c
   | g g g g f' f f f
   | es es es es des des des des
-  | \cresc c c c c fis fis fis fis
-  | \endcresc g\f c c c c8 r
+  | c\cresc c c c fis fis fis fis
+  | g\f c c c c8 r
   | R2
 
   % 90
