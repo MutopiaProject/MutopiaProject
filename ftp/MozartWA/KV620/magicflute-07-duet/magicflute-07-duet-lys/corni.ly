@@ -3,5 +3,5 @@
 \include "header.ly"
 
 \include "MF7-Duett.ly"
-\include "corni.ily"
+\include "cornie.ily"
 \include "piece.ly"
