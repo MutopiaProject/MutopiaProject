@@ -1,8 +1,7 @@
-\version "2.11.44"
+\version "2.16.1"
 
 \paper {
-    page-top-space = #0.0
-    %indent = 0.0
+    top-markup-spacing #'basic-distance = #6
     line-width = 18.0\cm
     ragged-bottom = ##f
     ragged-last-bottom = ##f
@@ -21,16 +20,28 @@
         mutopiacomposer = "BachJS"
         opus = "BWV 988"
         date = "1741"
-        mutopiainstrument = "Clavier"
+        mutopiainstrument = "clavichord,harpsichord"
         style = "Baroque"
         source = "Bach-Gesellschaft Edition 1853 Band 3"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "Hajo Dezelski"
         maintainerEmail = "dl1sdz (at) gmail.com"
 	
- footer = "Mutopia-2008/04/22-1405"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2013/03/25-1405"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
+
+%------------------ MACROS
+raiseMMRest = \once \override MultiMeasureRest #'staff-position = #6
+raiseMMRestTwo = \once \override MultiMeasureRest #'staff-position = #10
+staffUp = \change Staff = "upper"
+staffDown = \change Staff = "lower"
+shortenStem = \once \override Stem #'length-fraction = #(magstep -2)
+lengthenStem = \once \override Stem #'length-fraction = #(magstep 1.5)
+shiftNoteColLeft = \once \override NoteColumn #'force-hshift = #-0.3
+shiftBeam = \once \override Beam #'positions = #'(5.2 . 5.3)
+ignoreClashNote = \override NoteColumn #'ignore-collision = ##t
+%------------------
 
 
 sopranoOne =   \relative b' {
@@ -40,7 +51,7 @@ sopranoOne =   \relative b' {
     d'8 [ a d ] | % 2
     g4. ~ | % 3
     g8 [ fis ] r8 | % 4
-	R1*3/8 | % 5
+    	R1*3/8 | % 5
 	R1*3/8 | % 6
     r8 a,8 [ c8 ~ ] | % 7
     c16 [ a b8 ] r8 | % 8
@@ -55,7 +66,7 @@ sopranoOne =   \relative b' {
 	
   \alternative {
 	  { cis8 [d8 ] r8 | } %16
-	  { cis8 [d8 ] r8 | } %16
+	  { cis8\repeatTie [d8 ] r8 | } %16
     } %end alternative
 	
     \repeat volta 2 { %begin repeated section
@@ -69,7 +80,7 @@ sopranoOne =   \relative b' {
     g16 \prall [ fis e8 ] r8 | % 24
     r8 c'8 [ e ] | % 25
     a,8 [ b d ] | % 26
-    g,8 c4 ~ | % 27
+    \lengthenStem g,8 c4 ~ | % 27
     c8 [ d c ] | % 28
     b16 [ c ] d4 ~ | % 29
     d16 [ c d c b a ] | % 30
@@ -77,7 +88,7 @@ sopranoOne =   \relative b' {
     } %end repeated section
 	 \alternative {
 		 {fis8  [ g8 ] r8 |} % 32
-		 {fis8  [ g8 ] r8 |} % 32
+		 { fis8\repeatTie  [ g8 ] r8 |} % 32
     } %end alternative
 }
 
@@ -95,14 +106,14 @@ sopranoTwo =   \relative d' {
 	R1*3/8 | % 9
 	R1*3/8 | % 10
     r8 cis8 [ e ] | % 11
-    a,4 g8 ~ | % 12
+    a,4 \stemUp \shiftOn \shortenStem g8 ~ \stemDown | % 12
     g8 [ fis a ] | % 13
     d,8 [ e g ] | % 14
     cis,8 [ a' g ] ~ | % 15
     } %end of repeated section
 	 \alternative {
 		 {g16 [ e fis8 ] r8 | } % 16
-		 {g16 [ e fis8 ] r8 | } % 16
+		 {g16\repeatTie [ e fis8 ] r8 | } % 16
     } %end alternative
   
     \repeat volta 2 { %begin repeated section
@@ -116,15 +127,15 @@ sopranoTwo =   \relative d' {
     e4 r8 | % 24
     r8 a8 [ c ] | % 25
     fis,8 [ g b ] | % 26
-    e,8 a4 ~ | % 27
+    \stemUp \shortenStem e,8 \stemDown a4 ~ | % 27
     a8 [ fis a ~ ] | % 28
     a8 [ g b ] | % 29
     e,4. | % 30
-    a,8 [ d  c ~ ] | % 31  
+    \staffDown \stemUp \shiftNoteColLeft \shiftBeam a,8 [ \staffUp \stemDown d  c ~ ] | % 31  
     } %end repeated section
 	 \alternative {
-		 {  c16 [ a b8 ] r8 | }% 32 
-		 {  c16 [ a b8 ] r8 | }% 32 
+		 {  c16 [ \staffDown \stemUp a b8 ] s8 | }% 32 
+		 {  \staffUp \stemDown c16\repeatTie [ \staffDown \stemUp a b8 ] s8 | }% 32 
     } %end alternative
 }
 
@@ -137,19 +148,19 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 bassOne = \relative b {
 	\repeat volta 2 { %begin repeated section
 	\stemUp
-    R1*3/8 | % 1
-    R1*3/8 | % 2
+    \raiseMMRest R1*3/8 | % 1
+    \raiseMMRest R1*3/8 | % 2
     r8 b8 [ g ] | % 3
     d'4 r8 | % 4
     r8 g,8 [ b ] | % 5
     e,8 [ a g ~ ] | % 6
     g8 [ fis16 e fis8 ] | % 7
     g8 [ d ] r8 | % 8
-    R1*3/8 | % 9 
+    \raiseMMRest R1*3/8 | % 9 
     r8 d'8 [ fis ] | % 10
     b,8 [ e ] r8 | % 11
-    r8 cis8 [ e8 ] | % 12
-    a,4. ~ | % 13
+    r8 cis8 [ \staffUp \stemDown e8 ] | % 12
+    \staffDown \stemUp a,4. ~ | % 13
     a8 [ g b ] | % 4
     e,8 [ fis e ] | % 15
 
@@ -161,7 +172,7 @@ bassOne = \relative b {
     } %end alternative
   
     \repeat volta 2 { %begin repeated section
-    R1*3/8 | % 17
+    \raiseMMRestTwo R1*3/8 | % 17
     r8 d'8 [ g8 ] | % 18
     e8 c4 ~ | % 19
     c8  [ b16 a g fis ] | % 20
@@ -170,8 +181,8 @@ bassOne = \relative b {
     c8 b4 ~| % 23 
     b8  [ g b ] | % 24
     e,8 [ a16 g fis g ] | % 25
-    d'4. | % 26
-    c8 [ fis, a ] | % 27
+    \staffUp \stemDown d'4. | % 26
+    c8 [ \staffDown \stemUp fis, a ] | % 27
     d,4. ~ | % 28
     d4  g8 ~| % 29
     g8 [ a c ] | % 30
@@ -195,7 +206,7 @@ bassTwo = \relative c' {
     c4. | % 6
     d4. | % 7
     r8 b8 [ d ] | % 8
-    g,8 g'4 ~ | % 9
+    g,8 g'4 ^~ | % 9
     g8 fis4 ~ | % 10
     fis8 [ e g ] | % 11
     cis,8 [ a' cis ] | % 12
@@ -206,11 +217,11 @@ bassTwo = \relative c' {
     } %end of repeated section
 	 \alternative {
 		 { d,8. [ d'16 e fis ] | } % 16
-		 { d,8. [ a''16  b cis ] | } % 16
+		 { \ignoreClashNote \stemUp d,8. [ \stemDown a''16  b cis ] | } % 16
     } %end alternative
   
     \repeat volta 2 { %begin repeated section
-    d4 c8 | % 17 
+    d4 c!8 | % 17 
     b4 g8 | % 18
     c8 [ fis, a ] | % 19
     b8 [ dis, b ] | % 20
@@ -238,7 +249,6 @@ bass = << \bassOne \\ \bassTwo>>
 
 \score {
     \context PianoStaff <<
-        \set PianoStaff.instrumentName = "Clavier  "
         \set PianoStaff.midiInstrument = "harpsichord"
         \new Staff = "upper" { \clef "treble" \key g \major \time 3/8 \soprano }
         \new Staff = "lower"  { \clef "bass" \key g \major \time 3/8 \bass }
