@@ -1,4 +1,4 @@
-\version "1.6.0"
+\version "2.16.0"
 
 % Notes:
 % - The last rest in the last measure is a quarter in the manuscript, not an eighth as
@@ -6,8 +6,8 @@
 % - The slurs between 32th in measures 65 and 70 are not present in the manuscript, and
 %   the slur in measure 69 goes from the g to the es. I have assumed that all 32ths 
 %   should be slurred in the same way.
-Theme = \notes \relative c'' {
-  <{e8 |
+Theme =  \relative c'' {
+  <<{e8 |
   e f f g |
   g4 e8 g |
   f e f d |
@@ -23,10 +23,10 @@ Theme = \notes \relative c'' {
   c16 b c d c8 c |
   c d d e |
   e4 c8 e |
-  d c d b}>
+  d c d b}>>
 }
 
-IMandI = \notes \relative c'' {
+IMandI =  \relative c'' {
   \clef "treble"
   \key c\major
   \time 2/4
@@ -36,7 +36,7 @@ IMandI = \notes \relative c'' {
   %page 2
   \Theme
   %8
-  <c4 e, g,> r4 |
+  <c e, g,>4 r4 |
   }
   \repeat "volta" 2 {
   g'4 g |
@@ -49,11 +49,11 @@ IMandI = \notes \relative c'' {
   g4 r8
   }
   \repeat "volta" 2 {
-  \Theme | <e4 \\ c>  r4 |
+  \Theme | <<e4 \\ c>>  r4 |
   }
   \repeat "volta" 2 {
   %25
-  g es | d g, |
+  g' es | d g, |
   c8 d es fis |
   % page 3
   %28
@@ -71,19 +71,19 @@ IMandI = \notes \relative c'' {
   es' g, es' g, c g c g |
   es' g, es' g, c4 |
   %40
-  <as''2 \\ b,!> |
-  <g4 \\ c,> as16 f es d |
-  es32( )d c8. d4 |
+  <<as''2 \\ b,!>> |
+  <<g'4 \\ c,>> as'16 f es d |
+  es32(  d) c8. d4 |
   c2 |
   %44
-  <as'2 \\ b,!> |
-  <g4 \\ c,> as16 f es d |
-  es32( )d c8. d4 |
+  <<as'2 \\ b,!>> |
+  <<g'4 \\ c,>> as'16 f es d |
+  es32(  d) c8. d4 |
   c4 r8 
   }
   \repeat "volta" 2 {
   \Theme
-  <c4 e,> r8
+  <c e,>4 r8
   }
   \repeat "volta" 2 {
   % page 4
@@ -102,14 +102,14 @@ IMandI = \notes \relative c'' {
   \repeat "volta" 2 {
   %64
   c,4 bes' |
-  as32( )g f8. r4 |
+  as32(  g) f8. r4 |
   c4 bes' |
-  as32( )g f8. r4 |
+  as32(  g) f8. r4 |
   %68
   bes,4 as' |
-  g32( )f es8. r4 |
+  g32(  f) es8. r4 |
   bes4 as' |
-  g32( )f es8. r8 g8 |
+  g32(  f) es8. r8 g8 |
   %72
   g es r g |
   g d r g |
@@ -124,16 +124,16 @@ IMandI = \notes \relative c'' {
 
   %80
   \repeat "volta" 2 {
-  <as2 \\ b,!> |
-  <g4 \\ c,> as16 f es d |
-  es32( )d c8. d4 |
+  <<as2 \\ b,!>> |
+  <<g'4 \\ c,>> as'16 f es d |
+  es32(  d) c8. d4 |
   %84
   c2 | 
-  <as'2 \\ b,!> |
-  <g4 \\ c,> as16 f es d |
-  es32( )d c8. d4 |
+  <<as'2 \\ b,!>> |
+  <<g'4 \\ c,>> as'16 f es d |
+  es32(  d) c8. d4 |
   %84
-  c4 r8 <{e8 |
+  c4 r8 <<{e8 |
   e f f g |
   g4 e8 g |
   f e f d |
@@ -149,7 +149,7 @@ IMandI = \notes \relative c'' {
   c16 b c d c8 c |
   c d d e |
   e4 c8 e |
-  d c d g,}>
+  d c d g,}>>
 
   %page 5
   %96
@@ -165,7 +165,7 @@ IMandI = \notes \relative c'' {
   %104
   c c e c g'8 g, |
   c16 c e c g'8 g, |
-  <{c c c c} \\ e,2 g,> |
-  <c4 e, g,> r4^\fermata \bar "|."
+  <<{c c c c} \\ e,2 g,>> |
+  <c' e, g,>4 r4^\fermata \bar "|."
   }
 }
