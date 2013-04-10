@@ -1,8 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-noStroke = {\property Voice.Stem \set #'stroke-style = #'()}
-
-IIMandII = \notes \relative c'' {
+IIMandII =  \relative c'' {
   \clef "treble"
   \time 6/8
   \key d\minor
@@ -28,5 +26,3 @@ IIMandII = \notes \relative c'' {
   %43
   f f f e d cis | d4. r4 r8^\fermata \bar "|."
 }
-
-

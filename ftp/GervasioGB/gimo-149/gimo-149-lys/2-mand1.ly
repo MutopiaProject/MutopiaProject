@@ -1,8 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-noStroke = {\property Voice.Stem \set #'stroke-style = #'()}
-
-IIMandI = \notes \relative c'' {
+IIMandI =  \relative c'' {
   \clef "treble"
   \time 6/8
   \key d\minor
@@ -12,7 +10,7 @@ IIMandI = \notes \relative c'' {
   d f e e g f | f a g g bes a | a4. g | f8 a g f e d | e g f e d cis |
   d4. r8 r a, | d f e e g f | f a g g bes a | a4. g | f8 a g f e d |
   %11
-  e g f e d cis | d4. r8 r a'' | a4.( )a4 g8 | bes a g f e d |
+  e g f e d cis | d4. r8 r a'' | a4.(  a4) g8 | bes a g f e d |
   cis a cis e cis e | cis a cis e cis e |
   %17 page 8
   d a d f d f | d a d f d f | e a, e' g a, g' | e a, e' g a, g' |
