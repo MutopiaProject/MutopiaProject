@@ -1,14 +1,12 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIBasso = \notes \relative c {
+IIBasso =  \relative c {
   \clef "bass"
   \key c\major
   \time 2/2
 
   % end beams on quarters by default
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 4)
-  \property Staff.tupletSpannerDuration = #(make-moment 1 4)
+  \set Staff.tupletSpannerDuration = #(ly:make-moment 1 4)
 
   %1 page 4
   \times 2/3 {c8 c c c c c c c' g e g e |
@@ -26,9 +24,9 @@ IIBasso = \notes \relative c {
   f4 f f, r |
   g g g g |
   %14
-  \clef "tenor" c'4. es16 d [c8. bes16 as8. g16] |
+  \clef "tenor" c'4. es16 d  c8.[ bes16 as8. g16] |
   %15 Note: fis4. was eis4 in manuscript
-  fis4. c'16 b [b!8 a! g f!] |
+  fis4. c'16 b  b!8[ a! g f!] |
   \clef "bass" e4 f g g, |
   \times 2/3 {c8 c c c c c c c c c c c |
   c c c c c c c c c c c c} |
@@ -91,8 +89,8 @@ IIBasso = \notes \relative c {
   g g g g g g g g g g g g} |
   c4 e f g |
   %70
-  \clef "tenor" c4. es16 d [c8. bes16 as8. g16] |
-  fis4. d'16 c [b!8 a! g f] |
+  \clef "tenor" c4. es16 d  c8.[ bes16 as8. g16] |
+  fis4. d'16 c  b!8[ a! g f] |
   e4 f g \clef "bass" g, |
   \times 2/3 {c8 c c c c c c c c c c c |
   c c c c c c c c c c c c} |

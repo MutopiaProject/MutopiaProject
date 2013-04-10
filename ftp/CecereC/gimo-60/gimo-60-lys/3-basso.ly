@@ -1,11 +1,16 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIBasso = \notes \relative c' {
+IIIBasso =  \relative c' {
   \clef "bass"
   \key a\major
   \time 3/8
 
-  \property Score.skipBars = ##t
+  \set Score.skipBars = ##t
+  \set Timing.beamExceptions = #'((end . (
+    ((1 . 8) . (3))
+    ((1 . 24) . (3 3 3))
+    ((1 . 32) . (12))
+  )))
 
   %1 page 19
   a8 a a | a a a | gis gis gis | a a a |
