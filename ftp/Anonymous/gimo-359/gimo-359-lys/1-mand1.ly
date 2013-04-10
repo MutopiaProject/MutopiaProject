@@ -1,9 +1,7 @@
-\version "1.6.0"
+\version "2.16.0"
 \include "1-shared.ly"
 
-noStroke =  \property Voice.Stem \set #'stroke-style = #'()
-
-IMandI = \notes \relative c'' {
+IMandI =  \relative c'' {
   \clef "treble"
   \key c\major
   \time 4/4
@@ -15,13 +13,13 @@ IMandI = \notes \relative c'' {
   a f16 g a8 f g e16 f g8 e | f8 d16 e f8 d e16 d c b c d e f |
   \ISharedB
   %9 page 3
-  b d g d b d g d c e g e c e g e | b d g d b d g d c e g e c e g e |
+  b, d g d b d g d c e g e c e g e | b d g d b d g d c e g e c e g e |
   cis e a e cis e a cis, d fis a fis d fis! a fis |
   cis e a e cis e a e d8 d, fis'16 g g a | a8 c, b a b16 g d' b g' d b' g |
   %14 page 4
   \ISharedC d8 c b a |
   %15
-  b16 g d' b e c fis d g8 g,16 a \grace {\noStroke c8} b a |
+  b16 g d' b e c fis d g8 g,16 a \grace c8 b a |
   %16 Note: the d8 g, are written d4 g, in the manuscript
   d8 g, g'4 ~ g16 e cis e a, g' f e | f8 f, f'4 ~ f16 d c d g, f' e d |
   e c f d g e d c b a g8 r4 | c4 g'16 f e d c8 c, e g |

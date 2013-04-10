@@ -1,6 +1,6 @@
-\version "1.6.0"
+\version "2.16.0"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 Instrument = "Violin II"
 \include "header.ly"
@@ -9,30 +9,45 @@ Instrument = "Violin II"
 \include "3-vln2.ly"
 
 \score {
-  \context Staff = VlnII <
+  \context Staff = VlnII <<
     \IVlnII
-  >
+  >>
 
   \header {piece = "Maestoso" opus = "Gimo 153"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4 = 66}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 66
+    }
+
+
 }
 
 \score {
-  \context Staff = VlnII <
+  \context Staff = VlnII <<
      \IIVlnII
-  >
+  >>
 
   \header {piece = "Larghetto"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 4=66}
+  \layout {}
+  
+  \midi {
+    \tempo 4 = 66
+    }
+
+
 }
 
 \score {
-  \context Staff = VlnII <
+  \context Staff = VlnII <<
     \IIIVlnII
-  >
+  >>
   \header {piece = "Allegro"}
-  \paper {\translator {\StaffContext minimumVerticalExtent = #'(-4 . 4) }}
-  \midi {\tempo 8=108}
+  \layout {}
+  
+  \midi {
+    \tempo 4. = 36
+    }
+
+
 }

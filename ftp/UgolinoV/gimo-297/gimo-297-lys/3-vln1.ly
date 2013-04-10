@@ -1,10 +1,10 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IIIViolinI = \notes \relative c''' {
+IIIViolinI =  \relative c''' {
   \clef "treble"
   \key g\major
 
-  \property Score.skipBars = ##t 
+  \set Score.skipBars = ##t 
   g8 g g | g g,16 a b c | d8 e fis | g g,16 a b c |
   %5
   d8 e fis | g g, r | b'16 a g fis e d |
@@ -13,7 +13,7 @@ IIIViolinI = \notes \relative c''' {
   %12
   b d g | fis a, c | b d fis | g fis16 e d c |
   %16
-  \times 2/3 {[b16 a g]} [b8 a] |
+  \times 2/3 { b16[ a g]}  b8[ a] |
   %17
   g4^\fermata r8 | R4.*8
   %26
@@ -38,5 +38,5 @@ IIIViolinI = \notes \relative c''' {
   %81
   c r r | d r r | g r r | R4. | r8 g'\f b | a a, c | b g' b | a a, c |
   %89
-  b16 g' fis e d c | b8 c d | <g4 b, d,> r8^\fermata |
+  b16 g' fis e d c | b8 c d | <g b, d,>4 r8^\fermata |
 }
