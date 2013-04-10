@@ -1,21 +1,19 @@
-\version "1.6.0"
+\version "2.16.0"
 
-IVMandII = \notes \relative c'' {
+IVMandII =  \relative c'' {
   \clef "treble"
   \time 2/4
   \key g\minor
-
-  \property  Voice.autoBeamSettings \override
-    #'(end * * * *) = #(make-moment 1 2)
+  \set Timing.baseMoment = #(ly:make-moment 1 2)
 
   %page 10
   \repeat "volta" 2 {
-  \partial 4 <{bes8 bes | bes bes bes c | bes bes bes c}
-    {g g | g g g g | g g g g}> | bes a g fis |
+  \partial 4 <<{bes8 bes | bes bes bes c | bes bes bes c}
+    {g g | g g g g | g g g g}>> | bes a g fis |
   %4
-  g g <{bes bes | bes bes bes c | bes bes bes c} {g g | g g g g | g g g g }> |
+  g g <<{bes bes | bes bes bes c | bes bes bes c} {g g | g g g g | g g g g }>> |
   %7
-  g a g fis | <g4 g,> r8
+  g a g fis | <g g,>4 r8
   }
   
   \repeat "volta" 2 {
@@ -23,7 +21,7 @@ IVMandII = \notes \relative c'' {
   %9
   d d d bes | c c c a | bes bes bes g | a a a f |
   %13 page 11
-  d' d d b | c c c a | bes d, es c | <d4. bes>
+  d' d d b | c c c a | bes d, es c | <d bes>4.
   }
 
   \repeat "volta" 2 {
@@ -31,7 +29,7 @@ IVMandII = \notes \relative c'' {
   %17
   r4 r8 g | c g a e | f f f c' | d bes bes, a | g g' g <bes g> |
   %22
-  <{bes bes bes c} {g g g g}> | bes a g fis | g4 g,4 |
+  <<{bes bes bes c} {g g g g}>> | bes a g fis | g4 g,4 |
   }
   
   \repeat "volta" 2 {
@@ -56,30 +54,30 @@ IVMandII = \notes \relative c'' {
 
   \repeat "volta" 2 {
   %57 page 12  
-  r4 <{bes'8 bes | bes bes bes c | bes bes bes c | bes} {g g | g g g g |
-    g g g g | g}> a g fis | g g <bes g> <bes g> |
+  r4 <<{bes'8 bes | bes bes bes c | bes bes bes c | bes} {g g | g g g g |
+    g g g g | g}>> a g fis | g g <bes g> <bes g> |
   %62
-  <{bes bes bes c | bes bes bes c} {g g g g | g g g g} {g, s s s | g}>
+  <<{bes bes bes c | bes bes bes c} {g g g g | g g g g} {g, s s s | g}>>
   %64
-  bes a g fis | g4 r8 bes | d d d b | c c c a | bes! bes bes g |
+  bes' a g fis | g4 r8 bes | d d d b | c c c a | bes! bes bes g |
   %69
-  a a a f | d' d d b | c c c a | bes c es, c | <d4 bes> r |
+  a a a f | d' d d b | c c c a | bes c es, c | <d bes>4 r |
   %74
-  <{bes'8 bes bes c | bes bes bes c} {g g g g | g g g g} g,>
-  bes a g f | g d g bes |
+  <<{bes'8 bes bes c | bes bes bes c} {g g g g | g g g g} g,>>
+  bes' a g f | g d g bes |
   %78
-  <{bes bes bes c | bes bes bes c} {g g g g | g g g g}> |
+  <<{bes bes bes c | bes bes bes c} {g g g g | g g g g}>> |
   bes a g fis | g d g bes |
   %82
-  <{bes bes bes c | bes bes bes c} {g g g g | g g g} {g, s s s | g}> |
-  bes a g fis | g2 | es | cis4 d8 es |
+  <<{bes bes bes c | bes bes bes c} {g g g g | g g g} {g, s s s | g}>> |
+  bes' a g fis | g2 | es | cis4 d8 es |
   %88 page 13
   d c! bes a | g4 <bes' g> |
   %90
-  <bes g g,> <cis g> | <cis? g> <d8 d,> <es d,> |
-  <{d c bes a} \\ d,2> | g4 d8 b |
+  <bes g g,> <cis g> | <cis? g> <d d,>8 <es d,> |
+  <<{d c bes a} \\ d,2>> | g4 d8 b |
   %94
-  <{b'4 b | b} {d, d | d} {g, g | g}> r4^\fermata \bar "|."
+  <<{b'4 b | b} {d, d | d} {g, g | g}>> r4^\fermata \bar "|."
   }
 }
 
