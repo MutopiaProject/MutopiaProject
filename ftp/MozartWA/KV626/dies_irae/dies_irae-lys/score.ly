@@ -23,7 +23,7 @@
   source = "Breitkopf & Haertel, 1877"
   style = "Classical"
   copyright = "Public Domain"
-  maintainer = "Martin Norb‰ck"
+  maintainer = "Martin Norb√§ck"
   maintainerEmail = "d95mback@dtek.chalmers.se"
   maintainerWeb = "http://norpan.org/cvs/K626/"
   lastupdated = "2003/Oct/27"
