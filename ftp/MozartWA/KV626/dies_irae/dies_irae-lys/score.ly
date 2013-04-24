@@ -16,7 +16,7 @@
   composer = "W. A. Mozart (1756-1791)"
    
   mutopiatitle = "Dies Irae"
-  mutopiacomposer = "W. A. Mozart (1756-1791)"
+  mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 626"
   mutopiainstrument = "Orchestra, Voice"
   date = "1791"
