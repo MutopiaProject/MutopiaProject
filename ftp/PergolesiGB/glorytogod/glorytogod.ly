@@ -16,7 +16,7 @@
 
 \header {
  mutopiatitle = "Glory to God in the highest"
- mutopiacomposer = "G. B. Pergolesi (1710 -1736)"
+ mutopiacomposer = "PergolesiGB"
  mutopiainstrument = "Voice (SATB) and Organ"
  date = "1700s"
  source = "G Shirmer, Inc., 1904"
@@ -35,11 +35,11 @@
 %  arranger = \markup { \italic {Will Mcfarlane. }}
 % not really a poet, but using it to left-justify the editor
   poet = "{\it Edited by\\\Will C. Macfarlane }"
+ mutopiapoet = "Will C. Macfarlane"
 
 %  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed under the " + \copyright + " license by " + \maintainer + ".\\\\Please copy this music and share it!}"
  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright " + \maintainer + " 2004.} \\makebox[\\textwidth][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[\\textwidth][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[\\textwidth][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}"
- footer = "Mutopia- " + \lastupdated + "-477"
-
+ footer = "Mutopia-2004/09/05-477"
  
  texidoc = "Glory to God in the highest (Pergolesi)"
 }
