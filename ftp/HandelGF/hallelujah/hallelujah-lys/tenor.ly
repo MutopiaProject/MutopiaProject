@@ -215,28 +215,28 @@ TenorGermanLyrics = \lyrics {
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja,
 	
 	%12
-	denn Gott der Herr reg -- gie -- ret all --  mäch -- tig,
+	denn Gott der Herr reg -- gie -- ret all --  mÃ¤ch -- tig,
 	
 	%14
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, 
 	%17
-	denn Gott der Herr reg -- gie -- ret all --  mäch -- tig,
+	denn Gott der Herr reg -- gie -- ret all --  mÃ¤ch -- tig,
 	%20
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja,
 	
 	%21
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
 	%25
-	denn Gott der Herr reg -- gie -- ret all --  mäch -- tig,
+	denn Gott der Herr reg -- gie -- ret all --  mÃ¤ch -- tig,
 	%27
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja,
 	%30
-	denn Gott der Herr reg -- gie -- ret all --  mäch -- tig,
+	denn Gott der Herr reg -- gie -- ret all --  mÃ¤ch -- tig,
 	%32
 	Hal -- le -- lu -- ja!
 	
 	%34
-	Das Kö -- nig -- reich der Welt ist fort -- an das Kö -- nig -- reich des Herrn und sei -- nes Christ, und sei -- nes Christ,
+	Das KÃ¶ -- nig -- reich der Welt ist fort -- an das KÃ¶ -- nig -- reich des Herrn und sei -- nes Christ, und sei -- nes Christ,
 	
 	%43
 	und er re -- giert auf im -- mer und e -- wig, und er re -- giert auf im -- mer und e -- wig,
