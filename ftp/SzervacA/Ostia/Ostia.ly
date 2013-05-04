@@ -46,6 +46,7 @@
         tagline =  \markup { License: GPLv3 - CC-BY-SA3 - title: \fromproperty #'header:title - version: .1 - Home:
 \with-url #"http://321.hu/" \with-color #(x11-color 'blue) http://321.hu/ }
         home = " http://321.hu "
+	mutopiatitle = "Ostia"
         mutopiacomposer = "SzervacA"
         mutopiainstrument = ""
         mutopiacopyright = "Creative Commons Attribution-ShareAlike 3.0"
@@ -53,9 +54,8 @@
         mutopiastyle = "Modern"
         maintainer = "SZERVÁC Attila"
         maintainerWeb = "http://321.hu"
-        moreInfo = "The composer has licensed this piece jointly under the GPLv3 and Creative Commons 
-Attribution-ShareAlike 3.0 licenses, and it may be distributed under the terms of either."
-        %footer = "Mutopia-2007/11/14-1160"
+        mutopiafooter = "Mutopia-2007/11/14-1160"
+        moreInfo = "The composer has licensed this piece jointly under the GPLv3 and Creative Commons Attribution-ShareAlike 3.0 licenses, and it may be distributed under the terms of either."
 }
 
 q=\relative{bes'8 d4 a b4. (bes8)r as4. c4 des ces r c8 (a4) d8 e4 b cis 
