@@ -10,4 +10,5 @@
  maintainerEmail = "nicolas.sceaux@free.fr"
  maintainerWeb = "http://nicolas.sceaux.free.fr"
  lastupdated = "2007/Jan/07"
+ footer = "Mutopia-2007/01/07-907"
 }
