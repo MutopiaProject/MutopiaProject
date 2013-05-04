@@ -62,6 +62,7 @@ evenHeaderMarkup = \markup
         tagline =  \markup { License: GPLv3 - CC-BY-SA3 - title: \fromproperty #'header:title - version: .1 - Home:
 \with-url #"http://321.hu/" \with-color #(x11-color 'blue) http://321.hu/ }
         home = " http://321.hu "
+	mutopiatitle = "Tritto"
         mutopiacomposer = "SzervacA"
         mutopiainstrument = ""
         mutopiacopyright = "Creative Commons Attribution-ShareAlike 3.0"
@@ -70,7 +71,7 @@ evenHeaderMarkup = \markup
         maintainer = "SZERVÁC Attila"
         maintainerWeb = "http://321.hu"
         moreInfo = "The composer has licensed this piece jointly under the GPLv3 and Creative Commons Attribution-ShareAlike 3.0 licenses, and it may be distributed under the terms of either."
-	%footer = "Mutopia-2007/09/20-1036"
+	mutopiafooter = "Mutopia-2007/09/20-1036"
 }
 
 q=\relative{\partial 4*1 a' | cis2 r4 gis8 b cis d~ |
