@@ -20,6 +20,7 @@
   source = ""
   copyright = "Public Domain"
   enteredby = "Stan Sanderson"
+  mutopiacomposer = "AdamsS"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "3/25/2004"
