@@ -11,7 +11,7 @@
   composer = "Matthias Weckmann (1621-1674)"
   copyright = "Public Domain"
   mutopiatitle = "Fantasia d moll"
-  mutopiacomposer = "Matthias Weckmann (1621-1674)"
+  mutopiacomposer = "WeckmannM"
   mutopiainstrument = "Organ"
   style = "Baroque"
   copyright = "Public Domain"
