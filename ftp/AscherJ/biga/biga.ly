@@ -9,7 +9,7 @@
 \header {
 	date = "189-?"
 	source = "Sydney: Nicholson & Co., (189-?)"
-	style = "Romance"
+	style = "Romantic"
 	instrument = ""
 	copyright = "Public Domain"
 	maintainer = "Stan Sanderson"
@@ -20,6 +20,9 @@
 	poet = ""
 	composer = "Joseph Ascher"
 	opus = "1829-1869"
+	mutopiainstrument = "Piano"
+	mutopiacomposer = "AscherJ"
+	moreinfo = "<p>This piece, an expansion of Ascher's popular <em>Alice</em> tune, is, I believe, typical of the repertory of the parlor performer.  I suspect it exists on a piano roll somewhere.</p> <p>The original is very dim; the transcription was as true as possible; corrections are welcome.</p>"
 	
 	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
 	footer = "Mutopia-2004/05/25-449"
