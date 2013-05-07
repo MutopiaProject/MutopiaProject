@@ -16,7 +16,7 @@ Mark Van den Borre <mark@markvdb.be>
 \version "2.2.0"
 \header {
   mutopiatitle = "Divertissements pour la guitare, n°2 Waltz "
-  mutopiacomposer = "Fernando Sor (1778- 1839)"
+  mutopiacomposer = "SorF"
   mutopiaopus = "O 1.2"
   mutopiainstrument = "Guitar"
   date = "1820s"
