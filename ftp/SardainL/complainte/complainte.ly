@@ -9,7 +9,7 @@
 	opus = ""
 	tagline = "Public Domain"
 	mutopiatitle = "Complainte"
-	mutopiacomposer = "L.Sardain (1979-)"
+	mutopiacomposer = "SardainL"
 	mutopiainstrument = "Clarinet, Piano"
 	date = "1999"
 	source = "manuscript"
