@@ -17,6 +17,7 @@
   opus = "circ. 1837"
   source = ""
   copyright = "Public Domain"
+  mutopiacomposer = "SilcherF"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
