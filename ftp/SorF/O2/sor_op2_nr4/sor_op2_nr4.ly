@@ -3,7 +3,7 @@
  composer =    "Fernando Sor (1778-1839)"
  opus =        "Op.2 No. 4"
  mutopiatitle = "Menuetto"
- mutopiacomposer = "Fernando Sor (1778-1839)"
+ mutopiacomposer = "SorF"
  mutopiaopus = "Op. 2 No. 4"
  mutopiainstrument = "Guitar"
  source = "Simrock, Berlin"
