@@ -28,7 +28,7 @@
 
 % -*- Mutopia Project-*--*- -*- -*- -*- -*- 
 mutopiatitle = "100 Etudes"
- mutopiacomposer = "Hans Sitt"
+ mutopiacomposer = "SittH"
  mutopiaopus = "32"
  mutopiainstrument = "Violin"
  date = "19th C"
