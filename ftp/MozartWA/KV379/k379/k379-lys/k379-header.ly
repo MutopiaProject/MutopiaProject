@@ -8,7 +8,7 @@
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
 
     mutopiatitle = "Sonate for Violin and Piano K 379"
-    mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV 379"
     mutopiainstrument = "Violin and Piano"
     date = "1781"
