@@ -6,7 +6,7 @@
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
 
     mutopiatitle = "Fugue in E-flat Major KV 153/375f"
-    mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV 153/375f"
     mutopiainstrument = "Piano"
     date = "1782"
