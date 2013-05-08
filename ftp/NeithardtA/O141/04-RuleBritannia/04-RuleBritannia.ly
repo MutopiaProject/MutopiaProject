@@ -90,7 +90,7 @@ LRule = \lyricmode {
  texttranslator = "" 
 
  mutopiatitle = "Rule Britannia"
- mutopiacomposer = "A. Neithardt (1793-1861)"
+ mutopiacomposer = "NeithardtA"
  mutopiapoet = "J. Thomson (1700-1748)"
  mutopiaopus = "O 141, 4"
  mutopiainstrument = "Voice, (SATB)"
