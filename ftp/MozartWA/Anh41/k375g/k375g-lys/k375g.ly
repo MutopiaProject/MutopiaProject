@@ -5,7 +5,7 @@
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
         
     mutopiatitle = "Fugue fragment Anh. 41 (375g)"
-    mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "Anh. 41 (375g)"
     mutopiainstrument = "Piano"
     date = "1777?"
