@@ -12,6 +12,7 @@
 \header {
   title = "My Mother's Old Red Shawl"
   composer = "Charles Moreland"
+  mutopiacomposer = "MorelandC"
   instrument = "Voice and Piano"
   source = "G. W. Warren \& Co., Evansville, Ind. 1885"
   copyright = "Public Domain"
