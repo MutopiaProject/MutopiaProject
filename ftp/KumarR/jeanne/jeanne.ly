@@ -6,7 +6,7 @@
 	piece = \markup{\large {"Lente\n"} "très libre bien que tentative"}
 	dedication = "pour Jeanne Masle-Farquhar"
 	mutopiatitle = "Jumelle qui qoue"
-	mutopiacomposer = "R. Kumar (1988-)"
+	mutopiacomposer = "KumarR"
 	mutopiainstrument = "Piano"
 	date = "2004"
 	source = "Original composition"
