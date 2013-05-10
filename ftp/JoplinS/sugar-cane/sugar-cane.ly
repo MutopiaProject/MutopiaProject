@@ -14,7 +14,7 @@
   piece = "Slow March Tempo"
 
   mutopiatitle = "Sugar Cane"
-  mutopiacomposer = "S. Joplin (1868-1917)"
+  mutopiacomposer = "JoplinS"
   mutopiainstrument = "Piano"
 
   date = "C. 1908"
