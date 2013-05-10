@@ -4,11 +4,11 @@
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
         
     mutopiatitle = "Andante in C Major K. 315"
-    mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV. 315"
     mutopiainstrument = "Flute and Orchestra"
     date = "1778"
-    source = "Breitkopf und H\"artel"
+    source = "Breitkopf und Härtel"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
