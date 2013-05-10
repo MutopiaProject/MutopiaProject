@@ -5,7 +5,7 @@
 	source="Methodist Hymnbook 1933, Number 615"
 	meter=\metre
 
-	mutopiacomposer = \composer
+	mutopiacomposer = "HughesJ"
 	mutopiainstrument = "Voice (SATB)"
 	date = "1665"
 
