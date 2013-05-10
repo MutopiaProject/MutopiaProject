@@ -6,7 +6,7 @@
 \version "1.6.9"
 \header {
     mutopiatitle = "Second Ballade"
-    mutopiacomposer = "F. Liszt (1811-1886)"
+    mutopiacomposer = "LisztF"
     mutopiainstrument = "Piano"
     date = "1853"
     style = "Romantic"
@@ -15,7 +15,7 @@
     maintainerEmail = "ly@auriga.com"
     lastupdated = "2003/Jun/5"
     
-    title="Deuxi\\`eme Ballade"
+    title="Deuxième Ballade"
     composer="F. Liszt"
     date="1853"
     tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
