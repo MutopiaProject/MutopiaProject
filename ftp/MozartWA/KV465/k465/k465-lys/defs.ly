@@ -6,11 +6,11 @@
     composer = "W. A. Mozart (1756-1791)"
         
     mutopiatitle = "String Quartet KV. 465 (nr. 19) \"Dissonances\""
-    mutopiacomposer = "W. A. Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV. 465"
     mutopiainstrument = "String Quartet"
     date = "14th January 1785 (Wien)"
-    source = "Breitkopf und H\"artel (1882)"
+    source = "Breitkopf und Härtel (1882)"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
