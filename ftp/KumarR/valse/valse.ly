@@ -8,7 +8,7 @@
 	piece = "Allegretto"
 	dedication = "pour Stephanie Walls"
 	mutopiatitle = "Valse"
-	mutopiacomposer = "R. Kumar (1988-)"
+	mutopiacomposer = "KumarR"
 	mutopiainstrument = "Piano"
 	source = "Original composition"
 	style = "Classical"
