@@ -11,6 +11,7 @@
 \header {
   title = "The Three Fishers"
   composer = "S. D. S. \& J. Hullah"
+  mutopiacomposer = "HullahJ"
   poet = "Rev. C. Kingsley"
   instrument = "Voice and Piano"
   source = "New York: S. T. Gordon, 1856"
