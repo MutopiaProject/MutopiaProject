@@ -6,7 +6,7 @@
   composer = "Paul Delmet (1862-1904)"
   arranger = \markup {\small "Transcription par Benjamin Intartaglia"}
   mutopiatitle = "Envoi de Fleurs"
-  mutopiacomposer = "DelmetPaul"
+  mutopiacomposer = "DelmetP"
   mutopiainstrument = "Organ"
   date = "1897"
   source = "ENOCH & Cie 1897"
