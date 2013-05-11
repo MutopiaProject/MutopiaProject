@@ -4,7 +4,7 @@
     composer = "Gaetano Donizetti (1797-1848)"
         
     mutopiatitle = "String Quartet nr. 18 in E minor"
-    mutopiacomposer = "Gaetano Donizetti (1797-1848)"
+    mutopiacomposer = "DonizettiG"
     mutopiaopus = "Nr. 18"
     mutopiainstrument = "String Quartet"
     date = "Napoli, 1836"
