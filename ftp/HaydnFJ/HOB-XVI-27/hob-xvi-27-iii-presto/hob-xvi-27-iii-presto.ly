@@ -10,7 +10,7 @@
   tagline           = "Typeset using Lilypond 1.4.9.uu1"
   copyright         = "Public Domain"
   mutopiatitle      = "Sonate I"
-  mutopiacomposer   = "F.J. Haydn (1732-1809)"
+  mutopiacomposer   = "HaydnFJ"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "C.F. Peters, 1880s"
