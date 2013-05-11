@@ -165,7 +165,7 @@ violinvivace =       \transpose g g{\relative c'' {
                This score can be obtained in editable form from www.lightandmatter.com or
                mutopiaproject.org. -- Benjamin Crowell"
  mutopiatitle = "Sonata"
- mutopiacomposer = "Henri Eccles (1670-1742)"
+ mutopiacomposer = "EcclesH"
  mutopiainstrument = "Violin, Piano"
  source = "ed. J. Salmon, 1914"
  style = "Baroque"
