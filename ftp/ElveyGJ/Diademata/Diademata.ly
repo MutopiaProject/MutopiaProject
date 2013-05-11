@@ -7,8 +7,7 @@
   metre = "6 6. 8 6. D"
   meter = \metre
 
-  mutopiatitle = \title
-  mutopiacomposer = \composer
+  mutopiacomposer = "ElveyGJ"
   mutopiainstrument = "Voice (SATB)"
   style = "Hymn"
   source = "Book of Common Praise, 1908, number 367"
