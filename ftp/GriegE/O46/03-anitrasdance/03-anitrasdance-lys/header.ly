@@ -3,7 +3,7 @@
 \header {
  mutopiatitle = "Anitra's Dance (Tanz)"
  mutopiasubtitle = "La danse d'Anitra"
- mutopiacomposer = "E. Grieg (1843-1907)"
+ mutopiacomposer = "GriegE"
  mutopiapoet = "Henrik Ibsen"
  mutopiaopus = "O 46 No. 3 - Peer Gynt Suite I"
  mutopiainstrument = "String Ensemble: Violin, Viola, Cello, Double Bass, Triangle"
