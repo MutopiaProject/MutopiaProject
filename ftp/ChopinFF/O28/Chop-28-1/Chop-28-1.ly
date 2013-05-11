@@ -16,9 +16,10 @@
 
   % mutopia headers.
   mutopiatitle = "Prelude op 28.1"
-  mutopiacomposer = "Chopin, Frederic"
+  mutopiacomposer = "ChopinFF"
   mutopiaopus = "28.1"
   mutopiainstrument = "Piano"
+  copyright = "Creative Commons Attribution-ShareAlike"
   date = "ca. 1837"
 
   source = "Edition Peters"
