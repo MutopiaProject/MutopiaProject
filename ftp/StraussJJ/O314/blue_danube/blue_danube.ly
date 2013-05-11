@@ -275,7 +275,7 @@ lower =  {
     composer = "Johann Strauss Jr. (1825 - 1899)"
     
     mutopiatitle = "The Blue Danube Waltz"
-    mutopiacomposer = "Johann Strauss Jr."
+    mutopiacomposer = "StraussJJ"
     mutopiaopus = "O 314"
     mutopiainstrument = "Piano"
     date = "1867"
