@@ -6,12 +6,11 @@
 	meter = \metre	 % pander to American orthography
 	composer = "John Hatton ?--1793"
 
-	mutopiatitle = \title
 	mutopiainstrument="Voice (SATB)"
 	source = "see comments in source"
 	date = "C18"
 	style = "Hymn"
-	mutopiacomposer = "J. Hatton (?-1793)"
+	mutopiacomposer = "HattonJ"
 	copyright = "Public Domain"
 	maintainer = "Peter Chubb"
 	maintaineremail = "mutopia@chubb.wattle.id.au"
