@@ -10,7 +10,7 @@
  mutopiainstrument = "Piano"
  date = "1896"
  source = "The John Church Company"
- style = "Classical"
+ style = "March"
  maintainer = "Benjamin Bloomfield"
  maintainerEmail = "bhb123@gmail.com"
  license = "Public Domain"

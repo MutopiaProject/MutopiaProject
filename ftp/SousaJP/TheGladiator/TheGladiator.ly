@@ -10,7 +10,7 @@
  mutopiainstrument = "Piano"
  date = "1886"
  source = "Harry Coleman"
- style = "Classical"
+ style = "March"
  maintainer = "Benjamin Bloomfield"
  maintainerEmail = "bhb123@gmail.com"
  license = "Public Domain"
