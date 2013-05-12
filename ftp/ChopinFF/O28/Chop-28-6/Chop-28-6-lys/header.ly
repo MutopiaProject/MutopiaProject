@@ -30,7 +30,8 @@
     maintainer = "Magnus Lewis-Smith"
     maintainerEmail = "mlewissmith@users.sourceforge.net"
     maintainerWeb = "http://magware.sourceforge.net"
-    lastupdated = "12 Aug 2004" 
+    lastupdated = "12 Aug 2004"
+    copyright = "Public Domain"
 
     tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
     footer = "Mutopia-2004/08/12-469"
