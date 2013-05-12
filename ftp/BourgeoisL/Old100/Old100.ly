@@ -1,11 +1,12 @@
 #(ly:set-option 'old-relative)
 \header{
 	title = "Old 100th"
-	composer = "Genevan Psalter 1551"
+	composer = "Genevan Psalter 1551" % source ref., not composer? -gl
 	arranger = "Arr. John Dowland"
 	meter = "88 88"
 	source = "A Pilgrimes Solace"
-	mutopiacomposer = "attributed to L. Bourgeous (1510--1561)"
+	mutopiacomposer = "BourgeoisL"
+	style = "Hymn"
 	date = "1612" % first published date I know about for this arrangement
 	mutopiaarranger = "J. Dowland (1563-1626)"
 	copyright = "Public Domain"
