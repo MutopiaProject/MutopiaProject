@@ -39,7 +39,7 @@ Example:
     poet = "Librettiste"
     date = "1740-1742"
     arrangement = "..."
-    copyright = "Copyright line"
+%   copyright = "Copyright line"
   }
   \paper {
     %% Translate the TOC title
