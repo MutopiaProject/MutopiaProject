@@ -1,17 +1,9 @@
-\version "2.10.23"
+\version "2.16.1"
 
-% Uncomment paper block below for fewer pages.
-%\paper {
-%       between-system-padding = #0.1
-%       between-system-space = #0.1
-%       ragged-last-bottom = ##f
-%       ragged-bottom = ##f
-%}
-
-%Uncomment paper block below for evenly-filled pages.
 \paper {
-  page-top-space = #0.0
-  %indent = 0.0
+  top-markup-spacing #'basic-distance = #6
+  markup-system-spacing #'basic-distance = #12
+  top-system-spacing #'basic-distance = #12
   line-width = 18.0\cm
   ragged-bottom = ##f
   ragged-last-bottom = ##f
@@ -31,14 +23,14 @@
         mutopiacomposer = "BachJS"
         opus = "BWV 988"
         date = "1741"
-        mutopiainstrument = "Clavier"
+        mutopiainstrument = "Harpsichord,Clavichord"
         style = "Baroque"
         source = "Bach-Gesellschaft"
         copyright = "Creative Commons Attribution-ShareAlike 3.0"
         maintainer = "JD Erickson"
         maintainerEmail = "erickson.jd@gmail.com"
- footer = "Mutopia-2007/07/01-980"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2013/05/13-980"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 % Macros %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -48,7 +40,14 @@ staffLower = {\change Staff = lower \stemUp}
 startRepeat = {\set Score.repeatCommands = #'(start-repeat)}
 endRepeat = {\set Score.repeatCommands = #'(end-repeat)}
 stemExtend = \once \override Stem #'length = #22
-noFlag = \once \override Stem #'flag-style = #'no-flag
+noFlag = \once \override Flag #'style = #'no-flag
+adjustBeamOne = \once \override Beam #'positions = #'(2.1 . 1)
+adjustBeamTwo = \once \override Beam #'positions = #'(5.5 . 4.9)
+adjustBeamThree = \once \override Beam #'positions = #'(-1.3 . 1.3)
+adjustBeamFour = \once \override Beam #'positions = #'(10 . 12.4)
+flatBeam = \once \override Beam #'positions = #'( -0.2 . -0.2 )
+flatBeamTwo = \once \override Beam #'positions = #'( -0.8 . -0.8 )
+flatBeamThree = \once \override Beam #'positions = #'( -1.2 . -1.2 )
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -63,7 +62,7 @@ soprano = \relative c'' {
         \stemUp g16 fis16 g8_~ g16 d16 e16 fis16 g16 a16 b16 cis16
         \stemDown d16 cis16 d8^~ d16 a16 b16 cis16 d16 e16 fis16 d16
         g16 fis16 g8^~ g16 fis16 e16 d16 \stemUp cis16 e16 a,16 g16
-        fis16 e16 d16 cis16 d16 fis16 \staffLower \stemExtend \noFlag a,16 \stemExtend \noFlag g16 fis16 a16 d,8
+        fis16 e16 d16 cis16 \adjustBeamOne d16 fis16 \staffLower \stemExtend \noFlag a,16 \stemExtend \noFlag g16 \adjustBeamTwo fis16 a16 d,8
         \staffUpper \stemUp b''8\rest d16[ c16 d8 g,8 b,8 d'8]
 
         %6-10
@@ -92,7 +91,7 @@ soprano = \relative c'' {
         %21-25
         b16 dis16 e8^~ e16 dis,16 e8_~ e16 \staffLower \stemExtend \noFlag dis,16 \stemExtend \noFlag e8
         \staffUpper \stemUp a''16\rest gis16 a8^~ a16 gis,16 a8_~ a16 \staffLower \stemExtend \noFlag gis,16 \stemExtend \noFlag a8^~
-        \stemExtend \noFlag a16 \staffUpper \stemUp b16 c16 fis16 b,16 dis16 e16 g16 fis16 e16 dis16 a'16  
+        \stemExtend \noFlag \adjustBeamFour a16 \staffUpper \stemUp b16 c16 fis16 b,16 dis16 e16 g16 fis16 e16 dis16 a'16  
         g16 fis16 e16 dis16 \stemDown e16 g16 \staffLower \stemExtend \noFlag b,16 \stemExtend \noFlag a16 g16 b16 e,8 
         \staffUpper \stemDown b''8\rest e8 c8 e8 a8 a,8         
 
@@ -124,13 +123,13 @@ bass = \relative c {
 
         %6-10
         \stemUp c,16 b16 c8_~ \stemDown c16 e16 fis16 g16 a16 b16 c16 a16
-        \stemUp d,16 cis16 d8_~ \stemDown d16 a'16 b16 c16 d16 e16 fis16 d16
+        \stemUp d,16 cis16 d8_~ \stemDown d16 a'16 b16 c!16 d16 e16 fis16 d16
         g16 fis16 g16 d16 b16 d16 g,16 b16 d,16 g16 b,16 d16
-        \stemUp g,8[ \stemDown g'8 b8 g8 \stemUp g,8 \stemDown g'8]
-        \stemUp fis,8[ \stemDown fis'8 a8 fis8 \stemUp fis,8 \stemDown fis'8]
+        \stemUp \flatBeam g,8[ \stemDown g'8 b8 g8 \stemUp g,8 \stemDown g'8]
+        \stemUp \flatBeamTwo fis,8[ \stemDown fis'8 a8 fis8 \stemUp fis,8 \stemDown fis'8]
 
         %11-15
-        \stemUp e,8[ \stemDown e'8 g8 e8 \stemUp e,8 \stemDown g'8]   
+        \stemUp \flatBeamThree e,8[ \stemDown e'8 g8 e8 \stemUp e,8 \stemDown g'8]   
         a,8 e'8 g8 e8 a,8 g'8
         fis16 a16 d16 fis16 a16 fis16 d16 a16 fis16 a16 d,16 fis16
         g16 b16 d16 g16 b16 g16 d16 b16 g16 b16 e,16 g16
@@ -141,7 +140,7 @@ bass = \relative c {
         \stemUp d,,8[ fis'16 e16 fis8 d8 d,8 fis'8]
         g,8[ b'16 a16 b8 g8 g,8 b'8]
         \stemDown c,8[ c'16 b16 c8 fis,8 a8 c8]
-        a8 fis8 dis16 b16 dis16 fis16 b16 \staffUpper \stemExtend \noFlag dis16 \stemExtend \noFlag fis16 \stemExtend \noFlag a16   
+        a8 fis8 dis16 b16 dis16 fis16 \adjustBeamThree b16 \staffUpper \stemExtend \noFlag dis16 \stemExtend \noFlag fis16 \stemExtend \noFlag a16   
 
         %21-25
         g8. fis16 g8.[ \staffLower \stemUp fis,16] \stemDown g8. b,16
@@ -168,11 +167,10 @@ bass = \relative c {
 
 \score {
     \context PianoStaff <<
-        \set PianoStaff.instrumentName = "Clavier  "
         \set PianoStaff.midiInstrument = "harpsichord"
         \context Staff = "upper" { \clef treble \key g \major \time 3/4 \soprano }
         \context Staff = "lower"  { \clef bass \key g \major \time 3/4 \bass }
     >>
-    \layout{  }
+    \layout{ }
     \midi { } 
 }
