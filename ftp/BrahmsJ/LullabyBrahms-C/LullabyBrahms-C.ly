@@ -9,6 +9,8 @@
 \header {
   title = "Cancion de Cuna"
   composer = "Johannes Brahms (1833-1897)"
+  mutopiacomposer = "BrahmsJ"
+  mutopiainstrument = "Recorder, Guitar"
   arranger = "Arreglo por Diego F Guillen"
   meter = "Slow Waltz"
   copyright = "Copyright 2004 Diego Guillen"

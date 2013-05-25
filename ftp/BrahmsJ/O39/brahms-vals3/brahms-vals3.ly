@@ -4,7 +4,7 @@
  composer = "J. Brahms (1833-1897)"
  opus = "Op. 39"
  mutopiatitle = "Vals no. 3"
- mutopiacomposer = "J. Brahms (1833-1897)"
+ mutopiacomposer = "BrahmsJ"
  mutopiaopus = "O 39"
  mutopiainstrument = "Guitar"
  source = "Transcribed"

@@ -5,7 +5,7 @@
 	composer = "Chris Brown"
     dedication = "for Silas Brown"
  mutopiatitle = "Ebb and Flow"
- mutopiacomposer = "C J Brown (1947-)"
+ mutopiacomposer = "BrownCJ"
  mutopiainstrument = "Flute and Piano"
  date = "2006"
  source = "Typeset from the manuscript with full permission of the composer"
