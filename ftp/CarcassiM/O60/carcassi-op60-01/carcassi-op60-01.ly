@@ -19,7 +19,7 @@ note.
   % needed by mutopia:
 
   mutopiainstrument =  "Guitar"
-  mutopiacomposer =    "Matteo Carcassi (1792-1853)"
+  mutopiacomposer = "CarcassiM"
   date =               "19th C."
   style =              "Classical"
   copyright =          "Public Domain"  
