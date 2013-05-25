@@ -3,12 +3,12 @@
 \version "2.0.1"
 
 \header {
-  dedication = "à Madame Marguérite Baugnies"
-  title = "Après un Rêve"
-  poet = "Poésie de Romain Bussine."
-  composer = "Gabriel Fauré."
+  dedication = "\`a Madame Margu\\'erite Baugnies"
+  title = "Apr\`es un R\^eve"
+  poet = "Po\\'esie de Romain Bussine."
+  composer = "Gabriel Faur\\'e."
   piece = "\\hspace*{30mm}\\normalfont\\large Andantino."
-  % mutopiatitle = "Apres un Reve"
+  mutopiatitle = "Après un Rêve"
   mutopiacomposer = "FaureG"
   mutopiapoet = "R. Bussine (1830-1899)"
   mutopiaopus = "Op. 7"
