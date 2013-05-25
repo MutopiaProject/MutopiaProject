@@ -11,7 +11,7 @@
 	maintainer = "Giampaolo Orrigo"
 	composer = "Adriano Banchieri"
 	mutopiatitle = "SUONATA SECONDA, FVGA TRIPLICATA From Primo Registro of the Organo Suonarino"
-	mutopiacomposer = "A. Banchieri"
+	mutopiacomposer = "BanchieriA"
 	mutopiainstrument = "Organ"
 	date = "1605"
 	source = "Urtext"

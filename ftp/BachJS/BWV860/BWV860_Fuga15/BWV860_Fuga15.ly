@@ -4,7 +4,7 @@
   title = "Fuga 15 - BWV 860"
   composer = "Johann Sebastian Bach"
   mutopiatitle = "Fuga 15 - BWV 860"
-  mutopiacomposer = "Johann Sebastian Bach"
+  mutopiacomposer = "BachJS"
   mutopiapoet = "Johann Sebastian Bach"
   mutopiainstrument = "piano"
   date = "18th century"
