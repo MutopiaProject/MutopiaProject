@@ -5,7 +5,7 @@
   opus = " "
   composer = "Matthias Weckmann (1621-1674)"
   mutopiatitle = "Praeambulum Primi toni a 5"
-  mutopiacomposer = "Matthias Weckmann (1621-1674)"
+  mutopiacomposer = "WeckmannM"
   mutopiaopus = " "
   mutopiainstrument = "Organ"
   date = "1742"

@@ -7,7 +7,7 @@
        piece = "Allegro"
 	opus = "HWV 56"
  mutopiatitle = "Hallelujah Chorus from Messiah"
- mutopiacomposer = "G. F. Handel (1685-1759)"
+ mutopiacomposer = "HandelGF"
  mutopiainstrument = "String"
  date = "1741"
  source = "Not-Sure"
