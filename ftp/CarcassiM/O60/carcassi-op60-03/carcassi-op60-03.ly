@@ -8,7 +8,7 @@
     composer =    "Matteo Carcassi"
     
     mutopiatitle = "Etude 3"
-    mutopiacomposer = "Matteo Carcassi (1792-1853)"
+    mutopiacomposer = "CarcassiM"
     mutopiaopus = "O 60"
     mutopiainstrument = "Guitar"
     date = "19th C."
@@ -19,7 +19,7 @@
     maintainerEmail = "jeff.covey@pobox.com"
     maintainerWeb = "http://pobox.com/~jeff.covey/"
     lastupdated = "2005/Jan/31"
-    footer = "Mutopia-2005/01/31-1"
+    footer = "Mutopia-2005/01/31-14"
     tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
 
