@@ -2,7 +2,7 @@
 
 \header {
  mutopiatitle = "Aase's Death from Peer Gynt Suite I"
- mutopiacomposer = "E. Grieg (1843-1907)"
+ mutopiacomposer = "GriegE"
  mutopiapoet = "Henrik Ibsen"
  mutopiaopus = "O 46 No. 2"
  mutopiainstrument = "Violin, Viola, Cello, Bass"
