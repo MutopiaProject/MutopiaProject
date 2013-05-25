@@ -18,7 +18,7 @@
   subtitle = "Allegretto"
   composer = "Ludwig van Beethoven"
   mutopiatitle = "Symphony No. 7 in A Major, Op. 92"
-  mutopiacomposer = "Ludwig van Beethoven"
+  mutopiacomposer = "BeethovenLv"
   mutopiapoet = "Ludwig van Beethoven"
   mutopiainstrument = "orchestra"
   date = "1811-12"

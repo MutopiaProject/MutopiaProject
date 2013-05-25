@@ -12,6 +12,7 @@
   title = "Home, Sweet Home"
   subsubtitle ="from Clari, the Maid of Milan (1821)"
   composer = "Sir Henry Rowley Bishop(1786-1855)"
+  mutopiacomposer = "BishopHR"
   poet = "John Howard Payne (1792-1852)"
   instrument = "Voice and Piano"
   opus = "Cincinnati, 1852"

@@ -28,7 +28,7 @@
     % % These are headers used by the Mutopia Project 
   % http://www.mutopiaproject.org/ 
   mutopiatitle = "Les Deux Anges" 
-  mutopiacomposer = "Blumenthal J" 
+  mutopiacomposer = "BlumenthalJ"
   mutopiapoet = "" 
   mutopiainstrument = "Piano" 
   date = "1829-1908" 
