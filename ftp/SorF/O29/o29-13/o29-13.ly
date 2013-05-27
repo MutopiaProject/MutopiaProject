@@ -11,7 +11,7 @@
 %  arranger = "Arranger"
 %  poet = "Poet"
 %  texttranslator = "Translator"
- copyright = "Creative Commons \\texttt{http://creativecommons.org}"
+ copyright = "Creative Commons Attribution-ShareAlike 1.0"
  enteredby = "Steve Shorter"
  footer = "Mutopia-2004/05/22"
  mutopiatitle = "Opus 29 no. 13"

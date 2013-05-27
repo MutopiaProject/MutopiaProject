@@ -47,6 +47,7 @@ rightAlignMark = #(define-music-function (parser location text padding ) (string
 	style = "Romantic"
 	maintainer = "Stewart Holmes"
 	lastupdated = "2006/August/26"
+	copyright = "Creative Commons Attribution-ShareAlike 2.5"
 
 	title = "Adelita"
 	composer = "Francisco Tárrega (1852-1909)"
