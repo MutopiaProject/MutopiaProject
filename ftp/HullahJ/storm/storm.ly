@@ -27,7 +27,7 @@
   % These are headers used by the Mutopia Project 
   % http://www.mutopiaproject.org/ 
   mutopiatitle = "The Storm" 
-  mutopiacomposer = "Hullah J" 
+  mutopiacomposer = "HullahJ" 
   mutopiapoet = "Procter A" 
   mutopiainstrument = "Voice and Piano" 
   date = "1812-1884" 

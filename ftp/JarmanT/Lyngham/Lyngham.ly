@@ -9,12 +9,12 @@
 	mutopiatitle = "Lyngham"
 
 	source="Methodist Hymnbook AT7, 1904"
-	mutopiacomposer=\composer
+	mutopiacomposer="JarmanT"
 	mutopiainstrument="Voice (SATB)"
 	copyright="Public Domain"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
-	style="hymn"
+	style="Hymn"
 	lastmodified = "2005/Jan/23"
 	
 	footer = "Mutopia-2005/01/23-178"

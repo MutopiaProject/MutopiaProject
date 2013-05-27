@@ -6,7 +6,7 @@
  piece = "Slow March Tempo"
 
  mutopiatitle = "Search-Light Rag"
- mutopiacomposer = "S. Joplin (1868-1917)"
+ mutopiacomposer = "JoplinS"
  mutopiainstrument = "Piano"
  date = "C. 1907"
  style = "Jazz"
