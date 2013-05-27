@@ -4,9 +4,9 @@
     composer = "W. A. Mozart (1756-1791)"
         
     mutopiatitle = "12 duets"
-    mutopiacomposer = "W. A. Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV487"
-    mutopiainstrument = "horn"
+    mutopiainstrument = "Horn"
     source = "see README"
     style = "Classical"
     copyright = "Public Domain"
