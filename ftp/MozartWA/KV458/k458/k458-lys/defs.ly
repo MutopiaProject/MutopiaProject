@@ -6,11 +6,11 @@
     composer = "W. A. Mozart (1756-1791)"
         
     mutopiatitle = "String Quartet KV. 458 (nr. 17) \"Hunt\""
-    mutopiacomposer = "W. A. Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV. 458"
     mutopiainstrument = "String Quartet"
     date = "19th November 1784 (Wien)"
-    source = "Breitkopf und H\"artel (1882)"
+    source = "Breitkopf und Härtel (1882)"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
