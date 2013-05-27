@@ -12,6 +12,7 @@
 \header {
   title = "The Vacant Chair"
   composer = "Geo. F. Root (1820-1895)"
+  mutopiacomposer = "RootGF"
   instrument = "Voice and Piano"
   copyright = "Public Domain"
   enteredby = "Stan Sanderson"

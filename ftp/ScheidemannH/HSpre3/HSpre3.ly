@@ -12,7 +12,7 @@
   composer = "Heinrich Scheidemann (ca. 1595-1663)"
   copyright = "Public Domain"
   mutopiatitle = "Praeambulum no.3 in d"
-  mutopiacomposer = "Heinrich Scheidemann (ca. 1595-1663)"
+  mutopiacomposer = "ScheidemannH"
   mutopiaopus = "WV 31"
   mutopiainstrument = "Organ"
   style = "Renaissance"

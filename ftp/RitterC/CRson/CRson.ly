@@ -11,7 +11,7 @@
   composer = "Christian Ritter (1645?-1725?)"
   copyright = "Public Domain"
   mutopiatitle = "Sonatina d moll"
-  mutopiacomposer = "Christian Ritter (1645?-1725?)"
+  mutopiacomposer = "RitterC"
   mutopiainstrument = "Organ"
   style = "Baroque"
   copyright = "Public Domain"

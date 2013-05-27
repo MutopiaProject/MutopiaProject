@@ -6,9 +6,9 @@
 \header {
 	title = "Tambourin"
 	composer = "Jean-Philippe Rameau"
-	subtitle = "Pi\`eces de Clavecin"
+	subtitle = "Pièces de Clavecin"
 	mutopiatitle = "Tambourin"
-	mutopiacomposer = "J. P. Rameau (1683-1764)"
+	mutopiacomposer = "RameauJP"
 	mutopiainstrument = "Harpsichord, Piano"
 	date = "1724"
 	source = "Durand, 1895"
