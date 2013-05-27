@@ -6,11 +6,11 @@
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
 
     mutopiatitle = "Fugue in G Minor KV 154/385k"
-    mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV 154/385k"
     mutopiainstrument = "Piano"
     date = "1782?"
-    source = "Breitkopf und H\"artel (1878-1887)"
+    source = "Breitkopf und Härtel (1878-1887)"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"

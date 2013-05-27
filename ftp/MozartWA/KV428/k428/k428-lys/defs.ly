@@ -7,11 +7,11 @@
     opus = "KV.~428"
         
     mutopiatitle = "String Quartet KV. 428 (nr. 16)"
-    mutopiacomposer = "W. A. Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV. 428"
     mutopiainstrument = "String Quartet"
     date = "1783"
-    source = "Breitkopf und H\"artel (1882)"
+    source = "Breitkopf und Härtel (1882)"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
