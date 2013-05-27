@@ -1,101 +1,113 @@
-\version "1.5.58"
+\version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
 
-\include "violin2-i.ly"
+\include "violin2-i.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino II."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"violin"
+	\set Staff.instrumentName = "Violino II."
 	\globalI
 
 	\KeyI
 	\markingsI
 	\violinIIFirstMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "violin2-ii.ly"
+\include "violin2-ii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino II."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"violin"
+	\set Staff.instrumentName = "Violino II."
 	\globalII
 
 	\KeyII
 	\markingsII
 	\violinIISecondMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "violin2-iii.ly"
+\include "violin2-iii.ily"
 
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino II."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"violin"
+	\set Staff.instrumentName = "Violino II."
 	\globalIII
 
 	\KeyIII
 	\markingsIII
 	\violinIIThirdMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 50
+    
+  \midi {
+    \tempo 4 = 50
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "violin2-iv.ly"
+\include "violin2-iv.ily"
 
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violino II."
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"violin"
+	\set Staff.instrumentName = "Violino II."
 	\globalIV
 
 	\KeyIV
 	\markingsIV
 	\violinIIFourthMov	
-    >
+    >>
 
-    \midi {
-       \tempo 2 = 120
+    
+  \midi {
+    \tempo 2 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
