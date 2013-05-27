@@ -63,7 +63,7 @@ LBells = \lyricmode {
 % texttranslator = "Johann Christoph Grünbaum (1785-1870)" 
 
  mutopiatitle = "Die blauen Glöckchen von Schottland"
- mutopiacomposer = "A. Neithardt (1793-1861)"
+ mutopiacomposer = "NeithardtA"
  mutopiapoet = ""
  mutopiaopus = "O 141, 2"
  mutopiainstrument = "Voice, (SATB)"
