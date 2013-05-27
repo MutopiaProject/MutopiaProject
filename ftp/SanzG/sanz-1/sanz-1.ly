@@ -11,6 +11,8 @@
 	title = "Preludio"
 	composer = "Gaspar Sanz"
 	opus = "1640-1710"
+	mutopiainstrument = "Guitar"
+	mutopiacomposer = "SanzG"
 	
 	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
 	footer = "Mutopia-2004/01/05-380"
