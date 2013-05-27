@@ -16,7 +16,7 @@
 	opus = ""
 	date = "1899"
 	source = "Jos. Stern & Co."
-	style = "Ragtime"
+	style = "Jazz"
 	copyright = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"

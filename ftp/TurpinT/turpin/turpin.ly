@@ -9,7 +9,7 @@
 	opus = "1903"
 	date = "1903"
 	source = "Sol Bloom, New York & Chicago"
-	style = "Ragtime"
+	style = "Jazz"
 	copyright = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"
