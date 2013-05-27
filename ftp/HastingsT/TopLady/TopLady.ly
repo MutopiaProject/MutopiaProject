@@ -6,7 +6,7 @@
 	date = "1830"
 	enteredby = "Peter Chubb"
 
-	mutopiacomposer=\composer
+	mutopiacomposer="HastingsT"
 
 	maintainer = "Peter  Chubb"
 	copyright= "Public Domain"	

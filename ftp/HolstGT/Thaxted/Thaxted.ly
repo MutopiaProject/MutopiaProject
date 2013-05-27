@@ -6,7 +6,7 @@
 
     mutopiatitle = "Thaxted"
     source = "Methodist Hymnbook 1933, number 900"
-    mutopiacomposer = "G. T.Holst (1874--1934)"
+    mutopiacomposer = "HolstGT"
     mutopiainstrument = "Voice and Piano"
     date = "1921"
 
