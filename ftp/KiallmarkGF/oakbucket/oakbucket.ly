@@ -12,7 +12,7 @@
   title = "The Old Oaken Bucket"
   subsubtitle =""
   composer = "George F. Kiallmark (1804-1887)"
-  composer = "KiallmarkGF"
+  mutopiacomposer = "KiallmarkGF"
   poet = "Samuel Woodworth (1818)"
   instrument = "Voice and Piano"
   opus = "1826"
