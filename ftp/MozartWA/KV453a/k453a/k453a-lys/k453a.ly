@@ -5,7 +5,7 @@
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
         
     mutopiatitle = "Marche funebre KV 453a"
-    mutopiacomposer = "Wolfgang Amadeus Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV 453a"
     mutopiainstrument = "Piano"
     date = "Wien, 1784"
