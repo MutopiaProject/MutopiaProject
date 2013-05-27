@@ -8,7 +8,7 @@
   opus = "KV.~498"
 
   mutopiatitle = "Trio in E-flat Major KV. 498"
-  mutopiacomposer = "W. A. Mozart (1756-1791)"
+  mutopiacomposer = "MozartWA"
   mutopiaopus = "KV. 498"
   mutopiainstrument = "Clarinet, Viola and Piano"
   date = "1786"

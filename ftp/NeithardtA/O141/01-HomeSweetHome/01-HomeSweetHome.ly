@@ -101,7 +101,7 @@ LHome = \lyricmode {
  texttranslator = "Johann Christoph Grünbaum (1785-1870)" 
 
  mutopiatitle = "Heimat, süßer Ort"
- mutopiacomposer = "A. Neithardt (1793-1861)"
+ mutopiacomposer = "NeithardtA"
  mutopiapoet = "J. H. Payne (1791-1852)"
  mutopiaopus = "O 141, 1"
  mutopiainstrument = "Voice, (SATB)"

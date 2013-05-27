@@ -65,7 +65,7 @@ LRose = \lyricmode {
  texttranslator = "" 
 
  mutopiatitle = "Des Sommers letzte Rose"
- mutopiacomposer = "A. Neithardt (1793-1861)"
+ mutopiacomposer = "NeithardtA"
  mutopiapoet = ""
  mutopiaopus = "O 141, 3"
  mutopiainstrument = "Voice, (SATB)"
