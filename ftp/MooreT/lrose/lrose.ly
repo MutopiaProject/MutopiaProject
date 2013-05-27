@@ -11,6 +11,7 @@
   title = "The Last Rose of Summer"
   subtitle ="(Martha)"
   composer = "Thomas Moore (1779-1833)"
+  mutopiacomposer = "MooreT"
   poet = "Sir John Stevenson (1761-1833)"
   instrument = "Voice and Piano"
   opus = ""

@@ -8,11 +8,9 @@
    piece = "Allegro"
 
    % mutopia headers
-   mutopiatitle = "Etude in A minor"
-   mutopiacomposer = "J.K.Mertz (1806-1856)"
-   mutopiainstrument = "Guitar"
+   mutopiacomposer = "MertzJK"
 
-   style = "classical"
+   style = "Classical"
    copyright = "Public Domain"
    maintainer = "Emre Akbas"
    maintainerEmail = "emreakbas@yahoo.com"
