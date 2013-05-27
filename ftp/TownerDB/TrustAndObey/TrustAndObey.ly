@@ -9,7 +9,7 @@
 
     meter=\metre
     mutopiatitle = "Trust and Obey"
-    mutopiacomposer = \composer
+    mutopiacomposer = "TownerDB"
     mutopiapoet = "J. H. Sammis (?--1919)"
     mutopiainstrument = "Voice (SATB)"
     date = "C19"

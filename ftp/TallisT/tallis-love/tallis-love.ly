@@ -9,10 +9,10 @@
   arranger = "Adapted by S. O. S. (2004)"
   poet = "John 14: 15-17"
   copyright = "Public Domain"
-
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
+  mutopiacomposer = "TallisT"
   	lastupdated = "1/24/2004"
   	
   	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
