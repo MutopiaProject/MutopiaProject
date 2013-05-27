@@ -16,7 +16,7 @@ Mark Van den Borre <mark@markvdb.be>
 \version "2.2.0"
 \header {
   mutopiatitle = "Divertissements pour la guitare, n°1 Andante "
-  mutopiacomposer = "Fernando Sor (1778- 1839)"
+  mutopiacomposer = "SorF"
   mutopiaopus = "O 1.1"
   mutopiainstrument = "Guitar"
   date = "1820s"

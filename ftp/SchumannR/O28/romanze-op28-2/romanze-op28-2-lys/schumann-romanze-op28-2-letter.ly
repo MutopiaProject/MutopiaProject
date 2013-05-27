@@ -9,7 +9,7 @@
   enteredby="Rune Zedeler"
   maintainer="rune@zedeler.dk"
   mutopiatitle = "Romanzen - op. 28/2"
-  mutopiacomposer = "R. Schumann 1810-1856"
+  mutopiacomposer = "SchumannR"
   mutopiainstrument = "Piano"
   style = "Romantic"
   copyright = "Public Domain"

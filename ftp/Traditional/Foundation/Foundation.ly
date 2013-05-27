@@ -10,8 +10,7 @@
     copyright = "Creative Commons Attribution-ShareAlike 2.0"
     maintainer = "Peter Chubb"
     maintainerEmail = "mutopia@chubb.wattle.id.au"
-    mutopiaComposer = "American Traditional"
-    mutopiatitle=\title
+    mutopiacomposer = "Traditional"
     mutopiainstrument="Voice (SATB)"
     source="Australian Hymn Book plus other sources"
     mutopiaPoet = "R. Keen (1787)"

@@ -6,7 +6,7 @@
 \version "1.6.9"
 \header {
     mutopiatitle = "Doumka"
-    mutopiacomposer = "P. Tchaikovskiy"
+    mutopiacomposer = "TchaikovskyPI"
     mutopiainstrument = "Piano"
     date = "1886"
     style = "Romantic"

@@ -6,7 +6,7 @@
   arranger = \markup \italic { "arr. by Louis Tocaben." }
   instrument = \markup { \bold { 1\raise #1.0 { st } Mandolin. } }
   mutopiatitle = "Ah! Was It Him My Heart Foretold."
-  mutopiacomposer = "G. Verdi (1813-1901)"
+  mutopiacomposer = "VerdiG"
   mutopiainstrument = "Mandolin"
   date = "1853"
   source = "Hinds, Noble & Eldredge 1912"

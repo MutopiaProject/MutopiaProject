@@ -31,7 +31,7 @@
   % % These are headers used by the Mutopia Project 
   % http://www.mutopiaproject.org/ 
   mutopiatitle = "Thunder and Lightning" 
-  mutopiacomposer = "Strauss J" 
+  mutopiacomposer = "StraussJJ"
   mutopiapoet = "" 
   mutopiainstrument = "Piano" 
   date = "1825-1899" 

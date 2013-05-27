@@ -9,10 +9,11 @@
 	opus = "1903"
 	date = "1903"
 	source = "Sol Bloom, New York & Chicago"
-	style = "Rag"
+	style = "Ragtime"
 	copyright = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"
+	mutopiacomposer = "TurpinT"
 	lastupdated = "2004/Apr/10"
 	
 	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
