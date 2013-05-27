@@ -6,7 +6,7 @@
 \header {
 	title = "Tambourin"
 	composer = "Jean-Philippe Rameau"
-	subtitle = "Pièces de Clavecin"
+	subtitle = "Pi\`eces de Clavecin"
 	mutopiatitle = "Tambourin"
 	mutopiacomposer = "RameauJP"
 	mutopiainstrument = "Harpsichord, Piano"
