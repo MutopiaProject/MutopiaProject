@@ -3,8 +3,7 @@
     meter = " 8 7. 8 7. D"
     composer = "F. Haydn (1732--1809)"
 
-    mutopiatitle = \title
-    mutopiacomposer = \composer
+    mutopiacomposer = "HaydnFJ"
     date = "1797"
 
     style = "Hymn"

@@ -9,7 +9,7 @@
   meter             = "I - Allegro moderato"
   copyright         = "Public Domain"
   mutopiatitle      = "Sonate II"
-  mutopiacomposer   = "F.J. Haydn (1732-1809)"
+  mutopiacomposer   = "HaydnFJ"
   mutopiainstrument = "Harpsichord"
   date              = "18th century"
   source            = "C.F. Peters, 1880s"
