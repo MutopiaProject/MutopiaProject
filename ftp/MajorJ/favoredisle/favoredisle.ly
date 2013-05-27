@@ -4,7 +4,7 @@
  enteredby="Martin Usher"
     
  mutopiatitle = "Britain's Favored Isle"
- mutopiacomposer = "John Major"
+ mutopiacomposer = "MajorJ"
  mutopiapoet = "John Major"
  mutopiainstrument = "Voice and Piano"
  date = "<1860"
