@@ -18,32 +18,29 @@ help:
 	@echo "  where TARGET is one of the following:"
 	@echo "  all help violin1 violin2 viola cello score"
 
-violin1: k421-violin1.ps
+%.pdf : %.ly
+	lilypond $<
 
-k421-violin1.ps: k421-violin1.ly $(VIOLIN1_FILES)
-	ly2dvi -P k421-violin1.ly
+violin1: k421-violin1.pdf
 
-
-violin2: k421-violin2.ps
-
-k421-violin2.ps: k421-violin2.ly $(VIOLIN2_FILES)
-	ly2dvi -P k421-violin2.ly
+k421-violin1.pdf: k421-violin1.ly $(VIOLIN1_FILES)
 
 
-viola: k421-viola.ps
+violin2: k421-violin2.pdf
 
-k421-viola.ps: k421-viola.ly $(VIOLA_FILES)
-	ly2dvi -P k421-viola.ly
-
-
-cello: k421-cello.ps
-
-k421-cello.ps: k421-cello.ly $(CELLO_FILES)
-	ly2dvi -P k421-cello.ly
+k421-violin2.pdf: k421-violin2.ly $(VIOLIN2_FILES)
 
 
-score: k421-score.ps
+viola: k421-viola.pdf
 
-k421-score.ps: k421-score.ly $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
+k421-viola.pdf: k421-viola.ly $(VIOLA_FILES)
 
-	ly2dvi -P k421-score.ly
+
+cello: k421-cello.pdf
+
+k421-cello.pdf: k421-cello.ly $(CELLO_FILES)
+
+
+score: k421-score.pdf
+
+k421-score.pdf: k421-score.ly $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
