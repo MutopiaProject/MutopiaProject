@@ -1,12 +1,12 @@
-COMMON_FILES = defs.ly
-VIOLIN1_FILES = $(COMMON_FILES) violin1-i.ly violin1-ii.ly	\
-violin1-iii.ly violin1-iv.ly
-VIOLIN2_FILES = $(COMMON_FILES) violin2-i.ly violin2-ii.ly	\
-violin2-iii.ly violin2-iv.ly
-VIOLA_FILES = $(COMMON_FILES) viola-i.ly viola-ii.ly viola-iii.ly	\
-viola-iv.ly
-CELLO_FILES = $(COMMON_FILES) cello-i.ly cello-ii.ly cello-iii.ly	\
-cello-iv.ly
+COMMON_FILES = defs.ily
+VIOLIN1_FILES = $(COMMON_FILES) violin1-i.ily violin1-ii.ily	\
+violin1-iii.ily violin1-iv.ily
+VIOLIN2_FILES = $(COMMON_FILES) violin2-i.ily violin2-ii.ily	\
+violin2-iii.ily violin2-iv.ily
+VIOLA_FILES = $(COMMON_FILES) viola-i.ily viola-ii.ily viola-iii.ily	\
+viola-iv.ily
+CELLO_FILES = $(COMMON_FILES) cello-i.ily cello-ii.ily cello-iii.ily	\
+cello-iv.ily
 
 
 .PHONY: all help score violin1 violin2 viola cello

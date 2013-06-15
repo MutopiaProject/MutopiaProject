@@ -1,6 +1,6 @@
 \version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
 \header {
     instrument = "Viola."
@@ -10,7 +10,7 @@
     \compressFullBarRests
 }
 
-\include "viola-i.ly"
+\include "viola-i.ily"
 
 \score {
     \context Staff <<
@@ -31,7 +31,7 @@
     \layout { }
 }
 
-\include "viola-ii.ly"
+\include "viola-ii.ily"
 
 \score {
     \context Staff <<
@@ -52,7 +52,7 @@
     \layout { }
 }
 
-\include "viola-iii.ly"
+\include "viola-iii.ily"
 
 \score {
     \context Staff <<
@@ -74,7 +74,7 @@
     \layout { }
 }
 
-\include "viola-iv.ly"
+\include "viola-iv.ily"
 
 \score {
     \context Staff <<
