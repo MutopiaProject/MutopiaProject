@@ -1,239 +1,247 @@
-\version "1.6.6"
+\version "2.16.0"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
-\include "defs.ly"
+\include "defs.ily"
 
 
-\include "violin1-i.ly"
-\include "violin2-i.ly"
-\include "viola-i.ly"
-\include "cello-i.ly"
+\include "violin1-i.ily"
+\include "violin2-i.ily"
+\include "viola-i.ily"
+\include "cello-i.ily"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
 
-	\context StaffGroup = strings <
+	\context StaffGroup = "strings" <<
 
-	    \context Staff = violinI <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino I."
-		\property Staff.instr = "Vl.I"
+	    \context Staff = violinI <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino I."
+		\set Staff.shortInstrumentName = "Vl.I"
 
 		\violinIFirstMov
-		\context Voice=markings { \markingsI }
-	    >
+		\context Voice = "markings" { \markingsI }
+	    >>
 
-	    \context Staff = violinII <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino II."
-		\property Staff.instr = "Vl.II"
+	    \context Staff = violinII <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino II."
+		\set Staff.shortInstrumentName = "Vl.II"
 
 		\violinIIFirstMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Viola."
-		\property Staff.instr = "Vla"
+	    \context Staff = "viola" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Viola."
+		\set Staff.shortInstrumentName = "Vla"
 
 		\violaFirstMov
-	    >
+	    >>
 
-	    \context Staff = cello <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Violoncello."
-		\property Staff.instr = "Vc."
+	    \context Staff = "cello" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Violoncello."
+		\set Staff.shortInstrumentName = "Vc."
 
 		\celloFirstMov
-	    >
-	>
-    >
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 90
+    
+  \midi {
+    \tempo 4 = 90
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "violin1-ii.ly"
-\include "violin2-ii.ly"
-\include "viola-ii.ly"
-\include "cello-ii.ly"
+\include "violin1-ii.ily"
+\include "violin2-ii.ily"
+\include "viola-ii.ily"
+\include "cello-ii.ily"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
 
-	\context StaffGroup = strings <
-	    \context Staff = violinI <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino I."
-		\property Staff.instr = "Vl.I"
+	\context StaffGroup = "strings" <<
+	    \context Staff = violinI <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino I."
+		\set Staff.shortInstrumentName = "Vl.I"
 
 		\violinISecondMov
-		\context Voice=markings { \markingsII }
-	    >
+		\context Voice = "markings" { \markingsII }
+	    >>
 
-	    \context Staff = violinII <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino II."
-		\property Staff.instr = "Vl.II"
+	    \context Staff = violinII <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino II."
+		\set Staff.shortInstrumentName = "Vl.II"
 
 		\violinIISecondMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Viola."
-		\property Staff.instr = "Vla"
+	    \context Staff = "viola" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Viola."
+		\set Staff.shortInstrumentName = "Vla"
 
 		\violaSecondMov
-	    >
+	    >>
 
-	    \context Staff = cello <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Violoncello."
-		\property Staff.instr = "Vc."
+	    \context Staff = "cello" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Violoncello."
+		\set Staff.shortInstrumentName = "Vc."
 
 		\celloSecondMov
-	    >
-	>
-    >
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 70
+    
+  \midi {
+    \tempo 4 = 70
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
 
-\include "violin1-iii.ly"
-\include "violin2-iii.ly"
-\include "viola-iii.ly"
-\include "cello-iii.ly"
+\include "violin1-iii.ily"
+\include "violin2-iii.ily"
+\include "viola-iii.ily"
+\include "cello-iii.ily"
 
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
 
-	\context StaffGroup = strings <
-	    \context Staff = violinI <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino I."
-		\property Staff.instr = "Vl.I"
+	\context StaffGroup = "strings" <<
+	    \context Staff = violinI <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino I."
+		\set Staff.shortInstrumentName = "Vl.I"
 
 		\violinIThirdMov
-		\context Voice=markings { \markingsIII }
-	    >
+		\context Voice = "markings" { \markingsIII }
+	    >>
 
-	    \context Staff = violinII <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino II."
-		\property Staff.instr = "Vl.II"
+	    \context Staff = violinII <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino II."
+		\set Staff.shortInstrumentName = "Vl.II"
 
 		\violinIIThirdMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Viola."
-		\property Staff.instr = "Vla"
+	    \context Staff = "viola" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Viola."
+		\set Staff.shortInstrumentName = "Vla"
 
 		\violaThirdMov
-	    >
+	    >>
 
-	    \context Staff = cello <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Violoncello."
-		\property Staff.instr = "Vc."
+	    \context Staff = "cello" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Violoncello."
+		\set Staff.shortInstrumentName = "Vc."
 
 		\celloThirdMov
 		\context Voice=markingsBis { \markingsIIIbis }
-	    >
-	>
-    >
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 130
+    
+  \midi {
+    \tempo 4 = 130
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "violin1-iv.ly"
-\include "violin2-iv.ly"
-\include "viola-iv.ly"
-\include "cello-iv.ly"
+\include "violin1-iv.ily"
+\include "violin2-iv.ily"
+\include "viola-iv.ily"
+\include "cello-iv.ily"
 
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
 
-	\context StaffGroup = strings <
+	\context StaffGroup = "strings" <<
 
-	    \context Staff = violinI <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino I."
-		\property Staff.instr = "Vl.I"
+	    \context Staff = violinI <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino I."
+		\set Staff.shortInstrumentName = "Vl.I"
 
 		\violinIFourthMov	
-		\context Voice=markings { \markingsIV }
-	    >
+		\context Voice = "markings" { \markingsIV }
+	    >>
 
-	    \context Staff = violinII <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = "Violino II."
-		\property Staff.instr = "Vl.II"
+	    \context Staff = violinII <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = "Violino II."
+		\set Staff.shortInstrumentName = "Vl.II"
 
 		\violinIIFourthMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Viola."
-		\property Staff.instr = "Vla"
+	    \context Staff = "viola" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Viola."
+		\set Staff.shortInstrumentName = "Vla"
 
 		\violaFourthMov
-	    >
+	    >>
 
-	    \context Staff = cello <
-	        \property Staff.autoBeaming = ##f
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = "Violoncello."
-		\property Staff.instr = "Vc."
+	    \context Staff = "cello" <<
+	        \set Staff.autoBeaming = ##f
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = "Violoncello."
+		\set Staff.shortInstrumentName = "Vc."
 
 		\celloFourthMov
-	    >
-	>
-    >
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 100
+    
+  \midi {
+    \tempo 4 = 100
     }
 
-    \paper { }
+
+
+    \layout { }
 }
