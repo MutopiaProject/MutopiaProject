@@ -2,7 +2,7 @@
 
 \version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
 \header {
     instrument = "Cello."
@@ -12,7 +12,7 @@
     \compressFullBarRests
 }
 
-\include "cello-i.ly"
+\include "cello-i.ily"
 
 \score {
     \context Staff <<
@@ -35,7 +35,7 @@
     \layout { }
 }
 
-\include "cello-ii.ly"
+\include "cello-ii.ily"
 
 \score {
     \context Staff <<
@@ -58,7 +58,7 @@
     \layout { }
 }
 
-\include "cello-iii.ly"
+\include "cello-iii.ily"
 
 \score {
     \context Staff <<
@@ -83,7 +83,7 @@
     \layout { }
 }
 
-\include "cello-iv.ly"
+\include "cello-iv.ily"
 
 \score {
     \context Staff <<

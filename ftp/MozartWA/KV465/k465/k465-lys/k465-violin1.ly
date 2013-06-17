@@ -2,7 +2,7 @@
 
 \version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
 \header {
     instrument = "Violino I."
@@ -12,7 +12,7 @@
     \compressFullBarRests
 }
 
-\include "violin1-i.ly"
+\include "violin1-i.ily"
 
 \score {
     \context Staff <<
@@ -35,7 +35,7 @@
     \layout { }
 }
 
-\include "violin1-ii.ly"
+\include "violin1-ii.ily"
 
 \score {
     \context Staff <<
@@ -58,7 +58,7 @@
     \layout { }
 }
 
-\include "violin1-iii.ly"
+\include "violin1-iii.ily"
 
 \score {
     \context Staff <<
@@ -83,7 +83,7 @@
     \layout { }
 }
 
-\include "violin1-iv.ly"
+\include "violin1-iv.ily"
 
 \score {
     \context Staff <<
