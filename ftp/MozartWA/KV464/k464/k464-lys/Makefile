@@ -17,43 +17,36 @@ help:
 	@echo "Usage: make [TARGET]"
 	@echo "  where TARGET is one of the following:"
 	@echo "  all help violin1 violin2 viola cello score"
-	@echo ""
-	@echo "Warning: you must have GNU m4 installed"
 
-%.ps : %.ly
-	ly2dvi -P -o $@ $<
+%.pdf : %.ly
+	lilypond $<
 
 ############################################################
 
-violin1: k464-violin1.ps
+violin1: k464-violin1.pdf
 
-k464-violin1.ly: k464-violin1.ly.m4 $(VIOLIN1_FILES)
-	m4 -DSOLO=1 $< > $@
-
-############################################################
-
-violin2: k464-violin2.ps
-
-k464-violin2.ly: k464-violin2.ly.m4 $(VIOLIN2_FILES)
-	m4 -DSOLO=1 $< > $@
+k464-violin1.pdf: k464-violin1.ly $(VIOLIN1_FILES)
 
 ############################################################
 
-viola: k464-viola.ps
+violin2: k464-violin2.pdf
 
-k464-viola.ly: k464-viola.ly.m4 $(VIOLA_FILES)
-	m4 -DSOLO=1 $< > $@
-
-############################################################
-
-cello: k464-cello.ps
-
-k464-cello.ly: k464-cello.ly.m4 $(CELLO_FILES)
-	m4 -DSOLO=1 $< > $@
+k464-violin2.pdf: k464-violin2.ly $(VIOLIN2_FILES)
 
 ############################################################
 
-score: k464-score.ps
+viola: k464-viola.pdf
 
-k464-score.ly: k464-score.ly.m4 $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
-	m4 $< > $@
+k464-viola.pdf: k464-viola.ly $(VIOLA_FILES)
+
+############################################################
+
+cello: k464-cello.pdf
+
+k464-cello.pdf: k464-cello.ly $(CELLO_FILES)
+
+############################################################
+
+score: k464-score.pdf
+
+k464-score.pdf: k464-score.ly $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
