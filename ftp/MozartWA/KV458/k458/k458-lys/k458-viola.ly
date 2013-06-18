@@ -1,97 +1,109 @@
-\version "1.6.6"
+\version "2.16.0"
 
 \include "defs.ly"
+
+\header {
+    instrument = "Viola."
+}
+
+\layout {
+    \compressFullBarRests
+}
 
 \include "viola-i.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola."
+    \context Staff <<
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
 
 	\time 6/8
 	\partial 8
 
 	\violaFirstMov
-	\context Voice=markings { \markingsI }
-    >
+	\context Voice = "markings" { \markingsI }
+    >>
 
-    \midi {
-       \tempo 4 = 140
+    
+  \midi {
+    \tempo 4 = 140
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 \include "viola-ii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola."
+    \context Staff <<
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
 
 	\time 3/4
 
 	\violaSecondMov
-	\context Voice=markings { \markingsII }
+	\context Voice = "markings" { \markingsII }
 	\context Voice=markingsBis { \markingsIIbis }
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 \include "viola-iii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola."
+    \context Staff <<
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
 
 	\violaThirdMov
-	\context Voice=markings { \markingsIII }
-    >
+	\context Voice = "markings" { \markingsIII }
+    >>
 
-    \midi {
-       \tempo 4 = 40
+    
+  \midi {
+    \tempo 4 = 40
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 \include "viola-iv.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola."
+    \context Staff <<
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
 
 	\time 2/4
 
 	\violaFourthMov
-	\context Voice=markings { \markingsIV }
-    >
+	\context Voice = "markings" { \markingsIV }
+    >>
 
-    \midi {
-       \tempo 4 = 140
+    
+  \midi {
+    \tempo 4 = 140
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
