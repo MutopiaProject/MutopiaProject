@@ -4,12 +4,12 @@
 
 #(set-global-staff-size 16)
 
-\include "defs.ly"
+\include "defs.ily"
 
-\include "violin1-i.ly"
-\include "violin2-i.ly"
-\include "viola-i.ly"
-\include "cello-i.ly"
+\include "violin1-i.ily"
+\include "violin2-i.ily"
+\include "viola-i.ily"
+\include "cello-i.ily"
 
 \score {
     <<
@@ -78,10 +78,10 @@
 }
 
 
-\include "violin1-ii.ly"
-\include "violin2-ii.ly"
-\include "viola-ii.ly"
-\include "cello-ii.ly"
+\include "violin1-ii.ily"
+\include "violin2-ii.ily"
+\include "viola-ii.ily"
+\include "cello-ii.ily"
 
 \score {
     <<
@@ -145,10 +145,10 @@
     \layout { }
 }
 
-\include "violin1-iii.ly"
-\include "violin2-iii.ly"
-\include "viola-iii.ly"
-\include "cello-iii.ly"
+\include "violin1-iii.ily"
+\include "violin2-iii.ily"
+\include "viola-iii.ily"
+\include "cello-iii.ily"
 
 
 \score {
@@ -217,10 +217,10 @@
 }
 
 
-\include "violin1-iv.ly"
-\include "violin2-iv.ly"
-\include "viola-iv.ly"
-\include "cello-iv.ly"
+\include "violin1-iv.ily"
+\include "violin2-iv.ily"
+\include "viola-iv.ily"
+\include "cello-iv.ily"
 
 
 \score {
