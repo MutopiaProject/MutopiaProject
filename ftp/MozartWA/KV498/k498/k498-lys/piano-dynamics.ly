@@ -1,12 +1,14 @@
-dynamicsFirstMov = \notes {
+\version "2.16.0"
+
+dynamicsFirstMov =  {
     s4\f s16 s64\p s32. s4.
     | s2.*3
     | s4\f s16 s64\p s32. s4.
     | s2.*3
     | s16 s16\p s4 s4.
     | s2.*13
-    | s4 s8 \< s4 \! s8
-    | s4.\f \> \! s8-\p s s
+    | s4 s8 \< s4  s8\!
+    | s4.\f \>  s8\!\p s s
     | s2.*28
     | s4. s4 s8\f
     | s2.
@@ -27,7 +29,7 @@ dynamicsFirstMov = \notes {
 
 %---------------------------------------------------------------------
 
-dynamicsSecondMov = \notes {
+dynamicsSecondMov =  {
     s4\f s2
     | s2.*6
     | s2 s4\p
@@ -36,7 +38,7 @@ dynamicsSecondMov = \notes {
     | s2.*3
     | s4\p s2
     | s2.*9
-    | s4-\f s2
+    | s4\f s2
     | s2.*3
     | s4 s2\p
     | s2.
@@ -72,7 +74,7 @@ dynamicsSecondMov = \notes {
 
 %---------------------------------------------------------------------
 
-dynamicsThirdMov = \notes {
+dynamicsThirdMov =  {
     s2\p s2
     | s1*6
     | s2 s8 s8\f s4
@@ -83,7 +85,7 @@ dynamicsThirdMov = \notes {
     | s1*45
     | s4\f s4 s2
     | s1*40
-    | s2-#'(columns (dynamic "mf") (italic " legato")) s2
+    | s2- \markup{ {\dynamic "mf"} {\italic " legato"}} s2
     | s1*23 \bar "||"
     | s1*44
     | s2 s16 s16\f s8 s4
@@ -93,18 +95,18 @@ dynamicsThirdMov = \notes {
     | s2\fp s2
     | s1*2
     | s2\f s2
-    | s8 s8\> s2 s8. \! s16
+    | s8 s8\> s2 s8.  s16\!
     | s2\p s2
     | s1*3
     | s2\f s2
     | s1*2
     | s8 s8\p s4 s2
     | s1*17
-    | s2-#'(columns (dynamic "f") (italic " legato")) s2
+    | s2- \markup{ {\dynamic "f"} {\italic " legato"}} s2
     | s1
     | s4 s4\p s2
     | s1*7
-    | s2-#'(italic "cresc.") s2
+    | s2- \markup{\italic "cresc."} s2
     | s2\f s2
     | s1 \bar "|."
 }

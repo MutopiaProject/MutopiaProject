@@ -23,37 +23,34 @@ help:
 	@echo "where TARGET can be one of the following:"
 	@echo "    help       This help"
 	@echo "    all        Make the piano, violin, viola, clarinet and piano solo part"
-	@echo "    clarinet   Create k498-clarinet.ps (solo clarinet part)"
-	@echo "    violin     Create k498-violin.ps (solo clarinet part transposed for violin)"
-	@echo "    viola      Create k498-viola.ps (solo viola part)"
-	@echo "    piano-solo Create k498-piano-solo.ps (solo piano part)"
-	@echo "    piano      Create k498-piano.ps (complete score)"
+	@echo "    clarinet   Create k498-clarinet.pdf (solo clarinet part)"
+	@echo "    violin     Create k498-violin.pdf (solo clarinet part transposed for violin)"
+	@echo "    viola      Create k498-viola.pdf (solo viola part)"
+	@echo "    piano-solo Create k498-piano-solo.pdf (solo piano part)"
+	@echo "    piano      Create k498-piano.pdf (complete score)"
 
 all: clarinet violin viola piano-solo piano
 
-clarinet: k498-clarinet.ps
+clarinet: k498-clarinet.pdf
 
-violin: k498-violin.ps
+violin: k498-violin.pdf
 
-viola: k498-viola.ps
+viola: k498-viola.pdf
 
-piano-solo: k498-piano-solo.ps
+piano-solo: k498-piano-solo.pdf
 
-piano: k498-piano.ps
+piano: k498-piano.pdf
 
+%.pdf : %.ly
+	lilypond $<
 
-k498-clarinet.ps: k498-clarinet.ly $(CLARINET_FILES)
-	ly2dvi -P k498-clarinet.ly
+k498-clarinet.pdf: k498-clarinet.ly $(CLARINET_FILES)
 
-k498-violin.ps: k498-violin.ly $(CLARINET_FILES)
-	ly2dvi -P k498-violin.ly
+k498-violin.pdf: k498-violin.ly $(CLARINET_FILES)
 
-k498-viola.ps: k498-viola.ly $(VIOLA_FILES)
-	ly2dvi -P k498-viola.ly
+k498-viola.pdf: k498-viola.ly $(VIOLA_FILES)
 
-k498-piano-solo.ps: k498-piano-solo.ly $(PIANO_FILES)
-	ly2dvi -P k498-piano-solo.ly
+k498-piano-solo.pdf: k498-piano-solo.ly $(PIANO_FILES)
 
-k498-piano.ps: k498-piano.ly $(CLARINET_FILES) \
+k498-piano.pdf: k498-piano.ly $(CLARINET_FILES) \
 	 $(VIOLA_FILES) $(PIANO_FILES)
-	ly2dvi -P k498-piano.ly

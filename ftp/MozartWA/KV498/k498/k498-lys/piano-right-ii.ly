@@ -1,357 +1,314 @@
-rightHandSecondMov = \notes \relative c'' {
+\version "2.16.0"
+
+rightHandSecondMov =  \relative c'' {
     \key bes \major
     \time 3/4
 
     \noTupletBracket
 
     \repeat volta 2 {
-	<
-	    { \voiceOne d2. ~ | [d8( c f es d )c] }
-	    \context Voice=x { \voiceTwo <f,2. bes> | g }
-	> \oneVoice
-	| <d,4 f bes> <d f bes(> <f a )c>
+	<<
+	    { d2. ~ |  d8[( c f es d  c)] } \\
+	    { <f, bes>2. | g }
+	>>
+	| <d f bes>4 <d f bes>( <f a c>)
 	|
-	<
+	<<
 	    {
-		\property Voice.Stem \set #'transparent = ##t
-		\voiceOne c'2( )d4
-		\property Voice.Stem \set #'transparent = ##f
+		\voiceOne <a c>2(  <bes d>4)
 	    }
 
-	    \context Voice=x {
-		\property Voice.Stem \override #'length = #8
-		\voiceOne a2( )bes4
-		\property Voice.Stem \revert #'length
+	    \new Voice {
+		\override NoteHead #'transparent = ##t
+		\override NoteColumn #'ignore-collision = ##t
+		\voiceOne a2(  bes4)
+		\revert NoteColumn #'ignore-collision
 	    }
 
-	    \context Voice=y { \voiceTwo f2. }
-	> \oneVoice
-	| <g,2. bes es(> ~
-	| [es'8 )d d( f es )d]
-	| [d( bes d bes es )c]
-	| bes4( )a f'( ~
-	| f )e bes'( ~
+	    \new Voice { \voiceTwo f2. }
+	>> \oneVoice
+	| <g bes es>2.( ~
+	|  es'8[  d) d( f es  d)]
+	|  d[( bes d bes es  c)]
+	| bes4(  a) f'( ~
+	| f  e) bes'( ~
 
 % 10
-	| bes )a \times 2/3 { [d8( bes )g] }
+	| bes  a) \times 2/3 {  d8[( bes  g)] }
 	|
-	<
-	    { f2( \voiceOne [a8 g] | \oneVoice )f4 }
-	    \context Voice=x { s2 \voiceTwo e4 \oneVoice | s4 }
-	> r4 r
+	<<
+	    { f2( \voiceOne  a8[ g] | \oneVoice  f4) }
+	    \context Voice = "x" { s2 \voiceTwo e4 }
+	>> r4 r
     }
 
     \repeat volta 2 {
-	<
-	    { \voiceOne <as,4 c> c2 | c2. }
-	    \context Voice=x { \voiceThree s4 as4 g | f2 fis4 }
-	    \context Voice=y { \voiceTwo d4 d2 | d2. }
-	> \oneVoice
-	| <es,4 g c> <es g c(> <g b )d>
-	<
+	<<
+	    { \voiceOne <as, c>4 c2 | c2. }
+	    \context Voice = "x" { \voiceThree s4 as4 g | f2 fis4 }
+	    \context Voice = "y" { \voiceTwo d4 d2 | d2. }
+	>> \oneVoice
+	| <es g c>4 <es g c>( <g b d>)
+	<<
 	    {
-		\property Voice.Stem \set #'transparent = ##t
-		\voiceOne d'2( )es4
-		\property Voice.Stem \set #'transparent = ##f
+		\voiceOne <a c>2(  <bes d>4)
 	    }
 
-	    \context Voice=x {
-		\property Voice.Stem \override #'length = #8
-		\voiceOne b2( )c4
-		\property Voice.Stem \revert #'length
+	    \new Voice {
+		\override NoteHead #'transparent = ##t
+		\override NoteColumn #'ignore-collision = ##t
+		\voiceOne a2(  bes4)
+		\revert NoteColumn #'ignore-collision
 	    }
 
-	    \context Voice=y { \voiceTwo g2. }
-	> \oneVoice
-	| es4( e <d )f>
+	    \new Voice { \voiceTwo f2. }
+	>> \oneVoice
+	| es'4( e <d f>)
 	|
-	<
-	    { \voiceOne f4.( fis8 )g4 }
-	    \context Voice=x { \voiceTwo d2( )es4 }
-	> \oneVoice
-	| r4 r bes(
+	<<
+	    { f4.( fis8  g4) } \\
+	    { d2(  es4) }
+	>>
+	| r4 r bes'(
 
 % 20
-	| fis g )d
+	| fis g  d)
 	| es8 r f! r g r
-	| d4( )c d,(
-	| [es8 d] es4 e
-	| [f8 e] f4 d
-	| [es8 d] es4 e
-	| f4 )c
-	<
+	| d4(  c) d,(
+	|  es8[ d] es4 e
+	|  f8[ e] f4 d
+	|  es8[ d] es4 e
+	| f4  c)
+	<<
 	    {
-		\voiceOne a'4 ~ | a( g )fis ~ | fis( [g8 a] )bes4 |
-		[b8( c f es d )c]
+		a'4 ~ | a( g  fis) ~ | fis(  g8[ a]  bes4) |
+		 b8[( c f es d  c)]
 	    }
-
-	    \context Voice=x {
-		\voiceTwo d,4 ~ | d2. ~ | d | g
+	    \\
+	    {
+		d,4 ~ | d2. ~ | d | g
 	    }
-	> \oneVoice
+	>>
 
 % 30
-	| <d,2 bes'!> r4
+	| <d bes'!>2 r4
 	| R2.*2
-	| r4 r <a'( c> ~
-	| <a c> <)g bes> < \voiceOne es' \context Voice=x { \voiceTwo
-          f, } > \oneVoice
-	| [<f8 d'(> f' es d c )bes]
-	| g4.( [es8 d )c]
+	| r4 r <a' c>( ~
+	| <a c> <g bes>) << es' \\ f, >>
+	| <f d'>8[( f' es d c  bes)]
+	| g4.(  es8[ d  c)]
 	| d4 r bes''4( ~
-	| bes )a es( ~
-	| es \times 2/3 { [d8 es f] } \times 2/3 { [g es c] }
-	| )bes2(
-	<
-	    { \voiceOne [d8 c] }
-	    \context Voice=x { \voiceTwo a4 }
-	> \oneVoice
-	| )bes4 r r
+	| bes  a) es( ~
+	| es \times 2/3 {  d8[ es f] } \times 2/3 {  g[ es c] }
+	|  bes2)( << { d8[ c] } \\ a4 >>
+	|  bes4) r r
     }
 
     \repeat volta 2 {
 	R2.
-	| r4 r [fis8.(^\trill e32 fis]
-	| )g8 r <fis a> r <g bes> r
-	|
-	<
-	    { \voiceOne a4( )d }
-	    \context Voice=x { \voiceTwo fis,2 }
-	> \oneVoice r4
+	| r4 r  fis8.[(^\trill e32 fis]
+	|  g8) r <fis a> r <g bes> r
+	| << { a4(  d) } \\ fis,2 >> r4
 	| R2.
-	| r4 r [fis,8.(^\trill e32 fis]
-	| )g8 r <fis a> r <g bes> r
+	| r4 r  fis8.[(^\trill e32 fis]
+	|  g8) r <fis a> r <g bes> r
 	|
-	<
-	    { \voiceOne c4( des )c | c }
-	    \context Voice=x { \voiceTwo a4 bes2 | a4 }
-	> \oneVoice r4 [a8.(^\trill g32 a]
+	<<
+	    { c4( des  c) | c } \\
+	    { a4 bes2 | a4 }
+	>> r4  a8.[(^\trill g32 a]
 
 % 51
-	| )bes8 r <a c> r <bes d> r
+	|  bes8) r <a c> r <bes d> r
 	|
-	<
-	    { \voiceOne e4( f )e | e }
-	    \context Voice=x { \voiceTwo cis4 d2 | cis4 }
-	> \oneVoice r4 [cis8.(^\trill b32 cis]
-	| )d8 r <cis e> r <d f> r
+	<<
+	    { e4( f  e) | e } \\
+	    { cis4 d2 | cis4 }
+	>> r4  cis8.[(^\trill b32 cis]
+	|  d8) r <cis e> r <d f> r
 	|
-	<
-	    { \voiceOne a'4( bes! gis | a fis g! | es )f! }
-	    \context Voice=x {
-		\voiceTwo r4 d e | cis d bes | c! as
-	    }
-	> \oneVoice <g,8 b d> r
+	<<
+	    { a'4( bes! gis | a fis g! | es  f!) } \\
+	    { r4 d e | cis d bes | c! as }
+	>> <g b d>8 r
 	| <g c es> r <f a! c> r <f bes! d> r
 	| <es g bes> r <es a c> r <d fis a> r
 
 % 60
-	| <g4 bes> g'( )f!
-	| \grace { \cue f16( \noCue } )e!4( )d <g, a>
+	| <g bes>4 g'(  f!)
+	| \appoggiatura f16 e!4(  d) <g, a>
 	| <f a> r r
     }
 
     \repeat volta 2 {
 	R2.
-	| \times 2/3 { [g8( c es] } \noTupletNum \times 2/3 { [g as g]
-          [f! g f] }
-	| \times 2/3 { [es f g] [f es d] [es d )c] }
+	| \times 2/3 {  g8[( c es] } \noTupletNum \times 2/3 {  g[ as g]
+           f![ g f] }
+	| \times 2/3 {  es[ f g]  f[ es d]  es[ d  c)] }
 	| R2.
-	| \stemDown \times 2/3 { [f,8( bes des] [f ges f] [es f es] }
-	| \times 2/3 { [d! es f] [es d c] [d c )bes] } \stemBoth
+	| \stemDown \times 2/3 {  f,8[( bes des]  f[ ges f]  es[ f es] }
+	| \times 2/3 {  d![ es f]  es[ d c]  d[ c  bes)] } \stemNeutral
 	| r4
-	<
-	    { \voiceOne <es2 g> ~ | <es4 g> <d2 fis(> | <d4 )g> <fis,
-	    c'> <g bes> }
-	    \context Voice=x { \voiceTwo <g2 bes> | a2. | g4 d2 }
-	>
+	<<
+	    {  <es g>2 ~ | <es g>4 <d fis>2( | <d g>4) <fis, c'> <g bes> } \\
+	    { <g bes>2 | a2. | g4 d2 }
+	>>
 
 % 72
-	| <g4( bes> <)fis a> r4
+	| <g bes>4( <fis a>) r4
 	| R2.
-	| r4 r \slurDown [fis8.(^\trill e32 fis]
-	| )g8 \slurBoth r <fis a> r <g bes> r
+	| r4 r \slurDown  fis8.[(^\trill e32 fis]
+	|  g8) \slurNeutral r <fis a> r <g bes> r
 	|
 	% In this bar there is only one slur (unlike bar #43), so
 	% things are simpler.
-	<
-	    { \voiceOne a4( )d }
-	    \context Voice=x { \voiceTwo fis,2 }
-	> \oneVoice r4
+	<< { a4(  d) } \\ fis,2 >> r4
 	| R2.*2
-	| <a4 fis'(> <bes g'> <gis )eis'>
+	| <a fis'>4( <bes g'> <gis eis'>)
 
 % 80
-	| <a2. fis'> ~
-	| \tupletNum \times 2/3 { [fis'8 a( c] } \noTupletNum \times
-          2/3 { [es c bes!] [a g fis] }
-	| \times 2/3 { [g d bes'] [a d, c'] [bes d, )d'] }
-	| \times 2/3 { [fis,( a c] [es c bes!] [a g fis] }
-	| \times 2/3 { [g d bes'] [a d, c'] [bes g )bes] }
+	| <a fis'>2. ~
+	| \tupletNum \times 2/3 {  fis'8[ a( c] } \noTupletNum \times
+          2/3 {  es[ c bes!]  a[ g fis] }
+	| \times 2/3 {  g[ d bes']  a[ d, c']  bes[ d,  d')] }
+	| \times 2/3 {  fis,[( a c]  es[ c bes!]  a[ g fis] }
+	| \times 2/3 {  g[ d bes']  a[ d, c']  bes[ g  bes)] }
 	|
-	<
-	    { \voiceOne d4( es cis | d b c! | as )bes! }
-	    \context Voice=x {
-		\voiceTwo r4 g( a | fis g es! | f! )des
-	    }
-	> \oneVoice <c,8 e g> r
+	<<
+	    { d4( es cis | d b c! | as  bes!) } \\
+	    { r4 g( a | fis g es! | f!  des) }
+	>> <c e g>8 r
 	| <c f as!> r <bes d! f> r <bes es! g> r
 	| <as c es> r <as d f> r <g b d> r
 
 % 90
-	| <fis2 c' es> <g4 bes! d>
+	| <fis c' es>2 <g bes! d>4
 	|
-	<
-	    { \voiceOne <as4 c> <g bes> <fis a> }
-	    \context Voice=x {
-		\voiceTwo es4 d2
-	    }
-	> \oneVoice
-	| <g,2. cis g'>
-	| <bes4 d g> r <c! d>
+	<<
+	    { <as c>4 <g bes> <fis a> } \\
+	    { es4 d2 }
+	>>
+	| <g, cis g'>2.
+	| <bes d g>4 r <c! d>
 	| <bes d> r r
     }
 
     R2.
-    | <es4 f c'> r r
+    | <es f c'>4 r r
     | R2.
-    | r4 r \tupletNum \times 2/3 { [es''8( c bes] } \noTupletNum
-    | \times 2/3 { [a bes c] } )f,4 \times 2/3 { [es'8( c bes] }
+    | r4 r \tupletNum \times 2/3 {  es''8[( c bes] } \noTupletNum
+    | \times 2/3 {  a[ bes c] }  f,4) \times 2/3 {  es'8[( c bes] }
 
 % 100
-    | \times 2/3 { [a bes c] } )f,4 \times 2/3 { [es'8( c bes] }
-    | \times 2/3 { [a bes c] } )f,4 r
+    | \times 2/3 {  a[ bes c] }  f,4) \times 2/3 {  es'8[( c bes] }
+    | \times 2/3 {  a[ bes c] }  f,4) r
     | R2.
-    <
-	{ \voiceOne d2. ~ | [d8( c f es d )c] }
-	\context Voice=x { \voiceTwo <f,2. bes> | g }
-    > \oneVoice
-    | <d,4 f bes> <d f bes(> <f a )c>
+    <<
+	{ d2. ~ |  d8[( c f es d  c)] } \\
+	{ <f, bes>2. | g }
+    >>
+    | <d f bes>4 <d f bes>( <f a c>)
     |
-    <
+    <<
 	{
-	    \property Voice.Stem \set #'transparent = ##t
-	    \voiceOne c'2( )d4
-	    \property Voice.Stem \set #'transparent = ##f
+	    \voiceOne <a c>2(  <bes d>4)
 	}
-	
-	\context Voice=x {
-	    \property Voice.Stem \override #'length = #8
-	    \voiceOne a2( )bes4
-	    \property Voice.Stem \revert #'length
+
+	\new Voice {
+	    \override NoteHead #'transparent = ##t
+	    \override NoteColumn #'ignore-collision = ##t
+	    \voiceOne a2(  bes4)
+	    \revert NoteColumn #'ignore-collision
 	}
-	
-	\context Voice=y { \voiceTwo f2. }
-    > \oneVoice
-    | <g,2. bes es(> ~
-    | [es'8 )d d( f es )d]
-    | [d( bes d bes es )c]
+
+	\new Voice { \voiceTwo f2. }
+    >> \oneVoice
+    | <g bes es>2.( ~
+    |  es'8[  d) d( f es  d)]
+    |  d[( bes d bes es  c)]
 
 % 110
-    | bes4( )a f'( ~
-    | f )e bes'( ~
-    | bes )a \times 2/3 { [d8( bes )g] }
+    | bes4(  a) f'( ~
+    | f  e) bes'( ~
+    | bes  a) \times 2/3 {  d8[( bes  g)] }
     |
-    <
-	{ f2( \voiceOne [a8 g] | \oneVoice )f4 }
-	\context Voice=x { s2 \voiceTwo e4 \oneVoice | s4 }
-    > r4 r
+    <<
+	{ f2( \voiceOne  a8[ g] | \oneVoice  f4) }
+	\context Voice = "x" { s2 \voiceTwo e4}
+    >> r4 r
     |
-    <
-	{ \voiceOne <as,4 c> c2 | c2. }
-	\context Voice=x { \voiceThree s4 as4 g | f2 fis4 }
-	\context Voice=y { \voiceTwo d4 d2 | d2. }
-    > \oneVoice
-    | <es,4 g c> <es g c(> <g b )d>
-    <
+    <<
+	{ \voiceOne <as c>4 c2 | c2. }
+	\context Voice = "x" { \voiceThree s4 as4 g | f2 fis4 }
+	\context Voice = "y" { \voiceTwo d4 d2 | d2. }
+    >> \oneVoice
+    | <es g c>4 <es g c>( <g b d>)
+    <<
 	{
-	    \property Voice.Stem \set #'transparent = ##t
-	    \voiceOne d'2( )es4
-	    \property Voice.Stem \set #'transparent = ##f
+	    \voiceOne <a c>2(  <bes d>4)
 	}
-	
-	\context Voice=x {
-	    \property Voice.Stem \override #'length = #8
-	    \voiceOne b2( )c4
-	    \property Voice.Stem \revert #'length
+
+	\new Voice {
+	    \override NoteHead #'transparent = ##t
+	    \override NoteColumn #'ignore-collision = ##t
+	    \voiceOne a2(  bes4)
+	    \revert NoteColumn #'ignore-collision
 	}
-	
-	\context Voice=y { \voiceTwo g2. }
-    > \oneVoice
-    | es4( e <d )f>
+
+	\new Voice { \voiceTwo f2. }
+    >> \oneVoice
+    | es'4( e <d f>)
 
 % 120
-    |
-    <
-	{ \voiceOne f4.( fis8 )g4 }
-	\context Voice=x { \voiceTwo d2( )es4 }
-    > \oneVoice
+    | << { f4.( fis8  g4) } \\ { d2(  es4) } >>
     | r4 r bes(
-    | fis g )d
+    | fis g  d)
     | es8 r f! r g r
-    | d4( )c d,(
-    | [es8 d] es4 e
-    | [f8 e] f4 d
-    | [es8 d] es4 e
-    | f4 )c
-    <
+    | d4(  c) d,(
+    |  es8[ d] es4 e
+    |  f8[ e] f4 d
+    |  es8[ d] es4 e
+    | f4  c)
+    <<
 	{
-	    \voiceOne a'4 ~ | a( g )fis ~ | fis( [g8 a] )bes4 |
-	    [b8( c f es d )c]
+	    a'4 ~ | a( g  fis) ~ | fis(  g8[ a]  bes4) |
+	     b8[( c f es d  c)]
 	}
-	
-	\context Voice=x {
-	    \voiceTwo d,4 ~ | d2. ~ | d | g
+	\\
+	{
+	    d,4 ~ | d2. ~ | d | g
 	}
-    > \oneVoice
+    >>
 
 % 132
-    | <d,2 bes'!> r4
+    | <d bes'!>2 r4
     | R2.*2
-    | r4 r <a'( c> ~
-    | <a c> <)g bes>
-    <
-	{ \voiceOne es' }
-	\context Voice=x {
-	    \voiceTwo f,
-	}
-    > \oneVoice
-    | [<f,8 d'(> f' es d c )bes]
-    | g4.( [es8 d )c]
+    | r4 r <a' c>( ~
+    | <a c> <g bes>) << es' \\ f, >>
+    | <f d'>8[( f' es d c  bes)]
+    | g4.(  es8[ d  c)]
     | d4 r bes''4( ~
 
 % 140
-    | bes )a es( ~
-    | es \times 2/3 { [d8 es f] } \times 2/3 { [g es c] }
-    | )bes2(
-    <
-	{ \voiceOne [d8 c] }
-	\context Voice=x { \voiceTwo a4 }
-    > \oneVoice
-    | )bes4 r
-    <
-	{ \voiceOne bes'4 ~ | bes( )a b ~ | b( )c }
-	\context Voice=x {
-	    \voiceTwo f,4( | )es2 <f4( as> | <)es2 g>
-	}
-    > \oneVoice \tupletNum \times 2/3 { [g8( es' )c] }
-    | bes2(
-    <
-	{ \voiceOne [d8 c] }
-	\context Voice=x {
-	    \voiceTwo a!4
-	}
-    > \oneVoice
-    | )bes4 r r
+    | bes  a) es( ~
+    | es \times 2/3 {  d8[ es f] } \times 2/3 {  g[ es c] }
+    |  bes2)( << { d8[ c] } \\ a4 >>
+    |  bes4) r
+    <<
+	{ bes'4 ~ | bes(  a) b ~ | b(  c) } \\
+	{ f,4( |  es2) <f as>4( | <es g>2) }
+    >> \tupletNum \times 2/3 {  g8[( es'  c)] }
+    | bes2( << { d8[ c] } \\ a!4 >>
+    |  bes4) r r
     | R2.*2
 
 % 150
-    | <bes,4 d(> <c es> <a )c>
+    | <bes, d>4( <c es> <a c>)
     | bes r r
     | R2.*2
-    | <bes4 d(> <c es> <a )c>
-    | bes r [c8.(^\trill bes32 c]
-    | )d4 r [c'8.(^\trill bes32 c]
-    | )d4 r <c, es f a>
+    | <bes d>4( <c es> <a c>)
+    | bes r  c8.[(^\trill bes32 c]
+    |  d4) r  c'8.[(^\trill bes32 c]
+    |  d4) r <c, es f a>
     | <bes d f bes> r r
 }
