@@ -52,7 +52,7 @@
 	maintainer = "SZERVÁC Attila"
 	maintainerWeb = "http://321.hu"
 	moreInfo = "The composer has licensed this piece jointly under the GPLv3 and Creative Commons Attribution-ShareAlike 3.0 licenses, and it may be distributed under the terms of either."
-	%footer = "Mutopia-2007/07/22-1002"
+	mutopiafooter = "Mutopia-2007/07/22-1002"
 }
 
 q = \relative

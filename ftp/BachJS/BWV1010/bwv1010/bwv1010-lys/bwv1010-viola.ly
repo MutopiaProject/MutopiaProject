@@ -34,7 +34,7 @@
 
 \score { { \clef "alto" \prelude }
 	\layout { %{ Use LilyPond defaults %} }
-	\header { piece = "Pr‰ludium" }
+	\header { piece = "Pr√§ludium" }
 }
 
 \score { { \clef "alto" \allemande }
@@ -54,12 +54,12 @@
 
 \score { { \clef "alto" \bourreeI }
 	\layout { %{ Use LilyPond defaults %} }
-	\header { piece = "BourrÈe 1" }
+	\header { piece = "Bourr√©e 1" }
 }
 
 \score { { \clef "alto" \bourreeII }
 	\layout { %{ Use LilyPond defaults %} }
-	\header { piece = "BourrÈe 2" }
+	\header { piece = "Bourr√©e 2" }
 }
 
 \score { { \clef "alto" \gigue }

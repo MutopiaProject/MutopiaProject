@@ -186,7 +186,7 @@ SopGermanLyrics = \lyrics {
 	Hal -- le -- lu -- ja,
 	Hal -- le -- lu -- ja,
 	
-	denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+	denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 	
 	%15
 	Hal -- le -- lu -- ja,
@@ -200,7 +200,7 @@ SopGermanLyrics = \lyrics {
 	Hal -- le -- lu -- ja,
 	Hal -- le -- lu -- ja,
 	
-	denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+	denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 
 	
 	%25
@@ -210,9 +210,9 @@ SopGermanLyrics = \lyrics {
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja!
 	
 	%34
-	Das Kö -- nig -- reich der Welt
+	Das KÃ¶ -- nig -- reich der Welt
 	ist fort -- an 
-	das Kö -- nig -- reich des Herrn 
+	das KÃ¶ -- nig -- reich des Herrn 
 	und sei -- nes Christ, 
 	und sei -- nes Christ,
 	
@@ -265,10 +265,10 @@ SopGermanLyrics = \lyrics {
 	King of Kings! => Herr der Herrn,
 	For e -- ver and e -- ver! => auf im -- mer und e -- wig
 	And He shall reign, => und er re -- giert
-For the Lord God om -- ni -- po -- tent reign -- eth, => denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
-	The king -- dom of this -- earth, ==> Das Kö -- nig -- reich der Welt
+For the Lord God om -- ni -- po -- tent reign -- eth, => denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
+	The king -- dom of this -- earth, ==> Das KÃ¶ -- nig -- reich der Welt
 	Is be -- come. ==> ist fort -- an das
-	The king -- dom of our Lord,=> Kö -- nig -- reich des Herrn 
+	The king -- dom of our Lord,=> KÃ¶ -- nig -- reich des Herrn 
 	And of His Christ, and of His Christ! => und seines Christ, und seines Christ
 	%}
 }
