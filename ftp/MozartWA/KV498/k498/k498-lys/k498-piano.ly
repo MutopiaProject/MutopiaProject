@@ -2,14 +2,14 @@
 
 #(set-global-staff-size 16)
 
-\include "defs.ly"
+\include "defs.ily"
 
-\include "piano-dynamics.ly"
+\include "piano-dynamics.ily"
 
-\include "clarinet-i.ly"
-\include "viola-i.ly"
-\include "piano-right-i.ly"
-\include "piano-left-i.ly"
+\include "clarinet-i.ily"
+\include "viola-i.ily"
+\include "piano-right-i.ily"
+\include "piano-left-i.ily"
 
 \score {
     <<
@@ -62,10 +62,10 @@
 }
 
 
-\include "clarinet-ii.ly"
-\include "viola-ii.ly"
-\include "piano-right-ii.ly"
-\include "piano-left-ii.ly"
+\include "clarinet-ii.ily"
+\include "viola-ii.ily"
+\include "piano-right-ii.ily"
+\include "piano-left-ii.ily"
 
 \score {
     <<
@@ -119,10 +119,10 @@
 }
 
 
-\include "clarinet-iii.ly"
-\include "viola-iii.ly"
-\include "piano-right-iii.ly"
-\include "piano-left-iii.ly"
+\include "clarinet-iii.ily"
+\include "viola-iii.ily"
+\include "piano-right-iii.ily"
+\include "piano-left-iii.ily"
 
 \score {
     <<

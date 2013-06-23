@@ -6,15 +6,15 @@
 #
 # Maurizio Tomasi, 2002
 
-COMMON_FILES = defs.ly
-CLARINET_FILES = $(COMMON_FILES) clarinet-i.ly \
-	clarinet-ii.ly clarinet-iii.ly
-VIOLA_FILES = $(COMMON_FILES) viola-i.ly viola-ii.ly \
-	viola-iii.ly
-PIANO_FILES = $(COMMON_FILES) piano-dynamics.ly \
-	piano-right-i.ly piano-left-i.ly \
-	piano-right-ii.ly piano-left-ii.ly \
-	piano-right-iii.ly piano-left-iii.ly
+COMMON_FILES = defs.ily
+CLARINET_FILES = $(COMMON_FILES) clarinet-i.ily \
+	clarinet-ii.ily clarinet-iii.ily
+VIOLA_FILES = $(COMMON_FILES) viola-i.ily viola-ii.ily \
+	viola-iii.ily
+PIANO_FILES = $(COMMON_FILES) piano-dynamics.ily \
+	piano-right-i.ily piano-left-i.ily \
+	piano-right-ii.ily piano-left-ii.ily \
+	piano-right-iii.ily piano-left-iii.ily
 
 .PHONY: help all clarinet violin viola piano-solo piano
 

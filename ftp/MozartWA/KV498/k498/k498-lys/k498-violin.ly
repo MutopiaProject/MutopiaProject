@@ -1,6 +1,6 @@
 \version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
 \header {
     instrument = "Violin"
@@ -10,7 +10,7 @@
     \compressFullBarRests
 }
 
-\include "clarinet-i.ly"
+\include "clarinet-i.ily"
 
 \score {
     \context Staff <<
@@ -34,7 +34,7 @@
 }
 
 
-\include "clarinet-ii.ly"
+\include "clarinet-ii.ily"
 
 \score {
     \context Staff <<
@@ -58,7 +58,7 @@
 }
 
 
-\include "clarinet-iii.ly"
+\include "clarinet-iii.ily"
 
 \score {
     \context Staff <<

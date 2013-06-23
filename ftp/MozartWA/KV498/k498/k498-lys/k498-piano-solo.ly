@@ -2,7 +2,7 @@
 
 #(set-global-staff-size 20)
 
-\include "defs.ly"
+\include "defs.ily"
 
 \header {
     instrument = "Piano"
@@ -12,10 +12,10 @@
     \compressFullBarRests
 }
 
-\include "piano-dynamics.ly"
+\include "piano-dynamics.ily"
 
-\include "piano-right-i.ly"
-\include "piano-left-i.ly"
+\include "piano-right-i.ily"
+\include "piano-left-i.ily"
 
 \score {
     \context PianoStaff <<
@@ -44,8 +44,8 @@
 }
 
 
-\include "piano-right-ii.ly"
-\include "piano-left-ii.ly"
+\include "piano-right-ii.ily"
+\include "piano-left-ii.ily"
 
 \score {
     \context PianoStaff <<
@@ -73,8 +73,8 @@
     }
 }
 
-\include "piano-right-iii.ly"
-\include "piano-left-iii.ly"
+\include "piano-right-iii.ily"
+\include "piano-left-iii.ily"
 
 \score {
     \context PianoStaff <<
