@@ -14,6 +14,6 @@ bourreeII = \relative c' {
 	f8 ees d c bes aes <ees' g,>4 |
 	<ees aes,> f <f bes,> d |
 	<<{ees8 f g4} \\ c,8>> <g' g,>4( ees) |
-	aes, f'^\markup{\italic "(Bourrée 1 da capo)"} bes, d |
+	aes, f'^\markup{\italic "(BourrÃ©e 1 da capo)"} bes, d |
 	<<ees2. \\ <bes ees,>4>> \bar ":|"
 }

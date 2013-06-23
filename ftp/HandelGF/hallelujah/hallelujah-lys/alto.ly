@@ -209,17 +209,17 @@ AltoGermanLyrics = \lyrics {
 	
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
-denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
-denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
 Hal -- le -- lu -- ja,
-denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
-Das Kö -- nig -- reich der Welt ist fort -- an 
-das Kö -- nig -- reich des Herrn und sei -- nes Christ, und sei -- nes Christ,
+Das KÃ¶ -- nig -- reich der Welt ist fort -- an 
+das KÃ¶ -- nig -- reich des Herrn und sei -- nes Christ, und sei -- nes Christ,
 And He shall reign auf e -- wig und e -- wig,
 auf e -- wig und e -- wig, auf e -- wig und e -- wig,
 Herr der Herrn, der Wel -- ten Gott,

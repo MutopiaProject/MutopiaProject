@@ -1,5 +1,3 @@
-#(set! point-and-click line-column-location)
-
 \header {
     title = "String Quartet KV. 421 (nr. 15)"
     subtitle = "for 2 violins, viola and cello"
@@ -7,11 +5,11 @@
     opus = "KV.~421"
         
     mutopiatitle = "String Quartet KV. 421 (nr. 15)"
-    mutopiacomposer = "W. A. Mozart (1756-1791)"
+    mutopiacomposer = "MozartWA"
     mutopiaopus = "KV. 421"
     mutopiainstrument = "String Quartet"
     date = "June 1783"
-    source = "Breitkopf und H\"artel (1882)"
+    source = "Breitkopf und Härtel (1882)"
     style = "Classical"
     copyright = "Public Domain"
     maintainer = "Maurizio Tomasi"
@@ -182,7 +180,7 @@ markingsIV = \notes {
 
     s2 s8
     \once \property Voice.TextScript \override #'extra-offset = #'(-3 . 3)
-    s8^#'((Large upright) "Pi� Allegro.")
+    s8^#'((Large upright) "Più Allegro.")
 
     \skip2.*30
     \bar "|."

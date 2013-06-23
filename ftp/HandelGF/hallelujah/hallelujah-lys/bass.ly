@@ -226,7 +226,7 @@ BassGermanLyrics = \lyrics {
 	Hal -- le -- lu -- ja,
 	
 	
-	denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+	denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 	
 	Hal -- le -- lu -- ja,
 	Hal -- le -- lu -- ja,
@@ -234,7 +234,7 @@ BassGermanLyrics = \lyrics {
 	Hal -- le -- lu -- ja,
 	
 	
-	denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+	denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 	
 	Hal -- le -- lu -- jah!
 	Hal -- le -- lu -- jah!
@@ -243,15 +243,15 @@ BassGermanLyrics = \lyrics {
 	Hal -- le -- lu -- jah!
 	
 	%25
-	denn Gott der Herr re -- gie -- ret all -- mäch -- tig,
+	denn Gott der Herr re -- gie -- ret all -- mÃ¤ch -- tig,
 	Hal -- le -- lu -- jah, hal -- le -- lu -- jah!
 	Hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah, hal -- le -- lu -- jah!
 	Hal -- le -- lu -- jah, hal -- le -- lu -- jah!
 	
 	%33
-	Das Kö -- nig -- reich der Welt
+	Das KÃ¶ -- nig -- reich der Welt
 	ist fort -- an
-	das Kö -- nig -- reich des Herrn
+	das KÃ¶ -- nig -- reich des Herrn
 	und sei -- nes Christ,
 	und sei -- nes Christ,
 	und er re -- giert auf im -- mer und e -- wig,
