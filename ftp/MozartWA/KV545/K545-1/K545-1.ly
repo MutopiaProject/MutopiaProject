@@ -1,4 +1,4 @@
-\version "2.10.25"
+\version "2.16.0"
 
 \header {
   title = "Sonate 16 in C major"
@@ -15,7 +15,7 @@
   maintainer = "Alejandro Sierra"
   maintainerEmail = "algsierra@gmail.com"
  footer = "Mutopia-2007/07/22-998"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ tagline = ""
 }
   
 %{ Abreviations
@@ -235,7 +235,7 @@ dvlh = \relative c {
   <d-3 f-1>4-.) r r \clef bass <a, e' g>(
 
   <d_5 f_4>4-.) r r16 d'-3( f e d c-1 b a
-  gis4-.)\sf r r16 gis-3( b a g f-1 e d
+  gis4-.)\sf r r16 gis-3( b a gis f!-1 e d
   c4-.)\sf r \clef treble r16 d'-5( a'-1 g f e-1 d c
   \break
 
@@ -246,16 +246,16 @@ dvlh = \relative c {
   d2\sf) <c g' bes>\sf
 }
   
-%ptilha = \relative c {
-%  f8-5 g16 a  bes c d-3 e f e d-1 c  bes a-1 g f
-%}
+ptilha = \relative c {
+  f8-5 g16 a  bes c d-3 e f e d-1 c  bes a-1 g f
+}
 
 ptilh = \relative c {
   <f f'>4-. r4 r2
   f8-5\( g16 a  bes c d-3 e f e d-1 c  bes a-1 g f  % \ptilha
   e8 f16 g  a b-4 c d  e d c b  a-1 g f e
   d8 e16 f  g a b-3 c  d c b a  g-1 f e d
-  \transpose f c {   f8-5 g16 a  bes c d-3 e f e d-1 c  bes a-1 g f } % \ptilha }
+  \transpose f c { \ptilha }
   
   \once \set fingeringOrientations = #'(right)
   <f-2 a-1>1\p\) 
@@ -269,7 +269,7 @@ stvlh = {
   \transpose d g { \stlhc } 
   \relative c' {  
     r8 \repeat unfold 7 { <f a>8-. }
-    \clef bass \repeat unfold 8 { <fis, c' ees>8-. }
+    \clef bass r8 \repeat unfold 7 { <fis, c' ees>8-. }
     \repeat unfold 4 { g16-5 e' c-2 e }
     \repeat unfold 4 { g,16 f' b, f' }
     <c-2 e-1>4-. r r <g  d' f>(
@@ -310,9 +310,6 @@ stvlh = {
   >>
   \layout {}
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 132 4)
-    }
+    \tempo 4 = 132
   }
 }
