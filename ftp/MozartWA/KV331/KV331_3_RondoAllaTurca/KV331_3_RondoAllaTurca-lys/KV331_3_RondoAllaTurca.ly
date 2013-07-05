@@ -26,8 +26,12 @@
   <<
     \new Staff {
       \time 2/4
-      \override DynamicTextSpanner #'style = #'none
+      
       \right
+    }
+    \new Dynamics {
+      \override DynamicTextSpanner #'style = #'none
+      \dynamics
     }
     \new Staff {
       \left

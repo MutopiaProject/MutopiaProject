@@ -1,8 +1,37 @@
 \version "2.16.0"
 \include "deutsch.ly"
 
+dynamics = {
+  s4\p s2*4
+  s2*3 s4 s4\mp s2*2
+  s2*5 s4 s4\p
+  s2*2 s2\cresc s8\fz s8\p s4 s2*2
+  s2 s4 s8\f s8 s2*3
+  s2*4 s4 s4\p
+  s2*2 s2\< s2\>
+  s2\! s2*2 s4 s4\f
+  s2*5
+  s2*2 s4 s4\p s2*2
+  s2\< s4\! s4\cresc s2\> s2 s2\p
+  s4 s4\f s2*4
+  s2*3 s4 s4\p
+  s2*5
+  s2*2 s4 s4\mp s2*3
+  s2*4 s4 s4\p s2
+  s2 s2\cresc s8\fz s8\p s4 s2*3
+  s4 s4\f s2*3
+  s2*4
+  s4 s2 s2\f s2 s2
+  s2*3 s2\f s2
+  s2*4
+  s2\p s2*3
+  s2*3 s2\f
+  s2*5
+  s2*3 s2\f s4 s4\ff s2
+}
+
 righta = \transpose c c'' {
-  h,16-4\p( a, gis, a,-1 |
+  h,16-4( a, gis, a,-1 |
   c8)-.-3 r d16-3( c h, c |
   e8)-.-4 r f16-4( e dis e-1 |
   h-4 a gis a h a gis a |
@@ -14,18 +43,18 @@ righta = \transpose c c'' {
 }
 
 rightaa = \transpose c c'' {
-  h,16\p( a, gis, a, |
+  h,16( a, gis, a, |
   c8)-. r d16( c h, c |
   e8)-. r f16( e dis e |
-  h\cresc a gis a h a gis a |
-  c'4*1/2)\fz s8\p a8-.-2 h-. |
+  h a gis a h a gis a |
+  c'4*1/2) s8 a8-.-2 h-. |
   c'-.\accent h-. a-.-1  gis-.-2 a-. e-. f-.-4 d-.-2 |
   c4-- h,8.-2\trill( a,32 h, |
   a,4)--
 }
 
 rightb = \transpose c c'' {
-  <c e>8[\mp-.-1-3 <d! f!>-.] |
+  <c e>8[-.-1-3 <d! f!>-.] |
   <e g>-.-1-3 <e g>-. a16-4( g f e) |
   << { d4\accent-4 } \\ { h,8-2( g,) } >> <c e>8-. <d! f!>-. |
   <e g>-. <e g>-. a16-4( g f e) |
@@ -37,7 +66,7 @@ rightb = \transpose c c'' {
 }
 
 rightc = \relative c''' {
-  <a a,>8-.\f <h h,>-. |
+  <a a,>8-. <h h,>-. |
   <cis cis,>4\accent\tenuto <a a,>8-. <h h,>-. <cis cis,>-.\accent <h h,>-. <a a,>-. <gis gis,>-. |
   <fis fis,>-. <gis gis,>-. <a a,>-. <h h,>-. <gis gis,>-4( <e e,>)-. <a a,>8-. <h h,>-. |
   <cis cis,>4\accent\tenuto <a a,>8-. <h h,>-. <cis cis,>-.\accent <h h,>-. <a a,>-. <gis gis,>-. |
@@ -46,7 +75,7 @@ rightc = \relative c''' {
 }
 
 rightco = \relative c'' {
-  a16\f( a' h, h' |
+  a16( a' h, h' |
   cis,\accent cis') r8 a,16( a' h, h' cis, cis' h, h' a, a' gis, gis') |
   fis,( fis' gis, gis' a, a' h, h' gis, gis' e, e') a,16( a' h, h' |
   cis,\accent cis') r8 a,16( a' h, h' cis, cis' h, h' a, a' gis, gis') |
@@ -58,14 +87,15 @@ rightcoa = \transpose c c' {
 }
 
 rightcoat = \transpose c c' {
-  <a a'>4\tenuto)
+  <a a'>4\tenuto )
+  << { cis''8. cis''16 } \\ { cis'4 } >>
 }
 
 rightd = \relative c''' {
-  cis16-3\p( d cis h a h a gis-3 fis a gis fis |
+  cis16-3( d cis h a h a gis-3 fis a gis fis |
   eis fis gis eis cis-2 dis eis cis |
-  fis-4 \< eis-1 fis gis a gis a-1 h \! |
-  cis \> his cis his cis d cis h) \! |
+  fis-4 eis-1 fis gis a gis a-1 h |
+  cis his cis his cis d cis h) |
   a( h a gis-3 fis a gis fis |
   e! fis gis e cis-2 dis e cis |
   dis-3 e fis dis his-1 cis dis his |
@@ -73,7 +103,7 @@ rightd = \relative c''' {
 }
 
 righte = \relative c''' {
-  e,16-5(\f d! cis h! |
+  e,16-5( d! cis h! |
   a h cis d-1 e fis gis a) |
   a\accent-4( gis fis e) e-5( d cis h |
   a-1 h cis d-1 e fis gis a) |
@@ -81,13 +111,13 @@ righte = \relative c''' {
   a h cis d-1 e fis gis a) |
   a\accent-4( gis fis e) e-4( d cis h |
   cis-3 e a,-1 cis-4 h d gis,-2 h-4 |
-  a4)-- cis'16\p( d cis h a h a gis fis a gis fis |
+  a4)-- cis'16( d cis h a h a gis fis a gis fis |
   eis fis gis eis cis dis eis cis) |
-  fis( \< eis fis gis a gis a h\! |
-  cis-3 his cis his cis\cresc his cis ais-2 |
-  d)-4( \> cis d cis d cis d cis |
-  d cis h a gis-2 a h gis\! |
-  a\p h cis fis,-2 eis fis gis eis fis4)--
+  fis( eis fis gis a gis a h |
+  cis-3 his cis his cis his cis ais-2 |
+  d)-4( cis d cis d cis d cis |
+  d cis h a gis-2 a h gis |
+  a h cis fis,-2 eis fis gis eis fis4)--
 }
 
 strum = \transpose c c { <<
@@ -97,27 +127,26 @@ strum = \transpose c c { <<
 }
 
 rightf = \transpose c c'' {
-  << { cis'8. cis'16} \\ { cis4 } >> |
-  << \strum \\ { s4\f } >> |
+  << \strum \\ { s4 } >> |
   \strum |
   d'16-4( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   <d' a fis>2\accent |
   \repeat unfold 4 { \grace d'8( <cis' a e>8)-. } |
   << { h4.-3( e'8)-. } \\ { <gis e>2 } >> |
-  << \strum \\ s4\f >> |
+  << \strum \\ s4 >> |
   \strum |
   d'16( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   <d' a fis>2\accent |
   \grace d'8( <cis' a e>2)-. |
   \repeat unfold 4 { \grace cis'8( <h gis e>8)-. } |
 
-  a4\p-- \grace { e32[( a)] } cis'8.-.-4 cis'16 |
+  a4-- \grace { e32[( a)] } cis'8.-.-4 cis'16 |
   \repeat unfold 2 { \grace { e32[( a)] } cis'2\accent } |
   d'16( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   d'2\accent |
   \repeat unfold 4 { \grace { d'8( } cis'8)-. } |
   h4.-2( e'8)-. |
-  << \strum \\ s4\f >> |
+  << \strum \\ s4 >> |
   \strum |
   d'16( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   <d' a fis>2\accent |
@@ -126,8 +155,8 @@ rightf = \transpose c c'' {
   <a, cis e a-->4. <cis cis'>8-. |
   <a, a-->4. <e e'>8-. |
   <a, a-->4. <cis cis'>8-. |
-  <a, a>-.\f <cis cis'>8-. <a, a>-. <e e'>8-. |
-  <a, a>4-. <a, cis e a >4-.(\ff |
+  <a, a>-. <cis cis'>8-. <a, a>-. <e e'>8-. |
+  <a, a>4-. <a, cis e a >4-.( |
   <a, cis e a >4)-. r4
 }
 
@@ -230,7 +259,6 @@ leftf = {
   a,4-. <a, cis e a  >-.( < a, cis e a >)-. r4
 }
 
-
 right = {
   \clef G
   \key a \minor
@@ -248,14 +276,16 @@ right = {
   \key a \major
   \repeat volta 2 { \rightco } \alternative {
     { \set Timing.measureLength = #(ly:make-moment 1 4)
-      \rightcoa }
+      \rightcoa
+    }
     { \set Timing.measureLength = #(ly:make-moment 2 4)
-      \once\override Slur #'positions = #'(4 . 0)
+      %\override Slur #'positions = #'(4 . 0)
       \hideNotes \grace a'16.^( \unHideNotes
-      \rightcoat  }
+      \rightcoat
+      \barNumberCheck #98
+      \rightf
+    }
   }
-  \barNumberCheck #97
-  \rightf
   \bar "|."
 }
 
@@ -277,8 +307,14 @@ left = {
     { \set Timing.measureLength = #(ly:make-moment 1 4)
       a,4 }
     { \set Timing.measureLength = #(ly:make-moment 2 4)
-      \stra a8-. a8-. }
+      \stra a8-. a8-.
+      \leftf
+    }
   }
-  \leftf
   \bar "|."
 }
+
+
+%%% Local Variables: ***
+%%% LilyPond-master-file: "./KV331_3_RondoAllaTurca.ly" ***
+%%% End: ***
