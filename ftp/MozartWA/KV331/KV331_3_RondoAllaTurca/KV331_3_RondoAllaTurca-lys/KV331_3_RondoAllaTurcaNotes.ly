@@ -274,18 +274,26 @@ right = {
   \repeat volta 2 { \righta }
   \repeat volta 2 { \rightb \rightaa }
   \key a \major
-  \repeat volta 2 { \rightco } \alternative {
-    { \set Timing.measureLength = #(ly:make-moment 1 4)
-      \rightcoa
-    }
-    { \set Timing.measureLength = #(ly:make-moment 2 4)
-      %\override Slur #'positions = #'(4 . 0)
-      \hideNotes \grace a'16.^( \unHideNotes
-      \rightcoat
-      \barNumberCheck #98
-      \rightf
-    }
-  }
+  % These repeat commands form a manual volta+alternative set for the
+  % purpose of fixing a warning regarding an inability to end a volta
+  % spanner. One other way to fix this is to have the alternative
+  % clause encompass the entire 2nd alternative which has the
+  % consequence of extending the volta line to the end of the
+  % piece. (I tried shortening the line which worked but still gave
+  % the warning.)
+  \set Score.repeatCommands = #'(start-repeat)
+  \rightco
+  \set Timing.measureLength = #(ly:make-moment 1 4)
+  \set Score.repeatCommands = #'((volta "1"))
+  \rightcoa
+  \set Score.repeatCommands = #'((volta #f) (volta "2") end-repeat)
+  \set Timing.measureLength = #(ly:make-moment 2 4)
+  \once\override Slur #'positions = #'(4 . 4)
+  \hideNotes \grace a'16.^( \unHideNotes
+  \rightcoat
+  \set Score.repeatCommands = #'((volta #f))
+  \barNumberCheck #98
+  \rightf
   \bar "|."
 }
 
@@ -303,18 +311,11 @@ left = {
   \repeat volta 2 { \lefta }
   \repeat volta 2 { \leftb \leftaa }
   \key a \major
-  \repeat volta 2 { \leftc } \alternative {
-    { \set Timing.measureLength = #(ly:make-moment 1 4)
-      a,4 }
-    { \set Timing.measureLength = #(ly:make-moment 2 4)
-      \stra a8-. a8-.
-      \leftf
-    }
-  }
+  \leftc
+  \set Timing.measureLength = #(ly:make-moment 1 4)
+  a,4
+  \set Timing.measureLength = #(ly:make-moment 2 4)
+  \stra a8-. a8-.
+  \leftf
   \bar "|."
 }
-
-
-%%% Local Variables: ***
-%%% LilyPond-master-file: "./KV331_3_RondoAllaTurca.ly" ***
-%%% End: ***
