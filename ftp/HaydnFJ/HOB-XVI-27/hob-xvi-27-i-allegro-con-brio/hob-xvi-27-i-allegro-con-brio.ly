@@ -1,6 +1,7 @@
-%\version "1.4.9.uu1"
+\version "2.16.0"
+
 \include "nederlands.ly"
-\include "paper16.ly"
+#(set-global-staff-size 16)
 \header {
   title             = "Sonata I"
   subtitle          = "6 Sonate 1776"
@@ -18,35 +19,27 @@
   copyright         = "Public Domain"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@zonnet.com"
-  lastupdated       = "2002/Feb/22"
 
-  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by " + \maintainer + ".\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
+  tagline = ""
   footer = "Mutopia-2002/02/22-185"
 }
 
-Global = \notes {\key g\major \time 2/4 \partial 8}
-beamingOff = \property Voice.noAutoBeaming = ##t
-beamingOn = \property Voice.noAutoBeaming = ##f
+Global =  {\key g\major \time 2/4 \partial 8}
 Treble = \clef treble
 Bass = \clef bass
-tieUp = \property Voice.Tie \override #'direction = #1
-tieBoth = \property Voice.Tie \override #'direction = #0
-tieDown = \property Voice.Tie \override #'direction = #-1
-scriptOne = \property Voice.Script \override #'extra-offset = #'(0 . 1)
-scriptNone = \property Voice.Script \revert #'extra-offset
 
-MD = \notes \relative c' {
+MD =  \relative c' {
   \repeat volta 2 {
-  \stemBoth d8
+  d8
 
-  \scriptOne g8.\turn \scriptNone a16 b8.\turn c16
+   g8.\turn  a16 b8.\turn c16
   d8 d d d
   d e16 ( fis a g fis e
-  ) d8 d d d
+   d8) d d d
 
   d e16 ( fis a g fis e
-  ) d8 g16 ( b a g fis e
-  ) d4 c\trill
+   d8) g16 ( b a g fis e
+   d4) c\trill
   d r8 g,
 
   fis8\prall e d\prall c
@@ -54,65 +47,65 @@ MD = \notes \relative c' {
   d8 \times 2/3 {c16 d c} b8 \times 2/3 {a16 b a}
   g4 r8 d'
 
-  g16 () fis a () g b () a c () b
+  g16 ( fis) a ( g) b ( a) c ( b)
   d8 d d d
   d e16 ( fis a g fis e
-  ) d8 d d d
+   d8) d d d
 
-  d g ( f ) d
-  \tieUp dis4 () e ~
-  e8 g ( e ) c
-  cis4 () d ~
+  d g ( f  d)
+  dis4 ( e) ~
+  e8 g ( e  c)
+  cis4 ( d) ~
 
-  d8 b' a32 () g16. fis32 () e16.
-  d4 c8\prall () b
-  b16 ( c dis e d c b ) a
-  g4 () fis8 a
+  d8 b' a32 ( g16.) fis32 ( e16.)
+  d4 c8\prall ( b)
+  b16 ( c dis e d c b  a)
+  g4 ( fis8) a
 
-  d4 g16 ( fis e ) d
-  d8 () cis r a
-  e'4 a16 ( g fis ) e
-  e8 () fis r a,
+  d4 g16 ( fis e  d)
+  d8 ( cis) r a
+  e'4 a16 ( g fis  e)
+  e8 ( fis) r a,
 
-  \property Voice.Slur \override #'beautiful = #2.0 a16 ( a' g fis e d cis ) d
-  \property Voice.Slur \revert #'beautiful b8-| dis-| e-| fis-|
-  r16 g ( fis e d! cis b ) cis
+  a16 ( a' g fis e d cis  d)
+  b8-| dis-| e-| fis-|
+  r16 g ( fis e d! cis b  cis)
   a8-| cis-| d-| e-|
 
-  r16 fis ( e d cis b a ) b
+  r16 fis ( e d cis b a  b)
   g8-| b-| cis-| d-|
-  r16 e ( d cis b a b ) g
-  fis8 () d' cis () a'
+  r16 e ( d cis b a b  g)
+  fis8 ( d') cis ( a')
 
-  fis () d cis () g
-  fis () d' cis-| a'-|
+  fis ( d) cis ( g)
+  fis ( d') cis-| a'-|
   fis-| d-| cis-| g-|
-  fis () d' c! () a
+  fis ( d') c! ( a)
 
-  ais4 () b8 b'16 () g
-  a () fis g () e fis () d e () cis
-  \scriptOne d8-| d'-| d-| d\turn ()
-  cis g!-| g-| g\turn (
+  ais4 ( b8) b'16 ( g)
+  a ( fis) g ( e) fis ( d) e ( cis)
+   d8-| d'-| d-| d\turn (
+  cis) g!-| g-| g\turn (
 
-  \scriptNone ) fis c!-| c-| c\turn ()
-  b ais'16 ( b a g fis e
-  ) d4 e\trill
-  \scriptOne d8 d'-| d-| d\turn ()
+    fis) c!-| c-| c\turn (
+  b) ais'16 ( b a g fis e
+   d4) e\trill
+   d8 d'-| d-| d\turn (
 
-  cis g!-| g-| g\turn (
-  \scriptNone fis ) c!-| c-| c\turn ()
-  b ais'16 ( b a g fis e )
+  cis) g!-| g-| g\turn (
+   fis  c!)-| c-| c\turn (
+  b) ais'16 ( b a g fis e )
   d4 e\trill
 
-  fis16 () d d' () a b () fis g () e
+  fis16 ( d) d' ( a) b ( fis) g ( e)
   d4 e\trill
   d8 r <cis g'> r
   <d fis> r <g, cis> r
 
-  \partial 8*3 <fis4 d'> r8
+  <fis d'>4 r8
   }
 
-  \partial 8 d8-|
+  d8-|
 
   f-| a-| d-| f-|
   gis,4 r8 e-|
@@ -146,115 +139,114 @@ MD = \notes \relative c' {
 
   c bes' a c,
   bes g' a, a'
-  \stemDown g, bes' a\prall g
-  \stemBoth fis a c16 ( a fis ) d
+  g, bes' a\prall g
+  fis a c16 ( a fis  d)
 
-  \beamingOff <a8 c\fermata> \beamingOn b16 ( c d c b ) a
-  g () fis a () g b () a c () b
+  <a c\fermata>8\noBeam b16 ( c d c b  a)
+  g ( fis) a ( g) b ( a) c ( b)
   d8 d d d
   d8 e16 ( fis a g fis e
 
-  ) d8 d d d
+   d8) d d d
   d8 e16 ( fis a g fis e
-  ) d8 g16 ( b a g fis e
-  ) d4 c\trill
+   d8) g16 ( b a g fis e
+   d4) c\trill
 
-  c8 () b r g
+  c8 ( b) r g
   fis\prall e d\prall c
   b4 r8 \times 2/3 {e16 fis e}
-  \times 2/3 {[d e d]} \times 2/3 {[c d c]} \times 2/3 {[b c b]} \times 2/3 {[a b a]}
+  \times 2/3 { d[ e d]} \times 2/3 { c[ d c]} \times 2/3 { b[ c b]} \times 2/3 { a[ b a]}
 
   gis8-| b-| d-| gis-|
-  b-| d-| b'8. () d,16
-  d ( c b ) a a8-| a-|
-  <c4. a'> a8
+  b-| d-| b'8. ( d,16)
+  d ( c b  a) a8-| a-|
+  <c a'>4. a8
 
-  c16 ( b a ) g g8-| d'-|
-  d16 ( c b ) c a8-| c-|
-  c16 ( b a ) g g8-| g'-|
-  fis16 ( e d c b a c ) a
+  c16 ( b a  g) g8-| d'-|
+  d16 ( c b  c) a8-| c-|
+  c16 ( b a  g) g8-| g'-|
+  fis16 ( e d c b a c  a)
 
-  \beamingOff g4 () fis8 d
-  \beamingOn g4 c16 ( b a ) g
-  g8 () fis e d
-  a'4 d16 ( c b ) a
+  g4 ( fis8)\noBeam d
+  g4 c16 ( b a  g)
+  g8 ( fis) e d
+  a'4 d16 ( c b  a)
 
-  a8 () b r d
-  g4 c16 ( b a ) g
-  g8 () fis r d
-  a'4 d16 ( c b ) a
+  a8 ( b) r d
+  g4 c16 ( b a  g)
+  g8 ( fis) r d
+  a'4 d16 ( c b  a)
 
-  a8 () b r d,
-  \property Voice.Slur \override #'beautiful = #2.0 d16 ( d' c b a g fis ) g
-  \property Voice.Slur \revert #'beautiful
+  a8 ( b) r d,
+  d16 ( d' c b a g fis  g)
   e8-| gis-| a-| b-|
-  r16 c16 ( b a g! fis e ) fis
+  r16 c16 ( b a g! fis e  fis)
 
   d8-| fis-| g-| a-|
-  r16 b ( a g fis e d ) e
+  r16 b ( a g fis e d  e)
   c8-| e-| fis-| g-|
-  r16 a ( g fis e d e ) c
+  r16 a ( g fis e d e  c)
 
-  b8 () g' fis () d'
-  b () g fis () c
-  b-| ( \times 2/3 {g'16 a g} ) fis8 d'-|
+  b8 ( g') fis ( d')
+  b ( g) fis ( c)
+  b-| ( \times 2/3 {g'16 a g}  fis8) d'-|
   b-| g-| fis-| c-|
 
-  b () g' f () d
-  dis4 () e8 e16 () c
-  d! () b c () a b () g a () fis
-  g8-| g'-| g-| \scriptOne g\turn (
+  b ( g') f ( d)
+  dis4 ( e8) e16 ( c)
+  d! ( b) c ( a) b ( g) a ( fis)
+  g8-| g'-| g-|  g\turn (
 
-  \scriptNone ) fis c!-| c-| c\turn (
-  ) b f-| f-| f\turn ()
-  e dis'16 (e d c b a
-  ) g4 a\trill
+    fis) c!-| c-| c\turn (
+   b) f-| f-| f\turn (
+  e) dis'16 (e d c b a
+   g4) a\trill
 
-  g8-| g'-| g-| \scriptOne g\turn (
-  \scriptNone ) fis c!-| c-| c\turn ()
-  b f-| f-| f\turn ()
-  e dis'16 ( e d c b a
+  g8-| g'-| g-|  g\turn (
+    fis) c!-| c-| c\turn (
+  b) f-| f-| f\turn (
+  e) dis'16 ( e d c b a
 
-  ) g4 a\trill
-  b16 () g g' () d e () b c () a
+   g4) a\trill
+  b16 ( g) g' ( d) e ( b) c ( a)
   g4 a\trill
   g8 r <fis c'> r
 
   <g b> r <c, fis> r
-  \partial 8*3 <b4 d g> r8
+  <b d g>4 r8
   \bar "|."
   }
 
-MS = \notes \relative c' {
-  \stemBoth r8
+MS =  \relative c' {
+  r8
 
-  <g4 b> r4
+  <g b>4 r4
   \Treble r8 <g' b> <fis a> <a c>
-  <g4 b> r
+  <g b>4 r
   r8 <g b> <fis a> <a c>
 
-  <g4 b> r8 <g c>
-  <g4 b> r
+  <g b>4 r8 <g c>
+  <g b>4 r
   r8 b a d,
-  g d \beamingOff g, \Bass <g, g'>
+  g d g,\noBeam \Bass <g, g'>
 
-  \beamingOn <fis fis'> <e e'> <d d'> <c c'>
-  <b4 b'> r8 \times 2/3 {e'16 fis e}
+  <fis fis'> <e e'> <d d'> <c c'>
+  <b b'>4 r8 \times 2/3 {e'16 fis e}
   d8 \times 2/3 {c16 d c} b8 \times 2/3 {a16 b a}
   g4 r
 
   <g' b> r
   \Treble r8 <g' b> <fis a> <a c>
-  <g4 b> r
+  <g b>4 r
   r8 <g b> <fis a> <a c>
 
-  \tieBoth <g2 b> ~
-  <g8 b> <g c> <g c> <g c>
-  <g4 c> r
+  <g b>2 ~
+  <g b>8 <g c> <g c> <g c>
+  <g c>4 r
   r8 <g b> <g b> <g b>
 
-  <g4 b> r
-  r8 a ( fis ) g
+  <g b>4 r
+  r8 a ( fis  g)
   \Bass c,4. cis8
   d a d, r
 
@@ -337,19 +329,19 @@ MS = \notes \relative c' {
   es, cis' g cis es, cis' g cis
   d, c' fis, c' d, c' fis, c'
 
-  <d,8\fermata fis c'> r r4
-  <g4 b> r
+  <d,\fermata fis c'>8 r r4
+  <g b>4 r
   \Treble r8 <g' b> <fis a> <a c>
-  <g4 b> r
+  <g b>4 r
 
   r8 <g b> <fis a> <a c>
-  <g4 b> r8 <g c>
-  <g4 b> r
+  <g b>4 r8 <g c>
+  <g b>4 r
   r8 b a d,
 
-  g d \beamingOff g, \Bass <g, g'>
-  \beamingOn <fis fis'> <e e'> <d d'> <c c'>
-  <b4 b'> r8 e'
+  g d g,\noBeam \Bass <g, g'>
+  <fis fis'> <e e'> <d d'> <c c'>
+  <b b'>4 r8 e'
   d c b a
 
   gis16 e' b e gis, e' b e
@@ -411,14 +403,24 @@ MS = \notes \relative c' {
   g,4 r8
   }
 
-\score {\notes {
-\context PianoStaff <
-  \property PianoStaff.midiInstrument = "harpsichord"
-  \context Staff = "up" <\Global \Treble \context Voice=One \MD >
-  \context Staff = "down" <\Global \Bass \context Voice=Two \MS >
->
+\score { {
+\context PianoStaff <<
+  \set PianoStaff.midiInstrument = "harpsichord"
+  \context Staff = "up" <<\Global \Treble \context Voice=One \MD >>
+  \context Staff = "down" <<\Global \Bass \context Voice=Two \MS >>
+>>
 }
-\paper {}
-\midi {\tempo 4=120}
+\layout {
+  \context {
+    \Staff
+    \override TupletBracket #'stencil = ##f
+  }
+}
+
+  \midi {
+    \tempo 4 = 120
+    }
+
+
 }
 
