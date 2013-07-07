@@ -62,7 +62,7 @@ rightAlignMark = #(define-music-function (parser location text padding ) (string
 						}
 					}
 				}
-%	copyright = "Creative Commons Attribution-ShareAlike 2.5"
+	copyright = "Creative Commons Attribution-ShareAlike 2.5"
 	footer = "Mutopia-2006/08/21-808"
 }
 
