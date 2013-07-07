@@ -5,10 +5,14 @@
 	arranger = "Arr. John Dowland"
 	meter = "88 88"
 	source = "A Pilgrimes Solace"
-	mutopiacomposer = "BourgeoisL"
 	style = "Hymn"
-	date = "1612" % first published date I know about for this arrangement
+	date = "1612"
+	% first published date I know about for this arrangement
+
+	mutopiacomposer = "BourgeoisL"
 	mutopiaarranger = "J. Dowland (1563-1626)"
+	mutopiainstrument = "Voice (SATB)"
+
 	copyright = "Public Domain"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
