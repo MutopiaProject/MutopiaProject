@@ -1,101 +1,113 @@
-\version "1.5.58"
+\version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
 
-\include "viola-i.ly"
+\include "viola-i.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
+	\set Staff.instrumentName = "Viola"
 	\globalI
 
 	\KeyI
 	\markingsI
 	\violaFirstMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "viola-ii.ly"
+\include "viola-ii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
+	\set Staff.instrumentName = "Viola"
 	\globalII
 
 	\KeyII
 	\markingsII
 	\violaSecondMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "viola-iii.ly"
+\include "viola-iii.ily"
 
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
+	\set Staff.instrumentName = "Viola"
 	\globalIII
 
 	\KeyIII
 	\markingsIII
 	\violaThirdMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 50
+    
+  \midi {
+    \tempo 4 = 50
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "viola-iv.ly"
+\include "viola-iv.ily"
 
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
+	\set Staff.instrumentName = "Viola"
 	\globalIV
 
 	\KeyIV
 	\markingsIV
 	\violaFourthMov	
-    >
+    >>
 
-    \midi {
-       \tempo 2 = 120
+    
+  \midi {
+    \tempo 2 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
