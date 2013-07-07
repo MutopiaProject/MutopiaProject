@@ -1,12 +1,12 @@
-COMMON_FILES = defs.ly
-VIOLIN1_FILES = $(COMMON_FILES) violin1-i.ly violin1-ii.ly	\
-violin1-iii.ly violin1-iv.ly
-VIOLIN2_FILES = $(COMMON_FILES) violin2-i.ly violin2-ii.ly	\
-violin2-iii.ly violin2-iv.ly
-VIOLA_FILES = $(COMMON_FILES) viola-i.ly viola-ii.ly viola-iii.ly	\
-viola-iv.ly
-CELLO_FILES = $(COMMON_FILES) cello-i.ly cello-ii.ly cello-iii.ly	\
-cello-iv.ly
+COMMON_FILES = defs.ily
+VIOLIN1_FILES = $(COMMON_FILES) violin1-i.ily violin1-ii.ily	\
+violin1-iii.ily violin1-iv.ily
+VIOLIN2_FILES = $(COMMON_FILES) violin2-i.ily violin2-ii.ily	\
+violin2-iii.ily violin2-iv.ily
+VIOLA_FILES = $(COMMON_FILES) viola-i.ily viola-ii.ily viola-iii.ily	\
+viola-iv.ily
+CELLO_FILES = $(COMMON_FILES) cello-i.ily cello-ii.ily cello-iii.ily	\
+cello-iv.ily
 
 
 .PHONY: all help score violin1 violin2 viola cello
@@ -18,32 +18,29 @@ help:
 	@echo "  where TARGET is one of the following:"
 	@echo "  all help violin1 violin2 viola cello score"
 
-violin1: k421-violin1.ps
+%.pdf : %.ly
+	lilypond $<
 
-k421-violin1.ps: k421-violin1.ly $(VIOLIN1_FILES)
-	ly2dvi -P k421-violin1.ly
+violin1: k421-violin1.pdf
 
-
-violin2: k421-violin2.ps
-
-k421-violin2.ps: k421-violin2.ly $(VIOLIN2_FILES)
-	ly2dvi -P k421-violin2.ly
+k421-violin1.pdf: k421-violin1.ly $(VIOLIN1_FILES)
 
 
-viola: k421-viola.ps
+violin2: k421-violin2.pdf
 
-k421-viola.ps: k421-viola.ly $(VIOLA_FILES)
-	ly2dvi -P k421-viola.ly
-
-
-cello: k421-cello.ps
-
-k421-cello.ps: k421-cello.ly $(CELLO_FILES)
-	ly2dvi -P k421-cello.ly
+k421-violin2.pdf: k421-violin2.ly $(VIOLIN2_FILES)
 
 
-score: k421-score.ps
+viola: k421-viola.pdf
 
-k421-score.ps: k421-score.ly $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
+k421-viola.pdf: k421-viola.ly $(VIOLA_FILES)
 
-	ly2dvi -P k421-score.ly
+
+cello: k421-cello.pdf
+
+k421-cello.pdf: k421-cello.ly $(CELLO_FILES)
+
+
+score: k421-score.pdf
+
+k421-score.pdf: k421-score.ly $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
