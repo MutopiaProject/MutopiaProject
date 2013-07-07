@@ -1,4 +1,6 @@
 \version "2.4.0"
+% Note - Character set converted to UTF-8 for source repository consistency
+% For correct compilation with LilyPond 2.4 this change may need to be reverted
 
 \header {
 	title = "Suite 4 for Cello Solo"

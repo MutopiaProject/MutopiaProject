@@ -1,4 +1,6 @@
 #(ly:set-point-and-click 'line-column )
+% Note - Character set converted to UTF-8 for source repository consistency
+% For correct compilation with LilyPond 2.2 this change may need to be reverted
 
 \include "header.ly"
 
