@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.1"
 
 #(set-global-staff-size 16)
 \include "nederlands.ly"
@@ -9,18 +9,18 @@
   opus              = "Hob. XVI:28"
   meter             = "II - Menuetto"
   copyright         = "Public Domain"
-  mutopiatitle      = "Sonate II"
+  mutopiatitle      = "Sonate II, II - Menuetto"
   mutopiacomposer   = "HaydnFJ"
-  mutopiainstrument = "Harpsichord"
-  date              = "18th century"
-  source            = "C.F. Peters, 1880s"
+  mutopiainstrument = "Harpsichord, Piano"
+  date              = "18th Century"
+  source            = "C. F. Peters, 1880s"
   style             = "Classical"
   copyright         = "Public Domain"
   maintainer        = "Bas Wassink"
   maintainerEmail   = "basvanlola@zonnet.com"
 
-  tagline           = ""
-  footer            = "Mutopia-2002/03/15-211"
+ footer = "Mutopia-2013/07/07-211"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 Global =  {\key es\major \time 3/4 \partial 16*5}
