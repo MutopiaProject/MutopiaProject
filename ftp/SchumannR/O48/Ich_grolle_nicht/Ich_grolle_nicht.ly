@@ -67,19 +67,23 @@ chant =  \relative do' \context Voice = "chant" {
     <<
     {
       \voiceOne
-      la'4. la8 sol2 ( fa8)
+      \override NoteHead #'font-size = #-3
+       la'4. la8 sol2 ( fa8)
       \override TextSpanner #'(bound-details left text) = \markup {\italic ritard.}
       fa \startTextSpan fa fa fa fa fa fa mi4. re8 \stopTextSpan 
-      do4 }
+      \override NoteHead #'font-size = #1
+    }
     \new Voice
     {
       \voiceTwo
       \autoBeamOff
-      re4. re8 re2 ( dod8) dod dod dod do! do do do si4. si8 do4 }
+      re4. re8 re2 ( dod8) dod dod dod do! do do do si4. si8 }
     >>
     \oneVoice
+    do4
     r r8 si\f si si la2 r8 sol sol sol 
-    do,1 ~ do2 r2 R1 R r4 s2.
+    do,1 ~ do2 r2 R1 R 
+    r4
     \bar "|."
 }
 
@@ -130,7 +134,7 @@ md =  \relative do' \context Voice = "md" { % Par carrures de 4 mesures  1 mesur
     do <sol do>-> <sol do> <sol do> <sol do> <la do> <la do> <la do>
     <la do>-> <do sol'>\< <do sol'> <do sol'> <do sol'> <do do'> <do do'> <do do'>\!
     <do do'>-> <do sol' do> <do sol' do> <do sol' do> <do sol' do> <do la' do> <do la' do> <do la' do>
-    <do la' do>-> <do sol'> <do mi> do s2 s1
+    <do la' do>-> <do sol'> <do mi> do s2 s4
     \bar "|."
 }
 
@@ -175,7 +179,8 @@ mg =  \relative do, \simultaneous { % 1 mesure par ligne
     % coda
     \voiceTwo
     do,1 ~ <do fa do'>8 s4. s2 s8 sol'4. ~ sol2 ~ sol <sol do>8 r <sol si> r
-    <do, sol' do> r s2.
+    <do, sol' do>
+    r
     \bar "|."
 
 }
@@ -186,7 +191,8 @@ mg =  \relative do, \simultaneous { % 1 mesure par ligne
     s8 <sol mi'> <sol mi'> <sol mi'> <sol mi'> <la fa'> <la fa'> <la fa'> 
     <la fa'> <mi' sol>[ <mi sol> <mi sol>] <mi sol> <fa la> <fa la> <fa la> 
     <fa la> <mi sol> <mi sol> <do mi> <mi sol>^\f r <re sol>^\f r
-    <mi sol>^\f r s2.
+    <mi sol>^\f 
+    r
     \bar "|."
 }
 }
