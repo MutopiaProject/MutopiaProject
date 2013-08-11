@@ -1,4 +1,6 @@
-celloThirdMov = \notes \relative g, {
+\version "2.16.0"
+
+celloThirdMov =  \relative g, {
     \key es \major
     \clef bass
 
@@ -6,14 +8,14 @@ celloThirdMov = \notes \relative g, {
 
     \repeat volta 2 {
 	s16 r4
-	| g2-\f r4
+	| g2\f r4
 	| as2 r4
 	| R2.*2
-	| bes2(-\p )d4
+	| bes2(\p  d4)
 	| es2 r4
-	| c2-\f r4
+	| c2\f r4
 	| f,2. ~
-	| f-\p ~
+	| f\p ~
 
 % 10
 	| f
@@ -29,8 +31,8 @@ celloThirdMov = \notes \relative g, {
 
 % 20
 	| bes4 r r
-	| es-\f f f,
-	| bes r d-\p
+	| es\f f f,
+	| bes r d\p
 	| es r f
 	| g r g,
 	| f r f
@@ -39,7 +41,7 @@ celloThirdMov = \notes \relative g, {
 
     \repeat volta 2 {
         r4
-        | g8-\p r es r g r
+        | g8\p r es r g r
 	| as! r g r r4
 	| as8 r f r es r
 	| d r bes r r4
@@ -48,18 +50,18 @@ celloThirdMov = \notes \relative g, {
 	| as r f r es r
 	| bes'4 r r
 	| R2.*2
-	| g2-\f r4
+	| g2\f r4
 	| as2 r4
 	| R2.*2
 
 % 41
-	| bes2.-\p
+	| bes2.\p
 	| es,2 r4
-	| g2-\f r4
+	| g2\f r4
 	| as2 r4
 	| a2 r4
 	| bes2. ~
-	| bes-\p
+	| bes\p
 	| es4 r r
 	| bes r r
 
@@ -72,17 +74,17 @@ celloThirdMov = \notes \relative g, {
 	| es ~
 	| es ~
 	| es ~
-	| es4 r es'-\f
+	| es4 r es'\f
 	| as, bes bes
 
 % 60
-	| es,2.-\sf
-	| es-\sf
-	| es-\sf
-	| es-\sf
-	| es2-\sf es'4
+	| es,2.\sf
+	| es\sf
+	| es\sf
+	| es\sf
+	| es2\sf es'4
 	| as bes bes,
-	| es r g-\p
+	| es r g\p
 	| as r bes
 	| c r c,
 	| bes r bes
@@ -97,13 +99,13 @@ celloThirdMov = \notes \relative g, {
     \repeat volta 2 {
         r4
 	| R2.
-	| c,2.-\p ~
+	| c,2.\p ~
 	| c ~
 	| c ~
 	| c
-	| c'2( ~ [c8 )d]
+	| c'2( ~  c8[  d)]
 	| es4 f f,
-	| bes2(-\fp )d4
+	| bes2(\fp  d4)
 	| es r f
 
 % 80
@@ -131,10 +133,10 @@ celloThirdMov = \notes \relative g, {
 	| f ~
 	| f ~
 	| f
-	| f'4.( a8 [f a]
-	| [g_\cresc bes g bes e, )g]
-	| [f( c' es! d c bes]
-	| [a g f es! d )c]
+	| f'4.( a8  f[ a]
+	|  g[_\cresc bes g bes e,  g)]
+	|  f[( c' es! d c bes]
+	|  a[ g f es! d  c)]
 
 % 100
 	| bes2. ~
