@@ -1,100 +1,108 @@
 % -*- LilyPond -*-
 
-\version "1.6.6"
+\version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
-\include "cello-i.ly"
+\header {
+    instrument = "Cello."
+}
+
+\layout {
+    \compressFullBarRests
+}
+
+\include "cello-i.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
 
 	\time 3/4
 
 	\celloFirstMov
-	\context Voice=markings { \markingsI }
-    >
+	\context Voice = "markings" { \markingsI }
+    >>
 
-    \midi {
-       \tempo 4 = 40
+    
+  \midi {
+    \tempo 4 = 40
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
-\include "cello-ii.ly"
+\include "cello-ii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
 
 	\time 3/4
 
 	\celloSecondMov
-	\context Voice=markings { \markingsII }
-    >
+	\context Voice = "markings" { \markingsII }
+    >>
 
-    \midi {
-       \tempo 4 = 64
+    
+  \midi {
+    \tempo 4 = 64
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
-\include "cello-iii.ly"
+\include "cello-iii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
 
 	\time 3/4
 	\partial 4
 
 	\celloThirdMov
-	\context Voice=markings { \markingsIII }
+	\context Voice = "markings" { \markingsIII }
 	\context Voice=markingsBis { \markingsIIIbis }
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 140
+    
+  \midi {
+    \tempo 4 = 140
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
-\include "cello-iv.ly"
+\include "cello-iv.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = "Cello."
+    \context Staff <<
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"cello"
 
 	\time 2/4
 	\partial 4
 
 	\celloFourthMov
-	\context Voice=markings { \markingsIV }
-    >
+	\context Voice = "markings" { \markingsIV }
+    >>
 
-    \midi {
-       \tempo 4 = 152
+    
+  \midi {
+    \tempo 4 = 152
     }
 
-    \paper { }
+
+
+    \layout { }
 }

@@ -1,16 +1,12 @@
-COMMON_FILES = defs.ly
-VIOLIN1_FILES = $(COMMON_FILES) violin1-i.ly violin1-ii.ly	\
-violin1-iii.ly violin1-iv.ly
-VIOLIN1SOLO_FILES = $(COMMON_FILES) violin1-i.ly violin1-ii-solo.ly	\
-violin1-iii.ly violin1-iv.ly
-VIOLIN2_FILES = $(COMMON_FILES) violin2-i.ly violin2-ii.ly	\
-violin2-iii.ly violin2-iv.ly
-VIOLA_FILES = $(COMMON_FILES) viola-i.ly viola-ii.ly viola-iii.ly	\
-viola-iv.ly
-CELLO_FILES = $(COMMON_FILES) cello-i.ly cello-ii.ly cello-iii.ly	\
-cello-iv.ly
-CELLOSOLO_FILES = $(COMMON_FILES) cello-i.ly cello-ii-solo.ly	\
-cello-iii.ly cello-iv.ly
+COMMON_FILES = defs.ily
+VIOLIN1_FILES = $(COMMON_FILES) violin1-i.ily violin1-ii.ily	\
+violin1-iii.ily violin1-iv.ily
+VIOLIN2_FILES = $(COMMON_FILES) violin2-i.ily violin2-ii.ily	\
+violin2-iii.ily violin2-iv.ily
+VIOLA_FILES = $(COMMON_FILES) viola-i.ily viola-ii.ily viola-iii.ily	\
+viola-iv.ily
+CELLO_FILES = $(COMMON_FILES) cello-i.ily cello-ii.ily cello-iii.ily	\
+cello-iv.ily
 
 
 .PHONY: all help score violin1 violin2 viola cello
@@ -22,31 +18,35 @@ help:
 	@echo "  where TARGET is one of the following:"
 	@echo "  all help violin1 violin2 viola cello score"
 
-violin1: k458-violin1.ps
+%.pdf : %.ly
+	lilypond $<
 
-k458-violin1.ps: k458-violin1.ly $(VIOLIN1SOLO_FILES)
-	ly2dvi -P k458-violin1.ly
+############################################################
 
+violin1: k458-violin1.pdf
 
-violin2: k458-violin2.ps
+k458-violin1.pdf: k458-violin1.ly $(VIOLIN1_FILES)
 
-k458-violin2.ps: k458-violin2.ly $(VIOLIN2_FILES)
-	ly2dvi -P k458-violin2.ly
+############################################################
 
+violin2: k458-violin2.pdf
 
-viola: k458-viola.ps
+k458-violin2.pdf: k458-violin2.ly $(VIOLIN2_FILES)
 
-k458-viola.ps: k458-viola.ly $(VIOLA_FILES)
-	ly2dvi -P k458-viola.ly
+############################################################
 
+viola: k458-viola.pdf
 
-cello: k458-cello.ps
+k458-viola.pdf: k458-viola.ly $(VIOLA_FILES)
 
-k458-cello.ps: k458-cello.ly $(CELLOSOLO_FILES)
-	ly2dvi -P k458-cello.ly
+############################################################
 
+cello: k458-cello.pdf
 
-score: k458-score.ps
+k458-cello.pdf: k458-cello.ly $(CELLO_FILES)
 
-k458-score.ps: k458-score.ly $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
-	ly2dvi -P k458-score.ly
+############################################################
+
+score: k458-score.pdf
+
+k458-score.pdf: k458-score.ly $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(CELLO_FILES)
