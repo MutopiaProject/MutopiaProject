@@ -7,8 +7,8 @@
         
     mutopiatitle = "String Quartet KV. 465 (nr. 19) \"Dissonances\""
     mutopiacomposer = "MozartWA"
-    mutopiaopus = "KV. 465"
-    mutopiainstrument = "String Quartet"
+    mutopiaopus = "KV 465"
+    mutopiainstrument = "String Quartet: Two Violins, Viola, 'Cello"
     date = "14th January 1785 (Wien)"
     source = "Breitkopf und Härtel (1882)"
     style = "Classical"
@@ -16,8 +16,8 @@
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
 
-    tagline = ""
-    footer = "Mutopia-2002/12/29-279"
+ footer = "Mutopia-2013/08/11-279"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 % Some useful macros
