@@ -1,4 +1,4 @@
-
+\version "2.16.1"
 \header {
   title = "Sei Duetti a Due Viole"
   opus = "(Torinesi manuscript, BI uncatalogued)"
@@ -12,10 +12,9 @@
   copyright = "Public Domain"
   maintainer = "Huw Richards"
   maintainerEmail = "huw.richards (at) eng.cam.ac.uk"
-  lastupdated = "2010/Oct/10"
 
-  footer = "Mutopia-2010/08/10-0"
-  tagline = \markup  { \small { \wordwrap { Sheet music from \with-url #"http://www.MutopiaProject.org"  www.MutopiaProject.org \hspace #0.5 • \hspace #0.5  Free to download, with the freedom to distribute, modify and perform.  Typeset using \with-url #"http://www.LilyPond.org"  www.LilyPond.org  by Huw Richards.  This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } }
+ footer = "Mutopia-2013/08/18-1861"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
 \paper {
