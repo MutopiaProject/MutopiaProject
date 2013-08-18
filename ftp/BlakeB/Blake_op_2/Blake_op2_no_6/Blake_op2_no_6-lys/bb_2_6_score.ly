@@ -42,7 +42,7 @@
 % solution to fixing warnings from ambiguous (de)crescendi. I could
 % see nothing wrong with the crescendo in question. -gl
 %
-%{
+
 \book {
   \bookOutputSuffix "Duetto-VI"
   \score {
@@ -70,4 +70,3 @@
     }
   }
 }
-%}
