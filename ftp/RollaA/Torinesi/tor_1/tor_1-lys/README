@@ -1,0 +1,10 @@
+Manifest, Torinesi duets, no. 1
+
+    tor_1_header.ly     - common header and paper variables
+    tor_1_notes_vla1.ly - Viola 1
+    tor_1_notes_vla2.ly - Viola 2
+    tor_1_parts.ly      - tagged part definitions
+
+    tor_1_score.ly      - full duet score
+    tor_1_vla1.ly       - Viola 1 only
+    tor_1_vla2.ly       - Viola 2 only
