@@ -9,8 +9,8 @@
   mutopiacomposer = "BoismortierJBd"
   composer = "Joseph Bodin de Boismortier"
   opus = "40"
-  mutopiatitle = "Six sonates pour deux Baßons, Violoncelles, ou
-  Violes"
+  %mutopiatitle = "Six sonates pour deux Baßons, Violoncelles, ou Violes"
+  mutopiatitle = "Sonata I."
   mutopiainstrument = "2 Bassoons"
   source = "facsimile of first printing 1732"
   style = "Baroque"
