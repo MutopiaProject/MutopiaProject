@@ -264,9 +264,9 @@ bassOne = \relative g {
 		\times 2/3 { r16 r16 d16 }
 		\times 2/3 { cis16 [ d16 ] r16 }
 		\times 2/3 { r16 r16 \clef "bass" b16 } | % 11
-		\times 2/3 { a16 [ bis16 ] r16 }
-		\times 2/3 { r16 r16 bis16  }
-		\times 2/3 { a16 [ c16 ] r16 }
+		\times 2/3 { a16 [ cis16 ] r16 }
+		\times 2/3 { r16 r16 b16  }
+		\times 2/3 { a16 [ cis16 ] r16 }
 		\times 2/3 { r16 r16 g16 }
 		\times 2/3 { fis16 [ a16 ] r16 }
 		\times 2/3 { r16 r16 e16 } | % 12
@@ -390,7 +390,7 @@ bassTwo = \relative a {
 		s4 \clef "treble" 
 		<fis' a>16 r16 <fis a>16 r16 g,16 r16 <fis' a>16 r16 \clef "bass" | % 21
 		s4 \clef "treble" 
-		<fis a>16 r16 <fis a>16 r16 g,16 r16 <fis' a>16 r16 \clef "bass" | % 22
+		<fis a>16 r16 <fis a>16 r16 b,16 r16 <fis' a>16 r16 \clef "bass" | % 22
 		s1*3/4 | % 23
 		e,8 \clef "treble" 
 		<fis' a>16 r16 <dis fis>16 r16 <dis fis>16 r16 <a dis>16 r16 <a dis>16 r16 \clef "bass" | % 24
