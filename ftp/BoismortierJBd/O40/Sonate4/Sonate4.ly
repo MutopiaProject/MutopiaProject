@@ -12,8 +12,8 @@
   mutopiacomposer = "BoismortierJBd"
   composer = "Joseph Bodin de Boismortier"
   opus = "op. 40 No. 4"
-  mutopiatitle = "Six sonates pour deux Baßons, Violoncelles, ou
-  Violes"
+  %mutopiatitle = "Six sonates pour deux Baßons, Violoncelles, ou Violes"
+  mutopiatitle = "Sonata IV."
   mutopiainstrument = "2 Bassoons"
   source = "facsimile of first printing 1732"
   style = "Baroque"
@@ -184,7 +184,7 @@
 	  c2
 	}
 	\repeat volta 2{
-	  \partial 1 e4 f4. e8 d4|
+	  e4 f4. e8 d4|
 	  e4 cis d e,8 b' a4 cis|
 	  d4. e8 f4 h,4. c8 d4|
 	  g,2 g4 g4. a8 f4|
@@ -204,7 +204,7 @@
 	  c,2
 	}
 	\repeat volta 2{
-	  \partial 1 cis''4 d4. cis8 b4|
+	  cis''4 d4. cis8 b4|
 	  a4. g8 f4 g a a,|
 	  d4 f d g2 f4|
 	  %Zeile 6
