@@ -1,8 +1,6 @@
-\version "2.13.9"
+\version "2.16.1"
 
 \paper {
- page-top-space = #0.0
- %indent = 0.0
  line-width = 18.0\cm
  ragged-bottom = ##f
  ragged-last-bottom = ##f
@@ -28,9 +26,9 @@
  comment = "Notenverteilung wurde fuer die 2-Systeme optimiert"
  maintainer = "Hajo Dezelski"
  maintainerEmail = "dl1sdz (at) gmail.com"
-	
- footer = "Mutopia-2009/12/21-1421"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+
+ footer = "Mutopia-2013/09/01-1421"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
 }
 
 
@@ -315,7 +313,7 @@ bassOne = \relative g {
 		\times 2/3 { g16 [ b16 ] r16 }
 		\times 2/3 { r16 r16 fis16  } | % 20
 		e8 [ e'8 ] \clef "treble" dis''16 [ r16 dis16 ] r16 g,16 [ r16 dis'16 ] r16 \clef "bass" | % 21
-		c,,8 [ c'8 ] \clef "treble" dis'16 [ r16 dis16 ] r16 g,16 [ r16 dis'16 ] r16 \clef "bass" | % 22
+		c,,8 [ c'8 ] \clef "treble" dis'16 [ r16 dis16 ] r16 b16 [ r16 dis16 ] r16 \clef "bass" | % 22
 		a,8 [ dis,8 e8 a8 b8 b,8 ] | % 23
 		r8 \clef "treble" dis''16 r16 b16 [ r16 b16 ] r16 fis16 [ r16 fis16 ] r16 \clef "bass" | % 24
 		c,8 [ b'8 a8 gis8 a8 c,8 ] | % 25
