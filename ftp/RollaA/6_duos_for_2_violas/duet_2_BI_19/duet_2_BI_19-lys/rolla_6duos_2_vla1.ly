@@ -1,4 +1,4 @@
-\version "2.16.2"
+\version "2.16.1"
 \include "rolla_6duos_2_header.ly"
 \include "rolla_6duos_2_parts.ly"
 \header { subtitle = "Viola 1" }
