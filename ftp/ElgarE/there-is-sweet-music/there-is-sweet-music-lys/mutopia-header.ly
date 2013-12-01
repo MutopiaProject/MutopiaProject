@@ -1,0 +1,21 @@
+\header {
+    title = "There is Sweet Music"
+    opus = "Op. 53, No. 1"
+    composer = "Edward Elgar"
+    poet = "Tennyson"
+
+    mutopiatitle = "There is Sweet Music"
+    %mutopiacomposer = "Edward Elgar (1857-1934)"
+    mutopiacomposer = "ElgarE"
+    mutopiapoet = "Tennyson"
+    mutopiaopus = "Op. 53, No. 1"
+    mutopiainstrument = "S.S.A.A.T.T.B.B."
+    date = "1907"
+    source = "Novello and Company, 1908"
+    style = "Romantic"
+    copyright = "Public Domain"
+    maintainer = "Mojca Božič"
+    maintainerEmail = "mojca.bozic (at) guest.arnes.si"
+    lastupdated = "2006/January/30"
+    footer = "Mutopia-2013/09/10-0"
+}
