@@ -14,7 +14,7 @@
 	style = "Modern"
 	copyright = "Creative Commons Attribution-ShareAlike 3.0"
 	maintainer = "Karel"
-	moreInfo = "Radan Papežík (born 1974 in Prague) belongs among the most talented and versatile artists of the Czech music scene. This composition written in 2006 combines sophisticated 12-tone system with modern rock patterns."
+	moreInfo = "Theme of this piece is free for recomposing your own variations."
  footer = "Mutopia-2007/08/07-1018"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
