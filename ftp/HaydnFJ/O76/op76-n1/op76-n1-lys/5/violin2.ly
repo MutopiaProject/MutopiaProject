@@ -1,6 +1,6 @@
 % -*- LilyPond -*-
 
-\version "2.6.0"
+\version "2.16.0"
 
 markingsI = {}
 markingsII = {}
@@ -23,53 +23,55 @@ violinIIOverridesIV = {}
 
 #(set-global-staff-size 16.0)
 
-\include "../defs.ly"
-\include "defs.ly"
-\include "violin2_defs.ly"
+\layout {
+  \compressFullBarRests
+  \context {
+    \Score
+    \override BarNumber #'font-size = #1
+    \override BarNumber #'padding = #3
+  }
+}
 
-\include "i-violin2.ly"
+\include "../defs.ily"
+\include "defs.ily"
+\include "violin2_defs.ily"
+
+\include "i-violin2.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"violin"
-    \set Staff.instrument = "Violin II"
+    \set Staff.instrumentName = "Violin II"
 
     \timeI
     \violinIIFirstMov
-    \context Voice = "breaks" { \violinIIBreakI }
-    \context Voice = "markings" { \markingsI }
-    \context Voice = "override" { \violinIIOverridesI }
+    \new Voice = "breaks" { \violinIIBreakI }
+    \new Voice = "markings" { \markingsI }
+    \new Voice = "override" { \violinIIOverridesI }
   >>
 
-  \include "i-midi.ly"
+  \include "i-midi.ily"
   \header {
     piece = \headerI
   }
   \layout {}
 }
 
-\include "ii-violin2.ly"
+\include "ii-violin2.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"violin"
-    \set Staff.instrument = "Violin II"
+    \set Staff.instrumentName = "Violin II"
 
     \timeII
     \violinIISecondMov
-    \context Voice = "breaks" { \violinIIBreakII }
-    \context Voice = "markings" { \markingsII }
-    \context Voice = "override" { \violinIIOverridesII }
+    \new Voice = "breaks" { \violinIIBreakII }
+    \new Voice = "markings" { \markingsII }
+    \new Voice = "override" { \violinIIOverridesII }
   >>
 
-  \include "ii-midi.ly"
+  \include "ii-midi.ily"
 
   \header {
     piece = \headerII
@@ -79,25 +81,21 @@ violinIIOverridesIV = {}
   \layout {}
 }
 
-\include "iii-violin2.ly"
+\include "iii-violin2.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"violin"
-    \set Staff.instrument = "Violin II"
+    \set Staff.instrumentName = "Violin II"
 
     \timeIII
     \violinIIThirdMov
-    \context Voice = "breaks" { \violinIIBreakIII }
-    \context Voice = "markings" { \markingsIII }
-    \context Voice = "override" { \violinIIOverridesIII }
+    \new Voice = "breaks" { \violinIIBreakIII }
+    \new Voice = "markings" { \markingsIII }
+    \new Voice = "override" { \violinIIOverridesIII }
   >>
 
-  \include "iii-midi.ly"
+  \include "iii-midi.ily"
 
   \header {
     piece = \headerIII
@@ -107,25 +105,21 @@ violinIIOverridesIV = {}
   \layout {}
 }
 
-\include "iv-violin2.ly"
+\include "iv-violin2.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"violin"
-    \set Staff.instrument = "Violin II"
+    \set Staff.instrumentName = "Violin II"
 
     \timeIV
     \violinIIFourthMov
-    \context Voice = "breaks" { \violinIIBreakIV }
-    \context Voice = "markings" { \markingsIV }
-    \context Voice = "override" { \violinIIOverridesIV }
+    \new Voice = "breaks" { \violinIIBreakIV }
+    \new Voice = "markings" { \markingsIV }
+    \new Voice = "override" { \violinIIOverridesIV }
   >>
 
-  \include "iv-midi.ly"
+  \include "iv-midi.ily"
 
   \header {
     piece = \headerIV
