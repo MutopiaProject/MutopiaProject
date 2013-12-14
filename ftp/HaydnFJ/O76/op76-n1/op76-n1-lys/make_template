@@ -45,7 +45,6 @@ clean:
 
 %.pdf: %.ly
 	$(LILYPOND) $<
-	$(RM) $*.ps
 
 violin1.ly violin2.ly viola.ly violoncello.ly: ../part_template.ly
 	sed -e	"s/@INST@/$($(basename $@)_inst)/g" \

@@ -1,6 +1,6 @@
 % -*- LilyPond -*-
 
-\version "2.6.0"
+\version "2.16.0"
 
 markingsI = {}
 markingsII = {}
@@ -23,53 +23,55 @@ markingsIV = {}
 
 #(set-global-staff-size 16.0)
 
-\include "../defs.ly"
-\include "defs.ly"
-\include "@INST@_defs.ly"
+\layout {
+  \compressFullBarRests
+  \context {
+    \Score
+    \override BarNumber #'font-size = #1
+    \override BarNumber #'padding = #3
+  }
+}
 
-\include "i-@INST@.ly"
+\include "../defs.ily"
+\include "defs.ily"
+\include "@INST@_defs.ily"
+
+\include "i-@INST@.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"@MIDI_INST@"
-    \set Staff.instrument = "@STAFF_INST@"
+    \set Staff.instrumentName = "@STAFF_INST@"
 
     \timeI
     \@LILY_INST@FirstMov
-    \context Voice = "breaks" { \@LILY_INST@BreakI }
-    \context Voice = "markings" { \markingsI }
-    \context Voice = "override" { \@LILY_INST@OverridesI }
+    \new Voice = "breaks" { \@LILY_INST@BreakI }
+    \new Voice = "markings" { \markingsI }
+    \new Voice = "override" { \@LILY_INST@OverridesI }
   >>
 
-  \include "i-midi.ly"
+  \include "i-midi.ily"
   \header {
     piece = \headerI
   }
   \layout {}
 }
 
-\include "ii-@INST@.ly"
+\include "ii-@INST@.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"@MIDI_INST@"
-    \set Staff.instrument = "@STAFF_INST@"
+    \set Staff.instrumentName = "@STAFF_INST@"
 
     \timeII
     \@LILY_INST@SecondMov
-    \context Voice = "breaks" { \@LILY_INST@BreakII }
-    \context Voice = "markings" { \markingsII }
-    \context Voice = "override" { \@LILY_INST@OverridesII }
+    \new Voice = "breaks" { \@LILY_INST@BreakII }
+    \new Voice = "markings" { \markingsII }
+    \new Voice = "override" { \@LILY_INST@OverridesII }
   >>
 
-  \include "ii-midi.ly"
+  \include "ii-midi.ily"
 
   \header {
     piece = \headerII
@@ -79,25 +81,21 @@ markingsIV = {}
   \layout {}
 }
 
-\include "iii-@INST@.ly"
+\include "iii-@INST@.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"@MIDI_INST@"
-    \set Staff.instrument = "@STAFF_INST@"
+    \set Staff.instrumentName = "@STAFF_INST@"
 
     \timeIII
     \@LILY_INST@ThirdMov
-    \context Voice = "breaks" { \@LILY_INST@BreakIII }
-    \context Voice = "markings" { \markingsIII }
-    \context Voice = "override" { \@LILY_INST@OverridesIII }
+    \new Voice = "breaks" { \@LILY_INST@BreakIII }
+    \new Voice = "markings" { \markingsIII }
+    \new Voice = "override" { \@LILY_INST@OverridesIII }
   >>
 
-  \include "iii-midi.ly"
+  \include "iii-midi.ily"
 
   \header {
     piece = \headerIII
@@ -107,25 +105,21 @@ markingsIV = {}
   \layout {}
 }
 
-\include "iv-@INST@.ly"
+\include "iv-@INST@.ily"
 
 \score {
-  \context Staff <<
-    \barNumberDefaultStyle
-
-    \override Score.BarNumber #'padding = #3
-    \set Score.skipBars = ##t
+  \new Staff <<
     \set Staff.midiInstrument = #"@MIDI_INST@"
-    \set Staff.instrument = "@STAFF_INST@"
+    \set Staff.instrumentName = "@STAFF_INST@"
 
     \timeIV
     \@LILY_INST@FourthMov
-    \context Voice = "breaks" { \@LILY_INST@BreakIV }
-    \context Voice = "markings" { \markingsIV }
-    \context Voice = "override" { \@LILY_INST@OverridesIV }
+    \new Voice = "breaks" { \@LILY_INST@BreakIV }
+    \new Voice = "markings" { \markingsIV }
+    \new Voice = "override" { \@LILY_INST@OverridesIV }
   >>
 
-  \include "iv-midi.ly"
+  \include "iv-midi.ily"
 
   \header {
     piece = \headerIV

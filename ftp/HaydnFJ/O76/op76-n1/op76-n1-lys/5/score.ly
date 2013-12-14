@@ -1,61 +1,66 @@
 % -*- LilyPond -*-
 % vim: ft=lilypond :
 
-\version "2.6.0"
+\version "2.16.0"
 
 markingsI = {}
 markingsII = {}
 markingsIII = {}
 markingsIV = {}
 
-\include "defs.ly"
-\include "../defs.ly"
+\include "defs.ily"
+\include "../defs.ily"
 
-\include "i-violin1.ly"
-\include "i-violin2.ly"
-\include "i-viola.ly"
-\include "i-violoncello.ly"
+\include "i-violin1.ily"
+\include "i-violin2.ily"
+\include "i-viola.ily"
+\include "i-violoncello.ily"
 
 #(set-global-staff-size 12)
 
+\layout {
+  \context {
+    \Score
+    \override BarNumber #'font-size = #1
+    \override BarNumber #'padding = #3
+  }
+}
+
 \score {
   <<
-    \barNumberDefaultStyle
-    \override Score.BarNumber #'padding = #3
-
-    \context StaffGroup = "strings" <<
-      \context Staff = violinI <<
+    \new StaffGroup = "strings" <<
+      \new Staff = violinI <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino I."
-        \set Staff.instr = "Vl.I"
+        \set Staff.instrumentName = "Violino I."
+        \set Staff.shortInstrumentName = "Vl.I"
 
         \timeI
         \violinIFirstMov
-        \context Voice = "markings" { \markingsI }
+        \new Voice = "markings" { \markingsI }
       >>
 
-      \context Staff = violinII <<
+      \new Staff = violinII <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino II."
-        \set Staff.instr = "Vl.II"
+        \set Staff.instrumentName = "Violino II."
+        \set Staff.shortInstrumentName = "Vl.II"
 
         \timeI
         \violinIIFirstMov
       >>
 
-      \context Staff = "viola" <<
+      \new Staff = "viola" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Viola."
-        \set Staff.instr = "Vla"
+        \set Staff.instrumentName = "Viola."
+        \set Staff.shortInstrumentName = "Vla"
 
         \timeI
         \violaFirstMov
       >>
 
-      \context Staff = "cello" <<
+      \new Staff = "cello" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Violoncello."
-        \set Staff.instr = "Vc."
+        \set Staff.instrumentName = "Violoncello."
+        \set Staff.shortInstrumentName = "Vc."
 
         \timeI
         \celloFirstMov
@@ -63,7 +68,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "i-midi.ly"
+  \include "i-midi.ily"
 
   \header {
     piece = \headerI
@@ -72,49 +77,46 @@ markingsIV = {}
   \layout { }
 }
 
-\include "ii-violin1.ly"
-\include "ii-violin2.ly"
-\include "ii-viola.ly"
-\include "ii-violoncello.ly"
+\include "ii-violin1.ily"
+\include "ii-violin2.ily"
+\include "ii-viola.ily"
+\include "ii-violoncello.ily"
 
 \score {
   <<
-    \barNumberDefaultStyle
-    \override Score.BarNumber   #'padding = #3
-
-    \context StaffGroup = "strings" <<
-      \context Staff = violinI <<
+    \new StaffGroup = "strings" <<
+      \new Staff = violinI <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino I."
-        \set Staff.instr = "Vl.I"
+        \set Staff.instrumentName = "Violino I."
+        \set Staff.shortInstrumentName = "Vl.I"
 
         \timeII
         \violinISecondMov
-        \context Voice = "markings" { \markingsII }
+        \new Voice = "markings" { \markingsII }
       >>
 
-      \context Staff = violinII <<
+      \new Staff = violinII <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino II."
-        \set Staff.instr = "Vl.II"
+        \set Staff.instrumentName = "Violino II."
+        \set Staff.shortInstrumentName = "Vl.II"
 
         \timeII
         \violinIISecondMov
       >>
 
-      \context Staff = "viola" <<
+      \new Staff = "viola" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Viola."
-        \set Staff.instr = "Vla"
+        \set Staff.instrumentName = "Viola."
+        \set Staff.shortInstrumentName = "Vla"
 
         \timeII
         \violaSecondMov
       >>
 
-      \context Staff = "cello" <<
+      \new Staff = "cello" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Violoncello."
-        \set Staff.instr = "Vc."
+        \set Staff.instrumentName = "Violoncello."
+        \set Staff.shortInstrumentName = "Vc."
 
         \timeII
         \celloSecondMov
@@ -122,7 +124,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "ii-midi.ly"
+  \include "ii-midi.ily"
 
   \header {
     piece = \headerII
@@ -131,49 +133,46 @@ markingsIV = {}
   \layout { }
 }
 
-\include "iii-violin1.ly"
-\include "iii-violin2.ly"
-\include "iii-viola.ly"
-\include "iii-violoncello.ly"
+\include "iii-violin1.ily"
+\include "iii-violin2.ily"
+\include "iii-viola.ily"
+\include "iii-violoncello.ily"
 
 \score {
   <<
-    \barNumberDefaultStyle
-    \override Score.BarNumber   #'padding = #3
-
-    \context StaffGroup = "strings" <<
-      \context Staff = violinI <<
+    \new StaffGroup = "strings" <<
+      \new Staff = violinI <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino I."
-        \set Staff.instr = "Vl.I"
+        \set Staff.instrumentName = "Violino I."
+        \set Staff.shortInstrumentName = "Vl.I"
 
         \timeIII
         \violinIThirdMov
-        \context Voice = "markings" { \markingsIII }
+        \new Voice = "markings" { \markingsIII }
       >>
 
-      \context Staff = violinII <<
+      \new Staff = violinII <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino II."
-        \set Staff.instr = "Vl.II"
+        \set Staff.instrumentName = "Violino II."
+        \set Staff.shortInstrumentName = "Vl.II"
 
         \timeIII
         \violinIIThirdMov
       >>
 
-      \context Staff = "viola" <<
+      \new Staff = "viola" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Viola."
-        \set Staff.instr = "Vla"
+        \set Staff.instrumentName = "Viola."
+        \set Staff.shortInstrumentName = "Vla"
 
         \timeIII
         \violaThirdMov
       >>
 
-      \context Staff = "cello" <<
+      \new Staff = "cello" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Violoncello."
-        \set Staff.instr = "Vc."
+        \set Staff.instrumentName = "Violoncello."
+        \set Staff.shortInstrumentName = "Vc."
 
         \timeIII
         \celloThirdMov
@@ -181,7 +180,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "iii-midi.ly"
+  \include "iii-midi.ily"
 
   \header {
     piece = \headerIII
@@ -190,50 +189,47 @@ markingsIV = {}
   \layout { }
 }
 
-\include "iv-violin1.ly"
-\include "iv-violin2.ly"
-\include "iv-viola.ly"
-\include "iv-violoncello.ly"
+\include "iv-violin1.ily"
+\include "iv-violin2.ily"
+\include "iv-viola.ily"
+\include "iv-violoncello.ily"
 
 \score {
   <<
-    \barNumberDefaultStyle
-    \override Score.BarNumber   #'padding = #3
+    \new StaffGroup = "strings" <<
 
-    \context StaffGroup = "strings" <<
-
-      \context Staff = violinI <<
+      \new Staff = violinI <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino I."
-        \set Staff.instr = "Vl.I"
+        \set Staff.instrumentName = "Violino I."
+        \set Staff.shortInstrumentName = "Vl.I"
 
         \timeIV
         \violinIFourthMov	
-        \context Voice = "markings" { \markingsIV }
+        \new Voice = "markings" { \markingsIV }
       >>
 
-      \context Staff = violinII <<
+      \new Staff = violinII <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = "Violino II."
-        \set Staff.instr = "Vl.II"
+        \set Staff.instrumentName = "Violino II."
+        \set Staff.shortInstrumentName = "Vl.II"
 
         \timeIV
         \violinIIFourthMov
       >>
 
-      \context Staff = "viola" <<
+      \new Staff = "viola" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Viola."
-        \set Staff.instr = "Vla"
+        \set Staff.instrumentName = "Viola."
+        \set Staff.shortInstrumentName = "Vla"
 
         \timeIV
         \violaFourthMov
       >>
 
-      \context Staff = "cello" <<
+      \new Staff = "cello" <<
         \set Staff.midiInstrument = #"cello"
-        \set Staff.instrument = "Violoncello."
-        \set Staff.instr = "Vc."
+        \set Staff.instrumentName = "Violoncello."
+        \set Staff.shortInstrumentName = "Vc."
 
         \timeIV
         \celloFourthMov
@@ -241,7 +237,7 @@ markingsIV = {}
     >>
   >>
 
-  \include "iv-midi.ly"
+  \include "iv-midi.ily"
 
   \header {
     piece = \headerIV
