@@ -4,7 +4,7 @@
   subtitle = "Op. 76 No. 4"
   composer = "Franz Joseph Haydn (1732-1809)"
 
-  mutopiatitle = "String Quartet in B-flat minor"
+  mutopiatitle = "String Quartet in B-flat major"
   mutopiacomposer = "HaydnFJ"
   mutopiaopus = "Op. 76 No. 4"
   mutopiainstrument = "String Quartet"
