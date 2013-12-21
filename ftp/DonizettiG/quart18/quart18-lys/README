@@ -1,28 +1,3 @@
-The three directories contain three copies of the String Quartet in E
-minor by Gaetano Donizetti.
-
-
-autograph/  
-
-    An (almost) unaltered copy of the autograph.  Every slur, tie,
-    alteration and tuplet number is copied in the score.  Errors found
-    in the source were not corrected.  File autograph/README contains
-    some information about the source used as well as some historical
-    notes about Donizetti and this quartet.
-
-
-edited/
-
-    A modified version of the autograph score.  Almost every error is
-    corrected (except for doubtful passages), and various improvements
-    were made to improve the readability of the score.  See file
-    edited/README for more information.
-
-
-midi/
-
-    This is derived from the edited score, and its *only* purpose is
-    to create the MIDI files.
-
-
-Maurizio Tomasi, July 2003.
+This is String Quartet nr. 18 by Gaetano Donizetti. This edition comes
+in two versions: the autograph edition and an edited edition that is
+more suitable for performers.
