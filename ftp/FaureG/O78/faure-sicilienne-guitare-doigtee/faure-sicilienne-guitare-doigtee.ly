@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 
 % Right hand fingering shortcuts
 P=\rightHandFinger #1
@@ -13,13 +13,13 @@ barre =
   #{
     \set Staff.minimumFret = $strg
     \set Staff.restrainOpenStrings = ##t
-     \once\override TextSpanner #'(bound-details left text) = #(format #f "B ~@r" strg)
-     \once\override TextSpanner #'font-shape = #'upright
-     \once\override TextSpanner #'bound-details #'left #'stencil-align-dir-y = #CENTER
-     \once\override TextSpanner #'style = #'line
-     \once\override TextSpanner #'bound-details #'right #'text = \markup \draw-line #'(0 . -1)
-     \once\override TextSpanner #'to-barline = ##t
-     \once\override TextSpanner #'(bound-details right padding) = #1.5
+     \once\override TextSpanner.bound-details.left.text = #(format #f "B ~@r" strg)
+     \once\override TextSpanner.font-shape = #'upright
+     \once\override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \once\override TextSpanner.style = #'line
+     \once\override TextSpanner.bound-details.right.text = \markup \draw-line #'(0 . -1)
+     \once\override TextSpanner.to-barline = ##t
+     \once\override TextSpanner.bound-details.right.padding = #1.5
     <>\startTextSpan
     $music
     <>\stopTextSpan
@@ -30,6 +30,7 @@ barre =
 \header 	{
   title = "Sicilienne (Op 78)"
   composer = "Gabriel Fauré"
+  piece = \markup { \circle 6 = D } % drop D tuning
   copyright  = "Public Domain"
   mutopiatitle = "Sicilienne"
   mutopiacomposer = "FaureG"
@@ -74,8 +75,8 @@ first =  \relative c {
   \repeat volta 2 {
     \barre 5 { <b'-4-\A >16-> <g,-\P > <d'-3-\I > <g-4-\M >-> <a-1-\A >8-> <bes-3-\M >16-> <g,-\P > <c-\I > <c'-4-\M >-> <cis-4-\A >8-> } |
     \barre 8 { <d-3-\A >16-> <ees,-\I > <a-3-\M >  <ees-\I >-> <f-\M >8-> } \barre 1 { <g-4-\A >16-> <f,-3-\P > <aes-\P > <f-3-\P > <d'-4-\M >8-> } |
-    <bes-4-\M >16-> <bes,-2-\P > <d-\P > <g-\M >-> <a-2-\A >8-> \barre 1 { <bes-4-\M >16-> <ees,-\P > <bes'-\I > <c-\M >-> <cis-2-\A >8-> } | 
-    <d-2-\M >16-> <fis,-3-\P > <a-1-\I > <e'\open-\M >-> <fis-1-\A >8-> \barre 3 <g-\A d-\M bes-\I >4-> r8 | 
+    <bes-4-\M >16-> <bes,-2-\P > <d-\P > <g-\M >-> <a-2-\A >8-> \barre 1 { <bes-4-\M >16-> <ees,-\P > <bes'-\I > <c-\M >-> <cis-2-\A >8-> } |
+    <d-2-\M >16-> <fis,-3-\P > <a-1-\I > <e'\open-\M >-> <fis-1-\A >8-> \barre 3 <g-\A d-\M bes-\I >4-> r8 |
   }
   \break
   \repeat volta 2 {
@@ -140,12 +141,12 @@ music = {
     \new Staff = "guitar" \with {
       midiInstrument = "acoustic guitar (nylon)"
       fingeringOrientations = #'(left)
-      \override StringNumber #'add-stem-support = ##t
-      \override Fingering #'add-stem-support = ##t
-      \override Fingering #'whiteout = ##t
-      \override StringNumber #'stencil = ##f
-      \override StrokeFinger #'font-size = #-2
-      \override StrokeFinger #'whiteout = ##t
+      \override StringNumber.add-stem-support = ##t
+      \override Fingering.add-stem-support = ##t
+      \override Fingering.whiteout = ##t
+      \override StringNumber.stencil = ##f
+      \override StrokeFinger.font-size = #-2
+      \override StrokeFinger.whiteout = ##t
     }
     <<
       \context Voice = "first voice" { \clef "G_8" \voiceOne  \first }
