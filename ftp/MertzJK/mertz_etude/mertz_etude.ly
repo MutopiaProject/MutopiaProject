@@ -2,7 +2,7 @@
 
 \header {
    title = "Etude in A minor"
-   composer = "Johann Kapsar Mertz(1806-1856)"
+   composer = "Johann Kaspar Mertz(1806-1856)"
    instrument = "Guitar"
    enteredby = "Emre Akbas"
    piece = "Allegro"
