@@ -1,4 +1,5 @@
-bassoThirdMov = \notes \relative f {
+\version "2.17.14"
+bassoThirdMov =  \relative f {
     \key f \major
     \clef bass
 
@@ -6,12 +7,12 @@ bassoThirdMov = \notes \relative f {
 
     \repeat volta 2 {
 	r4
-	| r r f-\p
+	| r r f\p
 	| g4. a8 bes4
 	| a r f
-	| g8-( f g a-) bes4-.
-	| a-.-\f a-( g-)
-	| f-. f-( e-)
+	| g8( f g a) bes4-.
+	| a-.\f a( g)
+	| f-. f( e)
 	| f g g,
 	| c c'
     }
@@ -21,11 +22,11 @@ bassoThirdMov = \notes \relative f {
 	| r r c,
 
 % 10
-	| bes'!-. bes-( a-)
+	| bes'!-. bes( a)
 	| g r c,
 	| bes'8 a bes g a f
 	| d' c d bes c4
-	| bes e,-( f-)
+	| bes e,( f)
 	| bes, c c
 	| f f,
     }
@@ -36,7 +37,7 @@ bassoThirdMov = \notes \relative f {
 
     \repeat volta 2 {
 	r4
-	| c'2.-\p
+	| c'2.\p
 	| f
 	| c'
 
@@ -44,7 +45,7 @@ bassoThirdMov = \notes \relative f {
 	| g4 d g
 	| a g2
 	| c4 g e
-	| c2.-\f
+	| c2.\f
 	| bes!
 	| f'
 	| c2 g'4
@@ -55,11 +56,11 @@ bassoThirdMov = \notes \relative f {
     \repeat volta 2 {
 	r4
 	| R2.*4
-	| e4-\p r r
+	| e4\p r r
 	| f r r
 	| f r r
-	| fis fis-\cresc fis
-	| g-\f g g,
+	| fis fis\deprecatedcresc fis
+	| g\f g g,
 	| c c'
     }
 }

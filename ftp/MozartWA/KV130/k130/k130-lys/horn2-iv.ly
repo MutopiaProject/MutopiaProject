@@ -1,11 +1,12 @@
-hornIIFourthMov = \notes \relative c' {
+\version "2.17.14"
+hornIIFourthMov =  \relative c' {
     \key c \major
     \clef violin
 
     \noTupletBracket
 
     \repeat volta 2 {
-	| c2-\f c
+	| c2\f c
 	| R1
 	| c2 r
 	| R1
@@ -46,7 +47,7 @@ hornIIFourthMov = \notes \relative c' {
 	| R1*18
 
 % 61
-	| c1-\f ~
+	| c1\f ~
 	| c
 	| g'
 	| d'4 r r2
@@ -62,14 +63,18 @@ hornIIFourthMov = \notes \relative c' {
 	| R1*8
 
 % 80
-	| c,4-\f r c'8 g e g
+	| c,4\f r c'8 g e g
 	| e4 r c'8 g e g
 	| e4 r e e 
 	| e c8 c16 c c4 r
     }
 
-    \grace s16 R1*4
-    | d'2.-\f r4
+    \grace {
+\override Flag.stroke-style = #"grace"
+   s16 
+  \revert Flag.stroke-style }
+ R1*4
+    | d'2.\f r4
     | d2. r4
 
 % 90
@@ -116,7 +121,7 @@ hornIIFourthMov = \notes \relative c' {
     | R1
     | c2 c
     | R1*8
-    | c4-\f r r2
+    | c4\f r r2
     | c4 r r2
     | c4 r c c
     | c c c r

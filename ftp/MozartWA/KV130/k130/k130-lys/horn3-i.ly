@@ -1,4 +1,5 @@
-hornIIIFirstMov = \notes \relative c'' {
+\version "2.17.14"
+hornIIIFirstMov =  \relative c'' {
     \key c \major
     \clef violin
 
@@ -6,7 +7,7 @@ hornIIIFirstMov = \notes \relative c'' {
 
     \repeat volta 2 {
 	R1*5
-	| c1-\f
+	| c1\f
 	| d
 	| c
 	| r4 f e d
@@ -17,11 +18,11 @@ hornIIIFirstMov = \notes \relative c'' {
 	| c ~
 	| c ~
 	| c ~
-	| c-\p ~
+	| c\p ~
 	| c ~
 	| c ~
 	| c4 r r2
-	| c4-\f r r2
+	| c4\f r r2
 
 % 20
 	| e4 e8 e e4 e
@@ -37,18 +38,18 @@ hornIIIFirstMov = \notes \relative c'' {
 
 % 30
 	| R1
-	| d1-\p ~
+	| d1\p ~
 	| d ~
 	| d ~
-	| d ~
+	| d \laissezVibrer
 	| R1*3
-	| g,1-\p ~
+	| g,1\p ~
 	| g ~
 
 % 40
 	| g ~
 	| g
-	| g4-\f g g g
+	| g4\f g g g
 	| g r r2
 	| d'4 e2 e4
 	| d4 d2 d4
@@ -58,14 +59,14 @@ hornIIIFirstMov = \notes \relative c'' {
 	| R1*6
 
 % 55
-	| d1-\f
+	| d1\f
 	| e2 r
 	| d2 d
-	| g8-( d-) d-. d-. d4 r
+	| g8( d) d-. d-. d4 r
 	| R1
 
 % 60
-	| g8-( d-) d-. d-. d4 r
+	| g8( d) d-. d-. d4 r
 	| R1
 	| d4 d d r
     }
@@ -73,7 +74,7 @@ hornIIIFirstMov = \notes \relative c'' {
     | R1*8
 
 % 71
-    | d4-\f r r2
+    | d4\f r r2
     | e4 r r2
     | d4 r r2
     | e4 r r2
@@ -81,7 +82,7 @@ hornIIIFirstMov = \notes \relative c'' {
     | e r r2
     | e1
     | R1
-    | e1-\f
+    | e1\f
 
 % 80
     | c
@@ -89,7 +90,7 @@ hornIIIFirstMov = \notes \relative c'' {
     | d1
     | d4 d d r
     | R1*4
-    | c1-\f
+    | c1\f
     | d
 
 % 90
@@ -109,27 +110,27 @@ hornIIIFirstMov = \notes \relative c'' {
     | g ~
     | g
     | R1*3
-    | c1-\p ~
+    | c1\p ~
     | c ~
     | c ~
     | c
 
 % 110
-    | c4-\f c c c
+    | c4\f c c c
     | c1
     | d
     | c4 c c c
     | e2 d
     | c4 r r2
     | R1*6
-    | g1-\f
+    | g1\f
     | d'2 f
     | e d
-    | c8-( g-) g-. g-. g4 r
+    | c8( g) g-. g-. g4 r
     | R1
-    | c8-( g-) g-. g-. g4 r
+    | c8( g) g-. g-. g4 r
     | R1
-    | c8-( g-) g-. g-. e'-( c-) c-. c-.
+    | c8( g) g-. g-. e'( c) c-. c-.
     | g' e g e g e c g
     | c4 c c c
     | c2 r

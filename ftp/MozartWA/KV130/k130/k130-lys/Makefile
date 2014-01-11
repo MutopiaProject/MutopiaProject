@@ -27,83 +27,83 @@ help:
 	@echo "  all help score horn1 horn2 horn3 horn4"
 	@echo "  flute1 flute2 violin1 violin2 viola basso"
 
-%.ps : %.ly
-	ly2dvi -P -o $@ $<
+%.pdf : %.ly
+	lilypond -o $@ $<
 
 ############################################################
 
-flutes: k130-flutes.ps
+flutes: k130-flutes.pdf
 
-k130-flutes.ps: k130-flutes.ly $(FLUTES_FILES)
-
-############################################################
-
-flute1: k130-flute1.ps
-
-k130-flute1.ps: k130-flute1.ly $(FLUTE1_FILES)
+k130-flutes.pdf: k130-flutes.ly $(FLUTES_FILES)
 
 ############################################################
 
-flute2: k130-flute2.ps
+flute1: k130-flute1.pdf
 
-k130-flute2.ps: k130-flute2.ly $(FLUTE2_FILES)
-
-############################################################
-
-horn1: k130-horn1.ps
-
-k130-horn1.ps: k130-horn1.ly $(HORN1_FILES)
+k130-flute1.pdf: k130-flute1.ly $(FLUTE1_FILES)
 
 ############################################################
 
-horn2: k130-horn2.ps
+flute2: k130-flute2.pdf
 
-k130-horn2.ps: k130-horn2.ly $(HORN2_FILES)
-
-############################################################
-
-horn3: k130-horn3.ps
-
-k130-horn3.ps: k130-horn3.ly $(HORN3_FILES)
+k130-flute2.pdf: k130-flute2.ly $(FLUTE2_FILES)
 
 ############################################################
 
-horn4: k130-horn4.ps
+horn1: k130-horn1.pdf
 
-k130-horn4.ps: k130-horn4.ly $(HORN4_FILES)
-
-############################################################
-
-flute: k130-flute.ps
-
-k130-flute.ps: k130-flute.ly $(FLUTE_FILES)
+k130-horn1.pdf: k130-horn1.ly $(HORN1_FILES)
 
 ############################################################
 
-violin1: k130-violin1.ps
+horn2: k130-horn2.pdf
 
-k130-violin1.ps: k130-violin1.ly $(VIOLIN1_FILES)
-
-############################################################
-
-violin2: k130-violin2.ps
-
-k130-violin2.ps: k130-violin2.ly $(VIOLIN2_FILES)
+k130-horn2.pdf: k130-horn2.ly $(HORN2_FILES)
 
 ############################################################
 
-viola: k130-viola.ps
+horn3: k130-horn3.pdf
 
-k130-viola.ps: k130-viola.ly $(VIOLA_FILES)
-
-############################################################
-
-basso: k130-basso.ps
-
-k130-basso.ps: k130-basso.ly $(BASSO_FILES)
+k130-horn3.pdf: k130-horn3.ly $(HORN3_FILES)
 
 ############################################################
 
-score: k130-score.ps
+horn4: k130-horn4.pdf
 
-k130-score.ps: k130-score.ly $(FLUTES_FILES) $(HORN1_FILES) $(HORN2_FILES) $(HORN3_FILES) $(HORN4_FILES) $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(BASSO_FILES)
+k130-horn4.pdf: k130-horn4.ly $(HORN4_FILES)
+
+############################################################
+
+flute: k130-flute.pdf
+
+k130-flute.pdf: k130-flute.ly $(FLUTE_FILES)
+
+############################################################
+
+violin1: k130-violin1.pdf
+
+k130-violin1.pdf: k130-violin1.ly $(VIOLIN1_FILES)
+
+############################################################
+
+violin2: k130-violin2.pdf
+
+k130-violin2.pdf: k130-violin2.ly $(VIOLIN2_FILES)
+
+############################################################
+
+viola: k130-viola.pdf
+
+k130-viola.pdf: k130-viola.ly $(VIOLA_FILES)
+
+############################################################
+
+basso: k130-basso.pdf
+
+k130-basso.pdf: k130-basso.ly $(BASSO_FILES)
+
+############################################################
+
+score: k130-score.pdf
+
+k130-score.pdf: k130-score.ly $(FLUTES_FILES) $(HORN1_FILES) $(HORN2_FILES) $(HORN3_FILES) $(HORN4_FILES) $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(BASSO_FILES)

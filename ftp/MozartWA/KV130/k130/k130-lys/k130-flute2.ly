@@ -1,108 +1,120 @@
 % -*- LilyPond -*-
 
-\version "1.7.30"
+\version "2.17.97"
 
 \include "defs.ly"
 
 \include "flute2-i.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.midiInstrument = #"flute"
-	\property Staff.instrument = #"Flauto II" 
+    \context Staff <<
+        \override Score.BarNumber.padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.midiInstrument = #"flute"
+	\set Staff.instrumentName = #"Flauto II" 
 
 	\time 4/4
 
 	\fluteIIFirstMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 124
+    
+  \midi {
+    \tempo 4 = 124
     }
+
+
 
     \header {
 	piece = "Allegro."
     }
 
-    \paper { }
+    \layout { }
 }
 
 \include "flute2-ii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.midiInstrument = #"flute"
-	\property Staff.instrument = #"Flauto II" 
+    \context Staff <<
+        \override Score.BarNumber.padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.midiInstrument = #"flute"
+	\set Staff.instrumentName = #"Flauto II" 
 
 	\time 3/8
 
 	\fluteIISecondMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 42
+    
+  \midi {
+    \tempo 4 = 42
     }
+
+
 
     \header {
 	piece = "Andantino cantabile."
     }
 
-    \paper { }
+    \layout { }
 }
 
 \include "flute2-iii.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.midiInstrument = #"flute"
-	\property Staff.instrument = #"Flauto II" 
+    \context Staff <<
+        \override Score.BarNumber.padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.midiInstrument = #"flute"
+	\set Staff.instrumentName = #"Flauto II" 
 
 	\time 3/4
 	\partial 4
 
 	\fluteIIThirdMov
-	\context Voice=markings { \markingsIII }
+	\context Voice = "markings" { \markingsIII }
 	\context Voice=markingsBis { \markingsIIIbis }
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 130
+    
+  \midi {
+    \tempo 4 = 130
     }
+
+
 
     \header {
 	piece = "MENUETTO."
     }
 
-    \paper { }
+    \layout { }
 }
 
 \include "flute2-iv.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.midiInstrument = #"flute"
-	\property Staff.instrument = #"Flauto II" 
+    \context Staff <<
+        \override Score.BarNumber.padding = #3
+	\set Score.skipBars = ##t
+        \set Staff.midiInstrument = #"flute"
+	\set Staff.instrumentName = #"Flauto II" 
 
 	\time 4/4
 
 	\fluteIIFourthMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 180
+    
+  \midi {
+    \tempo 4 = 180
     }
+
+
 
     \header {
 	piece = "Allegro molto."
     }
 
-    \paper { }
+    \layout { }
 }
