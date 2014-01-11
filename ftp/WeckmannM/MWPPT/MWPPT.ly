@@ -1,5 +1,5 @@
-\version "1.6.6"
-\include "nederlands.ly"
+\version "2.18.0"
+
 \header {
   title = "Praeambulum Primi toni a 5"
   opus = " "
@@ -15,12 +15,11 @@
   maintainer = "Tim Knigge"
   maintainerEmail = "tim@asset-control.com"
   lastupdated = "2003/March/14"
-  
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+
   footer = "Mutopia-2003/03/14-305"
 }
 
-global = \notes {
+global =  {
   \key c \major
   \time 4/4
   \skip 1*53
@@ -31,13 +30,13 @@ global = \notes {
   \bar "|." |
 }
 
-upOne = \context Voice=one \notes \relative c'' {
+upOne = \context Voice = "one"  \relative c'' {
   \clef treble
   \stemUp
   \tieUp
   \slurUp
   \shiftOff
-  \property Staff.midiInstrument="church organ"
+  \set Staff.midiInstrument = "church organ"
 
   a1~ |
   a |
@@ -46,25 +45,25 @@ upOne = \context Voice=one \notes \relative c'' {
   bes8. a16 g8. a16 bes2~ |				   %5
   bes a4 g |
   a1 |
-  r16 [d, e fis] [g a b cis] [d a b cis] [d e fis g] |     
-  [a e f cis] [d e f d] e2 |
+  r16  d,[ e fis]  g[ a b cis]  d[ a b cis]  d[ e fis g] |
+  a[ e f cis]  d[ e f d] e2 |
   e1 |							   %10
   cis |
   r |
   r |
-  r16 [g' f e] [d c bes a] [g f' e d] [c bes a g] |
+  r16  g'[ f e]  d[ c bes a]  g[ f' e d]  c[ bes a g] |
   a1 |							   %15
-  r16 [e f g] [a b c g] [a b c d] [e f g e] |
-  [f cis d e] [f g a e ] f2 |
+  r16  e[ f g]  a[ b c g]  a[ b c d]  e[ f g e] |
+  f[ cis d e]  f[ g a e ] f2 |
   e1~ |
   e2. d4 |
   cis1 |						   %20
   s |
-  r2 r16 [a' g f] [e d c b] |
+  r2 r16  a'[ g f]  e[ d c b] |
   a1 |
   a2 r4 a~ |
-  [a8 a] gis4 a b |					   %25
-  c4. [b16 a] b2 |
+  a8[ a] gis4 a b |					   %25
+  c4.  b16[ a] b2 |
   a g4 a~ |
   a gis a2 |
   r4 a4. a8 gis4 |
@@ -72,23 +71,23 @@ upOne = \context Voice=one \notes \relative c'' {
   b r |
   r1 |
   r4 a4. a8 gis4 |
-  [a8 b] [c a][ b16 c d c] [b c a b] |
+  a8[ b]  c[ a] b16[ c d c]  b[ c a b] |
   c4 b4. b8 a4~ |					   %35
-  [a8 gis16 fis] gis4 a2~ |
+  a8[ gis16 fis] gis4 a2~ |
   a r |
   r2 r4 d~ |
-  [d8 d] cis4 d e |
+  d8[ d] cis4 d e |
   f2 e |						   %40
-  d4 [c8 b] a4 b |
-  c [b8 c] d4 e |
-  [f8 e] e4 [d8 c16 b] d4 |
+  d4  c8[ b] a4 b |
+  c  b8[ c] d4 e |
+  f8[ e] e4  d8[ c16 b] d4 |
   e1 |
   r |							   %45
   r2 r4 d~ |
-  [d8 d] cis4 d e |
-  f [e8 d] c4 d |
+  d8[ d] cis4 d e |
+  f  e8[ d] c4 d |
   e f2 e4~ |
-  [e8 d16 c] [d e f g] e2 |				   %50
+  e8[ d16 c]  d[ e f g] e2 |				   %50
   f4 e d e~ |
   e d2 cis4 |
   d1 |
@@ -112,18 +111,18 @@ upOne = \context Voice=one \notes \relative c'' {
   d~ |
   d~ |
   d |
-  bes8 [bes16 c] d8 [g,16 a] bes8 [bes16 a] [g a bes g] |
-  a8 [fis16 g] a8 [d,16 e] fis8. g16 a8 [b16 cis] |	   %75
+  bes8  bes16[ c] d8  g,16[ a] bes8  bes16[ a]  g[ a bes g] |
+  a8  fis16[ g] a8  d,16[ e] fis8. g16 a8  b16[ cis] |	   %75
   d1 |
 }
 
-upTwo = \context Voice=two \notes \relative c' {
+upTwo = \context Voice = "two"  \relative c' {
   \clef treble
   \stemDown
   \tieDown
   \slurDown
   \shiftOn
-  \property Staff.midiInstrument="church organ"
+  \set Staff.midiInstrument = "church organ"
 
   f1 |
   e2 fis |
@@ -133,50 +132,50 @@ upTwo = \context Voice=two \notes \relative c' {
   d |
   d |
   s |
-  [fis16 g a e] [fis g a b] c4 [b8 a] |
+  fis16[ g a e]  fis[ g a b] c4  b8[ a] |
   gis4 a2 gis4 |					   %10
   a1 |
   r |
-  r2 r16 [c bes a] [g f e d] |
+  r2 r16  c[ bes a]  g[ f e d] |
   c2 c |
   f1 |							   %15
-  \translator Staff = bass \stemUp r8 r16 e, [f g a b] [c g a b] [cis d e cis] |
-  \translator Staff = treble \stemDown [d16 e f g] [a e f cis] [d a b cis] [d e f g] |
+  \change Staff = bass \stemUp r8 r16 e,  f[ g a b]  c[ g a b]  cis[ d e cis] |
+  \change Staff = treble \stemDown  d16[ e f g]  a[ e f cis]  d[ a b cis]  d[ e f g] |
   a1 |
   b4. c8 b2 |
   a1 |							   %20
   s1 |
-  r16 [d c b] [a g fis e] d4 b |
-  [cis16 f e d] [e d cis b] [cis d e d] [cis b d cis] |
+  r16  d[ c b]  a[ g fis e] d4 b |
+  cis16[ f e d]  e[ d cis b]  cis[ d e d]  cis[ b d cis] |
   a4 d4. d8 cis4 |
-  d e f [e8 d] |					   %25
-  e4. [d16 c] d4 e |
-  f4. [e16 d] e2 |
-  d4. e8 [f e] [d e] |
-  f4 e f [e8 d] |
-  c4 d e4. [d16 c] |					   %30
+  d e f  e8[ d] |					   %25
+  e4.  d16[ c] d4 e |
+  f4.  e16[ d] e2 |
+  d4. e8  f[ e]  d[ e] |
+  f4 e f  e8[ d] |
+  c4 d e4.  d16[ c] |					   %30
   d4 e f2 |
-  e [d8 e f d] |
+  e d8[ e f d] |
   e1 |
   e2 r |
   r1 |							   %35
   r |
   r2 r4 d~ |
-  [d8 d] cis4 d4. e8 |
+  d8[ d] cis4 d4. e8 |
   f4 e b b' |
   a2 gis4 a |						   %40
-  b [a8 g] a2 |
+  b  a8[ g] a2 |
   r1 |
   r2 r4 a~ |
-  [a8 a] gis4 a2 |
-  b [e,8 f] g4 |					   %45
-  [g16 a b g] [a b c a] b2 |
+  a8[ a] gis4 a2 |
+  b e,8[ f] g4 |					   %45
+  g16[ a b g]  a[ b c a] b2 |
   r2 r4 a~ |
-  [a8 a] gis4 a b |
-  [c8 b] [a g] a2~ |
+  a8[ a] gis4 a b |
+  c8[ b]  a[ g] a2~ |
   a4 a2 a4 |						   %50
-  [a8 b c b] a4 g~ |
-  [g8 f16 e] [f8 g] a4. g8 |
+  a8[ b c b] a4 g~ |
+  g8[ f16 e]  f8[ g] a4. g8 |
   fis1 |
   r1. |
   r |							   %55
@@ -203,13 +202,13 @@ upTwo = \context Voice=two \notes \relative c' {
   <fis a> |
 }
 
-downOne = \context Voice=three \notes \relative c' {
+downOne = \context Voice = "three"  \relative c' {
   \clef bass
   \stemUp
   \tieUp
   \slurUp
   \shiftOff
-  \property Staff.midiInstrument="church organ"
+  \set Staff.midiInstrument = "church organ"
 
   a1~ |
   a |
@@ -218,84 +217,84 @@ downOne = \context Voice=three \notes \relative c' {
   g8. a16 bes8. a16 g2~ |				   %5
   g fis4 e  |
   fis1 |
-  r8 r16 d [e fis g a] [b cis d a] [b cis d e] |
-  s2 r16 [e, f g] [a b c d] |
+  r8 r16 d  e[ fis g a]  b[ cis d a]  b[ cis d e] |
+  s2 r16  e,[ f g]  a[ b c d] |
   e1 |							   %10
   e |
-  r16 [f,16 g a] [bes c \translator Staff = treble \stemDown d e] \stemUp [f e d e] [f g a bes] |
-  \stemDown [c8 bes16 a] [g f e d] \stemUp \translator Staff = bass c4 bes~ |
+  r16  f,16[ g a]  bes[ c \change Staff = treble \stemDown d e] \stemUp  f[ e d e]  f[ g a bes] |
+  \stemDown  c8[ bes16 a]  g[ f e d] \stemUp \change Staff = bass c4 bes~ |
   bes a c g |
   c1 |							   %15
   r |
   r |
-  r16 [e, f g] [a b c d] \translator Staff = treble \stemDown e2 |
+  r16  e,[ f g]  a[ b c d] \change Staff = treble \stemDown e2 |
   e1 |
   e |							   %20
-  \stemUp r16 [a g f] [e d c b] [a b cis d] [e b cis b] |
-  \translator Staff = bass a2. e'4~ |
-  [e16 a, g f] [g f e d] [e f g f] [e d fis e] |
+  \stemUp r16  a[ g f]  e[ d c b]  a[ b cis d]  e[ b cis b] |
+  \change Staff = bass a2. e'4~ |
+  e16[ a, g f]  g[ f e d]  e[ f g f]  e[ d fis e] |
   fis2 r |
   r1 |							   %25
-  r4 a~ [a8 a] gis4 |
+  r4 a~  a8[ a] gis4 |
   a b c2 |
-  b [a8 g] [f e] |
+  b  a8[ g]  f[ e] |
   a4 a4. d8 b4 |
   a2 gis4 a |						   %30
   b2 a |
-  g4 a [b8 c d d~] |
-  [d d] c4 b2 |
+  g4 a  b8[ c d d~] |
+  d[ d] c4 b2 |
   c d4 e~ |
-  [e8 e] d4 e4. [d16 c] |				   %35
-  d4 e f4. [e16 d] |
+  e8[ e] d4 e4.  d16[ c] |				   %35
+  d4 e f4.  e16[ d] |
   e2 d4 a |
-  g [a8 g] [f e] d4 |
-  r a'4~ [a8 a] gis4 |
+  g  a8[ g]  f[ e] d4 |
+  r a'4~  a8[ a] gis4 |
   a b c2 |						   %40
   b r4 a~ |
-  [a8 a] gis4 a b |
+  a8[ a] gis4 a b |
   c4. b8 a4. b8 |
   c4 b c2 |
-  b4 [e8 d] c4 d |					   %45
-  c a~ [a8 a] gis4 |
+  b4  e8[ d] c4 d |					   %45
+  c a~  a8[ a] gis4 |
   a1 |
   r |
-  r4 d~ [d8 d] cis4 |
+  r4 d~  d8[ d] cis4 |
   d2 e |						   %50
-  d4 c d4. [c16 b] |
-  cis4 [d8 e] [f e16 d] e4 |
+  d4 c d4.  c16[ b] |
+  cis4  d8[ e]  f[ e16 d] e4 |
   d1 |
-  \translator Staff = treble \stemDown d2. d4 cis2 |
+  \change Staff = treble \stemDown d2. d4 cis2 |
   d4 e f g e2 |						   %55
   f4. e8 d4 c b2 |
-  \translator Staff = bass \stemUp a2. f'4 e d |
+  \change Staff = bass \stemUp a2. f'4 e d |
   c d e2. d4 |
-  \translator Staff = treble \stemDown c4. d8 e4 f d2 |
+  \change Staff = treble \stemDown c4. d8 e4 f d2 |
   c4 d e f d2 |						   %60
   e4. d8 e4 fis gis2 |
   a2 r r |
   r1. |
   d,2. d4 cis2 |
   d4 e f g e2 |						   %65
-  \translator Staff = bass \stemUp a,1. |
+  \change Staff = bass \stemUp a,1. |
   f4 g a bes c2 |
-  \translator Staff = treble \stemDown f2. f4 e2 |
+  \change Staff = treble \stemDown f2. f4 e2 |
   d1 r2 |
   g2. g4 fis2 |						   %70
-  \translator Staff = bass \stemUp g,4 a bes c d2 |
+  \change Staff = bass \stemUp g,4 a bes c d2 |
   d1. |
   d |
-  d8 [d16 c] bes8 [bes16 a] g8 [g16 a] [bes c d e] |
-  fis,8 [a16 g] fis8 [fis16 e] d8 [a'16 g] fis8 [g16 e] |  %75
-  <d1 a'> |
+  d8  d16[ c] bes8  bes16[ a] g8  g16[ a]  bes[ c d e] |
+  fis,8  a16[ g] fis8  fis16[ e] d8  a'16[ g] fis8  g16[ e] |  %75
+  <d a'>1 |
  }
 
-downTwo = \context Voice=four \notes \relative c {
+downTwo = \context Voice = "four"  \relative c {
   \clef bass
   \stemDown
   \tieDown
   \slurDown
   \shiftOn
-  \property Staff.midiInstrument="church organ"
+  \set Staff.midiInstrument = "church organ"
 
   d1 |
   e2 d |
@@ -306,18 +305,18 @@ downTwo = \context Voice=four \notes \relative c {
   d |
   s |
   s |
-  r16 [b c d] [e fis gis a] [b c d c] [b a b8] |	   %10
+  r16  b[ c d]  e[ fis gis a]  b[ c d c]  b[ a b8] |	   %10
   e,1 |
-  r8 r16 f, [g a bes c] [d e f c] [d e f g] |
-  [a bes c8] [bes16 a g f] e4 d |
+  r8 r16 f,  g[ a bes c]  d[ e f c]  d[ e f g] |
+  a[ bes c8]  bes16[ a g f] e4 d |
   e f2 e4 |
   f1 |							   %15
   r |
   r |
-  r2 r16 \stemUp [b, cis d] [e fis gis a] |
-  [gis a b c] [b a gis fis] gis2 |
+  r2 r16 \stemUp  b,[ cis d]  e[ fis gis a] |
+  gis[ a b c]  b[ a gis fis] gis2 |
   a1 |							   %20
-  r8 r16 a [g f e d] [cis b a b] [cis d e b] |
+  r8 r16 a  g[ f e d]  cis[ b a b]  cis[ d e b] |
   d2 d4 g |
   e s s2 |
   d' r |
@@ -325,29 +324,29 @@ downTwo = \context Voice=four \notes \relative c {
   r |
   r |
   r2 r4 d,4~ |
-  [d8 d] cis4 d e |
+  d8[ d] cis4 d e |
   f2 e |						   %30
-  r4 e~ [e8 e] d4 |
+  r4 e~  e8[ e] d4 |
   e fis g4. fis8 |
   e1 |
   r4 a4. a8 gis4 |
   a b c2 |						   %35
   b a |
   a4. g8 f2 |
-  e2 [d8 e f g] |
+  e2  d8[ e f g] |
   a2 r4 e~ |
-  [e8 e] d4 e fis |					   %40
+  e8[ e] d4 e fis |					   %40
   g2 f |
   e2 fis4 g |
   a g f2 |
-  e [a8 g f e] |
+  e  a8[ g f e] |
   d4 e2 d4 |						   %45
   e2 d4. e8 |
   f4 e d cis |
-  d e f [e8 d] |
+  d e f  e8[ d] |
   c4 d a'4. g8 |
   f2. a4~ |						   %50
-  [a8 a] gis4 a b |
+  a8[ a] gis4 a b |
   a1 |
   a | |
   r1. |
@@ -375,12 +374,12 @@ downTwo = \context Voice=four \notes \relative c {
   s |
 }
 
-bass = \context Voice=five \notes \relative c {
+bass = \context Voice = "five"  \relative c {
   \clef bass
   \stemDown
   \tieDown
   \slurDown
-  \property Staff.midiInstrument="church organ"
+  \set Staff.midiInstrument = "church organ"
 
   d1 |
   cis2 d |
@@ -412,21 +411,21 @@ bass = \context Voice=five \notes \relative c {
   r |
   r |
   r2 r4 a'~ |						   %30
-  [a8 a] gis4 a b |
+  a8[ a] gis4 a b |
   c2 b |
   c4. d8 e2 |
   a, r |
   r1 |							   %35
   r2 r4 d~ |
-  [d8 d] cis4 d2 |
+  d8[ d] cis4 d2 |
   e4 a, bes2 |
   a r |
   r1 |							   %40
-  r4 e'~ [e8 e] d4 |
-  c4 e d [c8 b] |
+  r4 e'~  e8[ e] d4 |
+  c4 e d  c8[ b] |
   a1 |
   r2 r4 a~ |
-  [a8 a] gis4 a b |					   %45
+  a8[ a] gis4 a b |					   %45
   c2 b |
   a r |
   r1 |
@@ -461,31 +460,34 @@ bass = \context Voice=five \notes \relative c {
 }
 
 \score {
-%  \context GrandStaff <
-    \context PianoStaff <
-      \property PianoStaff.followVoice = ##t
-      \context Staff = treble <
-        \global 
+%  \context GrandStaff <<
+    \context PianoStaff <<
+      \set PianoStaff.followVoice = ##t
+      \context Staff = "treble" <<
+        \global
         \upOne
         \upTwo
-      >	
-      \context Staff = bass <
-        \global 
+      >>
+      \context Staff = "bass" <<
+        \global
         \downOne
         \downTwo
 	\bass
-      >   
-    >
-%    \context Staff = bass <
-%      \global 
+      >>
+    >>
+%    \context Staff = "bass" <
+%      \global
 %      \bass
-%    >   
-%  >
+%    >
+%  >>
+
   \midi {
-    \tempo 4=90
-  }
-  \paper {
-%    linewidth = 19.0 \cm
+    \tempo 4 = 90
+    }
+
+
+  \layout {
+%    line-width = 19.0 \cm
 %    indent = 0
 %    interscorelinefill = 5.0\pt
   }
