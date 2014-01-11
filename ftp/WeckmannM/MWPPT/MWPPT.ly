@@ -15,8 +15,8 @@
   maintainer = "Tim Knigge"
   maintainerEmail = "tim@asset-control.com"
   lastupdated = "2003/March/14"
-
   footer = "Mutopia-2003/03/14-305"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } } }
 }
 
 global =  {
@@ -32,10 +32,11 @@ global =  {
 
 upOne = \context Voice = "one"  \relative c'' {
   \clef treble
-  \stemUp
-  \tieUp
-  \slurUp
-  \shiftOff
+  %\stemUp
+  %\tieUp
+  %\slurUp
+  %\shiftOff
+  \voiceOne
   \set Staff.midiInstrument = "church organ"
 
   a1~ |
@@ -118,10 +119,11 @@ upOne = \context Voice = "one"  \relative c'' {
 
 upTwo = \context Voice = "two"  \relative c' {
   \clef treble
-  \stemDown
-  \tieDown
-  \slurDown
-  \shiftOn
+  %\stemDown
+  %\tieDown
+  %\slurDown
+  %\shiftOn
+  \voiceFour
   \set Staff.midiInstrument = "church organ"
 
   f1 |
@@ -204,10 +206,11 @@ upTwo = \context Voice = "two"  \relative c' {
 
 downOne = \context Voice = "three"  \relative c' {
   \clef bass
-  \stemUp
-  \tieUp
-  \slurUp
-  \shiftOff
+  %\stemUp
+  %\tieUp
+  %\slurUp
+  %\shiftOff
+  \voiceOne
   \set Staff.midiInstrument = "church organ"
 
   a1~ |
@@ -286,14 +289,15 @@ downOne = \context Voice = "three"  \relative c' {
   d8  d16[ c] bes8  bes16[ a] g8  g16[ a]  bes[ c d e] |
   fis,8  a16[ g] fis8  fis16[ e] d8  a'16[ g] fis8  g16[ e] |  %75
   <d a'>1 |
- }
+}
 
 downTwo = \context Voice = "four"  \relative c {
   \clef bass
-  \stemDown
-  \tieDown
-  \slurDown
-  \shiftOn
+  %\stemDown
+  %\tieDown
+  %\slurDown
+  %\shiftOn
+  \voiceFour
   \set Staff.midiInstrument = "church organ"
 
   d1 |
@@ -307,13 +311,14 @@ downTwo = \context Voice = "four"  \relative c {
   s |
   r16  b[ c d]  e[ fis gis a]  b[ c d c]  b[ a b8] |	   %10
   e,1 |
-  r8 r16 f,  g[ a bes c]  d[ e f c]  d[ e f g] |
+  r8 f,16\rest f  g[ a bes c]  d[ e f c]  d[ e f g] |
   a[ bes c8]  bes16[ a g f] e4 d |
   e f2 e4 |
   f1 |							   %15
+  % avoid stems' collision
+  b,\rest |
   r |
-  r |
-  r2 r16 \stemUp  b,[ cis d]  e[ fis gis a] |
+  r2 r16 \stemUp b[ cis d] e[ fis gis a] |
   gis[ a b c]  b[ a gis fis] gis2 |
   a1 |							   %20
   r8 r16 a  g[ f e d]  cis[ b a b]  cis[ d e b] |
@@ -376,9 +381,10 @@ downTwo = \context Voice = "four"  \relative c {
 
 bass = \context Voice = "five"  \relative c {
   \clef bass
-  \stemDown
-  \tieDown
-  \slurDown
+  %\stemDown
+  %\tieDown
+  %\slurDown
+  \voiceTwo
   \set Staff.midiInstrument = "church organ"
 
   d1 |
@@ -392,6 +398,8 @@ bass = \context Voice = "five"  \relative c {
   d2 a |
   e1 |							   %10
   a |
+  % avoid collision between tie and second voice's stems
+  \shape #'((0 . 0.5) (0 . -5) (0 . -3) (0 . 0.5))  Tie
   f~ |
   f4 g a bes |
   c2~ c |
@@ -408,7 +416,8 @@ bass = \context Voice = "five"  \relative c {
   r1 |							   %25
   r |
   r |
-  r |
+  % avoid rests' collision
+  d\rest |
   r |
   r2 r4 a'~ |						   %30
   a8[ a] gis4 a b |
@@ -419,7 +428,8 @@ bass = \context Voice = "five"  \relative c {
   r2 r4 d~ |
   d8[ d] cis4 d2 |
   e4 a, bes2 |
-  a r |
+  % avoid  rests' collision
+  a b,\rest |
   r1 |							   %40
   r4 e'~  e8[ e] d4 |
   c4 e d  c8[ b] |
@@ -460,35 +470,29 @@ bass = \context Voice = "five"  \relative c {
 }
 
 \score {
-%  \context GrandStaff <<
-    \context PianoStaff <<
-      \set PianoStaff.followVoice = ##t
-      \context Staff = "treble" <<
-        \global
-        \upOne
-        \upTwo
-      >>
-      \context Staff = "bass" <<
-        \global
-        \downOne
-        \downTwo
-	\bass
-      >>
+  %  \context GrandStaff <<
+  \context PianoStaff <<
+    \set PianoStaff.followVoice = ##t
+    \context Staff = "treble" <<
+      \global
+      \upOne
+      \upTwo
     >>
-%    \context Staff = "bass" <
-%      \global
-%      \bass
-%    >
-%  >>
+    \context Staff = "bass" <<
+      \global
+      \downOne
+      \downTwo
+      \bass
+    >>
+  >>
+  %    \context Staff = "bass" <
+  %      \global
+  %      \bass
+  %    >
+  %  >>
 
   \midi {
     \tempo 4 = 90
-    }
-
-
-  \layout {
-%    line-width = 19.0 \cm
-%    indent = 0
-%    interscorelinefill = 5.0\pt
   }
+  \layout { }
 }
