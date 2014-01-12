@@ -133,29 +133,38 @@ textB = \lyricmode {
 \score {
   \new ChoirStaff <<
     \new Staff \with {
-      midiInstrument = "choir aahs"
       instrumentName = "Sopran"
     } { \soprano }
     \addlyrics { \text }
     \addlyrics { \textB }
     \new Staff \with {
-      midiInstrument = "choir aahs"
       instrumentName = "Alt"
     } { \alto }
     \addlyrics { \text }
     \addlyrics { \textB }
     \new Staff \with {
-      midiInstrument = "choir aahs"
       instrumentName = "Tenor"
     } { \clef "treble_8" \tenor }
     \addlyrics { \text }
     \addlyrics { \textB }
     \new Staff \with {
-      midiInstrument = "choir aahs"
       instrumentName = "Bass"
     } { \clef "bass" \bass }
     \addlyrics { \text }
     \addlyrics { \textB }
   >>
   \layout { }
+}
+
+\score {
+  <<
+    \soprano
+    \alto
+    \tenor
+    \bass
+  >>
+  \midi {
+    \set Score.midiInstrument = "oboe"
+    \tempo 4 = 100
+  }
 }
