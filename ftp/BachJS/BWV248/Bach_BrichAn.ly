@@ -53,7 +53,7 @@
 }
 
 \layout {
-  \override Staff.ClefModifier.font-name = #"Century Schoolbook L italic"
+  \override Staff.ClefModifier.font-name = #"Century Schoolbook L bold italic"
   \override Staff.ClefModifier.extra-offset = #'(-0.3 . 0.07)
   \override Score.BarNumber.font-name = #"Century Schoolbook L"
 }
