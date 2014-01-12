@@ -39,7 +39,7 @@
     \override #'(baseline-skip . 2.2)
     \column {
       \abs-fontsize #8 \sans
-      \concat{"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " © 2012 by " \with-url #"http://joramberger.de" \maintainer "." }
+      \concat{"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " © 2014 by " \with-url #"http://joramberger.de" \maintainer "." }
       \abs-fontsize #8 \sans
       \concat {"This work is licensed under a " \with-url #"http://creativecommons.org/licenses/by-sa/4.0" \thecopyright " license."}
     }
