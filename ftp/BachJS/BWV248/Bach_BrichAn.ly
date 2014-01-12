@@ -6,24 +6,6 @@
   subtitle = "12. Choral – Weihnachtsoratorium"
   composer = "J. S. Bach"
   shortcomposer = "Bach"
-  tagline = \markup \with-url #"http://lilypond.org/"
-  \line {
-    "Lilypond"
-    #(string-join
-      (map (lambda (x) (if (symbol? x)
-                           (symbol->string x)
-                           (number->string x)))
-        (list-head (ly:version) 2))
-      ".")
-    "– www.lilypond.org"
-  }
-  copyright = \markup {
-    \with-url #"http://joramberger.de"
-    "© 2014 Joram Berger, joramberger.de"
-    "– Lizenz:"
-    \with-url #"http://creativecommons.org/licenses/by-sa/4.0/"
-    \small "CC-BY-SA"
-  }
   maintainer = "Joram Berger"
   maintainerWeb = "http://joramberger.de"
   style = "Baroque"
@@ -34,8 +16,34 @@
   mutopiainstrument = "Choir (SATB)"
   license = "cc-by-sa"
   date = "1734"
-  lastupdated = "2013-12-25"
-  %footer = "Mutopia-2014/01/00-000"
+  lastupdated = "2014-01-12"
+  % footer = "Mutopia-2014/01/00-000"
+  % tagline and copyright can be updated with the default
+  % Mutopia tagline, this one is a candidate for a new
+  % Mutopia default, but not yet decided.
+  thecopyright = "Creative Commons Attribution-ShareAlike 4.0"
+  tagline = \markup {
+    \override #'(baseline-skip . 2.2)
+    \center-column {
+      \abs-fontsize #8 \sans \bold
+      \with-url #"http://www.MutopiaProject.org" {
+        "Mutopia"
+        "Project"
+      }
+    }
+    \override #'(baseline-skip . 0)
+    \column {
+      \with-color #grey
+      \filled-box #'( 0 . 1) #'(-2.5 . 1.4) #0
+    }
+    \override #'(baseline-skip . 2.2)
+    \column {
+      \abs-fontsize #8 \sans
+      \concat{"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " © 2012 by " \with-url #"http://joramberger.de" \maintainer "." }
+      \abs-fontsize #8 \sans
+      \concat {"This work is licensed under a " \with-url #"http://creativecommons.org/licenses/by-sa/4.0" \thecopyright " license."}
+    }
+  }
 }
 
 #(set-global-staff-size 18.5)
