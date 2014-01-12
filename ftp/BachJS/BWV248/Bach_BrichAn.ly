@@ -46,7 +46,8 @@
   }
 }
 
-#(set-global-staff-size 18.5)
+#(set-global-staff-size 18.1)
+
 
 \paper {
   ragged-bottom = ##f
