@@ -217,6 +217,10 @@ until (eof CACHE) {
     print "<td><a href=\"../legal.html#ccasa\">";
     print "Creative Commons Attribution-ShareAlike 3.0</a></td>\n";
    }
+   elsif ($copyright eq "Creative Commons Attribution-ShareAlike 4.0") {
+    print "<td><a href=\"../legal.html#ccasa\">";
+    print "Creative Commons Attribution-ShareAlike 4.0</a></td>\n";
+   }
    elsif ($copyright eq "Creative Commons Attribution 2.5") {
     print "<td><a href=\"../legal.html#cca\">";
     print "Creative Commons Attribution 2.5</a></td>\n";
@@ -224,6 +228,10 @@ until (eof CACHE) {
    elsif ($copyright eq "Creative Commons Attribution 3.0") {
     print "<td><a href=\"../legal.html#cca\">";
     print "Creative Commons Attribution 3.0</a></td>\n";
+   }
+   elsif ($copyright eq "Creative Commons Attribution 4.0") {
+    print "<td><a href=\"../legal.html#cca\">";
+    print "Creative Commons Attribution 4.0</a></td>\n";
    }
    else { print "<td>&nbsp;</td>\n"; }
    print "<td><a href=\"piece-info.cgi?";

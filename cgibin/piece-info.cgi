@@ -113,27 +113,45 @@ if ($licence eq "Public Domain") {
 } elsif ($licence eq "Creative Commons Attribution-ShareAlike 2.5") {
  $licence = "<a href=\"../legal.html#ccasa\">" .
             "Creative Commons Attribution-ShareAlike 2.5</a>\n &nbsp;&nbsp;&nbsp;" .
-            "<a href=\"http://creativecommons.org/licenses/by-sa/2.5/\">" .            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<a href=\"http://creativecommons.org/licenses/by-sa/2.5/\">" .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/asa25.rdf\" type=\"application/rdf+xml\" />\n";
 } elsif ($licence eq "Creative Commons Attribution-ShareAlike 3.0") {
  $licence = "<a href=\"../legal.html#ccasa\">" .
             "Creative Commons Attribution-ShareAlike 3.0</a>\n &nbsp;&nbsp;&nbsp;" .
-            "<a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">" .            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<a href=\"http://creativecommons.org/licenses/by-sa/3.0/\">" .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/asa3.rdf\" type=\"application/rdf+xml\" />\n";
+} elsif ($licence eq "Creative Commons Attribution-ShareAlike 4.0") {
+ $licence = "<a href=\"../legal.html#ccasa\">" .
+            "Creative Commons Attribution-ShareAlike 4.0</a>\n &nbsp;&nbsp;&nbsp;" .
+            "<a href=\"http://creativecommons.org/licenses/by-sa/4.0/\">" .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
+ $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/asa4.rdf\" type=\"application/rdf+xml\" />\n";
 } elsif ($licence eq "Creative Commons Attribution 2.5") {
  $licence = "<a href=\"../legal.html#cca\">" .
             "Creative Commons Attribution 2.5</a>\n &nbsp;&nbsp;&nbsp;" .
-            "<a href=\"http://creativecommons.org/licenses/by/2.5/\">" .            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<a href=\"http://creativecommons.org/licenses/by/2.5/\">" .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/a25.rdf\" type=\"application/rdf+xml\" />\n";
 } elsif ($licence eq "Creative Commons Attribution 3.0") {
  $licence = "<a href=\"../legal.html#cca\">" .
             "Creative Commons Attribution 3.0</a>\n &nbsp;&nbsp;&nbsp;" .
-            "<a href=\"http://creativecommons.org/licenses/by/3.0/\">" .            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "<a href=\"http://creativecommons.org/licenses/by/3.0/\">" .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
             "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
  $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/a3.rdf\" type=\"application/rdf+xml\" />\n";
+} elsif ($licence eq "Creative Commons Attribution 4.0") {
+ $licence = "<a href=\"../legal.html#cca\">" .
+            "Creative Commons Attribution 4.0</a>\n &nbsp;&nbsp;&nbsp;" .
+            "<a href=\"http://creativecommons.org/licenses/by/4.0/\">" .
+            "<img src=\"../images/cc.primary.srr.gif\" alt=\"CC: Some rights reserved\" width=\"88\" " .
+            "height=\"31\" border=\"0\" style=\"vertical-align: middle;\" /></a>";
+ $ccmetadata = "<link rel=\"meta\" href=\"../cc-rdfs/a4.rdf\" type=\"application/rdf+xml\" />\n";
 }
 
 if ($lilypondversion eq "") {
