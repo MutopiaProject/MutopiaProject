@@ -10,16 +10,7 @@ violinIIFirstMov =  \relative f' {
 	r4 f\p a f
 	| r g8. f16 e4 c
 	| r f8. e16 d4 c
-	| bes bes8-. bes-. 
-	  \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
- bes16[( a8.) \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
- a16( g8.)]
+	| bes bes8-. bes-.  \grace { c32 } bes16[( a8.) \grace { bes32 } a16( g8.)]
 	| g16[( a8.) a8 a] c4( bes)
 	| a2:16\f f'4: a:
 	| e2: g4: e:
@@ -39,28 +30,16 @@ violinIIFirstMov =  \relative f' {
 	| f2: f:
 
 % 20
-	| f4 a2 \grace {
-\override Flag.stroke-style = #"grace"
-   g16 
-  \revert Flag.stroke-style }
- f8 e16 d
+	| f4 a2 \grace { g16 } f8 e16 d
 	| e8: e,: f: g: a: b: c: d:
 	| e2: e:
-	| e4 e2 \grace {
-\override Flag.stroke-style = #"grace"
-   f16 
-  \revert Flag.stroke-style }
- e8 d16 c
+	| e4 e2 \grace { f16 } e8 d16 c
 	| d( b) g-. g-. g4: d16( b) g-. g-. g4:
 	| g'16( e) c-. c-. c4: g''16( e) c-. c-. c4:
 	| c2: c:
 	| c: c:
 	| c16 a' a a a4: a2:
-	| g8 g,\p g, g' \grace {
-\override Flag.stroke-style = #"grace"
-   g16 
-  \revert Flag.stroke-style }
- f8( e) f( d)
+	| g8 g,\p g, g' \grace { g16 } f8( e) f( d)
 
 % 30
 	| c g c g d' g, d' g,
@@ -90,22 +69,10 @@ violinIIFirstMov =  \relative f' {
 
 % 50
 	| g16[( f8.) f8-. f-.] f16[( e8.) e8-. e-.]
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   e8 
-  \revert Flag.stroke-style }
- d4 c8 b c( e) g( c)
+	| \grace { e8 } d4 c8 b c( e) g( c)
 	| g16( f8.) f8-. f-. f16( e8.) e8-. e-.
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   e16 
-  \revert Flag.stroke-style }
- d16( c8.) c8 c' c( b) b( a)
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   b16 
-  \revert Flag.stroke-style }
- a8( g) g8-. g-. g g g g
+	| \grace { e16 } d16( c8.) c8 c' c( b) b( a)
+	| \grace { b16 } a8( g) g8-. g-. g g g g
 	| bes!2:\f cis,:
 	| d: d'4: e:
 	| g,: c b: d
@@ -119,21 +86,9 @@ violinIIFirstMov =  \relative f' {
     }
 
     | c'16[(\p g8.) g8-. g-.] g g g g
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   a32 
-  \revert Flag.stroke-style }
- g16[( f8.) f8-. f-.] f-. f-. f-. f-.
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   g32\p 
-  \revert Flag.stroke-style }
- f16[( e8.) e8-. e-.] e-. e-. e-. e-. 
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   f32 
-  \revert Flag.stroke-style }
- e16[( d8.) d8-. d-.] d-. d-. d-. d-.
+    | \grace { a32 } g16[( f8.) f8-. f-.] f-. f-. f-. f-.
+    | \grace { g32\p } f16[( e8.) e8-. e-.] e-. e-. e-. e-. 
+    | \grace { f32 } e16[( d8.) d8-. d-.] d-. d-. d-. d-.
     | c c c c c c c c
     | c c c c c c c c
     | c c c c c c c c
@@ -158,16 +113,7 @@ violinIIFirstMov =  \relative f' {
     | r4 f\p a f
     | r g8. f16 e4 c
     | r f8. e16 d4 c
-    | bes bes8-. bes-. 
-      \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
- bes16[( a8.) \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
- a16( g8.)]
+    | bes bes8-. bes-.  \grace { c32 } bes16[( a8.) \grace { bes32 } a16( g8.)]
     | a2:\f f'4: a:
     | e2: g4: e:
 
@@ -179,11 +125,7 @@ violinIIFirstMov =  \relative f' {
     | f8 f4 f f f8 ~
     | f f4 f f f8
     | f2: <d f>:
-    | <c e>8 c,\p c c' \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
- bes8( a) bes( g)
+    | <c e>8 c,\p c c' \grace { c32 } bes8( a) bes( g)
     | f c f c g' c, g' c,
     | a' c, a' c, a' c, f c
 
@@ -207,37 +149,13 @@ violinIIFirstMov =  \relative f' {
     | f2: <bes, e>:
     | <f a f'>4 c'(\p bes a)
     | R1
-    | c16[( bes8.) bes8-. bes-.] \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
- bes16[( a8.) a8-. a-.]
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   a8 
-  \revert Flag.stroke-style }
- g4 f8( e) f( a) c,4
-    | c16[( bes8.) bes8-. bes-.] \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
- bes16[( a8.) a8-. a-.]
+    | c16[( bes8.) bes8-. bes-.] \grace { c32 } bes16[( a8.) a8-. a-.]
+    | \grace { a8 } g4 f8( e) f( a) c,4
+    | c16[( bes8.) bes8-. bes-.] \grace { c32 } bes16[( a8.) a8-. a-.]
 
 % 120
-    | f'4 r8 f' \grace {
-\override Flag.stroke-style = #"grace"
-   g32 
-  \revert Flag.stroke-style }
- f16[( e8.) \grace {
-\override Flag.stroke-style = #"grace"
-   f32 
-  \revert Flag.stroke-style }
- e16( d8.)]
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   e32 
-  \revert Flag.stroke-style }
- d16[( c8.) c8-. c-.] c c c c
+    | f'4 r8 f' \grace { g32 } f16[( e8.) \grace { f32 } e16( d8.)]
+    | \grace { e32 } d16[( c8.) c8-. c-.] c c c c
     | es2:\f es:
     | d: g4: bes:
     | c: a bes: g
