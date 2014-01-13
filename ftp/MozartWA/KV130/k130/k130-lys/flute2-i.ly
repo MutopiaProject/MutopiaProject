@@ -8,30 +8,9 @@ fluteIIFirstMov =  \relative f''' {
     \repeat volta 2 {
 	R1*5
 	| f16[(\f c8.) c8-. c-.] c-. c-. c-. c-.
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   d32 
-  \revert Flag.stroke-style }
- c16[( bes8.) bes8-. bes-.] bes-. bes-. bes-. bes-.
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
- bes16[( a8.) a8-. a-.] a-. a-. a-. a-.
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
- a16[( g8.) g8-. g-.] 
-	  \grace {
-\override Flag.stroke-style = #"grace"
-   a32 
-  \revert Flag.stroke-style }
- g16[( f8.) \grace {
-\override Flag.stroke-style = #"grace"
-   g32 
-  \revert Flag.stroke-style }
- f16( e8.)]
+	| \grace { d32 } c16[( bes8.) bes8-. bes-.] bes-. bes-. bes-. bes-.
+	| \grace { c32 } bes16[( a8.) a8-. a-.] a-. a-. a-. a-.
+	| \grace { bes32 } a16[( g8.) g8-. g-.] \grace { a32 } g16[( f8.) \grace { g32 } f16( e8.)]
 
 % 10
 	| f4 r r2
@@ -58,8 +37,7 @@ fluteIIFirstMov =  \relative f''' {
 	| R1*5
 	| g,1\p ~ g ~ g 	
 	| R1*4
-	| c'2\f es fis,4 
-	  a4-. a-. a-. g b,2. c4 d2.
+	| c'2\f es fis,4 a4-. a-. a-. g b,2. c4 d2.
 	| c2. f4
 	| e2 d 
 	| c4 e(\p d c) 	
@@ -83,26 +61,22 @@ fluteIIFirstMov =  \relative f''' {
 % 71
     | c16[(\f g'8.) g8-. g-.] g-. g-. g-. g-.
     | \grace {
-\override Flag.stroke-style = #"grace"
    a32 
-  \revert Flag.stroke-style }
+   }
  g16[( fis8.) fis8-. fis-.] fis-. fis-. fis-. fis-.
     | g16[( bes8.) bes8 bes] bes bes bes bes
     | bes16[( a8.) a8 a] a a a a
     | \grace {
-\override Flag.stroke-style = #"grace"
    bes32 
-  \revert Flag.stroke-style }
+   }
  a16[( gis8.) gis8 gis] 
       \grace {
-\override Flag.stroke-style = #"grace"
    bes32 
-  \revert Flag.stroke-style }
+   }
  a16[( g8.) g8 g]
     | \grace {
-\override Flag.stroke-style = #"grace"
    a32 
-  \revert Flag.stroke-style }
+   }
  g16[( f8.) f8 f] bes4 d
     | d,2 cis2
     | d1 
@@ -115,31 +89,16 @@ fluteIIFirstMov =  \relative f''' {
     | e! e e r
     | R1*4
     | f'16[(\f c8.) c8-. c-.] c-. c-. c-. c-.
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   d32 
-  \revert Flag.stroke-style }
+    | \grace { d32 }
  c16[( bes8.) bes8-. bes-.] bes-. bes-. bes-. bes-.
 
 % 90
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
+    | \grace { c32 }
  bes16[( a8.) a8-. a-.] a-. a-. a-. a-.
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
+    | \grace { bes32 }
  a16[( g8.) g8-. g-.] 
-      \grace {
-\override Flag.stroke-style = #"grace"
-   a32 
-  \revert Flag.stroke-style }
- g16[( f8.) \grace {
-\override Flag.stroke-style = #"grace"
-   g32 
-  \revert Flag.stroke-style }
+      \grace { a32 }
+ g16[( f8.) \grace { g32 }
  f16( e8.)]
     | f1 ~ f ~ f ~ f ~ f     
     | e4 r r2
@@ -164,6 +123,6 @@ fluteIIFirstMov =  \relative f''' {
 % 130
     | c' a c a c a f c
     | f4 a4 f a f2 r2
-
+    \barNumberCheck #131
     \bar "|."
 }

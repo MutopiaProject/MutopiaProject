@@ -18,7 +18,7 @@ BASSO_FILES = $(COMMON_FILES) basso-i.ly basso-ii.ly basso-iii.ly basso-iv.ly
 
 .PHONY: all help score violin1 violin2 viola basso flute1 flute2 horn1 horn2 horn3 horn4
 
-all: score violin1 violin2 viola basso flute1 flute2 flutes horn1 horn2 horn3 horn4
+all: score violin1 violin2 viola basso flute1 flute2 horn1 horn2 horn3 horn4
 
 help:
 	@echo "Usage: make [TARGET]"
@@ -28,13 +28,7 @@ help:
 	@echo "  flute1 flute2 violin1 violin2 viola basso"
 
 %.pdf : %.ly
-	lilypond -o $@ $<
-
-############################################################
-
-flutes: k130-flutes.pdf
-
-k130-flutes.pdf: k130-flutes.ly $(FLUTES_FILES)
+	lilypond -o $(patsubst %.pdf,%,$@) $< 
 
 ############################################################
 
@@ -107,3 +101,7 @@ k130-basso.pdf: k130-basso.ly $(BASSO_FILES)
 score: k130-score.pdf
 
 k130-score.pdf: k130-score.ly $(FLUTES_FILES) $(HORN1_FILES) $(HORN2_FILES) $(HORN3_FILES) $(HORN4_FILES) $(VIOLIN1_FILES) $(VIOLIN2_FILES) $(VIOLA_FILES) $(BASSO_FILES)
+
+
+clean:
+	rm -f *.midi *.pdf

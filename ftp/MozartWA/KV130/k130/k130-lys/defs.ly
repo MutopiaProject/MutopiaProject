@@ -17,8 +17,8 @@
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
     lastupdated = "2014/Jan/04"
 
-    tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by \maintainer } \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
     footer = "Mutopia-2003/08/17-346"
+    tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 }
 
 % Some useful macros
@@ -146,7 +146,7 @@ markingsIII =  {
 
     s2
     \once \override TextScript.extra-offset = #'(-8 . 4)
-    s4^ \markup{{\large upright} "Trio."}
+    s4^ \markup{\large "Trio."}
 }
 
 markingsIIIbis =  {
@@ -154,7 +154,7 @@ markingsIIIbis =  {
     \skip 2.*37
 
     \once \override TextScript.extra-offset = #'(-5 . -2.5)
-    s2_ \markup{{\large upright} "Men.D.C."}
+    s2_ \markup{\large "Men.D.C."}
 }
 
 rbcOne = \set stemRightBeamCount = #1

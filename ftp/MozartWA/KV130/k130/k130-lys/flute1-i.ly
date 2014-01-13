@@ -8,44 +8,23 @@ fluteIFirstMov =  \relative f''' {
     \repeat volta 2 {
 	R1*5
 	| f16[(\f c8.) c8-. c-.] c-. c-. c-. c-.
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   d32 
-  \revert Flag.stroke-style }
+	| \grace { d32 }
  c16[( bes8.) bes8-. bes-.] bes-. bes-. bes-. bes-.
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
+	| \grace { c32 }
  bes16[( a8.) a8-. a-.] a-. a-. a-. a-.
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
+	| \grace { bes32 }
  a16[( g8.) g8-. g-.] 
-	  \grace {
-\override Flag.stroke-style = #"grace"
-   a32 
-  \revert Flag.stroke-style }
- g16[( f8.) \grace {
-\override Flag.stroke-style = #"grace"
-   g32 
-  \revert Flag.stroke-style }
+	  \grace { a32 }
+ g16[( f8.) \grace { g32 }
  f16( e8.)]
 
 % 10
 	| f4 r r2
 	| f2 es d4 r r2
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   c'8 
-  \revert Flag.stroke-style }
+	| \grace { c'8 }
  bes4 a8 bes g4 c bes2( a4) r4
 	| f2\p es d4 r r2
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   c'8 
-  \revert Flag.stroke-style }
+	| \grace { c'8 }
  bes4 a8 bes g4 c
 	| a4 r r2
 	| a4\f r r2
@@ -87,27 +66,15 @@ fluteIFirstMov =  \relative f''' {
 
 % 71
     | c,16[(\f g'8.) g8-. g-.] g-. g-. g-. g-.
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   a32 
-  \revert Flag.stroke-style }
+    | \grace { a32 }
  g16[( fis8.) fis8-. fis-.] fis-. fis-. fis-. fis-.
     | g16[( bes8.) bes8 bes] bes bes bes bes
     | bes16[( a8.) a8 a] a a a a
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
+    | \grace { bes32 }
  a16[( gis8.) gis8 gis] 
-      \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
+      \grace { bes32 }
  a16[( g8.) g8 g]
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   a32 
-  \revert Flag.stroke-style }
+    | \grace { a32 }
  g16[( f8.) f8 f] bes4 d
     | f,2 << { e2 } 
 	    \context Voice = "x" 	    { \blankNotes \setTrillWave e4 \beginTrillWave e8 \endTrillWave 
@@ -119,31 +86,16 @@ fluteIFirstMov =  \relative f''' {
     | c4 c c r
     | R1*4
     | f16[(\f c8.) c8-. c-.] c-. c-. c-. c-.
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   d32 
-  \revert Flag.stroke-style }
+    | \grace { d32 }
  c16[( bes8.) bes8-. bes-.] bes-. bes-. bes-. bes-.
 
 % 90
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   c32 
-  \revert Flag.stroke-style }
+    | \grace { c32 }
  bes16[( a8.) a8-. a-.] a-. a-. a-. a-.
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   bes32 
-  \revert Flag.stroke-style }
+    | \grace { bes32 }
  a16[( g8.) g8-. g-.] 
-      \grace {
-\override Flag.stroke-style = #"grace"
-   a32 
-  \revert Flag.stroke-style }
- g16[( f8.) \grace {
-\override Flag.stroke-style = #"grace"
-   g32 
-  \revert Flag.stroke-style }
+      \grace { a32 }
+ g16[( f8.) \grace { g32 }
  f16( e8.)]
     | f2 a c2. a4 d c bes c d c bes c d1
     | c4 r r2

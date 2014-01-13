@@ -28,7 +28,6 @@
 		      \set Staff.instrumentName = \markup { \center-column { "2 Flauti" } }
 		      \time 4/4
 		      \partcombine \fluteIFirstMov \fluteIIFirstMov
-
 	    >>
 
 	    \context Staff = hornsC {
@@ -104,7 +103,8 @@
 }
 
 
-\include "flutes-ii.ly"
+\include "flute1-ii.ly"
+\include "flute2-ii.ly"
 \include "horn1-ii.ly"
 \include "horn2-ii.ly"
 \include "horn3-ii.ly"
@@ -126,7 +126,7 @@
 
 		\time 3/8
 		
-		\flutesSecondMov
+		\partcombine \fluteISecondMov \fluteIISecondMov
 
 	    >>
 
@@ -136,7 +136,7 @@
 		\set Staff.instrumentName = \markup { \center-column { "Corni" "in F" } }
 
 		\time 3/8
-
+    \partcombine \hornISecondMov \hornIISecondMov
 		%\context Voice = "one" \XXpartcombine Voice
 		%\context Voice = "one" { \hornISecondMov }
 		%\context Voice = "two" { \hornIISecondMov }
@@ -148,6 +148,7 @@
 		\set Staff.instrumentName = \markup { \center-column { "Corni" "in B" } }
 
 		\time 3/8
+    \partcombine \hornIIISecondMov \hornIVSecondMov
 
 		%\context Voice = "one" \XXpartcombine Voice
 		%\context Voice = "one" { \hornIIISecondMov }
@@ -212,7 +213,8 @@
 }
 
 
-\include "flutes-iii.ly"
+\include "flute1-iii.ly"
+\include "flute2-iii.ly"
 \include "horn1-iii.ly"
 \include "horn2-iii.ly"
 \include "horn3-iii.ly"
@@ -234,8 +236,8 @@
 
 		\time 3/4
 		\partial 4
+		\partcombine \fluteIThirdMov \fluteIIThirdMov
 		
-		\flutesThirdMov
 
 		\context Voice = "markings" { \markingsIII }
 	    >>
@@ -246,10 +248,7 @@
 
 		\time 3/4
 		\partial 4
-
-		%\context Voice = "one" \XXpartcombine Voice
-		%\context Voice = "one" { \hornIThirdMov }
-		%\context Voice = "two" { \hornIIThirdMov }
+      \partcombine \hornIThirdMov \hornIIThirdMov
 	    }
 
 	    \context Staff = hornsF {
@@ -259,10 +258,8 @@
 
 		\time 3/4
 		\partial 4
+    \partcombine \hornIIIThirdMov \hornIVThirdMov
 
-		%\context Voice = "one" \XXpartcombine Voice
-		%\context Voice = "one" { \hornIIIThirdMov }
-		%\context Voice = "two" { \hornIVThirdMov }
 	    }
 	>>
 
@@ -300,8 +297,7 @@
 
 	    \context Staff = "basso" <<
                 \set Staff.midiInstrument = #"cello"
-		\set Staff.instrumentName = \markup { \center-column { "Violoncello"
-				     "e Basso." } }
+		\set Staff.instrumentName = \markup { \center-column { "Violoncello" "e Basso." } }
 
 
 		\time 3/4
@@ -327,7 +323,8 @@
     \layout { }
 }
 
-\include "flutes-iv.ly"
+\include "flute1-iv.ly"
+\include "flute2-iv.ly"
 \include "horn1-iv.ly"
 \include "horn2-iv.ly"
 \include "horn3-iv.ly"
@@ -349,7 +346,7 @@
 
 		\time 4/4
 		
-		\flutesFourthMov
+		\partcombine \fluteIFourthMov \fluteIIFourthMov
 
 	    >>
 
@@ -358,6 +355,7 @@
 		\set Staff.instrumentName = \markup { \center-column { "Corni in" "C alto" } }
 
 		\time 4/4
+		\partcombine \hornIFourthMov \hornIIFourthMov
 
 		%\context Voice = "one" \XXpartcombine Voice
 		%\context Voice = "one" { \hornIFourthMov }
@@ -371,6 +369,7 @@
 
 		\time 4/4
 
+		\partcombine \hornIIIFourthMov \hornIVFourthMov
 		%\context Voice = "one" \XXpartcombine Voice
 		%\context Voice = "one" { \hornIIIFourthMov }
 		%\context Voice = "two" { \hornIVFourthMov }
@@ -408,8 +407,7 @@
 
 	    \context Staff = "basso" <<
                 \set Staff.midiInstrument = #"cello"
-		\set Staff.instrumentName = \markup { \center-column { "Violoncello"
-				     "e Basso." } }
+		\set Staff.instrumentName = \markup { \center-column { "Violoncello" "e Basso." } }
 
 
 		\time 4/4
