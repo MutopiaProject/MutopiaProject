@@ -7,8 +7,6 @@ FLUTE1_FILES = $(COMMON_FILES) flute1-i.ly flute1-ii.ly flute1-iii.ly	\
 flute1-iv.ly
 FLUTE2_FILES = $(COMMON_FILES) flute2-i.ly flute2-ii.ly flute2-iii.ly	\
 flute2-iv.ly
-FLUTES_FILES = $(COMMON_FILES) flutes-i.ly flutes-ii.ly flutes-iii.ly	\
-flutes-iv.ly
 VIOLIN1_FILES = $(COMMON_FILES) violin1-i.ly violin1-ii.ly	\
 violin1-iii.ly violin1-iv.ly
 VIOLIN2_FILES = $(COMMON_FILES) violin2-i.ly violin2-ii.ly	\

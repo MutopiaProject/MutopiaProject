@@ -53,7 +53,7 @@ fluteIIFirstMov =  \relative f''' {
 % 60
 	| c8( g) g-. g-. g4 r
 	| R1
-	| c, e e r
+	| c,4 e e r
     }
 
     R1*8
@@ -111,7 +111,8 @@ fluteIIFirstMov =  \relative f''' {
 % 110
     | f2\f as f1 e f ~ f2 e f4 a4( g f)     
     | R1*6
-    | fis\f g2. bes4     
+    | fis1\f 
+    | g2. bes4     
     | f!2 e     
     | f8( c) c-. c-. c4 r
     | R1
