@@ -79,29 +79,56 @@ public class MutopiaMaps
                      "see: \\hspace #-0.5 \\with-url #\"http://creativecommons.org/licenses/by-sa/3.0\" http://creativecommons.org/licenses/by-sa/3.0 } } } }");
       
       licenceMapNew.put("Public Domain",
-                     "tagline = \\markup { \\override #'(box-padding . 1.0) \\override #'(baseline-skip . 2.7) \\box \\center-column { \\abs-fontsize #10 \\line { " +
-                     "Sheet music from \\with-url #\"http://www.MutopiaProject.org\" \\line { \\concat { \\abs-fontsize #8 www. \\abs-fontsize #11 MutopiaProject " +
-                     "\\abs-fontsize #8 .org } \\hspace #0.5 } \u2022 \\hspace #0.5 \\italic Free to download, with the \\italic freedom to distribute, modify and perform. " +
-                     "} \\line { \\abs-fontsize #10 \\line { Typeset using \\with-url #\"http://www.LilyPond.org\" \\line { \\concat { \\abs-fontsize #8 www. " +
-                     "\\abs-fontsize #11 LilyPond \\abs-fontsize #8 .org }} by \\concat { \\maintainer . } \\hspace #0.5 Reference: \\footer } } \\line { \\abs-fontsize #8 " +
-                     "\\line { This sheet music has been placed in the public domain by the typesetter, for details " +
-      		     "\\concat { see: \\hspace #0.3 \\with-url #\"http://creativecommons.org/licenses/publicdomain\" http://creativecommons.org/licenses/publicdomain } } } } }");
+                     "tagline =  \\markup { \\override #'(baseline-skip . 2.0) \\center-column { \\abs-fontsize #9 \\sans \\bold \\with-url #\"http:" +
+                     "//www.MutopiaProject.org\" { \\concat{ \"Mutopia\" \\hspace #0.3 } \\concat{ \" Project\" \\hspace #0.3 } } } \\override " +
+		     "#'(baseline-skip . 0) \\column { \\with-color #grey \\filled-box #'( 0 . 0.6 ) #'(-2.5 . 1.4) #0.2 } \\override #'(baseline-skip . 2.1)" +
+   		     " \\column { \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.5 \"Typeset using \" \\with-url #\"http://www.lilypond.org\" \"LilyPond\" \" " +
+   		     "by \" \\maintainer \" - \" \\footer } \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.5 \"Placed in the \" \\with-url " + 
+   		     "#\"http://creativecommons.org/licenses/publicdomain\" \"public domain\" \" by the typesetter - free to distribute, modify, and perform\"} } }");
       licenceMapNew.put("Creative Commons Attribution 3.0",
-                     "tagline = \\markup { \\override #'(box-padding . 1.0) \\override #'(baseline-skip . 2.7) \\box \\center-column { \\abs-fontsize #10 \\line { " +
-                     "Sheet music from \\with-url #\"http://www.MutopiaProject.org\" \\line { \\concat { \\abs-fontsize #8 www. \\abs-fontsize #11 MutopiaProject " +
-                     "\\abs-fontsize #8 .org } \\hspace #0.5 } \u2022 \\hspace #0.5 \\italic Free to download, with the \\italic freedom to distribute, modify and perform. " +
-                     "} \\line { \\abs-fontsize #10 \\line { Typeset using \\with-url #\"http://www.LilyPond.org\" \\line { \\concat { \\abs-fontsize #8 www. \\abs-fontsize " +
-                     "#11 LilyPond \\abs-fontsize #8 .org }} by \\concat { \\maintainer . } \\hspace #0.5 Copyright \u00A9 " + now.get(Calendar.YEAR) + ". \\hspace " +
-                     "#0.5 Reference: \\footer } } \\line { \\abs-fontsize #8 \\line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details " +
-      		     "\\concat { see: \\hspace #0.3 \\with-url #\"http://creativecommons.org/licenses/by/3.0\" http://creativecommons.org/licenses/by/3.0 } } } } }");      
+      	      	     "tagline =  \\markup { \\override #'(baseline-skip . 2.0) \\center-column { \\abs-fontsize #9 \\sans \\bold \\with-url #\"http:" +
+		     "//www.MutopiaProject.org\" { \\concat{ \"Mutopia\" \\hspace #0.3 } \\concat{ \" Project\" \\hspace #0.3 } } } \\override " +
+		     "#'(baseline-skip . 0) \\column { \\with-color #grey \\filled-box #'( 0 . 0.6 ) #'(-2.5 . 1.4) #0.2 } \\override #'(baseline-skip . 2.1)" +
+   		     " \\column { \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \"Typeset using \" \\with-url #\"http://www.lilypond.org\" \"LilyPond\" \" " +
+		     "\u00A9" + now.get(Calendar.YEAR) + " by \" \\maintainer \" - \" \\footer } \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \\with-url #\"http:" +
+   		     "//creativecommons.org/licenses/by/3.0\" \"Creative Commons Attribution 3.0 license\" \" - free to distribute, modify, and perform \"} } }");
       licenceMapNew.put("Creative Commons Attribution-ShareAlike 3.0",
-                     "tagline = \\markup { \\override #'(box-padding . 1.0) \\override #'(baseline-skip . 2.7) \\box \\center-column { \\abs-fontsize #10 \\line { Sheet " +
-                     "music from \\with-url #\"http://www.MutopiaProject.org\" \\line { \\concat { \\abs-fontsize #8 www. \\abs-fontsize #11 MutopiaProject \\abs-fontsize #8 " +
-                     ".org } \\hspace #0.5 } \u2022 \\hspace #0.5 \\italic Free to download, with the \\italic freedom to distribute, modify and perform. } \\line { " +
-                     "\\abs-fontsize #10 \\line { Typeset using \\with-url #\"http://www.LilyPond.org\" \\line { \\concat { \\abs-fontsize #8 www. \\abs-fontsize #11 LilyPond " +
-                     "\\abs-fontsize #8 .org }} by \\concat { \\maintainer . } \\hspace #0.5 Copyright \u00A9 " + now.get(Calendar.YEAR) + ". \\hspace #0.5 Reference: " +
-                     "\\footer } } \\line { \\abs-fontsize #8 \\line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details " +
-                     "\\concat { see: \\hspace #0.3 \\with-url #\"http://creativecommons.org/licenses/by-sa/3.0\" http://creativecommons.org/licenses/by-sa/3.0 } } } } }");
+      	      	     "tagline =  \\markup { \\override #'(baseline-skip . 2.0) \\center-column { \\abs-fontsize #9 \\sans \\bold \\with-url #\"http://www." +
+		     "MutopiaProject.org\" { \\concat{ \"Mutopia\" \\hspace #0.3 } \\concat{ \" Project\" \\hspace #0.3 } } } \\override #'(baseline-skip . 0) \\column" +
+		     " { \\with-color #grey \\filled-box #'( 0 . 0.6 ) #'(-2.5 . 1.4) #0.2 } \\override #'(baseline-skip . 2.1) \\column " +
+   		     "{ \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \"Typeset using \" \\with-url #\"http://www.lilypond.org\" \"LilyPond\" \" \u00A9" +
+   		      now.get(Calendar.YEAR) + " by \" \\maintainer \" - \" \\footer } \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \\with-url #\"http:" +
+   		     "//creativecommons.org/licenses/by-sa/3.0\" \"Creative Commons Attribution-ShareAlike 3.0 license\" \" - free to distribute, modify, " +
+   		     "and perform\"} } }");
+      licenceMapNew.put("Creative Commons Attribution 4.0",
+      	      	     "tagline =  \\markup { \\override #'(baseline-skip . 2.0) \\center-column { \\abs-fontsize #9 \\sans \\bold \\with-url #\"http://www." +
+		     "MutopiaProject.org\" { \\concat{ \"Mutopia\" \\hspace #0.3 } \\concat{ \" Project\" \\hspace #0.3 } } } \\override #'(baseline-skip . 0) \\column" +
+		     " { \\with-color #grey \\filled-box #'( 0 . 0.6 ) #'(-2.5 . 1.4) #0.2 } \\override #'(baseline-skip . 2.1) \\column { \\abs-fontsize #8 \\sans" +
+   		     " \\concat{ \\hspace #0.3 \"Typeset using \" \\with-url #\"http://www.lilypond.org\" \"LilyPond\" \" \u00A9" + now.get(Calendar.YEAR) + " by " +
+		     "\" \\maintainer \" - \" \\footer } \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \\with-url #\"http://creativecommons.org/licenses/by/4.0/\"" +
+   		     " \"Creative Commons Attribution 4.0 license\" \" - free to distribute, modify, and perform \"} } }");
+      licenceMapNew.put("Creative Commons Attribution-ShareAlike 4.0",
+      	      	     "tagline =  \\markup { \\override #'(baseline-skip . 2.0) \\center-column { \\abs-fontsize #9 \\sans \\bold \\with-url #\"http://www." +
+		     "MutopiaProject.org\" { \\concat{ \"Mutopia\" \\hspace #0.3 } \\concat{ \" Project\" \\hspace #0.3 } } } \\override #'(baseline-skip . 0) \\column" +
+		     " { \\with-color #grey \\filled-box #'( 0 . 0.6 ) #'(-2.5 . 1.4) #0.2 } \\override #'(baseline-skip . 2.1) \\column " +
+   		     "{ \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \"Typeset using \" \\with-url #\"http://www.lilypond.org\" \"LilyPond\" \" \u00A9" +
+   		      now.get(Calendar.YEAR) + " by \" \\maintainer \" - \" \\footer } \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \\with-url #\"http:" +
+   		     "//creativecommons.org/licenses/by-sa/4.0/\" \"Creative Commons Attribution-ShareAlike 4.0 license\" \" - free to distribute, modify, " +
+   		     "and perform\"} } }");
+      licenceMapNew.put("Creative Commons Public Domain Dedication 1.0",
+      	             "tagline =  \\markup { \\override #'(baseline-skip . 2.0) \\center-column { \\abs-fontsize #9 \\sans \\bold \\with-url #\"http://www." +
+		     "MutopiaProject.org\" { \\concat{ \"Mutopia\" \\hspace #0.3 } \\concat{ \" Project\" \\hspace #0.3 } } } \\override #'(baseline-skip . 0)" +
+		     " \\column { \\with-color #grey \\filled-box #'( 0 . 0.6 ) #'(-2.5 . 1.4) #0.2	} \\override #'(baseline-skip . 2.1) \\column {" +
+		     " \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.3 \"Dedicated to the public domain by \" \\maintainer \" - \" \\footer } \\abs-fontsize #8" +
+		     " \\sans \\concat { \\hspace #0.3 \"Typeset using \" \\with-url #\"http://www.lilypond.org\" \"LilyPond - \" \\with-url " +
+		     "#\"http://creativecommons.org/publicdomain/zero/1.0/\" \"Creative Commons CC0 1.0\" \" license - free to distribute, modify, and perform\" } } }");
+      licenceMapNew.put("Creative Commons Public Domain Mark 1.0",
+                     "tagline =  \\markup { \\override #'(baseline-skip . 2.0) \\center-column { \\abs-fontsize #9 \\sans \\bold \\with-url #\"http:" +
+                     "//www.MutopiaProject.org\" { \\concat{ \"Mutopia\" \\hspace #0.3 } \\concat{ \" Project\" \\hspace #0.3 } } } \\override " +
+		     "#'(baseline-skip . 0) \\column { \\with-color #grey \\filled-box #'( 0 . 0.6 ) #'(-2.5 . 1.4) #0.2 } \\override #'(baseline-skip . 2.1)" +
+   		     " \\column { \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.5 \"Typeset using \" \\with-url #\"http://www.lilypond.org\" \"LilyPond\" \" " +
+   		     "by \" \\maintainer \" - \" \\footer } \\abs-fontsize #8 \\sans \\concat{ \\hspace #0.5 \"Placed in the \" \\with-url " + 
+   		     "#\"http://creativecommons.org/publicdomain/mark/1.0/\" \"public domain\" \" by the typesetter - free to distribute, modify, and perform\"} } }");
    }
 
    private static void readDatFileIntoMap(String datFile, Map<String, String> map)
