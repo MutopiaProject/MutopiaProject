@@ -44,6 +44,9 @@
       \concat {"This work is licensed under a " \with-url #"http://creativecommons.org/licenses/by-sa/4.0" \thecopyright " license."}
     }
   }
+
+ mutopiacopyright = "Creative Commons Attribution-ShareAlike 4.0"
+ footer = "Mutopia-2014/01/14-1900"
 }
 
 #(set-global-staff-size 18.1)
