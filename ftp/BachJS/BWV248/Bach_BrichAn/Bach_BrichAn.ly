@@ -1,6 +1,8 @@
 \version "2.18.0"
 \language "deutsch"
 
+% Requires Libertine Open Fonts from http://www.linuxlibertine.org/
+
 \header {
   title = "Brich an, o schönes Morgenlicht"
   subtitle = "12. Choral – Weihnachtsoratorium"
