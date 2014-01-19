@@ -1,12 +1,11 @@
-\version "1.5.63"
+\version "2.18.0"
 
-\paper { 
+\layout { 
 
-\translator  {
-		\OrchestralScoreContext
+\context  {
+		\Score
 
-		TimeSignature \override #'style = #'C
-		BarNumber \override #'padding = #3
-		RestCollision \override #'maximum-rest-count = #1
+	 \override TimeSignature.style = #'C
+	 \override BarNumber.padding = #3
 	}
 }

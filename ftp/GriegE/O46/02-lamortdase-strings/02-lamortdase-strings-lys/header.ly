@@ -1,4 +1,4 @@
-\version "1.5.63"
+\version "2.18.0"
 
 \header {
  mutopiatitle = "Aase's Death from Peer Gynt Suite I"
@@ -17,10 +17,14 @@
  title = "Aase's Death"
  subtitle = "La Mort D'Ase or Ase's Tod"
  composer = "Edvard Grieg (1843-1907)"
- opus = "Op. 46 No.2"
+ opus = "Op. 46 No. 2"
  meter = "Andante doloroso"
 
 % footer = "Public Domain"
- tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed in the public domain by Deborah Lowrey (\\texttt{http://www.karmaresources.com}).\\\\Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}"
   footer = "Mutopia-2002/07/04-247"
+}
+
+\layout {
+  indent = 20.0 \mm
+  short-indent = 10.0 \mm
 }

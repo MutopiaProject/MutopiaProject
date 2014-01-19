@@ -1,7 +1,8 @@
 
-\version "1.5.63"
+\version "2.18.0"
 
 \include "header.ly"
+
 \include "violiniI.ly"
 \include "violiniII.ly"
 \include "viole.ly"
@@ -9,60 +10,59 @@
 \include "contrabassi.ly"
 
 \score {
-    < 
-\context StaffGroup = strings <
-   \context Staff = violiniI <
-	\property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = #'(lines "Violini I    " "(con sordini)" )
-	\property Staff.instr = #"Vl.I "
-	\context Voice=one \partcombine Voice
-	\context Thread=one \violinioneI
-	\context Thread=two \violinioneII
->
+  <<
+    \context StaffGroup = strings <<
+      \new Staff = violiniI \with {
+        midiInstrument = #"violin"
+        instrumentName = \markup {
+          \center-column { "Violini I" \line {"(con sordini)"} }
+        }
+        shortInstrumentName = #"Vl.I"
+      }
+      \partcombine \violinioneI \violinioneII
 
-   \context Staff = violiniII <
-	\property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = #'(lines "Violini II   " "(con sordini)" )
-	\property Staff.instr = #"Vl.II"
-	\context Voice=one \partcombine Voice
-	\context Thread=one \violinitwoI
-	\context Thread=two \violinitwoII
->
+      \new Staff = violiniII \with {
+        midiInstrument = #"violin"
+        instrumentName = \markup {
+          \center-column {"Violini II" \line { "(con sordini)" } }
+        }
+        shortInstrumentName = #"Vl.II"
+      }
+      \partcombine \violinitwoI \violinitwoII
 
-   \context Staff = viole <
-	\property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = #'(lines "Viole        " "(con sordini)" )
-	\property Staff.instr = #"Vla. "
-	\clef "alto"
- 	\context Voice=one \partcombine Voice
-	\context Thread=one \violeI
-	\context Thread=two \violeII
->
+      \new Staff = viole \with {
+        midiInstrument = #"viola"
+        instrumentName = \markup {
+          \center-column { "Viole" \line { "(con sordini)" } }
+        }
+        shortInstrumentName = #"Vla."
+      }
+      \partcombine \violeI \violeII
 
-   \context Staff = violoncelli <
-	\property Staff.midiInstrument = #"cello"
-	\property Staff.instrument = #'(lines "Violoncelli  " "(con sordini)" )
-	\property Staff.instr = #" Vc. "
-	\clef "bass"
-	\context Voice=one \partcombine Voice
-	\context Thread=one \violoncelliI
-	\context Thread=two \violoncelliII
-	\context Thread=three \violoncelliIII
->
+      \context Staff = violoncelli \with {
+        midiInstrument = #"cello"
+        instrumentName = \markup {
+          \center-column { "Violoncelli" \line{ "(con sordini)" } }
+        }
+        shortInstrumentName = #"Vc."
+      } <<
+        \clef "bass"
+        \partcombine \violoncelliI \violoncelliII \violoncelliIII
+      >>
 
-   \context Staff = contrabassi <
-	\property Staff.midiInstrument = #"contrabass"
-	\property Staff.instrument = #"Contrabassi  "
-	\property Staff.instr = #" Cb. "
-	\property Staff.transposing = #-12
-	\clef "bass"
-	\notes <
-	\context Voice=contrabassi 
-	\contrabassi
-		>
-	>
->
->
+      \context Staff = contrabassi \with {
+        midiInstrument = #"contrabass"
+        instrumentName = #"Contrabassi"
+        shortInstrumentName = #"Cb."
+        %\property Staff.transposing = #-12
+        } <<
+          \transposition c 
+          \clef "bass"
+          \new Voice=contrabassi \contrabassi
+        >>
+    >>
+>>
+
 \include "paper.ly"
 \include "midi.ly"
 }
