@@ -41,7 +41,7 @@ contrabassi =   \relative c {
 	r 
 	r
 	g'2\pp^\upbow (  d)
-	g (  d)_ \markup{\bold {\italic "più"}}
+	g (  d)_ \markup{\italic "più"}
 	g\pp\cr (  d)\!
 	cis\decr (  fis4.)\! r8
 

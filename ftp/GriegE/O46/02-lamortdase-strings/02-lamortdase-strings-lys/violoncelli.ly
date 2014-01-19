@@ -44,7 +44,7 @@ violoncelliI = \relative c {
 	c (  g)
 	c\pp\cr (  g)\!
 	fis\decr (  b4.)\! r8
-	g2_ \markup{\bold {\italic "più"}}^\upbow (  d)\p
+	g2_ \markup{\italic "più"}^\upbow (  d)\p
 	g (  d)
 	g\pp\cr (  d)\!
 	cis\decr (  fis4.)\! r8
@@ -104,7 +104,7 @@ violoncelliII = \relative c {
 	c (  g)
 	c\pp\cr (  g)\!
 	fis\decr (  b4.)\! r8
-	g2_ \markup{\bold {\italic "più"}}^\upbow (  d)\p
+	g2_ \markup{\italic "più"}^\upbow (  d)\p
 	g (  d)
 	g\pp\cr (  d)\!
 	cis\decr (  fis4.)\! r8
