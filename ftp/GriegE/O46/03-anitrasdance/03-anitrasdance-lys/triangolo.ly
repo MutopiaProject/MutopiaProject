@@ -75,7 +75,7 @@ triangolo =  \relative c'' {
   \alternative {
     {R2.}
     {R2.*2
-     c2.:16\fermata  c4 r r
+     c2.:16\fermata c4 r r
     }
   }
 }

@@ -39,9 +39,9 @@ violeI =  \relative c'' {
     fis\> r f\!
     e r dis
     % 2
-    e,8 dis\< e fis g a\!
+    e,8 dis e\< fis g a\!
     b\> e b a\! g fis
-    e\< fis g a b4^\accent\f\!
+    e\< fis g a b4^\accent\f
   }
 
   \alternative {
@@ -86,11 +86,11 @@ violeI =  \relative c'' {
     r r r8 c8\upbow^"arco"
     % 4
     \acciaccatura { f16 g } f8 e f g a bes
-    c8( f  c2)
+    c8( f c2)
     R2.
     r4 r r8 e,\wcrM
     \acciaccatura { a16 b } a8 gis a b c d
-    e8( a  e2)
+    e8( a e2)
     R2.
     r4 r r8 b,\upbow\ff
 
@@ -122,7 +122,10 @@ violeI =  \relative c'' {
     e\> a e d c\! b
     a\< b c d\! e4\f^\accent }
   \alternative {
-    {a4^\accent r r } {a4^\accent r r R2. e2.\pp\fermata ~ e4 r r }
+    {a4^\accent r r }
+    {a4^\accent r r R2.
+     % should say "arco" here.
+     e2.\pp\fermata ~ e4 r r }
   }
 }
 
@@ -152,12 +155,12 @@ violeII =  \relative c' {
     r fis fis
     b r f'
     e\< r dis\!
-    d\> r \! cis
+    d\> r cis\!
     c r b
     % 2
     e,8 dis e\< fis g a\!
     b\> e b a\! g fis
-    e\< fis g a\! b4^\accent\f
+    e\< fis g a b4^\accent\f
   }
 
   \alternative {
@@ -174,7 +177,7 @@ violeII =  \relative c' {
     r4 r8 d b a
     gis r r4 r8 b
     gis f e r r4
-    r c' g'
+    r cis' g'
     r cis,\< g'\!
     r cis, g'
     r cis,\> g'\!
@@ -238,7 +241,10 @@ violeII =  \relative c' {
     e\> a e d\! c b
     a\< b c d\! e4^\accent\f }
   \alternative {
-    {a4^\accent r r } {a4^\accent r r R2. a,2.\pp\fermata ~ a4 r r }
+    {a4^\accent r r }
+    {a4^\accent r r R2.
+     % should say "arco" here.
+     a,2.\pp\fermata ~ a4 r r }
   }
 }
 

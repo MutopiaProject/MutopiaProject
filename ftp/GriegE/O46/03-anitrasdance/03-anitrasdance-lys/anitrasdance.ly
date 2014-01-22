@@ -43,8 +43,7 @@
 
     indent = 3 \cm
     short-indent = 1.5 \cm
-
-    \context  {
+    \context {
       \Score
       soloText = "I."
       soloIIText = "II."

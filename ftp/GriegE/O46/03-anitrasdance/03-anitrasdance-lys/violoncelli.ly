@@ -106,7 +106,7 @@ violoncelliI =  \relative c {
     a8 gis\< a b c d\!
     e\> ( a e4  d)\!
     % 5
-    c8( e  c2)
+    c8( e c2)
     f2^\accent(  e4)
     dis2.\crM
     a'2^\accent\diM(  g4)
