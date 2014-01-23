@@ -50,7 +50,6 @@ virtuoso that taught in Geneva.
 
 %}
 
-%\include "mozart-hrn3-defs.ly"  (not used after update to v2.16.1 -JRA)
 \include "mozart-hrn3-allegro.ly"
 \include "mozart-hrn3-romanze.ly"
 \include "mozart-hrn3-rondo.ly"
