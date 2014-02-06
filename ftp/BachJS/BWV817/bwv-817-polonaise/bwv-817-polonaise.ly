@@ -1,6 +1,6 @@
 %--------------------------- HEADERS
 
-\version "2.16.1"
+\version "2.18.0"
 \include "articulate.ly"
 
 \paper {
@@ -15,7 +15,7 @@
 	
   mutopiatitle = "Polonaise"
   mutopiacomposer = "BachJS"
-  mutopiainstrument = "Harpsichord, Clavichord"
+  mutopiainstrument = "Harpsichord, Clavichord, Piano"
   source = "C.F. Peters, n.d."
   editor = "Carl Czerny, F.C. Griepenkeri, F.A. Roitzsch, S. Didenko"
   websource = "IMSLP #62909"
@@ -25,8 +25,8 @@
   mutopiaopus = "BWV 817"
   mutopiastyle = "Baroque"
 
- footer = "Mutopia-2014/01/23-0"
- tagline =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ footer = "Mutopia-2014/02/06-1935"
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2014. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 4.0 International License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/4.0" http://creativecommons.org/licenses/by/4.0 } } } }
 }
 
 
@@ -39,25 +39,25 @@
 	switchThreeFive = \markup{ \left-align \override #'( baseline-skip . 0 ) \column { \raise #-0.2 \char ##x2040 \finger \concat { "3" \hspace #0.2 "5" } } }
 	switchFourFive = \markup{ \left-align \override #'( baseline-skip . 0 ) \column { \raise #-0.2 \char ##x2040 \finger \concat { "4" \hspace #0.2 "5" } } }
 	switchInvTwoOne = \markup{ \left-align \override #'( baseline-skip . 1.5 ) \column { \finger \concat { "2" \hspace #0.2 "1 "} \raise #-1 \rotate #-180 \char ##x2040 } }
-	addPadding = \once \override Script #'padding = #0.7
+	addPadding = \once \override Script.padding = #0.7
 	
 	pDolce = \markup { \dynamic "p" \italic " dolce" }
 	paddedPiano = \markup { \column { " " \dynamic "p" } }
 	crescen = \markup { \column{ " " \italic "cresc." } }
 	crescendo = \markup { \italic "cresc." }
 	ctrCresc = \markup { \center-align \column{ " " \italic "cresc." } }
-	hideP = \tweak #'stencil ##f\p
-	hideF = \tweak #'stencil ##f\f
-	forceFingeringToStem = \override Fingering #'add-stem-support = ##t
-	pushFingerUp = \once \override Fingering #'extra-offset = #'(0.0 . 1.4 )
-	angleBeamOne = \once \override Beam #'positions = #'( -4.0 . -3.3 )
-	angleBeamTwo = \once \override Beam #'positions = #'( -0.9 . -0.9 )
-	angleBeamThree = \once \override Beam #'positions = #'( -1.8 . -1.8 )
-	angleBeamFour = \once \override Beam #'positions = #'( -1.8 . -2.2 )
-	angleBeamFive = \once \override Beam #'positions = #'( 2.4 . 2.8 )
-	angleBeamSix = \once \override Beam #'positions = #'( 3.2 . 3.6 )
-	shapeSlurOne = \once \override Slur #'control-points = #'( ( 1.594 . 2.59) ( 6.5753 . 5.479) ( 16.338 . 4.383) ( 20.323 . 1.693) )
-	shapeSlurTwo = \once \override Slur #'control-points = #'( ( 1.594 . 3.785) ( 4.9813 . 5.28) ( 9.7634 . 5.778) ( 13.549 . 3.287) )
+	hideP = \tweak stencil ##f\p
+	hideF = \tweak stencil ##f\f
+	forceFingeringToStem = \override Fingering.add-stem-support = ##t
+	pushFingerUp = \once \override Fingering.extra-offset = #'(0.0 . 1.4 )
+	angleBeamOne = \once \override Beam.positions = #'( -4.0 . -3.3 )
+	angleBeamTwo = \once \override Beam.positions = #'( -0.9 . -0.9 )
+	angleBeamThree = \once \override Beam.positions = #'( -1.8 . -1.8 )
+	angleBeamFour = \once \override Beam.positions = #'( -1.8 . -2.2 )
+	angleBeamFive = \once \override Beam.positions = #'( 2.4 . 2.8 )
+	angleBeamSix = \once \override Beam.positions = #'( 3.2 . 3.6 )
+	shapeSlurOne = \once \override Slur.control-points = #'( ( 1.594 . 2.59) ( 6.5753 . 5.479) ( 16.338 . 4.383) ( 20.323 . 1.693) )
+	shapeSlurTwo = \once \override Slur.control-points = #'( ( 1.594 . 3.785) ( 4.9813 . 5.28) ( 9.7634 . 5.778) ( 13.549 . 3.287) )
 	nb = \noBreak
 	firstTrebleVolta = {
 		gis16-3(_\pDolce-\hideP a b8 a4 gis)^\switchThreeFour	\nb	| % 1
