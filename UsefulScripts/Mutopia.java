@@ -204,6 +204,8 @@ public class Mutopia
                         else
                         {
                            out.write(" " + MutopiaMaps.licenceMapNew.get(licence));
+                           out.newLine();
+                           out.write(" tagline = ##f");
                         }
                         out.newLine();
                      }
