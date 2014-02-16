@@ -242,9 +242,14 @@ public class Mutopia
                   
                   writeThisLine = false;
                }
-               else if (nextLine.matches("\\s*tagline\\s*=.*")) // Tagline field
+               else if (nextLine.matches("\\s*tagline\\s*=.*")) // Tagline (footer) field
                {
                   System.out.println("Warning: discarding tagline field: " + nextLine);
+                  writeThisLine = false;
+               }
+               else if (nextLine.matches("\\s*copyright\\s*=\\s*\\\\markup.*")) // Copyright (footer) field
+               {
+                  System.out.println("Warning: discarding copyright field: " + nextLine);
                   writeThisLine = false;
                }
             }
