@@ -124,6 +124,5 @@ fluteIIFirstMov =  \relative f''' {
 % 130
     | c' a c a c a f c
     | f4 a4 f a f2 r2
-    \barNumberCheck #131
     \bar "|."
 }

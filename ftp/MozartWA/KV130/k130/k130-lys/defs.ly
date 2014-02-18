@@ -75,12 +75,6 @@ lowerBeam = \once \override Beam.shorten = #1
 
 LowerBeam = \once \override Beam.shorten = #1.7
 
-tupletNum = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
- = ##t
-
-noTupletNum = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
- = ##f 
-
 tupletBracket = \override TupletBracket.bracket-visibility = ##t
 
 noTupletBracket = \override TupletBracket.bracket-visibility = ##f

@@ -35,16 +35,10 @@ fluteIFourthMov =  \relative f'' {
 	| R1*8
 
 % 51
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   c16 
-  \revert Flag.stroke-style }
+	| \grace { c16 }
  b4\p a8 g c4 c 
 	| fis,4. d8 g4 g
-	| \grace {
-\override Flag.stroke-style = #"grace"
-   f!16 
-  \revert Flag.stroke-style }
+	| \grace { f!16 }
  e4 d8 c a'4 a
 	| b,4. g8 d'4 d
 	| c8 d e f g a b c
@@ -66,17 +60,9 @@ fluteIFourthMov =  \relative f'' {
 	| c g e g c4 r
     }
 
-    \grace {
-\override Flag.stroke-style = #"grace"
-   a16 
-  \revert Flag.stroke-style }
- g4\p f8 e a4 a
+    \grace { a16 } g4\p f8 e a4 a
     | fis4. d8 g4 g
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   f!16 
-  \revert Flag.stroke-style }
- e4 d8 c f4 f
+    | \grace { f!16 } e4 d8 c f4 f
     | e( d c) r
     | c'2.\f r4 c2. r4
 
@@ -85,17 +71,9 @@ fluteIFourthMov =  \relative f'' {
     | g2.\f r4 
     | f2( f'4) r
     | d2( cis4) r4
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   bes16 
-  \revert Flag.stroke-style }
- a4\p g8 f bes4 bes
+    | \grace { bes16 } a4\p g8 f bes4 bes
     | gis4. e8 a4 a
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   g!16 
-  \revert Flag.stroke-style }
- fis4 e8 d bes'4 bes
+    | \grace { g!16 } fis4 e8 d bes'4 bes
     | d,( cis) d-. r
     | d'1\f c bes a g f2 a
 
@@ -148,17 +126,9 @@ fluteIFourthMov =  \relative f'' {
     | R1*8
 
 % 164
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   f16 
-  \revert Flag.stroke-style }
- e4\p d8 c f4 f
+    | \grace { f16 } e4\p d8 c f4 f
     | b,4. g8 c4 c'
-    | \grace {
-\override Flag.stroke-style = #"grace"
-   bes!16 
-  \revert Flag.stroke-style }
- a4 g8 f d'4 d
+    | \grace { bes!16 } a4 g8 f d'4 d
     | e,4. c8 g'4 g
     | f8 c f a c c c c
     | bes a g f e4 r8 bes'

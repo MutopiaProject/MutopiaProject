@@ -23,7 +23,7 @@ violaThirdMov =  \relative c' {
 	| f( e f d e f)
 	| d4 g( c,)
 	| d8 bes c( b c b)
-	| << { c( b c b } \context Voice = "x" { c2_ \markup{\schluss } }>>
+	| << { c( b c b } \context Voice = "x" { c2 }>>
     }
 
     \key c \major

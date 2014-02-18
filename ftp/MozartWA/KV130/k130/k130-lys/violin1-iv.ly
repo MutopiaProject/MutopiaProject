@@ -56,8 +56,8 @@ violinIFourthMov =  \relative a' {
  } >>
 
 % 40
-	| \tuplet 3/2 { c'8 g g g g g \noTupletNum a f f f f f }
-	| \tuplet 3/2 { e c c c c c g' b, b b b b } \tupletNum
+	| \tuplet 3/2 { c'8 g g g g g a f f f f f }
+	| \tuplet 3/2 { e c c c c c g' b, b b b b } 
 	| c4 e\p dis8( e) f( e)
 	| e4 e e \grace {
 \override Flag.stroke-style = #"grace"
@@ -241,7 +241,7 @@ violinIFourthMov =  \relative a' {
    f16[ g] 
   \revert Flag.stroke-style }
  } >>
-    | \tuplet 3/2 { f8 c c c c c \noTupletNum d bes bes bes bes bes}
+    | \tuplet 3/2 { f8 c c c c c d bes bes bes bes bes}
     | \tuplet 3/2 { a f f f f f c' e, e e e e }
     | f4 a\p gis8( a) bes( a)
     | a4 a a \grace {
