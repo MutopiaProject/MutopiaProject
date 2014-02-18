@@ -1,16 +1,12 @@
-\version "2.0.0"
-IIIMand = \notes \relative c''' {
+\version "2.17.97"
+
+IIIMand =  \relative c''' {
   \clef "treble"
   \key e\major
   \time 3/4
 
-  \property Staff.tupletSpannerDuration = #(ly:make-moment 1 4)
+  \set Staff.tupletSpannerDuration = #(ly:make-moment 1/4)
 
-  % end beams on quarters by default, but beam eights as much as possible
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(ly:make-moment 1 4)
-  \property  Staff.autoBeamSettings \override
-    #'(end 1 8 * *) = #(ly:make-moment 3 4)
 
   \repeat "volta" 2 {
   \partial 8 b8 |
@@ -25,10 +21,10 @@ IIIMand = \notes \relative c''' {
   b, fis' b, a' gis fis |
   \grace dis8 e4 e, r |
   %9
-  \times 2/3 {e'8 cis a a a a a b cis |
+  \tuplet 3/2 {e'8 cis a a a a a b cis |
   b gis e e e e} e4 |
   %11
-  \times 2/3 {fis'8 gis a gis fis e dis e fis} |
+  \tuplet 3/2 {fis'8 gis a gis fis e dis e fis} |
   \grace fis8 e4 e,2 |
   e'4 r8 e \grace a8 gis8 fis16 e |
   %14 Note: The grace note is unclearly written, looks like a bis, but it is musically obvious that it is a ais.
@@ -36,7 +32,7 @@ IIIMand = \notes \relative c''' {
   e4 ~ e16 gis fis gis \grace a16 gis8 fis16 e |
   \grace e16 dis8 cis16 b b4 r |
   %17
-  \times 2/3 {b8 dis fis fis fis fis fis fis fis} |
+  \tuplet 3/2 {b8 dis fis fis fis fis fis fis fis} |
   \grace a16 gis8 fis <<fis2 \\ b,>> |
   b'8 fis r fis r dis |
   %20
@@ -67,12 +63,12 @@ IIIMand = \notes \relative c''' {
   b8 fis r   fis[ e dis] |
   dis cis <<cis2 \\ fis,>> |
   %39
-  \times 2/3 {gis'8 cis, cis cis cis cis b' a gis |
+  \tuplet 3/2 {gis'8 cis, cis cis cis cis b' a gis |
   a cis, cis cis cis cis cis cis cis |
   gis' cis, cis cis cis cis b' a gis |
   a cis, cis cis cis cis} cis4 |
   %43
-  \times 2/3 {fis8 b, b b b b a' gis fis |
+  \tuplet 3/2 {fis8 b, b b b b a' gis fis |
   gis e e e e e e e e |
   fis b, b b b b a' gis fis |
   gis e e e e e} e4^. |
@@ -87,7 +83,7 @@ IIIMand = \notes \relative c''' {
   e'8 dis e b a gis |
   \grace a8 gis8 fis <fis b,>2 |
   %53
-  \times 2/3 {b8 gis e e e e a b cis |
+  \tuplet 3/2 {b8 gis e e e e a b cis |
   b gis e e e e a b cis |
   b gis e e e e a b cis} |
   \grace dis16 cis8 b b2 |

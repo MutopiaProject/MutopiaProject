@@ -1,14 +1,10 @@
-\version "2.0.0"
-IIMand = \notes \relative c'' {
+\version "2.17.97"
+IIMand =  \relative c'' {
   \clef "treble"
   \key a\major
   \time 3/4
 
-  \property Staff.tupletSpannerDuration = #(ly:make-moment 1 4)
-
-  % end beams on quarters by default
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(ly:make-moment 1 4)
+  \set Staff.tupletSpannerDuration = #(ly:make-moment 1/4)
 
   \repeat "volta" 2 {
   \partial 8 a |
