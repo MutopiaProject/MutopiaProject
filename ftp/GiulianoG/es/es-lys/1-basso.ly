@@ -1,11 +1,8 @@
-\version "2.0.0"
-IBasso = \notes \relative c' {
+\version "2.17.97"
+IBasso =  \relative c' {
   \clef "bass"
   \key es\major
   \time 4/4
-
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(ly:make-moment 1 2)
 
   \repeat "volta" 2 {
   \partial 8 r8 |
