@@ -1,9 +1,9 @@
-\version "2.0.1"
+\version "2.18.0"
 
 % 5th Movement - RONDO
 
 % ********************************************************************************OBOE********************************************************************************
-oboeRondo = \notes \relative c'' {
+oboeRondo =  \relative c'' {
    \key bes \major
    \time 2/4
    \repeat volta 2 {
@@ -30,12 +30,12 @@ oboeRondo = \notes \relative c'' {
    f (  es4)  e8\!-.
    f[ \> ( g f  es!) ]
    d (  c\!) r f\p-.
-   \cresc e16 ( f g  a) bes8-. e,-.
+   e16\cresc ( f g  a) bes8-. e,-.
    f4 r8 f-.
    e16 ( f g  a) bes8-. e,-.
    f4 r8 f-.
    e16 ( f g  a) bes8-. e,-.
-   \endcresc f4.\f \> (  e8)
+   \! f4.\f \> (  e8)
    f4. (  e8)
    f (  e\!) f8\p ( d
    c  bes) g' ( es
@@ -204,8 +204,8 @@ oboeRondo = \notes \relative c'' {
 }
 
 % ********************************************************************************CLARINET********************************************************************************
-clarinetRondo = \notes \relative c'' {
-   \property Score.skipBars = ##t
+clarinetRondo =  \relative c'' {
+   \set Score.skipBars = ##t
    \key c \major
    \time 2/4
    \repeat volta 2 {
@@ -232,12 +232,12 @@ clarinetRondo = \notes \relative c'' {
    << c { s4.  s8\! } >>
    c4. \> (  d8)
    c (  b\!) \paddinggDynamics b,16\p ( d b  d)
-   \cresc c ( d c d c d c  d)
+   c( \cresc d c d c d c  d)
    b ( d b d b d b  d)
    c ( d c d c d c  d)
    b ( d b d b d b  d)
    c ( d c d c d c  d)
-   \endcresc b4\f r \normalDynamics
+   \! b4\f r \normalDynamics
    R2*2
 
    g'4\p r
@@ -260,7 +260,7 @@ clarinetRondo = \notes \relative c'' {
 
    % ******************************MINORE
    \repeat volta 2 {
-   r4 \noBreak \paddingDynamics 
+   r4 \noBreak \paddingDynamics
    g8\p-. g-. r4 \normalDynamics
    g8-. g-. r4
    << g2- \> { s4.  s8\! } >>
@@ -348,7 +348,7 @@ clarinetRondo = \notes \relative c'' {
    % ******************************INTERLUDE
    r4
    g'8[\p ( a g  a) ] \normalDynamics
-   f4 r \property Voice.DynamicLineSpanner \override #'padding = #1.5
+   f4 r \override DynamicLineSpanner.padding = #1.5
    f8[\mf ( g f  g) ] \normalDynamics
    e4 r
    e'\f r
@@ -406,8 +406,8 @@ clarinetRondo = \notes \relative c'' {
 }
 
 % ********************************************************************************BASSOON********************************************************************************
-bassoonRondo = \notes \relative c {
-   \property Score.skipBars = ##t
+bassoonRondo =  \relative c {
+   \set Score.skipBars = ##t
    \key bes \major
    \clef bass
    \time 2/4
@@ -435,12 +435,12 @@ bassoonRondo = \notes \relative c {
    g) << c, { s8  s8\! } >>
    d4 \> (  es)
    f8  f\! f\p f \paddingDynamics
-   \cresc f f f f
+   f \cresc f f f
    f f f f
    f f f f
    f f f f
    f f f f
-   \endcresc f4\f r \normalDynamics
+   \! f4\f r \normalDynamics
    R2*2
 
    d4\p r

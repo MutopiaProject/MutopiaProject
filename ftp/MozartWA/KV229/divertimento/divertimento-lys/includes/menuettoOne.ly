@@ -1,9 +1,9 @@
-\version "2.0.1"
+\version "2.18.0"
 
 % 2nd Movement - MENUETTO
 
 % ********************************************************************************OBOE********************************************************************************
-oboeMenuettoOne = \notes \relative c' {
+oboeMenuettoOne =  \relative c' {
    \key bes \major
    \time 3/4
    \partial 4
@@ -37,7 +37,7 @@ oboeMenuettoOne = \notes \relative c' {
    bes) r b (
    \cresc  c) r cis (
    d) r d (
-   es) r \endcresc e\mf
+   es) r \! e\mf
    f \< ( d  bes\!)
    f2 d'4\mf
    f \< ( es  c\!)
@@ -47,8 +47,12 @@ oboeMenuettoOne = \notes \relative c' {
    bes8 (  a) a (  g) a4
    }
    \alternative {
-      { bes r }
-      { \partial 2. bes4 r r }
+      { \set Timing.measureLength = #(ly:make-moment 2/4)
+        bes r
+      }
+      { \set Timing.measureLength = #(ly:make-moment 3/4)
+        bes4 r r
+      }
    }
    \break
 
@@ -83,7 +87,7 @@ oboeMenuettoOne = \notes \relative c' {
    f es d c bes  a\!)
    bes4 r c8 (  d)
    bes4 r c8 (  d)
-   << bes2.~ \> { s2 s8  s8\! } >> 
+   << bes2.~ \> { s2 s8  s8\! } >>
    bes2.
    bes\p \< (
    <<  c) { s2  s4\! } >>
@@ -107,7 +111,7 @@ oboeMenuettoOne = \notes \relative c' {
 }
 
 % ********************************************************************************CLARINET********************************************************************************
-clarinetMenuettoOne = \notes \relative c' {
+clarinetMenuettoOne =  \relative c' {
    \key c \major
    \time 3/4
    \partial 4
@@ -129,7 +133,7 @@ clarinetMenuettoOne = \notes \relative c' {
    d'2\f ( c4
    b a  g)
    fis ( g a
-   b c  d) 
+   b c  d)
    \paddinggDynamics fis,\p ( g a \normalDynamics
    b c  d)
    e2 c8 (  a)
@@ -141,7 +145,7 @@ clarinetMenuettoOne = \notes \relative c' {
    a) r ais (
    \cresc  b) r b (
    c) r cis (
-   d) r \endcresc dis\mf (
+   d) r \! dis\mf (
    e) r g,
    g' \< ( e )  c\!
    g2 d'4\mf
@@ -151,8 +155,12 @@ clarinetMenuettoOne = \notes \relative c' {
    f f f
    }
    \alternative {
-      { e r }
-      { \partial 2. e4 r r }
+      { \set Timing.measureLength = #(ly:make-moment 2/4)
+        e4 r
+      }
+      { \set Timing.measureLength = #(ly:make-moment 3/4)
+        e4 r r
+      }
    }
    \break
 
@@ -169,7 +177,7 @@ clarinetMenuettoOne = \notes \relative c' {
    g  f) r
    r r \cresc f'8 ( g \noBreak
    a g f e d  c)
-   \endcresc b4\f ( c  d)
+   \! b4\f ( c  d)
    c2. ~
    c4 b8 ( a g  f) \paddinggDynamics
    e \> ( g e g f  g\!)
@@ -211,7 +219,7 @@ clarinetMenuettoOne = \notes \relative c' {
 }
 
 % ********************************************************************************BASSOON********************************************************************************
-bassoonMenuettoOne = \notes \relative c {
+bassoonMenuettoOne =  \relative c {
    \key bes \major
    \clef bass
    \time 3/4
@@ -246,7 +254,7 @@ bassoonMenuettoOne = \notes \relative c {
    r f,\p r
    r \cresc f r \noBreak
    r f r
-   r f r \endcresc
+   r f r \!
    bes8\mf (  f') d-. f-. bes,-. f'-.
    bes,8 (  f') d-. f-. bes,-. f'-.
    f,8 (  f') c-. f-. a,-. f'-.
@@ -256,8 +264,12 @@ bassoonMenuettoOne = \notes \relative c {
    f,8 (  f') es!-. f-. f,-. f'-.
    }
    \alternative {
-      { bes,4 bes, }
-      { \partial 2. bes'4 f bes, }
+      { \set Timing.measureLength = #(ly:make-moment 2/4)
+        bes,4 bes,
+      }
+      { \set Timing.measureLength = #(ly:make-moment 3/4)
+        bes'4 f bes,
+      }
    }
    \break
 
@@ -269,14 +281,14 @@ bassoonMenuettoOne = \notes \relative c {
    es-. \> ( es-.  es\!)-. \normalSlur
    es es' r
    r r e, (
-   f) f, r \property Voice.Slur \override #'direction = #1
+   f) f, r \override Slur.direction = #1
    r r d' (
-   es) es, \property Voice.Slur \revert #'direction \cresc es'8 ( f \noBreak
+   es) es,\cresc \revert Slur.direction es'8 ( f \noBreak
    g f es d c  bes)
    a4 ( bes  c)
-   \endcresc f,\f ( g  a) \normalDynamics
+   \! f,\f ( g  a) \normalDynamics
    bes r d
-   es r es \property Voice.DynamicLineSpanner \override #'padding = #2.3
+   es r es \override DynamicLineSpanner.padding = #2.3
    f \> f << f { s8  s8\! } >>
    bes,4 bes' r
    }

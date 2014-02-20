@@ -1,9 +1,9 @@
-\version "2.0.1"
+\version "2.18.0"
 
 % 1st Movement - ALLEGRO
 
 % ********************************************************************************OBOE********************************************************************************
-oboeAllegro = \notes \relative c'' {
+oboeAllegro =  \relative c'' {
    \key bes \major
    \time 4/4
    \repeat volta 2 {
@@ -31,10 +31,10 @@ oboeAllegro = \notes \relative c'' {
    es8-. r es-. r d-. r d-. r
    c-. r c-. r bes-. r bes'4\f ~
    bes a2 g4 ~
-   g \dim f2 es4 ~ \noBreak
+   g f2 \dim es4 ~ \noBreak
    es d c8-. g'4 f8-.
    es8 ( d c  bes) a (  f') f-. f-.
-   d ( f bes,  d) \enddim \paddingSlur f-.\p ( f-. f-.  f)-. \normalSlur
+   d ( f bes,  d) \! \paddingSlur f-.\p ( f-. f-.  f)-. \normalSlur
    d ( f bes,  d) f,4 r
 
    % ******************************3rd PART
@@ -53,7 +53,7 @@ oboeAllegro = \notes \relative c'' {
 }
 
 % ********************************************************************************CLARINET********************************************************************************
-clarinetAllegro = \notes \relative c' {
+clarinetAllegro =  \relative c' {
    \key c \major
    \time 4/4
    \repeat volta 2 {
@@ -81,10 +81,10 @@ clarinetAllegro = \notes \relative c' {
    e8-. r d-. r d-. r c-. r
    c-. r b-. r c-. r e4\f
    d2 c
-   b \dim a \noBreak
+   b a \dim \noBreak
    g a8-. f'4 e8-.
    d ( c b  a) g (  g') g-. g-.
-   e ( g c,  e) \enddim \paddingSlur g-.\p ( g-. g-.  g)-. \normalSlur
+   e ( g c,  e) \! \paddingSlur g-.\p ( g-. g-.  g)-. \normalSlur
    e ( g c,  e) g,4 r
 
    % ******************************3rd PART
@@ -103,7 +103,7 @@ clarinetAllegro = \notes \relative c' {
 }
 
 % ********************************************************************************BASSOON********************************************************************************
-bassoonAllegro = \notes \relative c {
+bassoonAllegro =  \relative c {
    \key bes \major
    \time 4/4
    \clef bass
@@ -133,9 +133,9 @@ bassoonAllegro = \notes \relative c {
    es-. r f-. r bes,-. r r g''-.\f
    es (  c) f,-. f'-. d (  bes) r es-.
    c (  a) d,-. d'-. bes (  g) r c-.
-   \dim a (  f) bes,-. bes'-. es, es es es
+   a\dim (  f) bes,-. bes'-. es, es es es
    es es e e f f'-. f-. f-.
-   d ( f bes,  d) \enddim \paddingSlur f-.\p ( f-. f-.  f)-. \normalSlur
+   d ( f bes,  d) \! \paddingSlur f-.\p ( f-. f-.  f)-. \normalSlur
    d ( f bes,  d) f,4 r
    % ******************************3rd PART
    bes,8\f bes' bes bes bes bes bes bes
