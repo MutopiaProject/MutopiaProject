@@ -1,13 +1,12 @@
-\include "paper16.ly"
+\version "2.18.0"
 
-\version "2.0.1"
+#(set-global-staff-size 16)
 
 \header {
-  dedication = "\`a Madame Margu\\'erite Baugnies"
-  title = "Apr\`es un R\^eve"
-  poet = "Po\\'esie de Romain Bussine."
-  composer = "Gabriel Faur\\'e."
-  piece = "\\hspace*{30mm}\\normalfont\\large Andantino."
+  dedication = "à Madame Marguérite Baugnies"
+  title = "Après un Rêve"
+  poet = "Poésie de Romain Bussine."
+  composer = "Gabriel Fauré"
   mutopiatitle = "Après un Rêve"
   mutopiacomposer = "FaureG"
   mutopiapoet = "R. Bussine (1830-1899)"
@@ -16,85 +15,87 @@
   date = "1877"
   source = "Choudens, 1880"
   style = "Romantic"
-  copyright = "Public Domain"
-  maintainer = "Tak-Shing Chan"
+  tagline = ##f % "Public Domain"
+  maintainer = "Tak-Shing Chan" % Updated by Francisco Vila <paconet.org@gmail.com>
   maintainerEmail = "chan12@alumni.usc.edu"
   lastupdated = "2003/Nov/10"
-
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2003/11/10-368"
+  copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Public domain " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
 }
 
-chant = \notes \relative c'' {
+chant =  \relative c'' {
   \key c \minor
   \time 3/4
-  \property Staff.instrument = #"Chant.   "
-  \property Staff.autoBeaming = ##f
-  \property Staff.Hairpin \override #'minimum-length = #8
-  \property Voice.DynamicLineSpanner \override #'direction = #1
-  \property Voice.DynamicLineSpanner \override #'padding = #1.2
-  \property Voice.TupletBracket \override #'bracket-visibility = ##f
-  \property Voice.TupletBracket \override #'direction = #1
-  \property Voice.tupletSpannerDuration = #(ly:make-moment 1 4)
+  \set Staff.autoBeaming = ##f
+  \override Staff.Hairpin.minimum-length = #8
+  \dynamicUp
+  \override DynamicLineSpanner.padding = #1.2
+  \override TupletBracket.bracket-visibility = ##f
+  \override TupletBracket.direction = #UP
+  \tupletSpan 4
   R2. |
-  g4^\markup{\italic "dolce."} c\< d\! |
-  ees ~ \times 2/3 { ees8 d c ees d c } |
+  g4^\markup{\italic "dolce"} c\< d\! |
+  ees ~ \tuplet 3/2 { ees8 d c ees d c } |
   c2\> bes4\! |
   des8 f, des'4 c8 b |
   c4.\< c8 bes8. aes16\! |
-  g4\> ~ \times 2/3 {
-    \property Voice.TupletBracket \override #'direction = #-1
+  g4\> ~ \tuplet 3/2 {
+    \override TupletBracket.direction = #DOWN
     g8([ aes bes]
-    \property Voice.TupletBracket \override #'direction = #1
-    aes[ bes c])\! } |
+    \override TupletBracket.direction = #UP
+    aes[ bes c])\!
+  } |
   g2. |
-  g4 \times 2/3 { ees4 f8 g4 aes8 } |
-  bes4 ~ \times 2/3 { bes8 f f f e f } |
+  g4 \tuplet 3/2 { ees4 f8 g4 aes8 } |
+  bes4 ~ \tuplet 3/2 { bes8 f f f e f } |
   aes2 g4 |
   c\< c4. ces8\! |
   bes4 ees, ees |
-  f ~ \times 2/3 {
-    \property Voice.TupletBracket \override #'direction = #-1
+  f ~ \tuplet 3/2 {
+    \override TupletBracket.direction = #DOWN
     f8 ges\> aes
-    \property Voice.TupletBracket \override #'direction = #1
-    ges aes\! bes } |
+    \override TupletBracket.direction = #UP
+    ges aes\! bes
+  } |
   bes2 ees,4 |
   R2. |
   g4\< c d\! |
-  ees ~ \times 2/3 { ees8 d c ees d c } |
+  ees ~ \tuplet 3/2 { ees8 d c ees d c } |
   c2\> bes4\! |
   des8 f, des'4 c8 b |
   c4. c8 bes aes |
-  g4 ~ \times 2/3 {
-    \property Voice.TupletBracket \override #'direction = #-1
+  g4 ~ \tuplet 3/2 {
+    \override TupletBracket.direction = #DOWN
     g8([ aes bes]
-    \property Voice.TupletBracket \override #'direction = #1
-    aes[ bes c]) } |
+    \override TupletBracket.direction = #UP
+    aes[ bes c])
+  } |
   g2. |
-  g4 \times 2/3 { ees4( f8) g4( aes8) } |
-  bes4. f8 \times 2/3 { f e f } |
+  g4 \tuplet 3/2 { ees4( f8) g4( aes8) } |
+  bes4. f8 \tuplet 3/2 { f e f } |
   aes4 g c, |
-  des4^\markup{"" \raise #1.8 \italic "cresc. poco a poco"} ~ \times 2/3 { des8([ ees f]) ees([ f]) g } |
+  des4^\markup{ \italic "cresc. poco a poco"} ~ \tuplet 3/2 { des8([ ees f]) ees([ f]) g } |
   g4 c, e |
-  \times 2/3 {
-    f4 f8 f([ g]) aes
-    \property Voice.TupletBracket \override #'direction = #-1
-    bes([ aes]) bes
-    \property Voice.TupletBracket \override #'direction = #1 } |
+  \tuplet 3/2 { f4 f8 f([ g)] aes }
+  \tuplet 3/2 {  bes([ aes)] bes }
+  %\override TupletBracket.direction = #UP
+  |
   c4 c, c' |
   f2\f f,4 |
-  f \times 2/3 {
+  f \tuplet 3/2 {
     f8 g a
-    \property Voice.TupletBracket \override #'direction = #-1
-    bes([ c]) des } |
-  des4 ~ \times 2/3 { des8\>([ c ees] des[ c bes])\! } |
+    \override TupletBracket.direction = #DOWN
+    bes([ c]) des
+  } |
+  des4 ~ \tuplet 3/2 { des8\>([ c ees] des[ c bes])\! } |
   des2 bes8.\< bes16\! |
   ees2 des4 |
-  des4 ~ \times 2/3 {
+  des4 ~ \tuplet 3/2 {
     des8([ c]) bes
-    \property Voice.TupletBracket \override #'direction = #1
-    aes g f } |
-  g4\> ~ \times 2/3 { g8([ aes g] f[ g aes])\! } |
+    \override TupletBracket.direction = #UP
+    aes g f
+  } |
+  g4\> ~ \tuplet 3/2 { g8([ aes g] f[ g aes])\! } |
   g2 g4 |
   c2^\markup{\italic "cresc."} c4 |
   c2 c8. d16 |
@@ -102,37 +103,37 @@ chant = \notes \relative c'' {
   d2\> d4\! |
   d2\p c4 |
   bes4. g8 ees f |
-  g4\pp ~ \times 2/3 { g8([ f ees] f[ g aes] } |
+  g4\pp ~ \tuplet 3/2 { g8([ f ees] f[ g aes] } |
   g2.) |
   c, |
   R |
   \bar "|."
 }
 
-poesie = \lyrics {
+poesie = \lyricmode {
   Dans un som -- meil que char -- mait ton i -- ma -- ge
-  Je r\^e -- vais le bon -- heur,
+  Je rê -- vais le bon -- heur,
   ar -- dent mi -- ra -- ge,
-  Tes yeux \'e -- taint plus doux,
+  Tes yeux é -- taint plus doux,
   ta voix pure et so -- no -- re,
-  Tu ray -- on -- nais comme un ciel \'e -- clai -- r\'e par l'au -- ro -- re;
+  Tu ray -- on -- nais comme un ciel é -- clai -- ré par l'au -- ro -- re;
   Tu m'ap -- pe -- lais __ et je quit -- tais la ter -- re
-  Pour m'en -- fuir a -- vec toi vers la lu -- mi\`e -- re,
+  Pour m'en -- fuir a -- vec toi vers la lu -- miè -- re,
   Les cieux pour nous __ entr' -- ouv -- raient leurs nu -- es splen -- deurs __ in -- con -- nu -- es,
   lu -- eurs di -- vi -- nes en -- tre -- vu -- es,
-  H\'e -- las!
-  H\'e -- las,
-  tris -- te r\'e -- veil des son -- ges
+  Hé -- las!
+  Hé -- las,
+  tris -- te ré -- veil des son -- ges
   Je t'ap -- pelle,
-  \^o nuit,
+  ô nuit,
   rends moi tes men -- son -- ges,
   Re -- viens,
   re -- viens ra -- di -- eu -- se,
   Re -- viens,
-  \^o nuit mys -- t\'e -- ri -- eu -- se!
+  ô nuit mys -- té -- ri -- eu -- se!
 }
 
-droit = \notes \relative c' {
+droit =  \relative c' {
   \key c \minor
   \time 3/4
   <c ees g>8 <c ees g> <c ees g> <c ees g> <c ees g> <c ees g> |
@@ -186,8 +187,8 @@ droit = \notes \relative c' {
   \bar "|."
 }
 
-dynamics = \notes {
-  \property Staff.Hairpin \override #'minimum-length = #8
+dynamics =  {
+  \override Staff.Hairpin.minimum-length = #8
   s2.\pp
   s s s s s s s s s s s s s s
   s8\< s s\! s\> s s\!
@@ -206,7 +207,7 @@ dynamics = \notes {
   s\pp
 }
 
-gauche = \notes \relative c,, {
+gauche =  \relative c,, {
   \clef "F"
   \key c \minor
   \time 3/4
@@ -263,58 +264,32 @@ gauche = \notes \relative c,, {
 
 \score {
   <<
-    \addlyrics
-    \context Staff \chant
-    \context Lyrics \poesie
-    \context PianoStaff <<
-      \property PianoStaff.instrument = #"Piano.   "
-      \context Staff = droit \droit
-      \context Dynamics = dynamics \dynamics
-      \context Staff = gauche \gauche
+    \new Staff {
+      \set Staff.instrumentName = "Chant"
+      \tempo "Andantino"
+      \chant
+    }
+    \addlyrics \poesie
+    \new PianoStaff <<
+      \set PianoStaff.instrumentName = "Piano"
+      \new Staff \droit
+      \new Dynamics \dynamics
+      \new Staff \gauche
     >>
   >>
-  \paper {
-    % The following are taken from LilyPond's piano-dynamics.ly.
-    \translator {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \consists "Output_property_engraver"
-
-      minimumVerticalExtent = #'(-1 . 1)
-      pedalSustainStrings = #'("Ped." "*Ped." "*")
-      pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-
-      \consists "Piano_pedal_engraver"
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      TextScript \override #'font-relative-size = #1
-      TextScript \override #'font-shape = #'italic
-      DynamicText \override #'extra-offset = #'(0 . 1.2)
-      Hairpin \override #'extra-offset = #'(0 . 1.2)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consistsend "Axis_group_engraver"
-    }
-    \translator {
-      \PianoStaffContext
-      \accepts Dynamics
-      VerticalAlignment \override #'forced-distance = #7
+  \layout {
+    \context {
+      \Staff
+      \override VerticalAxisGroup.staff-staff-spacing = #'((basic-distance . 10))
     }
   }
-  \midi {
-    \translator {
-      \type "Performer_group_performer"
-      \name Dynamics
-      \consists "Piano_pedal_performer"
-      \consists "Span_dynamic_performer"
-      \consists "Dynamic_performer"
-    }
-    \translator {
-      \PianoStaffContext
-      \accepts Dynamics
-    }
-  }
+  \midi { }
+}
+
+\paper {
+  markup-system-spacing #'basic-distance = #16
+  top-system-spacing #'basic-distance = #16
+  top-markup-spacing #'basic-distance = #8
+  ragged-last-bottom = ##f
+  last-bottom-spacing #'basic-distance = #16
 }
