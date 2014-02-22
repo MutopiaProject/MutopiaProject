@@ -83,7 +83,7 @@ fagottiA =  \relative c' {
   d f g bes a g a a, |
   d4 r4 r2 \bar "|."
 }
-  
+
 fagottiB =  \relative c' {
   \key d \minor
   \time 4/4

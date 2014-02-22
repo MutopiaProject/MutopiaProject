@@ -67,10 +67,10 @@ timpani =  \relative c {
   d4 r r2 |
 }
 
-timpaniStaff = 
+timpaniStaff =
   \context Staff = "timpani" <<
-    \set Staff.instrumentName = \markup { \column { "Timpani" "in D.A" } }
-    \set Staff.shortInstrumentName = \markup { \column { "Tim." "D.A" } }
+    \set Staff.instrumentName = \markup { \center-column { "Timpani" "in D.A" } }
+    \set Staff.shortInstrumentName = \markup { \center-column { "Tim." "D.A" } }
     \set Staff.midiInstrument = "timpani"
     \clef bass
     \context Voice = "timpani" {

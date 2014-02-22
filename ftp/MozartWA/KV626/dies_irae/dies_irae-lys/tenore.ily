@@ -1,7 +1,7 @@
 \version "2.18.0"
 tenoreLyrics = \lyricmode {
   Di -- es i -- rae, di -- es il -- la,
-  solv -- vet sae -- clum in fa -- vil -- la: 
+  solv -- vet sae -- clum in fa -- vil -- la:
   te -- ste Da -- vid cum Si -- byl -- la.
 
   Quan -- tus, quan -- tus tre -- mor est fu -- tu -- rus,
@@ -9,7 +9,7 @@ tenoreLyrics = \lyricmode {
   cun -- cta stri -- cte, stri -- cte dis -- cus -- su -- rus!
 
   Di -- es i -- rae, di -- es il -- la,
-  solv -- vet sae -- clum in fa -- vil -- la: 
+  solv -- vet sae -- clum in fa -- vil -- la:
   te -- ste Da -- vid cum Si -- byl -- la.
 
   Quan -- tus tre -- mor est fu -- tu -- rus,
@@ -111,8 +111,8 @@ tenoreVoice =  \relative c' {
 tenoreStaff =
   \context Staff = "tenore" <<
     \clef "G_8"
-    \set Staff.instrumentName = #"Tenore "
-    \set Staff.shortInstrumentName = #"T "
+    \set Staff.instrumentName = #"Tenore"
+    \set Staff.shortInstrumentName = #"T"
     \set Staff.midiInstrument = #"choir aahs"
 
       \new Voice = "tenore" { \tenoreVoice }

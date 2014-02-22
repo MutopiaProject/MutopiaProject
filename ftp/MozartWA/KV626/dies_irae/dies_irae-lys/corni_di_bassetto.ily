@@ -114,7 +114,7 @@ corniDiBassettoB =  \relative c'' {
   e4 r r2 |
   R1*2 |
   e2 e |
- 
+
 % BAR 23
   fis1 |
   fis2 fis |
@@ -174,11 +174,11 @@ corniDiBassettoB =  \relative c'' {
 corniDiBassettoStaff =
   \context Staff = corniDiBassetto <<
     \clef treble
-    \set Staff.instrumentName = \markup { \column { "Corni di" "Bassetto in F" } }
-    \set Staff.shortInstrumentName = \markup { \column { "Cor." "F" } }
+    \set Staff.instrumentName = \markup { \center-column { "Corni di" "Bassetto in F" } }
+    \set Staff.shortInstrumentName = \markup { \center-column { "Cor." "F" } }
     \set Staff.midiInstrument = "clarinet"
 
     \context Voice = one_corniDiBassetto {
-      \partcombine \corniDiBassettoA \corniDiBassettoB
+     \partcombine \corniDiBassettoA \corniDiBassettoB
     }
   >>

@@ -88,12 +88,12 @@ organo =  \relative c {
 }
 
 organoStaff =
-\context Staff = "organo" <<
-  \set Staff.instrumentName = "Organo"
-  \set Staff.shortInstrumentName = "Org."
-  \set Staff.midiInstrument = "church organ"
-  \clef bass
-  \context Voice = "organ" {
-    \organo
-  }
->>
+  \context Staff = "organo" <<
+    \set Staff.instrumentName = "Organo"
+    \set Staff.shortInstrumentName = "Org."
+    \set Staff.midiInstrument = "church organ"
+    \clef bass
+    \context Voice = "organ" {
+      \organo
+    }
+  >>

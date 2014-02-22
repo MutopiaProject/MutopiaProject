@@ -15,7 +15,7 @@
   title = "2. Dies Irae"
   opus = "K 626"
   composer = "W. A. Mozart (1756-1791)"
-   
+
   mutopiatitle = "Dies Irae"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 626"
@@ -46,15 +46,17 @@
     \choirStaff
     \organoStaff
   >>
-  \midi { 
-    \tempo 2=90 
+
+  \midi {
+    \tempo 2 = 90
   }
 
 
-  \layout {
-    \context {
-      \Score
-      \override BarNumber.padding = #2
-    }
-  }
+  \layout {  }
+}
+
+\paper{
+  indent = 2\cm
+  short-indent = 1\cm
+
 }

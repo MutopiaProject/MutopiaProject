@@ -1,7 +1,7 @@
 \version "2.18.0"
 bassoLyrics = \lyricmode {
   Di -- es i -- rae, di -- es il -- la,
-  solv -- vet sae -- clum in fa -- vil -- la: 
+  solv -- vet sae -- clum in fa -- vil -- la:
   te -- ste Da -- vid cum Si -- byl -- la.
 
   Quan -- tus tre -- mor est fu -- tu -- rus,
@@ -9,7 +9,7 @@ bassoLyrics = \lyricmode {
   cun -- cta stri -- cte dis -- cus -- su -- rus!
 
   Di -- es i -- rae, di -- es il -- la,
-  solv -- vet sae -- clum in fa -- vil -- la: 
+  solv -- vet sae -- clum in fa -- vil -- la:
   te -- ste Da -- vid cum Si -- byl -- la.
 
   Quan -- tus tre -- mor est fu -- tu -- rus,
@@ -110,12 +110,12 @@ bassoVoice =  \relative c' {
 }
 
 bassoStaff =
-\context Staff = "basso" <<
-  \clef bass
-  \set Staff.instrumentName = #"Basso "
-  \set Staff.shortInstrumentName = #"B "
-  \set Staff.midiInstrument = #"choir aahs"
+  \context Staff = "basso" <<
+    \clef bass
+    \set Staff.instrumentName = #"Basso"
+    \set Staff.shortInstrumentName = #"B"
+    \set Staff.midiInstrument = #"choir aahs"
 
-  \new Voice = "basso" { \bassoVoice }
-  \new Lyrics \lyricsto "basso" { \bassoLyrics }
->>
+      \new Voice = "basso" { \bassoVoice }
+      \new Lyrics \lyricsto "basso" { \bassoLyrics }
+  >>

@@ -66,7 +66,7 @@ trombeA =  \relative c'' {
   R1 |
   c4 r g g8 g |
   g4 r r2 |
-}  
+}
 
 trombeB =  \relative c' {
   \transposition d
@@ -134,13 +134,13 @@ trombeB =  \relative c' {
   R1 |
   c4 r g4 g8 g |
   c4 r r2 |
-}  
+}
 
 trombeStaff =
   \context Staff = "trombe" <<
     \clef treble
     \set Staff.instrumentName = "Trombe in D"
-    \set Staff.shortInstrumentName = \markup { \column { "Tro." "D" } }
+    \set Staff.shortInstrumentName = \markup { \center-column { "Tro." "D" } }
     \set Staff.midiInstrument = "trumpet"
 
     \context Voice = one_trombe {

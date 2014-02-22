@@ -1,7 +1,7 @@
 \version "2.18.0"
 sopranoLyrics = \lyricmode {
   Di -- es i -- rae, di -- es il -- la,
-  solv -- vet sae -- clum in fa -- vil -- la: 
+  solv -- vet sae -- clum in fa -- vil -- la:
   te -- ste Da -- vid cum Si -- byl -- la.
 
   Quan -- tus tre -- mor est fu -- tu -- rus,
@@ -9,7 +9,7 @@ sopranoLyrics = \lyricmode {
   cun -- cta stri -- cte dis -- cus -- su -- rus!
 
   Di -- es i -- rae, di -- es il -- la,
-  solv -- vet sae -- clum in fa -- vil -- la: 
+  solv -- vet sae -- clum in fa -- vil -- la:
   te -- ste Da -- vid cum Si -- byl -- la.
 
   Quan -- tus tre -- mor est fu -- tu -- rus,
@@ -111,8 +111,8 @@ sopranoVoice =  \relative c'' {
 sopranoStaff =
   \context Staff = "soprano" <<
     \clef treble
-    \set Staff.instrumentName = #"Soprano "
-    \set Staff.shortInstrumentName = #"S "
+    \set Staff.instrumentName = #"Soprano"
+    \set Staff.shortInstrumentName = #"S"
     \set Staff.midiInstrument = #"choir aahs"
 
       \new Voice = "soprano" { \sopranoVoice }
