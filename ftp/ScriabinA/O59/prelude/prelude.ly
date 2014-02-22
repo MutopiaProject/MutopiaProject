@@ -1,11 +1,8 @@
-#(set-global-staff-size 16)
-
 \version "2.18.0"
 
 \header {
   title = "Prelude, Op. 59, No. 2 (1910)"
   composer = "A. Scriabin (1872-1915)"
-  piece = "\\hspace*{20mm}\\rmfamily\\bfseries Sauvage, belliqueux"
   mutopiatitle = "Prelude"
   mutopiacomposer = "ScriabinA"
   mutopiaopus = "O 59 N 2"
@@ -14,16 +11,21 @@
   source = "Dover, 1973"
   style = "Romantic"
   copyright = "Public Domain"
-  maintainer = "Tak-Shing Chan"
-  maintainerEmail = "chan12@alumni.usc.edu"
+  moreInfo = "typesetted by Tak-Shing Chan, chan12@alumni.usc.edu"
+  maintainer = "Federico Bruni"
+  maintainerEmail = "fede AT inventati DOT org"
   lastupdated = "2004/Apr/26"
-
-  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/04/26-445"
+}
+
+\paper {
+  system-system-spacing.stretchability = #8
 }
 
 upperOne =  \relative c' {
   \voiceOne
+  \override Score.RehearsalMark.break-align-symbols = #'(time-signature)
+  \mark \markup "Sauvage, belliqueux"
   \time 6/8
   \partial 4. <g c fis>4.--\p |
   <bes ees>8-- <d d'>4-> <g, fis'>4.-- |
@@ -231,10 +233,7 @@ lower =  \relative c, {
     >>
   >>
   \layout {
-    \context {
-      \PianoStaff
-      \override VerticalAlignment.forced-distance = #14
-    }
+    #(layout-set-staff-size 16)
   }
   \midi {
     \tempo 4 . = 84
