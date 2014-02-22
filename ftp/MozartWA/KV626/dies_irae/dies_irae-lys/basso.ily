@@ -1,5 +1,5 @@
-\version "2.0.0"
-bassoLyrics = \lyrics {
+\version "2.18.0"
+bassoLyrics = \lyricmode {
   Di -- es i -- rae, di -- es il -- la,
   solv -- vet sae -- clum in fa -- vil -- la: 
   te -- ste Da -- vid cum Si -- byl -- la.
@@ -27,7 +27,7 @@ bassoLyrics = \lyrics {
   cun -- cta stri -- cte, stri -- cte dis -- cus -- su -- rus!
 }
 
-bassoVoice = \notes \relative c' {
+bassoVoice =  \relative c' {
   \key d \minor
   \time 4/4
 
@@ -110,13 +110,12 @@ bassoVoice = \notes \relative c' {
 }
 
 bassoStaff =
-  \context Staff = basso <<
-    \clef bass
-    \property Staff.instrument = #"Basso "
-    \property Staff.instr      = #"B "
-    \property Staff.midiInstrument = #"choir aahs"
+\context Staff = "basso" <<
+  \clef bass
+  \set Staff.instrumentName = #"Basso "
+  \set Staff.shortInstrumentName = #"B "
+  \set Staff.midiInstrument = #"choir aahs"
 
-    \addlyrics
-      \context Voice = basso { \bassoVoice }
-      \context Lyrics = basso { \bassoLyrics }
-  >>
+  \new Voice = "basso" { \bassoVoice }
+  \new Lyrics \lyricsto "basso" { \bassoLyrics }
+>>

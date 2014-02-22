@@ -1,5 +1,5 @@
-\version "2.0.0"
-tenoreLyrics = \lyrics {
+\version "2.18.0"
+tenoreLyrics = \lyricmode {
   Di -- es i -- rae, di -- es il -- la,
   solv -- vet sae -- clum in fa -- vil -- la: 
   te -- ste Da -- vid cum Si -- byl -- la.
@@ -26,7 +26,7 @@ tenoreLyrics = \lyrics {
   cun -- cta stri -- cte, stri -- cte dis -- cus -- su -- rus!
 }
 
-tenoreVoice = \notes \relative c' {
+tenoreVoice =  \relative c' {
   \key d \minor
   \time 4/4
 
@@ -109,13 +109,12 @@ tenoreVoice = \notes \relative c' {
 }
 
 tenoreStaff =
-  \context Staff = tenore <<
-    \clef treble_8
-    \property Staff.instrument = #"Tenore "
-    \property Staff.instr      = #"T "
-    \property Staff.midiInstrument = #"choir aahs"
+  \context Staff = "tenore" <<
+    \clef "G_8"
+    \set Staff.instrumentName = #"Tenore "
+    \set Staff.shortInstrumentName = #"T "
+    \set Staff.midiInstrument = #"choir aahs"
 
-    \addlyrics
-      \context Voice = tenore { \tenoreVoice }
-      \context Lyrics = tenore { \tenoreLyrics }
+      \new Voice = "tenore" { \tenoreVoice }
+      \new Lyrics \lyricsto "tenore" { \tenoreLyrics }
   >>

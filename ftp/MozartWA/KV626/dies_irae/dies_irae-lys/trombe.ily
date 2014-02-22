@@ -1,7 +1,7 @@
-\version "2.0.0"
+\version "2.18.0"
 % Trombe in D (Trumpet tuned in D)
-trombeA = \notes \relative c'' {
-  \property Staff.transposing = #+2 % C is D
+trombeA =  \relative c'' {
+  \transposition d
   \key c \major
   \time 4/4
   c4\f r c r |
@@ -68,8 +68,8 @@ trombeA = \notes \relative c'' {
   g4 r r2 |
 }  
 
-trombeB = \notes \relative c' {
-  \property Staff.transposing = #+2 % C is D
+trombeB =  \relative c' {
+  \transposition d
   \key c \major
   \time 4/4
   c4\f r c r |
@@ -137,16 +137,13 @@ trombeB = \notes \relative c' {
 }  
 
 trombeStaff =
-  \context Staff = trombe <<
+  \context Staff = "trombe" <<
     \clef treble
-    \property Staff.instrument = "Trombe in D"
-    \property Staff.instr      = \markup { \column < "Tro." "D" > }
-    \property Staff.midiInstrument = "trumpet"
+    \set Staff.instrumentName = "Trombe in D"
+    \set Staff.shortInstrumentName = \markup { \column { "Tro." "D" } }
+    \set Staff.midiInstrument = "trumpet"
 
     \context Voice = one_trombe {
-      \partcombine Voice
-        \context Thread=one \trombeA
-        \context Thread=two \trombeB
+     \partcombine \trombeA \trombeB
     }
   >>
-

@@ -1,5 +1,5 @@
-\version "2.0.0"
-violinoB = \notes \relative c' {
+\version "2.18.0"
+violinoB =  \relative c' {
   \key d \minor
   \time 4/4
 
@@ -86,9 +86,9 @@ violinoB = \notes \relative c' {
 
 violinoBStaff =
   \context Staff = violinoB <<
-    \property Staff.instrument = #'"Violino II"
-    \property Staff.instr      = #'"Vo. II"
-    \property Staff.midiInstrument = "violin"
+    \set Staff.instrumentName = #'"Violino II"
+    \set Staff.shortInstrumentName = #'"Vo. II"
+    \set Staff.midiInstrument = "violin"
     \clef treble
     \context Voice = violinoB {
       \violinoB

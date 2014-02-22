@@ -1,5 +1,5 @@
-\version "2.0.0"
-altoLyrics = \lyrics {
+\version "2.18.0"
+altoLyrics = \lyricmode {
   Di -- es i -- rae, di -- es il -- la,
   solv -- vet sae -- clum in fa -- vil -- la: 
   te -- ste Da -- vid cum Si -- byl -- la.
@@ -26,7 +26,7 @@ altoLyrics = \lyrics {
   cun -- cta stri -- cte, stri -- cte dis -- cus -- su -- rus!
 }
 
-altoVoice = \notes \relative c'' {
+altoVoice =  \relative c'' {
   \key d \minor
   \time 4/4
 
@@ -109,13 +109,12 @@ altoVoice = \notes \relative c'' {
 }
 
 altoStaff =
-  \context Staff = alto <<
+  \context Staff = "alto" <<
     \clef treble
-    \property Staff.instrument = #"Alto "
-    \property Staff.instr      = #"A "
-    \property Staff.midiInstrument = #"choir aahs"
+    \set Staff.instrumentName = #"Alto "
+    \set Staff.shortInstrumentName = #"A "
+    \set Staff.midiInstrument = #"choir aahs"
 
-    \addlyrics
-      \context Voice = alto { \altoVoice }
-      \context Lyrics = alto { \altoLyrics }
+      \new Voice = "alto" { \altoVoice }
+      \new Lyrics \lyricsto "alto" { \altoLyrics }
   >>

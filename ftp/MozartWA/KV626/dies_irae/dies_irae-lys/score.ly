@@ -1,5 +1,6 @@
-\version "2.0.0"
-\include "paper13.ly"
+\version "2.18.0"
+#(set-global-staff-size 13)
+
 \include "corni_di_bassetto.ily"
 \include "fagotti.ily"
 \include "trombe.ily"
@@ -27,14 +28,13 @@
   maintainerEmail = "d95mback@dtek.chalmers.se"
   maintainerWeb = "http://norpan.org/cvs/K626/"
   lastupdated = "2003/Oct/27"
-
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2003/10/27-364"
+
 }
 
 \score {
   <<
-    \context StaffGroup = all <<
+    \context StaffGroup = "all" <<
       \corniDiBassettoStaff
       \fagottiStaff
       \trombeStaff
@@ -49,10 +49,12 @@
   \midi { 
     \tempo 2=90 
   }
-  \paper {
-    \translator {
-      \ScoreContext
-	BarNumber \override #'padding = #2
+
+
+  \layout {
+    \context {
+      \Score
+      \override BarNumber.padding = #2
     }
   }
 }

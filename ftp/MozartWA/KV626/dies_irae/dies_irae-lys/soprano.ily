@@ -1,5 +1,5 @@
-\version "2.0.0"
-sopranoLyrics = \lyrics {
+\version "2.18.0"
+sopranoLyrics = \lyricmode {
   Di -- es i -- rae, di -- es il -- la,
   solv -- vet sae -- clum in fa -- vil -- la: 
   te -- ste Da -- vid cum Si -- byl -- la.
@@ -26,7 +26,7 @@ sopranoLyrics = \lyrics {
   cun -- cta stri -- cte, stri -- cte dis -- cus -- su -- rus!
 }
 
-sopranoVoice = \notes \relative c'' {
+sopranoVoice =  \relative c'' {
   \key d \minor
   \time 4/4
 
@@ -109,13 +109,12 @@ sopranoVoice = \notes \relative c'' {
 }
 
 sopranoStaff =
-  \context Staff = soprano <<
+  \context Staff = "soprano" <<
     \clef treble
-    \property Staff.instrument = #"Soprano "
-    \property Staff.instr      = #"S "
-    \property Staff.midiInstrument = #"choir aahs"
+    \set Staff.instrumentName = #"Soprano "
+    \set Staff.shortInstrumentName = #"S "
+    \set Staff.midiInstrument = #"choir aahs"
 
-    \addlyrics
-      \context Voice = soprano { \sopranoVoice }
-      \context Lyrics = soprano { \sopranoLyrics }
+      \new Voice = "soprano" { \sopranoVoice }
+      \new Lyrics \lyricsto "soprano" { \sopranoLyrics }
   >>
