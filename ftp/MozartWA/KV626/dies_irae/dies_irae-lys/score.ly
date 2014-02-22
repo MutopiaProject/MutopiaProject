@@ -24,11 +24,13 @@
   source = "Breitkopf & Haertel, 1877"
   style = "Classical"
   copyright = "Public Domain"
-  maintainer = "Martin Norbäck"
+  maintainer = "Martin Norbäck" % updated by Francisco Vila <paconet.org@gmail.com>, 2014
   maintainerEmail = "d95mback@dtek.chalmers.se"
   maintainerWeb = "http://norpan.org/cvs/K626/"
-  lastupdated = "2003/Oct/27"
+  lastupdated = "2014/Feb/22"
   footer = "Mutopia-2003/10/27-364"
+  tagline = ##f % "Public Domain"
+  copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Public domain " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
 
 }
 
