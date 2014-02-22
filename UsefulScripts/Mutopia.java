@@ -226,12 +226,19 @@ public class Mutopia
                      // If we have an integer, set the idString field
                      try
                      {
-                        Integer.parseInt(foundIdString); // Throws exception if ID found is not an integer
-                        idString = foundIdString;
-                        System.out.println("Found ID " + idString + " from footer: " + nextLine);
+                        if (Integer.parseInt(foundIdString) > 0)
+                        {
+                           idString = foundIdString;
+                           System.out.println("Found ID " + idString + " from footer: " + nextLine);
+                        }
+                        else
+                        {
+                           System.out.println("Warning: discarding footer field of ID 0: " + nextLine);
+                        }
                      }
                      catch (NumberFormatException ex)
                      {
+                        // Exception thrown if ID found is not an integer
                         System.out.println("Warning: discarding malformed footer field: " + nextLine);
                      }
                   }
