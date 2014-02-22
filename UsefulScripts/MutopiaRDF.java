@@ -70,7 +70,7 @@ public class MutopiaRDF
       writeln(wr, "    " + (piece.getMeter() != null ? "<mp:metre>" + xmlIfy(piece.getMeter()) + "</mp:metre>" : "<mp:metre/>"));
       writeln(wr, "    " + (piece.getArranger() != null ? "<mp:arranger>" + xmlIfy(piece.getArranger()) + "</mp:arranger>" : "<mp:arranger/>"));
       writeln(wr, "    <mp:source>" + xmlIfy(piece.getSource()) + "</mp:source>");
-      writeln(wr, "    <mp:licence>" + piece.getCopyright() + "</mp:licence>");
+      writeln(wr, "    <mp:licence>" + piece.getLicense() + "</mp:licence>");
       wr.newLine();
       writeln(wr, "    <mp:lyFile>" + piece.getFilenameBase() + (piece.getMultipleLyFiles() ? "-lys.zip" : ".ly") + "</mp:lyFile>");
       writeln(wr, "    <mp:midFile>" + piece.getFilenameBase() + (piece.getMultipleMidFiles() ? "-mids.zip" : ".mid") + "</mp:midFile>");
@@ -126,7 +126,7 @@ public class MutopiaRDF
          piece.setMeter(getText(description, "mp:metre"));
          piece.setArranger(getText(description, "mp:arranger"));
          piece.setSource(getText(description, "mp:source"));
-         piece.setCopyright(getText(description, "mp:licence"));
+         piece.setLicense(getText(description, "mp:licence"));
          
          piece.setMultipleLyFiles(getText(description, "mp:lyFile").endsWith("-lys.zip"));
          piece.setMultipleMidFiles(getText(description, "mp:midFile").endsWith("-mids.zip"));

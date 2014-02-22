@@ -122,7 +122,7 @@
 </td>
 </tr>
 <tr>
- <td><i>copyright</i></td>
+ <td><i>license</i></td>
  <td>
   The license you've decided to place the contribution under, one of:
   <ul>
@@ -130,7 +130,7 @@
    <li>"Creative Commons Attribution 4.0"</li>
    <li>"Public Domain"</li>
   </ul>
- See the <a href="legal.html">license details page</a> for more information.</td>
+ See the <a href="legal.html">license details page</a> for more information. We previously used the "copyright" field for this information.</td>
 </tr>
 <tr>
  <td><i>maintainer</i></td>

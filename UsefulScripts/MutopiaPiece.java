@@ -33,7 +33,7 @@ public class MutopiaPiece
    private String meter = null;
    private String arranger = null;
    private String source = null;
-   private String copyright = null;
+   private String license = null;
    private String footer = null;
    private String moreInfo = null;
    private String maintainer = null;
@@ -193,16 +193,16 @@ public class MutopiaPiece
          System.err.println("Missing source");
       }
       
-      // Copyright is mandatory
-      if (getCopyright() == null)
+      // License is mandatory
+      if (getLicense() == null)
       {
          returnValue = false;
-         System.err.println("Missing copyright (licence)");
+         System.err.println("Missing license");
       }
-      else if (!MutopiaMaps.licenceMapNew.keySet().contains(getCopyright()))
+      else if (!MutopiaMaps.licenceMapNew.keySet().contains(getLicense()))
       {
          returnValue = false;
-         System.err.println("Invalid copyright (licence): " + getCopyright());
+         System.err.println("Invalid license: " + getLicense());
       }
       
       // Footer is mandatory
@@ -404,14 +404,14 @@ public class MutopiaPiece
       return source;
    }
    
-   public void setCopyright(String copyright)
+   public void setLicense(String license)
    {
-      this.copyright = copyright;
+      this.license = license;
    }
    
-   public String getCopyright()
+   public String getLicense()
    {
-      return copyright;
+      return license;
    }
    
    public void setFooter(String footer)

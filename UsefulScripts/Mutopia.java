@@ -212,7 +212,15 @@ public class Mutopia
                   }
                }
                else if ((nextLine.matches("\\s*copyright\\s*=\\s*\".*\"\\s*")) || 
-                        (nextLine.matches("\\s*mutopiacopyright\\s*=\\s*\".*\"\\s*"))) // Copyright field
+                        (nextLine.matches("\\s*mutopiacopyright\\s*=\\s*\".*\"\\s*"))) // Old copyright field
+               {
+                  // Copyright header field changed to license (US/International spelling) Feb 2014
+                  licence = nextLine.split("\"")[1];
+                  nextLine = nextLine.replace("copyright", "license");
+                  System.out.println("Warning: Rewriting 'copyright' field as 'license': " + nextLine);
+               }
+               else if ((nextLine.matches("\\s*license\\s*=\\s*\".*\"\\s*")) || 
+                        (nextLine.matches("\\s*mutopialicense\\s*=\\s*\".*\"\\s*"))) // License field
                {
                   licence = nextLine.split("\"")[1];
                }
