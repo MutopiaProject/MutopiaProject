@@ -1,6 +1,6 @@
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
-\version "2.0.1"
+\version "2.18.0"
 
 \header {
   title = "Prelude, Op. 59, No. 2 (1910)"
@@ -18,27 +18,27 @@
   maintainerEmail = "chan12@alumni.usc.edu"
   lastupdated = "2004/Apr/26"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/04/26-445"
 }
 
-upperOne = \notes \relative c' {
+upperOne =  \relative c' {
   \voiceOne
   \time 6/8
   \partial 4. <g c fis>4.--\p |
   <bes ees>8-- <d d'>4-> <g, fis'>4.-- |
   \phrasingSlurUp
-  \tieBoth
+  \tieNeutral
   ees'4-- <d d'>8->\( ~ <d d'> bes' a |
-  \times 3/5 { d bes a fis ees\) } <g, fis'>4. |
+  \tuplet 5/3 { d bes a fis ees\) } <g, fis'>4. |
   ees'4-- <d d'>8->\( ~ <d d'> bes' a |
-  \times 3/4 { d bes a fis\) } <bes, a'>4.-- |
+  \tuplet 4/3 { d bes a fis\) } <bes, a'>4.-- |
   ges'4-- <f f'>8->\( ~ <f f'> des' c |
-  \times 3/4 { f des c a\) } <cis, fis bis>4.-- |
+  \tuplet 4/3 { f des c a\) } <cis, fis bis>4.-- |
   <a e' a>8-- <gis' gis'>4-> <cis, bis'>4.-- |
   <a a'>4-- <gis' gis'>8-> <cis, bis'>4.-- |
   <a a'>4-- <gis' gis'>8-> <a, a'>4-- <gis' gis'>8-> |
-  r r <gis bis gis'>->\p\<^\markup{\italic "avec d\\'efi"} <gis bis gis'>-> <gis bis gis'>-> <gis bis gis'>->\! |
+  r r <gis bis gis'>->\p\<^\markup{\italic "avec défi"} <gis bis gis'>-> <gis bis gis'>-> <gis bis gis'>->\! |
   \tieUp
   gis'->\f e8.-> dis16-> gis4.-> ~ |
   gis4 e8-> dis-> bis-> a-> |
@@ -60,19 +60,19 @@ upperOne = \notes \relative c' {
   r4 r8 <cis fis bis>4.--\mp |
   <e a>8-- <gis gis'>4-> <cis, bis'>4.-- |
   \phrasingSlurUp
-  \tieBoth
+  \tieNeutral
   <a a'>4-- <gis' gis'>8->\( ~ <gis gis'> e' dis |
-  \times 3/5 { gis e dis bis a\) } <cis, bis'>4.-- |
+  \tuplet 5/3 { gis e dis bis a\) } <cis, bis'>4.-- |
   <a a'>4-- <gis' gis'>8->\( ~ <gis gis'> e' dis |
-  \times 3/4 { gis e dis bis\) } <e, dis'>4.-- |
+  \tuplet 4/3 { gis e dis bis\) } <e, dis'>4.-- |
   <c c'>4-- <b' b'>8->\( ~ <b b'> g' fis |
-  \times 3/4 { <b, b'> g' fis dis\) } <g, c fis>4-- r8 |
+  \tuplet 4/3 { <b, b'> g' fis dis\) } <g, c fis>4-- r8 |
   <ees bes' ees>8-- <d' d'>4-> <g, fis'>4.-- |
   <ees ees'>4-- <d' d'>8-> <g, fis'>4.-- |
   <ees ees'>4-- <d' d'>8-> <ees, ees'>4-- <d' d'>8-> |
   r r <d fis d'>->\p\< <d fis d'>-> <d fis d'>-> <d fis d'>->\! |
   \tieUp
-  <d d'>->\f^\markup{\italic "avec d\\'efi"} <bes bes'>-- <a a'>-- <d d'>4.-> ~ |
+  <d d'>->\f^\markup{\italic "avec défi"} <bes bes'>-- <a a'>-- <d d'>4.-> ~ |
   <d d'>4 <bes bes'>8-> <a a'>-> <fis fis'>-> <ees ees'>-> |
   \phrasingSlurDown
   <fis bes ees fis>4.-> bes,16\( ees fis bes d ees |
@@ -94,13 +94,13 @@ upperOne = \notes \relative c' {
   \tieUp
   d'8-> bes8.-- a16-- d4.-> ~ |
   d4-> bes8-> a4-> r16 fis-> |
-  \tieBoth
+  \tieNeutral
   <des e a>2.-> ~ |
   <des e a> |
   \bar "|."
 }
 
-upperTwo = \notes \relative c' {
+upperTwo =  \relative c' {
   \voiceTwo
   \time 6/8
   \partial 4. s4. |
@@ -145,14 +145,14 @@ upperTwo = \notes \relative c' {
   cis4. cis ~ |
   cis4 s8 s4. |
   s2. s s s s s s s |
-  \tieBoth
+  \tieNeutral
   <d, e>4. <d e> ~ |
   <d e> s |
   s2. s |
   \bar "|."
 }
 
-lower = \notes \relative c, {
+lower =  \relative c, {
   \clef "F"
   \time 6/8
   \partial 4. <a a'>16( <ees ees'>) r8 r |
@@ -213,7 +213,7 @@ lower = \notes \relative c, {
   <c' c'>16( <fis, fis'>) r8 r r <fis fis'>8 <c c'> |
   <bes'' e bes'>-> r r <c, c'>16( <fis, fis'>) r8 r |
   <c' c'>16( <fis, fis'>) r8 r r <fis fis'>8 <c c'> |
-  <bes'' e bes'>4.-> <bes e bes'>-> ~ | 
+  <bes'' e bes'>4.-> <bes e bes'>-> ~ |
   <bes e bes'>4 r8 r4 r8 |
   \acciaccatura <c,, c'> <c c' bes' e bes'>2. ~ |
   <c c' bes' e bes'> |
@@ -223,23 +223,23 @@ lower = \notes \relative c, {
 \score {
   <<
     \context PianoStaff <<
-      \context Staff = upper <<
-	\context Voice = one \upperOne
-	\context Voice = two \upperTwo
+      \context Staff = "upper" <<
+        \context Voice = "one" \upperOne
+        \context Voice = "two" \upperTwo
       >>
-      \context Staff = lower \lower
+      \context Staff = "lower" \lower
     >>
   >>
-  \paper {
-    \translator {
-      \PianoStaffContext
-      VerticalAlignment \override #'forced-distance = #14
+  \layout {
+    \context {
+      \PianoStaff
+      \override VerticalAlignment.forced-distance = #14
     }
   }
   \midi {
     \tempo 4 . = 84
-    \translator {
-      \VoiceContext
+    \context {
+      \Voice
       \remove "Dynamic_performer"
     }
   }
