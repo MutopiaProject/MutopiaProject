@@ -1,4 +1,5 @@
-\include "paper20.ly"
+\version "2.18.0"
+#(set-global-staff-size 20)
 \include "english.ly"
 
 \header {
@@ -6,7 +7,7 @@
  subtitle = "1st Movement"
  composer = "W.A. Mozart"
  
- mutopiatitle = "Piano Sonata KV. 457 (nr. 18)"
+ mutopiatitle = "Piano Sonata No. 14 (1st Movement: Molto allegro)"
  mutopiacomposer = "MozartWA"
  mutopiaopus = "KV 457"
  mutopiainstrument = "Piano"
@@ -16,34 +17,43 @@
  maintainer = "Will Oram"
  maintainerEmail = "spamguy@foxchange.com"
  maintainerWeb = "http://www.foxchange.com/~spamguy/"
- lastupdated = "2003/Oct/6"
 
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
- footer = "Mutopia-2003/10/06-356"
+ footer = "Mutopia-2014/02/22-356"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-\version "1.9.8"
+%{ Maintenance note:
+   This update includes several pitch edits so that this edition
+   matches several scans available in IMSLP that most likely were not
+   available when this was transcribed. All changes of this type have
+   been marked "Breitkopf" in the comment since Breitkopf was the
+   specific reference I used.
 
-upper = \notes\relative c' {
+   See: http://imslp.org/wiki/Special:ImagefromIndex/56441
+   -gl
+%}
+
+\paper {
+  top-margin = 12 \mm
+  bottom-margin = 10 \mm
+}
+
+upper = \relative c' {
 	\time 2/2
 	\key c \minor
-	\property Voice.TupletBracket \override #'bracket-visibility = ##f 
-	\property Voice.TextScript \override #'padding = #2
-	\property Voice.DynamicText \override #'padding = #3.5
-	\property Voice.TextScript \override #'font-magnification = #1.2
-	\property Voice.sparseTies = ##t
+	\override TupletBracket.bracket-visibility = ##f 
+	\override TextScript.padding = #2
+	\override DynamicText.padding = #3.5
+    \tempo "Molto allegro" 2 = 84
 	
-	c2^^-\f_\markup { \translate #(cons 2 1) \italic ten. }^\markup {
-		\translate #(cons -6 1)
-		\translate #(cons 0 -1) { \large "Molto allegro (" }
-		\magnify #.8 { \note #1 #0 #1 }
-		\large " = 84)" } eflat4-\staccatissimo g-\staccatissimo
+	c2^^-\f_\markup { \translate #(cons 2 1) \italic ten. } eflat4-\staccatissimo g-\staccatissimo
 	
 	c-\staccatissimo eflat-\staccatissimo r8. eflat16-.-\p eflat8-(-[-\trill d16 eflat-]
 	
 	g4 c,-.-) c-. c-.
 	
-	a'-( b,-)-. b-. r
+	aflat'-( b,-)-. b-. r       % gl: a->aflat, Breitkopf
 	
 	% 5
 	g,2^^-\f_\markup { \translate #(cons 2 1) \italic ten. } b4-\staccatissimo d-\staccatissimo
@@ -51,7 +61,6 @@ upper = \notes\relative c' {
 	g-\staccatissimo b-\staccatissimo r8. d16-.-\p d8-(-[-\trill c16 d-]
 	
 	f4 b,-.-) b-. b-.
-	\break
 	
 	g'-( c,-)-. c-. r
 	
@@ -66,7 +75,6 @@ upper = \notes\relative c' {
 	<< { fsharp f e eflat } \\ { eflat d2-\< c4-~ } >>
 	
 	<< { d2-)-\f } \\ { c4-(-\! b^.-) } >> r < b d aflat' >->-~
-	\break
 	
 	< b d aflat' >-( < c eflat g >-) r8. g16-[-( d'8.-.-) f16-]-(
 	
@@ -80,18 +88,16 @@ upper = \notes\relative c' {
 	r eflat-[-( g c,-]-) r d-[-( f b,-]-)
 	
 	c2^^ eflat4-\staccatissimo g-\staccatissimo
-	\break
 	
 	% 20
 	c-\staccatissimo eflat-\staccatissimo r8. eflat,16-. eflat8-\trill-[-( d16 eflat-]
 	
-	\times 2/3 { aflat!8_>-[ bflat c-] } \times 2/3 { bflat-[ aflat g-] } \times 2/3 { f-[ g aflat-] } \times 2/3 { g-[ f eflat-] }
+	\tuplet 3/2 { aflat!8_>-[ bflat c-] } \tuplet 3/2 { bflat-[ aflat g-] } \tuplet 3/2 { f-[ g aflat-] } \tuplet 3/2 { g-[ f eflat-] }
 	
 	
-	\times 2/3 { d-[ eflat f-] } \times 2/3 { eflat-[ d c-] } \times 2/3 { bflat-[-\> c bflat-] } \times 2/3 { aflat-[ bflat aflat-]-\! }
+	\tuplet 3/2 { d-[ eflat f-] } \tuplet 3/2 { eflat-[ d c-] } \tuplet 3/2 { bflat-[-\> c bflat-] } \tuplet 3/2 { aflat-[ bflat aflat-]-\! }
 	
 	g4.-\mp-)-( aflat32-[ g f g-] aflat4 d,
-	\break
 	
 	eflat8-.-[-)^\< g-.-]^\! bflat4.-(^\> a8-[^\! aflat fsharp-]
 	
@@ -103,7 +109,6 @@ upper = \notes\relative c' {
 	g4 bflat-) r8 bflat-.-[-(_\markup { \italic cresc. } bflat-. bflat-.-]-)
 	
 	f'_>-[-( eflat-)-] eflat4 r8 eflat-.-[-( eflat-. eflat-.-]-)
-	\break
 	
 	eflat8-\f-[-( f16 g-] f8-.-)-[ eflat-.-] d-.-[-\> c-. bflat-. a-.-\!-]
 	
@@ -120,7 +125,6 @@ upper = \notes\relative c' {
 	
 	% 35
 	bflat8-[-(-\> a aflat f-] bflat8-[ a aflat f-]-)-\!
-	\break
 	
 	eflat4.-\p-( f16 eflat d4 eflat
 	
@@ -138,7 +142,6 @@ upper = \notes\relative c' {
 	f4.-( g16 f eflat4 f
 	
 	fsharp2 g4-) r4
-	\break
 	
 	\clef "bass"
 	\relative c' {
@@ -155,8 +158,7 @@ upper = \notes\relative c' {
 	
 	r8 c'-\p-[-( bflat aflat-] g-[ f g aflat-]-)
 	
-	<< { eflat2.-(-\> g8-\! f-\> \stemDown eflat4-)-\! } \\ { s2. d4 } >>
-	\break
+	<< { eflat2.-( g8 f \stemDown eflat4-) } \\ { s2. d4 } >>
 	
 	r8 eflat-( d-[ dflat-\< c cflat-]-\!
 	%%% NOTE: I bumped beat 1 up to the previous bar. Hope you don't mind.
@@ -166,24 +168,22 @@ upper = \notes\relative c' {
 	% 50
 	< c c' >4-\f-(-\! < dflat dflat' >-\fz-) r2
 	
-	\property Voice.tupletInvisible = ##t
-	\times 2/3 { c'8-\f-[ f g,-] } \times 2/3 { aflat-[ c e,-] } \times 2/3 { f-[ aflat b,-] } \times 2/3 { c-[ f g,-] }
+	\override TupletBracket.transparent = ##t
+	\tuplet 3/2 { c'8-\f-[ f g,-] } \tuplet 3/2 { aflat-[ c e,-] } \tuplet 3/2 { f-[ aflat b,-] } \tuplet 3/2 { c-[ f g,-] }
 	
-	\property Voice.Slur \override #'beautiful = #'5
 	\clef "bass"
 	\relative c' {
-	\times 2/3 { aflat-[ c e,-] } \times 2/3 { f-[ aflat b,-] } \times 2/3 { c-[ f g,-] } \times 2/3 { aflat-[ c e,-] }
-	\break
+	\tuplet 3/2 { aflat-[ c e,-] } \tuplet 3/2 { f-[ aflat b,-] } \tuplet 3/2 { c-[ f g,-] } \tuplet 3/2 { aflat-[ c e,-] }
 	
-	\translator Staff = "down"
+	\change Staff = "down"
 	\clef bass
 	r4 r8 c8-( aflat'-[  f c' aflat-]
 	
 	f'-[ c aflat' f-]
-	\translator Staff = "up"
+	\change Staff = "up"
 	\clef "treble"
 	c'8-[ aflat f' c-]
-	\property Voice.Slur \revert #'beautiful
+%	\revert Slur.beautiful
 	
 	% 55
 	aflat'-[ f c' aflat-] f'-[ c aflat' f-]
@@ -193,7 +193,6 @@ upper = \notes\relative c' {
 	r8 bflat,-\p-[-( bflat' a-] aflat-[ g-\< gflat f-]-)-\!
 	
 	f-(-\> eflat-)-\! eflat2-( << { g!8 f } \\ { d4 } >>
-	\break
 	
 	eflat4-) r8 eflat-( e_>-[ f-]-) r8 f-(
 	
@@ -205,24 +204,22 @@ upper = \notes\relative c' {
 	eflat_>-\f-( eflat,-\> eflat2 g8 f-\!
 	
 	eflat-.-\f-) eflat-. eflat-\trill-[-( d16 eflat-] f8-.-)-[ f-.-] f-\trill-[-( eflat16 f-]
-	\break
 	
 	g8-.-\f-)_\markup { \translate #(cons 2.2 0) \italic cresc. } g-. g-\trill-[-( f16 g-] aflat8-.-)-[ aflat-.-] aflat-\trill-[-( g16 aflat-]
 	
 	% 65
-	\times 2/3 { bflat8-\ff-)-[-( c d-] } \times 2/3 { eflat-[ d c-] } \times 2/3 { bflat-[ aflat g-] } \times 2/3 { f-[ eflat d-] }
+	\tuplet 3/2 { bflat8-\ff-)-[-( c d-] } \tuplet 3/2 { eflat-[ d c-] } \tuplet 3/2 { bflat-[ aflat g-] } \tuplet 3/2 { f-[ eflat d-] }
 	
 	c4-.-) < eflat aflat c >-. < eflat g bflat >-. < f, aflat d >-.
 	
-	< g eflat' >-. \times 2/3 { bflat'8_>-[-( aflat g-] } \times 2/3 { f-[ eflat d-] } \times 2/3 { eflat-[ dflat b-] }
+	< g eflat' >-. \tuplet 3/2 { bflat'8_>-[-( aflat g-] } \tuplet 3/2 { f-[ eflat d-] } \tuplet 3/2 { eflat-[ dflat b-] }
 	
-	c4-.-) \times 2/3 { c'8_>-[-( bflat aflat-] } \times 2/3 { g-[ f eflat-] } \times 2/3 { d!-[ aflat' f-] }
-	\break
+	c4-.-) \tuplet 3/2 { c'8_>-[-( bflat aflat-] } \tuplet 3/2 { g-[ f eflat-] } \tuplet 3/2 { d!-[ aflat' f-] }
 	
-	eflat4-.-) \times 2/3 { bflat8->-\mf-[-( aflat g-] } \times 2/3 { f-[ eflat d-] } \times 2/3 { eflat-[ dflat b-] }
+	eflat4-.-) \tuplet 3/2 { bflat8->-\mf-[-( aflat g-] } \tuplet 3/2 { f-[ eflat d-] } \tuplet 3/2 { eflat-[ dflat b-] }
 	
 	% 70
-	c4-.-) \times 2/3 { c'8_>-[-( bflat! aflat-] } \times 2/3 { g-[ f eflat-] } \times 2/3 { d!-[ aflat' f-] }
+	c4-.-) \tuplet 3/2 { c'8_>-[-( bflat! aflat-] } \tuplet 3/2 { g-[ f eflat-] } \tuplet 3/2 { d!-[ aflat' f-] }
 	
 	eflat2^^-\f-) g4-\staccatissimo bflat-\staccatissimo
 	
@@ -231,23 +228,21 @@ upper = \notes\relative c' {
 	bflat4 eflat,-.-)_\markup { \italic dim. } eflat-. eflat-.
 	
 	aflat-\p-( b,-) b r
-	\break
 	
-	\bar ":|:"
+	\bar ":..:"
 	
 	% 75
 	c,2^^-\f e4-\staccatissimo g-\staccatissimo
 	
 	c-\staccatissimo e-\staccatissimo r8. g16-. g8-\trill-[-( f16 g-]
 	
-	\times 2/3 { bflat8_>-)-[-( c dflat-] } \times 2/3 { c-[ bflat aflat-] } \times 2/3 { g-[ aflat bflat-] } \times 2/3 { aflat-[ g f-] }
+	\tuplet 3/2 { bflat8_>-)-[-( c dflat-] } \tuplet 3/2 { c-[ bflat aflat-] } \tuplet 3/2 { g-[ aflat bflat-] } \tuplet 3/2 { aflat-[ g f-] }
 	
-	\times 2/3 { e-[ g e-] } \times 2/3 { dflat-[ e dflat-] } \times 2/3 { bflat-[-\> dflat bflat-] } \times 2/3 { g-[ bflat g-]-\! }
-	\break
+	\tuplet 3/2 { e-[ g e-] } \tuplet 3/2 { dflat-[ e dflat-] } \tuplet 3/2 { bflat-[-\> dflat bflat-] } \tuplet 3/2 { g-[ bflat g-]-\! }
 	
 	aflat4.-)-\mp-( bflat32 aflat g aflat bflat4 e,
 	
-	\property Voice.tupletInvisible = ##t
+	\override TupletBracket.transparent = ##t
 	
 	% 80
 	f8-.-) aflat-. c4.-(-\> b8-\! bflat g
@@ -255,17 +250,15 @@ upper = \notes\relative c' {
 	aflat4. bflat32 aflat g aflat bflat4 e,
 	
 	f8-.-)-[ f'-\mf-(-\> eflat! dflat-] c-[ b bflat g-]-)-\!
-	\break
 	
 	aflat2^^-\f c4-\staccatissimo f-\staccatissimo
 	
 	aflat-\staccatissimo c-\staccatissimo r2
 	
 	% 85
-	\times 2/3 { c8_>-[-( d eflat-] } \times 2/3 { d-[ c bflat-] } \times 2/3 { a-[ bflat c-] } \times 2/3 { bflat-[ a g-]-) }
-	\break
+	\tuplet 3/2 { c8_>-[-( d eflat-] } \tuplet 3/2 { d-[ c bflat-] } \tuplet 3/2 { a-[ bflat c-] } \tuplet 3/2 { bflat-[ a g-]-) }
 	
-	\times 2/3 { fsharp-[-( a fsharp-] } \times 2/3 { eflat-[ a eflat-] } \times 2/3 { d-[ a' d,-] } \times 2/3 { c-[ a' c,-] }
+	\tuplet 3/2 { fsharp-[-( a fsharp-] } \tuplet 3/2 { eflat-[ a eflat-] } \tuplet 3/2 { d-[ a' d,-] } \tuplet 3/2 { c-[ a' c,-] }
 	
 	bflat2^^-) d4-\staccatissimo g-\staccatissimo
 	
@@ -290,7 +283,6 @@ upper = \notes\relative c' {
 	d,4-. f-. r2
 	
 	b,4-._\markup { \italic calando } d-. d,-. f-.
-	\break
 	
 	\clef "bass"
 	< d, f aflat >1-\pp-(
@@ -302,7 +294,6 @@ upper = \notes\relative c' {
 	c'2^^-\f-1 eflat4-\staccatissimo-2 g-\staccatissimo-1
 	
 	c-\staccatissimo-2 eflat-\staccatissimo-4 r8. eflat16-.-\p eflat8-(-[-\trill d16 eflat-]
-	\break
 	
 	g4 c,-.-) c-. c-.
 	
@@ -323,7 +314,6 @@ upper = \notes\relative c' {
 	
 	% 110
 	<< { c'-( b^.-) } \\ { d,2-)-\f } >> r4 << { g'-( } \\ { eflat-~-\p } >>
-	\break
 	
 	<< { fsharp f-\< e eflat } \\ { eflat d2 c4-~ } >>
 	
@@ -332,7 +322,6 @@ upper = \notes\relative c' {
 	< b d aflat' >-( < c eflat g >-) r8. g16-[-( d'8.-.-) f16-]-(
 
 	eflat16-\trill-[ d eflat f-] g4-.-) r < b, d aflat' >->-~
-	\break
 	
 	% 115
 	< b d aflat' >-( < c eflat g >-)-. r8. f16-[-( b8.-.-) f'16-]-(
@@ -344,7 +333,6 @@ upper = \notes\relative c' {
 	c2^^-\f eflat4-\staccatissimo g-\staccatissimo
 	
 	c-\staccatissimo eflat-\staccatissimo < c, aflat' >-\staccatissimo < eflat c' >-\staccatissimo
-	\break
 	
 	% 120
 	< aflat, f' >-\staccatissimo < c aflat' >-\staccatissimo < f, dflat' >-\staccatissimo < aflat f' >-\staccatissimo
@@ -356,7 +344,6 @@ upper = \notes\relative c' {
 	c2-~ c8-[ aflat'-( bflat aflat-]-)
 
 	aflat4.-( f8 dflat4-) dflat4-~
-	\break
 		
 	% 125
 	dflat8-[ b-( c d-] f!-[ eflat d c-]
@@ -371,7 +358,6 @@ upper = \notes\relative c' {
 		
 	% 130
 	g8-[-(-\> fsharp f d-] g-[ fsharp f d-.-]-)-\!
-	\break
 	
 	c4.-\p-( d16 c b4 c
 	
@@ -387,7 +373,6 @@ upper = \notes\relative c' {
 	% 135
 	\clef "treble"
 	d4.-( eflat32 d c d eflat4 f
-	\break
 	
 	fsharp2-\> g4-)-\! r4
 	
@@ -417,36 +402,31 @@ upper = \notes\relative c' {
 	< c, c' >2^^-\mf-)-(-\< < dflat dflat' >^^-)-\!
 	
 	< c c' >4-\f-(
-	\slurBoth < eflat eflat' >-\fz-) r8 eflat'-\p-[-( d! c-]
+	\slurNeutral < eflat eflat' >-\fz-) r8 eflat'-\p-[-( d! c-]
 	
 	b^> d f,4-) r8 aflat-[-( g f-]
 	
 	e g bflat,4-) r8 dflat-[-(_\markup { \italic cresc. } c bflat-]-)
 	
 	\clef "bass"
-	\times 2/3 { aflat8-\f-[-( c e,-] } \times 2/3 { f-[ aflat b,-] } \times 2/3 { c-[ f g,-] } \times 2/3 { aflat-[ c e,-] }
-	\break
+	\tuplet 3/2 { aflat8-\f-[-( c e,-] } \tuplet 3/2 { f-[ aflat b,-] } \tuplet 3/2 { c-[ f g,-] } \tuplet 3/2 { aflat-[ c e,-] }
 	
 	% 150
-	\property Voice.Slur \override #'beautiful = #'500
 	f8-) r r4 r2
 
-	\translator Staff = "down"
+	\change Staff = "down"
 	R1	
-	\break
 	
 	R
 	
 	R
-	\break
 	
-	\translator Staff = "up"
+	\change Staff = "up"
 	\clef "treble"
 	r8-\p g''-[-(-\< g' fsharp-] f-[ e eflat d-]-)-\!
-	\property Voice.Slur \revert #'beautiful
 	
 	% 155
-	d-( c-) << { c2-(-\> eflat8 d-\! } \\ { s2 b4 } >>
+	d-( c-) << { c2( eflat8 d } \\ { s2 b4 } >>
 	
 	<< { c4-\p-) } \\ { c4 } >> r8 c-( csharp_>-[ d-]-) r8 d-(
 	
@@ -461,21 +441,19 @@ upper = \notes\relative c' {
 	
 	eflat8-.-)_\markup { \italic cresc. } eflat-. eflat-\trill-[-( d16 eflat-] f8-.-)-[ f-.-] f-\trill-[-( eflat16 f-]
 	
-	\times 2/3 { g8-\ff-)-[-( c bflat!-] } \times 2/3 { aflat-[ g f-] } \times 2/3 { eflat-[ d c-] } \times 2/3 { bflat-[ aflat g-] }
+	\tuplet 3/2 { g8-\ff-)-[-( c bflat!-] } \tuplet 3/2 { aflat-[ g f-] } \tuplet 3/2 { eflat-[ d c-] } \tuplet 3/2 { bflat-[ aflat g-] }
 	
 	aflat4-.-) < c f aflat >-. < c eflat g >-. < d, f b >-.
-	\break
 	
-	< eflat c' >-. \times 2/3 { g'8_>-\f-[-( fsharp aflat-] } \times 2/3 { g-[ f eflat-] } \times 2/3 { d-[ eflat c-] }
+	< eflat c' >-. \tuplet 3/2 { g'8_>-\f-[-( fsharp aflat-] } \tuplet 3/2 { g-[ f eflat-] } \tuplet 3/2 { d-[ eflat c-] }
 	
 	% 165
-	b4-.-) \times 2/3 { f'8_>-[-( e g-] } \times 2/3 { f-[ eflat d-] } \times 2/3 { c-[ bflat! d-] }
+	b4-.-) \tuplet 3/2 { f'8_>-[-( e g-] } \tuplet 3/2 { f-[ eflat d-] } \tuplet 3/2 { c-[ bflat! d-] }
 	
-	c4-.-) \times 2/3 { g'8_>-[-( fsharp aflat-] } \times 2/3 { g-[ f eflat-] } \times 2/3 { d-[ eflat c-] }
+	c4-.-) \tuplet 3/2 { g'8_>-[-( fsharp aflat-] } \tuplet 3/2 { g-[ f eflat-] } \tuplet 3/2 { d-[ eflat c-] }
 	
-	\times 2/3 { aflat'-\fz-[ g f-] } \times 2/3 { eflat-[ d c-] } \times 2/3 { b-[ aflat g-] } \times 2/3 { f-[ eflat d-] }
-	\bar ":|"
-	\break
+	\tuplet 3/2 { aflat'-\fz-[ g f-] } \tuplet 3/2 { eflat-[ d c-] } \tuplet 3/2 { b-[ aflat g-] } \tuplet 3/2 { f-[ eflat d-] }
+	\bar ":|."
 	
 	c4-\ff-) r r2
 	
@@ -486,40 +464,40 @@ upper = \notes\relative c' {
 	
 	aflat,,2_> c4-\staccatissimo eflat-\staccatissimo
 	
-	a-\staccatissimo c-\staccatissimo r \times 2/3 { c8-[-( eflat c-] }
+	a-\staccatissimo c-\staccatissimo r \tuplet 3/2 { c8-[-( eflat c-] }
 	
-	\times 2/3 { a-[ c a-] } \times 2/3 { fsharp-[ a fsharp-] } \times 2/3 { eflat-[ fsharp eflat-] } \times 2/3 { c-[ eflat c-] }
+	\tuplet 3/2 { a-[ c a-] } \tuplet 3/2 { fsharp-[ a fsharp-] } \tuplet 3/2 { eflat-[ fsharp eflat-] } \tuplet 3/2 { c-[ eflat c-] }
 	
 	g4-.-\f-) g'2_>-( f!16 eflat d c-)
 	
 	% 175
-	\grace eflat8-( d1-\trill-)-(-\> \bar "" \grace { c16-[ d-]-) } \bar "|"
+    #(define afterGraceFraction (cons 31 32))
+	\appoggiatura eflat8 \afterGrace d1 \startTrillSpan ( { c16[ d] ) \stopTrillSpan }
+	%\grace eflat8-( d1-\trill-)-(-\> \bar "" \grace { c16-[ d-]-) } \bar "|"
 
-	\times 2/3 { r8 c-\p-[-( c'-]-) } \times 2/3 { r8 b,-[-( b'-]-) } \times 2/3 { r8 c,-[-( c'-]-) } \times 2/3 { r8 g,-\f-[-( g'-]-) }
-	\break
+	\tuplet 3/2 { r8 c-\p-[-( c'-]-) } \tuplet 3/2 { r8 b,-[-( b'-]-) } \tuplet 3/2 { r8 c,-[-( c'-]-) } \tuplet 3/2 { r8 g,-\f-[-( g'-]-) }
 	
-	\times 2/3 { r8 aflat,-\p-[-( aflat'-]-) } \times 2/3 { r8 g,-[-( g'-]-) } \times 2/3 { r8 aflat,-[-( aflat'-]-) } \times 2/3 { r8 eflat,-\f-[-( eflat'-]-) }
+	\tuplet 3/2 { r8 aflat,-\p-[-( aflat'-]-) } \tuplet 3/2 { r8 g,-[-( g'-]-) } \tuplet 3/2 { r8 aflat,-[-( aflat'-]-) } \tuplet 3/2 { r8 eflat,-\f-[-( eflat'-]-) }
 	
-	\times 2/3 { r8 f,-\p-[-( f'-]-) } \times 2/3 { r8 fsharp,-[-( fsharp'-]-) } \times 2/3 { r8 g,-[-( g'-]-) } \times 2/3 { r8 g,,-\f-[-( g'-]-) }
+	\tuplet 3/2 { r8 f,-\p-[-( f'-]-) } \tuplet 3/2 { r8 fsharp,-[-( fsharp'-]-) } \tuplet 3/2 { r8 g,-[-( g'-]-) } \tuplet 3/2 { r8 g,,-\f-[-( g'-]-) }
 	
-	\times 2/3 { r8 c,-\p-[-( c'-]-) } \times 2/3 { r8 b,-[-( b'-]-) } \times 2/3 { r8 c,-[-( c'-]-) } \times 2/3 { r8 g,-\f-[-( g'-]-) }
+	\tuplet 3/2 { r8 c,-\p-[-( c'-]-) } \tuplet 3/2 { r8 b,-[-( b'-]-) } \tuplet 3/2 { r8 c,-[-( c'-]-) } \tuplet 3/2 { r8 g,-\f-[-( g'-]-) }
 	
 	% 180
 	\stemUp \slurUp
-	\times 2/3 { \translator Staff = "down" r8 aflat,^\p-[-( \translator Staff = "up" aflat'-]-) }
-	\times 2/3 { \translator Staff = "down" r8 g,-[-( \translator Staff = "up" g'-]-) }
-	\times 2/3 { \translator Staff = "down" r8 aflat,-[-( \translator Staff = "up" aflat'-]-) }
-	\times 2/3 { \translator Staff = "down" r8 eflat,^\f-[-( \translator Staff = "up" eflat'-]-) }
-	\break
+	\tuplet 3/2 { \change Staff = "down" r8 aflat,-[-( \change Staff = "up" aflat'-]-) }
+	\tuplet 3/2 { \change Staff = "down" r8 g,-[-( \change Staff = "up" g'-]-) }
+	\tuplet 3/2 { \change Staff = "down" r8 aflat,-[-( \change Staff = "up" aflat'-]-) }
+	\tuplet 3/2 { \change Staff = "down" r8 eflat,-[-( \change Staff = "up" eflat'-]-) }
 	
-	\times 2/3 { \translator Staff = "down" r8 f,^\p-[-( \translator Staff = "up" f'-]-) }
-	\times 2/3 { \translator Staff = "down" r8 fsharp,-[-( \translator Staff = "up" fsharp'-]-) }
-	\times 2/3 { \translator Staff = "down" r8 g,-[-( \translator Staff = "up" g'-]-) }
-	\times 2/3 { \translator Staff = "down" r8 g,,^\f-[-( g'-]-) }
+	\tuplet 3/2 { \change Staff = "down" r8 f,^\p-[-( \change Staff = "up" f'-]-) }
+	\tuplet 3/2 { \change Staff = "down" r8 fsharp,-[-( \change Staff = "up" fsharp'-]-) }
+	\tuplet 3/2 { \change Staff = "down" r8 g,-[-( \change Staff = "up" g'-]-) }
+	\tuplet 3/2 { \change Staff = "down" r8 g,,^\f-[-( g'-]-) }
 	
-	\times 2/3 { r8^\p c,-( eflat } \times 2/3 { g-[ eflat c-] } \times 2/3 { g'-[ eflat c-] } \times 2/3 { f!-[ d b-]-) }
+	\tuplet 3/2 { r8^\p c,-( eflat } \tuplet 3/2 { g-[ eflat c-] } \tuplet 3/2 { g'-[ eflat c-] } \tuplet 3/2 { f!-[ d b-]-) }
 	
-	\times 2/3 { r8^\markup { \italic dim. } g-( c } \times 2/3 { eflat-[ c g-] } \times 2/3 { eflat'-[ c g-] } \times 2/3 { d'-[ b g-]-) }
+	\tuplet 3/2 { r8^\markup { \italic dim. } g-( c } \tuplet 3/2 { eflat-[ c g-] } \tuplet 3/2 { eflat'-[ c g-] } \tuplet 3/2 { d'-[ b g-]-) }
 	
 	s1
 	
@@ -532,38 +510,37 @@ upper = \notes\relative c' {
 	
 	%%%%%%%%%% BASS STAVE %%%%%%%%%%
 
-lower = \notes\relative c, {
+lower = \relative c, {
 	\time 2/2
 	\key c \minor
-	\property Voice.tupletSpannerDuration = #(ly:make-moment 1 4)
+	\tupletSpan 4
 	
-	< c c' >2^^-\sustainDown < eflat eflat' >4-\staccatissimo-\sustainUp < g g' >-\staccatissimo
+	< c c' >2^^-\sustainOn < eflat eflat' >4-\staccatissimo-\sustainOff < g g' >-\staccatissimo
 	
 	< c c' >-\staccatissimo < eflat eflat' >-\staccatissimo r2
 	
 	\clef "treble"
-	r4 < eflat'' g >-. < eflat g >-. < eflat g >-.
+	r4 < eflat' g >-. < eflat g >-. < eflat g >-. % gl: lowered an octave
 	
 	r < d f aflat >-.	< d f aflat >-. r
 	
 	% 5
 	\clef "bass"
-	< g,,,, g' >2^^-\sustainDown < b b' >4-\staccatissimo-\sustainUp < d d' >-\staccatissimo
+	< g,,, g' >2^^-\sustainOn < b b' >4-\staccatissimo-\sustainOff < d d' >-\staccatissimo
 	
 	< g g' >-\staccatissimo < b b' >-\staccatissimo r2
 
 	\clef "treble"
 	\relative c' {
 	r4 
-	\once \property Voice.DynamicText \set #'transparent = ##t
+	\once \override DynamicText.transparent = ##t
 	< d f aflat >-\mp-. < d f aflat >-. < d f aflat >-.
-	\break
 	
 	r < eflat g >-. < eflat g >-. r
 	}
 	
 	\clef "bass" \stemDown
-	g8-[-(-\sustainDown g' g, g'-] g,-[ g' g, g'-]-)-\sustainUp
+	g8-[-(-\sustainOn g' g, g'-] g,-[ g' g, g'-]-)-\sustainOff
 	
 	% 10
 	g,-[ g' g, g'-] g,-[ g' g, g'-]
@@ -582,21 +559,21 @@ lower = \notes\relative c, {
 	
 	eflat,->-[-( eflat'-.-) eflat-. eflat-.-] d,->-[-( d'-.-) d-. d-.-]
 	
-	\stemBoth
+	\stemNeutral
 	c4 r f r
 	
 	g r g, r
 	
 	\clef "treble"
 	\relative c' {
-	c2^^-\f-\sustainDown eflat4-\staccatissimo-\sustainUp g-\staccatissimo
+	c2^^-\f-\sustainOn eflat4-\staccatissimo-\sustainOff g-\staccatissimo
 	
 	% 20
 	c-\staccatissimo eflat-\staccatissimo r2
 	}
 	
 	\clef "bass"
-	< bflat,! bflat'! >2^^-\sustainDown < d d' >4-\staccatissimo-\sustainUp < f f' >-\staccatissimo
+	< bflat,! bflat'! >2^^-\sustainOn < d d' >4-\staccatissimo-\sustainOff < f f' >-\staccatissimo
 	
 	< bflat bflat' > < d d' > r2
 	
@@ -670,11 +647,11 @@ lower = \notes\relative c, {
 	
 	< f, f' >^^
 	
-	\translator Staff = "up"
+	\change Staff = "up"
 	f'4.-> r8 r2
 	
 	r2 % another translator from lower stave
-	\translator Staff = "down"
+	\change Staff = "down"
 	r2
 	
 	% 55
@@ -717,22 +694,23 @@ lower = \notes\relative c, {
 	< eflat, g >-(
 	
 	% 70
+	% gl (Breitkopf): < eflat aflat >-.-) r r < eflat f aflat >-(
 	< eflat aflat >-.-) r r < bflat f' aflat >-(
 	
-	< eflat g >-.-)-\sustainDown r r2-\sustainUp
+	< eflat g >-.-)-\sustainOn r r2-\sustainOff
 	
-	< eflat, eflat' >2^^-\sustainDown < g g' >4-\staccatissimo-\sustainUp < bflat bflat' >-\staccatissimo
+	< eflat, eflat' >2^^-\sustainOn < g g' >4-\staccatissimo-\sustainOff < bflat bflat' >-\staccatissimo
 	
 	< eflat eflat' >-\staccatissimo < g g' >-\staccatissimo r2
 	
 	< g d' f >2. r4
 	
 	% 75
-	< c,, c' >2^^-\sustainDown < e e' >4-\staccatissimo-\sustainUp < g g' >-\staccatissimo
+	< c,, c' >2^^-\sustainOn < e e' >4-\staccatissimo-\sustainOff < g g' >-\staccatissimo
 	
 	< c c' >-\staccatissimo < e e' >-\staccatissimo r2
 	
-	< bflat, bflat' >2^^-\sustainDown < e e' >4-\staccatissimo-\sustainUp < g g' >-\staccatissimo
+	< bflat, bflat' >2^^-\sustainOn < e e' >4-\staccatissimo-\sustainOff < g g' >-\staccatissimo
 	
 	< bflat bflat' >-\staccatissimo < dflat dflat' >-\staccatissimo r2
 	
@@ -745,33 +723,32 @@ lower = \notes\relative c, {
 	% 80
 	aflat8-[ c f, c'-] e,-[ c' c, c'-]
 	
-	\times 2/3 { f,-[-( aflat c-] } \times 2/3 { bflat-[ aflat g-] } \times 2/3 { f-[ aflat c-] } \times 2/3 { bflat-[ aflat g-] }
+	\tuplet 3/2 { f,-[-( aflat c-] } \tuplet 3/2 { bflat-[ aflat g-] } \tuplet 3/2 { f-[ aflat c-] } \tuplet 3/2 { bflat-[ aflat g-] }
 	
-	\times 2/3 { f-[ aflat c-] } \times 2/3 { bflat-[ aflat g-] } \times 2/3 { f-[ g f-] } \times 2/3 { eflat!-[ f eflat-]-) }
+	\tuplet 3/2 { f-[ aflat c-] } \tuplet 3/2 { bflat-[ aflat g-] } \tuplet 3/2 { f-[ g f-] } \tuplet 3/2 { eflat!-[ f eflat-]-) }
 		
 	% 85
-	< d, d' >2^^-\sustainDown < fsharp fsharp' >4-\staccatissimo-\sustainUp < a a' >-\staccatissimo
+	< d, d' >2^^-\sustainOn < fsharp fsharp' >4-\staccatissimo-\sustainOff < a a' >-\staccatissimo
 
 	< d d' >-\staccatissimo < fsharp fsharp' >-\staccatissimo r2
 	
-	\property Voice.tupletInvisible = ##t
-	\times 2/3 { g8-[ bflat d-] } \times 2/3 { c-[ bflat a-] } \times 2/3 { g-[ bflat d-] } \times 2/3 { c-[ bflat a-] }
+	\override TupletBracket.transparent = ##t
+	\tuplet 3/2 { g8-[ bflat d-] } \tuplet 3/2 { c-[ bflat a-] } \tuplet 3/2 { g-[ bflat d-] } \tuplet 3/2 { c-[ bflat a-] }
 	
-	\times 2/3 { g-[ bflat d-] } \times 2/3 { c-[ bflat a-] } \times 2/3 { g-[ bflat d-] } \times 2/3 { g,-[ bflat d-] }
-	\break
+	\tuplet 3/2 { g-[ bflat d-] } \tuplet 3/2 { c-[ bflat a-] } \tuplet 3/2 { g-[ bflat d-] } \tuplet 3/2 { g,-[ bflat d-] }
 	
-	\times 2/3 { f,!-[ b d-] } \times 2/3 { g,-[ b d-] } \times 2/3 { aflat!-[ b d-] } \times 2/3 { g,-[ b d-] }
+	\tuplet 3/2 { f,!-[ b d-] } \tuplet 3/2 { g,-[ b d-] } \tuplet 3/2 { aflat!-[ b d-] } \tuplet 3/2 { g,-[ b d-] }
 	
 	% 90
-	\times 2/3 { f,-[ b d-] } \times 2/3 { g,-[ b d-] } \times 2/3 { aflat-[ b d-] } \times 2/3 { f,-[ b d-] }
+	\tuplet 3/2 { f,-[ b d-] } \tuplet 3/2 { g,-[ b d-] } \tuplet 3/2 { aflat-[ b d-] } \tuplet 3/2 { f,-[ b d-] }
 	
-	\times 2/3 { eflat,-[ g c-] } \times 2/3 { f,-[ aflat c-] } \times 2/3 { eflat,-[ g c-] } \times 2/3 { d,-[ f c'-] }
+	\tuplet 3/2 { eflat,-[ g c-] } \tuplet 3/2 { f,-[ aflat c-] } \tuplet 3/2 { eflat,-[ g c-] } \tuplet 3/2 { d,-[ f c'-] }
 	
-	\times 2/3 { eflat,-[ g c-] } \times 2/3 { d,-[ f c'-] } \times 2/3 { eflat,-[ g c-] } \times 2/3 { c,-[ eflat g-] }
+	\tuplet 3/2 { eflat,-[ g c-] } \tuplet 3/2 { d,-[ f c'-] } \tuplet 3/2 { eflat,-[ g c-] } \tuplet 3/2 { c,-[ eflat g-] }
 	
-	\times 2/3 { b,-[ d g-] } \times 2/3 { c,-[ d g-] } \times 2/3 { b,-[ d g-] } \times 2/3 { a,-[ d g-] }
+	\tuplet 3/2 { b,-[ d g-] } \tuplet 3/2 { c,-[ d g-] } \tuplet 3/2 { b,-[ d g-] } \tuplet 3/2 { a,-[ d g-] }
 	
-	\times 2/3 { b,-[ d g-] } g,4-\staccatissimo r2
+	\tuplet 3/2 { b,-[ d g-] } g,4-\staccatissimo r2
 	
 	% 95
 	\clef "treble"
@@ -782,22 +759,22 @@ lower = \notes\relative c, {
 	r1
 	
 	\clef "bass"
-	< b,, b' >1-\sustainDown-(
+	< b,, b' >1-\sustainOn-(
 	
-	< b b' >4-\sustainUp-) r4 r2-\fermata
+	< bflat bflat' >4-\sustainOff-) r4 r2-\fermata % gl: Breitkopf
 	
 	% 100
-	< c c' >2^^-\sustainDown < eflat eflat' >4-\staccatissimo-\sustainUp < g g' >-\staccatissimo
+	< c c' >2^^-\sustainOn < eflat eflat' >4-\staccatissimo-\sustainOff < g g' >-\staccatissimo
 	
 	< c c' >-\staccatissimo < eflat eflat' >-\staccatissimo r2
 	
 	\clef "treble"
-	r4 < eflat'' g >-. < eflat g >-. < eflat g >-.
+	r4 < eflat' g >-. < eflat g >-. < eflat g >-. % gl: Breitkopf
 	
 	r < d f aflat >-.	< d f aflat >-. r
 	
 	\clef "bass"
-	< g,,,, g' >2^^-\sustainDown < b b' >4-\staccatissimo-\sustainUp < d d' >-\staccatissimo
+	< g,,, g' >2^^-\sustainOn < b b' >4-\staccatissimo-\sustainOff < d d' >-\staccatissimo
 	
 	% 105
 	< g g' >-\staccatissimo < b b' >-\staccatissimo r2
@@ -805,16 +782,15 @@ lower = \notes\relative c, {
 	\clef "treble"
 	\relative c' {
 	r4 
-	\once \property Voice.DynamicText \set #'transparent = ##t
+	\once \override DynamicText.transparent = ##t
 	< d f aflat >-\mp-. < d f aflat >-. < d f aflat >-.
-	\break
 	
 	r < eflat g >-. < eflat g >-. r
 	
 	}
 	
 	\clef "bass" \stemDown
-	g8-[-(-\sustainDown g' g, g'-] g,-[ g' g, g'-]-)-\sustainUp
+	g8-[-(-\sustainOn g' g, g'-] g,-[ g' g, g'-]-)-\sustainOff
 	
 	
 	g,-[ g' g, g'-] g,-[ g' g, g'-]
@@ -834,17 +810,17 @@ lower = \notes\relative c, {
 	eflat,->-[-( eflat'-.-) eflat-. eflat-.-] d,->-[-( d'-.-) d-. d-.-]
 		
 	% 115
-	\stemBoth
+	\stemNeutral
 	c4 r f r
 	
 	g r g, r
 
-	r2-\sustainDown c'2^^
+	r2-\sustainOn c'2^^
 
-	eflat4-\staccatissimo-\sustainUp g-\staccatissimo < aflat,,, aflat' >2-\sustainDown
+	eflat4-\staccatissimo-\sustainOff g-\staccatissimo < aflat,,, aflat' >2-\sustainOn
 				
 	% 120
-	< c c' >4-\staccatissimo-\sustainUp < f f' >-\staccatissimo < aflat aflat' >2
+	< c c' >4-\staccatissimo-\sustainOff < f f' >-\staccatissimo < aflat aflat' >2
 
 	\clef "treble"
 	r8 gflat''-\p-[-( eflat gflat-] aflat,-[ gflat' eflat gflat-]-)
@@ -865,7 +841,7 @@ lower = \notes\relative c, {
 
 	< g b >-( < aflat c > < g b > < aflat c >-)
 
-	< g b > r r2
+	< g bflat > r r2            %gl: Breitkopf
 			
 	% 130
 	r1
@@ -887,12 +863,12 @@ lower = \notes\relative c, {
 	eflat-[ g c, g'-] eflat-[ g c, g'-]
 	
 	f-[ g d g-] eflat-[ g c, g'-]
-	
-	<< { eflat-[-( g eflat g-]-) e-[-( g e g-]-) } \\ { c,4 c bflat! s4 } >>
+
+    % gl: added bflat as 4th note in bass (Breitkopf)
+	<< { eflat-[-( g eflat g-]-) e-[-( g e g-]-) } \\ { c,4 c bflat! bflat } >>
 	
 	% 140
 	<< { c8-( f fsharp4-) } \\ { a,4 < aflat c > } >> r2
-	\break
 	
 	\clef "bass"
 	r4 < g b >-( < b d >-) r
@@ -915,18 +891,18 @@ lower = \notes\relative c, {
 	< f, f' >1->
 	
 	% 150
-	\times 2/3 { r8 c'-[-( f-] } \times 2/3 { aflat-[ f aflat-] } \times 2/3 { c-[ aflat c-] } \times 2/3 { f-[ c f-] }
+	\tuplet 3/2 { r8 c'-[-( f-] } \tuplet 3/2 { aflat-[ f aflat-] } \tuplet 3/2 { c-[ aflat c-] } \tuplet 3/2 { f-[ c f-] }
 	
-	\translator Staff = "up"
-	\times 2/3 { aflat-[ f aflat-] } \times 2/3 { c-[ aflat c-] }
+	\change Staff = "up"
+	\tuplet 3/2 { aflat-[ f aflat-] } \tuplet 3/2 { c-[ aflat c-] }
 	\clef "treble"
-	\times 2/3 { f-[ c f-] } \times 2/3 { aflat-[ f aflat-] }
+	\tuplet 3/2 { f-[ c f-] } \tuplet 3/2 { aflat-[ f aflat-] }
 	
-	\times 2/3 { c-[ aflat c-] } \times 2/3 { f-[ c f-] } \times 2/3 { aflat-[ f aflat-] } c-.-)-[ g-\mp-]-(
+	\tuplet 3/2 { c-[ aflat c-] } \tuplet 3/2 { f-[ c f-] } \tuplet 3/2 { aflat-[ f aflat-] } c-.-)-[ g-\mp-]-(
 	
 	aflat-[ e f csharp-] d-)-[ aflat'-(-\> f d-]-)-\!
 	
-	\translator Staff = "down"
+	\change Staff = "down"
 	\clef "bass"
 	< g,, c eflat >4 r r2
 	
@@ -962,23 +938,23 @@ lower = \notes\relative c, {
 	
 	< g b d f >1-)
 	
-	< c, c' >2->-\sustainDown < eflat eflat' >4-\staccatissimo-\sustainUp < g g' >-\staccatissimo
+	< c, c' >2->-\sustainOn < eflat eflat' >4-\staccatissimo-\sustainOff < g g' >-\staccatissimo
 	
 	< c c' >-\staccatissimo < eflat eflat' >-\staccatissimo r2
 	
 	% 170
-	< aflat,, aflat' >2->-\sustainDown < c c' >4-\staccatissimo-\sustainUp < eflat eflat' >-\staccatissimo
+	< aflat,, aflat' >2->-\sustainOn < c c' >4-\staccatissimo-\sustainOff < eflat eflat' >-\staccatissimo
 	
 	< aflat aflat' >-\staccatissimo < c c' >-\staccatissimo r2
 	
-	< fsharp,, fsharp' >2->-\sustainDown < a a' >4-\staccatissimo-\sustainUp < c c' >-\staccatissimo
+	< fsharp,, fsharp' >2->-\sustainOn < a a' >4-\staccatissimo-\sustainOff < c c' >-\staccatissimo
 	
 	< fsharp fsharp' >-\staccatissimo < a a' >-\staccatissimo < c c' >-\staccatissimo < eflat eflat' >-\staccatissimo
 	
-	\times 2/3 { g8-[-( c eflat-] } \times 2/3 { g,-[ c eflat-] } \times 2/3 { g,-[ c eflat-] } \times 2/3 { g,-[ c eflat-]-) }
+	\tuplet 3/2 { g8-[-( c eflat-] } \tuplet 3/2 { g,-[ c eflat-] } \tuplet 3/2 { g,-[ c eflat-] } \tuplet 3/2 { g,-[ c eflat-]-) }
 	
 	% 175
-	\times 2/3 { g,-\sustainDown-[-( b f'-] } \times 2/3 { g,-[ b f'-] } \times 2/3 { g,-[ b f'-] } \times 2/3 { g,-[ b f'-\sustainUp-]-) }
+	\tuplet 3/2 { g,-\sustainOn-[-( b f'-] } \tuplet 3/2 { g,-[ b f'-] } \tuplet 3/2 { g,-[ b f'-] } \tuplet 3/2 { g,-[ b f'-\sustainOff-]-) }
 	
 	c4-( b c-) g_>-(
 	
@@ -1015,6 +991,10 @@ lower = \notes\relative c, {
       \lower
       >>  
   >>
-  \paper { }  
-  \midi { \tempo 4=240 }
+  \layout { }  
+  
+  \midi {
+    \tempo 4 = 240
+    }
+
 }
