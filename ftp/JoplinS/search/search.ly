@@ -1,4 +1,4 @@
-\version "2.0.0"
+\version "2.17.97"
 
 \header {
  title = "Search-Light Rag"
@@ -18,22 +18,18 @@
  maintainerWeb = "http://www.sawer.uklinux.net/"
  lastupdated = "2004/Jan/27"
 
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+ tagline = ##f
  footer = "Mutopia-2004/01/27-275"
 }
 
-blanknotes = { \property Voice.NoteHead
-               \override #'transparent  = ##t
-               \property Voice.Stem
-               \override #'transparent = ##t }
-unblanknotes = { \property Voice.NoteHead
-                 \revert #'transparent
-                 \property Voice.Stem
-                 \revert #'transparent }
+blanknotes = { \override NoteHead.transparent  = ##t
+               \override Stem.transparent = ##t }
+unblanknotes = { \revert NoteHead.transparent
+                 \revert Stem.transparent }
 
-top = \notes \relative c' {
- \property Voice . TextScript \override #'padding = #2
- \property Staff . NoteCollision \override #'merge-differently-dotted = ##t
+top =  \relative c' {
+ \override TextScript.padding = #2
+ \override Staff.NoteCollision.merge-differently-dotted = ##t
  
  \key bes \major
  \time 2/4
@@ -58,10 +54,10 @@ top = \notes \relative c' {
    d8. c16 bes-( c d es-) |		%9 (1)
    f g8 d16 f8 f16-( g-) |
    a8.-( c16-) c,16-( g'8-) f16 ~ |
-   \property Voice . DynamicLineSpanner \override #'padding = #3
+   \override DynamicLineSpanner.padding = #3
    f8-\> g16-( f es d c f-)-\! |
    d8. \mf c16 bes-( c d es-) |		%13 (1)
-   \property Voice . DynamicLineSpanner \revert #'padding
+   \revert DynamicLineSpanner.padding
    f g8 d16 f8 e16-( f-) |
    fis8.-(-\< a16-) es'!16 d8 c16-\! |
   } \\ {
@@ -90,9 +86,9 @@ top = \notes \relative c' {
  \break
  
  \repeat volta 2 {
-  \property Voice . TextScript \revert #'padding
+  \revert TextScript.padding
   f16-(_\markup {\dynamic f \italic " legato"} a, es'-) f ~ f-( es g,8-) |
-  \property Voice . TextScript \override #'padding = #2
+  \override TextScript.padding = #2
   es'16-( g, gis a-) ~ a-( es' g,8-) |
   f16-( bes d <f d bes f>-) ~ <f d bes f>4 ~ |
   <f d bes f>8 d16-( c bes a g ges-) |				%25
@@ -147,10 +143,10 @@ top = \notes \relative c' {
   d8. c16-( bes c d es-) |
   f g8-\< d16 f8 f16-( g-)-\! |		%45 (1)
   a8.-( c16 c,-) g'8 f16 ~ |
-  \property Voice . DynamicLineSpanner \override #'padding = #3
+  \override DynamicLineSpanner.padding = #3
   f8 g16-(-\> f es d c f-)-\! |
   d8.-\mf c16-( bes c d es-) |
-  \property Voice . DynamicLineSpanner \revert #'padding
+  \revert DynamicLineSpanner.padding
   f g8 d16 f8 e16 f |			%49 (1)
   fis8.-\< a16 es'!16 d8 c16-\! |
  } \\ {
@@ -244,8 +240,8 @@ top = \notes \relative c' {
  \bar "|."
 }
 
-bottom = \notes \relative c {
- \property Voice . TextScript \override #'padding = #2
+bottom =  \relative c {
+ \override TextScript.padding = #2
 
  \key bes \major
  \time 2/4
@@ -368,28 +364,28 @@ bottom = \notes \relative c {
 
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
    \top
   \context Staff = "down"
    \bottom
  >>
 
-\paper {}
+\layout {}
 }
 
 \score {
- \notes \context PianoStaff <<
+  \context PianoStaff <<
   \context Staff = "up"
-   \apply #unfold-repeats \top 
+   \applyMusic #unfold-repeats \top 
   \context Staff = "down"
-   \apply #unfold-repeats \bottom
+   \applyMusic #unfold-repeats \bottom
  >>
  
  \midi {
   \tempo 4 = 66
-  \translator {
-   \VoiceContext
+  \context {
+   \Voice
    \remove Dynamic_performer
   }
  }
