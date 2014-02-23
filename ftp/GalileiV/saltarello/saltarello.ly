@@ -1,28 +1,28 @@
-\version "2.16.1"
+\version "2.18.0"
 
-P=\rightHandFinger #1 
+P=\rightHandFinger #1
 
 %% LSR snippet: http://lsr.dsi.unimi.it/LSR/Item?id=857
 #(define (text-spanner-start-stop mus)
-    (let ((elts (ly:music-property mus 'elements)))
-    (make-music 'SequentialMusic 'elements 
-       (append  
-          (list (make-music 'TextSpanEvent 'span-direction -1))
-          (reverse (cdr (reverse elts)))
-          (list (make-music 'TextSpanEvent 'span-direction 1))
-          (list (last elts))))))
-      
+   (let ((elts (ly:music-property mus 'elements)))
+     (make-music 'SequentialMusic 'elements
+       (append
+        (list (make-music 'TextSpanEvent 'span-direction -1))
+        (reverse (cdr (reverse elts)))
+        (list (make-music 'TextSpanEvent 'span-direction 1))
+        (list (last elts))))))
+
 stringNumberSpanner =
 #(define-music-function (parser location strg music)
    (string? ly:music?)
-  #{
-     \once \override Voice.TextSpanner #'style = #'solid
-     \once \override Voice.TextSpanner #'font-size = #-5
-     \once \override TextSpanner #'(bound-details left stencil-align-dir-y) = #CENTER
-     \once \override TextSpanner #'(bound-details left text) = \markup { \circle \number $strg }
-  
+   #{
+     \once \override Voice.TextSpanner.style = #'solid
+     \once \override Voice.TextSpanner.font-size = #-5
+     \once \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
+     \once \override TextSpanner.bound-details.left.text = \markup { \circle \number $strg }
+
      #(text-spanner-start-stop music)
-  #})
+   #})
 
 \header {
   title = "Saltarello"
@@ -41,7 +41,7 @@ stringNumberSpanner =
   copyright = "Public Domain"
   maintainer = "Federico Bruni"
   moreInfo = "Originally typeset by Emre Akbas (emreakbas@yahoo.com)"
-  
+
  footer = "Mutopia-2012/12/23-110"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
@@ -53,7 +53,7 @@ global = {
   % http://code.google.com/p/lilypond/issues/detail?id=2907
   % Nevertheless, using the following settings is probably better anyway
   \set Timing.beamExceptions = #'()
-  \set Timing.baseMoment = #(ly:make-moment 1 8)
+  \set Timing.baseMoment = #(ly:make-moment 1/8)
   \set Timing.beatStructure = #'(2 2 2)
 }
 
@@ -93,7 +93,7 @@ first =  \relative c' {
     fis2. |
     \set minimumFret = #7
     fis4\2 \stringNumberSpanner "3" { e d } |
-    % 20 
+    % 20
     a'2.\2 |
     fis4 e d |
     a'2 g4 ~ |
@@ -109,7 +109,7 @@ first =  \relative c' {
     a'2.\2 |
     \set minimumFret = #3
     \stringNumberSpanner "2" {
-      e8( d)  e( fis) \once \set minimumFret = #5 g( e) | 
+      e8( d)  e( fis) \once \set minimumFret = #5 g( e) |
       fis4
     }
     \set minimumFret = #0
@@ -177,15 +177,15 @@ second =  \relative c {
     \new Staff = "staff" \with {
       midiInstrument = "acoustic guitar (nylon)"
       % Avoid collision between stems and string numbers in bar 1 and 9
-      \override StringNumber #'add-stem-support = ##t
-      \override Fingering #'add-stem-support = ##t
+      \override StringNumber.add-stem-support = ##t
+      \override Fingering.add-stem-support = ##t
     }
     <<
       \context Voice = "staff first voice" { \clef "G_8" \voiceOne \slurDown \tieDown \first }
       \context Voice = "staff second voice" { \clef "G_8" \voiceTwo \second }
     >>
 
-%{    
+%{
     \new TabStaff = "tab" \with {
       stringTunings = #guitar-drop-d-tuning
     }
