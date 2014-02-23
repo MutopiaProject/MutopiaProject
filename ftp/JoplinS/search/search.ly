@@ -1,16 +1,20 @@
 \version "2.18.0"
 
+% used only to compare the output with the source edition
+% mBreak = { \break }
+mBreak = {}
+
 \header {
   title = "Search-Light Rag"
   composer = "Scott Joplin"
-  piece = "Slow March Tempo"
 
   mutopiatitle = "Search-Light Rag"
   mutopiacomposer = "JoplinS"
   mutopiainstrument = "Piano"
   date = "C. 1907"
   style = "Jazz"
-  copyright = "Public Domain"
+  license = "Public Domain"
+  source = "Dover Publications, 1988" % scan from imslp.org
 
   filename = "search.ly"
   maintainer = "Chris Sawer"
@@ -19,17 +23,18 @@
   lastupdated = "2004/Jan/27"
 
   tagline = ##f
-  footer = "Mutopia-2004/01/27-275"
+  footer = "Mutopia-2014/02/23-275"
 }
 
-blanknotes = {
-  \override NoteHead.transparent  = ##t
-  \override Stem.transparent = ##t
-}
-unblanknotes = {
-  \revert NoteHead.transparent
-  \revert Stem.transparent
-}
+% Built-in \hideNotes and \unHideNotes can be used instead
+% blanknotes = {
+%   \override NoteHead.transparent  = ##t
+%   \override Stem.transparent = ##t
+% }
+% unblanknotes = {
+%   \revert NoteHead.transparent
+%   \revert Stem.transparent
+% }
 
 top =  \relative c' {
   \override TextScript.padding = #2
@@ -39,10 +44,11 @@ top =  \relative c' {
   \time 2/4
   \clef treble
 
+  \mark \markup { \normalsize "Slow March Tempo" }
   bes'8-\mf g ~ g16 d g8 |		%1
   f d ~ d16 bes d8 |
   c bes ~ bes16-( d f d'-) |
-  c8 r <f c a f>^> s |
+  c8 r <f c a f>^> s \bar "||" \break |
 
   \repeat volta 2 {
     <<
@@ -55,7 +61,7 @@ top =  \relative c' {
       }
     >>
     <bes g>8.-( <a f>16-) <g es> <es c>8 <d bes>16 ~ |
-    <d bes>4-( <es c>-) |
+    <d bes>4-( <es c>-) \mBreak |
     <<
       {
         d8. c16 bes-( c d es-) |		%9 (1)
@@ -77,7 +83,7 @@ top =  \relative c' {
         d fis |
       }
     >>
-    <bes g>4.-\f <as d,>8 |
+    <bes g>4.-\f <as d,>8 \mBreak |
     <g es>8.-( <f d>16-) <es c>-( d es bes'-) |			%17
     <<
       {
@@ -100,10 +106,10 @@ top =  \relative c' {
     f16-(_\markup {\dynamic f \italic " legato"} a, es'-) f ~ f-( es g,8-) |
     \override TextScript.padding = #2
     es'16-( g, gis a-) ~ a-( es' g,8-) |
-    f16-( bes d <f d bes f>-) ~ <f d bes f>4 ~ |
+    f16-( bes d <f d bes f>-) ~ <f d bes f>4 ~ \mBreak |
     <f d bes f>8 d16-( c bes a g ges-) |				%25
     f-( a c <f c a f>-) ~ <f c a f>4 ~ |
-    <f c a f>8 c16-( bes a as g ges-) |
+    <f c a f>8 c16-( bes a as g ges-) \mBreak |
     f-( bes d <f d bes f>-) ~ <f d bes f>4 ~ |
     <f d bes f>8 f16 f f8 f |					%29
     f16-( a, es' f-) ~ f-( es g,8-) |
@@ -156,7 +162,7 @@ top =  \relative c' {
     }
   >>
   <bes g>8. <a f>16 <g es> <es c>8 <d bes>16 ~ |
-  <d bes>4-( <es c>-) |
+  <d bes>4-( <es c>-) \mBreak |
   <<
     {
       d8. c16-( bes c d es-) |
@@ -189,7 +195,7 @@ top =  \relative c' {
       bes4 s |
     }
   >>
-  <bes d,>4-\> ~ <bes d,>8-\! <bes' as d,> |
+  <bes d,>4-\> ~ <bes d,>8-\! <bes' as d,> \break |
 
   \key es \major
 
@@ -200,7 +206,7 @@ top =  \relative c' {
     r16 <d as d,> <des as des,> <c as c,> ~ <c as c,> <f, f,>-( <g g,> <as as,>-) |
     <a fis es a,>4-( <bes g es bes>-) |
     r16 <es g, es> <d g, d> <c g c,> ~ <c g c,> <bes bes,>-( <c c,> <cis cis,>-) |
-    <d bes g d>8-\< <cis cis,>16 <d bes g d> ~ <d bes g d>4-\! |				%61
+    <d bes g d>8-\< <cis cis,>16 <d bes g d> ~ <d bes g d>4-\! |			%61
     r16-\< <d d,> <es es,> <d a fis d> ~ <d a fis d> <cis cis,> <d a fis d>8-\! |
     <d bes g d>-\f <d a d,> <d bes as d,>4*1/2-\> s8-\! |
     r16-\mp <es g, es> <d g, d> <c g c,> ~ <c g c,> <bes bes,>-( <c c,> <cis cis,>-) |
@@ -209,7 +215,7 @@ top =  \relative c' {
     <es c g es>4 ~ <es c g es>8 <des g, es> |
     <<
       {
-        <c as> bes16-( as-) es as8 g16 ~ |
+        <c as> bes16-( as-) es as8 g16 ~ \mBreak |
         g-(-\< as a bes-)-\!
       } \\ {
         es,4 es8. es16 ~ |
@@ -238,25 +244,28 @@ top =  \relative c' {
     <f f,>-\< as, c <es es,> ~ <es es,> <d d,>-\! <c c,>8 |
     <<
       {
+        \override NoteColumn.ignore-collision = ##t
         \stemDown <c c,>16-(-\< es, g-) <bes e, bes> ~ \stemUp bes-( as g8-)-\! |
         <g es!>16-( c, es <g es>-) ~ <g es>-( c, d es-) |
       } \\ {
-        s8. \blanknotes <e bes>16 ~ \unblanknotes <e bes>4 | 		% slight cludge
+        s8.
+        \hideNotes <e bes>16 ~ \unHideNotes <e bes>4 | 			% slight cludge
         a,8.-\f a16 ~ a4
       }
     >>
-    <f' d as!>4 ~ <f d as>8-\> bes,16-( b-)-\! |				%81
+    <f' d as!>4 ~ <f d as>8-\> bes,16-( b-)-\! |			%81
     c16-(-\mp <bes' as d,>8 c,16 <bes' as d,>8 c,16-) <bes' as d,> ~ |
     <bes as d,> c,-( <bes' as d,> c bes as f d-) |
     c-( <bes' g es>8 c,16 <bes' g es>8 c,16-) <bes' g es> ~ |
-    <bes g es> c,-( <bes' g es> c bes-) g-( bes es-) |			%85
-    <f f,>-\< as, c <es es,> ~ <es es,> <d d,>-\! <c c,>8 |
+    <bes g es> c,-( <bes' g es> c bes g bes es-) |			%85
+    <f f,>-\< as,( c <es es,> ~ <es es,> <d d,>-\! <c c,>8) |
     <<
       {
+        \override NoteColumn.ignore-collision = ##t
         \stemDown <c c,>16-(-\< es, g-) <bes e, bes> ~ \stemUp bes-( as g8-)-\! |
         <g es!>16-( c, d es-) ~ es es <f d>8 |
       } \\ {
-        s8. \blanknotes <e bes>16 ~ \unblanknotes <e bes>4 | 		% slight cludge
+        s8. \hideNotes <e bes>16 ~ \unHideNotes <e bes>4 | 		% slight cludge
         a,8.-\f a16 ~ a4
       }
     >>
@@ -284,7 +293,7 @@ bottom =  \relative c {
     <bes bes,> <d bes f> <g, g,> <f f,> |			%5
     <d d,> <d' bes f> bes, <d' bes as> |
     <es, es,> <es' bes g> <g, g,> <ges ges,> |
-    <f f,>-( <bes bes,> <a a,> <f f,>-) |
+    <f f,>-( <bes bes,> \stemDown <a a,> <f f,>-) \stemNeutral |
     <bes bes,> <d bes f> <g, g,> <f f,> |			%9
     <d d,> <f' d bes> <des, des,> <f' des bes> |
     <c, c,> <f' c a> c, <e' c bes> |
@@ -297,7 +306,7 @@ bottom =  \relative c {
     <f f,> <d' bes f> <d bes f> <d d,>16-( <des des,>-) |
     <c c,>8 <es c g> <f, f,>4 |
   } \alternative {
-    { <bes bes,>8 <f f,>16-( <e e,> <f f,> <fis fis,> <g g,> <a a,>-) }
+    { \stemDown <bes bes,>8 <f f,>16-( <e e,> <f f,> <fis fis,> <g g,> <a a,>-) \stemNeutral }
     { <bes bes,>8 r r4 }							%21
   }
 
@@ -309,7 +318,7 @@ bottom =  \relative c {
     <c c,> <es a, f> <a, a,>16-( <bes bes,> <c c,> <bes bes,>-) |
     <a a,>8 <f' es a,> <f f,> <es es,> |
     <d d,> <d bes f> <bes bes,>16-( <c c,> <d d,> <bes bes,>-) |
-    <f f,>8 r r4 |								%29
+    <f f,>8 r r4 |							%29
     <f f,>8 <g g,> <a a,> <bes bes,> |
     <c c,> <b b,> <c c,> <cis cis,> |
     <d d,> <d bes f> <bes bes,>16 <c c,> <d d,> <c c,> |
@@ -354,7 +363,7 @@ bottom =  \relative c {
     <f f,>8 <d' bes as> <bes, bes,> <d' bes as> |
     r16 c,16-( es fis g es bes8-) |
     <es es,> <es' bes g> <es, es,> <es' bes g> |
-    <d, d,> <d' bes g> d,16-( g bes d-) |					%61
+    <d, d,> <d' bes g> d,16-( g bes d-) |				%61
     <d, d,>8 <d' c fis,> <d, d,> <d' c fis,> |
     <g, g,> <fis fis,> <f f,> <bes, bes,> |
     <es es,> <es' bes g> <g, g,> <ges ges,> |
@@ -379,7 +388,7 @@ bottom =  \relative c {
     <f, f,> <d' bes as> <bes, bes,> <d' bes as> |
     <es, es,> <es' bes g> <bes, bes,> <es' bes g> |
     <es, es,> <es' bes g> <bes, bes,> <es' bes g> |			%77
-    <as,, as,> <f'' es c as> <a,, a,> <fis'' es c a> |
+    \stemDown <as,, as,> <f'' es c as> <a,, a,> <fis'' es c a> |
     <bes,, bes,> <g'' es bes> <c,, c,> <e' c bes> |
     <f, f,> <es'! c a f> <f,, f,> <es'' c a f> |
     <bes, bes,> <d d,>16 <f f,> <bes bes,>8 <g g,>16-( <ges ges,>-) |	%81
@@ -407,15 +416,17 @@ bottom =  \relative c {
     \bottom
   >>
 
-  \layout {}
+  \layout {
+    % circa 4 bars per system
+    system-count = #22
+  }
 }
 
 \score {
+  \unfoldRepeats
   \context PianoStaff <<
-    \context Staff = "up"
-    \applyMusic #unfold-repeats \top
-    \context Staff = "down"
-    \applyMusic #unfold-repeats \bottom
+    \context Staff = "up" \top
+    \context Staff = "down" \bottom
   >>
 
   \midi {
