@@ -1,6 +1,4 @@
-% $Id: ballade.ly,v 1.3 2003/06/05 18:28:04 cve Exp $
-
-\version "2.18"
+\version "2.18.0"
 
 \header {
   mutopiatitle = "Second Ballade"
@@ -8,15 +6,19 @@
   mutopiainstrument = "Piano"
   date = "1853"
   style = "Romantic"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Vassily Checkin"
   maintainerEmail = "ly@auriga.com"
   lastupdated = "2003/Jun/5"
   title="Deuxième Ballade"
   composer="F. Liszt"
   date="1853"
-  footer = "Mutopia-2014/01/20-236"
-  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
+
+ mutopiasource = "Unknown"
+
+ footer = "Mutopia-2014/02/23-236"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 tupletOff = {
