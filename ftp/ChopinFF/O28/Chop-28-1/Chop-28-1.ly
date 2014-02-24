@@ -2,24 +2,19 @@
 %% dax: Chop-28,1.ly with absolute pitches except upper voice.
 %% TODO: Dynamics, rallentando and fingering.
 
-
-%\version "2.0.2"
+\version "2.18.0"
 \header {
   title         =       "Prelude"
-  % subtitle    =       "Opus 28.1"
-  % subsubtitle =       "Subsubtitle"
-  opus          =       "Opus 28"
-  piece = "Prelude"
-  composer =     "Chopin"
+  opus          =       "Opus 28 No.1"
+  composer =     "Frédéric Chopin (1810-1849)"
   enteredby =    "donald_j_axel"
-  instrument = "Pianoforte"
 
   % mutopia headers.
   mutopiatitle = "Prelude op 28.1"
   mutopiacomposer = "ChopinFF"
   mutopiaopus = "28.1"
   mutopiainstrument = "Piano"
-  copyright = "Creative Commons Attribution-ShareAlike"
+  copyright = "Creative Commons Attribution-ShareAlike 1.0"
   date = "ca. 1837"
 
   source = "Edition Peters"
@@ -27,222 +22,181 @@
   style = "Classical"
   maintainer = "Donald Axel"
   maintainerEmail = "donald_j_axel@get2net.dk"
-  lastupdated =  "2004/Mar/04"
+  lastupdated =  "2014/02/22"
   
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright \\ The Mutopia Project \\& " + \maintainer + " 2004.} \\makebox[\\textwidth][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[\\textwidth][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[\\textwidth][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}"
   footer = "Mutopia-2004/03/04-411"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/1.0/" "Creative Commons Attribution ShareAlike 1.0 (Generic) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-\include "paper16.ly"
+#(set-global-staff-size 18)
 
-\paper  {
-  linewidth = 455.244096\pt
-  textheight = 24.0 \cm    % for A4 paper
-  %textheight = 22.2 \cm    % for Letter paper
-  interscoreline = 3\pt
+\paper {
+	top-margin = 8\mm
+	bottom-margin = 6\mm
+	system-system-spacing.basic-distance = #19
 }
-
-
-
-% force direction of stems
-u = \stemUp
-d = \stemDown
-b = \stemBoth
-
 
 % explicit staff change
-su = \notes{ \translator Staff = upper}
-sd = \notes{ \translator Staff = lower}
-
+staffUp = \change Staff = "upper"
+staffDown = \change Staff = "lower"
 
 % force direction of tie
 tu = \tieUp
 td = \tieDown
-tb = \tieBoth
+tb = \tieNeutral
 
+%other defs
+ignoreClashNote = \override NoteColumn.ignore-collision = ##t
+icno = \once \override NoteColumn.ignore-collision = ##t
+hideTupletNumber = \override TupletNumber.transparent = ##t
+hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
+forceStemLeft = \once \override NoteColumn #'force-hshift = #-0.5
+forceStemRight = \once \override NoteColumn #'force-hshift = #0.5
+noteheadGreen = \override NoteHead #'color = #green
+noteheadBlue = \override NoteHead #'color = #blue
+noteheadRed = \override NoteHead #'color = #red
+noteheadMagenta = \override NoteHead #'color = #magenta
+tempoLegend = \markup { \right-align \column { "Agitato" " " } }
 
+adjBeamAngleOne = \once \override Beam.damping = #3
+algBeamOne = \once \override Beam.positions = #'( 1.9 . 2.7 )
+algBeamTwo = \once \override Beam.positions = #'( -6.0 . -3.8 )
+algBeamTre = \once \override Beam.positions = #'( 12.5 . 13.3 )
+algBeamQua = \once \override Beam.positions = #'( -5.3 . -3.3 )
+thinBeam = {
+      \once \override Beam.beam-thickness = #0.35
+      \once \override Beam.length-fraction = #0.7 }
 
+adjSlurOne = \shape #'((0.0 . 0.2) (0.0 . 0.5) (-0.8 . 0.3) (0 . 0.0)) Slur
+adjSlurTwo = \shape #'((-0.2 . 0.7) (-0.3 . 0.8) (-0.2 . 0.8) (0.2 . 1.6)) Slur
+adjSlurTre = \shape #'((0.0 . 0.0) (0.0 . 0.0) (0.0 . 0.2) (0.0 . 0.5)) Slur
+adjSlurQua = \override Slur.control-points = #'( ( 0.9888 . -4.9444) ( 2.4722 . -6.0569) ( 8.1583 . -5.9333) ( 10.63 . -5.3152) )
 
-upperOne = \notes\relative c'' {
+hideMF = \tweak #'stencil ##f\mf
+
+upperOne = \relative c' {
   \voiceOne
-  \slurUp
-  \property Voice.TupletBracket \set #'bracket-visibility = ##f
+  \tempo \tempoLegend
+  \ignoreClashNote
+  \hideTupletBracket 
   
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-  
-  ^\markup {
-      \large "Agitato"
+  \tuplet 3/2 8 {
+  % bar 1
+    \staffDown\stemUp 
+    a16\rest \adjSlurOne \adjBeamAngleOne g(-\hideMF \staffUp c \algBeamOne g'8 a16) |
   }
-  
-           \times 2/3 {g8 a16) }  |
-
-  \property Voice.TupletBracket \set #'number-visibility = ##f
+  \hideTupletNumber
 
   % bar 2
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {g8 a16) }  |
+           \once \override NoteHead.transparent = ##t
+           \once \override Stem.transparent = ##t
+           \staffDown
+           \tuplet 3/2 { a,16\rest \stemUp \adjBeamAngleOne g( \staffUp d' }
+           \override NoteColumn.ignore-collision = ##f
+           \tuplet 3/2 {   \forceStemLeft g8 a16) }  |
   % bar 3
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {g8 a16) }  |
+           \tuplet 3/2 { \staffDown a,16\rest \stemUp \adjBeamAngleOne g( \staffUp c } 
+           \tuplet 3/2 { \algBeamOne g'8 a16) }  |
   % bar 4
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {b8 c16) }  |
+           \tuplet 3/2 { \staffDown a,16\rest \stemUp \adjBeamAngleOne b( \staffUp e } 
+           \tuplet 3/2 {b'8 c16) }  |
 
   % bar 5
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {e8 d16) }  |
+           \tuplet 3/2 {\staffUp b16\rest \stemUp e,( a }
+           \tuplet 3/2 {e'8 \icno d16) }  |
 
   % bar 6
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {e8 d16) }  |
+	  \tuplet 3/2 {\staffUp b16\rest \stemUp e,( a }        
+	  \tuplet 3/2 {e'8  \icno d16) }  |
 
   % bar 7
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {e8 d16) }  |
-
+          \tuplet 3/2 {\staffUp b16\rest \stemUp e,( g } 
+          \tuplet 3/2 {e'8  \icno d16) }  |
   % bar 8
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {b8 a16) }  |
+          \tuplet 3/2 { \staffUp b16\rest \staffDown \stemUp \adjBeamAngleOne b,( \staffUp d } 
+          \tuplet 3/2 {b'8 a16) }  |
   % bar 9
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {g8 a16) }  |
+           \tuplet 3/2 { \staffDown a,16\rest \stemUp  \adjBeamAngleOne  g( \staffUp c}
+           \tuplet 3/2 { \algBeamOne g'8 a16) }  |
   % bar 10
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {g8 a16) }  |
-  % bar 11
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {g8 a16) }  |
+           \tuplet 3/2 { \staffDown a,16\rest \stemUp \adjBeamAngleOne g(  \staffUp d'}
+           \tuplet 3/2 { g8 a16) }  |
+  % bar 11        
+           \tuplet 3/2 { \staffDown a,16\rest \stemUp \adjBeamAngleOne g( \staffUp c } 
+           \tuplet 3/2 { \algBeamOne g'8 a16) }  |
   % bar 12
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {b8 c16) }  |
+           \tuplet 3/2 {e16\rest \staffDown \stemUp \adjBeamAngleOne b(  \staffUp e }
+           \tuplet 3/2 {b'8 c16) }  |
 
   % bar 13
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  d8(
-           \times 2/3 {cis8 d16) }  |
+           \tuplet 3/2 {b16\rest cis,( f }
+           \tuplet 3/2 {cis'8 \icno d16) }  |
 
   % bar 14
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  d8(
-           \times 2/3 {dis8 e16) }  |
+           \tuplet 3/2 {b16\rest dis,( g }
+           \tuplet 3/2 { dis'8 \icno e16) }  |
 
   % bar 15
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  d8(
-           \times 2/3 {  g8 f16) }  |
+           \tuplet 3/2 { b16\rest g( a }
+           \tuplet 3/2 { g'8 \icno f16) }  |
 
   % bar 16
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  d8(
-           \times 2/3 {dis8 e16) }  |
+           \tuplet 3/2 {b,16\rest  dis,( g }
+           \tuplet 3/2 {dis'8 \icno e16) }  |
 
   % bar 17
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(^\markup{ \italic {stretto} }
-           \times 2/3 {e8 f16) }  |
+          \tuplet 3/2 { b16\rest^\markup{ \italic {stretto} } e,( a }
+          \tuplet 3/2 { e'8 \icno f16) }  |
 
   % bar 18 pentole
-           \property Voice.TupletBracket \set #'number-visibility = ##t
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  \times 4/5 {f8(
-                     fis8[  g16]) }  |
+  \override  TupletNumber.transparent = ##f
+  \tuplet 5/4 { fis,16[(   b]
+                     fis'8[  \icno g16]) }  |
 
   % bar 19 pentole
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  \times 4/5 {f8(
-                     gis8[  a16]) }  |
+  \revert  Beam.positions
+  \tuplet 5/4 { gis,16[(  c]   
+                     gis'8[  \icno a16]) }  |
 
   % bar 20 pentole
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  \times 4/5 {g8(
-                     ais8[  b16)] }  |
-
-
+  \tuplet 5/4 {  ais,16[(  d]
+                     ais'8[  \icno b16)] }  |
   % bar 21
-           \property Voice.TupletBracket \set #'number-visibility = ##f
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  f8(
-           \times 2/3  {d'8   c16) }  |
+           
+           \tuplet 3/2 {b,16\rest d(   e }
+           \tuplet 3/2  {d'8  \icno c16) }  |
   
   % bar 22
-           \property Voice.TupletBracket \set #'number-visibility = ##f
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  f,8(
-           \times 2/3  {b8    a16) }  |
+           \hideTupletNumber
+           \tuplet 3/2 {b,16\rest b(    c } 
+           \tuplet 3/2  {b'8 \icno  a16) }  |
 
   % bar 23 pentole
-           \property Voice.TupletBracket \set #'number-visibility = ##t
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  \times 4/5 {e8(
-                       a8[  g16]) }  |
+           \override  TupletNumber.transparent = ##f
+           \tuplet 5/4 { a,16[(  c]
+                       a'8[ \icno  g16]) }  |
 
   % bar 24 % From bar 7
-           \property Voice.TupletBracket \set #'number-visibility = ##f
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c,8(
-           \times 2/3 {e8 d16) }  |
+           \tuplet 3/2 {b,16\rest e,(  g   }
+           \tuplet 3/2 {e'8 \icno d16) }  |
 
   % bar 25 pentole
-           \property Voice.TupletBracket \set #'number-visibility = ##t
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  \times 4/5 { c8(
-                    g8[ a16] ) }  |
+  \tuplet 5/4 { \staffDown \adjBeamAngleOne g,,16([ \staffUp c] 
+                    g'8[ a16] ) }  |
 
   % bar 26 pentole
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  \times 4/5 { c8(
-                    e8[ d16] ) }  |
+  \tuplet 5/4 {  \stemUp e16[( g] 
+                    e'8[ \icno d16] ) }  |
 
   % bar 27
-           \property Voice.TupletBracket \set #'number-visibility = ##f
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {g8 a16) }  |
+           \tuplet 3/2 { b16\rest \adjBeamAngleOne \staffDown g,( \staffUp  c   }
+           \tuplet 3/2 { g'8 a16) }  |
 
   % bar 28
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-  c8(
-           \times 2/3 {e8 d16) }  |
+           \hideTupletNumber
+           \tuplet 3/2 { b16\rest e,(  g } 
+           \tuplet 3/2 { e'8 \icno d16) }  |
 
   % bar 29
                        s8   c[(\accent    |
@@ -255,493 +209,441 @@ upperOne = \notes\relative c'' {
 
   % bar 33 % absolute c'
     s8
-    \times 2/3  {s16   s16    
-    \once \property Voice.Stem     \set #'transparent = ##t
+    \tuplet 3/2  {s16   s16    
+    \once \override Stem.transparent = ##t
     \tieDown
-                             c,~ } |
+                           \icno c,~ } |
   % bar 34
-              <c    e  >4          |
+       \once \override Script.extra-offset = #'(0.0 . 0.7 )       <c    e   >4\fermata        |
 
 }
 
 
-upperTwo = \notes {
+upperTwo =  {
   \voiceTwo
-  \property Voice.TupletBracket \set #'bracket-visibility = ##f
-  \property Voice.TupletBracket \set #'number-visibility = ##f
-  \once \property Voice.TupletBracket \set #'direction = #'1
-  \once \property Voice.TupletBracket \set #'bracket-visibility = #'if-no-beam
-  \once \property Voice.TupletBracket \set #'number-visibility = ##t
-  \tu \slurUp
-  \property Voice.Slur \set #'attachment = #'(stem . stem)
-  \times 2/3 {\sd \u r16 g  \su c'} 
-  \times 2/3 {\d e' c' \sd \u a  }      |
+  \ignoreClashNote
+  \hideTupletBracket 
 
-  \times 2/3 {r16 \sd \u g  \su d'} 
-  \times 2/3 {\d f' d' \sd \u a  }      |
+  \once \override TupletBracket.direction = #'1
+  \hideTupletBracket
+  \hideTupletNumber
+  \tu \slurUp
+  s8 
+  \tuplet 3/2 { \stemDown e'16 c' \staffDown \stemUp a  }      |
+
+  s8
+  \override NoteColumn.ignore-collision = ##f
+  \tuplet 3/2 { \stemDown \staffUp f'16 d' \staffDown \stemUp a  }      |
 
   %bar 3 
-  \times 2/3 {r16 \sd \u g  \su c' } 
-  \times 2/3 {\d e' c' \sd  \u a   }    |
+  s8 \staffUp
+  \tuplet 3/2 {\stemDown e'16 c' \staffDown  \stemUp a   }    |
 
   %bar 4
-  \times 2/3 {r16 \sd \u b  \su e' } 
-  \times 2/3 {\d g' e' \sd  \u  c' }    |
+  s8 \staffUp
+  \tuplet 3/2 {\stemDown g'16 e' \staffDown  \stemUp  c' }    |
 
   %bar 5
-  \times 2/3 {\su e'16\rest \u e'    a'  } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 2.1 . -0.4)
-  %% no, no. \once \property Voice.fontSize = #-1
-  \times 2/3 {   c'' a'        d'  }  |
+  \hideTupletNumber
+  s8 \staffUp
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.4 . -0.3)
+  \thinBeam
+  \tuplet 3/2 { c''16 a' d'  }  |
   
   %bar 6
-  \times 2/3 {d'16\rest \su \u e' a'    } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 2.1 . -0.4)
-  \times 2/3 {   c'' a'        d' }   |
+  s8 \staffUp 
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.4 . -0.3)
+  \thinBeam
+  \tuplet 3/2 { c''16 a' d'  }  |
+  \revert  Beam.font-size
   
   %bar 7
-  \times 2/3 {d'16\rest \su \u e'  g'   } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 1.9 . -0.4)
-  \times 2/3 {   b'  g'        d' }   |
+  s8 \staffUp
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.3 . -0.4)
+  \tuplet 3/2 { b'16  g' d' }   |
   
   %bar 8
-  \times 2/3 {d'16\rest \su \u b     d' } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 0.0 . -1.8)
-  \times 2/3 { \stemUp f'  d'  a   }   |
+  s8 \staffUp
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( -4.5 . -5.5)
+  \tuplet 3/2 { \stemDown f'16  d' \staffDown \stemUp a }   |
 
-  %bar 9  %% no rest because we need it in the lower staff
-  \times 2/3 {s16  \sd \u g \su c'}
-  \times 2/3 {\d e' c' \sd \u a  }     |
+  %bar 9  
+  s8 \staffUp
+  \tuplet 3/2 {\stemDown e'16 c' \staffDown \stemUp a  }     |
 
   %bar 10
-  \times 2/3 {r16 \sd \u g  \su d'} 
-  \times 2/3 {\d f' d' \sd \u  a  }    |
+  s8 \staffUp
+  \tuplet 3/2 {\stemDown f'16 d' \staffDown \stemUp  a  }    |
 
   %bar 11
-  \times 2/3 {r16 \sd \u g  \su c' } 
-  \times 2/3 {\d e' c' \sd  \u  a  }   |
+  s8 \staffUp
+  \tuplet 3/2 {\stemDown e'16 c' \staffDown  \stemUp  a  }   |
 
   %bar 12
-  \times 2/3 {r16 \sd \u b  \su e' } 
-  \times 2/3 {\d  g'  e' \sd \u  c' }  |
+  s8 \staffUp 
+  \tuplet 3/2 {\stemDown  g'16  e' \staffDown \stemUp  c' }  |
 
   %bar 13
-  \times 2/3 {r16 \sd \u cis'  \su f' } 
-  \times 2/3 {\d  a'  f' \sd \u  d' }  |
+  s8 \staffUp
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 1.6 . -0.3)
+  \tuplet 3/2 { a'16  f'  d' }  |
 
   %bar 14
-  \times 2/3 {r16 \sd \u dis'  \su g' } 
-  \times 2/3 {\d  c'' g' \sd \u  e' }  |
+  s8
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.6 . 0.0)
+  \tuplet 3/2 { c''16 g' e' }  |
 
   %bar 15
-  \times 2/3 {r16 \sd \u   g'  \su a' } 
-  \times 2/3 {\d  c'' a' \sd \u  f' }  |
+  s8
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.7 . 0.5)
+  \tuplet 3/2 { c''16 a' f' }  |
 
   %bar 16
-  \times 2/3 {r16 \sd \u dis'  \su g' } 
-  \times 2/3 {\d  c'' g' \sd \u  e' }  |
+  s8
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.7 . -0.1)
+  \tuplet 3/2 {c''16 g' e' }  |
 
   %bar 17 % FROM bar 5
-  \times 2/3 {\su e'16\rest \su \u e'    a'  } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 2.2 .  0.3)
-  \times 2/3 {   c''[   a'        f']  }  |
+  s8 
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.7 . 0.5)
+  \tuplet 3/2 {   c''16[   a'        f']  }  |
   
   %bar 18  pentole!
-  \times 4/5 { \su \u   fis'16[   b']   
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 3.0 .  0.8)
-                 d''[   b'        g']  }  |
+  \tuplet 5/4 { s8   
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 3.5 .  1.0)
+                 d''16[   b'        g']  }  |
 
   %bar 19  pentole!
-  \times 4/5 { \su \u   gis'16[  c'']   
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 3.7 .  1.4)
-                 e''[   c''       a']  }  |
+  \hideTupletNumber
+  \tuplet 5/4 { s8                
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 4.0 .  1.5)
+                 e''16[   c''       a']  }  |
 
   %bar 20  pentole!
-  \times 4/5 { \su \u   ais'16[  d'']   
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 4.7 .  1.7)
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-                 g''[   d''       b']  }  |
+  \tuplet 5/4 { s8   
+  \once \override Beam.positions = #'( 4.2 .  1.8)
+  \once \override NoteColumn.horizontal-shift = #1
+  \thinBeam
+                 g''16[   d''       b']  }  |
 
   %bar 21 %% FROM bar 5
-  \times 2/3 {d''16\rest \su \u d''   e'' } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 4.3 .  2.4)
-  \times 2/3 {   g''     e''       c'' }  |
+  s8 
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 4.3 .  2.2)
+  \thinBeam
+  \tuplet 3/2 {   g''16     e''       c'' }  |
   
   %bar 22
-  \times 2/3 {b'16\rest \su \u  b'    c'' } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 2.9 .  1.6)
-  \times 2/3 {   dis'' c''      a' }  |
+  s8
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 3.0 .  1.6)
+  \thinBeam
+  \tuplet 3/2 {   dis''16 c''      a' }  |
  
   %bar 23  pentole!
-  \times 4/5 { \su \u     a'16[  c'']   
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 3.5 .  1.1)
-                   e''[ c''       g']  }  |
+  \tuplet 5/4 { s8
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 3.5 .  1.1)
+  \thinBeam
+                   e''16[ c''       g']  }  |
   
-  %bar 24 % wrong stems/beams for second beat if no bracket-specification.
-  \times 2/3 {d'16\rest \su \u e'  g'   } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 1.9 . -0.4)
-  \times 2/3 { \su \u   b'[   g'   d'] }      |
+  %bar 24
+  s8
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 1.9 . -0.4)
+  \thinBeam
+  \tuplet 3/2 { \staffUp \stemUp   b'16[   g'   d'] }      |
 
   %bar 25 pentole
-  \times 4/5 {    \sd  \u  g16[ \su c'] 
-             \d e'[   c'  \sd  \u  a]  }      |
+  \tuplet 5/4 {    s8
+  	    \once \override Beam.positions = #'( -6.0 . -6.8)
+            \stemDown e'16[   c'  \staffDown  \stemUp  a]  }      |
 
   %bar 26 pentole
-  \times 4/5 {    \sd  \u e'16[ \su g'] 
-             \d b'[   g'  \sd  \u d']  }      |
+  \tuplet 5/4 {    s8 \staffUp
+  	  \once \override NoteColumn.horizontal-shift = #1
+  	  \once \override Beam.positions = #'( 2.2 . -0.4)
+          b'16[   g'   d']  }      |
 
-  %bar 27 %% no rest because we need it in the lower staff
-  \times 2/3 {s16  \sd \u g   \su c'   }
-  \times 2/3 {\d e'   c'   \sd \u a    }      |
+  %bar 27
+  s8
+  \once \override Beam.positions = #'( -6.0 . -6.8)
+  \tuplet 3/2 { \stemDown e'16  c' \staffDown \stemUp a }      |
 
   %bar 28
-  \times 2/3 { \su      d'16\rest       \u e'        g'   } 
-  \once \property Voice.NoteColumn \set #'horizontal-shift = #1
-  \once \property Voice.Beam \override #'thickness = #0.34
-  \once \property Voice.Beam \override #'positions = #'( 1.9 . -0.4)
-  \times 2/3 {     \u   b'[                g'        d'] }      |
+  s8
+  \once \override NoteColumn.horizontal-shift = #1
+  \once \override Beam.positions = #'( 2.0 . -0.3)
+  \thinBeam
+  \tuplet 3/2 { \staffUp \stemUp   b'16[  g'  d'] }      |
 
   %bar 29
-  \times 2/3 {\su  d'16\rest     \u c'        f'   }
-  \times 2/3 {\d   a'               f'     <e'g'>  }   |
+  \adjSlurQua
+  \tuplet 3/2 {\staffUp  d'16\rest     \stemUp c'_(        f'   }
+  \tuplet 3/2 {\stemDown   a'               f'     <e'g'>)  }   |
 
   %bar 30
-  \times 2/3 {\su  d'16\rest     \u c'        f'   }
-  \times 2/3 {\d   a'               f'     <e'g'>  }   |
+  \tuplet 3/2 {\staffUp  d'16\rest     \stemUp c'_(        f'   }
+  \tuplet 3/2 {\stemDown   a'               f'     <e'g'>)  }   |
 
   %bar 31
-  \times 2/3 {\su  d'16\rest     \u c'        f'   }
-  \times 2/3 {\d   a'               f'     <e'g'>  }   |
+  \tuplet 3/2 {\staffUp  d'16\rest     \stemUp c'(        f'   }
+  \tuplet 3/2 {\stemDown   a'               f'     <e'g'>)  }   |
 
   %bar 32
-  \times 2/3 {\su  d'16\rest     \u c'        f'   }
-  \times 2/3 {\d   a'               f'     <e'g'>  }   |
+  \tuplet 3/2 {\staffUp  d'16\rest     \stemUp c'(        f'   }
+  \tuplet 3/2 {\stemDown   a'               f'     <e'g'>)  }   |
 
   %bar 33
-  % \times 2/3 {     s16            s16       s16    }
   s8
-  \times 2/3 {\sd \u e16            g   \su \stemUp c'   }   |
+  \set tieWaitForNote = ##t
+  \tuplet 3/2 {\staffDown \algBeamTre \stemUp e16~  g~  \staffUp  c'   }   |
 
   %bar 34
-  % notes within this chord cannot be sent lowerstaff here. Must divide?
-  % < e  g  >4
-  s4
-
+  \staffDown
+  \crossStaff {< e  g  >4 }
 }
 
 
-lowerOne = \notes {
+lowerOne =  {
+  %\noteheadBlue
   \voiceOne
-  \property Voice.tupletInvisible = ##t
-  \property Voice.Stem \set #'beamed-extreme-minimum-free-lengths = #'(1.0 0.4 0.2)
-  
-  % \property Voice.Stem \set #'stem-shorten = #'(3.0 2.5)
-  \property Voice.Beam \override #'thickness = #0.38
-  \property Voice.Beam \override #'gap       = #0.5
+  \ignoreClashNote
+  \hideTupletNumber
+  \override TupletBracket.transparent = ##t
+  \override Stem.details.beamed-extreme-minimum-free-lengths = #'(1.0 0.4 0.2)
+  \override Beam.beam-thickness = #0.38
+  \override Beam.gap       = #0.5
 
-  \property Voice.Beam \override #'positions = #'(-0.6 . -0.5)
-  \times 2/3 {s16  \d g8[ } \times 2/3 {s8  a16]} |
-  \times 2/3 {s16  \d g8[ } \times 2/3 {s8  a16]} |
-  \times 2/3 {s16  \d g8[ } \times 2/3 {s8  a16]} |
-  \property Voice.Beam \override #'positions = #'( 0.5 .  0.7)
-  \times 2/3 {s16  \d b8[ } \times 2/3 {s8 c'16]} |
+  \override Beam.positions = #'(-0.6 . -0.5)
+  \tuplet 3/2 {s16  \stemDown g8.*2/3[ } \tuplet 3/2 {s8  a16]} |
+  \tuplet 3/2 {s16  \stemDown g8.*2/3[ } \tuplet 3/2 {s8  a16]} |
+  \tuplet 3/2 {s16  \stemDown g8.*2/3[ } \tuplet 3/2 {s8  a16]} |
+  \override Beam.positions = #'( 0.5 .  0.7)
+  \tuplet 3/2 {s16  \stemDown b8.*2/3[ } \tuplet 3/2 {s8 c'16]} |
   % bar 5
-  \su
-  \property Voice.Beam \override #'positions = #'(-4.5 . -4.9)
-  \times 2/3 {s16  \d e'8[ } \times 2/3 {s8  d'16]} |
+  \staffUp
+  \override Beam.positions = #'(-4.5 . -4.9)
+  \tuplet 3/2 {s16  \stemDown e'8.*2/3[ } \tuplet 3/2 {s8  d'16]} |
 
   % bar 6
-  \property Voice.Beam \override #'positions = #'( #f  .  #f )
-  \times 2/3 {s16  \d e'8[ } \times 2/3 {s8  d'16]} |
+  \tuplet 3/2 {s16  \stemDown e'8.*2/3[ } \tuplet 3/2 {s8  d'16]} |
 
   % bar 7
-  \times 2/3 {s16  \d e'8[ } \times 2/3 {s8  d'16]} |
+  \tuplet 3/2 {s16  \stemDown e'8.*2/3[ } \tuplet 3/2 {s8  d'16]} |
 
   % bar 8
-  \times 2/3 {s16  \d b8[ } \times 2/3 {s8  a16]} |
+  \override Beam.positions = #'(-0.6 . -0.5)
+  \tuplet 3/2 { \staffDown s16  \stemDown b8.*2/3[ } \tuplet 3/2 {s8  a16]} |
   
-  \sd
-  % bar 9  %% BAS-upper-voice, need positioned rest lower staff
-  \property Voice.Beam \override #'positions = #'(-0.6 . -0.5)
-  \times 2/3 {d16\rest  \d g8[ } \times 2/3 {s8  a16]} |
-  \times 2/3 {s16       \d g8[ } \times 2/3 {s8  a16]} |
-  \times 2/3 {s16       \d g8[ } \times 2/3 {s8  a16]} |
-  \property Voice.Beam \override #'positions = #'( 0.5 .  0.7)
-  \times 2/3 {s16       \d b8[ } \times 2/3 {s8 c'16]} |
+  \staffDown
+  % bar 9 
+  \override Beam.positions = #'(-0.6 . -0.5)
+  \tuplet 3/2 {s16  \stemDown g8.*2/3[ } \tuplet 3/2 {s8  a16]} |
+  \tuplet 3/2 {s16       \stemDown g8.*2/3[ } \tuplet 3/2 {s8  a16]} |
+  \tuplet 3/2 {s16       \stemDown g8.*2/3[ } \tuplet 3/2 {s8  a16]} |
+  \override Beam.positions = #'( 0.5 .  0.7)
+  \tuplet 3/2 {s16       \stemDown b8.*2/3[ } \tuplet 3/2 {s8 c'16]} |
 
 % bar 13
-  \property Voice.Beam \override #'positions = #'( 0.9 .  1.1)
-  \times 2/3 {s16  \d cis'8[ } \times 2/3 {s8 d'16]} |
+  \override Beam.positions = #'(-5.2 . -4.9)
+  \tuplet 3/2 {s16 \staffUp \stemDown cis'8.*2/3[ } \tuplet 3/2 {s8 d'16]} |
 
 % bar 14
-  \property Voice.Beam \override #'positions = #'( 1.1 .  1.4)
-  \times 2/3 {s16  \d dis'8[ } \times 2/3 {s8 e'16]} |
+  \override Beam.positions = #'(-5.0 . -4.4)
+  \tuplet 3/2 {s16  \stemDown dis'8.*2/3[ } \tuplet 3/2 {s8 e'16]} |
 
 % bar 15
-  \property Voice.Beam \override #'positions = #'( 2.2 .  1.4)
-  \times 2/3 {s16  \d   g'8[ } \times 2/3 {s8 f'16]} |
+  \override Beam.positions = #'(-5.0 . -4.4)
+  \tuplet 3/2 {s16  \stemDown   g'8.*2/3[ } \tuplet 3/2 {s8 f'16]} |
 
 % bar 16
-  \property Voice.Beam \override #'positions = #'( 0.9 .  1.1)
-  \times 2/3 {s16  \d dis'8[ } \times 2/3 {s8 e'16]} |
+  \override Beam.positions = #'(-5.0 . -4.4)
+  \tuplet 3/2 {s16  \stemDown dis'8.*2/3[ } \tuplet 3/2 {s8 e'16]} |
 
 % bar 17 axx % FROM bar 5
-  \su
-  \property Voice.Beam \override #'positions = #'(-4.5 . -4.0)
-  \times 2/3 {s16  \d e'8[ } \times 2/3 {s8  f'16]} |
+  \staffUp
+  \override Beam.positions = #'(-4.5 . -4.0)
+  \tuplet 3/2 {s16  \stemDown e'8.*2/3[ } \tuplet 3/2 {s8  f'16]} |
 
 % bar 18  pentole
-  \su
-  \property Voice.Beam \override #'positions = #'(-3.9 . -3.5)
-  \times 4/5 { \d fis'8[   s8  g'16]} |
+  \staffUp
+  \override Beam.positions = #'(-3.9 . -3.5)
+  \tuplet 5/4 { \stemDown fis'8.*2/3[   s8  g'16]} |
 
 % bar 19  pentole
-  \su
-  \property Voice.Beam \override #'positions = #'(-3.5 . -2.8)
-  \times 4/5 { \d gis'8[   s8  a'16]} |
+  \staffUp
+  \override Beam.positions = #'(-3.5 . -2.8)
+  \tuplet 5/4 { \stemDown gis'8.*2/3[   s8  a'16]} |
 
 % bar 20  pentole
-  \su
-  \property Voice.Beam \override #'positions = #'(-3.1 . -2.6)
-  \times 4/5 { \d ais'8[   s8  b'16]} |
+  \staffUp
+  \override Beam.positions = #'(-3.1 . -2.6)
+  \tuplet 5/4 { \stemDown ais'8.*2/3[   s8  b'16]} |
 
 % bar 21 axx % FROM bar 5
-  \su
-  \property Voice.Beam \override #'positions = #'(-2.1 . -2.6)
-  \times 2/3 {s16  \d d''8[ } \times 2/3 {s8  c''16]} |
+  \staffUp
+  \override Beam.positions = #'(-2.1 . -2.6)
+  \tuplet 3/2 {s16  \stemDown d''8.*2/3[ } \tuplet 3/2 {s8  c''16]} |
 
 % bar 22
-  \su
-  \property Voice.Beam \override #'positions = #'(-3.1 . -3.6)
-  \times 2/3 {s16  \d b'8[ }  \times 2/3 {s8   a'16]} |
+  \staffUp
+  \override Beam.positions = #'(-3.1 . -3.6)
+  \tuplet 3/2 {s16  \stemDown b'8.*2/3[ }  \tuplet 3/2 {s8   a'16]} |
 
 % bar 23  pentole
-  \su
-  \property Voice.Beam \override #'positions = #'(-3.1 . -3.6)
-  \times 4/5 { \d   a'8[   s8  g'16]} |
+  \staffUp
+  \override Beam.positions = #'(-3.1 . -3.6)
+  \tuplet 5/4 { \stemDown   a'8.*2/3[   s8  g'16]} |
 
 % bar 24  % From bar 7
-  \property Voice.Beam \override #'positions = #'(-3.5 . -4.4)
-  \times 2/3 {s16  \d e'8[ } \times 2/3 {s8  d'16]} |
+  \override Beam.positions = #'(-3.5 . -4.4)
+  \tuplet 3/2 {s16  \stemDown e'8.*2/3[ } \tuplet 3/2 {s8  d'16]} |
 
-  \sd
+  \staffDown
 % bar 25 pentole
-  \property Voice.Beam \override #'positions = #'(-0.6 . -0.5)
-  \times 4/5 {          \d g8[               s8  a16]} |
+  \override Beam.positions = #'(-0.6 . -0.5)
+  \tuplet 5/4 {  \stemDown g8.*2/3[  s8  a16] } |
 
 % bar 26 pentole
-  \property Voice.Beam \override #'positions = #'( 0.2 . -0.6)
-  \times 4/5 {         \d e'8[               s8 d'16]} |
+  \override Beam.positions = #'(-3.5 . -4.4)
+  \tuplet 5/4 { \staffUp \stemDown e'8.*2/3[               s8 d'16]} |
 
 % bar 27
-  \property Voice.Beam \override #'positions = #'(-0.6 . -0.5)
-  \times 2/3 {d16\rest  \d g8[ } \times 2/3 {s8  a16]} |
+  \override Beam.positions = #'(-0.6 . -0.5)
+  \tuplet 3/2 { \staffDown s16  \stemDown g8.*2/3[ } \tuplet 3/2 {s8  a16]} |
 
 % bar 28
-  \su
-  \property Voice.Beam \override #'positions = #'(-3.5 . -4.4)
-  \times 2/3 {s16  \su \d e'8[ } \times 2/3 {s8 d'16]} |
+  \staffUp
+  \override Beam.positions = #'(-3.5 . -4.4)
+  \tuplet 3/2 {s16  \staffUp \stemDown e'8.*2/3[ } \tuplet 3/2 {s8 d'16]} |
 
 % bar 29
-  \times 2/3 {s16  \su \d c'8}   s8                    |
+  \tuplet 3/2 {s16  \staffUp \stemDown c'8}   s8                    |
 
 % bar 30
-  \times 2/3 {s16  \su \d c'8}   s8                    |
+  \tuplet 3/2 {s16  \staffUp \stemDown c'8}   s8                    |
 
 % bar 31
-  \times 2/3 {s16  \su \d c'8}   s8                    |
+  \tuplet 3/2 {s16  \staffUp \stemDown c'8}   s8                    |
 
 % bar 32
-  \times 2/3 {s16  \su \d c'8}   s8                    |
+  \tuplet 3/2 {s16  \staffUp \stemDown c'8}   s8                    |
 
 % bar 33 - bar 34
-  %% s2
-           \sd
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-           c,8(                                         
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-           \su
-           d''8                                        |
+   \staffDown
+   \hideNotes
+   \shape #'((1.0 . 0.5) (0.0 . 7.0) (-6.4 . 5.3) (0.0 . 2.2)) Slur
+   c,8(                                         
+   \staffUp
+   s8                                        |
 
 % bar 34
-           \once \property Voice.NoteHead \set #'transparent = ##t
-           \once \property Voice.Stem \set #'transparent = ##t
-           g')
+           e')
 }
 
 
-lowerTwo = \notes{
+lowerTwo = {
   \voiceTwo
-  \property Voice.TupletBracket \set #'bracket-visibility = ##f
-  \property Voice.TupletBracket \set #'number-visibility = ##f
-  % \once \property Voice.Fingering \set #'padding = #3
-  \once \property Voice.TupletBracket \set #'number-visibility = ##t
-  \times 2/3 {c,16( ^\mf  g, e )} e,8\rest |
-  \times 2/3 {b,,16(      g, f )} e,8\rest |
-  \times 2/3 {c,16(       g, e )} f,8\rest |
-  \times 2/3 {e,16(       c  g )} g,8\rest |
+  \ignoreClashNote
+  \hideTupletBracket
+  
+  \tuplet 3/2 {c,16( ^\mf  g, e )} g,8\rest |
+  \hideTupletNumber 
+  \tuplet 3/2 { \adjSlurTwo b,,16( g, f ) } g,8\rest |
+  \tuplet 3/2 { \adjSlurTwo c,16(  g, e ) } g,8\rest |
+  \tuplet 3/2 { \adjSlurTwo e,16(  c  g ) } g,8\rest |
   % bar 5
   \slurUp
-  \times 2/3 {f,16(       c  a )} d,8\rest |
-  \times 2/3 {fis,16(     d  c')} d,8\rest |
+  \tuplet 3/2 { \algBeamTwo f,16(  c  a ) } d8\rest |
+  \tuplet 3/2 {fis,16(     d  c')} d8\rest |
   \break
-  \times 2/3 { g,16(      f  b )} d,8\rest |
-  \times 2/3 { g,,16(     g, f )} d,8\rest |
+  \tuplet 3/2 { g,16(      f!  b )} d8\rest |
+  \tuplet 3/2 { \adjSlurTwo g,,16_(     g, f )} g,8\rest |
   % bar 9
   \slurDown
-  \times 2/3 {c,16(       g, e )} e,8\rest |
-  \times 2/3 {b,,16(      g, f )} e,8\rest |
-  \times 2/3 {c,16(       g, e )} f,8\rest |
-  \times 2/3 {e,16(       c  g )} g,8\rest |
+  \tuplet 3/2 { \adjSlurTwo c,16(       g, e )} g,8\rest |
+  \tuplet 3/2 { \adjSlurTwo b,,16(      g, f )} g,8\rest |
+  \tuplet 3/2 { \adjSlurTwo c,16(       g, e )} g,8\rest |
+  \tuplet 3/2 { \adjSlurTwo e,16(       c  g )} g,8\rest |
 
   % bar 13
-  \times 2/3 {f,16(     c  a   )} g,8\rest |
+  \tuplet 3/2 {f,16^(     c!  a   )} d8\rest |
   \break
-  \times 2/3 {g,16(     c  bes )} g,8\rest |
-  \times 2/3 {a,16(     f    c')} g,8\rest |
-  \times 2/3 {g,16(     c    c')} g,8\rest |
+  \adjSlurTre
+  \tuplet 3/2 { \algBeamQua g,16^(     c  bes )} d8\rest |
+  \tuplet 3/2 { \algBeamQua a,16^(     f    c')} d8\rest |
+  \tuplet 3/2 { \algBeamQua g,16^(     c    c')} d8\rest |
 
   % bar 17
   \slurUp
-  \times 2/3 {a,16(     f    c')} g,8\rest |
-  \times 2/3 {b,16(     g    d')} g,8\rest |
-  \times 2/3 {c16(      g    e')} g,8\rest |
-  \times 2/3 {d16(      g    f')} g,8\rest |
+  \tuplet 3/2 { \algBeamQua a,16(     f    c')} d8\rest |
+  \override  TupletNumber.transparent = ##f
+  \once \override Beam.positions = #'( -4.7 . -2.7 )
+  \tuplet 3/2 {b,16(     g    d')} d8\rest |
+  \hideTupletNumber
+  \once \override Beam.positions = #'( -4.3 . -2.4 )
+  \tuplet 3/2 {c16(      g!   e')} d8\rest |
+  \tuplet 3/2 {d16(      g    f')} d8\rest |
   
   \break
   % bar 21
-  \times 2/3 {e16(      c'   g')} g,8\rest |
-  \times 2/3 {fis,16(   dis  c')} g,8\rest |
-  \times 2/3 {g,16(     e    c')} g,8\rest |
-  \times 2/3 {g,16(     f    b )} g,8\rest |
+  \tuplet 3/2 {e16(      c'   g')} d8\rest |
+  \tuplet 3/2 {fis,16(   dis  c')} d8\rest |
+  \once \override Beam.positions = #'( -5.4 . -2.7 )
+  \tuplet 3/2 {g,16(     e    c')} d8\rest |
+  \once \override Beam.positions = #'( -5.4 . -2.7 )
+  \tuplet 3/2 {g,16(     f    b )} d8\rest |
 
   % bar 25
   \slurDown
-  \times 2/3 {c,16(       g, e )} e,8\rest |
-  \times 2/3 {c,16(       g, f )} e,8\rest |
-  \times 2/3 {c,16(       g, e )} e,8\rest |
+  \tuplet 3/2 { \adjSlurTwo c,16(       g, e )} g,8\rest |
+  \tuplet 3/2 { \adjSlurTwo c,16(       g, f )} d8\rest |
+  \tuplet 3/2 { \adjSlurTwo c,16(       g, e )} g,8\rest |
   \break
   \slurUp
-  \times 2/3 {c,16(       g, f )} e,8\rest |
+  \tuplet 3/2 {c,16(       g, f )} d8\rest |
 
   % bar 29
-  \times 2/3 {c,16(       g, g )} e,8\rest |
-  \times 2/3 {c,16(       g, g )} e,8\rest |
-  \times 2/3 {c,16(^\markup{\italic {rit}}
-                          g, g )} e,8\rest |
-  \times 2/3 {c,16(       g, g )} e,8\rest |
+  \tuplet 3/2 {c,16(       g, g )} d8\rest |
+  \tuplet 3/2 {c,16(       g, g )} d8\rest |
+  \tuplet 3/2 {c,16(
+                          g, g )} d8\rest^\markup{\italic {rit.}} |
+  \tuplet 3/2 {c,16(       g, g )} d8\rest |
 
   % bar 33 
-  %% generates a 2.1.9 warning that tie isn't performed, 
-  %% however, it is rendered, don't remove.
   \tieDown
-  \times 2/3 {c,16~        g,    c         } 
+  \set tieWaitForNote = ##t
+  \tuplet 3/2 {c,16~ g,~  c~  } 
   s8                                       |
 
   % bar 34
-             <c,           g,    c  >4
-
+        <c,  g,  c  >4_\fermata
   \bar "|."
-
 }
 
-AuxUno = \notes {
-  \property Voice.TupletBracket \set #'bracket-visibility = ##f
-  \property Voice.TupletBracket \set #'number-visibility = ##f
-  s1*64/8                         |
-  s8
-  \times 2/3  {
-            s16 \tieDown
-  \once \property Voice.Stem     \set #'transparent = ##t
-  \once \property Staff.NoteCollision \override #'merge-differently-dotted = ##t
-                        g4*2/4~ }   |
-  \stemUp g4
-
-}
-
-AuxDuo = \notes {
-  \property Voice.TupletBracket \set #'bracket-visibility = ##f
-  \property Voice.TupletBracket \set #'number-visibility = ##f
-  s1*64/8                         |
-  \times 2/3 {  s8 s16   
-  %% \once \property Voice.NoteHead \set #'transparent = ##t
-  \once \property Voice.Stem     \set #'transparent = ##t
-  \once \property Staff.NoteCollision \override #'merge-differently-dotted = ##t
-  \tieDown
-                      e4*3/4~ }   |
-  %% \once \property Voice.NoteHead \set #'transparent = ##t
-  %% \once \property Voice.Stem     \set #'transparent = ##t
-   \stemUp e4
-}
-
-AuxTre = \notes {
-  \property Voice.TupletBracket \set #'bracket-visibility = ##f
-  \property Voice.TupletBracket \set #'number-visibility = ##f
-  s1*64/8                         |
-  \times 2/3 { s8  
-  \once \property Voice.NoteHead \set #'transparent = ##t
-  \once \property Voice.Stem     \set #'transparent = ##t
-  \once \property Staff.NoteCollision \override #'merge-differently-dotted = ##t
-                      c4*4/4~ }   |
-  \once \property Voice.NoteHead \set #'transparent = ##t
-  \once \property Voice.Stem     \set #'transparent = ##t
-   c4
-}
-
-AuxQtr = \notes {
-  \property Voice.TupletBracket \set #'bracket-visibility = ##f
-  \property Voice.TupletBracket \set #'number-visibility = ##f
-  s1*64/8                         |
-  \times 2/3 { s16   
-  \once \property Voice.NoteHead \set #'transparent = ##t
-  \once \property Voice.Stem     \set #'transparent = ##t
-  \once \property Staff.NoteCollision \override #'merge-differently-dotted = ##t
-                     g,4*5/4~ }   |
-  \once \property Voice.NoteHead \set #'transparent = ##t
-  \once \property Voice.Stem     \set #'transparent = ##t
-  g,4
-}
-
-%% When running lilypond:
-%% Interpreting music ...
-%% warning: can't find or create `Dynamics' called `uniqueContext0'
-%% This warning I cannot make any sense of, the "Dynamics" are
-%% rendered (it works). Perhaps a new Lilypond version will solve this.
-
-middleDynamics = \notes{
+middleDynamics = {
     s4*4
     % bar 5
-    s4\<  s8 s8\!
-    s4\>  s8 s8\!
+    \once \override Hairpin.to-barline = ##t
+    s4\<  s8 s16. s32\!
+    s4\>  s8 s16. s32
     % bar 9
-    s4*4
+    \once \override DynamicText #'extra-offset = #'(0.4 . 0.0 )
+    s4\mf s4*3
     % bar 13
-    s4-"cresc ..."
+    s4\cresc
     s4*3
     % bar 17
     s4
@@ -750,85 +652,58 @@ middleDynamics = \notes{
     s4^\ff
     s4\decr
     s4
-    s8 \rced s16  s32  s32\p
-    %% move \p left, clear from stem, therefore rather before bar line
+    s8 s16  s32  s32
     % bar 25
-    s4\< 
-    s8\!s8\>
-    s8\!s8
-    s4
+    \once \override DynamicText #'extra-offset = #'(-0.5 . 0.0 )
+    s32\p s16. s16. s32\< 
+    s16. s32\!\> s8
+    s8\!s16. s32\<
+    s16.. s64\!\> s16.s32
     % bar 29
-    s4\p\<
-    s8\! s8\>
+    s8\p s16\< s16
+    s16 s16 s16\! s32 s32\>
     s4
-    s8 s8\!
-    s16 s16-\pp
+    s16. s32\! s8
+    \once \override DynamicText #'extra-offset = #'(0.5 . 0.0 )
+    s4-\pp
+
 }
 
-lowerDynamics = \notes{
-    s8\sustainDown s16 s16\sustainUp
-    s4_"segue ..."
+lowerDynamics = {
+  %
+    s8\sustainOn s16 s16\sustainOff 
+    \once \override Voice.TextScript #'extra-offset = #'(0.0 . 1.5 )
+    s4_\markup { "segue ..."}
     s4*32
+  %
 }
-
-
 
 \score {
   \context PianoStaff <<
-    % Actually this works! See bottom note(*1)
-    % \property PianoStaff.TupletBracket \set #'bracket-visibility = ##f
     \time 2/8
-    \context Staff = upper <<
+    \context Staff = "upper" <<
       \clef violin
-      \context Voice = one \upperOne
-      \context Voice = two \upperTwo
+      \context Voice = "one" \upperOne
+      \context Voice = "two" \upperTwo
     >>  
     \new Dynamics <<
           \middleDynamics
     >>
-    \context Staff = lower <<
+    \context Staff = "lower" <<
       \clef bass
-      \context Voice = Uno \AuxUno
-      \context Voice = Duo \AuxDuo
-      \context Voice = Tre \AuxTre
-      \context Voice = Qtr \AuxQtr
-      \context Voice = one \lowerOne
-      \context Voice = two \lowerTwo
+      \context Voice = "one" \lowerOne
+      \context Voice = "two" \lowerTwo
     >>  
     \new Dynamics <<
           \lowerDynamics
     >>
   >>
-  \paper {
-     \translator {
-        \type "Engraver_group_engraver"
-        \name Dynamics
-        \consists "Output_property_engraver"
-        minimumVerticalExtent = #'(-1 . 1)
-
-        pedalSustainStrings = #'("Ped." "*Ped." "*")
-
-        \consists "Piano_pedal_engraver"
-        \consists "Script_engraver"
-        \consists "Dynamic_engraver"
-        \consists "Text_engraver"
-
-        %% TextScript \override #'font-relative-size = #1
-        TextScript \override #'font-shape = #'italic
-
-        \consists "Skip_event_swallow_translator"
-
-        \consistsend "Axis_group_engraver"
-    }
-
-    \translator {
-        \PianoStaffContext
+  \layout {
+    \context {
+        \PianoStaff
         \accepts Dynamics
-        VerticalAlignment \override #'forced-distance = #7
+        \consists #Span_stem_engraver
     }
-  }   %% end paper
+  }
   \midi { }  
 }
-
-
-
