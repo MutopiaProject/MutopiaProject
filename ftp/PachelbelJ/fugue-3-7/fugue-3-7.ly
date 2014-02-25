@@ -4,17 +4,22 @@
   title =  "Fugues on the Magnificat"
   mutopiatitle =  "Fugues on the Magnificat III. 7."
   subtitle =	"III. 7."
-  source = "Wien : Artaria, 1901 (Denkmaler der tonkunst in Osterreich; v. 17)"
+  source = "Wien: Artaria, 1901 (Denkmaler der tonkunst in Osterreich; v. 17)"
   composer = "Johann Pachelbel"
   mutopiacomposer = "PachelbelJ"
+  mutopiainstrument = "Piano"
   style = "Baroque"
-  enteredby =  "Steve Dunlop"
-  tagline =  "Music: public domain; Fingering copyright 2004 Steven J. Dunlop and licensed via GFDL and CC-ASAL"
-  maintainer = "Steve Dunlop" % updated by Francisco Vila <paconet.org@gmail.com>, 2014
-  maintainerweb = "www.nerstrand.net"
+  enteredby = "Steve Dunlop"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
+  maintainer = "Steve Dunlop"
+  % updated by Francisco Vila <paconet.org@gmail.com>, 2014
+  % Music: public domain; Fingering copyright 2004 Steven J. Dunlop and licensed via GFDL and CC-ASAL
+  maintainerWeb = "http://www.nerstrand.net/"
   lastupdated = "2014/2/19"
-  footer = "Mutopia-2004/02/29-420"
-  copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/1.0/" "Creative Commons Attribution ShareAlike 1.0 License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+
+ footer = "Mutopia-2014/02/25-420"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 % Note: The editorially added notes from the Artaria edition have been included
