@@ -11,19 +11,18 @@ mBreak = {}
   mutopiatitle = "Search-Light Rag"
   mutopiacomposer = "JoplinS"
   mutopiainstrument = "Piano"
-  date = "C. 1907"
+  date = "c. 1907"
   style = "Jazz"
   license = "Public Domain"
-  source = "Dover Publications, 1988" % scan from imslp.org
+  source = "Reproduction of original edition (1907)"
 
   filename = "search.ly"
   maintainer = "Chris Sawer"
-  maintainerEmail = "chris@sawer.uklinux.net"
-  maintainerWeb = "http://www.sawer.uklinux.net/"
-  lastupdated = "2004/Jan/27"
+  maintainerEmail = "chris@mutopiaproject.org"
 
-  tagline = ##f
-  footer = "Mutopia-2014/02/23-275"
+ footer = "Mutopia-2014/02/25-275"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 % Built-in \hideNotes and \unHideNotes can be used instead
