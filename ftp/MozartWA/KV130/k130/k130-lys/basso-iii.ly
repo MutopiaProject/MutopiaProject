@@ -59,7 +59,7 @@ bassoThirdMov =  \relative f {
 	| e4\p r r
 	| f r r
 	| f r r
-	| fis fis\deprecatedcresc fis
+	| fis fis\crescTextCresc fis
 	| g\f g g,
 	| c c'
     }

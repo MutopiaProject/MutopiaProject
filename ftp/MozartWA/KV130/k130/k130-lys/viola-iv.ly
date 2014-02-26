@@ -199,7 +199,7 @@ violaFourthMov =  \relative f' {
     | c bes4( es)
 
 % 160
-    | \slurHeadToStem d( c bes as)
+    | d( c bes as)
     | g2\f g4-.\p as-.
     | g2\f g4-.\p as-.
     | g2\f r

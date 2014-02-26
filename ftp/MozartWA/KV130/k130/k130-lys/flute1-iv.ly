@@ -89,8 +89,7 @@ fluteIFourthMov =  \relative f'' {
     | c4 bes' bes bes
 
 % 110
-    | bes8( a) g-. f-.
-    | a( g) f-. e-.
+    | bes8( a) g-. f-.  a( g) f-. e-.
     | f1 ~ 
     | f ~ 
     | f ~ 

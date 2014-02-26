@@ -120,9 +120,7 @@ violinIFirstMov =  \relative f'' {
       \grace { bes32 } a16[( g8.) g8-. g-.]
     | \grace { a32 }
  g16[( f8.) f8-. f-.] bes4 d
-    | a,2 << { e'2 } 
-	    \context Voice = "x" 	    { \blankNotes \setTrillWave e4 \beginTrillWave e8 \endTrillWave 
-	      \visibleNotes \tiny \stemUp d16[ e] } >>
+    | a,2 \afterGrace e'2\startTrillSpan { d16 [e] \stopTrillSpan }  |
     | d'16[( a8.) a8-. a-.] bes16[( g8.) g8-. g-.]
     | f4:\f a: d: f,:
 

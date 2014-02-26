@@ -1,4 +1,6 @@
 \version "2.17.14"
+\include "defs.ly"
+
 violaThirdMov =  \relative c' {
     \key f \major
     \clef alto
@@ -23,7 +25,7 @@ violaThirdMov =  \relative c' {
 	| f( e f d e f)
 	| d4 g( c,)
 	| d8 bes c( b c b)
-	| << { c( b c b } \context Voice = "x" { c2 }>>
+	| << {\voiceOne c( b c b } \new Voice { \voiceTwo c2 }>>
     }
 
     \key c \major
@@ -48,11 +50,11 @@ violaThirdMov =  \relative c' {
 
     \repeat volta 2 {
 	<< { g'4    g4. g8 g4 g g g g4. g8 g4 g } \\
-	  { g,4\f g4. g8 g4 g g g g4. g8 g4 g } >> r4 r
+	  { g,4\f g4. g8 g4 g g g g4. g8 g4 g } >> \oneVoice r4 r
 	| r b\p b
-	| r a a
+	| r a' a
 	| r as as
-	| a! a\deprecatedcresc a
+	| a! a\crescTextCresc a
 	| g\f g f
 	| <c, g' e'>2
     }

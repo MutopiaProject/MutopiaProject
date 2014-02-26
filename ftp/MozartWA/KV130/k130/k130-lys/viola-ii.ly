@@ -69,7 +69,7 @@ violaSecondMov =  \relative d' {
 	| f!8 c f,
 	| <a f'>4.
 	| << { f'8. e16 d8 } \\ { bes8 a16 c bes8 } >>
-	| g,8 r r16 g'
+	| g8 r r16 g'
 	| f4 \RaiseScript es16(\trill d32 es)
 	| d8\p bes d
 	| f4 g8
@@ -80,7 +80,7 @@ violaSecondMov =  \relative d' {
 	| r c'( a)
 	| c( bes) as'(
 	| g8)-. c,( d)
-	| r \raiseSlur f,(-. f-.)
+	| r f,(-. f-.)
 	| g4 r8
 	| r << { c a } { es' c } >>
 	| bes4.:16\f

@@ -76,9 +76,7 @@ fluteIFirstMov =  \relative f''' {
  a16[( g8.) g8 g]
     | \grace { a32 }
  g16[( f8.) f8 f] bes4 d
-    | f,2 << { e2 } 
-	    \context Voice = "x" 	    { \blankNotes \setTrillWave e4 \beginTrillWave e8 \endTrillWave 
-	      \visibleNotes \tiny \stemUp d16[ e] } >>
+    | f,2 \afterGrace e2\startTrillSpan { d16 [e] \stopTrillSpan }  |
     | a2 bes d1\f
 
 % 80
