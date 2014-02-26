@@ -11,10 +11,11 @@
       midiInstrument = #"contrabass"
       instrumentName = #"Contrabassi "
       shortInstrumentName = #"Cb. "
-    }
-	\transposition c 
-	\clef "bass"
-	\context Voice = "contrabassi" \contrabassi
+    } <<
+      \transposition c 
+      \clef "bass"
+      \new Voice = "contrabassi" \contrabassi
+    >>
   >>
 \include "paper.ly"
 \include "midi.ly"
