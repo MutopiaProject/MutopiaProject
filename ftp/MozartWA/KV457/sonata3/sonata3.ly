@@ -1,4 +1,4 @@
-\include "paper20.ly"
+#(set-global-staff-size 20)
 \include "english.ly"
 
 \header {
@@ -18,27 +18,27 @@
  maintainerWeb = "http://www.foxchange.com/~spamguy/"
  lastupdated = "2003/Oct/1"
 
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+ tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
  footer = "Mutopia-2003/10/06-358"
 }
 
-stemExtend = \once \property Voice.Stem \override #'length  = #20
+stemExtend = \once \override Stem.length  = #20
 
-\version "1.9.8"
+\version "2.17.97"
 
-upper = \notes\relative c'' {
+upper = \relative c'' {
 	\time 3/4
 	\key c \minor
-	\property Voice.TextScript \override #'padding = #2
-	\property Voice.DynamicText \override #'padding = #3.5
-	\property Voice.TextScript \override #'font-magnification = #1.2
-	\property Voice.sparseTies = ##t
+	\override TextScript.padding = #2
+	\override DynamicText.padding = #3.5
+	\override TextScript.font-magnification = #1.2
+	\set sparseTies = ##t
 	
 	% 0
 	\partial 4*1 g'4_>-\p-~-(^\markup {
 		\translate #(cons -6 1)
 		\translate #(cons 0 -1) { \large "Allegro assai (" }
-		\magnify #.8 { \note #1 #1 #1 }
+		\magnify #.8 { \note #"2." #1 }
 		\large " = 66)" }
 	
 	g eflat c-~
@@ -168,7 +168,7 @@ upper = \notes\relative c'' {
 	% 55
 	r eflat-.-\<-~ eflat-.-\!
 	
-	eflat4.-\f-( \times 2/3 { f16-[ eflat d-] } eflat8-.-)-[ f-.-]
+	eflat4.-\f-( \tuplet 3/2 { f16-[ eflat d-] } eflat8-.-)-[ f-.-]
 	
 	gflat2-( a,4
 	
@@ -182,7 +182,7 @@ upper = \notes\relative c'' {
 	
 	b-[-\< c dflat d-\! eflat-\> a,-]
 	
-	bflat4-)-\! \slurBoth r8 a''-[-( bflat a-]
+	bflat4-)-\! \slurNeutral r8 a''-[-( bflat a-]
 	
 	bflat4-) r8 a,-[-( bflat a-]
 	
@@ -282,7 +282,7 @@ upper = \notes\relative c'' {
 	
 	f'4-.-\f-) r r
 	
-	\slurBoth
+	\slurNeutral
 	r r g,4_>-\p-~-(
 	
 	g eflat c-~
@@ -438,8 +438,8 @@ upper = \notes\relative c'' {
 	
 	g4.-(^\markup { 
 		\translate #(cons 5 -7)
-		{ \column < \musicglyph #"scripts-turn"
-		\magnify #0.7 \musicglyph #"accidentals-1" > } }
+		{ \column { \musicglyph #"scripts.turn"
+		\magnify #0.7 \semisharp } } }
 	aflat8 g4-)
 	
 	% 170
@@ -458,7 +458,7 @@ upper = \notes\relative c'' {
 	
 	r c-.-~_\markup { \italic cresc. } c-.
 	
-	c4.-( \times 2/3 { d16-[ c b-] } c8-.-)-[ d-.-]
+	c4.-( \tuplet 3/2 { d16-[ c b-] } c8-.-)-[ d-.-]
 	
 	eflat2-\f-(-\> fsharp,4
 	
@@ -485,11 +485,11 @@ upper = \notes\relative c'' {
 	r8 fsharp,-[-( g fsharp-]
 	\break
 	
-	\property Voice.Slur \override #'beautiful = #'5
+	\override Slur.beautiful = #'5
 	g4-) r8 fsharp,-\f-[-( g fsharp-]
 	
 	g
-	\translator Staff = "down"
+	\change Staff = "down"
 	d8-[ eflat^\> b c fsharp,-]^\!
 	
 	g-\mf-[ fsharp g fsharp g fsharp-]
@@ -497,11 +497,11 @@ upper = \notes\relative c'' {
 	g-.-)-[^\< b-. d-. g-. b-. d-.-]
 	
 	% 190
-	\translator Staff = "up"
+	\change Staff = "up"
 	\clef "treble"
 	g-.-[ b-. d-. g-. b-. d-.-]^\!
 	
-	\property Voice.Slur \revert #'beautiful
+	\revert Slur.beautiful
 	< f! f'! >2.-^-\ff
 	
 	< b, b' >-^-~
@@ -518,7 +518,7 @@ upper = \notes\relative c'' {
 	<< { c2-( eflat8 d c4-\fp-) }
 	\\
 	{ g2 b4 c } >>
-	\stemBoth
+	\stemNeutral
 	r8 c-.-[ b-. c-.-]
 	
 	csharp-\fp-( d-.-) r d-.-[ csharp-. d-.-]
@@ -566,17 +566,17 @@ upper = \notes\relative c'' {
 	d-( b f'_>-)-~
 	\break
 		
-	\property Voice.Slur \override #'beautiful = #'100
+	\override Slur.beautiful = #'100
 	f8-\f-[-( d b aflat! f d-]
 	
 	b-[ aflat f d-]
-	\translator Staff = "down"
+	\change Staff = "down"
 	b-[ aflat-]
 
 	g-.-)
-	\translator Staff = "up"
+	\change Staff = "up"
 	g'-[-(-\> aflat a bflat b-]
-	\property Voice.Slur \revert #'beautiful
+	\revert Slur.beautiful
 	
 	% 220
 	c-[ d eflat e f fsharp-]-\!
@@ -737,7 +737,7 @@ upper = \notes\relative c'' {
 	\clef "bass"
 	eflat-.-)-[_\markup { \italic cresc. } c-( g c eflat, g-]
 	
-	\slurBoth
+	\slurNeutral
 	f-[ g f g f g-]-)
 	
 	eflat-[-( g eflat g eflat g-]-)
@@ -783,7 +783,7 @@ upper = \notes\relative c'' {
 	
 	c,4-\p-)-\! r r
 	
-	\clef "treble" \slurBoth
+	\clef "treble" \slurNeutral
 	r g''''8-\mf-[-( a b g-]
 	
 	c4-) c,8-[-( d eflat c-]
@@ -811,10 +811,10 @@ upper = \notes\relative c'' {
 	
 	%%%%%%%%%% BASS STAVE %%%%%%%%%%
 
-lower = \notes\relative c, {
+lower = \relative c, {
 	\time 3/4
 	\key c \minor
-	\property Voice.sparseTies = ##t
+	\set sparseTies = ##t
 	
 	\partial 4*1 r4
 	
@@ -855,8 +855,8 @@ lower = \notes\relative c, {
 	g-) } >> r4 < g, f' >-(
 	
 	
-	\stemUp < c eflat >-) r \stemBoth
-	\property Voice.DynamicText \set #'transparent = ##t
+	\stemUp < c eflat >-) r \stemNeutral
+	\override DynamicText.transparent = ##t
 	r-\f
 	
 	<< { d'4 eflat f
@@ -911,7 +911,7 @@ lower = \notes\relative c, {
 	
 	R2.
 	
-	\property Voice.DynamicText \set #'transparent = ##f
+	\override DynamicText.transparent = ##f
 	< c' eflat >2.-\p-(
 	
 	< b d f >2 < c eflat >4-)
@@ -930,10 +930,10 @@ lower = \notes\relative c, {
 	
 	eflat-[ f aflat f aflat f-]
 	
-	eflat-\sustainDown-[ f aflat f aflat-\sustainUp f-]
+	eflat-\sustainOn-[ f aflat f aflat-\sustainOff f-]
 	
 	% 50
-	eflat-\sustainDown-[ g bflat g bflat-\sustainUp g-]
+	eflat-\sustainOn-[ g bflat g bflat-\sustainOff g-]
 	
 	eflat-[ g bflat g bflat g-]
 	
@@ -941,14 +941,14 @@ lower = \notes\relative c, {
 	
 	eflat!-[ f aflat f aflat f-]
 	
-	eflat-\sustainDown-[ g bflat g bflat-\sustainUp g-]
+	eflat-\sustainOn-[ g bflat g bflat-\sustainOff g-]
 	
 	% 55
 	eflat-[ g bflat g bflat g-]
 	
 	c,-[ eflat a eflat a eflat-]
 	
-	cflat-\sustainDown-[ eflat gflat eflat gflat-\sustainUp eflat-]
+	cflat-\sustainOn-[ eflat gflat eflat gflat-\sustainOff eflat-]
 	
 	< bflat d >4 bflat' r
 	
@@ -985,7 +985,7 @@ lower = \notes\relative c, {
 	\clef "treble"
 	% 72 / 73
 	<< { gflat'-(
-	g!2-\sustainDown aflat!4-\sustainUp-) } \\
+	g!2-\sustainOn aflat!4-\sustainOff-) } \\
 	{ a,4-( bflat2.-) } >>
 
 	\clef "bass"
@@ -1039,21 +1039,21 @@ lower = \notes\relative c, {
 	% 95
 	bflat'-( c d
 	
-	eflat-\sustainDown-) r r
+	eflat-\sustainOn-) r r
 	
 	R2.
 	
 	\clef "bass"
-	< eflat,,,, f a >2.^>-\sustainUp-\sustainDown
+	< eflat,,,, f a >2.^>-\sustainOff-\sustainOn
 
-	< eflat' f a >2.^>-\sustainUp-\sustainDown
+	< eflat' f a >2.^>-\sustainOff-\sustainOn
 		
 	% 100
-	< d f b >2.^>-\sustainUp-\sustainDown
+	< d f b >2.^>-\sustainOff-\sustainOn
 	
-	< c d aflat' >2.^>-\sustainUp-\sustainDown
+	< c d aflat' >2.^>-\sustainOff-\sustainOn
 	
-	< b d g >4-.-\sustainUp r r
+	< b d g >4-.-\sustainOff r r
 	
 	R2.
 
@@ -1094,8 +1094,8 @@ lower = \notes\relative c, {
 	
 	g-) } >> r4 < g, f' >-(
 	
-	\stemUp < c eflat >-) r \stemBoth
-	\property Voice.DynamicText \set #'transparent = ##t
+	\stemUp < c eflat >-) r \stemNeutral
+	\override DynamicText.transparent = ##t
 	r-\f
 	
 	<< { d'4 eflat f
@@ -1192,9 +1192,9 @@ lower = \notes\relative c, {
 	
 	g,4 bflat d
 	
-	< b d f >2.-\sustainDown-~
+	< b d f >2.-\sustainOn-~
 	
-	< b d f >4-\sustainUp r r
+	< b d f >4-\sustainOff r r
 	
 	c,8^\p-[-( eflat g eflat g eflat-]-)
 	
@@ -1221,7 +1221,7 @@ lower = \notes\relative c, {
 	
 	a,-[ c f c f c-]
 	
-	\stemBoth
+	\stemNeutral
 	aflat!-[ c eflat! c eflat c-]
 	
 	< g b >4 g' r
@@ -1243,7 +1243,7 @@ lower = \notes\relative c, {
 	r g, r
 	
 	r8
-	\translator Staff = "up"
+	\change Staff = "up"
 	r8 r4 r
 	
 	R2.
@@ -1251,7 +1251,7 @@ lower = \notes\relative c, {
 	R2.
 		
 	% 190
-	\translator Staff = "down"
+	\change Staff = "down"
 	R2.
 
 	r4 < aflat aflat' >-. < aflat' aflat' >->-~
@@ -1265,7 +1265,7 @@ lower = \notes\relative c, {
 	% 195
 	g2-) < fsharp eflat'! >4-.
 	
-	<< { eflat'2-\sustainDown-( f!4-\sustainUp-) } \\ { g,2. } >>
+	<< { eflat'2-\sustainOn-( f!4-\sustainOff-) } \\ { g,2. } >>
 
 	c,8-[-( g' eflat g c, g'-]-)
 	
@@ -1311,16 +1311,16 @@ lower = \notes\relative c, {
 	
 	< aflat d f >
 	
-	< g d' f >4-.-\sustainDown r r
+	< g d' f >4-.-\sustainOn r r
 	
-	r-\sustainUp r
-	\translator Staff = "up"
+	r-\sustainOff r
+	\change Staff = "up"
 	\clef "treble"
-	\once \property Voice.Rest \override #'staff-position = #5
+	\once \override Rest.staff-position = #5
 	r
 	
 	r8
-	\translator Staff = "down"
+	\change Staff = "down"
 	\clef "bass"
 	r8 r4 r
 	
@@ -1349,35 +1349,35 @@ lower = \notes\relative c, {
 	\clef "bass"
 	< eflat, g >2.
 	
-	< d f aflat! >-\fermata-\sustainDown-~
+	< d f aflat! >-\fermata-\sustainOn-~
 	
-	< d f aflat >4-\sustainUp r r
+	< d f aflat >4-\sustainOff r r
 	
 	R2.
 	
 	< b d >2.
 	
-	< bflat! dflat g >2.-\fermata-\sustainDown-~
+	< bflat! dflat g >2.-\fermata-\sustainOn-~
 	
 	% 235
-	< bflat dflat g >4-\sustainUp r r
+	< bflat dflat g >4-\sustainOff r r
 
 	R2.
 	
 	< e c' >2.
 	
-	< f c' >-\fermata-\sustainDown-~
+	< f c' >-\fermata-\sustainOn-~
 	
-	< f c' >4-\sustainUp r r
+	< f c' >4-\sustainOff r r
 		
 	% 240
 	R2.
 
 	< f aflat >2.
 	
-	< fsharp a >-\fermata-\sustainDown-~
+	< fsharp a >-\fermata-\sustainOn-~
 	
-	< fsharp a >4-\sustainUp r r
+	< fsharp a >4-\sustainOff r r
 	
 	R2.
 	
@@ -1550,6 +1550,11 @@ lower = \notes\relative c, {
       \lower
       >>  
   >>
-  \paper { }  
-  \midi { \tempo 4 = 198 }
+  \layout { }  
+  
+  \midi {
+    \tempo 4 = 198
+    }
+
+
 }
