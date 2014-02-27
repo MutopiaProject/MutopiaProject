@@ -1,28 +1,29 @@
 \include "english.ly"
-%#(set-default-paper-size "letter")
-#(set-global-staff-size 16)
+#(set-default-paper-size "letter")
+%#(set-global-staff-size 16)
 \version "2.18.0"
 
 \header {
 	date = "1854"
 	source = "Foster's Melodies: New York: Horace Waters, No.481 Broadway"
 	style = "strophic with chorus"
-	instrument = "Voice and Piano"
+	subtitle = "Voice and Piano"
 	copyright = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"
 	lastupdated = "11/14/2003"
+	title = "Hard Times Come Again No More"
 	title = \markup { \normal-text \abs-fontsize #18 \column { "Hard Times Come Again No More" \null } }
 	poet = \markup \fontsize #1 "Text by Stephen Collins Foster" 
 	composer = \markup { \right-align \column { \fontsize #1  \caps  "Stephen Collins Foster" \fontsize #0 \caps "1826-1864" } }
 	mutopiacomposer = "FosterSC"
 	mutopiastyle = "Song"
+	mutopiainstrument = "Voice,Piano"
 	mutopiaopus = ""
-	
-	footer = "Mutopia-2003/12/16-371"
+
+        footer = "Mutopia-2014/02/27-371"	
 	copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
-	tagline = ##f
-	
+        tagline =  ##f
 	}
 	
 %definitions ------------------
@@ -30,15 +31,14 @@ partialTreQtr = \set Timing.measurePosition = #(ly:make-moment 1/4)
 partialUnoQtr = \set Timing.measurePosition = #(ly:make-moment 3/4)
 
 \paper {
-  top-margin = 6\mm
+  top-margin = 7\mm
   bottom-margin = 6\mm
   top-markup-spacing #'basic-distance = #8
   markup-system-spacing.basic-distance  = #10
+  top-system-spacing.basic-distance = #15
   system-system-spacing.basic-distance  = #13
   ragged-bottom = ##t
   scoreTitleMarkup = \markup \null
-  evenHeaderMarkup = \markup \null
-  oddHeaderMarkup = \markup \null
 }
 
 MEL =  \relative c' { 
@@ -404,8 +404,8 @@ CHOR =  \lyricmode {
 
 \score {  <<
 	\context ChoirStaff \with {  
-	   \override StaffGrouper.staff-staff-spacing.padding = #5
-           \override StaffGrouper.staff-staff-spacing.basic-distance = #6
+	   \override StaffGrouper.staff-staff-spacing.padding = #4
+           \override StaffGrouper.staff-staff-spacing.basic-distance = #5
 	}
 	<<
 		\new Staff  { \clef treble \TEN }
