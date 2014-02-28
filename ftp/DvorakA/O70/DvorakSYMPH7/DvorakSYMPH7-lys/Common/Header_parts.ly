@@ -61,7 +61,7 @@
 
   % Pour publication dans MUTOPIA
   mutopiatitle = "Symphony Nr. 7"
-  mutopiatitle = "DvorakA"
+  mutopiacomposer = "DvorakA"
   mutopiaopus = "Op.70"
   mutopiainstrument = "Orchestra"
   date = "1885"
@@ -73,7 +73,6 @@
   maintainerWeb = "http://www.espace-midi.com/lilypond/en"
   moreInfo = "Compiled with LilyPond 2.16.2 - Unzip using the original directory structure"
 
- mutopiacomposer = "DvorakA"
  footer = "Mutopia-2014/01/18-1901"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
