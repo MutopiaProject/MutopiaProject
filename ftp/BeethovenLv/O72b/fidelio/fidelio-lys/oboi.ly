@@ -1,10 +1,8 @@
-theOboes = \notes \relative e'' {
+\version "2.18.0"
+theOboes =  \relative e'' {
 	\clef "treble"
 	\time 2/2
 	\key e \major
-	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
 	
 	e4.\f b8 b4-. r4 								|
 	gsharp'4.\sf e8 e4-. r4							|
@@ -24,24 +22,24 @@ theOboes = \notes \relative e'' {
 	f1\pp(\<
 	d)\!\>
 	< c e >\pp~
-	\break
+	\mbreak
 	
 	< c e >					|
 	< e g >~				|
 	< e g >					|
-	\break
+	\mbreak
 	
 	< f a >~				|
 	< f a >(				|
 	< fsharp! a >)~			|
 	< fsharp a >~			|
-	\break
+	\mbreak
 	
 	< fsharp! a >~			|
 	< fsharp a >~			|
 	< fsharp a >~			|
 	< fsharp a >			|
-	\break
+	\mbreak
 	
 	< csharp asharp' >~		|
 	< csharp asharp' >		|
@@ -69,7 +67,7 @@ theOboes = \notes \relative e'' {
 	< fsharp a >1\sf~								|
 	< fsharp a >									|
 	< e gsharp >~
-	< e gsharp >2 gsharp8-.[^\zu e-. csharp-. b-.]
+	< e gsharp >2 gsharp8-.[^\markup{\bold "zu 2"} e-. csharp-. b-.]
 	asharp4 r r2
 	
 	R1*7
@@ -84,7 +82,7 @@ theOboes = \notes \relative e'' {
 		< e gsharp >4 < dsharp fsharp >8 < dsharp fsharp >
 	< e gsharp >4 < dsharp fsharp >8 < dsharp fsharp >
 		< e gsharp >4 < dsharp fsharp >8 < dsharp fsharp >
-	< e gsharp >4 e2.\ff^\zu
+	< e gsharp >4 e2.\ff^\markup{\bold "zu 2"}
 	e8[ dsharp csharp b] a[ gsharp fsharp e]
 	< csharp' csharp' >4 < csharp csharp' >2.
 	< csharp csharp' >8[ < b b' > < a a' > < gsharp gsharp' >]
@@ -176,7 +174,7 @@ theOboes = \notes \relative e'' {
 	< c e >4\f < b d >8 < b d > < c e >4 < b d >8 < b d >
 	< c e >4 < b d >8 < b d > < c e >4 < b d >8 < b d >
 	< c e >1\ff
-	c'8[^\zu b a g] f[ e d c]
+	c'8[^\markup{\bold "zu 2"} b a g] f[ e d c]
 	
 	\key c \major
 	
@@ -222,7 +220,7 @@ theOboes = \notes \relative e'' {
 	< fsharp a >~
 	< fsharp a >\fermata
 	
-	c4.\f^\zu b8 b4 r
+	c4.\f^\markup{\bold "zu 2"} b8 b4 r
 	c4. b8 b4 r
 	c4-. b-. c4-. b-.
 	c4-. b-. c-. b-.
@@ -256,20 +254,20 @@ theOboes = \notes \relative e'' {
 	< a b >~
 	< a b >~
 	< a b >
-	gsharp4\sf^\zu fsharp a\sf gsharp
+	gsharp4\sf^\markup{\bold "zu 2"} fsharp a\sf gsharp
 	fsharp\sf e dsharp\sf e
 	e\sf e e\sf e
 	e\sf e dsharp\sf e
 	fsharp\sf gsharp a\sf asharp
 	b\sf b b\sf b
-	gsharp4\sf^\zu fsharp a\sf gsharp
+	gsharp4\sf^\markup{\bold "zu 2"} fsharp a\sf gsharp
 	fsharp\sf e dsharp\sf e
 	e\sf e e\sf e
 	e\sf e dsharp\sf e
 	fsharp\sf gsharp a\sf < asharp, asharp' >				|
 	< b b' >\sf < b b' > < b b' >\sf < b b' >				|
 	<< { e4 } \\ { e4 } >> r4 r2							|
-	e4.\sf^\zu b8 b4 r										|
+	e4.\sf^\markup{\bold "zu 2"} b8 b4 r										|
 	gsharp'4 r r2											|
 	gsharp4.\sf e8 e4 r										|
 	b' r r2													|

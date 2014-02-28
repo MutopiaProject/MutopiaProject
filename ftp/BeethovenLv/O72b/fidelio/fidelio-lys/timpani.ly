@@ -1,9 +1,7 @@
-theTimpani = \notes \relative c {
+\version "2.18.0"
+theTimpani =  \relative c {
 	\clef "bass"
 	\time 2/2
-	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
 	
 	e4\f r8 b b4-. r4					|
 	e4\f r8 e e4-. r4					|

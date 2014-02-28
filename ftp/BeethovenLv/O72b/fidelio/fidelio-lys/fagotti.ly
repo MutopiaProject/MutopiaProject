@@ -1,21 +1,19 @@
-theBassoons = \notes \relative a {
-	\property Score.skipBars = ##t
+\version "2.18.0"
+theBassoons =  \relative a {
+	\set Score.skipBars = ##t
 	
 	\clef "bass"
 	\time 2/2
 	\key e \major
 	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
-	
-	e4.\f^\zu b8 b4-. r
+	e4.\f^\markup{\bold "zu 2"} b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4-. e-.
 	b-. r r2\fermata
 	
 	R1*8
 	
-	a'4.\f^\zu e8 e4-. r
+	a'4.\f^\markup{\bold "zu 2"} e8 e4-. r
 	csharp'4.\sf a8 a4-. r
 	e'4.\sf csharp8 csharp4-. a-.
 	e-. r r2\fermata
@@ -78,7 +76,7 @@ theBassoons = \notes \relative a {
 	< fsharp a >1\sf~
 	< fsharp a >
 	< e gsharp >~
-	< e gsharp >2 gsharp8-.[^\zu e-. csharp-. b-.]
+	< e gsharp >2 gsharp8-.[^\markup{\bold "zu 2"} e-. csharp-. b-.]
 	asharp4 r r2
 	R1
 	r4 fsharp'\p^\markup { \bold 1. } r fsharp
@@ -90,13 +88,13 @@ theBassoons = \notes \relative a {
 	fsharp r r2
 	r4 gsharp r gsharp
 	e b2( csharp4)
-	b1\p~^\zu
+	b1\p~^\markup{\bold "zu 2"}
 	b~_\cr
 	b~
 	b4\f < fsharp a >8 < fsharp a > < e gsharp >4 < fsharp a >8 < fsharp a >
 	< e gsharp >4 < fsharp a >8 < fsharp a > < e gsharp >4 < fsharp a >8 < fsharp a >
 	< e gsharp >4 < e e' >2.\ff
-	e'8[^\zu dsharp csharp b] a[ gsharp fsharp e]
+	e'8[^\markup{\bold "zu 2"} dsharp csharp b] a[ gsharp fsharp e]
 	csharp'4 csharp2.
 	csharp8[ b a gsharp] fsharp[ e dsharp csharp]
 	< asharp' csharp >1~
@@ -105,7 +103,7 @@ theBassoons = \notes \relative a {
 	< asharp csharp >2. < b csharp >4\sf
 	< asharp csharp >4 < b csharp >4\sf < asharp csharp > < b csharp >4\sf
 	< asharp csharp > < b csharp >4\sf < asharp csharp > < fsharp! asharp >\sf
-	< b, b' > dsharp\sf^\zu e csharp\sf
+	< b, b' > dsharp\sf^\markup{\bold "zu 2"} e csharp\sf
 	fsharp fsharp,\sf fsharp' fsharp,\sf
 	< b b' > < fsharp' a! >\p( < e gsharp >) r
 	r < fsharp a >\p( < e gsharp >) r
@@ -113,7 +111,7 @@ theBassoons = \notes \relative a {
 	r < fsharp a >\p( < e gsharp >) < csharp' e >\f(
 	< b dsharp >) < b dsharp >8 < b dsharp > < b dsharp >4 r
 	< b dsharp >4 < b dsharp >8 < b dsharp > < b dsharp >4 r
-	b,4^\zu b8 b b4 b8 b
+	b,4^\markup{\bold "zu 2"} b8 b b4 b8 b
 	b4 b8 b b4 b8 b
 	b4 r r2
 	
@@ -223,7 +221,7 @@ theBassoons = \notes \relative a {
 	< e g >) < c c' >2\p < f aflat >4(
 	< e g >) < c e >8 < c e > < c e >4 r
 	< e g >4 < e g >8 < e g > < e g >4 r
-	c4^\zu c8 c c4 c8 c
+	c4^\markup{\bold "zu 2"} c8 c c4 c8 c
 	c4 c8 c c4 c8 c
 	c4 c8 c c4 c8 c
 	c4 c8 c c4 c8 c
@@ -238,14 +236,14 @@ theBassoons = \notes \relative a {
 	
 	\key e \major
 	
-	e4.\ff^\zu b8 b4-. r
+	e4.\ff^\markup{\bold "zu 2"} b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4-. e-.
 	b-. r r2\fermata
 	
 	R1*5
 	
-	\times 4/6 { e4\p(_\markup { \translate #(cons 4 -1) \italic dolce }
+	\tuplet 6/4 { e4\p(_\markup { \translate #(cons 4 -1) \italic dolce }
 		gsharp b d csharp b) }
 	a r r2
 	
@@ -256,7 +254,7 @@ theBassoons = \notes \relative a {
 	< fsharp a >\fermata
 	< c c' >4.\f < b b' >8 < b b' >4 r
 	< c c' >4. < b b' >8 < b b' >4 r
-	c4-.^\zu b-. c-. b-.
+	c4-.^\markup{\bold "zu 2"} b-. c-. b-.
 	c-. b-. c-. b-.
 	e-. dsharp!-. e-. dsharp-.
 	e-. dsharp-. e-. dsharp-.

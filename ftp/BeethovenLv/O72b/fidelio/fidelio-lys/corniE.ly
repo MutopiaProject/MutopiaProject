@@ -1,11 +1,9 @@
-theHornsfirst = \notes \relative c' {
-	\property Staff.transposing = #-8
+\version "2.18.0"
+theHornsfirst =  \relative c' {
+	\transposition e 
 	\clef "treble"
 	\time 2/2
 	\key c \major
-	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
 	
 	< c c' >4.\f < g g' >8 < g g' >4-. r			|
 	< e' e' >4.\sf < c c' >8 < c c' >4-. r			|
@@ -26,7 +24,7 @@ theHornsfirst = \notes \relative c' {
 	< c c' >4 r r2							|
 	< c c' >2~ < c c' >4. < c c' >8			|
 	
-	f'4.\f^\zu c8 c4-. r				|
+	f'4.\f^\markup{\bold "zu 2"} c8 c4-. r				|
 	f4.\sf f8 f4-. r					|
 	c4.\sf c8 c4-. c-.					|
 	c-. r r2\fermata					|
@@ -57,7 +55,7 @@ theHornsfirst = \notes \relative c' {
 	d'4( f e d										|
 	c e g2)											|
 	d4( f e d)										|
-	\break
+	\mbreak
 	
 	c g \clef "bass" c,, g							|
 	c, r r2
@@ -88,8 +86,8 @@ theHornsfirst = \notes \relative c' {
 	< d f >								|
 	< c e >1~							|
 	< c e >2 < c, c' >4 < c c' >		|
-	<< { d'4 } \\ { c4 } >> d2\p(^\zu e4)|
-	d1~^\markup { \bold {1.2. zu 2} }	|
+	<< { d'4 } \\ { c4 } >> d2\p(^\markup{\bold "zu 2"} e4)|
+	d1~^\markup { \bold {1.2. markup{\bold "zu 2"} 2} }	|
 	d1~									|
 	d1~									|
 	d4 d2( e4)							|
@@ -113,11 +111,11 @@ theHornsfirst = \notes \relative c' {
 	< c d >							|
 	< c d >4 r r2					|
 	< c d >4 r r2					|
-	d4^\zu r d r					|
+	d4^\markup{\bold "zu 2"} r d r					|
 	d r d r							|
 	d r < c e > r					|
-	d^\zu d\sf d d\sf				|
-	< g, d' > r r d'\f~^\zu			|
+	d^\markup{\bold "zu 2"} d\sf d d\sf				|
+	< g, d' > r r d'\f~^\markup{\bold "zu 2"}			|
 	d r r d\f~											|
 	d r r d\f~											|
 	d r r d\f~											|
@@ -174,7 +172,7 @@ theHornsfirst = \notes \relative c' {
 	< c g' >1~									|
 	< c g' >2 < c, c' >8[ < c c' > < c c' > < c c' >]
 	< c c' >4 << { c'2( d4) } \\ { c2(\p d4) } >>
-	c1~^\zu
+	c1~^\markup{\bold "zu 2"}
 	c~										|
 	c~										|
 	c4 c2( d4)								|
@@ -187,7 +185,7 @@ theHornsfirst = \notes \relative c' {
 	
 	R1*3
 	
-	r4 eflat2(^\zu f4)_\cr					|
+	r4 eflat2(^\markup{\bold "zu 2"} f4)_\cr					|
 	eflat4 eflat2 eflat4					|
 	eflat eflat r eflat						|
 	eflat eflat r eflat						|
@@ -195,7 +193,7 @@ theHornsfirst = \notes \relative c' {
 	eflat4 eflat8 eflat eflat4 eflat8 eflat |
 	c1\ff
 	R1
-	f^\zu
+	f^\markup{\bold "zu 2"}
 	f
 	f~
 	f
@@ -255,7 +253,7 @@ theHornsfirst = \notes \relative c' {
 	< c c' >4.\sf < g g' >8 < g g' >4 r
 	<< { d''4. } \\ { d4.\sf } >> < g,, g' >8 < g g' >4 r
 	< g' g' >4.\sf < g, g' >8 < g g' >4 r
-	c'4.\p^\zu g8 g4 r
+	c'4.\p^\markup{\bold "zu 2"} g8 g4 r
 	c4. g8 g4 r
 	d'4. g,8 g4 r
 	g'4. g,8 g4 r

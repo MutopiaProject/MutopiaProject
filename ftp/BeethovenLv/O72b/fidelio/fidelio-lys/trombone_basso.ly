@@ -1,14 +1,12 @@
-theBassTrombones = \notes \relative c {
+\version "2.18.0"
+theBassTrombones =  \relative c {
 	\clef "bass"
 	\time 2/2
 	\key e \major
 	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
-	
 	r1
 	R1*2
-	R1\fermata
+	r1\fermata
 	R1*225
 	
 	e4.\ff b8 b4-. r
