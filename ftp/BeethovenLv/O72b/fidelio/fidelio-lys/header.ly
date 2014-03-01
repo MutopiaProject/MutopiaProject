@@ -25,6 +25,6 @@
  tagline = ##f
 }
 \paper {
-  top-margin = 10
-  bottom-margin = 8
+  top-margin = 10 \mm
+  bottom-margin = 8 \mm
 }

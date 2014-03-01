@@ -2,8 +2,8 @@
 %%% for providing the old texts that would otherwise rot on the shelves.
 
 \version "2.18.0"
+#(set-global-staff-size 14)
 
-#(set-global-staff-size 13)
 \include "english.ly"
 \include "defs.ly"
 
@@ -27,12 +27,11 @@
 
 \paper {
   left-margin = 18
+  right-margin = 14
 }  
 
 \score {
   <<
-%  	\override Score.InstrumentName.padding				= #12
-
     \context StaffGroup ="woodwinds" <<
       \context Staff ="flauti" <<
       	\override Score.MetronomeMark.transparent = ##t
@@ -138,7 +137,7 @@
   \layout {
 	indent = 20.0\mm
 	%textheight = 300.0\mm
-	line-width = 470\pt
+%	line-width = 470\pt
 %	papersize = "a4"
 
     \context { \Staff \RemoveEmptyStaves }
