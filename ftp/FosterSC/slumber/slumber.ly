@@ -1,4 +1,4 @@
-\version "2.17.97"
+\version "2.18.0"
 \include "english.ly"
 #(set-global-staff-size 16)
 
@@ -19,11 +19,24 @@
 	mutopiaopus = ""
 	mutopiastyle = "Song"
 
-	tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2003/12/11-370"
-	} 
-	
-RH = 
+ footer = "Mutopia-2014/02/28-370"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
+  }
+
+\paper {
+  top-margin = 7\mm
+  bottom-margin = 6\mm
+  top-markup-spacing #'basic-distance = #8
+  markup-system-spacing.basic-distance = #10
+  top-system-spacing.basic-distance = #15
+  system-system-spacing.basic-distance = #13
+%  ragged-bottom = ##t
+  scoreTitleMarkup = \markup \null
+}
+mbreak = {\break}
+
+RH =
 	\relative c'' {
 	\key ef\major
 	\time 6/8
@@ -34,7 +47,7 @@ RH =
 %3
 	ef4 d16 c16	bf8 af g
 %4
-	g8 f ef f4. \break
+	g8 f ef f4. \mbreak
 %5
 	bf8 g' f ef4 d8
 %6
@@ -42,7 +55,7 @@ RH =
 %7
 	bf8 ef g, f g f
 %8
-	ef4.~ ef4. \bar ".." \break
+	ef4.~ ef4. \bar ".." \mbreak
 %9
 	r8 <g ef bf> <g ef bf> r <af f bf,> <af f bf,>
 %10
@@ -58,7 +71,7 @@ RH =
 %15
 	r8 <af ef c> <af ef c> r <g ef bf> <g ef bf>
 %16
-	<ef bf g>8 r <d bf af> <ef bf g>4. 
+	<ef bf g>8 r <d bf af> <ef bf g>4.
 %17
 	r8 bf f' af f bf,
 %18
@@ -68,7 +81,7 @@ RH =
 %20
 	r8 bf ef g ef bf
 %21
-	r8 bf f' af f bf, 
+	r8 bf f' af f bf,
 %22
 	r8 bf ef g ef bf
 %23
@@ -101,10 +114,10 @@ RH =
 	ef4.~ ef4. \bar ".."
 
 }
-	
-	
-	
-LH = 
+
+
+
+LH =
 	\relative c {
 	\key ef\major
 	\time 6/8
@@ -121,7 +134,7 @@ LH =
 %6
 	\override Stem.details.beamed-lengths = #'(5.26 3.26 1.5)
 	af,8 \clef treble c' ef
-	\revert Stem.beamed-lengths 
+	\revert Stem.beamed-lengths
 	af ef c
 %7
 	\clef bass bf,8 <g' bf ef> <g bf ef> bf, <af' bf d> <af bf d>
@@ -180,23 +193,24 @@ LH =
 %34
 	\override Stem.details.beamed-lengths = #'(5.26 3.26 1.5)
 	af8 \clef treble c' ef
-	\revert Stem.beamed-lengths 
+	\revert Stem.beamed-lengths
 	af ef c
 %35
 	\clef bass bf,8 <g' bf ef> <g bf ef> bf, <af' bf d> <af bf d>
 %36
 	ef,8 g bf ef4.
-	
+
 	}
-	
-	
-MEL = 
+
+
+MEL =
 	\relative c'' {
 	\key ef\major
 	\time 6/8
 	\autoBeamOff
 %1
-	s2. s2. s2. s2. s2. s2. s2. s2.
+	R2.*8
+%	s2. s2. s2. s2. s2. s2. s2. s2.
 %9
 	g8 f ef f g f
 %10
@@ -253,14 +267,14 @@ MEL =
 	s2.
 %36
 	s2.
-	
+
 	}
-	
+
 
 VerOne = \context Lyrics = VerOne \lyricmode {
 	\time 6/8
-	\override LyricText.font-series = #'bold
-	\override LyricText.font-relative-size = #'+1
+%    \override LyricText.font-series = #'bold
+%    \override LyricText.font-size = #+1
 	\skip 2.  \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2.
 	Slum8 -- ber, my dar -- ling, thy moth -- er is near,4.
 	Guard8 -- ing thy dreams from all ter -- ror and fear,4.
@@ -278,8 +292,8 @@ VerOne = \context Lyrics = VerOne \lyricmode {
 
 VerTwo = \context Lyrics = VerTwo \lyricmode {
 	\time 6/8
-	\override LyricText.font-series = #'bold
-	\override LyricText.font-relative-size = #'+1
+%    \override LyricText.font-series = #'bold
+%    \override LyricText.font-size = #+1
 	\skip 2.  \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2.
 	Slumb8 -- er, my dar -- ling, till morn's blush -- ing ray4.
 	Brings8 to the world the glad tid -- ings of day;4.
@@ -293,34 +307,42 @@ VerTwo = \context Lyrics = VerTwo \lyricmode {
 	The8 wan8 -- der -- ing dews4 by16 the16 flow'rs8 are car -- essed,4.
 	Slum8 -- ber, my dar -- ling, I'll wrap thee up warm,4
 	And8 pray4 that16 the an8 -- gels will shield8. thee16 from8 harm.4.
-}	
-	
-	
-\score { <<
+}
 
-	\context Staff  \MEL
-		\set Staff.midiInstrument = "violin"
-		\new Lyrics { \VerOne }
-		\new Lyrics { \VerTwo }
-	\context PianoStaff <<
-		\set PianoStaff.midiInstrument = "acoustic grand"
-		\context Staff = "up" <<
+
+\score {
+  <<
+	\new Staff \with {
+      midiInstrument = "violin"
+      \RemoveEmptyStaves
+      \override VerticalAxisGroup.remove-first = ##t
+    }
+    \MEL
+    \new Lyrics { \VerOne }
+    \new Lyrics { \VerTwo }
+	\new PianoStaff <<
+      \set PianoStaff.midiInstrument = "acoustic grand"
+      \new Staff = "up" <<
 		\clef treble
-			\context Voice = VoiceI \RH
-			>>
-		\context Staff = "down" <<
+        \new Voice = VoiceI \RH
+      >>
+      \new Staff = "down" <<
 		\clef bass
-			\context Voice = VoiceI \LH
-			>>
-		>> 
-		>>
-	\layout { 
-		\context { \Staff \RemoveEmptyStaves }
-		}	
-	
+        \new Voice = VoiceI \LH
+      >>
+    >>
+  >>
+  \layout {
+    \context {
+      \Lyrics
+      \override VerticalAxisGroup.staff-affinity = ##f
+      \override VerticalAxisGroup.staff-staff-spacing =
+      #'((basic-distance . 0)
+        (minimum-distance . 1)
+        (padding . 3))
+    }
+  }
   \midi {
     \tempo 4. = 32
-    }
-
-
+  }
 }
