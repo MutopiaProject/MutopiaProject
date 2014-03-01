@@ -1,6 +1,6 @@
-\version "2.0.1"
+\version "2.17.97"
 \include "english.ly"
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 \header {
 	date = "1862"
@@ -19,11 +19,11 @@
 	mutopiaopus = ""
 	mutopiastyle = "Song"
 
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+	tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
 	footer = "Mutopia-2003/12/11-370"
 	} 
 	
-RH = \notes
+RH = 
 	\relative c'' {
 	\key ef\major
 	\time 6/8
@@ -42,7 +42,7 @@ RH = \notes
 %7
 	bf8 ef g, f g f
 %8
-	ef4.~ ef4. \bar ".|." \break
+	ef4.~ ef4. \bar ".." \break
 %9
 	r8 <g ef bf> <g ef bf> r <af f bf,> <af f bf,>
 %10
@@ -98,13 +98,13 @@ RH = \notes
 %35
 	bf8 ef g, f g f
 %36
-	ef4.~ ef4. \bar ".|."
+	ef4.~ ef4. \bar ".."
 
 }
 	
 	
 	
-LH = \notes
+LH = 
 	\relative c {
 	\key ef\major
 	\time 6/8
@@ -119,9 +119,9 @@ LH = \notes
 %5
 	ef,8 bf' ef g ef bf
 %6
-	\property Voice.Stem \override #'beamed-lengths = #'(5.26 3.26 1.5)
+	\override Stem.details.beamed-lengths = #'(5.26 3.26 1.5)
 	af,8 \clef treble c' ef
-	\property Voice.Stem \revert #'beamed-lengths 
+	\revert Stem.beamed-lengths 
 	af ef c
 %7
 	\clef bass bf,8 <g' bf ef> <g bf ef> bf, <af' bf d> <af bf d>
@@ -178,9 +178,9 @@ LH = \notes
 %33
 	ef,8 bf' ef g ef bf
 %34
-	\property Voice.Stem \override #'beamed-lengths = #'(5.26 3.26 1.5)
+	\override Stem.details.beamed-lengths = #'(5.26 3.26 1.5)
 	af8 \clef treble c' ef
-	\property Voice.Stem \revert #'beamed-lengths 
+	\revert Stem.beamed-lengths 
 	af ef c
 %35
 	\clef bass bf,8 <g' bf ef> <g bf ef> bf, <af' bf d> <af bf d>
@@ -190,7 +190,7 @@ LH = \notes
 	}
 	
 	
-MEL = \notes
+MEL = 
 	\relative c'' {
 	\key ef\major
 	\time 6/8
@@ -257,10 +257,10 @@ MEL = \notes
 	}
 	
 
-VerOne = \context Lyrics = VerOne \lyrics {
+VerOne = \context Lyrics = VerOne \lyricmode {
 	\time 6/8
-	\property Lyrics . LyricText \override #'font-series = #'bold
-	\property Lyrics . LyricText \override #'font-relative-size = #'+1
+	\override LyricText.font-series = #'bold
+	\override LyricText.font-relative-size = #'+1
 	\skip 2.  \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2.
 	Slum8 -- ber, my dar -- ling, thy moth -- er is near,4.
 	Guard8 -- ing thy dreams from all ter -- ror and fear,4.
@@ -276,10 +276,10 @@ VerOne = \context Lyrics = VerOne \lyrics {
 	And8 pray4 that16 the an8 -- gels will shield8. thee16 from8 harm.4.
 }
 
-VerTwo = \context Lyrics = VerTwo \lyrics {
+VerTwo = \context Lyrics = VerTwo \lyricmode {
 	\time 6/8
-	\property Lyrics . LyricText \override #'font-series = #'bold
-	\property Lyrics . LyricText \override #'font-relative-size = #'+1
+	\override LyricText.font-series = #'bold
+	\override LyricText.font-relative-size = #'+1
 	\skip 2.  \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2. \skip 2.
 	Slumb8 -- er, my dar -- ling, till morn's blush -- ing ray4.
 	Brings8 to the world the glad tid -- ings of day;4.
@@ -298,12 +298,12 @@ VerTwo = \context Lyrics = VerTwo \lyrics {
 	
 \score { <<
 
-	\context Staff \notes \MEL
-		\property Staff.midiInstrument = "violin"
+	\context Staff  \MEL
+		\set Staff.midiInstrument = "violin"
 		\new Lyrics { \VerOne }
 		\new Lyrics { \VerTwo }
 	\context PianoStaff <<
-		\property PianoStaff.midiInstrument = "acoustic grand"
+		\set PianoStaff.midiInstrument = "acoustic grand"
 		\context Staff = "up" <<
 		\clef treble
 			\context Voice = VoiceI \RH
@@ -314,8 +314,13 @@ VerTwo = \context Lyrics = VerTwo \lyrics {
 			>>
 		>> 
 		>>
-	\paper { 
-		\translator { \RemoveEmptyStaffContext }
+	\layout { 
+		\context { \Staff \RemoveEmptyStaves }
 		}	
-	\midi { \tempo 8 = 96 }
+	
+  \midi {
+    \tempo 4. = 32
+    }
+
+
 }
