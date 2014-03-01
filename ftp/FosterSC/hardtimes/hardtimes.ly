@@ -1,6 +1,6 @@
 \include "english.ly"
-#(set-default-paper-size "letter")
-%#(set-global-staff-size 16)
+%#(set-default-paper-size "letter")
+#(set-global-staff-size 16)
 \version "2.18.0"
 
 \header {
@@ -37,7 +37,7 @@ partialUnoQtr = \set Timing.measurePosition = #(ly:make-moment 3/4)
   markup-system-spacing.basic-distance  = #10
   top-system-spacing.basic-distance = #15
   system-system-spacing.basic-distance  = #13
-  ragged-bottom = ##t
+  last-bottom-spacing.basic-distance = #14
   scoreTitleMarkup = \markup \null
 }
 
@@ -190,7 +190,7 @@ LH =  \relative c { \key ef\major \time 4/4 \clef bass
 
 
 VerOne =  \context Lyrics = VerOne \lyricmode { 
-	\override LyricText.font-series = #'bold
+	%\override LyricText.font-series = #'bold
 	\override LyricText.font-size = #+1
 	
 	\skip 4  \skip 1 \skip 1 \skip 1 \skip 2.
@@ -211,7 +211,7 @@ VerOne =  \context Lyrics = VerOne \lyricmode {
 
 	
 VerTwo =  \context Lyrics = VerTwo \lyricmode { 
-	\override LyricText.font-series = #'bold
+	%\override LyricText.font-series = #'bold
 	\override LyricText.font-size = #+1
 	
 	\skip 4  \skip 1 \skip 1 \skip 1 \skip 2.
@@ -222,7 +222,7 @@ VerTwo =  \context Lyrics = VerTwo \lyricmode {
 	}
 	
 VerThree =  \context Lyrics = VerThree \lyricmode { 
-	\override LyricText.font-series = #'bold
+	%\override LyricText.font-series = #'bold
 	\override LyricText.font-size = #+1
 	
 	\skip 4  \skip 1 \skip 1 \skip 1 \skip 2.
@@ -233,7 +233,7 @@ VerThree =  \context Lyrics = VerThree \lyricmode {
 	}
 
 VerFour =  \context Lyrics = VerFour \lyricmode { 
-	\override LyricText.font-series = #'bold
+	%\override LyricText.font-series = #'bold
 	\override LyricText.font-size = #+1
 	
 	\skip 4  \skip 1 \skip 1 \skip 1 \skip 2.
@@ -248,14 +248,10 @@ VerFour =  \context Lyrics = VerFour \lyricmode {
 		\context Staff
 		\MEL
 		\set Staff.midiInstrument = "violin" 
-		\new Lyrics 
-		{ \VerOne }
-		\new Lyrics 
-		{ \VerTwo }
-		\new Lyrics 
-		{ \VerThree }
-		\new Lyrics 
-		{ \VerFour }
+		\new Lyrics { \VerOne }
+		\new Lyrics { \VerTwo }
+		\new Lyrics { \VerThree }
+		\new Lyrics { \VerFour }
 	\context PianoStaff <<
 		\set PianoStaff.midiInstrument = "acoustic grand"
 		\context Staff = "up" <<
