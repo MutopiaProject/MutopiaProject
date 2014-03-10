@@ -215,6 +215,7 @@ public class Mutopia
                         (nextLine.matches("\\s*mutopiacopyright\\s*=\\s*\".*\"\\s*"))) // Old copyright field
                {
                   // Copyright header field changed to license (US/International spelling) Feb 2014
+                  // Intend 'license' spelling to be used going forward
                   licence = nextLine.split("\"")[1];
                   nextLine = nextLine.replace("copyright", "license");
                   System.out.println("Warning: Rewriting 'copyright' field as 'license': " + nextLine);
