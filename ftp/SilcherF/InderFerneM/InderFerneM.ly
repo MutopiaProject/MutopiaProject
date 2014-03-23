@@ -1,9 +1,8 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key c \major \time 3/4 \tempo 4=66 } 
+global = { \key c \major \time 3/4 \tempo "Andante" } 
 
 TAFerne = \relative c' { 
 \partial 4 
@@ -12,8 +11,7 @@ e8\< a b4.\! a8 d8.\> cis16 b2\!
 b8.\mf fis16 a8.[ gis16] gis4 
 b8. fis16 a8.[ gis16] gis4 \oneVoice r \voiceOne 
 a8.\p e16 \acciaccatura gis8 fis e a b cis4(\< e\> d) 
-\dimTextDim 
-cis8.\! cis16 cis8 a cis\> b a2\! 
+cis8.\! cis16 cis8 a cis\dim b a2\! 
 \bar "|." 
 } 
 
@@ -46,8 +44,7 @@ c8\< e f4.\! e8 d8.\> c16 g2\!
 d'8.\mf d16 g4 g, 
 d'8. d16 g4 g, s
 c8.\p c16 c8 c e g <<c,2(\< {s4 s\>}>> f) 
-\dimTextDim 
-g8.\! g16 g8 g, g\> g c2\! 
+g8.\! g16 g8 g, g\dim g c2\! 
 \bar "|." 
 } 
 
@@ -91,32 +88,32 @@ o, wie ger -- ne kehrt ich um.
 %--------------------
 
 \header { 
-kaisernumber = "222" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "222" 
+ comment = "" 
+ footnote = "" 
  
-title = "In der Ferne" 
-subtitle = "" 
-composer = "Friedrich Silcher (1789–1860), 1853–55" 
-opus = "" 
-meter = \markup {Andante} 
-arranger = "" 
-poet = "Albert Graf Schlippenbach (1800–1886), 1833" 
+ title = "In der Ferne" 
+ subtitle = "" 
+ composer = "Friedrich Silcher (1789–1860), 1853–55" 
+ opus = "" 
+ arranger = "" 
+ poet = "Albert Graf Schlippenbach (1800–1886), 1833" 
  
-mutopiatitle = "In der Ferne" 
-mutopiacomposer = "SilcherF" 
-mutopiapoet = "A. Schlippenbach (1800–1886)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (TTBB)" 
-date = "1850s" 
-source = "Leipzig : C. F. Peters, 1907" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/August/1" 
- 
- footer = "Mutopia-2009/09/08-800"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ mutopiatitle = "In der Ferne" 
+ mutopiacomposer = "SilcherF" 
+ mutopiapoet = "A. Schlippenbach (1800–1886)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (TTBB)" 
+ date = "1850s" 
+ source = "Leipzig : C. F. Peters, 1907" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
+  
+ footer = "Mutopia-2014/03/23-800"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -125,7 +122,7 @@ lastupdated = "2009/August/1"
 	<< 
 	\context Staff = TenorStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G_8" 
 			\context Voice = TenorA { \voiceOne 
@@ -148,7 +145,7 @@ lastupdated = "2009/August/1"
 	\context Lyrics = versefour 
 	\context Staff = BassStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = BassA { \voiceOne 
@@ -176,19 +173,13 @@ lastupdated = "2009/August/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=66
 }
 
 }

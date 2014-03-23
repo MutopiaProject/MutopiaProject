@@ -1,12 +1,11 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key f \major \time 3/4 \tempo 4=72 } 
+global = { \key f \major \time 3/4 \tempo "Einfach" } 
 
 SHeimatAbschied = \relative f'' { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4. 
 c8\p b c d4. g,8 bes e, f4 r8 
 c'8 b c e4. d8 c bes a4 r8 
@@ -34,7 +33,7 @@ f8 g f f4. fis8 g bes a4 s8
 } 
 
 BHeimatAbschied = \relative f { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4. 
 f8\p f f bes,4. bes8 c c f4 r8 
 f8 f f c4. c8 d e f4 r8 
@@ -71,32 +70,32 @@ denk ich doch stets an euch zu -- rück.
 %--------------------
 
 \header { 
-kaisernumber = "224" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "224" 
+ comment = "" 
+ footnote = "" 
  
-title = "Abschied von der Heimat" 
-subtitle = "" 
-composer = "Wenzel Müller (1767–1835), 1828" 
-opus = "" 
-meter = \markup {Einfach} 
-arranger = "Bearbeitung von Robert Fuchs (1847–1927)" 
-poet = "Nach Ferdinand Raimund (1790–1836), 1828" 
+ title = "Abschied von der Heimat" 
+ subtitle = "" 
+ composer = "Wenzel Müller (1767–1835), 1828" 
+ opus = "" 
+ arranger = "Bearbeitung von Robert Fuchs (1847–1927)" 
+ poet = "Nach Ferdinand Raimund (1790–1836), 1828" 
  
-mutopiatitle = "Abschied von der Heimat" 
-mutopiacomposer = "MuellerW" 
-mutopiapoet = "F. Raimund (1790–1836)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1910s" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
- 
- footer = "Mutopia-2009/09/08-627"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ mutopiatitle = "Abschied von der Heimat" 
+ mutopiacomposer = "MuellerW" 
+ mutopiapoet = "F. Raimund (1790–1836)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1910s" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
+
+ footer = "Mutopia-2014/03/23-627"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -150,19 +149,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=72
 }
 
 }

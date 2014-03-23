@@ -1,11 +1,10 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key f \major \time 4/4 \tempo 4=100 } 
+global = { \key f \major \time 4/4 \tempo "Ziemlich gehalten" } 
 
 SGottesRat = \relative f'' { 
 \partial 4 
@@ -17,18 +16,16 @@ a4\mf f'\< e d4. c8 c4.\! h8 h4
 g4\mp e' d c4. h8 h4.->\> a8 a4\! 
 c4\p g!4.( b!8) a4 
 c4\pp g4.( b8) a4 
-\override Hairpin #'to-barline = ##f 
+\override Hairpin.to-barline = ##f 
 a4\p\< g2.( b4)\> a2.\! 
-\bar ":|" \break 
+\bar ":|." \break 
 c4\f b4. a8 a4 f' e4. d8 d4\fermata 
 r4 r2 r4 d\p c4.-> b8 a4 
-\crescTextCresc 
-a4\< f'4 e d4. c!8 c4. h8 h4 
-\revert Rest #'direction 
+a4\cresc f'4 e d4. c!8 c4. h8 h4 
+\revert Rest.direction 
 d4\f g f e r8 d d2.-> c4 c2 r4 
 c4\p g4. b8 a4 
 c4\pp g4. b8 a4 
-\crescHairpin 
 c4\p << g2.\< {s2 s4\f\>} >> b4 << a2. {s2 s4\pp} >> 
 \bar "|." 
 } 
@@ -44,7 +41,7 @@ f4 e h' a gis gis4.-> a8 a4
 f4 f( e) f 
 f4 f( e) f 
 f4 f2( e) f2. 
-\bar ":|" 
+\bar ":|." 
 f4 f4. f8 f4 f f4. f8 f4 
 d4\p d c b d g-> e f 
 g4 f g a a g4. g8 g4 
@@ -66,7 +63,7 @@ d4 c f e d d4.-> c8 c4
 c4 d( c) c 
 c4 d( c) c 
 c4 c1 c2. 
-\bar ":|" 
+\bar ":|." 
 c4 c4. c8 c4 c c4. b8 b4 
 d4 g, a b a g-> c c 
 cis4 d a a f' e4. d8 d4 
@@ -87,18 +84,16 @@ f4\mf d\< e f d g4.\! g8 g4
 h,4\mp c d e e f4.->\> f8 f4\! 
 a,4\p b!( c) f 
 a,4\pp b( c) f 
-\override Hairpin #'to-barline = ##f 
+\override Hairpin.to-barline = ##f 
 f4\p\< << c1 {s2 s\>} >> f2.\! 
-\bar ":|" 
+\bar ":|." 
 a4\f g4. f8 f4 a b4. b,8 b4\fermata 
 b'4\p e, fis g f e-> c f 
-\crescTextCresc 
-e4\< d e f d g4. g8 g4 
-\revert Rest #'direction 
+e4\cresc d e f d g4. g8 g4 
+\revert Rest.direction 
 f4\f e f g gis a2.-> a4 a2 r4 
 a,4\p b c f 
 a,4\pp b c f 
-\crescHairpin 
 a,4\p c2\< c\f\> << f2. {s2 s4\pp} >> 
 \bar "|." 
 } 
@@ -172,32 +167,32 @@ ja, recht ver -- stehn;
 %--------------------
 
 \header { 
-kaisernumber = "133" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "133" 
+ comment = "" 
+ footnote = "" 
  
-title = "Gottes Rat und Scheiden" 
-subtitle = "" 
-composer = "Felix Mendelssohn Bartholdy (1809–1847), 1839" 
-opus = "op. 47" 
-meter = \markup {Ziemlich gehalten} 
-arranger = "Bearbeitung von Arnold Mendelssohn (1809–1847)" 
-poet = "Ernst Freiherr von Feuchtersleben (1806–1849), vor 1826" 
+ title = "Gottes Rat und Scheiden" 
+ subtitle = "" 
+ composer = "Felix Mendelssohn Bartholdy (1809–1847), 1839" 
+ opus = "op. 47" 
+ arranger = "Bearbeitung von Arnold Mendelssohn (1809–1847)" 
+ poet = "Ernst Freiherr von Feuchtersleben (1806–1849), vor 1826" 
  
-mutopiatitle = "Gottes Rat und Scheiden" 
-mutopiacomposer = "Mendelssohn-BartholdyF" 
-mutopiapoet = "E. v. Feuchtersleben (1806–1849)" 
-mutopiaopus = "Op. 47" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1910s" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Gottes Rat und Scheiden" 
+ mutopiacomposer = "Mendelssohn-BartholdyF" 
+ mutopiapoet = "E. v. Feuchtersleben (1806–1849)" 
+ mutopiaopus = "Op. 47" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1910s" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-1707"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-1707"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -207,7 +202,7 @@ lastupdated = "2009/September/1"
 	\context Lyrics = extra 
 	\context Staff = women 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G" 
 			\context Voice = Sopran { \voiceOne 
@@ -228,7 +223,7 @@ lastupdated = "2009/September/1"
 	\context Lyrics = versethree 
 	\context Staff = men 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = Tenor { \voiceOne 
@@ -255,19 +250,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=100
 }
 
 }

@@ -1,41 +1,38 @@
-\include "deutsch.ly" 
-
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key a \minor \time 4/4 \tempo 4=92 } 
+global = { \key a \minor \time 4/4 \tempo "Mäßig bewegt" } 
 
 SGuterGottB = \relative a' { 
-\revert Rest #'direction 
-r4 e\mf a h 
-c h a h 
+\revert Rest.direction 
+r4 e\mf a b 
+c b a b 
 gis\> e\! r g 
 g f e\< a 
 a\> gis a\! e 
-a h c h 
-a h gis\> e\! 
+a b c b 
+a b gis\> e\! 
 r g! g f 
 e\< a a\> gis 
-a2.\! h4\f\< 
+a2.\! b4\f\< 
 c d\! e-> e 
 d-> d c e 
-d c h a8[ h] 
-<<c4-> {s8 s8\>}>> h4 a2\!  
+d c b a8[ b] 
+<<c4-> {s8 s8\>}>> b4 a2\!  
 \bar "|." 
 } 
 
 AGuterGottB = \relative a { 
 s4 c e e 
 e4. f8 e4 d 
-h h s h 
-cis d8[ c] h4 e 
-f e8[ d] c4 h 
+b b s b 
+cis d8[ c] b4 e 
+f e8[ d] c4 b 
 e <e d> <e c> e 
-e fis e h 
+e fis e b 
 s e e d 
-c c h8[ f'] e4 
+c c b8[ f'] e4 
 e2. e4 
 e g g4. a8 
 f4. g8 e4 e 
@@ -45,38 +42,38 @@ a gis e2
 } 
 
 TGuterGottB = \relative a { 
-s4 a c h 
+s4 a c b 
 a gis a8[ g] f4 
 e gis s g 
 a a gis e8[ e'] 
-d[ c] h4 a gis 
-c h a h 
-c h h gis 
-s g! b a 
-a a8[ g] f[ d'] c[ h] 
+d[ c] b4 a gis 
+c b a b 
+c b b gis 
+s g! bes a 
+a a8[ g] f[ d'] c[ b] 
 c2. gis4 
-a8[ c] h4 c8[ b] a4 
-h!8[ a] g4 g c 
+a8[ c] b4 c8[ bes] a4 
+b!8[ a] g4 g c 
 d e e8[ d] c[ d] 
-e[ f] h,[ d] c2  
+e[ f] b,[ d] c2  
 \bar "|." 
 } 
 
 BGuterGottB = \relative a, { 
-\revert Rest #'direction 
+\revert Rest.direction 
 r4 a\mf a' gis 
 a e8[ d] c4 d 
 e\> e\! r e 
 a, d e8[\< d] c4 
-h8[\> c16 d] e4 a,\! e'8[ d] 
-c[ h] a[ gis] a( a'4) g!8 
+b8[\> c16 d] e4 a,\! e'8[ d] 
+c[ b] a[ gis] a( a'4) g!8 
 fis[ e] dis4 e\> e\! 
 r4 c cis d 
 a'8[\< g!] f[ e] d4\> e 
 a,2.\! e'4\f\< 
 a g8[\! f] e[-> d] cis4 
-d8[-> c!] h4 c c' 
-h a e f 
+d8[-> c!] b4 c c' 
+b a e f 
 c8[-> d]\> e4 a,2\! 
 \bar "|." 
 } 
@@ -125,33 +122,33 @@ auf Gott setzt, den ver -- lässt er nicht.
 %--------------------
 
 \header { 
-kaisernumber = "18b" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "18b" 
+ comment = "" 
+ footnote = "" 
 
-title = "Wer nur den lieben Gott lässt walten" 
-subtitle = "" 
-composer = "Georg Neumark (1621–1681), 1657" 
-opus = "" 
-piece = "" 
-meter = "Mäßig bewegt" 
-arranger = "Bearbeitung von Gustav Schreck (1849–1918)" 
-poet = "Georg Neumark (1621–1681), 1657" 
+ title = "Wer nur den lieben Gott läßt walten" 
+ subtitle = "" 
+ composer = "Georg Neumark (1621–1681), 1657" 
+ opus = "" 
+ piece = "" 
+ arranger = "Bearbeitung von Gustav Schreck (1849–1918)" 
+ poet = "Georg Neumark (1621–1681), 1657" 
 
-mutopiatitle = "Wer nur den lieben Gott lässt walten" 
-mutopiacomposer = "SchreckG" 
-mutopiapoet = "G. Neumark (1621–1681)" 
-mutopiaopus = "" 
-mutopiainstrument = "Voice (SATB)" 
-date = "1910s" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Wer nur den lieben Gott läßt walten" 
+ mutopiacomposer = "SchreckG" 
+ mutopiapoet = "G. Neumark (1621–1681)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Voice (SATB)" 
+ date = "1910s" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/10-1705"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/21-1705"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score { 
@@ -205,19 +202,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=92
 }
 
 }

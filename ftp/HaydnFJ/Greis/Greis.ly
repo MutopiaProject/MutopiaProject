@@ -1,8 +1,8 @@
 #(set-global-staff-size 15.5) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key a \major \time 4/4 \tempo 4=60 } 
+global = { \key a \major \time 4/4 \tempo "Molto Adagio" } 
 
 mv = \markup{\italic "mezza voce"} 
 
@@ -182,7 +182,7 @@ a4 a8 a b cis d b
 cis4 c8\p c b8. b16 bes8 bes 
 a4 cis,8 cis d4 d8 d 
 e2.\sf e4\p 
-a2\fermata s2 
+a,2\fermata s2 
 \bar "|." 
 } 
 
@@ -333,32 +333,32 @@ war mein Le -- bens-, mein Le -- bens -- lauf.
 %--------------------
 
 \header { 
-kaisernumber = "385" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "130" 
+ comment = "" 
+ footnote = "" 
  
-title = "Der Greis" 
-subtitle = "" 
-composer = "Joseph Haydn (1732–1809), 1803" 
-opus = "" 
-meter = \markup {Molto Adagio} 
-arranger = "" 
-poet = "Johann Wilhelm Ludwig Gleim (1719–1803), 1756" 
+ title = "Der Greis" 
+ subtitle = "" 
+ composer = "Joseph Haydn (1732–1809), 1803" 
+ opus = "" 
+ arranger = "" 
+ poet = "Johann Wilhelm Ludwig Gleim (1719–1803), 1756" 
  
-mutopiatitle = "Der Greis" 
-mutopiacomposer = "HaydnFJ" 
-mutopiapoet = "J. W. L. Gleim (1719–1803)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1803" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Der Greis" 
+ mutopiacomposer = "HaydnFJ" 
+ mutopiapoet = "J. W. L. Gleim (1719–1803)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1803" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-986"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-986"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -415,15 +415,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
+\tempo 4=60
 }
 
 }

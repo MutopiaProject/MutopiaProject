@@ -1,20 +1,19 @@
 #(set-global-staff-size 15.5) 
 #(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key g \major \time 6/8 \tempo 4.=58 } 
+global = { \key g \major \time 6/8 \tempo "Sehr mäßig" } 
 
 SHirtenWiegenlied = \relative g' { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 8 
 d8\p d'4 d8 b8.\( c16\) d8 a8.[ g16 a8] b4 
 d,8 d'4 d8 b8.\( c16\) d8 a8.[ g16 a8] b4 
 \bar "||" 
 a8 b4\< a8\! b8.[ c16] a8 g4.\(\> g4\)\! 
-a8\p b4 a8 b8.[ c16] a8 g4.\( g8\) r8 
-\crescTextCresc 
-d8\< g8. a16 b8 c[ d] 
+a8\p b4 a8 b8.[ c16] a8 g4.\( g8\) r8  
+d8\cresc g8. a16 b8 c[ d] 
 c8\mf b8. b16 a8 g4 
 d8\p g8. a16 b8 c[ d] 
 c8 b8.^\markup {\large\italic rit.} b16 a8 g4\fermata 
@@ -56,8 +55,7 @@ d8 g4 a8 b8.( a16) g8 d'4( d,8) g4
 \bar "||" 
 d8 g4\< c,8\! d4 d8 e4(\> d8) c[\! b] 
 a8\p g4 e'8 d4 d8 g4.~ g8 r 
-\crescTextCresc 
-r8\< r4 r8 r4 
+r8\cresc r4 r8 r4 
 c,8\mf d8. d16 dis8 e4 
 d16[\p c] b8. d16 g8 e[ d] 
 fis8 g8._\markup {\large\italic rit.} c,16 d8 g,4\fermata 
@@ -110,32 +108,32 @@ Lextra = \lyricmode {
 %--------------------
 
 \header { 
-kaisernumber = "88" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "88" 
+ comment = "" 
+ footnote = "" 
  
-title = "Wiegenlied der Hirten" 
-subtitle = "" 
-composer = "Volksweise aus der Grafschaft Glatz, 1842 aufgezeichnet," 
-opus = "" 
-meter = \markup {Sehr mäßig} 
-arranger = "bearbeitet von Max Bruch (1838–1920)" 
-poet = "Verfasser unbekannt (1604)" 
+ title = "Wiegenlied der Hirten" 
+ subtitle = "" 
+ composer = "Volksweise aus der Grafschaft Glatz, 1842 aufgezeichnet," 
+ opus = "" 
+ arranger = "bearbeitet von Max Bruch (1838–1920)" 
+ poet = "Verfasser unbekannt (1604)" 
   
-mutopiatitle = "Wiegenlied der Hirten"
-mutopiacomposer = "BruchM" 
-mutopiapoet = "unknown" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1910s" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Wiegenlied der Hirten"
+ mutopiacomposer = "BruchM" 
+ mutopiapoet = "unknown" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1910s" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-632"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/21-632"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -189,18 +187,12 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4.=58
 }
 
 }

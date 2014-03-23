@@ -1,26 +1,23 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key as \major \time 4/4 \tempo 4=76 } 
+global = { \key as \major \time 4/4 \tempo "Langsam" } 
 
 SWaisenklage = \relative as' { 
-%\revert Rest #'direction 
+%\revert Rest.direction 
 \partial 4 
 ees4\p 
 as4 as c bes8[ as] 
-\crescTextCresc 
-bes4-> bes \oneVoice r4 \voiceOne g8(\< as) 
+bes4-> bes \oneVoice r4 \voiceOne g8(\cresc as) 
 bes4 bes8 bes bes[ des] c[ bes] 
 c2 \oneVoice r4 \voiceOne c8( bes) 
 as4 bes c8(\> c8) bes as 
 bes4\p bes \oneVoice r2 \voiceOne 
-des!2\< ees2 
+des!2\cresc ees2 
 c2. c4 
 c4(\> bes) bes2 
 ees2.\p\! r4 
-\crescHairpin 
 des2\< ees2 
 c2.\> c4 
 c4(\p-> bes)^\markup {\large\italic ritard.} bes2 
@@ -71,17 +68,15 @@ BWaisenklage = \relative as {
 \partial 4 
 ees4\p 
 as,4 as'8[ g] f[ ees8] d4 
-\crescTextCresc 
-d4-> ees s des'8(\< c) 
+d4-> ees s des'8(\cresc c) 
 bes8[ c] bes as g4 ees4 
 e2 s4 c8( c) 
 f4 ees!4 as8(\> as) bes c 
 bes4\p ees,4 s2 
-f2\< g2 
+f2\cresc g2 
 as4( g4) f4( ees4) 
 des2.\> des4 
 des'2(\p c4) r4 
-\crescHairpin 
 bes4(\< as) g4( ees4) 
 f2\> c2 
 <<des2\p-> {s4 s_\markup {\large\italic ritard.}}>> ees2 
@@ -119,32 +114,32 @@ schließ mir auf die Him -- mels -- tür!
 %--------------------
 
 \header { 
-kaisernumber = "138" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "138" 
+ comment = "" 
+ footnote = "" 
  
-title = "Waisenklage" 
-subtitle = "" 
-composer = "Volksweise aus der Badischen Pfalz," 
-opus = "" 
-meter = \markup {Langsam} 
-arranger = "bearbeitet von Max Bruch (1838–1920)" 
-poet = "Neueres Volkslied" 
+ title = "Waisenklage" 
+ subtitle = "" 
+ composer = "Volksweise aus der Badischen Pfalz," 
+ opus = "" 
+ arranger = "bearbeitet von Max Bruch (1838–1920)" 
+ poet = "Neueres Volkslied" 
  
-mutopiatitle = "Waisenklage" 
-mutopiacomposer = "BruchM" 
-mutopiapoet = "" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1910s" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Waisenklage" 
+ mutopiacomposer = "BruchM" 
+ mutopiapoet = "" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1910s" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-985"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/21-985"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -198,19 +193,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=76
 }
 
 }

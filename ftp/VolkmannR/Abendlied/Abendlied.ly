@@ -1,12 +1,11 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key es \major \time 4/4 \tempo 4=100 } 
+global = { \key es \major \time 4/4 \tempo "Langsam" } 
 
 SAbendlied = \relative es'' { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 bes4 bes4. bes8 bes4 bes c2 bes4 
 bes4 c es d c bes2. \breathe 
@@ -54,7 +53,7 @@ es8 es4 d8[ c] d4. f8 es2 s4\fermata
 } 
 
 BAbendlied = \relative es { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 es4 es4. es8 es4 es es2 es4 
 es4 as, c bes as es'2. 
@@ -117,32 +116,32 @@ da ist der Him -- mel blau.
 %--------------------
 
 \header { 
-kaisernumber = "205" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "205" 
+ comment = "" 
+ footnote = "" 
  
-title = "Abendlied" 
-subtitle = "" 
-composer = "Robert Volkmann (1815–1883)" 
-opus = "" 
-meter = \markup {Langsam} 
-arranger = "" 
-poet = "Hans Christian Andersen (1805–1875)" 
+ title = "Abendlied" 
+ subtitle = "" 
+ composer = "Robert Volkmann (1815–1883)" 
+ opus = "" 
+ arranger = "" 
+ poet = "Hans Christian Andersen (1805–1875)" 
  
-mutopiatitle = "Abendlied" 
-mutopiacomposer = "VolkmannR" 
-mutopiapoet = "H. C. Andersen (1805–1875)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1850s" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Abendlied" 
+ mutopiacomposer = "VolkmannR" 
+ mutopiapoet = "H. C. Andersen (1805–1875)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1850s" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-987"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-987"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -197,19 +196,16 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 \context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1) 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=100
 }
 
 }

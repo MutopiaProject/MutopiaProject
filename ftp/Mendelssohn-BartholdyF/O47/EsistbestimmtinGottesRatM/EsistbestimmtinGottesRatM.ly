@@ -1,11 +1,10 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key g \major \time 4/4 \tempo 4=108 } 
+global = { \key g \major \time 4/4 \tempo "Poco sostenuto" } 
 
 TAGottesRat = \relative g' { 
 \partial 4 
@@ -18,7 +17,7 @@ a4 fis' e d4. cis8 cis4.-> h8 h4
 d4\p a4.( c!8) h4 
 d4\pp a4.( c8) h4 
 d4 a2.( c4) h2.\fermata 
-\bar ":|" 
+\bar ":|." 
 \break 
 d4\f c4. h8 h4 g' fis4. e8 e4\fermata 
 e4 a, h c e d4. c8 h4 
@@ -42,7 +41,7 @@ a4 d cis h ais ais4. h8 h4
 g4 g( fis) g 
 g4 g( fis) g 
 g4 g2( fis) g2. 
-\bar ":|" 
+\bar ":|." 
 d'4 c4. h8 h4 g g4. g8 g4 
 e4 fis gis a h a fis g! 
 h4 e dis h4. h8 a4. a8 a4 
@@ -63,7 +62,7 @@ a4 fis g fis4. e8 e4. d8 d4
 d4 e( d) d 
 d4 e( d) g 
 d4 d1 d2. 
-\bar ":|" 
+\bar ":|." 
 h'4 a4. g8 g4 g fis4. e8 e4 
 e4 e d e g fis d g 
 h4 h a g4. g8 fis4. e8 e4 
@@ -84,7 +83,7 @@ a'4 d, e fis fis, g4.-> g8 g4
 h4\p c( d) g, 
 h4\pp c( d) g 
 h,4 d1 g,2.\fermata 
-\bar ":|" 
+\bar ":|." 
 h'4\f a4. g8 g4 e d4. c8 c4\fermata 
 e4 c h a g'! fis d g 
 \crescTextCresc 
@@ -150,32 +149,32 @@ auf Wie -- der -- sehn!
 %--------------------
 
 \header { 
-kaisernumber = "107" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "107" 
+ comment = "" 
+ footnote = "" 
  
-title = "Es ist bestimmt in Gottes Rat" 
-subtitle = "" 
-composer = "Felix Mendelssohn Bartholdy (1809–1847), 1839" 
-opus = "op. 47" 
-meter = \markup {Poco sostenuto} 
-arranger = "Bearbeitung von Robert Radecke (1830–1911)" 
-poet = "Ernst Freiherr von Feuchtersleben (1806–1849), vor 1826" 
+ title = "Es ist bestimmt in Gottes Rat" 
+ subtitle = "" 
+ composer = "Felix Mendelssohn Bartholdy (1809–1847), 1839" 
+ opus = "op. 47" 
+ arranger = "Bearbeitung von Robert Radecke (1830–1911)" 
+ poet = "Ernst Freiherr von Feuchtersleben (1806–1849), vor 1826" 
  
-mutopiatitle = "Es ist bestimmt in Gottes Rat" 
-mutopiacomposer = "Mendelssohn-BartholdyF" 
-mutopiapoet = "E. v. Feuchtersleben (1806–1849)" 
-mutopiaopus = "Op. 47" 
-mutopiainstrument = "Choir (TTBB)" 
-date = "1900s" 
-source = "Leipzig : C. F. Peters, 1907" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/August/1" 
- 
- footer = "Mutopia-2009/09/08-798"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ mutopiatitle = "Es ist bestimmt in Gottes Rat" 
+ mutopiacomposer = "Mendelssohn-BartholdyF" 
+ mutopiapoet = "E. v. Feuchtersleben (1806–1849)" 
+ mutopiaopus = "Op. 47" 
+ mutopiainstrument = "Choir (TTBB)" 
+ date = "1900s" 
+ source = "Leipzig : C. F. Peters, 1907" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
+
+ footer = "Mutopia-2014/03/23-798"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -185,7 +184,7 @@ lastupdated = "2009/August/1"
 	\context Lyrics = extra 
 	\context Staff = TenorStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G_8" 
 			\context Voice = TenorA { \voiceOne 
@@ -206,7 +205,7 @@ lastupdated = "2009/August/1"
 	\context Lyrics = versethree 
 	\context Staff = BassStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = BassA { \voiceOne 
@@ -232,19 +231,13 @@ lastupdated = "2009/August/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=108
 }
 
 }

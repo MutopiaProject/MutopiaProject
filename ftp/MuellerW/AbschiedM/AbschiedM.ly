@@ -1,11 +1,10 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f)
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key g \major \time 3/4 \tempo 4=72 } 
+global = { \key g \major \time 3/4 \tempo "Innig" } 
 
 TAHeimatAbschied = \relative g' { 
 \partial 4. 
@@ -71,32 +70,32 @@ denk ich doch stets an euch zu -- rück.
 %--------------------
 
 \header { 
-kaisernumber = "217" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "217" 
+ comment = "" 
+ footnote = "" 
  
-title = "Abschied" 
-subtitle = "" 
-composer = "Wenzel Müller (1767–1835), 1828"
-opus = "" 
-meter = \markup {Innig} 
-arranger = "Bearbeitung von Robert Radecke (1830–1911)" 
-poet = "Nach Ferdinand Raimund (1790–1836), 1828" 
+ title = "Abschied" 
+ subtitle = "" 
+ composer = "Wenzel Müller (1767–1835), 1828"
+ opus = "" 
+ arranger = "Bearbeitung von Robert Radecke (1830–1911)" 
+ poet = "Nach Ferdinand Raimund (1790–1836), 1828" 
  
-mutopiatitle = "Abschied von der Heimat" 
-mutopiacomposer = "MuellerW" 
-mutopiapoet = "F. Raimund (1790–1836)" 
-mutopiaopus = "" 
-mutopiainstrument = "Voice (TTBB)" 
-date = "1900s" 
-source = "Leipzig : C. F. Peters, 1907" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2008/August/1" 
+ mutopiatitle = "Abschied von der Heimat" 
+ mutopiacomposer = "MuellerW" 
+ mutopiapoet = "F. Raimund (1790–1836)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Voice (TTBB)" 
+ date = "1900s" 
+ source = "Leipzig : C. F. Peters, 1907" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-797"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-797"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -106,7 +105,7 @@ lastupdated = "2008/August/1"
 	\context Lyrics = extra 
 	\context Staff = TenorStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G_8" 
 			\context Voice = TenorA { \voiceOne 
@@ -127,7 +126,7 @@ lastupdated = "2008/August/1"
 	\context Lyrics = versethree 
 	\context Staff = BassStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = BassA { \voiceOne 
@@ -153,19 +152,13 @@ lastupdated = "2008/August/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=72
 }
 
 }

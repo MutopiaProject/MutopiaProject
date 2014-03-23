@@ -1,12 +1,11 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key d \major \time 4/4 \tempo 4=120 } 
+global = { \key d \major \time 4/4 \tempo "Etwas lebhaft" } 
 
 TAAugenhalten = \relative d' { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 fis4\mf 
 fis4. fis8 fis4. fis8 
@@ -97,7 +96,7 @@ fis2 s4
 } 
 
 BBAugenhalten = \relative d { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 d4\mf 
 d4. d8 d4. d8 
@@ -153,32 +152,32 @@ und küss sie auf den Mund.
 %--------------------
 
 \header { 
-kaisernumber = "447" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "447" 
+ comment = "" 
+ footnote = "" 
  
-title = "Ich halte ihr die Augen zu" 
-subtitle = "" 
-composer = "Robert Volkmann (1815–1883)" 
-opus = "op. 30, Nr. 3" 
-meter = \markup {Etwas lebhaft} 
-arranger = "" 
-poet = "Heinrich Heine (1797–1856), 1832 od. 33" 
+ title = "Ich halte ihr die Augen zu" 
+ subtitle = "" 
+ composer = "Robert Volkmann (1815–1883)" 
+ opus = "op. 30, Nr. 3" 
+ arranger = "" 
+ poet = "Heinrich Heine (1797–1856), 1832 od. 33" 
  
-mutopiatitle = "Ich halte ihr die Augen zu" 
-mutopiacomposer = "VolkmannR" 
-mutopiapoet = "H. Heine (1797–1856)" 
-mutopiaopus = "Op. 30, No. 3" 
-mutopiainstrument = "Choir (TTBB)" 
-date = "" 
-source = "Leipzig : C. F. Peters, 1907" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/August/1" 
+ mutopiatitle = "Ich halte ihr die Augen zu" 
+ mutopiacomposer = "VolkmannR" 
+ mutopiapoet = "H. Heine (1797–1856)" 
+ mutopiaopus = "Op. 30, No. 3" 
+ mutopiainstrument = "Choir (TTBB)" 
+ date = "1900s" 
+ source = "Leipzig : C. F. Peters, 1907" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-1703"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-1703"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -187,7 +186,7 @@ lastupdated = "2009/August/1"
 	<< 
 	\context Staff = TenorStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G_8" 
 			\context Voice = TenorA { \voiceOne 
@@ -205,7 +204,7 @@ lastupdated = "2009/August/1"
 	\context Lyrics = verses 
 	\context Staff = BassStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = BassA { \voiceOne 
@@ -229,19 +228,13 @@ lastupdated = "2009/August/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=120
 }
 
 }

@@ -2,9 +2,9 @@
 
 #(set-global-staff-size 15.5) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key b \major \time 3/4 \tempo 4=132 } 
+global = { \key b \major \time 3/4 \tempo "Lebendig" } 
 
 SAvTharau = \relative b' { 
 f4.\f g8 f4 f b b c4. d8 c4 b2. 
@@ -90,32 +90,32 @@ mein Le -- ben schließt sich um dei -- nes her -- um.
 %--------------------
 
 \header { 
-kaisernumber = "391" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "391" 
+ comment = "" 
+ footnote = "" 
  
-title = "Ännchen von Tharau" 
-subtitle = "" 
-composer = "Friedrich Silcher (1789–1860), 1825" 
-opus = "" 
-meter = \markup {Lebendig} 
-arranger = "Ernst Eduard Taubert (1838–1934)" 
-poet = "Simon Dach (1605–1659), 1637" 
+ title = "Ännchen von Tharau" 
+ subtitle = "" 
+ composer = "Friedrich Silcher (1789–1860), 1825" 
+ opus = "" 
+ arranger = "Ernst Eduard Taubert (1838–1934)" 
+ poet = "Simon Dach (1605–1659), 1637" 
  
-mutopiatitle = "Ännchen von Tharau" 
-mutopiacomposer = "SilcherF" 
-mutopiapoet = "S. Dach (1605–1659)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1825" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Ännchen von Tharau" 
+ mutopiacomposer = "SilcherF" 
+ mutopiapoet = "S. Dach (1605–1659)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1825" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-629"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/21-629"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -171,15 +171,12 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
 }
 }
 
 \midi {
+\tempo 4=132
 }
 
 }

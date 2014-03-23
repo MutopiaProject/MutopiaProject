@@ -1,9 +1,8 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key f \major \time 6/8 \tempo 8=92 } 
+global = { \key f \major \time 6/8 \tempo "Ruhig und zart" } 
 
 SWiegenlied = \relative f'' { 
 \repeat volta 2 { 
@@ -224,32 +223,32 @@ mit tau -- send sü -- ßen Stim -- me -- lein!
 %--------------------
 
 \header { 
-kaisernumber = "92" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "92" 
+ comment = "" 
+ footnote = "" 
  
-title = "Des Kindleins Wiegenlied" 
-subtitle = "" 
-composer = "Melodie 1697 aufgezeichnet" 
-opus = "" 
-meter = \markup {Ruhig und zart} 
-arranger = "bearbeitet von Robert Fuchs (1847–1927)" 
-poet = "Nach dem Lateinischen (1638)" 
+ title = "Des Kindleins Wiegenlied" 
+ subtitle = "" 
+ composer = "Melodie 1697 aufgezeichnet" 
+ opus = "" 
+ arranger = "bearbeitet von Robert Fuchs (1847–1927)" 
+ poet = "Nach dem Lateinischen (1638)" 
  
-mutopiatitle = "Des Kindleins Wiegenlied" 
-mutopiacomposer = "FuchsR"
-mutopiapoet = "" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1910s" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Des Kindleins Wiegenlied" 
+ mutopiacomposer = "FuchsR"
+ mutopiapoet = "" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1910s" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
 
- footer = "Mutopia-2009/09/08-1710"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-1710"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -301,19 +300,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 8=92
 }
 
 }

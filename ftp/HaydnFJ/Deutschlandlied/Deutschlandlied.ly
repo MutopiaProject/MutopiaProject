@@ -1,27 +1,25 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key g \major \time 4/4 \tempo 4=76 } 
+global = { \key g \major \time 4/4 \tempo "Langsam" } 
 
 SDeutschlandlied = \relative g' { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 2 
 g4.\mf a8 b4 a c b a8[ fis] g4 
 e'4 d c b\< a b8[ g] d'2\! 
 g,4.\mf a8 b4 a c b a8[ fis] g4 
 e'4 d c b\< a b8[ g] d'2\! 
 a4\p b a8[ fis] d4 c' b a8[ fis] d4 
-\crescTextCresc 
-d'4\< c b4. b8 cis4 cis8[ d] d2\f 
+d'4\cresc c b4. b8 cis4 cis8[ d] d2\f 
 \bar "||" 
 \break 
-\bar "|:" 
+\bar ".|:" 
 g4.\ff fis8 fis[ e] d4 
 e4. d8 d[ c] b4 
 a4. b16[ c] d8[ e] c[ a] g4 \acciaccatura{b8} a[ g] g2 
-\bar ":|" 
+\bar ":|." 
 } 
 
 ADeutschlandlied = \relative g' { 
@@ -32,15 +30,15 @@ d4. fis8 g4 fis a g fis8[ d] d4
 g4 g fis8[ a] g4 a g fis2 
 d4 d d d a' g fis8[ d] d4 
 d4 e8[ fis] g4. g8 g4 g8[ fis] fis2 
-\bar "|:" 
+\bar ".|:" 
 g4. g8 g4 g 
 g4. g8 a4 g 
 fis4. g16[ a] g4. e8 d4 fis d2 
-\bar ":|" 
+\bar ":|." 
 } 
 
 TDeutschlandlied = \relative g { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 2 
 b4. d8 d4 d d d c b 
 c4 d d d e e a,2 
@@ -48,11 +46,11 @@ b4. d8 d4 d d d c b
 c4 d d d e e a,2 
 fis4 g fis8[ a] fis4 d' d d8[ a] fis4 
 b4 a g8[ b] b[ e] e4. a,8 a2 
-\bar "|:" 
+\bar ".|:" 
 d4. d8 c4 b 
 c4. b8 d4 d 
 d4 d d e8[ c] b4 c b2 
-\bar ":|" 
+\bar ":|." 
 } 
 
 BDeutschlandlied = \relative g { 
@@ -62,13 +60,12 @@ c'4 b a8[ fis] g4\< c, cis d2\!
 g4.\mf d8 g4 d fis g d g, 
 c'4 b a8[ fis] g4\< c, cis d2\! 
 d4\p g d d fis g d d 
-\crescTextCresc 
-b4\< c8[ d] e4. e8 a4 a,4 d2\f 
-\bar "|:" 
+b4\cresc c8[ d] e4. e8 a4 a,4 d2\f 
+\bar ".|:" 
 b'4.\ff b8 c4 g 
 c,4. g'8 fis4 g 
 d4 c b c d d g,2 
-\bar ":|" 
+\bar ":|." 
 } 
 
 
@@ -111,32 +108,32 @@ blü -- he, deut -- sches Va -- ter -- land!
 %--------------------
 
 \header { 
-kaisernumber = "147" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "147" 
+ comment = "" 
+ footnote = "" 
  
-title = "Das Lied der Deutschen" 
-subtitle = "" 
-composer = "Joseph Haydn (1732–1809), 1797" 
-opus = "" 
-meter = "Langsam" 
-arranger = "Bearbeitung von Eusebius Mandyczewski (1857–1929)" 
-poet = "H. Hoffmann von Fallersleben (1798–1874), 1841" 
+ title = "Das Lied der Deutschen" 
+ subtitle = "" 
+ composer = "Joseph Haydn (1732–1809), 1797" 
+ opus = "" 
+ arranger = "Bearbeitung von Eusebius Mandyczewski (1857–1929)" 
+ poet = "H. Hoffmann von Fallersleben (1798–1874), 1841" 
  
-mutopiatitle = "Das Lied der Deutschen" 
-mutopiacomposer = "HaydnFJ" 
-mutopiapoet = "H. Hoffmann von Fallersleben (1798–1874)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1797" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Das Lied der Deutschen" 
+ mutopiacomposer = "HaydnFJ" 
+ mutopiapoet = "H. Hoffmann von Fallersleben (1798–1874)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1797" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-638"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-638"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -189,19 +186,14 @@ lastupdated = "2009/September/1"
 \layout {
 indent = 0.0\cm
 \context {\Score 
-\remove "Bar_number_engraver" 
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\remove "Bar_number_engraver"
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=76
 }
 
 }

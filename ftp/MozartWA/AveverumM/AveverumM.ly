@@ -1,9 +1,8 @@
 #(set-global-staff-size 15.5) 
-%#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key g \major \time 4/4 \tempo 4=108 } 
+global = { \key g \major \time 4/4 \tempo "Adagio" } 
 
 TAAveVerum = %\relative g'' 
 { 
@@ -25,14 +24,14 @@ a'2-( gis'4-) gis'4
 a'1 
 a'2.\p a'4 
 a'4-( bes'4-) bes'2 
-bes'4-( d''4-) c''4-( bes'4-) 
-bes'4-( a'4-) a'2 
-g'2. g'4 
-g'4-( bes'4-) a'4 g'4 
-g'2-( f'8[ e'8]-) f'4 
-e'2 r2 
+bes'4-(\mf\> d''4-) c''4-( bes'4-) 
+bes'4-(\p a'4-) a'2 
+g'2.\< g'4 
+g'4-(\! bes'4-) a'4\> g'4 
+g'2-(\< f'8[ e'8]-) f'4 
+e'2\! r2 
 fis'!2.\pp fis'4 
-fis'4-( e'4-) d'4-( g'4-) 
+fis'4-(\cresc e'4-) d'4-( g'4-) 
 g'2. g'4 
 g'4-( fis'4-) e'4 a'4 
 a'1~\( 
@@ -42,7 +41,7 @@ g'2\! g'2\p
 d''1-( 
 d''2-(-) dis''2 
 e''4 b'4 cis''4 d'' 
-cis''4 b'8[ a'8]-) d''4 g'\pp 
+cis''4\> b'8[ a'8]-) d''4 g'\pp 
 fis'2-( e'4.-) e'8 
 d'1\fermata 
 \bar "|." 
@@ -81,7 +80,7 @@ fis'1\( ~
 fis'4 g'4\) fis'4 e'4 
 d'2-( cis'4.-) cis'8 
 d'2 r2 
-r2 fis'2 
+r2 fis'2-\tweak X-offset #-2.5 \p 
 g'2-( fis'2 
 e'1 ~ 
 e'4 d'8[ cis'8]-) d'4 d'4 
@@ -133,7 +132,7 @@ fis1
 } 
 
 BBAveVerum = \relative g { 
-\revert Rest #'direction 
+\revert Rest.direction 
 d2\p d 
 d2 d 
 cis2 cis 
@@ -152,14 +151,14 @@ e2. e4
 a1 
 a2.\p a4 
 a4( g4) g2 
-c,2. c4 
+c,2.\mf\> c4 
 c4(\p f4) f2 
-f2. f4 
-e4( d4) cis!4 a'4 
-bes2( a4) gis4 
-a2 r2 
+f2.\< f4 
+e4(\! d4) cis!4\> a'4 
+bes2(\< a4) gis4 
+a2\! r2 
 \oneVoice R1 \voiceTwo 
-g2.\pp g4 
+g2.-\tweak X-offset #-3.0 \pp\cresc g4 
 g4( fis4) e4( a4) 
 a2. a4 
 a4-( g4-) fis4 b4 
@@ -169,7 +168,7 @@ b2\! r2
 r2 a2\p 
 bes2( a2 
 gis1 
-g!2) fis4 b\pp 
+g!2)\> fis4 b\pp 
 a2. a4 
 d,1\fermata 
 \bar "|." 
@@ -213,31 +212,31 @@ in Todes -- not er -- hö -- re uns,
 %--------------------
 
 \header { 
-kaisernumber = "41" 
-comment = "" 
+ kaisernumber = "41" 
+ comment = "" 
  
-title = "Ave, verum corpus" 
-subtitle = "" 
-composer = "Wolfgang Amadeus Mozart (1756–1791), 1791" 
-opus = "" 
-meter = "Adagio" 
-arranger = "Bearbeitung Carl Reinecke (1824–1910)" 
-poet = "Deutsch von Karl Lütge" 
+ title = "Ave, verum corpus" 
+ subtitle = "" 
+ composer = "Wolfgang Amadeus Mozart (1756–1791), 1791" 
+ opus = "" 
+ arranger = "Bearbeitung Carl Reinecke (1824–1910)" 
+ poet = "Deutsch von Karl Lütge" 
  
-mutopiatitle = "Ave, verum corpus" 
-mutopiacomposer = "MozartWA" 
-mutopiapoet = "" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (TTBB)" 
-date = "" 
-source = "Leipzig : C. F. Peters, 1907" 
-style = "Classical" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/August/1" 
+ mutopiatitle = "Ave, verum corpus" 
+ mutopiacomposer = "MozartWA" 
+ mutopiapoet = "" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (TTBB)" 
+ date = "1791" 
+ source = "Leipzig : C. F. Peters, 1907" 
+ style = "Classical" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-1708"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-1708"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
   
 \score { 
@@ -289,19 +288,13 @@ lastupdated = "2009/August/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=108
 }
 
 }

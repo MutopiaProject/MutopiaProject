@@ -1,12 +1,11 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key a \major \time 4/4 \tempo 4=126 } 
+global = { \key a \major \time 4/4 \tempo \markup {Frisch und kräftig (\italic {alla Marcia})} } 
 
 SDeutschesWeihelied = \relative a' { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 e4-.\f a4.-> e8-. a4-. b-. cis4.-> b8-. a4-. 
 b4-. cis-. b-. cis-. d-. e2-> cis4-. 
@@ -25,7 +24,7 @@ e4 fis gis a a a2( gis) e s4
 } 
 
 TDeutschesWeihelied = \relative a { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 e4 a4. e8 e4 gis a4. gis8 a4 
 gis4 a e' e e e2 e4 
@@ -87,32 +86,32 @@ soll Freund und Bru -- der hei -- ßen.
 %--------------------
 
 \header { 
-kaisernumber = "148" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "148" 
+ comment = "" 
+ footnote = "" 
  
-title = "Deutsches Weihelied" 
-subtitle = "" 
-composer = "Albert Methfessel (1785–1869), 1811" 
-opus = "" 
-meter = \markup {Frisch und kräftig (\italic {alla Marcia})} 
-arranger = "Bearbeitung von Friedrich Ernst Koch (1862–1927)" 
-poet = "Matthias Claudius (1740–1815), 1772" 
+ title = "Deutsches Weihelied" 
+ subtitle = "" 
+ composer = "Albert Methfessel (1785–1869), 1811" 
+ opus = ""  
+ arranger = "Bearbeitung von Friedrich Ernst Koch (1862–1927)" 
+ poet = "Matthias Claudius (1740–1815), 1772" 
  
-mutopiatitle = "Deutsches Weihelied" 
-mutopiacomposer = "MethfesselA" 
-mutopiapoet = "M. Claudius (1740–1815)"
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1811" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Deutsches Weihelied" 
+ mutopiacomposer = "MethfesselA" 
+ mutopiapoet = "M. Claudius (1740–1815)"
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1811" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-631"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-631"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -170,18 +169,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=126
 }
 
 }

@@ -1,12 +1,11 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key a \major \time 3/4 \tempo 4=66 } 
+global = { \key a \major \time 3/4 \tempo \markup {Andante "  " \italic {In gehender Bewegung}} } 
 
 SFerne = \relative a' { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 a8\mp\< b\! cis4. a8 a fis fis8.[\> e16] e4\! 
 e8\< a\! b4. a8 d8. cis16 b2 
@@ -15,9 +14,8 @@ b8. fis16 a8.[\> gis16] gis4\! r
 \set crescendoText = \markup { \italic " poco cresc." } 
 \set crescendoSpanner = #'text 
 a8.\p\< e16 \acciaccatura gis8 fis e a b\! \crescHairpin cis4(\< e\> d)\! 
-\override Hairpin #'to-barline = ##f 
-\dimTextDim 
-cis8.^\markup{\large\italic{dolce}} cis16 cis8\> a cis \dimHairpin b\> a2\! 
+\override Hairpin.to-barline = ##f 
+cis8.^\markup{\large\italic{dolce}} cis16 cis8\dim a cis b\> a2\! 
 \bar "|." 
 } 
 
@@ -52,9 +50,8 @@ b8. b'16 e,4\> e4\! r
 \set crescendoText = \markup { \italic " poco cresc." } 
 \set crescendoSpanner = #'text 
 a,8.\p\< cis16 d8 cis fis e\! \crescHairpin a,4(\< cis\> d)\! 
-\override Hairpin #'to-barline = ##f 
-\dimTextDim 
-e8._\markup{\large\italic{dolce}}  e16 e8\> e e \dimHairpin e\> a2\! 
+\override Hairpin.to-barline = ##f 
+e8._\markup{\large\italic{dolce}} e16 e8\dim e e e\> a2\! 
 \bar "|." 
 } 
 
@@ -98,32 +95,32 @@ o, wie ger -- ne kehrt ich um.
 %--------------------
 
 \header { 
-kaisernumber = "225" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "225" 
+ comment = "" 
+ footnote = "" 
  
-title = "In der Ferne" 
-subtitle = "" 
-composer = "Friedrich Silcher (1789–1860), 1855" 
-opus = "" 
-meter = \markup {Andante "  " \italic {In gehender Bewegung}} 
-arranger = "Bearbeitung von Friedrich Ernst Koch (1862–1927)" 
-poet = "Albert Graf Schlippenbach (1800–1886), 1833" 
+ title = "In der Ferne" 
+ subtitle = "" 
+ composer = "Friedrich Silcher (1789–1860), 1855" 
+ opus = "" 
+ arranger = "Bearbeitung von Friedrich Ernst Koch (1862–1927)" 
+ poet = "Albert Graf Schlippenbach (1800–1886), 1833" 
  
-mutopiatitle = "In der Ferne" 
-mutopiacomposer = "SilcherF" 
-mutopiapoet = "A. Schlippenbach (1800–1886)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1855" 
-source = "Leipzig : C. F. Peters, 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "In der Ferne" 
+ mutopiacomposer = "SilcherF" 
+ mutopiapoet = "A. Schlippenbach (1800–1886)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1855" 
+ source = "Leipzig : C. F. Peters, 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-732"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-732"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -179,19 +176,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=66
 }
 
 }

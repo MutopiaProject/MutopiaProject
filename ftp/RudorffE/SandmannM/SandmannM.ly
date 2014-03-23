@@ -1,14 +1,13 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key h \major \time 4/4 \tempo 4=90 } 
+global = { \key h \major \time 4/4 \tempo "Heimlich, nicht schleppend." } 
 
 TASandmann = \relative h { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 fis4\p h4. cis8 dis4 cis h2 ais4 
 h4 cis8[ dis] e4 dis8[ cis] h4 cis2 r4 
@@ -43,7 +42,7 @@ h4 ais h h h h h ais h2 s4
 } 
 
 BASandmann = \relative h { 
-\revert Rest #'direction 
+\revert Rest.direction 
 \partial 4 
 fis4 dis4. e8 fis4 fis fis2 fis4 
 fis4 fis fis fis fis fis2 r4 
@@ -120,31 +119,31 @@ Es leuch -- tet mor -- gen mir Will -- komm das Äu -- ge -- lein so fromm!
 %--------------------
 
 \header { 
-kaisernumber = "180" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "180" 
+ comment = "" 
+ footnote = "" 
  
-title = "Sandmännchen" 
-subtitle = "" 
-composer = "Volksweise, aufgezeichnet von Wilhelm von Zuccalmaglio, 1840" 
-opus = "" 
-meter = \markup {Heimlich, nicht schleppend.} 
-arranger = "Bearbeitung von Ernst Rudorff (1840–1916)" 
-% poet = "Volkslied, aufgezeichnet (und wahrscheinlichb gedichtet) von Wilhelm von Zuccalmaglio (1803–1864), 1840" 
+ title = "Sandmännchen" 
+ subtitle = "" 
+ composer = "Volksweise, aufgezeichnet von Wilhelm von Zuccalmaglio, 1840" 
+ opus = "" 
+ arranger = "Bearbeitung von Ernst Rudorff (1840–1916)" 
+ % poet = "Volkslied, aufgezeichnet (und wahrscheinlichb gedichtet) von Wilhelm von Zuccalmaglio (1803–1864), 1840" 
+
+ mutopiatitle = "Sandmännchen" 
+ mutopiacomposer = "RudorffE" 
+ mutopiapoet = "" 
+ mutopiainstrument = "Choir (TTBB)" 
+ date = "1900s" 
+ source = "Leipzig : C. F. Peters, 1907" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
-mutopiatitle = "Sandmännchen" 
-mutopiacomposer = "RudorffE" 
-mutopiapoet = "" 
-mutopiainstrument = "Choir (TTBB)" 
-date = "1900s" 
-source = "Leipzig : C. F. Peters, 1907" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/August/1" 
- 
- footer = "Mutopia-2009/09/08-801"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/23-801"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score {
@@ -154,7 +153,7 @@ lastupdated = "2009/August/1"
 	\context Lyrics = extra 
 	\context Staff = TenorStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "G_8" 
 			\context Voice = TenorA { \voiceOne 
@@ -175,7 +174,7 @@ lastupdated = "2009/August/1"
 	\context Lyrics = versethree 
 	\context Staff = BassStaff 
 	<< 
-	#(set-accidental-style 'voice) 
+	\accidentalStyle voice 
 	\set Staff.midiInstrument = "voice oohs" 
 			\clef "F" 
 			\context Voice = BassA { \voiceOne 
@@ -201,19 +200,13 @@ lastupdated = "2009/August/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=90
 }
 
 }

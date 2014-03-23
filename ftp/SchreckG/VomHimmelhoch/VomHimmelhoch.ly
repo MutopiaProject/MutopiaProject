@@ -1,21 +1,18 @@
 \include "deutsch.ly" 
 
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
-\version "2.12" 
+\version "2.18.0" 
 
-global = { \key d \major \time 4/4 \tempo 4=72 } 
+global = { \key d \major \time 4/4 \tempo "Freudig" } 
 
 SLutherHimmelB = \relative d'' { 
 \partial 4 
 d4\mf cis\< h cis\! a h cis d 
 d d a a fis a\< g\> fis\! 
-\crescTextCresc 
-fis h\< h a cis 
+fis h\cresc h a cis 
 d h a d\f 
-\dimTextDim 
-cis h a h\> 
+cis h a h\dim 
 g8[ fis] e4 d\p\fermata 
 \bar "|." 
 } 
@@ -42,11 +39,9 @@ BLutherHimmelB = \relative d {
 \partial 4 
 d4\mf a'\< h e,\! fis g8[ fis] e4 d 
 g, h cis8[ h] a4 d dis\< e\> h\! 
-\crescTextCresc 
-h'8[ a] g4\< gis a4. ais8 
+h'8[ a] g4\cresc gis a4. ais8 
 h4 e, a fis\f 
-\dimTextDim 
-eis8[ cis] dis[ eis] fis[ e] dis4\> 
+eis8[ cis] dis[ eis] fis[ e] dis4\dim 
 e8[ g,] a4 d\p\fermata 
 \bar "|." 
 } 
@@ -87,33 +82,33 @@ mit sei -- nem lie -- ben Sohn ver -- ehrt!
 %--------------------
 
 \header { 
-kaisernumber = "5b" 
-comment = "" 
-footnote = "" 
+ kaisernumber = "5b" 
+ comment = "" 
+ footnote = "" 
  
-title = "Vom Himmel hoch, da komm ich her" 
-subtitle = "" 
-composer = "Martin Luther (1483–1546), 1539" 
-opus = "" 
-piece = "" 
-meter = \markup {Freudig} 
-arranger = "Bearbeitung von Gustav Schreck (1849–1918)" 
-poet = "Martin Luther (1483–1546), 1535" 
+ title = "Vom Himmel hoch, da komm ich her" 
+ subtitle = "" 
+ composer = "Martin Luther (1483–1546), 1539" 
+ opus = "" 
+ piece = "" 
+ arranger = "Bearbeitung von Gustav Schreck (1849–1918)" 
+ poet = "Martin Luther (1483–1546), 1535" 
  
-mutopiatitle = "Vom Himmel hoch, da komm ich her" 
-mutopiacomposer = "SchreckG" 
-mutopiapoet = "M. Luther (1483–1546)" 
-mutopiaopus = "" 
-mutopiainstrument = "Choir (SATB)" 
-date = "1910s" 
-source = "Leipzig (Peters), 1915" 
-style = "Romantic" 
-copyright = "Creative Commons Attribution 3.0" 
-maintainer = "Klaus Rettinghaus" 
-lastupdated = "2009/September/1" 
+ mutopiatitle = "Vom Himmel hoch, da komm ich her" 
+ mutopiacomposer = "SchreckG" 
+ mutopiapoet = "M. Luther (1483–1546)" 
+ mutopiaopus = "" 
+ mutopiainstrument = "Choir (SATB)" 
+ date = "1910s" 
+ source = "Leipzig (Peters), 1915" 
+ style = "Romantic" 
+ license = "Creative Commons Attribution 4.0" 
+ maintainer = "Klaus Rettinghaus" 
+ lastupdated = "2014/March/01" 
  
- footer = "Mutopia-2009/09/08-630"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ footer = "Mutopia-2014/03/21-630"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 } 
 
 \score { 
@@ -167,19 +162,13 @@ lastupdated = "2009/September/1"
 indent = 0.0\cm
 \context {\Score 
 \remove "Bar_number_engraver"
-\override MetronomeMark #'transparent = ##t 
-\override DynamicTextSpanner #'dash-period = #-1.0 
-\override BreathingSign #'text = #(make-musicglyph-markup "scripts.rvarcomma") 
-}
-\context {\Staff 
-\override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1) 
+\override DynamicTextSpanner.style = #'none 
+\override BreathingSign.text = #(make-musicglyph-markup "scripts.rvarcomma") 
 }
 }
 
 \midi {
-\context { \Voice 
-\remove "Dynamic_performer" 
-}
+\tempo 4=72
 }
 
 }
