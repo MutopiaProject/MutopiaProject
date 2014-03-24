@@ -1,6 +1,6 @@
 \version "2.18.0"
 
-\include "includes\header.ly"
+\include "includes/header.ly"
 \header {
    instrument = "Clarinet"
 }
