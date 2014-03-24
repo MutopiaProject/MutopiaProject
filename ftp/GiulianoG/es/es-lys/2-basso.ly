@@ -1,11 +1,8 @@
-\version "2.0.0"
-IIBasso = \notes \relative c {
+\version "2.17.97"
+IIBasso =  \relative c {
   \clef "bass"
   \key c\minor
   \time 4/4
-
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(ly:make-moment 1 2)
 
   \repeat "volta" 2 {
   \partial 8 r8 |
@@ -21,7 +18,7 @@ IIBasso = \notes \relative c {
   bes bes, g' d |
   es g as as |
   %10
-\octave as
+\octaveCheck as
   bes8 bes bes, bes g'4 es8 c |
   bes bes bes bes es g bes g |
   c, c c c r f as bes |
@@ -29,7 +26,7 @@ IIBasso = \notes \relative c {
   bes8 bes bes bes es es g as |
   es a, bes bes es, es' es,4 |
   %16 page 6
-  \octave es,
+  \octaveCheck es,
   f'8 f f fis g g g,4 |
   b b c es8 c |
   f f f fis g d g,4 |
@@ -41,7 +38,7 @@ IIBasso = \notes \relative c {
   es' es8 es b8[ c] f[ g] |
   es r es es b[ c] f[ g] |
   %25
-  \octave g
+  \octaveCheck g
   c,4_\fermata r8
   }
 }
