@@ -1,5 +1,5 @@
-\version "2.0.0"
-organo = \notes \relative c {
+\version "2.18.0"
+organo =  \relative c {
   \key d \minor
   \time 4/4
   d8\f f a d d, f a d |
@@ -88,12 +88,12 @@ organo = \notes \relative c {
 }
 
 organoStaff =
-  \context Staff = organo <<
-    \property Staff.instrument = "Organo"
-    \property Staff.instr      = "Org."
-    \property Staff.midiInstrument = "church organ"
+  \context Staff = "organo" <<
+    \set Staff.instrumentName = "Organo"
+    \set Staff.shortInstrumentName = "Org."
+    \set Staff.midiInstrument = "church organ"
     \clef bass
-    \context Voice = organ {
+    \context Voice = "organ" {
       \organo
     }
   >>

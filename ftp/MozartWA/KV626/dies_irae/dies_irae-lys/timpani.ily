@@ -1,6 +1,6 @@
-\version "2.0.0"
+\version "2.18.0"
 % Timpani in D.A (timpani with D and A)
-timpani = \notes \relative c {
+timpani =  \relative c {
   \key c \major
   \time 4/4
 
@@ -67,13 +67,13 @@ timpani = \notes \relative c {
   d4 r r2 |
 }
 
-timpaniStaff = 
-  \context Staff = timpani <<
-    \property Staff.instrument = \markup { \column < "Timpani" "in D.A" > }
-    \property Staff.instr      = \markup { \column < "Tim." "D.A" > }
-    \property Staff.midiInstrument = "timpani"
+timpaniStaff =
+  \context Staff = "timpani" <<
+    \set Staff.instrumentName = \markup { \center-column { "Timpani" "in D.A" } }
+    \set Staff.shortInstrumentName = \markup { \center-column { "Tim." "D.A" } }
+    \set Staff.midiInstrument = "timpani"
     \clef bass
-    \context Voice = timpani {
+    \context Voice = "timpani" {
       \timpani
     }
   >>

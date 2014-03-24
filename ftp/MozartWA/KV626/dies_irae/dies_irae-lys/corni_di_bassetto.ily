@@ -1,7 +1,7 @@
-\version "2.0.0"
+\version "2.18.0"
 % Corni di Basetto(Basset Horns tuned in F)
-corniDiBassettoA = \notes \relative c''' {
-  \property Staff.transposing = #-7 % C is F
+corniDiBassettoA =  \relative c''' {
+  \transposition f  % C is F
   \key c \major
   \time 4/4
 
@@ -85,8 +85,8 @@ corniDiBassettoA = \notes \relative c''' {
   a r4 r2 \bar "|."
 }
 
-corniDiBassettoB = \notes \relative c'' {
-  \property Staff.transposing = #-7 % C is F
+corniDiBassettoB =  \relative c'' {
+  \transposition f  % C is F
   \key c \major
   \time 4/4
 
@@ -114,7 +114,7 @@ corniDiBassettoB = \notes \relative c'' {
   e4 r r2 |
   R1*2 |
   e2 e |
- 
+
 % BAR 23
   fis1 |
   fis2 fis |
@@ -174,13 +174,11 @@ corniDiBassettoB = \notes \relative c'' {
 corniDiBassettoStaff =
   \context Staff = corniDiBassetto <<
     \clef treble
-    \property Staff.instrument = \markup { \column < "Corni di" "Bassetto in F" > }
-    \property Staff.instr      = \markup { \column < "Cor." "F" > }
-    \property Staff.midiInstrument = "clarinet"
+    \set Staff.instrumentName = \markup { \center-column { "Corni di" "Bassetto in F" } }
+    \set Staff.shortInstrumentName = \markup { \center-column { "Cor." "F" } }
+    \set Staff.midiInstrument = "clarinet"
 
     \context Voice = one_corniDiBassetto {
-      \partcombine Voice
-        \context Thread=one \corniDiBassettoA
-        \context Thread=two \corniDiBassettoB
+     \partcombine \corniDiBassettoA \corniDiBassettoB
     }
   >>
