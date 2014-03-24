@@ -1,10 +1,10 @@
-\version "2.0.1"
+\version "2.18.0"
 
 
 % 4th Movement - MENUETTO
 
 % ********************************************************************************OBOE********************************************************************************
-oboeMenuettoTwo = \notes \relative c'' {
+oboeMenuettoTwo =  \relative c'' {
    \key bes \major
    \time 3/4
    \repeat volta 2 {
@@ -64,9 +64,9 @@ oboeMenuettoTwo = \notes \relative c'' {
 
    % ******************************2nd REPEAT IN TRIO
    \repeat volta 2 {
-   << c2.~ \p \< { s2 s8  s8\! } >> 
+   << c2.~ \p \< { s2 s8  s8\! } >>
    c4\f b-. r
-   << bes!2.~ \p \< { s2 s8  s8\! } >> 
+   << bes!2.~ \p \< { s2 s8  s8\! } >>
    bes4\f a-. r
    d2\p \< (  es4\!)
    f\f (  g) r
@@ -80,9 +80,9 @@ oboeMenuettoTwo = \notes \relative c'' {
    c8 (  bes) a4 r
    c2. \< ~
    << c { s2  s4\! } >>
-   r8 \cresc c' ( bes a g  f)
+   r8 c' \cresc ( bes a g  f)
    r bes ( a g f  e)
-   f4 r \endcresc f\f (
+   f4 r \! f\f (
    a) r a, (
    c4.)   a8[ ( bes  g) ]
    f4 r8   f'[ \> ( e  g) ]
@@ -92,7 +92,7 @@ oboeMenuettoTwo = \notes \relative c'' {
 }
 
 % ********************************************************************************CLARINET********************************************************************************
-clarinetMenuettoTwo = \notes \relative c' {
+clarinetMenuettoTwo =  \relative c' {
    \key c \major
    \time 3/4
    \repeat volta 2 {
@@ -103,7 +103,7 @@ clarinetMenuettoTwo = \notes \relative c' {
    b\f r r8 b (
    c) c4 c c8-.
    b4\p r r8 b (
-   c) c4 c c8-. 
+   c) c4 c c8-.
    b4 r r
    b r8   b[ ( c  d) ]
    c e16 (  c) b4 (  a)
@@ -166,11 +166,11 @@ clarinetMenuettoTwo = \notes \relative c' {
    b\f (  c) r
    \paddinggDynamics fis,4.\p ( \normalDynamics g8  a4)
    b8 (  a) g4 r
-   r8 \cresc d' ( c b a  g)
+   r8 d' \cresc ( c b a  g)
    r c ( b a g  fis)
    g (  b) d2 ~
    d2.
-   d4 r \endcresc b\f (
+   d4 r \! b\f (
    g') r g, (
    b4.)   g8[ ( a  fis) ]
    g (  b) d4. \> (  c8)
@@ -180,7 +180,7 @@ clarinetMenuettoTwo = \notes \relative c' {
 }
 
 % ********************************************************************************BASSOON********************************************************************************
-bassoonMenuettoTwo = \notes \relative c {
+bassoonMenuettoTwo =  \relative c {
    \key bes \major
    \clef bass
    \time 3/4
@@ -254,11 +254,11 @@ bassoonMenuettoTwo = \notes \relative c {
    f\f (  bes,) r
    c\p c c
    c (  f) r
-   \cresc f (  c) a'-.
+   f( c\cresc) a'-.
    g (  c,) bes'-.
    a (  c,) a'-.
    g (  c,) bes'-.
-   \endcresc a8\f c ( bes a g  f)
+   \! a8\f c ( bes a g  f)
    r f' ( e d c  b)
    c4 c, c
    \paddingDynamics f a, \> (  c)

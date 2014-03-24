@@ -1,25 +1,8 @@
-\version "2.0.1"
+\version "2.18.0"
 
+\include "includes/header.ly"
 \header {
-   title = "DIVERTIMENTO II"
-   subtitle = "for Oboe, Clarinet and Bassoon"
-   composer = "W.A.Mozart, K.V.A. 229, No.2"
    instrument = "Oboe"
-
-   mutopiatitle = "DIVERTIMENTO II for Oboe, Clarinet and Bassoon"
-   mutopiacomposer = "MozartWA"
-   mutopiaopus = "K.V.A. 229"
-   mutopiainstrument = "Ensemble: Oboe, Clarinet, Bassoon"
-   source = "Boosey & Hawkes"
-   style = "Classical"
-   copyright = "Public Domain"
-   maintainer = "Vit Reichel"
-   maintainerEmail = "vit.reichel@volny.cz"
-   maintainerWeb = "www.volny.cz/respiro"
-   lastupdated = "2003/Oct/08"
-   
-   tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-   footer = "Mutopia-2003/10/08-261"
 }
 
 \include "includes/definitions.ly"
@@ -29,7 +12,7 @@
 \include "includes/menuettoTwo.ly"
 \include "includes/rondo.ly"
 
-\paper { }
+\layout { }
 
 \score {
    \oboeAllegro
@@ -39,41 +22,45 @@
    }
 }
 
+\pageBreak
 \score {
-   \context Staff = ob <<
+   \context Staff = "ob" <<
    \oboeMenuettoOne
    \textUpMenuettoOne
    \textDownMenuettoOne
    >>
    \header {
-      piece = "\\newpage Menuetto"
+      piece = "Menuetto"
    }
 }
 
+\pageBreak
 \score {
    \oboeLarghetto
    \header {
-      piece = "\\newpage Larghetto"
+      piece = "Larghetto"
    }
 }
 
+\pageBreak
 \score {
-   \context Staff = ob <<
+   \context Staff = "ob" <<
    \oboeMenuettoTwo
    \textUpMenuettoTwo
    \textDownMenuettoTwo
    >>
    \header {
-      piece = "\\newpage Menuetto"
+      piece = "Menuetto"
    }
 }
 
+\pageBreak
 \score {
 <<
-   \property Score.BarNumber \override #'padding = #2
+   \override Score.BarNumber.padding = #2
    \oboeRondo
 >>
    \header {
-      piece = "\\newpage Rondo"
+      piece = "Rondo"
    }
 }
