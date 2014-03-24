@@ -1,6 +1,6 @@
-\version "2.0.0"
+\version "2.17.97"
 
-IIIBasso = \notes \relative c {
+IIIBasso =  \relative c {
   \clef "bass"
   \key e\major
   \time 3/4

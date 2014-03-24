@@ -1,13 +1,9 @@
-\version "2.0.0"
+\version "2.17.97"
 
-IBasso = \notes \relative c {
+IBasso =  \relative c {
   \clef "bass"
   \key e\major
   \time 4/4
-
-  % end beams on quarters by default
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(ly:make-moment 1 4)
 
   \repeat "volta" 2 {
   \partial 8 r8 |
@@ -39,7 +35,7 @@ IBasso = \notes \relative c {
   }
 
   \repeat "volta" 2 {
-  \property Score.measurePosition = #(ly:make-moment 3 4)
+  \set Score.measurePosition = #(ly:make-moment 3/4)
   b,4 |
   %20
   b2:8 r8   b[ b dis] |
