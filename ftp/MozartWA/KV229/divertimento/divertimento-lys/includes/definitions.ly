@@ -1,41 +1,50 @@
-\version "2.0.1"
+\version "2.18.0"
 
-paddingDynamics = \property Voice.DynamicLineSpanner \override #'padding = #1.2
-paddinggDynamics = \property Voice.DynamicLineSpanner \override #'padding = #2.4
-normalDynamics = \property Voice.DynamicLineSpanner \revert #'padding
+paddingDynamics = \override DynamicLineSpanner.padding = #1.2
+paddinggDynamics = \override DynamicLineSpanner.padding = #2.4
+normalDynamics = \revert DynamicLineSpanner.padding
 
-paddingSlur = \property Voice.Slur \override #'attachment-offset = #'((0 . 0.8) 0 . 0.8)
-paddinggSlur = \property Voice.Slur \override #'attachment-offset = #'((0 . 1.3) 0 . 1.3)
-normalSlur = \property Voice.Slur \revert #'attachment-offset
+paddingSlur = {} %\override Slur.attachment-offset = #'((0 . 0.8) 0 . 0.8)
+paddinggSlur = {} %\override Slur.attachment-offset = #'((0 . 1.3) 0 . 1.3)
+normalSlur = {} %\revert Slur.attachment-offset
 
-textUpMenuettoOne = \notes {
+textUpMenuettoOne =  {
 s4 \skip 2 .*7 s2
 s4 \skip 2 .*23 s2 s2.
-\property Voice.TextScript \override #'padding = #2
+\override TextScript.padding = #2
 s2.^"TRIO"
-\property Voice.TextScript \revert #'padding
+\revert TextScript.padding
 \skip 2 .*40
 s2
 }
 
-textDownMenuettoOne = \notes {
+textDownMenuettoOne =  {
 s4 \skip 2 .*7 s2
 s4 \skip 2 .*23 s2 s4 s2_\markup { \bold \italic Fine }
 \skip 2 .*41
-s2_\markup { \bold \italic \column < Menuetto "da Capo" > }
+s2_\markup { \bold \italic \column { Menuetto "da Capo" } }
 }
 
-textUpMenuettoTwo = \notes {
+textUpMenuettoTwo =  {
 \skip 2 .*30
-\property Voice.TextScript \override #'padding = #2.6
+\override TextScript.padding = #2.6
 s2.^"TRIO"
-\property Voice.TextScript \revert #'padding
+\revert TextScript.padding
 \skip 2 .*35
 }
 
-textDownMenuettoTwo = \notes {
+textDownMenuettoTwo =  {
 \skip 2 .*29
 s4 s2_\markup { \bold \italic Fine }
 \skip 2 .*35
-s4 s2_\markup { \bold \italic \column < Menuetto "da Capo" > }
+s4 s2_\markup { \bold \italic \column { Menuetto "da Capo" } }
+}
+
+\paper {
+  ragged-bottom = ##t
+  top-margin = 12 \mm
+  bottom-margin = 10 \mm
+}
+\layout {
+  indent = 20 \mm
 }
