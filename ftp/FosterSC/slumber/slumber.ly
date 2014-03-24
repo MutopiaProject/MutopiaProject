@@ -4,22 +4,22 @@
 
 \header {
 	date = "1862"
-	source = "Foster's Melodies: New York: Horace Waters, No.481 Broadway"
+	source = "Foster's Melodies: New York: Horace Waters, No. 481 Broadway"
 	style = "strophic with chorus"
 	instrument = "Voice and Piano"
-	copyright = "Public Domain"
+	license = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"
-	lastupdated = "12/11/2003"
+
 	title = "Slumber My Darling"
 	poet = "Text by Stephen Collins Foster"
 	composer = "Stephen Collins Foster"
-	opus = "1826-1864"
 	mutopiacomposer = "FosterSC"
+	mutopiapoet = "S. C. Foster (1826-1864)"
 	mutopiaopus = ""
 	mutopiastyle = "Song"
 
- footer = "Mutopia-2014/02/28-370"
+ footer = "Mutopia-2014/03/24-370"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
   }
