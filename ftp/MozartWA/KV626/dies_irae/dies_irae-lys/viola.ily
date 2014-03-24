@@ -1,5 +1,5 @@
-\version "2.0.0"
-viola = \notes \relative c' {
+\version "2.18.0"
+viola =  \relative c' {
   \key d \minor
   \time 4/4
   a16\f d d d d4:16 a16 d d d d4:16 |
@@ -85,13 +85,12 @@ viola = \notes \relative c' {
 }
 
 violaStaff =
-  \context Staff = viola <<
-    \property Staff.instrument = "Viola"
-    \property Staff.instr      = "Va."
-    \property Staff.midiInstrument = "viola"
+  \context Staff = "viola" <<
+    \set Staff.instrumentName = "Viola"
+    \set Staff.shortInstrumentName = "Va."
+    \set Staff.midiInstrument = "viola"
     \clef alto
-    \context Voice = viola {
+    \context Voice = "viola" {
       \viola
     }
   >>
-

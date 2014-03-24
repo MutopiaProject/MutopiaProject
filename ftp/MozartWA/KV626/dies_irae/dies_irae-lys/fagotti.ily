@@ -1,6 +1,6 @@
-\version "2.0.0"
+\version "2.18.0"
 % Fagotti (Bassoon)
-fagottiA = \notes \relative c' {
+fagottiA =  \relative c' {
   \key d \minor
   \time 4/4
   f2\f f |
@@ -83,8 +83,8 @@ fagottiA = \notes \relative c' {
   d f g bes a g a a, |
   d4 r4 r2 \bar "|."
 }
-  
-fagottiB = \notes \relative c' {
+
+fagottiB =  \relative c' {
   \key d \minor
   \time 4/4
   d2\f d |
@@ -169,16 +169,13 @@ fagottiB = \notes \relative c' {
 }
 
 fagottiStaff =
-  \context Staff = fagotti <<
+  \context Staff = "fagotti" <<
     \clef bass
-    \property Staff.instrument = #"Fagotti"
-    \property Staff.instr      = #"Fag."
-    \property Staff.midiInstrument = "bassoon"
+    \set Staff.instrumentName = #"Fagotti"
+    \set Staff.shortInstrumentName = #"Fag."
+    \set Staff.midiInstrument = "bassoon"
 
     \context Voice = one_fagotti {
-      \partcombine Voice
-        \context Thread=one \fagottiA
-        \context Thread=two \fagottiB
+      \partcombine \fagottiA \fagottiB
     }
   >>
-
