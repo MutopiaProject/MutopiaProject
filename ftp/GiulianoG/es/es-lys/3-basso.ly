@@ -1,11 +1,8 @@
-\version "2.0.0"
-IIIBasso = \notes \relative c' {
+\version "2.17.97"
+IIIBasso =  \relative c' {
   \clef "bass"
   \key es\major
   \time 3/4
-
-  \property  Staff.autoBeamSettings \override
-    #'(end * * * *) = #(ly:make-moment 3 4)
 
   \repeat "volta" 2 {
   %1 page 7
@@ -23,12 +20,12 @@ IIIBasso = \notes \relative c' {
   }
   \repeat "volta" 2 {
   %32
-\octave bes,
+\octaveCheck bes,
   bes d a | bes d f | g f es | es d bes | a2. | bes4 bes r | c a f |
   %39
   bes2 bes'4 | d, d, r | f' r8 f[ f, f'] | g2 g,4 | g2 b4 |
   %44
-\octave b,
+\octaveCheck b,
   c4 c c | c c c | g'2 g,4 | as2 b4 | c c c | c c c | f2 d4 |
   %51
   es a, f | bes bes bes | bes bes bes | f'2 d4 | es as, f |
@@ -37,14 +34,14 @@ IIIBasso = \notes \relative c' {
   %60
   d4 es es, | f' d es | bes' bes, r | f' d es | bes bes'8 as g f |
   %65
-\octave es
+\octaveCheck es
   es4 es r | as as, r | g' g r | as as, r | f' f, r | bes' bes, r |
   %71
   f' f, r | bes' bes, g' | as as as | es8 d d4 d | bes8 es bes4 bes |
   %76
   r8 es g4 d | es es, r | g' es g | f es d | es es, r | g' es g | f bes bes, |
   %83
-\octave es
+\octaveCheck es
   es2._\fermata
   }
 }
