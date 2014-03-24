@@ -1,28 +1,29 @@
 % -*- LilyPond -*-
 
-\version "1.7.30"
+\version "2.18.0"
 
 \include "defs.ly"
-
 \include "basso.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.midiInstrument = #"string ensemble 1"
-	\property Staff.instrument = \markup { \center << "Violoncello"
-							  "e Basso." >> }
-
-	\time 2/4
-
-	\bassoPart
-	\context Voice=markings { \markings }
-    >
-
-    \midi {
-       \tempo 4 = 46
+  \new Staff \with {
+    midiInstrument = #"string ensemble 1"
+    instrumentName = \markup {
+      \center-column { "Violoncello" "e Basso." }
     }
+  } <<
+    \override Score.BarNumber.padding = #3
+    \set Score.skipBars = ##t
+    \compressFullBarRests
 
-    \paper { }
+    \tempo "Andante."
+	\time 2/4
+	\bassoPart
+  >>
+
+  \midi {
+    \tempo 4 = 46
+  }
+
+  \layout { }
 }
