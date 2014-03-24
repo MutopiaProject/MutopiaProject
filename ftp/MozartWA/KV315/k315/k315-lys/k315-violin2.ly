@@ -1,27 +1,27 @@
 % -*- LilyPond -*-
 
-\version "1.7.30"
+\version "2.18.0"
 
 \include "defs.ly"
-
 \include "violin2.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.midiInstrument = #"string ensemble 1"
-	\property Staff.instrument = #"Violino II"
+  \new Staff \with {
+    midiInstrument = #"string ensemble 1"
+    instrumentName = #"Violino II"
+  } <<
+    \override Score.BarNumber.padding = #3
+    \set Score.skipBars = ##t
+    \compressFullBarRests
 
-	\time 2/4
+    \time 2/4
+    \tempo "Andante."
+    \violinIIPart
+  >>
 
-	\violinIIPart
-	\context Voice=markings { \markings }
-    >
+  \midi {
+    \tempo 4 = 46
+  }
 
-    \midi {
-       \tempo 4 = 46
-    }
-
-    \paper { }
+  \layout { }
 }

@@ -1,28 +1,30 @@
 % -*- LilyPond -*-
 
-\version "1.7.30"
+\version "2.18.0"
 
 \include "defs.ly"
-
 \include "flute.ly"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-        \property Staff.midiInstrument = #"flute"
-	\property Staff.instrument = \markup { \center << "Flauto traverso"
-							  "principale." >> }
-
-	\time 2/4
-
-	\flutePart
-	\context Voice=markings { \markings }
-    >
-
-    \midi {
-       \tempo 4 = 46
+  \new Staff = "flute" \with {
+    midiInstrument = #"flute"
+    instrumentName = \markup {
+      \center-column { "Flauto traverso" "principale." }
     }
+  } <<
+    \override Score.BarNumber.padding = #3
+    \compressFullBarRests
 
-    \paper { }
+    \time 2/4
+    \tempo "Andante."
+    \flutePart
+  >>
+
+  \midi {
+    \tempo 4 = 46
+  }
+
+  \layout {
+    indent = 24 \mm
+  }
 }
