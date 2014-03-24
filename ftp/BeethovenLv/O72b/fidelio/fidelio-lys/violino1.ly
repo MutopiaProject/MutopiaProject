@@ -1,11 +1,10 @@
-theFirstViolins = \notes \relative e'' {
+\version "2.18.0"
+theFirstViolins =  \relative e'' {
 	\clef "treble"
 	\time 2/2
 	\key e \major
 	
-	\property Score.skipBars = ##t
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
+	\set Score.skipBars = ##t
 	
 	e4.\f b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
@@ -23,34 +22,34 @@ theFirstViolins = \notes \relative e'' {
 	
 	a1\pp\<
 	f\!\>
-	\times 4/6 { e8\pp[(\! c e c e c] e[ c e c e c]) }
-	\times 4/6 { e[( c e c e c] e[ c e c e c]) }
-	\times 4/6 { g'[( e g e g e] g[ e g e g e]) }
-	\times 4/6 { g[( e g e g e] g[ e g e g e]) }
-	\times 4/6 { a[(_\cr f a f a f] a[ f a f a f]) }
-	\times 4/6 { a[( f a f a f] a[ f a f a f]) }
-	\times 4/6 { a[( fsharp! a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
-	\times 4/6 { a[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
-	\times 4/6 { dsharp'![( a dsharp a dsharp a] dsharp[ a dsharp a dsharp a]) }
-	\times 4/6 { dsharp[( a dsharp a dsharp a] dsharp[ a dsharp a dsharp a]) }
-	\times 4/6 { fsharp'[( dsharp fsharp dsharp fsharp dsharp] fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
-	\times 4/6 { fsharp[( dsharp fsharp dsharp fsharp dsharp] fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
-	\times 4/6 { a'[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
-	\times 4/6 { asharp[( csharp, asharp' csharp, asharp' csharp,] asharp'[ csharp, asharp' csharp, asharp' csharp,]) }
-	\times 2/3 { b'8\ff[( b,) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >]~ }
-		\times 2/3 { < b b' >[( b) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >]~ }
-	\times 2/3 { < b b' >[( b) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >]~ }
-		\times 2/3 { < b b' >[( b) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >] }
-	\times 2/3 { b8\p[( csharp b] } \times 2/3 { asharp[ b asharp] }
-		\times 2/3 { b8[ csharp b] } \times 2/3 { csharp[ dsharp csharp]) }
-	\times 2/3 { dsharp[( e dsharp] } \times 2/3 { e[ fsharp e] }
-		\times 2/3 { fsharp[ gsharp fsharp] } \times 2/3 { b,[ csharp b] }
+	\tuplet 6/4 { e8\pp[(\! c e c e c] e[ c e c e c]) }
+	\tuplet 6/4 { e[( c e c e c] e[ c e c e c]) }
+	\tuplet 6/4 { g'[( e g e g e] g[ e g e g e]) }
+	\tuplet 6/4 { g[( e g e g e] g[ e g e g e]) }
+	\tuplet 6/4 { a[(_\cr f a f a f] a[ f a f a f]) }
+	\tuplet 6/4 { a[( f a f a f] a[ f a f a f]) }
+	\tuplet 6/4 { a[( fsharp! a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
+	\tuplet 6/4 { a[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
+	\tuplet 6/4 { dsharp'![( a dsharp a dsharp a] dsharp[ a dsharp a dsharp a]) }
+	\tuplet 6/4 { dsharp[( a dsharp a dsharp a] dsharp[ a dsharp a dsharp a]) }
+	\tuplet 6/4 { fsharp'[( dsharp fsharp dsharp fsharp dsharp] fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
+	\tuplet 6/4 { fsharp[( dsharp fsharp dsharp fsharp dsharp] fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
+	\tuplet 6/4 { a'[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
+	\tuplet 6/4 { asharp[( csharp, asharp' csharp, asharp' csharp,] asharp'[ csharp, asharp' csharp, asharp' csharp,]) }
+	\tuplet 3/2 { b'8\ff[( b,) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >]~ }
+		\tuplet 3/2 { < b b' >[( b) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >]~ }
+	\tuplet 3/2 { < b b' >[( b) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >]~ }
+		\tuplet 3/2 { < b b' >[( b) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >] }
+	\tuplet 3/2 { b8\p[( csharp b] } \tuplet 3/2 { asharp[ b asharp] }
+		\tuplet 3/2 { b8[ csharp b] } \tuplet 3/2 { csharp[ dsharp csharp]) }
+	\tuplet 3/2 { dsharp[( e dsharp] } \tuplet 3/2 { e[ fsharp e] }
+		\tuplet 3/2 { fsharp[ gsharp fsharp] } \tuplet 3/2 { b,[ csharp b] }
 	asharp4) r r2
 	R1
-	\times 2/3 { b8[( csharp b] } \times 2/3 { asharp[ b asharp] }
-		\times 2/3 { b8[ csharp b] } \times 2/3 { csharp[ dsharp csharp]) }
-	\times 2/3 { dsharp[( e dsharp] } \times 2/3 { e[ fsharp e] }
-		\times 2/3 { fsharp[ gsharp fsharp] } \times 2/3 { b,[ csharp b] }
+	\tuplet 3/2 { b8[( csharp b] } \tuplet 3/2 { asharp[ b asharp] }
+		\tuplet 3/2 { b8[ csharp b] } \tuplet 3/2 { csharp[ dsharp csharp]) }
+	\tuplet 3/2 { dsharp[( e dsharp] } \tuplet 3/2 { e[ fsharp e] }
+		\tuplet 3/2 { fsharp[ gsharp fsharp] } \tuplet 3/2 { b,[ csharp b] }
 	a!4) r r2
 	R1
 	b8_\cr b4 b b b8~
@@ -107,8 +106,8 @@ theFirstViolins = \notes \relative e'' {
 	e8\ff[ e dsharp csharp] b[ a gsharp fsharp]
 	e[ dsharp csharp b] a[ gsharp fsharp e]
 	\stemUp csharp[ \stemDown csharp'' b a] gsharp[ fsharp e dsharp]
-	\stemBoth csharp[ b a gsharp] fsharp[ e dsharp csharp]
-	\stemUp asharp[ \stemDown fsharp'' fsharp fsharp] fsharp[ asharp asharp asharp] \stemBoth
+	\stemNeutral csharp[ b a gsharp] fsharp[ e dsharp csharp]
+	\stemUp asharp[ \stemDown fsharp'' fsharp fsharp] fsharp[ asharp asharp asharp] \stemNeutral
 	asharp[ csharp csharp csharp] csharp[ fsharp fsharp fsharp]
 	fsharp\ff[ fsharp fsharp fsharp] fsharp[ fsharp gsharp\sf gsharp]
 	fsharp[ fsharp fsharp fsharp] fsharp[ fsharp gsharp\sf gsharp]
@@ -250,11 +249,11 @@ theFirstViolins = \notes \relative e'' {
 	
 	R1*9
 	
-	\times 4/6 { b,4\p( dsharp fsharp a gsharp fsharp) }
-	\times 4/6 { b,( e gsharp b a gsharp) }
-	\times 4/6 { b,( e gsharp b a gsharp) }
-	\times 4/6 { b,( fsharp' a b a fsharp }
-	\times 4/6 { b a fsharp b a fsharp\fermata) }
+	\tuplet 6/4 { b,4\p( dsharp fsharp a gsharp fsharp) }
+	\tuplet 6/4 { b,( e gsharp b a gsharp) }
+	\tuplet 6/4 { b,( e gsharp b a gsharp) }
+	\tuplet 6/4 { b,( fsharp' a b a fsharp }
+	\tuplet 6/4 { b a fsharp b a fsharp\fermata) }
 	
 	\bar "||"
 	
@@ -268,31 +267,31 @@ theFirstViolins = \notes \relative e'' {
 	c-. b-. csharp-. b-.
 	csharp'-. b-. csharp-. b-.
 	csharp-. b-. csharp-. b-.
-	\times 4/6 { b\f( gsharp) e-. b( gsharp') e-. }
-	\times 4/6 { b'( gsharp) e-. b( gsharp') e-. }
-	\times 4/6 { b'( a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { fsharp( dsharp) b-. fsharp'( dsharp) b-. }
-	\times 4/6 { b'\p( gsharp) e-. b( gsharp') e-. }
-	\times 4/6 { b'( gsharp) e-. b( gsharp') e-. }
-	\times 4/6 { b( a) fsharp-. a( fsharp') dsharp-. }
-	\times 4/6 { b( fsharp') dsharp-. a'( fsharp) dsharp-. }
-	\times 4/6 { b'(_\cr gsharp) e-. gsharp( e) d-. }
-	\times 4/6 { b'( gsharp) e-. gsharp( e) d-. }
-	\times 4/6 { c'( a) e-. a( e) c-. }
-	\times 4/6 { c'( a) e-. a( e) c-. }
-	\times 4/6 { c'( a) fsharp-. a( fsharp) dsharp!-. }
-	\times 4/6 { c'( a) fsharp-. a( fsharp) dsharp!-. }
-	\times 4/6 { c'( a) fsharp-. a( fsharp) dsharp!-. }
-	\times 4/6 { c'( a) fsharp-. a( fsharp) dsharp!-. }
-	\times 4/6 { b'\f( a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { b'(_\markup { \italic {sempre piu \dynamic f} }
+	\tuplet 6/4 { b\f( gsharp) e-. b( gsharp') e-. }
+	\tuplet 6/4 { b'( gsharp) e-. b( gsharp') e-. }
+	\tuplet 6/4 { b'( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { fsharp( dsharp) b-. fsharp'( dsharp) b-. }
+	\tuplet 6/4 { b'\p( gsharp) e-. b( gsharp') e-. }
+	\tuplet 6/4 { b'( gsharp) e-. b( gsharp') e-. }
+	\tuplet 6/4 { b( a) fsharp-. a( fsharp') dsharp-. }
+	\tuplet 6/4 { b( fsharp') dsharp-. a'( fsharp) dsharp-. }
+	\tuplet 6/4 { b'(_\cr gsharp) e-. gsharp( e) d-. }
+	\tuplet 6/4 { b'( gsharp) e-. gsharp( e) d-. }
+	\tuplet 6/4 { c'( a) e-. a( e) c-. }
+	\tuplet 6/4 { c'( a) e-. a( e) c-. }
+	\tuplet 6/4 { c'( a) fsharp-. a( fsharp) dsharp!-. }
+	\tuplet 6/4 { c'( a) fsharp-. a( fsharp) dsharp!-. }
+	\tuplet 6/4 { c'( a) fsharp-. a( fsharp) dsharp!-. }
+	\tuplet 6/4 { c'( a) fsharp-. a( fsharp) dsharp!-. }
+	\tuplet 6/4 { b'\f( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { b'(_\markup { \italic {sempre piu \dynamic f} }
 		a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { b'( a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { b'( a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { b'\ff( a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { b'( a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { b'( a) fsharp-. a( fsharp) dsharp-. }
-	\times 4/6 { b'( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { b'( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { b'( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { b'\ff( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { b'( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { b'( a) fsharp-. a( fsharp) dsharp-. }
+	\tuplet 6/4 { b'( a) fsharp-. a( fsharp) dsharp-. }
 	gsharp8\sf[ gsharp fsharp fsharp] a\sf[ a gsharp gsharp]
 	fsharp\sf[ fsharp e e] dsharp\sf[ dsharp e e]
 	fsharp\sf[ fsharp gsharp gsharp] a\sf[ a asharp asharp]

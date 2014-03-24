@@ -1,14 +1,21 @@
+\version "2.18.0"
 \include "english.ly"
 \include "defs.ly"
+\include "header.ly"
+\header {
+  instrument = "Clarinetti in A"
+}
 
 \include "clarinettiA.ly"
-	
-\score {	
-	\theClarinets
-	
-	\header {
-		\include "header.ly"
-		instrument = "Clarinetti in A"
-	}
 
+\score {
+  \new Staff \with {
+    midiInstrument = #"clarinet"
+  } {
+	\new Voice = "Clarinets" \theClarinets
+  }
+  \layout {}
+  \midi {
+    \tempo 4 = 280
+  }
 }

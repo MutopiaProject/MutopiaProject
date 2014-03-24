@@ -1,59 +1,57 @@
-theCellos = \notes \relative c {
+\version "2.18.0"
+theCellos =  \relative c {
 	\clef "bass"
 	\time 2/2
 	\key e \major
-	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
-	
+
 	e4.\f b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4-. e-.
 	b-. r r2\fermata
-	
+
 	R1*8
-	
+
 	a'4.\f e8 e4-. r
 	csharp'4.\sf a8 a4-. r
 	e'4.\sf csharp8 csharp4-. a-.
 	e-. r r2\fermata
-	
+
 	R1*6
-	
-	\times 4/6 { c,8\pp[( g' c, g' c, g'] } \times 4/6 { c,8[ g' c, g' c, g']) }
-	\times 4/6 { c,8[( g' c, g' c, g'] } \times 4/6 { c,8[ g' c, g' c, g']) }
-	\times 4/6 { c,8[( g' c, g' c, g'] } \times 4/6 { c,8[ g' c, g' c, g']) }
-	\times 4/6 { c,8[( g' c, g' c, g'] } \times 4/6 { c,8[ g' c, g' c, g']) }
-	\times 4/6 { c,8[(_\cr a' c, a' c, a'] } \times 4/6 { c,8[ a' c, a' c, a']) }
-	\times 4/6 { c,8[( a' c, a' c, a'] } \times 4/6 { c,8[ c' c, c' c, c']) }
-	\times 4/6 { c,8[( c' c, c' c, c'] } \times 4/6 { c,8[ c' c, c' c, c']) }
-	\times 4/6 { c,8[( c' c, c' c, c'] } \times 4/6 { c,8[ c' c, c' c, c']) }
-	\times 4/6 { b[( fsharp'! b, fsharp' b, fsharp'] } \times 4/6 { b,[ fsharp' b, fsharp' b, fsharp']) }
-	\times 4/6 { b,[( fsharp' b, fsharp' b, fsharp'] } \times 4/6 { b,[ fsharp' b, fsharp' b, fsharp']) }
-	\times 4/6 { b,[( fsharp' b, fsharp' b, fsharp'] } \times 4/6 { b,[ fsharp' b, fsharp' b, fsharp']) }
-	\times 4/6 { b,[( fsharp' b, fsharp' b, fsharp'] } \times 4/6 { b,[ fsharp' b, fsharp' b, fsharp']) }
-	\times 4/6 { b,[( g' b, g' b, g'] } \times 4/6 { b,[ g' b, g' b, g']) }
-	\times 4/6 { b,[( g' b, g' b, g'] } \times 4/6 { b,[ g' b, g' b, g']) }
+
+	\tuplet 6/4 { c,8\pp[( g' c, g' c, g'] } \tuplet 6/4 { c,8[ g' c, g' c, g']) }
+	\tuplet 6/4 { c,8[( g' c, g' c, g'] } \tuplet 6/4 { c,8[ g' c, g' c, g']) }
+	\tuplet 6/4 { c,8[( g' c, g' c, g'] } \tuplet 6/4 { c,8[ g' c, g' c, g']) }
+	\tuplet 6/4 { c,8[( g' c, g' c, g'] } \tuplet 6/4 { c,8[ g' c, g' c, g']) }
+	\tuplet 6/4 { c,8[(_\cr a' c, a' c, a'] } \tuplet 6/4 { c,8[ a' c, a' c, a']) }
+	\tuplet 6/4 { c,8[( a' c, a' c, a'] } \tuplet 6/4 { c,8[ c' c, c' c, c']) }
+	\tuplet 6/4 { c,8[( c' c, c' c, c'] } \tuplet 6/4 { c,8[ c' c, c' c, c']) }
+	\tuplet 6/4 { c,8[( c' c, c' c, c'] } \tuplet 6/4 { c,8[ c' c, c' c, c']) }
+	\tuplet 6/4 { b[( fsharp'! b, fsharp' b, fsharp'] } \tuplet 6/4 { b,[ fsharp' b, fsharp' b, fsharp']) }
+	\tuplet 6/4 { b,[( fsharp' b, fsharp' b, fsharp'] } \tuplet 6/4 { b,[ fsharp' b, fsharp' b, fsharp']) }
+	\tuplet 6/4 { b,[( fsharp' b, fsharp' b, fsharp'] } \tuplet 6/4 { b,[ fsharp' b, fsharp' b, fsharp']) }
+	\tuplet 6/4 { b,[( fsharp' b, fsharp' b, fsharp'] } \tuplet 6/4 { b,[ fsharp' b, fsharp' b, fsharp']) }
+	\tuplet 6/4 { b,[( g' b, g' b, g'] } \tuplet 6/4 { b,[ g' b, g' b, g']) }
+	\tuplet 6/4 { b,[( g' b, g' b, g'] } \tuplet 6/4 { b,[ g' b, g' b, g']) }
 	b,8\ff r b r b r b r
 	b r b r b r b r
 	b\p r r4 r2
 	R1
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	r2^\markup { \italic pizz. } fsharp'4 r
 	r2 fsharp4 r
 	b, r r2
 	R1
 	r2 b'4 r
 	r2 b4 r
-	
+
 	R1*2
-	
+
 	e,4^\markup { \italic pizz. } r r2
-	
+
 	R1*5
-	
-	\property Staff.midiInstrument = #"string ensemble 1"
+
+	\set Staff.midiInstrument = #"string ensemble 1"
 	e1~^\markup { \italic arco }
 	e
 	dsharp4( b2 csharp8 dsharp
@@ -83,8 +81,8 @@ theCellos = \notes \relative c {
 	e8\sf[ e e e] gsharp-.[ e-. csharp-. b-.]
 	asharp4 r r2
 	R1
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	r2 fsharp'4\p^\markup { \italic pizz. } r
 	b r b, r
 	fsharp r r2
@@ -92,8 +90,8 @@ theCellos = \notes \relative c {
 	r2 fsharp'4\p^\markup { \italic pizz. } r
 	b r b, r
 	fsharp r r2
-	
-	\property Staff.midiInstrument = #"string ensemble 1"
+
+	\set Staff.midiInstrument = #"string ensemble 1"
 	r4^\markup { \italic arco } gsharp'8 gsharp gsharp4 gsharp8 gsharp
 	csharp,4 r r2
 	r4 b8\p b b4 b8 b
@@ -122,10 +120,10 @@ theCellos = \notes \relative c {
 	b4 b8 b b4 b8 b
 	b4 b8 b b4 b8 b
 	b4 r r2
-	
+
 	R1*7
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	r2 d'4\p^\markup { \italic pizz. } r
 	g r8 g, g4 r
 	g' r8 g, g4 r
@@ -148,14 +146,14 @@ theCellos = \notes \relative c {
 	b4_\cr r b r
 	b r b r
 	e\p r r2
-	
+
 	R1*3
-	
+
 	r2 e4^\markup { \italic pizz. } r
 	r2 e4 r
 	r2 b4 r
-	
-	\property Staff.midiInstrument = #"string ensemble 1"
+
+	\set Staff.midiInstrument = #"string ensemble 1"
 	r2 b4^\markup { \italic arco } b
 	dsharp( b2 csharp8 dsharp)
 	e4( b2) b4
@@ -184,8 +182,8 @@ theCellos = \notes \relative c {
 	e8\sf[ e e e] e-.[ d-. b-. a-.]
 	gsharp4 r r2
 	R1
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	r2 e'4\p r
 	a r a, r
 	e' r r2
@@ -200,8 +198,8 @@ theCellos = \notes \relative c {
 		% NOTE: In the print version, this measure is r2 g4 r2, which is 5/4.
 	c4 r c, r
 	g r r2
-	
-	\property Staff.midiInstrument = #"string ensemble 1"
+
+	\set Staff.midiInstrument = #"string ensemble 1"
 	r4 g'8_\cr^\markup { \italic arco } g g4 g8 g
 	c4 g8 g g4 g8 g
 	c4 g8 g g4 g8 g
@@ -209,9 +207,9 @@ theCellos = \notes \relative c {
 	c4 g8 g c4 g8 g
 	c1\ff
 	c8[ b a g] f[ e d c]
-	
+
 	\key c \major
-	
+
 	a1
 	a'8[ g f e] d[ c b a]
 	a'[ a a a] a[ a a a]
@@ -240,27 +238,27 @@ theCellos = \notes \relative c {
 	b4 b8 b b4 b8 b
 	b4 b8 b b4 b8 b
 	b4 r r2
-	
+
 	\key e \major
-	
+
 	e4.\ff b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4-. e-.
 	b-. r r2\fermata
-	
+
 	R1*6
-	
+
 	\clef "treble"
-	\times 4/6 { a'4\p^(_\markup { \translate #(cons 3 0) \italic dolce } csharp e a gsharp fsharp }
-	\times 4/6 { e d csharp b csharp a^) }
+	\tuplet 6/4 { a'4\p^(_\markup { \translate #(cons 3 0) \italic dolce } csharp e a gsharp fsharp }
+	\tuplet 6/4 { e d csharp b csharp a^) }
 	R1
-	
+
 	\clef "bass"
-	\times 4/6 { b,4\p( dsharp! fsharp a gsharp fsharp) }
-	\times 4/6 { b,( e gsharp b a gsharp) }
-	\times 4/6 { b,( e gsharp b a gsharp) }
-	\times 4/6 { b,( fsharp' a b a fsharp }
-	\times 4/6 { b a fsharp b a 
+	\tuplet 6/4 { b,4\p( dsharp! fsharp a gsharp fsharp) }
+	\tuplet 6/4 { b,( e gsharp b a gsharp) }
+	\tuplet 6/4 { b,( e gsharp b a gsharp) }
+	\tuplet 6/4 { b,( fsharp' a b a fsharp }
+	\tuplet 6/4 { b a fsharp b a
 		\tempo 4 = 100
 		fsharp\fermata) }	% ritard!
 	c4.\f b8_\markup { Bassi } b4 r

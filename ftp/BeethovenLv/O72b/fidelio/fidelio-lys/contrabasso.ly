@@ -1,26 +1,24 @@
-theBass = \notes \relative e {
-	\property Staff.transposing = #-12
+\version "2.18.0"
+theBass =  \relative e {
+	\transposition c
 	\clef "bass"
 	\time 2/2
 	\key e \major
-	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
-	
+
 	e4.\f b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4-. e-.
 	b-. r r2\fermata
-	
+
 	R1*8
-	
+
 	a'4.\f e8 e4-. r
 	csharp'4.\sf a8 a4-. r
 	e'4.\sf csharp8 csharp4-. a-.
 	e-. r r2\fermata
-	
+
 	R1*4
-	
+
 	f,1\pp\<
 	g\!\>
 	c\pp~\!
@@ -41,28 +39,28 @@ theBass = \notes \relative e {
 	b r b r b r b r
 	b\p r r4 r2
 	R1
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	r2^\markup { \italic pizz. } fsharp'4 r
 	r2 fsharp4 r
 	b, r r2
 	R1
 	r2 b'4 r
 	r2 b4 r
-	
+
 	R1*2
-	
+
 	e,4^\markup { \italic pizz. } r r2
-	
+
 	R1*5
-	
+
 	r2 e4^\markup { \italic pizz. } r
 	r2 e4 r
 	r2 b4 r
 	r2 b4 r
 	r2 b4 r
-	
-	\property Staff.midiInstrument = #"contrabass"
+
+	\set Staff.midiInstrument = #"contrabass"
 	r2 b4^\markup { \italic arco } b
 	dsharp(_\cr b2 csharp8 dsharp)
 	e4( b2) b4
@@ -87,8 +85,8 @@ theBass = \notes \relative e {
 	e8\sf[ e e e] gsharp-.[ e-. csharp-. b-.]
 	asharp4 r r2
 	R1
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	r2 fsharp'4\p^\markup { \italic pizz. } r
 	b r b, r
 	fsharp r r2
@@ -96,8 +94,8 @@ theBass = \notes \relative e {
 	r2 fsharp'4\p^\markup { \italic pizz. } r
 	b r b, r
 	fsharp r r2
-	
-	\property Staff.midiInstrument = #"contrabass"
+
+	\set Staff.midiInstrument = #"contrabass"
 	r4^\markup { \italic arco } gsharp'8 gsharp gsharp4 gsharp8 gsharp
 	csharp,4 r r2
 	r4 b8\p b b4 b8 b
@@ -126,10 +124,10 @@ theBass = \notes \relative e {
 	b4 b8 b b4 b8 b
 	b4 b8 b b4 b8 b
 	b4 r r2
-	
+
 	R1*12
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	e'4\p^\markup { \italic pizz. } r8 e, e4 r
 	e'4 r8 e, e4 r
 	e'4 r8 e, e4 r
@@ -147,14 +145,14 @@ theBass = \notes \relative e {
 	b4_\cr r b r
 	b r b r
 	e\p r r2
-	
+
 	R1*3
-	
+
 	r2 e4^\markup { \italic pizz. } r
 	r2 e4 r
 	r2 b4 r
-	
-	\property Staff.midiInstrument = #"contrabass"
+
+	\set Staff.midiInstrument = #"contrabass"
 	r2 b4^\markup { \italic arco } b
 	dsharp( b2 csharp8 dsharp)
 	e4( b2) b4
@@ -183,8 +181,8 @@ theBass = \notes \relative e {
 	e8\sf[ e e e] e-.[ d-. b-. a-.]
 	gsharp4 r r2
 	R1
-	
-	\property Staff.midiInstrument = #"pizzicato strings"
+
+	\set Staff.midiInstrument = #"pizzicato strings"
 	r2 e'4\p r
 	a r a, r
 	e' r r2
@@ -199,8 +197,8 @@ theBass = \notes \relative e {
 		% NOTE: In the print version, this measure is r2 g4 r2, which is 5/4.
 	c4 r c, r
 	g r r2
-	
-	\property Staff.midiInstrument = #"contrabass"
+
+	\set Staff.midiInstrument = #"contrabass"
 	r4 g'8_\cr^\markup { \italic arco } g g4 g8 g
 	c4 g8 g g4 g8 g
 	c4 g8 g g4 g8 g
@@ -208,9 +206,9 @@ theBass = \notes \relative e {
 	c4 g8 g c4 g8 g
 	c1\ff
 	c8[ b a g] f[ e d c]
-	
+
 	\key c \major
-	
+
 	a1
 	a'8[ g f e] d[ c b a]
 	a'[ a a a] a[ a a a]
@@ -239,16 +237,16 @@ theBass = \notes \relative e {
 	b4 b8 b b4 b8 b
 	b4 b8 b b4 b8 b
 	b4 r r2
-	
+
 	\key e \major
-	
+
 	e4.\ff b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4-. e-.
 	b-. r r2\fermata
-	
+
 	R1*14
-	
+
 	c4.\f b8_\markup { Bassi } b4 r
 	c4. b8 b4 r
 	c4-. b-. c-. b-.
