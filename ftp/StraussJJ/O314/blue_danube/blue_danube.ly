@@ -13,12 +13,10 @@
 % This file was last updated on 2014-3-22, previously 2005-1-12
 %
 % This music is part of the Mutopia project (http://www.MutopiaProject.org/).
-% Copyright (c) The Mutopia Project and Nikos Kouremenos, 2005.
+% Copyright (c) The Mutopia Project and Nikos Kouremenos, 2005-2014.
 %
-% This work is licensed under the Creative Commons Attribution-ShareAlike License 2.0.
-% To view a copy of that license visit
-% http://creativecommons.org/licenses/by-sa/2.0/ or send a letter to Creative Commons,
-% 559 Nathan Abbott Way, Stanford, California 94305, USA.
+% This work is licensed under the Creative Commons Attribution-ShareAlike International License 4.0.
+% To view a copy of that license visit https://creativecommons.org/licenses/by-sa/4.0/
 %
 
 %%
@@ -29,21 +27,23 @@
   title = "The Blue Danube Waltz"
   composer = \markup { \fill-line { \pad-to-box #'(0 . 0) #'(0 . 5) { "Johann Strauss Jr. (1825 - 1899)" }}}
 
-  mutopiatitle = "The Blue Danube Waltz"
+  mutopiatitle = "The Blue Danube Waltz (main theme)"
   mutopiacomposer = "StraussJJ"
-  mutopiaopus = "O 314"
+  mutopiaopus = "Op. 314"
+  mutopiaarranger = "N. Kouremenos"
   mutopiainstrument = "Piano"
   date = "1867"
-  source = "Christian Mondrup"
+  source = "Christian Mondrup, from the Werner Icking Music Archive"
   style = "Romantic"
-  license = "Creative Commons Attribution-ShareAlike 2.0"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Nikos Kouremenos"
   maintainerEmail = "kourem@gmail.com"
   maintainerWeb = "http://members.hellug.gr/nkour/"
   lastupdated = "2014/3/22"
-  footer = "Mutopia-2005/01/17-519"
-  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2004 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/2.0/" "Creative Commons Attribution ShareAlike 2.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
-  tagline = ##f
+
+ footer = "Mutopia-2014/03/24-519"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \paper {
