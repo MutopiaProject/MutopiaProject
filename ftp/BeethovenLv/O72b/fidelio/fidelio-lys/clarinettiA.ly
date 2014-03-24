@@ -1,15 +1,13 @@
-theClarinets = \notes \relative a'' {
-	\property Staff.transposing = #-3
-	\property Score.skipBars = ##t
+\version "2.18.0"
+theClarinets =  \relative a'' {
+	\transposition a 
+	\set Score.skipBars = ##t
 	
 	\clef "treble"
 	\time 2/2
 	\key g \major
 	
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
-	
-	g4.\f^\zu d8 d4-. r
+	g4.\f^\markup{\bold "zu 2"} d8 d4-. r
 	< b b' >4.\sf < g g' >8 < g g' >4-. r
 	< d' d' >4.\sf < b b' >8 < b b' >4-. < b g' >-.
 	< a fsharp' >-. r r2\fermata
@@ -18,7 +16,7 @@ theClarinets = \notes \relative a'' {
 	
 	<< { f'1( d g e) } \\
 		{ d1\p(_\markup { \translate #(cons 4 -1) \italic dolce } g, e' c) } >>
-	c4.\f^\zu g8 g4-. r
+	c4.\f^\markup{\bold "zu 2"} g8 g4-. r
 	e'4.\sf c8 c4-. r
 	g'4.\sf e8 e4-. < e c' >-.
 	< d b' >-. r r2\fermata
@@ -83,7 +81,7 @@ theClarinets = \notes \relative a'' {
 	< d d' >1\sf~
 	< d d' >~
 	< d d' >~
-	< d d' >2 b'8-.[^\zu g-. e-. d-.]
+	< d d' >2 b'8-.[^\markup{\bold "zu 2"} g-. e-. d-.]
 	csharp4 r r2
 	R1
 	r4 a\p^\markup { \bold 1. } r a
@@ -92,7 +90,7 @@ theClarinets = \notes \relative a'' {
 	R1
 	r4 a,\p r a
 	r a' r a
-	r b,2\p(^\zu c4)
+	r b,2\p(^\markup{\bold "zu 2"} c4)
 	b1~
 	b4 < d d' >2( < e e' >4)
 	< d d' >1\p~
@@ -100,7 +98,7 @@ theClarinets = \notes \relative a'' {
 	< d d' >~
 	< d d' >4\f < d d' >8 < d d' > < d d' >4 < d d' >8 < d d' >
 	< d d' >4 < d d' >8 < d d' > < d d' >4 < d d' >8 < d d' >
-	< d d' >4 g2.\ff^\zu
+	< d d' >4 g2.\ff^\markup{\bold "zu 2"}
 	g8[ fsharp e d] c[ b a g]
 	e'4 e2.
 	e8[ d c b] a[ g fsharp e]
@@ -153,7 +151,7 @@ theClarinets = \notes \relative a'' {
 	< b g' >\p r r2
 	
 	R1*2
-	\break
+	\mbreak
 	R1
 	
 	g'4.^\markup { \bold 1. }_\markup { \italic dolce }
@@ -196,7 +194,7 @@ theClarinets = \notes \relative a'' {
 	r g r g'
 	g r r2
 	r4 a, r a'
-	<< { a4 } \\ { r4 } >> bflat,2\p(^\zu c4)
+	<< { a4 } \\ { r4 } >> bflat,2\p(^\markup{\bold "zu 2"} c4)
 	bflat1~
 	bflat1~
 	bflat1~
@@ -214,7 +212,7 @@ theClarinets = \notes \relative a'' {
 	R1
 	< aflat eflat' >1~
 	< aflat eflat' >
-	c2.^\zu bflat4\sf
+	c2.^\markup{\bold "zu 2"} bflat4\sf
 	c2. bflat4\sf
 	c bflat\sf c bflat\sf
 	c bflat\sf c bflat\sf
@@ -243,7 +241,7 @@ theClarinets = \notes \relative a'' {
 	< d d' >4 < d d' >8 < d d' >8 < d d' >4-. < g b >-.
 	< fsharp a >-. r r2\fermata
 	R1
-	\times 4/6 { d4(\p_\markup { \translate #(cons 4 -1) \italic dolce } fsharp a c b a) }
+	\tuplet 6/4 { d4(\p_\markup { \translate #(cons 4 -1) \italic dolce } fsharp a c b a) }
 	g r r2
 	R1
 	<< { f1( d g e) } \\
@@ -254,7 +252,7 @@ theClarinets = \notes \relative a'' {
 	< b g' >)
 	< c g' >(
 	< c fsharp >\fermata)
-	eflat4.\f^\zu d8 d4 r
+	eflat4.\f^\markup{\bold "zu 2"} d8 d4 r
 	eflat4. d8 d4 r
 	
 	R1*8
@@ -302,7 +300,7 @@ theClarinets = \notes \relative a'' {
 	< d' d' > r r2
 	< d d' >4.\sf < b b' >8 < b b' >4 r
 	<< { g'4 } \\ { g4 } >> r4 r2
-	g4.\sf^\zu d8 d4 r
+	g4.\sf^\markup{\bold "zu 2"} d8 d4 r
 	g4 d g d
 	g4 d g d
 	g4 d g d

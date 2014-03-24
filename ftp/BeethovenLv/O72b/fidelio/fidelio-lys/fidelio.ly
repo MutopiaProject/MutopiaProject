@@ -1,9 +1,9 @@
 %%% Many thanks to the Case Western Reserve University Kulas Music library
 %%% for providing the old texts that would otherwise rot on the shelves.
 
-\version "2.0.1"
+\version "2.18.0"
+#(set-global-staff-size 14)
 
-\include "paper13.ly"
 \include "english.ly"
 \include "defs.ly"
 
@@ -23,139 +23,127 @@
 \include "violoncello.ly"
 \include "contrabasso.ly"
 
+\include "header.ly"
 
-\header {
-	\include "header.ly"
-	
-	mutopiatitle 		= "Fidelio Overture"
- 	mutopiacomposer 	= "BeethovenLv"
- 	mutopiaopus 		= "O 72b"
- 	mutopiainstrument 	= "Orchestra"
- 	date 				= "1814/May/26"
- 	source 				= "Eulenburg, 1919"
-	style 				= "Romantic"
- 	copyright			= "Public Domain"
- 	maintainer 			= "Will Oram"
- 	maintainerEmail 	= "spamguy@foxchange.com"
- 	lastupdated 		= "2003/Dec/13"
-}
+\paper {
+  left-margin = 18
+  right-margin = 14
+}  
 
-\score { 	
+\score {
   <<
-  	\property Score.InstrumentName \override #'font-magnification	= #1.5
-  	\property Score.InstrumentName \override #'padding				= #12
-  	
     \context StaffGroup ="woodwinds" <<
       \context Staff ="flauti" <<
-      	\property Score.MetronomeMark \override #'transparent = ##t
-      	\property Staff.midiInstrument = #"flute"
-		\property Staff.instrument = \markup { \center < "2 Flauti" > }
-		\property Staff.instr	= \markup { \center < "Fl." > }
+      	\override Score.MetronomeMark.transparent = ##t
+      	\set Staff.midiInstrument = #"flute"
+		\set Staff.instrumentName = \markup { \center-column { "2 Flauti" } }
+		\set Staff.shortInstrumentName = \markup { \center-column { "Fl." } }
 		\theFlutes >>
-      
+
       \context Staff ="oboi" <<
-      	\property Staff.midiInstrument = #"oboe"
-      	\property Staff.instrument = \markup { \center < "2 Oboi" > }
-      	\property Staff.instr = \markup { \center < "Ob." > }
+      	\set Staff.midiInstrument = #"oboe"
+      	\set Staff.instrumentName = \markup { \center-column { "2 Oboi" } }
+      	\set Staff.shortInstrumentName = \markup { \center-column { "Ob." } }
       	\theOboes >>
       \context Staff = "clarinetti" <<
-      	\property Staff.midiInstrument = #"clarinet"
-      	\property Staff.instrument = \markup { \center < "2 Clarinetti" "in A" > }
-      	\property Staff.instr = \markup { \center < "Cl." > }
+      	\set Staff.midiInstrument = #"clarinet"
+      	\set Staff.instrumentName = \markup { \center-column { "2 Clarinetti" "in A" } }
+      	\set Staff.shortInstrumentName = \markup { \center-column { "Cl." } }
       	\theClarinets >>
       \context Staff = "fagotti" <<
-      	\property Staff.midiInstrument = #"bassoon"
-      	\property Staff.instrument = \markup { \center < "2 Fagotti" > }
-      	\property Staff.instr = \markup { \center < "Fg." > }
+      	\set Staff.midiInstrument = #"bassoon"
+      	\set Staff.instrumentName = \markup { \center-column { "2 Fagotti" } }
+      	\set Staff.shortInstrumentName = \markup { \center-column { "Fg." } }
       	\theBassoons >>
     >>
-    
+
     \context StaffGroup ="brass" <<
      \context GrandStaff = "horns" <<
 		\context Staff = "corni_first" <<
-			\property Staff.midiInstrument = #"french horn"
-			\property Staff.instrument = \markup { \center < "Corni in E" "I  II" > }
-			\property Staff.instr = \markup { \center < "Cor. (E)" > }
+			\set Staff.midiInstrument = #"french horn"
+			\set Staff.instrumentName = \markup { \center-column { "Corni in E" "I  II" } }
+			\set Staff.shortInstrumentName = \markup { \center-column { "Cor. (E)" } }
 			\theHornsfirst >>
 		\context Staff = "corni_second" <<
-			\property Staff.midiInstrument = #"french horn"
-			\property Staff.instrument = \markup { \center < "III IV" > }
+			\set Staff.midiInstrument = #"french horn"
+			\set Staff.instrumentName = \markup { \center-column { "III IV" } }
 			\theHornssecond >>
 		>>
 		\context Staff = "trumpet" <<
-			\property Staff.midiInstrument = #"trumpet"
-			\property Staff.instrument = \markup { \center < "2 Trombe" "in C" > }
-			\property Staff.instr = \markup { \center < "Trbe. (C)" > }
+			\set Staff.midiInstrument = #"trumpet"
+			\set Staff.instrumentName = \markup { \center-column { "2 Trombe" "in C" } }
+			\set Staff.shortInstrumentName = \markup { \center-column { "Trbe. (C)" } }
 			\theTrumpets >>
 		\context GrandStaff = "trombones" <<
 			\context Staff = "tenor_trombone" <<
-				\property Staff.midiInstrument = #"trombone"
-				\property Staff.instrument = \markup { 
-                  							 \center < Trombone Tenore > }
+				\set Staff.midiInstrument = #"trombone"
+				\set Staff.instrumentName = \markup {
+                  							 \center-column { Trombone Tenore } }
 				\theTenorTrombones >>
-				\property Staff.instr = \markup { \center < "Trbni" > }
+				\set Staff.shortInstrumentName = \markup { \center-column { "Trbni" } }
 			\context Staff = "bass_trombone" <<
-				\property Staff.midiInstrument = #"trombone"
-				\property Staff.instrument = \markup {
-                  							 \center < Trombone Basso > }
+				\set Staff.midiInstrument = #"trombone"
+				\set Staff.instrumentName = \markup {
+                  							 \center-column { Trombone Basso } }
 				\theBassTrombones >>
 		>>
     >>
     \context StaffGroup ="timpani_group" <<
       \context Staff ="timpani" <<
-      	\property Staff.midiInstrument = #"timpani"
-      	\property Staff.instrument = \markup { \center < "Timpani" "in E-H" > }
-      	\property Staff.instr = \markup { \center < "Timp." > }
+      	\set Staff.midiInstrument = #"timpani"
+      	\set Staff.instrumentName = \markup { \center-column { "Timpani" "in E-H" } }
+      	\set Staff.shortInstrumentName = \markup { \center-column { "Timp." } }
       	\theTimpani
       	>>
     >>
     \context StaffGroup ="strings" <<
     	\context GrandStaff = "upper_strings" <<
     		\context Staff = "violin_one" <<
-    			\property Staff.midiInstrument = #"string ensemble 1"
-				\property Staff.instrument = \markup { \center < "Violino I" > }
-				\property Staff.instr = \markup { \center < "Vl." > }
+    			\set Staff.midiInstrument = #"string ensemble 1"
+				\set Staff.instrumentName = \markup { \center-column { "Violino I" } }
+				\set Staff.shortInstrumentName = \markup { \center-column { "Vl." } }
 				\theFirstViolins >>
     		\context Staff = "violin_two" <<
-    			\property Staff.midiInstrument = #"string ensemble 1"
-				\property Staff.instrument = \markup { \center < "Violino II" > }
+    			\set Staff.midiInstrument = #"string ensemble 1"
+				\set Staff.instrumentName = \markup { \center-column { "Violino II" } }
 				\theSecondViolins >>
 		>>
 	\context Staff = "viola" <<
-		\property Staff.midiInstrument = #"string ensemble 1"
-			\property Staff.instrument = \markup { \center < "Viola" > }
-			\property Staff.instr = \markup { \center < "Vla." > }
+		\set Staff.midiInstrument = #"string ensemble 1"
+			\set Staff.instrumentName = \markup { \center-column { "Viola" } }
+			\set Staff.shortInstrumentName = \markup { \center-column { "Vla." } }
 			\theViolas >>
 
 		\context GrandStaff = "lower_strings" <<
 			\context Staff = "violincello" <<
-				\property Staff.midiInstrument = #"string ensemble 1"
-				\property Staff.instrument = \markup { \center < "Violoncello" > }
-				\property Staff.instr = \markup { \center < "Vc." > }
+				\set Staff.midiInstrument = #"string ensemble 1"
+				\set Staff.instrumentName = \markup { \center-column { "Violoncello" } }
+				\set Staff.shortInstrumentName = \markup { \center-column { "Vc." } }
 				\theCellos >>
-			
+
 			\context Staff ="contrabass" <<
-	      		\property Staff.midiInstrument = #"contrabass"
-	      		\property Staff.instrument = \markup { \center < "Contrabasso" > }
-	      		\property Staff.instr = \markup { \center < "B." > }
+	      		\set Staff.midiInstrument = #"contrabass"
+	      		\set Staff.instrumentName = \markup { \center-column { "Contrabasso" } }
+	      		\set Staff.shortInstrumentName = \markup { \center-column { "B." } }
 	      		\theBass >>
 	     >>
 	  >>
  >>
-  
-\midi { \tempo 4 = 280 }
-  \paper {
-	indent = 25.0\mm
-	%textheight = 300.0\mm
-	linewidth = 470\pt
-	papersize = "a4"
 
-    \translator { \RemoveEmptyStaffContext }
-    \translator {
-      \ScoreContext
-      %minimumVerticalExtent = #(cons -3 3)
-      BarNumber \override #'padding = #3
+  \midi {
+    \tempo 4 = 280
+    }
+
+  \layout {
+	indent = 20.0\mm
+	%textheight = 300.0\mm
+%	line-width = 470\pt
+%	papersize = "a4"
+
+    \context { \Staff \RemoveEmptyStaves }
+    \context {
+      \Score
+      \override BarNumber.padding = #3
     }
   }
 }
-

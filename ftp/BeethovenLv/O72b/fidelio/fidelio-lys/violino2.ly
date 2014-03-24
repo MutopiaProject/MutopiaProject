@@ -1,57 +1,56 @@
-theSecondViolins = \notes \relative e'' {
+\version "2.18.0"
+theSecondViolins =  \relative e'' {
 	\clef "treble"
 	\time 2/2
 	\key e \major
-	
-	\property Score.skipBars = ##t
-	\property Staff.TupletBracket \override #'bracket-visibility = ##f
-	\property Staff.TextScript \override #'font-magnification = #1.25
-	
+
+	\set Score.skipBars = ##t
+
 	e4.\f b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4-. < b, gsharp' e' >-.
 	< b fsharp' dsharp' >-. r r2\fermata
-	
+
 	R1*8
-	
+
 	a'4.\f e8 e4-. r
 	csharp'4.\sf < a, a' >8 < a a' >4-. r
 	e'4.\sf csharp8 csharp4-. < e, csharp' a' >-.
 	< e b' gsharp' >-. r r2\fermata
-	
+
 	R1*5
-	
+
 	d1\pp\>
-	\times 4/6 { c8\pp[(\! g c g c g] c[ g c g c g]) }
-	\times 4/6 { c[( g c g c g] c[ g c g c g]) }
-	\times 4/6 { e'[( c e c e c] e[ c e c e c]) }
-	\times 4/6 { e[( c e c e c] e[ c e c e c]) }
-	\times 4/6 { f[(_\cr c f c f c] f[ c f c f c]) }
-	\times 4/6 { f[( c f c f c] f[ c f c f c]) }
-	\times 4/6 { fsharp![( dsharp! fsharp dsharp fsharp dsharp]
+	\tuplet 6/4 { c8\pp[(\! g c g c g] c[ g c g c g]) }
+	\tuplet 6/4 { c[( g c g c g] c[ g c g c g]) }
+	\tuplet 6/4 { e'[( c e c e c] e[ c e c e c]) }
+	\tuplet 6/4 { e[( c e c e c] e[ c e c e c]) }
+	\tuplet 6/4 { f[(_\cr c f c f c] f[ c f c f c]) }
+	\tuplet 6/4 { f[( c f c f c] f[ c f c f c]) }
+	\tuplet 6/4 { fsharp![( dsharp! fsharp dsharp fsharp dsharp]
 		fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
-	\times 4/6 { fsharp[( dsharp fsharp dsharp fsharp dsharp]
+	\tuplet 6/4 { fsharp[( dsharp fsharp dsharp fsharp dsharp]
 		fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
-	\times 4/6 { a'[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
-	\times 4/6 { a[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
-	\times 4/6 { dsharp'[( a dsharp a dsharp a] dsharp[ a dsharp a dsharp a]) }
-	\times 4/6 { fsharp'[( dsharp fsharp dsharp fsharp dsharp] fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
-	\times 4/6 { csharp[( e csharp e csharp e] csharp[ e csharp e csharp e]) }
-	\times 4/6 { csharp[( e csharp e csharp e] csharp[ e csharp e csharp e]) }
-	\times 2/3 { dsharp8\ff[( b) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >]~ }
-		\times 2/3 { < b b' >[( b) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >]~ }
-	\times 2/3 { < b b' >[( b) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >]~ }
-		\times 2/3 { < b b' >[( b) < b b' >]~ } \times 2/3 { < b b' >[( b) < b b' >]~ }
+	\tuplet 6/4 { a'[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
+	\tuplet 6/4 { a[( fsharp a fsharp a fsharp] a[ fsharp a fsharp a fsharp]) }
+	\tuplet 6/4 { dsharp'[( a dsharp a dsharp a] dsharp[ a dsharp a dsharp a]) }
+	\tuplet 6/4 { fsharp'[( dsharp fsharp dsharp fsharp dsharp] fsharp[ dsharp fsharp dsharp fsharp dsharp]) }
+	\tuplet 6/4 { csharp[( e csharp e csharp e] csharp[ e csharp e csharp e]) }
+	\tuplet 6/4 { csharp[( e csharp e csharp e] csharp[ e csharp e csharp e]) }
+	\tuplet 3/2 { dsharp8\ff[( b) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >]~ }
+		\tuplet 3/2 { < b b' >[( b) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >]~ }
+	\tuplet 3/2 { < b b' >[( b) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >]~ }
+		\tuplet 3/2 { < b b' >[( b) < b b' >]~ } \tuplet 3/2 { < b b' >[( b) < b b' >]~ }
 	< b b' >8\p r r4 r2
 	r2 r4 fsharp4~
-	\times 2/3 { fsharp8[( gsharp fsharp] } \times 2/3 { esharp[ fsharp esharp] }
-		\times 2/3 { fsharp[ gsharp fsharp] } \times 2/3 { esharp[ fsharp esharp] }
+	\tuplet 3/2 { fsharp8[( gsharp fsharp] } \tuplet 3/2 { esharp[ fsharp esharp] }
+		\tuplet 3/2 { fsharp[ gsharp fsharp] } \tuplet 3/2 { esharp[ fsharp esharp] }
 	fsharp4) r r2
-	
+
 	R1*3
-	
-	\times 2/3 { a8([ b a] } \times 2/3 { gsharp[ a gsharp] }
-		\times 2/3 { a[ b a] } \times 2/3 { gsharp[ a gsharp]) }
+
+	\tuplet 3/2 { a8([ b a] } \tuplet 3/2 { gsharp[ a gsharp] }
+		\tuplet 3/2 { a[ b a] } \tuplet 3/2 { gsharp[ a gsharp]) }
 	a8_\cr a4 a4 a4 a8~
 	a8 a4 a4 a4 a8
 	gsharp1\p~
@@ -194,9 +193,9 @@ theSecondViolins = \notes \relative e'' {
 	d4-.) gsharp8( a b4-.) b8( csharp
 	a4-.) a8( b csharp4-.) csharp8-. csharp-.
 	b4-. r r2
-	
+
 	R1*2
-	
+
 	r4 c,8\p( d e4-.) e8( f
 	d8-.) r b'( c d-.) r d( e
 	c4-.) c8( d e4-.) e8-. e-.
@@ -208,9 +207,9 @@ theSecondViolins = \notes \relative e'' {
 	e4 f8 f e4 f8 f
 	e8\ff[ c' b a] g[ f e d]
 	c[ b a g] f[ e d c]
-	
+
 	\key c \major
-	
+
 	a''[ a g f] e[ d c b]
 	a[ g f e] d[ c b a]
 	a[ f' f f] f[ a a a]
@@ -239,18 +238,18 @@ theSecondViolins = \notes \relative e'' {
 	< b b' >4 < b b' >8 < b b' > < b b' >4 < b b' >8 < b b' >
 	< b b' >4 r r2
 	R1
-	
+
 	\key e \major
-	
+
 	e4.\ff b8 b4-. r
 	gsharp'4.\sf e8 e4-. r
 	b'4.\sf gsharp8 gsharp4 < b, gsharp' >-.
 	< b fsharp' >-. r r2\fermata
-	
-	
+
+
 	R1*14
 	\bar "||"
-	
+
 	c,4.\f b8 b4 r
 	c4. b8 b4 r
 	c4-. b-. c-. b-.
