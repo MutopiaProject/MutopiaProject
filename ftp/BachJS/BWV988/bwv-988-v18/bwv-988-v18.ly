@@ -1,4 +1,4 @@
-\version "2.10.23"
+\version "2.18.2"
 
 % Goldberg Variations - Variation 18, Canone alla Sesta
 % J.S. Bach - BWV 988
@@ -26,6 +26,27 @@
 %
 % - 2007-10-14: initial release.
 % - 2007-10-15: fixed an incorrect note.  Thanks to Urs M. for pointing it out!
+% - 2014-03-24: update to v2.18.2. (Javier Ruiz-Alma)
+
+\paper {
+    top-margin = 8\mm
+    top-markup-spacing.basic-distance = #6
+    markup-system-spacing.basic-distance = #5
+    top-system-spacing.basic-distance = #12
+    last-bottom-spacing.basic-distance = #12
+    line-width = 18.0\cm
+    ragged-bottom = ##f
+    ragged-last-bottom = ##f
+}
+
+%-----------------------definitions
+adjTieDown = \shape #'((0 . -0.2) (0 . -0.3) (0 . -0.3) (0 . -0.2)) Tie
+adjTieUp = \shape #'((0 . 0.2) (0 . 0.3) (0 . 0.3) (0 . 0.2)) Tie
+adjTieOne = \shape #'(
+                       ((0 . -1.0) (0 . -1.2) (0 . -1.2) (0 . -1.0))
+                       ((0 . -1.0) (0 . -1.2) (0 . -1.2) (0 . -1.0))
+                       ) Tie
+adjTieTwo = \shape #'((0 . -0.2) (0 . -0.3) (0 . -0.3) (0 . -0.2)) Tie
 
 soprano = \relative c''' {
 	\key g \major
@@ -34,33 +55,33 @@ soprano = \relative c''' {
     \repeat volta 2 {
 		r2 g2 ~
 		g2 fis ~
-		fis4 g8 fis e2 ~
+		fis4 g8 fis \adjTieUp e2 ~
 		e4 d8 cis d2
-		r2 e2 ~
+		r2 \adjTieUp e2 ~
 		e4 d8 e fis2 ~
 		fis4 a8 g a2 ~
 		a8 g a fis g2
-		r2 e2 ~
-		e2 d ~
+		r2 \adjTieUp e2 ~
+		e2 \adjTieUp d ~ \noBreak
 		d4 e8 fis g2 ~
 		g8 fis g e fis2 ~
-		fis4 fis e2 ~
-		e4 e d2 ~
+		fis4 fis \adjTieUp e2 ~
+		e4 e \adjTieUp d2 ~
 		d4 g cis,8 d e4 ~
-		e2 d
+		e2 d \break
 	}        
     \repeat volta 2 {
 		r2 a'2 ~
 		a2 g ~
 		g4 a8 b c2 ~
 		c8 b c4 b2
-		r2 e,2 ~
-		e2 dis4 e
+		d,2\rest e2 ~ \noBreak
+		e2 dis4 e \break
 		fis2. e8 fis
 		g2 ~ g8 fis e d
 		c4 r a'2 ~
-		a2 g ~
-		g4 a8 b c2 ~
+		a2 \adjTieUp g ~
+		g4 a8 b \adjTieUp c2 ~
 		c8 b c a b2 ~
 		b4 b a2 ~
 		a4 a g2 ~
@@ -95,14 +116,14 @@ alto = \relative c'' {
 		c'1
 		b2. c8 d
 		e2 ~ e8 dis e4
-		dis2 r
-		g,1
-		fis4 g a2 ~
-		a4 g8 a b2 ~
+		dis2 b\rest
+		g1
+		fis4 g \adjTieOne a2 ~
+		a4 g8 a \adjTieTwo b2 ~
 		b8 a g fis e4 r
 		c'1
 		b2. c8 d
-		e2 ~ e8 d e c
+		\adjTieDown e2 ~ e8 d e c
 		d2. d4
 		c2. c4
 		b2. e4
@@ -148,7 +169,7 @@ bass = \relative c' {
 		c4 b \clef bass a g
 		fis4 e8 fis g4 fis8 g
 		e4 d8 e fis4 e8 fis
-		dis4 cis8 dis e d c b
+		dis4 cis8_[ dis] e_[ d c b]
 		c4 a d d,
 		g d' g2
     }
@@ -163,14 +184,15 @@ bass = \relative c' {
 	mutopiacomposer = "BachJS"
 	opus = "BWV 988"
 	date = "1741"
-	mutopiainstrument = "Clavier"
+	mutopiainstrument = "Harpsichord,Clavichord"
 	style = "Baroque"
-	source = "Bach-Gesellschaft"
-	copyright = "Creative Commons Attribution-ShareAlike 3.0"
+	source = "Bach-Gesellschaft Edition 1853 Band 3"
+	license = "Creative Commons Attribution-ShareAlike 3.0"
 	maintainer = "Benjamin D. Esham"
 	maintainerEmail = "bdesham@gmail.com"
 	footer = "Mutopia-2007/10/16-1076"
-	tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+	copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+        tagline = ##f
 }
 
 %%% for letter paper
@@ -187,19 +209,18 @@ bass = \relative c' {
 
 \score  {
     \context PianoStaff <<
-        \set PianoStaff.instrumentName = "Clavier  "
         \set PianoStaff.midiInstrument = "harpsichord"
         \context Staff = "upper" { \clef treble << \soprano \\ \alto >>  }
         \context Staff = "lower" { \bass }
     >>
 
-	\midi { \context { \Score tempoWholesPerMinute = #(ly:make-moment 96 2) } }
+	\midi { \tempo 2 = 96 }
  
     \layout {
 			%%% for letter paper
-			%\context { \Score \override SpacingSpanner #'spacing-increment = #1.0 }
+			%\context { \Score \override SpacingSpanner.spacing-increment = #1.0 }
 
 			%%% for a4 paper
-			\context { \Score \override SpacingSpanner #'spacing-increment = #0.8 }
+			\context { \Score \override SpacingSpanner.spacing-increment = #0.8 }
     }
 }
