@@ -79,8 +79,8 @@ sopranoOne =   \relative d'' {
         \adjBeamTre d16 [ c d e d c ] | % 7
         \adjBeamQtr b16 [ a b c b a ] | % 8
         g8 g'4 ~ | % 9
-        g8 fis4 ( | % 10
-        fis8 ) [ e d ] | % 11
+        g8 fis4 ~ | % 10
+        fis8  [ e d ] | % 11
         cis16 [ d ] \adjTieUp e4 ~ | % 12
         e8 d c! ~ | % 13
         c8 [ b g' ~ ] | % 14
