@@ -1,201 +1,102 @@
-\version "1.5.68"
+\version "2.16.0"
 
-\include "paper20.ly"
+#(set-global-staff-size 20)
 
-\include "defs.ly"
+\include "defs.ily"
 
-\include "piano-dynamics.ly"
+\header {
+    instrument = "Piano"
+}
 
-\include "piano-right-i.ly"
-\include "piano-left-i.ly"
+\layout {
+    \compressFullBarRests
+}
+
+\include "piano-dynamics.ily"
+
+\include "piano-right-i.ily"
+\include "piano-left-i.ily"
 
 \score {
-    \context PianoStaff <
-	\property Score.skipBars = ##t
-	\property PianoStaff.midiInstrument = #"acoustic grand"
-	\property PianoStaff.instrument = "Piano"
+    \context PianoStaff <<
+	\set PianoStaff.midiInstrument = #"acoustic grand"
 	
-	\context Staff=upper <
+	\context Staff = "upper" <<
 	    \rightHandFirstMov
 	    \markingsI
-	>
+	>>
 
-	\context Dynamics=dynamics \dynamicsFirstMov
+	\context Dynamics = "dynamics" \dynamicsFirstMov
 
-	\context Staff=lower \leftHandFirstMov
-    >
+	\context Staff = "lower" \leftHandFirstMov
+    >>
 
-    \paper {
-	% This will give a better spacing: Lily gets a bit confused
-	% with the 64th notes...
-	\translator {
-	    \ScoreContext SpacingSpanner \override
-	    #'common-shortest-duration = #(make-moment 1 16)
-	}
-
-	\translator {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-	    MinimumVerticalExtent = #'(-1 . 1)
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    TextScript \override #'font-relative-size = #1
-	    TextScript \override #'font-shape = #'italic
-	    DynamicText \override #'extra-offset = #'(0 . 2.5)
-	    Hairpin \override #'extra-offset = #'(0 . 2.5)
-	    
-	    \consists "Skip_req_swallow_translator"
-	    
-	    \consistsend "Axis_group_engraver"
-	}
-	\translator {
-	    \PianoStaffContext
-	    \accepts Dynamics
-	    VerticalAlignment \override #'forced-distance = #7
-	}
-    }
+    \layout { }
     
     \midi {
 	\tempo 4 = 70
 	
-	\translator {
-	    \type "Performer_group_performer"
-	    \name Dynamics
-	    
-	    \consists "Span_dynamic_performer"
-	    \consists "Dynamic_performer"
-	}
-	\translator {
-	    \PianoStaffContext
+	\context {
+	    \PianoStaff
 	    \accepts Dynamics
 	}
     }
 }
 
 
-\include "piano-right-ii.ly"
-\include "piano-left-ii.ly"
+\include "piano-right-ii.ily"
+\include "piano-left-ii.ily"
 
 \score {
-    \context PianoStaff <
-	\property PianoStaff.midiInstrument = #"acoustic grand"
-	\property PianoStaff.instrument = "Piano"
+    \context PianoStaff <<
+	\set PianoStaff.midiInstrument = #"acoustic grand"
 	
-	\context Staff=upper <
+	\context Staff = "upper" <<
 	    \rightHandSecondMov
 	    \markingsII
-	>
+	>>
 
-	\context Dynamics=dynamics \dynamicsSecondMov
+	\context Dynamics = "dynamics" \dynamicsSecondMov
 
-	\context Staff=lower \leftHandSecondMov
-    >
+	\context Staff = "lower" \leftHandSecondMov
+    >>
 
-    \paper {
-	\translator {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-	    MinimumVerticalExtent = #'(-1 . 1)
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    TextScript \override #'font-relative-size = #1
-	    TextScript \override #'font-shape = #'italic
-	    DynamicText \override #'extra-offset = #'(0 . 2.5)
-	    Hairpin \override #'extra-offset = #'(0 . 2.5)
-	    
-	    \consists "Skip_req_swallow_translator"
-	    
-	    \consistsend "Axis_group_engraver"
-	}
-	\translator {
-	    \PianoStaffContext
-	    \accepts Dynamics
-	    VerticalAlignment \override #'forced-distance = #7
-	}
-    }
+    \layout { }
     
     \midi {
 	\tempo 4 = 120
 	
-	\translator {
-	    \type "Performer_group_performer"
-	    \name Dynamics
-	    
-	    \consists "Span_dynamic_performer"
-	    \consists "Dynamic_performer"
-	}
-	\translator {
-	    \PianoStaffContext
+	\context {
+	    \PianoStaff
 	    \accepts Dynamics
 	}
     }
 }
 
-\include "piano-right-iii.ly"
-\include "piano-left-iii.ly"
+\include "piano-right-iii.ily"
+\include "piano-left-iii.ily"
 
 \score {
-    \context PianoStaff <
-	\property PianoStaff.midiInstrument = #"acoustic grand"
-	\property PianoStaff.instrument = "Piano"
+    \context PianoStaff <<
+	\set PianoStaff.midiInstrument = #"acoustic grand"
 	
-	\context Staff=upper <
+	\context Staff = "upper" <<
 	    \rightHandThirdMov
 	    \markingsIII
-	>
+	>>
 
-	\context Dynamics=dynamics \dynamicsThirdMov
+	\context Dynamics = "dynamics" \dynamicsThirdMov
 
-	\context Staff=lower \leftHandThirdMov
-    >
+	\context Staff = "lower" \leftHandThirdMov
+    >>
 
-    \paper {
-	\translator {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-	    MinimumVerticalExtent = #'(-1 . 1)
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    TextScript \override #'font-relative-size = #1
-	    TextScript \override #'font-shape = #'italic
-	    DynamicText \override #'extra-offset = #'(0 . 2.5)
-	    Hairpin \override #'extra-offset = #'(0 . 2.5)
-	    
-	    \consists "Skip_req_swallow_translator"
-	    
-	    \consistsend "Axis_group_engraver"
-	}
-	\translator {
-	    \PianoStaffContext
-	    \accepts Dynamics
-	    VerticalAlignment \override #'forced-distance = #7
-	}
-    }
+    \layout { }
     
     \midi {
 	\tempo 4 = 120
 	
-	\translator {
-	    \type "Performer_group_performer"
-	    \name Dynamics
-	    
-	    \consists "Span_dynamic_performer"
-	    \consists "Dynamic_performer"
-	}
-	\translator {
-	    \PianoStaffContext
+	\context {
+	    \PianoStaff
 	    \accepts Dynamics
 	}
     }

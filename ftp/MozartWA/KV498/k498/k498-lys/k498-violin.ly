@@ -1,71 +1,82 @@
-\version "1.5.68"
+\version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
-\include "clarinet-i.ly"
+\header {
+    instrument = "Violin"
+}
+
+\layout {
+    \compressFullBarRests
+}
+
+\include "clarinet-i.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violin"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"violin"
 
 	\markingsI
 
-	\notes \transpose bes \clarinetFirstMov
-    >
+	 \transpose c' bes \clarinetFirstMov
+    >>
 
-    \midi {
-       \tempo 4 = 70
+    
+  \midi {
+    \tempo 4 = 70
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "clarinet-ii.ly"
+\include "clarinet-ii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violin"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"violin"
 
 	\markingsII
 
-	\notes \transpose bes \clarinetSecondMov
-    >
+	 \transpose c' bes \clarinetSecondMov
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "clarinet-iii.ly"
+\include "clarinet-iii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"violin"
-	\property Staff.instrument = "Violin"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"violin"
 
 	\markingsIII
 
-	\notes \transpose bes \clarinetThirdMov
-    >
+	 \transpose c' bes \clarinetThirdMov
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
