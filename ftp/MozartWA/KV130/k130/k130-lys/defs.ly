@@ -1,24 +1,25 @@
-\version "2.17.97"
+\version "2.18.2"
 \header {
     title = "Symphony nr. 18 in F major K. 130"
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
         
     mutopiatitle = "Symphony nr. 18 in F major K. 130"
     mutopiacomposer = "MozartWA"
-    mutopiaopus = "KV. 130"
-    mutopiainstrument = "Orchestra"
-    mutopialastupdated = "2014/Jan/10"
+    mutopiaopus = "KV 130"
+    mutopiainstrument = "Orchestra: Flutes, Horns, Violins, Viola, Cello and Bass"
     date = "May 1772"
     source = "Breitkopf und Härtel"
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
-    lastupdated = "2014/Jan/04"
-    footer = "Mutopia-2003/08/17-346"
 
-    tagline =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+    moreInfo = "<p>This edition is based on the Breitkopf &amp; Haertel print of the score (1880), the so-called “Alte Mozart Ausgabe”.  The original autograph is kept in the Staatsbibliothek Preussischer Kulturbesitz-Musikabteilung, Berlin.</p><p>Mozart composed this piece between the second journey to Italy (December 13, 1769 - March 28, 1771) and the third one (October 24, 1772 - March 13, 1773).  It is considered by many scholars his first symphonic masterpiece.  Each of its four movements deserves some attention: the Allegro shows an unprecedented rythmic power, the Andantino Grazioso has a peaceful pastoral timbre, the Menuetto shows a clever use of counterpoint, the Trio contains a reference to the Menuetto in the rythm of bars 29-32.  Expecially worth of mention is the fourth movement, Allegro Molto.  It is full of musical ideas (no less than five themes!) and masterly passages, and is the starting point of a series which will lead to the closing Allegro Molto of the “Jupiter” symphony KV. 551.</p><p>The orchestra used in this work is unique in Mozart's symphonies: apart from the traditional string quintet, there are two flutes and four horns (winds in Mozart's early symphonies are often limited to two oboi and two french horns).  In no other symphony Mozart used the same instrumentation.</p><p>On the first page of the autograph Mozart wrote, “del Sig. Cavaliere Amadeo Wolfg. Mozart à Salisburgo nel Maggio 1772” (by Mr. Squire Amadeo Wolfgang Mozart, in Salzburg, May 1772).  It seems that Mozart added the two french horns in C at a later stage, since these are written in the bottom staff and are not included within the vertical line which Mozart drew to group the other staves.  The order of the staves in the autograph is the following: french horns in F (“Corni”, 1st staff), flutes (“2 flauti”, 2nd and 3rd staff), violins (“Violini”, 4th and 5th staff), viola (“Viola”, 6th staff), bassi (“Bassi”, 7th staff) and horns in C major (“Corni in C Alto”, 8th staff).</p><p>Maurizio Tomasi, August 2003.</p>"
+
+ footer = "Mutopia-2014/03/28-346"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 % Some useful macros
