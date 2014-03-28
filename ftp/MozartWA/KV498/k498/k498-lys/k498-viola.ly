@@ -1,71 +1,82 @@
-\version "1.5.68"
+\version "2.16.0"
 
-\include "defs.ly"
+\include "defs.ily"
 
-\include "viola-i.ly"
+\header {
+    instrument = "Viola"
+}
+
+\layout {
+    \compressFullBarRests
+}
+
+\include "viola-i.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
 
 	\markingsI
 
 	\violaFirstMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 70
+    
+  \midi {
+    \tempo 4 = 70
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "viola-ii.ly"
+\include "viola-ii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
 
 	\markingsII
 
 	\violaSecondMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }
 
 
-\include "viola-iii.ly"
+\include "viola-iii.ily"
 
 \score {
-    \context Staff <
-        \property Score.BarNumber \override #'padding = #3
-	\property Score.skipBars = ##t
-	\property Staff.autoBeaming = ##f
-        \property Staff.midiInstrument = #"viola"
-	\property Staff.instrument = "Viola"
+    \context Staff <<
+        \override Score.BarNumber   #'padding = #3
+	\set Staff.autoBeaming = ##f
+        \set Staff.midiInstrument = #"viola"
 
 	\markingsIII
 
 	\violaThirdMov
-    >
+    >>
 
-    \midi {
-       \tempo 4 = 120
+    
+  \midi {
+    \tempo 4 = 120
     }
 
-    \paper { }
+
+
+    \layout { }
 }

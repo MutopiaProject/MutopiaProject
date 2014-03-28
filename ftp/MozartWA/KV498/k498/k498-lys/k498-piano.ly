@@ -1,284 +1,175 @@
-\version "1.5.68"
+\version "2.16.0"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
-\include "defs.ly"
+\include "defs.ily"
 
-\include "piano-dynamics.ly"
+\include "piano-dynamics.ily"
 
-\include "clarinet-i.ly"
-\include "viola-i.ly"
-\include "piano-right-i.ly"
-\include "piano-left-i.ly"
+\include "clarinet-i.ily"
+\include "viola-i.ily"
+\include "piano-right-i.ily"
+\include "piano-left-i.ily"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
+	\override Score.BarNumber   #'padding = #3
 
-	\context Staff = clarinet <
-	    \property Staff.fontSize = #-1
-	    \property Staff.midiInstrument = #"clarinet"
-	    \property Staff.instrument = #'(lines "Clarinetto" "in B.")
-	    \property Staff.transposing = #-2
+	\context Staff = "clarinet" <<
+	    \set Staff.fontSize = #-1
+	    \set Staff.midiInstrument = #"clarinet"
+	    \set Staff.instrumentName = \markup {\column { "Clarinetto" \line {"in B."}}}
+	    \transposition ais 
 	    
 	    \markingsI
 	    
 	    \clarinetFirstMov
-	>
+	>>
 	
-	\context Staff = viola <
-	    \property Staff.fontSize = #-1
-	    \property Staff.autoBeaming = ##f
-	    \property Staff.midiInstrument = #"viola"
-	    \property Staff.instrument = "Viola"
+	\context Staff = "viola" <<
+	    \set Staff.fontSize = #-1
+	    \set Staff.autoBeaming = ##f
+	    \set Staff.midiInstrument = #"viola"
+	    \set Staff.instrumentName = "Viola"
 	    
 	    \violaFirstMov
-	>
+	>>
 	
-	\context PianoStaff = piano <
-	    \property PianoStaff.midiInstrument = #"acoustic grand"
-	    \property PianoStaff.instrument = "Piano"
+	\context PianoStaff = "piano" <<
+	    \set PianoStaff.midiInstrument = #"acoustic grand"
+	    \set PianoStaff.instrumentName = "Piano"
 	    
-	    \context Staff=upper <
+	    \context Staff = "upper" <<
 		\rightHandFirstMov
 		\markingsI
-	    >
+	    >>
 	    
-	    \context Dynamics=dynamics \dynamicsFirstMov
+	    \context Dynamics = "dynamics" \dynamicsFirstMov
 	    
-	    \context Staff=lower \leftHandFirstMov
-	>
-    >
+	    \context Staff = "lower" \leftHandFirstMov
+	>>
+    >>
     
-    \paper {
-	% This will give a better spacing: Lily gets a bit confused
-	% with the 64th notes...
-	\translator {
-	    \ScoreContext SpacingSpanner \override
-	    #'common-shortest-duration = #(make-moment 1 16)
-	}
-
-	\translator {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-	    MinimumVerticalExtent = #'(-1 . 1)
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    TextScript \override #'font-relative-size = #1
-	    TextScript \override #'font-shape = #'italic
-	    DynamicText \override #'extra-offset = #'(0 . 2.5)
-	    Hairpin \override #'extra-offset = #'(0 . 2.5)
-	    
-	    \consists "Skip_req_swallow_translator"
-	    
-	    \consistsend "Axis_group_engraver"
-	}
-	\translator {
-	    \PianoStaffContext
-	    \accepts Dynamics
-	    VerticalAlignment \override #'forced-distance = #7
-	}
+    \layout {
     }
-    
     \midi {
 	\tempo 4 = 70
-	
-	\translator {
-	    \type "Performer_group_performer"
-	    \name Dynamics
-	    
-	    \consists "Span_dynamic_performer"
-	    \consists "Dynamic_performer"
-	}
-
-	\translator {
-	    \PianoStaffContext
+	\context {
+	    \PianoStaff
 	    \accepts Dynamics
 	}
     }
 }
 
 
-\include "clarinet-ii.ly"
-\include "viola-ii.ly"
-\include "piano-right-ii.ly"
-\include "piano-left-ii.ly"
+\include "clarinet-ii.ily"
+\include "viola-ii.ily"
+\include "piano-right-ii.ily"
+\include "piano-left-ii.ily"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
+	\override Score.BarNumber   #'padding = #3
 
-	\context Staff = clarinet <
-	    \property Staff.fontSize = #-1
-	    \property Staff.autoBeaming = ##f
-	    \property Staff.midiInstrument = #"clarinet"
-	    \property Staff.instrument = #'(lines "Clarinetto" "in B.")
-	    \property Staff.transposing = #-2
+	\context Staff = "clarinet" <<
+	    \set Staff.fontSize = #-1
+	    \set Staff.autoBeaming = ##f
+	    \set Staff.midiInstrument = #"clarinet"
+	    \set Staff.instrumentName = \markup {\column { "Clarinetto" \line {"in B."}}}
+	    \transposition ais 
 	    
 	    \markingsII
 	    
 	    \clarinetSecondMov
-	>
+	>>
 	
-	\context Staff = viola <
-	    \property Staff.fontSize = #-1
-	    \property Staff.autoBeaming = ##f
-	    \property Staff.midiInstrument = #"viola"
-	    \property Staff.instrument = "Viola"
+	\context Staff = "viola" <<
+	    \set Staff.fontSize = #-1
+	    \set Staff.autoBeaming = ##f
+	    \set Staff.midiInstrument = #"viola"
+	    \set Staff.instrumentName = "Viola"
 	    
 	    \violaSecondMov
-	>
+	>>
 	
-	\context PianoStaff = piano <
-	    \property PianoStaff.midiInstrument = #"acoustic grand"
-	    \property PianoStaff.instrument = "Piano"
+	\context PianoStaff = "piano" <<
+	    \set PianoStaff.midiInstrument = #"acoustic grand"
+	    \set PianoStaff.instrumentName = "Piano"
 	    
-	    \context Staff=upper <
+	    \context Staff = "upper" <<
 		\rightHandSecondMov
 		\markingsII
-	    >
+	    >>
 	    
-	    \context Dynamics=dynamics \dynamicsSecondMov
+	    \context Dynamics = "dynamics" \dynamicsSecondMov
 	    
-	    \context Staff=lower \leftHandSecondMov
-	>
-    >
+	    \context Staff = "lower" \leftHandSecondMov
+	>>
+    >>
     
-    \paper {
-	\translator {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-	    MinimumVerticalExtent = #'(-1 . 1)
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    TextScript \override #'font-relative-size = #1
-	    TextScript \override #'font-shape = #'italic
-	    DynamicText \override #'extra-offset = #'(0 . 2.5)
-	    Hairpin \override #'extra-offset = #'(0 . 2.5)
-	    
-	    \consists "Skip_req_swallow_translator"
-	    
-	    \consistsend "Axis_group_engraver"
-	}
-	\translator {
-	    \PianoStaffContext
-	    \accepts Dynamics
-	    VerticalAlignment \override #'forced-distance = #7
-	}
-    }
+    \layout { }
     
     \midi {
 	\tempo 4 = 120
-	
-	\translator {
-	    \type "Performer_group_performer"
-	    \name Dynamics
-	    
-	    \consists "Span_dynamic_performer"
-	    \consists "Dynamic_performer"
-	}
-
-	\translator {
-	    \PianoStaffContext
+	\context {
+	    \PianoStaff
 	    \accepts Dynamics
 	}
     }
 }
 
 
-\include "clarinet-iii.ly"
-\include "viola-iii.ly"
-\include "piano-right-iii.ly"
-\include "piano-left-iii.ly"
+\include "clarinet-iii.ily"
+\include "viola-iii.ily"
+\include "piano-right-iii.ily"
+\include "piano-left-iii.ily"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
+	\override Score.BarNumber   #'padding = #3
 
-	\context Staff = clarinet <
-	    \property Staff.fontSize = #-1
-	    \property Staff.autoBeaming = ##f
-	    \property Staff.midiInstrument = #"clarinet"
-	    \property Staff.instrument = #'(lines "Clarinetto" "in B.")
-	    \property Staff.transposing = #-2
+	\context Staff = "clarinet" <<
+	    \set Staff.fontSize = #-1
+	    \set Staff.autoBeaming = ##f
+	    \set Staff.midiInstrument = #"clarinet"
+	    \set Staff.instrumentName = \markup {\column { "Clarinetto" \line {"in B."}}}
+	    \transposition ais 
 	    
 	    \markingsIII
 	    
 	    \clarinetThirdMov
-	>
+	>>
 	
-	\context Staff = viola <
-	    \property Staff.fontSize = #-1
-	    \property Staff.autoBeaming = ##f
-	    \property Staff.midiInstrument = #"viola"
-	    \property Staff.instrument = "Viola"
+	\context Staff = "viola" <<
+	    \set Staff.fontSize = #-1
+	    \set Staff.autoBeaming = ##f
+	    \set Staff.midiInstrument = #"viola"
+	    \set Staff.instrumentName = "Viola"
 	    
 	    \violaThirdMov
-	>
+	>>
 	
-	\context PianoStaff = piano <
-	    \property PianoStaff.midiInstrument = #"acoustic grand"
-	    \property PianoStaff.instrument = "Piano"
+	\context PianoStaff = "piano" <<
+	    \set PianoStaff.midiInstrument = #"acoustic grand"
+	    \set PianoStaff.instrumentName = "Piano"
 	    
-	    \context Staff=upper <
+	    \context Staff = "upper" <<
 		\rightHandThirdMov
 		\markingsIII
-	    >
+	    >>
 	    
-	    \context Dynamics=dynamics \dynamicsThirdMov
+	    \context Dynamics = "dynamics" \dynamicsThirdMov
 	    
-	    \context Staff=lower \leftHandThirdMov
-	>
-    >
+	    \context Staff = "lower" \leftHandThirdMov
+	>>
+    >>
     
-    \paper {
-	\translator {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \consists "Output_property_engraver"
-	    MinimumVerticalExtent = #'(-1 . 1)
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-	    
-	    TextScript \override #'font-relative-size = #1
-	    TextScript \override #'font-shape = #'italic
-	    DynamicText \override #'extra-offset = #'(0 . 2.5)
-	    Hairpin \override #'extra-offset = #'(0 . 2.5)
-	    
-	    \consists "Skip_req_swallow_translator"
-	    
-	    \consistsend "Axis_group_engraver"
-	}
-	\translator {
-	    \PianoStaffContext
-	    \accepts Dynamics
-	    VerticalAlignment \override #'forced-distance = #7
-	}
-    }
+    \layout { }
     
     \midi {
 	\tempo 4 = 120
-	
-	\translator {
-	    \type "Performer_group_performer"
-	    \name Dynamics
-	    
-	    \consists "Span_dynamic_performer"
-	    \consists "Dynamic_performer"
-	}
-
-	\translator {
-	    \PianoStaffContext
+	\context {
+	    \PianoStaff
 	    \accepts Dynamics
 	}
     }
