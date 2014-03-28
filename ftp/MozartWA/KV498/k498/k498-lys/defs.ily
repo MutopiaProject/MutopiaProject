@@ -9,17 +9,19 @@
 
   mutopiatitle = "Trio in E-flat Major KV. 498"
   mutopiacomposer = "MozartWA"
-  mutopiaopus = "KV. 498"
-  mutopiainstrument = "Clarinet, Viola and Piano"
+  mutopiaopus = "KV 498"
+  mutopiainstrument = "Clarinet (or Violin), Viola and Piano (also Piano solo)"
   date = "1786"
   source = "Breitkopf und Haertel (1879)"
   style = "Classical"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Maurizio Tomasi"
   maintainerEmail = "zio_tom78@hotmail.com"
+  moreInfo = "<p>A violin transposition of the clarinet part is included.</p>"
 
-  tagline = ""
-  footer = "Mutopia-2004/04/30-250"
+ footer = "Mutopia-2014/03/28-250"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 % Some useful macros
