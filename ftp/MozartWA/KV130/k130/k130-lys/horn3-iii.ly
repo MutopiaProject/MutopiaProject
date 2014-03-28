@@ -1,4 +1,5 @@
-hornIIIThirdMov = \notes \relative g' {
+\version "2.17.14"
+hornIIIThirdMov =  \relative g' {
     \key c \major
     \clef violin
 
@@ -7,7 +8,7 @@ hornIIIThirdMov = \notes \relative g' {
     \repeat volta 2 {
 	r4
 	| R2.*4
-	| g2.-\f ~
+	| g2.\f ~
 	| g
 	| e'4 d d
 	| d2

@@ -1,4 +1,5 @@
-hornIThirdMov = \notes \relative c'' {
+\version "2.17.14"
+hornIThirdMov =  \relative c'' {
     \key c \major
     \clef violin
 
@@ -7,7 +8,7 @@ hornIThirdMov = \notes \relative c'' {
     \repeat volta 2 {
 	r4
 	| R2.*4
-	| c2.-\f
+	| c2.\f
 	| c
 	| c2 d4
 	| c2
@@ -34,7 +35,7 @@ hornIThirdMov = \notes \relative c'' {
     }
 
     \repeat volta 2 {
-	d4-\f
+	d4\f
 	| e4. f8 g4
 
 % 30
@@ -42,7 +43,7 @@ hornIThirdMov = \notes \relative c'' {
 	| e4. f8 g4
 	| d r r
 	| R2.*4
-	| c2-\f d4
+	| c2\f d4
 	| c2
     }
 

@@ -1,3 +1,4 @@
+\version "2.17.97"
 \header {
     title = "Symphony nr. 18 in F major K. 130"
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
@@ -6,6 +7,7 @@
     mutopiacomposer = "MozartWA"
     mutopiaopus = "KV. 130"
     mutopiainstrument = "Orchestra"
+    mutopialastupdated = "2014/Jan/10"
     date = "May 1772"
     source = "Breitkopf und Härtel"
     style = "Classical"
@@ -13,138 +15,105 @@
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
-    lastupdated = "2002/Aug/17"
-
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+    lastupdated = "2014/Jan/04"
     footer = "Mutopia-2003/08/17-346"
+
+    tagline =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
 }
 
 % Some useful macros
 
-cue = \once \property Voice.Stem \override #'stroke-style = #'()
+cue = \once \override Flag.stroke-style = #'()
 
-raiseDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . 1.0)
+raiseDynamics = \once \override DynamicText.extra-offset = #'(0 . 1.0)
 
-RaiseDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . 1.5)
+RaiseDynamics = \once \override DynamicText.extra-offset = #'(0 . 1.5)
 
-lowerDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . -1.0)
+lowerDynamics = \once \override DynamicText.extra-offset = #'(0 . -1.0)
 
-LowerDynamics = \once \property Voice.DynamicText
-    \override #'extra-offset = #'(0 . -1.5)
+LowerDynamics = \once \override DynamicText.extra-offset = #'(0 . -1.5)
 
 cresc = #'(italic "cresc.")
 decresc = #'(italic "decresc.")
 staccato = #'(italic "staccato")
 legato = #'(italic "legato")
 
-aDue = #'(bold "a 2.")
-solo = #'(bold "solo")
+aDue = \markup { \bold "a 2." }
+solo = \markup { \bold "solo" }
 
-raiseSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . 0.5) 0 . 0.5)
+raiseSlur = \once \override Slur.attachment-offset = #'((0 . 0.5) 0 . 0.5)
 
-lowerSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . -0.5) 0 . -0.5)
+lowerSlur = \once \override Slur.attachment-offset = #'((0 . -0.5) 0 . -0.5)
 
-RaiseSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . 1.2) 0 . 1.2)
+RaiseSlur = \once \override Slur.attachment-offset = #'((0 . 1.2) 0 . 1.2)
 
-LowerSlur = \once \property Voice.Slur
-    \override #'attachment-offset = #'((0 . -1.2) 0 . -1.2)
+LowerSlur = \once \override Slur.attachment-offset = #'((0 . -1.2) 0 . -1.2)
 
-raisePhrasingSlur = \once \property Voice.PhrasingSlur
-    \override #'attachment-offset = #'((0 . 0.5) 0 . 0.5)
+raisePhrasingSlur = \once \override PhrasingSlur.attachment-offset = #'((0 . 0.5) 0 . 0.5)
 
-slurStemToStem = \once \property Voice.Slur
-    \override #'attachment = #'(stem . stem)
+slurStemToStem = \once \override Slur.attachment = #'(stem . stem)
 
-slurHeadToHead = \once \property Voice.Slur
-    \override #'attachment = #'(head . head)
+slurHeadToHead = \once \override Slur.attachment = #'(head . head)
 
-slurHeadToStem = \once \property Voice.Slur
-    \override #'attachment = #'(head . stem)
+slurHeadToStem = \once \override Slur.attachment = #'(head . stem)
 
-slurStemToHead = \once \property Voice.Slur
-    \override #'attachment = #'(stem . head)
+slurStemToHead = \once \override Slur.attachment = #'(stem . head)
 
-RaiseText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . 3)
+RaiseText = \once \override TextScript.extra-offset = #'(0 . 3)
 
-raiseText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . 1)
+raiseText = \once \override TextScript.extra-offset = #'(0 . 1)
 
-lowerText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . -1)
+lowerText = \once \override TextScript.extra-offset = #'(0 . -1)
 
-LowerText = \once \property Voice.TextScript
-    \override #'extra-offset = #'(0 . -2)
+LowerText = \once \override TextScript.extra-offset = #'(0 . -2)
 
-raiseBeam = \once \property Voice.Beam \set #'shorten = #-1
+raiseBeam = \once \override Beam.shorten = #-1
 
-RaiseBeam = \once \property Voice.Beam \set #'shorten = #-1.7
+RaiseBeam = \once \override Beam.shorten = #-1.7
 
-lowerBeam = \once \property Voice.Beam \set #'shorten = #1
+lowerBeam = \once \override Beam.shorten = #1
 
-LowerBeam = \once \property Voice.Beam \set #'shorten = #1.7
+LowerBeam = \once \override Beam.shorten = #1.7
 
-tupletNum = \property Voice.TupletBracket
-    \set #'number-visibility = ##t
+tupletBracket = \override TupletBracket.bracket-visibility = ##t
 
-noTupletNum = \property Voice.TupletBracket
-    \set #'number-visibility = ##f 
+noTupletBracket = \override TupletBracket.bracket-visibility = ##f
 
-tupletBracket = \property Voice.TupletBracket
-    \set #'bracket-visibility = ##t
+smartTupletBracket = \override TupletBracket.bracket-visibility = #'if-no-beam
 
-noTupletBracket = \property Voice.TupletBracket
-    \set #'bracket-visibility = ##f
+raiseHairpin = \once \override Hairpin.extra-offset = #'(0 . 1)
 
-smartTupletBracket = \property Voice.TupletBracket
-    \set #'bracket-visibility = #'if-no-beam
+lowerHairpin = \once \override Hairpin.extra-offset = #'(0 . -1)
 
-raiseHairpin = \once \property Voice.Hairpin
-    \override #'extra-offset = #'(0 . 1)
+raiseScript = \once \override Script.extra-offset = #'(0.0 . 1.0)
 
-lowerHairpin = \once \property Voice.Hairpin
-    \override #'extra-offset = #'(0 . -1)
+RaiseScript = \once \override Script.extra-offset = #'(0.0 . 1.5)
 
-raiseScript = \once \property Voice.Script
-    \override #'extra-offset = #'(0.0 . 1.0)
+lowerScript = \once \override Script.extra-offset = #'(0.0 . -1.0)
 
-RaiseScript = \once \property Voice.Script
-    \override #'extra-offset = #'(0.0 . 1.5)
+LowerScript = \once \override Script.extra-offset = #'(0.0 . 1.5)
 
-lowerScript = \once \property Voice.Script
-    \override #'extra-offset = #'(0.0 . -1.0)
-
-LowerScript = \once \property Voice.Script
-    \override #'extra-offset = #'(0.0 . 1.5)
-
-stemOff = \property Voice.Stem \override #'transparent = ##t
-stemOn = \property Voice.Stem \override #'transparent = ##f
+stemOff = \override Stem.transparent = ##t
+stemOn = \override Stem.transparent = ##f
 
 blankNotes = {
-    \property Voice.NoteHead \override #'transparent = ##t
-    \property Voice.Stem \override #'transparent = ##t
+    \override NoteHead.transparent = ##t
+    \override Stem.transparent = ##t
 }
 
 visibleNotes = {
-    \property Voice.NoteHead \override #'transparent = ##f
-    \property Voice.Stem \override #'transparent = ##f
+    \override NoteHead.transparent = ##f
+    \override Stem.transparent = ##f
 }
 
 setTrillWave = {
-    \property Voice.TextSpanner \set #'style = #'trill
-    \property Voice.TextSpanner \set #'edge-height = #'(0 . 0)
-    \property Voice.TextSpanner \set #'edge-text
-    = #(cons (make-musicglyph-markup "scripts-trill")  "")
+    \override TextSpanner.style = #'trill
+    \override TextSpanner.edge-text
+    = #(cons (make-musicglyph-markup "scripts.trill")  "")
 }
 
-beginTrillWave = #(ly:export (make-span-event 'TextSpanEvent START))
-endTrillWave = #(ly:export (make-span-event 'TextSpanEvent STOP))
+beginTrillWave = $(make-span-event 'TextSpanEvent START)
+endTrillWave = $(make-span-event 'TextSpanEvent STOP)
 
 parentP = #'(columns (large "(") (dynamic "p") (large ")"))
 parentF = #'(columns (large "(") (dynamic "f") (large ")"))
@@ -156,38 +125,36 @@ parentFP = #'(columns (large "(") (dynamic "fp") (large ")"))
 parentCresc = #'(columns (upright "(") (italic "cresc.") (upright ")"))
 parentDecresc = #'(columns (upright "(") (italic "decresc.") (upright ")"))
 
-parentShift = \once \property Voice.TextScript
-    \override #'extra-offset = #'(-1.0 . 0.0)
+parentShift = \once \override TextScript.extra-offset = #'(-1.0 . 0.0)
 
-ParentShift = \once \property Voice.TextScript
-    \override #'extra-offset = #'(-1.5 . 0.0)
+ParentShift = \once \override TextScript.extra-offset = #'(-1.5 . 0.0)
 
 cresc = \markup { \large { \italic cresc. } }
 decresc = \markup { \large { \italic decresc. } }
 
 % General markings and annotations for each movement
 
-markingsIII = \notes {
+markingsIII =  {
     s4
     \skip 2.*15
 
     s2
-    \once \property Voice.TextScript \override #'extra-offset = #'(-8 . 4)
-    s4^#'((Large upright) "Trio.")
+    \once \override TextScript.extra-offset = #'(-8 . 4)
+    s4^ \markup{\large "Trio."}
 }
 
-markingsIIIbis = \notes {
+markingsIIIbis =  {
     s4
     \skip 2.*37
 
-    \once \property Voice.TextScript \override #'extra-offset = #'(-5 . -2.5)
-    s2_#'((Large upright) "Men.D.C.")
+    \once \override TextScript.extra-offset = #'(-5 . -2.5)
+    s2_ \markup{\large "Men.D.C."}
 }
 
-rbcOne = \property Voice.stemRightBeamCount = #1
-rbcTwo = \property Voice.stemRightBeamCount = #2
-lbcOne = \property Voice.stemLeftBeamCount = #1
-lbcTwo = \property Voice.stemLeftBeamCount = #2
+rbcOne = \set stemRightBeamCount = #1
+rbcTwo = \set stemRightBeamCount = #2
+lbcOne = \set stemLeftBeamCount = #1
+lbcTwo = \set stemLeftBeamCount = #2
 
 % This avoids strokes with grace notes (Mozart never uses them in KV. 130)
-#(add-to-grace-init "Voice" 'Stem  'stroke-style '())
+%TODO: #(add-to-grace-init "Voice" 'Stem  'stroke-style '())

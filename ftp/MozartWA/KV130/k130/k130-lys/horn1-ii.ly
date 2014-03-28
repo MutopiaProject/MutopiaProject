@@ -1,4 +1,5 @@
-hornISecondMov = \notes \relative c'' {
+\version "2.17.14"
+hornISecondMov =  \relative c'' {
     \key c \major
     \clef violin
 
@@ -8,7 +9,7 @@ hornISecondMov = \notes \relative c'' {
 	R4.*10
 
 % 11
-	| c4.-\f
+	| c4.\f
 	| R4.
 	| c8 c c
 	| c4 r8
@@ -46,17 +47,17 @@ hornISecondMov = \notes \relative c'' {
 	| R4.*10
 
 % 50
-	| d4.-(
-	| e8-) r r
+	| d4.(
+	| e8) r r
 	| c4. ~
 	| c4 r8
 	| R4.
 	| c8 c c
-	| c-\p r r
+	| c\p r r
 	| R4.*9
 
 % 66
-	| c4.-\f
+	| c4.\f
 	| R4.
 	| c8 c c
 	| c4 r8
@@ -86,11 +87,11 @@ hornISecondMov = \notes \relative c'' {
 	| c8 c c
 	| c4 r8
 	| R4.*13
-	| r8 r c-\p
+	| r8 r c\p
 	| c4.
     }
 
-    | c4-\f r8
+    | c4\f r8
     | R4.*2
     | r8 c c
     | c4 r8
