@@ -1,12 +1,13 @@
 % -*- LilyPond -*-
 
-\version "1.7.29"
+\version "2.17.97"
 
-\include "paper16.ly"
+#(set-global-staff-size 16)
 
 \include "defs.ly"
 
-\include "flutes-i.ly"
+\include "flute1-i.ly"
+\include "flute2-i.ly"
 \include "horn1-i.ly"
 \include "horn2-i.ly"
 \include "horn3-i.ly"
@@ -17,107 +18,93 @@
 \include "basso-i.ly"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
+	\override Score.BarNumber.padding = #3
 
-	\context StaffGroup = winds <
+	\context StaffGroup = "winds" <<
 
-	    \context Staff = oboi <
-                \property Staff.midiInstrument = #"flute"
-		\property Staff.instrument = 
-		\markup { \center << "2 Flauti" >> }
-
-		\time 4/4
-		
-		\flutesFirstMov
-
-	    >
+	    \context Staff = "oboi" <<
+          \set Staff.midiInstrument = #"flute"
+		      \set Staff.instrumentName = \markup { \center-column { "2 Flauti" } }
+		      \time 4/4
+		      \partcombine \fluteIFirstMov \fluteIIFirstMov
+	    >>
 
 	    \context Staff = hornsC {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.instrument = 
-		\markup { \center << "Corni in" "C alto" >> }
-
-		\time 4/4
-
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornIFirstMov }
-		\context Thread=two { \hornIIFirstMov }
+        \set Staff.midiInstrument = #"french horn"
+		    \set Staff.instrumentName = \markup { \center-column { "Corni in" "C alto" } }
+		    \time 4/4
+		    \partcombine \hornIFirstMov \hornIIFirstMov
 	    }
 
 	    \context Staff = hornsF {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.transposing = #5
-		\property Staff.instrument = 
-		\markup { \center << "Corni" "in F" >> }
-
-		\time 4/4
-
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornIIIFirstMov }
-		\context Thread=two { \hornIVFirstMov }
+         \set Staff.midiInstrument = #"french horn"
+		      \transposition f' 
+		      \set Staff.instrumentName = \markup { \center-column { "Corni" "in F" } }
+		      \time 4/4
+          \partcombine \hornIIIFirstMov \hornIVFirstMov 
 	    }
-	>
+	>>
 
-	\context StaffGroup = strings <
+	\context StaffGroup = "strings" <<
 
-	    \context Staff = violinI <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino I." >> }
+	    \context Staff = violinI <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino I." } }
 
 		\time 4/4
 
 		\violinIFirstMov
-	    >
+	    >>
 
-	    \context Staff = violinII <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino II." >> }
+	    \context Staff = violinII <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino II." } }
 
 		\time 4/4
 
 		\violinIIFirstMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-                \property Staff.midiInstrument = #"viola"
-		\property Staff.instrument = 
-		\markup { \center << "Viola." >> }
+	    \context Staff = "viola" <<
+                \set Staff.midiInstrument = #"viola"
+		\set Staff.instrumentName = \markup { \center-column { "Viola." } }
 
 		\time 4/4
 
 		\violaFirstMov
-	    >
+	    >>
 
-	    \context Staff = basso <
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = 
-		\markup { \center << "Violoncello"
-				     "e Basso." >> }
+	    \context Staff = "basso" <<
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = \markup { \center-column { "Violoncello"
+				     "e Basso." } }
 
 
 		\time 4/4
 
 		\bassoFirstMov
-	    >
-	>
-    >
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 124
+    
+  \midi {
+    \tempo 4 = 124
     }
+
+
 
     \header {
 	piece = "Allegro."
     }
 
-    \paper { }
+    \layout { }
 }
 
 
-\include "flutes-ii.ly"
+\include "flute1-ii.ly"
+\include "flute2-ii.ly"
 \include "horn1-ii.ly"
 \include "horn2-ii.ly"
 \include "horn3-ii.ly"
@@ -128,108 +115,106 @@
 \include "basso-ii.ly"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
+	\override Score.BarNumber.padding = #3
 
-	\context StaffGroup = winds <
+	\context StaffGroup = "winds" <<
 
-	    \context Staff = oboi <
-                \property Staff.midiInstrument = #"flute"
-		\property Staff.instrument = 
-		\markup { \center << "2 Flauti" >> }
+	    \context Staff = "oboi" <<
+                \set Staff.midiInstrument = #"flute"
+		\set Staff.instrumentName = \markup { \center-column { "2 Flauti" } }
 
 		\time 3/8
 		
-		\flutesSecondMov
+		\partcombine \fluteISecondMov \fluteIISecondMov
 
-	    >
+	    >>
 
 	    \context Staff = hornsC {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.transposing = #5
-		\property Staff.instrument = 
-		\markup { \center << "Corni" "in F" >> }
+                \set Staff.midiInstrument = #"french horn"
+		\transposition f' 
+		\set Staff.instrumentName = \markup { \center-column { "Corni" "in F" } }
 
 		\time 3/8
-
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornISecondMov }
-		\context Thread=two { \hornIISecondMov }
+    \partcombine \hornISecondMov \hornIISecondMov
+		%\context Voice = "one" \XXpartcombine Voice
+		%\context Voice = "one" { \hornISecondMov }
+		%\context Voice = "two" { \hornIISecondMov }
 	    }
 
 	    \context Staff = hornsF {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.transposing = #-2
-		\property Staff.instrument = 
-		\markup { \center << "Corni" "in B" >> }
+                \set Staff.midiInstrument = #"french horn"
+		\transposition ais 
+		\set Staff.instrumentName = \markup { \center-column { "Corni" "in B" } }
 
 		\time 3/8
+    \partcombine \hornIIISecondMov \hornIVSecondMov
 
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornIIISecondMov }
-		\context Thread=two { \hornIVSecondMov }
+		%\context Voice = "one" \XXpartcombine Voice
+		%\context Voice = "one" { \hornIIISecondMov }
+		%\context Voice = "two" { \hornIVSecondMov }
 	    }
-	>
+	>>
 
-	\context StaffGroup = strings <
+	\context StaffGroup = "strings" <<
 
-	    \context Staff = violinI <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino I." >> }
+	    \context Staff = violinI <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino I." } }
 
 		\time 3/8
 
 		\violinISecondMov
-	    >
+	    >>
 
-	    \context Staff = violinII <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino II." >> }
+	    \context Staff = violinII <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino II." } }
 
 		\time 3/8
 
 		\violinIISecondMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-                \property Staff.midiInstrument = #"viola"
-		\property Staff.instrument = 
-		\markup { \center << "Viola." >> }
+	    \context Staff = "viola" <<
+                \set Staff.midiInstrument = #"viola"
+		\set Staff.instrumentName = \markup { \center-column { "Viola." } }
 
 		\time 3/8
 
 		\violaSecondMov
-	    >
+	    >>
 
-	    \context Staff = basso <
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = 
-		\markup { \center << "Violoncello"
-				     "e Basso." >> }
+	    \context Staff = "basso" <<
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = \markup { \center-column { "Violoncello"
+				     "e Basso." } }
 
 
 		\time 3/8
 
 		\bassoSecondMov
-	    >
-	>
-    >
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 42
+    
+  \midi {
+    \tempo 4 = 42
     }
+
+
 
     \header {
 	piece = "Andantino grazioso."
     }
 
-    \paper { }
+    \layout { }
 }
 
 
-\include "flutes-iii.ly"
+\include "flute1-iii.ly"
+\include "flute2-iii.ly"
 \include "horn1-iii.ly"
 \include "horn2-iii.ly"
 \include "horn3-iii.ly"
@@ -240,115 +225,106 @@
 \include "basso-iii.ly"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
+	\override Score.BarNumber.padding = #3
 
-	\context StaffGroup = winds <
+	\context StaffGroup = "winds" <<
 
-	    \context Staff = oboi <
-                \property Staff.midiInstrument = #"flute"
-		\property Staff.instrument = 
-		\markup { \center << "2 Flauti" >> }
+	    \context Staff = "oboi" <<
+                \set Staff.midiInstrument = #"flute"
+		\set Staff.instrumentName = \markup { \center-column { "2 Flauti" } }
 
 		\time 3/4
 		\partial 4
+		\partcombine \fluteIThirdMov \fluteIIThirdMov
 		
-		\flutesThirdMov
 
-		\context Voice=markings { \markingsIII }
-	    >
+		\context Voice = "markings" { \markingsIII }
+	    >>
 
 	    \context Staff = hornsC {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.instrument = 
-		\markup { \center << "Corni in" "C alto" >> }
+                \set Staff.midiInstrument = #"french horn"
+		\set Staff.instrumentName = \markup { \center-column { "Corni in" "C alto" } }
 
 		\time 3/4
 		\partial 4
-
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornIThirdMov }
-		\context Thread=two { \hornIIThirdMov }
+      \partcombine \hornIThirdMov \hornIIThirdMov
 	    }
 
 	    \context Staff = hornsF {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.transposing = #5
-		\property Staff.instrument = 
-		\markup { \center << "Corni" "in F" >> }
+                \set Staff.midiInstrument = #"french horn"
+		\transposition f' 
+		\set Staff.instrumentName = \markup { \center-column { "Corni" "in F" } }
 
 		\time 3/4
 		\partial 4
+    \partcombine \hornIIIThirdMov \hornIVThirdMov
 
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornIIIThirdMov }
-		\context Thread=two { \hornIVThirdMov }
 	    }
-	>
+	>>
 
-	\context StaffGroup = strings <
+	\context StaffGroup = "strings" <<
 
-	    \context Staff = violinI <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino I." >> }
+	    \context Staff = violinI <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino I." } }
 
 		\time 3/4
 		\partial 4
 
 		\violinIThirdMov
-	    >
+	    >>
 
-	    \context Staff = violinII <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino II." >> }
+	    \context Staff = violinII <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino II." } }
 
 		\time 3/4
 		\partial 4
 
 		\violinIIThirdMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-                \property Staff.midiInstrument = #"viola"
-		\property Staff.instrument = 
-		\markup { \center << "Viola." >> }
+	    \context Staff = "viola" <<
+                \set Staff.midiInstrument = #"viola"
+		\set Staff.instrumentName = \markup { \center-column { "Viola." } }
 
 		\time 3/4
 		\partial 4
 
 		\violaThirdMov
-	    >
+	    >>
 
-	    \context Staff = basso <
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = 
-		\markup { \center << "Violoncello"
-				     "e Basso." >> }
+	    \context Staff = "basso" <<
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = \markup { \center-column { "Violoncello" "e Basso." } }
 
 
 		\time 3/4
 		\partial 4
 
 		\bassoThirdMov
-		\context Voice=markings { \markingsIIIbis }
-	    >
-	>
-    >
+		\context Voice = "markings" { \markingsIIIbis }
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 130
+    
+  \midi {
+    \tempo 4 = 130
     }
+
+
 
     \header {
 	piece = "MENUETTO."
     }
 
-    \paper { }
+    \layout { }
 }
 
-\include "flutes-iv.ly"
+\include "flute1-iv.ly"
+\include "flute2-iv.ly"
 \include "horn1-iv.ly"
 \include "horn2-iv.ly"
 \include "horn3-iv.ly"
@@ -359,103 +335,100 @@
 \include "basso-iv.ly"
 
 \score {
-    <
-	\property Score.BarNumber \override #'padding = #3
+    <<
+	\override Score.BarNumber.padding = #3
 
-	\context StaffGroup = winds <
+	\context StaffGroup = "winds" <<
 
-	    \context Staff = flutes <
-                \property Staff.midiInstrument = #"flute"
-		\property Staff.instrument = 
-		\markup { \center << "2 Flauti" >> }
+	    \context Staff = "flutes" <<
+                \set Staff.midiInstrument = #"flute"
+		\set Staff.instrumentName = \markup { \center-column { "2 Flauti" } }
 
 		\time 4/4
 		
-		\flutesFourthMov
+		\partcombine \fluteIFourthMov \fluteIIFourthMov
 
-	    >
+	    >>
 
 	    \context Staff = hornsC {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.instrument = 
-		\markup { \center << "Corni in" "C alto" >> }
+                \set Staff.midiInstrument = #"french horn"
+		\set Staff.instrumentName = \markup { \center-column { "Corni in" "C alto" } }
 
 		\time 4/4
+		\partcombine \hornIFourthMov \hornIIFourthMov
 
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornIFourthMov }
-		\context Thread=two { \hornIIFourthMov }
+		%\context Voice = "one" \XXpartcombine Voice
+		%\context Voice = "one" { \hornIFourthMov }
+		%\context Voice = "two" { \hornIIFourthMov }
 	    }
 
 	    \context Staff = hornsF {
-                \property Staff.midiInstrument = #"french horn"
-		\property Staff.transposing = #5
-		\property Staff.instrument = 
-		\markup { \center << "Corni" "in F" >> }
+                \set Staff.midiInstrument = #"french horn"
+		\transposition f' 
+		\set Staff.instrumentName = \markup { \center-column { "Corni" "in F" } }
 
 		\time 4/4
 
-		\context Voice=one \partcombine Voice
-		\context Thread=one { \hornIIIFourthMov }
-		\context Thread=two { \hornIVFourthMov }
+		\partcombine \hornIIIFourthMov \hornIVFourthMov
+		%\context Voice = "one" \XXpartcombine Voice
+		%\context Voice = "one" { \hornIIIFourthMov }
+		%\context Voice = "two" { \hornIVFourthMov }
 	    }
-	>
+	>>
 
-	\context StaffGroup = strings <
+	\context StaffGroup = "strings" <<
 
-	    \context Staff = violinI <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino I." >> }
+	    \context Staff = violinI <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino I." } }
 
 		\time 4/4
 
 		\violinIFourthMov
-	    >
+	    >>
 
-	    \context Staff = violinII <
-                \property Staff.midiInstrument = #"violin"
-		\property Staff.instrument = 
-		\markup { \center << "Violino II." >> }
+	    \context Staff = violinII <<
+                \set Staff.midiInstrument = #"violin"
+		\set Staff.instrumentName = \markup { \center-column { "Violino II." } }
 
 		\time 4/4
 
 		\violinIIFourthMov
-	    >
+	    >>
 
-	    \context Staff = viola <
-                \property Staff.midiInstrument = #"viola"
-		\property Staff.instrument = 
-		\markup { \center << "Viola." >> }
+	    \context Staff = "viola" <<
+                \set Staff.midiInstrument = #"viola"
+		\set Staff.instrumentName = \markup { \center-column { "Viola." } }
 
 		\time 4/4
 
 		\violaFourthMov
-	    >
+	    >>
 
-	    \context Staff = basso <
-                \property Staff.midiInstrument = #"cello"
-		\property Staff.instrument = 
-		\markup { \center << "Violoncello"
-				     "e Basso." >> }
+	    \context Staff = "basso" <<
+                \set Staff.midiInstrument = #"cello"
+		\set Staff.instrumentName = \markup { \center-column { "Violoncello" "e Basso." } }
 
 
 		\time 4/4
 
 		\bassoFourthMov
-	    >
-	>
-    >
+	    >>
+	>>
+    >>
 
-    \midi {
-       \tempo 4 = 180
+    
+  \midi {
+    \tempo 4 = 180
     }
+
+
 
     \header {
 	piece = "Allegro molto."
     }
 
-    \paper { }
+    \layout { }
 }
 
 

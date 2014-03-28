@@ -1,4 +1,5 @@
-hornIVSecondMov = \notes \relative c'' {
+\version "2.17.14"
+hornIVSecondMov =  \relative c'' {
     \key c \major
     \clef violin
 
@@ -8,7 +9,7 @@ hornIVSecondMov = \notes \relative c'' {
 	R4.*10
 
 % 11
-	| c8-\f g e
+	| c8\f g e
 	| c4 r8
 	| g'8 e r
 	| R4.*2
@@ -41,7 +42,7 @@ hornIVSecondMov = \notes \relative c'' {
     }
 
     \repeat volta 2 {
-	| g,4.-\p ~
+	| g,4.\p ~
 	| g ~
 	| g ~
 	| g8 g g
@@ -49,10 +50,10 @@ hornIVSecondMov = \notes \relative c'' {
 	| g ~
 	| g ~
 	| g8 g g
-	| e'4.-\f ~
+	| e'4.\f ~
 	| e8 r r
-	| d'4.-(
-	| g,8-) r r
+	| d'4.(
+	| g,8) r r
 	| g4.
 	| e8 g c
 	| c,4 r8
@@ -60,7 +61,7 @@ hornIVSecondMov = \notes \relative c'' {
 	| R4.*10
 
 % 66
-	| c8-\f g e
+	| c8\f g e
 	| c4 r8
 	| g'8 e r
 	| R4.
@@ -101,13 +102,21 @@ hornIVSecondMov = \notes \relative c'' {
 	| d8 c g
 	| e4 r8
 	| R4.*6
-	| r8 r g-\p
+	| r8 r g\p
 	| g4 c8
     }
 
-    | c8-\f g c
-    | e4 \grace g16 f8
-    | \grace e16 d8 c r
+    | c8\f g c
+    | e4 \grace {
+\override Flag.stroke-style = #"grace"
+   g16 
+  \revert Flag.stroke-style }
+ f8
+    | \grace {
+\override Flag.stroke-style = #"grace"
+   e16 
+  \revert Flag.stroke-style }
+ d8 c r
     | c g g
     | g4 e8
     | e-. c-. r

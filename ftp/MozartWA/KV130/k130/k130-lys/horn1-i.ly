@@ -1,4 +1,5 @@
-hornIFirstMov = \notes \relative c'' {
+\version "2.17.14"
+hornIFirstMov =  \relative c'' {
     \key c \major
     \clef violin
 
@@ -6,7 +7,7 @@ hornIFirstMov = \notes \relative c'' {
 
     \repeat volta 2 {
 	R1*5
-	| c4-\f r r2
+	| c4\f r r2
 	| c4 r r2
 	| c4 r r2
 	| r2 c4 c
@@ -28,7 +29,7 @@ hornIFirstMov = \notes \relative c'' {
 
 % 30
 	| R1*12
-	| c2-\f c
+	| c2\f c
 	| c4 r r2
 	| g4 r r2
 	| g4 r r2
@@ -38,14 +39,14 @@ hornIFirstMov = \notes \relative c'' {
 	| R1*6
 
 % 55
-	| g2-\f r
+	| g2\f r
 	| R1
 	| e'2 d
-	| c8-( g-) g-. g-. g4 r
+	| c8( g) g-. g-. g4 r
 	| R1
 
 % 60
-	| c8-( g-) g^. g^. g4 r
+	| c8( g) g^. g^. g4 r
 	| R1
 	| c4 c c r
     }
@@ -53,7 +54,7 @@ hornIFirstMov = \notes \relative c'' {
     | R1*8
 
 % 71
-    | c4-\f r r2
+    | c4\f r r2
     | d4 r r2
     | d4 r r2
     | g,4 r r2
@@ -62,10 +63,10 @@ hornIFirstMov = \notes \relative c'' {
     | R1*3
 
 % 82
-    | d1-\f
+    | d1\f
     | c4 c c r
     | R1*4
-    | c4-\f r r2
+    | c4\f r r2
     | c4 r r2
 
 % 90
@@ -78,14 +79,14 @@ hornIFirstMov = \notes \relative c'' {
     | R1*14
 
 % 112
-    | c4-\f r r2
+    | c4\f r r2
     | c4 r r2
     | c2 c
     | c4 r r2
     | R1*6
 
 % 122
-    | c4-\f r r2
+    | c4\f r r2
     | d4 r r2
     | c4 r c c
     | c c8-. c-. c4 r

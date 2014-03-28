@@ -1,23 +1,24 @@
-bassoSecondMov = \notes \relative c {
+\version "2.17.14"
+bassoSecondMov =  \relative c {
     \key bes \major
     \clef bass
 
     \noTupletBracket
 
     \repeat volta 2 {
-	bes4-\p^\markup { pizz. } r8
+	bes4\p^\markup { pizz. } r8
 	| r bes' g
 	| es d r
 	| es4 r8
 	| f4 r8
-	| g-( f-) d-(
-	| es-)-. es'-( d-)
-	| r a-( bes-)
+	| g( f) d(
+	| es)-. es'( d)
+	| r a( bes)
 	| es,4 r8
 
 % 10
 	| r f f,
-	| bes4-\f r8
+	| bes4\f r8
 	| r bes' g
 	| es d c
 	| bes4 r8
@@ -33,18 +34,18 @@ bassoSecondMov = \notes \relative c {
 	| c' e g
 	| c r r
 	| f, r r
-	| f-( c a-)
+	| f( c a)
 	| bes f' a,
 	| bes bes' r
 	| c c, c
-	| f-( c a-)
+	| f( c a)
 
 % 30
 	| bes f' a,
 	| bes f' a,
 	| bes b r
-	| c-\p r c
-	| f4-\f r8
+	| c\p r c
+	| f4\f r8
 	| c4 r8
 	| f,4 r8
 	| c'4 r8
@@ -55,14 +56,14 @@ bassoSecondMov = \notes \relative c {
     \repeat volta 2 {
 % 40
 	| R4.
-	| f'8-\p c d
+	| f'8\p c d
 	| a bes bes,
 	| f' f, r
 	| R4.
 	| f''8 c des
 	| a bes e,
 	| f f, r
-	| d'-\f d d
+	| d'\f d d
 	| g, r r
 
 % 50
@@ -72,7 +73,7 @@ bassoSecondMov = \notes \relative c {
 	| bes, f' bes
 	| es, r es
 	| f f, f'
-	| bes,-\p r r
+	| bes,\p r r
 	| r bes' g
 	| es d r
 	| es4 r8
@@ -80,11 +81,11 @@ bassoSecondMov = \notes \relative c {
 % 60
 	| f4 r8
 	| g f d
-	| es es'-( d-)
-	| r a-( bes-)
+	| es es'( d)
+	| r a( bes)
 	| es,4 r8
 	| r f f,
-	| bes4-\f r8
+	| bes4\f r8
 	| r bes' g
 	| es d c
 	| bes4 r8
@@ -131,7 +132,7 @@ bassoSecondMov = \notes \relative c {
 	| f'4 bes8
 	| es, f f
 	| bes,4 r8
-	| r bes'-\p g
+	| r bes'\p g
 	| es d r
 	| es4 r8
 	| f4 r8
@@ -141,11 +142,19 @@ bassoSecondMov = \notes \relative c {
 
 
 % 113
-    | bes8-\f f bes
-    | d4 \grace f16 es8
-    | \grace d16 c8 bes r
+    | bes8\f f bes
+    | d4 \grace {
+\override Flag.stroke-style = #"grace"
+   f16 
+  \revert Flag.stroke-style }
+ es8
+    | \grace {
+\override Flag.stroke-style = #"grace"
+   d16 
+  \revert Flag.stroke-style }
+ c8 bes r
     | bes f f
-    | f4-( d8-)
+    | f4( d8)
     | d-. bes-. r
     | f' bes r
 
