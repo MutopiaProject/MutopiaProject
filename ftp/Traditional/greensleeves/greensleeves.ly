@@ -1,21 +1,21 @@
 \version "2.18.0"
 
 \header {
-	title = "Greensleeves"
-	composer = \markup { \fill-line { \pad-to-box #'(0 . 0) #'(0 . 5) { "Traditional; 16th Century English melody" }}}
-	mutopiatitle = "Greensleeves (hymntune)"
-	mutopiacomposer = "Traditional"
-	mutopiainstrument = "Voice (SATB)"
-	date = ""
-	maintainer = "Steve Dunlop"
-	maintainerWeb = "http://www.nerstrand.net"
-	maintainerEmail = "music@nerstrand.net"
-	style = "Hymn"
-	source = "www.cyberhymnal.org"
-	lastupdated = "2008/1/12"
- footer = "Mutopia-2008/01/13-1247"
- copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
+  title = "Greensleeves"
+  composer = \markup { \fill-line { \pad-to-box #'(0 . 0) #'(0 . 5) { "Traditional; 16th Century English melody" }}}
+  mutopiatitle = "Greensleeves (hymntune)"
+  mutopiacomposer = "Traditional"
+  mutopiainstrument = "Voice (SATB)"
+  date = ""
+  maintainer = "Steve Dunlop"
+  maintainerWeb = "http://www.nerstrand.net"
+  maintainerEmail = "music@nerstrand.net"
+  style = "Hymn"
+  source = "www.cyberhymnal.org"
+  lastupdated = "2008/1/12"
+  footer = "Mutopia-2008/01/13-1247"
+  copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+  tagline = ##f
 }
 
 % #(set-default-paper-size "letter")
@@ -26,44 +26,44 @@ Tenor = { { \key g \major g8 b4 a8 g4 b8 d' d' a fis4 a8 g4 g8 a4 e8 b4. b4 g8 b
 Bass = { { \key g \major e8 e4 fis8 g4 g8 d4 d8 d4 dis8 e4 e8 c4 c8 b,4. b,4 e8 e4 fis8 g4 g8 d d d d4 fis8 e4 a,8 b,4 b,8 e4. e4 r8 b4. g4 g8 d4 d8 d4 dis8 e4 e8 c4 c8 b,4 b,8 b,4 r8 b4. g4 g8 d d d d4 dis8 e4 a,8 b,4 b,8 e4. e4 s8  \bar "|." } }
 
 
-  \score {
-    \context GrandStaff \with {
+\score {
+  \context GrandStaff \with {
     \override StaffGrouper.staff-staff-spacing.basic-distance = #11
   }
-    <<
-      \context Staff = upper <<
-        \set Staff.printPartCombineTexts = ##f
-        \partcombine
-        {   \accidentalStyle modern-cautionary \Soprano }
-        { \Alto}
-      >>  
-      \context Staff = lower <<
-        \set Staff.printPartCombineTexts = ##f
-        \clef bass
-        \partcombine	
-        {  \accidentalStyle modern-cautionary \Tenor }
-        { \Bass }
-      >>  
+  <<
+    \context Staff = upper <<
+      \set Staff.printPartCombineTexts = ##f
+      \partcombine
+      {   \accidentalStyle modern-cautionary \Soprano }
+      { \Alto}
     >>
-\midi { }
-\layout {
+    \context Staff = lower <<
+      \set Staff.printPartCombineTexts = ##f
+      \clef bass
+      \partcombine
+      {  \accidentalStyle modern-cautionary \Tenor }
+      { \Bass }
+    >>
+  >>
+  \midi { }
+  \layout {
     \context {
-    \Score
-    % defaults
-    % (shortest-duration-space . 2.0)
-    % (spacing-increment . 1.2)
-    % (base-shortest-duration . ,(ly:make-moment 1/8))
-    % tighter spacing
-    \override SpacingSpanner.shortest-duration-space = #2.8
-    \override SpacingSpanner.spacing-increment = #0.6
-    \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
-    \remove "Bar_number_engraver"
-  }
+      \Score
+      % defaults
+      % (shortest-duration-space . 2.0)
+      % (spacing-increment . 1.2)
+      % (base-shortest-duration . ,(ly:make-moment 1/8))
+      % tighter spacing
+      \override SpacingSpanner.shortest-duration-space = #2.8
+      \override SpacingSpanner.spacing-increment = #0.6
+      \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
+      \remove "Bar_number_engraver"
+    }
   }
 }
-\paper {  
+\paper {
   first-page-number = 2
-  print-first-page-number = ##t 
+  print-first-page-number = ##t
   top-markup-spacing #'padding = #10
   markup-system-spacing #'padding = #7
   system-system-spacing #'basic-distance = #14
