@@ -37,14 +37,14 @@ Bass = { { \key g \major e8 e4 fis8 g4 g8 d4 d8 d4 dis8 e4 e8 c4 c8 b,4. b,4 e8 
       \context Staff = lower <<
         \set Staff.printPartCombineTexts = ##f
         \clef bass
-        \partcombine	{  \accidentalStyle modern-cautionary \Tenor }
+        \partcombine	
+        {  \accidentalStyle modern-cautionary \Tenor }
         { \Bass }
       >>  
     >>
-\midi { \context { \Score tempWholesPerMinute = #(ly:make-moment 70 4 ) } }
+\midi { }
 \layout {
-  obsolete-between-system-space = 1\mm  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
-  \context {
+    \context {
     \Score
     % defaults
     % (shortest-duration-space . 2.0)
@@ -56,13 +56,13 @@ Bass = { { \key g \major e8 e4 fis8 g4 g8 d4 d8 d4 dis8 e4 e8 c4 c8 b,4. b,4 e8 
     \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
     \remove "Bar_number_engraver"
   }
-  \context { \Staff 
-    \override VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
-  }
   }
 }
-\paper {  first-page-number = 2
-  print-first-page-number = ##t }
+\paper {  
+  first-page-number = 2
+  print-first-page-number = ##t 
+}
+
 % -- ABC Source file follows --
 %X:1
 %T:Greensleeves
