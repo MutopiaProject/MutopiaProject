@@ -1,3 +1,5 @@
+\version "2.18.0"
+
 \header {
 	title = "Greensleeves"
 	composer = "Traditional; 16th Century English melody"
@@ -13,9 +15,9 @@
 	source = "www.cyberhymnal.org"
 	lastupdated = "2008/1/12"
  footer = "Mutopia-2008/01/13-1247"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
-\version "2.10.10"
+
 % #(set-default-paper-size "letter")
 
 Soprano = { \time 6/8 \partial 8  { \key g \major e'8 g'4 a'8 b'8. c''16 b'8 a'4 fis'8 d'8. e'16 fis'8 g'4 e'8 e'8. dis'16 e'8 fis'4. b4 e'8 g'4 a'8 b'8. c''16 b'8 a'4 fis'8 d'8. e'16 fis'8 g'8. fis'16 e'8 dis'8. cis'16 dis'8 e'4. e'4 r8 d''4. d''8. cis''16 b'8 a'4 fis'8 d'8. e'16 fis'8 g'4 e'8 e'8. dis'16 e'8 fis'4 dis'8 b4 r8 d''4. d''8. c''16 b'8 a'4 fis'8 d'8. ( e'16 ) fis'8 g'8. fis'16 e'8 dis'8. cis'16 dis'8 e'4. e'4 s8  \bar "|." } }
@@ -29,33 +31,33 @@ Bass = { { \key g \major e8 e4 fis8 g4 g8 d4 d8 d4 dis8 e4 e8 c4 c8 b,4. b,4 e8 
       \context Staff = upper <<
         \set Staff.printPartCombineTexts = ##f
         \partcombine
-        {   #(set-accidental-style 'modern-cautionary) \Soprano }
+        {   \accidentalStyle modern-cautionary \Soprano }
         { \Alto}
       >>  
       \context Staff = lower <<
         \set Staff.printPartCombineTexts = ##f
         \clef bass
-        \partcombine	{  #(set-accidental-style 'modern-cautionary) \Tenor }
+        \partcombine	{  \accidentalStyle modern-cautionary \Tenor }
         { \Bass }
       >>  
     >>
 \midi { \context { \Score tempWholesPerMinute = #(ly:make-moment 70 4 ) } }
 \layout {
-  between-system-space = 1\mm
+  obsolete-between-system-space = 1\mm  system-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)  score-system-spacing #'basic-distance = #(/ obsolete-between-system-space staff-space)
   \context {
     \Score
     % defaults
     % (shortest-duration-space . 2.0)
     % (spacing-increment . 1.2)
-    % (base-shortest-duration . ,(ly:make-moment 1 8))
+    % (base-shortest-duration . ,(ly:make-moment 1/8))
     % tighter spacing
-    \override SpacingSpanner #'shortest-duration-space = #2.8
-    \override SpacingSpanner #'spacing-increment = #0.6
-    \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 8)
+    \override SpacingSpanner.shortest-duration-space = #2.8
+    \override SpacingSpanner.spacing-increment = #0.6
+    \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/8)
     \remove "Bar_number_engraver"
   }
   \context { \Staff 
-    \override VerticalAxisGroup #'minimum-Y-extent = #'(-1 . 1)
+    \override VerticalAxisGroup.minimum-Y-extent = #'(-1 . 1)
   }
   }
 }
