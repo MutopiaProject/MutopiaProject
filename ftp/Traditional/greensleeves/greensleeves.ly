@@ -2,7 +2,7 @@
 
 \header {
 	title = "Greensleeves"
-	composer = "Traditional; 16th Century English melody"
+	composer = \markup { \fill-line { \pad-to-box #'(0 . 0) #'(0 . 5) { "Traditional; 16th Century English melody" }}}
 	mutopiatitle = "Greensleeves (hymntune)"
 	mutopiacomposer = "Traditional"
 	mutopiainstrument = "Voice (SATB)"
@@ -27,7 +27,10 @@ Bass = { { \key g \major e8 e4 fis8 g4 g8 d4 d8 d4 dis8 e4 e8 c4 c8 b,4. b,4 e8 
 
 
   \score {
-    \context GrandStaff <<
+    \context GrandStaff \with {
+    \override StaffGrouper.staff-staff-spacing.basic-distance = #11
+  }
+    <<
       \context Staff = upper <<
         \set Staff.printPartCombineTexts = ##f
         \partcombine
@@ -61,6 +64,9 @@ Bass = { { \key g \major e8 e4 fis8 g4 g8 d4 d8 d4 dis8 e4 e8 c4 c8 b,4. b,4 e8 
 \paper {  
   first-page-number = 2
   print-first-page-number = ##t 
+  top-markup-spacing #'padding = #10
+  markup-system-spacing #'padding = #7
+  system-system-spacing #'basic-distance = #14
 }
 
 % -- ABC Source file follows --
