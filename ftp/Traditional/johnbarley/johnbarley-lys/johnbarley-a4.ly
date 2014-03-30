@@ -1,6 +1,6 @@
-
+\version "2.18.0"
 #(ly:set-option 'point-and-click #f)
-\version  "2.8.3"
+
 \header {
     title = "John Barleycorn"
     composer = "trad. (coll. G. B. Gardiner), arr. Gustav von Holst"
@@ -20,7 +20,7 @@
  lastupdated = "September 10, 2006"
 
  footer = "Mutopia-2006/09/11-814"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -47,7 +47,7 @@ melody = \relative c' \context Voice = "singer"
     R2^\markup {\italic {Moderato maestoso.}}
     R2*2 r4 r8 
     e8 
-    \repeat volta 4 { \bar "|:"
+    \repeat volta 4 { \bar ".|:"
         a a d d c b a 
         a16 (b) c8 c d d a4.
         a8 d d c b16(a) g8 g a
@@ -56,17 +56,17 @@ melody = \relative c' \context Voice = "singer"
         e8 \key g\major a a d d c16 c b8 a a16(b) c8 c d16 d d8 a4.
         a8 d d c b16(a) g8 g a a a a g a d,(e)
         f g a16. b32 a16 g f8 e16 e d4. e8
- \once \override Score.BreakAlignment #'break-align-orders = #(make-vector  3
+ \once \override Score.BreakAlignment.break-align-orders = #(make-vector  3
           	  '(span-bar
           	  breathing-sign
           	  staff-bar
           	  key
           	  clef
           	  time-signature))
-    \once \override Staff.KeyCancellation #'X-offset = #-1
-\key c\major \bar ":|"
+    \once \override Staff.KeyCancellation.X-offset = #-1
+\key c\major \bar ":|."
 
-     %\key c\major \bar ":|"
+     %\key c\major \bar ":|."
     }
     r2 r2
     
@@ -95,7 +95,7 @@ text = \lyricmode {
 upper = \relative c'{
     \key c\major
     
-    \override DynamicText #'extra-offset = #'(0.0 . -2.5)
+    \override DynamicText.extra-offset = #'(0.0 . -2.5)
     R2_\f   <f a>16. [<g b>32 <f a>16 <e g>] <d f>8 <c e> <b d>2 ~<b d>4 <c e> 
     r8_\mf <a f'> r <f d'> 
     \clef bass    r <e c'> r <c a'> r <f a c> r <d g b> r <c e a>4.
@@ -103,7 +103,7 @@ upper = \relative c'{
     % With my
     r <d f g> <d f a> r r <c e a> <f a>16. [b32 a16 \change Staff = bassclef g]  \change Staff = trebleclef r8  
     \clef treble e''_\p \key g\major
-     \once \override TextScript #'extra-offset = #'(0.0 . -2.5)
+     \once \override TextScript.extra-offset = #'(0.0 . -2.5)
       a_\markup {\italic staccato} <d, fis a> <fis a d> <fis a d> |
         <e g c> <c g' b> <d fis a> 
     %With clods all
@@ -111,8 +111,8 @@ upper = \relative c'{
     <d fis a>8 <d g d'> <d g d'> <e g c> <d b'>16 <c a'> <c e g>8 <c e g> <c d a'> <c d a'> <c e a> <c e a> <b d g> <b d a'> <g c d> 
     %With my fol
     <g c e> <c d f> <c e g> <f a>16. [<g b>32 <f a>16 <e g>] <d f>8 <g, c e> <f a d>4 r 
-    \once \override Staff.KeyCancellation #'X-offset = #-1
-\key c\major \bar ":|"
+    \once \override Staff.KeyCancellation.X-offset = #-1
+\key c\major \bar ":|."
 
     \key c\major
     r2 r2
@@ -123,7 +123,7 @@ lower = \relative c{
     \key c\major
     \clef bass
     a16. [b32 a16 g] f8 e d e f g a8. [b16 
-     \once \override TextScript #'extra-offset = #'(0.0 . 2.5) 
+     \once \override TextScript.extra-offset = #'(0.0 . 2.5) 
      a8^\markup {\italic dim.} g] f r e 
     %There were
     r d_\< e f g_\! a16._\> [b32 a16 g] f8 e_\! d r g r a e a,4 d8 r g r e r f r e r d r c r
@@ -135,8 +135,8 @@ lower = \relative c{
     a' b, g' b, g' a, g' a, fis' g, g' f,  f' e, c' 
     %WIth my
     g e d e f a d16. [b32 a16 g] f8 e 
-    \once \override Staff.KeyCancellation #'X-offset = #-1
-\key c\major \bar ":|"
+    \once \override Staff.KeyCancellation.X-offset = #-1
+\key c\major \bar ":|."
 
     \key c\major 
    d r a r d,2 \fermata   
@@ -154,8 +154,12 @@ lower = \relative c{
         >>
     >>
     \layout{}
-    \midi {    
-        \tempo 8 = 60}
+    
+  \midi {
+    \tempo 8 = 60
+    }
+
+
     }
 \markup {\small \override #'(baseline-skip . 2.5){\column{
     \line {\bold 1. There were three kings came from the North,}
