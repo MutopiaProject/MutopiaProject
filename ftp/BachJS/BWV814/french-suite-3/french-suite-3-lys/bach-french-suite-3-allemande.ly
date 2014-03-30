@@ -1,4 +1,4 @@
-\version "2.11.46"
+\version "2.18.0"
 
 \header {
   title        = "French Suite 3: Allemande"
@@ -7,23 +7,22 @@
   style        = "Baroque"
   copyright    = "Public Domain"
   enteredby    = "Joel Mayes"
-  lastupdated  = "2001/Aug/01"
+  lastupdated  = "2014/Mar/28"
   date         = "1722"
+  source       = "Bach-Gesellschaft, 1863"
 
   mutopiatitle       = "French Suite no. 3 in B minor"
   mutopiacomposer    = "BachJS"
   mutopiaopus        = "BWV 814"
   mutopiainstrument  = "Harpsichord, Piano"
-  mutopiasource      = "Unknown"
   maintainer         = "Joel Mayes"
   maintainerEmail    = "joel_mayes@dingoblue.net.au"
 
- footer = "Mutopia-2008/06/17-100"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  footer = "Mutopia-2008/06/17-100"
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 Global = {
-   
    \key b \minor
    \time 4/4
    \partial 16*3
@@ -40,13 +39,14 @@ VoiceI =  \relative c' {
       d fis, b ais b4~ b16 ais e' d e4~	%6
       e16 d gis fis gis4~ gis16 cis, fis eis fis a gis fis	%7
       eis8 cis fis8. e16 d fis, b a b4~	%8
-      b16 a gis b eis, d' cis b a e fis b gis8.\prallprall fis16	%9
-      fis2~ fis16 b e d e ais, d cis	%10
-      d gis, cis b cis4~ cis16 fis, d' cis eis,8.\prall fis16	%11
+      b16 a gis b eis, d' cis b a eis fis b gis8.- \parenthesize \prall fis16	%9
+      fis2~ fis16 fis e' d e fis, d' cis	%10
+      d gis, cis b cis4~ \stemDown cis16 fis, d' cis \stemNeutral eis,8.- \parenthesize \prall fis16	%11
       <<\relative fis' { fis2^~ fis4 r16}\\ \relative e' {r16 e d cis d8 cis16 b cis4 r16}>>	%12
+   }
    \repeat volta 2 {
-      cis'16 gis a 	
-      ais8. cis16 fis, fis' cis e d8. fis16 bis, bis' fis a	%13
+      cis'16 gis b 	
+      ais8. cis16 fis, fis' cis e d8. fis16 b, b' fis a	%13
       g e  b d c g' fis a dis,8\prall b r16 e b d	%14
       c e a, c b e g, b a e' fis, a g e' e, g	%15
       fis e' dis a' fis8.\prall e16 e4~ e16 g b, d	%16
@@ -56,9 +56,8 @@ VoiceI =  \relative c' {
       g b e, d' cis e g b, ais cis fis,8~ fis16 b fis a	%20
       g b e, g fis b d, fis e b' cis, e d b' b, d	%21
       cis b' ais e' cis8.\prall b16 b g fis' dis e4~	%22
-      e16 b gis' eis fis8. e16 d cis d b ais8. b16	%23
+      e16 b gis' eis fis8. e16 d cis d b ais8.- \parenthesize \prall b16	%23
       <<\relative b'{b2~ b4 r16}\\ \relative dis' {r8 dis~ dis16 e dis cis dis4 r16}>>	%24
-   }
    }
 }
 
@@ -70,7 +69,7 @@ VoiceII =  \relative c {
       e8 cis fis fis, b cis d b	%2
       e,16 b' e d cis8 b a g fis e		%3
       d16 a' d cis b8 a g fis e d		%4
-      cis16 e a g a8. fis16 b, fis' b a g8 a	%5
+      cis16 e a g a8. fis16 g fis b a g8 a	%5
       d,4~ d16 b g' fis g8 cis,~ cis16 fis b ais	%6
       b8 b,~ b16 eis a gis a4~ a16 fis b a	%7
       b d cis b a fis b ais b8 a gis16 eis d' cis	%8
@@ -88,7 +87,7 @@ VoiceII =  \relative c {
       a16 a' e g fis8 cis r16 d ais cis b8 fis	%17
       g16 g' d fis e8 b r16 cis gis b ais8 eis		%18
       fis16 fis' cis e d8 ais r16 b fis a g8 dis	%19
-      <<\relative e{ e8 g r2.}\\ \relative e{ e8 d e cis r16 fis cis e d8 b}>>		%20
+      e8 d e cis r16 fis cis e d8 b		%20
       e8 cis d b g' e fis d	%21
       e cis fis fis, g4~ g16 e cis' ais	%22
       b4~ b16 ais e' cis g'8 e fis fis,	%23
@@ -99,17 +98,19 @@ VoiceII =  \relative c {
 
 \score {
    \new PianoStaff <<
-      \new Staff << \Global \VoiceI >>
-      \new Staff << \Global \clef bass \VoiceII >>
+      \accidentalStyle Score.piano-cautionary
+      \new Staff {
+         \Global 
+         \VoiceI
+      }
+      \new Staff { 
+         \Global 
+         \clef bass 
+         \VoiceII 
+      }
    >>
    \layout { }
-   \midi { }
+   \midi { 
+      \tempo 4 = 80
+   }
 }
-
-
-
-
-
-
-
-
