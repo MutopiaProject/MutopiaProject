@@ -1,5 +1,4 @@
 \version "2.18.0"
-#(ly:set-option 'point-and-click #f)
 
 \header {
     title = "John Barleycorn"
@@ -95,7 +94,7 @@ text = \lyricmode {
 upper = \relative c'{
     \key c\major
     
-    \override DynamicText.extra-offset = #'(0.0 . -2.5)
+    \override DynamicText.extra-offset = #'(0.0 . -1.0) 
     R2_\f   <f a>16. [<g b>32 <f a>16 <e g>] <d f>8 <c e> <b d>2 ~<b d>4 <c e> 
     r8_\mf <a f'> r <f d'> 
     \clef bass    r <e c'> r <c a'> r <f a c> r <d g b> r <c e a>4.
@@ -103,7 +102,7 @@ upper = \relative c'{
     % With my
     r <d f g> <d f a> r r <c e a> <f a>16. [b32 a16 \change Staff = bassclef g]  \change Staff = trebleclef r8  
     \clef treble e''_\p \key g\major
-     \once \override TextScript.extra-offset = #'(0.0 . -2.5)
+     \once \override TextScript.extra-offset = #'(0.0 . -1.4)
       a_\markup {\italic staccato} <d, fis a> <fis a d> <fis a d> |
         <e g c> <c g' b> <d fis a> 
     %With clods all
@@ -123,7 +122,7 @@ lower = \relative c{
     \key c\major
     \clef bass
     a16. [b32 a16 g] f8 e d e f g a8. [b16 
-     \once \override TextScript.extra-offset = #'(0.0 . 2.5) 
+     % \once \override TextScript.extra-offset = #'(0.0 . 2.5) 
      a8^\markup {\italic dim.} g] f r e 
     %There were
     r d_\< e f g_\! a16._\> [b32 a16 g] f8 e_\! d r g r a e a,4 d8 r g r e r f r e r d r c r
