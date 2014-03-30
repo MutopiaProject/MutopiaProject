@@ -151,7 +151,7 @@ lower = \relative c {
     \layout {}
 
     \midi {
-      \tempo 8 = 60
+      \tempo 2 = 38
     }
     
   }
