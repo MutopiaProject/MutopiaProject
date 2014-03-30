@@ -76,11 +76,66 @@ lowVoiceOne = \relative c' {
 
 % Repeat two
 
-highVoiceTwo = \relative c' {
+highVoiceTwo = \relative c''' {
+  | a8 g fs e d cs
+  | d e fs d e g
+  | fs8 g a4 cs,
+  | d4 fs e
+  | fs4 b gs
+  | b,8 cs d4 cs
+  | b8 a gs fs gs es
+  
+  \barNumberCheck #24
+  
+  | fs2.
+  | a4. ( b16 c b4 )
+  | a8 g a fs g e
+  | b'4. ( cs16 d cs4 )
+  | b8 as b gs as fs
+  | e'8 cs fs, cs' e fs
+  | g8 cs, fs cs e cs
+  | d8 b fs b d b
+  
+  \barNumberCheck #32
+  
+  | fs'8 b, e b d b
+  | cs8 b d b e b
+  | fs' b, g' b, e b
+  | fs'4 e8 d cs d
+  | b2.
+  
+  \barNumberCheck #37
 }
 
-
 lowVoiceTwo = \relative c {
+  | fs8 a d a cs a
+  | fs8 a d, a' cs, a'
+  | d,8 a' d a cs a
+  | fs8 a d, a' cs, a'
+  | d,8 fs d b b' gs
+  | es8 gs es cs gs' es
+  | fs4 cs' cs,
+  
+  \barNumberCheck #24
+  
+  | fs8 a cs a e a
+  | ds,8 fs b, fs' ds fs
+  | e4 b e,
+  | es'8 gs cs, gs' es gs
+  | fs4 cs fs,
+  | as4 cs fs
+  | as4 fs as
+  | b,4 d fs
+  
+  \barNumberCheck #32
+  
+  | b4 cs d
+  | e4 fs g
+  | d4 e cs
+  | d4 e fs
+  | b,4 fs b,
+  
+  \barNumberCheck #37
 }
 
 global = { 
@@ -90,29 +145,18 @@ global = {
 }
 
 \score {
-  \new PianoStaff \with {
-    % Added to prevent warning: "no viable initial configuration found: may 
-    % not find good beam slope"
-    %%\override StaffGrouper #'staff-staff-spacing #'basic-distance = #11
-  } 
-  <<
+  \new PianoStaff <<
     \new Staff = "upper" {
       \clef treble
       \global
-      <<
-        \new Voice { \repeat volta 2 { \highVoiceOne } }
-      >> <<
-        \new Voice { \repeat volta 2 { \highVoiceTwo } }
-      >>      
+      \new Voice { \repeat volta 2 { \highVoiceOne } }
+      \new Voice { \repeat volta 2 { \highVoiceTwo } }      
     }
     \new Staff = "lower" {
       \clef bass
       \global
-      <<
-        \new Voice { \repeat volta 2 { \lowVoiceOne } }
-      >> <<
-        \new Voice { \repeat volta 2 { \lowVoiceTwo } }
-      >>
+      \new Voice { \repeat volta 2 { \lowVoiceOne } }
+      \new Voice { \repeat volta 2 { \lowVoiceTwo } }
     }
   >>
   \layout { 
