@@ -12,6 +12,7 @@
   date = "1909"
   source = "Folk-Songs from Hampshire"
   style = "Folk"
+  license = "Public Domain"
   maintainer = "Nigel Holmes"
   maintainerEmail = "nigel.holmes@thesaurus.badw.de"
   lastupdated = "September 10, 2006"
