@@ -25,22 +25,25 @@
 upperVoice = {
   \stemUp
   \tieUp
+  \slurUp
 }
 
 lowerVoice = {
   \stemDown
   \tieDown
+  \slurUp
 }
 
 neutralVoice = {
   \stemNeutral
   \tieNeutral
+  \slurUp
 }
 
 staffUp = \change Staff = "upper" 
 staffDown = \change Staff = "lower"
 voiceFive = #(context-spec-music (make-voice-props-set 4) 'Voice)
-voiceSix = #(context-spec-music (make-voice-props-set 5) 'Voice)
+arpeggioConnect = \set Staff.connectArpeggios = ##t
 
 % Repeat one
 
@@ -95,26 +98,50 @@ lowerLowOne = \relative c {
 % Repeat two
 
 upperHighTwo = \relative c'' {
-  | \staffUp \upperVoice ds8. e16 cs4. \trill bs8
-  | bs4 \glissando << { \voiceFive fs'2 } \\ { \upperVoice a2 } >>
+  \arpeggioConnect
+  \staffUp 
+  \upperVoice
+  | ds8. e16 cs4. \trill bs8
+  | bs4 << { fs'2 \arpeggio } \\ { a2 \arpeggio } >>  
+  | gs8. a16 fs4. es8
+  | es4 << { es2 \arpeggio } \\ { gs2 \arpeggio } \\ { b2 \arpeggio } >>
+  | a8. b16 gs4. a8
   |
 }
 
 upperLowTwo = \relative c'' {
-  | \staffUp \upperVoice \voiceFive b4 fs2
-  | \voiceSix \upperVoice gs4 ds'2
+  \arpeggioConnect
+  \staffUp 
+  \voiceFive 
+  \upperVoice
+  | b4 fs2
+  | gs4 ds'2 \arpeggio
+  | \lowerVoice cs2 b4
+  | cs4 cs2 \arpeggio
+  | \upperVoice fs4 fs es
   |
 }
 
 lowerHighTwo = \relative c' {
-  | \staffUp \lowerVoice fs4 cs2
-  | ds4 bs'2
+  \arpeggioConnect
+  \staffUp 
+  \lowerVoice
+  | fs4 cs2
+  | ds4 bs'2 \arpeggio
+  | \staffDown \upperVoice gs,4 a gs8 fs
+  | gs4 s2
+  | \staffUp \lowerVoice cs'4 d cs
   |
 }
 
 lowerLowTwo = \relative c' {
-  | \staffDown \lowerVoice b4 a2
+  \staffDown 
+  \neutralVoice 
+  | b4 a2
   | gs4 ~ gs16 fs ( a gs fs e fs ds )
+  | \lowerVoice e2 d4
+  | cs4 ~ \neutralVoice cs16 d ( cs b a gs fs gs32 es )
+  | fs4 b cs
   |
 }
 
@@ -150,10 +177,12 @@ lower = {
 
 \score {
   \new PianoStaff <<
-    \new PianoStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
+    \new Staff = "upper" \with {
+      \consists "Span_arpeggio_engraver"
+    } \upper
+    \new Staff = "lower" \with {
+      \consists "Span_arpeggio_engraver"
+    } \lower
   >>
   \layout { 
   } 
