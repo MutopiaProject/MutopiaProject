@@ -49,28 +49,28 @@ arpeggioConnect = \set Staff.connectArpeggios = ##t
 % Repeat one
 
 upperHighOne = \relative c'' {
-  | \staffUp \upperVoice gs8. a16 fs4. ( \trill e16 fs )
-  | e4 << { \voiceFive e2 } \\ { \upperVoice a2 } >>
+  | gs8. a16 fs4. ( \trill e16 fs )
+  | e4 << { a2 } \\ \\ { e2 } >>
   | a8. b16 gs4. ( \trill fs16 gs )
-  | fs4 fs2
-  | b8. \mordent cs16 a4. gs8
-  | cs8 ds16 e e4. ds8
+  | << { fs4 fs2 } \\ \\ { ds4 ds2 } >>
+  | b'8. \mordent cs16 a4. gs8
+  | << { cs8 ds16 e e4. ds8 } \\ \\ { fs,4 cs'4. b8 } >>
   | cs16 as b8 as4. b8
   
   \barNumberCheck #8
   
-  | b4 << { \voiceFive fs2 } \\ { \upperVoice b2 } >>
+  | b4 << { b2 } \\ \\ { fs2 } >>
   |
 }
 
 upperLowOne = \relative c' {
-  | \staffDown \upperVoice b4 bs2
-  | \staffUp \lowerVoice cs4 cs 2
-  | \staffDown \upperVoice b4 \staffUp \lowerVoice e2
-  | \voiceFive \upperVoice ds4 ds2
-  | \voiceTwo ds4 e2
-  | \voiceFive \upperVoice fs4 cs'4. b8
-  | \voiceTwo e,8 ds cs ds e4 ~
+  | s2.
+  | cs4 cs2
+  | s4 e2
+  | b4 b2
+  | ds4 e2
+  | cs4 fs4. fs8
+  | e8 ds cs ds e4 ~
   
   \barNumberCheck #8
   
@@ -79,13 +79,13 @@ upperLowOne = \relative c' {
 }
 
 lowerHighOne = \relative c' {
-  | \staffDown \upperVoice gs4 gs2
+  | << { b4 bs2 } \\ \\ { gs4 gs2 } >>
   | gs4 ~ gs16 b a gs fs e ds e
-  | fs4 b << { \voiceFive as } \\ { \upperVoice cs } >>
-  | \staffUp \lowerVoice b4 b2
-  | \staffDown \upperVoice b4 s2
-  | \staffUp \lowerVoice cs4 fs4. fs8
-  | \staffDown \upperVoice s4 fs,2 ~
+  | << { b'4 b cs } \\ \\ { fs,4 s as } >>
+  | s2.
+  | b4 s2
+  | s2.
+  | s4 fs2 ~
   
   \barNumberCheck #8
   
@@ -94,7 +94,7 @@ lowerHighOne = \relative c' {
 }
 
 lowerLowOne = \relative c {
-  | \staffDown \lowerVoice e4 ds2
+  | e4 ds2
   | cs2.
   | ds4 e2
   | b4 ~ b16 cs ds e fs gs a fs
