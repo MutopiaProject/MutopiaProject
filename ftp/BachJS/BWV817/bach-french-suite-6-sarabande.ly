@@ -112,45 +112,48 @@ lowerLowOne = \relative c {
 
 upperHighTwo = \relative c'' {
   \arpeggioConnect
-  \staffUp 
-  \upperVoice
-  | ds8. e16 cs4. \trill bs8
-  | bs4 << { \voiceFive fs'2 \arpeggio } \\ { \upperVoice a2 \arpeggio } >>  
+  | << { ds8. e16 cs4. \trill bs8 } \\ \\ { b4 fs2 } >>
+  | 
+  << { bs4 a'2 \arpeggio } \\ \\ 
+     { gs,4 fs'2 \arpeggio } \\ \\ 
+     { s4 ds2 \arpeggio} 
+  >>  
   | gs8. a16 fs4. es8
-  | es4 << { \voiceSix es2 \arpeggio } \\ { \voiceFive gs2 \arpeggio } \\ { \upperVoice b2 \arpeggio } >>
-  | a8. b16 gs4. a8
-  | b8. gs16 es4. fs8
+  | es4 
+  << { b'2 \arpeggio } \\ \\ 
+     { gs2 \arpeggio } \\ \\ 
+     { es2 \arpeggio } 
+  >>
+  | << { a8. b16 gs4. a8 } \\ \\ { fs4 fs es } >>
+  | << { b'8. gs16 es4. fs8 } \\ \\ { fs4 b,2 } >>
   | cs8 [ a' a gs ] fs gs16 es
   
   \barNumberCheck #16
   
   | fs4 fs2
   | cs8. ds16 ds4. \trill cs16 ds
-  | e4 << { \voiceFive e2 } \\ { \upperVoice gs2 } >>
+  | e4 << { gs2 } \\ \\ { e2 } >>
   | fs4 e8 ds e cs
   | ds4. cs8 b4
-  | gs'8. a16 a4. \trill gs16 a
-  | b4. a16 gs fs e ds cs
+  | << { gs'8. a16 a4. \trill gs16 a } \\ \\ { e4 s2 } >>
+  | << { b'4. a16 gs fs e ds cs } \\ \\ { e4 s2 } >>
   | b16 a' gs fs e4 ds8. e16
   
   \barNumberCheck #24
   
-  | e4 << { \voiceFive b2 } \\ { \upperVoice e2 } >>
+  | e4 << { e2 } \\ \\ { b2 } >>
   |
 }
 
-upperLowTwo = \relative c'' {
+upperLowTwo = \relative c' {
   \arpeggioConnect
-  \staffUp 
-  \voiceFive 
-  \upperVoice
-  | b4 fs2
-  | gs4 \voiceSix ds'2 \arpeggio 
-  | \voiceFive \lowerVoice cs2 b4
+  | fs4 cs2
+  | ds4 bs'2 \arpeggio 
+  | cs2 b4
   | cs4 cs2 \arpeggio
-  | \upperVoice fs4 fs es
-  | fs4 b,2
-  | \lowerVoice r8 cs b2 ~
+  | cs4 d cs
+  | b4 gs2
+  | r8 cs b2 ~
   
   \barNumberCheck #16
   
@@ -159,9 +162,9 @@ upperLowTwo = \relative c'' {
   | b4 cs2
   | ds4 cs8 b as4
   | b2 s4
-  | \upperVoice e4 s2
-  | e4 s2
-  | \lowerVoice b4 b2 ~
+  | b4 e2
+  | b4 cs4 ~ cs8 r
+  | b4 b2 ~
   
   \barNumberCheck #24
   
@@ -170,22 +173,17 @@ upperLowTwo = \relative c'' {
 
 lowerHighTwo = \relative c' {
   \arpeggioConnect
-  \staffUp 
-  \lowerVoice
-  | fs4 cs2
-  | ds4 bs'2 \arpeggio
-  | \staffDown \upperVoice gs,4 a gs8 fs
+  | s2. * 2
+  | gs=4 a gs8 fs
   | gs4 s2
-  | \staffUp \lowerVoice cs'4 d cs
-  | b4 gs2
-  | s2. 
+  | s2. * 3 
   
   \barNumberCheck #16
   
   | s2. * 5
-  | \staffUp \lowerVoice b='4 e2
-  | b4 cs ~ cs8 r
-  | \staffDown \upperVoice s4 r8 fs,,= gs a ~
+  | s2.
+  | s2.
+  | s4 r8 fs= gs a ~
   
   \barNumberCheck #24
   
@@ -194,12 +192,10 @@ lowerHighTwo = \relative c' {
 }
 
 lowerLowTwo = \relative c' {
-  \staffDown 
-  \neutralVoice 
   | b4 a2
   | gs4 ~ gs16 fs ( a gs fs e fs ds )
-  | \lowerVoice e2 d4
-  | cs4 ~ \neutralVoice cs16 \slurDown d ( cs b a gs fs gs32 es ) \slurNeutral
+  | e2 d4
+  | cs4 ~ \stemUp cs16 \slurDown d ( cs b a gs fs gs32 es ) \neutralVoice
   | fs4 b cs
   | d4. d8 cs b
   | a8 fs cs'4 cs,
@@ -213,7 +209,7 @@ lowerLowTwo = \relative c' {
   | b,8. cs16 cs4. ^ \trill b16 cs
   | d4 cs2
   | gs8. a16 \tieDown a4 ^ \trill ~ a16 gs a fs \tieNeutral
-  | ds8 e \lowerVoice b'2
+  | ds8 e \voiceTwo b'2
   | e2 e,4
   |
 }
