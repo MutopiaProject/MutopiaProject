@@ -22,56 +22,43 @@
   maintainerWeb      = "http://www.musicwithknute.com/"
 }
 
-upperVoice = {
-  \stemUp
-  \tieUp
-}
-
-lowerVoice = {
-  \stemDown
-  \tieDown
-}
-
-neutralVoice = {
-  \stemNeutral
-  \tieNeutral
-}
-
 staffUp = \change Staff = "upper" 
-
 staffDown = \change Staff = "lower"
 
 % Repeat one
 
 highVoiceOne = \relative c'' {
-  \staffUp \upperVoice
   \partial 16 e16 
   | e8 r r16 b cs ds e fs gs e
   | b'8 a16 gs fs e ds cs b r r8
   | r16 b' gs e cs a' fs ds b a' gs fs
   | gs16 e ds cs b a gs fs e r r8
-  | \neutralVoice r16 gs' e cs as e' cs as fs e' ds cs
+  | \stemNeutral r16 gs' e cs as e' cs as fs e' ds cs
   | ds16 fs ds b a cs a fs ds cs' b a 
-  | gs8 r r16 \upperVoice fs gs a b cs ds b
+  | gs8 r r16 \stemUp fs gs a b cs ds b
   
   \barNumberCheck #8
 
   | e16 r r8 r16 ds e fs gs as b gs
   | as16 fs cs r r cs as fs s4
-  | s8 b16 ds ~  <ds fs>8 s8 s4
-  | s8 b16 ds ~ <ds e>8 s s4
-  | \neutralVoice r16 fs,=' cs' e ds cs b ds gs, cs as e
+  | s8 << { s8 fs'8 } \\ \\ { b,16 \tieDown ds ~ ds8 } >> s8 s4
+  | s8 << { s8 e8 } \\ \\ { b16 ds ~ ds8 } >> s8 s4
+  | \stemNeutral r16 fs,=' cs' e ds cs b ds gs, cs as e
   | ds16 b' fs ds b fs' gs as b fs b e,
   | ds16 b' fs ds b fs' gs as b fs b e,
   | ds gs b ds e, ds' cs b e, cs' b as
   
   \barNumberCheck #16
   
-  | \upperVoice b8 r r16 cs, ds fs ~ <fs b>8. % partial bar, -1/16
+  | \stemUp b8 r r16 
+    << 
+      { s8. b8. } 
+      \\ \\ 
+      { \tieDown cs,16 ds fs ~ fs8. } 
+    >> % partial bar, -1/16
 }
 
 middleVoiceOne = \relative c' {
-  \staffUp \lowerVoice
   \partial 16 r16
   | r16 e fs gs a r r8 r4
   | ds,8 r r4 r16 a' gs fs
@@ -85,7 +72,7 @@ middleVoiceOne = \relative c' {
   | cs16 gs' a b cs r r8 r cs,
   | fs8 r16 as fs8 r e16 gs fs e
   | ds16 fs b8 ~ b r r4
-  | \staffDown \upperVoice gs,16 \staffUp \lowerVoice e' b'8 ~ b r r4
+  | \staffDown \stemUp gs,16 \staffUp \stemDown e' b'8 ~ b r r4
   | s2. * 4
   
   \barNumberCheck #16
@@ -119,12 +106,12 @@ lowVoiceOne = \relative c' {
 % Repeat two
 
 highVoiceTwo = \relative c'' {
-  \upperVoice fs16 % partial bar
-  | fs4 ~ <fs ds>8 r r4
-  | s4 r16 bs, ds fs e ds cs ds
+    fs16 % partial bar
+  | << { fs4 ~ fs8 } \\ \\ { s4 ds8 } >> r8 r4
+  | s4 r16 bs ds fs e ds cs ds
   | e16 gs, a e' ds a gs ds' cs gs fs cs'
   | bs4 ~ bs8 r r4
-  | \neutralVoice r16 d b gs es b' gs es cs b' a gs
+  | \stemNeutral r16 d b gs es b' gs es cs b' a gs
   | a16 fs es fs bs fs cs' fs, ds' fs, gs ds
   | e16 cs' a fs ds a' fs ds bs a' gs fs
   
@@ -141,15 +128,16 @@ highVoiceTwo = \relative c'' {
   
   \barNumberCheck #32
   
-  | e8 r r16 \upperVoice fs, gs b ~ <b e>8.
+  | e8 r r16 \stemUp 
+    << { s8. e } \\ \\ { \tieDown fs,16 gs b ~ b8. } >>
 }
 
 middleVoiceTwo = \relative c'' {
-  \upperVoice s16 % partial bar
+    r16 % partial bar
+  | r16 e ds cs r b a gs fs e ds fs
+  | \stemUp bs,16 ds fs a gs8 r r4
   | s2.
-  | bs,16 ds fs a gs8 r r4
-  | s2.
-  | \lowerVoice r16 gs=' fs e ds8 s s4
+  | \stemDown r16 gs=' fs e ds8 s s4
   | s2. * 3
   
   \barNumberCheck #24
@@ -158,14 +146,14 @@ middleVoiceTwo = \relative c'' {
   
   \barNumberCheck #32
   
-  | \lowerVoice s4 r8 gs=' ~ gs8.
+  | s4 r8 gs=' ~ gs8.
 }
 
-lowVoiceTwo = \relative c'' {
-  \staffUp \lowerVoice r16 % partial bar
-  | r16 e ds cs r b a gs fs e ds fs
-  | bs,4 ~ bs8 s s4
-  | \staffDown \neutralVoice cs8 cs, b b' a a,
+lowVoiceTwo = \relative c' {
+    s16 % partial bar
+  | s2.
+  | \staffUp \stemDown \tieDown bs4 ~ bs8 s s4
+  | \staffDown \stemNeutral cs8 cs, b b' a a,
   | gs8 r r16 cs' bs as gs fs es fs
   | es4 cs'8 b cs cs,
   | fs8 a ds, fs bs, bs'
