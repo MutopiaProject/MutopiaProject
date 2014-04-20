@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
@@ -484,6 +484,7 @@ middleVoice = \relative c' {
       \new Voice = "lowerVoice" \lowerVoice
       \new Voice = "middleVoice" \middleVoice
     >>
+%{
     \new TabStaff = "Guitar tabs" \with {
       stringTunings = #guitar-drop-d-tuning
       restrainOpenStrings = ##t
@@ -495,6 +496,7 @@ middleVoice = \relative c' {
       \new TabVoice = "lowerVoice" \lowerVoice
       \new TabVoice = "middleVoice" \middleVoice
     >>
+%}
   >>
   \layout {}
 }
