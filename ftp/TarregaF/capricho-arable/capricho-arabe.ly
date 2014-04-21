@@ -138,11 +138,11 @@ upperVoice = \relative c' {
   }
   <a,\0>4. <cis-3>8 <e-1> <g-4\4> |
 
-  \set TabStaff.minimumFret = #4
+  \set minimumFret = #4
   \stringNumberSpanner "4"
   \textSpannerDown
   \hideStrNo{ <bes-4\4>8\startTextSpan <a-3>\glissando \slashedGrace <e'-4\4> <e\4>4. <d-2\4>8\stopTextSpan } |
-  \set TabStaff.minimumFret = #0
+  \set minimumFret = #0
   \hideStrNo{ \tuplet 3/2 { <cis-1\4>16\startTextSpan <d-2\4> <e-4\4> <d-2\4> <cis-1\4> <bes\4> }
               \tuplet 3/2 { <a\4> <c\4> <bes\4> <a\4> <g\4> <f\4> }
               <e\4>32 <d\4>\stopTextSpan cis bes a g f
