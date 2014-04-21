@@ -156,7 +156,7 @@ lower= \relative c' {
 	\stemDown a,8 a' e <cis_3> e g \stemNeutral		| %18
 	fis8_\switchInvTwoOne cis fis, fis' eis fis		| %19
 	b,8 b' fis <dis_3> fis a!				| %20
-	b8( b,) <a'_1>( <cis,_5>) <b'_1>( <dis,_5>)		| %21
+	gis8( b,) <a'_1>( <cis,_5>) <b'_1>( <dis,_5>)		| %21
 	<cis'_2>8( e,) dis'( <fis,_5>) e' dis			| %22
 	cis8 <b_1> ais fis b b,					| %23
 	e8 b e, b' e4						| %24
