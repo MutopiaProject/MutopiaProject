@@ -29,6 +29,8 @@ ritard = \markup { \italic "ritard." }
 dimin = \markup { \italic "dimin." }
 attacca = \markup { \italic "attacca" }
 
+innerSlurAdjust = \shape #'((0.9 . 1.8) (0.6 . 2.1) (0.3 . 2.1) (0 . 1.8)) (
+
 upper = {
   \time 5/4
   \clef treble
@@ -68,7 +70,7 @@ upper = {
       \\ 
       {
         <<
-          { g'4 ( af'8 ) } 
+          { g'4-\innerSlurAdjust af'8 ) } 
           { ef'4 ~ ef'8 }
         >>
       }
@@ -117,7 +119,7 @@ lower = {
       \\ 
       {
         <<
-          { g'4 ( af'8 ) } 
+          { g'4-\innerSlurAdjust af'8 ) } 
           { ef'4 ~ ef'8 }
         >>
       }
