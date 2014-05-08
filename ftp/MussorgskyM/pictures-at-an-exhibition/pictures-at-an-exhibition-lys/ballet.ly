@@ -114,6 +114,8 @@ lowVoice = \relative c'' {
 
 highVoiceTwo = \relative c''' {
   \trio
+  \override TrillSpanner.X-extent = #'( 1 . 1 )
+  \override TrillSpanner.Y-extent = #'( -2 . 0 )
   | f2 \startTrillSpan \ppp
   | d2 \startTrillSpan 
   | c4 \startTrillSpan d \startTrillSpan
