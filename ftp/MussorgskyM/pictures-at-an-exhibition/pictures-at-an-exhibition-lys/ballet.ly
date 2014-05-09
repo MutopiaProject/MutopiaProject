@@ -116,6 +116,7 @@ highVoiceTwo = \relative c''' {
   \trio
   \override TrillSpanner.X-extent = #'( 1 . 1 )
   \override TrillSpanner.Y-extent = #'( -2 . 0 )
+  \override TrillSpanner.bound-details.right.padding = 1.9
   | f2 \startTrillSpan \ppp
   | d2 \startTrillSpan 
   | c4 \startTrillSpan d \startTrillSpan
@@ -141,9 +142,18 @@ lowerMiddleTwo = \relative c' {
   \repeat unfold 8 { r8 f r f }
 }
 
-lowVoiceTwo = \relative c {
-  << \\ { f2 ~ f f ~ f } \\ \\ { f4 a gs b f b a gs } >>
-  << \\ { f2 ~ f f ~ f } \\ \\ { f4 a gs b f b a gs } >>
+lowVoiceTwoA = \relative c {
+  | f2 ~ f 
+  | f2 ~ f 
+  | f2 ~ f 
+  | f2 ~ f
+}
+
+lowVoiceTwoB = \relative c {
+  | f4 a gs b 
+  | f4 b a gs
+  | f4 a gs b 
+  | f4 b a gs
 }
 
 highVoiceThree = \relative c''' {
@@ -203,8 +213,9 @@ global = {
       \repeat volta 2 { \lowVoice }
       \repeat volta 2 {
         <<
-          \new Voice { \voiceThree \lowerMiddleTwo }
-          \new Voice { \voiceFour \lowVoiceTwo }
+          \new Voice { \voiceOne \lowerMiddleTwo }
+          \new Voice { \voiceFour \lowVoiceTwoA }
+          \new Voice { \voiceTwo \lowVoiceTwoB }
         >>
       }
       \repeat volta 2 {
