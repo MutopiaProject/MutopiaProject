@@ -27,7 +27,7 @@ scherzino = {
 
 trio = {
   \once
-  \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \override Score.RehearsalMark.X-offset = -0.5
   \mark "Trio"
 }
 
@@ -43,10 +43,6 @@ attacca = \markup { \italic "attacca  " }
 
 staffUp = \change Staff = "up"
 staffDown = \change Staff = "down"
-
-slurAcrossStaves = {
-  \shape #'((0.1 . 0.1) (1 . 2) (1 . 3.5) (1 . 5)) Slur
-}
 
 highVoice = \relative c''' {
   \tempo "Vivo, leggiero."
@@ -81,8 +77,8 @@ highVoice = \relative c''' {
   | \acciaccatura { as,8 } <a b>8 _\cres r \acciaccatura { b8 } <g c> r
   | \acciaccatura { e'8 } <df f>8 r \acciaccatura { cs8 } <bf d> r
   | \acciaccatura { e,8 } <df f>8 r \acciaccatura { fs8 } <e g> r
-  | df'2 ~ \f \fermata
-  | df8 r \acciaccatura { c8 } c,8 \sf r \break
+  | s2 %df'2 ~ \f \fermata
+  | s2 %df8 r \acciaccatura { c8 } c,8 \sf r \break
 }
 
 lowVoice = \relative c'' {
@@ -107,9 +103,15 @@ lowVoice = \relative c'' {
   | c,8 [ e df f ]
   | d [ fs e g ]
   | f [ a gf bf ]
-  | af [ b \slurAcrossStaves bf ( c ) ]
-  | R2 \fermataMarkup
-  | R2
+  << { af [ b bf ( c  ] 
+       \oneVoice
+       | \staffUp df'2 ) ~ \f \fermata
+       | df8 r \acciaccatura { c8 } c,8 \sf r \break
+     } \\ {
+       \oneVoice
+       | s2 | R2 \fermataMarkup | R2
+     }
+  >>
 }
 
 highVoiceTwo = \relative c''' {
