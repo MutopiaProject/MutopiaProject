@@ -91,7 +91,7 @@ upper = \relative c'' {
     <g e c g> <bf bf,> <a f d a> <f f,> <g e c g>4
   \bar "||"
   \time 5/4
-  | <c, g c,>4 <d g, d> <c g c,> <d g, d>8 <f f,> <g g,> <d d,>
+  | <c, g c,>4 <d g, d> <c g c,> <d g, d>8 [ <f f,> <g g,> <d d,> ]
   \bar "||"
   \time 6/4
   | <a' cs, a>4 <f d a> <a cs, a> <d, bf e,> <a' c, a> <d, bf e,>
@@ -108,6 +108,20 @@ upper = \relative c'' {
   \bar "||"
   \time 5/4
   | <f f,>4 <g g,> <f f,> g, f
+  \bar "||"
+  \time 6/4
+  | <bf d, bf>4 << { c8 [ <f f,> ] } \\ { <a, c,>4 } >> <d bf d,>4
+    << { c8 [ <f f,> ] } \\ { <a, c,>4 } >> <d bf d,>4 <bf d, bf>
+  \bar "||"
+  \time 5/4
+  | <c g c,>4 <g c, g> <f c a> <g d bf> <f c a>
+  \bar "||"
+  \time 6/4
+  | <bf f d bf>4 << { c8 [ <f f,> ] } \\ { <a, f c>4 } >> <d bf f d>4
+    << { c8 [ <f f,> ] } \\ { <a, f c>4 } >> <d bf f d>4 <bf g d bf>
+  | <ef c g ef>2 <c a f c> 
+    << { bf4^^ ^\sf ~ | bf1 \fermata ~ bf4 } \\ { <f d>8 r | s1 s4 } >>
+  \bar "|."
 }
 
 lower = \relative c' {
@@ -147,6 +161,15 @@ lower = \relative c' {
   | <f f,>4 <g g,> <a a,>8 <bf bf,> <a a,>4 <bf bf,> <a a,> <g g,>
   \time 5/4
   | <f f,>4 <g g,> <f f,> g' f
+  \time 6/4
+  | <g g,>4 <f f,> <g g,> <a a,> <bf bf,> <g g,>
+  \time 5/4
+  | <ef ef,> <e e,> <f f,> <bf, bf,> <a a,>
+  \time 6/4
+  | <g g,> <f f,> <g g,> <a a,> <bf bf,> <g' g,>
+  \time 5/4
+  | <c, c,>2 <f f,> <bf bf,>8 r
+  | R1 * 5/4 _\attacca \fermataMarkup 
 }
 
 global = {
