@@ -72,13 +72,52 @@ highVoice = \relative c''' {
   | r8 \acciaccatura { bf8 } <af cf> r \acciaccatura { c8 } <a df>
   | r8 \acciaccatura { ef'8 } <df ff> r \acciaccatura { f8 } <d gf>
   | r8 \acciaccatura { c8 } <bf df> r \acciaccatura { d8 }  <b ef>
+  
+  \barNumberCheck #16
   | r8 \acciaccatura { e8 } <df f> r \acciaccatura { g8 } <e gs>
   | \acciaccatura { a'8 } <gf bf>8 \mf r \acciaccatura { gs8 } <f a> r
   | \acciaccatura { as,8 } <a b>8 _\cres r \acciaccatura { b8 } <g c> r
   | \acciaccatura { e'8 } <df f>8 r \acciaccatura { cs8 } <bf d> r
   | \acciaccatura { e,8 } <df f>8 r \acciaccatura { fs8 } <e g> r
-  | s2 %df'2 ~ \f \fermata
-  | s2 %df8 r \acciaccatura { c8 } c,8 \sf r \break
+  | s2 
+  | s2 
+}
+
+highVoiceMidi = \relative c''' {
+  | \acciaccatura { d8 } <f, a c>8 [   <f, a c> 
+    \acciaccatura { c''8 } <f, af b>  <f, af df> ] 
+  | \acciaccatura { d''8 } <f, a c>8  <f, a c> 
+    <df' f af> [ \acciaccatura { d'8 } <f, a c> ]
+  | \acciaccatura { d'8 } <f, a c>8 [  <f, a c> 
+    \acciaccatura { c''8 } <f, af b>  <f, af df> ] 
+  | \acciaccatura { d''8 } <f, a c>8 [  <f, a c> 
+    <df' f af>  <af b> ] 
+  | r8 \acciaccatura { fs8 } <e g> r \acciaccatura { a8 } <g bf>
+  | r8 \acciaccatura { b8 } <af c> r \acciaccatura { d8 } <c ef>
+  | r8 \acciaccatura { f8 } <ef gf> r \acciaccatura { a8 } <gf bf>
+
+  % bar 8
+  | r8 \acciaccatura { d'8 } <g, bf ef> r \acciaccatura { a'8 } <c, e g>
+  | \acciaccatura { d8 } <f, a c>8 [  <f, a c> 
+    \acciaccatura { c''8 } <f, af b>  <f, af df> ] 
+  | \acciaccatura { d''8 } <f, a c>8  <f, a c> 
+    <df' f af> [ \acciaccatura { d'8 } <f, a c> ]
+  | \acciaccatura { d'8 } <f, a c>8 [  <f, a c> 
+    \acciaccatura { c''8 } <f, af b>  <f, af df> ] 
+  | \acciaccatura { d''8 } <f, a c>8 [  <f, a c> 
+    <df' f af>  <af b> ] 
+  | r8 \acciaccatura { bf8 } <af cf> r \acciaccatura { c8 } <a df>
+  | r8 \acciaccatura { ef'8 } <df ff> r \acciaccatura { f8 } <d gf>
+  | r8 \acciaccatura { c8 } <bf df> r \acciaccatura { d8 }  <b ef>
+  
+  % bar 16
+  | r8 \acciaccatura { e8 } <df f> r \acciaccatura { g8 } <e gs>
+  | \acciaccatura { a'8 } <gf bf>8 \mf r \acciaccatura { gs8 } <f a> r
+  | \acciaccatura { as,8 } <a b>8 _\cres r \acciaccatura { b8 } <g c> r
+  | \acciaccatura { e'8 } <df f>8 r \acciaccatura { cs8 } <bf d> r
+  | \acciaccatura { e,8 } <df f>8 r \acciaccatura { fs8 } <e g> r
+  | s2 
+  | s2 
 }
 
 lowVoice = \relative c'' {
@@ -106,6 +145,39 @@ lowVoice = \relative c'' {
   << { af [ b bf ( c  ] 
        \oneVoice
        | \staffUp df'2 ) ~ \f \fermata
+       | df8 r \acciaccatura { c8 } c,8 \sf r \break
+     } \\ {
+       \oneVoice
+       | s2 | R2 \fermataMarkup | R2
+     }
+  >>
+}
+
+lowVoiceMidi = \relative c'' {
+  | \acciaccatura { s8 } s2 \unaCorda
+  | s4 <af b>8 r
+  | s2 * 2
+  | b,8 [ c d ef ]
+  | e8 [ f g af ]
+  | bf8 [ cf c df ]
+
+  % bar 8
+  | d [ ef e c ]
+  | s2
+  | s4 <af b>8 r
+  | s2 * 2
+  | df,8 [ ef e f ]
+  | gf8 [ af a bf ]
+  | ef,8 [ f fs g ]
+
+  % bar 16
+  | af8 [ bf b c ]
+  | c,8 [ e df f ]
+  | d [ fs e g ]
+  | f [ a gf bf ]
+  << { af [ b bf ( c  ] 
+       \oneVoice
+       | df'2 ) ~ 
        | df8 r \acciaccatura { c8 } c,8 \sf r \break
      } \\ {
        \oneVoice
@@ -197,6 +269,8 @@ global = {
   \accidentalStyle piano
 }
 
+% No MIDI output
+
 \score {
   \new PianoStaff <<
     \new Staff = "up" {
@@ -230,14 +304,19 @@ global = {
   >>
   \layout {
   }
-  \midi {
-    \tempo 4 = 160
-  }
 }
 
 % Coda
 
 highVoiceCoda = \relative c''' {
+  | \acciaccatura { c8 } df2-^ ~ \mf
+  | df4 ~ df8 r
+  | \acciaccatura { c8 } df8 \p r \acciaccatura { c8 } gs-> _\dimin ( a )
+  | \acciaccatura { gs'8 } <c, f a>4 \pp r _\attacca \fermata
+  \bar "|."
+}
+
+highVoiceCodaMidi = \relative c''' {
   | \acciaccatura { c8 } df2-^ ~ \mf
   | df4 ~ df8 r
   | \acciaccatura { c8 } df8 \p r \acciaccatura { c8 } gs-> _\dimin ( a )
@@ -252,11 +331,20 @@ lowVoiceCoda = \relative c'' {
   | <f' a>4 r \fermata
 }
 
+lowVoiceCodaMidi = \relative c'' {
+  | \acciaccatura { c8 } df2-^ ~
+  | df4 ~ df8 r
+  | \acciaccatura { c8 } df8 r \acciaccatura { c8 } gs-> ( a )
+  | <f' a>4 r \fermata
+}
+
 globalCoda = {
   \key f \major
   \time 2/4
   \omit Staff.TimeSignature
 }
+
+% No MIDI output
 
 \score {
   \new PianoStaff \with {
@@ -273,7 +361,52 @@ globalCoda = {
   >>
   \layout {
   }
+}
+
+% MIDI output only
+
+globalMidi = {
+  \time 2/4
+  \partial 2
+  \skip 2
+}
+
+\score {
+  <<
+    {
+      \globalMidi
+      \repeat unfold 2 { \highVoiceMidi }
+      \repeat unfold 2 {
+        <<
+          \new Voice { \voiceOne \highVoiceTwo }
+          \new Voice { \voiceTwo \upperMiddleTwo }
+        >>
+      }
+      \repeat unfold 2 { \highVoiceThree }
+      \highVoiceMidi
+      \highVoiceCodaMidi
+    }
+    {
+      \globalMidi
+      \repeat unfold 2 { \lowVoiceMidi }
+      \repeat unfold 2 {
+        <<
+          \new Voice { \voiceOne \lowerMiddleTwo }
+          \new Voice { \voiceFour \lowVoiceTwoA }
+          \new Voice { \voiceTwo \lowVoiceTwoB }
+        >>
+      }
+      \repeat unfold 2 {
+        <<
+          \new Voice { \voiceThree \lowerMiddleThree }
+          \new Voice { \voiceFour \lowVoiceThree }
+        >>
+      }
+      \lowVoiceMidi
+      \highVoiceCodaMidi
+    }
+  >>
   \midi {
+    \tempo 4 = 160
   }
 }
-    
