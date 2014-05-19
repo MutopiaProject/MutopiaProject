@@ -1,4 +1,4 @@
-\version "2.10.11"
+\version "2.18.0"
 
 capriceThree = {
 
@@ -15,7 +15,7 @@ capriceThree = {
 	< b,-1 b'-3 >2.\trill r4		|
 	< g'-1 g'-3 >2 < a-1 a'-3 >4 < b-1 b'-3 >		|
 	< d,-1 d'-3 >2.\trill r4		|
-	\setHairpinDecresc
+	\dimHairpin
 	< c'-1 c'-3 >4( < b b' >16 < a a' >-> < g g' > < fis fis' >->	< e e' > < dis dis' >-> < c c' > < b b' >-> < a a' >8) < c'-1 c'-3 >		|
 	< b b' >4( < a a' >16 < g g' >-> < fis fis' > < e e' >->	< d d' > < c c' >-> < b b' > < a a' >-> < g g' >8) < b' b' >		|
 	\mbreak
@@ -30,7 +30,7 @@ capriceThree = {
 	< g' g' >2 < a a' >4 < b b' >		|
 	< d, d' >2.\trill r4		|
 	< dis dis' >2( < c' c' >)		|
-	< b b' >4 < e, e' >4. < fis-2 fis'-4 >16( < e-1 e'-3 >	\times 4/5 {< fis-2 fis'-4 > < g-1 g'-3 > < a-2 a'-4 > < b-1 b'-3 > < c-2 c'-4 >) }		|
+	< b b' >4 < e, e' >4. < fis-2 fis'-4 >16( < e-1 e'-3 >	\tuplet 5/4 {< fis-2 fis'-4 > < g-1 g'-3 > < a-2 a'-4 > < b-1 b'-3 > < c-2 c'-4 >) }		|
 	\appoggiatura < c c' >\downbow( < e, e' >2 \appoggiatura < g g'-3 >16) < fis fis'-3 >2\trill
 	\mbreak
 
@@ -38,7 +38,7 @@ capriceThree = {
 	% dots continue to half-way through measure 20
 	< e e' >2 r4 < gis,, gis' >4_\markup{III\super{a} e IV\super{a}...}		|
 	< a a' >16( < b b' > < c c' > < d d' >	< e e' > < fis! fis'! > < gis gis' > < a a' >)	\set doubleSlurs = ##t < b b' >2\trill(		|
-	< c c' >4) < a, a' >->(\( \times 2/3 { < a a' >8) \set doubleSlurs = ##f < c' c' >\) < b b' >( }	\times 2/3 { < c c' > < a a' > < f f' >) }		|
+	< c c' >4) < a, a' >->(\( \tuplet 3/2 { < a a' >8) \set doubleSlurs = ##f < c' c' >\) < b b' >( }	\tuplet 3/2 { < c c' > < a a' > < f f' >) }		|
 	\set doubleSlurs = ##t < e e' >2( \appoggiatura < g g'-3 >16) < fis! fis'! >2\trill		|
 	< e e' > < c'-1 c'-3 >\trill_\markup{I\super{a}}_\markup{II\super{a}}		|
 	<  a-0 a'-2 >\trill\p < b-1 b'-3 >\trill		|
@@ -175,7 +175,7 @@ capriceThree = {
 	< fis'-1 fis'-3 >2 < a a' >4 < g g' >	|
 	< e e' >2.\trill r4		|
 	< e'-1 e'-3 >2 < fis fis' >4 < g g' >	|
-	< a a' >\upbow < a,-4 a'-2 >_\markup{IV\super{a}} \times 4/6 { < c'-1 c'-3 >8( < b b' > < d d' > < c c' > < a a' > < f f' >) }	|
+	< a a' >\upbow < a,-4 a'-2 >_\markup{IV\super{a}} \tuplet 6/4 { < c'-1 c'-3 >8( < b b' > < d d' > < c c' > < a a' > < f f' >) }	|
 	< e e' >2\f < b b' >\trill		|
 	\grace e2.\trill e\trill r4				|
 	< b-1 b'-3 >2\p\trill^\markup{III\super{a}} < b,-1 b'-3 >\trill^\markup{IV\super{a}.....}	|

@@ -1,4 +1,4 @@
-\version "2.10.11"
+\version "2.18.0"
 
 capriceOne = {
 
@@ -25,8 +25,8 @@ capriceOne = {
 
 	% Page 1 - Line 3 - Measure 8
 	gis-1 e' b' gis'	gis b, e, gis,	a-1 e' cis' a'	a cis, e, a,		| %-Checked
-	#(set-octavation 1) ais-1 g' e' cis'	cis e, g, ais,	cis-1 ais' g' e'	e g, ais, cis,		| %-Checked
-	ais-1 g' e' cis'	cis e, g, ais,	#(set-octavation 0) g-1 e' cis' ais'	ais cis, e, g,		| %-Checked
+	\ottava #1 ais-1 g' e' cis'	cis e, g, ais,	cis-1 ais' g' e'	e g, ais, cis,		| %-Checked
+	ais-1 g' e' cis'	cis e, g, ais,	\ottava #0 g-1 e' cis' ais'	ais cis, e, g,		| %-Checked
 	e-1 cis' ais' g'	g ais, cis, e,	cis-1 ais' g' e'	e g, ais, cis,		| %-Checked
 	\mbreak
 
@@ -45,7 +45,7 @@ capriceOne = {
 	b fis' dis' b'	b dis, fis, b,	e g b e	e b g e		| %-Checked
 	dis fis b fis'	fis b, fis dis	e g b e	e b g e		| %-Checked
 	\mbreak
-		
+
 	% Page 1 - Line 6 - Measure 20
 	b fis' dis' b'	b dis, fis, b,	b fis' d' b'	b d, fis, b,		| %-Checked
 	a fis' d' c'	c d, fis, a,	a fis' d' a'	a d, fis, a,		| %-Checked
@@ -56,27 +56,27 @@ capriceOne = {
 	% Page 1 - Line 7 - Measure 24
 	c-.( g'-. e'-. c'-.)	cis,,16( < a'-2 g'-3 e'-4 >)	d,32-1 a' fis' d'	dis,,16-1 < b'-2 a'-3 fis'-4 >		| %-Checked
 	e,32-1 b' g' e'	fis,,16-1 < d'! a' fis' >	g,16-1 < d' b' g' >	a-1 < fis' d' a' >		| %-Checked
-	b,-1 < g' d' b' >	c,-1 < g' e' c' >	#(set-octavation 1) cis,32 bes' g' e'	g16-.-4( #(set-octavation 0) cis,,,,-.-1)		| %-Checked
-	\times 2/3 { d16-.-0 < b''!-4 d-2 >-. < a c >-. }	\times 2/3 { < g-4 b-2 >-. < fis a >-. < e-0 g-4 >-. }	\times 2/3 { < d-3 fis-1 >-. < c e >-. < b-3 d-1 >-. }	\times 2/3 { < a-0 c-4 >-. < g-3 b-1 >-. < fis a >-. }		| %-Checked
+	b,-1 < g' d' b' >	c,-1 < g' e' c' >	\ottava #1 cis,32 bes' g' e'	g16-.-4( \ottava #0 cis,,,,-.-1)		| %-Checked
+	\tuplet 3/2 { d16-.-0 < b''!-4 d-2 >-. < a c >-. }	\tuplet 3/2 { < g-4 b-2 >-. < fis a >-. < e-0 g-4 >-. }	\tuplet 3/2 { < d-3 fis-1 >-. < c e >-. < b-3 d-1 >-. }	\tuplet 3/2 { < a-0 c-4 >-. < g-3 b-1 >-. < fis a >-. }		| %-Checked
 	\mbreak
 
 	% Page 1 - Line 8 - Measure 28
 	g,32-.( d'-. b'-. g'-.)	g-.( b,-. d,-. g,-.)	g-.( ees'-.-1 c'-.-3 fis-.-2)	fis-.( c-. ees,-. g,-.)		| %-Checked
-	\times 2/3 { < g d' >16 < b'' d > < a c > }	\times 2/3 { < g b > < fis a > < e g > }	\times 2/3 { < d fis > < c e > < b d > }	\times 2/3 { < a c > < g b > < fis a > }		| %-Checked
+	\tuplet 3/2 { < g d' >16 < b'' d > < a c > }	\tuplet 3/2 { < g b > < fis a > < e g > }	\tuplet 3/2 { < d fis > < c e > < b d > }	\tuplet 3/2 { < a c > < g b > < fis a > }		| %-Checked
 	g,32 d' b' g'	g b, d, g,	g ees'-1 c'-3 fis-2	fis c ees, g,		| %-Checked
-	\times 2/3 { < g d' >16 < b'' d > < a c > }	\times 2/3 { < g b > < fis a > < e g > }	\times 2/3 { < d fis > < c e > < b d > }	\times 2/3 { < a c > < g b > < fis a > }		| %-Checked
+	\tuplet 3/2 { < g d' >16 < b'' d > < a c > }	\tuplet 3/2 { < g b > < fis a > < e g > }	\tuplet 3/2 { < d fis > < c e > < b d > }	\tuplet 3/2 { < a c > < g b > < fis a > }		| %-Checked
 	\mbreak
-	
+
 	% Page 1 - Line 9 - Measure 32
 	g,32 d' b' g'	g b, d, g,	g d' bes' g'	g bes, d, g,		| %-Checked
-	\times 2/3 { < g ees' >16 < bes''-4 des-2 > < aes c > }	\times 2/3 { < g-4 bes!-2 > < g bes > < f aes! > }	\times 2/3 { < ees-4 g-2 > < des f > < c-4 ees-2 > }	\times 2/3 { < bes des > < aes-4 c-2 > < g bes > }		| %-Checked
+	\tuplet 3/2 { < g ees' >16 < bes''-4 des-2 > < aes c > }	\tuplet 3/2 { < g-4 bes!-2 > < g bes > < f aes! > }	\tuplet 3/2 { < ees-4 g-2 > < des f > < c-4 ees-2 > }	\tuplet 3/2 { < bes des > < aes-4 c-2 > < g bes > }		| %-Checked
 	aes,32 ees' c' aes'	aes c, ees, aes,	aes ees' ces' aes'	aes ces, ees, aes,		| %-Checked
 	\mbreak
 
 	% Page 1 - Line 10 - Measure 35
-	\times 2/3 { < gis e'! >16 < b''!-4 d!-2 > < a! cis > }	\times 2/3 { < gis-4 b-2 > < gis b > < fis! a > }	\times 2/3 { < e!-0 gis-4 > < d-3 fis-1 > < cis e > }	\times 2/3 { < b-3 d-1 > < a-0 cis-4 > < gis-3 b -1 > }		| %-Checked
+	\tuplet 3/2 { < gis e'! >16 < b''!-4 d!-2 > < a! cis > }	\tuplet 3/2 { < gis-4 b-2 > < gis b > < fis! a > }	\tuplet 3/2 { < e!-0 gis-4 > < d-3 fis-1 > < cis e > }	\tuplet 3/2 { < b-3 d-1 > < a-0 cis-4 > < gis-3 b -1 > }		| %-Checked
 	a,32 e' cis' a'	a cis, e, a,	a e' c' a'	a c, e, a,		| %-Checked
-	\times 2/3 { < a f' >16 < c''!-4 ees-2 > < bes-4 d-2 > }	\times 2/3 { < a c > < a c > < g!-4 bes!-2 > }	\times 2/3 { < f a > < ees-4 g-2 > < d f > }	\times 2/3 { < c-4 ees-2 > < bes d > < a-0 c-4 > }		| %-Checked
+	\tuplet 3/2 { < a f' >16 < c''!-4 ees-2 > < bes-4 d-2 > }	\tuplet 3/2 { < a c > < a c > < g!-4 bes!-2 > }	\tuplet 3/2 { < f a > < ees-4 g-2 > < d f > }	\tuplet 3/2 { < c-4 ees-2 > < bes d > < a-0 c-4 > }		| %-Checked
 	\mbreak
 
 	% Page 2 - Line 1 - Measure 38
@@ -109,14 +109,14 @@ capriceOne = {
 	% Page 2 - Line 5 - Measure 52
 	e8-1( < b' gis' e' >)	e,32-.-4( gis-.-3 b-. e-.)	e-.( b-. gis-. e-.)		| %-Checked
 	e-4 a-3 c e	e c a e	e-4 g-2 ais-1 e'-0	e ais, g e		| %-Checked
-	e-.-4( gis!-.-3 b-. e-.)	\times 2/3 { < gis! b >16-. < fis a >-. < e gis >-. }	\times 2/3 { < a-0-4 cis-3 >-. < gis-4 b-2 >-. < fis-3 a-1 >-. }	\times 2/3 { < e-0 gis-4 >-. < dis-3 fis-1 > -. < cis e >-. }		| %-Checked
+	e-.-4( gis!-.-3 b-. e-.)	\tuplet 3/2 { < gis! b >16-. < fis a >-. < e gis >-. }	\tuplet 3/2 { < a-0-4 cis-3 >-. < gis-4 b-2 >-. < fis-3 a-1 >-. }	\tuplet 3/2 { < e-0 gis-4 >-. < dis-3 fis-1 > -. < cis e >-. }		| %-Checked
 	b,32-.-2( gis'-. e'-. b'-.)	b-.( e,-. gis,-. b,-.)	b fis' dis' b'	b dis, fis, b,		| %-Checked
 	\mbreak
 
 	% Page 2 - Line 6 - Measure 56
 	e-.-4( gis-.-3 b-.-1 e-.-0)	gis'16-4( e)	e,,32-.-2( b'-. gis'-. e'-.)	e-.( gis,-. b,-. e,-.)		| %-Checked
 	e c' a' e'	e a, c, e,	e ais g' e'	e g, ais, e		| %-Checked
-	e b' gis'! e'	\times 2/3 { < e,,-2 gis-1 >16 < fis-3 a-1 > < gis b > }	\times 2/3 { < a-3 cis-1 >^\markup{II\super{a} e III\super{a...}} < b dis > < cis-3 e-1 > }	\times 2/3 { < dis fis > < e-3 gis-1 > < fis a > }		| %-Checked
+	e b' gis'! e'	\tuplet 3/2 { < e,,-2 gis-1 >16 < fis-3 a-1 > < gis b > }	\tuplet 3/2 { < a-3 cis-1 >^\markup{II\super{a} e III\super{a...}} < b dis > < cis-3 e-1 > }	\tuplet 3/2 { < dis fis > < e-3 gis-1 > < fis a > }		| %-Checked
 	b,32-.-4(_\markup{IV\super{a}} e-.-3 gis-.-1 e'-.-2)	e-.( gis,-. e-. b-.)	b-4 dis-3 fis-1 dis'-2	dis fis, dis b		| %-Checked
 	\mbreak
 
@@ -124,14 +124,14 @@ capriceOne = {
 	e,-1 b' gis' e'	gis gis, b, e,	e c' a' e'	a a, c, e,		| %-Checked
 	e b' gis' e'	gis a, b, e,	e c' a' e'	a a, c, e,		| %-Checked
 	e b' gis' e'	gis gis, b, e,	cis! ais' g' e'	cis,,16( ais-1)		| %-Checked
-	\times 2/3 { b < gis''!-4 b-2 > < fis a > }	\times 2/3 { < e-0 gis-4 > < dis-3 fis-1 > < cis e > }	\times 2/3 { < b-3 dis-1 > < a-0 cis-4 > < gis b > }	\times 2/3 { < fis a > < e-4 gis-3 > < dis-4 fis-2 > }		| %-Checked
+	\tuplet 3/2 { b < gis''!-4 b-2 > < fis a > }	\tuplet 3/2 { < e-0 gis-4 > < dis-3 fis-1 > < cis e > }	\tuplet 3/2 { < b-3 dis-1 > < a-0 cis-4 > < gis b > }	\tuplet 3/2 { < fis a > < e-4 gis-3 > < dis-4 fis-2 > }		| %-Checked
 	\mbreak
 
 	% Page 2 - Line 8 - Measure 64
 	e32-4 gis b e	gis b, gis e	e-4 a-3 c e	a c, a e		| %-Checked
 	e gis b e	gis b, gis e	e a c e	a c, a e		| %-Checked
 	e gis b e	gis b, gis e	c g' ais e'	g16( e)		| %-Checked
-	\times 2/3 { b, < b' e > < gis! b > }	\times 2/3 { b' < b,,-2 dis-1 >^\markup{III\super{a} e IV\super{a......}} < cis-3 e-1 > }	\times 2/3 { < dis fis > < e-3 gis-1 > < fis a > }	\times 2/3 { < gis-3 b-1 > < a cis > < b-3 dis-1 > }		| %-Checked
+	\tuplet 3/2 { b, < b' e > < gis! b > }	\tuplet 3/2 { b' < b,,-2 dis-1 >^\markup{III\super{a} e IV\super{a......}} < cis-3 e-1 > }	\tuplet 3/2 { < dis fis > < e-3 gis-1 > < fis a > }	\tuplet 3/2 { < gis-3 b-1 > < a cis > < b-3 dis-1 > }		| %-Checked
 	\mbreak
 
 	% Page 2 - Line 9 - Measure 68
@@ -143,13 +143,12 @@ capriceOne = {
 
 	% Page 2 - Line 10 - Measure 72
 	e gis e' e	e e gis, e	f a dis e	e dis a f		| %-Checked
-	\setTextCresc
+	\crescTextCresc
 	e\< gis e' e	e e gis, e	f a dis e	e dis a f\!		| %-Checked
-	\times 2/3 { e16\f < gis e' > e' }	r8	\times 2/3 { e,16 < gis gis' > e' }	r8		| %-Checked
+	\tuplet 3/2 { e16\f < gis e' > e' }	r8	\tuplet 3/2 { e,16 < gis gis' > e' }	r8		| %-Checked
 	e,32 gis e' e	e gis-2 b,-1 gis-3	e-3 gis e' e	e gis-2 b, gis		| %-Checked
 	e'4-0	< e,-3 gis e' > r4\fermata 				%-End of Piece
 	\pageBreak
 }
 
 }
-
