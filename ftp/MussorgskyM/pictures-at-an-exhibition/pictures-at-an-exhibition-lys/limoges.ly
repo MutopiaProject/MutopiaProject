@@ -294,4 +294,7 @@ global = {
   >>
   \layout {
   }
+  \midi {
+    \tempo 4 = 108
+  }
 }
