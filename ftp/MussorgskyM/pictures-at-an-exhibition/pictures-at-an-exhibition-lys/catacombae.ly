@@ -21,13 +21,127 @@
 }
 
 dimin = \markup { \italic "dim." }
-attacca = \markup { \italic "attacca" }
+cresc = \markup { \italic "cresc." }
+pocoCresc = \markup { \whiteout { \italic "poco a poco cresc." } }
+attacca = \markup { \italic "     attacca" }
+ffsf = #(make-dynamic-script "ffsf")
+fsfdim = \markup { \dynamic "fsf" \italic "dim." }
+pdim = \markup { \dynamic "p" \italic "dim." }
+
+forceShiftBack = \override NoteColumn.force-hshift = #-1.2
+forceShiftOn = \override NoteColumn.force-hshift = #1.2
+forceShiftOff = \override NoteColumn.force-hshift = #0
+adjustTextY = \once \override TextScript.Y-offset = #-6
+
+slurAdjustOne = \shape #'((0.0 . 0.0) (0.0 . 0.5) (0.0 . 0.5) (-1.0 . 1.0)) Slur
+slurAdjustTwo = \shape #'(
+  ((0.0 . 0.0) (0.0 . -0.5) (0.0 . 0.0) (0.0 . -0.5))
+  ((0.0 . 1.0) (0.0 . 0.0) (0.0 . 0.0) (0.0 . 0.0))
+)Slur
 
 upper = \relative c' {
+  \tempo "Largo"
+  | b2. \ff \fermata
+  | g2. \p \fermata
+  | g'2. _\cresc \fermata
+  | <g, b fs'>2. ~ _\ffsf
+  | q _\pdim
+  |
+  <<
+    { \forceShiftBack as2. ( _\ffsf | b2. _\pdim ) }
+    \\
+    { \forceShiftOff <g _~ fs' ^~ >2. | q2. }
+  >>
+  \break
+
+  \barNumberCheck #8
+  | <g cs fs>2. _\ffsf \fermata
+  |
+  <<
+    { \forceShiftOn \slurAdjustOne d'2. _( | b2. ) }
+    \\
+    { \forceShiftOff <fs _~ fs' ^~>2. _\dimin | q _\pdim }
+
+  >>
+  | <fs cs' fs>2 \pp \fermata r4
+  | <b, g' b>2. \ff \fermata
+  | <bf g' bf>2. \fermata
+  | <bf' g' bf>2. \fermata
+  |
+  <<
+    { \forceShiftOn \slurAdjustTwo d2. ( \p | cs2. ) } % bar #16
+    \\
+    { <e, _~ a ~ e' ^~> | q }
+  >>
+  |
+  <<
+    { \forceShiftBack \adjustTextY cs'2. _\pocoCresc | \forceShiftOn d2 ( a'4 ) }
+    \\
+    { <a ^~ f ^~ a, _~ >2. | q }
+  >>
+  \clef treble
+  |
+  <<
+    { \forceShiftOff d2. ( | cs2 d4 | c2. _\dimin | bf4 ~ bf8 ) }
+    \\
+    { <c, d a'>2. ~ | q2. | <d g>2. ~ | q4 ~ q8 }
+  >>
+  r8 g,4 \ff
+  | <g' bf ef g>2. \sf \fermata
+  \break
+
+  \barNumberCheck #24
+  | <g, c e g>2. \p \fermata
+  \clef bass
+  | <as e' g>2. ( _\fsfdim
+  | <b d fs>2.
+  | <g cs e>2. \p
+  | <gs b d>2. )
+  | <es gs b d>2. ~ \ffsf \> \fermata
+  | q2 \p r4
+  | \bar "|."
 }
 
 lower = \relative c {
-  
+  | <b b,>2. _\fermata
+  | <g g,>2. _\fermata
+  | <g' g,>2. _\fermata
+  | <d d,>2. (
+  | <cs cs,>2.
+  | <c c,>2.
+  | <b b,>2.
+
+  \barNumberCheck #8
+  | <bf bf,>2. ) _\fermata
+  | <a a,>2. (
+  | <g g,>2.
+  | <fs fs,>2 ) _\fermata r4
+  | <g g,>2. _\fermata
+  | <g bf, g>2. _\fermata
+  | <g' bf, g>2. _\fermata
+  | <a, e a,>2. ~
+  \break
+
+  \barNumberCheck #16
+  | q2.
+  | <a f a,>2. ~
+  | q2.
+  | <a fs a,>2. ~
+  | q2.
+  | << { <g d'>2. ~ | q4 ~ q8 } \\ { a,2. ~ | a4 ~ a8 } >> r8 <g' g,>4
+  | <g' bf ef>2. \fermata
+  \break
+
+  | <g, e'>2. _\fermata
+  |
+  <<
+    { bs4 ( cs2 | d2. | e2. | es2. ) }
+    \\
+    { fs,2. ~ | fs2. ~ | fs2. | fs2. }
+  >>
+  | <fs b d>2. ~ _\fermata
+  | q2 _\attacca r4
+  |
 }
 
 global = {
