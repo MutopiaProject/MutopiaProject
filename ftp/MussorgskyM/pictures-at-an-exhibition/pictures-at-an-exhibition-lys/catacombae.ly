@@ -20,6 +20,11 @@
   maintainerWeb      = "http://www.musicwithknute.com/"
 }
 
+#(define (myDynamics dynamic)
+    (if (equal? dynamic "ffsf")
+      0.95
+      (default-dynamic-absolute-volume dynamic)))
+
 dimin = \markup { \italic "dim." }
 cresc = \markup { \italic "cresc." }
 pocoCresc = \markup { \whiteout { \italic "poco a poco cresc." } }
@@ -152,7 +157,9 @@ global = {
 
 \score {
   \new PianoStaff <<
+    \set Score.dynamicAbsoluteVolumeFunction = #myDynamics
     \new Staff = "up" {
+      %\set Score.dynamicAbsoluteVolumeFunction = #myDynamics
       \global
       \upper
     }
