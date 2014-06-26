@@ -1,4 +1,31 @@
 %%--------------------------------------------------------------------
+% LilyPond typesetting of Rachmaninoff Prelude Op. 23 No. 1
+%%--------------------------------------------------------------------
+
+%----- Notes ---------------------------------------------------------
+% - Some grace notes are specially done with work-arounds
+%   * Most are shortened to avoid insufficient note length stealing from
+%     normal notes, see the bar 24 one for extreme example (otherwise
+%     LH / RH channels will be out of sync)
+%   * starting a voice with grace note mess up some voice properties
+
+%----- Known problems ------------------------------------------------
+% - Some slurs need tweaking to look better, e.g.
+%   * Left hand slur spanning bar 22-23
+%   * Right hand slur spanning bar 4-5, 19-20, 27, 34-35
+% - MIDI completely broken
+%   * Sound volume is a mess because some dynamics are in its own staff while others are
+%     attached to LH / RH.
+%   * Adding tons of invisible dynamics to both staves is not easy to manage, tackle later
+%   * As a result, midiMinimumVolume and midiMaximumVolume are set to prevent uncontrolled
+%     sound volume
+%   * Grace notes will never sound like natural performance
+%   * Ritardando is only crudely simulated
+% - Some <> hairpin pairs are not vertically aligned
+
+
+
+%%--------------------------------------------------------------------
 % The Mutopia Project
 % LilyPond template for keyboard solo piece
 %%--------------------------------------------------------------------
@@ -40,7 +67,8 @@
     %piece = "Left-aligned header"
     date = "1901"
     style = "Romantic"
-    source = "A. Gutheil, n.d.[1904]"
+    %% Gutheil edition on IMSLP is also cross-referenced
+    source = "Muzyka [1966]"
  
     maintainer = "Abel Cheung"
     maintainerEmail = "abelcheung at gmail dot com"
@@ -61,33 +89,6 @@
     copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
     tagline = ##f
 }
-
-%----- Caveats ---------------------------------------------------------------
-% - Some grace notes are specially done with work-arounds
-%   * Most are shortened to avoid insufficient note length stealing from normal notes,
-%     see the bar 24 one for extreme example (otherwise 2 hands will be out of sync)
-%   * starting a voice with grace note mess up some voice properties
-% - Hairpins don't follow Gutheil edition closely
-%   * Most of the start/end locations look arbitraty
-%   * Some hide under slurs (and resized) to save space, but it's too packed
-%   * following them exactly is a heavy burden, and may not reflect true intention
-% - Some stem/slur direction don't follow Gutheil edition (follows Lilypond automatic layout),
-%   allowing more compact staff
-
-%----- Known problems --------------------------------------------------------
-% - Some slurs might need tweaking to look better, e.g.
-%   * Left hand slur spanning bar 22-23
-%   * Right hand slur spanning bar 4-5, between bar 19-20
-% - Still considering unifying the direction of last few notes, some other edition does that
-% - MIDI completely broken
-%   * Sound volume is a mess because some dynamics are in its own staff while others are
-%     attached to LH / RH.
-%   * Adding tons of invisible dynamics to both staves is not easy to manage, tackle later
-%   * As a result, midiMinimumVolume and midiMaximumVolume are set to prevent uncontrolled
-%     sound volume
-%   * Grace notes will never sound like natural performance
-%   * Ritardando is only crudely simulated
-% - Some <> hairpin pairs are not vertically aligned
 
 
 %--------Definitions and shorthands
@@ -115,7 +116,7 @@ hideTempo = { % for controlling midi speed
 RHone = \relative c'' { % bar 21-23
   r4 \clef treble <d d'>2-- \clef treble <dis dis'>4-- |
   r4 \clef treble <e e'>4-- r2 |
-  \clef treble <g g'>2-> r4 \clef treble <gis gis'>8-> <gis gis'>16-> <gis gis'>-> |
+  \clef treble <g g'>2-> r4 \clef treble <gis gis'>8-> q16-> q-> |
 }
 
 RHtwo = \relative c { % bar 21-23
@@ -130,25 +131,31 @@ RH = \relative c'' {
   \partial 16 s16 \bar ""
   % bar 1-10
   R1 |
-  r4 fis2(--^\mf e4^\> |
+  r4
+  \once \override DynamicText.X-offset = #-4
+  fis2(--^\mf e4^\> |
   d1)\! |
   r4 d2(-- bis8.-- cis16-- |
   cis2.)-- b4-- |
   a1~ |
   a4 r r2 |
-  r4 fis'(^\mf e4. cis8^\> |
+  r4
+  \once \override DynamicText.X-offset = #-4
+  fis'(^\mf e4. cis8^\> |
   d1)\! |
   r4 d2( bis4)-- |
 
   % bar 11-20
   cis2.~ cis8 cis8-- |
   cis1--~ |
-  cis4 r cis'4.^\mf--( a8--) |
+  cis4 r
+  \once \override DynamicText.X-offset = #-4.5
+  cis'4.^\mf--( a8--) |
   a2-- \clef bass cis,,4.-- a8-- |
   a2-- \clef treble cis''4--~\( \tuplet 3/2 { cis8 cis,-- gis'-- } |
   a2--\) \clef bass a,,4.-- fis8-- |
   fis2-- \clef treble <fis'' fis'>4.-- <d d'>8-- |
-  <d d'>2-- \clef bass fis,,4.-- d8-- |
+  q2-- \clef bass fis,,4.-- d8-- |
   d2-- \clef treble <fis'' fis'>8-- fis--~
   \subBeam fis16 fis16(
   \tuplet 3/2 { <cis cis'> fis <cis cis'> } |
@@ -169,15 +176,13 @@ RH = \relative c'' {
   <fis fis'>4 <e e'>2( <cis cis'>4 |
   <c d fis d'>2.) <a a'>4( |
   <aes bes d bes'>2) \bar "" r8 <b d b'>4 <b cis b'>8-- |
-  <b cis b'>2--( \bar "" <a fis' a>) |
+  q2--( \bar "" <a fis' a>) |
   r4 <g b g'>2( <fis a fis'>4) |
   
   % bar 30-32
   << { fis'2.-- } \\ { <fis, a>8 s8 s2 } >> e'4-- |
   d2.-- bis4-- |
-  cis2--
-  \hideTempo \tempo 4 = 54
-  a4..-- fis16-- |
+  cis2-- a4..-- fis16-- |
   
   % bar 33-35
   % see left hand for tempo mark
@@ -195,8 +200,8 @@ RH = \relative c'' {
     \relative c' {
       fis1 |
       fis,,4 a b cis |
-      r16 \clef treble fis''^( <gis, b> fis' <a, bis>^\< fis' <a, cis>\! fis')
-      <a, cis>^(^\> fis' <gis, b>\! fis' <a, bis> fis' <a, cis> fis') |
+      r16 \clef treble fis''^( <gis, b> fis' <a, bis>^\< fis' <a, cis> fis'\! )
+      <a, cis>^(^\> fis' <gis, b> fis'\! <a, bis> fis' <a, cis> fis') |
     }
   >>
   
@@ -209,10 +214,10 @@ RH = \relative c'' {
   % bar 37.5-39.5
   <<
     \relative c' {
-      s2 | r2
-      \tuplet 3/2 { \repeat unfold 3 { <fis a cis fis>8-- } }
-      <fis a cis fis>4--~ |
-      \stemDown <fis a cis fis>2
+      s2 |
+      r2 \tuplet 3/2 { <fis a cis fis>8-- q-- q-- }
+      q4--~ |
+      q2
     } \\
     \relative c' {
       \voiceOne
@@ -227,8 +232,8 @@ RH = \relative c'' {
   >>
   
   % bar 39.5-41
-  <fis a cis fis>4.-- <fis a cis fis>8-- |
-  <fis a cis fis>1--\fermata \bar "|."
+  \stemUp <fis a cis fis>4.^- q8^- |
+  q1^-\fermata
 }
 
 %---------- Left Hand parts
@@ -251,7 +256,7 @@ LHone = \relative c' {
   fis( gis eis fis e fis dis e
   d e cis d \clef bass bis cis b cis) |
   \grace { \scaleDurations 2/3 { fis,,8( cis' } } a'16^\< fis' b, fis')\!
-  \repeat unfold 3 { bis,--(^\> fis' cis fis)\! } |
+  \repeat unfold 3 { bis,--(^\> fis' cis\! fis) } |
   \repeat unfold 2 { bis,--( fis' cis fis) }
   cis--( fis d fis) \clef treble <cis e>--( fis <cis eis> g') |
   \repeat unfold 2 { <d eis>--( g   <d fis> g)   }
@@ -263,9 +268,10 @@ LHone = \relative c' {
   <fis a>--( b <fis gis> a) gis--( a g gis) |
   a( b gis a g a fis g eis fis e fis dis e d e) \clef bass |
   \grace { \scaleDurations 2/3 {  a,,8( e' } } \clef treble cis'16^\< a' d, a')\!
-  \repeat unfold 2 { dis,^\>--( a' e a)\! } e^\>--( a eis a)\! |
+  \repeat unfold 2 { dis,^\>--( a' e\! a) } e^\>--( a eis\! a) |
   eis--( a fis a) <cis, fis>( a' <fis gis> b <fis gis> b <e, a> cis' <fis, a> cis' <f, a> d' |
-  <fis, a cis> dis' <e, a cis> e') \repeat unfold 2 { dis,--( a' e a) } e--( a eis a) |
+  <fis, a cis> dis' <e, a cis> e') dis,--^\p ( a' e a )
+  dis,--( a' e a) e--( a eis a) |
 
   % first beat of bar 16
   eis--( a fis a)
@@ -309,15 +315,17 @@ LHthree = \relative c, {
   % curse this grace note thing again, stem direction is messed up
   \voiceOne
   \clef treble a'8( b bis cis) fis,( g gis a) |
-  cis,[( dis] \clef treble e[ eis] fis g gis a) |
+  \clef bass cis,[( dis] \clef treble e[ eis] fis g gis a) |
   \clef bass \appoggiatura { d,,,16[ a' fis'] }
   d'8( e f fis) a,( b c cis) |
   
   % bar 27-29
-  d16-- aes ees'-- f, e'-- d f-- aes,
-  \clef treble eis'-- <b d> fis'-- <b, d> fisis'-- <b, cis> gis'-- <b, cis> |
+  d16-- \( aes ees'-- f, e'-- d f-- aes,
+  \clef treble eis'-- <b d> fis'-- <b, d> fisis'-- <b, cis> gis'-- <b, cis> \) |
   \clef bass \appoggiatura { a,16 fis' cis' }
   gis'8( fis eis fis bis, cis) a( b) |
+  % NOTE: follow Gutheil edition for 2nd left hand slur, instead of ending at
+  % G note in Muzyka edition -- slurs are for left hand main melody
   bis16( fis cis') cis, cis'( d, d' g, e' b cis) g d'( fis, dis') a |
   
   % bar 30-31
@@ -402,9 +410,11 @@ LH = {
   
   \oneVoice \relative c'' {
     % bar 32-36
-    <a fis cis>( b <gis e> a <fis d> gis <e a,> fis
-    <dis b> e <d fis,> e \clef bass <cis eis,> d <b cis,> cis) |
+    <a fis cis>( b <gis e> a <fis d> gis
     \set Score.tempoHideNote = ##t
+    \tempo \markup{ \huge{ "rit." }} 4 = 54
+    <e a,> fis
+    <dis b> e <d fis,> e \clef bass <cis eis,> d <b cis,> cis) |
     % align with grace notes, so not marking tempo on right hand
     \tempo \markup{ \huge{ "a tempo" } } 4 = 58
     \grace { \scaleDurations 2/3 { fis,,8^( cis' } } <fis a>16 fis' <gis, b> fis' <a, bis>^\< fis' <a, cis> fis')\!
@@ -416,7 +426,7 @@ LH = {
       {
         % work around problem: (De)crescendo with unspecified starting volume in MIDI
         \once \omit Voice.DynamicText
-        cis--\mf[(_\< b]\! a--[_\> e'])\!
+        cis--\mf[(\< b]\! a--[\> e'])\!
         \clef treble b--[( fis']) cis--[( gis'])
       } \\
       \relative c { fis4 a b cis }
@@ -429,9 +439,9 @@ LH = {
       \relative c, {
         s2 | r2
         \once \override Beam.positions = #'(4.5 . 4.5) % align beamed and unbeamed notes
-        \tuplet 3/2 { \repeat unfold 3 { <fis cis' fis a>8-- } }
-        <fis cis'fis a>4--~ |
-        <fis cis'fis a>2
+        \tuplet 3/2 { \repeat unfold 3 { <fis cis' fis a>8_- } }
+        q4_-~ |
+        q2
       } \\
       \relative c, {
         \voiceOne
@@ -442,8 +452,8 @@ LH = {
         s2
       }
     >>
-    <fis cis' fis a>4.^- <fis cis' fis a>8^- |
-    <fis cis' fis a>1^-\fermata
+    <fis cis' fis a>4.-- q8-- |
+    q1--\fermata
   }
 }
 
@@ -452,14 +462,15 @@ LH = {
 Dynamics = {
   \partial 16 s16 |
   % bar 1-10
-  s16\pp\< s8 s16\! \repeat unfold 5 { s16\> s8 s16\! }
+  \once \override DynamicText.X-offset = #-4
+  s16\pp\< s8 s16\! \repeat unfold 5 { s8\> s8\! }
   s2 |
-  s2\pp s4.\< s8\! |
+  s2\pp s4..\< s16\! |
   s1\mf |
   s4 s2.\dim |
   \barLinePad s1\pp |
   s1*2 |
-  s2\pp s4.\< s8\! |
+  s2\pp s4..\< s16\! |
   s1\mf |
   
   % bar 11-20
@@ -467,7 +478,7 @@ Dynamics = {
   \barLinePad s1\pp |
   s1 |
   s2 s2\< |
-  s8\> s8\! s4\p s2 |
+  s8\> s8\! s2. |
   s2 s2\< |
   s8\> s8\! s4 s2\cresc |
   s2\! s2\< |
@@ -475,7 +486,7 @@ Dynamics = {
   s2\! s2\< |
   
   % bar 21-30
-  s4\f\> s4\p s2\cresc |
+  s8.\f\> s16\! s4 s2\cresc |
   s2 s2\f |
   s4 s2.\cresc |
   s1\ff |
@@ -484,19 +495,20 @@ Dynamics = {
   s2 s4.\< s8\! |
   s4.\> s8\! s2 |
   s4 s2.\dim |
+  \once \override DynamicText.X-offset = #-3
   s1\p |
   
   % bar 31-41
-  s4 s4.\< s8\! s8\> s8\! |
+  s4 s4.\< s8\! s4\> |
   s4\p
-  s2.-\markup{\italic "dim. e rit."} |
+  s2.\dim |
   s4\pp s2. |
   s1*3 |
   \barLinePad s1\pp |
   s1 |
   s2 s4\< s4\f |
   s2\dim s4.\> s8\! |
-  s1\pp |
+  s1\pp \bar "|."
 }
 
 %-------Typeset music and generate midi
