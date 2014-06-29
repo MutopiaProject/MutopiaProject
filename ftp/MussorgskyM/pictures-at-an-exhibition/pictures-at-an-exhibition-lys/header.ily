@@ -11,5 +11,5 @@
   maintainerEmail    = "knute (at) snortum (dot) net"
   maintainerWeb      = "http://www.musicwithknute.com/"
 
- footer = "Mutopia-2014/05/24-475"
+ footer = "Mutopia-2014/06/29-475"
 }
