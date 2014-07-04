@@ -193,24 +193,94 @@ condAddAccent =
            (list (make-music 'ArticulationEvent 'articulation-type "accent")))))
        note)
 
+%-------- The following funcs are for repeatedly adding articulation
+
+#(define tied? #f)
+
+#(define (check-tie e)
+   (if (eq? 'TieEvent (ly:music-property e 'name))
+       (set! tied? #t)))
+
+% Idea from http://lists.gnu.org/archive/html/lilypond-user/2008-06/msg00019.html
+#(define (add-articulation articulation m)
+   (let (
+          (name    (ly:music-property m 'name))
+          (es      (ly:music-property m 'elements))
+          (e       (ly:music-property m 'element))
+          (ar-list (ly:music-property m 'articulations))
+          (ar      (make-music 'ArticulationEvent 'articulation-type articulation)))
+     (cond
+      ((ly:music? e)
+       (if (not (eq? name 'GraceMusic)) (add-articulation articulation e)))
+      ((eq? name 'TieEvent) (set! tied? #t))
+      ((list? es)  ; including case where elements property doesn't exist
+        (cond
+         ((eq? name 'EventChord)
+          (begin
+           (if (and (not tied?)
+                    ; no very reliable way to determine if an EventChord contains notes
+                    ; but enough for use here
+                    (or (ly:duration? (ly:music-property m 'duration))
+                        (memq 'NoteEvent
+                          (map (lambda(x) (ly:music-property x 'name)) es))))
+               ; Attaching same articulation multiple times is not harmful, so
+               ; not bother checking if accent already exists. Same below.
+               (ly:music-set-property! m 'elements
+                 (append es (list ar))))
+           (set! tied? #f)
+           (for-each check-tie es)
+           ))
+         ((eq? name 'NoteEvent)
+          (begin
+           (if (not tied?)
+               (ly:music-set-property! m 'articulations
+                 (append ar-list (list ar))))
+           (set! tied? #f)
+           (for-each check-tie ar-list)
+           ))
+         (else (if (not (null? es))
+                   (for-each
+                    (lambda(x) (add-articulation articulation x)) es)))
+         ))
+      )))
+
+
+% for supported articulation list, see lilypond doc section A.13
+addArticulation =
+#(define-music-function (parser location articulation mus)
+   (string? ly:music?)
+   "Add same articulation to all notes except rests, grace and tied notes"
+   (set! tied? #f)
+   (for-each
+    (lambda(x) (add-articulation articulation x))
+    (ly:music-property mus 'elements))
+   ; (display-scheme-music mus)
+   mus
+)
+
 
 %-------- Right Hand parts
+
 RHpatternA = \relative c'' { % bar 3 first 3 quartet sans first rest
   <bes bes'>16-> <d f>4->~ q8. <bes bes'>16->
 }
 
 RHpatternB = \relative c'' { % bar 3 last quartet + bar 4
-  \moveTupletAbs 4.5 ##f \tuplet 6/4 {
-    <d f>16-> <a a'>-> <bes d>-> <g g'>-> <bes d>-> <f f'>->
-  } |
-  \moveTupletAbs 3 ##f \tuplet 6/4 { <bes d>4-> q16-> q-> }
-  q8.-> <f d bes f>16->
+  \addArticulation "accent" {
+    \moveTupletAbs 4.5 ##f \tuplet 6/4 {
+      <d f>16 <a a'> <bes d> <g g'> <bes d> <f f'>
+    } |
+    \moveTupletAbs 3 ##f \tuplet 6/4 { <bes d>4 q16 q }
+    q8. <f d bes f>16
+  }
   \tuplet 3/2 { <f d bes f>16->( bes d) } <f d bes f>8->~
   \moveTupletAbs 5 ##f \tuplet 6/4 { q4~ q16 <g ees bes g>-> }
 }
 
 RHpatternC = \relative c'' { % bar 5
-  <f d bes f>8.-> <bes, bes'>16-> <d f>4->~ q8. <bes bes'>16->
+  \addArticulation "accent" {
+    <f d bes f>8. <bes, bes'>16 <d f>4~ q8. <bes bes'>16
+  }
   \moveTupletAbs 4 ##f \tuplet 6/4 {
     <d f>16-> <a a'> <bes d> <g g'> <bes d> <f f'>
   }
@@ -238,27 +308,35 @@ RHpatternF = \relative c'' { % bar 8
 }
 
 RHpatternG = \relative c'' { % bar 9
-  <d~ f aes d~>4-> <d e g d'>8. <c c'>16->
-  \moveTuplet -0.5 \tuplet 6/4 { <a ees' a>4->~ q16 <g g'>-> }
-  \moveTuplet -2   \tuplet 6/4 { <ees ees'>4->~ q16 <d d'>-> }
+  \addArticulation "accent" {
+    <d~ f aes d~>4 <d e g d'>8. <c c'>16
+    \moveTuplet -0.5 \tuplet 6/4 { <a ees' a>4~ q16 <g g'> }
+    \moveTuplet -2   \tuplet 6/4 { <ees ees'>4~ q16 <d d'> }
+  }
 }
 
 RHpatternH = \relative c' { % bar 10
-  \tuplet 3/2 { <bes bes'>16-> <a a'>-> <g g'>-> } <f f'>8->~
-  % FIXME tuplet position
-  \moveTuplet -1   \tuplet 6/4 { q4~ q16 \clef bass <f a ees' f>-> }
+  \addArticulation "accent" {
+    \tuplet 3/2 { <bes bes'>16 <a a'> <g g'> } <f f'>8~
+    % FIXME tuplet position
+    \moveTuplet -1   \tuplet 6/4 { q4~ q16 \clef bass <f a ees' f> }
+  }
 }
 
 RHpatternI = \relative c' { % bar 11
-  \moveTuplet -0.5 \tuplet 6/4 { <d bes f d>4->~ q16 \clef treble <bes' bes'>-> }
-  \moveTuplet -1.5 \tuplet 6/4 { <d f>4->~ q16 <bes bes,>16-> }
-  \moveTupletAbs 3 ##f \tuplet 6/4 { <f d f,>4->~ q16 <bes bes'>-> }
+  \addArticulation "accent" {
+    \moveTuplet -0.5     \tuplet 6/4 { <d bes f d>4~ q16 \clef treble <bes' bes'> }
+    \moveTuplet -1.5     \tuplet 6/4 { <d f>4~ q16 <bes bes,>16 }
+    \moveTupletAbs 3 ##f \tuplet 6/4 { <f d f,>4~ q16 <bes bes'> }
+  }
 }
 
 RHpatternJ = \relative c' { % bar 13 + 14
-  \moveTuplet -1   \tuplet 6/4 { <f bes d f>4->~ q16 <bes bes'>-> }
-  <d f>8->         \tuplet 3/2 { <bes bes,>16-> q-> q-> } 
-  \moveTupletAbs 3 ##f \tuplet 6/4 { <f d f,>4->~ q16 <bes bes'>-> }
+  \addArticulation "accent" {
+    \moveTuplet -1       \tuplet 6/4 { <f bes d f>4~ q16 <bes bes'> }
+    <d f>8               \tuplet 3/2 { <bes bes,>16 q q } 
+    \moveTupletAbs 3 ##f \tuplet 6/4 { <f d f,>4~ q16 <bes bes'> }
+  }
   \hideTupletOnce  \tuplet 6/4 { <d f>16-> <a a'> <bes d> <g g'> <bes d> <f f'> } |
   <bes d>8         \tuplet 3/2 { q16 q q } q8.-> <f d bes f>16
                    \tuplet 3/2 { <f d bes f>16( bes d) } <f d bes f>8~
@@ -269,15 +347,16 @@ RHpatternK = \relative c' { % bar 15 + bar 16 first 3 quartet
   <f a d f>8->  \tuplet 3/2 { <a f d a>16 ( d f ) }
   \moveTuplet -1 \tuplet 6/4 { <a f d a>4->~ q16 <bes f des bes>-> }
   \stemUp <a f c a>8-> \tuplet 3/2 { <c, a f c>16 ( f a ) } \stemNeutral
-  \moveTuplet -1 \tuplet 6/4 { <c a f c>4->~ q16 <ees c fis, ees>-> } |
-  \tuplet 6/4 { <d bes g d>4->~ q16 <c fis, ees c>-> }
-  \tuplet 6/4 { <bes g d bes>4->~ q16 <g ees c g>-> }
-  \tuplet 3/2 { <f d bes f>8-> <ees c ees,>-> <d bes d,>-> }
+  \addArticulation "accent" {
+    \moveTuplet -1 \tuplet 6/4 { <c a f c>4~ q16 <ees c fis, ees> } |
+    \tuplet 6/4 { <d bes g d>4~ q16 <c fis, ees c> }
+    \tuplet 6/4 { <bes g d bes>4~ q16 <g ees c g> }
+    \tuplet 3/2 { <f d bes f>8 <ees c ees,> <d bes d,> }
+  }
 }
 
 RH = \relative c'' {
   \tupletUp
-  % bar 1-6
   \hideDynamics R1\ff | R1 |
   r8. \RHpatternA \RHpatternB |
   \RHpatternC |
@@ -291,7 +370,11 @@ RH = \relative c'' {
   \RHpatternI \RHpatternB |
   \RHpatternJ |
   \RHpatternK
-  \tuplet 5/4 { <bes d e bes'>16-> <a cis e a>-> <f a d f>-> <d f bes d>-> <g bes ees g>-> } |
+  \addArticulation "accent" {
+    \tuplet 5/4 {
+      <bes d e bes'>16 <a cis e a> <f a d f> <d f bes d> <g bes ees g>
+    }
+  } |
   <f~ bes d f~>4-> <f a ees' f>8. <f f'>16-> |
 
   \barNumberCheck 18
@@ -413,23 +496,27 @@ RH = \relative c'' {
     
     % bar 32
     \revertTuplet \showTupletTemp
-    <e g bes e>4->~ q16 <d g bes d>->
-    <c g' bes c>4->~ q16 <a c e a>->
-    <g c e g>8-> <e bes' e>16-> <d bes' d>8-> <c bes' c>16->
+    \addArticulation "accent" {
+      <e g bes e>4~ q16 <d g bes d>
+      <c g' bes c>4~ q16 <a c e a>
+     <g c e g>8 <e bes' e>16 <d bes' d>8 <c bes' c>16
+    }
     % SPECIAL NOTE: hiding tuplet numbers here and on next bar, unlike both
     % public domain editions. Repetitive.
     \revertTuplet \hideTupletTemp
     <c a'>-> ( g' e d c ) <g' bes e g>\noBeam-> |
     
     % bar 33
-    <e g bes e>4->~ q16 <d g bes d>->
-    <c g' c>4->~ q16 <a c a'>->
-    <g c g'>8-> \clef bass
-    % FIXME Gutheil and Muzyka edition disagree here:
-    % Gutheil: <e bes' e>
-    % Muzyka: <e c' e>
-    % sadly I don't have access to authentic version (Boosey & Hawkes)
-    <e c' e>16-> <d bes' d>8-> <c bes' c>16->
+    \addArticulation "accent" {
+      <e g bes e>4~ q16 <d g bes d>
+      <c g' c>4~ q16 <a c a'>
+      % FIXME Gutheil and Muzyka edition disagree here:
+      % Gutheil: <e bes' e>
+      % Muzyka: <e c' e>
+      % sadly I don't have access to authentic version (Boosey & Hawkes)
+      <g c g'>8 \clef bass <e c' e>16
+      <d bes' d>8 <c bes' c>16
+    }
     <c a'>-> ( g' e d c ) g'32[ ( d] |
   }
   \revertTuplet
@@ -470,10 +557,10 @@ RH = \relative c'' {
   \tuplet 5/4 { <g''' ees' g>16 <f d' f> <d bes' d> <bes d bes'> <ees c' ees> } |
 
   \tuplet 6/4 4 {
-    <d bes' d> <bes' d e bes'> <a cis e a> <f a d f> <d f bes d> <g bes ees g>
-    <f bes d f> <ees' c' ees> <d bes' d> <bes d bes'> <g bes g'> <c ees c'>
-    <bes d bes'> <a d a'> <bes d bes'> <e, g cis e> <a c fis a> <d, f b d>
-    <g bes ees g> <c, ees a c> <f aes d f> <ees g c ees> <c g' c> <g' bes c g'>
+    <d bes' d   > <bes' d e bes'> <a cis e a > <f a d f    > <d f bes d> <g bes ees g>
+    <f bes d f  > <ees' c' ees  > <d bes' d  > <bes d bes' > <g bes g' > <c ees c'>
+    <bes d bes' > <a d a'       > <bes d bes'> <e, g cis e > <a c fis a> <d, f b d>
+    <g bes ees g> <c, ees a c   > <f aes d f > <ees g c ees> <c g' c   > <g' bes c g'>
   } |
   
   <c,~ f bes c~>4-> <c ees a c>8. <d f bes d>16-> |
@@ -532,13 +619,16 @@ RH = \relative c'' {
   \set subdivideBeams = ##f
   <f d>8 r16 <bes bes,>16-- <f d>4--~
   \tupletUp \showTupletOnce \moveTupletAbs 3 ##f
-  \tuplet 6/4 { q4~ q16 <d d'>-> } <f bes>4->~ |
-  
-  \tuplet 6/4 4 {
-    q4~              q16 <f f'      >->
-    <d bes' d  >4->~ q16 <bes' bes' >->
-    <f' d f,   >4->~ q16 <d d'      >->
-    <bes g' bes>4->~ q16 <f' bes d f>->
+  \tuplet 6/4 { q4~ q16 <d d'>-> }
+
+  \addArticulation "accent" {
+    <f bes>4~ |
+    \tuplet 6/4 4 {
+                 q4~ q16 <f f'      >
+      <d bes' d  >4~ q16 <bes' bes' >
+      <f' d f,   >4~ q16 <d d'      >
+      <bes g' bes>4~ q16 <f' bes d f>
+    }
   } |
   
   <d f bes d>16->\noBeam <bes' d f bes> <f bes d f> <g g'>
@@ -707,9 +797,11 @@ LHpatternJ = \relative c { % bar 9, 2nd half
 }
 
 LHpatternK = \relative c { % bar 10
-  \tuplet 3/2 { bes16-> a-> g-> } f8->~
-  % FIXME tuplet position
-  \moveTupletAbs -4 ##f \tuplet 6/4 { f4~ f16 <f f,>-> }
+  \addArticulation "accent" {
+    \tuplet 3/2 { bes16 a g } f8~
+    % FIXME tuplet position
+    \moveTupletAbs -4 ##f \tuplet 6/4 { f4~ f16 <f f,> }
+  }
 }
 
 LHpatternL = \relative c { % bar 15 + bar 16 first half
@@ -721,11 +813,12 @@ LHpatternL = \relative c { % bar 15 + bar 16 first half
   % first occurance of { <f c'>16 a'8 }, but slur exists on 2nd occurance
   \once \tupletUp \tuplet 3/2 { <a c,>8-> ) <c, f,>16 ( } a'8 )
   \hideTupletOnce   \tuplet 6/4 { <c, f,>16 ( f a ) a ( c <ees fis,>-> } |
-  
+
   \unset subdivideBeams
-  
-                        \tuplet 6/4 { <d bes g>4->~ q16 ) <a c fis>-> }
-  \moveTupletAbs -3 ##f \tuplet 6/4 { <bes d g>4->~ q16 <a ees c>-> }
+  \addArticulation "accent" {
+    \tuplet 6/4 { <d bes g>4~ q16 ) <a c fis> }
+    \moveTupletAbs -3 ##f \tuplet 6/4 { <bes d g>4~ q16 <a ees c> }
+  }
 }
 
 %%% LHpatternA (tuplet-visible, accent-on-first-note)
@@ -750,8 +843,10 @@ LH = \relative c'
   \LHpatternA ##f ##f \LHpatternC ##f \LHpatternD d   ##f |
   \LHpatternL
   \showTupletTemp
-  \tuplet 3/2 { <bes f d>8-> <f f,>-> <fis fis,>-> }
-  \tuplet 5/4 { <g g,>16-> <a a,>-> <d, d,>-> <bes' bes,>-> <ees, ees,>-> } |
+  \addArticulation "accent" {
+    \tuplet 3/2 { <bes f d>8 <f f,> <fis fis,> }
+    \tuplet 5/4 { <g g,>16 <a a,> <d, d,> <bes' bes,> <ees, ees,> }
+  } |
   \revertTuplet
   <f f,>4-> <f a ees'>8. <bes,, bes,>16-> |
 
@@ -797,7 +892,6 @@ LH = \relative c'
       \tuplet 3/2 4 { r8 ees, ( bes' ges' bes des ) }
       \showTupletOnce
       % manually ignore tuplet stuff so slur is drawn at natural position
-      \once \override TupletBracket.avoid-slur = ##f
       \once \override TupletNumber.avoid-slur = #'outside
       \tuplet 3/2 { <c aes ges>8 ( aes, ) aes'' } <ees c ges>4\arpeggio |
       \tuplet 3/2 4 { r8 aes,, ( f' des' \clef treble f ) c' }
@@ -851,20 +945,24 @@ LH = \relative c'
   
   % bar 30-31
   \revertTuplet \showTupletTemp
-  \tuplet 3/2 { <dis'' a fis b,>8\arpeggio [ \clef treble b'16-> ] ( } fis8->~
-  \tupletUp \tuplet 6/4 { fis8 ) dis16-> ( b8-> ) \clef bass fis16-> }
-  \tuplet 3/2 { <dis bis>8-> [ \clef treble ais''16-> ] ( } fis8->~
-  \tupletNeutral \tuplet 6/4 { fis8 ) \clef bass dis16-> ( ais8-> ) fis16-> ( } |
-  \tuplet 3/2 { <e cis>8->)[ ais'16->] ( } fis8->~
-  \tuplet 6/4 { fis8 ) <e e,>16-> <cis cis,>8-> <ais ais,>16-> }
-  \revertTuplet \hideTupletTemp
-  \tuplet 6/4 {
-    <fis fis,>8-> <e e,>16-> <cis cis,>8-> <ais ais,>16->
-    % SPECIAL NOTE: currently no public domain editions has ottava.
-    % it may save a bit of vertical space... or not.
-    % \ottava #-1 \set Staff.ottavation = #"8"
-    <fis fis,>8-> <e e,>16-> <cis cis,>8-> c,16->
-    % \ottava 0
+  \tupletNeutral
+  \tuplet 3/2 { <dis'' a fis b,>8\arpeggio \clef treble b'16-> ( }
+  \addArticulation "accent" {
+    fis8\noBeam~
+    \tuplet 6/4 { fis8 ) dis16 ( b8 ) \clef bass fis16 }
+    \tuplet 3/2 { <dis bis>8 \clef treble ais''16 ( } fis8\noBeam~
+    \tuplet 6/4 { fis8 ) \clef bass dis16 ( ais8 ) fis16 ( } |
+    \tuplet 3/2 { <e cis>8 ) ais'16 ( } fis8\noBeam~
+    \tuplet 6/4 { fis8 ) <e e,>16 <cis cis,>8 <ais ais,>16 }
+    \revertTuplet \hideTupletTemp
+    \tuplet 6/4 {
+      <fis fis,>8 <e e,>16 <cis cis,>8 <ais ais,>16
+      % SPECIAL NOTE: currently no public domain editions has ottava.
+      % it may save a bit of vertical space... or not.
+      % \ottava #-1 \set Staff.ottavation = #"8"
+      <fis fis,>8 <e e,>16 <cis cis,>8 c,16
+      % \ottava 0
+    }
   }
 
   % bar 32
@@ -1076,6 +1174,7 @@ Dynamics = {
     \context {
       \Score
       \omit TupletBracket
+      \override TupletBracket.avoid-slur = #'ignore
       \override DynamicTextSpanner.style = #'none
       % FIXME: packed-spacing is buggy with long dynamic text. See bar 3.
       % \override SpacingSpanner.packed-spacing = ##t
