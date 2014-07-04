@@ -16,11 +16,9 @@
 % - Probably possible to reimplement some music funcs & macros with tags
 
 %----- Known problems ------------------------------------------------
-% - It is next to impossible to have original layout; note
-%   density is too high. Most suggested methods, including
-%   SpacingSpanner.common-shortest-duration, can only affect
-%   spacing globally. Still investigating workarounds.
-% - Slurs at bar 36 and 57 are ugly
+% - It is next to impossible to have original layout; note density is
+%   too high. Setting system-count achieves the best result currently.
+% - Ugly broken slurs at end of bar 23 and 25
 % - This piece is basically a showcase for Lilypond's inept handling
 %   of tuplet number positioning. Most problems originate from tuplet
 %   number being placed at mid-point of tuplet bracket
@@ -58,11 +56,16 @@
     markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
     top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
     last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
-    % system-count = ???
+    
+    % page-count is not usable
+    system-count = 39  % 39 is the minimum without fatal layout problem
+                         % but still has note layout problem, e.g. bar 6 left hand
     % ragged-right = ##f
     ragged-last = ##f
     ragged-bottom = ##f
     ragged-last-bottom = ##f
+    
+    % debug-slur-scoring = ##t
 }
  
 %---------------------------------------------------------------------
@@ -120,14 +123,17 @@ revertTuplet = {
 % https://code.google.com/p/lilypond/issues/detail?id=2190
 % tuplet placement is sometimes not optimal, happens a lot here
 
-moveTuplet = % move *one* tuplet number for a relative offset
+% move tuplet number for a relative offset
+% should obsolete this because it is hard to predict where tuplets would
+% placed when layout changes
+moveTuplet =
 #(define-music-function (parser location offset)
    (number?)
    #{ \once \offset Y-offset $offset TupletNumber #}
 )
 
-% force invisible bracket to absolute position so
-% tuplet number is drawn at desired location
+% force invisible bracket to absolute position so tuplet number is drawn
+% at desired location. Better used with avoid-* properties
 moveTupletAbs = 
 #(define-music-function (parser location offset whiteout)
    (number? boolean?)
@@ -228,21 +234,17 @@ condAddAccent =
                (ly:music-set-property! m 'elements
                  (append es (list ar))))
            (set! tied? #f)
-           (for-each check-tie es)
-           ))
+           (for-each check-tie es)))
          ((eq? name 'NoteEvent)
           (begin
            (if (not tied?)
                (ly:music-set-property! m 'articulations
                  (append ar-list (list ar))))
            (set! tied? #f)
-           (for-each check-tie ar-list)
-           ))
+           (for-each check-tie ar-list)))
          (else (if (not (null? es))
                    (for-each
-                    (lambda(x) (add-articulation articulation x)) es)))
-         ))
-      )))
+                    (lambda(x) (add-articulation articulation x)) es))))))))
 
 
 % for supported articulation list, see lilypond doc section A.13
@@ -258,6 +260,9 @@ addArticulation =
    mus
 )
 
+% for debugging
+#(define (displaygrobprop g)
+   (display (ly:grob-basic-properties g)))
 
 %-------- Right Hand parts
 
@@ -295,7 +300,7 @@ RHpatternD = \relative c'' { % bar 6
 
 RHpatternE = \relative c'' { % bar 7
   \moveTupletAbs 5 ##f \tuplet 6/4 { <f d a f>4->~ q16 <d d'>-> }
-  \moveTupletAbs 4.5 ##f \tuplet 6/4 { <f a>16-> <c c'> <d f> <bes bes'> <d f> <a a'> }
+  \moveTupletAbs 5 ##f \tuplet 6/4 { <f a>16-> <c c'> <d f> <bes bes'> <d f> <a a'> }
   \tuplet 6/4 { <c f>4~ q16 <a a'> }
   <c f>8 \tuplet 3/2 { <a f a,>16 q q }
 }
@@ -349,7 +354,7 @@ RHpatternK = \relative c' { % bar 15 + bar 16 first 3 quartet
   \stemUp <a f c a>8-> \tuplet 3/2 { <c, a f c>16 ( f a ) } \stemNeutral
   \addArticulation "accent" {
     \moveTuplet -1 \tuplet 6/4 { <c a f c>4~ q16 <ees c fis, ees> } |
-    \tuplet 6/4 { <d bes g d>4~ q16 <c fis, ees c> }
+    \moveTuplet -0.5 \tuplet 6/4 { <d bes g d>4~ q16 <c fis, ees c> }
     \tuplet 6/4 { <bes g d bes>4~ q16 <g ees c g> }
     \tuplet 3/2 { <f d bes f>8 <ees c ees,> <d bes d,> }
   }
@@ -371,7 +376,7 @@ RH = \relative c'' {
   \RHpatternJ |
   \RHpatternK
   \addArticulation "accent" {
-    \tuplet 5/4 {
+    \moveTupletAbs 5 ##f \tuplet 5/4 {
       <bes d e bes'>16 <a cis e a> <f a d f> <d f bes d> <g bes ees g>
     }
   } |
@@ -607,7 +612,14 @@ RH = \relative c'' {
   
   % bar 57
   \showTupletOnce
-  \tuplet 3/2 { <d f>16 \) r c\noBeam \( }
+  \tuplet 3/2 {
+    <d f>16 \) r
+    % for default value of max-ratio (3), end points will stick close to
+    % note heads, therefore slur will have large curvature
+    \once \override PhrasingSlur.details.head-slur-distance-max-ratio = #4
+    \once \override PhrasingSlur.height-limit = #4
+    c\noBeam \(
+  }
   \tuplet 5/4 8 { d32 c bes g f bes g f ees d }
   \tuplet 6/4 { ees ges a b c ees }
   \showTupletOnce
@@ -655,7 +667,6 @@ LHpatternA = % bar 1, 1st half
      \temporary \override TupletNumber.stencil = #stencil
      \relative c, {
        \moveTupletAbs -3 ##f  % 2nd tuplet position is ok
-       \shape #'((0 . 0) (3 . 0) (0 . 0) (0 . 0)) PhrasingSlur
        \tuplet 6/4 4 {
          \condAddAccent #accent-on-first-note <bes bes,>16\( f' bes d e f
          <bes d> g f d bes f\)
@@ -667,7 +678,6 @@ LHpatternA = % bar 1, 1st half
 
 LHnotesB = \relative c, {
   \moveTupletAbs -3 ##f  % 2nd tuplet position is ok
-  \shape #'((0 . 0) (3 . 0) (0 . 0) (0 . 0)) PhrasingSlur
   \tuplet 6/4 4 { bes16\( f' bes d e f <bes d> g f d bes f\) }
 }
 
@@ -686,7 +696,8 @@ LHnotesC = \relative c, {
   \tuplet 6/4 4 {
     bes16 \(  f' bes d e f <bes d> f d bes f bes,~ |
     bes \)
-    \shape #'((0 . 0) (3 . 1.5) (0 . 0) (0 . -2)) PhrasingSlur
+    % right end point can't reach note when slope factor >= 5
+    \once \override PhrasingSlur.details.steeper-slope-factor = #3
     f' \( bes d e f <bes d> g f d_1 bes_2 f_3 \)
   }
 }
@@ -717,22 +728,6 @@ LHpatternD = % bar 4 or bar 6, 2nd half
      }
    #}
 )
-
-%{
-LHpatternE = % bar 5, 2nd half
-#(define-music-function (parser location accent-on-fourth-note)
-   (boolean?)
-   #{
-     \relative c, {
-       \tuplet 6/4 4 {
-         \hideTupletOnce <f bes,>16\( bes d
-         \condAddAccent #accent-on-fourth-note f bes, d
-         \showTupletOnce f bes d f8\) <d bes g>16->
-       }
-     }
-   #}
-)
-%}
 
 LHnotesF = \relative c {
   \tuplet 6/4 4 {
@@ -785,8 +780,12 @@ LHpatternH = \relative c { % bar 8, 2nd half
 }
 
 LHpatternI = \relative c { % bar 9, 1st half
-  \shape #'((0 . -0.5) (0 . 1.5) (0 . 0) (0 . -1.5)) PhrasingSlur
-  \hideTupletOnce \tuplet 6/4 { c16\( aes'_3 b d_1 e_2 f_1 }
+  \hideTupletOnce \tuplet 6/4 {
+    \once \override PhrasingSlur.details.region-size = #6
+     % discourage steep slope around end-points
+    \once \override PhrasingSlur.details.edge-slope-exponent = #500
+    c16\( aes'_3 b d_1 e_2 f_1
+  }
   <e bes g>8.\) <f,, f,>16->
 }
 
@@ -817,7 +816,7 @@ LHpatternL = \relative c { % bar 15 + bar 16 first half
   \unset subdivideBeams
   \addArticulation "accent" {
     \tuplet 6/4 { <d bes g>4~ q16 ) <a c fis> }
-    \moveTupletAbs -3 ##f \tuplet 6/4 { <bes d g>4~ q16 <a ees c> }
+    \moveTupletAbs -3.5 ##f \tuplet 6/4 { <bes d g>4~ q16 <a ees c> }
   }
 }
 
@@ -966,7 +965,7 @@ LH = \relative c'
   }
 
   % bar 32
-  % FIXME: accent is too far away? But slur curve depends on automatic
+  % Accent is too far away? But slur curve depends on automatic
   % layout and note density, so there's no reliable way of placing accent
   \tuplet 6/4 { c'16-> ( g'' bes e f g } <bes, e>8 )
   \revertTuplet \showTupletTemp
@@ -1044,7 +1043,7 @@ LH = \relative c'
   \clef treble d f4 <a ees c ges>8 |
   
   % bar 56
-  <bes d, f,>8\arpeggio \) \clef bass <f,, bes,> \( bes d
+  <bes d, f,>8\arpeggio\noBeam \) \clef bass <f,, bes,> \( bes d
   f bes4 <c ges ees>8 |
   
   % bar 57
@@ -1179,9 +1178,8 @@ Dynamics = {
       % FIXME: packed-spacing is buggy with long dynamic text. See bar 3.
       % \override SpacingSpanner.packed-spacing = ##t
       
-      % FIXME: Failed to get this to work for individual bars
-      % bar 10 would go insane for tighter values, or
-      % some bar alone would occupy whole system for laxer values
+      % Able to do some compression for 1/16 (8, 24, 32 won't work)
+      % But still not as good as setting system-count manually
       % \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1 16)
     }
   }
