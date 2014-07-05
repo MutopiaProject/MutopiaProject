@@ -179,6 +179,7 @@ graceStyle = \applyContext
                      (cadddr x)))
      (ly:context-property context 'graceSettings)))
 
+% unapply grace note style
 noGraceStyle = \applyContext
 #(lambda (context)
    (map (lambda (x) (ly:context-pushpop-property
@@ -187,17 +188,31 @@ noGraceStyle = \applyContext
                      (caddr x)))
      (ly:context-property context 'graceSettings)))
 
-% based on LilyPond scheme tutorial example
-% used in some left hand patterns
-condAddAccent =
-#(define-music-function (parser location toggle note)
+% show/hide fingering
+toggleFinger =
+#(define-music-function (parser location finger-visible music)
    (boolean? ly:music?)
-   "Conditionally add accent to note, determined via argument"
-   (if toggle
-       (ly:music-set-property! note 'articulations
-         (append (ly:music-property note 'articulations)
-           (list (make-music 'ArticulationEvent 'articulation-type "accent")))))
-       note)
+   (define stencil (if finger-visible ly:text-interface::print #f))
+   #{
+     \temporary \override Fingering.stencil = #stencil
+     \hideTupletTemp
+     $music
+     \revertTuplet
+     \revert Fingering.stencil
+   #}
+)
+
+% show/hide tuplet number
+toggleTup =
+#(define-music-function (parser location tup-visible music)
+   (boolean? ly:music?)
+   (define stencil (if tup-visible ly:tuplet-number::print #f))
+   #{
+     \temporary \override TupletNumber.stencil = #stencil
+     $music
+     \revertTuplet
+   #}
+)
 
 %-------- The following funcs are for repeatedly adding articulation
 
@@ -657,24 +672,17 @@ RH = \relative c'' {
 
 
 %-------- Left Hand parts
-
+LHnotesA = \relative c, {
+  \moveTupletAbs -3 ##f  % 2nd tuplet position is ok
+  \tuplet 6/4 4 {
+    \tag #'accents <bes bes,>16 \( f' bes d e f
+    <bes d> g f d bes f\)
+  }
+}
 
 LHpatternA = % bar 1, 1st half
-#(define-music-function (parser location tup-visible accent-on-first-note)
-   (boolean? boolean?)
-   (define stencil (if tup-visible ly:tuplet-number::print #f))
-   #{
-     \temporary \override TupletNumber.stencil = #stencil
-     \relative c, {
-       \moveTupletAbs -3 ##f  % 2nd tuplet position is ok
-       \tuplet 6/4 4 {
-         \condAddAccent #accent-on-first-note <bes bes,>16\( f' bes d e f
-         <bes d> g f d bes f\)
-       }
-     }
-     \revertTuplet
-   #}
-)
+#(define-music-function (parser location tup-visible) (boolean?)
+   #{ \toggleTup #tup-visible \LHnotesA #} )
 
 LHnotesB = \relative c, {
   \moveTupletAbs -3 ##f  % 2nd tuplet position is ok
@@ -682,15 +690,8 @@ LHnotesB = \relative c, {
 }
 
 LHpatternB = % bar 1, 2nd half
-#(define-music-function (parser location tup-visible)
-   (boolean?)
-   (define stencil (if tup-visible ly:tuplet-number::print #f))
-   #{
-     \temporary \override TupletNumber.stencil = #stencil
-     \LHnotesB
-     \revertTuplet
-   #}
-)
+#(define-music-function (parser location tup-visible) (boolean?)
+   #{ \toggleTup #tup-visible \LHnotesB #} )
 
 LHnotesC = \relative c, {
   \tuplet 6/4 4 {
@@ -703,31 +704,18 @@ LHnotesC = \relative c, {
 }
 
 LHpatternC = % bar 3 2nd half + bar 4 1st half
-#(define-music-function (parser location finger-visible)
-   (boolean?)
-   (define stencil (if finger-visible ly:text-interface::print #f))
-   #{
-     \temporary \override Fingering.stencil = #stencil
-     \hideTupletTemp
-     \LHnotesC
-     \revertTuplet
-     \revert Fingering.stencil
-   #}
-)
+#(define-music-function (parser location finger-visible) (boolean?)
+   #{ \toggleFinger #finger-visible \LHnotesC #})
 
-LHpatternD = % bar 4 or bar 6, 2nd half
-#(define-music-function (parser location pitch accent-on-fourth-note)
-   (ly:pitch? boolean?)
-   #{
-     \relative c, {
-       \tuplet 6/4 4 {
-         \hideTupletOnce <f bes,>16\( bes d
-         \condAddAccent #accent-on-fourth-note f bes, d
-         \showTupletOnce f bes d f8\) <$pitch bes g>16->
-       }
-     }
-   #}
-)
+LHpatternD = \relative c, { % bar 4 or bar 6, 2nd half
+  \tuplet 6/4 4 {
+    \hideTupletOnce <f bes,>16\( bes d
+    \tag #'(accents end-ees end-d) <f> bes, d
+    \showTupletOnce f bes d f8\)
+    \tag #'end-ees <ees bes g>16->
+    \tag #'end-d   <d   bes g>16->
+  }
+}
 
 LHnotesF = \relative c {
   \tuplet 6/4 4 {
@@ -741,17 +729,8 @@ LHnotesF = \relative c {
 }
 
 LHpatternF = % bar 7, 1st half
-#(define-music-function (parser location finger-visible)
-   (boolean?)
-   (define stencil (if finger-visible ly:text-interface::print #f))
-   #{
-     \temporary \override Fingering.stencil = #stencil
-     \hideTupletTemp
-     \LHnotesF
-     \revertTuplet
-     \revert Fingering.stencil
-   #}
-)
+#(define-music-function (parser location finger-visible) (boolean?)
+   #{ \toggleFinger #finger-visible \LHnotesF #} )
 
 LHnotesG = \relative c {
   \tuplet 6/4 4 {
@@ -761,17 +740,8 @@ LHnotesG = \relative c {
 }
 
 LHpatternG = % bar 7, 2nd half
-#(define-music-function (parser location finger-visible)
-   (boolean?)
-   (define stencil (if finger-visible ly:text-interface::print #f))
-   #{
-     \temporary \override Fingering.stencil = #stencil
-     \hideTupletTemp
-     \LHnotesG
-     \revertTuplet
-     \revert Fingering.stencil
-   #}
-)
+#(define-music-function (parser location finger-visible) (boolean?)
+   #{ \toggleFinger #finger-visible \LHnotesG #} )
 
 LHpatternH = \relative c { % bar 8, 2nd half
   \hideTupletTemp
@@ -807,11 +777,11 @@ LHpatternL = \relative c { % bar 15 + bar 16 first half
   \set subdivideBeams = ##t
   % move tuplet number away from slur
   \once \tupletUp \tuplet 3/2 { <a d,>16 ( d f ) } r8
-  \hideTupletOnce   \tuplet 6/4 { <a, d,>16 ( d f ) f ( a <bes des,>-> }
+  \hideTupletOnce \tuplet 6/4 { <a, d,>16 ( d f ) f ( a <bes des,>-> }
   % NOTE: In both Gutheil and Muzgiz editions, there is no slur on
   % first occurance of { <f c'>16 a'8 }, but slur exists on 2nd occurance
   \once \tupletUp \tuplet 3/2 { <a c,>8-> ) <c, f,>16 ( } a'8 )
-  \hideTupletOnce   \tuplet 6/4 { <c, f,>16 ( f a ) a ( c <ees fis,>-> } |
+  \hideTupletOnce \tuplet 6/4 { <c, f,>16 ( f a ) a ( c <ees fis,>-> } |
 
   \unset subdivideBeams
   \addArticulation "accent" {
@@ -820,26 +790,30 @@ LHpatternL = \relative c { % bar 15 + bar 16 first half
   }
 }
 
-%%% LHpatternA (tuplet-visible, accent-on-first-note)
-%%% LHpatternB (tuplet-visible)
-%%% LHpatternD (pitch-of-last-note, accent-on-fourth-note)
+%%% LHpatternA/B (tuplet-visible)
 %%% LHpatternC/F/G (fingering-visible)
+%%% \pushToTag #'accents -> \LHpatternA/D   (accent on certain note)
+%%% tags #'end-ees and #'end-d control which last note to use on patternD
 
 LH = \relative c'
 {
   \tupletDown
-  \LHpatternA ##t ##f \LHpatternB ##t |
-  \LHpatternA ##f ##f \LHpatternB ##f |
-  \LHpatternA ##f ##f \LHpatternC ##t \LHpatternD ees ##t |
-  \LHpatternA ##f ##f \LHpatternC ##f \LHpatternD d   ##t |
-  \LHpatternF ##t     \LHpatternG ##t |
-  \LHpatternF ##f     \LHpatternH |
-  \LHpatternI         \LHpatternJ |
+  \LHpatternA ##t \LHpatternB ##t |
+  \LHpatternA ##f \LHpatternB ##f |
+  \LHpatternA ##f \LHpatternC ##t
+  \pushToTag #'accents -> \keepWithTag #'end-ees \LHpatternD |
+  \LHpatternA ##f \LHpatternC ##f
+  \pushToTag #'accents -> \keepWithTag #'end-d   \LHpatternD |
+  \LHpatternF ##t \LHpatternG ##t |
+  \LHpatternF ##f \LHpatternH |
+  \LHpatternI     \LHpatternJ |
   \LHpatternK |
 
   \barNumberCheck 11
-  \LHpatternA ##f ##t \LHpatternC ##f \LHpatternD ees ##f |
-  \LHpatternA ##f ##f \LHpatternC ##f \LHpatternD d   ##f |
+  \pushToTag #'accents -> \LHpatternA ##f
+  \LHpatternC ##f \keepWithTag #'end-ees \LHpatternD |
+  \LHpatternA ##f
+  \LHpatternC ##f \keepWithTag #'end-d   \LHpatternD |
   \LHpatternL
   \showTupletTemp
   \addArticulation "accent" {
@@ -874,7 +848,7 @@ LH = \relative c'
       <aes fes aes, des,>2\arpeggio )
       bes8--[ ( ces--] des--\arpeggio [ ees--] |
       <ces ees, aes,>2.-- )
-      % FIXME phrasingSlur is ugly
+      % FIXME Slur is ugly, bad end point
       d8-- ( ees-- |
       <f~ ces aes>2 f4*2/3 ) ges8*2/3-- ( aes8-- bes-- ) |
       <ges bes, ges bes, ees,>1--\arpeggio |
@@ -1005,16 +979,18 @@ LH = \relative c'
   
   \barNumberCheck 38
   \tupletDown
-  \LHpatternA ##f ##f \LHpatternC ##f \LHpatternD ees ##t |
-  \LHpatternA ##f ##f \LHpatternC ##f \LHpatternD d   ##t |
-  \LHpatternF ##t     \LHpatternG ##t |
-  \LHpatternF ##f     \LHpatternH |
-  \LHpatternI         \LHpatternJ |
+  \LHpatternA ##f \LHpatternC ##f \pushToTag #'accents -> \keepWithTag #'end-ees \LHpatternD |
+  \LHpatternA ##f \LHpatternC ##f \pushToTag #'accents -> \keepWithTag #'end-d \LHpatternD |
+  \LHpatternF ##t \LHpatternG ##t |
+  \LHpatternF ##f \LHpatternH |
+  \LHpatternI     \LHpatternJ |
   \LHpatternK |
   
   \barNumberCheck 46
-  \LHpatternA ##f ##t \LHpatternC ##f \LHpatternD ees ##f |
-  \LHpatternA ##f ##f \LHpatternC ##f \LHpatternD d   ##f |
+  \pushToTag #'accents -> \LHpatternA ##f
+  \LHpatternC ##f \keepWithTag #'end-ees \LHpatternD |
+  \LHpatternA ##f
+  \LHpatternC ##f \keepWithTag #'end-d   \LHpatternD |
   \LHpatternL
   \tuplet 3/2 { <d'' f bes>8-> <fis fis,>-> <g g,>-> }
   \tuplet 5/4 { <c, c,>16 <d d,> <fis fis,> <g g,> <a a,> } |
