@@ -13,11 +13,11 @@
 % - Still considering whether to follow all tuplet number visibility
 %   in any edition. Gutheil and Muzyka differ a little in this area,
 %   and showing most numbers again in latter part is repetitive
-% - Probably possible to reimplement some music funcs & macros with tags
 
 %----- Known problems ------------------------------------------------
 % - It is next to impossible to have original layout; note density is
-%   too high. Setting system-count achieves the best result currently.
+%   too high. On stable (2.18) version, setting system-count achieves the
+%   best result, though best option is to use devel version.
 % - Ugly broken slurs at end of bar 23 and 25
 % - This piece is basically a showcase for Lilypond's inept handling
 %   of tuplet number positioning. Most problems originate from tuplet
@@ -35,8 +35,11 @@
 % The Mutopia Project
 % LilyPond template for keyboard solo piece
 %%--------------------------------------------------------------------
- 
-\version "2.18.2"
+
+
+% It is possible to lower requirement to 2.18.x but some problems
+% may surface, like bad tuplet layout in bar 6 left hand
+\version "2.19.1"
  
 %---------------------------------------------------------------------
 %--Paper-size setting must be commented out or deleted upon submission.
@@ -50,6 +53,14 @@
 %--Default staff size is 20
 % #(set-global-staff-size 20)
  
+ % from openlilylib
+ #(define (calculate-version ver-list)
+    ;; take a LilyPond version number as a three element list
+    ;; and calculate a integer representation
+    (+ (* 1000000 (first ver-list)) 
+      (* 1000 (second ver-list)) 
+      (third ver-list)))
+
 \paper {
     top-margin = 8\mm                              %-minimum top-margin: 8mm
     top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
@@ -57,9 +68,14 @@
     top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
     last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
     
-    % page-count is not usable
-    system-count = 39  % 39 is the minimum without fatal layout problem
-                         % but still has note layout problem, e.g. bar 6 left hand
+
+    % with 2.19 version the score is rendered into most compat layout by
+    % default, but for 2.18 the whole thing explode into 11-12 pages, so
+    % force system-count on older versions (the only one effective setting here)
+    % 39 is the minimum without fatal layout problem
+    #(if (> 2019000 (calculate-version (ly:version)))
+         (define system-count 39))
+
     % ragged-right = ##f
     ragged-last = ##f
     ragged-bottom = ##f
@@ -67,7 +83,7 @@
     
     % debug-slur-scoring = ##t
 }
- 
+
 %---------------------------------------------------------------------
 %--Refer to http://www.mutopiaproject.org/contribute.html
 %--for usage and possible values for header variables.
@@ -274,10 +290,6 @@ addArticulation =
    ; (display-scheme-music mus)
    mus
 )
-
-% for debugging
-#(define (displaygrobprop g)
-   (display (ly:grob-basic-properties g)))
 
 %-------- Right Hand parts
 
@@ -1140,7 +1152,6 @@ Dynamics = {
     \set PianoStaff.baseMoment = #(ly:make-moment 1 8)
     % setting connectArpeggios in Staff context won't work
     \set PianoStaff.connectArpeggios = ##t
-    \accidentalStyle Score.modern
     \new Staff = "RH" << \clef treble \key bes \major \time 4/4 \RH >>
     \new Dynamics << \Dynamics >>
     \new Staff = "LH" << \clef bass   \key bes \major \time 4/4 \LH >>
@@ -1151,12 +1162,6 @@ Dynamics = {
       \omit TupletBracket
       \override TupletBracket.avoid-slur = #'ignore
       \override DynamicTextSpanner.style = #'none
-      % FIXME: packed-spacing is buggy with long dynamic text. See bar 3.
-      % \override SpacingSpanner.packed-spacing = ##t
-      
-      % Able to do some compression for 1/16 (8, 24, 32 won't work)
-      % But still not as good as setting system-count manually
-      % \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1 16)
     }
   }
   \midi {
