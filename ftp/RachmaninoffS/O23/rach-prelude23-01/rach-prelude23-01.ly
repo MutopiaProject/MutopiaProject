@@ -10,9 +10,9 @@
 %   * starting a voice with grace note mess up some voice properties
 
 %----- Known problems ------------------------------------------------
-% - Some slurs need tweaking to look better, e.g.
-%   * Left hand slur spanning bar 22-23
-%   * Right hand slur spanning bar 4-5, 19-20, 27, 34-35
+% - Some artifacts need tweaking to look better, e.g.
+%   * Left hand slur spanning bar 22-23 (end point not reaching barline)
+%   * Last hairpin at bar 36 (should start at stem, not notehead left bound)
 % - MIDI completely broken
 %   * Sound volume is a mess because some dynamics are in its own staff while others are
 %     attached to LH / RH.
@@ -110,6 +110,28 @@ hideTempo = { % for controlling midi speed
   \once \omit Score.MetronomeMark
 }
 
+#(define (shape-if-broken grob)
+   ; Fix end point of first segment of broken slur, raise to above staff lines,
+   ; like \shape #'(((0 . 0)(0 . 0)(0 . 1)(0 . 1)) ()) Slur
+   ; but only does so if slur is broken between 2 staves
+   ; base on lilypond doc Difficult Tweaks example
+   (let* (
+           (orig (ly:grob-original grob))
+           (siblings (if (ly:grob? orig)
+                         (ly:spanner-broken-into orig)
+                         '())))
+     (if (>= (length siblings) 2)
+         (let* (
+                 (points (ly:slur::calc-control-points (first siblings)))
+                 (pt-three (third points))
+                 (pt-four (fourth points)))
+           (set! pt-three (cons (car pt-three) (+ 1 (cdr pt-three))))
+           (set! pt-four  (cons (car pt-four ) (+ 1 (cdr pt-four ))))
+           (ly:grob-set-property! (first siblings) 'control-points
+             (append (list-head points 2) (list pt-three) (list pt-four)))
+           ))))
+         
+
 
 %-------- Right Hand parts
 
@@ -135,12 +157,15 @@ RH = \relative c'' {
   \once \override DynamicText.X-offset = #-4
   fis2(--^\mf e4^\> |
   d1)\! |
-  r4 d2(-- bis8.-- cis16-- |
+  r4
+  \once \override Slur.after-line-breaking = #shape-if-broken
+  d2(-- bis8.-- cis16-- |
   cis2.)-- b4-- |
   a1~ |
   a4 r r2 |
   r4
   \once \override DynamicText.X-offset = #-4
+  \once \override Slur.after-line-breaking = #shape-if-broken
   fis'(^\mf e4. cis8^\> |
   d1)\! |
   r4 d2( bis4)-- |
@@ -152,12 +177,16 @@ RH = \relative c'' {
   \once \override DynamicText.X-offset = #-4.5
   cis'4.^\mf--( a8--) |
   a2-- \clef bass cis,,4.-- a8-- |
-  a2-- \clef treble cis''4--~\( \tuplet 3/2 { cis8 cis,-- gis'-- } |
+  a2-- \clef treble
+  \shape #'((0.5 . 0)(0.5 . 0)(-0.5 . 0)(-0.5 . 0)) Tie
+  cis''4--~\( \tuplet 3/2 { cis8 cis,-- gis'-- } |
   a2--\) \clef bass a,,4.-- fis8-- |
   fis2-- \clef treble <fis'' fis'>4.-- <d d'>8-- |
   q2-- \clef bass fis,,4.-- d8-- |
   d2-- \clef treble <fis'' fis'>8-- fis--~
-  \subBeam fis16 fis16(
+  \subBeam fis16
+  \shape #'((0 . -0.5)(0 . 1)(0 . 0)(0 . 0)) Slur
+  fis16(
   \tuplet 3/2 { <cis cis'> fis <cis cis'> } |
   <d d'>2--) \clef bass d,,4.-- b8-- |
   
@@ -182,7 +211,11 @@ RH = \relative c'' {
   % bar 30-32
   << { fis'2.-- } \\ { <fis, a>8 s8 s2 } >> e'4-- |
   d2.-- bis4-- |
-  cis2-- a4..-- fis16-- |
+  cis2--
+  \hideTempo \tempo 4 = 55
+  \once \override TextScript.X-offset = #-5
+  a4..--^\markup{\larger \italic "rit."}
+  fis16-- |
   
   % bar 33-35
   % see left hand for tempo mark
@@ -222,10 +255,8 @@ RH = \relative c'' {
     \relative c' {
       \voiceOne
       cis'16_( a fis e
-      \hideTempo \tempo 4 = 52
-      \subBeam fis^\markup{\italic "rit."} d
+      \subBeam fis^\markup{\larger \italic "rit."} d
       \tuplet 3/2 { b16 gis cis } |
-      \hideTempo \tempo 4 = 48
       fis,1) |
       s2
     }
@@ -269,8 +300,9 @@ LHone = \relative c' {
   a( b gis a g a fis g eis fis e fis dis e d e) \clef bass |
   \grace { \scaleDurations 2/3 {  a,,8( e' } } \clef treble cis'16^\< a' d, a')\!
   \repeat unfold 2 { dis,^\>--( a' e\! a) } e^\>--( a eis\! a) |
-  eis--( a fis a) <cis, fis>( a' <fis gis> b <fis gis> b <e, a> cis' <fis, a> cis' <f, a> d' |
-  <fis, a cis> dis' <e, a cis> e') dis,--^\p ( a' e a )
+  eis--( a fis a) <cis, fis>( a' <fis gis> b
+  <fis gis>^\< b <e, a> cis' <fis, a> cis' <f, a> d' |
+  <fis, a cis>^\> dis' <e, a cis>\! e') dis,--^\p ( a' e a )
   dis,--( a' e a) e--( a eis a) |
 
   % first beat of bar 16
@@ -320,8 +352,9 @@ LHthree = \relative c, {
   d'8( e f fis) a,( b c cis) |
   
   % bar 27-29
-  d16-- \( aes ees'-- f, e'-- d f-- aes,
-  \clef treble eis'-- <b d> fis'-- <b, d> fisis'-- <b, cis> gis'-- <b, cis> \) |
+  \shape #'((0 . 0)(4 . 2)(0 . 0)(0 . -2)) Slur
+  d16-- ( aes ees'-- f, e'-- d f-- aes,
+  \clef treble eis'-- <b d> fis'-- <b, d> fisis'-- <b, cis> gis'-- <b, cis> ) |
   \clef bass \appoggiatura { a,16 fis' cis' }
   gis'8( fis eis fis bis, cis) a( b) |
   % NOTE: follow Gutheil edition for 2nd left hand slur, instead of ending at
@@ -380,8 +413,9 @@ LH = {
 
   \oneVoice \relative c' {
     % 2nd quaver of bar 16 - 20
-    <cis eis>16( a' <d, fis> b' <dis, fis> b' <d, f> bis' <d, fis> bis' <cis, fis a> cis' |
-    <e, fis a> cis' <d, fis a> d') <gis,, d' fis>--( gis' <a, d fis> a')
+    <cis eis>16( a' <d, fis> b'
+    <dis, fis>^\< b' <d, f> bis' <d, fis> bis' <cis, fis a> cis' |
+    <e, fis a>^\> cis' <d, fis a>\! d') <gis,, d' fis>--( gis' <a, d fis> a')
     \repeat unfold 2 { <a, d fis>--( a' <ais, cis fis> ais') } |
     \repeat unfold 2 { <ais, cis fis>--( ais' <b, d fis> b') }
     <b, d fis>( b' <cis, e fis> cis' <b, d fis> cis' <bes, e g> d' |
@@ -411,11 +445,10 @@ LH = {
   \oneVoice \relative c'' {
     % bar 32-36
     <a fis cis>( b <gis e> a <fis d> gis
-    \set Score.tempoHideNote = ##t
-    \tempo \markup{ \huge{ "rit." }} 4 = 54
     <e a,> fis
     <dis b> e <d fis,> e \clef bass <cis eis,> d <b cis,> cis) |
     % align with grace notes, so not marking tempo on right hand
+    \once \set Score.tempoHideNote = ##t
     \tempo \markup{ \huge{ "a tempo" } } 4 = 58
     \grace { \scaleDurations 2/3 { fis,,8^( cis' } } <fis a>16 fis' <gis, b> fis' <a, bis>^\< fis' <a, cis> fis')\!
     <a, cis>( fis'^\> <gis, b> fis'\! <a, bis>^\< fis' <a, cis> fis')\! |
@@ -476,11 +509,8 @@ Dynamics = {
   % bar 11-20
   s4 s2.\dim |
   \barLinePad s1\pp |
-  s1 |
-  s2 s2\< |
-  s8\> s8\! s2. |
-  s2 s2\< |
-  s8\> s8\! s4 s2\cresc |
+  s1*4 |
+  s2 s2\cresc |
   s2\! s2\< |
   s8\> s8\! s4 s2\cresc |
   s2\! s2\< |
@@ -504,9 +534,15 @@ Dynamics = {
   s2.\dim |
   s4\pp s2. |
   s1*3 |
+  \hideTempo \tempo 4 = 56
   \barLinePad s1\pp |
-  s1 |
-  s2 s4\< s4\f |
+  s2.
+  \hideTempo \tempo 4 = 52
+  s4 |
+  s2
+  \hideTempo \tempo 4 = 48
+  s4\< s4\f |
+  \hideTempo \tempo 4 = 44
   s2\dim s4.\> s8\! |
   s1\pp \bar "|."
 }
