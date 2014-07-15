@@ -3,7 +3,7 @@
 \language "english"
 
 \header {
-  title        = "Catacombae. Sepulcrum romanum."
+  %title        = "Catacombae. Sepulcrum romanum."
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -29,7 +29,7 @@
       (default-dynamic-absolute-volume dynamic)))
 
 dimin = \markup { \italic "dim." }
-cresc = \markup { \italic "cresc." }
+cres = \markup { \italic "cresc." }
 pocoCresc = \markup { \whiteout { \italic "poco a poco cresc." } }
 attacca = \markup { \italic "     attacca" }
 ffsf = #(make-dynamic-script "ffsf")
@@ -51,7 +51,7 @@ upper = \relative c' {
   \tempo "Largo"
   | b2. \ff \fermata
   | g2. \p \fermata
-  | g'2. _\cresc \fermata
+  | g'2. _\cres \fermata
   | <g, b fs'>2. ~ _\ffsf
   | q _\pdim
   |
@@ -158,22 +158,27 @@ global = {
   \accidentalStyle piano
 }
 
-\score {
-  \new PianoStaff <<
-    \set Score.dynamicAbsoluteVolumeFunction = #myDynamics
-    \new Staff = "up" {
-      %\set Score.dynamicAbsoluteVolumeFunction = #myDynamics
-      \global
-      \upper
-    }
-    \new Staff = "down" {
-      \global
-      \lower
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "No. 8 Catacombae. Sepulcrum romanum."
   }
-  \midi {
-    \tempo 4 = 60
+  \score {
+    \new PianoStaff <<
+      \set Score.dynamicAbsoluteVolumeFunction = #myDynamics
+      \new Staff = "up" {
+        %\set Score.dynamicAbsoluteVolumeFunction = #myDynamics
+        \global
+        \upper
+      }
+      \new Staff = "down" {
+        \global
+        \lower
+      }
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 60
+    }
   }
 }

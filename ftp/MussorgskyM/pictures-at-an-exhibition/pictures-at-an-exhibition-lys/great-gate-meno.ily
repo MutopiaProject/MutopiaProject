@@ -14,7 +14,7 @@ tupletOn = {
   \undo \omit TupletNumber
 }
 
-noDash = \override DynamicTextSpanner #'dash-period = #-1.0
+noDash = \override DynamicTextSpanner.dash-period = #-1.0
 
 menoUpper = \relative c'' {
   \tempo "Meno messo, sempre maestoso"

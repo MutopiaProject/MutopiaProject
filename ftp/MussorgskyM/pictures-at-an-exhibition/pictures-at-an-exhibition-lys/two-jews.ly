@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title        = "Deux juifs l'un riche et lautre pauvre"
+  %title        = "Deux juifs l'un riche et lautre pauvre"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -249,35 +249,39 @@ global = {
   \accidentalStyle piano
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" {
-      \global
-      \override TupletBracket.stencil = ##f
-      \set subdivideBeams = ##t
-      \highVoice 
-     }
-    \new Staff = "down" {
-      \clef bass
-      \global
-      <<
-        \new Voice { 
-          \voiceThree   
-          \lowerMiddle 
-        }
-        \new Voice { 
-          \voiceFour 
-          \override TupletBracket.stencil = ##f
-          \set subdivideBeams = ##t
-          \lowVoice 
-        }
-      >>
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "No. 6 Deux juifs l'un riche et lautre pauvre"
   }
-  \midi {
-    \tempo 4 = 40
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" {
+        \global
+        \override TupletBracket.stencil = ##f
+        \set subdivideBeams = ##t
+        \highVoice 
+       }
+      \new Staff = "down" {
+        \clef bass
+        \global
+        <<
+          \new Voice { 
+            \voiceThree   
+            \lowerMiddle 
+          }
+          \new Voice { 
+            \voiceFour 
+            \override TupletBracket.stencil = ##f
+            \set subdivideBeams = ##t
+            \lowVoice 
+          }
+        >>
+      }
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 40
+    }
   }
 }
-

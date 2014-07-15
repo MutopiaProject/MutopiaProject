@@ -3,7 +3,7 @@
 \language "english"
 
 \header {
-  title        = "[Promenade-6] Con mortius in lingua mortua"
+  %title        = "[Promenade-6] Con mortius in lingua mortua"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -216,20 +216,25 @@ global = {
   \accidentalStyle piano
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" \with { \remove Time_signature_engraver } {
-      \global
-      \upper
-    }
-    \new Staff = "down" \with { \remove Time_signature_engraver } {
-      \global
-      \lower
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "[Promenade-6] Con mortius in lingua mortua"
   }
-  \midi {
-    \tempo 4 = 76
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" \with { \remove Time_signature_engraver } {
+        \global
+        \upper
+      }
+      \new Staff = "down" \with { \remove Time_signature_engraver } {
+        \global
+        \lower
+      }
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 76
+    }
   }
 }

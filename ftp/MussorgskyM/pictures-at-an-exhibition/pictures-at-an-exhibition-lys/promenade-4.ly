@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title        = "[Promenade IV]"
+  %title        = "[Promenade IV]"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -112,24 +112,29 @@ global = {
   \accidentalStyle piano
 }
 
-\score {
-  \new PianoStaff 
-  <<
-    \new Staff = "up" {
-      \global
-      <<
-        \new Voice \upper
-        \new Voice \middle
-      >>
-    }
-    \new Staff = "down" {
-      \global
-      \lower
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "[Promenade IV]"
   }
-  \midi {
-    \tempo 4 = 60
+  \score {
+    \new PianoStaff 
+    <<
+      \new Staff = "up" {
+        \global
+        <<
+          \new Voice \upper
+          \new Voice \middle
+        >>
+      }
+      \new Staff = "down" {
+        \global
+        \lower
+      }
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 60
+    }
   }
 }

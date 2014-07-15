@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title        = "[Promenade II]"
+  %title        = "[Promenade II]"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -139,21 +139,26 @@ global = {
   \accidentalStyle piano
 }
 
-\score {
-  \new PianoStaff 
-  <<
-    \new Staff = "up" {
-      \global
-      \upper
-    }
-    \new Staff = "down" {
-      \global
-      \lower
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "[Promenade II]"
   }
-  \midi {
-    \tempo 4 = 88
+  \score {
+    \new PianoStaff 
+    <<
+      \new Staff = "up" {
+        \global
+        \upper
+      }
+      \new Staff = "down" {
+        \global
+        \lower
+      }
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 88
+    }
   }
 }

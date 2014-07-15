@@ -5,7 +5,7 @@
 \include "great-gate-meno.ily"
 
 \header {
-  title        = "La grande porte.  (Dans la capitale de Kiev.)"
+  %title        = "La grande porte.  (Dans la capitale de Kiev.)"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -24,33 +24,38 @@
  tagline = ##f
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" {
-      \clef treble
-      \allegroGlobal
-      \allegroUpper
-      \break
-      \menoGlobal
-      \menoUpper
-    }
-    \new Staff = "down" {
-      \clef bass
-      \allegroGlobal
-      \allegroLower
-      \break
-      \menoGlobal
-      \menoLower
-    }
-  >>
-  \layout {
-    \context {
-      \Score
-      \remove "Mark_engraver"
-      \consists #multi-mark-engraver
-    }
+\bookpart {
+  \header {
+    subtitle = "No. 10 La grande porte.  (Dans la capitale de Kiev.)"
   }
-  \midi {
-    \tempo 2 = 60
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" {
+        \clef treble
+        \allegroGlobal
+        \allegroUpper
+        \break
+        \menoGlobal
+        \menoUpper
+      }
+      \new Staff = "down" {
+        \clef bass
+        \allegroGlobal
+        \allegroLower
+        \break
+        \menoGlobal
+        \menoLower
+      }
+    >>
+    \layout {
+      \context {
+        \Score
+        \remove "Mark_engraver"
+        \consists #multi-mark-engraver
+      }
+    }
+    \midi {
+      \tempo 2 = 60
+    }
   }
 }

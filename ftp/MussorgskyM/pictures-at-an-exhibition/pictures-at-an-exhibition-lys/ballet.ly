@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title        = "Ballet des poussins dans leurs coques"
+  %title        = "Ballet des poussins dans leurs coques"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -274,38 +274,43 @@ global = {
 
 % No MIDI output
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" {
-      \global
-      \repeat volta 2 { \highVoice }
-      \repeat volta 2 {
-        <<
-          \new Voice { \voiceOne \highVoiceTwo }
-          \new Voice { \voiceTwo \upperMiddleTwo }
-        >>
+\bookpart {
+  \header {
+    subtitle = "No. 5 Ballet des poussins dans leurs coques"
+  }
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" {
+        \global
+        \repeat volta 2 { \highVoice }
+        \repeat volta 2 {
+          <<
+            \new Voice { \voiceOne \highVoiceTwo }
+            \new Voice { \voiceTwo \upperMiddleTwo }
+          >>
+        }
+        \repeat volta 2 { \highVoiceThree }
       }
-      \repeat volta 2 { \highVoiceThree }
+      \new Staff = "down" {
+        \global
+        \repeat volta 2 { \lowVoice }
+        \repeat volta 2 {
+          <<
+            \new Voice { \voiceOne \lowerMiddleTwo }
+            \new Voice { \voiceFour \lowVoiceTwoA }
+            \new Voice { \voiceTwo \lowVoiceTwoB }
+          >>
+        }
+        \repeat volta 2 {
+          <<
+            \new Voice { \voiceThree \lowerMiddleThree }
+            \new Voice { \voiceFour \lowVoiceThree }
+          >>
+        }
+      }
+    >>
+    \layout {
     }
-    \new Staff = "down" {
-      \global
-      \repeat volta 2 { \lowVoice }
-      \repeat volta 2 {
-        <<
-          \new Voice { \voiceOne \lowerMiddleTwo }
-          \new Voice { \voiceFour \lowVoiceTwoA }
-          \new Voice { \voiceTwo \lowVoiceTwoB }
-        >>
-      }
-      \repeat volta 2 {
-        <<
-          \new Voice { \voiceThree \lowerMiddleThree }
-          \new Voice { \voiceFour \lowVoiceThree }
-        >>
-      }
-    }
-  >>
-  \layout {
   }
 }
 
@@ -349,20 +354,27 @@ globalCoda = {
 
 % No MIDI output
 
-\score {
-  \new PianoStaff \with {
-    instrumentName = #"Coda"
-  }<<
-    \new Staff {
-      \globalCoda
-      \highVoiceCoda
+\bookpart {
+  \header {
+    title = ""
+    subtitle = ""
+    composer = ""
+  }
+  \score {
+    \new PianoStaff \with {
+      instrumentName = #"Coda"
+    }<<
+      \new Staff {
+        \globalCoda
+        \highVoiceCoda
+      }
+      \new Staff {
+        \globalCoda
+        \lowVoiceCoda
+      }
+    >>
+    \layout {
     }
-    \new Staff {
-      \globalCoda
-      \lowVoiceCoda
-    }
-  >>
-  \layout {
   }
 }
 

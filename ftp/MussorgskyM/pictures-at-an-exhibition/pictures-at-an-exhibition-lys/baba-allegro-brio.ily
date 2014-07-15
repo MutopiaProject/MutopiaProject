@@ -5,7 +5,8 @@
 sfcrescsf = #(make-dynamic-script #{ 
   \markup { \dynamic "sf" \normal-text { \italic "cresc." } \dynamic "sf" } 
 #} )
-cres = \markup { \large \italic "cresc." }
+
+cres = \markup { \large { \italic "cresc." } }
 
 forceShiftOn = \override NoteColumn.force-hshift = #1.2
 forceShiftOff = \override NoteColumn.force-hshift = #0

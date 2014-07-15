@@ -3,7 +3,7 @@
 \include "multi-mark-engraver.ily"
 
 \header {
-  title        = "Bydlo"
+  %title        = "Bydlo"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -301,19 +301,24 @@ lower = {
   >>
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" \upper
-    \new Staff = "down" \lower
-  >>
-  \layout {
-      \context {
-      \Score
-      \remove "Mark_engraver"
-      \consists #multi-mark-engraver
-    }
+\bookpart {
+  \header {
+    subtitle = "No. 4 Bydlo"
   }
-  \midi {
-    \tempo 4 = 50
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" \upper
+      \new Staff = "down" \lower
+    >>
+    \layout {
+        \context {
+        \Score
+        \remove "Mark_engraver"
+        \consists #multi-mark-engraver
+      }
+    }
+    \midi {
+      \tempo 4 = 50
+    }
   }
 }

@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title        = "No 1. Gnomus"
+  %title        = "No 1. Gnomus"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -54,6 +54,7 @@ pocoAccel = {
 }
 veloc = \markup { \italic "velocissimo" }
 forza = \markup { \italic "con tutta forza" }
+noDash = \override DynamicTextSpanner.dash-period = #-1.0
 
 upper = {
   \time 3/4
@@ -423,23 +424,29 @@ lower = {
 global = {
   \key ef \minor
   \accidentalStyle piano
+  \noDash
 }
 
-\score {
-  \new PianoStaff 
-  <<
-    \new Staff = "up" {
-      \global
-      \upper
-    }
-    \new Staff = "down" {
-      \global
-      \lower
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "No 1. Gnomus"
   }
-  \midi {
-    \tempo 4 = 88
+  \score {
+    \new PianoStaff 
+    <<
+      \new Staff = "up" {
+        \global
+        \upper
+      }
+      \new Staff = "down" {
+        \global
+        \lower
+      }
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 88
+    }
   }
 }

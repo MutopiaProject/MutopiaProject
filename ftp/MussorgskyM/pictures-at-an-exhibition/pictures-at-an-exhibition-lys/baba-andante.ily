@@ -19,7 +19,7 @@ adjustFermata = {
 }
 beamGap = \override Beam.gap-count = #4
 omitDynamics = \once \omit Staff.DynamicText
-noDash = \override DynamicTextSpanner #'dash-period = #-1.0
+noDash = \override DynamicTextSpanner.dash-period = #-1.0
 
 #(define (myDynamics dynamic)
     (if (equal? dynamic "sf")

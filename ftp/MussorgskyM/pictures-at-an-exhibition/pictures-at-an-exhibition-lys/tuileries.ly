@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title        = "Tuileries (Dispute d'enfants après jeux.)"
+  %title        = "Tuileries (Dispute d'enfants après jeux.)"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -218,14 +218,19 @@ lower = {
   >>
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" \upper
-    \new Staff = "down" \lower
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "No.3 Tuileries (Dispute d'enfants après jeux.)"
   }
-  \midi {
-    \tempo 4 = 120
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" \upper
+      \new Staff = "down" \lower
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 120
+    }
   }
 }

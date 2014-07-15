@@ -6,7 +6,7 @@
 \include "baba-allegro-molto.ily"
 
 \header {
-  title        = "La cabane sur des pattes de poule (Baba-Jaga)"
+  %title        = "La cabane sur des pattes de poule (Baba-Jaga)"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -27,31 +27,35 @@
  tagline = ##f
 }
 
-%showLastLength = R2*90
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" {
-      \override DynamicTextSpanner #'dash-period = #-1.0 
-      \clef treble
-      \globalAllegroBrio
-      \upperAllegroBrio
-      \globalAndante
-      \upperAndante
-      \globalAllegroMolto
-      \upperAllegroMolto
-    }
-    \new Staff = "down" {
-      \clef bass
-      \globalAllegroBrio
-      \lowerAllegroBrio
-      \globalAndante
-      \lowerAntante
-      \globalAllegroMolto
-      \lowerAllegroMolto
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "No. 9 La cabane sur des pattes de poule (Baba-Jaga)"
   }
-  \midi {
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" {
+        \override DynamicTextSpanner #'dash-period = #-1.0 
+        \clef treble
+        \globalAllegroBrio
+        \upperAllegroBrio
+        \globalAndante
+        \upperAndante
+        \globalAllegroMolto
+        \upperAllegroMolto
+      }
+      \new Staff = "down" {
+        \clef bass
+        \globalAllegroBrio
+        \lowerAllegroBrio
+        \globalAndante
+        \lowerAntante
+        \globalAllegroMolto
+        \lowerAllegroMolto
+      }
+    >>
+    \layout {
+    }
+    \midi {
+    }
   }
 }

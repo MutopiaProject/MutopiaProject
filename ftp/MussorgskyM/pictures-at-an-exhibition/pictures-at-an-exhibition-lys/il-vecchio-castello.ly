@@ -2,7 +2,7 @@
 \language "english"
 
 \header {
-  title        = "Il Vecchio Castello"
+  %title        = "No. 2 Il Vecchio Castello"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -545,14 +545,19 @@ lower = {
   >>
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" \upper
-    \new Staff = "down" \lower
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "No. 2 Il Vecchio Castello"
   }
-  \midi {
-    \tempo 4. = 60
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" \upper
+      \new Staff = "down" \lower
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4. = 60
+    }
   }
 }

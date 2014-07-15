@@ -3,7 +3,7 @@
 \language "english"
 
 \header {
-  title        = "Limoges. Le marché (La grande nouvelle)"
+  %title        = "Limoges. Le marché (La grande nouvelle)"
   composer     = "Modest Moussorgsky (1839 - 1881)"
   style        = "Romantic"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
@@ -284,20 +284,25 @@ global = {
   \accidentalStyle piano
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "up" {
-      \global
-      \upper
-    }
-    \new Staff = "down" {
-      \global
-      \lower
-    }
-  >>
-  \layout {
+\bookpart {
+  \header {
+    subtitle = "No. 7 Limoges. Le marché (La grande nouvelle)"
   }
-  \midi {
-    \tempo 4 = 108
+  \score {
+    \new PianoStaff <<
+      \new Staff = "up" {
+        \global
+        \upper
+      }
+      \new Staff = "down" {
+        \global
+        \lower
+      }
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 108
+    }
   }
 }
