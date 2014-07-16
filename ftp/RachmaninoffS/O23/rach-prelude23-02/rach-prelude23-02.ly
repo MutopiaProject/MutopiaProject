@@ -9,16 +9,14 @@
 %   lengthened so whole passage becomes a 4/4 for easier counting (with
 %   additional effect of emulating real performance). Left hand notes
 %   are individually scaled to align with right hand notes.
-%   I don't know any good way to compress note spacing yet.
 % - Still considering whether to follow all tuplet number visibility
 %   in any edition. Gutheil and Muzyka differ a little in this area,
-%   and showing most numbers again in latter part is repetitive
+%   and showing numbers again in 2nd occurance of main theme is repetitive
 
 %----- Known problems ------------------------------------------------
 % - It is next to impossible to have original layout; note density is
 %   too high. On stable (2.18) version, setting system-count achieves the
 %   best result, though best option is to use devel version.
-% - Ugly broken slurs at end of bar 23 and 25
 % - This piece is basically a showcase for Lilypond's inept handling
 %   of tuplet number positioning. Most problems originate from tuplet
 %   number being placed at mid-point of tuplet bracket
@@ -26,8 +24,9 @@
 %     Gardner Read's Music Notation
 %   * Most vertical positions are wrong as well when displayed w/o bracket
 %   * Adjustment of number positions not quite done yet
-% - Not sure which auto accidental mode to use; IMSLP editions are somewhere
-%   between old romantic style and 20th century style
+% - Accidental mode for IMSLP editions are somewhere between old romantic
+%   style and 20th century style; choosing default here, because changing
+%   accidental mode increases page count (!)
 
 
 %%--------------------------------------------------------------------
@@ -280,7 +279,7 @@ RHpatternA = \relative c'' { % bar 3 first 3 quartet sans first rest
 
 RHpatternB = \relative c'' { % bar 3 last quartet + bar 4
   \addArticulation "accent" {
-    \moveTupletAbs 4.5 ##f \tuplet 6/4 {
+    \moveTupletAbs 5 ##f \tuplet 6/4 {
       <d f>16 <a a'> <bes d> <g g'> <bes d> <f f'>
     } |
     \moveTupletAbs 3 ##f \tuplet 6/4 { <bes d>4 q16 q }
@@ -331,8 +330,9 @@ RHpatternG = \relative c'' { % bar 9
 RHpatternH = \relative c' { % bar 10
   \addArticulation "accent" {
     \tuplet 3/2 { <bes bes'>16 <a a'> <g g'> } <f f'>8~
-    % FIXME tuplet position
-    \moveTuplet -1   \tuplet 6/4 { q4~ q16 \clef bass <f a ees' f> }
+    \moveTupletAbs 3 ##f
+    \once \override TupletNumber.extra-offset = #'(-2 . 0)
+    \tuplet 6/4 { q4~ q16 \clef bass <f a ees' f> }
   }
 }
 
@@ -667,6 +667,7 @@ RH = \relative c'' {
 %-------- Left Hand parts
 LHnotesA = \relative c, {
   \moveTupletAbs -3 ##f  % 2nd tuplet position is ok
+  \once \override PhrasingSlur.eccentricity = 2
   \tuplet 6/4 4 {
     \tag #'accents <bes bes,>16 \( f' bes d e f
     <bes d> g f d bes f\)
@@ -679,6 +680,7 @@ LHpatternA = % bar 1, 1st half
 
 LHnotesB = \relative c, {
   \moveTupletAbs -3 ##f  % 2nd tuplet position is ok
+  \once \override PhrasingSlur.eccentricity = 2
   \tuplet 6/4 4 { bes16\( f' bes d e f <bes d> g f d bes f\) }
 }
 
@@ -690,8 +692,10 @@ LHnotesC = \relative c, {
   \tuplet 6/4 4 {
     bes16 \(  f' bes d e f <bes d> f d bes f bes,~ |
     bes \)
-    % right end point can't reach note when slope factor >= 5
-    \once \override PhrasingSlur.details.steeper-slope-factor = #3
+    % right end point can't reach note when slope factor >= 5 (2.18.x)
+    % even 3 won't make it (2.19.x)
+    \once \override PhrasingSlur.details.steeper-slope-factor = #2
+    \once \override PhrasingSlur.eccentricity = 2
     f' \( bes d e f <bes d> g f d_1 bes_2 f_3 \)
   }
 }
@@ -746,7 +750,7 @@ LHpatternI = \relative c { % bar 9, 1st half
   \hideTupletOnce \tuplet 6/4 {
     \once \override PhrasingSlur.details.region-size = #6
      % discourage steep slope around end-points
-    \once \override PhrasingSlur.details.edge-slope-exponent = #500
+    \once \override PhrasingSlur.details.edge-slope-exponent = #5
     c16\( aes'_3 b d_1 e_2 f_1
   }
   <e bes g>8.\) <f,, f,>16->
@@ -761,8 +765,9 @@ LHpatternJ = \relative c { % bar 9, 2nd half
 LHpatternK = \relative c { % bar 10
   \addArticulation "accent" {
     \tuplet 3/2 { bes16 a g } f8~
-    % FIXME tuplet position
-    \moveTupletAbs -4 ##f \tuplet 6/4 { f4~ f16 <f f,> }
+    \moveTupletAbs #-4.5 ##f
+    \once \override TupletNumber.extra-offset = #'(-2 . 0)
+    \tuplet 6/4 { f4~ f16 <f f,> }
   }
 }
 
@@ -827,7 +832,10 @@ LH = \relative c'
       \revertTuplet \hideTupletTemp
       \tuplet 3/2 { f d bes \) } |
       s2. f'4-- |
-      <ges bes,>2.-- aes8-- bes--~ |
+      <ges bes,>2.-- aes8--
+      % 2nd part of broken tie is way too short
+      \shape #'(() ((0 . 2)(0.8 . 2.5)(1.6 . 2.5)(2.4 . 2))) Tie
+      bes--~ |
       <des bes f>2.-- ees8-- <f bes,>-- |
       
       % bar 22-23
@@ -835,13 +843,17 @@ LH = \relative c'
       \tuplet 3/2 { ges4 aes8-- }
       \clef treble <bes>8--\arpeggio c-- |
       \clef bass <des f, aes, f aes, des,>4.--\arpeggio s8*1/3 c8*2/3--
-      bes8-- ( aes-- f-- ) \clef bass \clef bass g,-- ( |
+      bes8-- ( aes-- f-- )
+      % first part of broken slur has bad end point
+      \shape #'(((0 . 0)(0 . 0)(0 . 2)(0 . 2)) ()) Slur
+      \clef bass g,-- ( |
       
       % bar 24-27
       <aes fes aes, des,>2\arpeggio )
       bes8--[ ( ces--] des--\arpeggio [ ees--] |
       <ces ees, aes,>2.-- )
-      % FIXME Slur is ugly, bad end point
+      % 2nd part of broken slur is ugly, bad end point
+      \shape #'(() ((0 . -0.5)(0 . -0.5)(0 . 1.5)(0 . 1.5))) Slur
       d8-- ( ees-- |
       <f~ ces aes>2 f4*2/3 ) ges8*2/3-- ( aes8-- bes-- ) |
       <ges bes, ges bes, ees,>1--\arpeggio |
@@ -1135,6 +1147,7 @@ Dynamics = {
     \set PianoStaff.baseMoment = #(ly:make-moment 1 8)
     % setting connectArpeggios in Staff context won't work
     \set PianoStaff.connectArpeggios = ##t
+    %\accidentalStyle PianoStaff.piano
     \new Staff = "RH" << \clef treble \key bes \major \time 4/4 \RH >>
     \new Dynamics << \Dynamics >>
     \new Staff = "LH" << \clef bass   \key bes \major \time 4/4 \LH >>
