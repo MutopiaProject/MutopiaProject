@@ -30,16 +30,14 @@
 %   between old romantic style and 20th century style
 
 
-
 %%--------------------------------------------------------------------
 % The Mutopia Project
 % LilyPond template for keyboard solo piece
 %%--------------------------------------------------------------------
 
-
 % It is possible to lower requirement to 2.18.x but some problems
 % may surface, like bad tuplet layout in bar 6 left hand
-\version "2.19.1"
+\version "2.19.7"
  
 %---------------------------------------------------------------------
 %--Paper-size setting must be commented out or deleted upon submission.
@@ -53,35 +51,34 @@
 %--Default staff size is 20
 % #(set-global-staff-size 20)
  
- % from openlilylib
- #(define (calculate-version ver-list)
-    ;; take a LilyPond version number as a three element list
-    ;; and calculate a integer representation
-    (+ (* 1000000 (first ver-list)) 
-      (* 1000 (second ver-list)) 
-      (third ver-list)))
+% from openlilylib
+#(define (calculate-version ver-list)
+   ;; take a LilyPond version number as a three element list
+   ;; and calculate a integer representation
+   (+ (* 1000000 (first ver-list)) 
+     (* 1000 (second ver-list)) 
+     (third ver-list)))
 
 \paper {
-    top-margin = 8\mm                              %-minimum top-margin: 8mm
-    top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
-    markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
-    top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
-    last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
-    
+  top-margin = 8\mm                              %-minimum top-margin: 8mm
+  top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
+  
+  % with 2.19 version the score is rendered into most compat layout by
+  % default, but for 2.18 the whole thing explode into 11-12 pages, so
+  % force system-count on older versions (the only one effective setting here)
+  % 39 is the minimum without fatal layout problem
+  #(if (> 2019000 (calculate-version (ly:version)))
+       (define system-count 39))
 
-    % with 2.19 version the score is rendered into most compat layout by
-    % default, but for 2.18 the whole thing explode into 11-12 pages, so
-    % force system-count on older versions (the only one effective setting here)
-    % 39 is the minimum without fatal layout problem
-    #(if (> 2019000 (calculate-version (ly:version)))
-         (define system-count 39))
-
-    % ragged-right = ##f
-    ragged-last = ##f
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
-    
-    % debug-slur-scoring = ##t
+  % ragged-right = ##f
+  ragged-last = ##f
+  ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  
+  % debug-slur-scoring = ##t
 }
 
 %---------------------------------------------------------------------
@@ -89,52 +86,36 @@
 %--for usage and possible values for header variables.
 %---------------------------------------------------------------------
 \header {
-    title = "Prelude II"
-    composer = "Sergei Rachmaninoff (1873-1943)"
-    opus = "Op. 23, No 2"
-    date = "1901"
-    style = "Romantic"
-    license = "Creative Commons Attribution-ShareAlike 4.0"
-    %% Gutheil edition on IMSLP is also cross-referenced
-    source = "Muzyka [1966]"
+  title = "Prelude II"
+  composer = "Sergei Rachmaninoff (1873-1943)"
+  opus = "Op. 23, No 2"
+  date = "1901"
+  style = "Romantic"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
+  %% Gutheil edition on IMSLP is also cross-referenced
+  source = "IMSLP - Muzyka and Gutheil editions"
  
-    maintainer = "Abel Cheung"
-    maintainerEmail = "abelcheung at gmail dot com"
-    mutopiatitle = "Prelude Op. 23"
-    mutopiaopus = "Op. 23"
-    mutopiacomposer = "RachmaninoffS"
-    mutopiainstrument = "Piano"
+  maintainer = "Abel Cheung"
+  maintainerEmail = "abelcheung at gmail dot com"
+  mutopiatitle = "Prelude Op. 23"
+  mutopiaopus = "Op. 23"
+  mutopiacomposer = "RachmaninoffS"
+  mutopiainstrument = "Piano"
  
- 
-    % Footer, tagline, and copyright blocks are included here for reference
-    % and spacing purposes only.  There's no need to change these.
-    % These blocks will be overridden by Mutopia during the publishing process.
-    footer = "Mutopia-2014/01/01-1234"
-    copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
-    tagline = ##f
+  footer = "Mutopia-2014/01/01-1234"
+  copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+  tagline = ##f
 }
 
 %--------Tuplet related funcs and shorthands
 
-showTupletOnce = {
-  \once \override TupletNumber.stencil = #ly:tuplet-number::print
-}
+showTupletOnce = { \once \override TupletNumber.stencil = #ly:tuplet-number::print }
+hideTupletOnce = { \once \omit TupletNumber }
 
-hideTupletOnce = {
-  \once \omit TupletNumber
-}
+showTupletTemp = { \temporary \override TupletNumber.stencil = #ly:tuplet-number::print }
+hideTupletTemp = { \temporary \omit TupletNumber }
 
-showTupletTemp = {
-  \temporary \override TupletNumber.stencil = #ly:tuplet-number::print
-}
-
-hideTupletTemp = {
-  \temporary \omit TupletNumber
-}
-
-revertTuplet = {
-  \revert TupletNumber.stencil
-}
+revertTuplet = { \revert TupletNumber.stencil }
 
 % https://code.google.com/p/lilypond/issues/detail?id=2190
 % tuplet placement is sometimes not optimal, happens a lot here
@@ -604,7 +585,7 @@ RH = \relative c'' {
       \set subdivideBeams = ##t
       \voiceOne r8
       \voiceTwo
-      % in referenced editions, octtava bracket collides w/ slur to save space
+      % in referenced editions, ottava bracket collides w/ slur to save space
       % not sure if we need that here (and not sure whether it's achievable)
       \ottavaUp
       \once \phrasingSlurUp
@@ -991,8 +972,10 @@ LH = \relative c'
   
   \barNumberCheck 38
   \tupletDown
-  \LHpatternA ##f \LHpatternC ##f \pushToTag #'accents -> \keepWithTag #'end-ees \LHpatternD |
-  \LHpatternA ##f \LHpatternC ##f \pushToTag #'accents -> \keepWithTag #'end-d \LHpatternD |
+  \LHpatternA ##f \LHpatternC ##f
+  \pushToTag #'accents -> \keepWithTag #'end-ees \LHpatternD |
+  \LHpatternA ##f \LHpatternC ##f
+  \pushToTag #'accents -> \keepWithTag #'end-d \LHpatternD |
   \LHpatternF ##t \LHpatternG ##t |
   \LHpatternF ##f \LHpatternH |
   \LHpatternI     \LHpatternJ |
@@ -1173,3 +1156,4 @@ Dynamics = {
     }
   }
 }
+
