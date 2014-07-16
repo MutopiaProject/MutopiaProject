@@ -444,19 +444,11 @@ RH = \relative c'' {
     des,       <ges ges,> des <f f,>
     \ottava #0 aes, <ees ees'>
     
-    % fake voice w/ bare notehead, to create additional tie
-    <<
-      \relative c'' {
-        aes' 16 <ees ees'> aes <des des,> des, <f f,> |
-        <fes fes,>\noBeam \) % d-flat note in voice below
-      }
-      \new Voice \with { \remove "Stem_engraver" } {
-        \relative c'' {
-          \override Accidental.hide-tied-accidental-after-break = ##t
-          \tieDown s4 des8~ | des16
-        }
-      }
-    >>
+    aes 16 <ees ees'> aes <des des,>
+    \set tieWaitForNote = ##t
+    des,_~ <f f,> |
+    <fes des fes,>\noBeam \)
+    \set tieWaitForNote = ##f
     
     % bar 24 sans first note
     <ees ees'>16 \(      <aes des> <fes fes'> <aes des> <ees ees'>
