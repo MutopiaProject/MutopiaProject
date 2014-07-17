@@ -1023,6 +1023,7 @@ posPedalJ = \once \override Staff.SustainPedal.extra-offset = #'( 0.8 . 0.4)
 posPedalK = \once \override SustainPedal.extra-offset = #'( 0.3 . 3.2 )
 posPedalL = \once \override SustainPedal.extra-offset = #'( -2.6 . -1 )
 posPedalM = \once \override Staff.SustainPedal.extra-offset = #'( -0.9 . 0)
+posPedalN = \once \override SustainPedal.extra-offset = #'( -1.3 . 0)
 posPedalRev = \revert SustainPedal.extra-offset
 hideNextPedal = \once \omit Voice.SustainPedal
 

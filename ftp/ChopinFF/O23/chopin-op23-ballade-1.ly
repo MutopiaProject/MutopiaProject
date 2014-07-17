@@ -3,8 +3,6 @@
 % LilyPond template for keyboard solo piece
 %%--------------------------------------------------------------------
 % TODO (prioritized):
-% Align 4th beat of bar 113.  Align bass <bes> octave in same  
-%   musical moment as treble chord
 % Add fingering
 % Add ossia to bar 6 with alternate bass chord
 % Add capped-brackets to tuplets
@@ -865,7 +863,7 @@ lowerOne = \relative c, {
   <d,d,>4 <b'd,>(<fis'fis,>) <cis,cis,> <cis'gis>(<eis b>)                                 | %112-midi
 }
 \tag #'printed {
-  \posScriptCF <fis,,fis,>4^> \posScriptCM f'2_\sharpTxt <bes,bes,>4 f'2                   | %113-print
+  \posScriptCF <fis,,fis,>4^> \posScriptCM f'2*127/128_\sharpTxt <bes,bes,>4*65/64 f'2         | %113-print
 }
 \tag #'played {
   \posScriptCF <fis,fis,>4^> fis'2 \posScriptCH <bes,bes,>4_\chordMarkupA fis'2            | %113-midi
@@ -1623,7 +1621,7 @@ pedalTwo = {
  s1\sustainOn s4 s4\sustainOff                          | %108
  s1\sustainOn s4 s4\sustainOff \posPedalRev             | %109
  \repeat unfold 3 { s1. | }                               %110-112
- s16 s8.\sustainOn s4 s8 s8\sustainOff s2\sustainOn s16 s8.\sustainOff  | %113
+ s16 s8.\sustainOn s4 s8 s8\sustainOff \posPedalN s2\sustainOn s16 s8.\sustainOff  | %113
  s16.. s64\sustainOn s8 s2. s4. s16\sustainOff s16                      | %114
  \repeat unfold 4 { s1. | }                                               %115-118
  s16. s32\sustainOn s4. s8. \hideNextPedal s16\sustainOff s2.           | %119
