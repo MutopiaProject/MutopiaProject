@@ -74,7 +74,7 @@
     maintainerEmail = "abelcheung at gmail dot com"
     license = "Creative Commons Attribution-ShareAlike 4.0"
  
-    mutopiatitle = "Prelude Op. 23"
+    mutopiatitle = "Prelude Op. 23, No. 1"
     mutopiaopus = "Op. 23"
     mutopiacomposer = "RachmaninoffS"
     %--A list of instruments can be found at http://www.mutopiaproject.org/browse.html#byInstrument
