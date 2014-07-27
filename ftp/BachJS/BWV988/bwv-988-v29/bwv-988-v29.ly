@@ -1,9 +1,15 @@
-\version "2.16.1"
+\version "2.18.2"
 
 \paper {
- line-width = 18.0\cm
- ragged-bottom = ##f
- ragged-last-bottom = ##f
+    top-margin = 8\mm
+    top-markup-spacing.basic-distance = #6
+    markup-system-spacing.basic-distance = #6
+    top-system-spacing.basic-distance = #12
+    last-bottom-spacing.basic-distance = #12
+    indent = 0.0
+    line-width = 18.0\cm
+    ragged-bottom = ##f
+    ragged-last-bottom = ##f
 }
 
 % #(set-default-paper-size "a4")
@@ -19,17 +25,23 @@
  mutopiacomposer = "BachJS"
  opus = "BWV 988"
  date = "1741"
- mutopiainstrument = "Clavier"
+ mutopiainstrument = "Harpsichord,Clavichord"
  style = "Baroque"
  source = "Bach-Gesellschaft Edition 1853 Band 3"
- copyright = "Creative Commons Attribution-ShareAlike 3.0"
+ license = "Creative Commons Attribution-ShareAlike 3.0"
  comment = "Notenverteilung wurde fuer die 2-Systeme optimiert"
  maintainer = "Hajo Dezelski"
  maintainerEmail = "dl1sdz (at) gmail.com"
 
- footer = "Mutopia-2013/09/01-1421"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2013. \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ footer = "Mutopia-2014/07/27-1421"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
+
+%%-------- definitions
+hideTupletNum = \temporary \override TupletNumber.transparent = ##t
+hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
+
 
 
 sopranoOne = \relative a'' {
@@ -38,159 +50,167 @@ sopranoOne = \relative a'' {
  		r8 r16 g,16 r16 g16 r16 g16 r16 g16 r16 g16 | % 1
 		r8 r16 d'16 r16 d16 r16 d16 r16 d16 r16 d16 | % 2
 		r8 r16 g16 r16 g16 r16 g16 r16 g16 r16 g16 | % 3
-		fis16 r16 r8 s2 | % 4
-		g8 r16 g16 r16 g16 r16 g16 r16 g16 r16 f16 | % 5
-		r8 r16 e16 r16 e16 r16 e16 r16 e16 r16 e16 | % 6
-		r8 r16 d16 r16 d16 r16 d16 r16 d16 r16 c16 | % 7
-		b16 r16 r8 
-		\times 2/3 { r16 a16 [ b ] }
-		\times 2/3 { c16 [ b a ] }
-		\times 2/3 { b16 [ a g ] }
-		\times 2/3 { e'16 [ d c ] } | % 8
-		\times 2/3 { d16 r16 g,16 }
-		\times 2/3 { fis16 [ c16 ] r16 }
-		\times 2/3 { r16 r16 g'16 }
-		\times 2/3 { a16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 b16 }
-		\times 2/3 { cis16  [a16 ] r16 } | % 9
-		\times 2/3 { r16 r16 d16 }
-		\times 2/3 { cis16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 d'16 }
-		\times 2/3 { e16 [ cis16 ] r16 }
-		\times 2/3 { r16 r16 fis16 }
-		\times 2/3 { d16 [ b16 ] r16 } | % 10
-		\times 2/3 { r16 r16 c16 }
-		\times 2/3 { b16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ e16 ] r16 }
-		\times 2/3 { r16 r16 fis16 }
-		\times 2/3 { e16 [ cis16 ] r16 } | % 11
-		\times 2/3 { r16 r16 fis16 }
-		\times 2/3 { e16 [ cis16 ] r16 }
+		fis16 s16 s8 s2 | % 4
+		g8 s16 g16 r16 g16 r16 g16 r16 g16 r16 f16 | % 5
+		s8 s16 e16 r16 e16 r16 e16 r16 e16 r16 e16 | % 6
+		s8 s16 d16 r16 d16 r16 d16 r16 d16 r16 c16 | % 7
+		b16 b16\rest b8\rest \stemNeutral \hideTupletBracket
+		\tuplet 3/2 { b16\rest a16 [ b ] } \hideTupletNum
+		\tuplet 3/2 { c16^[ b a ] }
+		\tuplet 3/2 { b16 [ a g ] }
+		\tuplet 3/2 { e'16 [ d c ] } \undo \hideTupletNum | % 8
+		\tuplet 3/2 { d16 b16\rest g16 } \hideTupletNum
+		\tuplet 3/2 { fis16 [ c16 ] b'16\rest } \undo \hideTupletNum
+		\tuplet 3/2 { b16\rest b16\rest g16 } \hideTupletNum
+		\tuplet 3/2 { a16 [ fis16 ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest b16 }
+		\tuplet 3/2 { cis16  [a16 ] b16\rest } | % 9
+		\tuplet 3/2 { b16\rest b16\rest d16 }
+		\tuplet 3/2 { cis16 [ g16 ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest d16 }
+		\tuplet 3/2 { e16 [ cis!16 ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest fis'16 }
+		\tuplet 3/2 { d16 [ b16 ] b16\rest } | % 10
+		\oneVoice
+		\tuplet 3/2 { r16 r16 c!16 }
+		\tuplet 3/2 { b16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { g16 [ e16 ] r16 }
+		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { e16 [ cis16 ] r16 } | % 11
+		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { e16 [ cis16 ] r16 }
 		\clef "bass" 
-		\times 2/3 { r16 r16 d16 }
-		\times 2/3 { cis16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 b16 }
-		\times 2/3 { a16 [ fis16 ] r16 } | % 12
-		\times 2/3 { r16 r16 b16 }
-		\times 2/3 { a16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 g16 }
-		\times 2/3 { fis16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 e16 }
-		\times 2/3 { d16 [ b16 ] r16 } | % 13
-		\times 2/3 { r16 r16 e16 }
-		\times 2/3 { d16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 c16 }
-		\times 2/3 { b16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { fis16 [ e16 ] r16 } | % 14
-		\times 2/3 { r16 g'16 [ a16 ] }
-		\times 2/3 { e'16 [ a,16 g16 ] }
-		\times 2/3 { r16 fis16 [ a16 ] }
-		\times 2/3 { d16 [ a16 fis16 ] }
-		\times 2/3 { r16 e16 [ g16 ] }
-		\times 2/3 { cis16 [ g16 e16 ] } | % 15
+		\tuplet 3/2 { r16 r16 d16 }
+		\tuplet 3/2 { cis16 [ a16 ] r16 }
+		\tuplet 3/2 { r16 r16 b16 }
+		\tuplet 3/2 { a16 [ fis16 ] r16 } | % 12
+		\tuplet 3/2 { r16 r16 b16 }
+		\tuplet 3/2 { a16 [ fis16 ] r16 }
+		\tuplet 3/2 { r16 r16 g16 }
+		\tuplet 3/2 { fis16 [ d16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16 }
+		\tuplet 3/2 { d16 [ b16 ] r16 } | % 13
+		\tuplet 3/2 { r16 r16 e16 }
+		\tuplet 3/2 { d16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 c16 }
+		\tuplet 3/2 { b16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { fis16 [ e16 ] r16 } | % 14
+		\tuplet 3/2 { r16 g'16 [ a16 ] }
+		\tuplet 3/2 { e'16 [ a,16 g16 ] }
+		\tuplet 3/2 { r16 fis16 [ a16 ] }
+		\tuplet 3/2 { d16 [ a16 fis16 ] }
+		\tuplet 3/2 { r16 e16 [ g16 ] }
+		\tuplet 3/2 { cis16 [ g16 e16 ] } | % 15
+		\voiceOne
 		r8 r16 d'16 r16 d16 r16 d16 r4 | % 16
 		\clef "treble" 
 	} %end of repeated section
  
   	\repeat volta 2 { %begin repeated section
-		\times 2/3 { r16 r16 b''16  }
-		\times 2/3 { a16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 g16  }
-		\times 2/3 { fis16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 e16  }
-		\times 2/3 { d16 [ b16 ] r16 } | % 17
-		\times 2/3 { r16 r16 e16 }
-		\times 2/3 { d16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 c16 }
-		\times 2/3 { b16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ e16 ] r16 } | % 18
-		\times 2/3 { r16 r16 f16 }
-		\times 2/3 { e16 [ c16 ] r16 }
-		\clef "bass" \times 2/3 { r16 r16 d16 }
-		\times 2/3 { c16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 b16  }
-		\times 2/3 { a16 [ fis16 ] r16 } | % 19
-		\times 2/3 { r16 r16 g16 }
-		\times 2/3 { fis16 [ dis16 ] r16 }
-		\times 2/3 { r16 r16 e16  }
-		\times 2/3 { dis16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 c16 }
-		\times 2/3 { b16 [ g16 ] r16 } \clef "treble" | % 20
+  	    \oneVoice
+		\tuplet 3/2 { r16 r16 b''16  }
+		\tuplet 3/2 { a16 [ fis16 ] r16 }
+		\tuplet 3/2 { r16 r16 g16  }
+		\tuplet 3/2 { fis16 [ d16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16  }
+		\tuplet 3/2 { d16 [ b16 ] r16 } | % 17
+		\tuplet 3/2 { r16 r16 e16 }
+		\tuplet 3/2 { d16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 c16 }
+		\tuplet 3/2 { b16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { g16 [ e16 ] r16 } | % 18
+		\tuplet 3/2 { r16 r16 f16 }
+		\tuplet 3/2 { e16 [ c16 ] r16 }
+		\tuplet 3/2 { r16 r16 \clef "bass" d16 }
+		\tuplet 3/2 { c16 [ a16 ] r16 }
+		\tuplet 3/2 { r16 r16 b16  }
+		\tuplet 3/2 { a16 [ fis16 ] r16 } | % 19
+		\tuplet 3/2 { r16 r16 g16 }
+		\tuplet 3/2 { fis16 [ dis16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16  }
+		\tuplet 3/2 { dis16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 c!16 }
+		\tuplet 3/2 { b16 [ g16 ] r16 } \clef "treble" | % 20
+		\voiceOne
 		r8 r16 e'''16 r16 e16 r16 e16 r16 e16 r16 e16 | % 21
 		r8 r16 e16 r16 e16 r16 e16 r16 e16 r16 e16 | % 22
-		\times 2/3 { r16 fis16 [ g16 ] }
-		\times 2/3 { a16 [b16 c16 ~ ] }
-		\times 2/3 { c16 [ b16 a16] }
-		\times 2/3 { g16 [ fis16 e16 ] }
-		\times 2/3 { dis16 [ c16 b16 ] }
-		\times 2/3 { a16 [g16 fis16 ] } | % 23
+		\oneVoice \undo \hideTupletNum \tupletUp
+		\tuplet 3/2 { r16 fis16 [ g16 ] } \hideTupletNum
+		\tuplet 3/2 { a16 [b16 c16 ~ ] }
+		\tuplet 3/2 { c16 [ b16 a16] }
+		\tuplet 3/2 { g16 [ fis16 e16 ] }
+		\tuplet 3/2 { dis16 [ c16 b16 ] }
+		\tuplet 3/2 { a16 [g16 fis16 ] } | % 23
+		\voiceOne
 		e16 [ e'16 ] r16 e16 r16 c16 r16 c16 r16 g16 r16 g16 \clef "bass" | % 24
-		\times 2/3 { r16 e,16 [ f16 ] }
-		\times 2/3 { fis16 [ g16 gis16 ] }
-		\times 2/3 { r16 b16 [ c16 ] }
-		\times 2/3 { d16 c16 b16 ] } \clef "treble"
-		\times 2/3 { c16 [ d16 e16 ]  }
-		\times 2/3 { fis16[  g16 a16 ] } \clef "bass" | % 25		
-		\times 2/3 { r16 d,,16 [ es16 ] }
-		\times 2/3 { e16 [ f16 fis16 ] }
-		\times 2/3 { r16 a16 [ b16 ] }
-		\times 2/3 { c16 [ b16 a16 ] }
+		\oneVoice \undo \hideTupletNum \tupletUp
+		\tuplet 3/2 { r16 e,16 [ f16 ] }
+		\tuplet 3/2 { fis16 [ g16 gis16 ] } \hideTupletNum
+		\tuplet 3/2 { r16 b16 [ c16 ] }
+		\tuplet 3/2 { d16 c16 b16 ] } \clef "treble"
+		\tuplet 3/2 { c16 [ d16 e16 ]  }
+		\tuplet 3/2 { fis16[  g16 a16 ] } \clef "bass" | % 25		
+		\tuplet 3/2 { r16 d,,16 [ es16 ] }
+		\tuplet 3/2 { e16 [ f16 fis16 ] }
+		\tuplet 3/2 { r16 a16 [ b16 ] }
+		\tuplet 3/2 { c16 [ b16 a16 ] }
 		\clef "treble" 
-		\times 2/3 { b16 [ c16 d16 ] }
-		\times 2/3 { e16 [ fis16 g16 ] } | % 26
-		\times 2/3 { c,16 [ r16 f16 ] }
-		\times 2/3 { e16 [c16 ] r16 }
-		\clef "bass" \times 2/3 { r16 r16 d16  }
-		\times 2/3 { c16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 b16 }
-		\times 2/3 { a16 [ fis16 ] r16 } \clef "treble" | % 27
-		\times 2/3 { r16 r16 b'16 }
-		\times 2/3 { a16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 g16 }
-		\times 2/3 { fis16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 e16 }
-		\times 2/3 { d16 [ b16 ] r16 } | % 28
-		\times 2/3 { r16 r16 e'16 }
-		\times 2/3 { d16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 c16 }
-		\times 2/3 { b16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ e16 ] r16 } | % 29
-		\times 2/3 { r16 r16 a'16 }
-		\times 2/3 { g16 [ e16 ] r16 }
-		\times 2/3 { r16 r16 f16 }
-		\times 2/3 { e16 [ c16 ] r16 }
-		\times 2/3 { r16 r16 d16 }
-		\times 2/3 { c16 [ a16 ] r16 } | % 30
-		\times 2/3 { r16 a16 [ b16 ] }
-		\times 2/3 { c16 [ d16 e16 ~] }
-		\times 2/3 { e16 [ d16 c16 ] }
-		\times 2/3 { b16 [ a16 g16 ~] }
-		\times 2/3 { g16 [ fis16 g16 ] }
-		\times 2/3 { a16 [ b16 c16 ] }| % 31
-		\grace c8 b r16 g'16 r16 g16 r16 g16 r4 
+		\tuplet 3/2 { b16 [ c16 d16 ] }
+		\tuplet 3/2 { e16 [ fis16 g16 ] } | % 26
+		\tuplet 3/2 { c,16 r16 f16 }
+		\tuplet 3/2 { e16 [c16 ] r16 }
+		\tuplet 3/2 { r16 r16 \clef "bass" d16  }
+		\tuplet 3/2 { c16 [ a16 ] r16 }
+		\tuplet 3/2 { r16 r16 b16 }
+		\tuplet 3/2 { a16 [ fis!16 ] r16 } \clef "treble" | % 27
+		\tuplet 3/2 { r16 r16 b'16 }
+		\tuplet 3/2 { a16 [ fis16 ] r16 }
+		\tuplet 3/2 { r16 r16 g16 }
+		\tuplet 3/2 { fis16 [ d16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16 }
+		\tuplet 3/2 { d16 [ b16 ] r16 } | % 28
+		\tuplet 3/2 { r16 r16 e'16 }
+		\tuplet 3/2 { d16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 c16 }
+		\tuplet 3/2 { b16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { g16 [ e16 ] r16 } | % 29
+		\tuplet 3/2 { r16 r16 a'16 }
+		\tuplet 3/2 { g16 [ e16 ] r16 }
+		\tuplet 3/2 { r16 r16 f16 }
+		\tuplet 3/2 { e16 [ c16 ] r16 }
+		\tuplet 3/2 { r16 r16 d16 }
+		\tuplet 3/2 { c16 [ a16 ] r16 } | % 30
+		\tuplet 3/2 { r16 a16 [ b16 ] }
+		\tuplet 3/2 { c16 [ d16 e16 ~] }
+		\tuplet 3/2 { e16 [ d16 c16 ] }
+		\tuplet 3/2 { b16 [ a16 g16 ~] }
+		\tuplet 3/2 { g16 [ fis16 g16 ] }
+		\tuplet 3/2 { a16 [ b16 c16 ] }| % 31
+		\grace c8 b \voiceOne r16 g'16 r16 g16 r16 g16 r4 
 
  } %end repeated section
 }
 
 sopranoTwo = \relative c'' {
+  \hideTupletBracket
 	\repeat volta 2 { %begin repeated section
 		\stemDown
 		r8 r16 <b, d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 | % 1
 		r8 r16 <fis' a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 | % 2 
 		r8 r16 <b e>16 r16 <b e>16 r16 <b e>16 r16 <b e>16 r16 <cis e>16 | % 3
-		<a d>16 r16 r8 
-		\times 2/3 { r16 c'16 [ b ] }
-		\times 2/3 { c, [ b' a ]} 
-		\times 2/3 { b, [ a' g] }
-		\times 2/3 { a, [ g' fis ] } | % 4
-		<b, d>8 r16 <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 | % 5
-		r8 r16 <g c>16 r16 <g c>16 r16 <g c>16 r16 <g c>16 r16 <g c>16 | % 6
-		r8 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 | % 7
-		<d g>16 r16 r8 s2 | % 8 
+		<a d>16 b16\rest b8\rest \tupletUp 
+		\tuplet 3/2 { b16\rest c'16 [ b ] }
+		\tuplet 3/2 { c, [ b' a ]} 
+		\tuplet 3/2 { b, [ a' g] }
+		\tuplet 3/2 { a, [ g' fis ] } | % 4
+		<b, d>8 b16\rest <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 r16 <b d>16 | % 5
+		b8\rest b16\rest <g c>16 r16 <g c>16 r16 <g c>16 r16 <g c>16 r16 <g c>16 | % 6
+		b8\rest b16\rest <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 r16 <fis a>16 | % 7
+		<d g>16 s16 s8 s2 | % 8 
 		s1*3/4 | % 9
 		s1*3/4 | % 10
 		s1*3/4 | % 11
@@ -209,7 +229,7 @@ sopranoTwo = \relative c'' {
 		r8 r16 <g' b>16 r16 <g b>16 r16 <g b>16 r16 <g b>16 r16 <g b>16 | % 21
 		r8 s16 <g b>16 r16 <g b>16 r16 <g b>16 r16 <g b>16 r16 <g b>16 | % 22
 		s1*3/4 | % 23
-		r16 <g b>16 r16 <g b>16 r16 <e g>16 r16 <e g>16 r16 <b e>16 r16 <b e>16 | % 24 
+		s16 <g b>16 r16 <g b>16 r16 <e g>16 r16 <e g>16 r16 <b e>16 r16 <b e>16 | % 24 
 	 	s1*3/4 | % 25
 		s1*3/4 | % 26
 		s1*3/4 \clef "treble" | % 27
@@ -217,7 +237,7 @@ sopranoTwo = \relative c'' {
 		s1*3/4 | % 29
 		s1*3/4 | % 30
 	 	s1*3/4 | % 31		
-		r8 r16 <b' d>16 r16 <b d>16 r16 <b d>16 r4 | % 32
+		s8 r16 <b' d>16 r16 <b d>16 r16 <b d>16 r4 | % 32
 
  
  } %end repeated section
@@ -231,119 +251,124 @@ soprano = << \sopranoOne \\ \sopranoTwo>>
 
 bassOne = \relative g {
 	\repeat volta 2 { %begin repeated section
-		\stemUp
+		\stemUp \hideTupletBracket
 		g8 [ g,8 ] \clef "treble" fis''16 r16 fis16 r16 fis16 r16 fis16 r16 \clef "bass" | % 1
 		fis,8 [ fis,8 ] \clef "treble" cis'''16 r16 cis16 r16 cis16 r16 cis16 r16 \clef "bass" | % 2
 		e,,8 [ e,8 ] \clef "treble" fis'''16 r16 e16 r16 fis16 r16 e16 r16 \clef "bass" | % 3
 		\stemDown 
-		r16 d,16 [ a16 fis16 ] d16. [ d'32 e,16. c'32 ] d,16. [ b'32 c,16. a'32 ] 
+		d,,16\rest d'16 [ a16 fis16 ] d16. [ d'32 e,16. c'32 ] d,16. [ b'32 c,16. a'32 ] 
 		\stemUp | % 4
-		b,8 [b'8] \clef "treble" fis''16  r16 fis16  r16 fis16 r16 d16 r16 \clef "bass" | % 5
-		c,,8 [c'8] \clef "treble" d'16 r16 d16 r16 d16 r16 c16 r16 \clef "bass" | % 6
-		d,,8 [ d'8 ] \clef "treble" cis'16 r16 cis16 r16 cis16 r16 a16 r16 \clef "bass" | % 7
+		b,8_[b'8] \clef "treble" fis''16  r16 fis16  r16 fis16 r16 d16 r16 \clef "bass" | % 5
+		c,,8_[c'8] \clef "treble" d'16 r16 d16 r16 d16 r16 c16 r16 \clef "bass" | % 6
+		d,,8_[ d'8 ] \clef "treble" cis'16 r16 cis16 r16 cis16 r16 a16 r16 \clef "bass" | % 7
 		\stemDown 
-		r16 g,16 [ d16 b16 ] g16. [ g'32 fis16. d'32 ] g,16. [ e'32 a,16. fis'32 ] 
-		\stemUp | % 8
-		\times 2/3 { b,16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { b16 [ d16 ] r16 }
-		\times 2/3 {r16 r16  \clef "treble" c16 }
-		\times 2/3 { d16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 e16 } | % 9
-		\times 2/3 { fis16 [ a ] r16 }
-		\times 2/3 { r16 r16 e16 }
-		\times 2/3 { fis16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 g16 }
-		\times 2/3 { a16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 a16 } | % 10
-		\times 2/3 { g16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 fis16 }
-		\times 2/3 { e16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 d16 }
-		\times 2/3 { cis16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 \clef "bass" b16 } | % 11
-		\times 2/3 { a16 [ cis16 ] r16 }
-		\times 2/3 { r16 r16 b16  }
-		\times 2/3 { a16 [ cis16 ] r16 }
-		\times 2/3 { r16 r16 g16 }
-		\times 2/3 { fis16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 e16 } | % 12
-		\times 2/3 { d16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 e16 }
-		\times 2/3 { d16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 c16 }
-		\times 2/3 { b16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 a16 } | % 13
-		\times 2/3 { fis16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 fis16 }
-		\times 2/3 { e16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 d16 } | % 14
+		d,,16\rest g16 [ d16 b16 ] g16. [ g'32 fis16. d'32 ] g,16. [ e'32 a,16. fis'32 ] 
+		\stemNeutral | % 8
+		\tuplet 3/2 { b,16 [ d16 ] d,16\rest } \hideTupletNum
+		\tuplet 3/2 { d16\rest d16\rest a'16 } \undo \hideTupletNum
+		\tuplet 3/2 { b16 [ d16 ] d,16\rest } \hideTupletNum
+		\tuplet 3/2 { d16\rest d16\rest  \clef "treble" c'16 }
+		\tuplet 3/2 { d16 [ g16 ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest e,16 } | % 9
+		\tuplet 3/2 { fis16 [ a ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest e,16 }
+		\tuplet 3/2 { fis16 [ a16 ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest g16 }
+		\tuplet 3/2 { a16 [ d16 ] b16\rest }
+		\tuplet 3/2 { b16\rest b16\rest a16 } | % 10
+		\oneVoice
+		\tuplet 3/2 { g16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { e16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 d16 }
+		\tuplet 3/2 { cis16 [ d16 ] r16 }
+		\tuplet 3/2 { r16 r16 \clef "bass" b16 } | % 11
+		\tuplet 3/2 { a16 [ cis16 ] r16 }
+		\tuplet 3/2 { r16 r16 b16  }
+		\tuplet 3/2 { a16 [ cis16 ] r16 }
+		\tuplet 3/2 { r16 r16 g16 }
+		\tuplet 3/2 { fis16 [ a16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16 } | % 12
+		\tuplet 3/2 { d16 [ fis16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16 }
+		\tuplet 3/2 { d16 [ fis16 ] r16 }
+		\tuplet 3/2 { r16 r16 c16 }
+		\tuplet 3/2 { b16 [ d16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 } | % 13
+		\tuplet 3/2 { fis16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { g16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { e16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 d16 } | % 14
 		cis8 [ cis'8 ] d8 [ fis,8 ] g8 [ a8 ] | % 15
+		\voiceThree
 		d,8 [ d'8 ] cis'16  r16 cis16 r16 d,,4 | % 16
 
  } %end of repeated section
  
  	\repeat volta 2 { %begin repeated section
-		\clef "treble" 
-		\times 2/3 { d'''16 [ fis16] r16 }
-		\times 2/3 { r16 r16 e16  }
-		\times 2/3 { d16 [ fis16]  r16 }
-		\times 2/3 { r16 r16 c16  }
-		\times 2/3 { b16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 a16  } | % 17
-		\times 2/3 { g16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 fis16 }
-		\times 2/3 { e16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 d16 } | % 18
-		\times 2/3 { c16 [ e16 ] r16 }
+		\clef "treble"
+		\oneVoice
+		\tuplet 3/2 { d'''16 [ fis16] r16 }
+		\tuplet 3/2 { r16 r16 e16  }
+		\tuplet 3/2 { d16 [ fis16]  r16 }
+		\tuplet 3/2 { r16 r16 c16  }
+		\tuplet 3/2 { b16 [ d16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16  } | % 17
+		\tuplet 3/2 { g16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { g16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 fis16 }
+		\tuplet 3/2 { e16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 d16 } | % 18
+		\tuplet 3/2 { c16 [ e16 ] r16 }
 		\clef "bass" 
-		\times 2/3 { r16 r16 b16  }
-		\times 2/3 { a16 [ c16 ] r16 }
-		\times 2/3 { r16 r16 g16 }
-		\times 2/3 { fis16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 e16 } | % 19
-		\times 2/3 { dis16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 cis16 }
-		\times 2/3 { b16 [ dis16 ] r16 }
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 fis16  } | % 20
-		e8 [ e'8 ] \clef "treble" dis''16 [ r16 dis16 ] r16 g,16 [ r16 dis'16 ] r16 \clef "bass" | % 21
-		c,,8 [ c'8 ] \clef "treble" dis'16 [ r16 dis16 ] r16 b16 [ r16 dis16 ] r16 \clef "bass" | % 22
-		a,8 [ dis,8 e8 a8 b8 b,8 ] | % 23
-		r8 \clef "treble" dis''16 r16 b16 [ r16 b16 ] r16 fis16 [ r16 fis16 ] r16 \clef "bass" | % 24
-		c,8 [ b'8 a8 gis8 a8 c,8 ] | % 25
+		\tuplet 3/2 { r16 r16 b16  }
+		\tuplet 3/2 { a16 [ c16 ] r16 }
+		\tuplet 3/2 { r16 r16 g16 }
+		\tuplet 3/2 { fis16 [ a16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16 } | % 19
+		\tuplet 3/2 { dis16 [ fis16 ] r16 }
+		\tuplet 3/2 { r16 r16 cis16 }
+		\tuplet 3/2 { b16 [ dis16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { g16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 fis16  } | % 20
+		\voiceThree
+		e8 [ e'8 ] \clef "treble" dis''16 r16 dis16 r16 g,16 r16 dis'16 r16 \clef "bass" | % 21
+		c,,8_[ c'8 ] \clef "treble" dis'16 r16 dis16 r16 b16 r16 dis16 r16 \clef "bass" | % 22
+		\oneVoice a,8 [ dis,8 e8 a8 b8 b,8 ] | % 23
+		\voiceThree
+		s8 \clef "treble" dis''16 r16 b16 r16 b16  r16 fis16 r16 fis16 r16 \clef "bass" | % 24
+		\oneVoice c,8 [ b'8 a8 gis8 a8 c,8 ] | % 25
 		b8 [ a'8 g8 fis8 g8 b,8 ] | % 26
-		\times 2/3 { a16 [ a'16 ] r16 }
-		\times 2/3 { r16 r16 b16  }
-		\times 2/3 { a16 [ c16 ] r16 }
-		\times 2/3 { r16 r16 g16 }
-		\times 2/3 { fis16 [ a16 ] r16 }
-		\times 2/3 { r16 r16 e16 } | % 27
-		\times 2/3 { d16 [ d'16 ] r16 }
-		\times 2/3 { r16 r16 e16  }
-		\times 2/3 { d16 [ fis16 ] r16 }
-		\times 2/3 { r16 r16 c16 }
-		\times 2/3 { b16 [ d16 ] r16 }
-		\times 2/3 { r16 r16 a16 } | % 28
-		\times 2/3 { g16 [ g'16 ] r16 } \clef "treble"
-		\times 2/3 { r16 r16 a16 }
-		\times 2/3 { g16 [ b16 ] r16 }
-		\times 2/3 { r16 r16 f16 }
-		\times 2/3 { e16 [ g16 ] r16 }
-		\times 2/3 { r16 r16 d16 } | % 29
-		\times 2/3 { c16 [ c'16 ] r16 }
-		\times 2/3 { r16 r16 d16 }
-		\times 2/3 { c16 [ e16 ] r16 }
-		\times 2/3 { r16 r16 b16 }
-		\times 2/3 { a16 [ c16 ] r16 }
-		\times 2/3 { r16 r16 g16  } | % 30
+		\tuplet 3/2 { a16 [ a'16 ] r16 }
+		\tuplet 3/2 { r16 r16 b16  }
+		\tuplet 3/2 { a16 [ c16 ] r16 }
+		\tuplet 3/2 { r16 r16 g16 }
+		\tuplet 3/2 { fis16 [ a16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16 } | % 27
+		\tuplet 3/2 { d16 [ d'16 ] r16 }
+		\tuplet 3/2 { r16 r16 e16  }
+		\tuplet 3/2 { d16 [ fis16 ] r16 }
+		\tuplet 3/2 { r16 r16 c16 }
+		\tuplet 3/2 { b16 [ d16 ] r16 }
+		\tuplet 3/2 { r16 r16 a16 } | % 28
+		\tuplet 3/2 { g16 [ g'16 ] r16 } \clef "treble"
+		\tuplet 3/2 { r16 r16 a16 }
+		\tuplet 3/2 { g16 [ b16 ] r16 }
+		\tuplet 3/2 { r16 r16 f16 }
+		\tuplet 3/2 { e16 [ g16 ] r16 }
+		\tuplet 3/2 { r16 r16 d16 } | % 29
+		\tuplet 3/2 { c16 [ c'16 ] r16 }
+		\tuplet 3/2 { r16 r16 d16 }
+		\tuplet 3/2 { c16 [ e16 ] r16 }
+		\tuplet 3/2 { r16 r16 b16 }
+		\tuplet 3/2 { a16 [ c16 ] r16 }
+		\tuplet 3/2 { r16 r16 g16  } | % 30
 		fis8 [ \clef "bass" a,8 b8 c8 ] d8 [ d,8 ] | % 31
-		g8 [ g,8 ] \clef "treble" fis'''16 r16 fis16 r16 \clef "bass" s4 \clef "treble" | % 32
+		g8_[ g,8 ] \clef "treble" \voiceThree fis'''16 r16 fis16 r16 \clef "bass" s4 \clef "treble" | % 32
  } %end repeated section
 }
 
@@ -390,7 +415,7 @@ bassTwo = \relative a {
 		s4 \clef "treble" 
 		<fis a>16 r16 <fis a>16 r16 b,16 r16 <fis' a>16 r16 \clef "bass" | % 22
 		s1*3/4 | % 23
-		e,8 \clef "treble" 
+		e,8\noBeam \clef "treble" 
 		<fis' a>16 r16 <dis fis>16 r16 <dis fis>16 r16 <a dis>16 r16 <a dis>16 r16 \clef "bass" | % 24
 	 	s1*3/4 | % 25
 		s1*3/4 | % 26
@@ -412,12 +437,11 @@ bass = << \bassOne \\ \bassTwo>>
 
 \score {
  \context PianoStaff <<
- \set PianoStaff.instrumentName = "Clavier "
  \set PianoStaff.midiInstrument = "harpsichord"
  \new Staff = "upper" { \clef treble \key g \major \time 3/4 \soprano }
  \new Staff = "lower" { \clef bass \key g \major \time 3/4 \bass }
  >>
  \layout{ }
- \midi { }
+ \midi { \tempo 4 = 84 }
 
 }
