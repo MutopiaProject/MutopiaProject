@@ -1,5 +1,4 @@
-
-\version "2.19"
+\version "2.19.7"
 
 tsfooter = \markup {
 \column {
@@ -20,22 +19,26 @@ tsfooter = \markup {
 
 \header {
 mutopiatitle = ""    %  if not set taken from title field
-mutopiacomposer = "Traditional"    %
+mutopiacomposer = "Traditional"
 mutopiapoet = ""    %  
 mutopiaopus = ""    %  
-mutopiainstrument = "Koto"    %  
+mutopiainstrument = "Koto"
 date = ""    %  optional - date piece composed
 source = "Nagai, Iwai and Obata, Kenhachiro, \"Seiyo gakufu Nihon zokkyokushu\", pub. Miki Shoten, Osaka, 1895.  English title, \"A Collection of Japanese Popular Music.\" "
-style = "Folk"    %  
-copyright = "Public Domain"    %  
-maintainer = "patrick stanistreet"    %  
-maintainerEmail = "haematopus@gmail.com"     %  
+style = "Folk"
+license = "Public Domain"
+maintainer = "patrick stanistreet"
+maintainerEmail = "haematopus@gmail.com"
 maintainerWeb = "http://www.daisyfield.com/music/"
 moreInfo = "Typeset by Tom Potter, 2007."  
 
-title = Murasaki
+title = "Murasaki"
 subtitle = "  "      %
 composer = "Arr. Y. Nagai, K. Obata"
+
+ footer = "Mutopia-2014/07/27-1983"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 kotoOne =  {
