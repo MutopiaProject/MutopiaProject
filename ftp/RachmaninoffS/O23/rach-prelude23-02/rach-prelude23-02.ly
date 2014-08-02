@@ -12,11 +12,11 @@
 % - Still considering whether to follow all tuplet number visibility
 %   in any edition. Gutheil and Muzyka differ a little in this area,
 %   and showing numbers again in 2nd occurance of main theme is repetitive
+% - Tried to do flexible curve tuning depending on system break points
+%   in middle section. Might not completely account for all cases though.
+% - Tame various Y-extent estimators in order to reduce page count
 
 %----- Known problems ------------------------------------------------
-% - It is next to impossible to have original layout; note density is
-%   too high. On stable (2.18) version, setting system-count achieves the
-%   best result, though best option is to use devel version.
 % - This piece is basically a showcase for Lilypond's inept handling
 %   of tuplet number positioning. Most problems originate from tuplet
 %   number being placed at mid-point of tuplet bracket
@@ -35,9 +35,10 @@
 %%--------------------------------------------------------------------
 
 % It is possible to lower requirement to 2.18.x but some problems
-% may surface, like bad tuplet layout in bar 6 left hand
-\version "2.19.7"
- 
+% may surface, like bad tuplet layout in bar 6 left hand, and notes
+% can't be packed densely like original IMSLP editions
+\version "2.19.10"
+
 %---------------------------------------------------------------------
 %--Paper-size setting must be commented out or deleted upon submission.
 %--LilyPond engraves to paper size A4 by default.
@@ -46,16 +47,16 @@
 %--Mutopia publishes both A4 and letter-sized versions.
 %---------------------------------------------------------------------
 % #(set-default-paper-size "letter")
- 
+
 %--Default staff size is 20
 % #(set-global-staff-size 20)
- 
+
 % from openlilylib
 #(define (calculate-version ver-list)
    ;; take a LilyPond version number as a three element list
    ;; and calculate a integer representation
-   (+ (* 1000000 (first ver-list)) 
-     (* 1000 (second ver-list)) 
+   (+ (* 1000000 (first ver-list))
+     (* 1000 (second ver-list))
      (third ver-list)))
 
 \paper {
@@ -64,7 +65,7 @@
   markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
   top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
   last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
-  
+
   % with 2.19 version the score is rendered into most compat layout by
   % default, but for 2.18 the whole thing explode into 11-12 pages, so
   % force system-count on older versions (the only one effective setting here)
@@ -76,7 +77,7 @@
   ragged-last = ##f
   ragged-bottom = ##f
   ragged-last-bottom = ##f
-  
+
   % debug-slur-scoring = ##t
 }
 
@@ -93,14 +94,14 @@
   license = "Creative Commons Attribution-ShareAlike 4.0"
   %% Gutheil edition on IMSLP is also cross-referenced
   source = "IMSLP - Muzyka and Gutheil editions"
- 
+
   maintainer = "Abel Cheung"
   maintainerEmail = "abelcheung at gmail dot com"
   mutopiatitle = "Prelude Op. 23, No. 2"
   mutopiaopus = "Op. 23"
   mutopiacomposer = "RachmaninoffS"
   mutopiainstrument = "Piano"
- 
+
  footer = "Mutopia-2014/07/19-1960"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
@@ -130,7 +131,7 @@ moveTuplet =
 
 % force invisible bracket to absolute position so tuplet number is drawn
 % at desired location. Better used with avoid-* properties
-moveTupletAbs = 
+moveTupletAbs =
 #(define-music-function (parser location offset whiteout)
    (number? boolean?)
    (define pos (cons offset offset))
@@ -168,20 +169,17 @@ ottavaUp = {
 % http://lists.gnu.org/archive/html/lilypond-user/2013-05/msg00415.html
 graceStyle = \applyContext
 #(lambda (context)
-   (map (lambda (x) (ly:context-pushpop-property
-                     context
-                     (cadr x)
-                     (caddr x)
-                     (cadddr x)))
+   (map (lambda (x)
+          (ly:context-pushpop-property
+           context (cadr x) (caddr x) (cadddr x)))
      (ly:context-property context 'graceSettings)))
 
 % unapply grace note style
 noGraceStyle = \applyContext
 #(lambda (context)
-   (map (lambda (x) (ly:context-pushpop-property
-                     context
-                     (cadr x)
-                     (caddr x)))
+   (map (lambda (x)
+          (ly:context-pushpop-property
+           context (cadr x) (caddr x)))
      (ly:context-property context 'graceSettings)))
 
 % show/hide fingering
@@ -209,6 +207,38 @@ toggleTup =
      \revertTuplet
    #}
 )
+
+%-------- The following funcs are for slur shape tuning
+
+#(define (change-slur-offset grob Y-one Y-two Y-three Y-four)
+   (let* ((points (ly:slur::calc-control-points grob))
+          (pt-one (first points))
+          (pt-two (second points))
+          (pt-three (third points))
+          (pt-four (fourth points)))
+     (set-cdr! pt-one   (+ Y-one   (cdr pt-one  )))
+     (set-cdr! pt-two   (+ Y-two   (cdr pt-two  )))
+     (set-cdr! pt-three (+ Y-three (cdr pt-three)))
+     (set-cdr! pt-four  (+ Y-four  (cdr pt-four )))
+     (ly:grob-set-property! grob 'control-points
+       (list pt-one pt-two pt-three pt-four))))
+
+% broken slurs/ties are often ugly with wrong Y-offset, so attempt
+% to cure *only* if curve is broken across systems
+#(define (shape-slur-if-broken grob part Y-one Y-two Y-three Y-four)
+   (if (eq? 'Slur (assoc-ref (ly:grob-property grob 'meta) 'name))
+       (let* ((orig (ly:grob-original grob))
+              (siblings (if (ly:grob? orig)
+                            (ly:spanner-broken-into orig) '())))
+         (if (>= (length siblings) 2)
+             (cond
+              ((eq? part 'first)
+               (change-slur-offset (first siblings)
+                 Y-one Y-two Y-three Y-four))
+              ((eq? part 'second)
+               (change-slur-offset (second siblings)
+                 Y-one Y-two Y-three Y-four)))))))
+
 
 %-------- The following funcs are for repeatedly adding articulation
 
@@ -347,7 +377,7 @@ RHpatternI = \relative c' { % bar 11
 RHpatternJ = \relative c' { % bar 13 + 14
   \addArticulation "accent" {
     \moveTuplet -1       \tuplet 6/4 { <f bes d f>4~ q16 <bes bes'> }
-    <d f>8               \tuplet 3/2 { <bes bes,>16 q q } 
+    <d f>8               \tuplet 3/2 { <bes bes,>16 q q }
     \moveTupletAbs 3 ##f \tuplet 6/4 { <f d f,>4~ q16 <bes bes'> }
   }
   \hideTupletOnce  \tuplet 6/4 { <d f>16-> <a a'> <bes d> <g g'> <bes d> <f f'> } |
@@ -378,7 +408,7 @@ RH = \relative c'' {
   \RHpatternF |
   \RHpatternG |
   \RHpatternH |
-  
+
   \barNumberCheck 11
   \RHpatternI \RHpatternB |
   \RHpatternJ |
@@ -408,7 +438,7 @@ RH = \relative c'' {
     } \\
     \relative c' { <d f bes d>1-> }
   >> |
-  
+
   \barNumberCheck 19
   \revertTuplet \hideTupletTemp
   \tuplet 6/4 4 {
@@ -417,51 +447,51 @@ RH = \relative c'' {
     <bes f> <c c,> <bes f> <d d,>     f,   <bes bes,>
     d,      <g g,> d       <bes bes'> d    <g g,>
     bes,    <f f'> bes     <ees ees,> bes  <d d,> |
-    
+
     % bar 20
     <des bes ges des>\noBeam \)
     <ges ges'> \(        <bes des> <f f'>     <bes des> <ees ees,>
     <bes ges> <des des,> <bes ges> <ees ees,> <bes ges> <des des,>
     ges,      <bes bes,> ges       <des des'> ges       <bes bes,>
     des,      <aes aes'> des       <bes bes'> des       <ges ges,> \) |
-    
+
     % bar 21
     r <des des'> \( <f bes> <f f'>   <bes des> <des des,>
     <bes f>  <c c,> <bes f> <des des,> <bes f> <c c,>
     f,   <bes bes,> f       <des des'> f       <bes bes,>
     des, <ges ges,> des     <bes bes'> des     f \) |
-    
+
     % bar 22
     r        <des des'> \( <ges bes> <ees ees'> <ges bes> <des des'>
     ges         <bes bes,> ges       <c c,>     ges       <des des'> \)
     \ottavaUp
     <aes' c> \( <ees ees'> <aes c>   <f f'>     <aes c>   <ges ges'>
     <c ees>     <ges ges'> <c ees>   <aes aes'> <c ees>   <bes bes'> \) |
-    
+
     % bar 23
     <des f> \( <bes bes'> f'  <c c'>     f    <des des'>
     f          <c c'>     f   <bes bes,> f    <aes aes,>
     des,       <ges ges,> des <f f,>
     \ottava #0 aes, <ees ees'>
-    
+
     aes 16 <ees ees'> aes <des des,>
     \set tieWaitForNote = ##t
     des,_~ <f f,> |
     <fes des fes,>\noBeam \)
     \set tieWaitForNote = ##f
-    
+
     % bar 24 sans first note
     <ees ees'>16 \(      <aes des> <fes fes'> <aes des> <ees ees'>
     <aes des> <fes fes'> <aes des> <ges ges'> <aes des> <fes fes'>
     aes       <ees ees'> aes       <fes fes'> aes       <ees ees'>
     g         <des des'> g         <ces ces,> g         <bes bes,> \) |
-    
+
     % bar 25
     <aes ees> \( <bes bes,> <aes ees> <ces ces,> <aes ees> <bes bes,>
     ees,         <g g,>     ees       <aes aes,> ees       <bes bes'>
     <aes' ees>   <ces ces,> <aes ees> <bes bes,> <aes ees> <ces ces,>
     aes          <bes bes,> aes       <ces ces,> aes       <des des,> \) |
-    
+
     % bar 26
     <ces aes> \( <d d,> <ces aes> <ees ees,> <ces aes> <e e,>
     <aes, ces>   <f f'> <aes ces> <e e'>     <aes ces> <f f'>
@@ -469,36 +499,36 @@ RH = \relative c'' {
     <d bes>      <f f,> <d bes>
     \ottavaUp
     <ges ges,> <aes aes,> <bes bes,> \) |
-    
+
     % bar 27
     <ges ees> \( <ees ees'> <ges bes> <ces ces,> <ges ees> <bes bes,>
     <ges ees>    <ces ces,> <ges ees> <bes bes,> <ges ees> <aes aes,>
     ees          <ges ges,> ees       <aes aes,>  ees      <ges ges,>
     \ottava #0
     bes,         <f f'>     bes       <ees, ees'> ges      <bes bes,> \) |
-  
+
     % bar 28
     r     <b, eis  >(  eis,)  <b' fis' >(  fis  <fis ais>)
     b, (  <gis' b  >)  dis (  <b' dis  >)  e,(  <b' e   >)
     gis(  <dis' gis>)  ais (  <dis ais'>)  b (  <dis b' >
     b  )  <e ais   >(  ais,)  <e' b'   >(  b )  <e cis' >( |
-    
+
     % bar 29
     cis )  <ees a   >(  a,  )  <ees' bes'>(  bes    <bes d   >)
     ees,(  <ces' ees>)  g   (  <ees' g   >)  aes,(  <aes' ees>)
     r      <ges ces >(  ces,)  <ges' des'>(  des )  <ges ees'>(
     ees )  <bes' ees>(  ees,)  <bes' f'  >(  f   )  <bes ges'>(
-    
+
     % bar 30
     fis16) <a    dis eis>( eis) <a    dis fis>( fis) <dis fis ais>(
     ais  ) <dis  fis b  >( b  ) <fis' b   d  >( d  ) <fis b   dis>(
     dis  ) <ais' dis eis>( eis) <ais  dis fis>( fis) <dis fis a  >(
     a    ) <dis  fis ais>( ais) <fis' ais d  >( d  ) <fis ais dis> |
-    
+
     % bar 31
     dis \repeat unfold 3 { <ais' e'>( e) <ais eis'>( eis) <ais e' fis>( fis) }
     <ais eis'>( eis) <ais fis'>( fis) <g bes e g>\noBeam-> |
-    
+
     % bar 32
     \revertTuplet \showTupletTemp
     \addArticulation "accent" {
@@ -510,7 +540,7 @@ RH = \relative c'' {
     % public domain editions. Repetitive.
     \revertTuplet \hideTupletTemp
     <c a'>-> ( g' e d c ) <g' bes e g>\noBeam-> |
-    
+
     % bar 33
     \addArticulation "accent" {
       <e g bes e>4~ q16 <d g bes d>
@@ -525,7 +555,7 @@ RH = \relative c'' {
     <c a'>-> ( g' e d c ) g'32[ ( d] |
   }
   \revertTuplet
-  
+
   \barNumberCheck 34
   ees32 c d g, a f )              <g' ees' g>16->\noBeam q8.-> c32 ( g
   a    f g d ees c ) \clef treble <c' ees c'>16->\noBeam q8.-> g'32 ( d |
@@ -533,7 +563,7 @@ RH = \relative c'' {
   a    f g d ees c )              <c' ees c'>16->\noBeam q8.-> c32 ( g |
   a    f g d ees c ) g'' ( d ees c d g, a f ) c'' ( g
   \repeat unfold 3 { a f c' g } a f ) r16 |
-  
+
   \barNumberCheck 37
   \cadenzaOn \voiceOne
   \graceStyle
@@ -554,22 +584,28 @@ RH = \relative c'' {
   \RHpatternF |
   \RHpatternG |
   \RHpatternH |
-  
+
   \barNumberCheck 46
   \RHpatternI \RHpatternB |
   \RHpatternJ |
   \RHpatternK
-  \tuplet 5/4 { <g''' ees' g>16 <f d' f> <d bes' d> <bes d bes'> <ees c' ees> } |
+  \tuplet 5/4 { <g'''=' ees' g>16 <f d' f> <d bes' d> <bes d bes'> <ees c' ees> } |
 
-  \tuplet 6/4 4 {
+  \moveTupletAbs 4.5 ##f \tuplet 6/4 {
     <d bes' d   > <bes' d e bes'> <a cis e a > <f a d f    > <d f bes d> <g bes ees g>
+  }
+  \moveTupletAbs 6 ##f \tuplet 6/4 {
     <f bes d f  > <ees' c' ees  > <d bes' d  > <bes d bes' > <g bes g' > <c ees c'>
+  }
+  \moveTupletAbs 3.5 ##f \tuplet 6/4 {
     <bes d bes' > <a d a'       > <bes d bes'> <e, g cis e > <a c fis a> <d, f b d>
+  }
+  \tuplet 6/4 {
     <g bes ees g> <c, ees a c   > <f aes d f > <ees g c ees> <c g' c   > <g' bes c g'>
   } |
-  
+
   <c,~ f bes c~>4-> <c ees a c>8. <d f bes d>16-> |
-  
+
   \barNumberCheck 54
   \revertTuplet \hideTupletTemp
   <<
@@ -593,7 +629,7 @@ RH = \relative c'' {
   \ottava #0
   \tuplet 5/4 { f' d c bes g }
   \tuplet 6/4 { a bes b c ees ges } |
-  
+
   % bar 55
   <f d>8\noBeam \)
   \ottavaUp
@@ -601,7 +637,7 @@ RH = \relative c'' {
   \ottava #0
   \tuplet 5/4 8 { f' d c bes g d' c bes g f ees d c ees f }
   \tuplet 6/4 { ges aes a b c ees } |
-  
+
   % bar 56
   <bes d>8\noBeam \)
   \tuplet 5/4 8 {
@@ -609,7 +645,7 @@ RH = \relative c'' {
     g f d c bes f' d c bes g d' c bes g f
   }
   \tuplet 6/4 { a bes b c ees ges } |
-  
+
   % bar 57
   \showTupletOnce
   \tuplet 3/2 {
@@ -626,7 +662,7 @@ RH = \relative c'' {
   \tuplet 3/2 { <bes d>16 \) r f\noBeam \( }
   \tuplet 5/4 8 { bes32 g f ees d f ees d c bes }
   \tuplet 6/4 { a bes b c ees ges \) } |
-  
+
   \barNumberCheck 58
   \set subdivideBeams = ##f
   <f d>8 r16 <bes bes,>16-- <f d>4--~
@@ -642,12 +678,12 @@ RH = \relative c'' {
       <bes g' bes>4~ q16 <f' bes d f>
     }
   } |
-  
+
   <d f bes d>16->\noBeam <bes' d f bes> <f bes d f> <g g'>
   <d d'> <f f'> <bes, bes'> <d d'>
   <g, g'> <bes bes'> <f f'> <g g'>
   <d d'> <f f'> <bes, bes'> <d d'> |
-  
+
   <<
     { r4 <a' c ees a>-> r8 \clef treble <bes d f bes>4.->\fermata } \\
     \relative c { <f f'>2-> \clef bass bes,-> }
@@ -756,10 +792,9 @@ LHpatternJ = \relative c { % bar 9, 2nd half
 
 LHpatternK = \relative c { % bar 10
   \addArticulation "accent" {
-    \tuplet 3/2 { bes16 a g } f8~
-    \moveTupletAbs #-4.5 ##f
+    \moveTupletAbs #-4 ##f \tuplet 3/2 { bes16 a g } f8~
     \once \override TupletNumber.extra-offset = #'(-2 . 0)
-    \tuplet 6/4 { f4~ f16 <f f,> }
+    \moveTupletAbs #-4.5 ##f \tuplet 6/4 { f4~ f16 <f f,> }
   }
 }
 
@@ -776,7 +811,7 @@ LHpatternL = \relative c { % bar 15 + bar 16 first half
   \unset subdivideBeams
   \addArticulation "accent" {
     \tuplet 6/4 { <d bes g>4~ q16 ) <a c fis> }
-    \moveTupletAbs -3.5 ##f \tuplet 6/4 { <bes d g>4~ q16 <a ees c> }
+    \moveTupletAbs -4.25 ##f \tuplet 6/4 { <bes d g>4~ q16 <a ees c> }
   }
 }
 
@@ -811,7 +846,10 @@ LH = \relative c'
     \tuplet 5/4 { <g g,>16 <a a,> <d, d,> <bes' bes,> <ees, ees,> }
   } |
   \revertTuplet
-  <f f,>4-> <f a ees'>8. <bes,, bes,>16-> |
+  <f f,>4->
+  \temporary \override Beam.auto-knee-gap = 1
+  <f a ees'>8. <bes,, bes,>16-> |
+  \revert Beam.auto-knee-gap
 
   \barNumberCheck 18
   <<
@@ -825,28 +863,30 @@ LH = \relative c'
       \tuplet 3/2 { f d bes \) } |
       s2. f'4-- |
       <ges bes,>2.-- aes8--
-      % 2nd part of broken tie is way too short
-      \shape #'(() ((0 . 2)(0.8 . 2.5)(1.6 . 2.5)(2.4 . 2))) Tie
-      bes--~ |
+      bes--_~ |
       <des bes f>2.-- ees8-- <f bes,>-- |
-      
+
       % bar 22-23
       <ges~ des bes ees,>2--\arpeggio
       \tuplet 3/2 { ges4 aes8-- }
       \clef treble <bes>8--\arpeggio c-- |
       \clef bass <des f, aes, f aes, des,>4.--\arpeggio s8*1/3 c8*2/3--
       bes8-- ( aes-- f-- )
-      % first part of broken slur has bad end point
-      \shape #'(((0 . 0)(0 . 0)(0 . 2)(0 . 2)) ()) Slur
-      \clef bass g,-- ( |
-      
+      \clef bass
+      g,-- -\tweak Slur.after-line-breaking
+      #(lambda(grob) (shape-slur-if-broken grob 'first 0 0 2 2))
+      ( |
+
       % bar 24-27
       <aes fes aes, des,>2\arpeggio )
+      \shape #'(() ((0 . 0)(0.3 . 0)(0.15 . -1)(-0.3 . -1.9))) Slur
       bes8--[ ( ces--] des--\arpeggio [ ees--] |
       <ces ees, aes,>2.-- )
-      % 2nd part of broken slur is ugly, bad end point
-      \shape #'(() ((0 . -0.5)(0 . -0.5)(0 . 1.5)(0 . 1.5))) Slur
-      d8-- ( ees-- |
+      d8-- -\tweak Slur.after-line-breaking
+      #(lambda(grob) (shape-slur-if-broken grob 'second 1.5 1.5 1.5 1.5))
+      ( ees-- |
+      % 2nd part of broken tie is way too short
+      \shape #'(() ((-1.2 . 0)(-0.8 . 0.3)(-0.4 . 0.3)(0 . 0))) Tie
       <f~ ces aes>2 f4*2/3 ) ges8*2/3-- ( aes8-- bes-- ) |
       <ges bes, ges bes, ees,>1--\arpeggio |
     } \\
@@ -857,7 +897,7 @@ LH = \relative c'
       \tuplet 3/2 4 { <f, bes,>8 ( bes d f bes d r d, bes f bes, f' ) } |
       \tuplet 3/2 4 { r8 bes, ( bes' ges' des' ges des ges, bes, ) } r4 |
       \tuplet 3/2 4 { r8 bes, ( bes' f' bes c des bes <f bes,> ) } r4 |
-      
+
       % bar 22-23
       \tuplet 3/2 4 { r8 ees, ( bes' ges' bes des ) }
       \showTupletOnce
@@ -866,11 +906,11 @@ LH = \relative c'
       \tuplet 3/2 { <c aes ges>8 ( aes, ) aes'' } <ees c ges>4\arpeggio |
       \tuplet 3/2 4 { r8 aes,, ( f' des' \clef treble f ) c' }
       des,4~ des8 r |
-      
+
       % bar 24
       \tuplet 3/2 4 { r8 des,, ( aes' fes' aes fes' ) }
       r4 <ees,, des' g>4\arpeggio |
-      
+
       % bar 25
       \tuplet 3/2 4 { r8 aes, ( aes' ees'4 ) aes,8 ( ces' ees, aes, ) }
       % SPECIAL NOTE: Both Muzyka and Gutheil editions don't show any accidentals,
@@ -881,14 +921,14 @@ LH = \relative c'
       % Richter, Ashkenazy: A♭
       % Ogdon, Gilels: B♮
       <ees' aes>4 |
-      
+
       % bar 26
       \tuplet 3/2 4 {
         r8 aes, ( f' ces' f, ces' )
         <aes bes d> bes, ges''
       }
       <aes, bes d>4 |
-      
+
       % bar 27
       \tuplet 3/2 4 {
         r8 ees,, ( ees' bes' ges' bes
@@ -896,7 +936,7 @@ LH = \relative c'
       }
     }
   >> |
-  
+
   \barNumberCheck 28
   <<
     \relative c' {
@@ -912,7 +952,7 @@ LH = \relative c'
       ges' ( ees ces ges bes, ges' ) f' ees
     }
   >> |
-  
+
   % bar 30-31
   \revertTuplet \showTupletTemp
   \tupletNeutral
@@ -926,11 +966,11 @@ LH = \relative c'
     \tuplet 6/4 { fis8 ) <e e,>16 <cis cis,>8 <ais ais,>16 }
     \revertTuplet \hideTupletTemp
     \tuplet 6/4 {
-      <fis fis,>8 <e e,>16 <cis cis,>8 <ais ais,>16
+      <fis fis,>8 <e e,>16 <cis cis,>8
       % SPECIAL NOTE: currently no public domain editions has ottava.
       % it may save a bit of vertical space... or not.
       % \ottava #-1 \set Staff.ottavation = #"8"
-      <fis fis,>8 <e e,>16 <cis cis,>8 c,16
+      <ais ais,>16 <fis fis,>8 <e e,>16 <cis cis,>8 c,16
       % \ottava 0
     }
   }
@@ -943,7 +983,7 @@ LH = \relative c'
   \tuplet 3/2 { a16 ( g c, }
   \tuplet 6/4 { <g' bes>8 ) <g bes>16-> <f bes>8-> <e bes'>16-> }
   <c bes'>8->\noBeam
-  
+
   % bar 33
   \tuplet 3/2 { d16 ( c g ) } |
   \revertTuplet \hideTupletTemp
@@ -951,7 +991,7 @@ LH = \relative c'
   <bes, e>8 ) \tuplet 3/2 { a16 ( g c, }
   \tuplet 6/4 { <g' bes>8 ) <g bes>16-> <f bes>8-> <e bes'>16-> }
   \revertTuplet <c bes'>4-> |
-  
+
   % bar 34-36
   f,8. g'32 ( d ees c d g, a f~ f16 )
   % SPECIAL NOTE: slur end point is suspicious, maybe should end one note
@@ -961,7 +1001,7 @@ LH = \relative c'
   ees'8.->\noBeam c32 ( g a f g d ees c ) c' ( g |
   a f g d ees c ) g'' ( d ees c d g, a f ) \clef treble c'' ( g
   \repeat unfold 3 { a ees c' g } a ees ) r16 \clef bass |
-  
+
   % bar 37
   \cadenzaOn
   \graceStyle
@@ -973,7 +1013,7 @@ LH = \relative c'
   \scaleDurations 3/4 { f[ ( ees f,] ) f[( f,]) }
   \noGraceStyle
   \cadenzaOff \bar "|"
-  
+
   \barNumberCheck 38
   \tupletDown
   \LHpatternA ##f \LHpatternC ##f
@@ -984,7 +1024,7 @@ LH = \relative c'
   \LHpatternF ##f \LHpatternH |
   \LHpatternI     \LHpatternJ |
   \LHpatternK |
-  
+
   \barNumberCheck 46
   \pushToTag #'accents -> \LHpatternA ##f
   \LHpatternC ##f \keepWithTag #'end-ees \LHpatternD |
@@ -1001,9 +1041,9 @@ LH = \relative c'
     <bes bes,> <fis fis,> <g g,> <a a,> <d, d,> <g g,>
     <c, c,> <f f,> <b, b,> <c c,> <ees ees,> <e e,>
   } |
-  
+
   <f f,>4-> <c ees a>8. <bes, bes,>16-> |
-  
+
   \barNumberCheck 54
   <<
     \relative c { \voiceTwo r8 \once \phrasingSlurUp f \( bes d }
@@ -1011,22 +1051,22 @@ LH = \relative c'
   >>
   \oneVoice
   \clef treble f'''8 bes4 <c ges ees>8 |
-  
+
   % bar 55
   <d f, bes,>8\noBeam \)
   \clef bass \once \phrasingSlurUp <d,, f, bes,> \( f bes
   \clef treble d f4 <a ees c ges>8 |
-  
+
   % bar 56
   <bes d, f,>8\arpeggio\noBeam \) \clef bass <f,, bes,> \( bes d
   f bes4 <c ges ees>8 |
-  
+
   % bar 57
   <bes d, f,>8\arpeggio \) bes,,[ ( <f' d'>] ) <a' ees c>--[ (
   <bes d, f,>--] ) bes,,[ ( <f' d'>] )
   \once \override Beam.breakable = ##t
   <ees' ges>--[ |
-  
+
   \barNumberCheck 58
   <f bes,>--]
   \tupletDown \revertTuplet \showTupletTemp
@@ -1034,20 +1074,20 @@ LH = \relative c'
   \moveTupletAbs -3 ##f \tuplet 6/4 { f d bes d bes f ) }
   \revertTuplet \hideTupletTemp
   \tuplet 6/4 4 { bes, ( f' bes d cis d f d bes d bes f ) } |
-  
+
   % bar 59
   \tuplet 6/4 4 {
     bes, ( f' bes d cis d bes' d, bes d bes f )
     bes, ( f' bes d f ) r
     e, ( bes' d g bes ) <f d bes f>->\noBeam
   } |
-  
+
   % bar 60
   <f bes d f>16->\noBeam <bes d bes'> <f bes d f> <g g'>
   <d d'> <f f'> <bes, bes'> <d d'>
   <g, g'> <bes bes'> <f f'> <g g'>
   <d d'> <f f'> <bes, bes'> <d d'> |
-  
+
   <<
     \relative c { r4 <ees a c ees>-> r8 <d f bes d>4.->\fermata } \\
     \relative c, { <f f,>2-> <bes, bes,>-> }
@@ -1069,59 +1109,62 @@ Dynamics = {
   \time 4/4 s1\ff |
   s1*5 |
   \time 2/4 s2 |
-  \time 4/4 s1\ff |
-  s2._\dim s4\p |
-  s1 |
-  
+  \time 4/4
+  s2-\tweak X-offset -3.5
+    -\tweak extra-offset #'(0 . -1.75) \ff
+  \bar "" s2 |
+  \once \override DynamicTextSpanner.extra-offset = #'(0 . -1.75)
+  s2\dim \bar "" s4 s4\p |
+  s2 \bar "" s2 |
+
   \barNumberCheck 21
 
   s2. s4\< |
   s2\! s4*5/3\> s4*1/3\! |
-  \once \override DynamicText.X-offset = #-2
-  s1\p |
-  s2 s8\< s8\! s8\> s8\! |
-  s2 s4*2/3 s4*4/3\< |
-  s1\! |
-  \once \override DynamicText.X-offset = #-4
-  s1\pp |
-  
+  s2-\tweak X-offset -2 \p \bar "" s2 |
+  s2 \bar "" s8\< s8\! s8\> s8\! |
+  s2 \bar "" s4*2/3 s4*4/3\< |
+  s2\! \bar "" s2 |
+  s2-\tweak extra-offset #'(0 . -1) \pp \bar "" s2 |
+
   \barNumberCheck 28
 
   \once \override DynamicTextSpanner.text = "un poco cresc."
   \once \set crescendoSpanner = #'text
-  s1\< |
-  s2 s2\cresc |
-  s8*2/3\f s4*2/3-\markup{\larger \italic "marcato"} s2. |
-  s1 |
+  s2\< \bar "" s2 |
+  s2 \bar "" s2\cresc |
+  \once \override DynamicText.extra-offset = #'(0 . -1)
+  s8*2/3\f s4*2/3-\markup{\larger \italic "marcato"} s4 \bar "" s2 |
+  s2 \bar "" s2 |
   s1\f |
   s2. s4*5/6\> s4*1/6\! |
   s2\p s2\cresc |
   s1 |
   s2... s16\! |
-  
+
   \barNumberCheck 37
   \time 2/4 s1 | % inside \cadenza
-  
+
   \set Score.currentBarNumber = #38 % \cadenza skips bar number, so increment manually
   \time 4/4
   s8 s2..\ffmarcato |
   s1*6 |
   \time 2/4 s2 |
-  
+
   \barNumberCheck 46
   \time 4/4 s1\ff |
   s1*4 |
   s2. s4-\markup{\larger \italic "marcato"} |
   s1 |
   \time 2/4 s2 |
-  
+
   \barNumberCheck 54
   \time 4/4
   s8 s2\ff  s8.\< s16\! s16*1/3 s16*4/3\> s16*1/3\! |
   s8 s2\dim s8.\< s16\! s16*1/3 s16*4/3\> s16*1/3\! |
   s8 s2     s8.\< s16\! s16*1/3 s16*4/3\> s16*1/3\! |
   s4. s8\> s4.\! s8\> |
-  
+
   \barNumberCheck 58
   s2\p s2\cresc |
   s1 |
@@ -1150,6 +1193,16 @@ Dynamics = {
       \omit TupletBracket
       \override TupletBracket.avoid-slur = #'ignore
       \override DynamicTextSpanner.style = #'none
+      % extent estimators, DON'T BE NAUGHTY
+      \override DynamicText.Y-extent =
+      #(ly:make-unpure-pure-container ly:grob::stencil-height '(-0 . 0))
+    }
+    \context {
+      \Voice
+      \override Slur.Y-extent =
+      #(ly:make-unpure-pure-container ly:slur::height '(-0 . 0))
+      \override PhrasingSlur.Y-extent =
+      #(ly:make-unpure-pure-container ly:slur::height '(-0 . 0))
     }
   }
   \midi {
