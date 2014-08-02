@@ -19,13 +19,13 @@
 
 %----- Known problems ------------------------------------------------
 % * Slope of staff change line in bar 20 is too steep if line break
-%   occurs there
-% * Curves to fix: bar 22-23, 73
+%   occurs there (which is not the case currently)
 % * Most staff change lines aren't pretty
 % * Staff packing is too agressive
 %   - Some hairpins / articulations can be mistaken to belong to
 %     staff above / below
-%   - A4 and letter paper size have different music layout (!)
+% * In Letter size, cresc in bar 29 can collide with tenutos
+% * Can't get good looking hairpin in bar 19
 
 %%--------------------------------------------------------------------
 % The Mutopia Project
@@ -265,7 +265,9 @@ RH = \relative c' {
       \restoreStemLength
       g4--~
       \shortenStemLength
-      g8 ) a ( |
+      g8 )
+      \shape #'(() ((0 . 0) (-1 . 0.5) (0 . 2) (0 . 2))) Slur
+      a ( |
       \restoreStemLength
       f4--~ f8 ) g ( ees d ) |
       cis8\tenutoAlt ( c16 cis d4 ) r |
@@ -556,12 +558,11 @@ LH = \relative c {
       \showStaffSwitch \change Staff="RH" bes8 \hideStaffSwitch
       \change Staff="LH" s2 \clef treble a='16 ( bes |
 
-      % FIXME How to place hairpin within slur?
       \temporary \override Hairpin.height = 0.3
-      \temporary \override Hairpin.extra-offset = #'(0 . -1.9)
+      \temporary \override DynamicLineSpanner.outside-staff-priority = ##f
       c ) fis, ( g^\< a\! bes-- a^\> g a\! g8 ) f16 g |
       \revert Hairpin.height
-      \revert Hairpin.extra-offset
+      \revert DynamicLineSpanner.outside-staff-priority
 
       % EDITORIAL NOTES: Both Gutheil & Muzyka editions have no slur here,
       % though similar passage at bar 19 has slur. Follow the editions.
@@ -623,8 +624,8 @@ LH = \relative c {
 
       \barNumberCheck 30
       f\tenutoAlt ( e )
-      %\once \override VoiceFollower.bound-details.left.padding = 2
-      %\once \override VoiceFollower.bound-details.right.padding = 2
+      \once \override VoiceFollower.bound-details.left.attach-dir = #RIGHT
+      \once \override VoiceFollower.bound-details.right.attach-dir = #LEFT
       \voiceTwo
       \showStaffSwitch \change Staff="RH" cis'\tenutoAlt ( c )
       \hideStaffSwitch \change Staff="LH"
@@ -706,7 +707,10 @@ LH = \relative c {
       r4 r8. \clef treble
       \once \override TupletBracket.padding = 0.5
       \tuplet 3/2 {
-        g32 -\tweak X-offset -5 ^\ppp ( a bes
+        g32 -\tweak X-offset -4
+            -\tweak extra-offset #'(-3.75 . -4.75)
+            -\tweak whiteout ##t ^\ppp
+        ( a bes
       } c8. ) c16-- |
       c16\tenutoAlt ( bes g a g8. )
       \once \override TupletBracket.padding = 0.5
@@ -809,8 +813,12 @@ LH = \relative c {
     }
     \\
     \relative c, {
-      a16[(-- cis]-- | d2~ d8)
-      \repeat unfold 2 { a16( cis | d2~ d8) }
+      a16[(-- cis]-- |
+      d2~ d8) a16( cis |
+      d2~ d8)
+      \shape #'(() ((0 . 0) (-1 . 0) (0 . -2) (0 . -2))) Slur
+      a16( cis |
+      d2~ d8)
     }
   >>
 
@@ -895,11 +903,11 @@ Dynamics = {
   s8. s16*2/3\< s16*1/3\! s2 |
   s2. |
   s4 s2\dim |
-  s2.\mf |
+  s2.-\tweak extra-offset #'(0 . 1.5) \mf |
   s2.\dim |
-  s2.\p |
+  s2.-\tweak extra-offset #'(0 . 1) \p |
   \tempo "rit." 4 = 70
-  s4-\tweak self-alignment-X -0.5 \pp
+  s4-\tweak extra-offset #'(0 . 0.5) \pp
   \tempo 4 = 64 s4
   \tempo 4 = 58 s8
   \tempo 4 = 50 s8 |
@@ -907,7 +915,7 @@ Dynamics = {
   \barNumberCheck 45
   \tempo "Tempo I" 4 = 66
   s4\mf s8\> s4.\! |
-  s2. |
+  s2. | \break  % Ensure A4/Letter have same break point, prevent surprises
   s4\mf s8\> s4.\! |
   s2. |
   \repeat unfold 2 { s8. s16\> s2\! } |
@@ -918,18 +926,22 @@ Dynamics = {
 
   \barNumberCheck 55
   s2.*7 |
-  s16 s4..\dim s4\p | % shift dim a bit to compact staves
-  s8 s8.\p\< s16\! s8.\> s16\! s8 |
+  s16 s4..\dim s4\p | % shift dim a bit to compact staves, but....
+  % for next 2 bars hairpins need to move upward
+  \temporary \override Hairpin.extra-offset = #'(0 . 1.5)
+  s8 s8.-\tweak extra-offset #'(0 . 1.5) \p\<
+  s16\! s8.\> s16\! s8 |
   s8 s8\< s8\! s8\> s8\! s8 |
+  \revert Hairpin.extra-offset
   s8 s8\cresc s2 |
   s8-\tweak X-offset -1.5 -\tweak whiteout ##t \f s8\dim s2 |
 
   \barNumberCheck 67
-  s2.-\tweak X-offset -2 \p |
+  s2.\p |
   s2.*3 |
   \repeat unfold 3 { s8 s8.\< s16\! s8.\> s16\! s8 | }
   s2. |
-  s2-\tweak self-alignment-X #LEFT \mf s4\> |
+  s2\mf s4\> |
   s2\!
   \tempo 4 = 40 s4\pp |
   s2. \bar "|."
