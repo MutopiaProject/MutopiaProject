@@ -1,4 +1,6 @@
-\version "2.1.27"
+\version "2.18.2"
+
+%#(set-default-paper-size "letter")
 
 \header {
     title = "Fugue in E-flat Major KV 153/375f"
@@ -10,31 +12,33 @@
     mutopiaopus = "KV 153/375f"
     mutopiainstrument = "Piano"
     date = "1782"
-    source = "Breitkopf und H\"artel (1878-1887)"
+    source = "Breitkopf und Härtel (1878-1887)"
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
-    maintainerWeb = "http://www.geocities.com/zio_tom78/"
-    lastupdated = "2004/Feb/29"
+    maintainerWeb = "http://ziotom78.jimdo.com/"
+    lastupdated = "2014/08/01"
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-    footer = "Mutopia-2004/02/29-424"
+ footer = "Mutopia-2014/08/01-424"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-% Let's make the score a little smaller than the default, so that the
-% score can fit 4 pages both with a4 and letter paper
-#(set-global-staff-size 18)
+\paper {
+  markup-system-spacing #'basic-distance = #15 %distance from header/title to 1st system
+  top-system-spacing #'basic-distance = #15 %dist. from top margin to system (no titles)
+  last-bottom-spacing.basic-distance = #15   % pads the last system in each page
+  top-margin = 12\mm
+}
 
 % These macros are used for the second voice only
-staffUp = { \change Staff=up \voiceTwo }
-staffDown = { \change Staff=down \voiceOne }
+staffUp = { \change Staff= "up" \voiceTwo }
+staffDown = { \change Staff= "down" \voiceOne }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceI = \notes\relative bes {
+voiceI = \relative bes {
     \voiceOne
     \partial 16
     \key es \major
@@ -64,12 +68,12 @@ voiceI = \notes\relative bes {
     | as g ~ g8 g' c bes
     | as g f es d c b as
     | g f es d c2^\markup { \large "(Sechter.)" }
-    | b4 r8. c16( g'4) g
+    | b4 b'8.\rest c,16( g'4) g
     | fis r8. g16( c4) c
 
 % 30
     | bes4 r8. d16( g8) f es d
-    | c bes a g fis es d c
+    | c bes a g fis! es d c
     | bes d g bes as! c bes as
     | g f g a bes2
     | c4 bes2 g'8 f
@@ -94,29 +98,29 @@ voiceI = \notes\relative bes {
 % 50
     | es8 bes c d es g f es
     | d es f g as! c bes as
-    | g4 r8. es,16 f8 r bes r
-    | es,4 r8. es16( as4) as
+    | g4 b,8.\rest es,16 f8 b\rest bes b\rest
+    | es,4 b'8.\rest es,16( as4) as
     | g r8. as16( des4) des
     | c4 r8. es16( as8) g f es
     | d! c bes as g f es d
-    | c4 d es r8. f16
+    | c4 d es b'8.\rest f16
     | g4 a bes r8. bes16
     | c4 d es r8. es,16
 
 % 60
     | f4 as g f
-    | es r8. es16( as4) as
+    | es b'8.\rest es,16( as4) as
     | g r8. as16( des4) des
     | c r8. es16( as8) g f es
     | d! c bes as g f es d
-    | c4 c' r d,
+    | c4 c' b\rest d,
     | d2( es)
     \bar "|."
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceII = \notes\relative es {
+voiceII = \relative es {
     \voiceTwo
     \partial 16
 
@@ -124,7 +128,7 @@ voiceII = \notes\relative es {
     | R1*3
     | r2 r4 r8. \staffDown es16(
     | bes'4) bes a r8. bes16( \staffUp
-    | es4) es d r8. f16(
+    | es4) es d r8. \slurUp f16(
     | bes8) a g f es d c bes \staffDown
     | a g f es d es f g
     | as! bes c4. f,8 bes as \staffUp
@@ -135,7 +139,7 @@ voiceII = \notes\relative es {
     | es d8 es bes a
     | bes \staffDown f g d es4 \staffUp r
     | es' f bes, r8. \staffDown bes16
-    | g4 a bes8 \staffUp d f g
+    | g4 a \once \override Beam.positions = #'(4.4 . 4.8) bes8 \staffUp d f g
     | as c bes as g4 ges
     | f bes2 ces4
     | bes g'4. f8 es d
@@ -149,9 +153,10 @@ voiceII = \notes\relative es {
     | c4) c b r8. \staffUp c16(
     | f4) f es r8. g16(
     | c8) bes as g f es d c
+      \once \override Beam.positions = #'(-5.2 . -5.6) 
     | b \staffDown as g f es e f fis \staffUp
-    | g2 b8 d es c
-    | d2 fis8 g a fis
+    | g2 b!8 d es c
+    | d2 fis!8 g a fis
 
 % 30
     | g2 r
@@ -163,11 +168,11 @@ voiceII = \notes\relative es {
     | as g8 f es4 r8. \staffDown es,16(
     | as4) as g r8. as16( \staffUp
     | des4) des c r8. es16(
-    | as8) g f es des \staffDown c bes as
+    | as8) g f es \once \override Beam.positions = #'(-4.2 . -5.2) des \staffDown c bes as
 
 % 40
     | g f es des c es as c
-    | des f es des c \staffUp d es g
+    | des f es des c \staffUp d! es g
     | as c bes as g4 r8. f16
     | g4 a bes8 as g f
     | es \staffDown bes g c f, \staffUp f' as g
@@ -195,22 +200,22 @@ voiceII = \notes\relative es {
     | es bes des c bes es f g
     | as g as bes c4 as
     | f8 as d, f es bes g bes
-    | as4 as' r as,
+    | as4 as' s as,
     | as2( g)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceIII = \notes\relative bes, {
+voiceIII = \relative bes, {
     \voiceTwo
     \key es \major
     \partial 16
 
-    \slurBoth
+    \slurNeutral
 
     bes16(
-    | es4) es d r8. es16(
-    | as4) \slurDown as g r8. bes16
+    | es4) es d d8.\rest es16(
+    | as4) \slurDown as g d8.\rest bes'16
     | es8 d c bes as g f es
     | d c bes as g f es f
     | g f e c f c' es! d
@@ -223,12 +228,12 @@ voiceIII = \notes\relative bes, {
     | es d es c bes f' as! g
     | f es d bes es bes' es d
     | c bes as g f es d c
-    | bes as! g f es4 r8. es'16
-    | c4 d es r
+    | bes as! g f es4 b'8.\rest es16
+    | c4 d es d\rest
     | R1
-    | r4 r8. bes16( es4) es
-    | d r8. es16( as4) as
-    | g r8. bes16( es8) d c bes
+    | d4\rest d8.\rest \slurUp bes16( es4) es
+    | d d8.\rest es16( as4) as
+    | g d8.\rest bes'16( es8) d c bes
     | as g f es d c bes as
 
 % 20
@@ -246,9 +251,9 @@ voiceIII = \notes\relative bes, {
 % 30
     | g d' g f! es d c bes
     | a g c, es d c bes a
-    | g4 r8. g'16 c,4 d8 r16 bes(
-    | es4) es d r8. es16(
-    | as4) as g r8. bes16(
+    | g4 r8. g'16 c,4 d8 d16\rest bes(
+    | es4) es d d8.\rest es16(
+    | as4) as g d8.\rest bes'16(
     | es8) d c bes as g f es
     | d c bes as g bes c des
     | c f, d'! bes es bes des c
@@ -259,7 +264,7 @@ voiceIII = \notes\relative bes, {
     | es4 g, as r8. as'16
     | f4 g as r8. g16
     | f4 bes es, r8. d16
-    | c4 f bes, r8. bes16(
+    | c4 f bes, r8. bes16_(
     | es4) es d r8. es16(
     | as4) as g r8. bes16(
     | es8) d c bes as g f es
@@ -276,7 +281,7 @@ voiceIII = \notes\relative bes, {
     | as bes c as f g as a
     | bes1 ~
     | bes ~
-    | bes2 ~ bes8 d f g
+    | \oneVoice bes2 ~ bes8 d f g
     | as c bes as g4 r8. g,16
 
 % 60
@@ -295,17 +300,23 @@ voiceIII = \notes\relative bes, {
 
 \score {
     \context PianoStaff <<
-	\context Staff = up <<
-	    \context Voice = one \voiceI
-	    \context Voice = two \voiceII
+      \set PianoStaff.midiInstrument = "church organ"
+	\context Staff = "up" <<
+	    \context Voice = "one" \voiceI
+	    \context Voice = "two" \voiceII
 	>>
-	\context Staff = down <<
+	\context Staff = "down" <<
 	    \clef bass
-	    \context Voice = three \voiceIII
+	    \context Voice = "three" \voiceIII
 	>>
     >>
-    \paper { }
-    \midi { \tempo 4 = 110 }
+    \layout { }
+    
+  \midi {
+    \tempo 4 = 110
+    }
+
+
 }
 
 
