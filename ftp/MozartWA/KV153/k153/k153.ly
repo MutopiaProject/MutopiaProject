@@ -300,7 +300,6 @@ voiceIII = \relative bes, {
 
 \score {
     \context PianoStaff <<
-      \set PianoStaff.midiInstrument = "church organ"
 	\context Staff = "up" <<
 	    \context Voice = "one" \voiceI
 	    \context Voice = "two" \voiceII
