@@ -12,6 +12,7 @@
   meter = "Slow Waltz"
   license = "Public Domain"
   maintainer = "Diego Guillen"
+  maintainerEmail = "adsldieg (at) tpg.com.au"
   style = "Romantic"
   source = "Arranged by typesetter"
   moreInfo = "Arrangement of Brahm's Lullaby Op. 49, No. 4"
