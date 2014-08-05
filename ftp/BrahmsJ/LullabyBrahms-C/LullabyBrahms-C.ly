@@ -1,33 +1,35 @@
-% FILE:     Lullaby.ly
-% LANGUAGE: lilypond
-% AUTHOR:   Diego F Guillen
-% DATE:     2004.10.07
-
 \include "english.ly"
-\version "2.2.3"
+\version "2.18.2"
 
 \header {
   title = "Cancion de Cuna"
   composer = "Johannes Brahms (1833-1897)"
+  date = "unknown"
   mutopiacomposer = "BrahmsJ"
-  mutopiainstrument = "Recorder, Guitar"
-  arranger = "Arreglo por Diego F Guillen"
+  mutopiaopus = "unknown"
+  mutopiainstrument = "Recorder,Guitar"
+  arranger = "Arreglo por Diego F. Guillen"
   meter = "Slow Waltz"
-  copyright = "Copyright 2004 Diego Guillen"
+  license = "Public Domain"
   maintainer = "Diego Guillen"
+  maintainerEmail = "adsldieg (at) tpg.com.au"
+  style = "Romantic"
+  source = "Arranged by typesetter"
+  moreInfo = "Arrangement of Brahm's Lullaby Op. 49, No. 4"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2004/10/11-481"
+ footer = "Mutopia-2014/08/04-481"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-songSettings = \notes { 
+songSettings =  { 
   \time 3/4 
   \key c \major
   \clef treble 
   \tempo 4=80 
 }
 
-theChords = \notes \transpose g c \chords {
+theChords =  \transpose g c \chordmode {
     r4 
     g4 b2:m
     g4 b2:m
@@ -49,8 +51,8 @@ theChords = \notes \transpose g c \chords {
 }
 
 
-theNotes = \notes \transpose g c \relative c' {
-%    \setEasyHeads
+theNotes =  \transpose g c \relative c' {
+%    \easyHeadsOn
     \partial 4
     b'8 b
     d4. b8 b4
@@ -69,7 +71,7 @@ theNotes = \notes \transpose g c \relative c' {
     d2 b8 g8 
     c8 d16 (c16) b4 a4
     g2
-    \bar ":|"
+    \bar ":|."
 
 }
 
@@ -86,7 +88,12 @@ wholeStaff = \context Staff {
 
   \wholeStaff
   
-  \midi { \tempo 4 = 80 }
-  \paper { }
+  
+  \midi {
+    \tempo 4 = 80
+    }
+
+
+  \layout { }
 }
 
