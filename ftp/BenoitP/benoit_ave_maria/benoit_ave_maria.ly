@@ -1,3 +1,9 @@
+\version "2.18.2"
+
+%----To Do:
+%   (1) re-work voice assignment and instantiation to avoid MIDI channel overflow warnings, and possibly
+%       also address the (de)crescendo warning
+
 \header {
     title = "Ave Maria"
     composer = "Peter Benoit (1834-1901)"
@@ -7,24 +13,29 @@
     opus = "Opus 1"
     style = "Romantic"
     source = "Manuscript"
-    copyright = "Creative Commons Attribution 3.0"
+    license = "Creative Commons Attribution 3.0"
     maintainer = "Kris Van Bruwaene"
     maintainerEmail = "krvbr@yahoo.co.uk"
     lastupdated = "2012-12-04"
 
  mutopiainstrument = "Voice (SATB)"
  mutopiastyle = "Romantic"
- footer = "Mutopia-2012/12/23-1834"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2012. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } } }
+ footer = "Mutopia-2014/07/29-1834"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/3.0/" "Creative Commons Attribution 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
-\version "2.16.0"
+
 #(set-global-staff-size 17)
-#(set-default-paper-size "a4")
+%#(set-default-paper-size "letter")
+
+%--------  definitions
 crpoco =
 #(make-music 'CrescendoEvent
 'span-direction START
 'span-type 'text
 'span-text "poco a poco crescendo")
+
+hidePP = \tweak #'stencil ##f \pp
 
 global = {
   \tempo "Poco Largo" 2 = 60 
@@ -33,7 +44,7 @@ global = {
 }
 
 sop_sol = \relative c'' {
-R\breve*18
+R\breve*18-\hidePP
 r1 r2 a4.\sf a8     | % 19
 b2( a g2.) fis4     | % 20
 a1(\sf e2 a4.) a8   | % 21
@@ -57,8 +68,8 @@ d4\! r r2 r1        | % 38
 R\breve*2           | % 39-40
 g,1\sf g\sf         | % 41
 bes1\pp a2 g        | % 42
-f1\crpoco e         | % 43
-c'1 b2( a)          | % 44
+f1\crpoco e \noBreak | % 43
+c'1 b2( a) \noBreak | % 44
 g2. g4 fis1\!       | % 45
 d'1\mf cis2 b       | % 46
 a1 gis              | % 47
@@ -374,7 +385,7 @@ b2 r r1             | % 77
 tensplit = \relative c' {
 s\breve             | % 1
 \voiceOne
-r1 d(\< |           | % 2
+r1 d(-\hidePP\<     | % 2
 e2)\! e4 e\> d2( c) | % 3
 b\breve\! |         | % 4
 \oneVoice
@@ -904,10 +915,9 @@ A -- men.
   \layout {
     \context {
 %      \RemoveEmptyStaffContext
-%      \override RemoveEmptyVerticalGroup #'remove-first = ##f
+%      \override RemoveEmptyVerticalGroup.remove-first = ##f
     }
   }
-
   \midi {
   }
 }
