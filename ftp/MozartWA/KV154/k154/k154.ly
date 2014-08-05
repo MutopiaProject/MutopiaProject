@@ -1,4 +1,6 @@
-\version "2.1.27"
+\version "2.18.2"
+
+%#(set-default-paper-size "letter")
 
 \header {
     title = "Fugue in G Minor KV 154/385k"
@@ -12,14 +14,22 @@
     date = "1782?"
     source = "Breitkopf und Härtel (1878-1887)"
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
-    maintainerWeb = "http://www.geocities.com/zio_tom78/"
-    lastupdated = "2004/Feb/29"
+    maintainerWeb = "http://ziotom78.jimdo.com/"
+    lastupdated = "2014/08/01"
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-    footer = "Mutopia-2004/02/29-425"
+ footer = "Mutopia-2014/08/02-425"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
+}
+
+\paper {
+  markup-system-spacing #'basic-distance = #18 %distance from header/title to 1st system
+  top-system-spacing #'basic-distance = #15 %dist. from top margin to system (no titles)
+  last-bottom-spacing.basic-distance = #15 % pads the last system in each page
+  top-margin = 12\mm
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -28,12 +38,12 @@
 #(set-global-staff-size 18)
 
 % These macros are used for the second voice only
-staffUp = { \change Staff=up \voiceTwo }
-staffDown = { \change Staff=down \voiceOne }
+staffUp = { \change Staff= "up" \voiceTwo }
+staffDown = { \change Staff= "down" \voiceOne }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceI = \notes\relative d'' {
+voiceI = \relative d'' {
     \voiceOne
     \key g \minor
 
@@ -66,7 +76,7 @@ voiceI = \notes\relative d'' {
     | c b bes a ~ a g4 fis8
     | g4 d'8 c bes4 a
     | g2 a4. es'!8
-    | d4 r r2
+    | d4 r d2\rest
     | c2 g
 
 % 30
@@ -94,7 +104,7 @@ voiceI = \notes\relative d'' {
     | a2 d,
 
 % 50
-    | r8 fis g a bes c d bes
+    | b'8\rest fis g a bes c d bes
     | c bes a b c d c a
     | fis a d c bes! a bes c
     | a2 ~ a8 g4 fis8
@@ -105,7 +115,7 @@ voiceI = \notes\relative d'' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceII = \notes\relative g' {
+voiceII = \relative g' {
     \voiceTwo
 
     g2 d
@@ -114,7 +124,7 @@ voiceII = \notes\relative g' {
     | r8 g, g a bes c bes a
     | g d' g f e a, a' g
     | fis e d c bes c bes a
-    | g2 r8 c d es!
+    | g2 c8\rest c d es!
     | f2 ~ f8 bes, c d
     | es2 ~ es8 a, bes c
 
@@ -122,6 +132,7 @@ voiceII = \notes\relative g' {
     | d4 c bes a
     | bes g'4. fis8 d c \staffDown
     | bes8 g4 c a d8
+      \once \override Beam.positions = #'(5.5 . 5.8)
     | d \staffUp d g4. d8 f!4 ~
     | f8 bes, es4. bes8 d4 ~
     | d8 g, c4. g8 bes4 \staffDown
@@ -145,7 +156,7 @@ voiceII = \notes\relative g' {
 % 30
     | c g' f es d as' g f
     | es c f4 ~ f8 d es d
-    | c4 d8 e fis4 g8 f
+    | c4 d8 e! fis!4 g8 f
     | e4. es8 d fis g4 ~
     | g8 e a g fis4 a
     | d,2 g
@@ -155,7 +166,7 @@ voiceII = \notes\relative g' {
     | g as g f es4 g
 
 % 40
-    | fis8 es d c bes c \staffDown bes a
+    | fis8 es d c \once \override Beam.positions = #'(-5.1 . -5.4) bes c \staffDown bes a
     | g \staffUp c' bes a g4 r
     | d'2 g,
     | as4 a bes b
@@ -176,13 +187,14 @@ voiceII = \notes\relative g' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceIII = \notes\relative g {
-    \voiceTwo
+voiceIII = \relative g {
+    \oneVoice
     \key g \minor
 
     R1*10
 
 % 11
+      \voiceTwo
     | g2 d
     | es4 e f fis
     | g2 d
@@ -201,7 +213,7 @@ voiceIII = \notes\relative g {
     | e4 f fis2
     | g4 c, d8 es' d c
     | c b bes a a g4 fis8
-    | g c, c' bes a d, d' c ~
+    | g c, c' bes a d, d' c^~
     | c c bes a bes a bes g
     | as g as f c' g es c
 
@@ -214,19 +226,22 @@ voiceIII = \notes\relative g {
     | g8 a bes c bes a bes c
     | d4 b8 g c4 a8 f
     | bes!4 g8 f es2
-    | d g,
+    | d \oneVoice g,
     | bes4 b c cis
 
 % 40
+      \voiceTwo
     | d2 g,4. a8
     | bes fis g a bes c d es
     | d a' bes b c d es! c
+      \oneVoice
     | f f,4 f'8 ~ f es d f
     | es2 ~ es8 d c bes
     | a4 bes8 a g4 g,
     | c2 d
     | g,1
     | d'
+      \voiceTwo
     | cis2 c
 
 % 50
@@ -241,17 +256,20 @@ voiceIII = \notes\relative g {
 
 \score {
     \context PianoStaff <<
-	\context Staff = up <<
-	    \context Voice = one \voiceI
-	    \context Voice = two \voiceII
+      \set PianoStaff.midiInstrument = "acoustic grand"
+	\context Staff = "up" <<
+	    \context Voice = "one" \voiceI
+	    \context Voice = "two" \voiceII
 	>>
-	\context Staff = down <<
+	\context Staff = "down" <<
 	    \clef bass
-	    \context Voice = three \voiceIII
+	    \context Voice = "three" \voiceIII
 	>>
     >>
-    \paper { }
+    \layout { }
+    
     \midi { \tempo 4 = 110 }
+    
 }
 
 
