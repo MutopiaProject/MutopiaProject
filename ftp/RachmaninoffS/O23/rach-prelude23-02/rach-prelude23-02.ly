@@ -5,18 +5,23 @@
 %----- Notes ---------------------------------------------------------
 % - Due to nature of this piece, visibility of most tuplet numbers are
 %   explicitly specified to avoid confusion
+%
 % - Bar 37 is TimeScaledMusic applying grace styles. First 2 notes are
 %   lengthened so whole passage becomes a 4/4 for easier counting (with
 %   additional effect of emulating real performance). Left hand notes
 %   are individually scaled to align with right hand notes.
+%
 % - Still considering whether to follow all tuplet number visibility
 %   in any edition. Gutheil and Muzyka differ a little in this area,
 %   and showing numbers again in 2nd occurance of main theme is repetitive
+%
 % - Tried to do flexible curve tuning depending on system break points
 %   in middle section. Might not completely account for all cases though.
+%
 % - Tame various Y-extent estimators in order to reduce page count
 
 %----- Known problems ------------------------------------------------
+%
 % - This piece is basically a showcase for Lilypond's inept handling
 %   of tuplet number positioning. Most problems originate from tuplet
 %   number being placed at mid-point of tuplet bracket
@@ -24,6 +29,7 @@
 %     Gardner Read's Music Notation
 %   * Most vertical positions are wrong as well when displayed w/o bracket
 %   * Adjustment of number positions not quite done yet
+%
 % - Accidental mode for IMSLP editions are somewhere between old romantic
 %   style and 20th century style; choosing default here, because changing
 %   accidental mode increases page count (!)
@@ -300,6 +306,17 @@ addArticulation =
    ; (display-scheme-music mus)
    mus
 )
+
+% default tenuto hides inside slur, pushing slurs outwards and prevent
+% staves to be compacted. And padding is too small, so it can stick
+% very close to slurs. Some may confuse with ledger line as well.
+tenutoAlt =
+#(let ((m (make-articulation "tenuto")))
+   (ly:music-set-property! m 'tweaks
+     (acons 'avoid-slur 'outside
+       (acons 'slur-padding 0.4
+         (ly:music-property m 'tweaks))))
+   m)
 
 %-------- Right Hand parts
 
@@ -777,8 +794,9 @@ LHpatternH = \relative c { % bar 8, 2nd half
 LHpatternI = \relative c { % bar 9, 1st half
   \hideTupletOnce \tuplet 6/4 {
     \once \override PhrasingSlur.details.region-size = #6
-     % discourage steep slope around end-points
-    \once \override PhrasingSlur.details.edge-slope-exponent = #5
+     % discourage steep slope around end-points; lower exponent is
+     % ok for A4 but not for Letter
+    \once \override PhrasingSlur.details.edge-slope-exponent = #500
     c16\( aes'_3 b d_1 e_2 f_1
   }
   <e bes g>8.\) <f,, f,>16->
@@ -863,6 +881,10 @@ LH = \relative c'
       \tuplet 3/2 { f d bes \) } |
       s2. f'4-- |
       <ges bes,>2.-- aes8--
+      % 2nd part of broken tie is way too short
+      % update: though currently line break doesn't occur here,
+      % leaving it there won't hurt
+      \shape #'(() ((0 . 2)(0.8 . 2.5)(1.6 . 2.5)(2.4 . 2))) Tie
       bes--_~ |
       <des bes f>2.-- ees8-- <f bes,>-- |
 
@@ -879,15 +901,18 @@ LH = \relative c'
 
       % bar 24-27
       <aes fes aes, des,>2\arpeggio )
-      \shape #'(() ((0 . 0)(0.3 . 0)(0.15 . -1)(-0.3 . -1.9))) Slur
-      bes8--[ ( ces--] des--\arpeggio [ ees--] |
-      <ces ees, aes,>2.-- )
-      d8-- -\tweak Slur.after-line-breaking
+      %\shape #'(() ((0 . 0)(0.3 . 0)(0.15 . -1)(-0.3 . -1.9))) Slur
+      bes8\tenutoAlt[ ( ces--] des--\arpeggio [ ees--] |
+      <ces ees, aes,>2.\tenutoAlt )
+      d8\tenutoAlt -\tweak Slur.after-line-breaking
       #(lambda(grob) (shape-slur-if-broken grob 'second 1.5 1.5 1.5 1.5))
       ( ees-- |
       % 2nd part of broken tie is way too short
+      % update: though currently line break doesn't occur here,
+      % leaving it there won't hurt
       \shape #'(() ((-1.2 . 0)(-0.8 . 0.3)(-0.4 . 0.3)(0 . 0))) Tie
-      <f~ ces aes>2 f4*2/3 ) ges8*2/3-- ( aes8-- bes-- ) |
+      <f~ ces aes>2 f4*2/3 ) ges8*2/3\tenutoAlt (
+      aes8-- bes\tenutoAlt ) |
       <ges bes, ges bes, ees,>1--\arpeggio |
     } \\
     \relative c {
@@ -931,8 +956,9 @@ LH = \relative c'
 
       % bar 27
       \tuplet 3/2 4 {
-        r8 ees,, ( ees' bes' ges' bes
-        ges' bes, ges bes, ees, bes' )
+        % SPECIAL NOTE: defies engraving standard, for staff compacting
+        r8 \temporary \stemUp ees,, ( ees' \stemNeutral
+        bes' ges' bes ges' bes, ges bes, ees, bes' )
       }
     }
   >> |
@@ -1196,6 +1222,8 @@ Dynamics = {
       % extent estimators, DON'T BE NAUGHTY
       \override DynamicText.Y-extent =
       #(ly:make-unpure-pure-container ly:grob::stencil-height '(-0 . 0))
+      \override Stem.Y-extent = % DIE!!! DIE!!! DIE!!!
+      #(ly:make-unpure-pure-container ly:stem::height '(-0 . 0))
     }
     \context {
       \Voice
