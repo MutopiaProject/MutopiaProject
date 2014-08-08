@@ -129,7 +129,7 @@
   title = "Prelude II"
   composer = "Sergei Rachmaninoff (1873-1943)"
   opus = "Op. 23, No 2"
-  date = "1901"
+  date = "1903"
   style = "Romantic"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   % Both are cross-referenced to minimize errors
