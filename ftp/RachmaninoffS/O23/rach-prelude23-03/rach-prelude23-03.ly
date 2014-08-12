@@ -980,6 +980,10 @@ Dynamics = {
   \tempo \markup \large "Tempo di minuetto" 4 = 66
 
   \repeat volta 2 {
+    % Overcome barNumberCheck problem with MIDI. In MIDI the repeat is
+    % unfolded, causing inconsistency in bar numbers.
+    \set Score.currentBarNumber = #1
+
     s4-\tweak X-offset -2 \mf s8\> s4.\! |
     s2. |
     s4-\tweak X-offset -4
@@ -1120,6 +1124,19 @@ Dynamics = {
       #(ly:make-unpure-pure-container ly:slur::height '(-0 . 0))
     }
   }
+}
+
+% MIDI handled separately because of repeat
+\score {
+  \context PianoStaff <<
+    \new Staff = "RH" <<
+      \clef treble \key d \minor \time 3/4 \unfoldRepeats \RH
+    >>
+    \new Dynamics << \unfoldRepeats \Dynamics >>
+    \new Staff = "LH" <<
+      \clef bass   \key d \minor \time 3/4 \unfoldRepeats \LH
+    >>
+  >>
   \midi {
     \tempo 4 = 66
     \context {
