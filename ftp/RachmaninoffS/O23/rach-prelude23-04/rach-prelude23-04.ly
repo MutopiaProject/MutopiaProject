@@ -3,8 +3,27 @@
 %%--------------------------------------------------------------------
 
 %----- Notes ---------------------------------------------------------
+%
+% * Significant effort has been spent on slur shaping. So I'm afraid
+%   the slurs can look quite different if line break were to change
+%   in future.
+%
+% * Some tenuti look irregular, though a few of them are intentional,
+%   in order to achieve a better looking slur.
+%
+% * Hairpin at bar 58 has been shifted, see the place marked with
+%   EDITORIAL NOTE below.
+%
+% * Some tuplet have had bracket added where the original editions
+%   didn't, to make sure slur around those notes are not misinterpreted.
 
 %----- Known problems ------------------------------------------------
+%
+% * MIDI tweaking not done yet; seems one channel per voice has more
+%   problem than I have anticipated (e.g. sound volume of some channel
+%   is out of control)
+%
+% * See bar 62 grace note slur, marked "Lilypond Bug"
 
 %%--------------------------------------------------------------------
 % The Mutopia Project
@@ -123,6 +142,18 @@ moveDyn =
 
 tenutoAlt = #(make-articulation "tenutoalt")
 
+% better midi contrast, default volume isn't apparent
+#(define (myMidiVolume dynamic)
+   (cond
+     ((string=? dynamic "pp") 0.35)
+     ((string=? dynamic "p" ) 0.45)
+     ((string=? dynamic "mp") 0.55)
+     ((string=? dynamic "mf") 0.65)
+     ((string=? dynamic "f" ) 0.75)
+     ((string=? dynamic "ff") 0.85)
+     (else 0)))
+
+
 %---------- Right hand parts
 RH = \relative c' {
   R2.*2 |
@@ -159,21 +190,23 @@ RH = \relative c' {
     }
     \\
     \relative c' {
+      \temporary \omit DynamicText
       s4 |
-      b8 s s2 |
+      b8\mp s s2 |
       b8 s s2 |
       <b g>8 r r4 c8 r |
       <d b>4 r <eis d> |
 
       \barNumberCheck 11
-      <fis cis a>\arpeggio r <eis d> |
-      <fis cis a>\arpeggio r <d bes> |
-      <d fis,> r <cis bes> |
-      <d a> b\rest cis |
-      <b fis> b\rest d |
+      <fis cis a>\arpeggio\mf r <eis d> |
+      <fis cis a>\arpeggio r \oH <d bes>\> |
+      <d fis,>\mp r <cis bes> |
+      <d a> b\rest cis\p |
+      <b fis>\pp b\rest d |
       \skip 2. |
       <d b g>2.~ |
       q4 <cis g>2
+      \revert DynamicText.stencil
     }
   >> |
 
@@ -229,7 +262,7 @@ RH = \relative c' {
     }
     \\
     \relative c' {
-      <fis d fis,>2(\tenutoAlt\arpeggio e4)\tenutoAlt |
+      \oD <fis d fis,>2(\tenutoAlt\arpeggio\mp e4)\tenutoAlt |
       <fis d fis,>2(\tenutoAlt\arpeggio b,4)\tenutoAlt |
       <cis g>2(\tenutoAlt d8-- cis16--\< d)\tenutoAlt |
       <e cis g>2--\! \showTuplet
@@ -370,7 +403,7 @@ RH = \relative c' {
       <a cis, a fis cis>2--\arpeggio
       \once \override TupletBracket.positions = #'(-3.5 . -3.5)
       \showTuplet \tuplet 3/2 {
-        <g d g,>4-- f16(\tenutoAlt \acciaccatura { \once \stemUp a8 }
+        <g d g,>4-- fis16(\tenutoAlt \acciaccatura { \once \stemUp a8 }
         %% Lilypond bug: if normal tenuto is used, the grace note slur
         %% would be placed OUTSIDE beam!
         g16)\tenutoAlt
@@ -382,7 +415,7 @@ RH = \relative c' {
       \once \override TupletBracket.positions = #'(-6 . -5)
       \onceShowTupBracket
       \showTuplet \tuplet 3/2 {
-        \slurPos 0 -1 <e cis e,>4(\tenutoAlt f8)\tenutoAlt
+        \slurPos 0 -1 <e cis e,>4(\tenutoAlt fis8)\tenutoAlt
       } \hideTuplet |
 
       \barNumberCheck 65
@@ -415,38 +448,43 @@ RH = \relative c' {
 %---------- Left hand parts
 
 LH = \relative c {
+  \temporary \omit DynamicText
+  \temporary \omit Hairpin
+
   \showTuplet
-  \slurPos 1 0 \tuplet 3/2 4 { d,8( a'' d a' d, a fis a, d') } |
+  \shape #'((0 . 0)(2 . 2)(0 . 0)(0 . 0)) Slur
+  \slurPos 1 0 \tuplet 3/2 4 { d,8\pp( a'' d a' d, a fis a, d') } |
   \hideTuplet
+  \shape #'((0 . 0)(2 . 2)(0 . 0)(0 . 0)) Slur
   \slurPos 1 0 \tuplet 3/2 4 { d,,( a'' d a' d, a fis a, d') } |
 
   \tuplet 3/2 4 {
     r d,,( a'' a' d, a) r \ct <cis g' a>( a) |
     r d,^( a' a' d, a) r <d a'>( a) |
     r \cb d,,( a'' \ct <g' a> e a,) r <b a'>( a) |
-    r d,( a' <g' a> cis, a) r <c a' d>\arpeggio \cb d, |
-    r d,( b'' \ct d' d, b~ b ais d) |
-    r d,( b' d' d, b~ b \cb g fis) |
-    d,( g' b \ct b' b, g) r <a d>( c') |
+    r d,( a' <g' a> cis, a) r <c a' d>\arpeggio\< \cb d, |
+    r d,\p( b'' \ct d' d, b~ b ais d) |
+    r d,( b' d' d, b~ b\> \cb g fis) |
+    d,\pp( g' b \ct b' b, g) r <a d>\<( c') |
     r d,,( b' d' d, b) \cb r b( bis) |
 
     \barNumberCheck 11
-    fis,,\noBeam <a'' cis,>( cis \ct cis' fis, a,) r b( d') |
-    \cb <cis,, fis,>( a' cis \ct cis' fis, a,) \cb r d,( g,) |
-    r d( a'' \ct a' d, a) r bes'( g,) |
-    \cb r d,_( a'' a' d, a g ais,) r |
-    r b,( fis'' d' b fis)
+    fis,,\noBeam\f <a'' cis,>( cis \ct cis' fis, a,) r b( d') |
+    \cb <cis,, fis,>( a' cis \ct cis' fis, a,) \cb r d,\>( g,) |
+    r d\mf( a'' \ct a' d, a) r bes'( g,) |
+    \cb r d,_( a''\> a' d, a g ais,) r |
+    r b,\p( fis'' d' b\< fis)
     % EDITORIAL NOTE: The "politically correct" way to present the notes
     % easily confuses slur with tie
     \temporary \stemDown <a fis,>( d, fis,) \stemNeutral |
-    \basicSlur <e e,>_( b' d' a' d, g, fis e d') |
-    r \basicSlur a,,( e'' b' d fis a g fis |
-    e d b a fis e b cis a) |
+    \basicSlur <e e,>\f_( b' d' a' d, g, fis\> e d') |
+    r \basicSlur a,,\p( e'' b' d fis a g fis |
+    e d b a\> fis e b cis a) |
   }
 
   \barNumberCheck 19
   \temporary \stemDown
-  \slurPos 0 2 d,8( a' fis' d' g, a,) |
+  \slurPos 0 2 d,8\pp( a' fis' d' g, a,) |
   \slurPos 0 2 d,( a' fis' d' fis, a,) |
   \slurPos 0 2 d,( a' g' cis fis, a,) |
   \slurPos 0 2 d,( a' g' cis c d,) |
@@ -455,6 +493,9 @@ LH = \relative c {
   r \slurPos 4 2 d,( d'' b g fis) |
   r \slurPos 1 0 d,( b'' g a d) |
   r \slurPos 2 0 d,( d' b bes d) |
+
+  \revert DynamicText.stencil
+  \revert Hairpin.stencil
 
   \barNumberCheck 27
   <a, d,>8\noBeam \ct a'( fis' a <bes cis,> bes,) |
@@ -719,19 +760,27 @@ Dynamics = {
 
       \override DynamicText.Y-extent =
       #(ly:make-unpure-pure-container ly:grob::stencil-height '(-0 . 0))
-      %\override Stem.Y-extent = % Can't be crueler than this
-      %#(ly:make-unpure-pure-container ly:stem::height '(-0 . 0))
       \override Slur.Y-extent =
       #(ly:make-unpure-pure-container ly:slur::height '(-0 . 0))
       \override PhrasingSlur.Y-extent =
       #(ly:make-unpure-pure-container ly:slur::height '(-0 . 0))
+    }
+    \context {
+      \Staff
+      \remove "Staff_performer"
+    }
+    \context {
+      \Voice
+      \consists "Staff_performer"
     }
   }
   \midi {
     \tempo 4 = 50
     \context {
       \Score
+      midiChannelMapping = #'voice
       midiInstrument = "acoustic grand"
+      dynamicAbsoluteVolumeFunction = #myMidiVolume
     }
   }
 }
