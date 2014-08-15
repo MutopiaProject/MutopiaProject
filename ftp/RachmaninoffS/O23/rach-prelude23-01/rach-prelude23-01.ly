@@ -2,36 +2,50 @@
 % LilyPond typesetting of Rachmaninoff Prelude Op. 23 No. 1
 %%--------------------------------------------------------------------
 
-%----- Notes ---------------------------------------------------------
-% - Some grace notes are specially done with work-arounds
-%   * Most are shortened to avoid insufficient note length stealing from
-%     normal notes, see the bar 24 one for extreme example (otherwise
-%     LH / RH channels will be out of sync)
-%   * starting a voice with grace note mess up some voice properties
+%%%%%%%% Notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% * This piece is a showcase of how #braindead lilypond is regarding
+%   grace notes. (https://code.google.com/p/lilypond/issues/detail?id=34)
+%   - Most are shortened to avoid insufficient note length stealing from
+%     normal notes
+%   - Starting a voice with grace note mess up most voice/staff properties,
+%     so the properties need to be specified again after grace notes
+%   - Bar 24,26,28 grace notes are done as cadenza using real notes, then
+%     apply grace note visual style on them. Otherwise they have to be
+%     scaleDuration'ed to such extreme as being undistinguishable mess,
+%     or in case they are not scaled, left / right hand midi channel will
+%     be out of sync!
+%
+% * In bar 33 the Metronome mark aligns with grace space paddings
 
-%----- Known problems ------------------------------------------------
-% - Some artifacts need tweaking to look better, e.g.
-%   * Left hand slur spanning bar 22-23 (end point not reaching barline)
-%   * Last hairpin at bar 36 (should start at stem, not notehead left bound)
-% - MIDI completely broken
-%   * Sound volume is a mess because some dynamics are in its own staff while others are
-%     attached to LH / RH.
-%   * Adding tons of invisible dynamics to both staves is not easy to manage, tackle later
-%   * As a result, midiMinimumVolume and midiMaximumVolume are set to prevent uncontrolled
-%     sound volume
-%   * Grace notes will never sound like natural performance
-%   * Ritardando is only crudely simulated
-% - Some <> hairpin pairs are not vertically aligned
+%%%%%%%% Known Problems %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% * Some artifacts need tweaking to look better, e.g.
+%   - Shortened hairpins due to invisible dynamic text
+%   - Last hairpin at bar 36 (should start at stem, not notehead left bound)
+%
+% * Out of sync with beat positions in MIDI. This is a compromise where
+%   better auditory experience is more desirable.
 
+%%%%%%%% Editorial Notes %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% * Bar 24 grace note slur: If upward slur is chosen (following convention),
+%   slur will look awkward. Following Gutheil / Muzyka edition which looks
+%   better. However, upward slur in bar 26 and 28 grace note feels more
+%   natural.
+%
+% * Bar 29 left hand 2nd slur: Gutheil edition ends the slur at C♯,
+%   while Muzyka ends at G note after it. Agree with Gutheil edition here
+%   since the slurs in previous bars are mainly for semiquaver melodies.
 
 
 %%--------------------------------------------------------------------
 % The Mutopia Project
 % LilyPond template for keyboard solo piece
 %%--------------------------------------------------------------------
- 
-\version "2.18.2"
- 
+
+\version "2.18.0"
+
 %---------------------------------------------------------------------
 %--Paper-size setting must be commented out or deleted upon submission.
 %--LilyPond engraves to paper size A4 by default.
@@ -40,22 +54,22 @@
 %--Mutopia publishes both A4 and letter-sized versions.
 %---------------------------------------------------------------------
 % #(set-default-paper-size "letter")
- 
+
 %--Default staff size is 20
 % #(set-global-staff-size 20)
- 
+
 \paper {
     top-margin = 8\mm                              %-minimum top-margin: 8mm
     top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
     markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
     top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
     last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
-    
+
     ragged-last = ##f
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 }
- 
+
 %---------------------------------------------------------------------
 %--Refer to http://www.mutopiaproject.org/contribute.html
 %--for usage and possible values for header variables.
@@ -64,24 +78,18 @@
     title = "Prelude I"
     composer = "Sergei Rachmaninoff (1873-1943)"
     opus = "Op. 23, No 1"
-    %piece = "Left-aligned header"
-    date = "1901"
+    date = "1903"
     style = "Romantic"
-    %% Gutheil edition on IMSLP is also cross-referenced
     source = "IMSLP - Muzyka and Gutheil editions"
- 
+    license = "Creative Commons Attribution-ShareAlike 4.0"
+
     maintainer = "Abel Cheung"
     maintainerEmail = "abelcheung at gmail dot com"
-    license = "Creative Commons Attribution-ShareAlike 4.0"
- 
     mutopiatitle = "Prelude Op. 23, No. 1"
     mutopiaopus = "Op. 23"
     mutopiacomposer = "RachmaninoffS"
-    %--A list of instruments can be found at http://www.mutopiaproject.org/browse.html#byInstrument
-    %--Multiple instruments are separated by a comma
     mutopiainstrument = "Piano"
- 
- 
+
     % Footer, tagline, and copyright blocks are included here for reference
     % and spacing purposes only.  There's no need to change these.
     % These blocks will be overridden by Mutopia during the publishing process.
@@ -92,10 +100,10 @@
 
 
 %--------Definitions and shorthands
-global = {
-  \key fis \minor
-  \time 4/4
-}
+cb = \clef bass
+ct = \clef treble
+oD = \once \omit DynamicText
+oH = \once \omit Hairpin
 
 subBeam = {
   \once \set subdivideBeams = ##t
@@ -106,90 +114,230 @@ barLinePad = { % some dynamics sticking too close to bar lines
   \once \override Staff.BarLine.space-alist.next-note = #'(semi-fixed-space . 2.0)
 }
 
-hideTempo = { % for controlling midi speed
-  \once \omit Score.MetronomeMark
+% better midi contrast, default volume isn't apparent
+#(define (myMidiVolume dynamic)
+   (cond
+     ((string=? dynamic "pp") 0.35)
+     ((string=? dynamic "p" ) 0.45)
+     ((string=? dynamic "mp") 0.55)
+     ((string=? dynamic "mf") 0.65)
+     ((string=? dynamic "f" ) 0.75)
+     ((string=? dynamic "ff") 0.85)
+     (else 0)))
+
+% for moving cresc and dim horizontally
+moveDynSpan =
+#(define-music-function
+  (parser location offset)
+  (number?)
+  #{ \once \override DynamicTextSpanner.bound-details.left.stencil-offset = #(cons offset 0) #})
+% delicate positioning of dynamic text
+moveDyn =
+#(define-music-function
+  (parser location initial real)
+  (number? number-pair?)
+  (set-car! real (- (car real) initial))
+  #{
+    \once \override DynamicText.X-offset = #initial
+    \once \override DynamicText.extra-offset = #real
+  #})
+
+% Default tenuto hides inside slur, pushing slurs outwards and prevent
+% staves to be compacted. And padding is too small, so it can stick
+% very close to beams.
+#(define my-script-alist (list-copy default-script-alist))
+#(set! my-script-alist
+       (acons "tenutoalt"
+         (acons 'avoid-slur 'outside
+           (acons 'quantize-position #f
+             (acons 'padding 0.4
+              (assoc-ref default-script-alist "tenuto"))))
+         my-script-alist))
+
+#(assoc-set! (assoc-ref my-script-alist "tenuto") 'padding 0.4)
+
+tenutoAlt = #(make-articulation "tenutoalt")
+
+
+%-------- The following funcs are for slur shape tuning
+
+#(define (change-slur-offset grob Y-one Y-two Y-three Y-four)
+   (let* ((points (ly:slur::calc-control-points grob))
+          (pt-one (first points))
+          (pt-two (second points))
+          (pt-three (third points))
+          (pt-four (fourth points)))
+     (set-cdr! pt-one   (+ Y-one   (cdr pt-one  )))
+     (set-cdr! pt-two   (+ Y-two   (cdr pt-two  )))
+     (set-cdr! pt-three (+ Y-three (cdr pt-three)))
+     (set-cdr! pt-four  (+ Y-four  (cdr pt-four )))
+     (ly:grob-set-property! grob 'control-points
+       (list pt-one pt-two pt-three pt-four))))
+
+% broken slurs/ties are often ugly with wrong Y-offset, so attempt
+% to cure *only* if curve is broken across systems
+#(define (shape-slur-if-broken grob part Y-one Y-two Y-three Y-four)
+   (if (eq? 'Slur (assoc-ref (ly:grob-property grob 'meta) 'name))
+       (let* ((orig (ly:grob-original grob))
+              (siblings (if (ly:grob? orig)
+                            (ly:spanner-broken-into orig) '())))
+         (if (>= (length siblings) 2)
+             (cond
+              ((eq? part 'first)
+               (change-slur-offset (first siblings)
+                 Y-one Y-two Y-three Y-four))
+              ((eq? part 'second)
+               (change-slur-offset (second siblings)
+                 Y-one Y-two Y-three Y-four)))))))
+
+
+%----------- function for adding articulation to all notes
+
+#(define tied? #f)
+
+#(define (check-tie e)
+   (if (eq? 'TieEvent (ly:music-property e 'name))
+       (set! tied? #t)))
+
+#(define (add-articulation articulation m)
+   (let ((ar (make-music 'ArticulationEvent 'articulation-type articulation)))
+     (for-some-music
+      (lambda (evt)
+        (let ((name    (ly:music-property evt 'name))
+              (es      (ly:music-property evt 'elements))
+              (ar-list (ly:music-property evt 'articulations)))
+          (case name
+            ((EventChord)
+             (if (and (not tied?)
+                      (or (ly:duration? (ly:music-property evt 'duration))
+                          (memq 'NoteEvent
+                            (map (lambda(x) (ly:music-property x 'name)) es))))
+                 (ly:music-set-property! evt 'elements (append es (list ar))))
+             (set! tied? #f)
+             (for-each check-tie es))
+            ((NoteEvent)
+             (if (not tied?)
+                 (ly:music-set-property! evt 'articulations
+                   (append ar-list (list ar))))
+             (set! tied? #f)
+             (for-each check-tie ar-list))
+            ((TieEvent) (set! tied? #t))
+            ((GraceMusic) #t)
+            (else #f))))
+      m)))
+
+addArticulation =
+#(define-music-function (parser location articulation mus)
+   (string? ly:music?)
+   "Add same articulation to all notes except rests, grace and tied notes"
+   (set! tied? #f)
+   (add-articulation articulation mus)
+   mus)
+
+
+% Emulate grace note, for bar 24
+% http://lists.gnu.org/archive/html/lilypond-user/2013-05/msg00415.html
+graceStyle = \applyContext
+#(lambda (context)
+   (map (lambda (x)
+          (ly:context-pushpop-property
+           context (cadr x) (caddr x) (cadddr x)))
+     (ly:context-property context 'graceSettings)))
+
+% unapply grace note style
+noGraceStyle = \applyContext
+#(lambda (context)
+   (map (lambda (x)
+          (ly:context-pushpop-property
+           context (cadr x) (caddr x)))
+     (ly:context-property context 'graceSettings)))
+
+
+% Pretend to be grace note in bar 24.
+% Need to be place before right hand in order to use #skip-of-length
+LHgraceA = {
+  \graceStyle
+  % don't cross stem of ending note
+  \shape #'((0 . 0) (-0.35 . -0.3) (-0.7 . -0.6) (-1.05 . -1)) Slur
+  % EDITORIAL NOTE: Downward slur in Gutheil / Muzyka edition looks nicer
+  \absolute \scaleDurations 2/5 { \oD fis,,16\ff[_( fis, cis a cis'] }
+  \noGraceStyle
 }
 
-#(define (shape-if-broken grob)
-   ; Fix end point of first segment of broken slur, raise to above staff lines,
-   ; like \shape #'(((0 . 0)(0 . 0)(0 . 1)(0 . 1)) ()) Slur
-   ; but only does so if slur is broken between 2 staves
-   ; base on lilypond doc Difficult Tweaks example
-   (let* (
-           (orig (ly:grob-original grob))
-           (siblings (if (ly:grob? orig)
-                         (ly:spanner-broken-into orig)
-                         '())))
-     (if (>= (length siblings) 2)
-         (let* (
-                 (points (ly:slur::calc-control-points (first siblings)))
-                 (pt-three (third points))
-                 (pt-four (fourth points)))
-           (set! pt-three (cons (car pt-three) (+ 1 (cdr pt-three))))
-           (set! pt-four  (cons (car pt-four ) (+ 1 (cdr pt-four ))))
-           (ly:grob-set-property! (first siblings) 'control-points
-             (append (list-head points 2) (list pt-three) (list pt-four)))
-           ))))
-         
+LHgraceB = {
+  \graceStyle \once \override Slur.positions = #'(0 . 0)
+  \absolute \scaleDurations 1/3 { \oD d,16\p[^( a, fis] }
+  \noGraceStyle
+}
 
+LHgraceC = {
+  \graceStyle \once \override Slur.positions = #'(0 . 0)
+  \absolute \scaleDurations 1/3 { \oD a,16\mf[^( fis cis'] }
+  \noGraceStyle
+}
 
 %-------- Right Hand parts
 
 RHone = \relative c'' { % bar 21-23
-  r4 \clef treble <d d'>2-- \clef treble <dis dis'>4-- |
-  r4 \clef treble <e e'>4-- r2 |
-  \clef treble <g g'>2-> r4 \clef treble <gis gis'>8-> q16-> q-> |
+  \temporary \omit DynamicText
+  r4 \ct <d d'>2--\mf \ct <dis dis'>4-- |
+  r4 \ct <e e'>4-- r2 |
+  \ct <g g'>2->\f r4 \ct <gis gis'>8->\ff q16-> q-> |
+  \revert DynamicText.stencil
 }
 
 RHtwo = \relative c { % bar 21-23
-  b2-- \clef bass a-- |
-  \clef bass gis4.-- \clef bass \tuplet 3/2 { gis16^( g gis } g2->) |
-  r4 r8 \clef bass fis8->( eis2->) |
+  \temporary \omit DynamicText
+  b2--\f \cb a--\mf |
+  \cb gis4.-- \cb \tuplet 3/2 { gis16\f^( g gis } g2->) |
+  r4 r8 \cb fis8->( eis2->) |
+  \revert DynamicText.stencil
 }
 
 RH = \relative c'' {
-  \tempo \markup{ \huge{ "Largo." } } 4 = 58
   % invisible bar to cope with left hand grace note, see start of left hand portion
-  \partial 16 s16 \bar ""
-  % bar 1-10
+  \partial 16 \afterGrace s16 { s4*2/3 } \bar ""
+
   R1 |
+  r4 fis2(-- -\tweak X-offset -4 ^\mf e4^\> |
+  \oD d1)\pp |
   r4
-  \once \override DynamicText.X-offset = #-4
-  fis2(--^\mf e4^\> |
-  d1)\! |
-  r4
-  \once \override Slur.after-line-breaking = #shape-if-broken
-  d2(-- bis8.-- cis16-- |
-  cis2.)-- b4-- |
-  a1~ |
+  \once \override Slur.after-line-breaking =
+  #(lambda (grob) (shape-slur-if-broken grob 'first 0 0 1 1))
+  \oD d2(\mf-- bis8.-- cis16-- |
+  cis2.)-- \oD b4\p-- |
+
+  \barNumberCheck 6
+  \oD a1\pp~ |
   a4 r r2 |
   r4
-  \once \override DynamicText.X-offset = #-4
-  \once \override Slur.after-line-breaking = #shape-if-broken
-  fis'(^\mf e4. cis8^\> |
-  d1)\! |
-  r4 d2( bis4)-- |
+  \once \override Slur.after-line-breaking =
+  #(lambda (grob) (shape-slur-if-broken grob 'first 0 0 1 1))
+  fis'( -\tweak X-offset -4 ^\mf e4. cis8^\> |
+  \oD d1)\pp |
+  r4 \oD d2\mf( bis4)-- |
 
-  % bar 11-20
-  cis2.~ cis8 cis8-- |
-  cis1--~ |
-  cis4 r
-  \once \override DynamicText.X-offset = #-4.5
-  cis'4.^\mf--( a8--) |
-  a2-- \clef bass cis,,4.-- a8-- |
-  a2-- \clef treble
-  \shape #'((0.5 . 0)(0.5 . 0)(-0.5 . 0)(-0.5 . 0)) Tie
-  cis''4--~\( \tuplet 3/2 { cis8 cis,-- gis'-- } |
-  a2--\) \clef bass a,,4.-- fis8-- |
-  fis2-- \clef treble <fis'' fis'>4.-- <d d'>8-- |
-  q2-- \clef bass fis,,4.-- d8-- |
-  d2-- \clef treble <fis'' fis'>8-- fis--~
+  \barNumberCheck 11
+  \oH cis2.\>~ cis8 cis8-- |
+  \addArticulation "tenuto" {
+    \oD cis1\pp~ |
+    cis4 r
+    cis'4. -\tweak X-offset -4.5 ^\mf( a8) |
+    a2 \cb cis,,4. a8 |
+    a2 \ct
+    \shape #'((0.5 . 0)(0.5 . 0)(-0.5 . 0)(-0.5 . 0)) Tie
+    cis''4~\( \tuplet 3/2 { cis8 cis, gis' } |
+    a2\) \cb a,,4. fis8 |
+    fis2 \ct <fis'' fis'>4. <d d'>8 |
+    q2 \cb fis,,4. d8 |
+    d2 \ct <fis'' fis'>8 fis~
+  }
   \subBeam fis16
-  \shape #'((0 . -0.5)(0 . 1)(0 . 0)(0 . 0)) Slur
-  fis16(
-  \tuplet 3/2 { <cis cis'> fis <cis cis'> } |
-  <d d'>2--) \clef bass d,,4.-- b8-- |
-  
+  \once \override Slur.positions = #'(0 . 0)
+  \shape #'((0 . 0)(0 . 1)(0 . 0.5)(0 . 0.5)) Slur
+  fis16( \tuplet 3/2 { <cis cis'> fis <cis cis'> } |
+  <d d'>2--) \cb d,,4.-- b8-- |
+
   % bar 21-23
   <<
     { \voiceOne \RHone }
@@ -197,210 +345,283 @@ RH = \relative c'' {
     { \voiceTwo \RHtwo }
   >>
 
-  % bar 24-29
+  \barNumberCheck 24
   \oneVoice
-  % allow LilyPond decide potential line breaks within bars
-  % otherwise impossible to achieve ragged-* settings
-  <gis''' gis'>2-> \bar "" <fis fis'>->~ |
+  \temporary \omit DynamicText
+
+  \cadenzaOn #(skip-of-length LHgraceA) \cadenzaOff
+
+  <gis'''='' gis'>2\ff-> \oH <fis fis'>->\>~ |
   <fis fis'>4 <e e'>2( <cis cis'>4 |
-  <c d fis d'>2.) <a a'>4( |
-  <aes bes d bes'>2) \bar "" r8 <b d b'>4 <b cis b'>8-- |
-  q2--( \bar "" <a fis' a>) |
-  r4 <g b g'>2( <fis a fis'>4) |
-  
-  % bar 30-32
-  << { fis'2.-- } \\ { <fis, a>8 s8 s2 } >> e'4-- |
-  d2.-- bis4-- |
-  cis2--
-  \hideTempo \tempo 4 = 55
-  \once \override TextScript.X-offset = #-5
-  a4..--^\markup{\larger \italic "rit."}
-  fis16-- |
-  
-  % bar 33-35
-  % see left hand for tempo mark
+
+  \cadenzaOn #(skip-of-length LHgraceB) \cadenzaOff
+  <c d fis d'>2.\p) <a a'>4( |
+  <aes bes d bes'>2) r8 \oH <b d b'>4\< <b cis b'>8-- |
+
+  \cadenzaOn #(skip-of-length LHgraceC) \cadenzaOff
+  <b cis b'>2--\mf( <a fis' a>\mp) |
+  r4 \oH <g b g'>2\>( <fis a fis'>4) |
+
+  \barNumberCheck 30
+  << { \oD fis'2.\p-- } \\ { \oD <fis, a>8\p } >>
+  \addArticulation "tenuto" {
+    e'4\p |
+    d2. bis4\mp |
+    \oH cis2\p\> a4.. fis16\pp |
+  }
+  \revert DynamicText.stencil
+
+  \barNumberCheck 33
   <<
     \relative c {
-      r4 r8 \clef bass cis8^\mf-- <cis fis,>4.-- cis8-- |
-      cis[(^\<-3 b]\!-2
+      r4 r8 \cb cis8^\mf-- <cis fis,>4.-- cis8-- |
+      \temporary \omit DynamicText
+      cis[(\p^\<-3 b]\!-2
       % default fingering position doesn't look good
       \once \override Fingering.avoid-slur = #'ignore
-      \once \override Fingering.extra-offset = #'(-0.8 . -1.5)
-      fis'[^\>-4 e])\! b(^\< fis'\! a^\> gis\! |
+      \once \override Fingering.extra-offset = #'(-0.5 . -1.5)
+      fis'[^\>-4 e])\p b(^\< fis'\mf a^\> gis\p |
       fis1--) |
+      \revert DynamicText.stencil
     }
     \\
     \relative c' {
-      fis1 |
-      fis,,4 a b cis |
-      r16 \clef treble fis''^( <gis, b> fis' <a, bis>^\< fis' <a, cis> fis'\! )
-      <a, cis>^(^\> fis' <gis, b> fis'\! <a, bis> fis' <a, cis> fis') |
+      \temporary \omit DynamicText
+      fis1\pp |
+      fis,,4\p a\mf b\p cis\mf |
+      r16 \ct fis''\p^( <gis, b> fis'
+      <a, bis>^\< fis' <a, cis> fis'\mf )
+      <a, cis>^(^\> fis' <gis, b> fis'\p
+      <a, bis> fis' <a, cis> fis') |
+      \revert DynamicText.stencil
     }
   >>
-  
-  % bar 36-37.5
-  <a cis>--(^\< fis' <b, d>\! fis' <bis, dis>--^\> a' <cis, e>\! a')
-  <d, eis>(^\> b' <d, fis>\! b') <e, fisis>(^\> cis' <eis, gis>\! cis') |
-  <fis fis,>( cis b gis a gis eis fis) cis'( a gis eis fis d bis cis) |
-  fis( cis b gis a gis eis fis)
-  
-  % bar 37.5-39.5
+
+  \barNumberCheck 36
+  \temporary \omit DynamicText
+  <a cis>\tenutoAlt(\p^\< fis' <b, d>\! fis'
+  <bis, dis>--\mp^\> a' <cis, e>\! a')
+  <d, eis>  (\mp^\> b' <d, fis>\! b')
+  <fisis e >(\mp^\> cis' <eis, gis>\! cis') |
+
+  <fis fis,>\pp( cis b gis a gis eis fis)
+  cis'         ( a gis eis fis d bis cis) |
+  fis          ( cis b gis a gis eis fis)
+
   <<
     \relative c' {
       s2 |
-      r2 \tuplet 3/2 { <fis a cis fis>8-- q-- q-- }
-      q4--~ |
-      q2
+      \barNumberCheck 39
+      r2 \addArticulation "tenuto" {
+        \tuplet 3/2 { \oH \oD <fis a cis fis>8\pp\< q q }
+        \oD q4\f~ |
+        q2
+      }
     } \\
     \relative c' {
       \voiceOne
-      cis'16_( a fis e
-      \subBeam fis^\markup{\larger \italic "rit."} d
+      \oD cis'16\pp_( a fis e
+      \subBeam fis d
       \tuplet 3/2 { b16 gis cis } |
+      \barNumberCheck 39
       fis,1) |
       s2
     }
   >>
-  
-  % bar 39.5-41
-  \stemUp <fis a cis fis>4.^- q8^- |
-  q1^-\fermata
+
+  \barNumberCheck 40
+  \stemUp \oH \oD <fis a cis fis>4.\mf\>^- q8^- |
+  \oD q1\pp-\tweak padding 0.5 \fermata ^-
 }
 
 %---------- Left Hand parts
 
 LHone = \relative c' {
+  \temporary \omit DynamicText
+  <>\pp
+
   % staff or voice starting with grace note has been b0rked for ages
-  % https://code.google.com/p/lilypond/issues/detail?id=34
-  \partial 16 \relative c, { \afterGrace s16 { \scaleDurations 2/3 { fis8[( cis'8] } } } \bar ""
+  \partial 16 \relative c, {
+    \afterGrace s16 { \scaleDurations 2/3 { fis8[( cis'8] } }
+  } \bar ""
 
-  % bar 1-5
-  a16 fis' b, fis') \repeat unfold 5 { bis,--( fis' cis fis) }
-  \clef treble
-  d--( fis <cis e> fis) <cis e>--( fis <cis eis> fis) |
-  \repeat unfold 4 { <d eis>--( g   <d fis> g)   } |
-  \repeat unfold 3 { <d eis>--( gis <d fis> a')  } eis--( gis fis a) |
-  <fis a>--( b <eis, a> b') <fis a>--( b <eis, a> b')
-  <fis gis>--( a <eis gis> a) fis--( gis eis gis) |
+  \oH a16\< fis' b, fis'\mp)
+  \temporary \omit Hairpin
+  \repeat unfold 5 { bis,\mp\>\tenutoAlt( fis' cis fis\pp) }
+  \revert Hairpin.stencil
+  \ct d\tenutoAlt( fis <cis e> fis)
+  <cis e>\tenutoAlt( fis <cis eis> fis) |
+  \repeat unfold 2 { <d eis>\tenutoAlt( g   <d fis> g)   }
+  \oH <>\<
+  \repeat unfold 2 { <d eis>\tenutoAlt( g   <d fis> g)   } |
+  <>\mf
+  \repeat unfold 3 { <d eis>\tenutoAlt( gis <d fis> a')  }
+  eis      \tenutoAlt( gis fis a) |
+  <fis a>  \tenutoAlt( b <eis, a> b')
+  \oH <>\>
+  <fis a>  \tenutoAlt( b <eis, a> b')
+  <fis gis>\tenutoAlt( a <eis gis> a)
+  fis      \tenutoAlt( gis eis gis) |
 
-  % bar 6-10
-  fis( gis eis fis e fis dis e
-  d e cis d \clef bass bis cis b cis) |
-  \grace { \scaleDurations 2/3 { fis,,8( cis' } } a'16^\< fis' b, fis')\!
-  \repeat unfold 3 { bis,--(^\> fis' cis\! fis) } |
-  \repeat unfold 2 { bis,--( fis' cis fis) }
-  cis--( fis d fis) \clef treble <cis e>--( fis <cis eis> g') |
-  \repeat unfold 2 { <d eis>--( g   <d fis> g)   }
-  \repeat unfold 2 { <d eis>--( gis <d fis> gis) } |
-  \repeat unfold 3 { <d eis>--( gis <d fis> a')  } eis--( gis fis a) |
-  
-  % bar 11-15
-  <fis a>--( b <eis, a> b') <fis a>--( b <eis, a> b')
-  <fis a>--( b <fis gis> a) gis--( a g gis) |
-  a( b gis a g a fis g eis fis e fis dis e d e) \clef bass |
-  \grace { \scaleDurations 2/3 {  a,,8( e' } } \clef treble cis'16^\< a' d, a')\!
-  \repeat unfold 2 { dis,^\>--( a' e\! a) } e^\>--( a eis\! a) |
-  eis--( a fis a) <cis, fis>( a' <fis gis> b
-  <fis gis>^\< b <e, a> cis' <fis, a> cis' <f, a> d' |
-  <fis, a cis>^\> dis' <e, a cis>\! e') dis,--^\p ( a' e a )
-  dis,--( a' e a) e--( a eis a) |
+  \barNumberCheck 6
+  fis\pp( gis eis fis e fis dis e
+  d e cis d \cb bis cis b cis) |
+  \grace { \scaleDurations 2/3 { fis,,8( cis' } }
+  a'16^\< fis' b, fis')\mp
+  \repeat unfold 3 { bis,\tenutoAlt(\mp^\> fis' cis fis\p) } |
+  \repeat unfold 2 { bis,\tenutoAlt( fis' cis fis) }
+  cis    \tenutoAlt( fis d fis) \ct
+  <cis e>\tenutoAlt( fis <cis eis> g') |
+  <>\pp
+  \repeat unfold 2 { <d eis>\tenutoAlt( g   <d fis> g  ) }
+  \oH <>\<
+  \repeat unfold 2 { <d eis>\tenutoAlt( gis <d fis> gis) } |
+  <>\mf
+  \repeat unfold 3 { <d eis>\tenutoAlt( gis <d fis> a' ) }
+  eis    \tenutoAlt( gis fis a) |
 
-  % first beat of bar 16
-  eis--( a fis a)
+  \barNumberCheck 11
+  <fis a>\tenutoAlt( b <eis, a> b')
+  \oH <fis a>\>\tenutoAlt( b <eis, a> b')
+  <fis a>\tenutoAlt( b <fis gis> a)
+  gis    \tenutoAlt( a g gis) |
+  a\pp( b gis a g a fis g eis fis e fis dis e d e) \cb |
+  \grace { \scaleDurations 2/3 {  a,,8( e' } }
+  \ct cis'16^\< a' d, a')\mp
+  \repeat unfold 2 { dis,\mp^\>\tenutoAlt( a' e a\p) }
+  e\mp^\>\tenutoAlt( a eis a\p) |
+
+  \barNumberCheck 14
+  eis\tenutoAlt( a fis a)
+  <cis, fis>( a' <fis gis> b
+  <fis gis>^\< b <e, a> cis'
+  <fis, a> cis' <f, a> d'\mf |
+  <fis, a cis>^\> dis' <e, a cis> e'\p)
+
+  \revert DynamicText.stencil
+  dis,\tenutoAlt^\p ( a' e a )
+  dis,\tenutoAlt( a' e a)
+  e   \tenutoAlt( a eis a) |
+  eis\tenutoAlt( a fis a)
 }
 
 LHtwo = \relative c {
   \partial 16 s16 |
-  % bar 1-10
   fis8 gis a4 a a |
   ais ais ais ais |
   b b b b |
   bis bis bis d |
   cis cis cis cis |
+
+  \barNumberCheck 6
   d8( a cis b fis a <dis, fis> <d fis>) |
   fis8[ gis] a4 a a |
   ais ais ais ais |
   b b b b |
   bis bis bis d |
-  
-  % bar 11-15
+
+  \barNumberCheck 11
   cis-- d-- dis-- e-- |
   fis8( cis e d a cis fis, <f a>) |
   a b cis4 cis cis |
   cis r r2 |
-  r4 cis cis cis | cis
+  r4 cis cis cis |
+
+  cis
 }
 
-LHthree = \relative c, {
-  % bar 24-26
-  % FIXME: I give up tweaking to sound like real performance.
-  % Even with \afterGrace, the note BEFORE padding space is stealed
-  % It might be doable with cue notes but then cross-voice slur becomes another problem
-  % Here is the deal: the grace notes are virtually indistinguishable
+LHthree = \relative c'' {
 
-  % It makes more sense to use slurDown, following Gutheil edition in this appoggiatura,
-  % instead of following convention. Situation is different for the next 2 appoggiatura
-  \slurDown
-  \shape #'((0 . 0) (-0.35 . -0.3) (-0.7 . -0.6) (-1.05 . -1)) Slur % not overlap with end note stem
-  \appoggiatura { \scaleDurations 1/2 { fis,16[ fis' cis' a' cis] } }
-  \slurNeutral
-  % curse this grace note thing again, stem direction is messed up
-  \voiceOne
-  \clef treble a'8( b bis cis) fis,( g gis a) |
-  \clef bass cis,[( dis] \clef treble e[ eis] fis g gis a) |
-  \clef bass \appoggiatura { d,,,16[ a' fis'] }
-  d'8( e f fis) a,( b c cis) |
-  
-  % bar 27-29
-  \shape #'((0 . 0)(4 . 2)(0 . 0)(0 . -2)) Slur
-  d16-- ( aes ees'-- f, e'-- d f-- aes,
-  \clef treble eis'-- <b d> fis'-- <b, d> fisis'-- <b, cis> gis'-- <b, cis> ) |
-  \clef bass \appoggiatura { a,16 fis' cis' }
-  gis'8( fis eis fis bis, cis) a( b) |
-  % NOTE: follow Gutheil edition for 2nd left hand slur, instead of ending at
-  % G note in Muzyka edition -- slurs are for left hand main melody
-  bis16( fis cis') cis, cis'( d, d' g, e' b cis) g d'( fis, dis') a |
-  
-  % bar 30-31
-  \repeat unfold 2 { bis--( fis' cis fis) } \clef treble
-  cis--( fis d fis) <cis e>--( fis <cis eis> g') |
-  <d eis>--( g <d fis> g) <d eis>--( gis <d fis> gis)
-  <d eis>--( gis <d fis> a') eis--( gis fis a) |
+  \barNumberCheck 24
+  \temporary \omit DynamicText
+
+  \cadenzaOn \LHgraceA \cadenzaOff
+  \ct a8)(\ff b bis cis) fis,( g gis a) |
+  \cb \oH cis,\>[( dis] \ct e[ eis] fis g gis a) \cb |
+
+  \cadenzaOn \LHgraceB \cadenzaOff
+  d,8)( e f fis) a,( b c cis) |
+
+  \barNumberCheck 27
+  \once \override Slur.positions = #'(0 . 0)
+  d16\tenutoAlt ( aes ees'-- f, e'-- d f\tenutoAlt aes,
+  \ct \oH eis'--\< <b d> fis'-- <b, d>
+  fisis'-- <b, cis> gis'-- <b, cis> ) \cb |
+
+  \cadenzaOn \LHgraceC \cadenzaOff
+  \oH gis'8)(\> fis eis fis\mp bis, cis) a( b) |
+  bis16\p( fis cis') cis,
+  % EDITORIAL NOTE: Follow Gutheil edition for 2nd left hand slur (end at C♯)
+  cis'( d, d' g, e' b cis) g
+  d'( fis, dis') a |
+
+  \barNumberCheck 30
+  \repeat unfold 2 { bis\tenutoAlt( fis' cis fis) } \ct
+  cis    \tenutoAlt( fis d fis       )
+  <cis e>\tenutoAlt( fis <cis eis> g') |
+  <d eis>\tenutoAlt( g <d fis> g     )
+  \oH <d eis>\tenutoAlt\<( gis <d fis> gis )
+  <d eis>\tenutoAlt( gis <d fis>\mp a'  )
+  \oH eis\> \tenutoAlt( gis fis a\p     ) |
+  \revert DynamicText.stencil
 }
 
 LHfour = \relative c'' {
-  % bar 24-26
-  a16 <a, cis> b' <a, cis> bis' <a, cis> cis' <a, cis>
-  fis' <a, cis> g' <a, cis> gis' <a, cis> a' <a, cis> |
-  cis a dis fis, e' cis eis a, fis' cis g' a, gis' cis, a' fis, |
-  d' a e' c f a, fis' fis, a fis b d, c' fis, cis' a |
-  
-  % bar 27-29
-  d8[ ees] e[ f] \autoBeamOff eis fis fisis gis \autoBeamOn |
-  gis16 <fis, cis'> fis' <fis, cis'> eis' <fis, cis'> fis' <fis, cis'>
-  bis fis cis' fis, a fis b cis, |
-  bis'8[ cis] \autoBeamOff cis d e[ cis] d dis \autoBeamOn |
-  
-  % bar 30-31
+  \temporary \omit DynamicText
+
+  % padding for "grace notes"
+  \cadenzaOn #(skip-of-length LHgraceA) \cadenzaOff
+
+  \barNumberCheck 24
+  a16\ff <a, cis> b' q bis q cis q
+  fis, q g q gis q a q |
+  \oH cis,\mp\> a dis fis, e' cis eis a,
+  fis' cis g' a, gis' cis, a' fis, |
+
+  \cadenzaOn #(skip-of-length LHgraceB) \cadenzaOff
+  d'\pp a e' c f a, fis' fis, a fis b d, c' fis, cis' a |
+
+  \barNumberCheck 27
+  d8\mp[ ees] e[ f] \autoBeamOff
+  \oH eis\< fis fisis gis\mf \autoBeamOn |
+
+  \cadenzaOn #(skip-of-length LHgraceC) \cadenzaOff
+  \oH gis16\pp <fis, cis'> fis' q eis q fis q
+  bis, fis cis' fis, a fis b cis, |
+  bis'8\mf[ \oH cis\>] \autoBeamOff cis d e[ cis] d dis\p \autoBeamOn |
+
+  \barNumberCheck 30
   \once \stemUp \acciaccatura cis,8 a'4 a ais ais |
   b b bis d |
+
+  \revert DynamicText.stencil
 }
 
 LHfive = \relative c { % bar 24-31
-  s1*3 |
+  \temporary \omit DynamicText
+
+  % padding for "grace notes"
+  \cadenzaOn #(skip-of-length LHgraceA) \cadenzaOff
+
+  s1*2 |
+  \cadenzaOn #(skip-of-length LHgraceB) \cadenzaOff
+  s1 |
+
   \stemDown
   % Default horiz shift for 3rd voice either is unnecessary or
   % doesn't work (some notes would overlap), so do it manually
   \once \override NoteColumn.force-hshift = #0
-  bes2
-  \once \override NoteColumn.force-hshift = #0.8
-  a'4_(
-  \once \override NoteColumn.force-hshift = #0.8
-  gis) |
+  bes2\p
+  \temporary \override NoteColumn.force-hshift = #0.8
+  a'4\mp_( gis\mf) |
+  \revert NoteColumn.force-hshift
+
+  \cadenzaOn #(skip-of-length LHgraceC) \cadenzaOff
   s1 |
   \override NoteColumn.ignore-collision = ##t
-  a,4 b2 bis4 |
+  a,4\mp b2 bis4 |
   s1*2 |
+  \revert DynamicText.stencil
 }
 
 LH = {
@@ -411,29 +632,47 @@ LH = {
     { \voiceTwo \LHtwo }
   >>
 
+  \barNumberCheck 16
+  \temporary \omit DynamicText
   \oneVoice \relative c' {
-    % 2nd quaver of bar 16 - 20
-    <cis eis>16( a' <d, fis> b'
-    <dis, fis>^\< b' <d, f> bis' <d, fis> bis' <cis, fis a> cis' |
-    <e, fis a>^\> cis' <d, fis a>\! d') <gis,, d' fis>--( gis' <a, d fis> a')
-    \repeat unfold 2 { <a, d fis>--( a' <ais, cis fis> ais') } |
-    \repeat unfold 2 { <ais, cis fis>--( ais' <b, d fis> b') }
-    <b, d fis>( b' <cis, e fis> cis' <b, d fis> cis' <bes, e g> d' |
-    <a, e' g> d' <d, fis a> d') <gis,, d' fis>--( gis' <a, d fis> a')
-    \repeat unfold 2 { <a, d fis>--( a' <ais, cis fis> ais') } |
-    \repeat unfold 2 { <ais, cis fis>--( ais' <b, d fis> b') }
-    <b, d fis>( b' <c, d fis> c' <c, d fis> c' <cis, d fis> cis' |
-    <cis, g'> cis' <d, g> d') <b, d fis>--( b' <b, d g> b')
-    <b, d g>--( b' <b, dis g> b') <b, dis fis>--( b' <b, dis g> b') |
-    
-    % bar 21-23
-    <b, dis gis>--( b' <b, e gis> b') <b, e g>--( b' <b, e gis> b')
-    <f, b d>( e' <f, b d> f' <f, b d> g' <f, b d> a' |
-    <b, d f> b' <c, f> c' <cis, f> cis' <d, fis> d' <d, g> d' <d, gis> d'
-    \tuplet 6/4 { <d, gis a> d' <d, gis ais> d' <d, gis b> d') } |
-  } \clef bass
-  
-  % bar 24-31
+    <cis eis>16\p( a' <d, fis> b'
+    <dis, fis>^\< b' <d, f> bis' <d, fis> bis' <cis, fis a> cis'\mf |
+    <e, fis a>^\> cis' <d, fis a> d'\mp)
+    <gis,, d' fis>\tenutoAlt( gis' <a, d fis> a')
+    \oH <>\<
+    \repeat unfold 2 { <a, d fis>    \tenutoAlt( a' <ais, cis fis> ais') } |
+    \repeat unfold 2 { <ais, cis fis>\tenutoAlt( ais' <b, d fis> b') }
+    <b, d fis>( b' <cis, e fis> cis'
+    <b, d fis> cis' <bes, e g> d'\mf |
+
+    \barNumberCheck 19
+    \oH <a, e' g>\> d' <d, fis a> d'\mp)
+    <gis,, d' fis>\tenutoAlt( gis' <a, d fis> a')
+    \oH <>\<
+    \repeat unfold 2 { <a, d fis>    \tenutoAlt( a' <ais, cis fis> ais') } |
+    \repeat unfold 2 { <ais, cis fis>\tenutoAlt( ais' <b, d fis> b') }
+    <b, d fis>( b' <c, d fis> c'
+    <c, d fis> c' <cis, d fis> cis' |
+
+    <cis, g'>\f \oH cis'\> <d, g> d')
+    <b, d fis>\mf  \tenutoAlt( b' <b, d   g> b')
+    \oH <b, d g>\< \tenutoAlt( b' <b, dis g> b')
+    <b, dis fis>   \tenutoAlt( b' <b, dis g> b') |
+
+    \barNumberCheck 22
+    <b, dis gis>\tenutoAlt( b' <b, e gis> b')
+    <b, e g>    \tenutoAlt( b' <b, e gis> b')
+    % FIXME too lazy to write a whole function just for fixing this slur
+    \shape #'(((0 . 0) (1 . 0) (2 . 0) (3 . 0)) ()) Slur
+    <f, b d>\f( e' q f q g q a |
+    <b, d f> b' <c, f> c'
+    \oH <cis, f>\< cis' <d, fis> d'
+    <d, g> d' <d, gis> d'
+    \tuplet 6/4 { <d, gis a>\ff d' <d, gis ais> d' <d, gis b> d') } |
+  } \cb
+  \revert DynamicText.stencil
+
+  \barNumberCheck 24
   <<
     { \voiceOne \LHthree }
     \new Voice { \voiceTwo \LHfour }
@@ -441,135 +680,174 @@ LH = {
     % notes in 3rd (middle) voice are horizontally shifted. We want the bottom ones shifted instead
     \new Voice { \voiceThree \LHfive }
   >>
-  
+
   \oneVoice \relative c'' {
-    % bar 32-36
-    <a fis cis>( b <gis e> a <fis d> gis
-    <e a,> fis
-    <dis b> e <d fis,> e \clef bass <cis eis,> d <b cis,> cis) |
-    % align with grace notes, so not marking tempo on right hand
-    \once \set Score.tempoHideNote = ##t
-    \tempo \markup{ \huge{ "a tempo" } } 4 = 58
-    \grace { \scaleDurations 2/3 { fis,,8^( cis' } } <fis a>16 fis' <gis, b> fis' <a, bis>^\< fis' <a, cis> fis')\!
-    <a, cis>( fis'^\> <gis, b> fis'\! <a, bis>^\< fis' <a, cis> fis')\! |
-    \clef treble <a, cis>(^\< fis' <b, d>\! fis' <bis, dis>^\> a' <cis, e>\! a')
-    <d, eis>(^\< b' <d, fis>\! b' <e, g>^\> cis' <eis, gis>\! cis') |
-    <cis, fis a>16 r r8 r \clef bass cis-- <cis fis,>4.-- cis8-- |
+    \temporary \omit DynamicText
+
+    \barNumberCheck 32
+    \oH <a fis cis>\p\>( b <gis e> a
+    <fis d> gis <e a,> fis
+    <dis b> e <d fis,> e \cb
+    <cis eis,> d <b cis,> cis) |
+
+    \grace { \scaleDurations 2/3 { fis,,8\pp^( cis' } }
+    <fis a>16 fis' <gis, b> fis'
+    <a, bis>^\< fis' <a, cis> fis')\mp
+    <a, cis>( fis'^\> <gis, b> fis'\pp
+    <a, bis>^\< fis' <a, cis> fis')\p |
+
+    \barNumberCheck 34
+    \ct <a, cis>(^\< fis' <b, d>\mf fis'
+    <bis, dis>^\> a' <cis, e>\p a')
+    <d, eis>(^\< b' <d, fis>\mf b'
+    <e, g>^\> cis' <eis, gis>\p cis') |
+    <cis, fis a>16 r r8 r \cb
+    cis--\mf <cis fis,>4.-- cis8-- |
+    \revert DynamicText.stencil
     <<
       {
-        % work around problem: (De)crescendo with unspecified starting volume in MIDI
-        \once \omit Voice.DynamicText
-        cis--\mf[(\< b]\! a--[\> e'])\!
-        \clef treble b--[( fis']) cis--[( gis'])
+        \temporary \omit DynamicText
+        cis\tenutoAlt\mp[(\< b]\!
+        a--[\mf\> e'])\!
+        \ct b\p\tenutoAlt[( fis']) cis\tenutoAlt[( gis'])
+        \revert DynamicText.stencil
       } \\
       \relative c { fis4 a b cis }
     >>
-    
-    % bar 37-41
-    <fis a>2.~ <fis a>16 d( bis cis) |
-    \clef bass fis,( cis b gis a gis eis fis)
+
+    \barNumberCheck 37
+    \oD <fis a>2.\pp~ <fis a>16 d( bis cis) |
+    \cb fis,( cis b gis a gis eis fis)
     <<
       \relative c, {
         s2 | r2
         \once \override Beam.positions = #'(4.5 . 4.5) % align beamed and unbeamed notes
-        \tuplet 3/2 { \repeat unfold 3 { <fis cis' fis a>8_- } }
-        q4_-~ |
-        q2
+        \temporary \override Script.direction = #DOWN
+        \addArticulation "tenuto" {
+          \tuplet 3/2 { \oH \oD <fis cis' fis a>8\pp q q }
+          \oD q4\f~ |
+          q2
+        }
       } \\
       \relative c, {
         \voiceOne
-        cis'16_( a fis e
+        \oD cis'16\pp_( a fis e
         \subBeam fis d
         \tuplet 3/2 { b16 gis cis } |
         fis,1) |
         s2
       }
     >>
-    <fis cis' fis a>4.-- q8-- |
-    q1--\fermata
+    \oH \oD <fis cis' fis a>4.\mf\>-- q8-- |
+    \oD q1--\fermata\pp
   }
 }
 
 %------------ Dynamics
 
 Dynamics = {
+  \tempo \markup \huge "Largo." 4 = 58
   \partial 16 s16 |
   % bar 1-10
-  \once \override DynamicText.X-offset = #-4
-  s16\pp\< s8 s16\! \repeat unfold 5 { s8\> s8\! }
+  \set Score.tempoHideNote = ##t
+  \override Score.MetronomeMark.font-size = 1
+  s16 -\tweak X-offset -4 \pp\< s8 s16\!
+  \repeat unfold 5 { s8\> s8\! }
   s2 |
   s2\pp s4..\< s16\! |
   s1\mf |
   s4 s2.\dim |
-  \barLinePad s1\pp |
-  s1*2 |
+  \barLinePad s2.\pp
+  \tempo 4 = 55 s4 |
+  \tempo 4 = 58 s1*2 |
   s2\pp s4..\< s16\! |
   s1\mf |
-  
-  % bar 11-20
+
+  \barNumberCheck 11
   s4 s2.\dim |
-  \barLinePad s1\pp |
-  s1*4 |
+  \barLinePad s2.\pp
+  \tempo 4 = 55 s4 |
+  \tempo 4 = 58 s1*4 |
   s2 s2\cresc |
   s2\! s2\< |
   s8\> s8\! s4 s2\cresc |
   s2\! s2\< |
-  
-  % bar 21-30
+
+  \barNumberCheck 21
   s8.\f\> s16\! s4 s2\cresc |
-  s2 s2\f |
-  s4 s2.\cresc |
-  s1\ff |
+  s2 s2-\tweak X-offset -2 -\tweak extra-offset #'(2 . -1) \f |
+  s4 s2\cresc
+  \tempo 4 = 52 s4 |
+  \tempo 4 = 58
+
+  % padding for "grace notes"
+  \cadenzaOn #(skip-of-length LHgraceA) \cadenzaOff
+
+  % allow LilyPond decide potential line breaks within bars
+  % otherwise impossible to achieve ragged-* settings
+  s2\ff \bar "" s2 |
   s1\dim |
+
+  \cadenzaOn #(skip-of-length LHgraceB) \cadenzaOff
   s1\p |
-  s2 s4.\< s8\! |
-  s4.\> s8\! s2 |
+  s2 \bar "" s4.\< s8\! |
+
+  \cadenzaOn #(skip-of-length LHgraceC) \cadenzaOff
+  s4.\> s8\! \bar "" s2 |
   s4 s2.\dim |
-  \once \override DynamicText.X-offset = #-3
-  s1\p |
-  
-  % bar 31-41
+
+  \barNumberCheck 30
+  s1 -\tweak X-offset -3 \p |
   s4 s4.\< s8\! s4\> |
-  s4\p
-  s2.\dim |
+  s4-\tweak extra-offset #'(0 . -1) \p s8\dim
+  \tempo "rit." 4 = 54 s4.
+  \tempo 4 = 50 s8
+  \tempo 4 = 46 s8 |
+  \tempo "a tempo" 4 = 58
+  \grace { s4*2/3 } %%%% Lilypond is retarded
   s4\pp s2. |
-  s1*3 |
-  \hideTempo \tempo 4 = 56
-  \barLinePad s1\pp |
-  s2.
-  \hideTempo \tempo 4 = 52
-  s4 |
+  s1*2 |
   s2
-  \hideTempo \tempo 4 = 48
-  s4\< s4\f |
-  \hideTempo \tempo 4 = 44
-  s2\dim s4.\> s8\! |
-  s1\pp \bar "|."
+  \tempo 4 = 55 s2 |
+  \tempo 4 = 52
+  \barLinePad s8-\tweak extra-offset #'(0 . -1.5) \pp
+  \tempo 4 = 54 s2.. |
+  s2.
+  \tempo "rit." 4 = 50 s8
+  \tempo 4 = 42 s8 |
+  \tempo 4 = 48 s2 s4\< s4\f |
+  \tempo 4 = 44 s2\dim
+  \tempo 4 = 40 s4.\> s8\! |
+  \tempo 4 = 30 s1\pp \bar "|."
 }
 
 %-------Typeset music and generate midi
 \score {
-  \context PianoStaff <<
-    %-Midi instrument values at 
-    % http://lilypond.org/doc/v2.18/Documentation/snippets/midi#midi-demo-midiinstruments
-    \set PianoStaff.midiInstrument = "acoustic grand"
-    \new Staff << \clef treble \global \RH >>
+  \context PianoStaff \with {
+    \accidentalStyle PianoStaff.piano
+  } <<
+    \new Staff << \ct \key fis \minor \time 4/4 \RH >>
     \new Dynamics << \Dynamics >>
-    \new Staff << \clef bass   \global \LH >>
+    \new Staff << \cb   \key fis \minor \time 4/4 \LH >>
   >>
   \layout {
     \context {
       \Score
-      \override TupletBracket.bracket-visibility = ##f
+      scriptDefinitions = #my-script-alist
+      \omit TupletBracket
+      \override TupletBracket.avoid-slur = #'ignore
+      \override DynamicTextSpanner.font-size = 0
       \override DynamicTextSpanner.style = #'none
+      \override Hairpin.height = 0.5
+      \override MetronomeMark.padding = 2
     }
   }
   \midi {
     \tempo 4 = 58
     \context {
       \Score
-      midiMinimumVolume = #0.3
-      midiMaximumVolume = #1
+      midiInstrument = "acoustic grand"
+      %dynamicAbsoluteVolumeFunction = #myMidiVolume
     }
   }
 }
