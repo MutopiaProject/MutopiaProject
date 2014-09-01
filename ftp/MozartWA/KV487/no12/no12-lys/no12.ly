@@ -1,21 +1,27 @@
-\version "1.9.8"
+\version "2.18.0"
 
 \include "header.ly"
-global = \notes {
+
+global =  {
     \time 2/4
     \key c \major
 \partial 8    
     }
 
-hornI = \notes \relative c'' {
+hornI =  \relative c'' {
     \repeat volta 2 {
-	
     f8\mf f(d) bes-. bes-. bes4.( b8) c8( b) c f es4( d8) f f( d ) bes
     bes bes bes'4 a8 \acciaccatura a8 g f g a
 	}
     \alternative {
-	{ f4 r8 }
-	{ \partial 4*0 f4 }
+    {
+      \set Timing.measureLength = #(ly:make-moment 3/8)
+      f4 r8
+    }
+    {
+      \set Timing.measureLength = #(ly:make-moment 2/4)
+      f4
+    }
 	}
 
     \repeat volta 2 {
@@ -41,10 +47,19 @@ hornI = \notes \relative c'' {
     c\f c d r |
     c2\p^\markup { \halign #-0.7 "Andante"  }
     }
-    \alternative { { \partial 4 bes4 } {bes4 r } }
-    
+  \alternative {
+    {
+      \set Timing.measureLength = #(ly:make-moment 1/4)
+      bes4
 }
-hornII = \notes \relative c' {
+    {
+      \set Timing.measureLength = #(ly:make-moment 2/4)
+      bes4 r
+    }
+  }
+}
+
+hornII =  \relative c' {
     \repeat volta  2 {
     r8
     bes \mf f' d f bes, f' d bes a f' a f bes bes, bes r |
@@ -52,9 +67,16 @@ hornII = \notes \relative c' {
     bes r c r |
     }
     \alternative {
-	{ f,4 r8 }
-	{\partial 4*0 f4 }
+    {
+      \set Timing.measureLength = #(ly:make-moment 3/8)
+      f,4 r8
+    }
+    {
+      \set Timing.measureLength = #(ly:make-moment 2/4)
+      f4
 	}
+  }
+
     \repeat volta 2 {
 	d'8 d es r b b c r a a bes a16( bes) c8 bes |
 	gis( a ) d-. d-. es r b b |
@@ -76,23 +98,29 @@ hornII = \notes \relative c' {
 	f2
 	}
     \alternative {
-	{ d4 }
-	{ d4 r }
-	  
+    {
+      \set Timing.measureLength = #(ly:make-moment 1/4)
+      d4
+    }
+    {
+      \set Timing.measureLength = #(ly:make-moment 2/4)
+      d4 r
+    }
 	}
     }
-
-
 
 \score {
    \new StaffGroup <<
     \new Staff << \global \hornI >>
     \new Staff <<\global \hornII >>
     >>
-   \paper {}
-   \midi { \tempo 4  = 100 }
+  \layout { }
+
+  \midi {
+    \tempo 4 = 100
+  }
+
 \header {
     piece = "No. 12.  Allegro"
-    footer = "Mutopia-2004/01/12-401"
 }
    }
