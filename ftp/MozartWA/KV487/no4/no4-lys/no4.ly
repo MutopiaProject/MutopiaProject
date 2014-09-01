@@ -1,27 +1,26 @@
+\version "2.19.7"
 
-
-\version "1.9.8"
 \include "header.ly"
-global = \notes {
+global =  {
     \time 3/4
     \key c \major
     
     }
 
-hornI = \notes \relative c'' {
+hornI =  \relative c'' {
     \repeat volta 2 {
     c8\mf c16 b c8 g e'4 |
     d8 d16 c d8 g, f'4
     e16(\p g) c b b( a) a( g) g( f) f( e) |
     d e d c b c b a g4 |
-    \octave c''
+    \octaveCheck c''
     c8\mf \acciaccatura d8 c16 b
     c8 g e'4 d8 \acciaccatura e16 d16 c d8 g, f'4 |
     e16( g) c b b( a ) a( g)  g( f) f( e) |
     e( d c b ) b4 c8 r |
 }
     
-	\octave d''
+	\octaveCheck d''
 	d4.\f f8( e g)
 	g4 g16( f e f ) e4|
 	d4. f8 e16( g ) c a |
@@ -30,7 +29,7 @@ hornI = \notes \relative c'' {
 	g8 d d d d d |
 	fis8 g fis g \appoggiatura b16 a8[( g16 fis)]|
 	g4 r8 g,8 b d g4 r8 g,8 b d |
-	\octave f''
+	\octaveCheck f''
 	f4. g16( a16) g16( e) f( d) |
 	c8\p c16 b c8 g e'4 | d8 d16 c d8 g, f'4 |
 	e16(\mf g) c b b(a ) a(g) g(f) f( e) |
@@ -38,16 +37,17 @@ hornI = \notes \relative c'' {
 
     %% Stosser puts appoggiatura here; I believe this is wrong.
 	c8 \acciaccatura d16 c16 b c8 g e'4
-	\octave d''
+	\octaveCheck d''
 	d8 \acciaccatura e16( d16) c d8 g, f'4 |
 	e16( g) c b  b(a ) a(g) g(f) f( e) |
 	e( d c b) b4( c8) r
     \bar "|."
 }
 
-hornII = \notes \relative c' {
+hornII =  \relative c' {
     \repeat volta 2 {
-	\property Staff.autoBeamSettings \set #'(begin 1 8 3 4) = #(ly:make-moment 1 8 )  
+%       now useless as LP does the right thing by default
+%	#(o verride-auto-beam-setting '(begin 1 8 3 4)  1 8 'Staff)  
 	c4\mf r8 c c c b4 r8 b b b |
 	c\p e'( f)[ e]( d) c |
 	b b16( c ) d8 d16 ( c ) b8 g |
@@ -83,11 +83,16 @@ hornII = \notes \relative c' {
     \new Staff << \global \hornI >>
     \new Staff <<\global \hornII >>
     >>
-\paper { } 
-   \midi { \tempo 4 = 85 }
+\layout { }
+
+  \midi {
+    \tempo 4 = 85
+    }
+
+
 \header {
     piece = "No. 4. Polonaise"
-    footer = "Mutopia-2004/01/12-393"
+    
 }
 
    }
