@@ -1,14 +1,13 @@
-
-\version "1.9.8"
+\version "2.18.0"
 
 \include "header.ly"
-global = \notes {
+
+global = {
     \time 2/2
     \key c \major
-    
     }
 
-hornI = \notes \relative c'' {
+hornI =  \relative c'' {
     \repeat volta 2 { 
     c2 d8( c d e ) |
     c4 g  g g
@@ -18,6 +17,7 @@ hornI = \notes \relative c'' {
     c2 a'8( fis) d c |
     b g'( e a) g4 fis fis2( g4) r
     }
+
     \repeat volta 2 {
 	g2\mf e8( f g a )
 	f2 d8( e f g)|
@@ -30,7 +30,8 @@ hornI = \notes \relative c'' {
 	b2( c4) r
     }
 }
-hornII = \notes \relative c' {
+
+hornII =  \relative c' {
     \repeat volta 2 {
 	e2 g
 	e8 c e g e g e c |
@@ -41,6 +42,7 @@ hornII = \notes \relative c' {
 	g4 c d d |
 	d2( g,4) r4  |
     }
+
     \repeat volta 2 {
 	r4 e'4 cis a |
 	r d b g |
@@ -53,17 +55,18 @@ hornII = \notes \relative c' {
     }
     }
 
-
-
 \score {
    \new StaffGroup <<
     \new Staff << \global \hornI >>
     \new Staff <<\global \hornII >>
     >>
-   \midi { \tempo 4 = 70 }
-   \paper { }
+  \layout { }
+
+  \midi {
+    \tempo 4 = 70
+  }
+
 \header {
     piece = "No. 10.  Andante"
-    footer = "Mutopia-2004/01/12-399"
 }
    }
