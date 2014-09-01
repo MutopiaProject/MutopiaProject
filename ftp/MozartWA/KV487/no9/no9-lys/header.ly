@@ -2,7 +2,7 @@
 \header {
     title = "12 duets"
     composer = "W. A. Mozart (1756-1791)"
-        
+
     mutopiatitle = "12 duets"
     mutopiacomposer = "MozartWA"
     mutopiaopus = "KV487"
