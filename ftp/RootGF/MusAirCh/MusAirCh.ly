@@ -1,10 +1,3 @@
-\layout{ papersize = "letter"
-	line-width = 165 \mm
-	indent = 8 \mm
-%	interscoreline = 4.0 \mm
-}
-
-
 \include "english.ly"
 \version "2.18.2"
 #(set-global-staff-size 16)
@@ -24,6 +17,15 @@
  footer = "Mutopia-2014/09/01-427"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
+}
+
+\paper {
+  % add space between composer/opus markup and first staff
+  markup-system-spacing #'padding = #3
+  % add a little space between composer and opus
+  markup-markup-spacing #'padding = #1.2
+  top-margin = 7\mm
+  bottom-margin = 6\mm
 }
 
 %% Spelling curiosities not corrected!
@@ -163,7 +165,10 @@ lower = \relative c {
       >>
   >>
   \layout {
-      \context { \Staff \RemoveEmptyStaves }
+      \context {
+        \Staff \RemoveEmptyStaves
+        \override VerticalAxisGroup.remove-first = ##t
+      }
   }
 
   \midi {
