@@ -1,17 +1,17 @@
-
-\version "1.9.8"
+\version "2.18.0"
 
 \include "header.ly"
-global = \notes {
+
+global =  {
     \time 3/4
     \key c \major
-    \skip 2.* 16
+  s2.*16
     \key f \major
-    \skip 2. * 16
+  s2.*16
     \key c \major
     }
 
-hornI = \notes \relative c'' {
+hornI =  \relative c'' {
     \repeat volta 2 { 
     c4\f d8 e f e e( d ) d4 d |
     d e8 f g
@@ -38,16 +38,15 @@ hornI = \notes \relative c'' {
 	}
     \repeat volta 2 {
 	e2( f4)|
-	\times 2/3 { g8 e c } bes4 a |
+    \tuplet 3/2 { g8 e c } bes4 a |
 	e'2(\p f4) |
-	\times 2/3 { g8 e c } bes4 a c2. |
+    \tuplet 3/2 { g8 e c } bes4 a c2. |
 	cis8\mf( d) d4.(g8) |
 	f( e d c d e ) f4 r r 
 	}
 }
 
-
-hornII = \notes \relative c' {
+hornII =  \relative c' {
     \repeat volta 2 {
 	r4 r c \f g' r8 g( fis g) |
 	g,4 r g' |
@@ -75,11 +74,11 @@ hornII = \notes \relative c' {
 	c,8 c' g e c4 |
 	}
     \repeat volta 2 {
-	\times 2/3 { c8\mf e g } bes4 a |
+    \tuplet 3/2 { c8\mf e g } bes4 a |
 	e2( f4)
-	\times 2/3 { c8\p e g } bes4 a |
+    \tuplet 3/2 { c8\p e g } bes4 a |
 	e2( f4)
-	a4 f a bes\mf f bes g c c, f8 a c a f4_\markup { \italic \halign #0.65 "Menuetto da capo" }
+    a4 f a bes\mf f bes g c c, f8 a c a f4_\markup { \italic \halign #0.45 "Menuetto da capo" }
 	}
     }
 
@@ -90,10 +89,14 @@ hornII = \notes \relative c' {
     \new Staff << \global \hornI >>
     \new Staff <<\global \hornII >>
     >>
-   \midi { \tempo 4 = 120 }
-   \paper { }
+
+  \layout { }
+
+  \midi {
+    \tempo 4 = 120
+  }
+
 \header {
     piece = "No. 11.  Menuetto"
-    footer = "Mutopia-2004/01/12-400"
 }
    }
