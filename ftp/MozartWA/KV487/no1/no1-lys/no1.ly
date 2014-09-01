@@ -1,11 +1,11 @@
-\version "1.9.8"
+\version "2.19.7"
 \include "header.ly"
 
-global =     \notes \sequential  {
+global =      \sequential  {
     \partial 8 \time 2/4
     \key f \major
 }
-hornI = \notes\relative c''
+hornI = \relative c''
 {
     \repeat volta 2 { 
     a8
@@ -15,7 +15,7 @@ hornI = \notes\relative c''
     f4 r8 f |
     g g  g g16 ( a16) |
     f8 g16 a bes c d e
-    \octave f''
+    \octaveCheck f''
     f8( d ) a b
     c4 r8 c |
     d16( e) f d b( c) d b
@@ -24,14 +24,14 @@ hornI = \notes\relative c''
     c4 r8
     }
     \repeat volta 2 {
-	\octave c''
+	\octaveCheck c''
 	c,8 c'4. a8 |
 	d4. c8 |
 	bes4. g8|
 	c4. bes8 |
 	a4.  f8 ~ f bes4 a8~ a g4 f8
 	c'4 r8 a c bes a g
-	\octave f'
+	\octaveCheck f'
 	f16( g ) a bes c d e f | e2
 	f16( g) a bes c a g f |
 	e2 f8 r c r |
@@ -45,14 +45,14 @@ hornI = \notes\relative c''
 }
 
 
-hornII =\notes
+hornII =
 \relative c' {
 
     \repeat volta 2 {
     f8 a g f c a4 r8 a c8 c c c
     a4 r8 a8 c c c c
     a4 r |
-    \octave f
+    \octaveCheck f
     f'2 e8 g e g f g f g e g e g f g f g
     e4 r8
     }
@@ -60,7 +60,7 @@ hornII =\notes
 	r8 | r 
 	f,8 f'4~ f8 d g4 ~ g8 f
 	e4 ~ e8 c f4 ~ f8 e es4 d c
-	\octave bes
+	\octaveCheck bes
 	bes b |
 	c r8 f a g f c a4
 	r8 a'8
@@ -82,10 +82,14 @@ hornII =\notes
     \new Staff << \global \hornI >>
     \new Staff <<\global \hornII >>
     >>
-   \paper { }
-   \midi { \tempo 4 = 90 }
+   \layout { }
+
+  \midi {
+    \tempo 4 = 90
+    }
+
+
 \header {
     piece = "No. 1. Allegro"
-    footer = "Mutopia-2004/01/12-390"
 }
    }
