@@ -1,11 +1,6 @@
-\paper{ papersize = "letter" 
-	linewidth = 165 \mm
-	indent = 8 \mm
-%	interscoreline = 4.0 \mm
-}
+\version "2.18.0"
 
 \include "english.ly"
-\version "2.1.30"
 #(set-global-staff-size 16)
 
 \header {
@@ -17,14 +12,12 @@
   instrument = "Voice and Piano"
   opus = "c. 1846"
   source = ""
-  copyright = "Public Domain"
+  license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"
   mutopiacomposer = "AbtF"
   maintainerEmail = "physinfoman@ameritech.net"
-  lastupdated = "3/22/2004"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/03/22-439"
 }
 
@@ -32,27 +25,22 @@
 %% G. F. Graham, C. Herlossoln, and Franz Abt.
 %% An early Austrailian edition claims Graham.
 
-hpuI = \once \override Staff.Hairpin #'extra-offset = #'(0 . +1)
-hpuII = \once \override Staff.Hairpin #'extra-offset = #'(0 . +2)
-hpdI = \once \override Staff.Hairpin #'extra-offset = #'(0 . -1)
-hpdII = \once \override Staff.Hairpin #'extra-offset = #'(0 . -2)
-hpdIIa = \once \override Staff.Hairpin #'extra-offset = #'(0 . -2.5)
 cresc = \markup { \italic "cresc." }
 dim = \markup { \italic "dim." }
-  
-melody = \notes\relative c' {
+
+melody = \relative c' {
 	\key g\major \time 3/4
-	\partial 4 b8.^\markup {\column <\bold {\large "Andantino"} \dynamic mf >} c16
+	\partial 4 b8.^\mf^\markup {\bold \large "Andantino"} c16
 %% 1-3
 	d4. g8^\< b8.\!^\> a16\! | g2 a8 e | d4\( d16\) g( fs e) d8. c16 |
 %% 4-6
-	b4 r b8 ds | e4.^\cresc e8 fs8. b,16 | g'2 g16( b) g( e) | 
+	b4 r b8 ds | e4.^\cresc e8 fs8. b,16 | g'2 g16( b) g( e) |
 %% 7-9	
 	d8. a16 fs'4.^\dim e8 | d4 r d8. e16 | fs4. d8^cresc fs g |
 %% 10-12
-	a2 fs8. g16 | a4. gs8^\< a b\! | c2.^\f |  
+	a2 fs8. g16 | a4. gs8^\< a b\! | c2.^\f |
 %% 13-15
-	b2^\mf \times 2/3 {\stemUp a8( b a)} \stemBoth | g2 d4 | 
+	b2^\mf \tuplet 3/2 {\stemUp a8( b a)} \stemNeutral | g2 d4 |
 		d(^\< e8 fs) g( a)\!
 %% 16-18
 	b2 r4 | e,^\mf b'4. a8 | d,2 g4 |
@@ -62,9 +50,9 @@ melody = \notes\relative c' {
 	a2 g4 | fs b4.^\dim a8 | g2 \bar "|."
 }
 
-textA = \lyrics {  
-	When the swal -- lows home -- ward fly, __ 
-	When the ro -- _ -- ses scat -- ter'd lie,
+textA = \lyricmode {
+	When the swal -- lows home -- ward fly, __
+	When the ro -- _ ses scat -- ter'd lie,
 	When from neith -- er hill nor dale,
 	Chants the silv' -- ry night -- in -- gale,
 	In these words my bleed -- ing heart,
@@ -74,7 +62,7 @@ textA = \lyrics {
 	Can __ I, ah! can I e'er know re -- pose.
 }	
 
-textB = \lyrics { 
+textB = \lyricmode {
 	When the white swan south -- ward roves,
 	To seek at noon the or -- ange groves,
 	When the red tints of the west,
@@ -86,20 +74,20 @@ textB = \lyrics {
 	Can __ I, ah! can I e'er know re -- pose.
 }
 
-textC = \lyrics { 
+textC = \lyricmode {
 	My poor heart, why do you cry,
- 	Once al -- so you in peace will lie!
+	Once al -- so you in peace will lie!
 	All things on this earth must die;
- 	Will then we meet, you and I?
- 	My heart asks with bod -- ing pain
- 	Will faith join us once a -- gain?
+	Will then we meet, you and I?
+	My heart asks with bod -- ing pain
+	Will faith join us once a -- gain?
   	My heart asks with bod -- ing pain
- 	Will faith __ _ join us once a __ -- _ gain?
+	Will faith __ _ join us once a -- _ gain?
 	Af -- ter to -- day's bit -- ter part -- ing pain.
 }
 
 
-dynamics = \notes { s4
+dynamics =  { s4
 	s4.\mf s8\< s8.\!\> s16\! | s2.*3 |
 %% meas. 5
 	s4^\cresc s2 | s2. | s4 s4^\dim s4 | s2.| s4 s4_\cresc s4 |
@@ -112,7 +100,7 @@ dynamics = \notes { s4
 	
 }
 
-upper = \notes\relative c' {
+upper = \relative c' {
 	\key g\major \time 3/4
 	\partial 4 b8. c16
 %% 1-3
@@ -121,14 +109,14 @@ upper = \notes\relative c' {
 %% 4-6
 	b4 r b8 ds | e4.( e8 fs8. b,16) | g'2 g16( b g e) |
 %% 7-9	
-	\slurUp d8.( a16 fs'4. e8) | \slurBoth d4 r d8.( e16) |
+	\slurUp d8.( a16 fs'4. e8) | \slurNeutral d4 r d8.( e16) |
 		<fs d>4.( d8[ fs g)] |
 %% 10-12
-	<a d,>2 fs8. g16 | <a fs>4.( gs8 a b) | <c fs, d>2. | 
+	<a d,>2 fs8. g16 | <a fs>4.( gs8 a b) | <c fs, d>2. |
 		
 %% 13-15
-	<b g d>2 \times 2/3 {<a c,>8 <b d,> <a c,>} |<g b,>2 <d b>4 | 
-		<<{d4( e8 fs g a)}\\{c,2 s4}>> | 
+	<b g d>2 \tuplet 3/2 {<a c,>8 <b d,> <a c,>} |<g b,>2 <d b>4 |
+		<<{d4( e8 fs g a)}\\{c,2 s4}>> |
 %% 16-18
 	<d g b>2 r4 | <<{e4( b'4. a8)}\\{c,2.}>> | d2( g4) |
 %% 19-21
@@ -139,17 +127,17 @@ upper = \notes\relative c' {
 	
 }
 	
-lower = \notes\relative c {
+lower = \relative c {
 	\key g\major \time 3/4
 	r4
 %% 1-3
-	g8( d' g d g d) | g,( d' g d g d) | d,( d' g d fs d) | 
+	g8( d' g d g d) | g,( d' g d g d) | d,( d' g d fs d) |
 %% 4-6
 	g,( d' g d g <a fs>) | <g e>( b, <g' e> b, <a' ds,> b,) |
-		e,( e' <g b> e <g b> e) 
+		e,( e' <g b> e <g b> e)
 %% 7-9
-	a,( d <fs a> d) <cs' g>([ a,)] | 
-		d, <d' fs a> <d fs a> <d fs a> <d fs a> <d fs a> | 
+	a,( d <fs a> d) <cs' g>([ a,)] |
+		d, <d' fs a> <d fs a> <d fs a> <d fs a> <d fs a> |
 		<d fs a> <d fs a> <d fs a> <d fs a> d e |
 %% 10-12
 	fs <d fs a> <d fs a> <d fs a> <d fs a> <d fs a> |
@@ -170,66 +158,37 @@ lower = \notes\relative c {
 
 \score {
   <<
-      \context Voice = mel {
-	  \autoBeamOff
-	  \melody
-      }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "1." \textA }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "2." \textB }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "3." \textC }		
-					
-      \context PianoStaff <<
-	  \context Staff = upper \upper
-	  \context Dynamics = dynamics \dynamics
-	  \context Staff = lower <<
-	      \clef bass
-	      \lower
-	  >>
-%	  \context Dynamics=pedal \pedal
-     >>
-     
-  >>
-	\paper {
-    \context {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \alias Voice % So that \cresc works, for example.
-      \consists "Output_property_engraver"
-      
-      minimumVerticalExtent = #'(-1 . 1)
-      pedalSustainStrings = #'("Ped." "*Ped." "*")
-      pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-      
-      \consists "Piano_pedal_engraver"
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      \override TextScript #'font-size = #2
-      \override TextScript #'font-shape = #'italic
-      \override DynamicText #'extra-offset = #'(0 . 2.5)
-      \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consistsend "Axis_group_engraver"
+    \new Voice = "mel" {
+      \autoBeamOff
+      \melody
     }
+    \lyricsto mel  \new Lyrics  { \set stanza = "1." \textA }
+    \lyricsto mel  \new Lyrics  { \set stanza = "2." \textB }
+    \lyricsto mel  \new Lyrics  { \set stanza = "3." \textC }
+
+    \new PianoStaff <<
+      \new Staff = "upper" \upper
+      \new Dynamics = "dynamics" \dynamics
+      \new Staff = "lower" <<
+        \clef bass
+        \lower
+      >>
+%      \new Dynamics = "pedal" \pedal
+     >>
+  >>
+  \layout {
     \context {
-      \PianoStaffContext
-      \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
+      \Lyrics
+      % Some space before, between and after the lyrics
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.minimum-distance = #6
+      \override VerticalAxisGroup.nonstaff-nonstaff-spacing.minimum-distance = #3
+      \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.minimum-distance = #6
     }
   }
+
   \midi {
     \context {
-      \type "Performer_group_performer"
-      \name Dynamics
-      \consists "Piano_pedal_performer"
-      \consists "Span_dynamic_performer"
-      \consists "Dynamic_performer"
-    }
-    \context {
-      \PianoStaffContext
+      \PianoStaff
       \accepts Dynamics
     }
   }
