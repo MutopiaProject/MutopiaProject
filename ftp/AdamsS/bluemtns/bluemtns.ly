@@ -1,11 +1,6 @@
-\paper{ papersize = "letter" 
-	linewidth = 165 \mm
-	indent = 8 \mm
-%	interscoreline = 4.0 \mm
-}
+\version "2.18.0"
 
 \include "english.ly"
-\version "2.1.30"
 #(set-global-staff-size 16)
 
 \header {
@@ -18,71 +13,63 @@
   instrument = "Voice and Piano"
   opus = ""
   source = ""
-  copyright = "Public Domain"
+  license = "Public Domain"
   enteredby = "Stan Sanderson"
   mutopiacomposer = "AdamsS"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "3/25/2004"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/03/25-440"
 }
 
-
-
-hpuI = \once \override Staff.Hairpin #'extra-offset = #'(0 . +1)
-hpuII = \once \override Staff.Hairpin #'extra-offset = #'(0 . +2)
-hpdI = \once \override Staff.Hairpin #'extra-offset = #'(0 . -1)
-hpdII = \once \override Staff.Hairpin #'extra-offset = #'(0 . -2)
-hpdIIa = \once \override Staff.Hairpin #'extra-offset = #'(0 . -2.5)
 cresc = \markup { \italic "cresc." }
 dim = \markup { \italic "dim." }
-  
-melody = \notes\relative c' {
+
+melody = \relative c' {
 	\key d\major \time 3/4
 	
 %% 1-3
-	r2.^\markup {\bold \large "Waltz tempo"} | r4 fs g | a2 a4 | 
+	r2.^\markup {\bold \large "Waltz tempo"} | r4 fs g | a2 a4 |
 %% 4-6
-	b2 d4  |a2. | fs4 d e | 
+	b2 d4  |a2. | fs4 d e |
 %% 7-9	
-	fs2 fs4 | fs( e) d | a'2. ~ | 
+	fs2 fs4 | fs( e) d | a'2. ~ |
 %% 10-12
-	a4 fs g | a2 a4 | b2 d4 |   
+	a4 fs g | a2 a4 | b2 d4 |
 %% 13-15
-	a2. | fs4 fs4. gs8 | a4( gs) fs | 
+	a2. | fs4 fs4. gs8 | a4( gs) fs |
 %% 16-18
-	cs'2 cs4 | cs2. ~ | cs4 cs cs | 
+	cs'2 cs4 | cs2. ~ | cs4 cs cs |
 %% 19-21
-	e( cs) a | b2 cs4 | a2 r4 | 
+	e( cs) a | b2 cs4 | a2 r4 |
 %% 22-24
-	r a gs | g2^\< a4 | cs2 b4\! | 
+	r a gs | g2^\< a4 | cs2 b4\! |
 %% 25-27
-	a2.^\> | fs4 a gs\! | g2 a4 | 
+	a2.^\> | fs4 a gs\! | g2 a4 |
 %% 28-30
-	cs2 b4 | a2. | r4 fs4.^\f gs8 | 
+	cs2 b4 | a2. | r4 fs4.^\f gs8 |
 %% 31-33
-	a4( gs) fs^\cresc | cs'2 cs4 | a2.^\dim | 
+	a4( gs) fs^\cresc | cs'2 cs4 | a2.^\dim |
 %% 34-36
-	fs4 fs4.^\f gs8 | a4( gs) fs | cs'2 cs4 | 
+	fs4 fs4.^\f gs8 | a4( gs) fs | cs'2 cs4 |
 %% 37-39
-	cs2. ~ | cs2\fermata d4^\f | d2 d4 | 
+	cs2. ~ | cs2\fermata d4^\f | d2 d4 |
 %% 40-42
-	cs2 b4 | cs2. ~ | cs2 cs4 | 
+	cs2 b4 | cs2. ~ | cs2 cs4 |
 %% 43-45
-	cs2 cs4 | b2 a4 | b2. ~ | 
+	cs2 cs4 | b2 a4 | b2. ~ |
 %% 46-48
-	b4 fs^\cresc g | a2 b4 | cs2 d4 | 
+	b4 fs^\cresc g | a2 b4 | cs2 d4 |
 %% 49-51
-	fs2.^\ff | d4 fs, g | a( gs) a^> | 
+	fs2.^\ff | d4 fs, g | a( gs) a^> |
 %% 52-54
 	b^> cs2^>\fermata | d2. ~ | d4 r r  \bar "|."
 }
 
-textA = \lyrics { 
+textA = \lyricmode {
 	By the blue Al -- sa -- tian moun -- tains,
-	Dwelt a maid -- en young __ and fair, __ 
+	Dwelt a maid -- en young __ and fair, __
 	like the care -- less flow -- ing foun -- tains,
 	Were the rip -- ples of her hair, __
 	Were the rip -- ples of her hair;
@@ -90,50 +77,49 @@ textA = \lyrics {
 	An -- gel bright her hap -- py smile,
 	When be -- neath the foun -- tains spin -- ning,
 	You could hear her song the while __
-	A -- d\'e, A -- d\'e, A -- d\'e, __
+	A -- dé, A -- dé, A -- dé, __
 	Such songs will pass a -- way __
 	Tho' the blue Al -- sa -- tian moun -- tains
-	seem to watch and wait al -- way. __ 
+	seem to watch and wait al -- way. __
 	
 }	
 
-textB = \lyrics { 
+textB = \lyricmode {
 	By the blue Al -- sa -- tian moun -- tains,
 	Dwelt a stran -- ger in __ the spring, __
-	And he lin -- ger'd by the foun -- tains, 
+	And he lin -- ger'd by the foun -- tains,
 	Just to hear __ the maid -- en sing, __
 	Just to hear __ the maid -- en sing;
-	Just to whis -- per in the moon -- light, 
+	Just to whis -- per in the moon -- light,
 	Words the sweet -- est she had known,
 	Just to charm a -- way the hours __ _
 	Till her heart was all his own __
-	A -- d\'e, A -- d\'e, A -- d\'e, __
+	A -- dé, A -- dé, A -- dé, __
 	Such dreams may pass a -- way __
 	But the blue Al -- sa -- tian moun -- tains
-	seem to watch and wait al -- way. __ 
-	
-	
+	seem to watch and wait al -- way. __
+
 }
 
-textC = \lyrics { 
+textC = \lyricmode {
 	By the blue Al -- sa -- tian moun -- tains,
 	Ma -- ny spring -- times bloom'd and pass'd, __
-	And the maid -- en in the foun -- tains, 
+	And the maid -- en in the foun -- tains,
 	Saw she lost __ her hopes at last, __
 	_ She lost __ her hopes at last;
 	And she with -- ered like the flow -- er
 	That is wait -- ing for the rain,
 	She will nev -- er see the stran -- ger,
 	Where the foun -- tains fall a -- gain __
-	A -- d\'e, A -- d\'e, A -- d\'e, __
+	A -- dé, A -- dé, A -- dé, __
 	The years have passed a -- way __
 	But the blue Al -- sa -- tian moun -- tains
 	seem to watch and wait al -- way. __
-	
+
 }
 
 
-dynamics = \notes { 
+dynamics =  {
 %% meas. 1-5
 	s4\mf s2 | s2.*4
 %% meas 6-10
@@ -159,7 +145,7 @@ dynamics = \notes {
 	
 }
 
-upper = \notes\relative c' {
+upper = \relative c' {
 	\key d\major \time 3/4
 	
 %% 1-4
@@ -187,7 +173,7 @@ upper = \notes\relative c' {
 %% 34-36
 	fs4) fs4.( gs8) | a4( gs) fs | <es gs cs>2 <es gs cs>4 |
 %% 37-38
-	<fs a cs>2.( | <e g cs>2)\fermata d'4 | 
+	<fs a cs>2.( | <e g cs>2)\fermata d'4 |
 %% 39-42
 	<<{d2( d4 cs2 b4)}\\{fs2. fs}>> | <g cs>2. ~ <g cs>2 <<{cs4(
 %% 43-45
@@ -200,7 +186,7 @@ upper = \notes\relative c' {
 	<b g d>^> <cs g e>2^>\fermata | <d a fs>2. ~ | <d a fs>4 r r |
 }
 	
-lower = \notes\relative c {
+lower = \relative c {
 	\key d\major \time 3/4
 	
 %% 1-3
@@ -210,7 +196,7 @@ lower = \notes\relative c {
 %% 7-9
 	d <fs a d> <fs a d> | a, <fs' a> <fs a> | a, <e' g a> <e g a> |
 %% 10-12
-	a, <e' g a> <e g a> | d <fs a d> <fs a d> | g, <g' b d> <g b d> | 
+	a, <e' g a> <e g a> | d <fs a d> <fs a d> | g, <g' b d> <g b d> |
 %% 13-15
 	d <fs a d> <fs a d> | a, fs'4. gs8 | a4 gs fs |
 %% 16-18
@@ -221,7 +207,7 @@ lower = \notes\relative c {
 	a a a | a, a' a | a a a |
 %% 25-27
 	a, a' a | a a a | a, a' a |
-%% 28-30 
+%% 28-30
 	a a a | d a fs | d fs4.( gs8) |
 %% 31-33
 	a4( gs) fs | cs2 cs4 | <fs fs,>2. ~ |
@@ -243,67 +229,38 @@ lower = \notes\relative c {
 
 \score {
   <<
-      \context Voice = mel {
-	  \autoBeamOff
-	  \melody
-      }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "1." \textA }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "2." \textB }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "3." \textC }		
-					
-      \context PianoStaff <<
-	  \context Staff = upper \upper
-	  \context Dynamics = dynamics \dynamics
-	  \context Staff = lower <<
-	      \clef bass
-	      \lower
-	  >>
-%	  \context Dynamics=pedal \pedal
-     >>
-     
-  >>
-	\paper {
-    \context {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \alias Voice % So that \cresc works, for example.
-      \consists "Output_property_engraver"
-      
-      minimumVerticalExtent = #'(-1 . 1)
-      pedalSustainStrings = #'("Ped." "*Ped." "*")
-      pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-      
-      \consists "Piano_pedal_engraver"
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      \override TextScript #'font-size = #2
-      \override TextScript #'font-shape = #'italic
-      \override DynamicText #'extra-offset = #'(0 . 2.5)
-      \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consistsend "Axis_group_engraver"
+    \new Voice = "mel" {
+      \autoBeamOff
+      \melody
     }
+    \lyricsto mel  \new Lyrics  { \set stanza = "1." \textA }
+    \lyricsto mel  \new Lyrics  { \set stanza = "2." \textB }
+    \lyricsto mel  \new Lyrics  { \set stanza = "3." \textC }
+
+    \new PianoStaff <<
+      \new Staff = "upper" \upper
+      \new Dynamics = "dynamics" \dynamics
+      \new Staff = "lower" <<
+        \clef bass
+        \lower
+      >>
+%      \new Dynamics = "pedal" \pedal
+    >>
+  >>
+
+  \layout {
     \context {
-      \PianoStaffContext
-      \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
+      \Lyrics
+      % Some space before, between and after the lyrics
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing.minimum-distance = #6
+      \override VerticalAxisGroup.nonstaff-nonstaff-spacing.minimum-distance = #4
+      \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.minimum-distance = #6
     }
   }
   \midi {
-  	\tempo 4=120
+    \tempo 4=120
     \context {
-      \type "Performer_group_performer"
-      \name Dynamics
-      \consists "Piano_pedal_performer"
-      \consists "Span_dynamic_performer"
-      \consists "Dynamic_performer"
-    }
-    \context {
-      \PianoStaffContext
+      \PianoStaff
       \accepts Dynamics
     }
   }
