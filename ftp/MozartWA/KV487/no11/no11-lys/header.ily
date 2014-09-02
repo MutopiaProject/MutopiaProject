@@ -9,7 +9,7 @@
     mutopiainstrument = "Horn"
     source = "see README"
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Han-Wen Nienhuys"
     maintainerEmail = "hanwen@xs4all.nl"
     lastupdated = "2004/Jan/12"
