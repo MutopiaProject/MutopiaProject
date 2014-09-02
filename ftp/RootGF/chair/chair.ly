@@ -1,32 +1,33 @@
-\paper{ papersize = "letter" 
-	linewidth = 165 \mm
-	indent = 8 \mm
-%	interscoreline = 4.0 \mm
-}
-
-
 \include "english.ly"
-\version "2.1.31"
-#(set-global-staff-size 17)
+\version "2.18.2"
+%#(set-global-staff-size 17)
 
 \header {
   title = "The Vacant Chair"
   composer = "Geo. F. Root (1820-1895)"
   mutopiacomposer = "RootGF"
   instrument = "Voice and Piano"
-  copyright = "Public Domain"
+  license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "2/25/2004"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2004/02/25-426"
+ footer = "Mutopia-2014/09/01-426"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
-  
 
+\paper {
+  % add space between composer/opus markup and first staff
+  markup-system-spacing #'padding = #4
+  % add a little space between composer and opus
+  markup-markup-spacing #'padding = #1.2
+  top-margin = 8\mm
+  bottom-margin = 8\mm
+}
 
-melody = \notes \relative c'' {
+melody =  \relative c'' {
 	\key a\major \time 3/4 \partial 1
   e,8.\p^\markup { \italic "With feeling" } e16 e4. e8 fs e  e a4. e8. e16 |
   e4.^\< e8 fs e\! | b'2 e,8.^\markup { \italic cresc } e16 | cs'4.^\f b8 a gs |
@@ -39,14 +40,14 @@ melody = \notes \relative c'' {
   gs fs4. cs'8.^\markup { \italic dim. } b16 | a4. gs8 fs gs | a2 r4 |
 }
 
-textA = \lyrics {
+textA = \lyricmode {
   We shall meet, but we shall miss him, There will be one va -- cant chair;
   We shall lin -- ger to ca -- ress him, While we breathe our eve -- ning pray'r.
   When a year a -- go we gath -- ered, Joy was in his mild blue eyes, But a gold -- en
   chord is sev -- ered, And our hopes in ru -- in lie.
 }
 
-textB = \lyrics {
+textB = \lyricmode {
 	At our fire -- side, sad and lone -- ly, Oft -- en will the bo -- som
 	swell At re -- mem -- brance of the sto -- ry How our no -- ble Wil -- lie
 	fell, How he strove to bear our ban -- ner Thro' the thick -- est of the
@@ -56,17 +57,17 @@ textB = \lyrics {
 	While we breathe our eve -- ning pray'r.
 }
 
-textC = \lyrics {
+textC = \lyricmode {
 	True, they tell us wreaths of glo -- ry, Ev -- er more will deck his brow,
-	But this soothes the an -- guish on -- ly, Sweep -- ing o'er our heart- 
+	But this soothes the an -- guish on -- ly, Sweep -- ing o'er our heart-
 	strings now. Sleep to -- day, oh, ear -- ly fal -- len, In thy green and
 	nar -- row bed, Dir -- ges from the pine and cy -- pryess, Min -- gle with
 	the tears we shed.
 }
 
-upper = \notes\relative c'' {
+upper = \relative c'' {
 	\key a\major \time 3/4 \partial 1
-  e,8.\p^\markup { \italic "With feeling" } e16  <e cs>4. \slurUp <e cs>8[( <fs d> <e cs>]) 
+  e,8.\p^\markup { \italic "With feeling" } e16  <e cs>4. \slurUp <e cs>8[( <fs d> <e cs>])
    <e cs>8( <a e cs>4.) <e cs>8. e16 |
 	<e d>4.^\< <e d>8[( <fs d> <e d>])\! <d e b'>2 <d e>8.^\markup { \italic cresc } e16
 	<e a cs>4.^\f <e b'>8[( <e a> <e gs>]) | <d gs>( <d fs>4.) <d fs cs'>8.( b'16) |
@@ -82,7 +83,7 @@ upper = \notes\relative c'' {
 
 }
 
-lower = \notes\relative c {
+lower = \relative c {
 	\key a\major \time 3/4 \partial 1
   r4  <a e'>2 <a e'>4 | <a e'>2 <a a'>4 | <e' gs>2 <e gs>4
   <e gs>2 <e gs>4 | <a, a'>4. <cs a'>8 <cs a'> <cs a'> | <d a'>2 d4 |
@@ -96,25 +97,25 @@ lower = \notes\relative c {
 
 \score {
   <<
-      \context Voice = mel {
+      \context Voice = "mel" {
 	  \autoBeamOff
 	  \melody
       }
 
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "1." \textA }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "2." \textB }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "3." \textC }
+		\lyricsto mel  \new Lyrics  { \set stanza = "1." \textA }
+		\lyricsto mel  \new Lyrics  { \set stanza = "2." \textB }
+		\lyricsto mel  \new Lyrics  { \set stanza = "3." \textC }
 
       \context PianoStaff <<
-	  \context Staff = upper \upper
-	  \context Staff = lower <<
+	  \context Staff = "upper" \upper
+	  \context Staff = "lower" <<
 	      \clef bass
 	      \lower
 	  >>
       >>
   >>
-  \paper {
-      \context { \RemoveEmptyStaffContext }
-  }  
-  \midi { }  
+  \layout {
+      \context { \Staff \RemoveEmptyStaves }
+  }
+  \midi { }
 }
