@@ -18,6 +18,15 @@
   tagline = ##f
 }
 
+\paper {
+  top-margin = 8\mm
+  top-markup-spacing.basic-distance = #6
+  markup-system-spacing #'padding = #5
+  markup-markup-spacing #'padding = #1.2
+  last-bottom-spacing.basic-distance = #12
+  top-system-spacing.basic-distance = #12
+  bottom-margin = 10\mm
+}
 
 global =  {
   \time 2/2
