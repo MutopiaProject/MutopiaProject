@@ -1,24 +1,21 @@
-
-
-\version "1.9.8"
+\version "2.18.2"
 \include "header.ly"
 
-global = \notes {
+global =  {
     \time 2/2
     \key c \major
-    
     }
 
-hornI = \notes \relative c'' {
+hornI =  \relative c'' {
     \repeat volta 2 {
-    e4 r e8( d) d( c ) |
+    e4-\omit\p r e8( d) d( c ) |
     c4 r8 g-.\< c-. d-. e-. f-. |
     g(\mf e) a( g) g(f) f( e) |
     e2( d4) r
     e4\p r8 e8 e(d) d(c) |
     c4 r8 g-.\< c-. d-. e-. f-. |
     g(\f c) e,( g) g( f e d )
-    d2 \octave c'' c4 r4
+    d2 \octaveCheck c'' c4 r4
     }
     \repeat volta 2 {
 	d2-\f e g8( fis f e) d4 r8 d |
@@ -28,11 +25,11 @@ hornI = \notes \relative c'' {
 	c4 r8 g c16\<[ d e f]  g[ a b c] |
 	g4\!_\markup { \dynamic p -- \dynamic f } e8( g) g( f e d) |
 	d2(
-	\octave c''
+	\octaveCheck c''
 	c4) r4
     }
 }
-hornII = \notes \relative c'' {
+hornII =  \relative c'' {
         \repeat volta 2 {
 	    c4\p r4 c8(g) g(e) |
 	    e4 r r8 g-.\< c-. d-. |
@@ -41,7 +38,7 @@ hornII = \notes \relative c'' {
 	    c'\p r8 c c( g) g( e) |
 	    e4 r r8 g-.\< c-. d-. |
 	    e4\f c8( e) e( d c g) |
-	    g2( \octave e' e4) r 
+	    g2( \octaveCheck e' e4) r 
 	}
         \repeat volta 2 {
 	    b'4\f g c g d' g, b g |
@@ -55,17 +52,16 @@ hornII = \notes \relative c'' {
     }
 
 
-
 \score {
   \new StaffGroup   <<
     \new Staff << \global \hornI >>
-    \new Staff <<\global \hornII >>
+    \new Staff << \global \hornII >>
     >>
-  \midi { \tempo 4 = 60 }
-  \paper { }
   
-\header {
-    piece = "No. 5. Larghetto"
-    footer = "Mutopia-2004/01/12-394"
-}
+  \midi {
+    \tempo 4 = 60
+    }
+
+  \layout { }
+  
 }

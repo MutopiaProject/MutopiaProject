@@ -1,7 +1,9 @@
-
+\version "2.18.2"
 \header {
     title = "12 duets"
+    piece = "             No. 5. Larghetto"
     composer = "W. A. Mozart (1756-1791)"
+    opus = "K.V. 487"
         
     mutopiatitle = "12 duets"
     mutopiacomposer = "MozartWA"
@@ -9,13 +11,24 @@
     mutopiainstrument = "Horn"
     source = "see README"
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Han-Wen Nienhuys"
-    maintainerEmail = "hanwen@xs4all.nl"
+    maintainerEmail = "hanwen (at) xs4all.nl"
     lastupdated = "2004/Jan/12"
-
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-    opus = "K.V. 487"
+    
+   
+ footer = "Mutopia-2014/09/03-394"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-\paper { linewidth = 18.0\cm }
+\paper {
+  top-margin = 8\mm
+  top-markup-spacing.basic-distance = #6
+  markup-markup-spacing #'padding = #1.2
+  system-system-spacing  #'padding = #5
+  last-bottom-spacing.basic-distance = #12
+  top-system-spacing.basic-distance = #12
+  bottom-margin = 10\mm
+  line-width = 17.0\cm
+}
