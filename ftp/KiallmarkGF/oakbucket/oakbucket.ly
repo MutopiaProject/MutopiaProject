@@ -1,36 +1,37 @@
-\paper{
-  papersize = "letter"
-  linewidth = 165 \mm
-  indent = 8 \mm
-  %	interscoreline = 4.0 \mm
-}
-
+\version "2.18.0"
 \include "english.ly"
-\version "2.1.30"
-#(set-global-staff-size 16)
 
 \header {
   title = "The Old Oaken Bucket"
-  subsubtitle =""
   composer = "George F. Kiallmark (1804-1887)"
   mutopiacomposer = "KiallmarkGF"
   poet = "Samuel Woodworth (1818)"
   instrument = "Voice and Piano"
   opus = "1826"
   source = ""
-  copyright = "Public Domain"
+  license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "3/18/2004"
-
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/03/18-436"
+  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/publicdomain/" "Creative Commons Public Domain " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+  tagline = ##f
 }
 
-melody = \notes\relative c'' {
+\paper {
+  top-margin = 8\mm
+  top-markup-spacing.basic-distance = #6
+  markup-system-spacing #'padding = #5
+  markup-markup-spacing #'padding = #1
+  last-bottom-spacing.basic-distance = #12
+  top-system-spacing.basic-distance = #12
+  bottom-margin = 10\mm
+}
+
+melody = \relative c'' {
   \key bf\major \time 6/8
-  \partial 8 bf8^\markup {\column <\bold \large "Moderato" \dynamic mp >}
+  \partial 8 bf8^\markup {\column {\bold \large "Moderato" \dynamic mp }}
   %% 1-3
   d8. c16 bf8 d c bf | c8.^\< bf16 c8\! d^\> bf r16 bf16\! |
   bf8. a16 g8 f^\< bf d\! |
@@ -53,7 +54,7 @@ melody = \notes\relative c'' {
   bf8. a16 g8 f bf d | c8.^\markup {\italic "ret."} bf16 c8 bf4 \bar "|."
 }
 
-textA = \lyrics {
+textA = \lyricmode {
   How dear to this heart are the scenes of my child -- hood,
   When fond rec -- ol -- lec -- tion pre -- sents them to view,
   The or -- chard, the mead -- ow, the deep tan -- gled wild -- wood,
@@ -64,7 +65,7 @@ textA = \lyrics {
   And e'en the rude buck -- et that hung in the well.
 }
 
-textB = \lyrics {
+textB = \lyricmode {
   The moss cov -- er'd buck -- et I hail as a treas -- ure,
   For of -- ten at noon when re -- turn'd from the field,
   I __ found it the source of an ex -- qui -- site pleas -- ure,
@@ -79,7 +80,7 @@ textB = \lyrics {
 
 }
 
-textC = \lyrics {
+textC = \lyricmode {
   How soon from the green mos -- sy rim to re -- ceive it,
   As pois'd on the curb it re -- clin'd to my lips,
   Not_a full flow -- ing gob -- let could tempt me to leave it,
@@ -90,9 +91,9 @@ textC = \lyrics {
   And sighs for the buck -- et that hung in the well.
 }
 
-upper = \notes\relative c'' {
+upper = \relative c'' {
   \key bf\major \time 6/8
-  \partial 8 bf8_\markup {\column <\bold \large "Moderato" \dynamic mp >}
+  \partial 8 bf8_\markup {\column {\bold \large "Moderato" \dynamic mp }}
   %% 1-3
   <d f,>8.( <c ef,>16 <bf d,>8) <d f,>( <c ef,> <bf d,>) |
   <c ef,>8.^\<( <bf d,>16 <c ef,>8\!) <d f,>^\>( <bf d,>) r16 bf16\! |
@@ -122,7 +123,7 @@ upper = \notes\relative c'' {
   <c ef,>8.^\markup {\italic "rit."}( bf16 <c ef,>8) <bf f d>4
 }
 
-lower = \notes\relative c {
+lower = \relative c {
   \key bf\major \time 6/8
   r8
   %% 1-3
@@ -146,24 +147,30 @@ lower = \notes\relative c {
 
 \score {
   <<
-    \context Voice = mel {
+    \context Voice = "mel" {
       \autoBeamOff
       \melody
     }
-    \lyricsto mel \new Lyrics \lyrics { \set stanza = "1." \textA }
-    \lyricsto mel \new Lyrics \lyrics { \set stanza = "2." \textB }
-    \lyricsto mel \new Lyrics \lyrics { \set stanza = "3." \textC }
+    \lyricsto mel  \new Lyrics  { \set stanza = "1." \textA }
+    \lyricsto mel  \new Lyrics  { \set stanza = "2." \textB }
+    \lyricsto mel  \new Lyrics  { \set stanza = "3." \textC }
 
     \context PianoStaff <<
-      \context Staff = upper \upper
-      \context Staff = lower <<
+      \context Staff = "upper" \upper
+      \context Staff = "lower" <<
         \clef bass
         \lower
       >>
     >>
 
   >>
-  \paper {
+  \layout {
+    line-width = 165\mm
+    indent = 8\mm
+    #(layout-set-staff-size 16)
   }
-  \midi { \tempo 4=90 }
+
+  \midi {
+    \tempo 4 = 90
+  }
 }
