@@ -1,11 +1,11 @@
-\paper{ papersize = "letter" 
-	linewidth = 165 \mm
+\layout{ papersize = "letter" 
+	line-width = 165 \mm
 	indent = 8 \mm
 %	interscoreline = 4.0 \mm
 }
 
 \include "english.ly"
-\version "2.1.31"
+\version "2.18.0"
 #(set-global-staff-size 16.5)
 
 \header {
@@ -21,14 +21,14 @@
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "3/2/2004"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
+  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/03/02-429"
 }
 
   
 %% Spelling curiosities not corrected!
 
-melody = \notes \relative c'' {
+melody =  \relative c'' {
 	\key c\major \time 6/8
 	s4.*2*4 \break s4.*2*4 \break
 	r4. r4 c8 | c e, a g c, f | e e d c4 c8 | d^\< e f g a b\! |
@@ -55,7 +55,7 @@ melody = \notes \relative c'' {
 	
 }
 
-textA = \lyrics { 
+textA = \lyricmode { 
 	Three fish -- ers went sail -- ing out in -- to the west, Out in -- to the west
 	as the sun went down; Each thought on the wo -- man who lov'd him the best,
 	And the child -- ren stood watch -- ing them out of the town
@@ -75,7 +75,7 @@ textA = \lyrics {
 
 %%%% page no.s refer to original edition
 
-upper = \notes\relative c' {   
+upper = \relative c' {   
 	\key c\major \time 6/8 
 	<g c e>8^\markup {\bold "Andantino."} r <g c e> <a c e> r <a c e> |
 	<a d f>8 <a c e> <a d f> <g b d>4 r8 | <g c e> r <g c e> <a c e> r <a c e> |
@@ -123,7 +123,7 @@ upper = \notes\relative c' {
 
 }
 
-lower = \notes\relative c {
+lower = \relative c {
 	\key c\major \time 6/8 
 	c8^\p r c a r a | d a d g,4 r8 | c^\pp r c a r a | f c' f, g^\f r r |
 	<c' e>4 <c e>8 <b c e>4 <b c e>8 | <a c>4.^\f <a c> | <g d'>^\f <<{ d'8 e f }\\{ g,4.}>> |
@@ -163,22 +163,27 @@ lower = \notes\relative c {
 
 \score {
   <<
-      \context Voice = mel {
+      \context Voice = "mel" {
 	  \autoBeamOff
 	  \melody
       }
       \lyricsto mel \new Lyrics \textA
 					
       \context PianoStaff <<
-	  \context Staff = upper \upper
-	  \context Staff = lower <<
+	  \context Staff = "upper" \upper
+	  \context Staff = "lower" <<
 	      \clef bass
 	      \lower
 	  >>
       >>
   >>
-  \paper {
-      \context { \RemoveEmptyStaffContext }
+  \layout {
+      \context { \Staff \RemoveEmptyStaves }
   }  
-  \midi { \tempo 8=120 }  
+  
+  \midi {
+    \tempo 4. = 40
+    }
+
+  
 }
