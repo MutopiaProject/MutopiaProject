@@ -200,15 +200,19 @@ lower = \relative c {
 
 \score {
   <<
-    \context Voice = "mel" {
-      \autoBeamOff
-      \melody
-    }
-    \lyricsto mel \new Lyrics \textA
+    \new Staff = "melodystaff" \with {
+      midiInstrument = #"choir aahs"
+    } <<
+      \new Voice = "mel" {
+        \autoBeamOff
+        \melody
+      }
+      \lyricsto mel \new Lyrics \textA
+    >>
 
-    \context PianoStaff <<
-      \context Staff = "upper" \upper
-      \context Staff = "lower" <<
+    \new PianoStaff <<
+      \new Staff = "upper" \upper
+      \new Staff = "lower" <<
         \clef bass
         \lower
       >>
