@@ -1,28 +1,69 @@
-\layout{ papersize = "letter" 
-	line-width = 165 \mm
-	indent = 8 \mm
-%	interscoreline = 4.0 \mm
-}
-
+\version "2.18.2"
 \include "english.ly"
-\version "2.18.0"
-#(set-global-staff-size 16.5)
+
+#(set-global-staff-size 18)
 
 \header {
   title = "The Three Fishers"
-  composer = "S. D. S. \& J. Hullah"
+  composer = "S. D. S. & J. Hullah"
   mutopiacomposer = "HullahJ"
   poet = "Rev. C. Kingsley"
   instrument = "Voice and Piano"
+  mutopiainstrument = "Voice, Piano"
   source = "New York: S. T. Gordon, 1856"
-  copyright = "Public Domain"
+  license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "3/2/2004"
 
-  tagline = "\\parbox{\\paper-width}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/03/02-429"
+  copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+  tagline = ##f
+}
+
+\paper {  
+  top-margin = 6 \mm
+  % default vertical spacing values have been multiplied by 1.5, except where noted with **
+  system-system-spacing = #'((basic-distance . 18) (minimum-distance . 12) (padding . 1.5))
+  % defaults are 12, 8, and 1
+  score-system-spacing = #'((basic-distance . 21) (minimum-distance . 12) (padding . 1.5))
+  % defaults are 14, 8, and 1
+  markup-system-spacing = #'((basic-distance . 7.5) (padding . 6))
+  % defaults are 5 and 0.5**
+  score-markup-spacing = #'((basic-distance . 18) (padding . 0.75))
+  % defaults are 12 and 0.5
+  markup-markup-spacing = #'((basic-distance . 1.5) (padding . 0.75))
+  % defaults are 1 and 0.5
+  top-system-spacing = #'((basic-distance . 1.5) (padding . 1.5))
+  % defaults are 1 and 1
+  top-markup-spacing = #'((basic-distance . 4) (padding 1.5)) 
+  % defaults are none** and 1
+  last-bottom-spacing = #'((basic-distance . 1.5) (padding . 5))
+  % defaults are 1 and 1**
+}
+
+\layout {
+  % #(set-paper-size = "letter")
+  indent = 8 \mm
+  % interscoreline = 4.0 \mm
+  % default vertical spacing values have been multiplied by 1.5, except where noted with **
+  \context {
+    \Staff
+    \override VerticalAxisGroup.default-staff-staff-spacing =
+    #'((basic-distance . 13.5) (minimum-distance . 12) (padding . 1.5))
+    % defaults are 9, 8, and 1
+    \RemoveEmptyStaves
+    \override VerticalAxisGroup.remove-first = ##t
+  }
+  \context {
+    \Lyrics
+    \override VerticalAxisGroup.nonstaff-relatedstaff-spacing =
+    #'((basic-distance . 7.5) (padding . 0.75))
+    % defaults are 5.5** and 0.5    
+    \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #1.5 
+    % default is 1
+  }
 }
 
   
@@ -45,14 +86,12 @@ melody =  \relative c'' {
 	f8 e f d4 d8^\markup { \italic cresc. } | e4 e8 e16 e8. e8 | f( e) f d g8. g16 |
 	g4^\markup { \italic cresc. } g8 g4 g8 | c4.^\f(\melisma c) | g4.^>( g^>)\melismaEnd |
 	
-	
 	e4 r8 r4 r8 |r4. r4 c'8 | c( e,) a g c, f | e4 d8 c4 c16 c | d8( e) f g a b |
 	c4 c8 b4 b16 b | d8^\markup {\italic "accel."} d d c c c | b b b f'4\fermata f,8 |
 	f8^\markup {\italic "rall."} e d e16 c8. a8 | b8. b16 b8 e4\fermata e8 |
 	e4^\markup {\italic "a tempo."} e8 e4 e8 | f e f d4 d16 d |
 	e16 e8. e8 e e e | f e f d g g | g8.^\markup {\italic "cresc."} g16 g8 g g g |
 	 c4.^\f(\melisma c) | g4.^>( g^>)\melismaEnd | e4 r8 r4 r8 |\break
-	
 }
 
 textA = \lyricmode { 
@@ -73,7 +112,7 @@ textA = \lyricmode {
 	And good bye to the bar and its moan __ ing.
 }
 
-%%%% page no.s refer to original edition
+%%%% page numbers refer to original edition
 
 upper = \relative c' {   
 	\key c\major \time 6/8 
@@ -119,8 +158,6 @@ upper = \relative c' {
 		<e c> r <e c> <e c> r <e c> |
 	<f c a> <e c g> <f c a> <e c g> r <e c g> | <f c a> <e c g> <f c a> <e c g> r <e c g> |
 		<e c g> r r <e c g> r r | <e c g>4. ~ <e c g>
-
-
 }
 
 lower = \relative c {
@@ -158,7 +195,6 @@ lower = \relative c {
 	<c f,>^\sf r <c f,> <d g,> r <d g,> | <d g,> r <d g,> <g g,> r <g g,> |
 	 	<g c,>^\p r <g c,> <g c,> r <g c,> |
 	 f c f c r^\pp c |f c f c r c | c r r c r r | c4.( c) | \bar "|."
- 
 }
 
 \score {
@@ -177,13 +213,8 @@ lower = \relative c {
 	  >>
       >>
   >>
-  \layout {
-      \context { \Staff \RemoveEmptyStaves }
-  }  
-  
+  \layout { }
   \midi {
     \tempo 4. = 40
-    }
-
-  
+  }
 }
