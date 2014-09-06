@@ -23,13 +23,13 @@
 }
 
 \paper {
-  top-margin = 6 \mm
+  top-margin = 7 \mm
   % default vertical spacing values have been multiplied by 1.5, except where noted with **
   system-system-spacing = #'((basic-distance . 18) (minimum-distance . 12) (padding . 1.5))
   % defaults are 12, 8, and 1
   score-system-spacing = #'((basic-distance . 21) (minimum-distance . 12) (padding . 1.5))
   % defaults are 14, 8, and 1
-  markup-system-spacing = #'((basic-distance . 7.5) (padding . 6))
+  markup-system-spacing = #'((basic-distance . 7.5) (padding . 13))
   % defaults are 5 and 0.5**
   score-markup-spacing = #'((basic-distance . 18) (padding . 0.75))
   % defaults are 12 and 0.5
@@ -39,7 +39,7 @@
   % defaults are 1 and 1
   top-markup-spacing = #'((basic-distance . 4) (padding 1.5))
   % defaults are none** and 1
-  last-bottom-spacing = #'((basic-distance . 1.5) (padding . 5))
+  last-bottom-spacing = #'((basic-distance . 1.5) (padding . 7))
   % defaults are 1 and 1**
 }
 
@@ -143,6 +143,7 @@ upper = \relative c' {
   <g' c,> r <g c,> <g c, b> r <g c, b> | <g c, a> r <g c, a> <f c a> r <f c a> |
   <d c g> r <d c g> <d b> <e c> <f d> |
   <e c> r <e c> <e c> r <e c> |
+  \break % fixes markup spacing issue in next measure
   <e c> r <e c> <e c> r <e c>^\markup {\italic "un poco meno mosso."} |
   <e c> r <ds c> <e c> r <f c a> |
   <e c g> r <f b, g> <e c g> r <e c g> | <d b g> r <d b> <g c,> r <g c,> |
