@@ -27,6 +27,7 @@
   last-bottom-spacing.basic-distance = #12
   top-system-spacing.basic-distance = #12
   bottom-margin = 10\mm
+  line-width = 165\mm
 }
 
 melody = \relative c'' {
@@ -165,7 +166,6 @@ lower = \relative c {
 
   >>
   \layout {
-    line-width = 165\mm
     indent = 8\mm
     #(layout-set-staff-size 16)
   }
