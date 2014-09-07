@@ -1,6 +1,6 @@
 \version "2.19.7"
 
-\include "header.ly"
+\include "header.ily"
 
 global =  {
   \time 3/4
