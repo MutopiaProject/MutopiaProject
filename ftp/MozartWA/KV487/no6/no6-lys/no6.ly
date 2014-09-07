@@ -1,15 +1,19 @@
-\version "1.9.8"
-\include "header.ly"
+\version "2.18.2"
+\include "header.ily"
 
-global = \notes {
+global =  {
     \time 3/4
     \key f \major
+}
     
-    }
+setBeatStructure = {
+  \set Staff.beamExceptions = #'()
+  \set Staff.baseMoment = #(ly:make-moment 1/4)
+  \set Staff.beatStructure = #'(1 1 1)
+}
 
-hornI = \notes \relative c' {
-    \property Score.autoBeamSettings \set #'(begin * * 3 4) = #(ly:make-moment 1 8) 
-    \property Score.autoBeamSettings \set #'(end * * 3 4) = #(ly:make-moment 1 4) 
+hornI =  \relative c' {
+  \setBeatStructure
     \repeat volta 2 {
     f2.\f
     bes2.
@@ -20,7 +24,7 @@ hornI = \notes \relative c' {
     a16 f g a bes c d e f g a bes |
     c4 r g, |
     a8 f'16 d c4 b
-    \octave c''
+    \octaveCheck c''
     c r r 
 	}
     \repeat volta 2 {
@@ -37,7 +41,7 @@ hornI = \notes \relative c' {
 	c8( b) bes2 |
 	a16( c) bes a bes c d e f g a bes |
 	c4 r c,  |
-	d8 e16 f f,4 a8( g) \octave f' f4 r r |
+	d8 e16 f f,4 a8( g) \octaveCheck f' f4 r r |
 	}
     \repeat volta 2 {
 	\key bes \major
@@ -49,10 +53,10 @@ hornI = \notes \relative c' {
     a-. f -. c-. a -. f4 g8. (a16) |
     f4 r8 f\p g a }
     \repeat volta 2 {
-	\octave bes'
+	\octaveCheck bes'
 	% where does \< start exactly? 
 	bes4 ( a as g4.\< a8 bes b\!) |
-	c4 \times 2/3 { g'8 f es } \times 2/3 { d c bes }
+	c4 \tuplet 3/2 { g'8 f es } \tuplet 3/2 { d c bes }
 	bes4( a ) r |
 	bes\p bes bes |
 	bes8( a) a2 |
@@ -60,12 +64,13 @@ hornI = \notes \relative c' {
 	c8(b) b2 |
 	c16 d  e f g8 g, g a |
 	bes16 c d es f8 d bes f |
-	g8 es'16 c bes4 a | a( \octave bes' bes) r 
+	g8 es'16 c bes4 a | a( \octaveCheck bes' bes) r 
 	}
 
     
 }
-hornII = \notes \relative c' {
+hornII =  \relative c' {
+  \setBeatStructure
     \repeat volta 2 {
 	r4 a\f f |
 	r c' e f r r |
@@ -74,7 +79,7 @@ hornII = \notes \relative c' {
 	e r e' |
 	f g g |
 	c, c, r
-	\octave c
+	\octaveCheck c
 	}
     \repeat volta 2 {
 	r4 e' fis g d e |
@@ -92,7 +97,7 @@ hornII = \notes \relative c' {
 	}
     \repeat volta 2 {
 	d''\p
-	\octave d'
+	\octaveCheck d'
 	d d |
 	d8( es) es2 es4 es es |
 	es8( d) d2 |
@@ -105,7 +110,7 @@ hornII = \notes \relative c' {
 	r4 r d'4
 	es8( f ) g4\< f |
 	es2\! e4 |
-	f4 \times 2/3 { c'8 bes a } \times 2/3 { g f es }  |
+	f4 \tuplet 3/2 { c'8 bes a } \tuplet 3/2 { g f es }  |
 	d4 d d |
 	d8( es) es2 |
 	es4\< es es |
@@ -115,20 +120,21 @@ hornII = \notes \relative c' {
 	}
     }
 
-
-
 \score {
-\new StaffGroup   <<
+  \new StaffGroup   <<
     \new Staff << \global \hornI >>
     \new Staff <<\global \hornII >>
     >>
 
-\paper { \translator { \ScoreContext SpacingSpanner \set #'spacing-increment = #1.1 }}
+  \layout { \context { \Score \override SpacingSpanner.spacing-increment = #1.1 }}
 
-\midi { \tempo 4 = 100 }
-\header {
-    piece = "No. 6.  Menuetto"
-    footer = "Mutopia-2004/01/12-395"
+
+  \midi {
+    \tempo 4 = 100
+    }
+    
+  \header {
+     piece = \markup { \hspace #9 "No. 6.  Menuetto" } 
+    }
+
 }
-	 
-   }
