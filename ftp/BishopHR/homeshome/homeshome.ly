@@ -1,12 +1,6 @@
-\paper{ papersize = "letter" 
-	linewidth = 175 \mm
-	indent = 8 \mm
-%	interscoreline = 18.0 \mm
-}
-
 \include "english.ly"
-\version "2.1.30"
-#(set-global-staff-size 17)
+\version "2.18.2"
+%#(set-global-staff-size 17)
 
 \header {
   title = "Home, Sweet Home"
@@ -17,24 +11,36 @@
   instrument = "Voice and Piano"
   opus = "Cincinnati, 1852"
   source = ""
-  copyright = "Public Domain"
+  license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "3/18/2004"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2004/03/18-435"
+ footer = "Mutopia-2014/09/02-435"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
-  
-melody = \notes\relative c' {
-	\key f\major \time 4/4 
-	\partial 4 f8.^\markup {\column <\bold \large "Andante" \dynamic p >}( g16)
+\paper {
+  % add space between composer/opus markup and first staff
+  markup-system-spacing #'padding = #3
+  % add a little space between composer and opus
+  markup-markup-spacing #'padding = #1.2
+  top-margin = 7\mm
+  top-markup-spacing.basic-distance = #4
+  markup-system-spacing.basic-distance = #13
+  last-bottom-spacing.basic-distance = #14
+  bottom-margin = 6\mm
+}
+
+melody = \relative c' {
+	\key f\major \time 4/4
+	\partial 4 f8.^\markup {\column {\bold \large "Andante" \dynamic p }}( g16)
 %% 1-3
 	a4.( bf8) bf4.^\< c8 \!| c4.^\> a8 a4(\! c) | bf4.( a8) bf4 g |
 %% 4-6
 	a2. f8. g16 | a4.( bf8) bf4.^\< c8\! | c2^\> a4\! c |
-%% 7-9	
+%% 7-9
 	bf4.( a8) bf4 g | f2 r4 c'8\( c\) | f4.(^\mf e8) d4. c8 |
 %% 10-12
 	c2 a4 c | bf4.( a8) bf4^\> g\! | a2. c8\(^\< c\)\! |
@@ -48,14 +54,14 @@ melody = \notes\relative c' {
 	c2 a4 c | bf4.^\>( a8) bf4 g\! | f2. \bar "|."
 }
 
-textA = \lyrics {  
+textA = \lyricmode {
 	_'Mid pleas -- ures and pal -- a -- ces __ though __ we may roam,
 	Be it ev -- er so hum -- ble there's no __ place like home.
 	A __ _ charm __ from the skies seems to hal -- low us there,
 	Which, _ seek __ thro' the world is ne'er met with else -- where.
 }
 
-textB = \lyrics { 
+textB = \lyricmode {
 	I __ gaze __ on the moon as I __ tread __ the drear wild,
 	And __ _ feel __ that my moth -- er now thinks __ of her child.
 	As she looks __ on that moon from our own __ cot -- tage door,
@@ -66,7 +72,7 @@ textB = \lyrics {
 	Oh, there's no __ place like home.
 }
 
-textC = \lyrics { 
+textC = \lyricmode {
 	An __ ex -- ile from home, splen -- dor daz -- zles in vain,
 	Oh __ _ give me my low -- ly thatch'd cot -- tage a -- gain.
 	The __ _ birds __ sing -- ing gai -- ly that came __ at my call,
@@ -74,23 +80,23 @@ textC = \lyrics {
 
 }
 
-upper = \notes\relative c' {
+upper = \relative c' {
 	\key f\major \time 4/4
 	f8._\p^\markup {\bold \large "Andante"}( g16)
 %% 1-3
 	<a f>4.( bf8) <bf e,>4._\<( c8)\! | <c a>4._\>( a8) <a f>4(\! <c a>) |
 		<bf e,>4.( a8 <bf e,>4 <g e>) |
 %% 4-6
-	<a f>2. f8.( g16) | <a f>4.( bf8) <bf e,>4.(_\< c8)\! | 
+	<a f>2. f8.( g16) | <a f>4.( bf8) <bf e,>4.(_\< c8)\! |
 		<c a>2(_\>( <a f>4\!) <c a> |
 %% 7-9
 	<bf e,>4.( a8 <bf e,>4 <g e>) | f2 r4 c'8 ~ c |
 		<<{<f a,>4.( <e c>8 <d bf>4. <c a>8)}\\{f,1_\mf}>> |
 %% 10-12
-	<f a c>2( a4 <a c>) | <<{bf4.( a8 bf4_\> g\!)}\\{e1}>> | 
+	<f a c>2( a4 <a c>) | <<{bf4.( a8 bf4_\> g\!)}\\{e1}>> |
 		<a f c>2. <c f,>8(_\< c)\! |
 %% 13-15
-	<<{<f a,>4.( <e c>8 <d bf>4. <c a>8)}\\{f,1_\f}>> | 
+	<<{<f a,>4.( <e c>8 <d bf>4. <c a>8)}\\{f,1_\f}>> |
 		<<{<c' a>2( a4 <c a>)}\\{f,1}>> | <c' a>4( <bf e,>2_\> <g e bf>4)\!
 %% 16-18
 	<f c a>2. r4 | <f a c>1_\p | <d g bf>2( <d g>) |
@@ -98,25 +104,25 @@ upper = \notes\relative c' {
 	<f c>4_\< r <g c,>\! r | <a f c>2_\mf r4_\> c\1\! |
 		<<{<f a,>4.(_\f <e c>8 <d bf>4. <c a>8)}\\{f,1}>> |
 %% 22-24
-	<<{<c' a>2( a4 <c a>)}\\{f,1}>> | 
+	<<{<c' a>2( a4 <c a>)}\\{f,1}>> |
 		\slurUp <bf e,>4.(_\> a8 <bf e,>4 <g e bf>)\! |
 		<f c a>2.
 }
-	
-lower = \notes\relative c {
+
+lower = \relative c {
 	\key f\major \time 4/4
 	r4
 %% 1-3
 	f,8( c' f c) g( c g' c,) | f,8( c' f c) f,( c' f c) | g( c g' c,) g( c g' c,) |
 %% 4-6
-	f,8( c' f c) f,8( c' f c) | f,8( c' f c) g( c g' c,) |f,8( c' f c) f,( c' f c) | 
+	f,8( c' f c) f,8( c' f c) | f,8( c' f c) g( c g' c,) |f,8( c' f c) f,( c' f c) |
 %% 7-9
-	g( c g' c,) c,( c' <e bf'> c) | <f a>( c a c f,4) r | 
+	g( c g' c,) c,( c' <e bf'> c) | <f a>( c a c f,4) r |
 		f8( c' <f a> c) bf( f' <bf d> f) |
 %% 10-12
 	f,( c' <f a> c) f,( c' <f a> c) | g( c g' c,) g( c <e bf'> c) |
 		f,( c' f e d c a g)
-%% 13-15	
+%% 13-15
 	f( c' <f a> c) bf( f' <bf d> f) | f,( c' <f a> c) f,( c' <f a> c) |
 		c,( c' g' c,) c,( c' g' c,) |
 %% 16-18
@@ -130,24 +136,26 @@ lower = \notes\relative c {
 
 \score {
   <<
-      \context Voice = mel {
-	  \autoBeamOff
-	  \melody
+    \new Staff \with { midiInstrument = #"choir aahs" } <<
+      \new Voice = "mel" {
+        \autoBeamOff
+        \melody
       }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "1." \textA }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "2." \textB }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "3." \textC }
-					
-      \context PianoStaff <<
-	  \context Staff = upper \upper
-	  \context Staff = lower <<
-	      \clef bass
-	      \lower
-	  >>
-     >>
-     
+      \lyricsto mel  \new Lyrics  { \set stanza = "1." \textA }
+      \lyricsto mel  \new Lyrics  { \set stanza = "2." \textB }
+      \lyricsto mel  \new Lyrics  { \set stanza = "3." \textC }
+    >>
+
+    \new PianoStaff \with { midiInstrument = #"acoustic grand" } <<
+      \new Staff = "upper" \upper
+      \new Staff = "lower" <<
+        \clef bass
+        \lower
+      >>
+    >>
   >>
-  \paper {
-  }  
-  \midi { \tempo 4=90 }  
+  \layout { }
+  \midi {
+    \tempo 4 = 90
+  }
 }
