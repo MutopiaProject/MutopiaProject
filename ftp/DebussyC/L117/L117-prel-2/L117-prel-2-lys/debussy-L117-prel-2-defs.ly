@@ -5,13 +5,37 @@ staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 mBreak = { \break }
 ten = \tenuto
+
+%---Dynamics definitions
+pLeger = #(make-dynamic-script #{ 
+  \markup { \dynamic "p" \normal-text { \italic "et très léger" } }
+#} )
+
+tresDoux = \markup { \italic "très doux" }
+pTresDouxMarkup = \markup { 
+  \dynamic p \normal-text { \tresDoux } 
+}
+pTresDoux = #(make-dynamic-script #{ \pTresDouxMarkup #} )
+#(define (myDynamics dynamic)
+    (if (equal? dynamic pTresDouxMarkup )
+      0.55
+      (default-dynamic-absolute-volume dynamic)))
+
+piuPMarkup = \markup { \dynamic \normal-text { \italic "più " } p }
+piuP = #(make-dynamic-script #{ \piuPMarkup #} )
+#(define (myDynamics dynamic)
+    (if (equal? dynamic piuPMarkup )
+      0.52
+      (default-dynamic-absolute-volume dynamic)))
+
 hideP = \tweak #'stencil ##f \p
 hidePP = \tweak #'stencil ##f \pp
 hideMF = \tweak #'stencil ##f \mf
 hideF = \tweak #'stencil ##f \f
 piuPP = \markup { \right-align \concat { \italic \bold "più " \dynamic pp } }
-piuP = \markup { \left-align \concat { \italic \bold "più " \dynamic p } }
-pTresDoux = \markup { \concat { \dynamic p \italic \bold "très doux" } }
+touPP = \markup { \dynamic { \normal-text { \italic "toujours " } pp } }
+ppExpr = \markup { \dynamic pp \normal-text { \italic expressif } }
+%-- End Dynamics
 
 breatheFermata = {
   \once \override BreathingSign.text = \markup {
@@ -59,7 +83,7 @@ timeSigShowBeg = {
   \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible 
 }
 
-shapeSlurOne = \shape #'((0 . 0) (0 . 0) (0 . 0) (-0.5 . 0)) Slur
+shapeSlurOne = \shape #'((2 . 0) (2 . 1) (4 . -1) (5 . 8)) Slur
 shapeSlurTwo = \shape #'((-1.0 . 1.3) (0 . 1.0) (0 . 0.1) (-0.9 . 0.2)) Slur
 shapeSlurTre = \shape #'((1.0 . -0.8) (2 . -6.0) (-1 . 0.8) (0 . 1.2)) PhrasingSlur
 shapeSlurQtr = \shape #'((0.6 . 2) (2 . -1.5) (0 . 0) (0 . 0)) Slur
@@ -165,10 +189,19 @@ breakBeamSep = \markup {
                    \with-color #white
                    \filled-box #'(5.2 . 8.5) #'(0.5 . 1.2) #0
 }
+
+
+
 legendOne = \markup { \center-align \smaller "doux et soutenu" }
 legendTwo = \markup { \center-align \italic \smaller "doux mais en dehors" }
-dansUnRythme = \markup { "(Dans un rythme sans rigueur et caressant)" }
+dansUnRythme = "(Dans un rythme sans rigueur et caressant)" 
 
+configLVTies = \override 
+  LaissezVibrerTieColumn.tie-configuration
+     = #`((-6 . ,DOWN)
+          (-4 . ,DOWN)
+          (-2 . ,UP)
+          (0 . ,UP)) 
 ignoreClashOnce = \once \override NoteColumn.ignore-collision = ##t
 setRestDirDown = \override Rest #'direction = #down
 
