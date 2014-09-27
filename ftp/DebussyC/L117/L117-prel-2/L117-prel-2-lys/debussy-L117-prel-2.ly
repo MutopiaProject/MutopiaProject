@@ -1,4 +1,4 @@
-%---+----1----+----2----+----3----+----4----+----5----+----6----+----7----+----
+%...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 
 %%--------------------------------------------------------------------
 % The Mutopia Project
@@ -18,8 +18,19 @@
     markup-system-spacing.basic-distance = #6      %-dist. from header/title to first system
     top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
     last-bottom-spacing.basic-distance = #11       %-pads music from copyright block
+
+    %% --- Uncomment these after all editing is finished
     %ragged-bottom = ##f
     %ragged-last-bottom = ##f
+    
+    %% --- Control system/score spacing
+    %system-system-spacing #'basic-distance = #8
+    %{score-system-spacing =
+      #'((basic-distance . 12)
+         (minimum-distance . 6)
+         (padding . 1)
+         (stretchability . 12))
+    %}
 }
 
 \header {
@@ -46,11 +57,12 @@
 }
 
 %--------Definitions
+
 \include "debussy-L117-prel-2-defs.ly"
 
 %------------Music
 
-upperStaff = \relative c''' {
+upperStaffTop = \relative c''' {
   \tempo "Modéré" 8 = 88
   r4^\dansUnRythme <gs e>8-- ~ ( q32 <fs d> <e c> <d bf> |
   <c af>8.. <c' gs>32 <bf fs>4 ) |
@@ -84,9 +96,31 @@ upperStaff = \relative c''' {
   q16 <bf fs>-. <af e>-. <fs d>-. ) <e c>4 ~ |
   q4 r |
   \stemNeutral \slurNeutral
-  <gs' e>8-- ~ ( q32 <fs d> <e c> <d bf> <c af>4 ~
+  <gs' e>8-- ~ ( q32 <fs d> <e c> <d bf> <c af>4 ~ |
+  
+  \barNumberCheck #16
   q8.. <c' gs>32 <bf fs>4 ) |
+  <gs e>8-- ~ ( q32 <fs d> <e c> <d bf> <c af>4 ~ |
+  q8.. <d bf>32 ) q8..-- ( <e c>32 ) |
+  q8..-- ( <fs d>32 ) 
+  << 
+    { 
+      \stemDown q4-- ~ ( |
+      q8 <e c> <fs d>8. <gs e>16 |
+      q2 ) | 
+    } 
+    \\ 
+    {  
+      s4 |
+      s2 |
+      r4 d,8-. \pp ( r |
+      d'8-. ) 
+    } 
+  >>
+}
 
+upperStaffBottom = \relative c' {
+  
 }
 
 lowerTop = \relative c {
@@ -105,8 +139,16 @@ lowerTop = \relative c {
   q2 |
   q2 |
   r8 \clef treble <af' e c af>-. ( <bf fs d bf>-. 
-    \configLVTies <c af e c>-. ) \laissezVibrer \clef bass
-  
+    \configLVTies <c af e c>-. ) \laissezVibrer \clef bass |
+    
+  \barNumberCheck #16
+  s2 |
+  r8 \clef treble <af e c af>-. ( <bf fs d bf>-. 
+    \configLVTies <c af e c>-. ) \laissezVibrer \clef bass |
+  s2 |
+  r8 \clef treble <af e c af>-. ( <bf fs d bf>-. 
+    \configLVTies <c af e c>-. ) \laissezVibrer \clef bass |
+  s2 |
 }
 
 lowerBottom = \relative c, {
@@ -124,10 +166,26 @@ lowerBottom = \relative c, {
   s2 |
   r8 bf4-. ( bf8-. ) |
   r8 bf4-. ( bf8-. |
-  bf4-. ) s4 |
+  bf4-. ) s |
+    
+  \barNumberCheck #16
   bf8-. ( bf-. r bf-. |
-  bf8-. )
+  bf8-. ) s4. |
+  bf8-. ( bf-. r bf-. ) |
+  bf4-. s |
+  bf8-. ( bf-. r bf-. ) |
+  bf2 ~ |
+  bf2 |
+  bf2 |
+  bf2 ~ |
+  bf2
 }
+
+upperStaff = <<
+  { \upperStaffTop }
+  \\
+  { \upperStaffBottom }
+>>
 
 lowerStaff = <<
   { \lowerTop }
@@ -150,8 +208,14 @@ dynamics = {
   s4 \< s4 \! |
   s2 * 4 |
   s2 \pp |
+  
+  \barNumberCheck #16
   s4 \< s4 \> |
   s2 \pp |
+  s4 \< s \p \< |
+  s4 \p \< s4 \! |
+  s4 s4 \> |
+  s4 \!
 }
 
 %-------Typeset music 
