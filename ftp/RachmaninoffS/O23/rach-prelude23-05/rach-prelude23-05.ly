@@ -235,7 +235,7 @@ RHone = \relative c' {
   r8 d16 d d8 r r d16 d d8 r |
   
   % page 3
-  \tempo "Un poco meno mosso"
+  \tempo "Un poco meno mosso" 4 = 50
   r8 \voiceOne <a'' d fis a>--( q-- <b d fis b>-- <c d fis c'>4-- <b b'>8 <a a'> |
   <g g'>8 <a a'> <b b'>4--) <fis fis'>--( <a a'>) |
   r8 <a d fis a>--( q-- <b d fis b>-- <c c'>4--) <b b'>8--( <a a'>) |
@@ -401,8 +401,16 @@ RHtwo = \relative c' {
   s1
   \voiceOne
   g8-> s s a16( b d2->) |
-  s1*14
-
+  g,8-> s s a16( b d2->) |
+  g,4.-- es'8-. g,4.-- e'8-. |
+  g,4.-- f'8-. g,-. fis'-. g,-. g'-. |
+  g,8 s s h16( c es2->) |
+  g,8 s s a16( b es2->) |
+  g,4.-- as'8-. g,4.-- a'8-. |
+  es,4.-- b''8-. d,,4.-- <d' d'>8-. |
+  g,8-. s2..
+  s1*3
+  s1*3
 }
 
 %---------- Left Hand parts
@@ -500,9 +508,17 @@ LHone = \relative c, {
   fis'16-. es-. d-. c-.
   \clef bass
   b-. a-. fis-. es-. d-. c-. b-. a-. fis->( d)
-  
-  <g, g'>4.^> s8 s2
-  s1*11
+  \voiceOne
+  <g, g'>8^> s s a'16( b <d, d'>2->) |
+  <g, g'>8^> s s a'16( b <d, d'>2->) |
+  <g, g'>4. es''8-. <g,, g'>4. es''8-. |
+  <g,, g'>4. f''8-. <g,, g'>8-. fis''-. <g,, g'>8-. g''-. |
+  <g,, g'>8^> s s h'16( c <es, es'>2->) |
+  <g, g'>8^> s s a'16( b <es, es'>2->) |
+  <g, g'>4. <as' as'>8-. <g, g'>4. <a' a'>8-. |
+  <es, es'>4. <b' b'>8-. <d, d'>4. d''8-. |
+  <g,, g'>8^> s2..
+  s1*3
   g=,,8 r r d' <g, d'> r d''16( e fis8) |
   <g, d' g>8 r \clef treble d''16( e fis8) 
   <g, d' g>8 r \clef treble d''16( e fis8) |
@@ -625,8 +641,16 @@ LHtwo = \relative c {
   %\once \override Script.extra-offset = #'(0 . +7.3)
   <d d,>1->) | s |
   
-  r8 <d' g b d>16[ q q8] r s q s q | 
-  
+  s8 <d' g b d>16[ q q8] s r <g b d>16[ <g b es>]  q[ <g b e> q8] |
+  s8 <d  f b d>16[ q q8] s r <g b c>16[ <g b cis>] q[ <g b d> q8] |
+  r8 <g  b es>16[  q q8] r r <e g b>16[ q q8] s |
+  r8 <f  g b>16[   q q8] r s2 |
+  r8 <es g>16[     q q8] s s <es g>16[ <es as>] q[ <es a> q8] |
+  s8 <es b'>16[    q q8] s r <es f>16[ <es fis>] q[ <es g> q8] |
+  r8 <es as>16[    q q8] r r <es a>16[   q q8] r |
+  r8 <es as>16[    q q8] r r <d b'>16[   q q8] r |
+  s8 <g, d'>16[   q q8] s s2
+
   % page 6
 }
 
@@ -747,7 +771,7 @@ pagebreaks = {
     }
   }
   \midi {
-    \tempo 4 = 108
+    \tempo 4 = 80
     \context {
       \Score
       midiMinimumVolume = #0.3
