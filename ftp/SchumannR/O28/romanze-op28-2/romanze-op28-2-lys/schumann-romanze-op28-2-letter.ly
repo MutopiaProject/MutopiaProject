@@ -1,6 +1,5 @@
-\version "1.7.21"
+\version "2.18.2"
 \include "schumann-romanze-op28-2-notes.ly"
-\include "paper16.ly"
 
 \header {
   title = "Romanzen"
@@ -12,33 +11,45 @@
   mutopiacomposer = "SchumannR"
   mutopiainstrument = "Piano"
   style = "Romantic"
-  copyright = "Public Domain"
+  license = "Public Domain"
   source = "Ed. Peters"
-  
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-  footer = "Mutopia-2003/06/16-314"
+
+ footer = "Mutopia-2014/08/27-314"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
+}
+
+\paper {
+  top-margin = 8\mm
+  top-markup-spacing.basic-distance = #6
+  % add space between composer/opus markup and first staff
+  markup-system-spacing #'padding = #5
+  % add a little space between composer and opus
+  markup-markup-spacing #'padding = #1.2
+  last-bottom-spacing.basic-distance = #12
+  top-system-spacing.basic-distance = #12
+  bottom-margin = 6\mm
+}
+
+% needs 15 to stay at 2 pages for letter
+#(set-global-staff-size 15)
+#(set-default-paper-size "letter")
+
+\layout {
+  \context {
+    \Staff
+    \RemoveEmptyStaves
+    \mergeDifferentlyDottedOn
+    \mergeDifferentlyHeadedOn
+    \override Fingering #'staff-padding = #'()
+    \override Fingering #'add-stem-support = ##t
+  }
 }
 
 \score {
   \thePianoStaff
-  \paper {
-      papersize = "letter"
-    interscoreline = 0.0
-    interscorelinefill = 1
-    indent = 0.5 \in
-    pagenumber = no
-    \translator {
-      \HaraKiriStaffContext
-    }
-    \translator {
-      \ScoreContext
-      SpacingSpanner \override #'common-shortest-duration = #(ly:make-moment 1 8)
-    }
-    \translator {
-      \PianoStaffContext
-      VerticalAlignment \override #'forced-distance = #13.0
-    }
+  \layout {}
+  \midi {
+    \tempo 8 = 100
   }
-  \midi { \tempo 8=100 }
 }
-
