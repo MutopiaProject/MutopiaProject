@@ -84,13 +84,13 @@ primo = \relative c'' {
 
 	% 37
 	|	f4 a
-	|	f r8\fermata
-	\mark \markup { \italic { Fine. } }
+	|	f \mark \markup { \italic { Fine. } } r8\fermata
 	\bar "|."
 
 		c8
 
 	% 39
+	\noBreak
 	|	a'4 f
 	|	c4. f16 a
 	|	a16( g fis g) f( e f d)
@@ -376,13 +376,13 @@ secondo = \relative c {
 
 	% 37
 	|	f4 f
-	|	f,4 r8\fermata
-	\mark \markup { \italic { Fine. } }
+	|	f,4 \mark \markup { \italic { Fine. } } r8\fermata
 	\bar "|."
 
 		r8
 
 	% 39
+	\noBreak
 	|	r8 f a c
 	|	f8 f, f' r
 	|	r8 e, g c
