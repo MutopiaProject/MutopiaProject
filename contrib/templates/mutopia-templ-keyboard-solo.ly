@@ -87,8 +87,3 @@ lowerStaff = \relative c {
     \layout{ }
     \midi  { \tempo 4 = 70 }
 }
-
-%{
-convert-ly (GNU LilyPond) 2.18.2  convert-ly: Processing `'...
-Applying conversion:     The document has not been changed.
-%}
