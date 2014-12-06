@@ -204,6 +204,7 @@
   c <bes g> <bes g>
   c <bes e> <bes e>
   f c a,
+  _\markup{ \italic "D.S. al Fine"}
   f, r r
   \bar "||" \key a \minor
   \mark \markup { \musicglyph #"scripts.segno" }
