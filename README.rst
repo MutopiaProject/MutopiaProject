@@ -10,7 +10,7 @@ sheet music.
 
 This GITHUB repository is made available to promote this volunteer
 effort. There is a
-`wiki <https://github.com/chrissawer/The-Mutopia-Project/wiki>`_
+`wiki <https://github.com/MutopiaProject/MutopiaProject/wiki>`_
 available if you are interested in contributing using GITHUB.
 Please see the main website
 `contribution page <http://www.mutopiaproject.org/contribute.html>`_ for
