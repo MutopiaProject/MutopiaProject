@@ -26,13 +26,20 @@
   \time 3/4
   \partial 4 e'4_\markup{ \dynamic p \whiteout \italic (dolce) }^\markup {\bold "Tempo di Valse" } \bar "||"
   \mark \markup { \musicglyph #"scripts.segno" }
-  e'2.( ~ e'4 gis' a')
-  b'2.( ~ b'4 gis' e')
-  c''2.\<( ~ c''4 b' a'\!)
-  e''2. ~ e''4 r e''
-  f''2.( ~ f''4 e'' d'')
-  e''2.\>( ~ e''4 d'' c''\!)
-  b'2.( ~ b'4 \acciaccatura d''8 c''4 b')
+  e'2.( ~
+  e'4 gis' a')
+  b'2.( ~
+  b'4 gis' e')
+  c''2.\<( ~
+  c''4 b' a'\!) \break
+  e''2. ~
+  e''4 r e''
+  f''2.( ~
+  f''4 e'' d'')
+  e''2.\>( ~
+  e''4 d'' c''\!)
+  b'2.( ~
+  b'4 \acciaccatura d''8 c''4 b') \break
   a'2.
   b'8\staccato\< c''\staccato d''\staccato e''\staccato f''\staccato g''\staccato \!
   < f'' a'' >4\staccato \f
@@ -41,28 +48,32 @@
   }
   < f'' a'' >( <e'' g''>4. <dis'' fis''>8
   <e'' g''>2.)
-  \repeat unfold 6 {
+  \repeat unfold 3 {
+  <d'' f''>4\staccato
+  } \break
+  \repeat unfold 3 {
   <d'' f''>4\staccato
   }
   < d'' f''>( <c'' e''>4. <bis' d''>8
   <c'' e''>2.)
-  \repeat unfold 6 {
+  <gis' d''>4\staccato \p
+  \repeat unfold 5 {
   <gis' d''>4\staccato
   }
   <f' d''>( <e' c''>4. b'8
-  a'2 a''4)
-  f''(d'' b')
+  a'2 a''4) \break
+  f''\p(d'' b') 
   \acciaccatura d''8 c''2( b'4)
   a'2. ~
   a'4 r e'
   e'2.( ~
-  e'4 gis' a')
+  e'4 gis' a') \break
   b'2.( ~ 
   b'4 gis' e')
   c''2.( ~
   c''4 b' a')
   e''2. ~
-  e''4 r e''
+  e''4 r e'' \break
   f''2.( ~
   f''4 e'' d'')
   e''2.\>( ~
@@ -70,20 +81,20 @@
   b'2.( ~
   b'4 \acciaccatura d''8 c''4 b')
   <c' e' a'>2. ~
-  <c' e' a'>4 _\markup{\italic Fine} r c' \p
+  <c' e' a'>4 _\markup{\italic Fine} r c' \p \break
   \bar "||" \key d \minor
   a'2.( ~
   a'4 gis' a')
   c'2.( ~
   c'4 f' g')
   a'\<( gis' a')\!
-  a'( d''4. c''8)
+  a'( d''4. c''8) \break
   c''2.\>(
   bes'4)\! r r
   g'2. ~
   g'4 fis' g'
   c'2. ~
-  c'4 e' f'
+  c'4 e' f' \break
   g'\<( fis' g')\!
   <e' g'>\>( <c'' e''>4. <bes' d''>8)
   <a' c''>2.\!
@@ -91,13 +102,13 @@
   a'2.( ~
   a'4 gis' a')
   c'2.( ~
-  c'4 f' g')
+  c'4 f' g') \break
   a'\<( gis' a')\!
   <f'' a''>\>( <e'' g''>4. <d'' f''>8)
   <c'' e''>2.(
   <bes' d''>4)\! r r
   e''( d'' fis'
-  g' bes' e'')
+  g' bes' e'') \break
   d''( c'' e'
   f' a' d'
   ')
@@ -211,10 +222,10 @@
   }
   >>
   
-  \layout { }
+  \layout {}
+  
   
   \midi {
     \tempo 4 = 60
   }
 }
-
