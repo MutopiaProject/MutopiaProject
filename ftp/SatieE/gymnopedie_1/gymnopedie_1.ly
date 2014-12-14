@@ -1,4 +1,4 @@
-\version "2.16.1"
+\version "2.18.0"
 
 \header {
   title = \markup{\halign #-2.3 {1.} {\small\raise #1.5 ere} Gymnopédie}
@@ -41,8 +41,8 @@ top = \context Staff \relative c'' {
   \dynamicUp
   \stemUp
   \slurUp
-  \override Hairpin #'to-barline = ##f
-  \bar "|:"
+  \override Hairpin.to-barline = ##f
+  \bar ".|:"
   \repeat volta 2 {
     R2.^\markup{\hspace #10 "Lent et douloureux"} |
     R2. |
@@ -51,7 +51,7 @@ top = \context Staff \relative c'' {
     s4 fis( \pp \< a |
     g fis cis |
     % The hairpin override is to align it with a previous hairpin
-    b cis\! \once\override Hairpin #'Y-offset = #7 d\> |
+    b cis\! \once\override Hairpin.Y-offset = #7 d\> |
     \barNumberCheck #8
     a2. |
     fis2.\!) ~ |
@@ -105,7 +105,7 @@ top = \context Staff \relative c'' {
 }
 
 middle = \context Voice = "accomp" \relative c' {
-  \override NoteColumn   #'horizontal-shift = #1
+  \override NoteColumn.horizontal-shift = #1
   \repeat volta 2 {
     r4 <fis d b>2 |
     r4 <fis cis a>2 |
@@ -256,8 +256,8 @@ bottom = \context Staff \relative c {
     ragged-right = ##f
     \context {
       \Score
-      \override SpacingSpanner #'shortest-duration-space = #3.0
-      \override SpacingSpanner #'spacing-increment = #1.2
+      \override SpacingSpanner.shortest-duration-space = #3.0
+      \override SpacingSpanner.spacing-increment = #1.2
     }
   }
 }
