@@ -24,7 +24,11 @@
     ragged-last-bottom = ##f
     
     %% --- Control system/score spacing
-    system-system-spacing.minimum-distance = #12
+    system-system-spacing = 
+      #'((basic-distance . 18)
+         (minimum-distance . 18)
+         (padding . 1)
+         (stretchability . 12))
     score-system-spacing =
       #'((basic-distance . 12)
          (minimum-distance . 6)
@@ -354,10 +358,16 @@ upperStaffBottom = \relative c' {
   r4 <gs e>8^- ~ ^\( q32 <fs d> <e c> <d bf> |
   \stemUp <c af>4 q16 <fs, bf>8 <e af>16 |
   \tupletBracketOff
-  \acciaccatura { <d fs>8 ( } <c e>4-- ) \) \acciaccatura { <d fs>8 } <c e>8.. 
-    \tuplet 3/2 { <d fs>64-. ( <d fs>-. <c e>-. ) } |
-  \acciaccatura { <d fs>8 } <c e>4-- q4-- ~ |
-  q2 \fermata |
+  \acciaccatura { <d fs>8 ( } <c e>4-- ) \) 
+    \breathFermata
+    \once \override BreathingSign.Y-offset = #3  \breathe
+    \acciaccatura { <d fs>8 } <c e>8.. [ 
+    \once \override BreathingSign.Y-offset = #4 \breathe
+    \tuplet 3/2 { <d fs>64-. ( <d fs>-. <c e>-. ) ] } |
+  \acciaccatura { <d fs>8 } <c e>4-- 
+    \once \override BreathingSign.Y-offset = #3 \breathe 
+    q4-- ~ |
+  q2 ^\fermata |
   \bar "|."
 }
 
@@ -573,8 +583,8 @@ lowerStaffTop = \relative c {
     { \voiceFour fs4 fs | fs4 }
     \new Voice {
       \voiceThree
-      \scaleDurations 8/11 {
-        \stemUp fs16. ^( [
+      \scaleDurations 8/12 {
+        \stemUp fs16. _( [
         \set stemLeftBeamCount = #3
         \set stemRightBeamCount = #1
         \graceOn
@@ -585,10 +595,11 @@ lowerStaffTop = \relative c {
         d 
         \staffUp \stemDown 
         \set stemLeftBeamCount = #1
-        fs gs bf c ] ) \staffDown \graceOff
+        fs gs bf c ] )  
+        \graceOff \staffDown s
       }
       \scaleDurations 8/12 {
-        \stemUp fs,,16. ^( [
+        \stemUp fs,,16. _( [
         \set stemLeftBeamCount = #3
         \set stemRightBeamCount = #1
         \graceOn
@@ -599,11 +610,12 @@ lowerStaffTop = \relative c {
         d 
         \staffUp \stemDown 
         \set stemLeftBeamCount = #1
-        fs gs bf c ] ) \staffDown \graceOff s
+        fs gs bf c ] ) 
+        \staffDown \graceOff s
       }
       |
-      \scaleDurations 8/11 {
-        \stemUp fs,,16. ^( [
+      \scaleDurations 8/12 {
+        \stemUp fs,,16. _( [
         \set stemLeftBeamCount = #3
         \set stemRightBeamCount = #1
         \graceOn
@@ -614,7 +626,8 @@ lowerStaffTop = \relative c {
         d 
         \staffUp \stemDown 
         \set stemLeftBeamCount = #1
-        fs gs bf c ] ) \staffDown \graceOff
+        fs gs bf c ] ) 
+        \staffDown \graceOff s
       }
     }
   >>
@@ -702,7 +715,7 @@ lowerStaffBottom = \relative c, {
   }
   s2 |
   s2 |
-  R2 |
+  \voiceThree R2 |
 }
 
 dynamics = {
@@ -768,9 +781,12 @@ dynamics = {
   s2 * 3 |
   s2 \pp |
   s2 |
+  
+  \barNumberCheck #56
   s2 \pp |
   s2 |
   s2 \piuPP
+  s2 * 6 |
 }
 
 upperStaff = {
@@ -804,14 +820,6 @@ lowerStaff = {
     \context {
       \PianoStaff
       \consists #Span_stem_engraver
-    }
-    \context {
-      \StaffGroup
-      \override StaffGrouper.staff-staff-spacing = 
-      #'((basic-distance . 12)
-         (minimum-distance . 18)
-         (padding . 1)
-         (stretchability . 12))
     }
   }
 }

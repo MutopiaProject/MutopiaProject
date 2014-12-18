@@ -37,9 +37,9 @@ tupletBracketOff = \override TupletBracket.bracket-visibility = ##f
 tresDoux = \markup { \italic "très doux" }
 pTresDouxMarkup = \markup { \dynamic p \normal-text { \tresDoux } }
 pTresDoux = #(make-dynamic-script #{ \pTresDouxMarkup #} )
-piuPMarkup = \markup { \dynamic \normal-text { \italic \bold "più " } p }
+piuPMarkup = \markup { \dynamic \normal-text { \italic "più " } p }
 piuP = #(make-dynamic-script #{ \piuPMarkup #} )
-piuPPMarkup = \markup { \dynamic \normal-text { \italic \bold "più " } pp }
+piuPPMarkup = \markup { \dynamic \normal-text { \italic "più " } pp }
 piuPP = #(make-dynamic-script #{ \piuPPMarkup #} )
 cres = \markup { \italic "cresc." }
 molto = \markup { \italic "molto" }
@@ -130,6 +130,16 @@ configLVTiesThree = \override
      = #`((6 . ,DOWN)
           (8 . ,UP)
           (13 . ,UP))      
+
+breathFermata = \override BreathingSign.text = \markup {
+  \override #'(direction . 1)
+  \override #'(baseline-skip . 1.8)
+  \dir-column {
+    \translate #'(0.155 . 0)
+    \center-align \musicglyph #"scripts.rcomma"
+    \center-align \musicglyph #"scripts.ufermata"
+  }
+}
 
 global = {
   \key c \major
