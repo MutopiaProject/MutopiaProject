@@ -208,7 +208,7 @@ bf8-4 [ af c, d-3)]} \cadenzaOff \bar "|" \normalsize		%32
  
 ef,-.\ped  <g' ef'>  ( <bf ef  g>)\pes  ef,-.\ped <af d> (<cf d af'>)\pes  ef,,-.\ped <g' ef'> (<bf ef g>)\pes d,,-.\ped  <g' ef'> (<bf ef g>)\pes	%1
 	   
-c,,-.\ped <g'' e'> (<bf e g>)\pes   c,-.\ped <g' e'> (<c e bf'>)\pes f,,-.\ped <f' df'> (<bf d e>)\pes  f,-.\ped <f' c'> (<af c f>)\pes	%2
+c,,-.\ped <g'' e'> (<bf e g>)\pes   c,-.\ped <g' e'> (<c e bf'>)\pes f,,-.\ped <f' df'> (<bf df e!>)\pes  f,-.\ped <f' c'> (<af c f>)\pes	%2
 	   
 bf,-.\ped <f' d'!> (<bf d af'>)\pes b,-.\ped <g' f'> (<d' f g>)\pes c,-.\ped <g' ef'> (<c ef g>)\pes a,-.\ped <gf' ef'> (<c ef gf>)\pes	%3
 		
@@ -232,7 +232,7 @@ c,,-.\ped <g'' ef'> (<c ef g>)\pes f,,-.\ped <f' ef'> (<c' ef f>)\pes <bf d>-. (
 
 ef,,-.\ped <g' ef'> (<bf ef g>)\pes ef,-. <af d> (<bf d af'>) ef,-. <g ef'> (<bf g'>) d,-. <g ef'> (<bf ef g>)	%13
 
-c,-. <g' e'> (<bf e g>) c,-. <g' e'> (<c e bf'>) f,,-. <f' df'> (<bf d e>) f,-. <f' c'> (<af c f>)	%14
+c,-. <g' e'> (<bf e g>) c,-. <g' e'> (<c e bf'>) f,,-. <f' df'> (<bf df e!>) f,-. <f' c'> (<af c f>)	%14
 
 bf,-.\ped <f' d'!> (<bf d af'>)\pes b,-.\ped <g' f'>  (<d' f g>)\pes c,-.\ped <g' ef'> (<c ef g>)\pes a,-.\ped <gf' ef'> (<c ef gf>)\pes	%15
 
@@ -248,7 +248,7 @@ c,,-.\ped <g'' ef'> (<c ef g>)\pes f,,-. <f' ef'> (<c' ef f>) <bf d>-. (<a ds>-.
 
 ef,,-.\ped <g' ef'> (<bf ef g>)\pes ef,-. <af d> (<bf d af'>) ef,-. <g ef'> (<bf ef g>) d,-. <g ef'> (<bf ef g>)	%21
 
-c,-. <g' e'> (<bf e g>) c,-. <g' e'> (<c e bf'>) f,,-. <f' bf df> (<bf d e>) f,-. <f' c'> (<af c f>)	%22
+c,-. <g' e'> (<bf e g>) c,-. <g' e'> (<c e bf'>) f,,-. <f' bf df> (<bf df e!>) f,-. <f' c'> (<af c f>)	%22
 
 bf,-. <f' d'!> (<bf d af'>) b,-. <g' f'>  (<d' f g>) c,-. <g' ef'> (<c ef g>) a,-. <gf' ef'> (<c ef gf>)	%23
 
