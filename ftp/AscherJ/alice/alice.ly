@@ -1,10 +1,10 @@
-\paper{ papersize = "letter" 
-	linewidth = 165 \mm
+\layout{
+	line-width = 165 \mm
 	indent = 8 \mm
 %	interscoreline = 4.0 \mm
 }
 \include "english.ly"
-\version "2.1.31"
+\version "2.19.15"
 #(set-global-staff-size 17)
 
 \header {
@@ -21,11 +21,10 @@
   maintainerEmail = "physinfoman@ameritech.net"
   lastupdated = "4/2/2004"
 
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
   footer = "Mutopia-2004/04/02-433"
 }
   
-melody = \notes\relative c' {
+melody = \relative c' {
 	\key bf\major \time 3/4 \partial 8 s8
 	s2.*7 r2 r8^\p f8 f4 bf4. c8 | bf4 a2 |
 	g4 \acciaccatura a16 g8 fs g a | g4( f) r8 f | f4 d'4.^\markup { \italic "cresc." } ef8 | 
@@ -44,7 +43,7 @@ melody = \notes\relative c' {
 		bf8^\markup { \italic "a tempo" } r r4 r8 \bar "|."
 }		
 
-textA = \lyrics {  
+textA = \lyricmode {  
 	The birds sleep -- ing gent -- ly, Sweet Lu -- na gleam -- eth bright,
 	Her rays tinge the for -- est, And all seems glad to -- night.
 	The wind sigh -- ing by me, __ _ Cool -- ing my fev -- ered brow;
@@ -56,7 +55,7 @@ textA = \lyrics {
 	Al -- ice, What e'er might be -- tide!
 }
 
-textB = \lyrics { 
+textB = \lyricmode { 
 	The sil -- ver rain fall -- ing, Just as it fall -- eth now, __ 
 	And all things slept gent -- ly, Oh! Al -- ice, where art thou?
 	I've sought thee by lake -- let, I've sought thee __ _ on the hill;
@@ -71,7 +70,7 @@ textB = \lyrics {
 }
 
 
-upper = \notes\relative c' {
+upper = \relative c' {
 	\key bf\major \time 3/4 \partial 8 
 	f8^\markup { "" \translate #(cons -5 +1) \bold \large "Moderato" }
 	<<{f4( bf4. c8 bf4 a2)}\\{d,2. ef2.}>> | 
@@ -93,16 +92,16 @@ upper = \notes\relative c' {
 	<<{d'2.}\\{a4( g4. g8)}>> | <fs ef'>8( <g d'> <a c> bf <a c> <g cs>) |
 		<fs d'>8 <d d'> <d d'> <d d'>^^ <ef d'>^^ <e d'>^^	|
 			<<{d'2.}\\{f,!4( bf4. c8)}>> |
-	<<{ef2.( ef2) ef4}\\{bf4( a2) g4 g8( fs) g( a)}>> | <g ef'>4( <f d'> r8 d' |
+	<<{ef2.( ef2) ef4}\\{bf4( a2) g4 g8( fs) g( a)}>> | <g ef'>4\( <f d'> r8 d' |
 		<d f,>4( <c f,>4. <b f>8) |
-	<b ef,>8( c) g4. c8) | <<{<c ef,>4( bf8^^ a^^ g^^ f^^)}\\{s4 ef2}>> |
+	<b ef,>8( c) g4. c8\) | <<{<c ef,>4( bf8^^ a^^ g^^ f^^)}\\{s4 ef2}>> |
 		<f f'>2. | <<{g4.( a8 bf c)}\\{ef,2.}>> |
 	<<{f4.( g8 a bf)}\\{d,2.}>> | <f bf d>2 r8 f | <ef a c>2 r8 f |
 		<d f bf>8 r <d' f bf>4 r8 
 	
 }
 	
-lower = \notes\relative c {
+lower = \relative c {
 	\key bf\major \time 3/4 \partial 8
 	r8^\p bf8( f' bf f bf f) | bf,( f' a f a f) | bf,( ef bf' ef, bf' ef,) | 
 		bf( f' bf f bf f) | g,( d' <f b> d <f b> d) |
@@ -133,25 +132,30 @@ lower = \notes\relative c {
 
 \score {
   <<
-      \context Voice = mel {
+      \context Voice = "mel" {
 	  \autoBeamOff
 	  \melody
       }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "1." \textA }
-		\lyricsto mel \new Lyrics \lyrics { \set stanza = "2." \textB }
+		\new Lyrics  \lyricsto mel  { \set stanza = "1." \textA }
+		\new Lyrics  \lyricsto mel  { \set stanza = "2." \textB }
 		
 					
       \context PianoStaff <<
-	  \context Staff = upper \upper
-	  \context Staff = lower <<
+	  \context Staff = "upper" \upper
+	  \context Staff = "lower" <<
 	      \clef bass
 	      \lower
 	  >>
       >>
   >>
-  \paper {
-      \context { \RemoveEmptyStaffContext }
+  \layout {
+      \context { \Staff \RemoveEmptyStaves }
   }  
-  \midi { \tempo 4=90 }  
+  
+  \midi {
+    \tempo 4 = 90
+    }
+
+  
 }
 
