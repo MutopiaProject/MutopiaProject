@@ -1,6 +1,7 @@
-\version "2.18.2"
+\version "2.19.15"
 
 %--------Definitions for Debussy Prelude 2
+
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 
@@ -16,8 +17,6 @@ subGroupThirtySecond = {
 }
 subGroupOff = {
   \set subdivideBeams = ##f
-  %\set baseMoment = #(ly:make-moment 1/4)
-  %\set beatStructure = #'(1 1)
 }
 
 graceOn = {
@@ -61,6 +60,11 @@ hidePP = \tweak #'stencil ##f \pp
 touPP = \markup { \dynamic { \normal-text { \italic "toujours " } pp } }
 ppExpr = \markup { \dynamic pp \normal-text { \italic expressif } }
 ppTresSouple = \markup { \dynamic pp \normal-text { \italic "très souple" } }
+
+dynamicAdjustOne = \once \override DynamicText.X-offset = #0.5
+dynamicAdjustTwo = \once \override DynamicText.X-offset = #-2
+dynamicAdjustThree = \once \override DynamicText.X-offset = #-2.5
+hairpinAdjustOne = \once \override Hairpin.X-offset = #1
 %-- End Dynamics
 
 %-- Custom Spanners
@@ -88,11 +92,30 @@ caesura = {
   \markup { \musicglyph #"scripts.caesura.straight" }
 }
 
-shapeSlurOne = \shape #'((2 . 0) (2 . 1) (3 . 0.5) (4 . 6)) Slur
+markAlignLeft = \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+
+shapeSlurOne = \shape #'((2 . 0) (2 . 1) (3 . 0.5) (4 . 8)) Slur
 shapeSlurTwo = \shape #'((-12 . 2) (-10 . -3) (0 . 2) (0 . 0)) Slur
 shapeSlurThree = \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . -5)) Slur
+shapeSlurFive = \shape #'((0.5 . -3) (0.5 . 4) (0 . 4) (0 . -0.5)) PhrasingSlur
+shapeSlurSix = \shape #'((0.5 . 1) (1 . 3) (0 . 2) (1 . -0.5)) PhrasingSlur
+shapeSlurSeven = \shape #'((0 . 0) (0 . 0) (1 . 3) (0 . 0)) Slur
+shapeSlurEight = \shape #'(
+                            ((0 . 0) (0 . 0) (0 . 0) (0 . 0)) 
+                            ((0 . 0) (0 . 0) (0 . 0) (1 . 4))
+                          ) PhrasingSlur
+shapeSlurNine = \shape #'((0 . 0) (1 . -1.5) (1 . -2.5) (2 . 8)) Slur
+shapeSlurTen = \shape #'((0 . 0) (1 . -1) (1 . -2.5) (2 . 4)) Slur
+shapeSlurEleven = \shape #'((0 . 0) (0 . -0.5) (0 . -2) (0 . 3)) Slur
+shapeSlurTwelve = \shape #'((0 . 0) (1 . -0.5) (1 . -2) (2 . 8)) Slur
+shapeSlurThirteen = \shape #'((0 . 0) (0 . -1) (0 . -3) (2 . 7)) Slur
+shapeSlurFourteen = \shape #'((0 . 0) (0 . -0.5) (0 . -2) (0 . 0)) Slur
+shapeSlurFifteen = \shape #'((0 . 0) (0 . 1) (0 . 1) (0 . 2)) Slur
+shapeSlurSixteen = \shape #'((0 . -2) (0 . 1) (1 . 2) (0 . 3)) Slur
+shapeSlurSeventeen = \shape #'((0 . 0) (0 . 1) (1 . 2) (0 . 3)) Slur
 
 flagHide = \once \override Voice.Flag.transparent = ##t
+textAdjustOne = \once \override TextScript.Y-offset = #2.5
 
 cueBassClefLow = { 
   \once \override Staff.CueClef.Y-offset = #-4 
@@ -101,10 +124,14 @@ cueBassClefLow = {
 
 cueClefUnbrokenVisibility = {
   %% Truth vector = end-of-line unbroken begin-of-line
-  \override Staff.CueClef.break-visibility = ##( #f #f #f )
+  \override Staff.CueClef.break-visibility = ##( #f #t #t ) % #f #f #f
 }
 
-ottavaEight = { \ottava #1 \set Staff.ottavation = #"8" }
+ottavaEight = { 
+  \ottava #1 
+  \set Staff.ottavation = #"8" 
+}
+ottavaAdjustOne = \once \override Staff.OttavaBracket.Y-offset = #8
 
 legendOne = \markup { \center-align \smaller "doux et soutenu" }
 legendTwo = \markup { \center-align \italic \smaller "doux mais en dehors" }

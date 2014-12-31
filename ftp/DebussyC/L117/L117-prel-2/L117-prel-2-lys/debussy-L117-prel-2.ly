@@ -8,7 +8,7 @@
 \version "2.19.15"
 \language "english"
 
-% #(set-default-paper-size "letter")
+\include "articulate.ly"
 
 #(set-global-staff-size 18)
 
@@ -120,27 +120,27 @@ upperStaffTop = \relative c''' {
     \\ 
     {  
       <fs, d>4-- ~ ( |
-      q8 <e c> <fs d>8. <gs e>16 |
+      q8 [ <e c> <fs d>8. <gs e>16 ] |
       q2 ) | 
       s4
     } 
   >>
   \slurUp \stemUp
   r8 af,='32 ( bf af fs |
-  af16 \< <e c'>16 <fs bf>8 \! ~ q16 ) r af32 \pp ( bf af fs |
-    
+  af16 <e c'>16 <fs bf>8 ~ q16 ) r af32 ( bf af fs | 
+   
   \barNumberCheck #24
-  af16 \< <e c'>16 <fs bf>8 \! ~ q16 ) r 
-    \subGroupEighth gs32 \< ( [ c e gs \! \subGroupOff |
+  af16 <e c'>16 <fs bf>8 ~ q16 ) r 
+    \subGroupEighth gs32 ( [ c e gs \subGroupOff |
   \tupletDown
-  <d fs>32 <c e> <bf d>8. ] ) ~ q8 
-    \tuplet 3/2 { <af c>16 ( \> <bf d> <af c> \! } |
+  <d fs>32 <c e> <bf d>8. ] ) ~ q8
+    \tweak TupletNumber.Y-offset #-2
+    \tuplet 3/2 { <af c>16 ( <bf d> <af c> } |
     \break
   \acciaccatura { <fs bf>8 } <e af>4. )
-    %\textSpannerUp
-    \tuplet 3/2 { <fs bf>16^- ( \> q^- <e af>^- \! } |
+    \tuplet 3/2 { <fs bf>16^- ( q^- <e af>^- } |
   \acciaccatura { <fs bf>8 } <e af>2 ) ~ |
-  q4 \mark "a Tempo" r8 af32 ( [ bf af fs ) |
+  \markAlignLeft \mark "a Tempo" q4 r8 af32 ( [ bf af fs ) |
   af16-. ( c-. ) ] bf32 ( [ d c e af8-. ] ) af,32 ( bf af fs |
   s8 ) bf32 ( d c e af8 ~ af32 bf af bf ) |
   c8 ( [ d64 df c16. ] ) c8 ( d64 df c16. ) |
@@ -175,6 +175,7 @@ upperStaffTop = \relative c''' {
     \stringSpanner "Emporté" { <af' af,>32 ( <bf bf,> <af af,> <gf gf,> |
   <af af,>32 [ <bf bf,> <df df,> <ef ef,> <af df, af>8 ] ~ }
     \stringSpanner "Cédez" { q16 <ef ef,>_. <df df,>_. <bf bf,>_. ) } |
+    \break
   \stringSpanner "Très retenu" { <df, df,>32 ( ef <ef ef,>8 <gf gf,>16 ) 
     <df df,>32 ( ef <ef ef,>8. ) |
   <df df,>32 ( ef <ef ef,>8 <bf' bf,>16 ) <df, df,>32 ( ef <ef ef,>8. ) ~ |
@@ -184,7 +185,7 @@ upperStaffTop = \relative c''' {
   \barNumberCheck #48
   \key c \major
   r8
-    -\tweak X-offset #-6
+    -\tweak X-offset #-7.2
     -\tweak Y-offset #-5
     _\markup \override #'(baseline-skip . 2.0) \tiny \italic 
       \column { "(comme un très" "léger glissando)" }
@@ -195,7 +196,7 @@ upperStaffTop = \relative c''' {
       \new Voice {
         \voiceTwo
         \scaleDurations 4/11 {
-          \staffDown \stemUp fs,,=16. ( \graceOn 
+          \staffDown \stemUp \shapeSlurNine fs,,=16. ( \graceOn 
           \set stemLeftBeamCount = #3
           \set stemRightBeamCount = #1
           gs32 
@@ -218,7 +219,7 @@ upperStaffTop = \relative c''' {
       \new Voice {
         \voiceTwo
         \scaleDurations 4/11 {
-          \staffDown \stemUp af,,=16. ( \graceOn 
+          \staffDown \stemUp \shapeSlurTen af,,=16. ( \graceOn 
           \set stemLeftBeamCount = #3
           \set stemRightBeamCount = #1
           bf32 
@@ -244,7 +245,7 @@ upperStaffTop = \relative c''' {
       \new Voice {
         \voiceTwo
         \scaleDurations 4/11 {
-          \staffDown \stemUp fs,,=16. ( \graceOn 
+          \staffDown \stemUp \shapeSlurTwelve fs,,=16. ( \graceOn 
           \set stemLeftBeamCount = #3
           \set stemRightBeamCount = #1
           gs32 
@@ -271,7 +272,7 @@ upperStaffTop = \relative c''' {
       \new Voice {
         \voiceTwo
         \scaleDurations 4/11 {
-          \staffDown \stemUp af,,=16. ( \graceOn 
+          \staffDown \stemUp \shapeSlurThirteen af,,=16. ( \graceOn 
           \set stemLeftBeamCount = #3
           \set stemRightBeamCount = #1
           bf32 
@@ -319,7 +320,7 @@ upperStaffBottom = \relative c' {
   
   \barNumberCheck #32
   \stringSpanner "Cédez" { s16 s s s s s s s } |
-  r8 \shapeSlurThree af=''-- ( [ bf-- c-- ] ~ |
+  r8 af=''-- _( [ bf-- c-- ] ~ |
   c4 d-- ) ~ |
   d8 \( e-- d-- c-- |
   bf16 af bf4-- ( af8 ) \) |
@@ -342,10 +343,10 @@ upperStaffBottom = \relative c' {
   s2 |
   s2 |
   \voiceOne
-  r8 ^\legendThree af'=''-. \( bf-. c-. ~ |
+  r8 ^\legendThree af'=''-. \( [ bf-. c-. ] ~ |
   c4 d-- ~ |
-  d8  e-. d-. c-. |
-  bf16-. af-. bf8-- ~ bf _( af _~ ) \) |
+  d8 [ e-. d-. c-. ] |
+  bf16-. af-. bf8-- ^\> ~ bf \! _( af _~ ) \) |
   \voiceTwo
   af2 |
   s2 |
@@ -386,16 +387,16 @@ lowerStaffTop = \relative c {
   <bf bf,>16 <af af,> <bf bf,>4 <af af,>8 ) |
   q2 |
   q2 |
-  r8 \clef treble <af' e c af>-. ( <bf fs d bf>-. 
-    \configLVTiesOne <c af e c>-. ) \laissezVibrer \clef bass |
+  r8 \clef treble <af' e c af>_. [ _( <bf fs d bf>_. 
+    \configLVTiesOne <c af e c>_. ) ] \laissezVibrer \clef bass |
     
   \barNumberCheck #16
   s2 |
-  r8 \clef treble <af e c af>-. ( <bf fs d bf>-. 
-    \configLVTiesOne <c af e c>-. ) \laissezVibrer \clef bass |
+  r8 \clef treble <af e c af>_. [ _( <bf fs d bf>_. 
+    \configLVTiesOne <c af e c>_. ) ] \laissezVibrer \clef bass |
   s2 |
-  r8 \clef treble <af e c af>-. ( <bf fs d bf>-. 
-    \configLVTiesOne <c af e c>-. ) \laissezVibrer \clef bass |
+  r8 \clef treble <af e c af>_. [ _( <bf fs d bf>_. 
+    \configLVTiesOne <c af e c>_. ) ] \laissezVibrer \clef bass |
   s2 |
   s2 |
   s4 \voiceFour \staffUp d,='4-- ~ |
@@ -413,15 +414,16 @@ lowerStaffTop = \relative c {
   \stemDown d16 ( e8 ) e16-. d16 ( e8 ) e16-. |
   
   \barNumberCheck #32
-  \stemUp d16-. ^\p ( e-. \staffUp \stemDown d'-. e,-. )
+  \stemUp d16-. ^\p ( e-. \staffUp \stemDown d'^. e,^. )
     \staffDown \stemUp d16-. %{ ^\markup { \whiteout \italic "dim." } %} ( 
-    e-. \staffUp \stemDown d'-. e,-. ) 
+    e-. \staffUp \stemDown d'^. e,^. ) 
   \staffDown \clef bass
   <<
     \new Voice {
-      \voiceOne r8 \clef treble <af, e c af>8-. ( <bf fs d bf>-. <c af e c> ~ |
+      \voiceOne 
+      r8 \clef treble <af, e c af>8-. ( <bf fs d bf>-. <c af e c>-. ~ |
       q4 <d bf fs d>4-- ) ~ |
-      q8 <e c af e>-. \( <d bf fs d>-. <c af e c>-. |
+      q8 \shapeSlurEight <e c af e>-. \( <d bf fs d>-. <c af e c>-. |
       <bf fs d bf>16-. <af e c af>-. <bf fs d bf>4-- ( <af e c af>8 ) \)
     }
     \new Staff \with { createSpacing = ##f \omit TimeSignature } {
@@ -451,7 +453,7 @@ lowerStaffTop = \relative c {
   \bar "||"
     
   \key bf \minor
-  af32 [ ( bf af gf \staffDown 
+  \shapeSlurSeven af32 [ ( bf af gf \staffDown 
     <<
       {
         \voiceTwo \stemUp ef8 ) ] ~ ef4 
@@ -460,7 +462,7 @@ lowerStaffTop = \relative c {
         \voiceOne
         \scaleDurations 4/14 { 
           \staffDown
-          ef32 [ \(
+          \shapeSlurSix ef32 [ \(
           \graceOn gf af bf df \staffUp \stemDown \clef treble 
           ef \< gf af bf df ] \stemUp ef gf af bf \graceOff 
         }
@@ -480,7 +482,7 @@ lowerStaffTop = \relative c {
         \subGroupThirtySecond
         \scaleDurations 4/19 {  
           \staffDown
-          ef32 [ ^\(
+          \shapeSlurFive ef32 [ ^\(
           \graceOn gf af bf 
           \set stemRightBeamCount = #1
           df
@@ -492,25 +494,25 @@ lowerStaffTop = \relative c {
           \staffDown \clef treble \stemUp ef gf af bf 
           \set stemRightBeamCount = #1
           df
-          \set stemLeftBeamCount = #1
-          \staffUp \ottavaEight \stemDown ef gf af bf ] \graceOff
+          \set stemLeftBeamCount = #1 \staffUp \ottavaAdjustOne \ottavaEight
+          \stemDown ef gf af bf ] \graceOff
         }
         \subGroupOff
-        \stemNeutral df16^> ( [ bf ] ) \) \ottava #0
+        \stemNeutral df16 %{ -\tweak padding #1 %} ^> ( [ bf ] ) \) \ottava #0
       }
     >>
     \clef bass \stemDown <bf,,,= ef,>16 _( <df gf,> |
-  <ef bf>16 [ <gf df> \staffUp <df' af ef>8 ] ~ q4 ) \staffDown |
-  \stemUp <af, df,>16 ( <gf ef>8. ) <af df,>16 ( <gf ef>8. ) |
+  <ef bf>16 [ <gf df> \staffUp <df' af ef>8 ] ) ~ q4 \staffDown |
+  \voiceThree <af, df,>16 ( <gf ef>8. ) <af df,>16 ( <gf ef>8. ) |
   <af df,>16 ( <gf ef>8. ) <af df,>16 ( <gf ef>8. ) ~ |
-  q4 af \rest |
+  q4 r |
   
   \barNumberCheck #48
   s2 |
   s2 |
   fs8 \rest 
     \scaleDurations 4/11 {
-      \stemUp \graceOn fs16. (  
+      \stemUp \graceOn \shapeSlurFifteen fs16. (  
       \set stemLeftBeamCount = #3
       \set stemRightBeamCount = #1
       gs32 
@@ -525,7 +527,7 @@ lowerStaffTop = \relative c {
     s4 |
   af,8 \rest
     \scaleDurations 4/11 {
-      \stemUp \graceOn af16. (  
+      \stemUp \graceOn \shapeSlurSixteen af16. (  
       \set stemLeftBeamCount = #3
       \set stemRightBeamCount = #1
       bf32 
@@ -540,7 +542,7 @@ lowerStaffTop = \relative c {
     s4 |
   fs,,8 \rest
     \scaleDurations 4/11 {
-      \stemUp \graceOn fs16. ^(  
+      \stemUp \graceOn \shapeSlurSeventeen fs16. ^(  
       \set stemLeftBeamCount = #3
       \set stemRightBeamCount = #1
       gs32 
@@ -555,7 +557,7 @@ lowerStaffTop = \relative c {
     s4 |
   af,8 \rest
     \scaleDurations 4/11 {
-      \stemUp \graceOn af16. _(  
+      \stemUp \graceOn \shapeSlurEleven af16. _(  
       \set stemLeftBeamCount = #3
       \set stemRightBeamCount = #1
       bf32 
@@ -583,8 +585,9 @@ lowerStaffTop = \relative c {
     { \voiceFour fs4 fs | fs4 }
     \new Voice {
       \voiceThree
+      \mergeDifferentlyDottedOn
       \scaleDurations 8/12 {
-        \stemUp fs16. _( [
+        \stemUp \shapeSlurFourteen fs16. _( [
         \set stemLeftBeamCount = #3
         \set stemRightBeamCount = #1
         \graceOn
@@ -599,7 +602,7 @@ lowerStaffTop = \relative c {
         \graceOff \staffDown s
       }
       \scaleDurations 8/12 {
-        \stemUp fs,,16. _( [
+        \stemUp \shapeSlurFourteen fs,,16. _( [
         \set stemLeftBeamCount = #3
         \set stemRightBeamCount = #1
         \graceOn
@@ -615,7 +618,7 @@ lowerStaffTop = \relative c {
       }
       |
       \scaleDurations 8/12 {
-        \stemUp fs,,16. _( [
+        \stemUp \shapeSlurFourteen fs,,16. _( [
         \set stemLeftBeamCount = #3
         \set stemRightBeamCount = #1
         \graceOn
@@ -644,8 +647,8 @@ lowerStaffBottom = \relative c, {
   bf8-. ( bf-. r bf-. |
   bf4-. ) r |
   bf8-. ( bf-. r bf-. |
-  bf4-. ) r |
-  s2 |
+  bf4-. ) r _\> |
+  s4 s8. s16 \! |
   r8 bf4-. ( bf8-. ) |
   r8 bf4-. ( bf8-. |
   bf4-. ) s |
@@ -690,6 +693,7 @@ lowerStaffBottom = \relative c, {
       \voiceThree s4.
       \autoBeamOff \crossStaff { 
         af''32 _( bf af gf ) |
+        \break
         af32 _( bf af gf ) s4. |
       } \autoBeamOn 
     }
@@ -713,16 +717,16 @@ lowerStaffBottom = \relative c, {
   \repeat unfold 4 {
     bf,4-- s4 |
   }
+  s2 \sustainOn |
   s2 |
-  s2 |
-  \voiceThree R2 |
+  \voiceThree R2 \sustainOff |
 }
 
 dynamics = {
   s4 s4 -\pTresDoux |
   s4 \< s4 \> |
   s4 \! s8 \p s8 \> |
-  s4 \piuP s16 s \> s s \! |
+  \dynamicAdjustOne s4 \piuP s16 s \> s s \! |
   s2 |
   s2 |
   s2 -\ppExpr |
@@ -731,7 +735,10 @@ dynamics = {
   s2 |
   s2 |
   s4 \< s4 \! |
-  s2 * 4 |
+  s2 |
+  s2 |
+  s16 s \> s s s4 \! |
+  s2 |
   s2 \pp |
   
   \barNumberCheck #16
@@ -742,18 +749,20 @@ dynamics = {
   s4 s \> |
   s4 \! s \pp |
   s4 s -\ppTresSouple |
-  s2 |
+  \hairpinAdjustOne s16 \< s s8 \! s s \pp |
   
   \barNumberCheck #24
-  s2 * 3 |
-  s2 \pp |
+  \hairpinAdjustOne s16 \< s s8 \! s s32 \< s s s \! |
+  s4. s32 \> s s s \! |
+  s4. s32 \> s s s \! |
+  \dynamicAdjustTwo s2 \pp |
   s4 s8 s \p |
   s8 s \< s \! s \p |
   s8 s \< s s32 s s s \!
   s16 \< s \! s8 s16 \< \p s \! s8 | 
   
   \barNumberCheck #32
-  s4 s ^\markup { \italic "dim." } |
+  s4 \textAdjustOne s -\markup { \italic "dim." } |
   s2 \pp |
   s2 |
   s2 |
@@ -765,11 +774,11 @@ dynamics = {
   \barNumberCheck #40
   s16 \< s s s \! s \< s s s \! |
   s2 ^\markup { \italic "dim. molto" } |
-  s8 \p s s \once \override DynamicText.X-offset = -3 s \mf |
+  s8 \p s s \dynamicAdjustThree s \mf |
   s8 s32 s -\tweak extra-offset #'(1 . -2) -\cres 
     s -\tweak extra-offset #'(0 . 7) ^\rapide
     s -\tweak extra-offset #'(2 . 0) -\molto s8  s \mf \< |
-  s8 s \f s -\tweak extra-offset #'(0 . -1) -\molto \> s |
+  s8 s -\tweak X-offset #-2 \f s -\tweak extra-offset #'(0 . -1) -\molto \> s |
   s16 \p \< s8. s16 \piuP \> s8 s16 \! |
   s16 \p \< s8. s16 \piuP \> s8 s16 \! |
   s2 |
@@ -779,11 +788,11 @@ dynamics = {
   s2 |
   s2 \hidePP |
   s2 * 3 |
-  s2 \pp |
+  s4 \pp s8 \> s \! |
   s2 |
   
   \barNumberCheck #56
-  s2 \pp |
+  s4 \pp s8 \> s \! |
   s2 |
   s2 \piuPP
   s2 * 6 |
@@ -810,8 +819,9 @@ lowerStaff = {
 %-------Typeset music 
 \score {
   \removeWithTag #'played
-  \new PianoStaff <<
-    %%\set PianoStaff.midiInstrument = "acoustic grand"
+  \new PianoStaff \with {
+    \override StaffGrouper.staff-staff-spacing = #'( (padding . 5) )
+  } <<
     \new Staff = "upper" { \upperStaff }
     \new Dynamics = "dyns" { \dynamics }
     \new Staff = "lower" \with { \accepts "Staff" } { \lowerStaff } 
@@ -826,6 +836,7 @@ lowerStaff = {
 
 %-------generate Midi
 \score {
+  \articulate <<  
     \removeWithTag #'printed
     \new PianoStaff <<
         \set PianoStaff.midiInstrument = "acoustic grand"
@@ -833,6 +844,7 @@ lowerStaff = {
         \new Dynamics = "dyns" { \dynamics }
         \new Staff = "lower" { \clef bass \global \lowerStaff }
     >>
-    \midi {  
-    }
+  >>
+  \midi {  
+  }
 }
