@@ -1,3 +1,5 @@
+\version "2.18.2"
+
 % -- "Glory to God in the Highest" by G. B. Pergolesi.
 % -- typeset by Robinson Tryon (robinson.tryon@alum.dartmouth.org), August 2004
 %
@@ -5,14 +7,14 @@
 % License: Creative Commons Attribution-ShareAlike
 
 \paper {
-    linewidth = 160 \mm
+  top-margin = .75 \in
+  bottom-margin = .75 \in
+  left-margin = 1 \in 
+  right-margin = 1 \in
 }
 
 % - be able to change the font size of the document
 #(set-global-staff-size 12)
-
-\version "2.2.0"
-
 
 \header {
  mutopiatitle = "Glory to God in the highest"
@@ -21,109 +23,66 @@
  date = "1700s"
  source = "G Shirmer, Inc., 1904"
  style = "Classical"
- filename = "glorytogod_pergolesi.ly"
  copyright = "Creative Commons Attribution-ShareAlike"
  maintainer = "Robinson Tryon"
  maintainerEmail = "robinson.tryon@alum.dartmouth.org"
- lastupdated = "2004/09/05"
 
  title = "Glory to God in the highest."
- subtitle = "The Angel's Song\\\(from the Gospel of St. Luke, chap. ii., v.14,)"
- subsubtitle = "for Christmas.\\\For Four-Part Chorus and Quartet of Mixed Voices\\\Organ-part by Vincent Novello."
+ subtitle = \markup { \center-column { 
+   \line { The Angel's Song } 
+   \line { (from the Gospel of St. Luke, chap. ii., v.14,) } } }
+ subsubtitle = \markup { \center-column { 
+   \line { for Christmas. } 
+   \line { For Four-Part Chorus and Quartet of Mixed Voices } 
+   \line { Organ-part by Vincent Novello. } } }
  composer = "G. B. Pergolesi"
 
-%  arranger = \markup { \italic {Will Mcfarlane. }}
+% arranger = \markup { \italic {Will Mcfarlane. }}
 % not really a poet, but using it to left-justify the editor
-  poet = "{\it Edited by\\\Will C. Macfarlane }"
+ poet = \markup { \italic { \column { 
+     \line { Edited by } 
+     \line { Will C. Macfarlane } } } }
  mutopiapoet = "Will C. Macfarlane"
 
-%  tagline = "\\parbox{\hsize}{\\thefooter\\quad\\small \\\\This music is part of the Mutopia project, \\texttt{http://www.mutopiaproject.org/}\\\\It has been typeset and placed under the " + \copyright + " license by " + \maintainer + ".\\\\Please copy this music and share it!}"
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright " + \maintainer + " 2004.} \\makebox[\\textwidth][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[\\textwidth][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[\\textwidth][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}"
  footer = "Mutopia-2004/09/05-477"
- 
  texidoc = "Glory to God in the highest (Pergolesi)"
 }
 
 
 % -- use global information to designate common stuff (key, time, etc..)
-global = \notes {
+global =  {
     \key g \major
     \time 4/4
-
-% --- this section determines auto page and line breaks (alternate below)
-
-% here, we use silent notes to put in the correct special barlines
-
-% --------------------------------------------------
-% NOTE: bug in lilypond 2.2 prevents the newpage formatting from
-%     being applied properly.  I'll uncomment this part when I get a new
-%     version of lilypond running.
-% --------------------------------------------------
-%{
-
-    s1*3 \break s1*2 \break s1*3 \newpage
-    s1*3 \break s1*2 \break s1*2 \newpage
-    s1*3 \break s1*3 \break s1*2 \newpage
-
-    s1*4 \break s1*4 \break s1*4 \newpage
-    s1*4 \break s1*2 \break s1*3 \newpage
-    s1*3 \break s1*3 \break s1*3 \newpage
-    s1*3 \break s1*4 \break s1*4
-
-    \bar "|."
-
-%}
-% --- Switch this section with the one above to 
-% ----  avoid the automatic page breaks.
-
-%-- here, we use silent notes to put in the correct special barlines
-    s1*26
-
-%-- 3 bars of rest for singers here
-    s1*3
-
-%-- bass solo for 3 bars
-    s1*3
-
-% -- 10 bars, then fermata
-    s1*10
-
-%-- 15 bars, then fermata
-    s1*15
-
-% -- 12 bars to end of piece
-    s1*12
-
-    \bar "|."
-
 }
 
 % ------ GENERAL MARKUP ITEMS ------
-markSoli = \markup { \sans \bigger \bold { Soli. }}
-markChorus = \markup { \bold \sans \bigger { Chorus. }}
+markSoli = \markup { \sans \larger \bold { Soli. }}
+markChorus = \markup { \bold \sans \larger { Chorus. }}
 
-markChorusF = \markup { \column < \bold \sans \bigger { Chorus. } \dynamic { f } > }
-markChorusP = \markup { \column < \bold \sans \bigger { Chorus. } \dynamic { p } > }
-markSoliP = \markup { \column < \bold \sans \bigger { Soli. } \dynamic { p } > }
+markChorusF = \markup { \column { \bold \sans \larger { Chorus. } \dynamic { f } } }
+markChorusP = \markup { \column { \bold \sans \larger { Chorus. } \dynamic { p } } }
+markSoliP = \markup { \column { \bold \sans \larger { Soli. } \dynamic { p } } }
 
 markPed = \markup { Ped. }
-% markPed = \sustainDown
+% markPed = \sustainOn
 
 markMan = \markup { Man. }
 markPSW = \markup { \dynamic { p } Sw. }
 markFGT = \markup { \dynamic { f } Gt. }
 
 editBreak = \break
-editNewPage = \newpage
+editNewPage = \pageBreak
+
+noDynamic = \once \omit DynamicText
 
 % ---- END MARKUP ITEMS ------------
 
 
 % soprano centers around a c above middle c
-sopMusic = \notes  \relative c'' {
+sopMusic =   \relative c'' {
 
 %- 1 -
-    b8^\markup { \column < \bigger{ Allegro.} \bigger \sans \bold { "    Soli." } > }
+    b8^\markup { \column { \larger{ Allegro.} \larger \sans \bold { "    Soli." } } }
       b4 c16(a) d8 d4 e16(c) 
     b8 b4 c16(a) d8 d4 e16(c)
     \stemUp { b8\noBeam c16(a) b8\noBeam c16(a) b8\noBeam c16(a) b8\noBeam c16(a) }
@@ -135,7 +94,7 @@ sopMusic = \notes  \relative c'' {
     d8\noBeam e\noBeam d\noBeam e\noBeam fis8.(e16) d4
     b8 b4 c16(a) d8 d4 e16(c)
     b8 b4 c16(a) d8 d4 e16(c)
-    \stemBoth
+    \stemNeutral
 
 %- 10 -
     b8\noBeam c16(a) b8\noBeam c16(a) b8\noBeam c16(a) b8\noBeam c16(a)
@@ -154,7 +113,7 @@ sopMusic = \notes  \relative c'' {
 %- 20 -
     d8 d4 e16(c) b8\noBeam c16(a) b8\noBeam c16(a)
     b8\noBeam c16(a) b8\noBeam c16(a) b4(c8) c\noBeam
-\stemBoth
+\stemNeutral
 
     b4(a) g r4
     r1
@@ -164,7 +123,7 @@ sopMusic = \notes  \relative c'' {
 \stemDown
     d'8^\markChorus\noBeam d\noBeam d\noBeam d\noBeam d4(e8) e\noBeam
     d2 b4 r4
-\stemBoth
+\stemNeutral
     r1
     r1
     r1
@@ -186,7 +145,7 @@ sopMusic = \notes  \relative c'' {
 %- 40 -
 \stemDown
     r2 b2(
-\stemBoth
+\stemNeutral
     a2) g
     fis2 g
 \stemDown
@@ -196,7 +155,7 @@ sopMusic = \notes  \relative c'' {
 %- 45 -
     e8 e4 f16(d) e8\noBeam f16(d) e8\noBeam f16(d)
     e8\noBeam f16(d) e8\noBeam f16(d) e8.(c16) c4
-\stemBoth
+\stemNeutral
     r2 a2^\p ~
     a2 b2( ~
     b2 a4.) a8
@@ -214,7 +173,7 @@ sopMusic = \notes  \relative c'' {
     d8 d4 e16(c) b8\noBeam c16(a) b8\noBeam c16(a)
     b8\noBeam c16(a) b8\noBeam c16(a) b4 e4
     d2 b4 r4
-\stemBoth
+\stemNeutral
     r2^\fermata g2^\p
     r4 g4 g4(e)
 
@@ -224,7 +183,7 @@ sopMusic = \notes  \relative c'' {
 \stemDown
     r2 b2 ~
     b2 b2 ~
-    b2 \stemBoth a2 ~
+    b2 \stemNeutral a2 ~
 
 %- 65 -
     a2 a2(
@@ -232,9 +191,11 @@ sopMusic = \notes  \relative c'' {
     a2 b4 r4
     r2^\fermata a4^\p r4
     r2^\fermata g2^\fermata^\pp
+    
+    \bar "|."
 }
 
-sopWords = \lyrics {
+sopWords = \lyricmode {
 
 %- 1 -
     Glo -- ry to __ God in the high -- est,
@@ -313,7 +274,7 @@ sopWords = \lyrics {
 
 }
 
-altoMusic = \notes  \relative c'' {
+altoMusic =   \relative c'' {
 
 %- 1 -
 \stemUp
@@ -335,14 +296,14 @@ altoMusic = \notes  \relative c'' {
     g4 g b4^\markSoli ( ~ b16 c a b
     g16 b a c) b8 r8 \stemUp b4( ~ b16 c a b
     g16 b a c) b8 r8 e16( d c b) e( d c b)
-    c8^\markChorusF\noBeam d16(b) c8\noBeam d16(b) \stemBoth c8.(g16) g4
+    c8^\markChorusF\noBeam d16(b) c8\noBeam d16(b) \stemNeutral c8.(g16) g4
     
 %- 15 -
 \stemDown
     cis4^\markSoli ( ~ cis16 d b cis a cis b d) cis8 r8
     cis4( ~ cis16 d b cis a cis b d) cis8 r8
     fis16( e d cis) fis( e d cis) d8^\markChorus\noBeam e16(cis) d8\noBeam e16(cis)
-    d8 \stemBoth a\noBeam r4 g8 g4 fis8
+    d8 \stemNeutral a\noBeam r4 g8 g4 fis8
     g8 g4 fis8 g g4 fis8
 
 %- 20 -
@@ -355,7 +316,7 @@ altoMusic = \notes  \relative c'' {
 
 %- 25 -
     b8^\markChorus\noBeam c16(a) b8\noBeam c16(a) b4(c8) c8\noBeam
-\stemBoth
+\stemNeutral
     a2 b4 r4
     r1
     r1
@@ -417,10 +378,10 @@ altoMusic = \notes  \relative c'' {
     fis2) g4 r4
     r2^\fermata fis4^\p r4
     r2^\fermata d2^\fermata^\pp
-\stemBoth
+\stemNeutral
 }
 
-altoWords = \lyrics { 
+altoWords = \lyricmode { 
 
 %- 1 -
     Glo -- ry to __ God in the high -- est,
@@ -502,7 +463,7 @@ altoWords = \lyrics {
 }
 
 
-tenorMusic = \notes \relative c'' { 
+tenorMusic =  \relative c'' { 
 
 \stemDown
 %- 1 -
@@ -524,7 +485,7 @@ tenorMusic = \notes \relative c'' {
 \stemDown
     b8\noBeam d\noBeam d\noBeam d\noBeam d\noBeam d\noBeam d\noBeam d\noBeam
     d4 d4 r2
-\stemBoth
+\stemNeutral
     r1
     r1
     g,8^\markChorusF\noBeam g\noBeam g\noBeam g\noBeam g8.(e16) e4
@@ -548,7 +509,7 @@ tenorMusic = \notes \relative c'' {
 %- 25 -
     g8^\markChorus\noBeam a16(fis) g8\noBeam a16(fis) g4. g8
     g4(fis) g r4
-\stemBoth
+\stemNeutral
     r1
     r1
     r1
@@ -613,10 +574,10 @@ tenorMusic = \notes \relative c'' {
     r2^\fermata a4^\p r4
 \stemDown
     r2^\fermata b2^\fermata^\pp
-\stemBoth
+\stemNeutral
 }
 
-tenorWords = \lyrics { 
+tenorWords = \lyricmode { 
 
 % -- just sop/alto
 
@@ -693,7 +654,7 @@ tenorWords = \lyrics {
     Peace! Peace!
 }
 
-bassMusic = \notes \relative c {
+bassMusic =  \relative c {
 
 %- 1 -
     r1
@@ -727,7 +688,7 @@ bassMusic = \notes \relative c {
     g8\noBeam d\noBeam g\noBeam d\noBeam g4(c,8) c8\noBeam
 \stemUp
     d2 g,4 r4
-\stemBoth
+\stemNeutral
     g'1^\markSoli ~
     g2 ~ g4. fis8
 
@@ -735,13 +696,13 @@ bassMusic = \notes \relative c {
     g8^\markChorus\noBeam d\noBeam g\noBeam d\noBeam g4(c,8) c8\noBeam
 \stemUp
     d2 g,4 r4
-\stemBoth
+\stemNeutral
     r1
     r1
     r1
 
 %- 30 -
-    r2^\fermata c'2^\markup { \column < \bigger \sans \bold { Solo. } \dynamic { mf } > }
+    r2^\fermata c'2^\markup { \column { \larger \sans \bold { Solo. } \dynamic { mf } } }
     c,2 b4 g'
 \stemUp
     r4 b,4 a2(
@@ -754,14 +715,14 @@ bassMusic = \notes \relative c {
     b2 c4 r4
     r2 cis2 ~
     cis2 d4 r4
-\stemBoth
+\stemNeutral
 
 %- 40 -
     r2 g2(
 \stemUp
     c,!2) d
     d2 g,
-\stemBoth
+\stemNeutral
     r2^\fermata c'2^\ff ~
     c1 ~
 
@@ -790,7 +751,7 @@ bassMusic = \notes \relative c {
     r2 cis2
 \stemUp
     r4 cis4 d2
-\stemBoth
+\stemNeutral
     r2 g2(
     f2) e2(
     d2) c2(
@@ -803,10 +764,10 @@ bassMusic = \notes \relative c {
     r2^\fermata d'4^\p r4
     r2^\fermata g,2^\fermata^\pp
 
-\stemBoth
+\stemNeutral
 }
 
-bassWords = \lyrics { 
+bassWords = \lyricmode { 
 
 % -- just sop/alto
 
@@ -890,12 +851,12 @@ bassWords = \lyrics {
 
 % --- Organ parts:
 
-organRightMusic = \notes \relative c'' {
+organRightMusic =  \relative c'' {
 %- 1 -
 
 
 %-- '\tempo' not working, so used workaround    
-     <g b>8^\markup { \bigger { Allegro. } (\note #"4" #1 = 80)}
+     <g b>8^\markup { \larger { Allegro. } (\note #"4" #1 = 80)}
         <g b>4 <a c>16( <fis a>) <b d>8 <b d>4 <c e>16( <a c>)
     <g b>8 <g b>4 <a c>16( <fis a>) <b d>8 <b d>4 <c e>16( <a c>)
     <g b>8 <a c>16( <fis a>) <g b>8 <a c>16( <fis a>) <g b>8 <a c>16( <fis a>) <g b>8 <a c>16( <fis a>)
@@ -919,7 +880,7 @@ organRightMusic = \notes \relative c'' {
 % - for the crescendo
 %\dynamicUp
     <d g b>8. <c fis a>16 <b g'>4
-        << { d'4^\< ~ d16 e c\! d } \\ { b4 ~ b8 a } >>
+        << { \noDynamic d'4 \p ^\< ~ d16 e c\! d } \\ { b4 ~ b8 a } >>
     << { b16 d c e d8 } \\ {g,8[ a] b} >> r8
         << { d4 ~ d16 e c d } \\ { b4 ~ b8 a } >>
     << { b16 d c e d8 } \\ {g,8[ a] b} >> r8
@@ -976,13 +937,13 @@ organRightMusic = \notes \relative c'' {
     <c e>8^.( <c e>^. <c e>^. <c e>^.) <b d> g-. b-. d-.
 
     g8-. b-. d4-. <d, g>8^.( <d g>^. <d g>^. <d g>^.)
-    <d g>8^.( <d g>^. <d g>^. <d g>^. ) <e g> g,-| c-| e-|
+    <d g>8^.( <d g>^. <d g>^. <d g>^. ) <e g> g,-! c-! e-!
 \stemDown
-    g8-| c-| e4-| \stemBoth <e, a>8^.( <e a>^. <e a>^. <e a>^.)
-    <e a>8^.( <e a>^. <e a>^. <e a>^.) <fis a> d-| fis-| a-|
+    g8-! c-! e4-! \stemNeutral <e, a>8^.( <e a>^. <e a>^. <e a>^.)
+    <e a>8^.( <e a>^. <e a>^. <e a>^.) <fis a> d-! fis-! a-!
 
 %- 40 -
-    d8-| fis-| a4 <d,, g b>8 <d g b> <d g b> <d g b>
+    d8-! fis-! a4 <d,, g b>8 <d g b> <d g b> <d g b>
     <c e a>8 <c e a> <c e a> <c e a> <b d g> <b d g> <b d g> <b d g>
     <a c d fis>8 <a c d fis> <a c d fis> <a c d fis> <b d g>2
     r2^\fermata <g' c e>8 <g c e>4 <d' f>16 <b d>
@@ -991,9 +952,9 @@ organRightMusic = \notes \relative c'' {
 %- 45 -
     << { g'8 g4 a16 f e8 f16 d e8 f16 d } \\ { e8 <g, e'>4 f'16 d <g, c>8 <g b> <g c> <g  b> } >>
     << { e'8 f16 d e8 f16 d } \\ { <g, c>8[ <g b>] <g c>[ <g b>] } >> <g c e>8.( <e g c>16) <e g c>4
-    r2 <d fis! a>8-| <d fis a>-| <d fis a>-| <d fis a>-|
+    r2 <d fis! a>8-! <d fis a>-! <d fis a>-! <d fis a>-!
     <d fis a>8 <d fis a> <d fis a> <d fis a> <d g b> <d g b> <d g b> <d g b>
-    <d g b>8 <d g b> <d g b> <d g b> <d fis a> d'-| a-| fis-|
+    <d g b>8 <d g b> <d g b> <d g b> <d fis a> d'-! a-! fis-!
 
 %- 50 -
     d8 r8 r4 << { a''4 ~ a16 b g a } \\ { fis4 ~ fis8 e } >>
@@ -1005,18 +966,18 @@ organRightMusic = \notes \relative c'' {
 %- 55 -
     << { b'8 b4 c16 a g8 a16 fis g8 a16 fis } \\ { d8 d4 <c fis>8 <b d> <c d> <b d> <c d> } >>
     << { g'8 a16 fis g8 a16 fis } \\ { <b, d>8 <c d> <b d> <c d> } >> b16 g' d b e c g' c,
-    <b d>8-| g'-| <a, c>-| fis'-| <g, b g'>4 r4
+    <b d>8-! g'-! <a, c>-! fis'-! <g, b g'>4 r4
 \slurDown
     r2^\fermata g16[( d8.) b'16( g8.)]
-    d'16[( b8.) g16( f8. )] e8 c-| e-| g-|
+    d'16[( b8.) g16( f8. )] e8 c-! e-! g-!
 
 %- 60 -
-    c8-| e-| g4 a,16[( e8.) cis'16( a8.) ]
+    c8-! e-! g4 a,16[( e8.) cis'16( a8.) ]
 \stemUp
-    e'16[( cis8. ) a16( g8.)] fis!8 d-| fis-| a-|
-\stemBoth
-\slurBoth
-    d-| fis-| a4-| <d,, g b>8-| <d g b>-| <d g b>-| <d g b>-|
+    e'16[( cis8. ) a16( g8.)] fis!8 d-! fis-! a-!
+\stemNeutral
+\slurNeutral
+    d-! fis-! a4-! <d,, g b>8-! <d g b>-! <d g b>-! <d g b>-!
     <d g b>8 <d g b> <d g b> <d g b> <e gis b> <e gis b> <e gis b> <e gis b>
     <e gis b>8 <e gis b> <e gis b> <e gis b> <a, e' a> <a e' a> <a e' a> <a e' a>
 
@@ -1029,7 +990,7 @@ organRightMusic = \notes \relative c'' {
 
 }
 
-organLeftMusic = \notes \relative c {
+organLeftMusic =  \relative c {
 %- 1 -
 
     << { g'8^\markup { \dynamic { p } Sw 8' with Oboe } g g g g g g g } \\ { g,2_\markMan g } >>
@@ -1078,7 +1039,7 @@ organLeftMusic = \notes \relative c {
 %-- 20 + --
     <g d' g>8 <d' a' d> <g d'> <d a' d>
     <g d'>8 <d a' d> <g d'> <d a' d> <g d'>[ <g d'>] <c, g' c>[ <c g' c>]
-    <d g b d>4 <d a' d> \stemDown <g, d' g> \stemBoth r4
+    <d g b d>4 <d a' d> \stemDown <g, d' g> \stemNeutral r4
 
 % 23
 %- multi -
@@ -1093,14 +1054,14 @@ organLeftMusic = \notes \relative c {
     <g g'>8 <a a'> <b b'> <c c'> <d d'>4 <d a' d>
 
 %- 30 -
-    \stemDown <g d' g>4 <g g'>^\fermata \stemBoth r2^\markPSW 
+    \stemDown <g d' g>4 <g g'>^\fermata \stemNeutral r2^\markPSW 
 
 \slurDown
     c8-._\markMan ( c-. c-. c-.) b-.( b-. b-. b-.)
     b8-.( b-. b-. b-.) a-.( a-. a-. a-.)
 \stemUp
     d8_\markup { Soft \markPed sustain } d d d  g, g g g
-\stemBoth
+\stemNeutral
     g8 g g g  g g g g
 
 %- 35 -
@@ -1109,11 +1070,11 @@ organLeftMusic = \notes \relative c {
     <b g'>8 <b g'> <b g'> <b g'> c4 r4
 \slurUp
     r2 <cis a'>8-.( <cis a'>-. <cis a'>-. <cis a'>-.) 
-    <c a'>8-.( <c a'>-. <c a'>-. <c a'>-.) <d a'>4 r4
+    <cis a'>8-.( <cis a'>-. <cis a'>-. <cis a'>-.) <d a'>4 r4
 
 %- 40 -
     r2 g8 g g g
-    c,!8 c c c \stemUp d2 ~ \stemBoth
+    c,!8 c c c \stemUp d2 ~ \stemNeutral
     <d, d'>2 g2
     r2^\fermata
 
@@ -1124,14 +1085,14 @@ organLeftMusic = \notes \relative c {
 %-- 45 + --
     <c' g' c>8 <g d' g> <c g' c> <g d' g>
     <c g' c>8 <g d' g> <c g' c> <g d' g> <c g' c>8. <c g' c>16 <c g' c>4
-    c'8-|^\markup { Sw. }_\p b-| a-| g-|
+    c'8-!^\markup { Sw. }_\p b-! a-! g-!
 
 %- multi
     << { d8 d d d  d d d d  d d d d  d d d d  d d d d  d } \\
        { d,2_\markPed ~ d1 ~ d1 ~ d8 } >>
 
 %-- 50 + 1/8 --
-    \stemUp a''8_\markMan b cis  \stemBoth d d d d
+    \stemUp a''8_\markMan b cis  \stemNeutral d d d d
     d8 d d d  d d d d
     d8 d d d  d^\< d d d\!
     d8^\< d d d\!
@@ -1143,7 +1104,7 @@ organLeftMusic = \notes \relative c {
 %-- 55 + --
     <g d' g>8 <d a' d> <g d' g> <d a' d>
     <g d' g>8 <d a' d> <g d' g> <d a' d> <g d' g>[ <g d' g>] <c c'>[ <c c'>]
-    \stemUp d8 d d d g,4 r4 \stemBoth
+    \stemUp d8 d d d g,4 r4 \stemNeutral
     r2^\fermata <b d g>2^\markPSW_\markMan
     r4 <b d g>4 <c e g> <c, c'>
 
@@ -1166,58 +1127,58 @@ organLeftMusic = \notes \relative c {
 
 
 \score {
-    \notes 
+     
 
     <<
 	\new ChoirStaff <<
-	    \context Staff = sopranos <<
-		\set Staff.instrument = \markup { 
-		    \bigger { \bold { "Soprano.   " }}}
+	    \context Staff = "sopranos" <<
+		\set Staff.instrumentName = \markup { 
+		    \larger { \bold { "Soprano.   " }}}
 		\global
 		\clef violin
 		
-		\context Voice = sopranos { \sopMusic }
+		\context Voice = "sopranos" { \sopMusic }
 		
 		% lyrics now go BELOW the staff... 
-		\context Lyrics = sopranos { s1 }
+		\context Lyrics = "sopranos" { s1 }
 	    >>
 	    
-	    \context Staff = altos <<
-		\set Staff.instrument = \markup { 
-		    \bigger { \bold { "Alto.   " }}}
+	    \context Staff = "altos" <<
+		\set Staff.instrumentName = \markup { 
+		    \larger { \bold { "Alto.   " }}}
 		\global
 		\clef violin
 		
-		\context Voice = altos { \altoMusic }
-		\context Lyrics = altos { s1 }
+		\context Voice = "altos" { \altoMusic }
+		\context Lyrics = "altos" { s1 }
 	    >>
 	    
-	    \context Staff = tenors <<
-		\set Staff.instrument = \markup { 
-		    \bigger { \bold { "Tenor.   " }}}
+	    \context Staff = "tenors" <<
+		\set Staff.instrumentName = \markup { 
+		    \larger { \bold { "Tenor.   " }}}
 		\global
 		\clef violin
 		
-		\context Voice = tenors {\tenorMusic }
-		\context Lyrics = tenors { s1 }
+		\context Voice = "tenors" {\tenorMusic }
+		\context Lyrics = "tenors" { s1 }
 	    >>
 	    
-	    \context Staff = basses <<
-		\set Staff.instrument = \markup { 
-		    \bigger { \bold { "Bass.  " }}}
+	    \context Staff = "basses" <<
+		\set Staff.instrumentName = \markup { 
+		    \larger { \bold { "Bass.  " }}}
 		\global
 		\clef bass
 		
-		\context Voice = basses { \bassMusic }
-		\context Lyrics = basses { s1 }
+		\context Voice = "basses" { \bassMusic }
+		\context Lyrics = "basses" { s1 }
 	    >>
 	>>
 
 % --- Organ
 
 	\context PianoStaff <<
-	    \set PianoStaff.instrument = \markup {
-		\bigger { \bold { "Organ. " }}}
+	    \set PianoStaff.instrumentName = \markup {
+		\larger { \bold { "Organ. " }}}
 	    
 	    \context Staff = organRight <<
 		\global
@@ -1235,26 +1196,30 @@ organLeftMusic = \notes \relative c {
 	
 	
 	      
-	\context Lyrics = sopranos \lyricsto sopranos \sopWords
-	\context Lyrics = altos \lyricsto altos \altoWords
-	\context Lyrics = tenors \lyricsto tenors \tenorWords
-	\context Lyrics = basses \lyricsto basses \bassWords
+	\context Lyrics = "sopranos" \lyricsto sopranos \sopWords
+	\context Lyrics = "altos" \lyricsto altos \altoWords
+	\context Lyrics = "tenors" \lyricsto tenors \tenorWords
+	\context Lyrics = "basses" \lyricsto basses \bassWords
 	
 	
 % -- for the StaffGroup   
     >>
 
     
-    \paper {
+    \layout {
+      
 	\context {
 	    
 	% a little smaller so lyrics can be closer to the staff. 
-	    \StaffContext
-	    minimumVerticalExtent = #'(-3 . 3) 
+	    \Staff
+	    \override VerticalAxisGroup.minimum-Y-extent = #'(-3 . 3) 
 	}
     }
     
-    \midi {
-	\tempo 4 = 80
+    
+  \midi {
+    \tempo 4 = 80
     }
+
+
 }
