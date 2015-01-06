@@ -1,11 +1,10 @@
-\version "2.2.0"
+\version "2.18.2"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% RIGHT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-partRH = \notes \relative g' {
+partRH =  \relative g' {
     \clef treble
-    \key c \minor
     \repeat volta 2 {
 %%% 1-10
         r8\ff <g g,> <g g,> <g g,> |
@@ -24,7 +23,7 @@ partRH = \notes \relative g' {
             { \voiceOne r8 f' f f | d2~ | d8 g g f | }
         >>
         ef2 | d8 g g f | ef2 |
-        \setTextCresc\noCrescSpanner
+        \crescTextCresc\noCrescSpanner
         d8\< <g d g,> <g d g,> <f d g,> |
         <ef c g>4\f r | <c fs, c> r |
         <<
@@ -43,7 +42,7 @@ partRH = \notes \relative g' {
            { r8 d d d | b2 ~ | b8 } >> <d' f>8 <d f> <d f> |
 %%% 33-42
         <c ef>8 <ef, g> [ <ef g c> <ef c'> ] |
-        \setTextCresc
+        \crescTextCresc
         <d f af c>2\<^( ~ | <d f af b>8) <f af b> <f af b> <f d'> |
         <ef g d'>2^( ~ | <ef g c>8) <ef g c> <ef g c> ef' |
         <ef af, f>8(\sf d) d-. f-. | <f bf, g>( e) e-. g-. |
@@ -60,7 +59,7 @@ partRH = \notes \relative g' {
         R2*3 |
         <<
             { bf4\p ^( ef | d ef | f c) | } \\
-            { \once\override TextScript #'extra-offset = #'( 1.5 . 2)
+            { \once\override TextScript.extra-offset = #'( 1.5 . 2)
               g2_\markup{\italic dolce} | af | af | }
         >>
 %%% 66-78
@@ -79,17 +78,17 @@ partRH = \notes \relative g' {
         <bf' bf'>4( <ef ef'> | <d d'> <ef ef'> |
         <f f'> <c c'>) | <c c'> ( <bf bf'> ) |
         <<
-            { \oass bf4( c | df c) | \oass bf( c | bf af) | } \\
+            { bf4( c | df c) | bf( c | bf af) | } \\
             { <ef g>2 | <e g> | <e g> | <c f> | }
         >>
 %%% 79-93
         <<
             {
-                \oass df'4( ef | f ef) | \oass df( ef | df c) | c2 | <c ef> | s2 |
+                df'4( ef | f ef) | df( ef | df c) | c2 | <c ef> | s2 |
                 <bf ef> | s2 | <a ef'> | s2 | <a ef'> |
                 s2 | <a ef'> | s2 |
             }\\{
-                \setTextCresc
+                \crescTextCresc
                 <f af>2 | <g bf> | <g bf> | <ef af> |
                 <ef ef'>4^( <f f'> | <gf gf'>\< <f f'> | <ef ef'> <f f'>) |
                 <gf gf'>^( <f f'> | <ef ef'> <f f'>) |
@@ -134,6 +133,7 @@ partRH = \notes \relative g' {
         r8 <f' bf d> <f bf d> <f bf d> |
         <g bf ef>4 r |
         R2*2 |
+        \break
     }
 %%% 125-134
     r8 bf,\ff bf bf |
@@ -155,13 +155,13 @@ partRH = \notes \relative g' {
         { g'8 c c bf | af2 | g8 c c bf | } \\
         { c,2~ | c8 af af bf | c2 | }
     >>
-    \setTextCresc\noCrescSpanner
+    \crescTextCresc\noCrescSpanner
     af'8 af\< af g | f f f ef |
 %%% 144-152
     d d d c | \voiceOne b4 r4\! |
     \oneVoice r8 ef ef f | \voiceOne g2~ |
     \oneVoice g8 ef ef f | \voiceOne g2~ |
-    \oneVoice\setHairpinCresc
+    \oneVoice\crescHairpin
     <g g,>2(\< | <a a,>4 <bf bf,> | <c c,> <cs cs,>)\! |
 %%% 153-161
     <d d,>8\p <d fs,> <d fs,> <c a> |
@@ -176,7 +176,7 @@ partRH = \notes \relative g' {
     <ef c'> <a a'> [ <bf bf'> <c c'> ] |
     <d g d'> g, [ <g bf> <g c> ] |
     <g d'> <g g'> [ <bf bf'> <c c'> ] |
-    \setTextCresc\noCrescSpanner
+    \crescTextCresc\noCrescSpanner
     <d g d'> g,\< [ <g bf> <g c> ] |
     <g d'> <g' bf> [ <a c> <bf d> ] |
     <ef, fs a ef'>\f <ef fs a ef'> <ef fs a ef'> <ef fs a ef'> |
@@ -187,8 +187,8 @@ partRH = \notes \relative g' {
     <e g bf e> <e g bf e> <e g bf e> <e g bf e> |
     <e g bf e> <e g bf e> <e g bf e> <e g bf e> |
     <e g bf e>4 r |
-    \setTextCresc
-    \set crescendoText = \markup{\italic "pi\\`u" \dynamic f}
+    \crescTextCresc
+    \set crescendoText = \markup{\italic "più" \dynamic f}
     r8\< <d g bf d> <d g bf d> <d g bf d> |
     <d g bf d>4 r | r <cs g' bf cs>8 <cs g' bf cs> |
     <cs g' bf cs>4 <d a' d>8 <d a' d> |
@@ -196,8 +196,8 @@ partRH = \notes \relative g' {
 %%% 180-188
     g2 | a |
     <<
-        { \voiceOne \tieBoth <d, d,>2 ~ | <d d,>~ | <d d,>~ | <d d,>4 s4 | } \\
-        { \voiceFour \stemBoth s2 | g,4\rest fs8 fs | fs4 c'8 c | c4 <fs fs,>8 <fs fs,> | }
+        { \voiceOne \tieNeutral <d, d,>2 ~ | <d d,>~ | <d d,>~ | <d d,>4 s4 | } \\
+        { \voiceFour \stemNeutral s2 | g,4\rest fs8 fs | fs4 c'8 c | c4 <fs fs,>8 <fs fs,> | }
     >>
     <a a,>4 <d a fs d>8 <d a fs d> |
     <b g d>8 <g g,> [ <g g,> <g g,> ] |
@@ -205,7 +205,7 @@ partRH = \notes \relative g' {
 %%% 189-197
     d2\sf |
     <<
-        { g,2 ~ | g~ | g~ | \once\override Tie #'y-offset = #3 g4 } \\
+        { g,2 ~ | g~ | \once\override Tie.Y-offset = #3 g~ | g4 } \\
         { r4 b,8 b | b4 f'8 f | f4 b8 b | b4 }
     >> <b f'>8 <b f'> |
     <d f>4 <d b' d>8 <d b' d> |
@@ -218,16 +218,16 @@ partRH = \notes \relative g' {
     <f f'> | <gf gf'> |
     <gf df bf> | <a ef a,> | <a ef' a> | <bf df bf'> |
 %%% 210-220
-    \setTextDim\noCrescSpanner
+    \dimTextDim\noCrescSpanner
     <bf f df>2 | <cf cf'> | <cf gf cf,>\> | <df df'> |
     <df af df,> |
-    \once\override DynamicText #'extra-offset = #'( 1.5 . 2 )
+    \once\override DynamicText.extra-offset = #'( 1.5 . 2 )
     <cs cs'>\p |
-    \once\override TextScript #'extra-offset = #'( 2.5 . 3 )
-    <cs, a fs>_\markup{\column < \italic Sempre \italic "pi\\`u" \dynamic p > }  |
+    \once\override TextScript.extra-offset = #'( 2.5 . 3 )
+    <cs, a fs>_\markup{\column { \italic Sempre \italic "più" \dynamic p } }  |
     <cs' a' cs> | <cs, a fs> | <cs' a' cs> | <cs, a fs> |
 %%% 221-230
-    \once\override DynamicText #'extra-offset = #'( 0 . 1.5 )
+    \once\override DynamicText.extra-offset = #'( 0 . 1.5 )
     <d' a' d>2\pp | \cslh\voiceOne <d, a d,> |
     \csrh\oneVoice <d' a' d> | \cslh\voiceOne <d, a d,> |
     \csrh\oneVoice <d' a' d> | \cslh\voiceOne <d, a d,> |
@@ -263,7 +263,7 @@ partRH = \notes \relative g' {
        { r8 ef, ef f | g2 | r8 ef ef f | <g b>4 c8 d | } >>
 %%% 266-274
     <<
-        { \setTextCresc\noCrescSpanner
+        { \crescTextCresc\noCrescSpanner
           \oneVoice ef2\< | \voiceOne c2 |
           \cadenzaOn { g'2\fermata\f s4 s s s s s s } \cadenzaOff | } \\
         { \voiceTwo s2 | <fs, c>4 r |
@@ -316,7 +316,7 @@ partRH = \notes \relative g' {
     <<
         { g4( c | b c | d a) | a( g) |
           g'( c | b c | d a) | a( g) |
-          \oass bf,!4( c | df c) | \oass bf( c | bf a) | } \\
+          bf,!4( c | df c) | bf( c | bf a) | } \\
         { e2 | f~ | f | <c e> |
           <c' e> | <d f> | f | <c e> |
           <g bf> | <e g> | <e g> | <c f> | }
@@ -326,7 +326,7 @@ partRH = \notes \relative g' {
         { c'4( d | ef d) | c( d | c b) | } \\
         { <f a>2 | <fs a> | <fs a> | <d g> | }
     >>
-    \setTextCresc
+    \crescTextCresc
     <f! f'!>4(\< <g g'> | <af af'> <g g'> <f f'> <g g'>) |
     <af af'>( <g g'> | <f f'> <g g'>) |
 %%% 336-344
@@ -391,10 +391,10 @@ partRH = \notes \relative g' {
 %%% 397-403
     <ef ef'>4 r | r8 g,\f g g |
     <<
-        { \once\override Staff.DynamicLineSpanner #'staff-padding = #0
+        { \once\override Staff.DynamicLineSpanner.staff-padding = #0
           ef2^\f | s2 | b''~ | b | } \\
         { g,,4 r |
-          \once\override PhrasingSlur #'height-limit = #5
+          \once\override PhrasingSlur.height-limit = #5
           b'8 \( c d ef | f g af g | af g af g \) }
     >>
     \clef bass g,,,4_.^> r |
@@ -402,10 +402,10 @@ partRH = \notes \relative g' {
     \clef treble
     <<
         { s2 | b''' ~ | b | } \\
-        { \once\override PhrasingSlur #'height-limit = #5
+        { \once\override PhrasingSlur.height-limit = #5
           b,8 \( c d ef | f g af g | af g af g \) | }
     >>
-    \once\override TextScript #'staff-padding = #2.5
+    \once\override TextScript.staff-padding = #2.5
     af8_\markup{\italic sempre \dynamic f} g bf! af | g f af f | f ef g f |
     ef d f ef | d c ef d | c bf d c |
 %%% 413-421
@@ -448,7 +448,7 @@ partRH = \notes \relative g' {
 %%% 442-451
     <c ef, c>4-. <c f, c>-. |
     << { <c c,>2 | } \\
-       { g4_( ef) | } >>
+       { \shape #'((0 . -2.0) (0 . -2.0) (0 . -2.0) (0 . -2.0)) Slur g4( ef) | } >>
     <f c' f>4-. <g c g'>-. |
     << { \voiceTwo <af af'>4^( <f f'>) | } \\
        { \voiceOne c'2 } >>
@@ -477,10 +477,10 @@ partRH = \notes \relative g' {
     <c, ef c'>8 <g g'> [ <g g'> <g g'> ] |
 %%% 469-474
     <<
-        { \voiceTwo\tieBoth
+        { \voiceTwo\tieNeutral
           <g g'>2~ | <g g'>2~ | <g g'>2~ |
           <g g'>2~ | <g g'>2~ | <g c ef g>8 } \\
-        { \voiceThree\tieBoth
+        { \voiceThree\tieNeutral
           r8 <b d> <b d> <b d> | <b d>2 ~ | <b d>4( <c ef> |
           <d f> <b d> | <c ef>) <d f> | s8 }
     >> <g g,>8 <g g,> <g g,> |
@@ -511,14 +511,15 @@ partRH = \notes \relative g' {
     <c ef g c> <b d g b> | <c ef g c> r |
     <b g d b> r | <c g ef c> r |
 %%% END
+
+    \bar "|."
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% LEFT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-partLH = \notes \relative g, {
+partLH =  \relative g, {
     \clef bass
-    \key c \minor
     \repeat volta 2 {
 %%% 1-10
         r8 g g g |
@@ -825,7 +826,7 @@ partLH = \notes \relative g, {
     r4 <d f, d> | r4 <d f, d> | r4 <d f, d> |
 %%% 345-352
     r4 <d f, d> |
-    << { \tieBoth <d,, g d'>2 ~ | <d g d'>4 <b g' b> | } \\
+    << { \tieNeutral <d,, g d'>2 ~ | <d g d'>4 <b g' b> | } \\
        { s2\ped | s8 s s s\pup } >>
     <c g' c>4 r | <d f d'> r | <e c' e> r |
     <f c' d f> r | <g c e g> r |
@@ -962,143 +963,62 @@ partLH = \notes \relative g, {
 %%% END
 }
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%% KEEP IT TOGETHER
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-partNull = \notes {
-%%% page1 1-52  0'00
-    \repeat volta 2 {
-        \mark\markup{\bold "Allegro con brio" \tiny{(\note #"2" #0.7 = 108)}}
-        s2*10 \myBreak
-        s2*11 \myBreak
-        s2*11 \myBreak
-        s2*10 \myBreak
-        s2*10 \myBreak
-
-%%% page2 53-124 0'28
-        s2*13 \myBreak
-        s2*13 \myBreak
-        s2*12 \myBreak
-        s2*10 \myBreak
-        s2*10 \myBreak
-        s2*14 \myBreak
-    }
-    \break
-
-%%% page3 125-179  1'09
-    s2*10 \myBreak
-    s2*9 \myBreak
-    s2*9 \myBreak
-    s2*9 \myBreak
-    s2*9 \myBreak
-    s2*9 \myBreak
-
-%%% page4 180-240  1'39
-    s2*9 \myBreak
-    s2*9 \myBreak
-    s2*12 \myBreak
-    s2*11 \myBreak
-    s2*10 \myBreak
-    s2*10 \myBreak
-
-%%% page5 241-281  2'13
-    s2*9 \myBreak
-    s2*8 \myBreak
-    s2*8 \myBreak
-    s2*2 \cadenzaOn s4 s s s s s s s s \cadenzaOff \bar "|"  \set Score.currentBarNumber = #269 s2*5 \myBreak
-    s2*8 \myBreak
-
-%%% page6 282-326  2'37
-    s2*8 \myBreak
-    s2*8 \myBreak
-    s2*10 \myBreak
-    s2*9 \myBreak
-    s2*10 \myBreak
-
-%%% page7 327-367  3'02
-    s2*9 \myBreak
-    s2*9 \myBreak
-    s2*8 \myBreak
-    s2*8 \myBreak
-    s2*7 \myBreak
-
-%%% page8 368-403  3'25
-    s2*7 \myBreak
-    s2*7 \myBreak
-    s2*8 \myBreak
-    s2*7 \myBreak
-    s2*7 \myBreak
-
-%%% page9 404-451  3'45
-    s2*9 \myBreak
-    s2*9 \myBreak
-    s2*10 \myBreak
-    s2*10 \myBreak
-    s2*10 \myBreak
-
-%%% page10 452-501 4'12
-    s2*11 \myBreak
-    s2*10 \myBreak
-    s2*10 \myBreak
-    s2*10 \myBreak
-    s2*10 \myBreak
-
-%%% END 4'40
-    \bar "|."
+global = {
+  \key c \minor
+  \time 2/4
+  \set Timing.beamExceptions = #'()
+  \set Timing.beatStructure = #'(2)
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% ALL TOGETHER NOW
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \score
-{
-    \notes {
-        #(override-auto-beam-setting '(end * * * *) 1 2 'Score)
-        \override Score.RehearsalMark #'padding = #2.2
-        \override Score.RehearsalMark #'self-alignment-X = #-1
-        \set Score.skipBars = ##t
-        <<
-            \new PianoStaff {
-                \set PianoStaff.midiInstrument = "acoustic grand"
-                \override PianoStaff.VerticalAlignment #'forced-distance = #13 % default 12
-                \time 2/4
-                <<
-                    \context Staff = "null" \partNull
-                    \context Staff = "rh" {
-                        %% #(set-accidental-style 'piano-cautionary)
-                        \override Staff.DynamicLineSpanner #'staff-padding = #3
-                        \partRH
-                    }
-                    \context Staff = "lh" {
-                        %% #(set-accidental-style 'piano-cautionary)
-                        %% \set PianoStaff.pedalSustainStyle = #'mixed
-                        \override Staff.SustainPedalLineSpanner #'staff-padding = #2
-                        \partLH
-                    }
-                >>
-            }
+{   
+    <<
+        \new PianoStaff \with {
+            \override Score.RehearsalMark.padding = #2.2
+            \override Score.RehearsalMark.self-alignment-X = #-1
+            \override StaffGrouper.staff-staff-spacing.minimum-distance = #11
+        }{
+            \set PianoStaff.midiInstrument = "acoustic grand"
+            \set Score.skipBars = ##t
+            <<
+                \new Staff = "rh" {
+                    %% \accidentalStyle piano-cautionary
+                    \override Staff.DynamicLineSpanner.staff-padding = #3
+                    \global                
+                    \partRH
+                }
+                \new Staff = "lh" {
+                    %% \accidentalStyle piano-cautionary
+                    %% \set PianoStaff.pedalSustainStyle = #'mixed
+                    \override Staff.SustainPedalLineSpanner.staff-padding = #2
+                    \global
+                    \partLH
+                }
+            >>
+        }
 %{
-            \new Staff {
-                \set Staff.midiInstrument = "orchestral strings"
-                \set Staff.instrument = "Strings"
-                \partRH
-            }
-            \new Staff {
-                \set Staff.midiInstrument = "bassoon"
-                \set Staff.instrument = "bassoon"
-                \partLH
-            }
+        \new Staff {
+            \set Staff.midiInstrument = "orchestral harp"
+            \set Staff.instrumentName = "Strings"
+            \partRH
+        }
+        \new Staff {
+            \set Staff.midiInstrument = "bassoon"
+            \set Staff.instrumentName = "bassoon"
+            \partLH
+        }
 %}
-        >>
-    }
-    \paper{ \context { \RemoveEmptyStaffContext } }
+    >>
+    \layout{ \context { \Staff \RemoveEmptyStaves } }
     \midi{
         \tempo 2=108
         %% Remove the dynamics from the midi output
         \context {
-            \VoiceContext
+            \Voice
             \remove "Dynamic_performer"
-            \remove "Span_dynamic_performer"
         }
     }
 }
