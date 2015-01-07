@@ -1,6 +1,7 @@
+\version "2.19.15"
 \include "header.ly"
 
-oboeNotes = \notes \relative c'' {
+oboeNotes =  \relative c'' {
   
   \key d \major
   \time 4/4 

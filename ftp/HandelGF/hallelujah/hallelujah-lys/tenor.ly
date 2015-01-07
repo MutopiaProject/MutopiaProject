@@ -1,10 +1,11 @@
-#(ly:set-point-and-click 'line-column )
+\version "2.19.15"
+
 % Note - Character set converted to UTF-8 for source repository consistency
 % For correct compilation with LilyPond 2.2 this change may need to be reverted
 
 \include "header.ly"
 
-TenorNotes = \notes\relative c {
+TenorNotes = \relative c {
 
  \clef "violin_8"
   \autoBeamOff
@@ -175,7 +176,7 @@ TenorNotes = \notes\relative c {
   a1-\fermata \bar "|."
 }
 
-TenorLyrics = \lyrics {
+TenorLyrics = \lyricmode {
 	Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
 	Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
 	For the Lord God Om -- ni -- po -- tent reign -- eth!
@@ -211,7 +212,7 @@ TenorLyrics = \lyrics {
 
 }
 
-TenorGermanLyrics = \lyrics {
+TenorGermanLyrics = \lyricmode {
 	%4
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja,  
 	Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,  Hal -- le -- lu -- ja,
@@ -278,8 +279,8 @@ TenorGermanLyrics = \lyrics {
 Tenor = <<
  
   \context Voice = Tenor \TenorNotes
-  \lyricsto Tenor \new Lyrics \lyrics {  \TenorLyrics } %\set stanza = "English"
-  \lyricsto Tenor \new Lyrics \lyrics { \TenorGermanLyrics } %\set stanza = "German"  
+  \new Lyrics  \lyricsto Tenor  {  \TenorLyrics } %\set stanza = "English"
+  \new Lyrics  \lyricsto Tenor  { \TenorGermanLyrics } %\set stanza = "German"  
 >>
 
 

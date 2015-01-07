@@ -1,7 +1,8 @@
+\version "2.19.15"
 \include "header.ly"
 \include "cello.ly"
 
-BbTrombone = \notes \transpose bes c' \CelloStaff %\CelloNotes 
+BbTrombone =  \transpose bes c' \CelloStaff %\CelloNotes 
 
 \score {
   <<
@@ -10,5 +11,5 @@ BbTrombone = \notes \transpose bes c' \CelloStaff %\CelloNotes
   \header {
        instrument = "Trombone"
      }
-}
    \midi  {}
+}

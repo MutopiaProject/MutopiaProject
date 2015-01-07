@@ -1,8 +1,11 @@
+\version "2.19.15"
 \include "timpani.ly"
 
 \score {
   <<
-    \context Staff=TimpaniInAandD \timpaniNotes
+    \new Staff=TimpaniInAandD {
+      \timpaniNotes
+    }
   >>
   
   \header {

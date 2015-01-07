@@ -1,6 +1,7 @@
+\version "2.19.15"
 \include "header.ly"
 
-timpaniNotes = \notes \relative c {
+timpaniNotes =  \relative c {
  \set Score.skipBars = ##t   
  \clef bass
   \key d \major

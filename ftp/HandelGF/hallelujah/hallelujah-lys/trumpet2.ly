@@ -1,6 +1,7 @@
+\version "2.19.15"
 \include "header.ly"
 
-TrumpetIInotes = \notes\relative c {
+TrumpetIInotes = \relative c {
 
   \key d \major
   

@@ -1,4 +1,4 @@
-\version "2.2.2"
+\version "2.19.15"
 
 \header {
 
@@ -17,12 +17,11 @@
  maintainerEmail = "joshuakoo@myrealbox.com"
  lastupdated = "2004/June/17"
  
- tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
  footer = "Mutopia-2004/08/02-459"
 }
 
-\paper {
-    %linewidth = 160 \mm %I need to do something to fit the pages correctly...
+\layout {
+    %line-width = 160 \mm %I need to do something to fit the pages correctly...
     
 }
 %{

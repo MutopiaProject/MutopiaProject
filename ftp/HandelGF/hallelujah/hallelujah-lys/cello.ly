@@ -1,8 +1,7 @@
+\version "2.19.15"
 \include "header.ly"
 
-#(ly:set-point-and-click 'line-column )
-
-celloNotes = \notes\relative c {
+celloNotes = \relative c {
 
 \clef bass  
   \key d \major

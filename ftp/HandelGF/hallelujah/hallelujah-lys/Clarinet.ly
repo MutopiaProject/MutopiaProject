@@ -1,6 +1,7 @@
+\version "2.19.15"
 \include "header.ly"
 
-oboeOneNotes = \notes \relative c'' {
+oboeOneNotes =  \relative c'' {
   
   %\tempo 4 = 120
   
@@ -152,7 +153,7 @@ oboeOneNotes = \notes \relative c'' {
   d1 \bar "|."
 }
 
-BbClarinet = \notes \transpose bes c' \oboeOneNotes
+BbClarinet =  \transpose bes c' \oboeOneNotes
 
 \score {
   <<
@@ -162,7 +163,6 @@ BbClarinet = \notes \transpose bes c' \oboeOneNotes
   \header {
 	  instrument = "Bb Clarinet"
   }
-
-}
   \midi  {}
+}
 

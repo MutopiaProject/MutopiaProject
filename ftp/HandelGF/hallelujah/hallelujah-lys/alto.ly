@@ -1,11 +1,12 @@
-#(ly:set-point-and-click 'line-column )
+\version "2.19.15"
+
 % Note - Character set converted to UTF-8 for source repository consistency
 % For correct compilation with LilyPond 2.2 this change may need to be reverted
 
 \include "header.ly"
 
 
-AltoNotes = \notes\relative c'' {
+AltoNotes = \relative c'' {
 
   \autoBeamOff
   \key d \major
@@ -172,7 +173,7 @@ AltoNotes = \notes\relative c'' {
 }
 
 
-AltoLyrics = \lyrics {
+AltoLyrics = \lyricmode {
 	
 Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
 Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
@@ -207,7 +208,7 @@ Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- l
 }
 
 
-AltoGermanLyrics = \lyrics {
+AltoGermanLyrics = \lyricmode {
 	
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
 Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja,
@@ -244,7 +245,7 @@ Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -- lu -- ja, Hal -- le -
 Alto = <<
  
   \context Voice = Alto \AltoNotes
-  \lyricsto Alto \new Lyrics \lyrics {  \AltoLyrics } %\set stanza = "English"
-  \lyricsto Alto \new Lyrics \lyrics { \AltoGermanLyrics } %\set stanza = "German"  
+  \new Lyrics  \lyricsto Alto  {  \AltoLyrics } %\set stanza = "English"
+  \new Lyrics  \lyricsto Alto  { \AltoGermanLyrics } %\set stanza = "German"  
 >>
 

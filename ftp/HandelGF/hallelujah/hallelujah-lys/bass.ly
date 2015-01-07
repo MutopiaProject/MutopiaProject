@@ -1,11 +1,11 @@
-#(ly:set-point-and-click 'line-column )
+\version "2.19.15"
 % Note - Character set converted to UTF-8 for source repository consistency
 % For correct compilation with LilyPond 2.2 this change may need to be reverted
 
 \include "header.ly"
 
 
-BassNotes = \notes\relative c {
+BassNotes = \relative c {
 
   \autoBeamOff
   \key d \major
@@ -176,7 +176,7 @@ BassNotes = \notes\relative c {
   d1-\fermata \bar "|." 
 }
 
-BassLyrics = \lyrics {
+BassLyrics = \lyricmode {
 	Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
 	Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
 	For the Lord God Om -- ni -- po -- tent reign -- eth!
@@ -214,7 +214,7 @@ BassLyrics = \lyrics {
 
 }
 
-BassGermanLyrics = \lyrics {
+BassGermanLyrics = \lyricmode {
 	Hal -- le -- lu -- ja,
 	Hal -- le -- lu -- ja,
 	Hal -- le -- lu -- ja,
@@ -338,7 +338,7 @@ BassGermanLyrics = \lyrics {
 Bass = <<
  
   \context Voice = Bass \BassNotes
-  \lyricsto Bass \new Lyrics \lyrics {  \BassLyrics } %\set stanza = "English"
-  \lyricsto Bass \new Lyrics \lyrics { \BassGermanLyrics } %\set stanza = "German"  
+  \new Lyrics  \lyricsto Bass  {  \BassLyrics } %\set stanza = "English"
+  \new Lyrics  \lyricsto Bass  { \BassGermanLyrics } %\set stanza = "German"  
 >>
 
