@@ -1,4 +1,4 @@
-\version "2.2.1"
+\version "2.19.15"
 
 \header {
   title = "Opus 29 no. 13"
@@ -13,7 +13,6 @@
 %  texttranslator = "Translator"
  copyright = "Creative Commons \\texttt{http://creativecommons.org}"
  enteredby = "Steve Shorter"
- footer = "Mutopia-2004/05/22"
  mutopiatitle = "Opus 29 no. 13"
  mutopiacomposer = "SorF"
  mutopiaopus = "O 29"
@@ -24,132 +23,144 @@
  maintainerEmail = "steve@linuxsuite.org"
  maintainerWeb = "http://www.linuxsuite.org/"
  lastupdated = "2004/May/20"
- tagline =	"\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright \\ The Mutopia Project \\& " + \maintainer + " 2004.} \\makebox[\\textwidth][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[\\textwidth][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[\\textwidth][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}"
  footer =	"Mutopia-2004/05/20-450"
 }
 
+\paper {
+  top-margin = 6\mm                              %-minimum top-margin: 8mm
+  top-markup-spacing.basic-distance = #5         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing #'padding = #5
+  markup-markup-spacing #'padding = #1.2
+  markup-system-spacing.basic-distance = #6      %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.basic-distance = #11       %-pads music from copyright block
+  bottom-margin = 10\mm
+}
 
-one =	\context Voice=one \notes \relative c'' {
+
+one = \relative c'' {
 	\voiceOne
 	\stemUp
-	\override Slur #'attachment = #'(head . head)
-	\override Slur #'direction = #-1
+	\override Slur.direction = #-1
 %
-	\override Rest #'extra-offset = #'(0 . 1.0)
-	\times 4/6 {r16^\markup {"" \raise #6.0 \bold \huge {Andante lento}}
+	\override Rest.extra-offset = #'(0 . 1.0)
+	\tuplet 6/4 {r16^\markup {"" \raise #6.0 \large {Andante lento}}
 	 d bes f f' d}
-	\override TupletBracket #'transparent = ##t
-	\times 4/6 {r16 d bes f f' d} |
-	\times 4/6 {r16 ees c f, f' ees}	\times 4/6 {r16 ees c f, f' ees} |
-	\times 4/6 {r16 d bes f f' d}		\times 4/6 {r16 e c bes e c} |
-	\times 4/6 {r16 f c a c a}		\times 4/6 {f16 f' c a c f} |
-	\times 4/6 {g16\rest g ees bes ees g}	\times 4/6 {g16\rest a f c f a} |
-	\times 4/6 {g16\rest bes f bes, bes' f}	\times 4/6 {g16\rest f d d, f' bes,} |
-	\times 4/6 {r16 ees bes g ees' bes}	\times 4/6 {r16 ees a, f f' ees} |
-	\times 4/6 {r16 d bes f d' bes}		\times 4/6 {f16 d' bes f d' bes} |
-% 9 
-	\times 4/6 {r16 c g e g' c,}		\times 4/6 {r16 c g e g' c,} |
-	\times 4/6 {r16 f c f, f' c}		\times 4/6 {a16 f' c f, f' c} |
-	\times 4/6 {r16 c g e g' c,}		\times 4/6 {r16 c g e g' c,} |
-	\times 4/6 {r16 f c f, f' c}		\times 4/6 {a16 f' c f, f' c} |
-	\times 4/6 {r16 c a f f' c}		\times 4/6 {r16 cis a f f' cis} |
-	\times 4/6 {r16 d bes f f' d}		\times 4/6 {r16 d bes g bes' d,} |
-	\times 4/6 {r16 a' f c a' f}		\times 4/6 {r16 g e c g' e} |
-	\times 4/6 {r16 c' f, c c' f,}		\times 4/6 {r16 c' f, c c' f,} |
+	\omit TupletNumber \omit TupletBracket
+	\tuplet 6/4 {r16 d bes f f' d} |
+	\tuplet 6/4 {r16 ees c f, f' ees}	\tuplet 6/4 {r16 ees c f, f' ees} |
+	\tuplet 6/4 {r16 d bes f f' d}		\tuplet 6/4 {r16 e c bes e c} |
+	\tuplet 6/4 {r16 f c a c a}		\tuplet 6/4 {f16 f' c a c f} |
+	\tuplet 6/4 {g16\rest g ees bes ees g}	\tuplet 6/4 {g16\rest a f c f a} |
+	\tuplet 6/4 {g16\rest bes f bes, bes' f}	\tuplet 6/4 {g16\rest f d d, f' bes,} |
+	\tuplet 6/4 {r16 ees bes g ees' bes}	\tuplet 6/4 {r16 ees a, f f' ees} |
+	\tuplet 6/4 {r16 d bes f d' bes}		\tuplet 6/4 {f16 d' bes f d' bes} |
+% 9
+	\tuplet 6/4 {r16 c g e g' c,}		\tuplet 6/4 {r16 c g e g' c,} |
+	\tuplet 6/4 {r16 f c f, f' c}		\tuplet 6/4 {a16 f' c f, f' c} |
+	\tuplet 6/4 {r16 c g e g' c,}		\tuplet 6/4 {r16 c g e g' c,} |
+	\tuplet 6/4 {r16 f c f, f' c}		\tuplet 6/4 {a16 f' c f, f' c} |
+	\tuplet 6/4 {r16 c a f f' c}		\tuplet 6/4 {r16 cis a f f' cis} |
+	\tuplet 6/4 {r16 d bes f f' d}		\tuplet 6/4 {r16 d bes g bes' d,} |
+	\tuplet 6/4 {r16 a' f c a' f}		\tuplet 6/4 {r16 g e c g' e} |
+	\tuplet 6/4 {r16 c' f, c c' f,}		\tuplet 6/4 {r16 c' f, c c' f,} |
 %  17
-	\times 4/6 {r16 f c a c' f,}		\times 4/6 {r16 f cis a cis' f,} |
-	\times 4/6 {r16 f d bes d' f,}		\times 4/6 {r16 g d bes bes' g} |
-	\times 4/6 {r16 a f c a' f}		\times 4/6 {r16 g e bes g' e} |
-	\times 4/6 {r16 f c a c a}	f8 s8 \bar ":|"
+	\tuplet 6/4 {r16 f c a c' f,}		\tuplet 6/4 {r16 f cis a cis' f,} |
+	\tuplet 6/4 {r16 f d bes d' f,}		\tuplet 6/4 {r16 g d bes bes' g} |
+	\tuplet 6/4 {r16 a f c a' f}		\tuplet 6/4 {r16 g e bes g' e} |
+	\tuplet 6/4 {r16 f c a c a}	f8 s8 \bar ":|."
 %
 % 21
-	\times 4/6 {a'16\rest f c a c f}	\times 4/6 {a16\rest g e bes e g} |
-	\times 4/6 {a16\rest a ees c ees a}	\times 4/6 {a16\rest bes d, bes d bes'} |
-	\times 4/6 {r16 ees, c f, c' ees}	\times 4/6 {r16 d bes f bes d} |
-	\times 4/6 {r16 d bes f bes d}		\times 4/6 {r16 c a f a c} |
-	\times 4/6 {r16 f c a c f}		\times 4/6 {a16\rest g e bes e g} |
-	\times 4/6 {a16\rest a ees c ees a}	\times 4/6 {a16\rest bes d, bes d bes'} |
-	\times 4/6 {r16 ees, c f, ees' c}	\times 4/6 {r16 d bes f d' bes} |
+	\tuplet 6/4 {a'16\rest f c a c f}	\tuplet 6/4 {a16\rest g e bes e g} |
+	\tuplet 6/4 {a16\rest a ees c ees a}	\tuplet 6/4 {a16\rest bes d, bes d bes'} |
+	\tuplet 6/4 {r16 ees, c f, c' ees}	\tuplet 6/4 {r16 d bes f bes d} |
+	\tuplet 6/4 {r16 d bes f bes d}		\tuplet 6/4 {r16 c a f a c} |
+	\tuplet 6/4 {r16 f c a c f}		\tuplet 6/4 {a16\rest g e bes e g} |
+	\tuplet 6/4 {a16\rest a ees c ees a}	\tuplet 6/4 {a16\rest bes d, bes d bes'} |
+	\tuplet 6/4 {r16 ees, c f, ees' c}	\tuplet 6/4 {r16 d bes f d' bes} |
 % 28
-	\times 4/6 {r16 c a f f' a, }		\times 4/6 {g e' bes a ees' c} |
-	\times 4/6 {r16 d bes f f' d}		\times 4/6 {r16 d bes f f' d} |
-	\times 4/6 {r16 ees c f, f' ees}	\times 4/6 {r16 ees c f, f' ees} |
-	\times 4/6 {r16 d bes f f' d}		\times 4/6 {r16 e c bes e c} |
-	\times 4/6 {r16 f c a c a}		\times 4/6 {f16 a c f a, c} |
-	\times 4/6 {g'16\rest fis c a fis' c}	\times 4/6 {g'16\rest fis c a fis' c} |
+	\tuplet 6/4 {r16 c a f f' a, }		\tuplet 6/4 {g e' bes a ees' c} |
+	\tuplet 6/4 {r16 d bes f f' d}		\tuplet 6/4 {r16 d bes f f' d} |
+	\tuplet 6/4 {r16 ees c f, f' ees}	\tuplet 6/4 {r16 ees c f, f' ees} |
+	\tuplet 6/4 {r16 d bes f f' d}		\tuplet 6/4 {r16 e c bes e c} |
+	\tuplet 6/4 {r16 f c a c a}		\tuplet 6/4 {f16 a c f a, c} |
+	\tuplet 6/4 {g'16\rest fis c a fis' c}	\tuplet 6/4 {g'16\rest fis c a fis' c} |
 % 34
-	\times 4/6 {g'16\rest g c, g g' c,}	\times 4/6 {g'16\rest g c, ees, g' c,} |
-	\times 4/6 {g'16\rest fis c a fis' c}	\times 4/6 {g'16\rest fis c a fis' c} |
-	\times 4/6 {g'16\rest g c, g g' c,}	\times 4/6 {g'16\rest g c, g g' c,} | 
-	\times 4/6 {g'16\rest g c, a g' c,}	\times 4/6 {g'16\rest ges c, a ges' c,} | 
-	\times 4/6 {g'16\rest f d bes f' d}	\times 4/6 {b'16\rest bes d, bes bes' d,} |
-	\times 4/6 {g16\rest bes c, g c bes'}	\times 4/6 {a16\rest a ees c a' ees} |
-	\times 4/6 {r16 bes' f d f d }		\times 4/6 {bes f' d bes d f} |
+	\tuplet 6/4 {g'16\rest g c, g g' c,}	\tuplet 6/4 {g'16\rest g c, ees, g' c,} |
+	\tuplet 6/4 {g'16\rest fis c a fis' c}	\tuplet 6/4 {g'16\rest fis c a fis' c} |
+	\tuplet 6/4 {g'16\rest g c, g g' c,}	\tuplet 6/4 {g'16\rest g c, g g' c,} |
+	\tuplet 6/4 {g'16\rest g c, a g' c,}	\tuplet 6/4 {g'16\rest ges c, a ges' c,} |
+	\tuplet 6/4 {g'16\rest f d bes f' d}	\tuplet 6/4 {b'16\rest bes d, bes bes' d,} |
+	\tuplet 6/4 {g16\rest bes c, g c bes'}	\tuplet 6/4 {a16\rest a ees c a' ees} |
+	\tuplet 6/4 {r16 bes' f d f d }		\tuplet 6/4 {bes f' d bes d f} |
 % 41
-	\times 4/6 {r16 g ees bes bes' g} 	\times 4/6 {r16 g ees bes bes' g} |
-	\times 4/6 {r16 f d bes bes' f}		\times 4/6 {r16 d bes f f' d} |
-	\times 4/6 {r16 c a f f' ees}		\times 4/6 {r16 c a f f' ees} |
-	\times 4/6 {r16 d bes f f' d}		\times 4/6 {r16 f d bes bes' f} |
-	\times 4/6 {r16 g ees bes bes' g}	\times 4/6 {r16 ges ees bes bes' ges} |
-	\times 4/6 {r16 f d bes bes' f}		\times 4/6 {r16 d bes f f' d} |
+	\tuplet 6/4 {r16 g ees bes bes' g} 	\tuplet 6/4 {r16 g ees bes bes' g} |
+	\tuplet 6/4 {r16 f d bes bes' f}		\tuplet 6/4 {r16 d bes f f' d} |
+	\tuplet 6/4 {r16 c a f f' ees}		\tuplet 6/4 {r16 c a f f' ees} |
+	\tuplet 6/4 {r16 d bes f f' d}		\tuplet 6/4 {r16 f d bes bes' f} |
+	\tuplet 6/4 {r16 g ees bes bes' g}	\tuplet 6/4 {r16 ges ees bes bes' ges} |
+	\tuplet 6/4 {r16 f d bes bes' f}		\tuplet 6/4 {r16 d bes f f' d} |
 % 47
-	\times 4/6 {r16 c a f  f' ees }		\times 4/6 {r16 c a f  f' ees } |
-	\times 4/6 {r16 d bes f f' d}		\times 4/6 {r16 d bes f f' d} |
-	\times 4/6 {r16 d c d, fis' d}		\times 4/6 {r16 d c d, fis' d}	|
-	\times 4/6 {r16 d bes d, g' d}		\times 4/6 {r16 d bes d, g' d} |
-	\times 4/6 {r16 d c d, a'' d,}		\times 4/6 {r16 d c d, a'' d,}	|
-	\times 4/6 {r16 d bes g bes' d,}	\times 4/6 {r16 d bes g bes' d,} |
+	\tuplet 6/4 {r16 c a f  f' ees }		\tuplet 6/4 {r16 c a f  f' ees } |
+	\tuplet 6/4 {r16 d bes f f' d}		\tuplet 6/4 {r16 d bes f f' d} |
+	\tuplet 6/4 {r16 d c d, fis' d}		\tuplet 6/4 {r16 d c d, fis' d}	|
+	\tuplet 6/4 {r16 d bes d, g' d}		\tuplet 6/4 {r16 d bes d, g' d} |
+	\tuplet 6/4 {r16 d c d, a'' d,}		\tuplet 6/4 {r16 d c d, a'' d,}	|
+	\tuplet 6/4 {r16 d bes g bes' d,}	\tuplet 6/4 {r16 d bes g bes' d,} |
 % 53
-	\times 4/6 {r16 g cis, bes g' cis,}	\times 4/6 {r16 g' cis, bes g' cis,} |
-	\times 4/6 {r16 f d bes f' d}		\times 4/6 {r16 d bes f d' bes} |
-	\times 4/6 {r16 c bes e, c' bes}	\times 4/6 {r16 c a ees f' a,} |
-	\override Rest #'extra-offset = #'(0 . -1.0)
-	\times 4/6 {r16 bes d,( f) bes d,}	\times 4/6 {r16 bes' d,( f) bes d,} |
-	\times 4/6 {r16 bes' f( d) f( d)}	\times 4/6 {r16 bes' f( d) f( d)} |
+	\tuplet 6/4 {r16 g cis, bes g' cis,}	\tuplet 6/4 {r16 g' cis, bes g' cis,} |
+	\tuplet 6/4 {r16 f d bes f' d}		\tuplet 6/4 {r16 d bes f d' bes} |
+	\tuplet 6/4 {r16 c bes e, c' bes}	\tuplet 6/4 {r16 c a ees f' a,} |
+	\override Rest.extra-offset = #'(0 . -1.0)
+	\tuplet 6/4 {r16 bes d,( f) bes d,}	\tuplet 6/4 {r16 bes' d,( f) bes d,} |
+	\tuplet 6/4 {r16 bes' f( d) f( d)}	\tuplet 6/4 {r16 bes' f( d) f( d)} |
 	bes2 |
 }
 
-two =	\context Voice=two \notes \relative c' {
+two = \relative c' {
 	\voiceTwo
 	\stemDown
-	\override Rest #'extra-offset = #'(0 . 1.0)
-	r8 f4 f8 |
-	r8 f4 f8 |
-	r8 f r bes |
-	r8 a f4 |
+	\override Rest.extra-offset = #'(0 . 0.5)
+	f8\rest f4 f8 |
+	f8\rest f4 f8 |
+	f8\rest f f\rest bes |
+	f8\rest a f4 |
 % 5
+	\override Rest.extra-offset = #'(0 . 1.0)
 	g8\rest bes g8\rest c8 |
 	g8\rest bes8 bes4 |
-	r8 g r f |
-	r8 f[ f f] |
+	\override Rest.extra-offset = #'(0 . 0.5)
+	f8\rest g r f |
+	f8\rest f[ f f] |
 % 9
-	r8 e4 e8 |
-	r8 f[ a f] |
-	r8 e4 e8 |
-	r8 f[ a f] |
-	r8 f4 f8 |
+	f8\rest e4 e8 |
+	f8\rest f[ a f] |
+	f8\rest e4 e8 |
+	f8\rest f[ a f] |
+	f8\rest f4 f8 |
 % 14
-	r8 f8 r8 g8 |
+	f8\rest f8 r8 g8 |
 	f8\rest c'4 c8 |
-	r8 c[ a c] |
-	r8 a4 a8 |
-	r8 bes4 bes8 |
-	r8 c4 bes8 |
-	r8  a8 s8 r8
+	g8\rest c[ a c] |
+	g8\rest a4 a8 |
+	g8\rest bes4 bes8 |
+	g8\rest c4 bes8 |
+	g8\rest  a8 s8 a8\rest
 % 21
+	\override Rest.extra-offset = #'(0 . 0.75)
 	a8\rest a a\rest bes |
 	a8\rest c a\rest bes |
-	r8 f r f |
-	r8 f r f |
-	r8 a a\rest bes |
+	g8\rest f g\rest f |
+	g8\rest f g\rest f |
+	g8\rest a a\rest bes |
 	a8\rest c a\rest bes |
-	r8 f r f |
+	f8\rest f f\rest f |
 % 28
-	r8 s g a |
-	r8 f4 f8 |
-	r8 f4 f8 |
-	r8 f8 r bes8 |
-	r8 a f4 |
+	f8\rest s g a |
+	f8\rest f4 f8 |
+	f8\rest f4 f8 |
+	f8\rest f8 r bes8 |
+	f8\rest a f4 |
 	g8\rest a4 a8 |
 % 34
 	g8\rest g g4 |
@@ -158,31 +169,31 @@ two =	\context Voice=two \notes \relative c' {
 	g8\rest a4 a8 |
 	g8\rest bes c8\rest bes |
 	g8\rest g a\rest c |
-	r8 d[ bes bes] |
+	g8\rest d'[ bes bes] |
 % 41
-	r8 bes4 bes8 |
-	r8 bes r f |
-	r8 f4 f8 |
-	r8 f r bes |
-	r8 bes r bes |
-	r8 bes r f |
-	r8 f4 f8 |
+	g8\rest bes4 bes8 |
+	g8\rest bes g\rest f |
+	g8\rest f4 f8 |
+	g8\rest f g\rest bes |
+	g8\rest bes g\rest bes |
+	g8\rest bes g\rest f |
+	g8\rest f4 f8 |
 % 48
-	r8 f4 f8 |
-	r8 d4 d8 |
-	r8 d4 d8 |
-	r8 d4 d8 |
-	r8 g4 g8 |
-	r8 bes4 bes8 |
+	g8\rest f4 f8 |
+	g8\rest d4 d8 |
+	g8\rest d4 d8 |
+	g8\rest d4 d8 |
+	g8\rest g4 g8 |
+	g8\rest bes4 bes8 |
 % 54
-	r8 bes4 f8 |
-	r8 e4 ees8 |
+	g8\rest bes4 f8 |
+	g8\rest e4 ees8 |
 	s2 |
 	s2 |
 	s2 |
 }
 
-three =	\context Voice=three \notes \relative c' {
+three =	\relative c' {
 	\voiceThree
 	\stemDown
 	bes4 bes |
@@ -251,17 +262,20 @@ three =	\context Voice=three \notes \relative c' {
 	bes2 |
 }
 
-	
-\score { 
-	\notes { \time 2/4 \key bes\major \clef treble 
-		\context Staff <<
-			 \one
-			 \two
-			 \three
-		>>
-	}
-%	\midi { \tempo 4=30}
+
+\score {
+  {
+    \new Staff \with {
+      midiInstrument = #"acoustic guitar (nylon)"
+      } <<
+      \time 2/4 \key bes\major \clef treble
+      \new Voice = "one" \one
+      \new Voice = "two" \two
+      \new Voice = "three" \three
+    >>
+  }
+  \layout {}
+  \midi {
+    \tempo 4 = 30
+  }
 }
-
-
-
