@@ -1,8 +1,9 @@
-\version "2.2.1"
+\version "2.18.0"
 
 \header {
-    title = "Fugue fragment Anh. 41 (375g)"
+    title = "Fugue Fragment"
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
+    opus = "Anh. 41 (375g)"
         
     mutopiatitle = "Fugue fragment Anh. 41 (375g)"
     mutopiacomposer = "MozartWA"
@@ -15,9 +16,7 @@
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
-    lastupdated = "2004/May/23"
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
     footer = "Mutopia-2004/05/23-447"
 }
 
@@ -27,7 +26,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceI = \notes\relative e'' {
+voiceI = \relative e'' {
     \key g \major
 
     r4 e d c
@@ -60,7 +59,7 @@ voiceI = \notes\relative e'' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceII = \notes\relative c'' {
+voiceII = \relative c'' {
     \voiceTwo
 
     s1*4
@@ -91,7 +90,7 @@ voiceII = \notes\relative c'' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceIII = \notes\relative e' {
+voiceIII = \relative e' {
     \key g \major
 
     R1*10
@@ -116,7 +115,7 @@ voiceIII = \notes\relative e' {
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-voiceIV = \notes\relative b {
+voiceIV = \relative b {
     \voiceTwo
 
     s1*16
@@ -137,17 +136,22 @@ voiceIV = \notes\relative b {
 
 \score {
     \context PianoStaff <<
-	\context Staff = up <<
+	\context Staff = "up" <<
 	    %\clef soprano
-	    \context Voice = one \voiceI
-	    \context Voice = two \voiceII
+	    \context Voice = "one" \voiceI
+	    \context Voice = "two" \voiceII
 	>>  
-	\context Staff = down <<
+	\context Staff = "down" <<
 	    \clef bass
-	    \context Voice = three \voiceIII
-	    \context Voice = four \voiceIV
+	    \context Voice = "three" \voiceIII
+	    \context Voice = "four" \voiceIV
 	>>  
     >>
-    \paper { }
-    \midi { \tempo 4 = 110 }  
+    \layout { }
+    
+  \midi {
+    \tempo 4 = 110
+    }
+
+  
 }
