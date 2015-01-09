@@ -1,4 +1,4 @@
-\version "2.2.3"
+\version "2.19.15"
 
 \header{
   title = "Sugar Cane"
@@ -28,15 +28,6 @@
 %
 %  Archive and version: 0rfelyus@hobitin.ucw.cz--2004-music/joplin-sugar-cane--main--1.0
 %  ArchiveLocation:     http://www.ucw.cz/~0rfelyus/{archives}/0rfelyus@hobitin.ucw.cz--2004-music
-
-  tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} "
-    + "This music is part of the Mutopia project: \\hspace{\\stretch{1}} "
-    + "\\texttt{http://www.MutopiaProject.org/}\\\\ "
-    + "\\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by "
-    + "Daniel \v{S}karda" % \maintainer
-    + ".} \\makebox[\\textwidth][c]{"
-    + "Unrestricted modification and redistribution is permitted and encouraged---"
-    + "copy this music and share it!}}"
   footer = "Mutopia-2004/10/21-467"
 
   lastupdated = "2004/Oct/21"
@@ -59,21 +50,51 @@
 %	LH: 16, 75
 }
 
+\paper {
+  top-margin = 6 \mm
+  top-markup-spacing.basic-distance = #5         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing #'padding = #5
+  markup-markup-spacing #'padding = #1.2
+  markup-system-spacing.basic-distance = #6      %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.basic-distance = #11       %-pads music from copyright block
+  bottom-margin = 10\mm
+
+  % default vertical spacing values have been multiplied by 1.5, except where noted with **
+  system-system-spacing = #'((basic-distance . 18) (minimum-distance . 12) (padding . 1.5))
+  % defaults are 12, 8, and 1
+  score-system-spacing = #'((basic-distance . 21) (minimum-distance . 12) (padding . 1.5))
+  % defaults are 14, 8, and 1
+  markup-system-spacing = #'((basic-distance . 7.5) (padding . 6))
+  % defaults are 5 and 0.5**
+  score-markup-spacing = #'((basic-distance . 18) (padding . 0.75))
+  % defaults are 12 and 0.5
+  markup-markup-spacing = #'((basic-distance . 1.5) (padding . 0.75))
+  % defaults are 1 and 0.5
+  top-system-spacing = #'((basic-distance . 1.5) (padding . 1.5))
+  % defaults are 1 and 1
+  top-markup-spacing = #'((basic-distance . 4) (padding 1.5))
+  % defaults are none** and 1
+  last-bottom-spacing = #'((basic-distance . 1.5) (padding . 5))
+  % defaults are 1 and 1**
+}
+
+
 % --- Utilities ... --------------------------------------------------
 
 % oBreak helps to break lines after same measures as in original score.
 % For easier checking it is usefull to define it to \break, otherwise
 % leave it empty
-oBreak = \break
+oBreak = {} %\break
 
 startInvisible =  { \set Score.skipTypesetting = ##t }
 endInvisible =  { \set Score.skipTypesetting = ##f }
 
-noStem = { \once \override Stem #'transparent = ##t }
+noStem = { \once \override Stem.transparent = ##t }
 
 % ---- Upper ... -----------------------------------------------------
 
-upper = \notes\relative c'' {
+upper = \relative c'' {
 									% INTRO
   \clef treble
   \key bes \major
@@ -85,7 +106,7 @@ upper = \notes\relative c'' {
   \repeat volta 2 {
     r16 d ( f, bes d f bes d ) |					%1
     f ( g f es c a g f ) |
-    r \stemDown d ( f, bes d f bes d ) \stemBoth |
+    r \stemDown d ( f, bes d f bes d ) \stemNeutral |
 
     f ( g f es c a g f ) |						%4
     es,8 ges16 ( es d8 f ) |
@@ -152,7 +173,7 @@ upper = \notes\relative c'' {
   {
     r16 d ( f, bes d f bes d ) |					%36
     f ( g f es c a g f ) |
-    r \stemDown d ( f, bes d f bes d ) \stemBoth |
+    r \stemDown d ( f, bes d f bes d ) \stemNeutral |
     f ( g f es c a g f ) |
 
     \oBreak
@@ -260,7 +281,7 @@ upper = \notes\relative c'' {
 
 % --- Lower ... ------------------------------------------------------
 
-lower = \notes\relative c {
+lower = \relative c {
   \clef bass
   \key bes \major
   \time 2/4
@@ -288,7 +309,7 @@ lower = \notes\relative c {
   } \alternative {
     {
       <c c,> <es a, f> <f, f,> <f a es'> |
-      \stemDown <bes bes,> [ <d, d,> <g g,> <f f,> ] \stemBoth |
+      \stemDown <bes bes,> [ <d, d,> <g g,> <f f,> ] \stemNeutral |
     }
     {
       <c c'> <f a es'> <f f,> <f a es'> |				%17
@@ -364,11 +385,11 @@ lower = \notes\relative c {
     <g g,> ( [ <es es,> <bes bes,> <g g,> ] ) |
   } \alternative {
     {
-      <f f,> <as bes d> \stemDown <bes, bes,> <as' bes d> \stemBoth |
+      <f f,> <as bes d> \stemDown <bes, bes,> <as' bes d> \stemNeutral |
       <es es,> [ <g g,> <f f,> <e e,> ] |
     }
     {
-      <f f,> <as bes d> \stemDown <bes, bes,> <as' bes d> \stemBoth |
+      <f f,> <as bes d> \stemDown <bes, bes,> <as' bes d> \stemNeutral |
       <es es,> [ bes es, <bes' bes,>^^ ] |
     }
   }
@@ -376,7 +397,7 @@ lower = \notes\relative c {
   \repeat volta 2 {
     \key bes \major
 
-    <es es,> <g bes es> \stemDown <bes, bes,> <g' bes es> \stemBoth |	%70
+    <es es,> <g bes es> \stemDown <bes, bes,> <g' bes es> \stemNeutral |	%70
     <es es,> <g bes es> <g g,> <ges ges,> |
     <f f,> <f bes d> <bes bes,> <f bes d> |
     <d d'> [ <f f,> <g g,> <gis gis,> ] |
@@ -385,7 +406,7 @@ lower = \notes\relative c {
 
     <bes bes,> <f bes d> <f f,> <f bes d> |				%76
     <bes bes,> [ <as as,> <g g,> <f f,> ] |
-    <es es,> <g bes es> \stemDown <bes, bes,> <g' bes es> \stemBoth |
+    <es es,> <g bes es> \stemDown <bes, bes,> <g' bes es> \stemNeutral |
     <g g,> <g bes es> <es es,> <ges bes es> |
     bes, <f' bes d> d <f bes d> |
     <f f,> <f bes d> <f a es'>4 |
@@ -402,7 +423,7 @@ lower = \notes\relative c {
 
 % --- Dynamics ... ---------------------------------------------------
 
-dynamics = \notes {
+dynamics =  {
   \partial 8 s8
   \repeat volta 2 {
     s2 \mf |								%1
@@ -438,7 +459,7 @@ dynamics = \notes {
     s16 \< s8 s16 s16 s16 s8 \! |
   } \alternative {
     { s2 | }
-    { s4 s8 ^\markup { \vcenter \right-align \sans "Fine." } }
+    { s4 s8 ^\markup { \vcenter \upright \right-align \sans "Fine." } }
   }
 }
 
@@ -446,63 +467,32 @@ dynamics = \notes {
 
 \score {
   \context PianoStaff <<
-    \context Staff=upper \upper
-    \context Dynamics=dynamics \dynamics
-    \context Staff=lower \lower
+    \context Staff = "upper" \upper
+    \context Dynamics = "dynamics" \dynamics
+    \context Staff = "lower" \lower
   >>
-  \paper {
-    \context {
-      \type "Engraver_group_engraver"
-      \name Dynamics
-      \alias Voice % So that \cresc works, for example.
-      \consists "Output_property_engraver"
-
-      minimumVerticalExtent = #'(-1 . 1)
-
-      \consists "Script_engraver"
-      \consists "Dynamic_engraver"
-      \consists "Text_engraver"
-
-      \override TextScript #'font-size = #2
-      \override TextScript #'font-shape = #'italic
-      \override DynamicText #'extra-offset = #'(0 . 2.5)
-      \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-      \consists "Skip_event_swallow_translator"
-
-      \consistsend "Axis_group_engraver"
-    }
-    \context {
-      \PianoStaffContext
-      \accepts Dynamics
-      \override VerticalAlignment #'forced-distance = #7
-    }
-  }
+  \layout { }
 }
 
 \score {
   \context PianoStaff <<
-    \context Staff = upper
-     \apply #unfold-repeats
+    \context Staff = "upper"      \applyMusic #unfold-repeats
       \upper
-    \context Dynamics = dynamics
-     \apply #unfold-repeats
+    \context Dynamics = "dynamics"      \applyMusic #unfold-repeats
       \dynamics
-    \context Staff = lower
-     \apply #unfold-repeats
+    \context Staff = "lower"      \applyMusic #unfold-repeats
       \lower
    >>
 
   \midi {
     \tempo 4 = 100
     \context {
-      \type "Performer_group_performer"
+      \type "Performer_group"
       \name Dynamics
-      \consists "Span_dynamic_performer"
       \consists "Dynamic_performer"
     }
     \context {
-      \PianoStaffContext
+      \PianoStaff
       \accepts Dynamics
     }
   }
