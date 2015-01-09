@@ -8,6 +8,7 @@
 
 \include "english.ly"
 \include "header.ly"
+\include "paper-defs.ily"
 
 paperOFF = { \set Score.skipTypesetting = ##t }
 paperON = { \set Score.skipTypesetting = ##f }
@@ -78,10 +79,10 @@ playLH =  \relative e, {
     \time 3/4
 
                                 % 0
-    \partial 4 r4^\markup{\dynamic p \italic "dolce e semplice"} |
+    \partial 4 r4\p |
 
                                 % 1 - 4
-    e4\sustainOn <e' e'> <e e'> | <e e'>2 r4\sustainOff |
+    e4^\markup{\italic "dolce e semplice"}\sustainOn <e' e'> <e e'> | <e e'>2 r4\sustainOff |
     a,4\sustainOn <a' e'> <a e'> | <a e'>2 r4\sustainOff |
 
                                 % 5 - 8
@@ -130,7 +131,12 @@ scoreAll =  {
     {
         \scoreAll
     }
-    \layout {}
+    \layout {
+      \context {
+        \Score
+        \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
+      }
+    }
     \midi {
         \tempo 4 = 120
     }
