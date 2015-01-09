@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
                       %                 "PRELUDE Op28 No6"
                       %                 by Frederic Chopin
@@ -8,6 +8,7 @@
 
 \include "english.ly"
 \include "header.ly"
+\include "paper-defs.ily"
 
 paperOFF = { \set Score.skipTypesetting = ##t }
 paperON = { \set Score.skipTypesetting = ##f }
@@ -43,7 +44,7 @@ playRHupper =  \relative b' {
     d d d d d d |
     d d cs cs <cs as>( <d b> |
     e4. fs8 e16 d \acciaccatura d8 cs16 b |
-    <as fss cs>8\< <b gs d>\! <d b d,>\> <cs as cs,>)\! \trebleQuaverRest |
+    <as fss cs>8[\< <b gs d>\! <d b d,>\> <cs as cs,>)]\! \trebleQuaverRest |
 
                                 % 9 - 12
     b8( b) b( b) b( b) | b b b b b b |
