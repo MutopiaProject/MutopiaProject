@@ -1,7 +1,8 @@
-partFourGlobal = \notes {
+\version "2.19.15"
+partFourGlobal =  {
     \repeat volta 2 {
                                 % 55 - 58
-        \bar "||:"
+        \bar ".|:-||"
         \barRest | \barRest | \barRest | \barRest |
         \myBreak
                                 % 59 - 62
@@ -20,15 +21,15 @@ partFourGlobal = \notes {
         {\barRest |}
     }
     \myBreak
-%    \bar "||" % no-use \bar "||:" at next block
+%    \bar "||" % no-use \bar ".|:-||" at next block
 }
 
-partFourRHnotes = \notes \relative f' {
+partFourRHnotes =  \relative f' {
     \key f \major
     \repeat volta 2 {
                                 % 55 - 58
         << { f4~ <f c>16( a <a d f>8) } \\
-           { \once\override DynamicText #'extra-offset = #'(0 . -1)
+           { \once\override DynamicText.extra-offset = #'(0 . -1)
              a,16(\mp bf b c)~ \ohs c8 s8  } >>  |
         << { s8. \ohs bf'16~ bf bf <d f>8 } \\
            { <g, d' f>8. <g bf>16~ g8 g} >> |
@@ -62,18 +63,18 @@ partFourRHnotes = \notes \relative f' {
         <f a>16 <f a>8 <f gs>16~ <f gs>8 <f gs d'> |
         << { d'16 c8 bf16~ <bf e, d>8 <a e c> } \\
            { <a f>8. <e d>16~
-             \once\override NoteColumn #'force-hshift = #1
-             \ohs \tieBoth<e d>8 s8 } >> |
+             \once\override NoteColumn.force-hshift = #1
+             \ohs \tieNeutral<e d>8 s8 } >> |
     }
     \alternative {
                                 % 70
         { <f a,>4. <e bf>8\fermata | }
                                 % 71
-        { \stemUp <f a,>4~ <f a,>8\< d'16(\fermata f)\! \stemBoth | }
+        { \stemUp <f a,>4~ <f a,>8\< d'16(\fermata f)\! \stemNeutral | }
     }
 }
 
-partFourLHnotes = \notes \relative f {
+partFourLHnotes =  \relative f {
     \key f \major
     \repeat volta 2 {
                                 % 55 - 58
@@ -116,14 +117,14 @@ partFourLHnotes = \notes \relative f {
     }
 }
 
-partFourRH = \notes {
+partFourRH =  {
     <<
         \partFourGlobal
         \partFourRHnotes
     >>
 }
 
-partFourLH = \notes {
+partFourLH =  {
     <<
         \partFourGlobal
         \partFourLHnotes

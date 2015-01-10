@@ -1,7 +1,8 @@
-partOneGlobal = \notes {
+\version "2.19.15"
+partOneGlobal =  {
     \repeat volta 2 {
                                 % 5 - 19
-        \bar "||:"
+        \bar ".|:-||"
         \barRest | \barRest | \barRest | \barRest |
         \myBreak
         \barRest | \barRest | \barRest | \barRest |
@@ -19,7 +20,7 @@ partOneGlobal = \notes {
     \myBreak
 }
 
-partOneRHnotes = \notes \relative b' {
+partOneRHnotes =  \relative b' {
     \repeat volta 2 {
                                 % 5 - 8
         b16\mf( bf a g~g gs a as) |
@@ -53,7 +54,7 @@ partOneRHnotes = \notes \relative b' {
     }
 }
 
-partOneLHnotes = \notes \relative d {
+partOneLHnotes =  \relative d {
     \repeat volta 2 {
                                 % 5 - 8
         << { d8. g16 <b f'>8 d, } \\
@@ -98,14 +99,14 @@ partOneLHnotes = \notes \relative d {
     }
 }
 
-partOneRH = \notes {
+partOneRH =  {
     <<
         \partOneGlobal
         \partOneRHnotes
     >>
 }
 
-partOneLH = \notes {
+partOneLH =  {
     <<
         \partOneGlobal
         \partOneLHnotes

@@ -1,4 +1,4 @@
-\version "2.2.2"
+\version "2.19.15"
 
 
                                 %                   "SOLACE"
@@ -9,19 +9,19 @@
 \include "english.ly"
 \include "header.ly"
 
-barRest = \notes {\skip 2 |}
+barRest =  {\skip 2 |}
 
-myBreak = \notes { \break }
-myMark = \notes {} %\notes{\mark\default}
-paperOFF = \notes{ \set Score.skipTypesetting = ##t }
-paperON = \notes{ \set Score.skipTypesetting = ##f }
+myBreak =  {} % ... { \break }
+myMark =  {} %... {\mark\default}
+paperOFF = { \set Score.skipTypesetting = ##t }
+paperON = { \set Score.skipTypesetting = ##f }
 
 %% Change staff
 csrh = { \change Staff = "rh" }
 cslh = { \change Staff = "lh" }
 
-ohs = { \once\override Stem #'transparent = ##t }
-ohh = { \once\override NoteHead #'transparent = ##t }
+ohs = { \once\override Stem.transparent = ##t }
+ohh = { \once\override NoteHead.transparent = ##t }
 
 \include "intro.ly"
 \include "partOne.ly"
@@ -32,27 +32,26 @@ ohh = { \once\override NoteHead #'transparent = ##t }
 
 
 
-scoreAll = \notes {
+scoreAll =  {
     \new PianoStaff {
-        \override PianoStaff.VerticalAlignment #'forced-distance = #14  % gap between staves -- default 12
         \set PianoStaff.midiInstrument = "honky-tonk"
-        \override PianoStaff.NoteCollision #'merge-differently-dotted = ##t
+        \override PianoStaff.NoteCollision.merge-differently-dotted = ##t
         <<
-            \context Staff = "rh" {
-                #(set-accidental-style 'default)
-                %%\override Staff.Accidental  #'cautionary-style = #'smaller % doesn't work
-                \override Staff.TextScript #'staff-padding = #2
-                \override Staff.DynamicLineSpanner #'staff-padding = #3.5  % (forced-distance - 6) / 2 (roughly)
-                \myMark \introRH
+            \new Staff = "rh" {
+                \accidentalStyle default
+                %%\override Staff.AccidentalCautionary.font-size = #-2 % doesn't work
+                %\override Staff.TextScript.staff-padding = #2
+                %\override Staff.DynamicLineSpanner.staff-padding = #3.5  % (forced-distance - 6) / 2 (roughly)
+                \myMark \introRH \break
                 \myMark \partOneRH
                 \myMark \partTwoRH
                 \myMark \partThreeRH
                 \myMark \partFourRH
                 \myMark \partFiveRH
             }
-            \context Staff = "lh" {
-                #(set-accidental-style 'default)
-                %%\override Staff.Accidental  #'cautionary-style = #'smaller % doesn't work
+            \new Staff = "lh" {
+                \accidentalStyle default
+                %%\override Staff.AccidentalCautionary.font-size = #-2 % doesn't work
                 \introLH
                 \partOneLH
                 \partTwoLH
@@ -64,18 +63,14 @@ scoreAll = \notes {
     }
 }
 
-\score
-{
-    \notes
-    {
-        \scoreAll
-    }
-    \paper {    }
+\score {
+  \scoreAll
+  \layout {}
 %     \midi {
 %         \tempo 4 = 72 %% correct
 %         %% Remove the dynamics from the midi output
 %         \context {
-%             \VoiceContext
+%             \Voice
 %             \remove "Dynamic_performer"
 %             \remove "Span_dynamic_performer"
 %         }
@@ -85,22 +80,19 @@ scoreAll = \notes {
 
 
 
-
                                 % ALL REPEATS, MIDI ONLY
 \score
 {
-    \notes
+    
     {
-        \apply #unfold-repeats
+        \applyMusic #unfold-repeats
         \scoreAll
     }
     \midi {
         \tempo 4 = 72
         \context {
-            \VoiceContext
+            \Voice
             \remove "Dynamic_performer"
-            \remove "Span_dynamic_performer"
         }
     }
 }
-

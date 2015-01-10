@@ -1,6 +1,7 @@
+\version "2.19.15"
 \header {
                                 % LILYPOND HEADERS
-    head =  "0.04 (11 Oct 2004)" 
+    head =  "0.05 (09 Jan 2015)" 
 
     %% dedication = "Dedication"
     title = "Solace"
@@ -37,7 +38,6 @@
     maintainerWeb = "http://magware.sourceforge.net"
     lastupdated = "11 Oct 2004" 
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
      footer = "Mutopia-2004/10/11-482"
 }
 

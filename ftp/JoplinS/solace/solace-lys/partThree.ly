@@ -1,4 +1,5 @@
-partThreeGlobal = \notes {
+\version "2.19.15"
+partThreeGlobal =  {
                                 % 39 - 42
     \barRest | \barRest | \barRest | \barRest |
     \myBreak
@@ -11,10 +12,10 @@ partThreeGlobal = \notes {
                                 % 51 - 54
     \barRest | \barRest | \barRest | \barRest |
     \myBreak
-%    \bar "||" % no-use \bar "||:" at next block
+%    \bar "||" % no-use \bar ".|:-||" at next block
 }
 
-partThreeRHnotes = \notes \relative b' {
+partThreeRHnotes =  \relative b' {
                                 %39 - 42
     b16\mf( bf a g~g gs a as) |
     b( <d f> <cs g'> <d f>)~<d f>( <cs g'> <d f> b) |
@@ -40,7 +41,7 @@ partThreeRHnotes = \notes \relative b' {
     <c e c'>4~<c e c'>8\> <e, bf>\! |
 }
 
-partThreeLHnotes = \notes \relative d {
+partThreeLHnotes =  \relative d {
                                 %39 - 42
     << { d8. g16 <b f'>8 d, } \\
        { d4. d8 } >> |
@@ -77,14 +78,14 @@ partThreeLHnotes = \notes \relative d {
     <c c'>8 g'16 c,~c8 c |
 }
 
-partThreeRH = \notes {
+partThreeRH =  {
     <<
         \partThreeGlobal
         \partThreeRHnotes
     >>
 }
 
-partThreeLH = \notes {
+partThreeLH =  {
     <<
         \partThreeGlobal
         \partThreeLHnotes
