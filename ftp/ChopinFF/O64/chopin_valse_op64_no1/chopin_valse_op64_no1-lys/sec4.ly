@@ -1,4 +1,6 @@
-secFourSilent = \notes {
+\version "2.18.2"
+
+secFourSilent =  {
                                 % 70 - 73
     \barRest |
     \barRest |
@@ -72,7 +74,7 @@ secFourSilent = \notes {
 }
 
 
-secFourRHnotes = \notes \relative af' {
+secFourRHnotes =  \relative af' {
                                 % 70 - 73
     af2.\trill(~ |
     af2.\trill~ |
@@ -110,9 +112,9 @@ secFourRHnotes = \notes \relative af' {
     ef f ef\prall d ef e |
 
                                 % 94 - 97
-    \times 2/3 { f8[ gf f] } e f af gf |
+    \tuplet 3/2 { f8[ gf f] } e f af gf |
     f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
+    \tuplet 3/2 { af[ bf af] } g af c bf |
     af bf af g af df |
 
                                 % 98 - 101
@@ -123,22 +125,22 @@ secFourRHnotes = \notes \relative af' {
 
                                 % 102 - 105
     \stemUp
-    \times 2/3 { f8[ gf f] } e f af gf |
+    \tuplet 3/2 { f8[ gf f] } e f af gf |
     f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
+    \tuplet 3/2 { af[ bf af] } g af c bf |
     af bf af g af f' |
 
                                 % 106 - 109
     ef df c bf af gf |
-    \stemBoth
+    \stemNeutral
     f ef df c bf af |
     a c bf f gf c, |
     df4) r f'->(~ |
 
                                 % 110 - 113
-    \times 2/3 { f8[ gf f] } e f af gf |
+    \tuplet 3/2 { f8[ gf f] } e f af gf |
     f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
+    \tuplet 3/2 { af[ bf af] } g af c bf |
     af bf af g af df |
 
                                 % 114 - 117
@@ -149,20 +151,20 @@ secFourRHnotes = \notes \relative af' {
 
                                 % 118 - 121
     \stemUp
-    \times 2/3 { f8[ gf f] } e f af gf |
+    \tuplet 3/2 { f8[ gf f] } e f af gf |
     f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
+    \tuplet 3/2 { af[ bf af] } g af c bf |
     af[ bf af g af])
-    \stemBoth
-    \override Staff.OttavaBracket #'extra-offset = #'(0 . 1)
-    #(set-octavation 1)
+    \stemNeutral
+    \override Staff.OttavaBracket.extra-offset = #'(0 . 1)
+    \ottava #1
     f''\>( |
 
                                 % 122 - 125
     \tiny
-    \times 18/24 {
+    \tuplet 24/18 {
         ef8[ df c bf af gf f ef
-        #(set-octavation 0)
+        \ottava #0
         df c bf af gf f
         ef df c bf a\!\< c bf f gf c,\!]
     } |
@@ -170,7 +172,7 @@ secFourRHnotes = \notes \relative af' {
     df2) r4 |
 }
 
-secFourRHdyn = \notes {
+secFourRHdyn =  {
                                 % 70 - 73
     \barRest |
     s8\< s s s s s |
@@ -243,7 +245,7 @@ secFourRHdyn = \notes {
     s4\f s s |
 }
 
-secFourRH = \notes {
+secFourRH =  {
     <<
         \secFourSilent
         \secFourRHnotes
@@ -253,7 +255,7 @@ secFourRH = \notes {
 
 
 
-secFourLHnotes = \notes \relative df, {
+secFourLHnotes =  \relative df, {
                                 % 70 - 73
     R1*3/4 |
     R1*3/4 |
@@ -315,10 +317,10 @@ secFourLHnotes = \notes \relative df, {
         \context Voice = "vocLHa" \relative gf' { \voiceOne\stemDown\csrh r4 <gf? af> <gf af> }
         \context Voice = "vocLHb" \relative c' { c2. }
     >> |
-    \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemBoth\cslh r } |
+    \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemNeutral\cslh r } |
 
                                 % 106 - 109
-    gf?4 \stemDown\csrh <df' ef bf'> \stemBoth\cslh r |
+    gf?4 \stemDown\csrh <df' ef bf'> \stemNeutral\cslh r |
     af,4 <f' af df> r |
     af,? <gf' af?> <gf af> |
     df4 <af' f'> r |
@@ -348,7 +350,7 @@ secFourLHnotes = \notes \relative df, {
         \context Voice = "vocLHa" \relative gf' { \voiceOne\stemDown\csrh r4 <gf? af> <gf af> }
         \context Voice = "vocLHb" \relative c' { c2. }
     >> |
-    \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemBoth\cslh r } |
+    \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemNeutral\cslh r } |
 
                                 % 122 - 125
     gf,?4 \clef treble <df'' ef bf'> r |
@@ -358,7 +360,7 @@ secFourLHnotes = \notes \relative df, {
     df, <f' af f'> r |
 }
 
-secFourLHdyn = \notes {
+secFourLHdyn =  {
                                 % 70 - 73
     \barRest |
     \barRest |
@@ -432,7 +434,7 @@ secFourLHdyn = \notes {
     \sd s8 s \su s8 s |
 }
 
-secFourLH = \notes {
+secFourLH =  {
     <<
         \secFourSilent
         \secFourLHnotes

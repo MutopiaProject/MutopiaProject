@@ -1,4 +1,6 @@
-secOneSilent = \notes {
+\version "2.18.2"
+
+secOneSilent =  {
                                 % 1 - 4
     \barRest |
     \barRest |
@@ -31,7 +33,7 @@ secOneSilent = \notes {
 }
 
 
-secOneRHnotes = \notes \relative af' {
+secOneRHnotes =  \relative af' {
     \slurUp
                                 % 1 - 4
     af4->^( g8 af c bf |
@@ -64,9 +66,10 @@ secOneRHnotes = \notes \relative af' {
     ef f ef\prall d ef e) |
 }
 
-secOneRHdyn = \notes {
+secOneRHdyn =  {
                                 % 1 - 4
-    s8^\markup{\hspace #-4 \large\bold "Molto Vivace"}_\markup{\italic leggiero} s s s s s |
+    \tempo "Molto Vivace"
+    s8_\markup{\italic leggiero} s s s s s |
     \barRest |
     \barRest |
     \barRest |
@@ -96,7 +99,7 @@ secOneRHdyn = \notes {
     \barRest |
 }
 
-secOneRH = \notes {
+secOneRH =  {
     <<
         \secOneSilent
         \secOneRHnotes
@@ -106,7 +109,7 @@ secOneRH = \notes {
 
 
 
-secOneLHnotes = \notes \relative d {
+secOneLHnotes =  \relative d {
                                 % 1 - 4
     R2. |
     R2. |
@@ -138,7 +141,7 @@ secOneLHnotes = \notes \relative d {
     af <c gf'> af,  |
 }
 
-secOneLHdyn = \notes {
+secOneLHdyn =  {
                                 % 1 - 4
     \barRest |
     \barRest |
@@ -171,7 +174,7 @@ secOneLHdyn = \notes {
 
 }
 
-secOneLH = \notes {
+secOneLH =  {
     <<
         \secOneSilent
         \secOneLHnotes

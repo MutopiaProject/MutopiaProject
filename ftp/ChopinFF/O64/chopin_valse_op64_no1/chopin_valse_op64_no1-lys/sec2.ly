@@ -1,4 +1,6 @@
-secTwoSilent = \notes {
+\version "2.18.0"
+
+secTwoSilent =  {
     \repeat volta 2 {
                                 % 21 - 24
         \barRest |
@@ -32,15 +34,12 @@ secTwoSilent = \notes {
 }
 
 
-secTwoRHnotes = \notes \relative f'' {
+secTwoRHnotes =  \relative f'' {
     \repeat volta 2 {
                                 % 21 - 24
-        \once\override Slur #'attachment = #'(head . stem)
-                                % [bug] first f should tie with last f in bar 36
-                                % [bug] slur/phrase should terminate in both bar 36 and 37 (voltas)
-        \times 2/3 { f8([ gf f] } e f af gf |
+        \tuplet 3/2 { f8([ gf f] } e f af gf |
         f gf f e f bf |
-        \times 2/3 { af[ bf af] } g af c bf |
+        \tuplet 3/2 { af[ bf af] } g af c bf |
         af bf af g af df |
 
                                 % 25 - 28
@@ -51,29 +50,26 @@ secTwoRHnotes = \notes \relative f'' {
 
                                 % 29 - 32
         \stemUp
-        \times 2/3 { f8[ gf? f] } e f af gf |
+        \tuplet 3/2 { f8[ gf? f] } e f af gf |
         f gf f e f bf |
-        \times 2/3 { af[ bf af] } g af c bf |
+        \tuplet 3/2 { af[ bf af] } g af c bf |
         af bf af g af f' |
 
                                 % 33 - 35
         ef df c bf af gf |
-        \stemBoth
+        \stemNeutral
         f ef df c bf af |
         a c bf f gf c, |
     }
     \alternative {
                                 % 36
-                                % [bug] The f should tie with the first f (bar 21)
-                                %       in this section on repeat
-        { df4) r f' }
+        { df4) r \shapeSlurTwo f' -\tweak X-extent #'(0 . 4) \laissezVibrer }
                                 % 37 (partial bar)
-                                % [bug] The df should terminate a slur
-        { df,4) r } % [mils] expect warning
+        { df,4 \repeatTie r } 
     }
 }
 
-secTwoRHDyn = \notes {
+secTwoRHDyn =  {
     \repeat volta 2 {
                                 % 21 - 24
         \barRest |
@@ -104,7 +100,7 @@ secTwoRHDyn = \notes {
     }
 }
 
-secTwoRH = \notes {
+secTwoRH =  {
     <<
         \secTwoSilent
         \secTwoRHnotes
@@ -114,7 +110,7 @@ secTwoRH = \notes {
 
 
 
-secTwoLHnotes = \notes \relative a, {
+secTwoLHnotes =  \relative a, {
     \repeat volta 2 {
                                 % 21 - 24
         a4 <f' c' ef?> <f c' ef> |
@@ -141,10 +137,10 @@ secTwoLHnotes = \notes \relative a, {
             \context Voice = "vocLHa" \relative gf' { \voiceOne\stemDown\csrh r4 <gf? af> <gf af> }
             \context Voice = "vocLHb" \relative c' { c2. }
         >> |
-        \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemBoth\cslh r } |
+        \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemNeutral\cslh r } |
 
                                 % 33 - 35
-        gf?4 \stemDown\csrh <df' ef bf'> \stemBoth\cslh r |
+        gf?4 \stemDown\csrh <df' ef bf'> \stemNeutral\cslh r |
         af,4 <f' af df> r |
         af,? <gf' af?> <gf af> |
 
@@ -157,7 +153,7 @@ secTwoLHnotes = \notes \relative a, {
     }
 }
 
-secTwoLHDyn = \notes {
+secTwoLHDyn =  {
     \repeat volta 2 {
                                 % 21 - 24
         \sbar |
@@ -187,7 +183,7 @@ secTwoLHDyn = \notes {
     }
 }
 
-secTwoLH = \notes {
+secTwoLH =  {
     <<
         \secTwoSilent
         \secTwoLHnotes
