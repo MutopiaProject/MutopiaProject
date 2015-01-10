@@ -31,7 +31,6 @@ ohh = { \once\override NoteHead.transparent = ##t }
 \include "partFive.ly"
 
 
-
 scoreAll =  {
     \new PianoStaff {
         \set PianoStaff.midiInstrument = "honky-tonk"
@@ -39,9 +38,6 @@ scoreAll =  {
         <<
             \new Staff = "rh" {
                 \accidentalStyle default
-                %%\override Staff.AccidentalCautionary.font-size = #-2 % doesn't work
-                %\override Staff.TextScript.staff-padding = #2
-                %\override Staff.DynamicLineSpanner.staff-padding = #3.5  % (forced-distance - 6) / 2 (roughly)
                 \myMark \introRH \break
                 \myMark \partOneRH
                 \myMark \partTwoRH
@@ -51,7 +47,6 @@ scoreAll =  {
             }
             \new Staff = "lh" {
                 \accidentalStyle default
-                %%\override Staff.AccidentalCautionary.font-size = #-2 % doesn't work
                 \introLH
                 \partOneLH
                 \partTwoLH
@@ -66,24 +61,13 @@ scoreAll =  {
 \score {
   \scoreAll
   \layout {}
-%     \midi {
-%         \tempo 4 = 72 %% correct
-%         %% Remove the dynamics from the midi output
-%         \context {
-%             \Voice
-%             \remove "Dynamic_performer"
-%             \remove "Span_dynamic_performer"
-%         }
-%     }
 }
-
-
 
 
                                 % ALL REPEATS, MIDI ONLY
 \score
 {
-    
+
     {
         \applyMusic #unfold-repeats
         \scoreAll

@@ -1,7 +1,7 @@
 \version "2.19.15"
 \header {
                                 % LILYPOND HEADERS
-    head =  "0.05 (09 Jan 2015)" 
+    head =  "0.05 (09 Jan 2015)"
 
     %% dedication = "Dedication"
     title = "Solace"
@@ -21,7 +21,7 @@
 
                                 % LILYPOND FOOTERS
     copyright = "Public Domain"
-    %footer = "0.04 (11 Oct 2004)" 
+    %footer = "0.04 (11 Oct 2004)"
     %% tagline = "Tagline"
 
 
@@ -36,7 +36,7 @@
     maintainer = "Magnus Lewis-Smith"
     maintainerEmail = "mlewissmith@users.sourceforge.net"
     maintainerWeb = "http://magware.sourceforge.net"
-    lastupdated = "11 Oct 2004" 
+    lastupdated = "11 Oct 2004"
 
      footer = "Mutopia-2004/10/11-482"
 }
@@ -46,19 +46,19 @@
 
 %{
 BUGLIST
-*	http: 
+*	http:
 *	category:  projects/lily
 *	group:     sources/lily/joplin_solace
 
 
 FEATURE REQUEST
-*	http: 
+*	http:
 *	category:  projects/lily
 *	group:     sources/lily/joplin_solace
 
 Some interesting Scott Joplin links:
-*    http: 
-*    http: 
-*    http: 
-*    http: 
+*    http:
+*    http:
+*    http:
+*    http:
 %}
