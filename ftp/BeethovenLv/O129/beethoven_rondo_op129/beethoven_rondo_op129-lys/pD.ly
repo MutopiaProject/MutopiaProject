@@ -1,14 +1,15 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PART D : BARS 129-216  1'39-3'24
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\version "2.2.0"
+\version "2.18.2"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% RIGHT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rhD = \notes \relative b' {
+rhD =  \relative b' {
     \key g \major
 %%% 129-130
+    \setBeatStructureQuarter
     b4 d8 d | g g b4 |
 %%% 131-136
     d16 c d c a8 r |
@@ -26,10 +27,7 @@ rhD = \notes \relative b' {
     b8 b e4 |
 %%% 143-148
     << { cs2 | }
-       { \override TextSpanner  #'style = #'trill
-         \override TextSpanner  #'edge-height = #'(0 . 0)
-         \override TextSpanner  #'edge-text  = #(cons (make-musicglyph-markup "scripts-trill")  "")
-         s4..^\startTextSpan \grace { b16\stopTextSpan [ cs ] } } >>
+       { s4..^\startTrillSpan \afterGrace s16 { b16\stopTrillSpan [ cs ] } } >>
     d4 d, |
     b4 d8 d |
     g g b4 |
@@ -64,6 +62,7 @@ rhD = \notes \relative b' {
     ef16 df ef df bf8 bf16 c |
     af8 r r4 |
 %%% 173-179
+    \setBeatStructureHalf
     <af, c>8 <af c> <af c> <af c> |
     <af c> <af c> <af c> <af c> |
     <bf c> <bf c> <bf c> <bf c> |
@@ -77,6 +76,7 @@ rhD = \notes \relative b' {
     af af c4 |
     ef16 df ef df bf4 |
     ef16 df ef df bf4 |
+    \setBeatStructureQuarter
     r16 c af ef c af' ef c |
 %%% 186-191
     af16 c af ef c af' ef c |
@@ -102,13 +102,13 @@ rhD = \notes \relative b' {
     df bf8 bf |
     g! g e!4 |
     ef' c8 c |
-    a! a f f |
+    a![ a f f] |
 %%% 207-211
     ef16 a,, bf c d ef f g |
     a bf c d ef f g a |
     bf c d ef f ef d c |
     bf a g f ef d c bf |
-    a g f ef d c \cslh\voiceOne\clef bass bf a |
+    a g f ef \posBeamA d^[ c \cslh\voiceOne\clef bass bf a] |
 %%% 212-216
     g f ef d c bf a g |
     f g a bf c d ef f |
@@ -121,9 +121,10 @@ rhD = \notes \relative b' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% LEFT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-lhD = \notes \relative g, {
+lhD =  \relative g, {
     \key g \major
 %%% 129-130
+    \setBeatStructureQuarter
     g16 b' d, b' g b d, b' |
     g, b' d, b' g b d, b' |
 %%% 131-136
@@ -166,6 +167,7 @@ lhD = \notes \relative g, {
     d,4 a'16 d a d |
     ef,4 g16 bf g bf |
     ef,4 g16 bf g bf |
+    \setBeatStructureHalf
     <af c>8 <af c ef> <af c ef> <af c ef> |
     <af c ef> <af c ef> <af c ef> <af c ef> |
 %%% 167-172
@@ -176,6 +178,7 @@ lhD = \notes \relative g, {
     <af df ef g> <af df ef g> <af df ef g> <af df ef g> |
     <af c ef af>8 g-. [  af-. bf-. ] |
 %%% 173-179
+    \setBeatStructureQuarter
     c16 bf af g f g af bf |
     c8-. c-. f4-> |
     f16 e! f e c4 |
@@ -183,13 +186,10 @@ lhD = \notes \relative g, {
     c16 bf af g f g af bf |
     c8-. c-. f4-> |
     << { d!2 | }
-       { \override TextSpanner  #'style = #'trill
-         \override TextSpanner  #'edge-height = #'(0 . 0)
-%         \override TextSpanner  #'edge-text  = #(cons (make-musicglyph-markup "scripts-trill accidentals--2")  "")
-                                % [TODO -- very ugly here]
-         s4..^\trill^\markup{\tiny\flat}^\startTextSpan \grace { c16\stopTextSpan [ d ] } } >>
+       { s4..^\startTrillSpan^\markup{\tiny\flat} \afterGrace s16 { c16\stopTrillSpan [ d ] } } >>
 %%% 180-185
     ef4 r |
+    \setBeatStructureHalf
     <af, c ef>8 <af c ef> <af c ef> <af c ef> |
     <af c ef> <af c ef> <af c ef> <af c ef> |
     <g bf df ef> <g bf df ef> <g bf df ef> <g bf df ef> |
@@ -204,6 +204,7 @@ lhD = \notes \relative g, {
     gf ef8 ef |
 %%% 192-196
     c8 c gf4 |
+    \setBeatStructureQuarter
     r16 f' df af f df' af f |
     df f df af f af df f |
     f, a! c f a, c f a! |
@@ -233,7 +234,7 @@ lhD = \notes \relative g, {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DYNAMICS PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-dynD = \notes {
+dynD =  {
 %%% 129-130
     s2_\f | s2 |
     \myBreak
@@ -250,19 +251,20 @@ dynD = \notes {
     s2*3 | s4. s8_\p | s2*2 |
     \myBreak
 %%% 155-160
-    s2*2 | s4. s8_\cresc | s2*3 |
+    s2*2 | s4. s8_\deprecatedcresc | s2*3 |
     \myBreak
 %%% 161-166
-    s4 s_\dim | s2*3 | s2_\pp | s2 |
+    s4 s^\deprecateddim | s2*3 | s2^\pp | s2 |
     \myBreak
 %%% 167-172
-    s2*5 | s8 s\< s s\! |
+    s2*5 | s8 \posHairpinA s\< s s%\! |
     \myBreak
 %%% 173-179
-    s2_\mf | s2*6 |
+    s2-\mf\! |
+    s2*6 |
     \myBreak
 %%% 180-185
-    s2 | s2_\cresc | s2*3 | s2_\f |
+    s2 | s2_\deprecatedcresc | s2*3 | s2_\f |
     \myBreak
 %%% 186-191
     s2*6 |
@@ -271,15 +273,16 @@ dynD = \notes {
     s2*5 |
     \myBreak
 %%% 197-201
-    s2*4 | s2_\ff |
+    s2*4 | s2^\ff |
     \myBreak
 %%% 202-206
-    s2 | s2_\sf | s2 | s2_\sf | s2 |
+    s2 | s2-\sf | s2 | s2-\sf | s2 |
     \myBreak
 %%% 207-211
-    s2_\sf | s2*2 | s4 s_\dim | s2 |
+    s2_\sf | s2*2 | s4 s_\deprecateddim | s2 |
     \myBreak
 %%% 212-216
-    s2*4 | s2_\dim |
+    s2*4 | s2_\deprecateddim |
     \myBreak
 }
+

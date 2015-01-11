@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PART E : BARS 217-338  3'24-5'05
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\version "2.2.0"
+\version "2.18.2"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% RIGHT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rhE = \notes \relative e' {
+rhE =  \relative e' {
 %%% 217-224
     e!8( f bf4 |
     cs8 d f4 |
@@ -51,7 +51,7 @@ rhE = \notes \relative e' {
     e16 d c b \cslh\clef bass\voiceOne a g fs e |
     d c b a g fs e d |
     cs d e fs g a b c! |
-    \times 2/3 {
+    \tuplet 3/2 {
         d8_. ds_. e_. f_. fs_. g_. |
         gs a as b c cs |
         \csrh\clef treble\oneVoice
@@ -76,6 +76,7 @@ rhE = \notes \relative e' {
     <d! d,!>8 <cs cs,> r4 |
     <e e,>8 <d d,> r4 |
 %%% 271-276
+    \setBeatStructureHalf
     as,8( b) cs( d) |
     fs( g) as( b) |
     d16( c d c a!4->) |
@@ -83,6 +84,7 @@ rhE = \notes \relative e' {
     as,8( b) cs( d) |
     fs( g) as( b) |
 %%% 277-282
+    \setBeatStructureQuarter
     d16 c d c a!8 a16 b |
     g4 r8 d |
     d'16 c d c a4 |
@@ -163,7 +165,7 @@ rhE = \notes \relative e' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% LEFT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-lhE = \notes \relative e {
+lhE =  \relative e {
 %%% 217-224
     <<
         {
@@ -252,7 +254,7 @@ lhE = \notes \relative e {
           d4 fs8 g |
           d4 fs |
           g8) }
-    >> d8-. b-. g-. |
+    >> d8-.[ b-. g-.] |
 %%% 263-270
     r4 \clef treble <ds'' fs>8( <e g>) |
     r4 <ds fs>8( <e g>) |
@@ -271,7 +273,7 @@ lhE = \notes \relative e {
     g d' b g d b' g d |
     b g' d b g d' b g |
 %%% 277-282
-    d16 d' fs a d, c' fs, c' |
+    d16_[ d' fs a] d, c' fs, c' |
     g b d b g8 r |
     \clef treble
     r4 g''16 fs g fs |
@@ -284,6 +286,7 @@ lhE = \notes \relative e {
     fs!4 a16 g! a g |
     e4 g16 fs g fs |
     \clef bass
+    \setBeatStructureHalf
     ds8 e cs d |
     b c! a b |
 %%% 289-294
@@ -313,6 +316,7 @@ lhE = \notes \relative e {
     <g ef>4 r |
     R2 |
 %%% 311-315
+    \setBeatStructureQuarter
     af,,16 c ef af c, ef af c |
     ef, af c ef af, c ef af |
     g4 e!8 e |
@@ -352,7 +356,7 @@ lhE = \notes \relative e {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DYNAMICS PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-dynE = \notes {
+dynE =  {
 %%% 217-224
     s2_\markup{\dynamic p \italic dolce} | s2*7 |
     \myBreak
@@ -360,28 +364,28 @@ dynE = \notes {
     s2*8 |
     \myBreak
 %%% 233-240
-    s2_\cresc | s2*7 |
+    s2_\deprecatedcresc | s2*7 |
     \myBreak
 %%% 241-248
-    s2*2 | s2_\cresc | s2*3 | s2_\f | s2 |
+    s2*2 | s2_\deprecatedcresc | s2*3 | s2_\f | s2 |
     \myBreak
 %%% 249-254
-    s2*5 | s2_\dim |
+    s2*5 | s2_\deprecateddim |
     \myBreak
 %%% 255-262
     s2_\markup{\italic dolce} | s2*7 |
     \myBreak
 %%% 263-270
-    s2*6 | s2_\dim | s2 |
+    s2*6 | s2^\deprecateddim | s2 |
     \myBreak
 %%% 271-276
     s2_\f | s2*5 |
     \myBreak
 %%% 277-282
-    s2 | s4. s8_\pp | s2_\markup{\italic leggiermente} | s2*3 |
+    s2 | s4. s8_\pp | s2^\markup{\italic leggiermente} | s2*3 |
     \myBreak
 %%% 283-288
-    s2*4 | s4 s4_\cresc | s2 |
+    s2*4 | s4 s4_\deprecatedcresc | s2 |
     \myBreak
 %%% 289-294
     s2*2 | s2^\f | s2^\sf | s2*2 |

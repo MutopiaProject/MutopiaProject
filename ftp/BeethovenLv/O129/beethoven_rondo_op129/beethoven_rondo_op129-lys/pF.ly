@@ -1,12 +1,12 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PART F : BARS 339-???  5'05-?'??
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\version "2.2.0"
+\version "2.18.2"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% RIGHT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rhF = \notes \relative d {
+rhF =  \relative d {
 %%% 339-343
     \cslh\voiceOne\clef bass
     R2 |
@@ -82,12 +82,12 @@ rhF = \notes \relative d {
 %%% 396-401
     d8 d g4 |
     g fs8 r |
-    r f f f |
+    r f[ f f] |
     e16 d c b a b c d |
     e8 e a4 |
     a g8 r |
 %%% 402-410
-    r g g g |
+    r g[ g g] |
     fs!16 e ds cs b cs ds e |
     fs8 fs b4 |
     << { gs8 gs e'4 |} \\
@@ -101,7 +101,7 @@ rhF = \notes \relative d {
 %%% 411-418
     << { c8 c a'4 | cs,8 cs a'4 | } \\
        { a,2 | a | } >>
-    <b d b'>8 d, g g |
+    <b d b'>8^[ d, g g] |
     b b d4 |
     d16( c! d c a8) r |
     d16 c d c a8 r |
@@ -147,7 +147,7 @@ rhF = \notes \relative d {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% LEFT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-lhF = \notes \relative d, {
+lhF =  \relative d, {
 %%% 339-343
     \voiceTwo
     d4 fs8 fs |
@@ -277,7 +277,7 @@ lhF = \notes \relative d, {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DYNAMICS PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-dynF = \notes {
+dynF =  {
 %%% 339-343
     s2_\markup{\dynamic f \italic "ben marcato"} | s2*4 |
     \myBreak
@@ -285,11 +285,11 @@ dynF = \notes {
     s2*11
     \myBreak
 %%% 355-364
-    s2*2 | s2_\dim | s2*5 | s2_\p | s2 |
+    s2*2 | s2_\deprecateddim | s2*5 | s2_\p | s2 |
     \myBreak
 %%% 365-373
-    s2*2 | s2_\pp |
-    \override TextSpanner #'edge-text = #'("cal" . "ando")
+    s2*2 | s2^\pp |
+    \setCalandoSpanner
     s2\startTextSpan | s2 | s2\stopTextSpan | s2_\f\mark\markup{a tempo} | s2*2 |
     \myBreak
 %%% 374-382
@@ -302,7 +302,7 @@ dynF = \notes {
     s2*4 | s4 s_\p | s2 |
     \myBreak
 %%% 396-401
-    s2*3 | s2_\cresc | s2*2 |
+    s2*3 | s2^\deprecatedcresc | s2*2 |
     \myBreak
 %%% 402-410
     s2*7 | s2_\f | s2 |
@@ -311,7 +311,7 @@ dynF = \notes {
     s2*2 | s8 s_\p s4 | s2*5 |
     \myBreak
 %%% 419-424
-    s2*2 | s2_\cresc | s2 | s4 s_\dim | s2 |
+    s2*2 | s2_\deprecatedcresc | s2 | s4 s_\deprecateddim | s2 |
     \myBreak
 %%% 425-429
     s4_\p s8 s_\markup{\italic "sempre dimin."} | s2*4 |
@@ -320,5 +320,5 @@ dynF = \notes {
     s2*3 | s2_\pp | s2 |
     \myBreak
 %%% 435-441
-    s2*2 | s8 s_\cresc s s | s2 | s_\ff | s2*2 |
+    s2*2 | s8 s_\deprecatedcresc s s | s2 | s_\ff | s2*2 |
 }
