@@ -1,4 +1,5 @@
-#(ly:set-option 'old-relative)
+\version "2.18.2"
+
 \header{
 	title = "Old 100th"
 	composer = "Genevan Psalter 1551" % source ref., not composer? -gl
@@ -13,15 +14,16 @@
 	mutopiaarranger = "J. Dowland (1563-1626)"
 	mutopiainstrument = "Voice (SATB)"
 
-	copyright = "Public Domain"
+	license = "Public Domain"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
-	lastupdated = "2004/04/11"
-	copyright = "Public Domain"
+	lastupdated = "2015/01/11"  %update to 2.18.2 (Javier Ruiz-Alma)
 	
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2004/04/11-90"
+	
 
+ footer = "Mutopia-2015/01/11-90"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 %{
@@ -29,16 +31,15 @@
 	http://homepage3.nifty.com/dikaios/CMstudy/English/papers/OV.htm
 	and especially appendix 9.
 %}
-\version "2.1.33"
 
-oneline=\notes{       
+oneline={       
 	\skip 1
 	\skip 2*8
 	\skip 1
 	\bar "||"
 }
 
-global = \notes{
+global = {
        \key g \major
        \time 4/2
        \partial 1
@@ -48,7 +49,7 @@ global = \notes{
        \oneline
 }
 
-sop= \notes\relative c'' {
+sop= \relative c'' {
 	b1^"Melody in tenor" |
 	b2 a c b |
 	b1 d |
@@ -70,7 +71,7 @@ sop= \notes\relative c'' {
 	b1
 }
 
-alt=\notes\relative c' {
+alt=\relative c' {
 	d1 |
 	d2 d e4( fis) g2 |
 	g1 fis |
@@ -92,7 +93,7 @@ alt=\notes\relative c' {
 	g
 }
 
-ten=\notes\relative c' {
+ten=\relative c' {
 	g1 |
 	g2  fis e d |
 	g1 a |
@@ -114,7 +115,7 @@ ten=\notes\relative c' {
 	g
 }
 
-bass=\notes\relative c{
+bass=\relative c{
 	g1 
 	g2 d' a b |
 	e1 d |
@@ -140,34 +141,35 @@ bass=\notes\relative c{
 upper=\context Staff = "upper" <<
 	\clef "treble"
 	\global
-	\context Voice = sop {\voiceOne \sop}
-	\context Voice = alto {\voiceTwo \alt}
+	\context Voice = "sop" {\voiceOne \sop}
+	\context Voice = "alto" {\voiceTwo \alt}
 >>
 
 lower=\context Staff = "lower" <<
 	\clef "bass"
 	\global
-	\context Voice = tenor {\voiceOne \ten}
-	\context Voice = bass {\voiceTwo \bass}
+	\context Voice = "tenor" {\voiceOne \ten}
+	\context Voice = "bass" {\voiceTwo \bass}
 >>
 
 \score {
        \context ChoirStaff <<
+            \set ChoirStaff.midiInstrument = "choir aahs"
 		\upper
 		\lower
 	>>
-	\paper{
+	\layout{
 %		gourlayMaxmeasures = 6.0
-		linewidth = 180.0\mm
+		line-width = 180.0\mm
 		indent = 0.0\pt
 		\context {
-		    \StaffContext
+		    \Staff
 		    \remove "Time_signature_engraver"
 		}
 	}
-	\midi {
-		\tempo 2 = 120
-	}
-}
 	
+  \midi {
+    \tempo 2 = 120
+    }
 
+}
