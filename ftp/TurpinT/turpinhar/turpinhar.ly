@@ -1,60 +1,69 @@
-\version "2.2.0"
+\version "2.18.2"
 \include "english.ly"
-\paper{ papersize = "letter" 
-	linewidth = 165 \mm
-	indent = 8 \mm
-}
 
 #(set-global-staff-size 18)
-
+%#(set-default-paper-size "letter")
 
 \header {
 	title = "THE HARLEM RAG."
-	subsubtitle = "MARCH \\& CAKE WALK."
+	subsubtitle = "MARCH & CAKE WALK."
 	composer = "Tom Turpin (1873 - 1922)"
 	mutopiacomposer = "TurpinT"
+	mutopiainstrument = "Piano"
 	opus = ""
 	date = "1899"
 	source = "Jos. Stern & Co."
 	style = "Jazz"
-	copyright = "Public Domain"
+	license = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"
-	lastupdated = "2004/Apr/13"
+	lastupdated = "2015/01/11"  %update to v2.18.2 (Javier Ruiz-Alma)
 	
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2004/04/13-443"
+ footer = "Mutopia-2015/01/11-443"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 	}
 
+\paper{ 
+        top-margin = 8 \mm
+	line-width = 171 \mm
+	indent = 8 \mm
+	top-markup-spacing.basic-distance = #6 %-dist. from bottom of top margin to the first markup/title
+        markup-system-spacing.basic-distance = #7 %-dist. from header/title to first system
+        system-system-spacing.basic-distance = #18
+        top-system-spacing.basic-distance = #12
+}
 
+Up =  { \stemUp \tieUp }
+Down =  { \stemDown \tieDown }
+Neutral =  { \stemNeutral \tieNeutral }
+doubleSlursOn = \set doubleSlurs = ##t
+doubleSlursOff = \set doubleSlurs = ##f
+shapeSlurA = \shape #'(( -0.25 . -0.5) (-0.15 . -0.45) (-0.15 . -0.45) (-0.1 . -0.5)) Tie
+pushRest = \once \override Rest.extra-offset = #'(1.1 . 0.1)
 
-Up = \notes { \stemUp \tieUp }
-Down = \notes { \stemDown \tieDown }
-Both = \notes { \stemBoth \tieBoth }
-
-RH = \notes \relative c'' { \key c \major \time 2/4
+RH =  \relative c'' { \key c \major \time 2/4
 %%% 1
-	c16_\f^\markup { \bold \bigger \column  
-		< "Allegretto" " " > } c8 g16 c8 g |
+	c16_\f^\markup { \bold \larger \column { "Allegretto" " " } } c8 g16 c8 g |
 	af16 c8 af16 g4 | <f b>16 <f b>8 <f c'>16 <f b>8 <f a!> |
 	<f g>8 r r16 g16_\mf a b |
 %%% 5
 	\repeat volta 2 {
 	<f e'>8[ <f d'> <f e'> <f d'>] | <f e'> d'16 e~ e d( b g) |
-	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 d~ d c( a g) |
+	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 \shapeSlurA d~ d c( a g) |
 	<f c'>8[ <f b> <f c'> <f b>] |
 %%% 10
 	<f c'> b16 c~ c b( a g) | <e a>8[ <e g> <e a> <e g>] |
 	<e a>8 g16 a~ a g( a c) | <e f,>8[ <d f,> <e f,> <d f,>] |
 	<e f,>8 d16 e~ e d b g |
 %%% 15
-	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 d~ d c( a g) |
+	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 \shapeSlurA d~ d c( a g) |
 	<g f'>8[ <g e'> <g f'> <g e'>]| <fs e'> d'16 e~ e d c a |
 	<f! e'>8[ <f d'> <f e'> <f g d'>] | 
 	}
 	\alternative  {{ <e g c>4~ <g e c>16 g( a b) }
-		{ <e, g c>8 r8_\markup { \dynamic f \italic "marcato." } r4}
-		}
+		{ <e, g c>8 r8_\markup { \dynamic f \italic \whiteout "marcato." } r4}
+	} \break
 %%% 22
 	\repeat volta 2 {
 	r8 <a cs g'>16 <a cs g'> <a cs g'>8 <a cs g'> |
@@ -79,32 +88,34 @@ RH = \notes \relative c'' { \key c \major \time 2/4
 		 } \bar "||" 
 %%% 40
 	<f e'>8[ <f d'> <f e'> <f d'>] | <f e'> d'16 e~ e d b g |
-	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 d~ d c a g |
+	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 \shapeSlurA d~ d c a g |
 	<f c'>8[ <f b> <f c'> <f b>] | 
 %%% 45
 	<f c'> b16 c~ c b a g | <e a>8[ <e g> <e a> <e g>] |
 	<e a> g16 a~ a g a c | <f, e'>8[ <f d'> <f e'> <f d'>] | 
 	<f e'> d'16 e~ e d b g |
 %%% 50
-	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 d~ d c a g |
+	<e d'>8[ <e c'> <e d'> <e c'>] | <e d'> c'16 \shapeSlurA d~ d c a g |
 	<g f'>8[ <g e'> <g f'> <g e'>] | <fs e'> d'16 e~ e d c a |
 	<f! e'>8 <f d'> <f e'> <f g d'> | 
 	<e g c>8 r <c' e g c>^^_\sfz r |\bar "||" \key f \major \break
 	
 %%% 56
-	f,8^\markup {\translate #(cons -8 0) \column < \huge \bold "TRIO."  " " > } <f a d>4 <f a c>8 | 
+	f,8^\markup {\translate #(cons -8 0) \column { \huge \bold "TRIO."  " " } } <f a d>4 <f a c>8 | 
 	<d fs>8 <d a' d>4 <d a' c>8 | <d g>8 <d g c>4 <d g bf>8 |
 	d4 a'8 g | f <f a c>4 <f a>8 |
 %%% 61
-	<<{f4( a)}\\{\stemUp d,( f)}>> | <e g>4 c16 d8 c16 |
-	d8[ <c c'>^^ <d c'>^^ <e c'>^^] | f^^ <f a d>4 <f a c>8 |
+	\doubleSlursOn <f d>4( <a f>) \doubleSlursOff |
+	<e g>4 c16 d8 c16 |
+	d8[ <c c'>^^ <d c'>^^ <e c'>^^] | \break
+	f^^ <f a d>4 <f a c>8 |
 	<d fs> <d a' d>4 <d a' c>8 |
 %%% 66
 	<d g>8 <d g c>4 <d g bf>8 | d4 a'8 g |
 	f8 <f a c>4 <g bf>8 | <f a>4( <e g>)( | 
 	f8) <d d'>4^^ <c c'>8^^
 %%% 71
-	<d d'>8^^[ <c c'> <d d'> <e e'>] | \bar "||"
+	<d d'>8^^[ <c c'> <d d'> <e e'>] | \bar "||" \break
 	<f f'>8^^_\mf <d' d'>4 <c c'>8 | <fs, fs'>8 <d' d'>4 <c c'>8 |
 	<g g'>8 <c c'>4 <bf bf'>8 | <d, d'>4 <a' a'>8 <g g'> |
 %%% 76
@@ -114,8 +125,7 @@ RH = \notes \relative c'' { \key c \major \time 2/4
 %%% 81
 	<fs, fs'>8 <d' d'>4 <c c'>8 | <g g'>8 <c c'>4 <bf bf'>8 |
 	<d, d'>4 <a' a'>8 <g g'> | <f f'>8 <c' c'>4 <bf bf'>8 |
-	<<{ \once\override Score.Rest #'extra-offset = #'(-1.1 . -4.7) r8 <d f>[ 
-		\once\override Score.Rest #'extra-offset = #'(-1.1 . -2.1) r8 <c e>]}\\{<a a'>4 <g g'>}>> |
+	<<{ \pushRest d8\rest <d f>[ \pushRest d8\rest <c e>]}\\{<a a'>4 <g g'>}>> |
 %%% 86
 	<f f'>8 r c16 d8 c16 | f8 r <f a c f>^^ r | \bar "||"
 %%% 88
@@ -139,18 +149,17 @@ RH = \notes \relative c'' { \key c \major \time 2/4
 %%% 110
 	<g g'>8 <c c'>4 <bf bf'>8 | <d,d'>4 <a' a'>8 <g g'> |
 	<f f'>8 <c' c'>4 <bf bf'>8 | 
-	<<{\once\override Score.Rest #'extra-offset = #'(-1.1 . -4.7) r8
-		<d f>[ \once\override Score.Rest #'extra-offset = #'(-1.1 . -2.1) r8
-		<c e>]}\\{<a a'>4 <g g'>}>> |
+	<<{\pushRest d8\rest <d f>[ \pushRest d8\rest <c e>]}\\
+	  {<a a'>4 <g g'>}>> |
 	<f f'>8 r <c c'>16 <d d'>8 <c c'>16 |
 %%% 115
-	\override Score.OttavaBracket   #'padding = #2
-	 f8 r #(set-octavation 1) <f' a c f>^^ #(set-octavation 0) r | \bar "|."
+	\override Score.OttavaBracket.padding = #2
+	 f8 r \ottava #1 <f' a c f>^^ \ottava #0 r | \bar "|."
 
 	
 }
 
-LH = \notes \relative c' { \key c \major \time 2/4
+LH =  \relative c' { \key c \major \time 2/4
 %%% 1
 	c16 c8 g16 c8 g | af16 c8 af16 g4 |
 	<g d'>16 <g d'>8 <af d>16 <g d'>8 <g c> |
@@ -254,11 +263,21 @@ LH = \notes \relative c' { \key c \major \time 2/4
 			\RH
 		>>
 		\context Staff = "down" <<
-		\clef bass
+		        \clef bass
 			\LH
 		>>
 	>>
 
-\paper { }
-\midi { \tempo 4 = 72 }
+\layout {
+   \context {
+            \PianoStaff
+            \override StaffGrouper.staff-staff-spacing.minimum-distance = #12
+        }
+}
+
+  \midi {
+    \tempo 4 = 72
+    }
+
+
 }		
