@@ -1,5 +1,5 @@
-\version "2.2.0"
-\paper{ papersize = "letter" }
+\version "2.18.2"
+%#(set-default-paper-size "letter")
 
 #(set-global-staff-size 18)
 
@@ -10,26 +10,36 @@
 	date = "1903"
 	source = "Sol Bloom, New York & Chicago"
 	style = "Jazz"
-	copyright = "Public Domain"
+	license = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"
 	mutopiacomposer = "TurpinT"
+	mutopiainstrument = "Piano"
 	lastupdated = "2004/Apr/10"
 	
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2004/04/10-369"
-
+ footer = "Mutopia-2015/01/12-369"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 	}
 
-Up = \notes { \stemUp \tieUp }
-Down = \notes { \stemDown \tieDown }
-Both = \notes { \stemBoth \tieBoth }
+\paper{ 
+        top-margin = 8 \mm
+        bottom-margin = 10 \mm
+	top-markup-spacing.basic-distance = #6 %-dist. from bottom of top margin to the first markup/title
+        markup-system-spacing.basic-distance = #7 %-dist. from header/title to first system
+        system-system-spacing.basic-distance = #18
+        top-system-spacing.basic-distance = #12
+}
 
-Global = \notes {\time 2/4}
+Up =  { \stemUp \tieUp }
+Down =  { \stemDown \tieDown }
+Neutral =  { \stemNeutral \tieNeutral }
 
-MD = \notes \relative c'' {
+Global =  {\time 2/4}
+
+MD =  \relative c'' {
 	\key c \major 
-   <g' g,>16\f^\markup { \translate #(cons -8 0) \italic \column  < "Allegretto" " " > } <c c,>8-> 
+   <g' g,>16\f^\markup { \translate #(cons -8 0) \italic \column { "Allegretto" " " } } <c c,>8-> 
    			<a a,>16 <g g,> <e e,> <d d,>8
   <c c,>16 <e e,>8-> <d d,>16 <c c,> <b b,> <a a,>8
   <g g,>16 <a a,>8 <ais ais,>16 <b b,>\< <c c,> <d d,> <e e,>\!
@@ -59,7 +69,7 @@ MD = \notes \relative c'' {
    
    <g f'>16 <gis f'> <a f'> <b f'>~ <b f'> <ais f'> <b f'>8
    <b f' g>16 <c f g> <cis f g> <d f g>~ <d f g> <cis f g> <d f g>8
-   #(set-octavation 1) e'16 a b, c e #(set-octavation 0) fis, g c
+   \ottava #1 e'16 a b, c e \ottava #0 fis, g c
    e,16 f fis g a g e c
    
    \Up b8 <f' g> ais, <e' g>
@@ -67,9 +77,9 @@ MD = \notes \relative c'' {
    r8 <g, c e g>\arpeggio r <g c e g>\arpeggio
    r8 <g g'>16 e' <a, a'> e' <g, g'>8->
    
-   <g f'>16 <gis f'> <a f'> <b f'>~ <b f'> <ais f'> <b f'>8
-   <b f' g>16 <c f g> <cis f g> <d f g>~ <d f g> <cis f g> <d f g>8
-   #(set-octavation 1) e'16 a b, c e #(set-octavation 0) fis, g c
+   <g f'>16 <gis f'> <a f'> <b_~ f'~> <b f'> <ais f'> <b f'>8
+   <b f' g>16 <c f g> <cis f g> <d_~ f~ g~> <d f g> <cis f g> <d f g>8
+   \ottava #1 e'16 a b, c e \ottava #0 fis, g c
    e,16 f fis g a g e c
    
    r8 <c ees c'>-> <b' ees, c>-> <c, ees a>->
@@ -81,26 +91,26 @@ MD = \notes \relative c'' {
    
    \key f \major
    
-   <a c>16\mf b c <a f'>~ <a f'> <f a> <g bes> <gis b>
-   <a c>16 b c <a f'>~ <a f'> b c cis
-   <bes d>16 cis d <bes g'>~ <bes g'> fis g a
-   <g bes> a bes g~ g a bes b
+   <a c>16\mf b c <a_~ f'~> <a f'> <f a> <g bes> <gis b>
+   <a c>16 b c <a_~ f'~> <a f'> b c cis
+   <bes d>16 cis d <bes_~ g'~> <bes g'> fis g a
+   <g bes> a bes g_~ g a bes b
    
    \Down c8 <e, bes'> e' <e, bes'>
-   \Up r8 <e bes' c>16 <e bes' d>~ <e bes' d> c' <e, bes' d> c'
+   \Up r8 <e bes' c>16 <e_~ bes'~ d~> <e bes' d> c' <e, bes' d> c'
    <f, f'>16\f <g g'> <a a'> <g g'> <f f'> <d d'>8 <f f'>16
    <c c'>8 <f b cis> <e bes' d> <e bes' c>
 
-	<a c>16\mf b c <a f'>~ <a f'> <f a> <g bes> <gis b>
-	<a c>16 b c <a f'>~ <a f'> b c cis
-	<bes d>16 cis d <bes g'>~ <bes g'> fis g a
-	<g bes> a bes g~ g a bes b
+	<a c>16\mf b c <a_~ f'~> <a f'> <f a> <g bes> <gis b>
+	<a c>16 b c <a_~ f'~> <a f'> b c cis
+	<bes d>16 cis d <bes_~ g'~> <bes g'> fis g a
+	<g bes> a bes g_~ g a bes b
    
    c8 <e, bes'> e' <e, bes'>
-   r8 <e bes' c>16 <e bes' d>~ <e bes' d> c' <e, bes' d> c'
+   r8 <e bes' c>16 <e_~ bes'~ d~> <e bes' d> c' <e, bes' d> c'
    <f, a f'>8 c16 <f a d>~ <f a d> c' <e, bes' d>8
    
-   <f a f'>4~ <f a f'>16 <f a> <g bes> <gis b>
+   <f_~ a~ f'~>4 <f a f'>16 <f a> <g bes> <gis b>
    <f a f'>8 b,16 c\< cis d dis e\!
    
 	\Down f8-^ <f' a d> <f a d> <ees a d>
@@ -108,9 +118,9 @@ MD = \notes \relative c'' {
 	\Down f8-^ <f' a d> <f a d> <ees a d>
 	<e a d>8 \Up b,16[ c]\< cis d dis\! e
 
-	f8^^ \Down <f' a d>16 [<f a c>]~ <f a c> a g f
-	<cis a'>16 e g <a, f'>~ <a f'>8 <a a'>
-	<b a'>16 f' g <b, a'>~ <b a'> f' <b, g'>8
+	f8^^ \Down <f' a d>16 [<f~ a~ c^~>] <f a c> a g f
+	<cis a'>16 e g <a,~ f'^~> <a f'>8 <a a'>
+	<b a'>16 f' g <b,~ a'^~> <b a'> f' <b, g'>8
 	<c e c'>8 \Up b,16[ c] cis\< d dis e\!
 	
 	\Down f8-^ <f' a d> <f a d> <ees a d>
@@ -118,16 +128,16 @@ MD = \notes \relative c'' {
 	\Down f8-^ <f' a d> <f a d> <ees a d>
 	<e a d>8 \Up b,16[ c]\< cis d dis\! e
 	
-	f8^^ \Down <f' a d>16 [<f a c>]~ <f a c> a g f
-	<a, a'>16 e' g <a, f'>~ <a f'>8 <b f' g>
-	<c a'>16 f g <b, a'>~ <b a'> f' <bes, g'>8
+	f8^^ \Down <f' a d>16 [<f~ a~ c^~>] <f a c> a g f
+	<a, a'>16 e' g <a,~ f'^~> <a f'>8 <b f' g>
+	<c a'>16 f g <b,~ a'^~> <b a'> f' <bes, g'>8
 	
 	<a f'>8 \Up b,16 [c] cis\< d dis e\!
 	\Down <a f'>8 r <f' a c f>_>\fz r8
 	
 }
 
-MS = \notes \relative c' {
+MS =  \relative c' {
 	\key c \major 
 	
  g16 c8-> a16 g16 e d8
@@ -222,12 +232,12 @@ MS = \notes \relative c' {
 	<c c'>8 <c c'> <d d'> <e e'>
 	
 	<f f'>8 b,16 [c] cis d dis e
-	<f f'>8 r \Up <f, f,>^> r \bar ".|."
+	<f f'>8 r \Up <f, f,>^> r \bar ".."
    
 
 }
 
-RPT = \notes \relative c'' {
+RPT =  \relative c'' {
 		s2 s2 s2 s2
 		\repeat volta 2 {
 			s2 s2 s2 s2 s2
@@ -256,26 +266,26 @@ RPT = \notes \relative c'' {
 			}
 		}
 
-
-
 \score { 
-\notes {
-\context PianoStaff <<
-%		\apply #unfold-repeats
+ {
+  \context PianoStaff <<
+%		\applyMusic #unfold-repeats
 		\set PianoStaff.midiInstrument = "honky-tonk"
 		\context Staff = "up" <<
-		\Global
-		\clef treble
-		\context Voice=VoiceI \MD
-		\context Voice=VoiceII \RPT
+		  \Global
+		  \clef treble
+		  \context Voice=VoiceI \MD
+		  \context Voice=VoiceII \RPT
 		>>
 		\context Staff = "down" <<
-		\Global
-		\clef bass
-		\context Voice=VoiceI \MS
+		  \Global
+		  \clef bass
+		  \context Voice=VoiceI \MS
 		>>
 	>>
-}
-\paper { }
-\midi { \tempo 4 = 96 }
+ }
+  \layout { }
+
+  \midi { \tempo 4 = 96 }
+
 }		
