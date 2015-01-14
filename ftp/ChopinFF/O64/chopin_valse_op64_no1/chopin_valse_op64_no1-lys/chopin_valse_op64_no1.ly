@@ -105,7 +105,7 @@ scoreAll =  {
 %%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \paper {
-  system-system-spacing.minimum-distance = #14
+  system-system-spacing.minimum-distance = #16
 }
 
 \score
