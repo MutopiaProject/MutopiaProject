@@ -13,7 +13,7 @@ Enjoy this music!
 Mark Van den Borre <mark@markvdb.be>
 %}
 
-\version "2.2.0"
+\version "2.18.0"
 \header {
   mutopiatitle = "Divertissements pour la guitare, n°1 Andante "
   mutopiacomposer = "SorF"
@@ -36,22 +36,21 @@ Mark Van den Borre <mark@markvdb.be>
   source =	"Golden Music Press/GFA/Frederic Noad facsimile edition"
   composer =	"Fernando Sor"
   enteredby	= "Mark Van den Borre"
-  tagline =	"\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright " + \maintainer + " 2004.} \\makebox[\\textwidth][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[\\textwidth][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[\\textwidth][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}"
   footer = 	"Mutopia-2004/05/03-413"
 }
 
-upperVoice = \notes \relative c''{
+upperVoice =  \relative c''{
  \repeat volta 2 {
   b4 b c|									%1
   d4.. e16 d4|									%2
   <e c> <fis d> <g e>|								%3
   <fis d> 
-  \once \override Slur  #'attachment-offset = #'((0 . -0.4) . (-0.6 . -1.5))	%tweak slur
+%  \once \override Slur.attachment-offset = #'((0 . -0.4) . (-0.6 . -1.5))	%tweak slur
   \grace fis16( <e c>8.) d16 <d b>4|						%4 facsimile: grace fis slurs to e, not c
   <g b,><b b,> <d b,>|								%5
-  fis,4. \slurDown \times 2/3 {g16( fis  e)} <fis c>8[ fis]|			%6
+  fis,4. \slurDown \tuplet 3/2 {g16( fis  e)} <fis c>8[ fis]|			%6
   <g b,>4 <b b,> <d b,>|							%7
-  <fis, c>4. \times 2/3 {g16( fis  e)}  fis8[ fis]|				%8
+  <fis, c>4. \tuplet 3/2 {g16( fis  e)}  fis8[ fis]|				%8
   <g b, g e>4 r8<cis, g a,>[ <cis g a,><cis g a,>]|				%9
   <d fis, d>4<d fis, d> r4|							%10
  }										%end 1st repeat
@@ -68,7 +67,7 @@ upperVoice = \notes \relative c''{
  }										%end 2nd repeat
 }										%end upperVoice
 
-lowerVoice = \notes \relative c'{
+lowerVoice =  \relative c'{
  \repeat volta 2 {
   \stemDown g2.|								%1
   g2.|										%2
@@ -93,9 +92,9 @@ lowerVoice = \notes \relative c'{
  }										%end 2nd repeat
 }										%end lowerVoice
 
-middleVoice = \notes \relative c'{
+middleVoice =  \relative c'{
  \repeat volta 2 {
-  \stemUp  g'8[ d] \stemDown  g[ d a' d,]|					%1
+  \once\shiftOn \stemUp g'8[ d] \stemDown  g[ d a' d,]|					%1
   b'8[ g] b[ g16 c]  b8[ g]|							%2
   s2.|										%3
   s2.|										%4
@@ -120,27 +119,32 @@ middleVoice = \notes \relative c'{
 }										%end middleVoice
 
 \score {
-  \context Staff=upper \notes <<
+  \context Staff = "upper"  <<
     \time 3/4
     \key g \major
     \clef violin 
-    \context Voice = one {
+    \context Voice = "one" {
         \voiceOne
 	\upperVoice
     }
-    \context Voice = two {
+    \context Voice = "two" {
         \voiceTwo
 	\middleVoice
     }
-    \context Voice = three {
+    \context Voice = "three" {
     	\voiceThree
 	\lowerVoice
     }
 >>
-\midi { \tempo 4=84}
-\paper {
-  linewidth = 455.244096\pt
-  textheight = 24.0 \cm    % for A4 paper
+
+  \midi {
+    \tempo 4 = 84
+    }
+
+
+\layout {
+%  line-width = 455.244096\pt
+%  textheight = 24.0 \cm    % for A4 paper
   %textheight = 22.2 \cm    % for Letter paper
 }
 }
