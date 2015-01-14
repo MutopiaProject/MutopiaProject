@@ -13,7 +13,7 @@ Enjoy this music!
 Mark Van den Borre <mark@markvdb.be>
 %}
 
-\version "2.18.0"
+\version "2.18.2"
 \header {
   mutopiatitle = "Divertissements pour la guitare, n°1 Andante "
   mutopiacomposer = "SorF"
@@ -39,14 +39,25 @@ Mark Van den Borre <mark@markvdb.be>
   footer = 	"Mutopia-2004/05/03-413"
 }
 
-upperVoice =  \relative c''{
+\paper{ 
+  top-margin = 8 \mm
+  bottom-margin = 10 \mm
+  top-markup-spacing.basic-distance = #6 %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #7 %-dist. from header/title to first system
+  system-system-spacing.basic-distance = #18
+  top-system-spacing.basic-distance = #12
+}
+
+
+
+upperVoice =  \relative c' {
  \repeat volta 2 {
   b4 b c|									%1
   d4.. e16 d4|									%2
   <e c> <fis d> <g e>|								%3
-  <fis d> 
+  <fis d>
 %  \once \override Slur.attachment-offset = #'((0 . -0.4) . (-0.6 . -1.5))	%tweak slur
-  \grace fis16( <e c>8.) d16 <d b>4|						%4 facsimile: grace fis slurs to e, not c
+  \grace fis16_( <e c>8.) d16 <d b>4|						%4 facsimile: grace fis slurs to e, not c
   <g b,><b b,> <d b,>|								%5
   fis,4. \slurDown \tuplet 3/2 {g16( fis  e)} <fis c>8[ fis]|			%6
   <g b,>4 <b b,> <d b,>|							%7
@@ -54,7 +65,7 @@ upperVoice =  \relative c''{
   <g b, g e>4 r8<cis, g a,>[ <cis g a,><cis g a,>]|				%9
   <d fis, d>4<d fis, d> r4|							%10
  }										%end 1st repeat
- 
+
  \repeat volta 2 {
   <c! a>4. \grace d16 <c a>16<b gis> <c a>8<c a>|				%11
   b g' <fis d> <e c> <d b> <cis! ais!>|						%12
@@ -67,7 +78,7 @@ upperVoice =  \relative c''{
  }										%end 2nd repeat
 }										%end upperVoice
 
-lowerVoice =  \relative c'{
+lowerVoice =  \relative c {
  \repeat volta 2 {
   \stemDown g2.|								%1
   g2.|										%2
@@ -78,34 +89,34 @@ lowerVoice =  \relative c'{
   g[ d g d g d]|								%7
   a'[ d, a' d,] <c' a>[ <c a d,>]|						%8
   s2.|										%9
-  s2.||										%10
+  s2.|										%10
  }										%end 1st repeat
  \repeat volta 2 {
   fis,,8[_\markup \italic "dol" d' fis, d' fis, d']|				%11
-  <g, g'>4 r r|									%12 corrected: facsimile says e
-  fis8[ d' fis, d' fis, d']|							%13
-  g,4 r r|									%14
-  r8  f'[ e d c b]|								%15
-  a4 r fis'|									%16
-  g8. c,16 d4 d|								%17
-  g,2 s4||									%18
+  <g, g'>4 c\rest c\rest|									%12 corrected: facsimile says e
+  fis,8[ d' fis, d' fis, d']|							%13
+  g,4 c\rest c\rest |									%14
+  b8\rest f'[ e d c b]|								%15
+  a4 c\rest fis|                                    %16
+  g8. c,16 d4 d|                                    %17
+  g,2 s4|									%18
  }										%end 2nd repeat
 }										%end lowerVoice
 
-middleVoice =  \relative c'{
+middleVoice =  \relative c {
  \repeat volta 2 {
   \once\shiftOn \stemUp g'8[ d] \stemDown  g[ d a' d,]|					%1
-  b'8[ g] b[ g16 c]  b8[ g]|							%2
+  b'8[ g] b[ g16 c]  b8[ g]|                %2
   s2.|										%3
   s2.|										%4
   s2.|										%5
-  s4 \stemUp c s|								%6
+  s4 \stemUp c s|                           %6
   s2.|										%7
   s4 c s4|									%8
   s2.|										%9
-  s2.||										%10
+  s2.|										%10
  }										%end 1st repeat
- 
+
  \repeat volta 2 {
   s2.|										%11
   s2.|										%12
@@ -114,24 +125,26 @@ middleVoice =  \relative c'{
   s2.|										%15
   s2.|										%16
   s2.|										%17
-  s2.||										%18
+  s2.|										%18
  }										%end 2nd repeat
 }										%end middleVoice
 
 \score {
-  \context Staff = "upper"  <<
+  \new Staff = "upper" \with {
+    midiInstrument = #"acoustic guitar (nylon)"
+    } <<
     \time 3/4
     \key g \major
-    \clef violin 
-    \context Voice = "one" {
+    \clef "treble_8"
+    \new Voice = "one" {
         \voiceOne
 	\upperVoice
     }
-    \context Voice = "two" {
+    \new Voice = "two" {
         \voiceTwo
 	\middleVoice
     }
-    \context Voice = "three" {
+    \new Voice = "three" {
     	\voiceThree
 	\lowerVoice
     }
@@ -143,6 +156,10 @@ middleVoice =  \relative c'{
 
 
 \layout {
+  \context {
+    \Score
+    \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/16)
+    }
 %  line-width = 455.244096\pt
 %  textheight = 24.0 \cm    % for A4 paper
   %textheight = 22.2 \cm    % for Letter paper
