@@ -1,6 +1,7 @@
+\version "2.18.2"
 \header {
                                 % LILYPOND HEADERS
-    head =  "0.08 (12 Aug 2004)" 
+    %head =  "0.08 (12 Aug 2004)" 
 
     %%    dedication = "Dedication"
     title = "Prelude"
@@ -8,20 +9,10 @@
     %%    subsubtitle = "Subsubtitle"
 
     composer = "Frederic Chopin (1810-1849)"
-    opus = "Op.~28, No.~15"
-    %%    arranger = "Arranger"
-
-    %%    poet = "Poet"
-    %%    texttranslator = "Translator"
-    %%    meter = "meter"
-
-    %%    instrument = "Instrument"
-    %%    piece = "Piece"
+    opus = "Op.28, No.15"
 
                                 % LILYPOND FOOTERS
-    copyright = "Public Domain"
-    %footer = "0.08 (12 Aug 2004)" 
-    %%    tagline = "Tagline"
+
 
                                 % MUTOPIA HEADERS
     mutopiatitle = "Prelude Op. 28, No. 15 ('Raindrop')"
@@ -35,12 +26,23 @@
     maintainer = "Magnus Lewis-Smith"
     maintainerEmail = "mlewissmith@users.sourceforge.net"
     maintainerWeb = "http://magware.sourceforge.net"
-    lastupdated = "12 Aug 2004" 
+    license = "Public Domain"
+    lastupdated = "2015/01/15"  %Update to LilyPond v2.18.2 (Javier Ruiz-Alma)
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-    footer = "Mutopia-2004/08/12-471"
+ footer = "Mutopia-2015/01/16-471"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
+
+\paper {
+    top-margin = 8 \mm
+    bottom-margin = 10 \mm
+    top-markup-spacing.basic-distance = #6
+    markup-system-spacing.basic-distance = #8 %distance from header/title to 1st system
+    top-system-spacing.basic-distance = #10 %dist. from top margin to system (no titles)
+    system-system-spacing.basic-distance = #20  %fixed distance between systems
+}
 
 
 

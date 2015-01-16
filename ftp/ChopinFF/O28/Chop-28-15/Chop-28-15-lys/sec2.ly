@@ -1,4 +1,7 @@
-sIInull = \notes {
+\version "2.18.2"
+\include "defs.ly"
+
+sIInull =  {
     \repeat unfold 4 {\barRest|} \myBreak % 28 - 31
     \repeat unfold 4 {\barRest|} \myBreak % 32 - 35
     \repeat unfold 4 {\barRest|} \myBreak % 36 - 39
@@ -12,13 +15,13 @@ sIInull = \notes {
 }
 
 % right-hand upper voice
-sIIrhI = \notes {
+sIIrhI =  {
     \relative gs {
         \key cs \minor
         \slurUp
 
                                 % 28 - 31
-        gs8^\markup{\bold\large "Poco pi\\`u animato"}( gs gs gs gs gs gs gs |
+        gs8^\markup{\bold\large "Poco più animato"}( gs gs gs gs gs gs gs |
         gs8 gs gs gs gs gs gs gs |
         gs8 gs gs gs gs gs gs gs |
         gs8 gs gs gs gs gs gs gs |
@@ -51,13 +54,13 @@ sIIrhI = \notes {
         gs8 gs gs gs gs gs gs gs |
         gs8 gs gs gs gs gs gs gs |
         gs8 gs gs gs gs gs gs gs |
-        gs8 <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'>) |
+        gs8 \ignoreClash <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'>) |
 
                                 % 52 - 55
         <gs gs'>( <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> |
         <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> |
         <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> |
-        <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> |
+        <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> <gs gs'> \ignoreClash <gs gs'> |
 
                                 % 56 - 59
         <b b'> <b b'> <b b'> <b b'> <b b'> <b b'> <b b'> <b b'> |
@@ -87,13 +90,13 @@ sIIrhI = \notes {
         <ds fs gs>2 <cs fs gs>4 <cs e as> |
         <cs e as>2 <bs ds gs>4) <cs e as>( |
         <cs e as>2 <bs ds gs>4) <cs e as>( |
-        <cs e as> <bs ds gs>) s s
+        <cs e as> <bs ds gs>) b'2\rest
     }
 }
 
 
 % right-hand lower voice
-sIIrhII = \notes {
+sIIrhII =  {
     \relative cs' {
         \key cs \minor
         \stemDown
@@ -147,12 +150,12 @@ sIIrhII = \notes {
         \barRest |
 
                                 % 60 - 63
-        \override Beam #'positions = #'(-5 . -5)
+        \override Beam.positions = #'(-5 . -5)
         gs8 gs gs gs gs gs gs gs |
         gs8 gs gs gs gs gs gs gs |
         gs8 gs gs gs gs gs gs gs |
         gs gs fs fs gs gs a a |
-        \revert Beam #'positions
+        \revert Beam.positions
 
                                 % 64 - 67
         gs,8 gs gs gs gs gs gs gs |
@@ -161,11 +164,11 @@ sIIrhII = \notes {
         gs gs gs gs gs gs gs gs |
 
                                 % 68 - 71
-        \override Beam #'positions = #'(-5 . -5)
+        \override Beam.positions = #'(-5 . -5)
         gs'8 gs gs gs gs gs gs gs |
         gs gs gs gs gs gs gs gs |
         gs gs gs gs gs gs gs gs |
-        \revert Beam #'positions
+        \revert Beam.positions
         cs, cs cs cs cs cs cs cs |
 
                                 % 72 - 75
@@ -175,22 +178,22 @@ sIIrhII = \notes {
         gs gs gs gs {
             \dynamicUp
             \set decrescendoText = \markup { \italic "dim." }
-            \set decrescendoSpanner = #'none
-            \once\override DynamicLineSpanner #'staff-padding = #0
+            \set decrescendoSpanner = #'text
+            \once \override DynamicTextSpanner.extra-offset = #'( 1.3 . -6.1)
             af[\> af af \cslh \stemUp af\!]
         }|
     }
 }
 
 
-sIIrh = \notes  {
+sIIrh =   {
     <<
         { \context Voice = "upper" {\sIIrhI} } \\
         { \context Voice = "lower" {\sIIrhII} }
     >>
 }
 
-sIIdyn = \notes  {
+sIIdyn =   {
                                 % 28 - 31
     \context Voice = "upper" { s8_\markup{\italic "sotto voce"} s s s s s s s | }
     \barRest |
@@ -202,16 +205,16 @@ sIIdyn = \notes  {
     \barRest |
     \barRest |
     \context Voice = "lower" {
-        \setTextCresc
+       
         %% transparent note to align "cresc" correctly
-        \ohnu gs8\p s \ohnu gs\< s s s s s | % [mils] expect warning: Too many clashing notecolumns
+        \ohnu gs8\p s \ohnu \setCrescSpanner gs\startTextSpan s s s s s | % [mils] expect warning: Too many clashing notecolumns
     }
 
                                 % 36 - 39
     \barRest |
     \barRest |
     \barRest |
-    \context Voice = "lower" { s8 s s s s s s \ohnu gs\! | } % [mils] expect warning: Too many clashing notecolumns
+    \context Voice = "lower" { s8 s s s s s s \ohnu gs\stopTextSpan | } % [mils] expect warning: Too many clashing notecolumns
 
                                 % 40 - 43
     \context Voice = "lower" { s8\ff s s s s s s s | }
@@ -219,8 +222,8 @@ sIIdyn = \notes  {
     \barRest |
 
     \context Voice = "upper" {
-        \setTextCresc
-        s8\dim s s s s s s s\! |
+        \setDimSpanner
+        s8 s\startTextSpan s s s s s s\stopTextSpan |
     }
 
                                 % 44 - 47
@@ -235,23 +238,22 @@ sIIdyn = \notes  {
     \barRest |
 
     \context Voice = "lower" {
-        \setTextCresc
         %% transparent note to align "cresc" correctly
-        \ohnu gs8\p \ohnu gs\< s s s s s s | % [mils] expect warning: Too many clashing notecolumns
+        \ohnu gs8\p \ohnu gs\startTextSpan s s s s s s | % [mils] expect warning: Too many clashing notecolumns
     }
                                 % 52 - 55
     \barRest |
     \barRest |
     \barRest |
-    \context Voice = "lower" { s8 s s s s s s \ohnu gs\! | } % [mils] expect warning: Too many clashing notecolumns
+    \context Voice = "lower" { s8 s s s s s s \ohnu gs\stopTextSpan | } % [mils] expect warning: Too many clashing notecolumns
 
                                 % 56 - 59
     \context Voice = "upper" { s8\ff s s s s s s s | }
     \barRest |
     \barRest |
     \context Voice = "upper" {
-        \setTextCresc
-        s8\fz s\dim s s s s s s\! |
+        \crescTextCresc
+        s8\fz \setDimSpanner  s_\startTextSpan s s s s s s\stopTextSpan |
     }
 
                                 % 60 - 63
@@ -284,12 +286,12 @@ sIIdyn = \notes  {
 }
 
 % left-hand
-sIIlh = \notes \relative gs, {
+sIIlh =  \relative gs, {
     \key cs \minor
     \slurDown
 
                                 % 28 - 31
-    \once\override Slur #'height-limit = #3
+    \once\override Slur.height-limit = #3
     <gs cs,>4\<( <gs ds> <cs e,> <bs ds,> |
     <gs ds> <gs e> <ds' fs,> <cs e,> |
     <cs e,> <ds gs,> <e cs> <ds gs,>\! |
@@ -361,13 +363,13 @@ sIIlh = \notes \relative gs, {
     <gs gs,>2. <gs cs,>4 |
     <gs gs,>2. <gs cs,>4 |
     << { gs4
-         \once\override TextScript #'staff-padding = #0
+         \once\override TextScript.staff-padding = #0
          gs_\markup{\italic "poco rit."} } \\
        { gs,2 } >> af''8[ f gf ef] |
 }
 
 % sustain
-sIIsustain = \notes {
+sIIsustain =  {
                                 % 28 - 31
     s8\unaCorda s s s s s s s |
     \barRest |

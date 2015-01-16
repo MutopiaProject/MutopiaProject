@@ -1,4 +1,7 @@
-sInull = \notes {
+\version "2.18.2"
+\include "defs.ly"
+
+sInull =  {
                                 % section 1: 27 bars
     \repeat unfold 4 {\barRest|} \myBreak
     \repeat unfold 5 {\barRest|} \myBreak
@@ -8,31 +11,28 @@ sInull = \notes {
     \repeat unfold 4 {\barRest|} \myBreak
 }
 
-sIrh = \notes \relative f'' {
+sIrh =  \relative f'' {
     \clef treble
     \key df \major
     \time 4/4
 
                                 % 1 - 4
-    \once\override TextScript #'extra-offset = #'(-4 . 0)
-    \once\override Slur #'attachment = #'(stem . stem)
-    f8.^(^\markup{\hspace #4 \italic "con espressione e semplice"}^\markup{\bold\large Sostenuto} df16 af2 bf4 |
+    \posTxtScriptB
+    f8.^\(^\txtSostenuto df16 af2 bf4 |
     c2. df4 |
     \stemUp
     ef8. f16 gf2 f4  |
-    \override TupletBracket #'number-visibility = ##f
-    \override TupletBracket #'bracket-visibility = ##f
-    f4. ef8 df4 \acciaccatura ef8 \times 1/3 { ef8([ f ef } \times 1/4 { d8 ef f gf)] } |
-    \revert TupletBracket #'number-visibility
-    \revert TupletBracket #'bracket-visibility
+    \hideTupletBracket
+    f4. ef8 df4( \slashedGrace ef8) \tupletNumberDown \tuplet 7/2 { ef8[( f ef d8 ef f gf]) } |
+    \showTupletBracket
 
                                 % 5 - 8
-    \stemBoth
+    \stemNeutral
     f8. df16 af2 bf4 |
     c2. df4 |
     \stemUp
     ef8. f16 gf2 f4 |
-    f4. ef8 df4) \stemBoth c8( df |
+    f4. ef8 df4\) \stemNeutral c8( df |
 
                                 % 9 - 12
     ef4 ef2 f4 |
@@ -52,28 +52,25 @@ sIrh = \notes \relative f'' {
     f2. ef4 |
 
                                 % 20 - 23
-    \once\override Slur #'attachment = #'(stem . stem)
-    f8.)( df16 af2 bf4 |
+    f8.)\( df16 af2 bf4 |
     c2. df4 |
     \stemUp
     ef8. f16 gf2 f4 |
-    \override TupletBracket #'number-visibility = ##f
-    \override TupletBracket #'bracket-visibility = ##f
-    f4. ef8 df4 \times 1/4 { d8([ ef e f } \times 1/3 { af8 g gf)] } |
-    \revert TupletBracket #'number-visibility
-    \revert TupletBracket #'bracket-visibility
+    \hideTupletBracket
+    f4. ef8 df4 \omit TupletNumber \tuplet 7/2 { d8([ ef e f af8 g gf)\)] } |
+    \showTupletBracket
 
                                 % 24 - 27
-    \stemBoth
-    f8. df16 af2 bf4 |
+    \stemNeutral
+    f8.\( df16 af2 bf4 |
     c2. df4 |
     \stemUp
-    ef8. f16 gf2) c,4^( |
-    ef2) r2 |
+    ef8. f16 gf2 c,4 |
+    ef2\) r2 |
 
 }
 
-sIlh = \notes \relative df {
+sIlh =  \relative df {
     \clef bass
     \key df \major
     \time 4/4
@@ -97,7 +94,7 @@ sIlh = \notes \relative df {
     <<
         \relative gf' {
             \stemDown
-            \once\override Beam #'damping = #2
+            \beamFlattenB
             \csrh gf8[ \cslh af,16 \csrh af' \ohh bf8 \cslh af,]
             af8 af \csrh <df af'> \cslh af
         } \\
@@ -109,7 +106,7 @@ sIlh = \notes \relative df {
                                 % 4
     <<
         \stemDown
-        { \csrh af8 \cslh af, \csrh gf' \cslh af, \csrh <df f> \cslh af \csrh <c gf'> \cslh af } \\
+        { \csrh \beamFlattenA af8 \cslh af, \csrh gf' \cslh af, \csrh \beamFlattenA <df f> \cslh af \csrh <c gf'> \cslh af } \\
         { \csrh c2 } % [mils] expect warning: Too many clashing notecolumns
     >> |
 
@@ -131,7 +128,7 @@ sIlh = \notes \relative df {
     <<
         \relative gf' {
             \stemDown
-            \once\override Beam #'damping = #2
+            \once\override Beam.damping = #2
             \csrh gf8[ \cslh af,16 \csrh af' \ohh bf8 \cslh af,]
             af8 af \csrh <df af'> \cslh af
         } \\
@@ -143,7 +140,7 @@ sIlh = \notes \relative df {
                                 % 8
     <<
         \stemDown
-        { \csrh af8 \cslh af, \csrh ef' \cslh af, <df f> af <df f> af } \\
+        { \csrh \beamFlattenA af8 \cslh af, \csrh ef' \cslh af, <df f> af <df f> af } \\
         { \csrh c2 } % [mils] expect warning: Too many clashing notecolumns
     >> |
 
@@ -193,7 +190,7 @@ sIlh = \notes \relative df {
     <<
         \relative gf' {
             \stemDown
-            \once\override Beam #'damping = #2
+            \once\override Beam.damping = #2
             \csrh gf8[ \cslh af,16 \csrh af' \ohh bf8 \cslh af,]
             af8 af \csrh <df af'> \cslh af
         } \\
@@ -203,7 +200,7 @@ sIlh = \notes \relative df {
     >> |
 
                                 % 23
-    \csrh <c af'>8 \cslh af \csrh <c gf'> \cslh af \csrh <df f> \cslh af \csrh <c gf'> \cslh af |
+    \csrh \beamFlattenA <c af'>8 \cslh af \csrh <c gf'> \cslh af \csrh \beamFlattenA <df f> \cslh af \csrh <c gf'> \cslh af |
 
                                 % 24
     <<
@@ -223,7 +220,7 @@ sIlh = \notes \relative df {
     <<
         \relative gf' {
             \stemDown
-            \once\override Beam #'damping = #2
+            \once\override Beam.damping = #2
             \csrh gf8[ \cslh af,16 \csrh af' \ohh bf8 \cslh af,]
             af8 af \csrh ef' \cslh af,
         } \\
@@ -235,15 +232,15 @@ sIlh = \notes \relative df {
                                 % 27
     <<
         \stemDown
-        \once\override Beam #'damping = #4
+        \once\override Beam.damping = #4
         { \csrh \ohh gf8 \cslh af, af af af af af af } \\
         { \csrh gf'2 } % [mils] expect warning: Too many clashing notecolumns
     >> |
 }
 
-sIsustain = \notes {
+sIsustain =  {
                                 % 1 - 4
-    \sd s8 s s s s \su s |
+    \sd s8 s s s s s \su |
     \sd s s s \su s \sd s |
     \sud s \sud s s s \sud s |
     \sud s s s \sud s \sud \su |
@@ -284,9 +281,9 @@ sIsustain = \notes {
     s s s s s s s \su |
 }
 
-sIdyn = \notes {
+sIdyn =  {
                                 % 1 - 4
-    s8\p s s s s s s s |
+    \posDynTxtA s8\p s s s s s s s |
     s8\< s s s s s s s |
     s s s s\! s\> s s s |
     s s s s\! s s s s|
@@ -295,7 +292,7 @@ sIdyn = \notes {
     \barRest |
     s8\< s s s s s s s |
     s s s\! s\> s s s s |
-    s s s s\! s s s\p s |
+    s s s s\! s s \posDynTxtA s\p s |
 
                                 % 9 - 12
     \barRest |
@@ -313,7 +310,7 @@ sIdyn = \notes {
     \barRest |
     s8 s s\< s s s s s |
     s\! s s\> s s s s\! s |
-    s\p s s s s s s s|
+    \posDynTxtA s\p s s s s s s s|
 
                                 % 21 - 24
     s8\< s s s s s s s |
@@ -323,6 +320,6 @@ sIdyn = \notes {
 
                                 % 25 - 27
     s8\< s s s s s s s |
-    s s s\! s\> s s s s |
+    s s s s\> s s s s |
     s\! s s s s s s s|
 }

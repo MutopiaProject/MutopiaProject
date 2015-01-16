@@ -1,10 +1,11 @@
-\version "2.2.2"
+\version "2.18.2"
 
+                    %                 "PRELUDE Op28 No15"
+                    %                 by Frederic Chopin
+                    %
+                    %    Please see "header.ly" for more information
 
-                                %                 "PRELUDE Op28 No15"
-                                %                 by Frederic Chopin
-                                %
-                                %    Please see "header.ly" for more information
+%#(set-default-paper-size "letter")
 
 \include "english.ly"
 \include "header.ly"
@@ -15,7 +16,7 @@
 \include "sec2.ly"
 \include "sec3.ly"
 
-playRH = \notes {
+playRH =  {
                                 % section 1
     <<
         \sIrh
@@ -37,7 +38,7 @@ playRH = \notes {
 }
 
 
-playLH = \notes {
+playLH =  {
                                 % section 1
     <<
         \sIlh
@@ -60,27 +61,24 @@ playLH = \notes {
     \bar "|."
 }
 
-playNull = \notes {
+playNull =  {
      \sInull
      \sIInull
      \sIIInull
 }
 
-scoreAll = \notes {
+scoreAll =  {
     \new PianoStaff {
                                 % setup instrument
         \set PianoStaff.midiInstrument = "acoustic grand"
-
-                                % gap between staves -- default 12
-        %% \override PianoStaff.VerticalAlignment #'forced-distance = #14
 
                                 % PLAY!
         <<
             \context Staff = "rh" {
                                 % setup dynamics
-                \override Staff.TextScript #'staff-padding = #3
-                \override Staff.DynamicLineSpanner #'staff-padding = #3  % (forced-distance - 6) / 2
-                #(set-accidental-style 'modern-cautionary)
+                \override Staff.TextScript.staff-padding = #3
+                \override Staff.DynamicLineSpanner.staff-padding = #3  % (forced-distance - 6) / 2
+                \accidentalStyle Score.modern-cautionary
 
                                 % PLAY RH!
                 <<
@@ -91,11 +89,11 @@ scoreAll = \notes {
             \context Staff = "lh" {
                                 % setup pedals
                 \set Staff.pedalSustainStyle = #'bracket
-                #(set-accidental-style 'modern-cautionary)
+                \accidentalStyle Score.modern-cautionary
 
                                 % setup dynamics
-                \override Staff.TextScript #'staff-padding = #3
-                \override Staff.DynamicLineSpanner #'staff-padding = #3  % (forced-distance - 6) / 2
+                \override Staff.TextScript.staff-padding = #3
+                \override Staff.DynamicLineSpanner.staff-padding = #3  % (forced-distance - 6) / 2
 
                                 % PLAY LH!
                 <<
@@ -112,18 +110,20 @@ scoreAll = \notes {
 %%%
 \score
 {
-    \notes { \scoreAll }
-    \paper {}
+     { \scoreAll }
+    \layout {
+        \context {
+            \PianoStaff
+            \override StaffGrouper.staff-staff-spacing.minimum-distance = #12.2
+        }
+
+    }
     \midi {
         \tempo 4 = 80
         %% Remove the dynamics from the midi output
         \context {
-            \VoiceContext
+            \Voice
             \remove "Dynamic_performer"
-            \remove "Span_dynamic_performer"
         }
     }
 }
-
-
-

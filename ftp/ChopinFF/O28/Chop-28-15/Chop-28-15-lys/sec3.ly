@@ -1,27 +1,28 @@
-sIIInull = \notes {
+\version "2.18.2"
+\include "defs.ly"
+
+sIIInull =  {
     \repeat unfold 4 {\barRest|} \myBreak
     \repeat unfold 5 {\barRest|} \myBreak
     \repeat unfold 5 {\barRest|} \myBreak
 }
 
 
-sIIIrh = \notes  \context Voice = "vIIIrh" {
+sIIIrh =   \context Voice = "vIIIrh" {
     \relative f''{
         \key df \major
 
                                 % 76 - 79
-        \once\override Slur #'attachment = #'(stem . head)
-        f8.( df16 af2 bf4 |
+        f8.\( df16 af2 bf4 |
         c2. df4 |
         \stemUp
         ef8. f16 gf2 f4 |
-        f4. ef8 df8. d16  \times 4/10 { ef16 f ef d ef e f af g gf } |
+        f4. ef8 df8. d16 \tupletNumberDown \tuplet 10/4 { ef16( f ef d ef e f af g gf) } |
 
                                 % 80 - 83
-        \stemBoth
+        \stemNeutral
         f8. df16 af2 bf4 |
-        c4) r r
-        \once\override Slur #'attachment = #'(head . stem)
+        c4\) r r
         bf'^>(~ |
         bf af gf c, |
         f ef df bf |
@@ -34,14 +35,14 @@ sIIIrh = \notes  \context Voice = "vIIIrh" {
            } >> |
 
                                 % 88 - 89
-        \override TextScript #'staff-padding = #0
+        \override TextScript.staff-padding = #0
         <df f>1 |
-        \revert TextScript #'staff-padding
+        \revert TextScript.staff-padding
         <af df f>)\fermata |
     }
 }
 
-sIIIlh = \notes \relative df {
+sIIIlh =  \relative df {
     \key df \major
 
     \stemDown
@@ -63,11 +64,11 @@ sIIIlh = \notes \relative df {
     <<
         \relative gf' {
             \stemDown
-            \once\override Beam #'damping = #2
+            \beamFlattenB
             \csrh gf8[ \cslh af,16 \csrh af' \ohh bf8 \cslh af,]
             af8 af \csrh <df af'> \cslh af
         } \\
-        \relative c'  { \stemDown \csrh c2. } \\ % [mils] expect warning: Too many clashing notecolumns
+        \relative c'  { \stemDown \csrh \ignoreClash c2. } \\ % [mils] expect warning: Too many clashing notecolumns
         \relative af  { \stemUp   s8 af4 s4 af} \\
         \relative bf' { \stemDown s4 \csrh \olu bf2 } \\
     >> |
@@ -75,8 +76,8 @@ sIIIlh = \notes \relative df {
                                 % 79
     <<
         \stemDown
-        { \csrh af8 \cslh af, \csrh gf' \cslh af, \csrh <df f> \cslh af \csrh <c gf'> \cslh af } \\
-        { \csrh c2 } % [mils] expect warning: Too many clashing notecolumns
+        { \csrh \beamFlattenA af8 \cslh af, \csrh gf' \cslh af, \csrh \beamFlattenA <df f> \cslh af \csrh <c gf'> \cslh af } \\
+        { \csrh \ignoreClash c2 } % [mils] expect warning: Too many clashing notecolumns
     >> |
 
                                 % 80
@@ -106,7 +107,7 @@ sIIIlh = \notes \relative df {
        { df,2( af | df,1)\fermata } >>
 }
 
-sIIIsustain = \notes {
+sIIIsustain =  {
                                 % 76 - 79
     \sd s8 s s s s \su s |
     \sd s s s \su s \sd s |
@@ -128,31 +129,30 @@ sIIIsustain = \notes {
 }
 
 
-sIIIdyn = \notes \context Voice = "vIIIrh" {
+sIIIdyn =  \context Voice = "vIIIrh" {
                                 % 76 - 79
-    \once\override TextScript #'extra-offset = #'(2 . 1)
-    s8\p_\markup{\italic "a tempo"} s s s s s s s |
+    \posTxtScriptA \posDynTxtA s8\p_\markup{\italic "a tempo"} s s s s s s s |
     s\< s s s s s s s |
-    s s s\! s\> s s s s\! |
-    \set crescendoText = \markup { \italic "smorzando" }
-    \set crescendoSpanner = #'dashed-line
+    s s s\! \posHairpinA s\> s s s s\! |
+    \set crescendoText = \markup { \italic \smaller \whiteout "smorzando" }
+    \set crescendoSpanner = #'text
     s s s s s s s s\< |
 
                                 % 80 - 83
     \barRest |
     s s\!_\markup{\italic "slentando"} s s s s s\f s |
-    \setHairpinCresc
+    \crescHairpin
     s\> s s s s s s s |
     s s s s s s s s\! |
 
                                 % 84 - 89
     \context Voice = "vIIIrhLOWER" {
-        \override Voice.DynamicLineSpanner #'staff-padding = #0.1
+        \override Voice.DynamicLineSpanner.staff-padding = #0.1
         s\p s s s s s s s |
         s s s s s^\< s s s |
         s\! s s s s^\> s s s\! |
         s\pp s s s s s s s |
-        \revert Voice.DynamicLineSpanner #'staff-padding
+        \revert Voice.DynamicLineSpanner.staff-padding
     }
     s8^\markup{\italic "riten."} s s s s s s s |
     \barRest |
