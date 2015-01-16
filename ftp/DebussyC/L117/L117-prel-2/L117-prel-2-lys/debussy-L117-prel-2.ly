@@ -49,7 +49,7 @@
     maintainerEmail = "knute (at) snortum (dot) net"
     license = "Creative Commons Attribution-ShareAlike 4.0"
 
-    mutopiatitle = "Prélude 1: Danseuses de Delphes"
+    mutopiatitle = "Prélude 2: Voiles"
     mutopiaopus = "CD 125; L.117"
     mutopiacomposer = "DebussyC"
     mutopiainstrument = "Piano"
