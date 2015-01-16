@@ -6,10 +6,9 @@
 	source = "Sydney: Nicholson & Co., (189-?)"
 	style = "Romantic"
 	instrument = ""
-	copyright = "Public Domain"
+	license = "Public Domain"
 	maintainer = "Stan Sanderson"
 	maintainerEmail = "physinfoman@ameritech.net"
-	lastupdated = "5/25/2004"
 	title = "Alice, Where Art Thou."
 	subsubtitle = "Transcribed for the pianoforte by Joseph Ascher."
 	poet = ""
@@ -18,10 +17,19 @@
     % Piece abused into the tempo mark...
     % easier to move it here than from its normal pace.
     piece = \markup{\bold { \null \translate #'(13 . -1) "Moderato Capriccioso."}}
+	mutopiatitle = "Alice, Where Art Thou?"
 	mutopiainstrument = "Piano"
 	mutopiacomposer = "AscherJ"
-	moreinfo = "<p>This piece, an expansion of Ascher's popular <em>Alice</em> tune, is, I believe, typical of the repertory of the parlor performer.  I suspect it exists on a piano roll somewhere.</p> <p>The original is very dim; the transcription was as true as possible; corrections are welcome.</p>"
+	mutopiasource = "Sydney: Nicholson & Co., (1890s)"
+	mutopiastyle = "Song"
+	mutopiadate = "1890s?"
+	mutopiaopus = " "
+	mutopiaarranger = "Transcribed for the pianoforte by Joseph Ascher"
+	moreInfo = "<p>This piece, an expansion of Ascher's popular \"Alice\" tune, is, I believe, typical of the repertory of the parlor performer. I suspect it exists on a piano roll somewhere.</p><p>The original is very dim; the transcription was as true as possible; corrections are welcome.</p>"
 
+ footer = "Mutopia-2015/01/16-449"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 	}
 
 %%%%%
