@@ -15,17 +15,17 @@
 
 
                                 % MUTOPIA HEADERS
-    mutopiatitle = "Prelude Op. 28, No. 15 ('Raindrop')"
+    mutopiatitle = "Prelude: Op. 28, No. 15"
     mutopiacomposer = "ChopinFF"
-    mutopiaopus = "O28"
+    mutopiaopus = "Op. 28"
     mutopiainstrument = "Piano"
     date = "1838/39"
     source = "Edition Peters"
-    style = "Classical"
+    style = "Romantic"
     enteredby = "Magnus Lewis-Smith"
     maintainer = "Magnus Lewis-Smith"
     maintainerEmail = "mlewissmith@users.sourceforge.net"
-    maintainerWeb = "http://magware.sourceforge.net"
+    maintainerWeb = "http://magware.sourceforge.net/"
     license = "Public Domain"
     lastupdated = "2015/01/15"  %Update to LilyPond v2.18.2 (Javier Ruiz-Alma)
 
