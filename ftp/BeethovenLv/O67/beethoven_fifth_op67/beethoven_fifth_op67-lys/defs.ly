@@ -1,17 +1,10 @@
-\version "2.2.0"
+\version "2.18.2"
 
-paperOFF = \notes{ \set Score.skipTypesetting = ##t }
-paperON = \notes{ \set Score.skipTypesetting = ##f }
+paperOFF = { \set Score.skipTypesetting = ##t }
+paperON = { \set Score.skipTypesetting = ##f }
 
-myBreak = \notes {}
-%% myBreak = \notes { \break }
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%% slur attachments (once)
-oahh = \notes { \once\override Slur #'attachment = #'(head . head) }
-oahs = \notes { \once\override Slur #'attachment = #'(head . stem) }
-oash = \notes { \once\override Slur #'attachment = #'(stem . head) }
-oass = \notes { \once\override Slur #'attachment = #'(stem . stem) }
+myBreak =  {}
+%% myBreak =  { \break }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% CHANGE STAFF
@@ -21,34 +14,35 @@ oass = \notes { \once\override Slur #'attachment = #'(stem . stem) }
 csrh = { \change Staff = "rh" }
 cslh = { \change Staff = "lh" }
 
-ottavaOn = #(set-octavation 1)
-ottavaOff = #(set-octavation 0)
+ottavaOn = \ottava #1
+ottavaOff = \ottava #0
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% rewrite some spanners (see /usr/share/lilypond/2.2.2/ly/spanners-init.ly)
-setTextCresc = {
+crescTextCresc = {
     \set crescendoText = \markup { \italic "cresc." }
-    \set crescendoSpanner = #'dashed-line
+    \set crescendoSpanner = #'text
     \set decrescendoText = \markup { \italic "decr." }
-    \set decrescendoSpanner = #'dashed-line
+    \set decrescendoSpanner = #'text
 }
-setTextDecresc = {
-    \setTextCresc
+dimTextDecresc = {
+    \crescTextCresc
 }
-setTextDim = {
-    \setTextCresc
+dimTextDim = {
+    \crescTextCresc
     \set decrescendoText = \markup { \italic "dim." }
-    \set decrescendoSpanner = #'dashed-line
+    \set decrescendoSpanner = #'text
 }
-setHairpinCresc = {
+crescHairpin = {
     \unset crescendoText
     \unset crescendoSpanner
     \unset decrescendoText
     \unset decrescendoSpanner
 }
 noCrescSpanner = {
-    \set crescendoSpanner = #'none
-    \set decrescendoSpanner = #'none
+  \once \override DynamicTextSpanner.style = #'none
+  %  \set crescendoSpanner = #'none
+  %  \set decrescendoSpanner = #'none
 }
 
 

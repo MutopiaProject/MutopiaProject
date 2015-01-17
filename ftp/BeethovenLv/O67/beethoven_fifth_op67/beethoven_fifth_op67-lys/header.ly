@@ -1,6 +1,7 @@
+\version "2.18.2"
+
 \header {
                                 % LILYPOND HEADERS
-    head =  "0.04 (17 Nov 2004)" 
 
     %%    dedication = "Dedicated to Prince Franz Joseph Lobkowitz and Count Andreas Razumovsky"
     title = "Symphony No.~5"
@@ -35,10 +36,8 @@
     maintainer = "Magnus Lewis-Smith"
     maintainerEmail = "mlewissmith@users.sourceforge.net"
     maintainerWeb = "http://magware.sourceforge.net"
-    lastupdated = "17 Nov 2004" 
 
     footer = "Mutopia-2004/11/17-497"
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
 }
 
 %{
