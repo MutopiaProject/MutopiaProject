@@ -12,12 +12,16 @@
     date = "Wien, 1784"
     source = "Reproduction of Autograph"
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
 
-    footer = "Mutopia-2004/05/17-446"
+  moreInfo = "<p>Mozart wrote this little march into the music-book of his pupil Barbara Ployer in 1784.  The subtitle \"del Signor Maestro Contrap[p]unto\" (by Mr. Master Counterpoint) could be a humorous reference to Mozart himself, although no definitive evidence of this interpretation has been given.</p><p>It is interesting to note that the beginning rhythm (one quarter, one dotted eighteenth, one sixteenth, two quarters) is the same used in the main theme of piano concertos KV 451, KV 453, KV 456 and KV 459, all composed in 1784.  Considering that at least one of them (KV 453) was intended to be played by Barbara Ployer, it is tempting to consider this little Funeral March as a musical caricature of the concertos.</p><p>Maurizio Tomasi, May 2004</p>"
+
+ footer = "Mutopia-2015/01/17-446"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 upper = \relative c' {
