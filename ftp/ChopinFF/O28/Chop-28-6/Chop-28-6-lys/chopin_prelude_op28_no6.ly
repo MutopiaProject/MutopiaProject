@@ -1,36 +1,41 @@
-\version "2.2.2"
+\version "2.18.2"
 
-
-                                %                 "PRELUDE Op28 No6"
-                                %                 by Frederic Chopin
-                                %
-                                %    Please see "header.ly" for more information
+                      %                 "PRELUDE Op28 No6"
+                      %                 by Frederic Chopin
+                      %
+                      %    Verbose pedal marking in comments
+                      %    Please see "header.ly" for more information
 
 \include "english.ly"
 \include "header.ly"
+\include "paper-defs.ily"
 
-paperOFF = \notes{ \set Score.skipTypesetting = ##t }
-paperON = \notes{ \set Score.skipTypesetting = ##f }
+paperOFF = { \set Score.skipTypesetting = ##t }
+paperON = { \set Score.skipTypesetting = ##f }
+myBreak = {} % { \break }
 
-myBreak = {} %\notes { \break }
-barRest = \notes { s1*3/4 }
-trebleQuaverRest = \notes \relative b' { b4\rest }
 
-%% simpler sustain commands
-sd  = \notes { \once\override Rest #'transparent = ##t r8\sustainDown }
-su  = \notes { \once\override Rest #'transparent = ##t r8\sustainUp }
-sud = \notes { \once\override Rest #'transparent = ##t r8\sustainUp\sustainDown }
+trebleQuaverRest =  \relative b' { b4\rest }
 
-playRHupper = \notes \relative b' {
+beams = {
+    \set Timing.beamExceptions = #'()
+    \set Timing.baseMoment = #(ly:make-moment 1/4)
+    \set Timing.beatStructure = #'(1 1 1)
+}
+
+
+playRHupper =  \relative b' {
     \clef treble
     \key b \minor
     \time 3/4
 
                                 % 1 - 4
-    \once\override TextScript #'extra-offset = #'( -3.5 . 1.5 )
-    b8^\markup{\bold\large "Assai Lento"}(-> b) b(-> b) b(-> b) |
-    \once\override TextScript #'staff-padding = #0
-    \once\override TextScript #'extra-offset = #'(-1 . 0)
+    \tempo "Assai Lento"
+     b8(-> b) b[(-> b)] b(-> b) |
+     \beams
+
+    \once\override TextScript.staff-padding = #0
+    \once\override TextScript.extra-offset = #'(-1 . 0)
     b^\markup{\italic (simile) } b b b b b |
     b b d d d d |
     d d d d d d |
@@ -39,7 +44,7 @@ playRHupper = \notes \relative b' {
     d d d d d d |
     d d cs cs <cs as>( <d b> |
     e4. fs8 e16 d \acciaccatura d8 cs16 b |
-    <as fss cs>8\< <b gs d>\! <d b d,>\> <cs as cs,>)\! \trebleQuaverRest |
+    <as fss cs>8[\< <b gs d>\! <d b d,>\> <cs as cs,>)]\! \trebleQuaverRest |
 
                                 % 9 - 12
     b8( b) b( b) b( b) | b b b b b b |
@@ -58,11 +63,11 @@ playRHupper = \notes \relative b' {
     fs fs fs fs fs fs | fs fs fs fs fs fs |
 
                                 % 25 - 26
-    fs fs \trebleQuaverRest fs8( fs | fs fs) \trebleQuaverRest\trebleQuaverRest |
+    fs fs \trebleQuaverRest fs8( fs | fs fs) \trebleQuaverRest \trebleQuaverRest |
 }
 
 
-playRHlower = \notes \relative fs' {
+playRHlower =  \relative fs' {
     \clef treble
     \key b \minor
     \time 3/4
@@ -75,7 +80,7 @@ playRHlower = \notes \relative fs' {
 
                                 % 5 - 8
     <b g> b b | <b gs> <b gs> g |
-    <g as>8 <g b> <g as> <fs cs'> <fs b> fs | \barRest |
+    <g as>8 <g b> <g as> <fs cs'> <fs b> fs | s2. |
 
                                 % 9 - 12
     <fs d>4 fs fs | <fs d> <fs d> <fs d> |
@@ -86,7 +91,6 @@ playRHlower = \notes \relative fs' {
     <g cs,>\p <fs cs> <fs d> | <g cs,> <g cs,> <g d> |
 
                                 % 17 - 20
-    \once\override TextScript #'extra-offset = #'(0 . 1)
     <g d>4 <fs cs> <e cs> | <e cs> <d b> <g d> |
     <g cs,> <g cs,> <fs d> | <g cs,> <g cs,> <g d> |
 
@@ -99,143 +103,64 @@ playRHlower = \notes \relative fs' {
 }
 
 
-
-playLH = \notes \relative b, {
+playLH =  \relative b, {
     \clef bass
     \key b \minor
     \time 3/4
                                 % 1 - 4
-    b16\unaCorda(\< d fs b d4\!_\markup{\italic "molto cantato"} cs8. d16 |
+    %b16\p\unaCorda\sustainOn(\< d fs b d4\!_\markup{\italic "molto cantato"} cs8. d16 |
+    \once \hide Staff.DynamicText b16 \p (\< d fs b d4\! cs8. d16 |
     b4.\> fs8[ d cs])\! |
+    %b4.\> \sustainOff fs8[ d cs])\! |
     b16(\< fs' b d fs4\! e8. fs16 |
+    %b16(\<\sustainOn fs' b d fs4\!\sustainOff e8. fs16 |
     d4.\> b8[ fs d])\! |
 
                                 % 5 - 8
                                 % this slur is ugly no matter what...
     g,16_(\< d' b' d g4\! fs | fs\> es\! e8 d |
+    %g,16_(\< \sustainOn d' b' d g4\!\sustainOff fs | fs\> es\! e8 d |
     cs \acciaccatura e d cs as b d, | e es fs4) d8( cs |
 
                                 % 9 - 12
     b16\< d fs b d4\! cs8. d16 | b4.\> fs8[ d b]\! |
-    g16\< d' g b d4 e8 f\! | e4.\> c8[ g c,]\!) |
+    %b16\< \sustainOn d fs b d4\!\sustainOff cs8. d16 | b4.\> fs8[ d b]\! |
+    g16\< d' g b d4 e8 f\!| e4.\> c8[ g c,]\!) |
+    %g16\< \sustainOn d' g b d4 e8 f\!\sustainOff | e4.\> c8[ g c,]\!) |
 
                                 % 13 - 16
-    c,16(\< g' e' g e'4)\! c,,16^(\< g' e' g |
-    e'2\!) r4 |
-    \once\override TextScript #'extra-offset = #'(0 . 1)
-    e,4.\treCorde_\markup{\italic "espressivo" }( fs8 e16 d cs b) |
-    e4.( fs8 e16_\markup{\italic sostenuto} d cs b |
+    c,16(\<\sustainOn g' e' g e'4)\!\sustainOff c,,16^(\<\sustainOn g' e' g |
+    e'2\!) \sustainOff r4 |
+    e,4.( fs?8 e16 d cs b) |
+    %\once\override TextScript.extra-offset = #'(1 . 0.7)
+    %e,4.\treCorde_\markup{\italic "espressivo" }( fs8 e16 d cs b) |
+    e4.( fs8 e16-\markup{\italic "sostenuto" } d cs b |
 
                                 % 17 - 20
     a16 g d e fs2 | g2) g'4( |
-    e4. fs8 e16 d cs b) | e4.( fs8 e16 d cs b |
+    e4. fs8 e16 d cs b) | e4.( fs8 e16-\markup{ \italic "sostenuto"} d cs b |
 
                                 % 21 - 24
-    a16 g d e fs2 | b,2._\unaCorda)~ |
-    b16(\< b' fs' b d4\! cs8. d16 | b4.\> fs8[ d cs]\! |
+    a16 g d e fs2 | b,2.)~ |
+    %a16 g d e fs2 | b,2._\unaCorda)~ |
+    b16(\< b' fs' b d4\! cs8. d16 |
+    %b16\sustainOn(\< b' fs' b d4\! cs8.\sustainOff d16 |
+    b4.\> fs8[ d cs]\!|
+    %b4.\sustainOn\> fs8[ d cs]\!\sustainOff |
 
                                 % 25 - 26
     b2.)~ | b4 r r |
 }
 
-playLHsustain = \notes {
-                                % 1
-    \sd s8 s \su s s |
-    \barRest |
-    \sd s8 s \su s s |
-    \barRest |
 
-                                % 5
-    \sd s8 s \su s s |
-    \barRest |
-    \barRest |
-    \barRest |
-
-                                % 9
-    \sd s s \su s s |
-    \barRest |
-    \sd s s \su s s |
-    \barRest |
-
-                                % 13
-    \sd s s \su \sd s |
-    s s s \su s s |
-    \barRest |
-    \barRest |
-
-                                % 17
-    \barRest |
-    \barRest |
-    \barRest |
-    \barRest |
-
-                                % 21
-    \barRest |
-    \barRest |
-    \sd s s s \su  s |
-    \sd s s s s \su |
-
-                                % 25
-    \barRest |
-    \barRest |
-}
-
-playSilent = \notes {
-    \barRest
-    \barRest
-    \barRest \myBreak
-
-    \barRest
-    \barRest
-    \barRest \myBreak
-
-    \barRest
-    \barRest
-    \barRest \myBreak
-
-    \barRest
-    \barRest
-    \barRest
-    \barRest \myBreak
-
-    \barRest
-    \barRest
-    \barRest
-    \barRest \myBreak
-
-    \barRest
-    \barRest
-    \barRest
-    \barRest \myBreak
-
-    \barRest
-    \barRest
-    \barRest
-    \barRest
-    \barRest \myBreak
-    \bar "|."
-}
-
-
-
-scoreAll = \notes {
+scoreAll =  {
     \new PianoStaff {
                                 % setup instrument
             \set PianoStaff.midiInstrument = "acoustic grand"
 
-                                % setup beaming defaults
-            #(override-auto-beam-setting '(end * * * *) 1 4 'Score)
-
-                                % gap between staves -- default 12
-            %% \override PianoStaff.VerticalAlignment #'forced-distance = #14
-
                                 % PLAY!
             <<
                 \context Staff = "rh" {
-                                % setup dynamics
-                    \override Staff.TextScript #'staff-padding = #3
-                    \override Staff.DynamicLineSpanner #'staff-padding = #3  % (forced-distance - 6) / 2
-
                                 % PLAY RH!
                     <<
                         \playRHupper \\
@@ -244,19 +169,11 @@ scoreAll = \notes {
                     \bar "|."
                 }
                 \context Staff = "lh" {
-                                % setup dynamics
-                    %\override Staff.TextScript #'staff-padding = #3
-                    %\override Staff.DynamicLineSpanner #'staff-padding = #3  % (forced-distance - 6) / 2
-
                                 % setup pedals
-                    \set Staff.pedalSustainStyle = #'mixed
-                    \override Staff.SustainPedalLineSpanner #'padding = #3
-
+                    \set Staff.pedalSustainStyle = #'text
                                 % PLAY LH!
                     <<
                         \playLH
-                        \playLHsustain
-                        \playSilent
                     >>
                     \bar "|."
                 }
@@ -269,19 +186,11 @@ scoreAll = \notes {
 %%%
 \score
 {
-    \notes
     {
         \scoreAll
     }
-    \paper {}
+    \layout {}
     \midi {
         \tempo 4 = 45
-        %% Remove the dynamics from the midi output
-        \context {
-            \VoiceContext
-            \remove "Dynamic_performer"
-            \remove "Span_dynamic_performer"
-        }
     }
 }
-
