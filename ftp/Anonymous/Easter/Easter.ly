@@ -1,27 +1,25 @@
-#(ly:set-option 'old-relative)
+\version "2.18.2"
+
 \header {
 	title = "Easter Morn"
-	composer = "{\it Lyrica Davidica,} 1706"
-	metre="7 7.7 7. and Hallelujahs"
-	meter=\metre
+	composer = \markup { \italic {Lyrica Davidica,} 1706}
+	meter = "7 7.7 7. and Hallelujahs"
 	mutopiatitle = "Easter Hymn"
 	mutopiacomposer = "Anonymous"
 	mutopiainstrument = "Voice (SATB)"
 	date = "1706"
 	source = "Methodist Hymnbook 1933"
 	style = "Hymn"
-	copyright = "Public Domain"
+	license = "Public Domain"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
-	lastupdated = "2004/04/10"
 	
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
-	footer = "Mutopia-2004/04/10-442"
+ footer = "Mutopia-2015/01/17-442"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-\version "2.1.33"
-
-global=\notes{
+global={
 	\time 2/4
 	\key c \major
 	\skip 2*8 \bar "||"
@@ -30,7 +28,7 @@ global=\notes{
 	\skip 2*8 \bar "||"
 }
 
-sop=\notes\relative c' {
+sop=\relative c' {
 	c4 e |
 	g c, |
 	f a |
@@ -70,7 +68,7 @@ sop=\notes\relative c' {
 	c2
 }
 
-alto=\notes\relative c'{
+alto=\relative c'{
 	c4 c |
 	d c |
 	c f |
@@ -109,7 +107,7 @@ alto=\notes\relative c'{
 	e2
 }
 
-tenor = \notes \relative c {
+tenor =  \relative c {
 	e4 g |
 	g e |
 	f c'|
@@ -151,7 +149,7 @@ tenor = \notes \relative c {
 	c2
 }
 
-bass=\notes\relative c {
+bass=\relative c {
 	c4 c |
 	b c |
 	a f |
@@ -194,20 +192,20 @@ bass=\notes\relative c {
 
 upper=\context Staff = "upper" <<
 	\clef "treble"
-	\context Voice = sop { \voiceOne \sop}
-	\context Voice = alto { \voiceTwo \alto}
+	\context Voice = "sop" { \voiceOne \sop}
+	\context Voice = "alto" { \voiceTwo \alto}
 	\global
 >>
 
 lower=\context Staff = "lower" <<
 	\clef "bass"
-	\context Voice = tenor {\voiceOne \tenor}
-	\context Voice = bass { \voiceTwo \bass}
+	\context Voice = "tenor" {\voiceOne \tenor}
+	\context Voice = "bass" { \voiceTwo \bass}
 	\global
 
 >>
 
-accomp = \chords {
+accomp = \chordmode {
     c4 c |
     g:7 c |
     f f |
@@ -256,16 +254,16 @@ accomp = \chords {
 		\upper
 		\lower
 	>>
-	\paper{
+	\layout{
 		indent = 0.0\pt
 		\context {
-		    \StaffContext
+		    \Staff
 		    \remove "Time_signature_engraver"
 		}
 		\context {
-			\ChordNamesContext
-%		 \override ChordName #'word-space = #1
-		 \override ChordName #'style = #'american
+			\ChordNames
+%		 \override ChordName.word-space = #1
+		 \override ChordName.style = #'american
 			chordChanges = ##t
 		}
 	}
@@ -274,12 +272,17 @@ accomp = \chords {
 	% staves that are unisons don't get sounded.
 	<<
 	    \global
-		\context Staff=a {
+		\context Staff = "a" {
 		    \set Staff.midiInstrument = "tenor sax" 
 			\sop
 		}
-		\context Staff=b << % \alto \tenor \bass
+		\context Staff = "b" << % \alto \tenor \bass
 		    \context ChordNames \accomp >>
 	>>
-	\midi { \tempo 4=120 }
+	
+  \midi {
+    \tempo 4 = 120
+    }
+
+
 }
