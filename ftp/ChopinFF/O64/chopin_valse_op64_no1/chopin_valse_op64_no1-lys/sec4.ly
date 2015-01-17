@@ -1,4 +1,6 @@
-secFourSilent = \notes {
+\version "2.18.2"
+
+secFourSilent =  {
                                 % 70 - 73
     \barRest |
     \barRest |
@@ -72,7 +74,7 @@ secFourSilent = \notes {
 }
 
 
-secFourRHnotes = \notes \relative af' {
+secFourRHnotes =  \relative af' {
                                 % 70 - 73
     af2.\trill(~ |
     af2.\trill~ |
@@ -106,63 +108,87 @@ secFourRHnotes = \notes \relative af' {
                                 % 90 - 93
     bf4. af8[ gf f] |
     f ef ef\prall d ef4) |
-    bf'4.( af8[ gf f] |
-    ef f ef\prall d ef e |
+    \context Voice = "longSlur" {
+      bf'4.( af8[ gf f] |
+      ef f ef\prall d ef e |
 
                                 % 94 - 97
-    \times 2/3 { f8[ gf f] } e f af gf |
-    f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
-    af bf af g af df |
-
-                                % 98 - 101
-    c bf af gf f ef |
-    df c bf af gf f |
-    ef df c ef bf' af |
-    g af bf c df ef |
-
-                                % 102 - 105
-    \stemUp
-    \times 2/3 { f8[ gf f] } e f af gf |
-    f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
-    af bf af g af f' |
-
-                                % 106 - 109
-    ef df c bf af gf |
-    \stemBoth
-    f ef df c bf af |
-    a c bf f gf c, |
-    df4) r f'->(~ |
+      \tuplet 3/2 { f8[ gf f] } e f af gf |
+      f gf f e f bf |
+      \tuplet 3/2 { af[ bf af] } g af c bf |
+      af bf af g af df |
+  
+                                  % 98 - 101
+      c bf af gf f ef |
+      df c bf af gf f |
+      ef df c ef bf' af |
+      g af bf c df ef |
+  
+                                  % 102 - 105
+      <<
+        \context Voice = "longSlur" {
+          \voiceOne
+          \tuplet 3/2 { f8[ gf f] } e f af gf |
+          f gf f e f bf |
+          \tuplet 3/2 { af[ bf af] } g af c bf |
+        }
+        \\
+        {
+          r4 <ef,, f> q | 
+          r4 <df f> q  |
+          r4 <gf af> q |
+        }
+      >>
+      af'8 bf af g af f' |
+  
+                                  % 106 - 109
+      ef df c bf af gf |
+      \stemNeutral
+      f ef df c bf af |
+      a c bf f gf c, |
+      df4) r
+    }
+    \context Voice = "longSlur" { f'->(~ |
 
                                 % 110 - 113
-    \times 2/3 { f8[ gf f] } e f af gf |
-    f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
-    af bf af g af df |
-
+      \tuplet 3/2 { f8[ gf f] } e f af gf |
+      f gf f e f bf |
+      \tuplet 3/2 { af[ bf af] } g af c bf |
+      af bf af g af df |
+  
                                 % 114 - 117
-    c bf af gf f ef |
-    df c bf af gf f |
-    ef df c ef bf' af |
-    g af bf c df ef |
-
+      c bf af gf f ef |
+      df c bf af gf f |
+      ef df c ef bf' af |
+      g af bf c df ef |
+  
                                 % 118 - 121
-    \stemUp
-    \times 2/3 { f8[ gf f] } e f af gf |
-    f gf f e f bf |
-    \times 2/3 { af[ bf af] } g af c bf |
-    af[ bf af g af])
-    \stemBoth
-    \override Staff.OttavaBracket #'extra-offset = #'(0 . 1)
-    #(set-octavation 1)
+      << 
+        \context Voice = "longSlur" { 
+          \voiceOne
+          \tuplet 3/2 { f8[ gf f] } e f af gf | 
+          f8 gf f e f bf |
+          \tuplet 3/2 { af8[ bf af] } g af c bf |
+        }
+        \\
+        { 
+          r4 <ef,, f> q | 
+          r4 <df f> q  |
+          r4 <gf af> q |
+        }
+      >>
+      af'8[ bf af g af]) 
+    }
+    \stemNeutral
+    \override Staff.OttavaBracket.extra-offset = #'(0 . 1)
+    \ottava #1
     f''\>( |
 
                                 % 122 - 125
     \tiny
-    \times 18/24 {
+    \tuplet 24/18 {
         ef8[ df c bf af gf f ef
-        #(set-octavation 0)
+        \ottava #0
         df c bf af gf f
         ef df c bf a\!\< c bf f gf c,\!]
     } |
@@ -170,7 +196,7 @@ secFourRHnotes = \notes \relative af' {
     df2) r4 |
 }
 
-secFourRHdyn = \notes {
+secFourRHdyn =  {
                                 % 70 - 73
     \barRest |
     s8\< s s s s s |
@@ -243,7 +269,7 @@ secFourRHdyn = \notes {
     s4\f s s |
 }
 
-secFourRH = \notes {
+secFourRH =  {
     <<
         \secFourSilent
         \secFourRHnotes
@@ -253,7 +279,7 @@ secFourRH = \notes {
 
 
 
-secFourLHnotes = \notes \relative df, {
+secFourLHnotes =  \relative df, {
                                 % 70 - 73
     R1*3/4 |
     R1*3/4 |
@@ -303,22 +329,13 @@ secFourLHnotes = \notes \relative df, {
     df <af' df f> r |
 
                                 % 102 - 105
-    <<
-        \context Voice = "vocLHa" \relative ef' { \voiceOne\stemDown\csrh r4 <ef? f> <ef f> }
-        \context Voice = "vocLHb" \relative a { a2.( }
-    >> |
-    <<
-        \context Voice = "vocLHa" \relative df' { \voiceOne\stemDown\csrh r4 <df f> <df f> }
-        \context Voice = "vocLHb" \relative bf { bf2. }
-    >> |
-    <<
-        \context Voice = "vocLHa" \relative gf' { \voiceOne\stemDown\csrh r4 <gf? af> <gf af> }
-        \context Voice = "vocLHb" \relative c' { c2. }
-    >> |
-    \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemBoth\cslh r } |
+    a2. ( |
+    bf2. |
+    c2. |
+    df4) \stemDown\csrh <f af> \stemNeutral\cslh r |
 
                                 % 106 - 109
-    gf?4 \stemDown\csrh <df' ef bf'> \stemBoth\cslh r |
+    gf,?4 \stemDown\csrh <df' ef bf'> \stemNeutral\cslh r |
     af,4 <f' af df> r |
     af,? <gf' af?> <gf af> |
     df4 <af' f'> r |
@@ -336,29 +353,20 @@ secFourLHnotes = \notes \relative df, {
     df <af' df f> r |
 
                                 % 118 - 121
-    <<
-        \context Voice = "vocLHa" \relative ef' { \voiceOne\stemDown\csrh r4 <ef? f> <ef f> }
-        \context Voice = "vocLHb" \relative a { a2.( }
-    >> |
-    <<
-        \context Voice = "vocLHa" \relative df' { \voiceOne\stemDown\csrh r4 <df f> <df f> }
-        \context Voice = "vocLHb" \relative bf { bf2. }
-    >> |
-    <<
-        \context Voice = "vocLHa" \relative gf' { \voiceOne\stemDown\csrh r4 <gf? af> <gf af> }
-        \context Voice = "vocLHb" \relative c' { c2. }
-    >> |
-    \context Voice = "vocLHb" \relative df' { df4) \stemDown\csrh <f af> \stemBoth\cslh r } |
+    a2.( |
+    bf2. |
+    c2. |
+    df4) \stemDown\csrh <f af> \stemNeutral\cslh r |
 
                                 % 122 - 125
-    gf,?4 \clef treble <df'' ef bf'> r |
+    gf,,?4 \clef treble <df'' ef bf'> r |
     R1*3/4 |
     \clef bass
     af,4 <gf' af> <gf af> |
     df, <f' af f'> r |
 }
 
-secFourLHdyn = \notes {
+secFourLHdyn =  {
                                 % 70 - 73
     \barRest |
     \barRest |
@@ -432,7 +440,7 @@ secFourLHdyn = \notes {
     \sd s8 s \su s8 s |
 }
 
-secFourLH = \notes {
+secFourLH =  {
     <<
         \secFourSilent
         \secFourLHnotes

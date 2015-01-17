@@ -1,4 +1,6 @@
-secThreeSilent = \notes {
+\version "2.18.2"
+
+secThreeSilent =  {
                                 % 37 (partial)
     s4 |
 
@@ -45,7 +47,7 @@ secThreeSilent = \notes {
 }
 
 
-secThreeRHnotes = \notes \relative af' {
+secThreeRHnotes =  \relative af' {
                                 % 37 (partial)
     af4(~ |
 
@@ -59,7 +61,7 @@ secThreeRHnotes = \notes \relative af' {
     f2 bf,4 |
     f'2 c4 |
     ef2 df4 |
-    \times 3/4 { c ef df bf } |
+    \tuplet 4/3 { c ef df bf } |
 
                                 % 46 - 49
     af2 ef4_( |
@@ -101,7 +103,7 @@ secThreeRHnotes = \notes \relative af' {
     f ef af) |
 }
 
-secThreeRHdyn = \notes {
+secThreeRHdyn =  {
                                 % 37 (partial)
     s4 |
 
@@ -143,12 +145,12 @@ secThreeRHdyn = \notes {
                                 % 66 - 69
     \barRest |
     \barRest |
-    \once\override Hairpin #'extra-offset = #'(0 . 1.5)
+    \once\override Hairpin.extra-offset = #'(0 . 1.5)
     s4\< s s |
     s s s\! |
 }
 
-secThreeRH = \notes {
+secThreeRH =  {
     <<
         \secThreeSilent
         \secThreeRHnotes
@@ -158,7 +160,7 @@ secThreeRH = \notes {
 
 
 
-secThreeLHnotes = \notes \relative a, {
+secThreeLHnotes =  \relative a, {
                                 % 37 (partial)
     r4 |
 
@@ -208,16 +210,25 @@ secThreeLHnotes = \notes \relative a, {
                                 % 66 - 69
     ef4 <df' g> <df g> |
     r4 <df gf> <df gf> |
+    %{
     <<
         << { r4 <c gf'> } \\
            { af2 } >>           % [mils] expect warning
-        { \ohn af4_( \ohn c) }
+        { \hideNotes af4_(  c) \unHideNotes }
+    >> r4 |
+    %}
+    
+    %\mergeDifferentlyHeadedOn
+    << 
+      { r4 <c gf'> } \\ 
+      { af2 } \\
+      { \stemDown \hideNotes \forceShift \shapeSlurOne af4_( c) } 
     >> r4 |
 
     R1*3/4 |
 }
 
-secThreeLHdyn = \notes {
+secThreeLHdyn =  {
                                 % 37 (partial)
     s4 |
 
@@ -263,7 +274,7 @@ secThreeLHdyn = \notes {
     \barRest |
 }
 
-secThreeLH = \notes {
+secThreeLH =  {
     <<
         \secThreeSilent
         \secThreeLHnotes
