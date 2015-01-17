@@ -1,8 +1,9 @@
-\version "2.2.1"
+\version "2.18.2"
 \header {
-    title = "Marche funebre KV 453a"
+    title = "Marche Funebre"
     subtitle = "del Sigr. Maestro Contrapunto"
     composer = "Wolfgang Amadeus Mozart (1756-1791)"
+    opus = "KV 453a"
         
     mutopiatitle = "Marche funebre KV 453a"
     mutopiacomposer = "MozartWA"
@@ -15,20 +16,18 @@
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
-    lastupdated = "2004/May/17"
 
-    tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
     footer = "Mutopia-2004/05/17-446"
 }
 
-upper = \notes\relative c' {
+upper = \relative c' {
     \key c \minor
     \time 2/2
+    \tempo "Lento"
 
     \repeat volta 2
     {
-	<c es g c>4^\markup { \bold \large \translate #'(-8 . 6) "Lento" } 
-	<c es g>8. <c es g>16 <c es g>4 <d f g>
+	<c es g c>4 <c es g>8. <c es g>16 <c es g>4 <d f g>
 	| <c es g> << { es'8( d f es d c) } \\ { g fis as g f es } >>
 	| <b' d g>4 <d, g>8. <d g>16 <es g>4 <c fis>
 	| <b g'> << { d'8( es g f es d) } \\ { b c es d c b } >>
@@ -53,7 +52,7 @@ upper = \notes\relative c' {
     }
 }
 
-lower = \notes\relative c, {
+lower = \relative c, {
     \key c \minor
     \time 2/2
 
@@ -82,7 +81,7 @@ lower = \notes\relative c, {
     }
 }
 
-dynamics = \notes {
+dynamics =  {
   s1
   | s4 s2.-\p
   | s4-\f s2.
@@ -98,50 +97,34 @@ dynamics = \notes {
   | s4 s4-\p s2
 }
 
+\paper {
+  system-system-spacing.minimum-distance = #18
+}
+
 \score {
     \context PianoStaff <<
-	\context Staff=upper \upper
-	\context Dynamics=dynamics \dynamics
-	\context Staff=lower <<
+	\context Staff = "upper" \upper
+	\context Dynamics = "dynamics" \dynamics
+	\context Staff = "lower" {
 	    \clef bass
 	    \lower
-	>>
-    >>
-    \paper {
-	\context {
-	    \type "Engraver_group_engraver"
-	    \name Dynamics
-	    \alias Voice % So that \cresc works, for example.
-	    \consists "Output_property_engraver"
-	    
-	    \consists "Script_engraver"
-	    \consists "Dynamic_engraver"
-	    \consists "Text_engraver"
-
-	    \override TextScript #'font-size = #2
-	    \override TextScript #'font-shape = #'italic
-	    \override DynamicText #'extra-offset = #'(0 . 2.5)
-	    \override Hairpin #'extra-offset = #'(0 . 2.5)
-
-	    \consists "Skip_event_swallow_translator"
-
-	    \consistsend "Axis_group_engraver"
 	}
+    >>
+    \layout {
 	\context {
-	    \PianoStaffContext
+	    \PianoStaff
 	    \accepts Dynamics
-	    \override VerticalAlignment #'forced-distance = #7
+	    \override StaffGrouper.staff-staff-spacing.minimum-distance = #13
 	}
     }
     \midi {
 	\context {
-	    \type "Performer_group_performer"
+	    \type "Performer_group"
 	    \name Dynamics
-	    \consists "Span_dynamic_performer"
 	    \consists "Dynamic_performer"
 	}
 	\context {
-	    \PianoStaffContext
+	    \PianoStaff
 	    \accepts Dynamics
 	}
     }
