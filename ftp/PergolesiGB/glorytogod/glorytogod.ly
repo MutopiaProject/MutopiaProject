@@ -23,7 +23,7 @@
  date = "1700s"
  source = "G Shirmer, Inc., 1904"
  style = "Classical"
- copyright = "Creative Commons Attribution-ShareAlike"
+ license = "Creative Commons Attribution-ShareAlike 4.0"
  maintainer = "Robinson Tryon"
  maintainerEmail = "robinson.tryon@alum.dartmouth.org"
 
@@ -44,8 +44,10 @@
      \line { Will C. Macfarlane } } } }
  mutopiapoet = "Will C. Macfarlane"
 
- footer = "Mutopia-2004/09/05-477"
  texidoc = "Glory to God in the highest (Pergolesi)"
+ footer = "Mutopia-2015/01/17-477"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 
