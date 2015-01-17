@@ -1,16 +1,17 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PART C : BARS 83-128  1'19-1'39
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\version "2.2.0"
+\version "2.18.2"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% RIGHT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rhC = \notes \relative b' {
+rhC =  \relative b' {
     \key g \major
 %%% 83-86
     b4( d8-.) d-. |
     g-. g-. b4->( |
+    \setBeatStructureQuarter
     d16 c d c a8-.) r |
     d16( c d c a8-.) r |
 %%% 87-93
@@ -26,10 +27,7 @@ rhC = \notes \relative b' {
     b16 a g fs e fs g a |
     b8-. b-. e4-> |
     << { cs2 | }
-       { \override TextSpanner  #'style = #'trill
-         \override TextSpanner  #'edge-height = #'(0 . 0)
-         \override TextSpanner  #'edge-text  = #(cons (make-musicglyph-markup "scripts-trill")  "")
-         s4..^\startTextSpan \grace { b16\stopTextSpan [ cs ] } } >>
+       { s4..^\startTrillSpan \afterGrace s16 { b16\stopTrillSpan [ cs ] } } >>
     d4 d, |
     as16 b as b cs d cs d |
     fs g fs g as b as b |
@@ -45,6 +43,7 @@ rhC = \notes \relative b' {
         <e gs b e>4 <b e gs b> |
 %%% 108-116
         <gs b e gs> \voiceOne r8  e'8( |
+        \setBeatStructureHalf
         <b ds>-.) <b e>-. <b fs'>-. <b gs'>-. |
         \oneVoice <b a'> <b b'> <cs cs'> <ds ds'> |
         <e gs b e>4 <b e gs b> |
@@ -56,7 +55,7 @@ rhC = \notes \relative b' {
         { <ds b'>4 r8 } % partial
     }
     \repeat volta 2 {
-        \partial 8 b' |
+        \partialA b'8 |
         <b a'!>8 <b gs'> <b fs'> <b e> |
 %%% 117-124
         <b ds>8 <b cs> b <b a> |
@@ -67,7 +66,7 @@ rhC = \notes \relative b' {
         <b gs> <a fs> <gs e> <fs ds> |
         e4 r8 % partial
     }
-    \partial 8 b'8 |
+    \partialA b'8 |
     <b e gs b>4 <gs b e gs> |
 %%% 125-128
     <e gs b e> r8 <e gs>( |
@@ -80,7 +79,7 @@ rhC = \notes \relative b' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% LEFT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-lhC = \notes \relative g {
+lhC =  \relative g {
     \clef bass
     \key g \major
 %%% 83-86
@@ -124,7 +123,7 @@ lhC = \notes \relative g {
         { <b' b,>8 [ fs b, ] } % partial
     }
     \repeat volta 2 {
-        \partial 8 r8 |
+        \partialA r8 |
         r8 \clef treble b'' a gs |
 %%% 117-124
         fs8 e ds b |
@@ -135,7 +134,7 @@ lhC = \notes \relative g {
         \clef bass e a, b b, |
         e [ b e, ] % partial
     }
-    \partial 8 r |
+    \partialA r8 |
     r8 e( gs b |
     e gs b) d( |
     c-.) d-. c-. gs-. |
@@ -148,7 +147,7 @@ lhC = \notes \relative g {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DYNAMICS PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-dynC = \notes {
+dynC =  {
 %%% 83-86
     s2_\p | s2*3 |
     \myBreak
@@ -156,7 +155,7 @@ dynC = \notes {
     s2*7 |
     \myBreak
 %%% 94-100
-    s2 | s8 s_\cresc s s | s2*3 | s2_\f | s2 |
+    s2 | s8 s^\deprecatedcresc s s | s2*3 | s2_\f | s2 |
     \myBreak
 %%% 101-107
     s2*6 |
@@ -170,18 +169,19 @@ dynC = \notes {
         {s2}{s4.}
     }
     \repeat volta 2 {
-        \partial 8 s8_\p |
+        \partialA s8_\p |
         \set Score.currentBarNumber = #116
         s2 |
         \myBreak
 %%% 117-124
         s2*3 | s2_\fp | s2*2 | s8 s s
     }
-    \partial 8 s8_\f |
+    \partialA s8_\f |
     \set Score.currentBarNumber = #124
     s2 |
     \myBreak
 %%% 125-128
-    s8 s s s_\p | s2 | s2_\cresc | s2 |
+    s8 s s s_\p | s2 | s2_\deprecatedcresc | s2 |
 %%% END
 }
+

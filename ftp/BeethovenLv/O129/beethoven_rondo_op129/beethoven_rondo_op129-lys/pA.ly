@@ -1,29 +1,30 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% PART A : BARS 1-24  0'00-0'19
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\version "2.2.0"
+\version "2.18.2"
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% RIGHT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-rhA = \notes \relative b' {
+rhA =  \relative b' {
     \clef treble
     \key g \major
+    \setBeatStructureQuarter
+    
 %%% 1-6
     b4( d8-.) d-. | g-. g-. b4->( | d16 c d c a8-.) r |
     d16( c d c a8-.) r | b,4( d8-.) d-. | g-. g-. b4->( |
 %%% 7-13
     d16 c d c a8-.) a16( b | g4-.) r |
-    b16 a g fs e fs g a | b8-. b-. e4-> |
-    e16( ds e ds b8-.) r | e16( ds e ds b8-.) r |
+    b16 a g fs e fs g a | 
+    b8-. b-. e4-> |
+    e16( ds e ds b8-.) r |
+    e16( ds e ds b8-.) r |
     b16 a g fs e fs g a |
 %%% 14-21
     b8-. b-. e4-> |
-    << { cs2 | }
-       { \override TextSpanner  #'style = #'trill
-         \override TextSpanner  #'edge-height = #'(0 . 0)
-         \override TextSpanner  #'edge-text  = #(cons (make-musicglyph-markup "scripts-trill")  "")
-         s4..^\startTextSpan \grace { b16\stopTextSpan [ cs ] } } >>
+    << { s4.\startTrillSpan \afterGrace s8 { b16\stopTrillSpan [ cs ] } } \\ 
+       { cs2 } >> |
     d4 d, |
     b4 d8 d | g g b4 | d16 c! d c a4-> |
     d16 c d c a4-> | b,4 d8 d |
@@ -35,9 +36,10 @@ rhA = \notes \relative b' {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% LEFT HAND PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-lhA = \notes \relative g {
+lhA =  \relative g {
     \clef bass
     \key g \major
+    \setBeatStructureHalf
 %%% 1-6
     <g b d>8 <g b d> <g b d> <g b d> | <g b d> <g b d> <g b d> <g b d> |
     <g c d fs> <g c d fs> <g c d fs> <g c d fs> |
@@ -69,13 +71,13 @@ lhA = \notes \relative g {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%% DYNAMICS PART
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-dynA = \notes {
+dynA =  {
 %%% 1-6
     \mark\markup{\bold "Allegro vivace"}
     s8_\p s s s | s2*5 |
     \myBreak
 %%% 7-13
-    s2*6 | s8 s s_\cresc s |
+    s2*6 | s8 s s_\deprecatedcresc s |
     \myBreak
 %%% 14-21
     s2*3 | s8_\f s s s | s2*4 |
@@ -84,3 +86,4 @@ dynA = \notes {
     s2*3 |
 %%% END
 }
+
