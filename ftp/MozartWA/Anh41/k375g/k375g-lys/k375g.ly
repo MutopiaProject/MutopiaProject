@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 \header {
     title = "Fugue Fragment"
@@ -12,12 +12,16 @@
     date = "1777?"
     source = "Autograph"
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Maurizio Tomasi"
     maintainerEmail = "zio_tom78@hotmail.com"
     maintainerWeb = "http://www.geocities.com/zio_tom78/"
 
-    footer = "Mutopia-2004/05/23-447"
+    moreInfo = "<p>The source text used in the preparation of this score is a photography of the autograph reproduced in the booklet of the CD \"Wolfgang Amadeus Mozart - Fragments and Unfinished Works for Piano\" by Duo Crommelynck (Claves Records, CD 50-9109).  This fugue was probably begun in 1776-77.</p><p>The autograph was reproduced as faithfully as possible, except for some minor instances:</p><ol><li>The upper staff in the autograph uses a soprano clef, which is not common practice today.  It has been therefore substituted with a treble clef.</li><li>A lot of switches between the upper and lower staff occur in the third voice.  In this reproduction of the score, the first two voices are written in the upper staff, while the others are always placed in the second staff.</li><li>Mozart did not write full bar rests, preferring to leave the bar blank.  In this edition, full bar rests are always written.</li></ol><p>Maurizio Tomasi, May 2004</p><p>An interesting article about this piece was posted to the Mozart Forum by Dennis Pajot. It can be read at: <a href=\"http://www.mozartforum.com/VB%5Fforum/showthread.php?t=72\">http://www.mozartforum.com/VB%5Fforum/showthread.php?t=72</a></p>"
+
+ footer = "Mutopia-2015/01/17-447"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
