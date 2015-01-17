@@ -1,12 +1,12 @@
-#(set-global-staff-size 16)
+#(set-global-staff-size 17)
 \include "catalan.ly"
 
-\version "2.2.0"
+\version "2.19.15"
 
 \header {
 	title = "Tambourin"
 	composer = "Jean-Philippe Rameau"
-	subtitle = "Pi\`eces de Clavecin"
+	subtitle = "Pièces de Clavecin"
 	mutopiatitle = "Tambourin"
 	mutopiacomposer = "RameauJP"
 	mutopiainstrument = "Harpsichord, Piano"
@@ -18,15 +18,36 @@
 	maintainerEmail = "ludovicsardain@hotmail.com"
 	lastupdated = "2004/Oct/25"
 
-	tagline = "\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[\\textwidth][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}"
 	footer = "Mutopia-2004/10/25-487"
 }
 
-droite = \notes \relative do'{
+\paper {
+  top-margin = 6 \mm
+  % default vertical spacing values have been multiplied by 1.5, except where noted with **
+  system-system-spacing = #'((basic-distance . 18) (minimum-distance . 12) (padding . 1.5))
+  % defaults are 12, 8, and 1
+  score-system-spacing = #'((basic-distance . 21) (minimum-distance . 12) (padding . 1.5))
+  % defaults are 14, 8, and 1
+  markup-system-spacing = #'((basic-distance . 7.5) (padding . 6))
+  % defaults are 5 and 0.5**
+  score-markup-spacing = #'((basic-distance . 18) (padding . 0.75))
+  % defaults are 12 and 0.5
+  markup-markup-spacing = #'((basic-distance . 1.5) (padding . 0.75))
+  % defaults are 1 and 0.5
+  top-system-spacing = #'((basic-distance . 1.5) (padding . 1.5))
+  % defaults are 1 and 1
+  top-markup-spacing = #'((basic-distance . 4) (padding 1.5))
+  % defaults are none** and 1
+  last-bottom-spacing = #'((basic-distance . 1.5) (padding . 5))
+  % defaults are 1 and 1**
+}
+
+
+droite =  \relative do'{
 	\time 2/2
 	\key mi \minor
 	\partial 2
-	\once\override TextScript #'extra-offset = #'(-3.5 . 2)
+	\once\override TextScript.extra-offset = #'(-3.5 . 2)
 	mi8^\markup { \bold \fontsize #2.5 Vif } fad sol fad |
 	mi4 si' si la |
 	sol-\prall fad mi8 fad sol la |
@@ -93,7 +114,7 @@ droite = \notes \relative do'{
 	\bar "|."
 }
 
-gauche = \notes \relative do {
+gauche =  \relative do {
 	\clef bass
 	\key mi \minor
 	r2 |
@@ -205,27 +226,16 @@ gauche = \notes \relative do {
 }
 
 \score {
-	\context PianoStaff \notes <<
-		\context Staff = up <<
-			\set Staff.minimumVerticalExtent = #'(-4 . 6)
-			\droite
-		>>
-		\context Staff = down <<
-			\set Staff.minimumVerticalExtent = #'(-6 . 4)
-			\gauche
-		>>
-	>>
-
-\paper {
-	linewidth = 17.0 \cm
-	textheight = 24.0 \cm
-	\context {
-		\PianoStaffContext
-	 \override VerticalAlignment #'forced-distance = #10
-	}
-}
-
-
-\midi { \tempo 4 = 80 }
-
+  \new PianoStaff  <<
+    \new Staff = up <<
+      \droite
+    >>
+    \new Staff = down <<
+      \gauche
+    >>
+  >>
+  \layout {}
+  \midi {
+    \tempo 4 = 80
+    }
 }
