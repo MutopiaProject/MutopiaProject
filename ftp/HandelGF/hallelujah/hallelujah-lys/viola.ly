@@ -1,6 +1,7 @@
+\version "2.19.15"
 \include "header.ly"
 
-violaNotes =  \notes\relative c' {
+violaNotes =  \relative c' {
   %\tempo
   \clef alto
   \key d \major

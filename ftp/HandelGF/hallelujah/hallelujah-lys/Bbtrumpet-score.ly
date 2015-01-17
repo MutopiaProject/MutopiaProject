@@ -1,14 +1,15 @@
+\version "2.19.15"
 \include "trumpet.ly"
 
 trumpetStaff = <<
 
-\context Voice = BbTrumpetI \notes \transpose bes c' \trumpetI
+\context Voice = BbTrumpetI  \transpose bes c' \trumpetI
 >>
 
      
 \score {
   <<
-    \context Staff = trumpets \trumpetStaff
+    \context Staff = "trumpets" \trumpetStaff
   >>
 
   \header {

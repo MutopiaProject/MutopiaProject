@@ -1,10 +1,11 @@
-#(ly:set-point-and-click 'line-column )
+\version "2.19.15"
+
 % Note - Character set converted to UTF-8 for source repository consistency
 % For correct compilation with LilyPond 2.2 this change may need to be reverted
 
 \include "header.ly"
 
-SopNotes = \notes\relative c {
+SopNotes = \relative c {
   
   \autoBeamOff
   \key d \major
@@ -146,7 +147,7 @@ SopNotes = \notes\relative c {
   d1-\fermata \bar "|." 
 }
 
-SopLyrics = \lyrics { 
+SopLyrics = \lyricmode { 
 	Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
 	Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah! Hal -- le -- lu -- jah!
 	For the Lord God Om -- ni -- po -- tent reign -- eth!
@@ -175,7 +176,7 @@ SopLyrics = \lyrics {
 
 }
 
-SopGermanLyrics = \lyrics { 
+SopGermanLyrics = \lyricmode { 
 	Hal -- le -- lu -- ja,
 	Hal -- le -- lu -- ja,
 	Hal -- le -- lu -- ja,
@@ -278,7 +279,7 @@ For the Lord God om -- ni -- po -- tent reign -- eth, => denn Gott der Herr re -
 Soprano = <<
  
   \context Voice = Sop \SopNotes
-  \lyricsto Sop \new Lyrics \lyrics {  \SopLyrics }
-  \lyricsto Sop \new Lyrics \lyrics { \SopGermanLyrics } %\set stanza = "German" 
+  \new Lyrics  \lyricsto Sop  {  \SopLyrics }
+  \new Lyrics  \lyricsto Sop  { \SopGermanLyrics } %\set stanza = "German" 
 >>
 

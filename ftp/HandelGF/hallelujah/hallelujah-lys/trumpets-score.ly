@@ -1,3 +1,4 @@
+\version "2.19.15"
 \include "trumpet.ly"
 \include "trumpet2.ly"
 

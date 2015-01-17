@@ -1,9 +1,9 @@
+\version "2.19.15"
 \include "header.ly"
 
-#(ly:set-point-and-click 'line-column )
 
 trumpetI = 
-\notes 
+ 
 \relative c'' {
 \key d \major
 \time 4/4  
