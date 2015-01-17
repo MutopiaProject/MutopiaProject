@@ -16,22 +16,20 @@
   mutopiatitle = "Sugar Cane"
   mutopiacomposer = "JoplinS"
   mutopiainstrument = "Piano"
+  mutopiasource = "Reproduction of original edition (1908)"
+  mutopiadate = "c. 1908"
 
   date = "C. 1908"
   style = "Jazz"
-  copyright = "Public Domain"
+  license = "Public Domain"
 
-  maintainer = "Daniel Skarda"
+  maintainer = "Daniel Škarda"
   maintainerEmail = "0rfelyus@ucw.cz"
 
 % This file is maintained using GNU Arch (http://www.gnuarch.org):
 %
 %  Archive and version: 0rfelyus@hobitin.ucw.cz--2004-music/joplin-sugar-cane--main--1.0
 %  ArchiveLocation:     http://www.ucw.cz/~0rfelyus/{archives}/0rfelyus@hobitin.ucw.cz--2004-music
-  footer = "Mutopia-2004/10/21-467"
-
-  lastupdated = "2004/Oct/21"
-
 % Changes:
 %
 %  Oct 21 2004
@@ -48,6 +46,10 @@
 %
 %   beams:
 %	LH: 16, 75
+
+ footer = "Mutopia-2015/01/17-467"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \paper {
