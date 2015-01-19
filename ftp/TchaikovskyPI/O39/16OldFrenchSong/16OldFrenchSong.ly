@@ -36,17 +36,17 @@
     composer = "Peter Ilyich Tchaikovsky (1840 - 1893) "
     opus = "Op. 39, No. 16"
     %piece = "Left-aligned header"
-    date = "1741"
-    style = "Baroque"
-    source = "Bach-Gesellschaft Edition 1853 Band 3"
 
-    maintainer = ""
+    date = "1878"
+    style = "Classical"
+
+    maintainer = "David McNamara"
     maintainerEmail = ""
     license = "Public Domaon"
 
     %mutopiatitle = ""  % default to plain title
     %mutopiaopus = "Op.0" % default to plain opus 
-    mutopiacomposer = "TchaikovskyP"
+    mutopiacomposer = "TchaikovskyPI"
     %--A list of instruments can be found at http://www.mutopiaproject.org/browse.html#byInstrument
     %--Multiple instruments are separated by a comma
     mutopiainstrument = "Piano"
