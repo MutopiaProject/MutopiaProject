@@ -1,4 +1,7 @@
-\version "2.19.15"
+\version "2.18.2"
+
+\language "english"
+\include "articulate.ly"
 
 %--------Definitions for Debussy Prelude 2
 
@@ -168,7 +171,7 @@ breathFermata = \override BreathingSign.text = \markup {
   }
 }
 
-global = {
+PrelTwoGlobal = {
   \key c \major
   \time 2/4
   \numericTimeSignature

@@ -1,52 +1,6 @@
-%%--------------------------------------------------------------------
-% The Mutopia Project
-% LilyPond template for keyboard solo piece
-%%--------------------------------------------------------------------
-
 \version "2.18.2"
 
-% #(set-default-paper-size "letter")
-
-#(set-global-staff-size 18)
-
-\paper {
-    top-margin = 8\mm                              %-minimum top-margin: 8mm
-    top-markup-spacing.basic-distance = #5         %-dist. from bottom of top margin to the first markup/title
-    markup-system-spacing.basic-distance = #6      %-dist. from header/title to first system
-    top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
-    last-bottom-spacing.basic-distance = #11       %-pads music from copyright block
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
-}
-
-\header {
-    title = "Prélude I."
-    composer = "Claude Debussy (1862-1918)"
-    opus = "CD 125; L.117"
-    piece = \markup \italic \huge "Danseuses de Delphes"
-    date = "1910"
-    style = "Romantic"
-    source = "Durand, 1910"
-
-    maintainer = "Javier Ruiz-Alma"
-    maintainerEmail = "javier (at) ruiz-alma.com"
-    license = "Creative Commons Attribution-ShareAlike 4.0"
-
-    mutopiatitle = "Prélude 1: Danseuses de Delphes"
-    mutopiaopus = "CD 125; L.117"
-    mutopiacomposer = "DebussyC"
-    mutopiainstrument = "Piano"
-
- footer = "Mutopia-2014/05/26-1956"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
-}
-
-%--------Definitions
-\include "debussy-L117-prel-1-defs.ly"
-
-%------------Music
-upperOne =  \relative c' {
+PrelOneUpperOne =  \relative c' {
   <d f>4-.(^\legendOne-\hideP
      <ees g>-. <f a>-.)                       | % 1
   <d f>4-.( <ees g>-. <f a>-.)                | % 2
@@ -98,7 +52,7 @@ upperOne =  \relative c' {
    \bar "|."
 }
 
-upperTwo =  \relative c' {
+PrelOneUpperTwo =  \relative c' {
   \preBrokenBeam \shiftNoteRight
   \shapeSlurEle bes4(-\hideP b8. c16 cis4)   | % 1
   \shapeSlurOne
@@ -142,7 +96,7 @@ upperTwo =  \relative c' {
   a,4\rest e'\rest \stemUp <f f,>^.          | %28
 }
 
-upperTre = \relative c {
+PrelOneUpperTre = \relative c {
   \staffDown
   \crossStaff {
   f4-\hideP g a                              | % 1
@@ -196,7 +150,7 @@ upperTre = \relative c {
   <bes f bes,>2\fermata f'4\rest             | %31
     
 }
-upperQtr = \relative c''' {
+PrelOneUpperQtr = \relative c''' {
   s2. s2. s2.                                | % 1-3
   f4\rest f8\rest s8 s2                      | % 4
   s2. \staffDown \stemUp                     | % 5
@@ -209,9 +163,9 @@ upperQtr = \relative c''' {
   s8 \moveNoteTwo <g a>4 \moveNoteTwo <c,d> s8| %17
 }
 
-upperStaff = <<{ \upperOne }\\{ \upperTwo }\\{ \upperTre }\\{ \upperQtr }>>
+PrelOneUpperStaff = <<{ \PrelOneUpperOne }\\{ \PrelOneUpperTwo }\\{ \PrelOneUpperTre }\\{ \PrelOneUpperQtr }>>
 
-lowerStaff = \relative c {
+PrelOneLowerStaff = \relative c {
    \setRestDirDown \stemDown
   <bes bes,>4_._(-\hideP <a a,>_. <f f,>_.)  | % 1
   <bes bes,>4_._( <a a,>_. <f f,>_.)         | % 2
@@ -261,7 +215,7 @@ lowerStaff = \relative c {
   bes,,4_\ten_.-\hidePP g4\rest g4\rest              | %31
 }
 
-dynamics = {
+PrelOneDynamics = {
   \pushDynLeft s2.\p                         | % 1
   s2.                                        | % 2
   \pushDynLeft s4\p\< s4\p\< s4\p\<          | % 3
@@ -290,32 +244,4 @@ dynamics = {
   s2.\pp                                     | %28
   s2.\f\>                                    | %29
   s2.\pp                                     | %30
-}
-
-%-------Typeset music 
-\score {
-    \removeWithTag #'played
-    \context PianoStaff <<
-        \set PianoStaff.midiInstrument = "acoustic grand"
-        \new Staff = "upper" { \clef treble \global \upperStaff }
-        \new Dynamics = "dyns" { \dynamics }
-        \new Staff = "lower" { \clef bass \global \lowerStaff }
-    >>
-    \layout{ 
-      \context {
-        \PianoStaff
-        \consists #Span_stem_engraver
-      }
-    }
-}
-%-------generate Midi
-\score {
-    \removeWithTag #'printed
-    \context PianoStaff <<
-        \set PianoStaff.midiInstrument = "acoustic grand"
-        \new Staff = "upper" { \clef treble \global \upperStaff }
-        \new Dynamics = "dyns" { \dynamics }
-        \new Staff = "lower" { \clef bass \global \lowerStaff }
-    >>
-    \midi  { \tempo 4 = 40 }
 }
