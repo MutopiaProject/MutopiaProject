@@ -80,7 +80,7 @@
 
 <p>Ensure that your .ly file does not have any papersize settings which will interfere with the commands we'll use to compile the file (see above). The only exception is if your music should be produced in landscape format, eg. for organ music.</p>
 
-<p>Finally, define the following headers in the \header section. These will be used for the title, composer, etc. when the music is displayed on Mutopia. Please make sure they're filled in carefully in the described format, in English.</p>
+<p>Finally, define the following headers in the \header section. These will be used for the title, composer, etc. when the music is displayed on Mutopia. Please make sure they're filled in carefully in the described format, in English.  For-pay website links are not permitted.</p>
 
 <table class="simple_table">
 <tr>
