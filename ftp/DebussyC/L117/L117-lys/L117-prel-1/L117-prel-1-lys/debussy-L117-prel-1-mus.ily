@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-PrelOneUpperOne =  \relative c' {
+upperOne =  \relative c' {
   <d f>4-.(^\legendOne-\hideP
      <ees g>-. <f a>-.)                       | % 1
   <d f>4-.( <ees g>-. <f a>-.)                | % 2
@@ -52,7 +52,7 @@ PrelOneUpperOne =  \relative c' {
    \bar "|."
 }
 
-PrelOneUpperTwo =  \relative c' {
+upperTwo =  \relative c' {
   \preBrokenBeam \shiftNoteRight
   \shapeSlurEle bes4(-\hideP b8. c16 cis4)   | % 1
   \shapeSlurOne
@@ -96,7 +96,7 @@ PrelOneUpperTwo =  \relative c' {
   a,4\rest e'\rest \stemUp <f f,>^.          | %28
 }
 
-PrelOneUpperTre = \relative c {
+upperTre = \relative c {
   \staffDown
   \crossStaff {
   f4-\hideP g a                              | % 1
@@ -150,7 +150,7 @@ PrelOneUpperTre = \relative c {
   <bes f bes,>2\fermata f'4\rest             | %31
     
 }
-PrelOneUpperQtr = \relative c''' {
+upperQtr = \relative c''' {
   s2. s2. s2.                                | % 1-3
   f4\rest f8\rest s8 s2                      | % 4
   s2. \staffDown \stemUp                     | % 5
@@ -163,9 +163,9 @@ PrelOneUpperQtr = \relative c''' {
   s8 \moveNoteTwo <g a>4 \moveNoteTwo <c,d> s8| %17
 }
 
-PrelOneUpperStaff = <<{ \PrelOneUpperOne }\\{ \PrelOneUpperTwo }\\{ \PrelOneUpperTre }\\{ \PrelOneUpperQtr }>>
+upperStaff = <<{ \upperOne }\\{ \upperTwo }\\{ \upperTre }\\{ \upperQtr }>>
 
-PrelOneLowerStaff = \relative c {
+lowerStaff = \relative c {
    \setRestDirDown \stemDown
   <bes bes,>4_._(-\hideP <a a,>_. <f f,>_.)  | % 1
   <bes bes,>4_._( <a a,>_. <f f,>_.)         | % 2
@@ -215,7 +215,7 @@ PrelOneLowerStaff = \relative c {
   bes,,4_\ten_.-\hidePP g4\rest g4\rest              | %31
 }
 
-PrelOneDynamics = {
+dynamics = {
   \pushDynLeft s2.\p                         | % 1
   s2.                                        | % 2
   \pushDynLeft s4\p\< s4\p\< s4\p\<          | % 3

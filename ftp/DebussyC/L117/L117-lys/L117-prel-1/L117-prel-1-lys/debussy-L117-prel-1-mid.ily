@@ -3,9 +3,9 @@
     \removeWithTag #'printed
     \context PianoStaff <<
         \set PianoStaff.midiInstrument = "acoustic grand"
-        \new Staff = "upper" { \clef treble \PrelOneGlobal \PrelOneUpperStaff }
-        \new Dynamics = "dyns" { \PrelOneDynamics }
-        \new Staff = "lower" { \clef bass \PrelOneGlobal \PrelOneLowerStaff }
+        \new Staff = "upper" { \clef treble \global \upperStaff }
+        \new Dynamics = "dyns" { \dynamics }
+        \new Staff = "lower" { \clef bass \global \lowerStaff }
     >>
     \midi  { \tempo 4 = 40 }
 }

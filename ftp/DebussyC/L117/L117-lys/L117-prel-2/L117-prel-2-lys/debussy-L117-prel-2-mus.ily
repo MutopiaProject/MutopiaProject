@@ -659,7 +659,7 @@ lowerStaffBottom = \relative c, {
   \voiceThree R2 \sustainOff |
 }
 
-PrelTwoDynamics = {
+dynamics = {
   s4 s4 -\pTresDoux |
   s4 \< s4 \> |
   s4 \! s8 \p s8 \> |
@@ -735,7 +735,7 @@ PrelTwoDynamics = {
   s2 * 6 |
 }
 
-PrelTwoUpperStaff = {
+upperStaff = {
   \clef treble
   <<
     \new Voice { \voiceOne \upperStaffTop }
@@ -743,7 +743,7 @@ PrelTwoUpperStaff = {
   >>
 }
 
-PrelTwoLowerStaff = {
+lowerStaff = {
   \clef bass
   <<
     \new Voice { \voiceThree \lowerStaffTop }

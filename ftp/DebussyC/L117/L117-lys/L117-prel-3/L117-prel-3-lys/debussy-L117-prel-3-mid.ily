@@ -9,13 +9,13 @@
     \set PianoStaff.midiInstrument = "acoustic grand"
     \new Staff = "upper" {
       \clef treble
-      \PrelThreeGlobal
-      \new Voice="upperOne" { \PrelThreeUpperOne }
+      \global
+      \new Voice="upperOne" { \upperOne }
     }
     \new Staff = "lower" {
       \clef bass
-      \PrelThreeGlobal
-      \new Voice="lowerOne" { \PrelThreeLowerOne }
+      \global
+      \new Voice="lowerOne" { \lowerOne }
     }
   >>
   \midi  { \tempo 4 = 126 }

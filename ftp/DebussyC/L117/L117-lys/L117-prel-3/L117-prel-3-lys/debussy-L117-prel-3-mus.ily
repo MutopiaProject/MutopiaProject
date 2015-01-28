@@ -2,7 +2,7 @@
 
 \include "nederlands.ly"
 
-PrelThreeGlobal = {
+global = {
   \key ges \major
   \numericTimeSignature
   \time 4/4
@@ -19,7 +19,7 @@ hidePP = \tweak #'stencil ##f \pp
 XpiuP = \markup { \concat { \italic "più" } \dynamic p }
 XpiuPP = \markup{ \concat { \italic "più" } \dynamic pp }
 
-PrelThreeUpperOne = \relative c' {
+upperOne = \relative c' {
   \tupletSpan 4
   \tuplet 6/4 {
     \shapeII #'((s -1 0) (s 0 3)) PhrasingSlur
@@ -265,7 +265,7 @@ PrelThreeUpperOne = \relative c' {
 }
 
 
-PrelThreeLowerOne = \relative c' {
+lowerOne = \relative c' {
   \stemDown
   % 1 & 2
   \repeat unfold 2 {
@@ -432,7 +432,7 @@ PrelThreeLowerOne = \relative c' {
 
 
 %\tweak DynamicText.self-alignment-X #RIGHT
-PrelThreeMidDynamics = {
+midDynamics = {
   \override DynamicTextSpanner.style = #'none
   s8\pp s8*7 s1*5 s8\pp s8*7 s4*3 s16 s16\< s16 s16\!
   s8\pp s8*7 s8-\tweak #'Y-offset #-0.2 \> s8 s8\! s8 s2 s8\pp s8*7 s8 \> s8 s16\! s16 s8 \< s4 s4\! |
@@ -474,7 +474,7 @@ PrelThreeMidDynamics = {
   s1
 }
 
-PrelThreeLowDynamics = {
+lowDynamics = {
   s8\hidePP s8*7 | s1*3 |
   \repeat unfold 4 { s32\< s32*4 s32\! s32 s32\> s32\! s32*3 s8 }
   s1*6 | s4 s4\sfz s4\p s4 | s8\> s8*6 s16 s16\! |

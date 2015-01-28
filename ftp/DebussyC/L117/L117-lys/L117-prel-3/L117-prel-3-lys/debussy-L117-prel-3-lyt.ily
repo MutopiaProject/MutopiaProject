@@ -9,20 +9,20 @@
     } <<
     \new Staff = "upper" {
       \clef treble
-      \PrelThreeGlobal
+      \global
       \override Score.MetronomeMark.padding = #1.5
       \tempo "Animé" 4=126
-      \new Voice="upperOne" { \PrelThreeUpperOne }
+      \new Voice="upperOne" { \upperOne }
     }
     \new Dynamics \with {
       \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.2
-      } { \PrelThreeMidDynamics }
+      } { \midDynamics }
     \new Staff = "lower" {
       \clef treble
-      \PrelThreeGlobal
-      \new Voice="lowerOne" { \PrelThreeLowerOne }
+      \global
+      \new Voice="lowerOne" { \lowerOne }
     }
-    \new Dynamics { \PrelThreeLowDynamics }
+    \new Dynamics { \lowDynamics }
   >>
   \layout{
     \context {

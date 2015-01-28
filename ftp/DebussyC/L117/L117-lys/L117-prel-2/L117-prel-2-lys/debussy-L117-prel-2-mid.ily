@@ -4,9 +4,9 @@
     \removeWithTag #'printed
     \new PianoStaff <<
         \set PianoStaff.midiInstrument = "acoustic grand"
-        \new Staff = "upper" { \clef treble \PrelTwoGlobal \PrelTwoUpperStaff }
-        \new Dynamics = "dyns" { \PrelTwoDynamics }
-        \new Staff = "lower" { \clef bass \PrelTwoGlobal \PrelTwoLowerStaff }
+        \new Staff = "upper" { \clef treble \global \upperStaff }
+        \new Dynamics = "dyns" { \dynamics }
+        \new Staff = "lower" { \clef bass \global \lowerStaff }
     >>
   >>
   \midi { \tempo 8 = 88 }

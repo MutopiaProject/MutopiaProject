@@ -171,7 +171,7 @@ breathFermata = \override BreathingSign.text = \markup {
   }
 }
 
-PrelTwoGlobal = {
+global = {
   \key c \major
   \time 2/4
   \numericTimeSignature

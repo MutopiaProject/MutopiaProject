@@ -4,9 +4,9 @@
   \new PianoStaff \with {
     \override StaffGrouper.staff-staff-spacing = #'( (padding . 5) )
   } <<
-    \new Staff = "upper" { \PrelTwoGlobal \PrelTwoUpperStaff }
-    \new Dynamics = "dyns" { \PrelTwoDynamics }
-    \new Staff = "lower" \with { \accepts "Staff" } { \PrelTwoGlobal \PrelTwoLowerStaff } 
+    \new Staff = "upper" { \global \upperStaff }
+    \new Dynamics = "dyns" { \dynamics }
+    \new Staff = "lower" \with { \accepts "Staff" } { \global \lowerStaff } 
   >>
   \layout {
     \context {

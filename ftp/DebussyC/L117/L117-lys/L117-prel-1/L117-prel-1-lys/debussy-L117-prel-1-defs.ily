@@ -170,7 +170,7 @@ legendTwo = \markup { \center-align \italic \smaller "doux mais en dehors" }
 ignoreClashOnce = \once \override NoteColumn.ignore-collision = ##t
 setRestDirDown = \override Rest #'direction = #down
 
-PrelOneGlobal = {
+global = {
   \key bes \major
   \time 3/4
 }
