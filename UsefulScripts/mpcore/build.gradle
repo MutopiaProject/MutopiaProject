@@ -1,4 +1,9 @@
 // Build file for core mutopia library
+
+task wrapper(type: Wrapper) {
+  gradleVersion = '2.2.1'
+}
+
 allprojects {
   apply plugin: 'java'
   repositories {
