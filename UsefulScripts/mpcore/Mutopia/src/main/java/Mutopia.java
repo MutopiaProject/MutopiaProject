@@ -16,6 +16,7 @@
 
 import java.io.*;
 import java.util.*;
+import mutopia.core.*;
 
 public class Mutopia
 {

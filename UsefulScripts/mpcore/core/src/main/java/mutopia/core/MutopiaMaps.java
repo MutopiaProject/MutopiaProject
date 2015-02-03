@@ -6,6 +6,8 @@
  *   Class to set up licence, composer and style maps.
  */
 
+package mutopia.core;
+
 import java.io.*;
 import java.util.*;
 

@@ -1,0 +1,29 @@
+// Build file for core mutopia library
+allprojects {
+  apply plugin: 'java'
+  repositories {
+    mavenCentral()
+  }
+  dependencies {
+    testCompile "junit:junit:4.+"
+  }
+}  
+
+project (':core') {
+  group = 'mutopia.core'
+  version = '0.1'
+  jar {
+    baseName = 'mutopia-core'
+  }
+}
+
+project (':Mutopia') {
+  apply plugin: 'application'
+  dependencies {
+    compile project(':core')
+  }
+  mainClassName = 'mutopia.core.Mutopia'
+  manifest {
+    attributes 'Main-Class' : 'mutopia.core.Mutopia'
+  }
+}

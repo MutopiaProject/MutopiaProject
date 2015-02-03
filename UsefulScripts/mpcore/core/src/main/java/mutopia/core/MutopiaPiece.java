@@ -6,6 +6,8 @@
  *   Class to store information about a Mutopia piece.
  */
 
+package mutopia.core;
+
 import java.beans.*;
 import java.io.*;
 import java.lang.reflect.*;

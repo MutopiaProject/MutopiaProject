@@ -6,6 +6,8 @@
  *   Class to generate an RDF file from a MutopiaPiece object.
  */
 
+package mutopia.core;
+
 import java.io.*;
 import javax.xml.*;
 import javax.xml.parsers.*;
