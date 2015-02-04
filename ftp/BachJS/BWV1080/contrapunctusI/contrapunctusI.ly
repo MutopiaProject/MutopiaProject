@@ -538,19 +538,44 @@ pianoPart = {
   >>
 }
 
-\score{
+fullTraditionalScore = {
   <<
-  \context StaffGroup <<
-	\new Staff <<\global \clef soprano \soprano>>
-	\new Staff <<\global \clef alto \alto>>
-	\new Staff <<\global \clef tenor \tenor>>
-	\new Staff <<\global \clef bass \bass>>
+    \new StaffGroup
+    <<
+      \new Staff << \global \clef soprano \soprano >>
+      \new Staff <<\global \clef alto \alto>>
+      \new Staff <<\global \clef tenor \tenor>>
+      \new Staff <<\global \clef bass \bass>>
     >>
-  \context PianoStaff <<
-    \context Staff = "upper" {\global \clef treble <<\soprano \\ \alto>> \bar "|."}
-    \context Staff = "lower" {\global \clef bass <<\tenor \\ \bass>>}
+    \pianoPart
+  >>
+}
+midiScore = {
+  <<
+    \new StaffGroup
+    <<
+      \new Staff << \global \clef soprano \soprano >>
+      \new Staff <<\global \clef alto \alto>>
+      \new Staff <<\global \clef tenor \tenor>>
+      \new Staff <<\global \clef bass \bass>>
     >>
-  >>	
+    \pianoPart
+  >>
+}
+alternativeScoreI = {
+  \new Staff << \global \soprano >>
+}
+alternativeScoreII = {
+  \new Staff <<\global \transpose c d \alto>>
+}
+
+scoreContent = {
+  %\fullTraditionalScore
+  %\pianoPart
+  \alternativeScoreI
+  %\alternativeScoreII
+}
+
   \midi {\tempo 4=120}
   \layout{}
 }
