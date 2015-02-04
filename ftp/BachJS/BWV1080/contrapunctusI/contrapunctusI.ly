@@ -535,7 +535,8 @@ pianoPart = {
       \set Staff.soloText = #"tenor"
       \set Staff.soloIIText = #"bass"
       \set Staff.aDueText = #"tenor + bass"
-      \partcombine \tenor \bass >>
+      \partcombine \tenor \bass
+    >>
   >>
 }
 
