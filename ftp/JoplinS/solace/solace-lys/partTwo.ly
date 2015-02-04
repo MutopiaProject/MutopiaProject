@@ -1,4 +1,5 @@
-partTwoGlobal = \notes {
+\version "2.19.15"
+partTwoGlobal =  {
     \repeat volta 2 {
         %% BARS 22 - 38
                                 % ridiculous silent grace notes to prevent extra barline from drawing
@@ -18,10 +19,10 @@ partTwoGlobal = \notes {
     \bar "||"
 }
 
-partTwoRHnotes = \notes \relative f'' {
+partTwoRHnotes =  \relative f'' {
     \repeat volta 2 {
                                 % 22 - 25
-        << { \stemBoth <f a>8 c32( d e f \stemUp g16)( f8) \times 2/3 { f32 g f } } \\
+        << { \stemNeutral <f a>8 c32( d e f \stemUp g16)( f8) \tuplet 3/2 { f32 g f } } \\
                                 % ridiculous silent grace notes to prevent extra barline from drawing
            { \grace { s8.\f } s4 a,8. af16 } >> |
         <af f'>16\> <g e'> <g e'> <fs c' ds>\!~<fs c' ds>8 <f b d> |
@@ -29,7 +30,7 @@ partTwoRHnotes = \notes \relative f'' {
         <e a c e>8 e'16(\< f) <e g>8 <e gs>-^\! |
 
                                 % 26 - 29
-        << { \stemBoth <f a>8 c32( d e f \stemUp g16)( f8) \times 2/3 { f32 g f } } \\
+        << { \stemNeutral <f a>8 c32( d e f \stemUp g16)( f8) \tuplet 3/2 { f32 g f } } \\
            { s4\f a,8. af16 } >> |
         <af f'>16 <g e'> <g e'> <g c e>~<g c e>8 <g bf e> |
         << { e'16( d e b)~b( d a8) } \\
@@ -50,7 +51,7 @@ partTwoRHnotes = \notes \relative f'' {
         <e a, e>8( <d a d,>4) <f, d c f,>8\mp |
         \stemDown
         <f d b f>8 <g d b g>~<g d b g>16 g,( <f b e>8) |
-        \stemBoth
+        \stemNeutral
     }
     \alternative {
         \relative c'' {
@@ -64,23 +65,23 @@ partTwoRHnotes = \notes \relative f'' {
     }
 }
 
-partTwoLHnotes = \notes \relative f, {
+partTwoLHnotes =  \relative f, {
     \repeat volta 2 {
                                 % 22 - 25
         << { f8. a'16 <c f>8 f,, } \\
-           { \appoggiatura { c16[ d e] } f4.\sustainDown f8\sustainUp } >> |
+           { \appoggiatura { c16[ d e] } f4.\sustainOn f8\sustainOff } >> |
         << { c'8. a'16 <c ds>8 af8 } \\
            { \appoggiatura { g,16[ a b] } c4.( af'8) } >> |
         \appoggiatura { e16[ f fs] }
-        \override Slur #'attachment = #'(head . stem)
+%        \override Slur.attachment = #'(head . stem)
         g8. g16( g,8) gs |
-        \revert Slur #'attachment
+%        \revert Slur.attachment
         << { a8. a'16 <c e>8 bf-^ } \\
            { a,4.( c8) } >> |
 
                                 % 26 - 29
         << { f,8. a'16 <c f>8 f,, } \\
-           { \appoggiatura { c16[ d e] } f4.\sustainDown f8\sustainUp } >> |
+           { \appoggiatura { c16[ d e] } f4.\sustainOn f8\sustainOff } >> |
         << { c'8. a'16 <c e>8 cs,8 } \\
            { \appoggiatura { g16[ a b] } c4.( cs8) } >> |
         << { d8. g16 <b d>8 d, } \\
@@ -92,19 +93,19 @@ partTwoLHnotes = \notes \relative f, {
         << { d'8. f16 <a d>8 d, } \\
            { d4. d8} >> |
         << { gs,8. gs'16 <b d f>8 <g g,> } \\
-           { gs,4.\sustainDown g8\sustainUp } >> |
+           { gs,4.\sustainOn g8\sustainOff } >> |
         << { d'8. f16 <a d>8 d, } \\
            { d4. d8} >> |
         << { gs,8. gs'16 <b d f>8 gs, } \\
-           { gs4.\sustainDown gs8\sustainUp } >> |
+           { gs4.\sustainOn gs8\sustainOff } >> |
 
                                 % 34 - 36
         << { a8. a'16 <c e>8 a, } \\
-           { a4.\sustainDown a8\sustainUp } >> |
+           { a4.\sustainOn a8\sustainOff } >> |
         << { f8. a'16 <d f>8 <af af,> } \\
            { f,4.( af8) } >> |
         << { g'8. g16 <b f'>8 <g g,> } \\
-           { <g, g'>4.\sustainDown g8\sustainUp } >> |
+           { <g, g'>4.\sustainOn g8\sustainOff } >> |
     }
     \alternative {
         \relative c {
@@ -118,14 +119,14 @@ partTwoLHnotes = \notes \relative f, {
     }
 }
 
-partTwoRH = \notes {
+partTwoRH =  {
     <<
         \partTwoGlobal
         \partTwoRHnotes
     >>
 }
 
-partTwoLH = \notes {
+partTwoLH =  {
     <<
         \partTwoGlobal
         \partTwoLHnotes

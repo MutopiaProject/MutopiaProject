@@ -1,4 +1,4 @@
-\version "2.16.1"
+\version "2.18.2"
 
 \header {
   title = "Study in A Minor"
@@ -9,13 +9,24 @@
   mutopiacomposer = "AguadoD"
   mutopiainstrument = "Guitar"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  license = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail dot com"
   moreInfo = "This is a very good first position warmup exercise for a beginner. Unlike many exercises it is lyrical and fun to play. The fingerings in the piece are from Aguado."
 
- footer = "Mutopia-2012/12/23-1833"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Copyright © 2012. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } } }
+ footer = "Mutopia-2015/01/25-1833"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
+}
+
+\paper{ 
+  top-margin = 8 \mm
+  line-width = 171 \mm
+  indent = 8 \mm
+  top-markup-spacing.basic-distance = #6 %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #7 %-dist. from header/title to first system
+  system-system-spacing.basic-distance = #18
+  top-system-spacing.basic-distance = #12
 }
 
 global = {
@@ -39,8 +50,8 @@ upperVoice = \relative c' {
   \repeat volta 2 {
     gis'16 b e b e, b' e b e,, b'' e b b-4\3 d e d |
     a-3 c e c e,-2 c' e c e,, c'' e c c-3\3 e-4\2 e-0 e\2 |
-    c-3\3 e-4\2 \override StringNumber #'transparent = ##t e-0 e\2 b-3\3 d e d b-3\3 d e d a c e c |
-    \revert StringNumber #'transparent
+    c-3\3 e-4\2 \override StringNumber.transparent = ##t e-0 e\2 b-3\3 d e d b-3\3 d e d a c e c |
+    \revert StringNumber.transparent
     gis b e b e, b' e b e,,4  s4 |
     gis'16 c e c e, b' e b e,, b'' e b \once\set minimumFret=4 b d e d |
     a-3 c e c e, c' e c a, a' c a c, a' c a |
@@ -78,9 +89,9 @@ lowerVoice = \relative c' {
   <<
     \new Staff = "Guitar" \with {
       midiInstrument = "acoustic guitar (nylon)"
-      \override Fingering #'font-size = #-4
-      \override Fingering #'add-stem-support = ##t
-      \override StringNumber #'add-stem-support = ##t
+      \override Fingering.font-size = #-4
+      \override Fingering.add-stem-support = ##t
+      \override StringNumber.add-stem-support = ##t
     }
     <<
       \numericTimeSignature

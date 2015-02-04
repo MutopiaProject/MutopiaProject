@@ -1,7 +1,8 @@
-partFiveGlobal = \notes {
+\version "2.19.15"
+partFiveGlobal =  {
     \repeat volta 2 {
                                 % 72 - 75
-        \bar "||:"
+        \bar ".|:-||"
         \barRest | \barRest | \barRest | \barRest |
         \myBreak
                                 % 76 - 79
@@ -23,7 +24,7 @@ partFiveGlobal = \notes {
     \bar "|."
 }
 
-partFiveRHnotes = \notes \relative b'' {
+partFiveRHnotes =  \relative b'' {
     \repeat volta 2 {
                                 % 72 - 75
         <bf f>16\f <bf e,> <bf ds,> <bf e,>~ <bf e,> <bf ds,>8 <bf e,>16 |
@@ -42,7 +43,7 @@ partFiveRHnotes = \notes \relative b'' {
         <bf f>16 <bf e,> <bf ds,> <bf e,>~ <bf e,> <bf ds,>8 <bf e,>16 |
         \context Voice = "lower" { <a e>16 <a d,> <a cs,> <a d,>~ <a d,>4~} |
         << \context Voice = "upper" { \stemUp\tieUp\slurUp \ohs a4 ~ a16 a( f ef) } \\
-           \context Voice = "lower" { \stemDown\tieBoth <a d,>4~ \tieDown d,16 c8. } >> |
+           \context Voice = "lower" { \stemDown\tieNeutral <a d,>4~ \tieDown d,16 c8. } >> |
 
                                 % 84 - 86
         << { d16( f d f)~ f f8( d16) }\\
@@ -57,11 +58,11 @@ partFiveRHnotes = \notes \relative b'' {
         { f4. d'16\fermata f | }
 
                                 % 88
-        { f,4 <f a c f>8-^ r^\markup{\bigger\bold\italic FINE}}
+        { f,4 <f a c f>8-^ r^\markup{\bold\italic "Fine"}}
     }
 }
 
-partFiveLHnotes = \notes \relative g, {
+partFiveLHnotes =  \relative g, {
     \repeat volta 2 {
                                 % 72 - 75
         << { g8. g'16 <bf c e>8 c,, } \\
@@ -91,20 +92,20 @@ partFiveLHnotes = \notes \relative g, {
         << { f8. a'16 <c f>8 c,, } \\
            { f4. c8} >> |
         << { f16 gs'( a d)~ d8 f } \\
-           \once\override Slur #'attachment = #'(head . stem)
+%           \once\override Slur.attachment = #'(head . stem)
            { f,,4.( a'8) } >> |
 
                                 % 84 - 86
         <bf f'>8. <b f>16~ <b f> <b f>8. |
         << { s8.
-             \once\override NoteColumn #'force-hshift = #-1.5
+             \once\override NoteColumn.force-hshift = #-1.5
              \ohs\ohh
              \tieDown
              ef16~
-             \once\override NoteColumn #'force-hshift = #-0.6
+             \once\override NoteColumn.force-hshift = #-0.6
              ef f8. } \\
            {<c f>8. \tieUp <ef f>16~
-             \once\override NoteColumn #'force-hshift = #0.6
+             \once\override NoteColumn.force-hshift = #0.6
              f d8( df16) } >> |
         << { s8. \ohs f16~ f c8( bf16) } \\
            { <f' c>8. <f c>16~ c16 c,8. } >> |
@@ -120,14 +121,14 @@ partFiveLHnotes = \notes \relative g, {
     }
 }
 
-partFiveRH = \notes {
+partFiveRH =  {
     <<
         \partFiveGlobal
         \partFiveRHnotes
     >>
 }
 
-partFiveLH = \notes {
+partFiveLH =  {
     <<
         \partFiveGlobal
         \partFiveLHnotes
