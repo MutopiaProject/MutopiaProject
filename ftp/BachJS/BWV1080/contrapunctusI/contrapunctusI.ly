@@ -571,9 +571,9 @@ alternativeScoreII = {
 }
 
 scoreContent = {
-  %\fullTraditionalScore
+  \fullTraditionalScore
   %\pianoPart
-  \alternativeScoreI
+  %\alternativeScoreI
   %\alternativeScoreII
 }
 
