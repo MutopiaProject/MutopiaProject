@@ -164,7 +164,7 @@ breakBeamSep = \markup {
                    \with-color #white
                    \filled-box #'(5.2 . 8.5) #'(0.5 . 1.2) #0
 }
-legendOne = \markup { \center-align \smaller "doux et soutenu" }
+legendOne = \markup \smaller \italic "doux et soutenu"
 legendTwo = \markup { \center-align \italic \smaller "doux mais en dehors" }
 
 ignoreClashOnce = \once \override NoteColumn.ignore-collision = ##t

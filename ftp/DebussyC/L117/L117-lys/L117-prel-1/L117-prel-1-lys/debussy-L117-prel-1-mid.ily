@@ -7,5 +7,5 @@
         \new Dynamics = "dyns" { \dynamics }
         \new Staff = "lower" { \clef bass \global \lowerStaff }
     >>
-    \midi  { \tempo 4 = 40 }
+    \midi  { \tempo 4 = 44 }
 }

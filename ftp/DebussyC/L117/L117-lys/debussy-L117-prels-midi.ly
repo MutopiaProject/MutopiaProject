@@ -1,7 +1,5 @@
 %%--- Generate MIDI files
 
-% --- 
-
 % --- Prelude 1
 \include "./L117-prel-1/L117-prel-1-lys/debussy-L117-prel-1-defs.ily"
 \include "./L117-prel-1/L117-prel-1-lys/debussy-L117-prel-1-mus.ily"
@@ -9,7 +7,6 @@
     \bookOutputName "L117-prel-1"
     \include "./L117-prel-1/L117-prel-1-lys/debussy-L117-prel-1-mid.ily"
 }
-
 
 % --- Prelude 2
 \include "./L117-prel-2/L117-prel-2-lys/debussy-L117-prel-2-defs.ily"

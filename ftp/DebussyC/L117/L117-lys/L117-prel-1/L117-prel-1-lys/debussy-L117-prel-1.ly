@@ -1,6 +1,6 @@
 %%--------------------------------------------------------------------
-% The Mutopia Project
-% LilyPond template for keyboard solo piece
+% Debussy Preludes Book 1 L117
+% Prelude 1: Danseuses de Delphes
 %%--------------------------------------------------------------------
 
 #(set-global-staff-size 18)

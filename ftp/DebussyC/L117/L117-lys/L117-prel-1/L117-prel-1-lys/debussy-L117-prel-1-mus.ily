@@ -1,6 +1,7 @@
 \version "2.18.2"
 
 upperOne =  \relative c' {
+  \tempo "Lent et grave" 4=44
   <d f>4-.(^\legendOne-\hideP
      <ees g>-. <f a>-.)                       | % 1
   <d f>4-.( <ees g>-. <f a>-.)                | % 2
@@ -210,8 +211,8 @@ lowerStaff = \relative c {
      \shapeSlurNov <f f,>8_._\pp_(                   | %26
   <bes!bes,!>2) \moveDynOct \shapeSlurNov \moveDynSixt
   \lengthenHairpin <f f,>4_._(_\ppp_\>               | %27
-  <bes bes,>2)\! <f f,>4_.                   | %28
-  s2. s2.                                    | %29-30
+  <bes bes,>2)\! <f f,>4_.                           | %28
+  s2. s2.                                            | %29-30
   bes,,4_\ten_.-\hidePP g4\rest g4\rest              | %31
 }
 
