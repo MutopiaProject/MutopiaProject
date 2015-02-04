@@ -1,14 +1,8 @@
 \version "2.18"
 
-% A4 version %%%%%%%%%%%%%%%%%%%%%%%
-
-#(set-default-paper-size "a4")
-#(set-global-staff-size 16)
-
-% Letter version %%%%%%%%%%%%%%%%%%
-
-%#(set-default-paper-size "letter")
-%#(set-global-staff-size 15)
+\paper {
+  #(set-paper-size "letter")
+}
 
 \header{
 title="Die Kunst der Fuge"
