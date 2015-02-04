@@ -517,6 +517,26 @@ global = {
   s1*78
   \bar "|."
 }
+pianoPart = {
+  \new PianoStaff <<
+
+    \new Staff  = "upper" <<
+      \global
+      \clef treble
+      \set Staff.soloText = #"soprano"
+      \set Staff.soloIIText = #"alto"
+      \set Staff.aDueText = #"sopranoalto"
+      \partcombine \soprano \alto
+    >>
+    \new Staff = "lower" <<
+      \global
+      \clef bass
+      \set Staff.soloText = #"tenor"
+      \set Staff.soloIIText = #"bass"
+      \set Staff.aDueText = #"tenor + bass"
+      \partcombine \tenor \bass >>
+  >>
+}
 
 \score{
   <<
