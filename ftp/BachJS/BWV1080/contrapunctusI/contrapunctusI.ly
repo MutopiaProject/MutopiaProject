@@ -41,9 +41,9 @@ soprano = \relative c''{
 
   c a |
   gis a4 b |
-  c2~ c8 d c bes! |
+  c2~ c8 d c bes |
   a d, d'2 cis4 |
-  d8 a c!4~ c8 a bes4~ |
+  d8 a c4~ c8 a bes4~ |
 
   %11-15
 
@@ -55,7 +55,7 @@ soprano = \relative c''{
 
   %16-20
 
-  g,8 bes! a4~ a8 bes a g~ |
+  g,8 bes a4~ a8 bes a g~ |
   g e f d bes'2~ |
   bes8 g a4 d2~ |
   d8 b c4 f2~ |
@@ -63,7 +63,7 @@ soprano = \relative c''{
 
   %21-25
 
-  d8 b c4 f, bes! |
+  d8 b c4 f, bes |
   a2 d,4 g~ |
   g8 e f d' e,2~ |
   e8 d a'2 g4 |
@@ -78,7 +78,7 @@ soprano = \relative c''{
   %31-35
 
   gis a4 b |
-  c2~ c8 d c bes! |
+  c2~ c8 d c bes |
   a4 r r a~ |
   a8 c bes a bes a g fis |
   g4. bes8 e,4. fis8 |
@@ -96,7 +96,7 @@ soprano = \relative c''{
   e8 cis d4~ d4. e8 |
   f e g4~ g8 f e d |
   cis a d4~ d8 b c4~ |
-  c bes! a r |
+  c bes a r |
 
 
   %45-50
@@ -117,7 +117,7 @@ soprano = \relative c''{
   a2. e'4~ |
   e8 cis d e f d g4~ |
   g8 e a g f e d cis |
-  d c! bes a g2~ |
+  d c bes a g2~ |
   g8 e f d a'2~ |
 
   %61-65
@@ -130,7 +130,7 @@ soprano = \relative c''{
 
   %66-70
 
-  c bes! a4. a8 |
+  c bes a4. a8 |
   d f e g f e d4~ |
   d8 f4 e8 f d e4~ |
   e8 d c b c4. a'8 |
@@ -141,7 +141,7 @@ soprano = \relative c''{
   r2 d4 r |
   r2 d2~ |
   d2~ d8 b cis4 |
-  d4. c!8 bes!4. a8 |
+  d4. c8 bes4. a8 |
   d,2 r8 g a c~ |
 
   %76-80
@@ -175,7 +175,7 @@ alto = \relative c'{
   %11-15
 
   g4. g8 f e d cis |
-  d4 g2 c,!4 |
+  d4 g2 c,4 |
   f4. e8 f4. gis,8 |
   e'2. d8 c |
   d f e d c4 r |
@@ -246,7 +246,7 @@ alto = \relative c'{
 
   %61-65
 
-  d2 r4 fis! |
+  d2 r4 fis |
   g8 fis g4 r bes~ |
   bes8 a f' d b4 e8 cis |
   a4 d8 a bes4. g8 |
@@ -257,7 +257,7 @@ alto = \relative c'{
   fis d g4~ g8 e f4~
   f8 d' c4~ c4. c8
   bes a gis4 a4. e8
-  a4 g!~ g4. c8
+  a4 g~ g4. c8
   a4 g~ g r
 
   %71-75
@@ -292,7 +292,7 @@ tenor = \relative c'{
 
   %16-20
 
-  c2~ c8 d c bes! |
+  c2~ c8 d c bes |
   a2~ a8 f g4 |
   c2~ c8 a b4 |
   e2~ e8 cis d4 |
@@ -303,13 +303,13 @@ tenor = \relative c'{
   e4. a8 d,4. e8 |
   cis4 d8 a b4. cis8 |
   d4 a2.~ |
-  a2 bes! |
+  a2 bes |
   r8 e, a4~ a8 bes a g |
 
   %26-30
 
   a4 b c2~ |
-  c8 a bes!4 a d~ |
+  c8 a bes4 a d~ |
   d8 b c4 b e4~ |
   e8 a, d4~ d8 d c b |
   c d e4~ e8 e d c |
@@ -317,8 +317,8 @@ tenor = \relative c'{
   %31-34
 
   b2 c4 gis |
-  a8 g! fis e fis4 g~ |
-  g8 g f! e f e d cis |
+  a8 g fis e fis4 g~ |
+  g8 g f e f e d cis |
   d4 r r2 |
 
   %35-40
@@ -339,16 +339,16 @@ tenor = \relative c'{
   d4 g, c f, |
   bes e, a2 |
   e4 a4~ a8 gis fis gis |
-  a4. g!8 f! e d cis |
+  a4. g8 f e d cis |
   d4 f8 d bes'4 g8 e |
 
   %51-55
 
   a4. f'8 b,4 cis |
-  d b8 g c!4 a8 f |
+  d b8 g c4 a8 f |
   bes d g4~ g8 e f4~ |
   f8 f e d cis2 |
-  d8 c! bes! a g a bes c |
+  d8 c bes a g a bes c |
 
   %56-60
 
@@ -371,7 +371,7 @@ tenor = \relative c'{
   bes2~ bes8 gis a4 |
   d2~ d8 b c4 |
   f2~ f8 d ees4 |
-  d2 e!4 r |
+  d2 e4 r |
 
   %71-75
 
@@ -423,7 +423,7 @@ bass = \relative c{
   a2~ a8 f g4~ |
   g8 e f4~ f8 d e4 |
   d2~ d8 b cis4 |
-  d4. c8 bes!2 |
+  d4. c8 bes2 |
   a4. g8 f g f e |
 
   %26-30
@@ -462,7 +462,7 @@ bass = \relative c{
 
   f4. d8 e4. cis8 |
   d4. b8 cis a d4~ |
-  d8 c! b a b2 |
+  d8 c b a b2 |
   a4 r r2 |
 
 
