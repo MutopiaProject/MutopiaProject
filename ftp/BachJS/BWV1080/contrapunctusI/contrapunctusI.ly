@@ -576,7 +576,15 @@ scoreContent = {
   %\alternativeScoreII
 }
 
+\score{
+  \scoreContent
+  \layout {
+    \accidentalStyle Score.modern-cautionary
+    \set Score.skipBars = ##t
+  }
+}
+\score {
+  \midiScore
   \midi {\tempo 4=120}
-  \layout{}
 }
 
