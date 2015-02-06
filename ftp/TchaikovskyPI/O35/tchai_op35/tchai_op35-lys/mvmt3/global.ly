@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-spacing = \notes {
+spacing =  {
 	s2*6	\break		% STARTS AT 1
 	s2*7	\break		% 7
 	s2*9	\break		% 14
@@ -102,14 +102,14 @@ spacing = \notes {
 	s2*6	\break		% 634; end @ 639
 }
 
-barlines = \notes {
-	\override Score.MetronomeMark   #'transparent = ##t
+barlines =  {
+	\set Score.tempoHideNote = ##t
 	\set Score.skipBars = ##t
-	\override Score.TupletBracket   #'bracket-visibility = ##f
-	\override Score.TextScript   #'font-magnification = #1.25
+	\override Score.TupletBracket.bracket-visibility = ##f
 	
 	\time 2/4
-	
+	\tempo "Allegro vivacissimo."
+
 	s2*15
 	\tempo 4 = 150
 	s2*34
@@ -117,43 +117,43 @@ barlines = \notes {
 	s2*2
 	\tempo 4 = 155
 	s2*93
-	\tempo 4 = 95
 	\bar "||"
 	\key a \major
+	\tempo "Poco meno mosso." 4 = 95
 	s2*19
-	\tempo 4 = 155
+	\tempo "Tempo I." 4 = 155
 	s2*32
-	\tempo 4 = 95
 	\bar "||"
+	\tempo "Molto meno mosso." 4 = 95
 	s2*21
-	\tempo 4 = 75
+	\tempo "Poco a poco rallentando" 4 = 75
 	s2*14
-	\tempo 4 = 100
+	\tempo "Quasi andante." 4 = 100
 	s2*4
-	\tempo 4 = 120
+	\tempo "Poco a poco string." 4 = 120
 	s2*4
 	\tempo 4 = 140
 	s2*4
-	\tempo 4 = 155
+	\tempo "Tempo I." 4 = 155
 	\bar "||"
 	\key d \major
 	s2*106
-	\tempo 4 = 95
+	\tempo "Poco meno mosso." 4 = 95
 	\bar "||"
 	\key g \major
 	s2*19
-	\tempo 4 = 155
+	\tempo "Tempo I." 4 = 155
 	s2*32
-	\tempo 4 = 95
+	\tempo "Molto meno mosso." 4 = 95
 	\bar "||"
 	s2*17
-	\tempo 4 = 75
+	\tempo "Poco a poco rallentando" 4 = 75
 	s2*19
-	\tempo 4 = 100
+	\tempo "Quasi andante." 4 = 100
 	s2*14
-	\tempo 4 = 120
+	\tempo "Poco a poco stringendo." 4 = 120
 	s2*10
-	\tempo 4 = 155
+	\tempo "Tempo I." 4 = 155
 	\bar "||"
 	\key d \major
 	s2*80

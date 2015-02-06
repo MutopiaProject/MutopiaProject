@@ -1,5 +1,5 @@
-\version "2.2.2"
-theOboes = \notes \relative d'' {
+\version "2.18.0"
+theOboes =  \relative d'' {
 	
 	\clef "treble"
 	\key g \minor
@@ -29,7 +29,7 @@ theOboes = \notes \relative d'' {
 	<< { a2.^\p^\< } \\ { R1*3/4 } >>
 	<< { c2 d4\! } \\ { r4 r f,\p } >>
 	<< { bflat8 r r4 r } \\ { g2(_\< gflat4)\! } >>
-	<< { bflat2. } \\ { f2. } \\ { s4\> s4 s4\! } >>
+	<< { bflat2. } \\ { f2. } { s4\> s4 s4\! } >>
 	
 	R1*3/4*2
 	

@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theHornssecond = \notes \relative c' {
+theHornssecond =  \relative c' {
 	\transposition f
 	\clef "treble"
 	\key c \major
@@ -104,7 +104,7 @@ theHornssecond = \notes \relative c' {
 	<< e2~^\cr \\ csharp2~ >>
 	<< { e4 fsharp8[ e] } \\ { csharp4 bsharp8[ csharp] } >>
 	<< { fsharp2~ } \\ { c!2~ } >>
-	<< { fsharp4 csharp8[ fsharp] } \\ { csharp4 a8[ csharp] } >>
+	<< { fsharp4 csharp8[ fsharp] } \\ { c4 a8[ c] } >>
 	<< { d2~ } \\ { e,2~ } >>
 	<< { d'4 d8[ d] } \\ { e,2~ } >>
 	<< { c'!2~ } \\ { e,2~ } >>

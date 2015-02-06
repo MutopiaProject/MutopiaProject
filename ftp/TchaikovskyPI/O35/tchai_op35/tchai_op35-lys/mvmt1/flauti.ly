@@ -1,12 +1,10 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theFlutes = \notes \relative d''' {
+theFlutes =  \relative d''' {
 	\clef "treble"
 	\key d \major
 	
-	r1^\markup { \huge {Allegro moderato.} }
-	
-	R1*5
+	R1*6
 	
 	r2 r4 d\p
 	csharp b a2
@@ -34,14 +32,14 @@ theFlutes = \notes \relative d''' {
 	
 	R1*24
 	
-	r4 \times 2/3 { r16^\markup {I.} g,\f[( bflat } \times 2/3 { csharp e g] } bflat8) r r4
+	r4 \tuplet 3/2 { r16^\markup {I.} g,\f[( bflat } \tuplet 3/2 { csharp e g] } bflat8) r r4
 	R1
-	r4 \times 2/3 { r16 g,[( bflat } \times 2/3 { csharp e g] } bflat8) r r4
+	r4 \tuplet 3/2 { r16 g,[( bflat } \tuplet 3/2 { csharp e g] } bflat8) r r4
 	
 	R1*5
 	
-	r2 r4 \times 2/3 { csharp,8\f[ d e] }
-	r2 r4 \times 2/3 { csharp8[ dsharp e] }
+	r2 r4 \tuplet 3/2 { csharp,8\f[ d e] }
+	r2 r4 \tuplet 3/2 { csharp8[ dsharp e] }
 	r8 e r4 r8 e r4
 	r8 e r4 r8 e r4
 	f4\fp( e) e16[( dsharp csharpsharp e] dsharp4)
@@ -54,7 +52,7 @@ theFlutes = \notes \relative d''' {
 	a16\mf[ r b r a r b] r c8\f r r4
 	c16\mf[ r d r c r d] r eflat8->\f r r4
 	eflat16\mf[ r f r eflat r f] r fsharp8\f r r4
-	gsharp8\f^\markup { \huge {Piu mosso.} } r r4 r2
+	gsharp8\f r r4 r2
 	a8 r r4 r2
 	b,8 r r4 r2
 	bsharp8 r r4 r2
@@ -62,7 +60,7 @@ theFlutes = \notes \relative d''' {
 	R1*3
 	
 	bsharp8\f[\< bsharp bsharp bsharp] bsharp[ bsharp bsharp bsharp]\!
-	csharp8\ff^\markup { \huge {Moderato assai.} } r8 csharp2 b16[( a csharp e])
+	csharp8\ff r8 csharp2 b16[( a csharp e])
 	b4.( csharp8) b4 csharp
 	d8 r d2 csharp16[( b d fsharp])
 	csharp4.( d8) csharp4 csharp
@@ -140,17 +138,17 @@ theFlutes = \notes \relative d''' {
 	
 	R1*17
 	
-	r4 \times 2/3 { r16 c,\f[( eflat] } \times 2/3 { fsharp![ a c]) } eflat4~ eflat8 r
+	r4 \tuplet 3/2 { r16 c,\f[( eflat] } \tuplet 3/2 { fsharp![ a c]) } eflat4~ eflat8 r
 	R1
-	r4 \times 2/3 { r16^\markup {I.} c,\f[( eflat] } \times 2/3 { fsharp![ a c]) } eflat4~ eflat8 r
+	r4 \tuplet 3/2 { r16^\markup {I.} c,\f[( eflat] } \tuplet 3/2 { fsharp![ a c]) } eflat4~ eflat8 r
 	R1
-	r4 \times 2/3 { r16 d,,^\f[( f } \times 2/3 { aflat d f] } bflat8) r r4
-	r4 \times 2/3 { r16 csharp,,![( e } \times 2/3 { g csharp! e] } a8) r r4
+	r4 \tuplet 3/2 { r16 d,,^\f[( f } \tuplet 3/2 { aflat d f] } bflat8) r r4
+	r4 \tuplet 3/2 { r16 csharp,,![( e } \tuplet 3/2 { g csharp! e] } a8) r r4
 	
 	R1*2
 	
-	r2 r4 \times 2/3 { fsharp8\f[ g a] }
-	r2 r4 \times 2/3 { fsharp8[ gsharp a] }
+	r2 r4 \tuplet 3/2 { fsharp8\f[ g a] }
+	r2 r4 \tuplet 3/2 { fsharp8[ gsharp a] }
 	r8 a r4 r8 a r4
 	r8 a r4 r8 a r4
 	
@@ -164,7 +162,7 @@ theFlutes = \notes \relative d''' {
 	
 	R1*4
 	
-	fsharp,8\f^\markup { \huge {Allegro gusto.} } r r4 r2
+	fsharp,8\f r r4 r2
 	
 	R1*2
 	
@@ -176,7 +174,7 @@ theFlutes = \notes \relative d''' {
 	
 	eflat'1\f
 	f
-	fsharp!8\ff^\markup { \huge Stringendo. } r r4 r2
+	fsharp!8\ff r r4 r2
 	
 	R1*3
 	
@@ -184,7 +182,7 @@ theFlutes = \notes \relative d''' {
 	d r r4 r8 csharp[ a csharp]
 	d r r csharp d r r csharp
 	d r r e esharp r r esharp
-	fsharp\ff d,4^\markup { \huge {Piu mosso.}} d8~ d[ e fsharp g]
+	fsharp\ff d,4 d8~ d[ e fsharp g]
 	a d,4 d8~ d[ e fsharp g]
 	a d4 e8 d csharp4 d8
 	csharp b4 g8 bflat-> r r a

@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-spacing = \notes {
+spacing =  {
 	s2.*7	\break		% START @ 1
 	s2.*6	\break		% 8
 	s2.*6	\break		% 14
@@ -24,18 +24,25 @@ spacing = \notes {
 	s2.*6	\break		% 114
 }
 
-barlines = \notes {
-	\override Score.MetronomeMark   #'transparent = ##t
-	\override Score.TupletBracket   #'bracket-visibility = ##f
-	\override Score.TextScript   #'font-magnification = #1.25
+barlines =  {
+	\set Score.tempoHideNote = ##t
+	\override Score.TupletBracket.bracket-visibility = ##f
 	\set Score.skipBars = ##t
 	
 	\time 3/4
 	s2.*37
 	\bar "|"
-	s2.*75
+	s2.
+	s4.
+	\tempo "rit."
+	s4.
+	s2.*72
+	\tempo "rallent."
+	s2.
 	\tempo 4 = 55
-	s2.*5
+	s2.*4
+	\tempo "riten. molto"
+	s2.
 	\tempo 4 = 50
 	s2.*2
 	\tempo 4 = 40

@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theBassoons = \notes \relative d' {
+theBassoons =  \relative d' {
 	\set Score.skipBars = ##t
 	
 	\clef "bass"
@@ -54,8 +54,8 @@ theBassoons = \notes \relative d' {
 	
 	R1*2
 	
-	r2 r4 \times 2/3 { < e e' >8\f[ < e e' > < e e' >] }
-	r2 r4 \times 2/3 { < fsharp fsharp' >8\f[ < fsharp fsharp' > < fsharp fsharp' >] }
+	r2 r4 \tuplet 3/2 { < e e' >8\f[ < e e' > < e e' >] }
+	r2 r4 \tuplet 3/2 { < fsharp fsharp' >8\f[ < fsharp fsharp' > < fsharp fsharp' >] }
 	r8 < fsharpsharp fsharpsharp' > r4 r8 < gsharp gsharp' > r4
 	r8 < a a' > r4 r8 < bflat bflat' > r4
 	
@@ -85,31 +85,31 @@ theBassoons = \notes \relative d' {
 	r8 < d d' >8~ < d d' >4 r8 < d d' >8~ < d d' >4
 	r8 < d d' > r8 < d d' > r8 < d d' > r8 < d d' >
 	<< { d8[\< d d d] d[ d d d]\! } \\ { d8[ d d d] d[ d d d] } >>
-	< a a' >8\ff[ \times 2/3 { < a' csharp >16 < a csharp > < a csharp >] } < a csharp >8[ < a csharp >]
+	< a a' >8\ff[ \tuplet 3/2 { < a' csharp >16 < a csharp > < a csharp >] } < a csharp >8[ < a csharp >]
 		< a csharp >[ < a csharp > < a csharp > < a csharp >]
-	< e, e' > \times 2/3 { < gsharp' b >16[ < gsharp b > < gsharp b >] } < gsharp b >8 r
+	< e, e' > \tuplet 3/2 { < gsharp' b >16[ < gsharp b > < gsharp b >] } < gsharp b >8 r
 		< d, d' > r < csharp csharp' > r
-	< b b' >8 \times 2/3 { < b'' d >16[ < b d > < b d >] } < b d >8[ < b d >]
+	< b b' >8 \tuplet 3/2 { < b'' d >16[ < b d > < b d >] } < b d >8[ < b d >]
 		< b d >[ < b d >] < b d >[ < b d >]
-	< fsharp, fsharp' >8[ \times 2/3 { < asharp' csharp >16 < asharp csharp > < asharp csharp >] }
+	< fsharp, fsharp' >8[ \tuplet 3/2 { < asharp' csharp >16 < asharp csharp > < asharp csharp >] }
 		< asharp csharp >8[ < a bsharp >] < asharp csharp >[ < asharp csharp >] < e, e' >[ < a' csharp >]
 	< d,, d' >8 r r4 < csharp csharp' >8 r r4
 	< b b' >8 r r4 << { a'8 } \\ { a8 } >> r8 r4
 	<< { gsharp8 } \\ { gsharp8 } >> r8 r4 < d d' >8 r < csharp csharp' >8 r
 	<< { gsharp'8 } \\ { gsharp8 } >> r8 r4 < d d' >8 r < e e' > r
-	< a a' >8\ff[ \times 2/3 { < a' csharp >16 < a csharp > < a csharp >] } < a csharp >8[ < a csharp >]
+	< a a' >8\ff[ \tuplet 3/2 { < a' csharp >16 < a csharp > < a csharp >] } < a csharp >8[ < a csharp >]
 		< a csharp >[ < a csharp > < a csharp > < a csharp >]
-	< e, e' > \times 2/3 { < gsharp' b >16[ < gsharp b > < gsharp b >] } < gsharp b >8 r
+	< e, e' > \tuplet 3/2 { < gsharp' b >16[ < gsharp b > < gsharp b >] } < gsharp b >8 r
 		< d, d' > r < csharp csharp' > r
-	< b b' >8 \times 2/3 { < b'' d >16[ < b d > < b d >] } < b d >8[ < b d >]
+	< b b' >8 \tuplet 3/2 { < b'' d >16[ < b d > < b d >] } < b d >8[ < b d >]
 		< b d >[ < b d >] < b d >[ < b d >]
-	< fsharp, fsharp' >8[ \times 2/3 { < asharp' csharp >16 < asharp csharp > < asharp csharp >] }
+	< fsharp, fsharp' >8[ \tuplet 3/2 { < asharp' csharp >16 < asharp csharp > < asharp csharp >] }
 		< asharp csharp >8[ < a bsharp >] < asharp csharp >[ < asharp csharp >] < e, e' >[ < a' csharp >]
 	< d,, d' >8 r r4 < csharp csharp' >8 r r4
 	< b b' >8 r r4 << { a'8 } \\ { a8 } >> r8 r4
 	<< { gsharp8 } \\ { gsharp8 } >> r8 r4 r2
 	r2 r4 << { csharp'4 } \\ { csharp4\p\< } >>
-	<< { \stemDown < bsharp dsharp >8 \stemBoth } \\ { s8\mf\! } >> r8 r4 r2
+	<< { \stemDown < bsharp dsharp >8 \stemNeutral } \\ { s8\mf\! } >> r8 r4 r2
 	r2 r4 << { < e, csharp' >4 } \\ { s4\p\< } >>
 	<< { csharp'8 r r dsharp->( e) r r4 } \\ { asharp,8\f\! r r4 r2 } >>
 	<< { r4 r8 dsharp->( e) r r4 } \\ { R1 } >>
@@ -222,8 +222,8 @@ theBassoons = \notes \relative d' {
 	
 	R1*2
 	
-	r2 r4 \times 2/3 { < a a' >8\f[ < a a' > < a a' >] }
-	r2 r4 \times 2/3 { < b b' >8[ < b b' > < b b' >] }
+	r2 r4 \tuplet 3/2 { < a a' >8\f[ < a a' > < a a' >] }
+	r2 r4 \tuplet 3/2 { < b b' >8[ < b b' > < b b' >] }
 	r8 < bsharp bsharp' > r4 r8 < csharp csharp' > r4
 	r8 < d d' > r4 r8 < eflat c' > r4
 	

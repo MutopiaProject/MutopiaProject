@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theFirstViolins = \notes \relative d' {
+theFirstViolins =  \relative d' {
 	\clef "treble"
 	\key d \major
 	
@@ -41,7 +41,7 @@ theFirstViolins = \notes \relative d' {
 	d2~ d8 r a4~
 	a8[ b( csharp e]) esharp[( fsharp] a,4)~
 	a8[ b( csharp e!]) esharp[( fsharp] e4)
-	d4~ \times 2/3 { d8[( e fsharp]) } b,2
+	d4~ \tuplet 3/2 { d8[( e fsharp]) } b,2
 	gsharp16[(\< a b csharp]) d4( csharp8)\! r r g'!\p
 	b r r e, g r r4
 	
@@ -99,9 +99,9 @@ theFirstViolins = \notes \relative d' {
 	e2\p d~
 	d_\markup { \italic {poco a poco cresc.} } d
 	csharp csharp
-	\times 2/3 { r8 gsharp'[( d] } \times 2/3 { gsharp[ d gsharp]) } \times 2/3 { r a[( fsharp] } \times 2/3 { a[ fsharp a]) }
-	\times 2/3 { r bflat[( g]) } \times 2/3 { r b[( gsharp]) } \times 2/3 { r csharp![( g]) } \times 2/3 { r d'[( b]) }
-	\times 2/3 { r e\mf[( csharp] } \times 2/3 { e[ csharp e]) } \times 2/3 { r e[( csharp] } \times 2/3 { e[ csharp e]) }
+	\tuplet 3/2 { r8 gsharp'[( d] } \tuplet 3/2 { gsharp[ d gsharp]) } \tuplet 3/2 { r a[( fsharp] } \tuplet 3/2 { a[ fsharp a]) }
+	\tuplet 3/2 { r bflat[( g]) } \tuplet 3/2 { r b[( gsharp]) } \tuplet 3/2 { r csharp![( g]) } \tuplet 3/2 { r d'[( b]) }
+	\tuplet 3/2 { r e\mf[( csharp] } \tuplet 3/2 { e[ csharp e]) } \tuplet 3/2 { r e[( csharp] } \tuplet 3/2 { e[ csharp e]) }
 	f4\mf e4~ e8[ g-.]( f-.[ f-.])
 	eflat-.[( eflat-.]) d-.[( d-.]) c-.[( c-.]) bflat-.[( bflat-.])
 	f'4 e!4~ e8[ g-.]( f-.[ f-.])
@@ -110,8 +110,8 @@ theFirstViolins = \notes \relative d' {
 	a,4 gsharp~ gsharp8[ a( csharp! e])
 	r8 fsharp,!8 a'4 a8 r r4
 	R1
-	r2 r4 \times 2/3 { csharp,8\f[ d e] }
-	r2 r4 \times 2/3 { csharp8[ dsharp e] }
+	r2 r4 \tuplet 3/2 { csharp,8\f[ d e] }
+	r2 r4 \tuplet 3/2 { csharp8[ dsharp e] }
 	r8 < asharp, e' > r4 r8 < b e > r4
 	r8 < a e' > r4 r8 < c e > r4
 	f4\fp( e) e16[( dsharp csharpsharp e] dsharp4)
@@ -255,7 +255,7 @@ theFirstViolins = \notes \relative d' {
 	d4. d8~ d r\pp a'4~_\markup { \italic dolce }
 	a8[ b( csharp e]) esharp[( fsharp] a,4)~
 	a8[ b(_\markup { \italic {poco cresc.} } csharp e!]) esharp[( fsharp] e4)
-	d4~( \times 2/3 { d8[ e fsharp]) } b,2\<
+	d4~( \tuplet 3/2 { d8[ e fsharp]) } b,2\<
 	gsharp16[( a b csharp]) d4(\! csharp8) r r g'!8\p
 	b r r e, g r r4
 	
@@ -320,8 +320,8 @@ theFirstViolins = \notes \relative d' {
 	d,4 csharp!~ csharp8[ d fsharp! a]
 	r4 < d, d' >\f < d d' >8 r r4
 	R1
-	r2 r4 \times 2/3 { fsharp'8\f[ g a] }
-	r2 r4 \times 2/3 { fsharp8[ gsharp a] }
+	r2 r4 \tuplet 3/2 { fsharp'8\f[ g a] }
+	r2 r4 \tuplet 3/2 { fsharp8[ gsharp a] }
 	r8 < a, a' >8 r4 r8 < a a' > r4
 	r8 < a a' > r4 r8 < a a' > r4
 	bflat'4\pp( a) a16[( gsharp fsharpsharp a]) gsharp4

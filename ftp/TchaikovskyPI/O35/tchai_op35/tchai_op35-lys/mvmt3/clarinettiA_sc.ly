@@ -1,6 +1,8 @@
+\version "2.18.0"
 \include "english.ly"
-\include "defs.ly"
+\include "../defs.ly"
 \include "global.ly"
+\include "header.ly"
 
 \include "clarinettiA.ly"
 	
@@ -10,7 +12,6 @@
       	\theClarinets >>
 	
 	\header {
-		\include "header.ly"
 		instrument = "Clarinetti (A)"
 	}
 

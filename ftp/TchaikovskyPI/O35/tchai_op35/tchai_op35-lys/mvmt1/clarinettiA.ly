@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theClarinets = \notes \relative a' {
+theClarinets =  \relative a' {
 	\transposition a'
 	
 	\clef "treble"
@@ -45,8 +45,8 @@ theClarinets = \notes \relative a' {
 		
 	R1*16
 		
-	<< { r2 \times 2/3 { r8 g^\mf^>[~ g]~( } \times 2/3 { g8[ \times 2/3 { g16 e c } \times 2/3 { g e c] } } } \\ { R1 } >>
-	<< { g8) r r4 \times 2/3 { r8 a''^>[~ a]~ } \times 2/3 { a8[ \times 2/3 { a16( f d } \times 2/3 { a f d] } } } \\ { R1 } >>
+	<< { r2 \tuplet 3/2 { r8 g^\mf^>[~ g]~( } \tuplet 3/2 { g8[ \tuplet 3/2 { g16 e c } \tuplet 3/2 { g e c] } } } \\ { R1 } >>
+	<< { g8) r r4 \tuplet 3/2 { r8 a''^>[~ a]~ } \tuplet 3/2 { a8[ \tuplet 3/2 { a16( f d } \tuplet 3/2 { a f d] } } } \\ { R1 } >>
 	<< { a8) } \\ { s8 } >> r8 r4 r2
 	
 	R1*2
@@ -54,14 +54,14 @@ theClarinets = \notes \relative a' {
 	< d f >2_\markup { \dynamic pp \italic {poco cresc.} } < eflat a >
 	<< { g4 f g aflat } \\ { dflat, d e! f } >>
 	<< { dflat'2~ dflat8 } \\ { g,2\mf~ g8 } >> r8 r4
-	\times 2/3 { r16^\markup {I. Solo.} f\f[( aflat } \times 2/3 { dflat f aflat] } dflat8) r8 r2
+	\tuplet 3/2 { r16^\markup {I. Solo.} f\f[( aflat } \tuplet 3/2 { dflat f aflat] } dflat8) r8 r2
 	R1
-	\times 2/3 { r16 f,,[( aflat } \times 2/3 { dflat f aflat] } dflat8) r8 r2
+	\tuplet 3/2 { r16 f,,[( aflat } \tuplet 3/2 { dflat f aflat] } dflat8) r8 r2
 	
 	R1*5
 	
-	r2 r4 \times 2/3 { < e, c' >8\f[ < e c' > < e c' >] }
-	r2 r4 \times 2/3 { < e c' >8[ < e c' > < e c' >] }
+	r2 r4 \tuplet 3/2 { < e, c' >8\f[ < e c' > < e c' >] }
+	r2 r4 \tuplet 3/2 { < e c' >8[ < e c' > < e c' >] }
 	r8 < e csharp' > r4 r8 < d d' > r4
 	r8 < eflat c'! > r4 r8 < eflat bflat' > r4
 	<< { aflat2^\fp a } \\ { R1 } >>
@@ -91,19 +91,19 @@ theClarinets = \notes \relative a' {
 	r8 < a c >8~ < a c >4 r8 < a c >8~ < a c >4
 	r8 < a c > r < a c > r < a c > r < a c >
 	< c' dsharp >8\f[\< < c dsharp > < c dsharp > < c dsharp >] < c dsharp >[ < c dsharp > < c dsharp > < c dsharp >]\!
-	< c e >8\ff[ \times 2/3 { < c e >16 < c e > < c e >] } < c e >8[ < c e >] < c e >[ < c e > < c e > < c e >]
-	< b d >8[ \times 2/3 { < b d >16 < b d > < b d >] } < b d >8[ < asharp csharp >] < b d >[ < b d >] r < csharp! e >
-	< d f >8[ \times 2/3 { < d f >16 < d f > < d f >] } < d f >8[ < d f >] < d f >[ < d f > < d f > < d f >]
-	< csharp e >[ \times 2/3 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < bsharp dsharp >]
+	< c e >8\ff[ \tuplet 3/2 { < c e >16 < c e > < c e >] } < c e >8[ < c e >] < c e >[ < c e > < c e > < c e >]
+	< b d >8[ \tuplet 3/2 { < b d >16 < b d > < b d >] } < b d >8[ < asharp csharp >] < b d >[ < b d >] r < csharp! e >
+	< d f >8[ \tuplet 3/2 { < d f >16 < d f > < d f >] } < d f >8[ < d f >] < d f >[ < d f > < d f > < d f >]
+	< csharp e >[ \tuplet 3/2 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < bsharp dsharp >]
 		< csharp e >[ < csharp e >] r < csharp e >
 	< c! f > r r4 < c g' >8 r r4
 	< f, a >8 r r4 < e a >8 r r4
 	< f a >8 r r4 < d a' >8 r < gsharp b > r
 	< f a > r r4 < d a' >8 r < g b > r
-	< c e >8\ff[ \times 2/3 { < c e >16 < c e > < c e >] } < c e >8[ < c e >] < c e >[ < c e > < c e > < c e >]
-	< b d >8[ \times 2/3 { < b d >16 < b d > < b d >] } < b d >8[ < asharp csharp >] < b d >[ < b d >] r < csharp! e >
-	< d f >8[ \times 2/3 { < d f >16 < d f > < d f >] } < d f >8[ < d f >] < d f >[ < d f > < d f > < d f >]
-	< csharp e >[ \times 2/3 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < bsharp dsharp >]
+	< c e >8\ff[ \tuplet 3/2 { < c e >16 < c e > < c e >] } < c e >8[ < c e >] < c e >[ < c e > < c e > < c e >]
+	< b d >8[ \tuplet 3/2 { < b d >16 < b d > < b d >] } < b d >8[ < asharp csharp >] < b d >[ < b d >] r < csharp! e >
+	< d f >8[ \tuplet 3/2 { < d f >16 < d f > < d f >] } < d f >8[ < d f >] < d f >[ < d f > < d f > < d f >]
+	< csharp e >[ \tuplet 3/2 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < bsharp dsharp >]
 		< csharp e >[ < csharp e >] r < csharp e >
 	< c! f > r r4 < c g' >8 r r4
 	< f, a >8 r r4 < e a >8 r r4
@@ -142,12 +142,12 @@ theClarinets = \notes \relative a' {
 	r2 < f, d' >\p_\markup { \translate #(cons 4 -1) \italic cresc. }
 	r < f d' > < f d' >\< < f d' >
 	< g d' > < aflat d >4\! < b aflat' >
-	< c aflat' >8\ff[ \times 2/3 { < aflat, c >16 < aflat c > < aflat c >] } < aflat c >8 < aflat c > < aflat c >
+	< c aflat' >8\ff[ \tuplet 3/2 { < aflat, c >16 < aflat c > < aflat c >] } < aflat c >8 < aflat c > < aflat c >
 		< aflat c > < aflat c > < aflat c >
-	< g bflat >8[ \times 2/3 { < g bflat >16 < g bflat > < g bflat >] } < g bflat >8 < fsharp a! > < g bflat > < g bflat > r < a! c >
-	r8 \times 2/3 { < bflat dflat >16[ < bflat dflat > < bflat dflat >] } < bflat dflat >8 < bflat dflat >
+	< g bflat >8[ \tuplet 3/2 { < g bflat >16 < g bflat > < g bflat >] } < g bflat >8 < fsharp a! > < g bflat > < g bflat > r < a! c >
+	r8 \tuplet 3/2 { < bflat dflat >16[ < bflat dflat > < bflat dflat >] } < bflat dflat >8 < bflat dflat >
 		< bflat dflat > < bflat dflat > < bflat dflat > < bflat dflat >
-	< a c >8[ \times 2/3 { < a c >16 < a c > < a c >] } < a c >8 < gsharp b > < a c > < a c > r < a c >
+	< a c >8[ \tuplet 3/2 { < a c >16 < a c > < a c >] } < a c >8 < gsharp b > < a c > < a c > r < a c >
 	< aflat dflat >8 r r4 < aflat eflat' >8 r r4
 	< bflat dflat >8 r r4 < c f >8 r r4
 	< gflat' dflat' >8 r < aflat dflat >8 r < gflat eflat' > r < bflat, bflat' > r
@@ -197,18 +197,18 @@ theClarinets = \notes \relative a' {
 	<< { fsharp,2(^\markup { \dynamic pp \italic cresc. } g } \\ { d1~ } >>
 	<< { a'2 gsharp) } \\ { d2 e } >>
 	< f a >2._\cr < fsharp a >4
-	<< { \times 2/3 { bflat16[( bflat, dflat } \times 2/3 { gflat! bflat dflat] } gflat8) r8 r4 r4 } \\
+	<< { \tuplet 3/2 { bflat16[( bflat, dflat } \tuplet 3/2 { gflat! bflat dflat] } gflat8) r8 r4 r4 } \\
 		{ gflat,8\f r r4 r2 } >>
 	R1
-	<< { \times 2/3 { r16 bflat,\f[( dflat } \times 2/3 { gflat bflat dflat] } gflat8) r8 r4 r4 } \\ { R1 } >>
+	<< { \tuplet 3/2 { r16 bflat,\f[( dflat } \tuplet 3/2 { gflat bflat dflat] } gflat8) r8 r4 r4 } \\ { R1 } >>
 	R1
-	<< { \times 2/3 { r16\f aflat,,[( cflat } \times 2/3 { gflat' aflat cflat] } f!8) r r4 r4 } \\ { R1 } >>
-	<< { \times 2/3 { r16 g,,[( bflat } \times 2/3 { f' g bflat] } e8) r8 r4 r4 } \\ { R1 } >>
+	<< { \tuplet 3/2 { r16\f aflat,,[( cflat } \tuplet 3/2 { gflat' aflat cflat] } f!8) r r4 r4 } \\ { R1 } >>
+	<< { \tuplet 3/2 { r16 g,,[( bflat } \tuplet 3/2 { f' g bflat] } e8) r8 r4 r4 } \\ { R1 } >>
 	
 	R1*2
 	
-	r2 r4 \times 2/3 { < f a >8\f[ < f a > < f a >] }
-	r2 r4 \times 2/3 { < f a >8[ < f a > < f a >] }
+	r2 r4 \tuplet 3/2 { < f a >8\f[ < f a > < f a >] }
+	r2 r4 \tuplet 3/2 { < f a >8[ < f a > < f a >] }
 	r8 < fsharp a > r4 r8 < c g' > r4
 	r8 < f! aflat > r4 r8 < eflat aflat! > r4
 	r8 < dflat aflat' >4->\pp < dflat aflat' >8 r8 < d g >4-> < d g >8

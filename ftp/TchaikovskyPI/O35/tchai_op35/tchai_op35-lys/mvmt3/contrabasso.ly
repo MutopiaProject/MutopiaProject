@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theBass = \notes \relative d {
+theBass =  \relative d {
 	\clef "bass"
 	\key d \major
 	
@@ -418,6 +418,8 @@ theBass = \notes \relative d {
 	e r b r
 	a2\f~\>
 	a2~\!_\markup { \dynamic pp \italic {poco a poco cresc.}}
+	a2~^\cr
+	a2
 	a2~^\cr
 	a2~
 	a2~

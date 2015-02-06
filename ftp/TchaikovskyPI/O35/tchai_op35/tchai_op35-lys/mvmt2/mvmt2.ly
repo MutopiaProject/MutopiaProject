@@ -1,120 +1,108 @@
 %%% Many thanks to the Case Western Reserve University Kulas Music library
 %%% for providing the old texts that would otherwise rot on the shelves.
 
-\version "2.2.2"
+\version "2.18.0"
 
 #(set-global-staff-size 13)
 \include "english.ly"
-\include "mvmt2/defs.ly"
-\include "mvmt2/global.ly"
+\include "../defs.ly"
+\include "header.ly"
+\include "global.ly"
 
-\include "mvmt2/flauti.ly"
-\include "mvmt2/oboi.ly"
-\include "mvmt2/clarinettiB.ly"
-\include "mvmt2/fagotti.ly"
-\include "mvmt2/corniF.ly"
-\include "mvmt2/solo.ly"
-\include "mvmt2/violino1.ly"
-\include "mvmt2/violino2.ly"
-\include "mvmt2/viola.ly"
-\include "mvmt2/violoncello.ly"
-\include "mvmt2/contrabasso.ly"
+\include "flauti.ly"
+\include "oboi.ly"
+\include "clarinettiB.ly"
+\include "fagotti.ly"
+\include "corniF.ly"
+\include "solo.ly"
+\include "violino1.ly"
+\include "violino2.ly"
+\include "viola.ly"
+\include "violoncello.ly"
+\include "contrabasso.ly"
 
 \score { 
   <<
-  \spacing
-    \context StaffGroup ="woodwinds" <<
-      \context Staff = "flauti" <<
+%  \spacing
+    \new StaffGroup ="woodwinds" <<
+      \new Staff = "flauti" <<
         \set Staff.midiInstrument = #"flute"
-        \set Staff.instrument = \markup { \center-align < "Flauto I." > }
-        \set Staff.instr      = \markup { \center-align < "Fl." > }
-        \barlines
+        \set Staff.instrumentName = \markup { \center-column { "Flauto I." } }
+        \set Staff.shortInstrumentName = \markup { \center-column { "Fl." } }
         \theFlutes >>
-      \context Staff ="oboi" <<
+      \new Staff ="oboi" <<
         \set Staff.midiInstrument = #"oboe"
-        \set Staff.instrument = \markup { \center-align < "2 Oboi" > }
-        \set Staff.instr = \markup { \center-align < "Ob." > }
-        \barlines
+        \set Staff.instrumentName = \markup { \center-column { "2 Oboi" } }
+        \set Staff.shortInstrumentName = \markup { \center-column { "Ob." } }
         \theOboes >>
-      \context Staff = "clarinetti" <<
+      \new Staff = "clarinetti" <<
         \set Staff.midiInstrument = #"clarinet"
-        \set Staff.instrument = \markup { \center-align < "2 Clarinetti" "in B" > }
-        \set Staff.instr = \markup { \center-align < "Cl." "(B)" > }
+        \set Staff.instrumentName = \markup { \center-column { "2 Clarinetti" "in B" } }
+        \set Staff.shortInstrumentName = \markup { \center-column { "Cl." "(B)" } }
         \theClarinets >>
-      \context Staff = "fagotti" <<
+      \new Staff = "fagotti" <<
         \set Staff.midiInstrument = #"bassoon"
-        \set Staff.instrument = \markup { \center-align < "2 Fagotti" > }
-        \set Staff.instr = \markup { \center-align < "Fg." > }
-        \barlines
+        \set Staff.instrumentName = \markup { \center-column { "2 Fagotti" } }
+        \set Staff.shortInstrumentName = \markup { \center-column { "Fg." } }
         \theBassoons >>
     >> % end woodwinds
     
-   \context StaffGroup ="brass" <<
-      \context Staff = "corni" <<
+   \new StaffGroup ="brass" <<
+      \new Staff = "corni" <<
         \set Staff.midiInstrument = #"french horn"
-        \set Staff.instrument = \markup { "Corni in F" }
-        \set Staff.instr = \markup { \center-align < "Cor." "(F)" > }
+        \set Staff.instrumentName = \markup { "Corni in F" }
+        \set Staff.shortInstrumentName = \markup { \center-column { "Cor." "(F)" } }
         \theHorns >>
     >>
     
-     \context StaffGroup ="solo_group" <<
-      \context Staff ="solo" <<
+     \new StaffGroup ="solo_group" <<
+      \new Staff ="solo" <<
         \set Staff.midiInstrument = #"violin"
-        \set Staff.instrument = \markup { \center-align < Violino Solo > }
-        \set Staff.instr = \markup { \center-align < "V.S." > }
-        \barlines
+        \set Staff.instrumentName = \markup { \center-column { Violino Solo } }
+        \set Staff.shortInstrumentName = \markup { \center-column { "V.S." } }
         \theSolo
         >>
     >>
     
-    \context StaffGroup ="strings" <<
-        \context GrandStaff = "upper_strings" <<
-                \context Staff = "violin_one" <<
+    \new StaffGroup ="strings" <<
+        \new GrandStaff = "upper_strings" <<
+                \new Staff = "violin_one" <<
                         \set Staff.midiInstrument = #"string ensemble 1"
-                                \set Staff.instrument = \markup { \center-align < "Violino I" > }
-                                \set Staff.instr = \markup { \center-align < "Vl." > }
-                                \barlines
+                                \set Staff.instrumentName = \markup { \center-column { "Violino I" } }
+                                \set Staff.shortInstrumentName = \markup { \center-column { "Vl." } }
                                 \theFirstViolins >>
-                        \context Staff = "violin_two" <<
+                        \new Staff = "violin_two" <<
             		             \set Staff.midiInstrument = #"string ensemble 1"
-                                 \set Staff.instrument = \markup { \center-align < "Violino II" > }
-                                 \barlines
+                                 \set Staff.instrumentName = \markup { \center-column { "Violino II" } }
                                  \theSecondViolins >>
                 >>
-                \context Staff = "viola" <<
+                \new Staff = "viola" <<
                         \set Staff.midiInstrument = #"string ensemble 1"
-                        \set Staff.instr = \markup { \center-align < "Vla." > }
-                        \barlines
+                        \set Staff.shortInstrumentName = \markup { \center-column { "Vla." } }
                         \theViolas >>
-                \context GrandStaff = "lower_strings" <<
-                        \context Staff = "violincello" <<
+                \new GrandStaff = "lower_strings" <<
+                        \new Staff = "violincello" <<
                                 \set Staff.midiInstrument = #"string ensemble 1"
-                                \set Staff.instrument = \markup { \center-align < "Violoncello" > }
-                                \set Staff.instr = \markup { \center-align < "Vc." > }
-                                \barlines
+                                \set Staff.instrumentName = \markup { \center-column { "Violoncello" } }
+                                \set Staff.shortInstrumentName = \markup { \center-column { "Vc." } }
                                 \theCellos >>
-                         \context Staff ="contrabass" <<
+                         \new Staff ="contrabass" <<
                          		 \set Staff.midiInstrument = #"string ensemble 1"
-                                 \set Staff.instrument = \markup { \center-align < "Contrabasso" > }
-                                 \set Staff.instr = \markup { \center-align < "B." > }
-                                 \barlines
+                                 \set Staff.instrumentName = \markup { \center-column { "Contrabasso" } }
+                                 \set Staff.shortInstrumentName = \markup { \center-column { "B." } }
                                  \theBass >>
           >>
         >>
+   \context Staff = "solo" \barlines
  >>
   
-\midi { \tempo 4 = 58 }
-  \paper {
-        indent = 25.0\mm
-%       textheight = 300.0\mm
-        linewidth = 470\pt
-        papersize = "a4"
-
-    \context { \RemoveEmptyStaffContext }
-    \context {
-%      \Score
-      %minimumVerticalExtent = #(cons -3 3)
- %     \override BarNumber #'padding = #3
+  \midi {
+    \tempo 4 = 58
     }
+
+
+  \layout {
+
+    \context { \Staff \RemoveEmptyStaves }
   }
 }

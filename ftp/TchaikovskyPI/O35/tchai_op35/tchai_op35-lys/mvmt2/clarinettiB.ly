@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theClarinets = \notes \relative a'' {
+theClarinets =  \relative a'' {
 	\transposition bflat
 	
 	\clef "treble"
@@ -27,7 +27,7 @@ theClarinets = \notes \relative a'' {
 	
 	<< { r4 r gsharp'^\markup { \dynamic p \italic espress. } } \\ { R1*3/4 } >>
 	<< { a4.^\< b8[( c d])^\! } \\ { R1*3/4 } >>
-	<< { \times 2/3 { e8-.[ e-. e-.]_\> } e16-.[ e-. e-. e-.]
+	<< { \tuplet 3/2 { e8-.[ e-. e-.]_\> } e16-.[ e-. e-. e-.]
 		e4\trill \bar "" \grace { dsharp16[_\! e] } } \\ { R1*3/4 } >>
 	<< { a,8 r r4 r } \\ { R1*3/4 } >>
 	
@@ -42,8 +42,8 @@ theClarinets = \notes \relative a'' {
 	
 	R1*3/4*10
 	
-	<< { \times 2/3 { r8^\p c''[( b] } \times 2/3 { gsharp[ e c] }
-		\times 2/3 { b[ gsharp e]) } } \\ { g1*3/4\rest } >>
+	<< { \tuplet 3/2 { r8^\p c''[( b] } \tuplet 3/2 { gsharp[ e c] }
+		\tuplet 3/2 { b[ gsharp e]) } } \\ { g1*3/4\rest } >>
 	<< { r16 a[( c f] e8) e4^> e8 } \\ { g,1*3/4\rest } >>
 	<< { r16 b'16[( e a] gsharp8) gsharp4^> gsharp8 } \\ { R1*3/4 } >>
 	<< { r16 e16[( a d] c8) c4^> c8 } \\ { R1*3/4 } >>
@@ -67,7 +67,7 @@ theClarinets = \notes \relative a'' {
 	<< { e'2.^>^\< } \\ { gsharp,2.\< } >>
 	<< { f'2^\! g4 } \\ { a,2\! c4 } >>
 	<< { c4^\< d2^\! } \\ { c,2( b4) } >>
-	<< { e'2. } \\ { c,2. } \\ { s4\> s s\pp\! } >>
+	<< { e'2. } \\ { c,2. } { s4\> s s\pp\! } >>
 	<< { a'8[( b] c4 d) } \\ { f,4( e d) } >>
 	<< { a'8[( b] c4 d) } \\ { f,4( e d) } >>
 	<< { c'8[( d] eflat4) csharp8[( dsharp] } \\ { d,4(_\cr eflat) dsharp( } >>
@@ -89,5 +89,4 @@ theClarinets = \notes \relative a'' {
 	R1*3/4*2
 	r1*3/4^\fermata
 	
-	\key f \major
 }

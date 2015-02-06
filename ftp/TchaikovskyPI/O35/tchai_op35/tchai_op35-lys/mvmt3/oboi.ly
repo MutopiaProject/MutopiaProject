@@ -1,5 +1,5 @@
-\version "2.2.2"
-theOboes = \notes \relative d'' {
+\version "2.18.0"
+theOboes =  \relative d'' {
 	
 	\clef "treble"
 	\key d \major
@@ -46,7 +46,7 @@ theOboes = \notes \relative d'' {
 	R1*2/4*3
 	
 	<< { r16_\markup { \dynamic p \italic espress. }
-		^\markup { "" \raise #5.0 { \column < \huge {Molto meno mosso.} \smaller { 1\super {mo} Solo.} > } }
+		^\markup {  1\super {mo} Solo. }
 		csharp'16-.[ dsharp-. esharp-.] fsharp8-.[ gsharp-.] } \\ { R1*2/4 } >>
 	<< { a4 \grace { gsharp16[( a] } gsharp8[ fsharp]) } \\ { R1*2/4 } >>
 	<< { \grace { e16[( fsharp] } e8[ d]) r4 } \\ { R1*2/4 } >>
@@ -131,7 +131,7 @@ theOboes = \notes \relative d'' {
 	<< { \grace { fsharp16[( g] } fsharp8[ e]) r4 } \\ { R1*2/4 } >>
 	
 	R1*2/4*29
-	R1*2/4^\markup { \huge {Quasi andante.} }
+	R1*2/4
 	
 	r4 << { e4^>( } \\ { csharp4_>\p( } >>
 	<< { d8) } \\ { a8) } >> r8 r4

@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theCellos = \notes \relative c {
+theCellos =  \relative c {
 	\clef "bass"
 	\key d \major
 	
@@ -114,8 +114,8 @@ theCellos = \notes \relative c {
 	r8 f4 e! r8 r4
 	r8 dsharp8 dsharp4 e8 r r4
 	R1
-	r2 r4 \times 2/3 { e8\f[ e e] }
-	r2 r4 \times 2/3 { fsharp8[ fsharp fsharp] }
+	r2 r4 \tuplet 3/2 { e8\f[ e e] }
+	r2 r4 \tuplet 3/2 { fsharp8[ fsharp fsharp] }
 	r8 fsharpsharp r4 r8 gsharp r4
 	r8 a r4 r8 bflat r4
 	a8\f r r4 a8\p r r4
@@ -321,8 +321,8 @@ theCellos = \notes \relative c {
 	r8 bflat4 a!8~ a[ a a a]
 	r8 < gsharp d' >8\f < d' b' >4 < d a' >8 r r4
 	R1
-	r2 r4 \times 2/3 { a'8\f[ a a] }
-	r2 r4 \times 2/3 { b8[ b b] }
+	r2 r4 \tuplet 3/2 { a'8\f[ a a] }
+	r2 r4 \tuplet 3/2 { b8[ b b] }
 	r8 bsharp r4 r8 csharp8 r4
 	r8 d, r4 r8 eflat r4
 	d2\pp d

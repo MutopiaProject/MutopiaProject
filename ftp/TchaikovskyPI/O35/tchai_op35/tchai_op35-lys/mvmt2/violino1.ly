@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theFirstViolins = \notes \relative d' {
+theFirstViolins =  \relative d' {
 	\clef "treble"
 	\key g \minor
 	
@@ -56,7 +56,7 @@ theFirstViolins = \notes \relative d' {
 	g2._\markup { \dynamic p \italic cresc.}
 	< c, aflat' >2 < eflat bflat' >4
 	eflat4_\markup { \italic piu \dynamic f } f2
-	<< { g2. } \\ { s4.\> s4 s8\! } >>
+	<< { g2. } { s4.\> s4 s8\! } >>
 	c,8\p[( d]) eflat4 f
 	c8[( d]) eflat4 f
 	c\< csharp2\!

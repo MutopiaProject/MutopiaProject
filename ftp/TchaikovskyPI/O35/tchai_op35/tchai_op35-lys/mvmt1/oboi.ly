@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theOboes = \notes \relative d' {
+theOboes =  \relative d' {
 	
 	\clef "treble"
 	\key d \major
@@ -45,8 +45,8 @@ theOboes = \notes \relative d' {
 	
 	R1*8
 	
-	r2 r4 \times 2/3 { < csharp csharp' >8\f[ < d csharp' > < e csharp' >] }
-	r2 r4 \times 2/3 { < csharp csharp' >8[ < dsharp csharp' > < e csharp' >] }
+	r2 r4 \tuplet 3/2 { < csharp csharp' >8\f[ < d csharp' > < e csharp' >] }
+	r2 r4 \tuplet 3/2 { < csharp csharp' >8[ < dsharp csharp' > < e csharp' >] }
 	r8 < e csharp' > r4 r8 < e b' > r4
 	r8 < e c' > r4 r8 < e c' > r4
 	
@@ -80,23 +80,23 @@ theOboes = \notes \relative d' {
 	r8 < fsharp bsharp > r8 < fsharp bsharp > r8 < fsharp bsharp > r8 < fsharp bsharp >
 	< fsharp' a >8\f[\< < fsharp a > < fsharp a > < fsharp a >] < fsharp a >[ < fsharp a >
 		< fsharp a > < fsharp a >]\!
-	< e a >8\ff[ \times 2/3 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < csharp e >]
+	< e a >8\ff[ \tuplet 3/2 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < csharp e >]
 		< csharp e >[ < csharp e > < csharp e > < csharp e >]
-	< b e >8[ \times 2/3 { < b e >16 < b e > < b e >] } < b e >8[ < asharp e' >] < b e >[ < b e >] r < csharp fsharp >
-	< d fsharp >8[ \times 2/3 { < d fsharp >16 < d fsharp > < d fsharp >] } < d fsharp >8[
+	< b e >8[ \tuplet 3/2 { < b e >16 < b e > < b e >] } < b e >8[ < asharp e' >] < b e >[ < b e >] r < csharp fsharp >
+	< d fsharp >8[ \tuplet 3/2 { < d fsharp >16 < d fsharp > < d fsharp >] } < d fsharp >8[
 		< d fsharp >] < d fsharp >[ < d fsharp >] < d fsharp >[ < d fsharp >]
-	< csharp! fsharp >8[ \times 2/3 { < csharp fsharp >16 < csharp fsharp > < csharp fsharp >] } < csharp e >8[
+	< csharp! fsharp >8[ \tuplet 3/2 { < csharp fsharp >16 < csharp fsharp > < csharp fsharp >] } < csharp e >8[
 		< bsharp fsharp' >] < csharp fsharp >[ < csharp fsharp >] r < csharp fsharp >
 	< d fsharp > r r4 < a e' >8 r r4
 	< b d >8 r r4 < fsharp csharp' >8 r r4
 	< b fsharp' >8 r r4 < b fsharp >8 r < csharp esharp > r
 	< b fsharp > r r4 < b fsharp' >8 r < b e! > r
-	< e a >8\ff[ \times 2/3 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < csharp e >]
+	< e a >8\ff[ \tuplet 3/2 { < csharp e >16 < csharp e > < csharp e >] } < csharp e >8[ < csharp e >]
 		< csharp e >[ < csharp e > < csharp e > < csharp e >]
-	< b e >8[ \times 2/3 { < b e >16 < b e > < b e >] } < b e >8[ < asharp e' >] < b e >[ < b e >] r < csharp fsharp >
-	< d fsharp >8[ \times 2/3 { < d fsharp >16 < d fsharp > < d fsharp >] } < d fsharp >8[
+	< b e >8[ \tuplet 3/2 { < b e >16 < b e > < b e >] } < b e >8[ < asharp e' >] < b e >[ < b e >] r < csharp fsharp >
+	< d fsharp >8[ \tuplet 3/2 { < d fsharp >16 < d fsharp > < d fsharp >] } < d fsharp >8[
 		< d fsharp >] < d fsharp >[ < d fsharp >] < d fsharp >[ < d fsharp >]
-	< csharp! fsharp >8[ \times 2/3 { < csharp fsharp >16 < csharp fsharp > < csharp fsharp >] } < csharp e >8[
+	< csharp! fsharp >8[ \tuplet 3/2 { < csharp fsharp >16 < csharp fsharp > < csharp fsharp >] } < csharp e >8[
 		< bsharp fsharp' >] < csharp fsharp >[ < csharp fsharp >] r < csharp fsharp >
 	< d fsharp > r r4 < a e' >8 r r4
 	< b d >8 r r4 < fsharp csharp' >8 r r4
@@ -128,12 +128,12 @@ theOboes = \notes \relative d' {
 	r2 < f d' >
 	< fsharp! d' >\< < gsharp d' >
 	< gsharp e' > < gsharp f' >4\! < b gsharp' >
-	< c a' >8\ff \times 2/3 { < f, a >16[ < f a > < f a >] } < f a >8[ < f a >] < f a >[ < f a >] < f a >[ < f a >]
-	< e g >[ \times 2/3 { < e g >16 < e g > < e g >] } < e g >8[ < dsharp fsharp! >]
+	< c a' >8\ff \tuplet 3/2 { < f, a >16[ < f a > < f a >] } < f a >8[ < f a >] < f a >[ < f a >] < f a >[ < f a >]
+	< e g >[ \tuplet 3/2 { < e g >16 < e g > < e g >] } < e g >8[ < dsharp fsharp! >]
 		< e g >[ < e g >] r < fsharp! a >
-	r8 \times 2/3 { < g bflat >16[ < g bflat > < g bflat >] } < g bflat >8[ < g bflat >] < g bflat >[ < g bflat >]
+	r8 \tuplet 3/2 { < g bflat >16[ < g bflat > < g bflat >] } < g bflat >8[ < g bflat >] < g bflat >[ < g bflat >]
 		< g bflat >[ < g bflat >]
-	< fsharp a >8[ \times 2/3 { < fsharp a >16 < fsharp a > < fsharp a >] } < fsharp a >8[ < esharp gsharp >]
+	< fsharp a >8[ \tuplet 3/2 { < fsharp a >16 < fsharp a > < fsharp a >] } < fsharp a >8[ < esharp gsharp >]
 		< fsharp a >[ < fsharp a >] r < fsharp a >
 	< f bflat > r r4 < f c' >8 r r4
 	< g bflat >8 r r4 < a d >8 r r4
@@ -169,8 +169,8 @@ theOboes = \notes \relative d' {
 	
 	R1*25
 	
-	r2 r4 \times 2/3 { < d fsharp >8\f[ < d fsharp > < d fsharp >] }
-	r2 r4 \times 2/3 { < d fsharp >8[ < d fsharp > < d fsharp >] }
+	r2 r4 \tuplet 3/2 { < d fsharp >8\f[ < d fsharp > < d fsharp >] }
+	r2 r4 \tuplet 3/2 { < d fsharp >8[ < d fsharp > < d fsharp >] }
 	r8 < dsharp fsharp > r4 r8 < e a > r4
 	r8 < d! f > r4 r8 < c! f > r4
 	

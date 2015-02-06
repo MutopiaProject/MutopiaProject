@@ -1,5 +1,5 @@
-\version "2.2.2"
-theViolas = \notes \relative d' {
+\version "2.18.0"
+theViolas =  \relative d' {
 	\clef "alto"
 	\key d \major
 

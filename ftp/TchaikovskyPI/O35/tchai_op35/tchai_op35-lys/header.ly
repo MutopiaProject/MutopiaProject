@@ -1,4 +1,9 @@
- 	mutopiatitle = "Violin Concerto in D Major"
+\version "2.18.0"
+\header {
+	title 				= "Violin Concerto in D Major"
+	opus				= "Op. 35"
+	composer			= "P. Tschaikowsky. 1840-1893"
+	
  	mutopiacomposer = "TchaikovskyPI"
 	mutopiaopus = "O 35"
  	mutopiainstrument = "Orchestra, Violin"
@@ -8,4 +13,7 @@
  	copyright = "Public Domain"
  	maintainer = "Will Oram"
  	maintainerEmail = "spamguy@foxchange.com"
- 	lastupdated = "2004/Jul/19"
+
+ 	tagline = ""
+ 	footer = "Mutopia-2004/07/25-466"
+}

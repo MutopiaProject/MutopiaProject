@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theFirstViolins = \notes \relative d'' {
+theFirstViolins =  \relative d'' {
 	\clef "treble"
 	\key d \major
 	

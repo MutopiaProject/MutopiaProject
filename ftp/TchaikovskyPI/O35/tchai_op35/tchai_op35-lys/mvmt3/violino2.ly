@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theSecondViolins = \notes \relative d'' {
+theSecondViolins =  \relative d'' {
 	\clef "treble"
 	\key d \major
 	\time 2/4

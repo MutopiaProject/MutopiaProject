@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theSolo = \notes \relative d' {
+theSolo =  \relative d' {
 	\clef "treble"
 	\key d \major
 	
@@ -116,7 +116,7 @@ theSolo = \notes \relative d' {
 	< d,, a' d' >8[ d''16(\( csharp] d8)[ b-.]\)		|
 	< a, csharp' >[ e''] < a,, a' >16[ gsharp' a b]
 	csharp[ b csharp d] e[ fsharp g gsharp]
-	#(set-octavation 1) a[ asharp b csharp] d8\f #(set-octavation 0) r
+	\ottava #1 a[ asharp b csharp] d8\f \ottava #0 r
 	d,8\f[ d16(\( csharp] d8)[ b-.]\)
 	g16[ fsharp e g] d[ csharp b d]
 	g,[ fsharp e g] d[ csharp b d]
@@ -154,11 +154,11 @@ theSolo = \notes \relative d' {
 	
 	r4 a,,8-.\f[( e-.])									|
 	gsharp4( fsharp8[ e])
-	d-.[ \times 2/3 { d16(\( e d]) } csharp8[ b]\)
+	d-.[ \tuplet 3/2 { d16(\( e d]) } csharp8[ b]\)
 	a2~(
 	a4\glissando a'8[ e-.])
 	gsharp4( fsharp8[ e])
-	d-.[ \times 2/3 { d16(\( e d]) } csharp8[ b]\)
+	d-.[ \tuplet 3/2 { d16(\( e d]) } csharp8[ b]\)
 	a2~(
 	a4\glissando fsharp'8[ fsharp-.])
 	fsharp4( e8[ d])
@@ -193,9 +193,9 @@ theSolo = \notes \relative d' {
 	a[ e fsharp gsharp] a[ e fsharp gsharp]
 	a[ e a b] csharp[ d csharp c]
 	b[ asharp b csharp!] b[ a gsharp fsharp]
-	e[ fsharp gsharp a] #(set-octavation 1) b[ csharp d fsharp]
+	e[ fsharp gsharp a] \ottava #1 b[ csharp d fsharp]
 	a[ e fsharp gsharp] a[ e fsharp gsharp]
-	a[ #(set-octavation 0) a, a a,] r a[ a a,]
+	a[ \ottava #0 a, a a,] r a[ a a,]
 	< gsharp gsharp' >8:[ < a a' >: < b b' >: < fsharp' fsharp' >:]
 	< e e' >:[ < fsharp fsharp' >: < gsharp gsharp' >: < a a' >:]
 	< gsharp gsharp' >:[ < a a' >: < b b' >: < gsharp gsharp' >:]
@@ -212,14 +212,14 @@ theSolo = \notes \relative d' {
 	
 	r4 e8\p[( fsharp])									|
 	gsharp4( \grace { fsharp16[ gsharp] } fsharp8[ e])
-	\slurUp \grace { dsharp16[( e] } dsharp8[ csharp]) \slurBoth r4
+	\slurUp \grace { dsharp16[( e] } dsharp8[ csharp]) \slurNeutral r4
 	R1*2/4
 	r4 e8\p[( fsharp])
 	gsharp4( \grace { fsharp16[ gsharp] } fsharp8[ e])
 	\grace { dsharp16[( e] } dsharp8[ csharp]) r4
 	R1*2/4
 	r4 e8[( esharp])
-	fsharp4(^\markup { \huge\bold {Poco a poco rallentando} } \grace { e!16[ fsharp] } e8[ d])
+	fsharp4( \grace { e!16[ fsharp] } e8[ d])
 	\grace { csharp16[ d] } csharp8[(_\markup { \italic rall. } b]) asharp[ b]
 	d4( \grace { csharp16[ d] } csharp8[ b])
 	\grace { a16[( b] } a8[ gsharp]) fsharpsharp[ gsharp]
@@ -233,11 +233,11 @@ theSolo = \notes \relative d' {
 	g4(^\< \grace { fsharp16[ g] } fsharp8[ e])^\!
 	g4( \grace { fsharp16[ g] } fsharp8[ e])
 	\grace { d!16[( e] } d8[ csharp)\> d e]\!
-	g4\p(^\markup { \huge\bold {Quasi andante.}} \grace { fsharp16[ g] } fsharp8[ e])
+	g4\p( \grace { fsharp16[ g] } fsharp8[ e])
 	d8[( csharp) d-. e-.]
 	g4( \grace { fsharp16[ g] } fsharp8[ e-.])
 	\grace { d16[ e] } d8[( csharp) d e]
-	bflat8-.[^\markup { \huge\bold {Poco a poco string.}} bflat16( c] bflat8)[ a]
+	bflat8-.[ bflat16( c] bflat8)[ a]
 	gsharp!8-.[ gsharp16( a] gsharp8)[ a]
 	bflat8-.[ bflat16( c] bflat8)[ a]
 	gsharp!8-.[ gsharp16( a] gsharp8)[ a]
@@ -331,7 +331,7 @@ theSolo = \notes \relative d' {
 	< g d' >[ bflat, d < bflat' g' >] < bflat g' >[ d, g < d' bflat' >]
 	< d bflat' >[ g, bflat < g' d' >] < g d' >[ bflat, bflat < g' d' >]
 	< g eflat' >8 r r4
-	r4 r8 \stemDown bflat,,16[ < g' eflat' >] \stemBoth
+	r4 r8 \stemDown bflat,,16[ < g' eflat' >] \stemNeutral
 	< g eflat' >[ bflat, eflat < bflat' g' >] < bflat g' >[ eflat, g < eflat'! bflat' >]
 	< eflat bflat' >[ g, bflat < g' eflat' >] < g eflat' >[ bflat, bflat < g' eflat' >]
 	< g e'! >8 r r4
@@ -346,14 +346,14 @@ theSolo = \notes \relative d' {
 	eflat[ c a' b] c[ a c d]
 	eflat[ c a' b] c[ a c d]
 	eflat[\< a,, c a'] c-1[ d eflat-1 gsharp]\!
-	\stemDown a8\f[ \stemBoth \stemUp a,,,16\p( b]) \stemBoth c[_\cr a c d]
+	\stemDown a8\f[ \stemNeutral \stemUp a,,,16\p( b]) \stemNeutral c[_\cr a c d]
 	eflat[ c a' b] c[ a c d]
 	eflat[ c a' b] c[ a c d]
 	eflat[\< a,, c a'] c[ d eflat gsharp]\!
 	a8\f \noDynamic a,,,16\p[(_\markup { \dynamic p \italic cresc. } b]) c[ a c dsharp]
 	e[\< a c e] a[ c e-1 gsharp]\!
-	\stemDown a8\f[ \stemBoth \stemUp \noDynamic a,,,16\p(_\markup { \dynamic p \italic cresc. }
-		b]) \stemBoth c[_\cr a c e]
+	\stemDown a8\f[ \stemNeutral \stemUp \noDynamic a,,,16\p(_\markup { \dynamic p \italic cresc. }
+		b]) \stemNeutral c[_\cr a c e]
 	f[\< a c f] a[ c f gsharp]\!
 	a\ff[ fsharp! g! a] c,[ d e a,] b[ c fsharp, g] a[ c, d e]
 	a,[ b c fsharp,] g[ a c, d]
@@ -367,11 +367,11 @@ theSolo = \notes \relative d' {
 	
 	r4 g'8-.\mf[( d-.])
 	fsharp4( e8[ d--])
-	c!8[ \times 2/3 { c16(\( d c]\) } b8[ a-.])
+	c!8[ \tuplet 3/2 { c16(\( d c]\) } b8[ a-.])
 	g2~\(
 	g4\glissando( g'8-0)[ d-.]\)
 	fsharp4( e8[ d--])
-	c!8[ \times 2/3 { c16(\( d c]\) } b8[ a-.])
+	c!8[ \tuplet 3/2 { c16(\( d c]\) } b8[ a-.])
 	g2~\(
 	g4\glissando( e'8)[ e-.]\)
 	e4( d8[ c])
@@ -405,8 +405,8 @@ theSolo = \notes \relative d' {
 	a[ gsharp a b!] a[ gsharp fsharp e]
 	d[ e fsharp g] a[ b c e]
 	g[ d e fsharp] g[ d e fsharp]
-	g[ #(set-octavation 1) a b d] e8-0[ e-0]
-	e4-0 #(set-octavation 0)
+	g[ \ottava #1 a b d] e8-0[ e-0]
+	e4-0 \ottava #0
 	< d,, g\harmonic >8-.[( < c fsharp\harmonic >-.])
 	< b e\harmonic >[ < a d\harmonic >\glissando](\( < e' a\harmonic >)[ < e a\harmonic >]\)
 	< e a\harmonic >4 < d g\harmonic >8-.[( < c fsharp\harmonic >-.])
@@ -455,9 +455,8 @@ theSolo = \notes \relative d' {
 	bflat2(
 	a8)[ csharp( e gsharp,])
 	a[( csharp) e( gsharp,])
-	\times 2/3 { a-.[_\cr^\markup { \huge\bold {Poco a poco stringendo.} }
-		csharp-. e-.] } \times 2/3 { gsharp,-.[ a-. csharp-.] }
-	\times 2/3 { e-.[ gsharp,-. a-.] } \times 2/3 { csharp-.[ e-. gsharp,-.] }
+	\tuplet 3/2 { a-.[_\cr csharp-. e-.] } \tuplet 3/2 { gsharp,-.[ a-. csharp-.] }
+	\tuplet 3/2 { e-.[ gsharp,-. a-.] } \tuplet 3/2 { csharp-.[ e-. gsharp,-.] }
 	a16-.[ csharp-. e-. gsharp,-.] a[\< csharp e gsharp,]
 	a[ csharp e gsharp,] a[ csharp e gsharp,]
 	a[ csharp e gsharp,] a[ csharp e gsharp,]
@@ -532,7 +531,7 @@ theSolo = \notes \relative d' {
 	< d,, a' d' >8[ d''16(\( csharp] d8)[ b-.]\)		|
 	< a, csharp' >[ e''] < a,, a' >16[ gsharp' a b]
 	csharp[ b csharp d] e[ fsharp g gsharp]
-	#(set-octavation 1) a[ asharp b csharp] d8\f #(set-octavation 0) r
+	\ottava #1 a[ asharp b csharp] d8\f \ottava #0 r
 	d,8\f[ d16(\( csharp] d8)[ b-.]\)
 	g16[ fsharp e g] d[ csharp b d]
 	g,[ fsharp e g] d[ csharp b d]
@@ -610,7 +609,7 @@ theSolo = \notes \relative d' {
 	d[ e fsharp g] a[ a b csharp]
 	d[ e, fsharp g] a[ a b csharp]
 	
-	#(set-octavation 1)
+	\ottava #1
 	d[ e fsharp g] a[ a b csharp]
 	d[ d d d] < d, d' >[ < d d' > < d d' > < d d' >]
 	< d d' >2:16
@@ -620,7 +619,7 @@ theSolo = \notes \relative d' {
 	< d d' >:
 	< d d' >16[ d' csharp b] a[ g fsharp e]
 	
-	#(set-octavation 0)
+	\ottava #0
 	d[ a b csharp] d[ a b csharp]
 	d[ csharp b a] gsharp[ fsharp e d]
 	csharp[ b a g!] fsharp[ e d csharp]
@@ -628,7 +627,7 @@ theSolo = \notes \relative d' {
 	d[ a b csharp] d[ fsharp a csharp]
 	d[ a, b csharp] d[ fsharp a csharp]
 	d[ a b csharp] d[ e fsharp a]
-	#(set-octavation 1) d8 #(set-octavation 0) r r4 
+	\ottava #1 d8 \ottava #0 r r4 
 	R1*2/4
 	r8 e,->[ a->] r
 	< a,,, fsharp' d' > r r4\fermata

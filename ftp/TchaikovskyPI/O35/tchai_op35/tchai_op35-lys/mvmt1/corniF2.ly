@@ -1,12 +1,11 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theHornssecond = \notes \relative c' {
+theHornssecond =  \relative c' {
 	\transposition f'
 	\clef "treble"
 	\key c \major
 	
-	\override Staff.TupletBracket   #'bracket-visibility = ##f
-	\override Staff.TextScript   #'font-magnification = #1.25
+	\override Staff.TupletBracket.bracket-visibility = ##f
 	
 	r1
 	
@@ -63,25 +62,25 @@ theHornssecond = \notes \relative c' {
 	
 	< csharp g' >8[\< < csharp g' > < csharp g' > < csharp g' >] < csharp g' >[ < csharp g' >
 		< csharp g' > < csharp g' >]\!
-	< b gsharp' >\ff[ \times 2/3 { < b gsharp' >16 < b gsharp' > < b gsharp' >] } < b gsharp' >8[ < b gsharp' >]
+	< b gsharp' >\ff[ \tuplet 3/2 { < b gsharp' >16 < b gsharp' > < b gsharp' >] } < b gsharp' >8[ < b gsharp' >]
 		< b gsharp' >[ < b gsharp' >] < b gsharp' >[ < b gsharp' >]
-	< b fsharp' >[ \times 2/3 { < b fsharp' >16 < b fsharp' > < b fsharp' >] } < b fsharp' >8[ < b esharp >]
+	< b fsharp' >[ \tuplet 3/2 { < b fsharp' >16 < b fsharp' > < b fsharp' >] } < b fsharp' >8[ < b esharp >]
 		< b fsharp' >[ < b fsharp' >]  r < csharp gsharp' >
-	< csharp a' >[ \times 2/3 { < csharp a' >16 < csharp a' > < csharp a' >] } < csharp a' >8[ < csharp a' >]
+	< csharp a' >[ \tuplet 3/2 { < csharp a' >16 < csharp a' > < csharp a' >] } < csharp a' >8[ < csharp a' >]
 		< csharp a' >[ < csharp a' >] < csharp a' >[ < csharp a' >]
-	< csharp gsharp' >[ \times 2/3 { < csharp gsharp' >16 < csharp gsharp' > < csharp gsharp' >] } < csharp gsharp' >8[
+	< csharp gsharp' >[ \tuplet 3/2 { < csharp gsharp' >16 < csharp gsharp' > < csharp gsharp' >] } < csharp gsharp' >8[
 		< csharp g' >] < csharp gsharp' >[ < csharp gsharp' >] r < csharp gsharp' >
 	< csharp a' > r r4 < b e' >8 r r4
 	< csharp fsharp >8 r r4 < csharp gsharp' >8 r r4
 	< csharp a' >8 r r4 < a fsharp' >8 r < dsharp c'! > r
 	< csharp a' > r r4 < a fsharp' >8 r < dsharp dsharp' > r
-	< b gsharp' >\ff[ \times 2/3 { < b gsharp' >16 < b gsharp' > < b gsharp' >] } < b gsharp' >8[ < b gsharp' >]
+	< b gsharp' >\ff[ \tuplet 3/2 { < b gsharp' >16 < b gsharp' > < b gsharp' >] } < b gsharp' >8[ < b gsharp' >]
 		< b gsharp' >[ < b gsharp' >] < b gsharp' >[ < b gsharp' >]
-	< b fsharp' >[ \times 2/3 { < b fsharp' >16 < b fsharp' > < b fsharp' >] } < b fsharp' >8[ < b esharp >]
+	< b fsharp' >[ \tuplet 3/2 { < b fsharp' >16 < b fsharp' > < b fsharp' >] } < b fsharp' >8[ < b esharp >]
 		< b fsharp' >[ < b fsharp' >]  r < csharp gsharp' >
-	< csharp a' >[ \times 2/3 { < csharp a' >16 < csharp a' > < csharp a' >] } < csharp a' >8[ < csharp a' >]
+	< csharp a' >[ \tuplet 3/2 { < csharp a' >16 < csharp a' > < csharp a' >] } < csharp a' >8[ < csharp a' >]
 		< csharp a' >[ < csharp a' >] < csharp a' >[ < csharp a' >]
-	< csharp gsharp' >[ \times 2/3 { < csharp gsharp' >16 < csharp gsharp' > < csharp gsharp' >] } < csharp gsharp' >8[
+	< csharp gsharp' >[ \tuplet 3/2 { < csharp gsharp' >16 < csharp gsharp' > < csharp gsharp' >] } < csharp gsharp' >8[
 		< csharp g' >] < csharp gsharp' >[ < csharp gsharp' >] r < csharp gsharp' >
 	< csharp a' > r r4 < b e' >8 r r4
 	< csharp fsharp >8 r r4 < csharp gsharp' >8 r r4
@@ -106,12 +105,12 @@ theHornssecond = \notes \relative c' {
 	R1*27
 	
 	r2 r4 < c fsharp >
-	<< { g'8[ \times 2/3 { c16 c c] } } \\ { c,8\ff[ \times 2/3 { c16 c c] } } >>
+	<< { g'8[ \tuplet 3/2 { c16 c c] } } \\ { c,8\ff[ \tuplet 3/2 { c16 c c] } } >>
 		< c c' >8[ < c c' >] < c c' >[ < c c' >] < c c' >[ < c c' >]
-	< b b' >[ \times 2/3 { < b b' >16 < b b' > < b b' >] } < b b' >8[ < asharp asharp' >]
+	< b b' >[ \tuplet 3/2 { < b b' >16 < b b' > < b b' >] } < b b' >8[ < asharp asharp' >]
 		< b b' >[ < b b' >] r < csharp csharp' >
-	r8 \times 2/3 { < d d' >16[ < d d' > < d d' >] } < d d' >8[ < d d' >] < d d' >[ < d d' >] < d d' >[ < d d' >]
-	< csharp csharp' >[ \times 2/3 { < csharp csharp' >16 < csharp csharp' > < csharp csharp' >] } < csharp csharp' >8[
+	r8 \tuplet 3/2 { < d d' >16[ < d d' > < d d' >] } < d d' >8[ < d d' >] < d d' >[ < d d' >] < d d' >[ < d d' >]
+	< csharp csharp' >[ \tuplet 3/2 { < csharp csharp' >16 < csharp csharp' > < csharp csharp' >] } < csharp csharp' >8[
 		< bsharp bsharp' >] < csharp csharp' >[ < csharp csharp' >] r < csharp csharp' >
 	< c! c' > r r4 < c c' >8 r r4
 	< d d' >8 r r4 << { a'8 } \\ { a8 } >> r r4
