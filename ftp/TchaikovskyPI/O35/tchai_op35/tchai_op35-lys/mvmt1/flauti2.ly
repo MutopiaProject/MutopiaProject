@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theFlutessecond = \notes \relative d''' {
+theFlutessecond =  \relative d''' {
 	\clef "treble"
 	\key d \major
 	
@@ -33,8 +33,8 @@ theFlutessecond = \notes \relative d''' {
 	
 	R1*32
 	
-	r2 r4 \times 2/3 { csharp8\f[ d e] }
-	r2 r4 \times 2/3 { csharp8[ dsharp e] }
+	r2 r4 \tuplet 3/2 { csharp8\f[ d e] }
+	r2 r4 \tuplet 3/2 { csharp8[ dsharp e] }
 	r8 e r4 r8 e r4
 	r8 e r4 r8 e r4
 	c2\fp b
@@ -127,8 +127,8 @@ theFlutessecond = \notes \relative d''' {
 	
 	R1*25
 	
-	r2 r4 \times 2/3 { fsharp8\f[ g a] }
-	r2 r4 \times 2/3 { fsharp8[ gsharp a] }
+	r2 r4 \tuplet 3/2 { fsharp8\f[ g a] }
+	r2 r4 \tuplet 3/2 { fsharp8[ gsharp a] }
 	
 	r8 a r4 r8 a r4
 	r8 a r4 r8 a r4

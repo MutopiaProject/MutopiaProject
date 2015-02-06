@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theViolas = \notes \relative d' {
+theViolas =  \relative d' {
 	\clef "alto"
 	\key d \major
 	
@@ -92,18 +92,18 @@ theViolas = \notes \relative d' {
 	fsharp! fsharp
 	a a4~ a8 r
 	
-	\times 2/3 { r8 e'8\p[( e,]) } \times 2/3 { e'[( e, e']) } \times 2/3 { r e[( e,]) } \times 2/3 { e'[( e, e']) }
-	\times 2/3 { r8 fsharp8[( fsharp,]) } \times 2/3 { fsharp'[( fsharp, fsharp']) } \times 2/3 { r fsharp[(
-		fsharp,]) } \times 2/3 { fsharp'[( fsharp, fsharp']) }
-	\times 2/3 { r8 fsharp8[( fsharp,]) } \times 2/3 { fsharp'[( fsharp, fsharp']) } \times 2/3 { r fsharp[(
-		fsharp,]) } \times 2/3 { fsharp'[( fsharp, fsharp']) }
-	\times 2/3 { r8_\markup { "" \raise #-4 \italic {poco a poco cresc.} } fsharp8[( fsharp,]) } \times 2/3 { fsharp'[(
-		fsharp, fsharp']) } \times 2/3 { r e[( e,]) } \times 2/3 { e'[( e, e']) }
-	\times 2/3 { r e[( e,]) } \times 2/3 { e'[( e, e']) } \times 2/3 { r e[( e,]) } \times 2/3 { e'[( e, e']) }
-	\times 2/3 { r b[( gsharp] } \times 2/3 { b[ gsharp b]) } \times 2/3 { r c[( a] } \times 2/3 { c[ a c]) }
-	\times 2/3 { r e[( bflat]) } \times 2/3 { r d[( b]) } \times 2/3 { r e[( csharp]) } \times 2/3 { r f[( d]) }
-	\times 2/3 { r asharp'\mf[( e] } \times 2/3 { asharp[ e asharp]) } \times 2/3 { r asharp[( e] }
-		\times 2/3 { asharp[ e asharp]) }
+	\tuplet 3/2 { r8 e'8\p[( e,]) } \tuplet 3/2 { e'[( e, e']) } \tuplet 3/2 { r e[( e,]) } \tuplet 3/2 { e'[( e, e']) }
+	\tuplet 3/2 { r8 fsharp8[( fsharp,]) } \tuplet 3/2 { fsharp'[( fsharp, fsharp']) } \tuplet 3/2 { r fsharp[(
+		fsharp,]) } \tuplet 3/2 { fsharp'[( fsharp, fsharp']) }
+	\tuplet 3/2 { r8 fsharp8[( fsharp,]) } \tuplet 3/2 { fsharp'[( fsharp, fsharp']) } \tuplet 3/2 { r fsharp[(
+		fsharp,]) } \tuplet 3/2 { fsharp'[( fsharp, fsharp']) }
+	\tuplet 3/2 { r8_\markup { "" \raise #-4 \italic {poco a poco cresc.} } fsharp8[( fsharp,]) } \tuplet 3/2 { fsharp'[(
+		fsharp, fsharp']) } \tuplet 3/2 { r e[( e,]) } \tuplet 3/2 { e'[( e, e']) }
+	\tuplet 3/2 { r e[( e,]) } \tuplet 3/2 { e'[( e, e']) } \tuplet 3/2 { r e[( e,]) } \tuplet 3/2 { e'[( e, e']) }
+	\tuplet 3/2 { r b[( gsharp] } \tuplet 3/2 { b[ gsharp b]) } \tuplet 3/2 { r c[( a] } \tuplet 3/2 { c[ a c]) }
+	\tuplet 3/2 { r e[( bflat]) } \tuplet 3/2 { r d[( b]) } \tuplet 3/2 { r e[( csharp]) } \tuplet 3/2 { r f[( d]) }
+	\tuplet 3/2 { r asharp'\mf[( e] } \tuplet 3/2 { asharp[ e asharp]) } \tuplet 3/2 { r asharp[( e] }
+		\tuplet 3/2 { asharp[ e asharp]) }
 	bflat4\mf bflat~ bflat8 bflat-.( bflat-.[ b-.])
 	g-.[( a-.]) f-.[( g-.]) eflat-.[( d-.]) d-.[( c-.])
 	bflat'4 bflat~ bflat8 bflat-.( bflat-.[ b-.])
@@ -112,8 +112,8 @@ theViolas = \notes \relative d' {
 	b,!4 b~ b8[ csharp!( e a])
 	r8 a, a'4 a8 r r4
 	R1
-	r2 r4 \times 2/3 { csharp,8\f[ d e] }
-	r2 r4 \times 2/3 { csharp8[ dsharp e] }
+	r2 r4 \tuplet 3/2 { csharp,8\f[ d e] }
+	r2 r4 \tuplet 3/2 { csharp8[ dsharp e] }
 	r8 e r4 r8 e r4
 	r8 e r4 r8 e r4
 	f2\f fsharp
@@ -319,8 +319,8 @@ theViolas = \notes \relative d' {
 	e,!4 e~ e8[ fsharp! a d]
 	r8 f,\f f4 fsharp8 r r4
 	R1
-	r2 r4 \times 2/3 { < d' fsharp >8\f[ < d fsharp > < d fsharp >] }
-	r2 r4 \times 2/3 { < d fsharp >8[ < d fsharp > < d fsharp >] }
+	r2 r4 \tuplet 3/2 { < d' fsharp >8\f[ < d fsharp > < d fsharp >] }
+	r2 r4 \tuplet 3/2 { < d fsharp >8[ < d fsharp > < d fsharp >] }
 	r8 < dsharp fsharp > r4 r8 e r4
 	r8 < d! f >8 r4 r8 < c f! >8 r4
 	

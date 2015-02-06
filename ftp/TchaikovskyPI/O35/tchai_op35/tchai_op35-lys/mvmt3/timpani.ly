@@ -1,7 +1,8 @@
-\version "2.2.2"
-theTimpani = \notes \relative c {
+\version "2.18.0"
+theTimpani =  \relative c {
 	\clef "bass"
 	\key c \major
+	\time 2/4
 	
 	a8\ff r r4
 	
@@ -69,7 +70,7 @@ theTimpani = \notes \relative c {
 	
 	R1*2/4*26
 	
-	<< { a2:32 } \\ { s8\f\> s8\pp\! s4 } >>
+	<< { a2:32 } { s8\f\> s8\pp\! s4 } >>
 	a2:32_\markup { \italic {poco a poco cresc.}}
 	a2:
 	a2:

@@ -1,7 +1,8 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theSecondViolins = \notes \relative d {
+theSecondViolins =  \relative d {
 	\clef "treble"
+	\time 3/4
 	\key g \minor
 	
 	r1*3/4
@@ -57,10 +58,10 @@ theSecondViolins = \notes \relative d {
 	d_\markup { \dynamic p \italic cresc. }
 	f2 < g, g' >4
 	aflat2._\markup { \italic piu \dynamic f }
-	<< { < g eflat' >2. } \\ { s4.\> s4 s8\! } >>
+	<< { < g eflat' >2. } { s4.\> s4 s8\! } >>
 	c4\p c c
 	c c c
-	<< { g2. } \\ { s4.\< s4 s8\! } >>
+	<< { g2. } { s4.\< s4 s8\! } >>
 	a4 r r
 	R1*3/4
 	

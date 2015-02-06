@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theTimpani = \notes \relative c {
+theTimpani =  \relative c {
 	\clef "bass"
 	\key c \major
 	

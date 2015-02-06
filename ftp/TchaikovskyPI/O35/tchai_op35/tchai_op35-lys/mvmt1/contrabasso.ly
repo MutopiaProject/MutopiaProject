@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theBass = \notes \relative d {
+theBass =  \relative d {
 	\clef "bass"
 	\key d \major
 	
@@ -114,8 +114,8 @@ theBass = \notes \relative d {
 	r8 f4 e! r8 r4
 	r8 dsharp8 dsharp'4 e8 r r4
 	R1
-	r2 r4 \times 2/3 { e,8\f[ e e] }
-	r2 r4 \times 2/3 { fsharp8[ fsharp fsharp] }
+	r2 r4 \tuplet 3/2 { e,8\f[ e e] }
+	r2 r4 \tuplet 3/2 { fsharp8[ fsharp fsharp] }
 	r8 fsharpsharp r4 r8 gsharp r4
 	r8 a r4 r8 bflat r4
 	a8\f r r4 a8\p r r4
@@ -312,8 +312,8 @@ theBass = \notes \relative d {
 	r8 bflat4 a!8~ a[ a a a]
 	r8 gsharp\f gsharp'4 a8 r r4
 	R1
-	r2 r4 \times 2/3 { a8\f[ a a] }
-	r2 r4 \times 2/3 { b8[ b b] }
+	r2 r4 \tuplet 3/2 { a8\f[ a a] }
+	r2 r4 \tuplet 3/2 { b8[ b b] }
 	
 	r8 bsharp r4 r8 csharp8 r4
 	r8 d r4 r8 eflat r4
@@ -327,7 +327,7 @@ theBass = \notes \relative d {
 	
 	R1*3
 	
-	r8\pp a16_\markup { \italic {poco a poco cresc.}} r16 \stemUp a[ r a,] \stemBoth r a[ r a' r a r a,] r
+	r8\pp a16_\markup { \italic {poco a poco cresc.}} r16 \stemUp a[ r a,] \stemNeutral r a[ r a' r a r a,] r
 	a[ r a r a r a] r a[ r a r a r a] r
 	a[ r a r a r a] r a[ r a r a r a] r
 	a[\< r a r a r a]\! r g2\f\>

@@ -1,5 +1,5 @@
-\version "2.2.2"
-theViolas = \notes \relative d {
+\version "2.18.0"
+theViolas =  \relative d {
 	\clef "alto"
 	\key g \minor
 	
@@ -55,7 +55,7 @@ theViolas = \notes \relative d {
 	b_\markup { \dynamic p \italic cresc. }
 	aflat2 bflat4
 	c2(_\markup { \italic piu \dynamic f } cflat4)
-	<< bflat2. \\ { s4.\> s4 s8\! } >>
+	<< bflat2. { s4.\> s4 s8\! } >>
 	aflat4\p g f
 	aflat g f
 	eflat2\< e4\!

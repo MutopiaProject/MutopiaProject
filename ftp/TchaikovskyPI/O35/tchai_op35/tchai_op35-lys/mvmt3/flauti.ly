@@ -1,11 +1,10 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theFlutes = \notes \relative d''' {
+theFlutes =  \relative d''' {
 	\clef "treble"
 	\key d \major
 	
-	a8\ff^\markup { \huge\bold {Allegro vivacissimo.} }
-		r r4
+	a8\ff r r4
 	
 	R1*2/4*2
 	
@@ -43,11 +42,11 @@ theFlutes = \notes \relative d''' {
 	
 	R1*2/4*38
 	
-	a8^\markup { \huge\bold {Poco meno mosso.}} r r4
+	a8 r r4
 	
 	R1*2/4*18
 	
-	r4^\markup { \huge\bold {Tempo I.} } r8 \grace gsharp,16( fsharp8\p)
+	r4 r8 \grace gsharp,16( fsharp8\p)
 	r8 \grace a16( gsharp8) r8 \grace csharp16( b8)
 	r8 \grace fsharp'16( e8) r \grace a16( gsharp8)
 	r8 \grace b16( a8) r \grace fsharp16( e8)
@@ -60,7 +59,7 @@ theFlutes = \notes \relative d''' {
 	%%% TEMPO 1 %%%
 	
 	R1*2/4*70
-	R1*2/4^\markup { \huge\bold {Tempo 1.}}
+	R1*2/4
 	R1*2/4*3
 	
 	b16\f r r8 r4
@@ -101,11 +100,11 @@ theFlutes = \notes \relative d''' {
 	
 	R1*2/4*15
 	
-	g8\ff^\markup { \huge\bold {Poco meno mosso.} } r8 r4
+	g8\ff r8 r4
 	
 	R1*2/4*18
 	
-	r4^\markup { \huge\bold {Tempo I.}} e8\p[ e]
+	r4 e8\p[ e]
 	e4-> d8[ c]
 	b[( a) e' e]
 	e4-> d8[ c]
@@ -125,7 +124,7 @@ theFlutes = \notes \relative d''' {
 	gsharp8[( a] c[ asharp])
 	b4( g!
 	
-	d8)^\markup { \huge\bold {Molto meno mosso.}} r r4
+	d8) r r4
 	
 	R1*2/4*7
 	
@@ -138,9 +137,9 @@ theFlutes = \notes \relative d''' {
 	\grace { csharp16[^( d] } csharp8[ b]^) r4
 	
 	R1*2/4*2
-	R1*2/4^\markup { \huge\bold {Poco a poco rallentando}}
+	R1*2/4
 	R1*2/4*42
-	R1*2/4^\markup { \huge\bold {Tempo I.}}
+	R1*2/4
 	R1*2/4*3
 	
 	%%% TEMPO 1 %%%

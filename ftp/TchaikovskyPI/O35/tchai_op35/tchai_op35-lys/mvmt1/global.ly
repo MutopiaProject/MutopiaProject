@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-spacing = \notes {
+spacing =  {
 	s1*7 \break				% begins @ M1
 	s1*6 \break				% begins @ M8
 	s1*5 \break
@@ -135,15 +135,15 @@ spacing = \notes {
 	s1*4 \break				% 335
 }
 
-barlines = \notes {
-	\override Score.MetronomeMark   #'transparent = ##t
+barlines =  {
 	\set Score.skipBars = ##t
-	\override Score.TupletBracket   #'bracket-visibility = ##f
-	\override Score.TextScript   #'font-magnification = #1.25
+	\override Score.TupletBracket.bracket-visibility = ##f
 	
 	\time 4/4
 	
+	\tempo "Allegro moderato."
 	s1*23
+	\set Score.tempoHideNote = ##t
 	\tempo 4 = 85
 	s1*4
 	\bar "||"
@@ -151,9 +151,13 @@ barlines = \notes {
 	\bar "||"
 	s1*12
 	\bar "||"
+	\set Score.tempoHideNote = ##f
+	\tempo "Piu mosso."
 	s1*8
 	\bar "||"
+	\tempo "Moderato assai."
 	s1*61
+	\set Score.tempoHideNote = ##t
 	\tempo 4 = 95
 	s1*70
 	\bar "||"
@@ -161,9 +165,20 @@ barlines = \notes {
 	s1*91
 	\bar "||"
 	\tempo 4 = 115
-	s1*7
+	s16
+	\set Score.tempoHideNote = ##f
+	\tempo "Allegro gusto."
+	s16 s8 s4 s2
+	s1*6
+	\set Score.tempoHideNote = ##t
 	\tempo 4 = 125
-	s1*27
+	s1*6
+	\set Score.tempoHideNote = ##f
+	\tempo "Stringendo."
+	s1*8
+	\tempo "Piu mosso."
+	s1*13
+	\set Score.tempoHideNote = ##t
 	\tempo 4 = 105
 	s1*2
 	\bar "|."

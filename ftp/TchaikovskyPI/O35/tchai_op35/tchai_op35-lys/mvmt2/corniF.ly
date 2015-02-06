@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theHorns = \notes \relative c'' {
+theHorns =  \relative c'' {
 	\transposition f
 	\clef "treble"
 	\key c \major	
@@ -49,6 +49,6 @@ theHorns = \notes \relative c'' {
 	
 	R1*3/4*3
 	
-	r4 r < b, b' >\pp~\>
-	< b b' >2.\fermata\!
+	r4 r < b, b' >\pp\> ~
+	<< < b b' >2.\fermata { s8 s8\! } >>
 }

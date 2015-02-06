@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theBassoons = \notes \relative d {
+theBassoons =  \relative d {
 	\set Score.skipBars = ##t
 	
 	\clef "bass"
@@ -54,11 +54,11 @@ theBassoons = \notes \relative d {
 	
 	<< { b'2^>^\p~ } \\ { R1*2/4 } >>
 	<< { b4 d,~( } \\ { R1*2/4 } >>
-	<< { b4 csharp8[ bsharp] } \\ { R1*2/4 } >>
+	<< { d4 csharp8[ bsharp] } \\ { R1*2/4 } >>
 	<< { csharp8) r r4 } \\ { R1*2/4 } >>
 	<< { b'2^>^\p~ } \\ { R1*2/4 } >>
 	<< { b4 d,~( } \\ { R1*2/4 } >>
-	<< { b4 csharp8[ bsharp] } \\ { R1*2/4 } >>
+	<< { d4 csharp8[ bsharp] } \\ { R1*2/4 } >>
 	<< { csharp8) r r4 } \\ { R1*2/4 } >>
 	
 	R1*2/4*7

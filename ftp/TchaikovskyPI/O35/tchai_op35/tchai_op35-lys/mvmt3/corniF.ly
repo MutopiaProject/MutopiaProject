@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theHornsfirst = \notes \relative c' {
+theHornsfirst =  \relative c' {
 	\transposition f
 	\clef "treble"
 	\key c \major	

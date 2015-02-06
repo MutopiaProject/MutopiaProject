@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theCellos = \notes \relative c {
+theCellos =  \relative c {
 	\clef "bass"
 	\key g \minor
 	
@@ -14,7 +14,7 @@ theCellos = \notes \relative c {
 	g'2.~
 	g8[ g( fsharp e fsharp d])
 	< g, d' >2.
-	<< { d'2. } \\ { s4.\< s4 s8\! } >>
+	<< { d'2. } { s4.\< s4 s8\! } >>
 	c'4\< bflat, < a d >\!
 	< g d' > r r
 	d'( g) r
@@ -47,7 +47,7 @@ theCellos = \notes \relative c {
 	g2._\markup { \dynamic p \italic cresc. }
 	f2 eflat4
 	eflat2._\markup { \italic piu \dynamic f }
-	<< { eflat2. } \\ { s4.\> s4 s8\! } >>
+	<< { eflat2. } { s4.\> s4 s8\! } >>
 	f4\p eflat d
 	f eflat d
 	c\< bflat a\!

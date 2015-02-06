@@ -1,14 +1,17 @@
+\version "2.18.0"
 \include "english.ly"
-\include "defs.ly"
+\include "global.ly"
+\include "header.ly"
+\include "../defs.ly"
 
 \include "timpani.ly"
+
+\header {
+	instrument = "Timpani in E/H"
+}
 	
 \score {	
-	\theTimpani
-	
-	\header {
-		\include "header.ly"
-		instrument = "Timpani in E/H"
-	}
-
+	\context Staff ="timpani" <<
+	\barlines
+	\theTimpani >>
 }

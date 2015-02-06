@@ -1,14 +1,12 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theTrumpets = \notes \relative d' {
+theTrumpets =  \relative d' {
 	\clef "treble"
 	\time 2/4
 	\key c \major
 	
-	\override Score.MetronomeMark   #'transparent = ##t
 	\set Score.skipBars = ##t
-	\override Score.TupletBracket   #'bracket-visibility = ##f
-	\override Score.TextScript   #'font-magnification = #1.25
+	\override Score.TupletBracket.bracket-visibility = ##f
 	
 	\transposition d
 	

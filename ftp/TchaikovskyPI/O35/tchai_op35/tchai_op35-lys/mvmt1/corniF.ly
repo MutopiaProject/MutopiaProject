@@ -1,12 +1,11 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theHornsfirst = \notes \relative c' {
+theHornsfirst =  \relative c' {
 	\transposition f'
 	\clef "treble"
 	\key c \major	
 	
-	\override Staff.TupletBracket   #'bracket-visibility = ##f
-	\override Staff.TextScript   #'font-magnification = #1.25
+	\override Staff.TupletBracket.bracket-visibility = ##f
 	
 	r1
 	
@@ -83,23 +82,23 @@ theHornsfirst = \notes \relative c' {
 	
 	%%% DOUBLE BAR %%%
 	
-	< e b' >8\ff \times 2/3 { < e e' >16[ < e e' > < e e' >] } < e e' >8[ < e e' >] < e e' >[ < e e' > < e e' > < e e' >]
-	< dsharp dsharp' >8[ \times 2/3 { < dsharp dsharp' >16 < dsharp dsharp' > < dsharp dsharp' >] } < dsharp dsharp' >8[ < d d' >]
+	< e b' >8\ff \tuplet 3/2 { < e e' >16[ < e e' > < e e' >] } < e e' >8[ < e e' >] < e e' >[ < e e' > < e e' > < e e' >]
+	< dsharp dsharp' >8[ \tuplet 3/2 { < dsharp dsharp' >16 < dsharp dsharp' > < dsharp dsharp' >] } < dsharp dsharp' >8[ < d d' >]
 		< dsharp dsharp' >[ < dsharp dsharp' >] r < esharp esharp' >
-	< fsharp fsharp' >[ \times 2/3 { < fsharp fsharp' >16 < fsharp fsharp' > < fsharp fsharp' >] }
+	< fsharp fsharp' >[ \tuplet 3/2 { < fsharp fsharp' >16 < fsharp fsharp' > < fsharp fsharp' >] }
 		< fsharp fsharp' >8[ < fsharp fsharp' >] < fsharp fsharp' >[ < fsharp fsharp' >] < fsharp fsharp' >[ < fsharp fsharp' >]
-	< esharp esharp' >8[ \times 2/3 { < esharp esharp' >16 < esharp esharp' > < esharp esharp' >] } < esharp esharp' >8[ < e e' >]
+	< esharp esharp' >8[ \tuplet 3/2 { < esharp esharp' >16 < esharp esharp' > < esharp esharp' >] } < esharp esharp' >8[ < e e' >]
 		< esharp esharp' >[ < esharp esharp' >] r < esharp esharp' >
 	< e! e'! > r r4 < e e' >8 r r4
 	< a fsharp' >8 r r4 < gsharp csharp >8 r r4
 	< fsharp csharp' >8 r r4 < fsharp csharp' >8 r < gsharp dsharp' > r
 	< fsharp csharp' >8 r r4 < fsharp csharp' >8 r < fsharp fsharp' > r
-	< e b' >8\ff \times 2/3 { < e e' >16[ < e e' > < e e' >] } < e e' >8[ < e e' >] < e e' >[ < e e' > < e e' > < e e' >]
-	< dsharp dsharp' >8[ \times 2/3 { < dsharp dsharp' >16 < dsharp dsharp' > < dsharp dsharp' >] } < dsharp dsharp' >8[ < d d' >]
+	< e b' >8\ff \tuplet 3/2 { < e e' >16[ < e e' > < e e' >] } < e e' >8[ < e e' >] < e e' >[ < e e' > < e e' > < e e' >]
+	< dsharp dsharp' >8[ \tuplet 3/2 { < dsharp dsharp' >16 < dsharp dsharp' > < dsharp dsharp' >] } < dsharp dsharp' >8[ < d d' >]
 		< dsharp dsharp' >[ < dsharp dsharp' >] r < esharp esharp' >
-	< fsharp fsharp' >[ \times 2/3 { < fsharp fsharp' >16 < fsharp fsharp' > < fsharp fsharp' >] }
+	< fsharp fsharp' >[ \tuplet 3/2 { < fsharp fsharp' >16 < fsharp fsharp' > < fsharp fsharp' >] }
 		< fsharp fsharp' >8[ < fsharp fsharp' >] < fsharp fsharp' >[ < fsharp fsharp' >] < fsharp fsharp' >[ < fsharp fsharp' >]
-	< esharp esharp' >8[ \times 2/3 { < esharp esharp' >16 < esharp esharp' > < esharp esharp' >] } < esharp esharp' >8[ < e e' >]
+	< esharp esharp' >8[ \tuplet 3/2 { < esharp esharp' >16 < esharp esharp' > < esharp esharp' >] } < esharp esharp' >8[ < e e' >]
 		< esharp esharp' >[ < esharp esharp' >] r < esharp esharp' >
 	< e! e'! > r r4 < e e' >8 r r4
 	< a fsharp' >8 r r4 < gsharp csharp >8 r r4
@@ -130,12 +129,12 @@ theHornsfirst = \notes \relative c' {
 	r2 < a fsharp' >
 	< a fsharp' >\< < a fsharp' >
 	< b fsharp' >\! < c f >4 < eflat c' >
-	<< { c'8[ \times 2/3 { e16 e e] } } \\ { e,!8\ff[ \times 2/3 { e16 e e] } } >>
+	<< { c'8[ \tuplet 3/2 { e16 e e] } } \\ { e,!8\ff[ \tuplet 3/2 { e16 e e] } } >>
 		< e e' >8[ < e e' >] < e e' >[ < e e' >] < e e' >[ < e e' >]
-	< d d' >[ \times 2/3 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < csharp csharp' >]
+	< d d' >[ \tuplet 3/2 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < csharp csharp' >]
 		< d d' >[ < d d' >] r < e e' >
-	r8 \times 2/3 { < f f' >16[ < f f' > < f f' >] } < f f' >8[ < f f' >] < f f' >[ < f f' >] < f f' >[ < f f' >]
-	< e e' >8[ \times 2/3 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < dsharp dsharp' >] < e e' >[ < e e' >] r < e e' >
+	r8 \tuplet 3/2 { < f f' >16[ < f f' > < f f' >] } < f f' >8[ < f f' >] < f f' >[ < f f' >] < f f' >[ < f f' >]
+	< e e' >8[ \tuplet 3/2 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < dsharp dsharp' >] < e e' >[ < e e' >] r < e e' >
 	< f! f'! > r r4 < g g' >8 r r4
 	< f f' >8 r r4 < e e' >8 r r4
 	< f f' >8 r < f f' > r < bflat g' > r < a d > r
@@ -184,8 +183,8 @@ theHornsfirst = \notes \relative c' {
 	
 	R1*2
 	
-	r2^\markup {I.II.} r4 \times 2/3 { < a' csharp >8\f[ < a csharp > < a csharp >] }
-	r2 r4 \times 2/3 { < a csharp >8[ < a csharp > < a csharp >] }
+	r2^\markup {I.II.} r4 \tuplet 3/2 { < a' csharp >8\f[ < a csharp > < a csharp >] }
+	r2 r4 \tuplet 3/2 { < a csharp >8[ < a csharp > < a csharp >] }
 	r8 < asharp csharp > r4 r8 < b e > r4
 	r8 < a! c! > r4 r8 < g c > r4
 	r8 < f c' >4->\pp < f c' >8 r < fsharp b >4-> < fsharp b >8

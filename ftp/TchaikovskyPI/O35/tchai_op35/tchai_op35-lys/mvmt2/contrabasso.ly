@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theBass = \notes \relative d {
+theBass =  \relative d {
 	\clef "bass"
 	\key g \minor
 	
@@ -27,7 +27,7 @@ theBass = \notes \relative d {
 	R1*3/4*9
 	
 	aflat2._\markup { \italic piu \dynamic f }
-	<< { \stemDown eflat2. \stemBoth } \\ { s4.\> s4 s8\! } >>
+	<< { eflat2. } { s4.\> s4 s8\! } >>
 	f4\p eflat d
 	f eflat d
 	c\< bflat a\!

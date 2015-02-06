@@ -1,6 +1,6 @@
-\version "2.2.0"
+\version "2.18.0"
 
-theTrumpets = \notes \relative d' {
+theTrumpets =  \relative d' {
 	\clef "treble"
 	\time 4/4
 	\key c \major
@@ -12,7 +12,7 @@ theTrumpets = \notes \relative d' {
 	R1*12
 	
 	<< { g4\mf } \\ { g4 } >> r4 r2
-	<< { c4 } \\ { \stemUp eflat,4 } >> r4 r2
+	< c eflat, >4 r4 r2
 	< a c >4\f r r2
 	< a c >4 r r2
 	< a c >4\ff r < a c > r
@@ -33,25 +33,25 @@ theTrumpets = \notes \relative d' {
 	
 	R1*4
 	
-	< g b >8\ff[ \times 2/3 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
+	< g b >8\ff[ \tuplet 3/2 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
 		< d d' >[ < d d' > < d d' > < d d' >]
-	< d d' >[ \times 2/3 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
+	< d d' >[ \tuplet 3/2 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
 		< d d' >[ < d d' >] r < e e' >
-	< e e' >[ \times 2/3 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
+	< e e' >[ \tuplet 3/2 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
 		< e e' >[ < e e' >] < e e' >[ < e e' >]
-	< e e' >[ \times 2/3 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
+	< e e' >[ \tuplet 3/2 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
 		< e e' >[ < e e' >] r < e e' >
 	< e e' > r r4 < d d' >8 r r4
 	< e c' >8 r r4 < e b' >8 r r4
 	< a e' >8 r r4 < a e' >8 r < b dsharp > r
 	< a e' > r r4 < a e' >8 r < d, d' > r
-	< g b >8\ff[ \times 2/3 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
+	< g b >8\ff[ \tuplet 3/2 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
 		< d d' >[ < d d' > < d d' > < d d' >]
-	< d d' >[ \times 2/3 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
+	< d d' >[ \tuplet 3/2 { < d d' >16 < d d' > < d d' >] } < d d' >8[ < d d' >]
 		< d d' >[ < d d' >] r < e e' >
-	< e e' >[ \times 2/3 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
+	< e e' >[ \tuplet 3/2 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
 		< e e' >[ < e e' >] < e e' >[ < e e' >]
-	< e e' >[ \times 2/3 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
+	< e e' >[ \tuplet 3/2 { < e e' >16 < e e' > < e e' >] } < e e' >8[ < e e' >]
 		< e e' >[ < e e' >] r < e e' >
 	< e e' > r r4 < d d' >8 r r4
 	< e c' >8 r r4 < e b' >8 r r4
@@ -66,14 +66,14 @@ theTrumpets = \notes \relative d' {
 	
 	R1*34
 	
-	< bflat, bflat' >8\ff[ \times 2/3 { < bflat bflat' >16 < bflat bflat' > < bflat bflat' >] }
+	< bflat, bflat' >8\ff[ \tuplet 3/2 { < bflat bflat' >16 < bflat bflat' > < bflat bflat' >] }
 		< bflat bflat' >8 < bflat bflat' > < bflat bflat' > < bflat bflat' >
 		< bflat bflat' > < bflat bflat' >
-	< bflat bflat' >8[ \times 2/3 { < bflat bflat' >16 < bflat bflat' > < bflat bflat' >] }
+	< bflat bflat' >8[ \tuplet 3/2 { < bflat bflat' >16 < bflat bflat' > < bflat bflat' >] }
 		< bflat bflat' >8 < bflat bflat' > < bflat bflat' > < bflat bflat' > r < c c' >
-	< c c' >8[ \times 2/3 { < c c' >16 < c c' > < c c' >] } < c c' >8 < c c' >
+	< c c' >8[ \tuplet 3/2 { < c c' >16 < c c' > < c c' >] } < c c' >8 < c c' >
 		< c c' > < c c' > < c c' > < c c' >
-	< c c' >8[ \times 2/3 { < c c' >16 < c c' > < c c' >] } < c c' >8
+	< c c' >8[ \tuplet 3/2 { < c c' >16 < c c' > < c c' >] } < c c' >8
 		< c c' > < c c' > < c c' > r < c c' >
 	< c c' > r r4 < bflat bflat' >8 r r4
 	< c c' >8 r r4 < g' c >8 r r4

@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theCellos = \notes \relative c {
+theCellos =  \relative c {
 	\clef "bass"
 	\key d \major
 	

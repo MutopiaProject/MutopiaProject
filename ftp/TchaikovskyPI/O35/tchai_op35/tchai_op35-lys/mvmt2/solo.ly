@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theSolo = \notes \relative d' {
+theSolo =  \relative d' {
 	\clef "treble"
 	\key g \minor
 	
@@ -10,7 +10,7 @@ theSolo = \notes \relative d' {
 	r4 r d_\markup { \dynamic p \italic {molto espress.}}^\markup {con sordino}
 	\noDynamic g4.\p a8-.[ bflat-. c-.]
 	d4--~ d-- d--
-	d2\trill^\( \times 4/5 { d32[( eflat d csharp d) } f16 eflat]^\)
+	d2\trill^\( \tuplet 5/4 { d32[( eflat d csharp d) } f16 eflat]^\)
 	d2( d,4)
 	g4. a8[( bflat c])
 	d4--( d-- d--)
@@ -18,7 +18,7 @@ theSolo = \notes \relative d' {
 	fsharp16[( eflat d8]~ d4) d
 	g4. a8[( bflat c])
 	d4-- d-- d--
-	d2\trill^\( \times 4/5 { d32[( eflat d csharp d) } f16 eflat]^\)
+	d2\trill^\( \tuplet 5/4 { d32[( eflat d csharp d) } f16 eflat]^\)
 	d2( d,4)
 	g4. a8[( bflat c])
 	d4--~\< d-- d--\!
@@ -39,9 +39,9 @@ theSolo = \notes \relative d' {
 	f\p[( g] bflat,4.) eflat8(
 	f[ g] bflat,)[ b( d c])
 	f,4.( fsharp8 g4)
-	aflat4~ \times 2/3 { aflat8[ bflat c] } \times 2/3 { d[ eflat f] }
+	aflat4~ \tuplet 3/2 { aflat8[ bflat c] } \tuplet 3/2 { d[ eflat f] }
 	g8\f[( eflat]) bflat4. c'8(
-	bflat8[ g] \times 2/3 { e)[ c-- d--] } \times 2/3 { eflat--[ f-- g--] }
+	bflat8[ g] \tuplet 3/2 { e)[ c-- d--] } \tuplet 3/2 { eflat--[ f-- g--] }
 	aflat4_\markup { \italic piu \dynamic f } g8--[ f-- eflat( d])
 	f[( d) bflat( dflat) c g--]
 	aflat[(\> cflat) bflat-- f-- g( bflat])\!
@@ -55,21 +55,21 @@ theSolo = \notes \relative d' {
 	bflat-.[ aflat-. g( bflat eflat, e])
 	f[( eflat! d) c( b c]
 	eflat)[ c,-.( d-. eflat-. f-. fsharp-.])
-	\times 2/3 { g-.\p[\< g,-. b-.] } \times 2/3 { d[ g b]^(\!\> } \times 2/3 { eflat![ d bflat]^)\! }
-	\times 2/3 { r8 aflat,-.[\< c-.] } \times 2/3 { f-.[ aflat-. c-.]^(\!\> } \times 2/3 { f[ eflat bflat!])\! }
-	\override TupletBracket   #'transparent = ##t
-	\times 2/3 { r eflat8[( d] c[ d eflat]) a[( g aflat]) }
-	\times 2/3 { bflat[( g eflat] c)[ bflat g] eflat[( bflat g]) }
-	\times 2/3 { aflat--[_\cr bflat-- b--] c--[ d-- eflat--] f--[ g-- aflat--] }
-	\times 2/3 { c--[ b-- c--] c--[ d-- eflat--] f--[ g-- aflat--] }
-	\times 2/3 { c--[ d-- eflat--] eflat,[( fsharp g] a)[ a, a']~ }
-	\times 2/3 { a[ bflat( a] fsharp[ d c]) a[( fsharp a]) }
+	\tuplet 3/2 { g-.\p[\< g,-. b-.] } \tuplet 3/2 { d[ g b]^(\!\> } \tuplet 3/2 { eflat![ d bflat]^)\! }
+	\tuplet 3/2 { r8 aflat,-.[\< c-.] } \tuplet 3/2 { f-.[ aflat-. c-.]^(\!\> } \tuplet 3/2 { f[ eflat bflat!])\! }
+	\override TupletBracket.transparent = ##t
+	\tuplet 3/2 { r eflat8[( d] c[ d eflat]) a[( g aflat]) }
+	\tuplet 3/2 { bflat[( g eflat] c)[ bflat g] eflat[( bflat g]) }
+	\tuplet 3/2 { aflat--[_\cr bflat-- b--] c--[ d-- eflat--] f--[ g-- aflat--] }
+	\tuplet 3/2 { c--[ b-- c--] c--[ d-- eflat--] f--[ g-- aflat--] }
+	\tuplet 3/2 { c--[ d-- eflat--] eflat,[( fsharp g] a)[ a, a']~ }
+	\tuplet 3/2 { a[ bflat( a] fsharp[ d c]) a[( fsharp a]) }
 	
-	\override TupletBracket   #'transparent = ##f
+	\override TupletBracket.transparent = ##f
 	d,8 r r4 d\p
 	g4. a8[( bflat c])
-	d-.[( d-.]) \times 2/3 { d-.[( d-. d-.] } \times 2/3 { d-.[ d-. d-.]) }
-	d2\trill^\( \times 4/5 { d32[( eflat d csharp d) } f16 eflat]^\)
+	d-.[( d-.]) \tuplet 3/2 { d-.[( d-. d-.] } \tuplet 3/2 { d-.[ d-. d-.]) }
+	d2\trill^\( \tuplet 5/4 { d32[( eflat d csharp d) } f16 eflat]^\)
 	d2( d,4)
 	g4. a8[( bflat c])
 	d[( d,~ d d' d, d'])
@@ -77,7 +77,7 @@ theSolo = \notes \relative d' {
 	fsharp16[( eflat d8]~ d4) d
 	g4. a8[( bflat c])
 	d4-- d-- d--
-	d2\trill^\( \times 4/5 { d32[( eflat d csharp d) } f16 eflat]^\)
+	d2\trill^\( \tuplet 5/4 { d32[( eflat d csharp d) } f16 eflat]^\)
 	d2( d,4) g4. a8[( bflat c])
 	d4 d d
 	eflat^\trill \grace { d16[ eflat] } f4_\cr fsharp\trill \bar "" \grace { e16[ f] } \bar "|"
@@ -91,16 +91,8 @@ theSolo = \notes \relative d' {
 	csharp[ d) a( bflat]^\< fsharp[ g)^\! csharp,( d] eflat[ d bflat a])
 	g8[( bflat) eflat-- g-- a-- bflat--]
 	
-	%%% some trill spanner nonsense %%%
-    \override TextSpanner  #'style = #'trill
-    \override TextSpanner  #'edge-height = #'(0 . 0)
-    \override TextSpanner  #'edge-text
-   % \override TextSpanner  #'staff-padding = #'2.5
-  	= #(cons (make-musicglyph-markup "scripts-trill")  "")
-  	%%% end trill spanner nonsense %%%
-  	
-	csharp2.~\>\startTextSpan
-	csharp!\fermata \bar "" \grace { b16[(\!\stopTextSpan csharp]) } \bar "|"
+	csharp2.~\>\startTrillSpan
+	csharp!\fermata \bar "" \grace { b16[(\!\stopTrillSpan csharp]) } \bar "|"
 	d8 r r4 r
 	
 	R1*3/4*23

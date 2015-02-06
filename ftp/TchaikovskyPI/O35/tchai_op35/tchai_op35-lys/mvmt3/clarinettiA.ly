@@ -1,6 +1,6 @@
-\version "2.2.2"
+\version "2.18.0"
 
-theClarinets = \notes \relative a' {
+theClarinets =  \relative a' {
 	\transposition a
 	
 	\clef "treble"
@@ -57,7 +57,7 @@ theClarinets = \notes \relative a' {
 	
 	R1*2/4*16
 	
-	\key c \major
+%	\key c \major
 	
 	< c' g' >8 r r4
 	
@@ -90,7 +90,7 @@ theClarinets = \notes \relative a' {
 	<< { \grace { c16[ d] } c8[( b] a) r } \\ { R1*2/4 } >>
 	
 	R1*2/4*38
-	\key f \major
+%	\key f \major
 	R1*2/4*4
 	
 	< d, a' >16\f r r8 r4
@@ -157,7 +157,7 @@ theClarinets = \notes \relative a' {
 	
 	R1*2/4*15
 	
-	\key bflat \major
+%	\key bflat \major
 	
 	< d bflat' >8\ff r r4
 	
@@ -200,7 +200,7 @@ theClarinets = \notes \relative a' {
 	< eflat c' >) r
 	
 	R1*2/4*11
-	\key f \major
+%	\key f \major
 	R1*2/4*4
 	
 	< d' a' >16\f r r8 r4

@@ -1,8 +1,9 @@
-\version "2.2.0"
+\version "2.18.0"
 
-\include "mvmt1/cadenza.ly"
+\include "cadenza.ly"
 
-theSolo = \notes \relative d' {
+
+theSolo = \relative d' {
 	\clef "treble"
 	\key d \major
 	
@@ -13,76 +14,78 @@ theSolo = \notes \relative d' {
 	%%% SOLO %%%
 	
 	r8 a8\p( bflat4~ bflat8)[ a( csharp e])												|
-	\times 2/3 { g8[(\< a csharp] } e16[ g a csharp]\! e8)[_\cr d( csharp bflat])		|
+	\tuplet 3/2 { g8[(\< a csharp] } e16[ g a csharp]\! e8)[_\cr d( csharp bflat])		|
 	a8\f[ gsharp(_\markup { \italic rit. } a asharp])
-		b4^\markup { "" \raise #2.0 \italic ritenuto }_\markup { \italic dim. }
+		b4^\markup { \italic ritenuto }_\markup { \italic dim. }
 		\grace { a16[ b] } a8(\> gsharp												|
 	csharp,4) d8( dsharp fsharp4) \grace { e16[ fsharp] } e8( csharp\!				|
 	a8)[ gsharp( a asharp]\> b) a4\fermata g8\!
 	
 	%%% TUTTI %%%
 	
-	\appoggiatura a,8^\markup { \huge {Moderato assai.} \note #"4" #0.75 { = 80 }}
+	\set Score.tempoHideNote = ##f
+	\appoggiatura a,8 \tempo "Moderato assai." 4 = 80
 		fsharp'8 r\p fsharp2 e16[( d fsharp a]) e4.( fsharp8) e4 fsharp					|															|
+	\set Score.tempoHideNote = ##t
 	\appoggiatura b,8 g'8 r g4~( g8.[ a16]) b[( csharp d e])							|
-	a,4. \times 2/3 { b16[( d b] } a8)[^\markup { \italic dolce } b( csharp d])			|
+	a,4. \tuplet 3/2 { b16[( d b] } a8)[^\markup { \italic dolce } b( csharp d])			|
 	e8( g a,4)~ a8[ b( csharp d])														|
-	e8( g a,4)~ \times 2/3 { a8[( gsharp a]) } \times 2/3 { asharp[( gsharpsharp asharp]) } |
-	\times 2/3 { b8[( d fsharp)] } gsharp,4~ gsharp16[ dsharp( e fsharp]
+	e8( g a,4)~ \tuplet 3/2 { a8[( gsharp a]) } \tuplet 3/2 { asharp[( gsharpsharp asharp]) } |
+	\tuplet 3/2 { b8[( d fsharp)] } gsharp,4~ gsharp16[ dsharp( e fsharp]
 		gsharp[ a b e])																	|
 	e4~(\< e16[ esharp fsharp gsharp])\! a8\mf[( b16.-.) b32]( csharp,4~				|
 	csharp8[ e16-.) r32 e]( g,4~ g8[ b16-.) r32 b]( csharp,8[ g'16-.) r32 g](			|
-	b,8[_\markup { "" \raise #-2.0 \italic cresc. } e16-.) r32 e](
+	b,8[\cresc e16-.) r32 e](
 		bflat8[ csharp16-.) r32 csharp32]( a8[ bflat16-.) r32 bflat-.](\<
 		gsharp8[ bflat16-.) r32 bflat](\!												|
 	a8[ bflat16-.) r32 bflat32]( gsharp8[ bflat16-.) r32 bflat]( a8[ bflat16-.)
 		r32 bflat32]( gsharp8[\> bflat16-.) r32 bflat](									|
 	gsharp8[ a16-.) r32 bflat]( gsharp8[ a16-.)\! r32 bflat\p](
-		\times 2/3 { gsharp16[ a bflat } \times 2/3 { gsharp16 a bflat }
-		\times 2/3 { gsharp16 a bflat } \times 2/3 { gsharp16 a bflat]) }							|
-	\times 2/3 { gsharp16[(\< a bflat } \times 2/3 { b16 bsharp csharp] }
-		\times 2/3 { d16[ dsharp e } \times 2/3 { esharp16 fsharp g] }
-		\times 2/3 { gsharp16[ a bflat } \times 2/3 { b16 c csharp]\! } d16[ dsharp e esharp]) |
+		\tuplet 3/2 { gsharp16[ a bflat } \tuplet 3/2 { gsharp16 a bflat }
+		\tuplet 3/2 { gsharp16 a bflat } \tuplet 3/2 { gsharp16 a bflat]) }							|
+	\tuplet 3/2 { gsharp16[(\< a bflat } \tuplet 3/2 { b16 bsharp csharp] }
+		\tuplet 3/2 { d16[ dsharp e } \tuplet 3/2 { esharp16 fsharp g] }
+		\tuplet 3/2 { gsharp16[ a bflat } \tuplet 3/2 { b16 c csharp]\! } d16[ dsharp e esharp]) |
 	< d, a' fsharp' >8 r < d a' fsharp' >2\downbow \grace { e'16[ fsharp] } e16[( d fsharp a])
-	\appoggiatura a,8 < csharp e >4.( < d fsharp >8) \times 2/3 { < csharp e >(
+	\appoggiatura a,8 < csharp e >4.( < d fsharp >8) \tuplet 3/2 { < csharp e >(
 		< bsharp dsharp > < csharp e >) }
-		<< { \times 2/3 { fsharp8( e fsharp) } } \\ { < d,! c' >8 r } >>
+		<< { \tuplet 3/2 { fsharp8( e fsharp) } } \\ { < d,! c' >8 r } >>
 	< d b' g' >8 r < d b' g' >4\downbow(\( < b' g' >8.[\) a'16]) b16[( csharp d e)]
-	a,4.( \times 2/3 { b16[ d b] } a8)[ b( csharp d)]
+	a,4.( \tuplet 3/2 { b16[ d b] } a8)[ b( csharp d)]
 	e8( g a,4~ a8)[_\cr b( csharp d])
 	e8( g a,4~\< a16[ asharp) b--( csharp--] d--[ e-- f-- fsharp--])\!
 	gsharp8\f[( a16-.) r32 a]( a,8[ fsharp'16-.) r32 fsharp]( gsharp,8[ csharp16-.) r32 csharp](
 		d,8[ b'16-.) r32 b](
 	csharp,8[ a'16-.) r32 a]( a,8[ e'16-.)_\markup { \italic dim. } r32 e](
 		fsharp,8[ csharp'16-.) r32 csharp]( e,8[ a16-.) r32 a](
-	csharp,8[^\markup { \huge {Ben sostenuto il tempo.}} fsharp16-.) r32 fsharp]( e8[ fsharp16-.) r32 fsharp]( csharp8[ fsharp16-.) r32 fsharp](
+	csharp,8[\tempo "Ben sostenuto il tempo." fsharp16-.) r32 fsharp]( e8[ fsharp16-.) r32 fsharp]( csharp8[ fsharp16-.) r32 fsharp](
 		e8[ fsharp16-.) r32 fsharp](
 	e8[ g16-.) r32 g]( csharp,8[ e16-.) r32 e]( b8[ e16-.) r32 e](
 		csharp8[ a'16-.) r32 a](
-	\times 2/3 { d,16[ fsharp a] } \times 2/3 { b8[ csharp16]) } \times 2/3 { fsharp,16[( a b] }
-		\times 2/3 { csharp8[ d16]) } \times 2/3 { a16[( d e] } \times 2/3 { esharp8[ fsharp16]) }
-		\times 2/3 { b16[( a fsharp] } \times 2/3 { d[ a fsharp]) }
+	\tuplet 3/2 { d,16[ fsharp a] } \tuplet 3/2 { b8[ csharp16]) } \tuplet 3/2 { fsharp,16[( a b] }
+		\tuplet 3/2 { csharp8[ d16]) } \tuplet 3/2 { a16[( d e] } \tuplet 3/2 { esharp8[ fsharp16]) }
+		\tuplet 3/2 { b16[( a fsharp] } \tuplet 3/2 { d[ a fsharp]) }
 	e8\f[( g16-.) r32 g]( csharp,8[ e16-.) r32 e]( b8[ e16-.) r32 e](
 		csharp8[ a'16-.) r32 a](
-	\times 2/3 { d,16[ fsharp a] } \times 2/3 { b8[ csharp16]) } \times 2/3 { fsharp,16[( a b] }
-		\times 2/3 { csharp8[ d16]) } \times 2/3 { a16[( d e] } \times 2/3 { esharp8[ fsharp16]) }
-		\times 2/3 { b16[( a fsharp] } \times 2/3 { d[ a fsharp]) }
+	\tuplet 3/2 { d,16[ fsharp a] } \tuplet 3/2 { b8[ csharp16]) } \tuplet 3/2 { fsharp,16[( a b] }
+		\tuplet 3/2 { csharp8[ d16]) } \tuplet 3/2 { a16[( d e] } \tuplet 3/2 { esharp8[ fsharp16]) }
+		\tuplet 3/2 { b16[( a fsharp] } \tuplet 3/2 { d[ a fsharp]) }
 	fsharp8\f[( g16-.) r32 g]( fsharp8[ gsharp16-.) r32 gsharp](
-		\times 2/3 { fsharp16[ asharp16 csharp] } \times 2/3 { e16[ esharp fsharp]) }
-		\times 2/3 { asharp,!16[( b d] } \times 2/3 { fsharp16[ asharp b]) }
-	b,8[( c16-.) r32 c]( b8[ csharp16-.) r32 csharp]( \times 2/3 { b16[ dsharp fsharp }
-		\times 2/3 { a! asharp b]) } \times 2/3 { dsharp,![( e g } \times 2/3 { b dsharp e]) }
-	\times 2/3 { e,[( fsharpsharp gsharp } \times 2/3 { b dsharp e]) }
-		\times 2/3 { e,[( gsharp a } \times 2/3 { c dsharp e]) }
-		\times 2/3 { gsharp,[( b dsharp } \times 2/3 { e fsharpsharp gsharp]) }
-		\times 2/3 { a,[( c! dsharp } \times 2/3 { e gsharp a]) }
-	\times 2/3 { \noDynamic bflat-.\ff[ d,( eflat } \times 2/3 { f) bflat,( csharp!] }
-		\times 2/3 { d)[ f,( a } \times 2/3 { bflat!) d,( eflat] }
-		\times 2/3 { f!)[ bflat,( csharp! } \times 2/3 { d) f,( a] }
-		\times 2/3 { bflat!)[ bflat,( csharp! } \times 2/3 { d) f( bflat] }
-	\times 2/3 { b!)[ f( g } \times 2/3 { aflat) aflat( b] } \times 2/3 { f')[ f( g }
-		\times 2/3 { aflat) aflat( b!] } \times 2/3 { f')[ aflat,( b } \times 2/3 { f') b,( f'] }
-		\times 2/3 { aflat)[ f( aflat } \times 2/3 { b!) aflat( b] }
+		\tuplet 3/2 { fsharp16[ asharp16 csharp] } \tuplet 3/2 { e16[ esharp fsharp]) }
+		\tuplet 3/2 { asharp,!16[( b d] } \tuplet 3/2 { fsharp16[ asharp b]) }
+	b,8[( c16-.) r32 c]( b8[ csharp16-.) r32 csharp]( \tuplet 3/2 { b16[ dsharp fsharp }
+		\tuplet 3/2 { a! asharp b]) } \tuplet 3/2 { dsharp,![( e g } \tuplet 3/2 { b dsharp e]) }
+	\tuplet 3/2 { e,[( fsharpsharp gsharp } \tuplet 3/2 { b dsharp e]) }
+		\tuplet 3/2 { e,[( gsharp a } \tuplet 3/2 { c dsharp e]) }
+		\tuplet 3/2 { gsharp,[( b dsharp } \tuplet 3/2 { e fsharpsharp gsharp]) }
+		\tuplet 3/2 { a,[( c! dsharp } \tuplet 3/2 { e gsharp a]) }
+	\tuplet 3/2 { \noDynamic bflat-.\ff[ d,( eflat } \tuplet 3/2 { f) bflat,( csharp!] }
+		\tuplet 3/2 { d)[ f,( a } \tuplet 3/2 { bflat!) d,( eflat] }
+		\tuplet 3/2 { f!)[ bflat,( csharp! } \tuplet 3/2 { d) f,( a] }
+		\tuplet 3/2 { bflat!)[ bflat,( csharp! } \tuplet 3/2 { d) f( bflat] }
+	\tuplet 3/2 { b!)[ f( g } \tuplet 3/2 { aflat) aflat( b] } \tuplet 3/2 { f')[ f( g }
+		\tuplet 3/2 { aflat) aflat( b!] } \tuplet 3/2 { f')[ aflat,( b } \tuplet 3/2 { f') b,( f'] }
+		\tuplet 3/2 { aflat)[ f( aflat } \tuplet 3/2 { b!) aflat( b] }
 	c8) r r4 c,,,32[( e fsharp! g a! bflat b c] dsharp[ e fsharp! g gsharp a bflat b])
 	c8 r r4 c,,32[( e fsharp! g a! bflat b c] dsharp[ e fsharp! g gsharp a bflat b])
 	c8 r8 d,,32[( fsharp a d) d( fsharp a d]) d8 r e,,32[( gsharp d' e) e( gsharp d' e])
@@ -99,31 +102,31 @@ theSolo = \notes \relative d' {
 	e8_\markup { \italic dim. } f4 e8~\> e f4(\! fsharp8\p)
 	a4(_\markup { \italic {con molto espr.} } gsharp) b16[( a gsharp b] a4)
 	b4( asharp4) csharp16[( b asharp csharp] b4)
-	\times 2/3 { csharp8[(\< d e] } \times 2/3 { fsharp[ g! fsharp])\! } fsharp8(\> b4 fsharp8)\!
+	\tuplet 3/2 { csharp8[(\< d e] } \tuplet 3/2 { fsharp[ g! fsharp])\! } fsharp8(\> b4 fsharp8)\!
 	
-	\override TupletBracket   #'transparent = ##t
-	\grace { e16[ fsharp] } \times 2/3 { e8[(\< dsharp-. e-.] } \times 2/3 { g[-. fsharp-. e-.])\! }
+	\override TupletBracket.transparent = ##t
+	\grace { e16[ fsharp] } \tuplet 3/2 { e8[(\< dsharp-. e-.] } \tuplet 3/2 { g[-. fsharp-. e-.])\! }
 		fsharp8(\> b4 fsharp8)\!
-	\grace { f16[ g] } \times 2/3 { f8[( e f] } \times 2/3 { a)[ a,-. b-.] } bsharp-.[ csharp]~
-		\times 2/3 { csharp[ csharp,-.( d-.]) }
-	dsharp8(^\< e~ \times 2/3 { e)[ esharp-.( fsharp-.] } \times 2/3 { fsharpsharp-.[ gsharp-. a-.])^\! }
-		\times 2/3 { asharp[(^\> csharp b])^\! }
+	\grace { f16[ g] } \tuplet 3/2 { f8[( e f] } \tuplet 3/2 { a)[ a,-. b-.] } bsharp-.[ csharp]~
+		\tuplet 3/2 { csharp[ csharp,-.( d-.]) }
+	dsharp8(^\< e~ \tuplet 3/2 { e)[ esharp-.( fsharp-.] } \tuplet 3/2 { fsharpsharp-.[ gsharp-. a-.])^\! }
+		\tuplet 3/2 { asharp[(^\> csharp b])^\! }
 	a!4( gsharp) b16[( a gsharp b] a4)
 	b4( asharp4) csharp16[( b asharp csharp] b4)
-	\times 2/3 { csharp8[(_\markup { \italic {poco cresc.}} d e] } \times 2/3 { fsharp[ g! fsharp]) } fsharp8( b4-> fsharp8)
-	\times 2/3 { f[( gsharp a!] } \times 2/3 { b)[ csharp-. b-.] } b-. e4--~ e8--
-	\times 2/3 { fsharp!8\f[ e d] csharp[ d e] g![ fsharp e] d[ csharp b] }
-	\grace { a16[ b] } \times 2/3 { a8[ gsharp( a] c)[ a,( b] csharp!)[ csharp,!( d] e)[\> a8.( a,16)]\! }
+	\tuplet 3/2 { csharp8[(_\markup { \italic {poco cresc.}} d e] } \tuplet 3/2 { fsharp[ g! fsharp]) } fsharp8( b4-> fsharp8)
+	\tuplet 3/2 { f[( gsharp a!] } \tuplet 3/2 { b)[ csharp-. b-.] } b-. e4--~ e8--
+	\tuplet 3/2 { fsharp!8\f[ e d] csharp[ d e] g![ fsharp e] d[ csharp b] }
+	\grace { a16[ b] } \tuplet 3/2 { a8[ gsharp( a] c)[ a,( b] csharp!)[ csharp,!( d] e)[\> a8.( a,16)]\! }
 	a4( gsharp) b16[( a gsharp b] a4)
 	b4( asharp4) csharp16[( b asharp csharp] b4)
-	\times 2/3 { csharp8[( d e] fsharp)[ g8.( fsharp16]) } fsharp8 b4(_> fsharp8)
-	\times 2/3 { b8[( csharp d]) d[( e fsharp]) fsharp-.[ d,-. fsharp'->]~( fsharp[ e d]) }
-	\times 2/3 { csharp[( d e]) e[( fsharp g]) g-.[ e,-. g'->]~( g[_\markup { "" \raise #-2.5 \italic {poco a poco cresc.} } fsharp e]) }
-	\times 2/3 { gsharp-.[ f,-. gsharp'-.]~( gsharp[ g f]) a-.[ fsharp, a'](~ a[ gsharp fsharp]) }
-	\times 2/3 { bflat[( a g!]) b[( asharp gsharp]) csharp[( b asharp]) d[( csharp b]) }
-	\times 2/3 { e8[(\< dsharp csharp]) e[( dsharp csharp]) e16[( dsharp csharp) e( dsharp csharp) e( dsharp csharp) bsharp( csharp e)]\! }
-	f4\f( e) g16[( f e g] \times 2/3 { fsharp8)[ aflat( g] }
-	\times 2/3 { eflat)[ g( f] } \times 2/3 { d)[ f( eflat] } \times 2/3 { c)[ e( d] } \times 2/3 { bflat)[ d( c]) }
+	\tuplet 3/2 { csharp8[( d e] fsharp)[ g8.( fsharp16]) } fsharp8 b4(_> fsharp8)
+	\tuplet 3/2 { b8[( csharp d]) d[( e fsharp]) fsharp-.[ d,-. fsharp'->]~( fsharp[ e d]) }
+	\tuplet 3/2 { csharp[( d e]) e[( fsharp g]) g-.[ e,-. g'->]~( g[_\markup { "" \raise #-2.5 \italic {poco a poco cresc.} } fsharp e]) }
+	\tuplet 3/2 { gsharp-.[ f,-. gsharp'-.]~( gsharp[ g f]) a-.[ fsharp, a'](~ a[ gsharp fsharp]) }
+	\tuplet 3/2 { bflat[( a g!]) b[( asharp gsharp]) csharp[( b asharp]) d[( csharp b]) }
+	\tuplet 3/2 { e8[(\< dsharp csharp]) e[( dsharp csharp]) e16[( dsharp csharp) e( dsharp csharp) e( dsharp csharp) bsharp( csharp e)]\! }
+	f4\f( e) g16[( f e g] \tuplet 3/2 { fsharp8)[ aflat( g] }
+	\tuplet 3/2 { eflat)[ g( f] } \tuplet 3/2 { d)[ f( eflat] } \tuplet 3/2 { c)[ e( d] } \tuplet 3/2 { bflat)[ d( c]) }
 	f4( e!) g16[( f e g] f)[ f( aflat g]
 	eflat)[ eflat( g f] d)[ d( f eflat] c)[ c( eflat d] bflat)[ bflat( d c])
 	bflat4( a) c16[( bflat a c] bflat)[ bflat( d bflat])
@@ -131,80 +134,74 @@ theSolo = \notes \relative d' {
 	gsharp4 fsharp16[( gsharp a fsharp]) fsharp[( e dsharp fsharp] e)[ csharp( bsharp d]
 	csharp)[ a( gsharp b] a)[ e( dsharp fsharp] e)[ csharp( bsharp d] csharp)[ a( gsharp b]
 	
-	\override TupletBracket   #'transparent = ##f
-	a8->\ff)[\< b32( csharp d e] \times 8/11 { fsharp[ gsharp a b csharp d e fsharp gsharp a b])\! }
-		\times 2/3 { csharp8->[ d-> e->] } r4
-	a,,,8->[ b32( csharp d e] \times 8/11 { fsharp[ gsharp a b csharp d e fsharp gsharp a b]) }
-		\times 2/3 { csharp8->[ d-> e->] } r4
-	\times 4/5 { e,,32[( fsharp gsharp a b] } \times 4/7 { csharp[ dsharp e fsharp gsharp a b]) }
-		\times 2/3 { csharp8->[ dsharp-> e->] } \times 4/5 { e,,32[( fsharp gsharp a b] }
-		\times 4/7 { csharp[ dsharp e fsharp gsharp! a asharp] } \times 2/3 { b8->)[ dsharp!-> e->] }
-	\times 4/5 { e,,32[( fsharp gsharp a b] } \times 4/7 { c[ d! e fsharp gsharp a b]) }
-		\times 2/3 { c8->[ dsharp-> e->] } \times 4/5 { e,,32[( fsharp! gsharp! a b] }
-		\times 4/7 { c![ d e f g a b] } \times 2/3 { c!8->)[ dsharp!-> e->] }
-	\stemDown f16:32[^\fff \stemBoth c,,: d!: e:] f:[ g: a: c:] b:[ fsharp: b: fsharp':] b:[ csharp!: dsharp: f:]
+	\override TupletBracket.transparent = ##f
+	a8->\ff)[\< b32( csharp d e] \tuplet 11/8 { fsharp[ gsharp a b csharp d e fsharp gsharp a b])\! }
+		\tuplet 3/2 { csharp8->[ d-> e->] } r4
+	a,,,8->[ b32( csharp d e] \tuplet 11/8 { fsharp[ gsharp a b csharp d e fsharp gsharp a b]) }
+		\tuplet 3/2 { csharp8->[ d-> e->] } r4
+	\tuplet 5/4 { e,,32[( fsharp gsharp a b] } \tuplet 7/4 { csharp[ dsharp e fsharp gsharp a b]) }
+		\tuplet 3/2 { csharp8->[ dsharp-> e->] } \tuplet 5/4 { e,,32[( fsharp gsharp a b] }
+		\tuplet 7/4 { csharp[ dsharp e fsharp gsharp! a asharp] } \tuplet 3/2 { b8->)[ dsharp!-> e->] }
+	\tuplet 5/4 { e,,32[( fsharp gsharp a b] } \tuplet 7/4 { c[ d! e fsharp gsharp a b]) }
+		\tuplet 3/2 { c8->[ dsharp-> e->] } \tuplet 5/4 { e,,32[( fsharp! gsharp! a b] }
+		\tuplet 7/4 { c![ d e f g a b] } \tuplet 3/2 { c!8->)[ dsharp!-> e->] }
+	\stemDown f16:32[^\fff \stemNeutral c,,: d!: e:] f:[ g: a: c:] b:[ fsharp: b: fsharp':] b:[ csharp!: dsharp: f:]
 	b:[ e,,: b: gsharp:] e:[ fsharp: gsharp: b:] a:[ e: a: e':] a:[ b: csharp: e:]
 	a-.[ a,,-. d'-. a,-.] a''-.[ a,,-. c'-. a,-.] a''-.[ d,,,-. d'-. d,-.] f32[( a d f] a[ d f a])
 	a16-.[ a,,-. d'-. a,-.] a''-.[ a,,-. c'-. a,-.] a''-.[ d,,,-. d'-. d,-.] f32[( a d f] a[ d f a])
-	\times 2/3 { r16 gsharp,,,( < f' b >) } \times 2/3 { < f b >( gsharp, < f' b >]) } \times 2/3 { r16 e[( < a e' >) }
-		\times 2/3 { < a e' >( e < a e' >]) } \times 2/3 { r16 d,[( < b' e >) } \times 2/3 { < b e >( d, < b' e >]) }
-		\times 2/3 { r16 < a, e' >( < c' a' >) } \times 2/3 { < c a' >( < a, e' > < c' a' >]) }
-	\times 2/3 { r16 b[( b') } \times 2/3 { b( b, b']) } \times 2/3 { r16 a,[( < e' csharp'! >) }
-		\times 2/3 { < e csharp' >( a, < e' csharp' >]) } \times 2/3 { r16 a,[( a') } \times 2/3 { a( a, a']) }
-		\times 2/3 { r16 a,[( a'') } \times 2/3 { a( a,, a'']) }
+	\tuplet 3/2 { r16 gsharp,,,( < f' b >) } \tuplet 3/2 { < f b >( gsharp, < f' b >]) } \tuplet 3/2 { r16 e[( < a e' >) }
+		\tuplet 3/2 { < a e' >( e < a e' >]) } \tuplet 3/2 { r16 d,[( < b' e >) } \tuplet 3/2 { < b e >( d, < b' e >]) }
+		\tuplet 3/2 { r16 < a, e' >( < c' a' >) } \tuplet 3/2 { < c a' >( < a, e' > < c' a' >]) }
+	\tuplet 3/2 { r16 b[( b') } \tuplet 3/2 { b( b, b']) } \tuplet 3/2 { r16 a,[( < e' csharp'! >) }
+		\tuplet 3/2 { < e csharp' >( a, < e' csharp' >]) } \tuplet 3/2 { r16 a,[( a') } \tuplet 3/2 { a( a, a']) }
+		\tuplet 3/2 { r16 a,[( a'') } \tuplet 3/2 { a( a,, a'']) }
 		
 	%%% DOUBLE BAR %%%
 	
-	\times 2/3 { e16-.\p[ csharp-. e-. } \times 2/3 { fsharp-. csharp-. fsharp-.] } \times 2/3 { d-.[ b-. d-. }
-		\times 2/3 { gsharp!-. dsharp-. gsharp-.] }
-		\override TupletBracket   #'transparent = ##t
-		\times 2/3 { e16-.[ csharp-. e-. fsharp-. csharp-. fsharp-.] } \times 2/3 { d-.[ b-. d-. gsharp-. dsharp-. gsharp-.] }
-	\times 2/3 { e-.[ csharp-. e-. g!-. e-. g-.] d!-.[ b-. d-. fsharp-. d-. fsharp-.] csharp-.[ a-. csharp-.
+	\tuplet 3/2 { e16-.\p[ csharp-. e-. } \tuplet 3/2 { fsharp-. csharp-. fsharp-.] } \tuplet 3/2 { d-.[ b-. d-. }
+		\tuplet 3/2 { gsharp!-. dsharp-. gsharp-.] }
+		\override TupletBracket.transparent = ##t
+		\tuplet 3/2 { e16-.[ csharp-. e-. fsharp-. csharp-. fsharp-.] } \tuplet 3/2 { d-.[ b-. d-. gsharp-. dsharp-. gsharp-.] }
+	\tuplet 3/2 { e-.[ csharp-. e-. g!-. e-. g-.] d!-.[ b-. d-. fsharp-. d-. fsharp-.] csharp-.[ a-. csharp-.
 		e-. csharp-. e-.] a,-.[ fsharp-. a-. csharp-. a-. csharp-.] }
-	\times 2/3 { b[( gsharp e]) fsharp'-.[ csharp-. fsharp-.] d-.[ b-. d-. gsharp-. dsharp-. gsharp-.] }
-	\times 2/3 { e-.[ csharp-. e-. fsharp-. csharp-. fsharp-.] d!-.[ b-. d-. gsharp-. dsharp-. gsharp-.]
+	\tuplet 3/2 { b[( gsharp e]) fsharp'-.[ csharp-. fsharp-.] d-.[ b-. d-. gsharp-. dsharp-. gsharp-.] }
+	\tuplet 3/2 { e-.[ csharp-. e-. fsharp-. csharp-. fsharp-.] d!-.[ b-. d-. gsharp-. dsharp-. gsharp-.]
 		e-.[ csharp-. e-. g!-. e-. g-.] d!-.[ b-. d-. fsharp-. d-. fsharp-.] csharp-.[ a-. csharp-. e-. csharp-. e-.]
 		a,-.[ fsharp-. a-. csharp-. a-. csharp-.] }
-	\times 2/3 { b16[(_\markup { "" \raise #-2.0 { \dynamic pp \italic {poco a poco cresc.}}} gsharp e]) < asharp, fsharp' >-.[
+	\tuplet 3/2 { b16[(_\markup { "" \raise #-2.0 { \dynamic pp \italic {poco a poco cresc.}}} gsharp e]) < asharp, fsharp' >-.[
 		csharp,-. < asharp' fsharp' >-.] b,-.[ < fsharp' d' >-. b,-.] < bsharp' gsharp' >-.[ dsharp,-. < bsharp' gsharp' >-.]
 		csharp,-.[ < a' e' >-. csharp,-.] < asharp' fsharp' >-.[ csharp,-. < asharp' fsharp' >-.]
 		b,-.[ < fsharp' d' >-. b,-.] < bsharp'! gsharp'! >-.[ dsharp,!-. < bsharp' gsharp' >-.] }
-	\times 2/3 { csharp,-.[ < a'! e' >-. csharp,-.] < csharp' a' >-.[ e,-. < csharp' a' >-.] d,![ < a' fsharp' >-. d,-.]
+	\tuplet 3/2 { csharp,-.[ < a'! e' >-. csharp,-.] < csharp' a' >-.[ e,-. < csharp' a' >-.] d,![ < a' fsharp' >-. d,-.]
 		< dsharp' b' >-.[ fsharp,-. < dsharp' b' >-.] e,-.[ < b' gsharp' > e,-.] < csharp' a' >-.[ e,-. < csharp' a' >-.] d,![ < a' fsharp' >-. d,-.]
 		< dsharp'! b' >-.[ fsharp,-. < dsharp' b' >-.] }
-	\times 2/3 {  e,-.[ < b' gsharp' > e,-.] < e' csharp' >-.[ gsharp,-. < e' csharp' >-.] fsharp,-.[ < csharp' a' >-. fsharp,-.] < fsharp' d' >-.[
+	\tuplet 3/2 {  e,-.[ < b' gsharp' > e,-.] < e' csharp' >-.[ gsharp,-. < e' csharp' >-.] fsharp,-.[ < csharp' a' >-. fsharp,-.] < fsharp' d' >-.[
 		a,-. < fsharp' d' >-.] gsharp,-.[ < e' b' >-. gsharp,-.] < gsharp' e' >-.[ b,-. < gsharp' e' >-.] a,-.[ < e' csharp' >-. a,-.]
 		< a' fsharp' >-.[ csharp,-. < a' fsharp' >-.] }
-	\times 2/3 { b,-.[ < fsharp' d' >-. b,-.] < b' gsharp' >-.[ d,-. < b' gsharp' >-.] d,-.[_\cr < b' fsharp' >-. d,-.]
+	\tuplet 3/2 { b,-.[ < fsharp' d' >-. b,-.] < b' gsharp' >-.[ d,-. < b' gsharp' >-.] d,-.[_\cr < b' fsharp' >-. d,-.]
 		< b' gsharp' >-.[ d,-. < b' gsharp' >-.] a'16[( fsharp d a fsharp d]) d[( fsharp a d fsharp a]) }
-	\times 2/3 { d,,-.[ < b' fsharp' >-. d,-.] < b' gsharp' >-.[ d,-. < b' gsharp' >-.] d,-.[ < b' fsharp' >-. d,-.]
+	\tuplet 3/2 { d,,-.[ < b' fsharp' >-. d,-.] < b' gsharp' >-.[ d,-. < b' gsharp' >-.] d,-.[ < b' fsharp' >-. d,-.]
 		< b' gsharp' >-.[ d,-. < b' gsharp' >-.] a'[( f d a f d]) d[( f a d f a]) }
-	\times 2/3 { f,-.[ < d' a' >-. f,-.] < d' b' >-.[ f,-. < d' b' >-.] f,-.[ < d' a' >-. f,-.]
+	\tuplet 3/2 { f,-.[ < d' a' >-. f,-.] < d' b' >-.[ f,-. < d' b' >-.] f,-.[ < d' a' >-. f,-.]
 		< d' b' >-.[ f,-. < d' b' >-.] c'[( a f c a f]) c[( a c f a c]) }
-	\times 2/3 { a,-.[ < f' c' >-. a,-.] < f' d' >-.[ a,-. < f' d' >-.] a,-.[ < f' c' >-. a,-.]
+	\tuplet 3/2 { a,-.[ < f' c' >-. a,-.] < f' d' >-.[ a,-. < f' d' >-.] a,-.[ < f' c' >-. a,-.]
 		< f' d' >-.[ a,-. < f' d' >-.] eflat'[( c! aflat eflat c aflat]) aflat[( c eflat aflat c eflat]) }
-	\times 2/3 { c,-.[ < aflat' eflat' >-. c,-.] < aflat' f' >-.[ c,-. < aflat' f' >-.] c,-.[ < aflat' eflat' >-. c,-.]
+	\tuplet 3/2 { c,-.[ < aflat' eflat' >-. c,-.] < aflat' f' >-.[ c,-. < aflat' f' >-.] c,-.[ < aflat' eflat' >-. c,-.]
 		< aflat' f' >-.[ c,-. < aflat' f' >-.] fsharp'[( dsharp b! fsharp! dsharp b!]) b[( dsharp fsharp b dsharp fsharp]) }
 	
 	%%% DOUBLE BAR %%%
 	
 	gsharp4\trill gsharp4\trill gsharp4\trill gsharp4\trill
-	a_>\ff^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > }
-		a,,_>^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > }
-		a'_>^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > }
-		a'_>^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > }
-	a_>^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > }
-		a,,_>^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > }
-		a'_>^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > }
-		a'^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > }_>
+	a_>\ff^\trillflat a,,_>^\trillflat a'_>^\trillflat a'_>^\trillflat
+	a_>^\trillnatural a,,_>^\trillnatural a'_>^\trillnatural a'_>^\trillnatural
 	a4_>\trill a,,_>\trill a'_>\trill a'_>\trill
-	\times 2/3 { bsharp,,,16[( fsharp' a) a( fsharp bsharp,]) bsharp16[(_\cr fsharp' a) a( fsharp bsharp,])
+	\tuplet 3/2 { bsharp,,,16[( fsharp' a) a( fsharp bsharp,]) bsharp16[(_\cr fsharp' a) a( fsharp bsharp,])
 		a[( fsharp' bsharp) bsharp( fsharp a,]) a[( fsharp' bsharp) bsharp( fsharp a,]) }
-	\times 2/3 { bsharp16[( a' fsharp') fsharp( a, bsharp,]) bsharp16[( a' fsharp') fsharp( a, bsharp,])
+	\tuplet 3/2 { bsharp16[( a' fsharp') fsharp( a, bsharp,]) bsharp16[( a' fsharp') fsharp( a, bsharp,])
 		fsharp'[( bsharp a') a( bsharp, fsharp]) fsharp[( bsharp a') a( bsharp, fsharp]) }
-	\times 2/3 { a16[( fsharp' bsharp) bsharp( fsharp a,]) fsharp16[( bsharp a') a( bsharp, fsharp])
+	\tuplet 3/2 { a16[( fsharp' bsharp) bsharp( fsharp a,]) fsharp16[( bsharp a') a( bsharp, fsharp])
 		a[( fsharp' bsharp) bsharp( fsharp a,]) bsharp[( a' fsharp') fsharp( a, bsharp,]) }
-	\times 2/3 { r16\ff fsharp[( a bsharp) a^( bsharp] fsharp'^)[ bsharp,( fsharp'] a)[ fsharp( a] bsharp)[ a( bsharp] fsharp')[ bsharp,( fsharp']
+	\tuplet 3/2 { r16\ff fsharp[( a bsharp) a^( bsharp] fsharp'^)[ bsharp,( fsharp'] a)[ fsharp( a] bsharp)[ a( bsharp] fsharp')[ bsharp,( fsharp']
 		a)[ fsharp( a] bsharp)[ a( bsharp] }
 		
 	%%% DOUBLE BAR %%%
@@ -215,7 +212,7 @@ theSolo = \notes \relative d' {
 	
 	b,8\f[ \grace { b16[ c] } b( asharp] b8)[ \grace { b16[ c] } b16( asharp] b[ gsharp e dsharp]) e[( fsharp gsharp a])								|
 	b8--[ \grace { b16[ c] } b( asharp] b8)[ \grace { b16[ c] } b(\> asharp] b[ c d c]) b[( a g f])\!
-	< c e >16\mf[^\markup { \bigger\bigger\bigger {Molto sostenuto il tempo, moderatissimo.}} g,-. e'-. g-.] < c e >[_( g,) e'-.(_\( g-.]
+	< c e >16\mf[\tempo "Molto sostenuto il tempo, moderatissimo." g,-. e'-. g-.] < c e >[_( g,) e'-.(_\( g-.]
 		a-.[ b-. c-. d-.]_) \grace { e[ f] } e-.[_( c e g]_)_\)
 	< b, d! >->[ g, g'-. < asharp e' >-.] < b d >[( d, e) fsharp-.]( g-.[ a-. b-. d-.]) < csharp e >->[ a-. b-. csharp-.]
 	< d f >-.->[ d,-. a'-. d-.] < d f >[( f,) g-.^\( a-.] b-.[ csharp-. d-. e-.] \grace { f[ g] } f[( d f a])^\)
@@ -259,7 +256,7 @@ theSolo = \notes \relative d' {
 	< a e' a >8\downbow\ff r < a e' csharp' >\downbow r < a e' csharp' e >\downbow r < a e' csharp' a' >\downbow r
 	R1
 	< a e' a >8_\downbow\ff < a e' csharp' >_\downbow < a e' csharp' e >_\downbow
-		< a e' csharp' a' >_\downbow < a' e' csharp' >^\markup { \italic \bigger Cadenza } r < csharp a' e' > r											|
+		< a e' csharp' a' >_\downbow < a' e' csharp' >^\markup { \italic \larger Cadenza } r < csharp a' e' > r											|
 		
 	%%% CADENZA %%%
 
@@ -267,26 +264,26 @@ theSolo = \notes \relative d' {
 	
 	%%% TUTTI %%%
 	
-	\override TupletBracket   #'transparent = ##f
-	a'1\p^\markup { \musicglyph #"scripts-trill" \translate #'(1 . 1) { \musicglyph #"scripts-prallprall" } }	|
-	a1^\markup { \musicglyph #"scripts-trill" \translate #'(1 . 1) { \musicglyph #"scripts-prallprall" } }
-	d2^\markup { \musicglyph #"scripts-trill" \translate #'(1 . 1) { \musicglyph #"scripts-prallprall" } }
-		d16[( d, d' csharp] b[ a g g,] fsharp)[ d( fsharp a] \times 4/6 { d[ fsharp a b d b] } a8)[ b( csharp_\markup { \italic dolce } d]			|
+	\override TupletBracket.transparent = ##f
+	<<a'1\p {s4\startTrillSpan s s s\stopTrillSpan}>> |
+	<<a1 {s4\startTrillSpan s s s\stopTrillSpan}>> |
+	<<d2 {s4\startTrillSpan s\stopTrillSpan}>>
+		d16[( d, d' csharp] b[ a g g,] |
+	fsharp)[ d( fsharp a] \tuplet 6/4 { d[ fsharp a b d b] } a8)[ b( csharp_\markup { \italic dolce } d]			|
 	e)[ g]( a,4~ a8)[ b(_\cr csharp d])
-	e[( g] a,4~ \times 2/3 { a8)[ gsharp( a] } \times 2/3 { asharp)[ gsharpsharp-- asharp--] }
-	\times 2/3 { b--[ d-- fsharp--] } gsharp,,,4\f~ \times 8/11 { gsharp32[\< a( b csharp d e fsharp gsharp a b csharp] }
-		\times 8/10 { d[ e fsharp gsharp a b csharp d dsharp])\! s }
+	e[( g] a,4~ \tuplet 3/2 { a8)[ gsharp( a] } \tuplet 3/2 { asharp)[ gsharpsharp-- asharp--] }
+	\tuplet 3/2 { b--[ d-- fsharp--] } gsharp,,,4\f~ \tuplet 11/8 { gsharp32[\< a( b csharp d e fsharp gsharp a b csharp] }
+		\tuplet 10/8 { d[ e fsharp gsharp a b csharp d dsharp])\! s }
 		%%% NOTE: The edition left out a note in the 8/10! I don't know what it is, so I just added an s32.
 	e4~ e16[ esharp--( fsharp-- gsharp--]) a8[ b16 r32 b32]( csharp,4~
 	csharp8[ e16-.) r32 e]( g,4~ g16)[ b32-. b-. csharp,-. csharp-. e-. e-.] g,[ g b b csharp, csharp e e]
 	a,[ a bflat bflat gsharp gsharp bflat bflat] a[ a bflat bflat gsharp gsharp bflat bflat] a[ a bflat bflat gsharp gsharp bflat bflat]
 		a[ a bflat bflat gsharp gsharp bflat bflat]
 	a[ bflat gsharp a a bflat gsharp a] a[ bflat gsharp a a bflat gsharp a] a[ bflat gsharp a a bflat gsharp a]
-		\times 8/15 { a[^( bflat gsharp a b csharp d e fsharp g! a] b[ csharp d e]^) }
+		\tuplet 15/8 { a[^( bflat gsharp a b csharp d e fsharp g! a] b[ csharp d e]^) }
 	fsharp8\mf r < d, a' fsharp' >2 \grace { e'16[ fsharp] } e16[( d fsharp a])
-	<< { e4.( fsharp8) } \\ { \appoggiatura e,8 \stemDown a2 } >> \times 2/3 { e'8[( dsharp e]) } \times 2/3 { < d,! a' fsharp' >[( e' fsharp]) }
-	< d, d'! g >8 r << { \stemDown \once \override Stem  #'length = #12 < d' g >4~( < d g >8.[ fsharp16]) }
-		\\ { \stemDown d,4 s4 } >> g'16[( a b csharp])
+	<< { e4.( fsharp8) } \\ { \appoggiatura e,8 \stemDown a2 } >> \tuplet 3/2 { e'8[( dsharp e]) } \tuplet 3/2 { < d,! a' fsharp' >[( e' fsharp]) }
+	< d, d'! g >8 r < d d'~ g~ >4( <d' g>8.[ fsharp16]) g16[( a b csharp])
 	fsharp,4.( g8 fsharp8.)[ fsharp16]( g[ a b c])
 	e,4.( fsharp8 e8.)[ e16]( f[ g a bflat])
 	d,4.( eflat8 d8.)[ d16]( csharp[ d fsharp! g])
@@ -294,31 +291,29 @@ theSolo = \notes \relative d' {
 	d8\f[( e!16-.) r32 e32]( b8[ d16-.) r32 d]( g,8[ b16-.) r32 b]( e,8[ g16-.) r32 g](
 	c,8[_\markup { \italic {dim. molto} } e16-.) r32 e]( a,8[ eflat'16-.) r32 eflat]( c8[ e16-.) r32 e]( a,8[ eflat'16-.) r32 eflat](
 	c8[ e16-.) r32 e]( c8[ eflat16-.) r32 eflat]( b8[ d16-.) r32 d]( bflat8[ csharp16-.) r32 csharp](
-	a8[_\markup { \dynamic p \italic grazioso }^\markup { \huge {Ben sostenuto.}} c16-.) r32 c]( fsharp,8[ a16-.) r32 a]( 
+	a8[_\markup { \dynamic p \italic grazioso }\tempo "Ben sostenuto." c16-.) r32 c]( fsharp,8[ a16-.) r32 a]( 
 		e8[ a16-.) r32 a32]( fsharp8[ d'16-.) r32 d-.]
-	\times 2/3 { g,16[(\< b d] } \times 2/3 { e8[ fsharp16]) } \times 2/3 { b,16[( d e] } \times 2/3 { fsharp8[ g16]) }
-		\times 2/3 { d16[( g a]\! } \times 2/3 { bflat8[ b16]) } \times 2/3 { e16[(\> d b] } \times 2/3 { g[ d b])\! }
+	\tuplet 3/2 { g,16[(\< b d] } \tuplet 3/2 { e8[ fsharp16]) } \tuplet 3/2 { b,16[( d e] } \tuplet 3/2 { fsharp8[ g16]) }
+		\tuplet 3/2 { d16[( g a]\! } \tuplet 3/2 { bflat8[ b16]) } \tuplet 3/2 { e16[(\> d b] } \tuplet 3/2 { g[ d b])\! }
 	a8[ c16-. r32 c]( fsharp,8[ a16-.) r32 a32]( e8[ a16-.) r32 a]( fsharp8[ d'16-.) r32 d-.]
-	\times 2/3 { g,16[(\< b d] } \times 2/3 { e8[ fsharp16]) } \times 2/3 { b,16[( d e] } \times 2/3 { fsharp8[ g16]) } \times 2/3 { d16[( g a] }
-		\times 2/3 { bflat8[ b16])\! } \times 2/3 { e16[(\> d b] } \times 2/3 { g[ e d])\! }
-	\override TupletBracket   #'transparent = ##t
-	b8[( c16-.) r32 c]( b8[ csharp16-.) r32 csharp]( \times 2/3 { b16[ dsharp fsharp a asharp b]) d,[( e g b dsharp e]) }
-	e,8[( f16-.) r32 f]( e8[ fsharp16-.) r32 fsharp]( \times 2/3 { e16[ gsharp b d dsharp e]) a,[( b c e gsharp a]) }
-	\times 2/3 { a,[( bsharp csharp! e gsharp a]) a,[( csharp d f gsharp a]) a,,[( b! bsharp csharp e a]) csharp,[( d e f a d]) }
-	\times 2/3 { eflat16-.[ g,( a!] bflat)[ eflat,( fsharp!] g!)[ bflat,( d] eflat!)[ g,( a] bflat)[ eflat,( fsharp!]
+	\tuplet 3/2 { g,16[(\< b d] } \tuplet 3/2 { e8[ fsharp16]) } \tuplet 3/2 { b,16[( d e] } \tuplet 3/2 { fsharp8[ g16]) } \tuplet 3/2 { d16[( g a] }
+		\tuplet 3/2 { bflat8[ b16])\! } \tuplet 3/2 { e16[(\> d b] } \tuplet 3/2 { g[ e d])\! }
+	\override TupletBracket.transparent = ##t
+	b8[( c16-.) r32 c]( b8[ csharp16-.) r32 csharp]( \tuplet 3/2 { b16[ dsharp fsharp a asharp b]) d,[( e g b dsharp e]) }
+	e,8[( f16-.) r32 f]( e8[ fsharp16-.) r32 fsharp]( \tuplet 3/2 { e16[ gsharp b d dsharp e]) a,[( b c e gsharp a]) }
+	\tuplet 3/2 { a,[( bsharp csharp! e gsharp a]) a,[( csharp d f gsharp a]) a,,[( b! bsharp csharp e a]) csharp,[( d e f a d]) }
+	\tuplet 3/2 { eflat16-.[ g,( a!] bflat)[ eflat,( fsharp!] g!)[ bflat,( d] eflat!)[ g,( a] bflat)[ eflat,( fsharp!]
 		g[ a bflat] d-.)[ eflat( fsharp g bflat eflat] }
 		
-	\override Staff.OttavaBracket #'staff-padding = #6	
-	\times 2/3 { e!)[ bflat( c dflat) e,!( a] bflat)[ bflat,( eflat e) bflat( c] dflat)[ bflat( dflat e! bflat'! dflat!] e!)[ dflat!( e
-		#(set-octavation 1) bflat' dflat eflat] }
-	f8\f) #(set-octavation 0) r r4 f,,,32[(_\cr a b c d eflat e f] gsharp[ a b c csharp d eflat e])
-	\revert Staff.OttavaBracket #'staff-padding
+	\tuplet 3/2 { e!)[ bflat( c dflat) e,!( a] bflat)[ bflat,( eflat e) bflat( c] dflat)[ bflat( dflat e! bflat'! dflat!] e!)[ dflat!( e
+		\ottava #1 bflat' dflat eflat] }
+	f8\f) \ottava #0 r r4 f,,,32[(_\cr a b c d eflat e f] gsharp[ a b c csharp d eflat e])
 	
 	f8 r r4 f,,32[( a b csharp d! eflat e fsharp] gsharp[ a b c csharp d eflat e])
 	f8 r g,,32[( b d g]) g[( b d g]) g8 r a,,32[( csharp! g' a]) a[( csharp! g' a])
-	a8 r d,,32[( g bflat e]) #(set-octavation 1) e[( g bflat csharp!]) csharp8 #(set-octavation 0) r f,,32[( g gsharp d']) d[( e f gsharp])
+	a8 r d,,32[( g bflat e]) \ottava #1 e[( g bflat csharp!]) csharp8 \ottava #0 r f,,32[( g gsharp d']) d[( e f gsharp])
 	\stemDown a16-.[ a,,-. b''-. a,,32-. b''-.] a16-.[ a,,-. b''-. a,,32-. b''-.] a32[( e d a]) a[( e a, b] csharp[ d e gsharp a b csharp e])
-	a16-.[ a,,-. b''-. a,,32-. b''-.] a16-.[ a,,-. b''-. a,,32-. b''-.] a32[( e d a]) a[( e a, b] csharp[ d e gsharp a b csharp e]) \stemBoth
+	a16-.[ a,,-. b''-. a,,32-. b''-.] a16-.[ a,,-. b''-. a,,32-. b''-.] a32[( e d a]) a[( e a, b] csharp[ d e gsharp a b csharp e]) \stemNeutral
 	e32[( csharp a e]) csharp[( e fsharp gsharp] a[ gsharp a b] csharp[ d e fsharp])
 		g![( e csharp a]) e[( gsharp a b] csharp b csharp d e fsharp g! a])
 	b[( a g fsharp) e( g e d]) csharp[( e csharp b) a( b g fsharp]) e[( g e d) csharp( e csharp b]) a[( b g fsharp) e( g e d]
@@ -326,90 +321,90 @@ theSolo = \notes \relative d' {
 	a,)[ bflat8 a16]~\! a[ bflat8 b16]~ b8 bsharp4( csharp8)
 	d4\p(^\markup { \italic {con molto espress.} } csharp) e16[( d csharp e] d4)
 	e( dsharp) fsharp16[( e dsharp fsharp] e4)
-	\times 2/3 { fsharp8[( g a] b[ c b]) } b(\< e4\!\> b8)\!
-	\grace { a16[ b] } \times 2/3 { a8[( gsharp a] c)[\< b-- a--]\! } b( e4\> b8)\!
-	\grace { bflat16[ c] } \times 2/3 { bflat8[( a bflat] d)[ d,-- e--] } esharp[ fsharp]~ \times 2/3 { fsharp[ fsharp-.( g-.]) }
-	gsharp[( a])~ \times 2/3 { a[\< asharp^.^( b!^.] bsharp-.[ csharp-. d-.]) dsharp[( fsharp e])\! }
+	\tuplet 3/2 { fsharp8[( g a] b[ c b]) } b(\< e4\!\> b8)\!
+	\grace { a16[ b] } \tuplet 3/2 { a8[( gsharp a] c)[\< b-- a--]\! } b( e4\> b8)\!
+	\grace { bflat16[ c] } \tuplet 3/2 { bflat8[( a bflat] d)[ d,-- e--] } esharp[ fsharp]~ \tuplet 3/2 { fsharp[ fsharp-.( g-.]) }
+	gsharp[( a])~ \tuplet 3/2 { a[\< asharp^.^( b!^.] bsharp-.[ csharp-. d-.]) dsharp[( fsharp e])\! }
 	d!4( csharp) e16[( d csharp e] d4)
 	e4( dsharp) fsharp16[( e dsharp fsharp] e4)
-	\times 2/3 { fsharp8[( g a] b)[ c-. b-.] } b( e4-> b8)
-	\times 2/3 { bflat8[( csharp d] e)[ fsharp-- e--] } e a4~ a8--
-	\times 2/3 { #(set-octavation 1) b!8\p--[ a-- g--] fsharp--[ g-- a--] c--[ b-- a--] g--[ fsharp-- e--] }
-	\times 2/3 { b'--[ a-- gsharp--] gsharp--[ a-- b--] d--[ csharp!-- b--] b--[ a-- gsharp--] }
-	\times 2/3 { d'[( csharp) b]( gsharp)[ fsharp( d] #(set-octavation 0) b)[_\cr gsharp( b] dsharp[ fsharp a]) }
-	#(set-octavation 1) bflat4\f( a) c16[( bflat a c] \times 2/3 { bflat8)[ dflat( c] }
-	\times 2/3 { aflat)[ c( bflat] g)[ bflat( aflat] f)[ aflat( g] eflat)[ g( f]) }
+	\tuplet 3/2 { fsharp8[( g a] b)[ c-. b-.] } b( e4-> b8)
+	\tuplet 3/2 { bflat8[( csharp d] e)[ fsharp-- e--] } e a4~ a8--
+	\tuplet 3/2 { \ottava #1 b!8\p--[ a-- g--] fsharp--[ g-- a--] c--[ b-- a--] g--[ fsharp-- e--] }
+	\tuplet 3/2 { b'--[ a-- gsharp--] gsharp--[ a-- b--] d--[ csharp!-- b--] b--[ a-- gsharp--] }
+	\tuplet 3/2 { d'[( csharp) b]( gsharp)[ fsharp( d] \ottava #0 b)[_\cr gsharp( b] dsharp[ fsharp a]) }
+	\ottava #1 bflat4\f( a) c16[( bflat a c] \tuplet 3/2 { bflat8)[ dflat( c] }
+	\tuplet 3/2 { aflat)[ c( bflat] g)[ bflat( aflat] f)[ aflat( g] eflat)[ g( f]) }
 	bflat4( a!) c16[( bflat a c] bflat)[ bflat( dflat c]
 	aflat)[ aflat( c bflat] g)[ g( bflat! aflat] f)[ f( aflat g] eflat)[ eflat( g f])
-	eflat4( d) f16[( eflat d f] eflat)[ eflat( g eflat]) #(set-octavation 0)
+	eflat4( d) f16[( eflat d f] eflat)[ eflat( g eflat]) \ottava #0
 	d4( csharp!) e!16[( d csharp e] d)[ d( fsharp d])
 	csharp4( b16[ csharp d b]) b[( a gsharp b] a)[ fsharp( esharp gsharp]
 	fsharp)[ d( csharp e] d)[ a( gsharp b] a)[ fsharp( esharp g] fsharp)[ d( csharp e])
 	
-	\override TupletBracket   #'transparent = ##f
-	d8->[ e32^( fsharp g a] \times 8/11 { b[ csharp d e fsharp g a b csharp d e]) } \times 2/3 { fsharp8->[ g-> a->] } r4
-	d,,,8->[ e32^( fsharp g a] \times 8/11 { b[ csharp d e fsharp g a b csharp d e] } \times 2/3 { fsharp8->)[ gsharp-> a->] } r4
-	\times 4/5 { a,,32[( b csharp d e] } \times 4/7 { fsharp[ gsharp a b csharp d e] } \times 2/3 { fsharp8->)[ gsharp-> a->] }
-		\times 4/5 { a,,32[( b csharp d e] } \times 4/7 { fsharp[ gsharp a b csharp d dsharp] } \times 2/3 { e8->)[ gsharp!-> a->] }
-	\times 4/5 { a,,32[( b csharp d e] } \times 4/7 { f[ g! a b csharp d e] } \times 2/3 { f8->)[ gsharp!-> a->] }
-		\times 4/5 { a,,32[( b c d e] } \times 4/7 { f[ g! a bflat csharp! d e]) } \times 2/3 { f8->[ gsharp!-> a->] }
+	\override TupletBracket.transparent = ##f
+	d8->[ e32^( fsharp g a] \tuplet 11/8 { b[ csharp d e fsharp g a b csharp d e]) } \tuplet 3/2 { fsharp8->[ g-> a->] } r4
+	d,,,8->[ e32^( fsharp g a] \tuplet 11/8 { b[ csharp d e fsharp g a b csharp d e] } \tuplet 3/2 { fsharp8->)[ gsharp-> a->] } r4
+	\tuplet 5/4 { a,,32[( b csharp d e] } \tuplet 7/4 { fsharp[ gsharp a b csharp d e] } \tuplet 3/2 { fsharp8->)[ gsharp-> a->] }
+		\tuplet 5/4 { a,,32[( b csharp d e] } \tuplet 7/4 { fsharp[ gsharp a b csharp d dsharp] } \tuplet 3/2 { e8->)[ gsharp!-> a->] }
+	\tuplet 5/4 { a,,32[( b csharp d e] } \tuplet 7/4 { f[ g! a b csharp d e] } \tuplet 3/2 { f8->)[ gsharp!-> a->] }
+		\tuplet 5/4 { a,,32[( b c d e] } \tuplet 7/4 { f[ g! a bflat csharp! d e]) } \tuplet 3/2 { f8->[ gsharp!-> a->] }
 	\stemDown bflat16:32[ f,,: g: a:] bflat:[ c: d: f:] e:[ b: e: b':] e:[ fsharp!: gsharp: b:]
-	#(set-octavation 1) e:[ #(set-octavation 0) a,,,: e: gsharp:] a:[ b: csharp: e:] d:[ a: d: a':] d:[ e: fsharp: a:]
-	#(set-octavation 1) d:[\< #(set-octavation 0) d,,: d,: d':] d':[ d,: d,: d':] d':[ d,: d,: d':]\! g,:[ bflat: d: g:]
+	\ottava #1 e:[ \ottava #0 a,,,: e: gsharp:] a:[ b: csharp: e:] d:[ a: d: a':] d:[ e: fsharp: a:]
+	\ottava #1 d:[\< \ottava #0 d,,: d,: d':] d':[ d,: d,: d':] d':[ d,: d,: d':]\! g,:[ bflat: d: g:]
 	d':[\< d,: d,: d':] d':[ d,: d,: d':] d':[ d,: d,: d':]\! g,:[ bflat: d: g:]
-	\times 2/3 { r16 e,[( < bflat' e >) } \times 2/3 { < bflat e >( e, < bflat' e >]) } \times 2/3 { r16 a[( a') } \times 2/3 { a( a, a']) }
-		\times 2/3 { r16 a,[( a') } \times 2/3 { a( a, a']) } \times 2/3 { r16 d,,[( < f' d' >) } \times 2/3 { < f d' >( d, < f' d' >]) }
-	\times 2/3 { r16 e,[( < a e' >]) } \times 2/3 { < a e' >[( e < a e' >]) } \times 2/3 { r16 d,[( < a' fsharp' >]) }
-		\times 2/3 { < a fsharp' >[( d, < a' fsharp' >]) } \times 2/3 { r < d, d' >[( < d' d' >]) } \times 2/3 { < d d' >[( d, < d' d' >]) }
-		\times 2/3 { r < d, d' >[( < d' d' >]) } \times 2/3 { < d d' >[( d, < d' d' >]) }
+	\tuplet 3/2 { r16 e,[( < bflat' e >) } \tuplet 3/2 { < bflat e >( e, < bflat' e >]) } \tuplet 3/2 { r16 a[( a') } \tuplet 3/2 { a( a, a']) }
+		\tuplet 3/2 { r16 a,[( a') } \tuplet 3/2 { a( a, a']) } \tuplet 3/2 { r16 d,,[( < f' d' >) } \tuplet 3/2 { < f d' >( d, < f' d' >]) }
+	\tuplet 3/2 { r16 e,[( < a e' >]) } \tuplet 3/2 { < a e' >[( e < a e' >]) } \tuplet 3/2 { r16 d,[( < a' fsharp' >]) }
+		\tuplet 3/2 { < a fsharp' >[( d, < a' fsharp' >]) } \tuplet 3/2 { r < d, d' >[( < d' d' >]) } \tuplet 3/2 { < d d' >[( d, < d' d' >]) }
+		\tuplet 3/2 { r < d, d' >[( < d' d' >]) } \tuplet 3/2 { < d d' >[( d, < d' d' >]) }
 	
-	\override TupletBracket   #'transparent = ##t
-	\times 2/3 { a'16-.\p[ fsharp-. a-. b-. fsharp-. b-.] g-.[ e-. g-. csharp-. gsharp-. csharp-.] a-.[ fsharp-. a-. b-. fsharp-. b-.]
+	\override TupletBracket.transparent = ##t
+	\tuplet 3/2 { a'16-.\p[ fsharp-. a-. b-. fsharp-. b-.] g-.[ e-. g-. csharp-. gsharp-. csharp-.] a-.[ fsharp-. a-. b-. fsharp-. b-.]
 		g-.[ e-. g-. csharp-. gsharp-. csharp-.] }
-	\times 2/3 { a-.[ fsharp-. a-. c-. a-. c-.] g!-.[ e-. g-. bflat-. g-. bflat-.] fsharp-.[ d-. fsharp-. a-. fsharp-. a-.]
+	\tuplet 3/2 { a-.[ fsharp-. a-. c-. a-. c-.] g!-.[ e-. g-. bflat-. g-. bflat-.] fsharp-.[ d-. fsharp-. a-. fsharp-. a-.]
 		d,-.[ b-. d-. fsharp-. d-. fsharp-.] }
-	\times 2/3 { e[( csharp a]) b'-.[ fsharp-. b-.] g-.[ e-. g-. c-. gsharp-. c-.] a-.[ fsharp-. a-. b-. fsharp-. b-.]
+	\tuplet 3/2 { e[( csharp a]) b'-.[ fsharp-. b-.] g-.[ e-. g-. c-. gsharp-. c-.] a-.[ fsharp-. a-. b-. fsharp-. b-.]
 		g-.[ e-. g-. c-. gsharp-. c-.] }
-	\times 2/3 { a-.[ fsharp-. a-. c-. a-. c-.] g!-.[ e-. g-. bflat-. g-. bflat-.] fsharp-.[ d-. fsharp-. a-. fsharp-. a-.]
+	\tuplet 3/2 { a-.[ fsharp-. a-. c-. a-. c-.] g!-.[ e-. g-. bflat-. g-. bflat-.] fsharp-.[ d-. fsharp-. a-. fsharp-. a-.]
 		d,-.[ b-. d-. fsharp-. d-. fsharp-.] }
-	\stemBoth
-	\times 2/3 { e[(_\markup { "" \raise #-1.5 \italic {poco a poco cresc.}} csharp a]) b-.[ dsharp,-. b'-.] g-.[ e-. g-.] < esharp csharp' >-. gsharp,-.
+	\stemNeutral
+	\tuplet 3/2 { e[(_\markup { "" \raise #-1.5 \italic {poco a poco cresc.}} csharp a]) b-.[ dsharp,-. b'-.] g-.[ e-. g-.] < esharp csharp' >-. gsharp,-.
 		< esharp' csharp' >-.] a,-.[ < fsharp' a >-. a,-.] b'-.[ dsharp,-. b'-.] g!-.[ e-. g-.] < esharp csharp' >-. gsharp,-. < esharp' csharp' >-.] }
-	\times 2/3 { a,-.[ < fsharp' a >-. a,-.] < fsharp' d'! >-.[ a,-. < fsharp' d' >-.] g,!-.[ < d'! b' >-. g,-.] < gsharp' e' >-.[ b,-. < gsharp' e' >-.]
+	\tuplet 3/2 { a,-.[ < fsharp' a >-. a,-.] < fsharp' d'! >-.[ a,-. < fsharp' d' >-.] g,!-.[ < d'! b' >-. g,-.] < gsharp' e' >-.[ b,-. < gsharp' e' >-.]
 		a,-.[ < e' csharp' >-. a,-.] < fsharp' d' >-.[ a,-. < fsharp' d' >-.] g,!-.[ < d'! b' >-. g,-.] < gsharp' e' >-.[ b,-. < gsharp' e' >-.] }
-	\times 2/3 { a,-.[ < e' csharp' >-. a,-.] < a' fsharp' >-.[ csharp,-. < a' fsharp' >-.] b,-.[ < fsharp' d' >-. b,-.] < b' g'! >-.[ d,-. < b' g' >-.]
+	\tuplet 3/2 { a,-.[ < e' csharp' >-. a,-.] < a' fsharp' >-.[ csharp,-. < a' fsharp' >-.] b,-.[ < fsharp' d' >-. b,-.] < b' g'! >-.[ d,-. < b' g' >-.]
 		csharp,-.[ < a' e' >-. csharp,-.] < csharp' a' >-.[ e,-. < csharp' a' >-.] d,-.[ < a' fsharp' >-. d,-.] < d' b' >-.[ fsharp,-. < d' b' >-.] }
-	\times 2/3 { e,-.[ < b' g' >-. e,-.] < e' csharp' >-. g,-. < e' csharp' >-.] g,-.[ < e' b' >-. g,-.] < e' csharp' >-.[ g,-. < e' csharp' >-.]
+	\tuplet 3/2 { e,-.[ < b' g' >-. e,-.] < e' csharp' >-. g,-. < e' csharp' >-.] g,-.[ < e' b' >-. g,-.] < e' csharp' >-.[ g,-. < e' csharp' >-.]
 		d'[( b g d b g]) d'[( b g d b g]) }
-	\times 2/3 { g'-.[ < e' b' >-. g,-.] < e' csharp' >-.[ g,-. < e' csharp' >-.] g,-.[ < e' b' >-. g,-.] < e' csharp' >-.[ g,-. < e' csharp' >-.]
+	\tuplet 3/2 { g'-.[ < e' b' >-. g,-.] < e' csharp' >-.[ g,-. < e' csharp' >-.] g,-.[ < e' b' >-. g,-.] < e' csharp' >-.[ g,-. < e' csharp' >-.]
 		d'[( bflat g d bflat g]) d'[( bflat g d bflat g]) }
-	\times 2/3 { bflat'-.[ < g' d' >-. bflat,-.] < g' e' >-.[ bflat,-. < g' e' >-.] bflat,-.[ < g' d' >-. bflat,-.] < g' e' >-.[ bflat,-. < g' e' >-.]
+	\tuplet 3/2 { bflat'-.[ < g' d' >-. bflat,-.] < g' e' >-.[ bflat,-. < g' e' >-.] bflat,-.[ < g' d' >-. bflat,-.] < g' e' >-.[ bflat,-. < g' e' >-.]
 		f'[( d bflat f d bflat!]) bflat[( d f bflat d f]) }
-	\times 2/3 { d,-.[ < bflat' f' >-. d,-.] < bflat' g' >-.[ d,-. < bflat' g' >-.] d,-.[ < bflat' f' >-. d,-.] < bflat' g' >-.[ d,-. < bflat' g' >-.]
+	\tuplet 3/2 { d,-.[ < bflat' f' >-. d,-.] < bflat' g' >-.[ d,-. < bflat' g' >-.] d,-.[ < bflat' f' >-. d,-.] < bflat' g' >-.[ d,-. < bflat' g' >-.]
 		aflat'[( f dflat aflat f dflat]) dflat[( f aflat dflat f aflat]) }
-	\times 2/3 { f,-.[ < dflat' aflat' >-. f,-.] < dflat' bflat' >-.[ f,-. < dflat' bflat' >-.] f,-.[ < dflat' aflat' >-. f,-.] < dflat' bflat' >-.[
+	\tuplet 3/2 { f,-.[ < dflat' aflat' >-. f,-.] < dflat' bflat' >-.[ f,-. < dflat' bflat' >-.] f,-.[ < dflat' aflat' >-. f,-.] < dflat' bflat' >-.[
 		f,-. < dflat' bflat' >-.] b'[( gsharp e! b! gsharp e]) e[( gsharp b e gsharp b]) }
 	csharp4\ff\trill csharp\trill csharp\trill csharp\trill
 	
-	\override Staff.OttavaBracket #'staff-padding = #7.5
-	#(set-octavation 1) d^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > }
-		#(set-octavation 0) d,,^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > }
-		d'^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > } #(set-octavation 1)
-		d'^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals--2" } \musicglyph #"scripts-trill" > } #(set-octavation 0)
-	#(set-octavation 1) d^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > } #(set-octavation 0)
-		d,,^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > }
-		d'^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > } #(set-octavation 1)
-		d'^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > } #(set-octavation 0)
-	#(set-octavation 1) d^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > } #(set-octavation 0)
-		d,,^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > }
-		d'^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > } #(set-octavation 1)
-		d'^\markup { \column < \fontsize #-4 { \musicglyph #"accidentals-0" } \musicglyph #"scripts-trill" > } #(set-octavation 0)
-	\revert Staff.OttavaBracket #'staff-padding
+	\override Staff.OttavaBracket.outside-staff-priority = 1000
+	\ottava #1 d^\trillflat
+		\ottava #0 d,,^\trillflat
+		d'^\trillflat
+		d'^\trillflat \ottava #0
+	\ottava #1 d^\trillnatural \ottava #0
+		d,,^\trillnatural
+		d'^\trillnatural \ottava #1
+		d'^\trillnatural \ottava #0
+	\ottava #1 d^\trillnatural \ottava #0
+		d,,^\trillnatural
+		d'^\trillnatural
+		d'^\trillnatural \ottava #0
+	\revert OttavaBracket.outside-staff-priority
 	
-	\times 2/3 { g,,,,16[( b esharp) esharp( b g]) g[(_\cr b esharp) esharp( b g]) g[( d' b') b( d, g,]) g[( d' b') b( d, g,]) }
-	\times 2/3 { b[( esharp d') d( esharp, b]) b[( esharp d') d( esharp, b]) d[( b' esharp) esharp( b d,]) d[( b' esharp) esharp( b d,]) }
-	\times 2/3 { esharp[( d' b') b( d, esharp,]) b'[( esharp d') d( esharp, b]) d[( b' esharp) esharp( b d,]) d[( b' esharp) esharp( b d,]) }
-	\times 2/3 { g,,[(\< b d) b( d esharp]) d[( esharp b') esharp,( b' d]) b[( d esharp) d( esharp b']) esharp,[( b' d) b( d esharp])\! }
+	\tuplet 3/2 { g,,,,16[( b esharp) esharp( b g]) g[(_\cr b esharp) esharp( b g]) g[( d' b') b( d, g,]) g[( d' b') b( d, g,]) }
+	\tuplet 3/2 { b[( esharp d') d( esharp, b]) b[( esharp d') d( esharp, b]) d[( b' esharp) esharp( b d,]) d[( b' esharp) esharp( b d,]) }
+	\tuplet 3/2 { esharp[( d' b') b( d, esharp,]) b'[( esharp d') d( esharp, b]) d[( b' esharp) esharp( b d,]) d[( b' esharp) esharp( b d,]) }
+	\tuplet 3/2 { g,,[(\< b d) b( d esharp]) d[( esharp b') esharp,( b' d]) b[( d esharp) d( esharp b']) esharp,[( b' d) b( d esharp])\! }
 	
 	%%% CODA %%%
 	
@@ -420,29 +415,29 @@ theSolo = \notes \relative d' {
 	< a a' >[ e'' fsharp! gsharp] a[ e csharp a] e[ csharp a e] < a a' >[ a < a fsharp' > d,]
 	< b' g' >[ d' e fsharp] g[ d b g] d[ b g d] < d' g >[ d, < c' e > e,]
 	f[ c'' d e] f[ c b dsharp] e[ b csharp dsharp] e[ b a csharp]
-	d[ d,, d' d,] fsharp'[ d, < a' a' > d,] < d' d' >[ d, < fsharp' fsharp' > d,] #(set-octavation 1) < a'' a' >[ #(set-octavation 0)
-		d,, #(set-octavation 1) < d'' d' > #(set-octavation 0) d,,]
-	r d[ d' d,] f'[ d, < a' a' > d,] < d' d' >[ d, < f' f' > d,] #(set-octavation 1) < a'' a' >[ #(set-octavation 0)
-		d,, #(set-octavation 1) < d'' d' > #(set-octavation 0) d,,]
+	d[ d,, d' d,] fsharp'[ d, < a' a' > d,] < d' d' >[ d, < fsharp' fsharp' > d,] \ottava #1 < a'' a' >[ \ottava #0
+		d,, \ottava #1 < d'' d' > \ottava #0 d,,]
+	r d[ d' d,] f'[ d, < a' a' > d,] < d' d' >[ d, < f' f' > d,] \ottava #1 < a'' a' >[ \ottava #0
+		d,, \ottava #1 < d'' d' > \ottava #0 d,,]
 	r16 aflat[ bflat c] d[ f g aflat] bflat[ c d eflat] f[ bflat c d]
 	
-	\override TupletBracket   #'transparent = ##f
-	eflat8\f[ \times 2/3 { csharp!16( a csharp] } d8)[ \times 2/3 { d16( bflat d] } eflat8)[ \times 2/3 { csharp16( a csharp] }
-		d8)[ \times 2/3 { d16( bflat d]) }
+	\override TupletBracket.transparent = ##f
+	eflat8\f[ \tuplet 3/2 { csharp!16( a csharp] } d8)[ \tuplet 3/2 { d16( bflat d] } eflat8)[ \tuplet 3/2 { csharp16( a csharp] }
+		d8)[ \tuplet 3/2 { d16( bflat d]) }
 		
-	\override TupletBracket   #'transparent = ##t
-	\times 2/3 { eflat16[( d eflat) bflat( a bflat]) g[( fsharp g) eflat( d eflat]) bflat[( a bflat) g( fsharp g]) eflat[( d eflat) bflat( a bflat]) }
-	\times 2/3 { f'''[( e! f) d( csharp! d]) b[( asharp b) f( e f]) d[( csharp! d) b!( asharp b]) f[( e f) d( csharp! d]) }
-	\times 2/3 { a!16[( b a\p]) } << { \noDynamic fsharp'8\mf \noBeam g \noBeam a b csharp d } \\ { \times 2/3 { a,16[(\<
-		c a]) b[( d b]) csharp[( e csharp]) d[( f d]) e[( g e]) f[( a f])\! } } >> \times 2/3 { e'[( a, e]) }
-	\times 2/3 { f'16[( a, d,) fsharp'(_\cr a, d,]) g'[( d d,) gsharp'( d d,]) a''[( a, a') bflat( a, bflat']) b[( a, b') csharp( a, csharp']) }
-	\times 2/3 { < d, d' >\ff[( < d, d' > < d' d' >\p]) } << { \noDynamic fsharp,8\mf \noBeam g \noBeam a b csharp d } \\ { \times 2/3 { a,16[(\<
-		c a]) b[( d b]) csharp[( e csharp]) d[( f d]) e[( g e]) f[( a f])\! } } >> \times 2/3 { e'[( csharp e,]) }
-	\times 2/3 { f'16[( a, d,) fsharp'(_\cr a, d,]) g'[( d d,) gsharp'( d d,]) a''[( a, a') bflat( a, bflat']) b[( a, b') csharp( a, csharp']) }
-	d8\ff[ \times 2/3 { eflat16( csharp eflat] } d8)[ \times 2/3 { eflat16( csharp eflat] } d8) r r4
-	r8 \times 2/3 { eflat16[( csharp eflat] } d8)[ \times 2/3 { eflat16( csharp eflat] } d8) r r4
-	r8 \times 2/3 { eflat16( csharp eflat] } d8) r r \times 2/3 { eflat16( csharp eflat] } d8) r
-	r8 \times 2/3 { eflat16[( csharp eflat] } d8) r r \times 2/3 { d,,16[( d' d']) d[( d, d,)
+	\override TupletBracket.transparent = ##t
+	\tuplet 3/2 { eflat16[( d eflat) bflat( a bflat]) g[( fsharp g) eflat( d eflat]) bflat[( a bflat) g( fsharp g]) eflat[( d eflat) bflat( a bflat]) }
+	\tuplet 3/2 { f'''[( e! f) d( csharp! d]) b[( asharp b) f( e f]) d[( csharp! d) b!( asharp b]) f[( e f) d( csharp! d]) }
+	\tuplet 3/2 { a!16[( b a\p]) } << { \noDynamic fsharp'8\mf \noBeam g \noBeam a b csharp d } \\ { \tuplet 3/2 { a,16[(\<
+		c a]) b[( d b]) csharp[( e csharp]) d[( f d]) e[( g e]) f[( a f])\! } } >> \tuplet 3/2 { e'[( a, e]) }
+	\tuplet 3/2 { f'16[( a, d,) fsharp'(_\cr a, d,]) g'[( d d,) gsharp'( d d,]) a''[( a, a') bflat( a, bflat']) b[( a, b') csharp( a, csharp']) }
+	\tuplet 3/2 { < d, d' >\ff[( < d, d' > < d' d' >\p]) } << { \noDynamic fsharp,8\mf \noBeam g \noBeam a b csharp d } \\ { \tuplet 3/2 { a,16[(\<
+		c a]) b[( d b]) csharp[( e csharp]) d[( f d]) e[( g e]) f[( a f])\! } } >> \tuplet 3/2 { e'[( csharp e,]) }
+	\tuplet 3/2 { f'16[( a, d,) fsharp'(_\cr a, d,]) g'[( d d,) gsharp'( d d,]) a''[( a, a') bflat( a, bflat']) b[( a, b') csharp( a, csharp']) }
+	d8\ff[ \tuplet 3/2 { eflat16( csharp eflat] } d8)[ \tuplet 3/2 { eflat16( csharp eflat] } d8) r r4
+	r8 \tuplet 3/2 { eflat16[( csharp eflat] } d8)[ \tuplet 3/2 { eflat16( csharp eflat] } d8) r r4
+	r8 \tuplet 3/2 { eflat16( csharp eflat] } d8) r r \tuplet 3/2 { eflat16( csharp eflat] } d8) r
+	r8 \tuplet 3/2 { eflat16[( csharp eflat] } d8) r r \tuplet 3/2 { d,,16[( d' d']) d[( d, d,)
 		d( d' d']) }
 	< d, d' >16\ff[( < d, d' >) < d d' >( < d' d' >]) < d d' >16[( < d, d' >) < d d' >( < d' d' >]) < d d' >16[( < d, d' >) < d d' >( < d' d' >])
 		< d d' >16[( < d, d' >) < d d' >( < d' d' >])
