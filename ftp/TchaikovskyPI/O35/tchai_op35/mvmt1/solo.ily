@@ -218,7 +218,7 @@ theSolo = \relative d' {
 	< d f >-.->[ d,-. a'-. d-.] < d f >[( f,) g-.^\( a-.] b-.[ csharp-. d-. e-.] \grace { f[ g] } f[( d f a])^\)
 	< csharp,! e >->[ a, a' < d f >] < csharp e >->[( e, fsharp gsharp]) a-.[( b-. csharp-. d-.]) < csharp e >-.[ d-. csharp-. e-.]
 	a->-.[ < f, a >-. < f a >-. b'-.->] c->[( a,) b'-.-> a-.->] g-.[ < g,, e' c' >-. b''-. < g,, e' c' >-.] c''-.[ < g,, e' c' >-. a''-.( g-.)]			|
-	< a, f' >-.[ < d, a' >-. < d a' >-. gsharp'-.] a[( a,) g'-. fsharp-.] e-.[ < a,, e' a >-. gsharp''-. < a,, e' a >-.]
+	< a, f' >-.[ < d, a' >-. < d a' >-. gsharp'-.] a[( a,) g'-. f-.] e-.[ < a,, e' a >-. gsharp''-. < a,, e' a >-.]
 		a''-.[ < a,, e' a >-. f''-.( e-.])
 	d32[( e f e d c b a]) b[( c d c b a g! f]) e16:32[ e': gsharp,: b:] e:[ gsharp: b: e:]
 	d,32[( e f e d c b a]) b[( c d c b a g! f]) e16:32[\> e': b: gsharp:] e:[ f: gsharp: b:]\!
@@ -227,7 +227,7 @@ theSolo = \relative d' {
 	< d f >-.->[ d,-. a'-. d-.] < d f >[( f,) g-.^\( a-.] b-.[ csharp-. d-. e-.] \grace { f[ g] } f[( d f a])^\)
 	< csharp, e >->[ a, a' < d f >] < csharp e >->[( e, fsharp gsharp]) a-.[( b-. csharp-. d-.]) < csharp e >-.[ d-. csharp-. e-.]
 	a->-.[ < f, a >-. < f a >-. b'-.->] c->[( a,) b'-.-> a-.->] g-.[ < g,, e' c' >-. b''-. < g,, e' c' >-.] c''-.[ < g,, e' c' >-. a''-.( g-.)]			|
-	< a, f' >-.[ < d, a' >-. < d a' >-. gsharp'-.] a[( a,) g'-. fsharp-.] e-.[ < a,, e' a >-. gsharp''-. < a,, e' a >-.]
+	< a, f' >-.[ < d, a' >-. < d a' >-. gsharp'-.] a[( a,) g'-. f-.] e-.[ < a,, e' a >-. gsharp''-. < a,, e' a >-.]
 		a''-.[ < a,, e' a >-. f''-.( e-.])
 	dsharp-.[ fsharp,!-. < dsharp' b' >-. fsharp,-.] < dsharp' c' >-.[ fsharp,-. < fsharp d' >-. b,-.] < fsharp' dsharp' >-.[ b,-.
 		< fsharp' a >( < g b >] < a c >)[ b,-. < csharp! e >( < dsharp fsharp >]																		|
