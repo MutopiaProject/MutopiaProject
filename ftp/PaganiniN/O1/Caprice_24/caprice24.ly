@@ -3,14 +3,20 @@
 \include "english.ly"
 
 \header {
-	title = "24 CAPRICCI"
-	composer = "Nicolo Paganini"
-	subtitle = "#24"
-	instrument = "violin"
-
+	title = "24 CAPRICCI: Caprice No. 24"
+	composer = "Nicolò Paganini"
+	instrument = "Violin"
+	mutopiaopus = "Op. 1"
 	mutopiacomposer = "PaganiniN"
-	source = "IMSLP (http://imslp.org/wiki/Special:ImagefromIndex/29587)"
+	mutopiatitle = "24 Caprices for Solo Violin: 24"
+    mutopiaopus = "O 1"
+    style = "Romantic"
+	license = "Creative Commons Attribution-ShareAlike 4.0"
+%	source = "IMSLP (http://imslp.org/wiki/Special:ImagefromIndex/29587)"
+    source = "Milan: Gio. Ricordi"
+    date = "1836"
 	enteredby = "Samuel Rummel"
+	maintainer = "Samuel Rummel"
 }
 
 #(set-global-staff-size 18)
@@ -374,9 +380,10 @@ varXI = \relative a''{
 	\new Staff {
 		\music
 	}
+    \header { opus = "Op. 1" }
 	\layout {}
 }
-\score { \new Staff { \varI }		\layout {} }
+\score { \new Staff { \varI }       \layout {} }
 \score { \new Staff { \varII }		\layout {} }
 \score { \new Staff { \varIII }		\layout {} }
 \score { \new Staff { \varIV }		\layout {} }
