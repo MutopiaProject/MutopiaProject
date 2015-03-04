@@ -44,10 +44,11 @@ dependencies needed when building. Any dependency required by the
 build will be pulled in as needed. A `gradlew` script is provided that
 will do the necessary gradle self-install to get you started.
 
-In the `build.gradle` script you will find, * An `allprojects`
-configuration to set what will be used for all projects. * `core`
-project definition (library) * `Mutopia` project definition
-(application, depends on core)
+In the `build.gradle` script you will find,
+
+ * An `allprojects` configuration to set what will be used for all projects.
+ * `core` project definition (library).
+ * `Mutopia` project definition (application, depends on core).
 
 ```
 $ ./gradlew installApp # build and install everything
