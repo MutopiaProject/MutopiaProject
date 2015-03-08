@@ -9,8 +9,8 @@
 \include "english.ly"
 \include "header.ly"
 
-barRest =  {\skip 1*3/4}
-tenuto = \markup{\italic ten.}
+barRest =  { \skip 1*3/4 }
+tenuto = \markup { \italic ten. }
 
 paperOFF = { \set Score.skipTypesetting = ##t }
 paperON = { \set Score.skipTypesetting = ##f }
@@ -63,9 +63,10 @@ playSilent =  {
     \outroSilent
 
                                 % Place a closing fermata over the final bar line
-    \once \override Score.RehearsalMark.break-visibility = #begin-of-line-invisible
-    \once \override Score.RehearsalMark.self-alignment-X = #1
-    \mark \markup { \musicglyph #"scripts.ufermata" }
+    \once \override Score.RehearsalMark.self-alignment-X = #0.5
+    \once \override Score.RehearsalMark.Y-offset = #-3.5
+    \once \override Score.RehearsalMark.outside-staff-priority = #100
+    \mark \markup { \fermata }
 
     \bar "|."
 }
@@ -172,7 +173,7 @@ playSub =  {
 }
 
 scoreSuper =  {
-    \context Dynamics = "super" {
+    \new Dynamics = "super" {
         <<
             \playSilent
             \playSuper
@@ -181,7 +182,7 @@ scoreSuper =  {
 }
 
 scoreRH =  {
-    \context Staff = "rh" {
+    \new Staff = "rh" {
         <<
             \playSilent
 %%%            \playSuper
@@ -191,7 +192,7 @@ scoreRH =  {
 }
 
 scoreDynamics =  {
-    \context Dynamics = "dyn" {
+    \new Dynamics = "dyn" {
         <<
             \playSilent
             \playDynamics
@@ -200,7 +201,7 @@ scoreDynamics =  {
 }
 
 scoreLH =  {
-    \context Staff = "lh" {
+    \new Staff = "lh" {
         \set Staff.pedalSustainStyle = #'mixed
         <<
             \playSilent
@@ -211,7 +212,7 @@ scoreLH =  {
 }
 
 scoreSub =  {
-    \context Dynamics = "sub" {
+    \new Dynamics = "sub" {
         <<
             \playSilent
             \playSub
@@ -236,46 +237,18 @@ scoreAll =  {
 }
 
                                 % PAPER ONLY, NO MIDI
-\score
-{
-
-    {
-        \scoreAll
-    }
-    \layout {
-        % [Convert-ly] The Dynamics context is now included by default.
-        \context {
-            \PianoStaff
-            \accepts Dynamics
-            \override VerticalAlignment.forced-distance = #6
-                                % if this #7 is changed, change the extra-offsets of the super and sub marks
-        }
-    }
+\score {
+    \scoreAll
+    \layout { }
 }
 
 
 
                                 % ALL REPEATS, MIDI ONLY
-\score
-{
-
-    {
-        \applyMusic #unfold-repeats
-        \scoreAll
-    }
-    \midi{
+\score {
+    \unfoldRepeats \scoreAll
+    \midi {
         \tempo 4=150
-        \context {
-            \type "Performer_group"
-            \name Dynamics
-            \consists "Piano_pedal_performer"
-            \consists "Span_dynamic_performer"
-            \consists "Dynamic_performer"
-        }
-        \context {
-            \PianoStaff
-            \accepts Dynamics
-        }
     }
 }
 
