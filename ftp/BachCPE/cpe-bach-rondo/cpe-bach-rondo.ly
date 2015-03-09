@@ -2,11 +2,12 @@
 
 #(set-global-staff-size 16)
 \header {
-  title             = "Rondo"
+  title             = \markup { \normal-text { "Rondo in E♭ Major" \small { "H.288" } } }
   composer          = "Carl Philipp Emanuel Bach (1714-1788)"
   meter             = "Andantino"
   instrument        = "Harpsichord"
-  mutopiatitle      = "Rondo"
+  mutopiatitle      = "Rondo in E-flat Major"
+  mutopiaopus       = "H.288"
   mutopiacomposer   = "BachCPE"
   mutopiainstrument = "Harpsichord, Piano"
   date              = "18th Century"
@@ -724,7 +725,7 @@ MSI =  \relative c {
   f4. <f, f'>8
   <f f'> r r4
 
-  r8 es'' f <f,, f'>
+  r8 e'' f <f,, f'>
   <f f'> r r4
   r8 fis'' g <es,, es'>
   <es es'> <es es'> <es es'> <es es'>
