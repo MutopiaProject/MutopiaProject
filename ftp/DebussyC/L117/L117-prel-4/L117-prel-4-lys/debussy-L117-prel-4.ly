@@ -5,7 +5,7 @@
 % LilyPond template for keyboard solo piece
 %%--------------------------------------------------------------------
 
-\version "2.19.1"
+\version "2.19.16"
 \language "english"
 
 \include "articulate.ly"
