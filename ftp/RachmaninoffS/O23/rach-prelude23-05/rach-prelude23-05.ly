@@ -696,9 +696,17 @@ LHtwo = \relative c {
 
 %------------ Dynamics
 
-whiteFFMarkup = \markup {\whiteout \pad-markup #0.2 \dynamic ff}
-whiteff = #(make-dynamic-script whiteFFMarkup)
+breaks = {
+  \repeat unfold 8 { s1 \noPageBreak } s2 |
+  \repeat unfold 6 { s1 \noPageBreak } s2 \pageBreak |
+  \repeat unfold 18 { s1 \noPageBreak } \pageBreak |
+  \repeat unfold 10 { s1 \noPageBreak } \pageBreak |
+  \repeat unfold 12 { s1 \noPageBreak } \pageBreak |
+  \repeat unfold 15 { s1 \noPageBreak } \pageBreak |
+  \repeat unfold 12 { s1 \noPageBreak }
+}
 
+% tempo, bar lines and dynamics
 dynamics = {
   % page 1 | m. 1 - 16
   \tempo "Alla marcia." 4 = 108
@@ -781,58 +789,59 @@ dynamics = {
   s1 | s\p | s\dim |
   s\ppLeg | s1*2 |
   \bar "|."
-  
 }
 
-breaks = {
-  s1 \noBreak s \noBreak s \break
-  s1 \noBreak s \noBreak s \break
-  s1 \noBreak s \noBreak s2 \break
-  s1 \noBreak s \noBreak s \break
-  s1 \noBreak s \noBreak s \noBreak s2 \break
-  \repeat unfold 6 { s1 \noBreak s \noBreak s \break }
-  \repeat unfold 8 { s1 \noBreak s \break }
-  \repeat unfold 12 { s1 \noBreak s \noBreak s \break }
-}
 
-pagebreaks = {
-  \repeat unfold 8 { s1 \noPageBreak } s2 \noPageBreak
-  \repeat unfold 6 { s1 \noPageBreak } s2 \pageBreak
-  \repeat unfold 18 { s1 \noPageBreak } \pageBreak
-}
-
-%-------Typeset music and generate midi
+%-------Typeset music
 \score {
-  \context PianoStaff <<
-    %-Midi instrument values at 
-    % http://lilypond.org/doc/v2.18/Documentation/snippets/midi#midi-demo-midiinstruments
-    \set PianoStaff.midiInstrument = "acoustic grand"
+  \new PianoStaff <<
     \new Staff = "md" <<
-      \clef treble \global 
-      \new Voice { \voiceOne \voiceStyleOne \RHone }
-      \new Voice { \voiceTwo \voiceStyleTwo \RHtwo } 
+      \clef treble \key g \minor
+      \new Voice \RHone
+      \new Voice \RHtwo
     >>
-    \new Dynamics { \dynamics }
+    \new Dynamics <<
+      \dynamics
+      \breaks
+    >>
     \new Staff = "mg" <<
-      \clef bass \global 
-      \new Voice { \voiceOne \voiceStyleThree \LHone }
-      \new Voice { \voiceTwo \voiceStyleFour \LHtwo }
-      %\breaks
-      \pagebreaks
+      \clef bass \key g \minor
+      \new Voice \LHone
+      \new Voice \LHtwo
     >>
   >>
   \layout {
     \accidentalStyle piano
     \context {
       \Score
-      \override TupletBracket.bracket-visibility = ##f
+      \omit TupletNumber
+      \omit TupletBracket
       \override DynamicTextSpanner.style = #'none
-        \mergeDifferentlyHeadedOn \mergeDifferentlyDottedOn
-       %\set Staff.followVoice = ##t
+      \mergeDifferentlyHeadedOn \mergeDifferentlyDottedOn
+      \override StaffGrouper.staff-staff-spacing.basic-distance = 11
+      \override DynamicLineSpanner.staff-padding = #3.5
+
     }
   }
+}
+
+% generate midi
+\score{
+  \unfoldRepeats \articulate 
+  \new PianoStaff 
+  \with { midiInstrument = "acoustic grand" }
+  <<
+    \new Staff = "md" <<
+      \new Voice << \dynamics \RHone >>
+      \new Voice << \dynamics \RHtwo >>
+    >>
+    \new Staff = "mg" <<
+      \new Voice << \dynamics \LHone >>
+      \new Voice << \dynamics \LHtwo >>
+    >>
+  >>
   \midi {
-    \tempo 4 = 80
+    \tempo 4 = 60
     \context {
       \Score
       midiMinimumVolume = #0.3
