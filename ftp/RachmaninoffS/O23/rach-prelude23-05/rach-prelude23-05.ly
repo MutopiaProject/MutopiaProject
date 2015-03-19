@@ -1,150 +1,86 @@
 %%--------------------------------------------------------------------
-% LilyPond typesetting of Rachmaninoff Prelude Op. 23 No. 1
+% LilyPond typesetting of Rachmaninoff Prelude Op. 23 No. 5
 %%--------------------------------------------------------------------
+
+\version "2.19.16"
+\language "deutsch"
+\include "articulate.ly"
+
+% values between 17 and 19 look acceptable (some tweaks needed though)
+#(set-global-staff-size 18)
 
 %----- Notes ---------------------------------------------------------
-% - Some grace notes are specially done with work-arounds
-%   * Most are shortened to avoid insufficient note length stealing from
-%     normal notes, see the bar 24 one for extreme example (otherwise
-%     LH / RH channels will be out of sync)
-%   * starting a voice with grace note mess up some voice properties
+% - the choice between r and s in voices follows the Gutheil source,
+%   however, LilyPond prefers to put them them in the order of the
+%   voices, i.e. mostly below the staff.
+% - stems and articulations are not always consistent in the source
+% - the maintainer does not recommend the original tempo
 
 %----- Known problems ------------------------------------------------
-% - Some artifacts need tweaking to look better, e.g.
-%   * Left hand slur spanning bar 22-23 (end point not reaching barline)
-%   * Last hairpin at bar 36 (should start at stem, not notehead left bound)
-% - MIDI completely broken
-%   * Sound volume is a mess because some dynamics are in its own staff while others are
-%     attached to LH / RH.
-%   * Adding tons of invisible dynamics to both staves is not easy to manage, tackle later
-%   * As a result, midiMinimumVolume and midiMaximumVolume are set to prevent uncontrolled
-%     sound volume
-%   * Grace notes will never sound like natural performance
-%   * Ritardando is only crudely simulated
-% - Some <> hairpin pairs are not vertically aligned
-
-voiceStyleOne = {}
-
-voiceStyleOne = {
-  %\override NoteHead.style = #'diamond
-  \override NoteHead.color = #(x11-color 'firebrick)
-  \override Stem.color = #(x11-color 'firebrick)
-  \override Beam.color = #(x11-color 'firebrick)
-}
-voiceStyleTwo = {
-  \override NoteHead.style = #'diamond
-  \override NoteHead.color = #(x11-color 'RoyalBlue)
-  \override Stem.color = #(x11-color 'RoyalBlue)
-  \override Beam.color = #(x11-color 'RoyalBlue)
-}
-voiceStyleThree = {
-  \override NoteHead.style = #'triangle
-  \override NoteHead.color = #(x11-color 'ForestGreen)
-  \override Stem.color = #(x11-color 'ForestGreen)
-  \override Beam.color = #(x11-color 'ForestGreen)
-}
-voiceStyleFour = {
-  %\override NoteHead.style = #'default
-  \override NoteHead.color = #(x11-color 'OrangeRed)
-  \override Stem.color = #(x11-color 'OrangeRed)
-  \override Beam.color = #(x11-color 'OrangeRed)
-}
-voiceStyleNeutral = {
-  \revert NoteHead.style
-  \revert NoteHead.color
-  \revert Stem.color
-  \revert Beam.color
-}
-
-%{
-voiceStyleOne = {}
-voiceStyleTwo = {}
-voiceStyleThree = {}
-voiceStyleFour = {}
-%}
-
-beam = { \once \offset positions -0.15 Beam }
-
-%%--------------------------------------------------------------------
-% The Mutopia Project
-% LilyPond template for keyboard solo piece
-%%--------------------------------------------------------------------
- 
-\version "2.19.15"
-\language "deutsch"
- 
-%---------------------------------------------------------------------
-%--Paper-size setting must be commented out or deleted upon submission.
-%--LilyPond engraves to paper size A4 by default.
-%--Uncomment the setting below to validate your typesetting
-%--in "letter" sizing.
-%--Mutopia publishes both A4 and letter-sized versions.
-%---------------------------------------------------------------------
-% #(set-default-paper-size "letter")
- 
-%--Default staff size is 20
-#(set-global-staff-size 17.8)
- 
-\paper {
-    top-margin = 8\mm                              %-minimum top-margin: 8mm
-    top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
-    markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
-    top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
-    last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
-    
-    ragged-last = ##f
-    ragged-bottom = ##f
-    ragged-last-bottom = ##t
-    
- }
- 
-%---------------------------------------------------------------------
-%--Refer to http://www.mutopiaproject.org/contribute.html
-%--for usage and possible values for header variables.
-%---------------------------------------------------------------------
-\header {
-    dedication = "A Monsieur A. Siloti"
-    title = "Prelude V"
-    composer = "Sergei Rachmaninoff (1873-1943)"
-    opus = "Op. 23, No 5"
-    %piece = "Left-aligned header"
-    date = "1901"
-    style = "Romantic"
-    %% Gutheil edition on IMSLP is also cross-referenced
-    source = "IMSLP - Muzyka and Gutheil editions"
- 
-    maintainer = "Joram Berger"
-    maintainerEmail = "abelcheung at gmail dot com"
-    license = "Creative Commons Attribution-ShareAlike 4.0"
- 
-    mutopiatitle = "Prelude Op. 23"
-    mutopiaopus = "Op. 23"
-    mutopiacomposer = "RachmaninoffS"
-    %--A list of instruments can be found at http://www.mutopiaproject.org/browse.html#byInstrument
-    %--Multiple instruments are separated by a comma
-    mutopiainstrument = "Piano"
- 
- 
-    % Footer, tagline, and copyright blocks are included here for reference
-    % and spacing purposes only.  There's no need to change these.
-    % These blocks will be overridden by Mutopia during the publishing process.
- footer = "Mutopia-2014/07/13-1958"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \with-url #"http://joramberger.de" \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
-}
-
+% - midi is not nice
+% - quite some slurs would need further adjustments (\shape)
+% - some hairpins could be better aligned (extra-offset)
+% - there are many semiquaver rests at odd places
+% - a larger staff size would be possible if clef changes required
+%   less space (cf. m. 69 - 71). This would reduce the white space
+%   between staves
+% - there are 'Impossible or ambiguous (de)crescendo in MIDI.' errors
+% - there may be typos
 
 %--------Definitions and shorthands
-global = {
-  \key g \minor
-  \time 4/4
-  \autoBeamOff
+
+% shrink hairpin (like in second measure)
+hairpin = {
+  \once \override Hairpin.extra-offset = #'(0 . -0.8)
+  \once \override Hairpin.height = 0.5
 }
 
-subBeam = {
-  \once \set subdivideBeams = ##t
-  \once \set baseMoment = #(ly:make-moment 1 4)
+% same for the lower voice
+hairpinII = {
+  \once \override Hairpin.height = 0.5
 }
+
+% switch from upper staff (main droite) to lower (main gauche) and vice versa
+mg = { \change Staff = "mg" \voiceOne }
+md = { \change Staff = "md" \voiceTwo }
+
+% merge note heads of same pitches from different voices like in measure 41
+merge = {
+  \once \override Staff.NoteColumn.force-hshift = 0
+}
+
+% new dynamic mark: ff with white background for measure 24
+whiteff = #(make-dynamic-script #{
+  \markup \whiteout \pad-markup #0.4 \dynamic ff
+#})
+
+% new dynamic mark: pp leggiero for measure 84
+ppLeg = #(make-dynamic-script #{
+  \markup {
+    \dynamic pp
+    \with-dimensions #'(0 . 0) #'(0 . 0)
+    \normal-text \italic leggiero
+  }
+#})
+
+% move dynamics (either in x and y by a pair or in y by a number)
+dyn =
+#(define-music-function (parser location shift) (number-or-pair?)
+   (_i "Shift dynamics.")
+   (if (pair? shift)
+       #{
+         \once \override DynamicText.extra-offset = $shift
+         \once \override DynamicTextSpanner.extra-offset = $shift
+         \once \override Hairpin.extra-offset = $shift
+       #}
+       #{
+         \once \override DynamicText.extra-offset = #(cons 0 shift)
+         \once \override DynamicTextSpanner.extra-offset = #(cons 0 shift)
+         \once \override Hairpin.extra-offset = #(cons 0 shift)
+       #}))
+
+
+% paper and header -------------------------------------
 
 barLinePad = { % some dynamics sticking too close to bar lines
   \once \override Staff.BarLine.space-alist.next-note = #'(semi-fixed-space . 2.0)
@@ -154,33 +90,7 @@ hideTempo = { % for controlling midi speed
   \once \omit Score.MetronomeMark
 }
 
-mg = { \change Staff = "mg" \voiceOne }
-md = { \change Staff = "md" \voiceTwo }
-
-#(define (shape-if-broken grob)
-   ; Fix end point of first segment of broken slur, raise to above staff lines,
-   ; like \shape #'(((0 . 0)(0 . 0)(0 . 1)(0 . 1)) ()) Slur
-   ; but only does so if slur is broken between 2 staves
-   ; base on lilypond doc Difficult Tweaks example
-   (let* (
-           (orig (ly:grob-original grob))
-           (siblings (if (ly:grob? orig)
-                         (ly:spanner-broken-into orig)
-                         '())))
-     (if (>= (length siblings) 2)
-         (let* (
-                 (points (ly:slur::calc-control-points (first siblings)))
-                 (pt-three (third points))
-                 (pt-four (fourth points)))
-           (set! pt-three (cons (car pt-three) (+ 1 (cdr pt-three))))
-           (set! pt-four  (cons (car pt-four ) (+ 1 (cdr pt-four ))))
-           (ly:grob-set-property! (first siblings) 'control-points
-             (append (list-head points 2) (list pt-three) (list pt-four)))
-           ))))
-         
-
-
-%-------- Right Hand parts
+%----- musical content -----------------------------------------------------------
 
 RHone = \relative c' {
   \tempo "Alla marcia." 4 = 108
