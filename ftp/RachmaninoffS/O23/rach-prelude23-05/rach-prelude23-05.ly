@@ -82,12 +82,38 @@ dyn =
 
 % paper and header -------------------------------------
 
-barLinePad = { % some dynamics sticking too close to bar lines
-  \once \override Staff.BarLine.space-alist.next-note = #'(semi-fixed-space . 2.0)
+\paper {
+  top-margin = 8\mm                              %-minimum top-margin: 8mm
+  top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.basic-distance = #18       %-pads music from copyright block
+  ragged-last = ##f
+  ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  page-count = #6
 }
 
-hideTempo = { % for controlling midi speed
-  \once \omit Score.MetronomeMark
+\header {
+  % visible headers
+  title = "Prelude V"
+  composer = "Sergei Rachmaninoff (1873-1943)"
+  opus = "Op. 23, No. 5"
+
+  % meta information and Mutopia headers
+  date = "1901"
+  style = "Romantic"
+  source = "IMSLP - Muzyka and Gutheil editions"
+  footer = "Mutopia-2015/00/00-0000"
+  maintainer = "Joram Berger"
+  maintainerEmail = "joram.berger at gmx dot de"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
+  mutopiatitle = "Prelude Op. 23"
+  mutopiaopus = "Op. 23"
+  mutopiacomposer = "RachmaninoffS"
+  mutopiainstrument = "Piano"
+  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \with-url #"http://joramberger.de" \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+  tagline = ##f
 }
 
 %----- musical content -----------------------------------------------------------
