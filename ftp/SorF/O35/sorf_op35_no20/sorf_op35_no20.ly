@@ -60,7 +60,7 @@ upperVoice = \relative c' {
   \tempo "Tempo di minuetto."
   \tupletSpan 4
 
-  \set TabStaff.minimumFret = #4
+  \set minimumFret = #4
   \tuplet 3/2 { <a\4>8 <cis_2\3> <e_1\2> } e4 <a-1> |
   \override TupletBracket.bracket-visibility = ##f
   \omit TupletNumber
