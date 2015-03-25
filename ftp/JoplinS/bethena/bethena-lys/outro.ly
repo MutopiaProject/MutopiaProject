@@ -1,4 +1,6 @@
-outroSilent = \notes {
+\version "2.18.2"
+
+outroSilent =  {
     \barRest |
     \barRest |
     \barRest |
@@ -10,21 +12,21 @@ outroSilent = \notes {
     \barRest |
 }
 
-outroRHvI = \notes \relative a' {
-    \once \override Slur #'attachment = #'(stem . stem)
+outroRHvI =  \relative a' {
+    \once \override Slur.positions = #'(3.5 . 3.5)
     a8( g4 b8 a4) |
     g4 g'( a) |
-    \once \override Slur #'attachment = #'(stem . stem)
+    \once \override Slur.positions = #'(6.5 . 6)
     a8( g4 b8 a4) |
     g4 g' g |
     a,8 g4 b8 a4 |
     a,8 g4 b8 a4 |
     a,8 g4 b8 a4 |
-    g4 <g bf ef g>2\fermata |
+    g4 <g bf ef g>2 \fermata |
     <g b d g>2.|
 }
 
-outroRHvII = \notes \relative b {
+outroRHvII =  \relative b {
     b4( c2)( |
     b4) r r |
     b'4( c2)( |
@@ -36,7 +38,7 @@ outroRHvII = \notes \relative b {
     \barRest |
 }
 
-outroRH = \notes {
+outroRH =  {
     <<
         \outroRHvI \\
         \outroRHvII
@@ -44,11 +46,11 @@ outroRH = \notes {
 }
 
 
-outroLHvI = \notes \relative d {
-    \once \override Slur #'attachment = #'(stem . stem)
+outroLHvI =  \relative d {
+    \once \override Slur.positions = #'(3.8 . 3.8)
     d4( e ef |
     d) s s |
-    \once \override Slur #'attachment = #'(stem . stem)
+    \once \override Slur.positions = #'(6.5 . 6.5)
     d'4( e ef |
     d) s s |
     \barRest |
@@ -58,12 +60,12 @@ outroLHvI = \notes \relative d {
     \barRest |
 }
 
-outroLHvII = \notes \relative g, {
+outroLHvII =  \relative g, {
     g2. |
     g4 s s |
     g'2. |
     g4 s s |
-    \stemBoth
+    \stemNeutral
     \change Staff = "rh"
     <g' b d>2. |
     \change Staff = "lh"
@@ -73,7 +75,7 @@ outroLHvII = \notes \relative g, {
     <g g,>2. |
 }
 
-outroLH = \notes {
+outroLH =  {
     <<
         <<
             \outroLHvI \\
@@ -83,38 +85,30 @@ outroLH = \notes {
     >>
 }
 
-outroSuper = \notes {
-    \once\override TextScript #'extra-offset = #'(0 . 0)
-    s4^\markup{Andante} s s |
+outroSuper =  {
+    s4^\markup {Andante} s s |
     \barRest |
     \barRest |
     \barRest |
-    \once\override TextScript #'extra-offset = #'(0 . 0)
-    s4^\markup{Tempo primo} s s |
+    s4^\markup {Tempo primo} s s |
     \barRest |
     \barRest |
     \barRest |
-    \once\override TextScript #'extra-offset = #'(0 . 0)
-    s2.^\markup{\smaller\italic FINE} |
+    s2.^\markup { \smaller FINE} |
 }
 
-outroDynamics = \notes {
-    \once \override DynamicText #'extra-offset = #'(-4 . 1)
+outroDynamics =  {
     s4\p s s |
     \barRest |
     \barRest |
     \barRest |
-    \once \override DynamicText #'extra-offset = #'(-7 . 2.5)
     s2.\f |
     s2.\f |
-    \once \override DynamicText #'extra-offset = #'(0 . 1)
     s2.\f |
-    \once \override DynamicText #'extra-offset = #'(0 . 1)
     s2.\f |
-    \once \override DynamicText #'extra-offset = #'(-2.5 . 1)
     s2.\f |
 }
 
-outroSub = \notes {
+outroSub =  {
     \outroSilent
 }

@@ -1,4 +1,6 @@
-partSevenSilent = \notes {
+\version "2.18.2"
+
+partSevenSilent =  {
     \barRest |
     \barRest |
     \barRest |
@@ -16,8 +18,7 @@ partSevenSilent = \notes {
     \barRest |
 }
 
-partSevenRHvI = \notes\relative c'' {
-    \override Slur #'attachment = #'(stem . stem)
+partSevenRHvI = \relative c'' {
     a8 g4 b8 a4 |
     a8 g4 b8 a4 |
     a8 c4 b8 a4 |
@@ -34,13 +35,15 @@ partSevenRHvI = \notes\relative c'' {
     b,8 e4 b8 d( d,) |
                                 % [mils] move the \fermata so that it doesn't
                                 % [mils] clash with the slur
-    \override Script #'padding = #1.2
-    cs8( <g' b>4) c,8( <fs a>4)\fermata |
-    \revert Script #'padding
-    \revert Slur #'attachment
+    \override Script.padding = #1.2
+    \once \override Slur.positions = #'(1 . 3.5)
+    cs8( <g' b>4)
+    \once \override Slur.positions = #'(1 . 3.5)
+    c,8( <fs a>4) \fermata |
+    \revert Script.padding
 }
 
-partSevenRHvII = \notes\relative c' {
+partSevenRHvII = \relative c' {
     <b d>2. |
     <cs g'> |
     <c fs>2 <c fs>4 |
@@ -56,17 +59,17 @@ partSevenRHvII = \notes\relative c' {
     c'2 c4 |
     g2 r4 |
     cs,4. c8
-    c4\fermata |
+    c4 \fermata |
 }
 
-partSevenRH = \notes {
+partSevenRH =  {
     <<
         \partSevenRHvI \\
         \partSevenRHvII
     >>
 }
 
-partSevenLHvI = \notes \relative g, {
+partSevenLHvI =  \relative g, {
     g4 <d' g> <d g> |
     <e e,> <e g a> <e g a> |
     r4 <fs a> r4 |
@@ -81,10 +84,10 @@ partSevenLHvI = \notes \relative g, {
     <e e,>4 <e g> <e g> |
     <c c,> <e g c> <e g c> |
     <d d,> <d g b> <d g b> |
-    <e e,> <a, a,> <d d,>\fermata |
+    <e e,> <a, a,> <d d,> \fermata |
 }
 
-partSevenLHvII = \notes \relative d {
+partSevenLHvII =  \relative d {
     \barRest
     \barRest
     <d d,>2 <ds ds,>4
@@ -102,15 +105,15 @@ partSevenLHvII = \notes \relative d {
     \barRest
 }
 
-partSevenLH = \notes {
+partSevenLH =  {
     <<
         \partSevenLHvI \\
         \partSevenLHvII
     >>
 }
 
-partSevenSuper = \notes {
-    s4^\markup{\smaller\italic FINALE} s s |
+partSevenSuper =  {
+    s4^\markup { \smaller FINALE} s s |
     \barRest |
     \barRest |
     \barRest |
@@ -123,13 +126,11 @@ partSevenSuper = \notes {
     \barRest |
     \barRest |
     \barRest |
-    \once \override TextScript #'extra-offset = #'(0 . -2)
-    s4^\markup{rit. poco a poco} s s |
+    s4^\markup {rit. poco a poco} s s |
     \barRest |
 }
 
-partSevenDynamics = \notes {
-    \once \override DynamicText #'extra-offset = #'(-3.5 . 1)
+partSevenDynamics =  {
     s4\mf s s |
     \barRest |
     \barRest |
@@ -147,21 +148,21 @@ partSevenDynamics = \notes {
     \barRest |
 }
 
-partSevenSub = \notes {
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
+partSevenSub =  {
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
     \barRest |
 }

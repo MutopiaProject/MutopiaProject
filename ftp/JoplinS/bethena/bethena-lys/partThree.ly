@@ -1,4 +1,6 @@
-partThreeSilent = \notes {
+\version "2.18.2"
+
+partThreeSilent =  {
     \barRest |
     \barRest |
     \barRest |
@@ -17,8 +19,7 @@ partThreeSilent = \notes {
     \barRest |
 }
 
-partThreeRHvI = \notes\relative c'' {
-    \override Slur #'attachment = #'(stem . stem)
+partThreeRHvI = \relative c'' {
     a8 g4 b8 a4 |
     a8 g4 b8 a4 |
     a8 c4 b8 a4 |
@@ -33,12 +34,14 @@ partThreeRHvI = \notes\relative c'' {
     g2. |
     e'8 a4 e8 g4 |
     b,8 e4 b8 d( d,) |
-    cs8( <g' b>4) c,8( <fs a>4) |
+    \once \override Slur.positions = #'(1 . 3.5)
+    cs8( <g' b>4)
+    \once \override Slur.positions = #'(1 . 3.5)
+    c,8( <fs a>4) |
     g2. |
-    \revert Slur #'attachment
 }
 
-partThreeRHvII = \notes\relative c' {
+partThreeRHvII = \relative c' {
     <b d>2. |
     <cs g'> |
     <c fs>2 <c fs>4 |
@@ -57,32 +60,32 @@ partThreeRHvII = \notes\relative c' {
     <b d>2. |
 }
 
-partThreeRH = \notes {
+partThreeRH =  {
     <<
         \partThreeRHvI \\
         \partThreeRHvII
     >>
 }
 
-partThreeLHvI = \notes \relative g, {
-    \stemBoth
+partThreeLHvI =  \relative g, {
+    \stemNeutral
     g4 <d' g> <d g> |
     <e e,> <e g a> <e g a> |
     \stemUp
     r4 <fs a> r4 |
-    \stemBoth
+    \stemNeutral
     <e e,>4 <e g> <e g> |
     <c c,> <e g c> <e g c> |
     <d d,> <d g b> <d g b> |
     <a a,> <e' g a> <a, a,> |
     \stemUp
     r4 <d fs a> <d fs a> |
-    \stemBoth
+    \stemNeutral
     g,4 <d' g> <d g> |
     <e e,> <e g a> <e g a> |
     \stemUp
     r4 <fs a> r4 |
-    \stemBoth
+    \stemNeutral
     <e e,>4 <e g> <e g> |
     <c c,> <e g c> <e g c> |
     <d d,> <d g b> <d g b> |
@@ -90,7 +93,7 @@ partThreeLHvI = \notes \relative g, {
     <g g,>4 d g, |
 }
 
-partThreeLHvII = \notes \relative d {
+partThreeLHvII =  \relative d {
     \barRest
     \barRest
     <d d,>2 <ds ds,>4
@@ -109,15 +112,15 @@ partThreeLHvII = \notes \relative d {
     \barRest
 }
 
-partThreeLH = \notes {
+partThreeLH =  {
     <<
         \partThreeLHvI \\
         \partThreeLHvII
     >>
 }
 
-partThreeSuper = \notes {
-    s4^\markup{\italic\smaller cantabile} s s |
+partThreeSuper =  {
+    s4^\markup { \smaller cantabile} s s |
     \barRest |
     \barRest |
     \barRest |
@@ -135,8 +138,7 @@ partThreeSuper = \notes {
     \barRest |
 }
 
-partThreeDynamics = \notes {
-    \once \override DynamicText #'extra-offset = #'(-3.5 . 0.5)
+partThreeDynamics =  {
     s4\mp s s |
     \barRest |
     \barRest |
@@ -155,26 +157,26 @@ partThreeDynamics = \notes {
     \barRest |
 }
 
-partThreeSub = \notes {
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
+partThreeSub =  {
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
     \barRest |
 }
 
-segueThreeSilent = \notes {
+segueThreeSilent =  {
     \barRest |
     \barRest |
     \barRest |
@@ -185,7 +187,7 @@ segueThreeSilent = \notes {
     \barRest |
 }
 
-segueThreeRHvI = \notes \relative g'' {
+segueThreeRHvI =  \relative g'' {
     r4 g8( d' c b) |
     r4 e,8( b' a gs) |
     r4 ds8( gs as b) |
@@ -196,7 +198,7 @@ segueThreeRHvI = \notes \relative g'' {
     bf'2.^\tenuto |
 }
 
-segueThreeRHvII = \notes \relative g' {
+segueThreeRHvII =  \relative g' {
     g2. |
     gs |
     gs |
@@ -207,16 +209,16 @@ segueThreeRHvII = \notes \relative g' {
     <d f>4( <c e>2) |
 }
 
-segueThreeRH = \notes {
+segueThreeRH =  {
     <<
-        \segueThreeRHvI\\
+        \segueThreeRHvI \\
         \segueThreeRHvII
     >>
 }
 
 
-segueThreeLHvI = \notes \relative f {
-    \stemBoth
+segueThreeLHvI =  \relative f {
+    \stemNeutral
     \barRest |
     \barRest |
     \barRest |
@@ -226,10 +228,10 @@ segueThreeLHvI = \notes \relative f {
     cf4 bf a8 d |
     \slurDown
     g,4( c2) |
-    \slurBoth
+    \slurNeutral
 }
 
-segueThreeLHvII = \notes \relative f {
+segueThreeLHvII =  \relative f {
     <f b d>2.^\tenuto |
     <e b' d>^\tenuto |
     <ds b' ds> |
@@ -244,16 +246,16 @@ segueThreeLHvII = \notes \relative f {
     \barRest
 }
 
-segueThreeLH = \notes {
+segueThreeLH =  {
     <<
-                                % \applycontext #(lambda (x) (display "\n[mils] expect warnings:  Too many clashing notecolumns.\n"))
+                                % \applyContext #(lambda (x) (display "\n[mils] expect warnings:  Too many clashing notecolumns.\n"))
         \segueThreeLHvI \\
         \segueThreeLHvII
     >>
 }
 
 
-segueThreeSuper = \notes {
+segueThreeSuper =  {
     \barRest |
     \barRest |
     \barRest |
@@ -264,8 +266,8 @@ segueThreeSuper = \notes {
     \barRest |
 }
 
-segueThreeDynamics = \notes {
-    \once \override DynamicText #'extra-offset = #'(-2 . 3.5)
+segueThreeDynamics =  {
+    \once \override DynamicText.extra-offset = #'(-2 . -1.5)
     s4\f s s |
     \barRest |
     \barRest |
@@ -276,17 +278,13 @@ segueThreeDynamics = \notes {
     \barRest |
 }
 
-segueThreeSub = \notes {
-    \override SustainPedal #'extra-offset = #'(0 . 3.5)
-    s8\sustainDown s s s s s\sustainUp |
-    s8\sustainDown s s s s s\sustainUp |
-    s8\sustainDown s s s s s\sustainUp |
-    s8\sustainDown s s s s s\sustainUp |
-    s8\sustainDown s s s s s\sustainUp |
-    s8\sustainDown s s s s s\sustainUp |
+segueThreeSub =  {
+    s8 \sustainOn s s s s s \sustainOff |
+    s8 \sustainOn s s s s s \sustainOff |
+    s8 \sustainOn s s s s s \sustainOff |
+    s8 \sustainOn s s s s s \sustainOff |
+    s8 \sustainOn s s s s s \sustainOff |
+    s8 \sustainOn s s s s s \sustainOff |
     \barRest |
     \barRest |
-    \revert SustainPedal #'extra-offset
 }
-
-

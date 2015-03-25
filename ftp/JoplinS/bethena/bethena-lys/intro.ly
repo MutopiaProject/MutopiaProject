@@ -1,4 +1,6 @@
-introSilent = \notes {
+\version "2.18.2"
+
+introSilent =  {
     \barRest |
     \barRest |
     \barRest |
@@ -9,7 +11,7 @@ introSilent = \notes {
     \barRest |
 }
 
-introRH = \notes\relative a'' {
+introRH = \relative a'' {
     a8 g4 b8 a4 | a,8 g4 b8 a4 |
     R1*3/4 | R1*3/4 |
     <e c g>2. | <ef c g> |
@@ -17,16 +19,15 @@ introRH = \notes\relative a'' {
 }
 
 
-introLH = \notes\relative a {
+introLH = \relative a {
     R1*3/4 | R1*3/4 |
     a8 g4 b8 a4 | a,8 g4 b8 a4 |
     a8 g4 b8 a4 | a8 c4 b8 a4 |
     d2. | <d d,> |
 }
 
-introSuper = \notes {
-    \once \override TextScript #'extra-offset = #'(3 . -1.5)
-    s4^\markup{\center-align < {Valse Tempo} {\italic\smaller TEMA} > } s s |
+introSuper =  {
+    s4^\markup { \center-column { \line {Valse Tempo} \line { \smaller TEMA} } } s s |
     \barRest |
     \barRest |
     \barRest |
@@ -36,7 +37,7 @@ introSuper = \notes {
     \barRest |
 }
 
-introDynamics = \notes {
+introDynamics =  {
     s4\mp s s |
     \barRest |
     \barRest |
@@ -47,6 +48,6 @@ introDynamics = \notes {
     \barRest |
 }
 
-introSub = \notes {
+introSub =  {
     \introSilent
 }

@@ -1,4 +1,6 @@
-partTwoSilent = \notes {
+\version "2.18.2"
+
+partTwoSilent =  {
     \repeat volta 2 {
         \barRest |
         \barRest | \break
@@ -21,42 +23,42 @@ partTwoSilent = \notes {
         {\barRest |}
     }
 }
-partTwoRHvI = \notes \relative d' {
+partTwoRHvI =  \relative d' {
     \repeat volta 2 {
-        \stemBoth
+        \stemNeutral
         <d bf' d>8 <g g'>4 <f f'>8 <g g'> <a a'> |
         \stemUp
         <bf bf'>2. |
-        \stemBoth
+        \stemNeutral
         <d d'>8 <c c'>4 <f f'>8 <e e'> <ef ef'> |
         \stemUp
         <d d'>2. |
-        \stemBoth
+        \stemNeutral
         <bf bf'>8 <ef g>4 <bf bf'>8 <bf cs g'>4 |
         <bf d g>8 <bf d f>4 <bf d g>8 <f b d>4 |
         \stemUp
         d'8 bf4 d8 c4 |
         c2. |
-        \stemBoth
+        \stemNeutral
         <d, bf' d>8 <g g'>4 <f f'>8 <g g'> <a a'> |
         \stemUp
         <bf bf'>2. |
-        \stemBoth
+        \stemNeutral
         <d d'>8 <c c'>4 <f f'>8 <e e'> <ef ef'> |
         \stemUp
         <d d'>2. |
-        \stemBoth
+        \stemNeutral
         <bf bf'>8 <ef g>4 <bf bf'>8 <bf cs g'>4 |
         <bf d g>8 <bf d f>4 <bf d g>8 <f b d>4 |
         \stemUp
         d'8 bf4 d8 c4
-        \stemBoth
+        \stemNeutral
     }
     \alternative {
         {
             \stemUp
             <d, f bf>4 f8 bf c cs |
-            \stemBoth
+            \stemNeutral
         }
         {
             <d, f bf>4 a'8 af g4 |
@@ -64,7 +66,7 @@ partTwoRHvI = \notes \relative d' {
     }
 }
 
-partTwoRHvII = \notes \relative d'' {
+partTwoRHvII =  \relative d'' {
     \repeat volta 2 {
         \barRest |
         r4 <d f> <d f> |
@@ -83,19 +85,19 @@ partTwoRHvII = \notes \relative d'' {
         <bf, ef,>2 <bf ef,>4
     }
     \alternative {
-        {\barRest |}
-        {\barRest |}
+        { \barRest | }
+        { \barRest | }
     }
 }
 
-partTwoRH = \notes {
+partTwoRH =  {
     <<
-        \partTwoRHvI\\
+        \partTwoRHvI \\
         \partTwoRHvII
     >>
 }
 
-partTwoLHvI = \notes\relative c {
+partTwoLHvI = \relative c {
     \repeat volta 2 {
         <bf bf,>4 <f' bf d>8[ <f f,>] <e e,>[ <ef ef,>] |
         <d d,>4 <f bf d> <f bf d> |
@@ -114,20 +116,20 @@ partTwoLHvI = \notes\relative c {
         <c, c,> <g' bf c> <f f,> |
     }
     \alternative {
-        {<bf bf,> r r |}
-        {<bf bf,> a8 af g4 |}
+        { <bf bf,> r r | }
+        { <bf bf,> a8 af g4 | }
     }
 }
 
-partTwoLH = \notes {
+partTwoLH =  {
     \partTwoLHvI
 }
 
-partTwoSuper = \notes {
+partTwoSuper =  {
     \partTwoSilent
 }
 
-partTwoDynamics = \notes {
+partTwoDynamics =  {
     \repeat volta 2 {
         s4\f s s |
         \barRest |
@@ -151,23 +153,23 @@ partTwoDynamics = \notes {
     }
 }
 
-partTwoSub = \notes {
+partTwoSub =  {
     \repeat volta 2 {
         \barRest |
-        s4\sustainDown s s\sustainUp |
+        s4 \sustainOn s s \sustainOff |
         \barRest |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s\sustainUp s |
-        s4\sustainDown s\sustainUp s |
-        s4\sustainDown s\sustainUp s |
-        s4\sustainDown s s\sustainUp |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s \sustainOff s |
+        s4 \sustainOn s \sustainOff s |
+        s4 \sustainOn s \sustainOff s |
+        s4 \sustainOn s s \sustainOff |
         \barRest |
-        s4\sustainDown s s\sustainUp |
+        s4 \sustainOn s s \sustainOff |
         \barRest |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s\sustainUp s |
-        s4\sustainDown s\sustainUp s |
-        s4\sustainDown s\sustainUp s |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s \sustainOff s |
+        s4 \sustainOn s \sustainOff s |
+        s4 \sustainOn s \sustainOff s |
     }
     \alternative {
         { \barRest | }
@@ -176,7 +178,7 @@ partTwoSub = \notes {
 }
 
 
-segueTwoSilent = \notes {
+segueTwoSilent =  {
     \barRest |
     \barRest |
     \barRest |
@@ -186,7 +188,7 @@ segueTwoSilent = \notes {
     \barRest |
 }
 
-segueTwoRHvI = \notes \relative c'' {
+segueTwoRHvI =  \relative c'' {
     \stemUp
     gf8 f4 e8 ef4 |
     d <g bf d> <fs a d> |
@@ -195,14 +197,14 @@ segueTwoRHvI = \notes \relative c'' {
     <cs g' bf>2 <c g' a>4 |
     <c fs a>2.~ |
     <c fs a>2.^\tenuto |
-    \stemBoth
+    \stemNeutral
 }
 
-segueTwoRH = \notes {
+segueTwoRH =  {
     \segueTwoRHvI
 }
 
-segueTwoLHvI = \notes \relative c' {
+segueTwoLHvI =  \relative c' {
     gf8 f4 e8 ef4 |
     d r r |
     R1*3/4 |
@@ -213,32 +215,31 @@ segueTwoLHvI = \notes \relative c' {
         { d,2.^\tenuto } \\
         {
                                 % [mils] make this bar a little less crowded
-            \override Rest #'transparent = ##t
+            \override Rest.transparent = ##t
             r4 r2
-            \revert Rest #'transparent
+            \revert Rest.transparent
         }
     >> |
 }
 
-segueTwoLH = \notes {
+segueTwoLH =  {
     \segueTwoLHvI
 }
 
-segueTwoSuper = \notes {
+segueTwoSuper =  {
     \segueTwoSilent
 }
 
-segueTwoDynamics = \notes {
+segueTwoDynamics =  {
     \barRest |
     \barRest |
     \barRest |
     s4\< s s\! |
     s\f s s |
     \barRest |
-    \once \override Hairpin #'extra-offset = #'(-2 . 2.5)
+    \once \override Hairpin.extra-offset = #'(-1 . 0)
     s4\> s s\! |
 }
-segueTwoSub = \notes {
+segueTwoSub =  {
     \segueTwoSilent
 }
-

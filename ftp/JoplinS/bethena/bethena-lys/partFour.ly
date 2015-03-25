@@ -1,6 +1,8 @@
-partFourSilent = \notes {
+\version "2.18.2"
+
+partFourSilent =  {
     \repeat volta 2 {
-        \bar "||:"
+        \bar ".|:-||"
         \barRest |
         \barRest |
         \barRest |
@@ -32,9 +34,9 @@ partFourSilent = \notes {
 }
 
 
-partFourRHvI = \notes \relative c' {
+partFourRHvI =  \relative c' {
     \repeat volta 2 {
-        \stemBoth
+        \stemNeutral
         <c f a>4( <c e bf'> <d f b>) |
         c'8( <f a>4) c8( <f a>4) |
         bf,8( <e g>4) bf8( <bf e g>4) |
@@ -54,7 +56,7 @@ partFourRHvI = \notes \relative c' {
             c8 a4 c8 a4 |
             c8 g4 c8 g4 |
             g8 g4 g8 g4 |
-            \stemBoth
+            \stemNeutral
             <c e, c>8( bf g e c bf) |
         }
         {
@@ -66,10 +68,10 @@ partFourRHvI = \notes \relative c' {
     a'8 f4 a8 g4 |
     \stemUp
     f f8( f' f4) |
-    \stemBoth
+    \stemNeutral
 }
 
-partFourRHvII = \notes {
+partFourRHvII =  {
     \repeat volta 2 {
         \barRest |
         \barRest |
@@ -84,7 +86,7 @@ partFourRHvII = \notes {
         \barRest |
     }
     \alternative {
-        \relative ds''{
+        \relative ds'' {
             \barRest |
             ds2.( |
             e) |
@@ -96,23 +98,23 @@ partFourRHvII = \notes {
         }
     }
     \relative f' {
-        \barRest |
-        \barRest |
-        <f b,>2 <e bf>4 |
+      \barRest |
+      \barRest |
+      <f b,>2 <e bf>4 |
                                 % [mils] these slurs should be on both note-heads
                                 % [mils] (crossing staves) throughout this bar
-        <c a>(
-        \slurUp
-        \change Staff = "lh"
-        \stemUp
-        <df bf>)( <c a>) |      % [mils] slurs on both note-heads as above
-        \change Staff = "rh"
-        \stemBoth\slurBoth
+      <c a>(
+      \slurUp
+      \change Staff = "lh"
+      \stemUp
+      <df bf>)( <c a>) |      % [mils] slurs on both note-heads as above
+      \change Staff = "rh"
+      \stemNeutral\slurNeutral
     }
 }
 
 
-partFourRH = \notes {
+partFourRH =  {
     <<
         \partFourRHvI \\
         \partFourRHvII
@@ -120,15 +122,15 @@ partFourRH = \notes {
 }
 
 
-partFourLHvI = \notes {
+partFourLHvI =  {
     \repeat volta 2 \relative f {
-        \stemBoth
+        \stemNeutral
         <f f,>4 <g g,> <gs gs,> |
         <a a,> <a c f> <a c f> |
         \stemUp
         r4 <bf c e> r |
         r <a d f> <a d f> |
-        \stemBoth
+        \stemNeutral
         <f f,>4 <a c ds> <a c ds> |
         <e e,> <a c e> <a c e> |
         <e e,> <gs d' e> <gs d' e> |
@@ -137,7 +139,7 @@ partFourLHvI = \notes {
         <a a,> <a c f> <a c f> |
         \stemUp
         r4 <bf c e> r |
-        \stemBoth
+        \stemNeutral
     }
     \alternative {
         \relative a {
@@ -145,23 +147,25 @@ partFourLHvI = \notes {
             r4 <a d f> r |
             r <a c ds> <a c ds> |
             r <g c e> <g c e> |
-            \stemBoth
+            \stemNeutral
             <g g,>4 <g b f'> <g b f'> |
             <c, c,> <g' bf c e>2 |
         }
         \relative a {
             \stemUp
             r4 <a d f> r |
-            r <f bf d> r |
-            r <f a c> r |
-            r <d f g> r |
-            \stemBoth
-            \barRest |
         }
+    }
+    \relative a {
+      r <f bf d> r |
+      r <f a c> r |
+      r <d f g> r |
+      \stemNeutral
+      \barRest |
     }
 }
 
-partFourLHvII = \notes {
+partFourLHvII =  {
     \repeat volta 2 \relative c {
         \barRest |
         \barRest |
@@ -185,25 +189,26 @@ partFourLHvII = \notes {
         }
         \relative d {
             <d d,>2. |
-            <bf bf,>2 <b b,>4 |
-            <c c,>2 <d d,>4 |
-            <g, g,>2 <c c,>4 |
-            <f f,>2. |
         }
+    }
+    \relative d {
+      <bf bf,>2 <b b,>4 |
+      <c c,>2 <d d,>4 |
+      <g, g,>2 <c c,>4 |
+      <f f,>2. |
     }
 }
 
-partFourLH = \notes {
+partFourLH =  {
     <<
-        \partFourLHvI\\
+        \partFourLHvI \\
         \partFourLHvII
     >>
 }
 
-partFourSuper = \notes {
+partFourSuper =  {
     \repeat volta 2 {
-        \once \override TextScript #'extra-offset = #'(0 . -2)
-        s4^\markup{ \column < {a tempo} {\italic\smaller cantabile} > } s s |
+        s4^\markup{ \column { \line {a tempo} \line { \smaller cantabile} } } s s |
         \barRest |
         \barRest |
         \barRest |
@@ -211,7 +216,6 @@ partFourSuper = \notes {
         \barRest |
         s^\markup{rall.} s s |
         \barRest
-        \once \override TextScript #'extra-offset = #'(0 . -2)
         s^\markup{a tempo} s s |
         \barRest |
         \barRest |
@@ -221,23 +225,21 @@ partFourSuper = \notes {
             \barRest |
             \barRest |
             \barRest |
-            \once \override TextScript #'extra-offset = #'(0 . -0.5)
             s4^\markup{rit.} s s |
             \barRest |
         }
         {
             \barRest |
-            \override TextScript #'extra-offset = #'(0 . -2.5)
-            s8 s s s^\markup{rit. poco a poco} s s |
-            \revert TextScript #'extra-offset
-            \barRest |
-            \barRest |
-            \barRest |
         }
     }
+    s8 s s s^\markup{rit. poco a poco} s s |
+    \revert TextScript.extra-offset
+    \barRest |
+    \barRest |
+    \barRest |
 }
 
-partFourDynamics = \notes {
+partFourDynamics =  {
     \repeat volta 2 {
         s4\f s s |
         \barRest |
@@ -247,10 +249,10 @@ partFourDynamics = \notes {
         \barRest |
                                 % [mils] hugely ugly code to print "dim." instead
                                 %        of ">" (decrescendo)
-        \once \override TextScript #'extra-offset = #'(0 . -1)
-        \once \override TextScript #'font-series = #'medium
-        \once \override Hairpin #'transparent = ##t
-        s^\markup{\normalsize\italic dim.}\> s s |
+        \once \override TextScript.extra-offset = #'(0 . -1)
+        \once \override TextScript.font-series = #'medium
+        \once \override Hairpin.transparent = ##t
+        s^\markup { \normalsize dim. } \> s s |
         s s s\! |
         s\f s s |
         \barRest |
@@ -266,82 +268,80 @@ partFourDynamics = \notes {
         }
         {
             \barRest |
-            \barRest |
-            \barRest |
-            \barRest |
-            \barRest |
         }
     }
+    \barRest |
+    \barRest |
+    \barRest |
+    \barRest |
 }
 
-partFourSub = \notes {
+partFourSub =  {
     \repeat volta 2 {
         \barRest |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s\sustainUp s |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s \sustainOff s |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
         \barRest |
         \barRest |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s\sustainUp s |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s \sustainOff s |
     }
     \alternative {
         {
-            s4\sustainDown s\sustainUp s |
-            s4\sustainDown s s\sustainUp |
-            s4\sustainDown s s\sustainUp |
-            s4\sustainDown s s\sustainUp |
+            s4 \sustainOn s \sustainOff s |
+            s4 \sustainOn s s \sustainOff |
+            s4 \sustainOn s s \sustainOff |
+            s4 \sustainOn s s \sustainOff |
             \barRest |
         }
         {
-            s4\sustainDown s\sustainUp s |
-            s4\sustainDown s\sustainUp s |
-            s4\sustainDown s\sustainUp s |
-            s4\sustainDown s\sustainUp s |
-            \barRest |
+            s4 \sustainOn s\sustainOff s |
         }
     }
-}
-
-
-segueFourSilent = \notes {
-    \barRest |
-    \barRest |
-    \barRest |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s \sustainOff s |
     \barRest |
 }
 
-segueFourRHvI = \notes \relative f'' {
+
+segueFourSilent =  {
+    \barRest |
+    \barRest |
+    \barRest |
+    \barRest |
+}
+
+segueFourRHvI =  \relative f'' {
     f8( e f e ef d) |
     e( ds e ds d df) |
     ef( d ef d df c) |
     cs2 r4\fermata |
  }
 
-segueFourRH = \notes {
+segueFourRH =  {
     \segueFourRHvI
 }
 
-segueFourLHvI = \notes \relative as {
+segueFourLHvI =  \relative as {
     \barRest |
     \barRest |
     \barRest |
     as2 s4 |
 }
 
-segueFourLHvII = \notes \relative gs{
-    \override TextScript #'padding = #1.2
+segueFourLHvII =  \relative gs{
     <gs b d>2.^\tenuto |
     <g bf df>^\tenuto |
     <fs a c>^\tenuto |
     fs4 fs, s4 |
-    \revert  TextScript #'padding
 }
 
-segueFourLH = \notes {
+segueFourLH =  {
     <<
         <<
             \segueFourLHvI \\
@@ -352,18 +352,17 @@ segueFourLH = \notes {
 }
 
 
-segueFourSuper = \notes {
-    \once \override TextScript #'padding = #2
-    s4^\markup{a tempo} s s |
+segueFourSuper =  {
+    s4^\markup {a tempo} s s |
     \barRest |
     \barRest |
     \barRest |
 }
 
-segueFourDynamics = \notes {
+segueFourDynamics =  {
     \segueFourSilent
 }
 
-segueFourSub = \notes {
+segueFourSub =  {
     \segueFourSilent
 }
