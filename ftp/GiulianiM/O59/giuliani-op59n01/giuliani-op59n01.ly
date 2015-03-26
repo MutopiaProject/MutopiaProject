@@ -14,7 +14,7 @@
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail.com"
-  footer = "MUtopia-2015/03/11-0"
+  footer = "Mutopia-2015/03/11-0"
 }
 
 \paper {
