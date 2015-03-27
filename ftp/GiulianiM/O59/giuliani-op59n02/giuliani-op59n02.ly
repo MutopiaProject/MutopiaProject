@@ -26,7 +26,7 @@
   bottom-margin = #10
 }
 
-mbreak = { \break }
+mbreak = {} % { \break }
 global = {
   \time 2/4 \key c \major
 }
