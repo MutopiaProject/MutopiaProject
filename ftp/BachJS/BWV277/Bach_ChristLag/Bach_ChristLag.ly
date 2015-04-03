@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 \language "deutsch"
 
 % Requires Libertine Open Fonts from http://www.linuxlibertine.org/
@@ -19,36 +19,11 @@
   license = "cc-by-sa"
   date = "unknown"
   lastupdated = "2015-02-23"
-  % footer = "Mutopia-2015/01/00-000"
-  % tagline and copyright can be updated with the default
-  % Mutopia tagline, this one is a candidate for a new
-  % Mutopia default, but not yet decided.
-  thecopyright = "Creative Commons Attribution-ShareAlike 4.0"
-  tagline = \markup {
-    \override #'(baseline-skip . 2.2)
-    \center-column {
-      \abs-fontsize #8 \sans \bold
-      \with-url #"http://www.MutopiaProject.org" {
-        "Mutopia"
-        "Project"
-      }
-    }
-    \override #'(baseline-skip . 0)
-    \column {
-      \with-color #grey
-      \filled-box #'( 0 . 1) #'(-2.5 . 1.4) #0
-    }
-    \override #'(baseline-skip . 2.2)
-    \column {
-      \abs-fontsize #8 \sans
-      \concat{"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " © 2015 by " \with-url #"mailto:trschell@gmail.com" \maintainer "." }
-      \abs-fontsize #8 \sans
-      \concat {"This work is licensed under a " \with-url #"http://creativecommons.org/licenses/by-sa/4.0" \thecopyright " license."}
-    }
-  }
 
- mutopiacopyright = "Creative Commons Attribution-ShareAlike 4.0"
- footer = "Mutopia-2014/01/14-1900"
+ mutopialicense = "Creative Commons Attribution-ShareAlike 4.0"
+ footer = "Mutopia-2015/04/03-2003"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 #(set-global-staff-size 18.1)
