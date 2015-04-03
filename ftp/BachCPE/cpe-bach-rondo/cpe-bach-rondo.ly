@@ -1,4 +1,4 @@
-\version "2.16.1"
+\version "2.18.2"
 
 #(set-global-staff-size 16)
 \header {
@@ -304,13 +304,13 @@ MDI =  \relative c'' {
   bes es d g
 
   f es d f
-  \times 4/6 { es[ d c bes g f]}
+  \tuplet 6/4 { es[ d c bes g f]}
   bes2
   as4.^\prall\turn as8
 
   as f' es d
   bes' as g f
-  \stemUp \times 4/6 { es[ d c \staffDown bes as g]}
+  \stemUp \tuplet 6/4 { es[ d c \staffDown bes as g]}
   f2
 
   es4^\prall\turn \staffUp r8 bes'
