@@ -1,6 +1,8 @@
-partFiveSilent = \notes {
+\version "2.18.2"
+
+partFiveSilent =  {
     \repeat volta 2 {
-        \bar "||:"
+        \bar ".|:-||"
         \barRest |
         \barRest |
         \barRest |
@@ -24,7 +26,7 @@ partFiveSilent = \notes {
 }
 
 
-partFiveRHvI = \notes \relative d''{
+partFiveRHvI =  \relative d''{
     \repeat volta 2 {
         d8 b4 fs'8 d4 |
         b'8( fs d) b~ b4 |
@@ -37,7 +39,7 @@ partFiveRHvI = \notes \relative d''{
         \showStaffSwitch
         \stemUp\change Staff = "lh"
         \acciaccatura es,8 fs4^^ |
-        \stemBoth\change Staff = "rh"
+        \stemNeutral\change Staff = "rh"
         \hideStaffSwitch
         d''8 b4 fs'8 d4 |
         b'8( fs d) b~ b4 |
@@ -48,17 +50,17 @@ partFiveRHvI = \notes \relative d''{
         cs as4 g'8 fs4 |
     }
     \alternative {
-        {b,4 g^^ fs^^ |}
-        {b4 <d, es gs d'> <d fs a c> |}
+        { b,4 g^^ fs^^ | }
+        { b4 <d, es gs d'> <d fs a c> | }
     }
 }
 
-partFiveRH = \notes {
+partFiveRH =  {
     \partFiveRHvI
 }
 
 
-partFiveLHvI = \notes\relative b, {
+partFiveLHvI = \relative b, {
     \repeat volta 2 {
         <b b,>4 <fs' b d> <fs b d> |
         <b, b,>4 <fs' b d> <fs b d> |
@@ -73,11 +75,11 @@ partFiveLHvI = \notes\relative b, {
                                 % [mils] the E#-F# (right-hand).  The slur should be
                                 % [mils] above the notes.
             \acciaccatura {
-                \once \override Stem #'direction = #-1
-                \once \override Slur #'direction = #1
+                \once \override Stem.direction = #-1
+                \once \override Slur.direction = #1
                 es,8
             }
-            \stemDown fs4_^ \stemBoth |
+            \stemDown fs4_^ \stemNeutral |
         }
         <b b,>4 <fs' b d> <fs b d> |
         <b, b,>4 <fs' b d> <fs b d> |
@@ -88,19 +90,19 @@ partFiveLHvI = \notes\relative b, {
         <fs, fs,> <fs' as e'> <fs as e'> |
     }
     \alternative{
-        {<b d> <g g,>^^ <fs fs,>^^ |}
-        {<b d> <b b,> <a a,> |}
+        { <b d> <g g,>^^ <fs fs,>^^ | }
+        { <b d> <b b,> <a a,> | }
     }
 }
 
-partFiveLH = \notes {
+partFiveLH =  {
     \partFiveLHvI
 }
 
 
-partFiveSuper = \notes {
+partFiveSuper =  {
     \repeat volta 2 {
-        s4^\markup{\italic\smaller cantabile} s s |
+        s4^\markup{ \smaller cantabile} s s |
         \barRest |
         \barRest |
         \barRest |
@@ -122,9 +124,8 @@ partFiveSuper = \notes {
     }
 }
 
-partFiveDynamics = \notes {
+partFiveDynamics =  {
     \repeat volta 2 {
-        \once \override DynamicText #'extra-offset = #'(-3 . 2.5)
         s4\p s s |
         \barRest |
         \barRest |
@@ -133,7 +134,6 @@ partFiveDynamics = \notes {
         \barRest |
         s8\< s s s s s\! |
         s\f s s\> s s s\! |
-        \once \override DynamicText #'extra-offset = #'(-3 . 2.5)
         s\p s s s s s |
         \barRest |
         \barRest |
@@ -148,30 +148,26 @@ partFiveDynamics = \notes {
     }
 }
 
-partFiveSub = \notes {
+partFiveSub =  {
     \repeat volta 2 {
-        \override SustainPedal #'extra-offset = #'(0 . 0)
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
         \barRest |
         \barRest |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        s4\sustainDown s s\sustainUp |
-        \revert SustainPedal #'padding
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
+        s4 \sustainOn s s \sustainOff |
     }
     \alternative {
         { \barRest | }
         { \barRest | }
     }
 }
-
-

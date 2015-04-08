@@ -1,4 +1,4 @@
-\version "2.2.2"
+\version "2.18.2"
 
 
                                 %                   "BETHENA"
@@ -9,11 +9,11 @@
 \include "english.ly"
 \include "header.ly"
 
-barRest = \notes {\skip 1*3/4}
-tenuto = \markup{\italic ten.}
+barRest =  { \skip 1*3/4 }
+tenuto = \markup { \italic ten. }
 
-paperOFF = \notes{ \set Score.skipTypesetting = ##t }
-paperON = \notes{ \set Score.skipTypesetting = ##f }
+paperOFF = { \set Score.skipTypesetting = ##t }
+paperON = { \set Score.skipTypesetting = ##f }
 
 \include "intro.ly"
 \include "partOne.ly"
@@ -25,7 +25,7 @@ paperON = \notes{ \set Score.skipTypesetting = ##f }
 \include "partSeven.ly"
 \include "outro.ly"
 
-playSilent = \notes {
+playSilent =  {
                                 % 1-8
     \introSilent      \bar "||" \break
 
@@ -63,14 +63,15 @@ playSilent = \notes {
     \outroSilent
 
                                 % Place a closing fermata over the final bar line
-    \once \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-    \once \override Score.RehearsalMark #'self-alignment-X = #1
-    \mark \markup { \musicglyph #"scripts-ufermata" }
+    \once \override Score.RehearsalMark.self-alignment-X = #0.5
+    \once \override Score.RehearsalMark.Y-offset = #-3.5
+    \once \override Score.RehearsalMark.outside-staff-priority = #100
+    \mark \markup { \fermata }
 
     \bar "|."
 }
 
-playSuper = \notes {
+playSuper =  {
     \introSuper
     \partOneSuper
     \segueOneSuper
@@ -87,7 +88,7 @@ playSuper = \notes {
     \outroSuper
 }
 
-playRH = \notes {
+playRH =  {
     \time 3/4
     \key g \major
     \clef treble
@@ -112,7 +113,7 @@ playRH = \notes {
     \outroRH
 }
 
-playDynamics = \notes {
+playDynamics =  {
     \introDynamics
     \partOneDynamics
     \segueOneDynamics
@@ -129,7 +130,7 @@ playDynamics = \notes {
     \outroDynamics
 }
 
-playLH = \notes {
+playLH =  {
     \time 3/4
     \key g \major
     \clef bass
@@ -154,7 +155,7 @@ playLH = \notes {
     \outroLH
 }
 
-playSub = \notes {
+playSub =  {
     \introSub
     \partOneSub
     \segueOneSub
@@ -171,8 +172,8 @@ playSub = \notes {
     \outroSub
 }
 
-scoreSuper = \notes {
-    \context Dynamics = "super" {
+scoreSuper =  {
+    \new Dynamics = "super" {
         <<
             \playSilent
             \playSuper
@@ -180,8 +181,8 @@ scoreSuper = \notes {
     }
 }
 
-scoreRH = \notes {
-    \context Staff = "rh" {
+scoreRH =  {
+    \new Staff = "rh" {
         <<
             \playSilent
 %%%            \playSuper
@@ -190,8 +191,8 @@ scoreRH = \notes {
     }
 }
 
-scoreDynamics = \notes {
-    \context Dynamics = "dyn" {
+scoreDynamics =  {
+    \new Dynamics = "dyn" {
         <<
             \playSilent
             \playDynamics
@@ -199,8 +200,8 @@ scoreDynamics = \notes {
     }
 }
 
-scoreLH = \notes {
-    \context Staff = "lh" {
+scoreLH =  {
+    \new Staff = "lh" {
         \set Staff.pedalSustainStyle = #'mixed
         <<
             \playSilent
@@ -210,8 +211,8 @@ scoreLH = \notes {
     }
 }
 
-scoreSub = \notes {
-    \context Dynamics = "sub" {
+scoreSub =  {
+    \new Dynamics = "sub" {
         <<
             \playSilent
             \playSub
@@ -219,12 +220,12 @@ scoreSub = \notes {
     }
 }
 
-scoreAll = \notes {
+scoreAll =  {
     \new PianoStaff {
         \set PianoStaff.midiInstrument = "honky-tonk"
         %% \set PianoStaff.followVoice = ##t
         \set PianoStaff.connectArpeggios = ##t
-        %% #(set-accidental-style 'piano)
+        %% \accidentalStyle piano
         <<
             \scoreSuper
             \scoreRH
@@ -236,88 +237,46 @@ scoreAll = \notes {
 }
 
                                 % PAPER ONLY, NO MIDI
-\score
-{
-    \notes
-    {
-        \scoreAll
-    }
-    \paper {
-        \context {
-            \type "Engraver_group_engraver"
-            \name Dynamics
-            \alias Voice % So that \cresc works, for example.
-            \consists "Output_property_engraver"
-
-            minimumVerticalExtent = #'(-1 . 1)
-                                %            pedalSustainStrings = #'("Ped." "*Ped." "*")
-                                %            pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-
-            \consists "Piano_pedal_engraver"
-            \consists "Script_engraver"
-            \consists "Dynamic_engraver"
-            \consists "Text_engraver"
-
-                                %
-                                % position the supertext (text markup allegro etc)
-                                %
-                                % Note: extra offset 2nd value +ve up -ve down
-                                %
-            \override TextScript #'font-size = #2
-            %% \override TextScript #'font-shape = #'italic
-            \override TextScript #'font-series = #'bold
-            %% \override TextScript #'extra-offset = #'(0 . -2.5)
-            \override TextScript #'extra-offset = #'(0 . -3)
-
-                                %
-                                % position the dynamics
-                                %
-            \override DynamicText #'extra-offset = #'(0 . 2.5)
-            \override Hairpin #'extra-offset = #'(0 . 2.2)
-
-                                %
-                                % postion the subtext (pedal marks)
-                                %
-            %% pedalSustainStyle = #'mixed  %% hmm can't seem to use mixed pedal style...
-            \override SustainPedal #'extra-offset = #'(0 . 1)
-            \override PianoPedalBracket #'extra-offset = #'(0 . 1)
-
-
-            \consists "Skip_event_swallow_translator"
-            \consistsend "Axis_group_engraver"
-        }
-        \context {
-            \PianoStaffContext
-            \accepts Dynamics
-            \override VerticalAlignment #'forced-distance = #6
-                                % if this #7 is changed, change the extra-offsets of the super and sub marks
-        }
-    }
+\score {
+    \scoreAll
+    \layout { }
 }
 
 
 
                                 % ALL REPEATS, MIDI ONLY
-\score
-{
-    \notes
-    {
-        \apply #unfold-repeats
-        \scoreAll
-    }
-    \midi{
+\score {
+    \unfoldRepeats \scoreAll
+    \midi {
         \tempo 4=150
-        \context {
-            \type "Performer_group_performer"
-            \name Dynamics
-            \consists "Piano_pedal_performer"
-            \consists "Span_dynamic_performer"
-            \consists "Dynamic_performer"
-        }
-        \context {
-            \PianoStaffContext
-            \accepts Dynamics
-        }
     }
 }
 
+
+
+%{
+convert-ly (GNU LilyPond) 2.18.2  convert-ly: Processing `'...
+Applying conversion: 2.3.1, 2.3.2, 2.3.4, 2.3.6, 2.3.8, 2.3.9, 2.3.10,
+2.3.11, 2.3.12, 2.3.16, 2.3.17, 2.3.18, 2.3.22, 2.3.23, 2.3.24,
+2.3.25, 2.4.0, 2.5.0, 2.5.1, 2.5.2, 2.5.3, 2.5.12, 2.5.13, 2.5.17,
+2.5.18, 2.5.21, 2.5.25, 2.6.0, 2.7.0, 2.7.1, 2.7.2, 2.7.4, 2.7.6,
+2.7.10, 2.7.11, 2.7.12, 2.7.13, 2.7.14, 2.7.15, 2.7.22, 2.7.24,
+2.7.28, 2.7.29, 2.7.30, 2.7.31, 2.7.32, 2.7.32, 2.7.36, 2.7.40, 2.9.4,
+2.9.6, 2.9.9, 2.9.11, 2.9.13, 2.9.16, 2.9.19, 2.10.0, 2.11.2, 2.11.3,
+2.11.5, 2.11.6, 2.11.10, Span_dynamic_performer has been merged into
+Dynamic_performer2.11.11, 2.11.13, 2.11.15,  Not smart enough to
+convert VerticalAlignment #'forced-distance. Use the `alignment-
+offsets' sub-property of NonMusicalPaperColumn #'line-break-system-
+details to set fixed distances between staves. 2.11.23, 2.11.35,
+2.11.38, 2.11.46, 2.11.48, 2.11.50, 2.11.51, 2.11.52, 2.11.53,
+2.11.55, 2.11.57, 2.11.60, 2.11.61, 2.11.62, 2.11.64, 2.12.0, 2.12.3,
+2.13.0, 2.13.1, 2.13.4, 2.13.10, 2.13.16, 2.13.18, 2.13.20, 2.13.27,
+2.13.29, 2.13.31, 2.13.36, 2.13.39, 2.13.40, 2.13.42, 2.13.44,
+2.13.46,  Vertical spacing changes might affect user-defined contexts.
+Please refer to the manual for details, and update manually. 2.13.48,
+2.13.51, 2.14.0, 2.15.7, 2.15.9, 2.15.10, 2.15.16, 2.15.17, 2.15.18,
+2.15.19, 2.15.20, 2.15.25, 2.15.32, 2.15.39, 2.15.40, 2.15.42,
+2.15.43, 2.16.0, 2.17.0, 2.17.4, 2.17.5, 2.17.6, 2.17.11, 2.17.14,
+2.17.15, 2.17.18, 2.17.19, 2.17.20, 2.17.25, 2.17.27, 2.17.29,
+2.17.97, 2.18.0
+%}

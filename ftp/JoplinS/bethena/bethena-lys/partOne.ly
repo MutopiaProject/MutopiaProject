@@ -1,4 +1,6 @@
-partOneSilent = \notes {
+\version "2.18.2"
+
+partOneSilent =  {
     \barRest |
     \barRest |
     \barRest |
@@ -17,8 +19,7 @@ partOneSilent = \notes {
     \barRest |
 }
 
-partOneRHvI = \notes\relative c'' {
-    \override Slur #'attachment = #'(stem . stem)
+partOneRHvI = \relative c'' {
     a8 g4 b8 a4 |
     a8 g4 b8 a4 |
     a8 c4 b8 a4 |
@@ -33,12 +34,15 @@ partOneRHvI = \notes\relative c'' {
     g2. |
     e'8 a4 e8 g4 |
     b,8 e4 b8 d( d,) |
-    cs8( <g' b>4) c,8( <fs a>4) |
+    \once \override Slur.positions = #'(1 . 3.5)
+    cs8( <g' b>4)
+    \once \override Slur.positions = #'(1 . 3.5)
+    c,8( <fs a>4) |
+    \once \override Slur.positions = #'(3 . 3.5)
     g2( b4) |
-    \revert Slur #'attachment
 }
 
-partOneRHvII = \notes\relative c' {
+partOneRHvII = \relative c' {
     <b d>2. |
     <cs g'> |
     <c fs>2 <c fs>4 |
@@ -57,32 +61,32 @@ partOneRHvII = \notes\relative c' {
     <b d>2. |
 }
 
-partOneRH = \notes {
+partOneRH =  {
     <<
         \partOneRHvI \\
         \partOneRHvII
     >>
 }
 
-partOneLHvI = \notes \relative g, {
-    \stemBoth
+partOneLHvI =  \relative g, {
+    \stemNeutral
     g4 <d' g> <d g> |
     <e e,> <e g a> <e g a> |
     \stemUp
     r4 <fs a> r4 |
-    \stemBoth
+    \stemNeutral
     <e e,>4 <e g> <e g> |
     <c c,> <e g c> <e g c> |
     <d d,> <d g b> <d g b> |
     <a a,> <e' g a> <a, a,> |
     \stemUp
     r4 <d fs a> <d fs a> |
-    \stemBoth
+    \stemNeutral
     g,4 <d' g> <d g> |
     <e e,> <e g a> <e g a> |
     \stemUp
     r4 <fs a> r4 |
-    \stemBoth
+    \stemNeutral
     <e e,>4 <e g> <e g> |
     <c c,> <e g c> <e g c> |
     <d d,> <d g b> <d g b> |
@@ -90,7 +94,7 @@ partOneLHvI = \notes \relative g, {
     <g g,>2. |
 }
 
-partOneLHvII = \notes \relative d {
+partOneLHvII =  \relative d {
     \barRest
     \barRest
     <d d,>2 <ds ds,>4
@@ -109,16 +113,15 @@ partOneLHvII = \notes \relative d {
     \barRest
 }
 
-partOneLH = \notes {
+partOneLH =  {
     <<
         \partOneLHvI \\
         \partOneLHvII
     >>
 }
 
-partOneSuper = \notes {
-    \once \override TextScript #'extra-offset = #'(0 . -2)
-    s4^\markup{ \column < {a tempo} \italic\smaller {Valse cantabile} > } s s |
+partOneSuper =  {
+    s4^\markup{ \column { \line {a tempo} \line { \smaller {Valse cantabile} } } } s s |
     \barRest |
     \barRest |
     \barRest |
@@ -136,8 +139,8 @@ partOneSuper = \notes {
     \barRest |
 }
 
-partOneDynamics = \notes {
-    \once \override DynamicText #'extra-offset = #'(-3.5 . 2)
+partOneDynamics =  {
+    \once \override DynamicText.extra-offset = #'(3 . 1)
     s4\mp s s |
     \barRest |
     \barRest |
@@ -156,61 +159,59 @@ partOneDynamics = \notes {
     \barRest |
 }
 
-partOneSub = \notes {
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s s\sustainUp |
-    s4\sustainDown s\sustainUp s |
+partOneSub =  {
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s s \sustainOff |
+    s4 \sustainOn s \sustainOff s |
     \barRest |
 }
 
 
-segueOneSilent = \notes {
+segueOneSilent =  {
     \barRest |
     \barRest |
     \barRest |
     \barRest |
 }
 
-segueOneRHvI = \notes \relative b' {
+segueOneRHvI =  \relative b' {
     b4( a2^\tenuto) |
     <g cs,>2.^\tenuto |
-    \override TextScript #'extra-offset = #'(0 . 1)
-    \once \override Slur #'attachment = #'(stem . stem)
+    \once \override Slur.positions = #'(2.5 . 2.5)
     fs4( f2^\tenuto) |
-    \revert TextScript #'extra-offset
     f'2.\arpeggio^\tenuto |
 }
-segueOneRHvII = \notes \relative b {
+segueOneRHvII =  \relative b {
     <b ds>2. |
                                 % [mils] this note is a bit too close to the others
-    \once\override Voice.NoteColumn #'force-hshift = #1.2
+    \once\override Voice.NoteColumn.force-hshift = #1.2
     bf2( a4) |
-    \once \override Slur #'attachment = #'(stem . stem)
+    \once \override Slur.positions = #'(-5.5 . -5)
     d2( ef4) |
     <ef a c>2.\arpeggio
 }
-segueOneRHvIII = \notes \relative a {
+segueOneRHvIII =  \relative a {
     s1*3/4 |
     s1*3/4 |
                                 % [mils] this note is a bit too close to the others
-    \once\override Voice.NoteColumn #'force-hshift = #1.2
+    \once\override Voice.NoteColumn.force-hshift = #1.2
     a2. |
     s1*3/4 |
 }
 
-segueOneRH = \notes {
+segueOneRH =  {
     <<
         \segueOneRHvI \\
         \segueOneRHvII \\
@@ -218,36 +219,36 @@ segueOneRH = \notes {
     >>
 }
 
-segueOneLHvI = \notes \relative fs {
+segueOneLHvI =  \relative fs {
     fs2( f4) | % [mils] Expect warning 'clashing notecolumns'
     e2( ef4) | % [mils] Expect warning 'clashing notecolumns'
     d2( c4) |  % [mils] Expect warning 'clashing notecolumns'
     f,2.^\tenuto |     % [mils] Expect warning 'clashing notecolumns'
 }
 
-segueOneLHvII = \notes {
+segueOneLHvII =  {
     \transpose c c, \segueOneLHvI
 }
 
-segueOneLH = \notes {
+segueOneLH =  {
     <<
-                                % \applycontext #(lambda (x) (display "\n[mils] expect warnings:  Too many clashing notecolumns.\n"))
+                                % \applyContext #(lambda (x) (display "\n[mils] expect warnings:  Too many clashing notecolumns.\n"))
         \stemUp
         \segueOneLHvI \\
         \segueOneLHvII
-        \stemBoth
+        \stemNeutral
     >>
 }
 
-segueOneSuper = \notes {
+segueOneSuper =  {
     \segueOneSilent
 }
 
 
-segueOneSub = \notes {
+segueOneSub =  {
     \segueOneSilent
 }
 
-segueOneDynamics = \notes {
+segueOneDynamics =  {
     \segueOneSilent
 }

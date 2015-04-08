@@ -1,15 +1,12 @@
-
-
-
-\version "1.9.8"
+\version "2.18.2"
 \include "header.ly"
-global = \notes {
+global =  {
     \time 2/4
     \key c \major
     
     }
 
-hornI = \notes \relative c'' {
+hornI =  \relative c'' {
     \repeat volta 2 {
     c4\f c d4. e8( f) d c b
     c16-. e-. g-. e-.
@@ -22,11 +19,11 @@ hornI = \notes \relative c'' {
     d4. dis8( e8) c g' e | d2
     g8 f e dis e fis g a g4 fis g r 
 }
-    \octave g''
+    \octaveCheck g''
     g,8\p\< a b c \! d4 r |
     b8\< c d e \! f4 r
     f\mf r
-    f4.\fermata\f a8_\markup { \center < \italic rall. > } |
+    f4.\fermata\f a8_\markup { \center-column { \italic rall. } } |
     g\> e f d\! |
     \repeat volta 2 {
 	c4^\markup { \italic { a tempo }}  c
@@ -46,7 +43,7 @@ hornI = \notes \relative c'' {
     g(e) c4 |
     e4 f8(d)
     g2\fermata |
-    \octave g''
+    \octaveCheck g''
     cis,4\p cis d8( a' f d)
     c4 e8( d) |
     c4 r8 g' |
@@ -58,7 +55,7 @@ hornI = \notes \relative c'' {
 \bar "|."    
     
 }
-hornII = \notes \relative c' {
+hornII =  \relative c' {
     \repeat volta 2 { 
     e4\f e g2 g4 g e4 r |
     e4 e g2 g,4 g c4 r |
@@ -70,14 +67,14 @@ hornII = \notes \relative c' {
     g8\< a b c\! d4 r8 d
     b\mf d b g g,4.\f \fermata r8
     R2
-    \octave c'
+    \octaveCheck c'
     \repeat volta 2 {
 	e'4\p e g2  |
 	g4 g | e r4 |
 	e\mf e | g2 | g,4 g | c r  |
 	    
 }
-    \octave c'
+    \octaveCheck c'
     
     c'4 g  |
     e2 |
@@ -104,8 +101,13 @@ hornII = \notes \relative c' {
     \new Staff << \global \hornI >>
     \new Staff <<\global \hornII >>
     >>
-   \midi { \tempo 4  = 116 }
-   \paper { } 
+   
+  \midi {
+    \tempo 4 = 116
+    }
+
+
+   \layout { } 
 \header {
     piece = "No. 8. Allegro"
     footer = "Mutopia-2004/01/12-397"
