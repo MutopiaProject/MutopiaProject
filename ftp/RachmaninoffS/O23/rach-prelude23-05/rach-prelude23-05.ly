@@ -242,7 +242,7 @@ RHone = \relative c' {
   \voiceTwo
   s8 <g b d g>16[  q q8] s r <g b d>16[ <g b es>] q[ <g b e> q8] |
   s8 <f b d f>16[  q q8] s r <g b c>16[ <g b cis>] q[ <g b d> q8] |
-  r8 <g b es>16[   q q8] r r <d g d>16[ q q8] r |
+  r8 <g b es>16[   q q8] r r <d g d'>16[ q q8] r |
   r8 <cis g' cis>16[ q q8] r s <c a' c> s <h f' h> |
   s8 <c es g c>16[ q q8] s r <c es g>16[ <c es as>] q[ <c es a> q8] |
   s8 <es b>16[     q q8] s r <c es f>16[ <c es fis>] q[ <c es g> q8] |
