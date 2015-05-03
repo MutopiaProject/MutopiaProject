@@ -1,54 +1,17 @@
-\version "2.2.2"
+\version "2.18.0"
+\include "english.ly"
+\include "../defs.ily"
+\include "global.ily"
+\include "header.ily"
 
-theHorns = \notes \relative c'' {
-	\transposition f
-	\clef "treble"
-	\key c \major	
+\include "corniF.ily"
+
+\header {
+	instrument = "Corni in F [I/II]"
+}
 	
-	R1*3/4*3
-	
-	a2.^\p
-	<< { d4^\pp d2 } \\ { d,2._\pp } >>
-	<< { d'4 d2 } \\ { d,2. } >>
-	<< { eflat2^\< e4~^\! } \\ { R1*3/4 } >>
-	<< { e4 g4^\p( f) } \\ { R1*3/4 } >>
-	r4 r4 << { d'4->~ } \\ { d,4->~_\markup { \italic piu \dynamic f } } >>
-	<< { d'4 d2 } \\ { d,4 d2_\> } >>
-	<< { a'8[^( bflat] a4^) } \\ { d,2\! } >> r4
-	R1*3/4
-	<< { r4 a'2^>^\p } \\ { R1*3/4 } >>
-	<< { r4 a2^> } \\ { R1*3/4 } >>
-	<< { r4 a2^> } \\ { R1*3/4 } >>
-	<< { r4 a2^> } \\ { R1*3/4 } >>
-	<< { r4 a2^> } \\ { R1*3/4 } >>
-	<< { r4 a2^> } \\ { R1*3/4 } >>
-	<< { r4 g2^>~ } \\ { R1*3/4 } >>
-	<< { g4 r r } \\ { R1*3/4 } >>
-	
-	R1*3/4*13
-	
-	<< { r4 a2^>^\pp } \\ { R1*3/4 } >>
-	<< { r4 a2^> } \\ { R1*3/4 } >>
-	<< { r4 a2^> } \\ { R1*3/4 } >>
-	<< { r4 a2^>~ } \\ { R1*3/4 } >>
-	<< { a8 r r4 r } \\ { R1*3/4 } >>
-	
-	R1*3/4*60
-	
-	<< { a2.^>^\p^\> } \\ { R1*3/4 } >>
-	<< { d4^\pp^\! d2^> } \\ { d,2.\pp } >>
-	<< { d'4 d2 } \\ { d,2. } >>
-	<< { eflat2^\cr e4~ } \\ { R1*3/4 } >>
-	<< { e4 g( f) } \\ { R1*3/4 } >>
-	
-	R1*3/4*8
-	
-	< c' eflat >2.\p
-	R1*3/4
-	< b! dsharp >2.
-	
-	R1*3/4*3
-	
-	r4 r < b, b' >\pp~\>
-	< b b' >2.\fermata\!
+\score {
+	\context Staff ="corni" <<
+      	\barlines
+      	\theHorns >>
 }
