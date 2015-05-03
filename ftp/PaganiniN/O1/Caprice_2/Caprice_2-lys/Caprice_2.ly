@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 % ****************************** Final Version *********************************
 mbreak = { }
@@ -29,8 +29,10 @@ renderingOn = { }
   license = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Andrew Buck"
   maintainerEmail = "andrew.buck@ndsu.edu"
-  lastupdated = "2007/Jun/20"
-  footer = "Mutopia-2007/06/24-996"
+
+ footer = "Mutopia-2015/05/03-996"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \include "Caprice_2_notes.ly"
