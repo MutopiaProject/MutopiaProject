@@ -3,8 +3,6 @@
 \version "2.19.19"
 \language "english"
 
-\include "articulate.ly"
-
 \paper {
   % --- Set these to false after all editing is finished
   ragged-bottom = ##f
@@ -58,7 +56,7 @@ voltaOneUpper = \relative c'' {
   <a' e'>2. \prall |
   R1 * 3/4 \fermataMarkup |
   
-  % --- bar 19
+  \barNumberCheck #19
   << 
     { 
       \acciaccatura { e'16 f } g8 f16 e e8 e e e |
@@ -89,7 +87,7 @@ voltaOneUpper = \relative c'' {
   >> 
   <c e>8 <b d> <a c> <gs b> |
   
-  % --- bar 26
+  \barNumberCheck #26
   a16 a' cs, e a, cs e, a cs, e a, a' |
   fs16 a' fs a d, fs a, d fs, a d, d' |
   cs16 a' cs, e a, cs e, a cs, e a, a' |
@@ -133,7 +131,7 @@ voltaOneLower = \relative c' {
   q2. |
   R1 * 3/4 \fermataMarkup |
   
-  % --- bar 19
+  \barNumberCheck #19
   <c c'>4 q q |
   <g' g'>4 q  q |
   <d d'>4 <e e'> e |
@@ -142,7 +140,7 @@ voltaOneLower = \relative c' {
   <g' g'>4 q  q |
   <d d'>4 e' e, |
   
-  % --- 26
+  \barNumberCheck #26
   <a, a'>4 q q |
   <d d'>4 q q |
   <a a'>4 q q |
@@ -167,8 +165,7 @@ voltaOneLower = \relative c' {
 % --- Second repeat, both hands
 
 voltaTwoUpper = \relative c'' {
-  
-  % --- bar 45
+  \barNumberCheck #45
   r8 cs16 d e8 a, e' a, |
   r8 b16 cs d8 gs, d' gs, |
   <a cs>4 q <cs e> |
@@ -189,7 +186,7 @@ voltaTwoUpper = \relative c'' {
   \bar "||"
   \key c \major
   
-  % --- bar 62
+  \barNumberCheck #62
   << 
     { << { c'8 bf16 a a8 } \\ \new Voice { \voiceFour f4. } >> <f a>8 q q } 
     \\ 
@@ -214,17 +211,17 @@ voltaTwoUpper = \relative c'' {
   \bar "||"
   \key d \major
   
-  % --- bar 69
+  \barNumberCheck #69
   d16 d' fs, a d, fs a, d fs, a d, d' |
   b16 d' b d g, b d, g b, d g, g' |
   fs16 d' fs, a d, fs a, d fs, a d, d' |
   b16 g' fs e d cs32 d e d e fs e4 \prall |
   d4 r d' |
-  \acciaccatura { cs8 } b4 r fs |
+  \acciaccatura { cs8 } b4 r d |
   \acciaccatura { b8 } a4 r d |
   r16 b a g g fs e d fs e d cs |
   d4 r d' |
-  \acciaccatura { cs8 } b4 r fs |
+  \acciaccatura { cs8 } b4 r d |
   \acciaccatura { b8 } a4 r d |
   r16 b a g g fs e d fs e d cs |
   d8 <d fs>16. <e g>32 <fs a>8 <g b> <fs a> <g e> |
@@ -239,8 +236,7 @@ voltaTwoUpper = \relative c'' {
 }
 
 voltaTwoLower = \relative c {
-  
-  % --- bar 45
+  \barNumberCheck #45
   <a a'>4 q <cs a'> |
   <d a' b>4 q <e b'> |
   r8 cs'16 d e8 a, e' a, |
@@ -261,7 +257,7 @@ voltaTwoLower = \relative c {
   \bar "||"
   \key c \major
   
-  % --- bar 62
+  \barNumberCheck #62
   <f' c' f>2 q4 |
   <c g' c>2 <c c'>4 |
   <g' g'>4 a' a, |
@@ -272,7 +268,7 @@ voltaTwoLower = \relative c {
   \bar "||"
   \key d \major
   
-  % --- bar 69
+  \barNumberCheck #69
   <d, d'>4 q q |
   <g g'>4 q q |
   <d d'>4 q q |
@@ -304,7 +300,7 @@ global = {
 upperStaff = \relative c'' {
   \clef treble
   \global
-  \tempo "Allegro" 4 = 108
+  \tempo "Allegro"
   \repeat volta 2 { \voltaOneUpper \pageBreak }
   \repeat volta 2 { \voltaTwoUpper }
 }
@@ -317,26 +313,13 @@ lowerStaff = \relative c' {
 }
 
 \score {
-  \removeWithTag #'played
   \new PianoStaff <<
     \new Staff = "upper" { \upperStaff }
     \new Staff = "lower" { \lowerStaff } 
   >>
   \layout {
   }
-}
-
-%-------generate Midi
-
-\score {
-  \articulate <<  
-    \removeWithTag #'printed
-    \new PianoStaff <<
-        \set PianoStaff.midiInstrument = "acoustic grand"
-        \new Staff = "upper" { \upperStaff }
-        \new Staff = "lower" { \lowerStaff }
-    >>
-  >>
-  \midi {  
+  \midi {
+    \tempo 4 = 108
   }
 }
