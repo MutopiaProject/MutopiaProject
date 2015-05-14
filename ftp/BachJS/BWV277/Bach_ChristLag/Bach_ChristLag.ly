@@ -16,7 +16,7 @@
   mutopiapoet = "Martin Luther"
   mutopiaopus = "BWV 277"
   mutopiainstrument = "Choir (SATB)"
-  license = "cc-by-sa"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   date = "unknown"
   lastupdated = "2015-02-23"
 
