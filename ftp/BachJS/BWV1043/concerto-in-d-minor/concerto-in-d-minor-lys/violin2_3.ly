@@ -113,7 +113,7 @@ violinCD =  \relative c' {
     cis,8 r e! r r4 |
     d8 r gis, r r4 |
     e8 r c' r r4 |
-    b8 r d r r4 |
+    bes8 r d r r4 |
     c8 r e r r4 |
     d8 r r a16 g a8 r |
     R2. |
