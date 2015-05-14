@@ -3,7 +3,6 @@
 
 \header {
   instrument = "Classical Guitar"
-  license = "Public Domain"
   maintainer = "Stan Sanderson"
   maintainerEmail = "physinfoman@ameritech.net"
   title = "Preludio"
@@ -11,6 +10,7 @@
   opus = "1640-1710"
   mutopiainstrument = "Guitar"
   mutopiacomposer = "SanzG"
+  style = "Classical"
   license = "Public Domain"
 
   mutopiaopus = " "

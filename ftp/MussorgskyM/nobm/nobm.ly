@@ -15,6 +15,7 @@
 	maintainer = "Robert Clausecker"
 	maintainerEmail = "fuz@fuz.su"
 	moreInfo = "Piano arrangement by Konstantin Chernov"
+	style = "Romantic"
 	mutopiastyle = "Romantic"
 
  footer = "Mutopia-2013/12/08-1892"

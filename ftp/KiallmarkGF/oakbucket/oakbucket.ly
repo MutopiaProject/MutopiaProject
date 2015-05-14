@@ -9,6 +9,7 @@
   instrument = "Voice and Piano"
   opus = "1826"
   source = ""
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

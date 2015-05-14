@@ -11,6 +11,7 @@
   instrument = "Voice and Piano"
   opus = ""
   source = "Not known"
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

@@ -11,6 +11,7 @@
   instrument = "Voice and Piano"
   opus = "circ. 1851"
   source = ""
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

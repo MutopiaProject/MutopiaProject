@@ -12,6 +12,7 @@
   instrument = "Voice and Piano"
   opus = "c. 1846"
   source = ""
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

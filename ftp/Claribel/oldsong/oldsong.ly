@@ -9,6 +9,7 @@
   instrument = "Voice and Piano"
   date = "1868"
   source = "Not known"
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

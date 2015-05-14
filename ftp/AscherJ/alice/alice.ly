@@ -14,6 +14,7 @@
   instrument = "Voice and Piano"
   opus = ""
   source = "Not known"
+  style = "Song"
   license = "Public Domain"
   mutopiacomposer = "AscherJ"
   mutopiastyle = "Song"

@@ -9,6 +9,7 @@
   instrument = "Voice and Piano"
   source = "Boston: Russell and Richardson"
   date = "1857"
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

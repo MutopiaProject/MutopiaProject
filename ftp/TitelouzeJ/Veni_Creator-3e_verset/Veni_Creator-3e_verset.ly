@@ -35,6 +35,7 @@
   mutopiatitle = "Veni Creator (3e verset)"
   mutopiacomposer = "TitelouzeJ"
   mutopiainstrument = "Organ"
+  style = "Baroque"
   mutopiastyle = "Baroque"
 
  footer = "Mutopia-2011/09/18-549"

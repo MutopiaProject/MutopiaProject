@@ -15,6 +15,7 @@
     enteredby = "G. Gréco"
     mutopiacomposer = "GrignyNd"
     mutopiainstrument = "Organ"
+    style = "Baroque"
     mutopiastyle = "Baroque"
     maintainer = "Gérard Gréco"
 
