@@ -57,7 +57,7 @@ soloViolinBD =  \relative c' {
     b(  c) c,8 r4 r4 |
     <e cis'>8 q q q q q |
     <d d'> q q q q q |
-    <e c'> q q q q q |
+    <e d'> q q q q q |
     <e c'> q q q q q |
     <d c'> q <d b'> q q q |
     <c b'> q <c a'> q q q |
