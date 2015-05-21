@@ -312,6 +312,7 @@ upper = {
     \new Voice { \voiceOne \highVoice }
     \new Voice { \voiceTwo \upperMiddle }
   >>
+  \pageBreak
 }
 
 lower = {
@@ -321,6 +322,14 @@ lower = {
     \new Voice { \voiceThree \lowerMiddle }
     \new Voice { \voiceFour \lowVoice }
   >>
+  \pageBreak
+}
+
+\paper {
+  % --- Set these to false after all editing is finished
+  ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  ragged-right = ##f
 }
 
 \score {
@@ -333,6 +342,11 @@ lower = {
       \Score
       \hide BarLine
       \hide SpanBar
+      \remove "Bar_number_engraver"
+    }
+    \context {
+      \Staff
+      \remove "Time_signature_engraver"
     }
   } 
 }
