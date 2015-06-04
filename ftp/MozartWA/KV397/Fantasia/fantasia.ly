@@ -14,8 +14,12 @@ mutopiacomposer = "MozartWA"
 mutopiaopus = "KV 397"
 mutopiainstrument = "Piano"
 date = 1782
+source = "'Mozart Album: Zongorára' Budapest: Zeneműkiadó Vállalat, 1951"
+license = "Public Domain"
 style = "Classical"
-copyright = "Public Domain"
+moreInfo = "Listed as Public Domain in IMSLP due to publishing\
+ done by a state entity. Ref:\
+ <a href=\"http://imslp.org/wiki/Editio_Musica_Budapest\">http://imslp.org/wiki/Editio_Musica_Budapest</>."
 maintainer = "Andrés Necochea"
 maintainerEmail = "yayopoint@gmail.com"
  footer = "Mutopia-2013/01/08-0"
