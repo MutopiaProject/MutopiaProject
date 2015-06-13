@@ -550,7 +550,7 @@ lower = {
       \Score
       \hide BarLine
       \hide SpanBar
-      % --- uncomment when finished --- \remove "Bar_number_engraver"
+      \remove "Bar_number_engraver"
     }
     \context {
       \Staff
@@ -569,7 +569,7 @@ lower = {
     >>
   >>
   \midi { 
-    \tempo 4 = 100
+    \tempo 4 = 200
   }
 }
 
