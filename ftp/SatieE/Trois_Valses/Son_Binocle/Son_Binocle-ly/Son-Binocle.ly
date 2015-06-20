@@ -146,8 +146,10 @@ upperMiddle = \relative {
   c4 <d g>2 |
   g,4 <d' fs>2 |
   c4 <d g>2 |
-  <fs'~ a~ cs^~ fs^~>2. \shapeTwo |
-  q2 s4 |
+  \tag #'written { <fs'~ a~ cs^~ fs^~>2. \shapeTwo |
+                   q2 s4 | }
+  \tag #'played { <fs' a cs fs>2. ~ |
+                  q2 s4 | }
 }
 
 lowerMiddle = \relative {
@@ -279,6 +281,7 @@ lower = {
 }
 
 \score {
+  \keepWithTag #'written
   \new PianoStaff <<
     \new Dynamics { \global \dynamicsHigh }
     \new Staff = "upper" \upper
@@ -302,6 +305,7 @@ lower = {
 \include "articulate.ly"
 
 \score {
+  \keepWithTag #'played
   \articulate <<
     \new PianoStaff <<
       \new Staff ="upper" \upper
