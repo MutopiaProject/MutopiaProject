@@ -38,9 +38,9 @@
     \line { \hspace #30 fortune des autres, plutôt que de perdre un }
     \line { \hspace #30 bon mot, méritent une peine infamante. }
     \line { \hspace #32 Cela n'a pas été dit, et je l'ose dire. } 
-    \line { \hspace #32 (La BRUYERE: "Les Caractères" ou }
-    \line { \hspace #30 Les moeurs de ce siècle, d'après l'édition }
-    \line { \hspace #30 de MM. C. SERVOIS et A. REBELLIAU) }
+    \line { \hspace #32 "(La BRUYERE: \"Les Caractères\" ou Les" }
+    \line { \hspace #30 moeurs de ce siècle, d'après l'édition de M.M.}
+    \line { \hspace #30 G. SERVOIS et A. REBELLIAU) }
     \line { \null }
   }
 }
@@ -158,7 +158,7 @@ highVoice = \relative {
   s2. * 6 |
   <d g>4 ( <c e> <d g> |
   <c e>4 <d g> <c e> |
-  <d g>4 <c a> <d g> |
+  <d g>4 <c e> <d g> |
   <c e>4 <d g> <c e> ) |
   
   \barNumberCheck 40
