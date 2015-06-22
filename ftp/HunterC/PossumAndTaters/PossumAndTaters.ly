@@ -217,8 +217,8 @@ bottomphrasetwo = \relative c {
   aes, <ees' aes c> ees, <ees' aes c> |
   aes, <ees' aes c> c <ees aes c> |
 
-  bes <ees g des'> ees, <ees' g des'> |
-  bes <ees g des'> ees, <ees' g des'> |
+  des <f aes des> bes, <f' aes des> |
+  aes, <ees' aes c> c <ees aes c> |
   d <aes' bes d> bes, <aes' bes d> |
   <ees ees'>-> <des! des'!>-> <c c'>-> <bes bes'>-> |
 
