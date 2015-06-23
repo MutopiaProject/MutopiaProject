@@ -115,7 +115,7 @@ corrente =  {
     e''8 ais'16 b'16 cis''8 e''8 fis''16 e''16 dis''16 cis''16 |
     dis''8 fis''16 g''16 a''8 fis''8 e''16 dis''16 cis''16 b'16 |
     a'16 fis'16 g'16 b'16 e''16 g''16 b''16 e''16 b'8 dis''8 |
-    e''16 b'16 c''16 a'16 g'16 e''16 f'16 dis''16   e'8
+    e''16 b'16 c''16 a'16 g'16 e''16 fis'16 dis''16   e'8
     }
     \repeat volta 2 {
     b'8 |
