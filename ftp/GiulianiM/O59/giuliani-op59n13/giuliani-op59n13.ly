@@ -72,7 +72,7 @@ lowerVoice = \relative c {
   \repeat unfold 2 { e16 b' g b } |
   e,16 b' g b e, b' g r |
   \repeat unfold 2 { dis16 b' a b } |
-  dis,16 b' a b d, b' a r |
+  dis,16 b' a b dis, b' a r |
   e16 b' g b dis, b' a b |
   e,16 b' g b e, b' g r |
 
