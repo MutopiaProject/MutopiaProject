@@ -1,0 +1,17 @@
+
+\include "english.ly"
+\include "../defs.ily"
+\include "../paper.ily"
+\include "global.ily"
+
+\include "flauti.ily"
+\include "oboi.ily"
+\include "clarinettiB.ily"
+\include "fagotti.ily"
+\include "corniF.ily"
+\include "solo.ily"
+\include "violino1.ily"
+\include "violino2.ily"
+\include "viola.ily"
+\include "violoncello.ily"
+\include "contrabasso.ily"
