@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.18.2"
 
 andante = \markup { \bold \large Andante }
 adagio = \markup { \bold \large Adagio }
@@ -17,13 +17,13 @@ date = 1782
 source = "'Mozart Album: Zongorára' Budapest: Zeneműkiadó Vállalat, 1951"
 license = "Public Domain"
 style = "Classical"
-moreInfo = "Listed as Public Domain in IMSLP due to publishing\
- done by a state entity. Ref:\
- <a href=\"http://imslp.org/wiki/Editio_Musica_Budapest\">http://imslp.org/wiki/Editio_Musica_Budapest</>."
+moreInfo = "Listed as Public Domain in IMSLP due to publishing done by a state entity. Ref: <a href=\"http://imslp.org/wiki/Editio_Musica_Budapest\">http://imslp.org/wiki/Editio_Musica_Budapest</a>"
 maintainer = "Andrés Necochea"
 maintainerEmail = "yayopoint@gmail.com"
- footer = "Mutopia-2013/01/08-0"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
+
+ footer = "Mutopia-2015/07/09-2034"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \score {
@@ -42,15 +42,15 @@ maintainerEmail = "yayopoint@gmail.com"
       %%% ====        Movimiento 1        ==== %%%%
       \set Score.tempoHideNote = ##t
       \tempo 2 = 40
-      r4^\andante \set tupletSpannerDuration = #(ly:make-moment 1 4) \times 2/3 { r8 f-1[( a-2] d-4[ a-2 f'] d[ a f]) }
+      r4^\andante \tupletSpan 4 \tuplet 3/2 { r8 f-1[( a-2] d-4[ a-2 f'] d[ a f]) }
       r4  \scaleDurations #'(2 . 3) { r8 f[( a] d[ a f'] d[ a f]) }
       \clef treble
       r4  \scaleDurations #'(2 . 3) { r8 g-1[( bes-2] e-4[ bes-2 g'] e[ bes g]) }
       r4  \scaleDurations #'(2 . 3) { r8 g[( bes] e[ bes g'] e[ bes g]) }
       r4  \scaleDurations #'(2 . 3) { r8 a[( d] fis[ d a'] fis[ d a]) }
       r4  \scaleDurations #'(2 . 3) { r8 a[( d] fis[ d a'] fis[ d a]) }
-      r4 \times 2/3 { d8 a' g~ } g4 \times 2/3 { c,8 g' f!~ }
-      f4 \times 2/3 { bes,8_2 f' ees~ } ees4 \times 2/3 { b8 e d } 
+      r4 \tuplet 3/2 { d8 a' g~ } g4 \tuplet 3/2 { c,8 g' f!~ }
+      f4 \tuplet 3/2 { bes,8_2 f' ees~ } ees4 \tuplet 3/2 { b8 e d } 
       r4 \scaleDurations #'(2 . 3) { r8 cis-2[ e-1] a[ cis e!-1] a[ cis e] }
       \scaleDurations #'(2 . 3) { dis-4[ e bis-3] cis[ gis-2 a-5] dis,-3[ e bis-2] cis-4[ gis-2 a] }
       r1^\fermata \bar "||"
@@ -63,7 +63,7 @@ maintainerEmail = "yayopoint@gmail.com"
       g4.. fis32 g a8 g f e
       d!4 r8. e16-. g8( f) r4
       <a,-5 a'>2_\f( <bes-4 bes'>8) r8 r4
-      a'8._\p[( d16] \times 2/3 { cis8-.[ c-. b!-.] } bes!4-2) r8. a16-.-3
+      a'8._\p[( d16] \tuplet 3/2 { cis8-.[ c-. b!-.] } bes!4-2) r8. a16-.-3
       a8( gis) r g r fis r <d f>
       r8 <cis-2 e-1> <e a> <a-1 cis-3> <cis e> r8 r4
       <<
@@ -172,7 +172,7 @@ maintainerEmail = "yayopoint@gmail.com"
       g4.. fis32 g a8 g f e
       d!4 r8. e16-. g8( f) r4
       <a,-5 a'>2_\f( <bes-4 bes'>8) r8 r4
-      a'8._\p[( d16] \times 2/3 { cis8-.[ c-. b!-.] } bes!4-2) r8. a16-.-3
+      a'8._\p[( d16] \tuplet 3/2 { cis8-.[ c-. b!-.] } bes!4-2) r8. a16-.-3
       a8( gis) r8. gis16-.-2 e'8( g,!) r8. g16-.
       e8( f) r8. f16-. ees4~-3\f ees8.[ \grace {f32[ ees d ees]} f16-1\p]
       \cadenzaOn
@@ -316,7 +316,7 @@ maintainerEmail = "yayopoint@gmail.com"
       \oneVoice
       d'8[ <d a d,> q q]
       <d, g b-4>4 r8 g16-5\p( e)
-      \override Fingering #'add-stem-support = ##t
+      \override Fingering.add-stem-support = ##t
       cis8-2[ <g cis-3> <g cis-4> <g cis-4>]
       <fis^2 d'^5>4 r 
       <d' f b>\f r
@@ -359,14 +359,14 @@ maintainerEmail = "yayopoint@gmail.com"
       <<
         {
           \voiceOne
-          \times 2/3 { d8 f_4 a } d2.
-          \times 2/3 { d,8 f a } d2.
-          \times 2/3 { d,8 g_3 bes } d2.
-          \times 2/3 { d,8 g bes } d2.
-          \times 2/3 { c,8 fis a  } c2.
-          \times 2/3 { c,8 fis a  } c2.
-          \times 2/3 { bes8_4 d g ~ } g4 \times 2/3 { a,8_\markup { \finger "5 - 4" } c_2 f!_1~ } f4
-          \times 2/3 { g,8_5 bes_3 ees_1~ } ees4 \times 2/3 { gis,8_4 b f'~ } f4
+          \tuplet 3/2 { d8 f_4 a } d2.
+          \tuplet 3/2 { d,8 f a } d2.
+          \tuplet 3/2 { d,8 g_3 bes } d2.
+          \tuplet 3/2 { d,8 g bes } d2.
+          \tuplet 3/2 { c,8 fis a  } c2.
+          \tuplet 3/2 { c,8 fis a  } c2.
+          \tuplet 3/2 { bes8_4 d g ~ } g4 \tuplet 3/2 { a,8_\markup { \finger "5 - 4" } c_2 f!_1~ } f4
+          \tuplet 3/2 { g,8_5 bes_3 ees_1~ } ees4 \tuplet 3/2 { gis,8_4 b f'~ } f4
         }
         \new Voice {
           \voiceTwo
@@ -381,7 +381,7 @@ maintainerEmail = "yayopoint@gmail.com"
         }
       >>
       \oneVoice
-      \times 2/3 { a8_5 cis e! } a4 r2
+      \tuplet 3/2 { a8_5 cis e! } a4 r2
       R1
       a,,2_\fermata r \bar "||" 
 
