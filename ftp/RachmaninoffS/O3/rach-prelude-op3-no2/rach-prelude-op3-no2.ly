@@ -8,7 +8,7 @@
 %                                                               %
 %***************************************************************%
 
-\version "2.18.0"
+\version "2.18.2"
 \include "english.ly"
 
 % Default staff size is 20
@@ -1800,10 +1800,10 @@ lefthand = { \relative c' {
 	
 	mutopiatitle = "Prelude in C# minor"
 	mutopiacomposer = "RachmaninoffS"
-	mutopicaopus = "Op. 3, No. 2"
+	mutopiaopus = "Op. 3, No. 2"
 	mutopiainstrument = "Piano"
 	date = "1892"
-	source = "IMSLP - Muzgiz edition"
+	source = "Bosworth & Co. 1896; Universal Edition 1910"
 	style = "Romantic"
 	license = "Creative Commons Attribution-ShareAlike 4.0"
 	maintainer = "Petro Kostandy"
@@ -1813,11 +1813,11 @@ lefthand = { \relative c' {
 	license = "Creative Commons Attribution-ShareAlike 4.0"
 
 	% Footer, tagline, and copyright blocks are included here for reference
-    % and spacing purposes only.  There's no need to change these.
-    % These blocks will be overridden by Mutopia during the publishing process.
-    footer = "Mutopia-2015/01/29"
-    copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
-    tagline = ##f
+	% and spacing purposes only.  There's no need to change these.
+	% These blocks will be overridden by Mutopia during the publishing process.
+ footer = "Mutopia-2015/07/09-2033"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 	}
 
 % To show only the last few bars, helps during editing	
