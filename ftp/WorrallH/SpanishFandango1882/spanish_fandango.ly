@@ -33,8 +33,8 @@
 %---------------------------------------------------------------------
 \header {
     title = "Spanish Fandango"
-    subtitle = "As arranged by J. Church & Co. 1882"
-    composer = "Arr. by J.T.R."
+    subtitle = "As published by J. Church & Co. 1882"
+    composer = "H. Worrall, Arr. by J.T.R."
     opus = ""
     piece = "Open G tuning"
     %piece = "Left-aligned header"
