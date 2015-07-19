@@ -120,7 +120,7 @@ bbarre =
 
 
 
-amelody= {
+aOne={
   \repeat unfold 2 {
     \relative c''' {
       b4. a4. |
@@ -137,7 +137,7 @@ amelody= {
 }
 
 
-apattern = {
+aTwo= {
   \repeat unfold 2 {
     g8 g' b'   d' g' b'  | 
     g8 g' b'   g8 g' b'  |
@@ -150,7 +150,7 @@ apattern = {
 }
 
 
-bmelody={
+bOne={
   \relative c''{
     d4. d4. |
     d4. d4. |
@@ -164,7 +164,7 @@ bmelody={
   g16 g' b' d'' e'' d'' <g g' b' g''>4. 
 }
 
-bpattern={
+bTwo={
   d'8 a' c'' d' a' c'' |
   g8 g' b' g g' b' |
   d'8 a' c'' d' a' c'' |
@@ -176,7 +176,7 @@ bpattern={
   s2. \bar "||"
 }
 
-cmelody={
+cOne={
   g''4. g''4.  |
   d''4. d''4. |
   a''4. a''4. |
@@ -188,7 +188,7 @@ cmelody={
   g16 g' b' d'' e'' d'' <g g' b' g''>4. 
 }
 
-cpattern ={
+cTwo={
   \bbarre #"5th Pos." {c'8 c'' e'' c'8 c'' e'' } |
   g8^\markup{\fontsize #-2 \translate-scaled #'(0 . 4) Open} g' b' d' g' b' |
   \bbarre #"7th Pos." {d'8 d''8 fis'' a' d'' fis''} |
@@ -199,6 +199,69 @@ cpattern ={
   \bbarre #"7th Pos." {d'8 d'' fis'' a' d'' fis''} |
   s2. \bar "||"
 }
+
+dOne={
+  \repeat unfold 2 {
+    r8 <g' b' b''> <g' b' b''>  r8 <g' b' a''> <g' b' a''> |
+    r8 <g' b' g''> <g' b' g''>  r8 <g' b' d''> <g' b' d''> |
+    r8 <a' c'' d''> <a' c'' d''> r8 <a' c'' d''> <a' c'' d''> |
+  }
+  \alternative{
+    {r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''> |}
+    {r8 <g' b' d''> <g' b' d''> <g' b' g''>4. \bar "||" }
+  }
+}
+dTwo={
+  \repeat unfold 2 {
+    g4. d' |
+    g4. g  |
+    d'4. d' |
+    g4. g |
+  }
+}
+
+
+eOne={
+  \repeat unfold 2 {
+    r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''>
+    r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''>
+    r8 <a' c'' d''> <a' c'' d''> r8 <a' c'' d''> <a' c'' d''> 
+  }
+  \alternative{
+    { r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''>}
+    { r8 <g' b' d''> < g' b' d''> <g' b' g''>4. \bar "||" }
+  }
+}
+eTwo={
+  s1*0^"D String solo"
+  \repeat unfold 2 {
+    g'4. fis' |
+    e'4. d'   |
+    d'4. d'   |
+    g4.  g    |
+  }
+}
+
+fOne={
+  { r8 <c'' e'' g''> <c'' e'' g''> r8 <c'' e'' g''> <c'' e'' g''> } |
+  r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''> |
+  { r8 <d'' fis'' a''> <d'' fis'' a''> r8 <d'' fis'' a''> <d'' fis'' a''> } |
+  r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''> |
+  { r8 <b' dis'' fis''> <b' dis'' fis''>  r8 <b' dis'' fis''> <b' dis'' fis''>  } |
+  { r8 <c'' e'' g''> <c'' e'' g''> r8 <c'' e'' g''> <c'' e'' g''> } |
+  { r8 <d'' fis'' a''> <d'' fis'' a''> r8 <d'' fis'' a''> <d'' fis'' a''> } |
+  r8 <g' b' d''> <g' b' d''> <g' b' d''>4. \bar "||"
+}
+fTwo={
+  \bbarre #"5th Pos." {c'4. g'} |
+  g4.  g  |
+  \bbarre #"7th Pos." {d'4. a'} |
+  g4.  d' |
+  \bbarre #"4th Pos." {b4.  fis'} |
+  \bbarre #"5th Pos." {c'4. g'} |
+  \bbarre #"7th Pos." {d'4. a'} |
+  g4.  g  |
+}
 %-------Typeset music and generate midi
 \score {
   \new Staff <<
@@ -206,14 +269,20 @@ cpattern ={
     \time 6/8
 
     \new Voice { \voiceOne 
-    \amelody
-    \bmelody
-    \cmelody
+      \aOne
+      \bOne 
+      \cOne
+      \dOne
+      \eOne
+      \fOne
     }
     \new Voice { \voiceTwo 
-      \apattern
-      \bpattern
-      \cpattern
+      \aTwo
+      \bTwo
+      \cTwo
+      \dTwo
+      \eTwo
+      \fTwo
     }
   >>
    \layout{ }
