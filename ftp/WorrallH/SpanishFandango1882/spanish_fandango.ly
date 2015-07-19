@@ -33,10 +33,12 @@
 %---------------------------------------------------------------------
 \header {
     title = "Spanish Fandango"
-    composer = "Henry Worrall"
+    subtitle = "As arranged by J. Church & Co. 1882"
+    composer = "Arr. by J.T.R."
     opus = ""
+    piece = "Open G tuning"
     %piece = "Left-aligned header"
-    date = ""
+    date = "1882"
     style = ""
     source = "J. Church & Co. version, 1882"
 
@@ -145,11 +147,16 @@ bannote =
 %% Syntaxe: \bbarre #"text" { notes } - text = any number of box
 
 
+% tune is a set of 8 bar sections; 
+% break after each one (or set to empty to avoid breaks)
+endSection={ \break }
 
 
 aMarks={
+  s1*0 \mark \default
   g4.^"Allegro" s4.
   \repeat unfold 7 { s4. s4. }
+  \endSection
 }
 
 aOne={
@@ -169,7 +176,9 @@ aOne={
 }
 
 bMarks={
+  s1*0 \mark \default
   \repeat unfold 8 { s4. s4. }
+  \endSection
 }
 aTwo= {
   \repeat unfold 2 {
@@ -211,6 +220,7 @@ bTwo={
 }
 
 cMarks={
+  s1*0 \mark \default
   \bbarre #"5th Pos." { c8 c8 c8 c8 c8 c8 }
   \bannote #"Open" {g4. g4.}
   \bbarre #"7th Pos." {d8 d8 d8 d8 d8 d8 }
@@ -219,6 +229,7 @@ cMarks={
   \bbarre #"5th Pos." { c8 c8 c8 c8 c8 c8 }
   \bbarre #"7th Pos." { d8 d8 d8 d8 d8 d8 }
   s4. s4.
+  \endSection
 }
 cOne={
   g''4. g''4.  |
@@ -245,7 +256,9 @@ cTwo={
 }
 
 dMarks={
+  s1*0 \mark \default
   \repeat unfold 8 { s4. s4. }
+  \endSection
 }
 dOne={
   \repeat unfold 2 {
@@ -268,8 +281,10 @@ dTwo={
 }
 
 eMarks={
+  s1*0 \mark \default
   g4.^"D String solo" g4.
   \repeat unfold 7 { s4. s4. }
+  \endSection
 }
 eOne={
   \repeat unfold 2 {
@@ -292,6 +307,7 @@ eTwo={
 }
 
 fMarks={
+  s1*0 \mark \default
   \bbarre #"5" { c8 c8 c8 c8 c8 c8 }
   \bannote #"Open" { g8 g8 g8 g8 g8 g8 }
   \bbarre #"7" { d8 d8 d8 d8 d8 d8 }
@@ -300,6 +316,7 @@ fMarks={
   \bbarre #"5" { c8 c8 c8 c8 c8 c8 }
   \bbarre #"7" { d8 d8 d8 d8 d8 d8 }
   s4. s4.
+  \endSection
 }
 fOne={
   { r8 <c'' e'' g''> <c'' e'' g''> r8 <c'' e'' g''> <c'' e'' g''> } |
@@ -309,7 +326,7 @@ fOne={
   { r8 <b' dis'' fis''> <b' dis'' fis''>  r8 <b' dis'' fis''> <b' dis'' fis''>  } |
   { r8 <c'' e'' g''> <c'' e'' g''> r8 <c'' e'' g''> <c'' e'' g''> } |
   { r8 <d'' fis'' a''> <d'' fis'' a''> r8 <d'' fis'' a''> <d'' fis'' a''> } |
-  r8 <g' b' d''> <g' b' d''> <g' b' d''>4. \bar "||"
+  r8 <g' b' d''> <g' b' d''> <g' b' g''>4. \bar "||"
 }
 fTwo={
   c'4. g' |
@@ -321,23 +338,135 @@ fTwo={
   d'4. a' |
   g4.  g  |
 }
+
+gMarks={
+  s1*0 \mark \default
+  \repeat unfold 8 { s2 }
+  \endSection
+}
+
+gOne={
+  r16 g' b' b'' r16 g' b' a''  |
+  r16 g' b' g'' r16 g' b' d'' |
+  r8 <a' c'' d''> r8 <a' c'' d''>  |
+  r16 g' b' d'' r8 <g' b' d''> |
+  
+  r16 g' b' b'' r16 g' b' a''  |
+  r16 g' b' g'' r8 <g' b' d''> |
+  r16 a' c'' d'' r16 a' c'' d''  | 
+  r8 <g' b' g''> < g' b' g''>4  \bar "||"
+}
+
+gTwo={
+  g4 d' |
+  g4 g   |
+  d'4 d'|
+  g4 g  |
+  g4 d' |
+  g4 g |
+  d'4 d' |
+  g4 r4 |
+
+}
+
+hMarks={
+  s1*0 \mark \default
+  \repeat unfold 8 { s2 }
+  \endSection
+}
+
+hOne={
+  r16 g' b' g'' r8 <g' b' fis''> |
+  r16 g' b' e'' r8 <g' b' d''> |
+  r16 a' c'' d'' r16 a' c'' d''  |
+  r16 g' b' d'' r8 <g' b' d''> |
+
+  r16 g' b' g'' r8 <g' b' a''> |
+  r16 g' b' b'' r8 <g' b' d''> |
+  r16 a' c'' d'' r16 a' c'' d''  |
+  r8 <g' b' g''> <g' b' g''>4 |
+}
+
+hTwo={
+  \repeat unfold 2 {
+    g4 d' |
+    g4 g |
+    d'4 d' |
+  }
+  \alternative{
+    { g4  g | }
+    { g4  r \bar "||"} 
+  }
+}
+
+
+iMarks={
+  s1*0 \mark \default
+  \bbarre #"5" { c16 c16 c16 c16 c16 c16 c16 c16 }
+  \bannote #"Open" { g8 g8 g8 g8 }
+  \bbarre #"7" { {d16 d16 d16 d16}{d16 d16 d16 d16}}
+  \bannote #"Open" { g8 g8 g8 g8 }
+
+  \bbarre #"4" { {b16 b16 b16 b16}{b16 b16 b16 b16}}
+  \bbarre #"5" { {c16 c16 c16 c16}{c16 c16 c16 c16}}
+  \bbarre #"7" { {d16 d16 d16 d16}{d16 d16 d16 d16}}
+  \bannote #"Open" { g8 g8 g8 g8 }
+  \endSection
+}
+
+iOne={
+  r16 c'' e'' g'' r16 c'' e'' g''  |
+  r8 <g' b' d''> r8 <g' b' d''> |
+  r16 d'' fis'' a'' r16 d'' fis'' a''  |
+  r8 <g' b' d''> r8 <g' b' d''>  |
+
+  r16 b' dis'' fis'' r16 b' dis'' fis''  |
+  r16 c'' e'' g'' r16 c'' e'' g''  |
+  r16 d'' fis'' a'' r16 d'' fis'' a''  |
+  r8 <g' b' g''> <g' b' g''>4 |
+}
+iTwo={
+  c'4 g' |
+  g4 d' |
+  d'4 a' |
+  g4 d' |
+
+  b4 fis' |
+  c'4 g' |
+  d'4 a' |
+  g4 g  \bar "||"
+}
+
 %-------Typeset music and generate midi
 \score {
   <<
     \new Dynamics {
-      \time 6/8
+      \time 6/8 
       \aMarks \bMarks \cMarks \dMarks \eMarks \fMarks
+      \time 2/4
+      \gMarks \hMarks \iMarks
     }
-    \new Staff <<
+    \new Staff {
       \key g \major
       \time 6/8
-      \new Voice { \voiceOne 
-        \aOne \bOne \cOne \dOne \eOne \fOne
-      }
-      \new Voice { \voiceTwo 
-        \aTwo \bTwo \cTwo \dTwo \eTwo \fTwo
-      }
-    >>
+      <<
+        \new Voice { \voiceOne 
+          \aOne \bOne \cOne \dOne \eOne \fOne
+        }
+        \new Voice { \voiceTwo 
+          \aTwo \bTwo \cTwo \dTwo \eTwo \fTwo 
+        }
+      >>
+      \time 2/4
+      <<
+        \new Voice { \voiceOne 
+          \gOne \hOne \iOne
+        }
+        \new Voice { \voiceTwo
+          \gTwo \hTwo \iTwo
+        }
+      >> % end 2/4 section
+    } %end staff
   >>
    \layout{ }
     \midi  { \tempo 4 = 70 }
