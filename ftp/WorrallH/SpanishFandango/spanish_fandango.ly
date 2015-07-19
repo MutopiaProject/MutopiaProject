@@ -108,17 +108,49 @@ bbarre =
 %% %%%%%%%  Cut here ----- End 'bbarred.ly'
 %% Copy and change the last line for full barred. Rename in 'fbarred.ly'
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+bannote =
+#(define-music-function (barre location str music) (string? ly:music?)
+   (let ((elts (extract-named-music music '(NoteEvent EventChord))))
+     (if (pair? elts)
+         (let ((first-element (first elts))
+               (last-element (last elts)))
+           (set! (ly:music-property first-element 'articulations)
+                 (cons (make-music 'TextSpanEvent 'span-direction -1)
+                       (ly:music-property first-element 'articulations)))
+           (set! (ly:music-property last-element 'articulations)
+                 (cons (make-music 'TextSpanEvent 'span-direction 1)
+                       (ly:music-property last-element 'articulations))))))
+   #{
+       \once \override TextSpanner.font-size = #-2
+       \once \override TextSpanner.font-shape = #'upright
+       \once \override TextSpanner.staff-padding = #3
+       \once \override TextSpanner.style = #'none
+       \once \override TextSpanner.to-barline = ##f
+       \once \override TextSpanner.bound-details =
+            #`((left
+                (text . ,#{ \markup { \draw-line #'( 0 . -.5) } #})
+                (Y . 0)
+                (padding . 0.25)
+                (attach-dir . -2))
+               (right
+                (Y . 0)
+                (padding . 0.25)
+                (attach-dir . 2)))
+%% uncomment this line for make full barred
+       \once  \override TextSpanner.bound-details.left.text =  \markup { #str }
+       $music
+   #})
+
 
 %% Syntaxe: \bbarre #"text" { notes } - text = any number of box
 
 
 
 
-
-
-
-
-
+aMarks={
+  g4.^"Allegro" s4.
+  \repeat unfold 7 { s4. s4. }
+}
 
 aOne={
   \repeat unfold 2 {
@@ -136,7 +168,9 @@ aOne={
   }
 }
 
-
+bMarks={
+  \repeat unfold 8 { s4. s4. }
+}
 aTwo= {
   \repeat unfold 2 {
     g8 g' b'   d' g' b'  | 
@@ -176,6 +210,16 @@ bTwo={
   s2. \bar "||"
 }
 
+cMarks={
+  \bbarre #"5th Pos." { c8 c8 c8 c8 c8 c8 }
+  \bannote #"Open" {g4. g4.}
+  \bbarre #"7th Pos." {d8 d8 d8 d8 d8 d8 }
+  \bannote #"Open" {g4. g4.}
+  \bbarre #"4th Pos." { b8 b8 b8 b8 b8 b8 }
+  \bbarre #"5th Pos." { c8 c8 c8 c8 c8 c8 }
+  \bbarre #"7th Pos." { d8 d8 d8 d8 d8 d8 }
+  s4. s4.
+}
 cOne={
   g''4. g''4.  |
   d''4. d''4. |
@@ -189,17 +233,20 @@ cOne={
 }
 
 cTwo={
-  \bbarre #"5th Pos." {c'8 c'' e'' c'8 c'' e'' } |
-  g8^\markup{\fontsize #-2 \translate-scaled #'(0 . 4) Open} g' b' d' g' b' |
-  \bbarre #"7th Pos." {d'8 d''8 fis'' a' d'' fis''} |
-  g8^\markup{\fontsize #-2 \translate-scaled #'(0 . 4.5) Open} g' b' d' g' b' |
+  c'8 c'' e'' c'8 c'' e''  |
+  g8 g' b' d' g' b' |
+  d'8 d''8 fis'' a' d'' fis'' |
+  g8 g' b' d' g' b' |
 
-  \bbarre #"4th Pos." {b8 b' dis'' fis' b' dis''} |
-  \bbarre #"5th Pos." {c'8 c'' e'' g'8 c'' e''} |
-  \bbarre #"7th Pos." {d'8 d'' fis'' a' d'' fis''} |
+  b8 b' dis'' fis' b' dis'' |
+  c'8 c'' e'' g'8 c'' e'' |
+  d'8 d'' fis'' a' d'' fis'' |
   s2. \bar "||"
 }
 
+dMarks={
+  \repeat unfold 8 { s4. s4. }
+}
 dOne={
   \repeat unfold 2 {
     r8 <g' b' b''> <g' b' b''>  r8 <g' b' a''> <g' b' a''> |
@@ -220,7 +267,10 @@ dTwo={
   }
 }
 
-
+eMarks={
+  g4.^"D String solo" g4.
+  \repeat unfold 7 { s4. s4. }
+}
 eOne={
   \repeat unfold 2 {
     r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''>
@@ -233,7 +283,6 @@ eOne={
   }
 }
 eTwo={
-  s1*0^"D String solo"
   \repeat unfold 2 {
     g'4. fis' |
     e'4. d'   |
@@ -242,6 +291,16 @@ eTwo={
   }
 }
 
+fMarks={
+  \bbarre #"5" { c8 c8 c8 c8 c8 c8 }
+  \bannote #"Open" { g8 g8 g8 g8 g8 g8 }
+  \bbarre #"7" { d8 d8 d8 d8 d8 d8 }
+  \bannote #"Open" { g8 g8 g8 g8 g8 g8 }
+  \bbarre #"4" { b8 b8 b8 b8 b8 b8 }
+  \bbarre #"5" { c8 c8 c8 c8 c8 c8 }
+  \bbarre #"7" { d8 d8 d8 d8 d8 d8 }
+  s4. s4.
+}
 fOne={
   { r8 <c'' e'' g''> <c'' e'' g''> r8 <c'' e'' g''> <c'' e'' g''> } |
   r8 <g' b' d''> <g' b' d''> r8 <g' b' d''> <g' b' d''> |
@@ -253,37 +312,32 @@ fOne={
   r8 <g' b' d''> <g' b' d''> <g' b' d''>4. \bar "||"
 }
 fTwo={
-  \bbarre #"5th Pos." {c'4. g'} |
+  c'4. g' |
   g4.  g  |
-  \bbarre #"7th Pos." {d'4. a'} |
+  d'4. a' |
   g4.  d' |
-  \bbarre #"4th Pos." {b4.  fis'} |
-  \bbarre #"5th Pos." {c'4. g'} |
-  \bbarre #"7th Pos." {d'4. a'} |
+  b4.  fis' |
+  c'4. g' |
+  d'4. a' |
   g4.  g  |
 }
 %-------Typeset music and generate midi
 \score {
-  \new Staff <<
-    \key g \major
-    \time 6/8
-
-    \new Voice { \voiceOne 
-      \aOne
-      \bOne 
-      \cOne
-      \dOne
-      \eOne
-      \fOne
+  <<
+    \new Dynamics {
+      \time 6/8
+      \aMarks \bMarks \cMarks \dMarks \eMarks \fMarks
     }
-    \new Voice { \voiceTwo 
-      \aTwo
-      \bTwo
-      \cTwo
-      \dTwo
-      \eTwo
-      \fTwo
-    }
+    \new Staff <<
+      \key g \major
+      \time 6/8
+      \new Voice { \voiceOne 
+        \aOne \bOne \cOne \dOne \eOne \fOne
+      }
+      \new Voice { \voiceTwo 
+        \aTwo \bTwo \cTwo \dTwo \eTwo \fTwo
+      }
+    >>
   >>
    \layout{ }
     \midi  { \tempo 4 = 70 }
