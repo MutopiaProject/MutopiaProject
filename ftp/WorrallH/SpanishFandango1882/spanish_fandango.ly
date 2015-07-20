@@ -149,11 +149,11 @@ bannote =
 
 % tune is a set of 8 bar sections; 
 % break after each one (or set to empty to avoid breaks)
-endSection={ \break }
+endSection={ }
 
 
 aMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   g4.^"Allegro" s4.
   \repeat unfold 7 { s4. s4. }
   \endSection
@@ -176,7 +176,7 @@ aOne={
 }
 
 bMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   \repeat unfold 8 { s4. s4. }
   \endSection
 }
@@ -220,7 +220,7 @@ bTwo={
 }
 
 cMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   \bbarre #"5th Pos." { c8 c8 c8 c8 c8 c8 }
   \bannote #"Open" {g4. g4.}
   \bbarre #"7th Pos." {d8 d8 d8 d8 d8 d8 }
@@ -256,7 +256,7 @@ cTwo={
 }
 
 dMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   \repeat unfold 8 { s4. s4. }
   \endSection
 }
@@ -281,7 +281,7 @@ dTwo={
 }
 
 eMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   g4.^"D String solo" g4.
   \repeat unfold 7 { s4. s4. }
   \endSection
@@ -298,16 +298,20 @@ eOne={
   }
 }
 eTwo={
-  \repeat unfold 2 {
     g'4. fis' |
     e'4. d'   |
     d'4. d'   |
     g4.  g    |
-  }
+    
+    g'4. a' |
+    b'4. d' |
+    d'4. d'   |
+    g4.  g    \bar "||"
+
 }
 
 fMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   \bbarre #"5" { c8 c8 c8 c8 c8 c8 }
   \bannote #"Open" { g8 g8 g8 g8 g8 g8 }
   \bbarre #"7" { d8 d8 d8 d8 d8 d8 }
@@ -340,7 +344,7 @@ fTwo={
 }
 
 gMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   \repeat unfold 8 { s2 }
   \endSection
 }
@@ -370,7 +374,7 @@ gTwo={
 }
 
 hMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   \repeat unfold 8 { s2 }
   \endSection
 }
@@ -401,7 +405,7 @@ hTwo={
 
 
 iMarks={
-  s1*0 \mark \default
+  %s1*0 \mark \default
   \bbarre #"5" { c16 c16 c16 c16 c16 c16 c16 c16 }
   \bannote #"Open" { g8 g8 g8 g8 }
   \bbarre #"7" { {d16 d16 d16 d16}{d16 d16 d16 d16}}
