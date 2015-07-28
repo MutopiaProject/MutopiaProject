@@ -81,7 +81,7 @@ lowerVoice = \relative c {
   g8 b d g, b d |
 
   fis,8 a d fis, a d |
-  g,8 b d fis, b d |
+  g,8 b d fis, a d |
   g,8 b d g,4 r8 |
   fis8 a d fis, a d |
   g,8 b d g, b d |
@@ -99,8 +99,8 @@ lowerVoice = \relative c {
   <fis, d'>4 r8 r4 r8 |
   g8 b d g, b d |
   fis,8 a d fis, a d |
-  g,8 b d fis, b d |
-  g,8 c d g,4 r8
+  g,8 b d fis, a d |
+  g,8 b d g,4 r8
 }
 
 
