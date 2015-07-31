@@ -31,7 +31,7 @@ mUpperVoice = \relative c'' {
     g~ g8  f16 e f e d c |
     c4 \grace { d16[ c b] } c8. e16 g,4 |
     g8. a16 b8[ c] d e |
-    g4( g16 f ) e f  e4 |
+    g4 g16( f ) e f  e4 |
     d8. c16 a'4 c,4 |
     b8. d16 g8[ g] fis f |
     f16( e ) c a g4 \grace { a16[ g fis g] } b8. a16 |
