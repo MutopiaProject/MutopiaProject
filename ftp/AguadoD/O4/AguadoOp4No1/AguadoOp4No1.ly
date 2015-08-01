@@ -3,13 +3,16 @@
 \header {
   mutopiatitle = "Six Petites Pièces, No. 1"
   mutopiacomposer = "AguadoD"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
+  source = "Mainz: B. Schott"
+  % source = "Statens musikbibliotek - The Music Library of Sweden"
+  % http://urn.kb.se/resolve?urn=urn:nbn:se:statensmusikverk-4033
+  date = "1830"
   title = "Six Petites Pièces, No. 1"
   composer = "Dionisio Aguado"
   instrument = "Guitar"
   opus = "Op. 4, No. 1"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  copyright = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail.com"
  footer = "Mutopia-2011/09/21-1783"
