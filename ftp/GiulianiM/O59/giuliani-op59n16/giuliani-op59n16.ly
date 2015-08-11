@@ -91,7 +91,7 @@ lowerVoice = \relative c {
   e16 g e g e g f g |
   e16 g e g e g f g |
   e16 g b, g' c, g' d g |
-  e16 g e g e a e g |
+  e16 g e g e g e g |
   e16 g e g e g f g |
   
   e16 g e g e g f g |
