@@ -41,7 +41,7 @@ upperVoice = \relative c' {
   <g b>4.\mf \appoggiatura c16 b8 ais b |
   d4 cis8 c4 r8 |
   <g b>4. \appoggiatura c16 b8 ais b |
-  a8 c16 b a g fis e d c b a |
+  a8 c16-! b-! a-! g-! fis-! e-! d-! c-! b-! a-! |
   <g' b>4. \appoggiatura c16 b8 ais b |
   \mbreak
 
@@ -63,7 +63,7 @@ upperVoice = \relative c' {
   <g b>4. \appoggiatura c16 b8 ais b |
   \mbreak
 
-  a8 c16 b a g fis e d c b a |
+  a8 c16-! b-! a-! g-! fis-! e-! d-! c-! b-! a-! |
   <g' b>4. \appoggiatura c16 b8 ais b |
   d4 cis8 c4 r8 |
   <g b>4. <a c> |
@@ -81,7 +81,7 @@ lowerVoice = \relative c {
   g8 b d g, b d |
 
   fis,8 a d fis, a d |
-  g,8 b d fis, b d |
+  g,8 b d fis, a d |
   g,8 b d g,4 r8 |
   fis8 a d fis, a d |
   g,8 b d g, b d |
@@ -99,8 +99,8 @@ lowerVoice = \relative c {
   <fis, d'>4 r8 r4 r8 |
   g8 b d g, b d |
   fis,8 a d fis, a d |
-  g,8 b d fis, b d |
-  g,8 c d g,4 r8
+  g,8 b d fis, a d |
+  g,8 b d g,4 r8
 }
 
 
