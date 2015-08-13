@@ -1,8 +1,37 @@
-\version "2.10.0"
+\version "2.16.0"
 \include "deutsch.ly"
 
+dynamics = {
+  s4\p s2*4
+  s2*3 s4 s4\mp s2*2
+  s2*5 s4 s4\p
+  s2*2 s2\cresc s8\fz s8\p s4 s2*2
+  s2 s4 s8\f s8 s2*3
+  s2*4 s4 s4\p
+  s2*2 s2\< s2\>
+  s2\! s2*2 s4 s4\f
+  s2*5
+  s2*2 s4 s4\p s2*2
+  s2\< s4\! s4\cresc s2\> s2 s2\p
+  s4 s4\f s2*4
+  s2*3 s4 s4\p
+  s2*5
+  s2*2 s4 s4\mp s2*3
+  s2*4 s4 s4\p s2
+  s2 s2\cresc s8\fz s8\p s4 s2*3
+  s4 s4\f s2*3
+  s2*4
+  s4 s2 s2\f s2 s2
+  s2*3 s2\f s2
+  s2*4
+  s2\p s2*3
+  s2*3 s2\f
+  s2*5
+  s2*3 s2\f s4 s4\ff s2
+}
+
 righta = \transpose c c'' {
-  \partial 4 h,16-4\p( a, gis, a,-1 |
+  h,16-4( a, gis, a,-1 |
   c8)-.-3 r d16-3( c h, c |
   e8)-.-4 r f16-4( e dis e-1 |
   h-4 a gis a h a gis a |
@@ -14,22 +43,22 @@ righta = \transpose c c'' {
 }
 
 rightaa = \transpose c c'' {
-  \partial 4 h,16\p( a, gis, a, |
+  h,16( a, gis, a, |
   c8)-. r d16( c h, c |
   e8)-. r f16( e dis e |
-  h\cresc a gis a h a gis a |
-  c'4*1/2)\fz s8\p a8-.-2 h-. |
+  h a gis a h a gis a |
+  c'4*1/2) s8 a8-.-2 h-. |
   c'-.\accent h-. a-.-1  gis-.-2 a-. e-. f-.-4 d-.-2 |
   c4-- h,8.-2\trill( a,32 h, |
   a,4)--
 }
 
 rightb = \transpose c c'' {
-  <c e>8[\mp-.-1-3 <d! f!>-.] |
+  <c e>8[-.-1-3 <d! f!>-.] |
   <e g>-.-1-3 <e g>-. a16-4( g f e) |
   << { d4\accent-4 } \\ { h,8-2( g,) } >> <c e>8-. <d! f!>-. |
   <e g>-. <e g>-. a16-4( g f e) |
-  <h, d>4\accent---2-4 <a, c>8-.-1-3 <h, d> |
+  <h, d>4\accent---2-4 <a, c>8-.-1-3 <h, d>-. |
   <c e>-.-1-3 <c e>-. f16-4( e d c) |
   << { h,4\accent-4 } \\ { gis,8-2( e,) } >> <a, c>8-. <h, d>-. |
   <c e>-. <c e>-. f16( e d c) |
@@ -37,31 +66,36 @@ rightb = \transpose c c'' {
 }
 
 rightc = \relative c''' {
-  <a a,>8-.\f <h h,>-. |
-  <cis cis,>4\accent <a a,>8-. <h h,>-. <cis cis,>-.\accent <h h,>-. <a a,>-. <gis gis,>-. |
+  <a a,>8-. <h h,>-. |
+  <cis cis,>4\accent\tenuto <a a,>8-. <h h,>-. <cis cis,>-.\accent <h h,>-. <a a,>-. <gis gis,>-. |
   <fis fis,>-. <gis gis,>-. <a a,>-. <h h,>-. <gis gis,>-4( <e e,>)-. <a a,>8-. <h h,>-. |
-  <cis cis,>4\accent <a a,>8-. <h h,>-. <cis cis,>-.\accent <h h,>-. <a a,>-. <gis gis,>-. |
+  <cis cis,>4\accent\tenuto <a a,>8-. <h h,>-. <cis cis,>-.\accent <h h,>-. <a a,>-. <gis gis,>-. |
   <fis fis,>-. <h h,>-. <gis gis,>-. <e e,>-. |
-  <a a,>4
+  <a a,>4\tenuto
 }
 
 rightco = \relative c'' {
-  a16\f( a' h, h' |
+  a16( a' h, h' |
   cis,\accent cis') r8 a,16( a' h, h' cis, cis' h, h' a, a' gis, gis') |
   fis,( fis' gis, gis' a, a' h, h' gis, gis' e, e') a,16( a' h, h' |
   cis,\accent cis') r8 a,16( a' h, h' cis, cis' h, h' a, a' gis, gis') |
-  fis,( fis' h, h' gis, gis' e, e' |
+  fis,( fis' h, h' gis, gis' e, e'
 }
 
 rightcoa = \transpose c c' {
   <a a'>4)
 }
 
+rightcoat = \transpose c c' {
+  <a a'>4\tenuto )
+  << { cis''8. cis''16 } \\ { cis'4 } >>
+}
+
 rightd = \relative c''' {
-  cis16-3\p( d cis h a h a gis-3 fis a gis fis |
+  cis16-3( d cis h a h a gis-3 fis a gis fis |
   eis fis gis eis cis-2 dis eis cis |
-  fis-4 \< eis-1 fis gis a gis a-1 h \! |
-  cis \> his cis his cis d cis h) \! |
+  fis-4 eis-1 fis gis a gis a-1 h |
+  cis his cis his cis d cis h) |
   a( h a gis-3 fis a gis fis |
   e! fis gis e cis-2 dis e cis |
   dis-3 e fis dis his-1 cis dis his |
@@ -69,7 +103,7 @@ rightd = \relative c''' {
 }
 
 righte = \relative c''' {
-  e,16-5(\f d! cis h! |
+  e,16-5( d! cis h! |
   a h cis d-1 e fis gis a) |
   a\accent-4( gis fis e) e-5( d cis h |
   a-1 h cis d-1 e fis gis a) |
@@ -77,43 +111,42 @@ righte = \relative c''' {
   a h cis d-1 e fis gis a) |
   a\accent-4( gis fis e) e-4( d cis h |
   cis-3 e a,-1 cis-4 h d gis,-2 h-4 |
-  a4)-- cis'16\p( d cis h a h a gis fis a gis fis |
+  a4)-- cis'16( d cis h a h a gis fis a gis fis |
   eis fis gis eis cis dis eis cis) |
-  fis( \< eis fis gis a gis a h\! |
-  cis-3 his cis his cis\cresc his cis ais-2 |
-  d)-4( \> cis d cis d cis d cis |
-  d cis h a gis-2 a h gis\! |
-  a\p h cis fis,-2 eis fis gis eis fis4)--
+  fis( eis fis gis a gis a h |
+  cis-3 his cis his cis his cis ais-2 |
+  d)-4( cis d cis d cis d cis |
+  d cis h a gis-2 a h gis |
+  a h cis fis,-2 eis fis gis eis fis4)--
 }
 
 strum = \transpose c c { <<
-  { cis'2\arpeggio\accent } \\
+  { cis'2\accent } \\
   { <cis e a>4\arpeggio }
 >>
 }
 
 rightf = \transpose c c'' {
-  << { cis'8. cis'16} \\ { cis4 } >> |
-  << \strum \\ s4\f >> |
+  << \strum \\ { s4 } >> |
   \strum |
   d'16-4( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   <d' a fis>2\accent |
   \repeat unfold 4 { \grace d'8( <cis' a e>8)-. } |
   << { h4.-3( e'8)-. } \\ { <gis e>2 } >> |
-  << \strum \\ s4\f >> |
+  << \strum \\ s4 >> |
   \strum |
   d'16( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   <d' a fis>2\accent |
   \grace d'8( <cis' a e>2)-. |
   \repeat unfold 4 { \grace cis'8( <h gis e>8)-. } |
 
-  a4\p-- \grace { e32[( a)] } cis'8.-.-4 cis'16 |
+  a4-- \grace { e32[( a)] } cis'8.-.-4 cis'16 |
   \repeat unfold 2 { \grace { e32[( a)] } cis'2\accent } |
   d'16( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   d'2\accent |
   \repeat unfold 4 { \grace { d'8( } cis'8)-. } |
   h4.-2( e'8)-. |
-  << \strum \\ s4\f >> |
+  << \strum \\ s4 >> |
   \strum |
   d'16( cis')-. h-. cis'-. d'( cis')-. h-. cis' |
   <d' a fis>2\accent |
@@ -122,13 +155,13 @@ rightf = \transpose c c'' {
   <a, cis e a-->4. <cis cis'>8-. |
   <a, a-->4. <e e'>8-. |
   <a, a-->4. <cis cis'>8-. |
-  <a, a>-.\f <cis cis'>8-. <a, a>-. <e e'>8-. |
-  <a, a>4-. <a, cis e a >4-.(\ff |
+  <a, a>-. <cis cis'>8-. <a, a>-. <e e'>8-. |
+  <a, a>4-. <a, cis e a >4-.( |
   <a, cis e a >4)-. r4
 }
 
 lefta = {
-  \partial 4 r4 |
+  r4 |
   a8(-5 <c' e'>)-. <c' e'>-. <c' e'>-. |
   a8( <c' e'>)-. <c' e'>-. <c' e'>-. |
   a8-. <c' e'>-. a8-. <c' e'>-. |
@@ -139,7 +172,7 @@ lefta = {
   e4--
 }
 
-leftaa = { \partial 4
+leftaa = {
   r4 |
   a8( <c' e'>)-. <c' e'>-. <c' e'>-. |
   a8( <c' e'>)-. <c' e'>-. <c' e'>-. |
@@ -151,7 +184,7 @@ leftaa = { \partial 4
   <a, a>4--
 }
 
-leftb = { \partial 4
+leftb = {
   \repeat unfold 2 { r4 | c8-. c'-. e-. e'-. | g4 }
   \repeat unfold 2 { r4 | a,8-. a-. c-. c'-. | e4 }
 }
@@ -181,12 +214,11 @@ strdl = { \strd d8-. d-. }
 strel = { \stre e8-. e-. }
 
 leftc = {
-  \partial 4
   r4 \stral \stral \strd \strdis \strel \stral \stral \strd \stre
 }
 
 leftd = \relative c {
-  \partial 4 r4 |
+  r4 |
   fis8-5( <a cis>)-. <a cis>-. <a cis>-. |
   gis8-4( <h cis>)-. <h cis>-. <h cis>-. |
   fis8( <a cis>)-. <a cis>-. <a cis>-. |
@@ -198,7 +230,7 @@ leftd = \relative c {
 }
 
 lefte = \relative c' {
-  \partial 4 r4 |
+  r4 |
   a8( <cis e>)-. <cis e>-. <cis e>-. |
   h-. <d e>-. gis,-. <d' e>-. |
   a8( <cis e>)-. <cis e>-. <cis e>-. |
@@ -216,23 +248,23 @@ lefte = \relative c' {
   cis,-. <fis a>-. cis-. <gis' h>-. <fis a>4--
 }
 
-leftf = { 
-  a8-. a8-. \stral \stral \stral \strdl \stral \strel \stral \stral \stral \strdl \stral \strel
+leftf = {
+  \stral \stral \stral \strdl \stral \strel \stral \stral \stral \strdl \stral \strel
   a16( e' cis' e' a e' cis'  e')
   \repeat unfold 6 { a16 e' cis' e' }
   \repeat unfold 2 { a16 fis' d' fis' }
   \repeat unfold 2 { a16 e' cis' e' }
   \repeat unfold 2 { e16 e' gis e' }
   \stral \stral \stral \strdl \stral \strel \stral \stral \stral \stra \stra
-  a,4-. <a, cis e a  >-.( < a, cis e a >)-. r4  
+  a,4-. <a, cis e a  >-.( < a, cis e a >)-. r4
 }
-
 
 right = {
   \clef G
   \key a \minor
+  \partial 4
   \repeat volta 2 { \righta }
-  \repeat volta 2 {\rightb \rightaa }
+  \repeat volta 2 { \rightb \rightaa }
   \key a \major
   \repeat volta 2 { \rightc }
   \repeat volta 2 { \rightd }
@@ -242,25 +274,48 @@ right = {
   \repeat volta 2 { \righta }
   \repeat volta 2 { \rightb \rightaa }
   \key a \major
-  \repeat volta 2 { \rightco } \alternative { { \partial 4 \rightcoa } { \grace { s32*3 } \rightcoa } }
+  % These repeat commands form a manual volta+alternative set for the
+  % purpose of fixing a warning regarding an inability to end a volta
+  % spanner. One other way to fix this is to have the alternative
+  % clause encompass the entire 2nd alternative which has the
+  % consequence of extending the volta line to the end of the
+  % piece. (I tried shortening the line which worked but still gave
+  % the warning.)
+  \set Score.repeatCommands = #'(start-repeat)
+  \rightco
+  \set Timing.measureLength = #(ly:make-moment 1 4)
+  \set Score.repeatCommands = #'((volta "1"))
+  \rightcoa
+  \set Score.repeatCommands = #'((volta #f) (volta "2") end-repeat)
+  \set Timing.measureLength = #(ly:make-moment 2 4)
+  \once\override Slur #'positions = #'(4 . 4)
+  \hideNotes \grace a'16.^( \unHideNotes
+  \rightcoat
+  \set Score.repeatCommands = #'((volta #f))
+  \barNumberCheck #98
   \rightf
   \bar "|."
 }
 
 left = {
   \clef F
+  \partial 4
   \repeat volta 2 { \lefta }
   \repeat volta 2 { \leftb \leftaa }
   \key a \major
-  \repeat volta 2 { \leftc a,4 }
+  \repeat volta 2 { \leftc a,4^\tenuto }
   \repeat volta 2 { \leftd }
   \repeat volta 2 { \lefte }
-  \repeat volta 2 { \leftc a,4 }
+  \repeat volta 2 { \leftc a,4^\tenuto }
   \key a \minor
   \repeat volta 2 { \lefta }
   \repeat volta 2 { \leftb \leftaa }
   \key a \major
-  \repeat volta 2 { \leftc } \alternative { { \partial 4 a,4 } { \stra } }
+  \leftc
+  \set Timing.measureLength = #(ly:make-moment 1 4)
+  a,4
+  \set Timing.measureLength = #(ly:make-moment 2 4)
+  \stra a8-. a8-.
   \leftf
   \bar "|."
 }
