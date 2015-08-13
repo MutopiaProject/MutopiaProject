@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.14.3"
 
 \header {
   title = "Andantino"
@@ -6,7 +6,7 @@
   mutopiatitle = "Andantino"
   mutopiacomposer = "SorF"
   mutopiainstrument = "Guitar"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
+  source = "Statens musikbibliotek - The Music Library of Sweden" %http://imslp.org/images/d/d7/PMLP95300-Sor_-_Andantino.pdf -- http://imslp.org/wiki/File:PMLP95300-Sor_-_Andantino.pdf
   style = "Romantic"
   copyright = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Glen Larsen"
@@ -87,7 +87,7 @@ upperVoice = \relative c' {
     \mbreak
     <c, a'>2.-> |
     e8[ c'] d,[ b'] c,[ a'] |
-    <b, gis'>2 <c dis b'>4 |
+    <b, gis'>2 <c dis a'>4 |
     <b e gis>2 <c, dis a'>4 |
     <b e gis>2 <cis' e a>4 |
     a'4 gis fis |
