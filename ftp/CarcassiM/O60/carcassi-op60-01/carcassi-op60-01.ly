@@ -1,5 +1,3 @@
-% Updated to Lilypond 2.4.2 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org>
-% Last changed on 31/Jan/2005
 \version "2.18.2"
 
 \header {
@@ -9,24 +7,24 @@
   opus =        "Op. 60 No. 1"
   composer =    "Matteo Carcassi (1792-1853)"
 
-%{
-i know that
-  piece = "tempo"
-isn't correct, but it looks better than attaching it to the first
-note.
-%}
+  % i know that piece = "tempo" isn't correct, but it looks
+  % better than attaching it to the first note.
 
   % needed by mutopia:
 
   mutopiainstrument =  "Guitar"
-  mutopiacomposer = "CarcassiM"
+  mutopiacomposer =    "CarcassiM"
+  mutopiaopus =        "O 60"
+  mutopiasource =      "Unknown"
   date =               "19th C."
   style =              "Classical"
-  license =          "Public Domain"
+  license =            "Public Domain"
   maintainer =         "Jeff Covey"
   maintainerEmail =    "jeff.covey@pobox.com"
-  lastupdated =        "2005/Jan/31"
-  footer =             "Mutopia-2005/01/31-13"
+
+ footer = "Mutopia-2015/08/18-13"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 global =  { \time 4/4  \skip 1*43  \bar "|." }
