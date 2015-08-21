@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.18.0"
 
 \header {
   enteredby = 	"Allen Garvin"
@@ -127,10 +127,7 @@ voicetwo =  \relative c' {
   \layout{  }
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 140 4)
-      }
+    \tempo 4 = 140
     }
 }
 
