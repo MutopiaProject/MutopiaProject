@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.18.0"
 
 \header {
   enteredby = 	"Allen Garvin"
@@ -49,11 +49,11 @@ voiceone =  \relative c''' {
     >> |
   }
   \repeat "volta" 2 { 
-    d4  bes8[ c d e!] |
+    d'4  bes8[ c d e!] |
     f4 g a |
     bes  g8[ a bes g] |
     a4  g8[ a] f4 |
-    f8[ g a bes c d] |
+    f,8[ g a bes c d] |
     ees4 d\mordent c |
     f bes, a |
     bes2. |
@@ -127,10 +127,7 @@ voicetwo =  \relative c' {
   \layout{  }
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 140 4)
-      }
+    \tempo 4 = 140
     }
 }
 
