@@ -12,8 +12,8 @@
   style = "Classical"
   copyright = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2015/August/21"
-  footer = "Mutopia-2015/08/21-670"
+  lastupdated = "2015/August/22"
+  footer = "Mutopia-2015/08/22-670"
   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.5 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -60,7 +60,7 @@
  d16 e f8 a f d a, d f a d16 e f8 gis f d b, d f gis
  c4. a16 gis a gis a gis a8 e c f,4. a16 gis a gis a gis a8 b c' d8 e f b, c d gis, a, b, c,4. ~ c,8 c d e d e
  << { a,4. ~ a,16 b, cis d e f g8 f e d4. ~ d16 a b cis' d' e' f'8 e' d' e'2. } \\
- { a,2. ~ a,4. a,4. ~ a,16 a ~ a4 ~ a4. ~ a2. } >>
+ { a,2. ~ a,4. ~ a,4. ~ a,16 a ~ a4 ~ a4. ~ a2. } >>
  \bar "|."
 }
 >>
