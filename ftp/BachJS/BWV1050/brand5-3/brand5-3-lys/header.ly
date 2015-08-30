@@ -73,7 +73,7 @@
   lastupdated = "2005/March/31"
 
   footer = "Mutopia-2005/04/11-548"
-  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+  %tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
 
 %some fuctions
@@ -91,16 +91,13 @@ forteI = \markup \italic {\dynamic "f" "orte" }
 % set Triplets to 3 notes each
 triplets = \tupletSpan 4
 % hides the 3
-tripletsHide = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
-= ##f
+tripletsHide = \hide TupletNumber % number-visibility is deprecated. Tune the TupletNumber instead
 % shows the 3
-tripletsShow = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
-= ##t
+tripletsShow = \undo \hide TupletNumber % number-visibility is deprecated. Tune the TupletNumber instead
 % shows the 3 once
-tripletsShowOnce = \once \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
-= ##t
+tripletsShowOnce = \once \undo \hide TupletNumber % number-visibility is deprecated. Tune the TupletNumber instead
 % displays n condenses multi measure rests
-multirests = \set Score.skipBars = ##t
+multirests = \compressFullBarRests
 
 %hide triplets bracket
 bracketsHide = \override TupletBracket.bracket-visibility = ##f

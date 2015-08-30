@@ -1,5 +1,3 @@
-#(ly:set-point-and-click 'line-column )
-
 \include "header.ly"
 
 \version "2.18.0"
