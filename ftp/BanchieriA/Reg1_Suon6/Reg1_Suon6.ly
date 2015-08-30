@@ -16,13 +16,15 @@
 	date = "1605"
 	source = "Urtext"
 	style = "Baroque"
-	copyright = "Public Domain"
+	license = "Public Domain"
 	filename = "Reg1_Suon6.ly"
 	editor = "Ricciardo Amadino, Venezia, 1605"
 	maintainerEmail = "orrigo.gp@rosenet.it"
 	lastupdated = "2015/August/29"
 
-	footer = "Mutopia-2004/11/07-36"
+ footer = "Mutopia-2015/08/29-36"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 mensuralBreveNote = { \once \override NoteHead.style = #'neomensural }
@@ -50,7 +52,7 @@ soprano =  \relative c'' \context Voice = "soprano" {
 	a8 g a bes c2 r r4 f,4 |
 	a8 g a bes c2 r c ~ |
 	c4 bes a2 g1 |
-	\mensuralBreveNote a\breve 
+	\mensuralBreveNote a\breve
 	\bar "|."
 }
 contralto =  \relative c' \context Voice = "contralto" {
@@ -132,7 +134,7 @@ basso =  \relative c \context Voice = "basso" {
 	\bar "|."
 }
 \score {
-	\context PianoStaff  << 
+	\context PianoStaff  <<
 		\context Staff = "top" << \time 4/2
 			\key f \major
 			\soprano
@@ -145,13 +147,10 @@ basso =  \relative c \context Voice = "basso" {
 			\basso
 		>>
 	>>
-	
-  \midi {
-    \tempo 2 = 70
-    }
-
-
 	\layout {
 	}
+
+    \midi {
+      \tempo 2 = 7
+    }
 }
-	
