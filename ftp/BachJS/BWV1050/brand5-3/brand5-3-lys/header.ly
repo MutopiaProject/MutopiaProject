@@ -37,7 +37,7 @@
 		 My friends (music friends, school friends)
 		 My church (brethren in Christ)
 		 Friendly net pals (who helped me along)
-	 and in one or  many other aspects in my life
+	 and in one or many other aspects in my life
 
 	 I'd love to hear any comments. Email me at joshuakoo@myrealbox.com or zz85@users.sourceforge.net
 
@@ -48,45 +48,45 @@
 #(set-global-staff-size 18)
 
 \header {
-  title = "Brandenberg Concerto No.5 (Keyboard Concencerto)"
-  subtitle = "3rd Movement"
-  composer = "J.S. Bach"
-  meter = "Allegro"
+ title = "Brandenberg Concerto No.5 (Keyboard Concencerto)"
+ subtitle = "3rd Movement"
+ composer = "J.S. Bach"
+ meter = "Allegro"
 
-  %instrument = "Baroque Chamber"
-  %dedication = "Typesetted for my Friends"
-  %piece = ""
-  %head = ""
-  %footer = ""
-  %tagline = "joshuakoo@myrealbox.com. WIP for mutopia-project"
+ %instrument = "Baroque Chamber"
+ %dedication = "Typesetted for my Friends"
+ %piece = ""
+ %head = ""
+ %footer = ""
+ %tagline = "joshuakoo@myrealbox.com. WIP for mutopia-project"
 
-  mutopiatitle = "Brandenburg Concerto No. 5 in D Major"
-  mutopiacomposer = "BachJS"
-  mutopiaopus = "BWV 1050"
-  mutopiainstrument = "Ensemble: Flute, Two Violins, Violas, 'Cello, Bass and Harpsichord"
-  date = "1719?"
-  source = "Dover From the Bach-Gesellschaft Edition"
-  style = "Baroque"
-  copyright = "Public Domain"
-  maintainer = "Joshua Koo"
-  maintainerEmail = "zz85@users.sourceforge.net"
-  lastupdated = "2005/March/31"
+ mutopiatitle = "Brandenburg Concerto No. 5 in D Major"
+ mutopiacomposer = "BachJS"
+ mutopiaopus = "BWV 1050"
+ mutopiainstrument = "Ensemble: Flute, Two Violins, Violas, 'Cello, Bass and Harpsichord"
+ date = "1719?"
+ source = "Dover From the Bach-Gesellschaft Edition"
+ style = "Baroque"
+ copyright = "Public Domain"
+ maintainer = "Joshua Koo"
+ maintainerEmail = "zz85@users.sourceforge.net"
+ lastupdated = "2005/March/31"
 
-  footer = "Mutopia-2005/04/11-548"
-  %tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ footer = "Mutopia-2005/04/11-548"
+ %tagline = "\\raisebox { 10mm} { \\parbox { 188mm} { \\quad\\small\\noindent " + \footer + " \\hspace { \\stretch { 1}} This music is part of the Mutopia project: \\hspace { \\stretch { 1}} \\texttt { http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c] { It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c] { Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
 
 %some fuctions
-forteB = \markup {  \italic "(forte)" }
-pianoB = \markup {  \italic "(piano)" }
-forte = \markup {  \italic "forte" }
-piano = \markup {  \italic "piano" }
-pianoissimo = \markup {  \italic "pianoissimo" }
-pianoissimoB = \markup {  \italic "(pianoissimo)" }
-trillB = \markup {   "(" \musicglyph #"scripts.trill"  ")"}
-cantabile = \markup {  \italic "cantabile" }
-cantabileB = \markup {  \italic "(cantabile)" }
-forteI = \markup \italic {\dynamic "f" "orte" }
+forteB = \markup { \italic "(forte)" }
+pianoB = \markup { \italic "(piano)" }
+forte = \markup { \italic "forte" }
+piano = \markup { \italic "piano" }
+pianoissimo = \markup { \italic "pianoissimo" }
+pianoissimoB = \markup { \italic "(pianoissimo)" }
+trillB = \markup { "(" \musicglyph #"scripts.trill" ")"}
+cantabile = \markup { \italic "cantabile" }
+cantabileB = \markup { \italic "(cantabile)" }
+forteI = \markup \italic { \dynamic "f" "orte" }
 
 % set Triplets to 3 notes each
 triplets = \tupletSpan 4
@@ -110,9 +110,9 @@ commonSettings = {
 }
 
 %figured sharp
-fbis =  \markup{ \small \sharp }
-fbes =  \markup{ \small \flat }
-fbna =  \markup{ \small \natural }
+fbis = \markup { \small \sharp }
+fbes = \markup { \small \flat }
+fbna = \markup { \small \natural }
 
 %root 7th
 fbRootVII = \markup { }
