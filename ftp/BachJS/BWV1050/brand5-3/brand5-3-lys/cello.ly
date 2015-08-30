@@ -2,7 +2,7 @@
 
 \include "header.ly"
 
- \version "2.4.0"
+ \version "2.18.0"
 cello =  \relative c {
  \clef bass
  \key d \major
@@ -27,7 +27,7 @@ b r cis r |
 d r r4 |
 R2 |
 r8 r16 a d8. a16 |
- \times 2/3 { b8( a) g  fis( g) a } |
+ \tuplet 3/2 { b8( a) g  fis( g) a } |
 \tripletsHide
 
 % --Bar 41-- %
@@ -42,7 +42,7 @@ fis r g r |
 a r b r |
 %\autoBeamOff cis8. \autoBeamOn a16  d8. a16 | %[] workaround
 cis8.\noBeam a16  d8. a16 |
-\times 2/3 { b8( a) g fis( g) a |
+\tuplet 3/2 { b8( a) g fis( g) a |
 d,( fis) e d(e ) fis | }
 g r a r |
 b r g, r |
@@ -60,11 +60,11 @@ a, r d r |
 % --Bar 61-- %
 g,4 r |
 r8 r16 a d8. a16 |
-\times 2/3 { b8( a) g  }  a8. a16 |
+\tuplet 3/2 { b8( a) g  }  a8. a16 |
 d,8 r fis r |
 g r c r |
 \autoBeamOff b8. \autoBeamOn g'16 d'8. a16 |
-\times 2/3 { b8( a) g  fis( gis) a  } |
+\tuplet 3/2 { b8( a) g  fis( gis) a  } |
 
 % --Bar 68-- %
 gis r gis, r |
@@ -78,22 +78,22 @@ d8 r fis, r |
 
 % --Bar 76-- %
 g r a r |
-\times 2/3 { b( a) g  } a8. a,16 |
-\times 2/3 { d8( fis) e  d( e fis )}|
+\tuplet 3/2 { b( a) g  } a8. a,16 |
+\tuplet 3/2 { d8( fis) e  d( e fis )}|
 b, r r4 |
 \repeat unfold 6 {b8 r r4 |}
 
 % --Bar 86 -- %
-r8 r16 fis' \times 2/3 {b8( d) cis | 
+r8 r16 fis' \tuplet 3/2 {b8( d) cis | 
 d ( cis) b  ais ( g)  cis | }
-fis,4 ~ \times 2/3 {fis8 g e |
+fis,4 ~ \tuplet 3/2 {fis8 g e |
 d( cis b) } r4 |
 \repeat unfold 6 {b8 r r4 |}
 
 % --Bar 96 -- %
-r8 r16 fis' \times 2/3 {b8( a) gis |
+r8 r16 fis' \tuplet 3/2 {b8( a) gis |
 a (gis) fis eis( fis) gis }|
-cis,4 ~ \times 2/3 {cis8 d b |
+cis,4 ~ \tuplet 3/2 {cis8 d b |
 a( gis fis) } r4 |
 \repeat unfold 7 { fis8 r r4 |}
 
@@ -121,7 +121,7 @@ d r cis r |
 
 % --Bar 143 -- %
 d r e r |
-\times 2/3 { fis(e) d cis( dis) e }
+\tuplet 3/2 { fis(e) d cis( dis) e }
 dis4 r8 b |
 e8. d!16 cis8. fis,16 |
 e8. d16 e8. e,16 |
@@ -180,8 +180,8 @@ fis2 ~ |
 % --Bar 222 -- %
 fis8. \noBeam b,16 fis'8. a,16 |
 %should beam down
-\times 2/3 {b8( a) g ais(b) cis }|
-fis,4 ~ \times 2/3 {fis8 fis' e } |
+\tuplet 3/2 {b8( a) g ais(b) cis }|
+fis,4 ~ \tuplet 3/2 {fis8 fis' e } |
 d r r4 |
 
 % --Bar 226 -- %
@@ -208,7 +208,7 @@ b r cis r |
 d r r4 |
 R2 |
 r8 r16 a d8. a16 |
-\times 2/3 {b8( a) g fis( a ) b } |
+\tuplet 3/2 {b8( a) g fis( a ) b } |
 d, r e r |
 fis r fis, r |
 
@@ -221,7 +221,7 @@ a r b r |
 
 % --Bar 280 -- % 
 cis8. \noBeam a16 d8. a16 |
-\times 2/3 {b8(a) g fis (g) a |
+\tuplet 3/2 {b8(a) g fis (g) a |
 d,( fis ) e d(e) fis }|
 g r a r |
 b r b, r |
@@ -239,11 +239,11 @@ g,4 r |
 
 % --Bar 294 -- %
 r8 r16 a d8. a16 |
-\times 2/3 {b8 (a ) fis } a8. a16|
+\tuplet 3/2 {b8 (a ) fis } a8. a16|
 d,8 r fis r |
 g r c r |
 b8. \noBeam g'16 d'8. a16 |
-\times 2/3 {b8(a) g fis( gis) a }|
+\tuplet 3/2 {b8(a) g fis( gis) a }|
 gis r gis, r |
 r4 gis'8 r |
 
@@ -255,7 +255,7 @@ b8 r r r16 g |
 cis8 r r r16 a |
 d8 r fis, r |
 g r a r |
-\times 2/3 {b(a ) g} a8. a,16 |
+\tuplet 3/2 {b(a ) g} a8. a,16 |
 d2-\fermata \bar "|."
 }
 

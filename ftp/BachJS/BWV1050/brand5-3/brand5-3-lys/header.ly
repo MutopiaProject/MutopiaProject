@@ -1,3 +1,5 @@
+\version "2.18.0"
+
  %{
 	 Let all glory be for God
 
@@ -42,7 +44,7 @@
 	 Joshua Koo
 
  %}
-#(ly:set-point-and-click 'line-column)
+
 #(set-global-staff-size 18)
 
  \header {
@@ -81,24 +83,27 @@
  piano = \markup {  \italic "piano" }
  pianoissimo = \markup {  \italic "pianoissimo" }
  pianoissimoB = \markup {  \italic "(pianoissimo)" }
- trillB = \markup {   "(" \musicglyph #"scripts-trill"  ")"}
+ trillB = \markup {   "(" \musicglyph #"scripts.trill"  ")"}
  cantabile = \markup {  \italic "cantabile" }
  cantabileB = \markup {  \italic "(cantabile)" }
  forteI = \markup \italic {\dynamic "f" "orte" }
 
   % set Triplets to 3 notes each
- triplets = \set tupletSpannerDuration = #(ly:make-moment 1 4)
+ triplets = \tupletSpan 4
   % hides the 3
- tripletsHide = \override TupletBracket   #'number-visibility = ##f
+ tripletsHide = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
+ = ##f
   % shows the 3
- tripletsShow = \override TupletBracket   #'number-visibility = ##t
+ tripletsShow = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
+ = ##t
   % shows the 3 once
- tripletsShowOnce = \once \override TupletBracket   #'number-visibility = ##t
+ tripletsShowOnce = \once \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
+ = ##t
   % displays n condenses multi measure rests
  multirests = \set Score.skipBars = ##t
 
  %hide triplets bracket
- bracketsHide = \override TupletBracket  #'bracket-visibility = ##f
+ bracketsHide = \override TupletBracket.bracket-visibility = ##f
 
  commonSettings = {
 	  \triplets
@@ -138,20 +143,20 @@
 	 5 #
 
  %root 7th
- fbRootVII = \markup { \small \column < "7" "5"> }
+ fbRootVII = \markup { \small \column { "7" "5"} }
  %root 5
  fbRootV = \markup { \small "5" }
 
  %root 5 (853)
- fbVnIII = \markup { \small \column < "5" "3"> }
+ fbVnIII = \markup { \small \column { "5" "3"} }
 
  % 1st inversion
  fbIinv = \markup { \small "6" }
 
- fbIinvVII = \markup { \small \column < "6" "5"> }
+ fbIinvVII = \markup { \small \column { "6" "5"} }
 
  % 8 5 4
  fbIV = \markup { \small "4" }
- fbIVMv = \markup { \small \column < " " "4"> }
+ fbIVMv = \markup { \small \column { " " "4"} }
 
  %}

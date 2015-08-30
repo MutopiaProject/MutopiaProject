@@ -1,4 +1,4 @@
- \version "2.4.0"
+ \version "2.18.0"
 
 \include "header.ly"
 \include "flute.ly"
@@ -20,16 +20,16 @@
 <<
  \context GrandStaff = Solos <<
 	 \context Staff = Flute	<<
-		\set Staff.instrument = \markup \smaller "Flauto traverso." %flute solo
-		%\set Staff.instr = "Fl"
+		\set Staff.instrumentName = \markup \smaller "Flauto traverso." %flute solo
+		%\set Staff.shortInstrumentName = "Fl"
  		\flute
 		\set Staff.midiInstrument = "flute"
 		
 	>>
 
 	 \context Staff = ViolinPrinciple <<
-		\set Staff.instrument = \markup \smaller "Violino principate." %violin solo
-		%\set Staff.instr = "Vl.I"
+		\set Staff.instrumentName = \markup \smaller "Violino principate." %violin solo
+		%\set Staff.shortInstrumentName = "Vl.I"
                 \set Staff.midiInstrument = #"violin"
 		\violinP 
 	 >>
@@ -39,36 +39,36 @@
  \context GrandStaff = Strings <<
 	
  	\context Staff = ViolinMain <<
-		\set Staff.instrument = \markup \smaller { 
-			\column <
+		\set Staff.instrumentName = \markup \smaller { 
+			\column {
 				"Violino"
 				"di ripieno."
-			 > }
+			 } }
 		
-		%\set Staff.instr = "Vl"
+		%\set Staff.shortInstrumentName = "Vl"
 	 	\set Staff.midiInstrument = "violin"
 		\violin
 	>>
  	
 	\context Staff = ViolaRip <<
-		\set Staff.instrument = \markup \smaller { 
-			\column <
+		\set Staff.instrumentName = \markup \smaller { 
+			\column {
 				"Viola"
 				"di ripieno."
-			 > }
-		%\set Staff.instr = "Va"
+			 } }
+		%\set Staff.shortInstrumentName = "Va"
 	 	\set Staff.midiInstrument = "viola"
  		\viola 
 	>>
 	 \context Staff = Cellos <<
-	 	\set Staff.instrument = \markup \smaller "Violoncello." 	%Cello
-		%\set Staff.instr = "Vn"
+	 	\set Staff.instrumentName = \markup \smaller "Violoncello." 	%Cello
+		%\set Staff.shortInstrumentName = "Vn"
 		\set Staff.midiInstrument = "cello"
 		\cello  		
 	>>
 	 \context Staff = DoubleBass <<
-		\set Staff.instrument = \markup \smaller "Violone." %"Double Bass"
-		%\set Staff.instr = "B"
+		\set Staff.instrumentName = \markup \smaller "Violone." %"Double Bass"
+		%\set Staff.shortInstrumentName = "B"
 	 	\set Staff.midiInstrument = "contrabass"
 		\violone
 	>>
@@ -83,9 +83,12 @@
 	{
 	}
 
-	\midi { 
-	\tempo 2=90
-	}
+	
+  \midi {
+    \tempo 2 = 90
+    }
+
+
 
 
 }

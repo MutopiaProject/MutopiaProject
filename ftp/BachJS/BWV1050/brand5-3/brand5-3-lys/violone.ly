@@ -2,7 +2,7 @@
 
 \include "header.ly"
 
- \version "2.4.0"
+ \version "2.18.0"
 violone =  \relative c {
  \clef bass
  \key d \major
@@ -29,7 +29,7 @@ d r r4 |
 R2 |
 r8 r16 a d8. a16 |
 \tripletsShow
- \times 2/3 { b8( a) g  fis ( g) a } |
+ \tuplet 3/2 { b8( a) g  fis ( g) a } |
 \tripletsHide
 % --Bar 41-- %
 d, r e r |
@@ -42,7 +42,7 @@ fis r g r |
 % --Bar 47-- %
 a r b r |
 cis8.\noBeam a16  d8. a16 |
-\times 2/3 { b8( a) g fis( g) a |
+\tuplet 3/2 { b8( a) g fis( g) a |
 d,( fis) e d(e ) fis | }
 g r a r |
 b r g, r |
@@ -59,11 +59,11 @@ R2*2|
 % --Bar 61-- %
 R2 |
 r8 r16 a, d8. a16 |
-\times 2/3 { b8( a) g  }  a8. a16 |
+\tuplet 3/2 { b8( a) g  }  a8. a16 |
 d,8 r fis r |
 R2 |
 r8. g16 d'8. a16 |
-\times 2/3 { b8( a) g  fis( gis) a  } |
+\tuplet 3/2 { b8( a) g  fis( gis) a  } |
 
 % --Bar 68-- %
 gis' r gis, r |
@@ -77,8 +77,8 @@ d8 r fis, r |
 
 % --Bar 76-- %
 g r a r |
-\times 2/3 { b( a) g  } a8. a,16 |
-\times 2/3 { d8( fis) e  d( e fis )}|
+\tuplet 3/2 { b( a) g  } a8. a,16 |
+\tuplet 3/2 { d8( fis) e  d( e fis )}|
 b, r r4 |
 \repeat unfold 6 {R2 |}
 
@@ -117,7 +117,7 @@ d r cis r |
 
 % 143
 d r e r |
-\times 2/3 { fis(e) d cis( dis) e }
+\tuplet 3/2 { fis(e) d cis( dis) e }
 dis4 r8 b |
 e8. d!16 cis8. fis,16 |
 e8. d16 e8. e,16 |
@@ -147,7 +147,7 @@ fis,2~|
 %222
 fis8. \noBeam b16 fis'8. a,16 |
 %should beam down
-\times 2/3 {b8( a) g ais(b) cis }|
+\tuplet 3/2 {b8( a) g ais(b) cis }|
 fis,4 ~ fis8. e16 |
 d8 r r4 |
 
@@ -173,7 +173,7 @@ b r cis r |
 d r r4 |
 R2 |
 r8 r16 a d8. a16 |
-\times 2/3 {b8( a) g fis( a ) b } |
+\tuplet 3/2 {b8( a) g fis( a ) b } |
 d, r e r |
 fis r fis, r |
 
@@ -186,7 +186,7 @@ a r b r |
 
 %280 
 cis8. \noBeam  a16 d8. a16 |
-\times 2/3 {b8(a) g fis (g) a |
+\tuplet 3/2 {b8(a) g fis (g) a |
 d,( fis ) e d(e) fis }|
 g r a r |
 b r b, r |
@@ -202,11 +202,11 @@ R2*3|
 
 %294
 r8 r16 a, d8. a16 |
-\times 2/3 {b8 (a ) fis } a8. a16|
+\tuplet 3/2 {b8 (a ) fis } a8. a16|
 d,8 r r4 |
 r2 |
 r8 r16 g'16 d'8. a16 |
-\times 2/3 {b8(a) g fis( gis) a }|
+\tuplet 3/2 {b8(a) g fis( gis) a }|
 gis r gis, r |
 r4 gis'8 r |
 
@@ -218,7 +218,7 @@ b8 r r r16 g |
 cis8 r r r16 a |
 d8 r fis, r |
 g r a r |
-\times 2/3 {b(a ) g} a8. a,16 |
+\tuplet 3/2 {b(a ) g} a8. a,16 |
 d2-\fermata \bar "|."
 }
 
