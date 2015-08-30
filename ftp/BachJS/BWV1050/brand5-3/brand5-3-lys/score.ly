@@ -15,60 +15,42 @@
   \header {
     instrument = "Ensemble"
   }
-  <<
-    \context GrandStaff = Solos <<
-      \context Staff = Flute <<
-        \set Staff.instrumentName = \markup \smaller "Flauto traverso." %flute solo
-        %\set Staff.shortInstrumentName = "Fl"
-        \flute
-        \set Staff.midiInstrument = "flute"
-      >>
 
-      \context Staff = ViolinPrinciple <<
-        \set Staff.instrumentName = \markup \smaller "Violino principate." %violin solo
-        %\set Staff.shortInstrumentName = "Vl.I"
-        \set Staff.midiInstrument = #"violin"
-        \violinP
-      >>
+  <<
+    \new GrandStaff <<
+      \new Staff \with {
+        instrumentName = \markup \smaller \column { "Flauto" "traverso." }
+        % shortInstrumentName = "Fl"
+        midiInstrument = "flute"
+      } \flute
+      \new Staff \with {
+        instrumentName = \markup \smaller \column { "Violino" "principate." }
+        % shortInstrumentName = "Vl.I"
+        midiInstrument = "violin"
+      } \violinP
     >>
 
-    \context GrandStaff = Strings <<
-
-      \context Staff = ViolinMain <<
-        \set Staff.instrumentName = \markup \smaller {
-          \column {
-            "Violino"
-            "di ripieno."
-          }
-        }
-        %\set Staff.shortInstrumentName = "Vl"
-        \set Staff.midiInstrument = "violin"
-        \violin
-      >>
-
-      \context Staff = ViolaRip <<
-        \set Staff.instrumentName = \markup \smaller {
-          \column {
-            "Viola"
-            "di ripieno."
-          }
-        }
-        %\set Staff.shortInstrumentName = "Va"
-        \set Staff.midiInstrument = "viola"
-        \viola
-      >>
-      \context Staff = Cellos <<
-        \set Staff.instrumentName = \markup \smaller "Violoncello." 	%Cello
-        %\set Staff.shortInstrumentName = "Vn"
-        \set Staff.midiInstrument = "cello"
-        \cello
-      >>
-      \context Staff = DoubleBass <<
-        \set Staff.instrumentName = \markup \smaller "Violone." %"Double Bass"
-        %\set Staff.shortInstrumentName = "B"
-        \set Staff.midiInstrument = "contrabass"
-        \violone
-      >>
+    \new StaffGroup <<
+      \new Staff \with {
+        instrumentName = \markup \smaller \column { "Violino" "di ripieno." }
+        % shortInstrumentName = "Vl"
+        midiInstrument = "violin"
+      } \violin
+      \new Staff \with {
+        instrumentName = \markup \smaller \column { "Viola" "di ripieno." }
+        % shortInstrumentName = "Va"
+        midiInstrument = "viola"
+      } \viola
+      \new Staff \with {
+        instrumentName = \markup \smaller "Violoncello." 	%Cello
+        % shortInstrumentName = "Vn"
+        midiInstrument = "cello"
+      } \cello
+      \new Staff \with {
+        instrumentName = \markup \smaller "Violone." %"Double Bass"
+        % shortInstrumentName = "B"
+        midiInstrument = "contrabass"
+      } \violone
     >>
     \harpsichordTa
   >>

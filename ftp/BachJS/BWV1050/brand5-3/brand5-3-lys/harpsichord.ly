@@ -3,9 +3,11 @@
 \include "header.ly"
 
 harpsichordTreble = \relative c'' {
+  
   \commonSettings
   \triplets \tripletsHide
-
+  
+  \time 2/4 \clef treble \key d \major
   % --Bar 1-- %
   \repeat unfold 10 R2 |
 
@@ -412,7 +414,7 @@ harpsichordBass = \relative c' {
   \set Score.skipTypesetting = ##f
   \commonSettings
   \triplets \tripletsHide
-
+  \time 2/4 \clef bass \key d \major
 
 
   % --Bar 1-- %
@@ -853,33 +855,17 @@ harpsichordBass = \relative c' {
   d r fis, r |
   g r a r |
   \tuplet 3/2 { b a g} a8. a,16 |
-  d2-\fermata \bar "||"
+  d2-\fermata \bar "|."
 
 } % end for Notes Bass
 
 
 % end for notes
 
-harpsichordTa =
-\context PianoStaff <<
-
-  \context Staff = harpsichordUp <<
-    \time 2/4 \clef treble \key d \major
-    \set Staff.midiInstrument = "harpsichord"
-    \harpsichordTreble
-  >>
-
-  \context Staff = harpsichordDown <<
-    \time 2/4 \clef bass \key d \major
-    \set Staff.instrumentName = \markup \smaller {
-      \column {
-        "Cembalo"
-        "concertato."
-      }
-    }
-    %"Harpischord solo"
-    %\set Staff.shortInstrumentName = "Clavier"
-    \set Staff.midiInstrument = "harpsichord"
-    \harpsichordBass
-  >>
+harpsichordStaff = \new PianoStaff \with {
+  instrumentName = \markup \smaller \center-column { "Cembalo" "concertato." }
+  midiInstrument = "harpsichord"
+} <<
+  \new Staff = harpsichordUp \harpsichordTreble
+  \new Staff = harpsichordDown \harpsichordBass
 >>
