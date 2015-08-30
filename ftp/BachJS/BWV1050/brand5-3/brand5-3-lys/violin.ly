@@ -1,8 +1,5 @@
-\include "header.ly"
-
-
 \version "2.18.0"
-
+\include "header.ly"
 
 violin = \relative c'' {
   \clef violin

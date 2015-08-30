@@ -1,5 +1,5 @@
-\include "header.ly"
 \version "2.18.0"
+\include "header.ly"
 
 flute = \relative c'' {
   \clef treble

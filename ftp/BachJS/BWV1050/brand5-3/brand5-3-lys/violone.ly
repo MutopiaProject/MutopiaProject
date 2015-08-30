@@ -1,6 +1,6 @@
+\version "2.18.0"
 \include "header.ly"
 
-\version "2.18.0"
 violone = \relative c {
   \clef bass
   \key d \major
