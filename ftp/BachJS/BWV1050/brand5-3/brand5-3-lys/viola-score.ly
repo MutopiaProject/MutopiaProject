@@ -4,16 +4,16 @@
 \include "viola.ly"
 
 
-\score 
+\score
 {
-	% 
-	\viola
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-	}
+  %
+  \viola
+  \midi {}
+  \layout
+  {
+  }
+  \header
+  {
+  }
 
-}	
+}

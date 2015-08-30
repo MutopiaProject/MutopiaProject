@@ -1,6 +1,6 @@
 \version "2.18.0"
 
- %{
+%{
 	 Let all glory be for God
 
 	 This typeset is for anyone, but especially for my friends,
@@ -43,98 +43,98 @@
 
 	 Joshua Koo
 
- %}
+%}
 
 #(set-global-staff-size 18)
 
- \header {
-	 title = "Brandenberg Concerto No.5 (Keyboard Concencerto)"
-	 subtitle = "3rd Movement"
-	 composer = "J.S. Bach"
-	 meter = "Allegro"
+\header {
+  title = "Brandenberg Concerto No.5 (Keyboard Concencerto)"
+  subtitle = "3rd Movement"
+  composer = "J.S. Bach"
+  meter = "Allegro"
 
-	%instrument = "Baroque Chamber"
-	%dedication = "Typesetted for my Friends"
-	%piece = ""
-	%head = ""
-	%footer = ""
-	%tagline = "joshuakoo@myrealbox.com. WIP for mutopia-project"
+  %instrument = "Baroque Chamber"
+  %dedication = "Typesetted for my Friends"
+  %piece = ""
+  %head = ""
+  %footer = ""
+  %tagline = "joshuakoo@myrealbox.com. WIP for mutopia-project"
 
-	 mutopiatitle = "Brandenburg Concerto No. 5 in D Major"
-	 mutopiacomposer = "BachJS"
-	 mutopiaopus = "BWV 1050"
-	 mutopiainstrument = "Ensemble: Flute, Two Violins, Violas, 'Cello, Bass and Harpsichord"
-	 date = "1719?"
-	 source = "Dover From the Bach-Gesellschaft Edition"
-	 style = "Baroque"
-	 copyright = "Public Domain"
-	 maintainer = "Joshua Koo"
-	 maintainerEmail = "zz85@users.sourceforge.net"
-	 lastupdated = "2005/March/31"
+  mutopiatitle = "Brandenburg Concerto No. 5 in D Major"
+  mutopiacomposer = "BachJS"
+  mutopiaopus = "BWV 1050"
+  mutopiainstrument = "Ensemble: Flute, Two Violins, Violas, 'Cello, Bass and Harpsichord"
+  date = "1719?"
+  source = "Dover From the Bach-Gesellschaft Edition"
+  style = "Baroque"
+  copyright = "Public Domain"
+  maintainer = "Joshua Koo"
+  maintainerEmail = "zz85@users.sourceforge.net"
+  lastupdated = "2005/March/31"
 
-         footer = "Mutopia-2005/04/11-548"
-         tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+  footer = "Mutopia-2005/04/11-548"
+  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
 }
 
- %some fuctions
- forteB = \markup {  \italic "(forte)" }
- pianoB = \markup {  \italic "(piano)" }
- forte = \markup {  \italic "forte" }
- piano = \markup {  \italic "piano" }
- pianoissimo = \markup {  \italic "pianoissimo" }
- pianoissimoB = \markup {  \italic "(pianoissimo)" }
- trillB = \markup {   "(" \musicglyph #"scripts.trill"  ")"}
- cantabile = \markup {  \italic "cantabile" }
- cantabileB = \markup {  \italic "(cantabile)" }
- forteI = \markup \italic {\dynamic "f" "orte" }
+%some fuctions
+forteB = \markup {  \italic "(forte)" }
+pianoB = \markup {  \italic "(piano)" }
+forte = \markup {  \italic "forte" }
+piano = \markup {  \italic "piano" }
+pianoissimo = \markup {  \italic "pianoissimo" }
+pianoissimoB = \markup {  \italic "(pianoissimo)" }
+trillB = \markup {   "(" \musicglyph #"scripts.trill"  ")"}
+cantabile = \markup {  \italic "cantabile" }
+cantabileB = \markup {  \italic "(cantabile)" }
+forteI = \markup \italic {\dynamic "f" "orte" }
 
-  % set Triplets to 3 notes each
- triplets = \tupletSpan 4
-  % hides the 3
- tripletsHide = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
- = ##f
-  % shows the 3
- tripletsShow = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
- = ##t
-  % shows the 3 once
- tripletsShowOnce = \once \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
- = ##t
-  % displays n condenses multi measure rests
- multirests = \set Score.skipBars = ##t
+% set Triplets to 3 notes each
+triplets = \tupletSpan 4
+% hides the 3
+tripletsHide = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
+= ##f
+% shows the 3
+tripletsShow = \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
+= ##t
+% shows the 3 once
+tripletsShowOnce = \once \override TupletBracket.number-visibility % number-visibility is deprecated. Tune the TupletNumber instead
+= ##t
+% displays n condenses multi measure rests
+multirests = \set Score.skipBars = ##t
 
- %hide triplets bracket
- bracketsHide = \override TupletBracket.bracket-visibility = ##f
+%hide triplets bracket
+bracketsHide = \override TupletBracket.bracket-visibility = ##f
 
- commonSettings = {
-	  \triplets
-	 \multirests
-	 \bracketsHide
-	 \tupletUp
- }
+commonSettings = {
+  \triplets
+  \multirests
+  \bracketsHide
+  \tupletUp
+}
 
- %figured sharp
- fbis =  \markup{ \small \sharp }
- fbes =  \markup{ \small \flat }
- fbna =  \markup{ \small \natural }
+%figured sharp
+fbis =  \markup{ \small \sharp }
+fbes =  \markup{ \small \flat }
+fbna =  \markup{ \small \natural }
 
- %root 7th
- fbRootVII = \markup { }
- %root 5
- fbRootV = \markup { }
+%root 7th
+fbRootVII = \markup { }
+%root 5
+fbRootV = \markup { }
 
- %root 5 (853)
- fbVnIII = \markup { }
+%root 5 (853)
+fbVnIII = \markup { }
 
- % 1st inversion
- fbIinv = \markup { }
+% 1st inversion
+fbIinv = \markup { }
 
- fbIinvVII = \markup { }
+fbIinvVII = \markup { }
 
- % 8 5 4
- fbIV = \markup { }
- fbIVMv = \markup { }
+% 8 5 4
+fbIV = \markup { }
+fbIVMv = \markup { }
 
- %{
+%{
 	 More figure bass work needed
 	 They are disabled now
 	 slashed \ 6
@@ -159,4 +159,4 @@
  fbIV = \markup { \small "4" }
  fbIVMv = \markup { \small \column { " " "4"} }
 
- %}
+%}

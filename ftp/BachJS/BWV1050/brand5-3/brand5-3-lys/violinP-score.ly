@@ -1,14 +1,14 @@
 \version "2.18.0"
 \include "violinP.ly"
 
-\score 
+\score
 {
-	\violinP
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-	}
+  \violinP
+  \midi {}
+  \layout
+  {
+  }
+  \header
+  {
+  }
 }

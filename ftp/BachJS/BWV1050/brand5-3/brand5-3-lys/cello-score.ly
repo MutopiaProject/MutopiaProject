@@ -4,17 +4,17 @@
 
 #(set-global-staff-size 18)
 
-\score 
+\score
 {
-	\header
-	{
-		instrument = "Cello"
-	}
-	% 
-	\cello
-	\midi {}
- 	\layout 
-	{
-	}
+  \header
+  {
+    instrument = "Cello"
+  }
+  %
+  \cello
+  \midi {}
+  \layout
+  {
+  }
 
 }

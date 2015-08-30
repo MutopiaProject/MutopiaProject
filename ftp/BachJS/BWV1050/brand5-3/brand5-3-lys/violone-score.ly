@@ -3,16 +3,16 @@
 \include "violone.ly"
 
 
-\score 
+\score
 {
-	% 
-	\violone
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-		instrument = "Double Bass"
-	}
-}	
+  %
+  \violone
+  \midi {}
+  \layout
+  {
+  }
+  \header
+  {
+    instrument = "Double Bass"
+  }
+}

@@ -1,14 +1,14 @@
 \version "2.18.0"
 \include "flute.ly"
 
-\score 
+\score
 {
-	\flute
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-	}
+  \flute
+  \midi {}
+  \layout
+  {
+  }
+  \header
+  {
+  }
 }

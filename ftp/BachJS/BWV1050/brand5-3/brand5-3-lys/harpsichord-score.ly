@@ -1,15 +1,15 @@
 \version "2.18.0"
 \include "harpsichord.ly"
 
-\score 
+\score
 {
-	% 
-	\harpsichordTa
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-	}
+  %
+  \harpsichordTa
+  \midi {}
+  \layout
+  {
+  }
+  \header
+  {
+  }
 }
