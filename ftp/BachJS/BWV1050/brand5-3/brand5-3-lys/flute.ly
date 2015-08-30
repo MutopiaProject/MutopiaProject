@@ -36,7 +36,7 @@ flute = \relative c'' {
   e,8. e16 a8. e16 | \tripletsShowOnce
   \tuplet 3/2 {
     fis8 e d cis d e |
-    a, ( cis) b a ( cis) b |
+    a,( cis) b a( cis) b |
   }
   a2 ~ |
   \tuplet 3/2 { a8 cis b a( cis) b } |
@@ -129,7 +129,7 @@ flute = \relative c'' {
     d b cis d fis e |
     fis e d cis d b |
     ais cis fis e d cis | \tripletsShowOnce
-    b ^\piano (d fis) fis -\cantabileB ( e fis) |
+    b(^\piano d fis) fis(-\cantabileB e fis) |
     b,( d fis) fis( e fis) |
     b,( dis e) e( dis e) |
     ais,( cis e) e( d! e) |
@@ -137,16 +137,16 @@ flute = \relative c'' {
 
   %--Bar 93-%
   \tuplet 3/2 {
-    b (d fis) fis( e fis) |
-    cis( e g) g(fis g) |
-    ais,( fis) e' d(e) cis |
+    b( d fis) fis( e fis) |
+    cis( e g) g( fis g) |
+    ais,( fis) e' d( e) cis |
   }
   b r b r |
   cis r \tuplet 3/2 { b( a) b } |
   \tuplet 3/2 {
-    cis(b) a gis(fis)eis |
+    cis( b) a gis( fis) eis |
     fis( cis' fis) fis( e fis) | %99
-    a,( cis fis) fis (eis fis) | % 100
+    a,( cis fis) fis( eis fis) | % 100
   }
 
   %101
@@ -154,8 +154,8 @@ flute = \relative c'' {
     b,( cis d) b( cis a) |
     gis( b eis) eis( dis eis) |
     a,( cis fis) fis( eis fis) |
-    d!( b gis ) eis( gis fis) |
-    eis ( gis) fis eis( fis) gis |
+    d!( b gis) eis( gis fis) |
+    eis( gis) fis eis( fis) gis |
   }
   a r r4 |
   \tuplet 3/2 { r8 a-\forte b cis e d } |
@@ -190,7 +190,7 @@ flute = \relative c'' {
   \tuplet 3/2 {
     g!8( fis) e dis( e) fis |
     b,( e) g b( a) b |
-    e,(d) a
+    e,( d) a
   } d4 ~ |
   \tuplet 3/2 { d8 cis e } a8. e16 |
 
@@ -213,7 +213,7 @@ flute = \relative c'' {
   } a8. d,16 |
   cis8 r b-\trill r |
   \tuplet 3/2 {
-    a-\piano( cis e) e( d e) |
+    a(-\piano cis e) e( d e) |
     a,( cis e) e( d e) |
     a,( cis d) d( cis d) |
 
@@ -248,7 +248,7 @@ flute = \relative c'' {
   R2 * 5 |
 
   %189
-  \tuplet 3/2 { e'8-\piano ( cis) d e( cis) d } |
+  \tuplet 3/2 { e'8(-\piano cis) d e( cis) d } |
   e2 ~ |
   \tuplet 3/2 { e8 \noBeam g fis e( g) fis } |
   e r r4 |
@@ -284,7 +284,7 @@ flute = \relative c'' {
   b4 ~ \tuplet 3/2 { b8 cis b } |
   \tuplet 3/2 {
     ais( gis) ais b cis d |
-    e ( fis e) d( cis b) |
+    e( fis e) d( cis b) |
 
     %219
     %on triplets?
@@ -333,7 +333,7 @@ flute = \relative c'' {
   e,8. e16 a8. e16 |
   \tripletsShowOnce \tuplet 3/2 {
     fis8 e d cis d e |
-    a, ( cis) b a ( cis) b |
+    a,( cis) b a( cis) b |
   }
   a2 ~ |
   \tuplet 3/2 { a8 cis b a( cis) b } |
@@ -410,12 +410,8 @@ flute = \relative c'' {
   fis8. \noBeam a16 d8. a16 |
 
   %--Bar 308-%
-  \tripletsShowOnce \tuplet 3/2 { b8( a) g fis(g) a } |
+  \tripletsShowOnce \tuplet 3/2 { b8( a) g fis( g) a } |
   d,8. e16 cis8. d16 |
-  d2-\fermata \bar "|." |
-
-
-
-
+  d2\fermata \bar "|." |
 } %end flute notes
 

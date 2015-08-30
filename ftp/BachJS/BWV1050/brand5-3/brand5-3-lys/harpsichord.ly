@@ -1,8 +1,8 @@
+\version "2.18.0"
+
 \include "header.ly"
 
-\version "2.18.0"
 harpsichordTreble = \relative c'' {
-
   \commonSettings
   \triplets \tripletsHide
 
@@ -34,8 +34,7 @@ harpsichordTreble = \relative c'' {
   <a, cis e > r < fis b d> r |
   <gis b d > r
   <<
-    { cis8. d16 | e8. fis16 }
-    \\
+    { cis8. d16 | e8. fis16 } \\
     { a,4 ~ | a }
   >> %\stemDown
   \stemNeutral b8. a16 |
@@ -102,28 +101,28 @@ harpsichordTreble = \relative c'' {
   \tuplet 3/2 {
     fis,8-\pianoB( b d) d( cis d) |
     fis,( b d) d( cis d) |
-    g,! (ais b) cis(ais b) |
+    g,!( ais b) cis(ais b) |
     e,( ais cis) cis(b cis) |
-    fis,(b d) d (cis d) |
+    fis,(b d) d( cis d) |
     e,(g cis) cis(ais b)
 
     %85
-    cis( ais) b (fis b) ais |
+    cis( ais) b( fis b) ais |
   }
   b8 r r4 |
   s2*2 |
   \tuplet 3/2 {
     b8(-\pianoB fis' b) b( ais b) |
-    d,( fis b) b(ais b) |
-    e, (fis g) e(fis d) |
-    cis ( e ais) ais(gis ais) |
+    d,( fis b) b( ais b) |
+    e,( fis g) e( fis d) |
+    cis( e ais) ais( gis ais) |
   }
 
   %93
   \tuplet 3/2 {
     d,8( fis b) b( ais b) |
     g!( e cis) ais( cis b) |
-    ais( cis) b ais(b) cis |
+    ais( cis) b ais( b) cis |
   }
   d r r4 |
   s2 * 2 |
@@ -862,7 +861,6 @@ harpsichordBass = \relative c' {
 % end for notes
 
 harpsichordTa =
-
 \context PianoStaff <<
 
   \context Staff = harpsichordUp <<

@@ -11,20 +11,17 @@
 
 #(set-global-staff-size 13)
 
-\score
-{
-  \header
-  {
+\score {
+  \header {
     instrument = "Ensemble"
   }
   <<
     \context GrandStaff = Solos <<
-      \context Staff = Flute	<<
+      \context Staff = Flute <<
         \set Staff.instrumentName = \markup \smaller "Flauto traverso." %flute solo
         %\set Staff.shortInstrumentName = "Fl"
         \flute
         \set Staff.midiInstrument = "flute"
-
       >>
 
       \context Staff = ViolinPrinciple <<
@@ -35,7 +32,6 @@
       >>
     >>
 
-
     \context GrandStaff = Strings <<
 
       \context Staff = ViolinMain <<
@@ -45,7 +41,6 @@
             "di ripieno."
           }
         }
-
         %\set Staff.shortInstrumentName = "Vl"
         \set Staff.midiInstrument = "violin"
         \violin
@@ -76,21 +71,8 @@
       >>
     >>
     \harpsichordTa
-
   >>
 
-
-
-  \layout
-  {
-  }
-
-
-  \midi {
-    \tempo 2 = 90
-  }
-
-
-
-
+  \layout {}
+  \midi { \tempo 2 = 90 }
 }

@@ -1,8 +1,6 @@
 \version "2.18.0"
 \include "header.ly"
 
-
-
 violinP = \relative c'' {
   \clef violin
   \key d \major
@@ -56,10 +54,10 @@ violinP = \relative c'' {
 
   % --Bar 33-- %
   a8. a16 d8. a16 |
-  \tuplet 3/2 { b8 ( a) g fis ( g) a } |
+  \tuplet 3/2 { b8( a) g fis( g) a } |
   d, r cis r |
   d r e r |
-  \tuplet 3/2 { d ( fis) a a( g) a } |
+  \tuplet 3/2 { d( fis) a a( g) a } |
   \tuplet 3/2 { fis( b) a gis( cis) b } |
   a4 ~ \tuplet 3/2 { a8 b cis } |
   \tuplet 3/2 { d cis b a b g } |
@@ -69,7 +67,7 @@ violinP = \relative c'' {
   a r c, r |
   b r cis! r |
   d r \tuplet 3/2 { e,( a cis) } |
-  \tuplet 3/2 { fis, ( a) d e,( a) cis } |
+  \tuplet 3/2 { fis,( a) d e,( a) cis } |
   d r g r |
 
   %--Bar 47--%
@@ -78,21 +76,21 @@ violinP = \relative c'' {
   fis8. g16 a4 ~ |
   \tuplet 3/2 { a8 a g fis( g) a } |
   d,8. b'16 a8. g16 |
-  \tuplet 3/2 { fis8(a)g fis(a) g} |
+  \tuplet 3/2 { fis8( a)g fis( a) g} |
   fis2 ~ |
 
   %--Bar 54--%
-  \tuplet 3/2 { fis8 \noBeam fis' e d(fis) e } |
+  \tuplet 3/2 { fis8 \noBeam fis' e d( fis) e } |
   d2 ~ |
   d ~ |
   d |
-  \tuplet 3/2 { cis8 (b) a } a'4 ~ |
+  \tuplet 3/2 { cis8( b) a } a'4 ~ |
   \tuplet 3/2 { a8 b a } g4 ~ |
   \tuplet 3/2 { g8 a g } fis4 ~ |
 
   %--Bar 61--%
   \tuplet 3/2 { fis8 b, d e(fis) g } |
-  \tuplet 3/2 { cis,( e) cis a(b) cis } |
+  \tuplet 3/2 { cis,( e) cis a( b) cis } |
   a8. g16 e8. d16 |
   d2 ~ |
   d ~ |
@@ -114,7 +112,7 @@ violinP = \relative c'' {
   d,8. e16 cis8. d16 |
   d2 |
   \tuplet 3/2 {
-    b8-\piano ( d fis) fis( e fis) |
+    b8(-\piano d fis) fis( e fis) |
     b,( d fis) fis( e fis) |
     b,( dis e) e( dis e) |
     ais,( cis e) e( d! e) |
@@ -123,10 +121,10 @@ violinP = \relative c'' {
   }
 
   %--Bar 85--%
-  \tuplet 3/2 { ais,(fis) e' d(e)cis } |
+  \tuplet 3/2 { ais,( fis) e' d( e)cis } |
   b r fis r |
   b r \tuplet 3/2 { cis d e } |
-  \tuplet 3/2 { fis(e) d cis(b) ais } |
+  \tuplet 3/2 { fis( e) d cis( b) ais } |
   b8. fis'16-\forte b8. fis16 |
   g2 ~ |
   g8. g16 \tuplet 3/2 { a8( fis) g } |

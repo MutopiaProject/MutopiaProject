@@ -2,17 +2,11 @@
 
 \include "violone.ly"
 
-
-\score
-{
-  %
+\score {
   \violone
   \midi {}
-  \layout
-  {
-  }
-  \header
-  {
+  \layout {}
+  \header {
     instrument = "Double Bass"
   }
 }

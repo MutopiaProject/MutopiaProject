@@ -18,10 +18,10 @@ viola = \relative c'' {
   a, r e' r |
 
   % --Bar 33-- %
-  \tuplet 3/2 { cis ( d) e fis( g) a } | \tripletsHide
+  \tuplet 3/2 { cis(  d) e fis( g) a } | \tripletsHide
   d, r a' r |
   fis r \tuplet 3/2 { a( g) a } |
-  \tuplet 3/2 { fis ( e) d } a' r |
+  \tuplet 3/2 { fis( e) d } a' r |
   a r cis, r |
   d r e r |
   fis8. cis'16 a8. g16 |
@@ -31,8 +31,8 @@ viola = \relative c'' {
   a8 r g r |
   fis r d r |
   d r a' r |
-  fis r \tuplet 3/2 { e ( cis a) } |
-  \tuplet 3/2 { fis' ( d a) g'(e cis) }
+  fis r \tuplet 3/2 { e( cis a) } |
+  \tuplet 3/2 { fis'( d a) g'(e cis) }
   fis r d r |
 
 
@@ -57,7 +57,7 @@ viola = \relative c'' {
   %61
   d4 r |
   r8 r16 a' fis8. d16 |
-  \tuplet 3/2 { d8 (cis) b e( fis) g } |
+  \tuplet 3/2 { d8( cis) b e( fis) g } |
   fis8. \noBeam a16 d8. a16 |
   \tuplet 3/2 { b8( a) g fis( g) a } |
   d, r d r |
@@ -82,7 +82,7 @@ viola = \relative c'' {
   %85
   R2*2 |
   r8 r16 b fis8. cis'16 |
-  \tuplet 3/2 { d8(cis) b ais(b) cis} |
+  \tuplet 3/2 { d8( cis) b ais( b) cis} |
   a r r4 |
   R2*3 |
 

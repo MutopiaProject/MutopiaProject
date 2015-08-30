@@ -1,6 +1,7 @@
+\version "2.18.0"
+
 \include "header.ly"
 
-\version "2.18.0"
 cello = \relative c {
   \clef bass
   \key d \major
@@ -42,7 +43,7 @@ cello = \relative c {
   cis8.\noBeam a16 d8. a16 |
   \tuplet 3/2 {
     b8( a) g fis( g) a |
-    d,( fis) e d(e ) fis |
+    d,( fis) e d( e) fis |
   }
   g r a r |
   b r g, r |
@@ -79,14 +80,14 @@ cello = \relative c {
   % --Bar 76-- %
   g r a r |
   \tuplet 3/2 { b( a) g } a8. a,16 |
-  \tuplet 3/2 { d8( fis) e d( e fis )} |
+  \tuplet 3/2 { d8( fis) e d( e fis) } |
   b, r r4 |
   \repeat unfold 6 { b8 r r4 | }
 
   % --Bar 86 -- %
   r8 r16 fis' \tuplet 3/2 {
     b8( d) cis |
-    d ( cis) b ais ( g) cis |
+    d( cis) b ais( g) cis |
   }
   fis,4 ~ \tuplet 3/2 {
     fis8 g e |
@@ -97,7 +98,7 @@ cello = \relative c {
   % --Bar 96 -- %
   r8 r16 fis' \tuplet 3/2 {
     b8( a) gis |
-    a (gis) fis eis( fis) gis
+    a( gis) fis eis( fis) gis
   } |
   cis,4 ~ \tuplet 3/2 {
     cis8 d b |
@@ -129,12 +130,12 @@ cello = \relative c {
 
   % --Bar 143 -- %
   d r e r |
-  \tuplet 3/2 { fis(e) d cis( dis) e }
+  \tuplet 3/2 { fis( e) d cis( dis) e }
   dis4 r8 b |
   e8. d!16 cis8. fis,16 |
   e8. d16 e8. e,16 |
   a8_\pianoB r a' r |
-  \repeat unfold 6 { a, r a ' r | }
+  \repeat unfold 6 { a, r a' r | }
 
   % --Bar 155 -- %
   a, r r4 |
@@ -188,8 +189,8 @@ cello = \relative c {
   % --Bar 222 -- %
   fis8. \noBeam b,16 fis'8. a,16 |
   %should beam down
-  \tuplet 3/2 { b8( a) g ais(b) cis } |
-  fis,4 ~ \tuplet 3/2 { fis8 fis' e } |
+  \tuplet 3/2 { b8( a) g ais( b) cis | }
+  fis,4 ~ \tuplet 3/2 { fis8 fis' e | }
   d r r4 |
 
   % --Bar 226 -- %
@@ -216,7 +217,7 @@ cello = \relative c {
   d r r4 |
   R2 |
   r8 r16 a d8. a16 |
-  \tuplet 3/2 { b8( a) g fis( a ) b } |
+  \tuplet 3/2 { b8( a) g fis( a) b | }
   d, r e r |
   fis r fis, r |
 
@@ -230,9 +231,9 @@ cello = \relative c {
   % --Bar 280 -- %
   cis8. \noBeam a16 d8. a16 |
   \tuplet 3/2 {
-    b8(a) g fis (g) a |
-    d,( fis ) e d(e) fis
-  } |
+    b8( a) g fis( g) a |
+    d,( fis) e d( e) fis |
+  }
   g r a r |
   b r b, r |
   r4 b'8 r |
@@ -249,11 +250,11 @@ cello = \relative c {
 
   % --Bar 294 -- %
   r8 r16 a d8. a16 |
-  \tuplet 3/2 { b8 (a ) fis } a8. a16 |
+  \tuplet 3/2 { b8( a) fis } a8. a16 |
   d,8 r fis r |
   g r c r |
   b8. \noBeam g'16 d'8. a16 |
-  \tuplet 3/2 { b8(a) g fis( gis) a } |
+  \tuplet 3/2 { b8( a) g fis( gis) a } |
   gis r gis, r |
   r4 gis'8 r |
 
@@ -265,7 +266,7 @@ cello = \relative c {
   cis8 r r r16 a |
   d8 r fis, r |
   g r a r |
-  \tuplet 3/2 { b(a ) g} a8. a,16 |
-  d2-\fermata \bar "|."
+  \tuplet 3/2 { b( a) g } a8. a,16 |
+  d2\fermata \bar "|."
 }
 
