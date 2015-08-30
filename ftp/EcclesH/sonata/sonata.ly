@@ -1,11 +1,11 @@
-\version "2.4.0"
+\version "2.18.2"
 
 global =  {
  \key g \minor
 }
 
 violingrave =       \transpose g g{\relative c'' {
- % \set Staff.instrument = "violin"
+ % \set Staff.instrumentName = "violin"
   \time 4/4
   \partial 8 d8\mf |
   \repeat volta 2 {
@@ -23,7 +23,7 @@ violingrave =       \transpose g g{\relative c'' {
     }
 
   f4.( d8) bes16( a) bes4 bes8 | g'8.( f16) es16([ d c bes] a8) f8 bes4~ |
-           bes8[ d16( c)] c4~ c8 es16( d) es8 \times 2/3 {g16 f es} | 
+           bes8[ d16( c)] c4~ c8 es16( d) es8 \tuplet 3/2 {g16 f es} | 
            d4 c8.\trill bes16 bes4 r16 f'16( g a) |
   
   bes4. g8 e4.\trill e8 | a8 g16( fis) g8.( a16) fis8\<( d) c' c |
@@ -33,7 +33,7 @@ violingrave =       \transpose g g{\relative c'' {
 }}
 
 violincourante =       \transpose g g{\relative c'' {
- % \set Staff.instrument = "violin"
+ % \set Staff.instrumentName = "violin"
  \time 3/4
   \partial 8 d8\f |
   \repeat volta 2 {
@@ -88,7 +88,7 @@ violincourante =       \transpose g g{\relative c'' {
 }}
 
 violinadagio =       \transpose g g{\relative c'' {
- % \set Staff.instrument = "violin"
+ % \set Staff.instrumentName = "violin"
   \time 3/2
 
   r2 r d\mf | c2. es4 d4.( c8) | bes4.( a8) g2 d' | g2. bes4 a4.( g8) | fis4.( e8) d2 g4.( d8) |
@@ -108,7 +108,7 @@ violinadagio =       \transpose g g{\relative c'' {
 }}
 
 violinvivace =       \transpose g g{\relative c'' {
- % \set Staff.instrument = "violin"
+ % \set Staff.instrumentName = "violin"
   \time 3/8
   \repeat volta 2 {
 
@@ -176,12 +176,14 @@ violinvivace =       \transpose g g{\relative c'' {
  lastupdated = "2005/Mar/21"
  
  footer = "Mutopia-2005/03/24-540"
- tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ tagline = ""
 }
 \score {
     \new Staff << \global \violingrave >>
    \layout { }
-   \midi { \tempo 8 = 69 }
+  \midi {
+    \tempo 8 = 69
+    }
    \header {
     piece = "Grave"
    }
@@ -189,7 +191,9 @@ violinvivace =       \transpose g g{\relative c'' {
 \score {
     \new Staff << \global \violincourante >>
    \layout { }
-   \midi { \tempo 4 = 104 }
+  \midi {
+    \tempo 4 = 104
+    }
    \header {
     piece = "Courante"
    }
@@ -197,7 +201,9 @@ violinvivace =       \transpose g g{\relative c'' {
 \score {
     \new Staff << \global \violinadagio >>
    \layout { }
-   \midi { \tempo 2 = 42 }
+  \midi {
+    \tempo 2 = 42
+    }
    \header {
     piece = "Adagio"
    }
@@ -205,7 +211,9 @@ violinvivace =       \transpose g g{\relative c'' {
 \score {
     \new Staff << \global \violinvivace >>
    \layout { }
-   \midi { \tempo 8 = 228 }
+  \midi {
+    \tempo 4. = 76
+    }
    \header {
     piece = "Vivace"
    }
