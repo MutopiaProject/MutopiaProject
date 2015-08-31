@@ -2,8 +2,7 @@
 % convert-ly -> Lilypond 2.4.1 by Chris Sawer <chris@mutopiaproject.org>
 % Last changed on 7/Nov/2004
 
-#(ly:set-option 'old-relative)
-\version "2.4.0"
+\version "2.18.2"
 \header {
 	title = "SUONATA QUINTA, FVGA HARMONICA"
 	subtitle = "From Primo Registro of the Organo Suonarino"
@@ -24,10 +23,9 @@
 	lastupdated = "2004/Nov/07"
 
 	footer = "Mutopia-2004/11/07-35"
-	tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"	
 }
 
-mensuralBreveNote = { \once \override NoteHead #'style = #'neomensural }
+mensuralBreveNote = { \once \override NoteHead.style = #'neomensural }
 
 soprano =  \relative c'' \context Voice = "soprano" {
 	\set Staff.midiInstrument = "church organ"
@@ -145,9 +143,12 @@ basso =  \relative c \context Voice = "basso" {
 			\basso
 		>>
 	>>
-	\midi {
-		\tempo 2 = 70
-	}
+	
+  \midi {
+    \tempo 2 = 70
+    }
+
+
 	\layout {
 	}
 }
