@@ -11,19 +11,19 @@
   instrument = "Violin"
   arranger = "Salmon/Crowell"
   composer = "Henri Eccles (1670-1742)"
-  mutopiatitle = "Sonata"
+  mutopiatitle = "Sonata in G minor"
   mutopiacomposer = "EcclesH"
-  mutopiainstrument = "Violin, Piano"
+  mutopiainstrument = "Violin"
   source = "ed. J. Salmon, 1914"
   style = "Baroque"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Benjamin Crowell"
-  maintainerEmail = "Please do not put my address on the web site."
   maintainerWeb = "http://www.lightandmatter.com/music/strings/"
-  lastupdated = "2005/Mar/21"
+  moreInfo = "This score was prepared by Benjamin Crowell in 2005 from J. Salmon's 1914 arrangement for violin and piano."
 
-  footer = "Mutopia-2005/03/24-540"
-  tagline = ""
+ footer = "Mutopia-2015/09/01-540"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 global =  {
