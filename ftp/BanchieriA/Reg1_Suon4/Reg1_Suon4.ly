@@ -1,14 +1,11 @@
 % Updated to Lilypond 2.2.5 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org>
 % convert-ly -> Lilypond 2.4.1 by Chris Sawer <chris@mutopiaproject.org>
-% Last changed on 7/Nov/2004
 
-#(ly:set-option 'old-relative)
-\version "2.4.0"
+\version "2.18.0"
 \header {
 	title = "SUONATA QUARTA, FVGA CROMATICA"
 	subtitle = "From Primo Registro of the Organo Suonarino"
 	instrument = "Organ"
-	%piece = "SUONATA QUARTA, FVGA CROMATICA"
 	maintainer = "Giampaolo Orrigo"
 	composer = "Adriano Banchieri"
 	mutopiatitle = "SUONATA QUARTA, FVGA CROMATICA From Primo Registro of the Organo Suonarino"
@@ -18,16 +15,12 @@
 	source = "Urtext"
 	style = "Baroque"
 	copyright = "Public Domain"
-	filename = "Reg1_Suon4.ly"
 	editor = "Ricciardo Amadino, Venezia, 1605"
-	maintaineremail = "orrigo.gp@rosenet.it"
-	lastupdated = "2004/Nov/07"
-
-	footer = "Mutopia-2004/11/07-34"
-	tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"	
+	maintainerEmail = "orrigo.gp@rosenet.it"
+	lastupdated = "2015-Sep-02"
 }
 
-mensuralBreveNote = { \once \override NoteHead #'style = #'neomensural }
+mensuralBreveNote = { \once \override NoteHead.style = #'neomensural }
 
 soprano =  \relative c'' \context Voice = "soprano" {
 	\set Staff.midiInstrument = "church organ"
@@ -49,7 +42,7 @@ soprano =  \relative c'' \context Voice = "soprano" {
 	r2 fis4 e8 fis gis4 fis8 gis a2 |
 	b2 e,2. d8 c d2 ~ |
 	d4. e8 c4. d8 b1 |
-  r\breve |
+	r\breve |
 	e2. d4 c2 b |
 	a2 b c4 b8 c d4 c8 d |
 	\mensuralBreveNote e\breve 
@@ -90,7 +83,7 @@ tenore =  \relative c' \context Voice = "tenore" {
 	a2 gis fis g |
 	e1 d ~ |
 	d1 c |
-	f1 e ~ |
+	f1 e _~ |
 	e1 r1 |
 	r1 e'2 gis, |
 	b2 c1 b4 a |
@@ -133,6 +126,20 @@ basso =  \relative c \context Voice = "basso" {
 	\mensuralBreveNote e\breve |
 	\bar "|."
 }
+
+\paper {
+  top-margin = 8\mm                              %-minimum top-margin: 8mm
+  top-markup-spacing.basic-distance = #5         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #6      %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.basic-distance = #11       %-pads music from copyright block
+  
+  % --- Set these to false after all editing is finished
+  ragged-bottom = ##f
+  ragged-last-bottom = ##f
+  ragged-right = ##f
+}
+
 \score {
 	\context PianoStaff  << 
 		\context Staff = "top" << \time 4/2
@@ -145,9 +152,12 @@ basso =  \relative c \context Voice = "basso" {
 			\basso
 		>>
 	>>
-	\midi {
-		\tempo 2 = 70
-	}
+	
+  \midi {
+    \tempo 2 = 70
+    }
+
+
 	\layout {
 	}
 }
