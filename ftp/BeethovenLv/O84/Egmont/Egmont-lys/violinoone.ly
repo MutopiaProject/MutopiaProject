@@ -1,20 +1,21 @@
-\version "2.4.0"
+\version "2.18.2"
+
+\include "defs.ily"
 
  violinoone =  {
- \set Staff.instrument = "Violino I"
+ \set Staff.instrumentName = "Violino I"
  \set Staff.midiInstrument = "violin"
  \clef treble
  \key f \minor
  \time 3/2
- \override Staff.AccidentalPlacement   #'padding = #0.5
- << { f'1.\fermata } \\ { s2\f s4 s4\> s4 s4\! } >>
- aes2\staccato_"marcato" aes2\staccato r4 r8 aes
+ \moreAccidentalPadding
+ f'1.\fermata-\forteSforzato-\hideF
+ aes2\staccato_\txtMarcato aes2\staccato r4 r8 aes
  bes2\staccato c'\staccato r4 r8
  c' d'2\staccato ees'\staccato r4 r8 b8\p c'4 r4 r2 r2
  R1. r2 r4 c'4\p( b aes')
- << { \override Slur   #'attachment = #'(stem . stem) g'4( f'2 ~ f'2 e'4) } \\
- { \override DynamicLineSpanner   #'padding = #2.0
- s4 s4 s4\< s4\! s4\> s8 s8\! } >> f'1.\ff
+ << { g'4_( f'2_~ f'2 e'4) } \\
+ { \spaceSpannerE s4 s4 s4\< s4\! s4\> s8 s8\! } >> f'1.\ff
  aes2\staccato aes2\staccato r4 r8 aes8 bes2\staccato c'\staccato r2 R1. R1.
  r2 r2 c'2\p des'4\pp aes''4( bes''8 aes'' ges'' f'') f''4 r4
  r4 aes''4( bes''8 aes'' ges'' f'') f''4 r4 r4 ees''4( f''8 ees'' des'' c'') c''4 r4
@@ -23,22 +24,22 @@
  R1. R1. r4 bes'4\pp( c'' bes' aes' g') \bar "||"
 
  \time 3/4
- r8 \cresc \stemUp bes'([ c'' bes' aes' g'] c'' bes' aes' g' c'' bes')
+ r8 \stemUp bes'([\cresc c'' bes' aes' g'] c'' bes' aes' g' c'' bes')
  aes'( g' c'' bes' aes' g') c''( bes' aes' g') \stemDown c''4\sfp ~
- c''2. ~ c''2. ~ c''4 c''4( f''4) ~ f''4( e'') c''4\sfp ~
+ c''2.-\hideP ~ c''2. ~ c''4 c''4( f''4) ~ f''4( e'') c''4\sfp ~
  c''2. ~ c''2. ~ c''4 c''4( e'' g'' f'')
- f''4\<( ees''!2\!\> des''4\! c''4) r4 r4 R2. r4 r4 f''4\<( ees''2\!\> des''4\! c''4) r8
+ \hairpinPastBarline f''4\<( ees''!2\!\> des''4\! c''4) r4 r4 R2. r4 r4 \hairpinPastBarline f''4\<( ees''2\!\> des''4\! c''4) r8
  f''8\staccato[ f''\staccato e''\staccato]
  e''4 r8 g''8[ g'' f''] f''4 r8 aes''[ aes'' g''] g''4 r8 bes''[ bes'' aes'']
  aes''4 r8 c'''8[ c''' bes'']
- bes''4 r8 \cresc bes''8[ c''' des'''] des'''4 r8 g''[ aes'' bes'']
+ bes''4 r8 bes''8[\cresc c''' des'''] des'''4 r8 g''[ aes'' bes'']
  bes''4 r8 e''8[ f'' g''] g''4 r8 g''8[ aes'' bes''] bes''4 r8 bes''8[ c''' des''']
  des'''4 r8 g''[ aes'' bes''] bes''4 r8 e''[ f'' g'']
  g''4 r8 g''8[ aes'' bes''] bes''4 r8 bes''[ c''' des''']
  des'''4 r8 bes''[ c''' des'''] des'''4 r8 bes''[ c''' des'''] des'''4 r
  c'''4\ff( des''' c''') aes''\staccato f''\staccato des''\staccato c''\staccato
  \stemDown aes'2( f'4) e'4 r4
- \stemUp c'''4\ff( des''' c''') bes''\staccato g''\staccato e''\staccato des''\staccato
+ \stemNeutral c'''4\ff( des''' c''') bes''\staccato g''\staccato e''\staccato des''\staccato
  c''2( \stemUp bes'8 g') f'4 r8 \stemDown f''\staccato[ g''\staccato aes''\staccato] bes''4 r8
  g''[ aes'' bes''] c'''4 r8 aes''[ bes'' c'''] des'''4 des''' e''' f'''4 r8 f''[ g'' aes'']
  bes''4 r8 g''[ aes'' bes''] c'''4 r8 aes''[ bes'' c'''] des'''4 des''' d'''
@@ -47,8 +48,8 @@
  ees'4\ff\staccato ees'4\staccato r8 ees' f'4 f' r R2. R2.
  ees'4\ff ees'4 r8 ees' f'4 f' r R2. R2. ees'4\ff ees'4 r8 ees' fes'4 fes' r
  R2. R2. R2. R2. R2. R2.
- \set tupletSpannerDuration = #(ly:make-moment 1 4)
- \stemDown \times 2/3 { bes''!8\f[ bes'' bes''] bes''[ bes'' bes''] bes''[ bes'' bes'']
+ \tupletSpan 4
+ \stemDown \tuplet 3/2 { bes''!8\f[ bes'' bes''] bes''[ bes'' bes''] bes''[ bes'' bes'']
  ees'''8\ff[ ees''' ees'''] ees'''[ ees''' ees'''] ees'''[ ees''' ees''']
  ees'''8[ ees''' ees'''] c'''[ c''' c'''] aes''[ aes'' aes'']
  aes''8[ aes'' aes''] f''[ f'' f''] f''\sf[ f'' f'']
@@ -62,23 +63,23 @@
  \stemUp <ees' c'' aes''>8\fp[ ees'] ees'[ ees' ees' ees'] ees'2.:8 ees'2.:8 ees'2.:8
  <des' ees'>2.:8 <des' ees'>2.:8 <bes ees'>2.:8
  <bes ees'>8 <bes ees'> <bes ees'> <bes ees'> <ees' bes' g''>4\f\staccato
- <ees' c'' aes''>8 ees'\p[ ees' ees' ees' ees'] ees'2.:8 ees'2.:8 ees'2.:8
+ <ees' c'' aes''>8\noBeam ees'\p ees'[ ees' ees' ees'] ees'2.:8 ees'2.:8 ees'2.:8
  f'2.:8 f'2.:8 f'2.:8 f'8 f' f' f' \stemDown <f' c'' a''>4\f\staccato
  <f' des'' bes''>8\staccato \stemUp f'8\p[ f' f' f' f']
  f'2.:8 f'2.:8 f'2.:8 f'2.:8 f'2.:8 f'2.:8 f'8[ f' f' f'] \stemDown <f' c'' a''>4\f\staccato
  <f' des'' bes''>8\staccato \stemUp f'8\p[ f' f' f' f'] f'2.:8 f'2.:8 f'2.:8 f'2.:8
  f'8[ f' f' f'] r4 R2. R2. R2. R2.
- \stemDown b'4 r8 b'8[ b' c''] d''4 r8 d''8[ ees'' f''] f''4 r8 d''8[ ees'' f'']
+ \stemDown b'4 r8 b'8[\< b' c''] d''4 r8 d''8[ ees'' f''] f''4 r8 d''8[ ees'' f''\!]
  f''8 \stemUp f'8\pp([ g' f' ees' d']) r8 f'([ g' f' ees' d']) r f'([ g' f' ees' d'])
  g'8([ f' ees' d'] g'4)
- r8 bes'\pp([ c'' bes' aes' g']) r8 bes'([ c'' bes' aes' g']) r \cresc bes'([ c'' bes' aes' g'])
+ r8 bes'\pp([ c'' bes' aes' g']) r8 bes'([ c'' bes' aes' g']) r bes'([\cresc c'' bes' aes' g'])
  c''8( bes' aes' g' c'' bes') aes'( g' c'' bes' aes' g') c''( bes' aes' g')
  \stemDown c''4\sfp ~ c''2. ~ c''2. ~ c''4 c''( f'') ~ f''( e'')
- c''\sfp ~ c''2. ~ c''2. ~ c''4 c''4( e'' g'' f'') f''\<( ees''2\!\> des''4\! c'') r f''4\< ~ f''4.
- f''8\staccato\!\>[ f''\staccato g''\staccato\!] aes''4( f'') f''\<( ees''2\!\> des''4\! c'')
+ c''\sfp ~ c''2. ~ c''2. ~ c''4 c''4( e'' g'' f'') \hairpinPastBarline f''\<( ees''!2\!\> des''4\! c'') r f''4\< ~ f''4.
+ f''8\staccato\!\>[ f''\staccato g''\staccato\!] aes''4( f'') \hairpinPastBarline f''\<( ees''2\!\> des''4\! c'')
  r8 f''8\staccato[ f''\staccato e''\staccato] e''4 r8 g''8[ g'' f'']
  f''4 r8 aes''[ aes'' g''] g''4 r8 bes''8[ bes'' aes''] aes''4 r8 c'''8[ c''' bes'']
- bes''4 r8 \cresc bes''[ c''' des'''] des'''4 r8 g''[ aes'' bes'']
+ bes''4 r8 bes''[\cresc c''' des'''] des'''4 r8 g''[ aes'' bes'']
  bes''4 r8 e''8[ f'' g''] g''4 r8 g''[ aes'' bes'']
  bes''4 r8 bes''[ c''' des'''] des'''4 r8 g''[ aes'' bes'']
  bes''4 r8 e''8[ f'' g''] g''4 r8 g''[ aes'' bes'']
@@ -99,8 +100,8 @@
  aes'4\ff\staccato aes'4\staccato r8 aes' bes'4 bes' r R2. R2.
  aes'4\ff aes' r8 aes' bes'4 bes' r R2. R2.
  aes'4\ff aes' r8 aes' \stemDown beses'4 beses' r R2. R2. R2. R2. R2. R2.
- \set tupletSpannerDuration = #(ly:make-moment 1 4)
- \stemDown \times 2/3 { bes''8\f[ bes'' bes''] bes''[ bes'' bes''] bes''[ bes'' bes'']
+ \tupletSpan 4
+ \stemDown \tuplet 3/2 { bes''!8\f[ bes'' bes''] bes''[ bes'' bes''] bes''[ bes'' bes'']
  c'''8\ff[ c''' c'''] c'''[ c''' c'''] c'''[ c''' c''']
  des'''8[ des''' des'''] des'''[ des''' des'''] des'''\sf[ des''' des''']
  des'''8[ des''' des'''] bes''[ bes'' bes''] bes''\sf[ bes'' bes'']
@@ -120,7 +121,7 @@
  \key f \major \time 4/4
  \stemDown c''4\pp ~ c''16( b' c'' d'' e''8) r8 r4 c''4 ~ c''16( b' c'' d'' e''8) r8 r4
  d''4 ~ d''16( cis'' d'' e'' f''8) r8 r4 d''4 ~ d''16( cis'' d'' e'' f''8) r8 r4
- e''16_\markup { \italic \large "cresc." }( d'' e'' f'' g''8) r8 e''16( d'' e'' f'' g''8) r8
+ e''16_\txtCresc( d'' e'' f'' g''8) r8 e''16( d'' e'' f'' g''8) r8
  f''16( e'' f'' g'' a''8) r8  f''16( e'' f'' g'' a''8) r8
  g''16( fis'' g'' a'' bes''8) r a''16( g'' a'' bes'' c'''8) r
  bes''16 bes'' a'' a'' bes'' bes'' c''' c''' d''' d''' e''' e''' f'''! f''' g''' g'''
@@ -138,20 +139,20 @@
  d'''16 d''' c'''! c''' bes'' bes'' a'' a'' bes'' bes'' g'' g'' c''' c''' c''' c'''
  f''4 r r2 R1
 
- r8 a''16( bes'') c'''8\staccato c'''\staccato c'''\staccato[
- \set tupletSpannerDuration = #(ly:make-moment 1 4) \times 2/3 { a''16[ bes'' c'''] }
+ r8 a''16( bes'') c'''8\staccato c'''\staccato c'''\staccato
+ \tupletSpan 4 \tuplet 3/2 { a''16 bes'' c''' }
+ d'''8\staccato c'''\staccato
+ bes''8\staccato g''16( a'') bes''8\staccato bes''\staccato bes''\staccato
+ \tuplet 3/2 { g''16 a'' bes'' } c'''8\staccato bes''\staccato
+ a''8\staccato a''16( bes'') c'''8\staccato c'''\staccato c'''\staccato
+ \tupletSpan 4 \tuplet 3/2 { a''16 bes'' c''' }
  d'''8\staccato[ c'''\staccato]
- bes''8\staccato[ g''16( a'']) bes''8\staccato bes''\staccato bes''\staccato[
- \times 2/3 { g''16[ a'' bes''] } c'''8\staccato[ bes''\staccato]
- a''8\staccato a''16( bes'') c'''8\staccato c'''\staccato c'''\staccato[
- \set tupletSpannerDuration = #(ly:make-moment 1 4) \times 2/3 { a''16[ bes'' c'''] }
- d'''8\staccato[ c'''\staccato]
- bes''8\staccato[ g''16( a'']) bes''8\staccato bes''\staccato bes''\staccato[
- \times 2/3 { g''16[ a'' bes''] } c'''8\staccato[ bes''\staccato]
- \cresc a''16 a'' bes'' bes'' c''' c''' cis''' cis''' d''' d''' c''' c''' bes'' bes'' a'' a''
+ bes''8\staccato[ g''16( a'']) bes''8\staccato bes''\staccato bes''\staccato
+ \tuplet 3/2 { g''16 a'' bes'' } c'''8\staccato bes''\staccato
+ a''16-\hideF\cresc a'' bes'' bes'' c''' c''' cis''' cis''' d''' d''' c''' c''' bes'' bes'' a'' a''
  bes''16 bes'' a'' a'' g'' g'' a'' a'' bes'' bes'' c''' c''' d''' d''' e''' e'''
- \set tupletSpannerDuration = #(ly:make-moment 1 4)
- \times 2/3 { f'''8\ff[ f''' f'''] ees'''[ ees''' ees'''] d'''[ d''' d'''] fis'''[ fis''' fis''']
+ \tupletSpan 4 \hideTupletNumber
+ \tuplet 3/2 { f'''8\ff[ f''' f'''] ees'''[ ees''' ees'''] d'''[ d''' d'''] fis'''[ fis''' fis''']
  g'''8\sf[ g''' g'''] des'''[ des''' des'''] c'''[ c''' c'''] e'''![ e''' e''']
  f'''!8[ f''' f'''] f'''[ f''' f'''] g'''[ g''' g'''] g'''[ g''' g''']
  a'''8[ a''' a'''] a'''[ a''' a'''] bes'''[ bes''' bes'''] bes'''[ bes''' bes''']
@@ -168,15 +169,18 @@
  f''[ f''' f'''] f'''[ f''' f'''] f'''\sf[ f''' f'''] f'''[ f''' f''']
  f'''[ f''' f'''] f'''[ f''' f'''] f'''[ f''' f'''] f'''[ f''' f''']
  a'''\sf[ a''' a'''] a'''[ a''' a'''] a'''\sf[ a''' a'''] a'''[ a''' a''']
- a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a''']
- a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a''']
- g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g''']
- a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a''']
- g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g''']
- a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a'''] a'''[ a''' a''']
- g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g''']
- g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g''']
- g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g'''] g'''[ g''' g'''] }
+ }
+ \tupletSpan \default \hideTupletBracket
+ \tuplet 3/2 {
+ a'''2.:8 a''': 
+ a'''2.:8 a''': 
+ g'''2.:8\sf g''':
+ a'''2.:8 a''':
+ g'''2.:8\sf g''':
+ a'''2.:8 a''':
+ g'''2.:8\sf g''':
+ g'''2.:8\sf g''':
+ g'''2.:8\sf g''': } \tupletSpan 4
  f'''16\ff f''' f'' f'' g'' g'' a'' a'' bes'' bes'' a'' a'' bes'' bes'' c''' c'''
  d'''16 d''' c''' c''' d''' d''' e''' e''' f''' f''' e''' e''' f''' f''' g''' g'''
  a'''4 r r2 <f' c'' a''>4 r r2 <f' c'' a''>4 r r2
