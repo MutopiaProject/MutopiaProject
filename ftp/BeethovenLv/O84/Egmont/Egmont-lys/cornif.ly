@@ -1,14 +1,13 @@
-\version "2.4.0"
+\version "2.18.2"
 
  cornif =  {
- \set Staff.instrument = "Corni in F"
+ \set Staff.instrumentName = "Corni in F"
  \set Staff.midiInstrument = "english horn"
  \clef treble
  \key c \major
  \time 3/2
- \override Staff.AccidentalPlacement   #'padding = #0.5
- << { <c' c''>1.\fermata } \\
- { \override DynamicLineSpanner   #'padding = #2.5 s2\f s4 s4\> s4 s4\! } >>
+ \moreAccidentalPadding
+ <c' c''>1.\fermata-\hideF_\forteSforzato
  R1. R1. R1. R1. R1. R1. R1. <c' c''>1.\ff
  <g g'>2\staccato <g g'>2\staccato r4 r8 <g g'>8
  << { d''2\staccato } \\ { d''2 } >> <g g'>2\staccato r2 R1. R1. R1.
@@ -20,10 +19,10 @@
 
  \time 3/4 R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. \clef bass
  << { R2. R2. d4\rest d4\rest c4 ~ c2. ~ c4 d4\rest d4\rest R2. R2. } \\
- { c,4\rest c,4\rest c,4\p ~ c,2. ~ c,4 c,4\rest
- c,4 ~ c,2. ~ c,4 c,4\rest c,4 ~ c,2. ~ c,4 c,4\rest c,4\rest } >>
+ { c,4\rest c,4\rest \hairpinPastBarline c,4\p\< ~ c,2.\!\> ~ c,4\! c,4\rest
+ \hairpinPastBarline c,4\< ~ c,2.\!\> ~ c,4\! c,4\rest \hairpinPastBarline c,4\< ~ c,2.\> ~ c,4\! c,4\rest c,4\rest } >>
  \clef treble r4 <g g'>\p r r <g g'> r r <g g'> r r <g g'> r
- \cresc r4 <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r 
+ r4 <g g'>\cresc r r <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r 
  r4 <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r r4 <g g'>
  <g g'>4\ff ~ <g g'>2. ~ <g g'>2. ~ <g g'>4 <g g'> <g g'> <g g'> r4
  <g g'>4\ff ~ <g g'>2. ~ <g g'>2. ~ <g g'>4 <g g'> <g g'>
@@ -40,10 +39,10 @@
  <c' c''>4\staccato r r R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2.
  R2. R2. R2. R2. R2. R2. <g g'>4\p <g g'>4 r r <g g'>4 r r <g g'>4 r r <g g'>4 r r <g g'>4 r
  r4 <g g'>4 r r <g g'>4 r r r \clef bass
- \override DynamicLineSpanner   #'padding = #2.0
- <c, c>4\< ~ <c, c>2.\!\> ~ <c, c>4\! r r R2. r4 r <c, c>4\< ~ <c, c>2.\!\> ~ <c, c>4\! r4 r
+ \spaceSpannerE
+ \hairpinPastBarline <c, c>4\< ~ <c, c>2.\!\> ~ <c, c>4\! r r R2. r4 r \hairpinPastBarline <c, c>4\< ~ <c, c>2.\!\> ~ <c, c>4\! r4 r
  \clef treble r4 <g g'>4\p r r <g g'>4 r r <g g'>4 r r <g g'>4 r
- r4 \cresc <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r
+ r4 <g g'>\cresc r r <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r
  r4 <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'> r r <g g'>
  <g g'>4\ff ~ <g g'>2. ~ <g g'>2. ~ <g g'>4 <g g'> <g g'> <g g'> r
  <g g'>4\ff ~ <g g'>2. ~ <g g'>2. ~ <g g'>4 <g g'> <g g'> <c' c''> r r R2. R2. R2. R2. R2.
@@ -65,8 +64,8 @@
  <g g'>4 <g g'> r r4 r r8 r^\fermata
  R2. R2. R2. R2. R2. R2. R2. R2.^\fermataMarkup \bar "||"
 
- \time 4/4 <g g'>1\pp <g g'>1 <g g'>1 <g g'>1 <g g'>1_\markup { \italic \large "cresc." } <g g'>1
- <g g'>1 ~ <g g'>4_\markup { \italic \large "cresc." } <g' g''>2 <g' g''>4
+ \time 4/4 <g g'>1\pp <g g'>1 <g g'>1 <g g'>1 <g g'>1_\txtCresc <g g'>1
+ <g g'>1 ~ <g g'>4_\txtCresc <g' g''>2 <g' g''>4
  <c'' e''>2\ff ~ <c'' e''>8( <g' d''>) <e' c''>\staccato <g' d''>\staccato
  <c'' e''>2\sf ~ <c'' e''>8( <g' d''>) <e' c''>\staccato <g' d''>\staccato
  <c'' e''>8\sf( <g' d''>) <e' c''>\staccato <g' d''>\staccato
@@ -84,7 +83,7 @@
  << { c''4. } \\ { c''4.\sf } >> r8 r2 << { d''4. } \\ { d''4.\sf } >> r8 r2
  << { c''4. } \\ { c''4.\sf } >> r8 r2 << { d''4. } \\ { d''4.\sf } >> r8 r2
  << { c''4. } \\ { c''4.\sf } >> r8 r2 << { d''4. } \\ { d''4.\sf } >> r8 r2
- << { c''4. } \\ { c''4._\markup { \italic \large "cresc." } } >> r8 << { c''8 } \\ { c''8 } >> r8 r4
+ << { c''4. } \\ { c''4._\txtCresc } >> r8 << { c''8 } \\ { c''8 } >> r8 r4
  << { d''4. } \\ { d''4.\sf } >> r8 << { d''8 } \\ { d''8 } >> r8 r4
  << { c''8[ c''] } \\ { c''8\ff[ c''] } >> r4 << { c''8[ c''] } \\ { c''8[ c''] } >> r4
  << { d''8[ d''] } \\ { d''8[ d''] } >> r4 << { d''8[ d''] } \\ { d''8[ d''] } >> r4
