@@ -13,7 +13,7 @@ Enjoy this music!
 Mark Van den Borre <mark@markvdb.be>
 %}
 
-\version "2.2.0"
+\version "2.18.2"
 \header {
   mutopiatitle = "Divertissements pour la guitare, n°2 Waltz "
   mutopiacomposer = "SorF"
@@ -27,7 +27,6 @@ Mark Van den Borre <mark@markvdb.be>
   maintainerEmail = "mark@markvdb.be"
   maintainerWeb = "http://markvdb.be"
   lastupdated = "2004/May/03"
-  filename	= "sor_op1_2.ly"
   title 	= "Six divertissements pour la guitare"
   opus		= "Opus 1.2"
   instrument	= "Guitarre"
@@ -36,18 +35,17 @@ Mark Van den Borre <mark@markvdb.be>
   source =	"Golden Music Press/GFA/Frederic Noad facsimile edition"
   composer =	"Fernando Sor"
   enteredby	= "Mark Van den Borre"
-  tagline =	"\\parbox{\\hsize}{\\thefooter\\quad\\small\\noindent\\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[\\textwidth][c]{It has been typeset by " + \maintainer + ". Copyright \\copyright " + \maintainer + " 2004.} \\makebox[\\textwidth][c]{\\footnotesize This work is licensed under the Creative Commons Attribution-ShareAlike License, with the additional permission that attribution is not} \\makebox[\\textwidth][c]{\\footnotesize required in an audio derivative of this work. To view a copy of that license visit \\texttt{http://creativecommons.org/licenses/by-sa/1.0/} } \\makebox[\\textwidth][c]{\\footnotesize or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, California 94305, USA.}}"
   footer = 	"Mutopia-2004/05/03-452"
 }
 
-upperVoice = \notes \relative c'{
+upperVoice =  \relative c'{
  \repeat volta 2 {								%begin repeat #1
   \partial 8*1 \stemDown d'8|							%upbeat
   \stemUp b16. d32  g8[ g]|							%1
   g16 d  b8[ <d b>]|								%2
   <c a> \grace d16 \slurDown <c a>16( <b g>) <c a>8|				%3
   <b g> <c a> <cis ais>|							%4
-  \slurUp \times 2/3 {d16( e  d)}  g8[ g]|					%5
+  \slurUp \tuplet 3/2 {d16( e  d)}  g8[ g]|					%5
   g16. d32  b8[ d]|								%6
   cis[ \grace d16 \slurDown cis16(  b) cis8]|					%7
   <d fis,>r8									%8.1
@@ -95,7 +93,7 @@ upperVoice = \notes \relative c'{
   g16 d  b8[ <d b>]|								%34
   <c a> \grace d16 \slurDown <c a>16( <b g>) <c a>8|				%35
   <b g> <c a> <cis ais>|							%36
-  \times 2/3 {d16 e d}  g8[ g]|							%37
+  \tuplet 3/2 {d16 e d}  g8[ g]|							%37
   g16. d32  b8[ d]|								%38
   cis[ \grace d16 \slurDown cis16(  b) cis8]|					%39
   <d fis,>r8									%40.1
@@ -114,7 +112,7 @@ upperVoice = \notes \relative c'{
  }										%end repeat #6
 }
 
-lowerVoice = \notes \relative c'{
+lowerVoice =  \relative c'{
  \partial 8*1 s8|								%upbeat
  \stemDown g'4 r8|								%1
  g4 r8|										%2
@@ -166,20 +164,24 @@ lowerVoice = \notes \relative c'{
 }
 
 \score {
- \context Staff=guitar \notes <<
+ \context Staff = "guitar"  <<
   \time 3/8
   \key g \major
   \clef violin 
-  \context Voice = one {
+  \context Voice = "one" {
    \voiceOne
-   \override TupletBracket #'number-visibility = ##f				%no tuplet numbers in this voice
    \upperVoice
   }
-  \context Voice = two {
+  \context Voice = "two" {
    \voiceTwo
    \lowerVoice
   }
 >>
-\midi { \tempo 8=180}
-\paper {}
+
+  \midi {
+    \tempo 4. = 60
+    }
+
+
+\layout {}
 }
