@@ -15,18 +15,18 @@ Mark Van den Borre <mark@markvdb.be>
 
 \version "2.18.2"
 \header {
-  mutopiatitle = "Divertissements pour la guitare, n°2 Waltz "
+  mutopiatitle = "Divertissements pour la guitare, n°2 Waltz"
   mutopiacomposer = "SorF"
   mutopiaopus = "O 1.2"
   mutopiainstrument = "Guitar"
+  mutopiasource = "Danish Royal Library early 19th Century edition"
+  moreInfo = "<p>The maintainer has created MP3 and OGG Vorbis audio files from the MIDI output (which is available above). These are computer generated but will probably sound better than playing the MIDI file on your own system, depending on your setup. Download them:</p><ul><li><a href=\"../ftp/SorF/O1/sor_op1_2/sor_op1_2.mp3\">sor_op1_2.mp3</a></li><li><a href=\"../ftp/SorF/O1/sor_op1_2/sor_op1_2.ogg\">sor_op1_2.ogg</a></li></ul>"
   date = "1820s"
-  source = "Golden Music Press/GFA/Frederic Noad facsimile edition"
   style = "Classical"
-  copyright = "Creative Commons plus audio permission"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Mark Van den Borre"
   maintainerEmail = "mark@markvdb.be"
   maintainerWeb = "http://markvdb.be"
-  lastupdated = "2004/May/03"
   title 	= "Six divertissements pour la guitare"
   opus		= "Opus 1.2"
   instrument	= "Guitarre"
@@ -35,7 +35,10 @@ Mark Van den Borre <mark@markvdb.be>
   source =	"Golden Music Press/GFA/Frederic Noad facsimile edition"
   composer =	"Fernando Sor"
   enteredby	= "Mark Van den Borre"
-  footer = 	"Mutopia-2004/05/03-452"
+
+ footer = "Mutopia-2015/09/06-452"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 upperVoice =  \relative c'{

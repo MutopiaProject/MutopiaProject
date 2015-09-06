@@ -27,7 +27,6 @@ Mark Van den Borre <mark@markvdb.be>
   maintainer = "Mark Van den Borre"
   maintainerEmail = "mark@markvdb.be"
   maintainerWeb = "http://markvdb.be"
-  filename	= "sor_op1_1.ly"
   title 	= "Six divertissements pour la guitare"
   opus		= "Opus 1.1"
   instrument	= "Guitarre"
