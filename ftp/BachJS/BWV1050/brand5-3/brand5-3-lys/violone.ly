@@ -25,7 +25,7 @@ violone = \relative c {
     r8 r16 a d8. a16 |
     \tuplet 3/2 { b8( a) g fis( g) a } |
     \hide TupletNumber
-    
+
     % --Bar 41-- %
     d, r e r |
     fis r fis, r |

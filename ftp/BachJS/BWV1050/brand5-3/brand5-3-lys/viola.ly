@@ -99,7 +99,7 @@ viola = \relative c'' {
       cis8 r r4 |
       r e8 r |
       b8 r r4 |
-      
+
       R2*17 |
       r4 r8 r16 fis' |
       \tuplet 3/2 { fis8 e d } e4 ~ |
@@ -155,7 +155,7 @@ viola = \relative c'' {
       cis2 ~ |
       \tuplet 3/2 { cis8 \noBeam cis d e( cis) d | }
       a8 r r4 |
-      
+
       R2*5 |
       eis'8 r r4 |
       cis8 r r4 |
@@ -163,7 +163,7 @@ viola = \relative c'' {
       a8 r r4 |
       fis8 r r4 |
       cis8 r r4 |
-      
+
       R2*17 |
       r8 r16 b fis'8. cis16 |
       \tuplet 3/2 { d8( cis) b ais( b) cis | }
@@ -171,7 +171,7 @@ viola = \relative c'' {
       \tuplet 3/2 { fis8( d) e | }
       \tuplet 3/2 { fis8( e) d e( d) cis | }
       b8 r r4 |
-      
+
       R2*4 |
       r8 r16 g' fis8. e16 |
       d8 r fis r |

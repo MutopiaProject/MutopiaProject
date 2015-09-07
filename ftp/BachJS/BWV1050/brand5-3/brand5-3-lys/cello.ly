@@ -6,73 +6,73 @@ cello = \relative c {
   \key d \major
   \time 2/4
 
-  R2 * 28 |
+  R2*28 |
   \repeat unfold 2 {
-   r4 fis,8 r |
-  g r a r |
-  b r cis r |
-  d r e r |
+    r4 fis,8 r |
+    g r a r |
+    b r cis r |
+    d r e r |
 
-  % --Bar 33-- %
-  fis r fis r |
-  g r a r |
-  b r a r |
-  b r cis r |
-  d r r4 |
-  R2 |
-  r8 r16 a d8. a16 |
-  \tuplet 3/2 { b8( a) g fis( g) a | }
-  \hide TupletNumber
+    % --Bar 33-- %
+    fis r fis r |
+    g r a r |
+    b r a r |
+    b r cis r |
+    d r r4 |
+    R2 |
+    r8 r16 a d8. a16 |
+    \tuplet 3/2 { b8( a) g fis( g) a | }
+    \hide TupletNumber
 
-  % --Bar 41-- %
-  d, r e r |
-  fis r fis, r |
-  g r a r |
-  b r cis r |
-  d r e r |
-  fis r g r |
+    % --Bar 41-- %
+    d, r e r |
+    fis r fis, r |
+    g r a r |
+    b r cis r |
+    d r e r |
+    fis r g r |
 
-  % --Bar 47-- %
-  a r b r |
-  cis8. \noBeam a16 d8. a16 |
-  \tuplet 3/2 {
-    b8( a) g fis( g) a |
-    d,( fis) e d( e) fis |
-  }
-  g r a r |
-  b r b, r |
-  r4 b'8 r |
+    % --Bar 47-- %
+    a r b r |
+    cis8. \noBeam a16 d8. a16 |
+    \tuplet 3/2 {
+      b8( a) g fis( g) a |
+      d,( fis) e d( e) fis |
+    }
+    g r a r |
+    b r b, r |
+    r4 b'8 r |
 
-  % --Bar 54-- %
-  fis r fis, r |
-  r4 fis'8 r |
-  gis r gis, r |
-  r4 gis'8 r |
-  a r fis r |
-  b, r e r |
-  a, r d r |
+    % --Bar 54-- %
+    fis r fis, r |
+    r4 fis'8 r |
+    gis r gis, r |
+    r4 gis'8 r |
+    a r fis r |
+    b, r e r |
+    a, r d r |
 
-  % --Bar 61-- %
-  g,4 r |
-  r8 r16 a d8. a16 |
-  \tuplet 3/2 { b8( a) g } a8. a16 |
-  d,8 r fis r |
-  g r c r |
-  b8. \noBeam g'16 d'8. a16 |
-  \tuplet 3/2 { b8( a) g fis( gis) a } |
-  % --Bar 68-- %
-  gis r gis, r |
-  r4 gis'8 r |
-  gis r gis, r |
-  r4 gis'8 r |
-  a r r r16 fis |
-  b8 r r r16 g |
-  cis8 r r r16 a |
-  d8 r fis, r |
+    % --Bar 61-- %
+    g,4 r |
+    r8 r16 a d8. a16 |
+    \tuplet 3/2 { b8( a) g } a8. a16 |
+    d,8 r fis r |
+    g r c r |
+    b8. \noBeam g'16 d'8. a16 |
+    \tuplet 3/2 { b8( a) g fis( gis) a } |
+    % --Bar 68-- %
+    gis r gis, r |
+    r4 gis'8 r |
+    gis r gis, r |
+    r4 gis'8 r |
+    a r r r16 fis |
+    b8 r r r16 g |
+    cis8 r r r16 a |
+    d8 r fis, r |
 
-  % --Bar 76-- %
-  g r a r |
-  \tuplet 3/2 { b( a) g } a8. a,16 |
+    % --Bar 76-- %
+    g r a r |
+    \tuplet 3/2 { b( a) g } a8. a,16 |
   }
   \alternative {
     {
@@ -153,11 +153,7 @@ cello = \relative c {
       b8 r r4 |
       a8 r r4 |
       gis8 r fis r |
-      cis'8 r r4 |
-      cis'8 r r4 |
-      cis,8 r r4 |
-      cis'8 r r4 |
-      cis,8 r r4 |
+      \repeat unfold 5 { cis'8 r r4 | }
 
       % --Bar 203 -- %
       cis'8 r cis, r |
@@ -195,11 +191,7 @@ cello = \relative c {
       fis8. e16 fis8. fis,16 |
       b4 r |
       d r |
-      %234
-      %244
-      %251
-      %261
-      R2 * 27 |
+      R2*27 |
     }
     {
       d2\fermata \bar "|."
