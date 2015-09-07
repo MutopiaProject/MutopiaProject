@@ -34,11 +34,11 @@
         midiInstrument = "viola"
       } \viola
       \new Staff \with {
-        instrumentName = \markup \smaller "Violoncello." %Cello
+        instrumentName = \markup \smaller "Violoncello."
         midiInstrument = "cello"
       } \cello
       \new Staff \with {
-        instrumentName = \markup \smaller "Violone." %"Double Bass"
+        instrumentName = \markup \smaller "Violone."
         midiInstrument = "contrabass"
       } \violone
     >>

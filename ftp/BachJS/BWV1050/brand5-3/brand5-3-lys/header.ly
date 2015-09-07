@@ -48,9 +48,9 @@
 #(set-global-staff-size 18)
 
 \header {
-  title = "Brandenberg Concerto No.5 (Keyboard Concencerto)"
+  title = "Brandenburg Concerto No. 5 in D Major"
   subtitle = "3rd Movement"
-  composer = "J.S. Bach"
+  composer = "Johann Sebastian Bach"
   meter = "Allegro"
 
   %instrument = "Baroque Chamber"

@@ -25,6 +25,7 @@ violone = \relative c {
     r8 r16 a d8. a16 |
     \tuplet 3/2 { b8( a) g fis( g) a } |
     \hide TupletNumber
+    
     % --Bar 41-- %
     d, r e r |
     fis r fis, r |
@@ -74,23 +75,19 @@ violone = \relative c {
   }
   \alternative {
     {
-
       \tuplet 3/2 { d8( fis) e d( e fis) } |
       b, r r4 |
-
-      % --Bar 86 -- %
       R2*19 |
+
       % --Bar 99 -- %
       fis'8_\pianissimoB r r4 |
       fis,8 r r4 |
       \repeat unfold 6 { fis8 r r4 | }
 
       % --Bar 107 -- %
-      %switch staff rests
       R2*21 |
 
       % --Bar 128 -- %
-
       r4 a8_\forteB r |
       b r cis r |
       d r dis r |
@@ -120,17 +117,17 @@ violone = \relative c {
 
       %155
       a8 r r4 |
-      R2 * 22 |
+      R2*22 |
 
       %178
       r4 b |
       e, r |
       r a |
       d r |
-      R2 * 16 |
+      R2*16 |
 
       %198
-      \repeat unfold 5 { cis2 ~ | }
+      \repeat unfold 5 { cis2 ~ } |
       cis8 r r4 |
       %204
       R2*13 |
@@ -140,7 +137,6 @@ violone = \relative c {
 
       %222
       fis8. \noBeam b16 fis'8. a,16 |
-      %should beam down
       \tuplet 3/2 { b8( a) g ais( b) cis } |
       fis,4 ~ fis8. e16 |
       d8 r r4 |
@@ -154,9 +150,7 @@ violone = \relative c {
       R2*27 |
     }
     {
-
       d2-\fermata \bar "|."
     }
   }
 }
-
