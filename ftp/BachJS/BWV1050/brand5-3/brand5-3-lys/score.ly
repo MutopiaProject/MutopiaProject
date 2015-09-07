@@ -12,49 +12,39 @@
 #(set-global-staff-size 13)
 
 \score {
-  \header {
-    instrument = "Ensemble"
-  }
-
   <<
     \new GrandStaff <<
       \new Staff \with {
-        instrumentName = \markup \smaller \column { "Flauto" "traverso." }
-        % shortInstrumentName = "Fl"
+        instrumentName = \markup \smaller \center-column { "Flauto" "traverso." }
         midiInstrument = "flute"
       } \flute
       \new Staff \with {
-        instrumentName = \markup \smaller \column { "Violino" "principate." }
-        % shortInstrumentName = "Vl.I"
+        instrumentName = \markup \smaller \center-column { "Violino" "principate." }
         midiInstrument = "violin"
       } \violinP
     >>
 
-    \new StaffGroup <<
+    \new GrandStaff <<
       \new Staff \with {
-        instrumentName = \markup \smaller \column { "Violino" "di ripieno." }
-        % shortInstrumentName = "Vl"
+        instrumentName = \markup \smaller \center-column { "Violino" "di ripieno." }
         midiInstrument = "violin"
       } \violin
       \new Staff \with {
-        instrumentName = \markup \smaller \column { "Viola" "di ripieno." }
-        % shortInstrumentName = "Va"
+        instrumentName = \markup \smaller \center-column { "Viola" "di ripieno." }
         midiInstrument = "viola"
       } \viola
       \new Staff \with {
-        instrumentName = \markup \smaller "Violoncello." 	%Cello
-        % shortInstrumentName = "Vn"
+        instrumentName = \markup \smaller "Violoncello." %Cello
         midiInstrument = "cello"
       } \cello
       \new Staff \with {
         instrumentName = \markup \smaller "Violone." %"Double Bass"
-        % shortInstrumentName = "B"
         midiInstrument = "contrabass"
       } \violone
     >>
-    \harpsichordTa
+    \harpsichordStaff
   >>
 
   \layout {}
-  \midi { \tempo 2 = 90 }
+  \midi { \tempo 4 = 120 }
 }
