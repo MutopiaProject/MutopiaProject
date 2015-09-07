@@ -101,3 +101,10 @@ staffDown = { \change Staff = harpsichordDown \oneVoice }
   \override FiguredBass.BassFigure.font-size = -2
   \hide FiguredBass.BassFigureContinuation
 }
+
+\paper {
+  left-margin = 1.5\cm
+  right-margin = 1.5\cm
+  top-margin = 0.8\cm
+  bottom-margin = 0.7\cm
+}

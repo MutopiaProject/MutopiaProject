@@ -11,6 +11,10 @@
 
 #(set-global-staff-size 13)
 
+\paper {
+  ragged-last-bottom = ##f
+}
+
 \score {
   <<
     \new GrandStaff <<
