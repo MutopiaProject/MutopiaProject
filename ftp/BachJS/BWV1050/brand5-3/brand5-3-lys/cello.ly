@@ -1,13 +1,10 @@
 \version "2.18.0"
-
 \include "header.ly"
 
 cello = \relative c {
   \clef bass
   \key d \major
   \time 2/4
-
-  \commonSettings
 
   % --Bar 1-- %
   R2*28 |
@@ -26,8 +23,8 @@ cello = \relative c {
   d r r4 |
   R2 |
   r8 r16 a d8. a16 |
-  \tuplet 3/2 { b8( a) g fis( g) a } |
-  \tripletsHide
+  \tuplet 3/2 { b8( a) g fis( g) a | }
+  \hide TupletNumber
 
   % --Bar 41-- %
   d, r e r |
@@ -39,8 +36,7 @@ cello = \relative c {
 
   % --Bar 47-- %
   a r b r |
-  %\autoBeamOff cis8. \autoBeamOn a16 d8. a16 | %[] workaround
-  cis8.\noBeam a16 d8. a16 |
+  cis8. \noBeam a16 d8. a16 |
   \tuplet 3/2 {
     b8( a) g fis( g) a |
     d,( fis) e d( e) fis |
@@ -64,8 +60,8 @@ cello = \relative c {
   \tuplet 3/2 { b8( a) g } a8. a16 |
   d,8 r fis r |
   g r c r |
-  \autoBeamOff b8. \autoBeamOn g'16 d'8. a16 |
-  \tuplet 3/2 { b8( a) g fis( gis) a } |
+  b8. \noBeam g'16 d'8. a16 |
+  \tuplet 3/2 { b8( a) g fis( gis) a | }
 
   % --Bar 68-- %
   gis r gis, r |
@@ -98,8 +94,8 @@ cello = \relative c {
   % --Bar 96 -- %
   r8 r16 fis' \tuplet 3/2 {
     b8( a) gis |
-    a( gis) fis eis( fis) gis
-  } |
+    a( gis) fis eis( fis) gis |
+  }
   cis,4 ~ \tuplet 3/2 {
     cis8 d b |
     a( gis fis)
@@ -130,7 +126,7 @@ cello = \relative c {
 
   % --Bar 143 -- %
   d r e r |
-  \tuplet 3/2 { fis( e) d cis( dis) e }
+  \tuplet 3/2 { fis( e) d cis( dis) e | }
   dis4 r8 b |
   e8. d!16 cis8. fis,16 |
   e8. d16 e8. e,16 |

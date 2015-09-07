@@ -6,49 +6,11 @@ violin = \relative c'' {
   \key d \major
   \time 2/4
 
-  \commonSettings
-
-
   % --Bar 1-- %
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-
-  % --Bar 9-- %
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-
-  % --Bar 17-- %
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-
-  % --Bar 26-- %
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
+  R2*30 |
   r8 r16 d16 a'8. e16 |
   \tuplet 3/2 { fis8( e) d cis( d) e } |
-  \tripletsHide
+  \omit TupletNumber
 
   % --Bar 33-- %
   \tuplet 3/2 { a,( b) cis d( e) fis } |
@@ -107,14 +69,13 @@ violin = \relative c'' {
   d, r cis r |
   b8. b16 a8. a16 |
   a2 |
-  R2*6 |
+  R2*8 |
 
-  % --Bar 85-- %
-  R2*2 |
+  % --Bar 87-- %
   r8 r16 b fis'8. cis16 |
   \tuplet 3/2 {
     d8( cis) b ais( b) cis |
-    fis,(-\pianoissimo^"Solo" b d) d( cis d) | %\italics
+    fis,(-\pianissimo^"Solo" b d) d( cis d) | %\italics
     fis,( b d ) d( cis d ) |
     g,!( ais b) cis( ais b) |
     e,( ais cis) cis( b cis) |
@@ -131,7 +92,7 @@ violin = \relative c'' {
   b8 r r4 |
   r8 r16 fis-\forte cis'8. gis16 |
   \tuplet 3/2 { a8( gis) fis eis( fis) gis } |
-  \tuplet 3/2 { cis,8-\pianoissimo^"Solo"( fis a) a( gis a) } |
+  \tuplet 3/2 { cis,8-\pianissimo^"Solo"( fis a) a( gis a) } |
   \tuplet 3/2 { cis,8( fis a) a( gis) a } |
   \tuplet 3/2 { d,!8( eis fis) gis( eis fis) } |
   \tuplet 3/2 { b,8( eis gis) gis( fis gis) } |
@@ -143,14 +104,12 @@ violin = \relative c'' {
   gis8 r r4 |
   r gis8 r |
   fis8 r r4 |
-  R2 |
-  R2 |
-  R2 |
+  R2*3 |
   r4 cis'8 r |
   r4 d8 r |
   r4 e8 r |
   r4 fis8 r |
-  R2 *10 |
+  R2*10 |
   r8 r16 cis fis8. cis16 |
   \tuplet 3/2 { d8( cis) b ais( b) cis } |
   \tuplet 3/2 { fis,8( b) d fis( e) fis } |
@@ -199,19 +158,7 @@ violin = \relative c'' {
   r8 r16 fis b8. fis16 |
   \tuplet 3/2 { g8( fis) e d( e) fis } |
   b,8 r r4 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
+  R2*13
   r8 r16 fis' a8. fis16 |
   b,4 r |
   r8 r16 e g8. e16 |
@@ -228,33 +175,14 @@ violin = \relative c'' {
   cis2 ~ |
   \tuplet 3/2 { cis8 \noBeam cis d e( cis) d } |
   a8 r r4 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
+  R2*5
   b'8 r r4 |
   a8 r r4 |
   eis'8 r r4 |
   fis8 r r4 |
   fis8 r r4 |
   gis8 r r4 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
+  R2*16
   r8 r16 cis, fis8. cis16 |
   \tuplet 3/2 { d8( cis) b ais( b) cis } |
   fis,4 ~ fis8. e16 |
@@ -263,45 +191,15 @@ violin = \relative c'' {
   ais8. b16
   \tuplet 3/2 { cis8( d) e } |
   fis8 r r4 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
+  R2*4
   r8 r16 b, b8. b16 |
   b8 r ais r |
   fis4 r |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  R2 |
-  r8 r16 d' a'8. d,16 | \tripletsShow
-  \tuplet 3/2 { fis8( e) d cis( d) e } | \tripletsHide
+  R2*30
+  r8 r16 d' a'8. d,16 |
+  \undo \omit TupletNumber
+  \tuplet 3/2 { fis8( e) d cis( d) e } |
+  \omit TupletNumber
   \tuplet 3/2 { a,8( b) cis d( e) fis } |
   b,8 r cis r |
   \tuplet 3/2 { b8( d) fis fis( e) fis } |

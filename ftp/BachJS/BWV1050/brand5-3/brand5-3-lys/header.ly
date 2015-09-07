@@ -81,79 +81,23 @@ forteB = \markup { \italic "(forte)" }
 pianoB = \markup { \italic "(piano)" }
 forte = \markup { \italic "forte" }
 piano = \markup { \italic "piano" }
-pianoissimo = \markup { \italic "pianoissimo" }
-pianoissimoB = \markup { \italic "(pianoissimo)" }
+pianissimo = \markup { \italic "pianissimo" }
+pianissimoB = \markup { \italic "(pianissimo)" }
 trillB = \markup { "(" \musicglyph #"scripts.trill" ")"}
 cantabile = \markup { \italic "cantabile" }
 cantabileB = \markup { \italic "(cantabile)" }
 forteI = \markup \italic { \dynamic "f" "orte" }
 
-% set Triplets to 3 notes each
-triplets = \tupletSpan 4
-% hides the 3
-tripletsHide = \hide TupletNumber % number-visibility is deprecated. Tune the TupletNumber instead
-% shows the 3
-tripletsShow = \undo \hide TupletNumber % number-visibility is deprecated. Tune the TupletNumber instead
-% shows the 3 once
-tripletsShowOnce = \once \undo \hide TupletNumber % number-visibility is deprecated. Tune the TupletNumber instead
-% displays n condenses multi measure rests
-multirests = \compressFullBarRests
+onceShowTupletNumber = \once \override TupletNumber.stencil = #ly:tuplet-number::print
+staffUp = { \change Staff = harpsichordUp \voiceTwo }
+staffDown = { \change Staff = harpsichordDown \oneVoice }
 
-%hide triplets bracket
-bracketsHide = \hide TupletBracket
-
-commonSettings = {
-  \triplets
-  \multirests
-  \bracketsHide
-  \tupletUp
+\layout {
+  \compressFullBarRests
+  \override MultiMeasureRest.expand-limit = 8
+  \tupletSpan 4
+  \omit TupletBracket
+  \set FiguredBass.figuredBassAlterationDirection = #RIGHT
+  \override FiguredBass.BassFigure.font-size = -2
+  \hide FiguredBass.BassFigureContinuation
 }
-
-%figured sharp
-fbis = \markup { \small \sharp }
-fbes = \markup { \small \flat }
-fbna = \markup { \small \natural }
-
-%root 7th
-fbRootVII = \markup { }
-%root 5
-fbRootV = \markup { }
-
-%root 5 (853)
-fbVnIII = \markup { }
-
-% 1st inversion
-fbIinv = \markup { }
-
-fbIinvVII = \markup { }
-
-% 8 5 4
-fbIV = \markup { }
-fbIVMv = \markup { }
-
-%{
-	 More figure bass work needed
-	 They are disabled now
-	 slashed \ 6
-	 6 5nat
-	 6 #
-	 5 #
-
- %root 7th
- fbRootVII = \markup { \small \column { "7" "5"} }
- %root 5
- fbRootV = \markup { \small "5" }
-
- %root 5 (853)
- fbVnIII = \markup { \small \column { "5" "3"} }
-
- % 1st inversion
- fbIinv = \markup { \small "6" }
-
- fbIinvVII = \markup { \small \column { "6" "5"} }
-
- % 8 5 4
- fbIV = \markup { \small "4" }
- fbIVMv = \markup { \small \column { " " "4"} }
-
-%}

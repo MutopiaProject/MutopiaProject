@@ -6,11 +6,9 @@ violone = \relative c {
   \key d \major
   \time 2/4
 
-  \commonSettings
-
-  \tripletsHide
+  \hide TupletNumber
   % --Bar 1-- %
-  \repeat unfold 28 R2 |
+  R2*28 |
 
   % --Bar 28-- %
   r4 fis,8 r |
@@ -26,9 +24,9 @@ violone = \relative c {
   d r r4 |
   R2 |
   r8 r16 a d8. a16 |
-  \tripletsShow
+  \undo \hide TupletNumber
   \tuplet 3/2 { b8( a) g fis ( g) a } |
-  \tripletsHide
+  \hide TupletNumber
   % --Bar 41-- %
   d, r e r |
   fis r fis, r |
@@ -54,7 +52,8 @@ violone = \relative c {
   gis r gis, r |
   r4 gis'8 r |
   a r r4 |
-  R2*2 |
+  R2 |
+  R2 |
 
   % --Bar 61-- %
   R2 |
@@ -78,16 +77,13 @@ violone = \relative c {
   % --Bar 76-- %
   g r a r |
   \tuplet 3/2 { b( a) g } a8. a,16 |
-  \tuplet 3/2 { d8( fis) e d( e fis )} |
+  \tuplet 3/2 { d8( fis) e d( e fis) } |
   b, r r4 |
-  \repeat unfold 6 { R2 | }
 
   % --Bar 86 -- %
-  R2*8 |
-  % --Bar 93 -- %
-  R2*5 |
+  R2*19 |
   % --Bar 99 -- %
-  fis'8_\pianoissimoB r r4 |
+  fis'8_\pianissimoB r r4 |
   fis,8 r r4 |
   \repeat unfold 6 { fis8 r r4 | }
 
@@ -206,7 +202,7 @@ violone = \relative c {
   r8 r16 a, d8. a16 |
   \tuplet 3/2 { b8 (a ) fis } a8. a16 |
   d,8 r r4 |
-  r2 |
+  R2 |
   r8 r16 g'16 d'8. a16 |
   \tuplet 3/2 { b8(a) g fis( gis) a } |
   gis r gis, r |
