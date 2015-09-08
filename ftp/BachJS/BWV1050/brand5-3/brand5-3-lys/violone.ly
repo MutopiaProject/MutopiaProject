@@ -12,72 +12,72 @@ violone = \relative c {
   \repeat unfold 2 {
     % --Bar 28-- %
     r4 fis,8 r |
-    g r a r |
-    b r cis r |
-    d r e r |
+    g8 r a r |
+    b8 r cis r |
+    d8 r e r |
 
     % --Bar 33-- %
-    fis r fis r |
-    g r a r |
-    b r a r |
-    b r cis r |
-    d r r4 |
+    fis8 r fis r |
+    g8 r a r |
+    b8 r a r |
+    b8 r cis r |
+    d8 r r4 |
     R2 |
     r8 r16 a d8. a16 |
     \tuplet 3/2 { b8( a) g fis( g) a } |
     \hide TupletNumber
 
     % --Bar 41-- %
-    d, r e r |
-    fis r fis, r |
-    g r a r |
-    b r cis r |
-    d r e r |
-    fis r g r |
+    d,8 r e r |
+    fis8 r fis, r |
+    g8 r a r |
+    b8 r cis r |
+    d8 r e r |
+    fis8 r g r |
 
     % --Bar 47-- %
-    a r b r |
+    a8 r b r |
     cis8.\noBeam a16 d8. a16 |
     \tuplet 3/2 {
       b8( a) g fis( g) a |
-      d,( fis) e d( e) fis |
+      d,8( fis) e d( e) fis |
     }
-    g r a r |
-    b r b, r |
+    g8 r a r |
+    b8 r b, r |
     r4 b'8 r |
 
     % --Bar 54-- %
-    fis r fis, r |
+    fis8 r fis, r |
     r4 fis'8 r |
-    gis r gis, r |
+    gis8 r gis, r |
     r4 gis'8 r |
-    a r r4 |
+    a8 r r4 |
     R2*3 |
     r8 r16 a, d8. a16 |
     \tuplet 3/2 { b8( a) g } a8. a16 |
     d,8 r r4 |
     R2 |
-    r8 r16 g'16 d'8. a16 |
+    r8 r16 g' d'8. a16 |
     \tuplet 3/2 { b8( a) g fis( gis) a } |
 
     % --Bar 68-- %
-    gis r gis, r |
+    gis8 r gis, r |
     r4 gis'8 r |
-    gis r gis, r |
+    gis8 r gis, r |
     r4 gis'8 r |
-    a r r r16 fis |
+    a8 r r r16 fis |
     b8 r r r16 g |
     cis8 r r r16 a |
     d8 r fis, r |
 
     % --Bar 76-- %
-    g r a r |
-    \tuplet 3/2 { b( a) g } a8. a,16 |
+    g8 r a r |
+    \tuplet 3/2 { b8( a) g } a8. a,16 |
   }
   \alternative {
     {
       \tuplet 3/2 { d8( fis) e d( e fis) } |
-      b, r r4 |
+      b,8 r r4 |
       R2*19 |
 
       % --Bar 99 -- %
@@ -90,26 +90,26 @@ violone = \relative c {
 
       % --Bar 128 -- %
       r4 a8_\forteB r |
-      b r cis r |
-      d r dis r |
-      e r fis r |
-      g r gis r |
-      a r b r |
-      cis r cis, r |
+      b8 r cis r |
+      d8 r dis r |
+      e8 r fis r |
+      g8 r gis r |
+      a8 r b r |
+      cis8 r cis, r |
 
       % --Bar 135 -- %
-      d r cis r |
-      fis r fis, r |
-      gis r gis' r |
-      a r a, r |
-      b r b' r |
-      cis r cis, r |
-      d r d' r |
-      d r cis r |
+      d8 r cis r |
+      fis8 r fis, r |
+      gis8 r gis' r |
+      a8 r a, r |
+      b8 r b' r |
+      cis8 r cis, r |
+      d8 r d' r |
+      d8 r cis r |
 
       % 143
-      d r e r |
-      \tuplet 3/2 { fis(e) d cis( dis) e }
+      d8 r e r |
+      \tuplet 3/2 { fis8(e) d cis( dis) e }
       dis4 r8 b |
       e8. d!16 cis8. fis,16 |
       e8. d16 e8. e,16 |
@@ -122,9 +122,9 @@ violone = \relative c {
 
       %178
       r4 b |
-      e, r |
-      r a |
-      d r |
+      e,4 r |
+      r4 a |
+      d4 r |
       R2*16 |
 
       %198
@@ -147,7 +147,7 @@ violone = \relative c {
       r8 r16 g' d8. e16 |
       fis8. e16 fis8. fis,16 |
       b4 r |
-      d r |
+      d4 r |
       R2*27 |
     }
     {

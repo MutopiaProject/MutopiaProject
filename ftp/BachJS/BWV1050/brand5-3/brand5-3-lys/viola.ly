@@ -43,13 +43,13 @@ viola = \relative c'' {
     a8 r d r |
     d8 r fis r |
     b,2 ~ |
-    b |
+    b2 |
 
     % --Bar 54-- %
-    a ~ |
-    a |
-    e' ~ |
-    e |
+    a2 ~ |
+    a2 |
+    e'2 ~ |
+    e2 |
     e8 r fis r |
     fis8 r e r |
     e8 r d r |
@@ -85,7 +85,7 @@ viola = \relative c'' {
       %87
       r8 r16 b fis8. cis'16 |
       \tuplet 3/2 { d8( cis) b ais( b) cis| }
-      a r r4 |
+      a8 r r4 |
 
       %90
       R2*7 |
@@ -98,14 +98,14 @@ viola = \relative c'' {
       R2 |
       r4 fis'8_\forteB r |
       cis8 r r4 |
-      r e8 r |
+      r4 e8 r |
       b8 r r4 |
 
       R2*17 |
       r4 r8 r16 fis' |
       \tuplet 3/2 { fis8 e d } e4 ~ |
       \tuplet 3/2 { e8 d cis } b r |
-      b r fis'4 ~ |
+      b8 r fis'4 ~ |
       \tuplet 3/2 { fis8 b, e } e r |
       e8 r b'4 ~ |
       \tuplet 3/2 { b8 e, a } a r |
@@ -123,12 +123,12 @@ viola = \relative c'' {
       b8. gis16 a8. a,16 |
       e'8 r e r |
       e8. \noBeam e16_\cantabile a8. e16 |
-      \appoggiatura e( fis2) ~ |
+      \appoggiatura e16( fis2) ~ |
       fis8. fis16
       \tuplet 3/2 { g!8( e) fis | }
       \appoggiatura fis16( e2) ~ |
       e8. e16 a8. fis16 |
-      \appoggiatura e( d2) ~ |
+      \appoggiatura e16( d2) ~ |
       \tuplet 3/2 { d8 e fis e( fis) d | }
       cis8 r r4 |
       R2 |

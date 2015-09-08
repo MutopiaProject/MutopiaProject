@@ -44,7 +44,7 @@ violin = \relative c'' {
     \tuplet 3/2 { fis8 \noBeam d e fis( d) e } |
     fis8. a16 \tuplet 3/2 { d8( cis) d } |
     b2 ~ |
-    b |
+    b2 |
     cis8 r cis r |
     b8 r b r |
     a8 r a r |
@@ -79,10 +79,10 @@ violin = \relative c'' {
       r8 r16 b fis'8. cis16 |
       \tuplet 3/2 {
         d8( cis) b ais( b) cis |
-        fis,(-\pianissimo^"Solo" b d) d( cis d) | %\italics
-        fis,( b d ) d( cis d ) |
-        g,!( ais b) cis( ais b) |
-        e,( ais cis) cis( b cis) |
+        fis,8(-\pianissimo^"Solo" b d) d( cis d) | %\italics
+        fis,8( b d ) d( cis d ) |
+        g,!8( ais b) cis( ais b) |
+        e,8( ais cis) cis( b cis) |
       }
 
 
@@ -104,9 +104,9 @@ violin = \relative c'' {
       \tuplet 3/2 { b,8( d gis) gis( eis fis) } |
       \tuplet 3/2 { gis8( eis fis) cis( fis ) eis } |
       fis8 r r4 |
-      r a8-\forte r |
+      r4 a8-\forte r |
       gis8 r r4 |
-      r gis8 r |
+      r4 gis8 r |
       fis8 r r4 |
       R2*3 |
       r4 cis'8 r |
@@ -131,12 +131,12 @@ violin = \relative c'' {
       \tuplet 3/2 { gis8 fis e } a8. e16 |
       \tuplet 3/2 { fis8( e) d cis( d) e } |
       a,8 r cis r |
-      b r r dis |
+      b8 r r dis |
       e8. b16
       \tuplet 3/2 { e8( cis) a } |
       a8 r gis r |
       a8. \noBeam e16_\cantabile a8. e16 | \appoggiatura
-      e
+      e16
 
       fis2 ~ |
       fis8. fis16
@@ -149,7 +149,7 @@ violin = \relative c'' {
       e8. e16 a8. fis16 |
       \appoggiatura
 
-      e
+      e16
 
       d2 ~ |
       \tuplet 3/2 { d8 e fis e( fis) d } |
