@@ -2,6 +2,7 @@
 \include "header.ly"
 
 viola = \relative c'' {
+  \tempo "Allegro."
   \clef alto
   \key d \major
   \time 2/4

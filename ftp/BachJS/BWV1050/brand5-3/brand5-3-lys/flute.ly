@@ -2,6 +2,7 @@
 \include "header.ly"
 
 flute = \relative c'' {
+  \tempo "Allegro."
   \clef treble
   \key d \major
   \time 2/4

@@ -2,6 +2,7 @@
 \include "header.ly"
 
 violinP = \relative c'' {
+  \tempo "Allegro."
   \clef violin
   \key d \major
   \time 2/4

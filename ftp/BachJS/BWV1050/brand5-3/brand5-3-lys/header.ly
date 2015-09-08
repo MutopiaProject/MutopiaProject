@@ -51,8 +51,6 @@
   title = "Brandenburg Concerto No. 5 in D Major"
   subtitle = "3rd Movement"
   composer = "Johann Sebastian Bach"
-  meter = "Allegro"
-
   %instrument = "Baroque Chamber"
   %dedication = "Typesetted for my Friends"
   %piece = ""

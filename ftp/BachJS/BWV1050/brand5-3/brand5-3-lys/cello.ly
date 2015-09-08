@@ -2,6 +2,7 @@
 \include "header.ly"
 
 cello = \relative c {
+  \tempo "Allegro."
   \clef bass
   \key d \major
   \time 2/4

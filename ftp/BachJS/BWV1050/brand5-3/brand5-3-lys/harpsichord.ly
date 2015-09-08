@@ -334,6 +334,7 @@ harpsichordTreble = \relative c'' {
 
 harpsichordBass = \relative c' {
   \omit TupletNumber
+  \tempo "Allegro."
   \time 2/4
   \clef bass
   \key d \major
