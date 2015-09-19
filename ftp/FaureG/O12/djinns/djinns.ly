@@ -4,8 +4,9 @@
 
 \header{
   title = "Les Djinns"
-  composer = "Gabriel FAURE"
+  composer = "Gabriel FAURÉ"
   poet = "Victor HUGO"
+  opus = "Op. 12"
 
   mutopiatitle = "Les Djinns"
   mutopiacomposer = "FaureG"
@@ -1122,7 +1123,10 @@ pianoGauche = \relative do {
 }
 
 \score {<<
-	\context ChoirStaff <<
+	\context ChoirStaff \with {
+		\override StaffGrouper.
+			staffgroup-staff-spacing.minimum-distance = #18
+	} <<
 		\context Staff = "soprano" << 
 			\set Staff.instrumentName = "Sop   " \soprano>>
 		\addlyrics {\paroles }
@@ -1146,30 +1150,20 @@ pianoGauche = \relative do {
 			\context Staff = lower \pianoGauche
 		>>
 	>>
-	\layout {
-       		\context {
-		   %\PianoStaff
-		   %\override VerticalAlignment.forced-distance = #8
-		}
+	\layout {}
+
+	\midi {
+		\tempo 4 = 138
 	}
-	
-  \midi {
-    \tempo 4 = 138
-    }
 
 
 }
 
 \paper {
-	top-margin = 1.5\cm
-	
-	bottom-margin = 1.0\cm
-	
+	top-margin = 2\cm
+	bottom-margin = 2\cm
 	left-margin = 2.0\cm
-	
 	line-width = 17.0\cm
-	
-	ragged-bottom = ##t
 }
 
 
