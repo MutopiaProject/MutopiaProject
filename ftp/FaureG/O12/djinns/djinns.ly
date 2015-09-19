@@ -969,7 +969,7 @@ pianoGauche = \relative do {
 		}
 	\\ { 	s1 |
 		\stemUp sib8^. sib16\rest sib^. sib8^. sib\rest s2 |
-		<solb' sib>8^. solb16\rest <solb sib>^. <solb sib>8^. sol\rest r2 |
+		<solb' sib>8^. solb16\rest <solb sib>^. <solb sib>8^. sol\rest sol2\rest |
 		lab,8^. la16\rest lab^. lab8^. la\rest s2 |
 		s2 do8^. do16\rest do^. do8^. do\rest |
 		s2 do8^. do16\rest do^. do8^. do\rest |
@@ -1074,7 +1074,7 @@ pianoGauche = \relative do {
 		}
 	\\ { 	s1 |
 		\stemUp sib'8^. sib16\rest sib^. sib8^. sib\rest s2 |
-		<solb' sib>8^. solb16\rest <solb sib>^. <solb sib>8^. sol\rest r2 |
+		<solb' sib>8^. solb16\rest <solb sib>^. <solb sib>8^. sol\rest sol2\rest |
 		lab,8^. la16\rest lab^. lab8^. la\rest s2 |
 		s2 do8^. do16\rest do^. do8^. do\rest |
 		s2 do8^. do16\rest do^. do8^. do\rest |
