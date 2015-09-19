@@ -204,7 +204,7 @@ paroles = \lyricmode {
 	De leurs ai -- les loin -- tai -- nes
 	Le bat -- te -- ment dé -- croit
 	Si con -- fus dans les plai -- nes,
-	Si fai -- ble que l'on croit ou -- ir la sau -- te -- rel -- le
+	Si fai -- ble que l'on croit ou -- ïr la sau -- te -- rel -- le
 	cri -- er d'u -- ne voix grê -- le ou pé -- til -- ler la grê -- le
 	Sur le plomb d'un vieux toit.
 % L
@@ -396,7 +396,7 @@ parolea = \lyricmode {
 	De leurs ai -- les loin -- tai -- nes
 	Le bat -- te -- ment dé -- croit
 	Si con -- fus dans les plai -- nes,
-	Si fai -- ble que l'on croit ou -- ir la sau -- te -- rel -- le
+	Si fai -- ble que l'on croit ou -- ïr la sau -- te -- rel -- le
 	cri -- er d'u -- ne voix grê -- le ou pé -- til -- ler la grê -- le
 	Sur le plomb d'un vieux toit.
 % L
@@ -566,7 +566,7 @@ parolet = \lyricmode {
 	De leurs ai -- les loin -- tai -- nes
 	Le bat -- te -- ment dé -- croit
 	Si con -- fus dans les plai -- nes,
-	Si fai -- ble que l'on croit ou -- ir la sau -- te -- rel -- le
+	Si fai -- ble que l'on croit ou -- ïr la sau -- te -- rel -- le
 	cri -- er d'u -- ne voix grê -- le ou pé -- til -- ler la grê -- le
 	Sur le plomb d'un vieux toit.
 % L
@@ -711,7 +711,7 @@ paroleb = \lyricmode {
 	De leurs ai -- les loin -- tai -- nes
 	Le bat -- te -- ment dé -- croit
 	Si con -- fus dans les plai -- nes,
-	Si fai -- ble que l'on croit ou -- ir la sau -- te -- rel -- le
+	Si fai -- ble que l'on croit ou -- ïr la sau -- te -- rel -- le
 	cri -- er d'u -- ne voix grê -- le ou pé -- til -- ler la grê -- le
 	Sur le plomb d'un vieux toit.
 }
