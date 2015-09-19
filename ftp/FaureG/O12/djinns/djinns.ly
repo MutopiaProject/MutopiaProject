@@ -32,6 +32,7 @@ global = {
 
 soprano = \relative do'' {
 	\global
+	\autoBeamOff
 	\dynamicUp
 	R1*10
 % A
@@ -42,7 +43,7 @@ soprano = \relative do'' {
 	r4 sib8.\( do16 reb4 fa,8\) r |
 	r4 mi8. mi16 fa4 r |
 	r4 sib8. do16 reb4 fa,8 r |
-	reb'4\< mib8.(\! fa16) fa4\> do\! |
+	reb'4\< mib8.(\! [fa16]) fa4\> do\! |
 	r2 r4 fa,8.\pp fa16 |
 	sol8. sol16 sol8. sol16 sol4 r |
 % B
@@ -113,7 +114,7 @@ soprano = \relative do'' {
 	la2\> sol\! |
 	sol'4 fad8 mi re re do\< re |
 	do2\> si4\! sol8. sol16 |
-	sol4\< la8.( si16) do4 re8. mi16 |
+	sol4\< la8.( [si16]) do4 re8. mi16 |
 	fa4(\f mi) red\> mi8. mi16 |
 	do4. sol8\p sol4 si8. do16 |
 % J
@@ -153,7 +154,7 @@ soprano = \relative do'' {
 	r4 sib8.\( do16 reb4 fa,8\) r |
 	r4 mi8. mi16 fa4 r |
 	r4 sib8. do16 reb4 fa,8 r |
-	reb'4\< mib8.(\! fa16) fa4\> do\! |
+	reb'4\< mib8.(\! [fa16]) fa4\> do\! |
 	r2 r4 fa,8.\pp fa16 |
 	sol8. sol16 sol8. sol16 sol4 r |
 % N
@@ -220,6 +221,7 @@ paroles = \lyricmode {
 
 alto = \relative do' {
 	\global
+	\autoBeamOff
 	\dynamicUp
 	r1*2 |
 	do4-.\pp r reb-.( \grace reb8) r4 |
@@ -414,6 +416,7 @@ parolea = \lyricmode {
 
 tenor = \relative do' {
 	\global
+	\autoBeamOff
 	\dynamicUp
 	\clef "G_8"
 	R1*10
@@ -575,6 +578,7 @@ parolet = \lyricmode {
 
 basse = \relative do {
 	\global
+	\autoBeamOff
 	\dynamicUp
 	\clef bass
 	R1*10
