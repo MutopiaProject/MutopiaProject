@@ -1,4 +1,4 @@
-\version "2.7.28"
+\version "2.18.0"
 \include "catalan.ly"
 #(set-global-staff-size 16)
 
@@ -20,14 +20,14 @@
   lastupdated = "2006/Feb/10"
   
   footer = "Mutopia-2006/02/12-669"
-  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 global = {
 	\key fa \minor
 	\time 4/4
-	\set tupletSpannerDuration = #(ly:make-moment 1 4)
-	\override TupletBracket  #'bracket-visibility = ##f
+	\tupletSpan 4
+	\override TupletBracket.bracket-visibility = ##f
 }
 
 soprano = \relative do'' {
@@ -78,14 +78,14 @@ soprano = \relative do'' {
 	si si si si si4 sol\! |
 % E
 	\mark \default \noBreak
-	r4 r8 do\f \cresc do do\! do do |
+	r4 r8 do\f \deprecatedcresc do do\! do do |
 	reb2 reb4 reb8. reb16 |
 	do4 do8. do16 fa4 fa |
 	fad4.\ff fad8 fad4 fad8. fad16 |
 	sol2 r |
 	R1 |
 % F
-	\mark \default \noBreak \once \override DynamicText #'extra-offset = #'( 2.0 . 0.0 )
+	\mark \default \noBreak \once \override DynamicText.extra-offset = #'( 2.0 . 0.0 )
 	do,4\ff do8. do16 sib4 sol8. sol16 |
 	mib4 fa8. fa16 sol4 sol |
 	mib' mib8. mib16 re4 do |
@@ -95,7 +95,7 @@ soprano = \relative do'' {
 	re reb8. reb16 do4 dob8. dob16 |
 	sib4 lab8. sol16 sol2 |
 % G
-	\mark \default \noBreak \once \override DynamicText #'extra-offset = #'( 2.0 . 0.0 )
+	\mark \default \noBreak \once \override DynamicText.extra-offset = #'( 2.0 . 0.0 )
 	sol4\ff lab8. la16 sib4 si8. do16 |
 	reb4 mib8. mi16 fa4 do |
 	la sib8. si16 do4 dod8. re16 |
@@ -269,7 +269,7 @@ alto = \relative do' {
 	r2 r4 r8 fad\< |
 	sol sol sol sol sol4 sol\! |
 % E
-	r4 r8 sol\f \cresc sol sol\! sol sol |
+	r4 r8 sol\f \deprecatedcresc sol sol\! sol sol |
 	sol2 sol4 sol8. sol16 |
 	do4 do8. do16 do4 do |
 	do4.\ff do8 do4 do8. do16 |
@@ -448,7 +448,7 @@ tenor = \relative do' {
 	r2 r4 r8 re\< |
 	re re re re re4 si\! |
 % E
-	r4 r8 mib\f \cresc mib mib\! mib mib |
+	r4 r8 mib\f \deprecatedcresc mib mib\! mib mib |
 	mi2 mi4 mi8. mi16 |
 	fa4 fa8. fa16 fa4 fa |
 	mib4.\ff mib8 mib4 mib8. mib16 |
@@ -604,7 +604,7 @@ basse = \relative do {
 	r2 r4 r8 fad\< |
 	fa! fa fa fa fa4 fa\! |
 % E
-	r4 r8 do'\f \cresc do do\! do do |
+	r4 r8 do'\f \deprecatedcresc do do\! do do |
 	sib2 sib4 sib8. sib16 |
 	<la do>4 <la do>8. <la do>16 <la do>4 <la do> |
 	<lab! do>4. <lab do>8 <lab do>4 <lab do>8. <lab do>16 |
@@ -714,7 +714,7 @@ paroleb = \lyricmode {
 
 pianoDroite = \relative do' {
 	\global
-	\override TupletBracket  #'bracket-visibility = #'if-no-beam
+	\override TupletBracket.bracket-visibility = #'if-no-beam
 	do1~\pp |
 	do~ |
 	\slurUp do2( reb |
@@ -736,32 +736,32 @@ pianoDroite = \relative do' {
 		s1 }
 	>>
 % B
-	<lab, do>8-.\pp r16 <lab do>16-. <lab do>8-. r \times 2/3 {r8 lab( fa'}
-		\times 2/3 {reb lab' fa)} |
-	<re lab' re>8 r r4 \times 2/3 {r8 mib( sib'} \times 2/3 {sol mib' sib)} |
+	<lab, do>8-.\pp r16 <lab do>16-. <lab do>8-. r \tuplet 3/2 {r8 lab( fa'}
+		\tuplet 3/2 {reb lab' fa)} |
+	<re lab' re>8 r r4 \tuplet 3/2 {r8 mib( sib'} \tuplet 3/2 {sol mib' sib)} |
 	<sib solb' sib>8-. r16 <sib solb' sib>-. <sib solb' sib>8-. r
-		\times 2/3 {r8 sib,( fa'} \times 2/3 {re sib' fa)} |
-	<fa si fa'>8 r r4 \times 2/3 {r8 mib( do'} \times 2/3 {lab mib' do)} |
+		\tuplet 3/2 {r8 sib,( fa'} \tuplet 3/2 {re sib' fa)} |
+	<fa si fa'>8 r r4 \tuplet 3/2 {r8 mib( do'} \tuplet 3/2 {lab mib' do)} |
 	<mi, sib' mi>8-. r16 <mi sib' mi>-. <mi sib' mi>8-. r
-		\times 2/3 {r8 mib( do'} \times 2/3 {lab mib' do)} |
+		\tuplet 3/2 {r8 mib( do'} \tuplet 3/2 {lab mib' do)} |
 	<mi, sib' mi>8-. r16 <mi sib' mi>-. <mi sib' mi>8-. r
-		\times 2/3 {r8 do( la'} \times 2/3 {fa do' la)} |
+		\tuplet 3/2 {r8 do( la'} \tuplet 3/2 {fa do' la)} |
 	<reb, fa reb'>8-. r16 <reb fa reb'>-. <reb fa reb'>8-. r
-		\times 2/3 {r8 fa( reb'} \times 2/3 {sib fa' reb)} |
+		\tuplet 3/2 {r8 fa( reb'} \tuplet 3/2 {sib fa' reb)} |
 % C
 	<mi, sol do mi>8-. r16 <mi sol do mi>-. <mi sol do mi>8-. r
 		\change Staff = lower fa,16 \change Staff = upper fa' \change Staff = lower fa,
 		\change Staff = upper fa' \change Staff = lower sol, \change Staff = upper fa'
 		\change Staff = lower sol, \change Staff = upper fa' |
 	lab,\< fa' lab, fa' sibb, fa' sibb, fa' sib, fa' sib, fa'\! dob fa dob fa |
-	\cresc fa' fa,\! fa' fa, <fa' sol> sol, <fa' sol> sol,
+	\deprecatedcresc fa' fa,\! fa' fa, <fa' sol> sol, <fa' sol> sol,
 		<fa' sold> sold, <fa' sold> sold, <fa' la> la, <fa' la> la, |
 	<fa' sib>\f sib, <fa' sib> sib, <reb solb>\> sol, <reb' solb> sol, 
 		<solb mib'> mib <solb mib'> mib <solb dob> dob, <solb' dob> dob,\! |
 	<reb solb lab>\p lab <reb solb lab> lab <reb fa lab> lab <reb fa lab> lab 
 		sib sib' sib, sib' do, sib' do, sib' |
 	reb,\< sib' reb, sib' re, sib' re, sib' mib, sib' mib, sib' mi, sib' mi, sib'\! |
-	\cresc sib' sib,\! sib' sib, <sib' do> do, <sib' do> do,
+	\deprecatedcresc sib' sib,\! sib' sib, <sib' do> do, <sib' do> do,
 		<sib' dod> dod, <sib' dod> dod, <sib' re> re, <sib' re> re, |
 	<sib' mib>\f mib, <sib' mib> mib, <solb dob>\> dob, <solb' dob> dob,
 		<dob lab'> lab <dob lab'> lab <dob fab> fab, <dob' fab> fab,\! |
@@ -769,7 +769,7 @@ pianoDroite = \relative do' {
 		mib mib' mib, mib' fa, mib' fa, mib' |
 	solb,\< mib' solb, mib' sol, mib' sol, mib' lab, mib' lab, mib' la, mib' la, mib'\! |
 % D
-	\cresc mib' mib,\! mib' mib, <mib' fa> fa, <mib' fa> fa,
+	\deprecatedcresc mib' mib,\! mib' mib, <mib' fa> fa, <mib' fa> fa,
 		<mib' solb> solb, <mib' solb> solb, <mib' sol> sol, <mib' sol> sol, |
 	<dob mib lab>\f lab <dob mib lab> lab <lab dob mib> mib <lab dob mib> mib
 		<mib lab dob>\> dob <mib lab dob> dob <dob mib lab> lab <dob mib lab> lab\! |
@@ -779,13 +779,13 @@ pianoDroite = \relative do' {
 		<mi la do>\> do <mi la do> do <do mi la> la <do mi la> la\! |
 	<la' do fa>\< fa <la do fa> fa <fa la do> do <fa la do> do
 		<do fa la> la <do fa la> la <do fa> la <do fa> la\! |
-	#(set-octavation 1) <reb' fa sib>\f sib <reb fa sib> sib <sib reb fa> fa <sib reb fa> fa
-		#(set-octavation 0) <fa sib reb>\> reb <fa sib reb> reb
+	\ottava #1 <reb' fa sib>\f sib <reb fa sib> sib <sib reb fa> fa <sib reb fa> fa
+		\ottava #0 <fa sib reb>\> reb <fa sib reb> reb
 		<reb fa sib> sib <reb fa sib> sib\! |
 	<sib' reb solb>\< solb <sib reb solb> solb <solb sib reb> reb <solb sib reb> reb
 		<reb solb sib> sib <reb solb sib> sib <reb solb> sib <reb solb> sib\! |
-	#(set-octavation 1) <re' fad si>\f si <re fad si> si <si re fad> fad <si re fad> fad
-		#(set-octavation 0) <fad si re>\> re <fad si re> re
+	\ottava #1 <re' fad si>\f si <re fad si> si <si re fad> fad <si re fad> fad
+		\ottava #0 <fad si re>\> re <fad si re> re
 		<re fad si> si <re fad si> si\! |
 	<si' re sol>\< sol <si re sol> sol <sol si re> re <sol si re> re
 		<re sol si> si <re sol si> si <re sol> si <re sol> si\! |
@@ -798,12 +798,12 @@ pianoDroite = \relative do' {
 		<la do fa> fa <la do fa> fa <la do> fa <la do> fa |
 	<mib' fad do'> do <mib fad do'> do <do mib fad> fad, <do' mib fad> fad,
 		<fad do' mib> mib <fad do' mib> mib <fad do'> mib <fad do'> mib |
-	<sol do mib sol>8. <sol do mib sol>16 \times 2/3 {<sol do mib sol>8->
+	<sol do mib sol>8. <sol do mib sol>16 \tuplet 3/2 {<sol do mib sol>8->
 		<lab lab'> <sol sol'>} <sol dod mi sol>8. <sol dod mi sol>16
-		\times 2/3 {<sol dod mi sol>8-> <lab lab'> <sol sol'>} |
-	<sol re' fa sol>8. <sol re' fa sol>16 \times 2/3 {<sol re' fa sol>8-.->
-		<re' fa lab>-. <re fa sol>-.} \times 2/3 {<re fa sold>-. <re fa la>-.
-		<re fa sold>-.} \times 2/3 {<re fa la>-. <re fa sib>-. <re fa si>-.} |
+		\tuplet 3/2 {<sol dod mi sol>8-> <lab lab'> <sol sol'>} |
+	<sol re' fa sol>8. <sol re' fa sol>16 \tuplet 3/2 {<sol re' fa sol>8-.->
+		<re' fa lab>-. <re fa sol>-.} \tuplet 3/2 {<re fa sold>-. <re fa la>-.
+		<re fa sold>-.} \tuplet 3/2 {<re fa la>-. <re fa sib>-. <re fa si>-.} |
 % F
 	<mib sol do>16\ff do <mib sol do>16 do <mib sol do>16 do <mib sol do>16 do 
 		r sib <mib sol sib> sib r sol <mib' sol> sol, |
@@ -832,69 +832,69 @@ pianoDroite = \relative do' {
 	<sol, do> sol' sol, sol' fa, fa' mib, mib' r re, <sol re'> re r do <sol' do> do, |
 % H
 	<sib fa'>\> sib' sib, sib' lab, lab' sol, sol' fa, fa' fa, fa' mib, mib' fa, fa'\! |
-	\times 2/3 {<sol, do mib sol>8\p do,-.\< reb-.} \times 2/3 {mib-. fa-. fad-.}
-		\times 2/3 {sol-. la-. si-.} \times 2/3 {do-. re-. red-.\!} |
+	\tuplet 3/2 {<sol, do mib sol>8\p do,-.\< reb-.} \tuplet 3/2 {mib-. fa-. fad-.}
+		\tuplet 3/2 {sol-. la-. si-.} \tuplet 3/2 {do-. re-. red-.\!} |
 	<< {<sol, do mi>8 r r4 r2}\\{mi2\ff <sol, do>} >> |
-	\times 2/3 {<la do>8 do-. re-.} \times 2/3 {mi-. fa-. sol-.}
-		\times 2/3 {la-. sib-. si-.} \times 2/3 {do-. re-. mi-.} |
+	\tuplet 3/2 {<la do>8 do-. re-.} \tuplet 3/2 {mi-. fa-. sol-.}
+		\tuplet 3/2 {la-. sib-. si-.} \tuplet 3/2 {do-. re-. mi-.} |
 	<fa, la re fa>8 r r4 <do re>2 |
-	\times 2/3 {<si re>8 re-. mi!-.} \times 2/3 {fad-. sol-. la-.}
-		\times 2/3 {si-. do-. re-.} \times 2/3 {mib-. fa-. fad-.} |
+	\tuplet 3/2 {<si re>8 re-. mi!-.} \tuplet 3/2 {fad-. sol-. la-.}
+		\tuplet 3/2 {si-. do-. re-.} \tuplet 3/2 {mib-. fa-. fad-.} |
 	<< {<mib sol>8 r r4 r2}\\{<sol, sib>4 fa8.( fad16) <fa sol>2} >> |
-	\times 2/3 {<mi sol>8 do-. re-.} \times 2/3 {mi-. fa-. sol-.}
-		\times 2/3 {la-. sib-. si-.} \times 2/3 {do-. re-. red-.} |
+	\tuplet 3/2 {<mi sol>8 do-. re-.} \tuplet 3/2 {mi-. fa-. sol-.}
+		\tuplet 3/2 {la-. sib-. si-.} \tuplet 3/2 {do-. re-. red-.} |
 	<mi, sol do mi>8\> r r4 <do mi>4( <si re>)\! |
-	\times 2/3 {<do mi>8\p sol <do mi>} \times 2/3 {sol <do mi> sol}
-		\times 2/3 {<do mi>8 sol <do mi>} \times 2/3 {sol <do mi> sol} |
+	\tuplet 3/2 {<do mi>8\p sol <do mi>} \tuplet 3/2 {sol <do mi> sol}
+		\tuplet 3/2 {<do mi>8 sol <do mi>} \tuplet 3/2 {sol <do mi> sol} |
 % I
-	\times 2/3 {<do mi> la <do mi> la <do mi> la <si red>\< sol <si red>
+	\tuplet 3/2 {<do mi> la <do mi> la <do mi> la <si red>\< sol <si red>
 		fad <la red> fad\!} |
-	\times 2/3 {<red' fad la>\mf\> do <red fad la> do <red fad la> do\!
+	\tuplet 3/2 {<red' fad la>\mf\> do <red fad la> do <red fad la> do\!
 		<mi sol> si <mi sol> si <mi sol> si}
-	\times 2/3 {<mi sol> do <mi sol> do <mi sol> do
+	\tuplet 3/2 {<mi sol> do <mi sol> do <mi sol> do
 		<re fad>\< si <re fad> la <do fad> la\!} |
-	\times 2/3 {<fad' la do>\mf\> mib! <fad la do> mib <fad la do> mib\!
+	\tuplet 3/2 {<fad' la do>\mf\> mib! <fad la do> mib <fad la do> mib\!
 		<sol si> re <sol si> sol, sol' sol,} |
-	\times 2/3 {sol'\< sol, sol' <sol, fa'> sol' <sol, fa'> sol' <sol, mi'> sol'
+	\tuplet 3/2 {sol'\< sol, sol' <sol, fa'> sol' <sol, fa'> sol' <sol, mi'> sol'
 		<sol, re'>\! sol' <sol, do>} |
-	\times 2/3 {fa' <fa, do'>\f fa' <sol, do> mi' <sol, do> red' <la si> red 
+	\tuplet 3/2 {fa' <fa, do'>\f fa' <sol, do> mi' <sol, do> red' <la si> red 
 		<sold, si> <mi' sold> <sold, si>} |
-	\times 2/3 {<mi' sol!>\> <sol,! do> <mi' sol> <sol, do> <mi' sol> <sol, do>\!
+	\tuplet 3/2 {<mi' sol!>\> <sol,! do> <mi' sol> <sol, do> <mi' sol> <sol, do>\!
 		<mi' sol> do <mi sol> re <fa sol> do} |
 % J
-	\times 2/3 {r8 mi sol mi sol mi r\< mi sol <mi do'> sol <fa re'>} |
-	\times 2/3 {r8\f\> solb do <solb mib'> do <solb mib'> r mib solb <mib do'>\! solb <mib do'>} |
-	\times 2/3 {r8 re fa re fa re r\< re fa <re sib'> fa <mib do'>} |
-	\times 2/3 {r8\f\> mi lad <mi dod'> lad <mi dod'> 
+	\tuplet 3/2 {r8 mi sol mi sol mi r\< mi sol <mi do'> sol <fa re'>} |
+	\tuplet 3/2 {r8\f\> solb do <solb mib'> do <solb mib'> r mib solb <mib do'>\! solb <mib do'>} |
+	\tuplet 3/2 {r8 re fa re fa re r\< re fa <re sib'> fa <mib do'>} |
+	\tuplet 3/2 {r8\f\> mi lad <mi dod'> lad <mi dod'> 
 		r dod mi <dod lad'>\! mi <dod lad'>} |
-	\times 2/3 {r8 sid red sid red sid r\< sid red <sid sold'> red <dod lad'>} |
-	\times 2/3 {r8\> re sold <re si'> sold <re si'> r si re <si sold'>\! re <si sold'>} |
-	\times 2/3 {r8 lad dod lad dod lad r\< lad dod <lad fad'> dod <si sold'>} |
-	\times 2/3 {r8\> do fad <do la'> fad <do la'> r la do <la fad'>\! do <la fad'>} |
-	\times 2/3 {r8 sold si sold si sold r sold si <sold mi'> si <la fad'> } |
+	\tuplet 3/2 {r8 sid red sid red sid r\< sid red <sid sold'> red <dod lad'>} |
+	\tuplet 3/2 {r8\> re sold <re si'> sold <re si'> r si re <si sold'>\! re <si sold'>} |
+	\tuplet 3/2 {r8 lad dod lad dod lad r\< lad dod <lad fad'> dod <si sold'>} |
+	\tuplet 3/2 {r8\> do fad <do la'> fad <do la'> r la do <la fad'>\! do <la fad'>} |
+	\tuplet 3/2 {r8 sold si sold si sold r sold si <sold mi'> si <la fad'> } |
 % K
-	\times 2/3 {r8 sib <mi sol> <mi sol> sib <mi sol>
+	\tuplet 3/2 {r8 sib <mi sol> <mi sol> sib <mi sol>
 		r lab,! <si fa'> <si fa'> lab <si fa'> } |
-	\times 2/3 {r8 sol <do mi> <do mi> sol <sib mi> r fa <lab fa'> <lab fa'> fa <dob' fa>} |
-	\times 2/3 {r8 lab <sib fa'> <sib fad'> lab <sib fad'> r sol <sib sol'> <sib sol'> sol <reb'! sol>} |
-	\times 2/3 {r8 sib <do sol'> r lab <do lab'> r do <fa la> r sib, <fa' sib>} |
-	\times 2/3 {r8 la, <mib' fa>} <mib fa>8 r \times 2/3 {r8 sib <reb fa>} <reb fa>8 r |
-	\times 2/3 {r8 do <mib fa>} <mib fa>8 r <sib reb fa>4-. <sib reb>-. |
+	\tuplet 3/2 {r8 sol <do mi> <do mi> sol <sib mi> r fa <lab fa'> <lab fa'> fa <dob' fa>} |
+	\tuplet 3/2 {r8 lab <sib fa'> <sib fad'> lab <sib fad'> r sol <sib sol'> <sib sol'> sol <reb'! sol>} |
+	\tuplet 3/2 {r8 sib <do sol'> r lab <do lab'> r do <fa la> r sib, <fa' sib>} |
+	\tuplet 3/2 {r8 la, <mib' fa>} <mib fa>8 r \tuplet 3/2 {r8 sib <reb fa>} <reb fa>8 r |
+	\tuplet 3/2 {r8 do <mib fa>} <mib fa>8 r <sib reb fa>4-. <sib reb>-. |
 % L
 	<sol do>4-. r r re'8-. r16 re-. |
 	<<{r4 do'8-. r16 do-. reb4( <do mi>8)-. r16 mi-. s8}\\{mib,2\< mi\> <fa lab do fa>8-.\pp}>> 
-	r16 <lab, do> <lab do>8-. r \times 2/3 {r8 lab( fa'}
-		\times 2/3 {reb lab' fa)} |
-	<re lab' re>8 r r4 \times 2/3 {r8 mib( sib'} \times 2/3 {sol mib' sib)} |
+	r16 <lab, do> <lab do>8-. r \tuplet 3/2 {r8 lab( fa'}
+		\tuplet 3/2 {reb lab' fa)} |
+	<re lab' re>8 r r4 \tuplet 3/2 {r8 mib( sib'} \tuplet 3/2 {sol mib' sib)} |
 	<sib solb' sib>8-. r16 <sib solb' sib>-. <sib solb' sib>8-. r
-		\times 2/3 {r8 sib,( fa'} \times 2/3 {re sib' fa)} |
-	<fa si fa'>8 r r4 \times 2/3 {r8 mib( do'} \times 2/3 {lab mib' do)} |
+		\tuplet 3/2 {r8 sib,( fa'} \tuplet 3/2 {re sib' fa)} |
+	<fa si fa'>8 r r4 \tuplet 3/2 {r8 mib( do'} \tuplet 3/2 {lab mib' do)} |
 	<mi, sib' mi>8-. r16 <mi sib' mi>-. <mi sib' mi>8-. r
-		\times 2/3 {r8 mib( do'} \times 2/3 {lab mib' do)} |
+		\tuplet 3/2 {r8 mib( do'} \tuplet 3/2 {lab mib' do)} |
 	<mi, sib' mi>8-. r16 <mi sib' mi>-. <mi sib' mi>8-. r
-		\times 2/3 {r8 do( la'} \times 2/3 {fa do' la)} |
+		\tuplet 3/2 {r8 do( la'} \tuplet 3/2 {fa do' la)} |
 	<reb, fa reb'>8-. r16 <reb fa reb'>-. <reb fa reb'>8-. r
-		\times 2/3 {r8 do( solb'} \times 2/3 {mib sib' solb)} |
+		\tuplet 3/2 {r8 do( solb'} \tuplet 3/2 {mib sib' solb)} |
 % M
 	<do, fa la>8-. r16 <do fa la> <do fa la>8-. r r4 sib'8.(^\markup{\italic dolce} do16 |
 	reb4 fa,8) r r2 |
@@ -999,8 +999,8 @@ pianoGauche = \relative do {
 	<lab! lab'!>4..-> <sib sib'>16 <do do'>4..-> <lab lab'>16 |
 	<sol sol'>8. <do' mib>16 <do mib>8-> r <sol,, sol'>8. <sib'' dod mi>16
 		<sib dod mi>8-> r |
-	<sol, sol'>8. <si' re fa>16 \times 2/3 {<si re fa>8-> do-. si-.}
-		\times 2/3 {sib-. la-. sib-.} \times 2/3 {la-. lab-. sol-.} |
+	<sol, sol'>8. <si' re fa>16 \tuplet 3/2 {<si re fa>8-> do-. si-.}
+		\tuplet 3/2 {sib-. la-. sib-.} \tuplet 3/2 {la-. lab-. sol-.} |
 % F
 	<do,, do'>4-> <do'' mib>-> <sib do mib sol>-> <sol sib do mib>-> |
 	<do,, do'>-> <lab'' do re>-> <sol do mib sol>2-> |
@@ -1120,24 +1120,24 @@ pianoGauche = \relative do {
 \score {<<
 	\context ChoirStaff <<
 		\context Staff = "soprano" << 
-			\set Staff.instrument = "Sop   " \soprano>>
+			\set Staff.instrumentName = "Sop   " \soprano>>
 		\addlyrics {\paroles }
 						
 		\context Staff = "alto" << 
-			\set Staff.instrument = "Alt   " \alto >>
+			\set Staff.instrumentName = "Alt   " \alto >>
 		\addlyrics {\parolea }
 		
 		\context Staff = "tenor" << 
-			\set Staff.instrument = "Ten   " \tenor >>
+			\set Staff.instrumentName = "Ten   " \tenor >>
 		\addlyrics {\parolet }
 		
 		\context Staff = "basse" << 
-			\set Staff.instrument = "Bas   " \basse >>
+			\set Staff.instrumentName = "Bas   " \basse >>
 		\addlyrics {\paroleb }
 	>>
 		\context PianoStaff = "piano" <<
-			\override PianoStaff.InstrumentName #'space-alist = #'((left-edge extra-space . 3.0))
-			\set PianoStaff.instrument = "Piano   "
+			\override PianoStaff.InstrumentName.space-alist = #'((left-edge extra-space . 3.0))
+			\set PianoStaff.instrumentName = "Piano   "
 			\context Staff = upper \pianoDroite
 			\context Staff = lower \pianoGauche
 		>>
@@ -1145,22 +1145,27 @@ pianoGauche = \relative do {
 	\layout {
        		\context {
 		   %\PianoStaff
-		   %\override VerticalAlignment #'forced-distance = #8
+		   %\override VerticalAlignment.forced-distance = #8
 		}
 	}
-	\midi { \tempo 4=138 }
+	
+  \midi {
+    \tempo 4 = 138
+    }
+
+
 }
 
 \paper {
-	topmargin = 1.5\cm
+	top-margin = 1.5\cm
 	
-	bottommargin = 1.0\cm
+	bottom-margin = 1.0\cm
 	
-	leftmargin = 2.0\cm
+	left-margin = 2.0\cm
 	
-	linewidth = 17.0\cm
+	line-width = 17.0\cm
 	
-	raggedbottom = ##t
+	ragged-bottom = ##t
 }
 
 
