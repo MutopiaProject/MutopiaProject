@@ -19,11 +19,11 @@
 #(set-global-staff-size 20)
 
 \paper {
-    top-margin = 8\mm                              %-minimum top-margin: 8mm
+    top-margin = 8\mm                              %-minimum: 8 mm
     top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
     markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
     top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
-    %last-bottom-spacing.basic-distance = #12      %-pads music from copyright block on one-page scores only
+    last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block 
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 }
@@ -39,7 +39,7 @@
     %piece = "Left-aligned header"
     date = "1741"
     style = "Baroque"
-    source = "Bach-Gesellschaft Edition 1853 Band 3"
+    source = "Bach-Gesellschaft, 1853"
 
     maintainer = "Eric Contributor"
     maintainerEmail = "eric (at) domain.com"
@@ -56,7 +56,7 @@
     % Footer, tagline, and copyright blocks are included here for reference
     % and spacing purposes only.  There's no need to change these.
     % These blocks will be overridden by Mutopia during the publishing process.
-    footer = "Mutopia-2001/01/01-0"
+    footer = "Mutopia-2001/01/01-1"
     copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
     tagline = ##f
 }
@@ -68,11 +68,11 @@ global = {
 }
 
 upperStaff =   \relative c'' {
-  \repeat unfold 50 c1         %sample music
+  \repeat unfold 50 c1         %sample notes
 }
 
 lowerStaff = \relative c {
-  \repeat unfold 50 c1         %sample music
+  \repeat unfold 50 c1         %sample notes
 }
 
 %-------Typeset music and generate midi
