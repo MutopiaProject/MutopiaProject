@@ -1,4 +1,4 @@
-%Typeset by Federico Bruni, verified/adjusted by Javier Ruiz-Alma
+%Typeset by Javier Ruiz-Alma
 
 \relative c''' {
   | R1*4

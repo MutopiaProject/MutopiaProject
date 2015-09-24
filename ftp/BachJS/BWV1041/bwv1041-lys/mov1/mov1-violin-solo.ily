@@ -104,7 +104,7 @@
   fis16 d( cis d-1) fis d a' fis |
   d'8-.( d,-.) a'4-1_3 ~ |
   a8 g16-2 fis g8-. b-2~ |
-  b8 e,16^"o" fis g( e) fis( dis) |
+  b8 e,16\open fis g( e) fis( dis) |
   e16 c( b c-1) e c g' e |
   c'8-.( c,-.) g'4_2 ~ |
   g8 fis16-1 g a8-. c,-. |
