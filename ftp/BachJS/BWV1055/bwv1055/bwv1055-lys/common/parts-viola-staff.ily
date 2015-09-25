@@ -22,7 +22,7 @@
   \keepWithTag #'printed
         <<
           \new Staff = "Staff_viola"  { \set Staff.instrumentName = #"Viola"
-                                          \clef treble \global \condenseRests \viola }
+                                          \clef alto \global \condenseRests \viola }
         >>
     \layout{ }
 }
