@@ -418,7 +418,7 @@ if ($maintainerweb ne "") { print "<td><a href=\"$maintainerweb\">$maintainerweb
 print "</tr>\n</table>\n\n";
 
 # Tagline
-print "<br /><br />\n\n"
+print "<br /><br />\n\n";
 print "<table align=\"center\" border=\"0\" width=\"90%\" bgcolor=\"#fefefe\" ";
 print "cellpadding=\"5\" cellspacing=\"0\">\n";
 print "<tr>\n<td align=\"center\">Free music from <a href=\"http://www.mutopiaproject.org\">Mutopia Project</a></td>\n";
