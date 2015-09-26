@@ -259,7 +259,8 @@ until (eof CACHE) {
 
    print "<td><a href=\"";
    print "$baseref$midrif$musicnm/$pngfile\">Preview image</a></td>\n";
-   print "<td><a href=\"ftp://ibiblio.org/pub/multimedia/mutopia/$midrif$musicnm/\">Appropriate FTP area</a></td>\n</tr><tr>\n";
+   print "<td><a href=\"";
+   print "$baseref$midrif$musicnm/\">Appropriate FTP area</a></td>\n</tr><tr>\n";
 
    # Several ps/pdf files in a zip, or just one?
    if ($a4psfile =~ /\.zip$/) {
