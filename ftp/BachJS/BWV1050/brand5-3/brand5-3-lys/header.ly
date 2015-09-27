@@ -51,12 +51,6 @@
   title = "Brandenburg Concerto No. 5 in D Major"
   subtitle = "3rd Movement"
   composer = "Johann Sebastian Bach"
-  %instrument = "Baroque Chamber"
-  %dedication = "Typesetted for my Friends"
-  %piece = ""
-  %head = ""
-  %footer = ""
-  %tagline = "joshuakoo@myrealbox.com. WIP for mutopia-project"
 
   mutopiatitle = "Brandenburg Concerto No. 5 in D Major"
   mutopiacomposer = "BachJS"
@@ -65,13 +59,35 @@
   date = "1719?"
   source = "Dover From the Bach-Gesellschaft Edition"
   style = "Baroque"
-  copyright = "Public Domain"
+  copyright = ##f
   maintainer = "Joshua Koo"
   maintainerEmail = "zz85@users.sourceforge.net"
-  lastupdated = "2005/March/31"
+  lastupdated = "2015-09-27"
 
   footer = "Mutopia-2005/04/11-548"
-  %tagline = "\\raisebox { 10mm} { \\parbox { 188mm} { \\quad\\small\\noindent " + \footer + " \\hspace { \\stretch { 1}} This music is part of the Mutopia project: \\hspace { \\stretch { 1}} \\texttt { http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c] { It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c] { Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+  thecopyright = "Creative Commons Attribution-ShareAlike 4.0"
+  tagline = \markup {
+    \override #'(baseline-skip . 2.2)
+    \center-column {
+      \abs-fontsize #8 \sans \bold
+      \with-url #"http://www.MutopiaProject.org" {
+        "Mutopia"
+        "Project"
+      }
+    }
+    \override #'(baseline-skip . 0)
+    \column {
+      \with-color #grey
+      \filled-box #'( 0 . 1) #'(-2.5 . 1.4) #0
+    }
+    \override #'(baseline-skip . 2.2)
+    \column {
+      \abs-fontsize #8 \sans
+      \concat{"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " © 2014 by " \maintainer "." }
+      \abs-fontsize #8 \sans
+      \concat {"This work is licensed under a " \with-url #"http://creativecommons.org/licenses/by-sa/4.0" \thecopyright " license."}
+    }
+  }
 }
 
 %some fuctions
