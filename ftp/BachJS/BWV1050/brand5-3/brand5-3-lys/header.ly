@@ -43,6 +43,15 @@
 
 	 Joshua Koo
 
+         --------------
+         I updated this piece to LilyPond 2.18. After contacting Joshua Koo, we
+         agreed that I can contribute to this piece in addition to updating it.
+         The musical content is still what Joshua entered and I left the above
+         dedication and comments. Main change to the content was to make use of
+         the A-B-A structure of the piece and fix some typos where the two A
+         parts showed differences.
+
+         Joram Berger
 %}
 
 #(set-global-staff-size 18)
@@ -60,7 +69,7 @@
   source = "Dover From the Bach-Gesellschaft Edition"
   style = "Baroque"
   copyright = ##f
-  maintainer = "Joshua Koo"
+  maintainer = "Joshua Koo, Joram Berger"
   maintainerEmail = "zz85@users.sourceforge.net"
   lastupdated = "2015-09-27"
 
