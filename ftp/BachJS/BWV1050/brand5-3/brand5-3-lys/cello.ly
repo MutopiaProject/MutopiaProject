@@ -61,6 +61,7 @@ cello = \relative c {
     g8 r c r |
     b8. \noBeam g'16 d'8. a16 |
     \tuplet 3/2 { b8( a) g fis( gis) a } |
+
     % --Bar 68-- %
     gis8 r gis, r |
     r4 gis'8 r |
@@ -87,10 +88,8 @@ cello = \relative c {
         b8( d) cis |
         d8( cis) b ais( g) cis |
       }
-      fis,4 ~ \tuplet 3/2 {
-        fis8 g e |
-        d8( cis b)
-      } r4 |
+      fis,4 ~ \tuplet 3/2 { fis8 g e } |
+      \tuplet 3/2 { d8( cis b) } r4 |
       \repeat unfold 6 { b8 r r4 } |
 
       % --Bar 96 -- %

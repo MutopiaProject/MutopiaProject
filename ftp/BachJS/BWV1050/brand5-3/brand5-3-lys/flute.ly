@@ -127,7 +127,7 @@ flute = \relative c'' {
   \alternative {
     {
       d2 |
-      r8 r16 fis -\cantabileB b8. fis16 | % \markup { }
+      r8 r16 fis-\cantabileB b8. fis16 | % \markup { }
       g2 ~ |
       g8. g16 \tuplet 3/2 { a8( fis) g } |
       fis2 ~ |
@@ -147,7 +147,7 @@ flute = \relative c'' {
         ais,8( cis e) e( d! e) |
       }
 
-      %--Bar 93-%
+      % --Bar 93-- %
       \tuplet 3/2 {
         b8( d fis) fis( e fis) |
         cis8( e g) g( fis g) |
@@ -157,11 +157,11 @@ flute = \relative c'' {
       cis8 r \tuplet 3/2 { b( a) b } |
       \tuplet 3/2 {
         cis8( b) a gis( fis) eis |
-        fis8( cis' fis) fis( e fis) | %99
-        a,8( cis fis) fis( eis fis) | % 100
+        fis8( cis' fis) fis( e fis) |
+        a,8( cis fis) fis( eis fis) |
       }
 
-      %101
+      % --Bar 101-- %
       \tuplet 3/2 {
         b,8( cis d) b( cis a) |
         gis8( b eis) eis( dis eis) |
@@ -175,8 +175,8 @@ flute = \relative c'' {
       \tuplet 3/2 { r8 gis, a b d cis | }
 
       %110
-      d2-\trill |
-      cis2-\trill |
+      d2\trill |
+      cis2\trill |
       b2 ~ |
       \tuplet 3/2 { b8 \noBeam gis a b( gis) a }
       b2 |
@@ -223,7 +223,7 @@ flute = \relative c'' {
         a8 gis fis b cis a |
         gis8( fis e)
       } a8. d,16 |
-      cis8 r b-\trill r |
+      cis8 r b\trill r |
       \tuplet 3/2 {
         a8(-\piano cis e) e( d e) |
         a,8( cis e) e( d e) |
@@ -270,7 +270,7 @@ flute = \relative c'' {
       b8. e,16 a4 ~ |
       a8. b16 gis4 ~ |
       gis8. a16 fis8. gis16 |
-      eis8. fis16 fis8.-\trill eis32 fis |
+      eis8. fis16 fis8.\trill eis32 fis |
       gis4 ~ gis8. cis,16 |
       a'2 ~ |
       \tuplet 3/2 { a8 gis fis gis a b } |
@@ -313,7 +313,7 @@ flute = \relative c'' {
       d4 e ~ |
       e8. g16 fis8. e16 |
       fis8. e16 fis8. g16 |
-      d8 r cis-\trill r |
+      d8 r cis\trill r |
       b4 r |
       %233
     }

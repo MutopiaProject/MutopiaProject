@@ -280,8 +280,7 @@ violinP = \relative c'' {
       b4 r |
     }
     {
-      d2-\fermata \bar "|."
+      d2\fermata \bar "|."
     }
   }
 }
-

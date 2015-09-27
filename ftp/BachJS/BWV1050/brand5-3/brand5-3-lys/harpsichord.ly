@@ -362,7 +362,9 @@ harpsichordBass = \relative c' {
     \tuplet 3/2 { cis8 \noBeam a b cis b cis | }
     \tuplet 3/2 { dis8 fis e dis fis e | }
     \tuplet 3/2 { dis8 b cis dis cis dis | }
-    \tuplet 3/2 { e16 d! e fis e d cis d cis \staffDown b a gis | }
+    \tuplet 3/2 { e16 d! e fis e d }
+    \once \override Beam.positions = #'(-6 . -5.5)
+    \tuplet 3/2 { cis d cis \staffDown b a gis | }
 
     % --Bar 26-- %
     \tuplet 3/2 {

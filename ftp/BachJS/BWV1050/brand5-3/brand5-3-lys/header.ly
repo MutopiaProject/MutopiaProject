@@ -91,10 +91,13 @@ staffUp = { \change Staff = harpsichordUp \voiceTwo }
 staffDown = { \change Staff = harpsichordDown \oneVoice }
 
 \layout {
+  % compressed rests
   \compressFullBarRests
   \override MultiMeasureRest.expand-limit = 8
+  % invisble (implicit) tuplets - with some exceptions inline
   \tupletSpan 4
   \omit TupletBracket
+  % figured bass - hidden continuation line used for number ordering
   \set FiguredBass.figuredBassAlterationDirection = #RIGHT
   \override FiguredBass.BassFigure.font-size = -2
   \hide FiguredBass.BassFigureContinuation
