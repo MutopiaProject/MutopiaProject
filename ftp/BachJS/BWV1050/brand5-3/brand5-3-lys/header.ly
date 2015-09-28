@@ -69,6 +69,7 @@
   source = "Dover From the Bach-Gesellschaft Edition"
   style = "Baroque"
   copyright = ##f
+  license = "Public Domain"
   maintainer = "Joshua Koo"
   maintainerEmail = "zz85@users.sourceforge.net"
   lastupdated = "2015-09-27"
