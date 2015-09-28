@@ -75,7 +75,6 @@
   lastupdated = "2015-09-27"
 
   footer = "Mutopia-2005/04/11-548"
-  thecopyright = "Creative Commons Attribution-ShareAlike 4.0"
   tagline = \markup {
     \override #'(baseline-skip . 2.2)
     \center-column {
