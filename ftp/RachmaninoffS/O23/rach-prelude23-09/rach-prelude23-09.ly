@@ -37,8 +37,9 @@ squeezeNotation = {
 }
 
 
-% values between 17 and 19 look acceptable (some tweaks needed though)
-#(set-global-staff-size 19.0) % 18
+% values between 17 and 19 look acceptable for A4 paper (some tweaks needed though)
+% a compromise has to be found that fits on US letter paper, too
+#(set-global-staff-size 18.0)
 
 %----- Notes ---------------------------------------------------------
 % - the choice between r and s in voices follows the Gutheil source,
@@ -128,11 +129,13 @@ dyn =
 % paper and header -------------------------------------
 
 \paper {
-  top-margin = 8\mm                              %-minimum top-margin: 8mm
+  top-margin = 6\mm                              %-minimum top-margin: 8mm
+  bottom-margin = 6\mm
   top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
   markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
   top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
   last-bottom-spacing.basic-distance = #12       %-pads music from copyright block
+  last-bottom-spacing.minimum-distance = #0
   ragged-last = ##f
   ragged-bottom = ##f
   ragged-last-bottom = ##f
