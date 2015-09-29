@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 %{
 	 Let all glory be for God
@@ -24,7 +24,7 @@
 	 dating back the lilypond versions 1.6.8 to 2.2.0 to 2.4.2,
 	 spanning a duration around 3 years.
 	 I started with little or no experienced in lilypond,
-	 and Im glad my goal of completing this small piece is much completed.
+	 and I'm glad my goal of completing this small piece is much completed.
 
 	 Some software that helped mes, includes
 	 	jEdit with LilyTool
@@ -61,12 +61,13 @@
   subtitle = "3rd Movement"
   composer = "Johann Sebastian Bach"
 
-  mutopiatitle = "Brandenburg Concerto No. 5 in D Major"
+  mutopiatitle = "Brandenburg Concerto No. 5 (3rd Movement: Allegro)"
   mutopiacomposer = "BachJS"
   mutopiaopus = "BWV 1050"
   mutopiainstrument = "Ensemble: Flute, Two Violins, Violas, 'Cello, Bass and Harpsichord"
+  mutopiadate = "1720-21?"
   date = "1719?"
-  source = "Dover From the Bach-Gesellschaft Edition"
+  source = "Bach-Gesellschaft"
   style = "Baroque"
   copyright = ##f
   license = "Public Domain"
@@ -74,29 +75,9 @@
   maintainerEmail = "zz85@users.sourceforge.net"
   lastupdated = "2015-09-27"
 
-  footer = "Mutopia-2005/04/11-548"
-  tagline = \markup {
-    \override #'(baseline-skip . 2.2)
-    \center-column {
-      \abs-fontsize #8 \sans \bold
-      \with-url #"http://www.MutopiaProject.org" {
-        "Mutopia"
-        "Project"
-      }
-    }
-    \override #'(baseline-skip . 0)
-    \column {
-      \with-color #grey
-      \filled-box #'( 0 . 1) #'(-2.5 . 1.4) #0
-    }
-    \override #'(baseline-skip . 2.2)
-    \column {
-      \abs-fontsize #8 \sans
-      \concat{"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " © 2014 by " \maintainer "." }
-      \abs-fontsize #8 \sans
-      \concat {"This work is licensed under a " \with-url #"http://creativecommons.org/licenses/by-sa/4.0" \thecopyright " license."}
-    }
-  }
+ footer = "Mutopia-2015/09/29-548"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 %some fuctions
