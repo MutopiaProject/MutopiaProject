@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIFourthMov =  \relative f'' {
   \key bes \major
   \clef violin
@@ -7,11 +7,11 @@ violinIFourthMov =  \relative f'' {
     f8(-\markup { \italic "mezza voce" } es)
     | d4( es) c-. d8( c)
     | bes4( c) \grace { g16[( f e] } f4) g8( a)
-    | bes4-| c-| d-| \grace { es16[( f] } g4)-|\fz
-    | \acciaccatura d8 c( bes c d) c4-| f8( es)
+    | bes4-! c-! d-! \grace { es16[( f] } g4)-!\fz
+    | \acciaccatura d8 c( bes c d) c4-! f8( es)
     | d4( es) c-. d8( c)
     | bes4( c) \grace { g16[( f e] } f4) g8( a)
-    | bes4-| \grace { g'16[( a] } bes4)-|\fz c,2\trill
+    | bes4-! \grace { g'16[( a] } bes4)-!\fz c,2\trill
     | bes4-. f-. d-.
   }
 
@@ -21,12 +21,12 @@ violinIFourthMov =  \relative f'' {
 
     % 10
     | d4( es f) g8( a)
-    | bes4-| \grace { bes16[( c] } d4)-|\fz fis,2\trill
+    | bes4-! \grace { bes16[( c] } d4)-!\fz fis,2\trill
     | g2. f!8(\p g)
     | \acciaccatura bes8 as4( g8 f) es4 f
     | \acciaccatura as8 g4( f8 es) d4 es
-    | \acciaccatura g8 f4( es8 d c4) d-|\f
-    | e8( f g a) bes4-| e,-|
+    | \acciaccatura g8 f4( es8 d c4) d-!\f
+    | e8( f g a) bes4-! e,-!
     | f\trill e f\trill e
     | f\trill e f a,8( bes)
     | c( a) c-. d-. es!( c) es-. f-.
@@ -39,15 +39,15 @@ violinIFourthMov =  \relative f'' {
     | f( es) g( f) es( g) f(\f es)
     | d4( es) c-. d8( c)
     | bes4( c) \grace { g16[( f e] } f4) g8( a)
-    | bes4-| c-| d-| \grace { es16[( f] } g4)-|\fz
-    | \acciaccatura d8 c( bes c d) c4-| r
-    | g'8( f) es4-| f-| d-|
+    | bes4-! c-! d-! \grace { es16[( f] } g4)-!\fz
+    | \acciaccatura d8 c( bes c d) c4-! r
+    | g'8( f) es4-! f-! d-!
 
     % 30
-    | es8( d) c4-| d-| bes-|
-    | c8( bes) a4 bes-. <f es'>-|
-    | <f d'>-| <bes g'>-| <bes f'>-| <bes as'>-|
-    | <bes g'>-| \grace { g'16[( a!] } bes4)-|\fz c,2\trill
+    | es8( d) c4-! d-! bes-!
+    | c8( bes) a4 bes-. <f es'>-!
+    | <f d'>-! <bes g'>-! <bes f'>-! <bes as'>-!
+    | <bes g'>-! \grace { g'16[( a!] } bes4)-!\fz c,2\trill
     | bes4 r r
   }
 
@@ -57,46 +57,46 @@ violinIFourthMov =  \relative f'' {
 
   \repeat volta 2 {
     f'8(\f bes)
-    | des!( bes a c) bes4-| bes,8( ges')
-    | f( bes, a es') des4-| d-|
-    | es-| f-| ges-| c,-|
-    | des!-| es\turn f-| <as,, as'>
+    | des!( bes a c) bes4-! bes,8( ges')
+    | f( bes, a es') des4-! d-!
+    | es-! f-! ges-! c,-!
+    | des!-! es\turn f-! <as,, as'>
     | <as as'> <as as'> <as as'> <as as'>
 
     % 40
-    | <as as'>4.(^\fz ges'8) f4-| bes(
-    | as)-| bes( as) ges'8( es)
-    | des4-| des'-| r
+    | <as as'>4.(^\fz ges'8) f4-! bes(
+    | as)-! bes( as) ges'8( es)
+    | des4-! des'-! r
   }
 
   ges,4-.\p
   | f-. ges-. f-. as(\f
-  | ges)-| as( ges)-| bes-.\p
+  | ges)-! as( ges)-! bes-.\p
   | a-. bes-. a-. des(\f
-  | c)-| des( c)-| bes8(\p e,)
+  | c)-! des( c)-! bes8(\p e,)
   | f c bes'( e,) f c bes'( e,)
   | f c f c f4 f8(\f bes)
-  | des( bes a c) bes4-| bes,8( ges')
+  | des( bes a c) bes4-! bes,8( ges')
 
   % 50
   | f( bes, a es') des4( d)
-  | es( f ges) ges-|
+  | es( f ges) ges-!
   | a,,2\fz ~ a8 ges''-. f-. es-.
   | des des' c bes a ges' f es
   | des4( bes') bes bes
   | es,,,\p r f r
-  | bes, r r ges''\f-|
-  | f-| ges-| f-| as(\p
-  | ges)-| as( ges)-| bes\f-|
-  | a-| bes-| a-| des(\p
+  | bes, r r ges''\f-!
+  | f-! ges-! f-! as(\p
+  | ges)-! as( ges)-! bes\f-!
+  | a-! bes-! a-! des(\p
 
   % 60
-  | c)-| des( c)-| bes8(\f e,)
+  | c)-! des( c)-! bes8(\f e,)
   | f c bes'( e,) f c bes'( e,)
   | f c f c f4 f8( bes)
-  | des( bes a c) bes4-| bes,8( ges')
-  | f( bes, a es') des4-| d-|
-  | es( f ges) ges-| 
+  | des( bes a c) bes4-! bes,8( ges')
+  | f( bes, a es') des4-! d-!
+  | es( f ges) ges-! 
   | a,,2.\fz a'8( bes)
   | c4-. c8( des) es4-. es8( f)
   | ges2.\fz es8(\p f)
@@ -111,7 +111,7 @@ violinIFourthMov =  \relative f'' {
 
   | d4( es) c-. d8( c)
   | bes4( c) \grace { g16[( f e] } f4) g8( a)
-  | bes4-| c-| d-| \grace { es16[( f] } g4)-|\fz
+  | bes4-! c-! d-! \grace { es16[( f] } g4)-!\fz
   | \acciaccatura d8 c( bes c d) c-. g'-. f-. es-.
   | d-. f-. es-. d-. c-. es-. d-. c-.
 
@@ -121,14 +121,14 @@ violinIFourthMov =  \relative f'' {
   | bes4-. f-. d-. a'8( bes)
   | c4( d es) bes8( c)
   | d4( es f) g8( a)
-  | bes4-| \grace { bes16[( c] } d4)\fz fis,2\trill
+  | bes4-! \grace { bes16[( c] } d4)\fz fis,2\trill
   | g2. f!8(\p g)
   | \acciaccatura bes8 as4( g8 f) es4 f
   | \acciaccatura as!8 g4( f8 es) d4 es
-  | \acciaccatura g8 f4( es8 d) c4 d\fz-|
+  | \acciaccatura g8 f4( es8 d) c4 d\fz-!
 
   % 90
-  | e8( f g a!) bes4-| e,-|
+  | e8( f g a!) bes4-! e,-!
   | f\trill e f\trill e
   | f\trill e f a,8-. bes-.
   | c( a) c-. d-. es!( c) es-. f-.
@@ -141,12 +141,12 @@ violinIFourthMov =  \relative f'' {
 
   % 100
   | bes4( c) \grace { g16[( f e] } f4) g8( a)
-  | bes4-| c-| d-| \grace { es16[( f] } g4)-|\fz
+  | bes4-! c-! d-! \grace { es16[( f] } g4)-!\fz
   | \acciaccatura d8 c( bes c d) c4 r8 as'
   | g-. f-. es-. g-. f es d f
   | es-. d-. c-. es-. d-. c-. bes-. b-.
-  | c-. bes!-. a-. c-. bes4-| <f es'>-|
-  | <f d'>-| <bes g'>-| <bes f'>-| <bes as'>-|
+  | c-. bes!-. a-. c-. bes4-! <f es'>-!
+  | <f d'>-! <bes g'>-! <bes f'>-! <bes as'>-!
   | <bes g'>2 <e, des' bes'>
   | r4 r8 e e4.(\trill d16 e)
   | f1 ~
@@ -155,20 +155,20 @@ violinIFourthMov =  \relative f'' {
   | f2 ~ f8 g(\p f es!)
   | d( f es d) c( es d c)
   | bes( d c bes) a( g' f es)
-  | d4-| r r2
+  | d4-! r r2
   | r r8 as'( g f)
-  | es4-| r r2
+  | es4-! r r2
   | r r8 g,( a! b)
-  | c4-| r r2
+  | c4-! r r2
   | r r8 g'( a b)
-  | c4-| r r8 f,( g a)
+  | c4-! r r8 f,( g a)
 
   % 120
-  | bes!4-| r r8 d( e fis)
+  | bes!4-! r r8 d( e fis)
   | g( fis g a) bes( c, d e)
-  | f!( e f g) as4 d,-|\f
-  | es!-| f-| g-| b,-| 
-  | c-| d-| es8-| g( f es
+  | f!( e f g) as4 d,-!\f
+  | es!-! f-! g-! b,-! 
+  | c-! d-! es8-! g( f es
   | d)es( d c bes)g'( f es
   | d) es( d c bes) g'( f es
   | d) g( f es d) g( f es
@@ -181,7 +181,7 @@ violinIFourthMov =  \relative f'' {
   | \acciaccatura d8 c( bes c d) c-. g'-. f-. es-.
   | d f es d c es d c
   | bes d c bes as c bes as
-  | g4-| \grace { g'16[( a!] } bes4)-| c,2\trill
+  | g4-! \grace { g'16[( a!] } bes4)-! c,2\trill
   | bes4 r r8 d-. c-. bes-.
   | a-. c-. bes-. d-. c-. f-. e-. g-.
   | f a g e f d c bes
@@ -202,11 +202,11 @@ violinIFourthMov =  \relative f'' {
   % 150
   | bes4\f bes'2 bes4 ~
   | bes bes2 bes4 ~
-  | bes8 g-. f-. es-. d4-| e-|
-  | f-| r r e-|
-  | f-| r r a-|
-  | bes-| r r d-|
-  | es-| r g-| r
+  | bes8 g-. f-. es-. d4-! e-!
+  | f-! r r e-!
+  | f-! r r a-!
+  | bes-! r r d-!
+  | es-! r g-! r
   | r2 r8 as,-.\p g-. fis-.
   | g-. as-. g-. fis-. g-. as-. g-. f-.
   | es( d es d) c-. g'-. f-. e-.
@@ -221,10 +221,10 @@ violinIFourthMov =  \relative f'' {
   | g as g f es f es d
   | c1
   | des4( d es e)
-  | f-| bes8-| d-| f4-| bes-|
+  | f-! bes8-! d-! f4-! bes-!
 
   % 170
-  | a-| c-| es-| a,-|
+  | a-! c-! es-! a,-!
   | bes r c r
   | d r a r
   | bes r r2

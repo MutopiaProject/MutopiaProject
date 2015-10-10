@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinISecondMov =  \relative a' {
   \key d \major
   \clef violin
@@ -97,8 +97,8 @@ violinISecondMov =  \relative a' {
   | d4 cis cis8 cis
 
 
-  \cadenzaOn c8[\fz\fermata ~ \times 2/3 { c16 a fis] } 
-  \times 2/3 { dis[ fis a] } 
+  \cadenzaOn c8[\fz\fermata ~ \tuplet 3/2 { c16 a fis] } 
+  \tuplet 3/2 { dis[ fis a] } 
   \small c16[ a fis dis fis a c8 a fis dis fis a] 
   \normalsize c4\p\fermata r8 \cadenzaOff
 

@@ -1,9 +1,9 @@
-\version "2.16.0"
+\version "2.18.0"
 violaSecondMov =  \relative ais {
   \key fis \major
   \clef alto
 
-  \override Staff.Hairpin   #'minimum-length = #5
+  \override Staff.Hairpin.minimum-length = #5
 
   r4
   | ais1(\p\<

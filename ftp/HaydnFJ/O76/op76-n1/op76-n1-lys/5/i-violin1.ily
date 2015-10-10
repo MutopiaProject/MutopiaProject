@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIFirstMov =  \relative a' {
   \key d \major
   \clef violin
@@ -57,15 +57,15 @@ violinIFirstMov =  \relative a' {
   % 40
   | a(-\> fis-\! d) bes'8.( a16 bes8)
   | c(-\> a-\! f!) d'\f ~ d16 c32-. bes-. a-. g-. f-. es-.
-  | d8[ r16 \lbcOne f-| bes-| d]-| es8 ~ 
+  | d8[ r16 \lbcOne f-! bes-! d]-! es8 ~ 
   es16 d32-. c-. bes-. a-. g-. f-.
-  | es8[ r16 \lbcOne f-| a-| c]-| d8 ~ 
+  | es8[ r16 \lbcOne f-! a-! c]-! d8 ~ 
   d16 c32-. bes-. a-. g-. f-. es-.
-  | d8[ r16 \lbcOne f-| bes-| d]-| es8 ~ 
+  | d8[ r16 \lbcOne f-! bes-! d]-! es8 ~ 
   es16 d32-. c-. bes-. a-. g-. f-.
-  | es8[ r16 \lbcOne f-| a-| c]-| f8 ~ 
+  | es8[ r16 \lbcOne f-! a-! c]-! f8 ~ 
   f32 es-. d-. c-. bes-. as-. g-. f-.
-  | es8-| g'-| r r4 r8
+  | es8-! g'-! r r4 r8
   | c,8.(\p b16 c8) es( d c)
   | bes! r r a r r
   | R2.
@@ -73,13 +73,13 @@ violinIFirstMov =  \relative a' {
   % 50
   | r4 r8 r r a,\f
   | f'8.( e16 f8) g8(\(-\> e16)-\! c( e g)\)
-  | a16-| a32( bes) c-. bes-. a-. g-. f-. e-. d-. c-. bes8 r r
+  | a16-! a32( bes) c-. bes-. a-. g-. f-. e-. d-. c-. bes8 r r
   | r16 f'32( g) a-. g-. f-. e-. d-. c-. bes-. a-. g8 r r
   | r16 f32( g) a-. g-. f-. e-. d-. c-. bes-. a-. gis8 f' f
-  | e16-| cis32( d e d cis b) a16-. g'-.
-  f16-| f32( g a g f e) d16-. d'-.
-  | cis16-| cis32( d e d cis b) a( cis e g)
-  f16-| f32( g a g f e) d( f a d)
+  | e16-! cis32( d e d cis b) a16-. g'-.
+  f16-! f32( g a g f e) d16-. d'-.
+  | cis16-! cis32( d e d cis b) a( cis e g)
+  f16-! f32( g a g f e) d( f a d)
   | cis8 a,-. a-. a-. r a\p
 
   \bar "||"
@@ -91,7 +91,7 @@ violinIFirstMov =  \relative a' {
   % 60
   | e8.( g32 fis) e16( ais) cis( b a g fis e)
   | d( cis e cis d b) a8( b cis)
-  | d32 d, cis d e fis g a b cis d dis e8\fz-| cis16( e cis a)
+  | d32 d, cis d e fis g a b cis d dis e8\fz-! cis16( e cis a)
   | d!16 d( e) e( fis) fis( g4)\fz fis8
   | e32( fis g fis) e( fis g fis) e( fis g a) b8( g) eis(\fz
   | fis) d16( b) cis( ais) b4 d8
@@ -105,7 +105,7 @@ violinIFirstMov =  \relative a' {
   | r16 d-. r e-. r fis-. g4(\fz gis8)
   | a16( fis) d'( a fis d) a8( b cis)
   | d16( b) fis'( d b fis) d( b gis d' b gis)
-  | a( cis e g! cis e) g[( fis a g)] \times 2/3 { b[( g e)] }
+  | a( cis e g! cis e) g[( fis a g)] \tuplet 3/2 { b[( g e)] }
   | d4.\fermata cis4\fermata r8
 
   \bar "||"
@@ -148,28 +148,28 @@ violinIFirstMov =  \relative a' {
   | fis16( d) g8-. e16( cis) d8-. d16 b e8-.
   | cis16( a) cis( a) d( a) e'( a,) fis'( a,) g'( a,)
   | fis'8. e16-. d-. cis-. b-. a-. g-. fis-. e-. d-.
-  | cis8-| e'-| r r4 r8
+  | cis8-! e'-! r r4 r8
   | fis8. e16-. d-. cis-. b-. a-. g-. fis-. e-. d-.
 
   % 110
-  | cis8-| e'-| r r4 r8
+  | cis8-! e'-! r r4 r8
   | a8. g16-. fis-. e-. d-. c-. b-. a-. g-. fis-.
-  | g8-| b'-| r e,,-| g'-| r
-  | fis,-| a'-| r a,-| cis'-| r
+  | g8-! b'-! r e,,-! g'-! r
+  | fis,-! a'-! r a,-! cis'-! r
   | fis8. e16-. d-. cis-. b-. a-. g-. fis-. e-. d-.
-  | cis8-| g''-| r r4 r8
+  | cis8-! g''-! r r4 r8
   | fis8. e16-. d-. cis-. b-. a-. g-. fis-. e-. d-.
-  | cis8-| g''-| r r4 r8
+  | cis8-! g''-! r r4 r8
   | a8. g16-. fis-. e-. d-. c-. b-. a-. g-. fis-.
-  | g8-| b'-| r e,,,-| g'-| r
+  | g8-! b'-! r e,,,-! g'-! r
 
   % 120
-  | fis,-| a'-| r e,-| cis''-| r
-  | d,,-| d''-| r r4 r8
+  | fis,-! a'-! r e,-! cis''-! r
+  | d,,-! d''-! r r4 r8
   | g,8. fis16-. e-. d-. cis-. b-. a-. g-. fis-. e-.
-  | d8-| fis'-| r r4 r8
+  | d8-! fis'-! r r4 r8
   | g8. fis16-. e-. d-. cis-. b-. a-. g-. fis-. e-.
-  | d8-| fis-| a-| d-| fis-| a-|
+  | d8-! fis-! a-! d-! fis-! a-!
   | d4 r8 <d,, a' fis'>4 r8
   | <d a' fis'>4 r8 r4 r8
 

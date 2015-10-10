@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIIFourthMov =  \relative es' {
   \key c \minor
   \clef violin
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     <es c'>4-.\f r f'-. r
@@ -69,13 +69,13 @@ violinIIFourthMov =  \relative es' {
     | r4 es'2 d4 ~
     | d c2 bes4 ~
     | bes as2 g4
-    | \times 2/3 { f8 f f g g g f f f g g g }
+    | \tuplet 3/2 { f8 f f g g g f f f g g g }
     | as4 r as r
-    | \times 2/3 { g'8 as bes as g f es d c bes as g } \noTupletNum
+    | \tuplet 3/2 { g'8 as bes as g f es d c bes as g } \noTupletNum
     | f4 r r2
 
     % 60
-    | \times 2/3 { g'8 as bes as g f es d c bes as g } \tupletNum
+    | \tuplet 3/2 { g'8 as bes as g f es d c bes as g } \tupletNum
     | f2( g4 as)
     | bes r <es, es'> r
     | <es es'> r <bes' f'> r
@@ -109,7 +109,7 @@ violinIIFourthMov =  \relative es' {
   | a2( bes4) f-.
   | ges2( f4) bes-.
   | a2( bes4) r
-  | r \times 2/3 { bes8\f c bes as! g! f es d c }
+  | r \tuplet 3/2 { bes8\f c bes as! g! f es d c }
   | bes4( es d as')
   | g2( as4 bes)
   | c2( bes4 g)
@@ -123,32 +123,32 @@ violinIIFourthMov =  \relative es' {
   | es2( d)
   | c( d4 e)
   | f2( es) ~
-  | es4 \times 2/3 { d8 c d es d es f es f }
+  | es4 \tuplet 3/2 { d8 c d es d es f es f }
   | bes,4 r r es ~
   | es as bes es,8. bes'16
 
   % 100
-  | \times 2/3 { c8 des es des c bes as g f es des c } \noTupletNum
+  | \tuplet 3/2 { c8 des es des c bes as g f es des c } \noTupletNum
   | bes4 r r2
-  | \times 2/3 { c'8 des es des c bes as g f es des c }
+  | \tuplet 3/2 { c'8 des es des c bes as g f es des c }
   | bes4 r r es,
-  | \times 2/3 { c'8 des es des c bes as g as bes c des }
+  | \tuplet 3/2 { c'8 des es des c bes as g as bes c des }
   | c4 r r2
-  | \times 2/3 { c8 des es des c bes as bes c bes as g }
-  | \times 2/3 { f g as g f es d! es f es d c }
+  | \tuplet 3/2 { c8 des es des c bes as bes c bes as g }
+  | \tuplet 3/2 { f g as g f es d! es f es d c }
   | bes4 f''2\fz f,4
   | g g'2\fz es,4
 
   % 110
   | d d''2\fz d,4
-  | \times 2/3 { es8 f g f es d c b c d c d }
+  | \tuplet 3/2 { es8 f g f es d c b c d c d }
   | es4 r r2
-  | r2 r4 \times 2/3 { es,8( d es) }
-  | f4-. \times 2/3 { g8( f g) } as4-. bes-.
-  | as-. bes-. as-. \times 2/3 { d,8( c d) }
-  | es4-. \times 2/3 { f8( es f) } g4-. as-.
-  | g-. as-. g-. \times 2/3 { es'8( f es) }
-  | d4-. \times 2/3 { c8( d c) } \tupletNum b4-. fis-.
+  | r2 r4 \tuplet 3/2 { es,8( d es) }
+  | f4-. \tuplet 3/2 { g8( f g) } as4-. bes-.
+  | as-. bes-. as-. \tuplet 3/2 { d,8( c d) }
+  | es4-. \tuplet 3/2 { f8( es f) } g4-. as-.
+  | g-. as-. g-. \tuplet 3/2 { es'8( f es) }
+  | d4-. \tuplet 3/2 { c8( d c) } \tupletNum b4-. fis-.
   | g-. b-. c-. d-.
 
   % 120
@@ -176,16 +176,16 @@ violinIIFourthMov =  \relative es' {
   | <c es>2.\fz as4
 
   % 140
-  | \times 2/3 { des8( c des) f( e f) 
+  | \tuplet 3/2 { des8( c des) f( e f) 
   as( g as) es( f es) } \noTupletNum
-  | \times 2/3 { d!-. es-. f-. f ges as as bes ces ces bes as }
+  | \tuplet 3/2 { d!-. es-. f-. f ges as as bes ces ces bes as }
   | ges4 ges2 ges4
   | <d! f>2.\fz bes4
-  | \times 2/3 { es8( d es) ges( f ges) bes( a bes) f( g f) }
-  | \times 2/3 { e-. f-. g-. g as! bes bes c des des c bes }
-  | as4 r \times 2/3 { f8( e f) as( g a) }
-  | c4 r \times 2/3 { c,8( b c) g'( fis g) }
-  | c4 r \times 2/3 { c,8( b c) g'( fis g) } \tupletNum
+  | \tuplet 3/2 { es8( d es) ges( f ges) bes( a bes) f( g f) }
+  | \tuplet 3/2 { e-. f-. g-. g as! bes bes c des des c bes }
+  | as4 r \tuplet 3/2 { f8( e f) as( g a) }
+  | c4 r \tuplet 3/2 { c,8( b c) g'( fis g) }
+  | c4 r \tuplet 3/2 { c,8( b c) g'( fis g) } \tupletNum
   | g,4 r fis'' r
 
   % 150
@@ -219,14 +219,14 @@ violinIIFourthMov =  \relative es' {
   | f2 e4( d)
   | c( bes a) d ~
   | d c2( b4)
-  | \times 2/3 { e8 f g f e d c b a g f e }
+  | \tuplet 3/2 { e8 f g f e d c b a g f e }
   | d4 r r2
-  | \times 2/3 {e'8 f g f e d c b a g f e }
+  | \tuplet 3/2 {e'8 f g f e d c b a g f e }
   | d2( e4 f)
 
   % 180
   | g-. r c-. r
-  | \repeat unfold 4 { \times 2/3 { c8 c c } }
+  | \repeat unfold 4 { \tuplet 3/2 { c8 c c } }
   | e4-. r <f, d'>-. r
   | <e c'> r r e'
   | f2( e4 b')

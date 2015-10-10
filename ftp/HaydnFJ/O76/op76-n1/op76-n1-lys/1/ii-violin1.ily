@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinISecondMov =  \relative e' {
   \key c \major
   \clef violin
@@ -11,7 +11,7 @@ violinISecondMov =  \relative e' {
   | f-(-[ e d8. dis16-)-]
   | e4-( d!-)
   | c!4-( d8 e-)
-  | f8-( \times 2/3 { a16 f d-) } c8-( \times 2/3 { b16 d g-) }
+  | f8-( \tuplet 3/2 { a16 f d-) } c8-( \tuplet 3/2 { b16 d g-) }
   | f4-( e8-) r
   | e'4-( d-)
 
@@ -97,7 +97,7 @@ violinISecondMov =  \relative e' {
   | f-[-( e d8. dis16-)-]
   | e4-( d!-)
   | c-( d8-[ e-]-)
-  | f-( \times 2/3 { a16 f d-) } c8-( \times 2/3 { b16 d f-) }
+  | f-( \tuplet 3/2 { a16 f d-) } c8-( \tuplet 3/2 { b16 d f-) }
   | e8 r r r32 g-(-[_\markup { \italic { più } \dynamic f } e c-)-]
 
   % 80

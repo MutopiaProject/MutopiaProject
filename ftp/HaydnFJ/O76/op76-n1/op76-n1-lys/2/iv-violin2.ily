@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIIFourthMov =  \relative a' {
   \key d \minor
   \clef violin
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     r8
@@ -337,7 +337,7 @@ violinIIFourthMov =  \relative a' {
   | <e cis'>
   | <fis d'>
   | <e cis'>)
-  | \repeat unfold 2 { \times 2/3 { d8-. fis-. a-. d-. a-. fis-. } }
+  | \repeat unfold 2 { \tuplet 3/2 { d8-. fis-. a-. d-. a-. fis-. } }
   | d4 r
   | <d a' fis'> r
   | <d a' fis'> r8

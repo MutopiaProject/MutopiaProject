@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIIThirdMov =  \relative bes {
   \key bes \major
   \clef violin
@@ -6,9 +6,9 @@ violinIIThirdMov =  \relative bes {
   \repeat volta 2 {
     r4
     | r r bes8(\f d)
-    | f4-| f-| r
+    | f4-! f-! r
     | r r bes,8( d)
-    | f4-| f-| r
+    | f4-! f-! r
     | g'2.(
     | f)
     | <bes, e>4\fz <bes e> <bes e>
@@ -20,13 +20,13 @@ violinIIThirdMov =  \relative bes {
     | b( c es c) r4
     | r r e8( f)
     | e( f bes f) r4
-    | r r f-|
-    | es-| g-| es-|
-    | d-| f-| bes,-|
-    | c-| es a,-|
-    | bes-| d-| cis ~
-    | cis cis-| cis'-|
-    | d-| r r
+    | r r f-!
+    | es-! g-! es-!
+    | d-! f-! bes,-!
+    | c-! es a,-!
+    | bes-! d-! cis ~
+    | cis cis-! cis'-!
+    | d-! r r
     | d,-. d-. r
 
     % 20
@@ -42,19 +42,19 @@ violinIIThirdMov =  \relative bes {
     | e( f) e( f) bes,( d)
 
     % 30
-    | f4-| f-| r
-    | <bes, f'>-| <bes f'>-| <bes f'>-|
-    | <bes es>-| <bes es>-| r
-    | f'-| a-| c8( a)
+    | f4-! f-! r
+    | <bes, f'>-! <bes f'>-! <bes f'>-!
+    | <bes es>-! <bes es>-! r
+    | f'-! a-! c8( a)
     | f'2.
     | g4 g8( es) c( a)
     | bes4 r r
-    | r r <bes g'>-|
-    | <bes f'>-| <bes f'>-| r
+    | r r <bes g'>-!
+    | <bes f'>-! <bes f'>-! r
     | r r g8( es)
 
     % 40
-    | d4-| bes'-| r
+    | d4-! bes'-! r
     | bes\p r r
     | bes r r
     | a r r

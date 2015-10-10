@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violaFourthMov =  \relative f' {
   \key d \minor
   \clef alto
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     r8
@@ -325,7 +325,7 @@ violaFourthMov =  \relative f' {
   | a,( g')
   | fis( d)
   | a( cis)
-  | \repeat unfold 2 { \times 2/3 { d,8-. fis-. a-. d-. a-. fis-. } }
+  | \repeat unfold 2 { \tuplet 3/2 { d,8-. fis-. a-. d-. a-. fis-. } }
   | d4 r <d a' d> r
   | <d a' d> r8
 

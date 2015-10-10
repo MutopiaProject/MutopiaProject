@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 \header {
   title = "String Quartet in D major"
   subtitle = "Op. 76 No. 5"
@@ -48,7 +48,7 @@ markingsIII =  {
 
   s2.*32
   s2
-  \override Score.RehearsalMark #'break-visibility = #begin-of-line-invisible
-  \override Score.RehearsalMark #'self-alignment-X = #1
+  \override Score.RehearsalMark.break-visibility = #begin-of-line-invisible
+  \override Score.RehearsalMark.self-alignment-X = #1
   \mark \markup { \large { \italic "Menuetto D.C." } }
 }

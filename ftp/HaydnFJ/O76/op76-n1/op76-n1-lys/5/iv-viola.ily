@@ -1,43 +1,43 @@
-\version "2.16.0"
+\version "2.18.0"
 violaFourthMov =  \relative g' {
   \key d \major
   \clef alto
 
-  g8-|\f
-  | fis4-| r
-  | r r8 g-|
-  | fis4-| r
-  | r r8 g-|
-  | fis-| g-| fis-| g-|
+  g8-!\f
+  | fis4-! r
+  | r r8 g-!
+  | fis4-! r
+  | r r8 g-!
+  | fis-! g-! fis-! g-!
   | fis4 r8 d-.\p
   | d-. d-. d-. d-.
   | \repeat unfold 32 d
-  | d[ d d] g-|\f
-  | fis4-| r8 g-|
-  | fis4-| r8 g-|
-  | fis-| g-| fis-| g-|
+  | d[ d d] g-!\f
+  | fis4-! r8 g-!
+  | fis4-! r8 g-!
+  | fis-! g-! fis-! g-!
 
   % 20
-  | fis4-| r8 e-|
-  | d4-| r8 e-|
-  | d4-| r8 d-|
-  | cis-| d-| cis-| d-|
+  | fis4-! r8 e-!
+  | d4-! r8 e-!
+  | d4-! r8 d-!
+  | cis-! d-! cis-! d-!
   | cis4 r8 a-.\p
   | a-. a-. a-. a-.
   | \repeat unfold 32 a
-  | a[ a a] b-|\f
-  | cis-| b-| cis-| b-|
-  | cis4 r8 c-|
-  | b-| c-| b-| c-|
-  | b4 r8 fis'-|
-  | g-| a-| g-| dis-|
-  | e-| dis-| e-| g-|
-  | fis-| g-| fis-| cis-|
-  | d-| cis-| d-| g-|
-  | fis-| g-| fis-| e'-|
-  | d-| e-| d-| cis-|
-  | b-| e-| d-| b-|
-  | b-| b-.\p b-. b-.
+  | a[ a a] b-!\f
+  | cis-! b-! cis-! b-!
+  | cis4 r8 c-!
+  | b-! c-! b-! c-!
+  | b4 r8 fis'-!
+  | g-! a-! g-! dis-!
+  | e-! dis-! e-! g-!
+  | fis-! g-! fis-! cis-!
+  | d-! cis-! d-! g-!
+  | fis-! g-! fis-! e'-!
+  | d-! e-! d-! cis-!
+  | b-! e-! d-! b-!
+  | b-! b-.\p b-. b-.
   | b-. b-. b-. b-.
   | \repeat unfold 16 b
   | ais\f ais ais ais
@@ -161,18 +161,18 @@ violaFourthMov =  \relative g' {
   | \repeat unfold 20 fis
   | e'-\< e e e
   | e cis a e-\!
-  | fis4-|\f r8 <e a>8-|
-  | \repeat unfold 2 { <fis a>4-| r8 <e a>-| }
-  | \repeat unfold 2 { <fis a>-| <e a>-| }
-  | <fis a>4-| r8 <fis cis'>-|
-  | \repeat unfold 2 { <fis d'>-| <fis cis'>-| }
-  | a4-| r8 a-|
+  | fis4-!\f r8 <e a>8-!
+  | \repeat unfold 2 { <fis a>4-! r8 <e a>-! }
+  | \repeat unfold 2 { <fis a>-! <e a>-! }
+  | <fis a>4-! r8 <fis cis'>-!
+  | \repeat unfold 2 { <fis d'>-! <fis cis'>-! }
+  | a4-! r8 a-!
 
   % 200
-  | \repeat unfold 2 { <d, b'>-| <d a'>-| }
-  | <d b'>4 r8 fis-|
-  | \repeat unfold 2 { <b, g'>-| <b fis'>-| }
-  | <b g'>4-| r8 e16( fis)
+  | \repeat unfold 2 { <d, b'>-! <d a'>-! }
+  | <d b'>4 r8 fis-!
+  | \repeat unfold 2 { <b, g'>-! <b fis'>-! }
+  | <b g'>4-! r8 e16( fis)
   | g4. gis8-.
   | a8-. cis,16( d) e8-. r
   | g!4. e8-.
@@ -182,18 +182,18 @@ violaFourthMov =  \relative g' {
 
   % 210
   | cis8-. g'16( fis) e8-. a,-.
-  | a4 r8 e''-|
-  | fis4 r8 b,-|
-  | cis4 r8 ais-|
-  | b4 r8 b-|
-  | ais( b ais) a-|
-  | gis( a gis) g-|
-  | fis( g fis) cis-|
-  | d( cis d) d-|
+  | a4 r8 e''-!
+  | fis4 r8 b,-!
+  | cis4 r8 ais-!
+  | b4 r8 b-!
+  | ais( b ais) a-!
+  | gis( a gis) g-!
+  | fis( g fis) cis-!
+  | d( cis d) d-!
   | d2
 
   % 220
-  | b4. e8-|
+  | b4. e8-!
   | e-. e-.\p e-. e-.
   | \repeat unfold 20 e
   | dis\f dis dis dis
@@ -253,7 +253,7 @@ violaFourthMov =  \relative g' {
   | fis4-. r8 g-.
   | fis4-. r8 e-.
   | fis4-. r8 e-.
-  | fis-| e-| fis-| e-|
+  | fis-! e-! fis-! e-!
   | fis4 r
 
   % 290

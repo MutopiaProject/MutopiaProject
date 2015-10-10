@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 celloFirstMov =  \relative g {
   \key g \major
   \clef bass
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   g4-.\f r d-. r
   | g,-. r r

@@ -1,14 +1,14 @@
-\version "2.16.0"
+\version "2.18.0"
 celloThirdMov =  \relative bes, {
   \key bes \major
   \clef bass
 
   \repeat volta 2 {
     r4
-    | bes\f-| d'-| r
-    | a,-| c'-| r
-    | g,-| bes'-| r
-    | f,-| a'-| r
+    | bes\f-! d'-! r
+    | a,-! c'-! r
+    | g,-! bes'-! r
+    | f,-! a'-! r
     | es es es
     | d2.
     | <c, c'>4\fz c' c
@@ -26,20 +26,20 @@ celloThirdMov =  \relative bes, {
     | R2.*3
     | r4 r d8( es)
     | d( es) d( es) g( es)
-    | d4-| d'-| r
+    | d4-! d'-! r
     | R2.*5
     | f2. ~
     | f ~
     | f
     | a,8( bes) a( bes) r4
     | R2.
-    | bes4-| bes-| bes-|
+    | bes4-! bes-! bes-!
 
     % 30
-    | a-| a-| r
-    | as-| as-| as-|
-    | g-| g-| r
-    | es'-| es-| es-|
+    | a-! a-! r
+    | as-! as-! as-!
+    | g-! g-! r
+    | es'-! es-! es-!
     | d2.
     | es4 es f
     | bes8( f) d( bes) a( bes)

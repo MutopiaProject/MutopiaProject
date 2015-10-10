@@ -1,14 +1,14 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIFourthMov =  \relative cis''' {
   \key d \major
   \clef violin
 
-  cis8-|\f
-  | d4-| r
-  | r r8 cis-|
-  | d4-| r
-  | r r8 cis-|
-  | d-| cis-| d-| cis-|
+  cis8-!\f
+  | d4-! r
+  | r r8 cis-!
+  | d4-! r
+  | r r8 cis-!
+  | d-! cis-! d-! cis-!
   | d4 r
   | R2
   | r4 r8 a16(\p g)
@@ -19,16 +19,16 @@ violinIFourthMov =  \relative cis''' {
   | fis8-. fis16( e) d8-. e-.
   | fis4( d8)-. r
   | R2*3
-  | r4 r8 cis'-|\f
-  | d4-| r8 cis-|
-  | d4-| r8 cis-|
-  | d-| cis-| d-| cis-|
+  | r4 r8 cis'-!\f
+  | d4-! r8 cis-!
+  | d4-! r8 cis-!
+  | d-! cis-! d-! cis-!
 
   % 20
-  | d4-| r8 ais-|
-  | b4-| r8 ais-|
-  | b4-| r8 gis-|
-  | a!-| gis-| a-| gis-|
+  | d4-! r8 ais-!
+  | b4-! r8 ais-!
+  | b4-! r8 gis-!
+  | a!-! gis-! a-! gis-!
   | a4 r
   | R2
   | r4 r8 e16(\p d)
@@ -39,20 +39,20 @@ violinIFourthMov =  \relative cis''' {
   % 30
   | cis4( a8)-. r
   | R2*3
-  | r4 r8 gis'-|\f
-  | a-| gis-| a-| gis-|
-  | a4 r8 fis-|
-  | g!-| fis-| g-| fis-|
-  | g4 r8 dis-|
-  | e-| dis-| e-| fis-|
+  | r4 r8 gis'-!\f
+  | a-! gis-! a-! gis-!
+  | a4 r8 fis-!
+  | g!-! fis-! g-! fis-!
+  | g4 r8 dis-!
+  | e-! dis-! e-! fis-!
 
   % 40
-  | g-| fis-| g-| cis,-|
-  | d-| cis-| d-| e-|
-  | fis-| e-| fis-| ais-|
-  | b-| ais-| b-| cis-|
-  | d-| cis-| d-| ais-|
-  | b-| ais-| b-| a-|
+  | g-! fis-! g-! cis,-!
+  | d-! cis-! d-! e-!
+  | fis-! e-! fis-! ais-!
+  | b-! ais-! b-! cis-!
+  | d-! cis-! d-! ais-!
+  | b-! ais-! b-! a-!
   | gis4 r
   | R2*3
 
@@ -214,20 +214,20 @@ violinIFourthMov =  \relative cis''' {
   % 190
   | d d d d
   | g-\< g g g
-  | g g g cis-|-\!
-  | d4-|\f r8 cis-|
-  | d4-| r8 cis-|
-  | d4-| r8 cis-|
-  | d-| cis-| d-| cis-|
-  | d4-| r8 ais-|
-  | b-| ais-| b-| ais-|
-  | b4-| r8 fis-|
+  | g g g cis-!-\!
+  | d4-!\f r8 cis-!
+  | d4-! r8 cis-!
+  | d4-! r8 cis-!
+  | d-! cis-! d-! cis-!
+  | d4-! r8 ais-!
+  | b-! ais-! b-! ais-!
+  | b4-! r8 fis-!
 
   % 200
-  | g-| fis-| g-| fis-|
-  | g4-| r8 dis-|
-  | e-| dis-| e-| dis-|
-  | e-| e16( fis) g8-. g16( a)
+  | g-! fis-! g-! fis-!
+  | g4-! r8 dis-!
+  | e-! dis-! e-! dis-!
+  | e-! e16( fis) g8-. g16( a)
   | b8-. g-. e-. d!-.
   | cis-. a16( b) cis8-. cis16( d)
   | e8-. e16( fis) g8-. cis,-.
@@ -237,15 +237,15 @@ violinIFourthMov =  \relative cis''' {
 
   % 210
   | e8-. e16( fis) g8-. cis,-.
-  | d( cis d) cis-|
-  | d( cis d) gis,-|
-  | a( gis a) fis-|
-  | g!( fis g) eis-|
-  | fis( eis fis) dis-|
-  | e!( dis e) cis-|
-  | d!( cis d) e-|
-  | fis( e fis) g-|
-  | a( gis a) ais-|
+  | d( cis d) cis-!
+  | d( cis d) gis,-!
+  | a( gis a) fis-!
+  | g!( fis g) eis-!
+  | fis( eis fis) dis-!
+  | e!( dis e) cis-!
+  | d!( cis d) e-!
+  | fis( e fis) g-!
+  | a( gis a) ais-!
 
   % 220
   | b( g! e) d-.
@@ -319,7 +319,7 @@ violinIFourthMov =  \relative cis''' {
   | d4-. r8 e-.
   | fis4-. r8 cis'-.
   | d4-. r8 cis-.
-  | d-| cis-| d-| cis-|
+  | d-! cis-! d-! cis-!
   | d4 r
 
   % 290

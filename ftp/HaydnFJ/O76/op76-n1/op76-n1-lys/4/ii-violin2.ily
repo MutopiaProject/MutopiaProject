@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIISecondMov =  \relative bes {
   \key es \major
   \clef violin
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 8)
+  \tupletSpan 8
 
   bes2.
   | d4 << { es2\fermata } { s4-\< s8-\!-\> s8-\! } >>
@@ -73,15 +73,15 @@ violinIISecondMov =  \relative bes {
   | r ges,(\fz f)
   | r as(\fz g!)
   | r4 bes8.( as16 g8 c)
-  | \times 2/3 { c16[( es f) a-. f-. es]-.
+  | \tuplet 3/2 { c16[( es f) a-. f-. es]-.
     c[( es f) a-. f-. es]-.
   bes[( d f) bes-. f-. d]-. } \noTupletNum
-  | \times 2/3 { bes[( des es) g-. es-. des]-.
+  | \tuplet 3/2 { bes[( des es) g-. es-. des]-.
     bes[( des es) g-. es-. des]-.
   as[( c es) as-. es-. c]-. }
 
   % 60
-  | \times 2/3 { as'[-. f-. d!-. bes-. as-. f]-.
+  | \tuplet 3/2 { as'[-. f-. d!-. bes-. as-. f]-.
     d[ f as c as f] 
   es[ g b c d es] } \tupletNum
   | c4 r r
@@ -97,7 +97,7 @@ violinIISecondMov =  \relative bes {
   % 70
   | ces2.
   | bes4( ces bes)
-  | \times 2/3 { ces16[( as bes ces as bes)] \noTupletNum
+  | \tuplet 3/2 { ces16[( as bes ces as bes)] \noTupletNum
     ces16[( as bes ces as bes)]
     ces16[( as bes ces as bes)] }
   | bes4 bes bes
