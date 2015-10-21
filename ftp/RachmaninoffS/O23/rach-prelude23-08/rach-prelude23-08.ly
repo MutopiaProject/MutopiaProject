@@ -69,67 +69,67 @@ global = {
 upperStaffA =   \relative c' {
   \setBeatStructureFourth \slurDown
   \partial 2.
-    c16( a' fis a,) des( bes'g bes,) d( b'aes b,)
-  | b'4\rest ees,16( c'aes c,) aes'( f' des f,) g( ees'c ees,) b'\rest_\scrCresc c( aes c,) b'\rest des( aes des,)
-  | b'16\rest ees( aes,c,) aes'( f'c f,) c'( g'ees g,) c( aes'f aes,) des( bes'g bes,) ees( c'aes c,)
-  | b4\rest ees,16( c'aes c,) aes'( ees'des f,) g( ees'c ees,) b'\rest_\scrCresc c( aes c,) b'\rest des( aes des,)
-  | b'16\rest ees( aes,c,) aes'( f'c f,) c'( g'ees g,) c( aes'f aes,) des( bes'g bes,) ees( c'aes c,)
+    c16( a' fis a,) des( bes' g bes,) d( b' aes b,)
+  | b'4\rest ees,16( c' aes c,) aes'( f' des f,) g( ees'c ees,) b'\rest_\scrCresc c( aes c,) b'\rest des( aes des,)
+  | b'16\rest ees( aes, c,) aes'( f' c f,) c'( g' ees g,) c( aes' f aes,) des( bes' g bes,) ees( c' aes c,)
+  | b4\rest ees,16( c' aes c,) aes'( ees' des f,) g( ees'c ees,) b'\rest_\scrCresc c( aes c,) b'\rest des( aes des,)
+  | b'16\rest ees( aes, c,) aes'( f' c f,) c'( g' ees g,) c( aes' f aes,) des( bes' g bes,) ees( c' aes c,)
   % 5
-  | \voiceTwo \slurNeutral c'( aes' ees aes,) ges( des'aes des,) f( des'aes des,) ees( c'ges c,) des( bes'ees,bes) c( aes'ees aes,)
-  | aes'16( f'c f,) ees( bes'f bes,) des( bes'f bes,) c( aes' f aes,) bes( g'c, g) aes( f'c f,)
-  | f'16( des'aes des,) b\rest g'( c,bes) b\rest f'( bes,aes) f'( c'g c,) b\rest f'( bes,aes) b\rest e( aes,g)
+  | \voiceTwo \slurNeutral c'( aes' ees aes,) ges( des' aes des,) f( des' aes des,) ees( c' ges c,) des( bes' ees, bes) c( aes' ees aes,)
+  | aes'16( f' c f,) ees( bes' f bes,) des( bes' f bes,) c( aes' f aes,) bes( g'c, g) aes( f'c f,)
+  | f'16( des' aes des,) b\rest g'( c, bes) b\rest f'( bes, aes) f'( c' g c,) b\rest f'( bes, aes) b\rest e( aes, g)
   % page 2, gl begins
-  | des'16( bes' f bes,) r16 ees16( aes, ges) r16 des'16( ges, f) c'( g' ees g,) r16 ces( f, ees) r16 bes'( ees, des)
-  | \voiceOne \slurDown c16( a' fis a,) des( bes' g bes,) bes( g' ees g,) ces( aes' f aes,) des( bes' g bes,) d( b' aes b,)
+  | des'16( bes' f bes,) bes\rest ees16( aes, ges) bes\rest des16( ges, f) c'( g' ees g,) bes\rest ces( f, ees) bes'\rest bes( ees, des)
+  | \voiceOne \slurDown c16( a' fis a,) des( bes' g bes,) bes( g' ees g,) c( aes' f aes,) des( bes' g bes,) d( b' aes b,)
   %10
   \repeat unfold 2 {
-    | b'4\rest ees,16( c'aes c,) aes'( f' des f,) g( ees'c ees,) b'\rest_\scrCresc c( aes c,) b'\rest des( aes des,)
-    | b'16\rest ees( aes,c,) aes'( f'c f,) c'( g'ees g,) c( aes'f aes,) des( bes'g bes,) ees( c'aes c,)
+    | b'4\rest ees,16( c' aes c,) aes'( f' des f,) g( ees'c ees,) b'\rest_\scrCresc c( aes c,) b'\rest des( aes des,)
+    | b'16\rest ees( aes, c,) aes'( f' c f,) c'( g' ees g,) c( aes' f aes,) des( bes' g bes,) ees( c' aes c,)
   }
-  | \voiceTwo \slurNeutral c'( aes' ees aes,) ges( des'aes des,) f( des'aes des,) ees( c'ges c,) des( bes'ees,bes) c( aes'ees aes,)
+  | \voiceTwo \slurNeutral c'( aes' ees aes,) ges( des' aes des,) f( des' aes des,) ees( c' ges c,) des( bes' ees, bes) c( aes' ees aes,)
   %15
   | gis'16( e' b e,) d( a' e a,) c( a' e a,) b( gis' e gis,) a( fis' b, fis) gis( e' b e,)
-  | ees'16_\scrDim( c' g c,) r f( bes, aes) r ees'( aes, g) fes'( c' aes c,) r f( bes, aes) r fes'( bes, aes)
-  | ees'16( c' g c,) r ees( aes, g) r des'( aes g) des' aes' ees aes, r des( aes des,) r c'( aes c,)
+  | ees'16_\scrDim( c' g! c,) b\rest f'( bes,! aes!) b\rest ees( aes, g) fes'( c' aes c,) b\rest f'( bes, aes) b\rest fes'( bes, aes)
+  | ees'16( c' g c,) b\rest ees( aes, g) b\rest des( aes g) des' aes' ees aes, b\rest des( aes des,) b'\rest c( aes c,)
   %18
   \voiceOne\slurDown
   | d16( b' aes b,) ees( c' aes c,) b( g' ees g,) c( aes' ees aes,) d( b' aes b,) ees( c' aes c,)
   | b'4\rest g16( ees' des! ees,) aes( f' des f,) a( fis' ees fis,) c'( a' fis a,) des( bes' g bes,)
   %20
   \voiceTwo\slurUp
-  | d16(_\scrCresc b' aes b,) f'( d' b d,) g( d' b d,) aes'( d aes d,) g( ees' c ees,) aes( ees' c ees,)
+  | d16(_\scrCresc b' aes! b,) f'( d' b d,) g( d' b d,) aes'( d aes d,) g( ees' c ees,) aes( ees' c ees,)
   \voiceOne\slurDown
-  | b4\rest g16( ees' des ees,) aes( f' des f) a,( fis' ees fis,) c'( a' fis a,) des( bes' g bes,)
+  | b4\rest g16( ees' des! ees,) aes( f' des f) a,( fis' ees fis,) c'( a' fis a,) des( bes' g bes,)
   %22
   \voiceTwo\slurUp
-  | d16( b' aes a,) f'( d' b d,) g( e' b e,) aes( f' b, f) aes( fis' des fis,) bes( g' des g,)
+  | d16( b' aes b,) f'( d' b d,) g( e' b e,) aes( f' b, f) aes( fis' des fis,) bes( g' des g,)
   | b,4\rest c16( aes' ges aes,) des( bes' ges bes,) d( b' aes b,) f'( d' b d,) ges( ees' c ees,)
   %24
-  | g16( e' des e,) bes'( bes'g g,) c( g' ees g,) des'( g ees g,) c( aes' f aes,) des( aes' f aes,)
-  | bes,4\rest c16( aes' ges aes,) des( bes' ges bes,) d( b' aes b,) f'( d' b d,) g( ees' c ees,)
+  | g!16( e' des! e,) bes'( bes' g g,) c( g' e g,) des'( g e g,) c( aes' f aes,) des( aes' f aes,)
+  | bes,4\rest c16( aes' ges aes,) des( bes' ges bes,) d( b' aes b,) f'( d' b d,) ges( ees' c ees,)
   %26
-  | g16( e' des e,) \ottava #1 bes'( g' e  g,) c( a' e a,) des( bes' e, bes) d( b' ges b,) ees( c' ges c,)
+  | g!16( e' des e,) \ottava #1 bes'( g' e  g,) c( a' e a,) des( bes' e, bes) d( b' ges b,) ees( c' ges c,)
   | c16( aes' f aes,) des( bes' f bes,) c( aes' f aes,) des( bes' f bes,) c( aes' f aes,) des( bes' f bes,)
   %28
-  | c16( aes' fes aes,) des( beses fes' beses,) c( aes' fes aes,) des( beses' fes beses,) c( aes' fes aes,) des( beses' fes beses,)
-  | c16( aes' ees aes,) bes( g' c, g) aes( f' c f,) g( ees' c ees,) \ottava #0 ees( c' f, c) des( bes' f bes,)
+  | c16( aes' fes aes,) des( beses' fes beses,!) c( aes' fes aes,) des( beses' fes beses,) c( aes' fes aes,) des( beses' fes beses,)
+  | c16( aes' ees aes,) bes!( g' c, g) aes( f' c f,) g( ees' c ees,) \ottava #0 ees( c' f, c) des( bes' f bes,)
   %30
   | c16( aes' f aes,) c( g' ees g,) \voiceOne\slurDown aes( f' c f,) g( ees' c ees,) ees( c' aes c,) d( bes' aes bes,)
-  | b'4\rest ees,16( d des g) f( ees c aes') fis( ees ces a') g( ees bes bes') ees,( d des aes)
+  | b'4\rest ees,16( d des g) f( ees c aes') fis( ees ces a') g( ees bes bes') ees,( d des g)
   %32
-  | f'16( ees c aes') fis( ees ces a') g( ees bes bes') g( ees b bes') g( ees c bes') g( ees des bes'~
-  | <bes g bes,>8) bes\rest e,16( d cis g') f( d c aes') fis( d b a') g( d bes bes') e,( d cis g')
+  | f16( ees c aes') fis( ees ces a') g( ees bes bes') g( ees b bes'!) g( ees c bes') g( ees des bes'~
+  | <bes g bes,>8) bes\rest e,16( d cis g') f( d c aes'!) fis( d b a') g( d bes bes') e,( d cis g')
   %34
-  | f16( d c aes') fis( d b a') g( d bes bes') g( d c bes') g( d cis bes') g( ees d bes')
-  | b4\rest g16( ees des a') g( ees des bes') g( ees c c') g( des bes des') g,( ees des a')
+  | f16( d c aes'!) fis( d b a') g( d bes bes') g( d c bes') g( d cis bes') g( ees d bes')
+  | b4\rest g16( ees des! a') g( ees des bes') g( ees c c') g( des bes des') g,( ees des a')
   %36
   | c16\rest g( des bes') g( e c c') c16\rest g( bes, des') g,(f des a') g( f c bes') c16\rest g( bes, b')
   | \time 4/4 c16\rest f,( a, c') f,( ees d g) f( ees c a') f( ees bes bes')
   %38
-  | f16( ees ces ces') f,( ees ces g') b\rest f( c aes') f( d aes a')
+  | f16( ees ces ces') f,( ees ces g') b\rest f( bes, aes') f( d aes a')
   | \voiceTwo \time 3/2 g,4\rest a16\rest ees'([ d ees~] ees d des c) \clef bass r16 bes( a bes~ bes[ a aes g~]) g fis f fis
   %40
-  | g16 f fes ees d des c r r f fes ees d des c r r f fes ees d des c r
+  | g16 f! fes ees d des c r r f fes ees d des c! r r f fes ees d des c! r
   | s4 \slurUp g'16( ees' des ees,) aes( f' des f,) a( fis' ees fis,) bes( g' ees g,) \clef treble \voiceOne\slurDown c16( aes'! f aes,)
   %42
   | c16( a' fis a,) des( bes' g bes,) c( a' fis a,) des( bes' g bes,) des( bes' g bes,) d( b' aes b,)
@@ -139,11 +139,11 @@ upperStaffA =   \relative c' {
   }
   | \voiceTwo\slurUp c'16( aes' ees aes,) ges( des' aes des,) f( des' aes des,) ees( c' ges c,) des( bes' ees, bes) c( aes' ees aes,)
   % 48
-  | aes'16( f' c f,) ees( bes' f bes,) des( bes' f bes,) c( aes' f aes,) bes( g' c, g) aes( f' c ees,)
+  | aes'16( f' c f,) ees( bes' f bes,) des( bes' f bes,) c( aes' f aes,) bes( g' c, g) aes( f' c f,)
   | f'( des' aes des,) bes\rest g'( c, bes) bes\rest f'( bes, aes) f'( c' g c,) bes\rest f'( bes, aes) bes\rest e( aes, g)
   %50
-  | des'16( aes' f bes,) bes\rest ees( aes, ges) bes\rest des( ges, f) c'( g' ees g,) bes\rest c( f, ees) bes'\rest bes( ees, des)
-  | \voiceOne\slurDown c( a' fis a,) des( bes' g bes,) bes( g' ees bes) c( aes' f aes,) des( bes' g bes,) d( b' aes b,)
+  | des'16( aes' f bes,) bes\rest ees!( aes, ges) bes\rest des( ges, f) c'( g'! ees g,) bes\rest c( f, ees) bes'\rest bes( ees, des)
+  | \voiceOne\slurDown c( a' fis a,) des( bes' g bes,) bes( g' ees g,) c( aes' f aes,) des( bes' g bes,) d( b' aes b,)
   %52
   | b'4\rest ees,16( c' aes c,) aes'( f' des f,) g( ees' c ees,) b'\rest c( aes c,) b'\rest des( aes des,)
   | b'16\rest ees( aes, c,) aes'( f' c f,) c'( g' ees g,) c( aes' f aes,) des( bes' g bes,) ees( c' aes c,)
@@ -167,8 +167,8 @@ upperStaffA =   \relative c' {
   | bes4\rest aes'16( c aes c,) bes'( des bes des,) aes'( d aes d,) bes'( des bes d,) aes'( ees' aes, ees)
   | \voiceOne\slurDown \ottava #1 g16( e' g, e) aes( f' aes, f) aes( f' ees f,) a( fis' ees fis,) a( fis' ees fis,) bes( g' ees g,)
   %64
-  | \voiceTwo\slurUp bes16( g' ees g,) ces( aes' ees aes,) b( g' ees g,) c( aes' ees aes,) c( aes' fes aes,) des'( aeses fes beses,)
-  | c16( a' f a,) des( bes' f bes,) f'( bes f bes,) e( b' e, b) ees( b' ees, b) ees( c' ees, c)
+  | \voiceTwo\slurUp bes16( g' ees g,) ces( aes' ees aes,) b( g'! ees g,) c( aes' ees aes,) c( aes' fes aes,) des( aeses' fes beses,)
+  | c16( a' f a,) des( bes'! f bes,) f'( bes f bes,) e( b' e, b) ees( b' ees, b) ees( c' ees, c)
   %66
   | ees16( c' ges a,) \ottava #0 ges( ees' c ees,) f( des' bes des,) \ottava #1 des'(^\markup{"a tempo"} bes' e, g,) \ottava #0 f( des' bes des,) e( c' bes c,)
   | \ottava #1 ces'16( bes' ees, bes) \ottava #0 ees,( des' bes des,) ees( ces' aes ces,) \ottava #1 bes'( aes' d, aes) \ottava #0 d,( bes' d, bes) d( aes' d, aes)
@@ -183,9 +183,9 @@ upperStaffA =   \relative c' {
   | <ees c' aes'>4\arpeggio \voiceOne\slurDown ees16( c' aes c,) r f'( aes, f) r ees'( aes, ees) f( c' aes c,) fes( des' aes des,)
   %74
   | r16 ees'( ees, ges) r16 bes-4( des,-1 ges-2) ges-1( ees' bes ees,) f( des' bes des,) bes'\rest bes( ges des) bes'\rest c( ges ees)
-  | ees16( des' aes des,) c( aes' f c) bes'\rest c( f, c) bes'\rest g( e c) ees( g ees c) des( ees des c~)
+  | f16( des' aes des,) c( aes' f c) bes'\rest c( f, c) bes'\rest g( e c) ees( g ees c) des( ees des c~)
   %76
-  | \oneVoice\slurUp\tieUp <c aes'>4 <aes c>--( <f f'>-- <g ees'>-- <aes c>-- <aes bes des>--
+  | \voiceOne\slurUp\tieUp <c aes'>4 <aes c>--( <f f'>-- <g ees'>-- <aes c>-- <aes bes des>--
   | <aes c ees>4-- <aes des f>-- <bes c e aes>-- <aes ces f aes>--  <des ees g bes ees~>2--)
   <c aes' c ees>1.\fermata
   \bar "|."
@@ -204,7 +204,7 @@ upperStaffB =   \relative c' {
   | f'4 s16 g8 s f s16 f4 s16 f8 s e s16
   % page 2, gl begins
   | des4 s16 ees8 s8 des8 s16 c4 s16 c8 s8 bes8 s16
-  | \voiceTwo ces,4 des bes ces des d
+  | \voiceTwo c,4 des bes c des d
   %10
   \repeat unfold 2 {
     | s4 ees4 aes g s2
@@ -216,7 +216,7 @@ upperStaffB =   \relative c' {
   | e'4 s16 f8 s ees8 s16 fes4 s16 f8 s fes s16
   | ees4 s16 ees8 s des8 s16 des4 s16 des8 s c s16
   %18
-  | \voiceTwo d,4 ees bes c des ees
+  | \voiceTwo d,4 ees b c d ees
   | s4 g aes a c des
   %20
   | \voiceOne d4 f g aes g-> aes
@@ -226,7 +226,7 @@ upperStaffB =   \relative c' {
   | s4 c,4 des d f ges
   %24
   | g4 bes c des c des
-  | s4 c,4 des d f g
+  | s4 c,4 des d f ges
   %26
   | g4 bes c des d-> ees
   | c4 des c des c des
@@ -247,7 +247,7 @@ upperStaffB =   \relative c' {
   | s16*3 c16 s16*3 g16 s16*3 a16 s16*3 bes16 % time change to 4/4
   %38
   | s16*3 ces16 s16*3 g16 s16*3 aes16 s16*3 a16
-  | \voiceOne\slurDown b16\rest bes,( ees' bes') \slurUp fis,4--( g) c,4--( des) a--(
+  | \voiceOne\slurDown b16\rest g,( ees' bes') \slurUp fis4--( g) c,4--( des) a--(
   %40
   | bes4) fis--( g) fis--( g) fis--(
   | \once\stemDown f) g aes a bes \voiceTwo c
@@ -264,14 +264,14 @@ upperStaffB =   \relative c' {
   | aes'4 ees des c bes aes
   | f'4 s16 g8 s f s16 f4 s16 f8 s e s16
   %50
-  | d4 s16 ees8 s des s16 c4 s16 c8 s bes s16
+  | des4 s16 ees8 s des s16 c4 s16 c8 s bes s16
   | \voiceTwo c,4 des bes c des d
   %52
   | s4 ees aes g s2
   | s4 aes c c des ees
   %54
   | s4 \slurUp c,16( aes' f aes,) des4 d % one bar at 4/4
-  | s4 ees a g s2
+  | s4 ees a c s2
   %56
   | s4 a c c ees ees
   | c,16( a' f a,) des4 d ees
@@ -302,7 +302,7 @@ upperStaffB =   \relative c' {
   | \voiceTwo s4 ees, s16 f'8 s ees s16 f,4 fes
   %74
   | s4*2 g4 f s16 bes8 s c s16
-  | f4 c s s ees des
+  | f,4 c s s ees des
   %76
   | s1.*3
 }
@@ -391,7 +391,7 @@ midDynamics = {
   %50
   | s1. | s1.\p
   %52
-  | s1. | s2 s2\< s4 s16 s16\! s8
+  | s4 s4\p s1 | s2 s2\< s4 s16 s16\! s8
   %54
   | s16*3 s16\p s8 s16 s16\< s4 s8 s8\f
   | s4\p s4 s1
@@ -451,7 +451,7 @@ lowerStaffA = \relative c, {
   | <aes, aes,>4( ees') \voiceOne <aes aes'>2-- <ges ees'>--
   %15
   | <e, e,>4( b') <e e'>2-- a4( gis)
-  | \oneVoice c,,4 <aes'' c f aes>--( <g c e g>) des, <aes'' c f aes>( <aes des fes aes>)
+  | \oneVoice c,,4 <aes'' c f aes>--( <g c e g>) des, <aes'' c f! aes>( <aes des fes aes>)
   | ees,4 <g' c ees g>--( <g des' ees g>) aes, <aes' ees'>--( ees)
   %18
   | R1.
@@ -460,11 +460,11 @@ lowerStaffA = \relative c, {
   | g8 aes( b d e4--\noBeam f) g->( aes)
   | d,,4\rest ees8( d des[ c b c] ees fis g bes)
   %22
-  | b8( d \clef treble f fis g\noBeam aes4) a8-- a4->( bes)
-  | \clef bass d,,4\rest aes'8\( g ges[ f ees f] aes b c ees
+  | b8( d \clef treble f fis g\noBeam aes4) a8-- a4->( bes!)
+  | \clef bass d,,4\rest aes'8\( g ges[ f e f] aes b c ees
   %24
-  | \clef treble e8 g bes4~\) bes8[ a( bes c)] c4->( des)
-  | \clef bass ees,,4\rest  aes8\( g ges[ f e f] aes b c ees\)
+  | \clef treble e8 g! bes4~\) bes8[ a( bes c)] c4->( des)
+  | \clef bass ees,,4\rest  aes8\( g! ges[ f e f] aes b c ees\)
   %26
   | \clef treble e8( g bes b c\noBeam des4) d8-- d4->( ees!)
   | \clef bass des,,,8_( aes' f' aes \clef treble des[ f bes aes] f des \clef bass aes f)
@@ -483,12 +483,12 @@ lowerStaffA = \relative c, {
   | \voiceOne ees1.--\arpeggio
   %36
   | e2-- f2.--\arpeggio e4--
-  | \time 4/4 ees1~--\arpeggio % FIX-THIS-MAYBE: src has dotted whole after 4/4 time change
+  | \time 4/4 ees!1~--\arpeggio % FIX-THIS-MAYBE: src has dotted whole after 4/4 time change
   %38
   | ees2 d--\arpeggio
   | \oneVoice <des g, bes, ees,>4--\arpeggio <c a>_-_( <des bes>) \set doubleSlurs = ##t <ees, fis>( <g ees>) <ees c>--(
   %40
-  | <des c>)  \set doubleSlurs = ##f \voiceOne\slurDown \repeat unfold 2 { aes8.( ces16 bes4) } aes8.( ces16
+  | <des c>)  \set doubleSlurs = ##f \voiceOne\slurDown \repeat unfold 2 { aes8.( ces!16 bes4) } aes8.( ces!16
   | \oneVoice <bes ees,>4) d\rest d2\rest d\rest % FIX-THIS: slur end-point needs tweak
   %42
   | s1.
@@ -509,13 +509,13 @@ lowerStaffA = \relative c, {
   | ees4 c aes f\) \voiceOne\slurUp fes( ees)
   %54
   | \time 4/4 d4\rest d\rest d2\rest \time 3/2
-  | \oneVoice <f, f,>4^- c'4\( f a f' e
+  | \oneVoice <f, f,>4^> c'4\( f a f' e
   %56
-  | ees4 c a f\) \voiceOne\slurUp des->( c)
+  | ees!4 c a f\) \voiceOne\slurUp des->( c)
   | \time 4/4 d4\rest d\rest d2\rest \time 3/2
   %58
   | \oneVoice bes,4 f''( c' des ges f)
-  | r8 des( ees aes, f ees aes, ees' \voiceTwo ges4 aes)
+  | r8 des( c aes f ees aes, ees' \voiceTwo ges4 aes)
   %60
   | \oneVoice <f des,>\arpeggio( aes8 des des[ d] ees4 \clef treble bes'4 aes)
   | \clef bass r8 des,( c bes g des c g') \voiceOne\slurUp g'2
@@ -524,9 +524,9 @@ lowerStaffA = \relative c, {
   | \clef treble c,8( g' aes ees') aes,( c,4 b8) ees'( des <g, ees> bes,)
   %64
   | aes8( ees'4 ces'8) ges,( ees'4 c'8) fes,,8( des'4 des'8)
-  | \clef bass des,,8( bes' \clef treble f' des') \clef bass c,,( bes' \clef treble <e g> des') \clef bass f,,,( aes' \clef treble <ees' ges> c')
+  | \clef bass des,,8( bes' \clef treble f' des') \clef bass c,,( bes' \clef treble <e g> des') \clef bass f,,,( aes'! \clef treble <ees' ges> c')
   %66
-  | \clef bass \oneVoice <bes,,, f''>4\arpeggio \clef treble <des'' c'>8\arpeggio[( bes' f des a g)] \clef bass aes,,4 <bes'' c aes'>8( g')
+  | \clef bass \oneVoice <bes,,, f''>4\arpeggio \clef treble <des'' c'>8\arpeggio[( bes' f des aes g!)] \clef bass c,,4 <bes'' c aes'>8( g')
   | \voiceOne\slurDown f,,4 \clef treble <f'' bes>8[( aes ees ces \clef bass g f)] bes,4 s4
   %68
   | \oneVoice ees,4 f''8[( ees c g)] ees'[( des aes f)] des'[( c
@@ -543,7 +543,7 @@ lowerStaffA = \relative c, {
   %76
   | <aes, ees'>4) f'( des c <aes ees'> <f des'>
   | <ees ees'>4 <des des'> <c c'> <f, f'> <ees ees'>2)
-  <ees'' aes ees'>1.\fermata
+  \slashedGrace{aes8} <ees'' aes ees'>1.\fermata
 }
 
 lowerStaffB = \relative c'{
@@ -571,10 +571,10 @@ lowerStaffB = \relative c'{
   | ees'2 <aes b> <ees' c ees,>
   | ees,,,2 ees'1
   %22
-  | <aes' ees>2 <d b> <ees des>
+  | <aes' ees>2 <d b> <ees! des>
   | f,,,2 aes'1
   %24
-  | <des' aes>2 <g ees> <aes f>
+  | <des' aes>2 <g e> <a f>
   | aes,,,2 aes'1
   %26
   | <des' aes>2 <g e> <aes ges>
@@ -592,7 +592,7 @@ lowerStaffB = \relative c'{
   | <g' bes, ees,>4\arpeggio des\rest des2\rest des2\rest
   %36
   | r2 <bes' g c, c,>4\arpeggio des,4\rest des2\rest
-  | <aes' f,>4\arpeggio des,4\rest des2\rest
+  | <a' f,>4\arpeggio des,4\rest des2\rest
   %38
   | aes'2 <aes bes,>4\arpeggio r
   | s1.
@@ -636,7 +636,7 @@ lowerStaffB = \relative c'{
   | s1.
   | s1
   %70
-  | \slurDown aes,,4( ees') c'( ees, aes des
+  | \slurDown aes,,,4( ees'') c'( ees, aes des
   | bes4) aes,,-- <ees'' bes'>( ges bes beses
   %72
   | aes4) aes,-- g'2~( g4 ees4)
