@@ -26,7 +26,7 @@
     license = "Creative Commons Attribution-ShareAlike 4.0"
 
     mutopiatitle = "Prelude Op. 23, No. 10"
-    mutopiaopus = "Op.23"
+    mutopiaopus = "Op. 23"
     mutopiacomposer = "RachmaninoffS"
     mutopiainstrument = "Piano"
 
