@@ -1,17 +1,19 @@
 \version "2.18.2"
 
-% This arrangement for guitar duo was adapted from the piano edition,
-% Mutopia-2012/12/23-931 typeset by Stelios Samelis.  Efcharistó, Stelios. 
+% Acknowledgments:
+% This arrangement for guitar duo has been adapted from the piano edition that
+% was typeset by Stelios Samelis (Mutopia-2012/12/23-931).  Efcharistó, Stelios.
+% Thanks also to guitarist Dennis Burns for his proofreading and fingering edits.
 
 \header {
  title = "Für Elise"
  subtitle = "Clavierstuck in A Minor - WoO 59"
  subsubtitle = "Arranged for Guitar Duo"
  composer = "Ludwig van Beethoven"
- arranger = "Arr: D. Burns & J. J. Olson"
+ arranger = "Arr: J. J. Olson"
  style = "Classical"
  date = "1810"
- source = "Breitkopf & Härtel"
+ source = "Breitkopf & Härtel, 1888"
 
  maintainer = "Jeffrey Olson"          %            o_
  maintainerEmail = "gmail's jjocanoe"  %       (\___\/_____/)
@@ -22,7 +24,7 @@
  mutopiatitle = "Für Elise"
  mutopiainstrument = "2 Guitars"
 
- footer = "Mutopia-2015/10/30-1"
+ footer = "Mutopia-2015/10/31-1"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
 }
 
