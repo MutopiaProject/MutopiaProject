@@ -13,21 +13,20 @@
 	source = "Methodist Hymn Book, 1933, No. 648"
 	metre = "8.8.8.8. D."
 	meter = "8.8.8.8. D."
-	copyright = "Public Domain"
+	license = "Public Domain"
 	style = "Hymn"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
-	lastupdated = "2009/August/5"
- footer = "Mutopia-2009/08/05-97"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
-}
 
-% $Id: Uxbridge.ly,v 1.7 2009-08-05 03:58:04 peterc Exp $
+ footer = "Mutopia-2015/11/01-97"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
+}
 
 % fit onto one page
 #(set-global-staff-size 16)
 
-\version "2.12.0"
+\version "2.18.2"
 
 global={
 	\key d \major
@@ -252,20 +251,20 @@ VerseFour = \lyricmode {
 	And bright in ef -- ful -- gence di -- vine.
 }
 
-Words = \context Lyrics = "sop" <<
-	\context Lyrics = "sop-1" {
+Words = <<
+	\new Lyrics \lyricsto "sop" {
 		\set stanza = "1."
 		\VerseOne
 	}
-	\context Lyrics = "sop-2" {
+	\new Lyrics \lyricsto "sop" {
 		\set stanza = "2."
 		\VerseTwo
 	}
-	\context Lyrics = "sop-3" {
+	\new Lyrics \lyricsto "sop" {
 		\set stanza = "3."
 		\VerseThree
 	}
-	\context Lyrics = "sop-4" {
+	\new Lyrics \lyricsto "sop" {
 		\set stanza = "4."
 		\VerseFour
 	}
@@ -276,7 +275,7 @@ upper = \context Staff = "upper" <<
 	 \unset Staff.melismaBusyProperties
 	\global
 	\context Voice = "sop" {\voiceOne \sop}
-	\lyricsto sop \Words
+	\Words
 	\context Voice = "alto" {\voiceTwo \alto}
 >>
 
@@ -308,10 +307,7 @@ lower=\context Staff = "lower" <<
 	}
 
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 180 4)
-      }
+    \tempo 4 = 180
     }
 }
 
