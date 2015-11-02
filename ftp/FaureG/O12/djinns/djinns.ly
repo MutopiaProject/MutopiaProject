@@ -225,7 +225,7 @@ alto = \relative do' {
 	\global
 	\autoBeamOff
 	\dynamicUp
-	r1*2 |
+	R1*2 |
 	do4-.\pp r reb-.( \grace reb8) r4 |
 	r re-. mib-. r |
 	sib-. r sib-.( \grace sib8) r4 |
