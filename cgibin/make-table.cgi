@@ -119,11 +119,16 @@ until (eof CACHE) {
   if ($FORM{searchingfor} ne "")
   {
     @searchlist = split(/ /, $FORM{searchingfor});
+    my $keywords = join('|',
+                        $title,$composer,$opus,$lyricist,$instrument,
+                        $date,$style,$metre,$arranger,$source,$copyright,
+                        $id, $maintainer,$mainteremail,$maintainterweb,
+                        $extrainfo,$lilypondversion,$collections);
     foreach $searchitem (@searchlist)
     {
-      if (!((uc($title . $composer . $opus . $lyricist . $instrument . $date . $style . $metre . $arranger . $source . $copyright . $id . $maintainer . $maintaineremail . $maintainerweb . $extrainfo . $lilypondversion . $collections)) =~ $searchitem))
-      {
+      if (!(uc($keywords) =~ $searchitem)) {
         $go = 0;
+        last;               # logical AND so stop on failure
       }
     }
   }
