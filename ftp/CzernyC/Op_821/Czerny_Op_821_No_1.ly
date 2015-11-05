@@ -11,7 +11,7 @@
     opus	      =	"Op. 821, No. 1"
     mutopiaopus     = 	"Op. 821, No. 1"
     
-    source        	=	"Leipzig: Edition Peters, n.d.[1888]. Plate 6990-6993."
+    source        	=	"IMLSP; Leipzig: Edition Peters, n.d.[1888]. Plate 6990-6993."
     style         	=	"Technique"
     license       	=	"Public Domain"
     maintainer	=	"Manuel Castejon Limas"
@@ -37,10 +37,10 @@ upperStaff =   {
          <e''-3 >16 <g''-5 >16 f'' g'' <e''-3 >16 f'' <d''-2 >16 e'' <c''-1 >16 <c'''-5 >16 b'' c''' <a''-3 >16 b'' <g''-2 >16 a''		| %1
          <f''-1 >16 <a''-5 >16 g'' a'' <f''-3 >16 g'' e'' f'' d'' <f''-5 >16 e'' f'' <d''-3 >16 e'' c'' d''					| %2
          <b'-1 >16-\cresc <d''-5 >16 c'' d'' <b'-3 >16 c'' a' b' <g'-1 >16 <b'-5 >16 a' b' g' a' f' g'						| %3
-         <e'-1 >16 <g'-5 >16 f' g' e' f' d' e' <c'-1 >16 <e'-5 >16 d' e' c' d' b c'								| %4
+         <e'-1 >16 <g'-5 >16 f' g' e' f' d' e' <c'-1 >16 <e'-5 >16 d' e' c' d' b c'                                         | %4
         <>  \f <a-1 >16 <d'-3 >16 cis' <e'-4 >16 <d'-1 >16 f' e' <g'-4 >16 <f'-1 >16 a' gis' <b'-4 >16 <a'-1 >16 <d''-3 >16 cis'' <e''-4 >16 	| %5
-         <d''-1 >16 f'' e'' <g''-4 >16 <f'> a' gis' <b'> \ottava #1  <a'>16 d'' cis'' <e''> <d''> e'' f'' d''					| %6
-         <a''> g'' f'' e'' \ottava #0  <d'''-1 >16 <c'''-3 >16 b'' a'' <g''-4 >16 f'' e'' d'' <c''-3 >16 b' a' b'				| %7
+         <d''-1 >16 f'' e'' <g''-4 >16 <f''-1> a'' gis'' <b''-4> \ottava #1  <a''-1>16 d''' cis''' <e'''-4> <d'''-1> e''' f''' d'''					| %6
+         <a'''-5> g'''! f''' e''' \ottava #0  <d'''-1 >16 <c'''-3 >16 b'' a'' <g''-4 >16 f'' e'' d'' <c''-3 >16 b' a' b'				| %7
          c'' d'' c'' b' <c''-1 >16 e'' g'' c''' c''8-\staccato r8 r4  								        \bar "|." %8
 }
 
@@ -49,7 +49,7 @@ lowerStaff =  {
          <c' g'>4 r <e' g'> r           | %1
          <d' a'> r \clef bass <f a> r   | %2
          <g d'> r <b, d g> r            | %3
-         <g, c> r <e g> r               | %4
+         <g c> r <e g> r                | %4
          <f, a, d> r r2                 | %5
          <f a d'>4 r r2                 | %6
          <g c' e'>4 r <g d' f'> r       | %7
