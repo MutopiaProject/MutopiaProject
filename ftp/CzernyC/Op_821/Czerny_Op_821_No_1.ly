@@ -3,23 +3,22 @@
 
 \header {
     composer	      =	"Czerny, C."
-    mutopiacomposer = 	"CzernyC"
+    mutopiacomposer   = "CzernyC"
 
-    title	      =	"160 Eight-Measure Exercises"
+    title	        =	"160 Eight-Measure Exercises"
     mutopiatitle    = 	"160 Eight-Measure Exercises"
 
-    opus	      =	"Op. 821, No. 1"
+    opus	        =	"Op. 821"
     mutopiaopus     = 	"Op. 821, No. 1"
     
     source        	=	"IMLSP; Leipzig: Edition Peters, n.d.[1888]. Plate 6990-6993."
     style         	=	"Technique"
     license       	=	"Public Domain"
-    maintainer	=	"Manuel Castejon Limas"
-    maintainerWeb =	"https://github.com/mcasl/Czerny"
+    maintainer	    =	"Manuel Castejon Limas"
+    maintainerWeb   =	"https://github.com/mcasl/Czerny"
     mutopiainstrument = "Piano"
-    instrument	=	"Piano"
-
-    footer = "Mutopia-2001/01/01-0"
+    instrument	=	""
+    footer = "Mutopia-2015/10/5"
     copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
     tagline = ##f
 }
@@ -31,7 +30,7 @@ global = {
   \time 4/4
 }
 
-
+exerciseNumber = "1."
 
 upperStaff =   {
          <e''-3 >16 <g''-5 >16 f'' g'' <e''-3 >16 f'' <d''-2 >16 e'' <c''-1 >16 <c'''-5 >16 b'' c''' <a''-3 >16 b'' <g''-2 >16 a''		| %1
@@ -60,16 +59,10 @@ lowerStaff =  {
 \score {
     \context PianoStaff <<
         \set PianoStaff.midiInstrument = "acoustic grand"
+        \set PianoStaff.instrumentName = \markup \huge \bold \exerciseNumber  
         \new Staff = "upper" { \clef treble \global \upperStaff }
-        \new Staff = "lower" { \clef bass \global \lowerStaff }
+        \new Staff = "lower" { \clef bass   \global \lowerStaff }
     >>
     \layout{ }
-    \midi  { \tempo 4 = 70 }
+    \midi  { \tempo 4 = 110 }
 }
-
-
-
-
-       
-
-
