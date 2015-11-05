@@ -6,18 +6,18 @@
     mutopiacomposer   = "CzernyC"
 
     title	        =	"160 Eight-Measure Exercises"
-    mutopiatitle    = 	"160 Eight-Measure Exercises"
+    mutopiatitle        = 	"160 Eight-Measure Exercises"
 
     opus	        =	"Op. 821"
-    mutopiaopus     = 	"Op. 821, No. 1"
+    mutopiaopus         = 	"Op. 821, No. 1"
     
     source        	=	"IMLSP; Leipzig: Edition Peters, n.d.[1888]. Plate 6990-6993."
     style         	=	"Technique"
     license       	=	"Public Domain"
-    maintainer	    =	"Manuel Castejon Limas"
-    maintainerWeb   =	"https://github.com/mcasl/Czerny"
-    mutopiainstrument = "Piano"
-    instrument	=	""
+    maintainer	        =	"Manuel Castejon Limas"
+    maintainerWeb       =	"https://github.com/mcasl/Czerny"
+    mutopiainstrument   = "Piano"
+
     footer = "Mutopia-2015/10/5"
     copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
     tagline = ##f
@@ -32,8 +32,8 @@ global = {
 
 exerciseNumber = "1."
 
-upperStaff =   {
-         <> \p <e''-3 >16 <g''-5 >16 f'' g'' <e''-3 >16 f'' <d''-2 >16 e'' <c''-1 >16 <c'''-5 >16 b'' c''' <a''-3 >16 b'' <g''-2 >16 a''		| %1
+upperStaff =   { \tempo "Allegro"
+         <e''-3 >16 <g''-5 >16 f'' g'' <e''-3 >16 f'' <d''-2 >16 e'' <c''-1 >16 <c'''-5 >16 b'' c''' <a''-3 >16 b'' <g''-2 >16 a''		| %1
          <f''-1 >16 <a''-5 >16 g'' a'' <f''-3 >16 g'' e'' f'' d'' <f''-5 >16 e'' f'' <d''-3 >16 e'' c'' d''					| %2
          <b'-1 >16-\cresc <d''-5 >16 c'' d'' <b'-3 >16 c'' a' b' <g'-1 >16 <b'-5 >16 a' b' g' a' f' g'						| %3
          <e'-1 >16 <g'-5 >16 f' g' e' f' d' e' <c'-1 >16 <e'-5 >16 d' e' c' d' b c'                                         | %4
