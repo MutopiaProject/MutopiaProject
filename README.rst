@@ -1,3 +1,6 @@
+.. image:: https://badge.waffle.io/mcasl/MutopiaProject.png?label=ready&title=Ready 
+ :target: https://waffle.io/mcasl/MutopiaProject
+ :alt: 'Stories in Ready'
 The Mutopia Project
 ===================
 
