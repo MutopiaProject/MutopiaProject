@@ -1,26 +1,25 @@
-
-\version "2.18.0"
+\version "2.18.2"
 
 \header {
     composer	        =       "Czerny, C."
     mutopiacomposer     =       "CzernyC"
 
-    title	        =	"160 Eight-Measure Exercises"
-    mutopiatitle        = 	"160 Eight-Measure Exercises"
+    title	            =	"160 Eight-Measure Exercises"
+    mutopiatitle        = 	"160 Eight-Measure Exercises, No. 3"
 
-    opus	        =	"Op. 821"
+    opus	            =	"Op. 821"
     mutopiaopus         = 	"Op. 821, No. 3"
     
-    source        	=	"IMLSP; Leipzig: Edition Peters, n.d.[1888]. Plate 6990-6993."
-    style         	=	"Technique"
-    license       	=	"Public Domain"
+    source        	    =	"IMLSP; Leipzig: Edition Peters, n.d.[1888]. Plate 6990-6993."
+    style             	=	"Technique"
+    license          	=	"Public Domain"
     maintainer	        =	"Manuel Castejon Limas"
     maintainerWeb       =	"https://github.com/mcasl/Czerny"
     mutopiainstrument   =       "Piano"
 
-    footer = "Mutopia-2015/10/6"
-    copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
-    tagline = ##f
+ footer = "Mutopia-2015/11/06-1722"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 
