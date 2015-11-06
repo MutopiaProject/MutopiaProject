@@ -73,9 +73,10 @@ pedal = {
 
 \score {
   \new PianoStaff = "PianoStaff_pf" <<
-    \new Staff = "Staff_pfUpper" << \global \upperStaff >>
+    \set PianoStaff.instrumentName = \markup \huge \bold \exerciseNumber 
+    \new Staff    = "Staff_pfUpper" << \global \upperStaff >>
     \new Dynamics = "Dynamics_pf" \dynamics
-    \new Staff = "Staff_pfLower" << \global \lowerStaff >>
+    \new Staff    = "Staff_pfLower" << \global \lowerStaff >>
     \new Dynamics = "pedal" \pedal
   >>
   \layout { }
@@ -83,11 +84,9 @@ pedal = {
 
 \score {
   \new PianoStaff = "PianoStaff_pf" <<
+    \set PianoStaff.midiInstrument = "acoustic grand"
     \new Staff = "Staff_pfUpper" << \global \upperStaff \dynamics \pedal >>
     \new Staff = "Staff_pfLower" << \global \lowerStaff \dynamics \pedal >>
   >>
   \midi { \tempo 4 = 110 }
 }
-
-
-
