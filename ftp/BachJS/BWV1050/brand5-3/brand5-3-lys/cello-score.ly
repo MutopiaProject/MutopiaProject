@@ -1,20 +1,12 @@
-\version "2.4.0"
-\include "header.ly"
+\version "2.18.2"
 \include "cello.ly"
 
-#(set-global-staff-size 18)
+\header {
+  instrument = "Violoncello"
+}
 
-\score 
-{
-	\header
-	{
-		instrument = "Cello"
-	}
-	% 
-	\cello
-	\midi {}
- 	\layout 
-	{
-	}
-
+\score {
+  \cello
+  \midi {}
+  \layout {}
 }

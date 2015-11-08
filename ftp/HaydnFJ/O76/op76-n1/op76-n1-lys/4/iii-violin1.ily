@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIThirdMov =  \relative a' {
   \key bes \major
   \clef violin
@@ -6,9 +6,9 @@ violinIThirdMov =  \relative a' {
   \repeat volta 2 {
     a8(\f bes)
     | \stemDown a( bes) a( bes) d( bes) \stemNeutral
-    | f'4-| f-| a,8( bes)
+    | f'4-! f-! a,8( bes)
     | \stemDown a( bes) a( bes) d( bes) \stemNeutral
-    | f'4-| f-| a,8( bes)
+    | f'4-! f-! a,8( bes)
     | \stemDown a( bes) a( bes) g'( bes,) \stemNeutral
     | bes'( bes,) bes'( bes,) bes'( bes,)
     | bes'(\fz g) e( c) bes( g)
@@ -26,9 +26,9 @@ violinIThirdMov =  \relative a' {
     | g( es) c( es) g( f)
     | f( d) bes( d) f( es)
     | es( c) a( c) es( d)
-    | d( bes) g( bes) g'4-|
-    | g-| g-| g-|
-    | fis-| r fis,8( g)
+    | d( bes) g( bes) g'4-!
+    | g-! g-! g-!
+    | fis-! r fis,8( g)
     | fis( g) fis( g) bes( g)
 
     % 20
@@ -44,19 +44,19 @@ violinIThirdMov =  \relative a' {
     | \stemDown a( bes) a( bes) d( bes) \stemNeutral
 
     % 30
-    | f'4-| f-| a,8( bes)
+    | f'4-! f-! a,8( bes)
     | \stemDown a( bes) a( bes) d( bes) \stemNeutral
-    | g'4-| g-| b,8( c)
+    | g'4-! g-! b,8( c)
     | b( c) b( c) a'( c,)
     | bes'!( bes,) bes'( bes,) bes'( bes,)
     | bes'( g) es( c) a( f)
     | bes4 r r
-    | r r <bes g'>-|
-    | <bes f'>-| <bes f'>-| r
-    | r r <bes g'>-|
+    | r r <bes g'>-!
+    | <bes f'>-! <bes f'>-! r
+    | r r <bes g'>-!
 
     % 40
-    | <bes f'>-| <bes f'>-| a'8(\p bes)
+    | <bes f'>-! <bes f'>-! a'8(\p bes)
     | a( bes) a( bes) f( d)
     | fis( g) fis( g) es( c)
     | b( c) b( c) es( a,)
@@ -130,7 +130,7 @@ violinIThirdMov =  \relative a' {
     | a4( bes) c8( bes)
     | a4( bes) c8( d)
     | es4( c a)
-    | f4( es) \times 2/3 { c8( a f) }
+    | f4( es) \tuplet 3/2 { c8( a f) }
     | <c es>2\f\fermata r4
     | R2.
     | r4 r f'\p ~

@@ -1,3 +1,4 @@
+\version "2.18.2"
 staffUp = {
 	\change Staff = "RH"
 	\stemDown
@@ -21,7 +22,7 @@ soprano = {
 		R1 | s1*11 | 
 		r8 b a fis d' b e dis |
 		a gis f' e b 
-		\once \override NoteColumn #'force-hshift = #0.7
+		\once \override NoteColumn.force-hshift = #0.7
 		ais g' fis |
 		eis fis d b cis2 ~ |%15
 		cis16 cis d e fis g b, ais b2 ~ |
@@ -31,9 +32,9 @@ soprano = {
 		e d16 cis b cis d8 ~ d cis16 b ais b cis8 ~ |%20
 		cis b16 ais b4 ~ b16 ais b d cis4 |
 		b a gis \tieDown fis ~ |
-		\override Beam #'positions = #'(1.8 . 1.5)
+		\override Beam.positions = #'(1.8 . 1.5)
 		fis8 eis 
-		\revert Beam #'positions
+		\revert Beam.positions
 		fis4 fis16 gis a b cis d fis, eis | 
 		fis4 \tieUp fis' ~ fis8 e dis fis |
 		g2 ~ g8 fis eis gis  | %25
@@ -49,7 +50,7 @@ soprano = {
 		r8 fis d b g' fis b ais | %35
 		e dis g4 ~ g16 fis gis ais b g fis eis |
 		fis4 f ~ f16 e fis gis a b e, dis |
-		e e, g a b cis d fis e cis d fis g e fis ais |
+		e fis, g a b cis d fis e cis d fis g e fis ais |
 		b4 a gis fis ~ |
 		fis16 eis fis eis fis4 ~ fis16 a, b cis d e fis, eis |%40
 		fis8 fis' d b g' fis b ais |
@@ -67,7 +68,7 @@ soprano = {
 		r16 fis, gis a b cis fis, eis a4 r |
 		r gis' fis e |
 		dis 
-		\once \override Tie #'staff-position = #1
+		\once \override Tie.staff-position = #1
 		\tieDown cis ~ cis8 \tieUp bis cis4 ~ | %55
 		cis16 dis e fis gis a cis, bis e2 ~ |
 		e16 e fis gis a b dis, cis dis4 r |
@@ -112,13 +113,13 @@ alto = {
 		fis8. g16 fis e d b cis e d b fis8 fis' ~ |
 		fis8. g16 fis e dis cis b[ cis32 d cis8] ~ cis16 b a d |%10
 		gis,4 a 
-		\once \override Tie #'staff-position = #2.5
+		\once \override Tie.staff-position = #2.5
 		b2 ~ |
 		b4 a g2 |
 		\tieDown\stemDown fis2 eis8 dis r dis' |
-		\override Beam #'positions = #'(-2.5 . -2.5)
+		\override Beam.positions = #'(-2.5 . -2.5)
 		dis e 
-		\revert Beam #'positions
+		\revert Beam.positions
 		r4 r8 e d16 cis d b | 
 		cis4 b8 fis g2 ~ | %15
 		g8 cis, ~ cis4 fis gis ~ |
@@ -126,12 +127,12 @@ alto = {
 		r1 |
 		r8
 		\staffDown fis d b r2 | 
-		\once \override MultiMeasureRest #'staff-position = #4
+		\once \override MultiMeasureRest.staff-position = #4
 		R1 | %20
 		\staffUp r8 fis' d b g' fis b ais! |
 		e dis c' b fis eis d' cis |
 		bis cis a << {
-		  \once \override Stem #'transparent = ##t % magic to get a cross-voice tie
+		  \once \override Stem.transparent = ##t % magic to get a cross-voice tie
 		  \tieDown fis ~ s16 s8. s4
 		} \\ {fis8 gis2} >> |
 		a2 ~ a8 c b dis |
@@ -162,7 +163,7 @@ alto = {
 		r16 e' fis g a b e, dis g2 ~| 
 		g8 fis eis gis ~ gis16 eis fis gis a b d, cis |
 		dis4 eis8 
-		\once \override Tie #'staff-position = #-5
+		\once \override Tie.staff-position = #-5
 		gis ~ gis16 gis fis eis fis gis a cis |
 		b gis a cis b d cis b cis d e d cis b ais gis |
 		fis a gis bis cis dis e fis e dis r a gis b a gis | %55
@@ -171,7 +172,7 @@ alto = {
 		fis dis e gis fis cis b a b cis d cis b a gis fis |
 		e g fis e d cis d b cis4 r16 a' g fis |
 		e4 r8 
-		\once \override Tie #'staff-position = #-2
+		\once \override Tie.staff-position = #-2
 		cis' ~ cis16 
 		cis b ais b4 | %60
 		cis8 d r16 e d cis b ais b8 r16 fis' e dis |
@@ -249,11 +250,11 @@ tenore = {
 		cis bis a' gis fisis gis e cis | %55
 		dis2 ~ dis16 gis, ais bis cis dis fis, e |
 		fis4 r r2 |
-		\once \override MultiMeasureRest #'staff-position = #4
+		\once \override MultiMeasureRest.staff-position = #4
 		R1*2 |
-		\override Rest #'staff-position = #4
+		\override Rest.staff-position = #4
 		r2 r8 
-		\revert Rest #'staff-position
+		\revert Rest.staff-position
 		\clef "treble" \stemUp fis' d b | %60
 		g' fis b ais e dis c' b |
 		fis eis d' cis bis cis a fis |

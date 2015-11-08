@@ -1,14 +1,14 @@
-\version "2.16.0"
+\version "2.18.0"
 violaThirdMov =  \relative d' {
   \key bes \major
   \clef alto
 
   \repeat volta 2 {
     r4
-    | d-|\f f-| r
-    | c-| es-| r
-    | bes-| d-| r
-    | a-| c-| r
+    | d-!\f f-! r
+    | c-! es-! r
+    | bes-! d-! r
+    | a-! c-! r
     | bes bes bes
     | bes2.
     | g'4\fz g, c
@@ -22,13 +22,13 @@ violaThirdMov =  \relative d' {
     % 10
     | r r cis8( d)
     | cis( d bes d) r4
-    | r r b-|
-    | c-| es-| a,-|
-    | bes-| d-| g,-|
-    | a-| c-| fis,-|
-    | g-| bes-| g-|
-    | bes'-| bes-| g,-|
-    | a-| r r
+    | r r b-!
+    | c-! es-! a,-!
+    | bes-! d-! g,-!
+    | a-! c-! fis,-!
+    | g-! bes-! g-!
+    | bes'-! bes-! g,-!
+    | a-! r r
     | bes-. bes-. r
 
     % 20
@@ -44,19 +44,19 @@ violaThirdMov =  \relative d' {
     | cis( d) cis( d) f( d)
 
     % 30
-    | c!4-| c-| r
-    | d-| d-| d-|
-    | es-| es-| r
-    | <a, f'>-| <a f'>-| <a f'>-|
+    | c!4-! c-! r
+    | d-! d-! d-!
+    | es-! es-! r
+    | <a, f'>-! <a f'>-! <a f'>-!
     | <bes f'>2.
     | es4 g f8( es)
     | d4 r r
-    | r r <bes es>-|
-    | <bes d>-| <bes d>-| cis,8( d)
+    | r r <bes es>-!
+    | <bes d>-! <bes d>-! cis,8( d)
     | cis( d) cis( d) es( g)
 
     % 40
-    | bes4-| bes-| r
+    | bes4-! bes-! r
     | f'\p r r
     | g r r
     | es r r

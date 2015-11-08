@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 celloSecondMov =  \relative es {
   \key es \major
   \clef bass
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 8)
+  \tupletSpan 8
 
   es4( f es)
   | bes << { es,2\fermata } { s4-\< s8-\!-\> s8-\! } >>
@@ -29,9 +29,9 @@ celloSecondMov =  \relative es {
   % 20
   | bes4 r r
   | R2.*2
-  | r4 r \times 2/3 { e,16(\p f a) c-. a-. f-. }
-  | r4 r \times 2/3 { cis16( d f) a-. f-. d-. }
-  | r4 r \times 2/3 { d,16( f a) bes-. f-. d-. }
+  | r4 r \tuplet 3/2 { e,16(\p f a) c-. a-. f-. }
+  | r4 r \tuplet 3/2 { cis16( d f) a-. f-. d-. }
+  | r4 r \tuplet 3/2 { d,16( f a) bes-. f-. d-. }
   | es4 r r
   | f'2. ~
   | f4. f8[ f f]
@@ -53,9 +53,9 @@ celloSecondMov =  \relative es {
   | bes2.\trill ~
   | bes4 r r
   | es,( d es)
-  | e f ~ \times 2/3 { f16( as c) as-. f-. es-. }
-  | d4 es ~ \times 2/3 { es16( g bes) g-. es-. d-. } \noTupletNum
-  | \times 2/3 { c[ es g as bes c]
+  | e f ~ \tuplet 3/2 { f16( as c) as-. f-. es-. }
+  | d4 es ~ \tuplet 3/2 { es16( g bes) g-. es-. d-. } \noTupletNum
+  | \tuplet 3/2 { c[ es g as bes c]
     d,[ f as bes c d] 
   es,[ g bes es f g] }
   | as2. ~
@@ -91,7 +91,7 @@ celloSecondMov =  \relative es {
   | es2.
   | d4( cis d)
   | \tupletNum 
-  \repeat unfold 3 { \times 2/3 { es16[( d es g bes g)] } 
+  \repeat unfold 3 { \tuplet 3/2 { es16[( d es g bes g)] } 
   \noTupletNum }
   | es2.\fermata   
 

@@ -1,42 +1,48 @@
-#(ly:set-option 'old-relative)
-% Updated to Lilypond 2.4.2 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org>
-% Last changed on 31/Jan/2005
-\version "2.4.0"
+\version "2.18.2"
 
 \header {
     title =       "Etude 15"
     opus =        "Op. 60, No. 15"
     composer =    "Matteo Carcassi"
     piece =       "Allegro moderato"
-  
+
     mutopiatitle = "Etude 15"
     mutopiacomposer = "CarcassiM"
     mutopiaopus = "O 60"
     mutopiainstrument = "Guitar"
     date = "19th C."
-    source = "Not known"
+    source = "Mayence, B. Schott's Söhne"
+    % From Boije 94
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Jeff Covey"
     maintainerEmail = "jeff.covey@pobox.com"
-    maintainerWeb = "http://pobox.com/~jeff.covey/"
-    lastupdated = "2005/Jan/31"
 
-    footer = "Mutopia-2005/01/31-16"
-    tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ footer = "Mutopia-2015/08/18-16"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-globalA =  { \time 4/4 \skip 1*8 \bar ":|" }
+\paper {
+  % add space between composer/opus markup and first staff
+  markup-system-spacing #'padding = #3
+  % add a little space between composer and opus
+  markup-markup-spacing #'padding = #1.2
+  top-margin = #8
+  bottom-margin = #10
+}
+
+globalA =  { \time 4/4 \skip 1*8 \bar ":|." }
 globalB =  { \skip 1*34 \bar "|."           }
 midiStuff = \context Staff = "guitar" {
     \set Staff.midiInstrument = "acoustic guitar (nylon)"
     \transposition c  % guitar music actually sounds an
                       % octave lower than written.
 }
-  
+
 melodyA =  \relative c' {
   \stemUp
-  r16  e[ g e a e g e]  r  g[ c g d' g, c g]
+  r16 e[ g e a e g e]  r  g[ c g d' g, c g]
   r  c[ e c f c e c]  r  e[ g e a e g e]
   r  f[ b f c' f, b f]  r  g[ d' g, e' g, d' g,]
   r  g[ c g d' g, c g]  r  e[ g e a e g e]
@@ -72,11 +78,11 @@ melodyB =  \relative c' {
   r  e[ c' e,] r  e[ c' e,] r  g[ e' g, f' g, e' g,]
   r  fis[ d' fis,] r  fis[ d' fis,] r  b[ g' b, a' b, g' b,]
   r  c[ e c] r  c[ e c] r  e[ c' e, d' e, c' e,]
-  r  a,[ d a cis a d a] r  b[ g' b, a' b, g' b,]  
+  r  a,[ d a cis a d a] r  b[ g' b, a' b, g' b,]
   r  e,[ c' e,] r  e[ c' e,] r  g[ e' g, f' g, e' g,]
   r  fis[ d' fis,] r  fis[ d' fis,] r  b[ g' b, a' b, g' b,]
   r  c[ e c] r  c[ e c] r  e[ c' e, d' e, c' e,]
-  r  a,[ d a cis a d a] r  b[ g' b, a' b, g' b,]  
+  r  a,[ d a cis a d a] r  b[ g' b, a' b, g' b,]
   %
   r  e,[ c' e, e' e, c' e,] r  f[ b f g' f, b f]
   r  e[ e' e, d' e, c' e,] r  f[ d' f, c' f, b f]
@@ -88,17 +94,17 @@ melodyB =  \relative c' {
 
 bassA =  \relative c' {
   \stemDown
-  c2 \mf e 
+  c2 \mf e
   g_\markup { \italic "cresc." } c d \f f e c \>
    c,\! e a \< c  d,\! d \>  g\! \p g,4 \skip 4*1
 }
 bassB =  \relative c' {
   \stemDown
-  g'2 \mf g fis d \>  fis\! \mf d g g \< \! 
+  g'2 \mf g fis d \>  fis\! \mf d g g \< \!
   g \f g a a gis e, a a d dis \sf e cis \sf d d \sf g r
-  c,2 \mf e 
-  g_\markup { \italic "cresc." } c c \f cis a, d \>  g\! gis \sf a fis \sf g g, 
-  c4 \p c c2 \sf c4 \p c c2 \sf c4 c a'2 \mf f g, 
+  c,2 \mf e
+  g_\markup { \italic "cresc." } c c \f cis a, d \>  g\! gis \sf a fis \sf g g,
+  c4 \p c c2 \sf c4 \p c c2 \sf c4 c a'2 \mf f g,
   c4 \p c c2 \f c4 \p c c2 \sf c4 \p c a'2 \mf f g,
   c \mf c c_\markup { \italic "dim" } c c \mf c c_\markup { \italic "dim" } c c_\markup { \italic "cresc." } c4 e c \skip 4*1 c \f c c2
   \skip 2*1
@@ -123,24 +129,27 @@ bSectionMusic = <<
 %       \context Voice = melodyVoiceB { \fingeringsMelodyB }
 %       \context Voice = bassVoiceB { \fingeringsBassB }
 % >>
-        
+
 % dvi output =  without fingerings
 \score {
-    \context Staff = "guitar"     { 
-      \aSectionMusic 
+    \context Staff = "guitar"     {
+      \aSectionMusic
       \bSectionMusic
     }
   \layout {
-        linewidth = 18.0 \cm
+        line-width = 18.0 \cm
   }
 }
 
 \score {
-  { 
+  {
     \midiStuff
     \aSectionMusic
     \bSectionMusic
   }
-  \midi { \tempo 4=80 }
-}
 
+  \midi {
+    \tempo 4 = 80
+    }
+
+}

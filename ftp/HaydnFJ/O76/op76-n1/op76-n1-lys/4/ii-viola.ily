@@ -1,9 +1,9 @@
-\version "2.16.0"
+\version "2.18.0"
 violaSecondMov =  \relative g {
   \key es \major
   \clef alto
 
-  \override Staff.Hairpin   #'minimum-length = #3
+  \override Staff.Hairpin.minimum-length = #3
 
   g4( as g)
   | << { bes2.\fermata } { s4-\< s4-\!-\> s4-\! } >>

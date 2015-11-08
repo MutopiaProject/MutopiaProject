@@ -1,6 +1,4 @@
-% Updated to Lilypond 2.4.2 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org>
-% Last changed on 31/Jan/2005
-\version "2.4.0"
+\version "2.18.2"
 
 \header {
   filename =    "carcassi-op60-01.ly"
@@ -9,25 +7,24 @@
   opus =        "Op. 60 No. 1"
   composer =    "Matteo Carcassi (1792-1853)"
 
-%{ 
-i know that 
-  piece = "tempo"
-isn't correct, but it looks better than attaching it to the first
-note.
-%}
+  % i know that piece = "tempo" isn't correct, but it looks
+  % better than attaching it to the first note.
 
   % needed by mutopia:
 
   mutopiainstrument =  "Guitar"
-  mutopiacomposer = "CarcassiM"
+  mutopiacomposer =    "CarcassiM"
+  mutopiaopus =        "O 60"
+  mutopiasource =      "Unknown"
   date =               "19th C."
   style =              "Classical"
-  copyright =          "Public Domain"  
+  license =            "Public Domain"
   maintainer =         "Jeff Covey"
   maintainerEmail =    "jeff.covey@pobox.com"
-  lastupdated =        "2005/Jan/31"
-  footer =             "Mutopia-2005/01/31-13"
-  tagline =            "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+
+ footer = "Mutopia-2015/08/18-13"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 global =  { \time 4/4  \skip 1*43  \bar "|." }
@@ -39,7 +36,7 @@ midiStuff = {
 
 melody =  \relative c'' {
   \stemUp
-  
+
    c,8[ c' b a]  g[ f e d]
    c[ e'd c]  b[ a g f]
    e[ g' f e]  d[ c b a]
@@ -98,7 +95,7 @@ melody =  \relative c'' {
 
 bass =  \relative c' {
   \stemDown
-  
+
   c4
   \skip 4*3
   c
@@ -133,7 +130,7 @@ bass =  \relative c' {
   e2 r d r c g' a e f r e r
   g,4 r r2
   r8  g[ b d]  g[ f e d]
-  c2 g' c g c, fis g g c g c, b a f g g 
+  c2 g' c g c, fis g g c g c, b a f g g
   %37
   c'8
   \skip 8*7
@@ -145,28 +142,31 @@ bass =  \relative c' {
   \skip 4*3
   c r r2
   c4 r c r c2 r
-  
+
 }
 
-        
+
 \score {
-      \context Staff = "guitar" << 
-        \global 
+      \context Staff = "guitar" <<
+        \global
         \context Voice = "melody" { \melody }
         \context Voice = "bass"   { \bass   }
       >>
   \layout {
-        linewidth = 18.0 \cm
+        line-width = 18.0 \cm
   }
 }
 \score {
-      \context Staff = "guitar" << 
+      \context Staff = "guitar" <<
         \midiStuff
-        \global 
+        \global
         \melody
         \bass
       >>
+
   \midi {
-    \tempo 4=160
-  }
+    \tempo 4 = 160
+    }
+
+
 }

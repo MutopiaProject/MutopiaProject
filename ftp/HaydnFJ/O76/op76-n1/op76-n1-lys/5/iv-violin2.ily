@@ -1,44 +1,44 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIIFourthMov =  \relative e'' {
   \key d \major
   \clef violin
 
-  e8-|\f
-  | fis4-| r
-  | r r8 e-|
-  | fis4-| r
-  | r r8 e-|
-  | fis-| e-| fis-| e-|
+  e8-!\f
+  | fis4-! r
+  | r r8 e-!
+  | fis4-! r
+  | r r8 e-!
+  | fis-! e-! fis-! e-!
   | fis4 r8 a,-.\p
   | a-. a-. a-. a-.
   | \repeat unfold 32 a
-  | a[ a a] e'-|\f
-  | fis4-| r8 e-|
-  | fis4-| r8 e-|
-  | fis-| e-| fis-| e-|
+  | a[ a a] e'-!\f
+  | fis4-! r8 e-!
+  | fis4-! r8 e-!
+  | fis-! e-! fis-! e-!
 
   % 20
-  | fis4-| r8 cis-|
-  | d4-| r8 cis-|
-  | d4-| r8 b-|
-  | cis-| b-| cis-| b-|
+  | fis4-! r8 cis-!
+  | d4-! r8 cis-!
+  | d4-! r8 b-!
+  | cis-! b-! cis-! b-!
   | cis4 r8 e,-.\p
   | e-. e-. e-. e-.
   | \repeat unfold 32 e
-  | e[ e e] d'-|\f
-  | cis-| d-| cis-| d-|
-  | cis4 r8 a-|
-  | b-| a-| b-| a-|
-  | b4 r8 a-|
-  | b-| c-| b-| b-|
+  | e[ e e] d'-!\f
+  | cis-! d-! cis-! d-!
+  | cis4 r8 a-!
+  | b-! a-! b-! a-!
+  | b4 r8 a-!
+  | b-! c-! b-! b-!
 
   % 40
-  | b4. a8-|
-  | a-| bes-| a-| a-|
-  | a4. cis8-|
-  | d-| cis-| d-| g-|
-  | fis-| g-| fis-| e-|
-  | fis-| g-| fis-| fis-|
+  | b4. a8-!
+  | a-! bes-! a-! a-!
+  | a4. cis8-!
+  | d-! cis-! d-! g-!
+  | fis-! g-! fis-! e-!
+  | fis-! g-! fis-! fis-!
   | e4 r
   | R2*3
 
@@ -204,7 +204,7 @@ violinIIFourthMov =  \relative e'' {
   | b e d c b e d c
   | b c b a g c b a
   | g c b a g c b a
-  | g8-| b-. b-. b-.
+  | g8-! b-. b-. b-.
   | b-. b-. b-. b-.
   | e,4. a16( b)
   | cis8-. cis16( d) e8-. g,-.
@@ -214,14 +214,14 @@ violinIIFourthMov =  \relative e'' {
 
   % 210
   | e8-. e16( d) cis8-. e-.
-  | d4 r8 g8-|
-  | a4 r8 d,-|
-  | e4 r8 cis-|
-  | d4 r8 d-|
-  | cis( d cis) c-|
-  | b( c b) bes-|
-  | a( bes a) a-|
-  | a4. d8-|
+  | d4 r8 g8-!
+  | a4 r8 d,-!
+  | e4 r8 cis-!
+  | d4 r8 d-!
+  | cis( d cis) c-!
+  | b( c b) bes-!
+  | a( bes a) a-!
+  | a4. d8-!
   | d2 ~
 
   % 220
@@ -287,7 +287,7 @@ violinIIFourthMov =  \relative e'' {
   | fis4-. r8 cis'-.
   | d4-. r8 g-.
   | fis4-. r8 g-.
-  | fis-| g-| fis-| g-|
+  | fis-! g-! fis-! g-!
   | fis4 r
 
   % 290

@@ -1,9 +1,9 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIISecondMov =  \relative cis' {
   \key fis \major
   \clef violin
 
-  \override Staff.Hairpin   #'minimum-length = #5
+  \override Staff.Hairpin.minimum-length = #5
 
   r4
   | cis1(\p\<

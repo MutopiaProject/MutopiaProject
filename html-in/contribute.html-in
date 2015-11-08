@@ -165,7 +165,7 @@
 
 <h4>GitHub pull request</h4>
 
-<p>The LilyPond source for all the music in Mutopia, as well as the tools used to build the website itself, are <a href="https://github.com/chrissawer/The-Mutopia-Project/">stored in GitHub</a> - the music is in the ftp directory. To contribute to the project directly through GitHub, please <a href="https://help.github.com/articles/fork-a-repo">fork our repository</a> and <a href="https://help.github.com/articles/using-pull-requests">send us a pull request</a>. If you are likely to be contributing several pull requests, we recommend using a separate branch for each one.</p>
+<p>The LilyPond source for all the music in Mutopia, as well as the tools used to build the website itself, are <a href="https://github.com/MutopiaProject/MutopiaProject/">stored in GitHub</a> - the music is in the ftp directory. To contribute to the project directly through GitHub, please <a href="https://help.github.com/articles/fork-a-repo">fork our repository</a> and <a href="https://help.github.com/articles/using-pull-requests">send us a pull request</a>. If you are likely to be contributing several pull requests, we recommend using a separate branch for each one.</p>
 
 <h4>E-mail directly to the Mutopia team</h4>
 

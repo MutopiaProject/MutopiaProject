@@ -1,26 +1,34 @@
-% Updated to Lilypond 2.4.2 by Ruud van Silfhout <Ruud.vanSilfhout@mutopiaproject.org>
-% Last changed on 31/Jan/2005
-\version "2.4.0"
+\version "2.18.2"
 
 \header {
     title =       "Etude 3"
     opus =        "Op. 60, No. 3"
     composer =    "Matteo Carcassi"
-    
+
     mutopiatitle = "Etude 3"
     mutopiacomposer = "CarcassiM"
     mutopiaopus = "O 60"
     mutopiainstrument = "Guitar"
     date = "19th C."
-    source = "Not known"
+    source = "Mayence, B. Schott's Söhne"
+    % From Boije 94
     style = "Classical"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Jeff Covey"
     maintainerEmail = "jeff.covey@pobox.com"
-    maintainerWeb = "http://pobox.com/~jeff.covey/"
-    lastupdated = "2005/Jan/31"
-    footer = "Mutopia-2005/01/31-14"
-    tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+
+ footer = "Mutopia-2015/08/18-14"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
+}
+
+\paper {
+  % add space between composer/opus markup and first staff
+  markup-system-spacing #'padding = #3
+  % add a little space between composer and opus
+  markup-markup-spacing #'padding = #1.2
+  top-margin = #8
+  bottom-margin = #10
 }
 
 % {{{ global settings
@@ -29,9 +37,9 @@ global =  {
   \key a \major
   \time 4/4
   \skip 1*8
-  \bar ":|:"
+  \bar ":..:"
   \skip 1*16
-  \bar ":|"
+  \bar ":|."
 }
 midiStuff = {
   \set Staff.midiInstrument = "acoustic guitar (nylon)"
@@ -40,12 +48,12 @@ midiStuff = {
 }
 
 % }}}
-  
+
 % {{{ melody
 
 melody =  \relative c'' {
   \stemUp
-  
+
   % section a
   \skip 4*1  fis4 e
   \skip 4*2  fis e
@@ -55,7 +63,7 @@ melody =  \relative c'' {
   \skip 4*2  fis e
   \skip 4*2  e \skip 4*1  dis
   \skip 4*2  e, r
-  
+
   % section b
   \skip 4*1  fis' e
   \skip 4*2  gis fis
@@ -79,61 +87,61 @@ melody =  \relative c'' {
 % }}}
 % {{{ middle voice
 
-middlevoice =  \relative c'' {  
-  
-  % section a  
+middlevoice =  \relative c'' {
+
+  % section a
   \stemUp
-  \times 2/3 {  a,8[ a' cis] } 
+  \tuplet 3/2 {  a,8[ a' cis] }
   \stemDown
-  \times 2/3 {  fis[ a, cis ] } \times 2/3 {  e[ a, cis ] }
+  \tuplet 3/2 {  fis[ a, cis ] } \tuplet 3/2 {  e[ a, cis ] }
   \stemUp
-  \times 2/3 {  a,[ a' cis ] }
+  \tuplet 3/2 {  a,[ a' cis ] }
 
   \stemUp
-   gis,8*2/3[ b'8*2/3 d8*2/3] 
+   gis,8*2/3[ b'8*2/3 d8*2/3]
   \stemDown
-   fis8*2/3[ b,8*2/3 d8*2/3 ]  e8*2/3[ b8*2/3 d8*2/3 ] 
+   fis8*2/3[ b,8*2/3 d8*2/3 ]  e8*2/3[ b8*2/3 d8*2/3 ]
   \stemUp
    gis,,8*2/3[ b'8*2/3 d8*2/3 ]
 
-   e,,8*2/3[ b''8*2/3 d8*2/3 ] 
+   e,,8*2/3[ b''8*2/3 d8*2/3 ]
   \stemDown
-   a'8*2/3[ b,8*2/3 d8*2/3 ]  gis8*2/3[ b,8*2/3 d8*2/3 ] 
+   a'8*2/3[ b,8*2/3 d8*2/3 ]  gis8*2/3[ b,8*2/3 d8*2/3 ]
   \stemUp
    e,,8*2/3[ b''8*2/3 d8*2/3 ]
 
-   a,8*2/3[ cis'8*2/3 e8*2/3 ] 
+   a,8*2/3[ cis'8*2/3 e8*2/3 ]
   \stemDown
-   b'8*2/3[ cis,8*2/3 e8*2/3 ]  a8*2/3[ cis,8*2/3 e8*2/3 ] 
+   b'8*2/3[ cis,8*2/3 e8*2/3 ]  a8*2/3[ cis,8*2/3 e8*2/3 ]
   \stemUp
    a,,8*2/3[ cis'8*2/3 e8*2/3 ]
 
-   a,,8*2/3[ a'8*2/3 cis8*2/3 ] 
+   a,,8*2/3[ a'8*2/3 cis8*2/3 ]
   \stemDown
-   gis'8*2/3[ a,8*2/3 cis8*2/3 ]  fis8*2/3[ a,8*2/3 cis8*2/3 ] 
+   gis'8*2/3[ a,8*2/3 cis8*2/3 ]  fis8*2/3[ a,8*2/3 cis8*2/3 ]
   \stemUp
    a,8*2/3[ a'8*2/3 cis8*2/3 ]
 
-   ais,8*2/3[ g'8*2/3 cis8*2/3 ] 
+   ais,8*2/3[ g'8*2/3 cis8*2/3 ]
   \stemDown
-   fis8*2/3[ g,8*2/3 cis8*2/3 ]  e8*2/3[ g,8*2/3 cis8*2/3 ] 
+   fis8*2/3[ g,8*2/3 cis8*2/3 ]  e8*2/3[ g,8*2/3 cis8*2/3 ]
   \stemUp
    ais,8*2/3[ g'8*2/3 cis8*2/3 ]
 
-   b,8*2/3[ fis'8*2/3 a8*2/3 ] 
+   b,8*2/3[ fis'8*2/3 a8*2/3 ]
   \stemDown
    e'8*2/3[ fis,8*2/3 a8*2/3 ]
   \stemUp
-   b,8*2/3[ fis'8*2/3 a8*2/3 ] 
+   b,8*2/3[ fis'8*2/3 a8*2/3 ]
   \stemDown
    dis8*2/3[ fis,8*2/3 a8*2/3 ]
 
   \stemUp
-   e,8*2/3[ gis'8*2/3 b8*2/3 ] 
+   e,8*2/3[ gis'8*2/3 b8*2/3 ]
    e8*2/3[ gis,8*2/3 b8*2/3 ]
   \stemDown
   e,4 \skip 4*1
-  
+
   % section b
   \stemUp
    e,8*2/3[ gis'8*2/3 b8*2/3 ]
@@ -141,31 +149,31 @@ middlevoice =  \relative c'' {
    fis'8*2/3[ gis,8*2/3 b8*2/3 ]  e8*2/3[ gis,8*2/3 b8*2/3 ]
   \stemUp
    e,8*2/3[ gis8*2/3 b8*2/3 ]
-  
+
    e,,8*2/3[ a'8*2/3 cis8*2/3 ]
   \stemDown
    gis'8*2/3[ a,8*2/3 cis8*2/3 ]  fis8*2/3[ a,8*2/3 cis8*2/3 ]
   \stemUp
    e,8*2/3[ a8*2/3 cis8*2/3 ]
-  
+
    e,,8*2/3[ ais'8*2/3 cis8*2/3 ]
   \stemDown
    g'8*2/3[ ais,8*2/3 cis8*2/3 ]  fis8*2/3[ ais,8*2/3 cis8*2/3 ]
   \stemUp
    e,8*2/3[ ais8*2/3 cis8*2/3 ]
-  
+
    e,,8*2/3[ b''8*2/3 d8*2/3 ]
   \stemDown
    a'8*2/3[ b,8*2/3 d8*2/3 ]  gis8*2/3[ b,8*2/3 d8*2/3 ]
   \stemUp
    e,8*2/3[ b'8*2/3 d8*2/3 ]
-  
+
    eis,8*2/3[ b'8*2/3 d8*2/3 ]
   \stemDown
    a'8*2/3[ b,8*2/3 d8*2/3 ]  gis8*2/3[ b,8*2/3 d8*2/3 ]
   \stemUp
    eis,8*2/3[ b'8*2/3 d8*2/3 ]
-  
+
    fis,8*2/3[ a8*2/3 cis8*2/3 ]
   \stemDown
    a'8*2/3[ a,8*2/3 cis8*2/3 ]
@@ -173,7 +181,7 @@ middlevoice =  \relative c'' {
    fis,8*2/3[ a8*2/3 cis8*2/3 ]
   \stemDown
    a'8*2/3[ a,8*2/3 cis8*2/3 ]
-  
+
   \stemUp
    d,8*2/3[ d'8*2/3 fis8*2/3 ]
   \stemDown
@@ -182,7 +190,7 @@ middlevoice =  \relative c'' {
    d,8*2/3[ d'8*2/3 fis8*2/3 ]
   \stemDown
    bis8*2/3[ d,8*2/3 fis8*2/3 ]
-  
+
   \stemUp
    cis,8*2/3[ eis'8*2/3 gis8*2/3 ]
   \stemDown
@@ -194,13 +202,13 @@ middlevoice =  \relative c'' {
    a,,8*2/3[ a'8*2/3 cis8*2/3 ]
   \stemDown
    fis8*2/3[ a,8*2/3 cis8*2/3 ]  e8*2/3[ a,8*2/3 cis8*2/3 ]
-  \stemUp  
+  \stemUp
    a,8*2/3[ a'8*2/3 cis8*2/3 ]
-  
+
    a,8*2/3[ b'8*2/3 d8*2/3 ]
   \stemDown
    a'8*2/3[ b,8*2/3 d8*2/3 ]  gis8*2/3[ b,8*2/3 d8*2/3 ]
-  \stemUp  
+  \stemUp
    a,8*2/3[ b'8*2/3 d8*2/3 ]
 
    a,8*2/3[ gis'8*2/3 b8*2/3 ]
@@ -249,7 +257,7 @@ middlevoice =  \relative c'' {
 
 bass =  \relative c' {
   \stemDown
-  
+
   %section a
   a2. a4 gis2. gis4 e2. e4 a2. a4 a2. a4 ais2. ais4 b2 b e,2. \skip 4*1
   %section b
@@ -261,26 +269,30 @@ bass =  \relative c' {
 }
 
 % }}}
-        
+
 \score {
       \context Staff = "guitar" <<
-        \global 
+        \global
         \context Voice = "melody"      { \melody      }
         \context Voice = "middlevoice" { \middlevoice }
         \context Voice = "bass"        { \bass        }
       >>
   \layout {
-        linewidth = 18.0 \cm
+        line-width = 18.0 \cm
   }
 }
 
 \score {
-  \context Staff = "guitar" << 
+  \context Staff = "guitar" <<
     \midiStuff
-    \global 
+    \global
     \melody
     \middlevoice
     \bass
   >>
-  \midi { \tempo 4=60 }
+
+  \midi {
+    \tempo 4 = 60
+    }
+
 }

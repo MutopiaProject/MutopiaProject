@@ -15,7 +15,7 @@
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail.com"
 
- footer = "Mutopia-2015/04/03-2003"
+ footer = "Mutopia-2015/08/12-2003"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
@@ -41,7 +41,7 @@ upperVoice = \relative c' {
   <g b>4.\mf \appoggiatura c16 b8 ais b |
   d4 cis8 c4 r8 |
   <g b>4. \appoggiatura c16 b8 ais b |
-  a8 c16 b a g fis e d c b a |
+  a8 c16-! b-! a-! g-! fis-! e-! d-! c-! b-! a-! |
   <g' b>4. \appoggiatura c16 b8 ais b |
   \mbreak
 
@@ -63,7 +63,7 @@ upperVoice = \relative c' {
   <g b>4. \appoggiatura c16 b8 ais b |
   \mbreak
 
-  a8 c16 b a g fis e d c b a |
+  a8 c16-! b-! a-! g-! fis-! e-! d-! c-! b-! a-! |
   <g' b>4. \appoggiatura c16 b8 ais b |
   d4 cis8 c4 r8 |
   <g b>4. <a c> |
@@ -81,7 +81,7 @@ lowerVoice = \relative c {
   g8 b d g, b d |
 
   fis,8 a d fis, a d |
-  g,8 b d fis, b d |
+  g,8 b d fis, a d |
   g,8 b d g,4 r8 |
   fis8 a d fis, a d |
   g,8 b d g, b d |
@@ -99,8 +99,8 @@ lowerVoice = \relative c {
   <fis, d'>4 r8 r4 r8 |
   g8 b d g, b d |
   fis,8 a d fis, a d |
-  g,8 b d fis, b d |
-  g,8 c d g,4 r8
+  g,8 b d fis, a d |
+  g,8 b d g,4 r8
 }
 
 

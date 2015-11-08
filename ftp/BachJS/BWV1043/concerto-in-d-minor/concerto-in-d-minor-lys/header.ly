@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.16.2"
     title = 	"Concerto in D minor"
     subtitle =	"for two violins and strings"
     composer =	"Johann Sebastian Bach (1685-1750)"
@@ -14,12 +14,13 @@
     source =            "Bach Gesellschaft zu Leipzig, 1874"
 	% M200.a.13.23^3 in Cambridge University Library.
     style =             "Baroque"
-    copyright =         "Public Domain"    
+    license =           "Public Domain"    
 
     maintainer =       "David Chan"
     maintainerEmail =  "david@sheetmusic.org.uk"
     maintainerWeb =    "http://www.sheetmusic.org.uk/"
     moreInfo = "The maintainer has been unable to locate an out-of-copyright piano accompaniment.  If anyone would be willing to submit such an arrangement to Mutopia, the world will be very grateful."
 
- footer = "Mutopia-2013/01/06-3"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \teeny www. \normalsize MutopiaProject \teeny .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \teeny www. \normalsize LilyPond \teeny .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
+ footer = "Mutopia-2015/09/02-3"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f

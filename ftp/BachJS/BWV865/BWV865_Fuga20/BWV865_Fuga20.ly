@@ -1,4 +1,4 @@
-\version "2.7.40"
+\version "2.18.2"
 
 \header {
   title = "Fuga 20 - BWV 865"
@@ -10,12 +10,12 @@
   date = "18th Century"
   source = "Bach Gesselschaft Edition (1866)"
   style = "Classical"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2006/August/15"
-  version = "2.6.0"
- footer = "Mutopia-2006/08/17-807"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+
+ footer = "Mutopia-2015/08/21-807"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \score {
@@ -45,7 +45,7 @@
  c''8 c''16 b' c''8 d'' e''16 d'' c'' d'' e''8 f'' gis'8 e' c''8\rest a'8 b'16 c'' a' b' c'' d'' b' c''} \\
  { c'16 b c'4 d'8 e'16 d' e'4 f'8 ~ f'16 fis' e' fis' gis'8 a' b'4 e'8\rest a'8
  g'!4 ~ g'16 f' e' g' fis'4 gis' a'8 a' g'! fis' e' c'' b' a'
- g'16 fis' e' fis' g'8 f'8 ~ f'8 e'16 dis' e'4 ~ e'8 a'16 dis' e'2 ~ e'8 dis'
+ g'16 fis' e' fis' g'8 fis'8 ~ fis'8 e'16 dis' e'4 ~ e'8 a'16 dis' e'2 ~ e'8 dis'
  e'4. dis'8 e'8 c'8\rest c'4\rest d'8\rest e'8[ fis' g'] a'8 c'8\rest c'4\rest
  e'8\rest d'8[ e' fis'] g'8 e'8\rest e'4\rest r2 e'8\rest d''16 e'' d''8 c''
  b'8 b'16 c'' b'8 a' g'4 a'8 b' c''4 g'8\rest d''8 cis''8. d''16 e''4 ~
@@ -86,7 +86,7 @@
  f'16\rest e''16 d'' c'' b' a' gis' a' b'2 ~ b'8 e'16 f' e'8 d' c'8 c'16 d' c'8 bes
  a16 b! cis' b a8 g fis'8 b' d'8\rest e'8 d'16 c' e' d' c' b d' c' b8 c' d'16 c' e' d'
  c'8 d' e'16 d' f' e' d'8 e' f'4 ~ f'8 e' e'8\rest e'16\rest bes'16 a'4 ~ a'16 cis'' e'' d''
- c''4 ~ c''16 a' cis'' d'' e''16 cis'' d''8 f'8\rest a'16 g' f'8 bes' a' g' ~ g'8 f'16 e' f'16 g' a' f' d'4 d'4\rest g'2\rest R1 } >>
+ e''4 ~ e''16 a' cis'' d'' e''16 cis'' d''8 f'8\rest a'16 g' f'8 bes' a' g' ~ g'8 f'16 e' f'16 g' a' f' d'4 d'4\rest g'2\rest R1 } >>
  << { f''2\rest f''8\rest e''16 f'' e''8 d'' c''8 c''16 d'' c''8 bes' a'16 bes' c'' bes' a'8 g'
  f''8 a'' f''8\rest e'' d''16 cis'' e'' d'' cis'' b' d'' c'' b'8 cis'' d'' a' e''2 ~
  e''16 cis'' d'' f'' g''4 ~ g''16 e'' f'' a'' bes''4 ~ bes''16 g'' a'' c''' d''8 e''16 g'' c''4 ~ c''16 f' g' bes' ~
@@ -170,7 +170,7 @@
  d'8\rest b16 c' d' e' fis' gis' a4 b8\rest b8 } \\
  { a,8\rest c16 d c8 bes, a,8 a,16 bes, a,8 g, f,16 g, a, g, f,8 ees, d8 fis a,8\rest c8
  bes,16 a, c bes, a, g, bes, a, g,4. fis,8 g,1 ~ g,2 ~ g,8 e16 f g16 f e d cis8 c8\rest c4\rest c8\rest e'8[ cis' a]
- d8 b,8\rest b,4\rest b,8 a,8\rest a,4\rest d4_\fermata b,4\rest <dis a> b,4\rest
+ d8 b,8\rest b,4\rest d8 a,8\rest a,4\rest d4_\fermata b,4\rest <dis a> b,4\rest
  <e a>4 b,4\rest <e d'> b,4\rest c2\rest fis4 a,8\rest gis8 } >>
 << { s1 s1 \change Staff="up" \stemDown d'8[ \change Staff="down" \stemUp a16 b] cis'8 d' e'4 d'8\rest d'8
  g'4 d'8\rest f'16 e' d'4 d'8\rest d'16 e' f'8 e'16 d' e'8 f' e'2 } \\
@@ -183,10 +183,14 @@
 
  \layout {
    \context {
-   \Staff \override VerticalAxisGroup #'minimum-Y-extent = #'( -6 . 6 )
    }
  }
 
- \midi { \tempo 4 = 76 }
+ 
+  \midi {
+    \tempo 4 = 76
+    }
+
+
 
 }

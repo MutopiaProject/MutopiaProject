@@ -1,19 +1,12 @@
-\version "2.4.0"
-
-\include "header.ly"
+\version "2.18.2"
 \include "viola.ly"
 
+\header {
+  instrument = "Viola di ripieno"
+}
 
-\score 
-{
-	% 
-	\viola
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-	}
-
-}	
+\score {
+  \viola
+  \midi {}
+  \layout {}
+}

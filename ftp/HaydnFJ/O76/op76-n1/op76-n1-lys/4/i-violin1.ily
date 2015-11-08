@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIFirstMov =  \relative e' {
   \key bes \major
   \clef violin
@@ -8,16 +8,16 @@ violinIFirstMov =  \relative e' {
     | f4. a8 \acciaccatura c bes a bes d\)
     | f4.(  a,8 bes d f a)
     | bes4.( a8 g f es d)
-    | c4-| r d-| r
-    | es-| r r2
+    | c4-! r d-! r
+    | es-! r r2
     | r r4 b,(
     | c4. d8 es f a c)
     | es4.( b8 c d es fis)
 
     % 10
     | \acciaccatura a g4.( f!8 es d es c)
-    | bes4-| r c-| r
-    | d-| r r2
+    | bes4-! r c-! r
+    | d-! r r2
     | f2.(\p e4)
     | f2.( e4)
     | f2.( fis4)
@@ -33,7 +33,7 @@ violinIFirstMov =  \relative e' {
     | d bes' a bes f d' cis d bes f' g f es d c bes
     | a es' d es c d bes c a es d es c es bes es
     | a, g' f g es c' bes c a es' d es a, g' f es
-    | d8-. r d-| es-| f-| r d-| es-|
+    | d8-. r d-! es-! f-! r d-! es-!
     | f2( fis)\fz
     | g4 g8. g16 a4 a8. a16
     | <d, bes'>8 r <d d'> r <d bes'> r <d d'> r
@@ -62,11 +62,11 @@ violinIFirstMov =  \relative e' {
     | bes2(\< b)
 
     % 50
-    | c8-.\!\f r e-| f-| g-| r e-| f-|
-    | g-| r g-| a-| bes16 a g f e d c bes
-    | a8-. r a'-| bes-| 
-    \repeat unfold 2 { c-| r a[-. \grace { c32[( bes a)] } bes8]-. }
-    c f-| f-| f-|
+    | c8-.\!\f r e-! f-! g-! r e-! f-!
+    | g-! r g-! a-! bes16 a g f e d c bes
+    | a8-. r a'-! bes-! 
+    \repeat unfold 2 { c-! r a[-. \grace { c32[( bes a)] } bes8]-. }
+    c f-! f-! f-!
     | e16( f e f) d( e d e) c( d c d) bes( c bes c)
     | a( bes a bes) g( a g a) f4 es'
     | d2( e4 f)
@@ -92,8 +92,8 @@ violinIFirstMov =  \relative e' {
   | d4. e8 \acciaccatura g8 f8 e f gis\)
   | a4.\( cis8 \acciaccatura e d cis d f\)
   | gis4.( a8 g f e d)
-  | cis4-. r d-| r
-  | e-| r r2
+  | cis4-. r d-! r
+  | e-! r r2
   | r r4 b,(
   | c4. b8 c es! fis a)
   | c4.( b8 c es! fis a)
@@ -101,20 +101,20 @@ violinIFirstMov =  \relative e' {
   | c,4.( b8 c es a, c)
 
   % 80
-  | bes!4-.\f g'8-| a-| bes-| r g-| a-| % There is an additional r8 in the Kalmus edition
+  | bes!4-.\f g'8-! a-! bes-! r g-! a-! % There is an additional r8 in the Kalmus edition
   | bes16 c d c bes a g fis g f es d c bes a g
-  | fis8 r a'-| bes-| c-| r a-| bes-| 
+  | fis8 r a'-! bes-! c-! r a-! bes-! 
   | c16 d es d c bes a g fis a a, bes c es d c
   | bes8 r bes'16( a bes c) d8 r bes16( a bes c)
-  | d8-| d16( es) f8-| f16 g as4 <as,,, d>
-  | <g es'>16-| es'( d es) bes-. es-. as,-. es'-. 
-  g,-| es'( d es) bes-. es-. as,-. es'-.
-  | g,-| des'( c des c des c des) g,( c b c g bes a! bes)
-  | a-| f'( e f) c-. f-. bes,-. f'-. a,-| f'( e f) c-. f-. bes,-. f'-.
-  | a,!-| es'!( d es d es d es) a,( d cis d a c b c)
+  | d8-! d16( es) f8-! f16 g as4 <as,,, d>
+  | <g es'>16-! es'( d es) bes-. es-. as,-. es'-. 
+  g,-! es'( d es) bes-. es-. as,-. es'-.
+  | g,-! des'( c des c des c des) g,( c b c g bes a! bes)
+  | a-! f'( e f) c-. f-. bes,-. f'-. a,-! f'( e f) c-. f-. bes,-. f'-.
+  | a,!-! es'!( d es d es d es) a,( d cis d a c b c)
 
   % 90
-  | bes!-| g'( fis g) d-| bes'( a bes) g-| d'( cis d) bes-| g'( fis g)
+  | bes!-! g'( fis g) d-! bes'( a bes) g-! d'( cis d) bes-! g'( fis g)
   | fis8-. r a-. r c-. r fis,-. r
   | g-. r bes-. r d-. r d-. r
   | d4.(\fz es16 d) c4-. c-.
@@ -141,14 +141,14 @@ violinIFirstMov =  \relative e' {
   % 110
   | f4.(-\markup { \italic cresc. } a,8 bes d f a)
   | bes4.( a8 g f es d)
-  | c4-.\f r <f, d'>-| r
-  | <g, es' es'>-| r r2
+  | c4-.\f r <f, d'>-! r
+  | <g, es' es'>-! r r2
   | r r4 b(\p
   | c4. d8 es f a c)
   | es4.(-\markup { \italic cresc. } b8 c d es fis)
   | \acciaccatura a g4.( f!8 es d es c)
-  | <d, bes'>4\f r <a f' c'>-| r
-  | <bes f' d'>-| r r2
+  | <d, bes'>4\f r <a f' c'>-! r
+  | <bes f' d'>-! r r2
 
   % 120
   | f''2.(\p e4)
@@ -175,7 +175,7 @@ violinIFirstMov =  \relative e' {
   | f( c' des e,)
 
   % 140
-  | f8-| f16( e f e f e) f8-| f,16( e f e f e)
+  | f8-! f16( e f e f e) f8-! f,16( e f e f e)
   | f4 r8 f'-.\p g-. a-. bes-. c-.
   | d1 ~
   | d ~
@@ -189,10 +189,10 @@ violinIFirstMov =  \relative e' {
   % 150
   | d
   | es2(-\< e)
-  | f8-\!\f r c-| d-| es!-| r c-| d-| 
-  | es-| r c-| d-| es16 d es c bes a c es,
-  | d8-. r d-| es-| f-| r d[-. \grace { f32[( es d)] } es8]-.
-  | f-. r d[-. \grace { f32[( es d)] } es8]-. f8 bes-| bes-| bes-|
+  | f8-\!\f r c-! d-! es!-! r c-! d-! 
+  | es-! r c-! d-! es16 d es c bes a c es,
+  | d8-. r d-! es-! f-! r d[-. \grace { f32[( es d)] } es8]-.
+  | f-. r d[-. \grace { f32[( es d)] } es8]-. f8 bes-! bes-! bes-!
   | a16( bes a bes) g( a g a) f( g f g) es( f es f)
   | d( es d es) c( d c d) bes4 as'
   | g2( a!4 bes)
@@ -213,7 +213,7 @@ violinIFirstMov =  \relative e' {
   % 170
   | d-. r c-. r bes-. r a-. r
   | bes'-. r a-. r bes-. r a-. r
-  | bes\ff-| bes-| a-| a-| bes-| bes-| a-| a-| 
+  | bes\ff-! bes-! a-! a-! bes-! bes-! a-! a-! 
   | bes,16 bes' bes, bes' c, c' c, c' d, d' d, d' es, es' es, es'
   | \slashedGrace f,8 f'1\fermata
   | g,,1\p ~

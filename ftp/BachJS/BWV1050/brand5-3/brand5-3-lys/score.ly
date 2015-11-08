@@ -1,4 +1,4 @@
- \version "2.4.0"
+\version "2.18.2"
 
 \include "header.ly"
 \include "flute.ly"
@@ -11,81 +11,44 @@
 
 #(set-global-staff-size 13)
 
-\score 
-{
-	\header
-	{
-		instrument = "Ensemble"
-	}
-<<
- \context GrandStaff = Solos <<
-	 \context Staff = Flute	<<
-		\set Staff.instrument = \markup \smaller "Flauto traverso." %flute solo
-		%\set Staff.instr = "Fl"
- 		\flute
-		\set Staff.midiInstrument = "flute"
-		
-	>>
+\paper {
+  ragged-last-bottom = ##f
+}
 
-	 \context Staff = ViolinPrinciple <<
-		\set Staff.instrument = \markup \smaller "Violino principate." %violin solo
-		%\set Staff.instr = "Vl.I"
-                \set Staff.midiInstrument = #"violin"
-		\violinP 
-	 >>
+\score {
+  <<
+    \new GrandStaff <<
+      \new Staff \with {
+        instrumentName = \markup \smaller \center-column { "Flauto" "traverso." }
+        midiInstrument = "flute"
+      } \flute
+      \new Staff \with {
+        instrumentName = \markup \smaller \center-column { "Violino" "principate." }
+        midiInstrument = "violin"
+      } \violinP
+    >>
+
+    \new GrandStaff <<
+      \new Staff \with {
+        instrumentName = \markup \smaller \center-column { "Violino" "di ripieno." }
+        midiInstrument = "violin"
+      } \violin
+      \new Staff \with {
+        instrumentName = \markup \smaller \center-column { "Viola" "di ripieno." }
+        midiInstrument = "viola"
+      } \viola
+      \new Staff \with {
+        instrumentName = \markup \smaller "Violoncello."
+        midiInstrument = "cello"
+      } \cello
+      \new Staff \with {
+        instrumentName = \markup \smaller "Violone."
+        midiInstrument = "contrabass"
+      } \violone
+    >>
+    \harpsichordStaff
   >>
 
-  
- \context GrandStaff = Strings <<
-	
- 	\context Staff = ViolinMain <<
-		\set Staff.instrument = \markup \smaller { 
-			\column <
-				"Violino"
-				"di ripieno."
-			 > }
-		
-		%\set Staff.instr = "Vl"
-	 	\set Staff.midiInstrument = "violin"
-		\violin
-	>>
- 	
-	\context Staff = ViolaRip <<
-		\set Staff.instrument = \markup \smaller { 
-			\column <
-				"Viola"
-				"di ripieno."
-			 > }
-		%\set Staff.instr = "Va"
-	 	\set Staff.midiInstrument = "viola"
- 		\viola 
-	>>
-	 \context Staff = Cellos <<
-	 	\set Staff.instrument = \markup \smaller "Violoncello." 	%Cello
-		%\set Staff.instr = "Vn"
-		\set Staff.midiInstrument = "cello"
-		\cello  		
-	>>
-	 \context Staff = DoubleBass <<
-		\set Staff.instrument = \markup \smaller "Violone." %"Double Bass"
-		%\set Staff.instr = "B"
-	 	\set Staff.midiInstrument = "contrabass"
-		\violone
-	>>
->>
-	\harpsichordTa
-
->>
-
-
-
-	\layout 
-	{
-	}
-
-	\midi { 
-	\tempo 2=90
-	}
-
-
+  \layout {}
+  \midi { \tempo 4 = 120 }
 }

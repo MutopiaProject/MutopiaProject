@@ -1,9 +1,9 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIIFirstMov =  \relative a {
   \key d \major
   \clef violin
 
-  \override Staff.Hairpin   #'minimum-length = #5
+  \override Staff.Hairpin.minimum-length = #5
 
   r8
   | <a fis'>-.\p r <a fis'>-. 
@@ -61,16 +61,16 @@ violinIIFirstMov =  \relative a {
 
   % 40
   | g16 fis( a bes c a) d,4 bes'8 ~
-  | bes16( a c d es c) f,!8[\f r16 \lbcOne d-| f-| bes]-|
+  | bes16( a c d es c) f,!8[\f r16 \lbcOne d-! f-! bes]-!
   | d32( c) bes-. a-. g( f) es-. d-. c( bes) a-. bes-. 
-  c8[ r16 \lbcOne f-| a-| c]-|
+  c8[ r16 \lbcOne f-! a-! c]-!
   | es32( d)c-. bes-. a( g) f-. es-. d( c) bes-. a-.
-  bes8[ r16 \lbcOne d-| f-| bes]-|
+  bes8[ r16 \lbcOne d-! f-! bes]-!
   | d32( c) bes-. a-. g( f) es-. d-. c( bes) a-. bes-. 
-  c8[ r16 \lbcOne f-| a-| c]-|
+  c8[ r16 \lbcOne f-! a-! c]-!
   | es32( d)c-. bes-. a( g) f-. es-. d( c) bes-. a-.
-  bes8[ r16 \lbcOne bes'-| d-| f]-|
-  | <es, bes' g'>8-| <es bes' g'>-| r r4 r8
+  bes8[ r16 \lbcOne bes'-! d-! f]-!
+  | <es, bes' g'>8-! <es bes' g'>-! r r4 r8
   | c'8.(\p d16 c8) g'( f es)
   | d r r c r r
   | r4 r8 r4 f,8\f
@@ -80,7 +80,7 @@ violinIIFirstMov =  \relative a {
   | f8( a,) a bes4.
   | c8 r r r16 g'32( a) bes-. a-. g-. f-. e-. d-. c-. bes-.
   | a8 r r r16 e'32( f) g-. f-. e-. d-. cis-. bes!-. a-. g-.
-  | f16-| f32( g) a g f e d c bes a gis8 d' d
+  | f16-! f32( g) a g f e d c bes a gis8 d' d
   | cis r e[( f)] r a[(
   | g)] r cis[( d)] r f(
   | e) a,-. a-. a-. r r
@@ -158,22 +158,22 @@ violinIIFirstMov =  \relative a {
   % 110
   | e a e a e a g a g a g a
   | \repeat unfold 6 { fis a }
-  | g8-| g'-| r g,-| e'-| r
-  | d,-| fis'-| r cis,-| e'-| r
-  | d,-| fis'-| r r4 r8
+  | g8-! g'-! r g,-! e'-! r
+  | d,-! fis'-! r cis,-! e'-! r
+  | d,-! fis'-! r r4 r8
   | g8. fis16-. e-. d-. cis-. b-. a-. g-. fis-. e-.
-  | d8-| fis'-| r r4 r8
+  | d8-! fis'-! r r4 r8
   | g8. fis16-. e-. d-. cis-. b-. a-. g-. fis-. e-.
-  | d8-| a''-| r r4 r8
-  | d,,8-| d'-| r g,-| e'-| r
+  | d8-! a''-! r r4 r8
+  | d,,8-! d'-! r g,-! e'-! r
 
   % 120
-  | d,-| fis'-| r cis,-| e'-| r
+  | d,-! fis'-! r cis,-! e'-! r
   | d'8. cis16-. b-. a-. g-. fis-. e-. d-. cis-. b-.
-  | a8-| e''-| r r4 r8
+  | a8-! e''-! r r4 r8
   | d8. cis16-. b-. a-. g-. fis-. e-. d-. cis-. b-.
-  | a8-| e''-| r r4 r8
-  | a,,,-| d-| fis-| a-| d-| fis-|
+  | a8-! e''-! r r4 r8
+  | a,,,-! d-! fis-! a-! d-! fis-!
   | a4 r8 <d,, a' fis'>4 r8
   | <d a' fis'>4 r8 r4 r8    
 

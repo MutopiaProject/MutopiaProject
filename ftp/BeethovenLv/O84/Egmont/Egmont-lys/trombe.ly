@@ -1,17 +1,18 @@
-\version "2.4.0"
+\version "2.18.2"
+
+\include "defs.ily"
 
  trombe =  {
- \set Staff.instrument = "Trombe in F"
+ \set Staff.instrumentName = "Trombe in F"
  \set Staff.midiInstrument = "english horn"
  \clef treble
  \key c \major
  \time 3/2
- \override Staff.AccidentalPlacement   #'padding = #0.5
- << { <c' c''>1.\fermata } \\
- { \override DynamicLineSpanner   #'padding = #2.5 s2\f s4 s4\> s4 s4\! } >>
+ \moreAccidentalPadding
+ <c' c''>1.\fermata-\forteSforzato-\hideF
  R1. R1. R1. R1. R1. R1. R1. <c' c''>1.\ff
  << { c'2\staccato c'\staccato } \\ { c'2 c'2 } >> r2 r2 << { g'2 } \\ { g'2 } >> r2
- R1. R1. R1. R1. R1. << { R1. R1. } \\ { r2 g2\pp g r2 g2 g } >>
+ R1. R1. R1. R1. R1. << { R1. R1. } \\ { \posDynamicTxtD r2\pp g2_. g_. r2 g2 g } >>
  R1. R1. R1. R1. R1. R1. \bar "||"
 
  \time 3/4 R2. R2. R2. R2. R2. R2. R2. R2. R2. R2. R2.
@@ -43,7 +44,7 @@
  <g g'>4\ff <g g'> r8 <g g'> <g g'>4 <g g'> r8 <g g'> <g g'>4 <g g'> r r4 r r8 r^\fermata
  R2. R2. R2. R2. R2. R2. R2. R2.^\fermataMarkup \bar "||"
 
- \time 4/4 R1 R1 R1 R1 R1 R1 R1 <g g'>1\p
+ \time 4/4 R1 R1 R1 R1 R1 R1 R1 <g g'>1-\hideP_\pCresc
  << { c''2 ~ c''8( g') e'\staccato g'\staccato c''2 ~ c''8( g') e'\staccato g'\staccato
  c''8( g') e'\staccato g'\staccato c''( g') e'\staccato g'\staccato
  c''8( g') e'\staccato g'\staccato c''( g') e'\staccato g'\staccato } \\
@@ -60,12 +61,12 @@
  <c'' d''>4 <c'' d''>8 <c'' d''> <g' d''>4 <g' d''>8 <g' d''> <c' c''>4 r r2 R1
  R1 R1 R1 R1 R1 R1
  <c' c''>4\ff <c' c''> <c' c''>8 r r4 r2 <g g'>4 <g g'> <c' c''>4 r <g g'> r <g g'> r <g g'> r
- <g g'>8 <g g'>16 <g g'> <g g'>8 <g g'> <g g'> <g g'> <g g'> <g g'>
- <g g'>8 <g g'> <g g'> <g g'> <g g'> <g g'> <g g'> <g g'>
+ <g g'>8 <g g'>16 <g g'> <g g'>8 <g g'> <g g'>[ <g g'>] <g g'> <g g'>
+ <g g'>8[ <g g'>] <g g'> <g g'> <g g'>[ <g g'>] <g g'> <g g'>
  <g g'>4 <g g'> <g g'> <g g'> <g g'> <g g'> <g g'> <g g'>
  <c' c''>4 r <g g'> r <g g'> r <g g'> r
- <g g'>8 <g g'>16 <g g'> <g g'>8 <g g'> <g g'> <g g'> <g g'> <g g'>
- <g g'>8 <g g'> <g g'> <g g'> <g g'> <g g'> <g g'> <g g'>
+ <g g'>8 <g g'>16 <g g'> <g g'>8 <g g'> <g g'>[ <g g'>] <g g'> <g g'>
+ <g g'>8[ <g g'>] <g g'> <g g'> <g g'>[ <g g'>] <g g'> <g g'>
  <g g'>4 <g g'> <g g'> <g g'> <g g'> <g g'> <g g'> <g g'>
  <c' c''>2. <g g'>4 <c' c''>4\staccato <g g'>4\staccato
  << { e'4\staccato } \\ { e'4 } >> <g g'>4\staccato

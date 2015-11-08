@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.18.2"
 
 \include "flautoone.ly"
 \include "flautotwo.ly"
@@ -15,119 +15,134 @@
 \include "violoncello.ly"
 \include "basso.ly"
 
+
+%#(set-default-paper-size "letter")
+#(set-global-staff-size 16)
+
 \header {
   title = "Overture to Egmont - Opus 84"
   composer = "Ludwig van Beethoven"
-  mutopiatitle = "Overture to Egmont - Opus 84"
+  mutopiatitle = "Overture to Egmont"
   mutopiacomposer = "BeethovenLv"
-  mutopiapoet = "Ludwig van Beethoven"
-  mutopiainstrument = "Orchestra"
-  date = "19th Century"
-  source = "Dover Publications - Breitkopf and Hartel"
+  mutopiaopus = "Op. 84"
+  mutopiainstrument = "Orchestra: Flutes, Oboe, Clarinet, Bassoon, Horns, Trumpets, Timpani, Violins, Viola, 'Cello, Bass"
+  date = "1810"
+  source = "Breitkopf and Hartel"
   style = "Classical"
-  copyright = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2005/March/29"
-  
-  footer = "Mutopia-2005/04/10-547"
-  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+  maintainerEmail = "1zante@otenet.gr"
+  license = "Public Domain"
+
+ footer = "Mutopia-2015/09/03-547"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
-#(set-global-staff-size 16)
+\paper {
+  top-margin = 15 \mm
+  ragged-bottom = ##t
+}
 
 \score {
 
   {
- \context StaffGroup <<
+ \new StaffGroup <<
 
- \context GrandStaff = "firstsystem" <<
+ \new GrandStaff = "firstsystem" <<
 
- \context Staff = "one" {
- \set Staff.midiMaximumVolume = 1
- \flautoone
-}
-
- \context Staff = "two" {
- \set Staff.midiMaximumVolume = 1
- \flautotwo
-} >>
-
- \context Staff = "three"  {
- \set Staff.midiMaximumVolume = 1
- \oboi
+ \new Staff = "one" 
+    {
+      \set Staff.midiMaximumVolume = 1
+      \flautoone
  }
 
- \context Staff = "four" {
- \transposition ais 
- \set Staff.midiMaximumVolume = 1
- \clarinetti
-}
+ \new Staff = "two" {
+   \set Staff.midiMaximumVolume = 1
+   \flautotwo
+   }
+ >>
 
- \context Staff = "five" {
- \set Staff.midiMaximumVolume = 1
- \fagotti
+ \new Staff = "three"  {
+   \set Staff.midiMaximumVolume = 1
+   \oboi
  }
 
- \context GrandStaff = "secondsystem"
+ \new Staff = "four" {
+   \transposition ais 
+   \set Staff.midiMaximumVolume = 1
+   \clarinetti
+}
+
+ \new Staff = "five" {
+   \set Staff.midiMaximumVolume = 1
+   \fagotti
+ }
+
+ \new GrandStaff = "secondsystem"
  <<
- \context Staff = "six" {
- \set Staff.midiMaximumVolume = 1
- \transposition f 
- \cornif
+ \new Staff = "six" {
+   \set Staff.midiMaximumVolume = 1
+   \transposition f 
+   \cornif
  }
 
- \context Staff = "seven"  {
- \set Staff.midiMaximumVolume = 1
- \transposition dis 
- \cornies 
+ \new Staff = "seven"  {
+   \set Staff.midiMaximumVolume = 1
+   \transposition dis 
+   \cornies 
  }
  >>
 
- \context Staff = "eight"  {
- \set Staff.midiMaximumVolume = 1
- \transposition f 
- \trombe
+ \new Staff = "eight"  {
+   \set Staff.midiMaximumVolume = 1
+   \transposition f 
+   \trombe
  }
 
- \context Staff = "nine" {
- \set Staff.midiMaximumVolume = 1
- \timpani
+ \new Staff = "nine" {
+   \set Staff.midiMaximumVolume = 1
+   \timpani
  }
 
- \context GrandStaff = "thirdsystem" <<
+ \new GrandStaff = "thirdsystem" <<
 
- \context Staff = "ten"  {
- \set Staff.midiMaximumVolume = 1
- \violinoone
+ \new Staff = "ten"  {
+   \set Staff.midiMaximumVolume = 1
+   \violinoone
  }
 
- \context Staff = "eleven"  {
- \set Staff.midiMaximumVolume = 1
- \violinotwo
- } >>
+ \new Staff = "eleven"  {
+   \set Staff.midiMaximumVolume = 1
+   \violinotwo
+ } 
+ >>
 
- \context Staff = "twelve"  {
- \set Staff.midiMaximumVolume = 1
- \viola
+ \new Staff = "twelve"  {
+   \set Staff.midiMaximumVolume = 1
+   \viola
  }
 
- \context GrandStaff = "fourthsystem" <<
+ \new GrandStaff = "fourthsystem" <<
 
- \context Staff = "thirteen"  {
- \set Staff.midiMaximumVolume = 1
- \violoncello
+ \new Staff = "thirteen"  {
+   \set Staff.midiMaximumVolume = 1
+   \violoncello
  }
 
- \context Staff = "fourteen"  {
- \set Staff.midiMaximumVolume = 1
- \basso
- } >>
+ \new Staff = "fourteen"  {
+   \set Staff.midiMaximumVolume = 1
+   \basso
+ }
+ >>
 
 >>
 }
 
- \layout {}
+ \layout { }
 
- \midi { \tempo 4 = 84 }
+ 
+  \midi {
+    \tempo 4 = 84
+    }
 
 }

@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 celloFirstMov =  \relative d, {
   \key d \minor
   \clef bass
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     d8\f d'-. d-. d-. r d-. d-. d-.

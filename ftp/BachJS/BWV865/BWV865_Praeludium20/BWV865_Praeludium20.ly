@@ -1,4 +1,4 @@
-\version "2.7.40"
+\version "2.18.2"
 
 \header {
   title = "Praeludium 20 - BWV 865"
@@ -10,12 +10,13 @@
   date = "18th Century"
   source = "Bach Gesselschaft Edition (1866)"
   style = "Classical"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2006/February/15"
-  version = "2.6.0"
- footer = "Mutopia-2006/08/17-670"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  lastupdated = "2015/August/22"
+
+ footer = "Mutopia-2015/09/01-670"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \score {
@@ -57,21 +58,25 @@
  a16 b c'8 dis' c' a fis a c' dis' e' e16 fis g a b8 r r r4. s1 s8 s1 s8 s1 s8 g8 b d' f' d' b g b g
  c'4. ~ c'16 a g f e d << { c16 d e f g e a4. ~ a16 c d e f g a g f e d c d4. ~ d16 e d c b, a, g, a, g, f, e, d, } \\
  { c4. ~ c2. ~ c4. ~ c4. b,16 s16 s8 s2  } >> c,8 r r e'16 d' c' b c' g e g f e d c
- fis8 fis fis fis fis fis fis fis fis g r r bes16 a g fis a d bes, d c bes, a, g, cis8 cis cis cis cis cis cis cis cis
+ fis8 fis fis fis fis fis fis fis fis g r r bes16 a g fis g d bes, d c bes, a, g, cis8 cis cis cis cis cis cis cis cis
  d16 e f8 a f d a, d f a d16 e f8 gis f d b, d f gis
  c4. a16 gis a gis a gis a8 e c f,4. a16 gis a gis a gis a8 b c' d8 e f b, c d gis, a, b, c,4. ~ c,8 c d e d e
  << { a,4. ~ a,16 b, cis d e f g8 f e d4. ~ d16 a b cis' d' e' f'8 e' d' e'2. } \\
- { a,2. ~ a,4. a,4. ~ a,16 a ~ a4 ~ a4. ~ a2. } >>
+ { a,2. ~ a,4. ~ a,4. ~ a,16 a ~ a4 ~ a4. ~ a2. } >>
  \bar "|."
 }
 >>
 
  \layout {
    \context {
-   \Staff \override VerticalAxisGroup #'minimum-Y-extent = #'( -6 . 6 )
    }
  }
 
- \midi { \tempo 4 = 106 }
+ 
+  \midi {
+    \tempo 4 = 106
+    }
+
+
 
 }

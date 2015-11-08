@@ -1,47 +1,47 @@
-\version "2.16.0"
+\version "2.18.0"
 celloFourthMov =  \relative a {
   \key d \major
   \clef bass
 
-  a8-|\f
-  | d,4-| r
-  | r r8 a'-|
-  | d,4-| r
-  | r r8 a'-|
-  | d,-| a'-| d,-| a'-|
+  a8-!\f
+  | d,4-! r
+  | r r8 a'-!
+  | d,4-! r
+  | r r8 a'-!
+  | d,-! a'-! d,-! a'-!
   | d,4 r
   | R2*5
   | r4 r8 a'16(\p g)
   | fis8-. fis16( e) d8-. e-.
   | fis16( g fis e) d8-. a'16( g)
   | fis8-. fis16( e) d8-. e-.
-  | fis4( d8)-. a'-|\f
-  | d,4-| r8 a'-|
-  | d,4-| r8 a'-|
-  | d,-| a'-| d,-| a'-|
+  | fis4( d8)-. a'-!\f
+  | d,4-! r8 a'-!
+  | d,4-! r8 a'-!
+  | d,-! a'-! d,-! a'-!
 
   % 20
-  | d,4-| r8 fis-|
-  | b,4-| r8 fis'-|
-  | b,4-| r8 e-|
-  | a,-| e'-| a,-| e'-|
+  | d,4-! r8 fis-!
+  | b,4-! r8 fis'-!
+  | b,4-! r8 e-!
+  | a,-! e'-! a,-! e'-!
   | a,4 r
   | R2*5
   | r4 r8 e'16(\p d)
   | cis8-. cis16( b) a8-. b-.
   | cis16( d cis b) a8-. e'16( d)
   | cis8-. cis16( b) a8-. b-.
-  | cis4( a8)-.\noBeam e'-|\f
-  | a,-| e'-| a,-| e'-|
-  | a,4 r8 d-|
-  | g,!-| d'-| g,-| d'-|
+  | cis4( a8)-.\noBeam e'-!\f
+  | a,-! e'-! a,-! e'-!
+  | a,4 r8 d-!
+  | g,!-! d'-! g,-! d'-!
   | g,4 r
   | R2*3
-  | r4 r8 e''-|
-  | d-| e-| d-| ais-|
-  | b-| ais-| b-| cis-|
-  | d-| cis-| d-| dis-|
-  | e-| e-.\p e-. e-.
+  | r4 r8 e''-!
+  | d-! e-! d-! ais-!
+  | b-! ais-! b-! cis-!
+  | d-! cis-! d-! dis-!
+  | e-! e-.\p e-. e-.
   | e-. e-. e-. e-.
   | \repeat unfold 16 e
   | e\f e e e
@@ -182,19 +182,19 @@ celloFourthMov =  \relative a {
   % 191
   | a-\< a a a
   | a, a a a-\!
-  | d,4\f r8 a''-|
-  | d4-| r8 a-|
-  | d4-| r8 a-| 
-  | d-| a-| d-| a-|
-  | d4-| r8 fis,-|
-  | b-| fis-| b-| fis-|
-  | b4-| r8 d,-|
+  | d,4\f r8 a''-!
+  | d4-! r8 a-!
+  | d4-! r8 a-! 
+  | d-! a-! d-! a-!
+  | d4-! r8 fis,-!
+  | b-! fis-! b-! fis-!
+  | b4-! r8 d,-!
 
   % 200
-  | g-| d-| g-| d-|
-  | g4-| r8 b,-|
-  | e-| b-| e-| b-|
-  | e-| e-. e-. e-.
+  | g-! d-! g-! d-!
+  | g4-! r8 b,-!
+  | e-! b-! e-! b-!
+  | e-! e-. e-. e-.
   | e-. e-. g-. gis-.
   | a-. a-. a-. a-.
   | a a a a
@@ -207,7 +207,7 @@ celloFourthMov =  \relative a {
   | fis4 r
   | R2*6
   | r4 r8 b
-  | fis( eis fis) fis-|
+  | fis( eis fis) fis-!
 
   % 220
   | g4.( gis8)-.
@@ -270,7 +270,7 @@ celloFourthMov =  \relative a {
   | a,
   | \repeat unfold 6 { d4 r8 a'-. }
   | d,4-. r8 a-.
-  | d,-| a'-| d,-| a'-|
+  | d,-! a'-! d,-! a'-!
   | d,4 r
 
   % 290

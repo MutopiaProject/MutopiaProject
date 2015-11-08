@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIFirstMov =  \relative g'' {
   \key c \major
   \clef violin
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     g8-.\f
@@ -41,7 +41,7 @@ violinIFirstMov =  \relative g'' {
     fis8.(\trill\fz e32 fis) g8-. g-.
     | fis8.(\trill\fz e32 fis) g8-. g-. 
     fis8.(\trill\fz e32 fis) g8-. b-.
-    | \times 4/6 { c16[\ff a fis d c a] } \times 4/6 { fis[ a c d fis a] } c8 r r
+    | \tuplet 6/4 { c16[\ff a fis d c a] } \tuplet 6/4 { fis[ a c d fis a] } c8 r r
     << { b,8( a4. b8) } \\ { g8\p ~ g fis16 e fis8 gis } >> <c a>4 r8 e-.\fz
     | cis4( d8) c-.\fz ais4( b8) a-.\fz
     | fis4( g8) e'-.\fz g,4( a8) fis-.
@@ -150,7 +150,7 @@ violinIFirstMov =  \relative g'' {
     | cis8.(\trill b32 cis) d8 \grace { c16( } b16)( a32 b) 
     c8 \grace { g16( } fis16)( e32 fis) g8 g'
     | a4\trill b\trill c\trill d8-. e-.
-    | \repeat unfold 2 { \times 4/6 { f16[ d b g b d] } } f8 r r\fermata e,-.\p
+    | \repeat unfold 2 { \tuplet 6/4 { f16[ d b g b d] } } f8 r r\fermata e,-.\p
     | d4.( e8) f4 r8 a-.\fz
     | fis4( g8) f-.\fz dis4( e8) d-.\fz
 

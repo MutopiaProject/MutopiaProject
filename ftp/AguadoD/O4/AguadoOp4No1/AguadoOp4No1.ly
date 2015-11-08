@@ -1,19 +1,24 @@
-\version "2.14.2"
+\version "2.18.2"
 
 \header {
   mutopiatitle = "Six Petites Pièces, No. 1"
   mutopiacomposer = "AguadoD"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
+  source = "Mainz: B. Schott"
+  % source = "Statens musikbibliotek - The Music Library of Sweden"
+  % http://urn.kb.se/resolve?urn=urn:nbn:se:statensmusikverk-4033
+  date = "1830"
   title = "Six Petites Pièces, No. 1"
   composer = "Dionisio Aguado"
   instrument = "Guitar"
   opus = "Op. 4, No. 1"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
-  maintainerEmail = "glenl at glx.com"
- footer = "Mutopia-2011/09/21-1783"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+  maintainerEmail = "glenl.glx at gmail.com"
+
+ footer = "Mutopia-2015/08/04-1783"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \layout {
@@ -31,16 +36,16 @@ mUpperVoice = \relative c'' {
     g~ g8  f16 e f e d c |
     c4 \grace { d16[ c b] } c8. e16 g,4 |
     g8. a16 b8[ c] d e |
-    g4( g16 f ) e f  e4 |
+    g4 g16( f ) e f  e4 |
     d8. c16 a'4 c,4 |
     b8. d16 g8[ g] fis f |
     f16( e ) c a g4 \grace { a16[ g fis g] } b8. a16 |
     g4 r r |
   }
   \repeat volta 2 {
-    \times 2/3 { g'16([ a ) g] } \times 2/3 { f[ e d] } cis2 |
+    \tuplet 3/2 { g'16([ a ) g] } \tuplet 3/2 { f[ e d] } cis2 |
     d16[ d32( cis ) d16 e] f[ f32 e f16 g] a4 |
-    \times 2/3 { f16([ g ) f] } \times 2/3 { e[ d c] } b2 |
+    \tuplet 3/2 { f16([ g ) f] } \tuplet 3/2 { e[ d c] } b2 |
     c16[ c32( b ) c16 d] e[ e32( d ) e16 f] g4 |
     c,8..[ e64 g] c4 < gis d b > |
     < a c, >2 < a ees c >4 |
@@ -48,7 +53,7 @@ mUpperVoice = \relative c'' {
     < f b >4 < e c' > r |
   }
 }
-	      
+
 mLowerVoice = \relative c {
   \voiceTwo
   \repeat volta 2 {
@@ -182,9 +187,10 @@ vLowerVoice = \relative c {
 %%%
 \score {
   <<
-    \new Staff = "minuet"
-    <<
-      \set Staff.instrumentName = #"MINUET."
+    \new Staff = "minuet" \with {
+      midiInstrument = #"acoustic guitar (nylon)"
+      instrumentName = #"MINUET."
+    } <<
       \clef "treble_8"
       \time 3/4
       \mergeDifferentlyHeadedOn
@@ -193,13 +199,17 @@ vLowerVoice = \relative c {
     >>
   >>
   \layout {}
+  \midi {
+    \tempo 4 = 100
+  }
 }
 
 \score {
   <<
-    \new Staff = "valse"
-    <<
-      \set Staff.instrumentName = #"VALSE."
+    \new Staff = "valse" \with {
+      midiInstrument = #"acoustic guitar (nylon)"
+      instrumentName = #"VALSE."
+    } <<
       \clef "treble_8"
       \time 3/8
       \mergeDifferentlyHeadedOn
@@ -209,41 +219,7 @@ vLowerVoice = \relative c {
     >>
   >>
   \layout {}
-}
-
-%%%
-%%% MIDI
-%%%
-\score {
-  \unfoldRepeats {
-    <<
-      \time 3/4
-      \set Staff.midiInstrument = #"acoustic guitar (nylon)"
-      \context Voice = "mUpperVoice" \mUpperVoice
-      \context Voice = "mLowerVoice" \mLowerVoice
-    >>
-  }
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-    }
-  }
-}
-
-\score {
-  \unfoldRepeats {
-    <<
-      \time 3/8
-      \set Staff.midiInstrument = #"acoustic guitar (nylon)"
-      \vUpperVoice
-      \vLowerVoice
-   >>
-  }
-  \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-    }
+    \tempo 4 = 100
   }
 }

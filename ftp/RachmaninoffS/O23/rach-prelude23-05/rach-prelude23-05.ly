@@ -112,7 +112,7 @@ dyn =
   mutopiacomposer = "RachmaninoffS"
   mutopiainstrument = "Piano"
 
- footer = "Mutopia-2015/03/25-2001"
+ footer = "Mutopia-2015/09/28-2001"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
@@ -242,7 +242,7 @@ RHone = \relative c' {
   \voiceTwo
   s8 <g b d g>16[  q q8] s r <g b d>16[ <g b es>] q[ <g b e> q8] |
   s8 <f b d f>16[  q q8] s r <g b c>16[ <g b cis>] q[ <g b d> q8] |
-  r8 <g b es>16[   q q8] r r <d g d>16[ q q8] r |
+  r8 <g b es>16[   q q8] r r <d g d'>16[ q q8] r |
   r8 <cis g' cis>16[ q q8] r s <c a' c> s <h f' h> |
   s8 <c es g c>16[ q q8] s r <c es g>16[ <c es as>] q[ <c es a> q8] |
   s8 <es b>16[     q q8] s r <c es f>16[ <c es fis>] q[ <c es g> q8] |

@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 celloFourthMov =  \relative d' {
   \key d \minor
   \clef bass
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     r8 
@@ -234,7 +234,7 @@ celloFourthMov =  \relative d' {
   | d-. r
   | r a
   | \repeat unfold 3 { \grace { d,16[( a'] } d2) ~ d }
-  | \repeat unfold 2 { \times 2/3 { d,8-. fis-. a-. d-. a-. fis-. } }
+  | \repeat unfold 2 { \tuplet 3/2 { d,8-. fis-. a-. d-. a-. fis-. } }
   | d4 r
   | <d a' d> r
   | <d a' d> r8

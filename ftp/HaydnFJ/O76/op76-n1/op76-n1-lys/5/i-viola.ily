@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violaFirstMov =  \relative d' {
   \key d \major
   \clef alto
@@ -60,7 +60,7 @@ violaFirstMov =  \relative d' {
   | \repeat unfold 6 <c es> \repeat unfold 6 <bes d>
   | \repeat unfold 6 <bes d> <es, c'> \repeat unfold 5 <c' es>
   | \repeat unfold 6 <c es> \repeat unfold 6 <bes d>
-  | <bes es>8-| <bes es>-| r r4 r8
+  | <bes es>8-! <bes es>-! r r4 r8
   | g'8.(\p as16 g8) es( f g)
   | f r r es' r f,\f
   | bes8.( a16 bes8) c(\(-\> a16)-\! f( a c)\)
@@ -70,7 +70,7 @@ violaFirstMov =  \relative d' {
   | a8 r f ~ f16 e32( f) g-. f-. e-. d-. c-. bes-. a-. g-.
   | f8 r a' g4.
   | f e
-  | d16-| f32( g) a-. g-. f-. e-. d-. c-. bes-. a-. gis4.
+  | d16-! f32( g) a-. g-. f-. e-. d-. c-. bes-. a-. gis4.
   | a8 r cis[( d)] r f[(
   | e)] r e[( f)] r d(
   | a') a,-. a-. a-. r r
@@ -159,10 +159,10 @@ violaFirstMov =  \relative d' {
   % 120
   | a4 r8 g'4 r8
   | d,8. e16-. fis-. g-. a-. b-. cis-. d-. e-. fis-.
-  | g8-| cis,,-| r r4 r8
+  | g8-! cis,,-! r r4 r8
   | d8. e16-. fis-. g-. a-. b-. cis-. d-. e-. fis-.
-  | g8-| cis,,-| r r4 r8
-  | fis'-| d-| a'-| fis-| d-| a-|
+  | g8-! cis,,-! r r4 r8
+  | fis'-! d-! a'-! fis-! d-! a-!
   | fis4 r8 <d a' d>4 r8
   | <d a' d>4 r8 r4 r8
 

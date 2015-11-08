@@ -1,7 +1,7 @@
 % -*- LilyPond -*-
 % vim: ft=lilypond :
 
-\version "2.16.0"
+\version "2.18.0"
 
 markingsI = {}
 markingsII = {}
@@ -21,8 +21,8 @@ markingsIV = {}
 \layout {
   \context {
     \Score
-    \override BarNumber #'font-size = #1
-    \override BarNumber #'padding = #3
+    \override BarNumber.font-size = #1
+    \override BarNumber.padding = #3
   }
 }
 

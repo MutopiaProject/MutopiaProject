@@ -115,7 +115,7 @@ corrente =  {
     e''8 ais'16 b'16 cis''8 e''8 fis''16 e''16 dis''16 cis''16 |
     dis''8 fis''16 g''16 a''8 fis''8 e''16 dis''16 cis''16 b'16 |
     a'16 fis'16 g'16 b'16 e''16 g''16 b''16 e''16 b'8 dis''8 |
-    e''16 b'16 c''16 a'16 g'16 e''16 f'16 dis''16   e'8
+    e''16 b'16 c''16 a'16 g'16 e''16 fis'16 dis''16   e'8
     }
     \repeat volta 2 {
     b'8 |
@@ -322,7 +322,7 @@ bouree =  {
 
 %  opus = "BWV 1013"
 
-  copyright = "Public Domain"
+  license = "Public Domain"
   enteredby = "js"
   source = "IMSLP"
 
@@ -337,7 +337,7 @@ bouree =  {
     maintainer = "Jacob Shapiro"
     maintainerEmail = "js@yashi.org"
     maintainerWeb = "http://yashi.org"
- footer = "Mutopia-2008/08/22-1528"
+ footer = "Mutopia-2015/08/13-1528"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
   }
 

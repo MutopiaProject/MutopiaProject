@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIFirstMov =  \relative d' {
   \key g \major
   \clef violin
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   <d b' g'-.>4-\f r <d d' a'-.> r
   | <d d' b'-.> r r

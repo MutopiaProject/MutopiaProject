@@ -1,9 +1,9 @@
-\version "2.14.2"
+\version "2.18.2"
 
 \header {
   enteredby = 	"Allen Garvin"
   maintainer = 	"Allen Garvin"
-  copyright = 	"Public Domain"
+  license = 	"Public Domain"
   filename = 	"anna-magdalena-05.ly"
   title = 	"Menuet"
   opus = 	"BWV Anh. 115"
@@ -11,7 +11,6 @@
   		%This piece has been attributed to Christian Petzold
   style =	"Baroque"
   source =	"Bach-Gesellschaft"
-  lastupdated =	"2011/Sep/20"
 
   mutopiainstrument = "Harpsichord, Piano, Clavichord"
   mutopiatitle =      "Menuet"
@@ -19,8 +18,9 @@
   mutopiaopus =       "BWV Anh. 115"
   maintainerEmail =   "AGarvin@tribalddb.com"
 
- footer = "Mutopia-2011/10/11-76"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2015/08/21-76"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 voiceone =  \relative c''' {
@@ -49,11 +49,11 @@ voiceone =  \relative c''' {
     >> |
   }
   \repeat "volta" 2 { 
-    d4  bes8[ c d e!] |
+    d'4  bes8[ c d e!] |
     f4 g a |
     bes  g8[ a bes g] |
     a4  g8[ a] f4 |
-    f8[ g a bes c d] |
+    f,8[ g a bes c d] |
     ees4 d\mordent c |
     f bes, a |
     bes2. |
@@ -127,10 +127,7 @@ voicetwo =  \relative c' {
   \layout{  }
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 140 4)
-      }
+    \tempo 4 = 140
     }
 }
 

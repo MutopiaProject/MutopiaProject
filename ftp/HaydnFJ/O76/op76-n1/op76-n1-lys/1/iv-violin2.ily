@@ -1,16 +1,16 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIIFourthMov =  \relative g' {
   \key g \minor
   \clef violin
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
-    \times 2/3 { g8(\f fis g) }
-    | bes!4-. g-. d-. \times 2/3 { c'8( d c) }
-    | es4-. c-. fis,-. \times 2/3 { d'8( es c) }
-    | bes4-. \times 2/3 { bes8( c a) } \noTupletNum g4-. d-.
+    \tuplet 3/2 { g8(\f fis g) }
+    | bes!4-. g-. d-. \tuplet 3/2 { c'8( d c) }
+    | es4-. c-. fis,-. \tuplet 3/2 { d'8( es c) }
+    | bes4-. \tuplet 3/2 { bes8( c a) } \noTupletNum g4-. d-.
     | \repeat unfold 2 { es4(-\trill d8) r }
     | \acciaccatura d8 \afterGrace es1(\trill {d16[ es])}
     | d4-. d'-. r2
@@ -26,20 +26,20 @@ violinIIFourthMov =  \relative g' {
     | r es-. es-. r
     | r bes-. bes-. r
     | R1
-    | r2 r4 \times 2/3 { f'8(\f e f) }
-    | bes-. r \times 2/3 { f( e f) } bes-. r \times 2/3 { f-. e-. f-. }
-    | \times 2/3 { bes[-. a-. bes-.] f-.[ e-. f]-. bes[-. a-. bes]-. f[-. e-. f]-. }
+    | r2 r4 \tuplet 3/2 { f'8(\f e f) }
+    | bes-. r \tuplet 3/2 { f( e f) } bes-. r \tuplet 3/2 { f-. e-. f-. }
+    | \tuplet 3/2 { bes[-. a-. bes-.] f-.[ e-. f]-. bes[-. a-. bes]-. f[-. e-. f]-. }
 
     % 20
     | bes1 ~
     | bes2 <g bes>
     | <f a>4 r <g bes>2
     | <f a>4 r <bes, g'>2
-    | <a f'>4-. r r \times 2/3 { f'8-.\p g-. f-. }
+    | <a f'>4-. r r \tuplet 3/2 { f'8-.\p g-. f-. }
     | bes4-. f-. d-. a'-.
     | bes( c d) c-.
-    | bes r r \times 2/3 { a8-. bes-. c-. }
-    | f,4 r r \times 2/3 { a8-. bes-. c-. }
+    | bes r r \tuplet 3/2 { a8-. bes-. c-. }
+    | f,4 r r \tuplet 3/2 { a8-. bes-. c-. }
     | f,4 r r2
 
     % 30
@@ -68,7 +68,7 @@ violinIIFourthMov =  \relative g' {
 
     % 50
     | f
-    | \times 2/3 { f8[-\< f f] f[ f f] f[ f f] f[ f f]-\! }
+    | \tuplet 3/2 { f8[-\< f f] f[ f f] f[ f f] f[ f f]-\! }
     | <bes, g'>1\ff
     | d2( es4) a,-.
     | bes-. des,2(\fz des4)-.
@@ -120,7 +120,7 @@ violinIIFourthMov =  \relative g' {
   % 90
   | as( bes c des)
   | c r r2
-  | r4 \tupletNum \times 2/3 { es,8( f es) } \noTupletNum as4-. es-.
+  | r4 \tupletNum \tuplet 3/2 { es,8( f es) } \noTupletNum as4-. es-.
   | ces-. bes-. ces-. bes'-.
   | as1-\> ~
   | << { as } { s4 s2.-\! } >>
@@ -136,21 +136,21 @@ violinIIFourthMov =  \relative g' {
   | a
   | d! ~
   | << { d1 } { s2.-\< s4-\! } >>
-  | cis4 \times 2/3 { e8(\f fis e) } a!4-. e-.
-  | cis-. r r \times 2/3 { e8( fis e) }
+  | cis4 \tuplet 3/2 { e8(\f fis e) } a!4-. e-.
+  | cis-. r r \tuplet 3/2 { e8( fis e) }
   | a4-. e-. c!-. gis'-.
-  | a-.\fz b-. c!-.\fz \times 2/3 { e,8( f! e) }
+  | a-.\fz b-. c!-.\fz \tuplet 3/2 { e,8( f! e) }
 
   % 110
-  | \repeat unfold 4 { a4-.\fz \times 2/3 { e8( f e) } }
-  | g!4-.\fz \times 2/3 { e8( f e) } 
-  \repeat unfold 3 { g4-.\fz \times 2/3 { e8( f e) } }
+  | \repeat unfold 4 { a4-.\fz \tuplet 3/2 { e8( f e) } }
+  | g!4-.\fz \tuplet 3/2 { e8( f e) } 
+  \repeat unfold 3 { g4-.\fz \tuplet 3/2 { e8( f e) } }
   | <e cis'>1\ff ~
-  | <e cis'>2. \times 2/3 { a8( bes a) }
-  | \repeat unfold 4 { d4-.\fz \times 2/3 { a8( bes a) } }
-  | c!4-.\fz \times 2/3 { a8( bes a) }
-  \repeat unfold 2 { c4-.\fz \times 2/3 { a8( bes a) } }
-  c4-.\fz \times 2/3 { c8( d c) }
+  | <e cis'>2. \tuplet 3/2 { a8( bes a) }
+  | \repeat unfold 4 { d4-.\fz \tuplet 3/2 { a8( bes a) } }
+  | c!4-.\fz \tuplet 3/2 { a8( bes a) }
+  \repeat unfold 2 { c4-.\fz \tuplet 3/2 { a8( bes a) } }
+  c4-.\fz \tuplet 3/2 { c8( d c) }
 
   % 120
   | <a fis'>1\ff ~
@@ -164,8 +164,8 @@ violinIIFourthMov =  \relative g' {
   | R1*2
 
   % 130
-  | r4 \times 2/3 { c8( d c) } es4-. c-.
-  | a \times 2/3 { a8( bes a) } c4-. a,-.
+  | r4 \tuplet 3/2 { c8( d c) } es4-. c-.
+  | a \tuplet 3/2 { a8( bes a) } c4-. a,-.
   | bes( a) bes( a)
   | bes1(
   | a2) r
@@ -200,7 +200,7 @@ violinIIFourthMov =  \relative g' {
   | d d2 d4
   | d4 r r2
   | << { c2( cis) } { s2-\< s4 s4-\! } >>
-  | \times 2/3 { d8[-.\f g-. b-.] d[-. b-. g-.] } d4-. c'!-.
+  | \tuplet 3/2 { d8[-.\f g-. b-.] d[-. b-. g-.] } d4-. c'!-.
 
   % 160
   | b-. bes,2(\fz bes4)-.
@@ -221,10 +221,10 @@ violinIIFourthMov =  \relative g' {
   | <d b'>4-. r r2
   | << { b'!4( c) b( c) } \\ { d,1 } >>
   | <d b'>4-. r r2
-  | \times 2/3 { c8[-. e-. g]-. c[-.-\markup { \italic cresc. } g-. e]-. 
+  | \tuplet 3/2 { c8[-. e-. g]-. c[-.-\markup { \italic cresc. } g-. e]-. 
   c[-. e-. g]-. c[-. g-. e]-. }
-  | \times 2/3 { cis[-. e-. g]-. bes[-. g-. e]-. cis[-. e-. g]-. bes[-. g-. e]-. }
-  | \times 2/3 { d[-.\ff g-. b!]-. d[-. b-. g]-. d[-. g-. b]-. d[-. b-. g]-. }
+  | \tuplet 3/2 { cis[-. e-. g]-. bes[-. g-. e]-. cis[-. e-. g]-. bes[-. g-. e]-. }
+  | \tuplet 3/2 { d[-.\ff g-. b!]-. d[-. b-. g]-. d[-. g-. b]-. d[-. b-. g]-. }
   | d4-. r <d c'!-.> r
 
   % 180
@@ -235,7 +235,7 @@ violinIIFourthMov =  \relative g' {
   | fis a c g
   | d-\markup { \italic cresc. } b' g d'
   | b g' r g\f^\markup { arco }
-  | \times 2/3 { g8[-. fis-. e]-. d[-. c-. b]-. a[-. g-. fis]-. e[-. d-. c]-. }
+  | \tuplet 3/2 { g8[-. fis-. e]-. d[-. c-. b]-. a[-. g-. fis]-. e[-. d-. c]-. }
   | b4 r r b'\p^\markup { pizz. }
   | g b g b
 
@@ -245,10 +245,10 @@ violinIIFourthMov =  \relative g' {
   | fis a c g
   | d-\markup { \italic cresc. } b' g d'
   | b g' r g\ff^\markup { arco }
-  | \times 2/3 { g8[-. fis-. e]-. d[-. c-. b]-. a[-. g-. fis]-. e[-. d-. c]-. }
+  | \tuplet 3/2 { g8[-. fis-. e]-. d[-. c-. b]-. a[-. g-. fis]-. e[-. d-. c]-. }
   | b4-. d-. g-. d-.
   | b-. d-. g-. d-.
-  | \times 2/3 { g8[( a b]) a[( b c]) b[( c d]) c[( b a]) }
+  | \tuplet 3/2 { g8[( a b]) a[( b c]) b[( c d]) c[( b a]) }
   | g4-. r <d-. a' fis'> r
 
   % 200

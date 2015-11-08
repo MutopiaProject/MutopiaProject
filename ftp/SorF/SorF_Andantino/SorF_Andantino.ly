@@ -7,12 +7,15 @@
   mutopiacomposer = "SorF"
   mutopiainstrument = "Guitar"
   source = "Statens musikbibliotek - The Music Library of Sweden"
+  % http://imslp.org/images/d/d7/PMLP95300-Sor_-_Andantino.pdf -- http://imslp.org/wiki/File:PMLP95300-Sor_-_Andantino.pdf
   style = "Romantic"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  license = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl at glx.com"
- footer = "Mutopia-2011/12/12-1810"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Copyright © 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+
+ footer = "Mutopia-2015/09/07-1810"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \layout {
@@ -87,7 +90,7 @@ upperVoice = \relative c' {
     \mbreak
     <c, a'>2.-> |
     e8[ c'] d,[ b'] c,[ a'] |
-    <b, gis'>2 <c dis b'>4 |
+    <b, gis'>2 <c dis a'>4 |
     <b e gis>2 <c, dis a'>4 |
     <b e gis>2 <cis' e a>4 |
     a'4 gis fis |

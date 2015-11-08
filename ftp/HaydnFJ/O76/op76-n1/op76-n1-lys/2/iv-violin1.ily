@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violinIFourthMov =  \relative a' {
   \key d \minor
   \clef violin
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     a8\p
@@ -323,24 +323,24 @@ violinIFourthMov =  \relative a' {
   | \acciaccatura fis8 e d e cis
 
   % 250
-  | \times 2/3 { d-. e-. fis-. d-. e-. fis-. }
-  | \times 2/3 { e-. fis-. g-. a,-. b-. cis-. } \noTupletNum
-  | \times 2/3 { d-. cis-. d e fis g }
-  | \times 2/3 { gis a b g e cis }
-  | \times 2/3 { a cis d e fis g }
-  | \times 2/3 { gis a b g e cis }
-  | \times 2/3 { d e fis g a b }
-  | \times 2/3 { cis a cis e a, cis }
-  | \times 2/3 { d a g fis e d }
-  | \times 2/3 { e fis g a, b cis }
+  | \tuplet 3/2 { d-. e-. fis-. d-. e-. fis-. }
+  | \tuplet 3/2 { e-. fis-. g-. a,-. b-. cis-. } \noTupletNum
+  | \tuplet 3/2 { d-. cis-. d e fis g }
+  | \tuplet 3/2 { gis a b g e cis }
+  | \tuplet 3/2 { a cis d e fis g }
+  | \tuplet 3/2 { gis a b g e cis }
+  | \tuplet 3/2 { d e fis g a b }
+  | \tuplet 3/2 { cis a cis e a, cis }
+  | \tuplet 3/2 { d a g fis e d }
+  | \tuplet 3/2 { e fis g a, b cis }
 
   % 260
-  | \times 2/3 { d cis d e fis g }
-  | \times 2/3 { gis a b g e cis }
-  | \times 2/3 { a cis d e fis g }
-  | \times 2/3 { gis a b g e cis }
-  | \times 2/3 { d-. fis-. a-. d-. a-. fis-. }
-  | \times 2/3 { d-. fis-. a-. d-. a-. fis-. }
+  | \tuplet 3/2 { d cis d e fis g }
+  | \tuplet 3/2 { gis a b g e cis }
+  | \tuplet 3/2 { a cis d e fis g }
+  | \tuplet 3/2 { gis a b g e cis }
+  | \tuplet 3/2 { d-. fis-. a-. d-. a-. fis-. }
+  | \tuplet 3/2 { d-. fis-. a-. d-. a-. fis-. }
   | d4 r <d, fis' d'> r
   | d4 r8
 

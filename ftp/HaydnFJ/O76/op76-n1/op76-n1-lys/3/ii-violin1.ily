@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 violinISecondMov =  \relative g' {
   \key g \major
   \clef violin
@@ -52,7 +52,7 @@ violinISecondMov =  \relative g' {
   | c, g' e' g, b, g' d' g, c, e g c e g b,, g'
   | a, c d fis g b d g c,,\p d fis a c fis g a
   | b, g' c, g' e, g' cis,, e' d, g b d d, c'! fis c
-  | b g' d b g d b d \times 4/6 { g, b d g b d } g b, b, g'
+  | b g' d b g d b d \tuplet 6/4 { g, b d g b d } g b, b, g'
   | c, g' e' g, b, g' d' g, c, e g c e g b,, g'
   | a, c d fis g b d g c,,\p d fis a c fis g a
   | b, g' c, g' e, g' cis,, e' d, g b d d, c'! fis c

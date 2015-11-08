@@ -41,7 +41,7 @@
  % Footer, tagline, and copyright blocks are included here for reference
  % and spacing purposes only.  There's no need to change these.
  % These blocks will be overridden by Mutopia during the publishing process.
- footer = "Mutopia-2015/05/31-2012"
+ footer = "Mutopia-2015/08/13-2012"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
@@ -53,12 +53,14 @@ mbreak = {
 topphraseone = \relative c' {
   ees8\p ees' r8 c f,4 g8 bes |
   r aes bes aes f4 e |
-  ees8\< <c aes'>4 ees8 <des bes'>4 <d b'>\! |
+  \tag #'firsttime { ees8\< }
+  \tag #'secondtime { ees!8\< }
+    <c aes'>4 ees8 <des bes'>4 <d b'>\! |
   \tag #'secondtime { \mbreak }
   <ees c'>\f f'8\> ees c aes f e\! |
   \tag #'firsttime { \mbreak }
 
-  ees8\p ees' r8 c f,4 g8 bes |
+  ees!8\p ees' r8 c f,4 g8 bes |
   r aes bes aes f4 ees |
   <d bes'>\< <f aes>8 <d bes'>4\! <f aes>8 <d c'>4 |
   << <des! g bes>1 { s4 s s\> s } >> |
@@ -71,14 +73,17 @@ topphraseone = \relative c' {
   <ees c'> f'8 ees c aes f e |
   \tag #'secondtime { \mbreak }
   f4 g8 aes bes aes  g f |
-  \tag #'firsttime { \mbreak }
-
-  ees8\f des ees e f fis g aes |
+  \tag #'firsttime { \mbreak ees8\f }
+  \tag #'secondtime { ees8 }
+    des ees e f fis g aes |
 }
 
 topphraseonealttwo = \relative c'' {
   g8\> bes ees des bes g ees c'\! |
-  <c, aes'>4 <ees ees'>8 <ees ees'> <ees ees'>4 <ees ees'> |
+  <c, aes'>4
+  \tag #'firsttime { <ees ees'>8 <ees ees'> <ees ees'>4 <ees ees'> }
+  \tag #'secondtime { <ees ees'>8-. <ees ees'>-. <ees ees'>4-. <ees ees'>-. }
+  |
 }
 
 topphrasetwo = \relative c'' {
@@ -91,7 +96,7 @@ topphrasetwo = \relative c'' {
   f4 aes8 <f bes> ~ <f bes> aes <f bes>4 |
   <ees c'>4 b'8 <ees, c'> ~ <ees c'> b'8 <ees, c'>4 |
   r8 aes\< d <aes f'> ~  <aes f'> d <aes f'>4\! |
-  \autoBeamOff <g bes ees>2 ~ <g bes ees>8 \autoBeamOn ees\> f g\! |
+  \autoBeamOff <g bes ees>2 ~ <g bes ees>8\> \autoBeamOn ees f g\! |
   \mbreak
 
   aes4 ees'8 f ~ f ees f4 |
@@ -101,8 +106,9 @@ topphrasetwo = \relative c'' {
   \tag #'secondtime { \mbreak }
 
   <aes des aes'>->\ff <g des' g>2-> <f aes f'>4->|
-  \tag #'firsttime { \mbreak }
-  <ees aes ees'>\> r r2 |
+  \tag #'firsttime { \mbreak <ees aes ees'>\> }
+  \tag #'secondtime { <ees aes ees'>->\> }
+    r r2 |
   r8\! ees g <ees c'> ~ <ees c'> g <des bes'>4
 }
 
@@ -131,7 +137,7 @@ top = {
         <c, aes'>4 r <aes' c ees aes> r |
       }
       {
-        \topphraseonealttwo
+        \keepWithTag #'firsttime \topphraseonealttwo
       }
     }
     \mbreak
@@ -175,12 +181,12 @@ top = {
       }
       {
         <f des'>4 f'8\f ges g aes bes c |
-        <f, f'>2. r4 |
+        <f, f'>2. r4 \bar "||"
       }
     }
     \key aes \major
     \keepWithTag #'secondtime \topphraseone
-    \topphraseonealttwo
+    \keepWithTag #'secondtime \topphraseonealttwo
     \keepWithTag #'secondtime \topphrasetwo
     \topphrasetwoalttwo \bar ".."
   }
@@ -196,7 +202,9 @@ bottomphraseone = \relative c {
   aes, <ees' aes c> ees, <ees' aes c> |
   bes <f' aes bes> des <f aes bes> |
   <ees, ees'>_> <e e'>_> <f f'>_> <g g'>_> |
-  <aes aes'> <ees' aes c> ees, <ees' g des'> |
+  \tag #'firsttime { <aes aes'> }
+  \tag #'secondtime { <aes aes'>^> }
+    <ees' aes c> ees, <ees' g des'> |
 
   aes,4 <ees' aes c> ees, <ees' aes c> |
   aes, <ees' aes c> ees, <ees' g des'> |
@@ -217,8 +225,8 @@ bottomphrasetwo = \relative c {
   aes, <ees' aes c> ees, <ees' aes c> |
   aes, <ees' aes c> c <ees aes c> |
 
-  bes <ees g des'> ees, <ees' g des'> |
-  bes <ees g des'> ees, <ees' g des'> |
+  des <f aes des> bes, <f' aes des> |
+  aes, <ees' aes c> c <ees aes c> |
   d <aes' bes d> bes, <aes' bes d> |
   <ees ees'>-> <des! des'!>-> <c c'>-> <bes bes'>-> |
 
@@ -227,7 +235,9 @@ bottomphrasetwo = \relative c {
   aes, <ees' aes c> ees, <ees' aes c> |
   <aes, aes'> <c c'>-> <des des'>-> <ees ees'>-> |
 
-  <f f'> <ees ees'>2 <des des'>4 |
+  \tag #'firsttime { <f f'> <ees ees'>2 <des des'>4 }
+  \tag #'secondtime { <f f'>-> <ees ees'>2-> <des des'>4-> }
+   |
   <c c'> bes'8 c ~ c bes aes4 |
   <ees, ees'> <e e'> <f f'> <g g'> |
 }
@@ -247,7 +257,7 @@ bottom =  {
     <ees aes c> r <ees ees,> r |
     <ees, ees,> r <ees' bes' des> r
 
-    \repeat volta 2 {
+    \keepWithTag #'firsttime \repeat volta 2 {
       \bottomphraseone
     }
     \alternative {
@@ -261,7 +271,7 @@ bottom =  {
     }
   }
   \relative c {
-    \repeat volta 2 {
+    \keepWithTag #'firsttime \repeat volta 2 {
       \bottomphrasetwo
     }
     \alternative {
@@ -304,9 +314,9 @@ bottom =  {
       }
     }
     \key aes \major
-    \bottomphraseone
+    \keepWithTag #'secondtime \bottomphraseone
     \bottomphraseonealttwo
-    \bottomphrasetwo
+    \keepWithTag #'secondtime \bottomphrasetwo
     \bottomphrasetwoalttwo
   }
 }

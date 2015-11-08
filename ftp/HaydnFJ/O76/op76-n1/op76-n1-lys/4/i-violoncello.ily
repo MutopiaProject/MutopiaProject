@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.18.0"
 celloFirstMov =  \relative bes, {
   \key bes \major
   \clef bass
@@ -8,16 +8,16 @@ celloFirstMov =  \relative bes, {
     | bes ~
     | bes ~
     | bes
-    | es4-| r d-| r
-    | c-| r r2
+    | es4-! r d-! r
+    | c-! r r2
     | f,1 ~
     | f ~
     | f ~
 
     % 10
     | f
-    | g4-| r f-| r
-    | bes-| r r2
+    | g4-! r f-! r
+    | bes-! r r2
     | d'2.(\p cis4)
     | d2.( cis4)
     | d2. d,4
@@ -30,9 +30,9 @@ celloFirstMov =  \relative bes, {
     | es2( e)
     | f1
     | bes,4\f r bes r
-    | bes8-| r bes-. r bes-. r bes-. r
+    | bes8-! r bes-. r bes-. r bes-. r
     | bes4 r bes r
-    | bes8-| r bes-. r bes-. r bes-. r
+    | bes8-! r bes-. r bes-. r bes-. r
     | bes4 r bes r
     | bes8 bes' bes bes a,\fz a' a a
     | g, g' g g d, d' d d
@@ -61,16 +61,16 @@ celloFirstMov =  \relative bes, {
     | << { des2 des, } { s2-\< s4. s8-\! } >>
 
     % 50
-    | c16-|\f c'( b c) e,-. c'-. d,-. c'-. 
-    \repeat unfold 2 { c,-| c'( b c) e,-. c'-. d,-. c'-. }
+    | c16-!\f c'( b c) e,-. c'-. d,-. c'-. 
+    \repeat unfold 2 { c,-! c'( b c) e,-. c'-. d,-. c'-. }
     c, c' c, c' c, c' c, c'
     | f,4 r f r
     | f r f r
     | R1
-    | r2 a8-| a-| a-| a-|
+    | r2 a8-! a-! a-! a-!
     | bes bes bes bes bes bes b b
     | c4 r r2
-    | c,16-| f( e f) c-| a'( g a) c,-| c'( b c) c,-| f'( e f)
+    | c,16-! f( e f) c-! a'( g a) c,-! c'( b c) c,-! f'( e f)
     | c,4-. r c2
 
     % 60
@@ -91,15 +91,15 @@ celloFirstMov =  \relative bes, {
   | d ~
   | d ~
   | d2. f'4
-  | e-| r d-| r
-  | cis-| r r2
+  | e-! r d-! r
+  | cis-! r r2
   | fis,1 ~
   | fis ~
   | fis ~
   | fis ~
   | fis
-  | g16\f-| g'( fis g) bes,-. g'-. a,-. g'-. 
-  g,-| g'( fis g) bes,-. g'-. a,-. g'-.
+  | g16\f-! g'( fis g) bes,-. g'-. a,-. g'-. 
+  g,-! g'( fis g) bes,-. g'-. a,-. g'-.
   | g,1
   | d'4 r fis, r
   | fis'1
@@ -114,8 +114,8 @@ celloFirstMov =  \relative bes, {
   | g8) g' g g g g g g
   | a, a' a a a a a a
   | bes, bes' bes bes bes bes bes bes
-  | es,16-| es'( d es d es d es) a,4 r
-  | d,16-| d'( cis d cis d cis d) g,4 r
+  | es,16-! es'( d es d es d es) a,4 r
+  | d,16-! d'( cis d cis d cis d) g,4 r
   | c r d r
   | \clef violin g4 r r8 bes-. r g-.
   | r c-. r a-. r fis-. r d-.
@@ -136,14 +136,14 @@ celloFirstMov =  \relative bes, {
   % 110
   | bes ~
   | bes
-  | es4-|\f r <g, d'>-| r
-  | <c, c'>-| r r2
+  | es4-!\f r <g, d'>-! r
+  | <c, c'>-! r r2
   | f1\p ~
   | f-\markup { \italic "cresc" } ~
   | f ~
   | f
-  | g4-|\f r f-| r
-  | bes-| r r2
+  | g4-!\f r f-! r
+  | bes-! r r2
 
   % 120
   | d'2.(\p cis4)
@@ -188,7 +188,7 @@ celloFirstMov =  \relative bes, {
   | bes4 r bes r
   | bes r bes r
   | R1
-  | r2 d8-| d-| d-| d-|
+  | r2 d8-! d-! d-! d-!
   | es es es es e e e e
   | f4 r r2
 
@@ -207,7 +207,7 @@ celloFirstMov =  \relative bes, {
   % 170
   | g-. g-. r es-. r f-. r f'-.
   | r d'-. r es-. r d-. r es-.
-  | d-|\ff bes,-| es-| bes-| d-| bes-| es-| bes-|
+  | d-!\ff bes,-! es-! bes-! d-! bes-! es-! bes-!
   | d bes a a' as, as' g, g'
   | d,1\fermata
   | es1\p ~

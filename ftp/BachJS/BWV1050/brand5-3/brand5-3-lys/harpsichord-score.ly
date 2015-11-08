@@ -1,15 +1,12 @@
-\version "2.4.0"
+\version "2.18.2"
 \include "harpsichord.ly"
 
-\score 
-{
-	% 
-	\harpsichordTa
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-	}
+\header {
+  instrument = "Cembalo concertato"
+}
+
+\score {
+  \harpsichordStaff
+  \midi {}
+  \layout {}
 }

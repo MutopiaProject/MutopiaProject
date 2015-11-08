@@ -1,18 +1,12 @@
-\version "2.4.0"
-
+\version "2.18.2"
 \include "violone.ly"
 
+\header {
+  instrument = "Violone"
+}
 
-\score 
-{
-	% 
-	\violone
-	\midi {}
- 	\layout 
-	{
-	}
-	\header
-	{
-		instrument = "Double Bass"
-	}
-}	
+\score {
+  \violone
+  \midi {}
+  \layout {}
+}

@@ -1,9 +1,9 @@
-\version "2.16.0"
+\version "2.18.0"
 celloFirstMov =  \relative d {
   \key d \major
   \clef bass
 
-  \override Staff.Hairpin   #'minimum-length = #5
+  \override Staff.Hairpin.minimum-length = #5
 
   r8
   | d-.\p r d-. << { d4. ~ } { s4-\> s8-\! } >>
@@ -62,7 +62,7 @@ celloFirstMov =  \relative d {
   | \repeat unfold 6 { a, f' } \repeat unfold 12 { bes, f' }
   \repeat unfold 12 { a, f' }
   \repeat unfold 6 { as, f' }
-  | g,8-| es-| r r4 r8
+  | g,8-! es-! r r4 r8
   | es''8.(\p f16 es8) c( d es)
   | f r r f, r r
   | r r bes\f ~ bes16 a32( bes) c-. bes-. a-. g-. f-. es-. d-. c-.
@@ -72,7 +72,7 @@ celloFirstMov =  \relative d {
   | d8 r r r4 r8
   | r4 f'8 e4. ~
   | e8 d4 ~ d8 cis4
-  | d16-| f,32( g) a-. g-. f-. e-. d-. c!-. bes-. a-. gis4.
+  | d16-! f,32( g) a-. g-. f-. e-. d-. c!-. bes-. a-. gis4.
   | a2. ~
   | a ~
   | a8 a-. a-. a-. r r
@@ -138,13 +138,13 @@ celloFirstMov =  \relative d {
   | << { a ~ } { s4. s4 } >>
   | a2. ~
   | a
-  | d8-| d'-| r r4 r8
+  | d8-! d'-! r r4 r8
   | g,8. fis16-. e-. d-. cis-. b-. a-. g-. fis-. e-.
-  | d8-| d'-| r r4 r8
+  | d8-! d'-! r r4 r8
 
   % 110
   | g8. fis16-. e-. d-. cis-. b-. a-. g-. fis-. e-.
-  | d8-| d'-| r r4 r8
+  | d8-! d'-! r r4 r8
   | g,4 r8 r4 r8
   | a4 r8 a4 r8
   | \repeat unfold 6 { d,16-. a'-. }
@@ -156,11 +156,11 @@ celloFirstMov =  \relative d {
 
   % 120
   | a4 r8 a4 r8
-  | d-| d,-| r8 r4 r8
+  | d-! d,-! r8 r4 r8
   | a'8. b16-. cis-. d-. e-. fis-. g-. a-. b-. cis-.
-  | d8-| d,,-| r r4 r8
+  | d8-! d,,-! r r4 r8
   | a'8. b16-. cis-. d-. e-. fis-. g-. a-. b-. cis-.
-  | d8-| a-| fis-| d-| a-| fis-|
+  | d8-! a-! fis-! d-! a-! fis-!
   | d4 r8 d4 r8
   | d4 r8 r4 r8
 

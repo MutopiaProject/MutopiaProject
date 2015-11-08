@@ -1,10 +1,10 @@
-\version "2.16.0"
+\version "2.18.0"
 violaFirstMov =  \relative f {
   \key d \minor
   \clef alto
 
   \noTupletBracket
-  \set tupletSpannerDuration = #(ly:make-moment 1 4)
+  \tupletSpan 4
 
   \repeat volta 2 {
     f8-.\f f-. f-. f-. r f-. f-. f-.

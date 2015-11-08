@@ -1,4 +1,4 @@
-\version "2.4.2"
+\version "2.18.2"
 \include "english.ly"
 #(set-global-staff-size 16)
 
@@ -11,26 +11,26 @@
   mutopiatitle = "Ein Musikalischer Spass (A Musical Joke) Mv 1"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 522"
-  mutopiainstrument = "Orchestra"
+  mutopiainstrument = "Orchestra: Horns, Violin, Viola, 'Cello"
   date = "1787"
   source = "free-scores.com"
   style = "Classical"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Martin Willett"
   maintainerEmail = "mwillett1@cox.net"
-  maintainerWeb = "http://harvestsongmedia.com"
-  lastupdated = "2005/April/18"
+  maintainerWeb = "http://harvestsongmedia.com/"
+  lastupdated = "2015/August/29"
   
-  footer = "Mutopia-2005/05/02-553"
-  tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
-
+ footer = "Mutopia-2015/09/01-553"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 global = {
  \time 4/4
 }
 
 horn = \relative c'' {
-\set Staff.instrument = "Corni in F "
+\set Staff.instrumentName = "Corni in F "
 \set Staff.midiInstrument = "brass section"
 %1
 \repeat volta 2 {
@@ -115,7 +115,7 @@ horn = \relative c'' {
 | <c c'>~
 | <c c'>
 | <f c'>4 r <a f'> r
-| r2 \times 2/3 { <a f'>8 <a f'> <a f'> } \times 2/3 { <a f'>8 <a f'> <a f'> }
+| r2 \tuplet 3/2 { <a f'>8 <a f'> <a f'> } \tuplet 3/2 { <a f'>8 <a f'> <a f'> }
 | <a f'>4 <f' a>8. <f a>16 <f a>4 <f a>8. <f a>16
 | <f g>4 <c g'> <a f'>8 <f' a> <g bf> <c, g'>
 | <a f'>4 <a f'>8 <a f'> <a f'>8 <c g'> <f a> <a, f'>
@@ -134,7 +134,7 @@ horn = \relative c'' {
 }
 violinOne = 
 \relative c''{
-  \set Staff.instrument = "Violino I "
+  \set Staff.instrumentName = "Violino I "
   \set Staff.midiInstrument = "viola"
 %1
 | <a f'>4 <a f'> <a f'> r
@@ -144,19 +144,19 @@ violinOne =
 | <c g'> <c g'> <c g'> r
 | a'8 bf c bf a4 g
 | <a, f'>4 <a f'> <a f'> r
-| \times 2/3 { d'8 c bf } \times 2/3 { d c bf } \times 2/3 { d c bf } \times 2/3 { d c bf }
-| \times 2/3 { c bf a } \times 2/3 { c bf a } \times 2/3 { c bf a } \times 2/3 { c bf a }
+| \tuplet 3/2 { d'8 c bf } \tuplet 3/2 { d c bf } \tuplet 3/2 { d c bf } \tuplet 3/2 { d c bf }
+| \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a }
 %10
-| \times 2/3 { bf a g } \times 2/3 { bf a g } \times 2/3 { bf a g } \times 2/3 { bf a g }
+| \tuplet 3/2 { bf a g } \tuplet 3/2 { bf a g } \tuplet 3/2 { bf a g } \tuplet 3/2 { bf a g }
 | a4 a a r
 | b2~\p b8( c d b)
 | d( c) c c d( c bf? a)
 | a( g) g g g( f g a)
 | f4 f f r
 | g2\f c
-| \times 2/3 { a8 g f } \times 2/3 { e d c } d4 d
+| \tuplet 3/2 { a8 g f } \tuplet 3/2 { e d c } d4 d
 | g g c c
-| \times 2/3 { a8 g f } \times 2/3 { e d c } d4 r
+| \tuplet 3/2 { a8 g f } \tuplet 3/2 { e d c } d4 r
 %20
 | g,8\p d' b d g, d' b d
 | g, e' c e g, e' c e
@@ -165,9 +165,9 @@ violinOne =
 | \appoggiatura c16 b2 \appoggiatura c16 b2 
 | \appoggiatura d16 c2 \appoggiatura d16 c2 
 | \appoggiatura e16 d2 \appoggiatura e16 d2
-| \times 2/3 { e8\f d c } \times 2/3 { b a g } \times 2/3 { c b a } \times 2/3 { g f e }
+| \tuplet 3/2 { e8\f d c } \tuplet 3/2 { b a g } \tuplet 3/2 { c b a } \tuplet 3/2 { g f e }
 | f4 g a2
-| \times 2/3 { e'8\f d c } \times 2/3 { b a g } \times 2/3 { c b a } \times 2/3 { g f e }
+| \tuplet 3/2 { e'8\f d c } \tuplet 3/2 { b a g } \tuplet 3/2 { c b a } \tuplet 3/2 { g f e }
 %30
 | f4 g c, e8 g
 | c4 e,8 g c4 e,8 g
@@ -196,19 +196,19 @@ violinOne =
 | <c g'> <c g'> <c g'> r
 | a'8 bf c bf a4 g
 | f f f r
-| \times 2/3 { d'8 c bf } \times 2/3 { d c bf } \times 2/3 { d c bf } \times 2/3 { d c bf }
-| \times 2/3 { c bf a } \times 2/3 { c bf a } \times 2/3 { c bf a } \times 2/3 { c bf a }
+| \tuplet 3/2 { d'8 c bf } \tuplet 3/2 { d c bf } \tuplet 3/2 { d c bf } \tuplet 3/2 { d c bf }
+| \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a }
 | b!2\p~ b8( c d b)
 | d8( c) c c c4 r
-| \times 2/3 { d8\f c bf } \times 2/3 { d c bf } \times 2/3 { d c bf } \times 2/3 { d c bf }
+| \tuplet 3/2 { d8\f c bf } \tuplet 3/2 { d c bf } \tuplet 3/2 { d c bf } \tuplet 3/2 { d c bf }
 %60
-| \times 2/3 { c bf a } \times 2/3 { c bf a } \times 2/3 { c bf a } \times 2/3 { c bf a }
+| \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a } \tuplet 3/2 { c bf a }
 | d8 c bf a bf a g f
 | c'4 c,8. c16 c4 r
 | c2 f
-| \times 2/3 { d8 c bf } \times 2/3 { a g f } g4 g
+| \tuplet 3/2 { d8 c bf } \tuplet 3/2 { a g f } g4 g
 | c4 c f f
-| \times 2/3 { d'8 c bf } \times 2/3 { a g f } g4 r
+| \tuplet 3/2 { d'8 c bf } \tuplet 3/2 { a g f } g4 r
 | c,8\p g' c, g' c, g' c, g'
 | c, a' f a c, a' f a
 | c, bf' g bf c, bf' g bf
@@ -217,9 +217,9 @@ violinOne =
 | \appoggiatura f,16 e2 \appoggiatura f16 e2
 | \appoggiatura g16 f2 \appoggiatura g16 f2
 | \appoggiatura a16 g2 \appoggiatura a16 g2
-| \times 2/3 { a8\f g f } \times 2/3 { e d c } \times 2/3 { f e d } \times 2/3 { c bf a }
+| \tuplet 3/2 { a8\f g f } \tuplet 3/2 { e d c } \tuplet 3/2 { f e d } \tuplet 3/2 { c bf a }
 | bf4 c d2
-| \times 2/3 { a'8 g f } \times 2/3 { e d c } \times 2/3 { f e d } \times 2/3 { c bf a }
+| \tuplet 3/2 { a'8 g f } \tuplet 3/2 { e d c } \tuplet 3/2 { f e d } \tuplet 3/2 { c bf a }
 | bf4 c f8 c\ff d e
 | f4 f8 f f g a f
 | \appoggiatura a16 g4 g8 g g2
@@ -238,7 +238,7 @@ violinOne =
 
 violinTwo = 
 \relative c''{
-  \set Staff.instrument = "Violino II "
+  \set Staff.instrumentName = "Violino II "
   \set Staff.midiInstrument = "viola"
 %1
 | <a f'>4 <a f'> <a f'> r
@@ -248,10 +248,10 @@ violinTwo =
 | <c e> <c e> <c e> r
 | f8 g a g f d e c
 | <a f'>4 <a f'> <a f'> r
-| \times 2/3 { bf8 c d } \times 2/3 { bf c d } \times 2/3 { bf c d } \times 2/3 { bf c d } 
-| \times 2/3 { a bf c } \times 2/3 { a bf c } \times 2/3 { a bf c } \times 2/3 { a bf c }
+| \tuplet 3/2 { bf8 c d } \tuplet 3/2 { bf c d } \tuplet 3/2 { bf c d } \tuplet 3/2 { bf c d } 
+| \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c }
 %10  
-| \times 2/3 { g' f e } \times 2/3 { g f e } \times 2/3 { g f e } \times 2/3 { g f e }
+| \tuplet 3/2 { g' f e } \tuplet 3/2 { g f e } \tuplet 3/2 { g f e } \tuplet 3/2 { g f e }
 | <a, f'>4 <a f'> <a f'> r
 | d8\p( f d f d f d f)
 | a,( c f c a c f c)
@@ -260,7 +260,7 @@ violinTwo =
 | <g, e'>4\f <g e'> <g e'> <g e'>
 | <a f'> c' b b
 | e,8 f g f e f g e
-| \times 2/3 { f8 g a } \times 2/3 { b c a } b4 r4
+| \tuplet 3/2 { f8 g a } \tuplet 3/2 { b c a } b4 r4
 %20
 | b,4\p b b b
 | c c c c
@@ -269,9 +269,9 @@ violinTwo =
 | g8\staccato d'\staccato b\staccato d\staccato g,\staccato d'\staccato b\staccato d\staccato
 | g,\staccato e'\staccato c\staccato e\staccato g,\staccato e'\staccato c\staccato e\staccato
 | g, f' d f g, f' d f
-| \times 2/3 { e\f d c } \times 2/3 { b a g } \times 2/3 { c' b a } \times 2/3 { g f e }
+| \tuplet 3/2 { e\f d c } \tuplet 3/2 { b a g } \tuplet 3/2 { c' b a } \tuplet 3/2 { g f e }
 | f4 g a2
-| \times 2/3 { e8 d c } \times 2/3 { b a g } \times 2/3 { c' b a } \times 2/3 { g f e }
+| \tuplet 3/2 { e8 d c } \tuplet 3/2 { b a g } \tuplet 3/2 { c' b a } \tuplet 3/2 { g f e }
 %30
 | f4 g c, e8 g
 | <c, e>4 e8 g <c, e>4 e8 g
@@ -300,19 +300,19 @@ violinTwo =
 | g c, g' c, g' bf a g
 | f g a g f d e c
 | f d c bf a g a f
-| \times 2/3 { bf8 c d } \times 2/3 { bf c d } \times 2/3 { bf c d } \times 2/3 { bf c d }
-| \times 2/3 { a bf c } \times 2/3 { a bf c } \times 2/3 { a bf c } \times 2/3 { a bf c }
+| \tuplet 3/2 { bf8 c d } \tuplet 3/2 { bf c d } \tuplet 3/2 { bf c d } \tuplet 3/2 { bf c d }
+| \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c }
 | d8\p( f d f d f d f)
 | a,( c f c a c f c)
-| \times 2/3 { bf8\f c d } \times 2/3 { bf c d } \times 2/3 { bf c d } \times 2/3 { bf c d }
+| \tuplet 3/2 { bf8\f c d } \tuplet 3/2 { bf c d } \tuplet 3/2 { bf c d } \tuplet 3/2 { bf c d }
 %60
-| \times 2/3 { a bf c } \times 2/3 { a bf c } \times 2/3 { a bf c } \times 2/3 { a bf c }
+| \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c } \tuplet 3/2 { a bf c }
 | d'8 c bf a bf a g f
 | c'4 c,8. c16 c4 r
 | a,8\staccato c\staccato f\staccato c\staccato a\staccato c\staccato f\staccato c\staccato
 | bf d f d g, c e c
 | a bf c bf a bf c a
-| \times 2/3 { f' g a } \times 2/3 { bf c d } e4 r
+| \tuplet 3/2 { f' g a } \tuplet 3/2 { bf c d } e4 r
 | e,\p e e e
 | f f f e8 f
 | g8 a g f g e f g
@@ -321,9 +321,9 @@ violinTwo =
 | c,8\staccato g'\staccato e\staccato g\staccato c,\staccato g'\staccato e\staccato g\staccato
 | c,\staccato a'\staccato f\staccato a\staccato c,\staccato a'\staccato f\staccato a\staccato
 | c, bf' g bf c, bf' g bf
-| \times 2/3 { a'\f g f } \times 2/3 { e d c } \times 2/3 { f e d } \times 2/3 { c bf a }
+| \tuplet 3/2 { a'\f g f } \tuplet 3/2 { e d c } \tuplet 3/2 { f e d } \tuplet 3/2 { c bf a }
 | bf4 c d2
-| \times 2/3 { a'8 g f } \times 2/3 { e d c } \times 2/3 { f e d } \times 2/3 { c bf a }
+| \tuplet 3/2 { a'8 g f } \tuplet 3/2 { e d c } \tuplet 3/2 { f e d } \tuplet 3/2 { c bf a }
 | bf4 c f,8 a\ff bf g
 | a4 a8 a a bf c d
 | \appoggiatura f16 e4 e8 e e2
@@ -341,7 +341,7 @@ violinTwo =
 
 viola = 
 \relative c'{
-  \set Staff.instrument = "Viola "
+  \set Staff.instrumentName = "Viola "
   \set Staff.midiInstrument = "viola"
 \clef alto
 %1
@@ -373,9 +373,9 @@ viola =
 | \grace { f16[ g16] } d4\stopTrillSpan f8 e d4 f
 | e4 g8 f e4 g
 | f4 d'8 c b4 d
-| c\f r \times 2/3 { c8 b a } \times 2/3 { g f e }
+| c\f r \tuplet 3/2 { c8 b a } \tuplet 3/2 { g f e }
 | f4 g a2
-| \times 2/3 { e'8 d c } \times 2/3 { b a g } \times 2/3 { c b a } \times 2/3 { g f e }
+| \tuplet 3/2 { e'8 d c } \tuplet 3/2 { b a g } \tuplet 3/2 { c b a } \tuplet 3/2 { g f e }
 %30
 | f4 g c, e8 g
 | g4 e8 g g4 e8 g
@@ -416,7 +416,7 @@ viola =
 | a''4 a a a 
 | g bf, e g,
 | f'8 g a g f g a f
-| \times 2/3 { d8 e f } \times 2/3 { g a bf} c4 r
+| \tuplet 3/2 { d8 e f } \tuplet 3/2 { g a bf} c4 r
 | { c1~\p \startTrillSpan }
 | c1~
 | c1~
@@ -425,9 +425,9 @@ viola =
 | \grace { bf32[ c32 ] } bf2 c8( bf) a\staccato g\staccato
 | f4( d'2) \appoggiatura c16 bf4
 | \appoggiatura a16 g4 \appoggiatura f16 e4 \appoggiatura f16 e4 \appoggiatura d16 c4
-| f\f r \times 2/3 { f8 e d } \times 2/3 { c bf a }
+| f\f r \tuplet 3/2 { f8 e d } \tuplet 3/2 { c bf a }
 | bf4 c d2
-| \times 2/3 { a'8 g f } \times 2/3 {e d c } \times 2/3 {f e d } \times 2/3 {c bf a }
+| \tuplet 3/2 { a'8 g f } \tuplet 3/2 {e d c } \tuplet 3/2 {f e d } \tuplet 3/2 {c bf a }
 | bf4 c f,8 d'\ff c a
 | a bf c d e f g a
 | g f e d c bf a g
@@ -445,7 +445,7 @@ viola =
 
 cello = 
 \relative c{
-  \set Staff.instrument = "Basso "
+  \set Staff.instrumentName = "Basso "
   \set Staff.midiInstrument = "cello"
   \clef bass
 % 1
@@ -477,9 +477,9 @@ cello =
 | g' g g g
 | e e e e
 | b b b b
-| c\f r \times 2/3 { c'8 b a } \times 2/3 { g f e }
+| c\f r \tuplet 3/2 { c'8 b a } \tuplet 3/2 { g f e }
 | f4 g a2
-| \times 2/3 { e'8 d c } \times 2/3 { b a g } \times 2/3 { c b a } \times 2/3 { g f e }  
+| \tuplet 3/2 { e'8 d c } \tuplet 3/2 { b a g } \tuplet 3/2 { c b a } \tuplet 3/2 { g f e }  
 % 30
 | f4 g c, e8 g
 | c4 e,8 g c4 e,8 g 
@@ -530,9 +530,9 @@ cello =
 | e e e e
 | d d d d
 | c c c8 bf a g
-| f4\f r \times 2/3 { f''8 e d } \times 2/3 { c bf a }
+| f4\f r \tuplet 3/2 { f''8 e d } \tuplet 3/2 { c bf a }
 | bf4 c d2
-| \times 2/3 {a8 g f } \times 2/3 { e d c } \times 2/3 { f e d } \times 2/3 { c bf a }
+| \tuplet 3/2 {a8 g f } \tuplet 3/2 { e d c } \tuplet 3/2 { f e d } \tuplet 3/2 { c bf a }
 | bf4 c f, a8\ff c
 | f8 g a bf c d e f
 | e d c bf a g f e
@@ -558,5 +558,10 @@ cello =
   \new Staff << \global \key f\major \cello >>
 >>
 \layout { }
-\midi { \tempo 4=118}
+
+  \midi {
+    \tempo 4 = 118
+    }
+
+
 }
