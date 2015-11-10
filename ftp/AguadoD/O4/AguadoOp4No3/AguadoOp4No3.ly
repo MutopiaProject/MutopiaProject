@@ -1,19 +1,23 @@
-\version "2.14.2"
+\version "2.18.2"
 
 \header {
   mutopiatitle = "Six Petites Pièces, No. 3"
   mutopiacomposer = "AguadoD"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
+  source = "Mainz: B. Schott"
+  % source = "Statens musikbibliotek - The Music Library of Sweden"
+  % http://urn.kb.se/resolve?urn=urn:nbn:se:statensmusikverk-4033
+  date = "1830"
   title = "Six Petites Pièces"
   composer = "Dionisio Aguado"
   instrument = "Guitar"
   opus = "Op. 4, No. 3"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl at glx.com"
- footer = "Mutopia-2011/10/01-1787"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2015/11/09-1787"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \layout {
@@ -34,7 +38,7 @@ mUpperVoice = \relative c' {
     <gis, e'>4 c8\rest e8 dis16([ e) fis e] |
     d'4. cis16[ b] a16[ gis fis e] |
     d2 cis4 |
-    \times 2/3 { b8[ d fis] } a,8[ \grace { cis16[ b a] } a8] cis8.[ b16] |
+    \tuplet 3/2 { b8([ d) fis] } a,8[ \grace { cis16[ b a] } a8] cis8.[ b16] |
     <a cis,>4 r4 r4
   }
   \repeat volta 2 {
@@ -71,12 +75,13 @@ mLowerVoice = \relative c {
     b'4\rest b8\rest <cis eis>8 <dis fis>8[ <eis gis>8] |
     r8 cis,8 fis4 r4 |
     b4\rest b8\rest <dis b>8 <cis e>8[ <dis! fis>8] |
-    e8[ <a, b,>8] <e gis>4 r4 |
+    << {\voiceTwo \once\override Beam.positions=#'(-.75 . -2.5) e8[ a,] <e gis>4 r4 } \\ { b8\rest \voiceThree\stemDown b s2 } >> |
     dis4 <e b'> r |
     e fis r |
     r8 c'[ b a gis a] |
-    << { \stemDown \shiftOn e,2 b'4 } \\ { gis'8[ b] gis[ b] a[ b] } >> |
-    << { \stemDown \shiftOn e,,2 b'4 } \\ { gis'8[ b] gis[ b] a[ b] } >> |
+    \repeat unfold 2 {
+      << { \stemDown \shiftOn e,2 b'4 } \\ { gis'8[ b] gis[ b] \once\override Beam.positions=#'(-2.5 . -2) a[ b] } >> |
+    }
     e,,4 r4 r4 |
     <e' d'>4 r4 r4 |
     a4 r4 <c dis,>4 |
@@ -90,19 +95,19 @@ mLowerVoice = \relative c {
 %%%
 vUpperVoice = \relative c' {
   \voiceOne
-  \partial 8 { e16. a32 }
   \repeat volta 2 {
+    \partial 8 { e16. a32 }
     a8 gis e |
     a4. |
     b4. |
     cis4 a16._([ cis32]) |
     e,8[ e] e16._([ a32]) |
-    cis,8[ cis] \acciaccatura gis'8 fis16.[ e32] |
+    cis,8[ cis] \slashedGrace gis'8 fis16.[ e32] |
     e8.\noBeam d16 b16[ gis] |
-    <a cis,>4 s8 |
+    <a cis,>4
   }
   \repeat volta 2 {
-    s4 cis16[ cis] |
+    cis16[ cis] |
     <a cis>8 <a cis> <b d> |
     cis8[ a'] gis16 fis |
     eis4 fis16[ gis] |
@@ -134,8 +139,8 @@ vUpperVoice = \relative c' {
 
 vLowerVoice = \relative c' {
   \voiceTwo
-  \partial 8 { r8 }
   \repeat volta 2 {
+    \partial 8 { r8 }
     <b d>4. |
     << { \stemDown <a cis>4. } \\ { \slurUp e'8\rest e16([ fis]) e8 } >> |
     << { \stemDown <gis, d'>4. } \\ { f'8\rest e16[ e] e8 } >> |
@@ -143,18 +148,18 @@ vLowerVoice = \relative c' {
     cis4 r8 |
     a4. |
     <d, e,>4. |
-    a4 s8
+    a4
   }
   \repeat volta 2 {
-    s4 r8 |
-    fis'8[ fis eis]
+    r8 |
+    fis'8[ fis eis] |
     <fis a>4 r8 |
     <b cis,>4. |
     <fis a>4 r8 |
     d4. |
     cis4 a8 |
     b8 e,4 |
-    a4 s8
+    a4 s8 |
   }
   \repeat volta 2 {
     a4. |
@@ -169,7 +174,7 @@ vLowerVoice = \relative c' {
     << { e'8\rest \stemDown a16[ a] a8 } \\ { a,4. } >> |
     a4 a'8 |
     << { e8\rest \stemDown a16[ a] a8 } \\ { a,4. } >> |
-    << { \stemDown\shiftOn\override Stem #'length-fraction = #(magstep -2)
+    << { \stemDown\shiftOn\override Stem.length-fraction = #(magstep -2)
 	 cis'8 d e } \\ { a,,4. } >> |
     <fis'' d,>4. |
     << { \stemDown\shiftOn cis8 e d } \\ { e,,4. } >>  |
@@ -218,6 +223,7 @@ vLowerVoice = \relative c' {
 %%%
 \score {			% Minuet
   \unfoldRepeats {
+    \new Staff="Guitar"
     <<
       \set Staff.midiInstrument = #"acoustic guitar (nylon)"
       \key a \major
@@ -227,14 +233,11 @@ vLowerVoice = \relative c' {
    >>
   }
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-    }
+    \tempo 4 = 100
   }
 }
 \score {			% Waltz
-  \unfoldRepeats {
+    \new Staff="Guitar"
     <<
       \set Staff.midiInstrument = #"acoustic guitar (nylon)"
       \key a \major
@@ -242,11 +245,7 @@ vLowerVoice = \relative c' {
       \vUpperVoice
       \vLowerVoice
    >>
-  }
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-    }
+    \tempo 4 = 100
   }
 }
