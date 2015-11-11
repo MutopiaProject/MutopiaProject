@@ -1,19 +1,23 @@
-\version "2.14.2"
+\version "2.18.2"
 
 \header {
   mutopiatitle = "Six Petites Pièces, No. 6"
   mutopiacomposer = "AguadoD"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
   title = "Six Petites Pièces, No. 6"
   composer = "Dionisio Aguado"
+  source = "Mainz: B. Schott"
+  % source = "Statens musikbibliotek - The Music Library of Sweden"
+  % http://urn.kb.se/resolve?urn=urn:nbn:se:statensmusikverk-4033
+  date = "1830"
   instrument = "Guitar"
   opus = "Op. 4, No. 6"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
-  maintainerEmail = "glenl at glx.com"
- footer = "Mutopia-2011/10/01-1790"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+  maintainerEmail = "glenl.glx at gmail.com"
+ footer = "Mutopia-2015/11/10-1790"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \layout {
@@ -29,26 +33,26 @@ global = {
 upperVoice = \relative c' {
   \voiceOne
   \slurDown
-  \partial 8 { d8 }
   \repeat volta 2 {
+    \partial 8 { d8 }
     b'16.[ a32] g8[ fis8] |
     g4 e8 |
     <e c'>16. <d b'>32 <c a'>8[ <b gis'>8] |
     <c a'>4 \grace { b'16[ c16] } a16. a32 |
-    \acciaccatura c8 fis,8.\noBeam fis16 e16.[ fis32] |
-    \acciaccatura fis8 d'8( \times 2/3 { d16[) cis c] } \times 2/3 { b16[ a g] } |
+    \slashedGrace{c8} fis,8.\noBeam fis16 e16.[ fis32] |
+    \slashedGrace{fis8} d'8( \tuplet 3/2 { d16[) cis c] } \tuplet 3/2 { b16[ a g] } |
     e8[ a8] g32[ fis e fis] |
-    <b, g'>4 s8 |
+    <b, g'>4
   }
   \repeat volta 2 {
-    s4 b'16.[ b32] |
+    b'16.[ b32] |
     b4 b16.[ fis32] |
     b16[ g16] e[ fis] g[ gis] |
     a4 g16.[ e32] |
-    fis8~ \times 2/3 { fis16[ d e] } \times 2/3 { fis[ g a] } |
+    fis8~ \tuplet 3/2 { fis16[ d e] } \tuplet 3/2 { fis[ g a] } |
     bes4 a16[ g] |
     fis16^\markup{\italic glissez}\glissando d'8 b16 g[ e] |
-    <e, d'>4 \acciaccatura fis'8 <g, e'>8 |
+    <e, d'>4 \slashedGrace{fis'8} <g, e'>8 |
     <d' fis,>16[ a'(] gis16[) a16] fis16[ d16] |
     cis4 cis8 |
     d16 e fis[ g(] b) a |
@@ -62,39 +66,39 @@ upperVoice = \relative c' {
     <g, b g'>4 e'8 |
     <e c'>16. <d b'>32 <c a'>8[ <b gis'>8] |
     <c a'>8. a'16^\markup{\italic glissez}\glissando e'16.[ e32] |
-    \acciaccatura e8 fis,8. \acciaccatura g8 fis16 e16.[ fis32 ] |
-    a8( \times 2/3 { a16[) g e16] } \times 2/3 { e[ c a16] } |
-    \times 2/3 { e'16 d b } g8[ b16. a32] |
-    g4 s8 |
+    \slashedGrace{e8} fis,8. \slashedGrace{g8} fis16 e16.[ fis32 ] |
+    a8( \tuplet 3/2 { a16[) g e16] } \tuplet 3/2 { e[ c a16] } |
+    \tuplet 3/2 { e'16 d b } g8[ b16. a32] |
+    g4
   }
   \repeat volta 2 {
-    s4 d'8 |
-    \times 2/3 { g16( a) b } \times 2/3 { b([ c) d16] } \times 2/3 {d16[ e fis16] } |
-    g8( \times 2/3 { g16[) d b] } \times 2/3 { d16( b) g } |
-    \times 2/3 { fis16 c' b } \times 2/3 { c([ a) fis16] } \times 2/3 { d e fis} |
-    \times 2/3 { g16[ b a] } g8 g |
-    \times 2/3 { g16( fis) e } \times 2/3 {d16([ c) b] } \times 2/3 { a( b) g } |
-    \times 2/3 { fis16 d( fis) } \times 2/3 { a16[ d fis16]} a16^\markup{\italic glissez}\glissando d |
-    \times 2/3 { d c( b) }\times 2/3 { b16([ a) d,16] } \times 2/3 { a' g e } |
-    <d fis,>4 s8
+    d'8 |
+    \tuplet 3/2 { g16( a) b } \tuplet 3/2 { b([ c) d16] } \tuplet 3/2 {d16[ e fis16] } |
+    g8( \tuplet 3/2 { g16[) d b] } \tuplet 3/2 { d16( b) g } |
+    \tuplet 3/2 { fis16 c' b } \tuplet 3/2 { c([ a) fis16] } \tuplet 3/2 { d e fis} |
+    \tuplet 3/2 { g16[ b a] } g8 g |
+    \tuplet 3/2 { g16( fis) e } \tuplet 3/2 {d16([ c) b] } \tuplet 3/2 { a( b) g } |
+    \tuplet 3/2 { fis16 d( fis) } \tuplet 3/2 { a16[ d fis16]} a16^\markup{\italic glissez}\glissando d |
+    \tuplet 3/2 { d c( b) }\tuplet 3/2 { b16([ a) d,16] } \tuplet 3/2 { a' g e } |
+    <d fis,>4
   }
   \repeat volta 2 {
-    s4 d8 |
+    d8 |
     <a c>4 <a c>8 |
-    \times 2/3 { <g b>16[ g' fis] } \times 2/3 { g16[ d( b)] } \times 2/3 { d16([ b) g] } |
+    \tuplet 3/2 { <g b>16[ g' fis] } \tuplet 3/2 { g16[ d( b)] } \tuplet 3/2 { d16([ b) g] } |
     <a c>4 <a c>8 |
-    <g b>8 \times 2/3 { g16[ b d] } \times 2/3 { g[( b) a] } |
-    \times 2/3 { gis b a } \times 2/3 { a[ f e] } \times 2/3 { d c b } |
-    \times 2/3 { c a e' } \times 2/3 { c[ a' e] } \times 2/3 { c'( b) a } |
-    \times 2/3 { d,, b' d } \times 2/3 { g([ b) g] } \times 2/3 { a( b) a } |
-    <b, g'>4 s8 |
+    <g b>8 \tuplet 3/2 { g16[ b d] } \tuplet 3/2 { g[( b) a] } |
+    \tuplet 3/2 { gis b a } \tuplet 3/2 { a[ f e] } \tuplet 3/2 { d c b } |
+    \tuplet 3/2 { c a e' } \tuplet 3/2 { c[ a' e] } \tuplet 3/2 { c'( b) a } |
+    \tuplet 3/2 { d,, b' d } \tuplet 3/2 { g([ b) g] } \tuplet 3/2 { a( b) a } |
+    <b, g'>4
   }
 }
 
 lowerVoice = \relative c' {
   \voiceTwo
-  \partial 8 { r8 }
   \repeat volta 2 {
+    \partial 8 { r8 }
     <g b>4 <d a' c>8 |
     <g b>8\noBeam g,8 r8 |
     r8 r8 e'8 |
@@ -102,10 +106,10 @@ lowerVoice = \relative c' {
     d4. |
     <g b>4. |
     <c, a'>4 <d a' c>8 |
-    g,4 s8 |
+    g,4
   }
   \repeat volta 2 {
-    s4 r8 |
+    r8 |
     b4. |
     e4 c8\rest |
     a4. |
@@ -128,10 +132,10 @@ lowerVoice = \relative c' {
     d4. |
     r8 <e b'>8\noBeam c8 |
     d4 d8 |
-    g,4 s8
+    g,4
   }
   \repeat volta 2 {
-    s4 r8 |
+    r8 |
     <g' b>4. |
     <g b>4. |
     d4. |
@@ -139,18 +143,18 @@ lowerVoice = \relative c' {
     <a, g'>4 cis8 |
     d16 r16 c8\rest c8\rest |
     << { \shiftOn\stemDown g''8 fis\noBeam <cis g> } \\ { g8 a\noBeam a, } >> |
-    d4 s8
+    d4
   }
   \repeat volta 2 {
-    s4 r8 |
-    r16 fis,( g) \times 1/3 { a([ b c]) } \times 2/3 { d a fis } |
+    r8 |
+    r16 fis,( g) \tuplet 3/1 { a([ b c]) } \tuplet 3/2 { d a fis } |
     g4 c8\rest |
-    r16 fis, g \times 1/3 { a[ b c] } \times 2/3 { d a fis } |
+    r16 fis, g \tuplet 3/1 { a[ b c] } \tuplet 3/2 { d a fis } |
     g4 r8 |
     <e' d'>16 r16 r8 r8 |
     a,8 r8 r8 |
     d4 <d c'>8 |
-    g\noBeam g, s8 |
+    g\noBeam g,
   }
 }
 
@@ -158,21 +162,18 @@ innerVoice = \relative c {
   \voiceThree
   \stemDown
   \partial 8 { s8 }
-  \repeat volta 2 {
-    \repeat unfold 4 { s4. }
-    a'8\rest <a c>8 <a c>8 |
-    \repeat unfold 3 { s4. }
-  }
-  \repeat volta 2 {
-    s4. |
-    b8\rest <b dis>8[ <b dis>8] |
-    e8 a,8\rest r8 |
-    a8\rest <a cis>8[ <a cis>8] |
-    d8 a8\rest a8\rest |
-    \repeat unfold 14 { s4. }
-    a8\rest <a c> <a c> |
-    \repeat unfold 3 { s4. }
-  }
+  \repeat unfold 4 { s4. }
+  a'8\rest <a c>8 <a c>8 |
+  \repeat unfold 2 { s4. }
+  s4
+  s8 |
+  b8\rest <b dis>8[ <b dis>8] |
+  e8 a,8\rest a\rest |
+  a8\rest <a cis>8[ <a cis>8] |
+  d8 a8\rest a8\rest |
+  \repeat unfold 14 { s4. }
+  a8\rest <a c> <a c> |
+  \repeat unfold 2 { s4. } s4
 }
 
 \score {
@@ -192,19 +193,15 @@ innerVoice = \relative c {
 }
 
 \score {
-  \unfoldRepeats {
-    <<
-      \global
-      \set Staff.midiInstrument = #"acoustic guitar (nylon)"
-      \upperVoice
-      \lowerVoice
-      \innerVoice
-   >>
-  }
+  \new Staff="Guitar"
+  <<
+    \global
+    \set Staff.midiInstrument = #"acoustic guitar (nylon)"
+    \upperVoice
+    \lowerVoice
+    \innerVoice
+  >>
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 4)
-    }
+    \tempo 4 = 100
   }
 }
