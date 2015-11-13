@@ -39,7 +39,7 @@ upperStaff = { \tempo "Allegro"
  <g'' bf''>2. <e'' g''>4                                                                   | % 3
  <e'' g''>8 ^\staccato  g''16^2[ a''] bf'' a'' g'' f''^1 e''^3 d'' c'' bf'^3 \stemDown a' g' c''^5 bf' \stemNeutral| % 4
  <f'^1 a'^3>2. <c''^1 a''^5>8 <c'' a''>8                                                   | % 5
- <bf'^2 g''^5>2. <bf'^1 g''^5>8 <bf' g''>8                                                 | % 6
+ <bf'^2 g''^5>2. <bf' g''>8 <bf' g''>8                                                 | % 6
  <a' f''>2 <g' e''^4>2                                                                     | % 7
  <a' f''>8  r8 r4 r2                                                             \bar "|."   % 8
 }
@@ -49,7 +49,7 @@ lowerStaff =  {
  
    f,16_3 fs, g,_1 gs,_2 ^3 a,16^1_1 bf,^3_2 b,^2_1 c^1_3 cs16^3_2  d^1_1 ds^3_2 e^2_1 f!16^1_2 e_3 f e  | % 1  
    f8^\staccato  r8 r4 r2                                                                       | % 2
-   c'16^1 b bf^3 a^1 af^2 g^1 gf^2 f^1 e^2 ef^3 d^1 df^2 c^1 b,^2 c b,                                 | % 3
+   c'16^1 b bf^3 a^1 af^2_3 g^1 gf^2_3 f^1 e^2 ef^3 d^1 df^2_3 c^1 b,^2 c b,                                 | % 3
    c8_\staccato r8 r4 r2                                                                               | % 4
    f,16_3  fs, g, gs,_2 ^3 a,16^1 bf,^3_2 b,^2_1 c^1_3 cs16^3_2 d^1_1 ds^3_3 e f8 r8                    | % 5 
   bf,!16 _3 b, c cs^3_2 d^1 ds^3_3 e f fs^3_2 g^1 gs^3_2 a^1 bf8^2 r8                                                                      \mbreak                    | % 6 
