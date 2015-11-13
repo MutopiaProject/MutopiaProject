@@ -13,11 +13,7 @@ foreach $pair (@pairs) {
  $FORM{$name} = $value;
 }
 
-# Grab the base reference, and open the cache file
-
-open(FTPB,"../ftpbase.dat");
-chomp ($ftpbase = <FTPB>);
-close(FTPB);
+# Open the cache file
 
 open(CACHE,"../datafiles/musiccache.dat");
 $baseref = "../ftp/";
@@ -265,7 +261,7 @@ until (eof CACHE) {
    print "<td><a href=\"";
    print "$baseref$midrif$musicnm/$pngfile\">Preview image</a></td>\n";
    print "<td><a href=\"";
-   print "$baseref$midrif$musicnm/\">Appropriate FTP area</a></td>\n</tr><tr>\n";
+   print "$baseref$midrif$musicnm/\">Web directory</a></td>\n</tr><tr>\n";
 
    # Several ps/pdf files in a zip, or just one?
    if ($a4psfile =~ /\.zip$/) {
