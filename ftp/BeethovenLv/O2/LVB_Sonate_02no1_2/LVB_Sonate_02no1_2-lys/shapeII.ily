@@ -1,4 +1,4 @@
-\version "2.17.26"
+\version "2.18.2"
 
 \header {
   snippet-title = "Improved \shape"
