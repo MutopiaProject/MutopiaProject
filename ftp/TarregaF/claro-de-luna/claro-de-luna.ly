@@ -12,7 +12,9 @@
  composer = "Arr: de F. Tárrega"
  style = "Classical"
  date = "c.1885" % Beethoven d.1827, Tarrega d.1909, Alier d.1938
+ mutopiadate = "c.1885"
  source = "Madrid: Ildefonso Alier, n.d. Plate 5754" % via IMSLP293004
+ mutopiasource = "Madrid: Ildefonso Alier, n.d. Plate 5754"
 
  %            o_
  %       (\___\/_____/)
@@ -25,9 +27,9 @@
  mutopiatitle = "Claro de Luna (Beethoven's Moonlight Sonata)"
  mutopiainstrument = "Guitar"
 
- footer = "Mutopia-2015/11/16-3"
+ footer = "Mutopia-2015/11/17-2074"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = \markup{ \smaller \italic "Ildefonso Alier (1864-1938), Editor de Musica, Madrid.  Placa № 5754. IMSLP № 293004."}
+ tagline = ##f
 }
 
 \paper{
