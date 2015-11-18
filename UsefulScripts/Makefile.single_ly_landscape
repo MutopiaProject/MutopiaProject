@@ -1,0 +1,13 @@
+# Makefile.single_ly_landscape
+
+all: $(addsuffix .rdf, $(basename $(wildcard *.ly))) \
+     $(addsuffix .log, $(basename $(wildcard *.ly)))
+
+%.rdf: %.ly
+	mutopia-clean.sh
+	java Mutopia -f $<
+	mutopia-compile.sh -l $<
+	java Mutopia -r $<
+
+%.log: %.ly
+	mutopia-history.sh
