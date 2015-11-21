@@ -79,36 +79,20 @@ TUPNO  = { \TUPNNO \TUPBNO }
 BEAMPOS = #(define-music-function (parser location beg-end) (pair?)
  #{ \once \override Beam.positions = #beg-end #})
 % DÉPLACER UNE DYNAMIQUE OU MODIFIER SON LIBELLÉ
-DYNEXO =
- #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override DynamicText.extra-offset = #beg-end #})
-PINEXO =
- #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Hairpin.extra-offset = #beg-end #})
-CRESC =   { \set crescendoText   = \markup { \italic "cresc." }   \set crescendoSpanner = #'text }
-DECRESC = { \set decrescendoText = \markup { \italic "decresc." } \set decrescendoSpanner = #'text }
-DIMIN =   { \set decrescendoText = \markup { \italic "dimin." }   \set decrescendoSpanner = #'text }
+dimin = #(make-music 'DecrescendoEvent 'span-direction START 'span-type 'text 'span-text "dimin.")
 %----- CRESCENDO SPÉCIAL
 CREScendo = { \set crescendoText = \markup { \italic "cres    " } \set crescendoSpanner = #'text }
 cresCENdo = { \set crescendoText = \markup { \italic "cen    " }  \set crescendoSpanner = #'text }
 crescenDO = { \set crescendoText = \markup { \italic "do" }   \set crescendoSpanner = #'text }
 %----- REMPLACEMENT DE LA MESURE 4/2
-NOTEEXO =
- #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override NoteHead.extra-offset = #beg-end #})
-RESTEXO =
- #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Rest.extra-offset = #beg-end #})
-TIMESIGNO = \override Staff.TimeSignature.transparent = ##t
-TSCREXO = #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override TextScript.extra-offset = #beg-end #})
-TIMESIGOK = \markup { \musicglyph #"timesig.C22" \musicglyph #"timesig.C22" }
-KEYTIME = { \key solb \major \TIMESIGNO \time 4/2 \TSCREXO #'(-4 . -10.5) s1*0 ^\TIMESIGOK }
-KEYTIMEB = { \key solb \major \TIMESIGNO \time 4/2 \TSCREXO #'(-4 . -3.5) s1*0 ^\TIMESIGOK }
+KEYTIME = { \key solb \major
+\override Staff.TimeSignature.stencil = #ly:text-interface::print
+\override Staff.TimeSignature.text = \markup { \musicglyph #"timesig.C22" \musicglyph #"timesig.C22" }
+\time 4/2 }
 %----- MOUVEMENT
 MOVEMENT = \markup { \bold \large  { \hspace #-5 \italic "Andante." } }
 %----- RÉTABLISSEMENT DU "dash"
-DTSDASHOK = \once \override DynamicTextSpanner.dash-period = #3.0
+DTSDASHOK = \once \override DynamicTextSpanner.style = #'dashed-line
 %----- MARKUP
 SFORZATO = \markup { \musicglyph #"scripts.sforzato" }
 FFZ = #(make-dynamic-script "ffz")
@@ -124,7 +108,7 @@ FFZ = #(make-dynamic-script "ffz")
 
 hautI = \context Staff \relative do'' \new Voice { \voiceOne
 %1-4
- \NOTEEXO #'(0.7 . 0) sib1 ^\MOVEMENT ( sib2-. sib2-.)
+ sib1 ^\MOVEMENT ( sib2-. sib2-.)
  sib1 ( solb1)
  lab1( solb4 fa mib reb)
  solb2 sib lab2. la4
@@ -241,7 +225,7 @@ hautI = \context Staff \relative do'' \new Voice { \voiceOne
 hautII = \context Staff \relative do' \new Voice { \voiceTwo
 %1-4
  \TUPNO
- \tuplet 6/4  { \RESTEXO #'(0.7 . 0) r8 sib[ reb solb reb sib] }   \tuplet 6/4 { reb[ sib reb solb reb sib] }
+ \tuplet 6/4  { r8 sib[ reb solb reb sib] }   \tuplet 6/4 { reb[ sib reb solb reb sib] }
   \tuplet 6/4 { r8 sib[ reb solb reb sib] }   \tuplet 6/4 { r8 sib[ reb solb reb sib] } 
  \tuplet 6/4  { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
   \tuplet 6/4 { r8 solb[ sib mib sib solb] }  \tuplet 6/4 { sib[ solb sib mib sib solb] } 
@@ -438,7 +422,7 @@ basIa = \relative do { \voiceOne
 
 %1-3
  \oneVoice
- \NOTEEXO #'(0.7 . 0) <solb reb'>1 <solb reb'>2 <solb reb'>2
+ <solb reb'>1 <solb reb'>2 <solb reb'>2
  <mib mib'>1~ <mib mib'>1
  <dob dob'>1 <reb reb'>2. <dob' reb>4
 }
@@ -877,7 +861,7 @@ basIII = \context Staff \relative do' \new Voice { \voiceThree
 %%%%%%%%%%%%%%%%%%%% RÉSUMÉ POUR LA PARTITION
 notePartBas = {
  \clef bass
- \KEYTIMEB
+ \KEYTIME
  \set autoBeaming = ##f
  << \basIPart \basII \basIII >>
 }
@@ -901,36 +885,36 @@ s1*2
 \tuplet 6/4 { s8 s8 \cr s4. s8 \! }   \tuplet 6/4 { s8 s4 \decr s8 s8 \! s8 } s1
 %5-8
 s1*2
-s1 s4 \crescTextCresc s2 \cr s4 \! 
+s1 s4 s2 \cresc s4 \! 
 s1*2
 s1*2 \p
 %9-12
 s1*4
-s1 \tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 s8 \! }  \tuplet 6/4 { s2 \cr s8 s8 \! }
+s1 \tuplet 6/4 { s8 s4 \cresc s4 s8 \! }  \tuplet 6/4 { s2 \cr s8 s8 \! }
 \tuplet 6/4 { s4 s8 \decr s4. }  \tuplet 6/4 { s2 s8 \! s8 }  s1
 %13-16
 s1 \pp s1
-s1 \DIMIN s4 \decr s4 \! s2
+s1 s4 \dimin s4 \! s2
 s1*2
-s1 \tuplet 6/4 { s4 \crescTextCresc s2 \cr } s2 \! 
+s1 \tuplet 6/4 { s4 s2 \cresc } s2 \! 
 %17-20
 s1*4
-\tuplet 6/4 { s8 \crescTextCresc s2 \cr s8 \! } s2 s1
+\tuplet 6/4 { s8 s2 \cresc s8 \! } s2 s1
 s1*2
 %21-24
 s1 \pp s1
-s1 \DIMIN s4 \decr s4 \! s2
+s1 s4 \dimin s4 \! s2
 s1*4
 %25-28
 s1 \f s1
-s1 \DECRESC s2 \decr s2 \!
+s1 s2 \decresc s2 \!
 s1 \p s1
 s1 \f s1
 %29-32
-s1 \tuplet 6/4 { s8 \DECRESC s4 \decr s4 s8 \! } s2
+s1 \tuplet 6/4 { s8 s4 \decresc s4 s8 \! } s2
 s1*2 \p
-\tuplet 12/8 { s4 \pp s8 \cr s4 s8 \! s4 \decr s8 \! s4. } \tuplet 6/4 { s8 \DECRESC s4 \decr s4 s8 \! } s2
-\DYNEXO #'(1 . 0) s1*2 \pp
+\tuplet 12/8 { s4 \pp s8 \cr s4 s8 \! s4 \decr s8 \! s4. } \tuplet 6/4 { s8 s4 \decresc s4 s8 \! } s2
+s1*2 \pp
 %33-36
 s1*4
 s1 \ppp s1
@@ -938,55 +922,55 @@ s1 \ppp s1
 %37-40
 s1 \pp s1
 \tuplet 12/8 { s8 s8 \cr s2 s2 s8 s8 \! } \tuplet 6/4 { s8 \fz s8 \decr s4 s8 s8 \! } s2
-s1 \pp s2 \tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 \! s8 }
+s1 \pp s2 \tuplet 6/4 { s8 s4 \cresc s4 \! s8 }
 s1 \f s1
 %41-44
 s1*2
 s1 \p s1
 s1*2
-\DYNEXO #'(0.5 . 0) s1 \f s1
+s1 \f s1
 %45-48
 s1*2
-\DYNEXO #'(0.5 . 0) s1 \p s1
+s1 \p s1
 s1*4
 %49-51
 s1*6
 %52-56
-s1 \tuplet 6/4 { s8 \DTSDASHOK \crescTextCresc s4 \cr s4. } s2
+s1 \tuplet 6/4 { s8 \DTSDASHOK s4 \cresc s4. } s2
 s1 s1 \!
 s1 s2 s2 \pp
 s1*4
 %57-60
-s1 \crescTextCresc s2 \cr s2 \!
+s1 s2 \cresc s2 \!
 s1 s1 \p
 s1*4
 %61-64
 s1*8
 %65-68
-\tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
+\tuplet 6/4 { s8 s4 \cresc s4 s8 \! } s2 s1
 s1*2
 s1 \pp s1
-s2 \DIMIN s4 \decr s4 \! s1
+s2 s4 \dimin s4 \! s1
 %69-72
 s1*2
-\tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
+\tuplet 6/4 { s8 s4 \cresc s4 s8 \! } s2 s1
 s1 \fp s1 \pp
-s1 \DIMIN s4 \decr s4 \! s2
+s1 s4 \dimin s4 \! s2
 %73-76
 s1*2
 s1 \tuplet 6/4 { s4. \DTSDASHOK \CREScendo s8 \cr s4 } s2
 \tuplet 6/4 { s8 \! \DTSDASHOK \cresCENdo s4. \cr s4 } s2 s2 \tuplet 6/4 { s4 s8 \! \crescenDO s4 \cr s8 \! }
-s1 \DYNEXO #'(1 . 0) s1 \fz
+s1 s1 \fz
 %77-80
 s1*2 \p
-s1 \tuplet 6/4 { s8 \crescTextCresc s2 \cr s8 } s2 \!
-s2 \tuplet 6/4 { s8 \crescTextCresc s2 \cr s8 } s1 \!
+s1 \tuplet 6/4 { s8 s2 \cresc s8 } s2 \!
+s2 \tuplet 6/4 { s8 s2 \cresc s8 } s1 \!
 s1 s1 -\FFZ
 %81-86
-s1 \p \DYNEXO #'(0.5 . -1) s1 \pp
+s1 \p s1 \pp
 s1*2
-\tuplet 6/4 { s8 \DIMIN s4. \decr s4 \! } s2 s1
-\DYNEXO #'(2 . 0) s1 \ppp s1
+\tuplet 6/4 { s8 s4. \dimin s4 \! } s2 s1
+s1 \ppp s1
 s1*4
 }
 
@@ -1018,7 +1002,7 @@ s1*6
 s1 \tuplet 12/8 { s8 s4 ^\cr s2. s8 s8 \! s8 }
 %25-28
 s1*2
-\tuplet 12/8 { \PINEXO #'(1 . 0) s4. ^\decr s4. s8 s8 \! s8 s4. } s1
+\tuplet 12/8 { s4. ^\decr s4. s8 s8 \! s8 s4. } s1
 s1*4
 %29-41
 s1*26
@@ -1039,7 +1023,7 @@ s1 \tuplet 12/8 { s4 s8 ^\cr s2. s8 s8 \! s8 }
 s1*4
 %57-60
 s1*2
-\tuplet 6/4 { s8 s8 ^\cr s4. s8 \! } \tuplet 6/4 { \PINEXO #'(0.5 . 0) s4. ^\decr s8 \! s4 }  s1
+\tuplet 6/4 { s8 s8 ^\cr s4. s8 \! } \tuplet 6/4 { s4. ^\decr s8 \! s4 }  s1
 s1*4
 %61-64
 \tuplet 6/4 { s8 s8 ^\cr s4. s8 \! } \tuplet 6/4 { s4. ^\decr s8 s8 \! s8 }  s1
@@ -1054,7 +1038,7 @@ s1 \tuplet 12/8 { s8 s4 ^\cr s8 s8 s8 \! s8 s4 ^\decr s8 s8 \! s8 }
 s1*4
 %73-76
 s1*6
-\tuplet 12/8 { s8 \PINEXO #'(1 . 0) s4 ^\cr s2. s8 \! s4 } \tuplet 12/8 { s8 s4 ^\decr s4. s4 s8 \! s4. }
+\tuplet 12/8 { s8 s4 ^\cr s2. s8 \! s4 } \tuplet 12/8 { s8 s4 ^\decr s4. s4 s8 \! s4. }
 %77-80
 s1 s1 ^\pp
 s1*2
@@ -1075,23 +1059,23 @@ dynPartBas = {
 %1-24
 s1*48
 %25-28
-\DYNEXO #'(1 . 0) s1 _\fz \DYNEXO #'(1 . 0) s1 _\fz
-\DYNEXO #'(1 . 0) s1 _\fz s1
+s1 _\fz s1 _\fz
+s1 _\fz s1
 s1*4
 %29-35
 \tuplet 3/2 { s8 s4 \decr } s4 \tuplet 3/2 { s4 s8 \! } s4 s1
 s1*12
 %36-40
-s1 \DYNEXO #'(0.5 . -1) s1 _\fz
+s1 s1 _\fz
 s1*2
-s1 \DYNEXO #'(0.5 . -1) s1 _\fz
+s1 s1 _\fz
 s1*4
 %41-45
 s1 _\fz s1 _\fz
 s1*2
-s1 \DYNEXO #'(0.5 . 0) s1 _\f
-\DYNEXO #'(0.5 . 0) s1 _\fz \DYNEXO #'(0.5 . 0) s1 _\f
-\DYNEXO #'(0.5 . 0) s1 _\fz \DYNEXO #'(0.5 . 0) s1 _\fz
+s1 s1 _\f
+s1 _\fz s1 _\f
+s1 _\fz s1 _\fz
 %46-77
 s1*82
 }
