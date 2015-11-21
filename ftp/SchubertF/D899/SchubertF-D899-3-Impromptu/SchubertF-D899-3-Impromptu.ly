@@ -9,7 +9,7 @@
 %                                                  
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\version "2.16.0"
+\version "2.18.0"
 \include "italiano.ly"
 
 #(set-global-staff-size 18)
@@ -72,19 +72,19 @@
 STAFFDO = { \change Staff = downIII \voiceThree }
 STAFFUP = { \change Staff = upII    \voiceTwo }
 %----- CACHER OU AFFICHER LE NOMBRE OU LE CROCHET D'UN NOLET
-TUPNNO = \override TupletNumber #'transparent = ##t
-TUPBNO = \override TupletBracket #'transparent = ##t
+TUPNNO = \override TupletNumber.transparent = ##t
+TUPBNO = \override TupletBracket.transparent = ##t
 TUPNO  = { \TUPNNO \TUPBNO }
 % VARIER LA HAUTEUR D'UNE BARRE DE LIGATURE
 BEAMPOS = #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Beam #'positions = #beg-end #})
+ #{ \once \override Beam.positions = #beg-end #})
 % DÉPLACER UNE DYNAMIQUE OU MODIFIER SON LIBELLÉ
 DYNEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override DynamicText #'extra-offset = #beg-end #})
+ #{ \once \override DynamicText.extra-offset = #beg-end #})
 PINEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Hairpin #'extra-offset = #beg-end #})
+ #{ \once \override Hairpin.extra-offset = #beg-end #})
 CRESC =   { \set crescendoText   = \markup { \italic "cresc." }   \set crescendoSpanner = #'text }
 DECRESC = { \set decrescendoText = \markup { \italic "decresc." } \set decrescendoSpanner = #'text }
 DIMIN =   { \set decrescendoText = \markup { \italic "dimin." }   \set decrescendoSpanner = #'text }
@@ -95,20 +95,20 @@ crescenDO = { \set crescendoText = \markup { \italic "do" }   \set crescendoSpan
 %----- REMPLACEMENT DE LA MESURE 4/2
 NOTEEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override NoteHead #'extra-offset = #beg-end #})
+ #{ \once \override NoteHead.extra-offset = #beg-end #})
 RESTEXO =
  #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override Rest #'extra-offset = #beg-end #})
-TIMESIGNO = \override Staff.TimeSignature #'transparent = ##t
+ #{ \once \override Rest.extra-offset = #beg-end #})
+TIMESIGNO = \override Staff.TimeSignature.transparent = ##t
 TSCREXO = #(define-music-function (parser location beg-end) (pair?)
- #{ \once \override TextScript #'extra-offset = #beg-end #})
+ #{ \once \override TextScript.extra-offset = #beg-end #})
 TIMESIGOK = \markup { \musicglyph #"timesig.C22" \musicglyph #"timesig.C22" }
 KEYTIME = { \key solb \major \TIMESIGNO \time 4/2 \TSCREXO #'(-4 . -10.5) s1*0 ^\TIMESIGOK }
 KEYTIMEB = { \key solb \major \TIMESIGNO \time 4/2 \TSCREXO #'(-4 . -3.5) s1*0 ^\TIMESIGOK }
 %----- MOUVEMENT
 MOVEMENT = \markup { \bold \large  { \hspace #-5 \italic "Andante." } }
 %----- RÉTABLISSEMENT DU "dash"
-DTSDASHOK = \once \override DynamicTextSpanner #'dash-period = #3.0
+DTSDASHOK = \once \override DynamicTextSpanner.dash-period = #3.0
 %----- MARKUP
 SFORZATO = \markup { \musicglyph #"scripts.sforzato" }
 FFZ = #(make-dynamic-script "ffz")
@@ -156,7 +156,7 @@ hautI = \context Staff \relative do'' \new Voice { \voiceOne
 %25-28
  sib1-> sib1->
  sib4( fa' re dob) dob( sib) sib( lab)
- lab4( solb fa lab) mib2( re4. \times 2/3 { s16 sib'8) }
+ lab4( solb fa lab) mib2( re4. \tuplet 3/2 { s16 sib'8) }
  sib1-> sib2.->( dob4)
 %29-32
  sib4( fa' re dob sib dob sib lab)
@@ -241,178 +241,178 @@ hautI = \context Staff \relative do'' \new Voice { \voiceOne
 hautII = \context Staff \relative do' \new Voice { \voiceTwo
 %1-4
  \TUPNO
- \times 4/6  { \RESTEXO #'(0.7 . 0) r8 sib[ reb solb reb sib] }   \times 4/6 { reb[ sib reb solb reb sib] }
-  \times 4/6 { r8 sib[ reb solb reb sib] }   \times 4/6 { r8 sib[ reb solb reb sib] } 
- \times 4/6  { r8 sib[ mib solb mib sib] }   \times 4/6 { mib[ sib mib solb mib sib] }
-  \times 4/6 { r8 solb[ sib mib sib solb] }  \times 4/6 { sib[ solb sib mib sib solb] } 
- \times 4/6  { r8 lab[ dob mib dob lab] }    \times 4/6 { dob[ lab dob mib dob lab] }
-  \times 2/3 { r8 lab[ dob] }  \times 2/3 { r8 lab[ dob] }  \times 2/3 { r8 lab[ dob] }  \times 2/3 { r8 fa,[ lab]}
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { r8 do[ mib solb mib do] }
-  \times 4/6 { r8 lab[ reb fa reb lab] }     \times 4/6 { reb[ lab reb fa reb lab] }
+ \tuplet 6/4  { \RESTEXO #'(0.7 . 0) r8 sib[ reb solb reb sib] }   \tuplet 6/4 { reb[ sib reb solb reb sib] }
+  \tuplet 6/4 { r8 sib[ reb solb reb sib] }   \tuplet 6/4 { r8 sib[ reb solb reb sib] } 
+ \tuplet 6/4  { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
+  \tuplet 6/4 { r8 solb[ sib mib sib solb] }  \tuplet 6/4 { sib[ solb sib mib sib solb] } 
+ \tuplet 6/4  { r8 lab[ dob mib dob lab] }    \tuplet 6/4 { dob[ lab dob mib dob lab] }
+  \tuplet 3/2 { r8 lab[ dob] }  \tuplet 3/2 { r8 lab[ dob] }  \tuplet 3/2 { r8 lab[ dob] }  \tuplet 3/2 { r8 fa,[ lab]}
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { r8 do[ mib solb mib do] }
+  \tuplet 6/4 { r8 lab[ reb fa reb lab] }     \tuplet 6/4 { reb[ lab reb fa reb lab] }
 %5-8
- \times 4/6  { r8 sib[ reb solb reb sib] }   \times 4/6 { reb[ sib reb solb reb sib] }
-  \times 4/6 { r8 sib[ reb solb reb sib] }   \times 4/6 { r8 sib[ reb solb reb sib] } 
- \times 4/6  { r8 sib[ mib solb mib sib] }   \times 4/6 { mib[ sib mib solb mib sib] }
-  \times 4/6 { r8 solb[ sib mib sib solb] }  s2
- s2 \times 4/6 { r8 lab[ dob mib dob lab] }
-  \times 2/3 { r8 dob[ lab] }  \times 2/3 { r8 dob[ lab] }  \times 2/3 { r8 dob[ lab] }  \times 2/3 { r8 dob[ lab]}
- \times 4/6  { r8 dob[ reb fa reb dob] }     \times 4/6 { reb[ dob reb fa reb dob] }
-  \times 4/6 { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] } 
+ \tuplet 6/4  { r8 sib[ reb solb reb sib] }   \tuplet 6/4 { reb[ sib reb solb reb sib] }
+  \tuplet 6/4 { r8 sib[ reb solb reb sib] }   \tuplet 6/4 { r8 sib[ reb solb reb sib] } 
+ \tuplet 6/4  { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
+  \tuplet 6/4 { r8 solb[ sib mib sib solb] }  s2
+ s2 \tuplet 6/4 { r8 lab[ dob mib dob lab] }
+  \tuplet 3/2 { r8 dob[ lab] }  \tuplet 3/2 { r8 dob[ lab] }  \tuplet 3/2 { r8 dob[ lab] }  \tuplet 3/2 { r8 dob[ lab]}
+ \tuplet 6/4  { r8 dob[ reb fa reb dob] }     \tuplet 6/4 { reb[ dob reb fa reb dob] }
+  \tuplet 6/4 { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] } 
 %9-12
- \times 4/6  { r8 lab[ reb fa reb lab] }     \times 4/6 { reb[ lab reb fa reb lab] }
-  \times 4/6 { r8 reb[ mib sol mib reb] }    \times 4/6 { mib[ reb mib sol mib reb] }
- \times 4/6  { r8 reb[ mib lab mib reb] }    \times 4/6 { mib[ reb mib lab mib dob] }
-  \times 4/6 { r8 dob[ mib lab mib dob] }    \times 4/6 { mib[ dob mib lab mib dob] }
- \times 4/6  { r8 dob[ fab lab fab dob] }    \times 4/6 { fab[ dob fab lab fab dob] }
-  \times 4/6 { r8 dob[ mib solb mib dob] }   \times 4/6 { r8 fab[ solb sib solb fab] }
- \times 4/6  { r8 fab[ solb dob solb fab] }  \times 4/6 { solb[ fab solb dob solb mib] }
-  \times 4/6 { r8 mib[ solb dob solb mib] }  \times 4/6 { solb[ mib solb dob solb mib] }
+ \tuplet 6/4  { r8 lab[ reb fa reb lab] }     \tuplet 6/4 { reb[ lab reb fa reb lab] }
+  \tuplet 6/4 { r8 reb[ mib sol mib reb] }    \tuplet 6/4 { mib[ reb mib sol mib reb] }
+ \tuplet 6/4  { r8 reb[ mib lab mib reb] }    \tuplet 6/4 { mib[ reb mib lab mib dob] }
+  \tuplet 6/4 { r8 dob[ mib lab mib dob] }    \tuplet 6/4 { mib[ dob mib lab mib dob] }
+ \tuplet 6/4  { r8 dob[ fab lab fab dob] }    \tuplet 6/4 { fab[ dob fab lab fab dob] }
+  \tuplet 6/4 { r8 dob[ mib solb mib dob] }   \tuplet 6/4 { r8 fab[ solb sib solb fab] }
+ \tuplet 6/4  { r8 fab[ solb dob solb fab] }  \tuplet 6/4 { solb[ fab solb dob solb mib] }
+  \tuplet 6/4 { r8 mib[ solb dob solb mib] }  \tuplet 6/4 { solb[ mib solb dob solb mib] }
 %13-16
- \times 4/6  { r8 mib[ solb dob solb mib] }  \times 4/6 { solb[ mib solb dob solb mib] }
-  \times 2/3 { r8 lab[ fa] }  \times 2/3 { r8 lab[ fa] }  \times 2/3 { r8 fa[ reb] }  \times 2/3 { r8 fa[ reb] }
- \times 4/6  { r8 reb[ solb sib solb reb]}   \times 4/6  { solb[ reb solb sib solb reb] }
-  \times 2/3 { reb'8[ solb, mib] }  \times 2/3 { dob'8[ solb mib] }  \times 2/3 { lab8[ mib dob] }  \times 2/3 { mib8[ dob lab] }
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] } 
-  \times 2/3 { solb'8[ dob, lab] }  \times 2/3 { fa'8[ dob lab] }  \times 2/3 { sib'8[ reb, dob] }  \times 2/3 { lab'8[ reb, dob] }
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] } 
-  \times 4/6 { r8 solb[ sib reb sib solb] }  \times 4/6 { r8 sol[ sib reb sib sol] }
+ \tuplet 6/4  { r8 mib[ solb dob solb mib] }  \tuplet 6/4 { solb[ mib solb dob solb mib] }
+  \tuplet 3/2 { r8 lab[ fa] }  \tuplet 3/2 { r8 lab[ fa] }  \tuplet 3/2 { r8 fa[ reb] }  \tuplet 3/2 { r8 fa[ reb] }
+ \tuplet 6/4  { r8 reb[ solb sib solb reb]}   \tuplet 6/4  { solb[ reb solb sib solb reb] }
+  \tuplet 3/2 { reb'8[ solb, mib] }  \tuplet 3/2 { dob'8[ solb mib] }  \tuplet 3/2 { lab8[ mib dob] }  \tuplet 3/2 { mib8[ dob lab] }
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] } 
+  \tuplet 3/2 { solb'8[ dob, lab] }  \tuplet 3/2 { fa'8[ dob lab] }  \tuplet 3/2 { sib'8[ reb, dob] }  \tuplet 3/2 { lab'8[ reb, dob] }
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] } 
+  \tuplet 6/4 { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { r8 sol[ sib reb sib sol] }
 %17-20
- \times 4/6  { r8 lab[ reb fa reb lab] }     \times 4/6 { reb[ lab reb fa reb lab] }
-  \times 4/6 { r8 reb[ fab sol fab reb] }      \times 4/6 { mib[ reb mib sol mib reb] }
-% \times 4/6 { r8 reb[ fa sol fa reb] }      \times 4/6 { mib[ reb mib sol mib reb] }
- \times 4/6  { r8 reb[ mib sib' mib, reb] }    \times 4/6 { mib[ reb mib lab mib dob] }
-  \times 4/6 { r8 dob[ mib lab mib dob] }    \times 4/6 { mib[ dob mib lab mib dob] }
- \times 4/6  { r8 dob[ fab lab fab dob] }    \times 4/6 { fab[ dob fab lab fab dob] }
-  \times 4/6 { r8 dob[ mib solb mib dob] }   \times 4/6 { r8 fab[ solb sib solb fab] }
- \times 4/6  { r8 fab[ solb reb' solb, fab] }  \times 4/6 { solb[ fab solb dob solb mib] }
-  \times 4/6 { r8 mib[ solb dob solb mib] }  \times 4/6 { solb[ mib solb dob solb mib] }
+ \tuplet 6/4  { r8 lab[ reb fa reb lab] }     \tuplet 6/4 { reb[ lab reb fa reb lab] }
+  \tuplet 6/4 { r8 reb[ fab sol fab reb] }      \tuplet 6/4 { mib[ reb mib sol mib reb] }
+% \tuplet 6/4 { r8 reb[ fa sol fa reb] }      \tuplet 6/4 { mib[ reb mib sol mib reb] }
+ \tuplet 6/4  { r8 reb[ mib sib' mib, reb] }    \tuplet 6/4 { mib[ reb mib lab mib dob] }
+  \tuplet 6/4 { r8 dob[ mib lab mib dob] }    \tuplet 6/4 { mib[ dob mib lab mib dob] }
+ \tuplet 6/4  { r8 dob[ fab lab fab dob] }    \tuplet 6/4 { fab[ dob fab lab fab dob] }
+  \tuplet 6/4 { r8 dob[ mib solb mib dob] }   \tuplet 6/4 { r8 fab[ solb sib solb fab] }
+ \tuplet 6/4  { r8 fab[ solb reb' solb, fab] }  \tuplet 6/4 { solb[ fab solb dob solb mib] }
+  \tuplet 6/4 { r8 mib[ solb dob solb mib] }  \tuplet 6/4 { solb[ mib solb dob solb mib] }
 %21-24
- \times 4/6  { r8 mib[ solb dob solb mib] }  \times 4/6 { solb[ mib solb dob solb mib] }
-  \times 2/3 { mib'8[ lab, fa] }  \times 2/3 { mibb'8[ lab, fa] }  \times 2/3 { dob'8[ fa, mibb] }  \times 2/3 { lab8[ fa reb] }
- \times 4/6  { r8 reb[ solb sib solb reb]}   \times 4/6  { solb[ reb solb sib solb reb] }
-  \times 2/3 { reb'8[ sol, mib] }  \times 2/3 { dob'8[ lab mib] }  \times 2/3 { lab8[ mib dob] }  \times 2/3 { mib8[ do lab] }
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] } 
-  \times 2/3 { solb'8[ dob,! lab] }  \times 2/3 { fa'8[ dob lab] }  \times 2/3 { sib'8[ reb, dob] }  \times 2/3 { lab'8[ reb, dob] }
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] } 
-  \times 4/6 { sib[ solb sib reb sib solb] } \times 4/6 { sib[ solb sib re sib solb] }
+ \tuplet 6/4  { r8 mib[ solb dob solb mib] }  \tuplet 6/4 { solb[ mib solb dob solb mib] }
+  \tuplet 3/2 { mib'8[ lab, fa] }  \tuplet 3/2 { mibb'8[ lab, fa] }  \tuplet 3/2 { dob'8[ fa, mibb] }  \tuplet 3/2 { lab8[ fa reb] }
+ \tuplet 6/4  { r8 reb[ solb sib solb reb]}   \tuplet 6/4  { solb[ reb solb sib solb reb] }
+  \tuplet 3/2 { reb'8[ sol, mib] }  \tuplet 3/2 { dob'8[ lab mib] }  \tuplet 3/2 { lab8[ mib dob] }  \tuplet 3/2 { mib8[ do lab] }
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] } 
+  \tuplet 3/2 { solb'8[ dob,! lab] }  \tuplet 3/2 { fa'8[ dob lab] }  \tuplet 3/2 { sib'8[ reb, dob] }  \tuplet 3/2 { lab'8[ reb, dob] }
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] } 
+  \tuplet 6/4 { sib[ solb sib reb sib solb] } \tuplet 6/4 { sib[ solb sib re sib solb] }
 %25-28
- \times 4/6  { r8 sib[ mib solb mib sib] }   \times 4/6 { mib[ sib mib solb mib sib] }
-  \times 4/6 { r8 sib[ mib solb mib sib] }   \times 4/6 { mib[ sib mib solb mib sib] }
- \times 2/3 { sib'8[ re, fa] } \times 2/3 { fa'8[ fa, lab] } \times 2/3 { re8[ fa, lab] } \times 2/3 { dob8[ fa, lab] }
-  \times 2/3 { dob8[ fa, lab] } \times 2/3 { sib8[ fa lab] } \times 2/3 { sib8[ sib, fa'] } \times 2/3 { lab8[ sib, fa'] }
- \times 2/3 { lab8[ sib, mib] } \times 2/3 { solb8[ sib, mib] } \times 2/3 { fa8[ lab, dob] } \times 2/3 { lab'8[ lab, dob] }
+ \tuplet 6/4  { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
+  \tuplet 6/4 { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
+ \tuplet 3/2 { sib'8[ re, fa] } \tuplet 3/2 { fa'8[ fa, lab] } \tuplet 3/2 { re8[ fa, lab] } \tuplet 3/2 { dob8[ fa, lab] }
+  \tuplet 3/2 { dob8[ fa, lab] } \tuplet 3/2 { sib8[ fa lab] } \tuplet 3/2 { sib8[ sib, fa'] } \tuplet 3/2 { lab8[ sib, fa'] }
+ \tuplet 3/2 { lab8[ sib, mib] } \tuplet 3/2 { solb8[ sib, mib] } \tuplet 3/2 { fa8[ lab, dob] } \tuplet 3/2 { lab'8[ lab, dob] }
   s1 
- \times 4/6  { r8 sib[ mib solb mib sib] }   \times 4/6 { mib[ sib mib solb mib sib] }
-  \times 4/6 { r8 sib[ mib solb mib sib] }   \times 4/6 { mib[ sib mib solb mib sib] }
+ \tuplet 6/4  { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
+  \tuplet 6/4 { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
 %29-32
- \times 2/3  { sib'8[ re, fa] } \times 2/3 { fa'8[ fa, lab] } \times 2/3 { re8[ fa, lab] }   \times 2/3 { dob8[ fa, lab] }
-  \times 2/3 { sib8[ fa lab] }  \times 2/3 { dob8[ fa, lab] } \times 2/3 { sib8[ sib, fa'] } \times 2/3 { lab8[ sib, fa'] }
- \times 2/3 { lab8[ sib, mib] } \times 2/3 { solb8[ sib, mib] } \times 2/3 { fa8[ lab, dob] } \times 2/3 { dob'8[ dob, fa] }
-  s2 s4 \times 2/3 { sib8[ sib, fa'] } 
-%\times 2/3 { lab8[ sib, mib] } \times 2/3 { solb8[ sib, mib] } \times 2/3 { fab8[ lab, dob] } \times 2/3 { dob'8[ dob, fa] }
- \times 2/3 { lab8[ sib, mib] } \times 2/3 { solb8[ sib, mib] } \times 2/3 { fab8[ lab, dob] } \times 2/3 { dob'8[ dob, fab] }
+ \tuplet 3/2  { sib'8[ re, fa] } \tuplet 3/2 { fa'8[ fa, lab] } \tuplet 3/2 { re8[ fa, lab] }   \tuplet 3/2 { dob8[ fa, lab] }
+  \tuplet 3/2 { sib8[ fa lab] }  \tuplet 3/2 { dob8[ fa, lab] } \tuplet 3/2 { sib8[ sib, fa'] } \tuplet 3/2 { lab8[ sib, fa'] }
+ \tuplet 3/2 { lab8[ sib, mib] } \tuplet 3/2 { solb8[ sib, mib] } \tuplet 3/2 { fa8[ lab, dob] } \tuplet 3/2 { dob'8[ dob, fa] }
+  s2 s4 \tuplet 3/2 { sib8[ sib, fa'] } 
+%\tuplet 3/2 { lab8[ sib, mib] } \tuplet 3/2 { solb8[ sib, mib] } \tuplet 3/2 { fab8[ lab, dob] } \tuplet 3/2 { dob'8[ dob, fa] }
+ \tuplet 3/2 { lab8[ sib, mib] } \tuplet 3/2 { solb8[ sib, mib] } \tuplet 3/2 { fab8[ lab, dob] } \tuplet 3/2 { dob'8[ dob, fab] }
   s1
- \times 4/6  { r8 solb,[ dob mib dob solb] }  \times 4/6 { dob[ solb dob mib dob solb] } 
-  \times 4/6 { r8 solb[ sib fab' sib, solb] }  \times 4/6 { lab'[ sib, reb solb fab sib,] } 
+ \tuplet 6/4  { r8 solb,[ dob mib dob solb] }  \tuplet 6/4 { dob[ solb dob mib dob solb] } 
+  \tuplet 6/4 { r8 solb[ sib fab' sib, solb] }  \tuplet 6/4 { lab'[ sib, reb solb fab sib,] } 
 %33-36
- \times 4/6  { r8 mib[ solb dob solb mib] }  \times 2/3 { solb[ mib solb] } \times 2/3 { r8 sol[ mib] }
-  \times 2/3 { reb'8[ lab dob,] } \times 2/3 { dob'8[ lab dob,] } \times 2/3 { lab'8[ fab dob] } \times 2/3 { fab8[ reb lab] }
- s1  \times 2/3 { lab'8[ sib, reb] } \times 2/3 { solb8[ sib, reb] } \times 2/3 { fab[ solb, sib] } \times 2/3 { reb[ solb, sib] }
+ \tuplet 6/4  { r8 mib[ solb dob solb mib] }  \tuplet 3/2 { solb[ mib solb] } \tuplet 3/2 { r8 sol[ mib] }
+  \tuplet 3/2 { reb'8[ lab dob,] } \tuplet 3/2 { dob'8[ lab dob,] } \tuplet 3/2 { lab'8[ fab dob] } \tuplet 3/2 { fab8[ reb lab] }
+ s1  \tuplet 3/2 { lab'8[ sib, reb] } \tuplet 3/2 { solb8[ sib, reb] } \tuplet 3/2 { fab[ solb, sib] } \tuplet 3/2 { reb[ solb, sib] }
  s1*4
 %37-40
  s1*4
- s1 s2 \times 2/3 { solb'8[ dob, mib] } \times 2/3 { dob'[ mib, solb] }
- \times 4/6  { r8 dob,[ re fa re dob] } \times 4/6 { re8[ dob re fa re dob] }
-  \times 4/6 { r8 lab[ re fa re lab] } \times 4/6 { re8[ lab re fa re lab] }
+ s1 s2 \tuplet 3/2 { solb'8[ dob, mib] } \tuplet 3/2 { dob'[ mib, solb] }
+ \tuplet 6/4  { r8 dob,[ re fa re dob] } \tuplet 6/4 { re8[ dob re fa re dob] }
+  \tuplet 6/4 { r8 lab[ re fa re lab] } \tuplet 6/4 { re8[ lab re fa re lab] }
 %41-44
- \times 4/6  { r8 lab8[ sib dob sib lab] } \times 4/6 { sib8[ lab8 sib dob sib lab] }
-  \times 4/6 { r8 lab8[ sib dob sib lab] } \times 4/6 { sib8[ lab8 sib dob sib lab] }
- \times 2/3  { fa'8[ solb, sib] } \times 2/3 { mib8[ solb, sib] } \times 2/3 { solb'8[ lab, dob] } \times 2/3 { fa8[ lab, dob] }
-  \times 2/3 { lab'8[ sib, mib] } \times 2/3 { solb8[ sib, mib] } \times 2/3 { fa8[ lab, dob] } \times 2/3 { lab'8[ lab, dob] }
- s1 s2 \times 2/3 { fa8[ sib, re] } \times 2/3 { sib'8[ re, fa] }
- \times 4/6  { r8 dob[ re fa re dob] } \times 4/6 { re8[ dob re fa re dob] }
-  \times 4/6 { r8 lab[ re fa re lab] } \times 4/6 { re8[ lab re fa re lab] }
+ \tuplet 6/4  { r8 lab8[ sib dob sib lab] } \tuplet 6/4 { sib8[ lab8 sib dob sib lab] }
+  \tuplet 6/4 { r8 lab8[ sib dob sib lab] } \tuplet 6/4 { sib8[ lab8 sib dob sib lab] }
+ \tuplet 3/2  { fa'8[ solb, sib] } \tuplet 3/2 { mib8[ solb, sib] } \tuplet 3/2 { solb'8[ lab, dob] } \tuplet 3/2 { fa8[ lab, dob] }
+  \tuplet 3/2 { lab'8[ sib, mib] } \tuplet 3/2 { solb8[ sib, mib] } \tuplet 3/2 { fa8[ lab, dob] } \tuplet 3/2 { lab'8[ lab, dob] }
+ s1 s2 \tuplet 3/2 { fa8[ sib, re] } \tuplet 3/2 { sib'8[ re, fa] }
+ \tuplet 6/4  { r8 dob[ re fa re dob] } \tuplet 6/4 { re8[ dob re fa re dob] }
+  \tuplet 6/4 { r8 lab[ re fa re lab] } \tuplet 6/4 { re8[ lab re fa re lab] }
 %45-48
- \times 4/6  { r8 lab8[ sib dob sib lab] } \times 4/6 { sib8[ lab8 sib dob sib lab] }
-  \times 4/6 { r8 lab8[ sib dob sib lab] } \times 4/6 { sib8[ lab8 sib dob sib lab] }
- \times 2/3  { fa'8[ solb, sib] } \times 2/3 { mib8[ solb, sib] } \times 2/3 { solb'8[ lab, dob] } \times 2/3 { fa8[ lab, dob] }
-  \times 2/3 { lab'8[ sib, mib] } \times 2/3 { solb8[ sib, mib] } \times 2/3 { fab8[ lab, dob] } \times 2/3 { dob'8[ dob, fab] }
+ \tuplet 6/4  { r8 lab8[ sib dob sib lab] } \tuplet 6/4 { sib8[ lab8 sib dob sib lab] }
+  \tuplet 6/4 { r8 lab8[ sib dob sib lab] } \tuplet 6/4 { sib8[ lab8 sib dob sib lab] }
+ \tuplet 3/2  { fa'8[ solb, sib] } \tuplet 3/2 { mib8[ solb, sib] } \tuplet 3/2 { solb'8[ lab, dob] } \tuplet 3/2 { fa8[ lab, dob] }
+  \tuplet 3/2 { lab'8[ sib, mib] } \tuplet 3/2 { solb8[ sib, mib] } \tuplet 3/2 { fab8[ lab, dob] } \tuplet 3/2 { dob'8[ dob, fab] }
  s1*2
- \times 4/6  { r8 sib,[ mib sol mib sib] }   \times 4/6 { mib[ sib mib sol mib sib] }
-  \times 4/6 { r8 sib[ re lab' re, sib] }     \times 4/6 { r8 re[ lab' sib lab re,] }
+ \tuplet 6/4  { r8 sib,[ mib sol mib sib] }   \tuplet 6/4 { mib[ sib mib sol mib sib] }
+  \tuplet 6/4 { r8 sib[ re lab' re, sib] }     \tuplet 6/4 { r8 re[ lab' sib lab re,] }
 %49-52
- \times 4/6  { r8 sol[ sib mib sib sol] }     \times 2/3 { sib8[ sol sib] } \times 2/3 { r8 si[ sol] }
-  \times 2/3 { fa'8[ do mib,] } \times 2/3 { mib'8[ do mib,] } \times 2/3 { do'8[ lab mib] } \times 2/3 { lab8[ fa do] }
- \times 4/6 { r8 sol[ sib mib sib sol] }   \times 4/6 { sib[ sol sib mib sib sol] }
-  \times 2/3 { do'8[ re, fa] } \times 2/3 { sib8[ re, fa] } \times 2/3 { lab8[ sib, re] } \times 2/3 { fa8[ sib, re] }
+ \tuplet 6/4  { r8 sol[ sib mib sib sol] }     \tuplet 3/2 { sib8[ sol sib] } \tuplet 3/2 { r8 si[ sol] }
+  \tuplet 3/2 { fa'8[ do mib,] } \tuplet 3/2 { mib'8[ do mib,] } \tuplet 3/2 { do'8[ lab mib] } \tuplet 3/2 { lab8[ fa do] }
+ \tuplet 6/4 { r8 sol[ sib mib sib sol] }   \tuplet 6/4 { sib[ sol sib mib sib sol] }
+  \tuplet 3/2 { do'8[ re, fa] } \tuplet 3/2 { sib8[ re, fa] } \tuplet 3/2 { lab8[ sib, re] } \tuplet 3/2 { fa8[ sib, re] }
  s1*4
 %53-56
- s1  \times 4/6 { r8 lab[ dob mibb dob lab] } \times 4/6 { dob[ lab dob mibb dob lab] }
- \times 4/6  { r8 dob[ reb lab' reb, dob] }   \times 4/6 { reb[ dob reb lab' reb, dob] }
- \times 4/6  { mibb[ dob mibb lab mibb dob] } \times 4/6 { reb[ dob reb lab' ^\fermata reb, dob] }
- \times 4/6  { r8 sib[ reb solb reb sib] }    \times 4/6 { reb[ sib reb solb reb sib] }
-  \times 4/6 { r8 sib[ reb solb reb sib] }    \times 4/6 { r8 sib[ reb solb reb sib] } 
- \times 4/6  { r8 sib[ mib solb mib sib] }    \times 4/6 { mib[ sib mib solb mib sib] }
-  \times 4/6 { r8 solb[ sib mib sib solb] }   \times 4/6 { sib[ solb sib mib sib solb] } 
+ s1  \tuplet 6/4 { r8 lab[ dob mibb dob lab] } \tuplet 6/4 { dob[ lab dob mibb dob lab] }
+ \tuplet 6/4  { r8 dob[ reb lab' reb, dob] }   \tuplet 6/4 { reb[ dob reb lab' reb, dob] }
+ \tuplet 6/4  { mibb[ dob mibb lab mibb dob] } \tuplet 6/4 { reb[ dob reb lab' ^\fermata reb, dob] }
+ \tuplet 6/4  { r8 sib[ reb solb reb sib] }    \tuplet 6/4 { reb[ sib reb solb reb sib] }
+  \tuplet 6/4 { r8 sib[ reb solb reb sib] }    \tuplet 6/4 { r8 sib[ reb solb reb sib] } 
+ \tuplet 6/4  { r8 sib[ mib solb mib sib] }    \tuplet 6/4 { mib[ sib mib solb mib sib] }
+  \tuplet 6/4 { r8 solb[ sib mib sib solb] }   \tuplet 6/4 { sib[ solb sib mib sib solb] } 
 %57-60
- \times 4/6  { r8 lab[ dob mib dob lab] }    \times 4/6 { dob[ lab dob mib dob lab] }
-  \times 2/3 { solb'8[ lab, dob] }  \times 2/3 { fa8[ lab, dob] }  \times 2/3 { mib8[ lab, dob] }  \times 2/3 { reb8[ fa, lab]}
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { r8 do[ mib solb mib do] }
-  \times 4/6 { r8 lab[ reb fa reb lab] }     \times 4/6 { reb[ lab reb fa reb la] }
- \times 4/6  { r8 sib[ reb solb reb sib] }   \times 4/6 { reb[ sib reb solb reb sib] }
-  \times 4/6 { r8 sib[ reb solb reb sib] }   \times 4/6 { r8 sib[ reb solb reb sib] } 
- \times 4/6  { r8 sib[ mib solb mib sib] }   \times 4/6 { mib[ sib mib solb mib sib] }
-  \times 4/6 { r8 solb[ sib mib sib solb] }  s2
+ \tuplet 6/4  { r8 lab[ dob mib dob lab] }    \tuplet 6/4 { dob[ lab dob mib dob lab] }
+  \tuplet 3/2 { solb'8[ lab, dob] }  \tuplet 3/2 { fa8[ lab, dob] }  \tuplet 3/2 { mib8[ lab, dob] }  \tuplet 3/2 { reb8[ fa, lab]}
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { r8 do[ mib solb mib do] }
+  \tuplet 6/4 { r8 lab[ reb fa reb lab] }     \tuplet 6/4 { reb[ lab reb fa reb la] }
+ \tuplet 6/4  { r8 sib[ reb solb reb sib] }   \tuplet 6/4 { reb[ sib reb solb reb sib] }
+  \tuplet 6/4 { r8 sib[ reb solb reb sib] }   \tuplet 6/4 { r8 sib[ reb solb reb sib] } 
+ \tuplet 6/4  { r8 sib[ mib solb mib sib] }   \tuplet 6/4 { mib[ sib mib solb mib sib] }
+  \tuplet 6/4 { r8 solb[ sib mib sib solb] }  s2
 %61-62
- s2 \times 4/6 { r8 lab[ dob mib dob lab] }
-  \times 2/3 { solb'8[ lab, dob] }  \times 2/3 { fa8[ lab, dob] }  \times 2/3 { mib8[ lab, dob] }  \times 2/3 { fa8[ lab, dob] }
- \times 4/6  { r8 dob[ reb fa reb dob] }     \times 4/6 { reb[ dob reb fa reb dob] }
-  \times 4/6 { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] } 
- \times 4/6  { r8 lab[ reb fa reb lab] }     \times 4/6 { reb[ lab reb fa reb lab] }
-  \times 4/6 { r8 reb[ fab sol fab reb] }    \times 4/6 { mib[ reb mib sol mib reb] }
- \times 4/6  { r8 reb[ mib sib' mib, reb] }    \times 4/6 { mib[ reb mib lab mib dob] }
-  \times 4/6 { r8 dob[ mib lab mib dob] }    \times 4/6 { mib[ dob mib lab mib dob] }
+ s2 \tuplet 6/4 { r8 lab[ dob mib dob lab] }
+  \tuplet 3/2 { solb'8[ lab, dob] }  \tuplet 3/2 { fa8[ lab, dob] }  \tuplet 3/2 { mib8[ lab, dob] }  \tuplet 3/2 { fa8[ lab, dob] }
+ \tuplet 6/4  { r8 dob[ reb fa reb dob] }     \tuplet 6/4 { reb[ dob reb fa reb dob] }
+  \tuplet 6/4 { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] } 
+ \tuplet 6/4  { r8 lab[ reb fa reb lab] }     \tuplet 6/4 { reb[ lab reb fa reb lab] }
+  \tuplet 6/4 { r8 reb[ fab sol fab reb] }    \tuplet 6/4 { mib[ reb mib sol mib reb] }
+ \tuplet 6/4  { r8 reb[ mib sib' mib, reb] }    \tuplet 6/4 { mib[ reb mib lab mib dob] }
+  \tuplet 6/4 { r8 dob[ mib lab mib dob] }    \tuplet 6/4 { mib[ dob mib lab mib dob] }
 %65-68
- \times 4/6  { r8 dob[ fab lab fab dob] }    \times 4/6 { fab[ dob fab lab fab dob] }
-  \times 4/6 { r8 dob[ mib solb mib dob] }   \times 4/6 { r8 fab![ solb sib solb fab] }
- \times 4/6  { r8 fab[ solb reb' solb, fab] }  \times 4/6 { solb[ fab solb dob solb mib] }
-  \times 4/6 { r8 mib[ solb dob solb mib] }  \times 4/6 { solb[ mib solb dob solb mib] }
- \times 4/6  { r8 mib[ solb dob solb mib] }  \times 4/6 { solb[ mib solb dob solb mib] }
-  \times 2/3 { mib'8[ lab, fa] }  \times 2/3 { dob'8[ lab fa] }  \times 2/3 { sib8[ fa reb] }  \times 2/3 { lab'8[ fa reb] }
- \times 4/6  { r8 reb[ solb sib solb reb]}   \times 4/6  { solb[ reb solb sib solb reb] }
-  \times 2/3 { reb'8[ solb, mib] }  \times 2/3 { dob'8[ solb mib] }  \times 2/3 { lab8[ mib dob] }  \times 2/3 { mib8[ dob lab] }
+ \tuplet 6/4  { r8 dob[ fab lab fab dob] }    \tuplet 6/4 { fab[ dob fab lab fab dob] }
+  \tuplet 6/4 { r8 dob[ mib solb mib dob] }   \tuplet 6/4 { r8 fab![ solb sib solb fab] }
+ \tuplet 6/4  { r8 fab[ solb reb' solb, fab] }  \tuplet 6/4 { solb[ fab solb dob solb mib] }
+  \tuplet 6/4 { r8 mib[ solb dob solb mib] }  \tuplet 6/4 { solb[ mib solb dob solb mib] }
+ \tuplet 6/4  { r8 mib[ solb dob solb mib] }  \tuplet 6/4 { solb[ mib solb dob solb mib] }
+  \tuplet 3/2 { mib'8[ lab, fa] }  \tuplet 3/2 { dob'8[ lab fa] }  \tuplet 3/2 { sib8[ fa reb] }  \tuplet 3/2 { lab'8[ fa reb] }
+ \tuplet 6/4  { r8 reb[ solb sib solb reb]}   \tuplet 6/4  { solb[ reb solb sib solb reb] }
+  \tuplet 3/2 { reb'8[ solb, mib] }  \tuplet 3/2 { dob'8[ solb mib] }  \tuplet 3/2 { lab8[ mib dob] }  \tuplet 3/2 { mib8[ dob lab] }
 %69-72
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] } 
-  \times 2/3 { solb'8[ dob, lab] }  \times 2/3 { fa'8[ dob lab] }  \times 2/3 { sib'8[ reb, dob] }  \times 2/3 { lab'8[ reb, dob] }
- \times 4/6  { r8 dob[ mib solb mib dob] }   \times 4/6 { mib[ dob mib solb mib dob] }
-  \times 4/6  { r8 fab[ solb sib solb fab] } \times 4/6  { r8 fab[ solb sib solb fab] }
- \times 4/6  { r8 mib[ solb dob solb mib] }  \times 4/6 { solb[ mib solb dob solb mib] }
-  \times 2/3 { mib'8[ lab, fa] }  \times 2/3 { mibb'8[ lab, fa] }  \times 2/3 { dob'8[ fa, mibb] }  \times 2/3 { lab8[ fa reb] }
- \times 4/6  { r8 reb[ solb sib solb reb]}   \times 4/6  { solb[ reb solb sib solb reb] }
-  \times 2/3 { reb'8[ sol, mib] }  \times 2/3 { dob'8[ lab mib] }  \times 2/3 { lab8[ mib dob] }  \times 2/3 { mib8[ do lab] }
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] } 
+  \tuplet 3/2 { solb'8[ dob, lab] }  \tuplet 3/2 { fa'8[ dob lab] }  \tuplet 3/2 { sib'8[ reb, dob] }  \tuplet 3/2 { lab'8[ reb, dob] }
+ \tuplet 6/4  { r8 dob[ mib solb mib dob] }   \tuplet 6/4 { mib[ dob mib solb mib dob] }
+  \tuplet 6/4  { r8 fab[ solb sib solb fab] } \tuplet 6/4  { r8 fab[ solb sib solb fab] }
+ \tuplet 6/4  { r8 mib[ solb dob solb mib] }  \tuplet 6/4 { solb[ mib solb dob solb mib] }
+  \tuplet 3/2 { mib'8[ lab, fa] }  \tuplet 3/2 { mibb'8[ lab, fa] }  \tuplet 3/2 { dob'8[ fa, mibb] }  \tuplet 3/2 { lab8[ fa reb] }
+ \tuplet 6/4  { r8 reb[ solb sib solb reb]}   \tuplet 6/4  { solb[ reb solb sib solb reb] }
+  \tuplet 3/2 { reb'8[ sol, mib] }  \tuplet 3/2 { dob'8[ lab mib] }  \tuplet 3/2 { lab8[ mib dob] }  \tuplet 3/2 { mib8[ do lab] }
 %73
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] }
-  \times 2/3 { solb'8[ dob,! lab] }  \times 2/3 { fa'8[ dob lab] }  \times 2/3 { sib'8[ reb, dob] }  \times 2/3 { lab'8[ reb, dob] }
- \times 4/6  { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] }
-  \times 4/6 { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] }
- \times 4/6  { r8 solb[ dob mibb dob solb] }  \times 4/6 { dob[ solb dob mibb dob solb] }
-  \times 4/6 { r8 solb[ sib fab' sib, solb] }  \times 4/6 { sib[ solb sib fab' sib, solb] }
- \times 4/6  { r8 solb[ dob mibb dob solb] }  \times 4/6 { dob[ solb dob mibb dob solb] } s1
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] }
+  \tuplet 3/2 { solb'8[ dob,! lab] }  \tuplet 3/2 { fa'8[ dob lab] }  \tuplet 3/2 { sib'8[ reb, dob] }  \tuplet 3/2 { lab'8[ reb, dob] }
+ \tuplet 6/4  { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] }
+  \tuplet 6/4 { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] }
+ \tuplet 6/4  { r8 solb[ dob mibb dob solb] }  \tuplet 6/4 { dob[ solb dob mibb dob solb] }
+  \tuplet 6/4 { r8 solb[ sib fab' sib, solb] }  \tuplet 6/4 { sib[ solb sib fab' sib, solb] }
+ \tuplet 6/4  { r8 solb[ dob mibb dob solb] }  \tuplet 6/4 { dob[ solb dob mibb dob solb] } s1
 %77-80
- s1  \times 2/3 { reb'8[ fa, lab] } \times 2/3 { dob'8[ dob, reb] } \times 2/3 { lab'8[ dob, reb] } \times 2/3 { fa8[ dob reb] }
- \times 4/6  { r8 solb,[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] }
-  \times 4/6 { r8 solb[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] }  \key do \major
- \times 4/6  { r8 fad[ si! re! si fad] } \times 4/6 { si8[ fad si re si fad] }
-  \times 4/6 { r8 fad[ la! re la fad] } \times 4/6 { la8[ fad la re la fad] }
- \times 4/6  { r8 sol[ sib re sib sol] }  \times 4/6 { sib[ sol sib re sib sol] }  \key solb \major s1
+ s1  \tuplet 3/2 { reb'8[ fa, lab] } \tuplet 3/2 { dob'8[ dob, reb] } \tuplet 3/2 { lab'8[ dob, reb] } \tuplet 3/2 { fa8[ dob reb] }
+ \tuplet 6/4  { r8 solb,[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] }
+  \tuplet 6/4 { r8 solb[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] }  \key do \major
+ \tuplet 6/4  { r8 fad[ si! re! si fad] } \tuplet 6/4 { si8[ fad si re si fad] }
+  \tuplet 6/4 { r8 fad[ la! re la fad] } \tuplet 6/4 { la8[ fad la re la fad] }
+ \tuplet 6/4  { r8 sol[ sib re sib sol] }  \tuplet 6/4 { sib[ sol sib re sib sol] }  \key solb \major s1
 %81-84
- s1  \times 2/3 { reb'8[ fa, lab] } \times 2/3 { dob'8[ dob, reb] } \times 2/3 { lab'8[ dob, reb] } \times 2/3 { fa8[ dob reb] }
- \times 4/6  { r8 solb,[ sib reb solb, sib] }  \times 4/6 { mib[ solb, dob reb solb, sib] }
-  \times 2/3 { fa'8[ dob reb] } \times 2/3 { dob'8[ dob, reb] } \times 2/3 { lab'8[ dob, reb] } \times 2/3 { fa8[ dob reb] }
- \times 4/6  { r8 solb,[ sib reb solb, sib] }  \times 4/6 { mib[ solb, dob reb solb, sib] }
-  \times 2/3 { fa'8[ dob reb] } \times 2/3 { mib'8[ fa, lab] } \times 2/3 { dob8[ reb, fa] } \times 2/3 { lab8[ reb, fa] }
- \times 4/6  { r8 solb,[ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] }
-  \times 4/6 { sib[ solb sib reb sib solb] } \times 4/6 { sib[ solb sib reb sib solb] }
+ s1  \tuplet 3/2 { reb'8[ fa, lab] } \tuplet 3/2 { dob'8[ dob, reb] } \tuplet 3/2 { lab'8[ dob, reb] } \tuplet 3/2 { fa8[ dob reb] }
+ \tuplet 6/4  { r8 solb,[ sib reb solb, sib] }  \tuplet 6/4 { mib[ solb, dob reb solb, sib] }
+  \tuplet 3/2 { fa'8[ dob reb] } \tuplet 3/2 { dob'8[ dob, reb] } \tuplet 3/2 { lab'8[ dob, reb] } \tuplet 3/2 { fa8[ dob reb] }
+ \tuplet 6/4  { r8 solb,[ sib reb solb, sib] }  \tuplet 6/4 { mib[ solb, dob reb solb, sib] }
+  \tuplet 3/2 { fa'8[ dob reb] } \tuplet 3/2 { mib'8[ fa, lab] } \tuplet 3/2 { dob8[ reb, fa] } \tuplet 3/2 { lab8[ reb, fa] }
+ \tuplet 6/4  { r8 solb,[ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] }
+  \tuplet 6/4 { sib[ solb sib reb sib solb] } \tuplet 6/4 { sib[ solb sib reb sib solb] }
 %85-86
  s1*4
 }
@@ -488,7 +488,7 @@ basIbP = \relative do, { \voiceOne
 %%%%%%%%%%%%%%%%%%%% 19: TRILLE POUR LE MIDI
 basIbM = \relative do { \voiceOne
  \oneVoice
- fab1 mib2  reb16 mib reb mib \times 2/3 { reb8 dob reb }
+ fab1 mib2  reb16 mib reb mib \tuplet 3/2 { reb8 dob reb }
 }
 
 %%%%%%%%%%%%%%%%%%%% 20: SUITE Ic
@@ -505,14 +505,14 @@ basIc = \relative do, { \voiceOne
  \oneVoice
  <solb, reb'>1. <fa re'>2
 %25
- <mib mib'>2. \times 2/3 { \TUPNO mib8[ fa solb] } solb2. \times 2/3 { solb8[ lab sib] }
+ <mib mib'>2. \tuplet 3/2 { \TUPNO mib8[ fa solb] } solb2. \tuplet 3/2 { solb8[ lab sib] }
 %26
  \voiceOne
  sib4( dob' lab fa) re2..( do16[ re])
 %27-28
  \oneVoice
- mib2( lab,) \stemDown \dotsDown sib2._( \times 2/3 { lab8[ solb fa]) } \stemNeutral \dotsNeutral
- mib2. \times 2/3 { mib8[ fa solb] } solb2. \times 2/3 { solb8[ lab sib] }
+ mib2( lab,) \stemDown \dotsDown sib2._( \tuplet 3/2 { lab8[ solb fa]) } \stemNeutral \dotsNeutral
+ mib2. \tuplet 3/2 { mib8[ fa solb] } solb2. \tuplet 3/2 { solb8[ lab sib] }
 }
 
 %%%%%%%%%%%%%%%%%%%% 29: TRILLE POUR LA PARTITION
@@ -521,7 +521,7 @@ basIcP = \relative do { \voiceOne
 }
 %%%%%%%%%%%%%%%%%%%% 29: TRILLE POUR LE MIDI
 basIcM = \relative do { \voiceOne
- sib4 dob' lab fa  re2  re16 mib re mib \times 2/3 { re8 dob re }
+ sib4 dob' lab fa  re2  re16 mib re mib \tuplet 3/2 { re8 dob re }
 }
 
 %%%%%%%%%%%%%%%%%%%% 30: SUITE Id
@@ -538,38 +538,38 @@ basId = \relative do { \voiceOne
  solb1 reb'2.( fab4)
 %35-36
  \oneVoice
- dob,1_( \stemDown labb2. \times 2/3 { \TUPNO labb8[ sibb dob]) }
+ dob,1_( \stemDown labb2. \tuplet 3/2 { \TUPNO labb8[ sibb dob]) }
  dob2._( reb16[ mib fab solb]) labb2_( solb)
 %37-40
- dob,1_( \stemDown lab2.) \times 2/3 { lab8_([ sib dob]) }
+ dob,1_( \stemDown lab2.) \tuplet 3/2 { lab8_([ sib dob]) }
  dob2._( reb16[ mib fab solb]) lab2_( solb)
  dob,1 ~ dob1 \stemNeutral
- lab'2._> \times 2/3 { lab8([ sib dob]) } dob2._> \times 2/3 { dob8([ reb re]) }
+ lab'2._> \tuplet 3/2 { lab8([ sib dob]) } dob2._> \tuplet 3/2 { dob8([ reb re]) }
 %41-44
- re2. \times 2/3 { re8([ mib fa]) } fa2.( fa,4)
+ re2. \tuplet 3/2 { re8([ mib fa]) } fa2.( fa,4)
  solb2( re mib lab,)
- \stemDown sib2_( \times 4/6 { sib8)[_( la sib dob sib la)] } sib2. \stemNeutral <sib sib'>4
- <lab lab'>2. \times 2/3 { lab'8([ sib dob]) } <dob, dob'>2. \times 2/3 { dob'8([ reb re]) }
+ \stemDown sib2_( \tuplet 6/4 { sib8)[_( la sib dob sib la)] } sib2. \stemNeutral <sib sib'>4
+ <lab lab'>2. \tuplet 3/2 { lab'8([ sib dob]) } <dob, dob'>2. \tuplet 3/2 { dob'8([ reb re]) }
 }
 
 %%%%%%%%%%%%%%%%%%%% 45-46: TRILLE POUR LA PARTITION = trille 29
 basIdP = \relative do, { \voiceOne
  \oneVoice
- <re re'>2. \times 2/3 { \TUPNO re'8[ mib fa] } <fa, fa'>2. fa4(
+ <re re'>2. \tuplet 3/2 { \TUPNO re'8[ mib fa] } <fa, fa'>2. fa4(
  solb2) (re \trill mib lab,)
 }
 %%%%%%%%%%%%%%%%%%%% 29: TRILLE POUR LE MIDI = trille 29
 basIdM = \relative do, { \voiceOne
  \oneVoice
- <re re'>2. \times 2/3 { re'8 mib fa] } <fa, fa'>2. fa4(
- solb2)   re16 mib re mib \times 2/3 { re8 dob re }   mib2 lab,
+ <re re'>2. \tuplet 3/2 { re'8 mib fa] } <fa, fa'>2. fa4(
+ solb2)   re16 mib re mib \tuplet 3/2 { re8 dob re }   mib2 lab,
 }
 
 %%%%%%%%%%%%%%%%%%%% 47: SUITE Ie
 basIe = \relative do, { \voiceOne
 %47-48
  \oneVoice
- \stemDown sib2_( \times 4/6 { \TUPNO sib8)[_( la sib dob sib la)] } sib2_( lab) \stemNeutral
+ \stemDown sib2_( \tuplet 6/4 { \TUPNO sib8)[_( la sib dob sib la)] } sib2_( lab) \stemNeutral
  <sol sol'>1^( fa'1)
 %49
  mib1( lab1)
@@ -578,8 +578,8 @@ basIe = \relative do, { \voiceOne
  sib1 fa'2.( lab4)
 %51-52
  \oneVoice
- mib,1_( \stemDown reb2.) \times 2/3 { fab8_([ mib re]) }
- dob1_( sib2) _(  \times 4/6 { sib8) _([ dob sib reb dob sib)]) }
+ mib,1_( \stemDown reb2.) \tuplet 3/2 { fab8_([ mib re]) }
+ dob1_( sib2) _(  \tuplet 6/4 { sib8) _([ dob sib reb dob sib)]) }
 }
 
 %%%%%%%%%%%%%%%%%%%% 53: TRILLE POUR LA PARTITION
@@ -590,7 +590,7 @@ basIeP = \relative do, { \voiceOne
 %%%%%%%%%%%%%%%%%%%% 53: TRILLE POUR LE MIDI
 basIeM = \relative do, { \voiceOne
  \oneVoice
- lab1  solb16[ lab solb lab] solb[ lab solb lab] solb[ lab solb lab] \times 2/3 { solb8 fa solb }
+ lab1  solb16[ lab solb lab] solb[ lab solb lab] solb[ lab solb lab] \tuplet 3/2 { solb8 fa solb }
 }
 
 
@@ -640,7 +640,7 @@ basIgP = \relative do, { \voiceOne
 %%%%%%%%%%%%%%%%%%%% 65: TRILLE POUR LE MIDI = trille 19
 basIgM = \relative do, { \voiceOne
  \oneVoice
- fab1 mib2  reb16 mib reb mib \times 2/3 { reb8 dob reb }
+ fab1 mib2  reb16 mib reb mib \tuplet 3/2 { reb8 dob reb }
 }
 
 
@@ -697,7 +697,7 @@ basIiP = \relative do, { \voiceOne
 %%%%%%%%%%%%%%%%%%%% 79: TRILLE POUR LE MIDI
 basIiM = \relative do, { \voiceOne
  \oneVoice
- re1 do16[ re do re] do[ re do re] do[ re do re] \times 2/3 { do8 sib do }
+ re1 do16[ re do re] do[ re do re] do[ re do re] \tuplet 3/2 { do8 sib do }
 }
 
 
@@ -806,70 +806,70 @@ basIII = \context Staff \relative do' \new Voice { \voiceThree
 %1-5
  s1*10
 %6-7
- s1 s2 \times 4/6 { \TUPNO r8 fa,[ lab re lab fa] }
- \times 4/6  { r8 mib[ solb dob solb mib] } s2 s1 
+ s1 s2 \tuplet 6/4 { \TUPNO r8 fa,[ lab re lab fa] }
+ \tuplet 6/4  { r8 mib[ solb dob solb mib] } s2 s1 
 %8-26
  s1*38
 %27
- s1 \times 4/6 { r8 mib[ solb sib solb mib] } \times 4/6 { r8 re[ fa sib fa \stemDown \STAFFUP sib'] } \STAFFDO
+ s1 \tuplet 6/4 { r8 mib[ solb sib solb mib] } \tuplet 6/4 { r8 re[ fa sib fa \stemDown \STAFFUP sib'] } \STAFFDO
 %28-29
  s1*4
 %30-31
- s1 \stemUp \times 4/6 { r8 mib,,[ solb sib solb mib] } \times 2/3 { r8 re[ <fa sib>] } s4
- s1 \times 4/6 { r8 mib[ solb dob solb mib] }   \times 4/6 { r8 reb[ solb sib solb reb] }
+ s1 \stemUp \tuplet 6/4 { r8 mib,,[ solb sib solb mib] } \tuplet 3/2 { r8 re[ <fa sib>] } s4
+ s1 \tuplet 6/4 { r8 mib[ solb dob solb mib] }   \tuplet 6/4 { r8 reb[ solb sib solb reb] }
 %32-33
  s1*4
 %34
- \times 4/6 { r8 mib[ solb dob solb mib] } \times 2/3 { solb8[ mib solb dob solb mib] } s1
+ \tuplet 6/4 { r8 mib[ solb dob solb mib] } \tuplet 3/2 { solb8[ mib solb dob solb mib] } s1
 %35-39
- \times 4/6  { r8 dob[ mib solb mib dob] } \times 4/6 { mib8[ dob mib solb mib dob] }
-  \times 4/6 { r8 dob[ fab labb fab dob] }  \times 4/6 { fab8[ dob fab labb fab dob] }
- \times 4/6  { r8 dob[ mib solb mib dob] }  \times 4/6 { mib8[ dob mib solb mib dob] }
-  \times 4/6 { r8 dob[ mibb fa! mibb dob] }  \times 4/6 { r8 reb[ fab solb fab reb] }
- \times 4/6  { r8 dob[ mib solb mib dob] } \times 4/6 { mib8[ dob mib solb mib dob] }
-  \times 4/6 { r8 dob[ fab lab fab dob] }  \times 4/6 { fab8[ dob fab lab fab dob] }
- \times 4/6  { r8 dob[ mib solb mib dob] }  \times 4/6 { mib8[ dob mib solb mib dob] }
-  \times 4/6 { r8 dob[ mibb fa mibb dob] }  \times 4/6 { r8 reb[ fab solb fab reb] }
- \times 4/6  { r8 dob[ mib solb mib dob] } \times 4/6 { mib8[ dob mib solb mib dob] }
-  \times 2/3 { \stemDown \STAFFUP dob'8[ \STAFFDO \stemUp mib, solb] } \times 2/3 { \stemDown \STAFFUP mib'8[ \STAFFDO \stemUp solb, dob] } s2
+ \tuplet 6/4  { r8 dob[ mib solb mib dob] } \tuplet 6/4 { mib8[ dob mib solb mib dob] }
+  \tuplet 6/4 { r8 dob[ fab labb fab dob] }  \tuplet 6/4 { fab8[ dob fab labb fab dob] }
+ \tuplet 6/4  { r8 dob[ mib solb mib dob] }  \tuplet 6/4 { mib8[ dob mib solb mib dob] }
+  \tuplet 6/4 { r8 dob[ mibb fa! mibb dob] }  \tuplet 6/4 { r8 reb[ fab solb fab reb] }
+ \tuplet 6/4  { r8 dob[ mib solb mib dob] } \tuplet 6/4 { mib8[ dob mib solb mib dob] }
+  \tuplet 6/4 { r8 dob[ fab lab fab dob] }  \tuplet 6/4 { fab8[ dob fab lab fab dob] }
+ \tuplet 6/4  { r8 dob[ mib solb mib dob] }  \tuplet 6/4 { mib8[ dob mib solb mib dob] }
+  \tuplet 6/4 { r8 dob[ mibb fa mibb dob] }  \tuplet 6/4 { r8 reb[ fab solb fab reb] }
+ \tuplet 6/4  { r8 dob[ mib solb mib dob] } \tuplet 6/4 { mib8[ dob mib solb mib dob] }
+  \tuplet 3/2 { \stemDown \STAFFUP dob'8[ \STAFFDO \stemUp mib, solb] } \tuplet 3/2 { \stemDown \STAFFUP mib'8[ \STAFFDO \stemUp solb, dob] } s2
 %40-42
  s1*6
 %43
- \times 4/6  { r8 mib,[ solb sib solb mib] }  \times 4/6 { solb[ mib solb sib solb mib] }
-  \times 4/6 { r8 re[ fa  sib fa re] } s2
+ \tuplet 6/4  { r8 mib,[ solb sib solb mib] }  \tuplet 6/4 { solb[ mib solb sib solb mib] }
+  \tuplet 6/4 { r8 re[ fa  sib fa re] } s2
 %44-46
  s1*6
 %47
- \times 4/6  { r8 mib[ solb sib solb mib] }  \times 4/6 { solb[ mib solb sib solb mib] }
-  \times 4/6 { r8 re[ fa  sib fa re] }       \times 4/6 { fa8[ re fa sib fa re] }
+ \tuplet 6/4  { r8 mib[ solb sib solb mib] }  \tuplet 6/4 { solb[ mib solb sib solb mib] }
+  \tuplet 6/4 { r8 re[ fa  sib fa re] }       \tuplet 6/4 { fa8[ re fa sib fa re] }
 %48-50
  s1*6
 %51-53
- \times 4/6  { r8 mib[ sol sib sol mib] }    \times 4/6 { sol[ mib sol sib sol mib] }
-  \times 4/6 { r8 mib[ sol sib sol mib] }    \times 4/6 { sol[ mib sol sib sol mib] }
- \times 4/6  { r8 mib[ lab dob lab mib] }    \times 4/6 { lab[ mib lab dob lab mib] }
-  \times 4/6 { r8 mib[ sol reb' sol, mib] }  \times 4/6 { sol[ mib sol reb' sol, mib] }
- \times 4/6  { r8 mib[ lab dob lab mib] }    \times 4/6 { lab[ mib lab dob lab mib] } s1
+ \tuplet 6/4  { r8 mib[ sol sib sol mib] }    \tuplet 6/4 { sol[ mib sol sib sol mib] }
+  \tuplet 6/4 { r8 mib[ sol sib sol mib] }    \tuplet 6/4 { sol[ mib sol sib sol mib] }
+ \tuplet 6/4  { r8 mib[ lab dob lab mib] }    \tuplet 6/4 { lab[ mib lab dob lab mib] }
+  \tuplet 6/4 { r8 mib[ sol reb' sol, mib] }  \tuplet 6/4 { sol[ mib sol reb' sol, mib] }
+ \tuplet 6/4  { r8 mib[ lab dob lab mib] }    \tuplet 6/4 { lab[ mib lab dob lab mib] } s1
 %54-59
  s1*12
 %60-61
- s1 s2 \times 4/6 { r8 fa[ lab  re lab fa] } 
- \times 4/6  { r8 mib[ solb dob solb mib] } s2 s1
+ s1 s2 \tuplet 6/4 { r8 fa[ lab  re lab fa] } 
+ \tuplet 6/4  { r8 mib[ solb dob solb mib] } s2 s1
 %62-75
  s1*28
 %76-77
- s1 \times 4/6 { r8 do[ solb' sibb solb do,] } \times 4/6 { solb'8[ do, solb' sibb solb do,] }
- \times 4/6  { r8 reb[ solb sib! solb reb]}   \times 4/6  { solb[ reb solb sib solb reb] } s1
+ s1 \tuplet 6/4 { r8 do[ solb' sibb solb do,] } \tuplet 6/4 { solb'8[ do, solb' sibb solb do,] }
+ \tuplet 6/4  { r8 reb[ solb sib! solb reb]}   \tuplet 6/4  { solb[ reb solb sib solb reb] } s1
 %78-79
  s1*4
 %80-81
- s1 \times 4/6 { r8 do[ solb'! sibb solb do,] } \times 4/6 { solb'8[ do, solb' sibb solb do,] }
- \times 4/6  { r8 reb[ solb sib! solb reb]}   \times 4/6  { solb[ reb solb sib solb reb] } s1
+ s1 \tuplet 6/4 { r8 do[ solb'! sibb solb do,] } \tuplet 6/4 { solb'8[ do, solb' sibb solb do,] }
+ \tuplet 6/4  { r8 reb[ solb sib! solb reb]}   \tuplet 6/4  { solb[ reb solb sib solb reb] } s1
 %82-84
  s1*6
 %85
- \times 4/6  { r8 solb,_([ sib reb sib solb] }  \times 4/6 { sib[ solb sib reb sib solb] }
-  \times 4/6 { sib[ solb sib reb sib solb] } \times 4/6 { sib[ solb reb solb reb sib]) }
+ \tuplet 6/4  { r8 solb,_([ sib reb sib solb] }  \tuplet 6/4 { sib[ solb sib reb sib solb] }
+  \tuplet 6/4 { sib[ solb sib reb sib solb] } \tuplet 6/4 { sib[ solb reb solb reb sib]) }
 %86
  s1*2
 }
@@ -892,13 +892,13 @@ notePartBas = {
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 dynPartCom = {
- \override DynamicTextSpanner #'style = #'none
+ \override DynamicTextSpanner.style = #'none
  
 %1-4
 s1 \pp s1
 s1*2
 s1*2
-\times 4/6 { s8 s8 \cr s4. s8 \! }   \times 4/6 { s8 s4 \decr s8 s8 \! s8 } s1
+\tuplet 6/4 { s8 s8 \cr s4. s8 \! }   \tuplet 6/4 { s8 s4 \decr s8 s8 \! s8 } s1
 %5-8
 s1*2
 s1 s4 \crescTextCresc s2 \cr s4 \! 
@@ -906,16 +906,16 @@ s1*2
 s1*2 \p
 %9-12
 s1*4
-s1 \times 4/6 { s8 \crescTextCresc s4 \cr s4 s8 \! }  \times 4/6 { s2 \cr s8 s8 \! }
-\times 4/6 { s4 s8 \decr s4. }  \times 4/6 { s2 s8 \! s8 }  s1
+s1 \tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 s8 \! }  \tuplet 6/4 { s2 \cr s8 s8 \! }
+\tuplet 6/4 { s4 s8 \decr s4. }  \tuplet 6/4 { s2 s8 \! s8 }  s1
 %13-16
 s1 \pp s1
 s1 \DIMIN s4 \decr s4 \! s2
 s1*2
-s1 \times 4/6 { s4 \crescTextCresc s2 \cr } s2 \! 
+s1 \tuplet 6/4 { s4 \crescTextCresc s2 \cr } s2 \! 
 %17-20
 s1*4
-\times 4/6 { s8 \crescTextCresc s2 \cr s8 \! } s2 s1
+\tuplet 6/4 { s8 \crescTextCresc s2 \cr s8 \! } s2 s1
 s1*2
 %21-24
 s1 \pp s1
@@ -927,18 +927,18 @@ s1 \DECRESC s2 \decr s2 \!
 s1 \p s1
 s1 \f s1
 %29-32
-s1 \times 4/6 { s8 \DECRESC s4 \decr s4 s8 \! } s2
+s1 \tuplet 6/4 { s8 \DECRESC s4 \decr s4 s8 \! } s2
 s1*2 \p
-\times 8/12 { s4 \pp s8 \cr s4 s8 \! s4 \decr s8 \! s4. } \times 4/6 { s8 \DECRESC s4 \decr s4 s8 \! } s2
+\tuplet 12/8 { s4 \pp s8 \cr s4 s8 \! s4 \decr s8 \! s4. } \tuplet 6/4 { s8 \DECRESC s4 \decr s4 s8 \! } s2
 \DYNEXO #'(1 . 0) s1*2 \pp
 %33-36
 s1*4
 s1 \ppp s1
-\times 8/12 { s4 s8 \cr s2 s2 s8 \! } \times 4/6 { s8 \fz s8 \decr s2 } s2 \! \p
+\tuplet 12/8 { s4 s8 \cr s2 s2 s8 \! } \tuplet 6/4 { s8 \fz s8 \decr s2 } s2 \! \p
 %37-40
 s1 \pp s1
-\times 8/12 { s8 s8 \cr s2 s2 s8 s8 \! } \times 4/6 { s8 \fz s8 \decr s4 s8 s8 \! } s2
-s1 \pp s2 \times 4/6 { s8 \crescTextCresc s4 \cr s4 \! s8 }
+\tuplet 12/8 { s8 s8 \cr s2 s2 s8 s8 \! } \tuplet 6/4 { s8 \fz s8 \decr s4 s8 s8 \! } s2
+s1 \pp s2 \tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 \! s8 }
 s1 \f s1
 %41-44
 s1*2
@@ -952,7 +952,7 @@ s1*4
 %49-51
 s1*6
 %52-56
-s1 \times 4/6 { s8 \DTSDASHOK \crescTextCresc s4 \cr s4. } s2
+s1 \tuplet 6/4 { s8 \DTSDASHOK \crescTextCresc s4 \cr s4. } s2
 s1 s1 \!
 s1 s2 s2 \pp
 s1*4
@@ -963,29 +963,29 @@ s1*4
 %61-64
 s1*8
 %65-68
-\times 4/6 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
+\tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
 s1*2
 s1 \pp s1
 s2 \DIMIN s4 \decr s4 \! s1
 %69-72
 s1*2
-\times 4/6 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
+\tuplet 6/4 { s8 \crescTextCresc s4 \cr s4 s8 \! } s2 s1
 s1 \fp s1 \pp
 s1 \DIMIN s4 \decr s4 \! s2
 %73-76
 s1*2
-s1 \times 4/6 { s4. \DTSDASHOK \CREScendo s8 \cr s4 } s2
-\times 4/6 { s8 \! \DTSDASHOK \cresCENdo s4. \cr s4 } s2 s2 \times 4/6 { s4 s8 \! \crescenDO s4 \cr s8 \! }
+s1 \tuplet 6/4 { s4. \DTSDASHOK \CREScendo s8 \cr s4 } s2
+\tuplet 6/4 { s8 \! \DTSDASHOK \cresCENdo s4. \cr s4 } s2 s2 \tuplet 6/4 { s4 s8 \! \crescenDO s4 \cr s8 \! }
 s1 \DYNEXO #'(1 . 0) s1 \fz
 %77-80
 s1*2 \p
-s1 \times 4/6 { s8 \crescTextCresc s2 \cr s8 } s2 \!
-s2 \times 4/6 { s8 \crescTextCresc s2 \cr s8 } s1 \!
+s1 \tuplet 6/4 { s8 \crescTextCresc s2 \cr s8 } s2 \!
+s2 \tuplet 6/4 { s8 \crescTextCresc s2 \cr s8 } s1 \!
 s1 s1 -\FFZ
 %81-86
 s1 \p \DYNEXO #'(0.5 . -1) s1 \pp
 s1*2
-\times 4/6 { s8 \DIMIN s4. \decr s4 \! } s2 s1
+\tuplet 6/4 { s8 \DIMIN s4. \decr s4 \! } s2 s1
 \DYNEXO #'(2 . 0) s1 \ppp s1
 s1*4
 }
@@ -1000,66 +1000,66 @@ dynPartHaut = {
 s1*8
 %5-8
 s1*4
-\times 4/6 { s4 s8 ^\cr s4 s8 \! }   \times 4/6 { s8 s4 ^\decr s8 s4 \! }  s1
+\tuplet 6/4 { s4 s8 ^\cr s4 s8 \! }   \tuplet 6/4 { s8 s4 ^\decr s8 s4 \! }  s1
 s1*2
 %9-12
-s1 \times 8/12 { s4 s8 ^\cr s2. s8 s8 \! s8 }
-\times 8/12 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
+s1 \tuplet 12/8 { s4 s8 ^\cr s2. s8 s8 \! s8 }
+\tuplet 12/8 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
 s1*4
 %13-16
 s1*8
 %17-20
-s1 \times 8/12 { s4 s8 ^\cr s2. s4 s8 \! }
-\times 8/12 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
-s1 \times 8/12 { s4 s8 ^\cr s2. s8 s8 \! s8 }
-\times 8/12 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
+s1 \tuplet 12/8 { s4 s8 ^\cr s2. s4 s8 \! }
+\tuplet 12/8 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
+s1 \tuplet 12/8 { s4 s8 ^\cr s2. s8 s8 \! s8 }
+\tuplet 12/8 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
 %21-24
 s1*6
-s1 \times 8/12 { s8 s4 ^\cr s2. s8 s8 \! s8 }
+s1 \tuplet 12/8 { s8 s4 ^\cr s2. s8 s8 \! s8 }
 %25-28
 s1*2
-\times 8/12 { \PINEXO #'(1 . 0) s4. ^\decr s4. s8 s8 \! s8 s4. } s1
+\tuplet 12/8 { \PINEXO #'(1 . 0) s4. ^\decr s4. s8 s8 \! s8 s4. } s1
 s1*4
 %29-41
 s1*26
 %42-44
-\times 8/12 { s4 s8 ^\cr s4. s4 s8 \! s4. } \times 8/12 { s8 s4 ^\decr s4. s8 \! s4 s4. }
-s1 \times 8/12 { s8 s4 ^\cr s2. s8 \! s4 }
+\tuplet 12/8 { s4 s8 ^\cr s4. s4 s8 \! s4. } \tuplet 12/8 { s8 s4 ^\decr s4. s8 \! s4 s4. }
+s1 \tuplet 12/8 { s8 s4 ^\cr s2. s8 \! s4 }
 s1*2
 %45-48
 s1*2
-\times 8/12 { s4 s8 ^\cr s4. s4 s8 \! s4. } \times 8/12 { s8 s4 ^\decr s4 s8 \! s2. }
+\tuplet 12/8 { s4 s8 ^\cr s4. s4 s8 \! s4. } \tuplet 12/8 { s8 s4 ^\decr s4 s8 \! s2. }
 s1*2
 s1*2 ^\pp
 %49-52
 s1*8
 %53-56
-s1 \times 8/12 { s4 s8 ^\cr s2. s8 s8 \! s8 }
-\times 8/12 { s8 ^\fz s4 ^\decr s4. s8 s8 \! s8 s4. } s1
+s1 \tuplet 12/8 { s4 s8 ^\cr s2. s8 s8 \! s8 }
+\tuplet 12/8 { s8 ^\fz s4 ^\decr s4. s8 s8 \! s8 s4. } s1
 s1*4
 %57-60
 s1*2
-\times 4/6 { s8 s8 ^\cr s4. s8 \! } \times 4/6 { \PINEXO #'(0.5 . 0) s4. ^\decr s8 \! s4 }  s1
+\tuplet 6/4 { s8 s8 ^\cr s4. s8 \! } \tuplet 6/4 { \PINEXO #'(0.5 . 0) s4. ^\decr s8 \! s4 }  s1
 s1*4
 %61-64
-\times 4/6 { s8 s8 ^\cr s4. s8 \! } \times 4/6 { s4. ^\decr s8 s8 \! s8 }  s1
+\tuplet 6/4 { s8 s8 ^\cr s4. s8 \! } \tuplet 6/4 { s4. ^\decr s8 s8 \! s8 }  s1
 s1*2
-s1 \times 8/12 { s4 s8 ^\cr s2. s8 s8 \! s8 }
-\times 8/12 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
+s1 \tuplet 12/8 { s4 s8 ^\cr s2. s8 s8 \! s8 }
+\tuplet 12/8 { s8 s4 ^\decr s4. s8 s8 \! s8 s4. } s1
 %65-68
 s1*8
 %69-72
 s1*2
-s1 \times 8/12 { s8 s4 ^\cr s8 s8 s8 \! s8 s4 ^\decr s8 s8 \! s8 }
+s1 \tuplet 12/8 { s8 s4 ^\cr s8 s8 s8 \! s8 s4 ^\decr s8 s8 \! s8 }
 s1*4
 %73-76
 s1*6
-\times 8/12 { s8 \PINEXO #'(1 . 0) s4 ^\cr s2. s8 \! s4 } \times 8/12 { s8 s4 ^\decr s4. s4 s8 \! s4. }
+\tuplet 12/8 { s8 \PINEXO #'(1 . 0) s4 ^\cr s2. s8 \! s4 } \tuplet 12/8 { s8 s4 ^\decr s4. s4 s8 \! s4. }
 %77-80
 s1 s1 ^\pp
 s1*2
-s1 \times 8/12 { s8 s4 ^\cr s2. s8 s8 \! s8 } 
-s1 \times 8/12 { s8 s4 ^\decr s2. s4 s8 \! }
+s1 \tuplet 12/8 { s8 s4 ^\cr s2. s8 s8 \! s8 } 
+s1 \tuplet 12/8 { s8 s4 ^\decr s2. s4 s8 \! }
 %81-86
 s1*12
 }
@@ -1070,7 +1070,7 @@ s1*12
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 dynPartBas = {
- \override DynamicTextSpanner #'style = #'none
+ \override DynamicTextSpanner.style = #'none
  
 %1-24
 s1*48
@@ -1079,7 +1079,7 @@ s1*48
 \DYNEXO #'(1 . 0) s1 _\fz s1
 s1*4
 %29-35
-\times 2/3 { s8 s4 \decr } s4 \times 2/3 { s4 s8 \! } s4 s1
+\tuplet 3/2 { s8 s4 \decr } s4 \tuplet 3/2 { s4 s8 \! } s4 s1
 s1*12
 %36-40
 s1 \DYNEXO #'(0.5 . -1) s1 _\fz
@@ -1288,7 +1288,7 @@ s1*2 \pp
 s1*8
 %53-54
 s1  s1 \cr
-s1 \! \f \decr s2 \! \p \times 4/6 { \tempo 4=100 s8 \tempo 4=80 s8 \tempo 4=60 s8 \tempo 4=40 s8 \tempo 4=60 s8 \tempo 4=90 s8 }
+s1 \! \f \decr s2 \! \p \tuplet 6/4 { \tempo 4=100 s8 \tempo 4=80 s8 \tempo 4=60 s8 \tempo 4=40 s8 \tempo 4=60 s8 \tempo 4=90 s8 }
 %55-56
 \tempo 4=120 s1*4
 %57
@@ -1355,8 +1355,8 @@ pedal = { s1 \sustainOn }
  \layout {
   \context {
    \Score
-   \override SpacingSpanner #'spacing-increment = #1.0
-   \override SpacingSpanner #'shortest-duration-space = #1.4
+   \override SpacingSpanner.spacing-increment = #1.0
+   \override SpacingSpanner.shortest-duration-space = #1.4
    pedalSustainStrings = #'("Ped." "*Ped." "*")
   }
  }
@@ -1448,7 +1448,7 @@ SILENCE = { \KEYTIME s1 s1 }
    \Score
 % ÉCHELLE DU VOLUME DE SORTIE MIDI
    dynamicAbsoluteVolumeFunction = #my-dynamic-absolute-volume
-   tempoWholesPerMinute = #(ly:make-moment 120 4)
+   tempoWholesPerMinute = #(ly:make-moment 120/4)
   }
   \context {
    \type "Performer_group"
