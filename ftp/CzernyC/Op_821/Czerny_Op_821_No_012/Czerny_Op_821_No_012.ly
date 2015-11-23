@@ -29,22 +29,6 @@ global = {
   \time 4/4
 }
 
-
-motivoA = {  a''16^1 cs'''^3 b''^2 d'''^4  }
-motivoA = {  bf'16^1 d''^3 c''^2 ef''^4  }
-motivoA = {  bf'16^1 d''^3 c''^2 ef''^4  }
-motivoA = {  bf'16^1 d''^3 c''^2 ef''^4  }
-motivoA = {  bf'16^1 d''^3 c''^2 ef''^4  }
-
-motivoA = {  bf'16^1 d''^3 c''^2 ef''^4  }
-
-motivoA = {  a''16^1 cs'''^3 b''^2 d'''^4  cs''' e''' d''' b'' }
-motivoB = {  d'' f'' ef'' c'' }
-motivoB = {  d'' f'' ef'' c'' }
-motivoB = {  d'' f'' ef'' c'' }
-motivoB = {  d'' f'' ef'' c'' }
-
-motivoB = {  d'' f'' ef'' c'' }
 mbreak = { }
 
 pianoUpper = { \tempo "Allegro moderato"
