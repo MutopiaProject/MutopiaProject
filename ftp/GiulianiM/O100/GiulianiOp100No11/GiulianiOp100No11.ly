@@ -1,20 +1,23 @@
-\version "2.14.2"
+\version "2.19.29"
 
 \header {
   title = "24 Studies for the Guitar"
   mutopiatitle = "24 Studies for the Guitar, No. 11"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
+  source = "Vienna: Ant. Diabelli et comp. Plate No. 4050"
+  %source = "Statens musikbibliotek - The Music Library of Sweden"
   composer = "Mauro Giuliani"
+  date = "c.1832"
   opus = "Op. 100"
   piece = "No. 11. Caprice"
   mutopiacomposer = "GiulianiM"
   mutopiainstrument = "Guitar"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
-  maintainerEmail = "glenl at glx.com"
- footer = "Mutopia-2011/12/12-1807"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Copyright © 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+  maintainerEmail = "glenl.glx at gmail.com"
+ footer = "Mutopia-2015/11/22-1807"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
 
 \layout {
@@ -40,16 +43,16 @@ upperVoice = \relative c' {
   r16 f[ c' f,] f'[ f, e' f,] d'[ f, ais, f'] b,[ f' a, f'] |
   r16 e[ b' e,] e'[ e, d' e,] c'[ e, gis, e'] a,[ e' g, e'] |
   r16 e[ a e] r e[ a e] r dis[ a' dis,] r dis[ a' dis,] |
-  r16 e[ gis e] b'[ gis e' b] gis'_|^\markup{"IV"} [ e_|\2 b'( gis)] e_|\2[ b'( gis) e_|\2] |
+  r16 e[ gis e] b'[ gis e' b] gis'_!^\markup{"IV"} [ e_!\2 b'( gis)] e_!\2[ b'( gis) e_!\2] |
   r16^\markup{"I"} e,[ a e] c'[ a e' c]
     \slurUp \stemDown
-    a'-|^\markup{"V"} [ e-|\2 c'( a)] e-|\2[ c'( a) e-|\2] |
+    a'-!^\markup{"V"} [ e-!\2 c'( a)] e-!\2[ c'( a) e-!\2] |
     \slurDown \stemUp
   r16 e,[ gis e] b'[ gis e' b]
     \slurUp \stemDown
-    gis'-|^\markup{"IV"} [ e-|\2 b'( gis)] e-|\2[ b'( gis) e-|\2] |
+    gis'-!^\markup{"IV"} [ e-!\2 b'( gis)] e-!\2[ b'( gis) e-!\2] |
     \slurDown \stemUp
-  r16^\markup{"I"} e,[ a e] c'[ a e' c] a'_|^\markup{"V"} [ e_|\2 c'( a)] e_|\2[ c'( a) e_|\2] |
+  r16^\markup{"I"} e,[ a e] c'[ a e' c] a'_!^\markup{"V"} [ e_!\2 c'( a)] e_!\2[ c'( a) e_!\2] |
   % markup to first position added by me
   r16^\markup{"I"} gis,[ b e] r a,[ c e] r gis,[ b e] r a,[ c e] |
   r16 gis,[ b e] r gis,[ b e] r a,[ c e] r gis,[ d' e] |
@@ -130,9 +133,6 @@ lowerVoice = \relative c {
   >>
   \layout {}
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 96 4)
-    }
+    \tempo 4 = 96
   }
 }
