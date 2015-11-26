@@ -6,6 +6,13 @@
 <title>Mutopia: Advanced search</title>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <link type="text/css" rel="stylesheet" href="mutopia.css" />
+<style>
+    li {
+        margin-top: 6px;
+        margin-bottom: 6px;
+        list-style: none;    
+    }
+</style>
 </head>
 <!-- http://www.cs.helsinki.fi/group/cbrahms/demoengine/ -->
 <body>
@@ -14,46 +21,42 @@
 
 <h2>Advanced search</h2>
 
-<p>Select the appropriate options and then click on "Display Music Table".</p>
-
 <form action="cgibin/make-table.cgi" method="get">
-<ul>
-<li>Options which change the <i>way</i> the music is displayed:
-<ul>
-<li><input type="checkbox" name="preview" value="1" /> Include preview images in page</li>
-</ul>
-</li>
 
-<li>Options which narrow down the range of music which is displayed:
+<p>Select options that narrow down the range of music that will be displayed:</p>
 <ul>
-<li>Search for <input type="text" name="searchingfor" size="30" /></li>
-<li>Display music by <select name="Composer">
+<li>Search for: <input type="text" name="searchingfor" size="30" /></li>
+<li>Composer: <select name="Composer">
 <option value="">all composers</option>
 [[ COMPOSER_OPTIONS() ]]
 </select></li>
-<li>for <select name="Instrument">
+<li>Instrument: <select name="Instrument">
 <option value="">any instrument</option>
 [[ INSTRUMENT_OPTIONS() ]]
 </select></li>
-<li><input type="checkbox" name="solo" value="1" /> Solo music only</li>
-<li>style: <select name="Style">
+<li>Style: <select name="Style">
 <option value="">any</option>
 [[ STYLE_OPTIONS() ]]
 </select></li>
-</ul></li>
-<li><input type="checkbox" name="recent" value="1" /> Display only music that's been added or updated in the last <input type="text" name="timelength" size="3" value="1" /> <select name="timeunit">
+<li><input type="checkbox" name="solo" value="1" /> Display only music for a solo performer (single instrument)</li>
+
+<li><input type="checkbox" name="recent" value="1" /> Display only music that's been added or updated in the last <input type="text" name="timelength" size="3" value="1" /> <select name="timeunit">
 <option value="week">week(s)</option>
 <option value="day">day(s)</option>
 </select></li>
 
-<li><input type="checkbox" name="lilyv" value="1" /> Display only music created with LilyPond version <input type="text" name="lilyversion" size="6" /> (can be a major version, eg. '2', or a more specific version, eg. '2.0' or '2.0.1')</li>
-
-<li><input type="checkbox" name="printav" value="1" /> Display only music which is available to purchase as a printed copy</li>
+<li><input type="checkbox" name="lilyv" value="1" /> Display only music created with LilyPond version <input type="text" name="lilyversion" size="6" /> (can be more or less specific, e.g. '2' or '2.6' or '2.6.1')</li>
 </ul>
-<p style="text-align: center;"><input type="submit" value="Display Music Table" /></p>
+
+<p>Select options that change the <i>way</i> the music will be displayed:</p>
+<ul>
+<li><input type="checkbox" name="preview" value="1" /> Include preview images in the results</li>
+</ul>
+
+<p style="text-align: center;"><input type="submit" value="Search" /></p>
 </form>
 
 [[ TAIL("advsearch") ]]
 
 </body>
-</html> 
+</html>
