@@ -1,4 +1,4 @@
-\version "2.14.2"
+\version "2.19.32"
 
 \header {
   title = "24 Studies for the Guitar"
@@ -10,12 +10,22 @@
   mutopiacomposer = "GiulianiM"
   mutopiainstrument = "Guitar"
   style = "Classical"
-  copyright = "Creative Commons Attribution-ShareAlike 3.0"
+  license = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl at glx.com"
 
- footer = "Mutopia-2011/11/19-1797"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Copyright © 2011. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ footer = "Mutopia-2015/11/28-1797"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2015" " by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
+}
+
+\paper {
+  % add space between composer/opus markup and first staff
+  markup-system-spacing #'padding = #3
+  % add a little space between composer and opus
+  markup-markup-spacing #'padding = #1.2
+  top-margin = #8
+  bottom-margin = #10
 }
 
 \layout {
@@ -28,7 +38,7 @@ mbreak = {}
 
 upperVoice = \relative c' {
   \voiceOne
-%  \once \override Score.RehearsalMark #'self-alignment-X = #LEFT
+%  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
 %  \mark "Grazioso"
   \set minimumFret = 3
   r8^\markup{"III"} g[ b] d[ b g] |
@@ -156,9 +166,6 @@ lowerVoice = \relative c {
   >>
   \layout {}
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 110 4)
-    }
+    \tempo 4 = 110
   }
 }
