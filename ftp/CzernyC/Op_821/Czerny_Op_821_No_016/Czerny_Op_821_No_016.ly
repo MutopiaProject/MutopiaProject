@@ -27,10 +27,13 @@ tagline = ##f
 exerciseNumber = "16."
 
 mbreak = {  }
+global = { \key g \major \time 2/4 }
+
 pianoUpper =   { \tempo "Allegro moderato"
-\clef treble \key g \major \time 2/4 
+\clef treble
 \times 2/3 {d''16^.^4 [d''^.^3 d''^.^2] }  d''8^.^1 
-\times 2/3 {d''16^.^4 [d''^.^3 d''^.^2] }  d''8^.^1 | % 1
+\override TupletNumber #'stencil = ##f
+\times 2/3 {g''16^.^4 [g''^.^3 g''^.^2] }  g''8^.^1 | % 1
 
 \times 2/3 {b''16^.   [b''^.   b''^.  ] }  b''8^. 
 \times 2/3 {d'''16^.  [d'''^.  d'''^. ] }  d'''8^.  | % 2
@@ -49,15 +52,15 @@ pianoUpper =   { \tempo "Allegro moderato"
 \times 2/3 {a''16^3  [a''    a''   ] }  
 \times 2/3 {c'''^3   [c'''   c'''  ] }
 \ottava 1
-\times 2/3 {e'''^3 e''' e'''}
+\times 2/3 {e'''^3[ e''' e''']}
 \times 2/3 {a'''^3 a'''^2 a'''^1}  | % 6      
 
-\times 2/3 {b'''16^3 d''''^5 c''''}
+\times 2/3 {b'''16^3 [d''''^5 c'''']}
 \times 2/3 {b''' a''' g''' }
-\times 2/3 {fs'''^4 e''' d'''}
+\times 2/3 {fs'''^4 [e''' d''']}
 \times 2/3 {c''' b''^3 a''   } \ottava 0 | % 7
 
-\times 2/3 {g''^1 d'''^5 b''^4}
+\times 2/3 {g''^1[ d'''^5 b''^4]}
 \times 2/3 {g''^2 d''^1 b'^4  }
 g'8^2  r8   | % 8
 \bar "|."
@@ -65,7 +68,7 @@ g'8^2  r8   | % 8
 }
 
 bassPiano =  {
-\clef bass \key g \major \time 2/4 
+\clef bass  
 g4 g4     | % 1
 g4 g4     | % 2 
 fs4 fs4     | % 3
@@ -78,23 +81,25 @@ d4 d4     | % 7
 }
 
 tenorPiano = {
-\times 4/6 {g16_4 b_2 d'_1 b d' b}  
+\clef bass 
+\times 4/6 {g16_4 b_2 d'_1 b d' b}
+\override TupletNumber #'stencil = ##f
 \times 4/6 {g     b   d'   b d' b}     | % 1
 
 \times 4/6 {g16   b   d'   b d' b}  
 \times 4/6 {g     b   d'   b d' b}     | % 2
 
-\times 4/6 {fs16_5 a_3 d'_1 a d' fs}  
-\times 4/6 {fs     a   d'   a d' fs}   | % 3
+\times 4/6 {fs16_5 a_3 d'_1 a d' a}  
+\times 4/6 {fs     a   d'   a d' a}   | % 3
 
-\times 4/6 {fs16   a   d'   a d' fs}  
-\times 4/6 {fs     a   d'   a d' fs}   | % 4
+\times 4/6 {fs16   a   d'   a d' a}  
+\times 4/6 {fs     a   d'   a d' a}   | % 4
 
-g8 <b d'> <b d'> <b d'> | % 5
+g8[ <b d'> <b d'> <b d'>] | % 5
 
-c8 <e a> <e a> <e a>    | % 6
+c8[ <e a> <e a> <e a>   ] | % 6
 
-d8 <g b> d     <fs c'>   | % 7
+d8[ <g b> d     <fs c'> ]  | % 7
 
 s2                      | % 8
 }
