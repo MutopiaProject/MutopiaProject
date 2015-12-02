@@ -29,31 +29,37 @@ exerciseNumber = "16."
 mbreak = {  }
 pianoUpper =   { \tempo "Allegro moderato"
 \clef treble \key g \major \time 2/4 
-\times 2/3 {d'16^.^4 d'^.^3 d'^.^2 }  d'8^.^1 
-\times 2/3 {d'16^.^4 d'^.^3 d'^.^2 }  d'8^.^1  | % 1
+\times 2/3 {d''16^.^4 [d''^.^3 d''^.^2] }  d''8^.^1 
+\times 2/3 {d''16^.^4 [d''^.^3 d''^.^2] }  d''8^.^1 | % 1
 
-\times 2/3 {b'16^. b'^. b'^.}  b'8^. 
-\times 2/3 {d''16^. d''^. d''^.}  d''8^.     | % 2
+\times 2/3 {b''16^.   [b''^.   b''^.  ] }  b''8^. 
+\times 2/3 {d'''16^.  [d'''^.  d'''^. ] }  d'''8^.  | % 2
 
-  \times 2/3 {c''16^. c''^. c''^. }  c''8^. 
-\times 2/3 {a'16^. a'^. a'^. }  a'8^.      | % 3
-\times 2/3 {d''16^. d''^. d''^.}  d''8^.
-\times 2/3 {c'16^. c'^. c'^.}  c'8^.       | % 4
+\times 2/3 {c'''16^.  [c'''^.  c'''^. ] }  c'''8^. 
+\times 2/3 {a''16^.   [a''^.   a''^.  ] }  a''8^.   | % 3
 
-\times 2/3 {b'16^3 b'^2  b'^1 } 
-\times 2/3 {d''^3  d''^2 d''^1}
-\times 2/3 {g''^3  g''   g''  }
-\times 2/3 {b''^3  b''   b''  }    | % 5
+\times 2/3 {d''16^.  [d''^.  d''^. ] }  d''8^.
+\times 2/3 {c''16^.  [c''^.  c''^. ] }  c''8^.      | % 4
 
-\times 2/3 {a''16^3 a''  a'' }  
-\times 2/3 {c'''^3  c''' c'''}
+\times 2/3 {b'16^3   [b'^2   b'^1  ] } 
+\times 2/3 {d''^3    [d''^2  d''^1 ] }
+\times 2/3 {g''^3    [g''    g''   ] }
+\times 2/3 {b''^3    [b''    b''   ] }    | % 5
+
+\times 2/3 {a''16^3  [a''    a''   ] }  
+\times 2/3 {c'''^3   [c'''   c'''  ] }
 \ottava 1
 \times 2/3 {e'''^3 e''' e'''}
 \times 2/3 {a'''^3 a'''^2 a'''^1}  | % 6      
 
-b'''16^3 d''''^5 c'''' b''' a''' g''' fs'''^4 e''' d''' c''' b''^3 a''    \ottava off | % 7
+\times 2/3 {b'''16^3 d''''^5 c''''}
+\times 2/3 {b''' a''' g''' }
+\times 2/3 {fs'''^4 e''' d'''}
+\times 2/3 {c''' b''^3 a''   } \ottava 0 | % 7
 
-g''^1 d'''^5 b''^4 g''^2 d''^1 b'^4 g'8^2  r8   | % 8
+\times 2/3 {g''^1 d'''^5 b''^4}
+\times 2/3 {g''^2 d''^1 b'^4  }
+g'8^2  r8   | % 8
 \bar "|."
 
 }
@@ -67,22 +73,22 @@ fs4 fs4     | % 4
 g2        | % 5
 c2        | % 6        
 d4 d4     | % 7
-<g b>8 <g b> <g b> r8  | % 8
+<g b>8 <g b> <g b> d8\rest  | % 8
 \bar "|."
 }
 
 tenorPiano = {
-g16_4 b_2 d'_1 b d' b  
-g     b   d'   b d' b   | % 1
+\times 4/6 {g16_4 b_2 d'_1 b d' b}  
+\times 4/6 {g     b   d'   b d' b}     | % 1
 
-g16   b   d'   b d' b  
-g     b   d'   b d' b   | % 2
+\times 4/6 {g16   b   d'   b d' b}  
+\times 4/6 {g     b   d'   b d' b}     | % 2
 
-fs16_5 a_3 d'_1 a d' fs  
-fs     a   d'   a d' fs   | % 3
+\times 4/6 {fs16_5 a_3 d'_1 a d' fs}  
+\times 4/6 {fs     a   d'   a d' fs}   | % 3
 
-fs16   a   d'   a d' fs  
-fs     a   d'   a d' fs   | % 4
+\times 4/6 {fs16   a   d'   a d' fs}  
+\times 4/6 {fs     a   d'   a d' fs}   | % 4
 
 g8 <b d'> <b d'> <b d'> | % 5
 
