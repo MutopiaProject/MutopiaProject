@@ -8,22 +8,62 @@
 
 import java.io.*;
 import java.util.*;
+import java.nio.file.FileSystems;
+import java.nio.file.FileSystem;
+import java.nio.file.Path;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
 
+/** Container class for access to various maps.
+ *
+ *  Holds mappings for copyright licenses, composers, and styles.
+ *
+ * @author Chris Sawer
+ */
 public class MutopiaMaps
 {
+    /** Very old license map.
+     * <p>Can be deprecated when the archive no longer has LilyPond
+     * versions less than 2.11.57
+     * </p>
+     */
    public static Map<String, String> licenceMapVOld = new HashMap<String, String>();
+
+    /** Old license map
+     * <p>Can be deprecated when the archive no longer has LilyPond
+     * versions less than 2.14.
+     * </p>
+     */
    public static Map<String, String> licenceMapOld = new HashMap<String, String>();
+
+    /** New license map */
    public static Map<String, String> licenceMapNew = new HashMap<String, String>();
-   public static Map<String, String> composerMap = new HashMap<String, String>();
-   public static Map<String, String> styleMap = new HashMap<String, String>();
-   
+
+    /** Map of composers.
+     *
+     *  The key is the MutopiaProject composer tag; the value is
+     *  the description associated with the author. This information
+     *  is read from the <code>datafiles/composers.dat</code> file.
+     */
+    public static Map<String, String> composerMap;
+
+    /** Map of valid styles. */
+    public static Map<String, String> styleMap;
+
    static
    {
       initialiseLicenceMap();
-      readDatFileIntoMap("composers.dat", composerMap);
-      readDatFileIntoMap("styles.dat", styleMap);
+
+      // FIXME: Should just throw the exception.
+      try {
+          composerMap = readDataFile("composers.dat");
+          styleMap = readDataFile("styles.dat");
+      }
+      catch (IOException ioe) {
+          System.err.println(ioe.getMessage());
+      }
    }
-   
+
    private static void initialiseLicenceMap()
    {
       Calendar now = Calendar.getInstance();
@@ -52,7 +92,7 @@ public class MutopiaMaps
                      "\\hspace #-1.0 \\teeny .org } by \\maintainer \\hspace #-1.0 . \\hspace #0.5 Copyright \u00A9 " + now.get(Calendar.YEAR) + ". \\hspace " +
                      "#0.5 Reference: \\footer } } \\line { \\teeny \\line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details " +
                      "see: \\hspace #-0.5 \\with-url #\"http://creativecommons.org/licenses/by-sa/3.0\" http://creativecommons.org/licenses/by-sa/3.0 } } } }");
-      
+
       licenceMapOld.put("Public Domain",
                      "tagline = \\markup { \\override #'(box-padding . 1.0) \\override #'(baseline-skip . 2.7) \\box \\center-column { \\small \\line { " +
                      "Sheet music from \\with-url #\"http://www.MutopiaProject.org\" \\line { \\teeny www. \\hspace #-1.0 MutopiaProject \\hspace #-1.0 " +
@@ -77,112 +117,78 @@ public class MutopiaMaps
                      "\\hspace #-1.0 \\teeny .org } by \\maintainer \\hspace #-1.0 . \\hspace #0.5 Copyright \u00A9 " + now.get(Calendar.YEAR) + ". \\hspace " +
                      "#0.5 Reference: \\footer } } \\line { \\teeny \\line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details " +
                      "see: \\hspace #-0.5 \\with-url #\"http://creativecommons.org/licenses/by-sa/3.0\" http://creativecommons.org/licenses/by-sa/3.0 } } } }");
-      
-      licenceMapNew.put("Public Domain",
-                     "copyright =  \\markup { \\override #'(baseline-skip . 0 ) \\right-column { \\sans \\bold \\with-url #\"http://www.MutopiaProject.org\" { " +
-                     "\\abs-fontsize #9  \"Mutopia \" \\concat { \\abs-fontsize #12 \\with-color #white \\char ##x01C0 \\abs-fontsize #9 \"Project \" } } } " +
-                     "\\override #'(baseline-skip . 0 ) \\center-column { \\abs-fontsize #11.9 \\with-color #grey \\bold { \\char ##x01C0 \\char ##x01C0 } } " +
-                     "\\override #'(baseline-skip . 0 ) \\column { \\abs-fontsize #8 \\sans \\concat { \" Typeset using \" \\with-url #\"http://www.lilypond.org\" " +
-                     "\"LilyPond\" \" by \" \\maintainer \" \" \\char ##x2014 \" \" \\footer } \\concat { \\concat { \\abs-fontsize #8 \\sans{ \" Placed in the \" " +
-                     "\\with-url #\"http://creativecommons.org/licenses/publicdomain\" \"public domain\" \" by the typesetter \" \\char ##x2014 \" free to " +
-                     "distribute, modify, and perform\" } } \\abs-fontsize #13 \\with-color #white \\char ##x01C0 } } }");
-      licenceMapNew.put("Creative Commons Attribution 3.0",
-                     "copyright =  \\markup { \\override #'(baseline-skip . 0 ) \\right-column { \\sans \\bold \\with-url #\"http://www.MutopiaProject.org\" { " +
-                     "\\abs-fontsize #9  \"Mutopia \" \\concat { \\abs-fontsize #12 \\with-color #white \\char ##x01C0 \\abs-fontsize #9 \"Project \" } } } " +
-                     "\\override #'(baseline-skip . 0 ) \\center-column { \\abs-fontsize #11.9 \\with-color #grey \\bold { \\char ##x01C0 \\char ##x01C0 } } " +
-                     "\\override #'(baseline-skip . 0 ) \\column { \\abs-fontsize #8 \\sans \\concat { \" Typeset using \" \\with-url #\"http://www.lilypond.org\" " +
-                     "\"LilyPond \" \\char ##x00A9 \" \" " + now.get(Calendar.YEAR) + " \" by \" \\maintainer \" \" \\char ##x2014 \" \" \\footer } \\concat { " + 
-                     "\\concat { \\abs-fontsize #8 \\sans { \" \" \\with-url #\"http://creativecommons.org/licenses/by/3.0/\" \"Creative Commons Attribution 3.0 " +
-                     "(Unported) License \" \\char ##x2014 \" free to distribute, modify, and perform\" } } \\abs-fontsize #13 \\with-color #white \\char ##x01C0 " +
-                     "} } }");
-      licenceMapNew.put("Creative Commons Attribution-ShareAlike 3.0",
-                     "copyright =  \\markup { \\override #'(baseline-skip . 0 ) \\right-column { \\sans \\bold \\with-url #\"http://www.MutopiaProject.org\" { " +
-                     "\\abs-fontsize #9  \"Mutopia \" \\concat { \\abs-fontsize #12 \\with-color #white \\char ##x01C0 \\abs-fontsize #9 \"Project \" } } } " +
-                     "\\override #'(baseline-skip . 0 ) \\center-column { \\abs-fontsize #11.9 \\with-color #grey \\bold { \\char ##x01C0 \\char ##x01C0 } } " +
-                     "\\override #'(baseline-skip . 0 ) \\column { \\abs-fontsize #8 \\sans \\concat { \" Typeset using \" \\with-url #\"http://www.lilypond.org\" " +
-                     "\"LilyPond \" \\char ##x00A9 \" \" " + now.get(Calendar.YEAR) + " \" by \" \\maintainer \" \" \\char ##x2014 \" \" \\footer } \\concat { " +
-                     "\\concat { \\abs-fontsize #8 \\sans { \" \" \\with-url #\"http://creativecommons.org/licenses/by-sa/3.0/\" \"Creative Commons Attribution " +
-                     "ShareAlike 3.0 (Unported) License \" \\char ##x2014 \" free to distribute, modify, and perform\" } } \\abs-fontsize #13 \\with-color #white " +
-                     "\\char ##x01C0 } } }");
-      licenceMapNew.put("Creative Commons Attribution 4.0",
-                     "copyright =  \\markup { \\override #'(baseline-skip . 0 ) \\right-column { \\sans \\bold \\with-url #\"http://www.MutopiaProject.org\" { " +
-                     "\\abs-fontsize #9  \"Mutopia \" \\concat{ \\abs-fontsize #12 \\with-color #white \\char ##x01C0 \\abs-fontsize #9 \"Project \" } } } " +
-                     "\\override #'(baseline-skip . 0 ) \\center-column { \\abs-fontsize #11.9 \\with-color #grey \\bold { \\char ##x01C0 \\char ##x01C0 } } " +
-                     "\\override #'(baseline-skip . 0 ) \\column { \\abs-fontsize #8 \\sans \\concat { \" Typeset using \" \\with-url #\"http://www.lilypond.org\" " +
-                     "\"LilyPond \" \\char ##x00A9 \" \" " + now.get(Calendar.YEAR) + " \" by \" \\maintainer \" \" \\char ##x2014 \" \" \\footer } \\concat { " + 
-                     "\\concat { \\abs-fontsize #8 \\sans { \" \" \\with-url #\"http://creativecommons.org/licenses/by/4.0/\" \"Creative Commons Attribution " +
-                     "4.0 International License \" \\char ##x2014 \" free to distribute, modify, and perform\" } } \\abs-fontsize #13 \\with-color #white " +
-                     "\\char ##x01C0 } } }");
-      licenceMapNew.put("Creative Commons Attribution-ShareAlike 4.0",
-                     "copyright =  \\markup { \\override #'(baseline-skip . 0 ) \\right-column { \\sans \\bold \\with-url #\"http://www.MutopiaProject.org\" { " +
-                     "\\abs-fontsize #9  \"Mutopia \" \\concat { \\abs-fontsize #12 \\with-color #white \\char ##x01C0 \\abs-fontsize #9 \"Project \" } } } " +
-                     "\\override #'(baseline-skip . 0 ) \\center-column { \\abs-fontsize #11.9 \\with-color #grey \\bold { \\char ##x01C0 \\char ##x01C0 } } " +
-                     "\\override #'(baseline-skip . 0 ) \\column { \\abs-fontsize #8 \\sans \\concat { \" Typeset using \" \\with-url #\"http://www.lilypond.org\" " +
-                     "\"LilyPond \" \\char ##x00A9 \" \" " + now.get(Calendar.YEAR) + " \" by \" \\maintainer \" \" \\char ##x2014 \" \" \\footer } \\concat { " + 
-                     "\\concat { \\abs-fontsize #8 \\sans{ \" \" \\with-url #\"http://creativecommons.org/licenses/by-sa/4.0/\" \"Creative Commons Attribution " +
-                     "ShareAlike 4.0 International License \" \\char ##x2014 \" free to distribute, modify, and perform\" } } \\abs-fontsize #13 " +
-                     "\\with-color #white \\char ##x01C0 } } }");
-      licenceMapNew.put("Creative Commons Public Domain Dedication 1.0",
-                     "copyright =  \\markup { \\override #'(baseline-skip . 0 ) \\right-column { \\sans \\bold \\with-url #\"http://www.MutopiaProject.org\" { " +
-                     "\\abs-fontsize #9  \"Mutopia \" \\concat { \\abs-fontsize #12 \\with-color #white \\char ##x01C0 \\abs-fontsize #9 \"Project \" } } } " +
-                     "\\override #'(baseline-skip . 0 ) \\center-column { \\abs-fontsize #11.9 \\with-color #grey \\bold { \\char ##x01C0 \\char ##x01C0 } } " +
-                     "\\override #'(baseline-skip . 0 ) \\column { \\abs-fontsize #8 \\sans \\concat { \" Typeset using \" \\with-url #\"http://www.lilypond.org\" " +
-                     "\"LilyPond\" \" by \" \\maintainer \" \" \\char ##x2014 \" \" \\footer } \\concat { \\concat { \\abs-fontsize #8 \\sans { \" \" " +
-                     "\\with-url #\"http://creativecommons.org/publicdomain/zero/1.0/\" \"Creative Commons Public Domain Dedication 1.0 (CC0 Universal) \" " +
-                     "\\char ##x2014 \" free to distribute, modify, and perform\" } } \\abs-fontsize #13 \\with-color #white \\char ##x01C0 } } }");
-      licenceMapNew.put("Creative Commons Public Domain Mark 1.0",
-      	             "copyright =  \\markup { \\override #'(baseline-skip . 0 ) \\right-column { \\sans \\bold \\with-url #\"http://www.MutopiaProject.org\" { " +
-                     "\\abs-fontsize #9  \"Mutopia \" \\concat { \\abs-fontsize #12 \\with-color #white \\char ##x01C0 \\abs-fontsize #9 \"Project \" } } } " +
-                     "\\override #'(baseline-skip . 0 ) \\center-column { \\abs-fontsize #11.9 \\with-color #grey \\bold { \\char ##x01C0 \\char ##x01C0 } } " +
-                     "\\override #'(baseline-skip . 0 ) \\column { \\abs-fontsize #8 \\sans \\concat { \" Typeset using \" \\with-url #\"http://www.lilypond.org\" " +
-                     "\"LilyPond\" \" by \" \\maintainer \" \" \\char ##x2014 \" \" \\footer } \\concat { \\concat { \\abs-fontsize #8 \\sans { \" \" " +
-                     "\\with-url #\"http://creativecommons.org/publicdomain/mark/1.0/\" \"Creative Commons Public Domain Mark 1.0 \" \\char ##x2014 " +
-                     "\" free to distribute, modify, and perform\" } } \\abs-fontsize #13 \\with-color #white \\char ##x01C0 } } }");
+
+      // The new map is populated by using copyrights generated by
+      // the LicenseMap singleton object. Once old and very old
+      // licenses are deprecated, the new map can be replaced with a
+      // simple call to LicenseMap.getCopyright().
+      LicenseMap lm = LicenseMap.getInstance();
+      for (String k: lm.keySet()) {
+          licenceMapNew.put(k, lm.getCopyright(k));
+      }
    }
 
-   private static void readDatFileIntoMap(String datFile, Map<String, String> map)
-   {
-      // Get directory
-      String mutopiaDir = System.getenv("MUTOPIA_BASE");
-      if (mutopiaDir == null)
-      {
-         throw new RuntimeException("MUTOPIA_BASE not set");
-      }
-      String filename = mutopiaDir + "/datafiles/" + datFile;
+    /** Read a pair file into a map.
+     *  Pair files are simply files that contain data in pairs,
+     *  typical of a flattened hash map. This routine generically
+     *  reads the file and returns a map of the key:value pairs.
+     *
+     *  @param inPath                a Path pointing to the actual file
+     *  @return                      Map containing hashed
+     *                               representation of file
+     *  @throws RuntimeException     on file format error, probably a
+     *                               mal-formed file. Files should
+     *                               contain an even number of lines.
+     *  @throws IOException          on read failure
+     */
+    public static Map<String, String> readPairFile(Path inPath)
+        throws RuntimeException, IOException
+    {
+        Map<String, String> pairMap = new HashMap<String, String>();
 
-      try
-      {
-         // Open file
-         BufferedReader dataFile = new BufferedReader(new InputStreamReader(new FileInputStream(filename), "UTF-8"));
+        BufferedReader dataFile = Files.newBufferedReader(inPath, StandardCharsets.UTF_8);
 
-         // Read key/value pairs
-         String key = dataFile.readLine();
-         String value = dataFile.readLine();
-         while (key != null) // key == null at end of file
-         {
+        // Read key/value pairs
+        String key = dataFile.readLine();
+        String value = dataFile.readLine();
+        while (key != null) { // key == null at end of file
             // Check value and put into map
-            if (value != null)
-            {
-               map.put(key, value);
+            if (value != null) {
+                pairMap.put(key, value);
             }
-            else
-            {
-               System.err.println("Inconsistency in data file: " + filename);
+            else {
+                throw new RuntimeException("Inconsistency in data file: " + inPath);
             }
 
             key = dataFile.readLine();
             value = dataFile.readLine();
-         }
+        }
 
-         dataFile.close();
-      }
-      catch (FileNotFoundException ex)
-      {  
-         System.err.println("Data file " + filename + " not found");
-      }
-      catch (IOException ex)
-      {  
-         System.err.println(ex);
-      }
-   }
+        dataFile.close();
+        return pairMap;
+    }
+
+    /** Reads a Mutopia datafile into a map.
+     *  Mutopia data files are simply pair files. This method builds a
+     *  full path to the location of the Mutopia datasets by
+     *  translating the MUTOPIA_BASE environment variable.
+     *
+     *  @param datFile               the name of the input file
+     *  @return Map                  containing hashed representation of file
+     *  @throws RuntimeException     on file format error
+     *  @throws IOException          from readPairFile(...)
+     */
+    public static Map<String, String> readDataFile(String datFile)
+        throws RuntimeException, IOException
+    {
+        // Get directory
+        String mutopiaDir = System.getenv("MUTOPIA_BASE");
+        if (mutopiaDir == null) {
+            throw new RuntimeException("MUTOPIA_BASE not set");
+        }
+
+        Path path = FileSystems.getDefault().getPath(mutopiaDir, "datafiles", datFile);
+        return MutopiaMaps.readPairFile(path);
+    }
+
 }
