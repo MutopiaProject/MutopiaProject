@@ -12,9 +12,8 @@
  composer = "Arr: de F. Tárrega"
  style = "Classical"
  date = "c.1885" % Beethoven d.1827, Tarrega d.1909, Alier d.1938
- mutopiadate = "c.1885"
  source = "Madrid: Ildefonso Alier, n.d. Plate 5754" % via IMSLP293004
- mutopiasource = "Madrid: Ildefonso Alier, n.d. Plate 5754"
+ mytagline = \markup{ \column { \vspace #2 \smaller \italic "Ildefonso Alier (1864-1938), Editor de Musica, Madrid.  Placa № 5754. IMSLP № 293004."} }
 
  %            o_
  %       (\___\/_____/)
@@ -25,6 +24,8 @@
 
  mutopiacomposer = "TarregaF"
  mutopiatitle = "Claro de Luna (Beethoven's Moonlight Sonata)"
+ mutopiadate = "c.1885"
+ mutopiasource = "Madrid: Ildefonso Alier, n.d. Plate 5754"
  mutopiainstrument = "Guitar"
 
  footer = "Mutopia-2015/11/17-2074"
@@ -43,6 +44,12 @@
   ragged-last-bottom = ##f
   print-first-page-number = ##t
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
+  oddFooterMarkup = \markup { \column {
+      \fill-line { \on-the-fly #first-page \column { \vspace #1 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #last-page \fromproperty #'header:mytagline }
+    }
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 
