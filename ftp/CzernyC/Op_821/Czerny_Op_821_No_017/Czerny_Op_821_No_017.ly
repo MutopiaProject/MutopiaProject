@@ -27,18 +27,20 @@ tagline = ##f
 exerciseNumber = "17."
 
 mbreak = {  }
+global = { \key g \major \time 4/4 }
+
 pianoUpper =   { \tempo "Allegro vivace"
-\clef treble \key g \major \time 4/4
+\clef treble 
 
-d'16^4 d'^3 d'^2 d'^1 b'8 r8
-c'16^4 c'^3 c'^2 c'^1 a'8 r8   | % 1
+d''16^4 d''^3 d''^2 d''^1 b''8 r8
+c''16^4 c''^3 c''^2 c''^1 a''8 r8   | % 1
 
-b'16 b' b' b' g'8 r8 <b' d'>2^2^> | % 2
+b'16 b' b' b' g''8 r8 <b' d''>2^2^> | % 2
 
-d'16^4 d'^3 d'^2 d'^1 c''8 r8
-d'16^4 d'^3 d'^2 d'^1 b'8  r8   | % 3
+d''16^4 d''^3 d''^2 d''^1 c'''8 r8
+d''16   d''   d''   d''    b''8  r8  | % 3
 
-d'16 d' d' d' a'8 r8 <fs' a' d''>2^> | % 4 
+d''16 d'' d'' d'' a''8 r8 <fs'' a'' d'''>2^> | % 4 
 
     
 
@@ -46,14 +48,14 @@ d''16^4 d''^3 d''^2  d''^1
 g''16^4 g''^3 g''^2  g''^1 
 b''16   b''   b''    b''
 \ottava 1
-d''16 d'' d'' d'' | % 5      
+d'''16 d''' d''' d''' | % 5      
 
-e''^2 g''^4 fs''^2 g''^3 a'' g'' fs'' e''^1 ds''^2 e''^3 fs'' e'' d''!^2 c''^1 b'^2 c''^3   \ottava 0 | % 6
+e'''^2 g'''^4 fs'''^2 g'''^3 a''' g''' fs''' e'''^1 ds'''^2 e'''^3 fs''' e''' d'''!^2 c'''^1 b''^2 c'''^3   \ottava 0 | % 6
 
-b''16^1 d'''^4  d''^3   d''^2
+b''16^1 d'''^4  d'''^3  d'''^2
 g''^1   b''^4   b''^3   b''^2 
 a''^1   c'''^4  c'''^3  c'''^2 
-d''^1   fs'''^4 fs'''^3 fs'''^2 | % 7
+d''^1   fs''^4  fs''^3  fs''^2 | % 7
 
 g''16^3 d''^1 b'^2 d''^1 g''^2 b''^4 d''' b'' g''8 r8 r4 | % 8
 \bar "|."
@@ -61,7 +63,7 @@ g''16^3 d''^1 b'^2 d''^1 g''^2 b''^4 d''' b'' g''8 r8 r4 | % 8
 }
 
 bassPiano =  {
-\clef bass \key g \major \time 4/4 
+\clef bass 
 g2_4 fs2_5 | % 1
 g1        | % 2 
 fs2 g2     | % 3
@@ -69,11 +71,12 @@ d2 c2     | % 4
 b,1       | % 5
 c2 c2     | % 6        
 d2 d2     | % 7
-<g b>8 r8 <g b> r8 <g b> r8 r4 | % 8
+<g b>8 d8\rest <g b> d8\rest <g b> d8\rest d4\rest | % 8
 \bar "|."
 }
 
 tenorPiano = {
+\clef bass 
 g4 <b d'> fs <a d'>       | % 1
 
 g4 <b d'> <b d'> <b d'>   | % 2
@@ -82,19 +85,19 @@ fs4 <a d'> g <b d'>       | % 3
 
 d4 <fs a> c <fs a>        | % 4
 
-b,4 <d^1 g^4> <d g> <d g> | % 5
+b,4 <d^4 g^1> <d g> <d g> | % 5
 
 c4 <e a> c   <e a>        | % 6
 
 d4 <g b> d   <a c'>       | % 7
 
-<g b>8 r <g b> r <g b> r8 r4                          | % 8
+s1                        | % 8
 }
 
 %-------Typeset music and generate midi
 
 dynamics = {
-  <>-\p s2    | % 1
+  <>-\p s1    | % 1
 }
 
 pedal = {
