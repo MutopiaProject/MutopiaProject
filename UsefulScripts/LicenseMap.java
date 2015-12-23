@@ -165,7 +165,7 @@ public class LicenseMap implements CCGenerator {
         if (cc.indexOf("Public") == -1) {
             String year = String.valueOf(Calendar.getInstance().get(Calendar.YEAR));
             sb.append("\\char ##x00A9");
-            sb.append(" \" " + year + "\" ");
+            sb.append(" \" " + year + " \" ");
         }
 
         for (String s : ccMid) {
