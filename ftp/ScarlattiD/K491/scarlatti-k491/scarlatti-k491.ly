@@ -16,6 +16,10 @@
   opus = "K.491"
   date = ""
   style = "Baroque"
+
+  % http://www.internetculturale.it/opencms/opencms/it/viewItemMag.jsp?case=&id=oai%3A193.206.197.121%3A18%3AVE0049%3AARM0001534
+  % Source: Queen Maria Barbara manuscript (1756) at Biblioteca nazionale Marciana - Venice
+  % Permission to reuse: http://www.internetculturale.it/opencms/opencms/it/main/chisiamo/uso/
   source = "Italian Digital Library: www.internetculturale.it"
   
   maintainer = "Knute Snortum"
