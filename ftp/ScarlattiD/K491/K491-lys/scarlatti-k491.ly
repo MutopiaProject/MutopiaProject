@@ -1,6 +1,6 @@
 %...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 
-\version "2.19.19"
+\version "2.19.33"
 \language "english"
 
 \paper {
@@ -16,7 +16,7 @@
   opus = "K.491"
   date = ""
   style = "Baroque"
-  source = ""
+  source = "Italian Digital Library: www.internetculturale.it"
   
   maintainer = "Knute Snortum"
   maintainerEmail = "knute (at) snortum (dot) net"
@@ -36,258 +36,250 @@
 
 % --- First repeat, both hands
 
-voltaOneUpper = \relative c'' {
-  d4 \prall d \prall d \prall |
-  d16 e fs g a g fs e d cs b a |
-  d4 \prall d \prall e \prall |
-  r8 fs16 g a8 d, a' d, |
-  r8 e16 fs g8 cs, g' cs, |
-  <d fs>4 q <fs a> |
-  <e g>4 q q |
-  r8 <a, fs'>16. <b g'>32 <a fs'>8 <b g'> <a fs'> <g e'> |
-  <fs d'>4 q <g e'> |
-  r8 <a fs'>16. <b g'>32 <a fs'>8 <b g'> <a fs'> <g e'> |
-  <fs d'>4 q <g e'> |
-  << { fs'8 fs16. g32 a8 a g fs } \\ { a,4 a8 fs' e d } >> |
-  <a e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'> |
-  <a' e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'> |
-  <a' e'>8 <fs d'> <e cs'> <d d'> <a' e'> <fs d'> |
-  <e cs'> <d d'> <a' e'>8 <fs d'> <e cs'> <d d'> |
-  <a' e'>2. \prall |
-  R1 * 3/4 \fermataMarkup |
+voltaOneUpper = \relative {
+  | d''4 \prall d \prall d \prall
+  | d16 e fs g a g fs e d cs b a
+  | d4 \prall d \prall e \prall
+  | r8 fs16 g a8 d, a' d,
+  | r8 e16 fs g8 cs, g' cs,
+  | <d fs>4 q <fs a>
+  | <e g>4 q q
   
-  \barNumberCheck #19
-  << 
-    { 
-      \acciaccatura { e'16 f } g8 f16 e e8 e e e |
-      \acciaccatura { g8 } f8 e16 d16 d8 d d e |
-      \acciaccatura { g8 } f8 e16 d 
-    } 
-    \\ 
-    { 
-      \grace { s8 } c2. |
-      \grace { s8 } b2 b8 cs |
-      \grace { s8 } <a d>4
-    }
-  >> 
-  <c e>8 <b d> <a c> <gs b> |
-  a8 \prall b c \prall d e \prall f |
-  << 
-    { 
-      \acciaccatura { e16 f } g8 f16 e e8 e e e |
-      \acciaccatura { g8 } f8 e16 d16 d8 d d e |
-      \acciaccatura { g8 } f8 e16 d 
-    } 
-    \\ 
-    { 
-      \grace { s8 } c2. |
-      \grace { s8 } b2 b8 cs |
-      \grace { s8 } <a d>4
-    }
-  >> 
-  <c e>8 <b d> <a c> <gs b> |
+    \barNumberCheck 8
+  | r8 <a, fs'>16. <b g'>32 <a fs'>8 <b g'> <a fs'> <g e'>
+  | <fs d'>4 q <g e'>
+  | r8 <a fs'>16. <b g'>32 <a fs'>8 <b g'> <a fs'> <g e'>
+  | <fs d'>4 q <g e'>
+  | << { fs'8 fs16. g32 a8 a g fs } \\ { a,4 a8 fs' e d } >>
+  | <a e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'>
+  | <a' e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'>
+  | <a' e'>8 <fs d'> <e cs'> <d d'> <a' e'> <fs d'>
+  | <e cs'>8 <d d'> <a' e'> <fs d'> <e cs'> <d d'>
+  | <a' e'>2. \prall
+  | R1 * 3/4 \fermataMarkup
+    
+    \barNumberCheck 19
+  | << { \grace { e'16 f } g8 f16 e e8 e e e } \\ { c2. } >>
+  | << { \acciaccatura { g'8 } f8 e16 d d8 d d e } \\ { b2 b8 cs! } >>
+  | << { \acciaccatura { g'8 } f8 e16 d e8 d c b } \\ { <a d>4 c8 b a gs } >>
+  | a8 \prall b c \prall d e \prall f
+  | << { \grace { e16 f } g8 f16 e e8 e e e } \\ { c2. } >>
+  | << { \acciaccatura { g'8 } f8 e16 d d8 d d e } \\ { b2 b8 cs! } >>
+  | << { \acciaccatura { g'8 } f8 e16 d e8 d c b } \\ { <a d>4 c8 b a gs } >>
   
-  \barNumberCheck #26
-  a16 a' cs, e a, cs e, a cs, e a, a' |
-  fs16 a' fs a d, fs a, d fs, a d, d' |
-  cs16 a' cs, e a, cs e, a cs, e a, a' |
-  fs16 d' cs b a gs32 a b a b cs b4 \prall |
-  a4 r a' |
-  \acciaccatura { gs8 } fs4 r a |
-  \acciaccatura { fs8 } e4 r a |
-  r16 fs e d d cs b a cs b a gs |
-  a4 r a' |
-  \acciaccatura { gs8 } fs4 r a |
-  \acciaccatura { fs8 } e4 r a |
-  r16 fs e d d cs b a cs b a gs |
-  <a cs>8 q16 <b d> <cs e>8 <d fs> <cs e> <b d> |
-  <a cs>8 <gs b>16 <a cs> <b d>8 <a cs>4 <gs b>8 |
-  <a cs>16 <gs b> <a cs> <b d> <a cs> <b d> <cs e> <d fs> 
-    <cs e> <b d> <a cs> <gs b> |
-  <a cs>16 <gs b> <a cs> <b d> <a cs> <b d> <cs e> <d fs> 
-    <cs e> <b d> <a cs> <gs b> |
-  <a cs>8 <gs b>16 <a cs> <b d>8 <a cs>4 <gs b>8 |
-  a16 a' e cs a e cs a r4 |
-  R1 * 3/4 
+    \barNumberCheck 26
+  | a16 a' cs,! e a, cs e, a cs, e a, a'
+  | fs16 a' fs a d, fs a, d fs, a d, d'
+  | cs16 a' cs, e a, cs e, a cs, e a, a'
+  | fs16 d' cs b a gs32 a b a b cs b4 \prall
+  | a4 r a'
+  | \acciaccatura { g8 } fs4 r a
+  | \acciaccatura { fs8 } e4 r a
+  | r16 fs e d d cs b a  cs b a gs
+  | a4 r a'
+  | \acciaccatura { g8 } fs4 r a
+  | \acciaccatura { fs8 } e4 r a
+  | r16 fs e d d cs b a  cs b a gs
+  
+    \barNumberCheck 38
+  | << { cs8 cs16 d e8 fs e d } \\ { a8 a16 b cs8 d cs b } >>
+  | << { cs8 b16 cs d8 cs4 b8 } \\ { a8 gs16 a b8 a4 gs8 } >>
+  | << { cs16 b cs d cs d e fs e d cs b } \\ { a16 gs a b a b cs d cs b a gs } >>
+  | << { cs16 b cs d cs d e fs e d cs b } \\ { a16 gs a b a b cs d cs b a gs } >>
+  | << { cs8 b16 cs d8 cs4 b8 } \\ { a8 gs16 a b8 a4 gs8 } >>
+  | a16 a' e cs a e cs a r4
+  | R1 * 3/4
 }
 
-voltaOneLower = \relative c' {
-  R1 * 3/4 |
-  d4 \prall d \prall d \prall |
-  d16 e fs g a g fs e d cs b a |
-  <d, d'>4 q <fs d'> |
-  <g d' e>4 q <a e'> |
-  r8 fs'16 g a8 d, a' d, |
-  << { r8 e16 fs g8 cs, g' cs, } \\ { a2. } >> |
-  d,4 d d |
-  r8 <fs d'>16. <g e'>32 <fs d'>8 <g e'> <fs d'> <e cs'> |
-  d4 d d |
-  r8 <fs d'>16. <g e'>32 <fs d'>8 <g e'> <fs d'> <e cs'> | 
-  << { d'2 } \\ { d,4 fs } >> g4 |
-  <a,, a'>4 q q |
-  q4 q q |
-  q4 q q |
-  q4 q q |
-  q2. |
-  R1 * 3/4 \fermataMarkup |
+voltaOneLower = \relative {
+  | R1 * 3/4
+  | d'4 \prall d \prall d \prall
+  | d16 e fs g a g fs e d cs b a
+  | <d, d'>4 q <fs d'>
+  | <g e' d>4 q <a e'>
+  | r8 fs'16 g a8 d, a' d,
+  | << { r8 e16 fs g8 cs, g' cs, } \\ { a2. } >>
   
-  \barNumberCheck #19
-  <c c'>4 q q |
-  <g' g'>4 q  q |
-  <d d'>4 <e e'> e |
-  a4 r r |
-  <c, c'>4 q q |
-  <g' g'>4 q  q |
-  <d d'>4 e' e, |
+    \barNumberCheck 8
+  | d,4 d d 
+  | r8 <fs d'>16. <g e'>32 <fs d'>8 <g e'> <fs d'> <e cs'>
+  | <d d'>4 d d
+  | r8 <fs d'>16. <g e'>32 <fs d'>8 <g e'> <fs d'> <e cs'>
+  | << { d'2 s4 } \\ { d,4 fs g } >>
+  | <a,, a'>4 q q
+  | q4 q q
+  | q4 q q
+  | q4 q q
+  | q2.
+  | R1 * 3/4 \fermataMarkup
+    
+    \barNumberCheck 19
+  | <c c'>4 q q
+  | <g' g'>4 q q
+  | <d d'>4 <e e'> e
+  | a4 r r
+  | <c, c'>4 q q
+  | <g' g'>4 q q
+  | <d d'>4 e' e,
   
-  \barNumberCheck #26
-  <a, a'>4 q q |
-  <d d'>4 q q |
-  <a a'>4 q q |
-  <d d'>4 <e e'> e |
-  a16 a'' cs, e a, cs e, a cs, e a, cs |
-  d16 a'' fs a d, fs a, d fs, a d,  a' |
-  a,16 e'' cs e a, cs e, a cs, e a, cs |
-  d,4 e e |
-  a16 a'' cs, e a, cs e, a cs, e a, cs |
-  d16 a'' fs a d, fs a, d fs, a d,  a' |
-  a,16 e'' cs e a, cs e, a cs, e a, cs |
-  d,4 e e |
-  <a, a'>4 q <e' e'> |
-  <a, a'>4 <d d'> <e e'> |
-  <a, a'>4 q <e' e'> |
-  <a, a'>4 q <e' e'> |
-  <a, a'>4 <d d'> <e e'> |
-  <a, a'>4 r a''16 e cs a |
-  a,2. 
+    \barNumberCheck 26
+  | <a, a'>4 q q
+  | <d d'>4 q q 
+  | <a a'>4 q q
+  | <d d'>4 <e e'> e
+  | a16 a'' cs, e a, cs e, a cs, e a, cs
+  | d16 a'' fs a d, fs a, d fs, a d, a'
+  | cs,16 e' cs e a, cs e, a cs, e a, cs 
+  | d,4 e e
+  | a16 a'' cs, e a, cs e, a cs, e a, cs
+  | d16 a'' fs a d, fs a, d fs, a d, a'
+  | cs,16 e' cs e a, cs e, a cs, e a, cs 
+  | d,4 e e
+  
+    \barNumberCheck 38
+  | <a, a'>4 q <e' e'>
+  | <a, a'>4 <d d'> <e e'>
+  | <a, a'>4 q <e' e'>
+  | <a, a'>4 q <e' e'>
+  | <a, a'>4 <d d'> <e e'>
+  | <a, a'>4 r a''16 e cs a
+  | a,2.
 }
 
 % --- Second repeat, both hands
 
-voltaTwoUpper = \relative c'' {
-  \barNumberCheck #45
-  r8 cs16 d e8 a, e' a, |
-  r8 b16 cs d8 gs, d' gs, |
-  <a cs>4 q <cs e> |
-  <b d>4 q q |
-  a16 b cs d e d cs b a g! fs e |
-  r8 fs'16 g a8 d, a' d, |
-  r8 e16 fs g8 cs, g' cs, |
-  <d fs>4 q <fs a> |
-  <e g>4 q q |
-  <d fs>4 q q |
-  g16 fs g a b a g fs e d cs b |
-  <a e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'> |
-  <a' e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'> |
-  <a' e'>8 <fs d'> <e cs'> <d d'> <a' e'> <fs d'> |
-  <e cs'> <d d'> <a' e'>8 <fs d'> <e cs'> <d d'> |
-  <a' e'>2. \prall |
-  R1 * 3/4 \fermataMarkup |
-  \bar "||"
-  \key c \major
+voltaTwoUpper = \relative {
+    \barNumberCheck 45
+  | r8 cs''16 d e8 a, e' a,
+  | r8 b16 cs d8 gs, d' gs,
+  | <a cs>4 q <cs e>
+  | <b d>4 q q
+  | a16 b cs d e d cs b a g! fs e
+  | r8 fs'16 g a8 d, a' d,
+  | r8 e16 fs g8 cs, g' cs,
+  | <d fs>4 q <fs a>
+  | <e g>4 q q
+  | <d fs>4 q q
+  | g16 fs g a b a g fs e d cs b
+  | <a e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'>
+  | <a' e'>8 q16. q32 q8 <fs d'> <e cs'> <d d'>
+  | <a' e'>8 <fs d'> <e cs'> <d d'> <a' e'> <fs d'>
+  | <e cs'>8 <d d'> <a' e'> <fs d'> <e cs'> <d d'>
+  | <a' e'>2. \prall
+  | R1 * 3/4 \fermataMarkup 
   
-  \barNumberCheck #62
-  << 
-    { << { c'8 bf16 a a8 } \\ \new Voice { \voiceFour f4. } >> <f a>8 q q } 
-    \\ 
-    { c2. } 
-  >> |
-  << { \acciaccatura { a'8 } g8 f16 e e8 fs g a } 
-     \\ 
-     { \acciaccatura { s8 } <c,~ e>4 c8 d e fs } 
-  >> |
-  <g bf>8 <f a>16 <e g> <f a>8 <e g> <d f> <cs e> |
-  d8 \prall e f \prall g a \prall bf |
-  << 
-    { << { c8 bf16 a a8 } \\ \new Voice { \voiceFour f4. } >> <f a>8 q q } 
-    \\ 
-    { c2. } 
-  >> |
-  << { \acciaccatura { a'8 } g8 f16 e e8 fs g a } 
-     \\ 
-     { \acciaccatura { s8 } <c,~ e>4 c8 d e fs } 
-  >> |
-  <g bf>8 <f a>16 <e g> <f a>8 <e g> <d f> <cs e> |
-  \bar "||"
-  \key d \major
+    \barNumberCheck 62
+    \key c \major
+  | <<
+      { \voiceOne c'8 bf16 a a8 a a a }
+      \\
+      \new Voice { \voiceTwo f4. f8 f f }
+      \\
+      \new Voice { \voiceTwo c2. }
+    >>
+  | <<
+      { \voiceOne \acciaccatura { a'8 } g8 f16 e e8 fs g a }
+      \\
+      \new Voice { \voiceThree e4 s2 }
+      \\
+      \new Voice { \voiceTwo c4. d8 e fs }
+    >>
+  | << { bf8 a16 g a8 g f e } \\ { g8 f16 e f8 e d cs } >>
+  | d8 \prall e f \prall g a \prall bf
+  | <<
+      { \voiceOne c8 bf16 a a8 a a a }
+      \\
+      \new Voice { \voiceTwo f4. f8 f f }
+      \\
+      \new Voice { \voiceTwo c2. }
+    >>
+  | <<
+      { \voiceOne \acciaccatura { a'8 } g8 f16 e e8 fs g a }
+      \\
+      \new Voice { \voiceThree e4 s2 }
+      \\
+      \new Voice { \voiceTwo c4. d8 e fs }
+    >>
+  | << { bf8 a16 g a8 g f e } \\ { g8 f16 e f8 e d cs } >>
   
-  \barNumberCheck #69
-  d16 d' fs, a d, fs a, d fs, a d, d' |
-  b16 d' b d g, b d, g b, d g, g' |
-  fs16 d' fs, a d, fs a, d fs, a d, d' |
-  b16 g' fs e d cs32 d e d e fs e4 \prall |
-  d4 r d' |
-  \acciaccatura { cs8 } b4 r d |
-  \acciaccatura { b8 } a4 r d |
-  r16 b a g g fs e d fs e d cs |
-  d4 r d' |
-  \acciaccatura { cs8 } b4 r d |
-  \acciaccatura { b8 } a4 r d |
-  r16 b a g g fs e d fs e d cs |
-  d8 <d fs>16. <e g>32 <fs a>8 <g b> <fs a> <g e> |
-  <d fs>8 <cs e>16 <d fs> <e g>8 <d fs>4 <cs e>8 |
-  <d fs>16 <cs e> <d fs> <g e> <d fs> <g e> <fs a> <g b> 
-    <fs a> <e g> <d fs> <cs e> |
-  <d fs>16 <cs e> <d fs> <g e> <d fs> <g e> <fs a> <g b> 
-    <fs a> <e g> <d fs> <cs e> |
-  <d fs>8 <cs e>16 <d fs> <e g>8 <d fs>4 <cs e>8 |
-  d16 d' a fs d a fs d r4 |
-  R1 * 3/4 |
+    \barNumberCheck 69
+    \key d \major
+  | d16 d' fs, a d, fs a, d fs, a d, d'
+  | b16 d' b d g, b d, g b, d g, g'
+  | fs d' fs, a d, fs a, d fs, a d, d'
+  | b16 g' fs e d cs32 d e d e fs e4 \prall
+  | d4 r d'
+  | \acciaccatura { cs8 } b4 r d
+  | \acciaccatura { b8 } a4 r d
+  | r16 b a g g fs e d fs e d cs
+  | d4 r d'
+  | \acciaccatura { cs8 } b4 r d
+  | \acciaccatura { b8 } a4 r d
+  | r16 b a g g fs e d fs e d cs  
+  
+    \barNumberCheck 81
+  | << { s8 fs16. g32 a8 b a g } \\ { d8 d16. e32 fs8 g fs e } >>
+  | << { fs8 e16 fs g8 fs4 e8 } \\ { d8 cs16 d e8 d4 cs8 } >>
+  | << { fs16 e fs g fs g a b a g fs e } \\ { d cs d e d e fs g fs e d cs } >>
+  | << { fs16 e fs g fs g a b a g fs e } \\ { d cs d e d e fs g fs e d cs } >>
+  | << { fs8 e16 fs g8 fs4 e8 } \\ { d8 cs16 d e8 d4 cs8 } >>
+  | d16 d' a fs d a fs d r4
+  | R1 * 3/4
 }
 
 voltaTwoLower = \relative c {
-  \barNumberCheck #45
-  <a a'>4 q <cs a'> |
-  <d a' b>4 q <e b'> |
-  r8 cs'16 d e8 a, e' a, |
-  << { r8 b16 cs d8 gs, d' gs, } \\ { e2. } >> |
-  <a cs>4 q q |
-  <d, d'>4 q <fs d'> |
-  <g d' e>4 q <a e'> |
-  r8 fs'16 g a8 d, a' d, |
-  << { r8 e16 fs g8 cs, g' cs, } \\ { a2. } >> |
-  d16 e fs g a g fs e d c b a |
-  g4 g g |
-  <a,, a'>4 q q |
-  q4 q q |
-  q4 q q |
-  q4 q q |
-  q2. |
-  R1 * 3/4 \fermataMarkup |
-  \bar "||"
-  \key c \major
+    \barNumberCheck 45
+  | <a a'>4 q <cs a'>
+  | <d a' b>4 q <e b'>
+  | r8 cs'16 d e8 a, e' a,
+  | << { r8 b16 cs d8 gs, d' gs, } \\ { e2. } >>
+  | <a cs>4 q q
+  | <d, d'>4 q <fs d'>
+  | <g d' e>4 q <a e'>
+  | r8 fs'16 g a8 d, a' d,
+  | << { r8 e16 fs g8 cs, g' cs, } \\ { a2. } >>
+  | d16 e fs g a g fs e d c b a
+  | g4 g g
+  | <a,, a'>4 q q
+  | q4 q q
+  | q4 q q
+  | q4 q q
+  | q2.
+  | R1 * 3/4 \fermataMarkup  
   
-  \barNumberCheck #62
-  <f' c' f>2 q4 |
-  <c g' c>2 <c c'>4 |
-  <g' g'>4 a' a, |
-  <d, d'>4 r r |
-  <f c' f>2 q4 |
-  <c g' c>2 <c c'>4 |
-  <g' g'>4 a' a, |
-  \bar "||"
-  \key d \major
+    \barNumberCheck 62
+    \key c \major
+  | <f' c' f>2 q4
+  | <c g' c>2 <c c'>4
+  | <g' g'>4 a' a,
+  | <d, d'>4 r r
+  | <f c' f>2 q4
+  | <c g' c>2 <c c'>4
+  | <g' g'>4 a' a, 
   
-  \barNumberCheck #69
-  <d, d'>4 q q |
-  <g g'>4 q q |
-  <d d'>4 q q |
-  <g g'>4 <a a'> a |
-  d16 a'' fs a d, fs a, d fs, a d, d' |
-  g,16 g' d g b, d g, b d, g g, g' |
-  fs16 a' fs a d, fs a, d fs, a d, fs |
-  g,,4 a a |
-  d16 a''' fs a d, fs a, d fs, a d, d' |
-  g,16 g' d g b, d g, b d, g g, g' |
-  fs16 a' fs a d, fs a, d fs, a d, fs |
-  g,,4 a a |
-  <d d'>4 q <a' a'> |
-  <d, d'>4 <g g'> <a a'> |
-  <d, d'>4 q <a' a'> |
-  <d, d'>4 q <a' a'> |
-  <d, d'>4 <g g'> <a a'> |
-  <d, d'>2 d''16 a fs d |
-  d,2. |
+    \barNumberCheck 69
+    \key d \major
+  | <d, d'>4 q q
+  | <g g'>4 q q
+  | <d d'>4 q q
+  | <g g'> <a a'> a
+  | d16 a'' fs a d, fs a, d fs, a d, d'
+  | g,16 g' d g b, d g, b d, g g, g'
+  | fs16 a' fs a d, fs a, d fs, a d, fs
+  | g,,4 a a
+  | d16 a''' fs a d, fs a, d fs, a d, d'
+  | g,16 g' d g b, d g, b d, g g, g'
+  | fs16 a' fs a d, fs a, d fs, a d, fs 
+  | g,,4 a a
+  
+    \barNumberCheck 81
+  | <d d'>4 q <a' a'>
+  | <d, d'>4 <g g'> <a a'>
+  | <d, d'>4 q <a' a'>
+  | <d, d'>4 q <a' a'>
+  | <d, d'>4 <g g'> <a a'>
+  | <d, d'>2 d''16 a fs d
+  | d,2.
 }
 
 %-------Typeset music 
