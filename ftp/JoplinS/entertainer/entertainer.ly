@@ -4,7 +4,6 @@
   title = "The Entertainer"
   subtitle = "A Ragtime Two Step"
   composer = "Scott Joplin"
-  piece = "INTRO"
 
   mutopiatitle = "The Entertainer"
   mutopiacomposer = "JoplinS"
@@ -32,6 +31,10 @@ top = \relative c' {
   \global
   \clef treble
 
+  %% to print RehearsalMark above MetronomeMark,
+  %% align them to the same ‘break-align-symbol’
+  \once\override Score.RehearsalMark.break-align-symbols = #'(time-signature)
+  \mark "INTRO:"
   \voiceOne
   d''16 e c a ~ a b g8 | %1
   \oneVoice
