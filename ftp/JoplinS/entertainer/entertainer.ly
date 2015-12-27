@@ -86,7 +86,7 @@ top = \relative c' {
     <a fis>8 <c fis,> <e f,>16 <d f,>8 <c e,>16 ~ |
   } \alternative {
     { <c e,>4 ~ <c e,>16 \ottava #1 <e' c e,> <f d f,> <fis dis fis,> \ottava #0 } %37
-    { <c, e,>4 ~ <c e,>8\> d,16 dis\! }
+    { <c, e,>4\repeatTie ~ <c e,>8\> d,16 dis\! }
   }
 
   \bar "||"
