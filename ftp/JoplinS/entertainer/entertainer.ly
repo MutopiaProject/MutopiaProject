@@ -17,7 +17,41 @@
   maintainerEmail = "sincero@my.mail.de"
 
   footer = "Mutopia-2015/12/27-xxx"
-  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \concat { \teeny www. MutopiaProject \teeny .org } \hspace #0.5 • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \concat { \teeny www. LilyPond \teeny .org } by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  tagline = \markup {
+    \override #'(box-padding . 1.0)
+    \override #'(baseline-skip . 2.7)
+    \box
+    \center-column {
+      \small \line {
+        Sheet music from
+        \with-url #"http://www.MutopiaProject.org"
+        \concat { \teeny www. MutopiaProject \teeny .org }
+
+        \hspace #0.5 • \hspace #0.5
+
+        \italic Free to download,
+        with the \italic freedom to distribute, modify and perform.
+      }
+      \line {
+        \small \line {
+          Typeset using
+          \with-url #"http://www.LilyPond.org"
+          \concat { \teeny www. LilyPond \teeny .org }
+          by \concat { \maintainer . }
+          \hspace #0.5
+          Reference: \footer
+        }
+      }
+      \line {
+        \teeny \line {
+          This sheet music has been placed in the public domain
+          by the typesetter, for details see:
+          \with-url #"http://creativecommons.org/licenses/publicdomain"
+          http://creativecommons.org/licenses/publicdomain
+        }
+      }
+    }
+  }
 }
 
 \paper {
