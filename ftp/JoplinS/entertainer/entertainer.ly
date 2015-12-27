@@ -214,7 +214,7 @@ bottom = \relative c {
     <e c g> <e c g> <e c g> <e c g> |
     <c d,> <a d,> <b g> <b g> |
   } \alternative {
-    { <c c,> <g g,>^^ <e e,>^^ <d d,>^^ } %37
+    { <c c,> <g g,>-^ <e e,>-^ <d d,>-^ } %37
     { <c' c,> <g g,> <c, c,> r }
   }
 
