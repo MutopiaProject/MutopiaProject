@@ -1,6 +1,6 @@
 % -*- coding: utf-8-unix; -*-
 
-\version "2.19.33"
+\version "2.19.34"
 
 \header {
   title = "Les étoiles d'or"
@@ -11,16 +11,17 @@
   mutopiatitle = "Les étoiles d'or, No. 1 Valse"
   mutopiacomposer = "GobbaertsL"
   mutopiainstrument = "Piano"
-  source = "G. Morosini & Co., 1882. The Crown Edition." % IMSLP #83958
+  % IMSLP #83958
+  source = "G. Morosini & Co., 1882. The Crown Edition."
   style = "Romantic"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Masamichi Hosoda"
   maintainerEmail = "trueroad@trueroad.jp"
   maintainerWeb = "http://www.trueroad.jp/"
 
-  footer = "Mutopia-2001/01/01-1"
-  copyright = \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9 "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
-  tagline = ##f
+ footer = "Mutopia-2015/12/27-2092"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2015 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
 }
 
 \pointAndClickOff
