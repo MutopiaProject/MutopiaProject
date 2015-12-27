@@ -29,8 +29,6 @@ global = {
 }
 
 top = \relative c' {
-  \override TextScript.padding = #2
-
   \global
   \clef treble
 
