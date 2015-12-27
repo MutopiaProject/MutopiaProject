@@ -34,20 +34,13 @@ top = \relative c' {
   \global
   \clef treble
 
-  \stemUp
+  \voiceOne
   d''16 e c a ~ a b g8 | %1
-  \stemNeutral
+  \oneVoice
   d16 e c a ~ a b g8 |
-  \stemUp
-  d16 e c
-  \change Staff = "down"
-  a ~ a b a as |
-  g8
-  \once \override Rest.direction = #UP
-  r
-  \change Staff = "up"
-  \stemNeutral
-  <g'' d b g>^^ d,16(\> dis)\! |
+
+  d16 e c \change Staff = "down" \voiceOne a ~ a b a as |
+  g8 r \change Staff = "up" \oneVoice   <g'' d b g>^^ d,16(\> dis)\! |
 
   \repeat volta 2 {
     e16\p c'8 e,16 c'8 e,16 c' ~ | %5
@@ -176,18 +169,13 @@ top = \relative c' {
 bottom = \relative c {
   \global
   \clef bass
-  \change Staff = "up"
-  \stemDown
+  \change Staff = "up" \voiceTwo
   d''16 \f e c a ~ a b g8 | %1
-  \stemNeutral
-  \change Staff = "down"
+  \change Staff = "down" \oneVoice
   d16 e c a ~ a b g8 |
-  \stemDown
+  \voiceTwo
   d16 e c a ~ a b a as |
-  g8
-  \once \override Rest.direction = #DOWN
-  r
-  \stemUp <g g,>^^ <b' g>
+  g8 r \oneVoice <g g,>^^ <b' g>
 
   \stemNeutral
   \repeat volta 2 {
