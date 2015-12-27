@@ -35,7 +35,7 @@ top = \relative c' {
   \clef treble
 
   \stemUp
-  d''16^\markup {\large "Not fast"} e c a ~ a b g8 | %1
+  d''16 e c a ~ a b g8 | %1
   \stemNeutral
   d16 e c a ~ a b g8 |
   \stemUp
