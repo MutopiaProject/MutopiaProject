@@ -409,7 +409,12 @@ dyn = {
     \new Staff = "down" \bottom
   >>
 
-  \layout {}
+  \layout {
+    \context {
+      \Voice
+      \override Tie.minimum-length = 3
+    }
+  }
 }
 
 \score {
