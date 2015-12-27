@@ -22,15 +22,6 @@
   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-blanknotes = {
-  \override NoteHead.transparent = ##t
-  \override Stem.transparent = ##t
-}
-unblanknotes = {
-  \revert NoteHead.transparent
-  \revert Stem.transparent
-}
-
 top = \relative c' {
   \override TextScript.padding = #2
 
@@ -137,7 +128,7 @@ top = \relative c' {
     c4\< <f b, gis>8.\fz\!\> f16\! |
     <<
       { \stemDown <a c, a>16\f <c c,>8 <g bes,>16 ~ \stemUp g c, d e }
-      \\ { s8. \blanknotes bes4*1/4 ~ \unblanknotes bes8 bes }
+      \\ { s8. \hideNotes bes4*1/4 ~ \unHideNotes bes8 bes }
     >> | %69 - slight kludge
   } \alternative {
     { <f' a,>8 b,16( c d e f g) }
