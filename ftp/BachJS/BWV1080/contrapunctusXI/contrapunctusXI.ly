@@ -786,3 +786,7 @@ global = { \time 2/2 \key d \minor }
     \tempo 4 = 90
   }
 
+  \layout {
+    indent = 8
+  }
+}
