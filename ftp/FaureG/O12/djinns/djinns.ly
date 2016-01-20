@@ -630,7 +630,7 @@ basse = \relative do {
 	lab4 lab8. lab16 lab4 lab |
 	fad fad8. fad16 la4 la8. la16 |
 	sib4 sib8. sib16 sib4 sib |
-	sib sib8. sib16 re4 re8. re16 |
+	si si8. si16 re4 re8. re16 |
 	mib4 mib,8. mib16 mib4 mib |
 % H
 	fa4\> fa8. sol16 lab4 lab8. lab16\! |
