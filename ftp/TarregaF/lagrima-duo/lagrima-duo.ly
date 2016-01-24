@@ -23,7 +23,7 @@
  maintainerEmail = "gmail's jjocanoe"
  license = "Public Domain"
 
- mutopiacomposer = "Tárrega"
+ mutopiacomposer = "TarregaF"
  mutopiatitle = "Lágrima"
  mutopiadate = "1889-1909"
  mutopiasource = "Madrid: Ildefonso Alier, n.d. Plate 5230 A"

@@ -23,7 +23,7 @@
  maintainerEmail = "gmail's jjocanoe"
  license = "Public Domain"
 
- mutopiacomposer = "Tárrega"
+ mutopiacomposer = "TarregaF"
  mutopiatitle = "Adelita"
  mutopiadate = "n.d."
  mutopiasource = "Valencia: Antich y Tena, n.d. Plate A.y.T. 361"
