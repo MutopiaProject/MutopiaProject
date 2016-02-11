@@ -1,7 +1,7 @@
 \version "2.18.2"
 
 \header {
-  title = "8 Petite Pièces"
+  title = "8 Petites Pièces"
   composer = "D. Aguado"
   opus = "Op. 3 No. 1"
   style = "Romantic"
