@@ -97,17 +97,16 @@ melody={
   } \break
 }
 
-hymn=\lyricmode { <<
+hymnA=\lyricmode { 
   { % First A section 
     Gott, wie gross ist dei -- ne Gü -- te die mein Herz auf Er -- den schmeckt
   }
-  \new Lyrics { % Second A section
-    Ach, wie labt sich mein Ge -- mü -- the, wenn mich Noth un Tod er -- schreckt 
-  }
->>
-  { Wenn mich et -- was will be -- trü -- ben, wenn mich mei -- ne Sün -- de presst, }
-  { zei -- get sie von dei -- nem Lie -- ben, das mich nicht ver -- za -- gen lässt; }
-  {drauf ich mich zu -- frie -- den stel -- le und Trotz bie -- ten kann der Höl -- le. }
+}
+hymnB=\lyricmode{
+  Ach, wie labt sich mein Ge -- mü -- the, wenn mich Noth un Tod er -- schreckt 
+  Wenn mich et -- was will be -- trü -- ben, wenn mich mei -- ne Sün -- de presst,
+  zei -- get sie von dei -- nem Lie -- ben, das mich nicht ver -- za -- gen lässt;
+  drauf ich mich zu -- frie -- den stel -- le und Trotz bie -- ten kann der Höl -- le.
 }
 
 bass={ 
@@ -168,15 +167,16 @@ bassfigures = \figuremode {
 
 %-------Typeset music and generate midi
 \score {
-    \context PianoStaff <<
-        %-Midi instrument values at 
-        % http://lilypond.org/doc/v2.18/Documentation/snippets/midi#midi-demo-midiinstruments
-        \set PianoStaff.midiInstrument = "acoustic grand"
-        \new Staff = "upper" { \clef treble \global \new Voice = "melody" \melody}
-        \new Lyrics \lyricsto "melody" {\hymn}
-        \new Staff = "lower" { \clef bass \global \bass}
-        \new FiguredBass{ \bassfigures }
-    >>
-    \layout{ }
-    \midi  { \tempo 4 = 70 }
+  \context PianoStaff <<
+    %-Midi instrument values at 
+    % http://lilypond.org/doc/v2.18/Documentation/snippets/midi#midi-demo-midiinstruments
+    \set PianoStaff.midiInstrument = "acoustic grand"
+    \new Staff = "upper" { \clef treble \global \new Voice = "melody" \melody }
+    \new Lyrics \lyricsto "melody" { \hymnA }
+    \new Lyrics \lyricsto "melody" { \hymnB }
+    \new Staff = "lower" { \clef bass \global \bass }
+    \new FiguredBass{ \bassfigures }
+  >>
+  \layout{ }
+  \midi  { \tempo 4 = 70 }
 }
