@@ -40,7 +40,7 @@ upperVoice = \relative c'' {
   gis16( a) b a e( fis) g fis |
   d8 s s4 |
   r8 cis16 b cis8 e |
-  r8 < e, d'> q r |
+  r8 < fis, d'> q r |
   gis'16( a b a) e( fis g fis) |
 
   \mbreak
@@ -140,7 +140,7 @@ lowerVoice = \relative c {
   s2 |
   <e, d'>2 |
   a4 r |
-  a16(^\markup{\small "med:"} b) <cis-3>( <d-4>) <e-1>( <fis-1>) <gis-3^\2>( <a-4>) |
+  a16(^\markup{\small "med:"} b) <cis-3>[( <d-4>)] <e-1>( <fis-1>) <gis-3^\2>[( <a-4>)] |
   a4 gis |
   <e d'>4. gis8 |
   a4. r8 |
@@ -177,7 +177,7 @@ lowerVoice = \relative c {
   <e, d'>2 |
   a4 r |
 
-  a16( b) cis( d) e( fis) gis( a) |
+  a16( b) cis[( d)] e( fis) gis[( a)] |
   a4 gis |
   <e d'>4. gis8 |
   a4. r8 |
