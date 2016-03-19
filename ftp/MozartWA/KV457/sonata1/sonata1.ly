@@ -298,7 +298,7 @@ upper = \relative c' {
 	
 	g4 c,-.-) c-. c-.
 	
-	a'-( b,-)-. b-. r
+	aflat'-( b,-)-. b-. r       % a->aflat, Breitkopf
 	
 	g,2^^-\f-1 b4-\staccatissimo-2 d-\staccatissimo-1
 	
