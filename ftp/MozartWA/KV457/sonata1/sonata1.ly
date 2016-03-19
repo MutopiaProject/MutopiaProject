@@ -449,7 +449,8 @@ upper = \relative c' {
 	< eflat c' >-. \tuplet 3/2 { g'8_>-\f-[-( fsharp aflat-] } \tuplet 3/2 { g-[ f eflat-] } \tuplet 3/2 { d-[ eflat c-] }
 	
 	% 165
-	b4-.-) \tuplet 3/2 { f'8_>-[-( e g-] } \tuplet 3/2 { f-[ eflat d-] } \tuplet 3/2 { c-[ bflat! d-] }
+  % bflat->b, Breitkopf
+	b4-.-) \tuplet 3/2 { f'8_>-[-( e g-] } \tuplet 3/2 { f-[ eflat d-] } \tuplet 3/2 { c-[ b d-] }
 	
 	c4-.-) \tuplet 3/2 { g'8_>-[-( fsharp aflat-] } \tuplet 3/2 { g-[ f eflat-] } \tuplet 3/2 { d-[ eflat c-] }
 	
