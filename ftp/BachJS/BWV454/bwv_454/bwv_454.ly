@@ -32,7 +32,7 @@
 %--FOR:q usage and possible values for header variables.
 %---------------------------------------------------------------------
 \header {
-    title = "Ermentre dich, mein schwacher Geist"
+    title = "Ermuntre dich, mein schwacher Geist"
     composer = "Johann Sebastian Bach"
     opus = "Schmellis Gesangbuch, No. 16"
     %piece = "Left-aligned header"
