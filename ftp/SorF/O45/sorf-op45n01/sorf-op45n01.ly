@@ -29,7 +29,7 @@ by Fernando Sor. Opus 45."
   bottom-margin = #12
 }
 
-mbreak = { \break }
+mbreak = {} % { \break }
 global = {
   \time 3/4
   \key g\major
