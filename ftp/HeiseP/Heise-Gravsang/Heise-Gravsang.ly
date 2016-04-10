@@ -37,7 +37,7 @@
   maintainerEmail = "ccm.moes@xs4all.nl"
   license = "Creative Commons Attribution 4.0"
 
- footer = "Mutopia-2016/03/10-2107"
+ footer = "Mutopia-2016/04/10-2107"
  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2016 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
  tagline = ##f
 }
@@ -75,7 +75,7 @@ Tenorb = \relative c' {
   \global
   \clef "G_8"
 \sdd 
-\partial 2. d2 d4 cis2 dis4 e_(dis) cis  d2 r4 d2 d4 cis2 a4 a( cis) b a r4 r a2 a4 a2 a4 a_(b) bis
+\partial 2. d2 d4 cis2 dis4 e_(d) cis  d2 r4 d2 d4 cis2 a4 a( cis) b a r4 r a2 a4 a2 a4 a_(b) bis
 cis2. cis2 cis4 d2 d4 cis_(b) a a2_(gis4) g2 g4 e2 a4 a_(d) c b2. b2 b4
 b4_(fis) gis a2 a4 a2.
 \bar "|."
