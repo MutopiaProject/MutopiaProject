@@ -367,7 +367,7 @@ lowerVarC = \relative c' {
     \tempo 4 = 80
   }
 }
-f
+
 \pageBreak
 
 \score {
