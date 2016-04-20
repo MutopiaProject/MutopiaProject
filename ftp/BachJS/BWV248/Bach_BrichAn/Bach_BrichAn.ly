@@ -85,7 +85,7 @@ fe = \fermata
 soprano = \relative c'' {
   \global
   \repeat volta 2 {
-    g4 | g a h8[ c] d4 | d cis d\fe
+    g4 | g a h8[ cis] d4 | d cis d\fe
     h4 | c h a h | a2 g4
   } \break
   a4  | \once \override Score.BarNumber.break-visibility = #all-visible
