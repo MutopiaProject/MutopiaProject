@@ -54,7 +54,7 @@ sopranB = \relative c'
 	g16 a,32 h cis h a16 d a e' a, fis'2~ |
 %38
 	fis16 g,32 a h g fis g cis g fis g d' g, fis g
-		e'16 g, fis d' fis, d' cis fis, |
+		e'16 g, fis d' e, d' cis e, |
 	cis' e, d h' cis, h' a c, a' c, h g' a, g' fis a, |
 	fis' a, g e' fis, e' d h' ais8 fis h e |
 	cis e, a d h d, g c |
@@ -114,7 +114,7 @@ altB = \relative c'
 	g, e h'8 r4 r16 fis'32 e d fis g fis cis fis g fis h, fis' g fis |
 	ais,8 h ais gis fis32 ais h cis d h fis d'cis ais fis cis'h gis eis h'|
 %35
-	ais8 h ais gis fis16 fis32 gis a16 fis h fis cis' fis, |
+	ais8 h ais gis fis16 fis32 gis ais16 fis h fis cis' fis, |
 	d'2~d16 e,32 fis g fis e16 a e h' e, |
 	cis'2~cis16 d,32 e fis d cis d g d cis d a' d, cis d |
 %38
@@ -142,7 +142,7 @@ bassB = \relative c'
 %8
 	d r h r cis fis cis' cis, |
 	fis r d r e r cis r |
-	d r h r cis fis cis cis |
+	d r h r cis fis, cis' cis |
 %11
 	fis, fis' gis ais h h, cis d |
 	e, e' fis g a a, h cis |
@@ -189,5 +189,5 @@ bassB = \relative c'
 	a r fis r g r e r |
 	fis h fis' fis, gis4-\fermata r8 g8 |
 	fis h fis' fis, h2-\fermata|
-	
+
 }
