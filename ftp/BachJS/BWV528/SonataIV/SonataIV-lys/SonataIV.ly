@@ -1,7 +1,8 @@
+\version "2.8.8"
+
 \header {
   title =       "Sonata IV"
   opus =        "BWV 528"
-  source =      "Peters Urtext"
   composer =    "Johann Sebastian Bach (1685-1750)"
   enteredby =   "Felix Braun"
   
@@ -12,14 +13,13 @@
   mutopiainstrument = "Organ"
   source = "Neue Bach-Ausgabe BA 5057"
   style = "Baroque"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Felix Braun"
-  lastupdated = "2006/Jun/12"
- footer = "Mutopia-2006/06/12-780"
+
+ footer = "Mutopia-2016/05/03-780"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\version "2.8.4"
 \include "deutsch.ly"
 \include "Adagio.ly"
 \include "Andante.ly"

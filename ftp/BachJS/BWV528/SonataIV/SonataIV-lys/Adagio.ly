@@ -1,4 +1,4 @@
-\version "2.8.4"
+\version "2.8.8"
 \include "deutsch.ly"
 
 sintro = \relative c'
