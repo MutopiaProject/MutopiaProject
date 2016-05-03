@@ -21,7 +21,7 @@ bintro = \relative c
 {
 	e4 r8 dis e4 r8 fis|
 	g4 r8 c8 fis,4 r8 h,|
-	e, e' g h h, c'16 h c8 c,|
+	e, e' g h c, c'16 h c8 c,|
 	h16 h'a h g h e, g ais,2|
 }
 
@@ -214,8 +214,8 @@ bassA = \relative c
 	e d c|
 %35
 	h4 r8 h e h|
-	c4 r8 f d d|
-	a4 g f|
+	c4 r8 f d e|
+	a,4 g f|
 	e d' c|
 %39
 	h r8 e gis e|
@@ -243,7 +243,7 @@ bassA = \relative c
 	h h' fis a dis, fis|
 %59
 	a,4 r8 c h a|
-	g a h g h4|
+	g a h a h4|
 	e,8 e' e e fis g|
 	cis, cis cis dis e fis|
 	h,4. g8 c4|
