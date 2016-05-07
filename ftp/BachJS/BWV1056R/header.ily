@@ -15,8 +15,8 @@
 
   maintainer = "Júda Ronén"
   maintainerWeb = "http://me.digitalwords.net/"
-  license = "Creative Commons Attribution 4.0"
-  lastupdated = "2016-05-07"
+  license = "Public Domain"
+  lastupdated = "2016-05-08"
 
   moreInfo = "Only the the second movement has been typeset by now. Feel free to complete the other movements, but please <a href=\"http://me.digitalwords.net/\">contact</a> me before for coordination."
 }

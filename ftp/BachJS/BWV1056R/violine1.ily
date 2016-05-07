@@ -30,7 +30,8 @@ largoViolineI = {
 	r des' c' r r d' bes' r |
 	r a' d' r r
 	\set Staff.midiInstrument = #"violin"
-	bes^\markup{\italic{coll’ arco}} g g'~ |
+	\once \omit DynamicText
+	bes\p^\markup{\italic{coll’ arco}} g g'~ |
 	g'\dim a'16( g') g'( fis') fis'( e') fis'2\fermata\pp |
 	\bar "||"
   }
