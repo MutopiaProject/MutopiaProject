@@ -3,8 +3,9 @@
 \language "deutsch"
 %% Noten fertig, es fehlt Dynamic!
 
-%\include "Papier+Layout.ly"
-\include "letter.ly"
+\include "Papier+Layout.ly"
+%\include "letter.ly"
+%#(set-global-staff-size 18)
 \header {
   mutopiatitle = "50 Melodische Übungsstücke"
   mutopiacomposer = "CzernyC"
@@ -15,6 +16,19 @@
   license="Public Domain"
   maintainer="Manuela"
   maintainerEmail="pressephotografin--gmail.com"
+  composer =\markup { \bold "Carl Czerny (1791-1857)"  }
+  %opus = \markup { "Op:" \number \tiny 840 }
+  piece =\markup {"Op:" \number \tiny 840 "Etüde" \number \tiny 2 }
+  title = "50 Melodische Übungsstücke"
+  %subtitle = "subtitle"
+  %arranger = "arranger"
+  %instrument = "Piano"
+  metre = "metre"
+  %poet = "poet"
+  texidoc = "All header fields with special meanings."
+  copyright = "public domain"
+  enteredby = "Manuela"
+
 }
 
 RH= \relative c'' {
@@ -23,8 +37,10 @@ RH= \relative c'' {
   \key f \major \partial 8
   %\set Staff.explicitKeySignatureVisibility = #all-invisible
   \set Staff.explicitKeySignatureVisibility = #end-of-line-invisible
+  \tempo  "Allegretto animato"
   \once \override Voice.Slur #'positions = #'(2.8 . 0.6)
-  c8-.-1
+  \once \override TextScript.extra-offset = #'( -16.5 . 3.5 )
+  c8-.-1-\markup { \small \bold o }
   \grace { f32( g } f8)-.-3 r c-. \grace { g'32( f } g8)-.-3 r c,-. %Takt 1
   \grace { a'32( b } a8)-.-3 r f-. \acciaccatura g8-3 f8(-2 e f)
   \grace { g32( a } g8)-.-3 r c,-. \grace { a'32( b } a8)-.-3 r c,-. |
@@ -46,7 +62,7 @@ RH= \relative c'' {
   \grace { c32 d } c8(-2 a-1-.)-. a'-.-5 \grace { b,32 c } b8(-2 g-.)-. g'-.
   \grace { a,32 b } a8(-2 f-.)-. f'-. \grace { g,32 a } g8(-2 e-.)-. e'-.-4
   f-5-. c-. a-. f-. r^\markup { "Fine." }
-  \tempo \markup { \bold "B Dur." \italic "(Si majeur)" }
+  \mark \markup { \bold "B Dur." \italic "(Si" \super \flat \italic " majeur)" }
   \bar ":..:"
   \key b \major
   f,8 < d'-4 f-5 >4.( < b-2 d-4 >8)-. q q \break
@@ -131,26 +147,12 @@ LHII = \relative c {
   < b d >8 q q q d,8\rest_\markup "D.C. sino al fine."
 }
 
-ST= {
-  s8 s2.*4 \break s2.*4 %\break s2.*5 \break
-  %s2.*5 \break
-
-}
-
-DY={
-  s8 s2. * 5
-}
-
-\header {
-  % title = \markup \caps "50 Melodische übungsstücke"
-  composer =\markup { \bold \large "Carl Czerny" "Op:" \number 840 }
-}
 \score
 {
   \new PianoStaff \with {
     instrumentName = \markup {
       \center-column {
-        \line { \bold \huge { N. \bold \super o } \number 2. }
+        \line { \bold \huge { N. } \number 2. }
         \line \large { F Dur }
         \italic \line { Fa majeur. }
       }
@@ -166,14 +168,13 @@ DY={
       \override BarNumber.padding = #0
       \override BarNumber.self-alignment-X = #CENTER
       \override BarNumber.break-visibility = #end-of-line-invisible
-      %instrumentName="Vocal"
+      \override Slur.outside-staff-priority = #150
     }
     {
       <<
         \set Staff.explicitKeySignatureVisibility = #begin-of-line-visible
         \RH
-        \new Dynamics \DY
-        %\ST
+
       >>
 
     }
