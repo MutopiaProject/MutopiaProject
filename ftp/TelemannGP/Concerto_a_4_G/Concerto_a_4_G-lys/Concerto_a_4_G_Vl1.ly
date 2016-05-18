@@ -1,6 +1,6 @@
 \version "2.18.2"
 \language "deutsch"
-\include "Concerto a 4 G.ly"
+\include "Concerto_a_4_G.ly"
 
 \paper {
   ragged-last-bottom = ##f
@@ -8,7 +8,7 @@
 
 \header {
   title = "Concerto à 4 Violini Concertati"
-  subtitle = "Violin IV"
+  subtitle = "Violin I"
   composer = "Georg Philipp Telemann"
   mutopiatitle = "Concerto in G major for four violins"
   mutopiacomposer = "TelemannGP"
@@ -30,7 +30,7 @@
     opus = "TWV 40:201"
     piece = \markup { \bold \huge "Largo e staccato" }
   }
-  \largoViolinIV   
+  \largoViolinI
   \layout {
     indent = 6
   }
@@ -40,7 +40,7 @@
   \header {
     piece = \markup { \bold \huge "Allegro" }
   }
-  \allegroViolinIV
+  \allegroViolinI
   \layout {
     indent = 6
   }
@@ -52,7 +52,7 @@
   \header {
     piece = \markup { \bold \huge "Adagio" }
   }
-  \adagioViolinIV
+  \adagioViolinI
   \layout {
     indent = 6
   }
@@ -62,7 +62,7 @@
   \header {
     piece = \markup { \bold \huge "Vivace" }
   }
-  \vivaceViolinIV
+  \vivaceViolinI
   \layout {
     indent = 6
   }
