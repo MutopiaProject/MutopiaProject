@@ -75,7 +75,7 @@ largoViolinII = \relative h {
   \largoGlobal
   R2.
   R2.
-  h4 4 4
+  h4 h h
   h4 h a
 
   \barNumberCheck 5
@@ -319,7 +319,7 @@ allegroViolinI = \relative g'' {
   r4 r8 d16 e fis8 d16 e fis8 fis16 g
 
   \barNumberCheck 35
-  a8 e a a a g16 fis g8 8
+  a8 e a a a g16 fis g8 g
   g8 fis16 e fis8 fis fis g16 e e8. d16
   d4 r16 h, a h c4 d
   g,8 h' e e, fis a d d,
