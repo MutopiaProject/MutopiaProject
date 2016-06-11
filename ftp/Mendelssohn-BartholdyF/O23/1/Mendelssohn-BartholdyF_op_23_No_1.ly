@@ -173,7 +173,7 @@ commonOneLyrics = \lyricmode {
   Aus tie -- fer Not schrei’ ich zu dir!
   Herr Gott, er -- hör’ mein Ru -- fen!
   Dein gnä -- dig’n Oh -- ren kehr zu mir,
-  und mei -- ner Bitt' sie öf -- fne!
+  und mei -- ner Bitt’ sie öf -- fne!
   Denn so du willst das se -- hen an,
   was Sünd und Un -- recht ist ge -- tan,
   wer kann, Herr, vor dir blei -- ben?
@@ -664,32 +664,32 @@ basTwoVoice = <<
 
 sopTwoLyrics = \lyricmode {
   Aus tie -- fer Not schrei’ ich zu dir,
-  er -- hör’' __ mein Ru -- fen,
-  Herr Gott, er -- hör’' __ mein Ru -- fen,
-  er -- hör’' __
-  Herr Gott, er -- hör’' mein Ru -- fen,
-  er -- hör’' mein Ru -- fen,
-  Herr Gott, er -- hör’' mein Ru -- fen,
-  er -- hör’' mein Ru -- fen,
+  er -- hör’ __ mein Ru -- fen,
+  Herr Gott, er -- hör’ __ mein Ru -- fen,
+  er -- hör’ __
+  Herr Gott, er -- hör’ mein Ru -- fen,
+  er -- hör’ mein Ru -- fen,
+  Herr Gott, er -- hör’ mein Ru -- fen,
+  er -- hör’ mein Ru -- fen,
 
   dein gnä -- dig’n Oh -- ren kehr __ zu __ mir,
   dein gnä -- dig’n Oh -- ren kehr, __
   dein gnä -- dig’n Oh -- ren kehr zu mir,
   dein gnä -- dig’n Oh -- ren kehr zu mir,
-  und mei -- ner Bitt' sie öf -- fne!
+  und mei -- ner Bitt’ sie öf -- fne!
 
   Denn so du willst das se -- hen an, das se -- hen an,
   was Sünd und Un -- recht ist ge -- tan, __
 
   aus tie -- fer Not schrei’ ich zu dir, __
-  Herr Gott, __ Herr Gott, __ er -- hör’' __ mein Ru -- fen,
+  Herr Gott, __ Herr Gott, __ er -- hör’ __ mein Ru -- fen,
 
   denn so du willst das se -- hen an,
   denn so du willst das se -- hen an,
   wer kann, Herr, vor dir blei -- ben?
 
   Aus tie -- fer Not schrei’ ich zu dir,
-  wer kann, Herr, vor dir blei -- ben?
+  wer kann, Herr, vor __ dir blei -- ben?
   was Sünd und Un -- recht ist ge -- tan,
   wer kann, Herr, vor dir blei -- ben?
 }
@@ -697,21 +697,21 @@ sopTwoLyrics = \lyricmode {
 altTwoLyrics = \lyricmode {
   Aus tie -- fer Not schrei’ ich zu dir,
   aus tie -- fer Not schrei’ ich zu dir,
-  Herr Gott, er -- hör’' __ mein Ru -- fen, er -- hör’, __
-  Herr Gott, aus tie -- fer Not schrei’ ich zu dir, schrei’ ich __ zu dir,
-  Herr Gott, __ er -- hör’' __ mein Ru -- fen,
+  Herr Gott, er -- hör’ __ mein Ru -- fen, er -- hör’, __
+  Herr Gott, __ aus tie -- fer Not schrei’ ich zu dir, schrei’ ich __ zu dir,
+  Herr Gott, __ er -- hör’ __ mein Ru -- fen,
   dein gnä -- dig’n Oh -- ren kehr __ zu mir,
   dein gnä -- dig’n Oh -- ren kehr __ zu mir,
   aus tie -- fer Not schrei’ ich zu dir, __
   Herr __ Gott, __ Herr __ Gott, zu dir,
   dein gnä -- dig’n Oh -- ren kehr zu mir,
-  und mei -- ner Bitt' sie öf -- fne!
+  und mei -- ner Bitt’ sie öf -- fne!
 
   Denn so du willst das se -- hen an,
   denn so du willst das se -- hen an,
   was Sünd und Un -- recht ist ge -- tan, __
   aus tie -- fer Not schrei’ ich zu dir, schrei’ ich zu dir,
-  Herr Gott, er -- hör’' mein Ru -- fen,
+  Herr Gott, er -- hör’ mein Ru -- fen,
   denn so du willst das se -- hen an,
   willst das se -- hen an,
   wer kann, Herr, vor __ dir blei -- ben?
@@ -722,31 +722,31 @@ altTwoLyrics = \lyricmode {
 
 tenTwoLyrics = \lyricmode {
   Herr Gott, er -- hör’ mein Ru -- fen, er -- hör’, __
-  Herr Gott, er -- hör’' mein Ru -- fen,
+  Herr Gott, er -- hör’ mein Ru -- fen,
   aus tie -- fer Not schrei’ ich zu dir,
-  Herr __ Gott, er -- hör’' __ mein Ru -- fen,
+  Herr __ Gott, __ er -- hör’ __ mein Ru -- fen,
   aus tie -- fer Not schrei’ ich zu dir,
-  Herr Gott, __ er -- hör’' __ mein Ru -- fen,
+  Herr Gott, __ er -- hör’ __ mein Ru -- fen,
   dein gnä -- dig’n Oh -- ren kehr, __
   dein gnä -- dig’n Oh -- ren kehr __ zu mir, zu mir,
 
   aus tie -- fer Not __ schrei’ ich zu dir, __
   aus tie -- fer Not schrei’ ich zu dir, __
   schrei’ ich __ zu __ dir,
-  Herr Gott, er -- hör’' mein Ru -- fen,
+  Herr Gott, er -- hör’ mein Ru -- fen,
   dein gnä -- dig’n Oh -- ren kehr zu mir,
-  und mei -- ner Bitt' sie öf -- fne!
+  und mei -- ner Bitt’ sie öf -- fne!
 
   Denn so du willst, denn so du willst das se -- hen an,
   das se -- hen an, was Sünd und Un -- recht ist ge -- tan __
 
   aus tie -- fer Not schrei’ ich zu dir,
-  Herr Gott, Herr Gott, er -- hör’', er -- hör’',
-  Herr Gott er -- hör’' mein Ru -- fen,
+  Herr Gott, Herr Gott, er -- hör’, er -- hör’,
+  Herr Gott er -- hör’ mein Ru -- fen,
   denn so du willst das se -- hen an,
   wer kann, Herr, vor dir blei -- ben?
   Herr, vor dir blei -- ben?
-  Denn so du willst das se -- hen an,
+  Denn so du willst das se -- hen an, __
   was Sünd und Un -- recht ist ge -- tan,
   wer kann, Herr, vor dir blei -- ben?
 }
@@ -755,21 +755,21 @@ basTwoLyrics = \lyricmode {
   Aus tie -- fer Not schrei’ ich zu dir,
   aus tie -- fer Not schrei’ ich zu dir,
   Herr Gott, er -- hör’ mein Ru -- fen,
-  er -- hör’ mein Ru -- fen,
-  Herr Gott, er -- hör’,
+  er -- hör’ __ mein Ru -- fen,
+  Herr __ Gott, er -- hör’,
   er -- hör’ mein Ru -- fen,
   er -- hör’ mein Ru -- fen,
   Herr Gott, er -- hör’ mein Ru -- fen,
-  er -- hör’
-  Herr Gott, er -- hör’ mein Ru -- fen,
+  er -- hör’ __
+  Herr __ Gott, er -- hör’ mein Ru -- fen,
   Herr Gott, er -- hör’,
   er -- hör’ __
   Herr Gott, er -- hör’, __ er -- hör’ __ mein __ Ru -- fen.
 
-  Dein gnä -- dig’n Oh -- ren kehr zu mir,
+  Dein gnä -- dig’n Oh -- ren kehr zu mir, __
   aus tie -- fer Not schrei’ ich zu dir, __
   schrei’ ich zu dir, zu dir,
-  und mei -- ner Bitt' sie öf -- fne!
+  und mei -- ner Bitt’ sie öf -- fne!
   Denn so du willst das se -- hen an,
   das seh -- en an,
 
@@ -780,8 +780,8 @@ basTwoLyrics = \lyricmode {
   Herr Gott, er -- hör’ mein Ru -- fen,
 
   Denn so du willst das se -- hen an,
-  wer kann, Herr, vor dir blei -- ben?
-  wer kann, __ wer kann, Herr, vor dir blei -- ben?
+  wer kann, Herr, vor __ dir blei -- ben?
+  wer kann, __ wer kann, Herr, vor dir __ blei -- ben?
   Denn willst du se -- hen an, was Sünd und Un -- recht ist ge -- tan,
   wer kann, Herr, vor dir blei -- ben?
 }
@@ -1384,8 +1384,8 @@ sopThreeLyrics = \lyricmode {
   und sei -- ner Gü -- te trau -- en,
   die mir zu -- sagt sein wer -- tes Wort,
   das ist mein Trost __ und treu -- er Hort,
-  dess' will ich all -- zeit, all -- zeit har -- ren,
-  dess' will ich all -- zeit har -- ren.
+  dess’ will ich all -- zeit, all -- zeit har -- ren,
+  dess’ will ich all -- zeit har -- ren.
 }
 
 altThreeLyrics = \lyricmode {
@@ -1395,16 +1395,16 @@ altThreeLyrics = \lyricmode {
   und sei -- ner Gü -- te trau -- en,
   die mir zu -- sagt sein wer -- tes Wort, __
   das ist mein Trost und treu -- er Hort,
-  dess' will __ ich all -- zeit har -- ren,
+  dess’ will __ ich all -- zeit har -- ren,
   das __ ist __ mein Trost,
-  dess' will ich all -- zeit har -- ren,
-  dess' will ich all -- zeit har -- ren.
+  dess’ will ich all -- zeit har -- ren,
+  dess’ will ich all -- zeit har -- ren.
 }
 
 tenThreeLyrics = \lyricmode {
   Bei dir gilt nichts denn Gnad’ und __ Gunst,
   die Sün -- de zu ver -- ge -- ben.
-  es ist doch un -- ser Tun __ um -- sonst,
+  es ist doch un -- ser Tun um -- sonst,
   auch in dem be -- sten Le -- ben,
   vor dir Nie -- mand sich rüh -- men __ kann,
   dess muss dich fürch -- ten Je -- der -- mann,
@@ -1421,10 +1421,10 @@ tenThreeLyrics = \lyricmode {
   und sei -- ner Gü -- te trau -- en,
   die mir zu -- sagt sein wer -- tes Wort, __
   das ist mein Trost und treu -- er Hort,
-  dess' will ich all -- zeit all -- zeit har -- ren, __
+  dess’ will ich all -- zeit all -- zeit har -- ren, __
   das __ ist mein Trost,
-  dess' will ich all -- zeit all -- zeit har -- ren,
-  dess' will ich all -- zeit har -- ren.
+  dess’ will ich all -- zeit all -- zeit har -- ren,
+  dess’ will ich all -- zeit har -- ren.
 }
 
 basThreeLyrics = \lyricmode {
@@ -1434,9 +1434,9 @@ basThreeLyrics = \lyricmode {
   und sei -- ner Gü -- te trau -- en,
   sein __ wer -- tes Wort,
   das, __ das ist mein Hort, __
-  dess' will ich all -- zeit, all -- zeit har -- ren,
+  dess’ will ich all -- zeit, all -- zeit har -- ren,
   das ist mein Trost, __
-  dess' __ will ich all -- zeit har -- ren.
+  dess’ __ will ich all -- zeit har -- ren.
 }
 
 
@@ -1734,18 +1734,18 @@ basFourVoice = <<
 >>
 
 sopFourLyrics = \lyricmode {
-  Und ob es währt __ bis in die Nacht,
+  Und ob es währt bis __ in die Nacht, __
   und wie -- der an __ den Mor -- gen __
   doch soll mein Herz an__ Got -- tes Macht
   ver -- zwei -- feln nicht, noch sor -- gen, __
   so tu Is -- ra -- el rech -- ter Art, __
   der aus dem Geist er -- zeu -- get ward
-  und sei -- nes Gott's er -- har -- re! __
+  und sei -- nes Gott’s er -- har -- re! __
 }
 
 altFourLyrics = \lyricmode {
   Und ob es __ währt bis in die Nacht, __ bis in die __ Nacht,
-  und wie -- der an den Mor -- gen,
+  und wie -- der an __ den Mor -- gen,
   doch soll mein Herz an Got -- tes Macht,
   doch soll mein Herz, doch soll mein Herz __
   an Got -- tes Macht,
@@ -1753,10 +1753,10 @@ altFourLyrics = \lyricmode {
   ver -- zwei -- feln nicht, ver -- zwei -- feln nicht, noch sor -- gen,
   So tu __ Is -- ra -- el rech -- ter Art,
   Is -- ra -- el rech -- ter __ Art, Is -- ra -- el rech -- ter __ Art,
-  der aus dem Geist, der aus dem Geist __ er -- zeu -- get ward,
-  der aus dem Geist, dem Geist er -- zeu -- get ward
-  und sei -- nes Gott's, sei -- nes Gott's er -- har -- re,
-  und sei -- nes Gott's, er -- har -- re!
+  der aus dem Geist, __ der aus dem Geist __ er -- zeu -- get ward,
+  der aus __ dem Geist, dem Geist er -- zeu -- get ward
+  und sei -- nes Gott’s, __ sei -- nes Gott’s er -- har -- re,
+  und sei -- nes Gott’s, er -- har -- re!
 }
 
 tenFourLyrics = \lyricmode {
@@ -1769,10 +1769,10 @@ tenFourLyrics = \lyricmode {
   ver -- zwei -- feln nicht, noch sor -- gen.
   So tu __ Is -- ra -- el rech -- ter Art,
   Is -- ra -- el rech -- ter __ Art, rech -- ter __ Art,
-  der aus dem Geist, der aus dem Geist __ er -- zeu -- get ward,
+  der aus dem Geist, __ der aus dem Geist __ er -- zeu -- get ward,
   der aus dem Geist er -- zeu -- get ward
-  und sei -- nes Gott's, sei -- nes Gott's er -- har -- re,
-  und sei -- nes Gott's, und sei -- nes Gott's er -- har -- re!
+  und sei -- nes Gott’s, sei -- nes Gott’s er -- har -- re,
+  und sei -- nes Gott’s, und sei -- nes Gott’s er -- har -- re!
 }
 
 basFourLyrics = \lyricmode {
@@ -1789,8 +1789,8 @@ basFourLyrics = \lyricmode {
   der aus dem Geist, dem Geist,
   der aus dem Geist er -- zeu -- get ward,
   der aus dem Geist er -- zeu -- get ward,
-  und sei -- nes Gott's, sei -- nes Gott's er -- har -- re,
-  und sei -- nes Gott's, und sei -- nes Gott's er -- har -- re!
+  und sei -- nes Gott’s, __ sei -- nes Gott’s er -- har -- re,
+  und sei -- nes Gott’s, und sei -- nes Gott’s er -- har -- re!
 }
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -1921,8 +1921,18 @@ basFiveVoice = <<
   \basFiveTune
 >>
 
-commonFiveLyrics = \lyricmode {
+sopFiveLyrics = \lyricmode {
   Ob bei uns ist der Sün -- de viel,
+  bei Gott ist viel mehr Gna -- de!
+  Sein Hand zu hel -- fen hat kein Ziel,
+  wie groß auch sei der Scha -- de.
+  Er ist al -- lein der gu -- te Hirt,
+  der Is -- ra -- el er -- lö -- sen wird
+  aus sei -- nen Sün -- den al -- len. __
+}
+
+commonFiveLyrics = \lyricmode {
+  Ob __ bei uns ist der Sün -- de viel,
   bei Gott ist viel mehr Gna -- de!
   Sein Hand zu hel -- fen hat kein Ziel,
   wie groß auch sei der Scha -- de.
@@ -2138,7 +2148,7 @@ commonFiveLyrics = \lyricmode {
       <<
         \new Voice = "sopFiveVoice" { \globalFive \sopFiveVoice }
       >>
-      \new Lyrics \lyricsto "sopFiveVoice" { \commonFiveLyrics }
+      \new Lyrics \lyricsto "sopFiveVoice" { \sopFiveLyrics }
 
       \new Staff
       <<
