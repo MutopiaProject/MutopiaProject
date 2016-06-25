@@ -89,7 +89,7 @@ tuttiBII = \relative c'' {
 
 tuttiAIII = \relative c'' {
 	b8 b cis |
-	a4. b8 |
+	ais4. b8 |
 	cis e, e e' |
 	e d16 cis d4 |
 	fis8 b, b g' |
