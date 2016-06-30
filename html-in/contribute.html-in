@@ -1,0 +1,182 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+
+<head>
+<title>Mutopia: How to contribute to Mutopia</title>
+<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+<link type="text/css" rel="stylesheet" href="mutopia.css" />
+</head>
+<body>
+
+[[ HEAD("contribute") ]]
+
+<h2>How to contribute to Mutopia</h2>
+
+<p>The Mutopia archive consists entirely of contributions from people around the world. If you would like to contribute, there are several ways in which you are able to help.</p>
+
+<ul>
+<li><a href="#typeset">Typeset music</a> that we don't already have</li>
+<li><a href="#proofread">Proofread/check music</a> for errors</li>
+<li><a href="#update">Update LilyPond syntax</a> to the latest LilyPond for better quality output and easier updating</li>
+<li><a href="#contribute">Contribute music</a> via GitHub or e-mail</li>
+</ul>
+
+<h3><a name="typeset">Typeset Music</a></h3>
+
+<p>New contributions to Mutopia are always welcome. Simply typeset the music using the free <a href="http://lilypond.org">LilyPond</a> software, <a href="#technical">add the necessary headers</a>, and <a href="#contribute">send us an e-mail or pull request</a>. It is a good idea to check that the music is not already present in Mutopia, and that no one else is working on it (using the <a href="projects.html">projects in progress page</a>). Note that it is vital to check that the source you have used is out of copyright.</p>
+
+<p>NB. We reserve the right to refuse files submitted to Mutopia if we feel that they are in any way unsuitable.</p>
+
+<h4>Check Copyright Status of Source</h4>
+
+<p>If you are contributing music you have composed yourself, then this doesn't apply to you. If you are contributing classical music, however, even if it is your own arrangement, then you need to check that the source of the music you're going to enter is out of copyright. For our purposes it has to meet the following criteria. This ensures that the music is in the public domain in as much of the world as possible.</p>
+
+<ol>
+<li>The composer, lyricist, arranger and editor must <b>all</b> have been dead for at least seventy complete years.</li>
+<li>The work must have been published prior to 1923.</li>
+</ol>
+
+<p>For example, our version of Handel's opera <a href="cgibin/piece-info.cgi?id=119">Giulio Cesare</a> (HWV 17) was edited by Friedrich Chrysander, and the source edition was published in 1875. Handel died in 1759, and Chrysander died in 1901, so this edition is in the public domain. More information about these rules is available on the <a href="http://en.wikipedia.org/wiki/Public_Domain">Wikipedia Public Domain page</a>.</p>
+
+<p>Incidentally, it is worth remembering that some older editions are heavily edited and can be rather error prone. For all new contributions we insist that you tell us the source you used when transcribing the music. This is to ensure as far as possible that all contributions are from public domain sources. Note that contributions listing a facsimile/reproduction source are discouraged as they may have additional legal complications. If you spot any possible copyright violations, please let us know.</p>
+
+<h4>Licensing</h4>
+
+<p>It is up to the contributor to decide what terms the music is released under. The three possibilities are described on the <a href="legal.html">license details page</a>. By submitting music to Mutopia, you are declaring that you have the legal right to release the work under the terms chosen.</p>
+
+<h4>Why LilyPond?</h4>
+
+<p>LilyPond (<a href="http://lilypond.org">lilypond.org</a>) is free in the sense that you don't have to pay for it, and also that the source code is available for you to look at, recompile and even improve. It is available for both Unix-like operating systems (eg. Linux, Mac OS X) as well as Windows. If you have already entered music in another free typesetting program then it may be possible to convert it into LilyPond format. Check LilyPond's documentation for more information.</p>
+
+<h3><a name="proofread">Proofread/Check Music</a></h3>
+
+<p>If you find any errors in the music on Mutopia, please send us an e-mail or pull request <a href="#contribute">as described below</a>. Simply describe the mistake in as much detail as necessary. We will check the error and correct the version on Mutopia. No technical knowledge of LilyPond is required, although if you want to supply an updated .ly file you are welcome to do so.</p>
+
+<p>The same goes for mistakes or inconsistencies in the metadata (eg. piece title, composer, opus, etc.) on Mutopia. If you spot any problems, please do let us know. They are easily corrected.</p>
+
+<h3><a name="update">Update LilyPond Syntax</a></h3>
+
+<p>One of the goals of Mutopia is not only to provide free sheet music of high quality, but to enable people to make their own arrangements, transpositions or editions of that sheet music with the minimum of difficulty. This is made challenging by the fact that LilyPond is not entirely backwards compatible with .ly files produced for earlier versions. Although those earlier versions remain available for free, they don't always run easily on modern operating systems.</p>
+
+<p>Consequently, it is helpful if experienced LilyPond users could help us update some of the files in Mutopia which use very old versions of LilyPond. This also allows pieces to take advantage of the improvements in LilyPond's rendering over the last few years. If you are willing and able to do so, please get in touch. Searching for music by LilyPond version is possible from the <a href="advsearch.html">advanced search page</a>.</p>
+
+[[ BREAK() ]]
+
+<h2><a name="technical">New Contributions - Technical Notes</a></h2>
+
+<p>Please check that the file compiles cleanly with LilyPond at both Letter and A4 paper sizes. We use the following commands for compiling:</p>
+
+<ul>
+<li><code>lilypond -dno-point-and-click -dpaper-size=\"a4\" filename.ly</code></li>
+<li><code>lilypond -dno-point-and-click -dpaper-size=\"letter\" filename.ly</code></li>
+</ul>
+
+<p>Please consider the users of the music - don't pick a very small font size unless it is necessary, and try to avoid "widowed" lines of music on the last page, and nasty page turns, if possible! If there are any serious problems with the file, we will probably ask you to fix them and resubmit.</p>
+
+<p>The LilyPond version should be defined in the .ly file, using the <code>\version</code> statement.</p>
+
+<p>Ensure that the music will generate one or more MIDI files when run through LilyPond. This just means adding a <code>\midi</code> section towards the end of the .ly file; see LilyPond's documentation for more information.</p>
+
+<p>Ensure that your .ly file does not have any papersize settings which will interfere with the commands we'll use to compile the file (see above). The only exception is if your music should be produced in landscape format, eg. for organ music.</p>
+
+<p>Finally, define the following headers in the \header section. These will be used for the title, composer, etc. when the music is displayed on Mutopia. Please make sure they're filled in carefully in the described format, in English.  For-pay website links are not permitted.</p>
+
+<table class="simple_table">
+<tr>
+ <th>Field</th>
+ <th>Description</th>
+</tr>
+<tr>
+ <td><i>mutopiatitle</i></td>
+ <td>The title of the piece.<br />
+ If not set, the title will be taken from the <i>title</i> field.</td>
+</tr>
+<tr>
+ <td><i>mutopiacomposer</i></td>
+ <td>The piece's composer, in the form surname followed by initials (no spaces or punctuation). The composers currently featured on Mutopia are as follows:<br />
+[[ COMPOSER_LIST() ]]
+</td>
+</tr>
+<tr>
+ <td><i>mutopiapoet</i> (Optional)</td>
+ <td>The poet/lyricist of the piece.<br />
+ If not set, the lyricist will be taken from the <i>poet</i> field.</td>
+</tr>
+<tr>
+ <td><i>mutopiaopus</i> (Optional)</td>
+ <td>The opus of the piece, eg. "Op. 4", "Op. 4, No. 1", "BWV 100", "KV 100".<br />
+ If not set, the opus will be taken from the <i>opus</i> field.</td>
+</tr>
+<tr>
+ <td><i>mutopiainstrument</i></td>
+ <td>A list of the instruments needed for the piece.<br />
+ If not set, the instruments will be taken from the <i>instrument</i> field.</td>
+</tr>
+<tr>
+ <td><i>date</i> (Optional)</td>
+ <td>The date the piece was composed.</td>
+</tr>
+<tr>
+ <td><i>source</i></td>
+ <td>The public domain source edition, with date if possible, eg. "Schirmer, 1880".</td>
+</tr>
+<tr>
+ <td><i>style</i></td>
+ <td>The style of the piece, taken from the following list:<br />
+[[ STYLE_LIST() ]]
+</td>
+</tr>
+<tr>
+ <td><i>license</i></td>
+ <td>
+  The license you've decided to place the contribution under, one of:
+  <ul>
+   <li>"Creative Commons Attribution-ShareAlike 4.0"</li>
+   <li>"Creative Commons Attribution 4.0"</li>
+   <li>"Public Domain"</li>
+  </ul>
+ See the <a href="legal.html">license details page</a> for more information. We previously used the "copyright" field for this information.</td>
+</tr>
+<tr>
+ <td><i>maintainer</i></td>
+ <td>Your name.<br />
+ "Anonymous" is acceptible if you don't want your name to be publicly displayed.</td>
+</tr>
+<tr>
+ <td><i>maintainerEmail</i> (Optional)</td>
+ <td>Your e-mail address, so people can contact you with comments. You may wish to obfuscate it in some way to reduce spam, as .ly files are archived by search engines.<br />
+ If you don't want your e-mail address to be stored on the website, just let us know.</td>
+</tr>
+<tr>
+ <td><i>maintainerWeb</i> (Optional)</td>
+ <td>Your home page address, if you have one and want people to know about it.<br />
+ Please include the full address, including the http:// at the beginning.</td>
+</tr>
+<tr>
+ <td><i>moreInfo</i> (Optional)</td>
+ <td>Extra information to be included on the piece's page in Mutopia. Markup in XHTML 1.0 format is permitted.</td>
+</tr>
+</table>
+
+<h3><a name="contribute">Contribute music</a></h3>
+
+<p>There are several ways of submitting music to Mutopia for inclusion on the website.</p>
+
+<h4>GitHub pull request</h4>
+
+<p>The LilyPond source for all the music in Mutopia, as well as the tools used to build the website itself, are <a href="https://github.com/MutopiaProject/MutopiaProject/">stored in GitHub</a> - the music is in the ftp directory. To contribute to the project directly through GitHub, please <a href="https://help.github.com/articles/fork-a-repo">fork our repository</a> and <a href="https://help.github.com/articles/using-pull-requests">send us a pull request</a>. If you are likely to be contributing several pull requests, we recommend using a separate branch for each one.</p>
+
+<h4>E-mail directly to the Mutopia team</h4>
+
+<p>If you are not familiar with Git/GitHub, contributions, updates and corrections can be sent by e-mail to &lt;<b>contributions (at) MutopiaProject.org</b>&gt;. You should receive a response in less than a week, usually quicker. Corrections can be slower to process as they require proofreading against known public domain sources. If your contribution will take longer than a week to publish, the Mutopia team will add it as a GitHub issue to track its progress.</p>
+
+<h4>E-mail to the mailing list for public review</h4>
+
+<p>If you wish to contribute in a more public way, contributions can be sent to the <a href="http://lists.bcn.mythic-beasts.com/mailman/listinfo/mutopia-discuss">Mutopia-Discuss mailing list</a> for public review and discussion. Note that you will need to be subscribed to the list in order to do this.</p>
+
+<p>NB. We reserve the right to refuse files submitted to Mutopia if we feel that they are in any way unsuitable.</p>
+
+[[ TAIL("contribute") ]]
+</body>
+</html>
