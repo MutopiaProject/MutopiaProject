@@ -6,6 +6,7 @@
   source = "Statens musikbibliotek - The Music Library of Sweden"
   composer = "Dionisio Aguado"
   piece = "Section 2, Exercise No. 10"
+  %Devin Ulibarri found this piece at http://carkiv.musikverk.se/www/boije/Boije_0018.pdf on page 60.
   mutopiacomposer = "AguadoD"
   mutopiainstrument = "Guitar"
   style = "Classical"
@@ -55,7 +56,7 @@ upperVoice = \relative c' {
     gis b e b e, b' e b e,,4  s4 |
     gis'16 b e b e, b' e b e,, b'' e b \once\set minimumFret=4 b d e d |
     a-3 c e c e, c' e c a, a' c a c, a' c a |
-    d,-0\4 a' b a f a b a e gis b gis e, gis' d'-4 gis, |
+    d,-0\4 a' b a f a b a e gis b gis e, gis' d'-4\5 %{ The original has a "4" indicated for the string, but that is illogical because there is also a fingering of "4" indicated. Either this is an open D string, or the 5th fret of the A string performed with the 4th finger%} gis, |
     a, a' c a e a c a a,4 r4 |
   }
 }
