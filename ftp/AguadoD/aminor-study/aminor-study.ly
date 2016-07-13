@@ -39,7 +39,7 @@ upperVoice = \relative c' {
   \set restrainOpenStrings = ##t
   \repeat volta 2 {
     a,16 c' e c a c e c b-4\3 d e d gis, b e b |
-    a c e c a, c' e c a c e c c-3\3 e-4\2 e e-0\2 |
+    a c e c a, c' e c a c e c c-3\3 e-4\2 e-0 e\2 |
     b-3\3 d e d e,-1 d' e d gis, b e b e, d' e d |
     a-3 c e c e,-2 c' e c c,-4 c' e c e, c' e c |
     a, c' e c a c e c b\3 d e d gis, b e b |
@@ -53,9 +53,9 @@ upperVoice = \relative c' {
     c-3\3 e-4\2 \override StringNumber.transparent = ##t e-0 e\2 b-3\3 d e d b-3\3 d e d a c e c |
     \revert StringNumber.transparent
     gis b e b e, b' e b e,,4  s4 |
-    gis'16 c e c e, b' e b e,, b'' e b \once\set minimumFret=4 b d e d |
+    gis'16 b e b e, b' e b e,, b'' e b \once\set minimumFret=4 b d e d |
     a-3 c e c e, c' e c a, a' c a c, a' c a |
-    d,-4\4 a' b a f a b a e gis b gis e, gis' d'-4 gis, |
+    d,-0\4 a' b a f a b a e gis b gis e, gis' d'-4 gis, |
     a, a' c a e a c a a,4 r4 |
   }
 }
