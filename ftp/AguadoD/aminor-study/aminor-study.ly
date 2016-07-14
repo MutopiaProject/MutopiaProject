@@ -3,17 +3,17 @@
 \header {
   title = "Study in A Minor"
   subtitle = "An Exercise from Nuevo Metodo para Guittare"
-  source = "Statens musikbibliotek - The Music Library of Sweden"
+  source = "Schonenberger, Paris. Plate S. 1320" %"Statens musikbibliotek - The Music Library of Sweden"
+  date = "ca. 1846"
   composer = "Dionisio Aguado"
   piece = "Section 2, Exercise No. 10"
-  %Devin Ulibarri found this piece at http://carkiv.musikverk.se/www/boije/Boije_0018.pdf on page 60.
   mutopiacomposer = "AguadoD"
   mutopiainstrument = "Guitar"
   style = "Classical"
   license = "Creative Commons Attribution-ShareAlike 3.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail dot com"
-  moreInfo = "This is a very good first position warmup exercise for a beginner. Unlike many exercises it is lyrical and fun to play. The fingerings in the piece are from Aguado."
+  moreInfo = "This is a very good first position warmup exercise for a beginner. Unlike many exercises it is lyrical and fun to play. The fingerings in the piece are from Aguado (with one correction to measure 15; see lilypond source notes). Devin Ulibarri found this piece at http://carkiv.musikverk.se/www/boije/Boije_0018.pdf on page 60."
 
  footer = "Mutopia-2015/01/25-1833"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by-sa/3.0/" "Creative Commons Attribution ShareAlike 3.0 (Unported) License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
