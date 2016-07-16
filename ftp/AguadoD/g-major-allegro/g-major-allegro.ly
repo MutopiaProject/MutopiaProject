@@ -12,6 +12,7 @@
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail.com"
+  moreInfo = "Score found at http://imslp.org/wiki/Allegro_in_G_major_(Aguado,_Dionisio) on 2016-07-16 and verified by Devin Ulibarri (devin at devinulibarri.com)"
 
  footer = "Mutopia-2015/12/27-2090"
  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2015 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
@@ -36,7 +37,7 @@ global = {
 upperVoice = \relative c' {
   \voiceOne
   \partial 8 { d8 | }
-  b'8 a16 g fis8 e |
+  b'8-4 a16-4 g fis8 e |
   d4 <g, b>8 <b d> |
   <a c>8 q16 <gis b> <a c>8 <c e> |
   <c e>4 <b d>8 d |
@@ -45,7 +46,7 @@ upperVoice = \relative c' {
   \mbreak
   d4 cis |
   d8 e16 fis g8 <g, cis> |
-  <g d'>4 r8 d' |
+  <fis d'>4 r8 d' |
   b'8 a16 g fis8 e |
   d4 <g, b>8 <b d> |
 
@@ -62,7 +63,7 @@ upperVoice = \relative c' {
   <fis a>4 r |
   <fis a>8 \slashedGrace{b8} <fis a>16 <eis gis> <fis a>8 <g b> |
   <fis a>4 r |
-  <a c>8 \slashedGrace{b8} <a c>16 <gis b> <a c>8 \slashedGrace{<b d>8} <c e> |
+  <a c>8 \slashedGrace{d8} <a c>16 <gis b> <a c>8 \slashedGrace{<b d>8} <c e> |
   <c e>4 <b d>8 r |
 
   \mbreak
@@ -74,7 +75,7 @@ upperVoice = \relative c' {
   }
 
   \mbreak
-  <a c>8 q16 <gis b> <a c>8[ \slashedGrace{<b d>8} <c e>8] |
+  <a c>8 \slashedGrace{d8} <a c>16 <gis b> <a c>8[ \slashedGrace{<b d>8} <c e>8] |
   <c e>4 <b d>8 r |
   fis8 \slashedGrace{g8} fis16 e fis8[ \slashedGrace{<a, fis'>8} <c a'>8] |
   <b g'>4 r^\markup{\italic "Fine."} |
@@ -85,20 +86,20 @@ upperVoice = \relative c' {
   g8\stopTextSpan\noBeam c16 b \tuplet 3/2 { d8 c a } |
 
   \mbreak
-  g8. a16 g8 f |
+  g8. a16 g8 f %{courtesy accidental in original of f natural (Devin U does not know how to add courtesy accidentals) %}  |
   f4 e8 r |
   e8 e16 f e8 <b d> |
-  <a c>8 <gis b> a gis |
+  <a c>8 <gis b> a g %{ natural not indicated in original, but G natural is within the style's syntax while G sharp is not -- Devin U %} |
   f8 a b4 |
   c4. r8 |
-  g'8. a16 g4 |
+  g'8. a16 g4^( |
 
   \mbreak
-  g8\noBeam c16 b \tuplet 3/2 { d8 c a } |
+  g8\noBeam) c16 b \tuplet 3/2 { d8 c a } |
   g8. a16 g8 f |
   f4 e8 r |
   e8 e16 f e8 <b d> |
-  <a c>8 <gis b> a gis |
+  <a c>8 <gis b> a g %{ natural not indicated in original, but G natural is within the style's syntax while G sharp is not -- Devin U %} |
   f8 a b4 |
   c4. r8 |
 
@@ -108,7 +109,7 @@ upperVoice = \relative c' {
 lowerVoice = \relative c' {
   \voiceTwo
   \partial 8 { r8 | }
-  <g b>4 r8 c,8 \glissando |
+  <g b>4 r8 c,8-2 \glissando |
   b8 g4 r8 |
   d'2 |
   r8 g g r |
@@ -157,15 +158,15 @@ lowerVoice = \relative c' {
        c4. r8 | }
      \\ { \voiceThree\stemUp s4 f8 g | e8 g e4 } >> |
   
-  <c' e>4. <b fis'^(>8 |
-  <c e>8) r8 r4 |
+  <c' e>4. <b f'>8 |
+  <c e>8 r8 r4 |
   <c e>4. b8 |
   c4. r8 |
   r4 r8 gis, |
   a8 b c cis |
   <<
     { \voiceTwo d4 g, | c4. r8_\markup{\italic "D.C."} } \\
-    { \voiceThree s4 f8 g | e8 g f4 } >> |
+    { \voiceThree s4 f8 g | e8 g e4 } >> |
 }
 
 \score {
