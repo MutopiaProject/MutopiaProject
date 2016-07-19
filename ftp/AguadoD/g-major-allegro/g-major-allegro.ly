@@ -86,7 +86,7 @@ upperVoice = \relative c' {
   g8\stopTextSpan\noBeam c16 b \tuplet 3/2 { d8 c a } |
 
   \mbreak
-  g8. a16 g8 f %{courtesy accidental in original of f natural (Devin U does not know how to add courtesy accidentals) %}  |
+  g8. a16 g8 f! |
   f4 e8 r |
   e8 e16 f e8 <b d> |
   <a c>8 <gis b> a g %{ natural not indicated in original, but G natural is within the style's syntax while G sharp is not -- Devin U %} |
