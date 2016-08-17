@@ -22,7 +22,7 @@
   title        = "GNOSSIENNE" 
   subtitle     =  \markup { \fontsize #3 "№ 2" }
   subsubtitle = "(1890)"
-  composer     = "Erik Satie (1866-1925)"
+  composer     = "Érik Satie (1866-1925)"
   style        = "Avant-garde"
   license      = "Creative Commons Attribution-ShareAlike 4.0"
   enteredby    = "Frédéric Duperray"
