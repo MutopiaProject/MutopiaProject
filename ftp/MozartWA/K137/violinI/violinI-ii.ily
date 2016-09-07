@@ -15,8 +15,8 @@ violinISecondMov =  \relative d' {
     e8( f) f4-. bf16 a g f ef d c bf | % 4
     b4( c8) ef-. bf4( a8) c-. | % 5
     ef,4( d8) r bf''16 a g f ef d c bf | % 6
-    b4( c8) g'-. bf,4( af8) ef'-. | % 7
-    \grace ef16 d8 c16 bf bf4. bf8-\tweak Y-offset #1.3 -. a'( g) | % 8
+    b4( c8) g'-. bf,4( a8) ef'-. | % 7
+    \grace ef16 d8 c16 bf bf4. bf8-\tweak Y-offset #1.3 -. a'(g) | % 8 % the last a on this line is questionable might be an af or bf
     f4 e8.( f32 g) f16( g a) g-.
     f-\tweak Y-offset #3 -. e-\tweak Y-offset #2.6 -.
     d-\tweak Y-offset #2.3 -. c-\tweak Y-offset #1.6 -. | % 9
