@@ -5,7 +5,7 @@ all: $(addsuffix .rdf, $(basename $(wildcard *.ly))) \
 
 %.rdf: %.ly
 	mutopia-clean.sh
-	java Mutopia -f $<
+	Mutopia -f $<
 	mutopia-compile.sh $<
 	mutopia-combine.sh $(basename $<)
 
