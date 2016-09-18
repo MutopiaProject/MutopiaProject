@@ -175,7 +175,7 @@ ONE = \tag #'partOnly ^\markup { \number 1}
 #(ly:set-option 'relative-includes #t)
 \include "repeatText.ily"
 \include "systemStartLine.ily"
-\include "upline.ily"
+\include "upLine.ily"
 \include "addScript.ily"
 \include "counting.ily"
 \include "SlurFixes.ily"
