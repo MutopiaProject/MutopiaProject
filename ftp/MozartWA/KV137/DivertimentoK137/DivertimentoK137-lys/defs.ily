@@ -12,7 +12,7 @@
   mutopiaopus = "K. 137"
   mutopiainstrument = "2 Violins, Viola, 'Cello"
   date = "1772"
-  source = "Breitkopf ünd Härtel, Leipzig"
+  source = "Breitkopf und Härtel, Leipzig"
   style = "Classical"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Frederic Henry"
