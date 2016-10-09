@@ -1,0 +1,13 @@
+.gradle
+.classpath
+.settings
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Ignore emacs backup files
+*~
+
+# Ignore eclipse project file
+.project
