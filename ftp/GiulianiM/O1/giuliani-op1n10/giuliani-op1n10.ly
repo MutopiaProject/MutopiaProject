@@ -198,8 +198,7 @@ lowerVoice = \fixed c {
     >>
     \new Dynamics { \mydynamics }
 %{
-%}
-    % tabs are not completely developed
+    % tabs have been developed, just uncomment this section
     \new TabStaff = "Guitar tabs" \with {
       restrainOpenStrings = ##t
     } <<
@@ -208,6 +207,7 @@ lowerVoice = \fixed c {
       \context TabVoice = "upperVoice" \upperVoice
       \context TabVoice = "lowerVoice" \lowerVoice
     >>
+%}
   >>
   \layout {}
   \midi {
