@@ -9,7 +9,7 @@
   date = "1812"
   mutopiacomposer = "GiulianiM"
   mutopiainstrument = "Guitar"
-  mutopiatitle = "Etudes, No. 12"
+  mutopiatitle = "Etudes, No. 10"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail.com"
@@ -26,7 +26,7 @@
 %  system-count = #8
 }
 
-mbreak = { \break }
+mbreak = {} % { \break }
 global = {
   \time 2/4
   \key d \major
