@@ -21,7 +21,7 @@
 %  system-count = #8
 }
 
-mbreak = { \break }
+mbreak = {} % { \break }
 global = {
   \time 6/8
   \key d \major
@@ -84,7 +84,7 @@ upperVoice = \fixed c {
   d4. <a cis' a'>8 q q |
   <a d' fis'>4. r8 <e' g' cis'> q |
   <d' fis' d''>4. r4 r8
-  
+
   \bar "|."
 }
 
