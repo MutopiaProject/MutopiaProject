@@ -1,4 +1,4 @@
-\version "2.4.1"
+\version "2.18.0"
 
 #(set-global-staff-size 22)
 
@@ -11,15 +11,14 @@ global =
 
 \paper
 {
-	%topmargin = 0.7\cm
-	%bottommargin = 1.2\cm
-	%leftmargin = 1.5\cm
-	%linewidth = 18.0\cm
+	top-margin = 1\cm
+	line-width = 18.0\cm
+	markup-system-spacing.basic-distance = #16
 }
 
 \header
 {
-	title = "Near the Cross"
+	title = \markup \raise #2.5 "Near the Cross"
 	poet = "Frances Jane (Fanny) Crosby, 1869"
 	composer = "William Howard Doane"
 	meter = "76.76. and Refrain"
@@ -30,22 +29,34 @@ global =
 	date = "1869"
 	source = "CyberHymnal"
 	style = "Hymn"
-	copyright = "Public Domain"
+	license = "Public Domain"
 	maintainer = "Jefferson dos Santos Felix"
 	maintainerEmail = "jsfelix@gmail.com"
 	lastupdated = "2004/Nov/11"
 
-	footer = "Mutopia-2004/11/11-495"
-	tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ footer = "Mutopia-2016/10/20-495"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
-
-setLyricsExtent =     \set Lyrics.minimumVerticalExtent        = #'(-1.0 . 1.2)
-setLyricsExtentRef =  \override Lyrics #'minimumVerticalExtent = #'(-1.3 . 1.4)
-setStaffExtentA =     \set Staff.minimumVerticalExtent         = #'(-6 . 1)
-setStaffExtentB =     \set Staff.minimumVerticalExtent         = #'(-1 . 5)
 
 
 refText = \markup { \bold \italic { "" \raise #1.2 "Refrain" } }
+
+gmult = #6
+
+\layout {
+  \context {
+    \Lyrics {
+      \override VerticalAxisGroup.nonstaff-relatedstaff-spacing =
+      #`((basic-distance . ,(* 3 gmult))
+         (padding . ,(* 0.25 gmult)))
+      \override VerticalAxisGroup.nonstaff-nonstaff-spacing =
+      #`((minimum-distance . ,(* 0.5 gmult))
+         (padding . ,(* 0.17 gmult)))
+      \override VerticalAxisGroup.nonstaff-unrelatedstaff-spacing.padding = #(* 0.2 gmult)
+    }
+  }
+}
 
 soprano = \relative c''
 {
@@ -85,14 +96,12 @@ bass = \relative c
 
 verseOne = \lyrics
 {
-	\setLyricsExtent
 	\set stanza = "1. "
 	Je -- sus, keep me near the cross,
 	There a pre -- cious fon -- tain
 	Free to all, a heal -- ing stream
 	Flows from Cal -- vary's moun -- tain.
 
-		\setLyricsExtentRef
 		% Refrain
 		In the cross, in the cross,
 		Be my glo -- ry e -- ver;
@@ -102,7 +111,6 @@ verseOne = \lyrics
 
 verseTwo = \lyrics
 {
-	\setLyricsExtent
 	\set stanza = "2. "
 	Near the cross, a trem -- bling soul,
 	Love and mer -- cy found me;
@@ -112,7 +120,6 @@ verseTwo = \lyrics
 
 verseThree = \lyrics
 {
-	\setLyricsExtent
 	\set stanza = "3. "
 	Near the cross! O Lamb of God,
 	Bring its scenes be -- fore me;
@@ -122,7 +129,6 @@ verseThree = \lyrics
 
 verseFour = \lyrics
 {
-	\setLyricsExtent
 	\set stanza = "4. "
 	Near the cross I'll watch and wait
 	Hop -- ing, trus -- ting e -- ver,
@@ -135,8 +141,7 @@ verseFour = \lyrics
 	<<
 		\context Voice = SA 
 		<<
-			\override Score.BarNumber #'break-visibility = #all-invisible
-			\setStaffExtentA
+			\override Score.BarNumber.break-visibility = #all-invisible
 			\stemUp
 			\global
 			\soprano
@@ -152,7 +157,6 @@ verseFour = \lyrics
 		>>
 		\context Voice = TB 
 		<<
-			\setStaffExtentB
 			\clef bass
 			\stemDown
 			\global
@@ -162,5 +166,10 @@ verseFour = \lyrics
 	>>
 	
 	\layout { indent = 0.0\cm }
-	\midi { \tempo 4=112 }
+	
+  \midi {
+    \tempo 4 = 112
+    }
+
+
 } 
