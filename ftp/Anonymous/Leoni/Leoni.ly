@@ -1,8 +1,8 @@
 \header{
     title = "Leoni"
     meter = "6 6 8 4 D"
-    %composer = "Transcribed by M. Lyon (1751--1797)\\\\ and adapted by T.Olivers (1725--1799)\\ from a synagogue melody for the Yigdal"
-    subtitle = "Transcribed by M. Lyon (1751--1797) and adapted by T.Olivers (1725--1799)"
+    
+    subtitle = \markup \smaller "Transcribed by M. Lyon (1751--1797) and adapted by T.Olivers (1725--1799)"
     subsubtitle = "from a synagogue melody for the Yigdal"
     
     mutopiatitle = \title
@@ -12,15 +12,24 @@
 
     style = "Hymn"
     source = "Australian Hymn Book number 53"
-    copyright = "Public Domain"
+    license = "Public Domain"
     maintainer = "Peter Chubb"
     maintainerEmail = "mutopia@chubb.wattle.id.au"
-    lastupdated =	 "2005/Jan/10"
+    lastupdated =	 "2016/10/19"  %-- Javier Ruiz-Alma
 
-    footer = "Mutopia-2005/01/18-525"
-    tagline = "\\raisebox{10mm}{\\parbox{188mm}{\\quad\\small\\noindent " + \footer + " \\hspace{\\stretch{1}} This music is part of the Mutopia project: \\hspace{\\stretch{1}} \\texttt{http://www.MutopiaProject.org/}\\\\ \\makebox[188mm][c]{It has been typeset and placed in the public domain by " + \maintainer + ".} \\makebox[188mm][c]{Unrestricted modification and redistribution is permitted and encouraged---copy this music and share it!}}}"
+ footer = "Mutopia-2016/10/19-525"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
 }
-\version "2.4.0"
+\version "2.18.2"
+
+\paper {
+    top-margin = 12\mm
+    line-width = 19\cm
+    indent = 0.0\mm
+    system-system-spacing #'padding = #8
+    markup-system-spacing #'basic-distance = #22
+}
 
 global =  {
     \key f \minor
@@ -238,15 +247,19 @@ guitar=\chordmode {
     >>
 
 \layout {
-    indent = 0.0\mm
+
     \context { 
       \ChordNames
- %     \override ChordName #'word-space = #1 
-      \override ChordName  #'style = #'american
+ %     \override ChordName.word-space = #1 
+      \override ChordName.style = #'american
 			chordChanges = ##t
     }
 }
-\midi {
+
+  \midi {
     \tempo 4 = 120
+    }
+
+
 }
-}
+
