@@ -15,12 +15,12 @@ Mark Van den Borre <mark@markvdb.be>
 
 \version "2.18.2"
 \header {
-  mutopiatitle = "Divertissements pour la guitare, n°3 Allegretto"
+  mutopiatitle = "Divertissements pour la guitare, n°3 Allegretto "
   mutopiacomposer = "SorF"
   mutopiaopus = "O 1.3"
   mutopiainstrument = "Guitar"
   date = "1820s"
-  source = "Danish Royal Library early 19th Century edition"
+  source = "Golden Music Press/GFA/Frederic Noad facsimile edition"
   style = "Classical"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Mark Van den Borre"
@@ -33,12 +33,11 @@ Mark Van den Borre <mark@markvdb.be>
   instrument	= "Guitarre"
   meter		= "Allegretto"
   subtitle = 	"3. Allegretto"
+  source =	"Golden Music Press/GFA/Frederic Noad facsimile edition"
   composer =	"Fernando Sor"
   enteredby	= "Mark Van den Borre"
-  moreInfo = "<p>The maintainer has created MP3 and OGG Vorbis audio files from the MIDI output (which is available above). These are computer generated but will probably sound better than playing the MIDI file on your own system, depending on your setup. Download them:</p><ul><li><a href=\"../ftp/SorF/O1/sor_op1_3/sor_op1_3.mp3\">sor_op1_3.mp3</a></li><li><a href=\"../ftp/SorF/O1/sor_op1_3/sor_op1_3.ogg\">sor_op1_3.ogg</a></li></ul>"
-
- footer = "Mutopia-2016/11/02-453"
- copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2016 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ footer = "Mutopia-2016/10/25-453"
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2016 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
 \paper {
