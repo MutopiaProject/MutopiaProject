@@ -27,7 +27,7 @@
 	"of a modern guitar ensemble and a standard instrument."
         \null\null
 	"        The \"standard\" guitar being considered has 19 frets and is in dropped D tuning. ie. strings are"
-	"tuned DADGBE. The original key is preserved throughout the transcription, as it is best accommodated"
+	"tuned DADGBE. The original key is preserved throughout the transcription, as it is easily accommodated"
 	"and serves the original intent most faithfully."
 	\null
 	"        Starting from this foundation, whatever resources were assembled that the structures demanded."

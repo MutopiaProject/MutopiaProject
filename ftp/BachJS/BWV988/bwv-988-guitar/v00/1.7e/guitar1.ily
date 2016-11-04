@@ -30,7 +30,8 @@
 	>>
 
         %11-15
-        < b e g >4\arpeggio \clef "G_8" \stemDown g4.\downprall fis16 g16
+        \clef "G_8"
+        < b e g >4\arpeggio \stemDown g4.\downprall fis16 g16
         g8
 %   	\once \override Slur #'control-points = #'((.5 . 1.4) (.6 . 1.2 ) (1.2 . .8) (1.9 . 1.2))
 	\SUpb \appoggiatura fis16 e8 cis4.\lineprall e8
