@@ -32,7 +32,7 @@
  \set GrandStaff.connectArpeggios = ##t
  \clef bass <d f bes>2.\p\arpeggio^\markup { \large "Adagio." }
  \clef treble d''8..( ees''32) f''4 \clef bass <d f bes>4 <ees f a>2. \clef treble a''8..( bes''32) c'''4 <c' ees'>4
- \cadenzaOn <bes d'>2. \override NoteHead #'font-size = #-2 d'16([ f' ees' d' ees' f' g' a' bes' c''])
+ <bes d'>2. \bar "" \cadenzaOn \override NoteHead #'font-size = #-2 d'16([ f' ees' d' ees' f' g' a' bes' c''])
  \cadenzaOff \bar "|" \override NoteHead #'font-size = #0 d''8..( ees''32) f''4 <aes' f''>4\sf \break
  << { f''4( ees''8)[ d'' c''\staccato( c''\staccato)] c''8^\trill[ \grace { b'16[ c''] } d''16 c''] c''8 } \\
  { g'4.\p bes'!8_\markup { \italic "cresc." }[ bes' bes'] bes'4( a'!8) } >> r8
@@ -118,7 +118,7 @@
  << { <bes' d''>8..([ <c'' ees''!>32] <d'' f''>4 <c'' ees''>) } \\ { f'2 f'4 } >> \break
  <f' bes' d''>8_\markup { \italic "cresc." } r8 r4 r4 R2.
  c'''8(~  \once \override TextScript #'script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
- ges'4\sf \cadenzaOn f'2. \override NoteHead #'font-size = #-2 g'!32([ f' e' f' g' a' bes' c'' d'' ees''! f'' g'' a'' bes''])
+ ges'4\sf f'2. \bar "" \cadenzaOn \override NoteHead #'font-size = #-2 g'!32([ f' e' f' g' a' bes' c'' d'' ees''! f'' g'' a'' bes''])
  \cadenzaOff \bar "|" \override NoteHead #'font-size = #0
  c'''8(~  \once \override TextScript #'script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
  <a' c'' ees''>4\sf \break
@@ -136,8 +136,8 @@
  \clef bass
  \key bes \major
  \time 3/4
- <bes,, f, bes,>2.\p\arpeggio r4 r <bes,, f, bes,>4 <c, f, c>2. r4 r <a, f>4
- \cadenzaOn <bes, f>2. s2 s8 \cadenzaOff \bar "|" r4 r <d b>4
+ <bes,, f, bes,>2.\p\arpeggio r4 r <bes,, f, bes,>4 <c, f, c>2. r4 r <a, f>4 <bes, f>2. s2 s8
+ r4 r <d b>4
  << { b4( c'8)[ d' ees' e'] e'4( f'8) d'8\rest } \\ { ees4. f8[ g\staccato( g\staccato)] f4. d8\rest } >> r4
  bes,,2. <bes, d f>2 <bes,, bes,>4 <f,, f,>2. <f, ees ges>4 r <bes c'>
  <a c'>8..( <b d'>32 <c' ees'>4) <c' ees'>4 << { ees'2 } \\ { f2 } \\ { c'4 a4 } >>
@@ -209,7 +209,7 @@
  r16 \times 2/3 { bes32([ bes, bes]) } << { <bes, d>8..([ <c ees>32] <d f>4 <c ees>) } \\ { bes,2 s4 } >>
  <bes, d>8 r8 r4 r32 f32\staccato[ e\staccato f\staccato g\staccato a\staccato bes\staccato c'\staccato]
  <bes d'>8..([ <c' ees'>32] <d' f'>4) bes,,4( a,,2.\p) r4 r <bes c' ees'>4\sf
- \cadenzaOn <a c' ees'>2. s4 s8 s16 \cadenzaOff \bar "|" r4 r <fis c' ees'>\sf(
+ <a c' ees'>2. s4 s8 s16 r4 r <fis c' ees'>\sf(
  <g bes d'>8) r r <e bes des'>\staccato\sf r4 r8 <f bes d'!>8\p\staccato r <f,, f,>\staccato r <f, f>\staccato
  <bes,, bes,>2. <bes,, bes,>2.
 
