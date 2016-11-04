@@ -96,7 +96,7 @@
  <f' bes' d''>8([ <g' bes' des'' e''>\f <g' bes' des'' e''>]) <a' c'' f''>8\p\<( <f' a' c''>4)
  <f' a' c''>8\!\>([ <g' bes' e''> <g' bes' c''>\!]) <f' a' f''>8\< <f' a' c''>4
  <f' a' c''>8\!\>([ <g' bes' e''> <g' bes' c''>\!]) \break
- <f' a' c''>8 <f' a' c''>4_\markup { \italic "decresc." } <c' f' a'>4 <a c' f'>8~ <a c' f'>8 r8 r4
+ <f' a' f''>8 <f' a' c''>4_\markup { \italic "decresc." } <c' f' a'>4 <a c' f'>8~ <a c' f'>8 r8 r4
  r16 g'32\staccato\<[ a'\staccato bes'\staccato c''\staccato d''\staccato ees''\staccato\!]
  << { f''4\p_\markup { \italic "    dolce" }(~ f''8..[ d''32 bes''8.. g''32]) f''4(~ f''8..[ d''32 ees''8.. c''32]) } \\
  { g'4\rest bes'4 bes' g'4\rest bes'4 bes'8( g') } >> \break
@@ -111,7 +111,7 @@
  \clef treble d'4(~ <aes ces' d' f'>4 <ces' d' f' aes'>)
  << { ces''2^\sf( bes'8 aes') } \\ { d'4\rest <d' f' aes'>4 <d' f'> } >> \break
  << { fis'4^\p g'4. bes'8 } \\ { a4\rest <bes ees'>2 } >>
- << { ees''2( c''8 a') } \\ { f'4\rest a'!4\sf\>~ a'8\! s8 } \\ { \stemDown s4 <ees' g'>2 } >>
+ << { ees''2( c''8 a') } \\ { f'4\rest a'!4\sf\>~ a'8\! s8 } \\ { \stemDown s4 <ees' ges'>2 } >>
  << { c''4\p( bes'4. d''8) } \\ { f'4\rest <d' f'>4_\markup { \italic "cresc." } <f' aes'> } >> \break
  << { f''8( ees''4.\sf <a' c''>8( a') } \\ { e'4\rest <g' bes'>8[ <ges' a'!>\sf <ees' ges'> <c' ees' ges'>] } >>
  <d' f' bes'>8 r8 r4 r32 f'32\staccato[ e'\staccato f'\staccato g'\staccato a'\staccato bes'\staccato c''\staccato]
