@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.18.2"
 
  \header {
   title = "Piano Sonate Opus 31 No 2 (2nd Movement)"
@@ -28,28 +28,28 @@
  \clef treble
  \key bes \major
  \time 3/4
- \override Score.MetronomeMark #'transparent = ##t
+ \override Score.MetronomeMark.transparent = ##t
  \tempo 4 = 40
- \override TextScript #'padding = #2.0
+ \override TextScript.padding = #2.0
  \set GrandStaff.connectArpeggios = ##t
  \clef bass <d f bes>2.\p\arpeggio^\markup { \large "Adagio." }
  \clef treble d''8..( ees''32) f''4 \clef bass <d f bes>4 <ees f a>2. \clef treble a''8..( bes''32) c'''4 <c' ees'>4
- <bes d'>2. \bar "" \cadenzaOn \override NoteHead #'font-size = #-2 d'16([ f' ees' d' ees' f' g' a' bes' c''])
- \cadenzaOff \bar "|" \override NoteHead #'font-size = #0 d''8..( ees''32) f''4 <aes' f''>4\sf \break
+ <bes d'>2. \bar "" \cadenzaOn \override NoteHead.font-size = #-2 d'16([ f' ees' d' ees' f' g' a' bes' c''])
+ \cadenzaOff \bar "|" \override NoteHead.font-size = #0 d''8..( ees''32) f''4 <aes' f''>4\sf \break
  << { f''4( ees''8)[ d'' c''\staccato( c''\staccato)] c''8^\trill[ \grace { b'16[ c''] } d''16 c''] c''8 } \\
  { g'4.\p bes'!8_\markup { \italic "cresc." }[ bes' bes'] bes'4( a'!8) } >> r8
  \clef bass r16 f16\p([ <ees! g> <c a>]) << { bes2. } \\ { <bes, d>8.( <c ees>32 <d f>4) <d f>4 } >>
  \clef treble d''8(~ d''16.^\turn ees''32) f''4 \clef bass <d f bes>4
  << { a2. } \\ { <c ees>8.( <d f>32 <ees ges>4) <ees ges>4 } >> \break
- \clef treble c'''8(~  \once \override TextScript #'script-priority = #-1
+ \clef treble c'''8(~  \once \override TextScript.script-priority = #-1
  c'''16.^\turn^\markup { \natural } d'''32 ees'''4) <ees' ges'>4\sf << { f'2 } \\ { ees'8 e'8\rest e'4\rest } >> r4
- \clef treble c'''8(~  \once \override TextScript #'script-priority = #-1
+ \clef treble c'''8(~  \once \override TextScript.script-priority = #-1
  c'''16.^\turn^\markup { \natural } d'''32 ees'''4) \set doubleSlurs = ##t <a' ees''>4( <bes' d''>8) r8
  << { g''2^\f f''2^\p } \\ { e'4\rest <g' bes' des''>8\f\staccato e'8\rest e'4\rest <f' bes' d''!>8\p\staccato e'8\rest } >>
  <c' ees' a'>8\staccato r8 \break
  <bes d' bes'>8\staccato r8 r4 r4 \set doubleSlurs = ##f \clef bass <g bes ees'>4( <f bes d'> <e bes cis'>)
  \set doubleSlurs = ##t <e bes cis'>4( <f bes d'>8) r8 r4 \break
- << { c'!4(~  \once \override TextScript #'script-priority = #-1
+ << { c'!4(~  \once \override TextScript.script-priority = #-1
  c'8^\turn^\markup { \natural }[ ees' c' a]) } \\ { <ees g>2 <ees ges>4 } >> <ees ges a c'>4( <d f bes>8) r8 r4
  \clef treble \set doubleSlurs = ##f <d' bes'>4_\markup { \italic "cresc." }( <bes d' g'> <a d' f'>) \break
  <g c' e'>4.\p <g c' e'>8([ <a c' f'> <bes c' g'>]) <bes c' g'>8.([ <gis c' e'>16]) <a c' f'>8\staccato
@@ -81,9 +81,9 @@
  \clef bass r32 f32\p([ g f e f <ees g> <c a>]) << { bes2. } \\ { <bes, d>8..( <c ees>32 <d f>4) <d f>4 } >> \break
  \clef treble d''8(~ d''16.^\turn ees''32 f''4) \clef bass bes4
  << { a2. } \\ { <c ees>8..( <d f>32 <ees ges>4) <ees ges>4 } >> \break
- \clef treble c'''8(~  \once \override TextScript #'script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
+ \clef treble c'''8(~  \once \override TextScript.script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
  <c' ees' ges'>4\sf << { f'2~ f'8 } \\ { <c' ees'>8( <a c'>16.)[ <b d'>32] <c' ees'>4 <c' ees'>8 } >> r16 c'''16 \break
- c'''8(~  \once \override TextScript #'script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
+ c'''8(~  \once \override TextScript.script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
  <a' c'' ees''>4\sf( <bes' d''>8) r8 << { g''2^\f } \\ { g'4\rest <g' bes' des''>8\f\staccato g'8\rest } >> \break
  << { f''2^\p } \\ { f'4\rest <f' bes' d''!>8\p\staccato g'8\rest } >> <c' ees' f' a'>8\staccato r8
  <bes d' f' bes'>8\staccato r8 r4 r4 \clef bass <aes bes f'>4( <g bes ees'> <fis bes d'>) \break
@@ -119,10 +119,10 @@
  <d' f' bes'>8 r8 r4 r32 f'32\staccato[ e'\staccato f'\staccato g'\staccato a'\staccato bes'\staccato c''\staccato]
  << { <bes' d''>8..([ <c'' ees''!>32] <d'' f''>4 <c'' ees''>) } \\ { f'2 f'4 } >> \break
  <f' bes' d''>8_\markup { \italic "cresc." } r8 r4 r4 R2.
- c'''8(~  \once \override TextScript #'script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
- ges'4\sf f'2. \bar "" \cadenzaOn \override NoteHead #'font-size = #-2 g'!32([ f' e' f' g' a' bes' c'' d'' ees''! f'' g'' a'' bes''])
- \cadenzaOff \bar "|" \override NoteHead #'font-size = #0
- c'''8(~  \once \override TextScript #'script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
+ c'''8(~  \once \override TextScript.script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
+ ges'4\sf f'2. \bar "" \cadenzaOn \override NoteHead.font-size = #-2 g'!32([ f' e' f' g' a' bes' c'' d'' ees''! f'' g'' a'' bes''])
+ \cadenzaOff \bar "|" \override NoteHead.font-size = #0
+ c'''8(~  \once \override TextScript.script-priority = #-1 c'''16.^\turn^\markup { \natural } d'''32) ees'''4
  <a' c'' ees''>4\sf \break
  << { d''8 } \\ { bes'8 } >> r8 << { g''2^\sf f''2^\p } \\ { g'4\rest <g' bes' des''>8\sf\staccato b'8\rest
  g'4\rest <f' bes' d''!>8\staccato b'8\rest } >> <c' ees' a'>8\staccato r8
@@ -145,28 +145,28 @@
  <a c'>8..( <b d'>32 <c' ees'>4) <c' ees'>4 << { ees'2 } \\ { f2 } \\ { c'4 a4 } >>
  \set doubleSlurs = ##t <fis c' ees'>4( <g bes d'>8) r8 r4 <e bes des'>8\f\staccato r8
  r4 <f bes d'!>8\p\staccato r8 <f, f>8\staccato r <bes,, bes,>8\staccato r16 \set doubleSlurs = ##f
- \times 2/3 { bes,32([ bes,, bes,)] } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16
- \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r r8 r16
- \times 2/3 { bes,32([ bes,, bes,)] } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16
- \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r r8 r16
- \times 2/3 { bes,32([ bes,, bes,)] } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16
- \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r
- r8 r16 \times 2/3 { c32([ c, c]) } c,8\staccato r16 \clef treble \times 2/3 { c'''32([ c'' c''']) } c''8\staccato r
- \clef bass r8 r16 \times 2/3 { c32([ c, c]) } c,8\staccato r16 \clef treble \times 2/3 { c'''32([ c'' c''']) } c''8\staccato r
- \clef bass r8 r16 \times 2/3 { c32([ c, c]) } c,8\staccato r16 \clef treble \times 2/3 { c'''32([ c'' c''']) } c''8\staccato r
- \clef bass r8 r16 \times 2/3 { c32([ c, c]) } c,8\staccato r16 \clef treble \times 2/3 { c'''32([ c'' c''']) } c''8\staccato
- r16 \times 2/3 { c'''32([ c'' c''']) } \clef bass r8 r16 c32([ c,]) c8\staccato r16 \clef treble c'''32([ c''])
+ \tuplet 3/2 { bes,32([ bes,, bes,)] } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16
+ \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r r8 r16
+ \tuplet 3/2 { bes,32([ bes,, bes,)] } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16
+ \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r r8 r16
+ \tuplet 3/2 { bes,32([ bes,, bes,)] } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16
+ \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r
+ r8 r16 \tuplet 3/2 { c32([ c, c]) } c,8\staccato r16 \clef treble \tuplet 3/2 { c'''32([ c'' c''']) } c''8\staccato r
+ \clef bass r8 r16 \tuplet 3/2 { c32([ c, c]) } c,8\staccato r16 \clef treble \tuplet 3/2 { c'''32([ c'' c''']) } c''8\staccato r
+ \clef bass r8 r16 \tuplet 3/2 { c32([ c, c]) } c,8\staccato r16 \clef treble \tuplet 3/2 { c'''32([ c'' c''']) } c''8\staccato r
+ \clef bass r8 r16 \tuplet 3/2 { c32([ c, c]) } c,8\staccato r16 \clef treble \tuplet 3/2 { c'''32([ c'' c''']) } c''8\staccato
+ r16 \tuplet 3/2 { c'''32([ c'' c''']) } \clef bass r8 r16 c32([ c,]) c8\staccato r16 \clef treble c'''32([ c''])
  c'''8\staccato r8 \clef bass r8 r16 c32([ c,]) c8\staccato r16 \clef treble c'''32([ c'']) c'''8\staccato r8
  \clef bass r8 r16 c32([ c,]) c8\staccato r16 c32([ c,]) c8\staccato r16 c32([ c,]) c8
  << { s4 c'4( bes8) } \\ { c'8[ b bes a g] } >> f,8\staccato f8([ <a c'> f <bes d'> f])
  <a c'>8([ f <a c'> f d bes,]) c,8\staccato c8([ <f a> c <e g> c]) << { e8([ c f]) } \\ { f,4. } >> a,8([ bes, g,])
  f,8\p\staccato f([ <a c'> f <bes d'> f]) <a c'>([ f <a c'> f d bes,]) c2 c,4
- <f,, f,>8\staccato r16 \times 2/3 { f,32\pp([ f,, f,]) } f,,8\staccato r16 \times 2/3 { f,32([ f,, f,]) } f,,8\staccato r8
- \override TupletNumber #'transparent = ##t  r8 r16 \times 2/3 { f,32([ f,, f,]) } f,,8\staccato r16
- \times 2/3 { f,32^\markup { \italic "cresc." }([ f,, f,]) } f,,8\staccato r8
- r8 r16 \times 2/3 { f,32([ f,, f,]) } f,,8\staccato r16 \times 2/3 { f,32([ f,, f,]) } f,,8\staccato r8
- r8 r16 \times 2/3 { f,32([ f,, f,]) } f,,8\staccato r16 \times 2/3 { f,32([ f,, f,]) } f,,8\staccato r8
- r8 r16 \times 2/3 { <a c'>32([ f <a c'>]) } f8\staccato r8 r4 <bes,, bes,>2.\p
+ <f,, f,>8\staccato r16 \tuplet 3/2 { f,32\pp([ f,, f,]) } f,,8\staccato r16 \tuplet 3/2 { f,32([ f,, f,]) } f,,8\staccato r8
+ \override TupletNumber.transparent = ##t  r8 r16 \tuplet 3/2 { f,32([ f,, f,]) } f,,8\staccato r16
+ \tuplet 3/2 { f,32^\markup { \italic "cresc." }([ f,, f,]) } f,,8\staccato r8
+ r8 r16 \tuplet 3/2 { f,32([ f,, f,]) } f,,8\staccato r16 \tuplet 3/2 { f,32([ f,, f,]) } f,,8\staccato r8
+ r8 r16 \tuplet 3/2 { f,32([ f,, f,]) } f,,8\staccato r16 \tuplet 3/2 { f,32([ f,, f,]) } f,,8\staccato r8
+ r8 r16 \tuplet 3/2 { <a c'>32([ f <a c'>]) } f8\staccato r8 r4 <bes,, bes,>2.\p
  <bes, d f>2 <bes,, f, bes,>4 <c, f, c>2. << { <c' ees'>2 a,4 } \\ { ges4( f) s4 } >> <bes,, bes,>2.
  \clef treble << { <f' aes'>2 } \\ { ces'4( bes) } >> \clef bass << { bes4 } \\ { d4 } >>
  << { bes8[( b c') d' ees' e'] e'4( f'8) e'8\rest } \\ { ees4.\p f8[ g\staccato( g\staccato)]
@@ -179,18 +179,18 @@
  \clef bass a32[ c' f a c f a, c] f,[ a, c, f, a,, c, f,, a,,] r32 fis,,[ a,, c, fis, a, c fis]
  r32 g,,[ bes,, d, g, bes, d g] r e,[ g, bes, e g bes g] des'[ bes g e des bes, g, e,]
  r32 f,[ bes, d! f d bes, f,] r f,[ bes, d f d bes, f,] ees[ c a, f, ees, c, a,, f,,]
- bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato
- r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) }
+ bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato
+ r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) }
  bes,,8\staccato r8 r4 r4
- r8 r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) }
- bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r4
- r8 r16 \times 2/3 { ees32([ ees, ees]) } ees,8\staccato r16 \times 2/3 { ees32([ ees, ees]) }
- ees,8\staccato r16 \times 2/3 { ees32([ ees, ees]) } ees,8\staccato r8 r4 r4
- r8 r16 \times 2/3 { f32([ f, f]) } f,8\staccato r16 \clef treble \times 2/3 { f'''32([ f'' f''']) } f''8\staccato r8
- \clef bass r8 r16 \times 2/3 { f32([ f, f]) } f,8\staccato r16 \clef treble \times 2/3 { f'''32([ f'' f''']) } f''8\staccato r8
- \clef bass r8 r16 \times 2/3 { f32([ f, f]) } f,8\staccato r16 \clef treble \times 2/3 { f'''32([ f'' f''']) } f''8\staccato r8
- \clef bass r8 r16 \times 2/3 { f32([ f, f]) } f,8\staccato r16 \clef treble \times 2/3 { f'''32([ f'' f''']) } f''8\staccato
- r16 \clef treble \times 2/3 { f'''32([ f'' f''']) } \clef bass r8 r16 f32([ f,]) f8\staccato r16
+ r8 r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) }
+ bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8 r4 r4
+ r8 r16 \tuplet 3/2 { ees32([ ees, ees]) } ees,8\staccato r16 \tuplet 3/2 { ees32([ ees, ees]) }
+ ees,8\staccato r16 \tuplet 3/2 { ees32([ ees, ees]) } ees,8\staccato r8 r4 r4
+ r8 r16 \tuplet 3/2 { f32([ f, f]) } f,8\staccato r16 \clef treble \tuplet 3/2 { f'''32([ f'' f''']) } f''8\staccato r8
+ \clef bass r8 r16 \tuplet 3/2 { f32([ f, f]) } f,8\staccato r16 \clef treble \tuplet 3/2 { f'''32([ f'' f''']) } f''8\staccato r8
+ \clef bass r8 r16 \tuplet 3/2 { f32([ f, f]) } f,8\staccato r16 \clef treble \tuplet 3/2 { f'''32([ f'' f''']) } f''8\staccato r8
+ \clef bass r8 r16 \tuplet 3/2 { f32([ f, f]) } f,8\staccato r16 \clef treble \tuplet 3/2 { f'''32([ f'' f''']) } f''8\staccato
+ r16 \clef treble \tuplet 3/2 { f'''32([ f'' f''']) } \clef bass r8 r16 f32([ f,]) f8\staccato r16
  \clef treble f'''32([ f'']) f'''8\staccato r8 \clef bass r8 r16 f32([ f,]) f8\staccato r16 \clef treble f'''32([ f'']) f'''8\staccato r8
  \clef bass r8 r16 f32([ f,]) f8\staccato r16 f32([ f,]) f8\staccato r16 f32([ f,])
  f8 << { s4 f'4 ees'8 } \\ { f'8([ e' ees' d' c']) } >> bes,8\staccato bes8([ <d' f'> bes <ees' g'> bes])
@@ -198,17 +198,17 @@
  f,8\staccato f([ <bes d'> f <a c'> f]) << { a8([ f bes]) } \\ { bes,4. } >> d8([ ees c])
  bes,8\staccato bes([ <d' f'> bes <ees' g'> bes])
  <d' f'>8([ bes <d' f'> bes g ees]) f2 <f,, f,>4 bes,,8\staccato
- r16 \times 2/3 { bes,32([ bes,,\pp bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
- r8 r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
- r8 r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
- r8 r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato
- r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { aes32([ bes, aes]) } bes,8\staccato
- r16 \times 2/3 { aes32([ bes, aes]) } bes,8\staccato r8
- r8 r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
- r8 r16 \times 2/3 { bes32([ bes, bes]) } bes,8\staccato r16 \times 2/3 { bes32([ bes, bes]) } bes,8\staccato r8
- r8 r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \times 2/3 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
- r8 r16 \times 2/3 { bes32([ bes, bes]) } bes,8\staccato r16 \times 2/3 { bes32([ bes, bes]) } bes,8\staccato
- r16 \times 2/3 { bes32([ bes, bes]) } << { <bes, d>8..([ <c ees>32] <d f>4 <c ees>) } \\ { bes,2 s4 } >>
+ r16 \tuplet 3/2 { bes,32([ bes,,\pp bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
+ r8 r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
+ r8 r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
+ r8 r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato
+ r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { aes32([ bes, aes]) } bes,8\staccato
+ r16 \tuplet 3/2 { aes32([ bes, aes]) } bes,8\staccato r8
+ r8 r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
+ r8 r16 \tuplet 3/2 { bes32([ bes, bes]) } bes,8\staccato r16 \tuplet 3/2 { bes32([ bes, bes]) } bes,8\staccato r8
+ r8 r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r16 \tuplet 3/2 { bes,32([ bes,, bes,]) } bes,,8\staccato r8
+ r8 r16 \tuplet 3/2 { bes32([ bes, bes]) } bes,8\staccato r16 \tuplet 3/2 { bes32([ bes, bes]) } bes,8\staccato
+ r16 \tuplet 3/2 { bes32([ bes, bes]) } << { <bes, d>8..([ <c ees>32] <d f>4 <c ees>) } \\ { bes,2 s4 } >>
  <bes, d>8 r8 r4 r32 f32\staccato[ e\staccato f\staccato g\staccato a\staccato bes\staccato c'\staccato]
  <bes d'>8..([ <c' ees'>32] <d' f'>4) bes,,4( a,,2.\p) r4 r <bes c' ees'>4\sf
  <a c' ees'>2. s4 s8 s16 r4 r <fis c' ees'>\sf(
