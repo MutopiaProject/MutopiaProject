@@ -36,7 +36,7 @@
 
         %11-15
         \clef "G_8"
-        < b e g >4\arpeggio \stemDown g4.\downprall fis16 g16
+        < b,e g >4\arpeggio \stemDown g'4.\downprall fis16 g16
         g8
 	\SUpb \appoggiatura fis16 e8 cis4.\lineprall e8
         a16( g16 fis16 e16) d8 \stemUp \TDn a4_~ a32 b32 c16

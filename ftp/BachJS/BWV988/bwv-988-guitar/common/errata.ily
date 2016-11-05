@@ -1,10 +1,12 @@
 \version "2.18.2"
 
 \bookpart {
-
-   \paper { print-page-number = ##t }
-
+  
    \header { title = "Errata" }
+   \header { maintainer = "Steve Shorter" }
+   \include "mutopia-header.ily"
+   
+   \paper { print-page-number = ##t }
 
    \tocItem \markup { Errata }
 
@@ -19,7 +21,7 @@
 	" "
 	"     * Variation 27  - bar 23, \"c#\" not playable under given intstrument limitations"
 	" "
-	"     * Variation 23  - bar 31, \"c\" not playable under given instrument limititations"
+	"     * Variation 23  - bar 31, \"c\" not playable under given instrument limitations"
 	" "
 	" "
 	" "
