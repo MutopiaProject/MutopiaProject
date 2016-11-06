@@ -115,7 +115,7 @@
  << { fis'4^\p g'4. bes'8 } \\ { a4\rest <bes ees'>2 } >>
  << { ees''2( c''8 a') } \\ { f'4\rest a'!4\sf\>~ a'8\! s8 } \\ { \stemDown s4 <ees' ges'>2 } >>
  << { c''4\p( bes'4. d''8) } \\ { f'4\rest <d' f'>4_\markup { \italic "cresc." } <f' aes'> } >> \break
- << { f''8( ees''4.\sf <a' c''>8 a') } \\ { e'4\rest <g' bes'>8[ <ges'~ a'!~>\sf <ees' ges' a'> <c' ees' ges'>] } >>
+ << { f''8( ees''4.*2/3\sf \tweak Stem.transparent ##t a'8~ <a' c''>8[ a']) } \\ { e'4\rest <g' bes'>8[ <ges'~ a'!>\sf <ees' ges'> <c' ees' ges'>] } >>
  <d' f' bes'>8 r8 r4 r32 f'32\staccato[ e'\staccato f'\staccato g'\staccato a'\staccato bes'\staccato c''\staccato]
  << { <bes' d''>8..([ <c'' ees''!>32] <d'' f''>4 <c'' ees''>) } \\ { f'2 f'4 } >> \break
  <f' bes' d''>8_\markup { \italic "cresc." } r8 r4 r4 R2.
