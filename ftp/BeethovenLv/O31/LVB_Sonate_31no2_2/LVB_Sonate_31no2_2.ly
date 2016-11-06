@@ -76,7 +76,7 @@
  \clef treble a''8(~ a''16.^\turn bes''32 c'''4)
  \clef bass << { <c' ees'>4 a8..( bes32 ces'4) ces'4 } \\ { f4 <f d'>2. } >>
  \clef treble d''8\<(~ d''16.^\turn ees''32) f''4\! <aes' f''>4\sf \break
- << { f''4( ees''8[ d'' c''\staccato( c''\staccato)] c''8^\trill[ \grace { b'16[ c''] } d''16 c''] c''8 } \\
+ << { f''4( ees''8)[ d'' c''\staccato( c''\staccato)] c''8^\trill[ \grace { b'16[ c''] } d''16 c''] c''8 } \\
  { g'4.\p_\markup { \italic "    cresc." } bes'!8[ bes' bes'] bes'4( a'!8) } >> r8
  \clef bass r32 f32\p([ g f e f <ees g> <c a>]) << { bes2. } \\ { <bes, d>8..( <c ees>32 <d f>4) <d f>4 } >> \break
  \clef treble d''8(~ d''16.^\turn ees''32 f''4) \clef bass bes4
@@ -115,7 +115,7 @@
  << { fis'4^\p g'4. bes'8 } \\ { a4\rest <bes ees'>2 } >>
  << { ees''2( c''8 a') } \\ { f'4\rest a'!4\sf\>~ a'8\! s8 } \\ { \stemDown s4 <ees' ges'>2 } >>
  << { c''4\p( bes'4. d''8) } \\ { f'4\rest <d' f'>4_\markup { \italic "cresc." } <f' aes'> } >> \break
- << { f''8( ees''4.\sf <a' c''>8( a') } \\ { e'4\rest <g' bes'>8[ <ges' a'!>\sf <ees' ges'> <c' ees' ges'>] } >>
+ << { f''8( ees''4.\sf <a' c''>8 a') } \\ { e'4\rest <g' bes'>8[ <ges'~ a'!~>\sf <ees' ges' a'> <c' ees' ges'>] } >>
  <d' f' bes'>8 r8 r4 r32 f'32\staccato[ e'\staccato f'\staccato g'\staccato a'\staccato bes'\staccato c''\staccato]
  << { <bes' d''>8..([ <c'' ees''!>32] <d'' f''>4 <c'' ees''>) } \\ { f'2 f'4 } >> \break
  <f' bes' d''>8_\markup { \italic "cresc." } r8 r4 r4 R2.
