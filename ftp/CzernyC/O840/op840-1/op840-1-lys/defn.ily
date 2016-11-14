@@ -1,0 +1,35 @@
+\version "2.18.2" 
+
+omitDynamic = \once\omit DynamicText
+
+shpSlurA = \shape #'((0 . 0) (0 . 0.5) (0 . 0.2) (0 . 0)) Slur
+shpSlurB = \shape #'((-0.5 . 0.2) (-1 . -0.5) (-1 . -1) (-1 . -1.5)) Slur
+shpSlurC = \shape #'((0 . 0.7) (0 . 2.8) (0 . 4) (0 . 3)) Slur
+shpSlurD = \shape #'((0 . 0) (0 . 1) (0 . 1) (0 . 0)) Slur
+shpSlurE = \shape #'((0 . 0.8) (0 . 1) (0 . 1) (0 . 1.5)) Slur
+shpSlurF = \shape #'((0.8 . -1.8) (0.8 . -2) (-0.5 . -1.8) (-0.8 . -1.8)) Slur
+shpSlurG = \shape #'((0.6 . -0.4) (0.4 . -0.6) (-0.3 . -0.6) (-0.6 . -0.4)) PhrasingSlur
+
+posSlurA = \once \override Voice.Slur #'positions = #'(0.5 . 3)
+posSlurB = \once \override Voice.Slur #'positions = #'(1 . 0.5)
+posSlurC = \once \override Voice.Slur #'positions = #'(2.2 . 0)
+
+posTextA = \once\override TextScript.extra-offset = #'(0 . 1)
+
+
+posSlurPriority = \once \override Slur.outside-staff-priority = #150
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% A function to modify the shape of slurs by offsetting the positions property
+% from default control-point values. Setting either y1 or y2 to zero will leave
+% that attachment-point unchanged. Syntax: \offsetPositions #'(y1 . y2)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+offsetPositions =
+#(define-music-function (offsets) (pair?)
+   #{
+     \once \override Slur.positions =
+     #(lambda (grob)
+        `(,(+ (car offsets) (cdar (ly:slur::calc-control-points grob))) .
+           ,(+ (cdr offsets) (cdr (cadddr (ly:slur::calc-control-points grob))))))
+   #})
