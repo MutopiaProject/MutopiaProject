@@ -163,7 +163,7 @@ lowVoice = \relative c' {
   | <b ds>4 ( <gs ds'>8 ) r <b ds>4 ( <gs ds'>8 ) r
   | <b ds>4 ( <gs ds'>8 ) r <b ds>4 ( <gs ds'>8 ) r
   \clef treble
-  | as16 ( b css ds es fs as b cs ds es fs ) r4
+  | as16 ( b css ds es fs as b css ds es fs ) r4
   | <ds, fs>4. q8 <d fs>4 q8 q
   | <ds fs>2 <d fs>4 ~ q8 r
   
