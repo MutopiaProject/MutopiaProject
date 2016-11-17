@@ -94,6 +94,8 @@ upper = {
     | <cf'' ef'' af''>4 \sf <cf'' ef'' gf''> \sf ~ q8 r
     | \acciaccatura s8 <gf' bf' f''>4 \sf <gf' bf' ef''>2 ~ \sf
     
+    % Prevent bar number check warnings when unfolding repeats
+    \tag #'midi { \set Score.currentBarNumber = #24 }
     \barNumberCheck #24
     
     | q4 ~ q8 r r4
@@ -280,6 +282,8 @@ lower = {
     | gf2.
     | \acciaccatura ef,,8 ef,4 ef,2 ~
     
+    % Prevent bar number check warnings when unfolding repeats
+    \tag #'midi { \set Score.currentBarNumber = #24 }
     \barNumberCheck #24
     
     | ef,2.
@@ -364,46 +368,96 @@ lower = {
   \barNumberCheck #72
   
   \time 3/4
-  | ef,2. ^ \p \startTrillSpan ^ \< ~
-  | ef,2 \tuplet 6/4 { 
-    ef,16 \stopTrillSpan ( [ e, f, gf, g, af, \! ] ) 
+  \tag #'layout {
+    | ef,?2. ^ \p \startTrillSpan ^ \< ~
+    | ef,2 \tuplet 6/4 { 
+      ef,16 \stopTrillSpan ( [ e, f, gf, g, af, \! ] ) 
+    }
+    | a,2. ^ \f \startTrillSpan ~
+    | a,2 \tuplet 6/4 {
+      bff,16 ^ \dim \stopTrillSpan ( [ af, aff, gf, f, ff, ] )
+    }
+    | ef,2. ^ \p \startTrillSpan  ~
+    | ef,2 \tuplet 6/4 { 
+      ef,16 \stopTrillSpan ( [ e, f, gf, g, af, ] ) 
+    }
+    | a,2. \startTrillSpan ~
+    | a,2 \tuplet 6/4 {
+      bff,16 \stopTrillSpan ( [ af, aff, gf, f, ff, ] )
+    }    
   }
-  | a,2. ^ \f \startTrillSpan ~
-  | a,2 \tuplet 6/4 {
-    bff,16 ^ \dim \stopTrillSpan ( [ af, aff, gf, f, ff, ] )
-  }
-  | ef,2. ^ \p \startTrillSpan  ~
-  | ef,2 \tuplet 6/4 { 
-    ef,16 \stopTrillSpan ( [ e, f, gf, g, af, ] ) 
-  }
-  | a,2. \startTrillSpan ~
-  | a,2 \tuplet 6/4 {
-    bff,16 \stopTrillSpan ( [ af, aff, gf, f, ff, ] )
+  
+  \tag #'midi {
+    | \repeat unfold 6 { ef,16 f, }
+    | \repeat unfold 4 { ef,16 f, } \tuplet 6/4 { 
+      ef,16 ( [ e, f, gf, g, af, ] ) 
+    }  
+    | \repeat unfold 6 { a,16 bf, }
+    | \repeat unfold 4 { a,16 bf, } \tuplet 6/4 {
+      bff,16 ( [ af, aff, gf, f, ff, ] )
+    }
+    | \repeat unfold 6 { ef,16 f, }
+    | \repeat unfold 4 { ef,16 f, } \tuplet 6/4 { 
+      ef,16 ( [ e, f, gf, g, af, ] ) 
+    }  
+    | \repeat unfold 6 { a,16 bf, }
+    | \repeat unfold 4 { a,16 bf, } \tuplet 6/4 {
+      bff,16 ( [ af, aff, gf, f, ff, ] )
+    }          
   }
   
   \barNumberCheck #80
   
-  | ef,2. \startTrillSpan  ~
-  | ef,2 \tuplet 6/4 { 
-    ef,16 \stopTrillSpan ( [ e, f, gf, g, af, ] ) 
+  \tag #'layout {
+    | ef,2. \startTrillSpan  ~
+    | ef,2 \tuplet 6/4 { 
+      ef,16 \stopTrillSpan ( [ e, f, gf, g, af, ] ) 
+    }
+    | a,2. \startTrillSpan ~
+    | a,2 \tuplet 6/4 {
+      bff,16 \stopTrillSpan ( [ af, aff, gf, f, ff, ] )
+    }
+    | ef,2. \startTrillSpan  ~
+    | ef,2 \tuplet 6/4 { 
+      ef,16 ^ \cresc \stopTrillSpan ( [ e, f, gf, g, af, ] ) 
+    }
+    | a,2. ^ \mf \startTrillSpan ~
+    | \tuplet 11/12 {  
+      a,16 ^ \< \stopTrillSpan ( [ bf, b, c df d ef f gf g af \! ] ) 
+    }
   }
-  | a,2. \startTrillSpan ~
-  | a,2 \tuplet 6/4 {
-    bff,16 \stopTrillSpan ( [ af, aff, gf, f, ff, ] )
-  }
-  | ef,2. \startTrillSpan  ~
-  | ef,2 \tuplet 6/4 { 
-    ef,16 ^ \cresc \stopTrillSpan ( [ e, f, gf, g, af, ] ) 
-  }
-  | a,2. ^ \mf \startTrillSpan ~
-  | \tuplet 11/12 {  
-    a,16 ^ \< \stopTrillSpan ( [ bf, b, c df d ef f gf g af \! ] ) 
-  }
+  
+  \tag #'midi {
+    | \repeat unfold 6 { ef,16 f, }
+    | \repeat unfold 4 { ef,16 f, } \tuplet 6/4 { 
+      ef,16 ( [ e, f, gf, g, af, ] ) 
+    }  
+    | \repeat unfold 6 { a,16 bf, }
+    | \repeat unfold 4 { a,16 bf, } \tuplet 6/4 {
+      bff,16 ( [ af, aff, gf, f, ff, ] )
+    }
+    | \repeat unfold 6 { ef,16 f, }
+    | \repeat unfold 4 { ef,16 f, } \tuplet 6/4 { 
+      ef,16 ( [ e, f, gf, g, af, ] ) 
+    }  
+    | \repeat unfold 6 { a,16 bf, }
+    | \tuplet 11/12 {
+      bff,16 ( [ bf, b, c df d ef f gf g af ] )
+    }          
+  }  
   
   \barNumberCheck #88
+
+  \tag #'layout {
+    | a2. ^ \cresc \startTrillSpan (
+    | bff2. ) \stopTrillSpan  
+  }
   
-  | a2. ^ \cresc \startTrillSpan (
-  | bff2. ) \stopTrillSpan
+  \tag #'midi {
+    | \repeat unfold 6 { a16 bf }
+    | \repeat unfold 6 { a16 bf }
+  }
+  
   | <af cf' ef'>4 \! <af cf' ef' ff'> ~ q8 r
   | R2.
   | <af cf' ef'>2 <af cf' ef' ff'>4 ~
@@ -432,6 +486,7 @@ global = {
     subtitle = "No 1. Gnomus"
   }
   \score {
+    \keepWithTag #'layout
     \new PianoStaff 
     <<
       \new Staff = "up" {
@@ -445,8 +500,26 @@ global = {
     >>
     \layout {
     }
-    \midi {
-      \tempo 4 = 88
-    }
+  }
+}
+
+% MIDI only
+\score {
+  \keepWithTag #'midi
+  \unfoldRepeats {
+    \new PianoStaff 
+    <<
+      \new Staff = "up" {
+        \global
+        \upper
+      }
+      \new Staff = "down" {
+        \global
+        \lower
+      }
+    >>
+  }
+  \midi { 
+    \tempo 4 = 230
   }
 }
