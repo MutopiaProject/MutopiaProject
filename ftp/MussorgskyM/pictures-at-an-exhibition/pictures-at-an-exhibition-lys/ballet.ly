@@ -204,6 +204,17 @@ highVoiceTwo = \relative c''' {
   | f2 \startTrillSpan \break
 }
 
+highVoiceTwoMidi = \relative c''' {
+  | \tuplet 3/2 { \repeat unfold 6 { f16 g } }
+  | \tuplet 3/2 { \repeat unfold 6 { d16 e } }
+  | \tuplet 3/2 { \repeat unfold 3 { c16 d } \repeat unfold 3 { d16 e } }
+  | \tuplet 3/2 { \repeat unfold 3 { c16 d } \repeat unfold 3 { b16 cs } }
+  | \tuplet 3/2 { \repeat unfold 6 { c16 d } }
+  | \tuplet 3/2 { \repeat unfold 6 { b16 cs } }
+  | \tuplet 3/2 { \repeat unfold 6 { a16 b } }
+  | \tuplet 3/2 { \repeat unfold 6 { f16 g } }
+}
+
 upperMiddleTwo = \relative c''' {
   | d2 
   | b2
@@ -393,7 +404,7 @@ globalMidi = {
       \repeat unfold 2 { \highVoiceMidi }
       \repeat unfold 2 {
         <<
-          \new Voice { \voiceOne \highVoiceTwo }
+          \new Voice { \voiceOne \highVoiceTwoMidi }
           \new Voice { \voiceTwo \upperMiddleTwo }
         >>
       }
