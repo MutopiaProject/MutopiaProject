@@ -87,7 +87,8 @@ upper = \relative c''' {
       alignAboveContext = "up"
     } {
       \key b \minor
-      | \repeat tremolo 24 { fs'32 ^\tranq fs, } 
+      | \tag #'layout { \repeat tremolo 24 { fs'32 ^\tranq fs, } }
+        \tag #'midi   { \repeat tremolo 24 { fs'32 \pp     fs, } }
       | \repeat tremolo 24 { fs'32 fs, } 
       | \repeat tremolo 24 { fs'32 fs, }
       | \repeat tremolo 24 { fs'32 fs, } 
@@ -182,14 +183,18 @@ lower = \relative c'' {
     \\
     { <d, a' bs>1. _\cantabileMarcato | <fs as>4 }
   >>
-    fs,4-. ( \sustainOn cs'-. fs-. as-. cs-. ) 
+    fs,4-. ( \sustainOn cs'-. fs-. as-. 
+    \tag #'layout { cs-. ) }
+    \tag #'midi   { cs-. ) \sustainOff }
   |
   <<
     { | e2. ( css2 bs4 | cs4 ) }
     \\
     { <d, a' bs>1. | <fs as>4 }
   >>
-    fs,4-. ( \sustainOn cs'-. fs-. as-. cs-. ) 
+    fs,4-. ( \sustainOn cs'-. fs-. as-. 
+    \tag #'layout { cs-. ) }
+    \tag #'midi   { cs-. ) \sustainOff } 
   |
   << 
     { ds2. ( ^\perden gss,2 as4) | <fs as cs>2. ~ \ppp q2 r4 }
@@ -221,6 +226,7 @@ global = {
     subtitle = "[Promenade-6] Con mortius in lingua mortua"
   }
   \score {
+    \keepWithTag #'layout
     \new PianoStaff <<
       \new Staff = "up" \with { \remove Time_signature_engraver } {
         \global
@@ -233,8 +239,25 @@ global = {
     >>
     \layout {
     }
-    \midi {
-      \tempo 4 = 76
-    }
+  }
+}
+
+% MIDI output only
+\score {
+  \keepWithTag #'midi
+  \unfoldRepeats {
+    \new PianoStaff <<
+      \new Staff = "up" \with { \remove Time_signature_engraver } {
+        \global
+        \upper
+      }
+      \new Staff = "down" \with { \remove Time_signature_engraver } {
+        \global
+        \lower
+      }
+    >>
+  }
+  \midi {
+    \tempo 4 = 76
   }
 }
