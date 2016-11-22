@@ -83,7 +83,7 @@ highVoice = \relative c' {
   | <fs gs ds' fs>4. <e gs cs e>
   \voiceOne
   | <ds ds'>4. <cs cs'>4 <b b'>8
-  | <a a'>8. <b b'>16 <a a'>8 <cs cs'> <b b'> <a a'>
+  | <as as'>8. <b b'>16 <as as'>8 <cs cs'> <b b'> <as as'>
   | <gs' b>4. gs4 ) \oneVoice r8
   \voiceOne
   | <e e'>4 q8 <fs fs'>8. ( <e e'>16 ) <ds ds'>8-.
@@ -98,7 +98,7 @@ highVoice = \relative c' {
   \voiceOne
   | <fs fs'>8 <gs gs'> <ds ds'> <e e'> <ds ds'> <e e'>
   | <ds ds'>4. <cs cs'>4 <b b'>8
-  | <a a'>8. <b b'>16 <a a'>8 <cs cs'> <b b'> <a a'>
+  | <as as'>8. <b b'>16 <as as'>8 <cs cs'> <b b'> <as as'>
   | <gs' b>4. gs4 ) \oneVoice r8
   | r4 r8 gs4. (
   
@@ -125,7 +125,7 @@ highVoice = \relative c' {
   \voiceOne
   | <ds ds'>4. ( <css css'>8 <cs cs'> <css css'> )
   | <ds ds'>4. ( <css css'>8 <cs cs'> <css css'> 
-  | <ds cs'>4. <css css'> )
+  | <ds ds'>4. <css css'> )
   
   \barNumberCheck #64
   
@@ -134,7 +134,7 @@ highVoice = \relative c' {
   | <fs ds' fs>4. <e cs' e>
   \voiceOne
   | <ds ds'>4. <cs cs'>4 <b b'>8
-  | <a a'>8. <b b'>16 <a a'>8 <cs cs'> <b b'> <a a'>
+  | <as as'>8. <b b'>16 <as as'>8 <cs cs'> <b b'> <as as'>
   | <gs' b>4. gs4 ) \oneVoice r8
   | r4 r8 r4 ds8 (
   | gs2. ~
@@ -158,12 +158,12 @@ highVoice = \relative c' {
   \voiceOne
   | <ds ds'>4. ( <css css'>8 <cs cs'> <css css'> )
   | <ds ds'>4. ( <css css'>8 <cs cs'> <css css'> 
-  | <ds cs'>4. <css css'> )
+  | <ds ds'>4. <css css'> )
   \oneVoice
   | <cs gs' cs>4. ( <gs' e' gs>
   | <fs ds' fs>4. \voiceOne <e e'>8 <gs gs'> <e e'> )
   | <ds ds'>4. ( <cs cs'>8 <ds ds'> <b b'>
-  | <a a'>8. <b b'>16 <a a'>8 <cs cs'> <b b'> <a a'> )
+  | <as as'>8. <b b'>16 <as as'>8 <cs cs'> <b b'> <as as'> )
   \oneVoice
   | R2. %{ \pp %} _ \markup { \left-align \dynamic "pp       " } % kludge to get "pp" mark in the right place
   
@@ -174,10 +174,16 @@ highVoice = \relative c' {
   | <e e'>4 q8 <fs fs'>8. ( <e e'>16 ) <ds ds'>8-.
   \oneVoice
   | R2.
-  | <cs e gs cs>4 . \< ( <gs' cs e gs>
-  | <fs gs ds' fs>4. \> <e gs cs e>4 ) \! r8
+  | \tag #'layout { <cs e gs cs>4. \< ( } 
+    \tag #'midi   { <cs e gs cs>4. ( }
+    <gs' cs e gs>
+  
+  | \tag #'layout { <fs gs ds' fs>4. \> <e gs cs e>4 ) \! } 
+    \tag #'midi   { <fs gs ds' fs>4.    <e gs cs e>4 ) }
+    r8
+  
   | R2.
-  | <a, a'>8. ( <b b'>16 <a a'>8 <cs cs'> <b b'> <a a'>-. )
+  | <as, as'>8. ( <b b'>16 <as as'>8 <cs cs'> <b b'> <as as'>-. )
   | r4 r8 r4 ds8 (
   
   \barNumberCheck #96
@@ -195,7 +201,7 @@ highVoice = \relative c' {
   \barNumberCheck #104
   
   | <fs a d>4 r8 <e gs cs>4 r8
-  | <fss as>8 r8 r r4 \clef treble <ds' ds'>8 \<
+  | <fss as>8 r8 r r4 \clef treble <ds'? ds'>8 \<
   | <gs gs'>2. \>
   | R2. \! \fermataMarkup
 }
@@ -312,7 +318,10 @@ lowerMiddle = \relative c {
   | ds4 ds8 ds-. ds-. ds-.
   | ds8. ( e16 ) ds8-. fs-. ( e-. ds-. )
   | cs8. ( ds16 ) cs8-. e-. ( ds-. cs-. )
-  | b4 ^\< ( cs8 ds ^\> cs ds ) \!
+  
+  | \tag #'layout { b4 ^\< ( cs8 ds ^\> cs b ) \! }
+    \tag #'midi   { b4     ( cs8 ds cs b ) }
+  
   | as8. ( b16 ) as8-. cs-. ( b-. as-. )
   | b4. ( gs4. )
   
@@ -329,7 +338,9 @@ lowerMiddle = \relative c {
   
   \barNumberCheck #16
   
-  | b4 ^\< ( cs8 ds ^\> cs ds ) \!
+  | \tag #'layout { b4 ^\< ( cs8 ds ^\> cs b ) \! }
+    \tag #'midi   { b4     ( cs8 ds cs b ) }
+  
   | as8. ( b16 ) as8-. cs-. ( b-. as-. )
   | b4. ( gs4. )
   | ds'2. ~
@@ -373,7 +384,9 @@ lowerMiddle = \relative c {
   
   \barNumberCheck #48
   
-  | b4 ^\< ( cs8 ds ^\> cs ds ) \!
+  | \tag #'layout { b4 ^\< ( cs8 ds ^\> cs b ) \! }
+    \tag #'midi   { b4     ( cs8 ds cs b ) }
+  
   | as8. ( b16 ) as8-. cs-. ( b-. as-. )
   | b4. ( gs4. )
   | ds'2. ~
@@ -550,14 +563,28 @@ lower = {
     subtitle = "No. 2 Il Vecchio Castello"
   }
   \score {
+    \keepWithTag #'layout
     \new PianoStaff <<
       \new Staff = "up" \upper
       \new Staff = "down" \lower
     >>
     \layout {
+      \context {
+        \Score
+        \remove "Bar_number_engraver"
+      }
     }
-    \midi {
-      \tempo 4. = 60
-    }
+  }
+}
+
+% MIDI only
+\score {
+  \keepWithTag #'midi
+  \new PianoStaff <<
+    \new Staff = "up" \upper
+    \new Staff = "down" \lower
+  >>
+  \midi {
+    \tempo 4. = 60
   }
 }
