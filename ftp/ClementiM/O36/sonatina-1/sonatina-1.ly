@@ -65,7 +65,7 @@ maintainerWeb = "brianrude.com"
     e c8 e g4 c            %29t
     <e, g> <d f> <c e> <b d>        %30t
     c8 d e f g a b c            %31t
-    c,4 d' d d                %32t
+    d,4 d' d d                %32t
     e,8 f g a b c d e            %33t
     f,4 f' f f                %34t
     g,8 c e g f e d c            %35t
@@ -200,7 +200,7 @@ upperthird = \relative c'' {\clef treble   \key c \major       \time 3/8
     b4 r r2                %12b
      c4 r c, r                %13b
     d r d, r                %14b
-    g8 b d g d,4 r    }        %15b
+    g8 b d g g,4 r    }        %15b
     \repeat volta 2 {    f''1        %16b
     ees                %17b
     b2 c                %18b
