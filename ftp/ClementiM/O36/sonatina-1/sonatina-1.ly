@@ -1,5 +1,4 @@
-\version "2.8.4"        %begin program
-
+\version "2.18.2"
 
 \header {
 title = "Sonatina"  composer = " M. Clementi, Opus 36 No. 1"
@@ -10,13 +9,14 @@ mutopiainstrument = "Piano"
 date = "19th C."
 source = "Sonatina Album, G. Schirmer, Inc.  Copyright 1893"
 style = "Classical"
-copyright = "Public Domain"
+license = "Public Domain"
 maintainer = "Brian D. Rude"
 maintainerEmail = "brianrude@hotmail.com"
 maintainerWeb = "brianrude.com"
-lastupdated = "2006/August/13"
- footer = "Mutopia-2006/08/17-804"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+
+ footer = "Mutopia-2016/11/30-804"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
 }
 
 
@@ -75,34 +75,34 @@ lastupdated = "2006/August/13"
             }    % end part 1 treble
 
 uppersecond = \relative c'' {\clef treble   \key f \major       \time 3/4
-    \set tupletSpannerDuration = #(ly:make-moment 1 4)
+    \tupletSpan 4
 
 
                 % begin part 2, treble
     c2^\markup {Andante} f4                %1t
     a,2 c4                        %2t
     f,2 g4^\trill   \grace {f16[ g]}                %3t
-    a4 \times 2/3 {f8[ a c] f f f}                %4t
-    d4 \times 2/3 {f,8[ bes d] f f f}                %5g
-    c4 \times 2/3 {a'8[ g f] e d c                %6t
+    a4 \tuplet 3/2 {f8[ a c] f f f}                %4t
+    d4 \tuplet 3/2 {f,8[ bes d] f f f}                %5g
+    c4 \tuplet 3/2 {a'8[ g f] e d c                %6t
     c[ e, g] c[ f, a] c[ f, a]}                %7t
     c8. a16 g4 r                    %8t
-    \times 2/3 {<d' f>8[ <d f> <d f>] <c e>[ <c e> <c e>] <b d> <b d> <b d>}        %9t
-    g'4 \times 2/3 {g,8[ a b] c d e                %10t
+    \tuplet 3/2 {<d' f>8[ <d f> <d f>] <c e>[ <c e> <c e>] <b d> <b d> <b d>}        %9t
+    g'4 \tuplet 3/2 {g,8[ a b] c d e                %10t
     a,[ f' d] <e, c'>[ <e c'> <e c'>] <d b'> <d b'> <d b'>}    %11t
     <f d'>2 <e c'>4                    %12t
-    \times 2/3 {c'8[ c c] ees[ d c] bes a g            %13t
+    \tuplet 3/2 {c'8[ c c] ees[ d c] bes a g            %13t
     fis[ a d,] g[ bes d,] a' c d,                %14t
     bes'[ bes bes] d[ c bes] a g f                 %15t
     e[ g c,] f[ a c] <a c> <g bes> <f a>}            %16t
-    <f a>4 \times 2/3 {<e g>8[ <a c> <a c>] <a c> <g bes> <f a>}        %17t
+    <f a>4 \tuplet 3/2 {<e g>8[ <a c> <a c>] <a c> <g bes> <f a>}        %17t
     <f a>4 <e g> r                    %18t
     c'2 f4                        %19t
     a,2 c4                        %20t
     ees,2 ees4^\trill  \grace {d16[ ees]}            %21t
-    \times 2/3 {d8[ f bes] d[ d d]} d4            %22t
-    \times 2/3 { <g, bes>8[ <g bes> <g bes>] <f a>[ <f a> <f a>] <e g> <e g> <e g>     }    %23t
-    c'8. f,16 \times 2/3 {f'8[ e d] c bes a            %24t
+    \tuplet 3/2 {d8[ f bes] d[ d d]} d4            %22t
+    \tuplet 3/2 { <g, bes>8[ <g bes> <g bes>] <f a>[ <f a> <f a>] <e g> <e g> <e g>     }    %23t
+    c'8. f,16 \tuplet 3/2 {f'8[ e d] c bes a            %24t
     g bes d} f,4 g^\trill  \grace {f16[ g]}            %25t
     f2.    \bar "|."        }            %26t    end second part, treble
 
@@ -227,33 +227,33 @@ upperthird = \relative c'' {\clef treble   \key c \major       \time 3/8
     }
 
     lowersecond = \relative c {    \clef bass \key f \major \time 3/4
-    \set tupletSpannerDuration = #(ly:make-moment 1 4)
+    \tupletSpan 4
 
                         %     begin second part bass
-    \times 2/3 {f8[ a c] f,[ a c] f, a c        %1b
+    \tuplet 3/2 {f8[ a c] f,[ a c] f, a c        %1b
     f,[a c] f,[ a c] f, a c                %2b
     c,[ f a] c,[ f a] c, e g                %3b
     f[ a c]} r4 r                %4b
-    \times 2/3 {f,8 bes d} r4 r            %5b
-    \times 2/3 { f,8[ a c] f,[ a c] f, a c}        %6b
+    \tuplet 3/2 {f,8 bes d} r4 r            %5b
+    \tuplet 3/2 { f,8[ a c] f,[ a c] f, a c}        %6b
     bes4 a f                    %7b
-    \times 2/3 { c8[ f a] c,[ e g] c, e g}        %8b
+    \tuplet 3/2 { c8[ f a] c,[ e g] c, e g}        %8b
     g,2 f'4                    %9b
-    \times 2/3 {e8 g c} e,2            %10b
+    \tuplet 3/2 {e8 g c} e,2            %10b
     f4 g g,                    %11b
     c, g' c                    %12b
     r4 r r                    %13b
     c' bes fis                    %14b
     g r r                    %15b
     bes a f                    %16b
-    \times 2/3 {c8 c' c} c4 r            %17b
-    \times 2/3 {c,8[ c' c] c[ d c] bes a g        %18b
+    \tuplet 3/2 {c8 c' c} c4 r            %17b
+    \tuplet 3/2 {c,8[ c' c] c[ d c] bes a g        %18b
     f[ a c] f,[ a c] f, a c                %19b
     f,[ a c] f,[ a c] f, a c                %20b
     f,[ a c] f,[ a c] f, a c    }            %21b
     bes2 r4                    %22b
     c,,2 bes'4                    %23b
-    \times 2/3 { a8[ c f] a,[ c f] a, c f        %24b
+    \tuplet 3/2 { a8[ c f] a,[ c f] a, c f        %24b
     bes,[ d g] c,[ f a] c, e g            %25b
     f,[ a c] f c a } f4        }        %26b        end second part bass
 
@@ -335,25 +335,40 @@ lowerthird = \relative c { \clef bass \key c \major \time 3/8
 \book {
     \score {
        \new PianoStaff <<
-          \set PianoStaff.instrument = "Piano  "
+          \set PianoStaff.instrumentName = "Piano  "
           \new Staff = "upper" \upperfirst
           \new Staff = "lower" \lowerfirst         >>
-    \midi {\tempo 4=156}    \layout { }}
+    
+  \midi {
+    \tempo 4 = 156
+    }
+
+    \layout { }}
 
    \score {
        \new PianoStaff <<
-          \set PianoStaff.instrument = "Piano  "
+          \set PianoStaff.instrumentName = "Piano  "
           \new Staff = "upper" \uppersecond
           \new Staff = "lower" \lowersecond
        >>
-    \midi {\tempo 4=92}        \layout { }}
+    
+  \midi {
+    \tempo 4 = 92
+    }
+
+        \layout { }}
 
    \score {
     \new PianoStaff <<
-    \set PianoStaff.instrument = "Piano"
+    \set PianoStaff.instrumentName = "Piano"
     \new Staff = "upper" \upperthird
     \new Staff = "lower" \lowerthird >>
-    \midi {\tempo 8=160}    \layout { }}
+    
+  \midi {
+    \tempo 8 = 160
+    }
+
+    \layout { }}
 
         }        % end book
 
