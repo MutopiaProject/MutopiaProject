@@ -21,7 +21,7 @@ maintainerWeb = "brianrude.com"
 
 
 \paper {
-    #(set-paper-size "letter")
+%    #(set-paper-size "letter")
 %    #(set-paper-size "a4")
  ragged-bottom=##f
  ragged-last-bottom=##f
