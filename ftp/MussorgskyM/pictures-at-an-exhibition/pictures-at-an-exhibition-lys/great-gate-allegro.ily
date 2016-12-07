@@ -137,14 +137,14 @@ allegroUpper = \relative c' {
 
   \barNumberCheck #40
   | <af cf>1 \> )
-  | <ff df'>2 \! ( <af cf>
+  | <ff df'>2 -\omit \pp \! ( <af cf>
   | <df, bff'>2 \dim <ff af>
   | <ef gf>1
   | <df ff>1 )
   | <af ef'>1
   | q2 q \!
   \ottava #1
-  | <g''' g'>8 _\fener <f f'> <ef ef'> <d d'> <c c'> <bf bf'> <af af'> <g g'>
+  | <g''' g'>8 -\omit \f _\fener <f f'> <ef ef'> <d d'> <c c'> <bf bf'> <af af'> <g g'>
   \ottava #0
   | <f f'>8 <ef ef'> <d d'> <c c'> <bf bf'> <af af'> <g g'> <f f'>
   | <ef ef'>8 <d d'> <c c'> <bf bf'> \clef bass <af af'> <g g'> <f f'> <ef ef'>
@@ -184,10 +184,10 @@ allegroUpper = \relative c' {
   | <af, ff'>2 <cf ef> \dim
   | <bf df>1
   | <af cf>1
-  | <ef bf>1 )
+  | <ef bf'>1 )
 
   \barNumberCheck #80
-  | q2 \omitDynamics q \p
+  | q2 q -\omit \p
   \clef bass
   | <f, ef'>1-^ \sf
   | <ff ef'>1-^
@@ -307,7 +307,7 @@ allegroLower = \relative c {
   <<
     { s2 ef }
     \\
-    { \acciaccatura { af,,8 } <c' c'>4 q <bf bf'> ( <af af'> ) }
+    { \acciaccatura { \stemUp af,,8 } \stemDown <c' c'>4 q <bf bf'> ( <af af'> ) }
   >>
   |
   <<
@@ -364,13 +364,13 @@ allegroLower = \relative c {
 
   \barNumberCheck #32
   | <df af'>2 <cf cf'>
-  | <ff cf>1
+  | <ff cf'>1
   | cf'1 )
   | <af cf>2 ( <gf df'>
   | <ff ff'>2 q
   | <bff ff'>2 <ff ff'>
   | <bff ff'>1
-  | <cf eff>2 <bff ff>
+  | <cf eff>2 <bff ff'>
 
   \barNumberCheck #40
   | <ff ff'>1 )
@@ -385,7 +385,7 @@ allegroLower = \relative c {
   \barNumberCheck #48
   | \acciaccatura { f8 } <f bf d f>1
   | \acciaccatura { g8 } <g bf ef g>2 \acciaccatura { ef8 } <ef bf' ef>4
-  \acciaccatura { g8 } <g ef g'>4
+  \acciaccatura { g8 } <g bf g'>4
   | \acciaccatura { f8 } <f bf f'>2 \acciaccatura { bf,8 } <bf d bf'>2
   | <g' bf g'>4 <bf ef bf'> << { <f f'>4 <ef ef'> } \\ { bf'2  } >>
   | \acciaccatura { d,8 } <d bf' d>2 \acciaccatura { bf8 } <bf g' bf>2
@@ -429,10 +429,14 @@ allegroLower = \relative c {
 
   \barNumberCheck #80
   | q2 q
-  | << { cf'1-^ } \\ { r2 af,2 \sf \sustainOn } >>
-  | << { af'1-^ } \\ { r2 cf,,2 \sf \sustainOn } >>
-  | << { cf''1-^ } \\ { r2 af,2 \sf \sustainOn } >>
-  | << { af'1-^ } \\ { r2 cf,,2 \sf \sustainOn } >>
+  | << { cf'1-^ } \\ { r2 \tag #'layout { af,2 \sf \sustainOn } 
+                          \tag #'midi   { af2 \sf } } >>
+  | << { af'1-^ } \\ { r2 \tag #'layout { cf,,2 \sf \sustainOn }
+                          \tag #'midi   { cf2 \sf } } >>
+  | << { cf''1-^ } \\ { r2 \tag #'layout { af,2 \sf \sustainOn }
+                           \tag #'midi   { af2 \sf } } >>
+  | << { af'1-^ } \\ { r2 \tag #'layout { cf,,2 \sf \sustainOn } 
+                          \tag #'midi   { cf2 \sf } } >>
   | << { <f' cf' ef>1 } \\ { r2 af,2 } >>
   | << { <ff' af ef'>1 } \\ { r2 cf,2 } >>
   | << { <f' cf' ef>1 } \\ { r2 af,2 } >>
