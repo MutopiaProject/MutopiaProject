@@ -3,6 +3,7 @@
 *.pdf
 *.ps.gz
 *-preview.png
+*-preview.svg
 *.rdf
 *.zip
 *.tar.gz
