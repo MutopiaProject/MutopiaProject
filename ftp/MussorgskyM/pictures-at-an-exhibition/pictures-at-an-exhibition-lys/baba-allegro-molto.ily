@@ -20,6 +20,7 @@ adjustSlur = \shape #'((0 . 0) (0 . 0) (0 . 0.5) (0 . 0.5)) Slur
 
 su = \change Staff = "up"
 sd = \change Staff = "down"
+omitDynamics = \once \omit Staff.DynamicText
 
 upperAllegroMolto = \relative c' {
   \set Score.tempoHideNote = ##t
@@ -161,7 +162,7 @@ upperAllegroMolto = \relative c' {
 }
 
 lowerAllegroMolto = \relative c {
-  | <g g,>4 r
+  | \omitDynamics <g g,>4 \f r
   | R2
   | <g g,>4 q
   | R2

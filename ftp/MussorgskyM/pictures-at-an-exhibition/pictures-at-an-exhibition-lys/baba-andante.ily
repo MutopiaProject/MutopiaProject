@@ -82,18 +82,39 @@ upperAndante = \relative c'' {
   << 
     { r2 \adjustMs <as' e' g>8 ^\ms <as' e' g> r4 } 
     \\ 
-    { \repeat tremolo 32 { g,64 e64 } } 
+    { 
+      \tag #'layout { \repeat tremolo 32 { g,64 e } }
+      \tag #'midi   { \repeat tremolo 16 { g32 e } }
+    } 
   >>
   | 
   << 
     { r2 \adjustMs <as e' g>8 ^\ms <as' e' g> r4 } 
     \\ 
-    { \repeat tremolo 32 { g,64 e64 } } 
+    { 
+      \tag #'layout { \repeat tremolo 32 { g,64 e } }
+      \tag #'midi   { \repeat tremolo 16 { g32 e } }
+    } 
   >>
-  | << { R1 } \\ { \repeat tremolo 32 { g64 e64 } } >>
+  | 
+  << { R1 } 
+     \\ 
+    { 
+      \tag #'layout { \repeat tremolo 32 { g64 e } }
+      \tag #'midi   { \repeat tremolo 16 { g32 e } }
+    }  
+  >>
   \bar "||"
   \time 2/4
-  | << { R2 } \\ { \beamGap \repeat tremolo 16 { g64 e64 } } >>
+  | 
+  << { R2 } 
+     \\ 
+     { 
+       \beamGap
+       \tag #'layout { \repeat tremolo 16 { g64 e } }
+       \tag #'midi   { \repeat tremolo 8  { g32 e } }
+     } 
+  >>
   \bar "||"
   \time 4/4
   
@@ -103,7 +124,9 @@ upperAndante = \relative c'' {
     { r2 \adjustMs <as e' g>8 ^\ms <as' e' g> r4 } 
     \\ 
     { 
-      \beamGap \repeat tremolo 16 { fs,64 ds64 } \repeat tremolo 16 { g64 e64 }
+      \beamGap 
+      \tag #'layout { \repeat tremolo 16 { fs,64 ds } \repeat tremolo 16 { g64 e } }
+      \tag #'midi   { \repeat tremolo 8  { fs32  ds } \repeat tremolo 8  { g32 e } }
     } 
   >>
   | 
@@ -111,27 +134,37 @@ upperAndante = \relative c'' {
     { r2 \adjustMs <as e' g>8 ^\ms <as' e' g> r4 } 
     \\ 
     { 
-      \beamGap \repeat tremolo 16 { fs,64 ds64 } \repeat tremolo 16 { g64 e64 }
+      \beamGap 
+      \tag #'layout { \repeat tremolo 16 { fs,64 ds } \repeat tremolo 16 { g64 e } }
+      \tag #'midi   { \repeat tremolo 8  { fs32  ds } \repeat tremolo 8  { g32 e } }
     }
   >>
-  | \repeat tremolo 32 { f64 d64 }
+  | \tag #'layout { \repeat tremolo 32 { f64 d } }
+    \tag #'midi   { \repeat tremolo 16 { f32 d } }
   \bar "||"
   \time 2/4
-  | \beamGap \repeat tremolo 16 { f64 d64 }
+  | \beamGap 
+    \tag #'layout { \repeat tremolo 16 { f64 d } }
+    \tag #'midi   { \repeat tremolo 8 { f32 d } }
   \bar "||"
   \clef bass
-  | \repeat tremolo 8 { \omitDynamics e64 \p \< cs } \repeat tremolo 8 { ds b }
-    \repeat tremolo 8 { d bf } \repeat tremolo 8 { c a }
-  | \repeat tremolo 8 { b64 gs } \repeat tremolo 8 { bf g }
-    \repeat tremolo 8 { a f } \repeat tremolo 8 { gs e \! } 
-  | \repeat tremolo 8 { g64 \> ef } 
-    \repeat tremolo 8 { fs d }
-    \repeat tremolo 8 { f cs } 
-    \repeat tremolo 8 { e c \! }
+  | \tag #'layout { \repeat tremolo 8 { e64 \< cs }     \repeat tremolo 8 { ds b }
+                    \repeat tremolo 8 { d bf }          \repeat tremolo 8 { c a } }
+    \tag #'midi   { \repeat tremolo 4 { e'32 \< cs }    \repeat tremolo 4 { ds b }
+                    \repeat tremolo 4 { d bf }          \repeat tremolo 4 { c a } }
+  | \tag #'layout { \repeat tremolo 8 { b64 gs }        \repeat tremolo 8 { bf g }
+                    \repeat tremolo 8 { a f }           \repeat tremolo 8 { gs e \! } }
+    \tag #'midi   { \repeat tremolo 4 { b'32 gs }       \repeat tremolo 4 { bf g }
+                    \repeat tremolo 4 { a f }           \repeat tremolo 4 { gs e } }
+  | \tag #'layout { \repeat tremolo 8 { g64 \> ef }     \repeat tremolo 8 { fs d }
+                    \repeat tremolo 8 { f cs }          \repeat tremolo 8 { e c \! } }
+    \tag #'midi   { \repeat tremolo 4 { g'32 \f \> ef } \repeat tremolo 4 { fs d }
+                    \repeat tremolo 4 { f cs }          \repeat tremolo 4 { e c \p } }
   | r2 r4 r8. \clef treble <e' e'>16 \<
   
   \barNumberCheck #120
-  | <e' e'>4 \sf ~ q8 r8 r4 \omitDynamics r8. \p <e, e'>16 \<
+  | \tag #'layout { <e' e'>4 \sf ~ q8 r8 r4 r8. <e, e'>16 \< }
+    \tag #'midi   { <e' e'>4 -> \f ~ q8 \mf r8 r4 r8. <e, e'>16 \p \< }
   | <e' e'>4 \sf ~ q8 r8 r2
   | R1 \fermataMarkup
   \break
@@ -161,7 +194,9 @@ lowerAntante = \relative c' {
   \time 2/4
   | \tuplet 3/2 8 { ds16 ( b ds b ds b ) } r4 
   \time 4/4
-  | <as as'>4 _\nonLegato <e e'>2 ^\ten \sustainOn r4
+  | <as as'>4 _\nonLegato <e e'>2 ^\ten \sustainOn 
+    \tag #'layout { r4 }
+    \tag #'midi   { r4 \sustainOff }
   | <as as'>8 q <e e'>2 ^\ten r4
   | <as as'>8 [ <d d'> <c c'> <d d'> ] <as as'>4 <c c'>8 <as as'>
   \time 2/4
@@ -169,8 +204,12 @@ lowerAntante = \relative c' {
   
   \barNumberCheck #112
   \time 4/4
-  | <b b'>4 <e, e'>2 ^\ten \sustainOn r4
-  | <b' b'>8 q <e, e'>2 ^\ten \sustainOn r4
+  | <b b'>4 <e, e'>2 ^\ten \sustainOn 
+    \tag #'layout { r4 }
+    \tag #'midi   { r4 \sustainOff }
+  | <b' b'>8 q <e, e'>2 ^\ten \sustainOn 
+    \tag #'layout { r4 }
+    \tag #'midi   { r4 \sustainOff }  
   | <gs gs'>8 [ <c c'> <b b'> <c c'> ] <gs gs'>4 <a a'>8 <gs gs'>
   \time 2/4
   | <c c'>4 <b b'>8 [ <gs gs'> ]
@@ -178,19 +217,34 @@ lowerAntante = \relative c' {
   | a2 _\marc e2
   | a,1
   | e1
-  | \repeat tremolo 8 { <gs'' e>64 \p _\< c }  
-    \repeat tremolo 8 { <g ds>64 b }
-    \repeat tremolo 8 { <f d>64 _\> bf } 
-    \repeat tremolo 8 { <e, c>64 a }
+  | \tag #'layout { \repeat tremolo 8 { <gs'' e>64 \p _\< c }  
+                    \repeat tremolo 8 { <g ds> b }
+                    \repeat tremolo 8 { <f d> _\> bf } 
+                    \repeat tremolo 8 { <e, c> a } }
+    \tag #'midi   { \repeat tremolo 4 { <gs e>32 \p _\< c }  
+                    \repeat tremolo 4 { <g ds> b }
+                    \repeat tremolo 4 { <f d> \f _\> bf } 
+                    \repeat tremolo 4 { <e, c> a } }
     
   \barNumberCheck #120
-  | \repeat tremolo 8 { <gs e>64 _\<  c }  
-    \repeat tremolo 8 { <g ds>64 b }
-    \repeat tremolo 8 { <f d>64 _\> bf } 
-    \repeat tremolo 8 { <e, c>64 a }
-  | \repeat tremolo 8 { <gs, e>64 _\pp c }  
-    \repeat tremolo 8 { <g ds>64 b }
-    \repeat tremolo 8 { \noDash <f d>64 ^\dim bf } 
-    \repeat tremolo 8 { <e, c>64 a }
-  | \repeat tremolo 32 { <ds, b>64 ^\ppp \adjustFermata g _\markupFermata }
+  | \tag #'layout { \repeat tremolo 8 { <gs e>64 _\<  c }  
+                    \repeat tremolo 8 { <g ds> b }
+                    \repeat tremolo 8 { <f d> _\> bf } 
+                    \repeat tremolo 8 { <e, c> a } }
+    \tag #'midi   { \repeat tremolo 4 { <gs e>32 \p _\<  c }  
+                    \repeat tremolo 4 { <g ds> b }
+                    \repeat tremolo 4 { <f d> \f _\> bf } 
+                    \repeat tremolo 4 { <e, c> a } }
+  | \tag #'layout { \repeat tremolo 8 { <gs, e>64 _\pp c }  
+                    \repeat tremolo 8 { <g ds> b }
+                    \repeat tremolo 8 { \noDash <f d> ^\dim bf } 
+                    \repeat tremolo 8 { <e, c> a } }
+    \tag #'midi   { \repeat tremolo 4 { <gs e>32 _\pp c }  
+                    \repeat tremolo 4 { <g ds> b }
+                    \repeat tremolo 4 { <f d> ^\dim bf } 
+                    \repeat tremolo 4 { <e, c> a } }
+  | \tag #'layout { 
+      \repeat tremolo 32 { <ds, b>64 ^\ppp \adjustFermata g _\markupFermata } }
+    \tag #'midi { 
+      \repeat tremolo 16 { <ds b>32 ^\ppp g } }
 }

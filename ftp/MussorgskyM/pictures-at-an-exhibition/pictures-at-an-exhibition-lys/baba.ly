@@ -31,6 +31,7 @@
     subtitle = "No. 9 La cabane sur des pattes de poule (Baba-Jaga)"
   }
   \score {
+    \keepWithTag #'layout
     \new PianoStaff <<
       \new Staff = "up" {
         \override DynamicTextSpanner #'dash-period = #-1.0 
@@ -54,7 +55,34 @@
     >>
     \layout {
     }
-    \midi {
-    }
+  }
+}
+
+% MIDI output only
+\score {
+  \keepWithTag #'midi
+  \unfoldRepeats {
+    \new PianoStaff <<
+      \new Staff = "up" {
+        \clef treble
+        \globalAllegroBrio
+        \upperAllegroBrio
+        \globalAndante
+        \upperAndante
+        \globalAllegroMolto
+        \upperAllegroMolto
+      }
+      \new Staff = "down" {
+        \clef bass
+        \globalAllegroBrio
+        \lowerAllegroBrio
+        \globalAndante
+        \lowerAntante
+        \globalAllegroMolto
+        \lowerAllegroMolto
+      }
+    >>
+  }
+  \midi {
   }
 }
