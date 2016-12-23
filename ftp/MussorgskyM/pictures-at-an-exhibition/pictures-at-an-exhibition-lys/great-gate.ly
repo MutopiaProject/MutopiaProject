@@ -29,6 +29,7 @@
     subtitle = "No. 10 La grande porte.  (Dans la capitale de Kiev.)"
   }
   \score {
+    \keepWithTag #'layout
     \new PianoStaff <<
       \new Staff = "up" {
         \clef treble
@@ -54,8 +55,33 @@
         \consists #multi-mark-engraver
       }
     }
-    \midi {
-      \tempo 2 = 60
-    }
+  }
+}
+
+% MIDI only
+\score {
+  \keepWithTag #'midi
+  \unfoldRepeats {
+    \new PianoStaff <<
+      \new Staff = "up" {
+        \clef treble
+        \allegroGlobal
+        \allegroUpper
+        \break
+        \menoGlobal
+        \menoUpper
+      }
+      \new Staff = "down" {
+        \clef bass
+        \allegroGlobal
+        \allegroLower
+        \break
+        \menoGlobal
+        \menoLower
+      }
+    >>
+  }
+  \midi {
+    \tempo 2 = 66
   }
 }
