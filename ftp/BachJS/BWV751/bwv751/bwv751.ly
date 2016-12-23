@@ -1,4 +1,4 @@
-\version "2.10.0"
+\version "2.19.46"
 
 \header {
   mutopiatitle = "In Dulci Jubilo"
@@ -18,8 +18,21 @@
   opus = "BWV 751"
 
  footer = "Mutopia-2006/12/18-884"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
+
+%--Default staff size is 20
+#(set-global-staff-size 20)
+
+\paper {
+    top-margin = 8\mm                              %-minimum: 8 mm
+    top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
+    markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
+    top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+    last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block 
+    ragged-bottom = ##f
+    ragged-last-bottom = ##f
+  }
 
 global = {
   \key c \major
@@ -39,43 +52,43 @@ right = \relative c'' {
 left = \relative c' {
   \stemDown
   \tieDown
-  r2 r b2 b a4 b 
+  r2 r b2 b a4 b
   \change Staff = right c2| d2 c4 d e2 |
-  \change Staff = left b4 g a b c2 b4 c b a b c b2 a4 b 
+  \change Staff = left b4 g a b c2 b4 c b a b c b2 a4 b
   \change Staff = right c2 d c4 d e2 |
-  \change Staff = left b4 g a b c2 b4 
+  \change Staff = left b4 g a b c2 b4
   \change Staff = right g' f e d c b f' e d c2 b c4 d e2 d4 e c e d c |
   b4 c d c b2 c4 b c a b c d b c d c d
   \change Staff = left b g a b
   \change Staff = right c b8 c d4 e fis d g2 s4 s g s s c s s g s s e s s d s s c s s b s s s |  s s c s s  fis s s d s s c s s b s s c s s d s s s|
   % 26
   \change Staff = left
-  r4 c b c a2 
+  r4 c b c a2
   \change Staff = right
-  r4 d c d b2 |r4 e d c 
+  r4 d c d b2 |r4 e d c
   \change Staff = left
-  b2 a4 
+  b2 a4
   \change Staff = right
   a' g a fis e d g e fis g2 ~ g4 e fis g fis2 r4 d c d e d r c b c d c b1 g'2 g1 fis2 e d cis d1
   \change Staff = left
   fis,2 |fis2 e4 fis g2 a g4 a b2 fis4 d e fis g2 fis4 g fis e fis g fis2 e4 fis g2 a2 g4 a b2 fis4 d e fis g2 fis4 d' c b a g fis c' b a g2 fis2 g4 a b2 a4 b g b a g fis g a g fis2 |
-  g4 fis g e fis g a fis g a g a fis d e fis g fis8 g a4 b cis a 
+  g4 fis g e fis g a fis g a g a fis d e fis g fis8 g a4 b cis a
   \change Staff = right
   d2|
   % 54
   s4 s d s s g s s d s s b|
   \change Staff = left
-  s s a s s g s s fis s s s | s s g s s 
+  s s a s s g s s fis s s s | s s g s s
   \change Staff = right
   cis|
   \change Staff = left
-  s s a s s g s s fis s s g s s a s s s 
+  s s a s s g s s fis s s g s s a s s s
   % 62
-  r4 c b c a2 
+  r4 c b c a2
   \change Staff = right
-  r4 d c d b2 r4 e d c b2 a4 a' g a fis e | d 4 g e fis g2 ~ g4 e fis g fis2 r4 d c d e d r c b c d c 
+  r4 d c d b2 r4 e d c b2 a4 a' g a fis e | d 4 g e fis g2 ~ g4 e fis g fis2 r4 d c d e d r c b c d c
   \change Staff = left
-  b2. a4 b c |b2. 
+  b2. a4 b c |b2.
   \change Staff = right
   c4 d e d2 b c <b d>1. \bar "|."
 }
@@ -119,10 +132,7 @@ pedal = \relative c {
 
   \layout{}
   \midi{
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 160 2)
-    }
+    \tempo 2 = 160
   }
 }
 
