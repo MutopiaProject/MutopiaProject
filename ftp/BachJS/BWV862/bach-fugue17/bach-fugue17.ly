@@ -1,5 +1,5 @@
 % Created on Wed Dec 26 18:54:54 GMT 2007
-\version "2.11.38"
+\version "2.19.46"
 
 myStaffSize = #17.8
 
@@ -20,7 +20,7 @@ myStaffSize = #17.8
   maintainer = "Andrew Hawryluk"
   maintainerWeb = "http://www.musicbyandrew.ca/"
  footer = "Mutopia-2008/03/27-1375"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 
@@ -57,7 +57,7 @@ RightHandOne = \relative c' {
 	f16 ef df f ef2 df4~
 	df16 c bf df c8 f df bf gf' ef
 	f4 af8 f g4 bf8 g
-	af f \once \override Tie #'staff-position = #6 df4~ df8 ef c f
+	af f \once \override Tie.staff-position = #6 df4~ df8 ef c f
 	c4 bf~ bf8 af16 g af 8 ef'
 	c af f' df ef g, af4~
 	af g af2^\fermata \bar "|."
@@ -130,12 +130,12 @@ LeftHandOne = \relative c {
 	r4 g'8 c af c d b
 	c16 ef, f g af bf c bf af g f g af g f ef
 	f ef df f ef8 r8 r4 r8 \change Staff = RH \voiceFour s
-	\once \override Voice.NoteColumn #'force-hshift = #-0.7
+	\once \override Voice.NoteColumn.force-hshift = #-0.7
 	af'4 r8 s
-	\once \override Voice.NoteColumn #'force-hshift = #-0.7
+	\once \override Voice.NoteColumn.force-hshift = #-0.7
 	bf4 r8 s
-	s r8 a,4\rest r8 \once \override Voice.NoteColumn #'force-hshift = #0.5 g' s4
-	\once \override Voice.NoteColumn #'force-hshift = #0.5
+	s r8 a,4\rest r8 \once \override Voice.NoteColumn.force-hshift = #0.5 g' s4
+	\once \override Voice.NoteColumn.force-hshift = #0.5
 	ef4 df s a8\rest s
 	s a\rest a\rest s s f\rest \change Staff = LH \voiceOne r bf
 	bf4 ef, ef2
