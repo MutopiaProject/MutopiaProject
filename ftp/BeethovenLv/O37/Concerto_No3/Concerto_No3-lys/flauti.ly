@@ -1,4 +1,4 @@
-\version "2.10.0"
+\version "2.19.46"
 
  flauti = {
  \set Staff.instrumentName = "Flauti"
@@ -56,7 +56,7 @@
  R1 R1^\markup { "SOLO." } R1 R1
  R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1 R1
  R1 r2 << { r2 ees'''1 ~ ees'''4 c'''4\rest r2 ees'''1 ~ ees'''4 c'''4\rest r2 ees'''1 ~ ees'''4 } \\
- { bes''2_\pp ~ bes''1 ~ c'''4 b'4\rest c'''2 ~ c'''1 ~ c'''4 b'4\rest c'''2 ~ c'''1 ~ bes''4 } >> r4 r2 R1
+ { bes''2_\pp ~ bes''1( c'''4) b'4\rest c'''2 ~ c'''1 ~ c'''4 b'4\rest c'''2 ~ c'''1( bes''4) } >> r4 r2 R1
  R1 R1 R1 R1 \pageBreak R1 R1 R1 R1
  << { ees''4^\markup { \bold "TUTTI" } } \\ { ees''4\f } >> r4 r
  << { c'''4 ~ c'''4. bes''8 aes''\staccato[ g''\staccato f''\staccato bes''\staccato] g''4 } \\
