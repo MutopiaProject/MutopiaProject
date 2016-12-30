@@ -67,7 +67,7 @@ highVoice = \relative c''' {
   | \acciaccatura { d8 } <f, a c>8 [ \staffDown <f, a c> \staffUp
     \acciaccatura { c''8 } <f, af b> \staffDown <f, af df> ] \staffUp
   | \acciaccatura { d''8 } <f, a c>8 \staffDown <f, a c> \staffUp
-    <df' f af> [ \acciaccatura { d'8 } <f, a c> ]
+    \acciaccatura { c''8 } <f, af b> \acciaccatura { d'8 } <f, a c>
   | \acciaccatura { d'8 } <f, a c>8 [ \staffDown <f, a c> \staffUp
     \acciaccatura { c''8 } <f, af b> \staffDown <f, af df> ] \staffUp
   | \acciaccatura { d''8 } <f, a c>8 [ \staffDown <f, a c> \staffUp
@@ -134,7 +134,7 @@ lowVoice = \relative c'' {
   \barNumberCheck #8
   | d [ ef e c ]
   | s2
-  | s4 <af b>8 r
+  | s4 <af df>8 r
   | s2 * 2
   | df,8 [ ef e f ]
   | gf8 [ af a bf ]
@@ -143,7 +143,7 @@ lowVoice = \relative c'' {
   \barNumberCheck #16
   | af8 [ bf b c ]
   | c,8 [ e df f ]
-  | d [ fs e g ]
+  | ds [ fs e g ]
   | f [ a gf bf ]
   << { af [ b bf ( c  ] 
        \oneVoice
