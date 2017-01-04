@@ -9,7 +9,7 @@
   arranger = \markup { \smaller "edited by G. Fitzgerald" }
   mutopiatitle = "Tenth Regiment March"
   mutopiacomposer = "HallRB"
-  mutopiainstrument = "Brass band: Flutes, Oboe, Bassoon, Clarinets, Bass Clarinet, Alto Sax, Tenor Sax, Baritone Sax, Trumpets, Cornets, Horns, Trombones, Euphonium, Basses, Drums, Bells, Timpani"
+  mutopiainstrument = "Concert band: Flutes, Oboe, Bassoon, Clarinets, Bass Clarinet, Alto Sax, Tenor Sax, Baritone Sax, Trumpets, Cornets, Horns, Trombones, Euphonium, Basses, Drums, Bells, Timpani"
   source = "Carl Fischer, 1895"
   style = "March"
   license = "Public Domain"
