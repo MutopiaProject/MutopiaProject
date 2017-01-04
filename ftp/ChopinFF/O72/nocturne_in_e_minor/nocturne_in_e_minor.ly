@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 % Nocturne No. 19 in E minor
 % F. Chopin - Op. 72, No. 1
@@ -10,8 +10,8 @@
 % This music is part of the Mutopia project (http://www.MutopiaProject.org/).
 % Copyright (c) The Mutopia Project and Benjamin Esham, 2004–2006.
 %
-% This work is licensed under the Creative Commons Attribution-ShareAlike License 2.5.
-% To view a copy of that license visit http://creativecommons.org/licenses/by-sa/2.5/
+% This work is licensed under the Creative Commons Attribution-ShareAlike License 4.0.
+% To view a copy of that license visit http://creativecommons.org/licenses/by-sa/4.0/
 % or send a letter to Creative Commons, 559 Nathan Abbott Way, Stanford, CA 94305, USA.
 % 
 % HISTORY
@@ -23,6 +23,7 @@
 % - 2006-09-19: fixed two errors pointed out by Aron F. (thanks!) and updated the
 %               syntax for Lilypond 2.8.
 % - 2016-12-16: Updated to 2.18.2
+% - 2017-01-04: Update license to CCASA version 4.0
 %
 % NOTES
 % 
@@ -376,13 +377,14 @@ leftNotes = \relative c' {
 	date = "1827"
 	source = "Schirmer, 1915"
 	style = "Romantic"
-	copyright = "Creative Commons Attribution-ShareAlike 2.5"
-	lastupdated = "2006/Sep/19"
+	license = "Creative Commons Attribution-ShareAlike 4.0"
 	
 	maintainer = "Benjamin D. Esham"
 	maintainerEmail = "bdesham@gmail.com"
- footer = "Mutopia-2006/09/20-509"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2006. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/2.5" http://creativecommons.org/licenses/by-sa/2.5 } } } }
+
+ footer = "Mutopia-2017/01/04-509"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2017 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
 }
 
 \score {
