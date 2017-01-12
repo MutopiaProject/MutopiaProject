@@ -1,7 +1,7 @@
-\version "2.16.1"
+\version "2.19.49"
 
 \header {
-  title = "Caprice No. 3"
+  title = "Six Caprices"
   source = "Mainz: B. Schott's Söhne"
   % Statens musikbibliotek - The Music Library of Sweden
   % Boije 91
@@ -9,6 +9,7 @@
   opus = "Op. 26 No. 3"
   year = "ca. 1827"
   mutopiacomposer = "CarcassiM"
+  mutopiatitle = "Six Caprices, No. 3"
   mutopiainstrument = "Guitar"
   style = "Classical"
   copyright = "Creative Commons Attribution-ShareAlike 3.0"
@@ -20,16 +21,15 @@
 
 \paper {
   line-width = 18.0\cm
-  markup-system-spacing #'padding = #2
-%{ uncomment for note entry
-  ragged-bottom = ##t
-  ragged-last = ##t
-%}
+  top-margin = 4\mm                              %-minimum: 8 mm
+  top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #10     %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block 
 }
 
 commonVar = {
-  \override Score.RehearsalMark #'break-align-symbols = #'(clef)
-  \override TextSpanner #'staff-padding = #6
+  \override Score.RehearsalMark.break-align-symbols = #'(clef)
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
 }
@@ -37,7 +37,7 @@ commonVar = {
 \layout {
   \context {
     \Voice
-    \override StringNumber #'stencil = ##f
+    \override StringNumber.stencil = ##f
   }
 }
 
@@ -130,7 +130,7 @@ lowerVoice = \relative c, {
   e,2. s4. b'4 s8 |
   e,2 s4 e'4 s8 e4 s8 |
   e,2. s4. b'4\6 s8 |
-  \override DynamicTextSpanner #'style = #'none
+  \override DynamicTextSpanner.style = #'none
   e,2.\dim s4. b'4\6 s8 |
   e,2.\pp s4. b'4\6 s8 |
   e,2 s4 e' s8 e4 s8
@@ -141,6 +141,7 @@ lowerVoice = \relative c, {
   <<
     \new Staff = "Guitar" \with {
       midiInstrument = #"acoustic guitar (nylon)"
+      instrumentName = #"Nº 3"
       midiMinimumVolume = #0.3
       midiMaximumVolume = #0.6
     } <<
