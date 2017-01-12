@@ -1,7 +1,7 @@
-\version "2.16.1"
+\version "2.19.49"
 
 \header {
-  title = "Caprice No. 2"
+  title = "Six Caprices"
   source = "Mainz: B. Schott's Söhne"
   % Statens musikbibliotek - The Music Library of Sweden
   % Boije 91
@@ -9,6 +9,7 @@
   opus = "Op. 26 No. 2"
   year = "ca. 1827"
   mutopiacomposer = "CarcassiM"
+  mutopiatitle = "Six Caprices, No. 2"
   mutopiainstrument = "Guitar"
   style = "Classical"
   copyright = "Creative Commons Attribution-ShareAlike 3.0"
@@ -20,16 +21,15 @@
 
 \paper {
   line-width = 18.0\cm
-  markup-system-spacing #'padding = #2
-%{ uncomment for note entry
-  ragged-bottom = ##t
-  ragged-last = ##t
-%}
+  top-margin = 4\mm                              %-minimum: 8 mm
+  top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #10     %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block
 }
 
 commonVar = {
-  \override Score.RehearsalMark #'break-align-symbols = #'(clef)
-  \override TextSpanner #'staff-padding = #6
+  \override Score.RehearsalMark.break-align-symbols = #'(clef)
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
 }
@@ -39,7 +39,7 @@ commonVar = {
     % Explicit string numbers are used to get the tablature correct
     % but just clutter traditional music notation.
     \Voice
-    \override StringNumber #'stencil = ##f
+    \override StringNumber.stencil = ##f
   }
 }
 
@@ -61,8 +61,8 @@ dynamicMarkup = {
 }
 
 
-%% Syntax: \bbarre #"text" { notes } - text = any number of box
-bbarre =
+%% Syntax: \barre #"text" { notes } - text = any number of box
+barre =
 #(define-music-function (barre location str music) (string? ly:music?)
    (let ((elts (extract-named-music music '(NoteEvent EventChord))))
      (if (pair? elts)
@@ -75,12 +75,12 @@ bbarre =
                  (cons (make-music 'TextSpanEvent 'span-direction 1)
                        (ly:music-property last-element 'articulations))))))
    #{
-       \once \override TextSpanner #'font-size = #-2
-       \once \override TextSpanner #'font-shape = #'upright
-       \once \override TextSpanner #'staff-padding = #3
-       \once \override TextSpanner #'style = #'line
-       \once \override TextSpanner #'to-barline = ##f
-       \once \override TextSpanner #'bound-details =
+       \once \override TextSpanner.font-size = #-2
+       \once \override TextSpanner.font-shape = #'upright
+       \once \override TextSpanner.staff-padding = #3
+       \once \override TextSpanner.style = #'line
+       \once \override TextSpanner.to-barline = ##f
+       \once \override TextSpanner.bound-details =
             #`((left
                 (text . ,#{ \markup { \draw-line #'( 0 . -.5) } #})
                 (Y . 0)
@@ -92,7 +92,7 @@ bbarre =
                 (padding . 0.25)
                 (attach-dir . 2)))
        %% uncomment this line for make full barred
-       \once  \override TextSpanner #'bound-details #'left #'text =  \markup { "B" #str " "}
+       \once  \override TextSpanner.bound-details.left.text =  \markup { #str " "}
        $music
    #})
 
@@ -105,7 +105,7 @@ upperVoiceA = {
     g,16 d' a d b d |
   }
   \set minimumFret = #3
-  \bbarre #"III" { fis,16 c' d c a' c, |
+  \barre #"III" { fis,16 c' d c a' c, |
   g16 b d b g' b, } |
   \set minimumFret = #0
   a,16 a' cis a g' a, |
@@ -115,7 +115,7 @@ upperVoiceA = {
     a,16 e' b e c e |
   }
   \set minimumFret = #3
-  \bbarre #"III" { c,16 c' e c a' c, |
+  \barre #"III" { c,16 c' e c a' c, |
   d,16 b' d b g' b, } |
   \set minimumFret = #0
 }
@@ -145,13 +145,13 @@ upperVoiceB = {
   c,16 e' b, e' a,, e'' |
 
   \set minimumFret = #5
-  \bbarre #"V" {gis,16 d' b' d, e d |
+  \barre #"V" {gis,16 d' b' d, e d |
   a16 c a' c, e c } |
   \set minimumFret = #0
   d,16 d' cis, d' c, d' |
   b,16 d' a, d' g,, d'' |
   \set minimumFret = #5
-  \bbarre "III" { fis,16 c' a' c, d c |
+  \barre "III" { fis,16 c' a' c, d c |
   g16 b g' b, d b } |
   \set minimumFret = #0
 
@@ -170,7 +170,7 @@ upperVoiceC = {
   \repeat unfold 2 {
     d,16 a' c a fis' a, |
     \set minimumFret = #3
-    \bbarre #"III" { g16 b g' b, d b |
+    \barre #"III" { g16 b g' b, d b |
     g16 b e b d b |
     fis16 c' a' c, d c |
     fis,16 c' e c d c } |
@@ -306,6 +306,7 @@ lowerVoice = \relative c {
   <<
     \new Staff = "Guitar" \with {
       midiInstrument = #"acoustic guitar (nylon)"
+      instrumentName = #"Nº 2"
     } <<
       \commonVar
       \clef "treble_8"
