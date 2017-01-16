@@ -1,7 +1,7 @@
-\version "2.16.1"
+\version "2.19.49"
 
 \header {
-  title = "Caprice No. 4"
+  title = "Six Caprices"
   source = "Mainz: B. Schott's Söhne"
   % Statens musikbibliotek - The Music Library of Sweden
   % Boije 91
@@ -9,6 +9,7 @@
   opus = "Op. 26 No. 4"
   year = "ca. 1827"
   mutopiacomposer = "CarcassiM"
+  mutopiatitle = "Six Caprices, No. 4"
   mutopiainstrument = "Guitar"
   style = "Classical"
   copyright = "Creative Commons Attribution-ShareAlike 3.0"
@@ -20,15 +21,15 @@
 
 \paper {
   line-width = 18.0\cm
-  markup-system-spacing #'padding = #2
-%{ uncomment for note entry
-  ragged-bottom = ##t
-  ragged-last = ##t
-%}
+  top-margin = 4\mm                              %-minimum: 8 mm
+  top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
+  markup-system-spacing.basic-distance = #10     %-dist. from header/title to first system
+  top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
+  last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block 
 }
 
-%% Syntax: \bbarre #"text" { notes } - text = any number of box
-bbarre =
+%% Syntax: \barre #"text" { notes } - text = any number of box
+barre =
 #(define-music-function (barre location str music) (string? ly:music?)
    (let ((elts (extract-named-music music '(NoteEvent EventChord))))
      (if (pair? elts)
@@ -41,12 +42,12 @@ bbarre =
                  (cons (make-music 'TextSpanEvent 'span-direction 1)
                        (ly:music-property last-element 'articulations))))))
    #{
-       \once \override TextSpanner #'font-size = #-2
-       \once \override TextSpanner #'font-shape = #'upright
-       \once \override TextSpanner #'staff-padding = #3
-       \once \override TextSpanner #'style = #'line
-       \once \override TextSpanner #'to-barline = ##f
-       \once \override TextSpanner #'bound-details =
+       \once \override TextSpanner.font-size = #-2
+       \once \override TextSpanner.font-shape = #'upright
+       \once \override TextSpanner.staff-padding = #3
+       \once \override TextSpanner.style = #'line
+       \once \override TextSpanner.to-barline = ##f
+       \once \override TextSpanner.bound-details =
             #`((left
                 (text . ,#{ \markup { \draw-line #'( 0 . -.5) } #})
                 (Y . 0)
@@ -58,13 +59,13 @@ bbarre =
                 (padding . 0.25)
                 (attach-dir . 2)))
        %% uncomment this line for make full barred
-       \once  \override TextSpanner #'bound-details #'left #'text =  \markup { "B" #str " "}
+       \once  \override TextSpanner.bound-details.left.text =  \markup { #str " "}
        $music
    #})
 
 
 commonVar = {
-  \override DynamicTextSpanner #'style = #'none
+  \override DynamicTextSpanner.style = #'none
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
 }
@@ -72,7 +73,7 @@ commonVar = {
 \layout {
   \context {
     \Voice
-    \override StringNumber #'stencil = ##f
+    \override StringNumber.stencil = ##f
   }
 }
 
@@ -80,7 +81,7 @@ commonVar = {
 upperVoice = \relative c' {
   \voiceOne
   a,16\f\< a' c, a' d, a'\> dis, a' e a c,\! a' |
-  a,16 a' c a e' a, \set minimumFret=5\bbarre #"V " { a,\p c' e d a' c, |
+  a,16 a' c a e' a, \set minimumFret=5\barre #"V " { a,\p c' e d a' c, |
   a,16 c' e c c' c, a, d' f d b' d, |
   a,16 c' e c a' c, } \set minimumFret=0 a, a' c a e' a, |
   \barNumberCheck #5
@@ -266,6 +267,7 @@ lowerVoice = \relative c {
   <<
     \new Staff = "Guitar" \with {
       midiInstrument = #"acoustic guitar (nylon)"
+      instrumentName = #"Nº 4"
     } <<
       \commonVar
       \clef "treble_8"
@@ -286,6 +288,6 @@ lowerVoice = \relative c {
   >>
   \layout {}
   \midi {
-    \tempo 4 = 100
+    \tempo 4 = 92
   }
 }
