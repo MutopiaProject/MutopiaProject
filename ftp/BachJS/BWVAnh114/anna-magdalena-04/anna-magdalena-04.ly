@@ -1,10 +1,11 @@
 \header {
   enteredby = 	"Allen Garvin"
   maintainer = 	"Allen Garvin"
-  copyright = 	"Public Domain"
+  license = 	"Public Domain"
   filename = 	"anna-magdalena-04.ly"
-  title = 	"Menuet"
-  opus = 	"BWV Anh. 114"
+  title = 	"Menuet in G"
+  subtitle = 	"BWV Anh. 114"
+  opus = 	"attributed to Christian Petzold (1677-1733)"
   composer =	"Johann Sebastian Bach (1685-1750)"
   style =	"Baroque"
   source =	"Bach-Gesellschaft"
@@ -17,13 +18,14 @@
   mutopiadate =       "1725"
   mutopiamoreInfo =  "<p>A guitar arrangement and a trumpet duet transcription of this piece can both be found in the Mutopia archive.</p>"
 
- footer = "Mutopia-2012/11/27-75"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-0.5 MutopiaProject \hspace #-0.5 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-0.5 LilyPond \hspace #-0.5 \teeny .org } by \maintainer \hspace #-0.6 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ footer = "Mutopia-2017/01/19-75"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
 }
-
+#(set-global-staff-size 21)
 \pointAndClickOff
 
-\version "2.14.2"
+\version "2.19.49"
 
 voiceone =  \relative c'' {
   \clef "treble"
@@ -113,7 +115,7 @@ voicetwo =  \relative c' {
     >> |
     b4 a g |
     d'2 r4 |
-    << { \stemUp { r4 r f, } \stemNeutral }
+    << { \stemUp { r4 r fis, } \stemNeutral }
       { \context Voice = "ii" { << \stemDown d2. >> } }
     >> |
     e4 g fis |
@@ -138,10 +140,7 @@ voicetwo =  \relative c' {
   \layout{}
   
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 140 4)
-      }
+    \tempo 4 = 140
     }
 
 }
