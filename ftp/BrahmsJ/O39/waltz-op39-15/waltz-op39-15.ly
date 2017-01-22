@@ -2,9 +2,9 @@
 
 \header {
 title = "Waltz"  composer = "Johannes Brahms, Op 39, No. 15"
-mutopiatitle = "Waltz"
+mutopiatitle = "Waltz No. 15"
 mutopiacomposer = "BrahmsJ"
-mutopiaopus = "Op.39, No. 15"
+mutopiaopus = "Op. 39"
 mutopiainstrument = "Piano"
 date = "19th C"
 source = "Ed. R. Joseffy"
