@@ -12,14 +12,15 @@
   maintainerEmail = "yann (dot) leprince (at) ylep (dot) fr"
   license = "Public Domain"
 
-  mutpiatitle = "Ave Maria: Meditation on the First Prelude in C by J. S. Bach"
+  mutopiatitle = "Ave Maria: Meditation on the First Prelude in C by J. S. Bach"
   mutopiacomposer = "GounodC"
   mutopiainstrument = "Piano, Violin"
 
   % Filled in automatically by Mutopia
-  footer = ""
-  copyright = \markup { }
-  tagline = ##f
+ footer = "Mutopia-2017/01/25-2167"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
+}
 
 %{
   Piano and violin voices are from the 1856 Heugel edition for solo violin,
@@ -34,7 +35,6 @@
   (enteredby Shay Rojansky, edited by Han-Wen Nienhuys, edited by Tobias
   Erbsland, version update by Javier Ruiz-Alma 9/11/2011)
 %}
-}
 
 global = {
   \key c \major
