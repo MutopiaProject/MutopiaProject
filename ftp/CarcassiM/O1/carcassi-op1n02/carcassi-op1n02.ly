@@ -4,17 +4,21 @@
   title = "Trois Sonatines"
   subtitle = "Nº. 2"
   composer = "Matteo Carcassi"
-  opus = "Op. 1 No. 2"
+  opus = "Op. 1"
   style = "Classical"
   source = "Mayence, B. Schött's Sohne. Plate 2702"
   date = "c.1827"
   mutopiacomposer = "CarcassiM"
-  mutopiaOpus = "Op. 1 No. 1"
+  mutopiaopus = "Op. 1 No. 2"
   mutopiainstrument = "Guitar"
   mutopiatitle = "Trois Sonatines, No. 2"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Glen Larsen"
   maintainerEmail = "glenl.glx at gmail.com"
+
+ footer = "Mutopia-2017/01/31-2169"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2017 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
 }
 
 \paper {
