@@ -9,7 +9,7 @@
   source = "Mayence, B. Schött's Sohne. Plate 2702"
   date = "c.1827"
   mutopiacomposer = "CarcassiM"
-  mutopiaOpus = "Op. 1 No. 1"
+  mutopiaopus = "Op. 1 No. 3"
   mutopiainstrument = "Guitar"
   mutopiatitle = "Trois Sonatines, No. 3"
   license = "Creative Commons Attribution-ShareAlike 4.0"
