@@ -38,7 +38,10 @@ midVoice = {
 }
 
 
+larghettoGlobal = {\time 6/8 \key d \major}
+
 larghettoTreble = \fixed c {
+  \larghettoGlobal
   \voiceOne
   \set fingeringOrientations = #'(up)
   \override Fingering.add-stem-support = ##t
@@ -105,6 +108,7 @@ larghettoTreble = \fixed c {
 }
 
 larghettoBass = \fixed c {
+  \larghettoGlobal
   \voiceTwo
   \partial 4. {r4 r8} |
   <d fis>4. q |
@@ -162,43 +166,22 @@ larghettoScore =
   \new Staff = "Guitar" \with {
     \mergeDifferentlyDottedOn
     \mergeDifferentlyHeadedOn
+    instrumentName = \markup{\bold "Nº. 2"}
   } <<
     \clef "treble_8"
-    \time 6/8
-    \key d \major
+    \larghettoGlobal
     \tempo "Larghetto."
     \context Voice = "upperVoice" \larghettoTreble
     \context Voice = "lowerVoice" \larghettoBass
-%{
-    % tabs are not completely developed
-    \new TabStaff = "Guitar tabs" \with {
-      restrainOpenStrings = ##t
-    } <<
-      \clef "moderntab"
-      \time 6/8
-      \key d \major
-      \context TabVoice = "upperVoice" \larghettoTreble
-      \context TabVoice = "lowerVoice" \larghettoBass
-    >>
-%}
   >>
-
-larghettoMidi = <<
-  \new Staff = "midi-guitar" \with {
-    midiInstrument = #"acoustic guitar (nylon)"
-  } <<
-    \clef "treble_8"
-    \time 6/8
-    \key d \major
-    \context Voice = "upperVoice" \larghettoTreble
-    \context Voice = "lowerVoice" \larghettoBass
-  >>
->>
 
 
 %%% RONDO SCORE
 
+rondoGlobal = { \key d \major \time 6/8 }
+
 rondoTreble = \fixed c {
+  \rondoGlobal
   \voiceOne
   \set fingeringOrientations = #'(up)
   \override Fingering.add-stem-support = ##t
@@ -311,6 +294,7 @@ rondoTreble = \fixed c {
 }
 
 rondoBass = \fixed c {
+  \rondoGlobal
   \voiceTwo
   \partial 4. {s4.} |
   fis4. g |
@@ -412,39 +396,14 @@ rondoScore =
     \mergeDifferentlyHeadedOn
   } <<
     \clef "treble_8"
-    \time 6/8
-    \key d \major
+    \rondoGlobal
     \tempo "Allegretto."
     \context Voice = "upperVoice" \rondoTreble
     \context Voice = "lowerVoice" \rondoBass
-%{
-    % tabs are not completely developed
-    \new TabStaff = "Guitar tabs" \with {
-      restrainOpenStrings = ##t
-    } <<
-      \clef "moderntab"
-      \time 6/8
-      \key d \major
-      \context TabVoice = "upperVoice" \rondoTreble
-      \context TabVoice = "lowerVoice" \rondoBass
-    >>
-%}
   >>
 
-rondoMidi = <<
-  \new Staff = "midi-guitar" \with {
-    midiInstrument = #"acoustic guitar (nylon)"
-  } <<
-    \clef "treble_8"
-    \time 6/8
-    \key d \major
-    \context Voice = "upperVoice" \rondoTreble
-    \context Voice = "lowerVoice" \rondoBass
-  >>
->>
 
-
-%%% FINAL ASSEMBLY
+%%% SCORE ASSEMBLY
 
 \score {
   << \larghettoScore >>
@@ -452,16 +411,19 @@ rondoMidi = <<
 }
 
 \score {
-  << \larghettoMidi >>
-  \midi {\tempo 4 = 72}
-}
-
-\score {
   << \rondoScore >>
   \layout {}
 }
 
+%%% MIDI ASSEMBLY
+
 \score {
-  << \rondoMidi >>
-  \midi {\tempo 4 = 108}
+  \new Staff = "midi-guitar" \with {
+    midiInstrument = #"acoustic guitar (nylon)"
+  } <<
+    \clef "treble_8"
+    \context Voice = "upperVoice" {\larghettoTreble \rondoTreble}
+    \context Voice = "lowerVoice" {\larghettoBass \rondoBass}
+  >>
+  \midi {\tempo 4 = 80}
 }
