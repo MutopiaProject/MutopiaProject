@@ -21,9 +21,13 @@
  tagline = ##f
 }
 
-\layout {
-  indent = 60\pt
-  short-indent = 0\pt
+\paper {
+  line-width = 18.0\cm
+  top-margin = 4\mm
+  top-markup-spacing.basic-distance = #6
+  markup-system-spacing.basic-distance = #10
+  top-system-spacing.basic-distance = #12
+  last-bottom-spacing.padding = #2
 }
 
 upperVoice = \relative c' {
@@ -31,8 +35,8 @@ upperVoice = \relative c' {
   \slurDown
   r16 e[ dis e] c[ e] b[ e] a,[ e'] e,,[ e''] c,[ e'] b,[ e'] |
   r16 e[ dis e] c[ e] b[ e] a,[ e'] e,,[ e''] c,[ e'] b,[ e'] |
-  r16 e[ dis e] d[ e] c[ d] b[ e] e,,[ e''] d,[ e'] c,[ e'] |
-  r16 e[ dis e] d[ e] c[ d] b[ e] e,,[ e''] gis,,[ e''] e,,[ e''] |
+  r16 e[ dis e] d[ e] c\3[ d] b\3[ e] e,,[ e''] d,[ e'] c,[ e'] |
+  r16 e[ dis e] d[ e] c\3[ d] b\3[ e] e,,[ e''] gis,,[ e''] e,,[ e''] |
   r16 e[ dis e] c[ e] b[ e] a,[ e'] e,,[ e''] c,[ e'] b,[ e'] |
   r16 e[ dis e] c[ e] b[ e] a,[ e'] e,,[ e''] c,[ e'] b,[ e'] |
   r16 g,[ b g] f'[ g, e' g,] d[ g g, g'] d[ g c, g'] |
@@ -77,8 +81,8 @@ lowerVoice = \relative c {
   \voiceTwo
   a4 c'8[ b] a[ e,] c'[ b] |
   a4 c'8[ b] a[ e,] c'[ b] |
-  gis4 d''8[ c] b[ e,,] d'[ c] |
-  b4 d'8[ c] b[ e,,] g[ e] |
+  gis4 d''8[ c\3] b\3[ e,,] d'\5[ c] |
+  b4 d'8[ c\3] b\3[ e,,] g[ e] |
   a4 c'8[ b] a[ e,] c'[ b] |
   a4 c'8[ b] a[ e,] c'[ b] |
   g2 r8 g[ d' c] |
@@ -95,7 +99,7 @@ lowerVoice = \relative c {
   e1 |
   e1 |
   e4 e e e |
-  e4 d' d d |
+  e4 d' c b |
   a8[ e] c'[ b] a[ e] c'[ b] |
   a2 r |
   d8[ a] f'[ e] d[ a] f'[ e] |
@@ -113,8 +117,9 @@ lowerVoice = \relative c {
 
 \score {
   <<
-    \new Staff = "Guitar"
-    <<
+    \new Staff = "Guitar" \with {
+      \override StringNumber #'stencil = ##f
+    } <<
       \set Staff.instrumentName = #"Allegro."
       \set Staff.midiInstrument = #"acoustic guitar (nylon)"
       \clef "treble_8"
@@ -123,7 +128,7 @@ lowerVoice = \relative c {
       \context Voice = "upperVoice" \upperVoice
       \context Voice = "lowerVoice" \lowerVoice
     >>
-%{
+%%{
     \new TabStaff = "guitar tab"
     <<
       \clef moderntab
