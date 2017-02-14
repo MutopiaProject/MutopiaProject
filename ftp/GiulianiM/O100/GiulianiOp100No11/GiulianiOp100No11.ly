@@ -128,7 +128,7 @@ lowerVoice = \relative c {
       \context Voice = "upperVoice" \upperVoice
       \context Voice = "lowerVoice" \lowerVoice
     >>
-%%{
+%{
     \new TabStaff = "guitar tab"
     <<
       \clef moderntab
