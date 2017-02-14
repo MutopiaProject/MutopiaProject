@@ -30,7 +30,7 @@
   last-bottom-spacing.padding = #2
 }
 
-mbreak = {\break}
+mbreak = {} % {\break}
 
 midVoice = {
   \voiceThree\stemDown
