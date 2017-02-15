@@ -520,7 +520,7 @@ dyn = {
   bottom-margin = 6\mm
   system-system-spacing.basic-distance = #19
   
-  #(set-paper-size "letter") % for testing only
+  % #(set-paper-size "letter") % for testing only
 }
 
 \score {
