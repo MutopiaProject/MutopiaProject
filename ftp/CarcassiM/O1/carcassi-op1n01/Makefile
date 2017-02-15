@@ -1,1 +1,1 @@
-../../../../UsefulScripts/Makefile.single_ly_multiple_output
+../../../../UsefulScripts/Makefile.single_ly
