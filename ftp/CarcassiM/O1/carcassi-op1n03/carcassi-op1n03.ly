@@ -37,13 +37,17 @@ midVoice = {
   \set fingeringOrientations = #'(left)
 }
 
+%% ANDANTE
+
+andanteGlobal = { \time 6/8 \key a \major }
 
 andanteTreble = \fixed c {
+  \andanteGlobal
   \voiceOne
   \set fingeringOrientations = #'(up)
   \override Fingering.add-stem-support = ##t
 
-  \partial 4. {<a cis>8\p <b d'> <bis dis'>} |
+  \partial 4. {<a cis'>8\p <b d'> <bis dis'>} |
   e'8 gis'( a') fis' gis'( a') |
   e'8 fis'16 gis' a' b' \acciaccatura{a'16[ b']} cis''8[ b'16 a'( \slashedGrace{a'8} gis'16) d'] |
   e'8 e' e' e' e' e' |
@@ -73,7 +77,7 @@ andanteTreble = \fixed c {
     e8 fis16 gis a b \acciaccatura{a16[ b]} cis'8 b16 a \acciaccatura{a8} gis16 fis\f |
     e8 a <a, cis> <cis e> <b, d> b, |
   }
-  a4 \bar "||" \key a \minor s8^\markup{\bold "Minore."} \ff a8 c <b d'> |
+  a4 \bar "||" \key a \minor s8^\markup{\bold "Minore."} \ff a8 c' <b d'> |
 
   \mbreak
   <c' e'>8. <b d'>16 <c' e'>8 <d' f'>4 q8 |
@@ -124,6 +128,7 @@ andanteTreble = \fixed c {
 }
 
 andanteBass = \fixed c {
+  \andanteGlobal
   \voiceTwo
   \partial 4. {s4 s8} |
   <a, cis'>4. <a, d'> |
@@ -160,13 +165,13 @@ andanteBass = \fixed c {
   c8 a, g, f,4. |
   b,8 gis, fis, e,4. |
   r8 a, b, c d dis |
-  <d gis>4. e, |
+  <e gis>4. e, |
   e,4. e, |
 
   e,4 r8 r4 r8 |
   r8 <gis b>8 <a c'> <ais cis'> b bis |
-  <a, cis'>4. q | % a \major
-  q4. r4 r8 |
+  <a, cis'>4. <a, d'> | % a \major
+  <a, cis'>4. r4 r8 |
   <e cis'>4. e,4 e8 |
 
   s2. |
@@ -194,46 +199,24 @@ andanteScore =
     \mergeDifferentlyHeadedOn
   } <<
     \clef "treble_8"
-    \time 6/8
-    \key a \major
     \tempo "Andante grazioso."
     \context Voice = "upperVoice" \andanteTreble
     \context Voice = "lowerVoice" \andanteBass
-%{
-    % tabs are not completely developed
-    \new TabStaff = "Guitar tabs" \with {
-      restrainOpenStrings = ##t
-    } <<
-      \clef "moderntab"
-      \time 6/8
-      \key a \major
-      \context TabVoice = "upperVoice" \andanteTreble
-      \context TabVoice = "lowerVoice" \andanteBass
-    >>
-%}
   >>
 
-andanteMidi = <<
-  \new Staff = "midi-guitar" \with {
-    midiInstrument = #"acoustic guitar (nylon)"
-  } <<
-    \clef "treble_8"
-    \time 6/8
-    \key d \major
-    \context Voice = "upperVoice" \andanteTreble
-    \context Voice = "lowerVoice" \andanteBass
-  >>
->>
 
 %%% RONDO
 
+rondoGlobal = { \time 2/4 \key a \major }
+
 rondoTreble = \fixed c {
+  \rondoGlobal
   \voiceOne
   \set fingeringOrientations = #'(up)
   \override Fingering.add-stem-support = ##t
 
   \fixed c' {
-    s4 \grace{d'8-2} cis'16.[ b32 cis'16. e'32] |
+    s4 \grace{d'8-2} cis'16.\p[ b32 cis'16. e'32] |
     a8 a \grace{b8} a16. gis32 a16. cis'32 |
     e4-0 e16 dis d b, |
     cis16 e b, e a, e cis e |
@@ -274,7 +257,7 @@ rondoTreble = \fixed c {
   \fixed c' {
     <cis e ais>8-> <d b> \slashedGrace{a8} gis16. fisis32 gis16. a32 |
     <cis e ais>8-> <d b> \slashedGrace{cis'8} b16. ais32 b16. cis'32 |
-    d'8\> <f gis cis'> <e gis d'> <f gis d'>\! |
+    d'8\> <f gis d'> <e gis d'> <f gis d'>\! |
     <e gis d'>4\fermata \slashedGrace{d'8} cis'16. b32 cis'16. e'32 |
     a8 a \slashedGrace{b8} a16. gis32 a16. cis'32 |
     e4 e16. dis32 d16. b,32 |
@@ -285,7 +268,7 @@ rondoTreble = \fixed c {
   b4 \slashedGrace{d''8} cis''16. b'32 cis''16. e''32 |
   a'8 a' \slashedGrace{b'8} a'16. gis'32 a'16. cis''32 |
   e'4 e'16. dis'32 dis'16. b32 |
-  cis'16 e' a e' b e' b e' |
+  cis'16 e' a e' b e' gis e' |
   <cis a>4
 
   \mbreak
@@ -363,6 +346,7 @@ rondoTreble = \fixed c {
 }
 
 rondoBass = \fixed c {
+  \rondoGlobal
   \voiceTwo
   s4 r4 |
   a,4 r |
@@ -465,7 +449,6 @@ rondoBass = \fixed c {
   a,2
 }
 
-
 rondoScore =
   \new Staff = "Guitar" \with {
     instrumentName = \markup{\bold "Rondo."}
@@ -473,39 +456,13 @@ rondoScore =
     \mergeDifferentlyHeadedOn
   } <<
     \clef "treble_8"
-    \time 2/4
-    \key a \major
     \tempo "Allegretto."
     \context Voice = "upperVoice" \rondoTreble
     \context Voice = "lowerVoice" \rondoBass
-%{
-    % tabs are not completely developed
-    \new TabStaff = "Guitar tabs" \with {
-      restrainOpenStrings = ##t
-    } <<
-      \clef "moderntab"
-      \time 2/4
-      \key a \major
-      \context TabVoice = "upperVoice" \rondoTreble
-      \context TabVoice = "lowerVoice" \rondoBass
-    >>
-%}
   >>
 
-rondoMidi = <<
-  \new Staff = "midi-guitar" \with {
-    midiInstrument = #"acoustic guitar (nylon)"
-  } <<
-    \clef "treble_8"
-    \time 2/4
-    \key a \major
-    \context Voice = "upperVoice" \rondoTreble
-    \context Voice = "lowerVoice" \rondoBass
-  >>
->>
 
-
-%%% FINAL ASSEMBLY
+%%% SCORE ASSEMBLY
 
 \score {
   << \andanteScore >>
@@ -513,16 +470,19 @@ rondoMidi = <<
 }
 
 \score {
-  << \andanteMidi >>
-  \midi {\tempo 4 = 84}
-}
-
-\score {
   << \rondoScore >>
   \layout {}
 }
 
+%%% MIDI ASSEMBLY
+
 \score {
-  << \rondoMidi >>
-  \midi {\tempo 4 = 80}
+  \new Staff = "midi-guitar" \with {
+    midiInstrument = #"acoustic guitar (nylon)"
+  } <<
+    \clef "treble_8"
+    \context Voice = "upperVoice" {\andanteTreble \rondoTreble}
+    \context Voice = "lowerVoice" {\andanteBass \rondoBass}
+  >>
+  \midi {\tempo 4 = 84}
 }
