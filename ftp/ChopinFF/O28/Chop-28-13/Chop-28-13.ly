@@ -351,7 +351,7 @@ dyn = {
   bottom-margin = 6\mm
   system-system-spacing.basic-distance = #19
   
-  #(set-paper-size "letter") % for testing only
+  % #(set-paper-size "letter") % for testing only
 }
 
 \score {
@@ -362,6 +362,10 @@ dyn = {
     \new Staff = "lower" \leftHand
   >>
   \layout {
+    \context {
+      \Score
+      \remove "Bar_number_engraver"
+    }
   }
   \midi {
   }
