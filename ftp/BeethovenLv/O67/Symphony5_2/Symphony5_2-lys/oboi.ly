@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.16.2"
 
  oboi = {
  \set Staff.instrumentName = "Oboi.          "
@@ -13,7 +13,8 @@
  << { ees''16\p } \\ { c''16 } >> r16 << { ees''16 } \\ { c''16 } >> r16
  <c'' ees''>8 r r R4. R4. R4. R4. R4. << { f''8\rest f''8\rest ees''16.\pp( f''32) } \\ { R4. } >>
  <ees'' fis''>4.\ff <e'' g''>16. <c'' e''>32 <g' c''>8\staccato[ <b' d''>\staccato]
- <g' c''>8 r8 << { e'16. g'32 } \\ { e'16. g'32 } >> <e' c''>8\ff_\markup { \italic "   sempre" }[ <e' c''> <g' d''>]
+ <g' c''>8 r8 << { e'16. g'32 } \\ { e'16. g'32 } >> 
+<e' c''>8_\markup { \dynamic ff \italic "sempre" }[ <e' c''> <g' d''>]
  <c'' e''>4 <e' c''>16.[ <g' d''>32] <c'' e''>8[ <c'' e''> < d'' f''>] <e'' g''>4\sf <c'' e''>16.[ <d'' f''>32]
  <e'' g''>4\sf <c'' e''>16.[ <d'' f''>32] <e'' g''>4.\sf\>~ <e'' g''>8\!\p r8 r
  R4. R4. R4. R4. R4. R4. R4. R4. R4. R4. R4. R4. R4.
@@ -28,7 +29,7 @@
  <g' c''>8 r << { e'16.[ g'32] } \\ { e'16.[ g'32] } >> <e' c''>8[ <e' c''> <g' d''>]
  <c'' e''>4 <e' c''>16.[ <g' d''>32] <c'' e''>8[ <c'' e''> <d'' f''>]
  <e'' g''>4\sf <c'' e''>16.[ <d'' f''>32] <e'' g''>4\sf <c'' e''>16.[ <d'' f''>32]
- <e'' g''>4.\f_\markup { \italic "   dimin." }~ <e'' g''>8\p r8 r R4. R4. R4.
+ <e'' g''>4._\markup { \dynamic f \italic "dimin." }~ <e'' g''>8\p r8 r R4. R4. R4.
  R4. R4. R4. R4. R4. R4. r8 r8 r16 << { ees''16\staccato ees''4.\f\>~ ees''4.\!\p~
  ees''4.~ ees''4.( e''4.) f''4.~ f''8 ees''!4~ ees''4.\pp c''8 e''8\rest e''8\rest } \\
  { ees''16\ff ees''8 a'8\rest a'8\rest R4. R4. R4. R4. R4. R4. R4. R4. } >> R4. R4. R4.
@@ -49,7 +50,7 @@
  r8 r << { e'16. g'32 } \\ { e'16.\ff g'32 } >> <e' c''>8[ <e' c''> <b' d''>] <c'' e''>4.~
  <c'' e''>4 <e' c''>16.[ <b' d''>32] <c'' e''>8[ <c'' e''> <d'' f''>]
  <e'' g''>4.~ <e'' g''>4 <c'' e''>16.[ <d'' f''>32] <e'' g''>4 <c'' e''>16.[ <d'' f''>32] <e'' g''>4
- <c'' e''>16.[ <d'' f''>32] \setTextDim <e'' g''>4.\>~ <e'' g''>4.~ <e'' g''>8\!\p r8 r R4. R4.
+ <c'' e''>16.[ <d'' f''>32]  <e'' g''>4.\>~ <e'' g''>4.~ <e'' g''>8\!\p r8 r R4. R4.
  R4. R4. R4. R4. R4. R4.
  << { e''8\rest ees''16\p e''16\rest e''8\rest e''8\rest ees''16 e''16\rest e''8\rest
  e''8\rest ees''16 e''16\rest e''8\rest e''8\rest ges''16 e''16\rest e''8\rest e''8\rest ges''16 e''16\rest e''8\rest
@@ -59,14 +60,14 @@
  r8 r16 <ees' ees''>_\markup { \italic "cresc." }[ <ees' ees''> <ees' ees''>]
  <ees' ees''>4.\ff <f' f''>4. <f'' g''>4. << { g''4. f''4. ees''4. } \\ { e''4 c''8~ c''8 des''4 bes'8 c''4 } >>
  <ees'' bes''>8 r r <ees'' c'''> r r <ees'' bes''> r r << { c'''16 } \\ { ees''16 } >> r16 r8
- << { aes'16.( c''32) ees''4( f''16 g'') aes''4.\p_\markup { \italic "    dolce" } ees''4.
+ << { aes'16.( c''32) ees''4( f''16 g'') aes''4._\markup {\dynamic p \italic dolce } ees''4.
  ees''8[ ees'' ees''] ees''8 f''8\rest f''8\rest } \\ { aes'16.( c''32) ees''8\sf g'8\rest g'8\rest R4. R4. R4. R4. } >>
  R4. R4. R4. R4. R4. R4. R4. R4.
  R4. R4. << { f''8\rest \grace { ees''16[ f''] } ges''8\p\staccato f''8\rest
  f''8\rest \grace { des''16[ ees''] } f''8\staccato f''8\rest f''8\rest \grace { des''16[ ees''] } fes''8\staccato f''8\rest
  ees''8 f''8\rest f''8\rest } \\ { R4. R4. R4. R4. } >>
  r8 r << { ees''8( c'') } \\ { bes'8\f( aes') } >> r8 r r8 r << { bes''8( c''') } \\ { g''8\f( aes'') } >> r8 r
- << { ees''8[ ees''] } \\ { c''8\ff[ bes'] } >> r8 << { f''8\rest ees''8([ f''16 g'']) aes''4.\p_\markup { \italic "    dolce" }
+ << { ees''8[ ees''] } \\ { c''8\ff[ bes'] } >> r8 << { f''8\rest ees''8([ f''16 g'']) aes''4._\markup { \dynamic p\italic dolce }
  ees''4. ees''8[ ees'' ees''] ees''8 f''8\rest f''8\rest } \\ { R4. R4. R4. R4. R4. } >> R4.
  r8 r8 r16 << { ees''16 g''8[ aes''8.] } \\ { ees''16 ees''8[ ees''8.\sf] } >> r16 R4.
  R4. R4. R4. R4. R4. R4. R4. R4. R4. R4. R4.
