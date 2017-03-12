@@ -21,7 +21,8 @@
 
 
 \header {
-  title = "Symphony No. 5 - Opus 67 ( 1st Movement )"
+  title = "Symphony No. 5 - Opus 67"
+  subtitle = "1st Movement"
   composer =  "Ludwig van Beethoven"
   mutopiatitle = "Symphony No. 5 - Opus 67 (1st Movement)"
   mutopiacomposer = "BeethovenLv"
