@@ -5,13 +5,15 @@ arco = \markup{\italic "arco"}
 
 
  violinoone = {
- \set Staff.instrumentName = "Violino I.    "
+ %\set Staff.instrumentName = "Violino I.    "
  \set Staff.midiInstrument = "violin"
+ \override MultiMeasureRest #'expand-limit = 1
+ \compressFullBarRests
+
  \clef treble
  \key aes \major
  \time 3/8
- \partial 8 r8 R4. R4. R4. R4. R4. R4. R4. r8 r8 aes'16.\p( c''32) ees''4.\f( c''8\p) r r R4. R4. R4. R4.
- r8 r16 aes'16\p([ c'' ees'']) ees''16([ des'']) c''8. c''16 c''16_\markup { \italic "cresc." }( bes') aes'8.[ aes'16]
+ \partial 8 r8 R4.*7 r8 r8 aes'16.\p( c''32) ees''4.\f( c''8\p) r r R4.*4 r8 r16 aes'16\p([ c'' ees'']) ees''16([ des'']) c''8. c''16 c''16_\markup { \italic "cresc." }( bes') aes'8.[ aes'16]
  g'4\f \times 2/3 { g'16([ aes' bes']) } aes'8\p r r r8 r \times 2/3 { g'16([ aes' bes']) } aes'16 r aes'\p r aes' r
  aes'8 r r r8 aes'8_\markup { \dynamic p \italic "dolce" }( bes' c'') r8 r r8 c''8( des'' ees'') r ees''16.\pp( f''32)
  ges''4 ees''16.( f''32) ges''4 ees''16.( f''32) fis''4.\ff
@@ -27,7 +29,7 @@ arco = \markup{\italic "arco"}
  aes16\p g'16^\arco_\markup { \italic "cresc." }[ \acciaccatura bes'32 aes'16 g' aes' c'']
  d''16\f( ees'' f'' ees'' d'' ees'') c''8\p r r R4.
  \override TupletNumber #'transparent = ##f
- R4. R4. R4. r8 r16 aes'16\p([ c'' ees'']) ees''16([ des'']) c''8. c''16 c''16_\markup { \italic "cresc." }([ bes'])
+ R4.*3 r8 r16 aes'16\p([ c'' ees'']) ees''16([ des'']) c''8. c''16 c''16_\markup { \italic "cresc." }([ bes'])
  aes'8. aes'16 g'4\f \times 2/3 { g'16([ aes' bes']) } aes'8\p r r r8 r \times 2/3 { g'16\f([ aes' bes']) }
  aes'16 r aes'\p r aes' r aes'8 r r
  r8 aes'8_\markup { \italic "dolce" }( bes' c'') r r r8 c''( des'' ees'') r ees''16.\pp( f''32)
@@ -51,9 +53,8 @@ arco = \markup{\italic "arco"}
  bes''4:16 aes''16 aes'' <ees' bes' g''>8~ g''32 ees'( f' g' aes'[ bes' c'' d''])
  ees''8~ ees''16( f''32 g'' aes''[ bes'' c''' d''']) ees'''4^\fermata des'!8\pp des'8 r des' des' r des'
  des'8 r des' des'8_\markup { \italic "sempre" \dynamic  pp } r des' des' r des'
- des'8 r c' c' r c' c' r <aes f'> <aes f'>8\f r r R4. R4. R4. R4. R4. R4.
- R4. R4. R4. R4. r8 r r16 des''16\p\staccato c''16\staccato[ bes'\staccato aes'\staccato] r r8
- R4. R4. r8 r e'16.\ff g'32 <g e' c''>8[ <g e' c''> <b g' d''>] <c' g' e''>4.~ e''4 c''16.[ d''32]
+ des'8 r c' c' r c' c' r <aes f'> <aes f'>8\f r r R4.*10 r8 r r16 des''16\p\staccato c''16\staccato[ bes'\staccato aes'\staccato] r r8
+ R4.*2 r8 r e'16.\ff g'32 <g e' c''>8[ <g e' c''> <b g' d''>] <c' g' e''>4.~ e''4 c''16.[ d''32]
  <e' c'' e''>8[ <e' c'' e''> <f' c'' f''>] <e' c'' g''>4.~ g''4 e''16.[ f''32] <e' c'' g''>4 e''16.[ f''32]
  <e' c'' g''>4 e''16.[ f''32] <e' c'' g''>4 r8 r8 r c'16.\p([ e'32] g'8\staccato) r8 c'16.([ f'32] aes'8\staccato)
  r8 ees'!16.([ g'32]) \override TupletNumber #'transparent = ##t
@@ -73,15 +74,12 @@ arco = \markup{\italic "arco"}
  des''!([ bes' ges' bes'] des''[ bes' ges' bes'] des''[ bes' ges' des''])
  ces''([ aes' ees' aes'] ces''[ aes' ees' aes'] ces''[ aes' ees' ces''])
  bes'_\markup { \italic "cresc." }([ g'! ees' g'] bes'[ ees' ces'' ees'] aes'[ ees' ces'' ees'])
- bes'([ g' ees' g'] bes'[ ees' ces'' ees'] aes'[ ees' ces'' ees']) bes'16\f\staccato[ <ees' ees''>\staccato] r8 r R4.
- R4. r8 c''16_\markup { \dynamic p \italic "dolce" }([ des'' ees'' f'']) a'([ bes' c'' des'']) r8 R4. R4.
- r8 r r32  ees''32\cresc([ f'' g''] aes''[ bes'' c''' des''']) ees'''8.( des'''16\!)
+ bes'([ g' ees' g'] bes'[ ees' ces'' ees'] aes'[ ees' ces'' ees']) bes'16\f\staccato[ <ees' ees''>\staccato] r8 r R4.*2 r8 c''16_\markup { \dynamic p \italic "dolce" }([ des'' ees'' f'']) a'([ bes' c'' des'']) r8 R4.*2 r8 r r32  ees''32\cresc([ f'' g''] aes''[ bes'' c''' des''']) ees'''8.( des'''16\!)
  c'''8\ff[ c'''16.( bes''32 aes''16. c'''32)] f''8[~ f''16.( a''32 bes''16. c'''32)]
  des'''16.([ c'''32 bes''16. des'''32 g''16. bes''32]) e''16.([ g''32]) c'''8[~ c'''16. bes''32]
  a''16.([ f''32]) bes''8.( des'''16) g''16.([ ees''32]) aes''!8[ aes''16.( c'''32)]
  ees'''4.\sf c'''32 aes32[ bes c'] des'[ ees' f' g'] aes'[ bes' c'' des''] <ees' ees''>8 r r
- <g ees' c''>32[ aes' bes' c''] des''[ ees'' f'' g''] aes''[ bes'' c''' des'''] ees'''8 r r R4. R4.
- R4. r8 r16 aes'16\p([ c'' ees'']) ees''16([ des'']) c''8. c''16 c''16([ bes']) aes'8. aes'16
+ <g ees' c''>32[ aes' bes' c''] des''[ ees'' f'' g''] aes''[ bes'' c''' des'''] ees'''8 r r R4.*3 r8 r16 aes'16\p([ c'' ees'']) ees''16([ des'']) c''8. c''16 c''16([ bes']) aes'8. aes'16
  g'4 \times 2/3 { g'16([ aes' bes']) } aes'8 r \times 2/3 { g'16([ aes' bes']) } aes'8 r \times 2/3 { g'16([ aes' bes']) }
  aes'16[\pp %^\markup { \large "Piu moto." }
  aes'] r aes' r aes' r16 aes' r aes' r aes' r16 aes' r aes' r aes'
@@ -90,14 +88,14 @@ arco = \markup{\italic "arco"}
  aes'8[ c'' ees''\f] c''8) r16. aes32\p_\markup { \italic "    cresc." }([ c'16. ees'32])
  \override TupletNumber #'transparent = ##f
  \times 2/3 { aes'16([ c'' ees'']) } aes''8( bes''\f c''') \times 2/3 { r16 aes16_\markup { \dynamic p \italic "cresc." }([ c'] }
- \times 2/3 { ees'16[ aes' c'']) } \times 2/3 { ees''16\ff([ aes'' c''']) } ees'''8 r8 R4. R4. R4. R4.
- r8 r16 aes'16_\markup {\dynamic p \italic dolce }([ c'' ees'']) ees''16_\markup { \italic "cresc." }([ des''] c''8.)[ c''16]
+ \times 2/3 { ees'16[ aes' c'']) } \times 2/3 { ees''16\ff([ aes'' c''']) } ees'''8 r8 R4.*4 r8 r16 aes'16_\markup {\dynamic p \italic dolce }([ c'' ees'']) ees''16_\markup { \italic "cresc." }([ des''] c''8.)[ c''16]
  g''16\f([ f''] ees''8.\sf)[ ees''16] ees''16\f([ des''] c''8.\sf\>)[ c''16] bes'8\!\p r8 r
  ees'8\pp r r aes'4.~ aes'4 aes'16.( c''32) ees''4.~ ees''4 c''16.( ees''32) aes''4 c''16.( ees''32 aes''4) r8
- R4. R4. R4. R4. R4. r8 r
+ R4.*5 r8 r
  \override TupletNumber #'transparent = ##t \override TupletBracket #'transparent = ##t
  \set tupletSpannerDuration = #(ly:make-moment 1 4) \times 2/3 { aes'16\f\staccato[ c'\staccato ees'\staccato]
  aes'[ c' ees'] aes'[ c'' ees''] <c'' aes''>[ <c'' aes''> <c'' aes''>] }
  <c'' aes''>8\ff r r <g' ees'' bes''>8\ff r r <aes' ees'' c'''>8 r <g' ees'' bes''>\p\staccato
  <aes' ees'' c'''>8\staccato r r <ees' bes' g''>\ff r r <aes ees' c'' aes''>8 r \bar "|."
 }
+

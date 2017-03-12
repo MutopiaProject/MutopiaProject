@@ -21,7 +21,8 @@
 \include "struktur.ly"
 
 \header {
-  title = "Symphony No. 5 - Opus 67 (2nd Movement)"
+  title = "Symphony No. 5 - Opus 67"
+  subtitle = "2nd Movement"
   composer =  "Ludwig van Beethoven"
   mutopiatitle = "Symphony No. 5 - Opus 67 (2nd Movement)"
   mutopiacomposer = "BeethovenLv"

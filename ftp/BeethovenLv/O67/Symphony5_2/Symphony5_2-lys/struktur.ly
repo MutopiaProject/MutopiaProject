@@ -4,7 +4,7 @@
 \header {
   title = "5. Symphonie, Op. 67"
 %  subtitle = "Op. 67"
- subtitle = "2. Satz"
+  subtitle = "2. Satz"
  % instrument = "Violoncello"
   composer =  "Ludwig van Beethoven" 
   %opus = "Op. 67"
@@ -20,8 +20,7 @@ struktur = {
  \partial 8
  s8^\markup{\fontsize #1 \bold "Andante con moto"} 
 
- s4.
- s4.*203
+ s4.*204
  s8^\markup{\large \bold "più moto"} s4
 
  s4.*12
