@@ -6,9 +6,7 @@ pizz = \markup{\italic "pizz."}
 arco = \markup{\italic "arco"} 
 crescendo = \markup{\italic "cresc."} 
 
-\header {
- instrument = "Basso"
-}
+
 
  basso = {
 % \set Staff.instrumentName = "Basso."

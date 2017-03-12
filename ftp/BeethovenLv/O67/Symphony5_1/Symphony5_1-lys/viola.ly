@@ -5,9 +5,6 @@ pizz = \markup{\italic "pizz."}
 arco = \markup{\italic "arco"} 
 crescendo = \markup{\italic "cresc."} 
 
-\header {
- instrument = "Viola"
-}
 
 
 viola = {

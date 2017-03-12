@@ -11,6 +11,9 @@
 %#(set-global-staff-size 20.5)
 
 
+\header {
+ instrument = "Viola"
+}
 
 
 

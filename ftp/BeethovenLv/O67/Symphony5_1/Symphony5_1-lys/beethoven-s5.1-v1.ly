@@ -8,6 +8,10 @@
 
 \include "jhe-title.ly"
 
+\header {
+ instrument = "Violino I"
+}
+
 
 
 % have pagebreaks only in parts, not in partiture

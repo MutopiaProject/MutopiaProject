@@ -9,6 +9,10 @@
 
 %#(set-global-staff-size 20.5)
 
+\header {
+ instrument = "Violoncello"
+}
+
 
 % have pagebreaks only in parts, not in partiture
 partPageBreaks = {
