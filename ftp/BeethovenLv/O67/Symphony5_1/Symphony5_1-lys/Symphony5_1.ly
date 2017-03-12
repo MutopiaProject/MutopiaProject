@@ -41,101 +41,92 @@
 
 
 \score {
+  \new StaffGroup { <<
 
- \new StaffGroup {
- <<
+    \new Staff = "one" {
+      \set Staff.instrumentName = "Flauti."
+      \set Staff.shortInstrumentName = "Fl"
+      <<
+        \context Voice = "text"\struktur
+        %\context Voice = "umbruch"\partiturUmbruch
+        \context Voice = fl\flauti
+      >>
+    }
 
- \new Staff = "one" {
+    \new Staff = "two" {
+      \set Staff.shortInstrumentName = "Ob"
+      \oboi
+    }
 
- %\context Staff = "ungTanzVvc"
- %   <<
- %     \context Voice = "text" \struktur
- %     \context Voice = vc \basso
- %   >>
-\set Staff.shortInstrumentName = "Fl"
- <<
- \context Voice = "text"\struktur
- %\context Voice = "umbruch"\partiturUmbruch
- \context Voice = fl\flauti
- >>
- }
+    \new Staff = "three" {
+      \set Staff.shortInstrumentName = "Cl"
+      \transposition bes
+      \clarinetti
+    }
 
- \new Staff = "two" {
-\set Staff.shortInstrumentName = "Ob"
- \oboi
- }
+    \new Staff = "four" {
+      \set Staff.shortInstrumentName = "Fa"
+      \fagotti
+    }
 
- \new Staff = "three" {
-\set Staff.shortInstrumentName = "Cl"
- \transposition bes
- \clarinetti
- }
+    \new Staff = "five" {
+     \set Staff.shortInstrumentName = "Co"
+     \transposition ees
+     \cornies
+    }
 
- \new Staff = "four" {
-\set Staff.shortInstrumentName = "Fa"
- \fagotti
- }
+    \new Staff = "six" {
+      \set Staff.shortInstrumentName = "Tb"
+      \trombec
+    }
 
- \new Staff = "five" {
-\set Staff.shortInstrumentName = "Co"
- \transposition ees
- \cornies
- }
+    \new Staff = "seven" {
+      \set Staff.shortInstrumentName = "Ti"
+      \timpani
+    }
 
- \new Staff = "six" {
-\set Staff.shortInstrumentName = "Tb"
- \trombec
- }
+    \new PianoStaff <<
+      \new Staff = "eight" {
+        \set Staff.instrumentName = "Violino I."
+        \set Staff.shortInstrumentName = "Vi1"
+        \violinoone
+      }
 
- \new Staff = "seven" {
-\set Staff.shortInstrumentName = "Ti"
- \timpani
- }
+      \new Staff = "nine" {
+        \set Staff.instrumentName = "Violino II."
+        \set Staff.shortInstrumentName = "Vi2"
+        \violinotwo
+      }
+    >>
 
- \new PianoStaff <<
- \new Staff = "eight" {
- \set Staff.shortInstrumentName = "Vi1"
- \violinoone
- }
+    \new Staff = "ten" {
+      \set Staff.instrumentName = "Viola."
+      \set Staff.shortInstrumentName = "Va"
+      \viola
+    }
 
- \new Staff = "nine" {
- \set Staff.shortInstrumentName = "Vi2"
- \violinotwo
- }
- >>
+    \new PianoStaff <<
+      \new Staff = "eleven" {
+       \set Staff.instrumentName = "Violoncello."
+       \set Staff.shortInstrumentName = "Vc"
+       \violoncello
+      }
 
- \new Staff = "ten" {
- \set Staff.instrumentName = "Viola."
- \set Staff.shortInstrumentName = "Va"
- \viola
- }
+      \new Staff = "twelve" {
+        \set Staff.instrumentName = "Basoo."
+        \set Staff.shortInstrumentName = "Cb"
+        \basso
+      }
+     >>
+  >> }
 
- \new PianoStaff <<
- \new Staff = "eleven" {
-\set Staff.instrumentName = "Violoncello."
- \set Staff.shortInstrumentName = "Vc"
- \violoncello
- }
-
- \new Staff = "twelve" {
-\set Staff.instrumentName = "Basoo."
- \set Staff.shortInstrumentName = "Cb"
- \basso
- }
- >>
-
- >>
- }
-
- \layout { 
- \context {
+  \layout { 
+    \context {
       \Staff \RemoveEmptyStaves
       %% To use the setting globally, uncomment the following line:
       %%\override VerticalAxisGroup #'remove-first = ##t
-       
     }
-}
-
+  }
 }
 
 %{
@@ -208,8 +199,8 @@
 }
 %}
 
- \paper {
+\paper {
  after-title-space = 2\cm
  left-margin = 2.0\cm
  paper-width = 22\cm
- }
+}
