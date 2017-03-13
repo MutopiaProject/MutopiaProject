@@ -44,7 +44,7 @@ arco = \markup{\italic "arco"}
  c''8[ c''] r16 c'' c''8[ des''] r16 des'' bes'8[ c''] r16 c''
  bes'8\pp[ bes' bes'] c''32 ees'32^\arco_\markup { \italic "dolce" }[ des' c'] des'[ ees' f' g']
  \acciaccatura bes'64 aes'32[ g' aes' bes']
- c''32\pp_\markup { \italic "     sempre" }([ bes' aes' g'] aes'[ bes' aes' g'] aes'[ bes' c'' aes'])
+ c''32_\markup { \dynamic pp \italic sempre }([ bes' aes' g'] aes'[ bes' aes' g'] aes'[ bes' c'' aes'])
  f'([ g' f' e'] f'[ a' bes' a'] bes'[ c'' des'' c'']) des''([ c'' des'' c''] bes'[ des'' aes'! des''] g'[ des'' f' des''])
  e'32([ c'' g' c''] b'[ c'' g' c''] bes'[ c'' g' c'']) a'([ c'' f' c''] bes'![ des'' f' des''] bes'[ des'' aes'! des''])
  g'([ c'' ees' c''] aes'![ c'' ees' c''] aes'[ c'' ees' c'']) g'([ ees'' c'' ees''] g'[ ees'' bes' ees''] g'[ ees'' bes' ees''])
@@ -85,7 +85,7 @@ arco = \markup{\italic "arco"}
  aes'] r aes' r aes' r16 aes' r aes' r aes' r16 aes' r aes' r aes'
  r16 g' r g' r g' r16 aes' r aes' r aes' r aes' r aes' r aes' r aes' r aes' r aes'
  r16 <bes g'> r <bes g'> r <bes g'> <c' g'>8 r16. aes32_\markup { \italic "cresc." }([ c'16. ees'32]
- aes'8[ c'' ees''\f] c''8) r16. aes32\p_\markup { \italic "    cresc." }([ c'16. ees'32])
+ aes'8[ c'' ees''\f] c''8) r16. aes32_\markup { \dynamic p \italic cresc. }([ c'16. ees'32])
  \override TupletNumber #'transparent = ##f
  \times 2/3 { aes'16([ c'' ees'']) } aes''8( bes''\f c''') \times 2/3 { r16 aes16_\markup { \dynamic p \italic "cresc." }([ c'] }
  \times 2/3 { ees'16[ aes' c'']) } \times 2/3 { ees''16\ff([ aes'' c''']) } ees'''8 r8 R4.*4 r8 r16 aes'16_\markup {\dynamic p \italic dolce }([ c'' ees'']) ees''16_\markup { \italic "cresc." }([ des''] c''8.)[ c''16]
