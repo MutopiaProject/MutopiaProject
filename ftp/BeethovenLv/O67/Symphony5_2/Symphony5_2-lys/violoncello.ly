@@ -50,7 +50,7 @@ aes,4.\ff^\arco g,8\staccato[ g,\staccato g,\staccato]
  des[ f] des[ f des f] 
  des[ f] des[ f des f]
  e16[ g] e[ g e g] ees![ f] des[ f des f] des[ ees] c[ ees c ees] <ees, bes,>[ ees] <ees, bes,>[ ees <ees, bes,> ees]
- aes,8 r32 ees32\f^\arco[ f g] \acciaccatura bes64 aes32[ g aes bes]
+ aes,8 r32 ees32\f(^\arco[ f g] \acciaccatura bes64 aes32[ g aes bes])
  c'32([ bes aes g] aes[ bes aes g] aes[ bes c' aes]) f([ g f e] f[ a bes a] bes[ c' des' c'])
  des'([ c' des' c'] bes[ des' aes! bes] g[ aes f g]) e([ f g e] c[ e g b] c'[ g c' bes!])
  a([ g a f] bes[ c' bes a] bes[ c' des' bes]) g([ f g ees] aes![ bes, aes, g,] aes,[ bes, c d]) ees4.
@@ -60,7 +60,7 @@ aes,4.\ff^\arco g,8\staccato[ g,\staccato g,\staccato]
 R4.*10 
  r8 r r16 e\p\staccato f\staccato[ g\staccato aes\staccato] r r8 R4.*2 r8 r c16.\ff c32 c8[ c g,] c4.~
  c4 c16.[ g,32] c8[ c c] c4.~ c4 c16.[ c32] c4 c16.[ c32] c4 c16.[ c32]
-  c4.\>~ c4. c8\!\p r8 r f8 r r ees r r R4.*2 bes,32\pp^\arco([ g, ees, g,]) bes,([ g, ees, g,])
+  c4.\>~ c4. c8\!\p^\pizz r8 r f8 r r ees r r R4.*2 bes,32\pp^\arco([ g, ees, g,]) bes,([ g, ees, g,])
  bes,([ g, ees, g,]) bes,8 r r R4. r8 r8 aes,8^\pizz
  aes,8[ aes, aes,] ees[ ees ees] aes[ aes aes] ges[ ges ges] ces'[ ces' ces']
  ges8[ ges ges] aes[ aes aes] ees8_\markup { \italic "cresc." }[ ees16 aes, aes aes]

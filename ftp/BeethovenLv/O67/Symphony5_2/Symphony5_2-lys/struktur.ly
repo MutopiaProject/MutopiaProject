@@ -15,12 +15,26 @@
 
 
 struktur = {
+ \set Score.markFormatter = #format-mark-box-alphabet
+
  \key aes \major
  \time 3/8
  \partial 8
  s8^\markup{\fontsize #1 \bold "Andante con moto"} 
+ s4.*28
+ \mark\default
+ s4.*49
+ \mark\default
+ s4.*36
+ \mark\default
+ s4.*33
+ \mark\default
+ s4.*29
+ \mark\default
+ s4.*19
+ \mark\default
 
- s4.*204
+ s4.*10
  s8^\markup{\large \bold "più moto"} s4
 
  s4.*12
