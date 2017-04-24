@@ -80,7 +80,9 @@ rightHand = \relative {
   \barNumberCheck 17
   | <cf,, cf'>8_. r \ottava 1 <f'' f'~> f'32 ( [ ef df af f ef df af
     \ottava 0 f ef df af f ef df \staffDown af f ef df af ] )
-  | f2 \trill \omitTuplet \tuplet 3/2 4 { e16^. [ f^. df'^. ] c^. [ g^. cf^. ]
+  | \tag #'layout { f2 \trill }
+    \tag #'midi { \repeat unfold 2 { \tuplet 3/2 { f16 g f g f g } } }
+    \omitTuplet \tuplet 3/2 4 { e16^. [ f^. df'^. ] c^. [ g^. cf^. ]
     gf^. [ bf^. f^. ] a^. [ f^. af^. ] }
   | c,4^. \staffUp r r2
   | r2 c''2
@@ -133,7 +135,10 @@ leftHand = \relative {
     
   \barNumberCheck 17
   | <cf,, cf'>8 r \clef treble <cf'' df f df'>4 \arpeggio \clef bass r2
-  | \voiceFour f,,,2 \trill \omitTuplet \tuplet 3/2 4 { e16^. [ f^. df'^. ] 
+  \voiceFour 
+  | \tag #'layout { f,,,2 \trill }
+    \tag #'midi { \repeat unfold 2 { \tuplet 3/2 { f16 g f g f g } } }
+    \omitTuplet \tuplet 3/2 4 { e16^. [ f^. df'^. ] 
     c^. [ g^. cf^. ] gf^. [ bf^. f^. ] a^. [ f^. af^. ] }
   | c,4^. \oneVoice r r2
   | r2 
@@ -208,25 +213,28 @@ dynamics = {
 #(set-global-staff-size 20)
 
 \paper {
-  ragged-last-bottom = ##t % set to false after editing 
+  ragged-last-bottom = ##f % set to false after editing 
 
   markup-system-spacing = 
     #'((basic-distance . 2)
        (padding . 1)) % defaults: 1, 0.5
     
   system-system-spacing =
-    #'((basic-distance . 12) 
-       (minimum-distance . 8)
+    #'((basic-distance . 10) 
+       (minimum-distance . 6)
        (padding . 1)
-       (stretchability . 60)) % defaults: 12, 8, 1, 60
+       (stretchability . 20)) % defaults: 12, 8, 1, 60
     
-  #(set-paper-size "letter") % for testing only
+  % #(set-paper-size "letter") % for testing only
   
   % Variables not affected by scaling of paper size 
-
+  top-margin = 12\mm % default 5
+  bottom-margin = 8\mm % default 6
 }
 
+% Typeset only, no MIDI
 \score {
+  \keepWithTag #'layout
   \new PianoStaff <<
     \set PianoStaff.instrumentName = #"XVIII"
     \new Staff = "upper" \rightHand
@@ -244,6 +252,15 @@ dynamics = {
       \consists #Span_stem_engraver
     }
   }
+}
+
+% MIDI Only
+\score {
+  \keepWithTag #'midi
+  <<
+    \new Staff = "upper" << \rightHand \pedal \dynamics >>
+    \new Staff = "lower" << \leftHand \pedal \dynamics >>
+  >>
   \midi {
   }
 }
