@@ -8,6 +8,7 @@ setup={\override Staff.TimeSignature #'style = #'numbered
 #(set-accidental-style 'modern-cautionary)
 \set Staff.midiInstrument = "cello"
 }
+
 \header{
 dedication="To my wife Sue"
 title="A Little Tune Book"
@@ -22,6 +23,7 @@ copyright="Creative Commons Attribution 4.0"
 maintainer="Silas Brown"
 maintainerWeb="http://people.ds.cam.ac.uk/ssb22/"
 }
+
 \markup "I."
 \score {
 << \new Staff << \context Voice = TheMusic {
