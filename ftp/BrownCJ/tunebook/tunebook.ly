@@ -8,7 +8,6 @@ setup={\override Staff.TimeSignature #'style = #'numbered
 #(set-accidental-style 'modern-cautionary)
 \set Staff.midiInstrument = "cello"
 }
-
 \header{
 dedication="To my wife Sue"
 title="A Little Tune Book"
@@ -23,7 +22,6 @@ copyright="Creative Commons Attribution 4.0"
 maintainer="Silas Brown"
 maintainerWeb="http://people.ds.cam.ac.uk/ssb22/"
 }
-
 \markup "I."
 \score {
 << \new Staff << \context Voice = TheMusic {
@@ -346,6 +344,8 @@ e a \noPageBreak |
 g f4 e \noPageBreak |
 f2 d \noPageBreak |
 e1 \<  -- _"attaca" \bar "||" \noPageBreak
+\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
+\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
 \mark \markup { \musicglyph #"scripts.coda" }
 c4 ( \p ^"poco piu mosso" ^"Variation 1"
 bes, d2 ) \noPageBreak |
@@ -406,8 +406,10 @@ b, ) ( g f ) f -- \noPageBreak |
 e8 ( d e c ) a,4 -- d -- \noPageBreak |
 g,1 \noPageBreak | g,8 \p -- g,4 ( f,8 -. ) e16 ( f e8 d -. ) r \noPageBreak |
 f, -- f,4 ( e,8 -. ) d16 ( e d8 c -. ) r e, -- e,4 ( d,8 -. ) d16 ( e f8 ) f -- \staccato r \noPageBreak |
-g4 -- e -- a2 \fermata \bar ":|" \mark "DC al Coda" \noPageBreak |
-f1 \fermata ^\markup { \musicglyph #"scripts.coda" } \bar "|."
+g4 -- e -- a2 \fermata \bar ":|"
+\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+\mark \markup { "DC al Coda " \musicglyph #"scripts.coda" } \noPageBreak |
+f1 \fermata \bar "|."
 } >> >> \layout{ indent = 0\cm } \midi{} }
 
 \pageBreak
