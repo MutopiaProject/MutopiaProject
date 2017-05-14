@@ -24,8 +24,8 @@
   last-bottom-spacing.padding = #2
 }
 
-mbreak = { \break }
-% mbreak = {} % {\break}
+% mbreak = { \break }
+mbreak = {} % {\break}
 
 twoT = \fixed c {
   \voiceOne
