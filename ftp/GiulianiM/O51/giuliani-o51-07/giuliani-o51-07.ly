@@ -24,8 +24,8 @@
   last-bottom-spacing.padding = #2
 }
 
-mbreak = { \break }
-% mbreak = {} % {\break}
+% mbreak = { \break }
+mbreak = {} % {\break}
 
 dynamics = {
   \once\override DynamicText.X-offset=#-3.8
