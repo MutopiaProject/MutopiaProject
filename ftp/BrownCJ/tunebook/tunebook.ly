@@ -1,10 +1,10 @@
-\version "2.16.2"
+\version "2.18.2"
 #(set-global-staff-size 20)
 pocoF = _\markup { \italic poco \dynamic f }
 piuF = _\markup { \italic piu \dynamic f }
 sempreP = _\markup { \italic sempre \dynamic p }
-setup={\override Staff.TimeSignature #'style = #'numbered
-\override Score.Hairpin #'after-line-breaking = ##t
+setup={\override Staff.TimeSignature.style = #'numbered
+\override Score.Hairpin.after-line-breaking = ##t
 #(set-accidental-style 'modern-cautionary)
 \set Staff.midiInstrument = "cello"
 }
@@ -18,9 +18,13 @@ mutopiainstrument="Cello"
 date="2015"
 source="Typeset from the manuscript by permission of the composer's estate"
 style="Modern"
-copyright="Creative Commons Attribution 4.0"
+license="Creative Commons Attribution 4.0"
 maintainer="Silas Brown"
 maintainerWeb="http://people.ds.cam.ac.uk/ssb22/"
+
+ footer = "Mutopia-2017/06/30-2193"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2017 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ tagline = ##f
 }
 \markup "I."
 \score {
@@ -28,33 +32,33 @@ maintainerWeb="http://people.ds.cam.ac.uk/ssb22/"
 
 \setup 
 \clef bass
-\time 3/4 \key f \major \times 2/3 { e8 ^"Flowing (not fast)" \( \p -- e ( f )  } d4 a ~ \<  \noPageBreak |
+\time 3/4 \key f \major \tuplet 3/2 { e8 ^"Flowing (not fast)" \( \p -- e ( f )  } d4 a ~ \<  \noPageBreak |
 a2 \) c'4 \! \noPageBreak |
 e2. \noPageBreak |
 c'4 \>  d2 ( ~ \noPageBreak |
 d \! c4 ) \breathe \noPageBreak |
- \times 2/3 { e8 -- e ( f )  } d4 a ~ \noPageBreak |
+ \tuplet 3/2 { e8 -- e ( f )  } d4 a ~ \noPageBreak |
 a2 d4 \noPageBreak |
 c2. \noPageBreak |
 f4 bes,2 ~ \noPageBreak |
 bes, f4 \noPageBreak |
 c2. ( ~ \noPageBreak |
 c2 g4 ) \breathe \noPageBreak |
- \times 2/3 { g8 -- g ( a )  } f4 d' ~ \noPageBreak |
+ \tuplet 3/2 { g8 -- g ( a )  } f4 d' ~ \noPageBreak |
 d'2 f'4 \noPageBreak |
 a2. ~ \noPageBreak |
 a4 f' g ~ \noPageBreak |
 g a2 ~ \noPageBreak |
-a  \times 2/3 { a8 -- a ( bes )  } \noPageBreak |
-g4 f2 ~ f -- \times 2/3 { a8 -- a ( bes )  } \noPageBreak |
+a  \tuplet 3/2 { a8 -- a ( bes )  } \noPageBreak |
+g4 f2 ~ f -- \tuplet 3/2 { a8 -- a ( bes )  } \noPageBreak |
 g4 f2 ~ \noPageBreak |
 f4 g f ~ \noPageBreak |
 f2 a4 \noPageBreak |
 c'2. \<  \noPageBreak |
 d'4 \! g2 ~ \>  \noPageBreak |
-g \! \times 2/3 { g8 -- g ( a )  } \noPageBreak |
+g \! \tuplet 3/2 { g8 -- g ( a )  } \noPageBreak |
 f4 c'2 ~ c'4 f' g ~ \noPageBreak |
-g2  \times 2/3 { g8 -- g ( a )  } \noPageBreak |
+g2  \tuplet 3/2 { g8 -- g ( a )  } \noPageBreak |
 g f ~ f2 ~ \noPageBreak |
 f4 d2 \noPageBreak |
 f2. \fermata \bar "|."
@@ -68,28 +72,28 @@ f2. \fermata \bar "|."
 g4 \f fis2. \noPageBreak |
 g4 e2. \noPageBreak |
 g4 d2 b,4 ~ \noPageBreak |
-b,2  \times 2/3 { g,4 -- a, -- b, --  } \noPageBreak |
+b,2  \tuplet 3/2 { g,4 -- a, -- b, --  } \noPageBreak |
 d2. \<  g4 \noPageBreak |
 c2. \>  -> g4 \! \noPageBreak |
-d1 ~ d4 r  \times 2/3 { g, -- a, -- b, --  } \noPageBreak |
+d1 ~ d4 r  \tuplet 3/2 { g, -- a, -- b, --  } \noPageBreak |
 d2. ees4 \noPageBreak |
 c2. bes,4 \noPageBreak |
 d1 ~ \noPageBreak |
-d4 r  \times 2/3 { g, -- a, -- b, \<  --  } \noPageBreak |
+d4 r  \tuplet 3/2 { g, -- a, -- b, \<  --  } \noPageBreak |
 d2. cis4 \! \noPageBreak |
 gis,2. cis4 fis,1 ~ -> \noPageBreak |
 fis,4 \> g, fis,2 ~ \! \noPageBreak |
-fis, \times 2/3 { b,4 -- a, -- g, --  } \noPageBreak |
+fis, \tuplet 3/2 { b,4 -- a, -- g, --  } \noPageBreak |
 d2. fis,4 -> \noPageBreak |
 fis,1 ~ \noPageBreak |
-fis,4 r  \times 2/3 { b, -- a, -- g, --  } \noPageBreak |
+fis,4 r  \tuplet 3/2 { b, -- a, -- g, --  } \noPageBreak |
 e2. _\markup{\italic dim.} fis4 \noPageBreak |
 e2. fis4 g2. g4 ~ \noPageBreak |
-g g --  \times 2/3 { a \<  -- b -- d' --  } \noPageBreak |
+g g --  \tuplet 3/2 { a \<  -- b -- d' --  } \noPageBreak |
 cis'2. \! b4 \noPageBreak |
 cis' d' g'2 ~ \noPageBreak |
 g'4 e' fis'2 ~ \< \noPageBreak | fis' b4 \! -> b ~ -> \noPageBreak |
-b1 ~ b4 r  \times 2/3 { b -- a \>  -- g --  } \noPageBreak |
+b1 ~ b4 r  \tuplet 3/2 { b -- a \>  -- g --  } \noPageBreak |
 d'2. \! e'4 ~ \noPageBreak |
 e'2 e'4 fis' ~ \noPageBreak |
 fis'2. b4 -> \noPageBreak |
@@ -199,7 +203,7 @@ e b ~ b2 e8 e' \noPageBreak |
 a b ~ b2 b8 c' \noPageBreak |
 a f ~ f2 f8 f
 e d ~ d2 d8 d
-} \alternative { { c e ~ e2 e8 e ^\markup { \right-align "DC" } } { c e ~ e2 e8 e ^\markup { \right-align "DS" } } } \bar ":|" \mark "Coda"
+} \alternative { { c e ~ e2 e8 e ^\markup { \right-align "DC" } } { c e ~ e2 e8 e ^\markup { \right-align "DS" } } } \bar ":|." \mark "Coda"
 e c' a d ~ d2 \noPageBreak |
 d8 d c e ~ e2 \noPageBreak |
 e8 c' a d ~ d2 \noPageBreak |
@@ -266,7 +270,7 @@ d'2. \fermata \bar "|."
 a ( \>  cis' ) b8 \! ( a gis4 -. ) \noPageBreak |
 gis1 -- \breathe \noPageBreak |
 a8 ( \mp gis fis gis ) a4 ( cis' ) \noPageBreak |
-e' (  \times 2/3 { dis'8 cis' dis'  } b2 ) \noPageBreak |
+e' (  \tuplet 3/2 { dis'8 cis' dis'  } b2 ) \noPageBreak |
 a8 ( gis fis gis ) a4 ( cis' ) \noPageBreak |
 a8 ( gis fis gis \>  ) e4 cis a,8 ( \p b, ) \transpose c c' { cis,4 -. cis,2 -- \noPageBreak |
 gis,,8 ( a,, ) b,,4 -. b,,2 -- \noPageBreak |
@@ -344,8 +348,8 @@ e a \noPageBreak |
 g f4 e \noPageBreak |
 f2 d \noPageBreak |
 e1 \<  -- _"attaca" \bar "||" \noPageBreak
-\once \override Score.RehearsalMark #'break-visibility = #end-of-line-visible
-\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+\once \override Score.RehearsalMark.break-visibility = #end-of-line-visible
+\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
 \mark \markup { \musicglyph #"scripts.coda" }
 c4 ( \p ^"poco piu mosso" ^"Variation 1"
 bes, d2 ) \noPageBreak |
@@ -379,7 +383,7 @@ c -. \pocoF
 d -. d -. bes, -. bes, -. des -. f, -. bes, -. \noPageBreak |
 aes, -. bes, -. bes, -. aes, -. aes, -. g, -. g, -. ees, -. \noPageBreak |
 ees, -. des, -. f, -. \< g, -.
-\once \override TextSpanner #'(bound-details left text) =
+\once \override TextSpanner.bound-details.left.text =
   \markup { \upright "rit." }
 g, -. \startTextSpan
 f, -. aes, -. bes, -. \noPageBreak |
@@ -406,8 +410,8 @@ b, ) ( g f ) f -- \noPageBreak |
 e8 ( d e c ) a,4 -- d -- \noPageBreak |
 g,1 \noPageBreak | g,8 \p -- g,4 ( f,8 -. ) e16 ( f e8 d -. ) r \noPageBreak |
 f, -- f,4 ( e,8 -. ) d16 ( e d8 c -. ) r e, -- e,4 ( d,8 -. ) d16 ( e f8 ) f -- \staccato r \noPageBreak |
-g4 -- e -- a2 \fermata \bar ":|"
-\once \override Score.RehearsalMark #'self-alignment-X = #RIGHT
+g4 -- e -- a2 \fermata \bar ":|."
+\once \override Score.RehearsalMark.self-alignment-X = #RIGHT
 \mark \markup { "DC al Coda " \musicglyph #"scripts.coda" } \noPageBreak |
 f1 \fermata \bar "|."
 } >> >> \layout{ indent = 0\cm } \midi{} }
