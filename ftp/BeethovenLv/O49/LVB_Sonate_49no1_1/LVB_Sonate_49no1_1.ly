@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.10.33"
 
  \header {
   title = "Piano Sonate Opus 49 No. 1 (1st Movement: Andante)"
@@ -12,10 +12,10 @@
   source = "Breitkopf & Hartel (1862-1865)"
   style = "Classical"
   copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2007/January/24"
-  version = "2.10.3"
- footer = "Mutopia-2007/01/25-912"
+
+ footer = "Mutopia-2017/07/06-912"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
@@ -61,7 +61,7 @@
  bes'8([ g' fis' g']) <g' ees''>2\fp d''8[ fis''( g'') d'']( c'')[ gis''( a'') c'']( bes')[ g''! a' ees''] g'8.([ a'32 g'] fis'8) r8
  r16 d''( bes'' d'' <c'' a''> d'' <bes' g''> d'') fis''( d'' cis'' d'' e'' fis'' g'' a'') bes''( d'' <bes'' d'''> d'' <a'' c'''!> d'' <g'' bes''> d'')
  a''16( f'' e'' f'' g'' a'' bes'' c''') d'''\<( f'' <d''' f'''> f'' <c''' ees'''!> f'' <bes'' d'''> f'')
- <a'' c'''>16( d'' <g'' bes''> d'' <fis'' a''> c'' g'' c''\!) r16 a'16\f( ees'' d'' c'' bes' a' g') fis'\p( g' a' gis' a' b' c'' b')
+ <a'' c'''>16( d'' <g'' bes''> d'' <fis'' a''> c'' g'' bes'\!) r16 a'16\f( ees'' d'' c'' bes' a' g') fis'\p( g' a' gis' a' b' c'' b')
  c''8_\markup { \italic "dolce" }[( fis') fis'\staccato( fis'\staccato)]
  \once \override TextScript #'script-priority = #-100 g'8.^\turn^\markup { \sharp }( bes'!16) d''8 d''
  c'''8[( fis'') fis''\staccato( fis''\staccato)]
