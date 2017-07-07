@@ -114,7 +114,7 @@ da wär's auf ein -- mal still. __
  % subtitle = "Das zerbrochene Ringlein" 
  composer = "Friedrich Glück (1793–1840), 1814" 
  opus = "" 
- arranger = "Bearbeitung von Friedrich Silcher (1789-1860), 1825" 
+ arranger = "Bearbeitung von Friedrich Silcher (1789–1860), 1825" 
  poet = "Joseph Freiherr von Eichendorff (1788–1857), 1810" 
 
  mutopiatitle = "Untreue" 
@@ -126,7 +126,7 @@ da wär's auf ein -- mal still. __
  style = "Romantic" 
  license = "Creative Commons Attribution 4.0" 
  maintainer = "Klaus Rettinghaus" 
- lastupdated = "2014/March/01" 
+ lastupdated = "2017/July/07" 
  
  footer = "Mutopia-2014/03/21-622"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
