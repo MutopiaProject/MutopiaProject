@@ -24,7 +24,7 @@
         mutopiainstrument = "Organ"
         style = "Baroque"
         source = "IMSLP"
-        copyright = "Creative Commons Attribution 3.0"
+        copyright = "Creative Commons Attribution-ShareAlike 4.0"
         maintainer = "Alexander Brock"
         maintainerEmail = "alexander@lunar-orbit.de"
 	
