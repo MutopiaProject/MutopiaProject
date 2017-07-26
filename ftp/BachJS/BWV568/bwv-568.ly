@@ -43,37 +43,38 @@ melodyRight = \relative c'' {
   fis \noBeam  d cis b s2.
   s1
   s1
-  r16  d' cis d fis d cis16 d g e dis e fis d cis d
-  << {d4 dis8.   e16 fis8.  g16 <b, dis! fis a>4
+  r16  << {d' cis d fis d cis16 d g e dis e fis d cis d} \\
+          {fis, e fis a fis e fis b g fis g a fis e fis} >>
+  << {d'4 dis8.   e16 fis8.  g16 <b, dis! fis a>4
       <b e a>4. <e gis>8  <e a>4 <gis b> 
        c16  a gis b a b gis b a4 r8  <e b'>
       <e a c>2 <d fis a c> |
       <d g b>2 <c e g b> |
       <c fis a>4 q <b dis fis a> r8  <b dis fis a> |
-       <b e g>4 <b e gis> <c e a> <d gis b> |
-        <e a c>4 r8 <a, cis> <a d>4 <cis e> |
+       <b e g>4 <b e gis> <c! e a> <d gis! b> |
+        <e a c>4 r8 <a, cis> <a d>4 <cis! e> |
          <d fis>4 r8 <d fis> <d g>4 <fis a>  |
           b8. d,16 b'8. d,16 c'8. c,16 f8. g16 |
            e16 \noBeam c' b a g f e d e g f e d f e d |
             e4~ e16 d c b  c e d c b d c b |
              c16 e d e f d c d e c b c d b a b |
               c4 g a b |
-    c16 \noBeam a'16  g f e d c b c4~ c16 b a gis  |
+    c16 \noBeam a'16  g! f e d c b c4~ c16 b a gis  |
     a c b a gis b a gis a c e d c b a g |
     f8 \noBeam a'16 g f e d c b g d' c b a g f! |
     e8 \noBeam  \stemNeutral g'16 f e d c b a f c' b a g f! e |
     d8 \noBeam  f'16 e d c b a gis e b' a gis! fis e d |
      c4 \stemUp a' b cis \acciaccatura e8 d16 cis16 d e f4 e8 d4 cis!8 |
-     d16 a a' g f e d c b g d' c b a g f |
-    e4 e'2 fis16 g a8 |
-    dis,16 b cis dis e fis g a b dis, cis b b' dis, cis b |
+     d16 a a' g f e d c b g d' c b a g f! |
+    e4 e'2 fis!16 g a8 |
+    dis,16 b cis dis e fis g a b dis,! cis! b b' dis, cis b |
      e16 b cis dis e fis g a b g fis e b' g fis e |
-      dis16 b cis dis e fis g a b dis, cis b b' dis, cis b |
+      dis16 b cis dis e fis g a b dis,! cis! b b' dis, cis b |
        e16 b cis dis e fis g a b g fis e b' g fis e |
-        dis16 b fis' e dis cis b a dis b fis' e dis cis b a  |
-    g e g' fis e d cis b  \acciaccatura  b4 <fis a>2 |
-     \stemNeutral b16 d fis e d cis b a  \acciaccatura a4 gis2 |
-    a16 e e' d c b a g \acciaccatura  g4 fis2 |
+        dis16 b fis' e dis cis b a dis! b fis' e dis cis! b a  |
+    g e g' fis e d! cis b  \acciaccatura  b4 <fis! a>2 |
+     \stemNeutral b16 d fis e d cis b a!  \acciaccatura a4 gis2 |
+    a16 e e' d c! b a g! \acciaccatura  g4 fis2 |
      g16 \noBeam \stemUp g' fis e d c b a b d c b a c b a  |
    b8. g'16  fis16 e d c d b a g c a g fis |
     g2.~ g8. fis16 |
@@ -81,39 +82,39 @@ melodyRight = \relative c'' {
       <d, g b>16 \noBeam \stemNeutral g fis g c a g fis g b a g a b g a |
        fis16 d e fis g a b cis \stemUp d2 |
    cis16 a b cis d e fis g \acciaccatura g4  fis2 |
-    g16\noBeam \stemNeutral g, a b c d e fis g d c b g' d c b |
+    g16\noBeam \stemNeutral g, a b c! d e fis g d c b g' d c b |
      c16\noBeam g a b c d e f g e d c g' e d c |
       b16\noBeam g a b c d e f g d c b g' d c b |
        c16\noBeam g a b c d e f g e d c g' e d c~ |
-        c16\noBeam a b c d e fis g a g fis e d c b a |
+        c16\noBeam a b c d e fis! g a g fis e d c b a |
          \stemUp b4 g' g fis |
          \acciaccatura fis2 g1
         
      }
      \\ {
        fis,4 <fis a>4 <dis fis b> <dis fis>  |
-       e4. b'8  c4 d |
+       e4. b'8  c!4 d |
         e16 c b d c d b d 
         c4 r8 gis |
      a2  <fis a>2 |
       g2 <e g> |
        fis4 fis <dis fis> r8 <dis fis>8 |
-        e4 d c e |
+        e4 d! c! e |
          e4 r8 e fis4 g |
-          a4 r8  a8 b4 c |
+          a4 r8  a8 b4 c! |
      <d g>4 q <c e g> <b d> |
       <g c>16 r r8 r4 r2 |
        r16 c b a g f e d e g f e d f e d |
         e16 g f g a f e f g e d e f d c d  |
-     e4  e4 fis gis  |
-     a r r16  a16 g f e d c b c e d c b d c b c4 c |
+     e4  e4 fis! gis  |
+     a r r16  a16 g! f e d c b c e d c b d c b c4 c |
       d4 d~ d d |
       s1 |
       s1 |
       s4  c4 d e |
        f16 e f g  a4 g8 f4 e8 |
         f4 d2 d4 |
-         c4 g'2 a8 fis |
+         c4 g'2 a8 fis! |
           fis2 dis4 fis4 |
           g2  e4 g |
           fis2 dis4 fis4 |
@@ -146,7 +147,7 @@ rhup = \relative c' {
   d1\rest |
    d16\rest g fis e d c b a b d c b a c b a  |
    b d\rest d8\rest d4\rest d2\rest |
-    d16\rest d' c d e c b a b c a c b c a c |
+    d16\rest \stemNeutral d' c d e c b a b c a c b c a c |
      b4\stemUp b d d |
       <b e>4 s4 s2 |
        s4 d,\rest d2\rest |
@@ -191,7 +192,7 @@ rhup = \relative c' {
   g4 r8 g' g a, g' fis |
    <g, g'>16 \noBeam b' a b e c b a b d c b c d b c |
    \stemUp <fis, a>2 s |
-    e'2~ e16 a, b c d c! b a |
+    e'2~ e16 a, b c d c b a |
      d2 s |
      \clef treble
     e2 c4 e |
@@ -217,7 +218,7 @@ s4  g4 b b |
        s16 r r8 r4 r2 | 
        s1 |
        s1 |
-        e,4. d'8 c4 b |
+        e,4. d'!8 c!4 b |
          a16 r r8 r4 r r8 s |
     <a e'>2 <d fis> |
      <g, d'>2 <c e> |
@@ -244,7 +245,7 @@ s4  g4 b b |
   b1~ |
   b4. b8 b4. b8 |
    e,4 g8  e8 fis16 cis fis g fis e d cis |
-    d4 b8 d e16 b e fis^\markup{\smaller{\bracket\natural}} e d c b |
+    d4 b8 d e16 b e fis^\markup{\smaller{\bracket\natural}} e d c! b |
    c4 a8 c d16 a d e d c b a  |
    b4 r g' fis  |
    g r r2 |
