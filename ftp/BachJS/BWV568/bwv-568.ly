@@ -271,14 +271,14 @@ pedal = \relative c {
   r |
    r16 d' cis d a d fis, a  g b e, g fis d' e, cis' |
     <d, d'>1~ |
-     q4 r r8. b'16 dis8. b16 |
-      e8. b16 e8. d16 c8. e16 b8. e16 |
+     q4 r r8. b'16[ dis8. b16] |
+      e8.[ b16 e8. d!16] c!8.[ e16 b8. e16] |
        a,2~ a8 a c e |
         a16 b a b g a g a fis a d, fis e g fis a |
          g16 a g a fis g fis g e g c, e d fis e g |
           fis16 g fis g e fis e fis dis fis b, dis cis e dis fis |
-           e16 fis e fis d e d e c d c d b c b c  |
-           a b a b g a g a fis g fis g e fis e fis |
+           e16 fis e fis d! e d e c! d c d b c b c  |
+           a b a b g! a g a fis g fis g e fis e fis |
             d16 d' cis d c d c d b c b c a b a b |
              g16 a g a f g f g e f e f d e d e |
               <c c'>1~ |
@@ -290,7 +290,7 @@ pedal = \relative c {
         d4 r r g, |
         c r r f, |
         b r4 r  e,|
-  a  a'2 g4 |
+  a  a'2 g!4 |
    f4 d g a |
     d,4 f g g, |
      c4 r r c |
