@@ -120,7 +120,7 @@ rh = \relative c' {
      \partial 16  <b, g'>16^\markup{\translate #(cons -1.8 0) \positive}
     << { g'4.. b16 b4.. d16  |
          d4.. g16 g4.. e16 | 
-         e4.. e16 e4.. c16  |
+         d04.. e16 e4.. c16  |
          b4.. d16^\markup{\translate #(cons -1.8 0) \grande} d4.. b16 |
         a4.. d16 d4.. b16 |
         } \\ {
@@ -152,7 +152,7 @@ rh = \relative c' {
       dis8.[ b16 b8. g'16] g8.[ b,16 b8. e16] |
       dis8.[ b16 b8. e16] e8.[ b16 b8. c16] |
       b8.[ b16 b8. dis16] dis4 <a c> |
-       <g b d g>8.[ g16 g8. g16] g8.[ d16 d8. b'16] |
+       <g b d g>8.[ g16 g8.] g16] g8.[ d16 d8. b'16] |
         b8.[ g16 g8. e'16] e8.[ g,16 g8. c16] |
          b8.[ d,16 d8. c'16] c8.[ fis,16 fis8. a16] |
           g4 r r4
@@ -404,7 +404,7 @@ lh = \relative c' {
  
  r8  <f g d'!>4 q q q8~ |
   q8 q4 q <f gis d'> q8 |
-   r8 <f a c> r <f a c> r <g bes c> r <e g c> |
+   r8 <f a c>[ r <f a c> r <g bes c> r <e g c>] |
     r8 <f a c>4 q q8~ 
     
      q8 q | \clef treble
@@ -452,7 +452,7 @@ lh = \relative c' {
     g4. e'8 e4. <c e g>8 |
      <a c e g>2 (  <a d f>4 )  <a c e> |
       <a c d>4 <a cis>8. e'16 <a, d>4 <d, a'>8. c'16 |
-       <g b>4 \clef treble  r8 f'-. e-. d-. c-. b-. |
+       <g b>4 \clef treble  r8 f'!-. e-. d-. c-. b-. |
         a8-. c-. e-. fis-. b,-. dis-. fis-. a-. |
     r8 <b, dis fis a> r <b e g> r <a d f> r <a d f> |
      r8 g-. c-. e-. r g,-. b-. f'-. |
