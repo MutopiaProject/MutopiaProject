@@ -304,7 +304,7 @@ lh = \relative c' {
     <b dis fis a>4 (  <b e g> )  <a d f>-. q-. |
      <g c e>2 <g b f'>4 q |
       <g c e>4 c8-. e-. g-. c,-. e-. g-. |
-       <a, c d fis>2 <b dis fis a>4. q8 |
+       <a, c e fis>2 <b dis fis a>4. q8 |
         q4 (  <b e g> )  <a d f>-. q-. |
          <g c e>2 <g g'>4 <g f'> |
     q2 (  <c e>4 )  \tuplet 3/2 { c8^\positive c c} |
@@ -329,7 +329,7 @@ lh = \relative c' {
     <b dis fis a>4 (  <b e g> )  <a d f>-. q-. |
      <g c e>2 <g b f'>4 q |
       <g c e>4 c8-. e-. g-. c,-. e-. g-. |
-       <a, c d fis>2 <b dis fis a>4. <b fis' a>8 |
+       <c, e fis a>2 <b dis fis a>4. <b fis' a>8 |
     <b fis' a>4 (  <bes e g> )  <a d f>-. q-. |
      <g c e>2 <g g'>4 <g f'> |
       q2 (  <c e>4 ) r4
@@ -361,7 +361,7 @@ lh = \relative c' {
     \break
      <g c e>2 <g b f'>4 q |
       <g c e>4 c8-. e-. g-. c,-. e-. g-. |
-       <a, c d fis>2 <b dis fis a>4. <b fis' a>8 |
+       <c, e fis a>2 <b dis fis a>4. <b fis' a>8 |
     <b fis' a>4 (  <bes e g> )  <a d f>-. q-. |
      <g c e>2 <g g'>4 <g f'> |
       q2 (  <c e>4^\p)
@@ -439,7 +439,7 @@ lh = \relative c' {
     <b dis fis a>4 (  <b e g> )  <a d f>-. q-. |
      <g c e>2 <g b f'>4 q |
       <g c e>4 c8-. e-. g-. c,-. e-. g-. |
-       <a, c d fis>2 <b dis fis a>4. q8 |
+       <a, c e fis>2 <b dis fis a>4. q8 |
         q4 (  <b e g> )  <a d f>-. q-. |
          <g c e>2 <g g'>4 <g f'> |
     q2 (  <c e>4 ) r
