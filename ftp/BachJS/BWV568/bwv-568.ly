@@ -207,7 +207,7 @@ rhup = \relative c' {
      f2 d4 f |
       e2 c4 e4 |
   <a, c fis!>1 |
-   <g d' g>4 \clef bass  b4 c d |
+   <g d' g>4 \clef bass \stemNeutral b4 c d |
     g,1
    
 }
