@@ -1,5 +1,7 @@
 \version "2.18.2"
 
+\include "bbarred.ly"
+
 \header{
   title = "Pavane"
   opus = "Op. 50"
@@ -13,8 +15,6 @@
   mutopiacomposer = "FaureG"
   mutopiaopus = "Op. 50"
   mutopiainstrument = "flute, guitar"
-  moreInfo = "Excerpt, first part (measure 1 through 43).
-  Guitar part fingered."
 }
 
 flute = {
@@ -72,25 +72,21 @@ flute = {
 
 
 guitar = {
-         \textSpannerDown
-         \override TextSpanner.bound-details.left.text = #"II "
-         fis8-4\startTextSpan a-1 cis'-1 a fis a cis' a\stopTextSpan |
+         \bbarre #"II" {fis8-4 a-1 cis'-1 a fis a cis' a} |
          fis a cis' a d cis' fis' cis'|
          e b e' b cis b e' b|
          d a-2 d'-4 a b, a d' a|
 %5
-         \override TextSpanner.bound-details.left.text = #"I "
-         cis-4\startTextSpan gis-1 eis'-1 gis b,-2 gis eis' gis\stopTextSpan |
+         \bbarre #"I" {cis-4 gis-1 eis'-1 gis b,-2 gis eis' gis} |
          a, fis'-3 cis'-2 fis' fis,-1 cis'-3 a-2 cis'|
          b,-1 fis'-3 a-2 fis' e, b g b|
          a, e' g e' d fis'-2 gis-1 fis'|
          cis-4 gis-1 cis'-2 d'-3 b-0 cis' a-1 gis-1|
 %10
-         \override TextSpanner.bound-details.left.text = #"II "
-         fis\startTextSpan a cis' a d cis' fis' cis'\stopTextSpan|
+         \bbarre #"II" {fis a cis' a d cis' fis' cis'} |
          e b e' b cis b e' b|
          d a d' a b, a d' a|
-         cis\startTextSpan gis eis' gis b, gis eis' gis\stopTextSpan |
+         \bbarre #"I" {cis gis eis' gis b, gis eis' gis} |
          a, cis' a cis' g,-3 e' a-2 e'|
 %15
          fis,-1 e' a d'-3 e, d' g cis'-2|
@@ -120,7 +116,7 @@ guitar = {
          fis a cis' a d cis' fis' cis'|
          e b e' b cis b e' b|
          d a d' a b, a d' a|
-         cis\startTextSpan gis eis' gis b, gis eis' gis\stopTextSpan |
+         \bbarre #"I" {cis gis eis' gis b, gis eis' gis} |
          a, cis' a cis' g,-3 e' a-2 e'|
 %40
          fis,-1 e' a-2 d'-4 e, d'-3 gis'-4 cis'-2|
