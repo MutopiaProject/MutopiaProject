@@ -8,9 +8,9 @@
     ragged-last-bottom = ##f
 }
 
-%#(set-default-paper-size "a4")
+#(set-default-paper-size "a4")
 
-#(set-global-staff-size 19)
+#(set-global-staff-size 18)
 
 \header {
         title = "Präludium XII"
