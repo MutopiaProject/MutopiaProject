@@ -21,17 +21,21 @@
 
 #(set-global-staff-size 18)
 
+\include "articulate.ly"
+
 \header {
         title = "Die Schöpfung"
         subtitle = "Part II: 22. Aria (Raphael)"
         %piece = "Part II: 22. Aria (Raphael)"
         mutopiatitle = "Air (Raphael)"
-	composer = "Johann Michael Haydn (1737-1806)"
-	mutopiacomposer = "HaydnJM"
+	composer = "F.J.Haydn (1732 - 1809)"
+
+        mutopiacomposer = "HaydnFJ"
+
         opus = "Hob. XXI:2"
         date = "1797 - 1798"
         mutopiainstrument = "Voice (Bass) and piano"
-        style = "Baroque"
+        style = "Classical"
         source = "http://hz.imslp.info/files/imglnks/usimg/7/71/IMSLP35013-PMLP40341-Haydn-SchoepfungVSpeters.pdf page 82ff"
         copyright = "Creative Commons Attribution-ShareAlike 4.0"
         maintainer = "Alexander Brock"
@@ -89,9 +93,13 @@ melody = \relative c {
     c4. b8 c gis |
   a4 r4 r |
    r4 r a |
-  d2\fermata a4 |
-   f4.\fermata f8 e d |
-    a'2.\fermata |
+ \set Score.tempoHideNote = ##t
+ \tempo 4 = 63
+d2\fermata  \tempo 4 = 90 a4 |
+  \tempo 4 = 57 f4.\fermata \tempo 4 = 90 f8 e d |
+  \tempo 4 = 67  a'2.\fermata |
+ \set Score.tempoHideNote = ##t
+ \tempo 4 = 105
    d,4 fis! a |
     b2 g4 |
      cis2 cis4 |
@@ -106,16 +114,16 @@ melody = \relative c {
   r4 r8 a'8 \noBeam cis \noBeam a |
    d4. a8 \noBeam fis \noBeam d |
     a'4 r8 a \noBeam cis \noBeam a |
-     d4. a8 \noBeam fis \noBeam d |
-      a'2 a,4 |
+     d4. \tempo 4 = 100 a8 \noBeam \tempo 4 = 95 fis \noBeam \tempo 4 = 90 d |
+    \tempo 4 = 85 a'2 a,4 |
    d4( fis) a |
     b4( g) d |
-     c'4.(\fermata b16 c d8) \noBeam c |
-   b2\fermata g4 |
+    \tempo 4 = 75 c'4.(\fermata \tempo 4 = 85 b16 c d8) \noBeam c |
+  \tempo 4 = 75 b2\fermata \tempo 4 = 95 g4 |
    cis2 cis4 |
     d2 \tuplet 3/2 { b8( g e)} |
      d2 \acciaccatura fis8 e( d) |
-      d4 r r |
+      \tempo 4 = 105 d4 r r |
   r2. |
   r4 r a'4 |
    a2 g4 |
@@ -143,7 +151,7 @@ rh = \relative c' {
   <d fis a d>4^\markup{\large Maestoso} ( <fis fis'>4 <a d fis a> )|
    <d, g b d>4( <g g'> <b d g b>) |
     <e, g cis e>4~ q8. <fis fis'>16 <g g'> <a a'> <b b'> <cis cis'> |
-     <d fis d'>4  d,8 \noBeam <a' d fis a>16-. <a d fis a>16-. q8-. q-. |
+  <d fis d'>4  d,8 \noBeam <a' d fis a>16-. <a d fis a>16-. q8-. q-. |
       <a e' a>8-. r <b d gis>-. r <e gis b d>-. r |
        <e a cis>8 \noBeam a,16-. a-. a8-. a-. a-. a-.  |
        <a e' a>4( <e e'> <cis cis'>) |
@@ -206,8 +214,15 @@ rh = \relative c' {
    bes4.( a8 bes  fis! |
     g4) g,8 \noBeam b'!-. b-. b-. |
      c4.( b8 c gis |
-      a4) a,8  \noBeam <e' a cis!>8-. q-. q-. |
-    <a d>8.( f'16 a8)  \noBeam <e, a cis>-. q-. q-. |
+      a4) a,8  \noBeam
+ \set Score.tempoHideNote = ##t
+ \tempo 4 = 100
+      <e' a cis!>8-. q-. q-. |
+    <a d>8.( f'16 a8)  \noBeam <e, a cis>-. 
+ \set Score.tempoHideNote = ##t
+ \tempo 4 = 95
+
+    q-. q-. |
      <d a' d>4 r r\fermata |
     \clef bass
      <d, gis d'>2 r4\fermata  <e a cis>2.\fermata  |
@@ -254,17 +269,17 @@ rh = \relative c' {
     d8( cis) r e16( d cis b a g) |
      <e g>8( <d fis>) r b'16( a g fis e d) |
       cis8 e a cis e g |
-       <a, fis'>4 <d fis a d> r |
+       <a, fis'>4 \tempo 4 = 105 <d fis a d> r |
         <fis, d'>2( <a c>4 |
          <fis ais>4 <g b>8) r <e g> r |
     <a, d fis>4  r <g cis e>( |
      <fis d'>8) \noBeam <d' d'>16 q q8 \noBeam q-. <e d'>-. <fis d'>-. |
       <g d'>8 a32( g fis g a8) \noBeam <d, d'>-. <e d'>-. <fis d'>-. |
-       <g d'>8 a32( g fis g a8) \noBeam <d, d'>-. <e d'>-. <fis d'>-. |
-        <g d'>4 r\fermata r |
+   \tempo 4 = 95 <g d'>8 a32( g fis g a8) \noBeam \tempo 4 = 85 <d, d'>-. <e d'>-. <fis d'>-. |
+        <g d'>4 \tempo 4 = 68 r\fermata \tempo 4 = 90 r |
    << { g2. |fis4( a b)} \\ { cis,2( e4) |d2.} >> |
    <a d fis>4 r <a cis e>( |
-    <fis d'>8) \noBeam <d' d'>16 q q8 \noBeam <fis' a> q q |
+  \tempo 4 = 105  <fis d'>8) \noBeam <d' d'>16 q q8 \noBeam <fis' a> q q |
    << {\acciaccatura cis'8 b([ a)] } \\ {g4} >> r8  e'16( d cis b a g) |
     <e g>8( <d fis>) r <fis a> q q |
    << {\acciaccatura cis'8 b([ a)] } \\ {g4} >> r8  e'16( d cis b a g |
@@ -424,6 +439,7 @@ prei -- sen soll.
 
 % The score definition
 \score {
+
 <<
 
   \time 3/4
@@ -564,6 +580,37 @@ prei -- sen soll.
     \RemoveEmptyStaffContext
   }
 }
+}
+
+\score {
+
+<<
+
+  \time 3/4
+
+    \override Score.VerticalAxisGroup #'remove-first = ##t 
+  \new Staff << 
+        \set Staff.midiInstrument = #"choir aahs"
+            \new Voice = "mel" { \clef bass \key d \major \melody}
+            \new Lyrics = "one" \lyricsto mel \songtext
+  >>
+  \new PianoStaff <<
+    \new Staff 
+    <<
+      \set Staff.midiInstrument = #"acoustic grand"
+      \new Voice { \key d \major \rh }
+    >>
+
+    \new Staff 
+    <<
+      \set Staff.midiInstrument = #"acoustic grand"
+      \new Voice { \clef bass \key d \major \lh }
+    >>
+    
+  >>
+
+>>
+
 \midi {
   \tempo 4 = 105
   \context {
@@ -574,4 +621,3 @@ prei -- sen soll.
 }
 
 }
-
