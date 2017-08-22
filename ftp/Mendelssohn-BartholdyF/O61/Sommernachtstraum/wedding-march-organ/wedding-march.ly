@@ -299,7 +299,7 @@ lh = \relative c' {
      r1 |
       r4 \tuplet 3/2 { c8^\markup{\translate #(cons -1 0)\positive} c c} c4  \tuplet 3/2 {c8 c c} |
   c4 \tuplet 3/2 { <c e>8 q q}  q4  \tuplet 3/2{ <c e g>8 q q}
-  
+      \repeat volta 2 {
    <a c e fis>2^\ff <b dis fis a>4.^\markup{\translate #(cons -1.7 0) \grande} q8 |
     <b dis fis a>4 (  <b e g> )  <a d f>-. q-. |
      <g c e>2 <g b f'>4 q |
@@ -307,13 +307,20 @@ lh = \relative c' {
        <a, c e fis>2 <b dis fis a>4. q8 |
         q4 (  <b e g> )  <a d f>-. q-. |
          <g c e>2 <g g'>4 <g f'> |
-    q2 (  <c e>4 )  \tuplet 3/2 { c8^\positive c c} |
+        }
+    \alternative {
+      {
+        q2 (  <c e>4 )  \tuplet 3/2 { c8^\positive c c} |
      c4 r r \tuplet 3/2 { c8 c c} |
       c2 r4 \tuplet 3/2 { c8 c c}  |
       <c e>4  \tuplet 3/2 {c8 c c} <c e>4 \tuplet 3/2 { <c e>8 q q}  |
       <c e g>4 \tuplet 3/2 { <c e>8 q q}  <c e g>4 \tuplet 3/2{ <c e g>8 q q}
-   <g f'>2 (  <c e>4 )  r |
-   
+        }
+      {
+    <g f'>2 (  <c e>4 )  r |
+       }
+    }
+    \repeat volta 2 {
    \clef bass
     c2 c4. c8 |
      e4 (  d )  b-. g-. |
@@ -332,18 +339,26 @@ lh = \relative c' {
        <c, e fis a>2 <b dis fis a>4. <b fis' a>8 |
     <b fis' a>4 (  <bes e g> )  <a d f>-. q-. |
      <g c e>2 <g g'>4 <g f'> |
-      q2 (  <c e>4 ) r4
-      <g f'>2 (  <c e>4 ) r8.
+      }
+    \alternative {
+      {q2 (  <c e>4 ) r4}
+      {<g f'>2 (  <c e>4 ) r8.}
+    }
      \key g \major
     \clef bass
+    \repeat volta 2 {
     <b, g'>16^\markup{\translate #(cons -1.8 0) \positive} q4.. <g' b>16 q4.. <b d>16 |
-    \clef treble
+   \clef treble
    q4.. <e g>16 q4.. <c e>16 <b d>4.. <c e>16 q4.. \clef bass  <a c>16 |
     <g b>4.. <b d>16 q4..  <g b>16 |
      <fis a>4.. <b d>16 q4.. <g b>16 |
-      <fis a>2 r4 r8. s16 |
-       <fis a>2 r4 
+    }
+  \alternative {
+      {<fis a>2 r4 r8. s16 |}
+       {<fis a>2 r4 }
+  }
   \clef treble
+  \repeat volta 2 {
   <cis' e fis>4^\markup{\halign #.1 \grande} \ff |
    <b dis fis>4 r8. <b dis>16^\markup{\translate #(cons -1.8 0) \positive} q4.. <dis fis>16 |
     q4.. <g b>16 q4.. <e g>16 |
@@ -352,7 +367,8 @@ lh = \relative c' {
        <g, d'>4 r8. <g b>16^\positive q4.. <b d>16 |
         q4.. <e g>16 q4.. <c e>16 |
          <b d>4.. <c e>16 q4.. <a c>16 |
-          <g b>8. g16^\grande[ \noBeam g8. g'16] g4 
+          <g b>8. g16^\grande[ \noBeam g8. g'16] g4
+}
           \key c \major
     \tuplet 3/2 { g8 g, g'}
  
@@ -387,6 +403,7 @@ lh = \relative c' {
      c8] c4 c c8}\\
     {s4 s1 s1 as'}
  >>
+ \repeat volta 2 {
   r4  |
  
  << {
@@ -405,7 +422,7 @@ lh = \relative c' {
  r8  <f g d'!>4 q q q8~ |
   q8 q4 q <f gis d'> q8 |
    r8 <f a c>[ r <f a c> r <g bes c> r <e g c>] |
-    r8 <f a c>4 q q8~ 
+    r8 <f a c>4 q q8~ }
     
      q8 q | \clef treble
   r8 <a e' g>4^\markup{\translate #(cons -2 0) {\grande}} q q q8 |
@@ -469,6 +486,7 @@ lh = \relative c' {
       <c e g>4 \tuplet 3/2 { <c e>8 q q}  <c e g>4 \tuplet 3/2{ <c e g>8 q q}
   
   \clef bass
+  \repeat volta 2 {
    <bes c g'>2^\f <a c f>4. <gis c e>8 |
     q2 <a c f> |
   <f c' f>2^\markup{\translate #(cons -.5 4) \grande}  <g c e>4. <a c dis>8 |
@@ -477,8 +495,11 @@ lh = \relative c' {
     <g' c e>2^\positive^\f  <f g d'>4. <e g c>8 |
      <g c e>2 <f g d'>4. <e g c>8 |
       <d f g c>4 <d f g b>^\markup{\translate #(cons -.5 2) \grande} <d f g a> <d f g b> |
-       <c e g c>2 r |
-        <c e g c>2 g'\startTrillSpan~ |
+  }
+  \alternative {
+       {<c e g c>2 r |}
+       { <c e g c>2 g'\startTrillSpan~ |}
+  }
          g1~ |
           g1~ |
            g1~ |
@@ -499,19 +520,28 @@ pedal = \relative c {
     r1 |
      r1 |
       r1 |
+     \repeat volta 2 {
   a2 b4. b8 |
    e2 f!4-. f-. |
     g,2 g' |
      c,4 r r2 |
       a2 b4. b8 |
        e2 f!4-. f-. |
-        g,2 g'4 g, g2 (  c4 )  r |
+        g,2 g'4 g, |
+            }
+    \alternative {
+      {
+    g2 (  c4 )  r |
          r1 |
     r1 |
      r1 |
       r1 |
+        }
+      {
    g2 (  c4 )  r |
-   
+       }
+    }
+    \repeat volta 2 {
     c2 c4. c8 |
      g2. g4 |
       c4 c e c |
@@ -526,17 +556,25 @@ pedal = \relative c {
     a'4 fis b dis,  |
     e cis d f,  |
      g2 g'4 g,
-    g2 (  c4 )  r4
-    g2 (  c4 )  r8.
+      }
+    \alternative {
+    {g2 (  c4 )  r4}
+    {g2 (  c4 )  r8.}
+    }
    \key g \major
-   r16 |
+   \repeat volta 2 {
+    r16 |
     r1 |
      r1 |
       r1 |
        r4 r8. g16 g4.. b16 |
         d4.. g,16 g4.. b16 |
-         d2 r4 r8. s16
-          d2 r4 
+    } 
+    \alternative {
+         {d2 r4 r8. s16}
+         { d2 r4 }
+    }
+    \repeat volta 2{
            fis4 |
             b,4 r r2 |
     r1 |
@@ -545,7 +583,7 @@ pedal = \relative c {
     g,4 r r2 |
      r2 c (  |
      d4 )   r4 d2 (  |
-      g,4 )r r 
+      g,4 )r r }
     \key c \major   r4 |
  
   a2 b4. b8 |
@@ -565,6 +603,7 @@ pedal = \relative c {
         f4-. r r2 |
          c'4-. r r2 |
           f,4-. r r
+   \repeat volta 2 {
     r |
      a4 r r2 |
      bes4 r g r |
@@ -574,6 +613,7 @@ pedal = \relative c {
      r1 |
       c4-.^\p r c-. r |
        f,4 r r
+   }
        r |
         cis1_\markup{\translate #(cons 8 -2) {\italic cresc.}} |
          d1 |
@@ -621,6 +661,7 @@ pedal = \relative c {
     r1 |
      r1 |
       r1 |
+  \repeat volta 2 {
        r1 |
         r1 |
    a2^\ff g4. fis8 |
@@ -628,8 +669,11 @@ pedal = \relative c {
      r1 |
       r1 |
        r4 g^\ff g g |
-        c2 r |
-         c2 r |
+  }
+  \alternative {
+    {c2 r |}
+    {c2 r |}
+  }
           r1 |
            r1 |
             r4 g g g |
@@ -649,17 +693,44 @@ pedal = \relative c {
 
   \new PianoStaff <<
     \new Staff  {
+      \set Staff.midiInstrument = #"church organ"
       \key c \major \rh
     }
     \new Staff  {
+      \set Staff.midiInstrument = #"church organ"
       \key c \major \lh
     }
     
   >>
-  \new Staff { \key c \major \pedal }
+  \new Staff {
+    \set Staff.midiInstrument = #"church organ"
+    \key c \major \pedal
+  }
 
 >>
-
-	\layout { }
- 	 \midi { }
+  \layout { }
 }
+
+\score {
+<<
+
+  \new PianoStaff <<
+    \new Staff  {
+      \set Staff.midiInstrument = #"church organ"
+      \key c \major \unfoldRepeats{\rh}
+    }
+    \new Staff  {
+      \set Staff.midiInstrument = #"church organ"
+      \key c \major \unfoldRepeats{\lh}
+    }
+    
+  >>
+  \new Staff {
+    \set Staff.midiInstrument = #"church organ"
+    \key c \major \unfoldRepeats{\pedal}
+  }
+
+>>
+  \midi { \tempo 2=65}
+}
+
