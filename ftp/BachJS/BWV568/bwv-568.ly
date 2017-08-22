@@ -8,7 +8,7 @@
     ragged-last-bottom = ##f
 }
 
-#(set-default-paper-size "a4")
+%#(set-default-paper-size "a4")
 
 #(set-global-staff-size 18)
 
@@ -341,20 +341,25 @@ rh = << \clef bass \rhup \\ \rhdown >>
       \consists #Merge_rests_engraver
     }
     <<
+      \set Staff.midiInstrument = #"church organ"
       \new Voice { \key g \major << \melody >> }
     >>
     \new Staff \with {
       \consists #Merge_rests_engraver
     }
     <<
+      \set Staff.midiInstrument = #"church organ"
       \new Voice { \key g \major \rh }
     >>
     
   >>
-  \new Staff { \key g \major \pedal }
+  \new Staff {
+    \set Staff.midiInstrument = #"church organ"
+
+    \key g \major \pedal }
 
 >>
 
 	\layout { }
- 	 \midi { }
+ 	 \midi { \tempo 4=90}
 }
