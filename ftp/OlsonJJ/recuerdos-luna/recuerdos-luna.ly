@@ -13,25 +13,20 @@
  mutopiadate = "1896"
  source = "Madrid: Orfeo Tracio, n.d. (ca.1920). Plate 1102" % via IMSLP24052
  mutopiasource = "Madrid: Orfeo Tracio, n.d. (ca.1920). Plate 1102"
- moreInfo = "This simple arrangement combines Tárrega's “Recuerdos de la Alhambra” 
-            with the triplets of Beethoven's “Moonlight Sonata”.  It was originally developed
-            as one of many sight reading exercises in “Chromatic Fretboard Exercises” to be
-            playable in a single fixed position (either VII or IX), but it sounds best
-            with the indicated fingering by Dennis Burns which allows each triplet arpeggio
-            to ring freely." 
+ moreInfo = "This simple arrangement combines Tárrega's “Recuerdos de la Alhambra” with the triplets of Beethoven's “Moonlight Sonata”.  It was originally developed as one of many sight reading exercises in “Chromatic Fretboard Exercises” to be playable in a single fixed position (either VII or IX), but it sounds best with the indicated fingering by Dennis Burns which allows each triplet arpeggio to ring freely."
 
  %            o_
  %       (\___\/_____/)
- %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~ 
+ %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~
  maintainer = "Jeffrey Olson & Dennis Burns"
  maintainerEmail = "gmail's jjocanoe & boldersounds.com's dennis"
- license = "Public Domain" 
+ license = "Public Domain"
 
  mutopiacomposer = "OlsonJJ"
  mutopiatitle = "Recuerdos de la Luna"
  mutopiainstrument = "Guitar"
 
- footer = "Mutopia-2017/10/14-draft"
+ footer = "Mutopia-2017/10/14-0"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
@@ -47,7 +42,7 @@
   ragged-last-bottom = ##f
   print-first-page-number = ##f
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #last-page \fromproperty #'header:myfoot }
     }
   }
@@ -189,7 +184,7 @@ upperVoice = \transpose c c' {
   \tuplet 3/2 4 { <c'-1>8\pI <f-3> <a-2>   <c'> <a> <f>   <d'-4> <a> <f> } | %18
   \tuplet 3/2 4 { <c'-1>8 <d'-4> <c'-1>   <b-0> <e-2> <gis-1>   <b> <gis> <e> } | %19
   \tuplet 3/2 4 { <b>8 <e> <gis>   <b> <gis> <e>   <b> <gis> <e> } \bar "||" %20
-  
+
   \key a \major
   \tuplet 3/2 4 { <e'-0>8 <a-1> <cis'-2>   <e'> <cis'> <a>   <d'-2>\pII <b-3> <e-1> } | %21
   \tuplet 3/2 4 { <cis'-1>8\bpII <e-1> <a-1>   <cis'> <a> <e>   <d'-2> <b-3> <e-1> } | %22
