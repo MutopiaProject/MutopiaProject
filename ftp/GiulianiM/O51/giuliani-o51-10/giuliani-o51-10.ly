@@ -47,7 +47,7 @@ tenT = \fixed c' {
   d4 b,8 a, c e |
   r8 g, b, d c a, |
   g,4. r4 g,8 |
-  c4 c8 c4 ces8 |
+  c4 c8 c4 c8 |
 
   \mbreak
   c4. r8 c cis |
@@ -89,7 +89,7 @@ tenB = \fixed c {
   g,8 b, d c4. |
   d4. d |
   g,8 d b, g,4 r8 |
-  c8 e g c e b |
+  c8 e g c e bes |
 
   c8 f a c4. |
   fis,8 a, d fis, c d |
