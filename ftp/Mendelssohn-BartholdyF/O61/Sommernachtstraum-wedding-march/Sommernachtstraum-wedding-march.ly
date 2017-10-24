@@ -13,7 +13,6 @@
 #(set-global-staff-size 19)
 
 \header {
-        title = \markup{\smallCaps{"Marche Nuptiale"}}
         subtitle = "du Songe d' une nuit d' Été"
 %        piece = "1. Adagio"
         mutopiatitle = "MARCHE NUPTIALE (Wedding march)"
@@ -21,24 +20,17 @@ composer =	 "Felix Mendelssohn-Bartholdy (1809-1847)"
 mutopiacomposer= "Mendelssohn-BartholdyF"
 %opus =	 	 "Op. 61"
 mutopiaopus =	 "O 61"
-%        date = "1720"
+        date = "ca.1909"
         mutopiainstrument = "Organ"
 style	= "Romantic"
-        source = "IMSLP"
-        copyright = "Creative Commons Attribution-ShareAlike 4.0"
+        source = "Paris: Durand & Cie., Plate D. & F. 9516"
         maintainer = "Alexander Brock"
         maintainerEmail = "alexander@lunar-orbit.de"
  arranger = "transcription for organ by Théodore Dubois"
- footer = "Mutopia-2017/07/25"
- tagline = \markup {
-   \override #'(box-padding . 1.0)
-   \override #'(baseline-skip . 2.7)
-   \box \center-align { \small
-                       \column {
-                        \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } 
-                        \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2017. \hspace #0.5 Reference: \footer } } 
-                        \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 4.0 License, for details see: \hspace #-0.5 \with-url #"https://creativecommons.org/licenses/by-sa/4.0/" https://creativecommons.org/licenses/by-sa/4.0/ } } } }
- }
+ license = "Creative Commons Attribution-ShareAlike 4.0"
+ footer = "Mutopia-2017/10/24-2198"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2017 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+ tagline = ##f
 }
 
 % The score definition
@@ -62,7 +54,7 @@ problemone= << {\shape #'((0.1 . 0.8) (0.0 . 1.0) (0.0 . 1.5) (-.2 . 0.6)) Slur 
     {g,2 \grace{ \stemUp
    \once \override Slur #'direction = #DOWN
    b16( c} \stemDown c4) <b g>}
- >> 
+ >>
 
 rh = \relative c' {
   r2 r4 \tuplet 3/2 {c8\f^\markup{\translate #(cons -1 0)\positive} c c}  |
@@ -87,7 +79,7 @@ rh = \relative c' {
           r4  \tuplet 3/2 {e,8 g c} <c e>4 r |
       r4  \tuplet 3/2 { e,8 g c} <c e>4 \tuplet 3/2 {  g8 c e} |
        <c e g>4 \tuplet 3/2 { g8 c e} <c e g>4 \tuplet 3/2 { c8^\grande e8 g}
-        
+
       }
       {
       << { <d b>2( c4)} \\ {g2~ g4} >> r4
@@ -109,7 +101,7 @@ rh = \relative c' {
         <c, e fis c'>2 <b dis fis b>4. <b fis'>8 |
          <b fis' a>4 (  <bes e g> )  <a d f>4-. <a d a'>-. |
 \problemone
-       
+
     }
     \alternative {
     {<< { <d b>2( c4)} \\ {g2~ g4} >> r4}
@@ -119,7 +111,7 @@ rh = \relative c' {
     \repeat volta 2 {
      \partial 16  <b, g'>16^\markup{\translate #(cons -1.8 0) \positive}
     << { g'4.. b16 b4.. d16  |
-         d4.. g16 g4.. e16 | 
+         d4.. g16 g4.. e16 |
          d04.. e16 e4.. c16  |
          b4.. d16^\markup{\translate #(cons -1.8 0) \grande} d4.. b16 |
         a4.. d16 d4.. b16 |
@@ -137,7 +129,7 @@ rh = \relative c' {
     }
     \repeat volta 2 {
         <ais' cis e fis>4^\markup{\halign #.1 \grande} \noBreak|
-     << 
+     <<
        {s4..  dis16^\markup{\translate #(cons -1.8 0) \positive} dis4.. fis16 |
         fis4.. b16 b4.. g16 |
         fis4.. g16 g4.. e16 |
@@ -189,7 +181,7 @@ rh = \relative c' {
     << {
      c'4  (  a4 \< e f )  |
       a4. \>(  g8 f4  \! e )  |
-       c'4(  a \< e f )  
+       c'4(  a \< e f )
     a4. \> (  g8 f4 \! e )  |
      g'4.\sf \> (  f8 e4 d )  |
       cis4 (d f \! d  )   |
@@ -237,7 +229,7 @@ rh = \relative c' {
      <b dis fis a>4 (  <b e g> )  <a d f>4-. <a d>-. |
 \problemone
        << { <d b>2( c4)} \\ {g2~ g4} >> r4
-   
+
           <e g c>2^\ff q4. q8 |
         <g c e>4 (  <f b d> )  <d f b>-. <b f' g>-. |
       <c e g>4. <e g c>8 q4. <g c e>8 |
@@ -254,12 +246,12 @@ rh = \relative c' {
          <b fis' a>4 (  <bes e g> )  <a d f>4-. <a d a'>-. |
 \problemone
        << { <d b>2( c4)} \\ {g2~ g4} >> r4
-       
+
  r  \tuplet 3/2 { c,8^\markup{\translate #(cons -2 1) \positive} e g} c4 r |
           r4  \tuplet 3/2 {e,8 g c} <c e>4 r |
       r4  \tuplet 3/2 { e,8 g c} <c e>4 \tuplet 3/2 {  g8 c e} |
        <c e g>4 \tuplet 3/2 { g8 c e} <c e g>4 \tuplet 3/2 { c8 e8 g}
-     
+
      \repeat volta 2 {
        c1~ \startTrillSpan |
        c1~ |
@@ -290,7 +282,7 @@ rh = \relative c' {
          g1 \stopTrillSpan|
   \appoggiatura{fis16 g}  <e g c>2 q  |
   q1\fermata
-         
+
 }
 
 lh = \relative c' {
@@ -331,7 +323,7 @@ lh = \relative c' {
       <a c d>4 <a cis>8. e'16 <a, d>4 <d, a'>8. c'16 |
        <g b>4 g a b |
   \clef treble
-  
+
      <a c e fis>2 <b dis fis a>4. q8 |
     <b dis fis a>4 (  <b e g> )  <a d f>-. q-. |
      <g c e>2 <g b f'>4 q |
@@ -371,7 +363,7 @@ lh = \relative c' {
 }
           \key c \major
     \tuplet 3/2 { g8 g, g'}
- 
+
       <a, c e fis>2 <b dis fis a>4. q8 |
     <b dis fis a>4 (  <b e g> )  <a d f>-. q-. |
     \break
@@ -405,25 +397,25 @@ lh = \relative c' {
  >>
  \repeat volta 2 {
   r4  |
- 
+
  << {
     f1^\markup{\translate #(cons -.5 0) {\positive}} |
      f2 b |
       f1 f2 g |
-      
+
     } \\ {
   r8  c,4 c c c8 |
    r8 des4 des des des8 |
    r8 c4 c c c8 |
   r8 des4 des des des8 |
-  
+
  } >>
- 
+
  r8  <f g d'!>4 q q q8~ |
   q8 q4 q <f gis d'> q8 |
    r8 <f a c>[ r <f a c> r <g bes c> r <e g c>] |
     r8 <f a c>4 q q8~ }
-    
+
      q8 q | \clef treble
   r8 <a e' g>4^\markup{\translate #(cons -2 0) {\grande}} q q q8 |
    r8 <a d f>4 q q q8 |
@@ -437,21 +429,21 @@ lh = \relative c' {
       r8 <g c d g>4 q q q8 |
        r8 <a c d fis>4 q q q8 |
         r8 <g c d g>4 q q q8 |
-  r8^\p 
+  r8^\p
   << {
       d'4 d8 e4 (  d )  |
        e4 (  d )  e (  d )|
        e4 (  d )  e (  d )|
        e4 (  d )  e (  d )|
-        
+
      } \\ {
    <fis, a>4 q8~ q2 |
     q1 |
      <a fis'>1 |
       q1 |
-      
+
   } >>
-  
+
      <a c e fis>2^\markup{\translate #(cons -1 0) \grande}_\ff <b dis fis a>4. q8 |
     <b dis fis a>4 (  <b e g> )  <a d f>-. q-. |
      <g c e>2 <g b f'>4 q |
@@ -460,7 +452,7 @@ lh = \relative c' {
         q4 (  <b e g> )  <a d f>-. q-. |
          <g c e>2 <g g'>4 <g f'> |
     q2 (  <c e>4 ) r
-    
+
      \clef bass
     c2^\ff c4. c8 |
      e4 (  d )  b-. g-. |
@@ -477,14 +469,14 @@ lh = \relative c' {
        a8-. c-. e-. fis-. a,-. dis-. fis-. a-. |
         r8 <b, fis' a> r <bes e g> r <a d f> r <a d f> |
     r8 g-. c-. e-. g4 <g, f'> |
-     q2 (  <c e>4 ) 
-     
+     q2 (  <c e>4 )
+
      \tuplet 3/2 { c8^\markup{\translate #(cons -1 0) \positive} c c} |
      c4 r r \tuplet 3/2 { c8 c c} |
       c2 r4 \tuplet 3/2 { c8 c c}  |
       <c e>4  \tuplet 3/2 {c8 c c} <c e>4 \tuplet 3/2 { <c e>8 q q}  |
       <c e g>4 \tuplet 3/2 { <c e>8 q q}  <c e g>4 \tuplet 3/2{ <c e g>8 q q}
-  
+
   \clef bass
   \repeat volta 2 {
    <bes c g'>2^\f <a c f>4. <gis c e>8 |
@@ -569,7 +561,7 @@ pedal = \relative c {
       r1 |
        r4 r8. g16 g4.. b16 |
         d4.. g,16 g4.. b16 |
-    } 
+    }
     \alternative {
          {d2 r4 r8. s16}
          { d2 r4 }
@@ -585,7 +577,7 @@ pedal = \relative c {
      d4 )   r4 d2 (  |
       g,4 )r r }
     \key c \major   r4 |
- 
+
   a2 b4. b8 |
    e2 f!4-. f-. |
     g,2 g' |
@@ -594,7 +586,7 @@ pedal = \relative c {
      e cis d f, |
      g2 g'4 g,  |
      g2  (  c4  ) r |
-  
+
    r1^\markup{Otez Tirasses et Anches de tous les claviers excepté du Récit}_\markup{Manuals and Pedal uncoupled and Reeds in (Swell excepted)} |
     r1 |
      r1 |
@@ -640,7 +632,7 @@ pedal = \relative c {
    a2 b4. b8 e2 f!4-. f-. |
     g,2 g'4 g, |
      g2 (  c4 )  r
-  
+
    c2^\ff c4. c8 |
     g2. g4 |
      c4 c e c |
@@ -684,8 +676,8 @@ pedal = \relative c {
                  r2 r4 r8. <c, c'>16 |
                   q2 q |
                    q1\fermata
-          
-    
+
+
 }
 
 \score {
@@ -700,7 +692,7 @@ pedal = \relative c {
       \set Staff.midiInstrument = #"church organ"
       \key c \major \lh
     }
-    
+
   >>
   \new Staff {
     \set Staff.midiInstrument = #"church organ"
@@ -723,7 +715,7 @@ pedal = \relative c {
       \set Staff.midiInstrument = #"church organ"
       \key c \major \unfoldRepeats{\lh}
     }
-    
+
   >>
   \new Staff {
     \set Staff.midiInstrument = #"church organ"
@@ -733,4 +725,3 @@ pedal = \relative c {
 >>
   \midi { \tempo 2=65}
 }
-
