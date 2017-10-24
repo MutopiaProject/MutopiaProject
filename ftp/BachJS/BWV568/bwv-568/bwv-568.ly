@@ -23,10 +23,11 @@
 %        date = "1720"
         mutopiainstrument = "Organ"
         style = "Baroque"
-        source = "IMSLP"
+%        source = "IMSLP"
+        source = "Leipzig: Breitkopf und Härtel B.W. XXXVIII"
         maintainer = "Alexander Brock"
         maintainerEmail = "alexander@lunar-orbit.de"
-	
+
         license = "Creative Commons Attribution-ShareAlike 4.0"
         footer = "Mutopia-2017/10/17-2197"
         copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2017 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
@@ -47,7 +48,7 @@ melodyRight = \relative c'' {
   r16  << {d' cis d fis d cis16 d g e dis e fis d cis d} \\
           {fis, e fis a fis e fis b g fis g a fis e fis} >>
   << {d'4 dis8.   e16 fis8.  g16 <b, dis! fis a>4
-      <b e a>4. <e gis>8  <e a>4 <gis b> 
+      <b e a>4. <e gis>8  <e a>4 <gis b>
        c16  a gis b a b gis b a4 r8  <e b'>
       <e a c>2 <d fis a c> |
       <d g b>2 <c e g b> |
@@ -90,12 +91,12 @@ melodyRight = \relative c'' {
         c16\noBeam a b c d e fis! g a g fis e d c b a |
          \stemUp b4 g' g fis |
          \acciaccatura fis2 g1
-        
+
      }
      \\ {
        fis,4 <fis a>4 <dis fis b> <dis fis>  |
        e4. b'8  c!4 d |
-        e16 c b d c d b d 
+        e16 c b d c d b d
         c4 r8 gis |
      a2  <fis a>2 |
       g2 <e g> |
@@ -202,7 +203,7 @@ rhup = \relative c' {
   <a, c fis!>1 |
    <g d' g>4 \clef bass \stemNeutral b4 c d |
     g,1
-   
+
 }
 
 rhdown = \relative c' {
@@ -216,7 +217,7 @@ s4  g4 b b |
        d4 s s2 |
        s1 |
        s1 |
-       s16 r r8 r4 r2 | 
+       s16 r r8 r4 r2 |
        s1 |
        s1 |
         e,4. d'!8 c!4 b |
@@ -296,7 +297,7 @@ pedal = \relative c {
     d,4 f g g, |
      c4 r r c |
       b1~ |
-      
+
       b1~ |
       b1~ |
       b1~ |
@@ -318,8 +319,8 @@ pedal = \relative c {
    <g g'>1~ |
    <g g'>4  b4 c d |
     g,1|
-   
-              
+
+
 }
 
 rh = << \clef bass \rhup \\ \rhdown >>
@@ -344,7 +345,7 @@ rh = << \clef bass \rhup \\ \rhdown >>
       \set Staff.midiInstrument = #"church organ"
       \new Voice { \key g \major \rh }
     >>
-    
+
   >>
   \new Staff {
     \set Staff.midiInstrument = #"church organ"
