@@ -7,14 +7,14 @@
     ragged-bottom = ##f
     ragged-last-bottom = ##f
    %page-count = 5
-   
+
    system-system-spacing =
     #'(
        %(basic-distance . 0)
        %(minimum-distance . 0)
        %(padding . 5)
        %(stretchability . 20)
-      ) 
+      )
 }
 
 %#(set-default-paper-size "a4")
@@ -36,21 +36,16 @@
         date = "1797 - 1798"
         mutopiainstrument = "Voice (Bass) and piano"
         style = "Classical"
-        source = "http://hz.imslp.info/files/imglnks/usimg/7/71/IMSLP35013-PMLP40341-Haydn-SchoepfungVSpeters.pdf page 82ff"
-        copyright = "Creative Commons Attribution-ShareAlike 4.0"
+        source = "Liepzig: C. F. Peters Plate 7619"
+        % "http://hz.imslp.info/files/imglnks/usimg/7/71/IMSLP35013-PMLP40341-Haydn-SchoepfungVSpeters.pdf page 82ff"
+        % publish date estimated at 1880
         maintainer = "Alexander Brock"
         maintainerEmail = "alexander@lunar-orbit.de"
-	
- footer = "Mutopia-2017/07/28"
- tagline = \markup {
-   \override #'(box-padding . 1.0)
-   \override #'(baseline-skip . 2.7)
-   \box \center-align { \small
-                       \column {
-                        \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } 
-                        \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2017. \hspace #0.5 Reference: \footer } } 
-                        \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 4.0 License, for details see: \hspace #-0.5 \with-url #"https://creativecommons.org/licenses/by-sa/4.0/" https://creativecommons.org/licenses/by-sa/4.0/ } } } }
- }
+
+        license = "Creative Commons Attribution-ShareAlike 4.0"
+        footer = "Mutopia-2017/10/24-2199"
+        copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2017 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+        tagline = ##f
 }
 
 melody = \relative c {
@@ -170,7 +165,7 @@ rh = \relative c' {
         <gis b>8([ a)] a <e' g!>[ (<d fis> <cis e>]) |
     <d fis a d>4( <fis fis'> <a d fis a>) |
      <d, g b d>4( <g g'> <b d g b>) |
-     
+
      <e, g cis e>4~ q8. <fis fis'>16 <g g'> <a a'> <b b'> <cis cis'> |
       <d fis d'>4 d,8 \noBeam <d' fis a>16 q q8 q |
        <e a>8 r <d gis>16 a' b cis d e fis gis, |
@@ -184,8 +179,8 @@ rh = \relative c' {
           a4.) a8 b16( a g a |
             b2.) |
     e,8( gis a) \noBeam d32( cis b cis <d fis,>8) <gis,! d> |
-     
-     
+
+
        } \\ {s2.  dis2  e4 |
      <c e>2( <b dis>4) |
       b2~ b8 a |
@@ -194,7 +189,7 @@ rh = \relative c' {
          e8( cis d e fis4~) |
           fis8( dis e g e d |
      cis4.) e8
-     
+
     } >>
    <b'( d,>4 <a) cis,>16( b <e, g!> a <d, fis> g <cis, e> fis |
   d8-.) <a d>8-.( q-. q-. q-. q-.) |
@@ -218,7 +213,7 @@ rh = \relative c' {
  \set Score.tempoHideNote = ##t
  \tempo 4 = 100
       <e' a cis!>8-. q-. q-. |
-    <a d>8.( f'16 a8)  \noBeam <e, a cis>-. 
+    <a d>8.( f'16 a8)  \noBeam <e, a cis>-.
  \set Score.tempoHideNote = ##t
  \tempo 4 = 95
 
@@ -286,7 +281,7 @@ rh = \relative c' {
    fis8) \noBeam d'16 cis d cis b a g fis e d  |
    cis b a g  fis8 <fis a>8 <e g> <cis e> |
     d4 <a' d fis> r
-    
+
     \bar "|."
 }
 
@@ -333,9 +328,9 @@ lh = \relative c {
       <bes bes'>2_\ff^"Kontrafag." q4(_\p |
    <a a'>4) r <a a'>( |
    <bes bes'>4) r <bes bes'>( |
-    <b! b'!>4) r 
+    <b! b'!>4) r
     << { s4  |
-         c'8 c c c c c} 
+         c'8 c c c c c}
        \\{ \stemNeutral <b,( b'>4 |
            \stemDown c2_\markup{\dynamic fz "Kontrafag."}) r4 } >> |
      f8( a16 c f8) \noBeam <f a> q q |
@@ -407,13 +402,13 @@ lh = \relative c {
       <d fis a>4 r <fis a d> |
        <g b d>4 a <a, a'> |
         d4 <d, d'> r
-    
+
 }
 
 songtext =  \lyricmode {
 %\override LyricText.self-alignment-X = #LEFT
 Nun4 scheint in vol2 -- lem4 Glan2 -- ze8 der Him4 -- mel
-Nun4 prangt in ih2 -- rem4 Schmuk2 -- ke8 die Er4-- de. 
+Nun4 prangt in ih2 -- rem4 Schmuk2 -- ke8 die Er4-- de.
 Die4 Luft2 er4 -- füllt2 das leich8 -- " " te2 Ge -- fie4 -- der
 die4 Was2 -- ser4 schwellt2 der4 Fi2 -- sche8 Ge -- wim4 -- el.
 Den Bo -- den drückt der Tie -- re Last,
@@ -444,8 +439,8 @@ prei -- sen soll.
 
   \time 3/4
 
-    \override Score.VerticalAxisGroup #'remove-first = ##t 
-  \new Staff << 
+    \override Score.VerticalAxisGroup #'remove-first = ##t
+  \new Staff <<
             \new Voice = "mel" { \clef bass \key d \major \melody}
             \new Lyrics = "one" \lyricsto mel \songtext
   >>
@@ -570,13 +565,13 @@ prei -- sen soll.
     <<
       \new Voice { \clef bass \key d \major \lh }
     >>
-    
+
   >>
 
 >>
 
 \layout {
-  \context {      
+  \context {
     \RemoveEmptyStaffContext
   }
 }
@@ -588,25 +583,25 @@ prei -- sen soll.
 
   \time 3/4
 
-    \override Score.VerticalAxisGroup #'remove-first = ##t 
-  \new Staff << 
+    \override Score.VerticalAxisGroup #'remove-first = ##t
+  \new Staff <<
         \set Staff.midiInstrument = #"choir aahs"
             \new Voice = "mel" { \clef bass \key d \major \melody}
             \new Lyrics = "one" \lyricsto mel \songtext
   >>
   \new PianoStaff <<
-    \new Staff 
+    \new Staff
     <<
       \set Staff.midiInstrument = #"acoustic grand"
       \new Voice { \key d \major \rh }
     >>
 
-    \new Staff 
+    \new Staff
     <<
       \set Staff.midiInstrument = #"acoustic grand"
       \new Voice { \clef bass \key d \major \lh }
     >>
-    
+
   >>
 
 >>
