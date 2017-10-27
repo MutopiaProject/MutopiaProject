@@ -213,7 +213,7 @@ fr = #(define-music-function (parser location frets) (string?) #{
 
 
 
-\pointAndClickOff
+%\pointAndClickOff
 
 upperInstrument = \markup{ "Guitar I   " }
 upperVoice = {
