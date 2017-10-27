@@ -30,7 +30,7 @@
  mutopiasource = "D B Mus. ms. Bach P 202 (Berlin, Staatsbibliothek)"
  mutopiainstrument = "2 Guitars"
 
- footer = "Mutopia-2017/10/23-draft"
+ footer = "Mutopia-2017/10/26-draft"
  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
  tagline = ##f
 
@@ -318,13 +318,13 @@ upperVoice = {
 
     % "home stretch F then G"
     \rhDown
-    b,16\rest\bpI^\markup{\fret-diagram #"4-3-3;3-2-2;2-1-1;1-1-1;" } b,\rest
-    <f,-3\P>[ <a,-2\I>]   <c-1\M>[ <f-1\A> <c\M> <a,\I>]   
-    <c\A>[ <a,-1\M>\pII ^\markup { \fret-diagram-terse #"x;5;3;2;x;x;" } <f,-2\I> <a,\M>]   <f,\I>[ <d,-4\P> <f,\I> <d,\P>] | %33a
+    b,16\rest\pV^\markup{ \fret-diagram #"5-8;4-o;4-7;3-5;2-6;" } b,\rest
+    <f,-4\P>[ <a,-3\I>]   <c-1\M>[ <f-2\A> <c\M> <a,\I>]   
+    <c\M>[ <a,\I> <f,\P> <a,\I>]   <f,\P>[ <d,-0\I> <f,\P> <d,\I>] | %33a
     \stemDown
     b,16\rest\pX^\markup{\fret-diagram #"3-12-2;2-12-3;1-10-1;1-13-4;" } b,\rest
     <g-2\P>[ <b-3\I>]   <d'-1\M>[ <f'-4\A> <d'\M> <b\I>]   
-    <d'\M>[ <b\I> <g\P> <b\I>]   <d-1\P>\pVII[ <f-4\I> <e-3\P> <d-1\I>] | %34a
+    <d'\M>[ <b\I> <g\P> <b\I>]   <d-1\P>\pVII[^\markup{ \fret-diagram #"3-7;3-9;3-10;" } <f-4\I> <e-3\P> <d-1\I>] | %34a
 
     <c-3 e-2 g-1 c'-1>1\bpVIII\fermata\arpeggio ^\markup { \fret-diagram-terse #"x;x;10-3;9-2;8-1;8-1;" } | %35a
   }
@@ -510,13 +510,13 @@ uprVoice = {
     
     % home stretch F then G"
     \rhDown
-    b,16\rest\bpI^\markup{\fret-diagram #"4-3-3;3-2-2;2-1-1;1-1-1;" } b,\rest
-    <f,-3\P>[ <a,-2\I>]   <c-1\M>[ <f-1\A> <c\M> <a,\I>]   
-    <c\A>[ <a,-1\M>\pII ^\markup { \fret-diagram-terse #"x;5;3;2;x;x;" } <f,-2\I> <a,\M>]   <f,\I>[ <d,-4\P> <f,\I> <d,\P>] | %33a
+    b,16\rest\pV^\markup{ \fret-diagram #"5-8;4-o;4-7;3-5;2-6;" } b,\rest
+    <f,-4\P>[ <a,-3\I>]   <c-1\M>[ <f-2\A> <c\M> <a,\I>]   
+    <c\M>[ <a,\I> <f,\P> <a,\I>]   <f,\P>[ <d,-0\I> <f,\P> <d,\I>] | %33a
     \stemDown
     b,16\rest\pX^\markup{\fret-diagram #"3-12-2;2-12-3;1-10-1;1-13-4;" } b,\rest
     <g-2\P>[ <b-3\I>]   <d'-1\M>[ <f'-4\A> <d'\M> <b\I>]   
-    <d'\M>[ <b\I> <g\P> <b\I>]   <d-1\P>\pVII[ <f-4\I> <e-3\P> <d-1\I>] | %34a
+    <d'\M>[ <b\I> <g\P> <b\I>]   <d-1\P>\pVII[^\markup{ \fret-diagram #"3-7;3-9;3-10;" } <f-4\I> <e-3\P> <d-1\I>] | %34a
 
     <c-3 e-2 g-1 c'-1>1\bpVIII\fermata\arpeggio ^\markup { \fret-diagram-terse #"x;x;10-3;9-2;8-1;8-1;" } | %35a
   }
@@ -713,15 +713,15 @@ uprVoice = {
     \rhDown
     b,16\rest\bpI^\markup{\fret-diagram #"4-3-3;3-2-2;2-1-1;1-1-1;" } b,\rest
     <f,-3\P>[ <a,-2\I>]   <c-1\M>[ <f-1\A> <c\M> <a,\I>]   
-    <c\A>[ <a,-1\M>\pII ^\markup { \fret-diagram-terse #"x;5;3;2;x;x;" } <f,-2\I> <a,\M>]   <f,\I>[ <d,-4\P> <f,\I> <d,\P>] | %33a
+    <c\M>[ <a,-1\I>\pII ^\markup { \fret-diagram-terse #"x;5;3;2;x;x;" } <f,-2\P> <a,\M>]   <f,\I>[ <d,-4\P> <f,\I> <d,\P>] | %33a
     
     % lower this bar for ez version
     \transpose c c, {
       b,16\rest\pII^\markup{\fret-diagram-terse #"x;x;5;4;3;1;" } b,\rest
       <g-4\P>[ <b-3\I>]   <d'-2\M>[ <f'-1\A> <d'\M> <b\I>]   
-      <d'\M>[ <b\I> <g\P> <b\I>]   <d-0\P>\pI[ <f-3\I> <e-2\P> <d-0\I>] | %34a
+      <d'\M>[ <b\I> <g\P> <b\I>]   <d-0\P>\pI[^\markup{\fret-diagram #"4-o;4-2;4-3;" } <f-3\I> <e-2\P> <d-0\I>] | %34a
 
-      <c-3 e-2 g-0 c'-1>1\fermata\arpeggio | %35a
+      <c-3 e-2 g-0 c'-1>1\fermata\arpeggio ^\markup { \fret-diagram-terse #"x;3;2;o;1;x;" } | %35a
     }
   }
 }
