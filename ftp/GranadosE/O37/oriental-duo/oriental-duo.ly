@@ -2,20 +2,18 @@
 
 \header {
  title = "Danzas Españolas No. 2, Oriental"
- subtitle = \markup { \smaller "Arranged for Guitar Duo" }
  composer = "Enrique Granados" % d.1916
  arranger = "Arr: Dennis Burns"
  style = "Romantic"
  date = "1890"
  source = "Barcelona: Casa Dostesio, n.d. (IMSLP01200)"
- mytagline = ##f
 
  %            o_
  %       (\___\/_____/)
- %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~ 
+ %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~
  maintainer = "Jeffrey Olson & Dennis Burns"
  maintainerEmail = "gmail's jjocanoe & boldersounds.com's dennis"
- license = "Creative Commons Attribution - ShareAlike 4.0"
+ license = "Creative Commons Attribution-ShareAlike 4.0"
 
  mutopiacomposer = "GranadosE"
  mutopiatitle = "Danzas Españolas No. 2, Oriental"
@@ -24,8 +22,8 @@
  mutopiasource = "Barcelona: Casa Dostesio, n.d."
  mutopiainstrument = "2 Guitars"
 
- footer = "Mutopia-2017/10/01-submittal"
- copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2017 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ footer = "Mutopia-2017/10/27-2200"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2017 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
 }
 
@@ -39,7 +37,7 @@
   print-first-page-number = ##t
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #3 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #3 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #last-page \fromproperty #'header:mytagline }
     }
   }
@@ -185,7 +183,7 @@ hiB   = ^\markup{ \smaller B}
 
 % tuplets
 hideTupletNumber = \override TupletNumber.stencil = ##f
-unhideTupletNumber = \revert TupletNumber.stencil 
+unhideTupletNumber = \revert TupletNumber.stencil
 hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
 
 % stems
@@ -215,7 +213,7 @@ onOneString =
      \override TextSpanner.dash-period = #2.0
      \override TextSpanner.font-size = #-5
      \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \override TextSpanner.bound-details.left.text = 
+     \override TextSpanner.bound-details.left.text =
        \markup  { \circle \number #strA }
    #})
 onTwoStrings =
@@ -227,7 +225,7 @@ onTwoStrings =
      \override TextSpanner.dash-period = #2.0
      \override TextSpanner.font-size = #-5
      \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \override TextSpanner.bound-details.left.text = 
+     \override TextSpanner.bound-details.left.text =
        \markup \concat { \circle \number #strA \circle \number #strB }
    #})
 noStrings = \stopTextSpan
@@ -291,7 +289,7 @@ upperVoice = \transpose c c' {
     \set glissandoMap = #'((0 . 0))
     <e''-1 c''-2>4(\pXII\gl^\segno_\dol\startTextSpan
     \set glissandoMap = #'()
-    <c'' a'-3>\pVIII\gl 
+    <c'' a'-3>\pVIII\gl
     <e'' c''-2>~\pXII | %3
     <e'' c''>4\gl <d'' b'-3>\pX\gl <c'' a'>\pVIII\gl | %4
     <d'' b'>\pX)\gl <d'' b'>8(\gl
@@ -303,27 +301,27 @@ upperVoice = \transpose c c' {
        } \\ {
       \fingerLeft
       r4 <b-0>2
-    } >>  
-    \ap { <c'-1\3>16\pV } 
-    \set glissandoMap = #'((1 . 1)) 
+    } >>
+    \ap { <c'-1\3>16\pV }
+    \set glissandoMap = #'((1 . 1))
     <a'-2 f'-3>4\gl\startTextSpan
     \set glissandoMap = #'((0 . 0))
     <c''-1 a'-3>\pVIII(\gl
-    \set glissandoMap = #'() 
+    \set glissandoMap = #'()
     <b' g'-2>\pVII\gl | %7
-    <a' f'>4\pV)\gl 
+    <a' f'>4\pV)\gl
     \set glissandoMap = #'((0 . 0))
-    <b' g'>\pVII\stopTextSpan(\gl 
-    \set glissandoMap = #'((1 . 1)) 
+    <b' g'>\pVII\stopTextSpan(\gl
+    \set glissandoMap = #'((1 . 1))
     <g'\1 b-2\3>\pIII\gl | %8
     <e'-3 c'-2>2.)\pIV~ | %9
     <e' c'>2. | %10
   }
-  
+
   \mrk
   \onTwoStrings "2" "3"
-  <d'-1 b-2>8\pIII\startTextSpan( <e'-4 c'-3> <d' b> <e' c'> 
-  \set glissandoMap = #'((1 . 1)) 
+  <d'-1 b-2>8\pIII\startTextSpan( <e'-4 c'-3> <d' b> <e' c'>
+  \set glissandoMap = #'((1 . 1))
   <f'-1 d'-2>4\pVI)\gl | %11
   <gis'-3 e'>4\pVIII\stopTextSpan(\gl_\psf <b'-4\1 d'-2\3>2\pVI\gl^> | %12
   <e'-3 c'-2\3>2.)~\pIV | %13
@@ -332,13 +330,13 @@ upperVoice = \transpose c c' {
   <gis' e'>4\stopTextSpan\pVIII_(_\psf <b' d'>2\pVI | %16
   <e' c'>2.\pIV)~ | %17
   <e' c'>2.\> | %18
-  
+
   \mrk
   \onTwoStrings "1" "2"
   \set glissandoMap = #'((0 . 0))
   <e''-1 c''-2>4\startTextSpan(\pXII\gl\!\pp
   \set glissandoMap = #'()
-  <c'' a'-3>\pVIII\gl 
+  <c'' a'-3>\pVIII\gl
   <e'' c''-2>~\pXII | %19
   <e'' c''>4\gl <d'' b'-3>\pX\gl <c'' a'>\pVIII\gl | %20
   <d'' b'>\pX)\gl <d'' b'>8(\gl
@@ -351,40 +349,40 @@ upperVoice = \transpose c c' {
        r4 <b-0>2
   } >>
   \set glissandoMap = #'((0 . 0))
-  <a'-1 f'-2>4\startTextSpan\pV\gl\! 
+  <a'-1 f'-2>4\startTextSpan\pV\gl\!
   <c'' a'-3>\pVIII(\gl
-  \set glissandoMap = #'() 
+  \set glissandoMap = #'()
   <b' g'-2>\pVII\gl | %23
-  <a' f'>4\pV)\gl 
+  <a' f'>4\pV)\gl
   \set glissandoMap = #'((0 . 0))
-  <b' g'>\stopTextSpan\pVII(\gl 
-  \set glissandoMap = #'((1 . 1)) 
+  <b' g'>\stopTextSpan\pVII(\gl
+  \set glissandoMap = #'((1 . 1))
   <g' b-2>\pIII\gl | %24
   <e'-3 c'-2\3>2.)\pIV~_\prd | %25
   <e' c'>2. | %26
-  
+
   \mrk
   <b'-1>4\pVII(\pp b'8 c'' b' c'' | %27
   <a'-1>4) a'8( <f'-2\2> <e'-1\2>4) | %28
   b'4\pVII(_\dol b'8 c'' b' c'' | %29
   a'2.\pV) | %30
-  
+
   <d-3 g,>2.(\BpIII_\pcr | %31
   <c'-4 f d-3>)( | %32
   <b,-1 e,>2.)\pII | %33
   <d b, e,>2.(\pp\> | %34
   <e-1 c-2 a,-4>2.)\! | %35
   \bar "||"
-  
+
   \mrk
   \onTwoStrings "2" "3"
   \set glissandoMap = #'()
   <e'-1 c'-2>4\startTextSpan(\pV\gl\p <c' a>\pI\gl_\dol <e' c'>~\pV | %36
-  <e' c'>4\gl 
+  <e' c'>4\gl
   <d' b>\pIII\gl <c' a>\pI\gl | %37
-  <d' b>)\pIII <d' b>8(\gl 
+  <d' b>)\pIII <d' b>8(\gl
   \set glissandoMap = #'((0 . 0))
-  <c' a>\stopTextSpan\pI 
+  <c' a>\stopTextSpan\pI
   \onTwoStrings "3" "4" <b-2 g-3>4~\startTextSpan)\pIII | %38
   << {
     <b g>4\stopTextSpan \afterGrace <g'-1>2\pIII\startTrillSpan( { <f'-4\2>16\stopTrillSpan g') } | %39
@@ -393,16 +391,16 @@ upperVoice = \transpose c c' {
        r4 <b-0>2
   } >>
   \onTwoStrings "2" "3"
-  <a-1 f-2>4\startTextSpan\pII\gl( <c' a-3>4\pV\gl 
+  <a-1 f-2>4\startTextSpan\pII\gl( <c' a-3>4\pV\gl
   \set glissandoMap = #'()
   <b g-2>\pIV\gl | %40
-  <a f>4)\gl 
-  \set glissandoMap = #'((0 . 0)) 
+  <a f>4)\gl
+  \set glissandoMap = #'((0 . 0))
   <b g>\stopTextSpan(\pIV
   \onOneString "3" <g-2 b,-4\6>\startTextSpan\gl_\rit | %41
   <e-2 c-3\5>2.)~\stopTextSpan\pI_\dim | %42
   <e c>2. | %43
-  
+
   \mrk
   << { \headHarmonic
        a4^\arh( c' b | %44
@@ -418,7 +416,7 @@ upperVoice = \transpose c c' {
        e2. | %47
   } >>
   \bar "|."
-  
+
   \time 6/8
   \tempo 8=90
   \mrk
@@ -428,21 +426,21 @@ upperVoice = \transpose c c' {
   <g'-2\2>4) \ap { <f'-2>16\pV } <g'-2>8^>~ g'4.\pVII | %50
   <f'-2\2>8\pV( <a'-1\1> \ap { <g'-2>16\pII } <a'-2>8^>~ a'\pIV[ \ap { <gis'-1>32 <a'-2> <b'-4> } a'8 gis'!] | %51
   <e'-2\2>4) e'8^>~ e'4. | %52
-  <e''-4\1 e'-1\3>4.^>\pIX\f~ <e'' e'>4_\dim 
+  <e''-4\1 e'-1\3>4.^>\pIX\f~ <e'' e'>4_\dim
   \stringUp<fis'-4\2>32\p([ \onOneString "1" <gis'-1>\startTextSpan <a'-2> <b'-4>] | %53
   a'2.)\stopTextSpan | %54
   \stringRight
-  
+
   \mrk
   <e''-2>4\pXI e''8^>~ e''8([ \ap { <dis''-1>32 <e''-2> <fis''-4> } e''8 dis''] | %55
   <b'-2\2>4) \ap { <a'-2>16\pIX } <b'-2>8^>~ b'4.\pXI | %56
   <c''-1\1>4\pVIII c''8^>~ c''32 c''( dis'' c'' dis''8[ b'\pVII] | %57
   <d''>4 cis''8 a'32\pV) a'^\rup c'' b' c''8([ b'] | %58
-  <gis'>4)\pIV <e'\2>8^>(~ e'4 
+  <gis'>4)\pIV <e'\2>8^>(~ e'4
   \stringUp<fis'-4\2>32\p[ \onOneString "1" <gis'-1>\startTextSpan <a'-2> <b'-4>] | %59
   a'2.)_\atm\stopTextSpan | %60
   \stringRight
-  
+
   \mrk
   << {
     <a,-0>16(\pVIII <e'-3> <c''-2 a'-4> e' <c'' a'> e') <c'' a'>( e' <c''> <f'-3> <d''-4> <d'-1>) | %61
@@ -460,7 +458,7 @@ upperVoice = \transpose c c' {
     a,2. | %66
   } >>
   \bar "||"
-  
+
   \time 3/4
   \tempo 4=80
   \mrk
@@ -474,9 +472,9 @@ upperVoice = \transpose c c' {
   %<< {
   %} \\ {
   %} >>
-  
-  
-  
+
+
+
 
 lowerInstrument = \markup{ "Guitar II  " }
 lowerVoice = \transpose c c' {
@@ -493,12 +491,12 @@ lowerVoice = \transpose c c' {
   <a-3>8( <b-0> <d'-4> <g'-1>\ppIII <d'-4> <b-0>) | %5
   a8( b d' g' d'
   \onOneString "4" <g-3>)\startTextSpan | %6
-  <f-2>8(\pII\stopTextSpan 
+  <f-2>8(\pII\stopTextSpan
   \onOneString "3" <g-0>\startTextSpan <a-1> <c'-4>\stopTextSpan <d'-1\2>\pIII <e'-0>) | %7
   <f'-4\2>8( <g'-1\1> f' g' <f-2\4> <g-0>) | %8
   a8(\pV b c' e' c' b) | %9
   a8( b c' e' c' b) | %10
-  
+
   <g-0>8\pI( <f-3\4> g f <d-0> <c-3> | %11
   <b,-2>8 <a,-0> gis, <f,-1> <d-0> <c-2>\pII) | %12
   <b,-1>8( <a,-0> <b,-1> <c-2> <e-1>\bpII <a-1> | %13
@@ -507,13 +505,13 @@ lowerVoice = \transpose c c' {
   b,8 a, gis, f, <d-0>\pII c) | %16
   b,8( a, b, c e\bpII a | %17
   <b-0>8 <c'\3>\pIII <d'\2> c' b c') | %18
-  
+
   a8( b c' e' c' b) | %19
   a8( b a b c' e') | %20
   a8( b d' g'\ppIII d' b) | %21
   a8( b d' g' d'
   \onOneString "4" <g-3>)\startTextSpan | %6
-  <f-2>8(\pII\stopTextSpan 
+  <f-2>8(\pII\stopTextSpan
   \onOneString "3" <g-0>\startTextSpan <a-1> <c'-4>\stopTextSpan <d'-1\2>\pIII <e'-0>) | %7
   <f'-4\2>8( <g'-1\1> f' g' <f-2\4> <g-0>) | %24
   \stringRight
@@ -524,7 +522,7 @@ lowerVoice = \transpose c c' {
   <c'-4 e-1 a,>2.\pII) | %38
   <d'-4 gis-2 e,>2.\pIV( | %29
   <c'-4 e-1 a,>2.\pII)\stopTextSpan | %30
-  
+
   \onOneString "4"
   <b-3>4\startTextSpan(\pVII b8 <c'-4> b c' | %31
   <a-1>4) a8( b a b | %32
@@ -533,7 +531,7 @@ lowerVoice = \transpose c c' {
   \onOneString "4"
   <b-3>4\startTextSpan\pVII( b8 c' b c' %34
   <a-1>2.)\stopTextSpan | %35
-  
+
   a,8\pI( b, c e c b,) | %36
   a,8( b, a, b, c e) | %37
   a,8( b, d g d b,) | %38
@@ -542,7 +540,7 @@ lowerVoice = \transpose c c' {
   <f>8( <g> f g <f,> <g,>) | %41
   a,8( b, a, b, a, g,) | %42
   f,8( g, f, g, f, e,) | %43
-  
+
   << { \headHarmonic
        f4_\arh( a g | %44
        f4) g( b, | %45
@@ -557,8 +555,8 @@ lowerVoice = \transpose c c' {
        a,2. | %46
        a,2. | %47
   } >>
-  
-  
+
+
   \time 6/8
   << {
     \fingerLeft
@@ -595,7 +593,7 @@ lowerVoice = \transpose c c' {
     \onOneString "4"
     s4. s4 s16 \once \hideNotes e\gl\startTextSpan | % use voice 4 to start glissando
   } >>
-  
+
   << {
   } \\ {
     s2. %61
@@ -610,16 +608,16 @@ lowerVoice = \transpose c c' {
     \once \hideNotes g4) % and to terminate the slur
   } >>
    \ap { <f-2>16\pVII } <g-2>8^>~ g4.\pIX | %62
-  <f-2>8\stopTextSpan\pVII( 
+  <f-2>8\stopTextSpan\pVII(
   \onOneString "4"
-  <a-1>\startTextSpan \ap { <g-2>16\pIV } <a-2>8^>~ a\pVI[ 
+  <a-1>\startTextSpan \ap { <g-2>16\pIV } <a-2>8^>~ a\pVI[
   \ap { \stemUp <gis-1>32 <a-2> <b-4> \stemDown } a8 gis!\gl] | %63
   <e-1>4) e8^>~ e4.\stopTextSpan | %64
-  <e'-4\3 e-1\5>4.^>\f\pII~ <e' e>4 
-  \stringUp <fis-3\5>32\p\pVI([ 
+  <e'-4\3 e-1\5>4.^>\f\pII~ <e' e>4
+  \stringUp <fis-3\5>32\p\pVI([
   \onOneString "4" <gis-1>\startTextSpan <a-2> <b-4>] | %65
   a2.)\stopTextSpan | %66
-  
+
   \override MultiMeasureRest.staff-position = #0
   R | %67
   R | %68
@@ -649,5 +647,3 @@ lowerVoice = \transpose c c' {
     }
   }
 }
-
-
