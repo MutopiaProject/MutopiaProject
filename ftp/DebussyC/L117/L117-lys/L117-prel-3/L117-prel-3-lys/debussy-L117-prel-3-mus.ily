@@ -1,30 +1,6 @@
-\version "2.19.15"
+\version "2.18.2"
 
-\header {
-    title = "Prélude III."
-    composer = "Claude Debussy (1862-1918)"
-    opus = "CD 125; L.117"
-    piece = \markup \italic \huge "Le vent dans la plaine"
-    date = "1910"
-    style = "Romantic"
-    source = "Durand, 1910"
-
-    maintainer = "Glen Larsen"
-    maintainerEmail = "glenl.glx (at) gmail.com"
-    license = "Creative Commons Attribution-ShareAlike 4.0"
-
-    mutopiatitle = "Prélude 3: Le vent dans la plaine"
-    mutopiaopus = "CD 125; L.117"
-    mutopiacomposer = "DebussyC"
-    mutopiainstrument = "Piano"
-
- footer = "Mutopia-2014/12/14-1995"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
-}
-
-\include "shapeII.ily"
-\include "paper-defs.ily"
+\include "nederlands.ly"
 
 global = {
   \key ges \major
@@ -37,6 +13,11 @@ legendOne = \markup { \raise #5.0 \center-align \italic \smaller "aussi légère
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 unrest = { \once\hideNotes r16 }
+
+hidePP = \tweak #'stencil ##f \pp
+
+XpiuP = \markup { \concat { \italic "più" } \dynamic p }
+XpiuPP = \markup{ \concat { \italic "più" } \dynamic pp }
 
 upperOne = \relative c' {
   \tupletSpan 4
@@ -448,8 +429,7 @@ lowerOne = \relative c' {
   | bes1^\fermata
 }
 
-piuP = \markup{\concat {\italic "più" } \dynamic p }
-piuPP = \markup{\concat {\italic "più" } \dynamic pp }
+
 
 %\tweak DynamicText.self-alignment-X #RIGHT
 midDynamics = {
@@ -480,7 +460,7 @@ midDynamics = {
   s16-\tweak #'X-offset #-0.5 \p s16 s8*7 |
   s4 s4\< s4 s4\! |
   s1*2 | % 42,43
-  s16-\tweak #'X-offset #-4.0 -\piuP s16 s8*7 |
+  s16-\tweak #'X-offset #-4.0 -\XpiuP s16 s8*7 |
   s1*5 | % 45 - 49
   s8 s8\pp s4*3 |
   s4-\tweak #'X-offset #1.0 \> s4\! s2 |
@@ -489,12 +469,11 @@ midDynamics = {
   \tuplet 3/2 { s8\< s8\! s8 } s2.\p |
   \tuplet 3/2 { s8\< s8\! s8 } s2.\p |
   s4 s2.\pp |
-  s2 s2-\tweak #'X-offset #-4.0 -\piuPP |
+  s2 s2-\tweak #'X-offset #-4.0 -\XpiuPP |
   s1\ppp
   s1
 }
 
-hidePP = \tweak #'stencil ##f \pp
 lowDynamics = {
   s8\hidePP s8*7 | s1*3 |
   \repeat unfold 4 { s32\< s32*4 s32\! s32 s32\> s32\! s32*3 s8 }
@@ -518,63 +497,4 @@ lowDynamics = {
   s4\p\< s4\! s4\p\< s4\! | % 49
   s1*9 |
   s1_\markup{\italic "laissez vibrer"}
-}
-
-%-------Typeset music
-\score {
-  \removeWithTag #'played
-  \context PianoStaff \with {
-    midiInstrument = "acoustic grand"
-    \override StaffGrouper #'staff-staff-spacing #'padding = #0.4
-    \override StaffGrouper #'staff-staff-spacing #'basic-distance = #16
-    } <<
-    \new Staff = "upper" {
-      \clef treble
-      \global
-      \override Score.MetronomeMark.padding = #1.5
-      \tempo "Animé" 4=126
-      \new Voice="upperOne" { \upperOne }
-    }
-    \new Dynamics \with {
-      \override VerticalAxisGroup #'nonstaff-relatedstaff-spacing #'padding = #0.2
-      } { \midDynamics }
-    \new Staff = "lower" {
-      \clef treble
-      \global
-      \new Voice="lowerOne" { \lowerOne }
-    }
-    \new Dynamics { \lowDynamics }
-  >>
-  \layout{
-    \context {
-      \PianoStaff
-      \consists #Span_stem_engraver
-    }
-    \context {
-      \Score
-      \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/16)
-    }
-  }
-}
-
-%-------generate Midi
-\score {
-  \removeWithTag #'printed
-  \context PianoStaff \with {
-    \mergeDifferentlyDottedOn
-    \mergeDifferentlyHeadedOn
-  } <<
-    \set PianoStaff.midiInstrument = "acoustic grand"
-    \new Staff = "upper" {
-      \clef treble
-      \global
-      \new Voice="upperOne" { \upperOne }
-    }
-    \new Staff = "lower" {
-      \clef bass
-      \global
-      \new Voice="lowerOne" { \lowerOne }
-    }
-  >>
-  \midi  { \tempo 4 = 126 }
 }
