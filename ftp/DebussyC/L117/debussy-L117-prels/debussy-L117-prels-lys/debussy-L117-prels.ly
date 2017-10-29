@@ -3,15 +3,15 @@
 %#(set-default-paper-size "letter")
 
 % The global staff size affects the book.
-% You may override the global staff size for notes within a \score by setting a new 
+% You may override the global staff size for notes within a \score by setting a new
 %     staff size within the \layout block for the corresponding \score.
 #(set-global-staff-size 18)
 
 
 %% -- PRINT COLLECTION BOOK
 \bookpart {   % --- Cover pages
-              
-   \header {     
+
+   \header {
      date = "1910"
      style = "Romantic"
      source = "Durand, 1910"
@@ -25,30 +25,30 @@
      license = "Creative Commons Attribution-ShareAlike 4.0"
 
      %-- the collection has its own PieceID
-     footer = "Mutopia-2015/01/20-1"
+     footer = "Mutopia-2015/01/20-0"
      copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
      tagline = ##f
   }
-  
-  \paper { 
+
+  \paper {
     top-margin = 5 \cm
     left-margin = 5 \cm
     right-margin = 5 \cm
     print-page-number = ##f
-    
+
     %% Larger ToC title:
     tocTitleMarkup = \markup \override #'(baseline-skip . 6 ) \abs-fontsize #16 \bold \column {
                            \line {  "Table of Contents"  }
                            \hspace #1
                       }
     %% Double-spaced content entries
-    tocItemMarkup = \markup \huge \column { 
+    tocItemMarkup = \markup \huge \column {
                                 \fill-line { \fromproperty #'toc:text \fromproperty #'toc:page }
                                 \hspace #1
                     }
-  
+
   }
-  
+
   %-- Title Page
   \markup {  \center-column {
                  \hspace #1
@@ -58,7 +58,7 @@
                  \hspace #1
                  \hspace #1
                  \hspace #1
-                 \fill-line { \epsfile #X #42 #"scroll-top.eps" }
+                 \fill-line { \epsfile #X #42 #"./debussy-L117-prels-lys/scroll-top.eps" }
                  \hspace #1
                  \hspace #1
                  \fill-line { \abs-fontsize #41 \bold "Préludes" }
@@ -69,7 +69,7 @@
                  \fill-line { \abs-fontsize #22 "Livre 1" }
                  \hspace #1
                  \hspace #1
-                 \fill-line { \epsfile #X #42 #"scroll-btm.eps" }
+                 \fill-line { \epsfile #X #42 #"./debussy-L117-prels-lys/scroll-btm.eps" }
                  \hspace #1
                  \hspace #1
                  \hspace #1
@@ -80,10 +80,10 @@
                  \fill-line { \abs-fontsize #12 "L.117" }
              }
   }  \pageBreak
-  
+
   %-- Table of Contents
   \markuplist \table-of-contents
-  
+
 } % - end cover pages bookpart
 
 %% -- DEFINITIONS AND MUSIC VARIABLES
@@ -95,7 +95,7 @@
 % --- Prelude 1
 \include "./L117-prel-1/L117-prel-1-lys/debussy-L117-prel-1-defs.ily"
 \include "./L117-prel-1/L117-prel-1-lys/debussy-L117-prel-1-mus.ily"
-\bookpart {    
+\bookpart {
    \tocItem \markup { "Prélude 1: Danseuses de Delphes"  }
    \include "./L117-prel-1/L117-prel-1-lys/debussy-L117-prel-1-heads.ily"
    \include "./L117-prel-1/L117-prel-1-lys/debussy-L117-prel-1-lyt.ily"
@@ -104,7 +104,7 @@
 % --- Prelude 2
 \include "./L117-prel-2/L117-prel-2-lys/debussy-L117-prel-2-defs.ily"
 \include "./L117-prel-2/L117-prel-2-lys/debussy-L117-prel-2-mus.ily"
-\bookpart {    
+\bookpart {
    \tocItem \markup { "Prélude 2: Voiles" }
    \include "./L117-prel-2/L117-prel-2-lys/debussy-L117-prel-2-heads.ily"
    \include "./L117-prel-2/L117-prel-2-lys/debussy-L117-prel-2-lyt.ily"
