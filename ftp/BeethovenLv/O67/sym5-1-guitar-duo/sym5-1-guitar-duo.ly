@@ -19,7 +19,7 @@
 
  %            o_
  %       (\___\/_____/)
- %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~ 
+ %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~
  maintainer = "Jeffrey Olson"
  maintainerEmail = "gmail's jjocanoe"
  license = "Public Domain"
@@ -30,8 +30,8 @@
  mutopiasource = "Leipzig: Breitkopf & Härtel, n.d.(1865). Plates 10668–10672"
  mutopiainstrument = "2 Guitars"
 
- footer = "Mutopia-2016/12/07-x19"
- copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ footer = "Mutopia-2017/10/31-2202"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
 }
 
@@ -46,7 +46,7 @@
   print-first-page-number = ##f
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #1 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #1 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #last-page \fromproperty #'header:mytagline }
     }
   }
@@ -66,7 +66,7 @@
 #(define lo-pitch (ly:make-pitch -1 2 NATURAL) )
 
 % function to color notes that are near or out of range
-#(define (color-pitch-range grob) 
+#(define (color-pitch-range grob)
   (let ((pitch (ly:event-property (event-cause grob) 'pitch) ))
     (if pitch
       (if (ly:pitch<? max-pitch pitch) (x11-color 'red)
@@ -190,7 +190,7 @@ hiB   = ^\markup{ \smaller B}
 
 % tuplets
 hideTupletNumber = \override TupletNumber.stencil = ##f
-unhideTupletNumber = \revert TupletNumber.stencil 
+unhideTupletNumber = \revert TupletNumber.stencil
 hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
 unhideTupletBracket = \revert TupletBracket.bracket-visibility
 
@@ -235,7 +235,7 @@ rightOne = \transpose c c' {
   <e>2\fermata | %5
   b8\rest <a-2>\pI\p[ a a] | %6
   <f-3>2 %7
-  f'8\rest <f'-1>[ f' f'] | %8 
+  f'8\rest <f'-1>[ f' f'] | %8
   <d'-4>2~ | %9
   d'8 a[ a a] | %10
   <e-1>2\pII %11
@@ -252,7 +252,7 @@ rightOne = \transpose c c' {
   b8\rest <bes-2>8\pII\ff[ <bes> <bes>] | %22
   <g-4>2~ | %23
   <g>2\fermata | %24
-  
+
   \mrk
   b8\rest <bes-4>8\pI\p[ bes bes] | %25
   <g-0>2~ | %26
@@ -291,7 +291,7 @@ rightOne = \transpose c c' {
   <b aes f b,>4\sf b\rest | %56
   R2 | %57
   <c'-1 g c-3>4\sf b\rest | %58
-  
+
   \mrk
   b8\rest <c'-4>\pIII\ff[ c' c'] | %59
   <f-1>2 | %60
@@ -326,18 +326,18 @@ rightOne = \transpose c c' {
   <f' f>4 <g' g> | %89
   <aes' aes>4 <g' g> | %90
   <f' f>4 <g' g> | %91
-  
+
   % ossia
   %<aes' aes>4 <g'-1 f'-4 b-2 g-3>\pIII | %92
   %<aes'-1 f'-4 b-1 aes-3>4\bpIV <b'-1 aes'-4 f'-3 b-2>\pVII) | %93
-  % 
+  %
   %\mrk
   %<c''-1 bes'!-3 g'-4 c'-2>2\pVIII\ff~ | %94
   %<c'' bes' g' c'>8[ <d''-1\1 d'-3\4>\pX <c'' c'>\pETC <bes' bes>] | %95
-  
+
   <aes' aes>4 <g'-1 d'-1 b-2 f-1>\bpIII | %92
   <aes'-3 d'-1 b-2 f-1>4 <b'-3 f'-1 d'-2 aes-1>\bpVI) | %93
-  
+
   \mrk
   <c''-1 g'-1 e'-2 bes-1>2\bpVIII\ff~ | %94
   <c'' g' e' bes>8[ <d''-1\1 d'-3\4>\pX <c'' c'>\pETC <bes' bes>] | %95
@@ -355,7 +355,7 @@ rightOne = \transpose c c' {
   e'8\pI([ d') bes g] | %107
   d'8([ c') a f] | %108
   b8\rest <c'' e' c'>\pVIII[ <c'' e' c'> <c'' e' c'>] | %109
-  
+
   \mrk
   r8 <a''-4\1 a'-1\3>\pXIV\ff[ <a'' a'> <a'' a'>] | %110
   <f'' f'>8\pX <c''-4\2 c'-1\4>[ <c'' c'> <c'' c'>] | %111
@@ -403,7 +403,7 @@ rightOne = \transpose c c' {
   <c''-2 a'-4 e'-3>2\pVII | %154
   <b'-1 gis'-4 e'-3>8 <e'' gis' e'>\bpIX[ <e'' gis' e'> <d'' b' e'>] | %155
   <c'' a' e'>2\pVII | %156
-  
+
   \mrk
   <b'-1 gis'-4 e'-3>2\pp | %157
   <c''-2 a'-4 e'-3>8 s4. | %158
@@ -416,7 +416,7 @@ rightOne = \transpose c c' {
   r8 <a'-3>[ <c''-1> <d''-3>] | %165
   <e'' a' e'>4\pIX s | %166
   s2 * 13 | %167-179
-  
+
   \mrk
   s8 e''[ e'' e''] | %180
   <a'-4>2\pII | %181
@@ -425,9 +425,9 @@ rightOne = \transpose c c' {
   s2 * 7 | %184-190
   <a'-1 a-3>2\bpV | %191
   s2 * 5 | %192-196
-  
+
   s2 * 32 | %197-228
-  
+
   s2 * 12 | %229-240
   <e bes,>8 b\rest b4\rest | %241
   s2 * 8 | %242-249
@@ -435,7 +435,7 @@ rightOne = \transpose c c' {
   s2 | %251
   <a e a,>2~\bpII | %252
   <a e a,>2\fermata | %253
-  
+
   \mrk
   g8\rest <a-2>\pI\p[ a a] | %254
   e'8\rest <bes-4>[ bes bes] | %255
@@ -453,12 +453,12 @@ rightOne = \transpose c c' {
   s2 | %267
   <d'-4 gis-2 d-1>4 r | %268
   \set Timing.timing = ##f
-  a''2\pXIV\fermata 
+  a''2\pXIV\fermata
   \ottava #1
   \grace { g''4 f'' e''2 f''16[ e'' d'' e''] g''4 f'' e''\fermata }
   \ottava #0
   \set Timing.timing = ##t s2 | %269
-  
+
   \mrk
   b8\rest <bes-4>8\pI\p[ bes bes] | %270
   <g-0>2~ | %271
@@ -496,7 +496,7 @@ rightOne = \transpose c c' {
   <d'-1 d-3>8\pIII <b-0 b,-2>\pI[ <b b,> <b b,>] | %300
   <gis-1 f-4 b,-2>4\sf b\rest | %301
   <a-3 e-2 a,-0>4\sf b\rest | %302
-  
+
   \mrk
   b8\rest <a-4>\pV[\ff a a] | %303
   <d-1>2 | %304
@@ -527,8 +527,8 @@ rightOne = \transpose c c' {
   <d'-1>4\pIII( <e'-3> | %329
   <d'-2>4\bpII <cis'-1>) | %330
   s2 * 15 | %331-345
- 
-  
+
+
   \mrk
   s2 * 7 | %346-352
   s8 <gis'-1\1 gis-3\4>[\pIV <a' a>\pETC <gis' gis>] | %353
@@ -540,7 +540,7 @@ rightOne = \transpose c c' {
   <cis' cis>8[( <b-0 b,-1>)\pII <g-0> <e-2>] | %359
   <b b,>8[( <a-2 a,-0>) <fis-4> <d-0>] | %360
   b8\rest <a'-4 cis'-1 a-1>\bpII[ <a' cis' a> <a' cis' a>] | %361
-  
+
   \mrk
   r8 <fis''-1\1 fis'-3\4>[\pXIV <fis'' fis'>\pETC <fis'' fis'>] | %362
   <d'' d'>8 <a' a>[ <a' a> <a' a>] | %363
@@ -550,7 +550,7 @@ rightOne = \transpose c c' {
   s2 * 2 | %367-368
   <a'-1\1 a-3\4>2\pV | %369
   s2 * 4 | %370-373
-  
+
   \mrk
   s8 <d'>[ d' d'] | %374
   <d'>8 s4. | %375
@@ -567,7 +567,7 @@ rightOne = \transpose c c' {
   s2 | %390
   s2 * 7 | %391-397
   R2 * 2 | %398-399
-  
+
   \mrk
   <cis'-1\2 cis-3\5>8[\pII <d' d>\pETC <e' e> <f' f>] | %400
   <g'-1\1 g-3\4>8[ <a' a>\pETC <bes' bes> <a' a>] | %401
@@ -647,16 +647,16 @@ rightOne = \transpose c c' {
   b8\rest <a-2>\pVI\pp[ a a] | %483
   e'8\rest <bes-4>[ bes bes] | %484
   e'8\rest <f'-1>[ f' f'] | %485
-  << { <d'-3>2~\> | <a'-1 d'>4\! s | } \\ 
+  << { <d'-3>2~\> | <a'-1 d'>4\! s | } \\
      \\ { cis''4\rest <bes'-1>( | s4) s | } >> %486-487
   e'8\rest bes[ bes bes] | %488
   e'8\rest f'[ f' f'] | %489
-  << { d'2 | \stemDown a'8 \stemUp s4. | } \\ 
+  << { d'2 | \stemDown a'8 \stemUp s4. | } \\
      \\ { cis''4\rest bes'( | s4) s | } >> %490-491
   s2 * 9 | %492-500
   <cis'-1 a-1 e-1 cis-4>4\arpeggio\bpII b\rest | %501
   <d'-3 a f-2>4\arpeggio b\rest | %502
-  
+
   \bar "|."
 }
 
@@ -686,7 +686,7 @@ rightTwo = \transpose c c' {
   <a,-0>2( | %32
   <d-4>8) s4. | %33
   s2 * 3 | %34-36
-  
+
   s2 | %37
   <bes-1 g-2>4\sf s | %38
   <c'-1 a-2>4\sf s | %39
@@ -796,7 +796,7 @@ rightTwo = \transpose c c' {
   <e' cis' a>4 <a'-1 cis' a>8[ <a' cis' a>] | %193
   <a' cis' a>4 <cis''-1 a'-2 e'-1>8\bpIX[ <cis'' a' e'>] | %194
   <e''-4 a' e'>4 <a''-4 cis''-1 a'-1>8\bpXIV[ <a'' cis'' a'>] | %195
-  
+
   \mrk
   <fis''-1\1 d''-2 fis'-3\4>8\ff <d''-1 d'-3>8\pX[ <d'' d'> <d'' d'>] | %196
   <g'-1 g-3>2\pIII | %197
@@ -828,7 +828,7 @@ rightTwo = \transpose c c' {
   <e'' b' gis' e'>2 | %226
   R2 | %227
   <e'' b' gis' e'>2 | %228
-  
+
   \mrk
   s8 <e''-1 e'-3>\pXII\ff[ <e'' e'> <e'' e'>] | %229
   <e''-1 cis''-4 e'-3>2 | %230
@@ -883,7 +883,7 @@ rightTwo = \transpose c c' {
   r8 <bes,-1>[ bes, bes,] | %276
   <a,-0>2 | %277
   s2 * 4 | %278-281
-  
+
   s2 | %282
   <bes-1 g-2>4\sf s | %283
   <c'-1 a-2>4\sf s | %284
@@ -892,8 +892,8 @@ rightTwo = \transpose c c' {
   <g'-3 d'-2>4\sf s | %287
   <bes'-3 e'-1>4\sf s | %288
   s2 * 14 | %289-302
- 
-  
+
+
   s2 * 4 | %303-306
   <fis-4>2(\p | %307
   <g-1>2) | %308
@@ -919,7 +919,7 @@ rightTwo = \transpose c c' {
   <b-1 gis-3>2 | %328
   <b-2 gis-4>2 | %329
   <a-1 e-1>2 | %330
-  
+
   \mrk
   \slurUp
   <g'-1\1 g-3\4>4\pIII( <a' a>\pETC | %331
@@ -952,7 +952,7 @@ rightTwo = \transpose c c' {
   %<g' e'>4 s | %355
   s2 *2 | %354-355
   s2 * 6 | %356-361
-  
+
   <d'-2 a-1 fis-3 d-4>2 | %362
   s2 * 2 | %363-364
   d8\rest <e'-0 cis'-3 a-2 e-1>[ <e' cis' a e> <e' cis' a e>] | %365
@@ -964,7 +964,7 @@ rightTwo = \transpose c c' {
   b8\rest <a' e' cis' a>[ <a' e' cis' a> <a' e' cis' a>] | %371
   <a' fis' d' a>4 b\rest | %372
   b8\rest <cis''-1 a'-2 e'-1 cis'-3>[\bpIX <cis''a'e'cis'> <cis''a'e'cis'>] | %373
-  
+
   <d''-1 a'-1 fis'-2 d'-3>2\bpX | %374
   s8 <d''-1 fis'-2 d'-3>[\pX <d'' fis'd'> <d'' fis'd'>] | %375
   <d'' g'-4 d'>2 | %376
@@ -1072,7 +1072,7 @@ rightTwo = \transpose c c' {
   <a' e'-1 a>2~ | %481
   <a' e' a>2\fermata | %482
   s2 | %483
-  
+
   \tieDown
   <f-3>2~ | %484
   <a f>2~ | %485
@@ -1093,8 +1093,8 @@ rightTwo = \transpose c c' {
   <a' f' d' a>4^. b\rest | %500
   s2 | %501
   s2 | %502
-  
-  
+
+
 }
 
 lowerInstrument = \markup{ \center-column{ "Guitar II  " \line \smaller {\circle 6 "= D"} } }
@@ -1127,7 +1127,7 @@ leftOne = \transpose c' c' {
   b8\rest <bes,-4>8\pV[ <bes,> <bes,>] | %22
   <g,-1>2~ | %23
   <g,>2\fermata | %24
-  
+
   R | %25
   b8\rest <e-4>\pIV[ e e] | %26
   <cis-1>2~ | %27
@@ -1140,7 +1140,7 @@ leftOne = \transpose c' c' {
   b8\rest <d,>[ <d,> <d,>] | %34
   <d,>4 d\rest | %35
   b8\rest <d,>[ <d,> <d,>] | %36
-  
+
   d,4 <d-0 a,-0 f,-1>8\pIII( d,) | %37
   d,4 <cis-1 g,-2>8\pIV( d,) | %38
   d,4 <c!-1 a,-4>8\pIII( d,) | %39
@@ -1292,7 +1292,7 @@ leftOne = \transpose c' c' {
   <g-4 cis-3>4 <g cis> | %194
   <e-1 a,-0>4\pII <a,-0 e,-2>8[ <a, e,>] | %195
   <d-0 a,-0 fis,-4>8 s4. | %196
-  
+
   s2 * 2 | %197-198
   <fis-4 a,-0 d,-0>2 | %199
   <g-0 d-0 bes,-1 g,-4>2 | %200
@@ -1321,7 +1321,7 @@ leftOne = \transpose c' c' {
   R2 | %226
   <e' b gis e>2 | %227
   R2 | %228
-  
+
   <e' b gis e>8 s4. | %229
   s2 * 4 | %230-233
   R2 | %234
@@ -1344,8 +1344,8 @@ leftOne = \transpose c' c' {
   d8\rest <a-1 g-4 a,-0 g,-3>\pII[ <a g a, g,> <a g a, g,>] | %251
   \repeat tremolo 8 { <e-2 a,-0 e,-1>32 <e a, e,> } | %252
   \repeat tremolo 8 { <e a, e,>32\fermata <e a, e,> } | %253
-  
-%} 
+
+%}
   R2 | %254
   <d d,>2~ | %255
   <d d,>2~ | %256
@@ -1359,13 +1359,13 @@ leftOne = \transpose c' c' {
   <a, d,>2 | %263
   <cis-1 e,-4>2\pIV | %264
   <d-0 a,-0>2\pIII | %265
-  
+
   << {  } \\ {  } >> | %265
   s2 * 3 | %266-268
   \set Timing.timing = ##f
   <a'-1 cis'-2 a-3 a,-0>4\bpV r\fermata
   \set Timing.timing = ##t s2 | %269
-  
+
   R | %270
   b8\rest <e-4>\pIV[ e e] | %271
   <cis-1>2~ | %272
@@ -1378,7 +1378,7 @@ leftOne = \transpose c' c' {
   b8\rest <d,>[ <d,> <d,>] | %279
   <d,>4 d\rest | %280
   b8\rest <d,>[ <d,> <d,>] | %281
-  
+
   d,4 <d-0 a,-0 f,-1>8\pIII( d,) | %282
   d,4 <cis-1 g,-2>8\pIV( d,) | %283
   d,4 <c!-1 a,-4>8\pIII( d,) | %284
@@ -1400,7 +1400,7 @@ leftOne = \transpose c' c' {
   <d,-0>8 <f,-1>[ <f,> <f,>] | %300
   <d-3 gis,-4>4 b,\rest | %301
   <cis-1 a,-4>4\pIV b,\rest | %302
-  
+
   s2 * 6 | %303-308
   b8\rest <a,>[\p a, a,] | %309
   <d,>4 b\rest | %310
@@ -1417,7 +1417,7 @@ leftOne = \transpose c' c' {
   <b,-1>2~ | %327
   b,2 | %328
   b8\rest <e,-1>[ e, e,] | %329
-  
+
   <a,-0>4 b\rest | %330
   <bes,!-1>2~\pI | %331
   <bes,>2 | %332
@@ -1451,7 +1451,7 @@ leftOne = \transpose c' c' {
   <e,-1>8[\pII <g,-4> e, g,] | %359
   <d,-0>8[ <fis,-3> d, fis,] | %360
   <a,-0 e,-1>4 <g-0 e-2 a,-0> | %361
-  
+
   b8\rest <fis-4>[ fis fis] | %362
   s2 | %363
   s8 d,[ d, d,] | %364
@@ -1464,7 +1464,7 @@ leftOne = \transpose c' c' {
   b8\rest <a,>[ <a,> <a,>] | %371
   <d a, fis,>4 b\rest | %372
   b8\rest <cis-1 a,-4>[ <cis a,> <cis a,>] | %373
-  
+
   b8\rest <d>[ d d] | %374
   <d>8 s4. | %375
   s8 <d>[ d d] | %376
@@ -1550,7 +1550,7 @@ leftOne = \transpose c' c' {
   d8\rest <g-3 g,-2>\pIV[ <g g,> <g g,>] | %480
   <e-3 a,-0 e,-2>2~\arpeggio\pI | %481
   <e a, e,>2\fermata | %482
-  
+
   R2 | %483
   \tieDown
   <a,-0 d,-0>2~ | %484
@@ -1572,14 +1572,14 @@ leftOne = \transpose c' c' {
   <d-0 a,-0 d,-0>4-. d\rest | %500
   <e-2 a,-0 e,-1>4\arpeggio d\rest | %501
   <d-0 a,-0 d,-0>4\arpeggio d\rest %502
-  
+
   % above, c will show as middle C on a guitar staff
   } %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END TRANSPOSE C C' %%% BTM UP
   % below, c' will show as middle C on a guitar staff
-  
 
-  
-  
+
+
+
 }
 
 leftTwo = \transpose c' c' {
@@ -1601,7 +1601,7 @@ leftTwo = \transpose c' c' {
   <d-3>2\pIII | %17
   cis8 s4. | %18
   s2 * 6 | %19-24
-  
+
   s2 * 3 | %25-27
   f,8\rest <a,-4>[ <a,> <a,>] | %28
   <d-2>8 b\rest b4\rest | %29
@@ -1609,7 +1609,7 @@ leftTwo = \transpose c' c' {
   f,8\rest <a,-0>[ <a,> <a,>] | %32
   <d-0 d,-0>8 b\rest b4\rest | %33
   s2 * 3 | %34-36
-  
+
   s2 * 22 | %37-58
   s2 * 14 | %59-72
   <bes,-1>8 <c-3>[ c c] | %73
@@ -1666,13 +1666,13 @@ leftTwo = \transpose c' c' {
   <e a,>8) s4. | %149
   \slurDown
   <d-3>4 s | %150
-  
+
   %ossia
   %<d-4>8 <f-2 d>[ <f d> <e-1 c-3>] | %151
   %<d-0 b,-1>[ <d b,> <d b,> <c-1 a,-4>\pIII] | %152
   %<b,-1 gis,-4>2\pII %153
   %s2 * 4 | %154-157
-  
+
   <d-0>8\pI <d'-4 f-3>[ <d' f> <c'-1 e-2>] | %151
   <b-3 d-4>\pII[ <b d> <b d> <a-1 c-2>] | %152
   <gis-1 b,-2>2\pI %153
@@ -1688,11 +1688,11 @@ leftTwo = \transpose c' c' {
   <e-1>2 | %190
   s2 * 5 | %191-195
   s8 d[ d d] | %196
-  
+
   <d-0 bes,-1>2\pI | %197
   <ees-1 c-3>2 | %198
   s2 * 30 | %199-228
-  
+
   s8 <e' e>[ <e' e> <e' e>] | %229
   <cis'-2 e-1>2\pII | %230
   <d'-3 e>2 | %231
@@ -1717,7 +1717,7 @@ leftTwo = \transpose c' c' {
   %s2 | %269
   \set Timing.timing = ##f s2 | %269
   \set Timing.timing = ##t s2 | %269
-  
+
   s2 * 3 | %270-272
   f,8\rest <a,-4>[ <a,> <a,>] | %273
   <d-2>8 b\rest b4\rest | %274
@@ -1725,9 +1725,9 @@ leftTwo = \transpose c' c' {
   f,8\rest <a,-0>[ <a,> <a,>] | %277
   <d-0 d,-0>8 b\rest b4\rest | %278
   s2 * 3 | %279-281
-  
+
   s2 * 21 | %282-302
-  
+
   R2 | %303
   R2 | %304
   R2 | %305
@@ -1766,13 +1766,13 @@ leftTwo = \transpose c' c' {
   s4 e | %343
   s4 <e,-1> | %344
   s4 e, | %345
-  
+
   s2 * 4 | %346-349
   <fis,-2>4\pII s | %350
   <g,-4>4 s | %351
   <a,-4>4\pIV s | %352
   s2 * 9 | %353-361
-  
+
   <d-0 a,-0 fis,-3>2 | %362
   <d-0>8 <a,-0>[ a, a,] | %363
   <fis,-3>8 s4. | %364
@@ -1782,7 +1782,7 @@ leftTwo = \transpose c' c' {
   <fis-4 fis,-3>8 <d d,>[ <d d,> <d d,>] | %368
   b8\rest <a,>[ <a,> <a,>] | %369
   s2 * 4 | %370-373
-  
+
   <d-2 fis,-1>2 | %374
   s8 <a-4 d fis,>[ <a d fis,> <a d fis,>] | %375
   <bes-4 d-1 g,-1>2\bpV | %376
@@ -1835,7 +1835,7 @@ leftTwo = \transpose c' c' {
   r8 <a,>[ <a,> <a,>] | %431
   s2 * 6 | %432-437
   s4 <a,-0>-. | %438
-  
+
   s2 | %439
   <d''-4 d'-1>4_.\pVII <d'' d'>_. | %440
   <d'' d'>2_^ | %441
@@ -1870,7 +1870,7 @@ leftTwo = \transpose c' c' {
   s2 * 2 | %488-489
   b4\rest d( | %490
   a,8) s4. | %491
-  
+
   <d'-4 a-2 d-0>4-. d\rest | %492
   s2 | %493
   <d' a d>4-. d\rest | %494
@@ -1879,13 +1879,13 @@ leftTwo = \transpose c' c' {
   <d' a d>4-. s | %497
   <d' a d>4-. s | %498
   s2 * 4 | %499-502
-  
+
   % above, c will show as middle C on a guitar staff
   } %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% END TRANSPOSE C C' %%% BTM DOWN
   % below, c' will show as middle C on a guitar staff
 
- 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BTM DOWN 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BTM DOWN
 }
 
 
@@ -1893,12 +1893,12 @@ leftTwo = \transpose c' c' {
   \context StaffGroup <<
     \context Staff = "up" \with { instrumentName = \upperInstrument } <<
       \set Staff.midiInstrument = #"acoustic grand"
-      %\override Staff.NoteHead.color = #color-pitch-range 
+      %\override Staff.NoteHead.color = #color-pitch-range
       << \rightOne \\ \rightTwo >>
     >>
     \context Staff = "dn" \with { instrumentName = \lowerInstrument } <<
       \set Staff.midiInstrument = #"acoustic grand"
-      %\override Staff.NoteHead.color = #color-pitch-range 
+      %\override Staff.NoteHead.color = #color-pitch-range
       << \leftOne \\ \leftTwo >>
      >>
   >>
