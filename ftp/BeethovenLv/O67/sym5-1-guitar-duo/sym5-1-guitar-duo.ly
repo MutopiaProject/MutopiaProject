@@ -54,7 +54,7 @@
 }
 
 % suppress local file system path in pdf
-%\pointAndClickOff
+\pointAndClickOff
 
 
 % pitch limits for standard clasical guitar
@@ -228,7 +228,6 @@ upperInstrument = \markup{ \center-column{ "Guitar I   " \line \smaller {\circle
 rightOne = \transpose c c' {
   % within this body, c will show as middle C on a guitar staff
   \global
-%%{
   b8\rest\ff <a-1>\pII[ <a> <a>] | %1
   <f-2>2\fermata | %2
   b8\rest <g-4>[ <g> <g>] | %3
@@ -498,14 +497,6 @@ rightOne = \transpose c c' {
   <gis-1 f-4 b,-2>4\sf b\rest | %301
   <a-3 e-2 a,-0>4\sf b\rest | %302
   
-  
-%}
-  \override Score.BarNumber.break-visibility = ##(#f #t #t)
-  \override Score.BarNumber.self-alignment-X = #LEFT
-  \set Score.currentBarNumber = #303
-  \set Score.rehearsalMark = #14 % (14=N)
-  \bar "|"
-  
   \mrk
   b8\rest <a-4>\pV[\ff a a] | %303
   <d-1>2 | %304
@@ -666,7 +657,7 @@ rightOne = \transpose c c' {
   <cis'-1 a-1 e-1 cis-4>4\arpeggio\bpII b\rest | %501
   <d'-3 a f-2>4\arpeggio b\rest | %502
   
-  
+  \bar "|."
 }
 
 rightTwo = \transpose c c' {
