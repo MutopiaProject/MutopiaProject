@@ -1,5 +1,5 @@
 
-\version "2.10.10" 
+\version "2.18.2" 
 
 
 \paper{ 
@@ -24,7 +24,7 @@ allemande =  {
     a'16 c''16 e''16 f''16 gis'16 f''16 e''16 d''16 c''16 e''16 gis''16 a''16 e'16 d''16 c''16 b'16 |
     a'16^\markup{\finger"5"} c''16 gis'16 a'16^\markup{\finger"5"} f'16 d''16 gis'16 a'16^\markup{\finger"5"} e'16 c''16 gis'16 a'16^\markup{\finger"5"} d'16 c''16 b'16 a'16^\markup{\finger"TF"} |
     gis'16 e'16 gis'16 b'16 e''16 gis''16 b''16 d'''16 f''16 d'''16 b''16 gis''16 e''16 d''16 c''16 b'16 |
-    c''16 a'16 c''16 e''16 a''16 c'''16 e'''16 f''16 g''16 b''16 g''16 e''16 c''16 bes'16 a'16 g'16 |
+    c''16 a'16 c''16 e''16 a''16 c'''16 e'''16 f''16 g''16 bes''16 g''16 e''16 c''16 bes'16 a'16 g'16 |
     a'16 f'16 a'16 c''16 d''16 f''16 a''16 c''16 b'16 g'16 b'16 d''16 e''16 g''16 b''16 d''16 |
     c''16 a'16 c''16 e''16 f''16 a''16 c'''16 e''16 d''16 b'16 d''16 fis''16 g''16 b''16 d'''16 f''16 |
     e''16 g''16 c'''16 b''16 c'''16 e'''16 c'''16 g''16 c''16 g''16 c'''16 b''16 c'''16 e'''16 c'''16 g''16 |
@@ -40,12 +40,9 @@ allemande =  {
     }
     \alternative {
     	{ g''16 fis''32 e''32 b''16 c'''16 fis''8. e''16 e''2 | }
-	{ g''16 fis''32 e''32 b''16 c'''16 fis''8. e''16 e''16 b'16 c''16 a'16 b'16 g'16 a'16 b'16 |
-	 e'16 b'16 e''16 dis''16 e''16 g''16 e''16 b'16 fis'16 b'16 e''16
-	 dis''16 e''16 g''16 e''16 b'16 | }
+	{ g''16 fis''32 e''32 b''16 c'''16 fis''8. e''16 e''16 b'16 c''16 a'16 b'16 g'16 a'16 b'16 | }
  }
-
-\repeat volta 2 {
+    e'16 b'16 e''16 dis''16 e''16 g''16 e''16 b'16 fis'16 b'16 e''16 dis''16 e''16 g''16 e''16 b'16 |
     e'16 g'16 b'16 c''16 dis'16 c''16 b'16 a'16 g'16 b'16 dis''16 e''16 b'16 a'16 g'16 fis'16 |
     e'16 g'16 b'16 c''16 dis'16 c''16 b'16 a'16 g'16 b'16 dis''16 e''16 b'16 a''16 g''16^\markup{\finger"5"} fis''16 |
     e''16 g''16 dis''16 e''16 b''16 gis''16 d''16 e''16 c''16 a''16 dis''16 e''16 gis'16 f''?16 e''16 d''16 |
@@ -71,21 +68,9 @@ allemande =  {
     c''16 e''16 a''16^\markup{\finger"5"} c''16 b'16 a'16^\markup{\finger"5"} e'16 gis''16 a''16 a'16 g'16 e'16 f'16 a''16 e'16 g''16 |
     d'16 f''16 e''16 cis''16 d''16 bes''16 c''16 a''16 gis''16 e''16 d''16 b'16 c''16 e'''16 b'16 d'''16 |
     a'16 c'''16 d''16 b''16 e''16 a''16 b''16 gis''16 a''16 e'16 a'16 c''16 e''16 a'16 c''16 e''16 |
+    a''16 e''16 a''16 c'''16 e'''16 a''16 c'''16 e'''16 a'''2\fermata \bar "||"
     }
-    \alternative {
-    	{
-	    a''16 e''16 a''16 c'''16 e'''16 a''16 c'''16 e'''16 a'''2 |
-	    r16 b'16 e''16 dis''16 e''16 g''16 e''16 b'16 fis'16 b'16 e''16 dis''16 e''16 g''16 e''16 b'16
-	}
-	{
-	    a''16 e''16 a''16 c'''16 e'''16 a''16 c'''16 e'''16 a'''2\fermata
-	    \bar "|." |
-	}
-    }
-
 }
-
-} 
 
 
 
@@ -352,7 +337,16 @@ bouree =  {
     maintainerWeb = "http://yashi.org"
     moreInfo = "Transposed and fingered for Eb Alto Saxophone" 
  footer = "Mutopia-2015/08/13-1527"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ tagline = ##f
+  }
+  
+  \paper {
+    top-margin = 8\mm
+    top-markup-spacing.basic-distance = #6
+    markup-system-spacing.basic-distance = #5
+    top-system-spacing.basic-distance = #12
+    last-bottom-spacing.padding = #2
   }
 
 \score { 
