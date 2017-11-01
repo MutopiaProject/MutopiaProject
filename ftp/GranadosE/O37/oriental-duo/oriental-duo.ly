@@ -2,11 +2,13 @@
 
 \header {
  title = "Danzas Españolas No. 2, Oriental"
+ subtitle = \markup { \smaller "Arranged for Guitar Duo" }
  composer = "Enrique Granados" % d.1916
  arranger = "Arr: Dennis Burns"
  style = "Romantic"
  date = "1890"
  source = "Barcelona: Casa Dostesio, n.d. (IMSLP01200)"
+ mytagline = ##f
 
  %            o_
  %       (\___\/_____/)
