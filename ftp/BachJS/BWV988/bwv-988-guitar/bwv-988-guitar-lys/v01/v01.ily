@@ -11,8 +11,8 @@ global = {
 
 \bookpart {
     \header { maintainer = "Steve Shorter and J.D. Erickson" }
-    \include "mutopia-header.ily"
-    \paper { 
+    \include "../mutopia-header.ily"
+    \paper {
       print-first-page-number = ##t
       markup-system-spacing.basic-distance = #15
       top-system-spacing.basic-distance = #13
@@ -35,9 +35,8 @@ global = {
 	    \new Staff << \global \guitarone >>
 	    \new Staff << \global \guitartwo >>
 	>>
-	
+
 	\layout { }
 	\midi { \tempo 4 = 100 }
     }
 }
-

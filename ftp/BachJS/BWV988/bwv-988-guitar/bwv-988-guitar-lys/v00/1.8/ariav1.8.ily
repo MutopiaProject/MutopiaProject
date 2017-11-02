@@ -13,7 +13,7 @@ global = {
 
 \bookpart {
     \header { maintainer = "Steve Shorter and J.D. Erickson" }
-    \include "mutopia-header.ily"
+    \include "../../mutopia-header.ily"
 	\paper {
 	print-first-page-number = ##t
 %	page-count = #4
@@ -29,7 +29,7 @@ global = {
 	title = \markup \column { \null \fontsize #5 \override #'(font-name . "FreeSerif") "Aria" }
 	piece = "1.8"
 	lastupdated = "2013/05"
-} 
+}
 
 \score {
     \new StaffGroup \with {

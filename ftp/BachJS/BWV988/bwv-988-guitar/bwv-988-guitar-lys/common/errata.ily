@@ -1,16 +1,16 @@
 \version "2.18.2"
 
 \bookpart {
-  
+
    \header { title = "Errata" }
    \header { maintainer = "Steve Shorter" }
-   \include "mutopia-header.ily"
-   
+   \include "../mutopia-header.ily"
+
    \paper { print-page-number = ##t }
 
    \tocItem \markup { Errata }
 
-   \markup { \column { 
+   \markup { \column {
 	" "
 	" "
 	" "

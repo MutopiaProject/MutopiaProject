@@ -12,7 +12,7 @@ global = {
 
 \bookpart {
     \header { maintainer = "Steve Shorter and Hajo Delzelski" }
-    \include "mutopia-header.ily"
+    \include "../mutopia-header.ily"
     \paper {
 	ragged-bottom = ##f
 	print-first-page-number = ##t
@@ -53,4 +53,3 @@ global = {
 	\midi { \tempo 4 = 78 }
     }
 }
-

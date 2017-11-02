@@ -11,7 +11,7 @@ global = {
 
 \bookpart {
     \header { maintainer = "Steve Shorter and Hajo Delzelski" }
-    \include "mutopia-header.ily"
+    \include "../mutopia-header.ily"
     \paper {
 	print-first-page-number = ##t
 	page-count = #2
@@ -54,4 +54,3 @@ global = {
         \midi { \tempo 4 = 95 }
     }
 }
-

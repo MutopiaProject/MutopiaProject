@@ -1,3 +1,4 @@
+\version "2.16.0"
  guitarfour = \relative c'  {
  \set Staff.instrumentName = "Gtr4 "
     \repeat volta 2 {

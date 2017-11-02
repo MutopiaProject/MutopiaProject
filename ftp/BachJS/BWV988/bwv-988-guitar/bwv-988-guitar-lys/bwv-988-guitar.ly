@@ -5,7 +5,7 @@
 #(ly:set-option 'relative-includes #t)
 
 \header { maintainer = "Steve Shorter et al." }
-\include "mutopia-header.ily"
+\include "./mutopia-header.ily"
 
 \include "./common/styles.ily"
 \include "./common/definitions.ily"
@@ -58,4 +58,3 @@
 \include "./common/copyright.ily"
 \include "./common/errata.ily"        %-- cc-by-sa Steve Shorter
 \include "./common/blank1.ily"
-

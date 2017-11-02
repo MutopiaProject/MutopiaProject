@@ -1,19 +1,19 @@
-\version "2.12.3"
+\version "2.18.0"
 
  guitarone = \relative c'' {
  \set Staff.instrumentName = "Gtr1 "
  \clef treble
- \override Staff.NoteCollision #'merge-differently-dotted = ##t
- \override Script #'padding = #1.0
+ \override Staff.NoteCollision.merge-differently-dotted = ##t
+ \override Script.padding = #1.0
  \repeat volta 2 {
 	%1-5
         \stemDown g'4
-   	\once \override Slur #'control-points = #'((1.0 . 3.5) (3 . 4.5) (6 . 4.7) (9.0 . 4.0))
+   	\once \override Slur.control-points = #'((1.0 . 3.5) (3 . 4.5) (6 . 4.7) (9.0 . 4.0))
 	g4( a8.\mordent) b16
         a8
-   	\once \override Slur #'control-points = #'((.5 . 1.8) (1.2 . 1.2) (1.4 . 1.4) (2.0 . 1.4))
+   	\once \override Slur.control-points = #'((.5 . 1.8) (1.2 . 1.2) (1.4 . 1.4) (2.0 . 1.4))
 	\appoggiatura g16 fis8
-   	\once \override Slur #'control-points = #'((.5 . .8) (1.2 . .4) (1.4 . .5) (2.0 . .6))
+   	\once \override Slur.control-points = #'((.5 . .8) (1.2 . .4) (1.4 . .5) (2.0 . .6))
 	\appoggiatura e16 d2
         \stemUp g,4\mordent g4.\downprall fis16 g16
         a32[( g32 fis16) g32( fis32 e16)] \grace e8 < d\harmonic >2
@@ -22,10 +22,10 @@
         %6-10
         e8
 	\SUpb \appoggiatura d16 c8
-   	\once \override Slur #'control-points = #'((.5 . -0.7) (.8 . -1.0) (1.4 . -1.6) (2.4 . -1.3))
+   	\once \override Slur.control-points = #'((.5 . -0.7) (.8 . -1.0) (1.4 . -1.6) (2.4 . -1.3))
 	\appoggiatura b16 \stemUp < a\harmonic >4. \stemDown fis'8\turn
         \stemDown g32[( fis16.) a32( g16.)] fis32[( e16.) d32( c16.)]
-   	\once \override Slur #'control-points = #'((.5 . 3.0) (0.6 . 4.0) (1.8 . 4.5) (2.4 . 3.9))
+   	\once \override Slur.control-points = #'((.5 . 3.0) (0.6 . 4.0) (1.8 . 4.5) (2.4 . 3.9))
 	\appoggiatura c8 a'8. c,16
         { \stemUp < b\harmonic >32[( < g\harmonic >16.) fis8] \appoggiatura fis8 g2\prallmordent }
         b4 b4( cis8.\prallmordent) d16

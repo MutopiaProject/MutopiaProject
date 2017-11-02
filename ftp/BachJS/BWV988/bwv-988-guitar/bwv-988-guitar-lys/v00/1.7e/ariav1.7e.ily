@@ -11,7 +11,7 @@ global = {
 
 \bookpart {
     \header { maintainer = "Steve Shorter and J.D. Erickson" }
-    \include "mutopia-header.ily"
+    \include "../../mutopia-header.ily"
     \header {
         title = \markup \column { \null \fontsize #5 \override #'(font-name . "FreeSerif") "Aria" }
         piece = "1.7e"
@@ -19,7 +19,7 @@ global = {
     \paper {
     page-count = #2
     system-count = #8
-    print-first-page-number = ##t 
+    print-first-page-number = ##t
     system-system-spacing =
 	    #'((basic-distance . 25)
 	    (minimum-distance . 14)
@@ -43,8 +43,8 @@ global = {
 		    \new Staff << \global \guitarone >>
 		    \new Staff << \global \guitartwo >>
 	        >>
-    
+
 	    \layout { }
 	    \midi { \tempo 4 = 55 }
     }
-} 
+}

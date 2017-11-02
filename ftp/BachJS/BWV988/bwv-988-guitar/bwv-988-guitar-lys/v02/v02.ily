@@ -13,7 +13,7 @@ global = {
 
 \bookpart {
     \header { maintainer = "Steve Shorter and J.D. Erickson" }
-    \include "mutopia-header.ily"
+    \include "../mutopia-header.ily"
     \paper {
 	print-first-page-number = ##t
 	top-system-spacing =
@@ -24,7 +24,7 @@ global = {
         ragged-bottom = ##f
     }
 
-    \header { 
+    \header {
       title = "Variation 02"
       subtitle = " "
     }
@@ -46,7 +46,6 @@ global = {
 		\override NonMusicalPaperColumn #'page-break-permission = ##f
             }
     }
-    \midi { \tempo 4 = 90 } 
+    \midi { \tempo 4 = 90 }
     }
 }
-

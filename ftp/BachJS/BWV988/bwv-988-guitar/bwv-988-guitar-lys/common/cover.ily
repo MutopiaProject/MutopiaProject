@@ -3,8 +3,8 @@
 %-----------------------Title Page
 \bookpart {
   \header { maintainer = "Steve Shorter et al." }
-  \include "mutopia-header.ily"
-  
+  \include "../mutopia-header.ily"
+
   \markup { \fill-line { \center-column {
 	\null \null \null \null
 	\null \null \null \null

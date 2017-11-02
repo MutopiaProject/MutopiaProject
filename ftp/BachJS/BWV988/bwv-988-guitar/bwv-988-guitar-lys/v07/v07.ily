@@ -11,9 +11,9 @@ global = {
 
 \bookpart {
     \header { maintainer = "Steve Shorter and Hajo Delzelski" }
-    \include "mutopia-header.ily"
+    \include "../mutopia-header.ily"
     \paper {
-	print-first-page-number = ##t 
+	print-first-page-number = ##t
 	system-system-spacing =
 	    #'((basic-distance . 22)
 	       (minimum-distance . 14)
@@ -48,4 +48,3 @@ global = {
 	\midi { \tempo 4 = 85 }
     }
 }
-

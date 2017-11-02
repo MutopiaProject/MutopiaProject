@@ -1,9 +1,9 @@
-\version "2.12.3"
+\version "2.18.0"
 
  guitartwo = {
  \set Staff.instrumentName = "Gtr2 "
  \clef "G_8"
- \override Script #'padding = #1.0
+ \override Script.padding = #1.0
     << %1,2,3
 	{ f'4\rest f'4\rest d'4 | f'4\rest f'4\rest d'4 | e'4\rest e'4\rest cis'4 } \\
 	{ s4 \stemDown b2 |  s4 \stemDown a2 |  s4 \stemDown g2 } \\

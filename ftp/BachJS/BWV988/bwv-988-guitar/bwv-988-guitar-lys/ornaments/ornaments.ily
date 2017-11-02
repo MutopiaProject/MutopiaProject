@@ -7,7 +7,7 @@ global = { \clef "G_8" }
 
 \bookpart {
     \header { maintainer = "Steve Shorter" }
-    \include "mutopia-header.ily"
+    \include "../mutopia-header.ily"
     \paper { indent = 0 }
     \header {
 	title = "Table of Ornaments"
@@ -43,9 +43,8 @@ global = { \clef "G_8" }
 	    \new Staff \with { \remove "Time_signature_engraver" }
 		<< \global \guitartwo >>
 	>>
-	
+
 
 	\layout { }
     }
 }
-
