@@ -10,7 +10,7 @@
   source = "Bach-Gesellschaft, 1853; Bach's annotated 'Handexemplar' of 1st Ed. ca.1741; OpenGoldberg, 2012"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   moreInfo = "This a derivative work.  Refer to each section for the appropriate cc-by-sa attribution."
-  maintainer = "Steve Shorter et al."  %--- copyright attribution set separately at each section
+  %maintainer = "Steve Shorter et al."  %--- copyright attribution set separately at each section
   maintainerEmail = "steve@linuxsuite.org"
 
   footer = "Mutopia-2017/11/01-2203"
