@@ -13,7 +13,7 @@
 
  %            o_
  %       (\___\/_____/)
- %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~ 
+ %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~
  maintainer = "Jeffrey Olson"
  maintainerEmail = "gmail's jjocanoe"
  license = "Public Domain"
@@ -25,8 +25,8 @@
  mutopiasource = "Bryn Mawr: Oliver Ditson Company, 1906."
  mutopiainstrument = "Guitar"
 
- footer = "Mutopia-2017/10/16-draft"
- copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ footer = "Mutopia-2017/11/05-2204"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
 }
 
@@ -41,7 +41,7 @@
   print-first-page-number = ##t
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #last-page \fromproperty #'header:mytagline }
     }
   }
@@ -139,7 +139,7 @@ stringRight = \set stringNumberOrientations = #'(right)
 
 % tuplets
 hideTupletNumber = \override TupletNumber.stencil = ##f
-unhideTupletNumber = \revert TupletNumber.stencil 
+unhideTupletNumber = \revert TupletNumber.stencil
 hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
 unhideTupletBracket = \revert TupletBracket.bracket-visibility
 
@@ -234,12 +234,12 @@ preludeFour = \context Staff = "S" <<
   \header { piece = \markup { \bold "Prelude 2 in A Minor" } }
   \preludeTwo
   \layout { }
+  \midi { }
 }
 
 \score {
   \header { piece = \markup { \bold "Prelude 4 in E Minor" } }
   \preludeFour
   \layout { }
+  \midi { }
 }
-
-
