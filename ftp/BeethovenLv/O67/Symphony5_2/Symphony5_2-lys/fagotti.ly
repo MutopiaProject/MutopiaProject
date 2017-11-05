@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.16.2"
 
  fagotti = {
  \set Staff.instrumentName = "Fagotti.       "
@@ -19,7 +19,7 @@
  <aes c'>8[ <aes c'>( <bes des'>] <c' ees'>4) r8 R4. r8 r8 \clef tenor ees'16.\pp( f'32) <c' fis'>4.\ff
  <e' g'>16.( <c' e'>32) <g c'>8\staccato[ <b d'>\staccato] << { c'8 } \\ { c'8 } >> r8 r R4. R4. R4. R4. R4.
  \clef bass R4. R4. << { g4.~ g4.~ g8 bes4 ces'4.~ ces'4. ces'4.( fes'4. ees'4. des'4.) bes8 } \\
- { e4.\pp~ e4. e4.\p_\markup { \italic "    sempre" } e4.( ees!4.)( d4. des!4. c4.
+ { e4.\pp~ e4. e4._\markup { \dynamic p \italic "sempre" } e4.( ees!4.)( d4. des!4. c4.
  des4._\markup { \italic "cresc." }) ees8\f } >> r8 << { ees'8\staccato } \\ { ees'8\f } >> R4. R4. R4.
  R4. R4. R4. R4. << { bes8[ bes bes]
  c'16 g16_\markup { \italic "cresc." }[ \acciaccatura bes32 aes16 g aes c']
@@ -36,7 +36,7 @@
  R4. R4. R4. \clef bass R4. R4. R4. R4.
  << { g4.~ g4.~ g8 bes4 ces'4.~ ces'4. ces'4.( fes'4.)( ees'4. des'4.) bes16
  ees16\staccato[ ees'\staccato] } \\
- { e4.\pp~ e4.~ e4.\pp_\markup { \italic "    sempre" }~ e4.( ees!4. d4. des!4. c4.
+ { e4.\pp~ e4.~ e4._\markup {\dynamic pp \italic "sempre" }~ e4.( ees!4. d4. des!4. c4.
  des4._\markup { \italic "cresc." }) ees16\f ees16\ff[ ees'] } >> r16 r8
  << { ees'4.\f\>~ ees'4.\!\p~ ees'4.~ ees'4.( e'4.) f'4.~ f'8 ees'!4~ ees'4.\pp c'8 a8\rest a8\rest
  a16\rest c16\p\staccato[ c'\staccato] a16\rest a8\rest a16\rest f[ f'] a\rest a8\rest a16\rest des[ des'] a\rest a8\rest
@@ -50,7 +50,7 @@
  ees'4 a8\rest } \\ { R4. R4. R4. } >> R4. R4. R4. R4. R4. R4. R4.
  R4. R4. R4. R4. R4. R4. R4. R4. r8 r << { e16. g32 } \\ { e16.\ff g32 } >> <e c'>8\ff[ <e c'> <d b>] <e c'>4.~
  <e c'>4 <e c'>16.[ <d b>32] <e c'>8[ <c e> <d f>] <e g>4.~ <e g>4 <c e>16.[ <d f>32] <e g>4 <c e>16.[ <d f>32] <e g>4
- <c e>16.[ <d f>32] \setTextDim <e g>4.\>~ <e g>4.~ <e g>8\!\p r8 r R4. R4.
+ <c e>16.[ <d f>32]  <e g>4.\>~ <e g>4.~ <e g>8\!\p r8 r R4. R4.
  R4. R4. R4. R4. R4. << { a8\rest a\rest ees16\p\staccato[ f32\rest aes\staccato]
  ces'8 ces'16\staccato[ b32\rest bes\staccato aes16\staccato a32\rest ces'\staccato]
  g4 aes16\staccato[ a32\rest bes\staccato]
@@ -67,7 +67,7 @@
  << { bes8 } \\ { g8 } >> r8 r << { c'8 } \\ { aes8 } >> r8 r
  << { ees32[ d ees f] g[ aes bes c'] des'![ ees f g] aes8 } \\ { g,8\rest g,8\rest c32\rest ees32[ f g] aes,8 } >>
  r8 << { aes16.( c'32) ees'4. f'4. c'4. ees'8[ ees' ees'] ees'8 } \\
- { aes,16.( c32) ees'4.\sf f'4.\p_\markup { \italic "    dolce" } c'4. ees'8[ ees' ees'] aes8 } >> r8 r8 R4. R4. R4.
+ { aes,16.( c32) ees'4.\sf f'4._\markup {\dynamic f \italic dolce } c'4. ees'8[ ees' ees'] aes8 } >> r8 r8 R4. R4. R4.
  r8 r << { ees'8 ees'8 } \\ { ees8\p ees8 } >> r8 r
  \clef tenor << { e'8\rest e'8\rest c'16_\markup { \italic "dolce" }( ees' ges'8)[ ges'16( f' ees' ges')]
  f'4 des'16( ees' fes'8)[ fes'16( ees' des' fes')] ees'4 } \\ { R4. R4. R4. R4. e8\rest e8\rest } >>
@@ -75,11 +75,11 @@
  { aes,16\pp[ aes,] aes,[ aes, aes, aes, aes, aes,] aes,4.:16 aes,4.:16 aes,8 } >> r8 r
  r8 r << { ees'8( c') } \\ { g8\f( aes) } >> r8 r r8 r
  << { bes8( c') \override TupletBracket #'transparent = ##t
- \times 2/3 { a16\rest aes,\p_\markup { \italic "cresc." }([ c] } \times 2/3 { ees[ aes c']) }
+ \times 2/3 { a16\rest aes,_\markup {\dynamic p \italic "cresc." }([ c] } \times 2/3 { ees[ aes c']) }
  \times 2/3 { ees16([ aes c']) } ees'8 } \\
  { g8\f( aes) s8 \override TupletBracket #'transparent = ##t \times 2/3 { g,16\rest g,16\rest c16 }
  \times 2/3 { ees16\f[ aes c'] } ees'8 } >> r8 R4. << { f'4. c'4. ees'8[ ees' ees'] } \\
- { f'4.\p_\markup { \italic "   dolce" } c'4. ees'8[ ees' ees'] } >> <aes ees'>8 r8 r
+ { f'4._\markup { \dynamic p \italic dolce } c'4. ees'8[ ees' ees'] } >> <aes ees'>8 r8 r
  <aes, aes>4~ <aes, aes>16_\markup { \italic "cresc." }[ <aes c'>] <des' f'>8([ <c' ees'>8.\sf]) <c' ees'>16\f
  << { ees'16([ des'] c'8.) } \\ { g8[ aes8.\sf] } >> r16 R4.
  R4. r8 r ees16_\markup { \italic "dolce" }( aes <aes c'>8)[ <aes c'>16( <ees bes> <c aes>16. <aes c'>32]

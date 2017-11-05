@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.16.2"
 
  oboi = {
  \set Staff.instrumentName = "Oboi."
@@ -8,7 +8,7 @@
  \time 2/4
  \repeat volta 2 {
  R2 r2^\fermata R2 R2 r2^\fermata R2 R2 R2 R2 R2 R2 R2 R2
- R2 R2 R2 R2 r8 <d'' g''>8_\markup { \italic "p cresc." }[ <d'' g''> <d'' f''>]
+ R2 R2 R2 R2 r8 <d'' g''>8_\markup { \dynamic p \italic "cresc." }[ <d'' g''> <d'' f''>]
  <c'' ees''>4\f r <c'' fis''> r <b' g''> r^\fermata
  r8 << { aes''8[ aes'' aes''] f''2~ f''2^\fermata } \\ { aes''8\ff[ aes'' aes''] f''2~ f''2 } >>
  R2 R2 R2 R2 R2 R2 R2 << { f''8\rest f''8\p[ f'' f''] ees''4 e''4\rest } \\ { R2 R2 } >> R2 R2
@@ -17,7 +17,7 @@
  <ees'' g''>2\f~ <ees'' g''>~ <ees'' g''>~ <ees'' g''> <f'' g''>2~ <f'' g''>~ <f'' g''>~ <f'' g''>4 <ees'' g''>4
  <ees'' ges''>2\ff~ <ees'' ges''>~ <ees'' ges''>~ <ees'' ges''> <ees'' ges''>4 r R2 <bes' f''>4 r
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
- << { \setTextCresc c'''2\<~ c'''2 bes''2~ bes''2 a''2~ a''~ a''~ a''~ a''4 a''4 a'' a''\!} \\ { R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 } >>
+ << {  c'''2\cresc ~ c'''2 bes''2~ bes''2 a''2~ a''~ a''~ a''~ a''4 a''4 a'' a''\!} \\ { R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 } >>
  <f'' aes''!>2\ff~ <f'' aes''>4 <f'' aes''> <ees'' g''>4 r << { aes''4 } \\ { aes''4 } >> r <ees'' bes''>4 r <ees'' c'''> r <ees'' g''> r
  <d'' f''> r <f'' aes''>2\ff~ <f'' aes''> <ees'' g''>4 <ees'' g''> r <d'' f''> r <ees'' g''> r <ees'' f''> r <ees'' g''> r <d'' f''>
  <ees'' g''>8 << { g''8[ g'' g''] ees'' bes''[ bes'' bes''] g'' ees''[ ees'' ees''] bes'2~ bes'8 g''8[ g'' g'']
@@ -31,12 +31,12 @@
  <c'' fis''>4 r R2 <c'' fis''>4 r R2 <g' g''>4 r R2 <d'' g''>4 r
  << { f''8\rest g''8_\markup { \italic "cresc." }[ a'' bes''] } \\ { R2 } >> <fis'' a''>2\f~ <fis'' a''>2 <fis'' a''>4 r
  r8 <g'' bes''>8[ <g'' bes''> <g'' bes''>] <g'' bes''>2~ <g'' bes''>2 <g'' bes''>4 r
- \set crescendoText = \markup { \italic "piu f" } \set crescendoSpanner = #'dashed-line
- r8 <g'' bes''>8\<[ <g'' bes''> <g'' bes''>] <g'' bes''>4 r r4 <g'' bes''>8 <g'' bes''> <g'' bes''>4 <d'' a''>8 <d'' a''> <d'' a''>4\! r4
+ \set crescendoText = \markup { \italic "più" \dynamic f } %\set crescendoSpanner = #'dashed-line
+ r8 <g'' bes''>8\cresc[ <g'' bes''> <g'' bes''>] <g'' bes''>4 r r4 <g'' bes''>8 <g'' bes''> <g'' bes''>4 <d'' a''>8 <d'' a''> <d'' a''>4\! r4
  R2 R2 R2 R2 R2 r4 << { fis''8[ fis''] fis''4 } \\ { fis''8[ fis''] fis''4 } >> <fis'' a''>8 <fis'' a''> <g'' b''>4 r R2 R2
  R2 R2 R2 r4 << { f''8 f'' f''4 } \\ { f''8 f'' f''4 } >> r4 r8 <c'' c'''>8\ff[ <c'' c'''> <c'' c'''>]
  << { f''2 g'' } \\ { f''2 g'' } >> R2 R2 <f' f''>2 <g' g''>2 R2 R2 << { f''2 ges'' } \\ { f''2 ges'' } >> R2 R2 << { a''2 bes'' } \\ { a''2 bes'' } >>
- R2 R2 R2 R2 R2 R2 R2 << { a''2_\markup { \italic "sempre piu p" } } \\ { R2 } >> R2 << { a''2 } \\ { R2 } >> R2
+ R2 R2 R2 R2 R2 R2 R2 << { a''2_\markup { \italic "sempre più" \dynamic p } } \\ { R2 } >> R2 << { a''2 } \\ { R2 } >> R2
  << { a''2\pp } \\ { R2 } >> R2 << { a''2 } \\ { R2 } >> R2 << { a''2 } \\ { R2 } >> R2 << { a''2 } \\ { R2 } >>
  r8 <d'' d'''>8\ff[ <d'' d'''> <d'' d'''>] <b' b''>2 <c'' c'''> <a' a''>~ <a' a''>
  << { aes''!2\pp } \\ { R2 } >> R2 << { aes''2 } \\ { R2 } >> R2 << { aes''2 } \\ { R2 } >> R2 << { aes''2 } \\ { R2 } >> R2
@@ -46,9 +46,27 @@
  R2 << { c''2\p~ c''2~ c''2~ c''2 d''2~ d''2~ d''2~ d''2 ees''2( d'' c'' b'4 c''8 d'') ees''2_\markup { \italic "cresc." }( c''2) } \\
  { R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 } >>
 
- << { \cadenzaOn g''2\f^\fermata\> \set fontSize = #-2 f''4^\markup { "Adagio" }_( ees''\! d''2 ees''16[ d'' c'' d'']
- f''4 ees'' d''4^\fermata) \set fontSize = #0 \cadenzaOff } \\
- { \cadenzaOn s2 s2 s2 r2_\fermata s2 \cadenzaOff } >> \bar "|"
+% \cadenzaOn 
+ << {
+   \cadenzaOn
+   g''2\f^\fermata\> %\set fontSize = #-2 
+  
+   f''4^\markup { \fontsize #-1 \bold "Adagio" }_( ees''\! d''2 ees''16[ d'' c'' d'']
+   f''4 ees'' d''4^\fermata) 
+   %\set fontSize = #0
+   \cadenzaOff
+   s2
+  } \\ {
+   %\cadenzaOn
+%     s2 s2 s2
+   \cadenzaOn
+   r2_\fermata %s2
+   s2*4
+   \cadenzaOff
+   s2
+  } >> %\bar "|"
+ %\cadenzaOff
+
  R2 <d'' f''>2\p~ <d'' f''>~ <d'' f''> <c'' ees''>4 r4 R2
  << { b''2_\markup { \italic "cresc." }~ b''2 c'''4\f g''4\rest } \\ { R2 R2 R2 } >> R2 <f'' aes''>4\f
  r4 r8 <ees'' g''>[ <ees'' g''> <ees'' g''>] <ees'' g''>4 r <f'' aes''>\sf r <e'' g''>\sf r <f'' aes''>\sf r
