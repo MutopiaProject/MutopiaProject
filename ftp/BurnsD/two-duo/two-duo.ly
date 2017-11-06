@@ -7,7 +7,6 @@
  title = "Two"
  subtitle = \markup { \smaller "Arranged for Guitar Duo" }
  composer = "Dennis Burns" % b.1959
- style = "Popular"
  date = "1990"
  source = "Unpublished manuscript dated 10/25/1990 with permission of Dennis Burns"
  moreInfo = "A recording of Dennis Burns playing this song is on track 11 of the album “A Rose on the Lake”, © 2005 Bolder Sounds."
