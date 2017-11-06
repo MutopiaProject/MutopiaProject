@@ -18,11 +18,11 @@
 
  %            o_
  %       (\___\/_____/)
- %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~ 
+ %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~
  maintainer = "Jeffrey Olson"
  maintainerEmail = "gmail's jjocanoe"
  license = "Public Domain"
- 
+
  mutopiacomposer = "BachJS"
  mutopiatitle = "Das Wohltemperierte Klavier I, Praeludium I"
  mutopiaopus = "BWV 846"
@@ -30,10 +30,9 @@
  mutopiasource = "D B Mus. ms. Bach P 202 (Berlin, Staatsbibliothek)"
  mutopiainstrument = "2 Guitars"
 
- footer = "Mutopia-2017/10/26-draft"
- copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+ footer = "Mutopia-2017/11/06-2206"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
-
  mytagline = \markup{ \column { \vspace #1 \smaller \italic { \concat { "Fingerings and mnemonics by " \maintainer ", " \footer } } } }
 }
 
@@ -48,7 +47,7 @@
   print-first-page-number = ##f
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \combine \null \vspace #1 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \combine \null \vspace #1 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #last-page \fromproperty #'header:mytagline }
     }
   }
@@ -223,107 +222,107 @@ upperVoice = {
     \setFretDiagramProperties
 
     % "demo: short round trip"
-    \fr #"x;x;x;12-1;13-4;12-2;"  <g-1>\pXII[ <c'-4>]   <e'-2>[ g c' e'] 
+    \fr #"x;x;x;12-1;13-4;12-2;"  <g-1>\pXII[ <c'-4>]   <e'-2>[ g c' e']
     \rr   g[ c']   e'[ g c' e'] | %1a
-    \fr #"x;x;x;14-1;15-4;13-2;"   <a-1>\pXIV[ <d'-4>]   <f'-2>[ a d' f'] 
+    \fr #"x;x;x;14-1;15-4;13-2;"   <a-1>\pXIV[ <d'-4>]   <f'-2>[ a d' f']
     \rr a[ d']   f'[ a d' f'] | %2a
-    \fr #"x;x;x;12-1;15-4;13-2;"   <g-1>\pXII[ <d'-4>]   <f'-2>[ g d' f'] 
+    \fr #"x;x;x;12-1;15-4;13-2;"   <g-1>\pXII[ <d'-4>]   <f'-2>[ g d' f']
     \rr g[ d']   f'[ g d' f'] | %3a
-    \fr #"x;x;x;12-1;13-3;12-2;"  <g-1>[ <c'-3>]   <e'-2>[ g c' e'] 
+    \fr #"x;x;x;12-1;13-3;12-2;"  <g-1>[ <c'-3>]   <e'-2>[ g c' e']
     \rr g[ c']   e'[ g c' e'] | %4a
 
     % "high: octaves A and G"
-    \fr #"x;x;x;14-1;17-4;17-4;"   <a-1>\pXIV[ <e'-4>]   <a'-4>[ a e' a'] 
+    \fr #"x;x;x;14-1;17-4;17-4;"   <a-1>\pXIV[ <e'-4>]   <a'-4>[ a e' a']
     \rr a[ e']   a'[ a e' a'] | %5a
-    \fr #"x;x;x;11-2;10-1;10-1;"   <fis-2>\bpX[ <a-1>]   <d'-1>[ fis a d'] 
+    \fr #"x;x;x;11-2;10-1;10-1;"   <fis-2>\bpX[ <a-1>]   <d'-1>[ fis a d']
     \rr fis[ a]   d'[ fis a d'] | %6a
-    \fr #"x;x;x;12-1;15-4;15-4;"   <g-1>\pXII[ <d'-4>]   <g'-4>[ g d' g'] 
+    \fr #"x;x;x;12-1;15-4;15-4;"   <g-1>\pXII[ <d'-4>]   <g'-4>[ g d' g']
     \rr g[ d']   g'[ g d' g'] | %7a
 
     % "shift: 3 hanging Cs"
-    \fr #"x;x;x;9-2;8-1;8-1;"   <e-2>\bpVIII[ <g-1>]   <c'-1>[ e g c'] 
+    \fr #"x;x;x;9-2;8-1;8-1;"   <e-2>\bpVIII[ <g-1>]   <c'-1>[ e g c']
     \rr e[ g]   c'[ e g c'] | %8a
-    \fr #"x;x;x;9-2;8-1;8-1;"   e[ g]   c'[ e g c'] 
+    \fr #"x;x;x;9-2;8-1;8-1;"   e[ g]   c'[ e g c']
     \rr e[ g]   c'[ e g c'] | %9a
-    \fr #"x;x;x;7-1;7-1;8-2;"   <d-1>\bpVII[ <fis-1>]   <c'-2>[ d fis c'] 
+    \fr #"x;x;x;7-1;7-1;8-2;"   <d-1>\bpVII[ <fis-1>]   <c'-2>[ d fis c']
     \rr d[ fis]   c'[ d fis c'] | %10a
 
     % "G resolve and lift"
-    \fr #"x;x;x;7-1;8-2;7-1;"   <d-1>\bpVII[ <g-2>]   <b-1>[ d g b] 
+    \fr #"x;x;x;7-1;8-2;7-1;"   <d-1>\bpVII[ <g-2>]   <b-1>[ d g b]
     \rr d[ g]   b[ d g b] | %11a
-    \fr #"x;x;x;9-3;8-2;9-4;"   <e-3>\pVII[ <g-2>]   <cis'-4>[ e g cis'] 
+    \fr #"x;x;x;9-3;8-2;9-4;"   <e-3>\pVII[ <g-2>]   <cis'-4>[ e g cis']
     \rr e[ g]   cis'[ e g cis'] | %12a
 
     % "mid: octaves D and C"
-    \fr #"x;x;x;7-1;10-4;10-4;"   <d-1>\pVII[ <a-4>]   <d'-4>[ d a d'] 
+    \fr #"x;x;x;7-1;10-4;10-4;"   <d-1>\pVII[ <a-4>]   <d'-4>[ d a d']
     \rr d[ a]   d'[ d a d'] | %13a
-    \fr #"x;x;x;7-2;6-1;7-3;"   <d-2>\pVI[ <f-1>]   <b-3>[ d f b] 
+    \fr #"x;x;x;7-2;6-1;7-3;"   <d-2>\pVI[ <f-1>]   <b-3>[ d f b]
     \rr d[ f]   b[ d f b] | %14a
-    \fr #"x;x;x;5-1;8-4;8-4;"   <c-1>\pV[ <g-4>]   <c'-4>[ c g c'] 
+    \fr #"x;x;x;5-1;8-4;8-4;"   <c-1>\pV[ <g-4>]   <c'-4>[ c g c']
     \rr c[ g]   c'[ c g c'] | %15a
-    
+
     % "shift: 3 hangings Fs"
     \stemUp
-    \fr #"x;x;7-3;5-1;6-2;x;"   <a,-3>\pV[ <c-1>]   <f-2>[ a, c f] 
+    \fr #"x;x;7-3;5-1;6-2;x;"   <a,-3>\pV[ <c-1>]   <f-2>[ a, c f]
     \rr a,[ c]   f[ a, c f] | %16a
-    \fr #"x;x;7-3;5-1;6-2;x;"   a,[ c]   f[ a, c f] 
+    \fr #"x;x;7-3;5-1;6-2;x;"   a,[ c]   f[ a, c f]
     \rr a,[ c]   f[ a, c f] | %17a
-    \fr #"x;x;5-2;4-1;6-4;x;"   <g,-2>\pIV[ <b,-1>]   <f-4>[ g, b, f] 
+    \fr #"x;x;5-2;4-1;6-4;x;"   <g,-2>\pIV[ <b,-1>]   <f-4>[ g, b, f]
     \rr g,[ b,]   f[ g, b, f] | %18a
 
     % "C resolve and lift"
-    \fr #"x;x;5-1;5-1;5-1;x;"   <g,-1>\bpV[ <c-1>]   <e-1>[ g, c e] 
+    \fr #"x;x;5-1;5-1;5-1;x;"   <g,-1>\bpV[ <c-1>]   <e-1>[ g, c e]
     \rr g,[ c]   e[ g, c e] | %19a
-    \fr #"x;x;8-4;5-1;5-1;x;"   <bes,-4>\bpV[ <c-1>]   <e-1>[ bes, c e] 
+    \fr #"x;x;8-4;5-1;5-1;x;"   <bes,-4>\bpV[ <c-1>]   <e-1>[ bes, c e]
     \rr bes,[ c]   e[ bes, c e] | %20a
 
     % "deep F"
-    \fr #"x;x;7-4;5-1;5-1;x;"   <a,-4>\bpV[ <c-1>]   <e-1>[ a, c e] 
+    \fr #"x;x;7-4;5-1;5-1;x;"   <a,-4>\bpV[ <c-1>]   <e-1>[ a, c e]
     \rr a,[ c]   e[ a, c e] | %21a
 
     % "tighten until it hurts"
-    \fr #"x;x;7-4;5-2;4-1;x;"   <a,-4>\pIV[ <c-2>]   <ees-1>[ a, c ees] 
+    \fr #"x;x;7-4;5-2;4-1;x;"   <a,-4>\pIV[ <c-2>]   <ees-1>[ a, c ees]
     \rr a,[ c]   ees[ a, c ees] | %22a
     \rhDown
-    \fr #"x;x;10-4;7-1;o;x;"   <b,-0\M>\pVII[ <c-4\P>]   <d-1\I>[ <b,\M> <c\P> <d\I>] 
+    \fr #"x;x;10-4;7-1;o;x;"   <b,-0\M>\pVII[ <c-4\P>]   <d-1\I>[ <b,\M> <c\P> <d\I>]
     \rr b,[ c]   d[ b, c d] | %23a
 
     % "relax to G C"
-    \fr #"x;x;5-3;4-2;3-1;x;"   <g,-3>\pIII[ <b,-2>]   <d-1>[ g, b, d] 
+    \fr #"x;x;5-3;4-2;3-1;x;"   <g,-3>\pIII[ <b,-2>]   <d-1>[ g, b, d]
     \rr g,[ b,]   d[ g, b, d] | %24a
-    \fr #"x;x;5-1;5-1;5-1;x;"   <g,-1>\bpV[ <c-1>]   <e-1>[ g, c e] 
+    \fr #"x;x;5-1;5-1;5-1;x;"   <g,-1>\bpV[ <c-1>]   <e-1>[ g, c e]
     \rr g,[ c]   e[ g, c e] | %25a
 
     % "DFs on C B"
-    \fr #"x;x;5-1;5-1;6-4;x;"   <g,-1>\bpV[ <c-1>]   <f-4>[ g, c f] 
+    \fr #"x;x;5-1;5-1;6-4;x;"   <g,-1>\bpV[ <c-1>]   <f-4>[ g, c f]
     \rr g,[ c]   f[ g, c f] | %26a
-    \fr #"x;x;5-2;4-1;6-4;x;"   <g,-2>\pIV[ <b,-1>]   <f-4>[ g, b, f] 
+    \fr #"x;x;5-2;4-1;6-4;x;"   <g,-2>\pIV[ <b,-1>]   <f-4>[ g, b, f]
     \rr g,[ b,]   f[ g, b, f] | %27a
 
     % "hope rises briefly"
-    \fr #"x;x;7-3;5-1;7-4;x;"   <a,-3>\pV[ <c-1>]   <fis-4>[ a, c fis] 
+    \fr #"x;x;7-3;5-1;7-4;x;"   <a,-3>\pV[ <c-1>]   <fis-4>[ a, c fis]
     \rr a,[ c]   fis[ a, c fis] | %28a
-    \fr #"x;x;5-1;5-1;8-4;x;"   <g,-1>\bpV[ <c-1>]   <g-4>[ g, c g] 
+    \fr #"x;x;5-1;5-1;8-4;x;"   <g,-1>\bpV[ <c-1>]   <g-4>[ g, c g]
     \rr g,[ c]   g[ g, c g] | %29a
 
     % "but DFs return"
-    \fr #"x;x;5-1;5-1;6-4;x;"   <g,-1>\bpV[ <c-1>]   <f-4>[ g, c f] 
+    \fr #"x;x;5-1;5-1;6-4;x;"   <g,-1>\bpV[ <c-1>]   <f-4>[ g, c f]
     \rr g,[ c]   f[ g, c f] | %30a
-    \fr #"x;x;5-2;4-1;6-4;x;"   <g,-2>\pIV[ <b,-1>]   <f-4>[ g, b, f] 
+    \fr #"x;x;5-2;4-1;6-4;x;"   <g,-2>\pIV[ <b,-1>]   <f-4>[ g, b, f]
     \rr g,[ b,]   f[ g, b, f] | %31a
 
     % "deep C change"
-    \fr #"x;x;5-3;3-1;5-4;x;"   <g,-3>\pIII[ <bes,-1>]   <e-4>[ g, bes, e] 
+    \fr #"x;x;5-3;3-1;5-4;x;"   <g,-3>\pIII[ <bes,-1>]   <e-4>[ g, bes, e]
     \rr g,[ bes,]   e[ g, bes, e] | %32a
 
     % "home stretch F then G"
     \rhDown
     b,16\rest\pV^\markup{ \fret-diagram #"5-8;4-o;4-7;3-5;2-6;" } b,\rest
-    <f,-4\P>[ <a,-3\I>]   <c-1\M>[ <f-2\A> <c\M> <a,\I>]   
+    <f,-4\P>[ <a,-3\I>]   <c-1\M>[ <f-2\A> <c\M> <a,\I>]
     <c\M>[ <a,\I> <f,\P> <a,\I>]   <f,\P>[ <d,-0\I> <f,\P> <d,\I>] | %33a
     \stemDown
     b,16\rest\pX^\markup{\fret-diagram #"3-12-2;2-12-3;1-10-1;1-13-4;" } b,\rest
-    <g-2\P>[ <b-3\I>]   <d'-1\M>[ <f'-4\A> <d'\M> <b\I>]   
+    <g-2\P>[ <b-3\I>]   <d'-1\M>[ <f'-4\A> <d'\M> <b\I>]
     <d'\M>[ <b\I> <g\P> <b\I>]   <d-1\P>\pVII[^\markup{ \fret-diagram #"3-7;3-9;3-10;" } <f-4\I> <e-3\P> <d-1\I>] | %34a
 
     <c-3 e-2 g-1 c'-1>1\bpVIII\fermata\arpeggio ^\markup { \fret-diagram-terse #"x;x;10-3;9-2;8-1;8-1;" } | %35a
@@ -451,36 +450,36 @@ uprVoice = {
     <a-1 d'-4 f'-2>1\pXIV ^\markup { \fret-diagram-terse #"x;x;x;14-1;15-4;13-2;" } | %2a
     <g-1 d'-4 f'-2>1\pXII ^\markup { \fret-diagram-terse #"x;x;x;12-1;15-4;13-2;" } | %3a
     <g-1 c'-3 e'-2>1\pXII ^\markup { \fret-diagram-terse #"x;x;x;12-1;13-3;12-2;" } | %4a
-    
+
     % "high: octaves A and G"
     <a-1 e'-4 a'-4>1\pXIV ^\markup { \fret-diagram-terse #"x;x;x;14-1;17-4;17-4;" } | %5a
     <fis-2 a-1 d'-1>1\bpX ^\markup { \fret-diagram-terse #"x;x;x;11-2;10-1;10-1;" } | %6a
     <g-1 d'-4 g'-4>1\pXII ^\markup { \fret-diagram-terse #"x;x;x;12-1;15-4;15-4;" } | %7a
-    
+
     % "shift: 3 hanging Cs"
     <e-2 g-1 c'-1>1\bpVIII ^\markup { \fret-diagram-terse #"x;x;x;9-2;8-1;8-1;" } | %8a
     <e g c'>1 | %9a
     <d-1 fis-1 c'-2>1\bpVII ^\markup { \fret-diagram-terse #"x;x;x;7-1;7-1;8-2;" } | %10a
-    
+
     % "G resolve and lift"
     <d-1 g-2 b-1>1\bpVII ^\markup { \fret-diagram-terse #"x;x;x;7-1;8-2;7-1;" } | %11a
     <e-3 g-2 cis'-4>1\pVII ^\markup { \fret-diagram-terse #"x;x;x;9-3;8-2;9-4;" } | %12a
-    
+
     % "mid: octaves D and C"
     <d-1 a-4 d'-4>1\pVII ^\markup { \fret-diagram-terse #"x;x;x;7-1;10-4;10-4;" } | %13a
     <d-2 f-1 b-3>1\pVI ^\markup { \fret-diagram-terse #"x;x;x;7-2;6-1;7-3;" } | %14a
     <c-1 g-4 c'-4>1\pV ^\markup { \fret-diagram-terse #"x;x;x;5-1;8-4;8-4;" } | %15a
-    
-    
+
+
     % "shift: 3 hangings Fs"
     <a,-3 -\strXY #'(0 . -.4) \4 c-1\3 f-2\2>1\pV ^\markup { \fret-diagram-terse #"x;x;7-3;5-1;6-2;x;" } | %16a
     <a, c f>1 | %17a
     <g,-2 b,-1 f-4>1\pIV ^\markup { \fret-diagram-terse #"x;x;5-2;4-1;6-4;x;" } | %18a
-    
+
     % "C resolve and lift"
     <g,-1 c-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;5-1;x;" } | %19a
     <bes,-4 c-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;8-4;5-1;5-1;x;" } | %20a
-    
+
     % "deep F"
     <a,-\fngXY #'(0 . 0.2)-4 c-\fngXY #'(0 . 0.2)-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;7-4;5-1;5-1;x;" } | %21a
 
@@ -488,34 +487,34 @@ uprVoice = {
     <a,-4 c-2 ees-1>1\pIV ^\markup { \fret-diagram-terse #"x;x;7-4;5-2;4-1;x;" } | %22a
     <b,-0 c-4 d-1>\pVII _\markup { \teeny \italic "m p i" }
     ^\markup { \fret-diagram-terse #"x;x;10-4;7-1;o;x;" } | %23a
-    
+
     % "relax to G C"
     <g,-3 b,-2 d-1>1\pIII ^\markup { \fret-diagram-terse #"x;x;5-3;4-2;3-1;x;" } | %24a
     <g,-1 c-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;5-1;x;" } | %25a
-    
+
     % "DFs on C B"
     <g,-1 c-1 f-4>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;6-4;x;" } | %26a
     <g,-2 b,-1 f-4>1\pIV ^\markup { \fret-diagram-terse #"x;x;5-2;4-1;6-4;x;" } | %27a
-    
+
     % "hope rises briefly"
     <a,-3 c-1 fis-4>1\pV ^\markup { \fret-diagram-terse #"x;x;7-3;5-1;7-4;x;" } | %28a
     <g,-1 c-1 g-4>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;8-4;x;" } | %29a
-    
+
     % "but DFs return"
     <g,-1 c-1 f-4>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;6-4;x;" } | %30a
     <g,-2 b,-1 f-4>1\pIV ^\markup { \fret-diagram-terse #"x;x;5-2;4-1;6-4;x;" } | %31a
-    
+
     % "deep C change"
     <g,-3 bes,-1 e-4>1\pIII ^\markup { \fret-diagram-terse #"x;x;5-3;3-1;5-4;x;" } | %32a
-    
+
     % home stretch F then G"
     \rhDown
     b,16\rest\pV^\markup{ \fret-diagram #"5-8;4-o;4-7;3-5;2-6;" } b,\rest
-    <f,-4\P>[ <a,-3\I>]   <c-1\M>[ <f-2\A> <c\M> <a,\I>]   
+    <f,-4\P>[ <a,-3\I>]   <c-1\M>[ <f-2\A> <c\M> <a,\I>]
     <c\M>[ <a,\I> <f,\P> <a,\I>]   <f,\P>[ <d,-0\I> <f,\P> <d,\I>] | %33a
     \stemDown
     b,16\rest\pX^\markup{\fret-diagram #"3-12-2;2-12-3;1-10-1;1-13-4;" } b,\rest
-    <g-2\P>[ <b-3\I>]   <d'-1\M>[ <f'-4\A> <d'\M> <b\I>]   
+    <g-2\P>[ <b-3\I>]   <d'-1\M>[ <f'-4\A> <d'\M> <b\I>]
     <d'\M>[ <b\I> <g\P> <b\I>]   <d-1\P>\pVII[^\markup{ \fret-diagram #"3-7;3-9;3-10;" } <f-4\I> <e-3\P> <d-1\I>] | %34a
 
     <c-3 e-2 g-1 c'-1>1\bpVIII\fermata\arpeggio ^\markup { \fret-diagram-terse #"x;x;10-3;9-2;8-1;8-1;" } | %35a
@@ -613,7 +612,7 @@ lorVoice = {
   \paper {
     page-count = 1
     indent = 0.0
-    oddFooterMarkup = \markup { 
+    oddFooterMarkup = \markup {
       \fill-line { \fromproperty #'header:mytagline }
     }
     evenFooterMarkup = \oddFooterMarkup
@@ -642,7 +641,7 @@ uprVoice = {
     \setFretDiagramProperties
     \fingerLeft
     \stringRight
-    
+
     % lower first 15 bars for ez version
     \transpose c c, {
 
@@ -651,37 +650,37 @@ uprVoice = {
       <a-3 d'-4 f'-2>1\pV ^\markup { \fret-diagram-terse #"x;x;7;7;6;x;" } | %2a
       <g-1 d'-4 f'-2>1\pV ^\markup { \fret-diagram-terse #"x;x;5;7;6;x;" } | %3a
       <g-1 c'-1 e'-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;5;5;5;x;" } | %4a
-    
+
       % "high: octaves A and G"
       <a-3 e'-1 a'-1>1 ^\markup { \fret-diagram-terse #"x;x;7;x;5;5;" } | %5a
       <fis-3 a-1 d'-2>1\pII ^\markup { \fret-diagram-terse #"x;x;4;2;3;x;" } | %6a
       <g-3 d'-1 g'-1>1\pIII ^\markup { \fret-diagram-terse #"x;x;5;x;3;3;" } | %7a
-    
+
       % "shift: 3 hanging Cs"
       <e-3\5 g-1 c'-1>1\bpV ^\markup { \fret-diagram-terse #"x;7;5;5;x;x;" } | %8a
       <e g c'>1 | %9a
       <d-3 fis-2 c'-4>1\pIII ^\markup { \fret-diagram-terse #"x;5;4;5;x;x;" } | %10a
-    
+
       % "G resolve and lift"
       <d-3 g-4 b-2>1\pIII ^\markup { \fret-diagram-terse #"x;5;5;4;x;x;" } | %11a
       <e-3 g-1 cis'-2>1\pV ^\markup { \fret-diagram-terse #"x;7;5;6;x;x;" } | %12a
-    
+
       % "mid: octaves D and C"
       <d-1 a-3 d'-4>1\pV ^\markup { \fret-diagram-terse #"x;5;7;7;x;x;" } | %13a
       <d-3 f-1 b-2>1\pIII ^\markup { \fret-diagram-terse #"x;5;3;4;x;x;" } | %14a
       <c-1 g-3 c'-4>1\pIII ^\markup { \fret-diagram-terse #"x;3;5;5;x;x;" } | %15a
     }
-    
-    
+
+
     % "shift: 3 hangings Fs"
     <a,-3 -\strXY #'(0 . -.4) \4 c-1\3 f-2\2>1\pV ^\markup { \fret-diagram-terse #"x;x;7-3;5-1;6-2;x;" } | %16a
     <a, c f>1 | %17a
     <g,-2 b,-1 f-4>1\pIV ^\markup { \fret-diagram-terse #"x;x;5-2;4-1;6-4;x;" } | %18a
-    
+
     % "C resolve and lift"
     <g,-1 c-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;5-1;x;" } | %19a
     <bes,-4 c-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;8-4;5-1;5-1;x;" } | %20a
-    
+
     % "deep F"
     <a,-4 c-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;7-4;5-1;5-1;x;" } | %21a
 
@@ -689,36 +688,36 @@ uprVoice = {
     <a,-4 c-2 ees-1>1\pIV ^\markup { \fret-diagram-terse #"x;x;7-4;5-2;4-1;x;" } | %22a
     <b,-0 c-4 d-1>\pVII _\markup { \teeny \italic "m p i" }
     ^\markup { \fret-diagram-terse #"x;x;10-4;7-1;o;x;" } | %23a
-    
+
     % "relax to G C"
     <g,-3 b,-2 d-1>1\pIII ^\markup { \fret-diagram-terse #"x;x;5-3;4-2;3-1;x;" } | %24a
     <g,-1 c-1 e-1>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;5-1;x;" } | %25a
-    
+
     % "DFs on C B"
     <g,-1 c-1 f-4>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;6-4;x;" } | %26a
     <g,-2 b,-1 f-4>1\pIV ^\markup { \fret-diagram-terse #"x;x;5-2;4-1;6-4;x;" } | %27a
-    
+
     % "hope rises briefly"
     <a,-3 c-1 fis-4>1\pV ^\markup { \fret-diagram-terse #"x;x;7-3;5-1;7-4;x;" } | %28a
     <g,-1 c-1 g-4>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;8-4;x;" } | %29a
-    
+
     % "but DFs return"
     <g,-1 c-1 f-4>1\bpV ^\markup { \fret-diagram-terse #"x;x;5-1;5-1;6-4;x;" } | %30a
     <g,-2 b,-1 f-4>1\pIV ^\markup { \fret-diagram-terse #"x;x;5-2;4-1;6-4;x;" } | %31a
-    
+
     % "deep C change"
     <g,-3 bes,-1 e-4>1\pIII ^\markup { \fret-diagram-terse #"x;x;5-3;3-1;5-4;x;" } | %32a
-    
+
     % home stretch F then G"
     \rhDown
     b,16\rest\bpI^\markup{\fret-diagram #"4-3-3;3-2-2;2-1-1;1-1-1;" } b,\rest
-    <f,-3\P>[ <a,-2\I>]   <c-1\M>[ <f-1\A> <c\M> <a,\I>]   
+    <f,-3\P>[ <a,-2\I>]   <c-1\M>[ <f-1\A> <c\M> <a,\I>]
     <c\M>[ <a,-1\I>\pII ^\markup { \fret-diagram-terse #"x;5;3;2;x;x;" } <f,-2\P> <a,\M>]   <f,\I>[ <d,-4\P> <f,\I> <d,\P>] | %33a
-    
+
     % lower this bar for ez version
     \transpose c c, {
       b,16\rest\pII^\markup{\fret-diagram-terse #"x;x;5;4;3;1;" } b,\rest
-      <g-4\P>[ <b-3\I>]   <d'-2\M>[ <f'-1\A> <d'\M> <b\I>]   
+      <g-4\P>[ <b-3\I>]   <d'-2\M>[ <f'-1\A> <d'\M> <b\I>]
       <d'\M>[ <b\I> <g\P> <b\I>]   <d-0\P>\pI[^\markup{\fret-diagram #"4-o;4-2;4-3;" } <f-3\I> <e-2\P> <d-0\I>] | %34a
 
       <c-3 e-2 g-0 c'-1>1\fermata\arpeggio ^\markup { \fret-diagram-terse #"x;3;2;o;1;x;" } | %35a
@@ -731,7 +730,7 @@ lorVoice = {
     \fingerLeft
     \stringRight
     \markBox
-    
+
     % lower first 15 bars for ez version
     \transpose c c, {
 
@@ -815,7 +814,7 @@ lorVoice = {
   \paper {
     page-count = 1
     indent = 0.0
-    oddFooterMarkup = \markup { 
+    oddFooterMarkup = \markup {
       \fill-line { \fromproperty #'header:mytagline }
     }
     evenFooterMarkup = \oddFooterMarkup
@@ -843,7 +842,7 @@ upVoice = {
     \setFretDiagramProperties
     \fingerLeft
     \stringRight
-    
+
     % lower first 15 bars for ez version
     \transpose c c, {
 
@@ -852,74 +851,74 @@ upVoice = {
       <a-2 d'-4 f'-1>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;2;3;1;" } | %2a
       <g-0 d'-4 f'-1>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;o;3;1;" } | %3a
       <g-0 c'-1 e'-0>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;o;1;o;" } | %4a
-    
+
       % "high: octaves A and G"
       <a-1 e'-4 a'-4>1\pII ^\markup { \fret-diagram-terse #"x;x;x;2;5;5;" } | %5a
       <fis-3 -\strXY #'(0 . -.65) \4 a-1\3 d'-2 -\strXY #'(0 . .2) \2>1^\mns ^\markup { \fret-diagram-terse #"x;x;4;2;3;x;" } | %6a
       <g-0\3 d'-2\2 g'-3 -\strXY #'(0 . .2) \1>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;o;3;3;" } | %7a
-    
+
       % "shift: 3 hanging Cs"
       <e-2 -\strXY #'(0 . -.65) \4 g-0\3 c'-1 -\strXY #'(0 . .2) \2>1\pI ^\markup { \fret-diagram-terse #"x;x;2;o;1;x;" } | %8a
       <e g c'>1 | %9a
       <d-3 -\strXY #'(0 . -.2) \5 fis-2 -\strXY #'(0 . .5) \4 c'-4 -\strXY #'(0 . .2) \2>1\pIII ^\markup { \fret-diagram-terse #"x;5;4;5;x;x;" } | %10a
-    
+
       % "G resolve and lift"
       <d-0 -\strXY #'(0 . -.2) \4 g-0\3 b-0 -\strXY #'(0 . .65) \2>1\pI ^\markup { \fret-diagram-terse #"x;x;o;o;o;x;" } | %11a
       <e-2 g-0 cis'-3>1^\mns ^\markup { \fret-diagram-terse #"x;x;2;o;2;x;" } | %12a
-    
+
       % "mid: octaves D and C"
       <d-0 a-2 d'-4>1^\mns ^\markup { \fret-diagram-terse #"x;x;o;2;3;x;" } | %13a
       <d-3 -\strXY #'(0 . -.65) \5 f-1\4 b-0 -\strXY #'(0 . .2) \2>1\pIII ^\markup { \fret-diagram-terse #"x;5;3;x;o;x;" } | %14a
       <c-3\5 g-0\3 c'-1 -\strXY #'(0 . .2) \2>1\pI ^\markup { \fret-diagram-terse #"x;3;x;o;1;x;" } | %15a
     }
-    
-    
+
+
     % "shift: 3 hangings Fs"
     <a,-2 -\strXY #'(0 . -.65) \3 c-1\2 f-1 -\strXY #'(0 . .2) \1>1\bpI ^\markup { \fret-diagram-terse #"x;x;x;2;1;1;" } | %16a
     <a, c f>1 | %17a
     <g,-0 b,-0 f-1>1\pI ^\markup { \fret-diagram-terse #"x;x;x;o;o;1;" } | %18a
-    
+
     % "C resolve and lift"
     <g,-0 c-1 e-0>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;o;1;o;" } | %19a
     <bes,-4 c-1 e-0>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;3;1;o;" } | %20a
-    
+
     % "deep F"
     <a,-2 c-1 e-0>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;2;1;o;" } | %21a
 
     % "tighten until it hurts"
     <a,-2 -\strXY #'(0 . -.65) \3 c-1\2 ees-4 -\strXY #'(0 . .65) \2>1^\mns ^\markup { \fret-diagram #"3-2;2-1;2-4;" } | %22a
     <b,-0 -\strXY #'(0 . -1) \2 c-1\2 d-4 -\strXY #'(0 . 1) \2>^\mns ^\markup { \fret-diagram #"2-o;2-1;2-3;" } | %23a
-    
+
     % "relax to G C"
     <g,-0 -\strXY #'(0 . -.65) \3 b,-0\2 d-4 -\strXY #'(0 . .65) \2>1^\mns ^\markup { \fret-diagram #"3-o;2-o;2-3;" } | %24a
     <g,-0 -\strXY #'(0 . -.2) \3 c-1\2 e-0 -\strXY #'(0 . .65) \1>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;o;1;o;" } | %25a
-    
+
     % "DFs on C B"
     <g,-0 c-1 f-1>1\bpI ^\markup { \fret-diagram-terse #"x;x;x;o;1;1;" } | %26a
     <g,-0 b,-0 f-1>1\pI ^\markup { \fret-diagram-terse #"x;x;x;o;o;1;" } | %27a
-    
+
     % "hope rises briefly"
     <a,-2 c-1 fis-3>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;2;1;2;" } | %28a
     <g,-0 c-1 g-4>1^\mns ^\markup { \fret-diagram-terse #"x;x;x;o;1;3;" } | %29a
-    
+
     % "but DFs return"
     <g,-0 c-1 f-1>1\bpI ^\markup { \fret-diagram-terse #"x;x;x;o;1;1;" } | %30a
     <g,-0 b,-0 f-1>1\pI ^\markup { \fret-diagram-terse #"x;x;x;o;o;1;" } | %31a
-    
+
     % "deep C change"
     <g,-3 -\strXY #'(0 . -.7) \4 bes,-1\3 e-0 -\strXY #'(0 . .2) \1>1\pIII ^\markup { \fret-diagram-terse #"x;x;5;3;x;o;" } | %32a
-    
+
     % home stretch F then G"
     \rhDown
     b,16\rest^\mns^\markup{\fret-diagram #"4-o;4-3-3;3-2-2;2-1-1;1-1-1;" } b,\rest
-    <f,-3\P>\bpI[ <a,-2\I>]   <c-1\M>[ <f-1\A> <c\M> <a,\I>]   
+    <f,-3\P>\bpI[ <a,-2\I>]   <c-1\M>[ <f-1\A> <c\M> <a,\I>]
     <c\M>[ <a,\I> <f,\P> <a,\I>]   <f,-3\P>[ <d,-0\I> <f,\P> <d,\I>] | %33a
-    
+
     % lower this bar for ez version
     \transpose c c, {
       b,16\rest\pI^\markup{\fret-diagram #"3-o;2-o;2-3;1-1;" } b,\rest
-      <g-0\P>[ <b-0\I>]   <d'-3\P>[ <f'-1\I> <d'\P> <b\I>]   
-      <d'\P>[ <b\I> <g\P> <b\I>]   <d-0\P>^\mns[ ^\markup{\fret-diagram #"4-o;4-2;4-3;" } 
+      <g-0\P>[ <b-0\I>]   <d'-3\P>[ <f'-1\I> <d'\P> <b\I>]
+      <d'\P>[ <b\I> <g\P> <b\I>]   <d-0\P>^\mns[ ^\markup{\fret-diagram #"4-o;4-2;4-3;" }
       <f-3\I> <e-2\P> <d-0\I>] | %34a
 
       <e-2 g-0 c'-1>1\fermata\arpeggio^\markup { \fret-diagram-terse #"x;x;2;o;1;x;" } | %35a
@@ -932,7 +931,7 @@ loVoice = {
     \fingerLeft
     \stringRight
     \markBox
-    
+
     % lower first 15 bars for ez version
     \transpose c c, {
 
@@ -1015,7 +1014,7 @@ loVoice = {
   \paper {
     page-count = 1
     indent = 0.0
-    oddFooterMarkup = \markup { 
+    oddFooterMarkup = \markup {
       \fill-line { \fromproperty #'header:mytagline }
     }
     evenFooterMarkup = \oddFooterMarkup
