@@ -1,6 +1,6 @@
-\version "2.10.3"
+\version "2.18.2"
 
- \header {
+\header {
   title = "Piano Sonate Opus 90"
   subtitle = "Dem Grafen Lichnowsky gewidmet"
   composer = "Ludwig Van Beethoven"
@@ -13,10 +13,22 @@
   style = "Classical"
   copyright = "Public Domain"
   maintainer = "Stelios Samelis"
-  lastupdated = "2007/January/17"
-  version = "2.10.3"
- footer = "Mutopia-2007/01/21-909"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  footer = "Mutopia-2017/11/04-909"
+  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain " "by the typesetter " \char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+  tagline = ##f
+}
+
+\paper{
+  page-count = #12
+  %#(set-paper-size "a4")      %uncomment to test specific paper size
+  %#(set-paper-size "letter")  %uncomment to test specific paper size
+  ragged-last-bottom = ##f
+  print-first-page-number = ##f
+  oddFooterMarkup = \markup {
+    \fill-line { \on-the-fly #first-page 
+                 \column { \vspace #1 \fromproperty #'header:copyright } } 
+  }
+  evenFooterMarkup = \oddFooterMarkup
 }
 
 \score {
@@ -27,9 +39,9 @@
  \clef treble
  \key e \major
  \time 2/4
- \override Score.MetronomeMark #'transparent = ##t
+ \override Score.MetronomeMark.transparent = ##t
  \tempo 4 = 72
- \override TextScript #'padding = #1.5
+ \override TextScript.padding = #1.5
  \partial 8 << { e'16\p^\markup { \large "Nicht zu geschwind und sehr singbar vorgetragen." }( fis'
  gis'4 b'8 a' gis' fis') fis'8\staccato( gis'\staccato) a'8([ cis'' b' fis'] <b e' gis'>4) } \\
  { s8 e'16 b e' b gis' b fis' b e' b dis' b dis' b e' b e' b e' b fis' b dis' b s4 } >> r8
@@ -39,7 +51,7 @@
  <cis' e' a'>8\staccato( <b! e' gis'>\staccato)
  << { gis'8( fis'4) fis'8 fis'([ b' ais' b'] e'4) } \\ { <ais e'>4 <a e'>4 <a dis'>8\p dis'4 dis'8 s4 } >> r8
  <b' b''>8( <ais' ais''>4 <e'' e'''> <dis'' dis'''>4.) <a'! a''!>8( <gis' gis''>4 <d'' d'''> <cis'' cis'''>4.)
- \setTextCresc <cis'' cis'''>8\<( <bis' bis''>([ <cis'' cis'''>]) <a' a''>\staccato([ <gis' gis''>\staccato])
+ \crescTextCresc <cis'' cis'''>8\<( <bis' bis''>[ <cis'' cis'''>]) <a' a''>\staccato([ <gis' gis''>\staccato])
  <gis' gis''>8( <fis' fis''>4) <fis' fis''>8\! <fis' fis''>8\p([ <b' b''> <ais' ais''> <b' b''>]) <e' e''>4 r8
  << { e'16( fis' gis'4 b'8 a'! gis' fis') fis'8\staccato( gis'\staccato) a'8([ cis'' b' fis'] <b e' gis'>8) } \\
  { s8 e'16 b e' b gis' b fis' b e' b dis' b dis' b e' b e' b e' b fis' b dis' b s8 } >> r8
@@ -55,14 +67,14 @@
  <fis'' b''>8\pp[ ais'' gis'' fis''] gis''[ fis'' e'' dis'']) dis''4.( e''16 fis'') cis''8 fis''16([ gis''] fis'' gis'' fis'' gis'')
  << { <cis''' e'''>4.( <b'' e'''>8) <b'' dis'''>8[( <ais'' cis'''>) <ais'' cis'''>( <b'' dis'''>)]
  <cis''' e'''>4.( <b'' dis'''>8) cis'''8([ gis''' fis''' e'''] dis'''8 fis''' e''' dis''' cis''' e''' dis''' cis''' b''[ a''! gis'' gis'']) gis''16 } \\
- { fis''16\< gis'' fis'' gis'' fis'' gis'' fis'' gis''\! fis''\> gis'' fis'' gis'' fis'' gis'' fis'' gis''\!
+ { fis''16-\omit\pp\< gis'' fis'' gis'' fis'' gis'' fis'' gis''\! fis''\> gis'' fis'' gis'' fis'' gis'' fis'' gis''\!
  fis''\< gis'' fis'' gis'' fis'' gis'' fis'' gis'' ais'' fis'' e''' fis'' dis''' fis'' cis''' fis''\!
  b''16_\markup { \italic "dimin." } fis'' dis''' fis'' cis''' fis'' b'' fis''
  ais'' fis'' cis''' fis'' b'' fis'' ais'' fis'' b'' fis'' a''! bis' gis'' bis' gis'' bis' bis' } >>
  gis'16\pp[ ais' b'] \acciaccatura dis''16 cis''16 b' cis'' dis'' e'' bis' cis'' dis'' \acciaccatura fis''16 e'' dis'' e'' fis''
  gis''16 fis'' e'' dis'' e'' dis'' cis'' gis'' dis'' cis'' b'! fis'' cis'' b' ais' fis''
  << { <fis' dis'' fis''>2_\markup { \italic "dolce" }( <e' cis'' e''>4 <dis' b' dis''> cis'' b'~ b' ais'8 fis'') } \\ { s2 s2 gis'4 gis' fis' fis' } >>
- \setTextCresc <fis' a'! fis''>2\< <e' a' e''>4 <dis' fis' a' dis''>\!
+ \crescTextCresc <fis' a'! fis''>2\< <e' a' e''>4 <dis' fis' a' dis''>\!
  << { cis''4 b'~ b' a' } \\ { a'4 <dis' a'>_\markup { \italic "piu cresc." }~ <dis' a'> <dis' fis'>\sf } >>
  a'16\f( dis'' fis'' dis'' a''\> dis''' fis''' dis'''\! a'''4\p) r16
  << { dis'16( e' fis' gis'4 b'8 a' gis' fis') fis'8\staccato( gis'\staccato) a'8([ cis'' b' fis'] <b e' gis'>4) } \\
@@ -73,7 +85,7 @@
  <cis' e' a'>8\staccato( <b! e' gis'>\staccato)
  << { gis'8( fis'4) fis'8 fis'([ b' ais' b'] e'4) } \\ { <ais e'>4 <a e'>4 <a dis'>8\p dis'4 dis'8 s4 } >> r8
  <b' b''>8( <ais' ais''>4 <e'' e'''> <dis'' dis'''>4.) <a'! a''!>8( <gis' gis''>4 <d'' d'''> <cis'' cis'''>4.)
- \setTextCresc <cis'' cis'''>8\<( <bis' bis''>([ <cis'' cis'''>]) <a' a''>\staccato([ <gis' gis''>\staccato])
+ \crescTextCresc <cis'' cis'''>8\<( <bis' bis''>[ <cis'' cis'''>]) <a' a''>\staccato([ <gis' gis''>\staccato])
  <gis' gis''>8( <fis' fis''>4) <fis' fis''>8\! <fis' fis''>8\p([ <b' b''> <ais' ais''> <b' b''>]) <e' e''>4 r8
  << { e'16( fis' gis'4 b'8 a'! gis' fis') fis'8\staccato( gis'\staccato) a'8([ cis'' b' fis'] <b e' gis'>8) } \\
  { s8 e'16 b e' b gis' b fis' b e' b dis' b dis' b e' b e' b e' b fis' b dis' b s8 } >> r8
@@ -82,7 +94,7 @@
  <fis' fis''>8\staccato( <gis' gis''>\staccato) <a' a''>8[( <cis'' cis'''> <b' b''>) <dis'' a'' dis'''>8\f\staccato] <e'' gis'' e'''>4\staccato r8
  << { gis'8( a'[ cis'' b']) dis''8\staccato e''8 s8 s4 s2 } \\
  { e'8\p dis'4 e'8 a' gis'( g'4 g''8 a''8_\markup { \italic "cresc." }[ c''' b'']) <dis'' a'' dis'''>8\f\staccato } >> \bar "||"
- \key e \minor <e'' g'' e'''>4 r8 g'8\p( \setTextCresc a'\<[ c'' b'] <a' dis''>)
+ \key e \minor <e'' g'' e'''>4 r8 g'8\p( \crescTextCresc a'\<[ c'' b'] <a' dis''>)
  <g' e''>8\staccato <e'' g''>\staccato <e'' c'''>\staccato <e'' c'''>\staccato
  <e'' c'''>8\staccato[ <a'' c'''>\staccato <d''' f'''>\staccato <d''' f'''>\staccato] \bar "||"
  \key c \major <d''' f'''>\staccato[ <d''' f'''>\staccato <d''' f'''>\staccato <d''' f'''>\!\staccato]
@@ -105,7 +117,7 @@
  <cis' e' a'>8\staccato( <b! e' gis'>\staccato)
  << { gis'8( fis'4) fis'8 fis'([ b' ais' b'] e'4) } \\ { <ais e'>4 <a e'>4 <a dis'>8\p dis'4 dis'8 s4 } >> r8
  <b' b''>8( <ais' ais''>4 <e'' e'''> <dis'' dis'''>4.) <a'! a''!>8( <gis' gis''>4 <d'' d'''> <cis'' cis'''>4.)
- <cis'' cis'''>8_\markup { \italic "cresc." }( <bis' bis''>[( <cis'' cis'''>) <a' a''>\staccato( <gis' gis''>\staccato)]
+ <cis'' cis'''>8_\markup { \italic "cresc." }( <bis' bis''>[ <cis'' cis'''>) <a' a''>\staccato( <gis' gis''>\staccato)]
  <gis' gis''>8( <fis' fis''>4) <fis' fis''>8 <fis' fis''>8\p([ <b' b''> <ais' ais''> <b' b''>]) <e' e''>4 r8
  << { e'16( fis' gis'4 b'8 a'! gis' fis') fis'8\staccato( gis'\staccato) a'8([ cis'' b' fis'] <b e' gis'>8) } \\
  { s8 e'16 b e' b gis' b fis' b e' b dis' b dis' b e' b e' b e' b fis' b dis' b s8 } >> r8
@@ -121,7 +133,7 @@
  gis''4.( a''16 b'' fis''8) b'16([ cis''] b' cis'' b' cis'')
  << { <fis'' a''>4.( <e'' gis''>8) <e'' gis''>8[( <dis'' fis''>) <dis'' fis''>( <e'' gis''>)]
  <fis'' a''>4.( <e'' gis''>8) fis''8([ cis''' b'' a''] gis''[ b'' a'' gis''] fis''[ a'' gis'' fis''] e''[ d'') cis'' cis''] } \\
- { b'16\< cis'' b' cis'' b' cis'' b' cis''\! b'\> cis'' b' cis'' b' cis'' b' cis''\!
+ { b'16-\omit\pp\< cis'' b' cis'' b' cis'' b' cis''\! b'\> cis'' b' cis'' b' cis'' b' cis''\!
  b'\< cis'' b' cis'' b' cis'' b' cis'' dis'' b' a'' b' gis'' b' fis'' b'\!
  e''_\markup { \italic "dimin." } b' gis'' b' fis'' b' e'' b' dis'' b' fis'' b' e'' b' dis'' a' b' gis' b' eis' b' eis' b' eis' } >>
  <eis' cis''>16 cis''16\pp[ dis'' eis''] \acciaccatura gis''16 fis''16 eis'' fis'' gis''
@@ -136,7 +148,7 @@
  << { \stemDown e''8( f''\pp[ aes'' g'' d''] e''[ f'' e'' b'] \stemUp c''4 cis''
  d'' a''~ a''8_\markup { \italic "sempre pp" }[ bes'' a'' f''] bes''[ f'' eis'' cis'']) } \\
  { s8 s2 s2 e'2 d'4 f'4\rest s2 s2 } >> \bar "||"
- \key e \major fis''8([ cis'' cis'' ais']) ais''([ fis'' fis'' cis'']) \setTextCresc cis'''\<([ a''! a'' fis''] c'''[ fis''\! b''\f fis''16]) r16
+ \key e \major fis''8([ cis'' cis'' ais']) ais''([ fis'' fis'' cis'']) \crescTextCresc cis'''\<([ a''! a'' fis''] c'''[ fis''\! b''\f fis''16]) r16
  r4 dis''16\f( b'' dis'' e'' fis''\sf b'' fis'' gis'' a''\sf b'' a'' gis'')
  fis''16\sf b'' fis'' e'' dis''_\markup { \italic "dimin." } b'' dis'' e'' fis'' b'' fis'' gis'' a'' b'' a'' gis''
  fis'' b'' fis'' e'' dis''\p b'' dis'' e'' fis''_\markup { \italic "sempre piu piano" } b'' fis'' gis'' a'' b'' a'' gis''
@@ -159,13 +171,13 @@
  r16 d''( d''' b'') r cis''( cis''' b'') R2 R2
  fis''8[ cis'''_\markup { \italic "p dolce" }( b'' fis''] a''2~ a''8[ a'' gis'' e''] gis''2)~ gis''8[ <e'' gis''>( <dis'' fis''> <b' dis''>]
  <dis'' fis''>)[ <bis' fis''>( <cis'' e''> <a' cis''>] <cis'' e''>)[ <ais' e''>( <b'! dis''> <gis' b'>]
- <b' d''>)[ <gis' d''>( <a'! cis''> <dis'! c''>] \setTextCresc <e' b'>\<) <cis'! b'> <dis' a'>16 fis' e' fis'\!
+ <b' d''>)[ <gis' d''>( <a'! cis''> <dis'! c''>] \crescTextCresc <e' b'>\<) <cis'! b'> <dis' a'>16 fis' e' fis'\!
  << { gis'4( b'8 a' gis' fis') fis'\staccato( gis'\staccato) a'8([ cis'' b' a']) gis'4 d''8\rest gis'8( a'[ cis'' b' fis'] <e' gis'>4) } \\
  { e'16\p b e' b gis' b fis' b e' b dis' b dis' b e' b e' b e' b fis' b dis' b b b e' b e' b e' b
  e'_\markup { \italic "dimin." } b e' b fis' b dis' b b4 } >> r8
  <gis' gis''>8( <a' a''>_\markup { \italic "ri    --    --    --    tar    --    --" }[ <cis'' cis'''> <b' b''>) <dis'' dis'''>8] <e'' e'''>4 r
  << { s2 a''8\rest fis''8[( e'' cis''']) } \\ { c'8\rest a8([ gis e']) e'8 s8 s4 } \\
- { d''4\rest d''8\rest gis'8 fis'[ \stemDown <cis'' e''>] cis''4 } >>
+ { d''4\rest d''8\rest gis'8 fis'\noBeam \stemDown <cis'' e''> cis''4 } >>
  cis'''16_\markup { "accelerando" }_\markup { "crescendo" } b'' gis'' e'' dis'' cis'' b' a' gis' fis' e' e'' dis'' cis'' cis''' b''
  b''16 a'' a''' gis''' gis''' fis''' a''' fis''' e''' dis''' fis''' a''\p a'' gis'' e'''^\markup { "a tempo." } gis''
  fis''\pp( cis''' b'' dis'' e''8) \bar "||"
@@ -197,8 +209,8 @@
  \clef treble <b dis'> fis' <gis b> fis' <ais cis'> fis' <b dis'> fis')
  <cis' e'>16( fis' <ais cis'> fis' <b dis'> fis' <cis' e'> fis' dis' fis' dis' fis' dis' fis' dis' fis') <dis' fis'>8 r8 r16 gis[ ais bis]
  cis'16 gis ais bis \acciaccatura dis'16 cis' bis cis' dis' e' dis' e' fis' gis' fis' e' eis' \clef bass fis'8 r fis r
- \set tupletSpannerDuration = #(ly:make-moment 1 4)
- \times 2/3 { b,8([ fis dis] b,[ b fis] cis[ ais fis] dis[ b fis] e[ cis' gis] eis[ d'! gis] fis[ dis'! b] e![ cis' ais]) }
+ \tupletSpan 4
+ \tuplet 3/2 { b,8([ fis dis] b,[ b fis] cis[ ais fis] dis[ b fis] e[ cis' gis] eis[ d'! gis] fis[ dis'! b] e![ cis' ais]) }
  dis16 b fis dis b, fis dis b, cis a e cis dis b fis dis e cis' a e fis b a fis fis b a fis c a fis dis
  c a fis dis c a fis dis b, a fis dis b, a gis fis
  <e, e>8\p r r4 <b,, b,>8 r r4 <cis, cis>8 r <dis, dis> <b,, b,> <e, e>16 gis b a gis a gis fis
@@ -212,11 +224,11 @@
  \clef bass e'!16 b gis b e b b, b fis b a b gis b fis b e b e' b e' b e' b \clef treble fis' b a' b g' b fis' b \bar "||"
  \key e \minor \clef bass e'16 b g b e b b, b fis b a b g b fis b e e' d! d'! c c' b, b a, a g, g f, f e, e \bar "||"
  \key c \major d,16 d c, c b,, b, a,, a, g,, g, b,, b, d, d fis, fis g, g b, b d d' fis fis' g g' a a' \clef treble b b' c' c'' f' c'' fis' c'' g'[ c'']
- \clef bass g8 \set tupletSpannerDuration = #(ly:make-moment 1 4)
- \times 2/3 { c8[ g e] c[ c' g] d[ b g] e[ c' g] f[ d' a] fis[ ees' c'] g[ e'! c'] g[ f' <b d'>] }
+ \clef bass g8 \tupletSpan 4
+ \tuplet 3/2 { c8[ g e] c[ c' g] d[ b g] e[ c' g] f[ d' a] fis[ ees' c'] g[ e'! c'] g[ f' <b d'>] }
  <c c'>16( g ees g c c' g c d b g d ees c' g ees f d' aes f fis ees' c' fis g ees' c' g gis dis' bis dis')
- \set tupletSpannerDuration = #(ly:make-moment 1 4) \times 2/3 { <cis cis'>8[ gis e] cis[ cis' gis] dis[ bis gis] e[ cis' gis] }
- \bar "||" \key e \major \times 2/3 { fis8[ dis' a] fisis[ e' cis'] gis[ e' cis'] } gis16 dis' bis dis'
+ \tupletSpan 4 \tuplet 3/2 { <cis cis'>8[ gis e] cis[ cis' gis] dis[ bis gis] e[ cis' gis] }
+ \bar "||" \key e \major \tuplet 3/2 { fis8[ dis' a] fisis[ e' cis'] gis[ e' cis'] } gis16 dis' bis dis'
  <cis cis'>16 gis eis gis cis cis' gis cis dis bis gis dis eis cis' gis eis fis cis' a fis fis cis' a fis fis cis' a fis e! cis' a e
  <dis b!>8 a16\sf[ c'] b\p ais b fis dis cis dis b, dis8\staccato fis\staccato
  r8 a16\sf c' b\p ais b fis dis cis dis b, dis8\staccato fis\staccato r8 a16\sf c' b\p ais b fis dis cis dis b, dis cis dis fis
@@ -243,8 +255,8 @@
  fis8[ b, cis dis] e[ cis dis e] fis[ dis e fis] } >> gis16 b gis b gis b gis b
  <gis b>8 r \clef treble r16 cis'16[ dis' eis'] fis'16 cis' dis' eis' \acciaccatura gis'16 fis' eis' fis' gis'
  a'16 gis' a' b' cis'' b' a' ais' b'8 r b r
- \clef bass \set tupletSpannerDuration = #(ly:make-moment 1 4)
- \times 2/3 { e8[ b gis] e[ e' b] fis[ dis' b] gis[ e' b] a[ fis' cis'] ais[ g' e'] b[ gis'! e'] a![ fis' dis'] }
+ \clef bass \tupletSpan 4
+ \tuplet 3/2 { e8[ b gis] e[ e' b] fis[ dis' b] gis[ e' b] a[ fis' cis'] ais[ g' e'] b[ gis'! e'] a![ fis' dis'] }
  gis16 e' b gis e b gis e fis d' a fis gis e' b gis a fis' d' a b gis' d' b gis d' b gis f d' b gis f d' b aes f d' b aes\bar "||"
  \key c \major d16 b aes f d b aes f b, aes f d b, aes f d b, g f d b, g b, g <b, g>4\pp r8 \clef treble
  << { g'8 g'[ aes' g' d'] } \\ { s8 g4\rest g8\rest g8 } >>
@@ -283,3 +295,21 @@
  \midi { }
 
 }
+
+
+%{
+2007/01/21 2.10.3 original(?) by Stelios Samelis
+2017/11/04 2.18.2 by gmail's jjocanoe
+convert-ly.py (GNU LilyPond) 2.18.2  convert-ly.py: Processing `'...
+Applying conversion: 2.11.2, 2.11.3, 2.11.5, 2.11.6, 2.11.10, 2.11.11,
+2.11.13, 2.11.15, 2.11.23, 2.11.35, 2.11.38, 2.11.46, 2.11.48,
+2.11.50, 2.11.51, 2.11.52, 2.11.53, 2.11.55, 2.11.57, 2.11.60,
+2.11.61, 2.11.62, 2.11.64, 2.12.0, 2.12.3, 2.13.0, 2.13.1, 2.13.4,
+2.13.10, 2.13.16, 2.13.18, 2.13.20, 2.13.27, 2.13.29, 2.13.31,
+2.13.36, 2.13.39, 2.13.40, 2.13.42, 2.13.44, 2.13.46, 2.13.48,
+2.13.51, 2.14.0, 2.15.7, 2.15.9, 2.15.10, 2.15.16, 2.15.17, 2.15.18,
+2.15.19, 2.15.20, 2.15.25, 2.15.32, 2.15.39, 2.15.40, 2.15.42,
+2.15.43, 2.16.0, 2.17.0, 2.17.4, 2.17.5, 2.17.6, 2.17.11, 2.17.14,
+2.17.15, 2.17.18, 2.17.19, 2.17.20, 2.17.25, 2.17.27, 2.17.29,
+2.17.97, 2.18.0
+%}
