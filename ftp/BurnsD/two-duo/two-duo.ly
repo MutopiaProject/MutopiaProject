@@ -7,26 +7,28 @@
  title = "Two"
  subtitle = \markup { \smaller "Arranged for Guitar Duo" }
  composer = "Dennis Burns" % b.1959
+ style = "Popular"
  date = "1990"
- source = "Unpublished manuscript dated 10/25/1990"
+ source = "Unpublished manuscript dated 10/25/1990 with permission of Dennis Burns"
  moreInfo = "A recording of Dennis Burns playing this song is on track 11 of the album “A Rose on the Lake”, © 2005 Bolder Sounds."
+ style = "Romantic"
  mytagline = ##f
 
  %            o_
  %       (\___\/_____/)
- %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~ 
+ %  ~ ~ ~ ~ ~ / ~ ~ ~ ~ ~ ~ ~
  maintainer = "Jeffrey Olson & Dennis Burns"
  maintainerEmail = "gmail's jjocanoe & boldersounds.com's dennis"
- license = "Creative Commons Attribution - ShareAlike 4.0"
+ license = "Creative Commons Attribution-ShareAlike 4.0"
 
- mutopiacomposer = "BurnsD" 
+ mutopiacomposer = "BurnsD"
  mutopiatitle = "Two"
  mutopiadate = "1990"
- mutopiasource = "Unpublished manuscript dated 10/25/1990"
+ mutopiasource = "Unpublished manuscript dated 10/25/1990 with permission of Dennis Burns"
  mutopiainstrument = "2 Guitars"
- 
- footer = "Mutopia-2017/10/17"
- copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {\char ##x01C0 \char ##x01C0 }}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " 2017 " "by " \maintainer " " \char ##x2014 " " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License "\char ##x2014 " free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white \char ##x01C0 }}}
+
+ footer = "Mutopia-2017/11/05-2205"
+ copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2017 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
 }
 
@@ -41,7 +43,7 @@
   print-first-page-number = ##f
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #1 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #1 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #last-page \fromproperty #'header:mytagline }
     }
   }
@@ -156,7 +158,7 @@ hiB   = ^\markup{ \smaller B}
 
 % tuplets
 hideTupletNumber = \override TupletNumber.stencil = ##f
-unhideTupletNumber = \revert TupletNumber.stencil 
+unhideTupletNumber = \revert TupletNumber.stencil
 hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
 
 % stems
@@ -176,7 +178,7 @@ onOneString =
      \override TextSpanner.dash-period = #2.0
      \override TextSpanner.font-size = #-5
      \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
-     \override TextSpanner.bound-details.left.text = 
+     \override TextSpanner.bound-details.left.text =
        \markup  { \circle \number #strA }
    #})
 
@@ -188,7 +190,7 @@ upperVoice = \transpose c c' {
   \fingerLeft
   \stringDown
   \tempo 4 = 52
-  
+
   \key d \major
   \partial 4. { a'8 d''[ cis''] } | %0
   \repeat volta 2 {
@@ -204,7 +206,7 @@ upperVoice = \transpose c c' {
     { d'2 r8 a' d''[ cis''] } %8
     { d'2 r8 fis' a'[ cis''] } %8
   }
-  
+
   \key g \minor
   d''8 g'4 g'8 c'' f'4 f'8| %9
   bes'16 a' g'8~ g'4 a'8 d''4 d''8 | %10
@@ -255,7 +257,7 @@ lowerVoice = \transpose c c' {
     { d8 fis a cis' d' r r e } %8
     { d8 fis a cis' d' r r4 } %8
   }
-  
+
   \key g \minor
   bes2 a | %9
   g4 d' dis'2 | %10
@@ -294,4 +296,3 @@ lowerVoice = \transpose c c' {
     \transposition c % guitar plays octave lower than written
   }
 }
-
