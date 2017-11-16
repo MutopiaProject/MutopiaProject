@@ -1,6 +1,6 @@
 % -*- mode: LilyPond; coding: utf-8; -*-
 
-\version "2.6.0"
+\version "2.19.49"
 
 upper = \relative c' {
   \key c \minor
@@ -27,7 +27,7 @@ upper = \relative c' {
   | \repeat unfold 4 { r b( ais b) } 
   \repeat unfold 2 { r c( b c) } \repeat unfold 2 { r d( cis d) }
   | es c g c es c g c fis c a c fis c a c << g'8 \\ b, >> 
-  %\once \override Slur #'attachment-offset = #'((0 . 3.5) 0 . 0)
+  %\once \override Slur.attachment-offset = #'((0 . 3.5) 0 . 0)
   g_( as'! g
   | fis f es d es_) c_( <des des'> <c c'>
   | <b b'> <bes bes'> <as as'> <g g'> <as as'>_) f'([ as c,])
@@ -78,7 +78,7 @@ dynamics = {
   | s4-\f s2.
   | s1*2
   | s2 s8 s4.-\p
-  | s1*2 \override Voice.TextScript #'extra-offset = #'(0 . 2)
+  | s1*2 \override Voice.TextScript.extra-offset = #'(0 . 2)
   | s8-\markup { \italic "cre-" } s8-\markup { \italic "-" }
     s8-\markup { \italic "scen-" } s8-\markup { \italic "-" }
     s8-\markup { \italic "do" } s8-\markup { \italic "-" }

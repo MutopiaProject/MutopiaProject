@@ -1,6 +1,6 @@
 % -*- mode: LilyPond; coding: utf-8; -*-
 
-\version "2.6.0"
+\version "2.19.49"
 
 melody = \relative g' {
   \key c \minor
