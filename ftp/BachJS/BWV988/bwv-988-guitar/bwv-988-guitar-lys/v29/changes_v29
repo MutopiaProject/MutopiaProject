@@ -1,0 +1,14 @@
+gtr1 - octave down
+      bar 8 replace r16 (beat 2) with "d"
+      bar 8 replace r16 (beat 2) with "g"
+      bar 25 replace r16 (beat 1) with "c" replace r16 (beat 2 ) with "a"
+      bar 26 replace r16 (beat 1) with "b" replace r16 (beat 2 ) with "g"
+     - bar 24 octave up
+       bar 31 replace r16 with "fis16"
+gtr2 - octave down
+       bar4 octave up, replace r16 with "fis16"
+       bar8 replace r16 with "b16"
+       bar15 change "cis" to "e"
+       bar 22 "c" octave up
+       bar 22 "dis" octave up
+ 

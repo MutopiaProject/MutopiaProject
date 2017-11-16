@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="132.80115mm"
+   height="72.352966mm"
+   viewBox="0 0 132.80115 72.352966"
+   version="1.1"
+   id="svg18864"
+   inkscape:version="0.92.1 r15371"
+   sodipodi:docname="preview.svg">
+  <defs
+     id="defs18858" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="230.96279"
+     inkscape:cy="93.872881"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="false" />
+  <metadata
+     id="metadata18861">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-44.724429,-101.31757)">
+    <text
+       y="106.49814"
+       x="94.720871"
+       style="font-size:7.0292716px;font-family:'Century Schoolbook L';text-anchor:start;fill:currentColor;stroke-width:1.58156633"
+       font-size="4.4445"
+       id="text4">
+      <tspan
+         style="stroke-width:1.58156633"
+         id="tspan2">J. S. Bach</tspan>
+    </text>
+    <text
+       y="130.03232"
+       x="44.230949"
+       style="font-weight:bold;font-size:12.65332031px;font-family:'Century Schoolbook L';text-anchor:start;fill:currentColor;stroke-width:1.58156633"
+       font-weight="bold"
+       font-size="8.0005"
+       id="text8">
+      <tspan
+         style="stroke-width:1.58156633"
+         id="tspan6">Goldberg Variations</tspan>
+    </text>
+    <text
+       y="149.36633"
+       x="95.680885"
+       style="font-size:7.0292716px;font-family:'Century Schoolbook L';text-anchor:start;fill:currentColor;stroke-width:1.58156633"
+       font-size="4.4445"
+       id="text12">
+      <tspan
+         style="stroke-width:1.58156633"
+         id="tspan10">BWV 988</tspan>
+    </text>
+    <text
+       y="173.56509"
+       x="76.48098"
+       style="font-size:7.0292716px;font-family:'Century Schoolbook L';text-anchor:start;fill:currentColor;stroke-width:1.58156633"
+       font-size="4.4445"
+       id="text16">
+      <tspan
+         style="stroke-width:1.58156633"
+         id="tspan14">For Guitar Ensemble</tspan>
+    </text>
+  </g>
+</svg>
