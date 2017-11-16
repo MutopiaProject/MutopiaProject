@@ -327,7 +327,7 @@ violaII = \new Staff \with {
 	c, e g \tuplet 2/3 { c, e) } | \bar "||" \mark \default
 
 	\set Staff.timeSignatureFraction = 2/4
-	\scaleDurations 3/2 { << { 
+	\scaleDurations 3/2 { << {
 		r8^"arco" g-. r c,-. |
 		e-. r r4 |
 		g8-. c,-. r4 |
@@ -424,5 +424,5 @@ violaII = \new Staff \with {
 	g c, e) g( |
 	c4 e8) r |
 	<< { \oneVoice g2~\fermata | g8 \voiceOne r }
-	\\ { s2 | c,,,4_"pizz." } >> r4 \bar "|."
+	\\ { s2 | \shiftOn c,,,4_"pizz." } >> r4 \bar "|."
 }
