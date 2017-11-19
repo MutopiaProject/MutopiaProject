@@ -32,50 +32,49 @@
 \book {
 
 \score { { \clef "bass" \transpose c c, { \prelude } }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Prélude" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "bass" \transpose c c, { \allemande } }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { system-count = #11 }
 	\header { piece = "Allemande" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "bass" \transpose c c, { \courante } }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Courante" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "bass" \transpose c c, { \sarabande } }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { system-count = #5 }
 	\header { piece = "Sarabande" }
+	\midi {}
 }
 
 \score { { \clef "bass" \transpose c c, { \menuetI } }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Menuet 1" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "bass" \transpose c c, { \menuetII } }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Menuet 2" }
+	\midi {}
 }
 
 \score { { \clef "bass" \transpose c c, { \gigue } }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Gigue" }
-}
-
-% MIDI output of all parts
-\score { { \transpose c c, {
-	\tempo 4 = 80 \prelude
-	\tempo 4 = 70 \allemande
-	\tempo 4 = 80 \courante
-	\tempo 4 = 60 \sarabande
-	\tempo 2 = 60 \menuetI
-	\tempo 2 = 60 \menuetII
-	\tempo 2 = 60 \gigue } }
-	\midi { %{ Use explicit \tempo specifications %} }
+	\midi {}
 }
 
 }

@@ -15,7 +15,7 @@ gigue = \context Staff \relative c' {
 	    b fis(g) g( e) g | a e(fis) fis( d) fis | g b g e b d |
 	    cis( e a) a,4 e'8 | f( e g) g( f a) | a( g bes) bes( a g) |
 	%12
-	    f( e d) a( d cis) | d a( fis!) d4 } \break \repeat volta 2 { a''8 | 
+	    f( e d) a( d cis) | d a( fis!) d4 } \repeat volta 2 { a''8 | 
 	    a fis g g e fis |
 	    fis16( g a8) fis d c'(b) | b g a a fis g | g16(a b8) g e d'(c) |
 	    a d(c) d, c'(b) | g c(b) c, b'(a) | g( fis e) b( e dis) |

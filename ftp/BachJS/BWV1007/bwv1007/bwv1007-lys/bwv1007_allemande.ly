@@ -27,7 +27,7 @@ allemande = \context Staff \relative c'' {
 	    d,16[(g') fis e] fis[(d a d]) d,[(fis a c!]) b8.[( a16]) |
 	    \acciaccatura g,16 <b' d,>8.[( a16]) g16[(fis e d']) cis[(e) a, g] fis[(d) a cis] |
 	% 16
-	    d,8.[(a'16]) d[(fis) a cis] d[a fis d] d,8. } \break \repeat volta 2 { a''16 |
+	    d,8.[(a'16]) d[(fis) a cis] d[a fis d] d,8. } \repeat volta 2 { a''16 |
 	    <a d,>4~a16 fis(g a) d,16[(e fis g] a[fis d c]) |
 	    b[(d g fis] g[a b c] d[) b( a) g] f[(e f d']) |
 	    e,8[(^\trill d16 c16] c'16[) a,( b c] d,[) c''( b c]) d[( b c a]) |

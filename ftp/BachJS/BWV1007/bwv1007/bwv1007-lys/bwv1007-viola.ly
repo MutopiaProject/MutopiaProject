@@ -33,50 +33,49 @@
 \book {
 
 \score { { \clef "alto" \prelude }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Prélude" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "alto" \allemande }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { system-count = #11 }
 	\header { piece = "Allemande" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "alto" \courante }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Courante" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "alto" \sarabande }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { system-count = #5 }
 	\header { piece = "Sarabande" }
+	\midi {}
 }
 
 \score { { \clef "alto" \menuetI }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Menuet 1" }
+	\midi {}
 }
+\pageBreak
 
 \score { { \clef "alto" \menuetII }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Menuet 2" }
+	\midi {}
 }
 
 \score { { \clef "alto" \gigue }
-	\layout { %{ Use LilyPond defaults %} }
+	\layout { }
 	\header { piece = "Gigue" }
-}
-
-% MIDI output of all parts
-\score { {
-	\tempo 4 = 80 \prelude
-	\tempo 4 = 70 \allemande
-	\tempo 4 = 80 \courante
-	\tempo 4 = 60 \sarabande
-	\tempo 2 = 60 \menuetI
-	\tempo 2 = 60 \menuetII
-	\tempo 2 = 60 \gigue }
-	\midi { %{ Use explicit \tempo specifications %} }
+	\midi {}
 }
 
 }
