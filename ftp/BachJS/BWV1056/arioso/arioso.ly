@@ -167,6 +167,7 @@ pianolefthand = \relative c {
     maintainer = "Hermógenes Hebert Pereira Oliveira"
 
     mutopiaopus = "BWV 1056"
+    style = "Baroque"
     mutopiastyle = "Baroque"
 
  footer = "Mutopia-2014/01/19-1902"

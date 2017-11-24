@@ -17,6 +17,7 @@
   mutopiaopus = "HWV 351"
   mutopiacomposer = "HandelGF"
   mutopiainstrument = "Trumpet, Organ/Piano"
+  style = "Baroque"
   mutopiastyle = "Baroque"
   mutopiamaintainer = "Cyprien Lecourt"
 

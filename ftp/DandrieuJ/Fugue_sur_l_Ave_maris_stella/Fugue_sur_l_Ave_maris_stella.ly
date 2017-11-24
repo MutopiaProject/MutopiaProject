@@ -14,6 +14,7 @@
     opus = ""
     mutopiainstrument = "Organ"
     mutopiacomposer = "DandrieuJ"
+    style = "Baroque"
     mutopiastyle = "Baroque"
     enteredby = "Gérard Gréco"
     maintainer = "Gérard Gréco"

@@ -10,6 +10,7 @@
   poet = "Rev. C. Kingsley"
   instrument = "Voice and Piano"
   source = "New York: S. T. Gordon, 1856"
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

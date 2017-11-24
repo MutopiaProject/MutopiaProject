@@ -7,6 +7,7 @@
   composer = "Geo. F. Root (1820-1895)"
   mutopiacomposer = "RootGF"
   instrument = "Voice and Piano"
+  style = "Song"
   license = "Public Domain"
   enteredby = "Stan Sanderson"
   maintainer = "Stan Sanderson"

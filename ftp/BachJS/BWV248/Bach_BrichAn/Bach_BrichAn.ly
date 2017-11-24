@@ -16,7 +16,7 @@
   mutopiapoet = "Johann Rist"
   mutopiaopus = "BWV 248"
   mutopiainstrument = "Choir (SATB)"
-  license = "cc-by-sa"
+  license = "Creative Commons Attribution-ShareAlike 4.0"
   date = "1734"
 
  mutopialicense = "Creative Commons Attribution-ShareAlike 4.0"

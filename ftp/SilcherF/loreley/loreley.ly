@@ -17,6 +17,7 @@
   instrument = "Voice and Piano"
   opus = "circ. 1837"
   source = ""
+  style = "Song"
   license = "Public Domain"
   mutopiacomposer = "SilcherF"
   mutopiapoet = "H. Heine"
