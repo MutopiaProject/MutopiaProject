@@ -3,7 +3,7 @@
 %          20 août 2013
 %=============================================
 
-\version "2.16.1"
+\version "2.18.2"
 
 \header {
   title = "La Réjouissance"
@@ -11,18 +11,19 @@
   subsubtitle = "Trompette & Orgue"
   composer = "Haëndel"
 
-  source = "IMSLP"
-  copyright = "Public Domain"
+  source = "Leipzig: Deutsche Händelgesellschaft, 1886. Plate H.W. 47."
   mutopiatitle = "La Réjouissance des Feux d'Artifice Royaux (Royal Fireworks)"
   mutopiaopus = "HWV 351"
   mutopiacomposer = "HandelGF"
   mutopiainstrument = "Trumpet, Organ/Piano"
   style = "Baroque"
   mutopiastyle = "Baroque"
-  mutopiamaintainer = "Cyprien Lecourt"
+  maintainer = "Cyprien Lecourt"
 
- footer = "Mutopia-2013/09/01-1864"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \abs-fontsize #10 \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 MutopiaProject \abs-fontsize #8 .org } \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \abs-fontsize #10 \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \concat { \abs-fontsize #8 www. \abs-fontsize #11 LilyPond \abs-fontsize #8 .org }} by \concat { \maintainer . } \hspace #0.5 Reference: \footer } } \line { \abs-fontsize #8 \line { This sheet music has been placed in the public domain by the typesetter, for details \concat { see: \hspace #0.3 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } } }
+  license = "Public Domain"
+  footer = "Mutopia-2017/11/24-1864"
+  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+  tagline = ##f
 }
 
 
@@ -31,7 +32,7 @@
 trompette = \relative c'{
     \clef treble
     \key d \major
-    \time 4/4 
+    \time 4/4
     r8 r4 r2 a'8      | % 1
     d d d d d16 e fis e d8 d16 e      | % 2
     fis8 fis fis fis fis16 g a g fis8 fis16 g      | % 3
@@ -40,20 +41,20 @@ trompette = \relative c'{
     a b16 a g8 fis e4. a8      | % 6
     a b16 a g8 fis e8. fis16 e8. fis16      | % 7
     e fis e fis e fis e fis e4. e8     | % 8
-    fis16 gis a b gis8. a16 a4. r8      \bar ":|" % 9
+    fis16 gis a b gis8. a16 a4. r8      \bar ":|." % 9
 
 
      r2 r4 r8 e8      | % 10
     e8 fis16 g a8 fis e4. d16 fis      | % 11
     e4. d16 fis e4 e8 a      | % 12
-    a~ b16~ cis~ d8 b a4. g16~ b      | % 13
-    a4. g16~ b a4. a8      | % 14
-    b b8. a16 g~ b a8 a8.~ g16 fis~ a      | % 15
-    g8 g8.~ fis16 e~ g fis8 fis8. e16 d~ fis~      | % 16
-    e8 e8. fis16 g~ e fis8~ d d e16 fis      | % 17
-    g8 e e fis16~ g a8 fis fis g16~ a      | % 18
-    b8.~ g16 a8.~ fis16 g8 fis16~ e a8 g      | % 19
-    fis~ fis16~ e e8.~ d16 d4.~ r8 \bar "|."  % 20
+    a b16 cis d8 b a4. g16 b      | % 13
+    a4. g16 b a4. a8      | % 14
+    b b8. a16 g b a8 a8. g16 fis a      | % 15
+    g8 g8. fis16 e g fis8 fis8. e16 d fis      | % 16
+    e8 e8. fis16 g e fis8 d d e16 fis      | % 17
+    g8 e e fis16 g a8 fis fis g16 a      | % 18
+    b8. g16 a8. fis16 g8 fis16 e a8 g      | % 19
+    fis~ fis16 e e8. d16 d4. r8 \bar "|."  % 20
 }
 
 
@@ -63,7 +64,7 @@ trompette = \relative c'{
 orgueUP = \relative c'{
     \clef treble
     \key d \major
-    \time 4/4 
+    \time 4/4
     r8 r4 r2 a'8      | % 1
     d d d d d16 e fis e d8 d16 e      | % 2
     <d fis>8 <d fis> <d fis> <d fis> <d fis>16 <e g> <fis a> <e g> <d fis>8 <d fis>16 <e g>      | % 3
@@ -72,7 +73,7 @@ orgueUP = \relative c'{
     <fis a> <g b>16 <fis a> <e g>8 <d fis> <a cis e>4. <cis a'>8      | % 6
     <fis a> <g b>16 <fis a> <e g>8 <d fis> <e a>8. <fis a>16 <e a>8 e16 <fis>      | % 7
     <cis e> <d fis> <cis e> <d fis> <cis e> <cis fis> <cis e> <d fis> <cis e>4. <cis e>8     | % 8
-    <d fis>16 <d gis> <fis a> <fis b> <e gis>8. <e a>16 <cis e a>4. r8      \bar ":|" % 9
+    <d fis>16 <d gis> <fis a> <fis b> <e gis>8. <e a>16 <cis e a>4. r8      \bar ":|." % 9
 
 
 
@@ -81,21 +82,21 @@ orgueUP = \relative c'{
     <cis e>4. <a d>16 <d fis> <cis e>8.~ <d e>16 <e>8 <cis a'>      | % 12
     <fis a>~ <fis b>16~ <fis cis'>~ <fis d'>8 <g b>16~ <e b'> <fis a>4. <e g>16~ <g b>      | % 13
     <fis a>4. <e g>16~ <g b> <fis a>4. <fis a>8      | % 14
-    <g b> <g b>8. <fis a>16 <e g>~ <g b> <fis a>8 <fis a>8.~ <e g>16 <d fis>~ <fis a>      | % 15
-    <e g>8 <e g>8.~ <d fis>16 <cis e>~ <e g> <d fis>8~ <a fis'>~ <d fis>16~ <d e> <d>~ <d fis>~      | % 16
-    <d e>8 <cis e>16~ <b e> <cis e>~ <d fis> <e g>~ <cis e> <a fis'>8~ <a d> <a d> <d e>16 <d fis>      | % 17
-    <e g>8 <cis e> <cis e> <d fis>16~ <e g> <fis a>8 <d fis> <d fis> <e g>16~ <fis a>      | % 18
+    <g b> <g b>8. <fis a>16 <e g>~ <g b> <fis a>8 <fis a>8. <e g>16 <d fis>~ <fis a>      | % 15
+    <e g>8 <e g>8. <d fis>16 <cis e>~ <e g> <d fis>8~ <a fis'>~ <d fis>16~ <d e> <d>~ <d fis>~      | % 16
+    <d e>8 <cis e>16~ <b e> <cis e> <d fis> <e g>~ <cis e> <a fis'>8~ <a d> <a d> <d e>16 <d fis>      | % 17
+    <e g>8 <cis e> <cis e> <d fis>16 <e g> <fis a>8 <d fis> <d fis> <e g>16 <fis a>      | % 18
     <g b>8. <e g>16 <fis a>8. <d fis>16 <cis g'>8 <d fis>16~ <d e> <e a>8 <cis e g>      | % 19
-    <d fis>~ <b fis'>16~ <b e> <cis e>8.~ <a d>16 <fis a d>4.~ r8 \bar "|."  % 20
+    <d fis>~ <b fis'>16~ <b e> <cis e>8. <a d>16 <fis a d>4. r8 \bar "|."  % 20
 }
 
 
 orgueDOWN = \relative c {
     \clef bass
     %staffkeysig
-    \key d \major 
-    %bartimesig: 
-    \time 4/4 
+    \key d \major
+    %bartimesig:
+    \time 4/4
     r1     | % 1
     r4 r8 <d fis a>8 <d fis a>4 r4     | % 2
     r4 r8 <d fis a>8 <d fis a>4 r4       | % 3
@@ -127,8 +128,8 @@ orgueDOWN = \relative c {
 
 
 
-\score { 
-	
+\score {
+
 	<<
 
 	\new Staff
@@ -136,11 +137,11 @@ orgueDOWN = \relative c {
 		\set Staff.midiInstrument = #"trumpet"
 		\set Staff.instrumentName = #"Trpt Bb"
 		\transpose d c \trompette
-		%\transpose d bes, \trompette 
+		%\transpose d bes, \trompette
 		%\trompette
-		%\stopStaff 
+		%\stopStaff
 	}
-    \new PianoStaff << 
+    \new PianoStaff <<
 		\set PianoStaff.instrumentName = #"Orgue"
 		\set PianoStaff.midiInstrument = #"church organ"
         \new Staff {
@@ -160,5 +161,3 @@ orgueDOWN = \relative c {
 		\tempo 4=100
 	}
 }
-
-
