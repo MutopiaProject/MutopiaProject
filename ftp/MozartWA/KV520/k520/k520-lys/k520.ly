@@ -1,6 +1,6 @@
 % -*- mode: LilyPond; coding: utf-8; -*-
 
-\version "2.6.0"
+\version "2.19.49"
 \include "defs.ly"
 
 #(set-global-staff-size 17)
@@ -14,18 +14,24 @@
   mutopiatitle = "Als Luise die Briefe ihres ungetreuen Liebhabers verbrannte"
   mutopiacomposer = "MozartWA"
   mutopiaopus = "KV 520"
-  mutopiainstrument = "Voice and Piano"
+  mutopiainstrument = "Voice and piano"
   date = "26th May 1787"
   source = "Breitkopf & Härtel (serie 7 n. 29)"
   style = "Classical"
-  copyright = "Public Domain"
   maintainer = "Maurizio Tomasi"
   maintainerEmail = "zio_tom78@hotmail.com"
   maintainerWeb = "http://www.geocities.com/zio_tom78/"
   lastupdated = "2005/Oct/26"
   
-  footer = "Mutopia-2005/12/09-500"
-  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  license = "Public Domain"
+  footer = "Mutopia-2017/11/16-500"
+  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+  tagline = ##f
+}
+
+\paper {
+  left-margin = 15\mm
+  right-margin = 15\mm
 }
 
 \include "melody.ly"
@@ -38,23 +44,22 @@
       \new Staff \with
       {
         fontSize = #-2
-        \override StaffSymbol #'staff-space = #(magstep -2)
+        \override StaffSymbol.staff-space = #(magstep -2)
       }
       <<
-        \set Staff.minimumVerticalExtent = #'(-2 . 2)
         \context Voice = mel {
           \set Staff.midiInstrument = #"clarinet"
-          \set Staff.instrument = \markup { "Singstimme." }
+          \set Staff.instrumentName = \markup { "Singstimme." }
 
 	  \autoBeamOff
           \melody
         }
-        \lyricsto mel \new Lyrics { \text }
+        \new Lyrics \lyricsto mel { \text }
       >>
       
       \new PianoStaff <<
         \set PianoStaff.midiInstrument = #"acoustic grand"
-        \set PianoStaff.instrument = \markup { "Pianoforte." }
+        \set PianoStaff.instrumentName = \markup { "Pianoforte." }
         
         \context Staff = upper \upper
         \context Dynamics=dynamics \dynamics
@@ -66,46 +71,15 @@
     >>
     
     \layout {
-      \context {
-        \type "Engraver_group_engraver"
-        \name Dynamics
-        \alias Voice % So that \cresc works, for example.
-        \consists "Output_property_engraver"
-        
-        minimumVerticalExtent = #'(-1 . 1)
-        pedalSustainStrings = #'("Ped." "*Ped." "*")
-        pedalUnaCordaStrings = #'("una corda" "" "tre corde")
-        
-        \consists "Piano_pedal_engraver"
-        \consists "Script_engraver"
-        \consists "Dynamic_engraver"
-        \consists "Text_engraver"
-        
-        \override TextScript #'font-size = #2
-        \override TextScript #'font-shape = #'italic
-        \override DynamicText #'extra-offset = #'(0 . 2.5)
-        \override Hairpin #'extra-offset = #'(0 . 2.5)
-        
-        \consists "Skip_event_swallow_translator"
-        
-        \consists "Axis_group_engraver"
-      }
-      \context {
-        \PianoStaff
-        \accepts Dynamics
-        \override VerticalAlignment #'forced-distance = #7
-      }
-      
-      \context { \RemoveEmptyStaffContext }
+      \context { \Staff \RemoveEmptyStaves }
     }  
 
     \midi
     {
       \context {
-        \type "Performer_group_performer"
+        \type "Performer_group"
         \name Dynamics
         \consists "Piano_pedal_performer"
-        \consists "Span_dynamic_performer"
         \consists "Dynamic_performer"
       }
       \context {
