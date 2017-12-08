@@ -31,13 +31,14 @@
   date = "1807/08"
   source = "Breitkopf and Härtel (1862-1865)"
   style = "Classical"
-  copyright = "Public Domain"
   maintainer = "Stelios Samelis (adapted to v2.16 by Johannes Heinecke)"
   lastupdated = "2017/March/11"
   version = "2.16.2"
- footer = "Mutopia-2008/06/01-1437"
- tagline = ""
  %tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  license = "Public Domain"
+  footer = "Mutopia-2017/12/08-1437"
+  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+  tagline = ##f
 }
 
 
@@ -113,24 +114,22 @@
     >>
 
   >> }
-}
 
-\layout {
-  indent = 3.0\cm
-  \context {
-    \Staff \RemoveEmptyStaves
-    %% To use the setting globally, uncomment the following line:
-    %%\override VerticalAxisGroup #'remove-first = ##t
+  \layout {
+    indent = 3.0\cm
+    \context {
+      \Staff \RemoveEmptyStaves
+      %% To use the setting globally, uncomment the following line:
+      %%\override VerticalAxisGroup #'remove-first = ##t
+    }
   }
+
+
+  \midi { }
+
 }
- 
-
-\midi { }
-
 
 \paper {
   after-title-space = 2\cm
   system-separator-markup = \slashSeparator
 }
-
-
