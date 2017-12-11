@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.16.2"
 
  trombec = {
  \set Staff.instrumentName = "Corni in Es."
@@ -8,7 +8,7 @@
  \time 2/4
  \repeat volta 2 {
  R2 r2^\fermata R2 R2 r2^\fermata R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
- r8 <g g'>8_\markup { \italic " p cresc." }[ <g g'> <g g'>] <c' c''>4\f r <c' c''> r <g g'> r4^\fermata
+ r8 <g g'>8_\markup {  \dynamic p \italic "cresc." }[ <g g'> <g g'>] <c' c''>4\f r <c' c''> r <g g'> r4^\fermata
  R2 R2 r2^\fermata R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
  R2 R2 R2 R2 <c' c''>4\f r <c' c''>\f r R2 R2 r4 <c' c''>8 <c' c''> <g g'>4 r R2 R2
  r4 <c' c''>8 <c' c''> <c' c''>2\ff~ <c' c''>~ <c' c''>~ <c' c''> <c' c''>4 r R2 R2
@@ -21,8 +21,8 @@
  R2 R2 R2 R2 R2 <g g'>4\pp r4 R2 << { c'4 } \\ { c'4 } >> r4 R2 << { c'4 } \\ { c'4 } >> r4 R2
  <g g'>4 r R2 <g g'>4 r R2 <c' c''>2\f~ <c' c''>2 <c' c''>4 r r8 <e' e''>8[ <e' e''> <e' e''>]
  <e' e''>2~ <e' e''>2 <e' e''>4 r
- \set crescendoText = \markup { \italic "piu f" } \set crescendoSpanner = #'dashed-line
- r8 <g' g''>\<[ <g' g''> <g' g''>] <g' g''>4 r r4 <g' g''>8 <g' g''> <g' g''>4\! r4 << { d''4 } \\ { d''4 } >> r4
+ \set crescendoText = \markup { \italic "piu f" } %\set crescendoSpanner = #'dashed-line
+ r8 <g' g''>\cresc[ <g' g''> <g' g''>] <g' g''>4 r r4 <g' g''>8 <g' g''> <g' g''>4\! r4 << { d''4 } \\ { d''4 } >> r4
  R2 R2 r4 << { c'8 c' c'4 } \\ { c'8 c' c'4 } >> r4 R2 R2 r4 << { d''8 d'' } \\ { d''8 d'' } >> <g' d''>4 r R2 R2
  R2 R2 R2 R2 r4 <g g'>8 <g g'> <c' c''>4 r4 << { c'2 c'2 } \\ { c'2 c'2 } >> R2 R2 << { c'2 c'2 } \\ { c'2 c'2 } >>
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
@@ -31,7 +31,11 @@
  <g' g''>2^\fermata r8 <g' g''>[ <g' g''> <g' g''>]  <g' g''>2~ <g' g''>2^\fermata R2 R2 R2 R2
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 <c' c''>4\p r4
 
- \cadenzaOn <g g'>4\f s4 s2 s2 r4^\fermata s2 s4 \cadenzaOff \bar "|"
+ \cadenzaOn 
+<g g'>4\f %s4 s2 s2
+ r4^\fermata %s2 s4 \cadenzaOff \bar "|"
+s2*4    \cadenzaOff
+s2
  R2 R2 R2 R2 R2 R2 R2 R2 R2 <c' c''>4\f r R2 <c' c''>4 r
  R2 R2 R2 R2 R2 R2 <c' c''>4\f r <c' c''>\f r R2 R2 r4 <c' c''>8[ <c' c''>] <g g'>4 r
  R2 R2 r4 <c' c''>8[ <c' c''>] <c' c''>2\ff~ <c' c''>~ <c' c''>~ <c' c''> <c' c''>4 r R2 <g g'>4 r R2 R2 R2

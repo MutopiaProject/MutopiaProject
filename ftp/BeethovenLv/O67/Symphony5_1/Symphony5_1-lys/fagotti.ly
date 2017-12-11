@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.16.2"
 
  fagotti = {
  \set Staff.instrumentName = \markup { \center-align { "Fagotti." } }
@@ -19,7 +19,7 @@
  R2 R2 R2 R2 R2 R2 R2 R2
  \set doubleSlurs = ##t <g bes>2\p( <f aes>) <bes, f>( <ees g>) <g bes>2\p( <f aes>) <bes, f>( <ees g>)
  <g bes>( <e g>) <c e>( <f aes>) <aes des'>( <g bes>) <ees! g>( <aes c'>) <aes, aes>2 \set doubleSlurs = ##f
- \setTextCresc <a, a>2\<~ <a, a> <bes, bes>~ <bes, bes> <ces ces'>~ <ces ces'>
+  <a, a>2\cresc ~ <a, a> <bes, bes>~ <bes, bes> <ces ces'>~ <ces ces'>
  <c! c'!>2~ <c c'>~ <c c'>4 <c c'> <c c'> <c c'>\!
  <d d'>2\ff~ <d d'>4 <d f> <ees g> r <f aes> r <g bes> r <aes c'> r << { bes4 } \\ { bes4 } >> r
  << { bes,4 } \\ { bes,4 } >> r4 \clef tenor <f' aes'>2\ff~ <f' aes'>4 <bes f'> <ees' g'> <ees' g'>
@@ -34,19 +34,19 @@
  \clef bass R2 <f f'>2\p~ <f f'>~ <f f'>~ <f f'> <e e'>2~ <e e'>~ <e e'>~ <e e'> <f f'>2( <e e'> <f f'> <e e'> <f f'>4) r4
  R2 R2 R2 \clef tenor <c' ees'>2\p( <b d'> <c' ees'> <b d'> <c' ees'>4) r4
  r8 << { ees'8[ ees' d'] c'[ c' c' bes] a s8 s4 } \\
- { \setTextCresc ees'8\<[ ees' d'] c'[ c' c' bes\!] a8\p[ <fis d'> <fis d'> <a c'>] } >> <g bes>2
+ {  ees'8\<[ ees' d'] c'[ c' c' bes\!] a8\p[ <fis d'> <fis d'> <a c'>] } >> <g bes>2
  <fis a>8[ <fis d'> <fis d'> <a c'>] <g b>2 <fis a> <g b>4 r4
  \clef bass << { a8\rest g8[ a bes] c'4 a4\rest a8\rest fis8[ a bes] c'4 a4\rest a8\rest a8[ bes c']
  d'4 a4\rest a8\rest g8[ bes c'] d'4 a4\rest } \\ { g,2:8 a,2~ a,2:8 a,2~ a,2:8 bes,2~ bes,2:8 bes,2 } >>
  r8 <g bes>8_\markup { \italic "cresc." }[ <a c'> <bes d'>] <fis a>2\f~ <fis a>2 <fis a>4 r
  r8 <cis cis'>8[ <cis cis'> <cis cis'>] <cis cis'>2~ <cis cis'>2 <cis cis'>4 r
- \set crescendoText = \markup { \italic "piu f" } \set crescendoSpanner = #'dashed-line
- r8 <d d'>\<[ <d d'> <d d'>] <d d'>4 r r4 <e e'>8 <e e'> <e e'>4 <fis fis'>8 <fis fis'> <fis fis'>4\! r R2 R2 R2
+ \set crescendoText = \markup { \italic "piu f" } %\set crescendoSpanner = #'dashed-line
+ r8 <d d'>\cresc[ <d d'> <d d'>] <d d'>4 r r4 <e e'>8 <e e'> <e e'>4 <fis fis'>8 <fis fis'> <fis fis'>4\! r R2 R2 R2
  r4 << { fis'8 fis' fis'4 } \\ { fis'8 fis' fis'4 } >> r4 R2 r4 <d d'>8 <d d'> <g, g>4 r R2 R2
  r4 << { b8 b b4 } \\ { b8 b b4 } >> r4 R2 R2 R2 r8 << { c'8[ c' c'] } \\ { c'8\ff[ c' c'] } >> <aes c'>2 <bes des'>
  R2 R2 <aes c'>2 <bes des'> R2 R2 <aes c'>2 <bes des'> R2 R2 <c' ees'>2 <des' f'>
  R2 \clef tenor <ees' ges'>2_\markup { \italic "dimin." } R2 <f' aes'>2 R2 <fis' a'>2\p R2
- <fis' a'>2_\markup { \italic "sempre piu p" } R2 <fis' a'>2 R2 <fis' a'>2\pp R2 <fis' a'>2 R2 <fis' a'>2 R2 <fis' a'>2
+ <fis' a'>2_\markup { \italic "sempre più"  \dynamic p } R2 <fis' a'>2 R2 <fis' a'>2\pp R2 <fis' a'>2 R2 <fis' a'>2 R2 <fis' a'>2
  r8 \clef bass <d d'>8\ff[ <d d'> <d d'>] <b, b>2 <c c'> <a, a>~ <a, a> <b f'>2\pp R2 <b f'>2 R2 <b f'>2 R2 <b f'>2
  r8 <aes, aes>\ff[ <aes, aes> <aes, aes>] <f, f>2~ <f, f>8 <aes, aes>[ <aes, aes> <aes, aes>]
  <f, f>2~ <f, f>8 <aes, aes>[ <aes, aes> <aes, aes>] <f, f>8 <aes, aes>[ <aes, aes> <aes, aes>]
@@ -55,7 +55,11 @@
  <c c'>2\p~ <c c'>2~ <c c'>4 <c c'>4( <ees ees'> <c c'>) <b, b>2~ <b, b>2~ <b, b>4 <g, g>4( <b, b> <g, g>)
  <c c'>2 <b, b> <c c'> <g, g> <c c'>2_\markup { \italic "cresc." } <aes, aes>2
 
- \cadenzaOn <g, g>4\f s4 s2 s2 r4^\fermata s2 s4 \cadenzaOff \bar "|"
+ \cadenzaOn 
+<g, g>4\f %s4 s2 s2 
+r4^\fermata% s2 s4 \cadenzaOff \bar "|"
+s2*4    \cadenzaOff
+s2
  R2 R2 R2 R2 R2 \clef tenor << { d'2~ d'2~ d'2 c'4 } \\ { d'2_\markup { \italic "cresc." }~ d'2~ d'2 c'4\f } >> r4
  r8 <f' aes'>[ <f' aes'> <f' aes'>] <f' aes'>4 r r8 <ees' g'>[ <ees' g'> <ees' g'>]
  <ees' g'>4 r \clef bass << { b4 } \\ { b4\sf } >> r4 <c bes!>4\sf r <c aes>\sf r <c e>\sf r <c f>\sf r <c c'>\sf r
@@ -65,8 +69,8 @@
  \set doubleSlurs = ##t <e' g'>2( <d' f'>) <g d'>( <c' e'>) \clef bass <e g>2( <d f>) <g, d>( <c e>)
  \clef tenor <e' g'>2( <d' f'>) <g d'>( <c' e'>) \clef bass <g bes!>2( <e g>) << { e2( f) } \\ { c2( f) } >>
  \set doubleSlurs = ##f <a c'>2( <fis a>) << { fis2( g) } \\ { d2( g) } >>
- \setTextCresc <aes,! aes>2\<~ <aes, aes>2~ <aes, aes>2 <b, b>2~ <b, b>2\!
- \setTextCresc <d d'>2\<~ <d d'>2~ <d d'>2~ <d d'>2 <d d'>2~ <d d'> <d d'>2~ <d d'>~ <d d'>2~ <d d'>\!
+  <aes,! aes>2\cresc~ <aes, aes>2~ <aes, aes>2 <b, b>2~ <b, b>2\!
+  <d d'>2\cresc ~ <d d'>2~ <d d'>2~ <d d'>2 <d d'>2~ <d d'> <d d'>2~ <d d'>~ <d d'>2~ <d d'>\!
  \clef tenor <d' f'>2\ff~ <d' f'>4 <b f'> <c' e'>4 r <b f'> r <c' e'> r
  \clef bass <f f'>4 r <g g'> r <g, g> r <b, d>2~ <b, d>2 <c e>4 <c e> r4 <d f> r <e g> r <f a> r <g c'> r <g b>
  <g c'>8 <e e'>[ <e e'> <e e'>] <c c'> <g g'>[ <g g'> <g g'>] <e e'> <c c'>[ <c c'> <c c'>]

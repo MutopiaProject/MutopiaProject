@@ -1,6 +1,6 @@
-\version "2.10.3"
+\version "2.16.2"
 
- clarinetti = {
+clarinetti = {
  \set Staff.instrumentName = "Clarinetti in B."
  \set Staff.midiInstrument = "clarinet"
  \clef treble
@@ -56,7 +56,7 @@
  c''8._\markup { \italic "cresc." }([ des''16 bes' des'']) } \\
  { R4. R4. R4. R4. R4. R4. R4. R4. e'8\rest e'8\rest e'16\rest bes'16 } >> <a' c''>8.([ <bes' des''>16 <f' bes'> <bes' des''>])
  <a' c''>16\f\staccato[ <a' f''>\staccato] r8 r8
- << { f''8\rest f''8\rest b'16\p_\markup { \italic "    dolce" }( c'' d''[ ees'' f'' g'')
+ << { f''8\rest f''8\rest b'16_\markup { \dynamic p \italic "dolce" }( c'' d''[ ees'' f'' g'')
  b'( c''] d''[ ees'']) f''8\rest f''8\rest } \\ { R4. R4. R4. } >>
  R4. R4. R4. R4. r8 c'32_\markup { \italic "cresc." }([ d' ees' f'] g'[ a' bes' c''])
  d''4.\ff~ d''16.([ c''32 bes'16. d''32]) g'8~ g'8 ees''16.([ d''32 c''16. ees''32])
@@ -72,7 +72,7 @@
  c''8( f''4) ees''8( d''4) c''8( bes'4) ees''8[ ees'' ees''] d''8 } \\
  { a'8( d'') a8\rest \override TupletBracket #'transparent = ##t
  \times 2/3 { c'16\rest c'16\rest d'16 } \times 2/3 { f'16\ff[ bes' d''] } f''8 a'8~ a'4.
- bes'4.\p_\markup { \italic "    dolce" } f'4. c''8[ c'' c''16.( a'32)] bes'8 } >> r8 r R4.
+ bes'4._\markup { \dynamic p\italic dolce } f'4. c''8[ c'' c''16.( a'32)] bes'8 } >> r8 r R4.
  r8 r r16 << { f''16 f''16([ ees''] d''8.) } \\ { d''16\f a'8[ bes'8.\sf] } >> r16 R4.
  R4. r8 r f'16_\markup { \italic "dolce" }( bes' <bes' d''>8)[ <bes' d''>16( <f' c''> <d' bes'>16. <bes' d''>32]
  <d'' f''>4) <d' bes'>16([ <bes' d''>] <d'' f''>8)[ <d'' f''>16( <c'' ees''> <bes' d''>16. <d'' f''>32)]
