@@ -1,6 +1,6 @@
-\version "2.10.3"
+\version "2.16.2"
 
- cornies = {
+cornies = {
  \set Staff.instrumentName = "Corni in Es."
  \set Staff.midiInstrument = "english horn"
  \clef treble
@@ -8,13 +8,13 @@
  \time 2/4
  \repeat volta 2 {
  R2 r2^\fermata R2 R2 r2^\fermata R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
- r8 << { e''8[ e'' e''] e''4 } \\ { e''8_\markup { \italic "p cresc." }[ e'' e''] e''4\f } >> r4 <c' c''>4 r <e' e''> r4^\fermata
+ r8 << { e''8[ e'' e''] e''4 } \\ { e''8_\markup {  \dynamic p \italic "cresc." }[ e'' e''] e''4\f } >> r4 <c' c''>4 r <e' e''> r4^\fermata
  r8 << { f''8[ f'' f''] d''2~ d''2^\fermata } \\ { f''8\ff[ f'' f''] d''2~ d''2 } >>
  R2 R2 R2 R2 R2 R2 R2 r8 <e' e''>8\p[ <e' e''> <e' e''>] <e' e''>4 r4 <d'' f''>2~ <d'' f''>4 r4 R2 R2 R2
  R2 R2 R2 R2 <d'' f''>4\sf r <c'' e''>2\f~ <c'' e''>~ <c'' e''>~ <c'' e''> <d'' e''>~ <d'' e''>~ <d'' e''>~ <d'' e''>4 <c'' e''>
  <c'' ees''>2\ff~ <c'' ees''>~ <c'' ees''>~ <c'' ees''> <c'' ees''>4 r R2 <g' d''>4 r
  r8 g''8\ff[ g'' g''] c''2\sf d''2\sf g'2\sf\>~ g'2\!\p~ g'2~ g'2~ g'2~ g'2~ g'2~ g'2~ g'2~ g'2~ g'2~ g'2~ g'2
- R2 R2 R2 R2 R2 R2 R2 R2 <c' c''>2\p~ \setTextCresc <c' c''>2\<~ <c' c''>~ <c' c''>~ <c' c''>~
+ R2 R2 R2 R2 R2 R2 R2 R2 <c' c''>2\p~  <c' c''>2\cresc ~ <c' c''>~ <c' c''>~ <c' c''>~
  <c' c''>~ <c' c''>~ <c' c''>~ <c' c''>~ <c' c''>4 <c' c''> <c' c''> <c' c''>\!
  <g' d''>2\ff~ <g' d''>4 <g g'> <g g'> r <g g'> r <g g'> r <c' c''> r <c'' e''> r <g' d''>
  <g g'>4~ <g g'>2\ff~ <g g'>2~ <g g'>4 <g g'> r4 <g g'> r <c' c''> r <c' c''> r <c' c''> r <g g'>
@@ -23,14 +23,14 @@
  r8 <g g'>[ <g g'> <g g'>] <c' c''>4 r r8 <g' d''>[ <g' d''> <g' d''>] <c' c''>4 r R2 R2 }
 
  r8 << { g''8[ g'' g''] e''2~ e''2~ e''2^\fermata } \\ { g''8\ff[ g'' g''] e''2~ e''2~ e''2 } >>
- R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 r4 << { c''4 d'' dis'' } \\ { \setTextCresc c''4\< d'' dis''\! } >>
+ R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 r4 << { c''4 d'' dis'' } \\ {  c''4\< d'' dis''\! } >>
  <e' e''>2\p~ <e' e''>~ <e' e''>~ <e' e''>~ <e' e''>~ <e' e''>4 r R2 R2
  R2 R2 R2 R2 R2 r8 <e' e''>8\p[ <e' e''> <e' e''>] <e' e''>4 r4 r8 <c' c''>[ <c' c''> <c' c''>] <c' c''>4 r4
  r8 <c' c''>[ <c' c''> <c' c''>] <c' c''>4 r4 r8 <e' e''>8[ <e' e''> <e' e''>] <e' e''>4 r
  r8 <e' e''>_\markup { \italic "cresc." }[ <e' e''> <e' e''>] <e' e''>4 <e' e''>4
  <c' c''>2\f~ <c' c''>2 <c' c''>4 r r8 <e' e''>8[ <e' e''> <e' e''>] <e' e''>2~ <e' e''>2 <e' e''>4 r
- \set crescendoText = \markup { \italic "piu f" } \set crescendoSpanner = #'dashed-line
- r8 <e' e''>\<[ <e' e''> <e' e''>] <e' e''>4\! r4 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
+ \set crescendoText = \markup { \italic "piu f" } %\set crescendoSpanner = #'dashed-line
+ r8 <e' e''>\cresc[ <e' e''> <e' e''>] <e' e''>4\! r4 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
  R2 r4 << { d''8 d'' d''4 } \\ { d''8 d'' d''4 } >> r4 R2 r4 << { e''8 e'' e''4 } \\ { e''8 e'' e''4 } >> r4
  << { d''2 e'' } \\ { d''2 e'' } >> R2 R2 << { d''2 e'' } \\ { d''2 e'' } >> R2 R2
  << { d''2 ees'' } \\ { d''2 ees'' } >> R2 R2 << { d''2 d'' } \\ { d''2 d'' } >>
@@ -40,7 +40,10 @@
  { f''8\ff[ f'' f''] d''2~ d''8 f''8[ f'' f''] d''2~ d''8 f''8[ f'' f''] d''4 f'' d'' f'' d'' f'' d''8 e''[ e'' e''] c''2 } >>
  r8 <e' e''>[ <e' e''> <e' e''>] <e' e''>2~ <e' e''>2^\fermata R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
 
- \cadenzaOn s2 s2 s2 r1^\fermata \cadenzaOff \bar "|"
+ \cadenzaOn % s2 s2 s2 
+r2^\fermata %\cadenzaOff \bar "|"
+s2*4    \cadenzaOff
+s2
  R2 R2 R2 R2 R2 << { d''2~ d''2~ d''2 c''4 } \\ { d''2_\markup { \italic "cresc." }~ d''2~ d''2 c''4\f } >> r4
  r8 <d'' f''>8[ <d'' f''> <d'' f''>] <d'' f''>4 r r8 <c'' e''>[ <c'' e''> <c'' e''>]
  <c'' e''>4 r R2 R2 R2 R2 R2 <d'' f''>4\f r4 <c'' e''>2\f~ <c'' e''>~ <c'' e''>~ <c'' e''>

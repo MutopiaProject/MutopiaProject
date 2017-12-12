@@ -1,4 +1,4 @@
-\version "2.10.3"
+\version "2.16.2"
 
  timpani = {
  \set Staff.instrumentName = "Timpani in C.G."
@@ -8,7 +8,7 @@
  \time 2/4
  \repeat volta 2 {
  R2 r2^\fermata R2 R2 r2^\fermata R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
- r8 g,8_\markup { \italic "p cresc." }[ g, g,] c4\f r c r g, r4^\fermata R2 R2 r2^\fermata
+ r8 g,8_\markup { \dynamic p \italic "cresc." }[ g, g,] c4\f r c r g, r4^\fermata R2 R2 r2^\fermata
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
  R2 R2 R2 R2 c4\f r c\f r R2 R2 r4 c8 c g,4 r R2 R2 r4 c8 c c2:8\ff c2:8 c2:8 c2:8 c4 r R2 R2
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
@@ -17,8 +17,8 @@
 
  R2 R2 R2 r2^\fermata R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
  R2 R2 R2 R2 R2 g,4\pp r4 R2 c4 r R2 c4 r R2 g,4 r R2 g,4 r R2 c2:8\f c2:8 c4 r r8 g,[ g, g,] g,2:8 g,2:8 g,4 r
- \set crescendoText = \markup { \italic "piu f" } \set crescendoSpanner = #'dashed-line
- r8 g,8\<[ g, g,] g,4 r r4 g,8 g, g,4\! r4 R2 R2 R2 R2 R2 R2 R2 R2 g,4 r R2 R2
+ \set crescendoText = \markup { \italic "piu f" } %\set crescendoSpanner = #'dashed-line
+ r8 g,8\cresc[ g, g,] g,4 r r4 g,8 g, g,4\! r4 R2 R2 R2 R2 R2 R2 R2 R2 g,4 r R2 R2
  R2 R2 R2 R2 r4 g,8 g, c4 r4 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 R2
@@ -26,7 +26,12 @@
  r8 g,8[ g, g,] g,2~ \startTrillSpan g,2^\fermata_\markup { \italic "ten." } \stopTrillSpan R2 R2 R2 R2
  R2 R2 R2 R2 R2 R2 R2 R2 R2 R2 c4\p r4
 
- \cadenzaOn g,4\f s4 s2 s2 r4^\fermata s2 s4 \cadenzaOff \bar "|"
+ \cadenzaOn
+ g,4\f %s4 s2 s2
+ r4^\fermata %s2 s4 \cadenzaOff \bar "|"
+s2*4    \cadenzaOff
+s2
+
  R2 R2 R2 R2 R2 R2 R2 R2 R2 c4\f r R2 c4 r R2 R2 R2 R2 R2 R2 c4\f r c4\f r R2 R2 r4 c8[ c] g,4 r
  R2 R2 r4 c8[ c] c2:8\f c2:8 c2:8 c2:8 c4 r R2 g,4 r R2 R2 R2
  R2 R2 R2 R2 R2 R2 R2 r8 g,8\p[ g, g,] c4 r4 R2 R2 R2 R2 R2 R2 r8 g,8[ g, g,] c4 r4
