@@ -4,7 +4,7 @@
 melodyOne =    \relative fis' {
     \key d \major
     \time 3/2
-    \set Staff.midiInstrument = "cello"
+    \set Staff.midiInstrument = "viola"
     
 	\repeat volta 2 {
 		fis2 fis2. g4 | % 1
@@ -12,13 +12,13 @@ melodyOne =    \relative fis' {
 		a4 (fis) g2. a4 | % 3
 		g4 (fis) g (e) fis2 | % 4
 		fis2 gis2. a4 | % 5
-		<d, b'>4 (cis) d2. e4 \clef bass | % 6
+		<d, b'>4 (cis) d2. e4 \clef alto | % 6
 		d4 (cis) cis (b) b (d) | % 7
 		d4 (cis) cis1| % 8
 	}
 	\repeat volta 2 {
 		   <cis e>2	<cis e>2. e4 | % 9
-		   e4 ( cis) dis a8 [(b )] c4 e,4 \clef tenor | % 10
+		   e4 ( cis) dis a8 [(b )] c4 e,4 \clef treble | % 10
 		   fis'4 s2 fis8 [(g)] a4 s4 | % 11
 		   a4 (fis) g2. g4 | % 12
 		   g4 ( fis) c'2 s2| % 13
@@ -38,7 +38,7 @@ melodyOne =    \relative fis' {
 		   <d a'>4 (f) f (d) d (cis) | % 27
 		   cis4 (d8) [e] e2. d4 | % 28
 		   d4 e8 [ ( fis16 g)] g4 (fis) fis (e) | % 29
-		   e4 (fis) fis (e) e (d) \clef bass | % 30
+		   e4 (fis) fis (e) e (d) \clef alto | % 30
 		   d2 d cis | % 31
 		   cis4 (d) d1 | % 32
 	}
@@ -57,7 +57,7 @@ melodyTwo =  \relative d {
 	}
     \repeat volta 2 {
 		a2 g2. s4 | % 9
-		fis'4 s4 s1 \clef tenor | % 10
+		fis'4 s4 s1 | % 10
 		dis4 s1 dis4 | % 11
 		e2 s1 | % 12
 		a2. d4 e g, | % 13
@@ -77,7 +77,7 @@ melodyTwo =  \relative d {
 		a,4 a' a f f e | % 27
 		a,4 s4 ais2. s4 | % 28
 		b4 r4 r2 d4 r4 | % 29
-		<g, g'>4 a' a g g fis \clef bass | % 30
+		<g, g'>4 a' a g g fis \clef alto | % 30
 		g,2 a r2 | % 31
 		d,2 fis'1 | % 32
 	}

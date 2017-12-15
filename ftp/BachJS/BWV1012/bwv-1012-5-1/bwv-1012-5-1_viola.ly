@@ -3,10 +3,10 @@
 melodyOne =  \relative fis' {
     \key d \major
     \time 4/4
-    \set Staff.midiInstrument = "cello"
+    \set Staff.midiInstrument = "viola"
     
 	\repeat volta 2 {
-		\partial 2  \clef tenor fis4 fis| % 0
+		\partial 2  \clef treble fis4 fis| % 0
 		fis4 e8 [ d ] e [ fis ] g4 | % 1
 		d8 [ (cis b a) ] a'4 a | % 2
 		a4 b8 [( a )] g [(fis e fis)] | % 3
@@ -19,7 +19,7 @@ melodyOne =  \relative fis' {
 	\repeat volta 2 {
 		a'4 a | % 0
 		a4 b8 [ a ] g [ fis ] b4 | % 9
-		a8 [ (g fis e) ] \clef bass a, [ g' (fis e) ] | % 10
+		a8 [ (g fis e) ] \clef alto a, [ g' (fis e) ] | % 10
 		g,8 [ dis' (e g) ] a, [ (fis') b, (dis) ] | % 11
 		e,8 [ b' (e fis) ] g4 g | % 12
 		cis,,8 [ e a b ] cis [ d e fis ] | % 13
@@ -29,14 +29,14 @@ melodyOne =  \relative fis' {
 		d4 cis8 [ (b) ] cis [ (d) ] e4 | % 17
 		d8 [ (cis b a) ] b [( cis d cis) ] | % 18
 		e8 [ (d) fis (e) ] g [ (fis) ] a4 | % 19
-		\appoggiatura fis8 e2 \clef tenor fis4 fis |  % 20
+		\appoggiatura fis8 e2 \clef treble fis4 fis |  % 20
 		fis4 e8 [ d ] e [ fis ] g4 | % 21
 		d8 [ (cis b a) ] a'4 a | % 22
 		a4 b8 [ (a) ] g [ (fis e fis) ] | % 23
 		g8 [ (fis e d) ] fis4 fis | % 24
 		fis8 [ (a g fis) ] e [ (d cis b) ] | % 25
 		cis8 [ b' (a g ] fis [ e d cis) ] | % 26
-		b8 [ a ] a'4 fis e8 [ d ] \clef bass | % 27
+		b8 [ a ] a'4 fis e8 [ d ] \clef alto | % 27
 		d2 % 28
 	}
 }
