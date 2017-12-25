@@ -1,4 +1,4 @@
-\version "2.10.0"
+\version "2.19.65"
 
 #(set-global-staff-size 18)
 
@@ -338,17 +338,17 @@ lhTwo = {
 }
 pianoDynamics = {
 	%Page 1 Line 1
-	s8_\sustainDown s8_\< s4 s4 s8\! s8_\sustainUp s4._\sustainDown s8_\sustainUp
-	s8_\sustainDown s8_\< s4 s4 s8\! s8_\sustainUp s4._\sustainDown s8_\sustainUp
-	s8_\sustainDown s8_\< s4 s4 s8\! s8_\sustainUp s4._\sustainDown s8_\sustainUp
+	s8_\sustainOn s8_\< s4 s4 s8\! s8_\sustainOff s4.\sustainOn s8_\sustainOff
+	s8_\sustainOn s8_\< s4 s4 s8\! s8_\sustainOff s4._\sustainOn s8_\sustainOff
+	s8_\sustainOn s8_\< s4 s4 s8\! s8_\sustainOff s4._\sustainOn s8_\sustainOff
 	%Page 1 Line 2
-	s1_\sustainDown s2_\sustainUp
+	s1_\sustainOn s2_\sustainOff
 	s1.
-	s1 s4._\sustainDown s8_\sustainUp
-	s2._\sustainDown s2._\sustainUp
+	s1 s4._\sustainOn s8_\sustainOff
+	s2._\sustainOn s2._\sustainOff
 	%Page 1 Line 3
-	s1 s4._\sustainDown s8_\sustainUp
-	s2._\sustainDown s2._\sustainUp
+	s1 s4._\sustainOn s8_\sustainOff
+	s2._\sustainOn s2._\sustainOff
 	s1.
 	%Page 1 Line 4
 	s1.*3
@@ -358,19 +358,19 @@ pianoDynamics = {
 	s1.*2
 	%Page 3 Line 2
 	s1.
-	s8_\sustainDown s4._\< s4. s8\! s2
+	s8_\sustainOn s4._\< s4. s8\! s2
 	%Page 3 Line 3
-	s8_\sustainDown s8 s4 s4 s8 s8_\sustainUp s4._\sustainDown s8_\sustainUp
-	s8_\sustainDown s8 s4 s4 s8 s8_\sustainUp s4._\sustainDown s8_\sustainUp
+	s8_\sustainOn s8 s4 s4 s8 s8_\sustainOff s4._\sustainOn s8_\sustainOff
+	s8_\sustainOn s8 s4 s4 s8 s8_\sustainOff s4._\sustainOn s8_\sustainOff
 	%Page 3 Line 4
-	s1_\sustainDown s2_\sustainUp
+	s1_\sustainOn s2_\sustainOff
 	s1.
 	%Page 4 Line 1
-	s1 s4._\sustainDown s8_\sustainUp
-	s2_\sustainDown s1_\sustainUp
+	s1 s4._\sustainOn s8_\sustainOff
+	s2_\sustainOn s1_\sustainOff
 	%Page 4 Line 2
-	s1 s4._\sustainDown s8_\sustainUp
-	s2_\sustainDown s1_\sustainUp
+	s1 s4._\sustainOn s8_\sustainOff
+	s2_\sustainOn s1_\sustainOff
 	s1.
 	%Page 4 Line 3
 	s1.*3
@@ -388,7 +388,7 @@ pianoDynamics = {
 				\context Voice = sopdyn { \sopDynamics }
 			>>
 		}
-		\lyricsto mel \new Lyrics \text
+		\new Lyrics = "one" \lyricsto mel \text
 
 		\context PianoStaff <<
 			\context Staff = rh {
