@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 zu			= \markup { \bold {zu 2} }
 cr			= \markup { \italic cresc. }
