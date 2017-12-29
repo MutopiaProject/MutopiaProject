@@ -62,7 +62,7 @@ sopNotes = {
 	f''2 ~ f''4 ees''4 des''4 c''4 | bes'2 r2 bes'4-> g'8 ees'8 |
 	
 	aes'2 ~ aes'4 aes'4 des''4. des''8 | des''2 c''4 c''4 c''4.-> f'8 |
-	bes'2 ~ bes'4 bes'4 ees''4 ees''4 | ees''2 des''4 f''4 des''4 g'4 | aes'4 aes'4 f''2 ~ f''4 ees''4 |
+	bes'2 ~ bes'4 bes'4 ees''4 ees''4 | ees''2 des''4 f''4 des''4 bes'4 | aes'4 aes'4 f''2 ~ f''4 ees''4 |
 	aes'2 r2 r2 | R1.*5
 }
 
