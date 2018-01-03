@@ -1,4 +1,4 @@
-\version "2.4.0"
+\version "2.18.2"
 
 prelude = \context Staff \relative c {
 	\time 2/2
@@ -11,13 +11,13 @@ prelude = \context Staff \relative c {
 	% 5
 	ees, c'' aes ees aes c, ees aes, | ees c'' aes ees aes c, ees aes, |
 	ees aes' f d f bes, d aes | ees aes' f d f bes, d aes |
-	ees f' ees bes ees g, bes ees, |
+	ees g' ees bes ees g, bes ees, |
 	% 10
 	d g' ees bes ees g, bes d, | c ees'' c g c ees, g c, |
 	bes ees' c g c ees, g bes, | a ees'' c f, a c, ees a, |
 	f ees'' c a c f, a ees |
 	% 15
-	bes d' bes f bes d, f bes, | aes des' bes f bes des, f aes, |
+	bes d' bes f bes d, f bes, | aes d' bes f bes d, f aes, | 
 	g des'' bes ees, g bes, ees g, | ees des'' bes g bes ees, g des |
 	aes c' aes ees aes c, ees aes, |
 	% 20
@@ -26,14 +26,13 @@ prelude = \context Staff \relative c {
 	c aes'' f c f aes, c f, |
 	% 25
 	b d' aes f aes d, f b, | g d'' b f aes d, f b, |
-	c, ees'' c g c ees, g c, | c, e'' c g c e, g c, |
-	bes e' c g c e, g c, |
+	c, ees'' c g c ees, g c, | c, ees'' c g c ees, g c, 
+	c, e'' c g c e, g c, |
 	% 30
-	%bes e' c g c e, g bes, |
-	aes f'' c aes c f, aes e |
+	bes e' c g c e, g bes, | aes f'' c aes c f, aes e |
 	f c' aes e f c f aes, | e des'' bes g bes e, g c, |
 	% 34
-	des bes' as e f as, c e, | f bes' aes e f aes, c f, |
+	des bes' g e g bes, des e, | f aes' f c f aes, c f, |
 	ees! aes' f c f aes, c ees, | d aes'' f d f bes, d f |
 	aes d,, f bes d bes aes' f |
 	% 39
@@ -58,7 +57,7 @@ prelude = \context Staff \relative c {
 	% 59
 	<<{<ees'' fis,>4 ~ ees16[ d c bes] a[g fis e] d[c bes( a)]} \\
 		<as d,>8 >> |
-	<<{<d' g,>8.[( es16])} \\ <bes, d,>8 >> bes'16(a bes) g
+	<<{<d' g,>8.[( c16])} \\ <bes, d,>8 >> bes'16(a bes) g
 		<<{<bes g>8.[( a16)]} \\ cis,8>> g'16(fis g cis,!) |
 	<<{g'8.[( a16])} \\ <a d,>8>> g16(fis g) e fis4.^\trill( g8) |
 	% 62
@@ -66,7 +65,7 @@ prelude = \context Staff \relative c {
 	g, des'' bes g bes e, g bes, | des g, bes e g e des' e, |
 	aes, c' aes f aes c, f aes, |
 	% 67
-	c f aes f c' f, d' aes | a, ees'' c a! c ees, ges c, |
+	c f aes f c' f, d' f, | a, ees'' c a! c ees, ges c, |
 	ees a, c ees ges a! c ees | bes, d' ces16(bes a8) bes d ces16(bes a8) |
 	% 71
 	bes ces bes16(aes! g8) aes ces bes16(aes g8) |
@@ -80,8 +79,8 @@ prelude = \context Staff \relative c {
 	ges8( bes,) ees ges bes ges ees' bes |
 	% 79
 	ges ees bes' ges ees bes ges'( ees) |
-	<ces' feses, as,>4 feses,16[( ges feses ges]) aes[( beses aes beses]) ces![( beses ces beses]) |
-	aes[( ges aes ges]) fes[( ees d ees]) <<{d4. ees8} \\ bes2>> |
+	<ces' fes, aes,>4 fes,16[( ges fes ges]) aes[( beses aes beses]) ces![( beses ces beses]) |
+	aes[( ges aes ges]) fes[( ees d ees]) <<{d4.\trill ees8} \\ bes2>> |
 	ees,8 ees'' bes g! bes ees, g bes, |
 	% 83
 	ees, ees'' bes g bes ees, g bes, | ees, des'' bes g bes ees, g bes, |

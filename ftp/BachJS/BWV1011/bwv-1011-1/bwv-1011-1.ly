@@ -344,5 +344,5 @@ melody = << \melodyOne \\ \melodyTwo >>
         { \clef bass \key c \minor \time 4/4 \melody  }
     >>
 	\layout { }
- 	 \midi { }
+ 	 \midi { \tempo 4 = 60 }
 }

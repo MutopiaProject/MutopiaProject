@@ -1,4 +1,4 @@
-\version "2.18.0"
+\version "2.18.2"
 
 spacing =  {
 	s2*6	\break		% STARTS AT 1
