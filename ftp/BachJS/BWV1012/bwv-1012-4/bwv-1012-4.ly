@@ -1,39 +1,11 @@
-\version "2.11.52"
+\version "2.18.2"
 
-\paper {
-    page-top-space = #0.0
-    %indent = 0.0
-    line-width = 18.0\cm
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
-}
-
-% #(set-default-paper-size "a4")
-
-#(set-global-staff-size 19)
-
-\header {
-        title = "Cello Suite VI"
-        subtitle = "\"Sechs Suiten für Violoncello\""
-        piece = "4. Sarabande"
-        mutopiatitle = "Cello Suite VI - BWV 1012 - Sarabande"
-        composer = "Johann Sebastian Bach (1685-1750)"
-        mutopiacomposer = "BachJS"
-        opus = "BWV 1012"
-        mutopiainstrument = "Cello"
-		arrangement = "Hajo Dezelski"
-        style = "Baroque"
-        source = "Bach-Gesellschaft Edition 1879 Band 27"
-        copyright = "Creative Commons Attribution-ShareAlike 3.0"
-        maintainer = "Hajo Dezelski"
-		maintainerWeb = "http://www.roxele.de/"
-        maintainerEmail = "dl1sdz (at) gmail.com"
-	
- footer = "Mutopia-2008/08/12-1505"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
-}
 
 melodyOne =    \relative fis' {
+    \key d \major
+    \time 3/2
+    \set Staff.midiInstrument = "cello"
+    
 	\repeat volta 2 {
 		fis2 fis2. g4 | % 1
 		e4 (cis) d2. b'4 | % 2
@@ -44,10 +16,10 @@ melodyOne =    \relative fis' {
 		d4 (cis) cis (b) b (d) | % 7
 		d4 (cis) cis1| % 8
 	}
-	   \repeat volta 2 {
+	\repeat volta 2 {
 		   <cis e>2	<cis e>2. e4 | % 9
-		   e4 ( cis) dis a8 [(b )] c4 e,4 \clef alto | % 10
-		   fis'4 s2 fis8 [(g)] b4 s4 | % 11
+		   e4 ( cis) dis a8 [(b )] c4 e,4 \clef tenor | % 10
+		   fis'4 s2 fis8 [(g)] a4 s4 | % 11
 		   a4 (fis) g2. g4 | % 12
 		   g4 ( fis) c'2 s2| % 13
 		   s2. c4 b2 | % 14
@@ -69,10 +41,8 @@ melodyOne =    \relative fis' {
 		   e4 (fis) fis (e) e (d) \clef bass | % 30
 		   d2 d cis | % 31
 		   cis4 (d) d1 | % 32
-
 	}
-
-      }
+}
 
 melodyTwo =  \relative d {
     \repeat volta 2 {
@@ -87,7 +57,7 @@ melodyTwo =  \relative d {
 	}
     \repeat volta 2 {
 		a2 g2. s4 | % 9
-		fis'4 s4 s1 \clef alto | % 10
+		fis'4 s4 s1 \clef tenor | % 10
 		dis4 s1 dis4 | % 11
 		e2 s1 | % 12
 		a2. d4 e g, | % 13
@@ -127,7 +97,7 @@ melodyThree =  \relative a {
    \repeat volta 2 {
 	 e2 e2. s4| % 9
 	 a4 s4 s1| % 10
-	 cis4 (a) b s2. | % 11
+	 c4 (a) b s2. | % 11
 	 b2 b2. s4 | % 12
 	 s1.| % 13
 	 s1 d2 | % 14
@@ -145,23 +115,12 @@ melodyThree =  \relative a {
 	 e4 s4 s1 | % 26
 	 f4 s4 s1 | % 27
 	 e4 s4 <fis cis'>2. s4 | % 28
-	 fis4 s2. cis'4 s4 | % 29
+	 fis4 s2. c'4 s4 | % 29
 	 b4 s4 s1| % 30
 	 fis4 (e) e (g) g (fis) | % 31
 	 <a, fis'>2 s1 | % 32
-
 	}
-
 }
 
-melody = << \melodyOne \\ \melodyTwo \\ \melodyThree >>
+sarabande = << \melodyOne \\ \melodyTwo \\ \melodyThree >>
 
-\score {
- 	\context Staff << 
-        \set Staff.instrumentName = "Cello"
-	\set Staff.midiInstrument = "cello"
-        { \clef alto \key d \major \time 3/2 \melody  }
-    >>
-	\layout { }
- 	 \midi { }
-}

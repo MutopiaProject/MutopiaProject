@@ -1,39 +1,11 @@
-﻿\version "2.13.4"
+﻿\version "2.18.2"
 
-\paper {
-    page-top-space = #0.0
-    %indent = 0.0
-    line-width = 18.0\cm
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
-}
 
-% #(set-default-paper-size "a4")
-
-#(set-global-staff-size 19)
-
-\header {
-        title = "Cello Suite II"
-        subtitle = "\"Sechs Suiten für Violoncello\""
-        piece = "3. Courante"
-        mutopiatitle = "Cello Suite II - BWV 1008 - Courante"
-        composer = "Johann Sebastian Bach (1685-1750)"
-        mutopiacomposer = "BachJS"
-        opus = "BWV 1008"
-        mutopiainstrument = "Cello"
-		arrangement = "Hajo Dezelski"
-        style = "Baroque"
-        source = "Bach-Gesellschaft Edition 1879 Band 27"
-        copyright = "Creative Commons Attribution-ShareAlike 3.0"
-        maintainer = "Hajo Dezelski"
-		maintainerWeb = "http://www.roxele.de/"
-        maintainerEmail = "dl1sdz (at) gmail.com"
-	
- footer = "Mutopia-2009/10/13-1489"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
-}
-
-melody = \relative d' {
+courante = \relative d'' {
+    \key d \minor
+    \time 3/4
+    \set Staff.midiInstrument = "cello"
+    
 	\repeat volta 2 {
 		\partial 16 d16 | % 0
 		d16 [a f a] d, [ f g a ] bes [ a bes g ] | % 1
@@ -51,14 +23,14 @@ melody = \relative d' {
 		c16 [a' (b c] b [a gis a)] d, [a' e a]  | % 13
 		f16 [a (b c] b [a gis a)] f [a e a] | % 14
 		dis,16 [a' (b c] b [a gis a)] e [a e gis] | % 15
-		a16 [e cis e] a, [cis e gis] a8. s16| % 16
+		a16 [e cis e] a, [cis e gis] a8. \pageBreak % 16
 	} % end repeat
  
 	\repeat volta 2 {
-		\partial 16 e'16 | % 
+		e'16 | % 
 		e16 [ cis a cis] e, [ f g a ] bes [(g) cis (g)] | % 17
 		<f d'>4 d'16 [a d e]  f [ d a c ] | % 18
-		bes16 [f d f] g, [ d' f g] b [ f d' f,] | % 19
+		b16 [f d f] g, [ d' f g] b [ f d' f,] | % 19
 		e16 [g c, (d] e [f g a] bes) [d c g] | % 20
 		<f a>16 [ c' (bes a] g [f ees d] ees) [ c' f, ees] | % 21
 		<bes d>4 ~ d16 [ e f g] a [ bes c d] | % 22
@@ -74,14 +46,4 @@ melody = \relative d' {
 		d16 [a f a] d, [f a, d] d,8. s16 | % 32
 		
 	} % end repeat
- }
-
-\score {
- 	\context Staff << 
-        \set Staff.instrumentName = "Cello"
-	\set Staff.midiInstrument = "cello"
-        { \clef bass \key d \minor \time 3/4 \melody  }
-    >>
-	\layout { }
- 	 \midi { }
 }
