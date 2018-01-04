@@ -6,28 +6,24 @@ sarabande = \context Staff \relative c'' {
 	\key g \major
 	\set Staff.midiInstrument = "cello"
 
-    \repeat volta 2 {
 	% 1
-	    \acciaccatura g,8 <b' d,>4 \acciaccatura g,8 <<{c'4.( b8)} \\ {e,4}>> 
-	    fis16(a b c) \acciaccatura g,8 <b' d,>4^\trill( a8 g) |
-	    d'[( f,]) e8.[(~e64 d c b] c8[) e] |
-	    fis!16( c' b g) \acciaccatura <a, d,>8 fis'4^\trill( e8 d) |
+	<<{b4 c4. b8}\\{g,4 g2}\\{d'4 e2}>> 
+	fis16( a b c) <<{b4\trill}\\{g,}\\{d'}>> a'8( g) |
+	d' f, e8.[( e64 d c b] c8[) e] |
+	fis!16 c'( b g) fis4^\trill e8( d) |
 	% 5
-	    a'16( fis d c) b8.( g16) b( d g a) |
-	    b( g e d) cis8. a32( b) cis16( d e fis) |
-	    g( cis d cis d) a( g fis) e( g fis) d |
+	a'16 fis( d c) b8.\trill g16 b( d g a) |
+	b g( e d) cis8.\trill a32( b cis16 d e fis) |
+	g cis( d cis) d a g fis e( g) fis( d) |
 	% 8
-	    a( d e cis) d4 d, |
-	}
-	\repeat volta 2 {
-	    <fis' a, d,>8 e16 d \acciaccatura <a d,>8  <c' fis,>4.( b16 a) |
-	    <b d, g,>16( fis g e) <dis a>8.( e16) fis16( g a b) |
+	a d( e cis) d4 d, | \bar ":|.|:"
+	<<{fis'8 e16 d c'4. b16 a}\\{d,,4 d4. s8}\\{s4 fis'4. s8}\\{a,4 a4. s8}>> |
+	<<{b'16 fis( g e)}\\{g,16 s8.}\\{d'16 s8.}>>  <<{dis8.\trill e16}\\{a,8. s16}>>  fis'16 g a b |
 	% 11
-	    dis,( a' b c) b8 a16( g) fis( e a fis) | g( e) fis( dis) e4 e, |
-	    <d'! b>8.( e32 f) \acciaccatura <g, c,>8 e'8. fis16 g16( a b c) |
+	dis, a'( b c) b8\trill a16( g) fis( e) a( fis) | g( e) fis( dis) e4 e, |
+	<<{d'!8. e32( f) e8. fis16}\\{b,8. s16 c,8 s8}\\{s4 g'8 s}>>  g'16( a b c) |
 	% 14
-	    gis, d''(c b) \acciaccatura <e, a,>8 c'8.( b16) a16( g! fis e) |
-	    <<{d4~d16 e( fis) g} \\ {r16 b,[(c a] b)}>> a'( c b g) |
-	    d( g) a( fis) g4 g, |
-	}
+	gis, d''(c b) <<{c8. b16}\\{a,8. s16}\\{e'8. s16}>> a16( g! fis e) |
+	<<{d4~d16 e fis g} \\ {r16 b,[c a] b}>> a'( c) b( g) |
+	d g( a fis) g4 g, | \bar ":|."
 }
