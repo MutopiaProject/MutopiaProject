@@ -385,7 +385,7 @@ allegroViolinII = \relative d'' {
   g,8 h d g e g d c'
   h8 g c2 h4
   c8 e,16 fis g4 r r8 a16 h
-  c8 c16 d e4 d2
+  cis8 cis16 d e4 d2
 
   \barNumberCheck 35
   cis2 d4 e
