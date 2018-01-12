@@ -1,39 +1,8 @@
-\version "2.13.4"
-
-\paper {
-    page-top-space = #0.0
-    %indent = 0.0
-    line-width = 18.0\cm
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
-}
-
-% #(set-default-paper-size "a4")
-
-#(set-global-staff-size 19)
-
-\header {
-        title = "Cello Suite V"
-        subtitle = "\"Sechs Suiten für Violoncello\""
-        piece = "7. Gigue"
-        mutopiatitle = "Cello Suite V - BWV 1011 - Gigue"
-        composer = "Johann Sebastian Bach (1685-1750)"
-        mutopiacomposer = "BachJS"
-        opus = "BWV 1011"
-        mutopiainstrument = "Cello"
-		arrangement = "Hajo Dezelski"
-        style = "Baroque"
-        source = "Bach-Gesellschaft Edition 1879 Band 27"
-        copyright = "Creative Commons Attribution-ShareAlike 3.0"
-        maintainer = "Hajo Dezelski"
-		maintainerWeb = "http://www.roxele.de/"
-        maintainerEmail = "dl1sdz (at) gmail.com"
-	
- footer = "Mutopia-2009/10/13-1521"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
-}
-
-melody =   \relative g {
+gigue =   \relative g {
+    \set Staff.midiInstrument = "cello"
+    \key c \minor 
+    \time 3/8
+    
     \repeat volta 2 {
 		\partial 8 g8 | % 0
 		es8. f16 d8 | % 1
@@ -59,11 +28,11 @@ melody =   \relative g {
 		g8.) as'16 f8 | % 21
 		g8. c16 d,8 | % 22
 		es8. g,16 bes8 | % 23
-		es,4 s8 | % 24
+		es,4  % 24
 	}
 
 	\repeat volta 2 {
-		\partial 8 es'8 | % 0
+		es'8 | % 0
 		g8. as16 f8 | % 25
 		g8. c16 b8 | % 26
 		c8. [d,16 (es16 f16) ] | % 27
@@ -111,19 +80,8 @@ melody =   \relative g {
 		g8. d16 es8 | % 69
 		g,8. c16 b8 | % 70
 		c8. es,16 g8 | % 71
-		c,4 s8 | % 72
+		c,4 % 72
 	}
 	
 }
 
-% The score definition
-
-\score {
- 	\context Staff << 
-        \set Staff.instrumentName = "Cello"
-	\set Staff.midiInstrument = "cello"
-        { \clef bass \key c \minor \time 3/8 \melody  }
-    >>
-	\layout { }
- 	 \midi { }
-}

@@ -1,39 +1,8 @@
-\version "2.13.4"
-
-\paper {
-    page-top-space = #0.0
-    %indent = 0.0
-    line-width = 18.0\cm
-    ragged-bottom = ##f
-    ragged-last-bottom = ##f
-}
-
-% #(set-default-paper-size "a4")
-
-#(set-global-staff-size 19)
-
-\header {
-        title = "Cello Suite V"
-        subtitle = "\"Sechs Suiten für Violoncello\""
-        piece = "2. Allemande "
-        mutopiatitle = "Cello Suite V - BWV 1011 - Allemande"
-        composer = "Johann Sebastian Bach (1685-1750)"
-        mutopiacomposer = "BachJS"
-        opus = "BWV 1011"
-        mutopiainstrument = "Cello"
-		arrangement = "Hajo Dezelski"
-        style = "Baroque"
-        source = "Bach-Gesellschaft Edition 1879 Band 27"
-        copyright = "Creative Commons Attribution-ShareAlike 3.0"
-        maintainer = "Hajo Dezelski"
-		maintainerWeb = "http://www.roxele.de/"
-        maintainerEmail = "dl1sdz (at) gmail.com"
-	
- footer = "Mutopia-2009/10/13-1531"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
-}
-
 melodyOne =  \relative d' {
+    \key c \minor 
+    \time 4/4
+    \set Staff.midiInstrument = "cello"
+    
     \repeat volta 2 {
 		\partial 8 d8 | % 0
 		<g,, es' d'>4 ~ d''16 [ c16 bes as ] bes8. [ f16 ] g8. [ d16 ] | % 1
@@ -53,10 +22,10 @@ melodyOne =  \relative d' {
 		<a, fis' es'>4 es''16 [ es, ( d c) ] bes8. \trill [ c16 ] d [ (e fis) as ] | % 15
 		b16 [ as  fis as ] b [ c d es ] f8. [ es32 d32 ] es8. [ fis,16 ] | % 16
 		<d as'>4 c16 [  b' ( as b)] b4. \trill as8 | % 17
-		g8. [ d16 b8. d16] g,4. s8 | % 18
+		g8. [ d16 b8. d16] g,4. % 18
 	}
 	\repeat volta 2 {
-		\partial 8 es''8 | % 0
+		es''8 | % 0
 		<b es>4 ~ es16 [ d es f ] cis8. [ as16 ] g8. [ f16 ] | % 19
 		es8. [ as16 ] d [ d, es f ] b,8. \trill [ as'16 ] es'8. [ f32 g ] | % 20
 		f4 c,,8. [ es''16 ] d8. [ c32 b ] c8. [ d16 ] | % 21
@@ -74,7 +43,7 @@ melodyOne =  \relative d' {
 		<f, cis'>8. [g16 ] (as [ g f es ] d [ c  b c)] d [ es f d ] | % 33
 		as8. [ cis'16 ] d [ (cis b as)] d4. fis,8 | % 34
 		g8. [ f'16 ] es [ f g es ] cis4. d8 | % 35
-		d8. [ as16 ] es8. [ c16 ] <g es' d'>4. s8 | % 36
+		d8. [ as16 ] es8. [ c16 ] <g es' d'>4.  % 36
 
 	}
 }
@@ -100,11 +69,11 @@ melodyTwo =  \relative c {
 		c,4 s2. | % 15
     	s1 | % 16
     	bes'4 s4 d2 | % 17
-		s1 | % 18
+		s2 s4 s8 % 18
 	}
 	
 	\repeat volta 2 {
-		\partial 8 s8 | % 0
+		 s8 | % 0
 		g,4 s2. | % 19
 		s1*2| % 21
 		es'4 s2. | % 22
@@ -121,21 +90,11 @@ melodyTwo =  \relative c {
 		g,8. s16 s2. | % 33
 		s2. s8 a8 | % 34
 		g8. s16 s4 d'2 | % 35
-		s2 c,4. s8 | % 36
+		s2 c,4. % 36
  	}    
 }
 
 
 % The score definition
 
-melody = << \melodyOne \\ \melodyTwo >>
-
-\score {
- 	\context Staff << 
-        \set Staff.instrumentName = "Cello"
-	\set Staff.midiInstrument = "cello"
-        { \clef bass \key c \minor \time 4/4 \melody  }
-    >>
-	\layout { }
- 	 \midi { }
-}
+allemande = << \melodyOne \\ \melodyTwo >>
