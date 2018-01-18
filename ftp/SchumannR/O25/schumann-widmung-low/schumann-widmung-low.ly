@@ -7,10 +7,9 @@
 	composer = "Robert Schumann (1810–1856)"
 	poet = "Friedrich Rückert (1788–1866)"
 	opus = "Op. 25, № 1."
-	copyright = "Public Domain"
 
 	%mutopia-specific headers:
-	mutopiatitle = "Widmung"
+	mutopiatitle = "Widmung (low voice)"
 	mutopiacomposer = "SchumannR"
 	mutopiapoet = "Friedrich Rückert (1788-1866)"
 	mutopiaopus = "O 25"
@@ -21,8 +20,11 @@
 	maintainer = "Daniel Johnson"
 	maintainerEmail = "il.basso.buffo at gmail dot com"
 	lastupdated = "2006/Dec/06"
- footer = "Mutopia-2006/12/18-588"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+	license = "Public Domain"
+	footer = "Mutopia-2018/01/17-2210"
+	copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+	tagline = ##f
+    moreinfo = "Adapted to low voice from original submission (piece #588)."
 }
 
 \paper {
@@ -48,22 +50,22 @@ sopNotes = {
 	f''2 ~ f''4 ees''4 des''4 c''4 | bes'2 r2 bes'4-> g'8 ees'8 | aes'2 ~ aes'4 aes'4 des''4. des''8 | des''2 c''4 c''4 ees''4.-> aes'8 |
 	des''2 ~ des''4 des''4 ges''4. ges''8 | ges''2 f''4 ees''4 des''4 c''4 | bes'2 r4 bes'4 c''4 des''4 |
 	ees''4 aes'4 aes'2 ~ aes'4 des''4 | c''4 c''4 \acciaccatura c''8 bes'2 ~ bes'4 c''4 | aes'2 r2 r2 |
-	
+
 	\transpose e fes {
 	\key e \major
-	
+
 	gis'1 fis'4 gis'4 | a'1 gis'2 | fis'1 ~ fis'4 gis'4 |
 	e'2 b2 r2 | gis'1 fis'4 gis'4 | a'1 gis'2 |
 	fis'1( gis'4.) e'!8 | gis'2 fis'4 r4 fis'4 dis'8 b8 | e'2 r4 e'4 a'4. a'8 |
 	a'2( gis'4) gis'4 b'4. e'8 | a'2 ~ a'4 a'4 d''4. d''8 | d''2( cis''4) cis''4 cis''4 cis''4
         }|
 	\key aes \major
-	
+
 	des''2 ~ des''4 des''4 ees''4. bes'8 | c''2 r2 c''2 |
 	c''4. f'8 f'4 f'4^\markup{\translate #(cons 0 0)\italic "ritardando"} g'4 aes'4 | bes'2 r2 r2 |
 	c''4 c''8 c''8 ees''4. aes'8 aes'4 bes'4 | c''2 r2 aes'4 aes'8 aes'8 |
 	f''2 ~ f''4 ees''4 des''4 c''4 | bes'2 r2 bes'4-> g'8 ees'8 |
-	
+
 	aes'2 ~ aes'4 aes'4 des''4. des''8 | des''2 c''4 c''4 c''4.-> f'8 |
 	bes'2 ~ bes'4 bes'4 ees''4 ees''4 | ees''2 des''4 f''4 des''4 bes'4 | aes'4 aes'4 f''2 ~ f''4 ees''4 |
 	aes'2 r2 r2 | R1.*5
@@ -98,13 +100,13 @@ text=\lyricmode {
 	Daß du mich liebst, macht mich mir wert, __
 	dein Blick hat mich vor mir ver -- klärt,
 	du hebst mich lie -- bend ü -- ber mich,
-	mein gu -- ter Geist, mein beß’ -- res Ich!	
+	mein gu -- ter Geist, mein beß’ -- res Ich!
 
 	Du mei -- ne See -- le, du mein Herz,
 	du mei -- ne Wonn’, __ o du mein Schmerz,
 	du mei -- ne Welt, __ in der ich le -- be,
 	mein Him -- mel du, __ da -- rein ich schwe -- be,
-	mein gu -- ter Geist, mein beß’ -- res Ich!	
+	mein gu -- ter Geist, mein beß’ -- res Ich!
 }
 
 rhOne = {
@@ -309,7 +311,7 @@ lhTwo = {
 	<f aes>1 ees2 | des4 g,4\rest g,4\rest des2 des4 | des1 des2 |
 	%Page 1, Line 4
 	c1 des4 bes,4 | ees2 ees1 | aes,1 aes,2 |
-	
+
 	\transpose e fes {
 	%Page 2, Line 1
 	e,1. | e,1. | e,1. |
@@ -323,7 +325,7 @@ lhTwo = {
 	\times 2/3 { <cis e a>4 <cis e a>4 <cis e a>4 } \times 2/3 { <cis e a>4 <cis e a>4 <cis e a>4 } s2 |
 	s1 \times 2/3 { a4 a4 a4 }
 	} |
-	
+
 	%Page 3, Line 1
 	ees1 ees2 | <ees bes>1 ees2 |
 	%Page 3, Line 2
@@ -332,7 +334,7 @@ lhTwo = {
 	aes,1 aes,2 | aes,1 aes,2 |
 	%Page 3, Line 4
 	des1 des2\rest | des1 <des ees>2 |
-	
+
 	%Page 4, Line 1
 	<c ees>1 bes,2 | aes,4 ges,4\rest aes4 ges,4\rest <ees f>2 |
 	%Page 4, Line 2
@@ -426,7 +428,7 @@ target = a,
 	\layout {
 		\context { \RemoveEmptyStaffContext }
 	}
-	
+
   \midi {
     \context {
       \Score
