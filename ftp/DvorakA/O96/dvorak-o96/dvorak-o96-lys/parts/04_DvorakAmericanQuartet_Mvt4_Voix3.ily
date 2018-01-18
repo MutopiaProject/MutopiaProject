@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   4   -   V O I X   3               #
 %#######################################################################
+\version "2.18.2"
 MvtQuatreVoixTrois = \relative c {
 	\clef alto
 	\override TupletBracket #'bracket-visibility = ##f
@@ -29,7 +30,7 @@ MvtQuatreVoixTrois = \relative c {
 	a-> a g-> g\!
 	<g d'>-> g <g d'>-> g
 % mesure 21 à 25
-	a\fz f c'4-> 
+	a\fz f c'4->
 	a8\fz f c'4->
 	a8\fz f c'4->
 	a8\fz f c'4-> \mark \default
@@ -63,7 +64,7 @@ MvtQuatreVoixTrois = \relative c {
 	a,\ff r a r
 	a r a r
 	a-._\dimi e-.\! a-.\p e-.
-	a-.\> e-. a-. a'-. 
+	a-.\> e-. a-. a'-.
 % mesure 51 à 55
 	a\pp f a, c
 	a c a'-> f
@@ -143,9 +144,9 @@ MvtQuatreVoixTrois = \relative c {
 	aes: c: aes: c:
 	c16\f( des c c,) c'( des c c,)
 % mesure 116 à 120
-	c'( des c c,) c'( des c c,) 
-	c'( des c c,) c'( des c c,) 
-	c'( des c c,) c'( des c c,) 
+	c'( des c c,) c'( des c c,)
+	c'( des c c,) c'( des c c,)
+	c'( des c c,) c'( des c c,)
 	c'8:16\fz[ des:\> c: des]
 	c:[ b: c: bes:]
 % mesure 121 à 125
@@ -277,7 +278,7 @@ MvtQuatreVoixTrois = \relative c {
 	gis8.\fz a16 gis4:16
 	gis16(\cresc e') e e\< e4:16
 	gis,16( e') e e e4:16
-	e16( f) f-. f-. f( fis) fis-. fis-.	
+	e16( f) f-. f-. f( fis) fis-. fis-.
 % mesure 231 à 235
 	fis(\f g) g-.\< g-. fis( g) g-. g-.
 	f!( g) g g f( g) g g
@@ -305,9 +306,9 @@ MvtQuatreVoixTrois = \relative c {
 % mesure 251 à 255
 	c)
 	des8\ppp-.[ f-. des-. f-.]
-	des-. f-. des-. f-. 
-	des-. f-. des-. f-. 
-	des-. f-. des-. f-. 
+	des-. f-. des-. f-.
+	des-. f-. des-. f-.
+	des-. f-. des-. f-.
 % mesure 256 à 260
 	bes,-. des-. bes-. des-.
 	bes-. des-. bes-. des-.
@@ -319,12 +320,12 @@ MvtQuatreVoixTrois = \relative c {
 	des-. f-. des-. f-.
 	des r c-.\fp bes-.
 	ees, r r4
-	\tuplet 6/4 {<ees c'>2.:8} 
+	\tuplet 6/4 {<ees c'>2.:8}
 % mesure 266 à 270
-	\tuplet 6/4 {<ees c'>2.:8} 
-	\tuplet 6/4 {<ees c'>2.:8} 
+	\tuplet 6/4 {<ees c'>2.:8}
+	\tuplet 6/4 {<ees c'>2.:8}
 	\tuplet 3/2 {ees4.:8} \tuplet 3/2 {ees4.:8}
-	\tuplet 6/4 {<ees des'>2.:8} 
+	\tuplet 6/4 {<ees des'>2.:8}
 	\tuplet 3/2 {cis'8_\cresc cis cis} cis8\< r
 % mesure 271 à 275
 	\tuplet 3/2 {cis cis cis} cis8 r
@@ -373,19 +374,19 @@ MvtQuatreVoixTrois = \relative c {
 	c[ c-. c-.] r8
 	c,8.\p\>-.[ c16-. c8-. c~]
 	c[ c-. c-.] r8\!
-	\tuplet 3/2 {a'\p( f a} f) r 
+	\tuplet 3/2 {a'\p( f a} f) r
 % mesure 311 à 315
-	\tuplet 3/2 {a( f a} f) r 
-	\tuplet 3/2 {a( f a} f) r 
-	\tuplet 3/2 {a( f a} f) r 
-	\tuplet 3/2 {a( f_\piucresc a} f) r 
+	\tuplet 3/2 {a( f a} f) r
+	\tuplet 3/2 {a( f a} f) r
+	\tuplet 3/2 {a( f a} f) r
+	\tuplet 3/2 {a( f_\piucresc a} f) r
 	\tuplet 3/2 {aes( f\< aes} f) r
 % mesure 316 à 320
 	\tuplet 3/2 {aes( f aes} f) r
 	\tuplet 3/2 {aes( f aes} f) r
 	\tuplet 3/2 {aes( f aes)} \tuplet 3/2 {aes'\f aes aes}
-	\tuplet 3/2 {aes aes aes} \tuplet 3/2 {aes\< aes aes} 
-	\tuplet 3/2 {aes aes aes} \tuplet 3/2 {aes aes aes} 
+	\tuplet 3/2 {aes aes aes} \tuplet 3/2 {aes\< aes aes}
+	\tuplet 3/2 {aes aes aes} \tuplet 3/2 {aes aes aes}
 % mesure 321 à 325
 	<f a!>\ff r \tuplet 3/2 {c(\upbow a) f-.}
 	c r \tuplet 3/2 {c'(\upbow a) f-.}
@@ -405,7 +406,7 @@ MvtQuatreVoixTrois = \relative c {
 	aes'->
 	gis4_\piuf d'!8-> gis,
 % mesure 336 à 340
-	c->\fz a! c->\fz a 
+	c->\fz a! c->\fz a
 	bes!->\fz g a\fz c
 	bes\fz des des\fz f
 	des->\fz c e!->\fz f
@@ -413,19 +414,19 @@ MvtQuatreVoixTrois = \relative c {
 % mesure 341 à 345
 	des->\fz c e->\fz f
 	e->\fz f d!->\fz e \mark \default
-	\tuplet 3/2 {<a, f'>\ff <f a> <f a>} \tuplet 3/2 {<f a>4.:8} 
-	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8} 
-	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8} 
+	\tuplet 3/2 {<a, f'>\ff <f a> <f a>} \tuplet 3/2 {<f a>4.:8}
+	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8}
+	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8}
 % mesure 346 à 350
-	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8} 
-	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8} 
-	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8} 
-	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<g f'>4.:8} 
+	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8}
+	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8}
+	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<f a>4.:8}
+	\tuplet 3/2 {<f a>4.:8} \tuplet 3/2 {<g f'>4.:8}
 	\tuplet 3/2 {<a f'>4.:8} \tuplet 3/2 {<g e'>4.:8}
 % mesure 351 à 355
 	<a f'>8 r f'8.\ff-> g16
 	f8.-> c16 a8.-> g16
-	f4 f'8.->\fz g16 
+	f4 f'8.->\fz g16
 	f8.-> c16 a8.-> g16
 	f4 f'8.->\fz g16
 % mesure 356 à 360
@@ -438,7 +439,7 @@ MvtQuatreVoixTrois = \relative c {
 	f,8-. f-. g-. g-.
 	a4-> c->
 	<c, a'>-> <c bes'>->
-	<c a'>-> <c bes'>->	
+	<c a'>-> <c bes'>->
 	<c a'>-> <c bes'>->
 % mesure 366 à 370
 	<c a'>-> <c bes'>->

@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   3   -   V O I X   2               #
 %#######################################################################
+\version "2.18.2"
 MvtTroisVoixDeux = \relative c {
 	\clef treble
 	\override TupletBracket #'bracket-visibility = ##f
@@ -26,7 +27,7 @@ MvtTroisVoixDeux = \relative c {
 	f4) r r \mark \default
 	r2.
 	c'8\ff d a4 r
-	r2. 
+	r2.
 	c,8_\dimi d\! a4 r
 % mesure 21 à 25
 	r4 c8\p d f4

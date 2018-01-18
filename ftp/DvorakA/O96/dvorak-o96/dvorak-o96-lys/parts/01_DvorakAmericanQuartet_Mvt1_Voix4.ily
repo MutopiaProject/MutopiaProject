@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   1   -   V O I X   4               #
 %#######################################################################
+\version "2.18.2"
 MvtUnVoixQuatre = \relative c {
 	\clef bass
 	\override TupletBracket #'bracket-visibility = ##f
@@ -21,7 +22,7 @@ MvtUnVoixQuatre = \relative c {
 		f,16\fz\<( a c f\!) f8.-> d16-. c4 r8 c
 		d16\fz\<( f a d) d8.-> bes16-.\! a4 r8 a
 		d,16\fz\<( f a d) d8. bes16-.\! a4 r8 a
-		d,8.\ff bes16 d8. bes16 d8. bes16 d8. bes16 
+		d,8.\ff bes16 d8. bes16 d8. bes16 d8. bes16
 % mesure 16 à 20
 		d8._\dimi bes16\! d8. bes16\> d8. bes16\p d8. bes16\! \mark \default
 		d4~(_\piup d16 f a d) a4~( a16 g f d)
@@ -102,8 +103,8 @@ MvtUnVoixQuatre = \relative c {
 	d''8_\dimi( d,16)\! r d8( d,16) r d8\p( a'16) r a8\>( d,16) r \mark \default
 	d8-.\pp^\pizz[ a'-.] d,-.[ a'-.] d,-.[ a'-.] d,-.[ a'-.]
 % mesure 81 à 85
-	d,-.[ a'-.] d,-.[ a'-.] d,-.[ a'-.] d,-.[ a'-.] 
-	d,[ a'] d,[ a'] fis[ a] fis[ a] 
+	d,-.[ a'-.] d,-.[ a'-.] d,-.[ a'-.] d,-.[ a'-.]
+	d,[ a'] d,[ a'] fis[ a] fis[ a]
 	fis[ a] fis[ a] fis[ a]  d,[ a']
 	d1\pp^\arco(
 	d8) d-.( d-. d-.) d-.( d-. d-. d-.)
@@ -114,9 +115,9 @@ MvtUnVoixQuatre = \relative c {
 	b) b'4\< b, b' b,8 \mark \default
 	bes!8.->\ff c16 d-. c-. r8 bes8.-> c16 f-. e-. r8
 % mesure 91 à 95
-	bes16\<( c e g\!) g8.-> bes,16 bes16\<( c e g\!) g8.-> bes,16 
-	bes8->\f[ c-.] bes->[ c-.] bes->[ c-.] bes->[ c-.] 
-	bes->[ c-.] bes->[ c-.] bes->[ c-.] bes->[ c-.] 
+	bes16\<( c e g\!) g8.-> bes,16 bes16\<( c e g\!) g8.-> bes,16
+	bes8->\f[ c-.] bes->[ c-.] bes->[ c-.] bes->[ c-.]
+	bes->[ c-.] bes->[ c-.] bes->[ c-.] bes->[ c-.]
 	bes r r4 r2
 	c'16\ff-> c c e, g->\fz g g c, des->\fz des des g, bes->\fz bes bes e, \mark \default
 % mesure 96 à 101
@@ -143,7 +144,7 @@ MvtUnVoixQuatre = \relative c {
 	r8 f' r f, r2
 	r8 f a c r f, a c
 	f4^\arco( e) d( c)
-	bes( a g f) \mark \default 
+	bes( a g f) \mark \default
 % mesure 121 à 125
 	ees1(
 	ees) \clef tenor
@@ -173,7 +174,7 @@ MvtUnVoixQuatre = \relative c {
 	aes8\p( g f ees) \clef bass c( bes16 des c4)
 	c8( bes16 des c4) c8( bes16 des c4)
 	aes8\p\< g16 g aes8 g16 g aes8 g16 g aes8 e!16 e
-	f8\< e16 e f8 e16 e f8 e16 e f8 bes,16 bes \mark \default 
+	f8\< e16 e f8 e16 e f8 e16 e f8 bes,16 bes \mark \default
 % mesure 146 à 150
 	c2\f c,4.( c'8)
 	c2 c,4.( c'8)
@@ -201,7 +202,7 @@ MvtUnVoixQuatre = \relative c {
 % mesure 166 à 170
 	f4( g8 d) c\<( f a c)(
 	c)\ff^\rit a-.\> f-. c-. \clef bass a8(_\dimmarkup f \tuplet 3/2 {e c c,)\!} \mark \default
-	f1\>^\intempo( 
+	f1\>^\intempo(
 	f\p\>)
 	f4\! a d\p( f8) r
 % mesure 171 à 175
@@ -209,7 +210,7 @@ MvtUnVoixQuatre = \relative c {
 	c4\pp)(^\pocorit c,2.)
 	f8.^\intempo f16 d c r8 f8._\cres f16\! d c r8
 	f16\< f d c f f d c f f d c f f d c
-	f2\ff f16 f d c f f d c 
+	f2\ff f16 f d c f f d c
 % mesure 176 à 180
 	f2 f16 f d c f f d c
 	c16\<( f a c) c8.->\fz( a16 f8) r f\f r

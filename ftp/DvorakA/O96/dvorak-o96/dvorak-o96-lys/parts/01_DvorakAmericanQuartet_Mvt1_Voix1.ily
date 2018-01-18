@@ -1,17 +1,18 @@
 %#######################################################################
 %#               M O U V E M E N T   1   -   V O I X   1               #
 %#######################################################################
+\version "2.18.2"
 MvtUnVoixUne = \relative c {
 	\clef treble
 	\override TupletBracket #'bracket-visibility = ##f
 % mesure 1 à 5
 	r8 f''16\pp( a \repeat tremolo 6 {f16 a)}
 	\repeat tremolo 4 {f16( a} \repeat tremolo 4 {f16 a)} \repeat volta 2 {
-		\repeat tremolo 4 {f16( a} \repeat tremolo 4 {f16 a)} 
-		\repeat tremolo 4 {f16( a} \repeat tremolo 4 {f16 a)} 
-		\repeat tremolo 4 {f16( a} \repeat tremolo 4 {f16 a)} 
+		\repeat tremolo 4 {f16( a} \repeat tremolo 4 {f16 a)}
+		\repeat tremolo 4 {f16( a} \repeat tremolo 4 {f16 a)}
+		\repeat tremolo 4 {f16( a} \repeat tremolo 4 {f16 a)}
 % mesure 6 à 10
-		f(_\cres a\! f a f a f a) f(\< a f c a f a c) 
+		f(_\cres a\! f a f a f a) f(\< a f c a f a c)
 		f8\mf\<( a4 c8) d8.( f16-. d4)\!
 		c8.( a16 f8 g16 a) c2
 		c,8.->\fz\< d16-. f-. d-. r8 c8.->\fz d16-. f-. d-. r8
@@ -21,7 +22,7 @@ MvtUnVoixUne = \relative c {
 		f8 r8 r4 c16(\fz\< f a c) c8. g16-.\!
 		f8 r8 r4 a,16(\fz\< d f a) a8.\! e16-.
 		d8 r8 r4 a16(\fz\< d f a) a8.\! e16-.
-		d\ff( f a) d-. d,( f a) d-. d,( f a)_\dimmarkup d-. d,( f a) d-. 
+		d\ff( f a) d-. d,( f a) d-. d,( f a)_\dimmarkup d-. d,( f a) d-.
 % mesure 16 à 20
 		d,,1(->^^\fz \mark \default
 		d4) r4 r2
@@ -44,7 +45,7 @@ MvtUnVoixUne = \relative c {
 		c8( d g,16 e a g) c8( d g,16 e a g)
 		c8(\< d-> c d->) c( d-> c b->)\!
 		a(_\crescmarkup b-> a b->) a( b-> a f->)
-		e16\fp\> e r d c c r a e'2\fp 
+		e16\fp\> e r d c c r a e'2\fp
 		e16\fz e r d c c r a e'2\fz \mark \default
 % mesure 36 à 40
 		e4(\ff f) e( f)
@@ -80,7 +81,7 @@ MvtUnVoixUne = \relative c {
 		r1
 		e''8.\pp([ c!16 a8. c16] e2)
 		e8.\pp([ c16 a8. c16] e2) \mark \default
-	} 
+	}
 	\repeat tremolo 4 {ees16(\pp c} \repeat tremolo 4 {ees c)}
 	\repeat tremolo 4 {ees16( c} \repeat tremolo 4 {ees c)}
 % mesure 66 à 70
@@ -102,7 +103,7 @@ MvtUnVoixUne = \relative c {
 	\repeat tremolo 32 <a fis'>32\p\> \mark \default
 	<a fis'>8\! <fis' a>4--\pp <fis a>16-- <fis a>( <fis a>8) <fis a>4-- <fis a>16 <fis a>(
 % mesure 81 à 85
-	<fis a>8) <fis a>4-- <fis a>16-- <fis a>( <fis a>8) <fis a>4 <fis a>16 <fis a>( 
+	<fis a>8) <fis a>4-- <fis a>16-- <fis a>( <fis a>8) <fis a>4 <fis a>16 <fis a>(
 	<d a'>8) <d a'>4 <d a'>16 <d a'>( <d a'>8) <a a'>4 <a a'>16 <a a'>(
 	<a a'>8) <a a'>4 <a a'>16 <a a'>( <a a'>8) <a a'>4 <fis' a>16 <fis a>(
 	<fis a>4)\pp\<( <d' fis>2\> <fis, a>4\!)
@@ -141,7 +142,7 @@ MvtUnVoixUne = \relative c {
 	f16\ppp( a! f a  f a f a  f a f a  f a f a)
 	f( a f a  f a f a  f a f a  f a f a)
 	f( a f a  f a f a  f a f a  f a f a)
-	f( a f a f\< a f a) f( a f c a f a c) 
+	f( a f a f\< a f a) f( a f c a f a c)
 % mesure 116 à 120
 	f8\mf( a4 c8)\< d8.( f16-. d4)
 	c8(\mf a f8\< g16 a\>) c2
@@ -177,7 +178,7 @@ MvtUnVoixUne = \relative c {
 	c'8\fp( e!) f( aes) aes\(( bes->) ees,16( d! f ees)\)
 	aes8\(( bes) ees,16( d f ees)\) aes8\(( bes->) ees,16( d f ees)\)
 	aes8(\< bes->) aes( bes->) aes( bes->) aes( g->)
-	f(\< g->) f( g->) f( g->) f( des->) 
+	f(\< g->) f( g->) f( g->) f( des->)
 % mesure 146 à 150
 	\acciaccatura c8( \mark \default  c'16\fz) c r bes aes aes r f c'2\fz
 	\acciaccatura c,8( c'16\fz) c r bes aes aes r f16 c'2\fz
@@ -191,7 +192,7 @@ MvtUnVoixUne = \relative c {
 	c1\>
 	aes2.\!_\ritard( g4) \mark \default
 % mesure 156 à 160
-	f4\pp--^\intempo( g--) a!--( g8-. f-.) 
+	f4\pp--^\intempo( g--) a!--( g8-. f-.)
 	g8( d'16 g, f8-. d-.) d2
 	g4( f8 d) c8\<( f a c)
 	d4.\mf( bes8) a16( c c4.->)
@@ -205,7 +206,7 @@ MvtUnVoixUne = \relative c {
 % mesure 166 à 170
 	<d, bes'>2 <c a'>(
 	<c a'>8)\ff^\moltoritard c'4 f8(~ f\> a, g4)\! \mark \default
-	f2 a8\>(^\intempo_\dolce g f d\!)  
+	f2 a8\>(^\intempo_\dolce g f d\!)
 	c8( a~ a16\> c a f) d4(~ d16 c f g\!)
 	a8( c f d) d4\p( a8) r
 % mesure 171 à 175

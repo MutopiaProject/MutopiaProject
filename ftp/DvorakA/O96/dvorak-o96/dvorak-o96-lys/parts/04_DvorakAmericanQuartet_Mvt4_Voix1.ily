@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   4   -   V O I X   1               #
 %#######################################################################
+\version "2.18.2"
 MvtQuatreVoixUne = \relative c {
 	\clef treble
 	\override TupletBracket #'bracket-visibility = ##f
@@ -30,7 +31,7 @@ MvtQuatreVoixUne = \relative c {
 	f'->\fz c bes g
 	f'->\fz c bes g
 	f'->\fz c bes g \mark \default
-	f4 r 
+	f4 r
 % mesure 26 à 30
 	R2*3
 	a'4\p->(\upbow c8) r
@@ -117,7 +118,7 @@ MvtQuatreVoixUne = \relative c {
 % mesure 97 à 100
 	<ees ees'>8-.\> aes-. <ees c'>4~(
 	<ees c'> <des bes'>\! \mark \default
-	<c aes'>8-.) r ees8.->\pp f16-. 
+	<c aes'>8-.) r ees8.->\pp f16-.
 	ees8-. r ees8.-> f16-.
 % mesure 101 à 105
 	ees8-. r ees8.-> f16-.
@@ -151,7 +152,7 @@ MvtQuatreVoixUne = \relative c {
 	a) r8 f'(
 	g) f-. d4(
 	d8) c( bes f')
-	c4\>( a8\!) r	
+	c4\>( a8\!) r
 	r4 c'8.\cresc( d16
 % mesure 131 à 135
 	c8)\<[ a-. f-. d-.]
@@ -182,7 +183,7 @@ MvtQuatreVoixUne = \relative c {
 	des_\dimi r\! r des,
 	des8.\p des16 des8\> des
 	des\! r r4
-	des2\pp( 
+	des2\pp(
 % mesure 156 à 160
 	f
 	ges
@@ -278,7 +279,7 @@ MvtQuatreVoixUne = \relative c {
 	d8.^\fzmarkup e16 d8. e16
 	d8.^\fzmarkup e16 d8. e16 \mark \default
 	f8-.\ff r c'8.\fpp( d16
-	c8)\> a-. f-. d-.\! 
+	c8)\> a-. f-. d-.\!
 % mesure 236 à 240
 	c-. a-. c4->(
 	a) r8 f'(\<

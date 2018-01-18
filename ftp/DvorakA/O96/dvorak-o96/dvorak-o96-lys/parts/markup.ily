@@ -1,3 +1,10 @@
+\version "2.18.2"
+
+pieceUn = \markup { \fill-line { \fontsize #5 I} }
+pieceDeux = \markup { \fill-line { \fontsize #5 II} }
+pieceTrois = \markup { \fill-line { \fontsize #5 III} }
+pieceQuatre = \markup { \fill-line { \fontsize #5 IV} }
+
 arco=^\markup {\italic arco}
 atempo=^\markup {\italic {a tempo}}
 crescmarkup=^\markup {\italic cresc.}
@@ -56,12 +63,3 @@ moltocresc = #(make-music 'CrescendoEvent
              'span-direction START
              'span-type 'text
              'span-text "molto cresc.")
-
-
-
-
-
-
-
-
-

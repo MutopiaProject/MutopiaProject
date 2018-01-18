@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   2   -   V O I X   2               #
 %#######################################################################
+\version "2.18.2"
 MvtDeuxVoixDeux = \relative c {
 	\clef treble
 	\override TupletBracket #'bracket-visibility = ##f
@@ -82,7 +83,7 @@ MvtDeuxVoixDeux = \relative c {
 	r16 fis,\mf\<( ees'8.[ d16]) d\>( c ees4)\!
 	R1*6/8
 	r16 fis,\f\<( ees'8.[ d16]) d( c ees4)\!
-% mesures 66 a 70	
+% mesures 66 a 70
 	d8\ff( bes'8.) bes16-. bes8( g) f16( d)
 	\set doubleSlurs = ##t <g, ees'>4.\>( <g ees'>8)\! r ees'\p \set doubleSlurs = ##f
 	bes'4.\pp\>( bes8) g( f16 d)

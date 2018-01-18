@@ -1,13 +1,14 @@
 %#######################################################################
 %#               M O U V E M E N T   1   -   V O I X   2               #
 %#######################################################################
+\version "2.18.2"
 MvtUnVoixDeux = \relative c {
 	\clef treble
 	\override TupletBracket #'bracket-visibility = ##f
 % mesure 1 à 5
 	r2 r8 a''16\pp( c a c a c)
 	\repeat tremolo 4 {a( c} \repeat tremolo 4 {a c)} \repeat volta 2 {
-		\repeat tremolo 4 {a( f} \repeat tremolo 4 {a f)} 
+		\repeat tremolo 4 {a( f} \repeat tremolo 4 {a f)}
 		\repeat tremolo 4 {a( f} \repeat tremolo 4 {a f)}
 		\repeat tremolo 4 {a( f} \repeat tremolo 4 {a f)}
 % mesure 6 à 10
@@ -36,7 +37,7 @@ MvtUnVoixDeux = \relative c {
 		c8-. a!16(\> c) c8-. a16( c) c8-. a16( c) c8-. a16\pp( c) \mark \default
 % mesure 26 à 30
 		e,8\fp( gis a! b) c4~( c16 b! d c)
-		c4~( c16 b! d c) c4~( c16 b! d c) 
+		c4~( c16 b! d c) c4~( c16 b! d c)
 		c8\<( e) e\prall( d) c\prall( b) a\prall( f)
 		e1\fp\>
 		e'16-.\fp\> e-. r d-. c-. c-.\! r b-. a8\<( g! e4^>)
@@ -46,7 +47,7 @@ MvtUnVoixDeux = \relative c {
 		e! e r f\cres e\! e r f e e r f e e r d
 		e4.\f( c'8) b16\fp b r a gis gis r e
 		e4.(\f c'8) b16\fz b r a gis gis r e \mark \default
-% mesure 36 à 40 
+% mesure 36 à 40
 		cis'4\ff( d) cis( d)
 		cis(\< d8 c) b( a g f)\!
 		e8 e4\> e e e8(
@@ -80,7 +81,7 @@ MvtUnVoixDeux = \relative c {
 		e8.\>( cis16 a8. cis16 e2)
 		a2.\pp g!8( e
 		a2.) g8( e) \mark \default
-	} 
+	}
 	a16\pp( c a c a c ees, c' \repeat tremolo 4 {a c)}
 	a16( c a c a c ees, c' \repeat tremolo 4 {a c)}
 % mesure 66 à 70
@@ -94,7 +95,7 @@ MvtUnVoixDeux = \relative c {
 	<gis, e'>1\ff
 	<gis e'>16\fz\> <gis e'> <gis e'>4.( <gis e'>2)
 	gis'8\mf gis4 gis\> gis gis8(
-	gis)\p gis4 gis\> gis e8\!( 
+	gis)\p gis4 gis\> gis e8\!(
 % mesure 76 à 80
 	eis)\< eis4 eis eis eis8(
 	eis)\f eis4\> eis eis eis8
@@ -133,7 +134,7 @@ MvtUnVoixDeux = \relative c {
 	f8 r f,16( g aes) aes-. aes8 r c16( e f) f-.
 % mesure 106 à 110
 	\tuplet 3/2 4 {aes,,8\<( bes c) c4.:8 aes8\<( bes c) c4.:8}
-	\tuplet 3/2 4 {aes8\<( bes c) c4.:8 aes8\<( bes c) c4.:8\!} 
+	\tuplet 3/2 4 {aes8\<( bes c) c4.:8 aes8\<( bes c) c4.:8\!}
 	<<{d4 \tuplet 3/2 {d4.:8} d4 \tuplet 3/2 {d4.:8}}\\{\tuplet 3/2 4 {aes8( bes c) c4.:8 aes8( bes c) c4.:8} }>>
 	f1\p\>
 	f\pp
@@ -196,9 +197,9 @@ MvtUnVoixDeux = \relative c {
 	d)
 	d2\< <c f>
 	<d bes'>\mf\> <c a'>\!
-	r8 c16\p c  r8 c16 c  r8 c16 c r8 a16 a 
+	r8 c16\p c  r8 c16 c  r8 c16 c r8 a16 a
 % mesure 161 à 165
-	r8 f'16 f r8 <c f>16 <c f> r8 <bes f'>16 <bes f'> r8 <bes f'>16 <bes f'> 
+	r8 f'16 f r8 <c f>16 <c f> r8 <bes f'>16 <bes f'> r8 <bes f'>16 <bes f'>
 	r8 f'16\< f r8 f16 f r8 <f a>16 <f a> r8 <f a>16 <f a>\!
 	r8 <f d'>16_\cres <f d'>\! r8 <f d'>16 <f d'> r8 <f c'>16 <f c'> r8 <f c'>16 <f c'>
 	r8 <f d'>16\f <f d'> r8 <f d'>16 <f d'> r8 <f c'>16 <f c'> r8 <f c'>16 <f c'>
@@ -206,7 +207,7 @@ MvtUnVoixDeux = \relative c {
 % mesure 166 à 170
 	r8 <f d'>16 <f d'> r8 <f d'>16 <f d'> r8 <f c'>16 <f c'> r8 <f c'>16 <f c'>
 	<<{<f a>2.\ff^\ritard} \\ {s4 s\dimi s\!}>> \tuplet 3/2 {g8\>( bes e,)} \mark \default
-	<f a>1^\intempo\>( 
+	<f a>1^\intempo\>(
 	<f a>4.\p) r8 r2
 	a8( c4 a8 f4.\p) r8
 % mesure 171 à 175

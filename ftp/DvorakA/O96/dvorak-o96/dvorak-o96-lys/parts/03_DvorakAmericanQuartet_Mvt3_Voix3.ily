@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   3   -   V O I X   3               #
 %#######################################################################
+\version "2.18.2"
 MvtTroisVoixTrois = \relative c {
 	\clef alto
 	\override TupletBracket #'bracket-visibility = ##f
@@ -53,7 +54,7 @@ MvtTroisVoixTrois = \relative c {
 	a2( d4)
 	c( d-> f,)
 	f'8\>( d c2)
-	a4\p\>( bes4.-> g8\!) 
+	a4\p\>( bes4.-> g8\!)
 % mesure 46 à 48
 	a4( bes4.-> g8)
 	a4\>^\ritard( bes4.-> g8)
@@ -64,7 +65,7 @@ MvtTroisVoixTrois = \relative c {
 	f,8\fz f f4-> r
 	des8\fz des des4-> r
 	f8\fp f f4-> r
-	des8\fp des des4-> r 
+	des8\fp des des4-> r
 % mesure 61 à 65
 	f8\fp f f4-> r
 	des8\fz-> des des4 r
