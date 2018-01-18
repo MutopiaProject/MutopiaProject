@@ -9,7 +9,7 @@
 	opus = "Op. 25, № 1."
 
 	%mutopia-specific headers:
-	mutopiatitle = "Widmung"
+	mutopiatitle = "Widmung (low voice)"
 	mutopiacomposer = "SchumannR"
 	mutopiapoet = "Friedrich Rückert (1788-1866)"
 	mutopiaopus = "O 25"
