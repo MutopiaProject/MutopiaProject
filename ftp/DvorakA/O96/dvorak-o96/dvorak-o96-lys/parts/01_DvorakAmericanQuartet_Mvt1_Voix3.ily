@@ -1,15 +1,16 @@
 %#######################################################################
 %#               M O U V E M E N T   1   -   V O I X   3               #
 %#######################################################################
+\version "2.18.2"
 MvtUnVoixTrois = \relative c {
 	\clef alto
 	\override TupletBracket #'bracket-visibility = ##f
 % mesure 1 à 5
-	R1*2 
+	R1*2
 	\repeat volta 2 {
 		f8\mf( a4 c8) d8. f16-. d4-.
 		c8.( a16 f8 g16 a) c2
-		c,8.-> d16-. f-. d-. r8 c8.-> d16-. f-. d-. r8 
+		c,8.-> d16-. f-. d-. r8 c8.-> d16-. f-. d-. r8
 % mesure 6 à 10
 		c16(\< f a c c8.\> a16 f4.) r8
 		\repeat tremolo 4 {f16\pp( a} \repeat tremolo 4 {f16 a)}
@@ -79,7 +80,7 @@ MvtUnVoixTrois = \relative c {
 % mesure 61 à 65
 		\repeat tremolo 4 {cis16\>(e} \repeat tremolo 4 {cis16 e)}
 		\repeat tremolo 4 {c!16\pp( e} \repeat tremolo 4 {c16 e)}
-		\repeat tremolo 4 {c16( e} \repeat tremolo 4 {c16 e)} \mark \default 
+		\repeat tremolo 4 {c16( e} \repeat tremolo 4 {c16 e)} \mark \default
 	}
 	fis8\mf\<( a4 bes8) c8.( ees16-. c4)\!
 	c8.( bes16 a8 gis16 a) c2
@@ -106,13 +107,13 @@ MvtUnVoixTrois = \relative c {
 	a8\pp <d, a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-.
 	a'4\<( fis'2\> a,4)
 % mesure 86 à 90
-	<d, a'>8\pp-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. 
+	<d, a'>8\pp-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-. <d a'>-.
 	a'4\<( fis'2\> a,4)\!
 	b8^>_\cres b\! b^> b b^> b b^> b
 	b\<^> b b^> b b^> b b^> b \mark \default
-	\repeat tremolo 16 {<c, bes'!>32\ff} \repeat tremolo 16 {<bes' c>32} 
+	\repeat tremolo 16 {<c, bes'!>32\ff} \repeat tremolo 16 {<bes' c>32}
 % mesure 91 à 95
-	\repeat tremolo 16 {<bes c>32\ffz} \repeat tremolo 16 {<bes c>32} 
+	\repeat tremolo 16 {<bes c>32\ffz} \repeat tremolo 16 {<bes c>32}
 	<c, c'>8\f r c16\<( e g c\!) c8.-> c,16 c\<( e g c\!)
 	c8.-> c,16 c\<( e g c\!) c8.-> c,16 c\<( e g c\!)
 	<c, c'>8 r r4 r2
@@ -120,7 +121,7 @@ MvtUnVoixTrois = \relative c {
 % mesure 96 à 100
 	f8 r r4 r2
 	R1*3
-	f4\p-> aes-> f->_\cres ees->\! 
+	f4\p-> aes-> f->_\cres ees->\!
 % mesure 101 à 105
 	c-> f8-.\< ees-. c4-> f8-. ees-. \mark \default
 	f8\ff r aes16\fz-> aes aes aes f8 r ees16\fz-> ees ees ees
@@ -156,7 +157,7 @@ MvtUnVoixTrois = \relative c {
 	d8\p( d') d-. d-. d-. d-. d-. d-.
 	d,( d') d-. d-. e,( e') e-. e-.
 % mesure 131 à 135
-	\grace f8( des'2.)\fz\> c8( bes) 
+	\grace f8( des'2.)\fz\> c8( bes)
 	des2.\< c8 bes
 	aes16\< aes8 aes f( des16) aes16 aes8 aes f( des16
 	des) aes'8\f aes aes aes16( aes) aes8 aes aes aes16(

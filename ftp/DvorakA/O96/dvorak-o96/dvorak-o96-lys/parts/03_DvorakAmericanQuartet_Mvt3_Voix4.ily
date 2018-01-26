@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   3   -   V O I X   4               #
 %#######################################################################
+\version "2.18.2"
 MvtTroisVoixQuatre = \relative c {
 	\clef bass
 	\override TupletBracket #'bracket-visibility = ##f
@@ -13,7 +14,7 @@ MvtTroisVoixQuatre = \relative c {
 % mesure 6 à 10
 	c'2 c,4
 	c'2 c,4
-	f4 r r 
+	f4 r r
 	r2.
 	r4 <d' a'>8->\fz <d a'> <d a'>\noBeam r8
 % mesure 11 à 15
@@ -48,7 +49,7 @@ MvtTroisVoixQuatre = \relative c {
 	a\ff( f) r8 c
 	c4( g'8 f) r f
 	a4( f) e8( d
-	f2) r4 \mark \default 
+	f2) r4 \mark \default
 % mesure 41 à 45
 	\tempo "Poco meno mosso." f'4\mf( d2->)
 	f4( d2)->
@@ -230,5 +231,5 @@ MvtTroisVoixQuatre = \relative c {
 	f4 f8 f f f_\dacapo
 % mesure 196 à 200
 	f2 r4 \bar "|."
-	
+
 }

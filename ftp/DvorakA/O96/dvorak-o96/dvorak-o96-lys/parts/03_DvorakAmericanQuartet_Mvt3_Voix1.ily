@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   3   -   V O I X   1               #
 %#######################################################################
+\version "2.18.2"
 MvtTroisVoixUne = \relative c {
 	\clef treble
 	\override TupletBracket #'bracket-visibility = ##f
@@ -15,7 +16,7 @@ MvtTroisVoixUne = \relative c {
 	c d f4 r
 % mesure 11 à 15
 	c8\upbow r f4.-> d8
-	c d a4 r 
+	c d a4 r
 	c2.\pp->_\espressivo
 	c->_\espressivo
 	c->(_\espressivo
@@ -108,7 +109,7 @@ MvtTroisVoixUne = \relative c {
 	f2(\pp c4
 % mesure 96 à 100
 	aes2 f4) \bar "||" \mark \default \key f \major
-	R2.*4	
+	R2.*4
 % mesure 101 à 105
 	d2.\p\downbow
 	d\downbow
@@ -136,7 +137,7 @@ MvtTroisVoixUne = \relative c {
 % mesure 121 à 125
 	a4( f) r8 c
 	c4( g'8 f) r a
-	a4( f) e8( d 
+	a4( f) e8( d
 	f2) r4 \mark \default
 	c8\f d f4 r
 % mesure 126 à 130
@@ -144,7 +145,7 @@ MvtTroisVoixUne = \relative c {
 	c,8 d_\dimi f4\! r
 	c8\p d a4 r
 	r c'8\p d f4--
-	r c8 d f4-- 
+	r c8 d f4--
 % mesure 131 à 135
 	r c8 d f4--
 	r c8 d f4--

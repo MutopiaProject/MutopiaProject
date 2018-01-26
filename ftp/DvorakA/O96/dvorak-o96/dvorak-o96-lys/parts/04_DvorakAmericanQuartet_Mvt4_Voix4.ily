@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   4   -   V O I X   4               #
 %#######################################################################
+\version "2.18.2"
 MvtQuatreVoixQuatre = \relative c {
 	\clef bass
 	\override TupletBracket #'bracket-visibility = ##f
@@ -13,7 +14,7 @@ MvtQuatreVoixQuatre = \relative c {
 	R2*2
 	d,8\p r f r
 	a r d f
-	R2*2 
+	R2*2
 % mesure 11 à 15
 	d,8 r f r
 	a r d-. f-.
@@ -139,11 +140,11 @@ MvtQuatreVoixQuatre = \relative c {
 	c c,\< r c'
 	c c, r c'
 	c c, r c'
-	<c, c'>\f r <c c'> r 
+	<c, c'>\f r <c c'> r
 % mesure 116 à 120
-	<c c'> r <c c'> r 
-	<c c'> r <c c'> r 
-	<c c'> r <c c'> r 
+	<c c'> r <c c'> r
+	<c c'> r <c c'> r
+	<c c'> r <c c'> r
 	c'8:16\fz des: c:\> des:
 	c: b: c: bes:
 % mesure 121 à 125
@@ -187,7 +188,7 @@ MvtQuatreVoixQuatre = \relative c {
 	des8.\> des16 des8 des
 	des\p r r des,\>
 	des8. des16 des8 des
-	des\! r r4 
+	des\! r r4
 % mesure 156 à 162
 	R2*7
 % mesure 163 à 165
@@ -265,7 +266,7 @@ MvtQuatreVoixQuatre = \relative c {
 	e,8. e16 e8 r
 	e' r e r
 	e,8. e16 e8 r
-	e' r e r 
+	e' r e r
 % mesure 226 à 230
 	e,8. e16 e8 r
 	e' r e-. e,-.
@@ -407,7 +408,7 @@ MvtQuatreVoixQuatre = \relative c {
 % mesure 341 à 345
 	c'8\fz c, c'\fz c,
 	c'8\fz c, c'\fz c, \mark \default
-	f4\ff r 
+	f4\ff r
 	a-> r
 	d-> r
 % mesure 346 à 350

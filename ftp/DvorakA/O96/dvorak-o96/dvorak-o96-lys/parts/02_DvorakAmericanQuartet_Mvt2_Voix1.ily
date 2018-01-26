@@ -1,6 +1,7 @@
 %#######################################################################
 %#               M O U V E M E N T   2   -   V O I X   1               #
 %#######################################################################
+\version "2.18.2"
 MvtDeuxVoixUne = \relative c {
 	\clef treble
 	\override TupletBracket #'bracket-visibility = ##f
@@ -10,7 +11,7 @@ MvtDeuxVoixUne = \relative c {
 	d4.( d16) a\< a( d) d( e)\!
 	f4( d8)\> c4(\prall a16 c)
 % mesures 6 à 10
-	d4.\p r8 d32\<([ a b cis] \tuplet 5/4 {d[ e f g gis)]\!} 
+	d4.\p r8 d32\<([ a b cis] \tuplet 5/4 {d[ e f g gis)]\!}
 	\acciaccatura a,8 a'4.\sfz( a8\p\>) g( f16 d)\!
 	d4.( d16\<) a a( d) e( f)
 	g4\mf( f16 e) <c e>4 \tuplet 3/2 {<f, d'>16( \arpeggio c' a)}
@@ -37,10 +38,10 @@ MvtDeuxVoixUne = \relative c {
 	c4.\mf d8\<( g bes,\f)
 	bes16\( a c4( c16)\) bes->(\> g-> ees-> g-> bes->\!)
 	a4.\> g8\p( f d)
-	c4\((\dimi c16)\! a'\) <c, a'>4. 
+	c4\((\dimi c16)\! a'\) <c, a'>4.
 	<a f'>4.\pp( <a f'>8)\noBeam a16( c) c( a) \mark \default
 % mesures 31 à 35
-	<<{s2 s8. \grace {a32[ bes]}}\\{bes2.\p^+}>> 
+	<<{s2 s8. \grace {a32[ bes]}}\\{bes2.\p^+}>>
 	bes8(\< e f16 e) g8\f\>( e'8. g,16)\!
 	<<{s2 s8. \grace {a32[_\cres bes\!]}}\\{bes2.\pp^+}>>
 	bes8(\< e) f16( e) e8( f8.) f16-.

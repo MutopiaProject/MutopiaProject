@@ -1,11 +1,12 @@
 %#######################################################################
 %#               M O U V E M E N T   2   -   V O I X   4               #
 %#######################################################################
+\version "2.18.2"
 MvtDeuxVoixQuatre = \relative c {
 	\clef bass
 	\override TupletBracket #'bracket-visibility = ##f
 % mesures 1 à 5
-	d8^\pizz\p r r d r r 
+	d8^\pizz\p r r d r r
 	d r r d r r
 	d r r d r r
 	<d a'> r r d r r
@@ -26,10 +27,10 @@ MvtDeuxVoixQuatre = \relative c {
 	d4.\<( d16) a a( d) e( f)
 	g4\mf( f16_\cres e\!) e4 \tuplet 3/2 {d16( c a) }
 	c4.\>( c8) r\! r \clef bass \mark \default
-	cis,^\pizz r r cis r r 
-	cis r r cis r r 
+	cis,^\pizz r r cis r r
+	cis r r cis r r
 % mesures 21 à 25
-	cis r r cis r r 
+	cis r r cis r r
 	<<{cis\< d\rest d\rest cis[ d\rest cis\!]}\\{s4.\moltocresc s4.\!}>>
 	f8\f f, r bes[_\dimi r\! bes]
 	d\p r d b_\cres[ r\! b]
@@ -73,7 +74,7 @@ MvtDeuxVoixQuatre = \relative c {
 % mesures 56 a 60
 	<c c'> r r <c c'> r r
 	<c c'>_\dimi r\! r <c c'> r r
-	c' r r c_\dimi r\! r 
+	c' r r c_\dimi r\! r
 	c r r a\p r r
 	g_\dimi r\! r f\pp r r
 % mesures 61 a 65
