@@ -13,6 +13,7 @@
 }
 %-----------------------------------------------------------------------
 \include "markup.ily"
+\include "globals.ily"
 \include "01_DvorakAmericanQuartet_Mvt1_Voix1.ily"
 \include "01_DvorakAmericanQuartet_Mvt1_Voix2.ily"
 \include "01_DvorakAmericanQuartet_Mvt1_Voix3.ily"
