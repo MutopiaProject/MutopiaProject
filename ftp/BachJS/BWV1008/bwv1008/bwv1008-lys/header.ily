@@ -5,7 +5,7 @@
     opus = "BWV 1008"
     composer = "Johann Sebastian Bach (1685-1750)"
     subtitle = "\"Sechs Suiten für Violoncello\""
-    mutopiatitle = "Cello Suite II - BWV 1008 - Prélude"
+    mutopiatitle = "Cello Suite II - BWV 1008"
     mutopiacomposer = "BachJS"
     mutopiainstrument = "Cello"
 	arrangement = "Hajo Dezelski"
