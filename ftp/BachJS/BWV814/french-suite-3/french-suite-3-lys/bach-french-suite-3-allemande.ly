@@ -41,7 +41,7 @@ VoiceI =  \relative c' {
       e16 d gis fis gis4~ gis16 cis, fis eis fis a gis fis	%7
       eis8 cis fis8. e16 d fis, b a b4~	%8
       b16 a gis b eis, d' cis b a eis fis b gis8.- \parenthesize \prall fis16	%9
-      fis2~ fis16 fis e' d e fis, d' cis	%10
+      fis2~ fis16 b e d e ais, d cis  %10
       d gis, cis b cis4~ \stemDown cis16 fis, d' cis \stemNeutral eis,8.- \parenthesize \prall fis16	%11
       <<\relative fis' { fis2^~ fis4 r16}\\ \relative e' {r16 e d cis d8 cis16 b cis4 r16}>>	%12
    }
@@ -70,7 +70,7 @@ VoiceII =  \relative c {
       e8 cis fis fis, b cis d b	%2
       e,16 b' e d cis8 b a g fis e		%3
       d16 a' d cis b8 a g fis e d		%4
-      cis16 e a g a8. fis16 g fis b a g8 a	%5
+      cis16 e a g a8. fis16 b, fis' b a g8 a   %5
       d,4~ d16 b g' fis g8 cis,~ cis16 fis b ais	%6
       b8 b,~ b16 eis a gis a4~ a16 fis b a	%7
       b d cis b a fis b ais b8 a gis16 eis d' cis	%8
