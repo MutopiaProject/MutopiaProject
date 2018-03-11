@@ -1,33 +1,10 @@
 \version "2.18.2"
 
-\header {
-  title        = "French Suite III: Courante"
-  composer     = "J. S. Bach (1685-1750)"
-  opus         = "BWV 814"
-  style        = "Baroque"
-  license      = "Public Domain"
-  enteredby    = "Joel Mayes"
-  lastupdated  = "2014/Mar/29"
-  date         = "1722"
-  source       = "Bach-Gesellschaft, 1863"
-
-  mutopiatitle       = "French Suite no. 3 in B minor"
-  mutopiacomposer    = "BachJS"
-  mutopiaopus        = "BWV 814"
-  mutopiainstrument  = "Harpsichord, Piano"
-  maintainer         = "Joel Mayes"
-  maintainerEmail    = "joel_mayes@dingoblue.net.au"
-
- footer = "Mutopia-2014/04/03-100"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
-}
-
 Global = {
    \key b \minor
    \time 6/4
    \partial 8
-   \set PianoStaff.connectArpeggios = ##t 
+   \set PianoStaff.connectArpeggios = ##t
 }
 
 noSee = {
@@ -62,11 +39,11 @@ revertDots = { % Revert dots
 
 suggestAcc = {
   \override Staff.AccidentalSuggestion.X-extent = #ly:accidental-interface::width
-  \set suggestAccidentals = ##t 
+  \set suggestAccidentals = ##t
 }
 
 noSuggestAcc = {
-  \set suggestAccidentals = ##f 
+  \set suggestAccidentals = ##f
 }
 
 
@@ -89,7 +66,7 @@ VoiceI =  \relative c'' { \voiceOne
    \repeat volta 2 {
       cis8
       cis2.~ cis8[ d cis b cis ais]
-      \suggestAcc	
+      \suggestAcc
       b4. cis8[ d! e] d[ cis d b] e4
       \noSuggestAcc
       cis4.\prall b8 a4~ \stemDown a8[ b'a g a fis]
@@ -197,23 +174,33 @@ VoiceXtra =  \relative c'' {
    }
 }
 
-\score {
-   \new PianoStaff <<
+
+\bookpart {
+  \header {
+    maintainer = "Joel Mayes"
+    maintainerEmail = "joel_mayes@dingoblue.net.au"
+    maintainerWeb = ""
+  }
+  \include "../header.ily"
+  \header { title = "Courante" }
+  \score {
+    \new PianoStaff <<
       \context Staff = Upper <<
-         \Global
-	 \clef treble
-         \new Voice <<\voiceOne \VoiceI >>
-         \new Voice <<\voiceTwo \VoiceII >>
-	 \new Voice <<\voiceThree \VoiceXtra >>
+        \Global
+        \clef treble
+        \new Voice <<\voiceOne \VoiceI >>
+        \new Voice <<\voiceTwo \VoiceII >>
+        \new Voice <<\voiceThree \VoiceXtra >>
       >>
       \context Staff = Lower <<
-         \Global
-	 \clef bass
-	 \new Voice \VoiceIII
+        \Global
+        \clef bass
+        \new Voice \VoiceIII
       >>
-   >>
-   \layout { }
-   \midi { 
-     \tempo 4 = 100
-   }
+    >>
+    \layout { }
+    \midi {
+      \tempo 4 = 100
+    }
+  }
 }

@@ -1,28 +1,5 @@
 \version "2.18.2"
 
-\header {
-  title        = "French Suite 3: Allemande"
-  composer     = "J. S. Bach (1685-1750)"
-  opus         = "BWV 814"
-  style        = "Baroque"
-  license      = "Public Domain"
-  enteredby    = "Joel Mayes"
-  lastupdated  = "2014/Mar/28"
-  date         = "1722"
-  source       = "Bach-Gesellschaft, 1863"
-
-  mutopiatitle       = "French Suite no. 3 in B minor"
-  mutopiacomposer    = "BachJS"
-  mutopiaopus        = "BWV 814"
-  mutopiainstrument  = "Harpsichord, Piano"
-  maintainer         = "Joel Mayes"
-  maintainerEmail    = "joel_mayes@dingoblue.net.au"
-
- footer = "Mutopia-2014/04/03-100"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "public domain" " by the typesetter " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
-}
-
 Global = {
    \key b \minor
    \time 4/4
@@ -46,7 +23,7 @@ VoiceI =  \relative c' {
       <<\relative fis' { fis2^~ fis4 r16}\\ \relative e' {r16 e d cis d8 cis16 b cis4 r16}>>	%12
    }
    \repeat volta 2 {
-      cis'16 gis b 	
+      cis'16 gis b
       ais8. cis16 fis, fis' cis e d8. fis16 b, b' fis a	%13
       g e  b d c g' fis a dis,8\prall b r16 e b d	%14
       c e a, c b e g, b a e' fis, a g e' e, g	%15
@@ -97,21 +74,30 @@ VoiceII =  \relative c {
 }
 
 
-\score {
-   \new PianoStaff <<
+\bookpart {
+  \header {
+    maintainer         = "Joel Mayes"
+    maintainerEmail    = "joel_mayes@dingoblue.net.au"
+  }
+  \include "../header.ily"
+  \header { title = "Allemande" }
+
+  \score {
+    \new PianoStaff <<
       \accidentalStyle Score.piano-cautionary
       \new Staff {
-         \Global 
-         \VoiceI
+        \Global
+        \VoiceI
       }
-      \new Staff { 
-         \Global 
-         \clef bass 
-         \VoiceII 
+      \new Staff {
+        \Global
+        \clef bass
+        \VoiceII
       }
-   >>
-   \layout { }
-   \midi { 
+    >>
+    \layout { }
+    \midi {
       \tempo 4 = 80
-   }
+    }
+  }
 }
