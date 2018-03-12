@@ -1,31 +1,8 @@
 \version "2.18.2"
 \language "english"
 
-\header {
-  title        = "French Suite III: Trio"
-  composer     = "J. S. Bach (1685-1750)"
-  opus         = "BWV 814"
-  style        = "Baroque"
-  license      = "Creative Commons Attribution-ShareAlike 4.0"
-  enteredby    = "Knute Snortum"
-  lastupdated  = "2014/Mar/30"
-  date         = "1722"
-  source       = "Bach-Gesellschaft, 1863"
-
-  mutopiatitle       = "French Suite no. 3 in B minor"
-  mutopiacomposer    = "BachJS"
-  mutopiaopus        = "BWV 814"
-  mutopiainstrument  = "Harpsichord, Piano"
-  maintainer         = "Knute Snortum"
-  maintainerEmail    = "knute (at) snortum (dot) net"
-  maintainerWeb      = "http://www.musicwithknute.com/"
- footer = "Mutopia-2014/04/03-100"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
-}
-
 staffUp = {
-  \change Staff = "upper" 
+  \change Staff = "upper"
   \stemDown
 }
 
@@ -41,14 +18,14 @@ textCapo = "Menuet da Capo."
 highVoiceOne = \relative c' {
   | fs8 g a4 g
   | c4 b a
-  | g4 b8 a g fs 
+  | g4 b8 a g fs
   | a8 g fs g e g
   | as8 b cs as b d
   | e16 fs g8 fs4. e8
   | d8 cs e d cs b
-  
+
   \barNumberCheck #8
-  
+
   | fs'2.
   |
 }
@@ -61,9 +38,9 @@ upperMiddleOne = \relative c' {
   | r4 e d
   | r4 r8 cs' fs,4
   | b2.
-  
+
   \barNumberCheck #8
-  
+
   | as2.
   |
 }
@@ -76,9 +53,9 @@ lowVoiceOne = \relative c' {
   | g2.
   | as,2.
   | b4 a g
-  
+
   \barNumberCheck #8
-  
+
   | fs2.
   |
 }
@@ -93,9 +70,9 @@ highVoiceTwo = \relative c''' {
   | d8 e fs d e g
   | b4 a g
   | fs8 e g fs e fs
-  
+
   \barNumberCheck #16
-  
+
   | d2.
   | a'8 g fs4 g
   | e4 fs g
@@ -104,9 +81,9 @@ highVoiceTwo = \relative c''' {
   | cs8 d e cs d fs
   | g4 fs e
   | d8 cs e d cs d
-  
+
   \barNumberCheck #24
-  
+
   | b2.
   |
 }
@@ -119,9 +96,9 @@ upperMiddleTwo = \relative c'' {
   | fs8 g a4 g ~
   | g4 fs e
   | d4 d' cs
-  
+
   \barNumberCheck #16
-  
+
   | d2.
   | fs8 e d4 e
   | cs4 d e ~
@@ -130,9 +107,9 @@ upperMiddleTwo = \relative c'' {
   | as8 \tieNeutral b cs as b d
   | e4 d cs
   | b4 \staffUp b' as
-  
+
   \barNumberCheck #24
-  
+
   | b2.
 }
 
@@ -144,9 +121,9 @@ lowVoiceTwo = \relative c, {
   | a2. ~
   | a4 b cs
   | d4 g, a
-  
+
   \barNumberCheck #16
-  
+
   | d,4 a d,
   | d'8 e fs e fs g
   | a8 b cs b as cs
@@ -155,14 +132,14 @@ lowVoiceTwo = \relative c, {
   | fs2. ~
   | fs4 \tieNeutral gs as
   | b4 e, fs _ \textCapo
-  
+
   \barNumberCheck #24
-  
+
   | b,2.
   |
 }
 
-global = { 
+global = {
   \key b \minor
   \time 3/4
   \accidentalStyle Score.piano-cautionary
@@ -187,14 +164,25 @@ lower = {
   \new Voice { \repeat volta 2 \lowVoiceTwo }
 }
 
-\score {
-  \new PianoStaff <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
-  \layout { 
-  } 
-  \midi { 
-    \tempo 4 = 100
+\bookpart {
+  \header {
+    maintainer         = "Knute Snortum"
+    maintainerEmail    = "knute (at) snortum (dot) net"
+    maintainerWeb      = "http://www.musicwithknute.com/"
+  }
+  \include "../header.ily"
+  \header { title = "Trio" }
+  \score {
+    \new PianoStaff <<
+      \new Staff = "upper" \upper
+      \new Staff = "lower" \lower
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 100
+    }
   }
 }
+
+\language "nederlands"

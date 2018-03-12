@@ -1,32 +1,8 @@
 \version "2.18.2"
 \language "english"
 
-\header {
-  title        = "French Suite III: Sarabande"
-  composer     = "J. S. Bach (1685-1750)"
-  opus         = "BWV 814"
-  style        = "Baroque"
-  license      = "Creative Commons Attribution-ShareAlike 4.0"
-  enteredby    = "Knute Snortum"
-  lastupdated  = "2014/Mar/29"
-  date         = "1722"
-  source       = "Bach-Gesellschaft, 1863"
-
-  mutopiatitle       = "French Suite no. 3 in B minor"
-  mutopiacomposer    = "BachJS"
-  mutopiaopus        = "BWV 814"
-  mutopiainstrument  = "Harpsichord, Piano"
-  maintainer         = "Knute Snortum"
-  maintainerEmail    = "knute (at) snortum (dot) net"
-  maintainerWeb      = "http://www.musicwithknute.com/"
-
- footer = "Mutopia-2014/04/03-100"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
- tagline = ##f
-}
-
 staffUp = {
-  \change Staff = "upper" 
+  \change Staff = "upper"
   \stemDown
 }
 
@@ -47,9 +23,9 @@ highVoiceOne = \relative c'' {
   | e16 d cs b cs a g a b cs d e
   | as,16 fs e fs g a b cs d e fs g
   | a16 b cs, d fs, e fs d' g, fs g e
-  
+
   \barNumberCheck #8
-  
+
   | d4 s s
   |
 }
@@ -61,9 +37,9 @@ upperMiddleOne = \relative c' {
   | fs8 g4 fs e8 ~
   | e8 d4 cs d8 ~
   | d8 e cs d4 cs8
-  
+
   \barNumberCheck #8
-  
+
   | r8 r16 cs d2
   |
 }
@@ -73,10 +49,10 @@ lowerMiddleOne = \relative c' {
   | fs2 e4
   | d4 cs s1
   | s2. * 3
-  
+
   \barNumberCheck #8
-  
-  | 
+
+  |
   <<
     { r16 e, fs8 ~ \stemDown fs8. d16 a fs d8 \stemUp }
     \\
@@ -93,9 +69,9 @@ lowVoiceOne = \relative c' {
   | b4 a g
   | fs4 e fs
   | g4 a8 g a4
-  
+
   \barNumberCheck #8
-  
+
   | d,4 s s
   |
 }
@@ -110,20 +86,20 @@ highVoiceTwo = \relative c' {
   | r4 b' a ~
   | a4 gs fs ~
   | fs4 fs es
-  
+
   \barNumberCheck #16
-  
+
   | fs2.
-  | c16 b c fs a g a c b a g fs 
+  | c16 b c fs a g a c b a g fs
   | e ds fs a g2
   | fs4 es fs
   | gs4 ~ gs16 fs es gs fs e d cs
   | d16 b as b fs b cs d e, cs' d e
   | fs,16 d' e fs gs, e' fs g cs, g' fs e
   | d16 b' g e fs b, as b fs b cs as
-  
+
   \barNumberCheck #24
-  
+
   | b4 b2
   |
 }
@@ -136,26 +112,26 @@ upperMiddleTwo = \relative c {
   | d'2 cs4
   | b2 a4
   | gs2.
-  
+
   \barNumberCheck #16
-  
+
   | s2. * 2
   | s4 e'2
   | b4 cs d ~
-  | d4 cs2 
+  | d4 cs2
   | s2. * 3
-  
+
   \barNumberCheck #24
-  
-  | r8 r16 fs,16 ~ fs \slurUp fs ( d8 ~ <fs d>4 ) 
+
+  | r8 r16 fs,16 ~ fs \slurUp fs ( d8 ~ <fs d>4 )
   |
 }
 
 lowerMiddleTwo = \relative c {
   | s2. * 7
-  
+
   \barNumberCheck #16
-  
+
   | r8 a cs fs ~ fs g
   | a4 b c ~
   | c4 b8 c16 b a g fs e
@@ -164,40 +140,40 @@ lowerMiddleTwo = \relative c {
   | r8 d, fs b ~ b as
   | b8 fs ~ fs4 g
   | fs8 as b cs d e ~
-  
+
   \barNumberCheck #24
-  
+
   | e16 cs d8 ~ d s s4
   |
 }
 
 lowVoiceTwo = \relative c {
-  | d2 e4 
+  | d2 e4
   | fs4 a8 fs e4
   | d8 d' ~ d16 cs b cs ~ cs b a b
   | a4 ~ a8 gs16 a b gs a fs
   | es16 gs a b a gs fs es fs gs a fs
   | cs16 es fs gs fs es ds cs d e fs d
   | b8 cs16 d cs b a gs cs8 cs,
-  
+
   \barNumberCheck #16
-  
+
   | fs2 e'4
   | ds2.
   | e2.
   | s2.
   | s4 fs2
-  | b,2 cs4 
+  | b,2 cs4
   | d4 ~ d8 b4 as8
   | b8 cs d e fs4
-  
+
   \barNumberCheck #24
-  
+
   | b4. r16 b fs d b8
   |
 }
 
-global = { 
+global = {
   \key b \minor
   \time 3/4
   \accidentalStyle Score.piano-cautionary
@@ -227,19 +203,30 @@ lower = {
   >>
 }
 
-\score {
-  \new PianoStaff \with {
-    % Added to prevent warning: "no viable initial configuration found: may 
-    % not find good beam slope"
-    \override StaffGrouper #'staff-staff-spacing #'basic-distance = #11
-  } 
-  <<
-    \new Staff = "upper" \upper
-    \new Staff = "lower" \lower
-  >>
-  \layout { 
-  } 
-  \midi { 
-    \tempo 4 = 72
+\bookpart {
+  \header {
+    maintainer         = "Knute Snortum"
+    maintainerEmail    = "knute (at) snortum (dot) net"
+    maintainerWeb      = "http://www.musicwithknute.com/"
+  }
+  \include "../header.ily"
+  \header { title = "Sarabande" }
+  \score {
+    \new PianoStaff \with {
+                                % Added to prevent warning: "no viable initial configuration found: may
+                                % not find good beam slope"
+      \override StaffGrouper #'staff-staff-spacing #'basic-distance = #11
+    }
+    <<
+      \new Staff = "upper" \upper
+      \new Staff = "lower" \lower
+    >>
+    \layout {
+    }
+    \midi {
+      \tempo 4 = 72
+    }
   }
 }
+
+\language "nederlands"
