@@ -1,4 +1,5 @@
 %Viola 1, 3rd movement
+\version "2.19.80"
 
 FirstViolaThirdMovement =
 {
@@ -127,7 +128,7 @@ FirstViolaThirdMovement =
   r a,16-. b-. cis-. b-. d-. cis-. |
   e8-. r r \afterGrace {e,\trill\( } {d16[ e]} |
   a8\) r r4 |
-  r8 \once \override Script #'script-priority = #-100 a'\trill^\markup{\tiny\flat}\( \grace {g16[ a]} d8\) r |
+  r8 \once \override Script.script-priority = #-100 a'\trill^\markup{\tiny\flat}\( \grace {g16[ a]} d8\) r |
   r4 r8 c,16 bes |
   a bes a g fis fis g a |
   bes8(\p g d4)~ |
@@ -149,7 +150,7 @@ FirstViolaThirdMovement =
   ees2~ |
   ees8 ees-.( ees-. ees-.) |
   f2~ |
-  f8 \dim f-.( f-. f-.) |
+  f8 \deprecateddim f-.( f-. f-.) |
   f2~ |
   f8 f-.( f-. f-.) |
   aes16\pp( c bes c aes c bes c |
@@ -203,17 +204,17 @@ FirstViolaThirdMovement =
   ees8 c' r c |
   r bes r c |
   r g'16-._\markup{\bold\italic "leggiero"} aes-. bes8-. c16-. d-. |
-  ees8-. g,-. \afterGrace { \once \override Script #'script-priority = #-100 g4^\markup{\tiny \flat}\trill\( } {f16[ g]} |
+  ees8-. g,-. \afterGrace { \once \override Script.script-priority = #-100 g4^\markup{\tiny \flat}\trill\( } {f16[ g]} |
   ees'8\) g,16-. aes-. bes8-. c16-. d-. |
-  ees8-. g,-. \afterGrace { \once \override Script #'script-priority = #-100 g4^\markup{\tiny \flat}\trill\( } {f16[ g]} |
+  ees8-. g,-. \afterGrace { \once \override Script.script-priority = #-100 g4^\markup{\tiny \flat}\trill\( } {f16[ g]} |
   ees'8\) a,!16-. bes-. c8-. d16-. ees-. |
   f8-. d-. \afterGrace { d4\trill\( } {c16[ d]} |
   g8\) ees-. \afterGrace { ees4\trill\( } {d16[ ees]} |
   f8\) bes,-. \afterGrace { bes4\trill\( } {a16[ bes]} |
   ees8\) g,16-. aes-. bes8-. c16-. d-. |
-  ees8-. g,-. \afterGrace { \once \override Script #'script-priority = #-100 g4^\markup{\tiny \flat}\trill\( } {f16[ g]} |
+  ees8-. g,-. \afterGrace { \once \override Script.script-priority = #-100 g4^\markup{\tiny \flat}\trill\( } {f16[ g]} |
   ees'8\) g,16-. aes-. bes8-. c16-. d-. |
-  ees8 g,-. \afterGrace { \once \override Script #'script-priority = #-100 g4\trill\(^\markup{\tiny \flat} } {f16[ g]} |
+  ees8 g,-. \afterGrace { \once \override Script.script-priority = #-100 g4\trill\(^\markup{\tiny \flat} } {f16[ g]} |
   
   %% Bar 200
   ees'8\) a,!16-. bes-. c8-. d16-. ees-. |
@@ -256,7 +257,7 @@ FirstViolaThirdMovement =
   d r g r bes r ees,, r |
   d r bes' r cis r d r |
   g r bes r d r fis,, r |
-  g r \dim g r bes r bes r |
+  g r \deprecateddim g r bes r bes r |
   bes r bes r bes r bes r |
   bes\! r r8 r4 |
   \bar "|."

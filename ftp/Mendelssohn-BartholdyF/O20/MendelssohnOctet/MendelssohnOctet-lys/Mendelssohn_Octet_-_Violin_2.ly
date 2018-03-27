@@ -1,4 +1,6 @@
 % This file creates the part for violin 2.
+\version "2.19.80"
+
 \header {
     \include "header.ly"        
     filename = "violin2.ly"
@@ -7,7 +9,7 @@
 }
 
 \paper {
-  firstpagenumber = 2
+  first-page-number = 2
 }
 #(set-global-staff-size 16)
 \include "marks.ly"
@@ -15,7 +17,7 @@
 \include "violin2_2.ly"
 \include "violin2_3.ly"
 \include "violin2_4.ly"
-\version "2.6.4"
+\version "2.19.80"
 
 
 \book {

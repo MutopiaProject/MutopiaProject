@@ -1,4 +1,5 @@
 %Cello 1, 3rd movement
+\version "2.19.80"
 
 FirstCelloThirdMovement =
 {
@@ -143,7 +144,7 @@ FirstCelloThirdMovement =
   g2~ |
   g8 g-.( g-. g-.) |
   g2~ |
-  g8 \dim g-.( g-. g-.) |
+  g8 \deprecateddim g-.( g-. g-.) |
   g2~ |
   g8 d-.( d-. d-.) |
   ees2~\pp |
@@ -246,7 +247,7 @@ FirstCelloThirdMovement =
   d r g r bes r ees,, r |
   d r bes' r cis r d r |
   g r bes r d r d,, r |
-  g r \dim g r g r g r |
+  g r \deprecateddim g r g r g r |
   g r g r g r g r |
   g\! r r8 r4 |
   \bar "|."

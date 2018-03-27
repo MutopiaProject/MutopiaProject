@@ -1,4 +1,5 @@
 %Violin 1, 4th movement
+\version "2.19.80"
 
 FirstViolinFourthMovement =
 {
@@ -41,11 +42,11 @@ FirstViolinFourthMovement =
   c' bes aes g f ees d f |
   ees d ees f g ees aes f |
   g f ees f g ees aes f |
-  g f ees d \cresc ees f g ees |
+  g f ees d \deprecatedcresc ees f g ees |
   c' bes aes g f ees d f |
   ees d ees f ees f g ees |
   c'\mf bes aes g f ees d f |
-  \cresc ees d ees f ees f g ees |
+  \deprecatedcresc ees d ees f ees f g ees |
   c'\f bes aes g f ees d f |
   ees4 r r2 |
   r2 \grace {a'16} bes4\p r |
@@ -117,7 +118,7 @@ FirstViolinFourthMovement =
   g c,) |
   f1\sf~ |
   f1~ |
-  f4 \cresc f( ges f |
+  f4 \deprecatedcresc f( ges f |
   
   %% Bar 140
   fis g! aes! a) |
@@ -133,11 +134,11 @@ FirstViolinFourthMovement =
   f1~ |
   f4 f( ges f |
   fis g! aes! a) |
-  \cresc bes1~ |
+  \deprecatedcresc bes1~ |
   bes~ |
   bes4 bes( ces bes |
   b c! des d) |
-  \cresc ees1~ |
+  \deprecatedcresc ees1~ |
   ees |
   e~\f |
   e |
@@ -163,9 +164,9 @@ FirstViolinFourthMovement =
   d f aes g f ees d c |
   bes a bes c d ees f g |
   aes! g f ees d c bes a |
-  \cresc bes c d ees f g aes! bes |
+  \deprecatedcresc bes c d ees f g aes! bes |
   c bes aes g f ees d c |
-  \cresc bes a bes c d ees d ees |
+  \deprecatedcresc bes a bes c d ees d ees |
   f g f g aes! bes c bes |
   aes g f ees d ees f g |
   aes g f g aes bes c d |
@@ -241,7 +242,7 @@ FirstViolinFourthMovement =
   R1 |
   r4 c'-.\pp f( e |
   f) c-. f( e |
-  \override Script #'padding = #'1.0
+  \override Script.padding = #'1.0
   f) e(\trill f) e(\trill |
   f) e(\trill f) e(\trill |
   f) r r2 |
@@ -260,10 +261,10 @@ FirstViolinFourthMovement =
   a) e-. a( gis |
   a) gis(\trill a) gis(\trill |
   a) ais-. cis-. g-. |
-  fis ais(\trill^\markup{\natural} b) ais(\trill |
+  fis \once \override Script.script-priority = #-100 ais(\trill^\markup{\natural} b) ais(\trill |
   b) b-. d-. aes!-. |
   g b(\trill c) b(\trill |
-  \revert Script #'padding
+  \revert Script.padding
   c) cis-. e-. bes!-. |
   a r d2 |
   d d |
@@ -321,7 +322,7 @@ FirstViolinFourthMovement =
   \afterGrace { des\( } { c16\stopTrillSpan[ des\)] } |
   c4 r ees''2 |
   c aes |
-  ces,,1~\sf\startTrillSpan^\markup{" " \raise #3.0 {\tiny\flat}} |  
+  ces,,1~\sf\startTrillSpan^\markup{{\tiny\flat}} |  
   \afterGrace { ces\( } { bes16\stopTrillSpan[ ces\)] } |
   bes4 bes'( d f |
   aes1\sf)~ |
@@ -366,18 +367,18 @@ FirstViolinFourthMovement =
   aes g bes aes c bes aes g |
   f ees! d c bes aes f aes |
   g\p f ees f g ees aes f |
-  g f ees f \cresc g ees aes f |
+  g f ees f \deprecatedcresc g ees aes f |
   g f ees d ees f g ees |
   c' bes aes g f ees d f |
-  ees d ees f \cresc g ees aes f |
+  ees d ees f \deprecatedcresc g ees aes f |
   g f ees f g ees aes f |
   g f ees d ees f g ees |
   c' bes aes g f ees d f |
   ees\mf d ees f ees f g ees |
-  c' bes aes g \cresc f ees d f |
+  c' bes aes g \deprecatedcresc f ees d f |
   ees d ees f ees f g ees |
   c'\f bes aes g f ees d ees |
-  \cresc c' bes aes g f ees d ees |
+  \deprecatedcresc c' bes aes g f ees d ees |
   c' bes aes g f ees d ees |
   ees'\ff ees, ees' ees, ees' ees, ees' ees, |
   d' ees, d' ees, c' ees, c' ees, |

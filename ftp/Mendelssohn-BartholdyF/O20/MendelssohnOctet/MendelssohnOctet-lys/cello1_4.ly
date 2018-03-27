@@ -1,4 +1,5 @@
 %Cello 1, 4th movement
+\version "2.19.80"
 
 FirstCelloFourthMovement =
 {
@@ -59,11 +60,11 @@ FirstCelloFourthMovement =
   aes2:8 bes2:8 |
   ees2:8 ees2:8 |
   c2:8 c2:8 |
-  g2:8 \cresc g2:8 |
+  g2:8 \deprecatedcresc g2:8 |
   aes2:8 bes2:8 |
   ees2:8 c2:8 |
   aes2:8\mf bes2:8 |
-  \cresc ees2:8 c2:8 |
+  \deprecatedcresc ees2:8 c2:8 |
   aes2:8\f bes2:8 |
   ees4 ees'8 ees ees ees d d |
   ees4 r r2 |
@@ -87,7 +88,7 @@ FirstCelloFourthMovement =
   e(\< f g a\! bes\> d c bes\! |
   a c bes a g bes a g |
   f a g f ees! g f ees) |
-  d( f ees d \dim ees g f ees |
+  d( f ees d \deprecateddim ees g f ees |
   d f ees d c ees d c |
   bes4)\p r r2 |
   R1 |
@@ -127,7 +128,7 @@ FirstCelloFourthMovement =
   R1*3 |
   a,8\p( bes c d ees d c bes |
   a bes c d ees d c bes) |
-  a( bes \cresc c d ees d c bes |
+  a( bes \deprecatedcresc c d ees d c bes |
   a bes c bes a g f ees) |
   d1\<( |
   f2 bes)\! |
@@ -141,11 +142,11 @@ FirstCelloFourthMovement =
   a bes c d ees d c bes) |
   a( bes c d ees d c bes |
   a bes c d ees c bes a) |
-  \cresc aes!( bes b c d c b bes |
+  \deprecatedcresc aes!( bes b c d c b bes |
   aes bes b c d c b bes) |
   aes( bes b c d c b bes |
   aes bes b c d c bes aes) |
-  \cresc g( aes bes c des c bes aes |
+  \deprecatedcresc g( aes bes c des c bes aes |
   g aes bes c des c bes aes) |
   ges(\f aes bes c des c bes aes) |
   
@@ -370,15 +371,15 @@ FirstCelloFourthMovement =
   f |
   g4 r r2 |
   R1*3 |
-  g2:8\p \cresc g2:8 |
+  g2:8\p \deprecatedcresc g2:8 |
   g2:8 g2:8 |
   g2:8 g2:8 |
   f2:8 f2:8 |
   g2:8\mf g2:8 |
-  \cresc f2:8 f2:8 |
+  \deprecatedcresc f2:8 f2:8 |
   g2:8 ees2:8\f |
   ees2:8 ees2:8 |
-  \cresc ees2:8 ees2:8 |
+  \deprecatedcresc ees2:8 ees2:8 |
   ees2:8 ees2:8 |
   <aes, ees'>1\ff~ |
   <aes ees'> |

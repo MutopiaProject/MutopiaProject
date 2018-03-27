@@ -1,4 +1,6 @@
 % This file creates the part for viola 2.
+\version "2.19.80"
+
 \header {
     \include "header.ly"        
     filename = "viola_2.ly"
@@ -7,7 +9,7 @@
 }
 
 \paper {
-  firstpagenumber = 2
+  first-page-number = 2
 }
 
 #(set-global-staff-size 16)
@@ -16,7 +18,7 @@
 \include "viola2_2.ly"
 \include "viola2_3.ly"
 \include "viola2_4.ly"
-\version "2.6.4"
+\version "2.19.80"
 
 
 \book {

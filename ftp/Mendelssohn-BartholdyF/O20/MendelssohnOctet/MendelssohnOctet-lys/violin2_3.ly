@@ -1,4 +1,5 @@
 %Violin 2, 3rd movement
+\version "2.19.80"
 
 SecondViolinThirdMovement =
 {
@@ -209,7 +210,7 @@ SecondViolinThirdMovement =
   d r g r bes r ees,, r |
   d r bes' r cis r d r |
   g r bes r d r fis,, r |
-  g r \dim g r bes r bes r |
+  g r \deprecateddim g r bes r bes r |
   bes r bes r bes r bes r |
   bes\! r r8 r4 |
   \bar "|."
