@@ -8,22 +8,8 @@
   ragged-last-bottom = ##f
 }
 
-\header {
-  title = "String Quartet in E-flat major"
-  composer = "Joseph Haydn (1732-1809)"
-  opus = "Op. 1 No. 2"
-
-  mutopiacomposer = "HaydnFJ"
-  mutopiainstrument = "String Quartet"
-  date = "ca. 1757-62"
-  source = "Trautwein & Comp, Berlin"
-  style = "Classical"
-  license = "Creative Commons Attribution 4.0"
-  maintainer = "Urs Metzger"
-}
-
 breakVoice = {}
-
+\include "header.ily"
 \include "defs.ily"
 \include "vl_i_a.ily"
 \include "vl_ii_a.ily"
