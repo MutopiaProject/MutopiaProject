@@ -6,29 +6,19 @@
   ragged-last-bottom = ##f
 }
 
+\include "../header.ily"
 \header {
-  title = "String Quartet in D major"
   subtitle = \markup { \abs-fontsize #14 "Violoncello" }
-  composer = "Joseph Haydn (1732-1809)"
-  opus = "Op. 1 No. 3"
-
-  mutopiacomposer = "HaydnFJ"
-  mutopiainstrument = "String Quartet"
-  date = "ca. 1757-62"
-  source = "Trautwein & Comp, Berlin"
-  style = "Classical"
-  license = "Creative Commons Attribution 4.0"
-  maintainer = "Urs Metzger"
 }
 
 breakVoice = { \break }
 
-\include "defs.ily"
-\include "vc_a.ily"
-\include "vc_b.ily"
-\include "vc_c.ily"
-\include "vc_d.ily"
-\include "vc_e.ily"
+\include "../defs.ily"
+\include "../vc_a.ily"
+\include "../vc_b.ily"
+\include "../vc_c.ily"
+\include "../vc_d.ily"
+\include "../vc_e.ily"
 
 
 \score {

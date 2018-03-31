@@ -5,29 +5,19 @@
   ragged-bottom = ##f
 }
 
+\include "../header.ily"
 \header {
-  title = "String Quartet in D major"
   subtitle = \markup { \abs-fontsize #14 "Violin II" }
-  composer = "Joseph Haydn (1732-1809)"
-  opus = "Op. 1 No. 3"
-
-  mutopiacomposer = "HaydnFJ"
-  mutopiainstrument = "String Quartet"
-  date = "ca. 1757-62"
-  source = "Trautwein & Comp, Berlin"
-  style = "Classical"
-  license = "Creative Commons Attribution 4.0"
-  maintainer = "Urs Metzger"
 }
 
 breakVoice = { \break }
 
-\include "defs.ily"
-\include "vl_ii_a.ily"
-\include "vl_ii_b.ily"
-\include "vl_ii_c.ily"
-\include "vl_ii_d.ily"
-\include "vl_ii_e.ily"
+\include "../defs.ily"
+\include "../vl_ii_a.ily"
+\include "../vl_ii_b.ily"
+\include "../vl_ii_c.ily"
+\include "../vl_ii_d.ily"
+\include "../vl_ii_e.ily"
 
 \score {
   \ViolinII_a
