@@ -14,23 +14,24 @@
 	mutopiainstrument = "Cello"
 	source = "Werner Icking"
 	style = "Baroque"
-	copyright = "Public Domain"
 	maintainer = "Hajo Dezelski"
 	maintainerEmail = "dl1sdz (at) gmail.com"
 	maintainerWeb = "http://www.roxele.de/"
 	lastupdated = "2017/Nov/28"
 
-	footer = "Mutopia-2005/01/15-518"
-	tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+	license = "Public Domain"
+	footer = "Mutopia-2018/03/31-518"
+	copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+	tagline = ##f
 }
 
-\include "./bwv-1011-1/bwv-1011-1_original.ly"
-\include "./bwv-1011-2/bwv-1011-2_original.ly"
-\include "./bwv-1011-3/bwv-1011-3_original.ly"
-\include "./bwv-1011-4/bwv-1011-4_original.ly"
-\include "./bwv-1011-5-1/bwv-1011-5-1_original.ly"
-\include "./bwv-1011-5-2/bwv-1011-5-2_original.ly"
-\include "./bwv-1011-6/bwv-1011-6_original.ly"
+\include "./bwv-1011-1_original.ly"
+\include "./bwv-1011-2_original.ly"
+\include "./bwv-1011-3_original.ly"
+\include "./bwv-1011-4_original.ly"
+\include "./bwv-1011-5-1_original.ly"
+\include "./bwv-1011-5-2_original.ly"
+\include "./bwv-1011-6_original.ly"
 
 
 \paper {
