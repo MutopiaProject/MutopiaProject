@@ -188,7 +188,7 @@ bass = \new Voice \relative f {
        \bass
   >>
   
-  \midi { \tempo 4=60 }
+  \midi { \tempo 4=54 }
 
 }
 \score {
