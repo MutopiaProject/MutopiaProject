@@ -146,7 +146,7 @@ tenor = \new Voice \relative f
   f1
   }
 
-bass = \relative f {
+bass = \new Voice \relative f {
   \voiceTwo
   \change Staff = "down"
   f1 ~ |
@@ -180,17 +180,12 @@ bass = \relative f {
 
 \score {
   \articulate
-  \new PianoStaff << 
     \new Staff \with {midiInstrument = #"harpsichord"}
     << \global \clef treble
        \alto
        \soprano 
-     >>
-    \new Staff \with {midiInstrument = #"harpsichord"}
-    << \global \clef bass
-       \tenor \\ 
+       \tenor 
        \bass
-     >>
   >>
   
   \midi { \tempo 4=60 }
