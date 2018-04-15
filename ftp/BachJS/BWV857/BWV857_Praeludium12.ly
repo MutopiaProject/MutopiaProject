@@ -3,12 +3,13 @@
 \header {
   title = "Praeludium XII"
   composer = "Johann Sebastian Bach"
+  opus = "BWV 857"
   mutopiatitle = "Das Wohltemperierte Clavier I, Praeludium XII"
   mutopiacomposer = "BachJS"
   mutopiainstrument = "Harpsichord, Piano"
   mutopiaopus = "BWV 857"
-  date = "18th Century"
-  source = "Bach Gesellschaft"
+  date = "1722"
+  source = "Bach-Gesellschaft Ausgabe, Band 14, Breitkopf und Haertel, 1866"
   style = "Baroque"
   copyright = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Sven Reichard"
@@ -23,11 +24,11 @@ global = {
  \time 4/4
 }
 
-soprano = \relative f'
-{
+soprano = \new Voice  \relative f'
+{ \voiceOne
   |
   f16 as c f  g, f' e g  as, c f e f4 |
-  des4 des16 des c bes  as8. bes16  bes8.\prall as32 bes |
+  des4 ~ des16 des c bes  as8. bes16  bes8.\prall as32 bes |
 
   c4 r16 des g, bes e,8. f16  f8.\prall e32 f |
   g16 c bes des ~ des des c bes a8. bes16  bes8.\prall a32 bes |
@@ -62,8 +63,8 @@ soprano = \relative f'
   
 }
 
-alto = \relative f'
-{
+alto = \new Voice \relative f'
+{ \voiceTwo
   |
   f4 g as f'16 c bes as |
   des as g bes e,4 f8 r s4 |
@@ -78,7 +79,7 @@ alto = \relative f'
   s2 s4 r16 as g8 |
   c16 as c e f g e f g2 ~ |
 
-  g16 c, f as d, f b, c b8. \prall c16 c8.\prall b32 c |
+  g16 c, f as d, f b, c b8. ^\prall c16 c8.^\prall^\markup{\natural} b32 c |
   d4 b es8 f r16 g as f |
   %%%%%
 
@@ -93,27 +94,36 @@ alto = \relative f'
   as f'16 c bes as des as g bes e,4 |
 
   f16 es d f b,4 r16 c bes des g, des' c bes |
-  s1 |
-
-  s1 |
-  r16 c g bes as4 g8 f g4 |
-  << c1 \\ as >> 
+  \voiceOne
+  \change Staff = "down"
+  as4 bes c as |
+  bes g c b|
+  \change Staff = "up"
+  \voiceTwo
+  r16 c
+  \change Staff = "down"
+  \voiceOne
+  g bes! as4 g8 f g4 |
+  \change Staff = "up"
+  \voiceTwo
+  << c1 \\ a >> 
 }
 
 
-tenor = \relative f
-{
+tenor = \new Voice \relative f
+{ \voiceOne
+  \change Staff = "down"
   as4 bes c as |
   bes g f16 as c f g, f' e f|
 
-  as,8 r s4 c,16 e g c des, c' bes des |
+  as,8 s s4 c,16 e g c des, c' bes des |
   e,8 g c4 f,,16 a c f ges, f' es ges |
 
   a,8 c a4 s2 |
   s4 g'8 r as,16 c es as bes, as' g bes |
 
   c, es as c  des, c' bes des  es, g bes es  f, es' des f |
-  g, f' es bes c2 bes4 |
+  g, f' es bes c2 bes4\prall |
   as4 ~ as16 r r8 e16 g bes des c, f e g |
 
   as2 g16 b d g as, g' f as |
@@ -129,13 +139,16 @@ tenor = \relative f
   c as bes g |
 
   as f g e |
-  <<{as bes c as | bes g c b } \\ {f g as f g e f2  }
-  >>
+  f g as f |
+  g e f2  |
+  
   g4 s s2 |
   f1
   }
 
 bass = \relative f {
+  \voiceTwo
+  \change Staff = "down"
   f1 ~ |
   f2 f4 g |
   
@@ -156,11 +169,11 @@ bass = \relative f {
   a4 f bes c |
 
   d8 e f4 c ~ c8. des16 |
-  es8 es' des c bes16 f des bes ~ bes c des bes |
+  es!8 es' des c bes16 f des bes ~ bes c des bes |
 
   c4. c8 des2 |
   c1 ~  |c ~  |c~ | c~  |
-  c4 r16 f bes, d c,2 |
+  c4 r16 f b, d c,2 |
   f1\fermata
   }
 
@@ -170,8 +183,8 @@ bass = \relative f {
   \new PianoStaff << 
     \new Staff \with {midiInstrument = #"harpsichord"}
     << \global \clef treble
-       \soprano \\
        \alto
+       \soprano 
      >>
     \new Staff \with {midiInstrument = #"harpsichord"}
     << \global \clef bass
@@ -180,20 +193,21 @@ bass = \relative f {
      >>
   >>
   
-  \midi { \tempo 4=88 }
+  \midi { \tempo 4=60 }
 
 }
 \score {
   \new PianoStaff << 
-    \new Staff
+    \new Staff="up"
     << \global \clef treble
-       \soprano \\
+       \soprano 
        \alto
-     >>
-    \new Staff
-    << \global \clef bass
-       \tenor \\ 
+       \tenor 
        \bass
+     >>
+    \new Staff="down"
+    << \global \clef bass
+       s1
      >>
   >>
   \layout { }
