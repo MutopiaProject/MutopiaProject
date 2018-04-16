@@ -17,6 +17,14 @@
   version = "2.18.2"
 }
 
+\paper {
+   ragged-bottom = ##f
+   ragged-last-bottom = ##f
+}
+
+staffup       = { \change Staff = "up"  }
+staffdown     = { \change Staff = "down"  }
+
 \include "articulate.ly"
 
 global = {  
@@ -95,16 +103,16 @@ alto = \new Voice \relative f'
 
   f16 es d f b,4 r16 c bes des g, des' c bes |
   \voiceOne
-  \change Staff = "down"
+  \staffdown
   as4 bes c as |
   bes g c b|
-  \change Staff = "up"
+  \staffup
   \voiceTwo
   r16 c
-  \change Staff = "down"
+  \staffdown
   \voiceOne
   g bes! as4 g8 f g4 |
-  \change Staff = "up"
+  \staffup
   \voiceTwo
   << c1 \\ a >> 
 }
@@ -112,7 +120,7 @@ alto = \new Voice \relative f'
 
 tenor = \new Voice \relative f
 { \voiceOne
-  \change Staff = "down"
+  \staffdown
   as4 bes c as |
   bes g f16 as c f g, f' e f|
 
@@ -148,7 +156,7 @@ tenor = \new Voice \relative f
 
 bass = \new Voice \relative f {
   \voiceTwo
-  \change Staff = "down"
+\staffdown
   f1 ~ |
   f2 f4 g |
   
@@ -180,16 +188,20 @@ bass = \new Voice \relative f {
 
 \score {
   \articulate
-    \new Staff \with {midiInstrument = #"harpsichord"}
-    << \global \clef treble
-       \alto
-       \soprano 
-       \tenor 
-       \bass
-  >>
-  
+\new PianoStaff <<
+  \new Staff="up" \with {midiInstrument = #"harpsichord"}
+  << \global \clef treble
+     \soprano 
+     \alto
+   >>
+  \new Staff="down" \with {midiInstrument = #"harpsichord"}
+  << \global \clef treble
+     \soprano 
+     \alto
+   >>
+>>  
   \midi { \tempo 4=54 }
-
+  
 }
 \score {
   \new PianoStaff << 
