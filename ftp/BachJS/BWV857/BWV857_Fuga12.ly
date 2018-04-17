@@ -1,4 +1,3 @@
-
 \version "2.18.2"
 
 \header {
@@ -8,18 +7,20 @@
   mutopiatitle = "Das Wohltemperierte Clavier I, Fuga XII"
   mutopiacomposer = "BachJS"
   mutopiainstrument = "Harpsichord, Piano"
-  mutopiaopus = "BWV 857"
   date = "1722"
-  source = "Bach-Gesellschaft Ausgabe, Band 14, Breitkopf und Haertel, 1866, Plate B.W.XIV, pp.44-47"
+  source = "Bach-Gesellschaft Ausgabe, Band 14, Breitkopf und Härtel, 1866, Plate B.W.XIV, pp.46-47"
   style = "Baroque"
   copyright = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Sven Reichard"
+  maintainerEmail = "sven,reichard#freenet,de"
   version = "2.18.2"
 }
+
 \paper {
    ragged-bottom = ##f
    ragged-last-bottom = ##f
-}
+ }
+
 staffup       = { \change Staff = "up" \voiceTwo }
 staffdown     = { \change Staff = "down" \voiceOne  }
 
@@ -29,8 +30,9 @@ global = {
  \time 4/4
 }
 
-%\parallelMusic #'( soprano alto tenor bass ) {
-  %1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Soprano
+
 soprano = \new Voice \relative c''{
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
@@ -105,7 +107,11 @@ soprano = \new Voice \relative c''{
   f4~f16 es des c des4~des16 bes c des|
   e,8 c'~c16 g as f~f f e d e4\prall|
   f1\fermata
-  }
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Alto
+%
 alto = \new Voice \relative c' {
   \voiceOne
   r1|
@@ -186,9 +192,10 @@ alto = \new Voice \relative c' {
 %%%
   bes16 des c bes a4 r16 c bes as g f es des |
   c1 |
-  c1\fermata
+  c1
 }
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Tenor
 tenor = \new Voice \relative c'
 {
   \staffup
@@ -279,9 +286,11 @@ tenor = \new Voice \relative c'
 				%56
   des c des es f4~f16 f g as bes4~|
   bes16 bes as g as4 g2 |
-  a1 \fermata
+  a1
 }
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Bass
 bass = \new Voice \relative c {
   \voiceTwo
   r1|
@@ -363,11 +372,13 @@ bass = \new Voice \relative c {
   
 }
 
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MIDI
 \score {
   \articulate
   \new PianoStaff << 
     \new Staff="up" \with {midiInstrument = #"harpsichord"}
+				% need to name the staves so staff change doesn't lead to warnings
     << \global \clef treble
        \soprano
        \alto
@@ -382,6 +393,9 @@ bass = \new Voice \relative c {
   \midi { \tempo 4=68 }
 
 }
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Printed score
 \score {
   \new PianoStaff << 
     \new Staff="up"
@@ -399,30 +413,3 @@ bass = \new Voice \relative c {
   \layout { }
   
 }
-
-%\score {
-%  \new PianoStaff << 
-%    \new Staff
-%    << \global \clef treble
-%       \relative c'' \soprano
-%     >>
-%    \new Staff
-%    <<
-%      \global \clef alto 
-%       \relative c' \alto
-%      >>
-%    \new Staff
-%    <<
-%      \global \clef tenor 
-%       \relative c' \tenor
-%      >>
-%
-%    \new Staff
-%    << \global \clef bass
-%       \relative c \bass
-%     >>
-%  >>
-%  \layout { }
-%  
-%
-%}

@@ -7,13 +7,12 @@
   mutopiatitle = "Das Wohltemperierte Clavier I, Praeludium XII"
   mutopiacomposer = "BachJS"
   mutopiainstrument = "Harpsichord, Piano"
-  mutopiaopus = "BWV 857"
   date = "1722"
-  source = "Bach-Gesellschaft Ausgabe, Band 14, Breitkopf und Haertel, 1866, Plate B.W.XIV, pp.44-47"
+  source = "Bach-Gesellschaft Ausgabe, Band 14, Breitkopf und Härtel, 1866, Plate B.W.XIV, pp.44-45"
   style = "Baroque"
   copyright = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Sven Reichard"
-  lastupdated = "2018/April/14"
+  maintainerEmail = "sven,reichard#freenet,de"
   version = "2.18.2"
 }
 
@@ -67,7 +66,7 @@ soprano = \new Voice  \relative f'
 
   e f g e bes' des, c bes as bes c f, d' as g f |
   e4 f4 r16 d b c r bes c e |
-  f1
+  f1\fermata
   
 }
 
@@ -104,8 +103,8 @@ alto = \new Voice \relative f'
   f16 es d f b,4 r16 c bes des g, des' c bes |
   \voiceOne
   \staffdown
-  as4 bes c as |
-  bes g c b|
+  s1 |
+  s2 c4 b|
   \staffup
   \voiceTwo
   r16 c
@@ -147,8 +146,8 @@ tenor = \new Voice \relative f
   c as bes g |
 
   as f g e |
-  f g as f |
-  g e f2  |
+  \voiceThree <f as> <g bes> <as c> <f as> |
+  <g bes> <e g> f2  |
   
   g4 s s2 |
   f1
@@ -186,6 +185,8 @@ bass = \new Voice \relative f {
   }
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% MIDI
 \score {
   \articulate
 \new PianoStaff <<
@@ -193,16 +194,21 @@ bass = \new Voice \relative f {
   << \global \clef treble
      \soprano 
      \alto
+     \tenor
+     \bass
    >>
   \new Staff="down" \with {midiInstrument = #"harpsichord"}
   << \global \clef treble
-     \soprano 
-     \alto
+     s1
    >>
 >>  
   \midi { \tempo 4=54 }
   
 }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Printed score
 \score {
   \new PianoStaff << 
     \new Staff="up"
