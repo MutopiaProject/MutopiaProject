@@ -1,3 +1,4 @@
+
 \version "2.18.2"
 
 \header {
@@ -9,7 +10,7 @@
   mutopiainstrument = "Harpsichord, Piano"
   mutopiaopus = "BWV 857"
   date = "1722"
-  source = "Bach-Gesellschaft Ausgabe, Band 14, Breitkopf und Haertel, 1866"
+  source = "Bach-Gesellschaft Ausgabe, Band 14, Breitkopf und Haertel, 1866, Plate B.W.XIV, pp.44-47"
   style = "Baroque"
   copyright = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Sven Reichard"
