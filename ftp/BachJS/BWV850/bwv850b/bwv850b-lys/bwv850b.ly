@@ -11,7 +11,7 @@
 	mutopiacomposer = "BachJS"
 	mutopiaopus = "BWV 850"
 	mutopiainstrument = "Harpsichord, Piano"
-	source = "Breitkopf & Härtel, 1866"
+	source = "Breitkopf & Härtel, 1866, Plate XIV, p.20-21"
 
 	style= "Baroque"
 	copyright = "Creative Commons Share-Alike 4.0"
@@ -23,11 +23,13 @@ global = {\time 4/4 \key d \major}
 roll = \relative{d32 e fis g fis e fis d}
 theme = \relative{\roll b8. b16 a8. g16}
 scale = \relative{d e fis g a b cis}
-soprano={
+
+
+soprano=\new Voice{\voiceOne
   r1 | r1 | r1 | r1 |
   r4 \transpose d a' {\theme} | %5
   \relative c'' {
-    cis8~cis32 e fis g a8. a16 a8~a32 d, e fis g8. g16 | %6
+    cis8.*5/6 e32 fis g a8. a16 a8.*5/6 d,32 e fis g8. g16 | %6
     g4 fis8. e16 d8. e16 cis8. cis16 | %7
     cis4
     \modalTranspose d b \scale {\theme}|
@@ -36,7 +38,7 @@ soprano={
     b4 \transpose d g' {\theme} |
     b8. cis16 d2 cis4 | %12
     d \transpose d d'' {\theme} | %13
-    fis8~fis32 d e fis g8. g16 g8. a16 fis8. fis16 |%14
+    fis8.*5/6 d32 e fis g8. g16 g8. a16 fis8. fis16 |%14
     fis8. e32 dis e4~e8. dis16 e8. fis16 |%15
     b,8. c32 a b8. c16 g4 fis |%16
     \modalTranspose d e' \scale {\roll} g'8 r r2 |%17
@@ -59,13 +61,13 @@ soprano={
   
 }
 
-alto= {
+alto= \new Voice{\voiceTwo
   r1 | r1 | r1 |
   r4 \transpose d d' {\theme}|
   \relative f' {
     fis8. gis16 a4~a gis | %5
     a cis d d | %6
-    cis8~cis32 e d cis d8. cis16 b4 a | %7
+    cis8.*5/6 e32 d cis d8. cis16 b4 a | %7
     a4 b~b ais | %8
     b r d8. b16 b8. a16 | %9
     a4 r c8. a16 a8. g16 |
@@ -89,11 +91,11 @@ alto= {
     }
   }
 
-tenor =  {
+tenor =  \new Voice {\voiceOne
   r1 | %1
   r4 \transpose d a {\theme} | %2
   \relative c' {
-    cis4 fis8. fis16 b,8~b32 b cis d e16 d e cis |%3
+    cis4 fis8. fis16 b,8.*5/6 b32 cis d e16 d e cis |%3
     a4 d~d cis |%4
     d cis b2  | %5
   }
@@ -128,19 +130,19 @@ tenor =  {
   
 }
 
-bass = 
-{|
+bass = \new Voice
+{|\voiceTwo
  r4 \theme  |                            %1
  \relative c {
  fis8. g16 fis8. e16 d4 e |              %2
- a,8~a32 e' fis g a2 g4~ |               %3
+ a,8. * 5/6 e'32 fis g a2 g4~ |               %3
  g8. fis32 e fis8. d16 g8. e16 a8. a,16| %4
  d8. e16 fis8. e16 d8. b16 e4 | %5
  a,4 r r2 |%6
 }
  r4 \transpose d d, {\theme}%7
  \relative f, {
-   fis8~fis32 d' e fis g8. fis16 e8. cis16 fis4  %8
+   fis8.*5/6 d'32 e fis g8. fis16 e8. cis16 fis4  %8
  
  \modalTranspose d b, \scale {\roll } gis8 r r2 | %9
  \modalTranspose d a, \scale {\roll } fis8 r r2 |
@@ -160,7 +162,7 @@ bass =
  a4 r \modalTranspose d e \scale {\roll} a'4| %20
  \roll g8 r r2 |%21
  <g g,>4 fis32 g a g fis e d cis b cis d cis b a b g a8. a16 | %22
- d,8~d32 d' e fis g4 \modalTranspose d cis \scale {\roll} fis4 | %23
+ d,8.*5/6 d'32 e fis g4 \modalTranspose d cis \scale {\roll} fis4 | %23
  \modalTranspose d b, \scale {\roll}
  \modalTranspose d e \scale {\roll}
  \modalTranspose d a \scale {\roll}
@@ -174,13 +176,24 @@ bass =
 
 \score {
 %\articulate
-  \new GrandStaff <<
-    \new Staff {\global \clef treble \soprano}
-    \new Staff {\global \clef treble \alto}
-    \new Staff {\global \clef bass \tenor}
-    \new Staff {\global \clef bass \bass}
+  \new PianoStaff <<
+    \new Staff = "up"{
+      \set Staff.midiInstrument="harpsichord"
+      \global \clef treble
+      << \soprano
+	 \alto
+	 >>
+    }
+    \new Staff = "down"{
+      \set Staff.midiInstrument="harpsichord"
+      \global \clef bass
+      <<
+	\tenor
+	\bass
+      >>
+      }
   >>
-  \midi{\tempo 4=60}
+  \midi{\tempo 4=72}
   \layout{}
   }
 
