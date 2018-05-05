@@ -4,7 +4,7 @@ footer = #(strftime "Mutopia-%Y/%B/%d-xxx" (localtime (current-time)))
 
 \header {
   filename      =       "op-10-12-wfi.ly"
-  title         =       \markup \fontsize #1 { "Revolutions - Etüde" }
+  title         =       \markup \fontsize #1 { "Revolutionary - Etüde" }
   composer      =       \markup \large { "Frédéric Chopin (1810 - 1849)" }
   opus          =       "Opus 10 Nr. 12"
   enteredby     =       "Roland Goretzki"
