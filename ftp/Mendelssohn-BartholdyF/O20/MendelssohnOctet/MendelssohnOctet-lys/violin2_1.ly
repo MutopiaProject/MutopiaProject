@@ -1,4 +1,5 @@
 %Violin 2, 1st movement
+\version "2.19.80"
 
 SecondViolinFirstMovement =
 {
@@ -8,11 +9,11 @@ SecondViolinFirstMovement =
   \repeat "tremolo" 4 { g'16\p\( bes, } \repeat "tremolo" 4 { g'16 bes,\) }
   \repeat volta 2 {
    \repeat "tremolo" 4 { g'16\( bes, } \repeat "tremolo" 4 { g'16 bes,\) }
-   << {\repeat "tremolo" 4 { g'16\( bes, } \repeat "tremolo" 4 { g'16 bes,\) } } {s4. \cresc s8 s2} >> 
+   << {\repeat "tremolo" 4 { g'16\( bes, } \repeat "tremolo" 4 { g'16 bes,\) } } {s4. \deprecatedcresc s8 s2} >> 
    \repeat "tremolo" 4 { g'16\f\( ees } \repeat "tremolo" 4 { g16 ees\) }
    \repeat "tremolo" 4 { f16\fp\( ees } \repeat "tremolo" 4 { f16 ees\) }
    \repeat "tremolo" 4 { f16\( ees } \repeat "tremolo" 4 { f16 ees\) }
-   \cresc \repeat "tremolo" 4 { aes16\( f } \repeat "tremolo" 4 { aes16 f\) }
+   \deprecatedcresc \repeat "tremolo" 4 { aes16\( f } \repeat "tremolo" 4 { aes16 f\) }
    \repeat "tremolo" 4 { aes16\f\( f } \repeat "tremolo" 4 { aes16 f\) }
    ees8 r r4 r2 |
    <ees ees'>4.\sf ees'16-. ees-. ees8( ees,) r4 |
@@ -22,8 +23,8 @@ SecondViolinFirstMovement =
    <ees' ees'>4.\sf ees'16-. ees-. ees8( ees,) r4 |
    <ees ees'>4.\sf ees'16-. ees-. ees8( ees,) r4 |
    R1 |
-   \repeat "tremolo" 4 { des'16\p( bes) } \cresc d16( ces d ces) aes8\! r |
-   r2 \cresc \repeat "tremolo" 4 { ges'16( ees) } |
+   \repeat "tremolo" 4 { des'16\p( bes) } \deprecatedcresc d16( ces d ces) aes8\! r |
+   r2 \deprecatedcresc \repeat "tremolo" 4 { ges'16( ees) } |
    \repeat "tremolo" 4 { f16\f( d) } \repeat "tremolo" 4 { ees( c) } |
    bes'16-.\ff aes-. g-. f-. ees-. d-. c-. bes-. aes g f ees d c bes aes |
    g8 r r4 r2 |
@@ -39,23 +40,23 @@ SecondViolinFirstMovement =
    g) r r2 |
    R1*2 | 
    <g bes>1~\f |
-   \dim <g bes> |
+   \deprecateddim <g bes> |
    c,2\p( ces |
    bes4) r r2 |
    R1 |
-   \cresc \repeat "tremolo" 4 { g'16\( ees } \repeat "tremolo" 4 { g16 ees\) }
+   \deprecatedcresc \repeat "tremolo" 4 { g'16\( ees } \repeat "tremolo" 4 { g16 ees\) }
    
    % Bar 40
    \repeat "tremolo" 4 { g16\f\( ees } \repeat "tremolo" 4 { g16 ees\) }
    e4 r8 bes\p( e g bes des |
-   bes4.\accent) e,8( \cresc g bes des g |
+   bes4.\accent) e,8( \deprecatedcresc g bes des g |
    bes,4.)\accent f8( bes des f\f des') |
    bes4( g e bes) |
    aes8 r r4 r2 |
    f'4.\sf f16-. f-. f8( f,) r4 |
    f'4.\sf f16-. f-. f8( f,) r4 |
    r2 r8 g'\p( f g |
-   aes\accent f des aes ees) \cresc bes''( aes bes |
+   aes\accent f des aes ees) \deprecatedcresc bes''( aes bes |
    c\accent aes ees c) b'\f\accent( f d b) |
    c r g'4.\sf g8 g g |
    fis r r4 r bes,\p( |
@@ -64,10 +65,10 @@ SecondViolinFirstMovement =
    R1*4 |
    f'1\p~ |
    f4 f2 f4( |
-   \cresc e1~) |
+   \deprecatedcresc e1~) |
    e4 e2 e4( |
    ees!2.)\f ees8. ees16 |
-   << {ees2.  ees8. ees 16} {s2 \cresc s2} >> |
+   << {ees2.  ees8. ees 16} {s2 \deprecatedcresc s2} >> |
    \repeat "tremolo" 4 { ees16\ff\( a, } \repeat "tremolo" 4 { ees'16 a,\) } |
    ees'(\sf a, ees' a,) ees'(\sf a, ees' a,) ees'(\sf a, ees' a,) ees'(\sf a, ees' a,) |
    ees'(\sf a, ees' a,) ees'(\sf a, ees' a,) ees'(\sf a, c bes a c ees a) |
@@ -99,7 +100,7 @@ SecondViolinFirstMovement =
    a a c a f8 r ees'16 ees ees d c c c bes |
    a a c a ees4( d8) r r4 |
    r r8 d\mf( g bes d bes' |
-   g4.\accent) \cresc d,8( g bes d bes' |
+   g4.\accent) \deprecatedcresc d,8( g bes d bes' |
    g4.\accent) d,8( g bes d d' |
    bes2\f f) |
    bes,1\accent |
@@ -112,7 +113,7 @@ SecondViolinFirstMovement =
    r8 bes( bes'4.) bes,8( bes'4~) |
    bes8 bes,( bes' bes, bes' bes, bes' bes,) |
    g'4( f) g( f) |
-   \cresc g8( f) g( f) g-. f-. g-. g-. |
+   \deprecatedcresc g8( f) g( f) g-. f-. g-. g-. |
    f,16\ff d d d d d d d d f f f f f f f |
    f bes bes bes bes bes bes bes bes d d d d d d d |
    bes8 r r4 r2 |
@@ -157,13 +158,13 @@ SecondViolinFirstMovement =
   <b g'>4 r8 d, g2~ |
   g8\< a16 a b b c c d8:16 ees8:16 f8:16 f8:16\! |
   ees2\ff ees4.. c16 |
-  g8 r des'4-.\accent( des-.\accent des-.\accent) |
+  g8 r des'4-.\accent( des-. -\tweak Y-offset 4 \accent des-.\accent) |
   bes2 bes4.. <bes bes'>16 |
   <bes bes'>8 r a4-.\accent( a-.\accent a-.\accent) |
   bes2 f4.. des16 |
-  bes8 r des'4-.\accent( des-.\accent des-.\accent) |
+  bes8 r des'4-.\accent( des-. -\tweak Y-offset 4 \accent des-.\accent) |
   <des f>2 <des f>4.. <des f>16 |
-  <des f>8 r <ges, c>4-.\accent( <ges c>4-.\accent <ges c>4-.\accent) |
+  <des f>8 r <ges, c>4-.\accent( <ges c>4-. -\tweak Y-offset -4 \accent <ges c>4-.\accent) |
   <f des'>2 aes4.. f16 |
   f8 r f'4-.\accent( f-.\accent f-.\accent) |
   <c f>1~ |
@@ -178,8 +179,8 @@ SecondViolinFirstMovement =
   r f-.( f-. f-.) |
   r f-.( f-. f-.) |
   r e-.( e-. e-.) |
-  r4 \dim f-.( r f-.) |
-  r2 b,(\!_\markup{\dynamic {pp} \bold\italic "con espress."} |
+  r4 \deprecateddim f-.( r f-.) |
+  r2 b,(\!_\markup{\dynamic {pp} \bold\italic\whiteout "con espress."} |
   r c) |
   R1*9 |
   r4 ees,\p( f g |
@@ -211,14 +212,14 @@ SecondViolinFirstMovement =
   a'8\p a4 a a a8( |
   bes) r r4 r2 |
   R1 |
-  f16\mf( e f g aes bes c bes \cresc aes g f g aes g f ees |
+  f16\mf( e f g aes bes c bes \deprecatedcresc aes g f g aes g f ees |
   
   %% Bar 210
   d ees f g aes g f ees) d( ees f g aes bes c d |
-  ees f g aes \cresc bes aes g f ees f g f ees d c bes) |
+  ees f g aes \deprecatedcresc bes aes g f ees f g f ees d c bes) |
   a( bes c d ees d c bes) a\<( bes c d ees f g a |
   bes8\f f d bes f bes,) bes-. bes~ |
-  bes bes4 bes \cresc bes bes8~ |
+  bes bes4 bes \deprecatedcresc bes bes8~ |
   bes bes4 bes bes bes8~ |
   bes bes4 bes8 c16\ff( bes c d ees f g a |
   bes a c bes d c ees d) f( e g f aes! g f ees) |
@@ -227,18 +228,18 @@ SecondViolinFirstMovement =
   f( ees d c d ees f g) aes\<( g f g aes bes c d\! |
   ees8) g,16\p\( bes, g' bes, g' bes, \repeat "tremolo" 4 {g'16 bes,\)} |
   \repeat "tremolo" 4 {g'16\( bes,} \repeat "tremolo" 4 {g'16 bes,\)} |
-  \cresc \repeat "tremolo" 4 {g'16\( bes,} \repeat "tremolo" 4 {g'16 bes,\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {g'16\( bes,} \repeat "tremolo" 4 {g'16 bes,\)} |
   \repeat "tremolo" 4 {g'16\(\f ees} \repeat "tremolo" 4 {g16 ees\)} |
   \repeat "tremolo" 4 {f16\(\fp ees} \repeat "tremolo" 4 {f16 ees\)} |
   \repeat "tremolo" 4 {f16\( ees} \repeat "tremolo" 4 {f16 ees\)} |
-  \cresc \repeat "tremolo" 4 {aes16\( f} \repeat "tremolo" 4 {aes16 f\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {aes16\( f} \repeat "tremolo" 4 {aes16 f\)} |
   \repeat "tremolo" 4 {aes16\f\( f} \repeat "tremolo" 4 {aes16 f\)} |
   ees8 r r4 r2 |
   <ees ees'>4.\sf ees'16-. ees-. ees8( ees,) r4 |
   <ees ees'>4.\sf ees'16-. ees-. ees8( ees,) r4 |
   R1 |
   ees'2_\markup{\dynamic {p} \bold\italic "cantabile"}( d4 c |
-  bes) \cresc g'( f ees |
+  bes) \deprecatedcresc g'( f ees |
   d) bes'8(\f aes g4 aes8 f |
   ees2)~ ees8 ees( b c |
   f2)\sf~ f8( ees d c) |
@@ -260,7 +261,7 @@ SecondViolinFirstMovement =
   c c c a b8-. g( c ees g ees') |
   c1\accent~ |
   c1 |
-  \cresc bes~ |
+  \deprecatedcresc bes~ |
   bes4 aes( g f) |
   \set doubleSlurs = ##t
   <ees, ees'>1\f~ |
@@ -297,7 +298,7 @@ SecondViolinFirstMovement =
   R1*13 |
   bes''1\p~ |
   bes2( g) |
-  \cresc f1( |
+  \deprecatedcresc f1( |
   fis)\< |
   \repeat "tremolo" 4 {g16\f\( ees} \repeat "tremolo" 4 {f!16 ees\)} |
   \repeat "tremolo" 4 {g16\( ees} \repeat "tremolo" 4 {aes16 d,\)} |
@@ -315,7 +316,7 @@ SecondViolinFirstMovement =
   aes'1~ |
   aes4 bes, g'4. f8 |
   ees16\(\fp bes g bes, g' bes, g' bes, \repeat "tremolo" 4 {g'16 bes,\)} |
-  \cresc \repeat "tremolo" 4 {g'16\( bes,} \repeat "tremolo" 4 {g'16 bes,\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {g'16\( bes,} \repeat "tremolo" 4 {g'16 bes,\)} |
   \repeat "tremolo" 4 {g'16\f\( bes,} \repeat "tremolo" 4 {g'16\< bes,\)} |
   g'2:16\! d'2:16\ff |
   ees8 r r4 <bes, f' d'>8 r r4 |

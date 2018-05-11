@@ -1,4 +1,5 @@
 %Viola 1, 1st movement
+\version "2.19.80"
 
 FirstViolaFirstMovement =
 {
@@ -9,11 +10,11 @@ FirstViolaFirstMovement =
   g8\p g4 g g g8~ |
   \repeat volta 2 {
    g8 g4 g <ees g> <ees g>8~ |
-   <ees g> <ees g>4 \cresc <ees g> <ees g> <ees g>8~ |
+   <ees g> <ees g>4 \deprecatedcresc <ees g> <ees g> <ees g>8~ |
    <ees g>\f <ees g>4 <ees g> g g8( |
    f) f4\p f f f8( |
    <f aes>) <f aes>4 <f aes> <f aes> <f aes>8~ |
-   \cresc <f aes> <f aes>4 <f aes> <f aes> <f aes>8~ |
+   \deprecatedcresc <f aes> <f aes>4 <f aes> <f aes> <f aes>8~ |
    <f aes>\f <f aes>4 <f aes> <f aes> <f aes>8 |
    g\( bes16 g bes g bes g \repeat tremolo 4 {bes g\)} |
    a\sf\( fis a fis \repeat tremolo 6 {bes g\)} |
@@ -23,8 +24,8 @@ FirstViolaFirstMovement =
    a\sf\( fis a fis \repeat tremolo 6 {bes g\)} |
    a\sf\( fis a fis \repeat tremolo 6 {bes g\)} |
    \repeat tremolo 4 {c\p( a)} \repeat tremolo 4 {bes( aes)} |
-   \repeat tremolo 4 {bes( des)} \cresc \repeat tremolo 4 {ces( d)} |
-   \repeat tremolo 4 {des( e)} \cresc \repeat tremolo 4 {ees( ges)} |
+   \repeat tremolo 4 {bes( des)} \deprecatedcresc \repeat tremolo 4 {ces( d)} |
+   \repeat tremolo 4 {des( e)} \deprecatedcresc \repeat tremolo 4 {ees( ges)} |
    \repeat tremolo 4 {f\f( aes)} g!( ees g ees  c ees c ees) |
    bes2:16\ff bes2:16 |
    bes8 r r4 r2 |
@@ -41,35 +42,35 @@ FirstViolaFirstMovement =
    ees'2 d4 bes) |
    bes2. r4 |
    R1 |
-   \dim des,1(\accent\mf |
+   \deprecateddim des,1(\accent\mf |
    c4\p ees f aes |
    bes8) r g16\( ees g ees \repeat tremolo 4 {g ees\)} |
    \repeat tremolo 4 {g\( ees} \repeat tremolo 4 {g ees\)} |
-   \cresc \repeat tremolo 4 {g\( ees} \repeat tremolo 4 {g ees\)} |
+   \deprecatedcresc \repeat tremolo 4 {g\( ees} \repeat tremolo 4 {g ees\)} |
    \repeat tremolo 4 {g\f\( ees} \repeat tremolo 4 {g ees\)} |
    \repeat tremolo 4 {g\p\( e} g e g e g8\) g'( |
    e[ des] bes) g16( e g e g e g8) bes'( |
-   \cresc f des bes f) bes'( g e\f des) |
+   \deprecatedcresc f des bes f) bes'( g e\f des) |
    des'( bes g e) \repeat tremolo 4 {des16( bes)} |
    \repeat tremolo 4 {aes\( c} \repeat tremolo 4 {aes c\)} |
    aes\(\sf b aes b \repeat tremolo 6 {aes c\)} |
    aes\(\sf b aes b \repeat tremolo 6 {aes c\)} |
    \repeat tremolo 4 {aes\p( b)} \repeat tremolo 4 {g( bes)} |
-   aes8 r r4 \cresc \repeat tremolo 4 {des16\( ees} |
+   aes8 r r4 \deprecatedcresc \repeat tremolo 4 {des16\( ees} |
    c8\) ees16( aes f aes f aes f\f aes f aes f g f g) |
    ees4:16 g,4:16 g4:16 g4:16 |
    d8 r r4 r g\p( |
    fis) r r g( |
    d) r r a'~ |
-   \dim a2( g |
+   \deprecateddim a2( g |
    fis4)\! r r2 |
    R1*2 |
    \repeat tremolo 4 {bes16\p\( f} \repeat tremolo 4 {bes f} |
    \repeat tremolo 4 {bes f} \repeat tremolo 4 {bes f\)} |
-   \cresc \repeat tremolo 4 {bes\( g} \repeat tremolo 4 {bes g} |
-   \cresc \repeat tremolo 4 {bes g} \repeat tremolo 4 {bes g\)} |
+   \deprecatedcresc \repeat tremolo 4 {bes\( g} \repeat tremolo 4 {bes g} |
+   \deprecatedcresc \repeat tremolo 4 {bes g} \repeat tremolo 4 {bes g\)} |
    \repeat tremolo 4 {c\f\( a} \repeat tremolo 4 {c a\)} |
-   \repeat tremolo 4 {c\( a} \cresc \repeat tremolo 4 {c a\)} |
+   \repeat tremolo 4 {c\( a} \deprecatedcresc \repeat tremolo 4 {c a\)} |
    \repeat tremolo 4 {c\ff\( ees} \repeat tremolo 4 {c ees\)} |
    a,\sf( c a c) a\sf( c a c) a\sf( c a c) a\sf( c a c) |
    a\sf( c a c) a\sf( c a c) a\sf( c a c a\sf c a c) |
@@ -101,7 +102,7 @@ FirstViolaFirstMovement =
    c c c c a8 r r4 ees'16-. ees-. ees-. d-. |
    c-. c-. ees-. c-. a4( bes8) r r4 |
    r r8 d,,(\mf g bes d bes' |
-   g4.)\accent \cresc d,8( g bes d bes' |
+   g4.)\accent \deprecatedcresc d,8( g bes d bes' |
    g4.)\accent d,8( g bes d d' |
    bes2\f f) |
    bes,1\accent |
@@ -115,7 +116,7 @@ FirstViolaFirstMovement =
    bes8 r r g\f( f g aes! f) |
    g8 r r g( f g aes f) |
    g4( aes) g( aes) |
-   \cresc g8( aes) g( aes) g-. aes-. g-. r |
+   \deprecatedcresc g8( aes) g( aes) g-. aes-. g-. r |
    f''-.\ff d-. bes-. g-. f-. d-. bes-. g-. |
    
    %% Bar 110
@@ -144,7 +145,7 @@ FirstViolaFirstMovement =
     r bes r aes! r g r cis |
     r d r ees r f r g |
     r4 <f, aes> r <bes d> |        
-    <bes ees>8 r r g4\p g \once\override Slur #'control-points = #'((1 . -2.5) (2 . -3.5) (3 . -3.5) (4 . -2.5)) g8( |
+    <bes ees>8 r r g4\p g \once\override Slur.control-points = #'((1 . -2.5) (2 . -3.5) (3 . -3.5) (4 . -2.5)) g8( |
    }
    {
     <bes d>8\f) <bes d>4 <bes d> <bes d> <bes d>8~ |
@@ -165,20 +166,20 @@ FirstViolaFirstMovement =
   <c ees>2\ff <c ees>4.. <c ees>16 |
   <c ees>8 r des4-.\accent( des-.\accent des-.\accent) |
   des2 bes4.. des16 |
-  des8 r <c ees>4-.\accent( <c ees>-.\accent <c ees>-.\accent) |
+  des8 r <c ees>4-.\accent( <c ees>-. -\tweak Y-offset 4 \accent <c ees>-.\accent) |
   des2 des4.. des16 |
   des8 r fes4-.(\accent fes-.\accent fes-.\accent) |
   <des f!>2 <des f>4.. <des f>16 |
-  <des f>8 r ees4-.\accent( ees-.\accent ees-.\accent) |
+  <des f>8 r ees4-.\accent( ees-. -\tweak Y-offset 4 \accent ees-.\accent) |
   des2 <f, aes>4.. <f aes>16 |
   <f aes>8 r <aes aes'>4-.\accent( <aes aes'>-.\accent <aes aes'>-.\accent) |
   <aes aes'>1~ |
-  <aes aes'>8 r <des e>4-.\accent( <des e>-.\accent <des e>-.\accent) |
+  <aes aes'>8 r <des e>4-.\accent( <des e>-. -\tweak Y-offset 4 \accent <des e>-.\accent) |
   r <c f>-.\accent( <c f>-.\accent <c f>-.\accent) |
   r des\f-.\accent( des-.\accent des-.\accent) |
-  r \dim c-.( c-. c-.) |
+  r \deprecateddim c-.( c-. c-.) |
   r g\mf-.( g-. g-.) |
-  r \dim bes-.( bes-. bes-.) |
+  r \deprecateddim bes-.( bes-. bes-.) |
   r g\p-.( g-. g-.) |
   r c-.( c-. c-.) |
   r des-.( des-. des-.) |
@@ -186,7 +187,7 @@ FirstViolaFirstMovement =
   r ees-.( ees-. ees-.) |
   r d!-.( d-. d-.) |
   r des-.( des-. des-.) |
-  r \dim c-.( r bes-.) |
+  r \deprecateddim c-.( r bes-.) |
   r2 c\pp( |
   r bes) |
   r4 aes\p( bes c |
@@ -196,7 +197,7 @@ FirstViolaFirstMovement =
   des c8 bes) c4 aes8( bes |
   c4 des8 c) c( bes aes bes) |
   aes r aes4 aes( bes |
-  \dim ces bes8 aes) bes4 g8( aes |
+  \deprecateddim ces bes8 aes) bes4 g8( aes |
   bes4 c!8 bes) bes( aes g aes) |
   g4\! r r2 |
   R1*14 |
@@ -220,10 +221,10 @@ FirstViolaFirstMovement =
   
   %% Bar 210
   d8) r r4 d16( ees f g aes bes c d |
-  ees f g aes \cresc bes aes g f ees f g f ees d c bes) |
+  ees f g aes \deprecatedcresc bes aes g f ees f g f ees d c bes) |
   a( bes c d ees d c bes) a(\< bes c d ees f g a |
   bes8\f f d bes f bes) bes-. bes~ |
-  bes bes4 bes \cresc bes bes8~ |
+  bes bes4 bes \deprecatedcresc bes bes8~ |
   bes bes4 bes8( aes16 g f ees d c d ees) |
   f( e f g aes g aes bes) c\ff( bes c d ees! f g a |
   bes a c bes d c ees d) f( e g f aes! g f ees) |
@@ -234,24 +235,24 @@ FirstViolaFirstMovement =
   f( ees d c d ees f g) aes(\< g f g aes bes c d\! |
   ees8) g,,4\p g g g8~ |
   g g4 g <ees g> <ees g>8~ |
-  \cresc <ees g> <ees g>4 <ees g> <ees g> <ees g>8~ |
+  \deprecatedcresc <ees g> <ees g>4 <ees g> <ees g> <ees g>8~ |
   <ees g> <ees g>4\f <ees g> g g8( |
   f) f4\p f f f8( |
   <f aes>) <f aes>4 <f aes> <f aes> <f aes>8~ |
-  \cresc <f aes> <f aes>4 <f aes> <f aes> <f aes>8~ |
+  \deprecatedcresc <f aes> <f aes>4 <f aes> <f aes> <f aes>8~ |
   <f aes> <f aes>4\f <f aes> <f aes> <f aes>8( |
   g) bes16\( g bes g bes g \repeat tremolo 4 {bes g\)} |
   a\sf\( fis a fis \repeat tremolo 6 {bes g\)} |
   a\sf\( fis a fis \repeat tremolo 6 {bes g\)} |
   \repeat tremolo 4 {a\(\p ges} \repeat tremolo 4 {bes aes\)} |
   \repeat tremolo 4 {bes\( g!} \repeat tremolo 4 {d' aes\)} |
-  \cresc \repeat tremolo 4 {bes\( g} \repeat tremolo 4 {d' c\)} |
+  \deprecatedcresc \repeat tremolo 4 {bes\( g} \repeat tremolo 4 {d' c\)} |
   \repeat tremolo 4 {f\( d} \repeat tremolo 4 {g, d'\)} |
   \repeat tremolo 4 {c\f\( g} \repeat tremolo 4 {c g\)} |
   \repeat tremolo 4 {c\sf\( a} \repeat tremolo 4 {c a\)} |  
   ees'2\fp( f4 g |
   aes! g8 fis) g4 ees8( f |
-  g4 \dim aes8 g) g( f ees f) |
+  g4 \deprecateddim aes8 g) g( f ees f) |
   ees1\pp~ |
   ees4 ees( f g |
   aes g8 fis) g4 ees8( f |
@@ -267,7 +268,7 @@ FirstViolaFirstMovement =
   ees4:16 d4:16 c8 r r4 |
   r2 r4 r8 c,( |
   ees c' ees ees') c2( |
-  \cresc bes1)~ |
+  \deprecatedcresc bes1)~ |
   bes4 aes( g f) |
   <bes, ees>1~\f 
   <bes ees>2. r4 |
@@ -306,13 +307,13 @@ FirstViolaFirstMovement =
   f) aes~ |
   aes4( g ges2)~ |
   ges4( f fes2)~ |
-  fes4( ees8) \cresc ees4 ees ees8~ |
+  fes4( ees8) \deprecatedcresc ees4 ees ees8~ |
   ees ees4 ees ees ees8( |
-  \cresc ges) ges4 ges ges ges8( |
+  \deprecatedcresc ges) ges4 ges ges ges8( |
   ges8)\f ges4 ges ges ges8 |
   \repeat tremolo 4 {g!16\p\( ees} \repeat tremolo 4 {g ees} |
   \repeat tremolo 4 {g ees} \repeat tremolo 4 {g ees\)} |
-  \cresc \repeat tremolo 4 {f\( ees} \repeat tremolo 4 {f ees\)} |
+  \deprecatedcresc \repeat tremolo 4 {f\( ees} \repeat tremolo 4 {f ees\)} |
   \repeat tremolo 4 {fis\(\< ees} \repeat tremolo 4 {fis ees\)} |
   g\(\f ees g ees b ees b ees \repeat tremolo 4 {c ees\)} |
   \repeat tremolo 4 {bes!\( ees} \repeat tremolo 4 {bes d\)} |
@@ -325,12 +326,12 @@ FirstViolaFirstMovement =
   f2:16 f2:16 |
   ees2:16 ees2:16 |
   d2:16 d2:16 |
-  \cresc ees2:16^\markup{\dynamic "sf"} des2:16^\markup{\dynamic "sf"} |
+  \deprecatedcresc ees2:16^\markup{\dynamic "sf"} des2:16^\markup{\dynamic "sf"} |
   c4:16^\markup{\dynamic "sf"} f4:16 ges2:16^\markup{\dynamic "sf"} |
   f2:16\ff f2:16 |
   f2:16 f2:16 |
   g!8 g,4\p g g g8~ |
-  \cresc g g4 g <ees g> <ees g>8~ |
+  \deprecatedcresc g g4 g <ees g> <ees g>8~ |
   << {<ees g>\f <ees g>4 <ees g> <ees g> <ees g>8~ } {s2 s2\< } >>|
   <ees g>16 g g g g4:16 d'2:16\ff |
   ees8 r r4 <bes d>8 r r4 |

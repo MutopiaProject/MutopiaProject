@@ -1,4 +1,5 @@
 %Viola 1, 4th movement
+\version "2.19.80"
 
 FirstViolaFourthMovement =
 {
@@ -51,11 +52,11 @@ FirstViolaFourthMovement =
   f2:8 f2:8 |
   ees8 ees g g g2:8 |
   g2:8 g2:8 |
-  g2:8 \cresc g2:8 |
+  g2:8 \deprecatedcresc g2:8 |
   f2:8 f2:8 |
   ees2:8 c'2:8 |
   f,2:8\mf f2:8 |
-  \cresc ees2:8 g2:8 |
+  \deprecatedcresc ees2:8 g2:8 |
   f2:8\f bes2:8 |
   bes4 bes'8 bes bes2:8 |
   bes4 r r2 |
@@ -126,10 +127,10 @@ FirstViolaFourthMovement =
   R1*3 |
   c4 c2 c4~ |
   c c2 c4~ |
-  c \cresc c2 c4~ |
+  c \deprecatedcresc c2 c4~ |
   c c2 c4( |
   bes) bes2 bes4~ |
-  \cresc bes bes2 bes4 |
+  \deprecatedcresc bes bes2 bes4 |
   bes1(\f |
   a2 g |
   f) r |
@@ -138,11 +139,11 @@ FirstViolaFourthMovement =
   ees ees2 ees4~ |
   ees ees2 ees4~ |
   ees ees2 ees4( |
-  \cresc d) d2 d4~ |
+  \deprecatedcresc d) d2 d4~ |
   d d2 d4~ |
   d d2 d4~ |
   d bes2 bes4( |
-  \cresc <ees, des'>) <ees des'>2 <ees des'>4~ |
+  \deprecatedcresc <ees, des'>) <ees des'>2 <ees des'>4~ |
   <ees des'> <ees des'>2 <ees des'>4( |
   <e des'>) <e des'>2\f <e des'>4~ |
   \set doubleSlurs = ##t
@@ -376,15 +377,15 @@ FirstViolaFourthMovement =
   g2:8 g2:8 |
   bes2:8 bes2:8 |
   c2:8 aes2:8 |
-  g8 bes bes bes \cresc ees2:8 |
+  g8 bes bes bes \deprecatedcresc ees2:8 |
   ees2:8 ees2:8 |
   ees2:8 ees2:8 |
   ees2:8 d2:8 |
   ees2:8\mf ees2:8 |
-  \cresc ees2:8 d2:8 |
+  \deprecatedcresc ees2:8 d2:8 |
   ees4 r r ees,\f |
   c'2.\accent( bes4) |
-  \cresc c2.\accent( bes4) |
+  \deprecatedcresc c2.\accent( bes4) |
   c2.\accent( bes4) |
   ees1\ff( |
   d2 c |

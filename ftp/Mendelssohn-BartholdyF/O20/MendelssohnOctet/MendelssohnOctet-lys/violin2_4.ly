@@ -1,4 +1,5 @@
 %Violin 2, 4th movement
+\version "2.19.80"
 
 SecondViolinFourthMovement =
 {
@@ -116,7 +117,7 @@ SecondViolinFourthMovement =
   g bes a g ges bes aes ges |
   f1~\sf |
   f~ |
-  f4 \cresc f( ges f |
+  f4 \deprecatedcresc f( ges f |
   
   %% Bar 140
   fis g! aes! a) |
@@ -132,11 +133,11 @@ SecondViolinFourthMovement =
   f1~ |
   f4 f( ges f |
   fis g! aes! a) |
-  \cresc bes1~ |
+  \deprecatedcresc bes1~ |
   bes~ |
   bes4 bes( ces bes |
   b c! des d) |
-  \cresc ees1~ |
+  \deprecatedcresc ees1~ |
   ees |
   e\f~ |
   
@@ -363,21 +364,21 @@ SecondViolinFourthMovement =
   bes'\> e,\!) |  
   << {f2.\( } {s2 s4\turn^\markup{\tiny\natural}} >> g |
   bes2 aes\)~ |
-  aes f( |
+  aes f~ |
   f( ees!4 d |
   ees2) r4 ees( |
   g2\accent) r4 g( |
   bes2)\accent r4 bes( |
   c2\accent bes\accent) |
-  ees,4 r r \cresc ees( |
+  ees,4 r r \deprecatedcresc ees( |
   g2)\accent r4 g( |
   bes2)\accent r4 bes( |
   c2\accent bes\accent) |
   ees,4 r r ees\mf( |
-  \cresc c'2\accent bes\accent) |
+  \deprecatedcresc c'2\accent bes\accent) |
   ees,4 r r ees\f |
   c'2.\accent( bes4) |
-  \cresc c2.\accent( bes4) |
+  \deprecatedcresc c2.\accent( bes4) |
   c2.\accent( bes4) |
   ees1\ff( |
   d2 c) |

@@ -1,4 +1,5 @@
 %Violin 3, 4th movement
+\version "2.19.80"
 
 ThirdViolinFourthMovement =
 {
@@ -44,11 +45,11 @@ ThirdViolinFourthMovement =
   ees2:8 d2:8 |
   ees2:8 ees2:8 |
   ees2:8 ees2:8 |
-  ees2:8 \cresc ees2:8 |
+  ees2:8 \deprecatedcresc ees2:8 |
   ees2:8 d2:8 |
   ees2:8 ees2:8 |
   ees2:8\mf d2:8 |
-  \cresc ees2:8 ees2:8 |
+  \deprecatedcresc ees2:8 ees2:8 |
   ees2:8\f d2:8 |
   ees4 bes'8 bes bes2:8 |
   bes4 r r2 |
@@ -115,10 +116,10 @@ ThirdViolinFourthMovement =
   R1*3 |
   ees'4 ees2 ees4~ |
   ees ees2 ees4~ |
-  ees4 \cresc ees2 ees4~ |
+  ees4 \deprecatedcresc ees2 ees4~ |
   ees ees2 c4( |
   bes8)( c d ees f ees d c |
-  \cresc bes c d c bes aes g f) |
+  \deprecatedcresc bes c d c bes aes g f) |
   bes1\f( |
   a2 g |
   f4) bes\p( a2 |
@@ -129,11 +130,11 @@ ThirdViolinFourthMovement =
   ees ees2 ees4~ |
   ees ees2 ees4~ |
   ees ees2 ees4( |
-  \cresc d) d2 d4~ |
+  \deprecatedcresc d) d2 d4~ |
   d4 d2 d4~ |
   d4 d2 d4~ |
   d4 bes2 bes4( |
-  \cresc <ees, des'>) <ees des'>2 <ees des'>4~ |
+  \deprecatedcresc <ees, des'>) <ees des'>2 <ees des'>4~ |
   <ees des'>4 <ees des'>2 \set doubleSlurs = ##t   <ees des'>4( |
   <e des'>) <e des'>2\f <e des'>4~ |
   
@@ -249,7 +250,7 @@ ThirdViolinFourthMovement =
   e) c-. e( f |
   e) f( e) f( |
   e) e-. e-. e-. |
-  d \once \override Script #'script-priority = #-100 ais\trill(^\markup{\tiny\flat} b) ais\trill( |
+  d \once \override Script.script-priority = #-100 ais\trill(^\markup{\tiny\flat} b) ais\trill( |
   
   %% Bar 300
   b) b-. d-. aes!-. |
@@ -359,15 +360,15 @@ ThirdViolinFourthMovement =
   ees2)\accent r4 ees( |
   g2)\accent r4 g( |
   c2\accent bes\accent) |
-  ees,4 r r \cresc bes( |
+  ees,4 r r \deprecatedcresc bes( |
   ees2\accent) r4 ees( |
   g2)\accent r4 g( |
   f1)\accent |
   ees4 r r c(\mf |
-  \cresc f1) |
+  \deprecatedcresc f1) |
   ees4 r r ees\f |
   aes2.\accent( g4) |
-  \cresc aes2.\accent( g4) |
+  \deprecatedcresc aes2.\accent( g4) |
   aes2.\accent( g4) |
   c1(\ff |
   bes2 aes) |

@@ -1,4 +1,5 @@
 %Cello 1, 1st movement
+\version "2.19.80"
 
 FirstCelloFirstMovement =
 {
@@ -9,11 +10,11 @@ FirstCelloFirstMovement =
   \repeat "tremolo" 4 {ees16\(\p bes} \repeat "tremolo" 4 {ees bes\)} |
   \repeat volta 2 {
    \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} |
-   << {\repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} } {s4. \cresc s8 s2 } >>|
+   << {\repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} } {s4. s8 \cresc s2 } >>|
    \repeat "tremolo" 4 {ees16\f\( c} \stemDown \repeat "tremolo" 4 {ees bes\)} \stemNeutral |
    \repeat "tremolo" 4 {ees\fp\( c} \repeat "tremolo" 4 {ees c\)} |
    \repeat "tremolo" 4 {ees\( c} \repeat "tremolo" 4 {ees c\)} |
-   \cresc \repeat "tremolo" 4 {ees\( ces} \repeat "tremolo" 4 {ees ces\)} |
+   \deprecatedcresc \repeat "tremolo" 4 {ees\( ces} \repeat "tremolo" 4 {ees ces\)} |
    \repeat "tremolo" 4 {f\f\( bes,} \repeat "tremolo" 4 {f' d\)} |
    ees8 r r ees,( g bes ees g) |
    c,4\sf( bes8) ees,( g bes ees g) |
@@ -23,8 +24,8 @@ FirstCelloFirstMovement =
    c,4\sf( bes8) ees,( g bes ees g) |
    c,4\sf( bes8) ees,( g bes ees g) |
    c,2\p\accent d\accent |
-   e\accent \cresc f\accent |
-   g\accent \cresc a\accent |
+   e\accent \deprecatedcresc f\accent |
+   g\accent \deprecatedcresc a\accent |
    b\accent\f c4\accent ees,\accent |
    bes!2:16\ff bes2:16 |
    ees,8 r ees'16\p-. ees-. ees-. f-. g-. g-. ees-. g-. bes-. bes-. g-. bes-. |
@@ -39,40 +40,40 @@ FirstCelloFirstMovement =
    c4 c16-. c-. des-. b-. c2~ |
    c4 c16-. c-. des-. b-. c2~ |
    c8 c( bes! a bes c des d |
-   \cresc ees1)~ |
+   \deprecatedcresc ees1)~ |
    ees1\f~ |
-   \dim ees~ |
+   \deprecateddim ees~ |
    ees~\p |
    ees4 r r2 |
    \repeat "tremolo" 4 {ees,16\( bes} \repeat "tremolo" 4 {ees bes\)} |
-   \cresc \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} | 
+   \deprecatedcresc \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} | 
    \repeat "tremolo" 4 {ees\f\( bes} \repeat "tremolo" 4 {ees bes\)} |
    \repeat "tremolo" 4 {e\p\( c} \repeat "tremolo" 4 {e c\)} |
    \repeat "tremolo" 4 {e\( c} \repeat "tremolo" 4 {e c\)} |
-   \cresc \repeat "tremolo" 4 {f\( des} \repeat "tremolo" 4 {g\f e\)} |
+   \deprecatedcresc \repeat "tremolo" 4 {f\( des} \repeat "tremolo" 4 {g\f e\)} |
    \repeat "tremolo" 4 {g\( bes} \repeat "tremolo" 4 {g bes} |
    aes4.\) c8( aes f c aes) |
    des4\sf( c8) c'( aes f c aes) |
    des4\sf( c8) c'( aes f c aes) |
    d,2\fp e\accent |
-   \cresc f\accent g\accent |
+   \deprecatedcresc f\accent g\accent |
    
    %% Bar 50
    aes\accent g2:16\f |
    c2:16 d4:16 ees4:16 |
    d8 r d'16-.\p d-. ees-. cis-. d2~ |
    d4 d16-. d-. ees-. cis-. d2~ |
-   d4 d16-. d-. ees-. cis-. \dim d2~ |
+   d4 d16-. d-. ees-. cis-. \deprecateddim d2~ |
    d4 d16-. d-. ees-. cis-. d4 d16-. d-. ees-. cis-. |
    d4 d16-.\pp d-. ees-. cis-. d2~ |
    d8 d-.( ees-. cis-.) d2~ |
    d8\< d\!( ees\>_\markup{\large\bold\italic {"cresc."}} cis\! d)\< d(\! ees\> cis\! |
    d1)~\p |
    d4 d2 d4( |
-   \cresc des1)~ |
+   \deprecatedcresc des1)~ |
    des4 des2 des4( |
    c4.) f,,8(\f a b c d) |
-   c4(\accent a8) \cresc f( a b c d) |
+   c4(\accent a8) \deprecatedcresc f( a b c d) |
    c2\accent a\accent |
    <f c'>4\ff\accent <f c'>\accent <f c'>\accent <f c'>\accent |
    <f c'>8 f16 f f4:16 f4:16 f8 f |
@@ -100,7 +101,7 @@ FirstCelloFirstMovement =
    r4 ges,4\accent( f8) r f' r |
    r4 fis,4\accent( g8) r d^\markup{\bold\italic "pizz."} r |
    g r d r g r r4 |
-   \cresc ees1^\markup{\bold\italic "arco"}( |
+   \deprecatedcresc ees1^\markup{\bold\italic "arco"}( |
    e) |
    f_\markup{\dynamic "f sf"}~\! |
    f~ |
@@ -118,7 +119,7 @@ FirstCelloFirstMovement =
    \set doubleSlurs = ##f
    bes''1~\f |
    bes2 bes\accent |
-   \cresc bes4\accent bes\accent bes8-. bes-. bes-. bes-. |
+   \deprecatedcresc bes4\accent bes\accent bes8-. bes-. bes-. bes-. |
    f,16\ff f f f f f f f f8 r f r |
    f''8-. d-. bes-. g-. f-. d-. bes-. g-. |
    f r r4 r2 |
@@ -172,12 +173,12 @@ FirstCelloFirstMovement =
   r4 des,16 des des ees f f des f aes aes f aes |
   b8 r r4 r2 |
   r4 c16 c c bes! aes aes c aes f f aes f |
-  c8 r <c c'>4-.\accent( <c c'>-.\accent <c c'>4-.)\accent |
-  r  <c c'>4-.\accent( <c c'>-.\accent <c c'>4-.)\accent |
-  r bes'-.\f\accent( bes-.\accent bes-.\accent) |
-  r \dim f'-.( f-. f-.) |
+  c8 r <c c'>4-.^\accent( <c c'>-.^\accent <c c'>4-.)^\accent |
+  r  <c c'>4-.^\accent( <c c'>-.^\accent <c c'>4-.)^\accent |
+  r bes'-.\f^\accent( bes-.^\accent bes-.^\accent) |
+  r \deprecateddim f'-.( f-. f-.) |
   r des-.(\mf c-. bes-.) |
-  r \dim des-.( des-. des-.) |
+  r \deprecateddim des-.( des-. des-.) |
   r des-.(\p c-. bes-.) |
   
   %% Bar 160
@@ -187,7 +188,7 @@ FirstCelloFirstMovement =
   r c-.( c-. c-.) |
   r b-.( b-. b-.) |
   r bes!-.( bes-. bes-.) |
-  r \dim aes-.( r des-.) |
+  r \deprecateddim aes-.( r des-.) |
   r2 c\pp( |
   r c) |
   R1*9 |
@@ -219,17 +220,17 @@ FirstCelloFirstMovement =
   bes~ |
   bes8 r r4 r2 |
   R1*6 |
-  bes8\p bes4 \cresc bes bes bes8~ |
+  bes8\p bes4 \deprecatedcresc bes bes bes8~ |
   bes bes4 bes bes bes8~ |
   bes bes4\mf bes bes bes8~ |
   
   %% Bar 210
-  bes bes4 bes \cresc bes bes8~ |
+  bes bes4 bes \deprecatedcresc bes bes8~ |
   bes bes4 bes bes bes8~ |
   << {bes bes4 bes bes bes8 } {s2 s2\< } >>|
   bes16\f( a bes c d ees f g f ees d c bes a bes b) |
   c( b c d ees f g aes! g f ees d c b c cis) |
-  d( c! d ees f g \cresc aes bes aes g f ees d c d ees |
+  d( c! d ees f g \deprecatedcresc aes bes aes g f ees d c d ees |
   f8) f,16( g aes g aes bes) c\ff( bes c d ees f g a |
   bes a c bes d c ees d) f( e g f aes! g f ees) |
   d(_\markup{\bold\italic "sempre" \dynamic "ff"} c ees d f ees d c) bes( a bes b c bes aes g) |
@@ -239,24 +240,24 @@ FirstCelloFirstMovement =
   f( ees d c d ees f g) f\<( ees d c bes aes! g f\! |
   ees8) ees'16\p\( bes ees bes ees bes \repeat "tremolo" 4 {ees bes\)} |
   \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} |
-  \cresc \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} |
   \repeat "tremolo" 4 {ees\f\( c} \stemDown \repeat "tremolo" 4 {ees bes\)} \stemNeutral |
   \repeat "tremolo" 4 {ees\fp\( c} \repeat "tremolo" 4 {ees c\)} |
   \repeat "tremolo" 4 {ees\( c} \repeat "tremolo" 4 {ees c\)} |
-  \cresc \repeat "tremolo" 4 {ees\( ces} \repeat "tremolo" 4 {ees ces\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {ees\( ces} \repeat "tremolo" 4 {ees ces\)} |
   \repeat "tremolo" 4 {f\f\( bes,} \repeat "tremolo" 4 {f' d\)} |
   ees8 r r ees,( g bes ees g) |
   c,4\sf( bes8) ees,( g bes ees g) |
   c,4\sf( bes8) ees,( g bes ees g) |
   c,2\p\accent d\accent |
   ees\accent f\accent |
-  \cresc g\accent aes\accent |
+  \deprecatedcresc g\accent aes\accent |
   bes\accent b\accent |
   c1\f |
   ees\sf~ |
   ees~\p |
   ees~ |
-  \dim ees2( d) |
+  \deprecateddim ees2( d) |
   ees1\pp~ |
   ees~ |
   ees~ |
@@ -321,7 +322,7 @@ FirstCelloFirstMovement =
   
   %% Bar 300
   \repeat "tremolo" 4 {ees g} \repeat "tremolo" 4 {ees g\)} |
-  \cresc \repeat "tremolo" 4 {ees\( f} \repeat "tremolo" 4 {ees f\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {ees\( f} \repeat "tremolo" 4 {ees f\)} |
   \repeat "tremolo" 4 {ees\(\< fis} \repeat "tremolo" 4 {ees fis\)} |
   g(\f ees g ees) g,8 g aes2:8 |
   bes2:8 bes2:8 |
@@ -334,12 +335,12 @@ FirstCelloFirstMovement =
   bes2:8 bes2:8 |
   bes2:8 bes2:8 |
   aes2:8 aes2:8 |
-  \cresc g2:8^\markup{\dynamic "sf"} g2:8^\markup{\dynamic "sf"} |
+  \deprecatedcresc g2:8^\markup{\dynamic "sf"} g2:8^\markup{\dynamic "sf"} |
   aes2:8^\markup{\dynamic "sf"} a2:8^\markup{\dynamic "sf"} |
   bes2:8\ff bes2:8 |
   bes2:8 bes2:8 |
   \repeat "tremolo" 4 {ees16\(\fp bes} \repeat "tremolo" 4 {ees bes\)} |
-  \cresc \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {ees bes\)} |
   \repeat "tremolo" 4 {ees\f\( bes} \repeat "tremolo" 4 {ees\< bes} |
   ees\) c c c c4:16 bes2:16\ff |
   ees8 r r4 bes8 r r4 |

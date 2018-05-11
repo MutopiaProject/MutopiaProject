@@ -1,8 +1,9 @@
 %Violin 3, 2nd movement
+\version "2.19.80"
 
 ThirdViolinSecondMovement =
 {
-\override TupletBracket  #'bracket-visibility = ##f
+\override TupletBracket.bracket-visibility = ##f
  \relative c' {  
   \key c \minor
   \time 6/8
@@ -20,36 +21,38 @@ ThirdViolinSecondMovement =
   aes2. |
   des4( aes8) aes r r |
   R2.*3 |
-  \times 2/3 {aes16\f([ d, b])} \times 2/3 {aes'([ d, b])} \times 2/3 {g'([ ees c])} \times 2/3 {f([ d aes])} \times 2/3 {f'([ d aes])} \times 2/3 {ees'([ c g])} |
-  \override TupletBracket  #'number-visibility = ##f  
-  \times 2/3 {f'([ aes f])} \times 2/3 {ees([ aes g])} \times 2/3 {d([ aes' g])} \times 2/3 {g[ c, c]} 
-  \revert TupletBracket  #'number-visibility  
-  \times 2/3 {c8.:16-.[ } \times 2/3 {c8.:16-.] } |
+  \tuplet 3/2 {aes16\f([ d, b])} \tuplet 3/2 {aes'([ d, b])} \tuplet 3/2 {g'([ ees c])} \tuplet 3/2 {f([ d aes])} \tuplet 3/2 {f'([ d aes])} \tuplet 3/2 {ees'([ c g])} |
+  \omit TupletNumber  
+  \tuplet 3/2 {f'([ aes f])} \tuplet 3/2 {ees([ aes g])} \tuplet 3/2 {d([ aes' g])} \tuplet 3/2 {g[ c, c]} 
+  \undo \omit TupletNumber
+  
+  \tuplet 3/2 {c8.:16-.[ } \tuplet 3/2 {c8.:16-.] } |
   
   %% Bar 20
-  \times 2/3 {c8.:16[ } \times 2/3 {c8.:16} \times 2/3 {c8.:16] } r4 r8 |
-  \override TupletBracket  #'number-visibility = ##f  
-  \times 2/3 {g''16-.\(\p[ g-. g-.]} \times 2/3 {g-.[ f-. ees-.]} \times 2/3 {d-.[ ees-. d-.]} \times 2/3 {c-.\)[ g-.\( g-.]} \times 2/3 {g-.[ g-. g-.]} \times 2/3 {g-.[ g-. g-.\)]} |
-   \dim \times 2/3 {g8.:16} \times 2/3 {g8.:16} \times 2/3 {g8.:16} g8\! r r |   
-   r4 r8 \times 2/3 {c,8.:16\pp} \times 2/3 {c8.:16} \times 2/3 {c8.:16} |
-   \times 2/3 {c8.:16[} \times 2/3 {c8.:16]} \times 2/3 {b16([ d f)]} ees8 r r |
-   \times 2/3 {c8.:16} \times 2/3 {c8.:16} \times 2/3 {c8.:16} \dim \times 2/3 {c8.:16} \times 2/3 {c8.:16} \times 2/3 {c8.:16} |
-   c8 \times 2/3 {r16 ees![\(\ff f]} \times 2/3 {ges[ ees c]\)} bes8\( \times 2/3 {a16[\) ees'\( f]} \times 2/3 {ges[ ees c\)]} |
-   bes8\( \times 2/3 {a16\)[ aes'!\( bes]} \times 2/3 {ces[ aes f\)] } ees8\( \times 2/3 {d!16\)[ aes'\( bes]} \times 2/3 {ces[ aes f\)]} |
+  \tuplet 3/2 {c8.:16[ } \tuplet 3/2 {c8.:16} \tuplet 3/2 {c8.:16] } r4 r8 |
+  \omit TupletNumber  
+  \tuplet 3/2 {g''16-.\(\p[ g-. g-.]} \tuplet 3/2 {g-.[ f-. ees-.]} \tuplet 3/2 {d-.[ ees-. d-.]} \tuplet 3/2 {c-.\)[ g-.\( g-.]} \tuplet 3/2 {g-.[ g-. g-.]} \tuplet 3/2 {g-.[ g-. g-.\)]} |
+   \deprecateddim \tuplet 3/2 {g8.:16} \tuplet 3/2 {g8.:16} \tuplet 3/2 {g8.:16} g8\! r r |   
+   r4 r8 \tuplet 3/2 {c,8.:16\pp} \tuplet 3/2 {c8.:16} \tuplet 3/2 {c8.:16} |
+   \tuplet 3/2 {c8.:16[} \tuplet 3/2 {c8.:16]} \tuplet 3/2 {b16([ d f)]} ees8 r r |
+   \tuplet 3/2 {c8.:16} \tuplet 3/2 {c8.:16} \tuplet 3/2 {c8.:16} \deprecateddim \tuplet 3/2 {c8.:16} \tuplet 3/2 {c8.:16} \tuplet 3/2 {c8.:16} |
+   c8 \tuplet 3/2 {r16 ees![\(\ff f]} \tuplet 3/2 {ges[ ees c]\)} bes8\( \tuplet 3/2 {a16[\) ees'\( f]} \tuplet 3/2 {ges[ ees c\)]} |
+   bes8\( \tuplet 3/2 {a16\)[ aes'!\( bes]} \tuplet 3/2 {ces[ aes f\)] } ees8\( \tuplet 3/2 {d!16\)[ aes'\( bes]} \tuplet 3/2 {ces[ aes f\)]} |
    ees8( d!16) r r8 bes'4.\pp( |
    aes2. |
    g4) r8 c4.( |
    bes2. |
    a4) r8 d4.( |
    des4.) c4.~ |
-   \revert TupletBracket  #'number-visibility 
-   c4. \times 2/3 {bes8.:16-.} \times 2/3 {bes8.:16-.} \times 2/3 {bes8.:16-.} |
-   \times 2/3 {bes8.:16} 
-   \override TupletBracket  #'number-visibility = ##f  
-   \times 2/3 {bes8.:16} \times 2/3 {bes8.:16} \cresc \times 2/3 {bes8.:16} \times 2/3 {bes8.:16} \times 2/3 {bes8.:16} |
-   \times 2/3 {bes8.:16} \times 2/3 {bes8.:16} \times 2/3 {bes8.:16} \times 2/3 {bes8.:16\f[} \times 2/3 {bes8.:16]\<} \times 2/3 {bes16[ bes b]} |
-   \times 2/3 {d[\ff d d]} \times 2/3 {d[ d ees]} \times 2/3 {f[ f f]} \dim \times 2/3 {bes,8.:16} \times 2/3 {bes8.:16} \times 2/3 {bes8.:16} |
-   c4.\(\p \times 2/3 {bes16\)[ bes, bes]} \dim \times 2/3 {aes8.:16[} \times 2/3 {bes8.:16]} |
+   \undo \omit TupletNumber
+ 
+   c4. \tuplet 3/2 {bes8.:16-.} \tuplet 3/2 {bes8.:16-.} \tuplet 3/2 {bes8.:16-.} |
+   \tuplet 3/2 {bes8.:16} 
+   \omit TupletNumber  
+   \tuplet 3/2 {bes8.:16} \tuplet 3/2 {bes8.:16} \deprecatedcresc \tuplet 3/2 {bes8.:16} \tuplet 3/2 {bes8.:16} \tuplet 3/2 {bes8.:16} |
+   \tuplet 3/2 {bes8.:16} \tuplet 3/2 {bes8.:16} \tuplet 3/2 {bes8.:16} \tuplet 3/2 {bes8.:16\f[} \tuplet 3/2 {bes8.:16]\<} \tuplet 3/2 {bes16[ bes b]} |
+   \tuplet 3/2 {d[\ff d d]} \tuplet 3/2 {d[ d ees]} \tuplet 3/2 {f[ f f]} \deprecateddim \tuplet 3/2 {bes,8.:16} \tuplet 3/2 {bes8.:16} \tuplet 3/2 {bes8.:16} |
+   c4.\(\p \tuplet 3/2 {bes16\)[ bes, bes]} \deprecateddim \tuplet 3/2 {aes8.:16[} \tuplet 3/2 {bes8.:16]} |
    
    %% Bar 40
    ces4.(\pp <ces d> |
@@ -71,22 +74,22 @@ ThirdViolinSecondMovement =
    ees'4.( ces)~ |
    ces( bes4) r8 |
    f( e ees d des c) |
-   c'4.( \cresc bes)~ |
+   c'4.( \deprecatedcresc bes)~ |
    
    %% Bar 60
    bes( c4) r8 |
-   r \times 2/3 {r16 bes[\<\(_\markup{\large\bold\italic "cresc."} c\!]} \times 2/3 {d\>[ bes g]\!} d8\) \times 2/3 {r16 bes'[ bes]} \times 2/3 {bes[ bes bes]} |
-   \cresc bes2. |
-   r8 \times 2/3 {r16 fes[\(\< ges\!]} \times 2/3 {aes!\>[ fes des]\!} aes!8\) \times 2/3 {r16 \cresc aes''[ aes] } \times 2/3 {aes[ aes aes]} |
+   r \tuplet 3/2 {r16 bes[\<\(_\markup{\large\bold\italic "cresc."} c\!]} \tuplet 3/2 {d\>[ bes g]\!} d8\) \tuplet 3/2 {r16 bes'[ bes]} \tuplet 3/2 {bes[ bes bes]} |
+   \deprecatedcresc bes2. |
+   r8 \tuplet 3/2 {r16 fes[\(\< ges\!]} \tuplet 3/2 {aes!\>[ fes des]\!} aes!8\) \tuplet 3/2 {r16 \deprecatedcresc aes''[ aes] } \tuplet 3/2 {aes[ aes aes]} |
    b4.(\< c)\! |
-   \times 2/3 {g16\f[ g, g]} \times 2/3 {g8.:16} \times 2/3 {g8.:16} \times 2/3 {g16[ g g]} \times 2/3 {g-.[ a-. b-.]} \times 2/3 {c-.[ aes!-. fis-.]} |
-   \times 2/3 {g8.:16} \times 2/3 {g8.:16} \times 2/3 {g8.:16} \times 2/3 {g16[ g g]} \times 2/3 {g-.[ a-. b-.]} \times 2/3 {c-.[ aes!-. fis-.]} |
-   \times 2/3 {g[ g g]} \times 2/3 {g-.[ a-. b-.]} \times 2/3 {c-.[ aes!-. fis-.]} \times 2/3 {g[ g g]} \times 2/3 {g-.[ a-. b-.]} \times 2/3 {c-.[ aes!-. fis-.]} |
-   \times 2/3 {g[ b,-.(\p b-.)]} \times 2/3 {r b-.( b-.)} \times 2/3 {r b-.( b-.)} \times 2/3 {r c-.( c-.)} \times 2/3 {r aes'-.( aes-.)} \times 2/3 {r d,-.( d-.)} |
-   \times 2/3 {r ees-.( ees-.)} \times 2/3 {r ees-.( ees-.)} \times 2/3 {r des-.( des-.)} \times 2/3 {r c-.( c-.)} \times 2/3 {r c-.( c-.)} \times 2/3 {r c-.( c-.)} |
-   \times 2/3 {r aes'-.( aes-.)} \times 2/3 {r ees-.( ees-.)} \times 2/3 {r ees-.( ees-.)} \times 2/3 {r ees-.( ees-.)} \times 2/3 {r c'-.( c-.)} \times 2/3 {r c-.( c-.)} |
-   \times 2/3 {r c-.(\< b-.)} \times 2/3 {r c-.( b-.)} \times 2/3 {r c-.( b-.)\!} \times 2/3 {r d-.(\> c-.)} \times 2/3 {r d-.( c-.)} \times 2/3 {r d-.( c-.)\!} |
-   \times 2/3 {r c-.(\< b-.)} \times 2/3 {r c-.( b-.)} \times 2/3 {r c-.( b-.)\!} \times 2/3 {r d-.(\> c-.)} \times 2/3 {r d-.( c-.)} \times 2/3 {r d-.( c-.)\!} |
+   \tuplet 3/2 {g16\f[ g, g]} \tuplet 3/2 {g8.:16} \tuplet 3/2 {g8.:16} \tuplet 3/2 {g16[ g g]} \tuplet 3/2 {g-.[ a-. b-.]} \tuplet 3/2 {c-.[ aes!-. fis-.]} |
+   \tuplet 3/2 {g8.:16} \tuplet 3/2 {g8.:16} \tuplet 3/2 {g8.:16} \tuplet 3/2 {g16[ g g]} \tuplet 3/2 {g-.[ a-. b-.]} \tuplet 3/2 {c-.[ aes!-. fis-.]} |
+   \tuplet 3/2 {g[ g g]} \tuplet 3/2 {g-.[ a-. b-.]} \tuplet 3/2 {c-.[ aes!-. fis-.]} \tuplet 3/2 {g[ g g]} \tuplet 3/2 {g-.[ a-. b-.]} \tuplet 3/2 {c-.[ aes!-. fis-.]} |
+   \tuplet 3/2 {g[ b,-.(\p b-.)]} \tuplet 3/2 {r b-.( b-.)} \tuplet 3/2 {r b-.( b-.)} \tuplet 3/2 {r c-.( c-.)} \tuplet 3/2 {r aes'-.( aes-.)} \tuplet 3/2 {r d,-.( d-.)} |
+   \tuplet 3/2 {r ees-.( ees-.)} \tuplet 3/2 {r ees-.( ees-.)} \tuplet 3/2 {r des-.( des-.)} \tuplet 3/2 {r c-.( c-.)} \tuplet 3/2 {r c-.( c-.)} \tuplet 3/2 {r c-.( c-.)} |
+   \tuplet 3/2 {r aes'-.( aes-.)} \tuplet 3/2 {r ees-.( ees-.)} \tuplet 3/2 {r ees-.( ees-.)} \tuplet 3/2 {r ees-.( ees-.)} \tuplet 3/2 {r c'-.( c-.)} \tuplet 3/2 {r c-.( c-.)} |
+   \tuplet 3/2 {r c-.(\< b-.)} \tuplet 3/2 {r c-.( b-.)} \tuplet 3/2 {r c-.( b-.)\!} \tuplet 3/2 {r d-.(\> c-.)} \tuplet 3/2 {r d-.( c-.)} \tuplet 3/2 {r d-.( c-.)\!} |
+   \tuplet 3/2 {r c-.(\< b-.)} \tuplet 3/2 {r c-.( b-.)} \tuplet 3/2 {r c-.( b-.)\!} \tuplet 3/2 {r d-.(\> c-.)} \tuplet 3/2 {r d-.( c-.)} \tuplet 3/2 {r d-.( c-.)\!} |
    b16 r r8 r r4 r8 |
    R2.*3 |
    f'4(\pp f8-. f-. f-. f-.) |
@@ -103,7 +106,7 @@ ThirdViolinSecondMovement =
    R2.*6 |
    aes2. |
    aes4. aes~ |
-   aes\( \times 2/3 {bes16-.\)[ aes\(-. g-.]} \times 2/3 {bes-.[ aes-. g-.]} \times 2/3 {bes-.[ aes-. g-.\)]} |
+   aes\( \tuplet 3/2 {bes16-.\)[ aes\(-. g-.]} \tuplet 3/2 {bes-.[ aes-. g-.]} \tuplet 3/2 {bes-.[ aes-. g-.\)]} |
    f16 r r8 r r4 r8 |
    R2.*5 |
    \bar "|."
