@@ -16,8 +16,8 @@
   maintainerEmail = "knute (at) snortum (dot) net"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   
-  mutopiatitle = "Prélude 22"
-  mutopiaopus = "Op 28, No 22"
+  mutopiatitle = "Prélude 23"
+  mutopiaopus = "Op 28, No 23"
   mutopiacomposer = "ChopinFF"
   mutopiainstrument = "Piano"
 
