@@ -86,7 +86,7 @@ alto = \new Voice \relative f'
   s2 s4 r16 as g8 |
   c16 as c e f g e f g2 ~ |
 
-  g16 c, f as d, f b, c b8. ^\prall c16 c8.^\prall^\markup{\natural} b32 c |
+  g16 c, f as d, f b, c b8. ^\prall c16 c8.^\prall%{^\markup{\natural}%} b32 c |
   d4 b es8 f r16 g as f |
   %%%%%
 
@@ -202,7 +202,7 @@ bass = \new Voice \relative f {
      s1
    >>
 >>  
-  \midi { \tempo 4=54 }
+  \midi { \tempo 4=72 }
   
 }
 
@@ -224,6 +224,4 @@ bass = \new Voice \relative f {
      >>
   >>
   \layout { }
-  
-
 }
