@@ -181,7 +181,8 @@ bass = \new Voice \relative f {
   c4. c8 des2 |
   c1 ~  |c ~  |c~ | c~  |
   c4 r16 f b, d c,2 |
-  f1\fermata
+  f1_\fermata
+  \bar "|."
   }
 
 
