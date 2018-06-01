@@ -1,4 +1,5 @@
 %Violin 4, 3rd movement
+\version "2.19.80"
 
 FourthViolinThirdMovement =
 {
@@ -105,7 +106,7 @@ FourthViolinThirdMovement =
   a8\) r r4 |
   R2 |
   <d,, a' fis'>8^\markup{\bold\italic "pizz."} r r4 |
-  r r8 \afterGrace {\once \override Script #'script-priority = #-100 a''8\trill^\markup{\tiny\flat}\(} {g16[ a]} |
+  r r8 \afterGrace {\once \override Script.script-priority = #-100 a''8\trill^\markup{\tiny\flat}\(} {g16[ a]} |
   d8\) r r4 |
   R2 |
   bes,,2\p~ |
@@ -214,7 +215,7 @@ FourthViolinThirdMovement =
   d r g r bes r ees,, r |
   d r bes' r cis r d r |
   g r bes r d r a,, r |
-  bes r \dim bes r d r d r |
+  bes r \deprecateddim bes r d r d r |
   d r d r d r d r |
   d\! r r8 r4 |
   \bar "|."

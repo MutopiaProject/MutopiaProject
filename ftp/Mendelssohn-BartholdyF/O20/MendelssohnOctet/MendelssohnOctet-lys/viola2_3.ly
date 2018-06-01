@@ -1,4 +1,5 @@
 %Viola 2, 3rd movement
+\version "2.19.80"
 
 SecondViolaThirdMovement =
 {
@@ -116,7 +117,7 @@ SecondViolaThirdMovement =
   <e g>-.( <e g>-. <e g>-.) a16 b |
   cis b cis d e d f e |
   g e a, a g' e a, a |
-  fis'8 r r \afterGrace {\once \override Script #'script-priority = #-100 a,\trill^\markup{\tiny\flat}\( } {g16[ a]} |
+  fis'8 r r \afterGrace {\once \override Script.script-priority = #-100 a,\trill^\markup{\tiny\flat}\( } {g16[ a]} |
   d8\) r r c16 bes |
   a bes a g fis g a bes |
   c c c c c c bes a |
@@ -139,7 +140,7 @@ SecondViolaThirdMovement =
   c2~ |
   c8 c-.( c-. c-.) |
   b2~ |
-  b8 \dim b-.( b-. b-.) |
+  b8 \deprecateddim b-.( b-. b-.) |
   b2~ |
   b8 b-.( b-. b-.) |
   c16(\pp ees des ees c ees des ees |
@@ -165,7 +166,7 @@ SecondViolaThirdMovement =
   bes8 r r4 |
   r4 bes16 aes g f |
   ees f ees d c8 r |
-  r g'8\trill( \grace {f[ g]} c8) r |
+  r g'8\trill( \grace {f16[ g]} c8) r |
   fis16( a g a fis a g a |
   fis a g a fis a g a |
   fis a g a fis a g a |
@@ -202,7 +203,7 @@ SecondViolaThirdMovement =
   f8) f f4( |
   g8) g16 g g8 g16 g |
   g8 g,16-. aes-. bes8-. c16-. d-. |
-  ees8-. g-. \afterGrace { \once \override Script #'script-priority = #-100 g4\(\trill^\markup{\tiny \flat}} {f16[ g\)] } |
+  ees8-. g-. \afterGrace { \once \override Script.script-priority = #-100 g4\(\trill^\markup{\tiny \flat}} {f16[ g\)] } |
   g8 g,16-. aes-. bes8-. c16-. d-. |
   ees8-. f-. f4 |
   f8 bes bes4 |
@@ -243,7 +244,7 @@ SecondViolaThirdMovement =
   d r g r bes r ees,, r |
   d r bes' r cis r d r |
   g r bes r d r d,, r |
-  g r \dim g r g r g r |
+  g r \deprecateddim g r g r g r |
   g r g r g r g r |
   g\! r r8 r4 |
   \bar "|."

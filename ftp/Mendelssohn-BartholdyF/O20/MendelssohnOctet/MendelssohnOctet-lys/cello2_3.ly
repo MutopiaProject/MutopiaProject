@@ -1,4 +1,5 @@
 %Cello 2, 3rd movement
+\version "2.19.80"
 
 SecondCelloThirdMovement =
 {
@@ -115,7 +116,7 @@ SecondCelloThirdMovement =
   R2 |
   r4 r8 a,16-. b-. |
   cis b d cis e-. e-. cis-. a-. |
-  d r \once \override Script #'script-priority = #-100 a8(\trill^\markup{\tiny\flat} \grace {g16[ a]} d8) r |
+  d r \once \override Script.script-priority = #-100 a8(\trill^\markup{\tiny\flat} \grace {g16[ a]} d8) r |
   R2 |
   r8 <d d'>-.( <d d'>-. <d d'>-.) |
   <d d'>2 |
@@ -137,7 +138,7 @@ SecondCelloThirdMovement =
   c2~ |
   c8 c-.( c-. c-.) |
   d2~ |
-  d8 \dim d-.( d-. d-.) |
+  d8 \deprecateddim d-.( d-. d-.) |
   d2~ |
   d8 d-.( d-. d-.) |
   ees,2\pp~ |
@@ -160,7 +161,7 @@ SecondCelloThirdMovement =
   r r8 d'16-. c-. |
   bes-. c-. a-. bes-. g-. g-. f-. g-. |
   ees8 r r4 |
-  r4 r8 \afterGrace {\once \override Script #'script-priority = #-100 g\trill\(^\markup{\tiny\flat} } {f16[ g]} |
+  r4 r8 \afterGrace {\once \override Script.script-priority = #-100 g\trill\(^\markup{\tiny\flat} } {f16[ g]} |
   c8\) r r4 |
   r4 r8 bes!( |
   a!2)~ |
@@ -241,7 +242,7 @@ SecondCelloThirdMovement =
   d r g r bes r ees,, r |
   d r bes' r cis r d r |
   g r bes r d r d,, r |
-  g r \dim g r g r g r |
+  g r \deprecateddim g r g r g r |
   g r g r g r g r |
   g\! r r8 r4 |
   \bar "|."
