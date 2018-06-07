@@ -19,14 +19,16 @@
 
 %#(set-default-paper-size "a4")
 
-#(set-global-staff-size 17)
+#(set-global-staff-size 16)
 
 \include "articulate.ly"
+
+midifermata = {\cadenzaOn \tag #'midiOnly {s4.} \cadenzaOff}
 
 \header {
         title = "Aria - \"Hat man nicht auch Gold beineben\""
         subtitle = "Fidelio"
-        %piece = "Part II: 22. Aria (Raphael)"
+        %piece = ""
         mutopiatitle = "Air (Rocco)"
 	opus				= "Op. 72b"
 	composer			= "L. van Beethoven"
@@ -85,7 +87,8 @@ melody = \relative c {
   g4 f8 r4 r8
   r4 f8 f f g 
   a4.~^\rall a8 bes c 
-  c4. es,4\fermata \bar "||" \time 2/4 \partial 8 
+  c4. es,4\fermata \midifermata \bar "||"
+  \time 2/4 \partial 8 
   \tempo 4 = 72
   c'8^\markup{Tempo I.}
   a a a c 
@@ -129,7 +132,8 @@ melody = \relative c {
   r4 f8 f f g 
   
   a4.~^\rall a8 bes c 
-  c4. es,4\fermata \bar "||" \time 2/4 \partial 8 c'8^"Tempo I."
+  c4. es,4\fermata \midifermata
+  \bar "||" \time 2/4 \partial 8 c'8^"Tempo I."
   a a a c 
   es, es es g 
   c, d es f 
@@ -206,7 +210,7 @@ rh = \relative c' {
   <g g'>4( <f f'>8)r4r8
   \tempo 4.=65
   <c es a>4.r4r8
-  <a c es>4.~ \tempo 4.=50 <a c es>4\fermata
+  <a c es>4.~ \tempo 4.=50 <a c es>4\fermata \midifermata
   <es' c'>8
   \tempo 4=72
   <c a'>-.[ <c a'>-. <c a'>-. <es c'>-.]
@@ -239,7 +243,7 @@ rh = \relative c' {
       bes'8.( g16)|
       f8-.[ f-. e-. e-.] 
       g g4( a16 bes) 
-      bes( a g f) \tempo 4=70 e8 a
+      bes( a g f) e8 a
     } \\
     {
       d,16. d32 d16. e32
@@ -268,7 +272,8 @@ rh = \relative c' {
   \tempo 4. = 70
   <c es a>4.r4r8
   \tempo 4. = 65
-  <a c es>4.~ \tempo 4.=30 <a c es>4\fermata
+  <a c es>4.~ \tempo 4.=50 <a c es>4\fermata \midifermata
+
   \tempo 4=72
   <es' c'>8-.|
   \set Staff.baseMoment = #(ly:make-moment 1/4)
@@ -287,7 +292,7 @@ rh = \relative c' {
   <d f bes> d32([ f16.)] bes,32([ d16.)] es32([ g16.)]
   c,32([ es16.)] a,32([ c16.)] f,32([ a16.)] a32([ f'16.)]
   f,32([ d'16.)] <g, bes>32([ g'16.)] <f, d'>32([ f'16.)] <a, c>32([ a'16.)]
-  <bes, d>32([ bes'16.)] r8 <c, f a>r <d f bes>r r4
+  <bes, d>32([ bes'16.)] r8 <c, f a>r <d f bes>r
   
 }
 
@@ -326,7 +331,7 @@ lh = \relative c {
   <bes f'>2.
   <a c es f>2.
   <f f'>4.r4r8
-  <f f'>4.~ <f f'>4\fermata
+  <f f'>4.~ <f f'>4\fermata \midifermata
   r8 |
   <f f'>8 r r4
   <f f'>8 r r4
@@ -400,7 +405,7 @@ lh = \relative c {
   <bes f'>2.|
   <a c es f>2.|
   <f f'>4.r4r8|
-  <f f'>4.~ <f f'>4\fermata r8|
+  <f f'>4.~ <f f'>4\fermata \midifermata r8|
   <f f'>8 r r4|
   <f f'>8 r r4|
     \set Staff.baseMoment = #(ly:make-moment 1/4)
@@ -487,27 +492,7 @@ das Gold, das Gold,
 es ist ein mäch -- tig Ding, das Gold, das Gold.
 }
 
-
-% The score definition
-\score {
-
-<<
-
-  \time 2/4
-
-    \override Score.VerticalAxisGroup #'remove-first = ##t
-  \new Staff <<
-            \new Voice = "mel" { \clef bass \key bes \major \melody}
-            \new Lyrics = "one" \lyricsto mel \songtext
-  >>
-  \new PianoStaff <<
-    \new Staff \with {
-      \consists #Merge_rests_engraver
-    }
-    <<
-      \new Voice { \key bes \major \rh }
-    >>
-      \new Dynamics {
+dynamics = {
     s4 \p |
     s2
     s2
@@ -537,7 +522,7 @@ es ist ein mäch -- tig Ding, das Gold, das Gold.
     s4\mf s2\p|
     s4\> s4\! s|
     s2.
-    s4. s4 s8 \pp|
+    s4. s4 s8 \pp \midifermata |
     s2|
     s2|
     s2\cresc|
@@ -579,7 +564,7 @@ es ist ein mäch -- tig Ding, das Gold, das Gold.
     s4\mf s2\p|
     s4\> s4\! s4|
     s2.|
-    s4. s4 s8 \pp|
+    s4. s4 s8 \pp \midifermata|
     s2|
     s|
     s\cresc|
@@ -595,14 +580,34 @@ es ist ein mäch -- tig Ding, das Gold, das Gold.
     s|
     s8 s4 \cresc s8 \f|
     s4 s\p|
-    
-    
-  }
+}
+
+
+% The score definition
+\score {
+
+<<
+
+  \time 2/4
+
+    \override Score.VerticalAxisGroup #'remove-first = ##t
+  \new Staff <<
+            \new Voice = "mel" {\removeWithTag #'midiOnly \clef bass \key bes \major \melody}
+            \new Lyrics = "one" \lyricsto mel \songtext
+  >>
+  \new PianoStaff <<
     \new Staff \with {
       \consists #Merge_rests_engraver
     }
     <<
-      \new Voice { \clef bass \key bes \major \lh }
+      \new Voice {\removeWithTag #'midiOnly \key bes \major \rh }
+    >>
+      \new Dynamics {\dynamics}
+    \new Staff \with {
+      \consists #Merge_rests_engraver
+    }
+    <<
+      \new Voice {\removeWithTag #'midiOnly \clef bass \key bes \major \lh }
     >>
 
   >>
@@ -624,9 +629,8 @@ es ist ein mäch -- tig Ding, das Gold, das Gold.
 
     \override Score.VerticalAxisGroup #'remove-first = ##t
   \new Staff <<
-        \set Staff.midiInstrument = #"choir aahs"
-            \new Voice = "mel" { \clef bass \key bes \major \melody}
-            \new Lyrics = "one" \lyricsto mel \songtext
+        \set Staff.midiInstrument = #"reed organ"
+            \new Voice = "mel" { \clef bass \key bes \major << {\melody} \\ {\transpose c c' \melody} >> }
   >>
   \new PianoStaff <<
     \new Staff
