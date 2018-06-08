@@ -1,4 +1,5 @@
 %Cello 2, 4th movement
+\version "2.19.80"
 
 SecondCelloFourthMovement =
 {
@@ -58,9 +59,9 @@ SecondCelloFourthMovement =
   bes r bes r |
   ees, r r2 |
   R1*7 |
-  ees'2:8\p \cresc ees2:8 |
+  ees'2:8\p \deprecatedcresc ees2:8 |
   ees2:8\mf d2:8 |
-  \cresc ees2:8 ees2:8 |
+  \deprecatedcresc ees2:8 ees2:8 |
   ees2:8\f d2:8 |
   ees4 ees'8 ees ees ees d d |
   ees4 r4 r2 |
@@ -109,10 +110,10 @@ SecondCelloFourthMovement =
   bes( |
   f'4) f2 f4~ |
   f f2 f4~ |
-  f \cresc f2 f4~ |
+  f \deprecatedcresc f2 f4~ |
   f f2 f4~ |
   f f2 f4~ |
-  \cresc f f2 f4( |
+  \deprecatedcresc f f2 f4( |
   bes1)~\f |
   bes~ |
   bes2 r |
@@ -121,11 +122,11 @@ SecondCelloFourthMovement =
   f f2 f4~ |
   f f2 f4~ |
   f f2 f4~ |
-  \cresc f f2 f4~ |
+  \deprecatedcresc f f2 f4~ |
   f f2 f4~ |
   f f2 f4~ |
   f f2 f4 |
-  \cresc g,8( aes bes c des c bes aes |
+  \deprecatedcresc g,8( aes bes c des c bes aes |
   g aes bes c des c bes aes) |
   ges(\f aes bes c des c bes aes) |
   ges( aes bes c des bes aes ges) |
@@ -354,15 +355,15 @@ SecondCelloFourthMovement =
   c2:8 c2:8 |
   g2:8 g2:8 |
   aes2:8 bes2:8 |
-  ees2:8 \cresc ees2:8 |
+  ees2:8 \deprecatedcresc ees2:8 |
   c2:8 c2:8 |
   g2:8 g2:8 |
   aes2:8 bes2:8 |
   ees2:8\mf c2:8 |
-  \cresc aes2:8 bes2:8 |
+  \deprecatedcresc aes2:8 bes2:8 |
   ees2:8 c2:8\f |
   aes2:8 aes2:8 |
-  \cresc aes2:8 aes2:8 |
+  \deprecatedcresc aes2:8 aes2:8 |
   aes2:8 aes2:8 |
   <aes ees'>1\ff~ |
   <aes ees'> |

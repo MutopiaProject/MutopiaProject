@@ -1,8 +1,9 @@
 %Cello 2, 2nd movement
+\version "2.19.80"
 
 SecondCelloSecondMovement =
 {
-\override TupletBracket  #'bracket-visibility = ##f
+\override TupletBracket.bracket-visibility = ##f
  \relative c' {  
   \key c \minor
   \clef "bass"
@@ -22,13 +23,13 @@ SecondCelloSecondMovement =
   %% Bar 20
   f,8( g f) ees-. f4\accent |
   g8-. a4\accent b8\p^\markup{\bold\italic "pizz."} c g |
-  r4 r8 r \dim g g\! |
+  r4 r8 r \deprecateddim g g\! |
   r4 r8 c\pp(^\markup{\bold\italic "arco"} b bes |
   a aes g) c r r |
   r4 r8 r f,( g) |
   c r r r4 r8 |
-  r8 \times 2/3 {r16 ees[\(\ff f]} \times 2/3 {ges[ ees c]\)} bes8\( \override TupletBracket  #'number-visibility = ##f \times 2/3 {a16\)[ ees'\( f]} \times 2/3 {ges[ ees c]\)} |
-  bes8\( \times 2/3 {a16\)[ aes\( bes]} \times 2/3 {ces[ aes f\)]} ees8\( \times 2/3 {d!16\)[ aes'\( bes]} \times 2/3 {ces[ aes f]\)} |
+  r8 \tuplet 3/2 {r16 ees[\(\ff f]} \tuplet 3/2 {ges[ ees c]\)} bes8\( \omit TupletNumber \tuplet 3/2 {a16\)[ ees'\( f]} \tuplet 3/2 {ges[ ees c]\)} |
+  bes8\( \tuplet 3/2 {a16\)[ aes\( bes]} \tuplet 3/2 {ces[ aes f\)]} ees8\( \tuplet 3/2 {d!16\)[ aes'\( bes]} \tuplet 3/2 {ces[ aes f]\)} |
   ees8( d16) r r8 ees4.\pp~ |
   ees( d |
   c4) r8 f4.~ |
@@ -36,12 +37,13 @@ SecondCelloSecondMovement =
   d4) r8 g4.~ |
   g aes!( |
   a4.) bes~ |
-  bes \cresc bes |
+  bes \deprecatedcresc bes |
   bes8 bes bes bes16\f bes bes\< bes bes bes |
-  \revert TupletBracket  #'number-visibility
-  \times 2/3 {aes'\ff[ aes g]} \times 2/3 {f[ f ees]} \times 2/3 {d[ d d]} \dim \override TupletBracket  #'number-visibility = ##f \times 2/3 {ees8.:16} \times 2/3 {f8.:16} \times 2/3 {g8.:16} |
-  aes8\p r r  \times 2/3 {ees,8.:16} \dim \times 2/3 {f8.:16} \times 2/3 {g8.:16} |
-  \revert TupletBracket  #'number-visibility
+  \undo \omit TupletNumber 
+  
+  \tuplet 3/2 {aes'\ff[ aes g]} \tuplet 3/2 {f[ f ees]} \tuplet 3/2 {d[ d d]} \deprecateddim \omit TupletNumber \tuplet 3/2 {ees8.:16} \tuplet 3/2 {f8.:16} \tuplet 3/2 {g8.:16} |
+  aes8\p r r  \tuplet 3/2 {ees,8.:16} \deprecateddim \tuplet 3/2 {f8.:16} \tuplet 3/2 {g8.:16} |
+  \undo \omit TupletNumber
   
   %% Bar 40
   aes4.~\pp aes8( ces aes) |
@@ -65,21 +67,20 @@ SecondCelloSecondMovement =
   des g, a bes4) c8\( |
   f,2. |
   << {ees!4. d!4\)} {s8.\< s8.\> s4\!} >> r8 |
-  \cresc g2. |
-  r4 r8 \times 2/3 {r16 bes\(\<[ c]} \times 2/3 {des\>[ bes aes]\!} \times 2/3 {g[ f ees]\)} |
-  \cresc aes2.~ |
-  \override TupletBracket  #'number-visibility = ##f 
-  aes8 r \times 2/3 {r16 c'[\<\( d!\!]} \times 2/3 {ees[\> c aes]\)\!} r8 \times 2/3 {r16 c,([ ees])} |
+  \deprecatedcresc g2. |
+  r4 r8 \tuplet 3/2 {r16 bes\(\<[ c]} \tuplet 3/2 {des\>[ bes aes]\!} \tuplet 3/2 {g[ f ees]\)} |
+  \deprecatedcresc aes2.~ |
+  \omit TupletNumber aes8 r \tuplet 3/2 {r16 c'[\<\( d!\!]} \tuplet 3/2 {ees[\> c aes]\)\!} r8 \tuplet 3/2 {r16 c,([ ees])} |
   g,16\f[ r32 g a16 r32 a b16 r32 b] c16[ r32 c ees16 r32 ees c16 r32 c] |
   g16[ r32 g fis16 r32 fis f16 r32 f] ees16[ r32 ees c16 r32 c ees16 r32 c] |
-  \revert TupletBracket  #'number-visibility \times 2/3 {g'16[ g' fis]} \override TupletBracket  #'number-visibility = ##f \times 2/3 {g[ d f]} \times 2/3 {ees[ d c]} \times 2/3 {b[ d b]} \times 2/3 {g[ f d]} \times 2/3 {g[ ees c]} |
+  \undo \omit TupletNumber \tuplet 3/2 {g'16[ g' fis]} \omit TupletNumber \tuplet 3/2 {g[ d f]} \tuplet 3/2 {ees[ d c]} \tuplet 3/2 {b[ d b]} \tuplet 3/2 {g[ f d]} \tuplet 3/2 {g[ ees c]} |
   g'16 r r8 r r4 r8 |
   R2.*2 |
   
   %% Bar 71
   g8-.\p( g-. g-. g-. g-. g-.) |
   g-.( g-. g-. c-. c-. c-.) |
-  g r g'-.( \dim a-. a-. a-.) |
+  g r g'-.( \deprecateddim a-. a-. a-.) |
   b-.(\pp b-. g-.) r g, r |
   R2. |
   c,2.( |
@@ -95,7 +96,7 @@ SecondCelloSecondMovement =
   g4( c8) r4 r8 |
   r4 r8 c,8. c16-.( f-. f-.) |
   c8. c16-.( f-. f-.) f4.~ |
-  f r4 g8(^\markup{\bold\italic "sul C."}_\markup{\bold\italic "dolce"} |
+  f r4 g8(^\markup{\bold\italic\whiteout "sul C."}_\markup{\bold\italic "dolce"} |
   aes d, e f4 g8) |
   aes( d, e f4 g8) |
   aes( f g aes f aes16 f) |
@@ -111,7 +112,7 @@ SecondCelloSecondMovement =
   \bar "|."
   
  }
- \revert TupletBracket  #'bracket-visibility
+ \undo \omit TupletNumber
 }
 
 SecondCelloSecondMovementTiming =
