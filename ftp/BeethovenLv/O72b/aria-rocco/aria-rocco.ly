@@ -48,7 +48,7 @@ style = "Classical"
         maintainerEmail = "alexander@lunar-orbit.de"
 
         license = "Creative Commons Attribution-ShareAlike 4.0"
-        footer = "Mutopia-2017/10/24-2199"
+        footer = "Mutopia-2018/06/12-2227"
         copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2017 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
         tagline = ##f
 }
@@ -74,35 +74,35 @@ melody = \relative c {
   bes( a) g( f) e8 a  |
   d,4.\fermata \bar "||" \time 6/8 \partial 8 r8^"Allegro" |
   r2.
-  r4 r8 r4 bes'8 
-  bes f bes bes g bes 
-  bes as bes g4 bes8 
-  bes f bes bes g bes 
-  as4. g4 g8 
+  r4 r8 r4 bes'8
+  bes f bes bes g bes
+  bes as bes g4 bes8
+  bes f bes bes g bes
+  as4. g4 g8
   f4 r8 r4 g8
   f8 f r r4 g8
   f f f g4 g8
   f f f g g g
   f f f f f f
   g4 f8 r4 r8
-  r4 f8 f f g 
-  a4.~^\rall a8 bes c 
+  r4 f8 f f g
+  a4.~^\rall a8 bes c
   c4. es,4\fermata \midifermata \bar "||"
-  \time 2/4 \partial 8 
+  \time 2/4 \partial 8
   \tempo 4 = 72
   c'8^\markup{Tempo I.}
-  a a a c 
-  es, es es g 
-  c, d es f 
-  g a bes c 
-  d4 c 
+  a a a c
+  es, es es g
+  c, d es f
+  g a bes c
+  d4 c
   bes4 r |
 
   r8. f16 g( a) bes( c )
-  d8 d c c 
-  bes8. f16( g) a( bes) c 
+  d8 d c c
+  bes8. f16( g) a( bes) c
   d4~( d16 bes) f( d )
-  es8. es16 f8. f16 
+  es8. es16 f8. f16
   bes,4 r |
   r2 | r2 |
   r4 bes'8 f d f bes8. c16|
@@ -115,40 +115,40 @@ melody = \relative c {
   f8 f e e  |
   g g4 a16( bes)  |
   bes( a) g( f) e8 a  |
-  
+
   d,4. \bar "||" \time 6/8 \partial 8 r8^"Allegro." |
   r2.
-  r4 r8 r4 bes'8 
-  bes f bes bes g bes 
-  bes as bes g4 bes8 
-  bes f bes bes g bes 
-  as4. g4 g8 
+  r4 r8 r4 bes'8
+  bes f bes bes g bes
+  bes as bes g4 bes8
+  bes f bes bes g bes
+  as4. g4 g8
   f8 f r8 r4 g8
   f8 f r r4 g8
   f f f g g g8
   f f f g4 g8
   f f f f f f
   g4 f8 r4 r8
-  r4 f8 f f g 
-  
-  a4.~^\rall a8 bes c 
+  r4 f8 f f g
+
+  a4.~^\rall a8 bes c
   c4. es,4\fermata \midifermata
   \bar "||" \time 2/4 \partial 8 c'8^"Tempo I."
-  a a a c 
-  es, es es g 
-  c, d es f 
-  g a bes c 
-  d4 c 
+  a a a c
+  es, es es g
+  c, d es f
+  g a bes c
+  d4 c
   bes4 r |
   r8. f16 g( a) bes( c )
-  d8 d c c 
-  bes8. f16 g( a) bes( c) 
+  d8 d c c
+  bes8. f16 g( a) bes( c)
   d4~( d16 bes) f( d) |
   es8. es16 f8. f16 |
-  bes 4 r8 
+  bes 4 r8
   g es c f g16( a)
-  bes4. f8 
-  bes4 r8 f8 
+  bes4. f8
+  bes4 r8 f8
   bes, r r4 \bar "|."
 
 }
@@ -160,14 +160,14 @@ rh = \relative c' {
 
 \set Score.tempoHideNote = ##t
   \tempo 4 = 72
-  
+
  << {{
     s4 |
     s4 s8. c''16}}\\
     {
         bes8^( f |
   d f16)
-      f32^( a bes8.) f32( a <bes d>8)^( bes16) 
+      f32^( a bes8.) f32( a <bes d>8)^( bes16)
   } >>
   r16 r8 <a, f'>16 r
   <bes d> r <a f'> f'32( a bes16)r16  <a c> f32( a|
@@ -176,7 +176,7 @@ rh = \relative c' {
   f8)r <bes' d>( <g bes>|
   <f a>[ <a c> <g bes>8. <c, g'>32 e]
   f8^.) s a8 a
-  a a a16( g f g) 
+  a a a16( g f g)
   a8( d,) <d bes'>8.( <e g>16)
   << {
     f8^.[ f^. e^. e^.]|
@@ -192,7 +192,7 @@ rh = \relative c' {
   >>
   \tempo 4 = 65
   d4.\fermata
-  
+
   \tempo 4. = 72
 
   \set Staff.baseMoment = #(ly:make-moment 3/8)
@@ -230,9 +230,9 @@ rh = \relative c' {
   <d f bes> d32([ f16.)] bes,32([ d16.)] es32([ g16.)]
   c,32([ es16.)] a,32([ c16.)] f,32([ a16.)] a32([ f'16.)]
   f,32([ d'16.)] <g, bes>32([ g'16.)] <f, d'>32[( f'16.)]<a, c>32([ a'16.)]
-  <bes, d>32([ bes'16.)]r8r <a, f'>16r 
-  <bes d>r <a f'> f'32( a bes8-.) <a c>16 f32( a 
-  <bes d>8)r <bes, d>( <g bes> 
+  <bes, d>32([ bes'16.)]r8r <a, f'>16r
+  <bes d>r <a f'> f'32( a bes8-.) <a c>16 f32( a
+  <bes d>8)r <bes, d>( <g bes>
   <f a>[ <a c> <g bes>8. <c, g'>32 e ]
   f8-.)r <bes' d>( <g bes>
   <f a>[ <a c> <g bes>8. <bes, c g'>16) ]
@@ -241,8 +241,8 @@ rh = \relative c' {
   <<
     {
       bes'8.( g16)|
-      f8-.[ f-. e-. e-.] 
-      g g4( a16 bes) 
+      f8-.[ f-. e-. e-.]
+      g g4( a16 bes)
       bes( a g f) e8 a
     } \\
     {
@@ -257,14 +257,14 @@ rh = \relative c' {
   \tempo 4.=72
   bes'16( a
   \set Staff.baseMoment = #(ly:make-moment 3/8)
-  bes as g f es d c bes as g f es 
+  bes as g f es d c bes as g f es
   d es f bes, c d es d es f g a!)
-  bes( a bes c d bes es d es f g as 
-  bes a! bes c d bes es4) bes,16( a bes a bes c d bes es d es f g as 
+  bes( a bes c d bes es d es f g as
+  bes a! bes c d bes es4) bes,16( a bes a bes c d bes es d es f g as
   bes a! bes c d bes es4) r8
   r d,16( f bes d) es4-.r8
   r d,16( f bes d) es4-.r8
-  r d,16( f bes d) es8-. es,16( g bes es) 
+  r d,16( f bes d) es8-. es,16( g bes es)
   f8-. d,16( f bes d) es8-. <es,, g>[ <es g>]
   <c es f>2.
   <d f>4 <f f'>8 <f f'> <f f'> <f f'>
@@ -281,19 +281,19 @@ rh = \relative c' {
   <c es>-.[ <c es>-. <c es>-. <es g>-. ]
   <a, c>([ <bes d> <c es> <d f>) ]
   <es g>([ <c f a> <f bes> <g bes c>)]
-  <f bes d>r <es f a c>r 
-  <d f bes>r16 f'( g a bes c) 
+  <f bes d>r <es f a c>r
+  <d f bes>r16 f'( g a bes c)
   d8-.[ d-. c-. c-. ]
 
-  bes8.( f16 g a bes c) 
+  bes8.( f16 g a bes c)
   d8-.[ d-. c-. c-. ]
-  bes <f bes d>4 <f bes d>8 
-  <g c es> <g c es>r <es f a c> 
+  bes <f bes d>4 <f bes d>8
+  <g c es> <g c es>r <es f a c>
   <d f bes> d32([ f16.)] bes,32([ d16.)] es32([ g16.)]
   c,32([ es16.)] a,32([ c16.)] f,32([ a16.)] a32([ f'16.)]
   f,32([ d'16.)] <g, bes>32([ g'16.)] <f, d'>32([ f'16.)] <a, c>32([ a'16.)]
   <bes, d>32([ bes'16.)] r8 <c, f a>r <d f bes>r
-  
+
 }
 
 lh = \relative c {
@@ -306,7 +306,7 @@ lh = \relative c {
   c8-.) << {c,16( bes'
            <a f>8-.) f,-. } \\
            {c'8} >>
-  bes'-.r16 g32( bes 
+  bes'-.r16 g32( bes
   c8-.)r16 \clef treble f32( a c8-.)
   << { c,16( bes' <f a>8-.) \clef bass f,8-. r16 a( f a
        e a es a d,4)} \\ { c'8
@@ -318,9 +318,9 @@ lh = \relative c {
   <f f'>8 <bes bes'> <g g'> <a a'>
   <d d'>4.\fermata
   r8
-  bes <d f> <d f> bes <es g> <es g> 
-  bes <f' as> <f as> bes, <es g> <es g> 
-  bes <d f> <d f> bes <es g> <es g> 
+  bes <d f> <d f> bes <es g> <es g>
+  bes <f' as> <f as> bes, <es g> <es g>
+  bes <d f> <d f> bes <es g> <es g>
   bes <f' as> <f as> bes, <es g> <es g>
   bes <d f> <d f> bes <es g> <es g>
   bes <f' as> <f as> bes, <es g> <es g>
@@ -335,7 +335,7 @@ lh = \relative c {
   r8 |
   <f f'>8 r r4
   <f f'>8 r r4
-  f16 f' f, f' f, f' f, f' 
+  f16 f' f, f' f, f' f, f'
   f, f' es, es' d, d' es, es'
   <f, f'>8r <f f'>8 r
   \set Timing.beamExceptions = #'()
@@ -355,7 +355,7 @@ lh = \relative c {
 
   \times 2/3 { bes,16( d f} \times 2/3 {bes, d f}
   \times 2/3 {  bes,) bes'( g} \times 2/3 {  f d bes)}
-  
+
   <es, es'>8r <f f'>r
   \times 2/3 { bes16( d f}
   \times 2/3 { bes, d f)}
@@ -371,7 +371,7 @@ lh = \relative c {
   \times 2/3 { es,( bes' es)}
   \times 2/3 { f,( bes d)}
   \times 2/3 { f,( c' es)}
-  
+
   \set Staff.baseMoment = #(ly:make-moment 1/4)
   \set Staff.beatStructure = 1,1,1
   <bes d>8r r8. f'32( a
@@ -391,11 +391,11 @@ lh = \relative c {
   <f f'>8 <bes bes'> <g g'> <a a'>|
   <d d'>4.\fermata r8|
   \set Staff.baseMoment = #(ly:make-moment 3/8)
-  bes <d f> <d f> bes <es g> <es g> 
-  bes <f' as> <f as> bes, <es g> <es g> 
-  bes <d f> <d f> bes <es g> <es g> 
-  bes <f' as> <f as> bes, <es g> <es g> 
-  bes <d f> <d f> bes <es g> <es g> 
+  bes <d f> <d f> bes <es g> <es g>
+  bes <f' as> <f as> bes, <es g> <es g>
+  bes <d f> <d f> bes <es g> <es g>
+  bes <f' as> <f as> bes, <es g> <es g>
+  bes <d f> <d f> bes <es g> <es g>
   bes <f' as> <f as> bes, <es g> <es g>
   <d f> <bes f' as>[ <bes f' as>] <es g>4 r8
   r <bes f' as> <bes f' as> <es g>4r8|
@@ -413,7 +413,7 @@ lh = \relative c {
   f8[ f' f f]|
   f([ es d es)]|
   f r <f, f'>r|
-  
+
     \set Timing.beamExceptions = #'()
   \set Staff.baseMoment = #(ly:make-moment 1/8)
   \set Staff.beatStructure = 1,1,1,1,1,1
@@ -431,7 +431,7 @@ lh = \relative c {
 
   \times 2/3 { bes,16( d f} \times 2/3 {bes, d f}
   \times 2/3 {  bes,) bes'( g} \times 2/3 {  f d bes)}
-  
+
   <es, es'>8r <f f'>r
   \times 2/3 { bes16( d f}
   \times 2/3 { bes, d f)}
@@ -447,7 +447,7 @@ lh = \relative c {
   \times 2/3 { es,( bes' es)}
   \times 2/3 { f,( bes d)}
   \times 2/3 { f,( c' es)}
-  
+
   <bes d>8r f'r|
   bes,r r4
 }
