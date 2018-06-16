@@ -147,8 +147,10 @@ right = \relative c'' {
 
   \key des \major
   des8 des~ des16 aes des ees |
+  \stemUp
   f8 f~ f16 aes, des f |
-  <aes, c ges' aes> <ees' ges c>8 <c ges' bes>16~ <c ges' bes> <c ges' aes> <ges aes c>8 |
+  <c ges' aes> <ees ges c>8 <c ges' bes>16~ <c ges' bes> <c ges' aes> <ges aes c>8 |
+  \stemNeutral
   <f aes des> r8 r8 aes16 a
 
   % Part C
@@ -326,9 +328,14 @@ left = \relative c' {
   \key des \major
   % Intermission
   {
-    \clef treble des'8 des~ des16 aes des ees |
+    des'8 des~ des16 aes des ees |
+    \change Staff = "right"
+    \stemDown
     f8 f~ f16 aes, des f |
-    \clef bass s4 <aes, aes,>8 <aes aes,> |
+    aes4
+    \stemNeutral
+    \change Staff = "left"
+    <aes, aes,>8 <aes aes,> |
     <des, des,> <des des,> <ees ees,> <f f,> |
   }
 
