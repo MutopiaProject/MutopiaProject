@@ -88,15 +88,13 @@ right = \relative c'' {
     <bes des> <a c> <bes des> f~ f a bes des |
     f c des bes~ bes f des bes |
     b-1 d-2 f-3 aes-4 b-5 b8-5 b16-1~ |
-    b d-2 f-3 aes-4 b8-5 r8 |
-    <<
-      {c16 aes ees c~ c aes c, ees}
-      \\
-      {<aes ees'>8 s8 s4}
-    >>
+    \stemUp
+    b d-2 f-3 aes-4 b8 \finger \markup { \lower #-4 "5" } r8 |
+    c16 aes ees c~ c aes c, ees
+    \stemNeutral
   }
   \alternative {
-    {<des, ees g bes>16 <des ees g bes>8 <c ees aes>16~ <c ees aes>8 ees16 e}
+    {<des ees g bes>16 <des ees g bes>8 <c ees aes>16~ <c ees aes>8 ees16 e}
     {<des ees g bes>16 <des ees g bes>8 <c ees aes>16~ <c ees aes>8 ees}
   }
 
@@ -106,11 +104,18 @@ right = \relative c'' {
     <aes c>8 <aes c>4 <c ees>8 |
     <b f'>16( <c ees>8) <b f'>16( <c ees>) <b f'>16( <c ees>8) |
     <<
-      { <e bes'>16( <f aes>8) <e bes'>16( <f aes>) <e bes'>( <f aes>16) <c ees>16~ |
+      {
+        \stemDown
+        <e bes'>16( <f aes>8) <e bes'>16( <f aes>) <e bes'>( <f aes>16) <c ees>16~ |
         <c ees>2
+        \stemNeutral
       }
       \\
-      {s2 | r8 ees,16( f g aes bes b)}
+      {
+        \stemUp
+        s2 | r8 ees,16( f g aes bes b)
+        \stemNeutral
+      }
     >> |
     <aes c>8 <aes c>4 <c ees>8 |
     <b f'>16( <c ees>8) <b f'>16( <c ees>) <c ees> <c ees>8 |
@@ -288,11 +293,13 @@ left = \relative c' {
     bes, <f' bes des> des <f bes des> |
     bes, <f' bes> <des f bes>4 |
     d16-5 f-4 aes-3 b-2 d-1 d8-1 d16-5~ |
-    d f-4 aes-3 b-2 d8-1 r8 |
-    s8 r8 r4 |
+    \stemDown
+    d \change Staff = "right" f_4 aes_3 b_2 d8_1 r8 |
+    \stemNeutral
+    <aes ees'>8 \change Staff = "left" r8 r4 |
   }
   \alternative {
-    { <ees,, ees,>8 <ees ees,> <aes aes,> r }
+    { <ees, ees,>8 <ees ees,> <aes aes,> r }
     { <ees ees,>8 <ees ees,> <aes aes,> r }
   }
 
