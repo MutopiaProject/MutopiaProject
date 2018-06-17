@@ -61,7 +61,7 @@ right = \relative c'' {
       }
       \\
       {
-        s2 | r16 c, e g c8 r8 |
+        s2 | r16 c,( e g c8) r8 |
       }
     >>
     <e, bes'>16( <f aes>8) <e bes'>16( <f aes>) <e bes'>( <f aes>) <c ees>~ |
@@ -130,10 +130,14 @@ right = \relative c'' {
     <<
       { <e bes'>16( <f aes>8) <e bes'>16( <f aes>) <f aes> <f g bes> <e g c>~ |
         <e g c>4~ c'8 g16 aes |
+        % Of the chord above, the e and g were marked in the original publication with a dot (extra length)
+        % This makes the sequence impossible to play, would require Lilypond to use three voices, which would screw
+        % up the display to no end. Worst of all, this would be inconsistent with the first repeatition.
+        % As such, we are assuming this is an error in the original printing
       }
       \\
       {
-        s2 | r16 c, e g c8 r8 |
+        s2 | r16 c,( e g c8) r8 |
       }
     >>
     <e, bes'>16( <f aes>8) <e bes'>16( <f aes>) <e bes'>( <f aes>) <c ees>~ |
