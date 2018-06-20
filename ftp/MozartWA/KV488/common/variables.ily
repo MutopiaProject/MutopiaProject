@@ -1,35 +1,39 @@
-%{
-  ***********************************************************************
-  *                                                                     *
-  * Variables, to be included at the top of all files                   *
-  * Variables, à inclure en tête de tous les fichiers                   *
-  *                                                                     *
-  *                                                                     *
-  * Do not compile                                                      *
-  *                                                                     *
-  ***********************************************************************
-%}
+% Variables, to be included at the top of all files
+% Do not compile
 
 \include "version.ily"
 
-%%------------------Work-specific variables
-thisComposer = "Johann Sebastian Bach"
-thisWork = "Keyboard Concerto Nº 4"
-thisOrchester = "for keyboard, strings, and continuo"
-thisOpus = "BWV 1055"
+%% Work-specific variables
+thisComposer = "Wolfgang Amadeus Mozart"
+thisWork = "Piano Concerto № 23"
+thisOrchester = "for piano and orchestra"
+thisOpus = "KV 488"
 thisTonality = "in A major"
-thisStyle = "Baroque"
-thisDates = "1685-1750"
-thisDateOfPublication = "1854"
-thisSource = "Bach-Gesellschaft Ausgabe; Breitkopf and Härtel, 1869"
-thisBigTitle = "Bach - Keyboard Concerto Nº 4 in A major"
+thisStyle = "Classical"
+thisDates = \markup {
+  \concat {
+    "1756"
+    \hspace #0.2 \char ##x2013 \hspace #-0.4
+    "1791"
+  }
+}
+thisDateOfPublication = "1800"
+thisSource = "Wolfgang Amadeus Mozart’s Werke; Breitkopf and Härtel, 1879"
 
-combinedPublicationName = "Conductor's Score"
+thisBigTitle = \markup {
+  \concat {
+    "Mozart"
+    \hspace #0.4 \char ##x2014 \hspace #0.4
+    "Piano Concerto № 23 in A major"
+  }
+}
 
-%%----------------Movement-specific variables
-thisTempoMovI = "Allegro"
-thisTempoMovII = "Larghetto"
-thisTempoMovIII = "Allegro ma non tanto"
+combinedPublicationName = "Conductor’s Score"
+
+%% Movement-specific variables
+thisTempoMovI = "Allegro (under construction)"
+thisTempoMovII = "Andante (under construction)"
+thisTempoMovIII = "Presto (under construction)"
 
 thisIdentifierMovI = "I"
 thisIdentifierMovII = "II"
@@ -39,24 +43,28 @@ thisLabelMovI = #'MvmtI
 thisLabelMovII = #'MvmtII
 thisLabelMovIII = #'MvmtIII
 
-thisFilenameMovI = "bwv1055-1-allegro"
-thisFilenameMovII = "bwv1055-2-larghetto"
-thisFilenameMovIII = "bwv1055-3-allegro-manontanto"
+thisFilenameMovI = "kv488-1-allegro"
+thisFilenameMovII = "kv488-2-andante"
+thisFilenameMovIII = "kv488-3-presto"
 
-%%----------------Instrument-specific variables
-thisInstrNameI = "Violin I"
-thisInstrNameII = "Violin II"
-thisInstrNameIII = "Viola"
-thisInstrNameIV = "Continuo"
-thisInstrNameV = "Keyboard"
+%% Instrument-specific variables
+thisInstrNameI = "Flute"
+thisInstrNameII = "Clarinet in A"
+thisInstrNameIII = "Bassoon"
+thisInstrNameIV = "French Horn in A"
+thisInstrNameV = "Piano"
+thisInstrNameVI = "Violin I"
+thisInstrNameVII = "Violin II"
+thisInstrNameVIII = "Viola"
+thisInstrNameIX = "Cello and Bass"
 
-   %------------------set clefs for single-staff parts
 thisClefInstrI = \clef treble
 thisClefInstrII = \clef treble
-thisClefInstrIII = \clef alto
-thisClefInstrIV = \clef bass
+thisClefInstrIII = \clef bass
+thisClefInstrIV = \clef treble
 thisClefInstrVu = \clef treble
 thisClefInstrVd = \clef bass
-
-
-
+thisClefInstrVI = \clef treble
+thisClefInstrVII = \clef treble
+thisClefInstrVIII = \clef alto
+thisClefInstrIX = \clef bass

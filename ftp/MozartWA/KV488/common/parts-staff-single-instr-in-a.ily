@@ -1,4 +1,4 @@
-% Score block for single-staff instruments
+% Score block for single-staff instruments in "A"
 % Do not compile
 
 \include "version.ily"
@@ -11,7 +11,8 @@
       \set Staff.instrumentName = \thisInstrName
       \thisClef
       \condenseRests
-      \global
+      \transposition a
+      \globalInA
       \theseNotes
     }
   >>

@@ -1,24 +1,15 @@
-%{
-  ***********************************************************************
-  * Composer - Work in Tonality                                         *
-  * typeset by                                                          *
-  *                                                                     *
-  *                                                                     *
-  * Common definitions file, to be included in all other files          *
-  *                                                                     *
-  * Do not compile                                                      *
-  *                                                                     *
-  ***********************************************************************
-%}
+% Mozart - Piano Concerto No. 23 in A major
+% typeset by William Chargin
+% Common definitions file, to be included at the top of all files
+% Do not compile
 
-%----Definitions with template dependencies
+% Definitions with template dependencies
 staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 condenseRests = \set Score.skipBars = ##t
-%-----------------------------------------
 
 
-%----Sample definitions
+% Sample definitions
 hideF = \tweak #'stencil ##f \f
 hideFF = \tweak #'stencil ##f \ff
 hideMF = \tweak #'stencil ##f \mf
@@ -55,11 +46,11 @@ scrFortePar = \markup { \small \concat { \italic \bold "(" \dynamic f \italic \b
 scrForteParCtr = \markup { \center-align \small \concat { \italic \bold "(" \dynamic f \italic \bold "orte)" } }
 scrSolo = \markup \small \bold "Solo"
 scrTastoSolo = \markup \small \bold "Tasto Solo"
-scrSpiccato = \markup { \center-align \concat { \hspace #4  \small \bold "spiccato" } }
+scrSpiccato = \markup { \center-align \concat { \hspace #4 \small \bold "spiccato" } }
 scrSpiccatoLeft = \markup \small \bold "spiccato"
 scrSoloPiano = \markup { \override #'(baseline-skip . 0) \center-align \center-column \small \whiteout { \bold "  Solo  " \concat { \dynamic p \italic \bold "iano" } } }
 scrSoloPianoLeftAlg = \markup { \override #'(baseline-skip . 0) \left-align \center-column \small \whiteout { \bold "  Solo  " \concat { \dynamic p \italic \bold "iano" } } }
-scrTuttiSpiccato = \markup { \override #'(baseline-skip . 0.2) \left-align \left-column \small \bold \whiteout {  "Tutti" "spiccato" } }
+scrTuttiSpiccato = \markup { \override #'(baseline-skip . 0.2) \left-align \left-column \small \bold \whiteout { "Tutti" "spiccato" } }
 
 scrNoPad = {
   \once \override TextScript.staff-padding = #'()
@@ -79,10 +70,10 @@ nachschlag = {
 
 setUpPrallSpanner = {
   \override TrillSpanner.bound-details.left.text = \markup {
-      \halign #-1.1 \concat { 
-        \raise #1.0 
-        \smaller 
-        \musicglyph #"scripts.upprall" 
+      \halign #-1.1 \concat {
+        \raise #1.0
+        \smaller
+        \musicglyph #"scripts.upprall"
         \hspace #-.6
       }
   }

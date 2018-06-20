@@ -1,58 +1,82 @@
-%{
-  ***********************************************************************
-  * Composer - Work in Tonality                                         *
-  * typeset by                                                          *
-  *                                                                     *
-  * movement printout for conductor's score                             *
-  *                                                                     *
-  * Do not compile                                                      *
-  *                                                                     *
-  ***********************************************************************
-%}
+% Mozart - Piano Concerto No. 23 in A major
+% typeset by William Chargin
+% Movement printout for conductor's score
+% Do not compile
 
 \include "version.ily"
 \include "styles.ily"
 \thisTocLabel
 \score {
-  \keepWithTag #'printed        %----------------------------- [manual entry]
+  \keepWithTag #'printed
   \new StaffGroup
+  <<
+    \new Staff {
+      \set Staff.instrumentName = \thisInstrNameI
+      \thisClefInstrI
+      \global
+      \flute
+    }
+    \new Staff {
+      \set Staff.instrumentName = \thisInstrNameII
+      \thisClefInstrII
+      \globalInA
+      \clarinet
+    }
+    \new Staff {
+      \set Staff.instrumentName = \thisInstrNameIII
+      \thisClefInstrIII
+      \global
+      \bassoon
+    }
+    \new Staff {
+      \set Staff.instrumentName = \thisInstrNameIV
+      \thisClefInstrIV
+      \globalInA
+      \horn
+    }
+    \new PianoStaff
     <<
-        \new GrandStaff
-        <<
-          \new Staff  {
-            \set Staff.instrumentName = \thisInstrNameI %----- /common/variables.ily
-            \thisClefInstrI     %----------------------------- /common/variables.ily
-            \global             %----------------------------- /mov_/music.ily
-            \violinI            %----------------------------- /mov_/music.ily [manually set instrument]
-          }
-          \new Staff  {
-            \set Staff.instrumentName = \thisInstrNameII
-            \thisClefInstrII
-            \global \violinII
-          }
-        >>
-        \new Staff {
-          \set Staff.instrumentName = \thisInstrNameIII
-          \thisClefInstrIII
-          \global \viola
-        }
-        \new Staff {
-          \set Staff.instrumentName = \thisInstrNameIV
-          \thisClefInstrIV
-          \global \continuo
-        }
-        \new PianoStaff
-        <<
-          \set PianoStaff.instrumentName = \thisInstrNameV
-          \new Staff = "upper" {  %--------------------------- dependency with \staffUp in /common/definitions.ily
-            \thisClefInstrVu      %--------------------------- /common/variables.ily
-            \global \upperKeyb    %--------------------------- /mov_/music.ily [manually set instrument]
-          }
-          \new Staff = "lower" {  %--------------------------- dependency with \staffDown in /common/definitions.ily
-            \thisClefInstrVd      %--------------------------- /common/variables.ily          %--------------------------- [manual entry]
-            \global \lowerKeyb    %--------------------------- /mov_/music.ily [manually set instrument]
-          }
-        >>
+      \set PianoStaff.instrumentName = \thisInstrNameV
+      % Staff names are not arbitrary; they are depended on by
+      % \staffUp and \staffDown in ./common/definitions.ily.
+      \new Staff = "upper" {
+        \thisClefInstrVu
+        \global
+        \pianoTreble
+      }
+      \new Staff = "lower" {
+        \thisClefInstrVd
+        \global
+        \pianoBass
+      }
     >>
-    \layout{ }
+    \new GrandStaff
+    <<
+      \new Staff {
+        \set Staff.instrumentName = \thisInstrNameVI
+        \thisClefInstrVI
+        \global
+        \violinI
+      }
+      \new Staff {
+        \set Staff.instrumentName = \thisInstrNameVII
+        \thisClefInstrVII
+        \global
+        \violinII
+      }
+    >>
+    \new Staff {
+      \set Staff.instrumentName = \thisInstrNameVIII
+      \thisClefInstrVIII
+      \global
+      \viola
+    }
+    \new Staff {
+      \set Staff.instrumentName = \thisInstrNameIX
+      \thisClefInstrIX
+      \global
+      \cello
+    }
+  >>
+  \layout { }
 }

@@ -1,0 +1,2 @@
+cello = \relative c {
+}
