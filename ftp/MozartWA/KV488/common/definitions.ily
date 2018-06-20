@@ -21,6 +21,10 @@ tutti = {
   \mark \markup { \fontsize #-2 \bold TUTTI }
 }
 
+% Articulation markings
+legato = \markup { \italic legato }
+dolce = \markup { \italic dolce }
+
 % Sample definitions
 hideF = \tweak #'stencil ##f \f
 hideFF = \tweak #'stencil ##f \ff
