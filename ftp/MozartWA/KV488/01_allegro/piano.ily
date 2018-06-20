@@ -206,7 +206,58 @@ pianoTreble = \relative c' {
   e4) \tutti r4 r2 |
   R1*7 |
 
-  \barNumberCheck #206
+  % The \barNumberCheck has to be be inside the \acciaccatura target,
+  % because when \articulate is in play, the next measure does not start
+  % until then.
+  \acciaccatura e16 { \barNumberCheck #206 \solo e'2 } \acciaccatura cis,16 cis'2 |
+  d,4~( d16 fis a d) b,( d fis b) gis,( b d gis |
+  a,8 a' a, <gis' e> a, <fis' d> a, <e' cis>) |
+  <<
+    { e4.( gis16 fis) e4 } \\
+    { d2 cis4 } \\
+  >> r4 |
+  \stemUp
+  e'8^( d16 cis b a gis fis e d cis b a gis fis e |
+  d8 e16 fis gis a b cis d e fis gis a b cis d) |
+  d16^( cis b a gis fis e d \stemNeutral cis d dis e) e( d cis b |
+
+  \barNumberCheck #213
+  \tutti
+  a4) r4 r2 |
+  R1 |
+  R1 |
+  R1 |
+
+  \barNumberCheck #217
+  r2 \solo r8 d8 d d |
+  gis!16_\legato a gis fis gis a b cis d e d cis b a gis fis |
+  e16 fis e dis e fis gis a b cis b a gis fis e d |
+  cis16 e d cis d e fis gis a b a gis fis e d cis |
+  b16 cis b ais b d cis e d e d cis d fis e g |
+  fis gis! a gis fis e d cis d e fis e d cis b a |
+  gis16 e gis b e b gis e r gis( b fis') r a,( cis e) |
+  r16 gis,( b d) r e,( a cis) r e,( gis b) r dis,( fis a |
+  gis16 e gis b e b gis e) r gis( b f' ) r a,( c e) |
+  r16 d,( gis d') r f,( a c) r b,( e b') r a,( dis a' |
+  gis16 e fis! gis a b cis! dis e8) fis16( gis a b cis dis |
+  e4)-. e,-. r4 cis8( d! |
+  fis8 e) e8. e16 e4 e4 |
+  e8( a gis fis e dis d cis) |
+  cis8( b) b8. b16 b4 b4 |
+  b8( e dis d cis b a gis |
+  fis8 e) e8. e16 e8( cis' a fis |
+  e8 d) d8. d16 d8( b' gis d |
+  cis16 e d cis d e fis gis a b cis d <e a,>8)-. <fis a,>8-. |
+  <cis a>2( <b gis>4) r4 |
+  R1 |
+  r8 a16( a' gis, gis' fis, fis' e, e' dis, dis' d, d' cis, cis') |
+  cis8( b8) b4 r2 |
+  r8 e16( e' dis, dis' d, d' cis, cis' b, b' a, a' gis, gis' |
+  fis8 e) e4 r2 |
+  r8 gis,16( gis' a, a' ais, ais' b, b' cis, cis' d, d' dis, dis') |
+  e16( cis e cis a4. cis8 b gis) |
+
+  \barNumberCheck #244
 }
 
 pianoBass = \relative c {
@@ -454,4 +505,71 @@ pianoBass = \relative c {
   << { s4 \tutti } R1*8 >>
 
   \barNumberCheck #206
+  \solo
+  \clef treble
+  a'8( e' cis e a, g' e g |
+  a, a' fis a d, fis b, d |
+  cis4) r4 r2 |
+  r4 gis'4 a a, |
+  \staffUp \stemDown cis'8_( b16 a gis fis e d
+  \staffDown \clef bass cis b a gis fis e d cis |
+  b8 cis16 d e fis gis a b \staffUp cis d e fis gis a b |
+  a4) \stemNeutral \staffDown d,,4 e e, |
+
+  \barNumberCheck #213
+  \tutti
+  a4 r4 r2 |
+  R1 |
+  R1 |
+  R1 |
+
+  \barNumberCheck #217
+  r2 \solo \clef treble d'8 fis cis fis |
+  b,8 d gis d b d a d |
+  \clef bass
+  gis,8 b e b gis b e, gis |
+  a cis a gis fis a e a |
+  <<
+    {
+      fis1~ |
+      fis2 b |
+      r2 d4 cis |
+      b4 a gis fis |
+    } \\
+    {
+      d1~ |
+      d2~ d4. dis8 |
+      e1~ |
+      e1 |
+    } \\
+  >> |
+  e2 <d d'>4 <c c'>4 |
+  <b b'>4 <a a'> <g g'> <f f'> |
+  <e e'>4 r4 \clef treble e''8( fis!16 gis a b cis dis |
+  e4)-. e,-. r2 |
+
+  <a cis>2 <gis b>2 |
+  <<
+    { a1 | } \\
+    { fis2.( e4) | } \\
+  >> |
+  <dis! fis a>1 |
+  <d! e gis>2 \clef bass r4 <d, gis>4 |
+  <<
+    {
+      a'1~ |
+      a2
+    } \\
+    {
+      cis,2 fis2 |
+      b,2
+    } \\
+  >>
+  <e gis>2 |
+  <a, a'>4 r4 r4 cis8-. dis-. |
+  e4 e' e, r |
+  R1*6 |
+  a8 r cis r e r e, r |
+
+  \barNumberCheck #244
 }
