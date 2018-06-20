@@ -8,6 +8,18 @@ staffUp = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 condenseRests = \set Score.skipBars = ##t
 
+% "Solo" and "tutti" markings. At any given position, a marking will be
+% displayed only once at the top of the system, no matter on which
+% staves it was specified. To aid readability of the source, each part
+% can therefore declare ``\solo'' or ``\tutti'' whenever appropriate.
+solo = {
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup { \fontsize #-2 \bold SOLO }
+}
+tutti = {
+  \once \override Score.RehearsalMark.self-alignment-X = #LEFT
+  \mark \markup { \fontsize #-2 \bold TUTTI }
+}
 
 % Sample definitions
 hideF = \tweak #'stencil ##f \f
