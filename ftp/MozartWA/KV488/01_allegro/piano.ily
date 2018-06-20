@@ -150,6 +150,60 @@ pianoTreble = \relative c' {
   d8 cis!16_\legato d e d cis b cis d e f g a b cis |
 
   \barNumberCheck #170
+  d16 a g a f g e f d f e f d e c d |
+  b16 d c d b c a b g a b c d e f g |
+  e16 g f g e f d e c e d e c d b c |
+  a16 c b c a b g a f g a b c d e f |
+  d16 f e f d e c d b d c d b c a b |
+  gis!16 b a b gis a fis! gis e fis gis a b c d e |
+  c16 e d e c d b c a b c d e fis! gis! e |
+  a16 e c a \repeat unfold 6 { a' a, } |
+
+  \barNumberCheck #178
+  <gis' e b>4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #180
+  r16 \solo a,16( gis! a gis a b a c a d a dis a e' a, |
+  f'16 a, fis' a, g' a, gis' a, a'8) a\turn( c8 a |
+
+  \barNumberCheck #182
+  e'4) \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #184
+  r16 \solo a,,16( gis a gis a b a c a d a dis a e' a, |
+  f'16 a, fis' a, g' a, gis' a, a'8) a\turn( c8 a |
+  e'4) r8 e,8( f4) r8 dis'8( |
+  e4) r16 e,16( f e f4) r16 dis'16( e dis |
+  \repeat unfold 2 { e16 e, e' e, f dis' f, dis' } |
+  % Note: We expand these turns because two of them are chromatic (the
+  % first trill goes down to ais, not a; the third goes down to dis, not
+  % d). We need to communicate this both to the reader and to
+  % articulate.ly. The construction described for "creating a delayed
+  % turn" in the LilyPond docs would (with some hacks) have the correct
+  % visual appearance, but the MIDI output would be wrong. Reifying the
+  % notes also makes it easier to read for those unfamiliar with the
+  % accidental-turn notation.
+  e4.) cis32( b ais b e4.) a,32( gis fis gis |
+  b4.) fis32( e dis e gis8) b,( e) gis,( |
+  \staffDown \clef bass \staffUp
+  b8) e,( gis) b,( e) \staffDown gis,( b) e,( |
+  \tuplet 3/2 4 {
+    \stemUp dis8 a' fis \staffUp \stemNeutral dis' a fis' dis a' fis dis' a fis' |
+    dis8 a' fis
+  }
+  cis'16 b a gis fis e dis cis \tuplet 6/4 { b a gis fis e dis } |
+  d4~) d16( b gis' fis gis e b' a b gis d' cis |
+  d16 b gis' fis gis e b' a b gis d' cis d cis d cis |
+  d16 e d cis b a gis fis e d cis b a gis fis e |
+  d16 e d cis d dis e eis fis g gis a \tuplet 6/4 { ais b c cis d dis } |
+
+  \barNumberCheck #198
+  e4) \tutti r4 r2 |
+  R1*7 |
+
+  \barNumberCheck #206
 }
 
 pianoBass = \relative c {
@@ -347,4 +401,54 @@ pianoBass = \relative c {
   <g e a,>1 |
 
   \barNumberCheck #170
+  <d f>4 r4 r2 |
+  \clef bass
+  <g, g,>4 r4 <b b,>4 r4 |
+  <c c,> r4 r2 |
+  <f, f,>4 r4 <a a,>r4 |
+  <b b,>4 r4 r2 |
+  <e, e,>4 r4 <gis! gis,!>4 r4 |
+  <a a,>4 r4 r2 |
+  <f f,>1 |
+
+  \barNumberCheck #178
+  <e e,>4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #180
+  << { s16 \solo } <e e,>1~ >> |
+  q1~ |
+
+  \barNumberCheck #182
+  q4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #184
+  << { s16 \solo } q1~ >> |
+  q1 |
+  \clef treble
+  r8 <e' gis b>8 q4 r8 <e a c>8 q4 |
+  r8 <e gis b>8 q4 r8 <e a c>8 q4 |
+  <<
+    { <gis b>4 <a c> <gis b> <a c> | } \\
+    { e2 e2 | } \\
+  >> |
+  <e gis b>4 r4 r2 |
+  R1
+  \clef bass
+  R1
+  % These notes would clash with the right-hand part if they had a stem,
+  % but they're whole notes, so the warning is spurious.
+  \once \override NoteColumn #'ignore-collision = ##t
+  <e,, fis a>1~ |
+  q1 |
+  <e gis b>1~ |
+  q1 |
+  R1 |
+  R1 |
+
+  \barNumberCheck #198
+  << { s4 \tutti } R1*8 >>
+
+  \barNumberCheck #206
 }
