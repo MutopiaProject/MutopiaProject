@@ -60,6 +60,57 @@ pianoTreble = \relative c' {
   <gis e>2( <fis dis>4) r4 |
 
   \barNumberCheck #107
+  R1 |
+  r8 e'16( e' dis, dis' cis, cis' b, b' ais, ais' a, a' gis, gis') |
+  gis8( fis) fis4 r2 |
+  r8 b,16( b' ais, ais' a, a' gis, gis' fis, fis' e, e' dis, dis' |
+  cis8 b) b4 r2 |
+  r8 dis,16( dis' e, e' eis, eis' fis, fis' gis, gis' a, a' ais, ais') |
+  b16( gis b gis e4. gis8 fis dis) |
+  e4 r4 r4 e8.-. e16-. |
+  <a e a,>4-. <gis e b>-. r4 e8.-. e16-. |
+  a8( b16 c b4) r2 |
+  <cis! a e>8 r8 cis4.( e16 dis e dis cis b) |
+  % Really, only the last beat of the _next_ measure (119) is
+  % polyphonic, but we need a slur from the beginning of this measure to
+  % the end of the next, so in order to avoid a cross-voice slur we
+  % start the polyphony earlier.
+  <<
+    {
+      \stemDown
+      b16( a cis b a gis fis e dis cis b a gis b e gis |
+      \barNumberCheck #119
+      cis,16 fis a cis b a gis fis e4 \stemUp gis8 fis) |
+    } \\
+    {
+      s1 |
+      s2 s4 dis4 |
+    } \\
+  >>
+  e4 r4 gis4~( gis16 a gis fis |
+  e4) r4 gis4~( gis16 a gis fis |
+  e4) r4 gis4~( gis16 a gis fis |
+  e16 fis e dis \tuplet 3/2 4 { e8) f-. fis-. g-. gis-. a-. ais-. b-. bis-. } |
+  cis8 r8 cis4.( e16 dis e dis cis b) |
+  b16( a cis b a gis fis e dis cis b a gis b e gis |
+  cis,16 fis a cis b a gis fis e4 dis4) |
+  b'16( a cis b a gis fis e dis cis b a gis b e gis) |
+  b,16( a cis b a gis fis e dis cis b a gis b e gis) |
+  cis,8( dis!16 eis fis gis a b cis d! bis d cis d bis d) |
+  cis8( dis16 eis fis gis a b cis d bis d! cis d bis d) |
+  cis16( dis e gis, a b! cis eis, fis gis a bis, cis eis fis gis, |
+  a16 b! cis eis, fis gis a bis, cis dis e cis ais b cis ais) |
+  r16 b( cis dis e fis gis a cis b a gis a b cis dis |
+  e16 dis cis b cis dis e fis gis fis e dis e fis gis a |
+  cis16 b a gis a b cis dis e dis cis b a gis fis e) |
+  #(define --old-afterGraceFraction afterGraceFraction)
+  #(define afterGraceFraction (cons 15 16))
+  \afterGrace fis1 \startTrillSpan { e16 \stopTrillSpan fis } |
+  #(define afterGraceFraction --old-afterGraceFraction)
+
+  \barNumberCheck #137
+  \tutti
+  e4 r4 r2 |
 }
 
 pianoBass = \relative c {
@@ -156,4 +207,60 @@ pianoBass = \relative c {
   b4 b' b, r4 |
 
   \barNumberCheck #107
+  R1*6 |
+  e8 r gis r b r b, r |
+  e16_\legato e' dis e dis e dis e dis e dis e d e b e |
+  c16 e dis e b e dis e dis e dis e d e b e |
+  a,16 e' dis e gis, e' dis e dis e dis e d e b e |
+  a,16( e' cis e a, e' cis e a, e' cis e gis, e' b e) |
+  <<
+    { b1 | } \\
+    { <fis dis>2. <gis e>4 | } \\
+  >> |
+  \clef treble
+  <a fis'>2
+  <<
+    { gis'4( a) | } \\
+    { b,2 | } \\
+  >> |
+  <cis gis'>4 r4 <bis dis gis>2 |
+  <cis e gis>4 r4 <bis dis gis>2 |
+  <cis e gis>4 r4 <bis dis gis>2 |
+  <cis e gis>4 <cis e>2 <b d? e>4 |
+  \clef bass
+  a16( e' cis e a, e' cis e a, e' cis e gis, e' b e) |
+  <<
+    { b1 | } \\
+    { <fis dis>2. <gis e>4 | } \\
+  >> |
+  \clef treble
+  <a fis'>2
+  <<
+    { gis'4( a) | } \\
+    { b,2 | } \\
+  >> |
+  \clef bass
+  <<
+    { b1 | } \\
+    { <fis dis>2. <gis e>4 | } \\
+  >> |
+  <<
+    { b,1 | } \\
+    { <fis dis>2. <gis e>4 | } \\
+  >> |
+  <a cis fis>1 |
+  \clef treble
+  <a' cis fis>1 |
+  <a cis fis>4 r4 r2 |
+  \clef bass
+  r2 r4 <cis, cis,>4 |
+  <b b,>1 |
+  R1 |
+  R1 |
+  \clef treble
+  b'16( a' dis, a' \repeat unfold 3 { b, a' dis, a' } |
+
+  \barNumberCheck #137
+  \tutti
+  <gis e>4) r4 r2 |
 }
