@@ -188,7 +188,10 @@ pianoTreble = \relative c' {
   e4.) cis32( b ais b e4.) a,32( gis fis gis |
   b4.) fis32( e dis e gis8) b,( e) gis,( |
   \staffDown \clef bass \staffUp
-  b8) e,( gis) b,( e) \staffDown gis,( b) e,( |
+  b8) e,( gis) b,(
+  \stemUp
+  \once \override Beam.positions = #'( 1 . 0 ) e)
+  \staffDown gis,( b) e,^( \stemNeutral |
   \tuplet 3/2 4 {
     \stemUp dis8 a' fis \staffUp \stemNeutral dis' a fis' dis a' fis dis' a fis' |
     dis8 a' fis
