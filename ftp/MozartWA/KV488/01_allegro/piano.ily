@@ -111,6 +111,45 @@ pianoTreble = \relative c' {
   \barNumberCheck #137
   \tutti
   e4 r4 r2 |
+  R1*11 |
+
+  \barNumberCheck #149
+  \solo
+  r16 gis,( a b cis dis e fis gis2~) |
+  gis8 a16( gis fis gis fis eis fis gis a gis b a gis fis |
+  e!16 dis cis b dis b fis' dis b'2~) |
+  b8 e16( dis e dis cis b a2~) |
+  a4 gis~ gis8 cis16( b a gis fis e |
+  dis16 e fis gis a fis e dis e fis gis fis e dis cis b |
+  a16 b cis b a gis fis e dis e fis e dis cis b a |
+
+  \barNumberCheck #156
+  gis4) \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #158
+  r16 \solo b'16( e g b b, ais' b, b' b, e g b b, ais' b, |
+  b'16 b, ais' b, b' b, g' b, a' b, gis' b, a' b, fis' b, |
+
+  \barNumberCheck #160
+  g'4) \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #162
+  r16 \solo g,( c e g g, fis' g, g' g, c e g g, fis' g, |
+  g'16 g, fis' g, g' g, e' g, f' g, e' g, f' g, dis' g, |
+
+  \barNumberCheck #164
+  e'4) \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #166
+  r4 \solo c'!4 f,!2~ |
+  f8( g16 f e8. f16 g4 c,) |
+  a'16-. a( gis! g fis! f e ees) d2~ |
+  d8 cis!16_\legato d e d cis b cis d e f g a b cis |
+
+  \barNumberCheck #170
 }
 
 pianoBass = \relative c {
@@ -263,4 +302,49 @@ pianoBass = \relative c {
   \barNumberCheck #137
   \tutti
   <gis e>4) r4 r2 |
+  \clef bass
+  R1*11 |
+
+  \barNumberCheck #149
+  \solo
+  r2 \clef treble e16( fis gis a b cis dis e) |
+  a,1~ |
+  a2 gis16( a b a gis fis gis e) |
+  cis'2~ cis8 fis16( e fis e dis cis |
+  b8) e16( dis e dis cis b a2~) |
+  a2 gis4 r4 |
+  \clef bass
+  fis,4 r b, r |
+
+  \barNumberCheck #156
+  e4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #158
+  << { s16 \solo } r4 >> \clef treble g'8-. fis-. g4 g8-. fis-. |
+  g8-. fis-. g-. e-. fis-. eis-. fis-. dis-. |
+
+  \barNumberCheck #160
+  e!4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #162
+  << { s16 \solo } r4 >> e8-. dis-. e4 e8-. dis-. |
+  e8-. dis-. e-. cis!-. d-. cis-. d-. b-. |
+
+  \barNumberCheck #164
+  c!4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #166
+  << { s4 \solo } r2 >> r4 <f! a>4 |
+  <<
+    { <g! bes>4~ q8. <f! a>16 g4( bes) | } \\
+    { c,!1 | } \\
+    { s2 e2 | } \\
+  >> |
+  << a4 \\ f4 \\ >> r4 r4 <f d>4 |
+  <g e a,>1 |
+
+  \barNumberCheck #170
 }
