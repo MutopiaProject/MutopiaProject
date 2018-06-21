@@ -331,6 +331,21 @@ pianoTreble = \relative c' {
   \barNumberCheck #284
   \tutti
   a4 r4 r2 |
+  R1*13 |
+
+  \barNumberCheck #298
+  \solo
+  #(define --old-afterGraceFraction afterGraceFraction)
+  #(define afterGraceFraction (cons 15 16))
+  \afterGrace { b1 \fermata \startTrillSpan -\cadenza } { a32 \stopTrillSpan b } |
+  #(define afterGraceFraction --old-afterGraceFraction)
+
+  \barNumberCheck #299
+  \tutti
+  a4 r4 r2 |
+  R1*15 | \bar "|."
+
+  \barNumberCheck #315
 }
 
 pianoBass = \relative c {
@@ -731,4 +746,17 @@ pianoBass = \relative c {
   \barNumberCheck #284
   \tutti
   <cis a>4) \clef bass r4 r2 |
+  R1*13 |
+
+  \barNumberCheck #298
+  \solo
+  r2 \fermata \clef treble <e, gis d'>2 \fermata |
+
+  \barNumberCheck #299
+  \tutti
+  <a cis>4 r2 r4 |
+  R1*15 |
+  \bar "|."
+
+  \barNumberCheck #315
 }

@@ -24,6 +24,7 @@ tutti = {
 % Articulation markings
 legato = \markup { \italic legato }
 dolce = \markup { \italic dolce }
+cadenza = \markup { \italic Cadenza }
 
 % Sample definitions
 hideF = \tweak #'stencil ##f \f
