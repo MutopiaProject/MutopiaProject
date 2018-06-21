@@ -78,5 +78,5 @@
       \cello
     }
   >>
-  \layout { }
+  \layout { \context { \Staff \RemoveEmptyStaves } }
 }
