@@ -258,6 +258,35 @@ pianoTreble = \relative c' {
   e16( cis e cis a4. cis8 b gis) |
 
   \barNumberCheck #244
+  a4 r4 r4 a,8.-. a16-. |
+  <d a d,>4 <cis a e>4 r4 a8.-. a16-. |
+  d8( e16 f e4) r2 |
+  <fis! d a>8 r fis4.( a16 gis a gis fis e) |
+  % Same polyphony deal as in measure 119 (see comment there).
+  <<
+    {
+      \stemNeutral
+      e( d fis e d cis b a gis fis e d cis e a cis |
+      fis,16 b d fis e d cis b a4 \stemUp cis8 b) |
+    } \\
+    {
+      s1 |
+      s2 s4 gis4 |
+    } \\
+  >>
+  a4 r4 cis4~( cis16 d cis b |
+  a4) r4 cis4~( cis16 d cis b |
+  a4) r4 cis4~( cis16 d cis b |
+  a16 b a gis \tuplet 3/2 4 { a8) bes-. b-. c-. cis-. d-. dis-. e-. eis-. } |
+  fis8 r8 fis4.( a16 gis a gis fis e!) |
+  e16( d fis e d cis b a gis fis e d cis e a cis) |
+  fis,16( b d fis e d cis b a4 gis4) |
+  b'16( ais cis b d cis b a gis fis e d cis a' e cis |
+  b16 ais cis b d cis b a gis fis e d cis e a cis) |
+  r8 fis16( e d cis b a gis8) gis'16( fis e d cis b |
+  a8) a'16( gis fis e d cis b4) b' |
+
+  \barNumberCheck #261
 }
 
 pianoBass = \relative c {
@@ -572,4 +601,43 @@ pianoBass = \relative c {
   a8 r cis r e r e, r |
 
   \barNumberCheck #244
+  a,16^\legato a' gis a gis a gis a gis a gis a g a e a |
+  f16 a gis! a e a gis a gis a gis a g a e a |
+  d,16 a' gis! a cis, a' gis a gis a gis a g a e a |
+  d,16 a' fis! a d, a' fis a d, a' fis a cis, a' e a |
+  <<
+    {
+      e1 |
+      b'2 cis4 d |
+    } \\
+    {
+      <b, gis>2. <cis a>4 |
+      d2 e2 |
+    } \\
+  >> |
+  <fis cis'>4 r4 <eis gis cis>2 |
+  <fis a cis>4 r4 <eis gis cis>2 |
+  <fis a cis>4 r4 <eis gis cis>2 |
+  <fis a cis>4 <fis a>2 <e! g! a>4 |
+  d16( a' fis a d, a' fis a d, a' fis a cis, a' e a) |
+  <<
+    {
+      e1 |
+      b'2 cis4 d |
+      e1 |
+      e,1 |
+      fis4 b2 cis4~ |
+      cis4 d2 e4 |
+    } \\
+    {
+      <b, gis>2. <cis a>4 |
+      d2 e2 |
+      <gis b>2. <a cis>4 |
+      <b, gis>2. <cis a>4 |
+      d2 e2 |
+      fis2 gis2 |
+    } \\
+  >> |
+
+  \barNumberCheck #261
 }
