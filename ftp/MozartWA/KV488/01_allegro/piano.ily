@@ -287,6 +287,50 @@ pianoTreble = \relative c' {
   a8) a'16( gis fis e d cis b4) b' |
 
   \barNumberCheck #261
+  r2
+  <<
+    {
+      cis,2~ |
+      cis4 b8. cis16 d4 b4 |
+      gis4 e e'2~ |
+      e4 a8. fis16 d2~ |
+      d4 cis2 b8. a16 |
+      gis4 a
+    } \\
+    {
+      a2 |
+      fis1 |
+      e4 s4 s2 |
+      a2 r2 |
+      r2 fis2 |
+      e2
+    } \\
+  >>
+  d'4. \startTrillSpan cis16 \stopTrillSpan d16 |
+  cis16_\legato e d cis d e fis gis a gis a b cis b a gis |
+  fis16 eis fis gis a gis fis e d cis d e fis e d cis |
+  b16 cis d cis b a gis fis e fis gis a b cis d e |
+  a,16 b cis d e fis gis a d, e fis gis a b cis d |
+  gis,,16 b d gis a, cis e a fis g fis e d e d cis |
+  b16 cis d e fis gis! a b cis b a gis fis e d cis |
+  d16 e fis gis a b cis d e d cis b a gis fis e |
+  fis16 g fis e d cis b a gis! a gis fis e d cis b |
+  a8 b16 cis d e fis gis a b cis d e fis gis a |
+  g16 a fis g e fis d e cis d b cis a b g a |
+  \tuplet 3/2 4 { fis8 d a' fis d ' a fis' d a' fis d' a } |
+  r16 a16 c a fis a dis, fis c dis a c fis, a dis, fis |
+  r16 e dis e fis e gis e a e b' e, cis' e, d'! e, |
+  r16 e' dis e fis e gis e a e b' e, cis' e, d'! e, |
+  e'16 cis gis a cis a dis, e a e bis cis e cis gis a |
+  r16 e fis gis a b cis d! e fis gis a b cis d e |
+  #(define --old-afterGraceFraction afterGraceFraction)
+  #(define afterGraceFraction (cons 15 16))
+  \afterGrace { b1 \startTrillSpan } { a32 \stopTrillSpan b } |
+  #(define afterGraceFraction --old-afterGraceFraction)
+
+  \barNumberCheck #284
+  \tutti
+  a4 r4 r2 |
 }
 
 pianoBass = \relative c {
@@ -640,4 +684,51 @@ pianoBass = \relative c {
   >> |
 
   \barNumberCheck #261
+  r2 <e' a,>2 |
+  <<
+    {
+      d1 |
+      b4
+    } \\
+    {
+      d,1~ |
+      d4
+    } \\
+  >>
+  e8. d16 cis4 a |
+  fis'2. b8. gis16 |
+  e4 a8. fis16 d4 d'4~ |
+  d4 cis <b fis'> \clef treble <e gis> |
+  <a, a'>4 r4 r2 \clef bass |
+  R1 |
+  R1 |
+  R1 |
+  R1 |
+  \repeat unfold 3 {
+    \repeat unfold 4 { e,16 e' dis e } |
+  } |
+  fis,4 r4 r2 |
+  <cis' e a>1 |
+  <d fis a>4 r4 r2 |
+  <dis fis a c>1 |
+  <<
+    {
+      cis'!4( d!8 b cis gis a b) |
+      cis4( d8 b cis gis a b) |
+      cis4
+    } \\
+    {
+      e,1 |
+      e1 |
+      e4
+    }
+  >>
+  r4 r2 |
+  <e e,>4 r4 r2 |
+  \clef treble
+  e'16( d' gis, d' e, d' gis, d' e, d' gis, d' e, d' gis, d' |
+
+  \barNumberCheck #284
+  \tutti
+  <cis a>4) \clef bass r4 r2 |
 }
