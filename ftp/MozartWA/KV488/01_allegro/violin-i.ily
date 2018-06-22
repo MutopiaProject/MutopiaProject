@@ -75,4 +75,44 @@ violinI = \relative c'' {
 
   \barNumberCheck #67
   \solo
+  R1*7 |
+  r2 b'8( \p cis d dis) |
+  e2( a2~) |
+  a8 r fis r d r b r |
+  a4 r4 r2 |
+  R1 |
+  e'1( |
+  d1) |
+  cis8 r d r cis r b r |
+
+  \barNumberCheck #82
+  \tutti
+  <a a'>2 \f r8 a8 a a |
+  e'8( d) d4. d8 d d |
+  a'8( g) g4. g8 g g |
+  d'8( cis) cis4. e8 e,( a) |
+
+  \barNumberCheck #86
+  g8( fis) fis4 \solo r2 |
+  d1~ \p |
+  d1 |
+  cis1 |
+  b1~ |
+  b4 dis8.( \trill cis32 dis) e4-. r4 |
+  R1 |
+  b,2 \sf cis''8 \p r b r |
+  a8 r gis r fis r e r |
+  dis4 r4 r2 |
+  R1*10 |
+  r2 r4 gis,8( \p a) |
+  cis8( b) b8. b16 b4 b4 |
+  b8( e dis cis b ais a gis) |
+  gis8( fis) fis8. fis16 fis4 fis4 |
+  fis8( b ais a gis fis e dis |
+  cis b) b8. b16 b4 bis4 |
+  cis8( dis e eis fis gis a ais) |
+  b8( gis) e4.( gis8 fis dis) |
+
+  \barNumberCheck #114
+  e4 r4 r2 |
 }
