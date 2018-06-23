@@ -114,4 +114,29 @@ violinII = \relative c'' {
 
   \barNumberCheck #114
   b4 r4 r2 |
+  r2 a'4( gis8) r8 |
+  r2 c4( b8) r8 |
+  R1 |
+  b4( a2 gis4) |
+  r4 a4( gis fis) |
+  e16( dis e fis gis8) gis gis4 r4 |
+  e16( dis e fis gis8) gis gis4 r4 |
+  e16( dis e fis gis8) gis gis4 r4 |
+  r4 gis2.( |
+  a4) r4 r2 |
+  b4( a2 gis4) |
+  r4 a( gis fis) |
+  b4( a2 gis4) |
+  R1 |
+  a1 |
+  cis1 |
+  fis4 r a r |
+  cis4 r r ais,4( |
+  b4) r4 r2 |
+  r2 r4 b,4( |
+  e8) r gis r b r e r |
+  r a,,8 a a a a a a |
+
+  \barNumberCheck #137
+  \tutti
 }
