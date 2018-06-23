@@ -125,4 +125,65 @@ clarinet = \relative c'' {
 
   \barNumberCheck #67
   \solo
+  R1*15 |
+
+  \barNumberCheck #82
+  \tutti
+  <c e,>1 \f |
+  << { g'8[( f]) } \\ c4 >> <f c>2 q4 |
+  << { f8[( e]) } \\ bes4 >> <e bes>4. <f a,>8 <g g,> <a f,> |
+  <bes e,,>4 <bes g>2 <g bes,>4 |
+
+  \barNumberCheck #86
+  <e g,>8( <f f,>) q4 \solo r2 |
+  R1*8 |
+  <d d,>2 \sf <fis a,>8 \p r <g bes,> r |
+  <fis c>8 r <g ees> r <d a> r <cis a> r |
+  <d a>2 <fis d>4. \f <g e>8 |
+  <fis d>4 <d d,> r2 |
+  R1*12 |
+  e8( \p d) d8. d16 d4( dis) |
+  e8( fis g gis a b c cis) |
+  <<
+    {
+      d4 b4.( g8 a fis) |
+      g4( \stemNeutral <f! d> <ees c> <d b>) |
+    } \\
+    {
+      R1 |
+      r4 s4 s2 |
+    }
+  >> |
+  <g ees>4( <f d> <ees! c> <d b>) |
+  <g ees>4( <f d> <ees! c> <d b>) |
+  R1*3 |
+  <<
+    {
+      b1~ |
+      b1~ |
+      b1~ |
+      b4 r4 r2 |
+    } \\
+    { R1*4 | }
+  >> |
+  R1*4 |
+  <<
+    { d4( c2 b4) | } \\
+    { a2.( g4) |} \\
+  >> |
+  R1*2 |
+  <<
+    {
+      a1~ |
+      a2( bes2) |
+    } \\
+    {
+      g1~ |
+      g1 |
+    } \\
+  >> |
+  <b! g>4 r4 r2 |
+  R1*3 |
+
+  \barNumberCheck #137
 }
