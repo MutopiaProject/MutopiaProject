@@ -140,4 +140,77 @@ violinI = \relative c'' {
 
   \barNumberCheck #137
   \tutti
+  << { e'2 \f } \\ { <b e,>4 s4 } >> r8 e e e |
+  b'8( a) a4. gis8 fis e |
+  e8( d!) d'4. cis8 b a |
+  a8( gis) gis4. b16 a gis fis e d |
+  cis8 cis16 b a gis fis e dis8 dis'16 cis b a gis fis |
+  e8 e'16 dis cis b a gis fis4-. fis'-. |
+  r2 gis,2~ \p |
+  gis4 fis8.( gis16 a4 fis) |
+  dis4( b) b'2~ |
+  b4 e8.( cis16) a2~ |
+  a4 gis2 fis8.( e16) |
+  dis4( e) a4.( \trill gis16 a) |
+
+  \barNumberCheck #149
+  \solo
+  gis4 r4 r2 |
+  R1*4 |
+  r2 e'2~ |
+  e2( dis2) |
+
+  \barNumberCheck #156
+  e4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #158
+  << { s16 \solo } r4 >> b'8-. ais-. b4 b8-. ais-. |
+  b8-. ais-. b-. g-. a-. gis-. a-. fis-. |
+
+  \barNumberCheck #160
+  g4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #162
+  << { s16 \solo } r4 >> g8-. fis-. g4 g8-. fis-. |
+  g8-. fis-. g-. e-. f-. e-. f-. dis-. |
+
+  \barNumberCheck #164
+  e4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #166
+  << { s4 \solo } R1 >> |
+  R1 |
+  r4 a4( d,2~) |
+  d8 e16( d cis!8.-.) d16-. e4( a,) |
+  f'4 r4 r2 |
+  R1*7 |
+
+  \barNumberCheck #178
+  r4 \tutti e4( f2~) |
+  f4 d8.( c16 b4 e) |
+
+  \barNumberCheck #180
+  << { s16 \solo } a,4 >> r4 r2 |
+  R1 |
+
+  \barNumberCheck #182
+  r4 \tutti e'4( f2~) |
+  f4 d8.( c16 b4 e) |
+
+  \barNumberCheck #184
+  << { s16 \solo } a,4 >> r4 r2 |
+  R1*3 |
+  e'4( dis e dis) |
+  e4 r4 r2 |
+  R1 |
+  R1 |
+  dis,1~ |
+  dis |
+  d!4 r4 r2 |
+  R1*3 |
+
+  \barNumberCheck #198
 }
