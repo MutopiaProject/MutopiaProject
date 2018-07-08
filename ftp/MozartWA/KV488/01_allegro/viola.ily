@@ -67,4 +67,46 @@ viola = \relative c' {
 
   \barNumberCheck #67
   \solo
+  R1*4 |
+  r4 cis( \p b e, ) |
+  r4 fis( d gis) |
+  a4 r4 r2 |
+  R1 |
+  e'1( \p |
+  fis2. d4) |
+  cis4 r4 r2 |
+  R1 |
+  e1~ |
+  e1~ |
+  e8 r gis r e r d r |
+
+  \barNumberCheck #82
+  \tutti
+  <cis e>8 \f q q q q q q q |
+  a'8 a a a a a a a |
+  cis,8 cis cis cis cis d e d |
+  e8 e e e e e a a |
+
+  \barNumberCheck #86
+  a8 a a a \solo a4 r4 |
+  d,2.( \p fis4) |
+  e1~ |
+  e2( fis)~ |
+  fis1 |
+  e4-. a,-. e'-. r4 |
+  R1 |
+  b2 \sf a'8 \p r gis r |
+  fis8 r e r dis r cis r |
+  b4 r4 r2 |
+  R1*11 |
+  e2( \p dis2) |
+  cis2.( b4) |
+  cis1 |
+  b2.( dis,4) |
+  e1~ |
+  e4 r4 r2 |
+  gis8 b gis b gis b a fis |
+
+  \barNumberCheck #114
+  gis4 r4 r2 |
 }
