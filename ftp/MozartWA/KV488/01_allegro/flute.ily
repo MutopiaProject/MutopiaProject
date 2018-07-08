@@ -56,4 +56,43 @@ flute = \relative c''' {
 
   \barNumberCheck #67
   \solo
+  R1*15 |
+
+  \barNumberCheck #82
+  \tutti
+  a2 \f r8 a a a |
+  e'8( d) d4. cis8 b a |
+  a8( g) g'4. fis8 e d |
+  d8( cis) cis4. e8 e,( a) |
+
+  \barNumberCheck #86
+  g8( fis) fis4 \solo r2 |
+  R1*8 |
+
+  \barNumberCheck #95
+  b,2 \sf c'8 \p r b r |
+  a8 r g r fis r e r |
+  dis2 b'4. \f b8 |
+  b4 b,4 r2 |
+  R1*7 |
+
+  \barNumberCheck #106
+  r2 r4 gis'8( \p a) |
+  cis8( b) b8. b16 b4 b4 |
+  b8( e dis cis b ais a gis) |
+  gis8( fis) fis8. fis16 fis4 fis4 |
+  fis8( b ais a gis fis e dis |
+  cis8 b) b4 r2 |
+  R1 |
+  b'2~ b8( gis a fis) |
+
+  \barNumberCheck #114
+  e4 r4 r2 |
+  r2 a4( gis8) r8 |
+  r2 c4( b8) r8 |
+  R1*11 |
+  b4( a2 gis4) |
+  R1*8 |
+
+  \barNumberCheck #137
 }
