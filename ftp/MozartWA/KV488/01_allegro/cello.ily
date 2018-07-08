@@ -80,4 +80,48 @@ cello = \relative c {
 
   \barNumberCheck #67
   \solo
+  R1*4 |
+  r4 cis'4( \p b e,) |
+  r4 fis( d gis,) |
+  a4 r4 r2 |
+  R1 |
+  a'1~ \p |
+  a1~ |
+  a4 r4 r2 |
+  R1 |
+  cis1( |
+  b1) |
+  a8 r d, r e r e r |
+
+  \barNumberCheck #82
+  \tutti
+  a8 \f a a a a a g g |
+  fis8 fis fis fis fis fis fis fis |
+  e8 e e e e d cis b |
+  a8 a a a a a cis cis |
+
+  \barNumberCheck #86
+  d8 d d d \solo d4 r4 |
+  b'2.( \p a4) |
+  gis1 |
+  a2( fis4 e) |
+  dis1 |
+  e4-. fis-. gis-. r4 |
+  R1 |
+  b,1~ \sf |
+  b1~ |
+  b4 r4 r2 |
+  R1*11 |
+
+  \barNumberCheck #107
+  e'2( \p dis) |
+  cis2.( b4) |
+  ais1 |
+  a!1 |
+  gis1 |
+  a2.( gis8 fis) |
+  e8 r gis r b r b, r |
+
+  \barNumberCheck #114
+  e4 r4 r2 |
 }
