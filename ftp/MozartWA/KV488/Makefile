@@ -25,6 +25,7 @@ midi: \
 		kv488-2-andante.midi \
 		kv488-3-presto.midi
 test:
+	./assert_barchecks.sh
 	! $(MAKE) all -B PAPERSIZE=a4 2>&1 | grep -F -e err -e warn >&2
 	! $(MAKE) all -B PAPERSIZE=letter 2>&1 | grep -F -e err -e warn >&2
 clean:

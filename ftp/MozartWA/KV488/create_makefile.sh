@@ -102,6 +102,7 @@ makefile() {
     printf ' \\\n\t\t%s.midi' "${midis[@]}"
     printf '\n'
     printf 'test:\n'
+    printf '\t%s\n' ./assert_barchecks.sh
     # shellcheck disable=SC2016
     printf \
         '\t! $(MAKE) all -B PAPERSIZE=%s 2>&1 | grep -F -e err -e warn >&2\n' \
