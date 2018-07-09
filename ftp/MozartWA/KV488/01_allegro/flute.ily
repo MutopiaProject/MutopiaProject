@@ -95,4 +95,14 @@ flute = \relative c''' {
   R1*8 |
 
   \barNumberCheck #137
+  \tutti
+  e2 \f r8 e e e |
+  b'8( a) a4. gis8 fis e |
+  e8( d!) d'4. cis8 b a |
+  a8( gis) gis4. b8 e d |
+  cis2 dis2 |
+  e2 fis2 |
+  R1*6 |
+
+  \barNumberCheck #149
 }
