@@ -31,7 +31,7 @@
 
   % Default horizontal spacing
   indent = 25\mm  % left indent for first system
-  short-indent = 0\mm  % left indent for rest of systems
+  short-indent = 10\mm  % left indent for rest of systems
   horizontal-shift = 0.0  % right indent for all systems
 
   ragged-bottom = ##f

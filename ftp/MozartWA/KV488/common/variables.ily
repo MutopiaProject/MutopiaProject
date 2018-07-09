@@ -58,6 +58,21 @@ thisInstrNameVII = "Violin II"
 thisInstrNameVIII = "Viola"
 thisInstrNameIX = "Cello and Bass"
 
+thisShortInstrNameI = "Fl."
+thisShortInstrNameII = \markup { \center-column { "Cl." "in A" } }
+thisShortInstrNameIII = "Bsn."
+thisShortInstrNameIV = \markup { \center-column { "Fr. H." "in A" } }
+thisShortInstrNameV = "Pno."
+thisShortInstrNameVI = "Vln. I"
+thisShortInstrNameVII = "Vln. II"
+thisShortInstrNameVIII = "Vla."
+thisShortInstrNameIX = \markup {
+  \center-column {
+    \concat { "Vlc." \hspace #0.5 "/" }
+    "Bass"
+  }
+}
+
 thisClefInstrI = \clef treble
 thisClefInstrII = \clef treble
 thisClefInstrIII = \clef bass
