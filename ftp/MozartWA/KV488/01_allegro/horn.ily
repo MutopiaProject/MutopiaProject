@@ -66,4 +66,24 @@ horn = \relative c'' {
 
   \barNumberCheck #67
   \solo
+  R1*15 |
+
+  \barNumberCheck #82
+  \tutti
+  <c c,>4 \f q8. q16 q4 q4 |
+  q1 |
+  q2~ q8 q q q |
+  q1 |
+
+  \barNumberCheck #86
+  << { s2 \solo } q2. >> r4 |
+  R1*27 |
+
+  \barNumberCheck #114
+  <g g,>1~ \p |
+  q1~ |
+  q1 |
+  R1*20 |
+
+  \barNumberCheck #137
 }
