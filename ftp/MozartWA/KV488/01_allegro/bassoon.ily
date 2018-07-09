@@ -1,5 +1,3 @@
-both = \markup { a. 2. }
-
 bassoon = \relative c {
   \barNumberCheck #1
   \tutti
@@ -206,4 +204,22 @@ bassoon = \relative c {
   R1*3 |
 
   \barNumberCheck #137
+  \tutti
+  e,8^\both \f e e e e' e d! d |
+  cis8 cis cis cis cis cis cis cis |
+  b8 b b b b a gis fis |
+  e8 e e e e e b' gis |
+  <<
+    {
+      a4 cis4 dis2 |
+      e2 fis2 |
+    } \\
+    {
+      a,4 fis2 gis4~ |
+      gis4 a2 b4 |
+    } \\
+  >> |
+  R1*6 |
+
+  \barNumberCheck #149
 }
