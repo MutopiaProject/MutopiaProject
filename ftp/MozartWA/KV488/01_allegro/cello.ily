@@ -148,4 +148,21 @@ cello = \relative c {
   b4 b b b |
 
   \barNumberCheck #137
+  \tutti
+  e8 \f e e e e' e d! d |
+  cis8 cis cis cis cis cis cis cis |
+  b8 b b b b a gis fis |
+  e8 e e e e e b' gis |
+  a4. a,8 b4. b8 |
+  cis4. cis8 dis4 r4 |
+  r2 e2 \p |
+  a1~ |
+  a4( b8. a16 gis4 e4) |
+  cis'2. fis,8.( a16) |
+  b4 e,8.( gis16) a2~ |
+  a4 gis fis b |
+
+  \barNumberCheck #149
+  \solo
+  e,4 r4 r2 |
 }
