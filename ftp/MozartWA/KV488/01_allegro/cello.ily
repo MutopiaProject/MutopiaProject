@@ -124,4 +124,28 @@ cello = \relative c {
 
   \barNumberCheck #114
   e4 r4 r2 |
+  e4 r4 r2 |
+  e4 r4 r2 |
+  R1 |
+  dis2.( e4) |
+  a4 r b r |
+  cis2( bis) |
+  cis2( bis) |
+  cis2( bis) |
+  cis8 r cis2( b!4) |
+  a4 r4 r2 |
+  dis,2.( e4) |
+  a4 r b r |
+  dis,2.( e4 )|
+  R1 |
+  a1~ |
+  a1~ |
+  a4 r4 r2 |
+  r2 r4 cis,4( |
+  b4) r4 r2 |
+  R1 |
+  R1 |
+  b4 b b b |
+
+  \barNumberCheck #137
 }
