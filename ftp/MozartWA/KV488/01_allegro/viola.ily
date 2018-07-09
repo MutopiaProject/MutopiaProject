@@ -133,4 +133,23 @@ viola = \relative c' {
   r8 fis, fis fis fis fis fis fis |
 
   \barNumberCheck #137
+  \tutti
+  gis8 \f gis' gis gis gis gis gis gis |
+  e8 e e e e e a a |
+  gis8 gis gis gis gis a b cis |
+  d8 d d d d d gis, b |
+  e,8 e, fis4. fis8 gis4~ |
+  gis8 gis8 a2 b4-. |
+
+  \barNumberCheck #143
+  r2 b2~ \p |
+  b4 a8.( b16 cis4 a4) |
+  fis4( dis) e( gis) |
+  cis1 |
+  b2.( a8. gis16) |
+  fis4( gis fis2) |
+
+  \barNumberCheck #149
+  \solo
+  e4 r4 r2 |
 }
