@@ -186,4 +186,22 @@ clarinet = \relative c'' {
   R1*3 |
 
   \barNumberCheck #137
+  \tutti
+  <b d>1 \f |
+  <g g'>2.( <c e>4) |
+  <b f'!>4 <f! b>4. <e c'>8 <d d'> <c e'> |
+  <b f''>4 <d' f>2 q4 |
+  <<
+    {
+      e2 fis2 |
+      g2 a2 |
+    } \\
+    {
+      g,4 a2 b4~ |
+      b4 c2 d4 |
+    } \\
+  >> |
+  R1*6 |
+
+  \barNumberCheck #149
 }
