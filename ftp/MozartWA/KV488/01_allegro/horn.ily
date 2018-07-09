@@ -86,4 +86,13 @@ horn = \relative c'' {
   R1*20 |
 
   \barNumberCheck #137
+  \tutti
+  <g g,>4 \f q8. q16 q4 q4 |
+  q4 <c c,> <e e,> <c c,> |
+  <g g,>2~ q8 q q q |
+  q1 |
+  <c c,>4 r4 r2 |
+  R1*7 |
+
+  \barNumberCheck #149
 }
