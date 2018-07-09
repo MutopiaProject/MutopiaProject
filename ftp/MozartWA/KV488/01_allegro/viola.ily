@@ -109,4 +109,28 @@ viola = \relative c' {
 
   \barNumberCheck #114
   gis4 r4 r2 |
+  r2 <c a>4( <b gis>8) r8 |
+  r2 <a' c,>4( <gis b,>8) r8 |
+  R1 |
+  fis2.( e4) |
+  a,4 r b r |
+  cis2( bis) |
+  cis2( bis) |
+  cis2( bis) |
+  cis4 e2 e4 |
+  e4 r4 r2 |
+  fis2.( e4) |
+  a,4 r b r |
+  fis'2.( e4) |
+  R1 |
+  fis1 |
+  a1 |
+  cis4 r4 r2 |
+  r2 r4 cis,4( |
+  b4) r4 r2 |
+  r2 r4 gis4( |
+  b8) r e r gis r b r |
+  r8 fis, fis fis fis fis fis fis |
+
+  \barNumberCheck #137
 }
