@@ -172,4 +172,44 @@ horn = \relative c'' {
 
   \barNumberCheck #198
   <c c,>4 \tutti r4 r2 |
+  R1 |
+  r2 r4 q4 |
+  q2. r4 |
+  R1*3 |
+  <<
+    {
+      g1~ |
+      \barNumberCheck #206
+      \solo
+      g4
+    } \\
+    {
+      g,1( |
+      c4)
+    } \\
+  >> r4 r2 |
+  <c' c,>1~ |
+  q4 r4 r2 |
+  <<
+    { d2( e4) r4 | } \\
+    R1 |
+  >> |
+  R1*3 |
+
+  \barNumberCheck #213
+  \tutti
+  <c c,>4 \f q8. q16 q4 q4 |
+  q1 |
+  q2~ q8 q q q |
+  q1 |
+  \barNumberCheck #217
+  << { s2 \solo } q2. >> r4 |
+  R1*7 |
+  <g g,>2 \f r2 |
+  R1 |
+  r2 <g g,>4. \f q8 |
+  q4-. q4-. r2 |
+  R1*8 |
+
+  \barNumberCheck #237
 }
