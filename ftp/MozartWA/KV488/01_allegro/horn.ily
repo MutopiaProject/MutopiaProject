@@ -212,4 +212,72 @@ horn = \relative c'' {
   R1*8 |
 
   \barNumberCheck #237
+  <e' c>2( \p <d g,>2) |
+  <c c,>1~ |
+  q1 |
+  <g g,>1 |
+  <c c,>1~ |
+  q4 r4 r2 |
+  <e c>2.( <d g,>4) |
+  <c c,>1~ |
+  q1~ |
+  q1 |
+  R1*3 |
+  <<
+    {
+      e,1~ |
+      e1~ |
+      e1~ |
+      e4
+    } \\
+    {
+      e1~ |
+      e1~ |
+      e1~ |
+      e4
+    } \\
+  >> r4 r2 |
+  R1*4 |
+  <g g,>1 |
+  R1*13 |
+
+  \barNumberCheck #272
+  <g g,>1~ |
+  q1~ |
+  q1 |
+  << c,4 \\ c4 >> r4 r2 |
+  R1*3 |
+  <g' g,>1~ |
+  q1~ |
+  q4 r4 r2 |
+  <g' g,>2 <e e,>4 <c c,>4 |
+  <g g,>1 \cresc |
+
+  \barNumberCheck #284
+  \tutti
+  <c c,>4 \f q8. q16 q4 q4 |
+  q1 |
+  q2~ q8 q q q |
+  q1 |
+  q4 r4
+  <<
+    {
+      d4 e4~ |
+      e4 c d g, |
+    } \\
+    {
+      g2 |
+      c,2 g'4 g,4 |
+    } \\
+  >> |
+  R1*3 |
+  r4 <c' c,>4-. \p q4-. q4-. |
+  r4 q4 r4 q4 |
+  r4 q4 q4 \f q8. q16 |
+  q4 q8. q16 q4 q8. q16 |
+  <g g,>2 r2 \fermata |
+
+  \barNumberCheck #298
+  \solo
+  R1 |
 }
