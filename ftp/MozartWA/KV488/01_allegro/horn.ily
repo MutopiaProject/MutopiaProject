@@ -95,4 +95,81 @@ horn = \relative c'' {
   R1*7 |
 
   \barNumberCheck #149
+  \solo
+  <<
+    {
+      s1*7 |
+      \barNumberCheck #156
+      s4 \tutti s4 s2 |
+    }
+    { R1*8 | }
+  >>
+
+  \barNumberCheck #157
+  <<
+    {
+      s1 |
+      \barNumberCheck #158
+      s16 \solo
+    }
+    {
+      d1~ \p |
+      d4
+    } \\
+    {
+      d1 |
+      g,4
+    } \\
+  >> r4 r2 |
+
+  <<
+    {
+      s1 |
+      \barNumberCheck #160
+      s4 \tutti s4 s2 |
+      s1 |
+      \barNumberCheck #162
+      s16 \solo s16*15 |
+      s1 |
+      \barNumberCheck #164
+      s4 \tutti s4 s2 |
+      s1 |
+      \barNumberCheck #166
+      s4 \solo s4 s2 |
+    }
+    {
+      R1*5 |
+      \barNumberCheck #164
+      r2 r4 <c c,>4 |
+      <g g,>1 |
+      <g c,>4 r4 r2 |
+    }
+  >> |
+  R1*11 |
+
+  \barNumberCheck #178
+  << { s4 \tutti } R1 >> |
+  R1 |
+  \barNumberCheck #180
+  << { s16 \solo } r8 >> <g g,>8 \p q q q q q q |
+  q8 q q q q q q q |
+  \barNumberCheck #182
+  q4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #184
+  << { s16 \solo } r8 >> q8 q q q q q q |
+  q8 q q q q q q q |
+  q1~ |
+  q1~ |
+  q1~ |
+  q4 r4 r2 |
+  R1*4 |
+  <d' g,,>1~ |
+  q1~ |
+  q1~ |
+  q1 |
+
+  \barNumberCheck #198
+  <c c,>4 \tutti r4 r2 |
 }
