@@ -306,4 +306,37 @@ violinII = \relative c'' {
   a8 a'16 gis fis e d cis b4-. b'4-. |
 
   \barNumberCheck #290
+  r2 a,2 \p |
+  fis1 |
+  e4( b cis e) |
+  a4-. a4-. r2 |
+  a4 r a r |
+  a4 r d!4 \f d8. d16 |
+  cis4 cis8. cis16 c4 c8. c16 |
+  cis!2 r2 \fermata |
+
+  \barNumberCheck #298
+  \solo
+  R1 |
+
+  \barNumberCheck #299
+  \tutti
+  r8 a8( \f b cis d dis e eis) |
+  fis8 r fis4. a16( gis) \grace b16 a8( gis16 fis) |
+  e8-. d'( b) gis-. d( b') cis,( a') |
+  b,4. fis16( d) cis4( b) |
+  e'8-. d'( b) gis-. d( b') cis,( a') |
+  e8-. d'( b) gis-. d( b') cis,( a') |
+  b,4. fis16( d) cis4( b) |
+  a4 r4 r2 |
+  cis4 \p r e r |
+  gis4( a8) r8 r2 |
+  c,2( cis8) r d r |
+
+  cis16 \f e \repeat unfold 7 { cis e } |
+  \repeat unfold 3 { \repeat unfold 8 { cis16 e } | } |
+  cis4 r4 r2 |
+  \bar "|."
+
+  \barNumberCheck #315
 }

@@ -297,4 +297,39 @@ violinI = \relative c'' {
   a8 a'16 gis fis e d cis b4-. b'4-. |
 
   \barNumberCheck #290
+  r2 cis,2~ \p |
+  cis4 b8.( cis16 d4 b4) |
+  gis4( e) e'2~ |
+  e8( dis) dis4 r8 a'16( gis a gis fis e) |
+  dis8-. a'16( gis a gis fis e) dis8-. a'16( gis a gis fis e) |
+  dis4-. r4 <a a'>4 \f q8. q16 |
+  q4 q8. q16 q4 q8. q16 |
+  q2 r2 \fermata |
+
+  \barNumberCheck #298
+  \solo
+  R1 |
+
+  \barNumberCheck #299
+  \tutti
+  r8 a8( \f b cis d dis e eis) |
+  fis8 r fis4. a16( gis) \grace b16 a8( gis16 fis) |
+  e8-. d'( b) gis-. d( b') cis,( a') |
+  b,4. d16( fis) a,4( gis) |
+  e'8-. d'( b) gis-. d( b') cis,( a') |
+  e8-. d'( b) gis-. d( b') cis,( a') |
+  b,4. d16( fis) a,4( gis) |
+  a4 r4 r2 |
+  fis4 \p r gis r |
+  b4( a8) r r2 |
+  dis,2( e8) r gis r |
+
+  a4 \f r a'8( e) e-. e-. |
+  e4 r e8( cis) cis-. cis-. |
+  cis4 r cis8( a) a-. a-. |
+  a8 r b8( \trill a16 b) a8 r b8( \trill a16 b) |
+  a4 r4 r2 |
+  \bar "|."
+
+  \barNumberCheck #315
 }
