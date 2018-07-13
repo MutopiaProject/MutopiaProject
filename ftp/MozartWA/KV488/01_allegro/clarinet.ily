@@ -204,4 +204,128 @@ clarinet = \relative c'' {
   R1*6 |
 
   \barNumberCheck #149
+  \solo
+  R1*7 |
+
+  <<
+    {
+      \barNumberCheck #156
+      s4 \tutti s4 s2 |
+      s1 |
+      \barNumberCheck #158
+      s16 \solo s16 s8
+    }
+    {
+      r4 d4 \p g2~ |
+      g4 fis8.( g16) a4( d,) |
+      bes'4
+    } \\
+    {
+      r2 r4 d,4 |
+      c4~( c8. bes16) a4( c) |
+      bes4
+    } \\
+  >> r4 r2 |
+  R1 |
+
+  <<
+    {
+      \barNumberCheck #160
+      s4 \tutti s4 s2 |
+      s1 |
+      \barNumberCheck #162
+      s16 \solo s16 s8
+    }
+    {
+      r2 r4
+      <<
+        {
+          g'4 |
+          aes4~( aes8. g16) f4( aes) |
+          g4
+        } \\
+        {
+          ees4 |
+          f4~( f8. ees16) d2 |
+          ees4
+        } \\
+      >>
+    }
+  >> r4 r2 |
+  R1 |
+
+  <<
+    {
+      \barNumberCheck #164
+      r4 \tutti g4
+      \shape #'((0 . -0.5) (0 . -0.5) (0 . -0.5) (0 . -0.5)) Tie
+      c,2~ |
+      \once \override NoteColumn.force-hshift = #0.4
+      \once \override Stem.length = #5
+      c4 b!8._( c16) d4_( g,4) |
+      ees'4
+    } \\
+    {
+      r2 r4 g,4 |
+      \shape #'((-0.5 . 0.5) (0 . 1.5) (0 . 1.5) (0 . 0)) Tie
+      g'1^~ |
+      g4
+    } \\
+  >>
+  \barNumberCheck #166
+  \solo r4 r2 |
+  R1*3 |
+  <<
+    {
+      r4 f,4 aes'2~ |
+      aes4 g8.( aes16) bes4( f) |
+      g4 ees,4 g'2~ |
+      g4 f8.( g16) aes4( ees) |
+      f4 d, f'2~ |
+      f4 ees8.( f16) g4( d) |
+      ees4 c, ees'2~ |
+      ees4( e f fis) |
+      \barNumberCheck #178
+      g4 \tutti r4 r2 |
+    } \\
+    {
+      R1*9 |
+    } \\
+  >> |
+  R1 |
+
+  \barNumberCheck #180
+  << { s16 \solo } r4 >> <fis d>4( <g ees>2~) |
+  q4 <f! d>8.( <d b>16) <ees c>4( <g ees!>4) |
+
+  \barNumberCheck #182
+  <d b>4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #184
+  << { s16 \solo } r4 >> <fis d>4( <g ees>2~) |
+  q4 <f! d>8.( <d b>16) <ees c>4( <g ees!>4) |
+  <d b>4 r4 r2 |
+  R1 |
+  <d b>4( <ees c> <d b> <ees c>) |
+  <d b>4 r4 r2 |
+  R1*4 |
+  <<
+    {
+      b'1~ |
+      b1~ |
+      b1~ |
+      b1( |
+      c4)
+    } \\
+    {
+      f,!1~ |
+      f1~ |
+      f1~ |
+      f1( |
+      e4)
+    } \\
+  >>
+  \barNumberCheck #198
+  \tutti r4 r2 |
 }
