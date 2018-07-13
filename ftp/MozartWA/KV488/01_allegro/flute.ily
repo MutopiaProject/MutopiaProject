@@ -168,4 +168,63 @@ flute = \relative c''' {
 
   \barNumberCheck #198
   cis4 \tutti r4 r2 |
+  d4.( fis8) b,( d) gis,( b) |
+  a4 r4 r2 |
+  R1*3 |
+  r8 e8-. fis-. gis-. a-. b-. cis-. d-. |
+  e8( dis d cis b4) r4 |
+
+  \barNumberCheck #206
+  \solo
+  R1 |
+  d2( b4 gis4) |
+  a4( gis fis e) |
+  e4.( gis16 fis e4) r4 |
+  R1*3 |
+
+  \barNumberCheck #213
+  \tutti
+  a2 \f r8 a a a |
+  e'8( d) d4. cis8 b a |
+  a8( g) g'4. fis8 e d |
+  d8( cis) cis4. e8-. e,( a) |
+
+  \barNumberCheck #217
+  g8( fis) fis4 \solo r2 |
+  R1*7 |
+
+  \barNumberCheck #225
+  e2 \f f'8 \p r e r |
+  d8 r c r b r a r |
+  gis2 e'4. \f e8 |
+  e4-. e,4-. r2 |
+
+  R1*7 |
+  \barNumberCheck #236
+  r2 r4 cis'8( \p d) |
+  fis8( e) e8. e16 e4 e4 |
+  e4.( fis8 e dis d cis) |
+  cis8( b) b8. b16 b4 b4 |
+  b8( e dis d cis b a gis |
+  fis8 e) e8. e16 e4( eis4) |
+  fis8( gis a ais b cis d dis) |
+  e8( cis) a4.( cis8 b gis) |
+  a4 r4 r2 |
+  r2 d4( cis8) r8 |
+  r2 f4( e8) r8 |
+  R1*5 |
+  r2 b2( |
+  cis4) r4 r2 |
+  R1*4 |
+  e4( d2 cis4) |
+  R1*20 |
+
+  \barNumberCheck #279
+  r8 e,,8-. fis-. gis-. a-. b-. cis-. d-. |
+  e8-. e-. fis-. gis-. a-. b-. cis-. d-. |
+  e4 r4 r2 |
+  R1 |
+  r2 gis,2 |
+
+  \barNumberCheck #284
 }
