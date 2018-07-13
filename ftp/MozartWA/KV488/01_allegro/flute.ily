@@ -227,4 +227,49 @@ flute = \relative c''' {
   r2 gis,2 |
 
   \barNumberCheck #284
+  \tutti
+  a2 \f r8 a a a |
+  e'8( d) d4. cis8 b a |
+  a8( g) g'4. fis8 e d |
+  d8( cis) cis4. e8 e,( g) |
+  fis2 gis!2 |
+  a2 b2 |
+
+  \barNumberCheck #290
+  r2 cis2~ \p |
+  cis4 b8.( cis16 d4 b) |
+  gis4( e) e'2~ |
+  e8( dis) dis4 r2 |
+  dis4 r dis r |
+  dis r d2( \f |
+  cis2 c) |
+  cis!2 r2 \fermata |
+
+  \barNumberCheck #298
+  \solo
+  R1 |
+
+  \barNumberCheck #299
+  \tutti
+  r8 a( \f b cis d dis e eis) |
+  fis8 r fis2( e!4) |
+  e4( d2 cis4) |
+  b2( a4 gis) |
+  e'4( d2 cis4) |
+  e4( d2 cis4) |
+  b2( a4 gis) |
+  a4 r4 dis8( \p e fis e) |
+  a,4 r8. a16 b4 r8. b16 |
+  d4( cis8) r dis( e fis e) |
+  a,4 r8. a16 cis8.( d!16) b8.( cis16) |
+
+  \barNumberCheck #310
+  a8( \f e) e-. e-. e4 r4 |
+  e'8( cis) cis-. cis-. cis4 r4 |
+  cis8( a) a-. a-. a4 r4 |
+  a8 r b8( \trill a16 b) a8 r b8( \trill a16 b) |
+  a4 r4 r2 |
+  \bar "|."
+
+  \barNumberCheck #315
 }
