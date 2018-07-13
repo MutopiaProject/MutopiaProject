@@ -328,4 +328,48 @@ clarinet = \relative c'' {
   >>
   \barNumberCheck #198
   \tutti r4 r2 |
+  R1 |
+  <c' e,>4( <b g> <a f> <g e>) |
+  <g e>4.( <b g>16 <a f> <g e>4) r |
+  <<
+    { c,2~ c8( b f') f-. | } \\
+    R1 \\
+  >>
+  <c e>2~ q8( <d b> <a' f>) q-. |
+  <g e>4 r4 r2 |
+  R1 |
+
+  \barNumberCheck #206
+  \solo
+  R1 |
+  <<
+    {
+      f2( d4 b) |
+      c4( g' f e) |
+    } \\
+    {
+      R1 |
+      R1 |
+    } \\
+  >> |
+  <f b,>2( <e c>4) r4 |
+  R1*3 |
+
+  \barNumberCheck #213
+  \tutti
+  <c e,>1 \f |
+  << { g'8[( f]) } \\ c4 >> <f c>2 q4 |
+  << { f8[( e]) } \\ bes4 >> <e bes>4. <f a,>8 <g g,> <a f,> |
+  <bes e,,>4 <bes g>2 <g bes>4 |
+
+  \barNumberCheck #217
+  <e g,>8( <f f,>) q4 \solo r2 |
+  R1*7 |
+  <d b>2 \f <aes' b,>8 \p r <g c,> r |
+  <f b,>8 r <ees c> r <d g> r <c fis,> r |
+  <b g>2 <b' d,>4. \f q8 |
+  q4-. << g4-. \\ g4-. >> r2 |
+  R1*7 |
+
+  \barNumberCheck #236
 }
