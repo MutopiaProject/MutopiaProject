@@ -372,4 +372,61 @@ clarinet = \relative c'' {
   R1*7 |
 
   \barNumberCheck #236
+  <<
+    {
+      r2 r4 e8(^\p f) |
+      a8( g) g8. g16 g4 g4 |
+      g8( c b a g fis f e) |
+      e8( d) d8. d16 d4 d4 |
+      d8( g fis f e d c b |
+      a8 g) g8. g16 g4( gis4) |
+      a8( b c cis d e f fis) |
+    } \\
+    { R1*7 | } \\
+  >> |
+  <g e>2~( q8 <e c> <f d> <d b>) |
+  <<
+    { c4( bes aes g) | } \\
+    { c4( g f e) } \\
+  >> |
+  <c' aes>4( <bes g> <aes f> <g e>) |
+  <c aes>4( <bes g> <aes f> <g e>) |
+  R1*4 |
+  r2 <d' b>2( |
+  <c a>4) r4 <d b>2( |
+  <c a>4) r4 r2 |
+  R1*4 |
+  <<
+    { g'4( f2 e4) | } \\
+    { d2.( c4) | } \\
+  >> |
+  R1*8 |
+
+  \barNumberCheck #267
+  <<
+    {
+      r2 e2~ |
+      e4 d8.( e16 f4 d) |
+      b4( g) g'2~ |
+      g4( c8. a16) f2~ |
+      f4 e2( d8. c16) |
+      b4 d2( c8. g16) |
+      f'2.( e8. c16) |
+      a'2.( g8. f16) |
+      e4
+    } \\
+    {
+      R1 |
+      a,1( |
+      g4) d e g |
+      c2. d4 |
+      b4( c) a2 |
+      g4 d'8.( g,16) \shape #'((0 . -1) (0 . -2) (0 . -3) (0 . -1)) Tie e'2~ |
+      e4 d8.( g,16) \shape #'((-1 . -1) (-1 . -2) (0 . -3) (0 . -2)) Tie g'2~ |
+      g4 f8.( d16) b2( |
+      c4)
+    } \\
+  >> r4 r2 |
+
+  \barNumberCheck #276
 }
