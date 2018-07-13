@@ -249,4 +249,52 @@ violinI = \relative c'' {
   R1*11 |
 
   \barNumberCheck #237
+  cis2( \p b) |
+  a1~ |
+  a1 |
+  gis1 |
+  a1~ |
+  a4 r4 r2 |
+  e'8( cis) a4.( e'8 d b) |
+  a4 r4 r2 |
+  r2 d4( cis8) r |
+  r2 f4( e8) r |
+  R1 |
+  e4( d2 cis4) |
+  r4 b( a gis) |
+  a16( gis a b cis8) cis cis4 r4 |
+  a16( gis a b cis8) cis cis4 r4 |
+  a16( gis a b cis8) cis cis4 r4 |
+  a8 r a'2( g4) |
+  fis4 r4 r2 |
+  e4( d2 cis4) |
+  r4 b( a gis) |
+  e'4( d2 cis4) |
+  R1 |
+  r8 a( b4.) b8( cis4~) |
+  cis8 cis( d2) e4 |
+
+  \barNumberCheck #261
+  R1*13 |
+  r2 gis2( |
+  a4) r4 r2 |
+  g,1( |
+  fis4) r4 r2 |
+  c'1( |
+  cis!4) d8( b cis gis a b) |
+  cis4 d8( b cis gis a b) |
+  e4 r4 r2 |
+  r8 cis,8 cis cis cis cis cis cis |
+  b16 b b \cresc b b b b b gis' gis gis gis gis gis gis gis |
+
+  \barNumberCheck #284
+  \tutti
+  <a a'>2 \f r8 a a a |
+  e'8( d) d4. d8 d d |
+  a'8( g) g4. g8 g g |
+  d'8( cis) cis4. e8 e,( g) |
+  fis8 fis16 e d cis b a gis!8 gis'!16 fis e d cis b |
+  a8 a'16 gis fis e d cis b4-. b'4-. |
+
+  \barNumberCheck #290
 }
