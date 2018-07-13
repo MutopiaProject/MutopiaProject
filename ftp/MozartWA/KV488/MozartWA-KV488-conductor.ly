@@ -34,14 +34,6 @@ thisTocLabel = \label \thisLabelMovI
 \include "01_allegro/music.ily"
 \bookpart { \include "common/conductor-staff.ily" }
 
-% The particular current state happens to have a slightly bad layout.
-% The actual result is mostly fine, so we ignore this warning---it'll go
-% away entirely in the next commit.
-#(if (string=? (ly:get-option 'paper-size) "a4")
-   (begin
-     (ly:expect-warning "compressing over-full page by 2.3 staff-spaces")
-     (ly:expect-warning "page 19 has been compressed")))
-
 % II. Andante
 thisIdentifier = \thisIdentifierMovII
 thisTempo = \thisTempoMovII
