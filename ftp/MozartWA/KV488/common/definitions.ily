@@ -26,6 +26,10 @@ legato = \markup { \italic legato }
 dolce = \markup { \italic dolce }
 cadenza = \markup { \italic Cadenza }
 
+% Voicing marking for bassoon and horn, indicating that the (monophonic)
+% notation should be played by both members.
+both = \markup { a. 2. }
+
 % Sample definitions
 hideF = \tweak #'stencil ##f \f
 hideFF = \tweak #'stencil ##f \ff
