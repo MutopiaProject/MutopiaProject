@@ -105,4 +105,67 @@ flute = \relative c''' {
   R1*6 |
 
   \barNumberCheck #149
+  \solo
+  R1*7 |
+
+  \barNumberCheck #156
+  << { s4 \tutti } R1 >> |
+  R1 |
+
+  \barNumberCheck #158
+  << { s16 \solo } R1 >> |
+  R1 |
+
+  \barNumberCheck #160
+  r4 \tutti g,4 c2~ |
+  c4 b8.( c16) d4( g,4) |
+
+  \barNumberCheck #162
+  << { s16 \solo } e'4 >> r4 r2 |
+  R1 |
+
+  \barNumberCheck #164
+  r4 \tutti e4 a,2~ |
+  a4 gis!8.( a16) b4( e,4) |
+
+  \barNumberCheck #166
+  c'4 \solo r4 r2 |
+  R1*4 |
+  r4 g,4 d''2~ |
+  d4 c8.( d16) e4( b4) |
+  c4 f,,4 c''2~ |
+  c4 b8.( c16) d4( a4) |
+  b4 e,,4 b''2~ |
+  b4 a8.( b16) c4( gis!4) |
+  a1 |
+
+  \barNumberCheck #178
+  gis4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #180
+  << { s16 \solo } R1 >> |
+  r4 e4( e'2~) |
+
+  \barNumberCheck #182
+  e4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #184
+  << { s16 \solo } R1 >> |
+  r4 e,4( e'2~) |
+
+  \barNumberCheck #186
+  e4 r4 r2 |
+  R1 |
+  e4( dis e dis) |
+  e4 r4 r2 |
+  R1*4 |
+  d!1~ |
+  d1~ |
+  d1~ |
+  d1 |
+
+  \barNumberCheck #198
+  cis4 \tutti r4 r2 |
 }
