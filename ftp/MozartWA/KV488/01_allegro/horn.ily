@@ -280,4 +280,26 @@ horn = \relative c'' {
   \barNumberCheck #298
   \solo
   R1 |
+
+  \barNumberCheck #299
+  \tutti
+  r4 <c c,>8. \f q16 q4 q4 |
+  q4 q2 q4 |
+  <g g,>1 |
+  R1 |
+  q1 |
+  q1 |
+  r2 <e' c>4 <d g,>4 |
+  <c c,>4 r4 r2 |
+  << { c,4 \p } \\ c >> r4 << g'4 \\ g >> r4 |
+  <c c,>4 r4 r2 |
+  q2 <e c>8 r <d g,> r |
+  <c e,>4 \f r c,8^\both e g c |
+  c,4 r4 c8 e g c |
+  c,4 r4 c8 e g c |
+  c,8 r g' r c r g r |
+  c,4 r4 r2 |
+  \bar "|."
+
+  \barNumberCheck #315
 }
