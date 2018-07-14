@@ -526,4 +526,45 @@ bassoon = \relative c {
   \barNumberCheck #298
   \solo
   R1 |
+
+  \barNumberCheck #299
+  \tutti
+  <<
+    {
+      r8 a( \f b cis d dis e eis) |
+      fis8 r8 fis2( e!4) |
+      e4( d2 cis4) |
+      d2( cis4 b) |
+      e4( d2 cis4) |
+      e4( d2 cis4) |
+      d2( cis4 b) |
+      a4 r dis8( \p e fis e) |
+      a,4 r8. a16 b4 r8. b16 |
+      d8( cis8) r4 dis8( e fis e) |
+      a,4 r8. a16 cis8.( d!16) b8.( cis16) |
+      % Note: The original bassoon score does not have a forte mark
+      % here, even though all other instruments do.
+      a4
+    } \\
+    {
+      r4 a4( gis g) |
+      fis8 r d'2( cis4) |
+      b2.( a4) |
+      b2( a4 gis) |
+      b2.( a4) |
+      b2.( a4) |
+      b2( a4 gis) |
+      a4 r4 r2 |
+      R1*3 |
+      a4
+    } \\
+  >>
+  r4 <e' cis>4 q8 q |
+  q4 r4 q8( <cis a>8) q-. q-. |
+  q4 r4 <cis e,>8( <a cis,>) q-. q-. |
+  q8 r <b gis> r <cis a> r <b gis> r |
+  << a4 \\ a4 >> r4 r2 |
+  \bar "|."
+
+  \barNumberCheck #315
 }
