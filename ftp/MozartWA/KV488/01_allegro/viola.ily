@@ -152,4 +152,71 @@ viola = \relative c' {
   \barNumberCheck #149
   \solo
   e4 r4 r2 |
+  R1*4 |
+  r2 e'2( |
+  fis1) |
+
+  \barNumberCheck #156
+  e4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #158
+  << { s16 \solo } r4 >> g8-. fis-. g4 g8-. fis-. |
+  g8-. fis-. g-. e-. fis-. eis-. fis-. dis-. |
+
+  \barNumberCheck #160
+  e!4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #162
+  << { s16 \solo } r4 >> e8-. dis-. e4 e8-. dis-. |
+  e8-. dis-. e-. cis!-. d-. cis-. d-. b-. |
+
+  \barNumberCheck #164
+  c!4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #166
+  << { s4 \solo } R1 >> |
+  R1 |
+  r2 r4
+  <<
+    {
+      a4 |
+      g4~ g8. f16 e4( g) |
+      f4
+    } \\
+    {
+      f4 |
+      e4~ e8. d16 cis!2( |
+      d4)
+    } \\
+  >> r4 r2 |
+  R1*7 |
+
+  \barNumberCheck #178
+  << { s4 \tutti } r2 >> r4 a''4( |
+  gis!4) f2( e8.) d16 |
+
+  \barNumberCheck #180
+  << { s16 \solo } c4 >> r4 r2 |
+  R1 |
+
+  \barNumberCheck #182
+  << { s4 \tutti } r2 >> r4 a'4( |
+  gis!4) f2( e8. d16) |
+
+  \barNumberCheck #184
+  << { s16 \solo } c4 >> r4 r2 |
+  R1*3 |
+  e,1~ |
+  e4 r4 r2 |
+  R1 |
+  R1 |
+  fis!1~ |
+  fis1 |
+  gis4 r4 r2 |
+  R1*3 |
+
+  \barNumberCheck #198
 }
