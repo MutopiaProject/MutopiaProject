@@ -382,4 +382,36 @@ bassoon = \relative c {
   \barNumberCheck #198
   \tutti
   r4 r2 |
+  R1*5 |
+  r8 <cis, e>-. <d fis>-. <e gis>-. <fis a>-. <gis b>-. <a cis>-. <b d>-. |
+  % The following <c dis> is as in the original source of transcription.
+  % The alternative <bis dis> looks better and is easier to read, but is
+  % arguably enharmonically incorrect, so we stick to the original.
+  <cis e>8( <c dis> <b d> <a cis> <gis b>4) r4 |
+
+  \barNumberCheck #206
+  \solo
+  R1 |
+  <d' fis>2.( <b d>4) |
+  <a cis>4 r4 r2 |
+  R1*4 |
+
+  \barNumberCheck #213
+  \tutti
+  a8^\both \f a a a a a g g |
+  fis8 fis fis fis fis fis fis fis |
+  e8 e e e e d cis b |
+  a8 a a a a a cis cis |
+  \barNumberCheck #217
+  d8 d d d \solo d4 r4 |
+  R1*7 |
+
+  \barNumberCheck #225
+  <b' gis>2 \f <b d,>8 \p r <c c,> r |
+  <d b,>8 r <f a,,> r <b, g,> r <a f,> r |
+  <b e,,>2 <b gis!>4. \f q8 |
+  q4-. <e e,,>4 r2 |
+  R1*7 |
+
+  \barNumberCheck #236
 }
