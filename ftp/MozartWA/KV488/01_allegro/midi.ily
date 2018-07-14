@@ -7,6 +7,7 @@
 
 \score {
   \keepWithTag #'played
+  \unfoldRepeats \articulate
   % TODO(@wchargin): Tune volume constants?
   <<
     \new Staff {

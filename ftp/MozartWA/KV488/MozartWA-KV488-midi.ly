@@ -8,6 +8,8 @@
 \include "common/variables.ily"
 \include "common/definitions.ily"
 
+\include "articulate.ly"
+
 % I. Allegro
 \include "01_allegro/music.ily"
 \book {
