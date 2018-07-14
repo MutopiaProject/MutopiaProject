@@ -90,7 +90,7 @@ makefile() {
     printf '\n'
 
     printf '# Metatargets, for convenience\n'
-    printf '.PHONY: all main parts midi quicktest test clean\n'
+    printf '.PHONY: all main parts midi quicktest test quickcheck check clean\n'
     printf 'all: main parts midi\n'
     printf 'main: %s\n' "${main}.pdf"
     printf 'parts:'
@@ -101,9 +101,9 @@ makefile() {
     printf 'midi:'
     printf ' \\\n\t\t%s.midi' "${midis[@]}"
     printf '\n'
-    printf 'quicktest:\n'
+    printf 'quicktest quickcheck:\n'
     printf '\t%s\n' ./assert_barchecks.sh
-    printf 'test: quicktest\n'
+    printf 'test check: quicktest\n'
     # shellcheck disable=SC2016
     printf \
         '\t! $(MAKE) all -B PAPERSIZE=%s 2>&1 | grep -F -e err -e warn >&2\n' \
