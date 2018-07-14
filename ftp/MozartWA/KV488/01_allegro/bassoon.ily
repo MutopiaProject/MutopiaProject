@@ -222,4 +222,164 @@ bassoon = \relative c {
   R1*6 |
 
   \barNumberCheck #149
+  \solo
+  R1*7 |
+
+  <<
+    {
+      \barNumberCheck #156
+      s4 \tutti s4 s2 |
+      s1 |
+      \barNumberCheck #158
+      s16 \solo s2... |
+    }
+    {
+      r2 r4
+      <<
+        {
+          g'4 \p |
+          fis4~( fis8. e16) dis2( |
+          e4)
+        } \\
+        {
+          e4 |
+          b1 |
+          e,4
+        } \\
+      >>
+      r4 r2 |
+    }
+  >> |
+  R1 |
+
+  <<
+    {
+      \barNumberCheck #160
+      s4 \tutti s4 s2 |
+      s1 |
+      \barNumberCheck #162
+      s16 \solo s2... |
+    }
+    {
+      r2 r4
+      <<
+        {
+          g'4~ |
+          g1~ |
+          g4
+        } \\
+        {
+          c,4 |
+          g1 |
+          c,4
+        } \\
+      >>
+      r4 r2 |
+    }
+  >> |
+  R1 |
+
+  <<
+    {
+      \barNumberCheck #164
+      s4 \tutti s4 s2 |
+      s1 |
+      \barNumberCheck #166
+      s4 \solo s4 s2 |
+    }
+    {
+      r2 r4
+      <<
+        {
+          e'4 |
+          d4~( d8. c16) b4( d) |
+          c4
+        } \\
+        {
+          c4 |
+          b4~( b8. a16) gis!2 |
+          a4
+        } \\
+      >>
+      r4 r2 |
+    }
+  >> |
+  R1*3 |
+
+  \barNumberCheck #170
+  <<
+    {
+      r2 d4( a) |
+      b4 g, r b |
+      r4 c c'( gis!) |
+      a4 f, r a |
+      r4 b b'( fis!4) |
+      gis!4 e, r gis! |
+      r4 a a'( e) |
+      f1 |
+      \barNumberCheck #178
+      e4 \tutti r4 r2
+    } \\
+    { R1*9 | } \\
+  >> |
+  R1 |
+
+  \barNumberCheck #180
+  << { s16 \solo } r2 >> r4
+  <<
+    {
+      b'4( |
+      c4) d8.( f16) e4( c4) |
+      b4
+    } \\
+    {
+      gis!4( |
+      a4) b8.( d16) c!4( a) |
+      gis4
+    } \\
+  >>
+  \barNumberCheck #182
+  \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #184
+  << { s16 \solo } r2 >> r4
+  <<
+    {
+      b4( |
+      c4) d8.( f16) e4( c4) |
+      b4
+    } \\
+    {
+      gis!4( |
+      a4) b8.( d16) c!4( a) |
+      gis4
+    } \\
+  >>
+  r4 r2 |
+  R1 |
+  <b gis>4( <c a> <b gis> <a c>) |
+  <b gis>4 r4 r2 |
+  R1*4 |
+
+  \barNumberCheck #194
+  <<
+    {
+      b1~ |
+      b1~ |
+      b1~ |
+      b1( |
+      cis!4)
+    } \\
+    {
+      gis1~ |
+      gis1~ |
+      gis1~ |
+      gis1( |
+      a4)
+    } \\
+  >>
+  \barNumberCheck #198
+  \tutti
+  r4 r2 |
 }
