@@ -315,4 +315,30 @@ viola = \relative c' {
   \barNumberCheck #298
   \solo
   R1 |
+
+  \barNumberCheck #299
+  \tutti
+  a,8 r cis4( b a) |
+  d8 d d d d d e e |
+  b'2~ b8 e, a cis, |
+  fis8 fis fis fis e e e e |
+  b'2~ b8 e, a cis, |
+  b'2~ b8 e, a cis, |
+  fis8 fis fis fis e e d d |
+  cis4 r4 r2 |
+
+  \barNumberCheck #307
+  a4 \p r e r |
+  e'2 r2 |
+  a,2~ a8 r e' r |
+
+  \barNumberCheck #310
+  a,8 \f cis e a a,4 r |
+  a8 cis e a a,4 r |
+  a8 cis e a a,4 r |
+  e'8 r gis r a r gis r |
+  a4 r4 r2 |
+  \bar "|."
+
+  \barNumberCheck #315
 }
