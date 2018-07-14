@@ -219,4 +219,100 @@ viola = \relative c' {
   R1*3 |
 
   \barNumberCheck #198
+  << { s4 \tutti } { cis2( \p e) } >> |
+  d4( fis d b) |
+  e,4 r r a |
+  a2. r4 |
+  r4 e( d gis) |
+  r4 a( fis b) |
+  cis4 r4 r2 |
+  R1 |
+
+  \barNumberCheck #206
+  \solo
+  R1*4 |
+  e1~ |
+  e1~ |
+  e8 r d r cis r b r |
+
+  \barNumberCheck #213
+  \tutti
+  <cis e>8 \f q q q q q q q |
+  a'8 a a a a a a a |
+  cis,8 cis cis cis cis d e d |
+  e8 e e e e e a a |
+
+  \barNumberCheck #217
+  a8 a a a \solo a4 r4 |
+  d,2.( \p fis4) |
+  e1~ |
+  e2( fis~) |
+  fis1~ |
+  fis2 b,2 |
+  b2 \f d8 \p r cis r |
+  b8 r a r gis r fis r |
+  e4 r4 r2 |
+  R1*11 |
+
+  \barNumberCheck #237
+  a2( \p gis) |
+  fis2.( e4) |
+  dis1 |
+  b'1 |
+  cis2( cis,2) |
+  d4 r4 r2 |
+  e'1~ |
+  e4 r4 r2 |
+  r2 <d f,>4( <cis e,>8) r |
+  r2 <f d>4( <e cis>8) r |
+  R1 |
+  b2.( a4) |
+  d,4 r e r |
+  fis2( eis) |
+  fis2( eis) |
+  fis2( eis) |
+  fis8 r8 <a cis>2 q4( |
+  <a d>4) r4 r2 |
+  b2.( a4) |
+  d,4 r e r |
+  b'2.( a4) |
+  R1 |
+  d4. d8( e4.) e8( |
+  fis4.) fis8( gis2) |
+
+  \barNumberCheck #261
+  R1*13 |
+  r2 <gis b,>2( |
+  <a a,>4) r4 r2 |
+  a,1~ |
+  a4 r4 r2 |
+  fis'1( |
+  e4) r4 r2 |
+  R1 |
+  R1 |
+  r8 e,8 e e e e e e |
+  e8 e \cresc e e e' e e e |
+
+  \barNumberCheck #284
+  \tutti
+  <e cis>8 \f q q q q q q q |
+  a8 a a a a a a a |
+  cis,8 cis cis cis cis d e d |
+  e8 e e e e e a a |
+  a8 a, b4. b8 cis4~ |
+  cis8 cis d2 e4-. |
+
+  \barNumberCheck #290
+  r2 e2~ \p |
+  e4 d8.( e16 fis4 d) |
+  b4( gis a cis) |
+  fis4-. fis-. r2 |
+  fis4 r fis r |
+  fis4 r d4 \f d8. d16 |
+  e4 e8. e16 fis4 fis8. fis16 |
+  e2 r2 \fermata |
+
+  \barNumberCheck #298
+  \solo
+  R1 |
 }
