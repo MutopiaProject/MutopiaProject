@@ -83,6 +83,9 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./01_allegro/.flute.ily.lydep
 ./01_allegro/.flute.ily.lydep: \
 		./01_allegro/flute.ily
+.INTERMEDIATE: ./01_allegro/.global.ily.lydep
+./01_allegro/.global.ily.lydep: \
+		./01_allegro/global.ily
 .INTERMEDIATE: ./01_allegro/.horn.ily.lydep
 ./01_allegro/.horn.ily.lydep: \
 		./01_allegro/horn.ily
@@ -97,6 +100,7 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 		./01_allegro/.cello.ily.lydep \
 		./01_allegro/.clarinet.ily.lydep \
 		./01_allegro/.flute.ily.lydep \
+		./01_allegro/.global.ily.lydep \
 		./01_allegro/.horn.ily.lydep \
 		./01_allegro/.piano.ily.lydep \
 		./01_allegro/.viola.ily.lydep \
@@ -127,6 +131,9 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./02_andante/.flute.ily.lydep
 ./02_andante/.flute.ily.lydep: \
 		./02_andante/flute.ily
+.INTERMEDIATE: ./02_andante/.global.ily.lydep
+./02_andante/.global.ily.lydep: \
+		./02_andante/global.ily
 .INTERMEDIATE: ./02_andante/.horn.ily.lydep
 ./02_andante/.horn.ily.lydep: \
 		./02_andante/horn.ily
@@ -141,6 +148,7 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 		./02_andante/.cello.ily.lydep \
 		./02_andante/.clarinet.ily.lydep \
 		./02_andante/.flute.ily.lydep \
+		./02_andante/.global.ily.lydep \
 		./02_andante/.horn.ily.lydep \
 		./02_andante/.piano.ily.lydep \
 		./02_andante/.viola.ily.lydep \
@@ -171,6 +179,9 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./03_presto/.flute.ily.lydep
 ./03_presto/.flute.ily.lydep: \
 		./03_presto/flute.ily
+.INTERMEDIATE: ./03_presto/.global.ily.lydep
+./03_presto/.global.ily.lydep: \
+		./03_presto/global.ily
 .INTERMEDIATE: ./03_presto/.horn.ily.lydep
 ./03_presto/.horn.ily.lydep: \
 		./03_presto/horn.ily
@@ -185,6 +196,7 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 		./03_presto/.cello.ily.lydep \
 		./03_presto/.clarinet.ily.lydep \
 		./03_presto/.flute.ily.lydep \
+		./03_presto/.global.ily.lydep \
 		./03_presto/.horn.ily.lydep \
 		./03_presto/.piano.ily.lydep \
 		./03_presto/.viola.ily.lydep \

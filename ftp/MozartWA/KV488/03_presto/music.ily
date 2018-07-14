@@ -5,15 +5,7 @@
 
 \include "../common/version.ily"
 
-global = {
-  \key a \major
-  \time 2/2
-}
-globalInA = {
-  \key c \major
-  \time 2/2
-  \transposition a
-}
+\include "global.ily"
 
 \include "flute.ily"
 \include "clarinet.ily"
