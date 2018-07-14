@@ -87,7 +87,11 @@ makefile() {
     main=MozartWA-KV488-conductor
     midi=MozartWA-KV488-midi
     midis=( kv488-{1-allegro,2-andante,3-presto} )
+    movements=( )
     parts=( )
+    for filename in *-movement-*.ly; do
+        movements+=( "${filename%.ly}" )
+    done
     for filename in *-part-*.ly; do
         parts+=( "${filename%.ly}" )
     done
@@ -105,9 +109,13 @@ makefile() {
     printf '\n'
 
     printf '# Metatargets, for convenience\n'
-    printf '.PHONY: all main parts midi quicktest test quickcheck check clean\n'
-    printf 'all: main parts midi\n'
+    printf '.PHONY: all main movements parts midi\n'
+    printf '.PHONY: quicktest test quickcheck check clean\n'
+    printf 'all: main movements parts midi\n'
     printf 'main: %s\n' "${main}.pdf"
+    printf 'movements:'
+    printf ' \\\n\t\t%s.pdf' "${movements[@]}"
+    printf '\n'
     printf 'parts:'
     printf ' \\\n\t\t%s.pdf' "${parts[@]}"
     printf '\n'
@@ -128,11 +136,16 @@ makefile() {
     # shellcheck disable=SC2016
     printf '\t$(RM) "%s"\n' "${main}.pdf"
     # shellcheck disable=SC2016
+    printf '\t$(RM) "%s.pdf"\n' "${movements[@]}"
+    # shellcheck disable=SC2016
     printf '\t$(RM) "%s.pdf"\n' "${parts[@]}"
     printf '\n'
 
     printf '# LilyPond entry points\n'
     ly_entry_point "${main}.pdf" "${main}.ly"
+    for movement in "${movements[@]}"; do
+        ly_entry_point "${movement}.pdf" "${movement}.ly"
+    done
     for part in "${parts[@]}"; do
         ly_entry_point "${part}.pdf" "${part}.ly"
     done

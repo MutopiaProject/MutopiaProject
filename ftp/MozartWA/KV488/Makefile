@@ -7,9 +7,14 @@ ifdef PAPERSIZE
 endif
 
 # Metatargets, for convenience
-.PHONY: all main parts midi quicktest test quickcheck check clean
-all: main parts midi
+.PHONY: all main movements parts midi
+.PHONY: quicktest test quickcheck check clean
+all: main movements parts midi
 main: MozartWA-KV488-conductor.pdf
+movements: \
+		MozartWA-KV488-movement-1-allegro.pdf \
+		MozartWA-KV488-movement-2-andante.pdf \
+		MozartWA-KV488-movement-3-presto.pdf
 parts: \
 		MozartWA-KV488-part-bassoon.pdf \
 		MozartWA-KV488-part-cello.pdf \
@@ -35,6 +40,9 @@ clean:
 	$(RM) "kv488-2-andante.midi"
 	$(RM) "kv488-3-presto.midi"
 	$(RM) "MozartWA-KV488-conductor.pdf"
+	$(RM) "MozartWA-KV488-movement-1-allegro.pdf"
+	$(RM) "MozartWA-KV488-movement-2-andante.pdf"
+	$(RM) "MozartWA-KV488-movement-3-presto.pdf"
 	$(RM) "MozartWA-KV488-part-bassoon.pdf"
 	$(RM) "MozartWA-KV488-part-cello.pdf"
 	$(RM) "MozartWA-KV488-part-clarinet.pdf"
@@ -48,6 +56,12 @@ clean:
 # LilyPond entry points
 MozartWA-KV488-conductor.pdf: .MozartWA-KV488-conductor.ly.lydep
 	$(LY) MozartWA-KV488-conductor.ly
+MozartWA-KV488-movement-1-allegro.pdf: .MozartWA-KV488-movement-1-allegro.ly.lydep
+	$(LY) MozartWA-KV488-movement-1-allegro.ly
+MozartWA-KV488-movement-2-andante.pdf: .MozartWA-KV488-movement-2-andante.ly.lydep
+	$(LY) MozartWA-KV488-movement-2-andante.ly
+MozartWA-KV488-movement-3-presto.pdf: .MozartWA-KV488-movement-3-presto.ly.lydep
+	$(LY) MozartWA-KV488-movement-3-presto.ly
 MozartWA-KV488-part-bassoon.pdf: .MozartWA-KV488-part-bassoon.ly.lydep
 	$(LY) MozartWA-KV488-part-bassoon.ly
 MozartWA-KV488-part-cello.pdf: .MozartWA-KV488-part-cello.ly.lydep
@@ -290,6 +304,36 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 		./common/.definitions.ily.lydep \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
+.INTERMEDIATE: ./.MozartWA-KV488-movement-1-allegro.ly.lydep
+./.MozartWA-KV488-movement-1-allegro.ly.lydep: \
+		./MozartWA-KV488-movement-1-allegro.ly \
+		./01_allegro/.music.ily.lydep \
+		./common/.conductor-dimension.ily.lydep \
+		./common/.conductor-staff.ily.lydep \
+		./common/.definitions.ily.lydep \
+		./common/.variables.ily.lydep \
+		./common/.version.ily.lydep \
+		./.mutopia-header.ily.lydep
+.INTERMEDIATE: ./.MozartWA-KV488-movement-2-andante.ly.lydep
+./.MozartWA-KV488-movement-2-andante.ly.lydep: \
+		./MozartWA-KV488-movement-2-andante.ly \
+		./02_andante/.music.ily.lydep \
+		./common/.conductor-dimension.ily.lydep \
+		./common/.conductor-staff.ily.lydep \
+		./common/.definitions.ily.lydep \
+		./common/.variables.ily.lydep \
+		./common/.version.ily.lydep \
+		./.mutopia-header.ily.lydep
+.INTERMEDIATE: ./.MozartWA-KV488-movement-3-presto.ly.lydep
+./.MozartWA-KV488-movement-3-presto.ly.lydep: \
+		./MozartWA-KV488-movement-3-presto.ly \
+		./03_presto/.music.ily.lydep \
+		./common/.conductor-dimension.ily.lydep \
+		./common/.conductor-staff.ily.lydep \
+		./common/.definitions.ily.lydep \
+		./common/.variables.ily.lydep \
+		./common/.version.ily.lydep \
+		./.mutopia-header.ily.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-bassoon.ly.lydep
 ./.MozartWA-KV488-part-bassoon.ly.lydep: \
 		./MozartWA-KV488-part-bassoon.ly \
