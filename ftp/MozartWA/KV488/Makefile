@@ -26,6 +26,7 @@ midi: \
 		kv488-3-presto.midi
 quicktest quickcheck:
 	./assert_barchecks.sh
+	./assert_consistent_marks.sh
 test check: quicktest
 	! $(MAKE) all -B PAPERSIZE=a4 2>&1 | grep -F -e err -e warn >&2
 	! $(MAKE) all -B PAPERSIZE=letter 2>&1 | grep -F -e err -e warn >&2

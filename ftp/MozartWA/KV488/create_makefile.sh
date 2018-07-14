@@ -118,6 +118,7 @@ makefile() {
     printf '\n'
     printf 'quicktest quickcheck:\n'
     printf '\t%s\n' ./assert_barchecks.sh
+    printf '\t%s\n' ./assert_consistent_marks.sh
     printf 'test check: quicktest\n'
     # shellcheck disable=SC2016
     printf \
