@@ -17,6 +17,11 @@ deps() {
     <"$1" tr '\n' '\0' |
         sed -zne 's/.*\\include "\([^"]\+\)".*/\1/p' | \
         zawk -v base="$(dirname "$1")" '{ print base "/" $0 }' | \
+        # Some dependencies may library files, like `articulate.ly`,
+        # which are not stored in the local file tree. Therefore, if a
+        # dependency does not exist locally, we assume that it is a
+        # library and don't track it in the dependency graph.
+        filter_existing | \
         sed -z 's:/[^/]\+/../:/:g' | \
         lydep_names | \
         sort -zu
@@ -27,6 +32,16 @@ deps() {
 # streams of filenames.
 lydep_names() {
     zawk -v FS="/" -v OFS="/" '{ $NF = "." $NF ".lydep"; print }'
+}
+
+# Print out each specified file, if it exists. Input and output are
+# NUL-delimited streams of filenames.
+filter_existing() {
+    while read -r -d $'\0' filename; do
+        if [ -f "${filename}" ]; then
+            printf '%s\0' "${filename}"
+        fi
+    done
 }
 
 # Like awk(1), but with NUL-delimited records (both input and output).
