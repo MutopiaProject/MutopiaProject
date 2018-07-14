@@ -290,9 +290,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-bassoon.ly.lydep
 ./.MozartWA-KV488-part-bassoon.ly.lydep: \
 		./MozartWA-KV488-part-bassoon.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.bassoon.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./02_andante/.bassoon.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./03_presto/.bassoon.ily.lydep \
+		./03_presto/.global.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr.ily.lydep \
@@ -302,9 +305,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-cello.ly.lydep
 ./.MozartWA-KV488-part-cello.ly.lydep: \
 		./MozartWA-KV488-part-cello.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.cello.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./02_andante/.cello.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./03_presto/.cello.ily.lydep \
+		./03_presto/.global.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr.ily.lydep \
@@ -314,9 +320,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-clarinet.ly.lydep
 ./.MozartWA-KV488-part-clarinet.ly.lydep: \
 		./MozartWA-KV488-part-clarinet.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.clarinet.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./02_andante/.clarinet.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./03_presto/.clarinet.ily.lydep \
+		./03_presto/.global.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr-in-a.ily.lydep \
@@ -326,9 +335,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-flute.ly.lydep
 ./.MozartWA-KV488-part-flute.ly.lydep: \
 		./MozartWA-KV488-part-flute.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.flute.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./02_andante/.flute.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./03_presto/.flute.ily.lydep \
+		./03_presto/.global.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr.ily.lydep \
@@ -338,9 +350,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-horn.ly.lydep
 ./.MozartWA-KV488-part-horn.ly.lydep: \
 		./MozartWA-KV488-part-horn.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./01_allegro/.horn.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./02_andante/.horn.ily.lydep \
+		./03_presto/.global.ily.lydep \
+		./03_presto/.horn.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr-in-a.ily.lydep \
@@ -350,9 +365,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-piano.ly.lydep
 ./.MozartWA-KV488-part-piano.ly.lydep: \
 		./MozartWA-KV488-part-piano.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./01_allegro/.piano.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./02_andante/.piano.ily.lydep \
+		./03_presto/.global.ily.lydep \
+		./03_presto/.piano.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-piano.ily.lydep \
@@ -362,9 +380,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-viola.ly.lydep
 ./.MozartWA-KV488-part-viola.ly.lydep: \
 		./MozartWA-KV488-part-viola.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./01_allegro/.viola.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./02_andante/.viola.ily.lydep \
+		./03_presto/.global.ily.lydep \
+		./03_presto/.viola.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr.ily.lydep \
@@ -374,9 +395,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-violin-ii.ly.lydep
 ./.MozartWA-KV488-part-violin-ii.ly.lydep: \
 		./MozartWA-KV488-part-violin-ii.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./01_allegro/.violin-ii.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./02_andante/.violin-ii.ily.lydep \
+		./03_presto/.global.ily.lydep \
+		./03_presto/.violin-ii.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr.ily.lydep \
@@ -386,9 +410,12 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 .INTERMEDIATE: ./.MozartWA-KV488-part-violin-i.ly.lydep
 ./.MozartWA-KV488-part-violin-i.ly.lydep: \
 		./MozartWA-KV488-part-violin-i.ly \
-		./01_allegro/.music.ily.lydep \
-		./02_andante/.music.ily.lydep \
-		./03_presto/.music.ily.lydep \
+		./01_allegro/.global.ily.lydep \
+		./01_allegro/.violin-i.ily.lydep \
+		./02_andante/.global.ily.lydep \
+		./02_andante/.violin-i.ily.lydep \
+		./03_presto/.global.ily.lydep \
+		./03_presto/.violin-i.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.parts-dimension.ily.lydep \
 		./common/.parts-staff-single-instr.ily.lydep \

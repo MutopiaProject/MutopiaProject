@@ -16,19 +16,22 @@ thisInstrName = \thisInstrNameV
 Part = \thisInstrName
 
 % I. Allegro
-\include "01_allegro/music.ily"
+\include "01_allegro/global.ily"
+\include "01_allegro/piano.ily"
 thisTempo = \thisTempoMovI
 thisIdentifier = \thisIdentifierMovI
 \bookpart { \include "common/parts-staff-piano.ily" }
 
 % II. Andante
-\include "02_andante/music.ily"
+\include "02_andante/global.ily"
+\include "02_andante/piano.ily"
 thisTempo = \thisTempoMovII
 thisIdentifier = \thisIdentifierMovII
 \bookpart { \include "common/parts-staff-piano.ily" }
 
 % III. Presto
-\include "03_presto/music.ily"
+\include "03_presto/global.ily"
+\include "03_presto/piano.ily"
 thisTempo = \thisTempoMovIII
 thisIdentifier = \thisIdentifierMovIII
 \bookpart { \include "common/parts-staff-piano.ily" }

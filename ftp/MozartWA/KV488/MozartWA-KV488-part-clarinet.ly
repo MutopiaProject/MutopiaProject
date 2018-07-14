@@ -17,21 +17,24 @@ Part = \thisInstrName
 thisClef = \thisClefInstrII
 
 % I. Allegro
-\include "01_allegro/music.ily"
+\include "01_allegro/global.ily"
+\include "01_allegro/clarinet.ily"
 theseNotes = \clarinet
 thisTempo = \thisTempoMovI
 thisIdentifier = \thisIdentifierMovI
 \bookpart { \include "common/parts-staff-single-instr-in-a.ily" }
 
 % II. Andante
-\include "02_andante/music.ily"
+\include "02_andante/global.ily"
+\include "02_andante/clarinet.ily"
 theseNotes = \clarinet
 thisTempo = \thisTempoMovII
 thisIdentifier = \thisIdentifierMovII
 \bookpart { \include "common/parts-staff-single-instr-in-a.ily" }
 
 % III. Presto
-\include "03_presto/music.ily"
+\include "03_presto/global.ily"
+\include "03_presto/clarinet.ily"
 theseNotes = \clarinet
 thisTempo = \thisTempoMovIII
 thisIdentifier = \thisIdentifierMovIII
