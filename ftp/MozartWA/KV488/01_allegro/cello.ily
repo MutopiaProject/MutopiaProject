@@ -165,4 +165,98 @@ cello = \relative c {
   \barNumberCheck #149
   \solo
   e,4 r4 r2 |
+  R1*4 |
+  r2 gis2( \p |
+  fis2 b,2) |
+
+  \barNumberCheck #156
+  e4 \tutti r4 r2 |
+  R1 |
+
+  \barNumberCheck #158
+  << { s16 \solo } R1 >> |
+  R1 |
+
+  \barNumberCheck #160
+  << { s4 \tutti } R1 >> |
+  R1 |
+
+  \barNumberCheck #162
+  << { s16 \solo } R1 >> |
+  R1 |
+
+  \barNumberCheck #164
+  << { s4 \tutti } R1 >> |
+  R1 |
+
+  \barNumberCheck #166
+  << { s4 \solo } R1 >> |
+  R1 |
+  r2 r4 d4 |
+  a1 |
+  d4 r4 r2 |
+  R1*7 |
+
+  \barNumberCheck #178
+  e8 e \tutti e e e e e e |
+  e8 e e e e e e e |
+
+  \barNumberCheck #180
+  << { s16 \solo } e4 >> r4 r2 |
+  R1 |
+
+  \barNumberCheck #182
+  e8 e \tutti e e e e e e |
+  e8 e e e e e e e |
+
+  \barNumberCheck #184
+  << { s16 \solo } e4 >> r4 r2 |
+  R1*3 |
+  e1~ |
+  e4 r4 r2 |
+  R1 |
+  R1 |
+  e1~ |
+  e1~ |
+  e4 r4 r2 |
+  R1*3 |
+
+  \barNumberCheck #198
+  a4 \p \tutti a a a |
+  a4 a a a |
+  a4 r4 r2 |
+  r4 d, a' a, |
+  r4 cis'( b e,) |
+  r4 fis( d gis,) |
+  a4 r4 r2 |
+  e''2~ e8( dis d b) |
+
+  \barNumberCheck #206
+  \solo
+  a4 r4 r2 |
+  R1*3 |
+  cis1( |
+  b1) |
+  a8 r d, r e r e r |
+
+  \barNumberCheck #213
+  \tutti
+  a8 \f a a a a a g g |
+  fis8 fis fis fis fis fis fis fis |
+  e8 e e e e d cis b |
+  a8 a a a a a cis cis |
+
+  \barNumberCheck #217
+  d8 d d d \solo d4 r4 |
+  b'2.( \p a4) |
+  gis1 |
+  a2( fis4 e) |
+  d1~ |
+  d2~ d4.( dis8) |
+  e1~ \fp |
+  e1~ |
+  e4 r4 r2 |
+  R1*11 |
+
+  \barNumberCheck #237
 }
