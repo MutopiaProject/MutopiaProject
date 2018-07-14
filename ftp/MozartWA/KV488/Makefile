@@ -26,9 +26,9 @@ parts: \
 		MozartWA-KV488-part-violin-ii.pdf \
 		MozartWA-KV488-part-violin-i.pdf
 midi: \
-		kv488-1-allegro.midi \
-		kv488-2-andante.midi \
-		kv488-3-presto.midi
+		MozartWA-KV488-midi-1-allegro.midi \
+		MozartWA-KV488-midi-2-andante.midi \
+		MozartWA-KV488-midi-3-presto.midi
 quicktest quickcheck:
 	./assert_barchecks.sh
 	./assert_consistent_marks.sh
@@ -36,9 +36,6 @@ test check: quicktest
 	! $(MAKE) all -B PAPERSIZE=a4 2>&1 | grep -F -e err -e warn >&2
 	! $(MAKE) all -B PAPERSIZE=letter 2>&1 | grep -F -e err -e warn >&2
 clean:
-	$(RM) "kv488-1-allegro.midi"
-	$(RM) "kv488-2-andante.midi"
-	$(RM) "kv488-3-presto.midi"
 	$(RM) "MozartWA-KV488-conductor.pdf"
 	$(RM) "MozartWA-KV488-movement-1-allegro.pdf"
 	$(RM) "MozartWA-KV488-movement-2-andante.pdf"
@@ -52,6 +49,9 @@ clean:
 	$(RM) "MozartWA-KV488-part-viola.pdf"
 	$(RM) "MozartWA-KV488-part-violin-ii.pdf"
 	$(RM) "MozartWA-KV488-part-violin-i.pdf"
+	$(RM) "MozartWA-KV488-midi-1-allegro.midi"
+	$(RM) "MozartWA-KV488-midi-2-andante.midi"
+	$(RM) "MozartWA-KV488-midi-3-presto.midi"
 
 # LilyPond entry points
 MozartWA-KV488-conductor.pdf: .MozartWA-KV488-conductor.ly.lydep
@@ -80,12 +80,12 @@ MozartWA-KV488-part-violin-ii.pdf: .MozartWA-KV488-part-violin-ii.ly.lydep
 	$(LY) MozartWA-KV488-part-violin-ii.ly
 MozartWA-KV488-part-violin-i.pdf: .MozartWA-KV488-part-violin-i.ly.lydep
 	$(LY) MozartWA-KV488-part-violin-i.ly
-.INTERMEDIATE: __run_midi
-kv488-1-allegro.midi: __run_midi
-kv488-2-andante.midi: __run_midi
-kv488-3-presto.midi: __run_midi
-__run_midi: .MozartWA-KV488-midi.ly.lydep
-	$(LY) MozartWA-KV488-midi.ly
+MozartWA-KV488-midi-1-allegro.midi: .MozartWA-KV488-midi-1-allegro.ly.lydep
+	$(LY) MozartWA-KV488-midi-1-allegro.ly
+MozartWA-KV488-midi-2-andante.midi: .MozartWA-KV488-midi-2-andante.ly.lydep
+	$(LY) MozartWA-KV488-midi-2-andante.ly
+MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
+	$(LY) MozartWA-KV488-midi-3-presto.ly
 
 # LilyPond dependency graph
 .INTERMEDIATE: ./01_allegro/.bassoon.ily.lydep
@@ -292,13 +292,25 @@ __run_midi: .MozartWA-KV488-midi.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-midi.ly.lydep
-./.MozartWA-KV488-midi.ly.lydep: \
-		./MozartWA-KV488-midi.ly \
+.INTERMEDIATE: ./.MozartWA-KV488-midi-1-allegro.ly.lydep
+./.MozartWA-KV488-midi-1-allegro.ly.lydep: \
+		./MozartWA-KV488-midi-1-allegro.ly \
 		./01_allegro/.midi.ily.lydep \
 		./01_allegro/.music.ily.lydep \
+		./common/.definitions.ily.lydep \
+		./common/.variables.ily.lydep \
+		./common/.version.ily.lydep
+.INTERMEDIATE: ./.MozartWA-KV488-midi-2-andante.ly.lydep
+./.MozartWA-KV488-midi-2-andante.ly.lydep: \
+		./MozartWA-KV488-midi-2-andante.ly \
 		./02_andante/.midi.ily.lydep \
 		./02_andante/.music.ily.lydep \
+		./common/.definitions.ily.lydep \
+		./common/.variables.ily.lydep \
+		./common/.version.ily.lydep
+.INTERMEDIATE: ./.MozartWA-KV488-midi-3-presto.ly.lydep
+./.MozartWA-KV488-midi-3-presto.ly.lydep: \
+		./MozartWA-KV488-midi-3-presto.ly \
 		./03_presto/.midi.ily.lydep \
 		./03_presto/.music.ily.lydep \
 		./common/.definitions.ily.lydep \
