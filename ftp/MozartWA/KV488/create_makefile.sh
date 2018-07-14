@@ -8,6 +8,14 @@
 #
 # Originally written by William Chargin <wchargin@gmail.com>. Released
 # under the MIT License.
+
+# Globally disable the following warning (requires shellcheck>=0.4.6),
+# which complains about single-quoted strings with dollar signs, in case
+# you thought that some expansion would take place. But we use this
+# pattern frequently to output Make rules, like '$(RM) foo', so we
+# disable this warning.
+# shellcheck disable=SC2016
+
 set -eu
 
 # Identify non-transitive dependencies of LilyPond file $1 by analyzing
@@ -78,7 +86,6 @@ ly_depgraph() {
 # LilyPond on $2, with appropriate transitive dependencies.
 ly_entry_point() {
     printf '%s: %s\n' "$1" "$(lydep_name "$2")"
-    # shellcheck disable=SC2016
     printf '\t$(LY) %s\n' "$2"
 }
 
@@ -93,10 +100,8 @@ makefile() {
     printf '# Run "%s" to regenerate\n' "$(basename "$0")"
     printf '\n'
 
-    # shellcheck disable=SC2016
     printf 'LY ?= lilypond -dno-point-and-click $(LYFLAGS)\n'
     printf 'ifdef PAPERSIZE\n'
-    # shellcheck disable=SC2016
     printf '\tLYFLAGS += -dpaper-size=%s\n' '\"$(PAPERSIZE)\"'
     printf 'endif\n'
     printf '\n'
@@ -119,18 +124,13 @@ makefile() {
     printf '\t%s\n' ./assert_barchecks.sh
     printf '\t%s\n' ./assert_consistent_marks.sh
     printf 'test check: quicktest\n'
-    # shellcheck disable=SC2016
     printf \
         '\t! $(MAKE) all -B PAPERSIZE=%s 2>&1 | grep -F -e err -e warn >&2\n' \
         a4 letter
     printf 'clean:\n'
-    # shellcheck disable=SC2016
     printf '\t$(RM) "%s"\n' "${main%.ly}.pdf"
-    # shellcheck disable=SC2016
     printf '\t$(RM) "%s.pdf"\n' "${movements[@]%.ly}"
-    # shellcheck disable=SC2016
     printf '\t$(RM) "%s.pdf"\n' "${parts[@]%.ly}"
-    # shellcheck disable=SC2016
     printf '\t$(RM) "%s.midi"\n' "${midis[@]%.ly}"
     printf '\n'
 
