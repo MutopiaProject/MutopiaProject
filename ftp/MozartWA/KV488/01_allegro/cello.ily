@@ -259,4 +259,66 @@ cello = \relative c {
   R1*11 |
 
   \barNumberCheck #237
+  a2( \p gis) |
+  fis2.( e4) |
+  dis1 |
+  d!1 |
+  cis1 |
+  d2.( cis8 b) |
+  a8 r cis r e r e r |
+  a,4 r4 r2 |
+  a4 r4 r2 |
+  a4 r4 r2 |
+  R1 |
+  gis'2.( a4) |
+  d,4 r e r |
+  fis2( eis) |
+  fis2( eis) |
+  fis2( eis) |
+  fis8 r fis2( e!4) |
+  d4 r4 r2 |
+  gis2.( a4) |
+  d,4 r e r |
+  gis2.( a4) |
+  gis,2.( a4) |
+  d4. d8( e4.) e8( |
+  fis4.) fis8( gis2) |
+  R1*11 |
+
+  \barNumberCheck #272
+  e1~ |
+  e1~ |
+  e1( |
+  fis4) r4 r2 |
+  cis1( |
+  d4) r4 r2 |
+  dis1( |
+  e4) r4 r2 |
+  R1 |
+  R1 |
+  e4 r4 r2 |
+  r8 e \cresc e e e e e e |
+
+  \barNumberCheck #284
+  \tutti
+  a8 \f a a a a a g g |
+  fis8 fis fis fis fis fis fis fis |
+  e8 e e e e d cis b |
+  a8 a a a a a cis cis |
+  d4. d8 e4. e8 |
+  fis4. fis8 gis!4 r4 |
+
+  \barNumberCheck #290
+  r2 a2 \p |
+  d,1~ |
+  d4 e8.( d16) cis4 a |
+  fis'4-. fis-. r2 |
+  fis4 r fis r |
+  fis4 r f4 \f f8. f16 |
+  e4 e8. e16 dis4 dis8. dis16 |
+  e2 r2 \fermata |
+
+  \barNumberCheck #298
+  \solo
+  R1 |
 }
