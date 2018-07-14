@@ -414,4 +414,75 @@ bassoon = \relative c {
   R1*7 |
 
   \barNumberCheck #236
+  <<
+    {
+      r2 r4 cis8(^\p d) |
+      fis8( e) e8. e16 e4 e4 |
+      e4.( fis8 e dis d cis) |
+      cis( b) b8. b16 b4 b4 |
+      b8( e dis d cis b a gis |
+      fis8 e) e8. e16 e4( eis4) |
+      fis8( gis a ais b cis d dis) |
+      e8( cis) a4.( cis8 b gis) |
+      a4( g f e) |
+    } \\
+    {
+      R1*8 |
+      r4 e4( d cis) |
+    } \\
+  >> |
+  <a' f>4( <g e> <f! d> <e cis>) |
+  <a f>4( <g e> <f! d> <e cis>) |
+  R1*3 |
+  r2 <b' gis>2( |
+  <a fis>4) r <b gis>2( |
+  <a fis>4) r <b gis>2( |
+  <a fis>4) r4 r2 |
+  R1*4 |
+  <<
+    { e'4( d2 cis4) | } \\
+    { b2.( a4) | } \\
+  >> |
+  R1*8 |
+
+  \barNumberCheck #267
+  r2
+  <<
+    {
+      e'2~ |
+      e4 d8.( e16 fis4 d) |
+      b4( gis a cis) |
+      fis1 |
+      e4~ e8. a,16 d4( b4~) |
+      b4 b2( a4) |
+      d2.( cis4) |
+      fis2.( e8. d16) |
+      cis4
+    } \\
+    {
+      a2 |
+      d,1~ |
+      d4 e8.( d16 cis4) a |
+      fis'2.( b8. gis16) |
+      e4 a8.( fis16) d4( dis4) |
+      e4 e4 \shape #'((0 . -1.5) (0 . -1.5) (0 . -1.5) (0 . -1.5)) Tie cis'2~ |
+      cis4 b \shape #'((0 . -1.5) (0 . -1.5) (0 . -1.5) (0 . -1.5)) Tie e2~ |
+      \shape #'((0 . -1) (0 . -1) (0 . -1) (0 . -1)) Slur e4( d) gis,2( |
+      a4)
+    } \\
+  >> r4 r2 |
+
+  \barNumberCheck #276
+  R1*3 |
+  <<
+    {
+      r8 e-. fis-. gis-. a-. b-. cis-. d-. |
+      e8-. e,-. fis-. gis-. a-. b-. cis-. d-. |
+      e4 r4 r2 |
+    } \\
+    { R1*3 | } \\
+  >> |
+  R1*2 |
+
+  \barNumberCheck #284
 }
