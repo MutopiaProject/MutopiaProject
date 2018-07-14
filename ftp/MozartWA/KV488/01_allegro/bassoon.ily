@@ -485,4 +485,45 @@ bassoon = \relative c {
   R1*2 |
 
   \barNumberCheck #284
+  \tutti
+  a,8^\both \f a a a a a g g |
+  fis8 fis fis fis fis fis fis fis |
+  e8 e e e e d cis b |
+  a8 a a a a a cis cis |
+  <<
+    {
+      d4 b'2 cis4~ |
+      cis4 d2 e4 |
+    } \\
+    {
+      d,4 fis gis!2 |
+      a2 b2 |
+    } \\
+  >> |
+
+  \barNumberCheck #290
+  <<
+    {
+      r2 cis2~^\p |
+      cis4 b8.( cis16 d4 b) |
+      gis4( e) e'2~ |
+      e8 dis dis4 r2 |
+      dis4 r dis r |
+      dis4 r d2( \f |
+      cis2 c2) |
+      cis!2
+    } \\
+    {
+      R1*3 |
+      r4 fis,-. fis-. fis-. |
+      r4 fis r fis |
+      r4 fis f2( |
+      e2 dis2) |
+      e2
+    } \\
+  >> r2 \fermata |
+
+  \barNumberCheck #298
+  \solo
+  R1 |
 }
