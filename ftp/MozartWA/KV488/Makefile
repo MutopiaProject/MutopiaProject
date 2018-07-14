@@ -7,7 +7,7 @@ ifdef PAPERSIZE
 endif
 
 # Metatargets, for convenience
-.PHONY: all main parts midi test clean
+.PHONY: all main parts midi quicktest test clean
 all: main parts midi
 main: MozartWA-KV488-conductor.pdf
 parts: \
@@ -24,8 +24,9 @@ midi: \
 		kv488-1-allegro.midi \
 		kv488-2-andante.midi \
 		kv488-3-presto.midi
-test:
+quicktest:
 	./assert_barchecks.sh
+test: quicktest
 	! $(MAKE) all -B PAPERSIZE=a4 2>&1 | grep -F -e err -e warn >&2
 	! $(MAKE) all -B PAPERSIZE=letter 2>&1 | grep -F -e err -e warn >&2
 clean:
