@@ -31,7 +31,7 @@ thisBigTitle = \markup {
 combinedPublicationName = "Conductor’s Score"
 
 %% Movement-specific variables
-thisTempoMovI = "Allegro (under construction)"
+thisTempoMovI = "Allegro"
 thisTempoMovII = "Andante (under construction)"
 thisTempoMovIII = "Presto (under construction)"
 
