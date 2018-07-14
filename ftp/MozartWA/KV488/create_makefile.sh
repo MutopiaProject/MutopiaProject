@@ -109,9 +109,7 @@ makefile() {
     printf 'all: main parts midi\n'
     printf 'main: %s\n' "${main}.pdf"
     printf 'parts:'
-    for part in "${parts[@]}"; do
-        printf ' \\\n\t\t%s.pdf' "${part}"
-    done
+    printf ' \\\n\t\t%s.pdf' "${parts[@]}"
     printf '\n'
     printf 'midi:'
     printf ' \\\n\t\t%s.midi' "${midis[@]}"
@@ -139,9 +137,7 @@ makefile() {
         ly_entry_point "${part}.pdf" "${part}.ly"
     done
     printf '.INTERMEDIATE: __run_midi\n'
-    for m in "${midis[@]}"; do
-        printf '%s.midi: __run_midi\n' "${m}"
-    done
+    printf '%s.midi: __run_midi\n' "${midis[@]}"
     ly_entry_point "__run_midi" "${midi}.ly"
 
     printf '\n'
