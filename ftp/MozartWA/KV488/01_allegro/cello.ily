@@ -321,4 +321,26 @@ cello = \relative c {
   \barNumberCheck #298
   \solo
   R1 |
+
+  \barNumberCheck #299
+  \tutti
+  a,8 \f r a'4( b cis) |
+  d8 d d d d d cis cis |
+  gis2.( a4) |
+  d,8 d d d e e e e |
+  gis2.( a4) |
+  gis2.( a4) |
+  d,8 d d d e e e e |
+  a,4 r4 r2 |
+  fis'4 \p r e r |
+  a2 r2 |
+  fis2( e8) r e r |
+  a,8 \f cis e a a,4 r |
+  a8 cis e a a,4 r |
+  a8 cis e a a,4 r |
+  a8 r e' r a r e r |
+  a,4 r4 r2 |
+  \bar "|."
+
+  \barNumberCheck #315
 }
