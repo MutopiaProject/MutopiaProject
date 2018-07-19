@@ -30,6 +30,42 @@ cadenza = \markup { \italic Cadenza }
 % notation should be played by both members.
 both = \markup { a. 2. }
 
+% We split the score into three atomic groups of staves: winds (flute,
+% clarinet, bassoon, horn), piano, and strings. We want each of these
+% groups to appear atomically: that is, we want it to never be the case
+% that (e.g.) the staves for some woodwinds are hidden while others
+% aren't.
+%
+% This has two benefits. First, it eliminates any potential ambiguity
+% between the clarinet and the horn, which are distinguishible only by
+% their position relative to the bassoon, without needing to label each
+% staff with short instrument names (which is kind of ugly and takes up
+% space). Second, it makes it easier for a reader to scan the score:
+% when moving from one system to the next, one can always continue
+% looking at (say) the third staff in the woodwind section, without
+% having to readjust because another staff has gone out of view.
+%
+% For reference, this is also the layout used by the source score.
+\layout {
+  \context {
+    \StaffGroup
+    \name "AtomicStaffGroup"
+    \type "Engraver_group"
+    \alias StaffGroup
+    \description "A group of staves that are only removed together,
+never separately (as with @code{PianoStaff}), and otherwise like
+@code{StaffGroup} but without the bracket."
+    \consists "Keep_alive_together_engraver"
+    \remove "System_start_delimiter_engraver"
+  }
+  \context {
+    \StaffGroup
+    % AtomicStaffGroup is only contained within the top-level
+    % StaffGroup, so this suffices.
+    \accepts "AtomicStaffGroup"
+  }
+}
+
 % Sample definitions
 hideF = \tweak #'stencil ##f \f
 hideFF = \tweak #'stencil ##f \ff
