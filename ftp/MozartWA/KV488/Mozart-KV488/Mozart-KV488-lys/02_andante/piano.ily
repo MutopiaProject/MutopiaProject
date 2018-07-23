@@ -46,6 +46,34 @@ pianoTreble = \relative c' {
   \barNumberCheck #35
   \tutti
   a4 r8 r4 r8 |
+  R2. |
+  R2. |
+
+  \barNumberCheck #38
+  r4 r8 r16 \solo ais( b cis d! dis |
+  e4.) cis4 d!32( cis b cis |
+  d8) d d d8 r r |
+  r8 cis( a') r16 b,16( cis d e fis) |
+  a,4( cis16 b a4) r8 |
+
+  r4 r8 r32 b'32([ d cis] b[ a gis fis] e[ d cis b]) |
+  r4 r8 r32 cis'32([ e d] cis[ b a gis] fis[ e d cis] |
+  b8 d gis, a16) a( gis a b cis |
+  e16 dis) d8( cis b8) r r |
+
+  <<
+    { e8~( e16 fis64 e d! e fis16 d cis8) } \\
+    { cis4 b8 a } \\
+  >>
+  r8 r8 |
+  b4( fis'8) fis8.( gis32 a gis16) fis-. |
+  e8
+  \shape #'((0 . -0.5) (2 . 2) (0 . 1) (0 . 0)) Slur
+  e'4~( e16 cis a e cis a) |
+  \afterGrace { b2. \startTrillSpan } { a32 \stopTrillSpan b } |
+
+  \barNumberCheck #51
+  << { s8 \tutti } a4 >> r8 r4 r8 |
 }
 
 pianoBass = \relative c {
@@ -91,5 +119,32 @@ pianoBass = \relative c {
 
   \barNumberCheck #35
   \tutti
+  R2.*3 |
+
+  \barNumberCheck #38
   R2. |
+  \tuplet 3/2 8 {
+    % Alternately, each triplet (of which six per measure) can be
+    % manually beamed together (e.g., `e[ cis a]`). This is done in the
+    % original score, but I think that it's harder to read.
+    e16( a cis e cis a e a cis e,16 a cis e cis a e a cis |
+    e,16 gis b e b gis e gis b e,16 gis b e b gis e gis b) |
+  }
+  <a fis>4 r8 <b fis d>4 r8 |
+  <<
+    { cis4( d8) cis4 } \\
+    { e,4. a4 } \\
+  >> r8 |
+
+  R2. |
+  r4 r8 r8 r <fis a> |
+  <d fis>4 <e d'>8 <a cis>4 r8 |
+  r8 << e'8 { gis,8( a) } >> <gis e>8 r8 r8 |
+  <a, cis>8( <cis e> <e gis>) <fis a>8 r r |
+  d4 r8 dis4 r8 |
+  e4 r8 e4 r8 |
+  e4 r8 e4 r8 |
+
+  \barNumberCheck #51
+  a,8 \tutti r r r4 r8 |
 }
