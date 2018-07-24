@@ -10,7 +10,7 @@ endif
 .PHONY: all main movements parts midi
 .PHONY: quicktest test quickcheck check clean
 all: main movements parts midi
-main: MozartWA-KV488-conductor.pdf
+main: MozartWA-KV488.pdf
 movements: \
 		MozartWA-KV488-movement-1-allegro.pdf \
 		MozartWA-KV488-movement-2-andante.pdf \
@@ -36,7 +36,7 @@ test check: quicktest
 	! $(MAKE) all -B PAPERSIZE=a4 2>&1 | grep -F -e err -e warn >&2
 	! $(MAKE) all -B PAPERSIZE=letter 2>&1 | grep -F -e err -e warn >&2
 clean:
-	$(RM) "MozartWA-KV488-conductor.pdf"
+	$(RM) "MozartWA-KV488.pdf"
 	$(RM) "MozartWA-KV488-movement-1-allegro.pdf"
 	$(RM) "MozartWA-KV488-movement-2-andante.pdf"
 	$(RM) "MozartWA-KV488-movement-3-presto.pdf"
@@ -54,8 +54,8 @@ clean:
 	$(RM) "MozartWA-KV488-midi-3-presto.midi"
 
 # LilyPond entry points
-MozartWA-KV488-conductor.pdf: .MozartWA-KV488-conductor.ly.lydep
-	$(LY) MozartWA-KV488-conductor.ly
+MozartWA-KV488.pdf: .MozartWA-KV488.ly.lydep
+	$(LY) MozartWA-KV488.ly
 MozartWA-KV488-movement-1-allegro.pdf: .MozartWA-KV488-movement-1-allegro.ly.lydep
 	$(LY) MozartWA-KV488-movement-1-allegro.ly
 MozartWA-KV488-movement-2-andante.pdf: .MozartWA-KV488-movement-2-andante.ly.lydep
@@ -279,9 +279,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 .SECONDARY: ./common/.version.ily.lydep
 ./common/.version.ily.lydep: \
 		./common/version.ily
-.SECONDARY: ./.MozartWA-KV488-conductor.ly.lydep
-./.MozartWA-KV488-conductor.ly.lydep: \
-		./MozartWA-KV488-conductor.ly \
+.SECONDARY: ./.MozartWA-KV488.ly.lydep
+./.MozartWA-KV488.ly.lydep: \
+		./MozartWA-KV488.ly \
 		./01_allegro/.music.ily.lydep \
 		./02_andante/.music.ily.lydep \
 		./03_presto/.music.ily.lydep \

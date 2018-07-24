@@ -91,7 +91,7 @@ ly_entry_point() {
 
 # Emit the main Makefile.
 makefile() {
-    main=MozartWA-KV488-conductor.ly
+    main=MozartWA-KV488.ly
     movements=( *-movement-*.ly )
     parts=( *-part-*.ly )
     midis=( *-midi-*.ly )
