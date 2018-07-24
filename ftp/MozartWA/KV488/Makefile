@@ -88,29 +88,29 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 	$(LY) MozartWA-KV488-midi-3-presto.ly
 
 # LilyPond dependency graph
-.INTERMEDIATE: ./01_allegro/.bassoon.ily.lydep
+.SECONDARY: ./01_allegro/.bassoon.ily.lydep
 ./01_allegro/.bassoon.ily.lydep: \
 		./01_allegro/bassoon.ily
-.INTERMEDIATE: ./01_allegro/.cello.ily.lydep
+.SECONDARY: ./01_allegro/.cello.ily.lydep
 ./01_allegro/.cello.ily.lydep: \
 		./01_allegro/cello.ily
-.INTERMEDIATE: ./01_allegro/.clarinet.ily.lydep
+.SECONDARY: ./01_allegro/.clarinet.ily.lydep
 ./01_allegro/.clarinet.ily.lydep: \
 		./01_allegro/clarinet.ily
-.INTERMEDIATE: ./01_allegro/.flute.ily.lydep
+.SECONDARY: ./01_allegro/.flute.ily.lydep
 ./01_allegro/.flute.ily.lydep: \
 		./01_allegro/flute.ily
-.INTERMEDIATE: ./01_allegro/.global.ily.lydep
+.SECONDARY: ./01_allegro/.global.ily.lydep
 ./01_allegro/.global.ily.lydep: \
 		./01_allegro/global.ily
-.INTERMEDIATE: ./01_allegro/.horn.ily.lydep
+.SECONDARY: ./01_allegro/.horn.ily.lydep
 ./01_allegro/.horn.ily.lydep: \
 		./01_allegro/horn.ily
-.INTERMEDIATE: ./01_allegro/.midi.ily.lydep
+.SECONDARY: ./01_allegro/.midi.ily.lydep
 ./01_allegro/.midi.ily.lydep: \
 		./01_allegro/midi.ily \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./01_allegro/.music.ily.lydep
+.SECONDARY: ./01_allegro/.music.ily.lydep
 ./01_allegro/.music.ily.lydep: \
 		./01_allegro/music.ily \
 		./01_allegro/.bassoon.ily.lydep \
@@ -124,41 +124,41 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./01_allegro/.violin-ii.ily.lydep \
 		./01_allegro/.violin-i.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./01_allegro/.piano.ily.lydep
+.SECONDARY: ./01_allegro/.piano.ily.lydep
 ./01_allegro/.piano.ily.lydep: \
 		./01_allegro/piano.ily
-.INTERMEDIATE: ./01_allegro/.viola.ily.lydep
+.SECONDARY: ./01_allegro/.viola.ily.lydep
 ./01_allegro/.viola.ily.lydep: \
 		./01_allegro/viola.ily
-.INTERMEDIATE: ./01_allegro/.violin-ii.ily.lydep
+.SECONDARY: ./01_allegro/.violin-ii.ily.lydep
 ./01_allegro/.violin-ii.ily.lydep: \
 		./01_allegro/violin-ii.ily
-.INTERMEDIATE: ./01_allegro/.violin-i.ily.lydep
+.SECONDARY: ./01_allegro/.violin-i.ily.lydep
 ./01_allegro/.violin-i.ily.lydep: \
 		./01_allegro/violin-i.ily
-.INTERMEDIATE: ./02_andante/.bassoon.ily.lydep
+.SECONDARY: ./02_andante/.bassoon.ily.lydep
 ./02_andante/.bassoon.ily.lydep: \
 		./02_andante/bassoon.ily
-.INTERMEDIATE: ./02_andante/.cello.ily.lydep
+.SECONDARY: ./02_andante/.cello.ily.lydep
 ./02_andante/.cello.ily.lydep: \
 		./02_andante/cello.ily
-.INTERMEDIATE: ./02_andante/.clarinet.ily.lydep
+.SECONDARY: ./02_andante/.clarinet.ily.lydep
 ./02_andante/.clarinet.ily.lydep: \
 		./02_andante/clarinet.ily
-.INTERMEDIATE: ./02_andante/.flute.ily.lydep
+.SECONDARY: ./02_andante/.flute.ily.lydep
 ./02_andante/.flute.ily.lydep: \
 		./02_andante/flute.ily
-.INTERMEDIATE: ./02_andante/.global.ily.lydep
+.SECONDARY: ./02_andante/.global.ily.lydep
 ./02_andante/.global.ily.lydep: \
 		./02_andante/global.ily
-.INTERMEDIATE: ./02_andante/.horn.ily.lydep
+.SECONDARY: ./02_andante/.horn.ily.lydep
 ./02_andante/.horn.ily.lydep: \
 		./02_andante/horn.ily
-.INTERMEDIATE: ./02_andante/.midi.ily.lydep
+.SECONDARY: ./02_andante/.midi.ily.lydep
 ./02_andante/.midi.ily.lydep: \
 		./02_andante/midi.ily \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./02_andante/.music.ily.lydep
+.SECONDARY: ./02_andante/.music.ily.lydep
 ./02_andante/.music.ily.lydep: \
 		./02_andante/music.ily \
 		./02_andante/.bassoon.ily.lydep \
@@ -172,41 +172,41 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./02_andante/.violin-ii.ily.lydep \
 		./02_andante/.violin-i.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./02_andante/.piano.ily.lydep
+.SECONDARY: ./02_andante/.piano.ily.lydep
 ./02_andante/.piano.ily.lydep: \
 		./02_andante/piano.ily
-.INTERMEDIATE: ./02_andante/.viola.ily.lydep
+.SECONDARY: ./02_andante/.viola.ily.lydep
 ./02_andante/.viola.ily.lydep: \
 		./02_andante/viola.ily
-.INTERMEDIATE: ./02_andante/.violin-ii.ily.lydep
+.SECONDARY: ./02_andante/.violin-ii.ily.lydep
 ./02_andante/.violin-ii.ily.lydep: \
 		./02_andante/violin-ii.ily
-.INTERMEDIATE: ./02_andante/.violin-i.ily.lydep
+.SECONDARY: ./02_andante/.violin-i.ily.lydep
 ./02_andante/.violin-i.ily.lydep: \
 		./02_andante/violin-i.ily
-.INTERMEDIATE: ./03_presto/.bassoon.ily.lydep
+.SECONDARY: ./03_presto/.bassoon.ily.lydep
 ./03_presto/.bassoon.ily.lydep: \
 		./03_presto/bassoon.ily
-.INTERMEDIATE: ./03_presto/.cello.ily.lydep
+.SECONDARY: ./03_presto/.cello.ily.lydep
 ./03_presto/.cello.ily.lydep: \
 		./03_presto/cello.ily
-.INTERMEDIATE: ./03_presto/.clarinet.ily.lydep
+.SECONDARY: ./03_presto/.clarinet.ily.lydep
 ./03_presto/.clarinet.ily.lydep: \
 		./03_presto/clarinet.ily
-.INTERMEDIATE: ./03_presto/.flute.ily.lydep
+.SECONDARY: ./03_presto/.flute.ily.lydep
 ./03_presto/.flute.ily.lydep: \
 		./03_presto/flute.ily
-.INTERMEDIATE: ./03_presto/.global.ily.lydep
+.SECONDARY: ./03_presto/.global.ily.lydep
 ./03_presto/.global.ily.lydep: \
 		./03_presto/global.ily
-.INTERMEDIATE: ./03_presto/.horn.ily.lydep
+.SECONDARY: ./03_presto/.horn.ily.lydep
 ./03_presto/.horn.ily.lydep: \
 		./03_presto/horn.ily
-.INTERMEDIATE: ./03_presto/.midi.ily.lydep
+.SECONDARY: ./03_presto/.midi.ily.lydep
 ./03_presto/.midi.ily.lydep: \
 		./03_presto/midi.ily \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./03_presto/.music.ily.lydep
+.SECONDARY: ./03_presto/.music.ily.lydep
 ./03_presto/.music.ily.lydep: \
 		./03_presto/music.ily \
 		./03_presto/.bassoon.ily.lydep \
@@ -220,66 +220,66 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./03_presto/.violin-ii.ily.lydep \
 		./03_presto/.violin-i.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./03_presto/.piano.ily.lydep
+.SECONDARY: ./03_presto/.piano.ily.lydep
 ./03_presto/.piano.ily.lydep: \
 		./03_presto/piano.ily
-.INTERMEDIATE: ./03_presto/.viola.ily.lydep
+.SECONDARY: ./03_presto/.viola.ily.lydep
 ./03_presto/.viola.ily.lydep: \
 		./03_presto/viola.ily
-.INTERMEDIATE: ./03_presto/.violin-ii.ily.lydep
+.SECONDARY: ./03_presto/.violin-ii.ily.lydep
 ./03_presto/.violin-ii.ily.lydep: \
 		./03_presto/violin-ii.ily
-.INTERMEDIATE: ./03_presto/.violin-i.ily.lydep
+.SECONDARY: ./03_presto/.violin-i.ily.lydep
 ./03_presto/.violin-i.ily.lydep: \
 		./03_presto/violin-i.ily
-.INTERMEDIATE: ./common/.conductor-cover.ily.lydep
+.SECONDARY: ./common/.conductor-cover.ily.lydep
 ./common/.conductor-cover.ily.lydep: \
 		./common/conductor-cover.ily \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.conductor-dimension.ily.lydep
+.SECONDARY: ./common/.conductor-dimension.ily.lydep
 ./common/.conductor-dimension.ily.lydep: \
 		./common/conductor-dimension.ily \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.conductor-staff.ily.lydep
+.SECONDARY: ./common/.conductor-staff.ily.lydep
 ./common/.conductor-staff.ily.lydep: \
 		./common/conductor-staff.ily \
 		./common/.styles.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.definitions.ily.lydep
+.SECONDARY: ./common/.definitions.ily.lydep
 ./common/.definitions.ily.lydep: \
 		./common/definitions.ily
-.INTERMEDIATE: ./common/.parts-dimension.ily.lydep
+.SECONDARY: ./common/.parts-dimension.ily.lydep
 ./common/.parts-dimension.ily.lydep: \
 		./common/parts-dimension.ily \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.parts-staff-piano.ily.lydep
+.SECONDARY: ./common/.parts-staff-piano.ily.lydep
 ./common/.parts-staff-piano.ily.lydep: \
 		./common/parts-staff-piano.ily \
 		./common/.styles.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.parts-staff-single-instr.ily.lydep
+.SECONDARY: ./common/.parts-staff-single-instr.ily.lydep
 ./common/.parts-staff-single-instr.ily.lydep: \
 		./common/parts-staff-single-instr.ily \
 		./common/.styles.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.parts-staff-single-instr-in-a.ily.lydep
+.SECONDARY: ./common/.parts-staff-single-instr-in-a.ily.lydep
 ./common/.parts-staff-single-instr-in-a.ily.lydep: \
 		./common/parts-staff-single-instr-in-a.ily \
 		./common/.styles.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.styles.ily.lydep
+.SECONDARY: ./common/.styles.ily.lydep
 ./common/.styles.ily.lydep: \
 		./common/styles.ily \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.variables.ily.lydep
+.SECONDARY: ./common/.variables.ily.lydep
 ./common/.variables.ily.lydep: \
 		./common/variables.ily \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./common/.version.ily.lydep
+.SECONDARY: ./common/.version.ily.lydep
 ./common/.version.ily.lydep: \
 		./common/version.ily
-.INTERMEDIATE: ./.MozartWA-KV488-conductor.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-conductor.ly.lydep
 ./.MozartWA-KV488-conductor.ly.lydep: \
 		./MozartWA-KV488-conductor.ly \
 		./01_allegro/.music.ily.lydep \
@@ -292,7 +292,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-midi-1-allegro.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-midi-1-allegro.ly.lydep
 ./.MozartWA-KV488-midi-1-allegro.ly.lydep: \
 		./MozartWA-KV488-midi-1-allegro.ly \
 		./01_allegro/.midi.ily.lydep \
@@ -300,7 +300,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.definitions.ily.lydep \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-midi-2-andante.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-midi-2-andante.ly.lydep
 ./.MozartWA-KV488-midi-2-andante.ly.lydep: \
 		./MozartWA-KV488-midi-2-andante.ly \
 		./02_andante/.midi.ily.lydep \
@@ -308,7 +308,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.definitions.ily.lydep \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-midi-3-presto.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-midi-3-presto.ly.lydep
 ./.MozartWA-KV488-midi-3-presto.ly.lydep: \
 		./MozartWA-KV488-midi-3-presto.ly \
 		./03_presto/.midi.ily.lydep \
@@ -316,7 +316,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.definitions.ily.lydep \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-movement-1-allegro.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-movement-1-allegro.ly.lydep
 ./.MozartWA-KV488-movement-1-allegro.ly.lydep: \
 		./MozartWA-KV488-movement-1-allegro.ly \
 		./01_allegro/.music.ily.lydep \
@@ -326,7 +326,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-movement-2-andante.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-movement-2-andante.ly.lydep
 ./.MozartWA-KV488-movement-2-andante.ly.lydep: \
 		./MozartWA-KV488-movement-2-andante.ly \
 		./02_andante/.music.ily.lydep \
@@ -336,7 +336,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-movement-3-presto.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-movement-3-presto.ly.lydep
 ./.MozartWA-KV488-movement-3-presto.ly.lydep: \
 		./MozartWA-KV488-movement-3-presto.ly \
 		./03_presto/.music.ily.lydep \
@@ -346,7 +346,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-bassoon.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-bassoon.ly.lydep
 ./.MozartWA-KV488-part-bassoon.ly.lydep: \
 		./MozartWA-KV488-part-bassoon.ly \
 		./01_allegro/.bassoon.ily.lydep \
@@ -361,7 +361,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-cello.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-cello.ly.lydep
 ./.MozartWA-KV488-part-cello.ly.lydep: \
 		./MozartWA-KV488-part-cello.ly \
 		./01_allegro/.cello.ily.lydep \
@@ -376,7 +376,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-clarinet.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-clarinet.ly.lydep
 ./.MozartWA-KV488-part-clarinet.ly.lydep: \
 		./MozartWA-KV488-part-clarinet.ly \
 		./01_allegro/.clarinet.ily.lydep \
@@ -391,7 +391,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-flute.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-flute.ly.lydep
 ./.MozartWA-KV488-part-flute.ly.lydep: \
 		./MozartWA-KV488-part-flute.ly \
 		./01_allegro/.flute.ily.lydep \
@@ -406,7 +406,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-horn.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-horn.ly.lydep
 ./.MozartWA-KV488-part-horn.ly.lydep: \
 		./MozartWA-KV488-part-horn.ly \
 		./01_allegro/.global.ily.lydep \
@@ -421,7 +421,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-piano.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-piano.ly.lydep
 ./.MozartWA-KV488-part-piano.ly.lydep: \
 		./MozartWA-KV488-part-piano.ly \
 		./01_allegro/.global.ily.lydep \
@@ -436,7 +436,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-viola.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-viola.ly.lydep
 ./.MozartWA-KV488-part-viola.ly.lydep: \
 		./MozartWA-KV488-part-viola.ly \
 		./01_allegro/.global.ily.lydep \
@@ -451,7 +451,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-violin-ii.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-violin-ii.ly.lydep
 ./.MozartWA-KV488-part-violin-ii.ly.lydep: \
 		./MozartWA-KV488-part-violin-ii.ly \
 		./01_allegro/.global.ily.lydep \
@@ -466,7 +466,7 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.MozartWA-KV488-part-violin-i.ly.lydep
+.SECONDARY: ./.MozartWA-KV488-part-violin-i.ly.lydep
 ./.MozartWA-KV488-part-violin-i.ly.lydep: \
 		./MozartWA-KV488-part-violin-i.ly \
 		./01_allegro/.global.ily.lydep \
@@ -481,6 +481,6 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.INTERMEDIATE: ./.mutopia-header.ily.lydep
+.SECONDARY: ./.mutopia-header.ily.lydep
 ./.mutopia-header.ily.lydep: \
 		./mutopia-header.ily

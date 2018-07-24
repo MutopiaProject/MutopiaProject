@@ -66,7 +66,7 @@ lydep_name() {
 # specified in $1.
 ly_rule() {
     filename="$1"
-    printf '.INTERMEDIATE: %s\n' "$(lydep_name "${filename}")"
+    printf '.SECONDARY: %s\n' "$(lydep_name "${filename}")"
     printf '%s: \\\n\t\t%s' "$(lydep_name "${filename}")" "${filename}"
     deps "${filename}" | while read -r -d $'\0' dep; do
         printf ' \\\n\t\t%s' "${dep}"
