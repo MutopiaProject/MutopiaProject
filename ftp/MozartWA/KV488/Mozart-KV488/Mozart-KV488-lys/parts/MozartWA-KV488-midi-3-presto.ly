@@ -4,11 +4,11 @@
 % Main file, to be compiled directly.
 
 #(ly:set-option 'relative-includes #t)
-\include "common/version.ily"
-\include "common/variables.ily"
-\include "common/definitions.ily"
+\include "../common/version.ily"
+\include "../common/variables.ily"
+\include "../common/definitions.ily"
 
 \include "articulate.ly"
 
-\include "03_presto/music.ily"
-\book { \include "03_presto/midi.ily" }
+\include "../03_presto/music.ily"
+\book { \include "../03_presto/midi.ily" }

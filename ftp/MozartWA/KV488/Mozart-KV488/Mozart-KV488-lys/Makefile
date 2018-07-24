@@ -56,36 +56,36 @@ clean:
 # LilyPond entry points
 MozartWA-KV488.pdf: .MozartWA-KV488.ly.lydep
 	$(LY) MozartWA-KV488.ly
-MozartWA-KV488-movement-1-allegro.pdf: .MozartWA-KV488-movement-1-allegro.ly.lydep
-	$(LY) MozartWA-KV488-movement-1-allegro.ly
-MozartWA-KV488-movement-2-andante.pdf: .MozartWA-KV488-movement-2-andante.ly.lydep
-	$(LY) MozartWA-KV488-movement-2-andante.ly
-MozartWA-KV488-movement-3-presto.pdf: .MozartWA-KV488-movement-3-presto.ly.lydep
-	$(LY) MozartWA-KV488-movement-3-presto.ly
-MozartWA-KV488-part-bassoon.pdf: .MozartWA-KV488-part-bassoon.ly.lydep
-	$(LY) MozartWA-KV488-part-bassoon.ly
-MozartWA-KV488-part-cello.pdf: .MozartWA-KV488-part-cello.ly.lydep
-	$(LY) MozartWA-KV488-part-cello.ly
-MozartWA-KV488-part-clarinet.pdf: .MozartWA-KV488-part-clarinet.ly.lydep
-	$(LY) MozartWA-KV488-part-clarinet.ly
-MozartWA-KV488-part-flute.pdf: .MozartWA-KV488-part-flute.ly.lydep
-	$(LY) MozartWA-KV488-part-flute.ly
-MozartWA-KV488-part-horn.pdf: .MozartWA-KV488-part-horn.ly.lydep
-	$(LY) MozartWA-KV488-part-horn.ly
-MozartWA-KV488-part-piano.pdf: .MozartWA-KV488-part-piano.ly.lydep
-	$(LY) MozartWA-KV488-part-piano.ly
-MozartWA-KV488-part-viola.pdf: .MozartWA-KV488-part-viola.ly.lydep
-	$(LY) MozartWA-KV488-part-viola.ly
-MozartWA-KV488-part-violin-ii.pdf: .MozartWA-KV488-part-violin-ii.ly.lydep
-	$(LY) MozartWA-KV488-part-violin-ii.ly
-MozartWA-KV488-part-violin-i.pdf: .MozartWA-KV488-part-violin-i.ly.lydep
-	$(LY) MozartWA-KV488-part-violin-i.ly
-MozartWA-KV488-midi-1-allegro.midi: .MozartWA-KV488-midi-1-allegro.ly.lydep
-	$(LY) MozartWA-KV488-midi-1-allegro.ly
-MozartWA-KV488-midi-2-andante.midi: .MozartWA-KV488-midi-2-andante.ly.lydep
-	$(LY) MozartWA-KV488-midi-2-andante.ly
-MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
-	$(LY) MozartWA-KV488-midi-3-presto.ly
+MozartWA-KV488-movement-1-allegro.pdf: ./parts/.MozartWA-KV488-movement-1-allegro.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-movement-1-allegro.ly
+MozartWA-KV488-movement-2-andante.pdf: ./parts/.MozartWA-KV488-movement-2-andante.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-movement-2-andante.ly
+MozartWA-KV488-movement-3-presto.pdf: ./parts/.MozartWA-KV488-movement-3-presto.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-movement-3-presto.ly
+MozartWA-KV488-part-bassoon.pdf: ./parts/.MozartWA-KV488-part-bassoon.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-bassoon.ly
+MozartWA-KV488-part-cello.pdf: ./parts/.MozartWA-KV488-part-cello.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-cello.ly
+MozartWA-KV488-part-clarinet.pdf: ./parts/.MozartWA-KV488-part-clarinet.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-clarinet.ly
+MozartWA-KV488-part-flute.pdf: ./parts/.MozartWA-KV488-part-flute.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-flute.ly
+MozartWA-KV488-part-horn.pdf: ./parts/.MozartWA-KV488-part-horn.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-horn.ly
+MozartWA-KV488-part-piano.pdf: ./parts/.MozartWA-KV488-part-piano.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-piano.ly
+MozartWA-KV488-part-viola.pdf: ./parts/.MozartWA-KV488-part-viola.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-viola.ly
+MozartWA-KV488-part-violin-ii.pdf: ./parts/.MozartWA-KV488-part-violin-ii.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-violin-ii.ly
+MozartWA-KV488-part-violin-i.pdf: ./parts/.MozartWA-KV488-part-violin-i.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-part-violin-i.ly
+MozartWA-KV488-midi-1-allegro.midi: ./parts/.MozartWA-KV488-midi-1-allegro.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-midi-1-allegro.ly
+MozartWA-KV488-midi-2-andante.midi: ./parts/.MozartWA-KV488-midi-2-andante.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-midi-2-andante.ly
+MozartWA-KV488-midi-3-presto.midi: ./parts/.MozartWA-KV488-midi-3-presto.ly.lydep
+	$(LY) ./parts/MozartWA-KV488-midi-3-presto.ly
 
 # LilyPond dependency graph
 .SECONDARY: ./01_allegro/.bassoon.ily.lydep
@@ -292,33 +292,36 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-midi-1-allegro.ly.lydep
-./.MozartWA-KV488-midi-1-allegro.ly.lydep: \
-		./MozartWA-KV488-midi-1-allegro.ly \
+.SECONDARY: ./.mutopia-header.ily.lydep
+./.mutopia-header.ily.lydep: \
+		./mutopia-header.ily
+.SECONDARY: ./parts/.MozartWA-KV488-midi-1-allegro.ly.lydep
+./parts/.MozartWA-KV488-midi-1-allegro.ly.lydep: \
+		./parts/MozartWA-KV488-midi-1-allegro.ly \
 		./01_allegro/.midi.ily.lydep \
 		./01_allegro/.music.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-midi-2-andante.ly.lydep
-./.MozartWA-KV488-midi-2-andante.ly.lydep: \
-		./MozartWA-KV488-midi-2-andante.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-midi-2-andante.ly.lydep
+./parts/.MozartWA-KV488-midi-2-andante.ly.lydep: \
+		./parts/MozartWA-KV488-midi-2-andante.ly \
 		./02_andante/.midi.ily.lydep \
 		./02_andante/.music.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-midi-3-presto.ly.lydep
-./.MozartWA-KV488-midi-3-presto.ly.lydep: \
-		./MozartWA-KV488-midi-3-presto.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-midi-3-presto.ly.lydep
+./parts/.MozartWA-KV488-midi-3-presto.ly.lydep: \
+		./parts/MozartWA-KV488-midi-3-presto.ly \
 		./03_presto/.midi.ily.lydep \
 		./03_presto/.music.ily.lydep \
 		./common/.definitions.ily.lydep \
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-movement-1-allegro.ly.lydep
-./.MozartWA-KV488-movement-1-allegro.ly.lydep: \
-		./MozartWA-KV488-movement-1-allegro.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-movement-1-allegro.ly.lydep
+./parts/.MozartWA-KV488-movement-1-allegro.ly.lydep: \
+		./parts/MozartWA-KV488-movement-1-allegro.ly \
 		./01_allegro/.music.ily.lydep \
 		./common/.conductor-dimension.ily.lydep \
 		./common/.conductor-staff.ily.lydep \
@@ -326,9 +329,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-movement-2-andante.ly.lydep
-./.MozartWA-KV488-movement-2-andante.ly.lydep: \
-		./MozartWA-KV488-movement-2-andante.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-movement-2-andante.ly.lydep
+./parts/.MozartWA-KV488-movement-2-andante.ly.lydep: \
+		./parts/MozartWA-KV488-movement-2-andante.ly \
 		./02_andante/.music.ily.lydep \
 		./common/.conductor-dimension.ily.lydep \
 		./common/.conductor-staff.ily.lydep \
@@ -336,9 +339,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-movement-3-presto.ly.lydep
-./.MozartWA-KV488-movement-3-presto.ly.lydep: \
-		./MozartWA-KV488-movement-3-presto.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-movement-3-presto.ly.lydep
+./parts/.MozartWA-KV488-movement-3-presto.ly.lydep: \
+		./parts/MozartWA-KV488-movement-3-presto.ly \
 		./03_presto/.music.ily.lydep \
 		./common/.conductor-dimension.ily.lydep \
 		./common/.conductor-staff.ily.lydep \
@@ -346,9 +349,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-bassoon.ly.lydep
-./.MozartWA-KV488-part-bassoon.ly.lydep: \
-		./MozartWA-KV488-part-bassoon.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-bassoon.ly.lydep
+./parts/.MozartWA-KV488-part-bassoon.ly.lydep: \
+		./parts/MozartWA-KV488-part-bassoon.ly \
 		./01_allegro/.bassoon.ily.lydep \
 		./01_allegro/.global.ily.lydep \
 		./02_andante/.bassoon.ily.lydep \
@@ -361,9 +364,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-cello.ly.lydep
-./.MozartWA-KV488-part-cello.ly.lydep: \
-		./MozartWA-KV488-part-cello.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-cello.ly.lydep
+./parts/.MozartWA-KV488-part-cello.ly.lydep: \
+		./parts/MozartWA-KV488-part-cello.ly \
 		./01_allegro/.cello.ily.lydep \
 		./01_allegro/.global.ily.lydep \
 		./02_andante/.cello.ily.lydep \
@@ -376,9 +379,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-clarinet.ly.lydep
-./.MozartWA-KV488-part-clarinet.ly.lydep: \
-		./MozartWA-KV488-part-clarinet.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-clarinet.ly.lydep
+./parts/.MozartWA-KV488-part-clarinet.ly.lydep: \
+		./parts/MozartWA-KV488-part-clarinet.ly \
 		./01_allegro/.clarinet.ily.lydep \
 		./01_allegro/.global.ily.lydep \
 		./02_andante/.clarinet.ily.lydep \
@@ -391,9 +394,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-flute.ly.lydep
-./.MozartWA-KV488-part-flute.ly.lydep: \
-		./MozartWA-KV488-part-flute.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-flute.ly.lydep
+./parts/.MozartWA-KV488-part-flute.ly.lydep: \
+		./parts/MozartWA-KV488-part-flute.ly \
 		./01_allegro/.flute.ily.lydep \
 		./01_allegro/.global.ily.lydep \
 		./02_andante/.flute.ily.lydep \
@@ -406,9 +409,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-horn.ly.lydep
-./.MozartWA-KV488-part-horn.ly.lydep: \
-		./MozartWA-KV488-part-horn.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-horn.ly.lydep
+./parts/.MozartWA-KV488-part-horn.ly.lydep: \
+		./parts/MozartWA-KV488-part-horn.ly \
 		./01_allegro/.global.ily.lydep \
 		./01_allegro/.horn.ily.lydep \
 		./02_andante/.global.ily.lydep \
@@ -421,9 +424,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-piano.ly.lydep
-./.MozartWA-KV488-part-piano.ly.lydep: \
-		./MozartWA-KV488-part-piano.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-piano.ly.lydep
+./parts/.MozartWA-KV488-part-piano.ly.lydep: \
+		./parts/MozartWA-KV488-part-piano.ly \
 		./01_allegro/.global.ily.lydep \
 		./01_allegro/.piano.ily.lydep \
 		./02_andante/.global.ily.lydep \
@@ -436,9 +439,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-viola.ly.lydep
-./.MozartWA-KV488-part-viola.ly.lydep: \
-		./MozartWA-KV488-part-viola.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-viola.ly.lydep
+./parts/.MozartWA-KV488-part-viola.ly.lydep: \
+		./parts/MozartWA-KV488-part-viola.ly \
 		./01_allegro/.global.ily.lydep \
 		./01_allegro/.viola.ily.lydep \
 		./02_andante/.global.ily.lydep \
@@ -451,9 +454,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-violin-ii.ly.lydep
-./.MozartWA-KV488-part-violin-ii.ly.lydep: \
-		./MozartWA-KV488-part-violin-ii.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-violin-ii.ly.lydep
+./parts/.MozartWA-KV488-part-violin-ii.ly.lydep: \
+		./parts/MozartWA-KV488-part-violin-ii.ly \
 		./01_allegro/.global.ily.lydep \
 		./01_allegro/.violin-ii.ily.lydep \
 		./02_andante/.global.ily.lydep \
@@ -466,9 +469,9 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.MozartWA-KV488-part-violin-i.ly.lydep
-./.MozartWA-KV488-part-violin-i.ly.lydep: \
-		./MozartWA-KV488-part-violin-i.ly \
+.SECONDARY: ./parts/.MozartWA-KV488-part-violin-i.ly.lydep
+./parts/.MozartWA-KV488-part-violin-i.ly.lydep: \
+		./parts/MozartWA-KV488-part-violin-i.ly \
 		./01_allegro/.global.ily.lydep \
 		./01_allegro/.violin-i.ily.lydep \
 		./02_andante/.global.ily.lydep \
@@ -481,6 +484,3 @@ MozartWA-KV488-midi-3-presto.midi: .MozartWA-KV488-midi-3-presto.ly.lydep
 		./common/.variables.ily.lydep \
 		./common/.version.ily.lydep \
 		./.mutopia-header.ily.lydep
-.SECONDARY: ./.mutopia-header.ily.lydep
-./.mutopia-header.ily.lydep: \
-		./mutopia-header.ily

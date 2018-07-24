@@ -6,11 +6,11 @@
 %#(set-default-paper-size "letter")
 #(ly:set-option 'relative-includes #t)
 
-\include "common/version.ily"
-\include "mutopia-header.ily"
-\include "common/variables.ily"
-\include "common/definitions.ily"
-\include "common/conductor-dimension.ily"
+\include "../common/version.ily"
+\include "../mutopia-header.ily"
+\include "../common/variables.ily"
+\include "../common/definitions.ily"
+\include "../common/conductor-dimension.ily"
 
 % Part-specific settings
 thisInstrName = \markup {
@@ -25,5 +25,5 @@ Part = " "
 thisIdentifier = \thisIdentifierMovI
 thisTempo = \thisTempoMovI
 thisTocLabel = \label \thisLabelMovI
-\include "01_allegro/music.ily"
-\bookpart { \include "common/conductor-staff.ily" }
+\include "../01_allegro/music.ily"
+\bookpart { \include "../common/conductor-staff.ily" }
