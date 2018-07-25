@@ -17,4 +17,37 @@ violinII = \relative c'' {
   \barNumberCheck #20
   \solo
   a4 r8 r4 r8 |
+  R2.*4 |
+  b'2. \p |
+  a2.~ |
+  a2. |
+  a4( gis8) r4 r8 |
+  r8 c,8( a') c8 r r |
+  r8 b,( gis') gis8 r r |
+  a4.( \fp dis,4.) |
+  e4 r8 r4 r8 |
+  R2. |
+  R2. |
+
+  \barNumberCheck #35
+  \tutti
+  R2.*3 |
+
+  \barNumberCheck #38
+  << { s4 s8 s16 \solo } R2. >> |
+  R2. |
+  r4 r8 r r gis( \p |
+  a8) r r fis8 r r |
+  r8 e( d) cis8 r r |
+  R2. |
+  R2. |
+  r8 d'16( b) b( gis) a8 r r |
+  b,4( a8) gis8 r r |
+  cis4( b8) a8 r r |
+  r16 a( fis' a, fis' a,) r16 a( fis' a, fis' a,) |
+  a8 a' a a8 a a |
+  a8 a a gis8 gis gis |
+
+  \barNumberCheck #51
+  << { s8 \tutti } a4 >> r8 r4 r8 |
 }
