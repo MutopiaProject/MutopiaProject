@@ -50,4 +50,24 @@ violinI = \relative c'' {
 
   \barNumberCheck #51
   << { s8 \tutti } a4 >> r8 r4 r8 |
+  R2. |
+
+  \barNumberCheck #53
+  \solo
+  R2.*15 |
+
+  \barNumberCheck #68
+  \tutti
+  r4 r8 a4.~ \p |
+  a8( gis fis eis8 fis gis) |
+  cis,4. cis'4.~ |
+  cis8( b a gis a b) |
+  eis,4. a'4.~ \f |
+  a8( gis fis eis8 fis gis) |
+  cis,4.~ cis8 b4~ |
+  b8( cis) a~( a8 b) gis |
+
+  \barNumberCheck #76
+  \solo
+  fis4 r8 r4 r8 |
 }
