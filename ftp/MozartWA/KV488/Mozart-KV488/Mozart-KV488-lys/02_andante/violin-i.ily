@@ -70,4 +70,11 @@ violinI = \relative c'' {
   \barNumberCheck #76
   \solo
   fis4 r8 r4 r8 |
+  cis'4.( \p b4.~) |
+  b8 a( gis fis gis a) |
+  d,4. d'4. |
+  gis,4 r8 r4 r8 |
+  R2.*3 |
+
+  \barNumberCheck #84
 }
