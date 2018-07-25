@@ -118,6 +118,25 @@ pianoTreble = \relative c' {
 
   \barNumberCheck #84
   fis4) r8 r4 r8 |
+  fis4. a,4. |
+  gis4.~ gis4 d''8 |
+  cis4. eis,4. |
+  fis4 r8 r4 r8 |
+  fis4. a,,4. |
+  g4.~ g4 d'''8 |
+  cis4. eis,4. |
+
+  fis4 r8 r4 r8 |
+  r4 r8 r16 cis16( cis') cis-. cis-. cis-. |
+  cis8.( a16 fis8) r4 r8 |
+  r4 r8 r16 cis16( cis') cis-. cis-. cis-. |
+  cis8.( a16 fis8) r4 r8 |
+  r16 cis16( cis') cis-. cis-. cis-. cis-. cis-. cis-. cis-. cis-. cis-. |
+  fis,8 r <a cis,>( <fis a,>8) r <a cis,>( |
+  <fis a,>8) r r r4 r8 |
+  \bar "|."
+
+  \barNumberCheck #100
 }
 
 pianoBass = \relative c {
@@ -232,4 +251,23 @@ pianoBass = \relative c {
 
   \barNumberCheck #84
   fis4 r8 r4 r8 |
+  d4 r8 r4 r8 |
+  b4 r8 r4 r8 |
+  cis4 r8 r4 r8 |
+  fis4 r8 r4 r8 |
+  d4 r8 r4 r8 |
+  b4 r8 r4 r8 |
+  cis4 r8 r4 r8 |
+
+  fis4 r8 r4 r8 |
+  r4 r8 cis4 r8 |
+  a4 r8 r4 r8 |
+  r4 r8 cis4 r8 |
+  a4 r8 bis4 r8 |
+  cis4 r8 cis4 r8 |
+  fis8 r r fis8 r r |
+  fis8 r r r4 r8 |
+  \bar "|."
+
+  \barNumberCheck #100
 }
