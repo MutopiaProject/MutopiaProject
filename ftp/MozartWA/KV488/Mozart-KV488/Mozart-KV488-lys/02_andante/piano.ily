@@ -99,6 +99,25 @@ pianoTreble = \relative c' {
   \barNumberCheck #68
   \tutti
   fis4 r8 r4 r8 |
+  R2.*7 |
+
+  \barNumberCheck #76
+  \solo
+  r4 r8 \grace a32 a'4. |
+  b16( a) a( gis) gis( fis) fis( eis) eis( fis) fis( gis) |
+  cis,4. cis'4.~ |
+  % This is notated as a ``delayed turn'' between gis8 and a8 in the
+  % original score, but it is not clear how to typeset that such that it
+  % both appears correctly in print and plays correctly on MIDI.
+  % Instead, we simply expand the turn to a sequence of 64th-notes.
+  cis16( d32 cis b8 a gis16 a64 gis fis gis a8 b) |
+  eis,4 cis8 a'4. |
+  dis4. gis,4 r8 |
+  cis4. fis,4 r8 |
+  b8.[( cis32 d] cis[ b a gis] fis16 eis b'8 eis, |
+
+  \barNumberCheck #84
+  fis4) r8 r4 r8 |
 }
 
 pianoBass = \relative c {
@@ -197,4 +216,20 @@ pianoBass = \relative c {
   \barNumberCheck #68
   \tutti
   <fis a>4 r8 r4 r8 |
+  R2.*7 |
+
+  \barNumberCheck #76
+  \solo
+  fis16^\legato a cis a cis a fis16 a cis a cis a |
+  fis16 a cis a cis a gis b cis b cis b |
+  a16 b eis b eis b a16 cis fis cis fis cis |
+  b16 d fis d fis d b16 d gis d gis d |
+
+  r16 cis,( eis gis cis cis, cis'4) r8 |
+  r16 cis,,16( dis fis cis' cis, cis'4) r8 |
+  r16 cis16( fis ais cis cis, cis'4) r8 |
+  r16 cis,,16( fis gis cis cis, cis'4) r8 |
+
+  \barNumberCheck #84
+  fis4 r8 r4 r8 |
 }
