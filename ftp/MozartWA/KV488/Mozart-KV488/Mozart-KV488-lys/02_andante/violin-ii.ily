@@ -77,4 +77,31 @@ violinII = \relative c'' {
   R2.*3 |
 
   \barNumberCheck #84
+  % These next eight measures shared across violins.
+  \set Staff.midiInstrument = "pizzicato strings"
+  r16-\pizz fis r a r cis r a r fis r cis |
+  r16 d r fis r a r fis r d r a |
+  r16 b r d r cis r b r a r gis |
+  r16 cis r fis r a r cis, r eis r gis |
+  r16 fis r a r cis r a r fis r cis |
+  r16 d r fis r a r fis r d r a |
+  r16 b r d r g r b r g r b, |
+  % Note: In the original score, this gis has a courtesy accidental,
+  % even though the corresponding gis in bar 87 does not. We reproduce
+  % this despite the inconsistency.
+  r16 cis r fis r a r cis, r eis r gis! |
+
+  \barNumberCheck #92
+  fis4 r8 r4 r8 |
+  \set Staff.midiInstrument = "violin"
+  d'4.-\arco b,4.~ |
+  b8( a) a-. r4 r8 |
+  d'4. b,4.~ |
+  b8( a) a-. r4 r8 |
+  a'4.( gis4.) |
+  fis8 r r a8 \pp r r |
+  cis8 r r r4 r8 |
+  \bar "|."
+
+  \barNumberCheck #100
 }
