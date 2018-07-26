@@ -41,4 +41,50 @@ flute = \relative c''' {
   \barNumberCheck #53
   \solo
   fis4 r8 r4 r8 |
+  R2.*10 |
+  fis2.( \p |
+  g8) r r r4 r8 |
+  R2. |
+  R2. |
+
+  \barNumberCheck #68
+  \tutti
+  R2. |
+  R2. |
+  r4 r8 cis4.~ \p |
+  cis8( b a gis a b) |
+  eis,4. cis'4. \f |
+  dis4.( d4.) |
+  cis4.~ cis8 b4~ |
+  b8( cis) a~( a8 b) gis |
+
+  \barNumberCheck #76
+  \solo
+  fis4 r8 r4 r8 |
+  R2.*3 |
+  r4 r8 fis4.~ \p |
+  fis4. eis4( d8) |
+  cis2. |
+  b8( cis d~ d8 cis b) |
+
+  \barNumberCheck #84
+  a4 r8 r4 r8 |
+  R2.*3 |
+  a'2.~ \p |
+  a2. |
+  d4.( b4. |
+  a4. gis!4.) |
+
+  \barNumberCheck #92
+  fis8 r r a4.~ |
+  a8( gis fis eis8 fis gis) |
+  cis,4. a'4.~ |
+  a8( gis fis eis8 fis gis) |
+  cis,4. a'4.~ |
+  a8( gis fis eis8 fis gis) |
+  fis8-. fis-. r cis'8-. \pp cis-. r |
+  fis8-. fis-. r r4 r8 |
+  \bar "|."
+
+  \barNumberCheck #100
 }
