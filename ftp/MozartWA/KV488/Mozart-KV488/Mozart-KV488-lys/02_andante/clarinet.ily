@@ -103,4 +103,93 @@ clarinet = \relative c'' {
   >> r8 r4 r8 |
 
   \barNumberCheck #54
+  R2.*10 |
+  <<
+    {
+      f'2.~ \p |
+      f8
+    } \\
+    {
+      a,2.( |
+      bes8)
+    } \\
+  >> r8 r8 r4 r8 |
+  R2. |
+  R2. |
+
+  \barNumberCheck #68
+  \tutti
+  <<
+    {
+      r4 r8 c'4.~^\p |
+      c8( (b a gis a b) |
+      e,4. r4 r8 |
+    } \\
+    {
+      R2. |
+      R2. |
+      R2. |
+    } \\
+  >> |
+  R2. |
+  r4 r8
+  <<
+    {
+      c'4.~ \f |
+      c8( (b a gis a b) |
+      bes8 a g f4. |
+      e8( d) c~( c8 d) b |
+    } \\
+    {
+      e4. |
+      fis4. f4. |
+      e4.~ e8( d c) |
+      b8( gis) a~( a8 b) gis |
+    } \\
+  >> |
+
+  \barNumberCheck #76
+  \solo
+  << a4 \\ a4 >> r8 r4 r8 |
+  R2.*3 |
+  <<
+    {
+      r4 r8 c'4.~ |
+      c4. b4.~ |
+      b4. a4.~ |
+      a4.( gis4.) |
+      a4
+    } \\
+    {
+      e2. \p |
+      dis4.( d4. |
+      cis4. c4.) |
+      b2. |
+      a4
+    } \\
+  >> r8 r4 r8 |
+  R2.*3 |
+
+  <a' e>2.( \p |
+  <a f>2.) |
+  <bes bes,>2. |
+  <a c,>4.( <gis b,!>4.) |
+  <a a,>8 r r r4 r8 |
+  R2. |
+
+  <<
+    {
+      r4 r8 c,4.~ |
+      c8( b a gis8 a b) |
+      e,4. c'4.~ |
+      c8( b a gis8 a b) |
+    } \\
+    { R2.*4 | } \\
+  >> |
+  << { a8[-. e']-. } \\ { a,[-. c]-. } >> r
+  << { a'8[-. \pp a]-. } \\ { c,[-. c]-. } >> r |
+  << { c'8[-. c]-. } \\ { e,[-. e]-. } >> r r4 r8 |
+  \bar "|."
+
+  \barNumberCheck #100
 }
