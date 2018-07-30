@@ -117,7 +117,7 @@ clean_targets() {
 
 # Emit the main Makefile.
 makefile() {
-    main=MozartWA-KV488.ly
+    main=Mozart-KV488.ly
     movements=( ./parts/*-movement-*.ly )
     parts=( ./parts/*-part-*.ly )
     midis=( ./parts/*-midi-*.ly )
