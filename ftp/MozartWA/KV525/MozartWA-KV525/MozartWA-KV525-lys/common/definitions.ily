@@ -1,6 +1,6 @@
 %staffUp = \change Staff = "upper"
 %staffDown = \change Staff = "lower"
-%condenseRests = \set Score.skipBars = ##t
+condenseRests = \set Score.skipBars = ##t
 
 
 % small accidentals above/below turns
@@ -8,7 +8,7 @@ tinyN= \markup {\hspace #0.2 \tiny  \natural} % small accidentals on top of turn
 tinyS= \markup {\hspace #0.2 \tiny  \sharp}
 tinyF= \markup {\hspace #0.2 \tiny  \flat}
 % moves turn so it doesn't collide with slur
-altTurn= \markup{\hspace #0.5 \musicglyph #"scripts.turn"} 
+altTurn= \markup{\hspace #0.5 \musicglyph #"scripts.turn"}
 
 % dynamics within parenthesis
 roundP = \markup {
@@ -43,23 +43,3 @@ mbreak= { }
 %mbreak= \break
 mpageBreak= { }
 %mpageBreak= \pageBreak
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
