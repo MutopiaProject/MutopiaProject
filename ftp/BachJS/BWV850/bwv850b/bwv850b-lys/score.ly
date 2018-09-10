@@ -22,34 +22,24 @@
 
 \score {
 %\articulate
-  \new PianoStaff <<
-    \new Staff = "up"{
-      \set Staff.midiInstrument="harpsichord"
-      \global \clef treble
-      << \soprano
-	 \alto
-	 >>
+  \new GrandStaff <<
+    \new Staff {
+      \global \clef soprano
+       \soprano
     }
-    \new Staff = "down"{
-      \set Staff.midiInstrument="harpsichord"
+    \new Staff {
+      \global \clef alto
+       \alto
+    }
+    \new Staff {
+      \global \clef tenor
+       \tenor
+    }
+    \new Staff {
       \global \clef bass
-      <<
-	\tenor
-	\bass
-      >>
-      }
+       \bass
+    }
   >>
-  \midi{\tempo 4=72}
   \layout{}
   }
 
-%\score {
-%		\new PianoStaff <<
-%			#(set-accidental-style 'piano)
-%			\set PianoStaff.connectArpeggios = ##t
-%			\new Staff = "RH" %\rightHand
-%			\new Staff = "LH" %\leftHand 
-%		>>
-%		\midi{}
-%		\layout{}
-%}
