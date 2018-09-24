@@ -1,7 +1,7 @@
 \version "2.18.2"
-\include "util.ily"
+\include "../util.ily"
 
-\include "ilys/cembalo.ily"
+\include "../ilys/cembalo.ily"
 
 \header { instrument = "Cembalo" }
 

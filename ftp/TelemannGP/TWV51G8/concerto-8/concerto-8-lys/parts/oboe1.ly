@@ -1,7 +1,7 @@
 \version "2.18.2"
-\include "util.ily"
+\include "../util.ily"
 
-\include "ilys/oboe1.ily"
+\include "../ilys/oboe1.ily"
 
 \header { instrument = "Oboe I" }
 

@@ -1,7 +1,7 @@
 \version "2.18.2"
-\include "util.ily"
+\include "../util.ily"
 
-\include "ilys/principale.ily"
+\include "../ilys/principale.ily"
 
 \header { instrument = "Violino principale" }
 \score {
