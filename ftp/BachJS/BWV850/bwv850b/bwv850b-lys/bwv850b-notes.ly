@@ -1,4 +1,4 @@
-\version "2.11.52"
+\version "2.18.2"
 %\include "notes.lyi"
 
 \include "articulate.ly"
@@ -17,7 +17,7 @@
 	copyright = "Creative Commons Share-Alike 4.0"
 	maintainer = "Sven Reichard"
 }
-
+#(set-global-staff-size 16)
 global = {\time 4/4 \key d \major}
 
 roll = \relative{d32 e fis g fis e fis d}
@@ -26,13 +26,13 @@ scale = \relative{d e fis g a b cis}
 
 
 soprano=\new Voice{\voiceOne
-  r1 | r1 | r1 | r1 |
+  s1 | s1 | s1 | s1 |
   r4 \transpose d a' {\theme} | %5
   \relative c'' { 
     cis8.*5/6 e32 fis g a8. a16 a8.*5/6 d,32 e fis g8. g16 | %6
     g4 fis8. e16 d8. e16 cis8. cis16 | %7
     cis4
-    \modalTranspose d b \scale {\theme}|
+    \modalTranspose d b' \scale {\theme}|
     d4 b'16 a b gis gis fis gis e e d e cis |
     cis4 a'16 g a fis fis e fis d d c d b | %10
     b4 \transpose d g' {\theme} |
@@ -61,14 +61,15 @@ soprano=\new Voice{\voiceOne
   
 }
 
-alto= \new Voice{\voiceTwo
-  r1 | r1 | r1 |
+alto= \new Voice{\voiceOne
+  s1 | s1 | s1 |
   r4 \transpose d d' {\theme}|
   \relative f' {
-    fis8. gis16 a4~a gis | %5
+    fis8. gis16 \voiceTwo a4~a gis | %5
+    \voiceThree
     a cis d d | %6
-    cis8.*5/6 e32 d cis d8. cis16 b4 a | %7
-    a4 b~b ais | %8
+    cis8.*5/6 e32 d cis  d8. cis16  b4 e, | %7
+    a4 \voiceTwo b~b ais | %8
     b r d8. b16 b8. a16 | %9
     a4 r c8. a16 a8. g16 |
     g4 r r2 | %11
@@ -91,21 +92,31 @@ alto= \new Voice{\voiceTwo
     }
   }
 
-tenor =  \new Voice {\voiceOne
-  r1 | %1
-  r4 \transpose d a {\theme} | %2
-  \relative c' {
-    cis4 fis8. fis16 b,8.*5/6 b32 cis d e16 d e cis |%3
+tenor =  \new Voice
+{\oneVoice
+ \change Staff = "up"
+
+ r1 | %1
+ r4 \transpose d a {\theme} | %2
+ \relative c' {
+   cis4
+
+   fis8. fis16 b,8.*5/6 b32 cis d e16 d e cis |%3
+   \voiceTwo
     a4 d~d cis |%4
-    d cis b2  | %5
+   d
+   \change Staff="down" \voiceOne
+   cis b2  | %5
   }
 
-  r4 \modalTranspose d fis' \scale {\roll} b'4
+ a4
+ \change Staff="up" \voiceTwo
+ \modalTranspose d fis' \scale {\roll} b'4
   \modalTranspose d e' \scale {\roll} |
   
-  a'4 a'8. g'16 fis'8. g'16 e'4 | %7
+  a'4 a'8. g'16 fis'8. g'16 a'4 | %7
   \relative c' {
-    d4 d cis2 | %8
+    d4 \change Staff="down" \voiceOne d cis2 | %8
     b4 r b'8. gis16 gis8. e16 |%9
     e4 r a8. fis16 fis8. d16 |%10
     d4 r r2 |%11
@@ -131,18 +142,21 @@ tenor =  \new Voice {\voiceOne
 }
 
 bass = \new Voice
-{|\voiceTwo
+{|\oneVoice
  r4 \theme  |                            %1
  \relative c {
  fis8. g16 fis8. e16 d4 e |              %2
  a,8. * 5/6 e'32 fis g a2 g4~ |               %3
  g8. fis32 e fis8. d16 g8. e16 a8. a,16| %4
+ \voiceTwo
  d8. e16 fis8. e16 d8. b16 e4 | %5
  a,4 r r2 |%6
 }
+
+ \oneVoice
  r4 \transpose d d, {\theme}%7
  \relative f, {
-   fis8.*5/6 d'32 e fis g8. fis16 e8. cis16 fis4  %8
+   fis8.*5/6 d'32 e fis \voiceTwo g8. fis16 e8. cis16 fis4  %8
  
  \modalTranspose d b, \scale {\roll } gis8 r r2 | %9
  \modalTranspose d a, \scale {\roll } fis8 r r2 |
