@@ -40,8 +40,9 @@
       }
   >>
   \midi{\tempo 4=72}
-  \layout{}
-  }
+  \layout{  }
+  
+}
 
 %\score {
 %		\new PianoStaff <<
