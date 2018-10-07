@@ -9,7 +9,7 @@
   mutopiacomposer = "MozartWA"
   mutopiapoet = "E. Schikaneder and C. L. Giesecke"
   opus = "KV 620"
-  mutopiainstrument = "Orchestra: Flute, Bassoon, French Horn, Violins, Viola, Cello, Double Bass, Voice (Soprano)"
+  mutopiainstrument = "Orchestra: Flute, Bassoon, French Horn, Violins, Viola, Cello, Double Bass, Voice (Bass)"
   source = "J. L. Peters 1875, C. F. Peters 18??, Lee & Walker 1870, North & Co. 1879"
   date = "1791"
   style = "Classical"
