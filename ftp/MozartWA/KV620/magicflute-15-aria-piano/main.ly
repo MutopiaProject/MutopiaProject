@@ -149,7 +149,11 @@ rh =  \relative c' {
   << { <e gis>4( <dis fis>8)} \\
      { b4. r8|}
   >>
-  r8 \clef bass <gis cis e>-.[ <fis b dis>-. <e ais cis>-.]|
+  r8 
+  \voiceOne
+  \autoBeamOff
+  \crossStaff { <cis e>-.[ <b dis>-. <ais cis>-.]}|
+  \autoBeamOn
   <dis b'>16 \noBeam \clef treble b'''8^"Fl."( gis32 e) dis16( fis8 e32 cis)|
   b4 r16 b-.^"Viol." cis-. dis-.|
   e-. fis-. gis-. a-. b-. <gis cis>-. <gis dis'>-. <gis e'>|
@@ -188,7 +192,7 @@ lh = \relative c {
   <b b'>4r|
   <e, e'>( <a, a'>)|
   <b b'>4. r8|
-  r8 <e e'>[ fis <fis, fis'>]|
+  r8 <<  \crossStaff{\autoBeamOff gis'' fis e \autoBeamOn}  \\ {<e, e'>[ fis <fis, fis'>]} >>|
   <b b'> \clef treble <e'' cis'>-.[ <fis b>-. <fis ais>-.] |
   \clef bass b,16-._"Fag. u. Hörn." b-. b-. b-. <a b>-. <a b>-. <a b>-. <a b>-.|
   <gis b>-. <gis b>-. <gis b>-. <gis b>-. <gis b>-. <e b'>-. <fis b>-. <gis b>-. |
@@ -247,6 +251,15 @@ ein Mensch, ein Mensch zu sein.
 % The score definition
 \score {
 
+\layout {
+  \context {
+    \RemoveEmptyStaffContext
+  }
+  \context {
+    \PianoStaff
+    \consists #Span_stem_engraver
+  }
+}
 <<
 
   \time 2/4
@@ -259,11 +272,9 @@ ein Mensch, ein Mensch zu sein.
             \new Lyrics = "two" \lyricsto mel \songtexttwo
   >>
   \new PianoStaff <<
-    \new Staff \with {
-      \consists #Merge_rests_engraver
-    }
+    \new Staff = "right"
     <<
-      \new Voice { \key e \major \rhintro \rh}
+      { \key e \major \rhintro \rh}
     >>
       \new Dynamics {
         s16\p
@@ -271,9 +282,7 @@ ein Mensch, ein Mensch zu sein.
         s2 \f
         r2 \p
   }
-    \new Staff \with {
-      \consists #Merge_rests_engraver
-    }
+    \new Staff = "left"
     <<
       \new Voice { \clef bass \key e \major \lhintro \lh}
     >>
@@ -282,11 +291,6 @@ ein Mensch, ein Mensch zu sein.
 
 >>
 
-\layout {
-  \context {
-    \RemoveEmptyStaffContext
-  }
-}
 
 }
 
