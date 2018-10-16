@@ -6,12 +6,13 @@ markings = {
 	\time 2/4
 	\partial 16 s16 s2
 	s4 s8 \bar "||" \mark \msegno s8
-	s2*25 s4 s8 s16_"D.C" \bar "||" \mark \msegno}
-incmidi = "midi.ly"
+	s2*25 s4 s8 s16_"D.C" \bar "||" \mark \msegno
+  }
+incmidi = "midi.ily"
 
 flautoI = \relative c'' {
 	\key e \major
-\partial 16 r16
+    \partial 16 r16
 	r2
 	dis8-.\f e-. r8 r
 	r2
@@ -37,7 +38,7 @@ flautoI = \relative c'' {
 
 flautoII = \relative c'' {
 	\key e \major
-\partial 16 r16
+    \partial 16 r16
 	r2
 	a8 gis r r
 	R2*2

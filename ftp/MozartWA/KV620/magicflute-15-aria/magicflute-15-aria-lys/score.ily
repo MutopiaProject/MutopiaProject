@@ -47,7 +47,7 @@ stringGroup = \new StaffGroup = "string_group" <<
 	\contrabassoStaff
 >>
 
-incmidi = "parts/midi.ly"
+incmidi = "parts/midi.ily"
 
 \score {
 <<
