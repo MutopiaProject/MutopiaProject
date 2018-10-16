@@ -11,8 +11,8 @@ incmidi = "midi.ly"
 
 flautoI = \relative c'' {
 	\key e \major
-\partial 16 r16 
-	r2 
+\partial 16 r16
+	r2
 	dis8-.\f e-. r8 r
 	r2
 	r4 r8 b\p
@@ -42,7 +42,7 @@ flautoII = \relative c'' {
 	a8 gis r r
 	R2*2
 	r8 b4\p ~ b16( e)
-	e8( dis) r4 
+	e8( dis) r4
 	R2*18
 	r8 e16 e fis fis dis dis
 	e8 r r4
@@ -55,7 +55,7 @@ fagottoI = \relative c' {
 	\slurUp
 	\stemUp
 \partial 16 r16
-	r2 
+	r2
 	dis8-.\f e-. r r
 	R2*8
 	b2\p ~
@@ -74,7 +74,7 @@ fagottoII = \relative c' {
 	\slurDown
 	\stemDown
 \partial 16 r16
-	r2 
+	r2
 	a8 gis r r
 	R2*8
 	b4( a)
@@ -90,7 +90,7 @@ fagottoII = \relative c' {
 
 cornieI = \relative c'' {
 \partial 16 r16
-	r2 
+	r2
 	d8-.\f c-. r r
 	R2*8
 	g2\p ~
@@ -107,7 +107,7 @@ cornieI = \relative c'' {
 
 cornieII = \relative c'' {
 \partial 16 r16
-	r2 
+	r2
 	g8 c r r
 	R2*8
 	g,2 ~
@@ -173,8 +173,8 @@ violinoII = \relative c'' {
 % 2
 	e4( dis8) r
 	r cis-. b-. ais-.
-	b e-. fis-. fis-. 
-	b,16-.( b-. b-. b-. b-. b-. b-. b)-. 
+	b e-. fis-. fis-.
+	b,16-.( b-. b-. b-. b-. b-. b-. b)-.
 	b b b b b b b b
 	b b b b b b b b
 	b b b b b b b b
@@ -190,7 +190,7 @@ violinoII = \relative c'' {
 	r gis r cis
 	r cis r fis
 	r e16-. e-. fis-. fis-. dis-. dis-.
-	e8 r a4( 
+	e8 r a4(
 	gis8) e4( dis8)
 	dis4( e8)
 }
@@ -226,7 +226,7 @@ viola = \relative c' {
 	r e r gis
 	r a r cis
 	r b r a
-	gis r fis'4( 
+	gis r fis'4(
 	e8) b( cis fis,)
 	a4( gis8)
 }
@@ -262,7 +262,7 @@ violoncello = \relative c {
 	e r cis r
 	a r a r
 	b r b r
-	e8 r b'4( 
+	e8 r b'4(
 	cis8) gis-. a-. b-.
 	b4( e,8)
 }
@@ -305,16 +305,16 @@ contrabasso = \relative c {
 
 sarastro = \relative c' {
 	\key e \major
-	\unset melismaBusyProperties 
+	\unset melismaBusyProperties
 \partial 16 r16
-	r2 
+	r2
 	r4 r8
 	b8
 	b8. b16 b( cis) a( fis)
 	e8.( fis16) dis8 b
 	e8. fis32( e) dis16( e) fis( gis)
 	gis8( fis) r b
-	b8. b16 bis16( cis) a( fis)	
+	b8. b16 bis16( cis) a( fis)
 % 2
 	e8.( fis16) dis8 fis
 	gis16( b8) gis32( e) dis16( fis8) e32( cis)
@@ -343,9 +343,9 @@ sarastro = \relative c' {
 \addlyrics {
 	In die -- sen heil' gen
 	Hal -- len kennt
-	man die Ra -- che 
+	man die Ra -- che
 	nicht, und
-	ist ein Mensch ge-	
+	ist ein Mensch ge-
 % 2
 	fal -- len, führt
 	Lie -- ben ihn zur
@@ -372,7 +372,7 @@ sarastro = \relative c' {
 	Mau -- ern, wo
 	Mensch den Men -- schen
 	liebt, kann
-	kein Ver -- rä -- ther	
+	kein Ver -- rä -- ther
 % 2
 	lau -- ern, weil
 	man dem Feind ver-
