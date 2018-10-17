@@ -1,8 +1,5 @@
-\version "2.14.2"
+\version "2.18.0"
 
 \midi {
-	\context {
-		\Score
-		tempoWholesPerMinute = #(ly:make-moment 45 4)
-	}
+	\tempo 4 = 45
 }
