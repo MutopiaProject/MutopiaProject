@@ -1,33 +1,33 @@
-\version "2.14.2"
+\version "2.18.0"
 
 #(set-global-staff-size 13)
 
-\include "flauti.ily"
-flautiStaff = \include "staff.ily"
+\include "parts/flauti.ily"
+flautiStaff = \include "parts/staff.ily"
 
-\include "fagotti.ily"
-fagottiStaff = \include "staff.ily"
+\include "parts/fagotti.ily"
+fagottiStaff = \include "parts/staff.ily"
 
-\include "cornie.ily"
-corniStaff = \include "staff.ily"
+\include "parts/cornie.ily"
+corniStaff = \include "parts/staff.ily"
 
-\include "violinoI.ily"
-violinoIStaff = \include "staff.ily"
+\include "parts/violinoI.ily"
+violinoIStaff = \include "parts/staff.ily"
 
-\include "violinoII.ily"
-violinoIIStaff = \include "staff.ily"
+\include "parts/violinoII.ily"
+violinoIIStaff = \include "parts/staff.ily"
 
-\include "viola.ily"
-violaStaff = \include "staff.ily"
+\include "parts/viola.ily"
+violaStaff = \include "parts/staff.ily"
 
-\include "violoncello.ily"
-violoncelloStaff = \include "staff.ily"
+\include "parts/violoncello.ily"
+violoncelloStaff = \include "parts/staff.ily"
 
-\include "contrabasso.ily"
-contrabassoStaff = \include "staff.ily"
+\include "parts/contrabasso.ily"
+contrabassoStaff = \include "parts/staff.ily"
 
-\include "sarastro.ily"
-sarastroStaff = \include "staff.ily"
+\include "parts/sarastro.ily"
+sarastroStaff = \include "parts/staff.ily"
 
 windGroup =  \new StaffGroup = "wind_group" <<
 	\flautiStaff
@@ -47,6 +47,7 @@ stringGroup = \new StaffGroup = "string_group" <<
 	\contrabassoStaff
 >>
 
+incmidi = "parts/midi.ily"
 
 \score {
 <<
