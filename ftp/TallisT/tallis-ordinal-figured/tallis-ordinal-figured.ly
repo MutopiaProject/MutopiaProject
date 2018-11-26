@@ -21,11 +21,21 @@
 \paper {
     top-margin = 8\mm                              %-minimum: 8 mm
     top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
-    markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
+    %markup-system-spacing.basic-distance = #5      %-dist. from header/title to first system
+    markup-system-spacing =
+    #'((basic-distance . 12) 
+       (minimum-distance . 8)
+       (padding . 1)
+       (stretchability . 10)) % default 60
     top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
     last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block 
     ragged-bottom = ##f
     ragged-last-bottom = ##f
+    system-system-spacing =
+    #'((basic-distance . 12) 
+       (minimum-distance . 8)
+       (padding . 1)
+       (stretchability . 3)) % default 60
 }
 
 %---------------------------------------------------------------------
@@ -43,6 +53,7 @@
 
     maintainer = "Thomas Hugel"
     maintainerEmail = "thomas.hugel -a|t- yandex.com"
+    maintainerWeb = "https://thomas-hugel.gitlab.io/"
     license = "Creative Commons Attribution-ShareAlike 4.0"
 
     mutopiatitle = "Tallis' Ordinal"
@@ -68,32 +79,64 @@ global = {
 }
 
 upperStaff = \relative c' {
-  \partial 4 d
-  fis g a a
-  b b a 
+  \partial 4 d4 |
+  fis g a a |
+  b b a \breathe a |
+  d cis b b |
+  a2. \breathe d,4 | \octaveCheck d'
+  fis g a a |
+  b b a \breathe d, |
+  g fis e e |
+  d2. \bar "|." \barNumberCheck #8
 }
 
 figs = \figuremode {
-  <_> <_> <6> <_>
-  <_> <_> <_> <_>
+  <_>4 |
+  <_> <6> <_> <_> |
+  <_> <_> <_> <_> |
+  <_> <_> <4> <3> |
+  <_>2. <_>4 |
+  <_> <6> <_> <_> |
+  <_> <_> <_> <_> |
+  <_> <_> <4> <3> |
+  <_>2. \barNumberCheck #8
 }
 
 lowerStaff = \relative c {
-  \partial 4 d
-  d b a d
-  g, g d'
+  \partial 4 d4 |
+  d b a d |
+  g g, d' \breathe d |
+  d a e' e |
+  a,2. \breathe d4 | \octaveCheck d
+  d b a d |
+  g g, d' \breathe b |
+  g d' a a |
+  d2. \bar "|." \barNumberCheck #8
 }
 
 %-------Typeset music and generate midi
+
+\layout {
+  \context {
+    \PianoStaff \override VerticalAxisGroup.staff-staff-spacing = % .basic-distance = #50
+      #'((basic-distance . 2) 
+         (minimum-distance . 2)
+         (padding . 1)
+         (stretchability . 5)) % default 60
+  }
+  \context {
+    \FiguredBass \override VerticalAxisGroup.staff-affinity = #CENTER
+  }
+  
+}
+
 \score {
-    \context PianoStaff <<
-        %-Midi instrument values at 
-        % http://lilypond.org/doc/v2.18/Documentation/snippets/midi#midi-demo-midiinstruments
-        \set PianoStaff.midiInstrument = "acoustic grand"
-        \new Staff = "upper" { \clef treble \global \upperStaff }
-        \new FiguredBass = "middle" { \figs }
-        \new Staff = "lower" { \clef bass \global \lowerStaff }
+    \context PianoStaff  <<
+        \set PianoStaff.midiInstrument = "church organ"
+        \new Staff { \clef treble \global \upperStaff }
+        \new FiguredBass { \figs }
+        \new Staff { \clef bass \global \lowerStaff }
     >>
-    \layout{ }
+    \layout{}
     \midi  { \tempo 4 = 42 }
 }
