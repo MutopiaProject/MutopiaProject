@@ -19,6 +19,7 @@
     %piece = "Left-aligned header"
     date = "1567"
     style = "Hymn"
+    meter = "8.6.8.6 (common meter)"
     source = "https://hymnary.org/media/fetch/139505"
 
     mutopiatitle = "Tallis' Ordinal"
