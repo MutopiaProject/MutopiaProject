@@ -1,3 +1,4 @@
+\version "2.18.0"
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%Start Music%%%%%%%%%%%%%%%
 
 staffOneVoiceOneNotes =
@@ -30,7 +31,7 @@ staffOneVoiceOneNotes =
   }
   \repeat volta 2
   {
-    \partial 8 a8\f
+    a8\f
     %8
     a16 cis' e'8 <cis' e'>
     %9
