@@ -1,0 +1,5 @@
+\version "2.19.82"
+\include "winchester-old-figured-header.ily"
+\include "winchester-old-figured-music.ily"
+\include "figured-chorale-paper.ily"
+\include "thomas-hugel-header.ily"
