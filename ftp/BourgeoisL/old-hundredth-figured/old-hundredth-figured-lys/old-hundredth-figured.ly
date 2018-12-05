@@ -1,0 +1,5 @@
+\version "2.19.82"
+\include "old-hundredth-figured-header.ily"
+\include "old-hundredth-figured-music.ily"
+\include "figured-chorale-paper.ily"
+\include "thomas-hugel-header.ily"
