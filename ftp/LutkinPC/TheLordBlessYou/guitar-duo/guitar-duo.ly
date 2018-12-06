@@ -25,10 +25,10 @@
  mutopiainstrument = "2 guitars and 2 optional voices"
  moreInfo = "In memory of John Paul Goodman (1943-2018), a widely beloved choir director in Colorado who always used this song as a farewell and godspeed, most poignantly whenever a fellow choir member passed away.  This edition allows two guitars to play all the notes in Lutkin's original version for SATB choir.  Reduced vocal parts are also provided in case the two guitarists also choose to sing as a duet (either tenor-bass, soprano-alto or soprano-bass). The LilyPond source file also contains snippets to (a) color any nearly out of range notes and (b) adjust formatting in response to paper size."
 
- footer = "Mutopia-2018/11/29-Draft"
+ comptitle = \markup { \concat { \composer ": " \title } }
+ footer = "Mutopia-2018/12/06-2235"
  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
- comptitle = \markup { \concat { \composer ": " \title } }
  myfoot = \markup{ \override #'(font-name . "DejaVu Sans,sans-serif") \column { \vspace #2 \abs-fontsize #8 \fill-line { \line { \footer } \line { \comptitle } \line { \arranger } } } }
 }
 
@@ -44,7 +44,7 @@
   print-first-page-number = ##f
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #not-first-page \fromproperty #'header:myfoot }
     }
   }
@@ -212,7 +212,7 @@ hiB   = ^\markup{ \smaller B}
 
 
 % function to color notes that are near or out of range
-#(define (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch) 
+#(define (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)
   (let ((pitch (ly:event-property (event-cause grob) 'pitch) ))
     (if pitch
       (if (ly:pitch<? max-pitch pitch) (x11-color 'red)
@@ -240,35 +240,35 @@ hiB   = ^\markup{ \smaller B}
      (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)))
 
 % pitch limits for typical (non-pro) church choirs
-#(define (soprano-pitch-range grob) 
+#(define (soprano-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  1 6 NATURAL) )  ; B5
          (hi-pitch  (ly:make-pitch  1 4 NATURAL) )  ; G5
          (lo-pitch  (ly:make-pitch  0 0 NATURAL) )  ; C4
          (min-pitch (ly:make-pitch -1 6 FLAT   ) )) ; Bb3
      (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)))
 
-#(define (alto-pitch-range grob) 
+#(define (alto-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  1 2 NATURAL) )  ; E5
          (hi-pitch  (ly:make-pitch  1 0 NATURAL) )  ; C5
          (lo-pitch  (ly:make-pitch -1 4 NATURAL) )  ; G3
          (min-pitch (ly:make-pitch -1 3 NATURAL) )) ; F3
      (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)))
 
-#(define (tenor-pitch-range grob) 
+#(define (tenor-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  0 5 NATURAL) )  ; A4
          (hi-pitch  (ly:make-pitch  0 4 NATURAL) )  ; G4
          (lo-pitch  (ly:make-pitch -1 0 NATURAL) )  ; C3
          (min-pitch (ly:make-pitch -2 6 FLAT   ) )) ; Bb2
      (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)))
 
-#(define (baritone-pitch-range grob) 
+#(define (baritone-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  0 3 NATURAL) )  ; F4
          (hi-pitch  (ly:make-pitch  0 2 NATURAL) )  ; E4
          (lo-pitch  (ly:make-pitch -2 5 NATURAL) )  ; A2
          (min-pitch (ly:make-pitch -2 4 NATURAL) )) ; G2
      (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)))
 
-#(define (bass-pitch-range grob) 
+#(define (bass-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  0 2 NATURAL) )  ; E4
          (hi-pitch  (ly:make-pitch  0 0 NATURAL) )  ; C4
          (lo-pitch  (ly:make-pitch -2 3 NATURAL) )  ; F2
@@ -300,7 +300,7 @@ soprano = \transpose c c' {
   d'4 f' e'4. g'8 | %2
   g'4 e'8 g' c''8.\bpV b'16 a'8 e' | %3
   <g'-3>4\pII fis' g' r | %4
-  
+
   r8 e'\pI f' e' <a'-4>4\pIII r | %5
   r8 g'\pVII a' g' c''\bpVIII r r g' | %6
   g'8 e' g' c'' e''8. c''16 g'8 e' | %7
@@ -311,7 +311,7 @@ soprano = \transpose c c' {
   \onTwoStrings "2" "3"
   a'8 g' r4 g' <f'-3>\startTextSpan | %12
   <e'-3>2 <d'-1> | %13
-  
+
   c'4\stopTextSpan r r2 | %14
   s1 | %15
   r4 <b'-1> <e''-4>\pIX <d''-2> | %16
@@ -324,7 +324,7 @@ soprano = \transpose c c' {
   g'1\pI | %23
   \headHarmonic g''1 | %24
   \bar "|."
-  
+
 }
 
 alto = \transpose c c' {
@@ -334,7 +334,7 @@ alto = \transpose c c' {
   c'4 b c'4. e'8 | %2
   e'4 c'8 e' e'8. e'16 e'8 e' | %3
   <d'-2>2 d'4 r | %4
-  
+
   r8 cis' cis' cis' <d'-1>4 r | %5
   r8 d' d' d' c' g' g' f' | %6
   e'8 c' e'4 e'8. e'16 e'8 c' | %7
@@ -344,7 +344,7 @@ alto = \transpose c c' {
   r4 r8 <c'-3>8 c'4. c'8 | %11
   c'8 c' r4 <cis'-4> <d'-4> | %12
   <c'!-2>2 <b-2> | %13
-  
+
   c'4\pI r r2 | %14
   r4\pVII <c'-4> <f'-4> <e'-3> | %15
   <d'-1>2\bpVII <e'-1>~ | %16
@@ -367,7 +367,7 @@ tenor = \transpose c c' {
   <a-2>4 g g4. c'8 | %2
   c'4 <g-0>8 g <a-3>8. <gis-1>16 <a-1>8\pII a | %3
   <b-1>4\pIV <a-4> b r | %4
-  
+
   r8 <a-1> a a a4 r | %5
   r8 b c' b c' g <a-3> b | %6
   c'4 c' c'8. c'16 c'8 c' | %7
@@ -377,7 +377,7 @@ tenor = \transpose c c' {
   r4 r8 c' bes4. bes8 | %11
   bes8 bes r4 <a-1> <a-1> | %12
   g2. <f-4>4 | %13
-  
+
   <e-2>4 g c' b | %14
   <a-2>4 a <d'-4> <c'-1> | %15
   b2 g4 a8 b | %16
@@ -390,7 +390,7 @@ tenor = \transpose c c' {
   <e-2>1\pI | %23
   <c' g e c>1\arpeggio | %24
   \bar "|."
-  
+
 }
 
 bass = \transpose c c' {
@@ -400,7 +400,7 @@ bass = \transpose c c' {
   <f,-1>4 <g,-3> <c-4>4. c8 | %2
   c4 <c-4>8 c a,8. <b,-2>16 <c-2>8 c | %3
   <d-2>2 <g-4>8 g g g | %4
-  
+
   <g-4>2\pII <f-3>8 f f f | %5
   f2\pI <e-2>8 e d4 | %6
   <c-4>8 c' g e c8. g16 g8 g | %7
@@ -410,7 +410,7 @@ bass = \transpose c c' {
   r4 r8 f8 e4. e8 | %11
   f8 e r4 <e-2>4 d | %12
   <g,-3>2 g, | %13
-  
+
   <c-3>4 r c d8 <e-2> | %14
   <f-3>2 d4 <e-2>8 f | %15
   g2 e4 f8 g | %16
@@ -423,7 +423,7 @@ bass = \transpose c c' {
   <c-3>1 | %23
   s1\dol\ppp | %24
   \bar "|."
-  
+
 }
 
 \score {
@@ -432,7 +432,7 @@ bass = \transpose c c' {
       midiInstrument = "choir aahs"
       instrumentName = \markup{ "Guitar I   " }
     } {
-      %\override Staff.NoteHead.color = #guitar-score-range 
+      %\override Staff.NoteHead.color = #guitar-score-range
       <<
         \new Voice = "soprano" { \voiceOne \soprano }
         \new Voice = "alto" { \voiceTwo \alto }
@@ -442,7 +442,7 @@ bass = \transpose c c' {
       midiInstrument = "choir aahs"
       instrumentName = \markup{ "Guitar II  " }
     } {
-      %\override Staff.NoteHead.color = #guitar-score-range  
+      %\override Staff.NoteHead.color = #guitar-score-range
       <<
         \new Voice = "tenor" { \voiceOne \tenor }
         \new Voice = "bass" { \voiceTwo \bass }
@@ -463,7 +463,7 @@ upperA = \transpose c c' {
   d'4 f' e'4. g'8 | %2
   g'4 e'8 g' c''8.\bpV b'16 a'8 e' | %3
   <g'-3>4\pII fis' g' r | %4
-  
+
   r8 e'\pI f' e' <a'-4>4\pIII r | %5
   r8 g'\pVII a' g' c''\bpVIII r r g' | %6
   g'8 e' g' c'' e''8. c''16 g'8 e' | %7
@@ -474,7 +474,7 @@ upperA = \transpose c c' {
   \onTwoStrings "2" "3"
   a'8 g'~ g' r g'4 <f'-3>\startTextSpan | %12    MOD
   <e'-3>2 <d'-1> | %13
-  
+
   c'4\stopTextSpan r r2 | %14
   s1 | %15
   r4 <b'-1> <e''-4>\pIX <d''-2> | %16
@@ -487,7 +487,7 @@ upperA = \transpose c c' {
   g'1\pI | %23
   g''1 | %24
   \bar "|."
-  
+
 }
 
 upperB = \transpose c c' {
@@ -497,7 +497,7 @@ upperB = \transpose c c' {
   c'4 b c'4. e'8 | %2
   e'4 c'8 e' e'8. e'16 e'8 e' | %3
   <d'-2>2 d'4 r | %4
-  
+
   r8 cis' cis' cis' <d'-1>4 r | %5
   r8 d' d' d' c' g' g' f' | %6
   e'8 c' e'4 e'8. e'16 e'8 c' | %7
@@ -507,7 +507,7 @@ upperB = \transpose c c' {
   f'4 r8 <c'-3>8 c'4. c'8 | %11                   MOD
   c'8 c'~ c' r <cis'-4>4 <d'-4> | %12            MOD
   <c'!-2>2 <b-2> | %13
-  
+
   c'4\pI g c' b | %14                            MOD
   <a-2>4 <c'-4>\pVII <f'-4> <e'-3> | %15        MOD
   <d'-1>2\bpVII <e'-1>~ | %16
@@ -531,7 +531,7 @@ upperV = {
   d'4 f' e'4. g'8 | %2
   g'4 e'8 g' c''8. b'16 a'8 e' | %3
   <g'>4 fis' g' r | %4
-  
+
   r8 e' f' e' <a'>4 r | %5
   r8 g' a' g' c'' r r g' | %6
   g'8 e' g' c'' e''8. c''16 g'8 e' | %7
@@ -541,7 +541,7 @@ upperV = {
   r4 r8 <a'> <g'>4. c'8 | %11
   a'8 g' r4 g' <f'> | %12
   <e'>2 <d'> | %13
-  
+
   c'4 g' c'' b' | %14                            MOD
   <a'>4 <c''> <f''> <e''> | %15                   MOD +OCT
   <d''>4 <b'> <e''> <d''> | %16                  +OCT
@@ -583,7 +583,7 @@ lowerC = \transpose c c' {
   <a-2>4 g g4. c'8 | %2
   c'4 <g-0>8 g <a-3>8. <gis-1>16 <a-1>8\pII a | %3
   <b-1>4\pIV <a-4> b r | %4
-  
+
   r8 <a-1> a a a4 r | %5
   r8 b c' b c' g <a-3> b | %6
   c'4 c' c'8. c'16 c'8 c' | %7
@@ -593,7 +593,7 @@ lowerC = \transpose c c' {
   c'4 r8 c' bes4. bes8 | %11                    MOD
   bes8 bes~ bes r <a-1>4 <a-1> | %12            MOD
   g2. <f-4>4 | %13
-  
+
   <e-2>4 s2. | %14                              MOD
   s4 a <d'-4> <c'-1> | %15                      MOD
   b2 g4 a8 b | %16
@@ -615,7 +615,7 @@ lowerD = \transpose c c' {
   <f,-1>4 <g,-3> <c-4>4. c8 | %2
   c4 <c-4>8 c a,8. <b,-2>16 <c-2>8 c | %3
   <d-2>2 <g-4>8 g g g | %4
-  
+
   <g-4>2\pII <f-3>8 f f f | %5
   f2\pI <e-2>8 e d4 | %6
   <c-4>8 c' g e c8. g16 g8 g | %7
@@ -625,7 +625,7 @@ lowerD = \transpose c c' {
   f4 r8 f8 e4. e8 | %11                       MOD
   f8 e~ e r <e-2>4 d | %12                    MOD
   <g,-3>2 g, | %13
-  
+
   <c-3>4 r c d8 <e-2> | %14
   <f-3>2 d4 <e-2>8 f | %15
   g2 e4 f8 g | %16
@@ -648,7 +648,7 @@ lowerV = {
   <f,>4 <g,> <c>4. c8 | %2
   c4 <c>8 c a,8. <b,>16 <c>8 c | %3
   <d>2 <g>8 g g g | %4
-  
+
   <g>2 <f>8 f f f | %5
   f2 <e>8 e d4 | %6
   <c>8 g, c e c8. <g, g>16 <g, g>8 <g, g> | %7         MOD c' g  to  g, c
@@ -658,7 +658,7 @@ lowerV = {
   r4 r8 f8 e4. e8 | %11
   f8 e r4 <e>4 d | %12
   <g,>2 g, | %13
-  
+
   <c>4 r c d8 <e> | %14
   <f>2 d4 <e>8 f | %15
   g2 e4 f8 g | %16
@@ -799,7 +799,7 @@ ifLetter =
       instrumentName = \markup{ "Guitar I   " }
     } {
       \set Staff.tempoHideNote = ##t
-      %\override Staff.NoteHead.color = #guitar-score-range 
+      %\override Staff.NoteHead.color = #guitar-score-range
       <<
         \new Voice = "upperA" { \voiceOne \upperA }
         \new Voice = "upperB" { \voiceTwo \upperB }
@@ -809,7 +809,7 @@ ifLetter =
     \new Staff \with {
       instrumentName = \markup{ "Guitar II  " }
     } {
-      %\override Staff.NoteHead.color = #guitar-score-range  
+      %\override Staff.NoteHead.color = #guitar-score-range
       <<
         \new Voice = "lowerC" { \voiceOne \lowerC }
         \new Voice = "lowerD" { \voiceTwo \lowerD }
@@ -826,7 +826,7 @@ ifLetter =
       midiInstrument = "acoustic guitar (nylon)"
     } {
       \set Staff.tempoHideNote = ##t
-      %\override Staff.NoteHead.color = #guitar-score-range 
+      %\override Staff.NoteHead.color = #guitar-score-range
       <<
         \new Voice = "upperA" { \voiceOne \upperA }
         \new Voice = "upperB" { \voiceTwo \upperB }
@@ -836,14 +836,14 @@ ifLetter =
     \new Staff \with {
       midiInstrument = "acoustic guitar (nylon)"
     } {
-      %\override Staff.NoteHead.color = #guitar-score-range  
+      %\override Staff.NoteHead.color = #guitar-score-range
       <<
         \new Voice = "lowerC" { \voiceOne \lowerC }
         \new Voice = "lowerD" { \voiceTwo \lowerD }
       >>
     }
   >>
-  \midi { 
+  \midi {
     \transposition c % guitar plays octave lower than written
   }
 }
@@ -854,8 +854,8 @@ ifLetter =
 
 % lyrics for upper voice
 upperVlyrics = \lyricmode {
-  The %| 
-  Lord bless you and %| 
+  The %|
+  Lord bless you and %|
   keep _ you, the %|
   Lord lift his coun -- te -- nance up -- %|
   on __ _ you %|
@@ -863,7 +863,7 @@ upperVlyrics = \lyricmode {
   and give you peace the %|
   Lord _ make his face to shine up -- %|
   on __ _ you and be %|
-  gra -- cious un -- to %| 
+  gra -- cious un -- to %|
   you, be gra -- cious, %|
   the Lord be %|
   gra -- cious gra -- cious %|
@@ -888,7 +888,7 @@ upperVlyrics = \lyricmode {
       midiInstrument = "choir aahs"
       instrumentName = \markup{ "Tenor  " }
     } <<
-      \override Staff.NoteHead.color = #tenor-pitch-range 
+      \override Staff.NoteHead.color = #tenor-pitch-range
       \new Voice = "upperV" \with { \consists "Ambitus_engraver" } { \voiceOne \upperVT }
       \new Lyrics \lyricsto "upperV" { \upperVlyrics }
     >>
@@ -896,7 +896,7 @@ upperVlyrics = \lyricmode {
       midiInstrument = "acoustic guitar (nylon)"
       instrumentName = \markup{ "Guitar I   " }
     } {
-      \override Staff.NoteHead.color = #guitar-score-range 
+      \override Staff.NoteHead.color = #guitar-score-range
       \transposition c % guitar plays octave lower than written
       <<
         \new Voice = "upperA" { \voiceOne \upperA }
@@ -915,8 +915,8 @@ upperVlyrics = \lyricmode {
 
 % lyrics for lower voice
 lowerVlyrics = \lyricmode {
-  The %| 
-  Lord bless you and %| 
+  The %|
+  Lord bless you and %|
   keep _ you, the %|
   Lord lift his coun -- te -- nance up -- %|
   on you and give you %|
@@ -957,8 +957,8 @@ lowerVlyrics = \lyricmode {
       midiInstrument = "acoustic guitar (nylon)"
       instrumentName = \markup{ "Guitar II  " }
     } {
-      \override Staff.NoteHead.color = #guitar-score-range 
-      \transposition c % guitar plays octave lower than written 
+      \override Staff.NoteHead.color = #guitar-score-range
+      \transposition c % guitar plays octave lower than written
       <<
         \new Voice = "lowerC" { \voiceOne \lowerC }
         \new Voice = "lowerD" { \voiceTwo \lowerD }
@@ -982,7 +982,7 @@ lowerVlyrics = \lyricmode {
       midiInstrument = "choir aahs"
       instrumentName = \markup{ "Soprano" }
     } <<
-      \override Staff.NoteHead.color = #soprano-pitch-range 
+      \override Staff.NoteHead.color = #soprano-pitch-range
       \new Voice = "upperVS" \with { \consists "Ambitus_engraver" } { \voiceOne \upperVS }
       \new Lyrics \lyricsto "upperVS" { \upperVlyrics }
     >>
@@ -990,7 +990,7 @@ lowerVlyrics = \lyricmode {
       midiInstrument = "acoustic guitar (nylon)"
       instrumentName = \markup{ "Guitar I   " }
     } {
-      \override Staff.NoteHead.color = #guitar-score-range 
+      \override Staff.NoteHead.color = #guitar-score-range
       \transposition c % guitar plays octave lower than written
       <<
         \new Voice = "upperA" { \voiceOne \upperA }
@@ -1022,8 +1022,8 @@ lowerVlyrics = \lyricmode {
       midiInstrument = "acoustic guitar (nylon)"
       instrumentName = \markup{ "Guitar II  " }
     } {
-      \override Staff.NoteHead.color = #guitar-score-range 
-      \transposition c % guitar plays octave lower than written 
+      \override Staff.NoteHead.color = #guitar-score-range
+      \transposition c % guitar plays octave lower than written
       <<
         \new Voice = "lowerC" { \voiceOne \lowerC }
         \new Voice = "lowerD" { \voiceTwo \lowerD }
@@ -1046,7 +1046,7 @@ lowerVlyrics = \lyricmode {
       midiInstrument = "acoustic grand"
       instrumentName = \markup{ "Lead I " }
     } <<
-      \override Staff.NoteHead.color = #guitar-score-range 
+      \override Staff.NoteHead.color = #guitar-score-range
       \new Voice = "upperV" \with { \consists "Ambitus_engraver" } { \voiceOne \upperVG }
       \new Lyrics \lyricsto "upperV" { \upperVlyrics }
     >>
@@ -1061,7 +1061,7 @@ lowerVlyrics = \lyricmode {
   >>
   \layout { %\context { \Voice \consists "Ambitus_engraver" }
   }
-  \midi { 
+  \midi {
     \transposition c % guitar plays octave lower than written
   }
 }
@@ -1094,13 +1094,13 @@ treblenotes = {
     \new Staff \with {
       instrumentName = \markup{ "Guitar actual" }
     } {
-      \override Staff.NoteHead.color = #guitar-pitch-range 
+      \override Staff.NoteHead.color = #guitar-pitch-range
       \clef "treble" \treblenotes
     }
     \new Staff \with {
       instrumentName = \markup{ "Guitar actual" }
     } {
-      \override Staff.NoteHead.color = #guitar-pitch-range  
+      \override Staff.NoteHead.color = #guitar-pitch-range
       \clef "bass" \bassnotes
     }
   >>
@@ -1112,13 +1112,13 @@ treblenotes = {
     \new Staff \with {
       instrumentName = \markup{ "Soprano range" }
     } {
-      \override Staff.NoteHead.color = #soprano-pitch-range 
+      \override Staff.NoteHead.color = #soprano-pitch-range
       \clef "treble" \treblenotes
     }
     \new Staff \with {
       instrumentName = \markup{ "Soprano range" }
     } {
-      \override Staff.NoteHead.color = #soprano-pitch-range  
+      \override Staff.NoteHead.color = #soprano-pitch-range
       \clef "bass" \bassnotes
     }
   >>
@@ -1130,13 +1130,13 @@ treblenotes = {
     \new Staff \with {
       instrumentName = \markup{ "Alto range" }
     } {
-      \override Staff.NoteHead.color = #alto-pitch-range 
+      \override Staff.NoteHead.color = #alto-pitch-range
       \clef "treble" \treblenotes
     }
     \new Staff \with {
       instrumentName = \markup{ "Alto range" }
     } {
-      \override Staff.NoteHead.color = #alto-pitch-range  
+      \override Staff.NoteHead.color = #alto-pitch-range
       \clef "bass" \bassnotes
     }
   >>
@@ -1148,13 +1148,13 @@ treblenotes = {
     \new Staff \with {
       instrumentName = \markup{ "Tenor range" }
     } {
-      \override Staff.NoteHead.color = #tenor-pitch-range 
+      \override Staff.NoteHead.color = #tenor-pitch-range
       \clef "treble" \treblenotes
     }
     \new Staff \with {
       instrumentName = \markup{ "Tenor range" }
     } {
-      \override Staff.NoteHead.color = #tenor-pitch-range  
+      \override Staff.NoteHead.color = #tenor-pitch-range
       \clef "bass" \bassnotes
     }
   >>
@@ -1166,13 +1166,13 @@ treblenotes = {
     \new Staff \with {
       instrumentName = \markup{ "Bass range" }
     } {
-      \override Staff.NoteHead.color = #bass-pitch-range 
+      \override Staff.NoteHead.color = #bass-pitch-range
       \clef "treble" \treblenotes
     }
     \new Staff \with {
       instrumentName = \markup{ "Bass range" }
     } {
-      \override Staff.NoteHead.color = #bass-pitch-range  
+      \override Staff.NoteHead.color = #bass-pitch-range
       \clef "bass" \bassnotes
     }
   >>
