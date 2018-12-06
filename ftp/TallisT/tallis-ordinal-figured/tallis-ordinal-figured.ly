@@ -30,6 +30,7 @@
     %--Multiple instruments are separated by a comma
     mutopiainstrument = "Organ"
 }
+
 global = {
   \key d \major
   \time 4/4
@@ -69,7 +70,9 @@ lowerStaff = \relative c {
   g g, d' \breathe b |
   g d' a a |
   d2. \bar "|." \barNumberCheck #8
-}%---------------------------------------------------------------------
+}
+
+%---------------------------------------------------------------------
 %--Paper-size setting must be commented out or deleted upon submission.
 %--LilyPond engraves to paper size A4 by default.
 %--Uncomment the setting below to validate your typesetting
@@ -119,6 +122,7 @@ lowerStaff = \relative c {
     \layout{}
     \midi  { \tempo 4 = 42 }
 }
+
 %---------------------------------------------------------------------
 %--Refer to http://www.mutopiaproject.org/contribute.html
 %--for usage and possible values for header variables.
@@ -160,3 +164,4 @@ lowerStaff = \relative c {
     }
     tagline = ##f
 }
+
