@@ -24,10 +24,11 @@
  mutopiasource = "Paris: Porro, n.d. Plate 79."
  mutopiainstrument = "2 Guitars"
 
- footer = "Mutopia-2018/11/16-Draft"
+ comptitle = \markup { \concat { "Mozart: " \title } }
+ footer = "Mutopia-2018/12/07-2236"
  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
- comptitle = \markup { \concat { "Mozart: " \title } }
+
  myfoot = \markup{ \override #'(font-name . "DejaVu Sans,sans-serif") \column { \vspace #2 \abs-fontsize #8 \fill-line { \line { \footer } \line { \comptitle } \line { \arranger } } } }
 }
 
@@ -42,7 +43,7 @@
   print-first-page-number = ##f
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #not-first-page \fromproperty #'header:myfoot }
     }
   }
@@ -163,7 +164,7 @@ hiB   = ^\markup{ \smaller B}
 
 % tuplets
 hideTupletNumber = \override TupletNumber.stencil = ##f
-unhideTupletNumber = \revert TupletNumber.stencil 
+unhideTupletNumber = \revert TupletNumber.stencil
 hideTupletBracket = \override TupletBracket.bracket-visibility = ##f
 unhideTupletBracket = \revert TupletBracket.bracket-visibility
 
@@ -210,7 +211,7 @@ fe = \fermata
 #(define lo-pitch (ly:make-pitch -1 2 NATURAL) )
 
 % function to color notes that are near or out of range
-#(define (color-pitch-range grob) 
+#(define (color-pitch-range grob)
   (let ((pitch (ly:event-property (event-cause grob) 'pitch) ))
     (if pitch
       (if (ly:pitch<? max-pitch pitch) (x11-color 'red)
@@ -260,7 +261,7 @@ onThreeStrings =
 
 
 % standard options
-stdOpts = { 
+stdOpts = {
   \fingerLeft \rhRight \stringDown
   \mergeDifferentlyHeadedOn
   \mergeDifferentlyDottedOn
@@ -295,11 +296,11 @@ StffGrp =
 
 % for text section headings and paragraph macros
 \include "text-macros.ily"
-balloon-color = #red    % visible (while adjusting) 
+balloon-color = #red    % visible (while adjusting)
 %balloon-color = #white  % invisible (for publication)
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%  
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 themaA = \transpose c c' {
   \stdOpts
@@ -799,7 +800,7 @@ varVC = \transpose c c' {
   r8 <e-1>16 <g-0> <c-2>4 | %20
   \onOneString "5"
   <d-4>8\startTextSpan r <b,-1> r | %21
-  <c-2>8\stopTextSpan 
+  <c-2>8\stopTextSpan
   \onOneString "6"
   r <e,-0>\pI\startTextSpan r | %22
   <f,-1>8 r <g,-3> r | %23
@@ -813,7 +814,7 @@ varV = \StffGrp \varVA \varVC
 
 varVIA = \transpose c c' {
   \stdOpts
-  \time 2/4      
+  \time 2/4
   \tempo 4=60
   <c' g e>8-.\p\bpV r <c' g e>-. r | %1
   <g' e' c'>8-.\pIII r <g' e' c'>-. r | %2
@@ -1656,7 +1657,7 @@ varQ = \StffGrp \varQA \varQC
     ragged-bottom = ##t
     ragged-last-bottom = ##t
   }
-  
+
   \markuplist {
    \override-lines #'(hdg-absfontsize . 11)
    \override-lines #'(par-absfontsize . 11)
@@ -1672,7 +1673,7 @@ varQ = \StffGrp \varQA \varQC
       though not so-named by Mozart, have come to fit both
       senses of the word, due to the theme of these variations
       and the new order in which they are here presented.
-    }    
+    }
     \heading "An Exceedingly Popular Theme"
     \paragraph {
       The theme on which Mozart based these twelve variations
@@ -1686,7 +1687,7 @@ varQ = \StffGrp \varQA \varQC
     }
     \heading "Delaying Recognition"
     \paragraph {
-      Because of the theme's current familiarity, 
+      Because of the theme's current familiarity,
       the order of presentation in this edition
       has been purposely modified to delay its recognition, in the hope
       this will allow greater appreciation of the variations before
@@ -1765,9 +1766,9 @@ varQ = \StffGrp \varQA \varQC
       will sound an octave below the piano. In listing modifications
       below for each variation, octave modifications are with regard
       to the score, not the sound.  In roughly half of the variations,
-      the lower score is listed as being “raised”, making it closer to 
+      the lower score is listed as being “raised”, making it closer to
       the upper part, but in terms of sound it is the upper part
-      that has been lowered in pitch.  In the other cases, where the score has not 
+      that has been lowered in pitch.  In the other cases, where the score has not
       been changed for either part, the intervals are the same but the
       overall pitch is lower by an octave.
     }
@@ -1782,15 +1783,15 @@ varQ = \StffGrp \varQA \varQC
       contain several typographic errors which have been corrected in this
       guitar edition.  Most of these involve restoring a missing
       sharp accidental, and one other is an obvious wrong note in a series
-      of octave chords.  These corrections are included in 
+      of octave chords.  These corrections are included in
       the list of modifications for each variation where they are
       distinguished by the word “corrected”.  The affected pieces are
-      “2. Grazioso (Var. VII)”, “4. Arioso (Var. III)”, 
+      “2. Grazioso (Var. VII)”, “4. Arioso (Var. III)”,
       “5. Andante (Var. II)” and “13. Finale (Var. XII)”.
     }
     \heading "Guitar Notation"
     \paragraph {
-      Roman numerals above the staff indicate 
+      Roman numerals above the staff indicate
       hand positions on the fretboard and
       remain in effect until the next such indication. A barre is
       indicated by prefixing the Roman numeral with a small “b_” for
@@ -1808,9 +1809,9 @@ varQ = \StffGrp \varQA \varQC
       differ, a second marking will appear below the lower staff,
       as in “7. Legato (Var. VI)”.
     }
-    
+
     \section-segno
-    
+
     \heading "1. Preludio (Var. I)   0:48"
     \paragraph {
       Generally, expressive marks are from the original piano
@@ -1824,14 +1825,14 @@ varQ = \StffGrp \varQA \varQC
       through 12).
     }
     \paragraph {
-      M1: low C to E.  M8: altered ending to avoid low C. 
+      M1: low C to E.  M8: altered ending to avoid low C.
       M16: moved half note G up an octave.
     }
     \heading "2. Grazioso (Var. VII)   0:48"
     \paragraph {
-      For Guitar I this is a straightforward 
+      For Guitar I this is a straightforward
       C major scale exercise in seventh position,
-      but don't rush or measure 8 may surprise you; 
+      but don't rush or measure 8 may surprise you;
       be graceful. Guitar II could do the whole
       piece in first position, but the octave sequence has more consistent
       tone when kept on strings 4 and 6 as indicated.  Be careful to
@@ -1847,7 +1848,7 @@ varQ = \StffGrp \varQA \varQC
     \paragraph {
       Notice the C minor key signature; this is the only variation
       that is not in C major.  If it doesn't sound minor you're missing
-      the flats.  The theme is well disguised by the minor; 
+      the flats.  The theme is well disguised by the minor;
       no twinkle here.
     }
     \paragraph {
@@ -1870,9 +1871,9 @@ varQ = \StffGrp \varQA \varQC
       But don't overdo it; the effect should be a slight fall in pitch
       at the end of note rather than a real glissando.
       It's a way for the guitarist to blur two notes together that are
-      a bit too far apart to play simultaneously. 
+      a bit too far apart to play simultaneously.
     }
-    \paragraph { 
+    \paragraph {
       The slurs in the second half of this piece are
       standard descending slurs to finger 1 on the same string,
       but then finger 1 immediately moves up a fret to an articulated
@@ -1886,26 +1887,26 @@ varQ = \StffGrp \varQA \varQC
       M3: 2nd eighth corrected from G to G\sharp.
       M7: changed dotted eighth B sixteenth D to B quarter in lower part.
       M8: raised moving part an octave to avoid low C.
-      M13-15: multiple editors disagree on interesting last two notes of 
+      M13-15: multiple editors disagree on interesting last two notes of
       each of these measures.
       M15: omitted low A in second chord of lower part.
     }
     \heading "5. Andante (Var. II)   0:47"
     \paragraph {
       This is the first variation in which the audience may easily
-      recognize the theme, so 
+      recognize the theme, so
       Guitar 1 should allow Guitar II to dominate during the first
       eight bars and perhaps even the second, but both parts should
       proudly celebrate the chord progression in the last eight bars.
-      At the end of that progression, Guitar I may choose to omit 
-      the final A (enclosed by parentheses) if the stretch is 
+      At the end of that progression, Guitar I may choose to omit
+      the final A (enclosed by parentheses) if the stretch is
       uncomfortable.
       Because Guitar II needs to play loudly, all the notes should
       be articulated, not slurred, e.g. as suggested in the first
       measure.
     }
     \paragraph {
-      M1-24: initial notes of lower part extended to provide 
+      M1-24: initial notes of lower part extended to provide
       a separate bass voice.
       M1-8,17-24: lower part raised an octave.
       M2-16: upper part theme has been obfuscated by omission or
@@ -1921,17 +1922,17 @@ varQ = \StffGrp \varQA \varQC
     \heading "6. Adagio (Var. XI)   1:30"
     \paragraph {
       This one could be called the “Happy Birthday” variation
-      as it shares a five note sequence (“... happy 
+      as it shares a five note sequence (“... happy
       \italic { birth-day dear Name Here} ...”) in measures 6 and 7
       with the high point of that later well known nineteenth century tune.
       Guitar I might playfully exaggerate that comparison
-      (e.g. with a slight fermata over the A sixteenth note) to lead 
+      (e.g. with a slight fermata over the A sixteenth note) to lead
       the audience further astray from the real theme.
     }
     \paragraph {
       Curiously, this variation also has elements Mozart used several
       years later in the famous Andante movement of Concerto No. 21
-      in C Major (K.467).  Compare measures 1 and 6 of this variation to 
+      in C Major (K.467).  Compare measures 1 and 6 of this variation to
       measures 2 and 7 of that movement. The presence of the IV chord
       elsewhere in this variation, and its corresponding absence in
       the Andante, overpowers these small similarities, however.
@@ -2011,7 +2012,7 @@ varQ = \StffGrp \varQA \varQC
     \paragraph {
       Guitar II has three critical spots to watch.  Two are rhythm
       changes, at measures 5 and 21, where you switch to the downbeat.
-      The last is in measure 24 where you jump to a large barre in 
+      The last is in measure 24 where you jump to a large barre in
       eighth position in order to play the final two C notes.
       Alternatively, Guitar I could play the final high C, though
       that would be out of rhythm for that part.
@@ -2039,7 +2040,7 @@ varQ = \StffGrp \varQA \varQC
       comfortable guitar range, and is only included for completeness.
       No individual notes were changed, however the upper
       and lower parts are now much closer together than in
-      the original piano version, causing noticeable collisions in 
+      the original piano version, causing noticeable collisions in
       measures 3, 4, 9 and 14.  In the first two cases, the last
       quarter note in the upper part is immediately repeated by
       the middle note of a triplet in the lower part, which sounds
@@ -2082,9 +2083,9 @@ varQ = \StffGrp \varQA \varQC
       to a guitar's strength for tender reflection.
       Think quiet, calm, pensive, wistful, poignant remembrances,
       of both childhood simplicities (the soft high notes) and
-      complex retrospection (the \concat { C \sharp} et seq.). 
+      complex retrospection (the \concat { C \sharp} et seq.).
       Be calm, placid and slow.
-      Evoke peace.  But for the deep octaves, these are the original notes, 
+      Evoke peace.  But for the deep octaves, these are the original notes,
       transformed only by tempo, dynamics and attitude.
       This placid calm also provides a good contrast before the finale.
     }
@@ -2093,9 +2094,9 @@ varQ = \StffGrp \varQA \varQC
     }
     \heading "13. Finale (Var. XII)   1:57"
     \paragraph {
-      Prepare yourselves for a vigorous workout.  This piece is 
+      Prepare yourselves for a vigorous workout.  This piece is
       in 3/4 but it's no waltz; just more sixteenth notes
-      per measure, resulting in the longest performance time of 
+      per measure, resulting in the longest performance time of
       all these variations.
     }
     \paragraph {
@@ -2109,7 +2110,7 @@ varQ = \StffGrp \varQA \varQC
       you jump after measure 7 all the way to the coda at measure 17
       and end with measure 28 (24 plus a 4 measure flourish).
       Notice that the upper part has the same chord at all three
-      critical junctions, i.e. measures 1, 8 and 17, which may lead 
+      critical junctions, i.e. measures 1, 8 and 17, which may lead
       Guitar II to worry you've missed the jump.  Obviously both
       players need to be alert.
     }
@@ -2118,7 +2119,7 @@ varQ = \StffGrp \varQA \varQC
       of Guitar I: either a fully extended trill, a single flip or no trill
       at all.  In some cases the trills are followed by a slide to the
       next note or into a barre, to better reach following notes.
-      Slurring is appropriate in section B (measures 9-16) in the 
+      Slurring is appropriate in section B (measures 9-16) in the
       same manner described in the first piece, but Guitar II should
       articulate all notes in the other sections.
     }
@@ -2136,13 +2137,13 @@ varQ = \StffGrp \varQA \varQC
       an octave below, largely out of guitar range.
       M27: this part of the bass line is raised an octave.
     }
-    
+
     \section-segno
-    
+
     \heading "So Many Choices"
     \paragraph {
       Considering that attention spans of audiences and performers
-      (present company excluded) do not appear to be as long as in 
+      (present company excluded) do not appear to be as long as in
       Mozart's time, performers will likely be picking and choosing
       which of these thirteen scherzi to include in any given
       performance.  Even if the performance order of the selected pieces
@@ -2180,7 +2181,7 @@ varQ = \StffGrp \varQA \varQC
       best as a culmination of the other variations, from which
       it echoes multiple motifs but without much hint of the theme.
       It's also overall the fastest yet longest of the thirteen.
-      Both of these pieces are well-balanced between upper 
+      Both of these pieces are well-balanced between upper
       and lower parts.
     }
     \heading "Character Pieces"
@@ -2204,7 +2205,7 @@ varQ = \StffGrp \varQA \varQC
       The Legato is marked by a continuously undulating run,
       initially in the lower part and then in the upper.
       The Placido, though it starts with the childish theme,
-      matures quickly into a wistful chord study, 
+      matures quickly into a wistful chord study,
       capable of evoking complex retrospective emotions.
     }
     \heading "Interstitial Pieces"
@@ -2224,7 +2225,7 @@ varQ = \StffGrp \varQA \varQC
       The Grazioso begins like a simple scale exercise and then
       develops into a graceful pas de deux between the alternating high
       notes of the upper part and the strong leading octaves of the lower
-      part.  The Arioso is noted for its lyrical run of triplets, 
+      part.  The Arioso is noted for its lyrical run of triplets,
       almost like an operatic aria, and for the disagreement between
       editors regarding some of the spicier notes in the last
       four bars.
@@ -2232,7 +2233,7 @@ varQ = \StffGrp \varQA \varQC
     \heading "Theme Pieces"
     \paragraph {
       One of these is the actual theme and the other a closely matched
-      variation. Both are delightfully childlike and very short; 
+      variation. Both are delightfully childlike and very short;
       the shortest of all the thirteen pieces.  Both are also well-balanced
       between parts.
     }
@@ -2241,7 +2242,7 @@ varQ = \StffGrp \varQA \varQC
     \continue-paragraph {
       As simple as the Allegro is, Mozart nevertheless was able
       to suggest some implicit diminished and minor chords in his
-      arrangement, if you mentally combine isolated notes appearing 
+      arrangement, if you mentally combine isolated notes appearing
       in the same measure.
       The Fuga Maggiore, in utter contrast to the Fuga Minore,
       is as playful as a child's game, with sudden changes between
@@ -2249,7 +2250,7 @@ varQ = \StffGrp \varQA \varQC
     }
     \heading "Other Similarities"
     \paragraph {
-      When selecting pieces for a performance program, there are 
+      When selecting pieces for a performance program, there are
       other similarities among pieces that you may wish to consider,
       whether to exhibit them as motifs or avoid them as redundancies.
     }
@@ -2289,12 +2290,12 @@ varQ = \StffGrp \varQA \varQC
       sixteenths, while the Fuga Minore, Adagio, Accelerando
       and Placido have their own patterns.
     }
-    
+
     \section-segno
-    
+
     %\balloony #5
-    
-    
+
+
     \heading "Performance Programs"
     \paragraph {
       Several sample programs are suggested below that address
@@ -2302,14 +2303,14 @@ varQ = \StffGrp \varQA \varQC
       just the net playing time, so add more if you plan to
       talk about individual pieces.
     }
-    
+
     \paragraph {
       As mentioned before, if you play only one, let it be
       the Accelerando, for the briefest of all programs:
     }
     \bullet #8 \dotb { \bold 0:28 }
     \bullet #16 \cirb { 8. Accelerando (Var. V)   0:28 }
-    
+
     \paragraph {
       You can almost accomplish a guess-the-theme program with
       three pieces.  The first two establish the variety and
@@ -2319,9 +2320,9 @@ varQ = \StffGrp \varQA \varQC
     \bullet #16 \cirb { 1. Preludio (Var. I)   0:48 }
     \bullet #16 \cirb { 3. Fuga Minore (Var. VIII)   0:43 }
     \bullet #16 \cirb { 8. Accelerando (Var. V)   0:28 }
-    
+
     \paragraph {
-      Adding two more pieces enhances the guess-the-theme program 
+      Adding two more pieces enhances the guess-the-theme program
       with a hint (the Andante) and a false lead (the Adagio's
       Happy Birthday):
     }
@@ -2331,7 +2332,7 @@ varQ = \StffGrp \varQA \varQC
     \bullet #16 \cirb { 5. Andante (Var. II)   0:47 }
     \bullet #16 \cirb { 6. Adagio (Var. XI)   1:30 }
     \bullet #16 \cirb { 8. Accelerando (Var. V)   0:28 }
-    
+
     \paragraph {
       The following set makes a nice trailer for the above program,
       or it might be used alone if you're not concerned about
@@ -2341,7 +2342,7 @@ varQ = \StffGrp \varQA \varQC
     \bullet #16 \cirb { 11. Fuga Maggiore (Var. IX)   0:24 }
     \bullet #16 \cirb { 12. Placido (Var. X)   0:69 }
     \bullet #16 \cirb { 13. Finale (Var. XII)   1:57 }
-    
+
     \paragraph {
       For an extended guess-the-theme program that prolongs
       the question and celebrates the answer, combine the two
@@ -2360,9 +2361,9 @@ varQ = \StffGrp \varQA \varQC
     \bullet #16 \cirb { 11. Fuga Maggiore (Var. IX)   0:24 }
     \bullet #16 \cirb { 12. Placido (Var. X)   0:69 }
     \bullet #16 \cirb { 13. Finale (Var. XII)   1:57 }
-    
+
     %\balloony #1
-    
+
     \paragraph {
       Alternatively, you can emphasize
       the theme  up front by starting with the Allegro and
@@ -2376,14 +2377,14 @@ varQ = \StffGrp \varQA \varQC
     \bullet #16 \cirb { 11. Fuga Maggiore (Var. IX)   0:24 }
     \bullet #16 \cirb { 12. Placido (Var. X)   0:69 }
     \bullet #16 \cirb { 8. Accelerando (Var. V)   0:28 }
-    
+
     \paragraph {
       Finally, here is the program in the original order Mozart intended.
       It starts by pairing the related but complementary Preludio
       and Andante, with their undulating sixteenths in the upper
       and lower parts respectively, both of which are repeated
       in the Finale.  Notably, this order also nicely juxtaposes the Fuga
-      Minore and Fuga Maggiore to emphasize their contrast, 
+      Minore and Fuga Maggiore to emphasize their contrast,
       like night and day.
     }
     \bullet #8 \dotb { \bold 11:11 }
@@ -2400,10 +2401,10 @@ varQ = \StffGrp \varQA \varQC
     \bullet #16 \cirb { Var. X "      " 12. Placido   0:69 }
     \bullet #16 \cirb { Var. XI "     " 6. Adagio   1:30 }
     \bullet #16 \cirb { Var. XII "   " 13. Finale   1:57 }
-    
-    
+
+
     \section-coda
-    
+
     \heading "Acknowledgements"
     \paragraph {
       This edition for guitar was based primarily on the piano
@@ -2418,7 +2419,7 @@ varQ = \StffGrp \varQA \varQC
     \paragraph {
       References in these annotations to Benjamin Britten's work
       come from multiple public concerts by Nicolò Spera,
-      Director, Ritter Family Classical Guitar Program, 
+      Director, Ritter Family Classical Guitar Program,
       and Assistant Professor of Guitar in the College of Music
       at the University of Colorado, Boulder.  He has freely
       shared his love and understanding of Britten's work
