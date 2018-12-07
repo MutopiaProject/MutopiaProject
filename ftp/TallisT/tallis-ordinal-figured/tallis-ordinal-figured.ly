@@ -1,12 +1,12 @@
 \version "2.19.82"
 \paper {
     markup-system-spacing =
-    #'((basic-distance . 12) 
+    #'((basic-distance . 12)
        (minimum-distance . 8)
        (padding . 1)
        (stretchability . 10)) % default 60
     system-system-spacing =
-    #'((basic-distance . 12) 
+    #'((basic-distance . 12)
        (minimum-distance . 8)
        (padding . 1)
        (stretchability . 3)) % default 60
@@ -29,6 +29,14 @@
     %--A list of instruments can be found at http://www.mutopiaproject.org/browse.html#byInstrument
     %--Multiple instruments are separated by a comma
     mutopiainstrument = "Organ"
+    maintainer = "Thomas Hugel"
+    maintainerEmail = "thomas.hugel -a|t- yandex.com"
+    maintainerWeb = "https://thomas-hugel.gitlab.io/"
+    license = "Creative Commons Attribution-ShareAlike 4.0"
+    year = "2018"
+    footer = "Mutopia-2018/12/07-2237"
+    copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2018 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+    tagline = ##f
 }
 
 global = {
@@ -88,7 +96,7 @@ lowerStaff = \relative c {
     top-margin = 8\mm                              %-minimum: 8 mm
     top-markup-spacing.basic-distance = #6         %-dist. from bottom of top margin to the first markup/title
     top-system-spacing.basic-distance = #12        %-dist. from top margin to system in pages with no titles
-    last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block 
+    last-bottom-spacing.padding = #2               %-min #1.5 -pads music from copyright block
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 }
@@ -101,7 +109,7 @@ lowerStaff = \relative c {
 \layout {
   \context {
     \PianoStaff \override VerticalAxisGroup.staff-staff-spacing = % .basic-distance = #50
-      #'((basic-distance . 2) 
+      #'((basic-distance . 2)
          (minimum-distance . 2)
          (padding . 1)
          (stretchability . 5)) % default 60
@@ -109,7 +117,7 @@ lowerStaff = \relative c {
   \context {
     \FiguredBass \override VerticalAxisGroup.staff-affinity = #CENTER
   }
-  
+
 }
 
 \score {
@@ -122,46 +130,3 @@ lowerStaff = \relative c {
     \layout{}
     \midi  { \tempo 4 = 42 }
 }
-
-%---------------------------------------------------------------------
-%--Refer to http://www.mutopiaproject.org/contribute.html
-%--for usage and possible values for header variables.
-%---------------------------------------------------------------------
-\header {
-    maintainer = "Thomas Hugel"
-    maintainerEmail = "thomas.hugel -a|t- yandex.com"
-    maintainerWeb = "https://thomas-hugel.gitlab.io/"
-    license = "Creative Commons Attribution-ShareAlike 4.0"
-    year = "2018"
-
-    % Footer, tagline, and copyright blocks are included here for reference
-    % and spacing purposes only.  There's no need to change these.
-    % These blocks will be overridden by Mutopia during the publishing process.
-    % footer = "Mutopia-2018"
-    copyright = \markup {
-      \override #'(baseline-skip . 0 )
-      \right-column {
-        \sans \bold \with-url #"http://www.MutopiaProject.org" {
-          \abs-fontsize #9 "Mutopia " \concat {
-            \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project "
-          }
-        }
-      } \override #'(baseline-skip . 0 ) \center-column {
-        \abs-fontsize #11.9 \with-color #grey \bold { 
-          \char ##x01C0 \char ##x01C0
-        } 
-      } \override #'(baseline-skip . 0 ) \column { 
-        \abs-fontsize #8 \sans \concat {
-          " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond" " by " \maintainer " in " \year "."
-        } \concat {
-          \concat {
-            \abs-fontsize #8 \sans{
-              " Licensed under " \license " (CC BY-SA 4.0)."
-            }
-          } \abs-fontsize #13 \with-color #white \char ##x01C0
-        }
-      }
-    }
-    tagline = ##f
-}
-
