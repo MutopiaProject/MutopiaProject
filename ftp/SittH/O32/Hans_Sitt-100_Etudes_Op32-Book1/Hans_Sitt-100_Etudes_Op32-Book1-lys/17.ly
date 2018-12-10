@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-\version "2.10.16"
+\version "2.12.3"
 
 dezessete = \relative a{
 	\set Staff.midiInstrument = "violin"
@@ -15,7 +15,7 @@ dezessete = \relative a{
   | e gis b e-4 gis, b e-0 gis   \noBreak
   | b, dis fis b a fis b a   \noBreak
   | gis a b a gis fis e d   \noBreak
-  | b (e-4) b a-0 gis fis e d-0 \break  \noPageBreak
+  | b (e-4) b a-0 gis (fis) e d-0 \break  \noPageBreak
 %3
   | cis-> (e) a cis e-4-> (cis) a e   \noBreak
   | d a'-0 e a-0 fis a-0 d, a'-0   \noBreak
@@ -85,7 +85,7 @@ dezessete = \relative a{
   | e gis b e-4 gis, b e-0 gis   \noBreak
   | b, dis fis b a fis b a    \noBreak
   | gis a b a gis fis e d  \noBreak
-  | b (e-0) b a gis fis e d \break \noPageBreak
+  | b (e-0) b a gis (fis) e d \break \noPageBreak
 %17
   | cis-> (e) a cis e-4-> (cis) a g!   \noBreak
   | e a-0 fis a-0 g! a-0 e a-0   \noBreak

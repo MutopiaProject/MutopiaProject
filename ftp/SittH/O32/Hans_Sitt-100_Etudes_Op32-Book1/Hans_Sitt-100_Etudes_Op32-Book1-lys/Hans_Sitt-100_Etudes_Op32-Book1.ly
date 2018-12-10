@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-\version "2.10.16"
+\version "2.12.3"
 
 \include "defs.ly"
 \include "1.ly"
@@ -26,7 +26,7 @@
 
 \header {
 
-% -*- Mutopia Project-*--*- -*- -*- -*- -*- 
+% -*- Mutopia Project-*--*- -*- -*- -*- -*-
 mutopiatitle = "100 Etudes"
  mutopiacomposer = "SittH"
  mutopiaopus = "32"
@@ -34,33 +34,30 @@ mutopiatitle = "100 Etudes"
  date = "19th C"
  source = "Schirmer, 1907"
  style = "Romantic"
- copyright = "Creative Commons Attribution-ShareAlike 2.5"
  maintainer = "Erasmo Fernandes"
  maintainerEmail = "erasmo@violinista.org"
  maintainerWeb = "http://erasmo.info"
  lastupdated = "2007/Feb/13"
-% -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- 
+% -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*- -*-
 
 title = "Hans Sitt"
 subtitle  = "100 Etudes, Op. 32"
 subsubtitle = "Book 1"
 oddheader = "Hans Sitt - 100 Etudes, Op. 32 - book 1"
-copyright =  \markup \center-align \fontsize #-3 {\line { Published under the \with-url #"http://creativecommons.org/licenses/by-sa/2.5" Creative Commons Attribution-ShareAlike license} \line { "Last update:" \lastupdated }    } 
- footer = "Mutopia-2007/02/19-929"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2007. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 2.5 License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/2.5" http://creativecommons.org/licenses/by-sa/2.5 } } } }
+license = "Creative Commons Attribution-ShareAlike 2.5"
+footer = "Mutopia-2018/12/05-929"
+copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2018 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/2.5/" "Creative Commons Attribution ShareAlike 2.5 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+tagline = ##f
 }
-
-
-\layout {
 
 #(set-global-staff-size 19)
-}
 
 \paper {
 print-page-number = ##t
 topmargin = 1 \mm
 bottommargin= 4 \mm
-foot-separation = 4 \mm
+% foot-separation = 4 \mm
+last-bottom-spacing = 4\mm
 
 oddHeaderMarkup = \markup {
  \line {
@@ -75,7 +72,7 @@ evenHeaderMarkup = \markup {
     \line {
       \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string
       \hspace #42 \on-the-fly #not-first-page \fontsize #-3 \fromproperty #'header:oddheader
-  
+
     }
 }
 
@@ -84,14 +81,14 @@ oddFooterMarkup = \markup {
      \line {
       \hspace #55 \on-the-fly #first-page \tiny \fromproperty #'header:copyright
 
-    } 
+    }
       \hspace #-10 \on-the-fly #not-first-page \on-the-fly #not-last-page \tiny \with-url #"http://mutopiaproject.org"  "http://mutopiaproject.org"
-      \hspace #8  \on-the-fly #last-page \fontsize #-5 \fromproperty #'header:tagline 
+      \hspace #8  \on-the-fly #last-page \fontsize #-5 \fromproperty #'header:tagline
 
   }
 
 evenFooterMarkup = \oddFooterMarkup
-} 
+}
 
 
 
@@ -332,5 +329,3 @@ tempoWholesPerMinute = #(ly:make-moment 156 8)
 }
 
 }
-
-
