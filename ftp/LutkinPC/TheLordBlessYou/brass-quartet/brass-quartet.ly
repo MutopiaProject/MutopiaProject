@@ -23,7 +23,7 @@
  mutopiadate = "1900"
  mutopiasource = "Chicago: Clayton F. Summy Company" % IMSLP525535
  mutopiainstrument = "2 trumpets, trombone and tuba"
- moreInfo = "In memory of John Paul Goodman (1943-2018), a widely beloved choir director in Colorado who always used this song as a farewell and godspeed, most poignantly whenever a fellow choir member passed away. An <a href=\"http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2235\">arrangement for two guitars</a> is also available."
+ moreInfo = "In memory of John Paul Goodman (1943-2018), a widely beloved choir director in Colorado who always used this song as a farewell and godspeed, most poignantly whenever a fellow choir member passed away. An <a href='http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2235'>arrangement for two guitars</a> is also available."
 
  footer = "Mutopia-2018/12/09-Draft"
  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
