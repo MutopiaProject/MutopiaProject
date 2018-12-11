@@ -25,10 +25,10 @@
  mutopiainstrument = "2 trumpets, trombone and tuba"
  moreInfo = "In memory of John Paul Goodman (1943-2018), a widely beloved choir director in Colorado who always used this song as a farewell and godspeed, most poignantly whenever a fellow choir member passed away. An <a href='http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2235'>arrangement for two guitars</a> is also available."
 
- footer = "Mutopia-2018/12/09-Draft"
+ comptitle = \markup { \concat { \composer ": " \title } }
+ footer = "Mutopia-2018/12/11-2239"
  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
  tagline = ##f
- comptitle = \markup { \concat { \composer ": " \title } }
  myfoot = \markup{ \override #'(font-name . "DejaVu Sans,sans-serif") \column { \vspace #2 \abs-fontsize #8 \fill-line { \line { \footer } \line { \comptitle } \line { \arranger } } } }
 }
 
@@ -44,7 +44,7 @@
   print-first-page-number = ##f
   evenHeaderMarkup = \oddHeaderMarkup % so all page numbers to right
   oddFooterMarkup = \markup { \column {
-      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } } 
+      \fill-line { \on-the-fly #first-page \column { \vspace #2 \fromproperty #'header:copyright } }
       \fill-line { \on-the-fly #not-first-page \fromproperty #'header:myfoot }
     }
   }
@@ -54,7 +54,7 @@
 
 
 % function to color notes that are near or out of range
-#(define (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch) 
+#(define (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)
   (let ((pitch (ly:event-property (event-cause grob) 'pitch) ))
     (if pitch
       (if (ly:pitch<? max-pitch pitch) (x11-color 'red)
@@ -64,24 +64,24 @@
 ) ) ) ) ) ) )
 
 % pitch limits for brass quartet
-% absolute max and min attainable 
-% comfortably attainable hi and lo 
+% absolute max and min attainable
+% comfortably attainable hi and lo
 
-#(define (trumpet-Bb-pitch-range grob) 
+#(define (trumpet-Bb-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  2 3 SHARP  ) )  ; F#6
          (hi-pitch  (ly:make-pitch  1 6 FLAT   ) )  ; Bb5
          (lo-pitch  (ly:make-pitch -1 2 NATURAL) )  ; E3
          (min-pitch (ly:make-pitch -1 2 NATURAL) )) ; E3
      (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)))
 
-#(define (trombone-Bb-pitch-range grob) 
+#(define (trombone-Bb-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  1 1 NATURAL) )  ; D5
          (hi-pitch  (ly:make-pitch  0 3 NATURAL) )  ; F4
          (lo-pitch  (ly:make-pitch -2 6 FLAT   ) )  ; Bb2
          (min-pitch (ly:make-pitch -2 6 FLAT   ) )) ; Bb2
      (color-pitch-range grob max-pitch hi-pitch lo-pitch min-pitch)))
 
-#(define (tuba-F-pitch-range grob) 
+#(define (tuba-F-pitch-range grob)
    (let ((max-pitch (ly:make-pitch  0 5 NATURAL) )  ; A4
          (hi-pitch  (ly:make-pitch  0 3 NATURAL) )  ; F4
          (lo-pitch  (ly:make-pitch -3 6 NATURAL) )  ; B1
@@ -115,7 +115,7 @@ soprano = \transpose c d {
   d'4 f' e'4. \breathe g'8 | %2
   g'4 e'8 g' c''8. b'16 a'8 e' | %3
   g'4 fis' g' r | %4
-  
+
   r8 e' f' e' a'4 r | %5
   r8 g' a' g' c'' r r g' | %6
   g'8 e' g' c'' e''8. c''16 g'8 e' | %7
@@ -125,7 +125,7 @@ soprano = \transpose c d {
   r4 r8 a' g'4. c'8 | %11
   a'8 g' r4 g' f' | %12
   e'2 d' | %13
-  
+
   c'4 r r2 | %14
   R1 | %15
   r4 b'\( e'' d'' | %16
@@ -137,7 +137,7 @@ soprano = \transpose c d {
   g'1 | %22
   g'1\fermata | %23
   \bar "|."
-  
+
 }
 
 alto = \transpose c d {
@@ -148,7 +148,7 @@ alto = \transpose c d {
   c'4 b c'4. \breathe e'8 | %2
   e'4 c'8 e' e'8. e'16 e'8 e' | %3
   d'2 d'4 r | %4
-  
+
   r8 cis' cis' cis' d'4 r | %5
   r8 d' d' d' c' g' g' f' | %6
   e'8 c' e'4 e'8. e'16 e'8 c' | %7
@@ -158,7 +158,7 @@ alto = \transpose c d {
   r4 r8 c'8 c'4. c'8 | %11
   c'8 c' r4 cis' d' | %12
   c'!2 b | %13
-  
+
   c'4 r r2 | %14
   r4 c'^\( f' e' | %15
   d'2\) e'~^\( | %16
@@ -180,7 +180,7 @@ tenor = \transpose c c {
   a4 g g4. \breathe c'8 | %2
   c'4 g8 g a8. gis16 a8 a | %3
   b4 a b r | %4
-  
+
   r8 a a a a4 r | %5
   r8 b c' b c' g a b | %6
   c'4 c' c'8. c'16 c'8 c' | %7
@@ -190,7 +190,7 @@ tenor = \transpose c c {
   r4 r8 c' bes4. bes8 | %11
   bes8 bes r4 a a | %12
   g2. f4 | %13
-  
+
   e4 g\( c' b | %14
   a4\) a\( d' c' | %15
   b2\) g4\( a8 b | %16
@@ -202,7 +202,7 @@ tenor = \transpose c c {
   f!2\) f | %22
   e1\fermata | %23
   \bar "|."
-  
+
 }
 
 bass = \transpose c c {
@@ -213,7 +213,7 @@ bass = \transpose c c {
   f,4 g, c4. \breathe c8 | %2
   c4 c8 c a,8. b,16 c8 c | %3
   d2\( g8\) \breathe g\< g g\! | %4
-  
+
   g2\(\> f8\)\! \breathe f\< f f\! | %5
   f2\(\> e8\)\! \breathe e d4 | %6
   c8 c' g e c8. g16 g8 g | %7
@@ -223,7 +223,7 @@ bass = \transpose c c {
   r4 r8 f8 e4. e8 | %11
   f8 e r4 e4 d | %12
   g,2 g, | %13
-  
+
   c4 r c\( d8 e | %14
   f2\) d4\( e8 f | %15
   g2\) e4\( f8 g | %16
@@ -235,7 +235,7 @@ bass = \transpose c c {
   d2\) g, | %22
   c1\fermata | %23
   \bar "|."
-  
+
 }
 
 % layout control for brass quartet score
@@ -372,7 +372,7 @@ tempO = {
     \new Staff \with {
       instrumentName = \markup{ "Trumpet I" }
     } {
-      \override Staff.NoteHead.color = #trumpet-Bb-pitch-range 
+      \override Staff.NoteHead.color = #trumpet-Bb-pitch-range
       <<
         \new Voice = "soprano" \with { \consists "Ambitus_engraver" } { \soprano }
         \pageQuartet
@@ -382,7 +382,7 @@ tempO = {
     \new Staff \with {
       instrumentName = \markup{ "Trumpet II" }
     } {
-      \override Staff.NoteHead.color = #trumpet-Bb-pitch-range 
+      \override Staff.NoteHead.color = #trumpet-Bb-pitch-range
       <<
         \new Voice = "alto" \with { \consists "Ambitus_engraver" } { \alto }
         \crescendi
@@ -391,7 +391,7 @@ tempO = {
     \new Staff \with {
       instrumentName = \markup{ "Trombone" }
     } {
-      \override Staff.NoteHead.color = #trombone-Bb-pitch-range  
+      \override Staff.NoteHead.color = #trombone-Bb-pitch-range
       <<
         \new Voice = "tenor" \with { \consists "Ambitus_engraver" } { \tenor }
         \crescendi
@@ -400,7 +400,7 @@ tempO = {
     \new Staff \with {
       instrumentName = \markup{ "Tuba" }
     } {
-      \override Staff.NoteHead.color = #tuba-F-pitch-range  
+      \override Staff.NoteHead.color = #tuba-F-pitch-range
       <<
         \new Voice = "bass" \with { \consists "Ambitus_engraver" } { \bass }
         \crescendi
@@ -431,14 +431,14 @@ tempO = {
     }
     \new Staff \with {
       midiInstrument = "trombone"
-    } { 
+    } {
       <<
         { \tenor }
       >>
     }
     \new Staff \with {
       midiInstrument = "tuba"
-    } { 
+    } {
       <<
         { \bass }
       >>
@@ -452,7 +452,7 @@ tempO = {
   \new Staff \with {
     instrumentName = \markup{ "Trumpet I" }
   } {
-    %\override Staff.NoteHead.color = #trumpet-Bb-pitch-range 
+    %\override Staff.NoteHead.color = #trumpet-Bb-pitch-range
     <<
       \new Voice = "soprano" \with { \consists "Ambitus_engraver" } { \soprano }
       { \pageParts }
@@ -467,7 +467,7 @@ tempO = {
   \new Staff \with {
     instrumentName = \markup{ "Trumpet II" }
   } {
-    %\override Staff.NoteHead.color = #trumpet-Bb-pitch-range 
+    %\override Staff.NoteHead.color = #trumpet-Bb-pitch-range
     <<
       \new Voice = "alto" \with { \consists "Ambitus_engraver" } { \alto }
       { \pageParts }
@@ -482,7 +482,7 @@ tempO = {
   \new Staff \with {
     instrumentName = \markup{ "Trombone" }
   } {
-    %\override Staff.NoteHead.color = #trombone-Bb-pitch-range  
+    %\override Staff.NoteHead.color = #trombone-Bb-pitch-range
     <<
       \new Voice = "tenor" \with { \consists "Ambitus_engraver" } { \tenor }
       { \pageParts }
@@ -497,7 +497,7 @@ tempO = {
   \new Staff \with {
     instrumentName = \markup{ "Tuba" }
   } {
-    %\override Staff.NoteHead.color = #tuba-F-pitch-range  
+    %\override Staff.NoteHead.color = #tuba-F-pitch-range
     <<
       \new Voice = "bass" \with { \consists "Ambitus_engraver" } { \bass }
       { \pageParts }
