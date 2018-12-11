@@ -29,10 +29,10 @@
      id="namedview501"
      showgrid="false"
      inkscape:zoom="0.92636616"
-     inkscape:cx="258.71836"
-     inkscape:cy="244.18888"
-     inkscape:window-x="0"
-     inkscape:window-y="-23"
+     inkscape:cx="382.89808"
+     inkscape:cy="303.623"
+     inkscape:window-x="274"
+     inkscape:window-y="40"
      inkscape:window-maximized="0"
      inkscape:current-layer="svg994" />
   <metadata
@@ -43,7 +43,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -3254,12 +3254,12 @@
   <text
      xml:space="preserve"
      style="font-style:normal;font-weight:normal;font-size:6.02265787px;line-height:1.25;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;stroke-width:0.15056644"
-     x="24.518034"
+     x="33.862564"
      y="87.356209"
      id="text4209"><tspan
        sodipodi:role="line"
        id="tspan4207"
-       x="24.518034"
+       x="33.862564"
        y="87.356209"
-       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.61359453px;font-family:Garuda;-inkscape-font-specification:Garuda;stroke-width:0.15056644">(Other variations omitted for brevity)</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:3.61359453px;font-family:Garuda;-inkscape-font-specification:Garuda;stroke-width:0.15056644">(Plus other variations ...)</tspan></text>
 </svg>
