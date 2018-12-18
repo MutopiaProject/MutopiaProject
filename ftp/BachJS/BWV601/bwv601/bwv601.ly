@@ -1,4 +1,5 @@
-﻿\version "2.8.2"
+\version "2.18.0"
+\include "deutsch.ly"
 
 \header {
    mutopiatitle = "Herr Christ der ein'ge Gottes Sohn"
@@ -10,40 +11,38 @@
    copyright = "Public Domain"
    maintainer = "Urs Metzger"
    maintainerEmail = "urs@ursmetzger.de"
-   lastupdated = "2006/May/21"
+   lastupdated = "2018/December/18"
 
    title = \markup {
-      \center-align {
-         \fontsize #0 "Herr Christ der ein'ge Gottes Sohn"
-         \fontsize #-2 "oder"
-         \fontsize #0 "Herr Gott nun sey gepreiset"
+      \center-column {
+         \fontsize #-1 "Herr Christ der ein'ge Gottes Sohn"
+         \fontsize #-3 "oder"
+         \fontsize #-1 "Herr Gott nun sey gepreiset"
       }
    }
    composer = "Johann Sebastian Bach"
    opus="BWV 601"
- footer = "Mutopia-2006/05/23-770"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+   footer = "Mutopia-2006/05/23-770"
+   tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
-\include "deutsch.ly"
 
 global = {
    \key a \major
    \time 4/4
-   #(set-accidental-style 'default)
+   \partial 4
 }
 
 #(set-default-paper-size "a4" 'landscape)
-#(set-global-staff-size 18)
 
-halsup = { \stemUp \tieUp }
-halsdown = { \stemDown \tieDown }
+halsup = { \stemUp \tieUp \dotsUp }
+halsdown = { \stemDown \tieDown \dotsDown }
 
 sopran = {
    \new Voice \relative a' {
       \global
       \halsup
-      \partial 4 a4
+      a4
       \repeat volta 2 {
          a8. h16 cis4 h a
          gis4 gis fis\fermata cis'
@@ -83,11 +82,11 @@ alt = {
    \new Voice \relative a {
       \global
       \halsdown
-      \partial 4 a16\rest a cis a
+      a16\rest a cis a
       \repeat volta 2 {
          d4 e8. fis16 gis fis gis8~ gis16 gis fis8~
          fis16 fis eis fis eis8. eis16 fis eis fis gis a4~
-         a16 a h a gis fis e! d cis8 e fis16 d e h
+         a16 a h a gis fis e d cis8 e fis16 d e h
       }
       \alternative {
          {
@@ -120,11 +119,11 @@ alt = {
 tenor = {
    \new Voice \relative d {
       \global
-      \partial 4 r4
+      r4
       \repeat volta 2 {
          r16 d fis d a'4 r16 h e d cis8. cis16
-         d16 gis, h gis cis h cis gis a gis a eis fis cis' fis e
-         d16 cis h8~ h h~ h a~ a gis
+         d16 gis, h gis cis h cis gis a gis a eis fis cis' fis e!
+         d16 cis h8~ h h~ h a4 gis8
       }
       \alternative {
          {
@@ -139,7 +138,7 @@ tenor = {
          a,16 cis e cis fis a cis a h d, fis d gis h d h
          cis e, gis e a cis e cis fis e fis dis h8 e~
          e16 d! cis h a4~ a8 gis a16 cis fis e!
-         d cis h a gis fis eis8 fis16 cis a cis fis, cis'' fis e!
+         d! cis h a gis fis eis8 fis16 cis a cis \stemUp fis, \stemDown cis'' fis e!
          d16 cis h cis d8. d16 cis h a8~ a gis
       }
       %% Takt 10 ==================================================
@@ -173,7 +172,7 @@ pedal = {
    \global
    \clef "bass"
    \relative a, {
-      \partial 4 r4
+      r4
       \repeat volta 2 {
          r4 r16 a cis a e'8 e, r16 fis' a fis
          h8 h, r16 cis eis cis fis8 fis, r16 fis' a fis
@@ -211,18 +210,18 @@ pedal = {
    <<
       \new PianoStaff
       {
-         \set PianoStaff.instrument = \markup { \large "Manual" }
+         \set PianoStaff.instrumentName = \markup { \large "Manual" }
          <<
             \new Staff = right { \right }
             \new Staff = left { \left }
          >>
       }
       \new Staff {
-         \set Staff.instrument = \markup { \large "Pedal" \hspace #1.8 }
+         \set Staff.instrumentName = \markup { \large "Pedal" \hspace #1.8 }
          \pedal
       }
    >>
-   \layout { }
+   \layout { indent = 19 \mm }
 }
 
 
@@ -262,7 +261,8 @@ pedal = {
       >>
    }
 
-   \midi{
-      \tempo 4 = 64
-   }
+
+  \midi {
+    \tempo 4 = 64
+  }
 }
