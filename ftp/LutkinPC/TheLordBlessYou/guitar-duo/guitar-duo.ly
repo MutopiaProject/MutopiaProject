@@ -23,7 +23,7 @@
  mutopiadate = "1900"
  mutopiasource = "Chicago: Clayton F. Summy Company" % IMSLP525535
  mutopiainstrument = "2 guitars and 2 optional voices"
- moreInfo = "In memory of John Paul Goodman (1943-2018), a widely beloved choir director in Colorado who always used this song as a farewell and godspeed, most poignantly whenever a fellow choir member passed away.  This edition allows two guitars to play all the notes in Lutkin's original version for SATB choir.  Reduced vocal parts are also provided in case the two guitarists also choose to sing as a duet (either tenor-bass, soprano-alto or soprano-bass). The LilyPond source file also contains snippets to (a) color any nearly out of range notes and (b) adjust formatting in response to paper size."
+ moreInfo = "In memory of John Paul Goodman (1943-2018), a widely beloved choir director in Colorado who always used this song as a farewell and godspeed, most poignantly whenever a fellow choir member passed away.  This edition allows two guitars to play all the notes in Lutkin's original version for SATB choir.  Reduced vocal parts are also provided in case the two guitarists also choose to sing as a duet (either tenor-bass, soprano-alto or soprano-bass). The LilyPond source file also contains snippets to (a) color any nearly out of range notes and (b) adjust formatting in response to paper size.  An <a href='http://www.mutopiaproject.org/cgibin/piece-info.cgi?id=2239'>arrangement for brass quartet</a> is also available."
 
  comptitle = \markup { \concat { \composer ": " \title } }
  footer = "Mutopia-2018/12/06-2235"
