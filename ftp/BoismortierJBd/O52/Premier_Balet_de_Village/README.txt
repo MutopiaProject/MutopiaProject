@@ -10,7 +10,7 @@ compare the guitar continuo with the keyboard original.
 
 This is the first installment in what I hope will be a
 Mutopia collection of pieces for flute, violin, and guitar.
-Except for having the placing the parts files in a separate
+Except for placing the parts files in a separate
 folder, the file structure follows the Mutopia ensemble
 template from https://github.com/MutopiaProject/MutopiaProject.
 
