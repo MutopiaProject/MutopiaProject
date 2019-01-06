@@ -1,3 +1,4 @@
+\version "2.18.0"
 % maybe change this to myBreak = { }
 myBreak =
 {
@@ -5,89 +6,89 @@ myBreak =
 }
 myMoveUpBeside =
 {
-  \once \override Fingering #'extra-offset = #'(-1.5 . 3.3)
+  \once \override Fingering.extra-offset = #'(-1.5 . 3.3)
 }
 myMoveLeftPastSharp =
 {
-  \once \override Fingering #'extra-offset = #'(-1.0 . 0.0)
+  \once \override Fingering.extra-offset = #'(-1.0 . 0.0)
 }
 myMoveLessUpLeft =
 {
-  \once \override Fingering #'extra-offset = #'(-2.5 . 3.9)
+  \once \override Fingering.extra-offset = #'(-2.5 . 3.9)
 }
 myMoveUnder =
 {
-  \once \override Fingering #'extra-offset = #'(0.0 . -6)
+  \once \override Fingering.extra-offset = #'(0.0 . -6)
 }
 myMoveUpLeft =
 {
-  \once \override Fingering #'extra-offset = #'(-1.5 . 4.5)
+  \once \override Fingering.extra-offset = #'(-1.5 . 4.5)
 }
 
 mySetDynamicPadding =
 {
-  \override DynamicLineSpanner #'staff-padding = #4.0
+  \override DynamicLineSpanner.staff-padding = #4.0
 }
 mySetDynamicExtent =
 {
-  \override DynamicLineSpanner #'Y-extent = #'(-0.2 . 0.2)
+  \override DynamicLineSpanner.Y-extent = #'(-0.2 . 0.2)
 }
 
 mySetTextSpannerI =
 {
-  \override TextSpanner #'(bound-details left text) = #"I "
+  \override TextSpanner.bound-details.left.text = #"I "
 }
 mySetTextSpannerII =
 {
-  \override TextSpanner #'(bound-details left text) = #"II "
+  \override TextSpanner.bound-details.left.text = #"II "
 }
 mySetTextSpannerIII =
 {
-  \override TextSpanner #'(bound-details left text) = #"III "
+  \override TextSpanner.bound-details.left.text = #"III "
 }
 mySetTextSpannerIV =
 {
-  \override TextSpanner #'(bound-details left text) = #"IV "
+  \override TextSpanner.bound-details.left.text = #"IV "
 }
 mySetTextSpannerV =
 {
-  \override TextSpanner #'(bound-details left text) = #"V "
+  \override TextSpanner.bound-details.left.text = #"V "
 }
 mySetTextSpannerVI =
 {
-  \override TextSpanner #'(bound-details left text) = #"VI "
+  \override TextSpanner.bound-details.left.text = #"VI "
 }
 mySetTextSpannerVII =
 {
-  \override TextSpanner #'(bound-details left text) = #"VII "
+  \override TextSpanner.bound-details.left.text = #"VII "
 }
 mySetTextSpannerVIII =
 {
-  \override TextSpanner #'(bound-details left text) = #"VIII "
+  \override TextSpanner.bound-details.left.text = #"VIII "
 }
 mySetTextSpannerIX =
 {
-  \override TextSpanner #'(bound-details left text) = #"IX "
+  \override TextSpanner.bound-details.left.text = #"IX "
 }
 mySetTextSpannerX =
 {
-  \override TextSpanner #'(bound-details left text) = #"X "
+  \override TextSpanner.bound-details.left.text = #"X "
 }
 mySetTextSpannerXI =
 {
-  \override TextSpanner #'(bound-details left text) = #"XI "
+  \override TextSpanner.bound-details.left.text = #"XI "
 }
 mySetTextSpannerXII =
 {
-  \override TextSpanner #'(bound-details left text) = #"XII "
+  \override TextSpanner.bound-details.left.text = #"XII "
 }
 mySetTextSpannerXIII =
 {
-  \override TextSpanner #'(bound-details left text) = #"XIII "
+  \override TextSpanner.bound-details.left.text = #"XIII "
 }
 mySetTextSpannerRight =
 {
-  \override TextSpanner #'(bound-details right text) = \markup { \draw-line #'(0 . -1.5) }
+  \override TextSpanner.bound-details.right.text = \markup { \draw-line #'(0 . -1.5) }
 }
 
 myTextATempo = ^\markup

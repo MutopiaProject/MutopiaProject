@@ -1,4 +1,5 @@
 %Violin 4, 1st movement
+\version "2.19.80"
 
 FourthViolinFirstMovement =
 {
@@ -8,11 +9,11 @@ FourthViolinFirstMovement =
   \repeat "tremolo" 4 { bes16\p\( g } \repeat "tremolo" 4 { bes g\) } |
   \repeat volta 2 {
    \repeat "tremolo" 4 { bes\( g } \repeat "tremolo" 4 { bes g\) } |
-   << {\repeat "tremolo" 4 { bes\( g } \repeat "tremolo" 4 { bes g\) }}  {s4. \cresc s8 s2} >> |
+   << {\repeat "tremolo" 4 { bes\( g } \repeat "tremolo" 4 { bes g\) }}  {s4. \deprecatedcresc s8 s2} >> |
    \repeat "tremolo" 4 { c16\f\( g } \repeat "tremolo" 4 { bes g\) } |
    c8 c16\p\( aes c aes c aes \repeat "tremolo" 4 { c aes\) } |
    \repeat "tremolo" 4 { c16\( aes } \repeat "tremolo" 4 { c16 aes\) } |
-   \cresc \repeat "tremolo" 4 { ces16\( aes } \repeat "tremolo" 4 { ces16 aes\) } |
+   \deprecatedcresc \repeat "tremolo" 4 { ces16\( aes } \repeat "tremolo" 4 { ces16 aes\) } |
    \repeat "tremolo" 4 { bes16\f\( aes } \repeat "tremolo" 4 { bes16 aes\) } |
    bes16[\( g es' bes] \repeat "tremolo" 6 { ees16 bes\) } |
    ees16\sf[\( a, ees' a,] \repeat "tremolo" 6 { ees'16 bes\) } |
@@ -22,8 +23,8 @@ FourthViolinFirstMovement =
    ees16\sf[\( a, ees' a,] \repeat "tremolo" 6 { ees'16 bes\) } |
    ees16\sf[\( a, ees' a,] \repeat "tremolo" 6 { ees'16 bes\) } |
    \repeat "tremolo" 4 { ees\p( c) } \repeat "tremolo" 4 { f( bes,) } |
-   \repeat "tremolo" 4 { g'( des) } \cresc \repeat "tremolo" 4 { aes'( f) } |
-   \repeat "tremolo" 4 { bes( g) } \cresc \repeat "tremolo" 4 { c( ges) } |
+   \repeat "tremolo" 4 { g'( des) } \deprecatedcresc \repeat "tremolo" 4 { aes'( f) } |
+   \repeat "tremolo" 4 { bes( g) } \deprecatedcresc \repeat "tremolo" 4 { c( ges) } |
    \repeat "tremolo" 4 { aes\f( f) } g!( ees g ees aes ees aes ees) |
    ees2:16\ff d4:16 f4:16 |
    g8 r ees16-.\p ees-. ees-. f-. g-. g-. ees-. g-. bes-. bes-. g-. bes-. |
@@ -38,36 +39,36 @@ FourthViolinFirstMovement =
    c4 c16-. c-. des-. b-. c2~ |
    c4 c16-. c-. des-. b-. c2~ |
    c8 c( bes! a bes c des d |
-   \cresc ees f g aes bes c d ees) |
+   \deprecatedcresc ees f g aes bes c d ees) |
    ees4\f r r2 |
-   \dim ees,1~\mf |
+   \deprecateddim ees,1~\mf |
    ees4 aes,(\p ees aes, |
    g8) r \repeat "tremolo" 6 {bes16\( g} |
    \repeat "tremolo" 4 { bes g } \repeat "tremolo" 4 { bes g\) } |
-   \cresc \repeat "tremolo" 4 { bes\( g } \repeat "tremolo" 4 { bes g\) } |
+   \deprecatedcresc \repeat "tremolo" 4 { bes\( g } \repeat "tremolo" 4 { bes g\) } |
    \repeat "tremolo" 4 { bes\(\f g } \repeat "tremolo" 4 { bes g\) } |
    \repeat "tremolo" 6 { bes\(\p g} bes8\) bes'( |
    g[ e] des) bes16( g bes g bes g bes8) des'( |
-   \cresc bes f des bes) des'( bes g\f e) |
+   \deprecatedcresc bes f des bes) des'( bes g\f e) |
    bes''( des, bes g e) r8 r4 |
    \repeat "tremolo" 4 { c16\( f } \repeat "tremolo" 4 { c f\) } |
    b,16\sf\( f' b, f' \repeat "tremolo" 6 {c f\) } |
    b,16\sf\( f' b, f' \repeat "tremolo" 6 {c f\) } |
    \repeat "tremolo" 4 { b,\(\p f' } \repeat "tremolo" 4 { bes, c\) } |
-   aes\( c aes c aes des aes des \cresc \repeat "tremolo" 4 {bes ees\) } |
+   aes\( c aes c aes des aes des \deprecatedcresc \repeat "tremolo" 4 {bes ees\) } |
    c\( ees c ees c f c f \repeat "tremolo" 4 {d\f f\) } |
    ees4:16 g4:16 g4:16 g4:16 |
    fis8 r d'16-.\p d-. ees-. cis-. d2~ |
    d4 d16-. d-. ees-. cis-. d2~ |
-   d4 d16-. d-. ees-. cis-. \dim d2~ |
+   d4 d16-. d-. ees-. cis-. \deprecateddim d2~ |
    d4 d16-. d-. ees-. cis-. d4\! r |
    R1*3 |
    f,1~\p |
    f4 f2 f4( |
-   \cresc g1)~ |
+   \deprecatedcresc g1)~ |
    g4 g2 g4( |
    f2.)\f f8. f16 |
-   << { f2. } {s4 \cresc s2} >> f8. f16 |
+   << { f2. } {s4 \deprecatedcresc s2} >> f8. f16 |
    \repeat "tremolo" 4 {ees\ff\( c} \repeat "tremolo" 4 {ees c\)} |
    ees\sf( c ees c) ees\sf( c ees c) ees\sf( c ees c) ees\sf( c ees c) |
    ees\sf( c ees c) ees\sf( c ees c) ees\sf( c ees c ees\sf c ees c) |
@@ -115,7 +116,7 @@ FourthViolinFirstMovement =
    g8) r r4 r r8 bes,\f |
    bes( ees g bes) bes4 r |
    bes2 bes\accent |
-   \cresc bes4\accent bes\accent bes8-. bes-. bes-. bes-. |
+   \deprecatedcresc bes4\accent bes\accent bes8-. bes-. bes-. bes-. |
    d,16\ff d d d d d d d f bes, bes bes bes bes bes bes |
    bes d d d d d d d d f f f f f f f |
    f8 r r4 r2 |
@@ -168,12 +169,12 @@ FourthViolinFirstMovement =
   r4 des,16 des des ees f f des f aes aes f aes |
   b8 r r4 r2 |
   r4 c16 c c bes! aes aes c aes f f aes f |
-  c8 r <g' bes>4-.\accent( <g bes>-.\accent <g bes>-.)\accent |
+  c8 r <g' bes>4-.\accent( <g bes>-. -\tweak Y-offset -4 \accent <g bes>-.)\accent |
   r aes-.\accent( aes-.\accent aes-.)\accent |
-  r g-.\f\accent( g-.\accent g-.)\accent |
-  r \dim f-.( f-. f-.) |
+  r g-.\f\accent( g-. -\tweak Y-offset -4 \accent g-.)\accent |
+  r \deprecateddim f-.( f-. f-.) |
   r bes,\mf-.( bes-. bes-.) |
-  r \dim e-.( e-. e-.) |
+  r \deprecateddim e-.( e-. e-.) |
   r bes-.\p( bes-. bes-.) |
   R1*4 |
   r4 aes'-.\p( aes-. aes-.) |
@@ -185,7 +186,7 @@ FourthViolinFirstMovement =
   c4_\markup{\bold\italic "espress."}( aes' g f |
   e2 f4 c) |
   c1~ |
-  c4 \dim c( f ees! |
+  c4 \deprecateddim c( f ees! |
   d!2 ees4 bes)~ |
   bes1~ |
   bes2~ bes8\! r r4 |
@@ -212,14 +213,14 @@ FourthViolinFirstMovement =
   f') f4 f f f8~ |
   f f4 f f f8~ |
   f f4 f f f8( |
-  ees) ees4 ees \cresc ees ees8~ |
+  ees) ees4 ees \deprecatedcresc ees ees8~ |
   ees ees4 ees8( e) e4 e8( |
   f) aes,4\mf aes aes aes8~ |
-  aes aes4 aes \cresc aes aes8( |
+  aes aes4 aes \deprecatedcresc aes aes8( |
   g) g4 g bes bes8( |
-  c) \cresc c4 c c c8( |
+  c) \deprecatedcresc c4 c c c8( |
   d) bes'4\f bes bes bes8~ |
-  bes bes4 bes \cresc bes bes8~ |
+  bes bes4 bes \deprecatedcresc bes bes8~ |
   bes bes4 bes bes bes8~ |
   bes bes4 bes,8 c16\ff( bes c d ees f g a |
   bes a c bes d c ees d) f( e g f aes! g f ees) |
@@ -230,18 +231,18 @@ FourthViolinFirstMovement =
   f( ees d c d ees f g) aes(\< g f g aes bes c d\! |
   ees8) bes,16\p\( g bes g bes g \repeat "tremolo" 4 {bes g\)} |
   \repeat "tremolo" 4 {bes\( g} \repeat "tremolo" 4 {bes g\)} |
-  \cresc \repeat "tremolo" 4 {bes\( g} \repeat "tremolo" 4 {bes g\)} 
+  \deprecatedcresc \repeat "tremolo" 4 {bes\( g} \repeat "tremolo" 4 {bes g\)} 
   \repeat "tremolo" 4 {c\f\( g} \repeat "tremolo" 4 {bes g\)} |
   c8 c16\p\( aes c aes c aes \repeat "tremolo" 4 {c aes\)} |
   \repeat "tremolo" 4 {c\( aes} \repeat "tremolo" 4 {c aes\)} |
-  \cresc \repeat "tremolo" 4 {ces\( aes} \repeat "tremolo" 4 {ces aes\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {ces\( aes} \repeat "tremolo" 4 {ces aes\)} |
   \repeat "tremolo" 4 {bes\f\( aes} \repeat "tremolo" 4 {bes aes\)} |
   bes\( g ees' bes ees bes ees bes \repeat "tremolo" 4 {ees bes\)} |
   ees\sf\( a, ees' a, \repeat "tremolo" 6 {ees' bes\)} |
   ees\sf\( a, ees' a, \repeat "tremolo" 6 {ees' bes\)} |
   \repeat "tremolo" 4 {ees\p\( a,} \repeat "tremolo" 4 {f' bes,\)} |
   \repeat "tremolo" 4 {ees\( bes} \repeat "tremolo" 4 {f' d\)} |
-  << {\repeat "tremolo" 4 {ees\( bes}  \repeat "tremolo" 4 {aes' f\)}} {s4 \cresc s2.} >>  |
+  << {\repeat "tremolo" 4 {ees\( bes}  \repeat "tremolo" 4 {aes' f\)}} {s4 \deprecatedcresc s2.} >>  |
   \repeat "tremolo" 4 {aes16\( f} \repeat "tremolo" 4 {d f\)} |
   \repeat "tremolo" 4 {ees\f\( c} \repeat "tremolo" 4 {ees c\)} |
   \repeat "tremolo" 4 {ees\sf\( c} \repeat "tremolo" 4 {ees c\)} |
@@ -257,7 +258,7 @@ FourthViolinFirstMovement =
   ees, c' d, b' c8 r r4 |
   r r8 c,,^\markup{\bold\italic "arco"}( ees aes c aes') |
   ees1~ |
-  \cresc ees |
+  \deprecatedcresc ees |
   ees2( bes) |
   <ees, bes'>1~\f |
   <ees bes'> |
@@ -294,7 +295,7 @@ FourthViolinFirstMovement =
   R1*11 |
   bes'1\p~ |
   bes |
-  \cresc c~ |
+  \deprecatedcresc c~ |
   c\< |
   bes16\f\( g bes g b g b g \repeat "tremolo" 4 {c aes\)} |
   \repeat "tremolo" 4 {bes!( g)} \repeat "tremolo" 4 {bes( aes)} |
@@ -307,12 +308,12 @@ FourthViolinFirstMovement =
   bes2:16 bes2:16 |
   g2:16 g2:16 |
   f2:16 f2:16 |
-  \cresc ees2:16^\markup{\dynamic "sf"} ees2:16^\markup{\dynamic "sf"} |
+  \deprecatedcresc ees2:16^\markup{\dynamic "sf"} ees2:16^\markup{\dynamic "sf"} |
   ees2:16^\markup{\dynamic "sf"} ees2:16^\markup{\dynamic "sf"} |
   ees2:16\ff ees2:16 |
   d2:16 d2:16 |
   ees16\fp\( g, bes g bes g bes g \repeat "tremolo" 4 {bes g\)} |
-  \cresc \repeat "tremolo" 4 {bes\( g} \repeat "tremolo" 4 {bes g\)} |
+  \deprecatedcresc \repeat "tremolo" 4 {bes\( g} \repeat "tremolo" 4 {bes g\)} |
   \repeat "tremolo" 4 {bes\f\( g} \repeat "tremolo" 4 {bes\< g\)} |
   c2:16\! f2:16\ff |
   ees8 r r4 <bes aes' bes>8 r r4 |

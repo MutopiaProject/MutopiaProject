@@ -1,4 +1,5 @@
-%Viola 1, 4th movement
+%Viola 2, 4th movement
+\version "2.19.80"
 
 SecondViolaFourthMovement =
 {
@@ -130,10 +131,10 @@ SecondViolaFourthMovement =
   e ees)~ |
   ees4 ees2 ees4~ |
   ees ees2 ees4~ |
-  ees \cresc ees2 ees4~ |
+  ees \deprecatedcresc ees2 ees4~ |
   ees ees2 c4( |
   aes!) aes2 aes4~ |
-  \cresc aes aes2 bes4 |
+  \deprecatedcresc aes aes2 bes4 |
   g1\f( |
   f2 ees |
   d) r |
@@ -142,11 +143,11 @@ SecondViolaFourthMovement =
   c c2 c4~ |
   c c2 c4~ |
   c c2 c4( |
-  \cresc bes) bes2 bes4~ |
+  \deprecatedcresc bes) bes2 bes4~ |
   bes bes2 bes4~ |
   bes bes2 bes4~ |
   bes bes2 bes4~ |
-  \cresc bes bes2 bes4~ |
+  \deprecatedcresc bes bes2 bes4~ |
   bes bes2 bes4~ |
   bes bes2\f bes4~ |
   
@@ -385,15 +386,15 @@ SecondViolaFourthMovement =
   c2:8 c2:8 |
   ees,2:8 ees2:8 |
   ees2:8 d2:8 |
-  ees8 g g g \cresc bes2:8 |
+  ees8 g g g \deprecatedcresc bes2:8 |
   c2:8 c2:8 |
   bes2:8 bes2:8 |
   c2:8 bes2:8 |
   bes2:8\mf c2:8 |
-  \cresc c2:8 bes2:8 |
+  \deprecatedcresc c2:8 bes2:8 |
   bes4 r r ees,\f |
   aes2.\accent( g4) |
-  \cresc aes2.\accent( g4) |
+  \deprecatedcresc aes2.\accent( g4) |
   aes2.\accent( g4) |
   c1(\ff |
   bes2 aes |

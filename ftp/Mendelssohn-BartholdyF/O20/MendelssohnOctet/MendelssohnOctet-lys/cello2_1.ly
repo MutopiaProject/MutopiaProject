@@ -1,4 +1,5 @@
 %Cello 2, 1st movement
+\version "2.19.80"
 
 SecondCelloFirstMovement =
 {
@@ -9,7 +10,8 @@ SecondCelloFirstMovement =
   ees,1\p
   \repeat volta 2 {
    ees
-   << {d } {s4. \cresc s8 s2} >> |
+   %<< {d } {s4. s8 \cresc s2} >> |
+   d \cresc
    c2(\f g') |
    aes1\fp |
    f |
@@ -23,8 +25,8 @@ SecondCelloFirstMovement =
    c,4(\sf bes8) ees,( g bes ees g) |
    c,4(\sf bes8) ees,( g bes ees g) |
    c,,2\p\accent d\accent |
-   e\accent \cresc f\accent |
-   g\accent \cresc a\accent |
+   e\accent \deprecatedcresc f\accent |
+   g\accent \deprecatedcresc a\accent |
    b2\f\accent c4\accent aes!\accent |
    bes!2:16\ff bes2:16 |
    ees,8 r r4 r2 |
@@ -38,39 +40,39 @@ SecondCelloFirstMovement =
    ees,4 r r f'( |
    e) r r f( |
    c) r r a(\sf |
-   bes2 \cresc aes'! |
+   bes2 \deprecatedcresc aes'! |
    g2. aes4) |
    bes1\f~ |
-   \dim bes |
+   \deprecateddim bes |
    aes,\p |
    ees |
    ees |
-   \cresc d |
+   \deprecatedcresc d |
    des\f |
    c\p |
    c |
-   \cresc des2 e\f |
+   des2 -\tweak DynamicTextSpanner.bound-details.left.padding -1 \cresc e\f |
    g <c, c'> |
    f4. c''8( aes f c aes) |
    des4\sf( c8) c'( aes f c aes) |
    des4\sf( c8) aes'( f c aes f) |
    d!2\fp e\accent |
-   \cresc f\accent g\accent |
+   \deprecatedcresc f\accent g\accent |
    aes\accent g2:16\f |
    c,2:16 d4:16 ees4:16 |
    d8 r r4 r2 |
    R1 |
    r2 r4 fis\p( |
-   \dim g1 |
+   \deprecateddim g1 |
    d4)\! r r fis(\pp |
    g2)~ g8 g-.( g-. g-.) |
-   \cresc ges1( |
+   \deprecatedcresc ges1( |
    f8)\p f4 f f f8~ |
    f f4 f f f8~ |
-   \cresc f f f f f f f f |
+   \deprecatedcresc f f f f f f f f |
    f f f f f f f f |
    f f f f\f( a b c d) |
-   c4\accent( a8) \cresc f( a b c d) |
+   c4\accent( a8) \deprecatedcresc f( a b c d) |
    c2\accent a\accent |
    <f c'>4\accent\ff <f c'>4\accent <f c'>4\accent <f c'>4\accent |
    <f c'>8 f f f f f f f |
@@ -115,7 +117,7 @@ SecondCelloFirstMovement =
    ees8) r r4 r bes'8\f r |
    ees, r r4 r bes'8 r |
    ees r d r ees r d r |
-   \cresc ees( d) ees( d) ees8-. d,-. ees-. e-. |
+   \deprecatedcresc ees( d) ees( d) ees8-. d,-. ees-. e-. |
    f16\ff f f f f f f f f8 r f r |
    f''-. d-. bes-. g-. f-. d-. bes-. g-. |
    f r r4 r2 |
@@ -161,7 +163,7 @@ SecondCelloFirstMovement =
   c2\ff c''4.. c16 |
   c8 r g4-.\accent( g-.\accent g-.\accent) |
   f2 f4.. f16 |
-  f8 r f4-.\accent( f-.\accent f-.\accent) |
+  f8 r f4-.\accent( f-. -\tweak Y-offset 4 \accent f-.\accent) |
   bes2 bes4.. bes16 |
   bes8 r bes4-.\accent( bes-.\accent bes-.\accent) |
   aes2 aes4.. aes16 |
@@ -169,12 +171,12 @@ SecondCelloFirstMovement =
   aes2 aes4.. aes16 |
   aes8 r des,4-.\accent( des-.\accent des-.\accent) |
   c1~ |
-  c8 r <c, c'>4-.\accent( <c c'>-.\accent <c c'>-.\accent) |
-  r  <c c'>-.\accent( <c c'>-.\accent <c c'>-.\accent) |
-  r e-.\accent\f( e-.\accent e-.\accent) |
-  r \dim f-.( f-. f-.) |
+  c8 r <c, c'>4-.^\accent( <c c'>-.^\accent <c c'>-.^\accent) |
+  r  <c c'>-.^\accent( <c c'>-.^\accent <c c'>-.^\accent) |
+  r e-.^\accent\f( e-.^\accent e-.^\accent) |
+  r \deprecateddim f-.( f-. f-.) |
   r \stemUp des'-.\mf( c-. bes-.) |
-  r \dim des-.( c-. bes-.)\! \stemNeutral |
+  r \deprecateddim des-.( c-. bes-.)\! \stemNeutral |
   R1*10 |
   f1\sfp~ |
   f |
@@ -203,17 +205,17 @@ SecondCelloFirstMovement =
   ees! |
   d |
   c |
-  bes'8\p bes4 \cresc bes bes bes8~ |
+  bes'8\p bes4 \deprecatedcresc bes bes bes8~ |
   bes bes4 bes bes bes8~ |
   bes bes4\mf bes bes bes8~ |
   
   %% Bar 210
-  bes bes4 bes \cresc bes bes8~ |
+  bes bes4 bes \deprecatedcresc bes bes8~ |
   bes bes4 bes bes bes8~ |
   << {bes bes4 bes bes bes8~} {s2 s2\< } >> |
   bes8\! r r4 r2 |
   R1 |
-  d,16\f( c d ees f g \cresc aes bes aes g f ees d c d ees) |
+  d,16\f( c d ees f g \deprecatedcresc aes bes aes g f ees d c d ees) |
   f( e f g aes g aes bes c8) c,16(\ff d ees f g a |
   bes a c bes d c ees d) f( e g f aes! g f ees) |
   d_\markup{\bold\italic "sempre" \dynamic "ff"}( c ees d f ees d c) bes( a bes b c bes aes g) |
@@ -223,24 +225,24 @@ SecondCelloFirstMovement =
   f( ees d c d ees f g) f(\< ees d c bes aes! g f\! |
   ees1\fp) |
   ees |
-  \cresc d |
+  \deprecatedcresc d |
   c2(\f g') |
   aes1\fp |
   f |
-  \cresc ees |
+  \deprecatedcresc ees |
   d2(\f bes') |
   ees,8 r r ees( g bes ees g) |
   c,4\sf( bes8) ees,( g bes ees g) |
   c,4\sf( bes8) ees,( g bes ees g) |
   c,,2\p\accent d\accent |
   ees\accent f\accent |
-  \cresc g\accent aes\accent |
+  \deprecatedcresc g\accent aes\accent |
   bes\accent b\accent |
   c8\f c4 c c c8( |
   a)\sf a4 a a a8( |
   bes1\fp\>)~ |
   bes~ |
-  \dim bes |
+  \deprecateddim bes |
   ees,\pp~ |
   ees~ |
   ees( |
@@ -295,15 +297,15 @@ SecondCelloFirstMovement =
   d des |
   c) \stemUp ees( |
   bes' des |
-  aes2.) \stemNeutral \cresc aes16-. aes-. bes-. g-. |
+  aes2.) \stemNeutral \deprecatedcresc aes16-. aes-. bes-. g-. |
   aes2~ aes8 r aes16-. aes-. bes-. g-. |
-  \cresc aes2~ aes8 r a16-. a-. bes-. gis-. |
+  \deprecatedcresc aes2~ aes8 r a16-. a-. bes-. gis-. |
   a1\f( |
   bes8)\p bes bes bes bes2:8 |
   
   %% Bar 300
   g2:8 g2:8 |
-  \cresc aes2:8 aes2:8 |
+  \deprecatedcresc aes2:8 aes2:8 |
   a2:8\< a2:8 |
   bes8\f bes g g aes!2:8 |
   bes2:8 bes2:8 |
@@ -316,12 +318,12 @@ SecondCelloFirstMovement =
   bes2:8 bes2:8 |
   bes2:8 bes2:8 |
   aes2:8 aes2:8 |
-  \cresc g2:8^\markup{\dynamic "sf"} g2:8^\markup{\dynamic "sf"} |
+  \deprecatedcresc g2:8^\markup{\dynamic "sf"} g2:8^\markup{\dynamic "sf"} |
   aes2:8^\markup{\dynamic "sf"} a2:8^\markup{\dynamic "sf"} |
   bes2:8\ff bes2:8 |
   bes2:8 bes2:8 |
   ees,4\fp ees ees ees |
-  \cresc ees ees ees ees |
+  \deprecatedcresc ees ees ees ees |
   d\f d d\< d |
   c2:16 bes'2:16\ff |
   ees,8 r r4 bes'8 r r4 |
