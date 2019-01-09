@@ -1,6 +1,6 @@
 \relative c {
 	\voiceTwo
-	r4 |
+	r4 
 	e8  e  e  e  |
 	f  e  s4 |
 	c8  f  g  g,  |
