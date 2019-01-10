@@ -66,7 +66,6 @@
 	c4  b  |
 	g'2  |
 	a  |
-	|
 	\break 
  
 
@@ -108,7 +107,6 @@
 	d  c  d  e  d  e  f  d  |
 	g4  f8  e  |
 	e4  d  |
-	|
 	\break 
  
 
@@ -123,8 +121,6 @@
 	e  c  c'4 ~  |
 	c4  b  |
 	c2  \bar "|."
-
-
 }
 
 
