@@ -10,7 +10,7 @@
 	c4  c8  f  |
 	e  c  s4 | \barNumberCheck #10
 %10	
-    f8  c  e  c  |
+	f8  c  e  c  |
 	b  b  b  c  |
 	g4 r4 |
 	g'4  r8  b,  |
@@ -22,7 +22,7 @@
 	f  e  s4 |
 	c8  f  g  g,  |\barNumberCheck #20
 %20	
-    c  c16  b  s4 |
+	c  c16  b  s4 |
 	e,8  e  e'  e  |
 	f  e  s4 |
 	c8  f  g  g,  |
@@ -34,8 +34,8 @@
 	
 	s1*2/4 | \barNumberCheck #30
 %30	
-    s1*2/4 | 
-    s1*2/4 |
+	s1*2/4 | 
+	s1*2/4 |
 	g4  c8  f  |
 	e  e  e  e  |
 	f  e  s4 |
@@ -46,9 +46,9 @@
 	f  e  s4 |
 	c8  f  g  g,  | \barNumberCheck #40
 %40	
-    c4  e8  c  | 
+	c4  e8  c  | 
 	
-    g'  e  f  d  |
+	g'  e  f  d  |
 	e  c  s4 |
 	s1*2/4 |
 	
@@ -71,9 +71,9 @@
 	g,  g  s4 |
 	a4  r8  a  | \barNumberCheck #60
 %60	
-    b  g  s4 | 
+	b  g  s4 | 
 	
-    e'8  f  s4 |
+	e'8  f  s4 |
 	s1*2/4 |
 	c4  f,  |
 	
@@ -85,9 +85,9 @@
 	
 	c8  d  e  c  | \barNumberCheck #70
 %70	
-    d4  r8  c  | 
+	d4  r8  c  | 
 	
-    b  g  d'  d  |
+	b  g  d'  d  |
 	g,4  c8  f  |
 	e  e  e  e  |
 	f  e  s4 |
@@ -98,11 +98,11 @@
 	f  e  s4 |
 	c8  f  g  g,  | \barNumberCheck #80
 %80	
-    c4. ~  c4  s8 | 
+	c4. ~  c4  s8 | 
 	
-    c4.  c  |
+	c4.  c  |
 	g'4.  f  | 
-    e  c  | 
+	e  c  | 
 	g'  f  |
 	e  c  |
 	g'  f  |
@@ -111,11 +111,11 @@
 	g4  a8  b4  g8 \f |
 	c4. ~  c4  g8  | \barNumberCheck #90
 %90	
-    c4.  f  |
+	c4.  f  |
 	e4  e8  d4  c8  |
 	g4  a8  b4  g8  | 
 	
-    c4. ~  c4  g8  |
+	c4. ~  c4  g8  |
 	c4.  f  |
 	
 	e4  f8  g4  g,8  |
@@ -124,18 +124,18 @@
 	s2. | 
 	s4. g4  g8  | \barNumberCheck #100
 %100	
-    c4. ~  c4  s8 |
+	c4. ~  c4  s8 |
 	s2. |
 	s2. | 
 	
 	s4. g4  g8  |
 	c4  d8  e4  c8 \p |
 	d4.  ~
-    d4  d8  |
+	d4  d8  |
 	e4.  ~
-    e4  e8  |
+	e4  e8  |
 	f4.  ~
-    f4  f8  |
+	f4  f8  |
 	c4  d8  e4  c8  |
 	g4  a8  b4  g8  | \barNumberCheck #110
 %110	
@@ -151,7 +151,7 @@
 	c4.  f  |
 	e4  f8  g4  g,8  | \barNumberCheck #120
 %120	
-    c2.  |
+	c2.  |
 
 }
 
