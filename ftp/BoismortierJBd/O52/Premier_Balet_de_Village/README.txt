@@ -14,6 +14,8 @@ Except for placing the parts files in a separate
 folder, the file structure follows the Mutopia ensemble
 template from https://github.com/MutopiaProject/MutopiaProject.
 
+ly2video rendering:
+https://www.youtube.com/watch?v=lQnTBqPZew8
 
 Mike Blackstock,
 Maintainer
