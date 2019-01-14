@@ -55,6 +55,7 @@ check_movement() {
 
 main() {
     check_movement 01_allegro
+    check_movement 02_andante
     exit "${failed}"
 }
 
