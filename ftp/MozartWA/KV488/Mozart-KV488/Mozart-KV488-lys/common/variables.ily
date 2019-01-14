@@ -32,7 +32,7 @@ combinedPublicationName = "Conductor’s Score"
 
 %% Movement-specific variables
 thisTempoMovI = "Allegro"
-thisTempoMovII = "Andante (under construction)"
+thisTempoMovII = "Andante"
 thisTempoMovIII = "Presto (under construction)"
 
 thisIdentifierMovI = "I"
