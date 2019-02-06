@@ -26,6 +26,9 @@ legato = \markup { \italic legato }
 dolce = \markup { \italic dolce }
 cadenza = \markup { \italic Cadenza }
 
+pizz = \markup { pizz. }
+arco = \markup { arco }
+
 % Voicing marking for bassoon and horn, indicating that the (monophonic)
 % notation should be played by both members.
 both = \markup { a. 2. }
