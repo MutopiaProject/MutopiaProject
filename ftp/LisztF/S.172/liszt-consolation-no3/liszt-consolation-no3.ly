@@ -32,7 +32,7 @@
   \set PianoStaff.connectArpeggios = ##t
   \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t \set beatLength = #(ly:make-moment 1 4)
 
-    \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissimo." }		| % 1
+    \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissimo" }		| % 1
     b1\rest											| % 2
     b2\rest b4\rest \once \override TextScript #'extra-offset = #'(-2.0 . 0.0)f'
 		^\markup { \small \italic "Cantando" }						| % 3
