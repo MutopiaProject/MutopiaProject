@@ -32,10 +32,10 @@
   \set PianoStaff.connectArpeggios = ##t
   \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t \set beatLength = #(ly:make-moment 1 4)
 
-    \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissmo." }		| % 1
+    \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissimo." }		| % 1
     b1\rest											| % 2
     b2\rest b4\rest \once \override TextScript #'extra-offset = #'(-2.0 . 0.0)f'
-		^\markup { \small \italic "Cantando." }						| % 3
+		^\markup { \small \italic "Cantando" }						| % 3
     f2\( bes,8 c des f\)									| % 4
     f2~\( f8 es f es\)										| % 5
     des2.~\( des16 f des bes'									| % 6
@@ -131,7 +131,7 @@
     s1												| % 29
     <bes e>8\arpeggio s8 s2.									| % 30
     \once \override TextScript #'extra-offset = #'(-3.5 . 0.0)
-		s1 ^\markup { \small \italic "dolcissimo." }					| % 31
+		s1 ^\markup { \small \italic "dolcissimo" }					| % 31
     s												| % 32
     s												| % 33
     s												| % 34
@@ -139,7 +139,7 @@
     s1												| % 36
     s												| % 37
     <d gis>8 s8 s2.										| % 38
-    s1 _\markup { \small \italic "dolcissimo." }						| % 39
+    s1 _\markup { \small \italic "dolcissimo"  }						| % 39
     s												| % 40
     s												| % 41
     s												| % 42
@@ -162,7 +162,7 @@
     <f!^~ aes^~>2_\ppp <f aes>8 <ges bes> <des f> <ges bes>					| % 57
     s1												| % 58
     \override TextSpanner #'bound-details #'left #'text = \markup
-		{ \italic "rit.           perdendosi." }
+		{ \italic "rit.           perdendosi" }
     s8 s s s\startTextSpan s2									| % 59
     s1												| % 60
     s2 s2\stopTextSpan										| % 61
