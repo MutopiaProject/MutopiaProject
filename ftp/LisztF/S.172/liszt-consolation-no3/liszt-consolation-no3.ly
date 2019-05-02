@@ -25,7 +25,7 @@
 }
 
 \paper {
-  system-count = #20		% this just fits the score into 4 pages
+  system-count = #19		% this just fits the score into 4 pages, for both A4 and letter size
   }
 
 \score {
