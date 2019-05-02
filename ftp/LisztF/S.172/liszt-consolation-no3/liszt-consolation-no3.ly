@@ -30,7 +30,7 @@
 
   \set PianoStaff.instrumentName = "Piano"
   \set PianoStaff.connectArpeggios = ##t
-  \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t \set beatLength = #(ly:make-moment 1/4)
+  \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t
 
     \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissimo" }		| % 1
     b1\rest											| % 2
