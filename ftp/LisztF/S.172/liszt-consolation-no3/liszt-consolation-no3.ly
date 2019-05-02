@@ -85,7 +85,7 @@
     <f f'>2\(\arpeggio <bes, bes'>8 <c c'> <des des'> <f f'>					| % 49
     <f~ f'~>2 <f f'>8 <es es'> <f f'> <es es'>\)						| % 50
     <des~ des'~>2\( <des des'>16[ f des bes' aes f' des bes']					| % 51
-    aes4\) b,,\rest b\rest b8\rest \stemUp des,^-						| % 52
+    aes4\) b,,\rest b\rest b8*4/3\rest \stemUp des,4*1/3^-					| % 52
     des2_~^\( des16[ bes' ges es' des bes' ges es']						| % 53
     des4\) b,\rest b\rest b8\rest \stemDown des8						| % 54
     \stemUp des2.^~^\( des16 fes des ges							| % 55
