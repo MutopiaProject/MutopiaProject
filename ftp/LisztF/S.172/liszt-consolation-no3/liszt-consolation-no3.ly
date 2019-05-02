@@ -1,4 +1,4 @@
-\version "2.12.2"
+\version "2.18.0"
 
 \header {
 
@@ -30,11 +30,11 @@
 
   \set PianoStaff.instrumentName = "Piano"
   \set PianoStaff.connectArpeggios = ##t
-  \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t \set beatLength = #(ly:make-moment 1 4)
+  \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t \set beatLength = #(ly:make-moment 1/4)
 
     \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissimo" }		| % 1
     b1\rest											| % 2
-    b2\rest b4\rest \once \override TextScript #'extra-offset = #'(-2.0 . 0.0)f'
+    b2\rest b4\rest \once \override TextScript.extra-offset = #'(-2.0 . 0.0)f'
 		^\markup { \small \italic "Cantando" }						| % 3
     f2\( bes,8 c des f\)									| % 4
     f2~\( f8 es f es\)										| % 5
@@ -99,7 +99,7 @@
 
   } \\ \relative c'' {
 
-    \once \override TextScript #'extra-offset = #'(-3.5 . 2.0) s1 ^\markup
+    \once \override TextScript.extra-offset = #'(-3.5 . 2.0) s1 ^\markup
 		{ \bold "Lento placido." } 							| % 1
     s												| % 2
     s												| % 3
@@ -130,7 +130,7 @@
     s ^\markup { \small \dynamic mf \italic "expressivo" }					| % 28
     s1												| % 29
     <bes e>8\arpeggio s8 s2.									| % 30
-    \once \override TextScript #'extra-offset = #'(-3.5 . 0.0)
+    \once \override TextScript.extra-offset = #'(-3.5 . 0.0)
 		s1 ^\markup { \small \italic "dolcissimo" }					| % 31
     s												| % 32
     s												| % 33
@@ -156,12 +156,12 @@
     s												| % 53
     s												| % 54
     <fes, beses>2.\arpeggio _> s8 beses16 s16							| % 55
-    \override TextSpanner #'bound-details #'left #'text = \markup { \italic "smorzando" }
+    \override TextSpanner.bound-details.left.text = \markup { \italic "smorzando" }
 		\textSpannerDown s8*1/2\startTextSpan cis s e s a s cis s e s e s e
 		s e\stopTextSpan								| % 56
     <f!^~ aes^~>2_\ppp <f aes>8 <ges bes> <des f> <ges bes>					| % 57
     s1												| % 58
-    \override TextSpanner #'bound-details #'left #'text = \markup
+    \override TextSpanner.bound-details.left.text = \markup
 		{ \italic "rit.           perdendosi" }
     s8 s s s\startTextSpan s2									| % 59
     s1												| % 60
@@ -308,7 +308,7 @@
 \layout {
   \context {
     \Score
-    \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 20)
+    \override SpacingSpanner.base-shortest-duration = #(ly:make-moment 1/20)
   }
 }
 \midi { }
