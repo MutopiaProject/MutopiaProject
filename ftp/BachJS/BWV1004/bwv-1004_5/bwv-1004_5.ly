@@ -396,7 +396,7 @@ melodyTwo =  \relative f' {
 	s2. | % 57
 	s2. | % 58
 	s2. | % 59
-	a,8 [ d ] d16 [ ( cis ) d ( b )] cis8 s8 | % 60	
+	a8 [ d ] d16 [ ( cis ) d ( b )] cis8 s8 | % 60	
 	s2. | % 61
 	s2. | % 62
 	s2. | % 63
@@ -425,7 +425,7 @@ melodyTwo =  \relative f' {
 	s2. | % 86
 	s2. | % 87
 	s2. | % 88
-	s4 f2 | % 89  
+	s4 f,2 | % 89  
  	e2 cis'4 | % 90
 	d,2 a'4 | % 91
 	bes8 [ a g f  e d ] | % 92
