@@ -1128,7 +1128,9 @@ melody = << \melodyOne \\ \melodyTwo \\ \melodyThree \\ \melodyFour >>
 \score {
 	\context Staff << 
         \set Staff.instrumentName = "Violine"
-        { \clef treble \key d \minor \time 3/4  \partial 2 \melody  }
+        { \clef treble \key d \minor \time 3/4
+        \set Score.currentBarNumber = #2
+        \partial 2 \melody  }
     >>
 	\layout { }
  	 \midi { }
