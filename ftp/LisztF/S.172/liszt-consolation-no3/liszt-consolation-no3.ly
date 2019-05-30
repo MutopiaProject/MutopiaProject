@@ -228,8 +228,10 @@
     \stemUp r g[_\( des' bes f' des bes g des' bes f' des]\)					| % 49
     r ges,![_\( c aes f' c aes ges c aes es' c]\)						| % 50
     r f,[_\( des' ces aes' des, ces f, des' ces aes' des,]\)					| % 51
+    \override Beam.positions = #'(7 . 7)
     d,\rest f[_\( des' ces aes' des, ces f, des' ces aes' \change Staff="up"
 		\stemDown des,]\)								| % 52
+    \revert Beam.positions
     \change Staff="down" \stemUp r des,[_\( bes' ges ges' bes, ges des bes' ges ges'
 		bes,]\)										| % 53
     \change Staff="down" \stemUp r des,[_\( bes' ges ges' bes, ges des bes' ges ges'
