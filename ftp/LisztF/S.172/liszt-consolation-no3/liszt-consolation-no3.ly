@@ -1,4 +1,4 @@
-\version "2.12.2"
+\version "2.18.0"
 
 \header {
 
@@ -14,15 +14,20 @@
   date = ""
   source = "Breitkopf & Härtel, 1850"
   style = "Romantic"
-  copyright = "Creative Commons Attribution 3.0"
   maintainer = "Ryan Prince"
   maintainerEmail = "rprincerp@gmail.com"
   maintainerWeb = ""
   moreInfo = "This file was created from a public domain scan of the work's first edition which is located in the Petrucci Music Library, http://imslp.org/."
 
- footer = "Mutopia-2009/10/14-1647"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+  license = "Creative Commons Attribution 3.0"
+  footer = "Mutopia-2019/05/30-1647"
+  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2009 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by/3.0" "Creative Commons Attribution 3.0 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+  tagline = ##f
 }
+
+\paper {
+  system-count = #19		% this just fits the score into 4 pages, for both A4 and letter size
+  }
 
 \score {
 
@@ -30,12 +35,12 @@
 
   \set PianoStaff.instrumentName = "Piano"
   \set PianoStaff.connectArpeggios = ##t
-  \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t \set beatLength = #(ly:make-moment 1 4)
+  \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t
 
-    \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissmo." }		| % 1
+    \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissimo" }		| % 1
     b1\rest											| % 2
-    b2\rest b4\rest \once \override TextScript #'extra-offset = #'(-2.0 . 0.0)f'
-		^\markup { \small \italic "Cantando." }						| % 3
+    b2\rest b4\rest \once \override TextScript.extra-offset = #'(-2.0 . 0.0)f'
+		^\markup { \small \italic "Cantando" }						| % 3
     f2\( bes,8 c des f\)									| % 4
     f2~\( f8 es f es\)										| % 5
     des2.~\( des16 f des bes'									| % 6
@@ -85,7 +90,7 @@
     <f f'>2\(\arpeggio <bes, bes'>8 <c c'> <des des'> <f f'>					| % 49
     <f~ f'~>2 <f f'>8 <es es'> <f f'> <es es'>\)						| % 50
     <des~ des'~>2\( <des des'>16[ f des bes' aes f' des bes']					| % 51
-    aes4\) b,,\rest b\rest b8\rest \stemUp des,^-						| % 52
+    aes4\) b,,\rest b\rest b8*4/3\rest \stemUp des,4*1/3^-					| % 52
     des2_~^\( des16[ bes' ges es' des bes' ges es']						| % 53
     des4\) b,\rest b\rest b8\rest \stemDown des8						| % 54
     \stemUp des2.^~^\( des16 fes des ges							| % 55
@@ -99,7 +104,7 @@
 
   } \\ \relative c'' {
 
-    \once \override TextScript #'extra-offset = #'(-3.5 . 2.0) s1 ^\markup
+    \once \override TextScript.extra-offset = #'(-3.5 . 2.0) s1 ^\markup
 		{ \bold "Lento placido." } 							| % 1
     s												| % 2
     s												| % 3
@@ -111,7 +116,7 @@
     s												| % 9
     s												| % 10
     s												| % 11
-    s												| % 12	
+    s												| % 12
     s												| % 13
     s												| % 14
     s												| % 15
@@ -130,8 +135,8 @@
     s ^\markup { \small \dynamic mf \italic "expressivo" }					| % 28
     s1												| % 29
     <bes e>8\arpeggio s8 s2.									| % 30
-    \once \override TextScript #'extra-offset = #'(-3.5 . 0.0)
-		s1 ^\markup { \small \italic "dolcissimo." }					| % 31
+    \once \override TextScript.extra-offset = #'(-3.5 . 0.0)
+		s1 ^\markup { \small \italic "dolcissimo" }					| % 31
     s												| % 32
     s												| % 33
     s												| % 34
@@ -139,7 +144,7 @@
     s1												| % 36
     s												| % 37
     <d gis>8 s8 s2.										| % 38
-    s1 _\markup { \small \italic "dolcissimo." }						| % 39
+    s1 _\markup { \small \italic "dolcissimo"  }						| % 39
     s												| % 40
     s												| % 41
     s												| % 42
@@ -156,13 +161,13 @@
     s												| % 53
     s												| % 54
     <fes, beses>2.\arpeggio _> s8 beses16 s16							| % 55
-    \override TextSpanner #'bound-details #'left #'text = \markup { \italic "smorzando" }
+    \override TextSpanner.bound-details.left.text = \markup { \italic "smorzando" }
 		\textSpannerDown s8*1/2\startTextSpan cis s e s a s cis s e s e s e
 		s e\stopTextSpan								| % 56
     <f!^~ aes^~>2_\ppp <f aes>8 <ges bes> <des f> <ges bes>					| % 57
     s1												| % 58
-    \override TextSpanner #'bound-details #'left #'text = \markup
-		{ \italic "rit.           perdendosi." }
+    \override TextSpanner.bound-details.left.text = \markup
+		{ \italic "rit.           perdendosi" }
     s8 s s s\startTextSpan s2									| % 59
     s1												| % 60
     s2 s2\stopTextSpan										| % 61
@@ -223,8 +228,10 @@
     \stemUp r g[_\( des' bes f' des bes g des' bes f' des]\)					| % 49
     r ges,![_\( c aes f' c aes ges c aes es' c]\)						| % 50
     r f,[_\( des' ces aes' des, ces f, des' ces aes' des,]\)					| % 51
+    \override Beam.positions = #'(7 . 7)
     d,\rest f[_\( des' ces aes' des, ces f, des' ces aes' \change Staff="up"
 		\stemDown des,]\)								| % 52
+    \revert Beam.positions
     \change Staff="down" \stemUp r des,[_\( bes' ges ges' bes, ges des bes' ges ges'
 		bes,]\)										| % 53
     \change Staff="down" \stemUp r des,[_\( bes' ges ges' bes, ges des bes' ges ges'
@@ -302,15 +309,9 @@
     s4 s s s \sustainOff									| % 61
 
   } >>
-
 >>
 
-\layout {
-  \context {
-    \Score
-    \override SpacingSpanner #'base-shortest-duration = #(ly:make-moment 1 20)
-  }
-}
-\midi { }
+\layout {}
+\midi {}
 
 }
