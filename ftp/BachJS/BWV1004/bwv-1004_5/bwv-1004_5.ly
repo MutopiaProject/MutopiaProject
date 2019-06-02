@@ -205,7 +205,7 @@ melodyOne =  \relative a' {
 	d16 [ b a'' a ] a [ fis d b ] d [ gis b gis ] | % 163
 	a16 [ e a a ] a [ cis, e e ] e [ a, cis g ] | % 164
 	fis16 [ d a' a ] a [ fis d fis ] a [ d fis b,, ] | % 165
-	cis16 [ d a' a ] a [ e cis e ] a [ cis e a,, ] | % 166
+	cis16 [ e a a ] a [ e cis e ] a [ cis e a,, ] | % 166
 	b16 [ d a' a ] a [ d, b d ] gis [ b d e, ] | % 167
 	a,16 [ e' a a ] a [ e a cis ] e [ cis a g ] | % 168
 	fis16 [ a, a a ] a16 a''16 [ a fis ] fis [ d d fis ]  | % 169
