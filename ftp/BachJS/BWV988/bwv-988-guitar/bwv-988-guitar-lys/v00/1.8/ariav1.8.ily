@@ -33,6 +33,7 @@ global = {
 
 \score {
     \new StaffGroup \with {
+        midiInstrument = #"acoustic guitar (nylon)"
 	    \override StaffGrouper.staff-staff-spacing =
 		#'((basic-distance . 12)
                    (minimum-distance . 8)
@@ -51,5 +52,6 @@ global = {
                     \override NonMusicalPaperColumn.page-break-permission = ##f
             }
         }
+    \midi { \tempo 4 = 55 }
     }
 }
