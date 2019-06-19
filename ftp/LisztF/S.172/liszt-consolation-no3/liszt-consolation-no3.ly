@@ -36,9 +36,10 @@
   \set PianoStaff.instrumentName = "Piano"
   \set PianoStaff.connectArpeggios = ##t
   \new Staff = "up" \relative c'' << { \time 4/4 \key des \major \clef treble \set subdivideBeams = ##t
+    \override MultiMeasureRest.staff-position = #2
 
-    \stemDown b1\rest _\markup { \small \dynamic ppp \italic "sempre legatissimo" }		| % 1
-    b1\rest											| % 2
+    \stemDown R1 _\markup { \small \dynamic ppp \italic "sempre legatissimo" }		        | % 1
+    R1  											| % 2
     b2\rest b4\rest \once \override TextScript.extra-offset = #'(-2.0 . 0.0)f'
 		^\markup { \small \italic "Cantando" }						| % 3
     f2\( bes,8 c des f\)									| % 4
@@ -90,7 +91,7 @@
     <f f'>2\(\arpeggio <bes, bes'>8 <c c'> <des des'> <f f'>					| % 49
     <f~ f'~>2 <f f'>8 <es es'> <f f'> <es es'>\)						| % 50
     <des~ des'~>2\( <des des'>16[ f des bes' aes f' des bes']					| % 51
-    aes4\) b,,\rest b\rest b8*4/3\rest \stemUp des,4*1/3^-					| % 52
+    aes4\) b,,\rest b\rest b8*4/3\rest \stemUp des,8*2/3^-					| % 52
     des2_~^\( des16[ bes' ges es' des bes' ges es']						| % 53
     des4\) b,\rest b\rest b8\rest \stemDown des8						| % 54
     \stemUp des2.^~^\( des16 fes des ges							| % 55
@@ -175,9 +176,10 @@
   } >>
 
   \new Staff = "down" \relative c << { \time 4/4 \key des \major \clef bass
+    \override MultiMeasureRest.staff-position = #2
 
-    r8*8/12 f[_\( des' aes f' des aes f des' aes f' des]\)					| % 1
-    r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 2
+    \tuplet 3/2 4 { r8 f[_\( des' aes f' des aes f des' aes f' des]\) }				| % 1
+    r8*8/12 f,[_\( des' aes f' des aes f des' aes f' des]\)					| % 2
     r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 3
     r g,[_\( des' bes f' des bes g des' bes f' des]\)						| % 4
     r ges,![_\( c aes f' c aes ges c aes es' c]\)						| % 5
@@ -189,10 +191,10 @@
     r aes,[_\( f' c aes' f c aes f' c aes' f]\)							| % 11
     r aes,[_\( d ces aes' d, ces aes d ces aes' d,]\)						| % 12
     r ges,[_\( es' bes ges' es bes ges es' bes ges' es]\)					| % 13
-    d,1\rest											| % 14
-    r8*8/12 f[_\( des' aes f' des aes f des' aes f' des]\)					| % 15
-    d,1\rest											| % 16
-    r8*8/12 g[_\( des' bes f' des]\) r ges,[_\( c aes es' c]\)					| % 17
+    R1   											| % 14
+    r8*8/12 f,[_\( des' aes f' des aes f des' aes f' des]\)					| % 15
+    R1  											| % 16
+    r8*8/12 g,[_\( des' bes f' des]\) r ges,[_\( c aes es' c]\)					| % 17
     r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 18
     r f,[_\( des' aes f' des aes f des' aes f' des]\)						| % 19
     r g,[_\( des' bes f' des bes g des' bes f' des]\)						| % 20
