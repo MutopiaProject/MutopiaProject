@@ -20,7 +20,7 @@
   maintainer = "Anonymous"
   mutopiacomposer = "StetsenkoK"
   mutopiainstrument = "Voice (Bass), Piano"
-  mutopiapoet = "Spiridon Cherkasenko"
+  mutopiapoet = "Spyrydon Cherkasenko"
   mutopiatitle = "Oi choho ty, dube [Oh, why do you oak]"
   license = "Public Domain"
   source = "Хрестоматия / вокально- / педагогического / репертуара / ДЛЯ БАРИТОНА И БАСА / МУЗЫКАЛЬНОЕ УЧИЛИЩЕ / I — II КУРСЫ / СОСТАВИТЕЛЬ Г. АДЕН / ИЗДАТЕЛЬСТВО МУЗЫКА МОСКВА 1966"
