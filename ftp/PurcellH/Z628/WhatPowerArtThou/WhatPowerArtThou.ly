@@ -41,6 +41,9 @@
   license = "Public Domain"
   source = "Dryden's Opera of / King Arthur / The Music Composed by / Henry Purcell / With a Piano Forte Accomp. / Compressed from the Score / By / G. Alex. Macfarren, / Professor of Harmony / at the Royal Academy of Music / London, Printed & Sold by Chappell. / Music Seller to Her Majesty / 50, New Bond Street. (IMSLP82155-PMLP69503)"
   style = "Baroque"
+  footer = "Mutopia-2019/07/12-2243"
+  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " "by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { "Placed in the " \with-url #"http://creativecommons.org/licenses/publicdomain" "Public Domain" " by the typesetter " " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+  tagline = ##f
 }
 
 TB = #(make-span-event 'TextSpanEvent START)
