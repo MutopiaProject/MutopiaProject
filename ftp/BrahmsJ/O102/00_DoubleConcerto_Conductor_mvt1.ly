@@ -7,6 +7,7 @@
 \paper {
 	ragged-last-bottom = ##t
 	ragged-bottom = ##t
+	system-separator-markup = \slashSeparator
 	bookTitleMarkup = \markup {
 		\override #'(baseline-skip . 3.5)
 		\column {
@@ -98,61 +99,61 @@
 	\score {
 		<<
 			\new StaffGroup <<
-%				\new Staff <<
-%%					\new Voice {
-%%						\formatConductorMvtI
-%%					}
+				\new Staff <<
 %					\new Voice {
-%						\timeMvtI \generalOptions \conductorOptions
-%						\nameVoiceI
-%						\partcombine \musicFloteIMvtI \musicFloteIIMvtI
-%%						\musicFloteIIMvtI
+%						\formatConductorMvtI
 %					}
-%				>>
-%				\new Staff {
-%					\timeMvtI \generalOptions \conductorOptions
-%					\nameVoiceIII
-%					\partcombine \musicOboeIMvtI \musicOboeIIMvtI
-%%					\musicOboeIIMvtI
-%				}
-%				\new Staff {
-%					\timeMvtI \generalOptions \conductorOptions
-%					\nameVoiceV
-%					\partcombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
-%%					\musicKlarinetIIMvtI
-%				}
-%				\new Staff {
-%					\timeMvtI \generalOptions \conductorOptions
-%					\nameVoiceVII
-%					\partcombine \musicFagottoIMvtI \musicFagottoIIMvtI
-%%					\musicFagottoIMvtI
-%				}
-%				\new GrandStaff <<
-%					\new Staff {
-%						\timeMvtI \generalOptions \conductorOptions
-%						\nameVoiceIX
-%						\partcombine \musicHornIMvtI \musicHornIIMvtI
-%%						\musicHornIIMvtI
-%					}
-%					\new Staff {
-%						\timeMvtI \generalOptions \conductorOptions
-%						\nameVoiceXI
-%						\partcombine \musicHornIIIMvtI \musicHornIVMvtI
-%%						\musicHornIVMvtI
-%					}
-%				>>
-%				\new Staff {
-%					\timeMvtI \generalOptions \conductorOptions
-%					\nameVoiceXIII
-%					\partcombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
-%%					\musicTrumpetIIMvtI
-%				}
-%				\new Staff {
-%					\timeMvtI \generalOptions \conductorOptions
-%					\nameVoiceXV
-%					\musicPaukenMvtI
-%				}
-%			>>
+					\new Voice {
+						\timeMvtI \generalOptions \conductorOptions
+						\nameVoiceI
+						\partcombine \musicFloteIMvtI \musicFloteIIMvtI
+%						\musicFloteIIMvtI
+					}
+				>>
+				\new Staff {
+					\timeMvtI \generalOptions \conductorOptions
+					\nameVoiceIII
+					\partcombine \musicOboeIMvtI \musicOboeIIMvtI
+%					\musicOboeIIMvtI
+				}
+				\new Staff {
+					\timeMvtI \generalOptions \conductorOptions
+					\nameVoiceV
+					\partcombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
+%					\musicKlarinetIIMvtI
+				}
+				\new Staff {
+					\timeMvtI \generalOptions \conductorOptions
+					\nameVoiceVII
+					\partcombine \musicFagottoIMvtI \musicFagottoIIMvtI
+%					\musicFagottoIMvtI
+				}
+				\new GrandStaff <<
+					\new Staff {
+						\timeMvtI \generalOptions \conductorOptions
+						\nameVoiceIX
+						\partcombine \musicHornIMvtI \musicHornIIMvtI
+%						\musicHornIIMvtI
+					}
+					\new Staff {
+						\timeMvtI \generalOptions \conductorOptions
+						\nameVoiceXI
+						\partcombine \musicHornIIIMvtI \musicHornIVMvtI
+%						\musicHornIVMvtI
+					}
+				>>
+				\new Staff {
+					\timeMvtI \generalOptions \conductorOptions
+					\nameVoiceXIII
+					\partcombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
+%					\musicTrumpetIIMvtI
+				}
+				\new Staff {
+					\timeMvtI \generalOptions \conductorOptions
+					\nameVoiceXV
+					\musicPaukenMvtI
+				}
+			>>
 			\new Staff {
 				\timeMvtI \generalOptions \conductorOptions
 				\nameVoiceXVI
@@ -163,19 +164,19 @@
 				\nameVoiceXVII
 				\musicSoloCelloMvtI
 			}
-%			\new StaffGroup <<
-%				\new GrandStaff <<
-%					\new Staff {
-%						\timeMvtI \generalOptions \conductorOptions
-%						\nameVoiceXVIII
-%						\musicViolinIMvtI
-%					}
-%					\new Staff {
-%						\timeMvtI \generalOptions \conductorOptions
-%						\nameVoiceXIX
-%						\musicViolinIIMvtI
-%					}
-%				>>
+			\new StaffGroup <<
+				\new GrandStaff <<
+					\new Staff {
+						\timeMvtI \generalOptions \conductorOptions
+						\nameVoiceXVIII
+						\musicViolinIMvtI
+					}
+					\new Staff {
+						\timeMvtI \generalOptions \conductorOptions
+						\nameVoiceXIX
+						\musicViolinIIMvtI
+					}
+				>>
 %				\new Staff {
 %					\timeMvtI \generalOptions \conductorOptions
 %					\nameVoiceXX
@@ -199,6 +200,9 @@
 			breakbefore = ##t
 		}
 		\layout {
+			\context {
+				\Staff \RemoveEmptyStaves
+			}
 		}
 	}
 }
