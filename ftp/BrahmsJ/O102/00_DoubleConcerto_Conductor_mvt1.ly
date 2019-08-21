@@ -177,23 +177,23 @@
 						\musicViolinIIMvtI
 					}
 				>>
-				\new Staff {
-					\timeMvtI \generalOptions \conductorOptions
-					\nameVoiceXX
-					\musicBratscheMvtI
-				}
-				\new GrandStaff <<
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceXXI
-						\musicVioloncellMvtI
-					}
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceXXII
-						\musicKontrabassMvtI
-					}
-				>>
+%				\new Staff {
+%					\timeMvtI \generalOptions \conductorOptions
+%					\nameVoiceXX
+%					\musicBratscheMvtI
+%				}
+%				\new GrandStaff <<
+%					\new Staff {
+%						\timeMvtI \generalOptions \conductorOptions
+%						\nameVoiceXXI
+%						\musicVioloncellMvtI
+%					}
+%					\new Staff {
+%						\timeMvtI \generalOptions \conductorOptions
+%						\nameVoiceXXII
+%						\musicKontrabassMvtI
+%					}
+%				>>
 			>>
 		>>
 		\header {
