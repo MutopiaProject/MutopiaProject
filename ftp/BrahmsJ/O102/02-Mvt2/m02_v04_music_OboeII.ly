@@ -4,12 +4,14 @@
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
-musicOboeIIMvtII = \relative c {
+musicOboeIIMvtII = \relative c'' {
 	\clef treble
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	
+	R2.\fermataMarkup
+	R2.\fermataMarkup
+	R2.*28
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -20,24 +22,50 @@ musicOboeIIMvtII = \relative c {
 	
 % Bars 26 to 30
 	
+	
+	
+	
+	\bar "||" \mark \default \key f \major
 % Bars 31 to 35
+	R2.*5
+	
+	
+	
 	
 % Bars 36 to 40
-	
+	r4 r c(
+	a g f
+	d e) r
+	R2.*12
 % Bars 41 to 45
 	
 % Bars 46 to 50
 	
-% Bars 51 to 55
 	
+	
+	
+	\mark \default
+% Bars 51 to 55
+	R2.*5
 % Bars 56 to 60
+	r4 r a(
+	bes\< a g
+	f\> e)\! r
+	R2.*8
 	
 % Bars 61 to 65
 	
 % Bars 66 to 70
-	
+	\bar "||" \key d \major
+	R2.
+	r4 r a(~_\mfcresc
+	a e' fis
+	e d) g(~
 % Bars 71 to 75
-	
+	g cis, d)
+	e2( d4)
+	cis4.\f\> r8\! r4
+	R2.*26
 % Bars 76 to 80
 	
 % Bars 81 to 85
@@ -48,6 +76,10 @@ musicOboeIIMvtII = \relative c {
 	
 % Bars 96 to 100
 	
+	
+	
+	\mark \default
+	R2.*18
 % Bars 101 to 105
 	
 % Bars 106 to 110
@@ -56,4 +88,6 @@ musicOboeIIMvtII = \relative c {
 	
 % Bars 116 to 118
 	
+	
+	d2.\fermata\p \bar "|."
 }
