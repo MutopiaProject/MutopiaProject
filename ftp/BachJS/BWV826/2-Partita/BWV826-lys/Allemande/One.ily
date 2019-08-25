@@ -8,7 +8,7 @@
   es16 d16 | % 3
   es16 f16 g8 as,16 g'16 f16 es16 f16 g16 as8 h,16 as'16
   g16 f16 | % 4
-  \voiceOne es4^\markup { \finger "3 - 5" } ~ es8. c16 d4 ~ d8. h16 | % 5
+  \voiceOne es4 ~ es8. c16 d4 ~ d8. h16 | % 5
   c4. ~ c16 h16 c4 ~ c16 c16 b16 as16 | % 6
   g16 c32 d32 es16 c16 g8 as8 b4 ~ b8 g'8 ~ | % 7
   \oneVoice g16 c,32 d32 es16 c16 a16 f'16 c32 d32 es16 \voiceOne d4 ~ d8 d8 | % 8
