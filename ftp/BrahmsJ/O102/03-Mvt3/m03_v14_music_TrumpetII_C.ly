@@ -1,15 +1,15 @@
 % Project Name : Double Concerto Op102
-% Fichier :      m03_v12_music_HornIV.ly
+% Fichier :      m03_v14_music_TrumpetII.ly
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
-musicHornIVMvtIII = \relative c' {
+musicTrumpetIIMvtIII = \relative c'' {
 	\clef treble
 	\key a \minor
 	\transposition d
 % Bars 1 to 5
-	R2*24
+	R2*28
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -18,14 +18,10 @@ musicHornIVMvtIII = \relative c' {
 	
 % Bars 21 to 25
 	
-	
-	
-	
-	ees2\p~
 % Bars 26 to 30
-	ees~
-	ees~
-	ees
+	
+	
+	
 	\tempo "poco rit." R2*4
 % Bars 31 to 35
 	
@@ -35,47 +31,37 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\mark \default
-	d'2\ff
+	d2\f
 	g,,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
-	g-. g'-. r g-.
+	g-. g-. r g-.
 	r g-. r g-.
-	bes-. bes-. r bes-. 
+	bes'-. bes-. r bes-.
 	r bes-. r bes-.
 % Bars 46 to 50
-	bes4( g~
-	g c,)
-	r8 d'-. d-. d-.
+	r d-. r bes-.
+	r g-. r g-.
+	r d'-. d-. d-.
 	g,,-. r r4
-	R2*15
+	R2*35
 % Bars 51 to 55
 	
 % Bars 56 to 60
 	
 % Bars 61 to 65
 	
-	
-	
-	
-	c'8\f c4 c8~
 % Bars 66 to 70
-	c c4 c8\p~
-	c c r4
-	R2*11
+	
 % Bars 71 to 75
 	
 % Bars 76 to 80
 	
-	%r4 f_\pocof(
-	%e ees
-	r4 b(
-	c) r
 % Bars 81 to 85
-	R2*4 %bes8 d) g(-. f-.)
-	%ees( c) g(-. b-.)
-	%c( ees) g4(~
-	\bar "||" %g g,) \bar "||"
+	
+	
+	
+	\bar "||"
 	\time 3/4 R2.*2
 % Bars 86 to 90
 	\bar "||"
@@ -95,16 +81,16 @@ musicHornIVMvtIII = \relative c' {
 % Bars 106 to 110
 	
 % Bars 111 to 115
-	g,8\pp-. r g-. r
+	g8\pp-. r g-. r
 	r4 g8-. r 
-	r4 g8_\dimmarkup-. r
+	r4 g8-. r
 	R2
 	r4 g8-. r
 % Bars 116 to 120
-	r4 g8-. r 
+	r4 g8-. r
 	R2*2
 	\bar "||"
-	R2*17
+	R2*18
 % Bars 121 to 125
 	
 % Bars 126 to 130
@@ -112,17 +98,17 @@ musicHornIVMvtIII = \relative c' {
 % Bars 131 to 135
 	
 % Bars 136 to 140
-	r4 r8. ees''16\ff
-	ees8-. r  r8. ees16
-	ees8-. r r8. ees16
-	ees4 g,
+	
+	ees''8-.\f r r4
+	ees8-. r r4
+	ees8 r g, r
 	R2*2
 % Bars 141 to 145
 	
-	r8. d'16-. d8-.[ r16 d-.]
-	d8 r r8. c16
-	c8 r r8. bes16
-	c4 g
+	r8. bes16-. bes8[-. r16 bes-.]
+	bes8 r r8. c,16
+	c8 r r8. g'16
+	d'4 g,,
 % Bars 146 to 150
 	R2*2
 	\mark \default
@@ -144,76 +130,60 @@ musicHornIVMvtIII = \relative c' {
 	\mark \default
 	R2
 % Bars 181 to 185
-	c,2\pp(
-	g4) r
-	c2(
-	g4) r
-	R2*2 %c2(
+	g2(\pp
+	c4) r
+	g2(
+	c4) r
+	R2*4
 % Bars 186 to 190
-	%f4) r
-	d''2(
-	g,4) r
-	c,2(
-	e4) r
+	
+	
+	
+	g2(
+	e'4) r
 % Bars 191 to 195
-	des'( c
-	e,) r
+	e2~
+	e4 r
 	R2*3
-	
-	
 % Bars 196 to 200
 	r4 r8. g16\ff
-	g4.. ees'16
-	ees4.. ees16
-	\tuplet 3/2 4 {ees4( d8) c( d ees)}
-	\tuplet 3/2 4 {ees4( des8) ces( des ees)}
+	g4 r8. g16
+	g4 r8. ees'16
+	ees4 r8. ees16
+	ees4 r8. ees16
 % Bars 201 to 205
-	bes4 b
-	r8. g16-. ees8[ r16 c]
+	g,4 d'
+	r8. g,,16-. g8[-. r16 g-.]
 	c'4 d
-	bes c,
+	bes ees,
 	g c,
 % Bars 206 to 210
-	c'4..\sf c16
+	c4..\sf c16
 	c4..\sf c16
 	c4-> c->
 	c8-. r r4
-	g'4..\sf g16
+	g4..\sf g16
 % Bars 211 to 215
 	g4..\sf g16
 	g4-> g->
-	g,8-. r r8. d''16
-	d2\fp~
-	d_\dimmarkup~
+	g8-. r r4
+	R2*4
+	
 % Bars 216 to 220
-	d~
-	d \bar "||" \mark \default
-	g,,8-.\p r r4
-	R2*11
+	
+	\mark \default
+	R2*20
 % Bars 221 to 225
 	
 % Bars 226 to 230
 	
-	
-	
-	
-	r4 r8 d''-.\p
 % Bars 231 to 235
-	g,-. r r4
-	r r8 f'-.
-	bes,-. r r4
-	R2*4
+	
 % Bars 236 to 240
 	
 	\mark \default
-	R2*4
-	
-	%f8_\dolce( ees16 d) f4~\<
+	R2*8
 % Bars 241 to 245
-	%f8\>( g16 aes)\! g8( f)
-	ees,2\p~
-	ees
-	R2*2
 	
 % Bars 246 to 250
 	\tempo "poco rit." R2*4
@@ -226,19 +196,19 @@ musicHornIVMvtIII = \relative c' {
 % Bars 256 to 260
 	
 	
-	g,8\f-. g-. r g-.
+	g8-.\f g-. r g-.
 	r g-. r g-.
-	g-. g'-. r g-.
+	g-. g-. r g-.
 % Bars 261 to 265
 	r g-. r g-.
-	bes-. bes-. r bes-.
+	bes'-. bes-. r bes-.
 	r bes-. r bes-.
-	bes4( g~
-	g c,)
+	r d-. r bes-.
+	r g-. r g-.
 % Bars 266 to 270
-	g'8-. bes-. d-. d-.
-	bes-. bes-. bes-. bes-.
-	ees,-. r r4
+	d'-. d-. r d-.
+	r bes-. r bes-.
+	g-. r r4
 	R2*5
 % Bars 271 to 275
 	
@@ -259,8 +229,6 @@ musicHornIVMvtIII = \relative c' {
 	\time 4/4 R1*2
 	\bar "||"
 	\time 2/4 R2*4
-	
-	
 % Bars 296 to 300
 	\bar "||"
 	\tempo "Poco meno Allegro" R2
@@ -271,43 +239,29 @@ musicHornIVMvtIII = \relative c' {
 	g4. c8~
 	c2~
 	c~
-	c
-	c
+	c4. r8
+	R2*19
 % Bars 306 to 310
-	c
-	c
-	c
-	c2_\crescmarkup
-	c
+	
 % Bars 311 to 315
-	c
-	c_\dimmarkup
-	g8\p r r4
-	R2*6
+	
 % Bars 316 to 320
 	
-	
-	
-	
-	<<g2 {s4\sf\> s\!}>>
 % Bars 321 to 325
-	g4\p r
-	<<{g4. r8} {s4\sf\> s\!}>>
-	<<{g4. r8} {s4\sf\> s\!}>> \bar "||"
-	\tempo "Tempo primo" g4\f-. g\fp~
-	g2~
+	
+	
+	\bar "||"
+	\tempo "Tempo primo" g4-.\f g'-.
+	R2
 % Bars 326 to 330
-	g8 g\f-. g-. g'-.
-	\tuplet 3/2 4 {g8( d'-.) d-. e( d-.) d-.}
-	g,8-.\p r r4
-	R2*7
+	r8 g,8-. g-. g-.
+	R2*9
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	g,8-.\f r r4
+	g8-.\f r r4
 	R2
 	g'8-. r r4
 	g8-. r r4
 	g,2\fermata \bar "|."
 }
-

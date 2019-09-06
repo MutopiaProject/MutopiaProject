@@ -51,7 +51,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	bes4( c~
 	c2)
 	c8-. c-. c-. b!-.
-	c-. r r4
+	c r r4
 	R2*35
 % Bars 51 to 55
 	%g'8-.\p ees-. ees-. c-. 
@@ -77,15 +77,15 @@ musicKlarinetIIMvtIII = \relative c'' {
 % Bars 86 to 90
 	\bar "||"
 	\time 4/4 R1
-	d,4(\< ees e f8 bes)\! \bar "||" 
+	d,4( ees e f8 bes) \bar "||" 
 	\time 2/4 g8-.\f r r4
 	f8-. r r4
 % Bars 91 to 95
 	aes8-. r r4
 	R2
-	ees'8\p( des c ces
+	ees'8\p des c ces
 	bes aes g f\<
-	aes\> g\!) r4
+	aes\> g\! r4
 % Bars 96 to 100
 	R2*5
 	
@@ -127,26 +127,26 @@ musicKlarinetIIMvtIII = \relative c'' {
 % Bars 146 to 150
 	R2*2
 	\mark \default
-	r4 r8 c,_\ppdolce\((
+	r4 r8 c,\((
 	aes') aes4 g8(
 	aes) aes4 c,8(
 % Bars 151 to 155
 	aes') aes4 g8(
-	aes) aes4\) des8\((
-	c) c4 aes8~
-	aes\) r8 r4
+	aes) aes4\) des8(
+	c) c4 aes8(
+	aes) r8 r4
 	R2
 % Bars 156 to 160
-	r4 r8 ees\((
+	r4 r8 ees(
 	aes) aes4 g8(
-	aes) aes4\) g8->\((
-	a) a4\) r8
-	r4 r8 f8\((\>
+	aes) aes4 g8(
+	a) a4 r8
+	r4 r8 f8(\>
 % Bars 161 to 165
-	c') c4\! bes8(_\dimmarkup
+	c') c4\! bes8(
 	ges) ges4 f8(
 	des!) des4 bes8(
-	c) c4\) r8
+	c) c4 r8
 	R2*15
 % Bars 166 to 170
 	
@@ -177,7 +177,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	g f
 	e f
 % Bars 206 to 210
-	f'8(\sf ees! des c)
+	f'8\sf ees! des c
 	des(\sf c bes aes)
 	g( d g d)
 	g-. r r4
@@ -186,11 +186,11 @@ musicKlarinetIIMvtIII = \relative c'' {
 	aes'(\sf g f ees)
 	d( a d a)
 	d-. r r4
-	g,8(\fp aes! g f
-	g_\dimmarkup f ees f
+	g,8\fp aes! g f
+	g f ees f
 % Bars 216 to 220
 	g4 f
-	g8 f ees d) \bar "||" \mark \default \key c \minor
+	g8 f ees d \bar "||" \mark \default \key c \minor
 	c-.\p r r4
 	R2*19
 	
@@ -211,14 +211,14 @@ musicKlarinetIIMvtIII = \relative c'' {
 % Bars 236 to 240
 	%R2*2
 	\mark \default
-	ees'4_\dolce( des
+	ees'4( des
 	c d!)~
 	d8 r r4
 % Bars 241 to 245
 	R2*3
 	
 	
-	b8(_\dolce dis16 e) dis8( cis16 dis)
+	b8( dis16 e) dis8( cis16 dis)
 	cis( b a b) gis4
 % Bars 246 to 250
 	\tempo "poco rit." R2*4
@@ -231,7 +231,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 	
 	
-	g,2_\mfcresc(
+	g,2(
 % Bars 256 to 260
 	f)
 	f''
@@ -286,7 +286,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	c b) r8 g(\<
 	a\> g) r8\! f'\p(
 	e d) r8 b(~
-	b_\crescmarkup c) r4
+	b c) r4
 	r r8 b(~
 % Bars 311 to 315
 	b c) r c(

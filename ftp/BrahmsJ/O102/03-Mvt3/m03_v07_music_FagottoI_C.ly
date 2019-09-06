@@ -95,9 +95,9 @@ musicFagottoIMvtIII = \relative c' {
 	\time 3/4 a c2)
 % Bars 86 to 90
 	b2. \bar "||"
-	\time 4/4 r4 e,(\mf f fis
-	g\< a ais b)\! \bar "||"
-	\time 2/4 cis8-.\f r r4
+	\time 4/4 \partcombineApart r4 e,(\mf f fis
+	g a ais b) \partcombineAutomatic \bar "||"
+	\time 2/4 cis8-. r r4
 	a8-. r r4
 % Bars 91 to 95
 	f!8-. r r4
@@ -146,33 +146,33 @@ musicFagottoIMvtIII = \relative c' {
 	R2*2
 % Bars 141 to 145
 	
-	r8. e'16-. c8-.[ r16 c-.]
-	a4 b
-	g a
-	e a,
+	r8. \partcombineApart e'16-. c8-.[ r16 c-.]
+	\partcombineAutomatic a4 b
+	g \partcombineApart a
+	e a, \partcombineAutomatic
 % Bars 146 to 150
 	R2*2
 	\clef tenor \mark \default
-	r4 r8 c'\(_\ppdolce~
+	r4 r8 \partcombineApart c'^\(_\ppdolce~
 	c c4 bes8(
 	a) a4 c8~
 % Bars 151 to 155
 	c c4 bes8(
-	a) a4\) f'8\((_\ppdolce
+	a) a4\) \partcombineApart f'8^\((_\ppdolce
 	ees) ees4 des8(
-	d!) d4 d8~
-	d d4 c8(
+	d!) d4 d8(
+	d) d4 c8(
 % Bars 156 to 160
-	f,) f( g) g(
+	\override Voice.Beam.length-fraction = #1.8 f,) f( g)\) g^\(( \revert Voice.Beam.length-fraction
 	a!) a4 bes8(
-	a) a4\) a8\((->
-	fis') fis4 d8~
-	d d4\) fis8\(~\>
+	a) a4\) a8^\((->
+	fis') fis4 d8(
+	d) d4\) fis8^\((
 % Bars 161 to 165
-	fis fis4\! g8_\dimmarkup(
+	fis) fis4  g8_\dimmarkup(
 	c,) c4 bes8(
 	g) g4 g8(
-	a) a4\) r8
+	a) a4\) \partcombineAutomatic r8
 	R2*11
 % Bars 166 to 170
 	
@@ -191,7 +191,7 @@ musicFagottoIMvtIII = \relative c' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. a16\ff
+	r4 r8. \partcombineApartOnce a16
 	a8( f!16) f( d) d( cis) cis(
 	f) f( d) d( bes') bes( a) a
 	g4.. g16
@@ -212,12 +212,12 @@ musicFagottoIMvtIII = \relative c' {
 	a\sf
 	a4-> a->
 	a8-. r r4
-	e'8(\fp d c b
+	e'8( d c b
 	c_\dimmarkup b a gis
 % Bars 216 to 220
 	a bes a gis
 	a4 e) \bar "||" \mark \default \key a \minor
-	a,8-.\p r r4
+	\partcombineApartOnce a,8-.\p r r4
 	R2*7
 % Bars 221 to 225
 	
@@ -294,15 +294,15 @@ musicFagottoIMvtIII = \relative c' {
 	\time 3/4 fis a2)
 	gis2. \bar "||"
 % Bars 291 to 295
-	\time 4/4 r4 cis,(_\pcresc d dis
-	e\<  fis fisis gis)\! \bar "||"
-	\time 2/4 ais8-.\f r r4
+	\time 4/4 \partcombineApart r4 cis,(_\pcresc d dis
+	e fis fisis gis) \partcombineAutomatic \bar "||"
+	\time 2/4 ais8-. r r4
 	fis8-. r r4
 	e8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" a8(_\pdolce e' dis d
-	cis b a) e(
+	\tempo "Poco meno Allegro" \partcombineApart a8( e' dis d
+	cis[ b a]) \partcombineAutomatic e(
 	fis e a e
 	f e4.)~
 % Bars 301 to 305
@@ -310,12 +310,12 @@ musicFagottoIMvtIII = \relative c' {
 	b a d a
 	<< {bes a4.)~ } {s4 s_\dimmarkup}>>
 	a4. gis8
-	<< {r8 b4 b8} {s8 s\< s\> s\!} >>
+	r8 b4 b8
 % Bars 306 to 310
-	r8 b4\p b8 
-	<< {r8 b4 b8} {s8 s\< s\> s\!} >>
-	r8 d4\p d8
-	r8 a4_\crescmarkup fis'8(
+	r8 b4 b8 
+	r8 b4 b8
+	r8 d4 d8
+	r8 \partcombineApartOnce a4_\crescmarkup fis'8(
 	e d cis b
 % Bars 311 to 315
 	d a4) a'8(
@@ -325,7 +325,7 @@ musicFagottoIMvtIII = \relative c' {
 	r4 r8 a(
 % Bars 316 to 320
 	gis\> fis d gis,)\! \clef bass
-	a\p r r4
+	a r r4
 	R2
 	eis4\f fis
 	a2\sf\> %<< a2 {\once \override Hairpin.minimum-length = #5 s4\sf\> s\!}>>
@@ -338,12 +338,12 @@ musicFagottoIMvtIII = \relative c' {
 % Bars 326 to 330
 	a4. b'8-.
 	cis-. r d-. r
-	cis-.\p r r4
+	cis-. r r4
 	R2*7
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	cis8-.\f r r4
+	cis8-. r r4
 	R2
 	cis8-. r r4
 	cis8-. r r4

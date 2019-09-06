@@ -5,6 +5,7 @@
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
 musicFloteIMvtIII = \relative c''' {
+	\override TupletBracket.bracket-visibility = ##f
 	\clef treble
 	\key a \minor
 %	\transposition a
@@ -32,7 +33,7 @@ musicFloteIMvtIII = \relative c''' {
 	
 	
 	\mark \default
-	e'2\ff
+	\partcombineApartOnce e'2
 	c8-. c-. r f-.
 % Bars 41 to 45
 	r d-. r c-.
@@ -70,9 +71,9 @@ musicFloteIMvtIII = \relative c''' {
 	R2.*2
 % Bars 86 to 90
 	\bar "||" \time 4/4
-	r2 r4 fis'(\f
-	g\< a ais b) \bar "||" \time 2/4
-	cis8-.\f r r4
+	\partcombineApart r2 r4 fis'(\f 
+	g a ais b) \partcombineAutomatic \bar "||" \time 2/4
+	cis8-. r r4
 	a8-. r r4
 % Bars 91 to 95
 	a'8-. r r4
@@ -92,7 +93,7 @@ musicFloteIMvtIII = \relative c''' {
 	
 	
 	
-	e'8->\p d16-. e-. d8-> e16-. d-.
+	e'8->_\p d16-. e-. d8-> e16-. d-.
 	e8-> d16-. e-. d( f) d-. b-.
 % Bars 111 to 115
 	a8 r r4
@@ -120,7 +121,7 @@ musicFloteIMvtIII = \relative c''' {
 	r8. g16-. g8[-. r16 g-.]
 	\times 2/3 {g4( f8)} \times 2/3 {d( e f)}
 	\times 2/3 {f4( e8)} \times 2/3 {c( d e)}
-	b4 a
+	b4 \partcombineApartOnce a
 % Bars 146 to 150
 	R2*2
 	\mark \default
@@ -141,8 +142,8 @@ musicFloteIMvtIII = \relative c''' {
 	R2
 % Bars 176 to 180
 	r4 r8 f'(\f
-	e) a,4 d8(
-	c) f,4 r8
+	e) \partcombineApartOnce a,4 d8(
+	c) \partcombineApartOnce f,4 r8
 	R2 \mark \default
 	R2*16
 % Bars 181 to 185
@@ -152,8 +153,8 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. a'16\ff
-	a4.. a16
+	r4 r8. \partcombineApart a'16
+	a4.. \partcombineAutomatic a16
 	a4.. a16
 	\times 2/3 {a4( g8)} \times 2/3 {f( g a)}
 	\times 2/3 {a4( g8)} \times 2/3 {f( g a)}
@@ -183,7 +184,7 @@ musicFloteIMvtIII = \relative c''' {
 	
 % Bars 221 to 225
 	
-	a16\p-. c-. e-. c-. g8-. r
+	a16_\p-. c-. e-. c-. g8-. r
 	R2
 	c16-. e-. g-. e-. b8-. r
 	R2*11
@@ -192,7 +193,7 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 231 to 235
 	
 % Bars 236 to 240
-	e8->\p d16-. e-. d8-> e16-. d-.
+	e8->_\p d16-. e-. d8-> e16-. d-.
 	e8-> d16-. e-. d( f) d-. b-. \mark \default
 	g8-. r r4
 	R2*3
@@ -248,9 +249,9 @@ musicFloteIMvtIII = \relative c''' {
 	R2.*2
 	\bar "||" \time 4/4
 % Bars 291 to 295
-	r4 cis,(_\pcresc d dis
-	e\< fis fisis gis) \bar "||" \time 2/4
-	ais8-.\f r r4
+	\partcombineApart r4 cis,(^\pcresc d dis 
+	e fis fisis gis) \bar "||" \time 2/4 \partcombineAutomatic
+	ais8-. r r4
 	fis8-. r r4
 	fis'8-. r r4
 % Bars 296 to 300
@@ -258,7 +259,7 @@ musicFloteIMvtIII = \relative c''' {
 	\tempo "Poco meno Allegro" a,8(_\pdolce e' dis d
 	cis b a) r
 	R2
-	r8. e16( a cis e cis
+	 r8. e16( a cis e cis 
 % Bars 301 to 305
 	a8) r r a(
 	b a d a
@@ -279,12 +280,12 @@ musicFloteIMvtIII = \relative c''' {
 	r4 r8 a'(
 % Bars 316 to 320
 	gis\> fis d gis,)\!
-	a\p r r4
+	\partcombineApartOnce a r r4
 	R2
 	r4 r8 a(
 	gis'4\sf\> fis)\!
 % Bars 321 to 325
-	a,\p r8 a(\pp\<
+	\partcombineApartOnce a, r8 a(\pp\<
 	gis'4\> fis8)\! r
 	gis4(\> fis8)\! r \bar "||"
 	\tempo "Tempo primo" a,8-.\f r dis4->~
@@ -292,12 +293,12 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 326 to 330
 	dis8 d-. cis-. b-.
 	cis-. r b-. r
-	a-.\p e'4 e8~
+	\partcombineApart a-. e'4 e8~
 	e e4 e8~
 	e e4 e8~
 % Bars 331 to 335
 	e e4 e8~
-	e e4_\pcresc e8~
+	e \partcombineAutomatic e4_\pcresc e8~
 	e e4 e8~
 	e e4 e8~
 	e e4 e8
@@ -306,5 +307,5 @@ musicFloteIMvtIII = \relative c''' {
 	R2
 	cis8-. r r4
 	cis8-. r r4
-	a2\fermata \bar "|."
+	\partcombineApartOnce a2\fermata \bar "|."
 }

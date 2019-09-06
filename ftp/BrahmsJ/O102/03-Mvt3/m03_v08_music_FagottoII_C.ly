@@ -76,7 +76,7 @@ musicFagottoIIMvtIII = \relative c {
 	\clef bass g8\f-. g'-. g,-. g'-. 
 % Bars 66 to 70
 	g,-. g'-. g,-. g\p~
-	g g4_\dimmarkup g8~
+	g g4 g8~
 	g g4 g8
 	R2*15
 % Bars 71 to 75
@@ -106,7 +106,7 @@ musicFagottoIIMvtIII = \relative c {
 	r4 c8(\p\< d
 	f\> e)\! r4
 % Bars 96 to 100
-	r c8(^\dolce\< d
+	r c8(\< d
 	f\> e)\! r4
 	R2*3
 	
@@ -146,33 +146,33 @@ musicFagottoIIMvtIII = \relative c {
 	R2*2
 % Bars 141 to 145
 	
-	r8. e''16-. c8-.[ r16 a-.]
+	r8. e''16 c8[ s16 a] 
 	f4 g
 	e f8. c16
 	e4 a,
 % Bars 146 to 150
 	R2*2
 	\clef tenor \mark \default
-	R2*4 %r4 r8 c'\(_\ppdolce~
-	%c c4 bes8(
-	%a) a4 c8~
+	r4 r8 r %r4 r8 c'\(_\ppdolce~
+	R2 %c c4 bes8(
+	R2 %a) a4 c8~
 % Bars 151 to 155
-	%c c4 bes8(
-	r4 r8 bes'8\((_\ppdolce
+	R2 %c c4 bes8(
+	r4 r8 bes'8(
 	c) c4 des8(
 	f,) f4 g8(
 	aes) aes4 g8(
 % Bars 156 to 160
-	bes) bes4 bes8(
-	a!)\) r8 r4
-	r r8 e8\((->
+	\override Voice.Stem.length = #8 bes) bes4 bes8( \revert Voice.Stem.length
+	a!) r8 r4
+	r r8 e8(->
 	a) a4 gis8(
-	a) a4\) d8\((\>
+	a) a4 d8(\>
 % Bars 161 to 165
-	ees) ees4\! d8_\dimmarkup(
+	ees) ees4\! d8(
 	a) a4 g8(
 	f) f4 e8(
-	f) f4\) r8
+	f) f4 r8
 	R2*11
 % Bars 166 to 170
 	
@@ -212,10 +212,10 @@ musicFagottoIIMvtIII = \relative c {
 	a\sf
 	a4-> a->
 	a8-. r r4
-	e'8(\fp f e d
-	e_\dimmarkup d c b
+	e'8\fp f e d
+	e d c b
 % Bars 216 to 220
-	c cis d b)
+	c cis d b
 	c( d e e,) \bar "||" \mark \default \key a \minor
 	a8-.\p r r4
 	R2*19
@@ -236,7 +236,7 @@ musicFagottoIIMvtIII = \relative c {
 % Bars 236 to 240
 	
 	\mark \default
-	\clef tenor c'4_\dolce( bes
+	\clef tenor c'4( bes
 	a b!)~
 	b8 r r4
 % Bars 241 to 245
@@ -302,20 +302,20 @@ musicFagottoIIMvtIII = \relative c {
 % Bars 296 to 300
 	R2 \bar "||"
 	\tempo "Poco meno Allegro" a'8(_\pdolce g fis f
-	e d cis) cis(
+	e[ d cis)] cis(
 	d cis4) cis8(
 	bis cis4.)~
 % Bars 301 to 305
-	cis \clef tenor fis8_\piup(
+	cis \clef tenor fis8(
 	g fis4) fis8(
-	<< {f fis4.)~ } {s4 s_\dimmarkup}>>
+	<< {f fis4.)~ } {s4 s}>>
 	fis4.( e8)
 	r gis(\< a\> gis\!) %<< {r8 b4 b8} {s8 s\< s\> s\!} >>
 % Bars 306 to 310
 	r8 b(\p a gis) 
 	r gis(\< a\> gis)\! %<< {r8 b4 b8} {s8 s\< s\> s\!} >>
 	r8 d'(\p cis b)
-	r8 a4_\crescmarkup d8(
+	r8 a4 d8(
 	cis b a gis
 % Bars 311 to 315
 	eis fis4) fis'8(
@@ -325,8 +325,8 @@ musicFagottoIIMvtIII = \relative c {
 	r4 r8 fis(
 % Bars 316 to 320
 	e\> d b d,)\! \clef bass
-	cis4\p d\<
-	dis e\!
+	\partcombineApart cis4\p d\<
+	dis e\! \partcombineAutomatic
 	cis4\f fis,
 	b2\sf\> %<< a2 {\once \override Hairpin.minimum-length = #5 s4\sf\> s\!}>>
 % Bars 321 to 325

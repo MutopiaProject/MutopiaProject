@@ -1,13 +1,13 @@
 % Project Name : Double Concerto Op102
-% Fichier :      m03_v12_music_HornIV.ly
+% Fichier :      m03_v11_music_HornIII.ly
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
-musicHornIVMvtIII = \relative c' {
+musicHornIIIMvtIII = \relative c'' {
 	\clef treble
 	\key a \minor
-	\transposition d
+	\transposition a
 % Bars 1 to 5
 	R2*24
 % Bars 6 to 10
@@ -35,19 +35,19 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\mark \default
-	d'2\ff
-	g,,8-. g-. r g-.
+	\partcombineApartOnce d2
+	g,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
-	g-. g'-. r g-.
-	r g-. r g-.
-	bes-. bes-. r bes-. 
+	g-. bes-. r bes-.
 	r bes-. r bes-.
+	d-. d-. r d-. 
+	r d-. r d-.
 % Bars 46 to 50
-	bes4( g~
-	g c,)
-	r8 d'-. d-. d-.
-	g,,-. r r4
+	d4( bes~
+	bes c)
+	r8 \partcombineApart d-. d-. d-. \partcombineAutomatic
+	g,-. r r4
 	R2*15
 % Bars 51 to 55
 	
@@ -58,27 +58,27 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	
-	c'8\f c4 c8~
+	\partcombineApartOnce c8 ees4 ees8~
 % Bars 66 to 70
-	c c4 c8\p~
-	c c r4
-	R2*11
+	ees ees4 ees8\p~
+	ees c r4
+	R2*9
 % Bars 71 to 75
 	
 % Bars 76 to 80
 	
-	%r4 f_\pocof(
-	%e ees
-	r4 b(
-	c) r
+	\partcombineApart r4 f^\pocof(
+	e ees
+	d g
+	ees) g,(
 % Bars 81 to 85
-	R2*4 %bes8 d) g(-. f-.)
-	%ees( c) g(-. b-.)
-	%c( ees) g4(~
-	\bar "||" %g g,) \bar "||"
-	\time 3/4 R2.*2
+	bes8 d) g(-. f-.) \partcombineAutomatic
+	ees( c) g(-. b-.)
+	c( ees) g4(~
+	g g,) \bar "||"
+	\time 3/4 c2 r4
 % Bars 86 to 90
-	\bar "||"
+	R2. \bar "||"
 	\time 4/4 R1*2
 	\bar "||"
 	\time 2/4 R2*12
@@ -95,7 +95,7 @@ musicHornIVMvtIII = \relative c' {
 % Bars 106 to 110
 	
 % Bars 111 to 115
-	g,8\pp-. r g-. r
+	g8\pp-. r g-. r
 	r4 g8-. r 
 	r4 g8_\dimmarkup-. r
 	R2
@@ -112,17 +112,17 @@ musicHornIVMvtIII = \relative c' {
 % Bars 131 to 135
 	
 % Bars 136 to 140
-	r4 r8. ees''16\ff
-	ees8-. r  r8. ees16
-	ees8-. r r8. ees16
-	ees4 g,
+	r4 r8. g'16\ff
+	g8-. r  r8. g16
+	g8-. r r8. g16
+	g4 d
 	R2*2
 % Bars 141 to 145
 	
-	r8. d'16-. d8-.[ r16 d-.]
-	d8 r r8. c16
-	c8 r r8. bes16
-	c4 g
+	r8. f16-. f8-.[ r16 f-.]
+	f8 r r8. ees16
+	ees8 r r8. d16
+	d4 d
 % Bars 146 to 150
 	R2*2
 	\mark \default
@@ -144,17 +144,17 @@ musicHornIVMvtIII = \relative c' {
 	\mark \default
 	R2
 % Bars 181 to 185
-	c,2\pp(
+	c2\pp(
 	g4) r
 	c2(
 	g4) r
-	R2*2 %c2(
+	\partcombineApart c2(
 % Bars 186 to 190
-	%f4) r
-	d''2(
-	g,4) r
+	f4) r \partcombineAutomatic
+	d2(
+	g4) r
 	c,2(
-	e4) r
+	e,4) r
 % Bars 191 to 195
 	des'( c
 	e,) r
@@ -162,16 +162,16 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 % Bars 196 to 200
-	r4 r8. g16\ff
-	g4.. ees'16
-	ees4.. ees16
-	\tuplet 3/2 4 {ees4( d8) c( d ees)}
-	\tuplet 3/2 4 {ees4( des8) ces( des ees)}
+	r4 r8. g'16\ff
+	g4.. g16
+	g4.. g16
+	\tuplet 3/2 4 {g4( f8) ees( f g)}
+	\tuplet 3/2 4 {g4( f8) ees( f g)}
 % Bars 201 to 205
-	bes4 b
-	r8. g16-. ees8[ r16 c]
-	c'4 d
-	bes c,
+	g4 d
+	r8. g,16-. ees8[ r16 c]
+	ees'4 \partcombineApartOnce d
+	d c
 	g c,
 % Bars 206 to 210
 	c'4..\sf c16
@@ -182,13 +182,13 @@ musicHornIVMvtIII = \relative c' {
 % Bars 211 to 215
 	g4..\sf g16
 	g4-> g->
-	g,8-. r r8. d''16
+	g,8-. r r8. d'16
 	d2\fp~
 	d_\dimmarkup~
 % Bars 216 to 220
 	d~
 	d \bar "||" \mark \default
-	g,,8-.\p r r4
+	g,8-.\p r r4
 	R2*11
 % Bars 221 to 225
 	
@@ -197,21 +197,21 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	
-	r4 r8 d''-.\p
+	r4 r8 \partcombineApartOnce d'-.
 % Bars 231 to 235
-	g,-. r r4
-	r r8 f'-.
-	bes,-. r r4
+	g-. r r4
+	r r8 \partcombineApartOnce f-.
+	bes-. r r4
 	R2*4
 % Bars 236 to 240
 	
 	\mark \default
-	R2*4
+	R2*2
 	
-	%f8_\dolce( ees16 d) f4~\<
+	f8_\dolce( ees16 d) f4~\<
 % Bars 241 to 245
-	%f8\>( g16 aes)\! g8( f)
-	ees,2\p~
+	f8\>( g16 aes)\! g8( f)
+	ees2\p~
 	ees
 	R2*2
 	
@@ -228,17 +228,17 @@ musicHornIVMvtIII = \relative c' {
 	
 	g,8\f-. g-. r g-.
 	r g-. r g-.
-	g-. g'-. r g-.
+	g-. bes-. r bes-.
 % Bars 261 to 265
-	r g-. r g-.
-	bes-. bes-. r bes-.
 	r bes-. r bes-.
-	bes4( g~
-	g c,)
+	d-. d-. r d-.
+	r d-. r d-.
+	d4( bes~
+	bes c)
 % Bars 266 to 270
-	g'8-. bes-. d-. d-.
-	bes-. bes-. bes-. bes-.
-	ees,-. r r4
+	d8-. g-. g-. f-.
+	f-. ees-. ees-. d-.
+	g,-. r r4
 	R2*5
 % Bars 271 to 275
 	
@@ -264,19 +264,19 @@ musicHornIVMvtIII = \relative c' {
 % Bars 296 to 300
 	\bar "||"
 	\tempo "Poco meno Allegro" R2
-	r4 r8 g,\pp~
+	r4 r8 g\pp~
 	g2~
 	g~
 % Bars 301 to 305
 	g4. c8~
 	c2~
-	c~
-	c
-	c
+	c4 r8. g16(
+	c e g e c8) r
+	R2
 % Bars 306 to 310
-	c
-	c
-	c
+	R
+	R
+	R
 	c2_\crescmarkup
 	c
 % Bars 311 to 315
@@ -297,17 +297,18 @@ musicHornIVMvtIII = \relative c' {
 	\tempo "Tempo primo" g4\f-. g\fp~
 	g2~
 % Bars 326 to 330
-	g8 g\f-. g-. g'-.
-	\tuplet 3/2 4 {g8( d'-.) d-. e( d-.) d-.}
-	g,8-.\p r r4
+	g8 g\f-. g-. e'-.
+	\partcombineApart \tuplet 3/2 4 {g8( d-.) d-. e( d-.) d-.}
+	g,8-. \partcombineAutomatic r r4
 	R2*7
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	g,8-.\f r r4
+	g8-.\f r r4
 	R2
 	g'8-. r r4
 	g8-. r r4
 	g,2\fermata \bar "|."
 }
+
 

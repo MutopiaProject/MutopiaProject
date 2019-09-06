@@ -6,7 +6,7 @@
 %###############################################################################
 generalOptions = {
 	\version "2.18.2"
-	\override TupletBracket #'bracket-visibility = ##f
+	%\override TupletBracket #'bracket-visibility = ##f
 	\override Hairpin.to-barline = ##f
 	\set Score.alternativeNumberingStyle = #'numbers
 	\set Score.doubleRepeatType = #":|.|:"
@@ -16,7 +16,7 @@ generalOptions = {
 	\compressFullBarRests
 }
 conductorOptions = {
-	\set Staff.soloText = #""
+	\set Staff.soloText = #"1."
 	#(set-global-staff-size 19)
 	\override Score.BarNumber #'font-size = #2
 }

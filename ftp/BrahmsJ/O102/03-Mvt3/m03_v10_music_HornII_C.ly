@@ -51,7 +51,7 @@ musicHornIIMvtIII = \relative c' {
 	ees8\f ees4 ees8~
 % Bars 66 to 70
 	ees ees4 ees8\p~
-	ees ees4_\dimmarkup ees8~
+	ees ees4 ees8~
 	ees ees4 ees8
 	R2*16
 % Bars 71 to 75
@@ -148,7 +148,7 @@ musicHornIIMvtIII = \relative c' {
 	g8-. d'-. g,-. d'-.
 	g,-. r r4
 	c,,2\fp~
-	c_\dimmarkup~
+	c~
 % Bars 216 to 220
 	c~
 	c \mark \default \bar "||"
@@ -194,7 +194,7 @@ musicHornIIMvtIII = \relative c' {
 	R2*3
 	
 	
-	c4(\mf c_\dimmarkup\>
+	c4(\mf c\>
 % Bars 271 to 275
 	c c
 	c c)\!
@@ -215,9 +215,9 @@ musicHornIIMvtIII = \relative c' {
 	\time 3/4 R2.*2 %\time 3/4 g2 r4
 	%R2. \bar "||"
 % Bars 291 to 295
-	\time 4/4 r2 r4 g_\pcresc
+	\time 4/4 r2 r4 g
 	c2 c \bar "||" 
-	\time 2/4 c'8-.\f r r4
+	\time 2/4 c'8\f r r4
 	R2*3
 	
 % Bars 296 to 300
@@ -227,13 +227,13 @@ musicHornIIMvtIII = \relative c' {
 	
 	
 	
-	r4 r8 c,8~
-	<< {c8 c4 c8} {s8 s\< s\> s\!} >>  
+	\partcombineApart r4 r8 c,8~
+	<< {c8 c4 c8} {s8 s\< s\> s\!} >> 
 % Bars 306 to 310
-	r c4\p c8
-	r c4 c8
-	r c4\p c8
-	r bes'4_\crescmarkup bes8
+	\partcombineAutomatic r \partcombineApart c4\p c8
+	\partcombineAutomatic r \partcombineApart c4 c8
+	\partcombineAutomatic r \partcombineApart c4\p c8
+	\partcombineAutomatic r \partcombineApart bes'4 bes8 \partcombineAutomatic
 	R2
 % Bars 311 to 315
 	r8 bes4 bes8
@@ -251,16 +251,16 @@ musicHornIIMvtIII = \relative c' {
 	c\p r
 	c(\pp\> b!8)\! r
 	c4(\> b8)\! r \bar "||"
-	\tempo "Tempo primo" c4\f-. b-.
-	R2*7
+	\tempo "Tempo primo" c4\f b-.
+	R2*5
 % Bars 326 to 330
 	
 	
 	
 	
-	%r8 c4\p c8~
+	R2 %r8 c4\p c8~
 % Bars 331 to 335
-	%c c4 c8~
+	R %c c4 c8~
 	r8 c4_\pcresc c8~
 	c c4 c8~
 	c c4 c8~

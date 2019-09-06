@@ -40,7 +40,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	
 	\mark \default
 	g'2\ff
-	ees8-. c-. r c-.
+	\partcombineApart ees8-. c-. \partcombineAutomatic r c-.
 % Bars 41 to 45
 	r b!-.  r c-.
 	r c-. r c-.
@@ -51,7 +51,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	ees2(~
 	ees4 f)
 	g8-. ees-. d-. d-.
-	c-. r r4
+	\partcombineApartOnce c-. r r4
 	R2
 % Bars 51 to 55
 	g'8-.\p ees-. ees-. c-. 
@@ -76,16 +76,16 @@ musicKlarinetIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 % Bars 86 to 90
 	\bar "||"
-	\time 4/4 r4 g(_\mfcresc\< aes a
-	bes c cis d)\! \bar "||" 
+	\time 4/4 \partcombineApart r4 g(^\mfcresc\< aes a
+	bes c cis d)\! \partcombineAutomatic \bar "||" 
 	\time 2/4 e!8-.\f r r4
 	f8-. r r4
 % Bars 91 to 95
 	c8-. r r4
 	R2
-	ees8\p( bes' a! aes
+	\partcombineApart ees8( bes' a! aes
 	g f ees bes\<
-	c\> bes\!) r4
+	c\> bes\!) \partcombineAutomatic r4
 % Bars 96 to 100
 	R2*5
 	
@@ -132,21 +132,21 @@ musicKlarinetIMvtIII = \relative c'' {
 	c) c4 ees,8(
 % Bars 151 to 155
 	c') c4 b8(
-	c) c4\) fes8\((
+	c) c4\) \partcombineApart fes8^\((
 	ees) ees4 des8(
 	ces) ces4 bes8(
 	aes) aes4 g8(
 % Bars 156 to 160
-	f!) f4\) ees8\((
+	f!) f4\) ees8^\((
 	c') c4 b8(
-	c) c4\) c,8->\((
+	c) c4\) c,8->^\((
 	c') c4 gis8(
-	a) a4\) f'8\((\>
+	a) a4\) f'8^\((
 % Bars 161 to 165
-	ees) ees4\! des!8(_\dimmarkup
+	ees) ees4 des!8(_\dimmarkup
 	a) a4 bes8(
 	fes) fes4 ees8(
-	c) c4\) r8
+	c) c4\) \partcombineAutomatic r8
 	R2*15
 % Bars 166 to 170
 	
@@ -165,8 +165,8 @@ musicKlarinetIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. c''16\ff
-	c4.. c16
+	r4 r8. \partcombineApartOnce c''16
+	\partcombineApartOnce c4.. c16
 	c4.. c16
 	\tuplet 3/2 4 {c4( bes8) aes( bes c)}
 	\tuplet 3/2 4 {c4( bes8) aes( bes c)} 
@@ -175,9 +175,9 @@ musicKlarinetIMvtIII = \relative c'' {
 	r8. c,16-. c8[-. r16 c-.]
 	f4 bes,
 	ees aes,
-	g f
+	g \partcombineApart f
 % Bars 206 to 210
-	f'8(\sf ees! des c)
+	f'8( ees! des c) \partcombineAutomatic
 	f(\sf ees des c)
 	b( c b c)
 	b-. r r4
@@ -186,7 +186,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	c(\sf bes  aes g)
 	fis( g fis g)
 	fis-. r r4
-	g8(\fp f! ees d
+	g8( f! ees d
 	ees_\dimmarkup d c b
 % Bars 216 to 220
 	c bes! a aes
@@ -265,8 +265,8 @@ musicKlarinetIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 	\bar "||"
 % Bars 291 to 295
-	\time 4/4 r4 e,(_\pcresc f fis
-	g\< a ais b)\! \bar "||"
+	\partcombineApart \time 4/4 r4 e,(_\pcresc f fis
+	g a ais b) \partcombineAutomatic \bar "||"
 	\time 2/4 cis8-.\f r r4
 	d8-. r r4
 	a8 r r4
@@ -280,28 +280,28 @@ musicKlarinetIMvtIII = \relative c'' {
 	g r8
 	R2*2
 	
-	r4 r8 d\<~
-	d4\> r8\! d\p~
+	r4 r8 d~
+	d4 r8 d~
 % Bars 306 to 310
-	d4 r8 b~\<
-	b4\> r8\! f'\p~
+	d4 r8 b~
+	b4 r8 f'~
 	f4 r8 d(~
 	d_\crescmarkup f) r4
 	r r8 d(~
 % Bars 311 to 315
 	d f) r a(
 	g\> f e d)\!
-	c\p r r4
+	\partcombineApartOnce c r r4
 	R2
 	r4 r8 c'(
 % Bars 316 to 320
 	b\> a f g)\!
-	g(\p gis) a4(~_\crescmarkup\<
+	\partcombineApart g( gis) a4(~_\crescmarkup_\<
 	a8 ais) b4\!~
-	b8 r r c,(
+	b8 r r \partcombineAutomatic c,(
 	b'4\sf\> a)\!
 % Bars 321 to 325
-	c,\p r
+	\partcombineApartOnce c, r
 	R2*2
 	\bar "||"
 	\tempo "Tempo primo" r4 r8 ees'(\f

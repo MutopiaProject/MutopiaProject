@@ -152,42 +152,42 @@
 				\nameVoiceXVI
 				\musicSoloViolinMvtII
 			}
-%			\new Staff {
-%				\timeMvtII \generalOptions \conductorOptions
-%				\nameVoiceXVII
-%				\musicSoloCelloMvtII
-%			}
-%			\new StaffGroup <<
-%				\new GrandStaff <<
-%					\new Staff {
-%						\timeMvtII \generalOptions \conductorOptions
-%						\nameVoiceXVIII
-%						\musicViolinIMvtII
-%					}
-%					\new Staff {
-%						\timeMvtII \generalOptions \conductorOptions
-%						\nameVoiceXIX
-%						\musicViolinIIMvtII
-%					}
-%				>>
-%				\new Staff {
-%					\timeMvtII \generalOptions \conductorOptions
-%					\nameVoiceXX
-%					\musicBratscheMvtII
-%				}
-%				\new GrandStaff <<
-%					\new Staff {
-%						\timeMvtII \generalOptions \conductorOptions
-%						\nameVoiceXXI
-%						\musicVioloncellMvtII
-%					}
-%					\new Staff {
-%						\timeMvtII \generalOptions \conductorOptions
-%						\nameVoiceXXII
-%						\musicKontrabassMvtII
-%					}
-%				>>
-%			>>
+			\new Staff {
+				\timeMvtII \generalOptions \conductorOptions
+				\nameVoiceXVII
+				\musicSoloCelloMvtII
+			}
+			\new StaffGroup <<
+				\new GrandStaff <<
+					\new Staff {
+						\timeMvtII \generalOptions \conductorOptions
+						\nameVoiceXVIII
+						\musicViolinIMvtII
+					}
+					\new Staff {
+						\timeMvtII \generalOptions \conductorOptions
+						\nameVoiceXIX
+						\musicViolinIIMvtII
+					}
+				>>
+				\new Staff {
+					\timeMvtII \generalOptions \conductorOptions
+					\nameVoiceXX
+					\musicBratscheMvtII
+				}
+				\new GrandStaff <<
+					\new Staff {
+						\timeMvtII \generalOptions \conductorOptions
+						\nameVoiceXXI
+						\musicVioloncellMvtII
+					}
+					\new Staff {
+						\timeMvtII \generalOptions \conductorOptions
+						\nameVoiceXXII
+						\musicKontrabassMvtII
+					}
+				>>
+			>>
 		>>
 		\header {
 			breakbefore = ##t

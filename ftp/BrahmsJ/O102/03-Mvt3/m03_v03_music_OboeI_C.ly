@@ -146,8 +146,8 @@ musicOboeIMvtIII = \relative c''' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. a16\ff
-	a4.. a16
+	r4 r8. \partcombineApart a16
+	a4.. \partcombineAutomatic a16
 	a4.. a16
 	\tuplet 3/2 4 {a4( g8) f( g a)}
 	\tuplet 3/2 4 {a4( g8) f( g a)}
@@ -156,7 +156,7 @@ musicOboeIMvtIII = \relative c''' {
 	r8. c'!16-. c8[-. r16 c-.]
 	\tuplet 3/2 4 {c4( bes8) g( a bes)}
 	\tuplet 3/2 4 {bes4( a8) f( g a)}
-	e4 d
+	e4 \partcombineApartOnce d
 % Bars 206 to 210
 	d'8(\sf c bes a)
 	bes\sf( a g f)
@@ -167,12 +167,12 @@ musicOboeIMvtIII = \relative c''' {
 	f(\sf e d c)
 	b( c b c)
 	b-. r r4
-	e8(\fp d' c b
+	e8( d' c b
 	c_\dimmarkup b a gis
 % Bars 216 to 220
 	a g! fis f
 	e d c b) \bar "||" \mark \default \key a \minor
-	a8\p r r4
+	\partcombineApartOnce a8 r r4
 	R2*17
 % Bars 221 to 225
 	
@@ -185,9 +185,9 @@ musicOboeIMvtIII = \relative c''' {
 	e8-> d16-. e-. d( f) d-. b-. \mark \default
 	g8-. r r4
 	R2
-	g'8( f16 e) g4~\<
+	g'8( f16 e) g4~
 % Bars 241 to 245
-	g8(\> a16 bes)\! a8( g)
+	g8( a16 bes) a8( g)
 	f r r4
 	R2*3
 % Bars 246 to 250
@@ -265,20 +265,20 @@ musicOboeIMvtIII = \relative c''' {
 	r4 r8 a,(
 	gis'4\sf\> fis)\!
 % Bars 321 to 325
-	a,\p r8 a(\pp\<
+	\partcombineApartOnce a, r8 a(\pp\<
 	gis'4\> fis8)\! r
 	gis4(\> fis8)\! r \bar "||"
-	\tempo "Tempo primo" r4 r8 c'(\f
-	a fis dis c)
+	\tempo "Tempo primo" r4 r8 \partcombineApart c'(
+	a fis dis c) 
 % Bars 326 to 330
 	a4. fis'8-.
 	\tuplet 3/2 4 {a8( e)-. e-. fis( e)-. e-.}
-	a,\p-. e'4 e8~
+	a,-. e'4 e8~
 	e e4 e8~
 	e e4 e8~
 % Bars 331 to 335
 	e e4 e8~
-	e e4_\pcresc e8~
+	e \partcombineAutomatic e4_\pcresc e8~
 	e e4 e8~
 	e e4 e8~
 	e e4 e8
