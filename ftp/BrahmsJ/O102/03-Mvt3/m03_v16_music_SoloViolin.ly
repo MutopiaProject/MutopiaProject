@@ -34,17 +34,17 @@ musicSoloViolinMvtIII = \relative c''' {
 	<bes d>16( <a c> <g bes> <a c>) <f a>4
 	<f' a>8( <e g>16 <f a>) <e g>4
 	<d f>16( <c e> <bes d> <c e>) <a c>4~
-	\tempo "poco rit" q8(\pp b16 c) f,4
+	\tempo "poco rit." q8(\pp b16 c) f,4
 	a8( gis16 a) a'4
 % Bars 31 to 35
 	a'8( gis16 a) a,,4
 	c'8( b16 c) c'4
-	\tempo "in tempo" \tuplet 6/4 4 {a16( gis a f e f c b c a gis a)}
-	\tuplet 6/4 4 {f( e f d cis d b ais b f e f)}
-	\tuplet 3/2 4 {e(_\benmarccresc d e} d8-.) \tuplet 3/2 4 {f16( d f} d8-.)
+	\tempo "in tempo" \tuplet 3/2 8 {a16([ gis a] f[ e f] c[ b c] a[ gis a])}
+	\tuplet 3/2 8 {f([ e f] d[ cis d] b[ ais b] f[ e f])}
+	\tuplet 3/2 8 {e(_\benmarccresc d e} d8-.) \tuplet 3/2 8 {f16( d f} d8-.)
 % Bars 36 to 40
-	\tuplet 3/2 4 {e16( d e} d8-.) \tuplet 3/2 4 {a'16( d, a'} d,8-.)
-	\tuplet 3/2 4 {d'16( d, d'} d,8-.) \tuplet 3/2 4 {d'16( d, d'} d,8.)
+	\tuplet 3/2 8 {e16( d e} d8-.) \tuplet 3/2 8 {a'16( d, a'} d,8-.)
+	\tuplet 3/2 8 {d'16( d, d'} d,8-.) \tuplet 3/2 8 {d'16( d, d'} d,8-.)
 	\tuplet 6/4 4 {<d' f>16\f d, <d' f> d, <d' f> d, <d' f> d, <d' f> d, <d' f> d, } \mark \default
 	<gis b e>8-. r r4
 	R2*9
@@ -69,10 +69,10 @@ musicSoloViolinMvtIII = \relative c''' {
 	q <c d>16-. d,-. <d' c'>4->~
 	q8 <d b'>16-. g,,-. <d'' c'>4->~
 % Bars 61 to 65
-	q <d b'>16-. d,-. <bes' aes'>4->~
-	q <bes g'>16-. g,-. <bes' aes'>4~->
+	q8 <d b'>16-. d,-. <bes' aes'>4->~
+	q8 <bes g'>16-. g,-. <bes' aes'>4~->
 	q8 <bes g'>16-. g,-. <bes' g'>8( <a! fis'>16-.) c,-.
-	<a' fis'>-. ees( <fis ees'>) c( <e c'>) a( <c a'>8-.)
+	<a' fis'>-. ees( <fis ees'>) c( <ees c'>) a,( <c a'>8-.)
 	<b! g'>8 r r4
 % Bars 66 to 70
 	R2*11
@@ -87,7 +87,7 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 81 to 85
 	<e g>4 <a, a'>~
 	q <a' f'>8-.( <g e'>-.)
-	<f d'>( a) <a a'>-.( <g g'>)
+	<f d'>( a) <a a'>-.( <g g'>-.)
 	<f f'>( <e e'> <d d'>) a'( \bar "||"
 	\time 3/4 <e c'> <d b'>) <d b'>4.( <e c'>8)
 % Bars 86 to 90
@@ -99,7 +99,7 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 91 to 95
 	r8 <c'' a'>16-. d,,-. <a'' f'!>8( <f d'>16-.) d,-.
 	<d' c'>8( <c a'>16-.) d,-. <a' f'>8( <f b>16-.) g,-.
-	<e' c'>8-. \tuplet 3/2 {g''16( bes, g'} \tuplet 6/4 4 { fis a, fis' f aes, f'}
+	<e' c'>8-. \tuplet 3/2 {g''16([ bes, g']} \tuplet 3/2 8 { fis[ a, fis'] f[ aes, f']}
 	\tuplet 6/4 4 {e g, e' d f, d' c e, c' g d g)}
 	c,8 g'( a b
 % Bars 96 to 100
@@ -107,12 +107,12 @@ musicSoloViolinMvtIII = \relative c''' {
 	c2)
 	r8 \ottava #1 c,( c'4)~
 	c r
-	r8 e( \open e'4)~ \open \mark \default
+	r8 e,( \open e'4)~ \open \mark \default
 % Bars 101 to 105
 	e8 \ottava #0 r r4
-	r r8 \tuplet 3/2 4 {e,,,16_\plegg-. c'-. a-.}
-	\tuplet 6/4 4 {dis, c' a e c' a f c' a e e' c}
-	\tuplet 6/4 4 {dis, dis' c e, e' c f a e c e e,}
+	r r8 \tuplet 3/2 8 {e,,,16_\plegg-. c'-. a-.}
+	\tuplet 3/2 8 {dis,[ c' a] e[ c' a] f[ c' a] e[ e' c]}
+	\tuplet 3/2 8 {dis,[ dis' c] e,[ e' c] f[ a e] c[ e e,]}
 	a,8 r r4
 % Bars 106 to 110
 	R2*3
@@ -131,93 +131,250 @@ musicSoloViolinMvtIII = \relative c''' {
 	R2
 	r4 r8. a''16-._\ffsempre \bar "||" \key d \minor
 	a8-.[ r16 <f a>]-. q8-.[ r16 q-.]
-	\tuplet 3/2 4 {q( <e g>8) <d f>( <e g> <f a>)}
+	\tuplet 3/2 4 {q4( <e g>8) <d f>( <e g> <f a>)}
 % Bars 121 to 125
-	\tuplet 3/2 4 {<f a>4( <e g>8) <des f>( <e g> <f a>)}
+	\tuplet 3/2 4 {<f a>4( <ees g>8) <des f>( <ees g> <f a>)}
+	<c a'>4 <cis e!>
+	r8. <c! g'>16-. <e g>8-.[ r16 q-.]
+	\tuplet 3/2 4 {q4( <d f>8) <b d>( <c e> <d f>)}
+	\tuplet 3/2 4 {<d f>4( <c e>8) <a c>( <b d> <c e>)}
 % Bars 126 to 130
-	
+	<c, a'>4 <b g'>8. <g' g'>16
+	<<{g'8( \tuplet 3/2 {f16 g f} \tuplet 6/4 4 {ees f ees d ees d)}} \\ {g,,8 s4.} \\ {g'2}>>
+	<<{ees'8( \tuplet 3/2 {d16 ees d} \tuplet 6/4 4 {c d c bes c bes)}} \\ {g,2}>>
+	<<{\tuplet 6/4 4 {a'16(\> bes a bes\! c bes) a( bes a bes c bes)}} \\ {g,4 g}>>
+	\tuplet 3/2 {<g a'>16( bes' a)} r8 r8. <d d'>16
 % Bars 131 to 135
-	
+	<<{d'8( \tuplet 3/2 {c16 d c} \tuplet 6/4 4 {bes c bes a bes a)}} \\ {d,,8 s4.} \\ {d'2}>>
+	<<{bes'8( \tuplet 3/2 {a16 bes a} \tuplet 6/4 4 {g a g f g f)}} \\ {d,2}>>
+	<<{\tuplet 6/4 4 {e'16(\> f e f\! g f e f e f g f)}} \\ {d,4 d}>>
+	\tuplet 3/2 {<d e'>16( f' e)} r8 r8. <a, a'>16
+	<a a'>8( \tuplet 3/2 {f'16 g f} \tuplet 6/4 4 {d e d cis d cis)}
 % Bars 136 to 140
+	f8( \tuplet 3/2 {d16 e d} \tuplet 6/4 4 {bes c! bes g a g)}
+	e8 r r4
+	R2*2
 	
+	\tuplet 3/2 4 {r8 a(\p gis a c, f)}
 % Bars 141 to 145
+	e4 r
+	R2*4
+	
+	
 	
 % Bars 146 to 150
-	
+	r4 \tuplet 3/2 4 {r8 bes'(\p gis}
+	\tuplet 3/2 4 {a cis, e)} a,4 \mark \default
+	R2
+	r4 \tuplet 3/2 4 {r8 <c! a'>\pp\(( c'!)}
+	\tuplet 3/2 4 {<a f'>( a') c~} c4\)
 % Bars 151 to 155
-	
+	r4 \tuplet 3/2 4 {r8 <c,, a'>\(( c')}
+	\tuplet 3/2 4 {<a f'>( a') c~} c4\)
+	r4 \tuplet 3/2 4 {r8 <f,, des'>\(( f')}
+	\tuplet 3/2 4 {<f aes>( d'!) f(} <a, f'>4)\)
+	r4 \tuplet 3/2 4 {r8 <g,, e'>\(( g')}
 % Bars 156 to 160
-	
+	\tuplet 3/2 4 {<g bes>( e') g(} <bes, g'>4)\)
+	r4 r8 c,16_\legg( c'
+	f a! c f a4)
+	r4 r8 a,,,16( a'
+	d fis a d fis4)
 % Bars 161 to 165
-	
+	r4 r8 bes,,,16(_\dimmarkup d
+	ees fis a c) r4
+	r4 r8 g,16( bes
+	a c f a) r4
+	R2
 % Bars 166 to 170
-	
+	r4 r8 a,(\f
+	<f' a>) <d a'>4 <bes gis'>8(
+	<a a'>) <f' a>4 <f d'>8(
+	<f c'>) <c f>4 <d bes'>8(
+	<d a'>)\noBeam <cis e>8. <d f>16( <f a> <e g>)
 % Bars 171 to 175
-	
+	<d f>8 a'4 gis8(
+	a)\noBeam a8. a,16(\f a' f
+	e d cis d e a d b
+	d a f e d a) <c! a'>8(
+	<c' a'>) q4 <b gis'>8(
 % Bars 176 to 180
-	
+	<c a'>8) q4 <f d'>16( a
+	<e c'> a e c a c) <d bes'>( f
+	<c a'> f c a) f( <f' a>) <e c'>( <d bes'>
+	<cis a'>8)\noBeam <cis e>8. <bes g'>16(\> <a f'> <g e'>) \mark \default
+	<e cis'>( <f d'>) <e gis> <f a>\! \tuplet 6/4 4 {a,_\plegg( fis' a fis' a fis')}
 % Bars 181 to 185
-	
+	\tuplet 6/4 4 {a( fis a, d,, a'' fis'} a8) r
+	\tuplet 6/4 4 {a16( fis a, a, fis d) a( fis' a fis' a fis')}
+	\tuplet 6/4 4 {a( fis a, d,, a'' fis'} a8) r
+	\tuplet 6/4 4 {a16( a, fis a, fis d} bes!8) r
+	\tuplet 6/4 4 {a'''16( a, a, c ees, a} bes,!8) r
 % Bars 186 to 190
-	
+	\tuplet 6/4 4 {f'''!16( f, d b d, b} d8) r
+	\tuplet 6/4 4 {d''16( b d, b d, b} cis8) r
+	\tuplet 6/4 4 {b''16( g b, g e cis) a( fis' a fis' a fis')}
+	\tuplet 6/4 4 {a16( fis a, d,, a'' fis'} a8) r
+	\tuplet 6/4 4 {a16( a, fis a, fis d) fis( dis fis b dis fis)}
 % Bars 191 to 195
-	
+	\tuplet 6/4 4 {b( fis dis b dis fis} b8) r
+	\tuplet 6/4 4 {b'16( fis dis b fis dis} b8) r
+	\tuplet 6/4 4 {a'!16( fis c! a fis c} b8) r
+	\tuplet 6/4 4 {dis''16(_\dimmarkup c a fis dis c} b8) r
+	\tuplet 6/4 4 {bes!16( g e d! bes g} e'8) r
 % Bars 196 to 200
-	
+	R2*13
 % Bars 201 to 205
 	
 % Bars 206 to 210
 	
-% Bars 211 to 215
 	
+	
+	r8 <<{\tuplet 3/2 8 {f'16( g f d[ e d)] b'([ cis b])}} \\ {a,8[\ff d,] d'}>>
+	<cis a'>8-. r r4
+% Bars 211 to 215
+	R2*2
+	
+	r8 <<{\tuplet 3/2 8 {c'16([ d c] a[ b a])}} \\ {e8\ff[ a,]}>> \tuplet 3/2 8 {<a fis''>16( gis'' fis)}
+	<gis, e'>8-. r r4
+	R2*3
 % Bars 216 to 220
 	
+	\bar "||" \mark \default \key a \minor
+	R2*10
 % Bars 221 to 225
 	
 % Bars 226 to 230
 	
+	
+	a8(\p e'16-.) e-. dis8( d16-.) d-.
+	c8( b16-.) b-. a8( e16-.) e-.
+	f8( e16-.) e-. a8( e16-.) e-.
 % Bars 231 to 235
-	
+	f8( e16-.) e-. a-. c-. e-. c-. 
+	a8( g16-.) g-. c8( g16-.) g-.
+	aes8( g16-.) g-. c-. e-. g-. e-. 
+	c8-- b16-. c-. b8-- c16-. b-.
+	c8-- b16-. c-. b( a') g-. fis-.
 % Bars 236 to 240
-	
+	e4 r
+	r \tuplet 6/4 4 {g,,16_\legg( b d g b d)} \mark \default
+	\tuplet 6/4 4 {e( c g e d e)} d8 r
+	\tuplet 6/4 4 {f'16( a, f e d e)} d8 r
+	\tuplet 6/4 4 {g'16( d b g f e)} g8 r
 % Bars 241 to 245
-	
+	\tuplet 6/4 4 {g'16( d bes g bes des, a' c, f bes, g' e)}
+	c8 r \tuplet 6/4 4 {r16 a(_\moltoleggieroedolce bes c d e)}
+	\tuplet 6/4 4 {f16( g a bes a g)} \tuplet 3/2 {c( a f} c8)
+	r4 \tuplet 6/4 4 {r16 f,_\piup( ges aes ges f)}
+	\tuplet 6/4 4 {bes( des ges bes aes ges)} \tuplet 3/2 {aes( f des} aes8)
 % Bars 246 to 250
-	
+	\tempo "poco rit." r8 \tuplet 3/2 8 {bes'16( aes g aes f ces} aes8)
+	r8 \tuplet 3/2 8 {des16( ces bes ces f aes} ces8)
+	r \tuplet 3/2 8 {bes16( aes g aes ees ces} aes8)
+	r \tuplet 3/2 8 {ees16( g bes ees g bes} ees8)
+	\tempo "in tempo" \tuplet 3/2 8 {gis,,,16(\>_\marcecrescmolto fisis gis} fisis8-.)\! \tuplet 3/2 8 {b!16(\> gis b} fisis8-.)\!
 % Bars 251 to 255
-	
+	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.) \tuplet 3/2 8 {dis'16(\> b dis} fisis,8-.)\!
+	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.) \tuplet 3/2 8 {gis'16(\> gis, gis'} fisis,8-.)\!
+	\tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.) \tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.)
+	\tuplet 3/2 8 {gis16([ b e] b\<[ e gis]) e([ gis b] gis[ b e])}
+	\tuplet 3/2 8 {gis,[( b e] b[ e gis] e[ gis b] gis[ b e])\!)}
 % Bars 256 to 260
-	
+	gis2\f\startTrillSpan~
+	\afterGrace gis {fis16[\stopTrillSpan gis]}
+	a8 r r4
+	R2*9
 % Bars 261 to 265
 	
 % Bars 266 to 270
 	
+	
+	r8  <f, d'>16-.\f d, <e' d'>8-> <e c'>16-. g,-.
+	<d' c'>8-> <d b'>16-. g,,-. <d'' b'>-. d,-. <c' a'>-. a-.
+	<gis b e>8-. r r4
 % Bars 271 to 275
+	R2*3
 	
+	\bar "||" \key a \major
+	a,4(\f b
+	cis) fis8(-. e-.)
 % Bars 276 to 280
-	
+	d4 d8(-. b-.)
+	cis4 d~
+	d fis8(-. e-.)
+	d4 d'8-.( cis-.)
+	fis,( e) d4
 % Bars 281 to 285
-	
+	r e\f(
+	<a cis> <b e>
+	<cis a>) <fis d'>8(-. <e cis'>-.)
+	<d b'>( fis) <bis, gis'>-.( fis'-.)
+	<cis e>4 <fis, fis'>4~
 % Bars 286 to 290
-	
+	q <fis' d'>8-.( <e cis'>-.)
+	<<{b'8( fis)} \\ {d r}>> <fis fis'>(-. <e e'>-.)
+	<d d'>( <cis cis'> <b b'>) fis'( \bar "||"
+	\time 3/4 <cis a'>_\crescmarkup <b gis'>) q4.( <a fis'>8)
+	<gis e'>4 r r8 e( \bar "||"
 % Bars 291 to 295
-	
+	\time 4/4 <cis a'> <b gis'> <cis a'> <b gis'>) q4.( <a fis'>8)
+	<gis e'>4 r r2 \bar "||"
+	\time 2/4 r8 <ais' fis'>16-. fis-. <b e>8( <fis cis'>16-.) e-.
+	r8 <dis' b'>16-. b-. <e a>8( <b fis'>16-.) a!-.
+	r8 <fis' fis'>16-. d,!-. <d' d'>8( <b b'>16-.) d,-.
 % Bars 296 to 300
-	
+	<a' a'>8( <a fis'>16-.) <d,>-. <e d'>8( gis16-.) d-. \bar "||"
+	\tempo "Poco meno Allegro" <cis a'>8-. r r4
+	R2
+	r8 e32(_\pdolce a cis e a4)
+	r8 e,32( a cis e a[ cis e cis] a e cis e,)
 % Bars 301 to 305
-	
+	a( cis e cis a[ e cis b]) a( cis e cis a8) 
+	r8_\piup a'32( d fis a d4)
+	r8 a,32( d fis a d[ fis a fis] d a fis a,)
+	d( fis a fis d[ a fis a,)] d( fis a fis b,8)
+	r e'32( b gis\< b fis'[ b,\> a b] e b\! gis b)
 % Bars 306 to 310
-	
+	r8 gis'32( b, e, b' fis'[ b, a b] e b gis b)
+	r8 e32(\< b gis b fis'[ d a\> d] e b gis\! b)
+	r8 b'32( d, b d a'[ d, cis d] gis d b d)
+	r8 fis32(_\crescmarkup d d, fis' a\<[ fis d, fis'] d' fis, d, fis')
+	cis'(\>[ e, d, e'] b'[ d, d, d'\!] a'[ cis, d, cis'] gis'[ b, d, b']
 % Bars 311 to 315
-	
+	eis[ gis, d gis)] fis'([ a, d, fis'] a\<[ fis d, a''] fis'[ a, d,, gis'])
+	e'(\>[ gis, d, fis'] d'[ fis, d, e'] cis'[ e, d, d'] b'[ d, d, d'])\!
+	e'8\p\<( eis) fis4(~
+	fis8 fisis) gis4\!~
+	gis8\f\>( cis b a)
 % Bars 316 to 320
-	
+	gis( fis d gis,)\!
+	a32(\p[ cis e cis)] a[ a cis a] fis\<[ fis a fis] d[ d fis d]
+	b([ dis fis dis]) b[ b dis b] gis[ gis b gis] e[ e gis e\!]
+	cis8 cis''(\f b a)
+	gis'32(\sf\> fis e d cis b a gis fis e d cis b a gis fis)\! 
 % Bars 321 to 325
-	
+	e(\p fis gis a b cis d dis e fis gis a b cis d! e)
+	gis(\pp fis e dis cis b a gis cis b a gis fis e dis cis)
+	gis'( fis e dis cis b a gis cis b a gis fis e dis cis) \bar "||"
+	\tempo "Tempo primo" e8-. r r4
+	R2*2
 % Bars 326 to 330
 	
+	\tuplet 6/4 4 {fis''16(\f e d cis b a gis fis e d cis b)}
+	\tuplet 3/2 4 {a8( e''-.) e-. dis( e-.) e-.}
+	\tuplet 3/2 4 {fis( e-.) e-. dis( e)-. e-.}
+	\tuplet 6/4 4 {a,,16( a') e( e') e,( e') dis,( dis') e,( e') e,( e')}
 % Bars 331 to 335
-	
+	\tuplet 6/4 4 {fis,( fis') e,( e') e,( e') dis,( dis') e,( e') e,( e')}
+	\tuplet 6/4 4 {fis,( fis') e,( e') e,( e') dis,( dis') e,( e') e,( e')}
+	\tuplet 6/4 4 {fis,( fis') e,( e') e,( e') dis,( dis') e,( e') e,( e')}
+	\tuplet 6/4 4 {fis,( fis') e,( e') e,( e') fis,( fis') e,( e') e,( e')}
+	\tuplet 6/4 4 {fis,( fis') e,( e') e,( e')} fis32( e dis e fis gis a b
 % Bars 336 to 340
-	
+	cis8-.) r r4
+	R2
+	<e,,, cis' a'>8-. r r4
+	<e cis' a'>8-. r r4
+	<cis a'>2\fermata \bar "|."
 }
