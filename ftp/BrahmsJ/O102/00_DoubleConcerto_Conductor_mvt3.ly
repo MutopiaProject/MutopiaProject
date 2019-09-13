@@ -181,24 +181,27 @@
 					\nameVoiceXX
 					\musicBratscheMvtIII
 				}
-%				\new GrandStaff <<
+				\new GrandStaff <<
 					\new Staff {
 						\timeMvtIII \generalOptions \conductorOptions
 						\nameVoiceXXI
 						\musicVioloncellMvtIII
 					}
-%					\new Staff {
-%						\timeMvtIII \generalOptions \conductorOptions
-%						\nameVoiceXXII
-%						\musicKontrabassMvtIII
-%					}
-%				>>
+					\new Staff {
+						\timeMvtIII \generalOptions \conductorOptions
+						\nameVoiceXXII
+						\musicKontrabassMvtIII
+					}
+				>>
 			>>
 		>>
 		\header {
 			breakbefore = ##t
 		}
 		\layout {
+			\context {
+				\Staff \RemoveEmptyStaves
+			}
 		}
 	}
 }
