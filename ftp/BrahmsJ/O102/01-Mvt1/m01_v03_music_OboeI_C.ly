@@ -25,9 +25,9 @@ musicOboeIMvtI = \relative c'' {
 % Bars 26 to 30
 	
 	
-	\partcombineApart r2 r4 cis(_\pdolce
+	r2 r4 cis(\pdolceD
 	b) cis( gis) a(_\<
-	a'2_\> e4\!) r \partcombineAutomatic
+	a'2_\> e4\!) r
 % Bars 31 to 35
 	R1\fermataMarkup
 	R1*25
@@ -60,8 +60,8 @@ musicOboeIMvtI = \relative c'' {
 % Bars 71 to 75
 	g4-.\p r r2
 	R1
-	\partcombineApart r4 r8 bes_\p_\<( des4. c8)
-	r4 r8 f( des4. c8)\! \partcombineAutomatic
+	r4 r8 bes_\p_\<( des4. c8)
+	r4 r8 f( des4. c8)\!
 	r4 f2->\f aes4-.
 % Bars 76 to 80
 	d,!-! r aes-! r
@@ -71,7 +71,7 @@ musicOboeIMvtI = \relative c'' {
 	des4)-. c-. r2
 % Bars 81 to 85
 	e8 e4 e8( d) d4 d8(
-	cis4)-. a-. r2
+	cis4)-. \partcombineApartOnce a-. r2
 	g'8 g4 g8( f) f4 f8~
 	f4-. e-. r2
 	g8 g4 g8( f) f4 f8(
@@ -126,9 +126,9 @@ musicOboeIMvtI = \relative c'' {
 % Bars 141 to 145
 	R
 	R \mark \default
-	g4._\espressivo_\pdolce( f8 d2)
+	\partcombineAutomatic g4._\espressivo\pdolceD( f8 d2)
 	r4 r8 g(_\< f4. d8
-	g4._\> f8 d2)\! \partcombineAutomatic
+	g4._\> f8 d2)\!
 % Bars 146 to 150
 	R1^\gp
 	R1*25
@@ -150,7 +150,7 @@ musicOboeIMvtI = \relative c'' {
 	R1
 	r2 r4 a'4(\p\<~
 	a8\> e)\! f4.( cis8) d4~
-	d_\dimmarkup d2 c4\pp\<(~
+	d\dimD d2 c4\pp\<(~
 	c1\>~
 % Bars 181 to 185
 	c2\! b)
@@ -169,7 +169,7 @@ musicOboeIMvtI = \relative c'' {
 % Bars 196 to 200
 	aes2\>)( g4)\! r
 	b8 b4 b8( a!) a4 a8(
-	gis4)-. e-. r2
+	gis4)-. \partcombineApartOnce e-. r2
 	b'8 b4 b8( a) a4 a8(
 	aes4-.) g-. r2
 % Bars 201 to 205
@@ -191,7 +191,7 @@ musicOboeIMvtI = \relative c'' {
 	g g4~ g8-. r r4
 	r g2 g4~
 % Bars 216 to 220
-	g8-. r r4 r bes,->
+	g8-. r r4 r \partcombineApartOnce bes,->
 	cis-> e-> g-> bes-> \mark \default
 	R1*15
 % Bars 221 to 225
@@ -200,28 +200,28 @@ musicOboeIMvtI = \relative c'' {
 	
 % Bars 231 to 235
 	
-	
+	\partcombineAutomatic
 	r2 r8 fis(\p e d)
 	r2 r8 b( cis d)
 	r2 r8 b'( a g)
 % Bars 236 to 240
-	\partcombineApart r2 r8 gis(_\dimmarkup fis eis)
-	r ais( gis fis) r b( ais gis) \partcombineAutomatic
+	r2 r8 gis(_\dimmarkup fis eis)
+	r ais( gis fis) r b( ais gis)
 	R1*4 
 % Bars 241 to 245
 	\mark \default
 	R1
-	\partcombineApart r2 r4 r8 eis-._\pmarc
-	fis-. gis-. a-. r r2 \partcombineAutomatic
+	r2 r4 r8 eis-._\pmarc
+	fis-. gis-. a-. r r2
 	R1*2
 % Bars 246 to 250
 	
-	\partcombineApart r2 r4 r8 ais-.
-	b-. cis-. d-. r r2 \partcombineAutomatic
+	r2 r4 r8 ais-.
+	b-. cis-. d-. r r2
 	R1
-	\partcombineApart r2 r4 r8 fis,-._\f
+	r2 r4 r8 fis,-._\f
 % Bars 251 to 255
-	g-. a-. bes-. r r2 \partcombineAutomatic
+	g-. a-. bes-. r r2
 	R1
 	r8 cis,-.\f d-. e-. f!-. r r4
 	r8 b,-. c!-. d-. ees-. r r4
@@ -242,7 +242,7 @@ musicOboeIMvtI = \relative c'' {
 	des ees2 c4~
 	c des2 bes4~
 	bes c2 aes4-.
-	f-. r ees-. r \mark #11
+	f-. r \partcombineApartOnce ees-. r \mark #11
 	R1*16
 % Bars 271 to 275
 	
@@ -257,11 +257,11 @@ musicOboeIMvtI = \relative c'' {
 	gis4-! r r2 \mark \default
 	a4.\ff g!8 e4 r
 % Bars 291 to 295
-	f4. e8 a,4 r
+	f4. e8 \partcombineApartOnce a,4 r
 	f'4-. f-. f4.-> a8
 	g4. f8 e4. e8
 	f2 fis
-	e2. e4
+	\partcombineApartOnce e2. e4
 % Bars 296 to 300
 	f2 fis
 	g2. e4
@@ -275,9 +275,9 @@ musicOboeIMvtI = \relative c'' {
 % Bars 311 to 315
 	
 	\mark \default \bar "||" \key a \major
-	\partcombineApart e'4._\espressivo_\pdolce( d8 b2)
+	e'4._\espressivo_\pdolce( d8 b2)
 	r4 r8 e( d4. b8_\<
-	e4._\> d8 b2)\! \partcombineAutomatic
+	e4._\> d8 b2)\!
 % Bars 316 to 320
 	R1^\gp
 	R1*25
@@ -297,9 +297,9 @@ musicOboeIMvtI = \relative c'' {
 	dis)-. e(~ e16 d cis b) r4
 % Bars 346 to 350
 	R1
-	r2 r4 fis'4\p(~
+	r2 r4 \partcombineApart fis'4(~
 	fis8 cis) d4.( ais8) b4~
-	b^\dimmarkup \partcombineApart b2 a!4\pp~
+	b^\dimmarkup  b2 a!4\pp~
 	a1~(
 % Bars 351 to 355
 	a2 gis) \partcombineAutomatic
@@ -316,7 +316,7 @@ musicOboeIMvtI = \relative c'' {
 % Bars 366 to 370
 	fis2\> e4)\! r \mark \default
 	gis8 gis4 gis8( fis!) fis4 fis8(
-	eis4-.) cis-. r2
+	eis4-.) \partcombineApartOnce cis-. r2
 	gis'8 gis4 gis8( fis) fis4 fis8(
 	f4-.) e-. r2
 % Bars 371 to 375
@@ -371,9 +371,9 @@ musicOboeIMvtI = \relative c'' {
 	r2 r4 \partcombineApart a,-.
 % Bars 426 to 430
 	\partcombineAutomatic a'2 a
-	\partcombineApart e \partcombineAutomatic e
-	a,4-. r a-. r 
-	a-. r d-. f-.
+	\partcombineApartOnce e e
+	\partcombineApartOnce a,4-. r \partcombineApartOnce a-. r 
+	\partcombineApartOnce a-. r d-. f-.
 	a-. r a-. r
 % Bar 431
 	R1\fermataMarkup \bar "|."

@@ -194,7 +194,7 @@ musicSoloCelloMvtI = \relative c, {
 	r4 e,16( g cis e fis8) r fis,16( a d fis
 	f!8) r d,16( f! b d e8) r e,16( g c e)
 	ees( c ees c a_\dimmarkup c a c a\> ees a ees c ees c ees)
-	c( a c a fis8)\! r r4_\fbenmarc g16-. g'-. r8
+	c( a c a fis8)\! r r4 g16-.\fbenmarcD g'-. r8
 	gis,16-. gis'-. r8 a,16-. a'-. r8 e,16-. e'-. r8 f,16-. f'-. r8
 % Bars 191 to 195
 	fis,16-. fis'-. r8 g,!16-. g'-. gis,-. gis'-. a,-. a'-. e,-. e'-. f,!-. f'!-. fis,-. fis'-. 

@@ -23,11 +23,11 @@ musicKlarinetIMvtI = \relative c''' {
 % Bars 21 to 25
 	
 % Bars 26 to 30
-	\partcombineApart r2 r4 e(_\pdolce
+	r2 r4 e(\pdolceD
 	d) e( b) c(_\<
 	d2_\> g,4)\! c(
 	fis2 f)
-	e4( c2) r4 \partcombineAutomatic
+	e4( c2) r4
 % Bars 31 to 35
 	R1\fermataMarkup
 	R1*25
@@ -71,9 +71,9 @@ musicKlarinetIMvtI = \relative c''' {
 	fes4-.) ees-. r2
 % Bars 81 to 85
 	g8 g4 g8( f) f4 f8(
-	e4-.) c-. r2
-	bes'8 bes4 bes8( aes) aes4 aes8~
-	aes4-. g-. r2
+	e4-.) \partcombineApartOnce c-. r2
+	bes'8 bes4 bes8( aes) aes4 aes8(
+	aes4-.) g-. r2
 	bes8 bes4 bes8( aes) aes4 aes8(
 % Bars 86 to 90
 	ges4)-! ges-! r2
@@ -97,7 +97,7 @@ musicKlarinetIMvtI = \relative c''' {
 	R1
 	c2(\sf c4-.) r
 	f2(\sf f4-.) r
-	r2 r4 c'(
+	r2 r4 \shape #'((0 . 0.5) (0 . 0 ) (0 . 0.5) (3.5 . -1.5)) Slur c'(
 	bes aes g2)
 % Bars 106 to 110
 	r2 ees4( f8 g)
@@ -146,7 +146,7 @@ musicKlarinetIMvtI = \relative c''' {
 	R1^\gp
 	g4.\espressivo_\dolce( f8 bes,2)
 	r4 r8 g'(\< f4. bes,8
-	g'4._\dimmarkup f8\> c4. g'8\!
+	g'4.\dimD\> f8 c4. g'8\!
 	f4. c8 f4. d8
 % Bars 151 to 155
 	bes4. aes8 f4. d8
@@ -161,7 +161,7 @@ musicKlarinetIMvtI = \relative c''' {
 	bes8 r c4~ c8 r ces4(
 	ees d8) r r4 bes~
 	bes8 r c4~ c8\< r ces4~
-	ces_\dimmarkup( bes2.)~\>
+	ces\dimD\>( bes2.)~
 % Bars 171 to 175
 	bes4\! r r2 \mark \default
 	R1*3
@@ -205,7 +205,7 @@ musicKlarinetIMvtI = \relative c''' {
 	r g-. r2
 	bes,,4.( g'8) g( g') g4(
 % Bars 206 to 210
-	f8) r g4( f!8) r ees4(
+	f8) r g4( f8) r ees4(
 	d2.) g4(
 	f8) r g4( f8) r ees4(
 	f2 g4) ees(
@@ -236,8 +236,8 @@ musicKlarinetIMvtI = \relative c''' {
 	R1*4
 % Bars 241 to 245
 	\mark \default
-	\partcombineApart a!2(_\pdolce g
-	ges f4) r \partcombineAutomatic
+	a!2(_\pdolce g
+	ges f4) r
 	r r8 b,_\pmarc-. c-. d-. ees-. r
 	R1
 % Bars 246 to 250
@@ -300,7 +300,7 @@ musicKlarinetIMvtI = \relative c''' {
 	d2 c
 	ees2. ees4
 	c2 bes
-	g c,
+	g \partcombineApartOnce c,
 	R1*5
 % Bars 301 to 305
 	
@@ -396,7 +396,7 @@ musicKlarinetIMvtI = \relative c''' {
 	bes4 r8 fis' g4-. r
 	f!2\trill ees8( aes g f)
 % Bars 391 to 395
-	ees4 r8 f-. ees4-. r8 c-.
+	ees4 r8 f-. ees4-. r8 \partcombineApartOnce c-.
 	g'8\f g4 g g g8~
 	g g4 g g g8~
 	g g4 g g g8~

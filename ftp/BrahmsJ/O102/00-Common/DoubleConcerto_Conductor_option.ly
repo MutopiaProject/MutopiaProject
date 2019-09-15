@@ -6,7 +6,7 @@
 %###############################################################################
 generalOptions = {
 	\version "2.18.2"
-	%\override TupletBracket #'bracket-visibility = ##f
+	\override TupletBracket #'bracket-visibility = ##f
 	\override Hairpin.to-barline = ##f
 	\set Score.alternativeNumberingStyle = #'numbers
 	\set Score.doubleRepeatType = #":|.|:"

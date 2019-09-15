@@ -42,7 +42,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	R1
 % Bars 61 to 65
 	c2-> g'->
-	d'2.-> r4
+	d'2. r4
 	c,2-> g'->
 	f2.-> r4
 	r2 r4 g,
@@ -60,7 +60,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	ees4-.\f ees2-> ees4-.
 % Bars 76 to 80
 	ees-! r ees-! r
-	bes'-! r r2
+	bes' r r2
 	R1 \mark \default
 	R1*10
 % Bars 81 to 85
@@ -75,7 +75,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 	
 	r2 r4 g,(\f
-	g'-.) bes2-> bes4-.
+	g'-.) bes2-> bes4
 	R1*2
 % Bars 96 to 100
 	
@@ -85,9 +85,9 @@ musicTrumpetIIMvtI = \relative c'' {
 	g8-. r r4 r2
 % Bars 101 to 105
 	R1
-	g2\sf g4-. r
+	g2\sf g4 r
 	c,2\sf c4-. r
-	bes'-. r r2
+	bes' r r2
 	bes4( c) d2
 % Bars 106 to 110
 	bes2\sf bes4-. r
@@ -96,7 +96,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	r c-. d-. r
 	g,,-. r g-. r
 % Bars 111 to 115
-	d''-. r d-. r \mark \default
+	d'' r d r \mark \default
 	R1*31
 % Bars 116 to 120
 	
@@ -146,8 +146,8 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 201 to 205
 	c2 c
 	c4 d' r2
-	d4-. r r c-.
-	r bes-. r2
+	d4 r r c
+	r bes r2
 	R1*8
 % Bars 206 to 210
 	
@@ -179,14 +179,14 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	ees,4-! r r bes'-!
+	ees,4-! r r bes'
 	ees,-! r r2
 	R1*4
 % Bars 261 to 265
 	
 	
 	
-	bes'4-. r bes-. r
+	bes'4 r bes r
 	ees,-. r r2
 % Bars 266 to 270
 	R1*4
@@ -254,7 +254,7 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 371 to 375
 	c2 c
 	c'4-! g-! r2
-	d'4-. r r c-.
+	d'4 r r c
 	r g-. r2
 	r2 r4 g,\f~
 % Bars 376 to 380
@@ -277,7 +277,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	c,2 g4-. r
 % Bars 391 to 395
 	g-. r g-. r
-	d''8-. r r4 r2
+	d''8 r r4 r2
 	R1*33
 % Bars 396 to 400
 	

@@ -276,8 +276,8 @@ musicHornIVMvtI = \relative c'' {
 % Bars 316 to 320
 	R1^\gp
 	g,1\pp~
-	g2( g')~
-	g1~_\dimmarkup
+	g2(\< g')~\!
+	g1~\dimD
 	g2\> fis~
 % Bars 321 to 325
 	fis4\! r r2

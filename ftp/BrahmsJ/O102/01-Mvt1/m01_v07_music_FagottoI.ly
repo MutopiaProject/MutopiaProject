@@ -41,7 +41,7 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 56 to 60
 	\clef bass \mark \default
-	a,4. b8 c4 r
+	a,4.\ff b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8

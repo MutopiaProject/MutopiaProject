@@ -227,8 +227,8 @@ musicPaukenMvtI = \relative c {
 	R1
 	r2 r4 a,\sf\startTrillSpan~
 	a a8-.\stopTrillSpan r r4 a\startTrillSpan~
-	a a\startTrillSpan~ a8-.\stopTrillSpan r r4
-	r e'2\startTrillSpan e4\stopTrillSpan\startTrillSpan
+	a\stopTrillSpan a\startTrillSpan~ a8-.\stopTrillSpan r r4
+	r << e'2 {s4\startTrillSpan s\stopTrillSpan} >> e4\startTrillSpan
 % Bars 386 to 390
 	e8-.\stopTrillSpan r r4 r2
 	R1 \bar "||" \mark \default

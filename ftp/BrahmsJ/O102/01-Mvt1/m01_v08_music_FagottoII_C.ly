@@ -41,7 +41,7 @@ musicFagottoIIMvtI = \relative c {
 	
 % Bars 56 to 60
 	\clef bass \mark \default
-	a,4. b8 c4 r
+	a,4.\ff b8 c4 r
 	d4. e8 f4 r
 	g,2 a4. f8
 	b4. g8 c4. a8
@@ -61,11 +61,11 @@ musicFagottoIIMvtI = \relative c {
 	c8(\p e g bes)\< des4.(\> c8)\!
 	c,8( f aes b!)\< des4.(\> c8)\!
 	d,8(\< f aes bes) e,2
-	f8( aes c f) g,2
-	aes,4\f-. bes2-> c4-.
+	f8( aes c f) g,2\!
+	aes,4\f bes2-> c4-.
 % Bars 76 to 80
-	f,-! r f-! r
-	c'-! r r2
+	f,-! r f r
+	c' r r2
 	R1 \mark \default
 	g'8\f g4 g8( f) f4 f8(
 	f4-.) e-. r2
@@ -146,7 +146,7 @@ musicFagottoIIMvtI = \relative c {
 	r1^\gp
 	c,4.( d8 e2)
 	r4 r8 c8(\< d4. e8)
-	d1\>
+	d1\dimD\>
 	g\!
 % Bars 151 to 155
 	R1
@@ -393,10 +393,10 @@ musicFagottoIIMvtI = \relative c {
 	e \clef bass a,~ a8-. r r4
 	r gis2 gis4~
 % Bars 386 to 390
-	gis8-. r r4 r a'->
+	gis8-. r r4 r a'
 	e-> c-> a-> c,-> \bar "||" \key a \minor \mark \default
 	b2 c4 r8 b'-.
-	c4-. r8 b-. c4-. r
+	c4-. r8 b c4 r
 	e,2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
@@ -405,15 +405,15 @@ musicFagottoIIMvtI = \relative c {
 	e e4 e e e8~
 	e4 e2 e4-.
 % Bars 396 to 400
-	R1*3
+	R1*8
 	
 	
-	R1
-	R1
+	
+	
 % Bars 401 to 405
-	R1
-	R1
-	R1
+	
+	
+	
 	d2\pp( ees
 	e! f)~
 % Bars 406 to 410
@@ -431,7 +431,7 @@ musicFagottoIIMvtI = \relative c {
 	
 	
 	
-	r2 r4 a'-.\f
+	r2 r4 a'\f
 % Bars 426 to 430
 	d,,2 b
 	c e

@@ -415,7 +415,7 @@ musicViolinIMvtI = \relative c''' {
 	b8) r cis4( gis8) r a4(\<
 	b2\> e,8)\! r cis'4(
 	b8) r cis4( gis8) r a4(\<
-	a'2\> e4) fis(
+	a'2\> e4)\! fis(
 	fisis)-! gis\sf(~ gis16 fis e d) fis4(~
 % Bars 381 to 385
 	fis16 e d cis) d4(~ d16 cis b ais) b4(~

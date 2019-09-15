@@ -11,8 +11,8 @@ musicHornIIMvtI = \relative c' {
 % Bars 1 to 5
 	c4. c8 c4 r
 	c4. c8 c4 r
-	b'-. r bes-. r
-	c,-. c-. bes'-. bes-.
+	b' r bes r
+	c,-. c-. bes' bes
 	R1\fermataMarkup
 % Bars 6 to 10
 	R1*20
@@ -58,11 +58,11 @@ musicHornIIMvtI = \relative c' {
 	c, b
 	c g
 % Bars 71 to 75
-	c4-.\p r r2
+	c4\p r r2
 	R1*3
 	
 	
-	r4 a'2->\f e4-.
+	r4 a'2\f e4
 % Bars 76 to 80
 	e-! r e-! r
 	ees-! r r2 
@@ -93,7 +93,7 @@ musicHornIIMvtI = \relative c' {
 	b8 r r4 r2
 % Bars 101 to 105
 	R1
-	b2\sf c4-. r
+	b2\sf c4 r
 	e,2\sf f4-. r
 	r2 r4 f'(
 	ees des) c2
@@ -104,7 +104,7 @@ musicHornIIMvtI = \relative c' {
 	r bes-. g-. r
 	bes-. r b-. r
 % Bars 111 to 115
-	c-. r c,-. r \mark \default
+	c r c, r \mark \default
 	R1*31
 % Bars 116 to 120
 	
@@ -158,7 +158,7 @@ musicHornIIMvtI = \relative c' {
 % Bars 196 to 200
 	<<d2.) {s4\> s s\!} >> r4
 	ees,8 ees4 ees8( g) g4 g8(
-	c4-.) c-. r2
+	c4-.) c r2
 	ees,8 ees4 ees8( bes') bes4 bes8(
 	des4-.) des-. r2
 % Bars 201 to 205
@@ -181,7 +181,7 @@ musicHornIIMvtI = \relative c' {
 	r c2 c4~
 % Bars 216 to 220
 	c8-. r r4 r c'->
-	c-> ees,-> ees-> c-> \mark \default
+	c-> ees,-> ees-> c \mark \default
 	R1*7
 % Bars 221 to 225
 	
@@ -241,7 +241,7 @@ musicHornIIMvtI = \relative c' {
 % Bars 296 to 300
 	g'2 d'
 	ees,2. r4
-	r bes'-. ees,-. r
+	r bes' ees,-. r
 	R1*14
 % Bars 301 to 305
 	
@@ -275,7 +275,7 @@ musicHornIIMvtI = \relative c' {
 	
 	r2 r4 bes''(\p~
 	bes8 c) bes4.( a8) g4~
-	g g2 g4~
+	g \partcombineApartOnce g2 g4~
 	g1~
 % Bars 351 to 355
 	g2( c,4) r
@@ -294,7 +294,7 @@ musicHornIIMvtI = \relative c' {
 % Bars 366 to 370
 	bes2.)\> r4\! \mark \default
 	c,8 c4 c8( e) e4 e8(
-	a4-.) a-. r2
+	a4-.) a r2
 	c,8 c4 c8( g') g4 g8(
 	bes4-.) bes-. r2
 % Bars 371 to 375
@@ -318,8 +318,8 @@ musicHornIIMvtI = \relative c' {
 % Bars 386 to 390
 	g8 r r4 r2
 	R1 \bar "||" \mark \default
-	g2\sf c4 r8 g'-.
-	c,4-. r8 g'-. c,4-. r
+	g2\sf c4 r8 g'
+	c,4-. r8 g' c,4-. r
 	e'2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r
@@ -341,10 +341,10 @@ musicHornIIMvtI = \relative c' {
 	
 % Bars 426 to 430
 	r4 bes'-.\f r b-.
-	r c-. r c,-.
+	r c r c,-.
 	c-. r r2
-	r bes'4-. bes-.
-	c-. r c-. r
+	r bes'4 bes
+	c r c r
 % Bar 431
 	R1\fermataMarkup \bar "|."
 }

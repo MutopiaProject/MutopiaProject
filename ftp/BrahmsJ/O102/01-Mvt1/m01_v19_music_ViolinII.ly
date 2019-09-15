@@ -47,8 +47,8 @@ musicViolinIIMvtI = \relative c'' {
 	\times 2/3 {<c g'>2-> f4-.} \times 2/3 {e( d) e-.}
 	\times 2/3 {d(\< c) d-.} \times 2/3 {c( b) c-.}
 % Bars 66 to 70
-	\times 2/3 {b( a) r} \times 2/3 {b( a)\! r}
-	a'4.\ff a,8(\< c4.\> b8\!)
+	\times 2/3 { \stemDown b( a) r} \times 2/3 {b( a)\! r}
+	\stemNeutral a'4.\ff a,8(\< c4.\> b8\!)
 	g4. e'8(\< c4.\> b8\!) 
 	a4. g'8( fis4. a,8)
 	<e g>2:16 <a, dis>:
@@ -310,8 +310,8 @@ musicViolinIIMvtI = \relative c'' {
 % Bars 296 to 300
 	b2 <a c>
 	\times 2/3 {<c g'>2-> f4-.} \times 2/3 {e( d) e-.}
-	\times 2/3 {a( f) a,-.} \times 2/3 {b( g) b,-.}
-	c2 a
+	\times 2/3 {a( f) a,-.} \times 2/3 {\stemUp b( g) b,-.}
+	\stemNeutral c2 a
 	gis\p gis
 % Bars 301 to 305
 	a a

@@ -116,7 +116,7 @@ musicVioloncellMvtI = \relative c' {
 	b' r b, r
 	e_\crescpocoapoco r e, r
 	e' r e, r
-	e'2^\arco_\pcresc a,\<
+	e'2^\arco -\tweak DynamicText.self-alignment-X #LEFT \pcrescD\< a,
 	a d,
 % Bars 126 to 130
 	c8-.\f r r4 r r8 a'\mf^\pizz
@@ -161,7 +161,7 @@ musicVioloncellMvtI = \relative c' {
 	r fis-. r d)-.\!
 	r f!2.\sf\>
 % Bars 161 to 165
-	e1(\!_\pdim
+	e1( -\tweak DynamicText.self-alignment-X #LEFT \pdimD
 	d2 g)
 	c,( c')
 	f,1\pp\>

@@ -36,20 +36,20 @@ musicTrumpetIMvtI = \relative c'' {
 	
 % Bars 56 to 60
 	\mark \default
-	bes,4.\f c8 d4 r
+	\partcombineApart bes,4. c8 d4 \partcombineAutomatic r
 	c4. c8 g4 r
 	c-. c-. g-. r
 	R1
 % Bars 61 to 65
 	c2-> bes->
-	d2.-> r4
+	\partcombineApartOnce d2.-> r4
 	c2-> bes->
 	f'2.-> r4
 	r2 r4 g,
 % Bars 66 to 70
 	g2 g
 	e'\f e 
-	f d
+	f \partcombineApartOnce d
 	d e
 	d4 r r2
 % Bars 71 to 75
@@ -60,7 +60,7 @@ musicTrumpetIMvtI = \relative c'' {
 	bes4-.\f ees2-> ees4-.
 % Bars 76 to 80
 	ees-! r ees-! r
-	bes-! r r2
+	\partcombineApartOnce bes-! r r2
 	R1 \mark \default
 	R1*10
 % Bars 81 to 85
@@ -69,13 +69,13 @@ musicTrumpetIMvtI = \relative c'' {
 	
 	
 	
-	bes2\f bes4 r \mark \default
+	\partcombineApart bes2 bes4 \partcombineAutomatic r \mark \default
 	R1*3
 % Bars 91 to 95
 	
 	
 	r2 r4 g(\f
-	bes-.) d2-> bes4-.
+	bes-.) d2-> \partcombineApartOnce bes4-.
 	R1*2
 % Bars 96 to 100
 	
@@ -85,9 +85,9 @@ musicTrumpetIMvtI = \relative c'' {
 	bes8-. r r4 r2
 % Bars 101 to 105
 	R1
-	g2\sf g4-. r
+	\partcombineApart g2 g4-. \partcombineAutomatic r
 	c2\sf c4-. r
-	bes-. r r2
+	\partcombineApartOnce bes-. r r2
 	bes4( c) d2
 % Bars 106 to 110
 	bes2\sf bes4-. r
@@ -96,7 +96,7 @@ musicTrumpetIMvtI = \relative c'' {
 	r c-. d-. r
 	g,-. r g-. r
 % Bars 111 to 115
-	d'-. r d-. r \mark \default
+	\partcombineApartOnce d'-. r \partcombineApartOnce d-. r \mark \default
 	R1*31
 % Bars 116 to 120
 	
@@ -143,9 +143,9 @@ musicTrumpetIMvtI = \relative c'' {
 	c4 r r2
 	c2 c
 % Bars 201 to 205
-	c4 d r2
-	d4-. r r c-.
-	r bes-. r2
+	c4 \partcombineApartOnce d r2
+	\partcombineApartOnce d4-. r r \partcombineApartOnce c-.
+	r \partcombineApartOnce bes-. r2
 	R1*8
 % Bars 206 to 210
 	
@@ -177,14 +177,14 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	ees4-! r r bes-!
+	ees4-! r r \partcombineApartOnce bes-!
 	ees-! r r2
 	R1*4
 % Bars 261 to 265
 	
 	
 	
-	bes4-. r bes-. r
+	\partcombineApartOnce bes4-. r \partcombineApartOnce bes-. r
 	ees-. r r2
 % Bars 266 to 270
 	R1*4
@@ -203,13 +203,13 @@ musicTrumpetIMvtI = \relative c'' {
 	c-! r c-! r
 	c-! r r2
 	d4-! r r2 \mark \default
-	bes4.\ff c8 d4 r
+	\partcombineApart bes4. c8 d4 \partcombineAutomatic r
 % Bars 291 to 295
 	c4. c8 g4 r
 	c-. c-. g-. r
 	R1
 	c2 bes
-	d2. r4
+	\partcombineApartOnce d2. r4
 % Bars 296 to 300
 	c2 bes
 	f'2. r4
@@ -252,7 +252,7 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 371 to 375
 	c2 c
 	d4-! d-! r2
-	d4-. r r c-.
+	\partcombineApartOnce d4-. r r \partcombineApartOnce c-.
 	r d-. r2
 	r2 r4 g,\f~
 % Bars 376 to 380
@@ -275,7 +275,7 @@ musicTrumpetIMvtI = \relative c'' {
 	c2 g4-. r
 % Bars 391 to 395
 	g-. r g-. r
-	d'8-. r r4 r2
+	\partcombineApartOnce d'8-. r r4 r2
 	R1*33
 % Bars 396 to 400
 	

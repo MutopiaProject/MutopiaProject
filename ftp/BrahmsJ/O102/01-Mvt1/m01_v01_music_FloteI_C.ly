@@ -5,11 +5,12 @@
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
 musicFloteIMvtI = \relative c''' {
+	\override Hairpin.to-barline = ##f
 	\clef treble
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc d8 b4 r
+	e4.\fmarcD d8 b4 r
 	c4. b8 e,4 r
 	\times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
 	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. }
@@ -25,7 +26,7 @@ musicFloteIMvtI = \relative c''' {
 % Bars 26 to 30
 	
 	
-	r2 r4 cis(^\pdolce
+	r2 r4 cis(\pdolceD
 	b) cis( gis) a\<(
 	a'2\> e4)\! r
 % Bars 31 to 35
@@ -59,9 +60,9 @@ musicFloteIMvtI = \relative c''' {
 	b, a
 % Bars 71 to 75
 	g4-.\p r r2
-	R1 \partcombineApart
-	r4 r8 bes_\p_\<( des4. c8)
-	r4 r8 f( des4. c8)\! \partcombineAutomatic
+	R1 
+	r4 r8 bes\p\<( des4. c8)
+	r4 r8 f( des4. c8)\! 
 	r4 f2->\f aes4-.
 % Bars 76 to 80
 	d,!4-! r aes-! r
@@ -97,17 +98,17 @@ musicFloteIMvtI = \relative c''' {
 	R1
 	dis2( e4-.) r
 	gis2( a4-.) r
-	r2 r4 a
-	g! f e2
+	r2 r4 \shape #'((0 . 0.5) (0 . 0 ) (0 . 1) (3.5 . -2)) Slur a(
+	g! f e2)
 % Bars 106 to 110
 	r2 gis,8(\sf\> a b c)\!
 	r2 cis8(\sf\> d e f)\!
-	R1
+	\partcombineApart R1
 	e,16( gis b cis d8-.) r r4 e,16( gis b cis
-	d8-.) r r4 a,16( c! dis fis a c dis fis)
+	d8-.) r r4 \partcombineAutomatic a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace gis1\trill( {fis16[ gis]) } \mark \default
-	a4-. r r2
+	\partcombineApartOnce a4-. r r2
 	R1*11
 % Bars 116 to 120
 	
@@ -115,7 +116,7 @@ musicFloteIMvtI = \relative c''' {
 	
 	
 	
-	bis,2( cis
+	bis,2(_\pcresc cis
 	d f!)
 % Bars 126 to 130
 	e8-.\f r r4 r2
@@ -154,8 +155,8 @@ musicFloteIMvtI = \relative c''' {
 	r2 r4 e~_\pdolce
 	e8 r e4~ e8 r d4~
 	d4. r8 r4 e~
-	e8 r e4~ e8 r e4~\<
-	e1_\dimmarkup\>~
+	e8 r e4~ e8 r e4~
+	e1~
 % Bars 171 to 175
 	e4\! r r2 \mark \default
 	r r4 c'\f(
@@ -199,7 +200,7 @@ musicFloteIMvtI = \relative c''' {
 % Bars 206 to 210
 	d8) r e4( b8) r c4(
 	d2 g,4) e'(
-	d8) r e4( b8) r c4(
+	d8) r e4( b8) r \shape #'((0 . -1.2) (0 . 0.5 ) (0 . 0.5) (0 . -1.2)) Slur  c4(
 	c'2 g4) e(
 	g-.) f2-> f4~
 % Bars 211 to 215
@@ -223,8 +224,8 @@ musicFloteIMvtI = \relative c''' {
 	r2 r8 d(\p cis b)
 	R1
 % Bars 236 to 240
-	\partcombineApart r2 r8 b(_\dimmarkup ais gis)
-	r cis( b ais) r dis( cis b) \partcombineAutomatic
+	 r2 r8 b(_\dimmarkup ais gis)
+	r cis( b ais) r dis( cis b)
 	R1*4
 % Bars 241 to 245
 	\mark \default
@@ -234,7 +235,7 @@ musicFloteIMvtI = \relative c''' {
 	
 % Bars 246 to 250
 	
-	\partcombineApart r4 r8 cis-. d-. e-. f!-. r \partcombineAutomatic
+	r4 r8 cis-. d-. e-. f!-. r
 	R1*4
 	
 	
@@ -277,13 +278,13 @@ musicFloteIMvtI = \relative c''' {
 	
 	
 % Bars 286 to 290
-	a'4-.\ff r e-. r
-	f-. r fis-. r
-	g-. r r2
-	gis4-. r r2 \mark \default
+	a'4-!\ff r e-! r
+	f-! r fis-! r
+	g-! r r2
+	gis4-! r r2 \mark \default
 	a4.\ff g!8 e4 r
 % Bars 291 to 295
-	f4. e8 a,4 r
+	f4. e8 \partcombineApartOnce a,4 r
 	\times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
@@ -302,22 +303,22 @@ musicFloteIMvtI = \relative c''' {
 	r \partcombineApart fis-. gis-. \partcombineAutomatic r
 	\partcombineApart r e-.\p r f-. \partcombineAutomatic 
 	r f-.\< a-.\sf r
-	r \partcombineApart d,-.\p r ees-. \partcombineAutomatic 
+	\partcombineApart r d,-.\p r ees-. \partcombineAutomatic 
 	r ees-.\< bes'-.\sf r
 % Bars 311 to 315
-	r a-. dis2\fp\>~
+	r \partcombineApartOnce a-. dis2\fp\>~
 	dis4\! r r2 \bar "||" \key a \major \mark \default
 	R1*3
 	
 	
 % Bars 316 to 320
 	R1^\gp
-	\partcombineApart cis4.\espressivo(_\pdolce b8 e,2)
+	cis4._\espressivo(_\pdolce b8 e,2)
 	r4 r8 cis'8( b4._\< e,8
 	cis'4._\> b8 fis4. cis'8
 	b4. fis8 b4.\! gis8
 % Bars 321 to 325
-	e4) r r2 \partcombineAutomatic
+	e4) r r2
 	R1*20
 % Bars 326 to 330
 	

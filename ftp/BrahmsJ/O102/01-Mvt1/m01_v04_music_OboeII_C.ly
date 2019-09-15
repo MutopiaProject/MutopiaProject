@@ -15,7 +15,7 @@ musicOboeIIMvtI = \relative c'' {
 	a-. a-. a-. a-. 
 	R1\fermataMarkup
 % Bars 6 to 10
-	R1*22
+	R1*25
 % Bars 11 to 15
 	
 % Bars 16 to 20
@@ -25,9 +25,9 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 26 to 30
 	
 	
-	R1
-	\override MultiMeasureRest.staff-position = #-6 R 
-	\revert MultiMeasureRest.staff-position R
+	
+	
+	
 % Bars 31 to 35
 	R1\fermataMarkup
 	R1*25
@@ -59,9 +59,9 @@ musicOboeIIMvtI = \relative c'' {
 	g dis
 % Bars 71 to 75
 	e4-.\p r r2
-	R1
-	R
-	R
+	R1*3
+	
+	
 	r4 des'2->\f c4-.
 % Bars 76 to 80
 	aes-! r d,!-! r
@@ -71,7 +71,7 @@ musicOboeIIMvtI = \relative c'' {
 	f4)-. e-. r2
 % Bars 81 to 85
 	bes'8 bes4 bes8( bes) bes4 bes8(
-	a4)-. a-. r2
+	a4)-. a r2
 	e'8 e4 e8( d) d4 d8(
 	des4-.) c-. r2
 	e8 e4 e8( d) d4 d8(
@@ -126,9 +126,9 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 141 to 145
 	c(
 	a2) g\rest \mark \default
-	R1
-	R
-	R
+	R1*3
+	
+	
 % Bars 146 to 150
 	R1^\gp
 	R1*25
@@ -150,7 +150,7 @@ musicOboeIIMvtI = \relative c'' {
 	R1
 	r2 r4 f4(\p\<~
 	f8\> bes,!)\! a4.( g8) f4~
-	f f2 f4\pp\<(~
+	f\dimD f2 f4\pp\<(~
 	f1\>~
 % Bars 181 to 185
 	f2\! d)
@@ -169,7 +169,7 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 196 to 200
 	c2\>)( b4)\! r
 	f'8 f4 f8( f) f4 f8(
-	e4)-. e-. r2
+	e4)-. e r2
 	d8 d4 d8( c) c4 c8(
 	c4-.) b-. r2
 % Bars 201 to 205
@@ -191,7 +191,7 @@ musicOboeIIMvtI = \relative c'' {
 	g e4~ e8-. r r4
 	r e2 e4~
 % Bars 216 to 220
-	e8-. r r4 r bes->
+	e8-. r r4 r bes
 	bes-> bes-> e-> e-> \mark \default
 	R1*15
 % Bars 221 to 225
@@ -205,24 +205,24 @@ musicOboeIIMvtI = \relative c'' {
 	r2 r8 g( a b)
 	r2 r8 g'( fis e)
 % Bars 236 to 240
-	R1
-	R
-	R1*4
+	R1*6
+	
+	
 % Bars 241 to 245
 	\mark \default
-	R1
-	R
-	R
-	R1*2
+	R1*11
+	
+	
+	
 % Bars 246 to 250
 	
-	R1
-	R
-	R
-	R
+	
+	
+	
+	
 % Bars 251 to 255
-	R
-	R
+	
+	
 	r8 cis-.\f d-. e-. f!-. r r4
 	r8 b,-. c!-. d-. ees-. r r4
 	R1*3
@@ -242,7 +242,7 @@ musicOboeIIMvtI = \relative c'' {
 	bes ees,2 aes4~
 	aes des,2 g4~
 	g c,2 f4-.
-	des-. r ees-. r \mark #11
+	des-. r ees r \mark #11
 	R1*16
 % Bars 271 to 275
 	
@@ -275,9 +275,9 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 311 to 315
 	
 	\mark \default \bar "||" \key a \major
-	R1
-	R
-	R
+	R1*3
+	
+	
 % Bars 316 to 320
 	R1^\gp
 	R1*25
@@ -297,8 +297,8 @@ musicOboeIIMvtI = \relative c'' {
 	dis)-. e(~ e16 d cis b) r4
 % Bars 346 to 350
 	R1
-	r2 r4 d4\p(~
-	d8 cis) d4.( ais8) b4~
+	r2 r4 d4~
+	d8 cis d4. ais8 b4~
 	b r4 r2
 	R1
 % Bars 351 to 355
@@ -316,7 +316,7 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 366 to 370
 	a2\> gis4)\! r \mark \default
 	d'8 d4 d8( d) d4 d8(
-	cis4-.) cis-. r2
+	cis4-.) cis r2
 	b8 b4 b8( a) a4 a8(
 	a4-.) gis-. r2
 % Bars 371 to 375
@@ -372,8 +372,8 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 426 to 430
 	d2 dis
 	e gis,
-	a4-. r a-. r 
-	a-. r f-. a-.
+	a4 r a r 
+	a r f-. a-.
 	c-. r c-. r
 % Bar 431
 	R1\fermataMarkup \bar "|."

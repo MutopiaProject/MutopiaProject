@@ -9,7 +9,7 @@ musicFloteIIMvtI = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc d8 b4 r
+	e4.\fmarcD d8 b4 r
 	c4. b8 e,4 r
 	\times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
 	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. }
@@ -59,9 +59,9 @@ musicFloteIIMvtI = \relative c''' {
 	g dis
 % Bars 71 to 75
 	e4-.\p r r2
-	R1
-	R1
-	R1
+	R1*3
+	
+	
 	r4 des'2->\f c4-.
 % Bars 76 to 80
 	aes4-! r d,!-! r
@@ -97,8 +97,8 @@ musicFloteIIMvtI = \relative c''' {
 	R1
 	a2\sf( a4-.) r
 	d!2\sf( d4-.) r
-	r2 r4 f^(
-	e b c b)
+	r2 r4 f
+	e b c b
 % Bars 106 to 110
 	r2 c,8(\sf\> e gis a)\!
 	r2 f8(\sf\> a cis d)\!
@@ -115,7 +115,7 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 	
-	dis,,2_\pcresc( e
+	dis,,2( e
 	f! a)
 % Bars 126 to 130
 	a8-.\f r r4 r2
@@ -142,7 +142,7 @@ musicFloteIIMvtI = \relative c''' {
 	R1^\gp
 	bes,1_\dolce~
 	bes(\<
-	a)~_\dimmarkup\>
+	a)~\dimD\>
 	a2( g)\!
 % Bars 151 to 155
 	R1*15
@@ -155,7 +155,7 @@ musicFloteIIMvtI = \relative c''' {
 	c8 r c4~ c8 r c4(\<
 	aes4\> g8\!) r8 r4 c~
 	c8 r c4~ c8 r c4~\<
-	c1\>~
+	c1\dimD\>~
 % Bars 171 to 175
 	c4\! r r2 \mark \default
 	r r4 c'\f(
@@ -221,10 +221,10 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 	r2 r8 b(\p a g)
-	R1
+	R1*3
 % Bars 236 to 240
-	R1
-	R1
+	
+	
 	R1*4
 % Bars 241 to 245
 	\mark \default
@@ -277,10 +277,10 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 % Bars 286 to 290
-	cis'4-.\ff r c-. r
-	a-. r c-. r
-	b-. r r2
-	d4-. r r2 \mark \default
+	cis'4-!\ff r c-! r
+	a-! r c-! r
+	b-! r r2
+	d4-! r r2 \mark \default
 	c4.\ff d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
@@ -312,12 +312,12 @@ musicFloteIIMvtI = \relative c''' {
 	
 % Bars 316 to 320
 	R1^\gp
-	R1
-	R
-	R
-	R
+	R1*5
+	
+	
+	
 % Bars 321 to 325
-	R
+	
 	R1*20
 % Bars 326 to 330
 	

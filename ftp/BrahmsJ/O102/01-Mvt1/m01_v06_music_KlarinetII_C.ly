@@ -15,7 +15,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	ees-. g-. c-. c-.
 	R1\fermataMarkup
 % Bars 6 to 10
-	R1*20
+	R1*25
 % Bars 11 to 15
 	
 % Bars 16 to 20
@@ -23,11 +23,11 @@ musicKlarinetIIMvtI = \relative c''' {
 % Bars 21 to 25
 	
 % Bars 26 to 30
-	R1
-	R
-	R
-	R
-	R
+	
+	
+	
+	
+	
 % Bars 31 to 35
 	R1\fermataMarkup
 	R1*25
@@ -58,9 +58,9 @@ musicKlarinetIIMvtI = \relative c''' {
 	g a
 	bes4 r r2
 % Bars 71 to 75
-	R1
-	R
-	R1*2
+	R1*4
+	
+	
 	
 	r4 aes2->\f ces4-.
 % Bars 76 to 80
@@ -71,7 +71,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	des4-.) des-. r2
 % Bars 81 to 85
 	des8 des4 des8( des) des4 des8(
-	c4-.) c-. r2
+	c4-.) c r2
 	des8 des4 des8( des) des4 des8(
 	fes4-.) ees-. r2
 	des8 des4 des8( des) des4 des8(
@@ -146,7 +146,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	R1^\gp
 	bes,1~
 	bes\<
-	a2(\> c)~
+	a2(\dimD\> c)~
 	c( bes)\!
 % Bars 151 to 155
 	R1*15
@@ -159,7 +159,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	bes8 r a4~ a8 r aes4\<~
 	aes\> f8\! r r4 bes~
 	bes8 r a4~ a8\< r aes4~
-	aes( g2.)~\>
+	aes(\dimD\> g2.)~
 % Bars 171 to 175
 	g4\! r r2 \mark \default
 	R1*3
@@ -394,7 +394,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	bes4 r8 c bes4-. r
 	d2\trill c8( aes g f)
 % Bars 391 to 395
-	ees4 r8 b'-. c4-. r8 c-.
+	ees4 r8 b'-. c4-. r8 c
 	g8\f g4 g g g8~
 	g g4 g g g8~
 	g g4 g g g8~
@@ -422,13 +422,13 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	
-	r2 r4 c-.
+	r2 r4 c
 % Bars 426 to 430
 	c2 c
 	c b
-	c4-. r c-. r
-	c-. r aes-. c-.
-	ees-. r ees,-. r
+	c4 r c r
+	c r aes c
+	ees r ees, r
 % Bar 431
 	c1 \bar "|."
 }
