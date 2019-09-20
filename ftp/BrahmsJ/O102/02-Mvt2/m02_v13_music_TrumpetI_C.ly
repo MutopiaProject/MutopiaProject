@@ -48,10 +48,10 @@ musicTrumpetIMvtII = \relative c'' {
 	\bar "||"
 	R2.*2
 	
-	g4 c2~
+	\partcombineChords g4 c2~
 	c2.~
 % Bars 71 to 75
-	c4 r r
+	c4 \partcombineAutomatic r r
 	R2.*28
 % Bars 76 to 80
 	
@@ -75,7 +75,7 @@ musicTrumpetIMvtII = \relative c'' {
 	
 	
 	
-	g4 c2~
+	<< {g4 c2~} {s4\p\< s\> s\!}>>
 	c2.~
 % Bars 116 to 118
 	c~

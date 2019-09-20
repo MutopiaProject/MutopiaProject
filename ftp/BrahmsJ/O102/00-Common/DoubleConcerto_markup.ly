@@ -20,6 +20,21 @@ marc = ^\markup {\italic marc.}
 moltocrescmark=^\markup {\italic {molto cresc.}}
 pizz=^\markup {\italic pizz.}
 pocorit=^\markup {\italic {poco rit.}}
+solo=^\markup {Solo}
+tutti=^\markup {Tutti}
+one=^\markup {\tiny \number 1}
+two=^\markup {\tiny \number 2}
+three=^\markup {\tiny \number 3}
+four=^\markup {\tiny \number 4}
+five=^\markup {\tiny \number 5}
+six=^\markup {\tiny \number 6}
+seven=^\markup {\tiny \number 7}
+eight=^\markup {\tiny \number 8}
+nine=^\markup {\tiny \number 9}
+ten=^\markup {\tiny \number 10}
+eleven=^\markup {\tiny \number 11}
+
+
 
 
 fdim = \markup {\dynamic f \italic dim.}
@@ -57,6 +72,7 @@ fbenmarcD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "
 fesprD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "espr."))
 ffmarcD = #(make-dynamic-script (markup #:dynamic "ff" #:normal-text #:italic "marc."))
 fmarcD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "marc."))
+fdimD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "dim."))
 fsemprepiuD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "sempre più"))
 mfcrescD = #(make-dynamic-script (markup #:dynamic "mf" #:normal-text #:italic "cresc."))
 pcrescD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "cresc."))
@@ -69,6 +85,7 @@ pleggD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "leg
 pmamarcD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "ma marc."))
 pmarcD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "marc."))
 semprefD = #(make-dynamic-script (markup #:normal-text #:italic "sempre" #:dynamic "f"))
+pocofD = #(make-dynamic-script (markup #:normal-text #:italic "poco" #:dynamic "f"))
 
 
 fpp = #(make-dynamic-script "fpp")

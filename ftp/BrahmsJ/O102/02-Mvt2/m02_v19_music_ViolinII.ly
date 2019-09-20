@@ -41,7 +41,7 @@ musicViolinIIMvtII = \relative c' {
 % Bars 26 to 30
 	b c d
 	<g, d'>\mf <b d> <a d>
-	d(_\dimmarkup a)\> a
+	d(\dimD\> a) a
 	d(\pp a) a
 	a4. r8 r4 \bar "||" \key f \major \mark \default
 % Bars 31 to 35

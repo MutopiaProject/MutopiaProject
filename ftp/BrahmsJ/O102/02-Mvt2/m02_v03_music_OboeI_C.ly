@@ -31,9 +31,9 @@ musicOboeIMvtII = \relative c''' {
 	
 	
 	\partcombineApart r4 r a4_\pdolce(~
-	a\< g f
+	a\< g f\>
 % Bars 36 to 40
-	e\> d )\! g(
+	e d )\! \partcombineChords g(
 	f e d 
 	b c) \partcombineAutomatic r
 	R2.*12
@@ -51,7 +51,7 @@ musicOboeIMvtII = \relative c''' {
 	r4 r cis(
 	d\< c! bes
 	a\> g)\! r
-	\partcombineApart r r a'(
+	\partcombineSoloI r r a'(
 	bes a g
 % Bars 61 to 65
 	e f) r \partcombineAutomatic

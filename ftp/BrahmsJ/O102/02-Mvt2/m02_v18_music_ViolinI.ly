@@ -41,7 +41,7 @@ musicViolinIMvtII = \relative c' {
 % Bars 26 to 30
 	b8( e) d4 fis8( a)
 	g(\mf d) d( e) e( fis)
-	fis4.(_\dimmarkup d8\>) cis( a)
+	fis4.(\dimD\> d8) cis( a)
 	fis'4.(\pp d8) cis( a)
 	d( a d) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
@@ -79,7 +79,7 @@ musicViolinIMvtII = \relative c' {
 	R2.
 % Bars 61 to 65
 	r4 r <bes, e>\p
-	r <a e'>_\dimmarkup r\>
+	r <a e'>\dimD\> r
 	<a f'> r <aes f'>\!
 	R2.
 	r4 eis'\pp r
@@ -132,7 +132,7 @@ musicViolinIMvtII = \relative c' {
 	fis!_\dimmarkup ees d
 % Bars 106 to 110
 	f! ees d~
-	d cis) c(~
+	d cis!) c(~
 	c b) bes(~
 	bes g) r
 	r r fis'!(\p\<

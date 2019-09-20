@@ -66,9 +66,9 @@ musicFloteIIMvtII = \relative c''' {
 % Bars 51 to 55
 	f g a
 	g f) r
-	r  r bes(
+	r  r bes
 	g a bes
-	a2) r4
+	a2 r4
 % Bars 56 to 60
 	r r a(
 	bes\< a g

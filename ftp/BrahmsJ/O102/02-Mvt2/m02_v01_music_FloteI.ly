@@ -9,9 +9,9 @@ musicFloteIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
+	\new CueVoice { \set instrumentCueName  = "Hr.I"} \cueDuring "cueVoiceFloteImII" #UP {\override MultiMeasureRest.staff-position = #0 R2.\fermataMarkup \revert MultiMeasureRest.staff-position}
 	<< { e4( a2)\fermata } {s8\p\< s s s\> s s\!} >>
-	R2.*4
+	R2.*4^\solo
 	
 	
 % Bars 6 to 10
@@ -19,36 +19,36 @@ musicFloteIMvtII = \relative c''' {
 	a,,8(_\pdolce d  e a fis d)
 	R2.
 	a8( d e fis d b)
-	R2.*9
+	R2.*7
 % Bars 11 to 15
 	
 % Bars 16 to 20
 	
-	
-	
-	r4 r8 fis'(\p a b)
+	\new CueVoice { \set instrumentCueName  = "Solo-Viol"}
+	\cueDuring "cueVoiceFloteImII" #DOWN {R2.*2 r4 r8}
+	fis'(\p a b)
 	c( a fis dis e g)
 % Bars 21 to 25
 	a(\p fis) g( e) fis( b)
 	c( a fis dis e g)
 	g( e) e( g,) g( a)
-	R2.*6
+	R2.*4
 % Bars 26 to 30
 	
 	
-	
-	
-	r4 r a'_\pdolce(~ \bar "||" \mark \default \key f \major
+	\new CueVoice { \set instrumentCueName  = "Solo-Viol"}
+	\cueDuring "cueVoiceFloteImII" #DOWN {R2.*2 r4 r }
+	 a'_\pdolce(~ \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	a bes c
 	bes a) d(
 	e f g
-	f c) c,\((_\pdolce
-	f)\< e d
+	f c) c,\((\pdolceD\<
+	f) e d
 % Bars 36 to 40
 	c\> b\)\! c(~
 	c cis d
-	g,2) r4
+	g,2)^\solo r4
 	R2.*2
 	
 % Bars 41 to 45
@@ -77,9 +77,9 @@ musicFloteIMvtII = \relative c''' {
 	d dis e
 % Bars 61 to 65
 	c2) r4
-	R2.*3
+	R2.*2
 	
-	
+	R2.^\tutti
 	r4 r gis\p\<(
 % Bars 66 to 70
 	b2\> a4)\! \bar "||" \key d \major
@@ -88,7 +88,7 @@ musicFloteIMvtII = \relative c''' {
 	fis g! a
 	g fis) b(~
 % Bars 71 to 75
-	b cis d)
+	b^\solo cis d)
 	e2( fis4)
 	g4.\f\> r8\! r4
 	R2.*5
@@ -120,14 +120,17 @@ musicFloteIMvtII = \relative c''' {
 	
 	
 	\mark \default
-	R2.*11
+	R2.*6
 % Bars 101 to 105
 	
 % Bars 106 to 110
-	
+	\new CueVoice { \set instrumentCueName  = "Solo-Vlc"}
+	\cueDuringWithClef "cueVoiceFloteImII" #UP #"bass" {R2.*4 r2}
+	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
+	\cueDuring "cueVoiceFloteImII" #UP {r4 r r}
 % Bars 111 to 115
-	r4 r d(~\f
-	d cis_\dimmarkup b\>
+	 d(~\f
+	d cis\dimD\> b
 	a g e)~
 	e(\p d) r
 	R2.*3

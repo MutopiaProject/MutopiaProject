@@ -36,7 +36,7 @@ musicHornIIIMvtII = \relative c {
 	c2\> r4\!
 	R2.*2
 	
-	\clef treble \partcombineApart g''2._\p~
+	\clef treble \partcombineSoloI g''2._\p~
 	g2 e'4(
 % Bars 41 to 45
 	d2.)~
@@ -96,7 +96,7 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	
-	e,4(\p\< a2)\>~
+	<< {e,4( a2)~ } {s4\< s\> s\!}>>
 	a2.\!~
 % Bars 116 to 118
 	a~

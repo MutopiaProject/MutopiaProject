@@ -77,7 +77,7 @@ musicHornIIMvtII = \relative c' {
 	
 	
 	
-	g4(\p\< c2\>)~
+	<< {g4( c2)~} {s4\p\< s\> s\!} >>
 	c2.~\!
 % Bars 116 to 118
 	c~

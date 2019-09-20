@@ -36,13 +36,13 @@ musicFagottoIMvtII = \relative c {
 	
 	
 	
-	r4 r a,4(_\pdolce~ \mark \default \bar "||" \key f \major
+	r4 r a,4^(_\pdolce~ \mark \default \bar "||" \key f \major
 % Bars 31 to 35
 	a bes c
-	bes a) d(
+	bes a) \partcombineChords d(
 	e f g
-	f c) c(
-	f) g f
+	f c) \partcombineApart c(
+	f) \partcombineAutomatic g f
 % Bars 36 to 40
 	e d e(
 	d g g,
@@ -59,17 +59,17 @@ musicFagottoIMvtII = \relative c {
 % Bars 51 to 55
 	a bes c 
 	bes a) r
-	r r \clef tenor d(
+	r r \clef tenor \partcombineChords d(
 	e f g
-	f c) r
+	f c) \partcombineAutomatic r
 % Bars 56 to 60
 	r r \clef bass f,,(
 	bes2.)~
-	bes2 r4
-	r r a'(
+	bes2 \partcombineAutomatic r4
+	r r \partcombineChords a'(
 	bes a g
 % Bars 61 to 65
-	c,2) r4
+	c,2) \partcombineAutomatic r4
 	R2.
 	r4 r \clef tenor f'(~\pp
 	f ges aes
@@ -83,7 +83,7 @@ musicFagottoIMvtII = \relative c {
 % Bars 71 to 75
 	b cis d)
 	e2( d4)
-	cis4. r8 r4
+	cis4. s8 r4
 	R2.*5
 % Bars 76 to 80
 	
@@ -124,7 +124,7 @@ musicFagottoIMvtII = \relative c {
 	R2.*5
 % Bars 111 to 115
 	
-	r4 e'(_\fdim g_\>
+	r4 \shape #'((0 . 0.5)(0 . -0.5)(0 . -0.5)(0 . 0.5)) Slur e'(_\fdimD_\> g
 	fis e cis)~
 	cis_\p( d) r
 	R2.*3

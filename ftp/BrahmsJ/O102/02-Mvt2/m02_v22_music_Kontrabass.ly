@@ -40,8 +40,8 @@ musicKontrabassMvtII = \relative c' {
 	cis d dis
 % Bars 26 to 30
 	e fis c
-	b\mf g a(~_\dimmarkup
-	a8\> d) fis,4 a4(~\!
+	b\mf g a(~\dimD\>
+	a8 d) fis,4 a4(~\!
 	a8\pp d) fis,4 a4(~
 	a d8) r r4 \bar "||" \key f \major \mark \default
 % Bars 31 to 35
@@ -65,14 +65,14 @@ musicKontrabassMvtII = \relative c' {
 	\mark \default
 % Bars 51 to 55
 	R2.
-	r4 r f,_\pocof\>~
+	r4 r f, -\tweak X-offset #-7.3 -\tweak Y-offset #-5 _\pocof\>~
 	f2\p r4
 	R2.
-	r4 r f4_\pf\>~
+	r4 r f4 -\tweak X-offset #-3.7 -\tweak Y-offset #-5 _\pf\>~
 % Bars 56 to 60
 	f2\p r4
 	R2.
-	r4 r bes_\pf\>~
+	r4 r bes -\tweak X-offset #-3.7 -\tweak Y-offset #-3 _\pf\>~
 	bes2\p r4
 	R2.
 % Bars 61 to 65

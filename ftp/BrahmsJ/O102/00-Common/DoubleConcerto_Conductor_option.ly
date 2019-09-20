@@ -17,7 +17,7 @@ generalOptions = {
 }
 conductorOptions = {
 	\set Staff.soloText = #"1."
-	#(set-global-staff-size 19)
+	#(set-global-staff-size 13)
 	\override Score.BarNumber #'font-size = #2
 }
 

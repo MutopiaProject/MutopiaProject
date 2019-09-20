@@ -16,9 +16,9 @@ musicFloteIMvtII = \relative c''' {
 	
 % Bars 6 to 10
 	
-	\partcombineApart a,,8(_\pdolce d  e a fis d) \partcombineAutomatic
+	\partcombineSoloI a,,8(_\pdolce d  e a fis d) \partcombineAutomatic
 	R2.
-	\partcombineApart a8( d e fis d b) \partcombineAutomatic
+	\partcombineSoloI a8( d e fis d b) \partcombineAutomatic
 	R2.*9
 % Bars 11 to 15
 	
@@ -41,9 +41,9 @@ musicFloteIMvtII = \relative c''' {
 	r4 r a'_\pdolce(~ \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	a bes c
-	bes a) d(
+	bes a) \partcombineChords d(
 	e f g
-	f c) c,\((_\pdolce
+	f c) \partcombineAutomatic c,\((_\pdolce
 	f) e\< d
 % Bars 36 to 40
 	c\> b\)\! c(~
@@ -52,7 +52,7 @@ musicFloteIMvtII = \relative c''' {
 	R2.*2
 	
 % Bars 41 to 45
-	\partcombineApart f'4._\p_\< f4 f8~
+	\partcombineSoloI f'4._\p_\< f4 f8~
 	f_\> f4 f8( g) g~\!
 	g4. r8 r4 \partcombineAutomatic
 	R2.
@@ -66,14 +66,14 @@ musicFloteIMvtII = \relative c''' {
 % Bars 51 to 55
 	a bes c
 	bes a) r
-	r  r d(
+	r  r \partcombineChords d(
 	e f g
-	f c) r
+	f c) \partcombineAutomatic r
 % Bars 56 to 60
 	r r cis(
 	d\< c! bes
 	a\> g\!) r
-	\partcombineApart r r f(
+	\partcombineSoloI r r f(
 	d dis e
 % Bars 61 to 65
 	c2) r4 \partcombineAutomatic
@@ -112,8 +112,8 @@ musicFloteIMvtII = \relative c''' {
 	\partcombineApart c'2(_\mf_\> b4)\! \partcombineAutomatic
 	a8( fis) g( e) fis( b)
 % Bars 91 to 95
-	\partcombineApart c!2(_\> b4)\! \partcombineAutomatic
-	bes8( g) g( e) e( a)
+	\partcombineApart c!2(_\> b4)\! \partcombineChords
+	bes8( g) g( e) e( a) \partcombineAutomatic
 	R2.*7
 % Bars 96 to 100
 	
@@ -126,8 +126,8 @@ musicFloteIMvtII = \relative c''' {
 % Bars 106 to 110
 	
 % Bars 111 to 115
-	\partcombineApart r4 r d(~_\f
-	d cis_\dimmarkup b_\>
+	\partcombineApart r4 r d(~\f
+	d cis_\dimD_\> b
 	a g e)~
 	e(\p d) r \partcombineAutomatic
 	R2.*3

@@ -12,7 +12,7 @@ musicVioloncellMvtII = \relative c {
 	R2.\fermataMarkup
 	R2.\fermataMarkup
 	a8(_\pocofmadolce d e a fis d)
-	<<{d4( g, a)} \\ {g g( d)}>>
+	<<{\shape #'((0 . 1.5)(0 . 0.5)(0 . 0.5)(0 . 1.5)) Slur d4( g, a)} \\ {g g( d)}>>
 	a'8( d e fis d b)
 % Bars 6 to 10
 	<<{d8( cis) cis( b) a4} \\ {e e  a}>>
@@ -46,8 +46,8 @@ musicVioloncellMvtII = \relative c {
 	\times 2/3 {cis,( a' e')} d4 \times 2/3 {dis,8( b' fis')}
 % Bars 26 to 30
 	e4 \times 2/3 {fis,8( d' a')} c,4
-	\times 2/3 {b8(\mf d g)} \times 2/3 {g,( b d)} a4(~_\dimmarkup
-	a8\> d) fis,4 a(~
+	\times 2/3 {b8(\mf d g)} \times 2/3 {g,( b d)} a4(~\dimD\>
+	a8 d) fis,4 a(~
 	a8\pp d) fis,4 a(~
 	a d,8) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
@@ -71,11 +71,11 @@ musicVioloncellMvtII = \relative c {
 	r c r4 c^\pizz \mark \default
 % Bars 51 to 55
 	f, r r
-	r r_\pocof <<{ 
+	r r -\tweak X-offset #-5 -\tweak Y-offset #-7 _\pocof <<{ %  
 		<des' bes'>^\pizz % bar 52 & 53
 		r <c a'>
 	} \\ {
-		f,4\>_\arco~
+		f,4\> -\tweak X-offset #-5 _\arco~
 		f2\p
 	}>> r4
 	R2.
@@ -83,7 +83,7 @@ musicVioloncellMvtII = \relative c {
 		<b aes'>
 		r <c a'!>
 	} \\ {
-		f,4_\pf~\>
+		f,4 -\tweak X-offset #-4 -\tweak Y-offset #-7 _\pf~\>
 		f2\p
 	}>> r4
 	R2.
@@ -91,7 +91,7 @@ musicVioloncellMvtII = \relative c {
 		fis'!
 		r g
 	} \\ {
-		bes,4_\pf~\>
+		bes,4 -\tweak X-offset #-4 -\tweak Y-offset #-6 _\pf~\>
 		bes2\p
 	}>> r4
 	R2.
@@ -133,7 +133,7 @@ musicVioloncellMvtII = \relative c {
 	R2.
 	r4 r d
 	e e, a
-	\times 2/3 {c'8\f\> a fis} \times 2/3 {dis c a} \times 2/3 {g b e}
+	\times 2/3 {c'8\f\> a fis} \times 2/3 {dis c a} \times 2/3 {g b e\!}
 	\times 2/3 {b\mf dis fis} b4 r
 % Bars 91 to 95
 	\times 2/3 {c8\f\> a fis} \times 2/3 {dis c a} \times 2/3 {g b e\!}

@@ -32,15 +32,15 @@ musicKlarinetIMvtII = \relative c''' {
 	r4 r c'_\pdolce(~ \bar "||" \key aes \major \mark \default
 % Bars 31 to 35
 	c des ees
-	des c) f(
-	g aes bes
-	aes ees) c~(
+	des c) \partcombineChords f(
+	g aes bes 
+	aes ees) \partcombineAutomatic \shape #'((0 . 2)(0 . -.5)(0 . -.5)(0 . 2)) Slur c~(
 	c bes aes 
 % Bars 36 to 40
-	g f) bes(
+	g f) \shape #'((0 . 2)(0 . -1)(0 . -1)(0 . 2)) Slur bes(
 	c cis d
-	bes2) \partcombineApart bes4^\pdolce(
-	des!4.)\< des4 des8(
+	bes2) \partcombineApart bes4\pdolceD\<(
+	des!4.) des4 des8(
 	des)\> des4 des8(\! c) c(
 % Bars 41 to 45
 	bes4) r r
@@ -57,9 +57,9 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 51 to 55
 	c des ees
 	des c) r
-	r r f(
+	r r \partcombineChords f(
 	g aes bes
-	aes ees) r
+	aes ees) \partcombineAutomatic r
 % Bars 56 to 60
 	R2.*3
 	
@@ -85,11 +85,11 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 81 to 85
 	
 	
-	\partcombineApart r4 r8 c,(_\p_\< f g
+	\partcombineSoloI r4 r8 c,(_\p_\< f g
 	c_\> a f c)\! r4 \partcombineAutomatic
 	R2.
 % Bars 86 to 90
-	\partcombineApart r4 r8 a(_\< cis e
+	\partcombineSoloI r4 r8 a(_\< cis e
 	a_\> fis d a)\! r4 \partcombineAutomatic
 	R2.*12
 % Bars 91 to 95
@@ -113,8 +113,8 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 % Bars 111 to 115
-	\partcombineApart r4 r f'(_\f~
-	f e_\dimmarkup d_\>
+	\partcombineSoloI r4 r f'(_\f~
+	f e\dimD\> d
 	c bes) bes(~
 	bes_\p a) r \partcombineAutomatic
 	R2.*3

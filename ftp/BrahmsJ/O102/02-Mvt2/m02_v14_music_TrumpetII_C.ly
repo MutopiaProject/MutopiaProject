@@ -75,10 +75,10 @@ musicTrumpetIIMvtII = \relative c' {
 	
 	
 	
-	g4\p\<( c2\>)~
+	\partcombineChords << {g4( c2)~ } {s4\p\< s\> s\!}>>
 	c2.\!~
 % Bars 116 to 118
 	c~
-	c2 r4
+	c2 \partcombineAutomatic r4
 	c2.\fermata \bar "|."
 }

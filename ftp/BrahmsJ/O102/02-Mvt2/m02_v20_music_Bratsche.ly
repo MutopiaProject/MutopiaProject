@@ -41,7 +41,7 @@ musicBratscheMvtII = \relative c' {
 % Bars 26 to 30
 	g4 c8( a) a( fis)\!
 	<<{d4^\div d8( e) e( fis) } \\ {d4\mf d d}>>
-	<d fis>2_\dimmarkup\> <e g>4
+	<d fis>2\dimD\> <e g>4
 	<d fis>2\pp <e g>4
 	fis8( a fis) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
@@ -75,7 +75,7 @@ musicBratscheMvtII = \relative c' {
 	<bes d> <fis c'> <g bes>~
 % Bars 61 to 65
 	q <f! a>) <e des'>^\pizz\p
-	r <f  c'>_\dimmarkup r\>
+	r <f  c'>\dimD\> r
 	<f ees'> r <f des'>\!
 	R2.
 	r4 gis\pp r

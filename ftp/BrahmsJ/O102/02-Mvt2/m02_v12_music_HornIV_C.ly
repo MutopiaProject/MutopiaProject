@@ -96,7 +96,7 @@ musicHornIVMvtII = \relative c, {
 	
 	
 	
-	e,4(\p\< a2)\>~
+	<< {e,4( a2)~ } {s4\< s\> s\!}>>
 	a2.\!~
 % Bars 116 to 118
 	a~

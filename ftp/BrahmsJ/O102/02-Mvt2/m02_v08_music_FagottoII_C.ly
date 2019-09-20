@@ -83,7 +83,7 @@ musicFagottoIIMvtII = \relative c {
 % Bars 71 to 75
 	g e fis)
 	g2.
-	a,4.\f\> r8\! r4
+	a,4.\f\> d8\rest\! r4
 	R2.*5
 % Bars 76 to 80
 	

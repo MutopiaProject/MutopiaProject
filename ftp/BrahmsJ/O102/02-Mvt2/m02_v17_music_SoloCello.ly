@@ -74,7 +74,7 @@ musicSoloCelloMvtII = \relative c {
 	R2.
 % Bars 61 to 65
 	r4 r8. c16(\> e,) g'( e)\! des_\dimmarkup(
-	bes) g( e) des( a c f a) c4(\pp
+	bes) g( e) des( a c f a) c4(\pp\<
 	ees2\> aes,4)\!
 	R2.*3
 % Bars 66 to 70
@@ -88,8 +88,8 @@ musicSoloCelloMvtII = \relative c {
 	<< {a,2 a'4\trill } {s8\startTrillSpan s s s\stopTrillSpan s4} >>
 % Bars 76 to 80
 	\afterGrace a,2(\trill\< {gis16[ a]} e'8) e,(\!
-	<g! d'>2._\dimmarkup)
-	<gis e'>4.\> r8\! r4
+	<g! d'>2.\dimD\>)
+	<gis e'>4. r8\! r4
 	a8(\f d e a fis d)
 	b4( b' a)
 % Bars 81 to 85
