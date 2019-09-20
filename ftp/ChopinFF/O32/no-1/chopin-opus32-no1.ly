@@ -1,6 +1,6 @@
 %...+....1....+....2....+....3....+....4....+....5....+....6....+....7....+....
 
-\version "2.19.82"
+\version "2.19.83"
 \language "english"
 
 \header {
@@ -29,6 +29,7 @@ staffUp   = \change Staff = "upper"
 staffDown = \change Staff = "lower"
 
 slashFlag = \once \override Flag.stroke-style = "grace"
+
 trillUnderSlur = {
   \once \override TrillSpanner.avoid-slur = #'inside
   \once \override TrillSpanner.outside-staff-priority = ##f
@@ -37,23 +38,29 @@ trillUnderSlur = {
 
 slurShapeA = \shape #'((0 . -2) (0 . -4) (0 . 0) (0 . 0)) Slur
 slurShapeB = \shape #'((0 . 2) (0 . -1) (-1 . -1) (0 . 4)) Slur
-slurShapeC = \shape #'((0 . 0) (0 . 0) (0 . 1) (1 . -1)) Slur
-%slurShapeX = \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur
+slurShapeD = \shape #'((0 . 0) (0 . 2) (0 . 0) (0 . 0)) Slur
+slurShapeI = \shape #'((-0.5 . 2) (0 . 0) (0 . 0) (0 . 0)) Slur
 
 slurPositionA = \once \override Slur.positions = #'(3 . 3)
-slurPositionB = \once \override Slur.positions = #'(4 . 4)
 slurPositionC = \once \override Slur.positions = #'(0 . 0)
-slurPositionD = \once \override Slur.positions = #'(0 . 5)
 slurPositionE = \once \override Slur.positions = #'(4 . 0)
 slurPositionF = \once \override Slur.positions = #'(2 . 3)
-%slurPositionG = \once \override Slur.positions = #'(1 . 4)
+slurPositionI = \once \override Slur.positions = #'(3 . 3)
+slurPositionJ = \once \override Slur.positions = #'(0 . 0)
+slurPositionK = \once \override Slur.positions = #'(0 . 0)
+slurPositionL = \once \override Slur.positions = #'(1 . 3)
+slurPositionQ = \once \override Slur.positions = #'(0 . 0)
+slurPositionR = \once \override Slur.positions = #'(0 . 0)
 
 beamPositionA = \once \override Beam.positions = #'(-1 . -1)
+
+tieShapeA = \shape #'((0 . 0.25) (0 . 0.75) (0 . 0.75) (0 . 0.25)) Tie
 
 global = {
   \key b \major
   \time 4/4
   \accidentalStyle piano
+  \override Slur.details.accidental-collision = #1000
 }
 
 rightHand = \relative {
@@ -244,8 +251,8 @@ rightHand = \relative {
   \override TieColumn.tie-configuration = #'((0.0 . 1) (-2.0 . 1) (-4.0 . 1))
     <c e g>2~ <c e g>
   %}
-  % Ties may be engraved manually by changing the tie-configuration property of
-  % the TieColumn object. The first number indicates the distance from the 
+  % Ties may be engraved manually by changing the tie-configuration property
+  % of the TieColumn object. The first number indicates the distance from the 
   % center of the staff in half staff-spaces, and the second number indicates 
   % the direction (1 = up, -1 = down).
   \context Voice = "1" { \cadenzaOn q2\fermata } r16 b32([ cs] e[ d cs b])
@@ -261,9 +268,10 @@ rightHand = \relative {
     \\
     { r4 \staffDown \stemUp <fs, gs b> <es gs b> s1 <e g as>4 q }
   >>
-  r4 \clef bass as \bar "|" 
+  \context Voice = "1" { r4 \clef bass as( \bar "|" }
   \tempo Adagio
-  << { as( b2.)~ \bar "|" b1\fermata } \\ { r2 r4 <e, g> <ds fs> r r2 } >>
+  \context Voice = "1" 
+    << { as b2.~ \bar "|" b1)\fermata } \\ { r2 r4 <e, g> <ds fs> r r2 } >>
   \bar "|."
 }
 
@@ -277,7 +285,7 @@ leftHand = \relative {
   b,,8) fs''( fs, fs' <as, e'> fs' fs, fs') |
   <b, ds>8( fs' fs, fs' <as, cs> fs' fs, fs') |
   b,,8( fs' a ds) as,( gs' as css) |
-  \slurPositionC ds,,8( fs' as ds) \slurPositionD e,,([ e' gs cs16]) r\fermata |
+  \slurPositionC ds,,8( fs' as ds) e,,([ e' gs cs16]) r\fermata |
   g,8-. e'( b' e) fs,,-. fs'( as e') |
   
   \barNumberCheck 8
@@ -318,7 +326,7 @@ leftHand = \relative {
   
   \barNumberCheck 20
   \slurPositionF b,,8( fs'' <ds' fs> fs, <cs' e> fs, <b ds> fs) |
-  \stemDown \slurShapeC fs,8( cs' <fs as> cs as cs <fs cs'> cs) |
+  \stemDown fs,8( cs' <fs as> cs as cs <fs cs'> cs) |
   cs,8-. cs'( <es b'> cs) fs,( cs' <fs as> cs)  |
   fs,8( cs' <fs as> cs) fs,( cs' cs' cs,) \stemNeutral |
   cs,8( cs' <es b'> cs) fs,( cs' as' css,) |
@@ -333,7 +341,7 @@ leftHand = \relative {
   <<
     { s8 ds4*1/2 css' ds, cs' ds, b' ds, }
     \\
-    { ds,8 ds'^( css' ds, cs' ds, b' ds,) }
+    { ds,8 \slurPositionI ds'^( css' ds, cs' ds, b' ds,) }
   >> |
   <<
     { s8 ds2*3/4 b'4*1/2 ds, css'4 }
@@ -351,14 +359,14 @@ leftHand = \relative {
     { as8 ds, ds' cs b ds, css' ds,) }
   >> |
   ds,8( fss' as ds) e,,([ e' gs cs16]) r\fermata |
-  g,,8( e'' b' e) fs,,,( fs'' as e') |
+  \slurShapeD g,,8( e'' b' e) fs,,,( fs'' as e') |
   
   \barNumberCheck 37
-  ds,,8( bs' gs' ds') cs,,( cs' b' es) |
+  \slurPositionJ ds,,8( bs' gs' ds') cs,,( cs' b' es) |
   fs,,8( fs' as e') b,( fs' b ds) |
-  \tuplet 5/4 { e,,( e' gs ds' cs } gs'4) r |
+  \tuplet 5/4 { \slurPositionK e,,( e' gs ds' cs } gs'4) r |
   fs,,,4 fs''2. |
-  b,,8( fs'' <ds'fs> fs, <cs' e> fs, <b ds> fs) |
+  \slurPositionL b,,8( fs'' <ds'fs> fs, <cs' e> fs, <b ds> fs) |
   \stemDown fs,8( cs' <fs as> cs as cs <fs cs'> cs) |
   cs,8-. cs'( <es b'> cs) fs,( cs' <fs as> cs) |
   fs,8( cs' <fs as> cs) fs,( cs' cs' cs,) |
@@ -390,10 +398,10 @@ leftHand = \relative {
     { as8 ds, ds' cs b ds, css' ds,) } 
   >> |
   ds,8( fss' as ds) e,,([ e' gs cs16]) r\fermata |
-  \stemNeutral g,,8( e'' b' e) fs,,,( fs'' as e') |
+  \stemNeutral \slurPositionQ g,,8( e'' b' e) \slurShapeI fs,,,( fs'' as e') |
   ds,,8( bs' gs' ds') cs,,( cs' b' es) |
   fs,,8( fs' as e') b,( fs' b ds) |
-  \tuplet 5/4 { e,,( e' gs ds' cs } gs'4) r\fermata |
+  \tuplet 5/4 { \slurPositionR e,,( e' gs ds' cs } gs'4) r\fermata |
   fs,,,4 fs''2. |
   
   \barNumberCheck 62
@@ -405,12 +413,15 @@ leftHand = \relative {
   \grace {fs,8([ b d f a] } g)[ r16 fs] 
   << { fs2-> } \\ { r8 <fs, ds'>-. <fs d'>4-. } >> r2
   <<
-    { cs'2*3/2_~ \tuplet 3/2 { cs8[ cs cs] } \tuplet 3/2 { cs[ cs cs] } cs4 d2. }
+    { 
+      \tieShapeA cs'2*3/2_~ \tuplet 3/2 { cs8[ cs cs] } 
+        \tuplet 3/2 { cs[ cs cs] } cs4 d2. 
+    }
     \\
     { r4 \staffDown fs, fs s2. r4 fs fs }
   >>
-  r4 as4 \bar "|"
-  << { as4( b2.)~ \bar "|" b1\fermata } \\ { r2 r4 e, b r r2 } >>
+  \context Voice = "1" { r4 as4( \bar "|" }
+  << { as4 b2.~ \bar "|" b1)\fermata } \\ { r2 r4 e, b r r2 } >>
   \bar "|."
 }
 
@@ -434,52 +445,52 @@ pedal = {
   s4.\sd s16 s16\su s2 |
   s4.\sd s16 s16\su s4.\sd s16 s16\su |
   s4\sd s16 s16\su s8 s4.\sd s16 s16\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4.\sd s32 s16.\su s4.\sd s16 s16\su |
   
   \barNumberCheck 20
+  s2.\sd s8 s16\su s16 |
   s2.\sd s8. s16\su |
+  s4\sd s16 s16\su s8 s4.\sd s16\su s16 |
+  s2.\sd s8 s16\su s16 |
+  s4.\sd s8\su s4.\sd s16\su s16 |
   s2.\sd s8. s16\su |
-  s4.\sd s8\su s4.\sd s16 s16\su |
-  s2.\sd s8. s16\su |
-  s4.\sd s8\su s4.\sd s16 s16\su |
-  s2.\sd s8. s16\su |
-  s4.\sd s8\su s4.\sd s16 s16\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4\sd s16 s16\su s8 s4.\sd s16 s16\su |
+  s4.\sd s16\su s16 s4.\sd s16\su s16 |
   s8.\sd s16\su s8.\sd s16\su s4.\sd s8\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4.\sd s16 s16\su s4.\sd s16\su s16 |
   s8.\sd s16\su s8.\sd s16\su s4.\sd s8\su |
   
   \barNumberCheck 31
   s1 * 4 |
-  s4.\sd s8\su s4.\sd s8\su |
+  s4\sd s16 s16\su s8 s4.\sd s8\su |
   s4.\sd s16 s16\su s4.\sd s16 s16\su |
   
   \barNumberCheck 37
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4.\sd s16\su s16 s4.\sd s16 s16\su |
+  s4.\sd s16\su s16 s4.\sd s16 s16\su |
   s2.\sd s8 s\su |
   s4\sd s\su s2 |
   s4.\sd s16 s16\su s2 |
+  s2.\sd s8 s16\su s |
+  s4.\sd s16\su s s4.\sd s16\su s |
   s2.\sd s8 s16 s\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
-  s2.\sd s8 s16 s\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4.\sd s16\su s s4.\sd s16 s16\su |
   
   \barNumberCheck 46
   s2.\sd s8 s16 s\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4.\sd s16\su s s4.\sd s16 s16\su |
+  s4.\sd s16\su s s4.\sd s16 s16\su |
   s8\sd s16 s\su s8\sd s16 s\su s4\sd s16 s\su s8 |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4.\sd s16 s16\su s4.\sd s16\su s |
   s8\sd s16 s\su s8\sd s16 s\su s4\sd s8. s16\su |
   
   \barNumberCheck 52
   s2.\sd s8 s16 s\su |
   s1 * 3 |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
-  s4.\sd s16 s16\su s4.\sd s16 s16\su |
+  s4\sd s16 s16\su s8 s4.\sd s16 s16\su |
+  s4.\sd s16\su s s4.\sd s16 s16\su |
+  s4.\sd s16\su s s4.\sd s16 s16\su |
+  s4.\sd s16\su s s4.\sd s16 s16\su |
   s2.\sd s4\su |
   s2\sd s2\su |
   
@@ -598,7 +609,7 @@ dynamics = {
   \layout {
     \context {
       \Score
-      \omit BarNumber
+      % \omit BarNumber
     }
   }
 }
