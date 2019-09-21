@@ -566,8 +566,8 @@ dynamics = {
 
 #(set-global-staff-size 18) % default 20
 
-% Beam slope is fine, even with the warning
-%#(ly:expect-warning "no viable initial configuration found")
+% Engraving is fine, even with the warning
+%#(ly:expect-warning "warning: stealing the entirety of a note's time")
 
 \paper {
   ragged-last-bottom = ##t % set to false after editing 
@@ -588,7 +588,7 @@ dynamics = {
        (padding . 2)
        (stretchability . 30)) % defaults 1, 0, 1, 30
     
-  #(set-paper-size "letter") % for testing only
+  % #(set-paper-size "letter") % for testing only
   
   % These settings are scaled to paper-size
   top-margin = 12\mm % default 5
@@ -609,7 +609,7 @@ dynamics = {
   \layout {
     \context {
       \Score
-      % \omit BarNumber
+      \omit BarNumber
     }
   }
 }
