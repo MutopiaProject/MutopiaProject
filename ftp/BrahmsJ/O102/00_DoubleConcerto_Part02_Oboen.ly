@@ -44,6 +44,7 @@
 \include "./00-Common/DoubleConcerto_Parts_option.ly"
 \include "./00-Common/DoubleConcerto_VoiceName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
+\include "./00-Common/DoubleConcerto_cueVoice.ly"
 \include "./01-Mvt1/m01_v03_music_OboeI.ly"
 \include "./02-Mvt2/m02_v03_music_OboeI.ly"
 \include "./03-Mvt3/m03_v03_music_OboeI.ly"

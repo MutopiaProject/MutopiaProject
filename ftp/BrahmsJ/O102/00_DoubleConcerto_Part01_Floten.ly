@@ -44,13 +44,20 @@
 \include "./00-Common/DoubleConcerto_Parts_option.ly"
 \include "./00-Common/DoubleConcerto_VoiceName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
+\include "./00-Common/DoubleConcerto_cueVoice.ly"
 \include "./01-Mvt1/m01_v01_music_FloteI.ly"
 \include "./02-Mvt2/m02_v01_music_FloteI.ly"
 \include "./03-Mvt3/m03_v01_music_FloteI.ly"
 \include "./01-Mvt1/m01_v02_music_FloteII.ly"
 \include "./02-Mvt2/m02_v02_music_FloteII.ly"
 \include "./03-Mvt3/m03_v02_music_FloteII.ly"
-\include "./00-Common/00_DoubleConcerto_Format_Floten.ly"
+\addQuote "cueVoiceFloteImI" { \cueVoiceFloteImI }
+\addQuote "cueVoiceFloteImII" { \cueVoiceFloteImII }
+\addQuote "cueVoiceFloteImIII" { \cueVoiceFloteImIII }
+\addQuote "cueVoiceFloteIImI" { \cueVoiceFloteIImI }
+\addQuote "cueVoiceFloteIImII" { \cueVoiceFloteIImII }
+\addQuote "cueVoiceFloteIImIII" { \cueVoiceFloteIImIII }
+%\include "./00-Common/00_DoubleConcerto_Format_Floten.ly"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -89,7 +96,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -155,7 +162,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4

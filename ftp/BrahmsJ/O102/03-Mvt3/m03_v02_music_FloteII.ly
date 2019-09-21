@@ -9,7 +9,9 @@ musicFloteIIMvtIII = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	R2*28
+	\new CueVoice { \set instrumentCueName = "Solo-Vlc." }
+	\cueDuringWithClef #"cueVoiceFloteIImIII" #UP #"bass" {R2*2}
+	R2*22
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -19,10 +21,11 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 21 to 25
 	
 % Bars 26 to 30
+	\new CueVoice { \set instrumentCueName = "Solo-Viol." }
+	\cueDuring #"cueVoiceFloteIImIII" #UP {R2*4}
+	\new CueVoice { \set instrumentCueName = "Klar." }
+	\cueDuring #"cueVoiceFloteIImIII" #UP {\tempo "poco rit." R2*2}
 	
-	
-	
-	\tempo "poco rit." R2*2
 % Bars 31 to 35
 	a2\pp~
 	a(
@@ -32,7 +35,7 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	\mark \default
-	e'2\ff
+	e'2\ff^\tutti
 	a,8-. a-. r a-.
 % Bars 41 to 45
 	r gis-. r a-.
@@ -44,34 +47,42 @@ musicFloteIIMvtIII = \relative c''' {
 	c2(
 	a)
 	a8-. c-. b-. b-.
-	a-. r r4
-	R2*35
+	a-. r^\solo r4
+	R2
 % Bars 51 to 55
-	%a16\p-. a-. c-. a-. fis-. fis-. a-. fis-. 
-	%d-. d-. fis-. d-. b-. b-. d-. b-. 
-	%a-. c-. ees-. c-. b-. d-. a-. d-. 
-	%b-. g-. r8 r4
-	%R2*30
+	R2*3^\tutti
+	
+	
+	R2*11^\solo
 % Bars 56 to 60
 	
 % Bars 61 to 65
 	
+	
+	
+	
+	R2*4^\tutti
 % Bars 66 to 70
+	
+	
+	
+	R2*8^\solo
 	
 % Bars 71 to 75
 	
 % Bars 76 to 80
 	
 % Bars 81 to 85
-	
-	
-	
-	\bar "||" \time 3/4
-	R2.*2
+	\new CueVoice { \set instrumentCueName = "Solo-Viol." }
+	\cueDuring #"cueVoiceFloteIImIII" #UP {
+		R2*8
+		\bar "||" \time 3/4
+		R2.*2
 % Bars 86 to 90
-	\bar "||" \time 4/4
-	R1 %r2 r4 fis'(\f
-	b,4(\< c cis d8 g)\! \bar "||" \time 2/4
+		\bar "||" \time 4/4
+		R1 %r2 r4 fis'(\f
+	}
+	b,4(\f\< c cis d8 g)\! \bar "||" \time 2/4
 	e-.\f r r4
 	fis8-. r r4
 % Bars 91 to 95
@@ -87,44 +98,50 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	\mark \default
 % Bars 101 to 105
-	R2*18
+	R2*4
+	
+	
+	
+	R2*4^\tutti
 % Bars 106 to 110
 	
 	
 	
-	%e'8->\p d16-. e-. d8-> e16-. d-.
+	R2*7^\solo %e'8->\p d16-. e-. d8-> e16-. d-.
 	%e8-> d16-. e-. d( f) d-. b-.
 % Bars 111 to 115
 	%a8 r r4
 	%r a16(\p\> e') r8\!
 	%R2*6
 % Bars 116 to 120
-	
-	
-	\bar "||" \key d \minor
-	R2*18
+	\new CueVoice { \set instrumentCueName = "Hr.III" }
+	\cueDuring #"cueVoiceFloteIImIII" #DOWN {R2*2}
+	\new CueVoice { \set instrumentCueName = "Solo-Viol." }
+	\cueDuring #"cueVoiceFloteIImIII" #UP {R2 \bar "||" \key d \minor R2*3}
+	R2*12
 % Bars 121 to 125
 	
 % Bars 126 to 130
 	
 % Bars 131 to 135
-	
+	\new CueVoice { \set instrumentCueName = "Viol.I" }
+	\cueDuring #"cueVoiceFloteIImIII" #UP {R2*3}
 % Bars 136 to 140
 	
-	\times 2/3 {f'4(\ff e8)} \times 2/3 {d( e f)}
+	\times 2/3 {f'4(\ff^\tutti e8)} \times 2/3 {d( e f)}
 	\times 2/3 {f4( ees8)} \times 2/3 {des( ees f)}
 	c4 cis
-	R2*2
+	R2*2^\solo
 % Bars 141 to 145
 	
-	r8. c!16-. e8[-. r16 e-.]
+	r8.^\tutti c!16-. e8[-. r16 e-.]
 	\times 2/3 {e4( d8)} \times 2/3 {b( c d)}
 	\times 2/3 {d4( c8)} \times 2/3 {a( b c)}
-	gis4 a
+	gis4 a^\solo
 % Bars 146 to 150
 	R2*2
 	\mark \default
-	R2*24
+	R2*18
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -132,10 +149,11 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 161 to 165
 	
 % Bars 166 to 170
-	
+	\new CueVoice { \set instrumentCueName = "Solo-Viol." }
+	\cueDuring #"cueVoiceFloteIImIII" #DOWN {R2*6 r4 r8}
 % Bars 171 to 175
 	
-	r4 r8 a,(\f
+	 a,(\f
 	f'-.) f4 e8(
 	f) f4 r8
 	R2
@@ -144,15 +162,16 @@ musicFloteIIMvtIII = \relative c''' {
 	c) a4 bes8(
 	a) f4 r8
 	R2 \mark \default
-	R2*16
+	R2*12
 % Bars 181 to 185
 	
 % Bars 186 to 190
 	
 % Bars 191 to 195
-	
+	\new CueVoice { \set instrumentCueName = "Viol." }
+	\cueDuring #"cueVoiceFloteIImIII" #UP {R2*4 r4}
 % Bars 196 to 200
-	r4 r8. a'16\ff
+	 r8. -\tweak X-offset #-2.8 ^\tutti a'16\ff
 	a4.. f!16
 	f4.. f16
 	\times 2/3 {f4( e8)} \times 2/3 {d( e f)}
@@ -167,19 +186,19 @@ musicFloteIIMvtIII = \relative c''' {
 	d8(\sf c!16) c( bes) bes( a) a(
 	bes8\sf)( a16) a( g) g( f) f(
 	e) e( f) f( e) e( f) f(
-	e8-.) r r8. a'16
-	a8(\sf g16) g( f) f( e) e(
+	e8-.) r^\solo r8. a'16
+	a8(\sf^\tutti g16) g( f) f( e) e(
 % Bars 211 to 215
 	f8\sf)( e16) e( d) d( c) c(
 	b) b( c) c( b) b( c) c(
-	b8-.) r r8. e16
-	e2\fp~
+	b8-.) r^\solo r8. e16
+	e2\fp~^\tutti
 	e_\dimmarkup~
 % Bars 216 to 220
 	e~
 	e \bar "||" \mark \default \key a \minor
 	a,8-.\p r r4
-	R2*19
+	R2*17
 	
 % Bars 221 to 225
 	
@@ -192,10 +211,8 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 231 to 235
 	
 % Bars 236 to 240
-	%e8->\p d16-. e-. d8-> e16-. d-.
-	\mark \default %e8-> d16-. e-. d( f) d-. b-. \mark \default
-	R2*4%g8-. r r4
-	%R2*3
+	\cueDuring #"cueVoiceFloteIImIII" #UP {R2*2 \mark \default R2*4}
+	
 	
 % Bars 241 to 245
 	
@@ -207,17 +224,17 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	\tempo "in tempo" R2*5
+	\tempo "in tempo" R2*4
 % Bars 251 to 255
 	
 	
 	
-	
+	\cueDuring #"cueVoiceFloteIImIII" #UP {\once \override MultiMeasureRest.staff-position = #-6 R2}
 	e''2_\mfcresc(
 % Bars 256 to 260
 	d)(
 	b)
-	c8-.\ff a-. r a
+	c8-.\ff^\tutti a-. r a
 	r gis-. r a-.
 	r a-. r a-.
 % Bars 261 to 265
@@ -229,26 +246,32 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 266 to 270
 	a8-. c-. b-. b-.
 	c-. c-. g-. g-.
-	f-. r r4
-	R2*5
-	
+	f-. r r4^\solo
+	R2
+	R2*3^\tutti
 % Bars 271 to 275
 	
 	
-	\bar "||" \key a \major
-	R2*15
+	R2^\solo \bar "||" \key a \major
+	R2*11
 % Bars 276 to 280
 	
 % Bars 281 to 285
 	
+	
+	
+	
+	\cueDuring #"cueVoiceFloteIImIII" #UP {
+		R2
 % Bars 286 to 290
-	
-	
-	\bar "||" \time 3/4
-	R2.*2
-	\bar "||" \time 4/4
+		R2
+		R
+		R \bar "||" \time 3/4
+		R2.
+		R2. \bar "||" \time 4/4
 % Bars 291 to 295
-	R1 %r4 cis,(_\pcresc d dis
+		R1 %r4 cis,(_\pcresc d dis
+	}
 	gis,4(\< a ais b8 e) \bar "||" \time 2/4
 	cis8-.\f r r4
 	dis8-. r r4

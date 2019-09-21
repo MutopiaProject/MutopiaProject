@@ -41,7 +41,7 @@
 		}
 	}
 }
-\include "/media/Documents/Partitions/lilypond/markup.ly"
+%\include "/media/Documents/Partitions/lilypond/markup.ly"
 \include "./00-Common/DoubleConcerto_timeMvt.ly"
 \include "./00-Common/DoubleConcerto_Conductor_option.ly"
 \include "./00-Common/DoubleConcerto_VoiceName.ly"
@@ -68,7 +68,7 @@
 \include "./01-Mvt1/m01_v20_music_Bratsche.ly"
 \include "./01-Mvt1/m01_v21_music_Violoncell.ly"
 \include "./01-Mvt1/m01_v22_music_Kontrabass.ly"
-\include "./00-Common/00_DoubleConcerto_Format_Cond_Mvt1.ly"
+%\include "./00-Common/00_DoubleConcerto_Format_Cond_Mvt1.ly"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -201,7 +201,10 @@
 		}
 		\layout {
 			\context {
-				\Staff \RemoveEmptyStaves
+				\Staff
+				\override TupletBracket #'bracket-visibility = ##f
+				\override Hairpin.to-barline = ##f
+				\RemoveEmptyStaves
 			}
 		}
 	}

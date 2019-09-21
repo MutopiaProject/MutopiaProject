@@ -33,7 +33,7 @@ eight=^\markup {\tiny \number 8}
 nine=^\markup {\tiny \number 9}
 ten=^\markup {\tiny \number 10}
 eleven=^\markup {\tiny \number 11}
-
+atempo=^\markup {\italic {a tempo}}
 
 
 

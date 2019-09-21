@@ -160,7 +160,7 @@ musicFloteIMvtI = \relative c''' {
 	e8 r e4~ e8 r d4~\<
 	d4.\> r8\! r4 e~
 	e8 r e4~ e8 r e4~\<
-	e1_\dimmarkup\>~
+	e1\dimD\>~
 % Bars 171 to 175
 	e4\! r r2 \mark \default
 	r r4 c'\f(
