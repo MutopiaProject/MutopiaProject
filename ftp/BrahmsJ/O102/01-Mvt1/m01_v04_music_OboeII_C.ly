@@ -122,9 +122,9 @@ musicOboeIIMvtI = \relative c'' {
 	
 	a2\pp( c
 	ees c)
-	c1~
+	<< c1~ {s2 s_\dimmarkup} >>
 % Bars 141 to 145
-	c(
+	c1(
 	a2) g\rest \mark \default
 	R1*3
 	

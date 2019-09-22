@@ -52,6 +52,12 @@
 \include "./02-Mvt2/m02_v04_music_OboeII.ly"
 \include "./03-Mvt3/m03_v04_music_OboeII.ly"
 \include "./00-Common/00_DoubleConcerto_Format_Oboen.ly"
+\addQuote "cueVoiceOboeImI" { \cueVoiceOboeImI }
+\addQuote "cueVoiceOboeImII" { \cueVoiceOboeImII }
+\addQuote "cueVoiceOboeImIII" { \cueVoiceOboeImIII }
+\addQuote "cueVoiceOboeIImI" { \cueVoiceOboeIImI }
+\addQuote "cueVoiceOboeIImII" { \cueVoiceOboeIImII }
+\addQuote "cueVoiceOboeIImIII" { \cueVoiceOboeIImIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -90,7 +96,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -156,7 +162,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4

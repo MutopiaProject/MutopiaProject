@@ -65,12 +65,12 @@ musicOboeIMvtIII = \relative c''' {
 	
 	
 	
-	
+	\bar "||"
 	\time 3/4 R2.*2
 % Bars 86 to 90
-	
+	\bar "||"
 	\time 4/4 R1*2
-	
+	\bar "||"
 	\time 2/4 R2*7
 % Bars 91 to 95
 	

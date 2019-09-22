@@ -36,6 +36,7 @@ eleven=^\markup {\tiny \number 11}
 atempo=^\markup {\italic {a tempo}}
 
 
+pespr = ^\markup {\dynamic p \musicglyph #"scripts.espr"}
 
 fdim = \markup {\dynamic f \italic dim.}
 fespress = \markup {\dynamic f \italic espress.}
@@ -46,8 +47,6 @@ pocof = \markup { \italic poco \dynamic f}
 pocofmadolce = \markup { \italic poco \dynamic f \italic {ma dolce}}
 ppdim = \markup { \dynamic pp \italic dim.}
 psempre = \markup {\dynamic p \italic sempre }
-
-
 fbenmarc = \markup { \dynamic f \italic {ben marc.}}
 fespr = \markup { \dynamic f \italic espr.}
 ffmarc = \markup { \dynamic ff \italic {marc.}}

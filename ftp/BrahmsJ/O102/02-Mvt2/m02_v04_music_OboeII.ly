@@ -9,9 +9,11 @@ musicOboeIIMvtII = \relative c'' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
-	R2.*28
+	\cueDuring #"cueVoiceOboeIImII" #DOWN {
+		R2.\fermataMarkup
+		R2.\fermataMarkup
+	}
+	R2.*27^\solo
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -25,18 +27,19 @@ musicOboeIIMvtII = \relative c'' {
 	
 	
 	
-	\bar "||" \mark \default \key f \major
+	\cueDuring #"cueVoiceOboeIImII" #UP { 
+		R2.^\tutti \bar "||" \mark \default \key f \major
 % Bars 31 to 35
-	R2.*5
-	
-	
-	
-	
+		R
+		R
+		R
+		R
+		R
 % Bars 36 to 40
-	r4 r c(
+		r4 r } c(_\pdolce
 	a g f
-	d e) r
-	R2.*12
+	d e) r^\solo
+	R2.*11
 % Bars 41 to 45
 	
 % Bars 46 to 50
@@ -44,25 +47,36 @@ musicOboeIIMvtII = \relative c'' {
 	
 	
 	
-	\mark \default
+	\cueDuring #"cueVoiceOboeIImII" #UP { 
+		R2. \mark \default
 % Bars 51 to 55
-	R2.*5
+		R
+		R
+		R
+		R
+		R
+	}
 % Bars 56 to 60
 	r4 r a(
-	bes\< a g
+	bes\< a g\!
 	f\> e)\! r
-	R2.*8
+	R2.*5
 	
 % Bars 61 to 65
 	
+	
+	
+	R2.*2^\tutti
+	
 % Bars 66 to 70
-	\bar "||" \key d \major
-	R2.
-	r4 r a(~_\mfcresc
+	\cueDuring #"cueVoiceOboeIImII" #DOWN {
+		R2. \bar "||" \key d \major
+		R2.
+		r4 r } a(~_\mfcresc
 	a e' fis
 	e d) g(~
 % Bars 71 to 75
-	g cis, d)
+	g^\solo cis, d)
 	e2( d4)
 	cis4.\f\> r8\! r4
 	R2.*26
@@ -79,15 +93,21 @@ musicOboeIIMvtII = \relative c'' {
 	
 	
 	\mark \default
-	R2.*18
+	R2.*11
 % Bars 101 to 105
 	
 % Bars 106 to 110
 	
 % Bars 111 to 115
-	
+	\cueDuring #"cueVoiceOboeIImII" #UP {
+		R2.
+		R
+		R
+		R
+		R
 % Bars 116 to 118
-	
-	
+		R
+		R
+	}
 	d2.\fermata\p \bar "|."
 }

@@ -111,7 +111,7 @@ musicOboeIIMvtIII = \relative c'' {
 	R2*2
 % Bars 141 to 145
 	
-	r8. g16 c8-.[ r16 c16-.]
+	r8. g16-. c8-.[ r16 c16-.]
 	c4 b
 	b a
 	gis a
@@ -185,7 +185,7 @@ musicOboeIIMvtIII = \relative c'' {
 	\mark \default %e8-> d16-. e-. d( f) d-. b-. \mark \default
 	R2*2 %g8-. r r4
 	%R2
-	r8 bes( c\< cis
+	r8 b( c\< cis
 % Bars 241 to 245
 	d\> des c!\! bes)
 	a r r4
