@@ -9,9 +9,9 @@ musicKlarinetIMvtII = \relative c''' {
 	\key f \major
 	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
+	\cueDuring #"cueVoiceKlarImII" #DOWN {R2.\fermataMarkup} 
 	<< {g4( c2)\fermata} {s8\p\< s s s\> s s\!} >>
-	R2.*5
+	R2.*5^\solo
 % Bars 6 to 10
 	
 	
@@ -19,17 +19,22 @@ musicKlarinetIMvtII = \relative c''' {
 	R2.
 	f8(\< d) d(\> f,)\! e4
 % Bars 11 to 15
-	R2.*19
+	R2.*14
 % Bars 16 to 20
 	
 % Bars 21 to 25
 	
+	
+	
+	
+	\cueDuring #"cueVoiceKlarImII" #UP {
+		\once \override MultiMeasureRest.staff-position = #-6 R2.
 % Bars 26 to 30
-	
-	
-	
-	
-	r4 r c'_\pdolce(~ \bar "||" \key aes \major \mark \default
+		R
+		R
+		\once \override MultiMeasureRest.staff-position = #-8 R
+		\once \override MultiMeasureRest.staff-position = #-8 R
+		e'4\rest } b\rest -\tweak X-offset #-1 ^\tutti c_\pdolce(~ \bar "||" \key aes \major \mark \default
 % Bars 31 to 35
 	c des ees
 	des c) f(
@@ -39,13 +44,13 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 36 to 40
 	g\> f\!) bes(
 	c cis d
-	bes2) bes4_\pdolce(
-	des!4.)\< des4 des8~
+	bes2) bes4^\solo -\tweak X-offset #0 _\pdolceD\<(
+	des!4.) des4 des8~
 	des\> des4 des8(\! c) c(
 % Bars 41 to 45
 	bes4) r r
 	r r bes\p(
-	des4.\< des8( ees) des~\!
+	des4.)\< des8( ees) des~\!
 	des des\>( bes') g( aes) ees(
 	f8\!) r r4 r
 % Bars 46 to 50
@@ -68,37 +73,52 @@ musicKlarinetIMvtII = \relative c''' {
 	f ees des~
 % Bars 61 to 65
 	des c) r
-	R2.*5
+	R2.*2
+	
+	R2.*2^\tutti
+	
 % Bars 66 to 70
-	\bar "||" \key f \major
-	R2.
-	r4 r c(~_\mfcresc
+	\cueDuring #"cueVoiceKlarImII" #UP { 
+		R2. \bar "||" \key f \major
+		R2.
+		r4 r } c(~_\mfcresc
 	c bes c
 	bes a) r
 % Bars 71 to 75
-	R2.*2
+	R2.*2^\solo
 	
 	g'4.\f\> r8\! r4
-	R2.*9
+	R2.*5
 % Bars 76 to 80
 	
+	
+	
+	\cueDuring #"cueVoiceKlarImII" #UP {
+		R2.
+		R
 % Bars 81 to 85
-	
-	
-	r4 r8 c,(\p\< f g
+		R
+		R
+		r4 r8 } c,(\p\< f g
 	c\> a f c)\! r4
 	R2.
 % Bars 86 to 90
 	r4 r8 a(\< cis e
 	a\> fis d a)\! r4
-	R2.*12
+	R2.*7
 % Bars 91 to 95
 	
+	
+	
+	
+	\cueDuring #"cueVoiceKlarImII" #UP {
+		R2.
 % Bars 96 to 100
-	
-	
-	
-	\mark \default
+		R
+		\once \override MultiMeasureRest.staff-position = #-8 R
+		\once \override MultiMeasureRest.staff-position = #-8 R
+		R \mark \default 
+	}
 	a4(\pp bes c
 % Bars 101 to 105
 	bes a) d(
@@ -114,7 +134,7 @@ musicKlarinetIMvtII = \relative c''' {
 	
 % Bars 111 to 115
 	r4 r f'(\f~
-	f e_\dimmarkup d\>
+	f e_\dimD\> d
 	c bes) bes(~
 	bes\p a) r
 	R2.*3

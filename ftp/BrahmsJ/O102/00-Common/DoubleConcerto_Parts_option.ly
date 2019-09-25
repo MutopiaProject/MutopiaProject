@@ -21,4 +21,6 @@ partOptions = {
 		beam-event tuplet-span-event dynamic-event articulation-event
 		dynamic-event slur-event text-script-event)
 }
-
+layoutCueVoice = \with {
+	fontSize = #-3
+}

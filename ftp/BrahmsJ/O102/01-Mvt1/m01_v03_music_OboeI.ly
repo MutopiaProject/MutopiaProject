@@ -24,7 +24,7 @@ musicOboeIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceOboeImI" #DOWN {
-		\cueClef "bass" R1
+		\cueClef "bass" \once \override MultiMeasureRest.staff-position = #8 R1
 		R
 		R
 % Bars 26 to 30

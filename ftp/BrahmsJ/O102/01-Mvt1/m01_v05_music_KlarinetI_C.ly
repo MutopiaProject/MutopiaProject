@@ -128,7 +128,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	r4 g-.\p r aes-.\<
 	r a-. f\sf-. r
-	r g-. r aes-.\<
+	r g-. r aes!-.\<
 	r a-. fis-.\sf r
 % Bars 136 to 140
 	r d-. r ees-.\<
@@ -307,7 +307,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 	
-	r4 g''-.\pp r aes-.\<
+	r4 g''-.\p r aes-.\<
 % Bars 306 to 310
 	r a-. f-.\sf r
 	r g-.\p r aes-.

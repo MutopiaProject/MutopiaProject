@@ -305,7 +305,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	
-	r4 ees'-.\pp r ees-.\<
+	r4 ees'-.\p r ees-.\<
 % Bars 306 to 310
 	r ees-. d-.\sf r
 	r ees-.\p r ees-.

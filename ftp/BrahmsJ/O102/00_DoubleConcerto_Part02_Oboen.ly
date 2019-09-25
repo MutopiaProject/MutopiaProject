@@ -105,6 +105,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -127,6 +130,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -149,6 +155,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -171,6 +180,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -193,6 +205,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -215,6 +230,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 }
