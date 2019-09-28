@@ -44,6 +44,7 @@
 \include "./00-Common/DoubleConcerto_Parts_option.ly"
 \include "./00-Common/DoubleConcerto_VoiceName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
+\include "./00-Common/DoubleConcerto_cueVoice.ly"
 \include "./01-Mvt1/m01_v09_music_HornI.ly"
 \include "./02-Mvt2/m02_v09_music_HornI.ly"
 \include "./03-Mvt3/m03_v09_music_HornI.ly"
@@ -57,6 +58,18 @@
 \include "./02-Mvt2/m02_v12_music_HornIV.ly"
 \include "./03-Mvt3/m03_v12_music_HornIV.ly"
 \include "./00-Common/00_DoubleConcerto_Format_Horn.ly"
+\addQuote "cueVoiceHrnImI" { \cueVoiceHrnImI }
+%\addQuote "cueVoiceHrnImII" { \cueVoiceHrnImII }
+%\addQuote "cueVoiceHrnImIII" { \cueVoiceHrnImIII }
+%\addQuote "cueVoiceHrnIImI" { \cueVoiceHrnIImI }
+%\addQuote "cueVoiceHrnIImII" { \cueVoiceHrnIImII }
+%\addQuote "cueVoiceHrnIImIII" { \cueVoiceHrnIImIII }
+%\addQuote "cueVoiceHrnIIImI" { \cueVoiceHrnIIImI }
+%\addQuote "cueVoiceHrnIIImII" { \cueVoiceHrnIIImII }
+%\addQuote "cueVoiceHrnIIImIII" { \cueVoiceHrnIIImIII }
+%\addQuote "cueVoiceHrnIVmI" { \cueVoiceHrnIVmI }
+%\addQuote "cueVoiceHrnIVmII" { \cueVoiceHrnIVmII }
+%\addQuote "cueVoiceHrnIVmIII" { \cueVoiceHrnIVmIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -95,7 +108,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -104,248 +117,284 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIVoiceIX
-			}
-			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceIX \musicHornIMvtII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					II
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIIVoiceIX
-			}
-			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceIX \musicHornIMvtIII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					III
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIVoiceX
-			}
-			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceX \musicHornIIMvtI
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					I
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIVoiceX
-			}
-			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceX \musicHornIIMvtII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					II
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIIVoiceX
-			}
-			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceX \musicHornIIMvtIII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					III
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIVoiceXI
-			}
-			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXI \musicHornIIIMvtI
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					I
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIVoiceXI
-			}
-			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXI \musicHornIIIMvtII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					II
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIIVoiceXI
-			}
-			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXI \musicHornIIIMvtIII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					III
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIVoiceXII
-			}
-			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXII \musicHornIVMvtI
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					I
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIVoiceXII
-			}
-			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXII \musicHornIVMvtII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					II
-				}
-			}
-		}
-		\layout {
-		}
-	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIIVoiceXII
-			}
-			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXII \musicHornIVMvtIII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					III
-				}
-			}
-		}
-		\layout {
-		}
-	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIVoiceIX
+%			}
+%			\new Voice {
+%				\timeMvtII \generalOptions \partOptions
+%				\nameVoiceIX \musicHornIMvtII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					II
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIIVoiceIX
+%			}
+%			\new Voice {
+%				\timeMvtIII \generalOptions \partOptions
+%				\nameVoiceIX \musicHornIMvtIII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					III
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIVoiceX
+%			}
+%			\new Voice {
+%				\timeMvtI \generalOptions \partOptions
+%				\nameVoiceX \musicHornIIMvtI
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					I
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIVoiceX
+%			}
+%			\new Voice {
+%				\timeMvtII \generalOptions \partOptions
+%				\nameVoiceX \musicHornIIMvtII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					II
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIIVoiceX
+%			}
+%			\new Voice {
+%				\timeMvtIII \generalOptions \partOptions
+%				\nameVoiceX \musicHornIIMvtIII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					III
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIVoiceXI
+%			}
+%			\new Voice {
+%				\timeMvtI \generalOptions \partOptions
+%				\nameVoiceXI \musicHornIIIMvtI
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					I
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIVoiceXI
+%			}
+%			\new Voice {
+%				\timeMvtII \generalOptions \partOptions
+%				\nameVoiceXI \musicHornIIIMvtII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					II
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIIVoiceXI
+%			}
+%			\new Voice {
+%				\timeMvtIII \generalOptions \partOptions
+%				\nameVoiceXI \musicHornIIIMvtIII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					III
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIVoiceXII
+%			}
+%			\new Voice {
+%				\timeMvtI \generalOptions \partOptions
+%				\nameVoiceXII \musicHornIVMvtI
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					I
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIVoiceXII
+%			}
+%			\new Voice {
+%				\timeMvtII \generalOptions \partOptions
+%				\nameVoiceXII \musicHornIVMvtII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					II
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIIVoiceXII
+%			}
+%			\new Voice {
+%				\timeMvtIII \generalOptions \partOptions
+%				\nameVoiceXII \musicHornIVMvtIII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					III
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
 }

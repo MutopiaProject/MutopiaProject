@@ -92,7 +92,7 @@ musicFagottoIIMvtI = \relative c {
 	ees16 f! ees d) ees4(~ ees16 d c b!) c4~
 	c a4~ a8-. r r4
 	r \clef bass fis,2 fis4~
-	fis8 r r4 r c'->
+	fis8-. r r4 r c'->
 % Bars 101 to 105
 	a-> fis-> dis-> c->
 	b2\sf c4-. r

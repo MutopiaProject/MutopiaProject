@@ -92,7 +92,7 @@ musicFagottoIMvtI = \relative c' {
 	g16 f! ees d) ees4(~ ees16 d c b!) c4~
 	c c4~ c8-. r r4
 	r \clef bass \partcombineChords a2 a4~
-	a8 \partcombineAutomatic r r4 r c->
+	a8-. \partcombineAutomatic r r4 r c->
 % Bars 101 to 105
 	a-> fis-> dis-> c->
 	b2\sf c4-. r

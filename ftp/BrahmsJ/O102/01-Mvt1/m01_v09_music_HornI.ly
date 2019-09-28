@@ -7,21 +7,27 @@
 musicHornIMvtI = \relative c'' {
 	\clef treble
 	\key a \minor
-%	\transposition a
+	\transposition e
 % Bars 1 to 5
-	c4._\fmarc c8 c4 r
+	c4._\fmarc^\tutti c8 c4 r
 	c4. c8 c4 r
 	b-. r bes-. r
 	c-. c-. bes-. bes-.
-	R1\fermataMarkup
+	\textLengthOn <>_\markup {(in modo d'un recit)} R1*18^\markup {Solo-Vlc.} \textLengthOff
 % Bars 6 to 10
-	R1*20
+	
 % Bars 11 to 15
 	
 % Bars 16 to 20
 	
 % Bars 21 to 25
 	
+	
+	\cueDuring #"cueVoiceHrnImI" #DOWN {
+		\cueClef "bass" R1
+		R
+		R \cueClefUnset
+	}
 % Bars 26 to 30
 	c,1~\p
 	c~
@@ -29,8 +35,7 @@ musicHornIMvtI = \relative c'' {
 	c~
 	c2. r4
 % Bars 31 to 35
-	R1\fermataMarkup
-	R1*25
+	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -39,9 +44,15 @@ musicHornIMvtI = \relative c'' {
 	
 % Bars 51 to 55
 	
+	\cueDuring #"cueVoiceHrnImI" #UP {
+		\once \override MultiMeasureRest.staff-position = #-8 R1
+		R
+		R
+		R
 % Bars 56 to 60
-	\mark \default
-	c'4.\f bes8 c4 r
+		R \mark \default
+	}
+	c'4.\f-\tweak X-offset #1 ^\tutti bes8 c4 r
 	f4. e8 f4 r
 	R1
 	r2 c4. c8
@@ -53,7 +64,7 @@ musicHornIMvtI = \relative c'' {
 	r2 r4 c
 % Bars 66 to 70
 	des2 c
-	g->\ff d'->
+	g->\ff d'!->
 	g,-> ees'->
 	ees f
 	g, g

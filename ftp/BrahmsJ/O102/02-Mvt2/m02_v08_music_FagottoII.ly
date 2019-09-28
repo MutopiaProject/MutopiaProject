@@ -9,23 +9,25 @@ musicFagottoIIMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
+	\cueDuring #"cueVoiceFagIImII" #UP { R2._\fermataMarkup }
 	<< {e4( a,2)\fermata} {s8\p\< s s s\> s s\!} >>
-	R2.*5
+	R2.*5^\solo
 % Bars 6 to 10
 	
 	%a,8(\p^\dolce d e a fis d)
-	b'8(\< g) g(\> e)\! fis4
+	b'8(\p\<_\dolce g) g(\> e)\! fis4
 	R2.
 	fis8(\< d) d(\> b)\! a4
 % Bars 11 to 15
-	R2.*10
+	R2.*8
 % Bars 16 to 20
 	
 	
 	
-	%r4 r8 fis(\p a b)
-	%c( a fis dis e g)
+	\cueDuring #"cueVoiceFagIImII" #UP {
+		R2.
+		R
+	}
 % Bars 21 to 25
 	fis'8(\p dis) e( cis) dis( b)
 	R2.
@@ -36,7 +38,7 @@ musicFagottoIIMvtII = \relative c {
 	
 	
 	
-	r4 r f4(_\pdolce~ \mark \default \bar "||" \key f \major
+	r4 r f4(_\pdolce~^\tutti \mark \default \bar "||" \key f \major
 % Bars 31 to 35
 	f g a
 	g f) bes(
@@ -46,24 +48,25 @@ musicFagottoIIMvtII = \relative c {
 % Bars 36 to 40
 	c\> b)\! e,(
 	d g2
-	c) r4
-	R2.*11
+	c) r4^\solo
+	R2.*8
 % Bars 41 to 45
 	
 % Bars 46 to 50
 	
-	
-	
-	
-	r4 r f(~_\psempre \mark \default
+	\cueDuring #"cueVoiceFagIImII" #DOWN {
+		\cueClef "treble" R2.
+		R
+		R
+		r4 r \cueClefUnset } f(~_\psempre \mark \default
 % Bars 51 to 55
 	f g a 
 	g f) r
-	r r \clef tenor bes(
+	r r bes(
 	g a bes
 	a2) r4
 % Bars 56 to 60
-	r r \clef bass f,(
+	r r f,(
 	bes,2.)~
 	bes2 r4
 	r r a'(
@@ -72,7 +75,7 @@ musicFagottoIIMvtII = \relative c {
 	f2) r4
 	R2.
 	r4 r \clef tenor des''(~\pp
-	des ees f
+	des^\tutti ees f
 	ees des) r
 % Bars 66 to 70
 	r r \clef bass cis,\pp~ \bar "||" \key d \major
@@ -81,7 +84,7 @@ musicFagottoIIMvtII = \relative c {
 	fis e fis
 	e d) g(~
 % Bars 71 to 75
-	g e fis)
+	g^\solo e fis)
 	g2.
 	a,4.\f\> r8\! r4
 	R2.*5
@@ -106,25 +109,31 @@ musicFagottoIIMvtII = \relative c {
 % Bars 91 to 95
 	R2.
 	g'8( e) e( g) g( e)
-	R2.*7
+	R2.*4
 % Bars 96 to 100
 	
-	
-	
-	\mark \default
+	\cueDuring #"cueVoiceFagIImII" #UP {
+		\once \override MultiMeasureRest.staff-position = #-6 R2.
+		R
+		R \mark \default
+	}
 	d4(\pp e fis
 % Bars 101 to 105
 	e d) g,(
 	a b cis
 	b a) r
-	R2.*8 %c2.)_\dimmarkup~
+	R2.*6 %c2.)_\dimmarkup~
 	%c4 fis,8( a d, g)~
 % Bars 106 to 110
 	%g4. r8 r4
 	%R2.*5
-% Bars 111 to 115
 	
-	r4 a'2(_\fdim\>
+	
+	\cueDuring #"cueVoiceFagIImII" #UP {
+		\cueClef "treble" R2.
+% Bars 111 to 115
+		R
+		r4 \cueClefUnset } a'2\fdimD\>~
 	a2.~
 	a4\p( d,) r
 	R2.*3

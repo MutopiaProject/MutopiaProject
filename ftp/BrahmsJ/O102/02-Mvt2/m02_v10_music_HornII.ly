@@ -84,4 +84,3 @@ musicHornIIMvtII = \relative c' {
 	c2 r4
 	c'2.\p\fermata \bar "|."
 }
-}

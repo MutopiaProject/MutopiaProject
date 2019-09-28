@@ -124,8 +124,8 @@ musicFagottoIIMvtII = \relative c {
 	R2.*5
 % Bars 111 to 115
 	
-	r4 a'2(
-	a2.)~
+	r4 a'2~
+	a2.~
 	a4( d,) r
 	R2.*3
 % Bars 116 to 118

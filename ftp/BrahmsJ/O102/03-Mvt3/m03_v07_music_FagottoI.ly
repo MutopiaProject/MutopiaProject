@@ -9,8 +9,9 @@ musicFagottoIMvtIII = \relative c' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	R2
-	r4 r8 a-.\p
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		R2
+		r4 r8 } a-.\p
 	c4 r8 a-.
 	c4 r8 c-.
 	e4 r8 c-.
@@ -19,11 +20,17 @@ musicFagottoIMvtIII = \relative c' {
 	g4( fis
 	e dis)
 	e r4
-	R2*11
+	\clef bass R2*7
 % Bars 11 to 15
 	
 % Bars 16 to 20
 	
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		\cueClef "treble" R2
+		R
+		R
+		R \cueClefUnset
+	}
 % Bars 21 to 25
 	c4(\p bes
 	a b!)
@@ -34,8 +41,10 @@ musicFagottoIMvtIII = \relative c' {
 	R2*3
 	
 	
-	\tempo "poco rit." R2*2
-	\clef bass
+	\tempo "poco rit." \cueDuring #"cueVoiceFagImIII" #UP {
+		\cueClef "treble" R2
+		R \cueClefUnset 
+	}
 % Bars 31 to 35
 	c2\pp~
 	c
@@ -46,7 +55,7 @@ musicFagottoIMvtIII = \relative c' {
 	R2*3
 	
 	\mark \default
-	e,2\ff
+	e,2\ff^\tutti
 	a,16-. b-. c8-. a16-. c-. f8-.
 % Bars 41 to 45
 	a,16-. d-. gis8-. a,16-. e'-. c'-. b-. 
@@ -58,33 +67,40 @@ musicFagottoIMvtIII = \relative c' {
 	e'->-. c-. c->-. a-. 
 	a->-. f-. f->-. d-. 
 	c-. a-. e'-. e,-. 
-	a-. r r4
+	a-. r^\solo r4
 	R2 \clef tenor
 % Bars 51 to 55
-	a'8\p-. a'-. a-. fis-. 
+	a'8\p-.^\tutti a'-. a-. fis-. 
 	fis-. d-. d-. b-. 
 	c16-. a-. c-. ees-. d-. b-. d-. d,-. 
-	g8-. r r4
-	R2*10
+	g8-. r r4^\solo
+	R2*7 \clef bass
 % Bars 56 to 60
 	
 % Bars 61 to 65
 	
-	
-	
-	
-	\clef bass g,8\f-. g'-. g,-. g'-. 
+	\cueDuring #"cueVoiceFagImIII" #DOWN {
+		\override MultiMeasureRest.staff-position = #8 R2
+		R
+		R \revert MultiMeasureRest.staff-position
+	}
+	g,8\f-.^\tutti g'-. g,-. g'-. 
 % Bars 66 to 70
 	g,-. g'-. g,-. g'\p~
 	g g4_\dimmarkup g8~
 	g g4 g8
-	R2*9
+	R2*5
 % Bars 71 to 75
 	
+	
+	
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		R2
+		R
 % Bars 76 to 80
-	
-	
-	r4 g,\mf\<(
+		R
+		R
+		r4 } g,\mf\<(
 	bes) a(\!
 	d) f
 % Bars 81 to 85
@@ -112,15 +128,18 @@ musicFagottoIMvtIII = \relative c' {
 	
 	\mark \default
 % Bars 101 to 105
-	R2*4
-	
-	
-	
-	\clef tenor a8->\p g16-. g-. c8-> g16-. g-.
+	R2*1 \clef treble
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		\override MultiMeasureRest.staff-position = #-6 R2
+		R
+		R \revert MultiMeasureRest.staff-position
+	} 
+	\clef tenor a8->\p^\tutti g16-. g-. c8-> g16-. g-.
 % Bars 106 to 110
 	aes8-> g16-. g-. c-. e-. g-. e-.
 	c8 r r4
-	R2*5
+	R2
+	R2*4^\solo
 % Bars 111 to 115
 	
 	
@@ -128,42 +147,52 @@ musicFagottoIMvtIII = \relative c' {
 	R2
 	r8. f16(_\dimmarkup e8) r
 % Bars 116 to 120
-	r8. f16( e8) r
-	R2*2
-	\bar "||" \key d \minor
-	R2*18
+	r8.^\tutti f16( e8) r
+	R2
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		\cueClef "treble" R2 \bar "||" \key d \minor
+		R
+		R
 % Bars 121 to 125
-	
+		R
+	} 
+	R2*12
 % Bars 126 to 130
 	
 % Bars 131 to 135
 	
-% Bars 136 to 140
 	
-	\clef bass d4..\ff d16
+	
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		R2
+		R
+% Bars 136 to 140
+		R \cueClefUnset
+	}
+	\clef bass d4..\ff^\tutti d16
 	des4.. bes16
 	f8. g16 a4
-	R2*2
+	R2*2^\solo
 % Bars 141 to 145
 	
-	r8. e'16-. c8-.[ r16 c-.]
+	r8.^\tutti e'16-. c8-.[ r16 c-.]
 	a4 b
 	g a
 	e a,
 % Bars 146 to 150
-	R2*2
+	R2*2^\solo
 	\clef tenor \mark \default
 	r4 r8 c'\(_\ppdolce~
 	c c4 bes8(
 	a) a4 c8~
 % Bars 151 to 155
 	c c4 bes8(
-	a) a4\) f'8\((_\ppdolce
+	a) a4\) f'8\((
 	ees) ees4 des8(
 	d!) d4 d8~
 	d d4 c8(
 % Bars 156 to 160
-	f,) f( g) g(
+	f,) f( g)\) \shape #'((0 . 2)(0 . 0)(0 . 0)(0 . 0)) PhrasingSlur g\((
 	a!) a4 bes8(
 	a) a4\) a8\((->
 	fis') fis4 d8~
@@ -173,25 +202,39 @@ musicFagottoIMvtIII = \relative c' {
 	c,) c4 bes8(
 	g) g4 g8(
 	a) a4\) r8
-	R2*11
+	\clef bass R2*7 
 % Bars 166 to 170
 	
 % Bars 171 to 175
 	
+	\cueDuring #"cueVoiceFagImIII" #DOWN {
+		\cueClef "treble" R2
+		R
+		R
+		R
 % Bars 176 to 180
-	r4 r8 \clef bass a(\f
+		r4 r8 \cueClefUnset } a(\f
 	c4) r8 f,(
 	a4) r
 	R2 \mark \default
-	R2*16
+	R2*9
 % Bars 181 to 185
 	
 % Bars 186 to 190
 	
-% Bars 191 to 195
 	
+	
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		\cueClef "treble" R2
+		R
+% Bars 191 to 195
+		R
+		R
+		R
+		R
+		R
 % Bars 196 to 200
-	r4 r8. a16\ff
+		r4 \cueClefUnset } r8. a16\ff^\tutti
 	a8( f!16) f( d) d( cis) cis(
 	f) f( d) d( bes') bes( a) a
 	g4.. g16
@@ -206,23 +249,29 @@ musicFagottoIMvtIII = \relative c' {
 	d''2\sf
 	d\sf
 	d4-> d->
-	d8-. r r4
-	a2\sf
+	d8-. r^\solo r4
+	a2\sf^\tutti
 % Bars 211 to 215
 	a\sf
 	a4-> a->
-	a8-. r r4
-	e'8(\fp d c b
+	a8-. r^\solo r4
+	e'8(\fp^\tutti d c b
 	c_\dimmarkup b a gis
 % Bars 216 to 220
 	a bes a gis
 	a4 e) \bar "||" \mark \default \key a \minor
 	a,8-.\p r r4
-	R2*7
+	R2*4 \clef tenor 
 % Bars 221 to 225
 	
+	
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		R2
+		R
+		R
+	}
 % Bars 226 to 230
-	\clef tenor e''8->\p d16-. e-. d8-> e16-. d-.
+	e''8->\p d16-. e-. d8-> e16-. d-.
 	e8-> d16-. e-. d( f) d-. b-.
 	c( e) c-. a-. a,8-. r
 	R2*3
@@ -244,10 +293,10 @@ musicFagottoIMvtIII = \relative c' {
 	f r r4
 	R2*2
 	
-	r4 des8(\p c16 des)
+	\clef bass r4 des8(\p c16 des)
 % Bars 246 to 250
 	\tempo "poco rit." ces4_\dimmarkup~ ces8( bes16 ces)
-	aes4~ aes8( g16 aes) \clef bass
+	aes4~ aes8( g16 aes)
 	ees4~ ees8( d16 ees)
 	ees,8 r r4
 	\tempo "in tempo" R2*5
@@ -256,10 +305,10 @@ musicFagottoIMvtIII = \relative c' {
 	
 	
 	
-	\clef tenor e''2_\mfcresc(
+	e''2_\mfcresc(
 % Bars 256 to 260
 	f)(
-	d) \clef bass
+	d)
 	a,16-.\ff b-. c8-. a16-. c-. f8-.
 	a,16-. d-. gis8-. a,16-. e'-. c'-. b-.
 	a8-. e-. f-. e-. 
@@ -272,18 +321,24 @@ musicFagottoIMvtIII = \relative c' {
 % Bars 266 to 270
 	c-. a-. e'-. e,-. 
 	a'-. a,-. c'-. c,-. 
-	d'-. r r4
-	R2*5
+	d'-. r^\solo r4
+	R2
+	R2*3^\tutti
 % Bars 271 to 275
 	
 	
-	\bar "||"
-	\key a \major R2*8
+	r4 r^\solo \bar "||"
+	\key a \major R2*4
 % Bars 276 to 280
 	
-% Bars 281 to 285
 	
-	r4 e,\mf\<(
+	\cueDuring #"cueVoiceFagImIII" #UP {
+		\cueClef "treble" R2
+		R
+		r4 \cueClef "tenor" r
+% Bars 281 to 285
+		R2
+		r4 \cueClefUnset } e,\mf\<(
 	g) fis(\!
 	b,)\> d\!
 	cis8( a) d(-. cis-.)
@@ -324,9 +379,9 @@ musicFagottoIMvtIII = \relative c' {
 	R2
 	r4 r8 a(
 % Bars 316 to 320
-	gis\> fis d gis,)\! \clef bass
+	gis\> fis d gis,)\! 
 	a\p r r4
-	R2
+	R2 \clef bass
 	eis4\f fis
 	a2\sf\> %<< a2 {\once \override Hairpin.minimum-length = #5 s4\sf\> s\!}>>
 % Bars 321 to 325

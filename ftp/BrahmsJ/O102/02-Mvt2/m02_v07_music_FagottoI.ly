@@ -9,22 +9,23 @@ musicFagottoIMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
+	\cueDuring #"cueVoiceFagImII" #UP {R2._\fermataMarkup}
 	<< {e4( a2)\fermata} {s8\p\< s s s\> s s\!} >>
-	R2.*4
+	R2.*4^\solo
 % Bars 6 to 10
 	
-	a,8(\p^\dolce d e a fis d)
+	a,8(_\pdolce d e a fis d)
 	d'(\< b) b(\> g)\! a4
 	a,8( d e fis d b)
 	d'(\< b) b(\> d,)\! cis4
 % Bars 11 to 15
-	R2.*8
+	R2.*6
 % Bars 16 to 20
 	
-	
-	
-	r4 r8 fis(\p a b)
+	\cueDuring #"cueVoiceFagImII" #UP {
+		\once \override MultiMeasureRest.staff-position = #-6 R2.
+		\once \override MultiMeasureRest.staff-position = #-6 R
+		r4 } r8 fis(\p^\solo a b)
 	c( a fis dis e g)
 % Bars 21 to 25
 	a(\p fis) g( e) fis( b)
@@ -36,7 +37,7 @@ musicFagottoIMvtII = \relative c {
 	
 	
 	
-	r4 r a,4(_\pdolce~ \mark \default \bar "||" \key f \major
+	r4 r a,4(_\pdolce^\tutti~ \mark \default \bar "||" \key f \major
 % Bars 31 to 35
 	a bes c
 	bes a) d(
@@ -47,15 +48,16 @@ musicFagottoIMvtII = \relative c {
 	e\> d\)\! e(
 	d g g,
 	c2) r4
-	R2.*11
+	R2.*8
 % Bars 41 to 45
 	
 % Bars 46 to 50
 	
-	
-	
-	
-	r4 r a'(~_\psempre \mark \default
+	\cueDuring #"cueVoiceFagImII" #DOWN {
+		\cueClef "treble" R2.
+		R
+		R
+		r4 r \cueClefUnset } a'(~_\psempre \mark \default
 % Bars 51 to 55
 	a bes c 
 	bes a) r
@@ -72,7 +74,7 @@ musicFagottoIMvtII = \relative c {
 	c,2) r4
 	R2.
 	r4 r \clef tenor f'(~\pp
-	f ges aes
+	f^\tutti ges aes
 	ges f) r
 % Bars 66 to 70
 	r r \clef bass cis\pp~ \bar "||" \key d \major
@@ -81,7 +83,7 @@ musicFagottoIMvtII = \relative c {
 	a g a
 	g fis) b(~
 % Bars 71 to 75
-	b cis d)
+	b^\solo cis d)
 	e2( d4)
 	cis4.\f\> r8\! r4
 	R2.*5
@@ -106,16 +108,18 @@ musicFagottoIMvtII = \relative c {
 % Bars 91 to 95
 	c2(\> b4)\!
 	bes8( g) g( e') e( a,)
-	R2.*7
+	R2.*4
 % Bars 96 to 100
 	
-	
-	
-	\mark \default
+	\cueDuring #"cueVoiceFagImII" #UP {
+		\once \override MultiMeasureRest.staff-position = #-6 R2.
+		\once \override MultiMeasureRest.staff-position = #-6 R
+		R \mark \default
+	}
 	fis4(\pp g a
 % Bars 101 to 105
 	g fis) g(
-	cis,! d e
+	cis, d e
 	d cis) d'(
 	c2.)_\dimmarkup~
 	c4 fis,8( a d, g)~
@@ -124,7 +128,7 @@ musicFagottoIMvtII = \relative c {
 	R2.*5
 % Bars 111 to 115
 	
-	r4 e'(_\fdim g\>
+	r4 e'(-\tweak X-offset #0 \fdimD\> g
 	fis e cis)~
 	cis\p( d) r
 	R2.*3

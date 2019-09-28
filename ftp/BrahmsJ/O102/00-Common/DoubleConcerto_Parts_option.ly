@@ -23,4 +23,7 @@ partOptions = {
 }
 layoutCueVoice = \with {
 	fontSize = #-3
+	\override Stem.length-fraction = #0.9
+	\override TupletBracket #'bracket-visibility = ##f
+	%\override Font.font-size = #+5
 }
