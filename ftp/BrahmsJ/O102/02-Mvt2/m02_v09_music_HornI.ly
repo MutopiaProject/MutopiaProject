@@ -9,9 +9,9 @@ musicHornIMvtII = \relative c'' {
 	\key c \major
 	\transposition d
 % Bars 1 to 5
-	<< {g4( c2)\fermata } {s8\f\< s s s\> s s\!} >>
+	<< {g4(^\solo c2)\fermata } {s8\f\< s s s\> s s\!} >>
 	<< {d4( g2)\fermata} {s8\p\< s s s\> s s\!} >>
-	R2.*28
+	R2.*27^\solo
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -25,11 +25,20 @@ musicHornIMvtII = \relative c'' {
 	
 	
 	
-	\mark \default \bar "||"
+	\cueDuring #"cueVoiceHrnImII" #UP { 
+		R2. \mark \default \bar "||"
 % Bars 31 to 35
-	R2.*20
+		R^\tutti
+		R
+		R
+		R
+		R
 % Bars 36 to 40
+		R
+	}
+	R2.*2
 	
+	\textLengthOn R2.*12^\solo \textLengthOff
 % Bars 41 to 45
 	
 % Bars 46 to 50
@@ -39,19 +48,25 @@ musicHornIMvtII = \relative c'' {
 	
 	\mark \default
 % Bars 51 to 55
-	R2.*16
+	R2.*12
 % Bars 56 to 60
 	
 % Bars 61 to 65
 	
-% Bars 66 to 70
-	\bar "||"
-	R2.*2
 	
+	\cueDuring #"cueVoiceHrnImII" #UP {
+		R2.
+		R-\tweak X-offset 1 ^\tutti
+		R
+% Bars 66 to 70
+		R \bar "||"
+		R
+		R
+	}
 	g,,4\f( c2)~
 	c2.~
 % Bars 71 to 75
-	c4 r r
+	c4 r^\solo r
 	R2.
 	g'4.\f\> r8\! r4
 	R2.*26
@@ -68,16 +83,28 @@ musicHornIMvtII = \relative c'' {
 	
 	
 	\mark \default
-	R2.*14
+	\cueDuring #"cueVoiceHrnImII" #DOWN {
+		R2.
 % Bars 101 to 105
-	
+		R
+		R
+		R
+		R
+		R
 % Bars 106 to 110
+		R
+	}
+	R2.*4
+	
+	
 	
 % Bars 111 to 115
-	
-	
-	
-	g,4(\p\< c2\>)~
+	\cueDuring #"cueVoiceHrnImII" #DOWN {
+		R2.
+		R
+		R
+	}
+	g,4(-\tweak X-offset #-1.5 \p\< c2\>)~
 	c2.~\!
 % Bars 116 to 118
 	c~

@@ -9,9 +9,11 @@ musicHornIVMvtII = \relative c, {
 	\key c \major
 	\transposition f
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
-	R2.*27
+	\cueDuring #"cueVoiceHrnIVmII" #DOWN {
+		R2.\fermataMarkup
+		R2.\fermataMarkup
+	}
+	R2.*22^\solo
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -20,12 +22,17 @@ musicHornIVMvtII = \relative c, {
 	
 % Bars 21 to 25
 	
+	
+	
+	
+	\cueDuring #"cueVoiceHrnIVmII" #DOWN {
+		R2.
 % Bars 26 to 30
-	
-	
-	
-	
-	r4 r \clef bass c~\p \bar "||" \mark \default
+		R
+		R
+		R
+		R
+		r4 r } \clef bass c~\p^\tutti \bar "||" \mark \default
 % Bars 31 to 35
 	c2.~
 	c~
@@ -34,8 +41,9 @@ musicHornIVMvtII = \relative c, {
 	c2.\<~
 % Bars 36 to 40
 	c2\> r4\!
-	R2.*14
-	
+	R2.
+	r4 r r^\solo
+	\clef treble R2.*8
 	
 	%g''2.\p~
 % Bars 41 to 45
@@ -46,12 +54,14 @@ musicHornIVMvtII = \relative c, {
 	%R2.*7
 % Bars 46 to 50
 	
-	
-	
-	
-	\mark \default
+	\cueDuring #"cueVoiceHrnIVmII" #DOWN {
+		R2.
+		R
+		R
+		R \mark \default
+	}
 % Bars 51 to 55
-	\clef treble c'2.\p~
+	c'2.\p~
 	c2 r4
 	r r c~
 	c2.~
@@ -62,7 +72,7 @@ musicHornIVMvtII = \relative c, {
 	
 	
 	r4 r ees'\pp~
-	ees2.~
+	ees2.~^\tutti
 	ees2 r4
 % Bars 66 to 70
 	R2. \bar "||"
@@ -71,7 +81,7 @@ musicHornIVMvtII = \relative c, {
 	e4\f( a2)~
 	a2.~
 % Bars 71 to 75
-	a4 r r
+	a4^\solo r r
 	R2.
 	b4.\f\> r8\! r4
 	R2.*26
@@ -88,15 +98,21 @@ musicHornIVMvtII = \relative c, {
 	
 	
 	\mark \default
-	R2.*14
+	R2.*6
 % Bars 101 to 105
 	
 % Bars 106 to 110
-	
+	\cueDuring #"cueVoiceHrnIVmII" #DOWN {
+		R2.
+		R
+		R
+		R
+		R
 % Bars 111 to 115
-	
-	
-	
+		R
+		\once \override MultiMeasureRest.staff-position = #6 R
+		\once \override MultiMeasureRest.staff-position = #6 R
+	}
 	e,4(\p\< a2)\>~
 	a2.\!~
 % Bars 116 to 118

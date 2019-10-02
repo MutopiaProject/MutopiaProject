@@ -227,7 +227,7 @@ musicHornIIMvtI = \relative c' {
 % Bars 281 to 285
 	
 % Bars 286 to 290
-	r2 c4-! r
+	r2 c4-!\ff r
 	bes-! r bes-! r
 	g-! r r2
 	c,4-! r r2 \mark \default

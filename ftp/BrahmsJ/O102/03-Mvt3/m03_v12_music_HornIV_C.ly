@@ -102,8 +102,8 @@ musicHornIVMvtIII = \relative c' {
 	r4 g8-. r
 % Bars 116 to 120
 	r4 g8-. r 
-	R2*2
-	\bar "||"
+	r4 g8-. r
+	R2 \bar "||"
 	R2*17
 % Bars 121 to 125
 	

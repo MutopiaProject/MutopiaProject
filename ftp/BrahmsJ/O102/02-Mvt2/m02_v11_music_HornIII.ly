@@ -9,9 +9,11 @@ musicHornIIIMvtII = \relative c {
 	\key c \major
 	\transposition f
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
-	R2.*27
+	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
+		R2.\fermataMarkup
+		\once \override MultiMeasureRest.staff-position = #6 R2.\fermataMarkup
+	}
+	R2.*22^\solo
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -20,12 +22,17 @@ musicHornIIIMvtII = \relative c {
 	
 % Bars 21 to 25
 	
+	
+	
+	
+	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
+		R2.
 % Bars 26 to 30
-	
-	
-	
-	
-	r4 r \clef bass c~\p \bar "||" \mark \default
+		R
+		R
+		R
+		R
+		r4 r } \clef bass c~\p^\tutti \bar "||" \mark \default
 % Bars 31 to 35
 	c2.~
 	c~
@@ -34,7 +41,7 @@ musicHornIIIMvtII = \relative c {
 	c2.\<~
 % Bars 36 to 40
 	c2\> r4\!
-	R2.*2
+	R2.*2^\solo
 	
 	\clef treble
 	g''2.\p~
@@ -62,7 +69,7 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	r4 r ees\pp~
-	ees2.~
+	ees2.~^\tutti
 	ees2 r4
 % Bars 66 to 70
 	R2. \bar "||"
@@ -71,7 +78,7 @@ musicHornIIIMvtII = \relative c {
 	e4\f( a2)~
 	a2.~
 % Bars 71 to 75
-	a4 r r
+	a4^\solo r r
 	R2.
 	d4.\f\> r8\! r4
 	R2.*26
@@ -88,16 +95,22 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	\mark \default
-	R2.*14
+	R2.*6
 % Bars 101 to 105
 	
 % Bars 106 to 110
-	
+	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
+		R2.
+		R
+		R
+		R
+		R
 % Bars 111 to 115
-	
-	
-	
-	e,4(\p\< a2)\>~
+		R
+		\once \override MultiMeasureRest.staff-position = #6 R
+		\once \override MultiMeasureRest.staff-position = #6 R
+	}
+	e,4(-\tweak X-offset #-3 \p\< a2)\>~
 	a2.\!~
 % Bars 116 to 118
 	a~

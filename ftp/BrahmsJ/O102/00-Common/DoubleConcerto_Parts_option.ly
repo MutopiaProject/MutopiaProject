@@ -19,7 +19,8 @@ partOptions = {
 	\override Score.BarNumber #'font-size = #0.1
 	\set Score.quotedCueEventTypes = #'(note-event rest-event tie-event
 		beam-event tuplet-span-event dynamic-event articulation-event
-		dynamic-event slur-event text-script-event)
+		dynamic-event slur-event text-script-event trill-span-event
+		phrasing-slur-event beam-forbid-event tremolo-event)
 }
 layoutCueVoice = \with {
 	fontSize = #-3
