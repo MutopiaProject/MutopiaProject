@@ -90,3 +90,18 @@ pocofD = #(make-dynamic-script (markup #:normal-text #:italic "poco" #:dynamic "
 fpp = #(make-dynamic-script "fpp")
 rf = #(make-dynamic-script "rf")
 
+% fonction
+MmrLength = #(define-music-function
+	(parser location length)
+	(number?)
+	#{
+		\once \override MultiMeasureRest #'minimum-length = #length
+	#}
+)
+MmrPos = #(define-music-function
+	(parser location position)
+	(number?)
+	#{
+		\once \override MultiMeasureRest.staff-position = #position
+	#}
+)

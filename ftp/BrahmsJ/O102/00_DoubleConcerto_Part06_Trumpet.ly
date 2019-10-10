@@ -44,6 +44,7 @@
 \include "./00-Common/DoubleConcerto_Parts_option.ly"
 \include "./00-Common/DoubleConcerto_VoiceName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
+\include "./00-Common/DoubleConcerto_cueVoice.ly"
 \include "./01-Mvt1/m01_v13_music_TrumpetI.ly"
 \include "./02-Mvt2/m02_v13_music_TrumpetI.ly"
 \include "./03-Mvt3/m03_v13_music_TrumpetI.ly"
@@ -51,6 +52,12 @@
 \include "./02-Mvt2/m02_v14_music_TrumpetII.ly"
 \include "./03-Mvt3/m03_v14_music_TrumpetII.ly"
 \include "./00-Common/00_DoubleConcerto_Format_Trumpet.ly"
+\addQuote "cueVoiceTptImI" { \cueVoiceTptImI }
+\addQuote "cueVoiceTptImII" { \cueVoiceTptImII }
+\addQuote "cueVoiceTptImIII" { \cueVoiceTptImIII }
+\addQuote "cueVoiceTptIImI" { \cueVoiceTptIImI }
+\addQuote "cueVoiceTptIImII" { \cueVoiceTptIImII }
+\addQuote "cueVoiceTptIImIII" { \cueVoiceTptIImIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -89,7 +96,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -98,6 +105,12 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
+%			\context {
+%				\Voice \layoutPart
+%			}
 		}
 	}
 	\score {
@@ -120,6 +133,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -142,6 +158,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -155,7 +174,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -164,6 +183,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -186,6 +208,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -208,6 +233,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 }

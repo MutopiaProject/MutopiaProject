@@ -44,9 +44,12 @@
 \include "./00-Common/DoubleConcerto_Parts_option.ly"
 \include "./00-Common/DoubleConcerto_VoiceName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
+\include "./00-Common/DoubleConcerto_cueVoice.ly"
 \include "./01-Mvt1/m01_v15_music_Pauken.ly"
 \include "./03-Mvt3/m03_v15_music_Pauken.ly"
 \include "./00-Common/00_DoubleConcerto_Format_Pauken.ly"
+\addQuote "cueVoicePkmI" { \cueVoicePkmI }
+%\addQuote "cueVoicePkmII" { \cueVoicePkmII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -85,7 +88,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -94,28 +97,34 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
-	\score {
-		\new Staff <<
-			\new Voice {
-				\formatMvtIIIVoiceXV
-			}
-			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXV \musicPaukenMvtIII
-			}
-		>>
-		\header {
-			breakbefore = ##f
-			piece = \markup {
-				\fill-line {
-					\fontsize #4
-					III
-				}
-			}
-		}
-		\layout {
-		}
-	}
+%	\score {
+%		\new Staff <<
+%			\new Voice {
+%				\formatMvtIIIVoiceXV
+%			}
+%			\new Voice {
+%				\timeMvtIII \generalOptions \partOptions
+%				\nameVoiceXV \musicPaukenMvtIII
+%			}
+%		>>
+%		\header {
+%			breakbefore = ##f
+%			piece = \markup {
+%				\fill-line {
+%					\fontsize #4
+%					III
+%				}
+%			}
+%		}
+%		\layout {
+%			\context {
+%				\CueVoice \layoutCueVoice
+%			}
+%		}
+%	}
 }
