@@ -21,7 +21,7 @@ partOptions = {
 		beam-event tuplet-span-event dynamic-event articulation-event
 		dynamic-event slur-event text-script-event trill-span-event
 		phrasing-slur-event beam-forbid-event tremolo-event)
-	%\set Voice.restNumberThreshold = #0
+	\set Voice.restNumberThreshold = #0
 }
 layoutCueVoice = \with {
 	fontSize = #-3

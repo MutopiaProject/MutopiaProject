@@ -3,6 +3,7 @@
 % Generated on : Friday 02 August 2019, 19:28:01
 arco=^\markup {\italic arco}
 benmarc=^\markup {\italic {ben marc.}}
+benmarccresc = ^\markup {\italic {ben marc. cresc.}}
 crescmarkup=^\markup {\italic cresc.}
 crescmolto=^\markup {\italic {cresc. molto}}
 crescpocoapoco=^\markup {\italic {cresc. poco a poco}}
@@ -12,12 +13,15 @@ dolce=^\markup {\italic {dolce}}
 espress=^\markup {\italic {espress.}}
 espr=^\markup {\italic {espr.}}
 express=^\markup {\italic {express.}}
+ffsempre = \markup {\dynamic ff \italic sempre}
 flat=^\markup { \flat}
 gp = ^\markup {G.P.}
 intempo=^\markup {\italic {in tempo}}
 legg=^\markup {\italic legg.}
 marc = ^\markup {\italic marc.}
+marcecrescmolto=^\markup {\italic {marc. e cresc. molto}}
 moltocrescmark=^\markup {\italic {molto cresc.}}
+moltoleggieroedolce=^\markup { \italic {molto leggiero e dolce}}
 pizz=^\markup {\italic pizz.}
 pocorit=^\markup {\italic {poco rit.}}
 solo=^\markup {Solo}
@@ -103,5 +107,19 @@ MmrPos = #(define-music-function
 	(number?)
 	#{
 		\once \override MultiMeasureRest.staff-position = #position
+	#}
+)
+no = #(define-music-function
+	(parser location)
+	()
+	#{
+		\set Voice.restNumberThreshold = #0
+	#}
+)
+ni = #(define-music-function
+	(parser location)
+	()
+	#{
+		\set Voice.restNumberThreshold = #1
 	#}
 )

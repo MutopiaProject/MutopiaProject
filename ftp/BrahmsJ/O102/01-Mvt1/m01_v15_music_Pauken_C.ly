@@ -9,30 +9,21 @@ musicPaukenMvtI = \relative c {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e2\startTrillSpan_\fmarc^\tutti e4\stopTrillSpan r
+	e2\startTrillSpan_\fmarc e4\stopTrillSpan r
 	e2\startTrillSpan_\fmarc e4\stopTrillSpan r
 	a,-. r e'-. r
 	e-. e-. a,-. a-.
-	\textLengthOn <>_\markup {(in modo d'un recit.)} R1*18^\markup {Solo-Vlc.} \textLengthOff
+	R1\fermataMarkup
 % Bars 6 to 10
-	
+	R1*51
 % Bars 11 to 15
 	
 % Bars 16 to 20
 	
 % Bars 21 to 25
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni R1
-		\MmrPos #-6 R
-		\MmrPos #-8 R
-		r2 \cueClef "treble" r^\tutti
-		R1
+	
 % Bars 26 to 30
-		\MmrPos #-6 R
-		R
-		R \no
-	}
-	\textLengthOn <>_\markup {Solo-Viol.u.Solo-Vlc.} R1*21 \textLengthOff
+	
 % Bars 31 to 35
 	
 % Bars 36 to 40
@@ -43,16 +34,10 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \MmrPos #-6 R1
-		R
-		R
-		R
 % Bars 56 to 60
-		R \mark \default \cueClefUnset \no
-	}
-	a2\startTrillSpan-\tweak X-offset #1 ^\tutti e'4\stopTrillSpan r
-	a,2\startTrillSpan a4\stopTrillSpan r
+	\mark \default
+	a2\trill e'4 r
+	a,2\trill a4 r
 	R1*8
 % Bars 61 to 65
 	
@@ -68,25 +53,20 @@ musicPaukenMvtI = \relative c {
 	
 	
 	\mark \default
-	R1*10
+	R1*11
 % Bars 81 to 85
 	
 % Bars 86 to 90
 	
 	
 	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1 \mark \default
-		R
+	\mark \default
+	R1*7
 % Bars 91 to 95
-		R
-		R
-		R
-		R
-		R
+	
 % Bars 96 to 100
-		R
-		r2 r4 \cueClefUnset \no } a,\f~\startTrillSpan
+	
+	r2 r4 a,\f~\startTrillSpan
 	a\stopTrillSpan a\startTrillSpan a8-.\stopTrillSpan r r4
 	r a2\trill a4\trill
 	a8 r r4 r2
@@ -113,14 +93,9 @@ musicPaukenMvtI = \relative c {
 % Bars 141 to 145
 	
 	\mark \default
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
-		R
-		R \no
-	}
+	R1*29
 % Bars 146 to 150
-	R1_\gp
-	R1*25
+	
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -131,53 +106,33 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 171 to 175
 	\mark \default
-	R1*5
+	R1*21
 % Bars 176 to 180
 	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni R1
-		R
-		R
-		R
 % Bars 181 to 185
-		R \no
-	}
-	R1*11
+	
 % Bars 186 to 190
 	
 % Bars 191 to 195
 	
 	\mark \default
-	R1*4
-	
-	
+	R1*20
 % Bars 196 to 200
 	
-	R1*2^\tutti
-	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \MmrPos #-8 R1
-		R \no
-	}
 % Bars 201 to 205
-	R1*8
+	
 % Bars 206 to 210
 	
-	
-	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni R1
-		R
 % Bars 211 to 215
-		R
-		R
-		r2 r4 \cueClefUnset \no } e'4\startTrillSpan~
+	
+	
+	r2 r4 e'4\startTrillSpan~
 	e\stopTrillSpan e4\trill e8-. r r4
 	r4 e2\trill e4\trill
 % Bars 216 to 220
 	e8-. r r4 r2
 	R1 \mark \default
-	\MmrLength #15 R1*24^\solo
+	R1*24
 % Bars 221 to 225
 	
 % Bars 226 to 230
@@ -188,46 +143,27 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 241 to 245
 	\mark \default
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
-		R1
-		R \no
-	}
-	R1*15^\tutti
+	R1*28
 % Bars 246 to 250
 	
 % Bars 251 to 255
 	
 % Bars 256 to 260
 	
-	
-	
-	
-	R1*2
 % Bars 261 to 265
-	
-	r4 r^\solo r2
-	r r4 r^\tutti
-	R1*6
 	
 % Bars 266 to 270
 	
 	
 	
 	\mark #11
-	R1*4^\solo
+	R1*8
 % Bars 271 to 275
 	
-	
-	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \MmrPos #-6 R1
-		R
 % Bars 276 to 280
-		R
-		R \cueClefUnset \no
-	}
-	e1\pp~\startTrillSpan^\solo
+	
+	
+	e1\pp~\startTrillSpan
 	e~
 	e~
 % Bars 281 to 285
@@ -239,19 +175,12 @@ musicPaukenMvtI = \relative c {
 	
 	
 	\mark \default
-	a,2\ff\trill -\tweak Y-offset #4.5 -\tweak X-offset #1 ^\tutti e'4 r
+	a,2\ff\trill e'4 r
 % Bars 291 to 295
 	a,2\trill a4 r
-	R1*8
-	
-	
-	
+	R1*21
 % Bars 296 to 300
 	
-	
-	
-	
-	R1*13^\solo
 % Bars 301 to 305
 	
 % Bars 306 to 310
@@ -259,14 +188,9 @@ musicPaukenMvtI = \relative c {
 % Bars 311 to 315
 	
 	\bar "||" \mark \default
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
-		R
-		R \no
-	}
+	R1*29
 % Bars 316 to 320
-	R1^\gp
-	R1*25
+	
 % Bars 321 to 325
 	
 % Bars 326 to 330
@@ -277,16 +201,9 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 341 to 345
 	\mark \default
-	R1*2
-	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni R1
-		R
+	R1*25
 % Bars 346 to 350
-		R
-		R \no
-	}
-	R1*19
+	
 % Bars 351 to 355
 	
 % Bars 356 to 360
@@ -295,18 +212,12 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 366 to 370
 	\mark \default
-	\MmrLength #10 R1*2 -\tweak X-offset #2.5 ^\tutti
-	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \MmrPos #-6 R1
-		\MmrPos #-6 R
+	R1*9
 % Bars 371 to 375
-		\MmrPos #-6 R
-		R
-		R
-		R
-		R \cueClefUnset \no
-	}
+	
+	
+	
+	
 % Bars 376 to 380
 	a16\f\> a a a\! r4 a16\> a a a\! r4
 	a2\startTrillSpan e'4\stopTrillSpan r
@@ -332,33 +243,20 @@ musicPaukenMvtI = \relative c {
 	\times 2/3 {e e e} \times 2/3 {e e e} \times 2/3 {e e e} \times 2/3 {e e e} 
 	e e r e r e r e
 % Bars 396 to 400
-	a,4^\solo r r2
-	R1*17
+	a,4 r r2
+	R1*29
 % Bars 401 to 405
 	
 % Bars 406 to 410
 	
 % Bars 411 to 415
 	
-	
-	
-	R1^\pocorit
-	r2 r4 r^\intempo
 % Bars 416 to 420
-	R1*4
 	
-	
-	
-	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
 % Bars 421 to 425
-		R
-		R
-		R
-		R
-		R
+	
 % Bars 426 to 430
-		r4 \cueClefUnset \no } a-.\f r a-.
+	r4 a-.\f r a-.
 	r e'-. r e-.
 	a,-. r a-. r
 	a-. r r2
