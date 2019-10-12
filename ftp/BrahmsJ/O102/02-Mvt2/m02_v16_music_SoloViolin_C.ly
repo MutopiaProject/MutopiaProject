@@ -9,10 +9,8 @@ musicSoloViolinMvtII = \relative c' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceSoloVlnmII" #UP {
-		\ni R2._\fermataMarkup 
-		R2._\fermataMarkup \no
-	}
+	R2.\fermataMarkup 
+	R2.\fermataMarkup
 	a8(_\fespress d e a fis d)
 	b4( b' a)
 	a,8( d e fis d b)
@@ -47,16 +45,11 @@ musicSoloViolinMvtII = \relative c' {
 	a8(\p fis d a) e'4
 	d4. r8 r4 \bar "||" \key f \major \mark \default
 % Bars 31 to 35
-	R2.*3
-	
-	
-	\cueDuring #"cueVoiceSoloVlnmII" #UP {
-		\ni R2.
-		R
+	R2.*7
 % Bars 36 to 40
-		R
-		R
-		r4 r \no } g'(_\pdolce
+	
+	
+	r4 r g'(_\pdolce
 	bes~ \times 2/3 {bes8 a bes} \times 2/3 {c a bes~}
 	\times 2/3 {bes a bes} \times 2/3 {d c bes} \times 2/3 {a g f~}
 % Bars 41 to 45
@@ -143,11 +136,10 @@ musicSoloViolinMvtII = \relative c' {
 	\times 2/3 {c b c} \times 2/3 {a' g f} \times 2/3 {g d b)}
 % Bars 106 to 110
 	g8. r16 r4 r
-	R2.
-	\cueDuring #"cueVoiceSoloVlnmII" #UP {
-		\ni \cueClef "bass" R2.
-		R 
-	r4 r \no \cueClefUnset } a,,8\p( d\crescD\<
+	R2.*3
+	
+	
+	r4 r a,,8\p( d\crescD\<
 % Bars 111 to 115
 	e a)~ a( a') d,( d')
 	\acciaccatura e,8 <e e'>4\f( <a a'>2)~

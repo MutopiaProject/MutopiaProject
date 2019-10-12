@@ -49,6 +49,9 @@
 \include "./02-Mvt2/m02_v16_music_SoloViolin.ly"
 \include "./03-Mvt3/m03_v16_music_SoloViolin.ly"
 \include "./00-Common/00_DoubleConcerto_Format_SoloVln.ly"
+\addQuote "cueVoiceSoloVlnmI" { \cueVoiceSoloVlnmI }
+\addQuote "cueVoiceSoloVlnmII" { \cueVoiceSoloVlnmII }
+\addQuote "cueVoiceSoloVlnmIII" { \cueVoiceSoloVlnmIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
