@@ -9,12 +9,10 @@ musicSoloCelloMvtI = \relative c, {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
-		R
-		R
-		R \no \cueClefUnset 
-	}
+	R1*4
+	
+	
+	
 	\times 2/3 {d2\f^\markup { \italic { \column { \lower #1 \line {(in modo d'un recitativo,} \line {ma sempre in tempo) } } } } e f}
 % Bars 6 to 10
 	dis2~ dis8 e a c
@@ -45,15 +43,9 @@ musicSoloCelloMvtI = \relative c, {
 	<< f1 {s8\< s s s s\> s s s\!} >>
 % Bars 26 to 30
 	e2) r
-	R1*7
+	R1*9
 % Bars 31 to 35
 	
-	
-	
-	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
-		\MmrPos #-8 R \no \cueClefUnset
-	}
 % Bars 36 to 40
 	\times 2/3 {r4 <d b'>( <d' f'>~} \times 2/3 {q d') b}
 	\times 2/3 {f( d b} \times 2/3 {f) e d}
@@ -99,7 +91,7 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	\mark \default
-	R1*18
+	R1*22
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -108,14 +100,8 @@ musicSoloCelloMvtI = \relative c, {
 	
 % Bars 106 to 110
 	
-	
-	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
-		R
-		R
 % Bars 111 to 115
-		R \no \cueClefUnset \mark \default
-	}
+	\mark \default
 	\clef tenor a''4.\f g8 e2~
 	e4. c8\>( e4. d8)
 	c\mp( e d c) e( d b c)
@@ -153,9 +139,7 @@ musicSoloCelloMvtI = \relative c, {
 % Bars 141 to 145
 	\times 2/3 {d( a' c\>} \times 2/3 {d, a' c} \times 2/3 {d, a' c} \times 2/3 {d, a' c)} 
 	\times 2/3 {d,( a' c} \times 2/3 {d, a' c} \times 2/3 {d, a' c} d,\!) r \clef bass \mark \default
-	\cueDuring #"cueVoiceSoloVlcmI" #UP { 
-		\cueClef "treble" \ni R1 \no \cueClefUnset
-	}
+	R1
 	\times 2/3 {g,8_\pdolce( f! d} \times 2/3 {g, d' f)} \clef tenor \times 2/3 {g( d' f} \times 2/3 {g f d)}
 	\times 2/3 {g,(\> d' f} \times 2/3 {g f d)} \times 2/3 {g,( d' f} \times 2/3 {g f d)\!}
 % Bars 146 to 150
@@ -165,9 +149,8 @@ musicSoloCelloMvtI = \relative c, {
 	\times 2/3 {d( a' c} \times 2/3 {d c a)} \times 2/3 {d,( a' c} \times 2/3 {d c d,)} 
 	\times 2/3 {g( c d} \times 2/3 {f d c)} \times 2/3 {g( b d} f) r
 % Bars 151 to 155
-	\clef tenor \cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni R1 
-		r2 r4 \no } e4(_\pdolce
+	R1
+	r2 r4 \clef tenor e4(_\pdolce
 	d8) r e4( b8) r c4(
 	d2 g,4) e'(
 	d8) r e4( b8) r c4(\<
@@ -221,7 +204,7 @@ musicSoloCelloMvtI = \relative c, {
 	f'!1(~\startTrillSpan
 % Bars 196 to 200
 	\afterGrace f2 {e16[\stopTrillSpan f])} \clef bass g,,16( b d f g b d f)
-	R1*18
+	R1*21
 	
 % Bars 201 to 205
 	
@@ -229,15 +212,9 @@ musicSoloCelloMvtI = \relative c, {
 	
 % Bars 211 to 215
 	
-	
-	
-	
-	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
 % Bars 216 to 220
-		r2 \cueClef "bass" r
-		R1 \no \cueClefUnset \mark \default
-	}
+	
+	\mark \default
 	e4.\f d8 b4 r
 	c4. b8 e,4 r
 	\times 2/3 {fis4 g a} g2~\<
@@ -270,11 +247,11 @@ musicSoloCelloMvtI = \relative c, {
 	d2(\p a'!
 	d4) r r2
 	r4 a'\trill c\trill fis,\trill
-	a\trill-\tweak Y-offset #5.7 -\tweak X-offset #1.3 ^\flat g2(\trill fis8) r
+	a\trill^\flat g2(\trill fis8) r
 % Bars 246 to 250
 	d'1\startTrillSpan~
 	\afterGrace d2( {cis16[\stopTrillSpan d])} f!4\trill b,\trill
-	d\trill f,\trill aes\trill-\tweak Y-offset #5.7 -\tweak X-offset #1.3 ^\flat d,\trill-\tweak Y-offset #5.7 -\tweak X-offset #1.3 ^\flat
+	d\trill f,\trill aes\trill^\flat d,\trill^\flat
 	f\trill \afterGrace ees\trill( {d16[ ees]} d8) r r4 \clef tenor
 	g4\trill g'2\trill g,4\trill~
 % Bars 251 to 255
@@ -284,23 +261,21 @@ musicSoloCelloMvtI = \relative c, {
 	c,!4\trill c'2\trill_\crescmarkup( b8-.) r
 	bes,!4\trill bes'2\trill( des,8)-. r
 % Bars 256 to 260
-	ges,4\trill ges'2\trill-\tweak Y-offset #10 -\tweak X-offset #2.7 ^\flat( bes,8-.) r \clef treble
-	\afterGrace ges''1\ff\trill-\tweak Y-offset #10 -\tweak X-offset #2.7 ^\flat( {f16[ ges])}
+	ges,4\trill ges'2\trill^\flat( bes,8-.) r \clef treble
+	\afterGrace ges''1\ff\trill^\flat( {f16[ ges])}
 	f8-. r \clef bass f,,,16( c' a' f') f( a, c, f,) c( c' ees bes')
-	f,( c' a' f') f( a, c, f,) f8 \cueDuring #"cueVoiceSoloVlcmI" #UP { \ni r r4
-		R1
+	f,( c' a' f') f( a, c, f,) f8 r r4
+	R1*2
 % Bars 261 to 265
-		R
-		r4 \no } c16( g' e'! c') c( e, g, c,) g'( f' bes des)
+	
+	r4 c16( g' e'! c') c( e, g, c,) g'( f' bes des)
 	c,,( g' e' c') c( e, g, c,) c8 r r4
-	R1*4
+	R1*6
 % Bars 266 to 270
 	
 	
-	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni R1
-		R \no \mark #11
-	}
+	
+	\mark #11
 	c'8\(\fp c4 c8( ees) ees4 ees8(
 % Bars 271 to 275
 	aes) aes4 aes8( b!) b4 b8( \clef tenor
@@ -325,20 +300,14 @@ musicSoloCelloMvtI = \relative c, {
 	r <d, a'>-! r \clef bass <d, c'>-!
 	r <g, d' b'>-! r2
 	r4 <e b' gis' d'>-! r2 \mark \default
-	R1*4
+	R1*10
 % Bars 291 to 295
 	
-	
-	
-	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni R1
-		R
 % Bars 296 to 300
-		R
-		R
-		R
-		\MmrPos #-6 R \no
-	}
+	
+	
+	
+	
 	\times 2/3 {e8(\f\< b' e} \times 2/3 {gis b d)} f4.(\> e8)
 % Bars 301 to 305
 	\times 2/3 {e,,8(\< c' e} \times 2/3 {a c dis)} f4.(\> e8)
@@ -375,17 +344,17 @@ musicSoloCelloMvtI = \relative c, {
 	cis) \clef tenor fis,2 g4(
 	e) d2 fis,4(
 	cis') b2 dis4( 
-	b a fis d!)
+	b a fis \clef bass d!)
 % Bars 331 to 335
-	cis r \clef treble \cueDuring #"cueVoiceSoloVlcmI" #UP { \ni r2
-		R1
-		R
-		R
-		R
+	cis r r2
+	R1*4
+	
+	
+	
 % Bars 336 to 340
-		r2 \no } r4 cis''4(_\dolce
+	r2 r4 \clef tenor cis''4(_\dolce
 	b8) r cis4( gis8) r a4(\<
-	b2\> e,4)\! cis'(
+	b2\> e,4)\! \clef treble cis'(
 	b8) r cis4( gis8) r a4(\<
 	a'1\>)(
 % Bars 341 to 345
@@ -409,8 +378,8 @@ musicSoloCelloMvtI = \relative c, {
 % Bars 356 to 360
 	r4 cis,16( e ais cis dis8) r dis,16( fis b dis
 	b8) r b,16( d! gis b cis8) r cis,16( e  a cis)
-	c(\dimD\> a c a fis a fis a fis c fis c a c a fis
-	dis fis a c dis8)\! r r4 e,16-._\fbenmarc e'-. r8
+	c(_\dimmarkup a c\> a fis a fis a fis c fis c a c a fis
+	dis fis a c dis8)\! r r4 e,16-.\f^\benmarc e'-. r8
 	eis,16-. eis'-. r8 fis,16-. fis'-. r8 cis,16-. cis'-. r8 d,16-. d'-. r8
 % Bars 361 to 365
 	dis,16-. dis'-. r8 e,!16-. e'-. eis,-. eis'-. fis,-. fis'-. cis,-. cis'-. d,-. d'-. dis,-. dis'-. 
@@ -430,17 +399,11 @@ musicSoloCelloMvtI = \relative c, {
 % Bars 386 to 390
 	
 	\bar "||" \mark \default \key a \minor
-	R1*5 \clef tenor
+	R1*8
 % Bars 391 to 395
 	
-	
-	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
-		R
-		\MmrPos #-6 R \no \cueClefUnset
-	}
 % Bars 396 to 400
-	a'4.\f g8 e4.( c8)
+	\clef tenor a'4.\f g8 e4.( c8)
 	e4.( aes8) g4.( f8)
 	e8( c fis, a) gis( b e d)
 	c(\< e, fis a) gis(\> b e d)

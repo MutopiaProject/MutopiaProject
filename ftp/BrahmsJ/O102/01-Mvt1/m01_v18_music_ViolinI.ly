@@ -9,11 +9,11 @@ musicViolinIMvtI = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc d8 b4 r
+	e4._\fmarc^\tutti d8 b4 r
 	c4. b8 e,4 r
 	\times 2/3 {fis-. gis-. a-.} \times 2/3 {gis-. a-. b-.}
 	\times 2/3 {a-.  b-. cis-.} \times 2/3 {d-. e-. fis-.}
-	R1\fermataMarkup
+	\textLengthOn <>_\markup {(in modo d'un recit.)} R1*20^\markup {Solo-Vlc.}
 % Bars 6 to 10
 	R1*51
 % Bars 11 to 15

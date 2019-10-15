@@ -66,6 +66,7 @@ piup=^\markup {\italic {più} \dynamic p}
 plegg = \markup { \dynamic p \italic legg.}
 pmamarc = \markup { \dynamic p \italic {ma marc.}}
 pmarc = \markup { \dynamic p \italic marc.}
+pmarccresc = \markup { \dynamic p \italic { marc. cresc.}}
 sempref = \markup { \italic sempre \dynamic f}
 ppdolce = \markup { \dynamic pp \italic dolce }
 

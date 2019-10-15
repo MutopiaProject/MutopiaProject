@@ -3030,3 +3030,152 @@ cueVoiceSoloVlnmIII = \relative c {
 	e( d4 b8)
 	r4 e,-\tweak X-offset #-2 ^\markup {Solo-Vlc.}
 }
+%###############################################################################
+%#                             S O L O - C E L L O                             #
+%###############################################################################
+cueVoiceSoloVlcmI = \relative c {
+	e'''4.-\tweak X-offset #-4 ^\markup {Viol.I} d8 b4 r
+	c4. b8 e,4 r
+	\tuplet 3/2 2 {fis4-. gis-. a-. gis-. a-. b-.}
+	\tuplet 3/2 2 {a-. b-. c-. d-. e-. f-.}
+	R1*29
+	% bar 34
+	c2(~-\tweak X-offset #-6 ^\markup {Solo-Vln} \tuplet 3/2 2 {c4 a) fis}
+	\tuplet 3/2 2 {c( a fis c) b a}
+	R1*72
+	% bar 108
+	fis''8(-\tweak X-offset #-4 ^\markup {Viol.I} g) gis( a) d( f) e-. e,-.
+	r4 d'8( f) e-. e,-. r4
+	d'8( f) r4 dis8( fis) r4
+	e4-. r e,,-. r
+	R1*31
+	% bar 143
+	\tuplet 3/2 4 {g''8(-\tweak X-offset #-6 ^\markup {Solo-Vln.} f d g, f d) g( f d g, f d)}
+	R1*7
+	% bar 151
+	g4.(^\markup {Klar.I} f8 d4. b8
+	a2.) r4
+	R1*62
+	% bar 215
+	r4^\markup {Viol.I} bes'16( e g a bes a g e) bes( e g a
+	bes8-.) r r4 r g,->-\tweak X-offset #-5 ^\markup {Bass.} 
+	e-> cis-> ais-> g->
+	R1*41
+	% bar 259
+	r2 r8 ees'-.-\tweak X-offset #-3 ^\markup {Vlc.} des-. c-.
+	bes4 ges2 bes4
+	ges ees2 ges4
+	bes,4-. r r2
+	R1*5
+	% bar 268
+	\tuplet 3/2 2 {c4-.^\markup {Vlc.} d-. e!-. f-. g-. aes-.}
+	\tuplet 3/2 2 {bes-. c-. des-. ees,-. f-. g-.}
+	R1*24
+	% bar 294
+	d'2^\markup {Vlc.} dis
+	\tuplet 3/2 2 {e2-> d!4 c( b) a-.}
+	d2 dis
+	\tuplet 3/2 2 {e2 d!4 c( g) c,-.}
+	\tuplet 3/2 2 {f2 d4 g2 e4}
+	a2 f,
+	R1*31
+	% bar 331
+	r2 r4-\tweak X-offset #-2 ^\markup {Solo-Vln.} cis''''
+	\afterGrace d2.( {e16[ d])} cis8( d)
+	e4 r8 e( eis4) r8 eis(
+	fis4 e d cis
+	b) r r cis(
+	b) r r2
+	R1*56
+	% bar 393
+	r8-\tweak X-offset #-2 ^\markup {Viol.I} e( d b) c( b e,) a(
+	g c,) f( e a,) d( c f,)
+	b( f) a( e) a( d,) gis( d)
+}
+cueVoiceSoloVlcmII = \relative c {
+	a''4_(-\tweak X-offset #-2 ^\markup {Hr.I} d2)\fermata
+	e'4_(-\tweak X-offset #-3 ^\markup {Fl.I} a2)\fermata
+	R2.*35
+	% bar 38
+	r4 r4 g,4_(-\tweak X-offset #-6 ^\markup {Solo-Vln.}
+	bes4~ \tuplet 3/2 4 {bes8 a bes c a bes~}
+	\tuplet 3/2 4 {bes a bes d c bes a g f)}
+	R2.*2
+	% bar 43
+	r4 \tuplet 3/2 4 {bes8_( a bes c a bes~}
+	\tuplet 3/2 4 {bes a bes g' f e f c a)}
+	R2.*23
+	% bar 68
+	r4^\markup {Fl.I} r4 fis(~
+	fis g! a 
+	g fis) b
+	R2.*28
+	% bar 99
+	r2 a4_(-\tweak X-offset #-5 ^\markup {Solo-Vln.}
+	c!)_(~ \tuplet 3/2 4 {c8 b c d b c~}
+	\tuplet 3/2 4 {c b c d a c b a g)}
+}
+cueVoiceSoloVlcmIII = \relative c {
+	R2*45
+	% bar 46
+	c'''16-\tweak X-offset #-5 ^\markup {Viol.I} c e c a a c a
+	f f a f d d f d
+	e8-. a-. a-. gis-.
+	a-. r r4
+	R2*35
+	R2.*2
+	R1*2
+	R2*16
+	% bar 105
+	r8 g,,16-.^\markup {Fag.I} g-. c8-> g16-. g-.
+	aes8-> g16-. g-. c-. e-. g-. e-.
+	c'8->^\markup {Ob.I} b16-. c-. b8-> c16-. b-. 
+	c8-> b16-. c-. b( a') g-. fis-.
+	R2*97
+	% bar 206
+	d'8(-\tweak X-offset #-4 ^\markup {Ob.I} c bes a)
+	bes( a g f)
+	e( f e f)
+	e r r4
+	% bar 210
+	r8 g(-\tweak X-offset #-4 ^\markup {Ob.I} f e)
+	f( e d c)
+	b( c b c)
+	b r r4
+	% bar 214
+	r8 d'(-\tweak X-offset #-4 ^\markup {Ob.I} c b
+	c b a gis
+	a g! fis f
+	e d c b)
+	R2*16
+	% bar 234
+	c'8^-^\markup {Solo-Vln.} b16^. c^. b8^- c16^. b^.
+	c8^- b16^. c^. b^( a') g^. fis^.
+	e8^>^\markup {Fl.I} d16^. e^. d8^> e16^. d^.
+	e8^> d16^. e^. d( f) d^. b^.
+	g8^. g\rest r4
+	R2*25
+	% bar 264
+	c16-\tweak X-offset #-5 ^\markup {Viol.I} c e c a a c a
+	f f a f d d f d
+	e8-. a-. a-. g-.
+	g-. f-. f-. e-.
+	R2*2
+	% bar 270
+	r4 d8(-\tweak X-offset #-4 ^\markup {Viol.I} b)
+	b( gis) gis( e)
+	e( d4 b8)
+}
+%###############################################################################
+%#                              V I O L I N   I                                #
+%###############################################################################
+cueVoiceVlnI = \relative c {
+	R1*23
+	% bar 
+}
+cueVoiceVlnII = \relative c {
+	
+}
+cueVoiceVlnIII = \relative c {
+	
+}

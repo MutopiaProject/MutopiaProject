@@ -9,10 +9,8 @@ musicSoloCelloMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceSoloVlcmII" #UP {
-		\cueClef "treble" \ni R2._\fermataMarkup
-		R2._\fermataMarkup \no \cueClefUnset
-	}
+	R2.\fermataMarkup
+	R2.\fermataMarkup
 	a8(_\fespress d e a fis d)
 	b4( b' a)
 	a,8( d e fis d b)
@@ -45,29 +43,22 @@ musicSoloCelloMvtII = \relative c {
 	d8.\f( b16) b8.( e,16) e8.( a16)
 	a8( fis d a) e'4
 	a8(\p fis d a) e'4
-	d4. r8 r4 \bar "||" \key f \major \mark \default 
+	d4. r8 r4 \bar "||" \key f \major \mark \default
 % Bars 31 to 35
-	\clef tenor R2.*7
+	R2.*10
 % Bars 36 to 40
 	
-	
-	\cueDuring #"cueVoiceSoloVlcmII" #UP {
-		\ni \cueClef "treble" R2.
-		R
-		R \no \cueClefUnset
-	}
 % Bars 41 to 45
-	f'4(_\pdolce~ \times 2/3 {f8 e f} \times 2/3 {g e f~}
+	\clef tenor f'4(_\pdolce~ \times 2/3 {f8 e f} \times 2/3 {g e f~}
 	\times 2/3 {f e f} \times 2/3 {a g f} \times 2/3 {g4 a8)}
-	bes8. r16 \cueDuring #"cueVoiceSoloVlcmII" #UP { \ni \cueClef "treble" r4 r
-		R2. \no \cueClefUnset
-	}
+	bes8. r16 r4 r
+	R2.
 	f4(~ \times 2/3 {f8 e f} \times 2/3 {g e f~}
 % Bars 46 to 50
 	\times 2/3 {f e f} \clef treble \times 2/3 {d' c b} \times 2/3 {c)\< e,( g}
 	\times 2/3 {des' c b} \times 2/3 {c)\! e,( g} \times 2/3 {des' c b}
 	\times 2/3 {des c b} \times 2/3 {c) ees,( aes} \times 2/3 {bes) des,( g}
-	\times 2/3 {aes)_\dimD\> \clef tenor c,( f} \times 2/3 {g) bes,( des} \times 2/3 {f) f,4~}
+	\times 2/3 {aes)_\dimmarkup \clef tenor c,(\> f} \times 2/3 {g) bes,( des} \times 2/3 {f) f,4~}
 	\times 2/3 {f8 f4~} \times 2/3 {f8 f4\!} r4 \mark \default
 % Bars 51 to 55
 	R2.
@@ -88,14 +79,9 @@ musicSoloCelloMvtII = \relative c {
 	R2.*3
 % Bars 66 to 70
 	\bar "||" \key d \major
-	R2.
-	\cueDuring #"cueVoiceSoloVlcmII" #UP {
-		\ni \cueClef "treble" R2.
-		R
-		R \cueClefUnset
-	}
+	R2.*4
 % Bars 71 to 75
-	e'4(\f a2)~
+	\clef tenor e'4(\f a2)~
 	a2.~
 	<< {a4 a2 } {s4 s8\startTrillSpan s s s\stopTrillSpan} >>
 	<< {a,2.} {s8\startTrillSpan s s s s s\stopTrillSpan} >> \clef bass
@@ -109,7 +95,7 @@ musicSoloCelloMvtII = \relative c {
 % Bars 81 to 85
 	a,8( d e fis d b)
 	gis4( gis' a)
-	a,8(\p\< d e a)~ a4~
+	a,8(\p\< d e a)~ a4\!~
 	a4.\> \clef tenor a'8( fis d)\!
 	b4( b' a) \clef bass
 % Bars 86 to 90
@@ -128,11 +114,10 @@ musicSoloCelloMvtII = \relative c {
 	d8.( b16) b8.( e,16) e8.( a16)
 	a8(\< fis d a) e'4\>
 	a8(\p fis d a) e'4
-	d4. r8 \cueDuring #"cueVoiceSoloVlcmII" #UP { \cueClef "treble" r4 \ni \mark \default
-		R2.
+	d4. r8 r4 \mark \default
+	R2.*2
 % Bars 101 to 105
-		R \no \cueClefUnset
-	}
+	
 	\clef tenor g'4(_\dolce~ \times 2/3 {g8 f g} \times 2/3 {a f g~}
 	\times 2/3 {g f g} \times 2/3 {b a g} \times 2/3 {a4 b8)}
 	c8. r16 r4 r 
