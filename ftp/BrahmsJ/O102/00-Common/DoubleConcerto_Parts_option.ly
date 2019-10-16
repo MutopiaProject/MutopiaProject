@@ -20,7 +20,8 @@ partOptions = {
 	\set Score.quotedCueEventTypes = #'(note-event rest-event tie-event
 		beam-event tuplet-span-event dynamic-event articulation-event
 		dynamic-event slur-event text-script-event trill-span-event
-		phrasing-slur-event beam-forbid-event tremolo-event)
+		phrasing-slur-event beam-forbid-event tremolo-event crescendo-event 
+		decrescendo-event )
 	\set Voice.restNumberThreshold = #0
 }
 layoutCueVoice = \with {

@@ -49,9 +49,9 @@
 \include "./02-Mvt2/m02_v18_music_ViolinI.ly"
 \include "./03-Mvt3/m03_v18_music_ViolinI.ly"
 \include "./00-Common/00_DoubleConcerto_Format_ViolinI.ly"
-\addQuote "cueVoiceVlnI" { \cueVoiceVlnI }
-%\addQuote "cueVoiceVlnII" { \cueVoiceVlnII }
-%\addQuote "cueVoiceVlnIII" { \cueVoiceVlnIII }
+\addQuote "cueVoiceVlnImI" { \cueVoiceVlnImI }
+\addQuote "cueVoiceVlnImII" { \cueVoiceVlnImII }
+\addQuote "cueVoiceVlnImIII" { \cueVoiceVlnImIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -104,54 +104,54 @@
 			}
 		}
 	}
-%	\score {
-%		\new Staff <<
-%			\new Voice {
-%				\formatMvtIIVoiceXVIII
-%			}
-%			\new Voice {
-%				\timeMvtII \generalOptions \partOptions
-%				\nameVoiceXVIII \musicViolinIMvtII
-%			}
-%		>>
-%		\header {
-%			breakbefore = ##f
-%			piece = \markup {
-%				\fill-line {
-%					\fontsize #4
-%					II
-%				}
-%			}
-%		}
-%		\layout {
-%			\context {
-%				\CueVoice \layoutCueVoice
-%			}
-%		}
-%	}
-%	\score {
-%		\new Staff <<
-%			\new Voice {
-%				\formatMvtIIIVoiceXVIII
-%			}
-%			\new Voice {
-%				\timeMvtIII \generalOptions \partOptions
-%				\nameVoiceXVIII \musicViolinIMvtIII
-%			}
-%		>>
-%		\header {
-%			breakbefore = ##f
-%			piece = \markup {
-%				\fill-line {
-%					\fontsize #4
-%					III
-%				}
-%			}
-%		}
-%		\layout {
-%			\context {
-%				\CueVoice \layoutCueVoice
-%			}
-%		}
-%	}
+	\score {
+		\new Staff <<
+			\new Voice {
+				\formatMvtIIVoiceXVIII
+			}
+			\new Voice {
+				\timeMvtII \generalOptions \partOptions
+				\nameVoiceXVIII \musicViolinIMvtII
+			}
+		>>
+		\header {
+			breakbefore = ##f
+			piece = \markup {
+				\fill-line {
+					\fontsize #4
+					II
+				}
+			}
+		}
+		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
+		}
+	}
+	\score {
+		\new Staff <<
+			\new Voice {
+				\formatMvtIIIVoiceXVIII
+			}
+			\new Voice {
+				\timeMvtIII \generalOptions \partOptions
+				\nameVoiceXVIII \musicViolinIMvtIII
+			}
+		>>
+		\header {
+			breakbefore = ##f
+			piece = \markup {
+				\fill-line {
+					\fontsize #4
+					III
+				}
+			}
+		}
+		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
+		}
+	}
 }

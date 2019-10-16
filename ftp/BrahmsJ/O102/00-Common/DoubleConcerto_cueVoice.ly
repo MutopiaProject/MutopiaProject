@@ -3169,13 +3169,104 @@ cueVoiceSoloVlcmIII = \relative c {
 %###############################################################################
 %#                              V I O L I N   I                                #
 %###############################################################################
-cueVoiceVlnI = \relative c {
+cueVoiceVlnImI = \relative c {
 	R1*23
-	% bar 
+	% bar 24
+	r2 r4 d,(^\markup {Solo-Vlc.}
+	f1
+	e2) r4 cis'''(_\markup {Klar.I}
+	b) cis( gis) a(\<
+	b2\> e,4)\! cis''^(^\markup {Fl.I}
+	b) cis^( gis) a^(
+	a'2 e4) g,\rest
+	R1*21
+	% bar 52
+	r2 e,8^(^\markup {Solo-Viol.} fis16 gis a b c d 
+	e) a,^( b c d e fis gis a) e^( fis gis a b c d
+	e) a,^( b c d e fis gis a) e fis gis a e f g
+	a4-. <a,, c e'>-. <d, f' f'>-. <d a'' fis'>-.
+	<g, b' g' g'>-. r <e' b' gis' gis'>-. r
+	R1*99
+	% bar 156
+	r2 f4\rest bes,-._(-\tweak X-offset #-3 _\markup {Br.}
+	f'\rest a,-. f'\rest cis-.)
+	f\rest a,-._( f'\rest a,-.\<
+	f'\rest c!-. f\rest a,-.)\!
+	f'\rest dis2.\sf\>
+	b1_(~-\tweak X-offset #0 \pdimD
+	b2 d!)
+	e_( c)
+	c2.\pp a4\>_(
+	c2.) a4_(
+	c2)\! e\rest
 }
-cueVoiceVlnII = \relative c {
-	
+cueVoiceVlnImII = \relative c {
+	a'4(-\tweak X-offset #-4 _\markup {Hr.I} d2)_\fermata
+	e'4(^\markup {Klar.I} a2)\fermata
+	R2.*33
+	% bar 36
+	r2 g4(-\tweak X-offset #-3.5 ^\markup {Ob.I}
+	f e d
+	b) r2
 }
-cueVoiceVlnIII = \relative c {
-	
+cueVoiceVlnImIII = \relative c {
+	a'8(-\tweak X-offset #-6 ^\markup {Solo-Vlc.} e'16-.) e-. dis8( d16-.) d-.
+	c8( b16)-. b-. a8( e16-.) e-.
+	R2*6
+	% bar 9
+	b''4(-\tweak X-offset #-3 ^\markup {Klar.I} d
+	b d8. f16
+	e8) r r4
+	R2*49
+	% bar 61
+	r4 <bes aes'>->~-\tweak X-offset #-8 ^\markup {Solo-Viol.}
+	q8 <bes g'>16[-. g,-.] <bes' aes'>4->~
+	q8 <bes g'>16 g, <bes' g'>8( <a! fis'>16-.) c,-.
+	<a' fis'>-. ees( <fis ees'>) c_( <ees c'>[) a,]( <c a'>8-.)
+	R2*19
+	% bar 84
+	r4 r8 a''(-\tweak X-offset #-7 ^\markup {Solo-Viol.}
+	<e c'> <d b'>) q4.( <c a'>8)
+	<b g'>2 r8 g(
+	<e c'> <d b'> <e c'> <d b'>) q4. r8
+	R1
+	R2*27
+	% bar 116
+	e4\rest-\tweak X-offset #-2 _\markup {Hr.III} a,8-. e'\rest
+	e4\rest a,8-. e'\rest
+	R2*54
+	% bar 172
+	r4 r16 a,(^\markup {Solo-Viol.} a' f
+	e d cis d f a d b
+	d a f e d a) <c! a'>8(\noBeam
+	<c' a'>) q4 <b gis'>8(
+	<c a'>) q4 <f d'>16( a
+	<e c'> a e c a c) <d bes'>( f
+	<c a'> f c a) f( <f' a>) <e c'>( <d bes'>
+	<cis a'>8) <cis e>8. <bes g'>16[( <a f'> <g e'>)]
+	<e cis'>( <f d'>) <e gis>( <f a>) r4
+	R2*37
+	% bar 218
+	a,8(-\tweak X-offset #-6 ^\markup {Solo-Vlc.} e'16-.) e-. dis8( d16-.) d-.
+	c8( b16-.) b-. a8 r
+	R2*34
+	% bar 254
+	\tuplet 3/2 8 {gis16([^\markup {Solo-Viol.} b e] b[ e gis]) e([ gis b] gis[ b e])}
+	\tuplet 3/2 8 {gis,([ b e] b[ e gis] e[ gis b] gis[ b e])}
+	gis2^\trill
+	R2*31
+	% bar 288
+	r4 r8 fis,(-\tweak X-offset #-6 ^\markup {Solo-Viol.}
+	<cis a'>8 <b gis'>) q4.( <a fis'>8)
+	<gis e'>4 r r8 e_(
+	<cis a'> <b gis'> <cis a'> <b gis'>) q4. r8
+	R1
+	R2*14
+	% bar 307
+	r4 r8 b''(^\markup {Ob.I}
+	a gis) r e(
+	gis fis) r d'(^\markup {Fl.I}
+	cis b a gis
+	eis fis) r fis'(
+	e d cis b)
 }

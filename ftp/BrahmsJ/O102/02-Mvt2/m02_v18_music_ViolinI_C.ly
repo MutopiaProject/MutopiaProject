@@ -9,11 +9,9 @@ musicViolinIMvtII = \relative c' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceVlnImII" #UP { \ni 
-		\MmrPos #4 R2.\fermataMarkup
-		\MmrPos #-2 R2._\fermataMarkup \no
-	}
-	a8(_\pocofmadolce^\solo d e a fis d)
+	R2.\fermataMarkup
+	R2.\fermataMarkup
+	a8(_\pocofmadolce d e a fis d)
 	b( d) d( e) fis4
 	a,8( d e fis d b)
 % Bars 6 to 10
@@ -45,15 +43,14 @@ musicViolinIMvtII = \relative c' {
 	g(\mf d) d( e) e( fis)
 	fis4.(\dimD\> d8) cis( a)
 	fis'4.(\pp d8) cis( a)
-	d( a d) r r4_\tutti \bar "||" \mark \default \key f \major
+	d( a d) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	a4^\pizz r r
-	R2.*4
+	R2.*6
 % Bars 36 to 40
-	\cueDuring #"cueVoiceVlnImII" #UP {
-		\ni R2.
-		R \no
-		r4 } e'8\p^\arco e4 e8~^\solo
+	
+	
+	r4 e'8\p^\arco e4 e8~
 	e e4 e e8~
 	e e4 e d8~
 % Bars 41 to 45
@@ -70,7 +67,7 @@ musicViolinIMvtII = \relative c' {
 	r c r4 r \mark \default
 % Bars 51 to 55
 	R2.
-	r4 r bes'^\pizz-\tweak X-offset #-2.5 _\pocof
+	r4 r bes'^\pizz_\pocof
 	r a\p r
 	R2.
 	r4 r f_\pf
@@ -93,7 +90,7 @@ musicViolinIMvtII = \relative c' {
 	c2.\f)~
 	c2 b4(~
 % Bars 71 to 75
-	b^\solo cis! d)
+	b cis! d)
 	e2( fis4
 	g) cis,,^\pizz r
 	R2.*5
@@ -130,7 +127,7 @@ musicViolinIMvtII = \relative c' {
 % Bars 101 to 105
 	d2 d,4(
 	g2.)~
-	g2 fis4( 
+	g2 fis4(
 	g a g
 	fis!_\dimmarkup ees d
 % Bars 106 to 110
