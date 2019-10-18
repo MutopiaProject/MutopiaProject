@@ -44,10 +44,14 @@
 \include "./00-Common/DoubleConcerto_Parts_option.ly"
 \include "./00-Common/DoubleConcerto_VoiceName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
+\include "./00-Common/DoubleConcerto_cueVoice.ly"
 \include "./01-Mvt1/m01_v19_music_ViolinII.ly"
 \include "./02-Mvt2/m02_v19_music_ViolinII.ly"
 \include "./03-Mvt3/m03_v19_music_ViolinII.ly"
 \include "./00-Common/00_DoubleConcerto_Format_ViolinII.ly"
+\addQuote "cueVoiceVlnIImI" { \cueVoiceVlnIImI }
+\addQuote "cueVoiceVlnIImII" { \cueVoiceVlnIImII }
+\addQuote "cueVoiceVlnIImIII" { \cueVoiceVlnIImIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -86,7 +90,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -95,6 +99,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -117,6 +124,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 	\score {
@@ -139,6 +149,9 @@
 			}
 		}
 		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
 		}
 	}
 }

@@ -69,6 +69,7 @@ pmarc = \markup { \dynamic p \italic marc.}
 pmarccresc = \markup { \dynamic p \italic { marc. cresc.}}
 sempref = \markup { \italic sempre \dynamic f}
 ppdolce = \markup { \dynamic pp \italic dolce }
+unis=^\markup {unis.}
 
 crescD = #(make-dynamic-script (markup #:normal-text #:italic "cresc."))
 dimD = #(make-dynamic-script (markup #:normal-text #:italic "dim."))

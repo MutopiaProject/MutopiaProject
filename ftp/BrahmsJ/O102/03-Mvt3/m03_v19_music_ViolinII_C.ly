@@ -9,20 +9,11 @@ musicViolinIIMvtIII = \relative c'' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni \cueClef "bass" R2
-		R \no \cueClefUnset
-	}
-	R2*6
+	R2*10
 % Bars 6 to 10
 	
-	
-	
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni R2
-		R
 % Bars 11 to 15
-		r8 \no } c-.\p b-. a-.
+	r8 c-.\p b-. a-.
 	fis-. gis-. a-. r
 	r <a, e'>-. <c e>4
 	r8 <a e'>-. <e' a>4
@@ -43,10 +34,7 @@ musicViolinIIMvtIII = \relative c'' {
 	R2*3
 	
 	
-	\tempo "poco rit." \cueDuring #"cueVoiceVlnIImIII" #DOWN {
-		\ni R2
-		R \no
-	}
+	\tempo "poco rit." R2*2
 % Bars 31 to 35
 	r8 a'8^\pizz f' f,
 	r a e' a,
@@ -57,7 +45,7 @@ musicViolinIIMvtIII = \relative c'' {
 	c bes a b\<
 	<a f'> <b d> <a f'> <b d>\!
 	<a f' a>\f r r4 \mark \default
-	\tuplet 6/4 4 {<gis' e'>16-.\ff^\arco^\tutti q-. q-. q-. q-. q-. q-. q-. q-. q-. q-. q-.}
+	\tuplet 6/4 4 {<gis' e'>16-.\ff^\arco q-. q-. q-. q-. q-. q-. q-. q-. q-. q-. q-.}
 	a8->_\benmarc e'16-. e-. dis8-> d16-. d-.
 % Bars 41 to 45
 	c8-> b16-. b-. a8-> e16-. e-.
@@ -69,28 +57,26 @@ musicViolinIIMvtIII = \relative c'' {
 	c c e c a! a c a
 	f f a f d d f d
 	<e a>8-. <a c>-. <a b>-. <gis b>-.
-	a-. r r4^\solo
-	R2
+	a-. r r4
+	R2*3
 % Bars 51 to 55
-	R2*2^\tutti
+	
 	
 	r8 c^\pizz\p b a
-	g r r4^\solo
-	R2*6
+	g r r4
+	R2*9
 % Bars 56 to 60
 	
 % Bars 61 to 65
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni R2
-		\MmrPos #12 R
-		\MmrPos #12 R
-		r4 r8. \no } g16\f^\arco^\tutti(
+	
+	
+	
+	r4 r8. g16\f^\arco(
 	g') f,( f') d,( d') g,( g') f,(
 % Bars 66 to 70
 	f') d,( d') g,,( g'8) <g, g'>8_\pdim~
 	q q4 q8
-	R2
-	R2*15^\solo
+	R2*17
 % Bars 71 to 75
 	
 % Bars 76 to 80
@@ -99,12 +85,11 @@ musicViolinIIMvtIII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceVlnIImIII" #UP { 
-		\ni R2 \bar "||"
-		\time 3/4 R2.
+	\bar "||"
+	\time 3/4 R2.*2
 % Bars 86 to 90
-		R \bar "||"
-		\time 4/4 r2 r4 \no } r8 <<{d''8
+	\bar "||"
+	\time 4/4 r2 r4 r8 <<{d''8
 		s8\< s s s s4. s8\!
 	} \\ {
 		d\f^\div^(
@@ -128,23 +113,21 @@ musicViolinIIMvtIII = \relative c'' {
 	a) r r e'\p^\pizz
 	fis gis a a
 	c r r4
-	R2
-	R2*2^\tutti
+	R2*3
+	
 % Bars 106 to 110
 	
 	r16 e,-.^\arco_\plegg b-. e-. r dis-. c-. dis-.
 	r e-. b-. e-. r dis-. fis-. a-.
-	gis8-._\dimmarkup^\solo r a-. r
+	gis8-._\dimmarkup r a-. r
 	gis-. r a-. r
 % Bars 111 to 115
 	a-. r r4
-	R2*4
+	R2*6
 % Bars 116 to 120
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni \MmrPos #4 R2
-		\MmrPos #4 R \no
-	}
-	r4 r8. a16-.\mf^\solo \bar "||" \key d \minor
+	
+	
+	r4 r8. a16-.\mf \bar "||" \key d \minor
 	a8[-. r16 f-.] f8[-. r16 d-.]
 	bes4.. bes16
 % Bars 121 to 125
@@ -166,21 +149,21 @@ musicViolinIIMvtIII = \relative c'' {
 	r8 a'8-.\f^\arco a-. gis-.
 	a8-.\p[ r16 a-.] a8-.[\< r16 a-.]
 % Bars 136 to 140
-	f'8-.[^\tutti r16 f-.] f8-.[ r16 f-.]\!
+	f'8-.[ r16 f-.] f8-.[ r16 f-.]\!
 	\tuplet 3/2 4 {f4(\ff e8) d( e f)}
 	\tuplet 3/2 4 {f4( ees8) des( ees f)}
 	c4 cis
-	r^\solo c,!^\pizz\p
+	r c,!^\pizz\p
 % Bars 141 to 145
 	cis r
-	r8.^\tutti c'!16-.^\arco\ff e8-.[ r16 e-.]
+	r8. c'!16-.^\arco\ff e8-.[ r16 e-.]
 	\tuplet 3/2 4 {e4( d8) b( c d)}
 	\tuplet 3/2 4 {d4( c8) a( b c)}
 	gis4 a
 % Bars 146 to 150
-	R2*2^\solo
+	R2*2
 	\mark \default
-	R2*24
+	R2*32
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -191,17 +174,12 @@ musicViolinIIMvtIII = \relative c'' {
 	
 % Bars 171 to 175
 	
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni \MmrPos #-10 R2
-		\MmrPos #-10 R
-		\MmrPos #-10 R
-		R
 % Bars 176 to 180
-		R
-		R
-		R
-		R \mark \default
-		r4 \no } fis\pp(
+	
+	
+	
+	\mark \default
+	r4 fis\pp(
 % Bars 181 to 185
 	a) d( 
 	a) fis(
@@ -221,7 +199,7 @@ musicViolinIIMvtIII = \relative c'' {
 	c!) b(
 	d) cis(
 % Bars 196 to 200
-	d) r8. <a' a'>16\ff^\tutti
+	d) r8. <a' a'>16\ff
 	q8( f'!16) f( d) d( cis) cis(
 	f) f( d) d( bes!) bes( bes,!) bes
 	bes4.. bes16
@@ -236,20 +214,19 @@ musicViolinIIMvtIII = \relative c'' {
 	q4..\sf <d, d'>16
 	q8\sf( c'!16) c( bes) bes( a) a(
 	gis)\sf gis( a) a( gis)\sf gis( a) a(
-	gis8-.) r^\solo r8. <a a'>16
-	q4..\sf^\tutti <<{a16} \\ {a}>>
+	gis8-.) r r8. <a a'>16
+	q4..\sf <<{a16} \\ {a}>>
 % Bars 211 to 215
 	a8\sf( g!16) g( f) f( e) e(
 	dis\sf) dis( e) e( dis)\sf dis( e) e(
-	dis8-.) r^\solo r4
-	e8^\pizz^\tutti r r4
+	dis8-.) r r4
+	e8^\pizz r r4
 	R2*3
 % Bars 216 to 220
 	
 	\bar "||" \mark \default \key a \minor
-	\cueDuring #"cueVoiceVlnIImIII" #UP { 
-		\ni \cueClef "bass" R2
-		r4 r8 \no \cueClefUnset } c-.\p^\arco
+	R2
+	r4 r8 c-.\p^\arco
 	<a e'>4 r8 c-.
 % Bars 221 to 225
 	<a e'>4 r8 c-.
@@ -280,25 +257,17 @@ musicViolinIIMvtIII = \relative c'' {
 	f4 r
 	R2*3
 % Bars 246 to 250
-	\tempo "poco rit." \cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni R2
-		R \no
-	}
+	\tempo "poco rit." R2*2
+	
 	aes,2\pp(
 	g
 	\tempo "in tempo" aes8-.) r r4
 % Bars 251 to 255
-	R2*3
-	
-	
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni \MmrPos #-6 R2
-		R \no
-	}
+	R2*6
 % Bars 256 to 260
-	R2
+	
 	\tuplet 3/2 8 {d!16\f\<[( f b] f[ b d]) b[( d f] d[ f b])}
-	a,8->\ff^\tutti e'16-. e-. dis8-> d16-. d-.
+	a,8->\ff e'16-. e-. dis8-> d16-. d-.
 	c8-> b16-. b-. a8-> e16-. e-.
 	f8 e16 e a8 e16 e
 % Bars 261 to 265
@@ -310,14 +279,14 @@ musicViolinIIMvtIII = \relative c'' {
 % Bars 266 to 270
 	e8-. <c' e>-. <b e>\sf-. <b e>-.
 	<a c>\sf-. q-. <g c>\sf-. q-.
-	<f a>-. r^\solo r4
+	<f a>-. r r4
 	R2
-	gis8(\mf^\tutti a-\tweak X-offset #1 \dimD\>) a( b)
+	gis8(\mf\dimmarkup\> a) a( b)
 % Bars 271 to 275
 	e,( d) d( b)
 	b4 b\!
-	R2^\solo \bar "||" \key a \major
-	R2*14
+	R2 \bar "||" \key a \major
+	R2*15
 % Bars 276 to 280
 	
 % Bars 281 to 285
@@ -325,12 +294,11 @@ musicViolinIIMvtIII = \relative c'' {
 % Bars 286 to 290
 	
 	
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni R2 \bar "||"
-		\time 3/4 R2.
-		R \bar "||"
+	\bar "||"
+	\time 3/4 R2.*2
+	\bar "||"
 % Bars 291 to 295
-		\time 4/4 r2 r4 \no } r8 b'(\f
+	\time 4/4 r2 r4 r8 b'(\f
 	<d fis>\<^\div <cis e> <d fis> <cis e>) <cis e>4.( <b d>8)\! \bar "||"
 	\time 2/4 <ais cis>8-.\f r r4
 	<fis dis'>8-.^\unis r r4
@@ -338,26 +306,20 @@ musicViolinIIMvtIII = \relative c'' {
 % Bars 296 to 300
 	r4 d8\p^\pizz r \bar "||"
 	\tempo "Poco meno Allegro" cis8 r r4
-	R2*9
+	R2*17
 % Bars 301 to 305
 	
 % Bars 306 to 310
 	
-	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni R2
-		R
-		R
-		R
 % Bars 311 to 315
-		R
-		R
-		R
-		R \no
-	}
+	
+	
+	
+	
 	gis4.(^\arco a8)\>~
 % Bars 316 to 320
 	a4( gis)\!
-	a4.(\p ais8)\<
+	a4.( ais8)\<
 	b4.( bis8)
 	cis4.(\f d8)
 	a'-.\sf r r4
