@@ -3317,7 +3317,7 @@ cueVoiceVlnIImII = \relative c {
 	b) r2
 	R2.*68
 	% bar 107
-	s2 s8 f,(^\markup {Solo-Vlc.}
+	s2 s8 fis,(^\markup {Solo-Vlc.}
 	g4)(~ \tuplet 3/2 4 {g8 fis g)} ees' bes
 	g ees bes4 g
 	a8( d e! a) r4
@@ -3392,4 +3392,90 @@ cueVoiceVlnIImIII = \relative c {
 	a,4.(^\markup {Viol.I} ais8)
 	b4.( bis8)
 }
-
+%###############################################################################
+%#                            B R A T S C H E                                  #
+%###############################################################################
+cueVoiceBrmI = \relative c {
+	R1*23
+	% bar 24
+	s2 s4 d,(^\markup {Solo-Vlc.}
+	f1
+	e2) r4 cis'''(^\markup {Klar.I}
+	b) cis( gis) a(
+	b2 e,4) cis'(^\markup {Ob.I}
+	b) cis( gis) a(
+	a'2 e4) r
+	R1*21
+	% bar 52
+	r2 e,8(-\tweak X-offset #-3 ^\markup {Solo-Viol.} fis16 gis a b c d
+	e) a,( b c d e fis gis a) e( fis gis a b c d 
+	e) a,( b c d e fis gis a) e fis gis a e f g 
+	a4-. <a,, c e'>-. <d, f' f'>-. <d a'' fis'>-.
+	<g, b' g' g'>-. r <e' b' gis' gis'>-. r
+}
+cueVoiceBrmII = \relative c {
+	a'4(-\tweak X-offset #-1 ^\markup {Hr.I} d2^\fermata)
+	e'4(-\tweak X-offset #-2 ^\markup {Klar.I} a2)^\fermata
+	a,,8(^\markup {Solo-Viol.} d e a fis d)
+	R2.*37
+	% bar 41
+	f'4.^\markup {Fl.I} f4 f8~
+	f f4 f8( g) g~
+	g4. bes,8(^\markup {Klar.I} c) bes~
+	bes  bes( g') e( f) c
+}
+cueVoiceBrmIII = \relative c {
+	R2*60
+	% bar 61
+	s4 <bes'' aes'>4->~^\markup  {Solo-Viol.}
+	q8 <bes g'>16-.[ g,-.] <bes' aes'>4->~
+	q8 <bes g'>16-. g,-. <bes' g'>8( <a! fis'>16-.) c,-.
+	<a' fis'>-. ees( <fis ees'>) c( <ees c'>) a,( <c a'>8-.)\noBeam
+	R2*12
+	% bar 77
+	r4^\markup {Solo-Viol.} g'(
+	<c e> <d g>
+	<e c'>) <a f'>8-.( <g e'>-.)
+	<f d'>( a) <dis, b'>-.( a'-.)
+	<e g>4 <a, a'>~
+	q <a' f'>8-.( <g e'>-.)
+	<f d'>( a) r4
+	R2
+	R2.*2
+	R1*2
+	R2*27
+	% bar 116
+	r4_\markup {Hr.III} a,,8-. r
+	r4 a8-. r
+	R2*54
+	% bar 172
+	s4 s16 a16(-\tweak X-offset #-5 ^\markup {Solo-Viol} a' f
+	e d cis d f a d b
+	d a f e d[ a]) <c! a'>8(
+	<c' a'>) q4 <b gis'>8(
+	<c a'>) q4 <f d'>16( a
+	<e c'> a e c a[ c]) <d bes'>([ f]
+	<c a'> f c a) f([ <f' a>]) <e c'>[( <d bes'>]
+	<cis a'>8)\noBeam <cis e>8. <bes g'>16([ <a f'> <g e'>)]
+	<e cis'>( <f d'>) <e gis>( <f a>) r4
+	R2*100
+	% bar 281
+	s4 e(^\markup {Solo-Viol.}
+	<a cis> <b e>
+	<cis a'>) <fis d'>8-.( <e cis'>-.)
+	<d b'>( fis) <bis, gis'>-.( fis'-.)
+	<cis e>4 <fis, fis'>~
+	q <fis' d'>8-.( <e cis'>)-.
+	<d b'>( fis) r4
+	R2
+	R2.*2
+	R1*2
+	R2*14
+	% bar 307
+	s4 s8 b(^\markup {Ob.I}
+	a gis) r e(
+	gis fis) r d'(-\tweak X-offset #-3 ^\markup {Fl.I}
+	cis b a gis
+	eis fis) r fis'(
+	e d cis b)
+}

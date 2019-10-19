@@ -9,11 +9,9 @@ musicBratscheMvtII = \relative c' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceBrmII" #UP {
-		\ni R2._\fermataMarkup
-		\cueClef "treble" R2._\fermataMarkup
-		\MmrPos #-6 R2. \cueClefUnset \no
-	}
+	R2.\fermataMarkup
+	R2.\fermataMarkup
+	R2.
 	g8(_\pocofmadolce d) d( e) fis4
 	R2.
 % Bars 6 to 10
@@ -37,7 +35,7 @@ musicBratscheMvtII = \relative c' {
 % Bars 21 to 25
 	dis'4(_\moltop cis dis)
 	R2.
-	<e, g>4\<^\div <e g>4.(\> <g a>8)\!
+	<e, g>4\< <e g>4.(\> <g a>8)\!
 	<fis a>4( <e g> <d fis>)\<
 	g8( e) fis4 a8( fis)
 % Bars 26 to 30
@@ -47,45 +45,39 @@ musicBratscheMvtII = \relative c' {
 	<d fis>2\pp <e g>4
 	fis8( a fis) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
-	f!4^\pizz^\tutti r r 
-	R2.*7
+	f!4^\pizz r r 
+	R2.*13
 % Bars 36 to 40
 	
-	
-	
-	R2.*2^\solo
-	
 % Bars 41 to 45
-	\cueDuring #"cueVoiceBrmII" #UP {
-		\ni \cueClef "treble" R2.
-		R
-		R
-		R \no \cueClefUnset
-	}
+	
+	
+	
+	
 	aes8^\arco\p aes4 g aes8~
 % Bars 46 to 50
 	aes\< g4 f8( e) e(
-	f) f( e) e\! r ees-._\pdolce_(
+	f) f( e) e\! r ees-._\pdolce(
 	r ees-. r ees-.) r e-.
 	r f_\dimmarkup r g r f
 	r f r4 r \mark \default
 % Bars 51 to 55
 	R2.
-	r4 r <e des'>-\tweak X-offset #-2 _\pocof^\pizz
+	r4 r <e des'>_\pocof^\pizz
 	r <f c'>\p r
 	R2.
 	r4 r <d b'>_\pf
 % Bars 56 to 60
-	r <c c'>\p <a' cis>(^\div^\arco
+	r <c c'>\p <a' cis>(^\div
 	<bes d> <a c!>\< <g bes>
 	<f a>\> <e g>)\! <ees c'>^\pizz_\pf
-	r <d bes'>\p <a' c>^\arco^\div(
+	r <d bes'>\p <a' c>^\arco(
 	<bes d> <fis c'> <g bes>~
 % Bars 61 to 65
 	q <f! a>) <e des'>^\pizz\p
 	r <f  c'>\dimD\> r
 	<f ees'> r <f des'>\!
-	R2.^\tutti
+	R2.
 	r4 gis\pp r
 % Bars 66 to 70
 	b r^\div <fis a>\pp^\arco~( \bar "||" \key d \major
@@ -101,7 +93,7 @@ musicBratscheMvtII = \relative c' {
 		c4 a)
 	}>> <g b>4~(
 % Bars 71 to 75
-	q^\solo <e cis'!> <fis d'>)
+	q <e cis'!> <fis d'>)
 	<g e'>2( <d' fis>4
 	<e g>) e,^\pizz r
 	R2.*5
