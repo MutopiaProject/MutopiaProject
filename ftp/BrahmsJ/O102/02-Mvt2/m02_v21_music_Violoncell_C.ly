@@ -9,11 +9,9 @@ musicVioloncellMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceVlcmII" #DOWN {
-		\ni \MmrPos #-2 R2._\fermataMarkup
-		\MmrPos #-2 R2._\fermataMarkup \no
-	}
-	a8(_\pocofmadolce^\solo d e a fis d)
+	R2.\fermataMarkup
+	R2.\fermataMarkup
+	a8(_\pocofmadolce d e a fis d)
 	<<{\shape #'((0 . 1.5)(0 . 0.5)(0 . 0.5)(0 . 1.5)) Slur d4( g, a)} \\ {g g( d)}>>
 	a'8( d e fis d b)
 % Bars 6 to 10
@@ -53,7 +51,7 @@ musicVioloncellMvtII = \relative c {
 	a8\pp d) fis,4 a(~
 	a d,8) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
-	f!4^\pizz^\tutti r r
+	f!4^\pizz r r
 	R2.*3
 	
 	
@@ -61,20 +59,15 @@ musicVioloncellMvtII = \relative c {
 % Bars 36 to 40
 	R2.
 	r4 r g(\p^\arco
-	c,2) r4^\solo
-	R2.*6
+	c,2) r4
+	R2.*10
 % Bars 41 to 45
 	
-	
-	
-	\clef treble
-	\cueDuring #"cueVoiceVlcmII" #UP {
-		\ni \MmrPos #-6 R2.
 % Bars 46 to 50
-		R
-		\MmrPos #-6 R
-		\clef bass R
-		r4 \no } r8 bes'_\ppdim r b
+	
+	
+	
+	r4 r8 bes'_\ppdim r b
 	r c r4 c^\pizz \mark \default
 % Bars 51 to 55
 	f, r r
@@ -88,7 +81,7 @@ musicVioloncellMvtII = \relative c {
 	R2.
 	r4 r <<{ %bar 55 & 56
 		<b aes'>
-		r <c a'!>^\p
+		r <c a'!>
 	} \\ {
 		f,4 -\tweak X-offset #-4 -\tweak Y-offset #-7 _\pf~\>
 		f2\p
@@ -111,7 +104,7 @@ musicVioloncellMvtII = \relative c {
 		f2.~
 		f
 	}>>
-	des4^\pizz^\tutti r r
+	des4^\pizz r r
 	r cis'\pp r
 % Bars 66 to 70
 	cis r r \bar "||" \key d \major
@@ -120,7 +113,7 @@ musicVioloncellMvtII = \relative c {
 	a'4\f d r
 	r r d,_\mfcresc^\arco~
 % Bars 71 to 75
-	d2-\tweak X-offset #1 ^\solo d4(~
+	d2 d4(~
 	d cis b 
 	a) a^\pizz r
 	R2.*5
@@ -165,7 +158,7 @@ musicVioloncellMvtII = \relative c {
 	a2) aes4(
 	g2.)~
 	g
-	a!2\p\< a4(
+	a2\p\< a4(
 % Bars 111 to 115
 	g) fis( f)
 	e8\f^\pizz e' a, a' r4

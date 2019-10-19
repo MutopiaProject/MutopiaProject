@@ -57,6 +57,7 @@ ffmarc = \markup { \dynamic ff \italic {marc.}}
 fmarc = \markup { \dynamic f \italic marc.}
 fsemprepiu = \markup { \dynamic f \italic {sempre più}}
 mfcresc = \markup { \dynamic mf \italic cresc.}
+mfdim = \markup {\dynamic mf \italic dim.}
 pcresc = \markup { \dynamic p \italic cresc.}
 pcrescmolto = \markup { \dynamic p \italic {cresc. molto}}
 pdim = \markup { \dynamic p \italic dim.}
@@ -70,6 +71,7 @@ pmarccresc = \markup { \dynamic p \italic { marc. cresc.}}
 sempref = \markup { \italic sempre \dynamic f}
 ppdolce = \markup { \dynamic pp \italic dolce }
 unis=^\markup {unis.}
+ppsempre = \markup { \dynamic pp \italic {sempre}}
 
 crescD = #(make-dynamic-script (markup #:normal-text #:italic "cresc."))
 dimD = #(make-dynamic-script (markup #:normal-text #:italic "dim."))
@@ -91,7 +93,7 @@ pmamarcD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "m
 pmarcD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "marc."))
 semprefD = #(make-dynamic-script (markup #:normal-text #:italic "sempre" #:dynamic "f"))
 pocofD = #(make-dynamic-script (markup #:normal-text #:italic "poco" #:dynamic "f"))
-
+ppsempreD = #(make-dynamic-script (markup #:dynamic "pp" #:normal-text #:italic "sempre"))
 
 fpp = #(make-dynamic-script "fpp")
 rf = #(make-dynamic-script "rf")

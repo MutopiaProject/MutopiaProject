@@ -1,3 +1,28 @@
+%
+% Flote I             |    29
+% Flote II            |   105
+% Oboe I              |   352
+% Oboe II             |  
+% Klarinet I          |  
+% Klarinet II         |  
+% Fagot I             |  
+% Fagot II            |  
+% Horn I              |  
+% Horn II             |  
+% Horn III            |  
+% Horn IV             |  
+% Trumpet I           |  
+% Trumpet II          |  
+% Pauken              |  
+% Solo Violin         |  
+% Solo Violoncelle    |  
+% Violin I            |  
+% Violin II           |  
+% Bratsche            |  
+% Violoncelle         |  
+% Contrabass          |  
+%
+%
 %###############################################################################
 %#                                F L O T E N                                  #
 %###############################################################################
@@ -3479,3 +3504,60 @@ cueVoiceBrmIII = \relative c {
 	eis fis) r fis'(
 	e d cis b)
 }
+%###############################################################################
+%#                        V I O L O N C E L L                                  #
+%###############################################################################
+cueVoiceVlcmI = \relative c {
+	R1*23
+	% bar 24
+	s2 s4 d,(^\markup {Solo-Vlc.}
+	f1
+	e2) r4 cis'''(^\markup {Klar.I}
+	b) cis( gis) a(
+	b2 e,4) cis'(^\markup {Ob.I}
+	b) cis( gis) a(
+	a'2 e4) r
+	R1*21
+	% bar 52
+	r2 e,,,8(-\tweak X-offset #-3 ^\markup {Solo-Vlc.} fis16 gis a b c d
+	e) a,( b c d e fis gis a) e( fis gis a b c d 
+	e) a,( b c d e fis gis a) e fis gis a e f g 
+	a4-. a,-. <d a'>-. <d, c'>-.
+	<g, d' b'>-. r <e b' gis' d'>-. r
+}
+cueVoiceVlcmII = \relative c {
+	a'4^(-\tweak X-offset #-3 ^\markup {Hr.I} d2^\fermata)
+	e4^( a2)^\fermata
+	R2.*42
+	% bar 45
+	f4(~^\markup {Solo-Vlc.} \tuplet 3/2 4 {f8 e f g e f~}
+	\tuplet 3/2 4 {f e f d' c b c) e,( g}
+	\tuplet 3/2 4 {des' c b c) e,( g des' c b)}
+	r8^\markup {Br.} ees,,-.( r ees-.) r e
+	r f r2
+}
+cueVoiceVlcmIII = \relative c {
+	R2*60
+	% bar 61
+	s4 s8 <g f'>16-.-\tweak X-offset #-3 ^\markup {Solo-Vlc.} c,-.
+	<f' des'>4.-> <c e>16-. c,-.
+	<e' c'>4.-> <ees c'>16-. c,-.
+	<ees' c'>-.\noBeam c,( <c' a'>) c,( <a' fis'>)[ c,(] <fis ees'!>8-.)
+	R2*20
+	R2.*2
+	R1*2
+	R2*27
+	% bar 116
+	a8.\rest^\markup {Pk.} a16-. a8-. a\rest
+	a8.\rest a16-. a8-. a\rest
+	R2*56
+	% bar 174
+	s4 s8 <c'! a'>8(-\tweak X-offset #-6 ^\markup {Solo-Viol.}
+	<c' a'>) q4 <b gis'>8(
+	<c a'>) q4 <f d'>16( a
+	<e c'> a e c a[ c]) <d bes'>( f
+	<c a'> f c a) f[( <f' a>)] <e c'>( <d bes'>
+	<cis a'>8)\noBeam <cis e>8. <bes g'>16( <a f'> <g e'>)
+	<e cis'>( <f d'> <e gis> <f a>) r4
+}
+
