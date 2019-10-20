@@ -9,33 +9,23 @@ musicKontrabassMvtI = \relative c' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc^\tutti d8 b4 r
+	e4._\fmarc d8 b4 r
 	c4. b8 e,4 r
 	a-. r b-. r
 	c-. a-. f'-. d-. 
-	\textLengthOn <>_\markup {(in modo d'un recit.)} R1*19^\markup {Solo-Vlc.} \textLengthOff
+	R1\fermataMarkup
 % Bars 6 to 10
-	
+	R1*51
 % Bars 11 to 15
 	
 % Bars 16 to 20
 	
 % Bars 21 to 25
 	
-	
-	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \MmrPos #4 R1
-		\MmrPos #4 R
 % Bars 26 to 30
-		<< R {s2^\tutti s4 \clef treble s} >>
-		\MmrPos #4 R1
-		\MmrPos #4 R
-		R
-		R \no
-	}
+	
 % Bars 31 to 35
-	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff \clef bass
+	
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -44,15 +34,9 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \MmrPos #-8 R1
-		R
-		\clef tenor R
-		R
 % Bars 56 to 60
-		\clef bass \MmrPos #-8 R \mark \default \no
-	}
-	a,4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
+	\mark \default
+	a,4.\ff b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
@@ -118,7 +102,7 @@ musicKontrabassMvtI = \relative c' {
 	f''8( d) r4 fis8( dis) r4
 % Bars 111 to 115
 	e-! r e,,-! r \mark \default
-	a4\fp\>-.^\solo r8 b-. c4-.\! r
+	a4\fp\>-. r8 b-. c4-.\! r
 	R1*3
 	
 	
@@ -159,20 +143,19 @@ musicKontrabassMvtI = \relative c' {
 	
 	
 % Bars 146 to 150
-	R1_\gp
-	R1*5
+	R1^\gp
+	R1*9
 	
 	
 	
 % Bars 151 to 155
 	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \clef tenor R1
-		R
-		R
-		R
+	
+	
+	
+	
 % Bars 156 to 160
-		r2 r4 \no } \clef bass c-.^\arco(
+	r2 r4 c-.^\arco(
 	r cis-. r a-.)
 	r d(-. r f-.\<
 	r fis-. r d)-.\!
@@ -221,7 +204,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 196 to 200
 	
-	g2^\arco\f^\tutti b
+	g2^\arco\f b
 	e4-! a,-! r2
 	g2 d'
 	g4-! g-! r2
@@ -246,9 +229,9 @@ musicKontrabassMvtI = \relative c' {
 % Bars 216 to 220
 	cis8-. r r4 r g''->
 	e-> cis-> ais-> g-> \mark \default
-	fis,2\mf^\solo g4 r
+	fis,2\mf g4 r
 	b2 c!4 r
-	R1*20
+	R1*22
 % Bars 221 to 225
 	
 % Bars 226 to 230
@@ -257,16 +240,11 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 236 to 240
 	
-	
-	
-	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \clef treble R1
 % Bars 241 to 245
-		\clef bass R\mark \default
-		\clef treble R
-		R
-		r2 r4 \no } \clef bass r8 cis\pp^\pizz
+	\mark \default
+	R1*2
+	
+	r2 r4 r8 cis\pp^\pizz
 	d ees r bes c! d r d
 % Bars 246 to 250
 	g,8 r r4 r2
@@ -284,12 +262,12 @@ musicKontrabassMvtI = \relative c' {
 	ees r r  des
 	ces\ff r r ces
 	ees4\sf r r2
-	ees4\sf r r8 ees'\ff-.^\arco^\tutti des-. c-.
+	ees4\sf r r8 ees'\ff-.^\arco des-. c-.
 	bes4 ges2 bes4
 % Bars 261 to 265
 	ges ees2 ges4
-	bes,4-!\sf r r2^\solo
-	bes4-!\sf r r8 bes'-.^\tutti aes-. g-.
+	bes,4-!\sf r r2
+	bes4-!\sf r r8 bes'-. aes-. g-.
 	f4-.\sf r g-.\sf r
 	aes_\benmarc-. f-. des'-. bes-.
 % Bars 266 to 270
@@ -297,7 +275,7 @@ musicKontrabassMvtI = \relative c' {
 	c des,-. bes'-. g-.
 	\times 2/3 {c,-. d-. e!-.} \times 2/3 {f-. g-. aes-.}
 	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
-	aes,1\fpp^\solo(
+	aes,1\fpp(
 % Bars 271 to 275
 	gis)(
 	e!)~
@@ -321,7 +299,7 @@ musicKontrabassMvtI = \relative c' {
 	d,-! r d-! r
 	g,-! r r2
 	e4-! r r2 \mark \default 
-	a4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
+	a4.\ff b8 c4 r
 % Bars 291 to 295
 	d4. e8 f4 r
 	g2 a4. f8
@@ -333,7 +311,7 @@ musicKontrabassMvtI = \relative c' {
 	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
 	\times 2/3 {f2 d4} \times 2/3 {g2 e4}
 	a2 f,
-	e\p^\solo e'
+	e\p e'
 % Bars 301 to 305
 	e e
 	fis gis
@@ -353,8 +331,8 @@ musicKontrabassMvtI = \relative c' {
 	R1*2
 	
 % Bars 316 to 320
-	R1_\gp
-	R1*19
+	R1^\gp
+	R1*25
 	
 	
 	
@@ -365,15 +343,10 @@ musicKontrabassMvtI = \relative c' {
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \clef treble R1
-		R
-		\MmrPos #-6 R
-		R
-		R
+	
 % Bars 341 to 345
-		R \mark \default
-		r4 \no } \clef bass gis,-.\mf^\arco r cis-.
+	\mark \default
+	r4 gis,-.\mf^\arco r cis-.
 	r b-. r d-.
 	r cis-. r fis-.
 	r e-. r e,\p~
@@ -403,7 +376,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 366 to 370
 	\mark \default
-	e,2\f-\tweak X-offset #1 ^\arco-\tweak X-offset #1 ^\tutti gis
+	e,2\f^\arco gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2
@@ -438,7 +411,7 @@ musicKontrabassMvtI = \relative c' {
 	e e4 e e e8~
 	e4 e2 e'4
 % Bars 396 to 400
-	a,4-.\fp^\solo r8 b-. c4-. r
+	a,4-.\fp r8 b-. c4-. r
 	R1*5
 	
 	
