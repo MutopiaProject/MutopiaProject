@@ -9,8 +9,10 @@ musicFloteIMvtIII = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	\new CueVoice { \set instrumentCueName  = "Solo-Vlc."}
-	\cueDuringWithClef "cueVoiceFloteImIII" #UP #"bass" {R2*2}
+	\cueDuring "cueVoiceFloteImIII" #UP {
+		\ni \clef bass R2
+		R \no \clef treble
+	}
 	R2*22
 % Bars 6 to 10
 	
@@ -20,16 +22,22 @@ musicFloteIMvtIII = \relative c''' {
 	
 % Bars 21 to 25
 	
-% Bars 26 to 30
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
-	\cueDuring "cueVoiceFloteImIII" #UP {R2*4}
 	
-	\tempo "poco rit." \new CueVoice { \set instrumentCueName  = "Klar."}
-	\cueDuring "cueVoiceFloteImIII" #DOWN {R2*2}
+	
+	
+	\cueDuring #"cueVoiceFloteImIII" #UP {
+		\ni R2
+% Bars 26 to 30
+		R
+		R
+		R
+		R^\pocorit
+		R \no
+	}
 % Bars 31 to 35
 	c2\pp~
 	c(
-	\tempo "in tempo" a8) r r4
+	a8)^\intempo r r4
 	R2*5
 % Bars 36 to 40
 	
@@ -72,19 +80,22 @@ musicFloteIMvtIII = \relative c''' {
 	
 % Bars 76 to 80
 	
+	
+	\cueDuring #"cueVoiceFloteImIII" #UP {
+		\ni R2
+		R
+		R
 % Bars 81 to 85
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
-	\cueDuring "cueVoiceFloteImIII" #DOWN {
-		R2 \override MultiMeasureRest.staff-position = #-4 
-		R2*7 
-		\bar "||" \time 3/4
-		R2. \revert MultiMeasureRest.staff-position 
+		R
+		R
+		R
+		R
+		R \bar "||" 
+		\time 3/4 R2.
 % Bars 86 to 90
 		R2.
-		\bar "||" \time 4/4
-		r2 r4
-	}
-	 fis'(\f
+		\bar "||" 
+		\time 4/4 r2 r4 \no } fis'(\f
 	g\< a ais b) \bar "||" \time 2/4
 	cis8-.\f r r4
 	a8-. r r4
@@ -108,8 +119,10 @@ musicFloteIMvtIII = \relative c''' {
 	R2*2^\tutti
 % Bars 106 to 110
 	
-	\new CueVoice { \set instrumentCueName  = "Ob.I"}
-	\cueDuring "cueVoiceFloteImIII" #UP {R2*2}
+	\cueDuring "cueVoiceFloteImIII" #UP {
+		\ni R2
+		R \no
+	}
 	e'8->\p^\solo d16-. e-. d8-> e16-. d-.
 	e8-> d16-. e-. d( f) d-. b-.
 % Bars 111 to 115
@@ -117,23 +130,28 @@ musicFloteIMvtIII = \relative c''' {
 	r a16(\p\> e') r8\!
 	R2*3
 % Bars 116 to 120
-	\new CueVoice { \set instrumentCueName  = "Hr.III"}
-	\cueDuring "cueVoiceFloteImIII" #DOWN { R2*2^\tutti }
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
-	\cueDuring "cueVoiceFloteImIII" #UP {
-		R2 \bar "||" 
-		\key d \minor R2*3
+	\cueDuring "cueVoiceFloteImIII" #UP { 
+		\ni \MmrPos #4 R2^\tutti 
+		\MmrPos #4 R
+		R \bar "||" 
+		\key d \minor R2
+		R
+% Bars 121 to 125
+		R \no
 	}
 	R2*12
-% Bars 121 to 125
-	
 % Bars 126 to 130
 	
 % Bars 131 to 135
-	\new CueVoice { \set instrumentCueName  = "Viol.I"}
-	\cueDuring "cueVoiceFloteImIII" #UP { R2*3 }
-% Bars 136 to 140
 	
+	
+	
+	\cueDuring "cueVoiceFloteImIII" #UP { 
+		\ni R2
+		R
+% Bars 136 to 140
+		R \no
+	}
 	\times 2/3 {a4(\ff^\tutti g8)} \times 2/3 {f( g a)}
 	\times 2/3 {a4( g8)} \times 2/3 {f( g a)}
 	a4 e
@@ -145,7 +163,7 @@ musicFloteIMvtIII = \relative c''' {
 	\times 2/3 {f4( e8)} \times 2/3 {c( d e)}
 	b4 a
 % Bars 146 to 150
-	R2*2^\solo
+	R2*2-\tweak X-offset #0 ^\solo
 	\mark \default
 	R2*18
 % Bars 151 to 155
@@ -155,14 +173,15 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 161 to 165
 	
 % Bars 166 to 170
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
 	\cueDuring "cueVoiceFloteImIII" #UP { 
-		R2 \override MultiMeasureRest.staff-position = #4 
-		R2*5 \revert MultiMeasureRest.staff-position r4 r8
-	}
+		\ni \MmrPos #6 R2 
+		\MmrPos #6 R
+		\MmrPos #6 R
+		\MmrPos #6 R
+		\MmrPos #6 R
 % Bars 171 to 175
-	
-	a,8(\f
+		\MmrPos #6 R
+		r4 r8 \no } a,8(\f
 	a'-.) a4 gis8(
 	a) a4 r8
 	R2
@@ -177,10 +196,14 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 186 to 190
 	
 % Bars 191 to 195
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
-	\cueDuring "cueVoiceFloteImIII" #UP { R2*4 r4}
+	
+	\cueDuring "cueVoiceFloteImIII" #UP { 
+		\ni R2
+		R
+		R
+		R
 % Bars 196 to 200
-	 r8. a'16\ff^\tutti
+		r4 r8. \no } a'16\ff^\tutti
 	a4.. a16
 	a4.. a16
 	\times 2/3 {a4( g8)} \times 2/3 {f( g a)}
@@ -218,8 +241,13 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 226 to 230
 	
 % Bars 231 to 235
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
-	\cueDuring "cueVoiceFloteImIII" #UP { R2*2 }
+	
+	
+	
+	\cueDuring #"cueVoiceFloteImIII" #UP {
+		\ni R2
+		R \no
+	}
 % Bars 236 to 240
 	e8->\p d16-. e-. d8-> e16-. d-.
 	e8-> d16-. e-. d( f) d-. b-. \mark \default
@@ -232,16 +260,18 @@ musicFloteIMvtIII = \relative c''' {
 	d16( c bes c) a4
 	R2*2
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	\MmrLength #10 R2*4^\pocorit
 	
 	
 	
-	\tempo "in tempo" R2*4
+	\MmrLength #10 R2*4^\atempo
 % Bars 251 to 255
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
-	\cueDuring "cueVoiceFloteImIII" #UP { \override MultiMeasureRest.staff-position = #-6 R2 \revert MultiMeasureRest.staff-position }
 	
 	
+	
+	\cueDuring #"cueVoiceFloteImIII" #UP {
+		\ni R2 \no
+	}
 	e''2_\mfcresc(
 % Bars 256 to 260
 	f)(
@@ -269,17 +299,20 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 276 to 280
 	
 % Bars 281 to 285
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
+	
+	
+	
+	
 	\cueDuring "cueVoiceFloteImIII" #UP {
-		R2
+		\ni R2
 % Bars 286 to 290
 		R
 		R
-		R \bar "||" \time 3/4
-		R2.*2
-		\bar "||" \time 4/4
+		R \bar "||" 
+		\time 3/4 R2.
+		R \bar "||" 
 % Bars 291 to 295
-	e4\rest } cis(_\pcresc d dis
+		\time 4/4 a4\rest \no } cis,(_\pcresc d dis
 	e\< fis fisis gis) \bar "||" \time 2/4
 	ais8-.\f r r4
 	fis8-. r r4

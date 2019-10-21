@@ -9,7 +9,9 @@ musicFloteIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\new CueVoice { \set instrumentCueName  = "Hr.I"} \cueDuring "cueVoiceFloteImII" #UP {\override MultiMeasureRest.staff-position = #0 R2.\fermataMarkup \revert MultiMeasureRest.staff-position}
+	\cueDuring "cueVoiceFloteImII" #UP {
+		\ni \MmrPos #4 R2.\fermataMarkup 
+	}
 	<< { e4( a2)\fermata } {s8\p\< s s s\> s s\!} >>
 	R2.*4^\solo
 	
@@ -24,9 +26,10 @@ musicFloteIMvtII = \relative c''' {
 	
 % Bars 16 to 20
 	
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol"}
-	\cueDuring "cueVoiceFloteImII" #DOWN {R2.*2 r4 r8}
-	fis'(\p a b)
+	\cueDuring "cueVoiceFloteImII" #DOWN {
+		\ni R2.
+		R
+		r4 r8 \no } fis'(\p a b)
 	c( a fis dis e g)
 % Bars 21 to 25
 	a(\p fis) g( e) fis( b)
@@ -36,9 +39,10 @@ musicFloteIMvtII = \relative c''' {
 % Bars 26 to 30
 	
 	
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol"}
-	\cueDuring "cueVoiceFloteImII" #DOWN {R2.*2 r4 r }
-	 a'_\pdolce(~ \bar "||" \mark \default \key f \major
+	\cueDuring "cueVoiceFloteImII" #DOWN {
+		\ni R2.
+		R
+		r4 r \no } a'_\pdolce-\tweak X-offset #-3.6 ^\tutti(~ \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	a bes c
 	bes a) d(
@@ -124,12 +128,14 @@ musicFloteIMvtII = \relative c''' {
 % Bars 101 to 105
 	
 % Bars 106 to 110
-	\new CueVoice { \set instrumentCueName  = "Solo-Vlc"}
-	\cueDuringWithClef "cueVoiceFloteImII" #UP #"bass" {R2.*4 r2}
-	\new CueVoice { \set instrumentCueName  = "Solo-Viol."}
-	\cueDuring "cueVoiceFloteImII" #UP {r4 r r}
+	\cueDuring #"cueVoiceFloteImII" #UP {
+		\ni \clef bass R2.
+		R
+		R
+		R
+		<< R {s2 \clef treble s4} >>
 % Bars 111 to 115
-	 d(~\f
+		r4 r \no } d(~\f
 	d cis\dimD\> b
 	a g e)~
 	e(\p d) r

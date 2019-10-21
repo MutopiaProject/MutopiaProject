@@ -28,94 +28,105 @@
 %###############################################################################
 cueVoiceFloteImI = \relative c, {
 	R1*22
-	r4 <e b' d a'>_\pizz gis' f
+	% bar 23
+	r4 <e b' d a'>_\pizz^\markup {Solo-Vlc.} gis' f
 	d b gis d(_\arco
 	f1\espressivo
-	e2) r4 cis'''4(
+	e2) r4 cis'''4(^\markup {Klar.}
 	b) cis( gis) a(
 	b2 e,4) r4
 	R1*23
-	r2 e8^( fis16 gis a b c d
+	% bar 52
+	r2 e8^(^\markup {Solo-Viol.} fis16 gis a b c d
 	e) a,^( b c d e fis gis a) e^( fis gis a b c d
 	e) a,^( b c d e fis gis a) e fis gis a e f g
 	a4-. <c,, e'>-. <f f'>-. <a fis'>
 	<g g'>-. r <gis gis'>-. r
 	R1*63
-	fis,2( g
+	% bar 120
+	fis,2(^\markup {Klar.I} g
 	gis a)
 	b( c
 	cis d)
-	R1*38
-	\afterGrace f,2.( {g16[ f])} e8( f)
+	R1*37
+	% bar 161
+	s2 s4 e,(_\markup {Solo-Vlc.}
+	\afterGrace f2.)( {g16[ f])} e8( f)
 	g4 r8 g( gis4) r8 gis(
 	a4 g! f e
 	d) r r e( 
 	d) r r2
 	R1*64
-	r2 r4 \tuplet 3/2 4 {g'8( a b}
+	% bar 231
+	r2^\markup {Solo-Viol.} r4 \tuplet 3/2 4 {g'8( a b}
 	\tuplet 3/2 4 {e, fis g cis, d e ais, b c} e,4)
 	\tuplet 3/2 4 {d8( cis b e d cis fis e d)} r4
 	\tuplet 3/2 4 {b'8( a g cis b ais} d8) r r4
 	R1*40
-	r2 ees(~
+	% bar 276
+	s2 ees(~^\markup {Solo-Vlc.}
 	ees1~
 	ees2 b!
 	d!)~ d4. cis8(
 	d e f!) r r2
 	R1*23
-	r2 r4 a,(
+	% bar 303
+	s2 s4 a,_(^\markup {Solo-Viol.}
 	c,2. b4)
 	\tuplet 3/2 4 {a8 c f} r4 r2
 	R1*30
-	r2 r4 cis'4^(
+	% bar 336
+	s2 s4 cis'4^(^\markup {Solo-Vlc.}
 	b8) r cis4^( gis8) r a4^(
 	b2 e,4) cis'^(
 	b8) r cis4^( gis8) r a4^(
 	a'1
-	e2.) <fis fis'>4^(
+	e2.) <fis fis'>4^(^\markup {Solo-Viol.}
 	<fisis fisis'>) <gis gis'>4^(~ q16 fis' e dis) r4
 	R1*57
-	a,2(~ a8 c b a)
+	% bar 400
+	a,2(~^\markup {Solo-Viol.} a8 c b a)
 	a2(~ a8 c b a)
 	R1*17
-	\tuplet 3/2 4 {f''8 e d c b a f e d c b a}
+	% bar 419
+	\tuplet 3/2 4 {f''8^\markup {Solo-Viol.} e d c b a f e d c b a}
 	c,16( e a c) e,( a c e) a,(  c e a) r4
 }
 cueVoiceFloteImII = \relative c' {
-	a4( d2)\fermata
+	a4(_\markup {Hr.I} d2)\fermata
 	R2.*15
 	% bar 17
-	a'8^( fis d a) e'4
+	a'8^(_\markup {Solo-Viol.} fis d a) e'4
 	a8^( fis d a) e'4
 	d4. r8 r4
 	R2.*8
 	% bar 28
-	a'8^( fis d a) e'4
+	a'8_(_\markup {Solo-Viol.} fis d a) e'4
 	a8^( fis d a) e'4
 	d4. r8 r4
 	R2.*75
 	% bar 106
-	g,4~( \tuplet 3/2 4 {g8 fis g~ g fis g}
+	g,4~(-\tweak X-offset #-6 ^\markup {Solo-Vlc.} \tuplet 3/2 4 {g8 fis g~ g fis g}
 	\tuplet 3/2 4 {a fis g~} g8) g4 fis8(
 	g4)(~ \tuplet 3/2 4 {g8 fis g)} ees' bes
 	g ees bes4 g
-	a8([ d e! a)] a( d
+	a8([ d e! a)] a(^\markup {Solo-Viol.} d
 	e[ a)]~ a([ a']) r4
 }
 cueVoiceFloteImIII = \relative c' {
-	a8( e'16) e-. dis8( d16-.) d-.
+	a8(^\markup {Solo-Vlc.} e'16) e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8( e16-.) e-.
 	R2*22
 	% bar 25
-	f''8( e16 f) e4
+	f''8(^\markup {Solo-Viol.} e16 f) e4
 	d16( c bes c) a4
 	a'8( g16 a) g4
 	f16( e d e) c4
-	<a c>2~
+	<a c>2~_\markup {Klar.}
 	q
 	R2*46
 	% bar 78
-	r4 g^(
+	r4^\markup {Solo-Viol.} g^(
 	<c e> <d g>
 	<e c'>) <a f'>8-.^( <g e'>-.)
 	<f d'>^( a) <dis, b'>-.^( a'-.)
@@ -128,22 +139,25 @@ cueVoiceFloteImIII = \relative c' {
 	\time 4/4 <e c'> <d b'> <e c'> <d b'>) <d b'>4 r4
 	R1
 	R2*18
-	c'8-> b16-. c-. b8-> c16-. b-.
+	% bar 107
+	c'8-> ^\markup {Ob.I} b16-. c-. b8-> c16-. b-.
 	c8-> b16-. c-. b( a') g-. fis-.
 	R2*7
-	r4 \stemUp a,,8-. r
-	r4 a8-. r
-	r4 r8. a''16-. \bar "||" \key d \minor
+	% bar 116
+	a,,4\rest-\tweak X-offset #-5 _\markup {Hr.III} a8-. a\rest
+	a4\rest a8-. a\rest
+	r4-\tweak X-offset #-1 ^\markup {Solo-Viol.} r8. a''16-. \bar "||" \key d \minor
 	a8[-. r16 <f a>-.] q8[-. r16 q-.]
 	\tuplet 3/2 4 {q4( <e g>8) <d f>( <e g> <f a>)}
 	\tuplet 3/2 4 {<f a>4( <ees g>8)} r4
 	R2*12
-	r8 f-.[ d-. b'-.]
+	% bar 134
+	r8^\markup {Viol.I} f-.[ d-. b'-.]
 	a8-.[ r16 a-.] a8-.[ r16 a-.] 
 	a8-.[ r16 a-.] a8-.[ r16 a-.] 
 	R2*29
 	% bar 166
-	r4 r8 a,,(
+	s4 s8 a,,(^\markup {Solo-Viol.}
 	<f' a>) <d a'>4 <bes gis'>8(
 	<a a'>) <f' a>4 <f d'>8(
 	<f c'>) <c f>4 <d bes'>8(
@@ -152,21 +166,21 @@ cueVoiceFloteImIII = \relative c' {
 	a) a8. r16 r8
 	R2*19
 	% bar 192
-	r4 b'(
+	s4 b'(^\markup {Viol.I}
 	a) g(
 	dis) e(
 	bes!) a(
 	a) r
 	R2*37
 	% bar 234
-	c'8-- b16-. c-. b8-- c16-. b-.
+	c'8--^\markup {Solo-Viol.} b16-. c-. b8-- c16-. b-.
 	c8-- b16-. c-. b( a') g-. fis-.
 	R2*18
 	% bar 254
-	\tuplet 3/2 8 {gis,,,16([ b e] b[ e gis]) e([ gis b] gis[ b e])}
+	\tuplet 3/2 8 {gis,,,16([^\markup {Solo-Viol.} b e] b[ e gis]) e([ gis b] gis[ b e])}
 	R2*30
 	% bar 285
-	r4 <fis, fis'>(
+	s4 <fis, fis'>(^\markup {Solo-Viol.}
 	<fis fis'>) <fis' d'>8-.( <e cis'>-.)
 	<d b'>( fis) <fis fis'>-.( <e e'>-.)
 	<d d'>( <cis cis'> <b b'>) fis'( \bar "||"
@@ -176,112 +190,123 @@ cueVoiceFloteImIII = \relative c' {
 }
 cueVoiceFloteIImI = \relative c, {
 	R1*22
-	r4 <e b' d a'>_\pizz gis' f
+	% bar 23
+	r4 <e b' d a'>_\pizz^\markup {Solo-Vlc.} gis' f
 	d b gis d(_\arco
 	f1\espressivo
-	e2) r4 cis'''4(
+	e2) r4 cis'''4(^\markup {Klar.}
 	b) cis( gis) a(
 	b2 e,4) r4
 	R1*23
-	r2 e8^( fis16 gis a b c d
+	% bar 52
+	r2^\markup {Solo-Viol.} e8^( fis16 gis a b c d
 	e) a,^( b c d e fis gis a) e^( fis gis a b c d
 	e) a,^( b c d e fis gis a) e fis gis a e f g
 	a4-. <c,, e'>-. <f f'>-. <a fis'>
-	<g g'>-. r <gis gis'>-. r
+	<g g'>-. g\rest <gis gis'>-. g\rest
 	R1*63
-	fis,2( g
+	% bar 120
+	fis,2(^\markup {Klar.I} g
 	gis a)
 	b( c
 	cis d)
 	R1*8
-	r4 e-. r f-.
-	R1*29
-	\afterGrace f,2.( {g16[ f])} e8( f)
+	% bar 132
+	r4^\markup {Fl.I} e-. r f-.
+	R1*28
+	% bar 161
+	s2 s4 e,(-\tweak X-offset #-4 _\markup {Solo-Vlc.}
+	\afterGrace f2.)( {g16[ f])} e8( f)
 	g4 r8 g( gis4) r8 gis(
 	a4 g! f e
 	d) r r e( 
 	d) r r2
 	R1*64
-	r2 r4 \tuplet 3/2 4 {g'8( a b}
+	% bar 231
+	r2^\markup {Solo-Viol.} r4 \tuplet 3/2 4 {g'8( a b}
 	\tuplet 3/2 4 {e, fis g cis, d e ais, b c} e,4)
 	\tuplet 3/2 4 {d8( cis b e d cis fis e d)} r4
 	\tuplet 3/2 4 {b'8( a g cis b ais} d8) r r4
 	R1*15
-	r2 r4 r8 fis-.
-	g-.[ a-. bes-.] cis,,-. d-.[ e-. fis-.] r
-	f!4\trill  f'\trill f,\trill r
+	% bar 251
+	s2 s4 s8 fis-.^\markup {Ob.I}
+	g-.[ a-. bes-.] cis,,-.^\markup {Fag.I} d-.[ e-. fis-.] r
+	f!4\trill^\markup {Solo-Viol.}  f'2\trill f,4\trill
 	R1*22
-	r2 ees'(~
+	% bar 275
+	s2 ees'(~^\markup {Solo-Vlc.}
 	ees1~
 	ees2 b!
 	d!)~ d4. cis8(
 	d e f!) r r2
 	R1*23
 	% bar 303
-	r2 r4 a,(
+	r2 r4 a,(^\markup {Solo-Viol.}
 	c,2. b4)
-	\tuplet 3/2 4 {a8 c f} e'4-. r f-.
-	\tuplet 3/2 4 {a,,8 c g'!} r4 r2
+	\tuplet 3/2 4 {a8 c f} e'4-.^\markup {Fl.I} r f-.
+	\tuplet 3/2 4 {a,,8^\markup {Solo-Viol.} c g'!} r4 r2
 	R1*10
 	% bar 317
-	cis'4.( b8 e,2)
+	cis'4.(^\markup {Fl.I} b8 e,2)
 	R1*18
 	% bar 336
-	r2 r4 cis4^(
+	s2 s4 cis4^(_\markup {Solo-Vlc.}
 	b8) r cis4^( gis8) r a4^(
 	b2 e,4) cis'^(
 	b8) r cis4^( gis8) r a4^(
 	a'1
-	e2.) <fis fis'>4^(
+	e2.) <fis fis'>4^(^\markup {Solo-Viol.}
 	<fisis fisis'>) <gis gis'>4^(~ q16 fis' e dis) r4
 	R1*57
-	a,2(~ a8 c b a)
+	% bar 400
+	a,2(~^\markup {Solo-Viol.} a8 c b a)
 	a2(~ a8 c b a)
 	R1*17
-	\tuplet 3/2 4 {f''8 e d c b a f e d c b a}
+	% bar 419
+	\tuplet 3/2 4 {f''8^\markup {Solo-Viol.} e d c b a f e d c b a}
 	c,16( e a c) e,( a c e) a,(  c e a) r4
 }
 cueVoiceFloteIImII = \relative c' {
-	a4( d2)\fermata
+	a4(_\markup {Hr.I} d2)_\fermata
 	R2.*15
 	% bar 17
-	a'8^( fis d a) e'4
+	a'8^(^\markup {Solo-Viol.} fis d a) e'4
 	a8^( fis d a) e'4
-	d4. fis'8([ a b)]
-	c( a fis dis e g)
+	d4. fis'8^([^\markup {Fl.I} a b)]
+	c^( a fis dis e g)
 	R2.*7
 	% bar 28
-	a,8^( fis d a) e'4
+	a,8^(^\markup {Solo-Viol.} fis d a) e'4
 	a8^( fis d a) e'4
 	d4. r8 r4
 	R2.*32
 	% bar 63
-	r4 r f(~
+	r4 r f(~_\markup {Fag.I}
 	f fis gis
 	fis eis) r4
 	R2.*40
 	% bar 106
-	g,4~( \tuplet 3/2 4 {g8 fis g~ g fis g}
+	g,4~_(^\markup {Solo-Vlc.} \tuplet 3/2 4 {g8 fis g~ g fis g}
 	\tuplet 3/2 4 {a fis g~} g8) g4 fis8(
 	g4)(~ \tuplet 3/2 4 {g8 fis g)} ees' bes
 	g ees bes4 g
-	a8([ d e! a)] a( d
-	e[ a)]~ a([ a']) d4
+	a8([ d e! a)] a(^\markup {Solo-Viol.} d
+	e[ a)]~ a([ a']) d4^\markup {Fl.I}
 }
 cueVoiceFloteIImIII = \relative c' {
-	a8( e'16) e-. dis8( d16-.) d-.
+	a8(^\markup {Solo-Vlc.} e'16) e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8( e16-.) e-.
 	R2*22
 	% bar 25
-	f''8( e16 f) e4
+	f''8(^\markup {Solo-Viol.} e16 f) e4
 	d16( c bes c) a4
 	a'8( g16 a) g4
 	f16( e d e) c4
-	<a c>2~
+	<a c>2~^\markup {Klar.}
 	q
 	R2*46
 	% bar 77
-	r4 g^(
+	r4^\markup {Solo-Viol.} g^(
 	<c e> <d g>
 	<e c'>) <a f'>8-.^( <g e'>-.)
 	<f d'>^( a) <dis, b'>-.^( a'-.)
@@ -293,23 +318,22 @@ cueVoiceFloteIImIII = \relative c' {
 	<b g'>2 r8 g^( \bar "||"
 	\time 4/4 <e c'> <d b'> <e c'> <d b'>) <d b'>4.( <c a'>8)
 	R1
-	R2*18
-	c'8-> b16-. c-. b8-> c16-. b-.
-	c8-> b16-. c-. b( a') g-. fis-.
-	R2*7
-	r4 \stemUp a,,8-. r
-	r4 a8-. r
-	r4 r8. a''16-. \bar "||" \key d \minor
+	R2*27
+	% bar 116
+	e4\rest^\markup {Hr.III} a,8-. e'\rest
+	e4\rest a,8-. e'\rest
+	r4 r8. a'16-.-\tweak X-offset #-5 ^\markup {Solo-Viol.} \bar "||" \key d \minor
 	a8[-. r16 <f a>-.] q8[-. r16 q-.]
 	\tuplet 3/2 4 {q4( <e g>8) <d f>( <e g> <f a>)}
 	\tuplet 3/2 4 {<f a>4( <ees g>8)} r4
 	R2*12
-	r8 f-.[ d-. b'-.]
+	% bar 134
+	r8^\markup {Viol.I} f-.[ d-. b'-.]
 	a8-.[ r16 a-.] a8-.[ r16 a-.] 
 	a8-.[ r16 a-.] a8-.[ r16 a-.] 
 	R2*29
 	% bar 166
-	r4 r8 a,,^(
+	s4 s8 a,,^(^\markup {Solo-Viol.}
 	<f' a>) <d a'>4 <bes gis'>8^(
 	<a a'>) <f' a>4 <f d'>8^(
 	<f c'>) <c f>4 <d bes'>8^(
@@ -318,17 +342,15 @@ cueVoiceFloteIImIII = \relative c' {
 	a) a8. r16 r8
 	R2*19
 	% bar 192
-	r4 b'(
+	s4 b'(^\markup {Viol.I}
 	a) g(
 	dis) e(
 	bes!) a(
 	a) r
-	R2*37
-	% bar 234
-	c'8-- b16-. c-. b8-- c16-. b-.
-	c8-- b16-. c-. b( a') g-. fis-.
-	e8->^\markup {Fl.I} d16-. e-. d8-> e16-. d-.
-	e8-> d16-. e-. d( f) d-. bes-.
+	R2*39
+	% bar 236
+	e''8->^\markup {Fl.I} d16-. e-. d8-> e16-. d-.
+	e8-> d16-. e-. d( f) d-. b-.
 	e,8(^\markup {Klar.I} d16 e) d4
 	f16( e d e) d4^\markup {Ob.I}
 	g8( f16 e) g4(

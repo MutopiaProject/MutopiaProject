@@ -57,7 +57,7 @@
 \addQuote "cueVoiceFloteIImI" { \cueVoiceFloteIImI }
 \addQuote "cueVoiceFloteIImII" { \cueVoiceFloteIImII }
 \addQuote "cueVoiceFloteIImIII" { \cueVoiceFloteIImIII }
-%\include "./00-Common/00_DoubleConcerto_Format_Floten.ly"
+\include "./00-Common/00_DoubleConcerto_Format_Floten.ly"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################

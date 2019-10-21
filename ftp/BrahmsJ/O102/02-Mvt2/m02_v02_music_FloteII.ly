@@ -9,7 +9,9 @@ musicFloteIIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\new CueVoice { \set instrumentCueName = "Hr I." } \cueDuring #"cueVoiceFloteIImII" #UP { \once \override MultiMeasureRest.staff-position = #2 R2.\fermataMarkup} 
+	\cueDuring #"cueVoiceFloteIImII" #UP { 
+		\ni \MmrPos #2 R2.\fermataMarkup
+	} 
 	<< { e4( a,2)\fermata } {s8\p\< s s s\> s s\!} >>
 	R2.*14
 	
@@ -24,10 +26,12 @@ musicFloteIIMvtII = \relative c''' {
 	
 % Bars 16 to 20
 	
-	\new CueVoice { \set instrumentCueName = "Solo-Viol." }
-	\cueDuring #"cueVoiceFloteIImII" #DOWN {R2.*2 r4 r8}
-	\new CueVoice { \set instrumentCueName = "Fl.I" }
-	\cueDuring #"cueVoiceFloteIImII" #UP {r8 r4 R2.}
+	\cueDuring #"cueVoiceFloteIImII" #DOWN {
+		\ni R2.
+		R
+		\MmrPos #-4 R
+		\MmrPos #-4 R \no
+	}
 % Bars 21 to 25
 	fis8(\p dis) e( cis) dis( b)
 	R2.
@@ -36,9 +40,10 @@ musicFloteIIMvtII = \relative c''' {
 % Bars 26 to 30
 	
 	
-	\new CueVoice { \set instrumentCueName = "Solo-Viol." }
-	\cueDuring #"cueVoiceFloteIImII" #DOWN {R2.*2 r4 r}
-	f'_\pdolce(~ -\tweak X-offset #-4 ^\tutti \bar "||" \mark \default \key f \major
+	\cueDuring #"cueVoiceFloteIImII" #DOWN {
+		\ni R2.
+		R
+		r4 r \no } f'_\pdolce(~ -\tweak X-offset #-4 ^\tutti \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	f g a
 	g f) bes( 
@@ -78,9 +83,10 @@ musicFloteIIMvtII = \relative c''' {
 % Bars 61 to 65
 	
 	
-	\new CueVoice { \set instrumentCueName = "Fag.I" }
-	\cueDuring #"cueVoiceFloteIImII" #DOWN {R2. R^\tutti r4 r}
-	 eis,4\p\<(
+	\cueDuring #"cueVoiceFloteIImII" #DOWN {
+		\ni R2. 
+		R^\tutti 
+		r4 r \no } eis,!4\p\<(
 % Bars 66 to 70
 	gis2\> fis4)\! \bar "||" \key d \major
 	R2.
@@ -124,13 +130,15 @@ musicFloteIIMvtII = \relative c''' {
 % Bars 101 to 105
 	
 % Bars 106 to 110
-	\new CueVoice { \set instrumentCueName = "Solo-Vlc." }
-	\cueDuringWithClef #"cueVoiceFloteIImII" #UP #"bass" {R2.*4 r2}
-	\new CueVoice { \set instrumentCueName = "Solo-Viol." }
-	\cueDuring #"cueVoiceFloteIImII" #UP {r4 r2}
-	\new CueVoice { \set instrumentCueName = "Fl.I" }
+	\cueDuring #"cueVoiceFloteIImII" #UP {
+		\ni \clef bass R2.
+		R
+		R
+		R
+		<< R {s2 \clef treble s4 } >>
 % Bars 111 to 115
-	\cueDuring #"cueVoiceFloteIImII" #UP {r4}
+		R2.
+	}
 	gis'4(\f a g_\dimD\>
 	fis e) r\!
 	R2.*4
