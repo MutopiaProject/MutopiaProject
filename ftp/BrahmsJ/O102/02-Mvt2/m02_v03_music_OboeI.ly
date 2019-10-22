@@ -9,8 +9,10 @@ musicOboeIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceOboeImII" #DOWN {R2.\fermataMarkup
-	R2.\fermataMarkup }
+	\cueDuring #"cueVoiceOboeImII" #DOWN {
+		\ni R2.\fermataMarkup
+		R2.\fermataMarkup \no
+	}
 	R2.*27 -\tweak X-offset #-2 ^\solo
 % Bars 6 to 10
 	
@@ -25,12 +27,13 @@ musicOboeIMvtII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceOboeImII" #UP {R2._\tutti \bar "||" \mark \default \key f \major
+	\cueDuring #"cueVoiceOboeImII" #UP {
+		\ni R2._\tutti \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 		R2.
 		R
 		R
-		r4 r } a4_\pdolce(~
+		r4 r \no } a4_\pdolce(~
 	a\< g f
 % Bars 36 to 40
 	e\> d )\! g(
@@ -44,13 +47,14 @@ musicOboeIMvtII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceOboeImII" #UP {R2.\mark \default
+	\cueDuring #"cueVoiceOboeImII" #UP {
+		\ni R2.\mark \default
 % Bars 51 to 55
 		R
 		R
 		R
 		R
-		R
+		R \no
 	}
 % Bars 56 to 60
 	r4 r cis(
@@ -65,9 +69,10 @@ musicOboeIMvtII = \relative c''' {
 	R2.*2^\tutti
 	
 % Bars 66 to 70
-	\cueDuring #"cueVoiceOboeImII" #UP {R2. \bar "||" \key d \major
+	\cueDuring #"cueVoiceOboeImII" #UP {
+		\ni R2. \bar "||" \key d \major
 		R2.
-		r4 r } fis(~_\mfcresc
+		r4 r \no } fis(~_\mfcresc
 	fis g a
 	g fis) b(~
 % Bars 71 to 75
@@ -95,14 +100,14 @@ musicOboeIMvtII = \relative c''' {
 	
 % Bars 111 to 115
 	\cueDuring #"cueVoiceOboeImII" #UP {
-		R2.
+		\ni R2.
 		R
 		R
 		R
 		R
 % Bars 116 to 118
 		R
-		R
+		R \no
 	}
 	fis2.\fermata\p \bar "|."
 }

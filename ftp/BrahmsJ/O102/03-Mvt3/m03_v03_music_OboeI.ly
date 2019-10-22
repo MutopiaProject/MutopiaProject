@@ -9,8 +9,10 @@ musicOboeIMvtIII = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceOboeImIII" #UP { \cueClef "bass" R2
-	R2 \cueClefUnset }
+	\cueDuring #"cueVoiceOboeImIII" #UP { 
+		\clef "bass" \ni R2
+		R2 \clef treble \no
+	}
 	R2*26
 % Bars 6 to 10
 	
@@ -24,19 +26,19 @@ musicOboeIMvtIII = \relative c''' {
 	
 	
 	
-	\tempo "poco rit." R2*4
+	\tempo "poco rit." \MmrLength #12 R2*4
 	
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*2
+	\tempo "in tempo" \MmrLength #12 R2*2
 	
 	\cueDuring #"cueVoiceOboeImIII" #DOWN {
-		R2
+		\ni R2
 % Bars 36 to 40
 		R
 		R
-		R \mark \default 
+		R \mark \default \no 
 	}
 	gis2\ff^\tutti
 	a8-. a-. r f-.
@@ -79,23 +81,24 @@ musicOboeIMvtIII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceOboeImIII" #UP {
-		R2 \bar "||"
+		\ni R2 \bar "||"
 		\time 3/4 R2.
 % Bars 86 to 90
 		R2. \bar "||"
 		\time 4/4 R1
 		R1  \bar "||"
-		\time 2/4 R2
+		\time 2/4 R2 \no
 	}
 	R2*3
 % Bars 91 to 95
 	
 	
-	\cueDuring #"cueVoiceOboeImIII" #UP { R2
+	\cueDuring #"cueVoiceOboeImIII" #UP { 
+		\ni R2
 		R
 		R
 % Bars 96 to 100
-		r4 } e'8(^\dolce\p\< g
+		r4 \no } e'8(^\dolce\p\< g
 	a\> g)\! r4
 	R2*3
 	
@@ -122,11 +125,11 @@ musicOboeIMvtIII = \relative c''' {
 	R2*2^\tutti
 	
 	\cueDuring #"cueVoiceOboeImIII" #UP {
-		R2 \bar "||" \key d \minor
+		\ni R2 \bar "||" \key d \minor
 		R
 		R
 % Bars 121 to 125
-		R
+		R \no
 	}
 	R2*12
 % Bars 126 to 130
@@ -136,10 +139,10 @@ musicOboeIMvtIII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceOboeImIII" #UP {
-		R2
+		\ni R2
 		R2
 % Bars 136 to 140
-		R
+		R \no
 	}
 	d4..\ff^\tutti d16
 	des4.. des16
@@ -163,14 +166,14 @@ musicOboeIMvtIII = \relative c''' {
 	
 % Bars 166 to 170
 	\cueDuring #"cueVoiceOboeImIII" #UP {
-		\override MultiMeasureRest.staff-position = #-8 R2
-		R
-		R
-		R
-		R
+		\ni \MmrPos #-8 R2
+		\MmrPos #-8 R
+		\MmrPos #-8 R
+		\MmrPos #-8 R
+		\MmrPos #-8 R
 % Bars 171 to 175
-		R \revert MultiMeasureRest.staff-position
-	r4 } r8 a\f(
+		\MmrPos #-8 R
+		r4 \no } r8 a\f(
 	a') a4 gis8(
 	a) a4 r8
 	R2
@@ -187,12 +190,12 @@ musicOboeIMvtIII = \relative c''' {
 % Bars 191 to 195
 	
 	\cueDuring #"cueVoiceOboeImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
 % Bars 196 to 200
-		r4 } r8. a16\ff^\tutti
+		r4 \no } r8. a16\ff^\tutti
 	a4.. a16
 	a4.. a16
 	\tuplet 3/2 4 {a4( g8) f( g a)}
@@ -227,10 +230,10 @@ musicOboeIMvtIII = \relative c''' {
 % Bars 231 to 235
 	
 	\cueDuring #"cueVoiceOboeImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		R
+		R \no
 	}
 % Bars 236 to 240
 	e'8->\p d16-. e-. d8-> e16-. d-.
@@ -254,9 +257,9 @@ musicOboeIMvtIII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceOboeImIII" #UP {
-		R2
+		\ni R2
 % Bars 256 to 260
-		R
+		R \no
 	}
 	gis'2\f
 	a8-.\ff^\tutti a-. r f-.
@@ -287,23 +290,23 @@ musicOboeIMvtIII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceOboeImIII" #UP { 
-		R2 \bar "||"
+		\ni R2 \bar "||"
 		\time 3/4 R2.
 		R2. \bar "||"
 % Bars 291 to 295
 		\time 4/4 R1
 		R1 \bar "||"
-		\time 2/4 R2
+		\time 2/4 R2 \no
 	}
 	R2*3
 	
 % Bars 296 to 300
 	\bar "||"
 	\tempo "Poco meno Allegro" \cueDuring #"cueVoiceOboeImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		r4 } r8. e16(_\pdolce
+		r4 \no } r8. e16(_\pdolce
 % Bars 301 to 305
 	a cis e cis a8) r
 	R2

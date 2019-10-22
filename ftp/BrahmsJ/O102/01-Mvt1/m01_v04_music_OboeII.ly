@@ -9,7 +9,7 @@ musicOboeIIMvtI = \relative c'' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc d8 b4 r
+	e4._\fmarc^\tutti d8 b4 r
 	c4. b8 e,4 r
 	c'-. r gis-. r
 	a-. a-. a-. a-. 
@@ -24,18 +24,18 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceOboeIImI" #DOWN {
-		\cueClef "bass" \once \override MultiMeasureRest.staff-position = #8 R1
+		\clef "bass" \MmrPos #8 \ni R1
 		R
 		R
 % Bars 26 to 30
-		r2 \cueClef "treble" r2^\tutti
+		<< R1 {s2 s4^\tutti \clef treble s}>>
 		R1
 		R
 		R
-		R \cueClefUnset
+		R \no
 	}
 % Bars 31 to 35
-	\textLengthOn <>^\markup {\column { \lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
+	\textLengthOn <>^\markup {\center-column { \lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -45,12 +45,13 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 51 to 55
 	
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
 % Bars 56 to 60
-		R } \mark \default
+		R  \mark \default \no
+	}
 	c4.\ff -\tweak X-offset #1 ^\tutti d8 c4 r
 	a4. gis8 a4 r
 	d4-. b-. c4.-> c8
@@ -128,13 +129,13 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 131 to 135
 	
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
 % Bars 136 to 140
 		R
-		R
+		R \no
 	}
 	a2\pp( c
 	ees c)
@@ -156,14 +157,14 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 166 to 170
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
 		R
 % Bars 171 to 175
 		R \mark \default
-		r2 r4 } c(\f 
+		r2 r4 \no } c(\f 
 	cis-.) d2( a4)
 	r2 r4 f'(
 	fis) g(~ g16 f e d) r4
@@ -182,8 +183,8 @@ musicOboeIIMvtI = \relative c'' {
 	
 	\mark \default
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
-		\once \override MultiMeasureRest.staff-position = #-8 R
+		\ni R1
+		\MmrPos #-8 R \no
 	}
 	d'8\f-. d4 d8( c) c4 c8(\<
 % Bars 196 to 200
@@ -220,9 +221,9 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 231 to 235
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 		R
-		r2 r8 } d(\p cis b)
+		r2 r8 \no } d(\p cis b)
 	r2 r8 g( a b)
 	r2 r8 g'( fis e)
 % Bars 236 to 240
@@ -237,10 +238,10 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 % Bars 251 to 255
 		R
-		R
+		R \no
 	}
 	r8 cis-.\f d-. e-. f!-. r r4
 	r8 b,-. c!-. d-. ees-. r r4
@@ -272,8 +273,8 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceOboeIImI" #DOWN {
-		R1
-		R
+		\ni R1
+		R \no
 	}
 % Bars 286 to 290
 	cis'4\ff-! r c-! r
@@ -301,9 +302,9 @@ musicOboeIIMvtI = \relative c'' {
 	
 	\mark \default \bar "||" \key a \major
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 		R
-		R
+		R \no
 	}
 % Bars 316 to 320
 	R1^\gp
@@ -316,14 +317,14 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 336 to 340
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 		R
-		\once \override MultiMeasureRest.staff-position = #-6 R
+		\MmrPos #-6 R
 		R
 		R
 % Bars 341 to 345
 		R \mark \default
-		r2 r4 } a'\f(
+		r2 r4 \no } a'\f(
 	ais-.) b2( fis4)
 	r2 r4 d'(
 	dis)-. e(~ e16 d cis b) r4
@@ -343,8 +344,8 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\once \override MultiMeasureRest.staff-position = #-6 R1
-		\once \override MultiMeasureRest.staff-position = #-6 R
+		\ni \MmrPos #-6 R1
+		\MmrPos #-6 R \no
 	}
 	b8-.\f b4 b8( a) a4 a8\<~
 % Bars 366 to 370
@@ -389,10 +390,10 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 406 to 410
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
-		r2 } gis\f
+		r2 \no } gis\f
 	a4-.\f r r2
 % Bars 411 to 415
 	R1*3
@@ -406,13 +407,13 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceOboeIImI" #UP {
-		R1
+		\ni R1
 % Bars 421 to 425
 		R
 		R
 		R
 		R
-		r2 r4 } a-.\f
+		r2 r4 \no } a-.\f
 % Bars 426 to 430
 	d2 dis
 	e gis,
@@ -420,5 +421,5 @@ musicOboeIIMvtI = \relative c'' {
 	a-. r f-. a-.
 	c-. r c-. r
 % Bar 431
-	R1\fermataMarkup \bar "|."
+	\ni R1\fermataMarkup \bar "|."
 }
