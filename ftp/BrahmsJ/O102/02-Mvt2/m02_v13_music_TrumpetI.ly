@@ -10,8 +10,8 @@ musicTrumpetIMvtII = \relative c'' {
 	\transposition d
 % Bars 1 to 5
 	\cueDuring #"cueVoiceTptImII" #UP {
-		\once \override MultiMeasureRest.staff-position = #4 R2.\fermataMarkup
-		\once \override MultiMeasureRest.staff-position = #4 R2.\fermataMarkup
+		\ni \MmrPos #4 R2.\fermataMarkup
+		\MmrPos #4 R2.\fermataMarkup \no
 	}
 	R2.*27-\tweak X-offset #-2.5 ^\solo -\tweak X-offset #8 ^\tutti
 % Bars 6 to 10
@@ -28,7 +28,7 @@ musicTrumpetIMvtII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptImII" #UP {
-		R2. \bar "||" \mark \default
+		\ni R2. \bar "||" \mark \default
 % Bars 31 to 35
 		R
 		R
@@ -38,7 +38,7 @@ musicTrumpetIMvtII = \relative c'' {
 % Bars 36 to 40
 		R
 		R
-		R^\solo
+		R^\solo \no
 	}
 	R2.*12
 % Bars 41 to 45
@@ -57,13 +57,13 @@ musicTrumpetIMvtII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptImII" #DOWN {
-		R2.
+		\ni R2.
 		R^\tutti
 		R
 % Bars 66 to 70
 		R \bar "||"
 		R
-		R
+		R \no
 	}
 	g4\f c2~
 	c2.~
@@ -84,7 +84,7 @@ musicTrumpetIMvtII = \relative c'' {
 	
 	\mark \default
 	\cueDuring #"cueVoiceTptImII" #DOWN {
-		R2.
+		\ni R2.
 % Bars 101 to 105
 		R
 		R
@@ -92,14 +92,14 @@ musicTrumpetIMvtII = \relative c'' {
 		R
 		R
 % Bars 106 to 110
-		R
+		R \no
 	}
 	R2.*4
 % Bars 111 to 115
 	\cueDuring #"cueVoiceTptImII" #DOWN {
-		R2.
+		\ni R2.
 		R
-		R
+		R \no
 	}
 	g4-\tweak X-offset #-2 \p\< c2\>~
 	c2.\!~

@@ -133,10 +133,10 @@ musicViolinIIMvtII = \relative c' {
 % Bars 106 to 110
 	
 	\cueDuring #"cueVoiceVlnIImII" #UP {
-		\ni \cueClef "bass" R2.
+		\ni \clef "bass" R2.
 		R
 		R
-		r4 r \cueClefUnset } d\p\<~
+		r4 r \clef treble } d\p\<~
 % Bars 111 to 115
 	d d( a')
 	gis\f^\pizz a r

@@ -144,7 +144,7 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 146 to 150
 	R1_\gp
 	\cueDuring #"cueVoiceSoloVlnmI" #UP {
-		\ni \cueClef "bass" R1 \cueClefUnset \no
+		\ni \clef "bass" R1 \clef treble \no
 	}
 	\times 2/3 {c,8( g' bes} \times 2/3 {c g' bes)} \times 2/3 {c( bes g} \times 2/3 {c, g' bes)}
 	\times 2/3 {c( a fis} \times 2/3 {c fis gis)} \times 2/3 {a( fis c} \times 2/3 {a c fis)}
@@ -213,8 +213,8 @@ musicSoloViolinMvtI = \relative c'' {
 	
 % Bars 216 to 220
 	\cueDuring #"cueVoiceSoloVlnmI" #UP {
-		\ni \cueClef "bass" R1
-		R \no \mark \default \cueClefUnset
+		\ni \clef "bass" R1
+		R \no \mark \default \clef treble
 	}
 	<e' e'>4.\f <d d'>8 <b b'>4 r
 	<c c'>4. <b b'>8 <e, e'>4 r
@@ -278,11 +278,11 @@ musicSoloViolinMvtI = \relative c'' {
 	
 	\mark #11
 	\cueDuring #"cueVoiceSoloVlnmI" #UP {
-		\cueClef "bass" \ni R1
+		\clef "bass" \ni R1
 % Bars 271 to 275
-		R \cueClef "tenor"
-		R \cueClef "treble"
-		R \no \cueClefUnset
+		R \clef "tenor"
+		R \clef "treble"
+		R \no 
 	}
 	e,,8\(\p e4 e8( g) g4 g8(
 	c) c4 c8( ees) ees4 ees8(

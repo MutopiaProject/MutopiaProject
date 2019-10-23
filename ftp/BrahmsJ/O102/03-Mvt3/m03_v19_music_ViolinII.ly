@@ -10,8 +10,8 @@ musicViolinIIMvtIII = \relative c'' {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceVlnIImIII" #UP {
-		\ni \cueClef "bass" R2
-		R \no \cueClefUnset
+		\ni \clef "bass" R2
+		R \no \clef treble
 	}
 	R2*6
 % Bars 6 to 10
@@ -248,8 +248,8 @@ musicViolinIIMvtIII = \relative c'' {
 	
 	\bar "||" \mark \default \key a \minor
 	\cueDuring #"cueVoiceVlnIImIII" #UP { 
-		\ni \cueClef "bass" R2
-		r4 r8 \no \cueClefUnset } c-.\p^\arco
+		\ni \clef "bass" R2
+		r4 r8 \no \clef treble } c-.\p^\arco
 	<a e'>4 r8 c-.
 % Bars 221 to 225
 	<a e'>4 r8 c-.

@@ -78,10 +78,10 @@ musicBratscheMvtIII = \relative c {
 	
 % Bars 61 to 65
 	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \cueClef "treble" R2
+		\ni \clef "treble" R2
 		\MmrPos #-12 R
 		\MmrPos #-12 R
-		r4 r8. \cueClefUnset \no } g16\f(^\arco^\tutti
+		r4 r8. \clef alto \no } g16\f(^\arco^\tutti
 	g') g,( f') g,( d') g,( g') g,(
 % Bars 66 to 70
 	f') g,( d') g,( g'8) <g, f'>_\pdim~
@@ -93,14 +93,14 @@ musicBratscheMvtIII = \relative c {
 % Bars 76 to 80
 	
 	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \cueClef "treble" R2
+		\ni \clef "treble" R2
 		R
 		R
 		R
 % Bars 81 to 85
 		R
 		R
-		r4 \cueClefUnset \no } \tuplet 3/2 4 {a'8\f^\pizz f' a}
+		r4 \clef alto \no } \tuplet 3/2 4 {a'8\f^\pizz f' a}
 	\tuplet 3/2 4 {a, d f f, a d} \bar "||"
 	\time 3/4 \tuplet 3/2 4 {d, a' d d, a' c fis, c' d}
 % Bars 86 to 90
@@ -189,7 +189,7 @@ musicBratscheMvtIII = \relative c {
 % Bars 171 to 175
 	
 	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \cueClef "treble" \MmrPos #-10 R2
+		\ni \clef "treble" \MmrPos #-10 R2
 		\MmrPos #-8 R
 		\MmrPos #-8 R
 		R
@@ -198,7 +198,7 @@ musicBratscheMvtIII = \relative c {
 		R
 		R
 		R \mark \default
-		r4 \cueClefUnset \no } a'\pp^\arco(
+		r4 \clef alto \no } a'\pp^\arco(
 % Bars 181 to 185
 	d) a'(
 	d,) a(
@@ -323,14 +323,14 @@ musicBratscheMvtIII = \relative c {
 	
 % Bars 281 to 285
 	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \cueClef "treble" \MmrPos #-6 R2
+		\ni \clef "treble" \MmrPos #-6 R2
 		R
 		R
 		R
 		R
 % Bars 286 to 290
 		R
-		r4 \no \cueClefUnset } \tuplet 3/2 4 {fis8\f^\pizz d' fis}
+		r4 \no \clef alto } \tuplet 3/2 4 {fis8\f^\pizz d' fis}
 	\tuplet 3/2 4 {fis, b d d, fis b} \bar "||"
 	\time 3/4 \tuplet 3/2 4 {dis,_\crescmarkup fis b dis, fis b dis, a' b} 
 	\tuplet 3/2 4 {gis d'! e gis, cis e e, gis d'} \bar "||"
@@ -349,13 +349,13 @@ musicBratscheMvtIII = \relative c {
 % Bars 306 to 310
 	
 	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \cueClef "treble" R2
+		\ni \clef "treble" R2
 		R
 		R
 		R
 % Bars 311 to 315
 		R
-		R \cueClefUnset \no
+		R \clef alto \no
 	}
 	a4.\p^\arco( ais8)\<
 	b4.( bis8)\!

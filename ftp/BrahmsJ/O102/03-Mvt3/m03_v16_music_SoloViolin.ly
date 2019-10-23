@@ -13,10 +13,10 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 6 to 10
 	
 	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni \cueClef "bass" R2
+		\ni \clef "bass" R2
 		R
 		R
-		R \no \cueClefUnset
+		R \no \clef treble
 	}
 % Bars 11 to 15
 	a8(\p e'16)-. e-. dis8( d16-.) d-.
@@ -89,10 +89,10 @@ musicSoloViolinMvtIII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni \cueClef "bass" R2
+		\ni \clef "bass" R2
 % Bars 76 to 80
 		R
-		r4 \no \cueClefUnset } g'(\f
+		r4 \no \clef treble } g'(\f
 	<c e> <d g> 
 	<e c'>) <a f'>8-.( <g e'>-.)
 	<f d'>( a) <dis, b'>-.( a'-.)
@@ -202,10 +202,10 @@ musicSoloViolinMvtIII = \relative c''' {
 	r4 r8 bes,,,16(_\dimmarkup d
 	ees fis a c) r4
 	r4 r8 g,16( bes
-	a c f a) \cueDuring #"cueVoiceSoloVlnmIII" #UP { \ni \cueClef "bass" r4
+	a c f a) \cueDuring #"cueVoiceSoloVlnmIII" #UP { \ni \clef "bass" r4
 		R2
 % Bars 166 to 170
-		r4 \no \cueClefUnset } r8 a,(\f
+		r4 \no \clef treble } r8 a,(\f
 	<f' a>) <d a'>4 <bes gis'>8(
 	<a a'>) <f' a>4 <f d'>8(
 	<f c'>) <c f>4 <d bes'>8(
@@ -329,7 +329,7 @@ musicSoloViolinMvtIII = \relative c''' {
 	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
 		\ni \MmrPos #-6 R2
 		\MmrPos #-8 R
-		\cueClef "bass" R \no \cueClefUnset \bar "||" \key a \major
+		\clef "bass" R \no \clef treble \bar "||" \key a \major
 	}
 	a,4(\f b
 	cis) fis8(-. e-.)

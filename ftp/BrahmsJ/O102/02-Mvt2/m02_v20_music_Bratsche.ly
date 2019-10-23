@@ -11,8 +11,8 @@ musicBratscheMvtII = \relative c' {
 % Bars 1 to 5
 	\cueDuring #"cueVoiceBrmII" #UP {
 		\ni R2._\fermataMarkup
-		\cueClef "treble" R2._\fermataMarkup
-		\MmrPos #-6 R2. \cueClefUnset \no
+		\clef "treble" R2._\fermataMarkup
+		\MmrPos #-6 R2. \clef alto \no
 	}
 	g8(_\pocofmadolce d) d( e) fis4
 	R2.
@@ -57,10 +57,10 @@ musicBratscheMvtII = \relative c' {
 	
 % Bars 41 to 45
 	\cueDuring #"cueVoiceBrmII" #UP {
-		\ni \cueClef "treble" R2.
+		\ni \clef "treble" R2.
 		R
 		R
-		R \no \cueClefUnset
+		R \no \clef alto
 	}
 	aes8^\arco\p aes4 g aes8~
 % Bars 46 to 50

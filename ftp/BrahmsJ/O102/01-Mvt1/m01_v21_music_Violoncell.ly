@@ -28,11 +28,11 @@ musicVioloncellMvtI = \relative c' {
 		\ni R1
 		\MmrPos #4 R
 % Bars 26 to 30
-		r2 \cueClef "treble" r^\tutti
+		<<\MmrPos #-6 R1 {s2 \clef treble s^\tutti }>> 
 		R1
 		\MmrPos #-6 R
 		R
-		R \no \cueClefUnset
+		R \no \clef bass
 	}
 % Bars 31 to 35
 	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff

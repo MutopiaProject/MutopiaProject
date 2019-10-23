@@ -10,8 +10,8 @@ musicTrumpetIIMvtIII = \relative c'' {
 	\transposition d
 % Bars 1 to 5
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		\MmrPos #4 R2
-		\once \override MultiMeasureRest.staff-position = #4 R
+		\ni \MmrPos #4 R2
+		\MmrPos #4 R \no
 	}
 	R2*18
 % Bars 6 to 10
@@ -22,15 +22,15 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 % Bars 21 to 25
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		\override MultiMeasureRest.staff-position = #4 R2
-		R
-		R
-		R
-		R
+		\ni \MmrPos #4 R2
+		\MmrPos #4 R
+		\MmrPos #4 R
+		\MmrPos #4 R
+		\MmrPos #4 R
 % Bars 26 to 30
-		R
-		R
-		R \revert MultiMeasureRest.staff-position 
+		\MmrPos #4 R
+		\MmrPos #4 R
+		\MmrPos #4 R \no 
 	}
 	\tempo "poco rit." \MmrLength #15  R2*4
 % Bars 31 to 35
@@ -39,11 +39,11 @@ musicTrumpetIIMvtIII = \relative c'' {
 	\tempo "in tempo" \MmrLength #15 R2*2
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		\override MultiMeasureRest.staff-position = #4 R2
+		\ni \MmrPos #4 R2
 % Bars 36 to 40
-		R
-		R
-		R \mark \default \revert MultiMeasureRest.staff-position
+		\MmrPos #4 R
+		\MmrPos #4 R
+		\MmrPos #4 R \mark \default \no
 	}
 	d2\f^\tutti
 	g,,8-. g-. r g-.
@@ -84,16 +84,16 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 76 to 80
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		\override MultiMeasureRest.staff-position = #4 R2
-		R
-		R
-		R
+		\ni \MmrPos #4 R2
+		\MmrPos #4 R
+		\MmrPos #4 R
+		\MmrPos #4 R
 % Bars 81 to 85
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		R
-		R
-		R \bar "||"
-		\time 3/4 R2. \revert MultiMeasureRest.staff-position 
+		\MmrPos #-8 R
+		\MmrPos #4 R
+		\MmrPos #4 R
+		\MmrPos #4 R \bar "||"
+		\time 3/4 R2. \no
 	}
 % Bars 86 to 90
 	R2. \bar "||"
@@ -117,10 +117,10 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 106 to 110
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		R2
+		\ni R2
 		R
 		R-\tweak X-offset #0 _\solo
-		R
+		R \no
 	}
 % Bars 111 to 115
 	g8\pp-. r g-. r
@@ -132,11 +132,11 @@ musicTrumpetIIMvtIII = \relative c'' {
 	r4^\tutti g8-. r
 	R2
 	\cueDuring #"cueVoiceTptIImIII" #UP { 
-		R2 \bar "||"
+		\ni  R2 \bar "||"
 		R
 		R
 % Bars 121 to 125
-		R
+		R \no
 	}
 	R2*12
 % Bars 126 to 130
@@ -146,10 +146,10 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 136 to 140
-		R
+		R \no
 	}
 	ees''8-.\f r r4
 	ees8-. r r4
@@ -178,14 +178,14 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 176 to 180
 		R
 		R
-		\once \override MultiMeasureRest.staff-position = #-6 R
+		\MmrPos #-6 R
 		R \mark \default
-		\once \override MultiMeasureRest.staff-position = #-10 R
+		\MmrPos #-10 R \no
 	}
 % Bars 181 to 185
 	g2(\pp
@@ -241,13 +241,13 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	\mark \default
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		R2
+		\ni R2
 		R
-		\once \override MultiMeasureRest.staff-position = #-8 R
+		\MmrPos #-8 R
 % Bars 241 to 245
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		\once \override MultiMeasureRest.staff-position = #-8 R
+		\MmrPos #-8 R
+		\MmrPos #-8 R
+		\MmrPos #-8 R \no
 	}
 	R2*2
 	
@@ -262,11 +262,11 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		\once \override MultiMeasureRest.staff-position = #-8 R2
+		\ni \MmrPos #-8 R2
 		R
 % Bars 256 to 260
 		R
-		\cueClef "bass" R \cueClefUnset
+		\clef "bass" R \clef treble \no
 	}
 	g8-.\f^\tutti g-. r g-.
 	r g-. r g-.
@@ -293,11 +293,11 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 % Bars 281 to 285
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		\once \override MultiMeasureRest.staff-position = #-8 R2
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		R
+		\ni \MmrPos #-8 R2
+		\MmrPos #-8 R
+		\MmrPos #-8 R
+		\MmrPos #-8 R
+		R \no
 	}
 % Bars 286 to 290
 	R2*3
@@ -307,16 +307,16 @@ musicTrumpetIIMvtIII = \relative c'' {
 	\bar "||"
 % Bars 291 to 295
 	\time 4/4 \cueDuring #"cueVoiceTptIImIII" #UP {
-		R1
+		\ni R1
 		R \bar "||"
-		\time 2/4 R2
+		\time 2/4 R2 \no
 	}
 	R2*3
 % Bars 296 to 300
 	\bar "||"
 	\tempo "Poco meno Allegro" \cueDuring #"cueVoiceTptIImIII" #UP {
-		R2
-		r4 r8 } g,\pp~
+		\ni R2
+		r4 r8 \no } g,\pp~
 	g2~
 	g~
 % Bars 301 to 305
@@ -333,7 +333,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		R2
+		\ni R2
 % Bars 316 to 320
 		R
 		R
@@ -343,7 +343,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 321 to 325
 		R
 		R
-		R \bar "||"
+		R \bar "||" \no
 	}
 	\tempo "Tempo primo" g4-.\f g'-.
 	R2
@@ -353,10 +353,10 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 331 to 335
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		R
+		R \no
 	}
 % Bars 336 to 340
 	g8-.\f r r4

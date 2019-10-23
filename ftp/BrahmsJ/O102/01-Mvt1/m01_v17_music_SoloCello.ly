@@ -10,10 +10,10 @@ musicSoloCelloMvtI = \relative c, {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
 		R
-		R \no \cueClefUnset 
+		R \no \clef bass 
 	}
 	\times 2/3 {d2\f^\markup { \italic { \column { \lower #1 \line {(in modo d'un recitativo,} \line {ma sempre in tempo) } } } } e f}
 % Bars 6 to 10
@@ -51,8 +51,8 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
-		\MmrPos #-8 R \no \cueClefUnset
+		\ni \clef "treble" R1
+		\MmrPos #-8 R \no \clef bass
 	}
 % Bars 36 to 40
 	\times 2/3 {r4 <d b'>( <d' f'>~} \times 2/3 {q d') b}
@@ -110,11 +110,11 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
 		R
 % Bars 111 to 115
-		R \no \cueClefUnset \mark \default
+		R \no \clef bass \mark \default
 	}
 	\clef tenor a''4.\f g8 e2~
 	e4. c8\>( e4. d8)
@@ -154,7 +154,7 @@ musicSoloCelloMvtI = \relative c, {
 	\times 2/3 {d( a' c\>} \times 2/3 {d, a' c} \times 2/3 {d, a' c} \times 2/3 {d, a' c)} 
 	\times 2/3 {d,( a' c} \times 2/3 {d, a' c} \times 2/3 {d, a' c} d,\!) r \clef bass \mark \default
 	\cueDuring #"cueVoiceSoloVlcmI" #UP { 
-		\cueClef "treble" \ni R1 \no \cueClefUnset
+		\clef "treble" \ni R1 \no \clef bass
 	}
 	\times 2/3 {g,8_\pdolce( f! d} \times 2/3 {g, d' f)} \clef tenor \times 2/3 {g( d' f} \times 2/3 {g f d)}
 	\times 2/3 {g,(\> d' f} \times 2/3 {g f d)} \times 2/3 {g,( d' f} \times 2/3 {g f d)\!}
@@ -233,10 +233,10 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 % Bars 216 to 220
-		r2 \cueClef "bass" r
-		R1 \no \cueClefUnset \mark \default
+		<<R1 {s2 \clef bass s}>>
+		R1 \no \mark \default
 	}
 	e4.\f d8 b4 r
 	c4. b8 e,4 r
@@ -435,9 +435,9 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	\cueDuring #"cueVoiceSoloVlcmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
-		\MmrPos #-6 R \no \cueClefUnset
+		\MmrPos #-6 R \no \clef bass
 	}
 % Bars 396 to 400
 	a'4.\f g8 e4.( c8)

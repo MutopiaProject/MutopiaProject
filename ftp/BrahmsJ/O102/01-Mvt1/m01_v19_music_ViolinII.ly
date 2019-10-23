@@ -25,10 +25,10 @@ musicViolinIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceVlnIImI" #UP {
-		\cueClef "bass" \ni R1
+		\clef "bass" \ni R1
 		\MmrPos #4 R
 % Bars 26 to 30
-		r2^\tutti \cueClefUnset r
+		<<R1 {s2 \clef treble s^\tutti }>>
 		R1
 		\MmrPos #-6 R
 		R
@@ -272,7 +272,7 @@ musicViolinIIMvtI = \relative c'' {
 	\cueDuring #"cueVoiceVlnIImI" #UP {
 		\ni R1
 % Bars 241 to 245
-		\cueClef "bass" R \no \mark \default \cueClefUnset
+		\clef "bass" R \no \mark \default \clef treble
 	}
 	c!8_\pdolce^\arco c4 c c c8~\<
 	c2.\> r4\!

@@ -53,10 +53,10 @@ musicSoloCelloMvtIII = \relative c' {
 	
 % Bars 46 to 50
 	\cueDuring #"cueVoiceSoloVlcmIII" #DOWN {
-		\ni \cueClef "treble" \MmrPos #-6 R2
+		\ni \clef "treble" \MmrPos #-6 R2
 		\MmrPos #-6 R
 		\MmrPos #-6 R \no
-		r4 \cueClefUnset } <a, e' a>->\f
+		r4 \clef bass } <a, e' a>->\f
 	<f a d a'>-> <d a' f' a>->
 % Bars 51 to 55
 	<a' e' a>8-. r r4
@@ -125,9 +125,9 @@ musicSoloCelloMvtIII = \relative c' {
 	f8-> <c, a'>16-. e'-. a-. c-. e-. c-.
 	a8 \clef tenor \cueDuring #"cueVoiceSoloVlcmIII" #UP { \ni r r4
 % Bars 106 to 110
-		R2 \cueClef "treble"
+		R2 \clef "treble"
 		R
-		R \cueClefUnset \no
+		R \clef tenor \no
 	}
 	e'8-.\p r r16 b'-._\legg a-. b-.
 	gis8-. r16 b-. a-. a-. f-. d-.
@@ -252,20 +252,20 @@ musicSoloCelloMvtIII = \relative c' {
 	
 % Bars 206 to 210
 	\cueDuring #"cueVoiceSoloVlcmIII" #UP {
-		\ni \cueClef "treble" R2
+		\ni \clef "treble" R2
 		R
 		R 
-		r8 \cueClefUnset \no } <<{s8 a} \\ {\tuplet 3/2 8 {d,16([-\tweak X-offset #-3.0 \ff cis d] f[ e f])}}>> \tuplet 3/2 8 {d,16[( cis d])}
-	a'8-. \cueDuring #"cueVoiceSoloVlcmIII" #UP { \ni \cueClef "treble" r r4
+		r8 \clef bass \no } <<{s8 a} \\ {\tuplet 3/2 8 {d,16([-\tweak X-offset #-3.0 \ff cis d] f[ e f])}}>> \tuplet 3/2 8 {d,16[( cis d])}
+	a'8-. \cueDuring #"cueVoiceSoloVlcmIII" #UP { \ni \clef "treble" r r4
 % Bars 211 to 215
 		R2
 		R
-		r8 \cueClefUnset \no } \tuplet 6/4 4 {a'16[(\ff gis a c b c)]} \tuplet 3/2 8 {a,16[( gis a])}
-	e'8-. \cueDuring #"cueVoiceSoloVlcmIII" #UP { \ni \cueClef "treble" r r4
+		r8 \clef bass \no } \tuplet 6/4 4 {a'16[(\ff gis a c b c)]} \tuplet 3/2 8 {a,16[( gis a])}
+	e'8-. \cueDuring #"cueVoiceSoloVlcmIII" #UP { \ni \clef "treble" r r4
 		R2
 % Bars 216 to 220
 		R
-		R \bar "||" \mark \default \key a \minor \cueClefUnset \no
+		R \bar "||" \mark \default \key a \minor \clef bass \no
 	}
 	a8(\p e'16-.) e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8( e16-.) e-.
@@ -284,12 +284,12 @@ musicSoloCelloMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceSoloVlcmIII" #DOWN {
-		\ni \cueClef "treble" \MmrPos #-4 R2
+		\ni \clef "treble" \MmrPos #-4 R2
 		\MmrPos #-4 R
 % Bars 236 to 240
 		\MmrPos #-4 R
 		\MmrPos #-4 R \mark \default
-		b4\rest \cueClefUnset \no } \clef bass \tuplet 6/4 4 {g,16(_\legg d' bes' d cis d)}
+		b4\rest \no } \clef bass \tuplet 6/4 4 {g,16(_\legg d' bes' d cis d)}
 	d,8 r \tuplet 6/4 4 {g,16( d' b'! d cis d)}
 	g,8 r \tuplet 6/4 4 {e,16( e' g e g e')}
 % Bars 241 to 245
@@ -320,18 +320,18 @@ musicSoloCelloMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceSoloVlcmIII" #UP {
-		\ni \cueClef "treble" R2
+		\ni \clef "treble" R2
 		R
 % Bars 266 to 270
 		R
-		R \no \cueClefUnset
+		R \no \clef bass
 	}
 	r8 \tuplet 3/2 8 {d,,,16\f[( a' f']) e,[( g g']) g[( g, e])}
 	\tuplet 3/2 8 {g([ d' g]) g[( d g,]) d[( d' f]) f[( d d,])}
-	e8-. r \cueDuring #"cueVoiceSoloVlcmIII" #UP { \ni \cueClef "treble" r4
+	e8-. r \cueDuring #"cueVoiceSoloVlcmIII" #UP { \ni \clef "treble" r4
 % Bars 271 to 275
 		R2
-		\MmrPos #-8 R \no \cueClefUnset
+		\MmrPos #-8 R \no \clef bass
 	}
 	r4  e'(\f \bar "||" \key a \major
 	cis' e

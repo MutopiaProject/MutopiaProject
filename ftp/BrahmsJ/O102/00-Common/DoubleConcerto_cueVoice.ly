@@ -2313,7 +2313,7 @@ cueVoiceTptImI = \relative c {
 	\tuplet 3/2 4 {d-! ees-! fis-! g-! a!-! bes-! d-! ees-! fis-! g-! a!-! bes-!}
 	R1*54
 	% bar 143
-	f4.(^\markup {Ob.I} ees8 c2)
+	f4.(-\tweak X-offset #1 ^\markup {Ob.I} ees8 c2)
 	r4 r8 f( ees4. c8
 	f4. ees8 c2)
 	R1*31

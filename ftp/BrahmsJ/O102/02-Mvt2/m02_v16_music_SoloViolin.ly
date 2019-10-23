@@ -145,9 +145,9 @@ musicSoloViolinMvtII = \relative c' {
 	g8. r16 r4 r
 	R2.
 	\cueDuring #"cueVoiceSoloVlnmII" #UP {
-		\ni \cueClef "bass" R2.
+		\ni \clef "bass" R2.
 		R 
-	r4 r \no \cueClefUnset } a,,8\p( d\crescD\<
+	r4 r \no \clef treble } a,,8\p( d\crescD\<
 % Bars 111 to 115
 	e a)~ a( a') d,( d')
 	\acciaccatura e,8 <e e'>4\f( <a a'>2)~

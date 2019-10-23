@@ -25,14 +25,14 @@ musicViolinIMvtI = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceVlnImI" #DOWN {
-		\ni \cueClef "bass" R1
+		\ni \clef "bass" R1
 		R
 % Bars 26 to 30
-		r2^\tutti \cueClef "treble" r
+		<<R1 {s2 \clef treble s^\tutti } >>
 		R1
 		R
 		\MmrPos #-4 R
-		\MmrPos #-4 R \no \cueClefUnset 
+		\MmrPos #-4 R \no 
 	}
 % Bars 31 to 35
 	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff

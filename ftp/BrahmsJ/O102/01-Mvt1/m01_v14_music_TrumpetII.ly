@@ -24,15 +24,15 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		\cueClef "bass" R1
-		\once \override MultiMeasureRest.staff-position = #4 R
-		\once \override MultiMeasureRest.staff-position = #4 R
+		\ni \clef "bass" R1
+		\MmrPos #4 R
+		\MmrPos #4 R
 % Bars 26 to 30
-		r2 \cueClefUnset r^\tutti
-		\override MultiMeasureRest.staff-position = #-6 R1
-		R
-		R \revert MultiMeasureRest.staff-position 
-		R \cueClefUnset
+		<< \MmrPos #-6 R1 {s2 \clef treble s^\tutti }>>
+		\MmrPos #-6 R1
+		\MmrPos #-6 R
+		\MmrPos #-6 R 
+		R \no
 	}
 % Bars 31 to 35
 	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
@@ -45,12 +45,12 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 51 to 55
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		\once \override MultiMeasureRest.staff-position = #-6 R1
+		\ni \MmrPos #-6 R1
 		R
 		R
 		R
 % Bars 56 to 60
-		R \mark \default
+		R \mark \default \no
 	}
 	bes4.\f^\tutti c8 d4 r
 	c,4. c8 g4 r
@@ -85,11 +85,11 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 % Bars 86 to 90
 		R
 		R
-		R
+		R \no
 	}
 	bes2\f bes4 r \mark \default
 	R1*3
@@ -134,9 +134,9 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 	\mark \default
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 		R
-		R
+		R \no
 	}
 % Bars 146 to 150
 	R1_\gp
@@ -155,7 +155,7 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 176 to 180
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
@@ -163,7 +163,7 @@ musicTrumpetIIMvtI = \relative c'' {
 		R
 		R
 		R
-		R
+		R \no
 	}
 	R1*8
 % Bars 186 to 190
@@ -176,9 +176,9 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 % Bars 196 to 200
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 		R
-		R
+		R \no
 	}
 	c,2\f c 
 	c4-. r r2
@@ -211,9 +211,9 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 241 to 245
 	\mark \default
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 		R
-		R
+		R \no
 	}
 	R1*9
 % Bars 246 to 250
@@ -223,11 +223,11 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 		R
 % Bars 256 to 260
 		R
-		R
+		R \no
 	}
 	ees,4-!\f r r bes'-!
 	ees,-! r r r^\tutti
@@ -253,8 +253,8 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		\once \override MultiMeasureRest.staff-position = #-8 R1
-		\once \override MultiMeasureRest.staff-position = #-8 R
+		\ni \MmrPos #-8 R1
+		\MmrPos #-8 R \no
 	}
 % Bars 286 to 290
 	g,4-!\f r g'-! r
@@ -287,12 +287,12 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 316 to 320
 	R1_\gp
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
 % Bars 321 to 325
-		R
+		R \no
 	}
 	R1*20
 % Bars 326 to 330
@@ -306,13 +306,13 @@ musicTrumpetIIMvtI = \relative c'' {
 	R1*2
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 		R
 % Bars 346 to 350
 		R
 		R
 		R
-		R
+		R \no
 	}
 	R1*16
 % Bars 351 to 355
@@ -323,9 +323,9 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 % Bars 366 to 370
 	\cueDuring #"cueVoiceTptIImI" #UP { 
-		R1 \mark \default
+		\ni R1 \mark \default
 		R -\tweak X-offset #2 ^\tutti
-		R
+		R \no
 	}
 	c2\f c
 	c4-! c-! r2
@@ -377,7 +377,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptIImI" #UP {
-		R1
+		\ni R1
 % Bars 421 to 425
 		R
 		R
@@ -385,7 +385,7 @@ musicTrumpetIIMvtI = \relative c'' {
 		R
 		R
 % Bars 426 to 430
-		r4 } g,-.\f r g-.
+		r4 \no } g,-.\f r g-.
 	r d'-. r d-.
 	g,-. r g-. r
 	g-. r c,-. c-.

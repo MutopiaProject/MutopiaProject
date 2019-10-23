@@ -25,7 +25,7 @@ musicPaukenMvtI = \relative c {
 		\ni R1
 		\MmrPos #-6 R
 		\MmrPos #-8 R
-		r2 \cueClef "treble" r^\tutti
+		<<R1 {s2 \clef treble s^\tutti } >>
 		R1
 % Bars 26 to 30
 		\MmrPos #-6 R
@@ -49,7 +49,7 @@ musicPaukenMvtI = \relative c {
 		R
 		R
 % Bars 56 to 60
-		R \mark \default \cueClefUnset \no
+		R \mark \default \clef bass \no
 	}
 	a2\startTrillSpan-\tweak X-offset #1 ^\tutti e'4\stopTrillSpan r
 	a,2\startTrillSpan a4\stopTrillSpan r
@@ -76,7 +76,7 @@ musicPaukenMvtI = \relative c {
 	
 	
 	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1 \mark \default
+		\ni \clef "treble" R1 \mark \default
 		R
 % Bars 91 to 95
 		R
@@ -86,7 +86,7 @@ musicPaukenMvtI = \relative c {
 		R
 % Bars 96 to 100
 		R
-		r2 r4 \cueClefUnset \no } a,\f~\startTrillSpan
+		r2 r4 \clef bass \no } a,\f~\startTrillSpan
 	a\stopTrillSpan a\startTrillSpan a8-.\stopTrillSpan r r4
 	r a2\trill a4\trill
 	a8 r r4 r2
@@ -114,7 +114,7 @@ musicPaukenMvtI = \relative c {
 	
 	\mark \default
 	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
 		R \no
 	}
@@ -171,7 +171,7 @@ musicPaukenMvtI = \relative c {
 % Bars 211 to 215
 		R
 		R
-		r2 r4 \cueClefUnset \no } e'4\startTrillSpan~
+		r2 r4 \clef bass \no } e'4\startTrillSpan~
 	e\stopTrillSpan e4\trill e8-. r r4
 	r4 e2\trill e4\trill
 % Bars 216 to 220
@@ -189,7 +189,7 @@ musicPaukenMvtI = \relative c {
 % Bars 241 to 245
 	\mark \default
 	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 		R1
 		R \no
 	}
@@ -225,7 +225,7 @@ musicPaukenMvtI = \relative c {
 		R
 % Bars 276 to 280
 		R
-		R \cueClefUnset \no
+		R \clef bass \no
 	}
 	e1\pp~\startTrillSpan^\solo
 	e~
@@ -260,7 +260,7 @@ musicPaukenMvtI = \relative c {
 	
 	\bar "||" \mark \default
 	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
 		R \no
 	}
@@ -305,7 +305,7 @@ musicPaukenMvtI = \relative c {
 		R
 		R
 		R
-		R \cueClefUnset \no
+		R \clef bass \no
 	}
 % Bars 376 to 380
 	a16\f\> a a a\! r4 a16\> a a a\! r4
@@ -350,7 +350,7 @@ musicPaukenMvtI = \relative c {
 	
 	
 	\cueDuring #"cueVoicePkmI" #UP {
-		\ni \cueClef "treble" R1
+		\ni \clef "treble" R1
 % Bars 421 to 425
 		R
 		R
@@ -358,7 +358,7 @@ musicPaukenMvtI = \relative c {
 		R
 		R
 % Bars 426 to 430
-		r4 \cueClefUnset \no } a-.\f r a-.
+		r4 \clef bass \no } a-.\f r a-.
 	r e'-. r e-.
 	a,-. r a-. r
 	a-. r r2

@@ -25,10 +25,10 @@ musicBratscheMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceBrmI" #UP {
-		\ni \cueClef "bass" \MmrPos #4 R1
+		\ni \clef "bass" \MmrPos #4 R1
 		\MmrPos #4 R
 % Bars 26 to 30
-		r2^\tutti \cueClef "treble" r
+		<<\MmrPos #-6 R1 {s2 \clef treble s^\tutti }>>
 		R1
 		\MmrPos #-6 R
 		R
@@ -50,7 +50,7 @@ musicBratscheMvtI = \relative c'' {
 		R
 		\MmrPos #-8 R
 % Bars 56 to 60
-		\MmrPos #-8 R \mark \default \no \cueClefUnset
+		\MmrPos #-8 R \mark \default \no \clef alto
 	}
 	<c e>4.\ff-\tweak X-offset #1 ^\tutti <g d'>8 <e' g>4 r
 	<a, f'>4. <d gis>8 <c a'>4 r
