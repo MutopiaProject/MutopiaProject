@@ -24,17 +24,17 @@ musicFagottoIIMvtI = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImI" #DOWN {
-		\once \override MultiMeasureRest.staff-position = #8 R1
+		\ni \MmrPos #8 R1
 		R
 		R
 % Bars 26 to 30
-		r2 \cueClef "treble" r
-		r s4 \cueClef "bass" r
-		r4 \cueClefUnset } b'(\< d\> cis)\!
+		<<R1 {s2 s4 \clef treble s^\tutti }>>
+		<<R1 {s2 s4 \clef bass s}>>
+		r4 \no } b'(\< d\> cis)\!
 	a1~
 	a2. r4^\solo
 % Bars 31 to 35
-	\textLengthOn <>^\markup { \column { \lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.} } } R1*21 \textLengthOff
+	\textLengthOn <>_\markup { \center-column { \lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.} } } R1*21 \textLengthOff
 	
 % Bars 36 to 40
 	
@@ -45,12 +45,12 @@ musicFagottoIIMvtI = \relative c {
 % Bars 51 to 55
 	
 	\cueDuring #"cueVoiceFagIImI" #UP {
-		\once \override MultiMeasureRest.staff-position = #-8 R1
+		\ni \MmrPos #-8 R1
 		R
-		R
-		R
+		\clef tenor R
+		<<R1 {s2 s4 \clef bass s}>>
 % Bars 56 to 60
-		\once \override MultiMeasureRest.staff-position = #-8 R \clef bass \mark \default }
+		\MmrPos #-8 R1 \clef bass \mark \default \no }
 	a,4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
 	d4. e8 f4 r
 	g,2 a4. f8
@@ -123,8 +123,8 @@ musicFagottoIIMvtI = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImI" #UP {
-		\cueClef "treble" R1
-		R \cueClefUnset
+		\ni \clef "treble" R1
+		R \clef bass \no
 	}
 	dis,2(\p e
 % Bars 121 to 125
@@ -171,13 +171,13 @@ musicFagottoIIMvtI = \relative c {
 	R1*4
 % Bars 161 to 165
 	\cueDuring #"cueVoiceFagIImI" #UP {
-		\cueClef "tenor" R1
+		\ni \clef "tenor" R1
 		R
 		R
 		R
 		R
 % Bars 166 to 170
-		r2 \cueClefUnset } r4 g_\pdolce~
+		r2 \clef bass \no } r4 g_\pdolce~
 	g8 r fis4~ fis8 r f4~(\<
 	f\> d8)\! r r4 g~
 	g8 r fis4~ fis8\< r f4~
@@ -263,9 +263,9 @@ musicFagottoIIMvtI = \relative c {
 % Bars 241 to 245
 	\mark \default
 	\cueDuring #"cueVoiceFagIImI" #UP {
-		R1
+		\ni R1
 		R
-		r4 r8 } \clef bass eis,-._\pmarc fis-. gis-. a-. r
+		r4 r8 \no } \clef bass eis,-._\pmarc fis-. gis-. a-. r
 	R1*3
 % Bars 246 to 250
 	
@@ -304,11 +304,11 @@ musicFagottoIIMvtI = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImI" #DOWN {
-		R1
+		\ni R1
 		R
 % Bars 281 to 285
 		R
-		s1
+		s1 \no
 	}
 	\clef bass a'1(_\pcresc
 	c,2) r
@@ -364,14 +364,14 @@ musicFagottoIIMvtI = \relative c {
 	
 % Bars 336 to 340
 	\cueDuring #"cueVoiceFagIImI" #UP {
-		R1
+		\ni R1
 		R
-		\once \override MultiMeasureRest.staff-position = #-6 R
+		\MmrPos #-6 R
 		R
 		R
 % Bars 341 to 345
 		R \mark \default
-		r2 r4 } \clef bass a\f(
+		r2 r4 \no } \clef bass a\f(
 	ais-.) b2( fis4)
 	r2 r4 d'(
 	dis)-. e4(~ e16 d cis b) d4(~\fp
@@ -463,13 +463,13 @@ musicFagottoIIMvtI = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImI" #UP {
-		R1
+		\ni R1
 % Bars 421 to 425
 		R
 		R
 		R
 		R
-		r2 r4 } \clef bass a'-.\f
+		r2 r4 \no } \clef bass a'-.\f
 % Bars 426 to 430
 	d,,2 b
 	c e

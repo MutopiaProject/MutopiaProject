@@ -10,8 +10,8 @@ musicHornIIIMvtIII = \relative c'' {
 	\transposition d
 % Bars 1 to 5
 	\cueDuring #"cueVoiceHrnIIImIII" #DOWN {
-		R2
-		R
+		\ni R2
+		R \no
 	}
 	R2*18
 % Bars 6 to 10
@@ -22,10 +22,10 @@ musicHornIIIMvtIII = \relative c'' {
 	
 % Bars 21 to 25
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		R
+		R \no
 	}
 	ees2\p~
 % Bars 26 to 30
@@ -39,11 +39,11 @@ musicHornIIIMvtIII = \relative c'' {
 	\tempo "in tempo" R2*2
 	
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 % Bars 36 to 40
 		R
 		R
-		R \mark \default
+		R \mark \default \no
 	}
 	d2\ff^\tutti
 	g,8-. g-. r g-.
@@ -69,10 +69,10 @@ musicHornIIIMvtIII = \relative c'' {
 	
 % Bars 61 to 65
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		\once \override MultiMeasureRest.staff-position = #-10 R
+		\MmrPos #-10 R \no
 	}
 	c8\f^\tutti ees4 ees8~
 % Bars 66 to 70
@@ -85,12 +85,12 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 % Bars 76 to 80
 		R
-		r4 } f_\pocof(
+		r4 \no } f_\pocof(
 	e ees
 	d g
 	ees) g,(
@@ -119,13 +119,13 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		\once \override TextScript.outside-staff-priority = #10000 R2-\tweak X-offset #0 ^\tutti
+		\ni R2-\tweak X-offset #0 ^\tutti
 % Bars 106 to 110
 		R
 		R
 		R
 		R
-		R
+		R \no
 	}
 % Bars 111 to 115
 	g8\pp-. r g-. r
@@ -137,11 +137,11 @@ musicHornIIIMvtIII = \relative c'' {
 	r4^\tutti g8-. r 
 	r4 g8-. r
 	\cueDuring #"cueVoiceHrnIIImIII" #UP { 
-		R2 \bar "||"
+		\ni R2 \bar "||"
 		R
 		R
 % Bars 121 to 125
-		R
+		R \no
 	}
 	R2*12
 	
@@ -152,10 +152,10 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 136 to 140
-		r4 r8. } g'16\ff^\tutti
+		r4 r8. \no } g'16\ff^\tutti
 	g8-. r  r8. g16
 	g8-. r r8. g16
 	g4 d
@@ -183,14 +183,14 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 176 to 180
 		R
 		R
-		\once \override MultiMeasureRest.staff-position = #-6 R
+		\MmrPos #-6 R
 		R \mark \default
-		\once \override MultiMeasureRest.staff-position = #-10 R
+		\MmrPos #-10 R \no
 	}
 % Bars 181 to 185
 	c2\pp(
@@ -245,9 +245,9 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
-		r4 r8 } d'-.\p
+		r4 r8 \no } d'-.\p
 % Bars 231 to 235
 	g-. r r4
 	r r8 f-.
@@ -276,11 +276,11 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 256 to 260
 		R
-		\cueClef "bass" R \cueClefUnset
+		\clef "bass" R \clef treble \no
 	}
 	g,8\f-.^\tutti g-. r g-.
 	r g-. r g-.
@@ -306,11 +306,11 @@ musicHornIIIMvtIII = \relative c'' {
 	
 % Bars 281 to 285
 	\cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
-		R
+		R \no
 	}
 % Bars 286 to 290
 	R2*3
@@ -320,16 +320,16 @@ musicHornIIIMvtIII = \relative c'' {
 	\bar "||"
 % Bars 291 to 295
 	\time 4/4 \cueDuring #"cueVoiceHrnIIImIII" #UP {
-		R1
+		\ni R1
 		R \bar "||"
-		\time 2/4 R2
+		\time 2/4 R2 \no
 	}
 	R2*3
 	
 % Bars 296 to 300
 	\bar "||"
 	\tempo "Poco meno Allegro" \cueDuring #"cueVoiceHrnIIImIII" #DOWN {
-		\once \override MultiMeasureRest.staff-position = #6 R2
+		\MmrPos #6 R2
 		r4 r8 } g\pp~
 	g2~
 	g~

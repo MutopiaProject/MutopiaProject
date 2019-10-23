@@ -10,8 +10,8 @@ musicHornIVMvtIII = \relative c' {
 	\transposition d
 % Bars 1 to 5
 	\cueDuring #"cueVoiceHrnIVmIII" #DOWN {
-		R2
-		R
+		\ni R2
+		R \no
 	}
 	R2*18
 % Bars 6 to 10
@@ -22,10 +22,10 @@ musicHornIVMvtIII = \relative c' {
 	
 % Bars 21 to 25
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		R
+		R \no
 	}
 	ees2\p~
 % Bars 26 to 30
@@ -39,11 +39,11 @@ musicHornIVMvtIII = \relative c' {
 	\tempo "in tempo" R2*2
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 % Bars 36 to 40
 		R
 		R
-		R \mark \default
+		R \mark \default \no
 	}
 	d'2\ff^\tutti
 	g,,8-. g-. r g-.
@@ -69,10 +69,10 @@ musicHornIVMvtIII = \relative c' {
 	
 % Bars 61 to 65
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		R
+		R \no
 	}
 	c'8\f^\tutti c4 c8~
 % Bars 66 to 70
@@ -85,9 +85,9 @@ musicHornIVMvtIII = \relative c' {
 	
 % Bars 76 to 80
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
-		r4 } b(
+		r4 \no } b(
 	c) r
 % Bars 81 to 85
 	R2*4 %bes8 d) g(-. f-.)
@@ -114,13 +114,13 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 % Bars 106 to 110
 		R
 		R
 		R
 		R^\solo
-		R
+		R \no
 	}
 % Bars 111 to 115
 	g,8\pp-. r g-. r
@@ -132,11 +132,11 @@ musicHornIVMvtIII = \relative c' {
 	r4^\tutti g8-. r 
 	r4 g8-. r
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2 \bar "||"
+		\ni R2 \bar "||"
 		R
 		R
 % Bars 121 to 125
-		R
+		R \no
 	}
 	R2*12
 % Bars 126 to 130
@@ -146,10 +146,10 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 136 to 140
-		r4 r8. } ees''16\ff
+		r4 r8. \no } ees''16\ff
 	ees8-. r  r8. ees16
 	ees8-. r r8. ees16
 	ees4 g,
@@ -177,16 +177,16 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 176 to 180
 		R
 		R
 		R
 		R \mark \default
-		\once \override MultiMeasureRest.staff-position = #-10 R
-% Bars 181 to 185
+		\MmrPos #-10 R \no
 	}
+% Bars 181 to 185
 	c,2\pp(
 	g4) r
 	c2(
@@ -239,9 +239,9 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
-		r4 r8 } d''-.\p
+		r4 r8 \no } d''-.\p
 % Bars 231 to 235
 	g,-. r r4
 	r r8 f'-.
@@ -253,9 +253,9 @@ musicHornIVMvtIII = \relative c' {
 	R2*2
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 % Bars 241 to 245
-		R
+		R \no
 	}
 	ees,2\p~
 	ees
@@ -272,11 +272,11 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 256 to 260
 		R
-		\cueClef "bass" R \cueClefUnset
+		\clef "bass" R \clef treble \no
 	}
 	g,8\f-.^\tutti g-. r g-.
 	r g-. r g-.
@@ -302,11 +302,11 @@ musicHornIVMvtIII = \relative c' {
 	
 % Bars 281 to 285
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
-		R
+		R \no
 	}
 % Bars 286 to 290
 	R2*3
@@ -316,17 +316,17 @@ musicHornIVMvtIII = \relative c' {
 	\bar "||"
 % Bars 291 to 295
 	\time 4/4 \cueDuring #"cueVoiceHrnIVmIII" #UP {
-		R1
+		\ni R1
 		R \bar "||"
-		\time 2/4 R2
+		\time 2/4 R2 \no
 	}
 	R2*3
 	
 % Bars 296 to 300
 	\bar "||"
 	\tempo "Poco meno Allegro" \cueDuring #"cueVoiceHrnIVmIII" #DOWN {
-		R2
-		r4 r8 } g,\pp~
+		\ni R2
+		r4 r8 \no } g,\pp~
 	g2~
 	g~
 % Bars 301 to 305

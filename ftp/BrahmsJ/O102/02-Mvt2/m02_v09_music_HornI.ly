@@ -26,7 +26,7 @@ musicHornIMvtII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnImII" #UP { 
-		R2. \mark \default \bar "||"
+		\ni R2. \mark \default \bar "||"
 % Bars 31 to 35
 		R^\tutti
 		R
@@ -34,7 +34,7 @@ musicHornIMvtII = \relative c'' {
 		R
 		R
 % Bars 36 to 40
-		R
+		R \no
 	}
 	R2.*2
 	
@@ -55,13 +55,13 @@ musicHornIMvtII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnImII" #UP {
-		R2.
+		\ni R2.
 		R-\tweak X-offset 1 ^\tutti
 		R
 % Bars 66 to 70
 		R \bar "||"
 		R
-		R
+		R \no
 	}
 	g,,4\f( c2)~
 	c2.~
@@ -84,7 +84,7 @@ musicHornIMvtII = \relative c'' {
 	
 	\mark \default
 	\cueDuring #"cueVoiceHrnImII" #DOWN {
-		R2.
+		\ni R2.
 % Bars 101 to 105
 		R
 		R
@@ -92,7 +92,7 @@ musicHornIMvtII = \relative c'' {
 		R
 		R
 % Bars 106 to 110
-		R
+		R \no
 	}
 	R2.*4
 	
@@ -100,9 +100,9 @@ musicHornIMvtII = \relative c'' {
 	
 % Bars 111 to 115
 	\cueDuring #"cueVoiceHrnImII" #DOWN {
-		R2.
+		\ni R2.
 		R
-		R
+		R \no
 	}
 	g,4(-\tweak X-offset #-1.5 \p\< c2\>)~
 	c2.~\!

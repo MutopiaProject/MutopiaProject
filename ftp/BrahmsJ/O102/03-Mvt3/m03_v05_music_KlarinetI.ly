@@ -10,10 +10,10 @@ musicKlarinetIMvtIII = \relative c'' {
 	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		\cueClef "bass" R2
-		R
+		\clef bass \ni R2
+		R \no
 	}
-	R2*6 \cueClefUnset
+	R2*6 \clef treble
 % Bars 6 to 10
 	
 	
@@ -31,11 +31,11 @@ musicKlarinetIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2
+		\ni R2
 % Bars 26 to 30
 		R
 		R
-		R
+		R \no
 	}
 	\tempo "poco rit." ees2~\pp
 	ees~
@@ -87,7 +87,7 @@ musicKlarinetIMvtIII = \relative c'' {
 % Bars 76 to 80
 	
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
@@ -99,7 +99,7 @@ musicKlarinetIMvtIII = \relative c'' {
 		\time 3/4 R2.
 % Bars 86 to 90
 		R2. \bar "||"
-		\time 4/4 r4 } g(\mfcrescD\< aes a
+		\time 4/4 r4 \no } g(\mfcrescD\< aes a
 	bes c cis d)\! \bar "||" 
 	\time 2/4 e!8-.\f r r4
 	f8-. r r4
@@ -124,14 +124,14 @@ musicKlarinetIMvtIII = \relative c'' {
 % Bars 106 to 110
 	
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2
+		\ni R2
 		R
-		R
+		R \no
 	}
 	R2*2
 % Bars 111 to 115
 	
-	\cueDuring #"cueVoiceKlarImIII" #UP {R2}
+	\cueDuring #"cueVoiceKlarImIII" #UP { \ni R2 \no }
 	r4 c16\p\>( g')\! r8
 	R2*2
 	
@@ -139,11 +139,11 @@ musicKlarinetIMvtIII = \relative c'' {
 	R2*2^\tutti
 	
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2 \bar "||" \key f \minor
+		\ni R2 \bar "||" \key f \minor
 		R
 		R
 % Bars 121 to 125
-		R
+		R \no
 	}
 	R2*12
 % Bars 126 to 130
@@ -153,10 +153,10 @@ musicKlarinetIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 136 to 140
-		R
+		R \no
 	}
 	des!4..\ff^\tutti des16
 	des4.. des16
@@ -204,10 +204,10 @@ musicKlarinetIMvtIII = \relative c'' {
 	R2*1
 % Bars 181 to 185
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		R
+		R \no
 	}
 	R2*7
 % Bars 186 to 190
@@ -215,12 +215,12 @@ musicKlarinetIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
 % Bars 196 to 200
-		r4 } r8. c''16\ff^\tutti
+		r4 \no } r8. c''16\ff^\tutti
 	c4.. c16
 	c4.. c16
 	\tuplet 3/2 4 {c4( bes8) aes( bes c)}
@@ -259,9 +259,13 @@ musicKlarinetIMvtIII = \relative c'' {
 	R2*6
 % Bars 231 to 235
 	
-	\cueDuring #"cueVoiceKlarImIII" #UP { \once \override MultiMeasureRest.staff-position = #-6 R2}
+	\cueDuring #"cueVoiceKlarImIII" #UP { 
+		\ni \MmrPos #-6 R2 \no
+	}
 	ces16\p-. ees-. g-. ees-. bes8-. r
-	\cueDuring #"cueVoiceKlarImIII" #UP {\once \override MultiMeasureRest.staff-position = #-6 R2}
+	\cueDuring #"cueVoiceKlarImIII" #UP {
+		\MmrPos #-6 \ni R2 \no
+	}
 	ees16-. g-. bes-. g-. d8-. r
 % Bars 236 to 240
 	R2*2
@@ -314,7 +318,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	
 % Bars 281 to 285
 	\cueDuring #"cueVoiceKlarImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
@@ -326,7 +330,7 @@ musicKlarinetIMvtIII = \relative c'' {
 		\time 3/4 R2.
 		R \bar "||"
 % Bars 291 to 295
-		\time 4/4 r4 } e,(_\pcresc f fis
+		\time 4/4 r4 \no } e,(_\pcresc f fis
 	g\< a ais b)\! \bar "||"
 	\time 2/4 cis8-.\f r r4
 	d8-. r r4

@@ -9,7 +9,7 @@ musicFagottoIIMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceFagIImII" #UP { R2._\fermataMarkup }
+	\cueDuring #"cueVoiceFagIImII" #UP { \ni R2._\fermataMarkup \no }
 	<< {e4( a,2)\fermata} {s8\p\< s s s\> s s\!} >>
 	R2.*5^\solo
 % Bars 6 to 10
@@ -25,8 +25,8 @@ musicFagottoIIMvtII = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImII" #UP {
-		R2.
-		R
+		\ni R2.
+		R \no
 	}
 % Bars 21 to 25
 	fis'8(\p dis) e( cis) dis( b)
@@ -55,10 +55,10 @@ musicFagottoIIMvtII = \relative c {
 % Bars 46 to 50
 	
 	\cueDuring #"cueVoiceFagIImII" #DOWN {
-		\cueClef "treble" R2.
+		\ni \clef "treble" R2.
 		R
 		R
-		r4 r \cueClefUnset } f(~_\psempre \mark \default
+		r4 r \clef bass \no } f(~_\psempre \mark \default
 % Bars 51 to 55
 	f g a 
 	g f) r
@@ -113,9 +113,9 @@ musicFagottoIIMvtII = \relative c {
 % Bars 96 to 100
 	
 	\cueDuring #"cueVoiceFagIImII" #UP {
-		\once \override MultiMeasureRest.staff-position = #-6 R2.
+		\ni \MmrPos #-6 R2.
 		R
-		R \mark \default
+		R \no \mark \default
 	}
 	d4(\pp e fis
 % Bars 101 to 105
@@ -130,10 +130,10 @@ musicFagottoIIMvtII = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImII" #UP {
-		\cueClef "treble" R2.
+		\ni \clef "treble" R2.
 % Bars 111 to 115
 		R
-		r4 \cueClefUnset } a'2\fdimD\>~
+		r4 \clef bass \no } a'2\fdimD\>~
 	a2.~
 	a4\p( d,) r
 	R2.*3

@@ -24,11 +24,11 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #DOWN {
-		\cueClef "bass" \once \override MultiMeasureRest.staff-position = #6 R1
+		\ni \clef "bass" \MmrPos #6 R1
 		R
 		R
 % Bars 26 to 30
-		r2 \cueClefUnset } r4 d_\pdolce(
+		r2 \clef treble } r4 d_\pdolce(
 	e2 d)
 	cis( d
 	cis c
@@ -44,12 +44,12 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 51 to 55
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni \MmrPos #-6 R1
 		R
 		R
 		R
 % Bars 56 to 60
-		R \mark \default
+		R \mark \default \no
 	}
 	g'4.\f-\tweak X-offset #1 ^\tutti f8 f4 r
 	ees4. d8 bes4 r
@@ -84,11 +84,11 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni R1
 % Bars 86 to 90
 		R
 		R
-		R
+		R \no
 	}
 	g4.\f( bes8) ees( g) g4( \mark \default
 	f8) r g4( f8) r ees4(
@@ -128,13 +128,13 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 131 to 135
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
 % Bars 136 to 140
 		R
-		R
+		R \no
 	}
 	bes2(\pp des
 	f e)
@@ -164,11 +164,11 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 % Bars 166 to 170
-		r2 } r4 d_\pdolce~
+		r2 \no } r4 d_\pdolce~
 	d8 r d4~ d8 r c4~\<
 	c~\> c8\! r r4 d~
 	d8 r d4~ d8 r\< d4~
@@ -191,8 +191,8 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		\once \override MultiMeasureRest.staff-position = #-6 R1
-		d2\rest } r4 bes_\pmamarc-.
+		\ni \MmrPos #-6 R1
+		d2\rest \no } r4 bes_\pmamarc-.
 	r bes-. r bes-.
 % Bars 191 to 195
 	r8 bes-. r8 bes-. r8 bes-. r8 bes-. 
@@ -237,13 +237,13 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 236 to 240
 	
 	\cueDuring #"cueVoiceHrnIIImI" #DOWN {
-		R1
+		\ni R1
 		R
 		R
-		R
+		R \no
 	}
 % Bars 241 to 245
-	\cueDuring #"cueVoiceHrnIIImI" #UP { \once \override MultiMeasureRest.staff-position = #6 R1 \mark \default }
+	\cueDuring #"cueVoiceHrnIIImI" #UP { \ni \MmrPos #6 R1 \mark \default \no }
 	bes,1\pp~
 	bes2. r4
 	R1*10
@@ -254,11 +254,11 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni R1
 		R
 % Bars 256 to 260
 		R
-		R
+		R \no
 	}
 	g'4\f-! r r aes-!
 	g-! r r2^\tutti
@@ -281,14 +281,14 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		\cueClef "bass" R1
+		\ni \clef "bass" R1
 		R
 		R
 % Bars 281 to 285
 		R
-		r2 \cueClefUnset r
+		<< \MmrPos #-8 R1 {s2 \clef treble s} >>
 		R1
-		r2 r4 } c-._\mfcresc
+		r2 r4 \no } c-._\mfcresc
 	g'-. r8 c,-. g'4-. r8 c,-.
 % Bars 286 to 290
 	g'4-!\ff r g,-! r
@@ -316,10 +316,10 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni R1
 % Bars 311 to 315
 		R
-		\once \override MultiMeasureRest.staff-position = #4 R \bar "||" \mark \default
+		\MmrPos #4 R \bar "||" \mark \default \no
 	}
 	d'1\pp~
 	<<d~ {s4\< s s s}>>
@@ -343,11 +343,11 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 % Bars 336 to 340
-		r2 } r4 d'(_\pdolce 
+		r2 \no } r4 d'(_\pdolce 
 	ees8) r d4( ees8) r d4(
 	g,) r r d'(
 	ees8) r d4( ees8) r d4(
@@ -358,8 +358,8 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 346 to 350
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
-		r2 r4 } e'\pp~
+		\ni R1
+		r2 r4 \no } e'\pp~
 	e e2 e4~
 	e1~
 % Bars 351 to 355
@@ -373,8 +373,8 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		\once \override MultiMeasureRest.staff-position = #4 R1
-		\once \override MultiMeasureRest.staff-position = #8 R
+		\ni \MmrPos #4 R1
+		\MmrPos #8 R \no
 	}
 	c8-.\f c4 c8~ c c4 c8(\<
 % Bars 366 to 370
@@ -431,7 +431,7 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImI" #UP {
-		R1
+		\ni R1
 % Bars 421 to 425
 		R
 		R
@@ -439,7 +439,7 @@ musicHornIIIMvtI = \relative c'' {
 		R
 		R
 % Bars 426 to 430
-		r4 } g-.\f r g-.
+		r4 \no } g-.\f r g-.
 	r g,-. r d'-.
 	g,-. r g-. r
 	g-. r c-. ees-.

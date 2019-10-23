@@ -10,8 +10,8 @@ musicHornIMvtIII = \relative c'' {
 	\transposition e
 % Bars 1 to 5
 	\cueDuring #"cueVoiceHrnImIII" #DOWN {
-		R2
-		R
+		\ni R2
+		R \no
 	}
 	R2*18
 % Bars 6 to 10
@@ -22,15 +22,15 @@ musicHornIMvtIII = \relative c'' {
 	
 % Bars 21 to 25
 	\cueDuring #"cueVoiceHrnImIII" #DOWN {
-		R2
+		\ni R2
 		R
 		R
-		\once \override MultiMeasureRest.staff-position = #6 R
-		\override MultiMeasureRest.staff-position = #-2 R
+		\MmrPos #6 R
+		\MmrPos #-2 R
 % Bars 26 to 30
-		R
-		R
-		R \revert MultiMeasureRest.staff-position
+		\MmrPos #-2 R
+		\MmrPos #-2 R
+		\MmrPos #-2 R \no
 	}
 	R2*4^\pocorit
 	
@@ -40,11 +40,11 @@ musicHornIMvtIII = \relative c'' {
 	\textLengthOn <>^\intempo R2*2 \textLengthOff
 	
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2
+		\ni R2
 % Bars 36 to 40
 		R
 		R
-		R \mark \default
+		R \mark \default \no
 	}
 	g2\ff^\tutti
 	c8-. r r4
@@ -70,10 +70,10 @@ musicHornIMvtIII = \relative c'' {
 	
 % Bars 61 to 65
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
-		\once \override MultiMeasureRest.staff-position = #-10 R
+		\MmrPos #-10 R \no
 	}
 	ees8\f^\tutti ees4 ees8~
 % Bars 66 to 70
@@ -90,13 +90,13 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		\once \override MultiMeasureRest.staff-position = #-6 R2
+		\ni \MmrPos #-6 R2
 % Bars 81 to 85
 		R
 		R
 		R
 		R \bar "||"
-		\time 3/4 R2.
+		\time 3/4 R2. \no
 	}
 % Bars 86 to 90
 	R2. \bar "||"
@@ -120,9 +120,9 @@ musicHornIMvtIII = \relative c'' {
 % Bars 106 to 110
 	
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2
+		\ni R2
 		R
-		R^\solo
+		R^\solo \no
 	}
 	R2*6
 % Bars 111 to 115
@@ -131,11 +131,11 @@ musicHornIMvtIII = \relative c'' {
 	R2*2^\tutti
 	
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2 \bar "||"
+		\ni R2 \bar "||"
 		R
 		R
 % Bars 121 to 125
-		R
+		R \no
 	}
 	R2*12
 % Bars 126 to 130
@@ -145,10 +145,10 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2
+		\ni R2
 		R
 % Bars 136 to 140
-		R
+		R \no
 	}
 	ees4\ff->^\tutti fis->
 	a4.-> r8
@@ -182,7 +182,7 @@ musicHornIMvtIII = \relative c'' {
 	R2
 % Bars 181 to 185
 	\cueDuring #"cueVoiceHrnImIII" #DOWN {
-		R2
+		\ni R2
 		R
 		R
 		R
@@ -192,7 +192,7 @@ musicHornIMvtIII = \relative c'' {
 		R
 		R
 		R
-		R
+		R \no
 	}
 % Bars 191 to 195
 	g2~
@@ -204,11 +204,11 @@ musicHornIMvtIII = \relative c'' {
 	r4 r8.^\tutti r16
 	R2
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 % Bars 201 to 205
-		R
+		R \no
 	}
 	r8. aes'16\ff-. aes8-.[ r16 aes-.]
 	\tuplet 3/2 4 {aes4( ges8) ees( f ges)}
@@ -238,11 +238,11 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2
+		\ni R2
 % Bars 231 to 235
 		R
 		R
-		R
+		R \no
 	}
 	r8 c'-.\p g'-. r
 	r4 r8 g,-.
@@ -263,10 +263,10 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		\once \override MultiMeasureRest.staff-position = #-8 R2
+		\ni \MmrPos #-8 R2
 		R
 % Bars 256 to 260
-		R
+		R \no
 	}
 	c2\f
 	c'8-.^\tutti r r4
@@ -314,11 +314,11 @@ musicHornIMvtIII = \relative c'' {
 	\tempo "Poco meno Allegro" R2*4
 % Bars 301 to 305
 	\cueDuring #"cueVoiceHrnImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
-		d8\rest } c(-\tweak X-offset #-1.5 \p\< d\> c\!)
+		d8\rest \no } c(-\tweak X-offset #-1.5 \p\< d\> c\!)
 % Bars 306 to 310
 	r e(\p d c)
 	r c(\< d\> c\!)

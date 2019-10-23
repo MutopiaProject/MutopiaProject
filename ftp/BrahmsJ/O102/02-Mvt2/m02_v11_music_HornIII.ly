@@ -10,8 +10,8 @@ musicHornIIIMvtII = \relative c {
 	\transposition f
 % Bars 1 to 5
 	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
-		R2.\fermataMarkup
-		\once \override MultiMeasureRest.staff-position = #6 R2.\fermataMarkup
+		\ni R2.\fermataMarkup
+		\MmrPos #6 R2.\fermataMarkup \no
 	}
 	R2.*22^\solo
 % Bars 6 to 10
@@ -26,13 +26,13 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
-		R2.
+		\ni R2.
 % Bars 26 to 30
 		R
 		R
 		R
 		R
-		r4 r } \clef bass c~\p^\tutti \bar "||" \mark \default
+		r4 r \no } \clef bass c~\p^\tutti \bar "||" \mark \default
 % Bars 31 to 35
 	c2.~
 	c~
@@ -100,20 +100,20 @@ musicHornIIIMvtII = \relative c {
 	
 % Bars 106 to 110
 	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
-		R2.
+		\ni R2.
 		R
 		R
 		R
 		R
 % Bars 111 to 115
 		R
-		\once \override MultiMeasureRest.staff-position = #6 R
-		\once \override MultiMeasureRest.staff-position = #6 R
+		\MmrPos #6 R
+		\MmrPos #6 R \no
 	}
 	e,4(-\tweak X-offset #-3 \p\< a2)\>~
 	a2.\!~
 % Bars 116 to 118
 	a~
 	a2 r4
-	R2.\fermataMarkup \bar "|."
+	\ni R2.\fermataMarkup \bar "|."
 }

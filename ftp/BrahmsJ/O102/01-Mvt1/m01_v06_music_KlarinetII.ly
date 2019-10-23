@@ -9,7 +9,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	\key c \minor
 	\transposition a
 % Bars 1 to 5
-	g4._\fmarc f8 d4 r
+	g4._\fmarc^\tutti f8 d4 r
 	ees4. d8 g,4 r
 	fis-. r f-. r
 	ees-. g-. c-. c-.
@@ -24,18 +24,18 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarIImI" #DOWN {
-		\cueClef "bass" R1
+		\ni \clef "bass" R1
 		R
 		R
 % Bars 26 to 30
-		r2 \cueClef "treble" r^\tutti
-		\override MultiMeasureRest.staff-position = #-4 \stemUp R1
-		R
-		R
-		R \cueClefUnset \revert MultiMeasureRest.staff-position \stemNeutral
+		<< R1 {s2 s4^\tutti \clef treble s }>> 
+		\MmrPos #-4 R1
+		\MmrPos #-4 R
+		\MmrPos #-4 R
+		\MmrPos #-4 R \no
 	}
 % Bars 31 to 35
-	\textLengthOn <>^\markup { \column { \lower #1 \line {Solo-Viol.u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
+	\textLengthOn <>^\markup { \center-column { \lower #1 \line {Solo-Viol.u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
 	
 % Bars 36 to 40
 	
@@ -46,12 +46,12 @@ musicKlarinetIIMvtI = \relative c''' {
 % Bars 51 to 55
 	
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
 % Bars 56 to 60
-		R \mark \default
+		R \mark \default \no
 	}
 	ees4.\ff -\tweak X-offset #1 ^\tutti bes8 g'4 r
 	aes,4. b8 c4 r
@@ -125,8 +125,8 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
-		R
+		\ni R1
+		R \no
 	}
 	fis,2(\p g
 % Bars 121 to 125
@@ -168,13 +168,13 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 % Bars 161 to 165
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
 		R
 		R
 % Bars 166 to 170
-		r2 } r4 bes_\pdolce~
+		r2 \no } r4 bes_\pdolce~
 	bes8 r a4~ a8 r aes4\<(~
 	aes\> f8)\! r r4 bes~
 	bes8 r a4~ a8\< r aes4~
@@ -243,20 +243,20 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 % Bars 231 to 235
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
+		\ni R1
 		R
-		\once \override MultiMeasureRest.staff-position = #-6 R
+		\MmrPos #-6 R
 		R
 		R
 % Bars 236 to 240
-		r2 r8 } gis,(_\dimmarkup a b)
+		r2 r8 \no } gis,(_\dimmarkup a b)
 	r a( b cis) r b( cis d)
 	R1*4
 % Bars 241 to 245
 	\mark \default
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
-		R
+		\ni R1
+		R \no
 	}
 	r4 r8 gis,_\pmarc-. a-. b-. c-. r
 	R1
@@ -297,10 +297,10 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
+		\ni R1
 		R
 % Bars 281 to 285
-		r2 r4 } c'\p~
+		r2 r4 \no } c'\p~
 	c1_\crescmarkup~
 	c(
 	g2) r
@@ -359,10 +359,10 @@ musicKlarinetIIMvtI = \relative c''' {
 % Bars 341 to 345
 	\mark \default
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
+		\ni R1
 		R
 		R
-		r2 r4 } f'4(\fp~
+		r2 r4 \no } f'4(\fp~
 % Bars 346 to 350
 	f8 bes,) a4.( g8) f4~
 	f a2\>( g4)\!
@@ -449,12 +449,12 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarIImI" #UP {
-		R1
+		\ni R1
 % Bars 421 to 425
 		R
 		R
 		R
-		R
+		R \no
 	}
 	r2 r4 c-.\f
 % Bars 426 to 430

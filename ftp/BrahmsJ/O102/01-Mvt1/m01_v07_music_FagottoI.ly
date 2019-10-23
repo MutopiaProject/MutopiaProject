@@ -24,12 +24,12 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceFagImI" #DOWN {
-		\once \override MultiMeasureRest.staff-position = #8 R1
+		\MmrPos #8 \ni R1
 		R
 		R
 % Bars 26 to 30
-		r2 \cueClef "treble" r
-		r2 r4 \cueClefUnset } fis,(\p\<_\dolce
+		<<R1 {s2 s4^\tutti \clef treble s }>>
+		r2 r4 \no } \clef bass fis,(\p\<_\dolce
 	a2\> gis4)\! a(
 	fis'2 f
 	e cis4) r
@@ -44,14 +44,14 @@ musicFagottoIMvtI = \relative c' {
 % Bars 51 to 55
 	
 	\cueDuring #"cueVoiceFagImI" #UP {
-		\once \override MultiMeasureRest.staff-position = #6 R1
-		R \cueClef "tenor"
+		\ni \MmrPos #6 R1
+		R \clef "tenor"
 		R
-		R \cueClef "bass"
+		<< R {s2 s4 \clef bass s } >>
 % Bars 56 to 60
-		R \mark \default \cueClefUnset
+		R1 \mark \default \no
 	}
-	a,4.\ff b8 c4 r
+	a,4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
@@ -123,8 +123,8 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceFagImI" #UP {
-		\cueClef "treble" R1
-		R \cueClefUnset
+		\ni \clef "treble" R1
+		R \clef bass \no
 	}
 	fis,2(\p g
 % Bars 121 to 125
@@ -155,7 +155,7 @@ musicFagottoIMvtI = \relative c' {
 	r4 r8 b8(\< c4. d8
 	b4.\> c8 d2\!)
 % Bars 146 to 150
-	r1^\gp
+	R1_\gp
 	bes1_\dolce~
 	bes(\<
 	a2)(\dimD\> c)~
@@ -171,13 +171,13 @@ musicFagottoIMvtI = \relative c' {
 	R1*4
 % Bars 161 to 165
 	\cueDuring #"cueVoiceFagImI" #UP {
-		\cueClef "tenor" R1
+		\ni \clef "tenor" R1
 		R
 		R
 		R
 		R
 % Bars 166 to 170
-		r2 \cueClefUnset } r4 g_\pdolce~
+		r2 \clef bass \no } r4 g_\pdolce~
 	g8 r a4~ a8 r aes4~(\<
 	aes\> f8)\! r r4 g~
 	g8 r a!4~ a8\< r aes4~
@@ -264,9 +264,9 @@ musicFagottoIMvtI = \relative c' {
 % Bars 241 to 245
 	\mark \default
 	\cueDuring #"cueVoiceFagImI" #UP {
-		\cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
-		r4 r8 \cueClefUnset } gis,-._\pmarc a-. b-. c-. r
+		r4 r8 \clef bass \no } gis,-._\pmarc a-. b-. c-. r
 	R1*3
 % Bars 246 to 250
 	
@@ -305,11 +305,11 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceFagImI" #DOWN {
-		\cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
 % Bars 281 to 285
 		R
-		R \cueClefUnset
+		R \clef bass \no
 	}
 	c'1(_\pcresc
 	a2) r
@@ -365,14 +365,14 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 336 to 340
 	\cueDuring #"cueVoiceFagImI" #UP {
-		\cueClef "treble" R1
+		\ni \clef "treble" R1
 		R
 		\once \override MultiMeasureRest.staff-position = #-6 R
 		R
 		R
 % Bars 341 to 345
 		R \mark \default
-		r2 r4 \cueClefUnset } a\f(
+		r2 r4 \clef bass \no } a\f(
 	ais-.) b2( fis4)
 	r2 r4 \clef tenor d'(
 	dis)-. e4(~ e16 d cis b) fis'4(~\fp
@@ -464,13 +464,13 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceFagImI" #UP {
-		\cueClef "treble" R1
+		\ni \clef "treble" R1
 % Bars 421 to 425
 		R
 		R
 		R
 		R
-		r2 r4 \cueClefUnset } a-.\f
+		r2 r4 \clef bass \no } a-.\f
 % Bars 426 to 430
 	d,2 b
 	c e

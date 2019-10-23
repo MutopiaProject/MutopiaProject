@@ -9,7 +9,7 @@ musicKlarinetIMvtII = \relative c''' {
 	\key f \major
 	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceKlarImII" #DOWN {R2.\fermataMarkup} 
+	\cueDuring #"cueVoiceKlarImII" #DOWN {\ni R2.\fermataMarkup \no } 
 	<< {g4( c2)\fermata} {s8\p\< s s s\> s s\!} >>
 	R2.*5^\solo
 % Bars 6 to 10
@@ -28,13 +28,13 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarImII" #UP {
-		\once \override MultiMeasureRest.staff-position = #-6 R2.
+		\ni \MmrPos #-6 R2.
 % Bars 26 to 30
 		R
 		R
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		e'4\rest } b\rest -\tweak X-offset #-1 ^\tutti c_\pdolce(~ \bar "||" \key aes \major \mark \default
+		\MmrPos #-8 R
+		\MmrPos #-8 R
+		e'4\rest \no } b\rest -\tweak X-offset #-1 ^\tutti c_\pdolce(~ \bar "||" \key aes \major \mark \default
 % Bars 31 to 35
 	c des ees
 	des c) f(
@@ -79,9 +79,9 @@ musicKlarinetIMvtII = \relative c''' {
 	
 % Bars 66 to 70
 	\cueDuring #"cueVoiceKlarImII" #UP { 
-		R2. \bar "||" \key f \major
+		\ni R2. \bar "||" \key f \major
 		R2.
-		r4 r } c(~_\mfcresc
+		r4 r \no } c(~_\mfcresc
 	c bes c
 	bes a) r
 % Bars 71 to 75
@@ -94,12 +94,12 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarImII" #UP {
-		R2.
+		\ni R2.
 		R
 % Bars 81 to 85
 		R
 		R
-		r4 r8 } c,(\p\< f g
+		r4 r8 \no } c,(\p\< f g
 	c\> a f c)\! r4
 	R2.
 % Bars 86 to 90
@@ -112,12 +112,12 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarImII" #UP {
-		R2.
+		\ni R2.
 % Bars 96 to 100
 		R
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		\once \override MultiMeasureRest.staff-position = #-8 R
-		R \mark \default 
+		\MmrPos #-8 R
+		\MmrPos #-8 R
+		R \mark \default \no
 	}
 	a4(\pp bes c
 % Bars 101 to 105

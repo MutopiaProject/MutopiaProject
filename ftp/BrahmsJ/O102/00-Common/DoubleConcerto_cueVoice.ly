@@ -807,7 +807,7 @@ cueVoiceKlarImI = \relative c {
 	f) r r2
 	R1*64
 	% bar 231
-	r2 r4 \tuplet 3/2 4 {bes'8( -\tweak X-offset #-6 ^\markup {Solo-Viol.} c d}
+	r2 r4 \tuplet 3/2 4 {bes'8( -\tweak X-offset #-7 ^\markup {Solo-Viol.} c d}
 	\tuplet 3/2 4 {g, a bes e, f g cis, d e} g,4-.)
 	\tuplet 3/2 4 {f8( e d g f e a g f)} r4
 	\tuplet 3/2 4 {d'8( c bes e d cis f e d)} r4
@@ -939,11 +939,11 @@ cueVoiceKlarIImI = \relative c {
 	r4 <g d' f c'>^\pizz b' aes
 	f d b f_(^\arco
 	aes1_\espressivo
-	g4) r r e'''(^\markup {Klar.I}
-	d) e( b) c(
-	d2 g,4) c(
+	g2) r4 e'''^(^\markup {Klar.I}
+	d) e^( b) c^(
+	d2 g,4) c^(
 	fis2 f)
-	e4( c2) r4 
+	e4^( c2) r4 
 	R1*21
 	% bar 52
 	r2^\markup {Solo-Viol.} g8( a16 b c d ees f

@@ -10,8 +10,8 @@ musicFagottoIIMvtIII = \relative c {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		R2
-		r4 r8 } c-.\p
+		\ni R2
+		r4 r8 \no } c-.\p
 	a'4 r8 c,-.
 	a'4 r8 e-.
 	c'4 r8 e,-.
@@ -27,19 +27,19 @@ musicFagottoIIMvtIII = \relative c {
 	
 % Bars 21 to 25
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		R2
+		\ni R2
 		R
 		R
 		R
-		R
+		R \no
 	}
 % Bars 26 to 30
 	R2*3
 	
 	
 	\tempo "poco rit." \cueDuring #"cueVoiceFagIImIII" #UP {
-		\cueClef "treble" R2
-		R \cueClefUnset
+		\ni \clef "treble" R2
+		R \clef bass \no
 	}
 % Bars 31 to 35
 	a2\pp~
@@ -75,9 +75,9 @@ musicFagottoIIMvtIII = \relative c {
 % Bars 61 to 65
 	
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		R2
+		\ni R2
 		R
-		\once \override MultiMeasureRest.staff-position = #-10 R
+		\MmrPos #-10 R \no
 	}
 	g8\f-.^\tutti g'-. g,-. g'-. 
 % Bars 66 to 70
@@ -91,19 +91,19 @@ musicFagottoIIMvtIII = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImIII" #DOWN {
-		R2
+		\ni R2
 		R
 		R
 % Bars 81 to 85
 		R
 		R
-		R
+		R \no
 	}
 	r4 d'~ \bar "||"
 	\time 3/4 d2.~
 % Bars 86 to 90
 	d4( g2) \bar "||"
-	\time 4/4 \cueDuring #"cueVoiceFagIImIII" #UP {R1}
+	\time 4/4 \cueDuring #"cueVoiceFagIImIII" #UP { \ni R1 \no}
 	b,4(\mf\< c cis d8 g,)\! \bar "||"
 	\time 2/4 a8-.\f r r4
 	d8-. r r4
@@ -137,10 +137,10 @@ musicFagottoIIMvtIII = \relative c {
 	R2*2
 	
 	\cueDuring #"cueVoiceFagIImIII" #UP { 
-		\cueClef "treble" R2 \bar "||" \key d \minor
+		\ni \clef "treble" R2 \bar "||" \key d \minor
 		R
 		R
-		R \cueClefUnset
+		R \clef bass \no
 	}
 % Bars 121 to 125
 	R2*12
@@ -151,10 +151,10 @@ musicFagottoIIMvtIII = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		\cueClef "treble" R2
+		\ni \clef "treble" R2
 		R
 % Bars 136 to 140
-		R \cueClefUnset
+		R \clef bass \no
 	}
 	bes'4..\ff^\tutti bes16
 	bes4.. bes,16
@@ -195,12 +195,12 @@ musicFagottoIIMvtIII = \relative c {
 % Bars 171 to 175
 	
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		\cueClef "treble" R2
-		\override MultiMeasureRest.staff-position = #-10 R
-		R \revert MultiMeasureRest.staff-position
+		\ni \clef "treble" R2
+		\MmrPos #-10 R
+		\MmrPos #-10 R
 		R
 % Bars 176 to 180
-		r4 \cueClefUnset } r8 d(\f
+		r4 \clef bass \no } r8 d(\f
 	a'4) r8 bes,!(
 	f'4) r
 	R2 \mark \default
@@ -212,16 +212,16 @@ musicFagottoIIMvtIII = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		\cueClef "treble" R2
+		\ni \clef "treble" R2
 		R
 % Bars 191 to 195
-		\once \override MultiMeasureRest.staff-position = #-6 R
+		\MmrPos #-6 R
 		R
 		R
 		R
 		R
 % Bars 196 to 200
-		r4 \cueClefUnset } r8. a16\ff^\tutti
+		r4 \clef bass \no } r8. a16\ff^\tutti
 	a8( f!16) f( d) d( cis) cis(
 	f) f( d) d( bes) bes( a) a
 	g4.. g16
@@ -265,8 +265,8 @@ musicFagottoIIMvtIII = \relative c {
 	%R2*3
 % Bars 236 to 240
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		\cueClef "treble" R2
-		R \cueClefUnset \mark \default
+		\ni \clef "treble" R2
+		R \clef bass \no \mark \default
 	}
 	c'4_\dolce( bes
 	a b!)~
@@ -287,7 +287,7 @@ musicFagottoIIMvtIII = \relative c {
 	
 	
 	
-	\cueDuring #"cueVoiceFagIImIII" #UP {R2}
+	\cueDuring #"cueVoiceFagIImIII" #UP {\ni R2 \no}
 	e'2_\mfcresc(
 % Bars 256 to 260
 	d)(
@@ -316,12 +316,12 @@ musicFagottoIIMvtIII = \relative c {
 	
 	
 	\cueDuring #"cueVoiceFagIImIII" #UP {
-		\cueClef "treble" R2
+		\ni \clef "treble" R2
 		R
-		R
+		<< R2 {s4 s8 \clef tenor s} >>
 % Bars 281 to 285
-		\cueClef "tenor" R
-		r4 \cueClefUnset } e,,\mf\<(
+		R2
+		r4 \clef bass \no } e,,\mf\<(
 	g) fis(\!
 	b)\> d\!
 	cis8( a) d(-. cis-.)
@@ -332,7 +332,7 @@ musicFagottoIIMvtIII = \relative c {
 	\time 3/4 b2.~
 	b4( e2) \bar "||"
 % Bars 291 to 295
-	\time 4/4 \cueDuring #"cueVoiceFagIImIII" #UP {R1}
+	\time 4/4 \cueDuring #"cueVoiceFagIImIII" #UP {\ni R1 \no}
 	gis,4(\p\< a ais b8 e)\! \bar "||"
 	\time 2/4 fis,8-.\f r r4
 	b8-. r r4
