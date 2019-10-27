@@ -1,27 +1,27 @@
 %
-% Flote I             |    29
-% Flote II            |   105
-% Oboe I              |   352
-% Oboe II             |  
-% Klarinet I          |  
-% Klarinet II         |  
-% Fagot I             |  
-% Fagot II            |  
-% Horn I              |  
-% Horn II             |  
-% Horn III            |  
-% Horn IV             |  
-% Trumpet I           |  
-% Trumpet II          |  
-% Pauken              |  
-% Solo Violin         |  
-% Solo Violoncelle    |  
-% Violin I            |  
-% Violin II           |  
-% Bratsche            |  
-% Violoncelle         |  
-% Contrabass          |  
 %
+% Flote I             | 29   | 95   | 116
+% Flote II            | 191  | 269  | 296
+% Oboe I              | 374  | 464  | 497
+% Oboe II             | 572  | 658  | 693
+% Klarinet I          | 781  | 830  | 861
+% Klarinet II         | 935  | 998  | 1028
+% Fagot I             | 1105 | 1161 | 1180
+% Fagot II            | 1254 | 1311 | 1334
+% Horn I              | 1416 | 1509 | 1543
+% Horn II             | 1638 | 1729 | 1763
+% Horn III            | 1874 | 1964 | 1987
+% Horn IV             | 2076 | 2166 | 2195
+% Trumpet I           | 2289 | 2379 | 2418
+% Trumpet II          | 2526 | 2616 | 2655
+% Pauken              | 2766 |      | 2858 
+% Solo Violin         | 2951 | 3001 | 3017 
+% Solo Violoncelle    | 3083 | 3142 | 3165 
+% Violin I            | 3219 | 3250 | 3259 
+% Violin II           | 3323 | 3357 | 3372 
+% Bratsche            | 3445 | 3463 | 3474 
+% Violoncelle         | 3532 | 3550 | 3561 
+% Contrabass          | 3588 | 3629 | 3640
 %
 %###############################################################################
 %#                                F L O T E N                                  #

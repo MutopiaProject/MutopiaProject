@@ -250,7 +250,7 @@ musicOboeIMvtIII = \relative c''' {
 	R2
 	aes'8( g16 aes) aes,4
 	R2
-	\tempo "in tempo" R2*5
+	\tempo "in tempo" \MmrLength #18 R2*5
 % Bars 251 to 255
 	
 	

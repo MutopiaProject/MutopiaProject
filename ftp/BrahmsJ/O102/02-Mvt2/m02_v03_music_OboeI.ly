@@ -13,7 +13,7 @@ musicOboeIMvtII = \relative c''' {
 		\ni R2.\fermataMarkup
 		R2.\fermataMarkup \no
 	}
-	R2.*27 -\tweak X-offset #-2 ^\solo
+	\MmrLength #20 R2.*27 -\tweak X-offset #-2 ^\solo
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -39,7 +39,7 @@ musicOboeIMvtII = \relative c''' {
 	e\> d )\! g(
 	f e d 
 	b c) r^\solo
-	R2.*11
+	\MmrLength #15 R2.*11
 % Bars 41 to 45
 	
 % Bars 46 to 50
@@ -64,9 +64,9 @@ musicOboeIMvtII = \relative c''' {
 	bes a g
 % Bars 61 to 65
 	e f) r
-	R2.*2
+	\MmrLength #15 R2.*2
 	
-	R2.*2^\tutti
+	\MmrLength #15 R2.*2^\tutti
 	
 % Bars 66 to 70
 	\cueDuring #"cueVoiceOboeImII" #UP {

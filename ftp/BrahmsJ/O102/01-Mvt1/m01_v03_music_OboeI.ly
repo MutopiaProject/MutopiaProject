@@ -9,7 +9,7 @@ musicOboeIMvtI = \relative c'' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc d8 b4 r
+	e4._\fmarc^\tutti d8 b4 r
 	c4. b8 e,4 r
 	dis'-. r d-. r
 	c-. e-. d-. f-. 
@@ -270,7 +270,7 @@ musicOboeIMvtI = \relative c'' {
 	c des2 bes4~
 	bes c2 aes4-.
 	f-. r ees-. r \mark #11
-	R1*14-\tweak X-offset #2.5 ^\solo
+	\MmrLength #15 R1*14^\solo
 % Bars 271 to 275
 	
 % Bars 276 to 280
@@ -279,8 +279,10 @@ musicOboeIMvtI = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceOboeImI" #DOWN {R1
-	R1 }
+	\cueDuring #"cueVoiceOboeImI" #DOWN {
+		\ni R1
+		R1 \no
+	}
 % Bars 286 to 290
 	a'4\ff-! r e-! r
 	f-! r fis-! r
@@ -430,5 +432,5 @@ musicOboeIMvtI = \relative c'' {
 	a-. r d-. f-.
 	a-. r a-. r
 % Bar 431
-	R1\fermataMarkup \bar "|."
+	\ni R1\fermataMarkup \bar "|."
 }

@@ -5,8 +5,9 @@
 %#                           S E C T I O N  P A P E R                          #
 %###############################################################################
 \paper {
-	ragged-last-bottom = ##t
-	ragged-bottom = ##t
+	ragged-last-bottom = ##f
+	ragged-bottom = ##f
+	left-margin = 16 \mm
 	bookTitleMarkup = \markup {
 		\override #'(baseline-skip . 3.5)
 		\column {
@@ -58,6 +59,7 @@
 \addQuote "cueVoiceFloteIImII" { \cueVoiceFloteIImII }
 \addQuote "cueVoiceFloteIImIII" { \cueVoiceFloteIImIII }
 \include "./00-Common/00_DoubleConcerto_Format_Floten.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -221,7 +223,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4

@@ -43,7 +43,7 @@ musicFloteIMvtIII = \relative c''' {
 	
 	
 	\mark \default
-	e'2\ff^\tutti
+	e'2\ff-\tweak X-offset #1 ^\tutti
 	c8-. c-. r f-.
 % Bars 41 to 45
 	r d-. r c-.

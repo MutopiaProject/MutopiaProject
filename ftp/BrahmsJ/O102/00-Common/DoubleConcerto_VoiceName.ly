@@ -71,7 +71,7 @@ nameVoiceVIII = {
 nameVoiceIX = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\line { "Horn I" }
+			\lower #1 \line { "Horn I" }
 			\line { " in E" }
 		}
 	}
@@ -84,7 +84,7 @@ nameVoiceIX = {
 nameVoiceX = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\line { "Horn II" }
+			\lower #1 \line { "Horn II" }
 			\line { " in E" }
 		}
 	}
@@ -97,7 +97,7 @@ nameVoiceX = {
 nameVoiceXI = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\line { "Horn III" }
+			\lower #1 \line { "Horn III" }
 			\line { " in D" }
 		}
 	}
@@ -110,7 +110,7 @@ nameVoiceXI = {
 nameVoiceXII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\line { "Horn IV" }
+			\lower #1 \line { "Horn IV" }
 			\line { " in D" }
 		}
 	}
@@ -123,7 +123,7 @@ nameVoiceXII = {
 nameVoiceXIII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\line { "Trumpet I" }
+			\lower #1 \line { "Trumpet I" }
 			\line { " in D" }
 		}
 	}
@@ -136,7 +136,7 @@ nameVoiceXIII = {
 nameVoiceXIV = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\line { "Trumpet II" }
+			\lower #1 \line { "Trumpet II" }
 			\line { " in D" }
 		}
 	}
@@ -160,16 +160,27 @@ nameVoiceXV = {
 %#                           V O I C E   N A M E S                             #
 %###############################################################################
 nameVoiceXVI = {
-	\set Staff.instrumentName = #"SoloViolin"
-	\set Staff.shortInstrumentName = #"Solo-Vln"
+	\set Staff.instrumentName = #"Solo Violin"
+	%\set Staff.shortInstrumentName = #"Solo-Vln"
+	\set Staff.shortInstrumentName = \markup {
+		\center-column {
+			\lower #1 \line { "Solo-" }
+			\line { "Vln" }
+		}
+	}
 	\set Staff.midiInstrument = #"violin"
 }
 %###############################################################################
 %#                           V O I C E   N A M E S                             #
 %###############################################################################
 nameVoiceXVII = {
-	\set Staff.instrumentName = #"SoloCello"
-	\set Staff.shortInstrumentName = #"Solo-Vlc"
+	\set Staff.instrumentName = #"Solo Vlc"
+	\set Staff.shortInstrumentName = \markup {
+		\center-column {
+			\lower #1 \line { "Solo-Vlc" }
+			\line { "Vlc" }
+		}
+	}
 	\set Staff.midiInstrument = #"cello"
 }
 %###############################################################################

@@ -7,6 +7,7 @@
 \paper {
 	ragged-last-bottom = ##t
 	ragged-bottom = ##t
+	left-margin = 16 \mm
 	bookTitleMarkup = \markup {
 		\override #'(baseline-skip . 3.5)
 		\column {
