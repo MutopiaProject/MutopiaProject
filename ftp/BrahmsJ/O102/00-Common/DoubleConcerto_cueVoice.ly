@@ -669,7 +669,7 @@ cueVoiceOboeIImII = \relative c' {
 	e d) r
 	R2.*13
 	% bar 50
-	r4 r a'(~
+	r4 r a'(~-\tweak X-offset #-3 ^\markup {Fl.I}
 	a bes c
 	bes a) r
 	r r d(

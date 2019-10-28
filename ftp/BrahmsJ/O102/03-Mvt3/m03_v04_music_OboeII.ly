@@ -13,7 +13,7 @@ musicOboeIIMvtIII = \relative c'' {
 		\ni \clef "bass" R2
 		R \clef treble \no
 	}
-	R2*26
+	\MmrLength #20 R2*26
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -26,12 +26,12 @@ musicOboeIIMvtIII = \relative c'' {
 	
 	
 	
-	\tempo "poco rit." \MmrLength #10 R2*4
+	\tempo "poco rit." \MmrLength #12 R2*4
 	
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" \MmrLength #10 R2*2
+	\tempo "in tempo" \MmrLength #12 R2*2
 	
 	\cueDuring #"cueVoiceOboeIImIII" #DOWN {
 		\ni R2
@@ -241,11 +241,11 @@ musicOboeIIMvtIII = \relative c'' {
 	a r r4
 	R2*3
 % Bars 246 to 250
-	\tempo "poco rit." \MmrLength #12 R2*4 %\tempo "poco rit." aes8(\p g16 aes) aes,4_\dimmarkup
+	\tempo "poco rit." \MmrLength #15 R2*4 %\tempo "poco rit." aes8(\p g16 aes) aes,4_\dimmarkup
 	%R2
 	%aes'8( g16 aes) aes,4
 	%R2
-	\tempo "in tempo" \MmrLength #14 R2*5
+	\tempo "in tempo" \MmrLength #15 R2*5
 % Bars 251 to 255
 	
 	

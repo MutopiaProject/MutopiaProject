@@ -35,7 +35,7 @@ musicOboeIIMvtI = \relative c'' {
 		R \no
 	}
 % Bars 31 to 35
-	\textLengthOn <>^\markup {\center-column { \lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
+	\textLengthOn <>_\markup {\center-column { \lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45

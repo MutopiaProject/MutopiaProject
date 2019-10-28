@@ -11,33 +11,48 @@
 	bookTitleMarkup = \markup {
 		\override #'(baseline-skip . 3.5)
 		\column {
-			\fill-line { 
-				\fromproperty #'header:dedication
-			}
 			\override #'(baseline-skip . 3.5)
 			\column {
+				\vspace #10
 				\fill-line {
 					\huge \larger \larger \bold
-					\fromproperty #'header:title
-				}
-				\fill-line {
-					\large %\bold
-					\fromproperty #'header:subtitle
-				}
-				\fill-line {
-					\smaller %\bold
-					\fromproperty #'header:subsubtitle
-				}
-				\fill-line {
-					\fromproperty #'header:poet
-					{ \large \bold \fromproperty #'header:instrument }
 					\fromproperty #'header:composer
 				}
+				\vspace #10
 				\fill-line {
-					\fromproperty #'header:meter
-					\fromproperty #'header:arranger
+					\large %\bold
+					\fromproperty #'header:title
+				}
+				\vspace #10
+				\fill-line {
+					\smaller %\bold
+					\fromproperty #'header:subtitle
 				}
 			}
+		}
+	}
+	oddHeaderMarkup = \markup {
+		\vspace #1
+		\on-the-fly \not-first-page \fill-line {
+			\null
+			\center-column {
+				\smaller \fromproperty #'header:subsubtitle
+				\fromproperty #'header:instrument
+				\vspace #2
+			}
+			\fromproperty #'page:page-number-string
+		}
+	}
+	evenHeaderMarkup =  \markup {
+		\vspace #1
+		\on-the-fly \not-first-page \fill-line {
+			\fromproperty #'page:page-number-string
+			\center-column {
+				\smaller \fromproperty #'header:subsubtitle
+				\fromproperty #'header:instrument
+				\vspace #2
+			}
+			\null
 		}
 	}
 }
@@ -52,8 +67,8 @@
 \include "./01-Mvt1/m01_v04_music_OboeII.ly"
 \include "./02-Mvt2/m02_v04_music_OboeII.ly"
 \include "./03-Mvt3/m03_v04_music_OboeII.ly"
-%\include "./00-Common/00_DoubleConcerto_Format_Oboen.ly"
-\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/00_DoubleConcerto_Format_Oboen.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceOboeImI" { \cueVoiceOboeImI }
 \addQuote "cueVoiceOboeImII" { \cueVoiceOboeImII }
 \addQuote "cueVoiceOboeImIII" { \cueVoiceOboeImIII }
@@ -65,104 +80,106 @@
 %###############################################################################
 \book {
 	\header {
-		title = \markup { \fontsize #5 \sans 
+		composer = \markup { \fontsize #5 \sans 
 			\center-column {
-				\vspace #10
 				"Johannes Brahms"
 				"1833 - 1897"
 			}
 		}
-		subtitle = \markup { 
+		title = \markup { 
 			\fontsize #5 \sans
 			\center-column {
-				\vspace #10
 				"Double Concerto pour Violon et Violoncelle"
 				"en la mineur Opus 102"
 			}
 		}
-		subsubtitle = \markup { \fontsize #3 \sans
+		subtitle = \markup { \fontsize #3 \sans
 			\center-column {
-				\vspace #10
 				"Part for Oboen"
 			}
 		}
+		subsubtitle = \markup {
+			"Brahms - Concerto for Violin and Cello in A Minor"
+		}
+		instrument = \markup {
+			"Oboe"
+		}
 	}
-%	\score {
-%		\new Staff <<
-%			\new Voice {
-%				\formatMvtIVoiceIII
-%			}
-%			\new Voice {
-%				\timeMvtI \generalOptions \partOptions
-%				\nameVoiceIII \musicOboeIMvtI
-%			}
-%		>>
-%		\header {
-%			breakbefore = ##t
-%			piece = \markup {
-%				\fill-line {
-%					\fontsize #4
-%					I
-%				}
-%			}
-%		}
-%		\layout {
-%			%system-count = 34
-%			\context {
-%				\CueVoice \layoutCueVoice
-%			}
-%		}
-%	}
-%	\score {
-%		\new Staff <<
-%			\new Voice {
-%				\formatMvtIIVoiceIII
-%			}
-%			\new Voice {
-%				\timeMvtII \generalOptions \partOptions
-%				\nameVoiceIII \musicOboeIMvtII
-%			}
-%		>>
-%		\header {
-%			breakbefore = ##f
-%			piece = \markup {
-%				\fill-line {
-%					\fontsize #4
-%					II
-%				}
-%			}
-%		}
-%		\layout {
-%			\context {
-%				\CueVoice \layoutCueVoice
-%			}
-%		}
-%	}
-%	\score {
-%		\new Staff <<
-%			\new Voice {
-%				\formatMvtIIIVoiceIII
-%			}
-%			\new Voice {
-%				\timeMvtIII \generalOptions \partOptions
-%				\nameVoiceIII \musicOboeIMvtIII
-%			}
-%		>>
-%		\header {
-%			breakbefore = ##f
-%			piece = \markup {
-%				\fill-line {
-%					\fontsize #4
-%					III
-%				}
-%			}
-%		}
-%		\layout {
-%			\context {
-%				\CueVoice \layoutCueVoice
-%			}
-%		}
-%	}
+	\score {
+		\new Staff <<
+			\new Voice {
+				\formatMvtIVoiceIII
+			}
+			\new Voice {
+				\timeMvtI \generalOptions \partOptions
+				\nameVoiceIII \musicOboeIMvtI
+			}
+		>>
+		\header {
+			breakbefore = ##t
+			piece = \markup {
+				\fill-line {
+					\fontsize #4
+					I
+				}
+			}
+		}
+		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
+		}
+	}
+	\score {
+		\new Staff <<
+			\new Voice {
+				\formatMvtIIVoiceIII
+			}
+			\new Voice {
+				\timeMvtII \generalOptions \partOptions
+				\nameVoiceIII \musicOboeIMvtII
+			}
+		>>
+		\header {
+			breakbefore = ##f
+			piece = \markup {
+				\fill-line {
+					\fontsize #4
+					II
+				}
+			}
+		}
+		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
+		}
+	}
+	\score {
+		\new Staff <<
+			\new Voice {
+				\formatMvtIIIVoiceIII
+			}
+			\new Voice {
+				\timeMvtIII \generalOptions \partOptions
+				\nameVoiceIII \musicOboeIMvtIII
+			}
+		>>
+		\header {
+			breakbefore = ##f
+			piece = \markup {
+				\fill-line {
+					\fontsize #4
+					III
+				}
+			}
+		}
+		\layout {
+			\context {
+				\CueVoice \layoutCueVoice
+			}
+		}
+	}
 	\score {
 		\new Staff <<
 			\new Voice {
@@ -199,7 +216,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4

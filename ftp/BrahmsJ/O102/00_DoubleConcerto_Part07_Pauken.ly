@@ -11,33 +11,48 @@
 	bookTitleMarkup = \markup {
 		\override #'(baseline-skip . 3.5)
 		\column {
-			\fill-line { 
-				\fromproperty #'header:dedication
-			}
 			\override #'(baseline-skip . 3.5)
 			\column {
+				\vspace #10
 				\fill-line {
 					\huge \larger \larger \bold
-					\fromproperty #'header:title
-				}
-				\fill-line {
-					\large %\bold
-					\fromproperty #'header:subtitle
-				}
-				\fill-line {
-					\smaller %\bold
-					\fromproperty #'header:subsubtitle
-				}
-				\fill-line {
-					\fromproperty #'header:poet
-					{ \large \bold \fromproperty #'header:instrument }
 					\fromproperty #'header:composer
 				}
+				\vspace #10
 				\fill-line {
-					\fromproperty #'header:meter
-					\fromproperty #'header:arranger
+					\large %\bold
+					\fromproperty #'header:title
+				}
+				\vspace #10
+				\fill-line {
+					\smaller %\bold
+					\fromproperty #'header:subtitle
 				}
 			}
+		}
+	}
+	oddHeaderMarkup = \markup {
+		\vspace #1
+		\on-the-fly \not-first-page \fill-line {
+			\null
+			\center-column {
+				\smaller \fromproperty #'header:subsubtitle
+				\fromproperty #'header:instrument
+				\vspace #2
+			}
+			\fromproperty #'page:page-number-string
+		}
+	}
+	evenHeaderMarkup =  \markup {
+		\vspace #1
+		\on-the-fly \not-first-page \fill-line {
+			\fromproperty #'page:page-number-string
+			\center-column {
+				\smaller \fromproperty #'header:subsubtitle
+				\fromproperty #'header:instrument
+				\vspace #2
+			}
+			\null
 		}
 	}
 }
@@ -56,26 +71,29 @@
 %###############################################################################
 \book {
 	\header {
-		title = \markup { \fontsize #5 \sans 
+		composer = \markup { \fontsize #5 \sans 
 			\center-column {
-				\vspace #10
 				"Johannes Brahms"
 				"1833 - 1897"
 			}
 		}
-		subtitle = \markup { 
+		title = \markup { 
 			\fontsize #5 \sans
 			\center-column {
-				\vspace #10
 				"Double Concerto pour Violon et Violoncelle"
 				"en la mineur Opus 102"
 			}
 		}
-		subsubtitle = \markup { \fontsize #3 \sans
+		subtitle = \markup { \fontsize #3 \sans
 			\center-column {
-				\vspace #10
 				"Part for Pauken"
 			}
+		}
+		subsubtitle = \markup {
+			"Brahms - Concerto for Violin and Cello in A Minor"
+		}
+		instrument = \markup {
+			"Pauken"
 		}
 	}
 	\score {
