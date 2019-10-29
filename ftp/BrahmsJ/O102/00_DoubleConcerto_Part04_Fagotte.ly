@@ -68,6 +68,7 @@
 \include "./02-Mvt2/m02_v08_music_FagottoII.ly"
 \include "./03-Mvt3/m03_v08_music_FagottoII.ly"
 \include "./00-Common/00_DoubleConcerto_Format_Fagotte.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceFagImI" { \cueVoiceFagImI }
 \addQuote "cueVoiceFagImII" { \cueVoiceFagImII }
 \addQuote "cueVoiceFagImIII" { \cueVoiceFagImIII }
@@ -124,6 +125,7 @@
 			}
 		}
 		\layout {
+			%system-count = 38
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -149,6 +151,7 @@
 			}
 		}
 		\layout {
+			%system-count = 9
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -165,7 +168,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -174,6 +177,7 @@
 			}
 		}
 		\layout {
+			%system-count = 26
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -199,6 +203,7 @@
 			}
 		}
 		\layout {
+			%system-count = #35
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -215,7 +220,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -224,6 +229,7 @@
 			}
 		}
 		\layout {
+			system-count = #9
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -249,6 +255,7 @@
 			}
 		}
 		\layout {
+			system-count = #25
 			\context {
 				\CueVoice \layoutCueVoice
 			}

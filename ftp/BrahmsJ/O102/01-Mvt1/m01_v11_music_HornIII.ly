@@ -9,7 +9,7 @@ musicHornIIIMvtI = \relative c'' {
 	\key a \minor
 	\transposition d
 % Bars 1 to 5
-	d4._\fmarc^\tutti d8 d4 r
+	\mark \markup {\abs-fontsize #16 "in D"} d4._\fmarc^\tutti d8 d4 r
 	d4. d8 d4 r
 	bes-. r c-. r
 	g-. g-. g'-. g-.
@@ -51,7 +51,7 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 56 to 60
 		R \mark \default \no
 	}
-	g'4.\f-\tweak X-offset #1 ^\tutti f8 f4 r
+	g'4.\f-\tweak X-offset #1.5 ^\tutti f8 f4 r
 	ees4. d8 bes4 r
 	ees-. ees-. ees4.-> g8
 	f4. f8 f4. g8
@@ -118,7 +118,7 @@ musicHornIIIMvtI = \relative c'' {
 	ees-. r e-. r
 % Bars 111 to 115
 	d-. r d-. r \mark \default
-	R1*20^\solo
+	\MmrLength #10 R1*20^\solo
 % Bars 116 to 120
 	
 % Bars 121 to 125
@@ -138,7 +138,7 @@ musicHornIIIMvtI = \relative c'' {
 	}
 	bes2(\pp des
 	f e)
-	<< g1~\pp {s2 s_\dimmarkup}>>
+	g1~-\tweak X-offset #0 \ppdimD
 % Bars 141 to 145
 	g1~
 	g \mark \default
@@ -146,7 +146,7 @@ musicHornIIIMvtI = \relative c'' {
 	f~
 	f
 % Bars 146 to 150
-	R1^\gp
+	R1_\gp
 	bes,1~
 	bes\<(
 	c)(\dimD\>
@@ -180,8 +180,8 @@ musicHornIIIMvtI = \relative c'' {
 	
 	r2 r4 g(~\p 
 	g8 d) ees4.( b8) c4~
-	c_\dimmarkup c2 c4\pp\<~
-	<<c1~ {s4\> s s s\! }>>
+	c_\dimmarkup c2 c4_\ppespr~
+	c1~
 % Bars 181 to 185
 	c2( f)~
 	f1(~
@@ -270,11 +270,11 @@ musicHornIIIMvtI = \relative c'' {
 	bes4-. r bes-. r
 	ees-. r r2
 % Bars 266 to 270
-	R1*4
+	\MmrLength #8 R1*4
 	
 	
 	\mark #11
-	R1*8^\solo
+	\MmrLength #10 R1*8^\solo
 % Bars 271 to 275
 	
 % Bars 276 to 280
@@ -307,7 +307,7 @@ musicHornIIIMvtI = \relative c'' {
 	f2. d4-.
 	g-. ees-. c-. d-.
 	g,2 g4 r
-	R1*10^\solo
+	\MmrLength #12 R1*10^\solo
 % Bars 301 to 305
 	
 % Bars 306 to 310
@@ -325,7 +325,7 @@ musicHornIIIMvtI = \relative c'' {
 	<<d~ {s4\< s s s}>>
 	<<d1 {s4\> s s s\!}>>
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	f1\pp~
 	f(\<
 	e)(~\dimD\>
@@ -379,7 +379,7 @@ musicHornIIIMvtI = \relative c'' {
 	c8-.\f c4 c8~ c c4 c8(\<
 % Bars 366 to 370
 	a2.\>) r4\! \mark \default
-	c8-\tweak X-offset #1 ^\tutti c4 c c c8(
+	c8-\tweak X-offset #1.8 ^\tutti c4 c c c8(
 	b4-.) b-. r2
 	a'8 a4 a8( g) g4 g8~
 	g4-! fis-! r2
@@ -414,7 +414,7 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 % Bars 396 to 400
-	R1*18^\solo
+	\MmrLength #15 R1*18^\solo
 % Bars 401 to 405
 	
 % Bars 406 to 410

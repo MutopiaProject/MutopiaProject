@@ -167,7 +167,7 @@ musicFagottoIIMvtIII = \relative c {
 	e f8. c16
 	e4 a,
 % Bars 146 to 150
-	R2*2 -\tweak X-offset #-1 ^\solo
+	\MmrLength #10 R2*2^\solo
 	\mark \default
 	R2*4 %r4 r8 c'\(_\ppdolce~
 	%c c4 bes8(

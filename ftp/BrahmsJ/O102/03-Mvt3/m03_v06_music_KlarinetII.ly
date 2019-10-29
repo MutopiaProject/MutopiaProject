@@ -167,9 +167,9 @@ musicKlarinetIIMvtIII = \relative c'' {
 	d c
 	b c
 % Bars 146 to 150
-	R2*2^\solo
+	\MmrLength #10 R2*2^\solo
 	\mark \default
-	r4 r8 c,_\ppdolce\((
+	r4 r8 c,-\tweak X-offset #-2 _\ppdolce\((
 	aes') aes4 g8(
 	aes) aes4 c,8(
 % Bars 151 to 155
@@ -285,7 +285,9 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceKlarIImIII" #UP {R2}
+	\cueDuring #"cueVoiceKlarIImIII" #UP {
+		\ni R2 \no 
+	}
 	g,2_\mfcresc(
 % Bars 256 to 260
 	\shape #'((0 . 2)(0 . 1)(0 . 1)(0 . 0)) Slur f)(

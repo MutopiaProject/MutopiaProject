@@ -41,6 +41,8 @@ atempo=^\markup {\italic {a tempo}}
 
 
 pespr = ^\markup {\dynamic p \musicglyph #"scripts.espr"}
+ppespr = ^\markup {\dynamic pp \musicglyph #"scripts.espr"}
+
 
 fdim = \markup {\dynamic f \italic dim.}
 fespress = \markup {\dynamic f \italic espress.}
@@ -85,6 +87,7 @@ mfcrescD = #(make-dynamic-script (markup #:dynamic "mf" #:normal-text #:italic "
 pcrescD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "cresc."))
 pcrescmoltoD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "cresc. molto"))
 pdimD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "dim."))
+ppdimD = #(make-dynamic-script (markup #:dynamic "pp" #:normal-text #:italic "dim."))
 pdolceD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "dolce"))
 piufD = #(make-dynamic-script (markup #:normal-text #:italic "più" #:dynamic "f"))
 piupD = #(make-dynamic-script (markup #:normal-text #:italic "più" #:dynamic "p"))

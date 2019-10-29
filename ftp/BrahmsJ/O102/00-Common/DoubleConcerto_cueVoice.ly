@@ -814,7 +814,7 @@ cueVoiceKlarImI = \relative c {
 	\tuplet 3/2 4 {bes'8( a g c bes a} d) r r4
 	R1*106
 	% bar 342
-	r2 r4 c^\markup {Ob.I}(
+	r2 r4 c-\tweak X-offset #-4 ^\markup {Ob.I}(
 	cis-.) d2( a4)
 	r2 r4 f4(
 	fis-.) g4(~ g16 f! e d) r4
@@ -1151,7 +1151,7 @@ cueVoiceFagImI = \relative c {
 	<fisis fisis'>) <gis gis'>4(~ <gis gis'>16 fis' e dis) r4
 	R1*77
 	% bar 420
-	r2 r4 c-.-\tweak X-offset #-3 ^\markup {Fl.I}
+	f,2\rest f4\rest c'-.-\tweak X-offset #-3 ^\markup {Fl.I}
 	b-. c-. gis-. a-.
 	b-. b-. e,-. c'-.
 	b-. c-. gis-. a-.
@@ -1178,7 +1178,7 @@ cueVoiceFagImII = \relative c {
 	d4. r8 r4
 }
 cueVoiceFagImIII = \relative c {
-	a'8(^\markup {Solo-Vlc.} e'16-.) e-. dis8( d16-.) d-.
+	a'8(-\tweak X-offset #-6 ^\markup {Solo-Vlc.} e'16-.) e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8 r
 	R2*14
 	% bar 17
@@ -1188,7 +1188,7 @@ cueVoiceFagImIII = \relative c {
 	e8-- d16-. e-. d( f) d-. b-.
 	R2*8
 	% bar 29
-	a8(^\markup {Solo-Viol.} gis16 a) a,4
+	a8(-\tweak X-offset #-7 ^\markup {Solo-Viol.} gis16 a) a,4
 	c8( b16 c) c'4
 	R2*31
 	% bar 62
@@ -1481,7 +1481,7 @@ cueVoiceHrnImI = \relative c {
 	f'4-. r r2
 	R1*23
 	% bar 310
-	r2 \tuplet 3/2 4 {ees'8\rf^\markup {Solo-Viol.} c ges ees c ges}
+	r2 \tuplet 3/2 4 {ees'8\rf-\tweak X-offset #-8.5 ^\markup {Solo-Viol.} c ges ees c ges}
 	f4 r \tuplet 3/2 4 {f''8\rf d b f d b}
 	\tuplet 3/2 4 {f' d b} f f\rest \tuplet 3/2 4 {f d b} f f'\rest
 	R1*29
@@ -1701,7 +1701,7 @@ cueVoiceHrnIImI = \relative c {
 	f'4-. r r2
 	R1*23
 	% bar 310
-	r2 \tuplet 3/2 4 {ees'8\rf^\markup {Solo-Viol.} c ges ees c ges}
+	r2 \tuplet 3/2 4 {ees'8\rf-\tweak X-offset #-8.5 ^\markup {Solo-Viol.} c ges ees c ges}
 	f4 r \tuplet 3/2 4 {f''8\rf d b f d b}
 	\tuplet 3/2 4 {f' d b} f f\rest \tuplet 3/2 4 {f d b} f f'\rest
 	R1*29
@@ -1934,7 +1934,7 @@ cueVoiceHrnIIImI = \relative c {
 	g d e fis g a bes c d g, a bes r4
 	R1*25
 	% bar 310
-	r2^\markup {Solo-Viol.} \tuplet 3/2 4 {f'8\rf d aes f d aes}
+	r2-\tweak X-offset #-4 ^\markup {Solo-Viol.} \tuplet 3/2 4 {f'8\rf d aes f d aes}
 	g!4 r \tuplet 3/2 4 {g''8\rf e cis g e! cis} 
 	\tuplet 3/2 4 {g' e cis} g g\rest \tuplet 3/2 4 {g e cis} g g\rest
 	R1*20
@@ -2228,11 +2228,11 @@ cueVoiceHrnIVmIII = \relative c {
 	ges8-> f16-. f-. bes-. d-. f-. d-.
 	bes8->^\markup {Ob.I} a16-. bes-. a8-> bes16-. a-.
 	bes8-> a16-. bes-. a( g') f-. e-.
-	d'8->-\tweak X-offset #-3.5 ^\markup {Fl.I} c16-. d-. c8-> d16-. c-.
+	d'8->_\markup {Fl.I} c16-. d-. c8-> d16-. c-.
 	d8-> c16-. d-. c( ees) c-. a-.
 	R2*7
 	% bar 118
-	r4 r8. g16-.^\markup {Solo-Viol.} 
+	r4 r8. g16-.-\tweak X-offset #-7 ^\markup {Solo-Viol.} 
 	g8-.[ g16\rest <ees g>-.] q8-.[ g16\rest q-.]
 	\tuplet 3/2 4 {<ees g>4( <d f>8) <c ees>( <d f> <ees g>)}
 	\tuplet 3/2 4 {<ees g>4( <des f>8)} r4

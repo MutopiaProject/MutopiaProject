@@ -9,7 +9,7 @@ musicHornIIMvtIII = \relative c' {
 	\key a \minor
 	\transposition e
 % Bars 1 to 5
-	\cueDuring #"cueVoiceHrnIImIII" #DOWN {
+	\mark \markup {\abs-fontsize #16 "in E"} \cueDuring #"cueVoiceHrnIImIII" #DOWN {
 		\ni R2
 		R \no
 	}
@@ -46,7 +46,7 @@ musicHornIIMvtIII = \relative c' {
 		R
 		R \mark \default \no
 	}
-	c2\ff^\tutti
+	c2-\tweak X-offset #-2 \ff-\tweak X-offset #1.5 ^\tutti
 	c8-. r r4
 % Bars 41 to 45
 	R2*1
@@ -95,7 +95,7 @@ musicHornIIMvtIII = \relative c' {
 		R
 		R
 		R
-		R \bar "||"
+		\MmrPos #-6 R \bar "||"
 		\time 3/4 R2. \no
 	}
 % Bars 86 to 90
@@ -153,17 +153,17 @@ musicHornIIMvtIII = \relative c' {
 	ees4\ff-> fis->
 	a4.-> r8
 	R2
-	\textLengthOn <>^\solo R2*2
+	\MmrLength #9 R2*2^\solo
 % Bars 141 to 145
 	
-	<>^\tutti R2*4
+	\MmrLength #9 R2*4^\tutti
 	
 	
 	
 % Bars 146 to 150
-	<>-\tweak X-offset #-2 ^\solo R2*2
+	\MmrLength #10 R2*2^\solo
 	\mark \default
-	<>_\markup {(Klar. Fag.)} R2*32 \textLengthOff
+	\textLengthOn <>_\markup {(Klar. Fag.)} R2*32 \textLengthOff
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -229,7 +229,7 @@ musicHornIIMvtIII = \relative c' {
 % Bars 216 to 220
 	c~
 	c \mark \default \bar "||"
-	R2*12-\tweak X-offset #2.5 ^\solo
+	\MmrLength #10 R2*12^\solo
 % Bars 221 to 225
 	
 % Bars 226 to 230
@@ -253,11 +253,11 @@ musicHornIIMvtIII = \relative c' {
 % Bars 241 to 245
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	\tempo "poco rit." \MmrLength #12 R2*4
 	
 	
 	
-	\tempo "in tempo" R2*4
+	\tempo "in tempo" \MmrLength #12 R2*4
 % Bars 251 to 255
 	
 	
@@ -268,7 +268,7 @@ musicHornIIMvtIII = \relative c' {
 % Bars 256 to 260
 		R \no
 	}
-	c,2\f
+	c,2-\tweak X-offset #-2.5 -\tweak Y-offset #-3 \f
 	c'8-.^\tutti r r4
 	R2*1
 	r8 c-. r c-.

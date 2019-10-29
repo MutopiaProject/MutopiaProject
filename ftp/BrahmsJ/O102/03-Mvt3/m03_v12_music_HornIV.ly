@@ -9,7 +9,7 @@ musicHornIVMvtIII = \relative c' {
 	\key a \minor
 	\transposition d
 % Bars 1 to 5
-	\cueDuring #"cueVoiceHrnIVmIII" #DOWN {
+	\mark \markup {\abs-fontsize #16 "in D"} \cueDuring #"cueVoiceHrnIVmIII" #DOWN {
 		\ni R2
 		R \no
 	}
@@ -45,7 +45,7 @@ musicHornIVMvtIII = \relative c' {
 		R
 		R \mark \default \no
 	}
-	d'2\ff^\tutti
+	d'2\ff-\tweak X-offset #1.5 ^\tutti
 	g,,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
@@ -119,11 +119,11 @@ musicHornIVMvtIII = \relative c' {
 		R
 		R
 		R
-		R^\solo
+		R-\tweak X-offset #0 ^\solo
 		R \no
 	}
 % Bars 111 to 115
-	g,8\pp-. r g-. r
+	g,8-\tweak X-offset #-3.5 -\tweak Y-offset #-2.5 \pp-. r g-. r
 	r4 g8-. r 
 	r4 g8_\dimmarkup-. r
 	R2
@@ -161,9 +161,9 @@ musicHornIVMvtIII = \relative c' {
 	c8 r r8. bes16
 	c4 g
 % Bars 146 to 150
-	R2*2^\solo
+	\MmrLength #10 R2*2^\solo
 	\mark \default
-	R2*26
+	\MmrLength #12 R2*26
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -177,12 +177,12 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		\ni R2
+		\ni \MmrPos #-10 R2
 		R
 % Bars 176 to 180
 		R
 		R
-		R
+		\MmrPos #-6 R
 		R \mark \default
 		\MmrPos #-10 R \no
 	}
@@ -231,7 +231,7 @@ musicHornIVMvtIII = \relative c' {
 % Bars 216 to 220
 	d~
 	d \bar "||" \mark \default
-	g,,8-.\p^\solo r r4
+	g,,8-.-\tweak X-offset #-2 -\tweak Y-offset #-2.5 \p-\tweak X-offset #1.5 ^\solo r r4
 	R2*9
 % Bars 221 to 225
 	
@@ -262,17 +262,17 @@ musicHornIVMvtIII = \relative c' {
 	R2*2
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	\tempo "poco rit." \MmrLength #11 R2*4
 	
 	
 	
-	\tempo "in tempo" R2*4
+	\tempo "in tempo" \MmrLength #11 R2*4
 % Bars 251 to 255
 	
 	
 	
 	\cueDuring #"cueVoiceHrnIVmIII" #UP {
-		\ni R2
+		\ni \MmrPos #-6 R2
 		R
 % Bars 256 to 260
 		R

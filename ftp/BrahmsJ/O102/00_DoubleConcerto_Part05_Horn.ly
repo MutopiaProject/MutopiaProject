@@ -74,6 +74,7 @@
 \include "./02-Mvt2/m02_v12_music_HornIV.ly"
 \include "./03-Mvt3/m03_v12_music_HornIV.ly"
 \include "./00-Common/00_DoubleConcerto_Format_Horn.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceHrnImI" { \cueVoiceHrnImI }
 \addQuote "cueVoiceHrnImII" { \cueVoiceHrnImII }
 \addQuote "cueVoiceHrnImIII" { \cueVoiceHrnImIII }
@@ -136,6 +137,7 @@
 			}
 		}
 		\layout {
+			%system-count = #24
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -161,6 +163,7 @@
 			}
 		}
 		\layout {
+			%system-count = #4
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -186,6 +189,7 @@
 			}
 		}
 		\layout {
+			%system-count = #17
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -211,6 +215,7 @@
 			}
 		}
 		\layout {
+			%system-count = 25
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -236,6 +241,7 @@
 			}
 		}
 		\layout {
+			%system-count = #4
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -261,6 +267,7 @@
 			}
 		}
 		\layout {
+			%system-count = #16
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -286,6 +293,7 @@
 			}
 		}
 		\layout {
+			%system-count = #30
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -311,6 +319,7 @@
 			}
 		}
 		\layout {
+			%system-count = #5
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -327,7 +336,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -336,6 +345,7 @@
 			}
 		}
 		\layout {
+			%system-count = #23
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -361,6 +371,7 @@
 			}
 		}
 		\layout {
+			system-count = #30
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -386,6 +397,7 @@
 			}
 		}
 		\layout {
+			system-count = #5
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -402,7 +414,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -411,6 +423,7 @@
 			}
 		}
 		\layout {
+			system-count = #22
 			\context {
 				\CueVoice \layoutCueVoice
 			}

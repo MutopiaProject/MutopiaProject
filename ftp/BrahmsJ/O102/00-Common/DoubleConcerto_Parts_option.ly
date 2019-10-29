@@ -11,7 +11,7 @@ generalOptions = {
 	\set Score.alternativeNumberingStyle = #'numbers
 	\set Score.doubleRepeatType = #":|.|:"
 	\set Score.markFormatter = #format-mark-box-alphabet
-	%\override Score.RehearsalMark #'font-size = #8.
+	\override Score.RehearsalMark #'font-size = #4
 	\compressFullBarRests
 }
 partOptions = {

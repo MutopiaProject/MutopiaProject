@@ -156,7 +156,7 @@ musicKlarinetIMvtI = \relative c''' {
 	R1*2
 	
 % Bars 146 to 150
-	R1^\gp
+	R1_\gp
 	g4.\espressivo_\dolce( f8 bes,2)
 	r4 r8 g'(\< f4. bes,8
 	g'4.\dimD\> f8 c4. g'8\!
@@ -193,7 +193,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 % Bars 181 to 185
-	r2 aes'(\pp\<~
+	r2 aes'(-\tweak X-offset #-2 \pp\<~
 	aes1~\>
 	aes2\! g)
 	ges1(\pp
@@ -340,7 +340,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	g1\pp~
 	g(
 	fis)(_\dimmarkup

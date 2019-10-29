@@ -9,7 +9,7 @@ musicHornIVMvtI = \relative c'' {
 	\key a \minor
 	\transposition d
 % Bars 1 to 5
-	d4._\fmarc d8 d4 r
+	\mark \markup {\abs-fontsize #16 "in D"} d4._\fmarc^\tutti d8 d4 r
 	d4. d8 d4 r
 	g,-. r c,-. r
 	g-. g-. g'-. g-.
@@ -34,7 +34,7 @@ musicHornIVMvtI = \relative c'' {
 	g1~
 	g2. r4
 % Bars 31 to 35
-	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
+	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -51,7 +51,7 @@ musicHornIVMvtI = \relative c'' {
 % Bars 56 to 60
 		R \no \mark \default
 	}
-	g4.\f -\tweak X-offset #1 ^\tutti c8 d4 r
+	g4.\f -\tweak X-offset #1.5 ^\tutti c8 d4 r
 	g,4. fis8 g4 r
 	c-. a-. bes4.-> bes8
 	c4. c8 d4. bes8
@@ -118,7 +118,7 @@ musicHornIVMvtI = \relative c'' {
 	g,-. r g-. r
 % Bars 111 to 115
 	d'-. r d-. r \mark \default
-	R1*20
+	\MmrLength #12 R1*20
 % Bars 116 to 120
 	
 % Bars 121 to 125
@@ -146,7 +146,7 @@ musicHornIVMvtI = \relative c'' {
 	ees~
 	ees 
 % Bars 146 to 150
-	R1^\gp
+	R1_\gp
 	R1
 	bes1~\<
 	bes~\dimD\>
@@ -227,7 +227,7 @@ musicHornIVMvtI = \relative c'' {
 % Bars 216 to 220
 	d8-. r r4 r2
 	R1 \mark \default
-	R1*19-\tweak X-offset #3 ^\solo
+	\MmrLength #12 R1*19^\solo
 % Bars 221 to 225
 	
 % Bars 226 to 230
@@ -325,11 +325,11 @@ musicHornIVMvtI = \relative c'' {
 	<<c~ {s4 s s s\<}>>
 	<<c1 {s4\> s s\! s}>>
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	g,1\pp~
-	g2(\< g')~\!
-	g1~\dimD(
-	g2\> fis~
+	g2(\< g')~
+	g1~\dimD\>(
+	g2 fis~
 % Bars 321 to 325
 	fis4)\! r r2
 	r2 r4 g_\pdolce(
@@ -379,7 +379,7 @@ musicHornIVMvtI = \relative c'' {
 	a8-.\f a4 a8( g) g4 g8\<~
 % Bars 366 to 370
 	g2\>( fis4) r4\! \mark \default
-	a8-\tweak X-offset #1 ^\tutti a4 a a a8~
+	a8-\tweak X-offset #1.5 ^\tutti a4 a a a8~
 	a4-. a-. r2
 	c8 c4 c8~ c c4 c8~
 	c4-! c-! r2
@@ -414,7 +414,7 @@ musicHornIVMvtI = \relative c'' {
 	
 	
 % Bars 396 to 400
-	R1*18^\solo
+	\MmrLength #10 R1*18^\solo
 % Bars 401 to 405
 	
 % Bars 406 to 410

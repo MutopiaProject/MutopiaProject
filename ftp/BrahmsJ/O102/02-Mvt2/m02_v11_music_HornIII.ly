@@ -9,7 +9,7 @@ musicHornIIIMvtII = \relative c {
 	\key c \major
 	\transposition f
 % Bars 1 to 5
-	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
+	\mark \markup {\abs-fontsize #16 "in F"} \cueDuring #"cueVoiceHrnIIImII" #DOWN {
 		\ni R2.\fermataMarkup
 		\MmrPos #6 R2.\fermataMarkup \no
 	}

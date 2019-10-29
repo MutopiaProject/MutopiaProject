@@ -9,7 +9,7 @@ musicHornIMvtII = \relative c'' {
 	\key c \major
 	\transposition d
 % Bars 1 to 5
-	<< {g4(^\solo c2)\fermata } {s8\f\< s s s\> s s\!} >>
+	\mark \markup {\abs-fontsize #16 "in D"} << {g4(^\solo c2)\fermata } {s8\f\< s s s\> s s\!} >>
 	<< {d4( g2)\fermata} {s8\p\< s s s\> s s\!} >>
 	R2.*27^\solo
 % Bars 6 to 10

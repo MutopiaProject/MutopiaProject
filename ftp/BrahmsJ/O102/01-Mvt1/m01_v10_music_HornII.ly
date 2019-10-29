@@ -9,7 +9,7 @@ musicHornIIMvtI = \relative c' {
 	\key a \minor
 	\transposition e
 % Bars 1 to 5
-	c4._\fmarc^\tutti c8 c4 r
+	\mark \markup {\abs-fontsize #16 "in E"} c4._\fmarc^\tutti c8 c4 r
 	c4. c8 c4 r
 	b'-. r bes-. r
 	c,-. c-. bes'-. bes-.
@@ -29,13 +29,13 @@ musicHornIIMvtI = \relative c' {
 		R \clef treble \no
 	}
 % Bars 26 to 30
-	c,,1~\p
+	c,,1~-\tweak X-offset #-2 \p
 	c~
 	c~
 	c~
 	c2. r4
 % Bars 31 to 35
-	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
+	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -52,7 +52,7 @@ musicHornIIMvtI = \relative c' {
 % Bars 56 to 60
 		R \mark \default \no
 	}
-	c'4.\f-\tweak X-offset #1 ^\tutti ees8 c4 r
+	c'4.\f-\tweak X-offset #1.5 ^\tutti ees8 c4 r
 	bes'4. bes8 des4 r
 	R1
 	r2 c4. c8
@@ -117,7 +117,7 @@ musicHornIIMvtI = \relative c' {
 	bes-. r b-. r
 % Bars 111 to 115
 	c-. r c,-. r \mark \default
-	R1*26^\solo
+	\MmrLength #12 R1*26^\solo
 % Bars 116 to 120
 	
 % Bars 121 to 125
@@ -141,7 +141,7 @@ musicHornIIMvtI = \relative c' {
 	r4 r8 ees8\p~ ees4.\< ees8~
 	<<ees1 {s4\> s s s\!}>>
 % Bars 146 to 150
-	R1^\gp
+	R1_\gp
 	R1*25
 	
 	
@@ -250,13 +250,13 @@ musicHornIIMvtI = \relative c' {
 	}
 	c'4-!\f r^\solo r ees,-!
 	c'-! r r2^\tutti
-	R1*6
+	\MmrLength #10 R1*6
 % Bars 266 to 270
 	
 	
 	
 	\mark #11
-	R1*8^\solo
+	\MmrLength #10 R1*8^\solo
 % Bars 271 to 275
 	
 % Bars 276 to 280
@@ -309,14 +309,14 @@ musicHornIIMvtI = \relative c' {
 	r4 r8 c8~ c4. c8\<~
 	<<c1 {s4\> s s s\!}>>
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	R1*2
 	
 	g1(_\dimmarkup
 	c,)~\>
 % Bars 321 to 325
 	c4\! r r2
-	R1*20
+	\MmrLength #10 R1*20
 % Bars 326 to 330
 	
 % Bars 331 to 335
@@ -354,7 +354,7 @@ musicHornIIMvtI = \relative c' {
 	c8\f-. c4 c8( g') g4 g8(\<
 % Bars 366 to 370
 	bes2.)\> r4\! \mark \default
-	c,8-\tweak X-offset #1 ^\tutti c4 c8( e) e4 e8(
+	c,8-\tweak X-offset #1.5 ^\tutti c4 c8( e) e4 e8(
 	a4-.) a-. r2
 	c,8 c4 c8( g') g4 g8(
 	bes4-.) bes-. r2
@@ -389,7 +389,7 @@ musicHornIIMvtI = \relative c' {
 	c c4 c c c8~
 	c4 c2 c4-.
 % Bars 396 to 400
-	R1*18^\solo
+	\MmrLength #12 R1*18^\solo
 % Bars 401 to 405
 	
 % Bars 406 to 410
@@ -398,7 +398,7 @@ musicHornIIMvtI = \relative c' {
 	
 	
 	
-	R1^\pocorit
+	\MmrLength #6 R1^\pocorit
 	r2 r4 r^\intempo
 % Bars 416 to 420
 	R1*4

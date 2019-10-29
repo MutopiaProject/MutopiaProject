@@ -51,7 +51,7 @@ musicFagottoIIMvtI = \relative c {
 		<<R1 {s2 s4 \clef bass s}>>
 % Bars 56 to 60
 		\MmrPos #-8 R1 \clef bass \mark \default \no }
-	a,4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
+	a,4.\ff-\tweak X-offset #1.5 ^\tutti b8 c4 r
 	d4. e8 f4 r
 	g,2 a4. f8
 	b4. g8 c4. a8
@@ -155,7 +155,7 @@ musicFagottoIIMvtI = \relative c {
 	r4 r8 g8(\< a4. b8
 	g4.\> a8 b2\!)
 % Bars 146 to 150
-	r1^\gp
+	R1_\gp
 	c,4._\dolce( d8 e2)
 	r4 r8 c8(\< d4. e8)
 	d1\dimD\>(
@@ -261,7 +261,7 @@ musicFagottoIIMvtI = \relative c {
 % Bars 236 to 240
 	
 % Bars 241 to 245
-	\mark \default
+	\once \override Score.RehearsalMark.self-alignment-X = 1 \mark \default
 	\cueDuring #"cueVoiceFagIImI" #UP {
 		\ni R1
 		R
@@ -350,7 +350,7 @@ musicFagottoIIMvtI = \relative c {
 	r4 r8 e( fis4.\< gis8
 	e4.\> fis8\! gis2)
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	a,4.(_\pp b8 cis2)
 	r4 r8 a(\< b4. cis8)
 	b1\dimD\>(
@@ -399,7 +399,7 @@ musicFagottoIIMvtI = \relative c {
 	e2\f b'
 % Bars 366 to 370
 	e2. r4 \mark \default
-	e,2-\tweak X-offset #1 ^\tutti gis
+	e,2-\tweak X-offset #1.8 ^\tutti gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2

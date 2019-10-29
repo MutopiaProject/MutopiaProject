@@ -25,11 +25,11 @@ musicFagottoIMvtIII = \relative c' {
 	
 % Bars 16 to 20
 	
-	\cueDuring #"cueVoiceFagImIII" #UP {
-		\ni \clef "treble" R2
-		R
-		R
-		R \clef bass \no
+	\cueDuring #"cueVoiceFagImIII" #DOWN {
+		\ni \clef "treble" \MmrPos #-4 R2
+		\MmrPos #-4 R
+		\MmrPos #-4 R
+		\MmrPos #-4 R \clef bass \no
 	}
 % Bars 21 to 25
 	c4(\p bes
@@ -55,7 +55,7 @@ musicFagottoIMvtIII = \relative c' {
 	R2*3
 	
 	\mark \default
-	e,2\ff^\tutti
+	e,2\ff-\tweak X-offset #1 ^\tutti
 	a,16-. b-. c8-. a16-. c-. f8-.
 % Bars 41 to 45
 	a,16-. d-. gis8-. a,16-. e'-. c'-. b-. 

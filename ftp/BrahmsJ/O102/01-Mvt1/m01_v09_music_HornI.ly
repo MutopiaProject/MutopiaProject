@@ -9,7 +9,7 @@ musicHornIMvtI = \relative c'' {
 	\key a \minor
 	\transposition e
 % Bars 1 to 5
-	c4._\fmarc^\tutti c8 c4 r
+	\mark \markup {\abs-fontsize #16 "in E"} c4._\fmarc^\tutti c8 c4 r
 	c4. c8 c4 r
 	b-. r bes-. r
 	c-. c-. bes-. bes-.
@@ -52,7 +52,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 56 to 60
 		R \mark \default \no
 	}
-	c'4.\f-\tweak X-offset #1 ^\tutti bes8 c4 r
+	c'4.\f-\tweak X-offset #1.5 ^\tutti bes8 c4 r
 	f4. e8 f4 r
 	R1
 	r2 c4. c8
@@ -117,7 +117,7 @@ musicHornIMvtI = \relative c'' {
 	f-. r f-. r
 % Bars 111 to 115
 	c-. r c,-. r \mark \default
-	R1*26
+	\MmrLength #10 R1*26
 % Bars 116 to 120
 	
 % Bars 121 to 125
@@ -141,7 +141,7 @@ musicHornIMvtI = \relative c'' {
 	r4 r8 ees8\p~ ees4.\< ees8~
 	<<ees1 {s4\> s s s\!}>>
 % Bars 146 to 150
-	R1^\gp
+	R1_\gp
 	ees'1~_\dolce
 	ees(\<
 	d\dimD\>
@@ -211,7 +211,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 216 to 220
 	ees8-. r r4 r ees->
 	ees-> c-> c-> c,-> \mark \default
-	R1*7^\solo
+	\MmrLength #10 R1*7^\solo
 % Bars 221 to 225
 	
 	
@@ -253,13 +253,13 @@ musicHornIMvtI = \relative c'' {
 	}
 	c4-!\f r^\solo r ees,-!
 	c'-! r r2^\tutti
-	R1*6
+	\MmrLength #8 R1*6
 % Bars 266 to 270
 	
 	
 	
 	\mark #11
-	R1*8
+	\MmrLength #8 R1*8
 % Bars 271 to 275
 	
 % Bars 276 to 280
@@ -282,7 +282,7 @@ musicHornIMvtI = \relative c'' {
 	bes-! r bes-! r
 	g-! r r2
 	c4-! r r2 \mark \default
-	c4.\ff -\tweak X-offset #1 ^\tutti bes8 c4 r
+	c4.\ff -\tweak X-offset #1.5 ^\tutti bes8 c4 r
 % Bars 291 to 295
 	f4. e8 f4 r
 	R1
@@ -294,7 +294,7 @@ musicHornIMvtI = \relative c'' {
 	ees2. r4
 	r bes-. ees-. r
 	R1
-	R1*10^\solo
+	\MmrLength #15 R1*10^\solo
 % Bars 301 to 305
 	
 % Bars 306 to 310
@@ -357,7 +357,7 @@ musicHornIMvtI = \relative c'' {
 	e8\f-. e4 e8( d) d4 d8(\<
 % Bars 366 to 370
 	des2\! c4) r4 \mark \default
-	e8-\tweak X-offset #1 ^\tutti e4 e8( d) d4 d8(
+	e8-\tweak X-offset #1.5 ^\tutti e4 e8( d) d4 d8(
 	cis4-.) a-. r2
 	e'8 e4 e8( d) d4 d8(
 	des4-.) c-. r2
@@ -401,7 +401,7 @@ musicHornIMvtI = \relative c'' {
 	
 	
 	
-	R1^\pocorit
+	\MmrLength #10 R1^\pocorit
 	r2 r4 r^\intempo
 % Bars 416 to 420
 	R1*4

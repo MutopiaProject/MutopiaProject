@@ -9,7 +9,7 @@ musicHornIIMvtII = \relative c' {
 	\key c \major
 	\transposition d
 % Bars 1 to 5
-	<< {g4( c2)\fermata } {s8\f\< s s s\> s s\!} >>
+	\mark \markup {\abs-fontsize #16 "in D"} << {g4( c2)\fermata } {s8\f\< s s s\> s s\!} >>
 	<< {d'4( g,2)\fermata} {s8\p\< s s s\> s s\!} >>
 	R2.*27^\solo
 % Bars 6 to 10
@@ -38,7 +38,7 @@ musicHornIIMvtII = \relative c' {
 	}
 	R2.*2
 	
-	R2.*12^\solo
+	\MmrLength #15 R2.*12^\solo
 	
 % Bars 41 to 45
 	
@@ -49,7 +49,7 @@ musicHornIIMvtII = \relative c' {
 	
 	\mark \default
 % Bars 51 to 55
-	R2.*12
+	\MmrLength #15 R2.*12
 % Bars 56 to 60
 	
 % Bars 61 to 65

@@ -9,9 +9,9 @@ musicHornIVMvtII = \relative c, {
 	\key c \major
 	\transposition f
 % Bars 1 to 5
-	\cueDuring #"cueVoiceHrnIVmII" #DOWN {
+	\mark \markup {\abs-fontsize #16 "in F"} \cueDuring #"cueVoiceHrnIVmII" #DOWN {
 		\ni R2.\fermataMarkup
-		R2.\fermataMarkup \no
+		\MmrPos #6 R2.\fermataMarkup \no
 	}
 	R2.*22^\solo
 % Bars 6 to 10
@@ -84,7 +84,7 @@ musicHornIVMvtII = \relative c, {
 	a4^\solo r r
 	R2.
 	b4.\f\> r8\! r4
-	R2.*26
+	\MmrLength #12 R2.*26
 % Bars 76 to 80
 	
 % Bars 81 to 85

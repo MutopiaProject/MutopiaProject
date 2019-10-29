@@ -239,7 +239,7 @@ musicFagottoIMvtI = \relative c' {
 % Bars 216 to 220
 	cis8 r r4 r cis'->
 	cis-> e-> e-> cis-> \mark \default
-	R1*7^\solo
+	\MmrLength #10 R1*7^\solo
 % Bars 221 to 225
 	
 	
@@ -297,7 +297,7 @@ musicFagottoIMvtI = \relative c' {
 	c des,-. bes'-. g-.
 	\times 2/3 {c,-! d-! e!-! } \times 2/3 {f-! g-! aes-!}
 	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
-	c,-.-\tweak X-offset #1 ^\solo r r2
+	c,-.-\tweak X-offset #1.5 ^\solo r r2
 % Bars 271 to 275
 	R1*8
 % Bars 276 to 280
@@ -351,7 +351,7 @@ musicFagottoIMvtI = \relative c' {
 	r4 r8 gis( a4.\< b8
 	gis4.\> a8\! b2)
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	a1~_\pp\<
 	a~
 	a~\dimD\>
@@ -463,14 +463,14 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	
-	\cueDuring #"cueVoiceFagImI" #UP {
-		\ni \clef "treble" R1
+	\cueDuring #"cueVoiceFagImI" #DOWN {
+		\ni \clef "treble" \MmrPos #-4 R1
 % Bars 421 to 425
-		R
-		R
-		R
-		R
-		r2 r4 \clef bass \no } a-.\f
+		\MmrPos #-4 R
+		\MmrPos #-4 R
+		\MmrPos #-4 R
+		\MmrPos #-4 R
+		e2\rest e4\rest \clef bass \no } a,-.\f
 % Bars 426 to 430
 	d,2 b
 	c e

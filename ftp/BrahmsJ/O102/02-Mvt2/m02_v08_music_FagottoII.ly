@@ -38,7 +38,7 @@ musicFagottoIIMvtII = \relative c {
 	
 	
 	
-	r4 r f4(_\pdolce~^\tutti \mark \default \bar "||" \key f \major
+	r4 r f4(_\pdolce~-\tweak X-offset #-3.0 ^\tutti \mark \default \bar "||" \key f \major
 % Bars 31 to 35
 	f g a
 	g f) bes(

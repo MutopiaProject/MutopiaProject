@@ -24,7 +24,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	\cueDuring #"cueVoiceKlarIImI" #DOWN {
-		\ni \clef "bass" R1
+		\ni \clef "bass" \MmrPos #-4 R1
 		R
 		R
 % Bars 26 to 30
@@ -157,7 +157,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	R1*2
 	
 % Bars 146 to 150
-	R1^\gp
+	R1_\gp
 	bes,1\espressivo_\dolce~
 	bes\<
 	a2(_\dimD\> c)~
@@ -342,7 +342,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	bes1\pp~
 	bes(
 	a)~_\dimmarkup
