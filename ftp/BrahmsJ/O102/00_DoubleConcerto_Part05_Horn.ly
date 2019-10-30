@@ -371,7 +371,7 @@
 			}
 		}
 		\layout {
-			system-count = #30
+			%system-count = #30
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -397,7 +397,7 @@
 			}
 		}
 		\layout {
-			system-count = #5
+			%system-count = #5
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -423,7 +423,7 @@
 			}
 		}
 		\layout {
-			system-count = #22
+			%system-count = #22
 			\context {
 				\CueVoice \layoutCueVoice
 			}

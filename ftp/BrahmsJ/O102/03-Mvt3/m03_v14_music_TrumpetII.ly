@@ -32,11 +32,11 @@ musicTrumpetIIMvtIII = \relative c'' {
 		\MmrPos #4 R
 		\MmrPos #4 R \no 
 	}
-	\tempo "poco rit." \MmrLength #15  R2*4
+	\tempo "poco rit." \MmrLength #12  R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" \MmrLength #15 R2*2
+	\tempo "in tempo" \MmrLength #12 R2*2
 	
 	\cueDuring #"cueVoiceTptIImIII" #UP {
 		\ni \MmrPos #4 R2
@@ -123,7 +123,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 		R \no
 	}
 % Bars 111 to 115
-	g8\pp-. r g-. r
+	g8-\tweak X-offset #-3.5 -\tweak Y-offset #-2.5 \pp-. r g-. r
 	r4 g8-. r 
 	r4 g8-._\dimmarkup r
 	R2
@@ -162,9 +162,9 @@ musicTrumpetIIMvtIII = \relative c'' {
 	c8 r r8. g'16
 	d'4 g,,
 % Bars 146 to 150
-	R2*2^\solo
+	\MmrLength #10 R2*2^\solo
 	\mark \default
-	R2*26
+	\MmrLength #14 R2*26
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -188,7 +188,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 		\MmrPos #-10 R \no
 	}
 % Bars 181 to 185
-	g2(\pp
+	g2(-\tweak X-offset #-3.5 -\tweak Y-offset #-2.5 \pp
 	c4) r
 	g2(
 	c4) r
@@ -225,12 +225,12 @@ musicTrumpetIIMvtIII = \relative c'' {
 	g4..\sf g16
 	g4-> g->
 	g8-.^\solo r r4
-	R2*4^\tutti
+	\MmrLength #10 R2*4^\tutti
 	
 % Bars 216 to 220
 	
 	\mark \default
-	R2*20^\solo
+	\MmrLength #15 R2*20^\solo
 % Bars 221 to 225
 	
 % Bars 226 to 230
@@ -252,11 +252,11 @@ musicTrumpetIIMvtIII = \relative c'' {
 	R2*2
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	\tempo "poco rit." \MmrLength #12 R2*4
 	
 	
 	
-	\tempo "in tempo" R2*4
+	\tempo "in tempo" \MmrLength #12 R2*4
 % Bars 251 to 255
 	
 	
@@ -268,7 +268,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 		R
 		\clef "bass" R \clef treble \no
 	}
-	g8-.\f^\tutti g-. r g-.
+	g8-.-\tweak X-offset #-2.2 -\tweak Y-offset #-2.5 \f^\tutti g-. r g-.
 	r g-. r g-.
 	g-. g-. r g-.
 % Bars 261 to 265
@@ -316,7 +316,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 	\bar "||"
 	\tempo "Poco meno Allegro" \cueDuring #"cueVoiceTptIImIII" #UP {
 		\ni R2
-		r4 r8 \no } g,\pp~
+		r4 r8 \no } g,-\tweak X-offset #-3.5 \pp~
 	g2~
 	g~
 % Bars 301 to 305
@@ -345,7 +345,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 		R
 		R \bar "||" \no
 	}
-	\tempo "Tempo primo" g4-.\f g'-.
+	\tempo "Tempo primo" g4-.-\tweak X-offset #-2.2 -\tweak Y-offset #-2.5 \f g'-.
 	R2
 % Bars 326 to 330
 	r8 g,8-. g-. g-.
@@ -359,7 +359,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 		R \no
 	}
 % Bars 336 to 340
-	g8-.\f r r4
+	g8-.-\tweak X-offset #-2.2 -\tweak Y-offset #-2.5 \f r r4
 	R2
 	g'8-. r r4
 	g8-. r r4

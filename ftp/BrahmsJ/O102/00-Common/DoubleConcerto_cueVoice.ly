@@ -2313,7 +2313,7 @@ cueVoiceTptImI = \relative c {
 	\tuplet 3/2 4 {d-! ees-! fis-! g-! a!-! bes-! d-! ees-! fis-! g-! a!-! bes-!}
 	R1*54
 	% bar 143
-	f4.(-\tweak X-offset #1 ^\markup {Ob.I} ees8 c2)
+	f4.(-\tweak X-offset #2 ^\markup {Ob.I} ees8 c2)
 	r4 r8 f( ees4. c8
 	f4. ees8 c2)
 	R1*31
@@ -2333,7 +2333,7 @@ cueVoiceTptImI = \relative c {
 	c4. a8( bes fis g bes) \ottava #0
 	R1*43
 	% bar 242
-	e,2(^\markup {Klar.I} d
+	e,2(-\tweak X-offset #1.5 ^\markup {Klar.I} d
 	des c4) r8 dis-.^\markup {Ob.I}
 	e-. fis-. g-. fis,^\markup {Klar.I}\noBeam g-. a-. bes-. r
 	R1*9
@@ -2452,7 +2452,7 @@ cueVoiceTptImIII = \relative c {
 	% bar 107
 	bes'8->^\markup {Ob.I} a16-. bes-. a8-> bes16-. a-.
 	bes8-> a16-. bes-. a( g') f-. e-.
-	d'8->^\markup {Fl.I} c16-. d-. c8-> d16-. c-.
+	d'8->-\tweak X-offset #-3.5 ^\markup {Fl.I} c16-. d-. c8-> d16-. c-.
 	d8-> c16-. d-. c( ees) c-. a-.
 	R2*7
 	% bar 118
@@ -2565,12 +2565,12 @@ cueVoiceTptIImI = \relative c {
 	g2) r
 	R1*11
 	% bar 196
-	r4^\markup {Viol.I} r8 \ottava #1 b'( c d ees d)
-	c8 c4 c c c8~
-	c4. a8( bes fis g bes) \ottava #0
+	e'4\rest^\markup {Viol.I} e8\rest \ottava #1 b'^( c d ees d)
+	c8 c4 c c c8^(
+	c4.) a8^( bes fis g bes) \ottava #0
 	R1*43
 	% bar 242
-	e,2(^\markup {Klar.I} d
+	e,2(-\tweak X-offset #1 ^\markup {Klar.I} d
 	des c4) r8 dis-.^\markup {Ob.I}
 	e-. fis-. g-. fis,^\markup {Klar.I}\noBeam g-. a-. bes-. r
 	R1*9
@@ -2600,7 +2600,7 @@ cueVoiceTptIImI = \relative c {
 	a-. r r2
 	R1*16
 	% bar 366
-	r4 r8 gis'(^\markup  {Viol.I} a b c b)
+	r4 r8 gis'(-\tweak X-offset #-5 ^\markup  {Viol.I} a b c b)
 	a8 a4 a a a8~
 	a4~ \tuplet 3/2 4 {a8 fis-. g-. dis-. e-. b-. g-. b-. e-.}
 	R1*51
@@ -2689,7 +2689,7 @@ cueVoiceTptIImIII = \relative c {
 	% bar 107
 	bes'8->^\markup {Ob.I} a16-. bes-. a8-> bes16-. a-.
 	bes8-> a16-. bes-. a( g') f-. e-.
-	d'8->^\markup {Fl.I} c16-. d-. c8-> d16-. c-.
+	d'8->-\tweak X-offset #-3.2 ^\markup {Fl.I} c16-. d-. c8-> d16-. c-.
 	d8-> c16-. d-. c( ees) c-. a-.
 	R2*7
 	% bar 118
@@ -2794,7 +2794,7 @@ cueVoicePkmI = \relative {
 	ees d c b!) c( d ees f g f ees d) r4
 	R1*45
 	% bar 143
-	g4.(^\markup {Ob.I} f8 d2)
+	g4.(-\tweak X-offset #1.5 ^\markup {Ob.I} f8 d2)
 	r4 r8 g( f4. d8)
 	g4.( f8 d2)
 	R1*31
@@ -2847,7 +2847,7 @@ cueVoicePkmI = \relative {
 	a16( e cis a) e'( cis a e) a( e cis a) <a, a'>4^\markup {Trpt.}
 	R1*44
 	% bar 420
-	r2 r4 c''-.^\markup {Fl.}
+	r2 r4 c''-.-\tweak X-offset #-3 ^\markup {Fl.}
 	b-. c-. gis-. a-. 
 	b-. b-. e,-. c'-. 
 	b-. c-. gis-. a-. 
@@ -2873,7 +2873,7 @@ cueVoicePkmIII = \relative {
 	<a f' d'> r r4
 	R2*38
 	% bar 77
-	r4 g'4(^\markup {Hr.III}
+	r4 g'4(-\tweak X-offset #-5 ^\markup {Hr.III}
 	fis f
 	e a
 	f) a,(
@@ -2892,7 +2892,7 @@ cueVoicePkmIII = \relative {
 	e8-> d16-. e-. d( f) d-. b-.
 	R2*26
 	% bar 137
-	\tuplet 3/2 4 {a4^(^\markup {Viol.I} g8) f^( g a)}
+	\tuplet 3/2 4 {a4^(-\tweak X-offset #-3 ^\markup {Viol.I} g8) f^( g a)}
 	\tuplet 3/2 4 {a4^( g8) f^( g a)}
 	a4 e
 	R2*41
@@ -2910,10 +2910,10 @@ cueVoicePkmIII = \relative {
 	d'4..\sf d16
 	d4..\sf d16
 	d4-> d->
-	d8-.\noBeam^\markup {Solo-Viol.} \tuplet 3/2 8 {f16([ g f] d[ e d]) b'[( cis b])}
+	d8-.\noBeam-\tweak X-offset #-5 ^\markup {Solo-Viol.} \tuplet 3/2 8 {f16([ g f] d[ e d]) b'[( cis b])}
 	R2*18
 	% bar 228
-	a8(^\markup {Solo-Viol.} e'16-.) e-. dis8( d16-.) d-.
+	a8(-\tweak X-offset #-7 ^\markup {Solo-Viol.} e'16-.) e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8( e16-.) e-.
 	f8( e16-.) e-. a8 r
 	R2*23
@@ -2926,7 +2926,7 @@ cueVoicePkmIII = \relative {
 	R1*2
 	R2*4
 	% bar 297
-	a,8(^\markup {Fl.I} e' dis d
+	a,8(-\tweak X-offset #-3.0 ^\markup {Fl.I} e' dis d
 	cis[ b a]) a,\noBeam^\markup {Trpt.I}~
 	a2~
 	a~
@@ -2936,7 +2936,7 @@ cueVoicePkmIII = \relative {
 	d4. r8
 	R2*23
 	% bar 328
-	r4 r8 d'-.\sfp^\markup {Viol.I}
+	r4 r8 d'-.\sfp-\tweak X-offset #-5 ^\markup {Viol.I}
 	cis-. b-. a-. e-.
 	a-. r r d-.\sfp
 	cis-. b-. a-. e-.

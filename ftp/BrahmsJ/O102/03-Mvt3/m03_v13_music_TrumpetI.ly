@@ -32,11 +32,11 @@ musicTrumpetIMvtIII = \relative c'' {
 		\MmrPos #4 R
 		\MmrPos #4 R \no
 	}
-	\tempo "poco rit." R2*4
+	\tempo "poco rit." \MmrLength #12 R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*2
+	\tempo "in tempo" \MmrLength #12 R2*2
 	
 	\cueDuring #"cueVoiceTptImIII" #UP {
 		\ni \MmrPos #4 R2
@@ -45,7 +45,7 @@ musicTrumpetIMvtIII = \relative c'' {
 		\MmrPos #4 R
 		\MmrPos #4 R \mark \default \no
 	}
-	d2\f^\tutti
+	d2\f-\tweak X-offset #0.5 ^\tutti
 	g,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
@@ -162,9 +162,9 @@ musicTrumpetIMvtIII = \relative c'' {
 	c8 r r8. g16
 	d'4 g,
 % Bars 146 to 150
-	R2*2^\solo
+	\MmrLength #12 R2*2^\solo
 	\mark \default
-	R2*26
+	\MmrLength #16 R2*26
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -178,7 +178,7 @@ musicTrumpetIMvtIII = \relative c'' {
 	
 	
 	\cueDuring #"cueVoiceTptImIII" #UP {
-		\ni R2
+		\ni \MmrPos #-10 R2
 		R
 % Bars 176 to 180
 		R
@@ -225,12 +225,12 @@ musicTrumpetIMvtIII = \relative c'' {
 	g4..\sf g16
 	g4-> g->
 	g8-. r^\solo r4
-	R2*4^\tutti
+	\MmrLength #10 R2*4^\tutti
 	
 % Bars 216 to 220
 	
 	\mark \default
-	R2*20
+	\MmrLength #16 R2*20
 % Bars 221 to 225
 	
 % Bars 226 to 230
@@ -239,7 +239,7 @@ musicTrumpetIMvtIII = \relative c'' {
 	
 % Bars 236 to 240
 	
-	\mark \default
+	\once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
 	\cueDuring #"cueVoiceTptImIII" #UP {
 		\ni R2
 		R
@@ -251,11 +251,11 @@ musicTrumpetIMvtIII = \relative c'' {
 	}
 	R2*2
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	\tempo "poco rit." \MmrLength #12 R2*4
 	
 	
 	
-	\tempo "in tempo" R2*4
+	\tempo "in tempo" \MmrLength #12 R2*4
 % Bars 251 to 255
 	
 	

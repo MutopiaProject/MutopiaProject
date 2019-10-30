@@ -150,15 +150,15 @@ musicPaukenMvtIII = \relative c {
 		\MmrPos #-2 R
 		\MmrPos #-2 R \no \clef treble
 	}
-	R2*2^\solo
+	\MmrLength #8 R2*2^\solo
 % Bars 141 to 145
 	
-	R2*4^\tutti
+	\MmrLength #8 R2*4^\tutti
 	
 	
 	
 % Bars 146 to 150
-	R2*2^\solo
+	\MmrLength #12 R2*2^\solo
 	\mark \default
 	R2*32
 % Bars 151 to 155
@@ -182,7 +182,7 @@ musicPaukenMvtIII = \relative c {
 		\ni \clef "treble" \MmrPos #-10 R2
 		R
 		\MmrPos #-10 R
-		R \no \clef bass
+		\MmrPos #-8 R \no \clef bass
 	}
 	R2*11
 % Bars 186 to 190
@@ -214,8 +214,8 @@ musicPaukenMvtIII = \relative c {
 	e_\dimmarkup~
 % Bars 216 to 220
 	e~
-	<< e {s4 s8 s\stopTrillSpan}>> \bar "||" \mark \default
-	a,8-.\p^\solo r r4
+	<< e {s4 s8\stopTrillSpan s}>> \bar "||" \mark \default
+	a,8-.\p-\tweak X-offset #1.5 ^\solo r r4
 	R2*9
 % Bars 221 to 225
 	

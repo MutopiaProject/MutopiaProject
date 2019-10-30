@@ -149,8 +149,8 @@ nameVoiceXIV = {
 nameVoiceXV = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\line { "Pauken" }
-			\line { " in A E" }
+			\lower #1 \line { "Pauken" }
+			\line { "in A E" }
 		}
 	}
 	\set Staff.shortInstrumentName = #"Pk"

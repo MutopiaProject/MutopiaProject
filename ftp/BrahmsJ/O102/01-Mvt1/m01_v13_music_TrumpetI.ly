@@ -119,7 +119,7 @@ musicTrumpetIMvtI = \relative c'' {
 	g,-. r g-. r
 % Bars 111 to 115
 	d'-. r d-. r \mark \default
-	\MmrLength #12 R1*31^\solo
+	\MmrLength #15 R1*31^\solo
 % Bars 116 to 120
 	
 % Bars 121 to 125
@@ -132,7 +132,7 @@ musicTrumpetIMvtI = \relative c'' {
 	
 % Bars 141 to 145
 	
-	\mark \default
+	\once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
 	\cueDuring #"cueVoiceTptImI" #UP {
 		\ni R1
 		R
@@ -140,7 +140,7 @@ musicTrumpetIMvtI = \relative c'' {
 	}
 % Bars 146 to 150
 	R1_\gp
-	R1*25
+	\MmrLength #12 R1*25
 % Bars 151 to 155
 	
 % Bars 156 to 160
@@ -199,7 +199,7 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 216 to 220
 	f8-. r r4 r2
 	R1 \mark \default
-	R1*24^\solo
+	\MmrLength #15 R1*24^\solo
 % Bars 221 to 225
 	
 % Bars 226 to 230
@@ -239,11 +239,11 @@ musicTrumpetIMvtI = \relative c'' {
 	bes4-. r bes-. r
 	ees-. r r2
 % Bars 266 to 270
-	R1*4
+	\MmrLength #8 R1*4
 	
 	
 	\mark #11
-	R1*14
+	\MmrLength #16 R1*14
 % Bars 271 to 275
 	
 % Bars 276 to 280
@@ -261,7 +261,7 @@ musicTrumpetIMvtI = \relative c'' {
 	c-! r c-! r
 	c-! r r2
 	d4-! r r2 \mark \default
-	bes4.\ff^\tutti c8 d4 r
+	bes4.\ff-\tweak X-offset #1.5 ^\tutti c8 d4 r
 % Bars 291 to 295
 	c4. c8 g4 r
 	c-. c-. g-. r
@@ -273,7 +273,7 @@ musicTrumpetIMvtI = \relative c'' {
 	f'2. r4
 	R1*2
 	
-	R1*13^\solo
+	\MmrLength #12 R1*13^\solo
 % Bars 301 to 305
 	
 % Bars 306 to 310
@@ -294,7 +294,7 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 321 to 325
 		R \no
 	}
-	R1*20
+	\MmrLength #12 R1*20
 % Bars 326 to 330
 	
 % Bars 331 to 335
@@ -360,7 +360,7 @@ musicTrumpetIMvtI = \relative c'' {
 	
 	
 % Bars 396 to 400
-	R1*18^\solo
+	\MmrLength #15 R1*18^\solo
 % Bars 401 to 405
 	
 % Bars 406 to 410
@@ -369,10 +369,10 @@ musicTrumpetIMvtI = \relative c'' {
 	
 	
 	
-	R1^\pocorit
+	\MmrLength #8 R1^\pocorit
 	r2 r4 r^\intempo
 % Bars 416 to 420
-	R1*4
+	\MmrLength #8 R1*4
 	
 	
 	

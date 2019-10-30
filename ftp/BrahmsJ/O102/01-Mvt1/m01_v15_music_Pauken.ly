@@ -51,7 +51,7 @@ musicPaukenMvtI = \relative c {
 % Bars 56 to 60
 		R \mark \default \clef bass \no
 	}
-	a2\startTrillSpan-\tweak X-offset #1 ^\tutti e'4\stopTrillSpan r
+	a2\startTrillSpan-\tweak X-offset #1.5 ^\tutti e'4\stopTrillSpan r
 	a,2\startTrillSpan a4\stopTrillSpan r
 	R1*8
 % Bars 61 to 65
@@ -94,12 +94,12 @@ musicPaukenMvtI = \relative c {
 	R1
 	a2\trill e'4-. r
 	e2\trill a,4-. r
-	R1*8
+	\MmrLength #10 R1*8
 % Bars 106 to 110
 	
 % Bars 111 to 115
 	\mark \default
-	R1*31
+	\MmrLength #10 R1*31
 % Bars 116 to 120
 	
 % Bars 121 to 125
@@ -112,7 +112,7 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 141 to 145
 	
-	\mark \default
+	\once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
 	\cueDuring #"cueVoicePkmI" #UP {
 		\ni \clef "treble" R1
 		R
@@ -215,7 +215,7 @@ musicPaukenMvtI = \relative c {
 	
 	
 	\mark #11
-	R1*4^\solo
+	\MmrLength #10 R1*4^\solo
 % Bars 271 to 275
 	
 	
@@ -239,7 +239,7 @@ musicPaukenMvtI = \relative c {
 	
 	
 	\mark \default
-	a,2\ff\trill -\tweak Y-offset #4.5 -\tweak X-offset #1 ^\tutti e'4 r
+	a,2\ff\trill -\tweak Y-offset #4.5 -\tweak X-offset #1.5 ^\tutti e'4 r
 % Bars 291 to 295
 	a,2\trill a4 r
 	R1*8
@@ -251,22 +251,22 @@ musicPaukenMvtI = \relative c {
 	
 	
 	
-	R1*13^\solo
+	\MmrLength #10 R1*13^\solo
 % Bars 301 to 305
 	
 % Bars 306 to 310
 	
 % Bars 311 to 315
 	
-	\bar "||" \mark \default
+	\bar "||" \once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
 	\cueDuring #"cueVoicePkmI" #UP {
 		\ni \clef "treble" R1
 		R
 		R \no
 	}
 % Bars 316 to 320
-	R1^\gp
-	R1*25
+	R1_\gp
+	\MmrLength #10 R1*25
 % Bars 321 to 325
 	
 % Bars 326 to 330
@@ -295,7 +295,7 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 366 to 370
 	\mark \default
-	\MmrLength #10 R1*2 -\tweak X-offset #2.5 ^\tutti
+	\MmrLength #15 R1*2^\tutti
 	
 	\cueDuring #"cueVoicePkmI" #UP {
 		\ni \MmrPos #-6 R1

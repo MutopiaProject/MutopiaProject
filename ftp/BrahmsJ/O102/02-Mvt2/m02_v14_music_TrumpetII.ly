@@ -13,7 +13,7 @@ musicTrumpetIIMvtII = \relative c' {
 		\ni R2.\fermataMarkup
 		R2.\fermataMarkup \no
 	}
-	R2.*27-\tweak X-offset #-2.5 ^\solo -\tweak X-offset #8 ^\tutti
+	R2.*27-\tweak X-offset #-2.5 ^\solo 
 % Bars 6 to 10
 	
 % Bars 11 to 15
@@ -28,7 +28,7 @@ musicTrumpetIIMvtII = \relative c' {
 	
 	
 	\cueDuring #"cueVoiceTptIImII" #UP {
-		\ni R2. \bar "||" \mark \default
+		\ni R2.-\tweak X-offset #3 ^\tutti \bar "||" \mark \default
 % Bars 31 to 35
 		R
 		R
