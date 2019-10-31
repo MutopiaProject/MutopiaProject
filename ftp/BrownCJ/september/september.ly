@@ -125,7 +125,7 @@ date="September 2011"
 style="Romantic"
 source="Typeset from the manuscript by permission of the composer"
 maintainer="Silas Brown"
-maintainerWeb = "http://people.pwf.cam.ac.uk/ssb22/"
+maintainerWeb="http://ssb22.user.srcf.net/"
 
  mutopiacopyright="Creative Commons Attribution 3.0"
  footer = "Mutopia-2011/10/01-1792"

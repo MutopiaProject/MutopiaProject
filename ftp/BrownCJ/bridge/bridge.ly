@@ -596,7 +596,7 @@ source="Typeset from the manuscript by permission of the composer"
 style="Modern"
 copyright="Creative Commons Attribution 3.0"
 maintainer="Silas Brown"
-maintainerWeb="http://people.ds.cam.ac.uk/ssb22/"
+maintainerWeb="http://ssb22.user.srcf.net/"
 dedication="In celebration of Benjamin Britten's centenary year"
 moreInfo="Quote from Alleluia/Noye’s Fludde granted by permission of Boosey & Hawkes Music Publishers Ltd."
 
