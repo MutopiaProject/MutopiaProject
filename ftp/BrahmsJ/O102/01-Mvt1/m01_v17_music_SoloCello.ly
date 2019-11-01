@@ -55,7 +55,7 @@ musicSoloCelloMvtI = \relative c, {
 		\MmrPos #-8 R \no \clef bass
 	}
 % Bars 36 to 40
-	\times 2/3 {r4 <d b'>( <d' f'>~} \times 2/3 {q d') b}
+	\times 2/3 {r4 <d b'>(-\tweak X-offset #-5 _\pocof <d' f'>~} \times 2/3 {q d') b}
 	\times 2/3 {f( d b} \times 2/3 {f) e d}
 	\grace {cis16([ d e]} d2)( cis!4) r
 	\times 2/3 {r4 \clef tenor e'( g'~} \times 2/3 {g e) <a, f'>(\<}
@@ -80,7 +80,7 @@ musicSoloCelloMvtI = \relative c, {
 	a4-. a,-. <d a'>-. \clef bass <d, c'>-.
 % Bars 56 to 60
 	<g, d' b'>-. r <e b' gis' d'>-. r \mark \default
-	R1*22
+	\MmrLength #12 R1*22
 % Bars 61 to 65
 	
 % Bars 66 to 70
@@ -91,7 +91,7 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	\mark \default
-	R1*11
+	\MmrLength #12 R1*11
 % Bars 81 to 85
 	
 % Bars 86 to 90
@@ -99,7 +99,7 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	\mark \default
-	R1*18
+	\MmrLength #12 R1*18
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -159,7 +159,7 @@ musicSoloCelloMvtI = \relative c, {
 	\times 2/3 {g,8_\pdolce( f! d} \times 2/3 {g, d' f)} \clef tenor \times 2/3 {g( d' f} \times 2/3 {g f d)}
 	\times 2/3 {g,(\> d' f} \times 2/3 {g f d)} \times 2/3 {g,( d' f} \times 2/3 {g f d)\!}
 % Bars 146 to 150
-	R1^\gp \clef bass
+	R1_\gp \clef bass
 	\times 2/3 {c,,8( g' bes} \times 2/3 {c g' bes)} \times 2/3 {c( bes g} \times 2/3 {c, g' bes)}
 	c r r4 r \times 2/3 {c8( bes g)}
 	\times 2/3 {d( a' c} \times 2/3 {d c a)} \times 2/3 {d,( a' c} \times 2/3 {d c d,)} 
@@ -188,9 +188,9 @@ musicSoloCelloMvtI = \relative c, {
 	e) fis,( a c e) f,(\< aes c\!
 	f c f d b a!) \times 2/3 {g,( g' c}
 	\times 2/3 {e) r g,,(} \times 2/3 {fis' a c} \times 2/3 {e) r g,,(} \times 2/3 {f' aes c}
-	\times 2/3 {e) r g,,(\>} \times 2/3 {e' g c} \clef tenor \times 2/3 {e) g,( c} \times 2/3 {e g c\!}
+	\times 2/3 {e) r g,,(\>} \times 2/3 {e' g c} \clef tenor \times 2/3 {e) g,( c} \times 2/3 {e g c}
 % Bars 171 to 175
-	e2.)_\dimmarkup r4 \mark \default
+	e2.)\dimD r4 \mark \default
 	r2 r4 c,_\fmarc(
 	cis-.) d4(~ d16 c b a) d( c b a)
 	a'4-. gis16( e b gis) e8 r f'4(
@@ -337,7 +337,7 @@ musicSoloCelloMvtI = \relative c, {
 		R
 		R
 		R
-		\MmrPos #-6 R \no
+		\MmrPos #-8 R \no
 	}
 	\times 2/3 {e8(\f\< b' e} \times 2/3 {gis b d)} f4.(\> e8)
 % Bars 301 to 305
@@ -359,7 +359,7 @@ musicSoloCelloMvtI = \relative c, {
 	\times 2/3 {e8(_\pdolce d b} \times 2/3 {e, b' d)} \times 2/3 {e( b' d} \times 2/3 {e d b)}
 	\times 2/3 {e,( b' d} \times 2/3 {e d b} \times 2/3 {e,\> b' d} \times 2/3 {e d b)\!}
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	\times 2/3 {a8( g! e} \times 2/3 {a, e' g} a8) r r4
 	\times 2/3 {a,8( e' g} \times 2/3 {a g e} \times 2/3 {a, e' g} \times 2/3 {a g e)}
 	\times 2/3 {b( dis fis} \times 2/3 {b fis dis} \times 2/3 {b fis' a} \times 2/3 {b a b)}
@@ -415,12 +415,12 @@ musicSoloCelloMvtI = \relative c, {
 % Bars 361 to 365
 	dis,16-. dis'-. r8 e,!16-. e'-. eis,-. eis'-. fis,-. fis'-. cis,-. cis'-. d,-. d'-. dis,-. dis'-. 
 	e,!-. e'-. eis,-. eis'-. fis,-. fis'-. cis,-. cis'-. d,!-. d'-. dis,-. dis'-. r4
-	<e, e'>8_\fmarc \clef tenor e''4 e8( f-.) f4 f8~
+	<e, e'>8-\tweak X-offset #-3 _\fmarc \clef tenor e''4 e8( f-.) f4 f8~
 	f-. f4 f8( <b, dis>)-. q4 q8
 	d!1\startTrillSpan~
 % Bars 366 to 370
-	\afterGrace d2( {cis16[\stopTrillSpan d])} \clef bass e,,16( gis b d e gis b d) \mark \default
-	R1*21
+	\afterGrace d2( {cis16[\stopTrillSpan d])} \clef bass e,,16( gis b d e gis b d) \once \override Score.RehearsalMark.self-alignment-X = #-1 \mark \default
+	\MmrLength #18 R1*21
 % Bars 371 to 375
 	
 % Bars 376 to 380
@@ -456,7 +456,7 @@ musicSoloCelloMvtI = \relative c, {
 	a: fis: g: a: bes: g: a: bes: \clef bass
 	bes,: cis,: bes': g': a,: d,: a': f':
 	f,: a,: f': a: gis,: d: gis: f':
-	<c, a' e' c'>8\ff c''4 c8( bes) bes4 bes8(
+	<c, a' e' c'>8-\tweak X-offset #-3.5 -\tweak Y-offset #-2.7 \ff c''4 c8( bes) bes4 bes8(
 % Bars 411 to 415
 	a) a4 a8( d,) d4 d8( \clef tenor
 	\acciaccatura a'8 a'4.) bes8( a g f g)

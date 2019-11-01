@@ -177,7 +177,7 @@ nameVoiceXVII = {
 	\set Staff.instrumentName = #"Solo Vlc"
 	\set Staff.shortInstrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Solo-Vlc" }
+			\lower #1 \line { "Solo-" }
 			\line { "Vlc" }
 		}
 	}

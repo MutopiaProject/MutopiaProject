@@ -2949,7 +2949,7 @@ cueVoicePkmIII = \relative {
 %#                           S O L O - V I O L I N                             #
 %###############################################################################
 cueVoiceSoloVlnmI = \relative c {
-	e'''4.^\markup {Viol.I} d8 b4 r
+	e'''4.-\tweak X-offset #-6 ^\markup {Viol.I} d8 b4 r
 	c4. b8 e,4 r
 	\tuplet 3/2 2 {fis-. gis-. a-. gis-. a-. b-.}
 	\tuplet 3/2 2 {a-. b-. c-. d-. e-. f-.}
@@ -2957,12 +2957,12 @@ cueVoiceSoloVlnmI = \relative c {
 	% bar 26
 	r2 r4^\markup {Klar.I} cis,4(_\pdolce
 	b) cis( gis) a4(
-	b2 e,4) cis''(^\markup {Fl.I}
-	b) cis( gis) a(
+	b2 e,4) cis''(-\tweak X-offset #-3 ^\markup {Fl.I}
+	b) cis( gis) a_(
 	a'2 e4) r
 	R1*81
 	% bar 112
-	a,,4.\f-\tweak X-offset #1 ^\markup {Solo-Vlc.} g8 e2~
+	a,,4.\f-\tweak X-offset #2 ^\markup {Solo-Vlc.} g8 e2~
 	e4. c8( e4. d8)
 	c( e d c) e( d b c)
 	a( a' e c) e( d b c)
@@ -3097,7 +3097,7 @@ cueVoiceSoloVlcmI = \relative c {
 	e4-. r e,,-. r
 	R1*31
 	% bar 143
-	\tuplet 3/2 4 {g''8(-\tweak X-offset #-6 ^\markup {Solo-Vln.} f d g, f d) g( f d g, f d)}
+	\tuplet 3/2 4 {g''8(^\markup {Solo-Vln.} f d g, f d) g( f d g, f d)}
 	R1*7
 	% bar 151
 	g4.(^\markup {Klar.I} f8 d4. b8
@@ -3127,7 +3127,7 @@ cueVoiceSoloVlcmI = \relative c {
 	a2 f,
 	R1*31
 	% bar 331
-	r2 r4-\tweak X-offset #-2 ^\markup {Solo-Vln.} cis''''
+	r2 r4-\tweak X-offset #-3 ^\markup {Solo-Vln.} cis''''
 	\afterGrace d2.( {e16[ d])} cis8( d)
 	e4 r8 e( eis4) r8 eis(
 	fis4 e d cis
@@ -3339,8 +3339,8 @@ cueVoiceVlnIImI = \relative c {
 	<g, b' g' g'>-. r <e' b' gis' gis'>-. r
 	R1*103
 	% bar 160
-	r4-\tweak X-offset #-1.5 _\markup {Br.} << a,2. {s8-\tweak X-offset -1.5 \f\> s s s s s\p} >>
-	gis2(_\dimD g)~
+	r4-\tweak X-offset #-1.5 _\markup {Br.} a,2.-\tweak X-offset -1.5 \f\>
+	gis2(-\tweak X-offset #0 _\pdimD g)~
 	g( b)
 	bes1
 	a\pp\>

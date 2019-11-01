@@ -35,7 +35,7 @@ musicViolinIMvtI = \relative c''' {
 		\MmrPos #-4 R \no 
 	}
 % Bars 31 to 35
-	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
+	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -48,11 +48,11 @@ musicViolinIMvtI = \relative c''' {
 		\ni R1
 		\MmrPos #-4 R
 		\MmrPos #-4 R
-		\MmrPos #-4 R
+		\MmrPos #-8 R
 % Bars 56 to 60
 		\MmrPos #-8 R \no \mark \default
 	}
-	a4.\ff-\tweak X-offset #1 ^\tutti g8 e4 r
+	a4.\ff-\tweak X-offset #1.5 ^\tutti g8 e4 r
 	f4. e8 a,4 r
 	\times 2/3 {b-. c-. d-.} d4.-> a8
 	g4. f8 e4. c'8
@@ -118,7 +118,7 @@ musicViolinIMvtI = \relative c''' {
 	d'8( f) r4 dis8( fis) r4
 % Bars 111 to 115
 	e4-. r e,,-. r \mark \default
-	c8\fp-.^\solo c-. c-. d-. e-. e-. e-. c->-. 
+	c8\fp-.-\tweak X-offset #1.7 ^\solo c-. c-. d-. e-. e-. e-. c->-. 
 	e-. e-. e-. f->-. e-. e-. e-. b-. 
 	c-. c-. a-. a-. b-. b-. gis-. gis-. 
 	a-. a-. r4 r2
@@ -246,7 +246,7 @@ musicViolinIMvtI = \relative c''' {
 % Bars 216 to 220
 	bes8-.) r r4 r bes,16( cis e fis
 	g8-.) r e16( g bes c cis8-.) r e,16( g ais cis) \mark \default
-	ais,,2\mf\trill-\tweak Y-offset #5.5 ^\solo b4 r
+	ais,,2\mf\trill-\tweak X-offset #0.5 -\tweak Y-offset #5.5 ^\solo b4 r
 	a!2 g4 r
 	R1*4
 % Bars 221 to 225
@@ -308,7 +308,7 @@ musicViolinIMvtI = \relative c''' {
 	\times 2/3 {des,-. ees-. f-.} \times 2/3 {g-. aes-. bes~}
 	bes c,-. aes'-. f-.
 	des-. bes-. g-. ees-. \mark #11
-	c1(\fpp^\solo
+	c1(\fpp-\tweak X-offset #1.7 ^\solo
 % Bars 271 to 275
 	b!)~
 	b~
@@ -331,8 +331,8 @@ musicViolinIMvtI = \relative c''' {
 	<a e'>4-!_\crescmarkup r q-! r
 	<a f'>-! r <a fis'>-! r
 	<d, b' g'>-! r r2
-	<d b' gis'>4-! r r2 \mark \default
-	a'''4.\ff-\tweak X-offset #1 ^\tutti g8 e4 r
+	<d b' gis'>4-! r r2 \once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
+	a'''4.\ff^\tutti g8 e4 r
 % Bars 291 to 295
 	f4. e8 a,4 r
 	\times 2/3 {b-. c-. d-.} c4. a8
@@ -425,7 +425,7 @@ musicViolinIMvtI = \relative c''' {
 	
 % Bars 366 to 370
 	r4 r8 ais'8\f^\arco( b cis d cis) \mark \default
-	b8^\tutti b4 b\< b b8~
+	b8-\tweak X-offset #1.7 ^\tutti b4 b\< b b8~
 	b4\sf~ \times 2/3 {b8 gis-! a-!} \times 2/3 {eis-! fis-! cis-!} \times 2/3 {a-! cis-! fis-! }
 	d'8 d4 d d d8~
 	d4. cis8( d e fis e)

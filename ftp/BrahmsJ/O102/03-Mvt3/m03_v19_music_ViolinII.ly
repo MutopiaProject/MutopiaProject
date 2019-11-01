@@ -57,7 +57,7 @@ musicViolinIIMvtIII = \relative c'' {
 	c bes a b\<
 	<a f'> <b d> <a f'> <b d>\!
 	<a f' a>\f r r4 \mark \default
-	\tuplet 6/4 4 {<gis' e'>16-.\ff^\arco^\tutti q-. q-. q-. q-. q-. q-. q-. q-. q-. q-. q-.}
+	\tuplet 6/4 4 {<gis' e'>16-.\ff -\tweak X-offset #1 ^\arco-\tweak X-offset #1 ^\tutti q-. q-. q-. q-. q-. q-. q-. q-. q-. q-. q-.}
 	a8->_\benmarc e'16-. e-. dis8-> d16-. d-.
 % Bars 41 to 45
 	c8-> b16-. b-. a8-> e16-. e-.
@@ -178,9 +178,9 @@ musicViolinIIMvtIII = \relative c'' {
 	\tuplet 3/2 4 {d4( c8) a( b c)}
 	gis4 a
 % Bars 146 to 150
-	R2*2^\solo
+	\MmrLength #10 R2*2^\solo
 	\mark \default
-	R2*24
+	\MmrLength #10 R2*24
 % Bars 151 to 155
 	
 % Bars 156 to 160

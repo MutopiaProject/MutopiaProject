@@ -54,8 +54,8 @@ musicViolinIMvtIII = \relative c'' {
 % Bars 36 to 40
 	e d f d\<
 	<d a'> <b g'> <d a'> <b g'>\!
-	<a f' d'>\f r r4 \mark \default
-	\tuplet 6/4 4 {e'''16\ff-.-\tweak X-offset #1 ^\arco e,-. e'-._\tutti e,-. e'-. e,-. e'-. e,-. e'-. e,-. e'-. e,-. }
+	<a f' d'>\f r r4 \once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
+	\tuplet 6/4 4 {e'''16\ff-.^\arco e,-. e'-._\tutti e,-. e'-. e,-. e'-. e,-. e'-. e,-. e'-. e,-. }
 	a8->_\benmarc e'16-. e-. dis8-> d16-. d-.
 % Bars 41 to 45
 	c8-> b16-. b-. a8-> e16-. e-.
@@ -80,8 +80,8 @@ musicViolinIMvtIII = \relative c'' {
 % Bars 61 to 65
 	\cueDuring #"cueVoiceVlnImIII" #UP {
 		\ni R2
-		\MmrPos #-12 R
-		\MmrPos #-12 R
+		\MmrPos #-11 R
+		\MmrPos #-11 R
 		r4 r8. \no } g16\f-\tweak X-offset #-3 ^\arco(
 	g')^\tutti f,( f') d,( d') g,,( g') f,(
 % Bars 66 to 70
@@ -114,7 +114,7 @@ musicViolinIMvtIII = \relative c'' {
 	c8 r r4
 % Bars 96 to 100
 	R2
-	c,4.(\pp^\arco bes8
+	c,4.(-\tweak X-offset #-3 \pp^\arco bes8
 	a4. aes8
 	g4. gis8
 	a4) r \mark \default
@@ -172,7 +172,7 @@ musicViolinIMvtIII = \relative c'' {
 	\tuplet 3/2 4 {f4( e8) c( d e)}
 	b4 a
 % Bars 146 to 150
-	r^\solo bes,!\p^\pizz
+	r-\tweak Y-offset #4.5 ^\solo bes,!\p^\pizz
 	a r \mark \default
 	R2*24
 % Bars 151 to 155
@@ -273,7 +273,7 @@ musicViolinIMvtIII = \relative c'' {
 	r bes a g
 	f4 r
 	R2
-	aes,2\pp(
+	aes,2-\tweak X-offset #-4.5 \pp(
 	des4) r
 % Bars 246 to 250
 	\tempo "poco rit." R2*2

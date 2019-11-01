@@ -35,7 +35,7 @@ musicViolinIIMvtI = \relative c'' {
 		R \no
 	}
 % Bars 31 to 35
-	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
+	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -52,7 +52,7 @@ musicViolinIIMvtI = \relative c'' {
 % Bars 56 to 60
 		\MmrPos #-6 R \no \mark \default
 	}
-	<c a'>4.\ff-\tweak X-offset #1 ^\tutti <d g>8 <c e>4 r
+	<c a'>4.\ff-\tweak X-offset #1.5 ^\tutti <d g>8 <c e>4 r
 	<a f'>4. <gis e'>8 a4 r
 	\times 2/3 {b4-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
@@ -247,7 +247,7 @@ musicViolinIIMvtI = \relative c'' {
 % Bars 216 to 220
 	q8-. r r4 r2
 	cis16( e g a bes8-.) r e,16( g bes c! cis8-.) r \mark \default
-	R1*5-\tweak X-offset #1 ^\solo
+	\MmrLength #10 R1*5^\solo
 	
 	
 % Bars 221 to 225
@@ -331,7 +331,7 @@ musicViolinIIMvtI = \relative c'' {
 	<f a>-! r <d c'>-! r
 	<g, d' b'>-! r r2
 	<e' b' e>4-! r r2 \mark \default
-	<c' a'>4.\ff-\tweak X-offset #1 ^\tutti <d g>8 <c e>4 r
+	<c' a'>4.\ff-\tweak X-offset #1.5 ^\tutti <d g>8 <c e>4 r
 % Bars 291 to 295
 	<a f'>4. <gis e'>8 a4 r
 	\times 2/3 {b4-. c-. d-.} c4. a8

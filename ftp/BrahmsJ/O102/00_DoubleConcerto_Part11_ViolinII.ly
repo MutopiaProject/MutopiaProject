@@ -65,6 +65,7 @@
 \include "./02-Mvt2/m02_v19_music_ViolinII.ly"
 \include "./03-Mvt3/m03_v19_music_ViolinII.ly"
 \include "./00-Common/00_DoubleConcerto_Format_ViolinII.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceVlnIImI" { \cueVoiceVlnIImI }
 \addQuote "cueVoiceVlnIImII" { \cueVoiceVlnIImII }
 \addQuote "cueVoiceVlnIImIII" { \cueVoiceVlnIImIII }
@@ -95,7 +96,7 @@
 			"Brahms - Concerto for Violin and Cello in A Minor"
 		}
 		instrument = \markup {
-			"Violin II"
+			"Violine II"
 		}
 	}
 	\score {
@@ -118,6 +119,7 @@
 			}
 		}
 		\layout {
+			%system-count = #49
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -134,7 +136,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -143,6 +145,7 @@
 			}
 		}
 		\layout {
+			%system-count = #11
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -159,7 +162,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -168,6 +171,7 @@
 			}
 		}
 		\layout {
+			%system-count = #33
 			\context {
 				\CueVoice \layoutCueVoice
 			}

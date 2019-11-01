@@ -64,7 +64,7 @@ musicViolinIMvtII = \relative c' {
 	c c4 b c8~
 % Bars 46 to 50
 	c\< b4 aes'8( g) g(
-	aes) aes( g) g\! r g-.(_\pdolce
+	aes) aes( g) g\! r g-.(-\tweak X-offset #-2 _\pdolce
 	r g-. r aes-.) r des,
 	r c_\dimmarkup r des r d
 	r c r4 r \mark \default

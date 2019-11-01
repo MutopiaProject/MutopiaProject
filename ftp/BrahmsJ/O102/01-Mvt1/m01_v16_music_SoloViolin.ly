@@ -28,7 +28,7 @@ musicSoloViolinMvtI = \relative c'' {
 	\cueDuring #"cueVoiceSoloVlnmI" #UP {
 		\ni R1
 		R
-		R
+		\MmrPos #-6 R
 		R
 		r2 r4 \no } <g! a>\p\<(
 % Bars 31 to 35
@@ -36,7 +36,7 @@ musicSoloViolinMvtI = \relative c'' {
 	a'2\> e4) <f,! a>\<(
 	\times 2/3 {a'4 d,) <e, a>(} \times 2/3 {a' cis,) <dis, a'>(\!}
 	c''!2~_\piuf \times 2/3 {c4 a) fis}
-	\times 2/3 {c( a fis} \times 2/3 {c) b a}
+	\shape #'((0 . -2)(0 . -2)(0 . -3)(0 . -3)) Slur \times 2/3 {c( a fis} \times 2/3 {c) b a}
 % Bars 36 to 40
 	\grace {gis16[( a b]} a2)( gis4) r
 	R1
@@ -63,7 +63,7 @@ musicSoloViolinMvtI = \relative c'' {
 	a4-. <a,, c e'>-. <d, f' f'>-. <d a'' fis'>-.
 % Bars 56 to 60
 	<g, b' g' g'>-. r <e' b' gis' gis'>-. r \mark \default
-	R1*22
+	\MmrLength #9 R1*22
 % Bars 61 to 65
 	
 % Bars 66 to 70
@@ -74,7 +74,7 @@ musicSoloViolinMvtI = \relative c'' {
 	
 	
 	\mark \default
-	R1*11
+	\MmrLength #9 R1*11
 % Bars 81 to 85
 	
 % Bars 86 to 90
@@ -82,7 +82,7 @@ musicSoloViolinMvtI = \relative c'' {
 	
 	
 	\mark \default
-	R1*22
+	\MmrLength #9 R1*22
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -122,9 +122,9 @@ musicSoloViolinMvtI = \relative c'' {
 		\new Voice {\voiceTwo <e,, c'>( <c' e>~ <c a'>) <dis b'>-.\noBeam e4( gis8) a-.\noBeam } 
 	>> \oneVoice
 	<d, d'>2-> <dis dis'>->
-	<< { s8\< s s\> s s\< s s\> s\! } \\ { <e e'>4.^( \acciaccatura g'8 f8) <a,, e''>4.^( \acciaccatura a''8 f) } >> \oneVoice
+	<< { s16\< s s s  s s\> s s\!  s\< s s s  s s\> s s\! } { <e e'>4.^( \acciaccatura g'8 f8) <a,, e''>4.^( \acciaccatura a''8 f) } >> 
 % Bars 131 to 135
-	e2.\!( gis,,,4)
+	\shape #'((0 . 0)(0 . 0)(0 . -1)(0 . -2)) Slur e2.\!( gis,,,4)
 	\times 2/3 {a8\f\< c f} \times 2/3 {e\> c gis} \times 2/3 {a\< c g'!} \times 2/3 {f\> c gis!}
 	\times 2/3 {a\< c g'!} \times 2/3 {fis a c} \times 2/3 {gis'\> d b} \times 2/3 {gis d b\!}
 	a4 r r2
@@ -313,10 +313,10 @@ musicSoloViolinMvtI = \relative c'' {
 		R
 		\MmrPos #-6 R \no
 	}
-	<d' d'>4._\fespr d,8( \times 4/6 {f8 d' gis b d, e,)}
+	<d' d'>4._\fespr d,8( \tuplet 3/2 4 {f8 d' gis b d, e,)}
 % Bars 301 to 305
-	c4. a'8( \times 4/6 {f a c a' c, e,)}
-	d4. c'8( \times 4/6 {b d b' d d, d,)}
+	c4. a'8( \tuplet 3/2 4 {f a c a' c, e,)}
+	d4. c'8( \tuplet 3/2 4 {b d b' d d, d,)}
 	c2. a'4(
 	c,2. b4)
 	\times 2/3 {a8\f c f} \times 2/3 {e c gis} \times 2/3 {a c g'!} \times 2/3 {f c gis!}
@@ -367,7 +367,7 @@ musicSoloViolinMvtI = \relative c'' {
 	<fisis fisis'>-.) <gis gis'>(~ q16 fis' e dis) fis( e dis cis)
 	e( cis e, fis) dis( b fis dis b8) r <b' b'>4(
 	<bis bis'>)-. <cis cis'>4(~ q16 b' a gis) b( a gis fis)
-	a( fis b, a) gis( a e' fis gis8) r gis,,16(\mf a b cis
+	a( fis b, a) gis( a e' fis gis8) r gis,,16(-\tweak X-offset #-3.8 \mf a b cis
 % Bars 346 to 350
 	d cis b ais) b( cis d e fis e d cis) d( fis b cis
 	d cis b fis) d( fis b cis d cis b fis) gis( a b cis

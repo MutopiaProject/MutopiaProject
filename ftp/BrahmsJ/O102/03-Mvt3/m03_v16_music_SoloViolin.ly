@@ -9,7 +9,7 @@ musicSoloViolinMvtIII = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	R2*6
+	\MmrLength #18 R2*6
 % Bars 6 to 10
 	
 	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
@@ -154,15 +154,39 @@ musicSoloViolinMvtIII = \relative c''' {
 	\tuplet 3/2 4 {<d f>4( <c e>8) <a c>( <b d> <c e>)}
 % Bars 126 to 130
 	<c, a'>4 <b g'>8. <g' g'>16
-	<<{g'8( \tuplet 3/2 {f16 g f} \tuplet 6/4 4 {ees f ees d ees d)}} \\ {g,,8 s4.} \\ {g'2}>>
-	<<{ees'8( \tuplet 3/2 {d16 ees d} \tuplet 6/4 4 {c d c bes c bes)}} \\ {g,2}>>
-	<<{\tuplet 6/4 4 {a'16(\> bes a bes\! c bes) a( bes a bes c bes)}} \\ {g,4 g}>>
-	\tuplet 3/2 {<g a'>16( bes' a)} r8 r8. <d d'>16
+	<< {
+		\voiceOne g'8( \tuplet 3/2 {f16 g f} \tuplet 6/4 4 {ees f ees d ees d)}
+		ees8( \tuplet 3/2 {d16 ees d} \tuplet 6/4 4 {c d c bes c bes)}
+		\tuplet 6/4 4 {a16(\> bes a bes\! c bes) a( bes a bes c bes)}
+	}
+	\new Voice {
+		\voiceTwo g,8 s s4
+		g2
+		g4 g
+	}
+	\new Voice {
+		\voiceThree g'2
+		s
+		s
+	} >> \oneVoice
+	\tuplet 3/2 {<g, a'>16( bes' a)} r8 r8. <d d'>16
 % Bars 131 to 135
-	<<{d'8( \tuplet 3/2 {c16 d c} \tuplet 6/4 4 {bes c bes a bes a)}} \\ {d,,8 s4.} \\ {d'2}>>
-	<<{bes'8( \tuplet 3/2 {a16 bes a} \tuplet 6/4 4 {g a g f g f)}} \\ {d,2}>>
-	<<{\tuplet 6/4 4 {e'16(\> f e f\! g f e f e f g f)}} \\ {d,4 d}>>
-	\tuplet 3/2 {<d e'>16( f' e)} r8 r8. <a, a'>16
+	<<{
+		\voiceOne d'8( \tuplet 3/2 {c16 d c} \tuplet 6/4 4 {bes c bes a bes a)}
+		bes8( \tuplet 3/2 {a16 bes a} \tuplet 6/4 4 {g a g f g f)}
+		\tuplet 6/4 4 {e16(\> f e f\! g f e f e f g f)}
+	}
+	\new Voice {
+		\voiceTwo d,8 s s4
+		d2
+		d4 d
+	}
+	\new Voice {
+		\voiceThree d'2
+		s
+		s
+	}>> \oneVoice
+	\tuplet 3/2 {<d, e'>16( f' e)} r8 r8. <a, a'>16
 	<a a'>8( \tuplet 3/2 {f'16 g f} \tuplet 6/4 4 {d e d cis d cis)}
 % Bars 136 to 140
 	f8( \tuplet 3/2 {d16 e d} \tuplet 6/4 4 {bes c! bes g a g)}

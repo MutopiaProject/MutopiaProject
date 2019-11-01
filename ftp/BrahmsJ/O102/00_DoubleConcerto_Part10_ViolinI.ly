@@ -65,6 +65,7 @@
 \include "./02-Mvt2/m02_v18_music_ViolinI.ly"
 \include "./03-Mvt3/m03_v18_music_ViolinI.ly"
 \include "./00-Common/00_DoubleConcerto_Format_ViolinI.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceVlnImI" { \cueVoiceVlnImI }
 \addQuote "cueVoiceVlnImII" { \cueVoiceVlnImII }
 \addQuote "cueVoiceVlnImIII" { \cueVoiceVlnImIII }
@@ -118,6 +119,7 @@
 			}
 		}
 		\layout {
+			%system-count = #47
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -134,7 +136,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -143,6 +145,7 @@
 			}
 		}
 		\layout {
+		%system-count = #14
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -168,6 +171,7 @@
 			}
 		}
 		\layout {
+			%system-count = #32
 			\context {
 				\CueVoice \layoutCueVoice
 			}

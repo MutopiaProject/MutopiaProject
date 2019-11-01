@@ -47,7 +47,7 @@ musicSoloCelloMvtI = \relative c, {
 % Bars 31 to 35
 	
 % Bars 36 to 40
-	\times 2/3 {r4 <d b'>( <d' f'>~} \times 2/3 {q d') b}
+	\times 2/3 {r4 <d b'>(_\pocof <d' f'>~} \times 2/3 {q d') b}
 	\times 2/3 {f( d b} \times 2/3 {f) e d}
 	\grace {cis16([ d e]} d2)( cis!4) r
 	\times 2/3 {r4 \clef tenor e'( g'~} \times 2/3 {g e) <a, f'>(\<}
