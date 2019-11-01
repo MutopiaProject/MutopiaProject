@@ -64,7 +64,7 @@
 \include "./01-Mvt1/m01_v16_music_SoloViolin.ly"
 \include "./02-Mvt2/m02_v16_music_SoloViolin.ly"
 \include "./03-Mvt3/m03_v16_music_SoloViolin.ly"
-\include "./00-Common/00_DoubleConcerto_Format_SoloVln.ly"
+\include "./00-Common/DoubleConcerto_Format_Part08_SoloVln.ly"
 %\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceSoloVlnmI" { \cueVoiceSoloVlnmI }
 \addQuote "cueVoiceSoloVlnmII" { \cueVoiceSoloVlnmII }

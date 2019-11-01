@@ -67,7 +67,7 @@
 \include "./03-Mvt3/m03_v20_music_Bratsche.ly"
 \include "./03-Mvt3/m03_v21_music_Violoncell.ly"
 \include "./03-Mvt3/m03_v22_music_Kontrabass.ly"
-\include "./00-Common/00_DoubleConcerto_Format_Cond_Mvt3.ly"
+\include "./00-Common/DoubleConcerto_Format_Cond_Mvt3.ly"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################

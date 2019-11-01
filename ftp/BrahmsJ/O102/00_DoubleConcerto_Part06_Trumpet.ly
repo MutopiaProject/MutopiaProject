@@ -67,7 +67,7 @@
 \include "./01-Mvt1/m01_v14_music_TrumpetII.ly"
 \include "./02-Mvt2/m02_v14_music_TrumpetII.ly"
 \include "./03-Mvt3/m03_v14_music_TrumpetII.ly"
-\include "./00-Common/00_DoubleConcerto_Format_Trumpet.ly"
+\include "./00-Common/DoubleConcerto_Format_Part06_Trumpet.ly"
 %\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceTptImI" { \cueVoiceTptImI }
 \addQuote "cueVoiceTptImII" { \cueVoiceTptImII }
