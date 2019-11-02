@@ -65,6 +65,7 @@
 \include "./02-Mvt2/m02_v22_music_Kontrabass.ly"
 \include "./03-Mvt3/m03_v22_music_Kontrabass.ly"
 \include "./00-Common/DoubleConcerto_Format_Part14_Kontrabass.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceKtbmI" { \cueVoiceKtbmI }
 \addQuote "cueVoiceKtbmII" { \cueVoiceKtbmII }
 \addQuote "cueVoiceKtbmIII" { \cueVoiceKtbmIII }
@@ -118,6 +119,7 @@
 			}
 		}
 		\layout {
+			%system-count = #38
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -143,6 +145,7 @@
 			}
 		}
 		\layout {
+			%system-count = #9
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -159,7 +162,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -168,6 +171,7 @@
 			}
 		}
 		\layout {
+			%system-count = #24
 			\context {
 				\CueVoice \layoutCueVoice
 			}

@@ -78,7 +78,7 @@ musicVioloncellMvtIII = \relative c {
 	
 % Bars 61 to 65
 	\cueDuring #"cueVoiceVlcmIII" #UP {
-		\ni R2
+		\ni \MmrPos #-8 R2
 		R
 		R \no
 		r4 r8. } g16(^\arco\f^\tutti

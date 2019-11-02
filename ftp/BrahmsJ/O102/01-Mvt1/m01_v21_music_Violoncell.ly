@@ -35,7 +35,7 @@ musicVioloncellMvtI = \relative c' {
 		R \no \clef bass
 	}
 % Bars 31 to 35
-	\textLengthOn <>^\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
+	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -52,7 +52,7 @@ musicVioloncellMvtI = \relative c' {
 % Bars 56 to 60
 		\clef bass R \mark \default \no
 	}
-	a,4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
+	a,4.\ff-\tweak X-offset #1.5 ^\tutti b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
@@ -118,7 +118,7 @@ musicVioloncellMvtI = \relative c' {
 	f''8( d) r4 fis8( dis) r4
 % Bars 111 to 115
 	e-! r e,,-! r \mark \default
-	a4\fp\>-.-\tweak X-offset #1 ^\solo r8 b-. c4-.\! r
+	a4\fp\>-.-\tweak X-offset #1.4 ^\solo r8 b-. c4-.\! r
 	r2 c,4^\pizz r8 d
 	e4 r r2
 	e4 r r2
@@ -245,7 +245,7 @@ musicVioloncellMvtI = \relative c' {
 % Bars 216 to 220
 	cis8-. r r4 r g''->
 	e-> cis-> ais-> g-> \mark \default
-	fis,2\mf^\solo g4 r
+	fis,2\mf-\tweak X-offset #0.5 ^\solo g4 r
 	b2 c!4 r
 	d,2\p e2~ 
 % Bars 221 to 225
@@ -270,7 +270,7 @@ musicVioloncellMvtI = \relative c' {
 % Bars 236 to 240
 		b
 		cis
-		gis'4(^\pp cis, fis b,
+		gis'4(-\tweak X-offset #-3 ^\pp cis, fis b,
 		eis ais, dis gis,
 		cis)
 	} \\ {
@@ -324,7 +324,7 @@ musicVioloncellMvtI = \relative c' {
 	c des,-. bes'-. g-.
 	\times 2/3 {c,-. d-. e!-.} \times 2/3 {f-. g-. aes-.}
 	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
-	aes,1\fpp(^\solo
+	aes,1\fpp(-\tweak X-offset #0.5 ^\solo
 % Bars 271 to 275
 	gis)(
 	e!)~
@@ -348,7 +348,7 @@ musicVioloncellMvtI = \relative c' {
 	d,-! r d-! r
 	g,-! r r2
 	e4-! r r2 \mark \default 
-	a4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
+	a4.\ff-\tweak X-offset #1.5 ^\tutti b8 c4 r
 % Bars 291 to 295
 	d4. e8 f4 r
 	g2 a4. f8
@@ -441,7 +441,7 @@ musicVioloncellMvtI = \relative c' {
 	
 % Bars 366 to 370
 	\mark \default
-	e2\f-\tweak X-offset #1 ^\arco -\tweak X-offset #1 ^\tutti gis
+	e2\f-\tweak X-offset #1.5 ^\arco -\tweak X-offset #1.5 ^\tutti gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2

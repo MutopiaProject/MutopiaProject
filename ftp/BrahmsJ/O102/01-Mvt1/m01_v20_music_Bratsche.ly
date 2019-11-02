@@ -9,7 +9,7 @@ musicBratscheMvtI = \relative c'' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc-\tweak X-offset #-6.5 ^\tutti d8 b4 r
+	e4._\fmarc^\tutti d8 b4 r
 	c4. b8 e,4 r
 	<dis, c'>-. r <d b' d>-. r
 	<a' e'>-. <c e>-. <d a'>-. <f a>-.
@@ -35,7 +35,7 @@ musicBratscheMvtI = \relative c'' {
 		R \no
 	}
 % Bars 31 to 35
-	\textLengthOn <>^\markup {\column { \center-align \line \lower #1 {Solo-Viol. u.} \center-align \line {Solo-Vlc.} }} R1*21 \textLengthOff
+	\textLengthOn <>_\markup {\column { \center-align \line \lower #1 {Solo-Viol. u.} \center-align \line {Solo-Vlc.} }} R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -96,7 +96,7 @@ musicBratscheMvtI = \relative c'' {
 	bes( g c, g' \times 2/3 {f8-.) b!-! c-!} \times 2/3 {a-! a-! b-!} \times 2/3 {c-! gis-! a-!} 
 	c16( a fis  a \times 2/3 {c8-.) a-! bes-!} \times 2/3 {a-! g-! ees-!} \times 2/3 {d-! c-! bes-!}
 	\times 2/3 {gis-! a-! b!-!} \times 2/3 {c-! d-! f-!} \times 2/3 {gis-! a-! b-!} \clef treble \times 2/3 {c-! d-! f-!}
-	c16( a' f c) a( f' c a) f( c' a f) \clef alto c'4(_\fbenmarc \mark \default
+	c16( a' f c) a( f' c a) f( c' a f) \clef alto c'4(-\tweak X-offset #-3 _\fbenmarc \mark \default
 	b!16 g d b!) c'4( bes16 g des bes) a'4( 
 % Bars 91 to 95
 	<g b!>8) <g b>4 q8( <g b>4) c4(
@@ -261,7 +261,7 @@ musicBratscheMvtI = \relative c'' {
 % Bars 216 to 220
 	bes8-.) r r4 r <cis, bes'>4:16
 	q: <e g>2: <cis e>4: \mark \default
-	e,2\mf-\tweak X-offset #1 ^\solo d4 r
+	e,2\mf-\tweak X-offset #1.5 ^\solo d4 r
 	dis2\trill e4 r
 	c2\p <c g'>~
 % Bars 221 to 225
@@ -323,7 +323,7 @@ musicBratscheMvtI = \relative c'' {
 	q q-. des <bes g'>->~
 	q q-. <aes c>-. f'->~
 	f bes,-. bes-. ees,-. \mark #11
-	ees1\fpp~^\solo
+	ees1\fpp~-\tweak X-offset #0.5 ^\solo
 % Bars 271 to 275
 	ees(
 	e!)(

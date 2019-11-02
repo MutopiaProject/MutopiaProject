@@ -3640,7 +3640,7 @@ cueVoiceKtbmII = \relative c {
 cueVoiceKtbmIII = \relative c {
 	R2*32
 	% bar 33
-	c'''8(^\markup {Solo-Vlc.} a4 f8)
+	c'''8(-\tweak X-offset #-7 ^\markup {Solo-Vlc.} a4 f8)
 	d( b f d)
 	e8-.\noBeam \tuplet 3/2 8 {d16( e d} f8-.) \tuplet 3/2 8 {d16( e d}
 	e8-.) \tuplet 3/2 8 {d16( e d} a'8)-. \tuplet 3/2 8 {d,16( e d}

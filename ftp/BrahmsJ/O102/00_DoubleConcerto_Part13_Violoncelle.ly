@@ -65,6 +65,7 @@
 \include "./02-Mvt2/m02_v21_music_Violoncell.ly"
 \include "./03-Mvt3/m03_v21_music_Violoncell.ly"
 \include "./00-Common/DoubleConcerto_Format_Part13_Violoncelle.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceVlcmI" { \cueVoiceVlcmI }
 \addQuote "cueVoiceVlcmII" { \cueVoiceVlcmII }
 \addQuote "cueVoiceVlcmIII" { \cueVoiceVlcmIII }
@@ -118,6 +119,7 @@
 			}
 		}
 		\layout {
+			%system-count = #47
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -134,7 +136,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -143,6 +145,7 @@
 			}
 		}
 		\layout {
+			%system-count = #12
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -159,7 +162,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -168,6 +171,7 @@
 			}
 		}
 		\layout {
+			%system-count = #33
 			\context {
 				\CueVoice \layoutCueVoice
 			}

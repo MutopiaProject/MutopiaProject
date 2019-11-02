@@ -75,7 +75,7 @@ musicVioloncellMvtII = \relative c {
 		\MmrPos #-6 R
 		\clef bass R
 		r4 \no } r8 bes'_\ppdim r b
-	r c r4 c^\pizz \mark \default
+	r c r4 c-\tweak X-offset #-1.5 ^\pizz \once \override Score.RehearsalMark.self-alignment-X = #-1 \mark \default
 % Bars 51 to 55
 	f, r r
 	r r -\tweak X-offset #-5 -\tweak Y-offset #-7 _\pocof <<{ %  
@@ -111,7 +111,7 @@ musicVioloncellMvtII = \relative c {
 		f2.~
 		f
 	}>>
-	des4^\pizz^\tutti r r
+	des4-\tweak X-offset #-2 ^\pizz -\tweak X-offset #-2 ^\tutti r r
 	r cis'\pp r
 % Bars 66 to 70
 	cis r r \bar "||" \key d \major

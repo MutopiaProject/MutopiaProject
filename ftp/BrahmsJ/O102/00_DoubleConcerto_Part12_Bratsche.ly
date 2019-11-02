@@ -65,6 +65,7 @@
 \include "./02-Mvt2/m02_v20_music_Bratsche.ly"
 \include "./03-Mvt3/m03_v20_music_Bratsche.ly"
 \include "./00-Common/DoubleConcerto_Format_Part12_Bratsche.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoiceBrmI" { \cueVoiceBrmI }
 \addQuote "cueVoiceBrmII" { \cueVoiceBrmII }
 \addQuote "cueVoiceBrmIII" { \cueVoiceBrmIII }
@@ -118,6 +119,7 @@
 			}
 		}
 		\layout {
+			%system-count = #56
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -134,7 +136,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -143,6 +145,7 @@
 			}
 		}
 		\layout {
+			%system-count = #12
 			\context {
 				\CueVoice \layoutCueVoice
 			}
@@ -159,7 +162,7 @@
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -168,6 +171,7 @@
 			}
 		}
 		\layout {
+			%system-count = #34
 			\context {
 				\CueVoice \layoutCueVoice
 			}

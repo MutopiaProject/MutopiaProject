@@ -124,7 +124,7 @@ musicKontrabassMvtIII = \relative c {
 	
 	\mark \default
 % Bars 101 to 105
-	a8-\tweak X-offset #1 ^\pizz r r4
+	a8-\tweak X-offset #1.5 ^\pizz r r4
 	R2*3
 	
 	
@@ -180,7 +180,7 @@ musicKontrabassMvtIII = \relative c {
 	e f8. c16
 	e4 a,
 % Bars 146 to 150
-	R2*2-\tweak X-offset #0 ^\solo
+	\MmrLength #10 R2*2^\solo
 	\mark \default
 	r4 f'\pp~
 	f c~
