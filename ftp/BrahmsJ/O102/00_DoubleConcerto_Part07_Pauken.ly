@@ -63,8 +63,8 @@
 \include "./00-Common/DoubleConcerto_cueVoice.ly"
 \include "./01-Mvt1/m01_v15_music_Pauken.ly"
 \include "./03-Mvt3/m03_v15_music_Pauken.ly"
-%\include "./00-Common/DoubleConcerto_Format_Part07_Pauken.ly"
-\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_Format_Part07_Pauken.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \addQuote "cueVoicePkmI" { \cueVoicePkmI }
 \addQuote "cueVoicePkmIII" { \cueVoicePkmIII }
 %###############################################################################

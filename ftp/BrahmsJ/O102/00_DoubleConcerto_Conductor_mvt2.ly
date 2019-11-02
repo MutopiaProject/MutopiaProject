@@ -7,6 +7,7 @@
 \paper {
 	ragged-last-bottom = ##t
 	ragged-bottom = ##t
+	left-margin = 16 \mm
 	bookTitleMarkup = \markup {
 		\override #'(baseline-skip . 3.5)
 		\column {
@@ -59,13 +60,13 @@
 \include "./02-Mvt2/m02_v12_music_HornIV_C.ly"
 \include "./02-Mvt2/m02_v13_music_TrumpetI_C.ly"
 \include "./02-Mvt2/m02_v14_music_TrumpetII_C.ly"
-\include "./02-Mvt2/m02_v16_music_SoloViolin.ly"
-\include "./02-Mvt2/m02_v17_music_SoloCello.ly"
-\include "./02-Mvt2/m02_v18_music_ViolinI.ly"
-\include "./02-Mvt2/m02_v19_music_ViolinII.ly"
-\include "./02-Mvt2/m02_v20_music_Bratsche.ly"
-\include "./02-Mvt2/m02_v21_music_Violoncell.ly"
-\include "./02-Mvt2/m02_v22_music_Kontrabass.ly"
+\include "./02-Mvt2/m02_v16_music_SoloViolin_C.ly"
+\include "./02-Mvt2/m02_v17_music_SoloCello_C.ly"
+\include "./02-Mvt2/m02_v18_music_ViolinI_C.ly"
+\include "./02-Mvt2/m02_v19_music_ViolinII_C.ly"
+\include "./02-Mvt2/m02_v20_music_Bratsche_C.ly"
+\include "./02-Mvt2/m02_v21_music_Violoncell_C.ly"
+\include "./02-Mvt2/m02_v22_music_Kontrabass_C.ly"
 %\include "./00-Common/DoubleConcerto_Format_Cond_Mvt2.ly"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
@@ -129,13 +130,13 @@
 				\new GrandStaff <<
 					\new Staff {
 						\timeMvtII \generalOptions \conductorOptions
-						\nameVoiceIX
+						\nameVoiceIXmvtII
 						\partcombine \musicHornIMvtII \musicHornIIMvtII
 %						\musicHornIIMvtII
 					}
 					\new Staff {
 						\timeMvtII \generalOptions \conductorOptions
-						\nameVoiceXI
+						\nameVoiceXImvtII
 						\partcombine \musicHornIIIMvtII \musicHornIVMvtII
 %						\musicHornIVMvtII
 					}

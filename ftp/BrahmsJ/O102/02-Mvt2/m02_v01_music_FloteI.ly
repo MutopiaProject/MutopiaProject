@@ -42,7 +42,7 @@ musicFloteIMvtII = \relative c''' {
 	\cueDuring "cueVoiceFloteImII" #DOWN {
 		\ni R2.
 		R
-		r4 r \no } a'_\pdolce-\tweak X-offset #-3.6 ^\tutti(~ \bar "||" \mark \default \key f \major
+		r4 r \no } a'_\pdolce-\tweak X-offset #-3.8 ^\tutti(~ \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	a bes c
 	bes a) d(

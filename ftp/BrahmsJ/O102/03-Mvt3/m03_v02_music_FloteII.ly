@@ -42,7 +42,7 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 36 to 40
 	
 	
-	\mark \default
+	\once \override Score.RehearsalMark.X-offset = #-1.8 \mark \default
 	e'2\ff^\tutti
 	a,8-. a-. r a-.
 % Bars 41 to 45

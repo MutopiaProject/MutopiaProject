@@ -51,7 +51,7 @@ musicFloteIMvtI = \relative c''' {
 % Bars 56 to 60
 		\MmrPos #-4 R \mark \default \no
 	}
-	a4.\ff-\tweak X-offset #1 ^\tutti g8 e4 r
+	a4.\ff-\tweak X-offset #1.5 ^\tutti g8 e4 r
 	f4. e8 c4 r
 	\times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
@@ -270,7 +270,7 @@ musicFloteIMvtI = \relative c''' {
 	
 	
 	f4._\ffmarc-> ees8 c4 r
-	des4.-> c8 f,4^\tutti r
+	des4.-> c8 f,4-\tweak X-offset #-1 ^\tutti r
 	des'2( bes)
 % Bars 261 to 265
 	bes( ges)
@@ -304,8 +304,8 @@ musicFloteIMvtI = \relative c''' {
 	a'4-.\ff r e-. r
 	f-. r fis-. r
 	g-. r r2
-	gis4-. r r2 \mark \default
-	a4.\ff-\tweak X-offset #1 ^\tutti g!8 e4 r
+	gis4-. r r2 \once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
+	a4.\ff^\tutti g!8 e4 r
 % Bars 291 to 295
 	f4. e8 a,4 r
 	\times 2/3 {b-. c-. d-.} c4.-> a8
@@ -386,7 +386,7 @@ musicFloteIMvtI = \relative c''' {
 	gis8-.\f gis4 gis8( fis) fis4 fis8\((\<
 % Bars 366 to 370
 	f2)\> e4\)\! r \mark \default
-	gis8-\tweak X-offset #1 ^\tutti gis4 gis8( fis!) fis4  fis8(
+	gis8-\tweak X-offset #1.5 ^\tutti gis4 gis8( fis!) fis4  fis8(
 	eis4-.) cis-. r2
 	b'8 b4 b8( a) a4 a8~
 	a4-. gis-. r2

@@ -333,7 +333,7 @@ musicSoloViolinMvtI = \relative c'' {
 	r2 r4 \times 2/3 {e8( b' d}
 	\times 2/3 {e d b} \times 2/3 {e, b' d} \times 2/3 {e\> d b} \times 2/3 {e, b' d)\!}
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	r2 \times 2/3 {a,8( e' g!} \times 2/3 {a e' g!)}
 	\times 2/3 {a( g e} \times 2/3 {a, e' g} \times 2/3 {a g e} \times 2/3 {a, e' g)}
 	\times 2/3 {a( fis! dis} \times 2/3 {a dis eis} \times 2/3 {fis dis a} \times 2/3 {fis a dis)}

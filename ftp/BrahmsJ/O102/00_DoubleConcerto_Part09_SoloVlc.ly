@@ -64,8 +64,8 @@
 \include "./01-Mvt1/m01_v17_music_SoloCello.ly"
 \include "./02-Mvt2/m02_v17_music_SoloCello.ly"
 \include "./03-Mvt3/m03_v17_music_SoloCello.ly"
-\include "./00-Common/DoubleConcerto_Format_temp.ly"
-%\include "./00-Common/DoubleConcerto_Format_Part09_SoloVlc.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_Format_Part09_SoloVlc.ly"
 \addQuote "cueVoiceSoloVlcmI" { \cueVoiceSoloVlcmI }
 \addQuote "cueVoiceSoloVlcmII" { \cueVoiceSoloVlcmII }
 \addQuote "cueVoiceSoloVlcmIII" { \cueVoiceSoloVlcmIII }

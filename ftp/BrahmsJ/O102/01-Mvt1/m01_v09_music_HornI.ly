@@ -312,7 +312,7 @@ musicHornIMvtI = \relative c'' {
 	r4 r8 c8~ c4. c8\<~
 	<<c1 {s4\> s s s\!}>>
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	c'1\pp~
 	c\<(
 	b1)(\dimD\>

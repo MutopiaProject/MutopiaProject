@@ -43,7 +43,7 @@ musicFloteIMvtIII = \relative c''' {
 	
 	
 	\mark \default
-	e'2\ff-\tweak X-offset #1 ^\tutti
+	e'2\ff-\tweak X-offset #1.5 ^\tutti
 	c8-. c-. r f-.
 % Bars 41 to 45
 	r d-. r c-.
@@ -163,9 +163,9 @@ musicFloteIMvtIII = \relative c''' {
 	\times 2/3 {f4( e8)} \times 2/3 {c( d e)}
 	b4 a
 % Bars 146 to 150
-	R2*2-\tweak X-offset #0 ^\solo
+	\MmrLength #10 R2*2^\solo
 	\mark \default
-	R2*18
+	\MmrLength #10 R2*18
 % Bars 151 to 155
 	
 % Bars 156 to 160

@@ -147,7 +147,7 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 % Bars 146 to 150
-	R1^\gp
+	R1_\gp
 	R1*19
 % Bars 151 to 155
 	
@@ -307,7 +307,7 @@ musicOboeIIMvtI = \relative c'' {
 		R \no
 	}
 % Bars 316 to 320
-	R1^\gp
+	R1_\gp
 	R1*19
 % Bars 321 to 325
 	

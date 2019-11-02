@@ -124,7 +124,7 @@
 			}
 			\new Voice {
 				\timeMvtI \generalOptions \partOptions
-				\nameVoiceIX \musicHornIMvtI
+				\nameVoiceIXmvtI \musicHornIMvtI
 			}
 		>>
 		\header {
@@ -150,7 +150,7 @@
 			}
 			\new Voice {
 				\timeMvtII \generalOptions \partOptions
-				\nameVoiceIX \musicHornIMvtII
+				\nameVoiceIXmvtII \musicHornIMvtII
 			}
 		>>
 		\header {
@@ -176,7 +176,7 @@
 			}
 			\new Voice {
 				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceIX \musicHornIMvtIII
+				\nameVoiceIXmvtIII \musicHornIMvtIII
 			}
 		>>
 		\header {
@@ -202,7 +202,7 @@
 			}
 			\new Voice {
 				\timeMvtI \generalOptions \partOptions
-				\nameVoiceX \musicHornIIMvtI
+				\nameVoiceXmvtI \musicHornIIMvtI
 			}
 		>>
 		\header {
@@ -228,7 +228,7 @@
 			}
 			\new Voice {
 				\timeMvtII \generalOptions \partOptions
-				\nameVoiceX \musicHornIIMvtII
+				\nameVoiceXmvtII \musicHornIIMvtII
 			}
 		>>
 		\header {
@@ -254,7 +254,7 @@
 			}
 			\new Voice {
 				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceX \musicHornIIMvtIII
+				\nameVoiceXmvtIII \musicHornIIMvtIII
 			}
 		>>
 		\header {
@@ -280,7 +280,7 @@
 			}
 			\new Voice {
 				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXI \musicHornIIIMvtI
+				\nameVoiceXImvtI \musicHornIIIMvtI
 			}
 		>>
 		\header {
@@ -306,7 +306,7 @@
 			}
 			\new Voice {
 				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXI \musicHornIIIMvtII
+				\nameVoiceXImvtII \musicHornIIIMvtII
 			}
 		>>
 		\header {
@@ -332,7 +332,7 @@
 			}
 			\new Voice {
 				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXI \musicHornIIIMvtIII
+				\nameVoiceXImvtIII \musicHornIIIMvtIII
 			}
 		>>
 		\header {
@@ -358,7 +358,7 @@
 			}
 			\new Voice {
 				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXII \musicHornIVMvtI
+				\nameVoiceXIImvtI \musicHornIVMvtI
 			}
 		>>
 		\header {
@@ -384,7 +384,7 @@
 			}
 			\new Voice {
 				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXII \musicHornIVMvtII
+				\nameVoiceXIImvtII \musicHornIVMvtII
 			}
 		>>
 		\header {
@@ -410,7 +410,7 @@
 			}
 			\new Voice {
 				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXII \musicHornIVMvtIII
+				\nameVoiceXIImvtIII \musicHornIVMvtIII
 			}
 		>>
 		\header {

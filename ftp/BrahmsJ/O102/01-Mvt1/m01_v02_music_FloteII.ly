@@ -51,7 +51,7 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 56 to 60
 		\MmrPos #-4 R \mark \default \no
 	}
-	c'4.\ff-\tweak X-offset #1 ^\tutti d8 c4 r
+	c'4.\ff-\tweak X-offset #1.5 ^\tutti d8 c4 r
 	a4. gis8 a4 r
 	\times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
@@ -306,7 +306,7 @@ musicFloteIIMvtI = \relative c''' {
 	a-. r c-. r
 	b-. r r2
 	d4-. r r2 \mark \default
-	c4.\ff-\tweak X-offset #1 ^\tutti d8 c4 r
+	c4.\ff-\tweak X-offset #1.5 ^\tutti d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
 	\times 2/3 {b-. c-. d-.} c4.-> a8
@@ -385,7 +385,7 @@ musicFloteIIMvtI = \relative c''' {
 	gis'8-.\f gis4 gis8( fis) fis4 fis8\((\<
 % Bars 366 to 370
 	f2)\> e4\)\! r \mark \default
-	gis8-\tweak X-offset #1 ^\tutti gis4 gis8( fis!) fis4  fis8(
+	gis8-\tweak X-offset #1.5 ^\tutti gis4 gis8( fis!) fis4  fis8(
 	eis4-.) cis-. r2
 	b'8 b4 b8( a) a4 a8~
 	a4-. gis-. r2
