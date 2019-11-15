@@ -58,7 +58,7 @@ musicSoloCelloMvtII = \relative c {
 	\times 2/3 {f e f} \clef treble \times 2/3 {d' c b} \times 2/3 {c)\< e,( g}
 	\times 2/3 {des' c b} \times 2/3 {c)\! e,( g} \times 2/3 {des' c b}
 	\times 2/3 {des c b} \times 2/3 {c) ees,( aes} \times 2/3 {bes) des,( g}
-	\times 2/3 {aes)_\dimmarkup \clef tenor c,(\> f} \times 2/3 {g) bes,( des} \times 2/3 {f) f,4~}
+	\times 2/3 {aes)_\dimD\> c,( f} \times 2/3 {g) bes,( des} \times 2/3 {f) \clef tenor f,4~}
 	\times 2/3 {f8 f4~} \times 2/3 {f8 f4\!} r4 \mark \default
 % Bars 51 to 55
 	R2.
@@ -118,8 +118,8 @@ musicSoloCelloMvtII = \relative c {
 	R2.*2
 % Bars 101 to 105
 	
-	\clef tenor g'4(_\dolce~ \times 2/3 {g8 f g} \times 2/3 {a f g~}
-	\times 2/3 {g f g} \times 2/3 {b a g} \times 2/3 {a4 b8)}
+	\clef tenor g'4(_\dolce~ \times 2/3 {g8 fis g} \times 2/3 {a fis g~}
+	\times 2/3 {g fis g} \times 2/3 {b a g} \times 2/3 {a4 b8)}
 	c8. r16 r4 r 
 	R2.
 % Bars 106 to 110

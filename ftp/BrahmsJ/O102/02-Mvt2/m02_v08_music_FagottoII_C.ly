@@ -124,9 +124,9 @@ musicFagottoIIMvtII = \relative c {
 	R2.*5
 % Bars 111 to 115
 	
-	r4 a'2~
+	\clef tenor r4 a'2~
 	a2.~
-	a4( d,) r
+	a4( d,) r \clef bass
 	R2.*3
 % Bars 116 to 118
 	

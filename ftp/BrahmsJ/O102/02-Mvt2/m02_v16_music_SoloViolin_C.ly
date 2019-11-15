@@ -60,7 +60,7 @@ musicSoloViolinMvtII = \relative c' {
 	f8.) r16 r4 r
 % Bars 46 to 50
 	R2.
-	r4  r \times 2/3 {r8 g,,_\pdolce( des'}
+	r4  r \times 2/3 {r8 g,,-\tweak X-offset #-8 _\pdolce( des'}
 	\times 2/3 {f ees d!} \times 2/3 {ees) c4(} \times 2/3 {des8) bes4(}
 	\times 2/3 {c8) aes4(\dimD\>} \times 2/3 {bes8) g4(} \times 2/3 {aes8) aes( d!}
 	\times 2/3 {f) aes,( c} \times 2/3 {f) aes,( c} f16) a,( c f\! \mark \default
@@ -71,7 +71,7 @@ musicSoloViolinMvtII = \relative c' {
 	e, e'( g,) e'( f,) f'( a,) f'( g,) g'( bes,) g'(
 	a,) a'( f a, c a f c) r4
 % Bars 56 to 60
-	r4 r8. f,16( a cis a' f')
+	r4 r8. \shape #'((-0.5 . 1.5)(0 . 1.5)(0 . 0)(0 . 0)) Slur f,16( a cis a' f')
 	d bes( d,) bes( c') a( c,) a( bes') g( bes,) g(
 	a f' a d g, e g, e) r4
 	r r8. d16( f a c a')
@@ -99,9 +99,9 @@ musicSoloViolinMvtII = \relative c' {
 	\times 2/3 {<e cis'>-.( <bis gis'>-. <cis a'>-.} \times 2/3 {<dis fis>-. <e g>-. <fis, dis'!>-.)} \times 2/3 {<g e'>-.( <dis bis'>-. <e cis'>-.)}
 	\times 2/3 {<bis gis'>(-. <cis a'>-. <dis fis>-.} \times 2/3 {<e g!> <bis! gis'>-. <cis a'>-.)} \times 2/3 {<dis fis>-.( <e g>-. <bis! gis'>-.)}
 % Bars 76 to 80
-	<cis a'>-.( <b! g'!>-.) <g e'>4\< c(~
-	c\! b)\dimD\> c4(~
-	c b8)\! r r4
+	<cis a'>-.( <b! g'!>-.) <g e'>4\< cis(~
+	cis\! b)\dimD\> cis4(~
+	cis b8)\! r r4
 	a8(\f d e a fis d)
 	b4( b' a)
 % Bars 81 to 85
@@ -133,13 +133,13 @@ musicSoloViolinMvtII = \relative c' {
 	g8. r16 r4 r
 	R2.
 	\shape #'((0 . 0)(0 . 0)(0 . 2)(0.5 . -1.5)) Slur c4_\piup(~ \times 2/3 {c8 b c} \times 2/3 {d b c~}
-	\times 2/3 {c b c} \times 2/3 {a' g f} \times 2/3 {g d b)}
+	\times 2/3 {c b c} \times 2/3 {a' g fis} \times 2/3 {g d b)}
 % Bars 106 to 110
 	g8. r16 r4 r
 	R2.*3
 	
 	
-	r4 r a,,8\p( d\crescD\<
+	r4 r a,,8\pcrescD(\< d
 % Bars 111 to 115
 	e a)~ a( a') d,( d')
 	\acciaccatura e,8 <e e'>4\f( <a a'>2)~

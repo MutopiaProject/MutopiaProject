@@ -109,10 +109,10 @@ musicFloteIMvtII = \relative c''' {
 	\partcombineApart a,8( d e_\< fis ais cis
 	fis_\> dis b fis\! d! fis) \partcombineAutomatic
 	fis( e) e( d) cis4
-	\partcombineApart c'2(_\mf_\> b4)\! \partcombineAutomatic
+	\partcombineApart c'2(\mf\> b4)\! \partcombineAutomatic
 	a8( fis) g( e) fis( b)
 % Bars 91 to 95
-	\partcombineApart c!2(_\> b4)\! \partcombineChords
+	\partcombineApart c!2(\> b4)\! \partcombineChords
 	bes8( g) g( e) e( a) \partcombineAutomatic
 	R2.*7
 % Bars 96 to 100

@@ -24,15 +24,17 @@ musicVioloncellMvtII = \relative c {
 	c'8(_\pocofmadolce a fis dis e g)
 	<<{fis( dis) e( cis!) dis( b)} \\ {b4 b b}>>
 	c'8( a fis dis e g)
-	<<{
-		c,,4\< c\> cis8( a')
+	<< {
+		\voiceOne c,,4\< c\> cis8( a')
 		a4(_\p a\< d)
-		g, g\!
-	} \\ {
+		g, g
+	} 
+	\new Voice { 
+		\voiceTwo
 		s2 cis,4
 		d4( d d)
 		s2
-	}>> a'4(~
+	}>> \oneVoice a'4(~\!
 % Bars 17 to 20
 	a8\> d) fis,4 a(~\!
 	a8_\pdim d) fis,4 a(~
@@ -71,19 +73,19 @@ musicVioloncellMvtII = \relative c {
 	r c r4 c^\pizz \mark \default
 % Bars 51 to 55
 	f, r r
-	r r -\tweak X-offset #-5 -\tweak Y-offset #-7 _\pocof <<{ %  
-		<des' bes'>^\pizz % bar 52 & 53
+	r r  <<{ %  
+		<des' bes'>-\tweak X-offset #2 ^\pizz-\tweak X-offset #-7 -\tweak Y-offset #-2.7 _\pocofD % bar 52 & 53
 		r <c a'>
 	} \\ {
-		f,4\> -\tweak X-offset #-5 _\arco~
+		f,4\> -\tweak X-offset #-6 _\arco~
 		f2\p
 	}>> r4
 	R2.
 	r4 r <<{ %bar 55 & 56
 		<b aes'>
-		r <c a'!>
+		r <c a'!>\p
 	} \\ {
-		f,4 -\tweak X-offset #-4 -\tweak Y-offset #-7 _\pf~\>
+		f,4-\tweak X-offset #-3 _\pfD~\>
 		f2\p
 	}>> r4
 	R2.
@@ -121,7 +123,7 @@ musicVioloncellMvtII = \relative c {
 	
 	
 	
-	r4 a^\pizz\mf d
+	r4 a^\pizz-\tweak X-offset #-4 \mf d
 	g g, d'
 % Bars 81 to 85
 	r a d
@@ -161,9 +163,9 @@ musicVioloncellMvtII = \relative c {
 	a2\p\< a4(
 % Bars 111 to 115
 	g) fis( f)
-	e8\f^\pizz e' a, a' r4
+	e8\f-\tweak X-offset #-5 ^\pizz e' a, a' r4
 	R2.
-	a,4 d r
+	a,4\p d r
 	r d r
 % Bars 116 to 118
 	d r r 

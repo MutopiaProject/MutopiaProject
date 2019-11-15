@@ -106,9 +106,9 @@ musicSoloViolinMvtII = \relative c' {
 	\times 2/3 {<e cis'>-.( <bis gis'>-. <cis a'>-.} \times 2/3 {<dis fis>-. <e g>-. <fis, dis'!>-.)} \times 2/3 {<g e'>-.( <dis bis'>-. <e cis'>-.)}
 	\times 2/3 {<bis gis'>(-. <cis a'>-. <dis fis>-.} \times 2/3 {<e g!> <bis! gis'>-. <cis a'>-.)} \times 2/3 {<dis fis>-.( <e g>-. <bis! gis'>-.)}
 % Bars 76 to 80
-	<cis a'>-.( <b! g'!>-.) <g e'>4\< c(~
-	c\! b)\dimD\> c4(~
-	c b8)\! r r4
+	<cis a'>-.( <b! g'!>-.) <g e'>4\< cis(~
+	cis\! b)\dimD\> cis4(~
+	cis b8)\! r r4
 	a8(\f d e a fis d)
 	b4( b' a)
 % Bars 81 to 85
@@ -140,7 +140,7 @@ musicSoloViolinMvtII = \relative c' {
 	g8. r16 r4 r
 	R2.
 	\shape #'((0 . 0)(0 . 0)(0 . 2)(0.5 . -1.5)) Slur c4_\piup(~ \times 2/3 {c8 b c} \times 2/3 {d b c~}
-	\times 2/3 {c b c} \times 2/3 {a' g f} \times 2/3 {g d b)}
+	\times 2/3 {c b c} \times 2/3 {a' g fis} \times 2/3 {g d b)}
 % Bars 106 to 110
 	g8. r16 r4 r
 	R2.

@@ -133,8 +133,8 @@ musicSoloCelloMvtII = \relative c {
 % Bars 101 to 105
 		R \no 
 	}
-	\clef tenor g'4(_\dolce~ \times 2/3 {g8 f g} \times 2/3 {a f g~}
-	\times 2/3 {g f g} \times 2/3 {b a g} \times 2/3 {a4 b8)}
+	\clef tenor g'4(_\dolce~ \times 2/3 {g8 fis g} \times 2/3 {a fis g~}
+	\times 2/3 {g fis g} \times 2/3 {b a g} \times 2/3 {a4 b8)}
 	c8. r16 r4 r 
 	R2.
 % Bars 106 to 110

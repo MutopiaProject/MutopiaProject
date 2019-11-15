@@ -26,15 +26,17 @@ musicVioloncellMvtII = \relative c {
 	c'8(_\pocofmadolce a fis dis e g)
 	<<{fis( dis) e( cis!) dis( b)} \\ {b4 b b}>>
 	c'8( a fis dis e g)
-	<<{
-		c,,4\< c\> cis8( a')
+	<< {
+		\voiceOne c,,4\< c\> cis8( a')
 		a4(_\p a\< d)
-		g, g\!
-	} \\ {
+		g, g
+	} 
+	\new Voice { 
+		\voiceTwo
 		s2 cis,4
 		d4( d d)
 		s2
-	}>> a'4(~
+	}>> \oneVoice a'4(~\!
 % Bars 17 to 20
 	a8\> d) fis,4 a(~\!
 	a8_\pdim d) fis,4 a(~
@@ -170,7 +172,7 @@ musicVioloncellMvtII = \relative c {
 	g) fis( f)
 	e8\f^\pizz e' a, a' r4
 	R2.
-	a,4 d r
+	a,4\p d r
 	r d r
 % Bars 116 to 118
 	d r r 

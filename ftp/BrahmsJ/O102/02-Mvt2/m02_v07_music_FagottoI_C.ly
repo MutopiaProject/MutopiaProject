@@ -14,7 +14,7 @@ musicFagottoIMvtII = \relative c {
 	R2.*4
 % Bars 6 to 10
 	
-	\partcombineApart a,8(_\p^\dolce d e a fis d) \partcombineAutomatic
+	\partcombineApart a,8(_\pdolce d e a fis d) \partcombineAutomatic
 	d'(\< b) b(\> g)\! a4
 	\partcombineApart a,8( d e fis d b) \partcombineAutomatic
 	d'(\< b) b(\> d,)\! cis4
@@ -124,9 +124,9 @@ musicFagottoIMvtII = \relative c {
 	R2.*5
 % Bars 111 to 115
 	
-	r4 \shape #'((0 . 0.5)(0 . -0.5)(0 . -0.5)(0 . 0.5)) Slur e'(_\fdimD_\> g
+	\clef tenor r4 e'(_\fdimD_\> g %\shape #'((0 . 0.5)(0 . -0.5)(0 . -0.5)(0 . 0.5)) Slur 
 	fis e cis)~
-	cis_\p( d) r
+	cis_\p( d) r \clef bass
 	R2.*3
 % Bars 116 to 118
 	

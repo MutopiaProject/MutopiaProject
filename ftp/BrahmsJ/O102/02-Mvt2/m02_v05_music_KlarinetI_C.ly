@@ -72,7 +72,7 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 66 to 70
 	\bar "||" \key f \major
 	R2.
-	r4 r c(~_\mfcresc
+	r4 r \shape #'((0 . -1.5)(0 . -0.5)(0 . 0)(0 . 0)) Slur c(~_\mfcresc
 	c bes c
 	bes a) r
 % Bars 71 to 75

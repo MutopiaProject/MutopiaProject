@@ -139,7 +139,7 @@ musicKontrabassMvtII = \relative c' {
 	a2\p\< a4(
 % Bars 111 to 115
 	g) fis( f)
-	e8\p^\pizz e' a, a' r4
+	e8\f^\pizz e' a, a' r4
 	R2.
 	a,4\p d r
 	r d r

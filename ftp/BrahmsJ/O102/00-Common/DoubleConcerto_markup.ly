@@ -100,6 +100,7 @@ ppsempreD = #(make-dynamic-script (markup #:dynamic "pp" #:normal-text #:italic 
 
 fpp = #(make-dynamic-script "fpp")
 rf = #(make-dynamic-script "rf")
+pfD = #(make-dynamic-script "pf")
 
 % fonction
 MmrLength = #(define-music-function

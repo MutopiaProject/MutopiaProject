@@ -61,16 +61,16 @@ musicViolinIIMvtII = \relative c' {
 	aes) aes4 g aes8~
 % Bars 46 to 50
 	aes\< g4 d'8( g,) g(
-	aes) aes( g) g\! r des'-.(_\pdolce
+	aes) aes( g) g\! r des'-._(-\tweak X-offset #-3 _\pdolce
 	r des-. r c-.) r bes
 	r aes_\dimmarkup r bes r aes
 	r aes r4 r \mark \default
 % Bars 51 to 55
 	R2.
-	r4 r <g e'>_\pocof^\pizz
+	r4 r <g e'>-\tweak X-offset #-7 _\pocof-\tweak X-offset #2 ^\pizz
 	r <a f'>\p r
 	R2.
-	r4 r <aes d>_\pf
+	r4 r <aes d>-\tweak X-offset #-3 _\pf
 % Bars 56 to 60
 	r a!\p r
 	R2.
@@ -78,8 +78,8 @@ musicViolinIIMvtII = \relative c' {
 	r <bes d> r
 	R2.
 % Bars 61 to 65
-	r4 r g\p
-	r4 a_\dimmarkup r\>
+	r4 r g-\tweak X-offset #-1.8 \p
+	r4 a_\dimD\> r
 	c r des\!
 	R2.
 	r4 cis\pp r
@@ -91,7 +91,11 @@ musicViolinIIMvtII = \relative c' {
 	c4 a') g(~
 % Bars 71 to 75
 	g e fis)
-	<<{g( e' d cis)} \\ {g2 g4~ g}>> % this bars 4 beats for polyphony
+	<<{ % this bars 4 beats for polyphony
+		\shape #'((0 . -1.3)(0 . -1.3)(0 . -1.3)(0 . -1.3)) Slur g( e' d cis)
+	} \\ {
+		g2 g4~ g
+	}>>
 	g,^\pizz r
 	R2.*5
 	
@@ -99,7 +103,7 @@ musicViolinIIMvtII = \relative c' {
 	
 	
 	
-	r4 g\mf a
+	r4 g-\tweak X-offset #-4 \mf^\pizz a
 	\times 2/3 {b8 d g} b4 d
 % Bars 81 to 85
 	r4 a, b
@@ -135,7 +139,7 @@ musicViolinIIMvtII = \relative c' {
 	r4 r d\p\<~
 % Bars 111 to 115
 	d d( a')
-	gis\f^\pizz a r
+	gis\f-\tweak X-offset #-5 ^\pizz a r
 	R2.
 	cis,4\p a r
 	r b r

@@ -129,16 +129,16 @@
 					\partcombine \musicFagottoIMvtI \musicFagottoIIMvtI
 %					\musicFagottoIMvtI
 				}
-				\new GrandStaff <<
+				\new GrandStaff \with { \nameGdStaff } <<
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceIXmvtI
+						\nameStaffIVmvtI
 						\partcombine \musicHornIMvtI \musicHornIIMvtI
 %						\musicHornIIMvtI
 					}
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceXImvtI
+						\nameStaffVmvtI
 						\partcombine \musicHornIIIMvtI \musicHornIVMvtI
 %						\musicHornIVMvtI
 					}
@@ -201,6 +201,7 @@
 			breakbefore = ##t
 		}
 		\layout {
+			%system-count = #16
 			\context {
 				\Staff
 				\override TupletBracket #'bracket-visibility = ##f

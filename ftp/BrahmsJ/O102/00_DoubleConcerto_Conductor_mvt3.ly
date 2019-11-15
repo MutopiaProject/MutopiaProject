@@ -17,15 +17,12 @@
 			\override #'(baseline-skip . 3.5)
 			\column {
 				\fill-line {
-					\huge \larger \larger \bold
 					\fromproperty #'header:title
 				}
 				\fill-line {
-					\large %\bold
 					\fromproperty #'header:subtitle
 				}
 				\fill-line {
-					\smaller %\bold
 					\fromproperty #'header:subsubtitle
 				}
 				\fill-line {
@@ -74,7 +71,8 @@
 %###############################################################################
 \book {
 	\header {
-		title = \markup { \fontsize #5 \sans 
+		title = \markup { 
+			\abs-fontsize #24 \bold \sans 
 			\center-column {
 				\vspace #10
 				"Johannes Brahms"
@@ -82,14 +80,15 @@
 			}
 		}
 		subtitle = \markup { 
-			\fontsize #5 \sans
+			\abs-fontsize #18 \sans
 			\center-column {
 				\vspace #10
 				"Double Concerto pour Violon et Violoncelle"
 				"en la mineur Opus 102"
 			}
 		}
-		subsubtitle = \markup { \fontsize #3 \sans
+		subsubtitle = \markup { 
+			\abs-fontsize #12 \sans
 			\center-column {
 				\vspace #10
 				"Movement 3"
@@ -128,16 +127,16 @@
 					\partcombine \musicFagottoIMvtIII \musicFagottoIIMvtIII
 %					\musicFagottoIIMvtIII
 				}
-				\new GrandStaff <<
+				\new GrandStaff \with { \nameGdStaff } <<
 					\new Staff {
 						\timeMvtIII \generalOptions \conductorOptions
-						\nameVoiceIXmvtIII
+						\nameStaffIVmvtIII
 						\partcombine \musicHornIMvtIII \musicHornIIMvtIII
 %						\musicHornIIMvtIII
 					}
 					\new Staff {
 						\timeMvtIII \generalOptions \conductorOptions
-						\nameVoiceXImvtIII
+						\nameStaffVmvtIII
 						\partcombine \musicHornIIIMvtIII \musicHornIVMvtIII
 %						\musicHornIVMvtIII
 					}
