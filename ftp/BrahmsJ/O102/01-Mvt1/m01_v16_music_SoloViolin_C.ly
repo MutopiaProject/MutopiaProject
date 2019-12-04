@@ -298,11 +298,11 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 306 to 310
 	\times 2/3 {a\< c g'!} \times 2/3 {fis a c} \times 2/3 {gis'\> d b} \times 2/3 {gis d b\!}
 	a4 r \times 2/3 {a8\< c g'!} \times 2/3 {f\> c g\!}
-	aes4 r \times 2/3 {a''!8\rf\> fis c} \times 2/3 {a fis c\!}
+	aes4 r \tag #'score { \times 2/3 {a''!8\rf\> fis c} } \tag #'midi {\times 2/3 {a'!8\> fis c} }  \times 2/3 {a fis c\!}
 	bes4 r \times 2/3 {g'8 bes f'!} \times 2/3 {ees bes f}
-	ges4 r \times 2/3 {g''!8\rf\> e! bes} \times 2/3 {g e bes\!}
+	ges4 r \tag #'score { \times 2/3 {g''!8\rf\> e! bes} } \tag #'midi { \times 2/3 {g'!8\> e! bes} } \times 2/3 {g e bes\!}
 % Bars 311 to 315
-	a!4 r \times 2/3 {a''8\rf\> fis dis} \times 2/3 {a fis dis\!}
+	a!4 r \tag #'score { \times 2/3 {a''8\rf\> fis dis} } \tag #'midi { \times 2/3 {a'8\rf\> fis dis} } \times 2/3 {a fis dis\!}
 	\times 2/3 {a'_\dimmarkup fis dis} a8 r \times 2/3 {a fis dis} a r \bar "||" \key a \major \mark \default
 	\times 2/3 {e'''8(_\pdolce d! b} \times 2/3 {e, d b)} \times 2/3 {e( d b} \times 2/3 {e, d b)}
 	r2 r4 \times 2/3 {e8( b' d}

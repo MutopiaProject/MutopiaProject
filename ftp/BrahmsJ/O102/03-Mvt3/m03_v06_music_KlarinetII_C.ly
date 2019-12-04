@@ -7,7 +7,7 @@
 musicKlarinetIIMvtIII = \relative c'' {
 	\clef treble
 	\key a \minor
-%	\transposition a
+	\transposition a
 % Bars 1 to 5
 	R2*8
 % Bars 6 to 10
@@ -165,7 +165,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. c''16\ff
+	r4 r8. c''16-\tweak X-offset #-3 \ff
 	c4.. aes!16
 	aes4.. aes16
 	\tuplet 3/2 4 {aes4( g8) f( g aes)}
@@ -235,7 +235,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 % Bars 256 to 260
 	f)
 	f''
-	ees8-.\ff c-. r aes-.
+	ees8-.-\tweak X-offset #-4 \ff c-. r aes-.
 	r f-. r ees-.
 	r ees-. r ees-.
 % Bars 261 to 265
@@ -272,7 +272,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	f!8 r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" c'8(_\pdolce bes a aes
+	\tempo "Poco meno Allegro" c'8(-\tweak X-offset #-9 _\pdolce bes a aes
 	g f e) e'(
 	f e4) e8(
 	dis e4.)~
@@ -299,22 +299,22 @@ musicKlarinetIIMvtIII = \relative c'' {
 	c\p r r4
 	R2
 	r4 r8 c(
-	g'4\sf\> f)\!
+	g'4-\tweak X-offset #2 \sf\> f)\!
 % Bars 321 to 325
 	c\p r
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" r4 r8 ees(\f
+	\tempo "Tempo primo" r4 r8 ees(-\tweak X-offset #-3 \f
 	c a fis ees)
 % Bars 326 to 330
 	c4. c'8-.
 	c-. r b-. r
-	c-.\p r r4
+	c-.-\tweak X-offset #-2 \p r r4
 	R2*7
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	e8-.\f r r4
+	e8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	c8-. r r4
 	c8-. r r4

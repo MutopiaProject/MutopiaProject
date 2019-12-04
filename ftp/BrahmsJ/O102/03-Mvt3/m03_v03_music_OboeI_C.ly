@@ -47,7 +47,7 @@ musicOboeIMvtIII = \relative c''' {
 	a-. r r4
 	R2
 % Bars 51 to 55
-	e4\p c
+	e4-\tweak X-offset #-3 \p c
 	a fis
 	a8-. r r4
 	R2*31
@@ -75,7 +75,7 @@ musicOboeIMvtIII = \relative c''' {
 % Bars 91 to 95
 	
 % Bars 96 to 100
-	r4 e'8(^\dolce\p\< g
+	r4 e'8(-\tweak X-offset #-4 ^\dolce\p\< g
 	a\> g)\! r4
 	R2*3
 	
@@ -200,8 +200,8 @@ musicOboeIMvtIII = \relative c''' {
 	
 % Bars 256 to 260
 	
-	gis'2\f
-	a8-.\ff a-. r f-.
+	gis'2-\tweak X-offset #-3 \f
+	a8-.-\tweak X-offset #-4 \ff a-. r f-.
 	r d-. r c-.
 	r c-. r c-.
 % Bars 261 to 265
@@ -262,8 +262,8 @@ musicOboeIMvtIII = \relative c''' {
 	R2*3
 	
 	
-	r4 r8 a,(
-	gis'4\sf\> fis)\!
+	r4 r8  \once \override CombineTextScript.X-offset = #-3.5 a,(
+	gis'4-\tweak X-offset #2 \sf\> fis)\!
 % Bars 321 to 325
 	\partcombineApartOnce a, r8 a(\pp\<
 	gis'4\> fis8)\! r
@@ -283,7 +283,7 @@ musicOboeIMvtIII = \relative c''' {
 	e e4 e8~
 	e e4 e8
 % Bars 336 to 340
-	cis'-.\f r r4
+	cis'-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	a8-. r r4
 	a8-. r r4

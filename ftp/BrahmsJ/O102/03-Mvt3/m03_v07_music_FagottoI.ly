@@ -36,7 +36,7 @@ musicFagottoIMvtIII = \relative c' {
 	a b!)
 	c(\< cis
 	d\! f8\> e
-	d4\!) r
+	f4\!) r
 % Bars 26 to 30
 	R2*3
 	

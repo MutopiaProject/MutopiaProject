@@ -21,7 +21,7 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 16 to 20
 	aes8( g16-.) g-. c-. e-. g-. e-.
 	c8-- b16-. c-. b8--\< c16-. b-.
-	c8-- b16-. c-. b( a') gis-. fis-.\!
+	c8-- b16-. c-. b( a') g-. fis-.\!
 	e8-- d16-. e-. d8--\> e16-. d-.
 	e8-- d16-. e-. d( f) d-. b-.\!
 % Bars 21 to 25
@@ -142,12 +142,12 @@ musicSoloViolinMvtIII = \relative c''' {
 	<c, a'>4 <b g'>8. <g' g'>16
 	<<{g'8( \tuplet 3/2 {f16 g f} \tuplet 6/4 4 {ees f ees d ees d)}} \\ {g,,8 s4.} \\ {g'2}>>
 	<<{ees'8( \tuplet 3/2 {d16 ees d} \tuplet 6/4 4 {c d c bes c bes)}} \\ {g,2}>>
-	<<{\tuplet 6/4 4 {a'16(\> bes a bes\! c bes) a( bes a bes c bes)}} \\ {g,4 g}>>
+	<<{\tuplet 6/4 4 {a'16(^\> bes a bes\! c bes) a( bes a bes c bes)}} \\ {g,4 g}>>
 	\tuplet 3/2 {<g a'>16( bes' a)} r8 r8. <d d'>16
 % Bars 131 to 135
 	<<{d'8( \tuplet 3/2 {c16 d c} \tuplet 6/4 4 {bes c bes a bes a)}} \\ {d,,8 s4.} \\ {d'2}>>
 	<<{bes'8( \tuplet 3/2 {a16 bes a} \tuplet 6/4 4 {g a g f g f)}} \\ {d,2}>>
-	<<{\tuplet 6/4 4 {e'16(\> f e f\! g f e f e f g f)}} \\ {d,4 d}>>
+	<<{\tuplet 6/4 4 {e'16(^\> f e f\! g f e f e f g f)}} \\ {d,4 d}>>
 	\tuplet 3/2 {<d e'>16( f' e)} r8 r8. <a, a'>16
 	<a a'>8( \tuplet 3/2 {f'16 g f} \tuplet 6/4 4 {d e d cis d cis)}
 % Bars 136 to 140
@@ -264,7 +264,7 @@ musicSoloViolinMvtIII = \relative c''' {
 	\tuplet 6/4 4 {g'16( d b g f e)} g8 r
 % Bars 241 to 245
 	\tuplet 6/4 4 {g'16( d bes g bes des, a' c, f bes, g' e)}
-	c8 r \tuplet 6/4 4 {r16 a(_\moltoleggieroedolce bes c d e)}
+	c8 r \tupletUp \tuplet 6/4 4 {r16 a(_\moltoleggieroedolce bes c d e)} \tupletNeutral
 	\tuplet 6/4 4 {f16( g a bes a g)} \tuplet 3/2 {c( a f} c8)
 	r4 \tuplet 6/4 4 {r16 f,_\piup( ges aes ges f)}
 	\tuplet 6/4 4 {bes( des ges bes aes ges)} \tuplet 3/2 {aes( f des} aes8)
@@ -272,13 +272,13 @@ musicSoloViolinMvtIII = \relative c''' {
 	\tempo "poco rit." r8 \tuplet 3/2 8 {bes'16( aes g aes f ces} aes8)
 	r8 \tuplet 3/2 8 {des16( ces bes ces f aes} ces8)
 	r \tuplet 3/2 8 {bes16( aes g aes ees ces} aes8)
-	r \tuplet 3/2 8 {ees16( g bes ees g bes} ees8)
+	r \tupletDown \tuplet 3/2 8 {ees16( g bes ees g bes} ees8) \tupletNeutral
 	\tempo "in tempo" \tuplet 3/2 8 {gis,,,16(\>_\marcecrescmolto fisis gis} fisis8-.)\! \tuplet 3/2 8 {b!16(\> gis b} fisis8-.)\!
 % Bars 251 to 255
 	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.) \tuplet 3/2 8 {dis'16(\> b dis} fisis,8-.)\!
 	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.) \tuplet 3/2 8 {gis'16(\> gis, gis'} fisis,8-.)\!
 	\tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.) \tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.)
-	\tuplet 3/2 8 {gis16([ b e] b\<[ e gis]) e([ gis b] gis[ b e])}
+	\tuplet 3/2 8 {gis16([ b e] b\<[ e gis]) \tupletDown e([ gis b] gis[ b e])} \tupletNeutral
 	\tuplet 3/2 8 {gis,[( b e] b[ e gis] e[ gis b] gis[ b e])\!)}
 % Bars 256 to 260
 	gis2\f\startTrillSpan~
@@ -320,7 +320,7 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 291 to 295
 	\time 4/4 <cis a'> <b gis'> <cis a'> <b gis'>) q4.( <a fis'>8)
 	<gis e'>4 r r2 \bar "||"
-	\time 2/4 r8 <ais' fis'>16-. fis-. <b e>8( <fis cis'>16-.) e-.
+	\time 2/4 r8 <ais' fis'>16-.\f fis-. <b e>8( <fis cis'>16-.) e-.
 	r8 <dis' b'>16-. b-. <e a>8( <b fis'>16-.) a!-.
 	r8 <fis' fis'>16-. d,!-. <d' d'>8( <b b'>16-.) d,-.
 % Bars 296 to 300
@@ -361,7 +361,7 @@ musicSoloViolinMvtIII = \relative c''' {
 	R2*2
 % Bars 326 to 330
 	
-	\tuplet 6/4 4 {fis''16(\f e d cis b a gis fis e d cis b)}
+	\tuplet 6/4 4 {fis''16(-\tweak X-offset #-2.5 \f e d cis b a gis fis e d cis b)}
 	\tuplet 3/2 4 {a8( e''-.) e-. dis( e-.) e-.}
 	\tuplet 3/2 4 {fis( e-.) e-. dis( e)-. e-.}
 	\tuplet 6/4 4 {a,,16( a') e( e') e,( e') dis,( dis') e,( e') e,( e')}

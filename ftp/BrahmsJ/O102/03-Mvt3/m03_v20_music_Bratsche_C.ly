@@ -54,7 +54,7 @@ musicBratscheMvtIII = \relative c {
 	c, g' d g\<
 	d g d g\!
 	<d a' f'>\f r r4 \mark \default
-	\tuplet 6/4 4 {<e b'>16-.^\arco\ff e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. }
+	\tuplet 6/4 4 {<e b'>16-.-\tweak X-offset #-5.5 ^\arco\ff e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. }
 	<c e>16_\benmarc-. q-. <c a'>8-. q16-. q-. <f a>8-.
 % Bars 41 to 45
 	<d gis>16-. q-. <d b'>8-. <c e>16-. q-. <c a'>8-.
@@ -71,7 +71,7 @@ musicBratscheMvtIII = \relative c {
 % Bars 51 to 55
 	
 	
-	r8 ees\p^\pizz d c
+	r8 ees\p-\tweak X-offset #-5.2 ^\pizz d c
 	b r r4
 	R2*9
 % Bars 56 to 60
@@ -80,7 +80,7 @@ musicBratscheMvtIII = \relative c {
 	
 	
 	
-	r4 r8. g16\f(^\arco
+	r4 r8. g16\f(-\tweak X-offset #-5 ^\arco
 	g') g,( f') g,( d') g,( g') g,(
 % Bars 66 to 70
 	f') g,( d') g,( g'8) <g, f'>_\pdim~
@@ -104,14 +104,14 @@ musicBratscheMvtIII = \relative c {
 	\time 2/4 <e cis'>8-.\f r r4
 	<fis d'>8-. r r4
 % Bars 91 to 95
-	<d c' f'>8-. r r4
-	r d'8\p^\pizz r
+	<d c' f!>8-. r r4
+	r d'8-\tweak X-offset #-2.0 \p^\pizz r
 	c r r4
 	R2
 	c,8 r r4
 % Bars 96 to 100
 	R2
-	c'4.(\pp^\div^\arco <bes g'>8
+	c'4._(-\tweak X-offset #-3 \pp-\tweak X-offset #-4.5 ^\div^\arco <bes g'>8
 	<a fis'>4. <aes f'>8
 	<g e'>4. <f d'>8
 	<e c'>4. <d gis>8 \mark \default
@@ -147,12 +147,12 @@ musicBratscheMvtIII = \relative c {
 	g\f^\pizz r
 	bes r
 	e! e
-	r8 <e d'>8-.\f^\arco <e cis'>-. q-.
+	r8 <e d'>8-.\f-\tweak X-offset #-5.5 ^\arco <e cis'>-. q-.
 % Bars 131 to 135
 	<d d'>-.\p r r4
-	f,4\f^\pizz r
+	f,4\f-\tweak X-offset #-5.5 ^\pizz r
 	gis gis
-	r8 <d' d'>8^\arco\f-. q-. q-.
+	r8 <d' d'>8-\tweak X-offset #-5.5 ^\arco\f-. q-. q-.
 	a'-.\p f-. d-.\< cis-.
 % Bars 136 to 140
 	f-. d-. bes-. g-.\!
@@ -162,7 +162,7 @@ musicBratscheMvtIII = \relative c {
 	r4 a\p^\pizz
 % Bars 141 to 145
 	a r
-	r8. <c! e>16-.\ff^\arco <c e>8-.[ r16 q-.]
+	r8. <c! e>16-.\ff-\tweak X-offset #-5.5 ^\arco <c e>8-.[ r16 q-.]
 	\tuplet 6/4 4 {<a c>4.:16 <g b>:}
 	\tuplet 6/4 4 {q:} <f a>8. <e a>16
 	<e d'>4 <e cis'>
@@ -205,7 +205,7 @@ musicBratscheMvtIII = \relative c {
 	<fis' a>) <e g>(
 	<g, e'>) q(
 % Bars 196 to 200
-	<fis a>) r8. <a a'>16\ff
+	<fis a>) r8. <a a'>16-\tweak X-offset #-3 \ff
 	a'8( f!16) f( d) d( cis) cis(
 	f) f( d) d( bes!) bes( d,) d
 	\tuplet 6/4 4 {<d bes'>4.:16 q:}
@@ -231,7 +231,7 @@ musicBratscheMvtIII = \relative c {
 % Bars 216 to 220
 	
 	\bar "||" \key a \minor \mark \default
-	c8-.\p^\arco e-. a-. f'-.
+	c8-.\p-\tweak X-offset #-5.5 ^\arco e-. a-. f'-.
 	e-. d-. c-. r
 	r <c, a'>^\div-. <c e>4
 % Bars 221 to 225
@@ -242,7 +242,7 @@ musicBratscheMvtIII = \relative c {
 	r <e b'> r <a b>
 % Bars 226 to 230
 	<<{
-		b4(^\div d
+		b4(-\tweak X-offset #-3 ^\div d
 		b d8. f16)
 		e8-.
 	} \\ {
@@ -250,7 +250,7 @@ musicBratscheMvtIII = \relative c {
 		gis a8 b)
 		c8-.
 	}>>
-	e,-.^\unis[ a-. f'-.]
+	e,-.-\tweak X-offset #-2 ^\unis[ a-. f'-.]
 	e-. d-. c-. <a c>-.
 	<c, a'>4 r8 <a' c>8-.
 % Bars 231 to 235
@@ -286,7 +286,7 @@ musicBratscheMvtIII = \relative c {
 % Bars 256 to 260
 	\tuplet 3/2 8 {d16[(\f\< f b] f[ b d]) b[( d f] d[ f b])}
 	\tuplet 3/2 8 {d,,[( f b] f[ b d]) b[( d f] d[ f b])}
-	<c, e>16\ff q <c a'>8 q16 q <f a>8
+	<c, e>16-\tweak X-offset #-4 \ff q <c a'>8 q16 q <f a>8
 	<d gis>16 q <d b'>8 <c e>16 q <c a'>8
 	<a c>16 q <c a'>8 <a c>16 q <c a'>8 
 % Bars 261 to 265
@@ -296,11 +296,11 @@ musicBratscheMvtIII = \relative c {
 	g16 g <e c'>8 e16 e <c a'>8
 	c16 c <a f'>8 a16 a <f d'>8
 % Bars 266 to 270
-	<a e'>8-. <c a'>-. <b a'>-.\sf <b g'>-.
-	<c g'>\sf-. <c f>-. <g f'>-. <g e'>-.
+	<a e'>8-. <c a'>-. <b a'>-.-\tweak X-offset #-1.5 \sf <b g'>-.
+	<c g'>-\tweak X-offset #-1.5 \sf-. <c f>-. <g f'>-. <g e'>-.
 	<f a>-. r r4
 	R2
-	e'4\mf_\dimmarkup e8(\> d)
+	e'4_\mfdimD\> e8( d)
 % Bars 271 to 275
 	d( b) b( gis)
 	gis4 gis\!
@@ -323,7 +323,7 @@ musicBratscheMvtIII = \relative c {
 	<dis b'>8-. r r4
 	<d! b' d a'>8-. r r4
 % Bars 296 to 300
-	r b'8\p^\pizz r8 \bar "||"
+	r b'8\p-\tweak X-offset #-5 ^\pizz r8 \bar "||"
 	\tempo "Poco meno Allegro" a8-. r r4
 	R2*15
 % Bars 301 to 305
@@ -340,13 +340,13 @@ musicBratscheMvtIII = \relative c {
 	fis4 e8( d)\!
 	cis4\p d\<
 	dis e\!
-	cis32[(\mf eis gis eis)] cis[( eis gis eis]) cis[( eis gis cis]) d[( a fis d)]
+	cis32[(-\tweak X-offset #-4 \mf eis gis eis)] cis[( eis gis eis]) cis[( eis gis cis]) d[( a fis d)]
 	a'8-.\sf r r4
 % Bars 321 to 325
 	a8-.\p r r4
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" <cis, a'>4-.\f <fis a>-.
+	\tempo "Tempo primo" <cis, a'>4-.-\tweak X-offset #-3 \f <fis a>-.
 	R2
 % Bars 326 to 330
 	r8 <a a'>8-! q-! q-!
@@ -361,7 +361,7 @@ musicBratscheMvtIII = \relative c {
 	q <e a>4 <gis b>8~
 	q <a cis>4 <gis e'>8-.
 % Bars 336 to 340
-	<a e'>8-.\f r r4
+	<a e'>8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	<a, e' cis'>8-. r r4
 	q8-. r r4

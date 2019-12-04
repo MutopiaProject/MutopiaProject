@@ -54,7 +54,7 @@ nameStaffVImvtI = {
 nameStaffVIImvtI = {
 	\set Staff.instrumentName = "2 Trompeten in D"
 	\set Staff.shortInstrumentName = \markup {
-		\column {
+		\center-column {
 			\lower #1 \line { Trpt. }
 			\line {(D)}
 		}
@@ -155,7 +155,7 @@ nameStaffVImvtII = {
 nameStaffVIImvtII = {
 	\set Staff.instrumentName = "2 Trompeten in D"
 	\set Staff.shortInstrumentName = \markup {
-		\column {
+		\center-column {
 			\lower #1 \line { Trpt. }
 			\line {(D)}
 		}
@@ -252,7 +252,7 @@ nameStaffVImvtIII = {
 nameStaffVIImvtIII = {
 	\set Staff.instrumentName = "2 Trompeten in D"
 	\set Staff.shortInstrumentName = \markup {
-		\column {
+		\center-column {
 			\lower #1 \line { Trpt. }
 			\line {(D)}
 		}
@@ -271,7 +271,7 @@ nameStaffIXmvtIII = {
 		}
 	}
 }
-nameStaffXmvtI = {
+nameStaffXmvtIII = {
 	\set Staff.instrumentName = "Solo-Violoncell"
 	\set Staff.shortInstrumentName = \markup {
 		\column {
@@ -288,7 +288,7 @@ nameStaffXIImvtIII = {
 	\set Staff.instrumentName = "2. Violine"
 	\set Staff.shortInstrumentName = #"2.Viol"
 }
-nameStaffXIIImvtI = {
+nameStaffXIIImvtIII = {
 	\set Staff.instrumentName = "Bratsche"
 	\set Staff.shortInstrumentName = #"Br."
 }

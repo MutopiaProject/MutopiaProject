@@ -146,7 +146,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 	e4 r
 	R2*3
 % Bars 196 to 200
-	r4 r8. g16\ff
+	r4 r8. g16-\tweak X-offset #-3 \ff
 	g4 r8. g16
 	g4 r8. ees'16
 	ees4 r8. ees16
@@ -196,7 +196,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 256 to 260
 	
 	
-	g8-.\f g-. r g-.
+	g8-.-\tweak X-offset #-3 \f g-. r g-.
 	r g-. r g-.
 	g-. g-. r g-.
 % Bars 261 to 265
@@ -251,7 +251,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	
 	\bar "||"
-	\tempo "Tempo primo" g4-.\f g'-.
+	\tempo "Tempo primo" g4-.-\tweak X-offset #-3 \f g'-.
 	R2
 % Bars 326 to 330
 	r8 g,8-. g-. g-.
@@ -259,7 +259,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	g8-.\f r r4
+	g8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	g'8-. r r4
 	g8-. r r4

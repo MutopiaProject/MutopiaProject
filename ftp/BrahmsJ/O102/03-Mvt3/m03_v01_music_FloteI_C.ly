@@ -32,7 +32,7 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 36 to 40
 	
 	
-	\mark \default
+	\once \override Score.RehearsalMark.X-offset = #-3.7 \mark \default
 	\partcombineApartOnce e'2
 	c8-. c-. r f-.
 % Bars 41 to 45
@@ -48,7 +48,7 @@ musicFloteIMvtIII = \relative c''' {
 	a-. r r4
 	R2
 % Bars 51 to 55
-	a,16\p-. a-. c-. a-. fis-. fis-. a-. fis-. 
+	a,16-\tweak X-offset #-3 \p-. a-. c-. a-. fis-. fis-. a-. fis-. 
 	d-. d-. fis-. d-. b-. b-. d-. b-. 
 	a-. c-. ees-. c-. b-. d-. a-. d-. 
 	b-. g-. r8 r4
@@ -214,11 +214,11 @@ musicFloteIMvtIII = \relative c''' {
 	
 	
 	
-	e''2_\mfcresc(
+	e''2-\tweak X-offset #-9.5 _\mfcresc(
 % Bars 256 to 260
 	f)(
 	gis)
-	a8-.\ff c,-. r f
+	a8-.-\tweak X-offset #-4 \ff c,-. r f
 	r d-. r c-.
 	r c-. r c-.
 % Bars 261 to 265
@@ -282,13 +282,13 @@ musicFloteIMvtIII = \relative c''' {
 	gis\> fis d gis,)\!
 	\partcombineApartOnce a r r4
 	R2
-	r4 r8 a(
-	gis'4\sf\> fis)\!
+	r4 r8 \once \override CombineTextScript.X-offset = #-2 a(
+	gis'4-\tweak X-offset #2 \sf\> fis)\!
 % Bars 321 to 325
 	\partcombineApartOnce a, r8 a(\pp\<
 	gis'4\> fis8)\! r
 	gis4(\> fis8)\! r \bar "||"
-	\tempo "Tempo primo" a,8-.\f r dis4->~
+	\tempo "Tempo primo" a,8-.-\tweak X-offset #-3 \f r dis4->~
 	dis2~
 % Bars 326 to 330
 	dis8 d-. cis-. b-.
@@ -303,7 +303,7 @@ musicFloteIMvtIII = \relative c''' {
 	e e4 e8~
 	e e4 e8
 % Bars 336 to 340
-	cis8-.\f r r4
+	cis8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	cis8-. r r4
 	cis8-. r r4

@@ -151,12 +151,12 @@ musicSoloCelloMvtIII = \relative c' {
 	<fis, a>4 g8. <g, g''>16
 	q2
 	<<{g''8( \tuplet 3/2 8 {f!16 g f ees f ees d ees d)}} \\ {g,,2}>>
-	<<{\tuplet 6/4 4 {cis'16(\> d c d\! e! d) cis( d cis d e d)}} \\ {g,,4 g}>>
+	<<{\tuplet 6/4 4 {cis'16(^\> d c d\! e! d) cis( d cis d e d)}} \\ {g,,4 g}>>
 	\tuplet 3/2 8 {<g cis'>16( d'' cis)} r8 r8. \clef tenor <d, d''>16
 % Bars 131 to 135
 	q2
 	<<{d''8( \tuplet 3/2 8 {c16 d c bes c bes a bes a)}} \\ {d,,2}>>
-	<<{\tuplet 6/4 4 {gis'16(\> a gis a\! b a) gis( a gis a b a)}} \\ {d,,4 d}>>
+	<<{\tuplet 6/4 4 {gis'16(^\> a gis a\! b a) gis( a gis a b a)}} \\ {d,,4 d}>>
 	\tuplet 3/2 8 {<d gis'>16( a'' gis)} r8 r8. \clef bass a,16
 	a8( \tuplet 3/2 8 {f16 g f} \tuplet 6/4 4 {d e d cis d cis)}
 % Bars 136 to 140
@@ -226,10 +226,10 @@ musicSoloCelloMvtIII = \relative c' {
 	d8) r \tuplet 6/4 4 {a''16( f! d a d f}
 	a8) r \clef bass dis,16( b fis dis
 % Bars 191 to 195
-	b8) r \clef tenor \tuplet 6/4 4 {b''16( gis d! b d gis}
+	b8) r \clef tenor \tuplet 6/4 4 {b''16( fis d! b d fis}
 	b8) r \tuplet 6/4 4 {dis,,16( fis b dis fis b!}
 	gis8) r \clef bass \tuplet 6/4 4 {e,,16( b' g' b_\dimmarkup e g}
-	c,!8) r \tuplet 6/4 4 {g,16( b e g b e}
+	c,!8) r \tuplet 6/4 4 { \shape #'((0 . -2)(0 . 0)(0 . 1)(0 . -1.5)) Slur g,16( b e g b e}
 	g,8) r \tuplet 6/4 4 {a,16( e' g a cis e}
 % Bars 196 to 200
 	a,8) r r4
@@ -273,9 +273,9 @@ musicSoloCelloMvtIII = \relative c' {
 	g,8 r \tuplet 6/4 4 {e,16( e' g e g e')}
 % Bars 241 to 245
 	d8 r r4
-	r4 \clef tenor \tuplet 6/4 4 {r16 f,(_\moltoleggieroedolce g a bes c)}
+	r4 \clef tenor \tupletUp \tuplet 6/4 4 {r16 f,(_\moltoleggieroedolce g a bes c)} \tupletNeutral
 	\tuplet 6/4 4 {d( e f g f e)} \tuplet 3/2 8 {a( f c} a8)
-	r4 \clef bass \tuplet 6/4 4 {r16 des,(_\piup ees f ees des)}
+	r4 \clef bass \tupletUp \tuplet 6/4 4 {r16 des,(_\piup ees f ees des)} \tupletNeutral
 	\clef tenor \tuplet 6/4 4 {ges( bes des ges f ees)} \tuplet 3/2 8 {f([ des aes]} f8) 
 % Bars 246 to 250
 	\tempo "poco rit." r4 \tuplet 3/2 8 {f'16([ des aes]} f8)
@@ -287,8 +287,8 @@ musicSoloCelloMvtIII = \relative c' {
 	gis8-.) \tuplet 3/2 8 {fisis16([ gis fisis]} gis8-.) \tuplet 3/2 8 {fisis16([ gis fisis]}
 	gis8-.) \tuplet 3/2 8 {fisis16([ gis fisis]} gis8-.) \tuplet 3/2 8 {fisis16([ fisis' fisis,]}
 	gis8-.) \tuplet 3/2 8 {fisis16([ fisis' fisis,]} gis8-.) \tuplet 3/2 8 {fisis16([ fisis' fisis,)]}
-	\tuplet 3/2 8 {gis([ b e] b[\< e gis]) e[( gis b] gis[ b e])} 
-	\tuplet 3/2 8 {gis,,[( b e] b[ e gis]) e[( gis b] gis[ b e]\!)} \clef tenor
+	\tupletDown \tuplet 3/2 8 {gis([ b e] b[\< e gis]) e[( gis b] gis[ b e])} 
+	\tuplet 3/2 8 {gis,,[( b e] b[ e gis]) e[( gis b] gis[ b e]\!)} \tupletNeutral \clef tenor
 % Bars 256 to 260
 	gis2\f\startTrillSpan~
 	\afterGrace gis {fis16[\stopTrillSpan gis]}
@@ -331,11 +331,11 @@ musicSoloCelloMvtIII = \relative c' {
 	<gis e'>4 r r2 \bar "||"
 	\time 2/4 r8 fis'(\f gis16-.) fis,-. ais'8-.
 	r b( cis16-.) b,-. dis'8-.
-	r a'( fis16-.) d,!-. d'8(
+	\clef tenor r a'( fis16-.) d,!-. d'8(
 % Bars 296 to 300
 	fis16-.) d,-. d'8( b16-.) e,-. b'8( \bar "||"
 	\tempo "Poco meno Allegro" a-.) r r4
-	r r8 \clef tenor e32(_\pdolce\< a cis e
+	r r8 e32(_\pdolce\< a cis e
 	fis8\> e)\! r e,32(\< a cis e
 	f!8\> e\!) r4
 % Bars 301 to 305
@@ -361,7 +361,7 @@ musicSoloCelloMvtIII = \relative c' {
 	e8(\p\< eis) fis4(~
 	fis8 fisis) gis4~\!
 	gis8 \clef treble cis4(\f fis8)
-	e32(\sf\> d cis b a gis fis e \clef bass d cis b a gis fis e d)
+	e32(\sf\> d cis b a gis fis e \clef bass d cis b a gis fis e d)\!
 % Bars 321 to 325
 	cis(\p d e fis gis a b bis \clef treble cis d e fis gis a b! cis)
 	e(\pp dis cis b a gis fis e \clef tenor a gis fis e dis cis b a)
@@ -370,7 +370,7 @@ musicSoloCelloMvtIII = \relative c' {
 	R2*2
 % Bars 326 to 330
 	
-	\clef tenor \tuplet 6/4 4 {fis'16(\f e d cis b a) gis'( fis e d cis b)}
+	\clef tenor \tuplet 6/4 4 {fis'16(-\tweak X-offset #-2.5 \f e d cis b a) gis'( fis e d cis b)}
 	\tuplet 3/2 4 {a8( e'-.) e-. dis( e-.) e-.}
 	\tuplet 3/2 4 {fis( e-.) e-. dis( e-.) e-.} 
 	\tuplet 3/2 4 {a,( e'-.) e-. dis( e-.) e-.}

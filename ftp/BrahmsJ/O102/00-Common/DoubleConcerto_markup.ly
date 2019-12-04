@@ -84,6 +84,7 @@ fmarcD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "mar
 fdimD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "dim."))
 fsemprepiuD = #(make-dynamic-script (markup #:dynamic "f" #:normal-text #:italic "sempre più"))
 mfcrescD = #(make-dynamic-script (markup #:dynamic "mf" #:normal-text #:italic "cresc."))
+mfdimD = #(make-dynamic-script (markup #:dynamic "mf" #:normal-text #:italic "dim."))
 pcrescD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "cresc."))
 pcrescmoltoD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "cresc. molto"))
 pdimD = #(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "dim."))

@@ -179,7 +179,7 @@ musicHornIMvtIII = \relative c'' {
 	
 % Bars 256 to 260
 	
-	c2\f
+	c2-\tweak X-offset #-2.3 \f
 	c'8-. r r4
 	R2
 	r8 c-. r c-.
@@ -194,7 +194,7 @@ musicHornIMvtIII = \relative c'' {
 	R2*3
 	
 	
-	c4(\mf c_\dimmarkup\>
+	c4(^\mfdimD^\> c
 % Bars 271 to 275
 	c c
 	c c)\!
@@ -246,10 +246,10 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	
-	e4(\sf\> d)\!
+	\once \override CombineTextScript.X-offset = #-3.5 e4(-\tweak X-offset #2 \sf\> d)\!
 % Bars 321 to 325
 	\partcombineApartOnce c r
-	e(\pp\> d8)\! r
+	e(-\tweak X-offset #2.0 \pp\> d8)\! r
 	e4(\> d8)\! r \bar "||"
 	\tempo "Tempo primo" \partcombineApartOnce c4-. f-.
 	R2*5
@@ -266,7 +266,7 @@ musicHornIMvtIII = \relative c'' {
 	c c4 c8~
 	c c4 c8
 % Bars 336 to 340
-	c8-.\f r r4
+	c8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	c8-. r r4
 	c8-. r r4

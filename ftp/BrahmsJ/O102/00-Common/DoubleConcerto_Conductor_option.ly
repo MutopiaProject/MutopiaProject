@@ -17,7 +17,22 @@ generalOptions = {
 }
 conductorOptions = {
 	\set Staff.soloText = #"1."
-	#(set-global-staff-size 13)
+	\set Staff.soloIIText = #"2."
 	\override Score.BarNumber #'font-size = #2
 }
-
+conductorOptionsHorn = {
+	\set Staff.soloText = #"3."
+	\set Staff.soloIIText = #"4."
+	\override Score.BarNumber #'font-size = #2
+}
+#(set-global-staff-size 13)
+\layout {
+	\context {
+		\Staff
+		\override TupletBracket #'bracket-visibility = ##f
+		\override Hairpin.to-barline = ##f
+		\RemoveEmptyStaves
+		%\override VerticalAxisGroup.remove-first = ##t
+	}
+	#(layout-set-staff-size 13)
+}

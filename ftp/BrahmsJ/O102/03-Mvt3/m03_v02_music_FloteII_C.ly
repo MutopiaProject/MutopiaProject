@@ -152,7 +152,7 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. a'16\ff
+	r4 r8. a'16-\tweak X-offset #-3 \ff
 	a4.. f!16
 	f4.. f16
 	\times 2/3 {f4( e8)} \times 2/3 {d( e f)}
@@ -213,11 +213,11 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	e''2_\mfcresc(
+	e''2-\tweak X-offset #-9.5 _\mfcresc(
 % Bars 256 to 260
 	d)(
 	b)
-	c8-.\ff a-. r a
+	c8-.-\tweak X-offset #-4 \ff a-. r a
 	r gis-. r a-.
 	r a-. r a-.
 % Bars 261 to 265
@@ -281,18 +281,18 @@ musicFloteIIMvtIII = \relative c''' {
 	e\> d b e,)\!
 	a\p r r4 
 	R2
-	r4 r8 a(
-	e'4\sf\> d)\!
+	r4 r8 \once \override CombineTextScript.X-offset = #-3.5 a(
+	e'4-\tweak X-offset #2 \sf\> d)\!
 % Bars 321 to 325
-	a\p r8 a(\pp\<
+	a\p r8 \once \override CombineTextScript.X-offset = #-3.5 a(\pp\<
 	e'4\> dis8)\! r
 	e4(\> dis8)\! r \bar "||"
-	\tempo "Tempo primo" a8-.\f r dis4->~
+	\tempo "Tempo primo" a8-.-\tweak X-offset #-3 \f r dis4->~
 	dis2~
 % Bars 326 to 330
 	dis8 d-. cis-. b-.
 	a-. r gis-. r
-	a\p r r4
+	a-\tweak X-offset #-2 \p r r4
 	R2 %e e4 e8~
 	R2 %e e4 e8~
 % Bars 331 to 335
@@ -302,7 +302,7 @@ musicFloteIIMvtIII = \relative c''' {
 	e e4 e8~
 	e e4 e8
 % Bars 336 to 340
-	a,8-.\f r r4
+	a,8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	a8-. r r4
 	a8-. r r4

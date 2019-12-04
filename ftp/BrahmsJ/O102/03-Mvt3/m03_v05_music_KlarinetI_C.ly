@@ -54,7 +54,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	\partcombineApartOnce c-. r r4
 	R2
 % Bars 51 to 55
-	g'8-.\p ees-. ees-. c-. 
+	g'8-.-\tweak X-offset #-3 \p ees-. ees-. c-. 
 	c-. a!-. a-. f-. 
 	ees-. r r4
 	R2*31
@@ -76,7 +76,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 % Bars 86 to 90
 	\bar "||"
-	\time 4/4 \partcombineApart r4 g(^\mfcresc\< aes a
+	\time 4/4 \partcombineApart r4 g(-\tweak X-offset 0 ^\mfcrescD\< aes a
 	bes c cis d)\! \partcombineAutomatic \bar "||" 
 	\time 2/4 e!8-.\f r r4
 	f8-. r r4
@@ -224,18 +224,18 @@ musicKlarinetIMvtIII = \relative c'' {
 	\tempo "poco rit." R2
 	d!8(_\dimmarkup cis16 d) d'4
 	R2
-	fis,8(_\pp eis16 fis) fis'4~
+	fis,8(-\tweak X-offset #-2 _\pp eis16 fis) fis'4~
 	\tempo "in tempo" fis8 r r4
 % Bars 251 to 255
 	R2*4
 	
 	
 	
-	g,,,2_\mfcresc(
+	g,,,2-\tweak X-offset #-9.5 _\mfcresc(
 % Bars 256 to 260
 	aes!)(
 	aes''!)
-	g8-.\ff ees-. r c-.
+	g8-.-\tweak X-offset #-4 \ff ees-. r c-.
 	r b-. r c-.
 	r c-. r c-.
 % Bars 261 to 265
@@ -272,7 +272,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	a8 r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" c8(_\pdolce g' fis f
+	\tempo "Poco meno Allegro" c8(-\tweak X-offset #-9 _\pdolce g' fis f
 	e d c) g'(
 	a g c g
 	aes g4.)~
@@ -296,25 +296,25 @@ musicKlarinetIMvtIII = \relative c'' {
 	r4 r8 c'(
 % Bars 316 to 320
 	b\> a f g)\!
-	\partcombineApart g( gis) a4(~_\crescmarkup_\<
+	\partcombineApart g( gis) a4(~_\crescD_\<
 	a8 ais) b4\!~
-	b8 r r \partcombineAutomatic c,(
-	b'4\sf\> a)\!
+	b8 r r \partcombineAutomatic \once \override CombineTextScript.X-offset = #-3.5 c,(
+	b'4-\tweak X-offset #2 \sf\> a)\!
 % Bars 321 to 325
 	\partcombineApartOnce c, r
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" r4 r8 ees'(\f
+	\tempo "Tempo primo" r4 r8 ees'(-\tweak X-offset #-3 \f
 	c a fis ees)
 % Bars 326 to 330
 	c4. d8-.
 	e!-. r f-. r
-	e-.\p r r4
+	e-.-\tweak X-offset #-2 \p r r4
 	R2*7
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	c'8-.\f r r4
+	c'8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	e,8-. r r4
 	e8-. r r4

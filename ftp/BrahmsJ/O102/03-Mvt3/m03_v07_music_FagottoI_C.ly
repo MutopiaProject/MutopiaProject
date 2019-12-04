@@ -29,7 +29,7 @@ musicFagottoIMvtIII = \relative c' {
 	a b!)
 	c(\< cis
 	d\! f8\> e
-	d4\!) r
+	f4\!) r
 % Bars 26 to 30
 	R2*3
 	
@@ -61,7 +61,7 @@ musicFagottoIMvtIII = \relative c' {
 	a-. r r4
 	R2 \clef tenor
 % Bars 51 to 55
-	a'8\p-. a'-. a-. fis-. 
+	a'8-\tweak X-offset #-3 \p-. a'-. a-. fis-. 
 	fis-. d-. d-. b-. 
 	c16-. a-. c-. ees-. d-. b-. d-. d,-. 
 	g8-. r r4
@@ -106,7 +106,7 @@ musicFagottoIMvtIII = \relative c' {
 	r4 e8(\p\< g
 	a\> g)\! r4
 % Bars 96 to 100
-	r e8(^\dolce\< g
+	r e8(-\tweak X-offset #-4 ^\dolce\< g
 	a\> g)\! r4
 	R2*3
 	
@@ -256,11 +256,11 @@ musicFagottoIMvtIII = \relative c' {
 	
 	
 	
-	\clef tenor e''2_\mfcresc(
+	\clef tenor e''2-\tweak X-offset #-9.5 _\mfcresc(
 % Bars 256 to 260
 	f)(
 	d) \clef bass
-	a,16-.\ff b-. c8-. a16-. c-. f8-.
+	a,16-.-\tweak X-offset #-4 \ff b-. c8-. a16-. c-. f8-.
 	a,16-. d-. gis8-. a,16-. e'-. c'-. b-.
 	a8-. e-. f-. e-. 
 % Bars 261 to 265
@@ -328,12 +328,12 @@ musicFagottoIMvtIII = \relative c' {
 	a r r4
 	R2
 	eis4\f fis
-	a2\sf\> %<< a2 {\once \override Hairpin.minimum-length = #5 s4\sf\> s\!}>>
+	<< a2 {s4-\tweak X-offset #2 \sf\> s\!}>>
 % Bars 321 to 325
 	a4\p r
-	a4.\pp\> r8\! %<< {a4. r8} {s4\pp\> s\!}>>
-	a4.\pp\> r8\! \bar "||" %<< {a4. r8} {s4\pp\> s\!}>> \bar "||"
-	\tempo "Tempo primo" r4 r8 c(\f
+	a4.-\tweak X-offset #2 \pp\> r8\! %<< {a4. r8} {s4\pp\> s\!}>>
+	a4.-\tweak X-offset #2 \pp\> r8\! \bar "||" %<< {a4. r8} {s4\pp\> s\!}>> \bar "||"
+	\tempo "Tempo primo" r4 r8 c(-\tweak X-offset #-3 \f
 	a fis dis c)
 % Bars 326 to 330
 	a4. b'8-.

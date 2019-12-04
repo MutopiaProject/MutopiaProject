@@ -191,7 +191,7 @@ musicFagottoIIMvtIII = \relative c {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. a16\ff
+	r4 r8. a16-\tweak X-offset #-3 \ff
 	a8( f!16) f( d) d( cis) cis(
 	f) f( d) d( bes) bes( a) a
 	g4.. g16
@@ -260,7 +260,7 @@ musicFagottoIIMvtIII = \relative c {
 % Bars 256 to 260
 	d)(
 	b) \clef bass
-	a,16-.\ff b-. c8-. a16-. c-. f8-.
+	a,16-.-\tweak X-offset #-4 \ff b-. c8-. a16-. c-. f8-.
 	a,16-. d-. gis8-. a,16-. e'-. c-. b-.
 	a8-. e-. f-. e-. 
 % Bars 261 to 265
@@ -301,7 +301,7 @@ musicFagottoIIMvtIII = \relative c {
 	e,8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" a'8(_\pdolce g fis f
+	\tempo "Poco meno Allegro" a'8(-\tweak X-offset #-9 _\pdolce g fis f
 	e[ d cis)] cis(
 	d cis4) cis8(
 	bis cis4.)~
@@ -328,22 +328,22 @@ musicFagottoIIMvtIII = \relative c {
 	\partcombineApart cis4\p d\<
 	dis e\! \partcombineAutomatic
 	cis4\f fis,
-	b2\sf\> %<< a2 {\once \override Hairpin.minimum-length = #5 s4\sf\> s\!}>>
+	<<b2 {s4-\tweak X-offset #2 \sf\> s\!} >>
 % Bars 321 to 325
 	cis4\p r
-	b4.\pp\> r8\! %<< {a4. r8} {s4\pp\> s\!}>>
-	b4.\pp\> r8\! \bar "||" %<< {a4. r8} {s4\pp\> s\!}>> \bar "||"
-	\tempo "Tempo primo" r4 r8 c'(\f
+	b4.-\tweak X-offset #2 \pp\> r8\! %<< {a4. r8} {s4\pp\> s\!}>>
+	b4.-\tweak X-offset #2 \pp\> r8\! \bar "||" %<< {a4. r8} {s4\pp\> s\!}>> \bar "||"
+	\tempo "Tempo primo" r4 r8 c'(-\tweak X-offset #-3 \f
 	a fis dis c)
 % Bars 326 to 330
 	a4. d8-.
 	cis-. r e-. r
-	a,-.\p r r4
+	a,-.-\tweak X-offset #-2 \p r r4
 	R2*7
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	a8-.\f r r4
+	a8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	a'8-. r r4
 	a8-. r r4

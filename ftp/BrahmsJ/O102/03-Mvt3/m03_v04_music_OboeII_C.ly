@@ -47,7 +47,7 @@ musicOboeIIMvtIII = \relative c'' {
 	a-. r r4
 	R2
 % Bars 51 to 55
-	c4\p a
+	c4-\tweak X-offset #-3 \p a
 	fis d
 	e8-. r r4
 	R2*31
@@ -146,7 +146,7 @@ musicOboeIIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. a'16\ff
+	r4 r8. a'16-\tweak X-offset #-3 \ff
 	a4.. f!16
 	f4.. f16
 	\tuplet 3/2 4 {f4( e8) d( e f)}
@@ -200,8 +200,8 @@ musicOboeIIMvtIII = \relative c'' {
 	
 % Bars 256 to 260
 	
-	b2\f
-	c8-.\ff a-. r a-.
+	b2-\tweak X-offset #-3 \f
+	c8-.-\tweak X-offset #-4 \ff a-. r a-.
 	r gis-. r a-.
 	r a-. r a-.
 % Bars 261 to 265
@@ -262,18 +262,18 @@ musicOboeIIMvtIII = \relative c'' {
 	%R2*3
 	
 	
-	r4 r8 a(
-	e'4\sf\> d)\!
+	r4 r8 \once \override CombineTextScript.X-offset = #-3.5 a(
+	e'4-\tweak X-offset #2 \sf\> d)\!
 % Bars 321 to 325
-	a\p r8 a(\pp\<
+	a\p r8 \once \override CombineTextScript.X-offset = #-3.5 a(\pp\<
 	e'4\> dis8)\! r
 	e4(\> dis8)\! r \bar "||"
-	\tempo "Tempo primo" r4 r8 c(\f
-	a fis' dis c)
+	\tempo "Tempo primo" r4 r8 c-\tweak X-offset #-3 \f
+	a fis' dis c
 % Bars 326 to 330
 	a4. a8-.
 	\tuplet 3/2 4 {a8( e')-. e-. fis( e)-. e-.}
-	a,\p-. r r4
+	a,-\tweak X-offset #-2 \p-. r r4
 	R2 %e e4 e8~
 	R2 %e e4 e8~
 % Bars 331 to 335
@@ -283,7 +283,7 @@ musicOboeIIMvtIII = \relative c'' {
 	e e4 e8~
 	e e4 e8
 % Bars 336 to 340
-	cis-.\f r r4
+	cis-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	cis8-. r r4
 	cis8-. r r4

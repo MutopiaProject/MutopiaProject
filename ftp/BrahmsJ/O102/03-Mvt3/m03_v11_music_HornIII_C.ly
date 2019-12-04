@@ -7,7 +7,7 @@
 musicHornIIIMvtIII = \relative c'' {
 	\clef treble
 	\key a \minor
-	\transposition a
+	\transposition d
 % Bars 1 to 5
 	R2*24
 % Bars 6 to 10
@@ -162,7 +162,7 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 % Bars 196 to 200
-	r4 r8. g'16\ff
+	r4 r8. g'16-\tweak X-offset #-3 \ff
 	g4.. g16
 	g4.. g16
 	\tuplet 3/2 4 {g4( f8) ees( f g)}
@@ -226,7 +226,7 @@ musicHornIIIMvtIII = \relative c'' {
 % Bars 256 to 260
 	
 	
-	g,8\f-. g-. r g-.
+	g,8-\tweak X-offset #-3 \f-. g-. r g-.
 	r g-. r g-.
 	g-. bes-. r bes-.
 % Bars 261 to 265
@@ -289,22 +289,22 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	
-	<<g2 {s4\sf\> s\!}>>
+	\once \override CombineTextScript.X-offset = #-3.5 <<g2 {s4-\tweak X-offset #2 \sf\> s\!}>>
 % Bars 321 to 325
 	g4\p r
-	<<{g4. r8} {s4\sf\> s\!}>>
-	<<{g4. r8} {s4\sf\> s\!}>> \bar "||"
-	\tempo "Tempo primo" g4\f-. g\fp~
+	<<{g4. r8} {s4-\tweak X-offset #2.5 \sf\> s\!}>>
+	<<{g4. r8} {s4-\tweak X-offset #2.5 \sf\> s\!}>> \bar "||"
+	\tempo "Tempo primo" g4-\tweak X-offset #-3 \f-. g-\tweak X-offset #-3.5 \fp~
 	g2~
 % Bars 326 to 330
-	g8 g\f-. g-. e'-.
+	g8 g-\tweak X-offset #-2.5 \f-. g-. e'-.
 	\partcombineApart \tuplet 3/2 4 {g8( d-.) d-. e( d-.) d-.}
 	g,8-. \partcombineAutomatic r r4
 	R2*7
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	g8-.\f r r4
+	g8-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	g'8-. r r4
 	g8-. r r4

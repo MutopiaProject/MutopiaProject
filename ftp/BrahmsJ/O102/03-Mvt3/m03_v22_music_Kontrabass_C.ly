@@ -48,7 +48,7 @@ musicKontrabassMvtIII = \relative c {
 	
 	
 	\mark \default
-	e,16\ff-.^\arco e'-. e,-. e'-. e,-. e'-. e,-. e'-. 
+	e,16\ff-.-\tweak X-offset #-5.5 ^\arco e'-. e,-. e'-. e,-. e'-. e,-. e'-. 
 	a,8-. c-. a-. f'-.
 % Bars 41 to 45
 	a,-. gis'-. a,-. c'16-. b-.
@@ -85,8 +85,8 @@ musicKontrabassMvtIII = \relative c {
 	d f,
 	g2~
 	g4\< g(
-	bes) a\!(
-	d) f
+	bes) << a( { s8 s16 s\! }>>
+	d4) f
 % Bars 81 to 85
 	e8( c) f-.( e-.)
 	d( a) a4~
@@ -101,7 +101,7 @@ musicKontrabassMvtIII = \relative c {
 	d8-. r r4
 % Bars 91 to 95
 	g,8-. r r4
-	r g'8^\pizz\p r
+	r g'8^\pizz-\tweak X-offset #-2.0 \p r
 	c, r r4
 	R2*7
 % Bars 96 to 100
@@ -134,7 +134,7 @@ musicKontrabassMvtIII = \relative c {
 	R2*3
 	
 	
-	r8 g'^\arco\f-. a-. a,-.
+	r8 g'-\tweak X-offset #-5.5 ^\arco\f-. a-. a,-.
 % Bars 131 to 135
 	d-.\p r r4
 	R2*2
@@ -270,8 +270,8 @@ musicKontrabassMvtIII = \relative c {
 	R2*6
 % Bars 256 to 260
 	
-	e2\sf^\arco
-	a8-.\ff c-. a-. f'-.
+	e2\sf-\tweak X-offset #1.5 ^\arco
+	a8-.-\tweak X-offset #-4 \ff c-. a-. f'-.
 	a,-. gis'-. a,-. c'16-. b-.
 	a8-. e-. f-. e-.
 % Bars 261 to 265
@@ -285,7 +285,7 @@ musicKontrabassMvtIII = \relative c {
 	a'-.\sf a,-. c'-.\sf c,-.
 	d'-. r r4
 	R2
-	e,,4(_\mf_\dimmarkup\> e
+	e,,4(_\mfdimD\> e
 % Bars 271 to 275
 	e e
 	e e)\!
@@ -317,7 +317,7 @@ musicKontrabassMvtIII = \relative c {
 	b8-. r r4
 	e,8-. r r4
 % Bars 296 to 300
-	r e'8^\pizz\p r \bar "||"
+	r e'8-\tweak X-offset #-5 ^\pizz\p r \bar "||"
 	\tempo "Poco meno Allegro" a,8 r r4
 	R2*7
 % Bars 301 to 305
@@ -342,13 +342,13 @@ musicKontrabassMvtIII = \relative c {
 	b, e!8( d)\!
 	cis4\p d\<
 	dis e\!
-	eis\f fis
+	eis-\tweak X-offset #-3 \f fis
 	b,\sf\> r4\!
 % Bars 321 to 325
 	cis\p r
 	b4.\pp\> r8\!
 	b4.\> r8\! \bar "||" 
-	\tempo "Tempo primo" cis4-.\f fis-.
+	\tempo "Tempo primo" cis4-.-\tweak X-offset #-3 \f fis-.
 	R2
 % Bars 326 to 330
 	r8 f-! e-! d-!
@@ -363,7 +363,7 @@ musicKontrabassMvtIII = \relative c {
 	e cis'4 e,8~
 	e a4 e8-.
 % Bars 336 to 340
-	a,-.\f r r4
+	a,-.-\tweak X-offset #-2.5 \f r r4
 	R2
 	a8-. r r4
 	a8-. r r4

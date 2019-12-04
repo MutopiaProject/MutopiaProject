@@ -233,7 +233,7 @@ musicPaukenMvtIII = \relative c {
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	a2\f\startTrillSpan~
+	a2-\tweak X-offset #-2.5 \f\startTrillSpan~
 	<< a {s4 s8 s\stopTrillSpan}>>
 	a8 r r4
 	a8-. r r4

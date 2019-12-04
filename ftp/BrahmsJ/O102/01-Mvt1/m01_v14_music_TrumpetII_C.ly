@@ -7,7 +7,7 @@
 musicTrumpetIIMvtI = \relative c'' {
 	\clef treble
 	\key a \minor
-%	\transposition a
+	\transposition d
 % Bars 1 to 5
 	d4._\fmarc d8 d4 r
 	d4. d8 d4 r

@@ -27,7 +27,7 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 16 to 20
 	aes8( g16-.) g-. c-. e-. g-. e-.
 	c8-- b16-. c-. b8--\< c16-. b-.
-	c8-- b16-. c-. b( a') gis-. fis-.\!
+	c8-- b16-. c-. b( a') g-. fis-.\!
 	e8-- d16-. e-. d8--\> e16-. d-.
 	e8-- d16-. e-. d( f) d-. b-.\!
 % Bars 21 to 25
@@ -378,7 +378,7 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 291 to 295
 	\time 4/4 <cis a'> <b gis'> <cis a'> <b gis'>) q4.( <a fis'>8)
 	<gis e'>4 r r2 \bar "||"
-	\time 2/4 r8 <ais' fis'>16-. fis-. <b e>8( <fis cis'>16-.) e-.
+	\time 2/4 r8 <ais' fis'>16-.\f fis-. <b e>8( <fis cis'>16-.) e-.
 	r8 <dis' b'>16-. b-. <e a>8( <b fis'>16-.) a!-.
 	r8 <fis' fis'>16-. d,!-. <d' d'>8( <b b'>16-.) d,-.
 % Bars 296 to 300
