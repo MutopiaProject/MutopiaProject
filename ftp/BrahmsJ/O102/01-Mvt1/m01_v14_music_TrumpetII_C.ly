@@ -36,7 +36,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	
 % Bars 56 to 60
 	\mark \default
-	bes4.\f c8 d4 r
+	bes4.-\tweak X-offset #-2 \f c8 d4 r
 	c,4. c8 g4 r
 	c-. c-. g-. r
 	R1
@@ -48,7 +48,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	r2 r4 g,
 % Bars 66 to 70
 	g2 g
-	e'\f g
+	e'-\tweak X-offset #-3.7 \f g
 	d' d
 	g, g
 	f4 r r2
@@ -74,7 +74,7 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 91 to 95
 	
 	
-	r2 r4 g,(\f
+	r2 r4 g,(-\tweak X-offset #-2.5 \f
 	g'-.) bes2-> bes4
 	R1*2
 % Bars 96 to 100
@@ -85,8 +85,8 @@ musicTrumpetIIMvtI = \relative c'' {
 	g8-. r r4 r2
 % Bars 101 to 105
 	R1
-	g2\sf g4 r
-	c,2\sf c4-. r
+	g2-\tweak X-offset #-2.8 \sf g4 r
+	c,2-\tweak X-offset #-3.2 \sf c4-. r
 	bes' r r2
 	bes4( c) d2
 % Bars 106 to 110
@@ -154,7 +154,7 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 211 to 215
 	
 	
-	r2 r4 d\f~
+	r2 r4 d-\tweak X-offset #-1.4 \f~
 	d d4~ d8-. r r4
 	r d2 d4~
 % Bars 216 to 220
@@ -179,7 +179,7 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	ees,4-! r r bes'
+	ees,4-!-\tweak X-offset #-2 \f r r bes'
 	ees,-! r r2
 	R1*4
 % Bars 261 to 265

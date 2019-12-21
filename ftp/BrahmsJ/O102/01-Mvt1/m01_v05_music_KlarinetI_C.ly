@@ -41,7 +41,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 % Bars 56 to 60
 	\mark \default
-	g'4.\ff f8 bes4 r
+	g'4.-\tweak X-offset #-2 \ff f8 bes4 r
 	c,4. f8 ees4 r
 	f4-. d-. ees4.-> c8
 	f4. d8 bes4. ees8
@@ -50,16 +50,16 @@ musicKlarinetIMvtI = \relative c''' {
 	g'2.-> ees4
 	d2-> c->
 	ees2.-> ees4
-	\times 2/3 {ees2 f4} \times 2/3 {d2 ees4}
+	\tupletUp \times 2/3 {ees2 f4} \times 2/3 {d2 ees4} \tupletNeutral
 % Bars 66 to 70
 	c2 c
-	a\ff-> a->
+	a-\tweak X-offset #-3.7 \ff-> a->
 	bes-> bes->
 	bes ees
 	d4 r r2
 % Bars 71 to 75
-	\partcombineApart r4 r8 des8_\p_\<( fes4._\> ees8)\!
-	r4 r8 aes(_\< fes4._\> ees8)\! \partcombineAutomatic
+	\partcombineApart r4 r8 des8\p\<( fes4.\> ees8)\!
+	r4 r8 aes(\< fes4.\> ees8)\! \partcombineAutomatic
 	R1*2
 	
 	r4 fes2->\f aes4-.
@@ -95,9 +95,9 @@ musicKlarinetIMvtI = \relative c''' {
 	ees8-. r r4 r2
 % Bars 101 to 105
 	R1
-	c2(\sf c4-.) r
-	f2(\sf f4-.) r
-	r2 r4 \shape #'((0 . 0.5) (0 . 0 ) (0 . 0.5) (3.5 . -1.5)) Slur c'(
+	c2(-\tweak X-offset #-1 \sf c4-.) r
+	f2(-\tweak X-offset #-1 \sf f4-.) r
+	r2 r4 c'(
 	bes aes g2)
 % Bars 106 to 110
 	r2 ees4( f8 g)
@@ -191,7 +191,7 @@ musicKlarinetIMvtI = \relative c''' {
 	\mark \default
 	R1*2
 	
-	aes'8-.\f aes4 aes aes aes8~\<
+	aes'8-.-\tweak X-offset #-1 \f aes4 aes aes aes8~\<
 % Bars 196 to 200
 	aes2.\> r4\!
 	aes8 aes4 aes aes aes8(

@@ -132,3 +132,10 @@ ni = #(define-music-function
 		\set Voice.restNumberThreshold = #1
 	#}
 )
+textPriority = #(define-music-function
+	(parser location priority)
+	(number?)
+	#{
+		\once \override TextScript.script-priority = #priority
+	#}
+)

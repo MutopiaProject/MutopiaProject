@@ -25,7 +25,7 @@ musicOboeIMvtI = \relative c'' {
 % Bars 26 to 30
 	
 	
-	r2 r4 cis(\pdolceD
+	r2 r4 cis(_\pdolce
 	b) cis( gis) a(_\<
 	a'2_\> e4\!) r
 % Bars 31 to 35
@@ -41,7 +41,7 @@ musicOboeIMvtI = \relative c'' {
 	
 % Bars 56 to 60
 	\mark \default
-	a4.\ff g8 e4 r
+	a4.-\tweak X-offset #-2 \ff g8 e4 r
 	f4. e8 c4 r
 	f4-. f-. f4.-> a8
 	g4. f8 e4. e8
@@ -50,10 +50,10 @@ musicOboeIMvtI = \relative c'' {
 	\partcombineApart e2.-> \partcombineAutomatic e4
 	f2-> fis->
 	g2.-> g4
-	\times 2/3 {a2 f4} \times 2/3 {g2 e4}
+	\tupletUp \times 2/3 {a2 f4} \times 2/3 {g2 e4} \tupletNeutral
 % Bars 66 to 70
 	f2 e
-	dis->\ff dis->
+	dis->-\tweak X-offset #-3.7 \ff dis->
 	e-> e->
 	e fis
 	b, a
@@ -95,9 +95,9 @@ musicOboeIMvtI = \relative c'' {
 	c8-. r r4 r2
 % Bars 101 to 105
 	R1
-	dis2(\sf e4-.) r
-	gis2(\sf a4-.) r
-	r2 r4 \shape #'((0 . 0.5) (0 . 0 ) (0 . 0) (3.5 . -1.5)) Slur a(
+	dis2(-\tweak X-offset #-1 \sf e4-.) r
+	gis2(-\tweak X-offset #-1 \sf a4-.) r
+	r2 r4 a(
 	g! f e2)
 % Bars 106 to 110
 	r2 gis8(\sf\> a b c)\!
@@ -142,7 +142,7 @@ musicOboeIMvtI = \relative c'' {
 	
 % Bars 171 to 175
 	\mark \default
-	r2 r4 c(\f 
+	r2 r4 \once \override CombineTextScript.X-offset = #-3.5 c(\f 
 	cis-.) d2( a4)
 	r2 r4 f'(
 	fis) g(~ g16 f e d) r4
@@ -165,7 +165,7 @@ musicOboeIMvtI = \relative c'' {
 	\mark \default
 	R1*2
 	
-	b'8\f-. b4 b8( a) a4 a8(\<
+	b'8-\tweak X-offset #-1 \f-. b4 b8( a) a4 a8(\<
 % Bars 196 to 200
 	aes2\>)( g4)\! r
 	b8 b4 b8( a!) a4 a8(
@@ -229,7 +229,7 @@ musicOboeIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	f4.->_\ffmarc ees8  c4 r
+	f4.->-\tweak X-offset #-2.5 _\ffmarc ees8  c4 r
 	des4.-> c8 f,4 r
 	R1*2
 % Bars 261 to 265

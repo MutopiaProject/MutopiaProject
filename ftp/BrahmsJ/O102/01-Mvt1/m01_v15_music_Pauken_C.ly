@@ -43,7 +43,7 @@ musicPaukenMvtI = \relative c {
 	
 % Bars 66 to 70
 	
-	a2\startTrillSpan\f a4\stopTrillSpan r
+	a2\startTrillSpan-\tweak X-offset #-3.7 \f a4\stopTrillSpan r
 	e'2\startTrillSpan e4\stopTrillSpan r
 	a,2\startTrillSpan a4\stopTrillSpan r
 	e'2\startTrillSpan e4\stopTrillSpan r

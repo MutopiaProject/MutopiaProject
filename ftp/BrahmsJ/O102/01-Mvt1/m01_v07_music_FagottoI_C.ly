@@ -24,7 +24,7 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 26 to 30
 	
-	\partcombineApart r2 r4^\pdolce \clef tenor fis,(\<
+	\partcombineApart r2 r4-\tweak X-offset #-1 ^\pdolce \clef tenor fis,(\<
 	a2\> gis4)\! a(
 	fis'2 f
 	e cis4) \partcombineAutomatic r
@@ -41,16 +41,16 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 56 to 60
 	\clef bass \mark \default
-	a,4.\ff b8 c4 r
+	a,4.-\tweak X-offset #-2 \ff b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis-> 
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
+	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) \partcombineApartOnce c,-. }
-	\times 2/3 {f2 \partcombineApartOnce bes,4} \times 2/3 {e2 \partcombineApartOnce a,4}
+	\set Staff.aDueText = #"" \times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-. }
+	\times 2/3 {f2 bes,4} \times 2/3 {e2 a,4} \tupletNeutral \unset Staff.aDueText
 % Bars 66 to 70
 	d2 \partcombineApartOnce c \partcombineUnisono
 	b8-. dis-. fis-. a-. c4.( b8)
@@ -95,8 +95,8 @@ musicFagottoIMvtI = \relative c' {
 	a8-. \partcombineAutomatic r r4 r c->
 % Bars 101 to 105
 	a-> fis-> dis-> c->
-	b2\sf c4-. r
-	e2\sf f4-. r
+	b2-\tweak X-offset #-1.5 \sf c4-. r
+	e2-\tweak X-offset #-1 \sf f4-. r
 	r2 r4 f'(
 	e f) a,( gis)
 % Bars 106 to 110
@@ -104,7 +104,7 @@ musicFagottoIMvtI = \relative c' {
 	r2 cis8(\sf\> d e f)\!
 	\partcombineApart r2 r4 r16 e,( gis b
 	e8-.) r d-. r r16 e,( gis b e8-.) r
-	d-. \partcombineAutomatic r8 r4 a,16( c! dis fis a c dis fis)
+	d-. \partcombineAutomatic r8 r4 \once \override CombineTextScript.X-offset = #-2  a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace d!1(\trill {c16[ d)]} \mark \default
 	c4-. r r2
@@ -194,7 +194,7 @@ musicFagottoIMvtI = \relative c' {
 	\mark \default
 	R1*2
 	
-	g2\f d'\<
+	\once \override CombineTextScript.X-offset = #1 g2-\tweak X-offset #-1 \f d'\<
 % Bars 196 to 200
 	g2.\> r4\!
 	g,2 b
@@ -265,7 +265,7 @@ musicFagottoIMvtI = \relative c' {
 % Bars 256 to 260
 	bes'2(_\pcresc ges')
 	ges,( ges')
-	f4._\ffmarc-> ees8 c4 r
+	\once \override CombineTextScript.X-offset = #-3 f4.-\tweak X-offset #-2.5 _\ffmarc-> ees8 c4 r
 	des4.-> c8 f,4 r \clef bass
 	bes ges2 bes4
 % Bars 261 to 265

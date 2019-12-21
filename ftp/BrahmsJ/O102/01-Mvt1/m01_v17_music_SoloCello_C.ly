@@ -13,7 +13,7 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	
-	\times 2/3 {d2\f^\markup { \italic { \column { \lower #1 \line {(in modo d'un recitativo,} \line {ma sempre in tempo) } } } } e f}
+	\tupletDown \times 2/3 {d2\f^\markup { \italic { \column { \lower #1 \line {(in modo d'un recitativo,} \line {ma sempre in tempo) } } } } e f} \tupletNeutral
 % Bars 6 to 10
 	dis2~ dis8 e a c
 	e a c e \acciaccatura a,8 a'4.( g8)
@@ -22,9 +22,9 @@ musicSoloCelloMvtI = \relative c, {
 	<b, a' dis>4.( f''8) <c, a' e'>8( c' a a')
 % Bars 11 to 15
 	<d,, b'>4.( a''8) <e, cis'>4.( a'8)
-	<f, d'>4.( \clef tenor a'8\>) \times 2/3 {d2( c!4)\!}
+	<f, d'>4.( \clef tenor a'8\>) \tupletUp \times 2/3 {d2( c!4)\!} \tupletNeutral
 	\times 2/3 {\acciaccatura d,,8 b''4( a f} \times 2/3 {d b a)}
-	\times 2/3 {\acciaccatura g8 g'4( f d} \times 2/3 {b g f)} \clef bass
+	\tupletDown \times 2/3 {\acciaccatura g8 g'4( f d} \times 2/3 {b g f)} \clef bass \tupletNeutral
 	\times 2/3 {\acciaccatura e8 e'4( d b)} \times 2/3 {\acciaccatura e,8 c'4( b e,)}
 % Bars 16 to 20
 	\acciaccatura e8 e'( d b) c( b e,)_\crescmarkup e'( d
@@ -177,13 +177,13 @@ musicSoloCelloMvtI = \relative c, {
 	r2 r4 c,_\fmarc(
 	cis-.) d4(~ d16 c b a) d( c b a)
 	a'4-. gis16( e b gis) e8 r f'4(
-	fis-.) g!( g8) r \clef bass b,,16(\mf c d e
+	fis-.) g!( g8) r \clef bass b,,16(-\tweak X-offset #-2 \mf c d e
 % Bars 176 to 180
 	f e d cis) d( e f g a g f e) f( a d e
 	f e d a) f( a d e f e d a) \clef tenor b( c d e
 	f e d cis) d( e f g a g f e) \clef bass d( a f e
 	d_\dimmarkup e f a) d(\> a f e d e f a) d( a f d)\!
-	g,8 r r4 r a'16(_\plegg g f d
+	g,8 r r4 r \shape #'((0 . -2)(0 . -1)(0 . 0)(0 . 0)) Slur a'16(_\plegg g f d
 % Bars 181 to 185
 	g, d' f g a8) r r2
 	r d16( bes a g d bes a g)
@@ -237,9 +237,9 @@ musicSoloCelloMvtI = \relative c, {
 	\times 2/3 {g8( a b} \times 2/3 {ais b cis} \times 2/3 {b cis d)} r4
 	\times 2/3 {e8( fis g} \times 2/3 {fis g a} \times 2/3 {g a b)} r4
 % Bars 236 to 240
-	\times 2/3 {eis,8(_\piup fis gis} \times 2/3 {fis gis ais} \times 2/3 {gis ais b)} r4
+	\times 2/3 {eis,8(-\tweak X-offset #-1 _\piup fis gis} \times 2/3 {fis gis ais} \times 2/3 {gis ais b)} r4
 	\times 2/3 {ais8(_\dimmarkup b cis)} r4 \times 2/3 {b8( cis dis)} r4
-	b16_\dolce( gis eis gis b cis8.) ais16( fis dis fis ais b8.)
+	b16-\tweak X-offset #-1 _\dolce( gis eis gis b cis8.) ais16( fis dis fis ais b8.)
 	gis16( eis cis eis gis ais8.) fis16( dis b dis fis gis8.)
 	cis,8 r r4 r2 \clef bass
 % Bars 241 to 245
@@ -247,12 +247,12 @@ musicSoloCelloMvtI = \relative c, {
 	d2(\p a'!
 	d4) r r2
 	r4 a'\trill c\trill fis,\trill
-	a\trill^\flat g2(\trill fis8) r
+	\textPriority #+3000 a\trill^\flat g2(\trill fis8) r
 % Bars 246 to 250
 	d'1\startTrillSpan~
 	\afterGrace d2( {cis16[\stopTrillSpan d])} f!4\trill b,\trill
-	d\trill f,\trill aes\trill^\flat d,\trill^\flat
-	f\trill \afterGrace ees\trill( {d16[ ees]} d8) r r4 \clef tenor
+	d\trill f,\trill \textPriority #+3000 aes\trill^\flat \textPriority #+3000 d,\trill^\flat
+	f\trill \afterGrace ees\trill( { d16[ ees]} d8) r r4 \clef tenor
 	g4\trill g'2\trill g,4\trill~
 % Bars 251 to 255
 	g \afterGrace g'2\trill( {fis16[ g]} fis8) r \clef bass
@@ -262,8 +262,8 @@ musicSoloCelloMvtI = \relative c, {
 	bes,!4\trill bes'2\trill( des,8)-. r
 % Bars 256 to 260
 	ges,4\trill ges'2\trill^\flat( bes,8-.) r \clef treble
-	\afterGrace ges''1\ff\trill^\flat( {f16[ ges])}
-	f8-. r \clef bass f,,,16( c' a' f') f( a, c, f,) c( c' ees bes')
+	\textPriority #+3000 \afterGrace ges''1-\tweak X-offset #-4 \ff\trill^\flat( {f16[ ges])}
+	f8-. r \clef bass f,,,16( c' a' f') f( a, c, f,) \stemDown c( c' ees bes') \stemNeutral
 	f,( c' a' f') f( a, c, f,) f8 r r4
 	R1*2
 % Bars 261 to 265

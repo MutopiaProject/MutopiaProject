@@ -6,7 +6,6 @@
 %###############################################################################
 generalOptions = {
 	\version "2.18.2"
-	\override TupletBracket #'bracket-visibility = ##f
 	\override Hairpin.to-barline = ##f
 	\set Score.alternativeNumberingStyle = #'numbers
 	\set Score.doubleRepeatType = #":|.|:"
@@ -32,7 +31,9 @@ conductorOptionsHorn = {
 		\override TupletBracket #'bracket-visibility = ##f
 		\override Hairpin.to-barline = ##f
 		\RemoveEmptyStaves
-		%\override VerticalAxisGroup.remove-first = ##t
+		\override VerticalAxisGroup.remove-first = ##t
+		\override TupletNumber.avoid-slur = #'around
+		%\override TupletBracket.padding = 0.8
 	}
 	#(layout-set-staff-size 13)
 }

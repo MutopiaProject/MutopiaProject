@@ -41,19 +41,19 @@ musicFagottoIIMvtI = \relative c {
 	
 % Bars 56 to 60
 	\clef bass \mark \default
-	a,4.\ff b8 c4 r
+	a,4.-\tweak X-offset #-2 \ff b8 c4 r
 	d4. e8 f4 r
 	g,2 a4. f8
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
+	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
 	d2-> dis->
 	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c-.}
-	\times 2/3 {f,2 bes4} \times 2/3 {e,2 a4}
+	\times 2/3 {f,2 bes4} \times 2/3 {e,2 a4} \tupletNeutral
 % Bars 66 to 70
 	d,2 c'
-	b8\ff\<-. dis-. fis-. a-. c4.\>( b8)
+	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-. c4.\>( b8)
 	b,-.\< e-. g-. ais-. c4.(\> b8)\!
 	cis,-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2
@@ -95,8 +95,8 @@ musicFagottoIIMvtI = \relative c {
 	fis8-. r r4 r c'->
 % Bars 101 to 105
 	a-> fis-> dis-> c->
-	b2\sf c4-. r
-	e2\sf f!4-. r
+	b2-\tweak X-offset #-1.5 \sf c4-. r
+	e2-\tweak X-offset #-1 \sf f!4-. r
 	r2 r4 d'(
 	e d c e)
 % Bars 106 to 110
@@ -104,7 +104,7 @@ musicFagottoIIMvtI = \relative c {
 	r2 f,8(\sf\> a g! f)\!
 	R1
 	e16( gis b cis d8-.) r r4 e,16( gis b cis
-	d8-.) r8 r4 a,16( c! dis fis a c dis fis)
+	d8-.) r8 r4 \once \override CombineTextScript.X-offset = #-2 a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace b,1(\trill {a16[ b)]} \mark \default
 	a4-. r r2
@@ -194,7 +194,7 @@ musicFagottoIIMvtI = \relative c {
 	\mark \default
 	R1*2
 	
-	g2\f d'\<
+	\once \override CombineTextScript.X-offset = #1 g2-\tweak X-offset #-1 \f d'\<
 % Bars 196 to 200
 	g2.\> r4\!
 	g,2 b
@@ -264,7 +264,7 @@ musicFagottoIIMvtI = \relative c {
 % Bars 256 to 260
 	ges'2( bes)
 	ees,( ees')
-	f4._\ffmarc-> ees8 c4 r
+	\once \override CombineTextScript.X-offset = #-3 f4.-\tweak X-offset #-2.5 _\ffmarc-> ees8 c4 r
 	des4.-> c8 f,4 r \clef bass
 	bes, ges2 bes4
 % Bars 261 to 265

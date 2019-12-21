@@ -2,51 +2,28 @@
 % Fichier :      00_DoubleConcerto_Conductor_mvt1.ly
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
-%#                           S E C T I O N  P A P E R                          #
+%#                               H E A D E R                                   #
 %###############################################################################
-\paper {
-	ragged-last-bottom = ##t
-	ragged-bottom = ##t
-	left-margin = 16 \mm
-	system-separator-markup = \slashSeparator
-	bookTitleMarkup = \markup {
-		\override #'(baseline-skip . 3.5)
-		\column {
-			\fill-line { 
-				\fromproperty #'header:dedication
-			}
-			\override #'(baseline-skip . 3.5)
-			\column {
-				\fill-line {
-					\huge \larger \larger \bold
-					\fromproperty #'header:title
-				}
-				\fill-line {
-					\large %\bold
-					\fromproperty #'header:subtitle
-				}
-				\fill-line {
-					\smaller %\bold
-					\fromproperty #'header:subsubtitle
-				}
-				\fill-line {
-					\fromproperty #'header:poet
-					{ \large \bold \fromproperty #'header:instrument }
-					\fromproperty #'header:composer
-				}
-				\fill-line {
-					\fromproperty #'header:meter
-					\fromproperty #'header:arranger
-				}
-			}
-		}
-	}
-}
+%
+%    Composer            : Johannes Brahms (1833 - 1897)
+%    Artwork             : Double Concerto for Violin and Violoncello 
+%                          in A minor (1st movement)
+%    Opus                : 102
+%    Year of composition : 1887
+%    Source              : Breitkopf and Härtel, 1926-27
+%
+%###############################################################################
+%#                          I N C L U D E   F I L E S                          #
+%###############################################################################
 %\include "/media/Documents/Partitions/lilypond/markup.ly"
+\include "./00-Common/DoubleConcerto_Header.ly"
+\include "./00-Common/DoubleConcerto_Paper.ly"
 \include "./00-Common/DoubleConcerto_timeMvt.ly"
 \include "./00-Common/DoubleConcerto_Conductor_option.ly"
-\include "./00-Common/DoubleConcerto_VoiceName.ly"
+\include "./00-Common/DoubleConcerto_StaffName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
+%\include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ly"
+\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \include "./01-Mvt1/m01_v01_music_FloteI_C.ly"
 \include "./01-Mvt1/m01_v02_music_FloteII_C.ly"
 \include "./01-Mvt1/m01_v03_music_OboeI_C.ly"
@@ -69,129 +46,120 @@
 \include "./01-Mvt1/m01_v20_music_Bratsche_C.ly"
 \include "./01-Mvt1/m01_v21_music_Violoncell_C.ly"
 \include "./01-Mvt1/m01_v22_music_Kontrabass_C.ly"
-%\include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ly"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
 \book {
 	\header {
-		title = \markup { \fontsize #5 \sans 
-			\center-column {
-				\vspace #10
-				"Johannes Brahms"
-				"1833 - 1897"
-			}
-		}
 		subtitle = \markup { 
-			\fontsize #5 \sans
-			\center-column {
-				\vspace #10
-				"Double Concerto pour Violon et Violoncelle"
-				"en la mineur Opus 102"
-			}
-		}
-		subsubtitle = \markup { \fontsize #3 \sans
+			\abs-fontsize #12 \sans
 			\center-column {
 				\vspace #10
 				"Movement 1"
 			}
+		}
+		subsubtitle = \markup {
+			"Brahms - Concerto for Violin and Cello in A Minor - 1st movement"
 		}
 	}
 	\score {
 		<<
 			\new StaffGroup <<
 				\new Staff <<
-%					\new Voice {
-%						\formatConductorMvtI
-%					}
+					\new Voice {
+						\formatConductorMvtI
+					}
+					\new Voice {
+						\displayFilterVoice
+					}
 					\new Voice {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceI
+						\nameStaffImvtI
 						\partcombine \musicFloteIMvtI \musicFloteIIMvtI
 %						\musicFloteIIMvtI
 					}
 				>>
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
-					\nameVoiceIII
+					\nameStaffIImvtI
 					\partcombine \musicOboeIMvtI \musicOboeIIMvtI
 %					\musicOboeIIMvtI
 				}
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
-					\nameVoiceV
+					\nameStaffIIImvtI
 					\partcombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
 %					\musicKlarinetIIMvtI
 				}
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
-					\nameVoiceVII
+					\nameStaffIVmvtI
 					\partcombine \musicFagottoIMvtI \musicFagottoIIMvtI
 %					\musicFagottoIMvtI
 				}
-				\new GrandStaff \with { \nameGdStaff } <<
+				\new GrandStaff \with { \nameGdStaffImvtI } <<
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffIVmvtI
+						\nameStaffVmvtI
 						\partcombine \musicHornIMvtI \musicHornIIMvtI
 %						\musicHornIIMvtI
 					}
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffVmvtI
+						\nameStaffVImvtI
 						\partcombine \musicHornIIIMvtI \musicHornIVMvtI
 %						\musicHornIVMvtI
 					}
 				>>
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
-					\nameVoiceXIII
+					\nameStaffVIImvtI
 					\partcombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
 %					\musicTrumpetIIMvtI
 				}
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
-					\nameVoiceXV
+					\nameStaffVIIImvtI
 					\musicPaukenMvtI
 				}
 			>>
 			\new Staff {
 				\timeMvtI \generalOptions \conductorOptions
-				\nameVoiceXVI
-				\musicSoloViolinMvtI
+				\nameStaffIXmvtI
+				\keepWithTag #'score \musicSoloViolinMvtI
 			}
 			\new Staff {
 				\timeMvtI \generalOptions \conductorOptions
-				\nameVoiceXVII
+				\nameStaffXmvtI
 				\musicSoloCelloMvtI
 			}
 			\new StaffGroup <<
 				\new GrandStaff <<
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceXVIII
+						\nameStaffXImvtI
 						\musicViolinIMvtI
 					}
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceXIX
+						\nameStaffXIImvtI
 						\musicViolinIIMvtI
 					}
 				>>
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
-					\nameVoiceXX
+					\nameStaffXIIImvtI
 					\musicBratscheMvtI
 				}
 				\new GrandStaff <<
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceXXI
+						\nameStaffXIVmvtI
 						\musicVioloncellMvtI
 					}
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
-						\nameVoiceXXII
+						\nameStaffXVmvtI
 						\musicKontrabassMvtI
 					}
 				>>
@@ -201,13 +169,13 @@
 			breakbefore = ##t
 		}
 		\layout {
-			%system-count = #16
-			\context {
-				\Staff
-				\override TupletBracket #'bracket-visibility = ##f
-				\override Hairpin.to-barline = ##f
-				\RemoveEmptyStaves
-			}
+%			system-count = #80
+%			\context {
+%				\Staff
+%				\override TupletBracket #'bracket-visibility = ##f
+%				\override Hairpin.to-barline = ##f
+%				\RemoveEmptyStaves
+%			}
 		}
 	}
 }

@@ -41,7 +41,7 @@ musicHornIVMvtI = \relative c'' {
 	
 % Bars 56 to 60
 	\mark \default
-	g4.\f c8 d4 r
+	g4.-\tweak X-offset #-2 \f c8 d4 r
 	g,4. fis8 g4 r
 	c-. a-. bes4.-> bes8
 	c4. c8 d4. bes8
@@ -53,7 +53,7 @@ musicHornIVMvtI = \relative c'' {
 	r2 r4 g,
 % Bars 66 to 70
 	g2 g2
-	cis'\ff-> g->
+	cis'-\tweak X-offset #-3.7 \ff-> g->
 	d'-> d
 	g, g
 	d'4 r r2
@@ -85,18 +85,18 @@ musicHornIVMvtI = \relative c'' {
 % Bars 96 to 100
 	r r4 ees,~
 	ees ees2 ees4~
-	ees ees~ ees8 r r4
+	ees ees~ ees8-. r r4
 	r e!2 e4~
 	e8-. r r4 r2
 % Bars 101 to 105
 	R1
-	g2\sf g4-. r
-	c,2\sf c4-. r
+	g2-\tweak X-offset #-1 \sf g4-. r
+	c,2-\tweak X-offset #-1 \sf c4-. r
 	bes' r r ees(
 	bes c) d2
 % Bars 106 to 110
 	bes2\sf bes4-. r
-	ees,2\sf ees4-. r
+	ees,2-\tweak X-offset #-1 \sf ees4-. r
 	c'-. d-. ees-. d-.
 	r ees-. d-. r
 	g,-. r g-. r
@@ -164,14 +164,14 @@ musicHornIVMvtI = \relative c'' {
 	
 	
 	
-	r2 r4 bes_\pmamarc-.
+	r2 r4 \once \override CombineTextScript.X-offset = #-3.5 bes_\pmamarc-.
 	r bes-. r bes-.
 % Bars 191 to 195
 	r8 bes-. r8 bes-. r8 bes-. r8 bes-. 
 	r8 bes-. r8 bes-. r8 bes-. r4 \mark \default
 	R1*2
 	
-	c8-.\f c4 c8( bes) bes4 bes8\<(
+	c8-.-\tweak X-offset #-2 \f c4 c8( bes) bes4 bes8\<(
 % Bars 196 to 200
 	bes2\>)( a4) s4\!
 	c8 c4 c c c8(
@@ -220,7 +220,7 @@ musicHornIVMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	ees'4\f-! r r bes-!
+	ees'4-\tweak X-offset #-2 \f-! r r bes-!
 	ees-! r r2
 	R1*2
 % Bars 261 to 265

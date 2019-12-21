@@ -9,10 +9,10 @@ musicFloteIIMvtI = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4.\fmarcD d8 b4 r
+	e4._\fmarc d8 b4 r
 	c4. b8 e,4 r
-	\times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
-	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. }
+	\tupletUp \times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
+	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. } \tupletNeutral
 	R1^\fermataMarkup
 % Bars 6 to 10
 	R1*22
@@ -41,19 +41,19 @@ musicFloteIIMvtI = \relative c''' {
 	
 % Bars 56 to 60
 	\mark \default
-	c'4.\ff d8 c4 r
+	c'4.-\tweak X-offset #-2 \ff d8 c4 r
 	a4. gis8 a4 r
-	\times 2/3 {b-. c-. d-.} c4.-> a8
+	\tupletUp \once \override CombineTextScript.X-offset = #-3 \times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->
 	e2.-> c'4
 	b2 a
 	g2. e'4
-	\times 2/3 {c2 d4} \times 2/3 {b2 c4}
+	\times 2/3 {c2 d4} \times 2/3 {b2 c4} \tupletNeutral
 % Bars 66 to 70
 	a2 a
-	a\ff-> a->
+	a-\tweak X-offset #-3.7 \ff-> a->
 	g-> g->
 	a a
 	g dis
@@ -96,7 +96,7 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 101 to 105
 	R1
 	a2\sf( a4-.) r
-	d!2\sf( d4-.) r
+	d!2-\tweak X-offset #-2 \sf( d4-.) r
 	r2 r4 f
 	e b c b
 % Bars 106 to 110
@@ -183,7 +183,7 @@ musicFloteIIMvtI = \relative c''' {
 	\mark \default
 	R1*2
 	
-	b'8\f-. b4 b8( a) a4 a8\<(
+	b'8-\tweak X-offset #-1 \f-. b4 b8( a) a4 a8\<(
 % Bars 196 to 200
 	aes2\>)( g4)\! r
 	b8 b4 b8( a!) a4 a8(
@@ -204,7 +204,7 @@ musicFloteIIMvtI = \relative c''' {
 	e-.) d2-> d4~
 % Bars 211 to 215
 	d d2 d4(~
-	d8 cis) d4.( a8) bes4\sf(~
+	d8 cis) d4.( a8) bes4-\tweak X-offset #-1.5 \sf(~
 	bes16 c! bes a) bes4(~ bes16 a g fis) g4~
 	g g~ g8-. r r4
 	r g2 g4~
@@ -247,7 +247,7 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 256 to 260
 	
 	
-	f4._\ffmarc-> ees8 c4 r
+	f4.-\tweak X-offset #-2.5 _\ffmarc-> ees8 c4 r
 	des4.-> c8 f,4 r
 	bes2( des,)
 % Bars 261 to 265

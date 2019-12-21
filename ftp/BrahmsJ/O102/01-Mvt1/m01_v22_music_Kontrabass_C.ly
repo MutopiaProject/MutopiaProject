@@ -36,19 +36,19 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 56 to 60
 	\mark \default
-	a,4.\ff b8 c4 r
+	a,4.-\tweak X-offset #-2 \ff b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
 	d2-> dis->
 	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2\< b,4} \times 2/3 {e2 a,4}
+	\times 2/3 {f2\< b,4} \times 2/3 {e2 a,4} \tupletNeutral
 % Bars 66 to 70
 	d2 c\!
-	b8\ff\<-. dis-. fis-. a-. c4.(\> b8)
+	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-. c4.(\> b8)
 	b,8\<-. e-. g-. ais!-. c4.\>( b8)\!
 	cis,8-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2
@@ -75,7 +75,7 @@ musicKontrabassMvtI = \relative c' {
 	bes4-! bes,-! r2
 	c4-! r r2
 	r r4 f,\f\>( \mark \default
-	f'8) r f,4(\> f'8)\! r f,4(
+	f'8)\! r f,4(\> f'8)\! r f,4(
 % Bars 91 to 95
 	f'4) e8 d e c f,4(\>
 	f'8)\! r f,4(\> f'8)\! r f,4(
@@ -102,7 +102,7 @@ musicKontrabassMvtI = \relative c' {
 	f''8( d) r4 fis8( dis) r4
 % Bars 111 to 115
 	e-! r e,,-! r \mark \default
-	a4\fp\>-. r8 b-. c4-.\! r
+	a4-\tweak X-offset #0.2 \fp\>-. r8 b-. c4-.\! r
 	R1*3
 	
 	
@@ -164,8 +164,8 @@ musicKontrabassMvtI = \relative c' {
 	e1( -\tweak DynamicText.self-alignment-X #LEFT \pdimD
 	d2 g,)
 	c1
-	f,1\pp\>
-	f(
+	<<f,1\pp {s2. s4\>} >>
+	f1(
 % Bars 166 to 170
 	fis2)\! r2
 	R1*5
@@ -174,7 +174,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 171 to 175
 	\mark \default
-	r4 b-.\mf^\arco r e-.
+	r4 b-.\mf-\tweak X-offset #-4.5 ^\arco r e-.
 	r d-. r f!-.
 	r e-. r a-.
 	r g-. r g,4\p~
@@ -204,7 +204,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 196 to 200
 	
-	g2^\arco\f b
+	g2-\tweak X-offset #-6 ^\arco\f b
 	e4-! a,-! r2
 	g2 d'
 	g4-! g-! r2
@@ -244,7 +244,7 @@ musicKontrabassMvtI = \relative c' {
 	\mark \default
 	R1*2
 	
-	r2 r4 r8 cis\pp^\pizz
+	r2 r4 r8 cis\pp-\tweak X-offset #-5 ^\pizz
 	d ees r bes c! d r d
 % Bars 246 to 250
 	g,8 r r4 r2
@@ -262,8 +262,8 @@ musicKontrabassMvtI = \relative c' {
 	ees r r  des
 	ces\ff r r ces
 	ees4\sf r r2
-	ees4\sf r r8 ees'\ff-.^\arco des-. c-.
-	bes4 ges2 bes4
+	ees4\sf r r8 \clef tenor ees'\ff-.-\tweak X-offset #-6 ^\arco des-. c-.
+	bes4 \clef bass ges2 bes4
 % Bars 261 to 265
 	ges ees2 ges4
 	bes,4-!\sf r r2

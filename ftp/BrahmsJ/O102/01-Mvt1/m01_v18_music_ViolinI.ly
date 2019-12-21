@@ -54,7 +54,7 @@ musicViolinIMvtI = \relative c''' {
 	}
 	a4.\ff-\tweak X-offset #1.5 ^\tutti g8 e4 r
 	f4. e8 a,4 r
-	\times 2/3 {b-. c-. d-.} d4.-> a8
+	\times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->

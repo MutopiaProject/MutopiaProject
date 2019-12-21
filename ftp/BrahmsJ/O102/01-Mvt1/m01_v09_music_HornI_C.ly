@@ -41,7 +41,7 @@ musicHornIMvtI = \relative c'' {
 	
 % Bars 56 to 60
 	\mark \default
-	c'4.\f bes8 c4 r
+	c'4.-\tweak X-offset #-2 \f bes8 c4 r
 	f4. e8 f4 r
 	R1
 	r2 \partcombineApartOnce c4. \partcombineApartOnce c8
@@ -53,7 +53,7 @@ musicHornIMvtI = \relative c'' {
 	r2 r4 \partcombineApart c
 % Bars 66 to 70
 	des2 c \partcombineAutomatic
-	g->\ff d'->
+	g->-\tweak X-offset #-3.7 \ff d'->
 	g,-> ees'->
 	\partcombineChords ees f \partcombineAutomatic
 	g, g
@@ -67,7 +67,7 @@ musicHornIMvtI = \relative c'' {
 	bes'-! r bes-! r
 	c-! r r2 
 	R1 \mark \default
-	ees4\f ees2 ees4~
+	\once \override CombineTextScript.X-offset = #-4 ees4\f ees2 ees4~
 	ees r r2
 % Bars 81 to 85
 	ees4 ees2 ees4~
@@ -88,18 +88,18 @@ musicHornIMvtI = \relative c'' {
 % Bars 96 to 100
 	r2 r4 f~
 	f f2 f4~
-	f f~ f8 r r4
+	f f~ f8-. r r4
 	r f2 f4~
 	f8 r r4 r2
 % Bars 101 to 105
 	R1
 	\partcombineApart b,2 c4-. \partcombineAutomatic r
-	e2\sf f4-. r
+	e2-\tweak X-offset #-1 \sf f4-. r
 	r2 r4 f(
 	ees des) c2
 % Bars 106 to 110
 	b2(\sf c4-.) r
-	e2(\sf f4-.) r
+	e2(-\tweak X-offset #-1 \sf f4-.) r
 	r2 f4-. e-.
 	r f-. e-. r
 	f-. r f-. r
@@ -154,7 +154,7 @@ musicHornIMvtI = \relative c'' {
 	r c-. r c-. r c-. r4 \mark \default
 	R1*2
 	
-	\partcombineChords g'8-. g4 g8( f) \partcombineAutomatic f4 f8(
+	\partcombineChords g'8-.-\tweak X-offset #-2 \f g4 g8( f) \partcombineAutomatic f4 f8(
 % Bars 196 to 200
 	e2)( ees4) r
 	\partcombineChords g8 g4 g8( f) \partcombineAutomatic f4 f8(
@@ -175,7 +175,7 @@ musicHornIMvtI = \relative c'' {
 	r ees,2\sf ees4-.
 % Bars 211 to 215
 	R1
-	r2 r4 fis\sf~
+	r2 r4 fis-\tweak X-offset #-1 \sf~
 	fis fis-. r \partcombineChords ees'~
 	ees ees~ ees8-. \partcombineAutomatic r r4
 	r \partcombineChords ees2 ees4~

@@ -100,7 +100,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 96 to 100
 	r2 r4 f~
 	f f2 f4~
-	f f~ f8 r r4
+	f f~ f8-. r r4
 	r f2 f4~
 	f8 r r4 r2
 % Bars 101 to 105

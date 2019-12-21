@@ -91,7 +91,7 @@ musicKontrabassMvtI = \relative c' {
 	bes4-! bes,-! r2
 	c4-! r r2
 	r r4 f,\f\>( \mark \default
-	f'8) r f,4(\> f'8)\! r f,4(
+	f'8)\! r f,4(\> f'8)\! r f,4(
 % Bars 91 to 95
 	f'4) e8 d e c f,4(\>
 	f'8)\! r f,4(\> f'8)\! r f,4(

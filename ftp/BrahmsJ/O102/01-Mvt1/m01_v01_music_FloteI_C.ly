@@ -5,15 +5,14 @@
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
 musicFloteIMvtI = \relative c''' {
-	\override Hairpin.to-barline = ##f
 	\clef treble
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4.\fmarcD d8 b4 r
+	e4._\fmarc d8 b4 r
 	c4. b8 e,4 r
-	\times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
-	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. }
+	\tupletUp \times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
+	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. } \tupletNeutral
 	R1^\fermataMarkup
 % Bars 6 to 10
 	R1*22
@@ -42,19 +41,19 @@ musicFloteIMvtI = \relative c''' {
 	
 % Bars 56 to 60
 	\mark \default
-	a4.\ff g8 e4 r
+	a4.-\tweak X-offset #-2 \ff g8 e4 r
 	f4. e8 c4 r
-	\times 2/3 {b-. c-. d-.} c4.-> a8
+	\tupletUp \once \override CombineTextScript.X-offset = #-3 \times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->
 	e'2.-> \partcombineApart c4
 	b2-> a-> \partcombineAutomatic
 	g'2.-> g4
-	\times 2/3 {a2 f4} \times 2/3 {g2 e4}
+	\times 2/3 {a2 f4} \times 2/3 {g2 e4} \tupletNeutral
 % Bars 66 to 70
 	f2 e
-	dis\ff-> dis->
+	dis-\tweak X-offset #-3.7 \ff-> dis->
 	e-> e->
 	e fis
 	b, a
@@ -98,7 +97,7 @@ musicFloteIMvtI = \relative c''' {
 	R1
 	dis2( e4-.) r
 	gis2( a4-.) r
-	r2 r4 \shape #'((0 . 0.5) (0 . 0 ) (0 . 1) (3.5 . -2)) Slur a(
+	r2 r4 a(
 	g! f e2)
 % Bars 106 to 110
 	r2 gis,8(\sf\> a b c)\!
@@ -135,7 +134,7 @@ musicFloteIMvtI = \relative c''' {
 	c,2\pp( ees_\dimmarkup
 % Bars 141 to 145
 	g1
-	fis \mark \default
+	fis \once \override Score.RehearsalMark.X-offset = #0 \mark \default
 	g4) r r2
 	R1*2
 	
@@ -184,7 +183,7 @@ musicFloteIMvtI = \relative c''' {
 	\mark \default
 	R1*2
 	
-	b8\f-. b4 b8( a) a4 a8\<(
+	b8-\tweak X-offset #-1 \f-. b4 b8( a) a4 a8\<(
 % Bars 196 to 200
 	aes2\>)( g4)\! r
 	b8 b4 b8( a!) a4 a8(
@@ -200,12 +199,12 @@ musicFloteIMvtI = \relative c''' {
 % Bars 206 to 210
 	d8) r e4( b8) r c4(
 	d2 g,4) e'(
-	d8) r e4( b8) r \shape #'((0 . -1.2) (0 . 0.5 ) (0 . 0.5) (0 . -1.2)) Slur  c4(
+	d8) r e4( b8) r c4(
 	c'2 g4) e(
 	g-.) f2-> f4~
 % Bars 211 to 215
 	f f2 f4(~
-	f8 e) f4.( cis8) d4\sf(~
+	f8 e) f4.( cis8) d4-\tweak X-offset #-1.5 \sf(~
 	d16 c! bes a) bes4(~ bes16 a g fis) g4~
 	g e'~ e8-. r r4
 	r e2 e4~
@@ -248,7 +247,7 @@ musicFloteIMvtI = \relative c''' {
 % Bars 256 to 260
 	
 	
-	f4._\ffmarc-> ees8 c4 r
+	f4.-\tweak X-offset #-2.5 _\ffmarc-> ees8 c4 r
 	des4.-> c8 f,4 r
 	des'2( bes)
 % Bars 261 to 265

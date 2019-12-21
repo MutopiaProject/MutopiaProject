@@ -41,7 +41,7 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 56 to 60
 	\mark \default
-	c4.\ff d8 c4 r
+	c4.-\tweak X-offset #-2 \ff d8 c4 r
 	a4. gis8 a4 r
 	d4-. b-. c4.-> c8
 	d4. d8 c4. c8
@@ -50,10 +50,10 @@ musicOboeIIMvtI = \relative c'' {
 	e'2. c4
 	b2-> a->
 	g2.-> e'4
-	\times 2/3 {c2 d4} \times 2/3 {b2 c4}
+	\tupletUp \times 2/3 {c2 d4} \times 2/3 {b2 c4} \tupletNeutral
 % Bars 66 to 70
 	a2 a
-	a->\ff a->
+	a->-\tweak X-offset #-3.7 \ff a->
 	g-> g->
 	a a
 	g dis
@@ -95,8 +95,8 @@ musicOboeIIMvtI = \relative c'' {
 	a8-. r r4 r2
 % Bars 101 to 105
 	R1
-	a2(\sf a4-.) r
-	d2(\sf d4-.) r
+	a2(-\tweak X-offset #-1 \sf a4-.) r
+	d2(-\tweak X-offset #-1 \sf d4-.) r
 	r2 r4 f
 	e b c b
 % Bars 106 to 110
@@ -142,7 +142,7 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 171 to 175
 	\mark \default
-	r2 r4 c(\f 
+	r2 r4 \once \override CombineTextScript.X-offset = #-3.5 c(\f 
 	cis-.) d2( a4)
 	r2 r4 f'(
 	fis) g(~ g16 f e d) r4
@@ -165,7 +165,7 @@ musicOboeIIMvtI = \relative c'' {
 	\mark \default
 	R1*2
 	
-	d'8\f-. d4 d8( c) c4 c8(\<
+	d'8-\tweak X-offset #-1 \f-. d4 d8( c) c4 c8(\<
 % Bars 196 to 200
 	c2\>)( b4)\! r
 	f'8 f4 f8( f) f4 f8(
@@ -229,7 +229,7 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	f4.->_\ffmarc ees8  c4 r
+	f4.->-\tweak X-offset #-2.5 _\ffmarc ees8  c4 r
 	des4.-> c8 f,4 r
 	R1*2
 % Bars 261 to 265

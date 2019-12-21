@@ -146,13 +146,13 @@ musicSoloViolinMvtI = \relative c'' {
 	d8) r e4( b8) r c4(\<
 	d2\> g,4)\! e'(
 	d8) r e4( b8) r c4(\<
-	c'1_\dimmarkup\>
+	c'1_\dimD\>
 % Bars 171 to 175
 	g2.)\! <a, a'>4_\fmarc( \mark \default
 	<ais ais'>-.) <b b'>(~ q16 a' g fis) a( g fis e)
 	g( e a, g) fis( a d e fis8) r <d d'>4(
 	<dis dis'>-.) <e e'>(~ q16 d' c b) d( c b a)
-	c( a d, c) b( d g a b8) r b,,16\mf( c d e
+	c( a d, c) b( d g a b8) r b,,16-\tweak X-offset #-2 \mf( c d e
 % Bars 176 to 180
 	f e d cis) d( e f g a g f e) f( a d e
 	f e d a) f( a d e f e d a) b( c d e
@@ -201,7 +201,7 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 221 to 225
 	\times 2/3 {e g c} e8 g c e\!
 	r2 \times 2/3 {b,,2 d4}
-	\times 2/3 {g\< b d} g8 b d g\!
+	\tupletUp \times 2/3 {g\< b d} \tupletNeutral g8 b d g\!
 	R1
 	r2 \times 2/3 {\acciaccatura e,8 e'4-. \acciaccatura fis,8 fis'4-. \acciaccatura g,8 g'4~}
 % Bars 226 to 230
@@ -217,22 +217,22 @@ musicSoloViolinMvtI = \relative c'' {
 	\times 2/3 {b'8( a g} \times 2/3 {cis b ais} \times 2/3 {d cis b)} r4
 	\times 2/3 {g'8( fis e} \times 2/3 {a g fis} \times 2/3 {b a g)} r4
 % Bars 236 to 240
-	\times 2/3 {gis8(_\piup fis eis} \times 2/3 {ais gis fis} \times 2/3 {b ais gis)} r4
+	\times 2/3 {gis8(-\tweak X-offset #-1 _\piup fis eis} \times 2/3 {ais gis fis} \times 2/3 {b ais gis)} r4
 	\times 2/3 {cis8(_\dimmarkup b ais)} r4 \times 2/3 {dis8( cis b)} r4
-	dis8.(_\dolce b16 gis eis ais b) cis8.( ais16 fis dis gis ais)
+	dis8.(-\tweak X-offset #-1 _\dolce b16 gis eis ais b) cis8.( ais16 fis dis gis ais)
 	b8.( gis16 eis cis fis gis) ais8.( fis16 dis b eis fis)
 	gis( eis b cis dis b gis ais b_\dimmarkup gis eis fis gis eis b cis
 % Bars 241 to 245
 	dis8) r r4 r2 \mark \default
 	a''!1\p\startTrillSpan~
 	\afterGrace a2( {gis16[\stopTrillSpan a])} c!4\trill fis,\trill
-	a\trill c,!\trill ees\trill a,\trill^\flat
+	a\trill c,!\trill ees\trill \textPriority #+3000 a,\trill^\flat
 	c\trill( bes\trill) \afterGrace a2\trill( {g16[ a]} 
 % Bars 246 to 250
 	b!8) r r4 r2
 	R1
 	r4 d,\trill f!\trill b,\trill
-	d\trill^\flat c2(\trill b8) r
+	\textPriority #+3000 d\trill^\flat c2(\trill b8) r
 	bes4\f\trill bes'2\trill bes,4\trill
 % Bars 251 to 255
 	bes'\trill \afterGrace bes'2\trill( {a16[ bes]} a8) r
@@ -242,7 +242,7 @@ musicSoloViolinMvtI = \relative c'' {
 	des,4\trill des'2\trill( bes8-.) r
 % Bars 256 to 260
 	bes,4\trill bes'2\trill( ges8-.) r
-	\afterGrace ges'1\ff\trill^\flat( {f16[ ges])}
+	\textPriority #+3000 \afterGrace ges'1-\tweak X-offset #-4 \ff\trill^\flat( {f16[ ges])}
 	f8-. r f16( a,, c f,) f( c' a f'') ges( ges, ees ges,)
 	f''( a,, c f,) f( c' a f'') f8 r r4
 	R1*2

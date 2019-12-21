@@ -100,7 +100,7 @@ musicHornIIMvtI = \relative c' {
 % Bars 96 to 100
 	r2 r4 b~
 	b b2 b4~
-	b b~ b8 r r4
+	b b~ b8-. r r4
 	r b2 b4~
 	b8 r r4 r2
 % Bars 101 to 105
@@ -183,7 +183,7 @@ musicHornIIMvtI = \relative c' {
 	r c-. r c-. r c-. r4 \mark \default
 	R1*2
 	
-	ees8-. ees4 ees8( bes') bes4 bes8(\<
+	ees8-.\f ees4 ees8( bes') bes4 bes8(\<
 % Bars 196 to 200
 	<<d2.) {s4\> s s\!} >> r4
 	ees,8^\tutti ees4 ees8( g) g4 g8(
