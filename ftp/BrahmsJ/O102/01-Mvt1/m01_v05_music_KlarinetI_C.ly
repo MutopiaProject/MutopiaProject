@@ -260,7 +260,7 @@ musicKlarinetIMvtI = \relative c''' {
 	e2( cis)
 % Bars 261 to 265
 	cis( a)
-	ees''!4._\ffmarc des8 bes4 r
+	ees''!4.-\tweak X-offset #-2.5 _\ffmarc des8 bes4 r
 	ces4. bes8 ees,4 r
 	ees-. r ees-. r
 	ces2 des

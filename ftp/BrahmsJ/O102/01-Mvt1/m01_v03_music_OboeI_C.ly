@@ -234,7 +234,7 @@ musicOboeIMvtI = \relative c'' {
 	R1*2
 % Bars 261 to 265
 	
-	c''4._\ffmarc bes8 g4 r
+	c''4.-\tweak X-offset #-3.5 _\ffmarc bes8 g4 r
 	aes4. g8 c,4 r
 	c-. r c-. r
 	c-. f2 des4~

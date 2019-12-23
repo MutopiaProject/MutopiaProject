@@ -225,7 +225,7 @@ musicHornIVMvtI = \relative c'' {
 	R1*2
 % Bars 261 to 265
 	
-	bes4\f-! r r ees-!
+	bes4-\tweak X-offset #-1.9 \f-! r r ees-!
 	bes-! r r2
 	bes4-. r bes-. r
 	ees,-. r r2

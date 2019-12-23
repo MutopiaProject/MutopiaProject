@@ -262,11 +262,11 @@ musicKontrabassMvtI = \relative c' {
 	ees r r  des
 	ces\ff r r ces
 	ees4\sf r r2
-	ees4\sf r r8 \clef tenor ees'\ff-.-\tweak X-offset #-6 ^\arco des-. c-.
+	ees4\sf r r8 \clef tenor ees'\ff-.^\arco des-. c-.
 	bes4 \clef bass ges2 bes4
 % Bars 261 to 265
 	ges ees2 ges4
-	bes,4-!\sf r r2
+	bes,4-!-\tweak X-offset #-2.5 \sf r r2
 	bes4-!\sf r r8 bes'-. aes-. g-.
 	f4-.\sf r g-.\sf r
 	aes_\benmarc-. f-. des'-. bes-.
@@ -290,9 +290,9 @@ musicKontrabassMvtI = \relative c' {
 	e~
 % Bars 281 to 285
 	e
-	e'_\crescmolto
+	e'-\tweak X-offset #3 _\crescmolto
 	e
-	c2. bes4-!\f
+	c2. bes4-!-\tweak X-offset #-2 \f
 	a-! r8 bes'-! a4-! r4
 % Bars 286 to 290
 	r2 a4-!_\crescmarkup r

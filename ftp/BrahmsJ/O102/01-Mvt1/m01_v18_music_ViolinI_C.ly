@@ -268,17 +268,17 @@ musicViolinIMvtI = \relative c''' {
 	fis-! g-! r r8 a'8-!
 	bes_\crescmarkup-! c-! des-! c-! des-! ees-! f-! f,-! 
 % Bars 256 to 260
-	ges-! aes-! bes-! a-! bes-! c-! des-! des,16\ff[ des]
+	ges-! aes-! bes-! a-! bes-! c-! des-! des,16-\tweak X-offset #-2 \ff[ des]
 	ees8:16 f: ges: f: ees: des: ces: bes:
 	<c,! a'!>8-. r q4^\pizz r <c bes'>
-	<c a'> q r8 f'8:16-\tweak X-offset #-6 ^\arco-\tweak X-offset #-4 \ff g!: a:
+	<c a'> q r8 f'8:16^\arco-\tweak X-offset #-4 \ff g!: a:
 	bes: c: des: c: bes: aes: ges: f:
 % Bars 261 to 265
 	ges: aes: bes: aes: ges: f: ees: des:
-	c4\sf-! <e,! g>^\pizz r4 <f des'>
+	c4-\tweak X-offset #-2.5 \sf-! <e,! g>^\pizz r4 <f des'>
 	<e g> q r2
-	\times 2/3 {d'!4\sf-.^\arco e!-. f-.} \times 2/3 {e-.\sf f-. g-.}
-	\times 2/3 {f_\benmarc-. g-. aes-. } \times 2/3 {bes-. c-. des~}
+	\tupletUp \times 2/3 {d'!4\sf-.-\tweak X-offset #-2 ^\arco e!-. f-.} \times 2/3 {e-.\sf f-. g-.}
+	\times 2/3 {f_\benmarc-. g-. aes-. } \times 2/3 {bes-. c-. des~} \tupletNeutral
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
 	\times 2/3 {des,-. ees-. f-.} \times 2/3 {g-. aes-. bes~}
@@ -299,9 +299,9 @@ musicViolinIMvtI = \relative c''' {
 	cis4. d8 b4. c8
 % Bars 281 to 285
 	a1)
-	a_\crescmolto
+	a-\tweak X-offset #3 _\crescmolto
 	c!
-	a2. d4\f-!
+	a2. d4-\tweak X-offset #-2 \f-!
 	e-! r8 d-! e4-! r8 d'-!
 % Bars 286 to 290
 	<a e'>4-!_\crescmarkup r q-! r

@@ -252,7 +252,7 @@ musicFloteIMvtI = \relative c''' {
 	des'2( bes)
 % Bars 261 to 265
 	bes( ges)
-	c4._\ffmarc bes8 g!4 r
+	c4.-\tweak X-offset #-2 _\ffmarc bes8 g!4 r
 	aes4. g8 c,4 r
 	\times 2/3 {d!4-. e-. f-.} \times 2/3 {e-. f-. g-.}
 	\times 2/3 {f-. g-. aes-.} \times 2/3 {bes-. c-. des-.~}
@@ -272,7 +272,7 @@ musicFloteIMvtI = \relative c''' {
 	r cis(_\dimmarkup e) r r b( d) r
 % Bars 281 to 285
 	r a( c!) fis,( a) dis,( fis) r
-	e4-! r r2
+	\once \override CombineTextScript.X-offset = #-3 e4-! r r2
 	R1*3
 	
 	
@@ -280,11 +280,11 @@ musicFloteIMvtI = \relative c''' {
 	a'4-!\ff r e-! r
 	f-! r fis-! r
 	g-! r r2
-	gis4-! r r2 \mark \default
+	gis4-! r r2 \once \override Score.RehearsalMark.X-offset = #-4 \mark \default
 	a4.\ff g!8 e4 r
 % Bars 291 to 295
 	f4. e8 \partcombineApartOnce a,4 r
-	\times 2/3 {b-. c-. d-.} c4.-> a8
+	\once \override CombineTextScript.X-offset = #-3.5 \times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
 	e'2. c4

@@ -270,7 +270,7 @@ musicFagottoIMvtI = \relative c' {
 	bes ges2 bes4
 % Bars 261 to 265
 	ges ees2 ges4
-	bes,1\sf
+	bes,1-\tweak X-offset #-4 \sf
 	bes2~ bes8 bes'-. aes-. g-.
 	f4-. r g-. r
 	aes-. f-. des'-. bes-.

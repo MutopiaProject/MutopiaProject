@@ -260,17 +260,17 @@ musicViolinIIMvtI = \relative c'' {
 	ees'-! c-! r b!-!
 	r8 a'_\crescmarkup-! bes-! a-! bes-! c-! des-! des,-! 
 % Bars 256 to 260
-	ees-. f-. ges-. f-. ges-. a!-. bes-. bes16\ff bes
+	ees-. f-. ges-. f-. ges-. a!-. bes-. bes16-\tweak X-offset #-2 \ff bes
 	ces8:16 des: ees: des: ces: bes: aes: ges:
 	f8-. r f4^\pizz r ges
 	f f r8 a!8:16-\tweak X-offset #-4 \ff^\arco bes: c:
 	des: a'!: bes: aes: ges: f: ees: des:
 % Bars 261 to 265
 	ees: f: ges: f: ees: des: c: bes:
-	<e,! c'>4-!\sf <e c'>^\pizz r <f des'>
+	<e,! c'>4-!-\tweak X-offset #-2.5 \sf <e c'>^\pizz r <f des'>
 	<e c'> q r8 q8:16^\arco <f c'>: <g c>:
 	<aes c>4-.\sf r <bes c>-.\sf r
-	<aes c>-._\benmarc  f'2-> f,4-.
+	<aes c>-.-\tweak X-offset #0.5 _\benmarc  f'2-> f,4-.
 % Bars 266 to 270
 	<bes, g'>-. ees'2-> ees,4-.
 	<des f>-. des'2-> <des, f>4-.
@@ -291,9 +291,9 @@ musicViolinIIMvtI = \relative c'' {
 	r r4 r8 a(
 % Bars 281 to 285
 	c1)
-	cis_\crescmolto
+	cis-\tweak X-offset #3 _\crescmolto
 	c!
-	a2. d4\f-!
+	a2. d4-\tweak X-offset #-2 \f-!
 	cis-! r8 d-! cis4-! r8 d'-!
 % Bars 286 to 290
 	cis4-!_\crescmarkup r <e, c'>-! r

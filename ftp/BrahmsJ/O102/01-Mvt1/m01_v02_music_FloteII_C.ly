@@ -252,7 +252,7 @@ musicFloteIIMvtI = \relative c''' {
 	bes2( des,)
 % Bars 261 to 265
 	ges( bes,)
-	c'4._\ffmarc bes8 g!4 r
+	c'4.-\tweak X-offset #-3 _\ffmarc bes8 g!4 r
 	aes4. g8 c,4 r
 	\times 2/3 {d!4-. e-. f-.} \times 2/3 {e-. f-. g-.}
 	\times 2/3 {f-. g-. aes-.} \times 2/3 {bes-. c-. des-.~}
@@ -272,7 +272,7 @@ musicFloteIIMvtI = \relative c''' {
 	r ais( cis) r r gis( b) r
 % Bars 281 to 285
 	r fis( a) dis,( fis) c!( dis) r
-	e4-! r r2
+	\once \override CombineTextScript.X-offset = #-3 e4-! r r2
 	R1*3
 	
 	
@@ -284,7 +284,7 @@ musicFloteIIMvtI = \relative c''' {
 	c4.\ff d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
-	\times 2/3 {b-. c-. d-.} c4.-> a8
+	\once \override CombineTextScript.X-offset = #-3.5 \times 2/3 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
 	e2. c'4

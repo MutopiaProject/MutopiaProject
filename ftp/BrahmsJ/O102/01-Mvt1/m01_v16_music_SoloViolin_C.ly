@@ -242,7 +242,7 @@ musicSoloViolinMvtI = \relative c'' {
 	des,4\trill des'2\trill( bes8-.) r
 % Bars 256 to 260
 	bes,4\trill bes'2\trill( ges8-.) r
-	\textPriority #+3000 \afterGrace ges'1-\tweak X-offset #-4 \ff\trill^\flat( {f16[ ges])}
+	\textPriority #+3000 \afterGrace ges'1-\tweak X-offset #-4 \ff-\tweak X-offset #-0.5 \trill-\tweak X-offset #1.5 ^\flat( {f16[ ges])}
 	f8-. r f16( a,, c f,) f( c' a f'') ges( ges, ees ges,)
 	f''( a,, c f,) f( c' a f'') f8 r r4
 	R1*2

@@ -291,17 +291,17 @@ musicBratscheMvtI = \relative c'' {
 	c!-! ees-! r d-!
 	R1
 % Bars 256 to 260
-	r2 r4 r8 <bes des>16\ff q
+	r2 r4 r8 <bes des>16-\tweak X-offset #-3.2 \ff q
 	<ces ees>8:16 <des f>: <ees ges>: <des f>: <ces ees>: <bes des>: <aes ces>: <ges bes>:
 	<f a!>8-. r <f a>4^\pizz r <c bes'>
 	<f a> q r8 <a f'>8:16-\tweak X-offset #-4 \ff^\arco <bes g'>: <c a'>:
 	<des bes'>: <a'! c>: <bes des>: <aes c>: <ges bes>: <f aes>: <ees ges>: <des f>:
 % Bars 261 to 265
 	<ees ges>: <f aes>: <ges bes>: <f aes>: <ees ges>: <des f>: <c ees>: <bes des>:
-	<c e!>4\sf-! <c e>^\pizz r <g f'>
+	<c e!>4-\tweak X-offset #-2.5 \sf-! <c e>^\pizz r <g f'>
 	<c e> q r8 c8:16^\arco d: e:
 	c4-.\sf r e-.\sf r
-	f-._\benmarc <c aes'>-. f-. <des bes'>->~
+	f-.-\tweak X-offset #-1 _\benmarc <c aes'>-. f-. <des bes'>->~
 % Bars 266 to 270
 	q q-. <c ees>-. <c aes'>->~
 	q q-. des <bes g'>->~
@@ -322,9 +322,9 @@ musicBratscheMvtI = \relative c'' {
 	ais4. b8 gis4. a8
 % Bars 281 to 285
 	fis2 dis)
-	e1_\crescmolto
+	e1-\tweak X-offset #3 _\crescmolto
 	<c,! a'>
-	e2. d4-!\f
+	e2. d4-!-\tweak X-offset #-2 \f
 	cis-! r8 d'-! a4-! r8 d-!
 % Bars 286 to 290
 	<cis a'>4-!_\crescmarkup r <c a'>-! r

@@ -211,7 +211,7 @@ musicHornIMvtI = \relative c'' {
 	
 % Bars 261 to 265
 	
-	c4-!\f r r ees,-!
+	\once \override CombineTextScript.X-offset = #-7.0 c4-!-\tweak X-offset #-1.8 \f r r ees,-!
 	c'-! r r2
 	R1*6
 % Bars 266 to 270

@@ -295,14 +295,14 @@ musicVioloncellMvtI = \relative c' {
 	ees, ees'2 des4
 	ces\ff ces'2 ces,4
 	ees,1\sf
-	ees2\sf~ ees8 \clef tenor ees''-\tweak X-offset #-2 \ff-.[ des-. c-.] 
+	ees2\sf~ ees8 \clef tenor ees''-\tweak X-offset #-2.7 \ff-.[ des-. c-.] 
 	bes4 \clef bass ges2 bes4
 % Bars 261 to 265
 	ges ees2 ges4
-	bes,4-!\sf r r2
+	bes,4-!-\tweak X-offset #-2.5 \sf r r2
 	bes4-!\sf r r8 bes'-. aes-. g-.
 	f4-.\sf r g-.\sf r
-	aes_\benmarc-. f-. des'-. bes-.
+	aes-\tweak X-offset #-1 _\benmarc-. f-. des'-. bes-.
 % Bars 266 to 270
 	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
 	c des,-. bes'-. g-.
@@ -323,9 +323,9 @@ musicVioloncellMvtI = \relative c' {
 	e~
 % Bars 281 to 285
 	e
-	e'_\crescmolto
+	e'-\tweak X-offset #3 _\crescmolto
 	e
-	c2. bes4-!\f
+	c2. bes4-!-\tweak X-offset #-2 \f
 	a-! r8 bes'-! a4-! r8 bes-!
 % Bars 286 to 290
 	a4-!_\crescmarkup r a-! r

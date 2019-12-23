@@ -261,8 +261,8 @@ musicSoloCelloMvtI = \relative c, {
 	c,!4\trill c'2\trill_\crescmarkup( b8-.) r
 	bes,!4\trill bes'2\trill( des,8)-. r
 % Bars 256 to 260
-	ges,4\trill ges'2\trill^\flat( bes,8-.) r \clef treble
-	\textPriority #+3000 \afterGrace ges''1-\tweak X-offset #-4 \ff\trill^\flat( {f16[ ges])}
+	ges,4\trill \textPriority #+3000 ges'2\trill-\tweak X-offset #2.5 ^\flat( bes,8-.) r \clef treble
+	\textPriority #+3000 \afterGrace ges''1-\tweak X-offset #-4 \ff-\tweak X-offset #-0.5 \trill-\tweak X-offset #1.5 ^\flat( {f16[ ges])}
 	f8-. r \clef bass f,,,16( c' a' f') f( a, c, f,) \stemDown c( c' ees bes') \stemNeutral
 	f,( c' a' f') f( a, c, f,) f8 r r4
 	R1*2
