@@ -296,22 +296,22 @@ musicViolinIIMvtI = \relative c'' {
 	a2. d4-\tweak X-offset #-2 \f-!
 	cis-! r8 d-! cis4-! r8 d'-!
 % Bars 286 to 290
-	cis4-!_\crescmarkup r <e, c'>-! r
+	cis4-!-\tweak X-offset #1 _\crescmarkup r <e, c'>-! r
 	<f a>-! r <d c'>-! r
 	<g, d' b'>-! r r2
 	<e' b' e>4-! r r2 \mark \default
-	<c' a'>4.\ff <d g>8 <c e>4 r
+	<c' a'>4.-\tweak X-offset #0.5 \ff <d g>8 <c e>4 r
 % Bars 291 to 295
 	<a f'>4. <gis e'>8 a4 r
-	\times 2/3 {b4-. c-. d-.} c4. a8
+	\tupletUp \times 2/3 {b4-. c-. d-.} \tupletNeutral c4. a8
 	g4. f8 e4. c'8
 	b2 <a c>
-	\times 2/3 {<e e'>2-> d'4-.} \times 2/3 {c( b) c-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #3.5 \times 2/3 {<e e'>2-> d'4-.} \times 2/3 {c( b) c-.}
 % Bars 296 to 300
 	b2 <a c>
-	\times 2/3 {<c g'>2-> f4-.} \times 2/3 {e( d) e-.}
-	\times 2/3 {a( f) a,-.} \times 2/3 {\stemUp b( g) b,-.}
-	\stemNeutral c2 a
+	\once \override TupletNumber.Y-offset = #4 \times 2/3 {<c g'>2-> f4-.} \times 2/3 {e( d) e-.}
+	\times 2/3 {a( f) a,-.} \times 2/3 {b( g) b,-.}
+	c2 a
 	gis\p gis
 % Bars 301 to 305
 	a a
@@ -341,7 +341,7 @@ musicViolinIIMvtI = \relative c'' {
 	R1*2
 	
 	f4\p r f r
-	fis!(_\dolce^\arco f d) r
+	fis!(_\dolce-\tweak X-offset #-4 ^\arco f d) r
 	f!^\pizz r f r
 % Bars 326 to 330
 	bis,2.(^\arco cis4)
@@ -353,14 +353,14 @@ musicViolinIIMvtI = \relative c'' {
 	gis1\pp~
 	gis2( e')~
 	e( a)~
-	a( fis)_\dimmarkup~
-	fis\>( b,)~
+	a( fis)-\tweak X-offset #0 \dimD\>~
+	fis( b,)~
 % Bars 336 to 340
 	b( cis4)\! r
 	f4\p^\pizz r f r
 	fis!(^\arco f d) r
 	f^\pizz r f r
-	bis,1\pp^\arco(
+	bis,1\pp-\tweak X-offset #-7 ^\arco(
 % Bars 341 to 345
 	cis4) r r2 \mark \default
 	r4 gis'-.\mf r e-.
@@ -372,7 +372,7 @@ musicViolinIIMvtI = \relative c'' {
 	
 	
 	
-	d4\p^\pizz r r2
+	d4\p-\tweak X-offset #2 ^\pizz r r2
 % Bars 351 to 355
 	R1
 	b4 r r2
@@ -383,7 +383,7 @@ musicViolinIIMvtI = \relative c'' {
 	cis4 r b r
 	b r a r
 	a r r2
-	r r4 <cis a'>_\pmarc
+	r r4 <cis a'>-\tweak X-offset #-0.7 _\pmarc
 	r q r a
 % Bars 361 to 365
 	r4 r8 <cis! a'> r q r q\<

@@ -277,11 +277,11 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 % Bars 286 to 290
-	cis'4-!\ff r c-! r
+	cis'4-!-\tweak X-offset #-2 \ff r c-! r
 	a-! r c-! r
 	b-! r r2
 	d4-! r r2 \mark \default
-	c4.\ff d8 c4 r
+	c4.-\tweak X-offset #0.5 \ff d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
 	\once \override CombineTextScript.X-offset = #-3.5 \times 2/3 {b-. c-. d-.} c4.-> a8
@@ -327,7 +327,7 @@ musicFloteIIMvtI = \relative c''' {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 a\f(
+	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
 	ais-.) b2( fis4)
 	r2 r4 d'(
 	dis)-. e4(~ e16 d cis b) d4\fp(~

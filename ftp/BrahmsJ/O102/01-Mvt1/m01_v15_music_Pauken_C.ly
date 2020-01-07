@@ -175,7 +175,7 @@ musicPaukenMvtI = \relative c {
 	
 	
 	\mark \default
-	a,2\ff\trill e'4 r
+	a,2\ff-\tweak X-offset #-0.5 \trill e'4 r
 % Bars 291 to 295
 	a,2\trill a4 r
 	R1*21

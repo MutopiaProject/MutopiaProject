@@ -304,22 +304,22 @@ musicViolinIMvtI = \relative c''' {
 	a2. d4-\tweak X-offset #-2 \f-!
 	e-! r8 d-! e4-! r8 d'-!
 % Bars 286 to 290
-	<a e'>4-!_\crescmarkup r q-! r
+	<a e'>4-!-\tweak X-offset #1 _\crescmarkup r q-! r
 	<a f'>-! r <a fis'>-! r
 	<d, b' g'>-! r r2
 	<d b' gis'>4-! r r2 \mark \default
-	a'''4.\ff g8 e4 r
+	a'''4.-\tweak X-offset #0.5 \ff g8 e4 r
 % Bars 291 to 295
 	f4. e8 a,4 r
-	\times 2/3 {b-. c-. d-.} c4. a8
+	\tupletUp \times 2/3 {b-. c-. d-.} \tupletNeutral c4. a8
 	g4. f8 e4. c'8
 	b2 a
-	\times 2/3 {e'2-> d4-.} \times 2/3 {c( b) c-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #6 \times 2/3 {e'2-> d4-.} \times 2/3 {c( b) c-.}
 % Bars 296 to 300
 	b2 a
-	\times 2/3 {g'2-> f4-.} \times 2/3 {e( d) e-.}
-	\times 2/3 {c( a) f-.} \times 2/3 {d( b) g-.}
-	\times 2/3 {f( e) r} \times 2/3 {e( d) r}
+	\once \override TupletNumber.Y-offset = #7 \times 2/3 {g'2-> f4-.} \times 2/3 {e( d) e-.}
+	\once \override TupletNumber.Y-offset = #6 \times 2/3 {c( a) f-.} \times 2/3 {d( b) g-.}
+	\times 2/3 {f( e) r} \times 2/3 {e( d) r} \tupletNeutral
 	b2\p b
 % Bars 301 to 305
 	c c
@@ -329,7 +329,7 @@ musicViolinIMvtI = \relative c''' {
 	a,4\! r r2
 % Bars 306 to 310
 	R1
-	a8\mf^\pizz c e gis, a4 r
+	a8-\tweak X-offset #0.3 \mf^\pizz c e gis, a4 r
 	aes8\< c f aes a4\f r
 	g8\p bes d fis, g4 r
 	ges8 bes ees ges g4 r
@@ -349,7 +349,7 @@ musicViolinIMvtI = \relative c''' {
 	R1*2
 	
 	b'4\p r b r
-	a2(_\dolce^\arco gis4) r
+	a2(_\dolce-\tweak X-offset #-5 ^\arco gis4) r
 	b^\pizz r b r
 % Bars 326 to 330
 	dis,(^\arco fis! a e)
@@ -361,7 +361,7 @@ musicViolinIMvtI = \relative c''' {
 	cis1\pp(
 	d)(
 	cis)(
-	a)_\dimmarkup~\>
+	a)-\tweak X-offset #0 \dimD\>~
 	a~
 % Bars 336 to 340
 	a2.\! r4
@@ -380,7 +380,7 @@ musicViolinIMvtI = \relative c''' {
 	
 	
 	
-	fis,4\p^\pizz r r2
+	fis,4\p-\tweak X-offset #2 ^\pizz r r2
 % Bars 351 to 355
 	R1
 	g4 r r2
@@ -391,7 +391,7 @@ musicViolinIMvtI = \relative c''' {
 	ais4 r b r
 	gis r a! r
 	fis r r2
-	r r4 cis'!_\pmarc
+	r r4 cis'!-\tweak X-offset #-0.7 _\pmarc
 	r a r cis,
 % Bars 361 to 365
 	r r8 cis'8 r cis r a\<

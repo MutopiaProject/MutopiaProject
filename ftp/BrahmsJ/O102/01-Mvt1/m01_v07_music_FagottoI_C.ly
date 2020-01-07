@@ -291,21 +291,21 @@ musicFagottoIMvtI = \relative c' {
 	a2) r
 	R1
 % Bars 286 to 290
-	cis4\ff-! r \partcombineChordsOnce c-! r
+	cis4-\tweak X-offset #-2 \ff-! r \partcombineChordsOnce c-! r
 	a-! r \partcombineChordsOnce c-! r
 	\partcombineChordsOnce b-! r r2
 	e,4-! r r2 \mark \default
-	a,4.\ff b8 c4 r
+	a,4.-\tweak X-offset #0.5 \ff b8 c4 r
 % Bars 291 to 295
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\times 2/3 {e2 d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \times 2/3 {e2 d!4-.} \times 2/3 {c( b) a-.}
 % Bars 296 to 300
 	d2 dis
 	\times 2/3 {e2 d!4} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4}
+	\times 2/3 {f2 d4} \times 2/3 {g2 e4} \tupletNeutral
 	a2 \partcombineApartOnce f,
 	R1*5
 % Bars 301 to 305
@@ -328,7 +328,7 @@ musicFagottoIMvtI = \relative c' {
 	gis4.\> a8\! b2)
 % Bars 316 to 320
 	R1^\gp
-	a1~_\pp
+	a1~-\tweak X-offset #-1.5 _\pp
 	a~
 	a~_\dimmarkup
 	a2 gis2~
@@ -343,7 +343,7 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 a\f(
+	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
 	ais-.) b2( fis4)
 	r2 r4 \clef tenor d'(
 	dis)-. e4(~ e16 d cis b) fis'4(~\fp

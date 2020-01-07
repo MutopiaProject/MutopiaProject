@@ -251,11 +251,11 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 281 to 285
 	
 % Bars 286 to 290
-	cis'4\ff-! r c-! r
+	cis'4-\tweak X-offset #-2 \ff-! r c-! r
 	a-! r c-! r
 	b-! r r2
 	d4-! r r2 \mark \default
-	c4.\ff d8 c4 r
+	c4.-\tweak X-offset #0.5 \ff d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
 	d4-. b-. c4.-> c8
@@ -297,7 +297,7 @@ musicOboeIIMvtI = \relative c'' {
 	dis)-. e(~ e16 d cis b) r4
 % Bars 346 to 350
 	R1
-	r2 r4 d4~
+	r2 r4 d4~-\tweak X-offset #0.5 \p
 	d8 cis d4. ais8 b4~
 	b r4 r2
 	R1

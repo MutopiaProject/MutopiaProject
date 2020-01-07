@@ -231,7 +231,7 @@ musicHornIMvtI = \relative c'' {
 	bes-! r bes-! r
 	g-! r r2
 	c4-! r r2 \mark \default
-	c4.\ff bes8 c4 r
+	c4.-\tweak X-offset #0.5 \ff bes8 c4 r
 % Bars 291 to 295
 	f4. e8 f4 r
 	R1
@@ -256,7 +256,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 316 to 320
 	R1^\gp
 	c'1\pp~
-	<< c( {s4 s8 s\< s4 s\!}>>
+	<< c( {s4 s8 s_\< s4 s8 s\!}>>
 	b1)(_\dimmarkup
 	bes)~
 % Bars 321 to 325

@@ -246,11 +246,11 @@ musicHornIVMvtI = \relative c'' {
 	r2 r4 c-.
 	g'-. r8 c,-. g'4-. r8 c
 % Bars 286 to 290
-	g4-!\ff r g,-! r
+	g4-!-\tweak X-offset #0.5 \ff r g,-! r
 	c-! r c-! r
 	c-! r r2
 	c'4-! r r2 \mark \default
-	g4.\ff c8 d4 r
+	g4.-\tweak X-offset #0.5 \ff c8 d4 r
 % Bars 291 to 295
 	g,4. fis8 g4 r
 	c4-. a-. bes4.-> bes8
@@ -276,12 +276,12 @@ musicHornIVMvtI = \relative c'' {
 % Bars 316 to 320
 	R1^\gp
 	g,1\pp~
-	g2(\< g')~\!
+	g2(-\tweak X-offset #2 \< g')~\!
 	g1~_\dimmarkup
 	g2\> fis~
 % Bars 321 to 325
 	fis4\! r r2
-	r2 r4 g_\pdolce(
+	r2 r4 g-\tweak X-offset #-8 _\pdolce(
 	c8) r g4( c8) r g4(
 	g,) r r g'( 
 	c8) r g4( c8) r g4(

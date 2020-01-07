@@ -231,7 +231,7 @@ musicHornIIMvtI = \relative c' {
 	bes-! r bes-! r
 	g-! r r2
 	c,4-! r r2 \mark \default
-	c4.\ff ees8 c4 r
+	c4.-\tweak X-offset #0.5 \ff ees8 c4 r
 % Bars 291 to 295
 	bes'4. bes8 des4 r
 	R1
@@ -258,7 +258,7 @@ musicHornIIMvtI = \relative c' {
 	R1*2
 	
 	g1(
-	c,)~\>
+	<< c,)~ {s8 \once \override Hairpin.extra-offset = #'(0 . 3) s\> s4 s s8 s\!} >>
 % Bars 321 to 325
 	c4\! r r2
 	R1*20

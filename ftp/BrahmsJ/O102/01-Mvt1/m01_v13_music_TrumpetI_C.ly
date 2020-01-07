@@ -199,7 +199,7 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 281 to 285
 	
 % Bars 286 to 290
-	g,4-!\f r d'-! r
+	g,4-!-\tweak X-offset #1 \f r d'-! r
 	c-! r c-! r
 	c-! r r2
 	d4-! r r2 \mark \default

@@ -290,11 +290,11 @@ musicFagottoIIMvtI = \relative c {
 	c,2) r
 	R1
 % Bars 286 to 290
-	a'4\ff-! r a,-! r
+	a'4-\tweak X-offset #-2 \ff-! r a,-! r
 	d-! r d,-! r
 	g-! r r2
 	e4-! r r2 \mark \default
-	a4.\ff b8 c4 r
+	a4.-\tweak X-offset #0.5 \ff b8 c4 r
 % Bars 291 to 295
 	d4. e8 f4 r
 	g,2 a4. f8
@@ -342,13 +342,13 @@ musicFagottoIIMvtI = \relative c {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 a\f(
+	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
 	ais-.) b2( fis4)
 	r2 r4 \clef tenor d'(
 	dis)-. e4(~ e16 d cis b) d4(~\fp
 % Bars 346 to 350
 	d8 g,) fis4.( e8) d4~
-	d \clef bass b2(\> e4)\!
+	d \clef bass << { b2( e4) } {s16 s\> s8 s s s\! s} >>
 	R1*5
 % Bars 351 to 355
 	

@@ -285,11 +285,11 @@ musicKlarinetIMvtI = \relative c''' {
 	c2) r
 	R1
 % Bars 286 to 290
-	g'4-!\ff r g-! r
+	g'4-!-\tweak X-offset #-2 \ff r g-! r
 	aes-! r a-! r
 	f-! r r2
 	f4-! r r2 \mark \default
-	g4.\ff f8 bes4 r
+	g4.-\tweak X-offset #0.5 \ff f8 bes4 r
 % Bars 291 to 295
 	c,4. f8 ees4 r
 	f-. d-. ees4.-> c8
@@ -343,7 +343,7 @@ musicKlarinetIMvtI = \relative c''' {
 	r2 r4 a4(\fp~
 % Bars 346 to 350
 	a8 e) f4.( cis8) d4~
-	d c!2\>( b4)\!
+	d << { c!2( b4) } {s16 s\> s8 s s s\! s} >>
 	R1*3
 	
 	

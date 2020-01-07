@@ -276,7 +276,7 @@ musicSoloViolinMvtI = \relative c'' {
 	a e fis gis a b c d e a, b c d e f! g!
 	a e fis gis a e f g a e fis gis a e f g
 % Bars 286 to 290
-	a4-!\ff <a, a'>-! r <a, c e'>-!
+	a4-!-\tweak X-offset #-2 \ff <a, a'>-! r <a, c e'>-!
 	r <d, f' f'>-! r <d a'' fis'>-!
 	r <g, b' g' g'>-! r2
 	r4 <e' b' gis' gis'> r2 \mark \default
@@ -288,13 +288,13 @@ musicSoloViolinMvtI = \relative c'' {
 	
 	
 	
-	<d' d'>4._\fespr d,8( \times 4/6 {f8 d' gis b d, e,)}
+	<d' d'>4._\fespr \shape #'((0 . -2)(0 . 1)(0 . 1.5)(0 . -0.5)) Slur d,8( \tupletUp \tuplet 3/2 4 {f8 d' gis b d, e,)}
 % Bars 301 to 305
-	c4. a'8( \times 4/6 {f a c a' c, e,)}
-	d4. c'8( \times 4/6 {b d b' d d, d,)}
+	c4. \shape #'((-0.5 . 1.5)(0 . 0)(2 . 0)(0 . 0.5)) Slur a'8( \tuplet 3/2 4 {f a c a' c, e,)}
+	d4. \shape #'((0 . 1.5)(0 . -0.5)(0 . -0.5)(0 . 1.5)) Slur c'8( \tuplet 3/2 4 {b d b' d d, d,)}
 	c2. a'4(
 	c,2. b4)
-	\times 2/3 {a8\f c f} \times 2/3 {e c gis} \times 2/3 {a c g'!} \times 2/3 {f c gis!}
+	\times 2/3 {a8\f c f} \times 2/3 {e c gis} \times 2/3 {a c g'!} \times 2/3 {f c gis!} \tupletNeutral
 % Bars 306 to 310
 	\times 2/3 {a\< c g'!} \times 2/3 {fis a c} \times 2/3 {gis'\> d b} \times 2/3 {gis d b\!}
 	a4 r \times 2/3 {a8\< c g'!} \times 2/3 {f\> c g\!}
@@ -306,7 +306,7 @@ musicSoloViolinMvtI = \relative c'' {
 	\times 2/3 {a'_\dimmarkup fis dis} a8 r \times 2/3 {a fis dis} a r \bar "||" \key a \major \mark \default
 	\times 2/3 {e'''8(_\pdolce d! b} \times 2/3 {e, d b)} \times 2/3 {e( d b} \times 2/3 {e, d b)}
 	r2 r4 \times 2/3 {e8( b' d}
-	\times 2/3 {e d b} \times 2/3 {e, b' d} \times 2/3 {e\> d b} \times 2/3 {e, b' d)\!}
+	\times 2/3 {e d b} \times 2/3 {e, b' d} \tupletUp \times 2/3 {e\> d b} \tupletNeutral \times 2/3 {e, b' d)\!}
 % Bars 316 to 320
 	R1^\gp
 	r2 \times 2/3 {a,8( e' g!} \times 2/3 {a e' g!)}
@@ -315,7 +315,7 @@ musicSoloViolinMvtI = \relative c'' {
 	\times 2/3 {e(_\dimmarkup d! b} \times 2/3 {e, fis b} \times 2/3 {e d b} \times 2/3 {gis fis e)}
 % Bars 321 to 325
 	R1
-	r2 r4 cis''_\dolce(
+	r2 r4 cis''-\tweak X-offset #-2 _\dolce(
 	b8) r cis4( gis8) r a4(\<
 	b2\> e,4)\! cis'(
 	b8) r cis4( gis8) r a4(\<
@@ -332,7 +332,7 @@ musicSoloViolinMvtI = \relative c'' {
 	fis4_\dimmarkup e! d cis
 	b) r r cis(
 % Bars 336 to 340
-	b) r4 \times 2/3 {r8^\legg e,,_\dolce( a } \times 2/3 {e' a cis}
+	b) r4 \times 2/3 {r8-\tweak X-offset #-2.5 ^\legg e,,_\dolce( a } \times 2/3 {e' a cis}
 	\times 2/3 {d a f)} \times 2/3 {e( a cis} \times 2/3 {b f d)} \times 2/3 {cis( e a}
 	\times 2/3 {fis! dis a)} \times 2/3 {d( f a} \times 2/3 {d, b gis)} \times 2/3 {e'( a cis}
 	\times 2/3 {d a f)} \times 2/3 {e( a cis} \times 2/3 {b f d)} \times 2/3 {cis(\< e a)}
@@ -358,7 +358,7 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 356 to 360
 	ais'( e cis ais e8) r b''16( fis dis b fis8) r
 	gis'16( d! b gis d8) r a''!16( e cis a e8) r
-	fis'16(_\dimmarkup c a\> c a fis a fis c fis c a c dis fis a
+	fis'16(\dimD\> c a c a fis a fis c fis c a c dis fis a
 	c8)\! r r4 r <e e'>8-.\f^\benmarc <a cis!>-.
 	<cis, a'>-. <a' cis>-. <cis, a'>-. <a cis>-. <cis e>-. <a cis>-. <cis, a'>-. <a' cis>-.
 % Bars 361 to 365

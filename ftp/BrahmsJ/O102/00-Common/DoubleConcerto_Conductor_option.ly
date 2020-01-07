@@ -32,7 +32,7 @@ conductorOptionsHorn = {
 		\override Hairpin.to-barline = ##f
 		\RemoveEmptyStaves
 		\override VerticalAxisGroup.remove-first = ##t
-		\override TupletNumber.avoid-slur = #'around
+		\override TupletNumber.avoid-slur = #'ignore
 		%\override TupletBracket.padding = 0.8
 	}
 	#(layout-set-staff-size 13)

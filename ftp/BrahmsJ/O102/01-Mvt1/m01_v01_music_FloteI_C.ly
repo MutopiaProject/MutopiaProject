@@ -277,11 +277,11 @@ musicFloteIMvtI = \relative c''' {
 	
 	
 % Bars 286 to 290
-	a'4-!\ff r e-! r
+	a'4-!-\tweak X-offset #-2 \ff r e-! r
 	f-! r fis-! r
 	g-! r r2
 	gis4-! r r2 \once \override Score.RehearsalMark.X-offset = #-4 \mark \default
-	a4.\ff g!8 e4 r
+	a4.-\tweak X-offset #0.5 \ff g!8 e4 r
 % Bars 291 to 295
 	f4. e8 \partcombineApartOnce a,4 r
 	\once \override CombineTextScript.X-offset = #-3.5 \times 2/3 {b-. c-. d-.} c4.-> a8
@@ -297,12 +297,12 @@ musicFloteIMvtI = \relative c''' {
 	
 	
 	
-	\partcombineApart r4 e,-.\p r f-. \partcombineAutomatic 
+	\partcombineApart r4 e,-. -\tweak X-offset #-1 \p r f-. \partcombineAutomatic 
 % Bars 306 to 310
 	r \partcombineApart fis-. gis-. \partcombineAutomatic r
-	\partcombineApart r e-.\p r f-. \partcombineAutomatic 
+	\partcombineApart r e-.-\tweak X-offset #-1 \p r f-. \partcombineAutomatic 
 	r f-.\< a-.\sf r
-	\partcombineApart r d,-.\p r ees-. \partcombineAutomatic 
+	\partcombineApart r d,-.-\tweak X-offset #-1 \p r ees-. \partcombineAutomatic 
 	r ees-.\< bes'-.\sf r
 % Bars 311 to 315
 	r \partcombineApartOnce a-. dis2\fp\>~
@@ -327,7 +327,7 @@ musicFloteIMvtI = \relative c''' {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 a\f(
+	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
 	ais-.) b2( fis4)
 	r2 r4 d'(
 	dis)-. e4(~ e16 d cis b) fis'4\fp(~

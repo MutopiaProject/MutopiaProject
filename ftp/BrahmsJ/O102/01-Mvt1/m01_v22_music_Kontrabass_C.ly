@@ -305,11 +305,11 @@ musicKontrabassMvtI = \relative c' {
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #6 \times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4}
+	\once \override TupletNumber.Y-offset = #6 \times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
+	\times 2/3 {f2 d4} \times 2/3 {g2 e4} \tupletNeutral
 	a2 f,
 	e\p e'
 % Bars 301 to 305
@@ -346,7 +346,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 341 to 345
 	\mark \default
-	r4 gis,-.\mf^\arco r cis-.
+	r4 gis,-.\mf-\tweak X-offset #-4 ^\arco r cis-.
 	r b-. r d-.
 	r cis-. r fis-.
 	r e-. r e,\p~
@@ -355,7 +355,7 @@ musicKontrabassMvtI = \relative c' {
 	e
 	e_\dimmarkup~
 	e
-	e4\p^\pizz r r2
+	e4\p-\tweak X-offset #2 ^\pizz r r2
 % Bars 351 to 355
 	R1
 	a4 r r2

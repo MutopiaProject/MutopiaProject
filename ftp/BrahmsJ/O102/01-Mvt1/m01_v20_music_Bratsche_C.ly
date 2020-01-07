@@ -327,21 +327,21 @@ musicBratscheMvtI = \relative c'' {
 	e2. d4-!-\tweak X-offset #-2 \f
 	cis-! r8 d'-! a4-! r8 d-!
 % Bars 286 to 290
-	<cis a'>4-!_\crescmarkup r <c a'>-! r
+	<cis a'>4-!-\tweak X-offset #1 _\crescmarkup r <c a'>-! r
 	<d a'>-! r <c a'>-! r
 	<b g'>-! r r2
 	<d e>4-! r r2 \mark \default 
-	<c e>4.:16\ff <g d'>16 q <e' g>4 r
+	<c e>4.:16-\tweak X-offset #0.5 \ff <g d'>16 q <e' g>4 r
 % Bars 291 to 295
 	<a, f'>4.:16 <d gis>16 q <c a'>4 r
 	<f d'>-. <f b>-. <f c'>4. q8
 	<d d'>4. <d b'>8 <e g>4. <e c'>8
 	<d f>2 <c fis>
-	\times 2/3 {<e, e'>2-> d'4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #3.5 \times 2/3 {<e, e'>2-> d'4-.} \times 2/3 {c( b) a-.}
 % Bars 296 to 300
 	<d f>2 <c fis>
 	\times 2/3 {<c g'>2-> f!4-.} \times 2/3 {e( d) g-.}
-	\times 2/3 {a( c,) f-.} \times 2/3 {g( d) e-.}
+	\times 2/3 {a( c,) f-.} \times 2/3 {g( d) e-.} \tupletNeutral
 	a,2 f
 	d\p d
 % Bars 301 to 305
@@ -364,7 +364,7 @@ musicBratscheMvtI = \relative c'' {
 	
 % Bars 316 to 320
 	R1^\gp
-	cis'4.(_\espressivo_\pdolce^\arco b8 e,2) 
+	cis'4.(_\espressivo_\pdolce-\tweak X-offset #-5 ^\arco b8 e,2) 
 	r4 r8 cis'(\< b4. e,8
 	cis'4.\> b8 fis4. cis'8
 	b4. fis8 b4.\! gis8
@@ -372,10 +372,10 @@ musicBratscheMvtI = \relative c'' {
 	e4. d8\< b4. gis8
 	fis2.\> e4)
 	d'4\p^\pizz r d r
-	dis(_\dolce^\arco d b) r
+	dis(_\dolce-\tweak X-offset #-5 ^\arco d b) r
 	d^\pizz r d r
 % Bars 326 to 330
-	r2 r4  \times 2/3 {g,8(^\arco\> cis g')\!} 
+	r2 r4  \times 2/3 {g,8(-\tweak X-offset #-3 ^\arco\> cis g')\!} 
 	r4 \times 2/3 {fis,8(\> cis' f)\!} r4 \times 2/3 {e,8(\> ais cis)\!}
 	r4 \times 2/3 {d,8( fis b)} r4 \times 2/3 {fis8( b fis')}
 	r4 \times 2/3 {fis,8( a b)} r4 \times 2/3 {fis8( a dis)}
@@ -384,14 +384,14 @@ musicBratscheMvtI = \relative c'' {
 	eis1\pp(
 	e!2)( gis)
 	g1(
-	fis)_\dimmarkup\>~
+	fis)-\tweak X-offset #0 \dimD\>~
 	fis~
 % Bars 336 to 340
 	fis2( e4)\! r
 	d'^\pizz\p r d r
 	dis(^\arco d b) r
 	d^\pizz r d r
-	a1\pp^\arco~
+	a1\pp-\tweak X-offset #-7 ^\arco~
 % Bars 341 to 345
 	a4 r r2 \mark \default
 	r4 dis-.\mf r e-.
@@ -403,7 +403,7 @@ musicBratscheMvtI = \relative c'' {
 	
 	
 	
-	b,4^\pizz\p r r2
+	b,4-\tweak X-offset #2 ^\pizz\p r r2
 % Bars 351 to 355
 	R1
 	e,4 r r2
@@ -414,7 +414,7 @@ musicBratscheMvtI = \relative c'' {
 	e4 r dis r
 	d! r cis r
 	c r r2
-	r r4 e_\pmarc
+	r r4 e-\tweak X-offset #-0.7 _\pmarc
 	eis fis cis d
 % Bars 361 to 365
 	dis e!8 eis fis cis\< d! dis

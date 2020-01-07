@@ -246,11 +246,11 @@ musicHornIIIMvtI = \relative c'' {
 	r2 r4 c-._\mfcresc
 	g'-. r8 c,-. g'4-. r8 \partcombineApartOnce c,-.
 % Bars 286 to 290
-	g'4-!\ff r g,-! r
+	g'4-!-\tweak X-offset #0.5 \ff r g,-! r
 	g-! r g-! r
 	c-! r r2
 	d4-! r r2 \mark \default
-	g4.\ff f8 f4 r
+	g4.-\tweak X-offset #0.5 \ff f8 f4 r
 % Bars 291 to 295
 	ees4. d8 bes4 r
 	ees4-. ees-. ees4.-> g8

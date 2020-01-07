@@ -308,12 +308,12 @@ musicSoloCelloMvtI = \relative c, {
 	
 	
 	
-	\times 2/3 {e8(\f\< b' e} \times 2/3 {gis b d)} f4.(\> e8)
+	\tupletDown \times 2/3 {e8(\f\< b' e} \tupletNeutral \times 2/3 {gis b d)} f4.(\> e8)
 % Bars 301 to 305
-	\times 2/3 {e,,8(\< c' e} \times 2/3 {a c dis)} f4.(\> e8)
+	\tupletDown \times 2/3 {e,,8(\< c' e} \times 2/3 {a c dis)} f4.(\> e8)
 	\times 2/3 {fis,,8(\< d' a'} \clef tenor \times 2/3 {d a' c)} b4.\>( d,8)
 	\times 2/3 {c8(\< e a} \times 2/3 {c, a e)} \clef bass \times 2/3 {a(\> c fis} \times 2/3 {c a dis,)\!}
-	e2 d!
+	e2 d! \tupletNeutral
 	c4 r r2
 % Bars 306 to 310
 	R1
@@ -378,7 +378,7 @@ musicSoloCelloMvtI = \relative c, {
 % Bars 356 to 360
 	r4 cis,16( e ais cis dis8) r dis,16( fis b dis
 	b8) r b,16( d! gis b cis8) r cis,16( e  a cis)
-	c(_\dimmarkup a c\> a fis a fis a fis c fis c a c a fis
+	c(\dimD\> a c a fis a fis a fis c fis c a c a fis
 	dis fis a c dis8)\! r r4 e,16-.\f^\benmarc e'-. r8
 	eis,16-. eis'-. r8 fis,16-. fis'-. r8 cis,16-. cis'-. r8 d,16-. d'-. r8
 % Bars 361 to 365

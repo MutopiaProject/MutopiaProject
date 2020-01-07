@@ -251,11 +251,11 @@ musicOboeIMvtI = \relative c'' {
 % Bars 281 to 285
 	
 % Bars 286 to 290
-	a'4\ff-! r e-! r
+	a'4-\tweak X-offset #-2 \ff-! r e-! r
 	f-! r fis-! r
 	g-! r r2
 	gis4-! r r2 \mark \default
-	a4.\ff g!8 e4 r
+	a4.-\tweak X-offset #0.5 \ff g!8 e4 r
 % Bars 291 to 295
 	f4. e8 \partcombineApartOnce a,4 r
 	f'4-. f-. f4.-> a8
@@ -297,9 +297,9 @@ musicOboeIMvtI = \relative c'' {
 	dis)-. e(~ e16 d cis b) r4
 % Bars 346 to 350
 	R1
-	r2 r4 \partcombineApart fis'4(~
+	r2 r4 \partcombineApart \shape #'((0 . -3)(0 . -1.5)(0 . 0)(0 . 0)) Slur fis'4(~
 	fis8 cis) d4.( ais8) b4~
-	b^\dimmarkup  b2 a!4\pp~
+	b-\tweak X-offset #1.8 ^\dimmarkup  b2 a!4-\tweak X-offset #-2 \pp~
 	a1~(
 % Bars 351 to 355
 	a2 gis) \partcombineAutomatic
