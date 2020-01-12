@@ -392,7 +392,7 @@ musicViolinIIMvtI = \relative c'' {
 	R1*2
 	
 % Bars 366 to 370
-	r4 r8 ais(\f^\arco b cis d cis) \mark \default
+	r4 r8 ais(\f-\tweak X-offset #-6 ^\arco b cis d cis) \mark \default
 	gis'16( d gis d b d gis d) fis( d fis d b d fis d)
 	eis( cis b cis \times 2/3 {eis8-!) eis-! fis-!} \times 2/3 {d-! cis-! gis-!} \times 2/3 {fis-! a-! cis-!}
 	b'16( gis b gis d gis b gis) a( fis a fis d fis a fis)
@@ -402,13 +402,13 @@ musicViolinIIMvtI = \relative c'' {
 	g( e d e \times 2/3 {g8-!) g-! g-!} \times 2/3 {fis-! g-! bis,-!} \times 2/3 {cis-! fis,-! g-!}
 	g'16( e cis e \times 2/3 {g8-.) e-! fis-!} \times 2/3 {cis-! d-! ais-!} \times 2/3 {b-! g-! fis-!}
 	\times 2/3 {dis-! e-! fis-!} \times 2/3 {a-! bis-! cis-!} \times 2/3 {dis-! e-! fis-!} \times 2/3 {a-! bis-! cis-!} 
-	cis16( a e cis) a'( e cis a) cis( a e cis) e'4->(_\fbenmarc
+	cis16( a e cis) a'( e cis a) cis( a e cis) e'4->(-\tweak X-offset #1 _\fbenmarc
 % Bars 376 to 380
 	dis16 b fis dis) e'4->( d16 b f d) <e cis'>4(
 	<dis b'>8) q4 q8( <d b'>4) e'4(
 	dis16 b fis dis) e'4( d16 b f d) cis'4(
 	dis\< e8\> fis) e4\! fis(
-	fisis-!) gis2\sf gis,,16( a b cis
+	fisis-!) gis2-\tweak X-offset #-1.5 \sf gis,,16( a b cis
 % Bars 381 to 385
 	d cis b ais) b( cis d e fis e d cis) d( fis b cis
 	d b fis e) d( fis b cis d b fis d) cis( d e fis

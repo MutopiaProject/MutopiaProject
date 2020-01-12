@@ -403,7 +403,7 @@ musicFloteIIMvtI = \relative c''' {
 	cis-.) b2-> b4~
 % Bars 381 to 385
 	b b2 b4~(
-	b8 ais) b4.( fis'8) g4(~
+	b8 ais) b4.( fis'8) g4(~\sf
 	g16 a! g fis) g4(~ g16 fis e dis) e4(
 	cis) cis~ cis8-. r r4
 	r d2 d4~

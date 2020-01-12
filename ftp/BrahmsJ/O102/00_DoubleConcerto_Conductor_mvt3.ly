@@ -22,8 +22,8 @@
 \include "./00-Common/DoubleConcerto_timeMvt.ly"
 \include "./00-Common/DoubleConcerto_Conductor_option.ly"
 \include "./00-Common/DoubleConcerto_StaffName.ly"
-%\include "./00-Common/DoubleConcerto_Format_Cond_Mvt3.ly"
-\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_Format_Cond_Mvt3.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \include "./03-Mvt3/m03_v01_music_FloteI_C.ly"
 \include "./03-Mvt3/m03_v02_music_FloteII_C.ly"
 \include "./03-Mvt3/m03_v03_music_OboeI_C.ly"
@@ -66,9 +66,9 @@
 		<<
 			\new StaffGroup <<
 				\new Staff <<
-					\new Voice {
-						\displayFilterVoice 
-					}
+%					\new Voice {
+%						\displayFilterVoice 
+%					}
 					\new Voice {
 						\formatConductorMvtIII
 					}

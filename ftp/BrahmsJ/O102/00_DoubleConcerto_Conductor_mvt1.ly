@@ -22,8 +22,8 @@
 \include "./00-Common/DoubleConcerto_Conductor_option.ly"
 \include "./00-Common/DoubleConcerto_StaffName.ly"
 \include "./00-Common/DoubleConcerto_markup.ly"
-%\include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ly"
-\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ly"
+%\include "./00-Common/DoubleConcerto_Format_temp.ly"
 \include "./01-Mvt1/m01_v01_music_FloteI_C.ly"
 \include "./01-Mvt1/m01_v02_music_FloteII_C.ly"
 \include "./01-Mvt1/m01_v03_music_OboeI_C.ly"
@@ -68,9 +68,6 @@
 				\new Staff <<
 					\new Voice {
 						\formatConductorMvtI
-					}
-					\new Voice {
-						\displayFilterVoice
 					}
 					\new Voice {
 						\timeMvtI \generalOptions \conductorOptions
@@ -169,13 +166,6 @@
 			breakbefore = ##t
 		}
 		\layout {
-%			system-count = #80
-%			\context {
-%				\Staff
-%				\override TupletBracket #'bracket-visibility = ##f
-%				\override Hairpin.to-barline = ##f
-%				\RemoveEmptyStaves
-%			}
 		}
 	}
 }

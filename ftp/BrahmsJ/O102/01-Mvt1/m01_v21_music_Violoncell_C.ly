@@ -425,7 +425,7 @@ musicVioloncellMvtI = \relative c' {
 	
 % Bars 366 to 370
 	\mark \default
-	e2\f^\arco gis
+	e2\f-\tweak X-offset #-6 ^\arco gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2
@@ -440,7 +440,7 @@ musicVioloncellMvtI = \relative c' {
 	a4 gis8 fis gis e a,16( cis e a
 	a,8) r a16( cis e a a,8) r a16( cis e a)
 	fis4 e8 dis e a, a'4(
-	a,-!) <e' d'>2\sf gis,16( a b cis
+	a,-!) <e' d'>2-\tweak X-offset #-1.5 \sf gis,16( a b cis
 % Bars 381 to 385
 	d cis b ais) b( cis d e fis e d cis) d( fis b cis
 	d b fis e) d( fis b cis d b fis d) a4~
@@ -449,7 +449,7 @@ musicVioloncellMvtI = \relative c' {
 	r gis2 gis4~
 % Bars 386 to 390
 	gis8-. r r4 r a->
-	e-> c-> a-> c,-> \bar "||" \key a \minor \mark \default
+	e-> c-> a-> c,-\tweak X-offset #1 -> \bar "||" \key a \minor \mark \default
 	b'2\ff c4 r8 b'-.
 	c4-. r8 b,-. c4-. r
 	e,2 f4 r8 e'-.

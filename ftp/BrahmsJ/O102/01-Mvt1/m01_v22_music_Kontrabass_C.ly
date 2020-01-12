@@ -376,7 +376,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 366 to 370
 	\mark \default
-	e,2\f^\arco gis
+	e,2\f-\tweak X-offset #-6 ^\arco gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2
@@ -391,7 +391,7 @@ musicKontrabassMvtI = \relative c' {
 	a'4) gis8 fis gis e a,4(
 	a'8) r a,4( a'8) r a,4(
 	fis'4) e8 dis e a, a'4(
-	a,-!) e2\sf e'4~
+	a,-!) e2-\tweak X-offset #-1.5 \sf e'4~
 % Bars 381 to 385
 	e e2 e4~
 	e e2 a,4~

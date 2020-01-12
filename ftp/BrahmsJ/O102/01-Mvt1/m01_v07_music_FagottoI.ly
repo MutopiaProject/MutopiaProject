@@ -425,7 +425,7 @@ musicFagottoIMvtI = \relative c' {
 % Bars 386 to 390
 	gis8-. r r4 r a->
 	e'-> c-> a-> c,-> \bar "||" \key a \minor \mark \default
-	b2 c4 r8 b'-.
+	b2\ff c4 r8 b'-.
 	c4-. r8 b,-. c4-. r
 	e2 f4 r8 e-.
 % Bars 391 to 395

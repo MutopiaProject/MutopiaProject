@@ -249,30 +249,30 @@ musicTrumpetIIMvtI = \relative c'' {
 	\mark \default
 	R1*2
 	
-	c2\f c
+	c2-\tweak X-offset #-2.5 \f c
 	c4-! c-! r2
 % Bars 371 to 375
 	c2 c
 	c'4-! g-! r2
 	d'4 r r c
 	r g-. r2
-	r2 r4 g,\f~
+	r2 r4 g,-\tweak X-offset #-2.5 \f~
 % Bars 376 to 380
 	g8 r g4~ g8 r g4~
 	g8 r r4 r g4~
 	g8 r g4~ g8 r g4~
 	g8 r r4 r2
-	r4 c'2\sf c4-. 
+	r4 c'2-\tweak X-offset #-2.0 \sf c4-. 
 % Bars 381 to 385
 	R1
-	r2 r4 g,\sf~
+	r2 r4 g,-\tweak X-offset #-3.5 \sf~
 	g g-. r g'\f~
 	g g~ g8 r r4
 	r c,2 c4~
 % Bars 386 to 390
 	c8-. r r4 r2
 	R1 \bar "||" \mark \default
-	g'2\sf d'4-. r
+	g'2-\tweak X-offset #-3 \sf d'4-. r
 	d-. r d-. r
 	c,2 g4-. r
 % Bars 391 to 395
@@ -292,7 +292,7 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 421 to 425
 	
 % Bars 426 to 430
-	r4 g,-.\f r g-.
+	r4 \once \override CombineTextScript.X-offset = #-3.5 g,-.\f r g-.
 	r d'-. r d-.
 	g,-. r g-. r
 	g-. r c,-. c-.

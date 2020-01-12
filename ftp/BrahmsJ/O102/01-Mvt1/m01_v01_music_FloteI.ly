@@ -404,7 +404,7 @@ musicFloteIMvtI = \relative c''' {
 	e-.) d2-> d4~
 % Bars 381 to 385
 	d d2 d4~(
-	d8 cis) d4.( ais'8) b4(~
+	d8 cis) d4.( ais'8) b4(~\sf
 	b16 a! gis fis) gis4(~ gis16 fis e dis) e4~
 	e e~ e8-. r r4
 	r f2 f4~

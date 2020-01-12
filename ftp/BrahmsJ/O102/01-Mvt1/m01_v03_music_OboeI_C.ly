@@ -333,16 +333,16 @@ musicOboeIMvtI = \relative c'' {
 	e-.) d2-> d4~
 % Bars 381 to 385
 	d d2 d4(~
-	d8 cis) d4.( ais'8) b4\sf~(
+	d8 cis) d4.( ais'8) b4-\tweak X-offset #-2 \sf~(
 	b16 a! g fis) g4(~ g16 fis e dis) e4~
 	e e~ e8-. r r4
 	r f2 f4~
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \mark \default \bar "||" \key a \minor
-	dis2\ff\trill e8( c b a)
+	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(-2 . 0.5)  dis2\ff\trill e8( c b a)
 	g4 r8 dis'-. e4-. r4
-	gis2\trill a8( f e d)
+	\once \override CombineTextScript.X-offset = #-4.5 gis2\trill a8( f e d)
 % Bars 391 to 395
 	c4 r8 gis'-. a4-. r
 	R1

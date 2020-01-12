@@ -373,16 +373,16 @@ musicFloteIMvtI = \relative c''' {
 	e-.) d2-> d4~
 % Bars 381 to 385
 	d d2 d4~(
-	d8 cis) d4.( ais'8) b4(~
+	d8 cis) d4.( ais'8) b4(~-\tweak X-offset #-2 \sf
 	b16 a! g fis) g4(~ g16 fis e dis) e4~
 	e e~ e8-. r r4
 	r f2 f4~
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \bar "||" \key a \minor \mark \default
-	dis2\ff\trill e8( c b a)
+	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(0 . 2) dis2\ff\trill e8( c b a)
 	g4 r8 dis'-. e4-. r
-	gis2\trill a8( f e d)
+	\once \override CombineTextScript.X-offset = #-4.5 gis2\trill a8( f e d)
 % Bars 391 to 395
 	c4 r8 gis'-. a4-. r
 	R1
@@ -393,7 +393,7 @@ musicFloteIMvtI = \relative c''' {
 	R1*6
 % Bars 401 to 405
 	
-	c,2(\pp des
+	c,2(-\tweak X-offset #-3 \pp des
 	d! ees)
 	f( ges
 	g! aes)~

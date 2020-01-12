@@ -424,7 +424,7 @@ musicBratscheMvtI = \relative c'' {
 	
 % Bars 366 to 370
 	\mark \default
-	b''16\f^\arco( gis b gis d gis b gis) b( fis b fis d fis b fis)
+	b''16\f-\tweak X-offset #-6 ^\arco( gis b gis d gis b gis) b( fis b fis d fis b fis)
 	b( gis cis, gis' \times 2/3 {b8-!) b-! cis-!} \times 2/3 {gis-! a-! eis-! } \times 2/3 {fis-! fis-! a-!} 
 	d16( b d b gis b d b) d( a d a fis a d a)
 	d( b f b d e,) cis' cis d8:16 e: fis!: e:
@@ -439,7 +439,7 @@ musicBratscheMvtI = \relative c'' {
 	fis!\< gis8\> a)\! e r a4(
 	fis16 dis b fis') a4( f16 d b f') e4(
 	<b a'>8) q4 q8( <cis a'>) q4 q8(
-	<e cis'>4-!) <d b'>2\sf q4~
+	<e cis'>4-!) <d b'>2-\tweak X-offset #-2.0 \sf q4~
 % Bars 381 to 385
 	q <d fis>2 d'4(~
 	d8 cis) d4.( fis,8) <g b>4(~

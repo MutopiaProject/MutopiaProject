@@ -308,22 +308,22 @@ musicHornIIMvtI = \relative c' {
 	g2 c,4) r
 	r2 r4 a'(
 	g2 c,4) r
-	r c2\sf c4-.
+	r c2-\tweak X-offset #-1.5 \sf c4-.
 % Bars 381 to 385
 	R1
-	r2 r4 c'\sf~
+	r2 r4 c'-\tweak X-offset #-2 \sf~
 	c c-. r a\f~
 	a a~ a8 r r4
 	r g,2 g4~
 % Bars 386 to 390
 	g8 r r4 r2
 	R1 \bar "||" \mark \default
-	g2\sf c4 r8 g'
+	g2-\tweak X-offset #-3.5 \sf c4 r8 g'
 	c,4-. r8 g' c,4-. r
 	e'2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r
-	c,8\f c4 c c c8~
+	c,8-\tweak X-offset #-0.4 \f c4 c c c8~
 	c c4 c c c8~
 	c c4 c c c8~
 	c4 c2 c4-.

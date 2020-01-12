@@ -223,17 +223,17 @@ musicPaukenMvtI = \relative c {
 	a2\startTrillSpan e'4\stopTrillSpan r
 	a,16\> a a a\! r4 a16\> a a a\! r4
 	a2\startTrillSpan a4\stopTrillSpan r
-	r e'2\sf\startTrillSpan e8-.\stopTrillSpan r
+	r e'2-\tweak X-offset #-2.5 \sf\startTrillSpan e8-.\stopTrillSpan r
 % Bars 381 to 385
 	R1
-	r2 r4 a,\sf\startTrillSpan~
+	r2 r4 a,-\tweak X-offset #-2 \sf\startTrillSpan~
 	a a8-.\stopTrillSpan r r4 a\startTrillSpan~
 	a\stopTrillSpan a\startTrillSpan~ a8-.\stopTrillSpan r r4
 	r << e'2 {s4\startTrillSpan s\stopTrillSpan} >> e4\startTrillSpan
 % Bars 386 to 390
 	e8-.\stopTrillSpan r r4 r2
 	R1 \bar "||" \mark \default
-	a,2\sf\trill e'4 r8 a,-.
+	a,2-\tweak X-offset #-3.5 \sf\trill e'4 r8 a,-.
 	e'4-. r8 a,-. e'4-. r
 	e2\trill a,4 r8 e'-.
 % Bars 391 to 395
@@ -256,7 +256,7 @@ musicPaukenMvtI = \relative c {
 % Bars 421 to 425
 	
 % Bars 426 to 430
-	r4 a-.\f r a-.
+	r4 a-.-\tweak X-offset #-1.5 \f r a-.
 	r e'-. r e-.
 	a,-. r a-. r
 	a-. r r2

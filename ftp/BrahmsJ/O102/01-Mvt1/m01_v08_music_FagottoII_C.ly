@@ -388,19 +388,19 @@ musicFagottoIIMvtI = \relative c {
 	a,-.) e2-> e4~
 % Bars 381 to 385
 	e e2 e4~
-	e \clef tenor b''4.( ais8) b4(~\sf
+	e \clef tenor b''4.( ais8) b4(~-\tweak X-offset #-2 \sf
 	b16 a g fis) g4(~ g16 fis e dis) e4~
 	e \clef bass a,~ a8-. r r4
 	r gis2 gis4~
 % Bars 386 to 390
 	gis8-. r r4 r a'
-	e-> c-> a-> c,-> \bar "||" \key a \minor \mark \default
-	b2 c4 r8 b'-.
+	e-> c-> a-> c,-\tweak X-offset #1 -> \bar "||" \key a \minor \mark \default
+	b2-\tweak X-offset #-4 \ff c4 r8 b'-.
 	c4-. r8 b c4 r
 	e,2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	e''(\f d b) c( b e,) e e~
+	\once \override CombineTextScript.X-offset = #0.5 e''(\f d b) c( b e,) e e~
 	e e4 e e e8~
 	e e4 e e e8~
 	e4 e2 e4-.
@@ -431,7 +431,7 @@ musicFagottoIIMvtI = \relative c {
 	
 	
 	
-	r2 r4 a'\f
+	r2 r4 a'-\tweak X-offset #-2 \f
 % Bars 426 to 430
 	d,,2 b
 	c e

@@ -338,14 +338,14 @@ musicHornIIIMvtI = \relative c'' {
 	r \partcombineApart c2 c4-. \partcombineAutomatic
 % Bars 381 to 385
 	R1
-	r2 r4 g\sf~
+	r2 r4 g-\tweak X-offset #-3.5 \sf~
 	g g-. r f'\f~
 	f f~ f8 r r4
 	r c2 c4~
 % Bars 386 to 390
 	c8-. r r4 r2
 	R1 \bar "||" \mark \default
-	g'2\sf f4 r8 g-.
+	g'2-\tweak X-offset #-3.5 \sf f4 r8 g-.
 	f4-. r8 g8-. f4-. r
 	c!2 bes4 r8 c-.
 % Bars 391 to 395

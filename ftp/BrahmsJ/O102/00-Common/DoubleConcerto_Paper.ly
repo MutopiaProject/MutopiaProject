@@ -60,11 +60,11 @@
 			\null
 		}
 	}
-%	oddFooterMarkup = \markup {
-%		\column {
-%			\fill-line {
-%				\on-the-fly #(on-page 1) \fromproperty #'header:copyright
-%			}
-%		}
-%	}
+	oddFooterMarkup = \markup {
+		\column {
+			\fill-line {
+				\on-the-fly #(on-page 1) \fromproperty #'header:copyright
+			}
+		}
+	}
 }

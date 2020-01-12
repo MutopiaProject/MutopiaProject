@@ -389,19 +389,19 @@ musicFagottoIMvtI = \relative c' {
 	a,-.) e2-> gis4~
 % Bars 381 to 385
 	gis b2 d4~
-	d \clef tenor d'4.( fis8) g4(~\sf
+	d \clef tenor d'4.( fis8) g4(~-\tweak X-offset #-2 \sf
 	g16 a g fis) g4(~ g16 fis e dis) e4(
 	cis) \clef bass a~ a8-. r r4
 	r gis2 gis4~
 % Bars 386 to 390
 	gis8-. r r4 r \partcombineApartOnce a->
-	e'-> c-> a-> c,-> \bar "||" \key a \minor \mark \default
-	b2 c4 r8 b'-.
+	e'-> c-> a-> c,-\tweak X-offset #1 -> \bar "||" \key a \minor \mark \default
+	b2-\tweak X-offset #-4 \ff c4 r8 b'-.
 	c4-. r8 \partcombineApartOnce b,-. \partcombineApartOnce c4-. r
 	e2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	e'(\f d b) c( b e,) e e~
+	\once \override CombineTextScript.X-offset = #0.5 e'(\f d b) c( b e,) e e~
 	e e4 e e e8~
 	e e4 e e e8~
 	e4 e2 e4-.

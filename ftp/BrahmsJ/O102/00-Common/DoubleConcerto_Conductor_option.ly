@@ -31,7 +31,7 @@ conductorOptionsHorn = {
 		\override TupletBracket #'bracket-visibility = ##f
 		\override Hairpin.to-barline = ##f
 		\RemoveEmptyStaves
-		\override VerticalAxisGroup.remove-first = ##t
+		%\override VerticalAxisGroup.remove-first = ##t
 		\override TupletNumber.avoid-slur = #'ignore
 		%\override TupletBracket.padding = 0.8
 	}
