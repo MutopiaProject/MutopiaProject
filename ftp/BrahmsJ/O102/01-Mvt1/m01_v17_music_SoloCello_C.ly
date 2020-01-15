@@ -182,7 +182,7 @@ musicSoloCelloMvtI = \relative c, {
 	f e d cis) d( e f g a g f e) f( a d e
 	f e d a) f( a d e f e d a) \clef tenor b( c d e
 	f e d cis) d( e f g a g f e) \clef bass d( a f e
-	d_\dimmarkup e f a) d(\> a f e d e f a) d( a f d)\!
+	d-\tweak X-offset #0 \dimD\> e f a) d( a f e d e f a) d( a f d)\!
 	g,8 r r4 r \shape #'((0 . -2)(0 . -1)(0 . 0)(0 . 0)) Slur a'16(_\plegg g f d
 % Bars 181 to 185
 	g, d' f g a8) r r2
@@ -193,7 +193,7 @@ musicSoloCelloMvtI = \relative c, {
 % Bars 186 to 190
 	r4 e,16( g cis e fis8) r fis,16( a d fis
 	f!8) r d,16( f! b d e8) r e,16( g c e)
-	ees( c ees c a_\dimmarkup c a c a\> ees a ees c ees c ees)
+	ees( c ees c a-\tweak X-offset #0 \dimD\> c a c a ees a ees c ees c ees)
 	c( a c a fis8)\! r r4 g16-.\fbenmarcD g'-. r8
 	gis,16-. gis'-. r8 a,16-. a'-. r8 e,16-. e'-. r8 f,16-. f'-. r8
 % Bars 191 to 195

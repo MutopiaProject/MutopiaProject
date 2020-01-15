@@ -50,7 +50,7 @@ s1*10  \break
 s1*7  \pageBreak
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 5)
-      (alignment-distances . (10 10 10 9 9 9 12 10 12 11 9)))
+      (alignment-distances . (10 10 10 9 9 9 12 11 12 11 9)))
 s1*6  \break
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 145)
@@ -106,7 +106,7 @@ s1*5  \break
 s1*5  \pageBreak
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 5)
-      (alignment-distances . (9 10 9 9 10 13 12 11 8 8 8)))
+      (alignment-distances . (9 11 9 9 10 13 12 11 8 8 8)))
 s1*5  \break
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 135)
@@ -114,11 +114,11 @@ s1*5  \break
 s1*6  \pageBreak
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 5)
-      (alignment-distances . (9 10 12 11 8 9 9 11)))
+      (alignment-distances . (9 10 13 12 8 9 9 11)))
 s1*8  \break
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 120)
-      (alignment-distances . (12 11 9 11 11 11 8 9 10 10)))
+      (alignment-distances . (12 11 9 12 11 12 8 9 11 11)))
 s1*9  \pageBreak
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 5)
@@ -130,7 +130,7 @@ s1*5  \break
 s1*4  \pageBreak
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 5)
-      (alignment-distances . (10 9 10 14 11 12 9 9 10 9)))
+      (alignment-distances . (10 9 10 15 11 12 9 9 10 9)))
 s1*4  \break
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
     #'((Y-offset . 130)
@@ -273,7 +273,7 @@ s1*4  \break
       (alignment-distances . (9 9 12 12 12 10 10 10 10)))
 s1*5  \pageBreak
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
-    #'((Y-offset . 3)
+    #'((Y-offset . 4)
       (alignment-distances . (9 10 9 9 10 15 10 11 9 9 9 9)))
 s1*5  \break
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
@@ -289,7 +289,7 @@ s1*4  \break
       (alignment-distances . (10 9 9 9 10 8 10 12 9 9 9 9)))
 s1*4  \pageBreak
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
-    #'((Y-offset . 3)
+    #'((Y-offset . 4)
       (alignment-distances . (9 10 10 9 9 9 10 11 8 12 8 8)))
 s1*4  \break
 \overrideProperty Score.NonMusicalPaperColumn.line-break-system-details

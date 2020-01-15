@@ -126,7 +126,7 @@ musicOboeIMvtI = \relative c'' {
 % Bars 141 to 145
 	R
 	R \mark \default
-	\partcombineAutomatic g4._\espressivo\pdolceD( f8 d2)
+	\partcombineAutomatic g4._\espressivo-\tweak X-offset #0 \pdolceD( f8 d2)
 	r4 r8 g(_\< f4. d8
 	g4._\> f8 d2)\!
 % Bars 146 to 150

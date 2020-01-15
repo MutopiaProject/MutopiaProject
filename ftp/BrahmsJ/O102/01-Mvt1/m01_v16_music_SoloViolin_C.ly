@@ -157,7 +157,7 @@ musicSoloViolinMvtI = \relative c'' {
 	f e d cis) d( e f g a g f e) f( a d e
 	f e d a) f( a d e f e d a) b( c d e
 	f e d cis) d( e f g a g f e) f( a d e
-	f_\dimmarkup e d a) f(\> a d e f e d a) f( a d f\!)
+	f-\tweak X-offset #0 \dimD\> e d a) f( a d e f e d a) f( a d f\!)
 	a(_\plegg g f d a g f d a g f d a8) r
 % Bars 181 to 185
 	r4 a16( d f g a d f g a g f d)
@@ -168,7 +168,7 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 186 to 190
 	cis'( g e cis g8) r d''16( a fis d a8) r
 	b'16( f! d b f8) r c''!16( g e c b8) r
-	a'16( ees c ees c_\dimmarkup a c a ees\> a ees c ees c a c)\!
+	a'16( ees c ees c-\tweak X-offset #0 \dimD\> a c a ees a ees c ees c a c)\!
 	a8 r r4 r_\fbenmarc <g'' g'>8-.-> <c e!>-.
 	<e, c'>-.-> <c' e>-. <e, c'>-.-> <c e>-. <e g>-.-> <c e>-. <e, c'>-.-> <c' e>-.
 % Bars 191 to 195
