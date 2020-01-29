@@ -60,7 +60,7 @@ musicFagottoIMvtI = \relative c' {
 	\times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
 	d2-> dis->
 	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 bes,4} \times 2/3 {e2 a,4}
+	\times 2/3 {f2 b,4} \times 2/3 {e2 a,4}
 % Bars 66 to 70
 	d2 c
 	b8\ff\<-. dis-. fis-. a-. c4.\>( b8)

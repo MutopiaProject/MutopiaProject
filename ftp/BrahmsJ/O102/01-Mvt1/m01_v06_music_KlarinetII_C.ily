@@ -7,7 +7,7 @@
 musicKlarinetIIMvtI = \relative c''' {
 	\clef treble
 	\key c \minor
-%	\transposition a
+	\transposition a
 % Bars 1 to 5
 	g4._\fmarc f8 d4 r
 	ees4. d8 g,4 r

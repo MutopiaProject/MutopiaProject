@@ -258,7 +258,7 @@ musicFloteIMvtI = \relative c''' {
 	\times 2/3 {f-. g-. aes-.} \times 2/3 {bes-. c-. des-.~}
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
-	\times 2/3 {des,-. e-. f-.} \times 2/3 {g-. aes-. bes-.~}
+	\times 2/3 {des,-. ees-. f-.} \times 2/3 {g-. aes-. bes-.~}
 	bes c,-. aes'-. f-.
 	des-. r r2 \mark #11
 	R1*9

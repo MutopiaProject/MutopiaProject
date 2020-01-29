@@ -50,7 +50,7 @@ musicFagottoIIMvtI = \relative c {
 	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
 	d2-> dis->
 	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c-.}
-	\times 2/3 {f,2 bes4} \times 2/3 {e,2 a4} \tupletNeutral
+	\times 2/3 {f,2 b4} \times 2/3 {e,2 a4} \tupletNeutral
 % Bars 66 to 70
 	d,2 c'
 	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-. c4.\>( b8)

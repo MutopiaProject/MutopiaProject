@@ -1,5 +1,5 @@
 % Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part05_Horn.ly
+% Fichier :      00_DoubleConcerto_Part05_Horn.ily
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                           S E C T I O N  P A P E R                          #
@@ -56,25 +56,25 @@
 		}
 	}
 }
-\include "./00-Common/DoubleConcerto_timeMvt.ly"
-\include "./00-Common/DoubleConcerto_Parts_option.ly"
-\include "./00-Common/DoubleConcerto_VoiceName.ly"
-\include "./00-Common/DoubleConcerto_markup.ly"
-\include "./00-Common/DoubleConcerto_cueVoice.ly"
-\include "./01-Mvt1/m01_v09_music_HornI.ly"
-\include "./02-Mvt2/m02_v09_music_HornI.ly"
-\include "./03-Mvt3/m03_v09_music_HornI.ly"
-\include "./01-Mvt1/m01_v10_music_HornII.ly"
-\include "./02-Mvt2/m02_v10_music_HornII.ly"
-\include "./03-Mvt3/m03_v10_music_HornII.ly"
-\include "./01-Mvt1/m01_v11_music_HornIII.ly"
-\include "./02-Mvt2/m02_v11_music_HornIII.ly"
-\include "./03-Mvt3/m03_v11_music_HornIII.ly"
-\include "./01-Mvt1/m01_v12_music_HornIV.ly"
-\include "./02-Mvt2/m02_v12_music_HornIV.ly"
-\include "./03-Mvt3/m03_v12_music_HornIV.ly"
-\include "./00-Common/DoubleConcerto_Format_Part05_Horn.ly"
-%\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_timeMvt.ily"
+\include "./00-Common/DoubleConcerto_Parts_option.ily"
+\include "./00-Common/DoubleConcerto_VoiceName.ily"
+\include "./00-Common/DoubleConcerto_markup.ily"
+\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./01-Mvt1/m01_v09_music_HornI.ily"
+\include "./02-Mvt2/m02_v09_music_HornI.ily"
+\include "./03-Mvt3/m03_v09_music_HornI.ily"
+\include "./01-Mvt1/m01_v10_music_HornII.ily"
+\include "./02-Mvt2/m02_v10_music_HornII.ily"
+\include "./03-Mvt3/m03_v10_music_HornII.ily"
+\include "./01-Mvt1/m01_v11_music_HornIII.ily"
+\include "./02-Mvt2/m02_v11_music_HornIII.ily"
+\include "./03-Mvt3/m03_v11_music_HornIII.ily"
+\include "./01-Mvt1/m01_v12_music_HornIV.ily"
+\include "./02-Mvt2/m02_v12_music_HornIV.ily"
+\include "./03-Mvt3/m03_v12_music_HornIV.ily"
+\include "./00-Common/DoubleConcerto_Format_Part05_Horn.ily"
+%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 \addQuote "cueVoiceHrnImI" { \cueVoiceHrnImI }
 \addQuote "cueVoiceHrnImII" { \cueVoiceHrnImII }
 \addQuote "cueVoiceHrnImIII" { \cueVoiceHrnImIII }

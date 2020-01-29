@@ -1,5 +1,5 @@
 % Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part14_Kontrabass.ly
+% Fichier :      00_DoubleConcerto_Part14_Kontrabass.ily
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                           S E C T I O N  P A P E R                          #
@@ -56,16 +56,16 @@
 		}
 	}
 }
-\include "./00-Common/DoubleConcerto_timeMvt.ly"
-\include "./00-Common/DoubleConcerto_Parts_option.ly"
-\include "./00-Common/DoubleConcerto_VoiceName.ly"
-\include "./00-Common/DoubleConcerto_markup.ly"
-\include "./00-Common/DoubleConcerto_cueVoice.ly"
-\include "./01-Mvt1/m01_v22_music_Kontrabass.ly"
-\include "./02-Mvt2/m02_v22_music_Kontrabass.ly"
-\include "./03-Mvt3/m03_v22_music_Kontrabass.ly"
-\include "./00-Common/DoubleConcerto_Format_Part14_Kontrabass.ly"
-%\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_timeMvt.ily"
+\include "./00-Common/DoubleConcerto_Parts_option.ily"
+\include "./00-Common/DoubleConcerto_VoiceName.ily"
+\include "./00-Common/DoubleConcerto_markup.ily"
+\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./01-Mvt1/m01_v22_music_Kontrabass.ily"
+\include "./02-Mvt2/m02_v22_music_Kontrabass.ily"
+\include "./03-Mvt3/m03_v22_music_Kontrabass.ily"
+\include "./00-Common/DoubleConcerto_Format_Part14_Kontrabass.ily"
+%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 \addQuote "cueVoiceKtbmI" { \cueVoiceKtbmI }
 \addQuote "cueVoiceKtbmII" { \cueVoiceKtbmII }
 \addQuote "cueVoiceKtbmIII" { \cueVoiceKtbmIII }

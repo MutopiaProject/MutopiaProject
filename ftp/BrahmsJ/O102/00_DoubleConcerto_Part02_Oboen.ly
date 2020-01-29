@@ -1,5 +1,5 @@
 % Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part02_Oboen.ly
+% Fichier :      00_DoubleConcerto_Part02_Oboen.ily
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                           S E C T I O N  P A P E R                          #
@@ -56,19 +56,19 @@
 		}
 	}
 }
-\include "./00-Common/DoubleConcerto_timeMvt.ly"
-\include "./00-Common/DoubleConcerto_Parts_option.ly"
-\include "./00-Common/DoubleConcerto_VoiceName.ly"
-\include "./00-Common/DoubleConcerto_markup.ly"
-\include "./00-Common/DoubleConcerto_cueVoice.ly"
-\include "./01-Mvt1/m01_v03_music_OboeI.ly"
-\include "./02-Mvt2/m02_v03_music_OboeI.ly"
-\include "./03-Mvt3/m03_v03_music_OboeI.ly"
-\include "./01-Mvt1/m01_v04_music_OboeII.ly"
-\include "./02-Mvt2/m02_v04_music_OboeII.ly"
-\include "./03-Mvt3/m03_v04_music_OboeII.ly"
-\include "./00-Common/DoubleConcerto_Format_Part02_Oboen.ly"
-%\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_timeMvt.ily"
+\include "./00-Common/DoubleConcerto_Parts_option.ily"
+\include "./00-Common/DoubleConcerto_VoiceName.ily"
+\include "./00-Common/DoubleConcerto_markup.ily"
+\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./01-Mvt1/m01_v03_music_OboeI.ily"
+\include "./02-Mvt2/m02_v03_music_OboeI.ily"
+\include "./03-Mvt3/m03_v03_music_OboeI.ily"
+\include "./01-Mvt1/m01_v04_music_OboeII.ily"
+\include "./02-Mvt2/m02_v04_music_OboeII.ily"
+\include "./03-Mvt3/m03_v04_music_OboeII.ily"
+\include "./00-Common/DoubleConcerto_Format_Part02_Oboen.ily"
+%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 \addQuote "cueVoiceOboeImI" { \cueVoiceOboeImI }
 \addQuote "cueVoiceOboeImII" { \cueVoiceOboeImII }
 \addQuote "cueVoiceOboeImIII" { \cueVoiceOboeImIII }

@@ -1,5 +1,5 @@
 % Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part11_ViolinII.ly
+% Fichier :      00_DoubleConcerto_Part11_ViolinII.ily
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                           S E C T I O N  P A P E R                          #
@@ -56,16 +56,16 @@
 		}
 	}
 }
-\include "./00-Common/DoubleConcerto_timeMvt.ly"
-\include "./00-Common/DoubleConcerto_Parts_option.ly"
-\include "./00-Common/DoubleConcerto_VoiceName.ly"
-\include "./00-Common/DoubleConcerto_markup.ly"
-\include "./00-Common/DoubleConcerto_cueVoice.ly"
-\include "./01-Mvt1/m01_v19_music_ViolinII.ly"
-\include "./02-Mvt2/m02_v19_music_ViolinII.ly"
-\include "./03-Mvt3/m03_v19_music_ViolinII.ly"
-\include "./00-Common/DoubleConcerto_Format_Part11_ViolinII.ly"
-%\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_timeMvt.ily"
+\include "./00-Common/DoubleConcerto_Parts_option.ily"
+\include "./00-Common/DoubleConcerto_VoiceName.ily"
+\include "./00-Common/DoubleConcerto_markup.ily"
+\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./01-Mvt1/m01_v19_music_ViolinII.ily"
+\include "./02-Mvt2/m02_v19_music_ViolinII.ily"
+\include "./03-Mvt3/m03_v19_music_ViolinII.ily"
+\include "./00-Common/DoubleConcerto_Format_Part11_ViolinII.ily"
+%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 \addQuote "cueVoiceVlnIImI" { \cueVoiceVlnIImI }
 \addQuote "cueVoiceVlnIImII" { \cueVoiceVlnIImII }
 \addQuote "cueVoiceVlnIImIII" { \cueVoiceVlnIImIII }

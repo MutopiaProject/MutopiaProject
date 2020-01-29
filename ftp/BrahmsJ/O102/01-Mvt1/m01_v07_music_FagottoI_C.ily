@@ -50,7 +50,7 @@ musicFagottoIMvtI = \relative c' {
 	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
 	d2-> dis->
 	\set Staff.aDueText = #"" \times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-. }
-	\times 2/3 {f2 bes,4} \times 2/3 {e2 a,4} \tupletNeutral \unset Staff.aDueText
+	\times 2/3 {f2 b,4} \times 2/3 {e2 a,4} \tupletNeutral \unset Staff.aDueText
 % Bars 66 to 70
 	d2 \partcombineApartOnce c \partcombineUnisono
 	b8-. dis-. fis-. a-. c4.( b8)

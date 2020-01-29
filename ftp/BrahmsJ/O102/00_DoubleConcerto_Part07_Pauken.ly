@@ -1,5 +1,5 @@
 % Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part07_Pauken.ly
+% Fichier :      00_DoubleConcerto_Part07_Pauken.ily
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                           S E C T I O N  P A P E R                          #
@@ -56,15 +56,15 @@
 		}
 	}
 }
-\include "./00-Common/DoubleConcerto_timeMvt.ly"
-\include "./00-Common/DoubleConcerto_Parts_option.ly"
-\include "./00-Common/DoubleConcerto_VoiceName.ly"
-\include "./00-Common/DoubleConcerto_markup.ly"
-\include "./00-Common/DoubleConcerto_cueVoice.ly"
-\include "./01-Mvt1/m01_v15_music_Pauken.ly"
-\include "./03-Mvt3/m03_v15_music_Pauken.ly"
-\include "./00-Common/DoubleConcerto_Format_Part07_Pauken.ly"
-%\include "./00-Common/DoubleConcerto_Format_temp.ly"
+\include "./00-Common/DoubleConcerto_timeMvt.ily"
+\include "./00-Common/DoubleConcerto_Parts_option.ily"
+\include "./00-Common/DoubleConcerto_VoiceName.ily"
+\include "./00-Common/DoubleConcerto_markup.ily"
+\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./01-Mvt1/m01_v15_music_Pauken.ily"
+\include "./03-Mvt3/m03_v15_music_Pauken.ily"
+\include "./00-Common/DoubleConcerto_Format_Part07_Pauken.ily"
+%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 \addQuote "cueVoicePkmI" { \cueVoicePkmI }
 \addQuote "cueVoicePkmIII" { \cueVoicePkmIII }
 %###############################################################################
