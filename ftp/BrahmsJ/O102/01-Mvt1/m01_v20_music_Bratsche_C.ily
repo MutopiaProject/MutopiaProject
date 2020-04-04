@@ -453,7 +453,7 @@ musicBratscheMvtI = \relative c'' {
 	<e g>4-. r8 <fis, dis'>-. <e e'>4-. r4
 	<d'! gis>2:16 <cis a'>4 r8 gis'-.
 % Bars 391 to 395
-	a8( fis e) d-. c( a g) f-.
+	a8( f e) d-. c( a g) f-.
 	e'(_\sempref d b) c( b e,) e'( d
 	b) e'( d b) c( b e,) a(
 	g c,) f( e a,) d( c f,)

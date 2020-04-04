@@ -242,7 +242,7 @@ musicSoloCelloMvtIII = \relative c' {
 % Bars 191 to 195
 	b8) r \clef tenor \tuplet 6/4 4 {b''16( fis d! b d fis}
 	b8) r \tuplet 6/4 4 {dis,,16( fis b dis fis b!}
-	gis8) r \clef bass \tuplet 6/4 4 {e,,16( b' g' b_\dimmarkup e g}
+	fis8) r \clef bass \tuplet 6/4 4 {e,,16( b' g' b_\dimmarkup e g}
 	c,!8) r \tuplet 6/4 4 {g,16( b e g b e}
 	g,8) r \tuplet 6/4 4 {a,16( e' g a cis e}
 % Bars 196 to 200

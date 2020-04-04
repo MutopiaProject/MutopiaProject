@@ -427,7 +427,7 @@ musicViolinIIMvtI = \relative c'' {
 	gis'16(-\tweak X-offset #1 ^\tutti d gis d b d gis d) fis( d fis d b d fis d)
 	eis( cis b cis \times 2/3 {eis8-!) eis-! fis-!} \times 2/3 {d-! cis-! gis-!} \times 2/3 {fis-! a-! cis-!}
 	b'16( gis b gis d gis b gis) a( fis a fis d fis a fis)
-	a( f d f g d) ais' ais b8:16 cis: d: cis:
+	a( f d f gis d) ais' ais b8:16 cis: d: cis:
 % Bars 371 to 375
 	b16( gis b gis d gis b gis) a( fis a fis d fis a fis)
 	g( e d e \times 2/3 {g8-!) g-! g-!} \times 2/3 {fis-! g-! bis,-!} \times 2/3 {cis-! fis,-! g-!}

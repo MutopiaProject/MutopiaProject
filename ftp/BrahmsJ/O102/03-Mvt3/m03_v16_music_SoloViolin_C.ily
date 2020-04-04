@@ -195,7 +195,7 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 171 to 175
 	<d f>8 a'4 gis8(
 	a)\noBeam a8. a,16(\f a' f
-	e d cis d e a d b
+	e d cis d f a d b
 	d a f e d a) <c! a'>8(
 	<c' a'>) q4 <b gis'>8(
 % Bars 176 to 180

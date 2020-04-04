@@ -100,7 +100,7 @@ musicViolinIMvtI = \relative c''' {
 	d16 c bes a) bes4(~ bes16 a g fis) g4(~
 % Bars 96 to 100
 	g8 fis) g4.( bes,8) a16( bes c d
-	ees d c b!) c( d e f g f e d) e( a c d
+	ees d c b!) c( d ees f g f ees d) ees( a c d
 	ees d c a) ees( a c d ees8-.) r r4
 	r ees,16( a c d ees d c a) ees( a c d
 	ees8-.) r r4 r ees,,16( fis a b!
