@@ -71,7 +71,7 @@ musicFloteIIMvtI = \relative c''' {
 	f4-.) e-. r2
 % Bars 81 to 85
 	bes'8 bes4 bes8( bes) bes4 bes8(
-	a4) a-. r2
+	a4) a r2
 	e'8 e4 e8( d) d4 d8(
 	des4-.) c-. r2
 	e8 e4 e8( d) d4 d8(
@@ -88,7 +88,7 @@ musicFloteIIMvtI = \relative c''' {
 	dis)-. e(~\sf e16 d c bes) d4(~
 	d16 c bes a) bes4(~ bes16 a g fis) g4(~
 % Bars 96 to 100
-	g8 fis) g4.( d'8) ees4(\f~
+	g8 fis) g4.( d'8) ees4( -\tweak X-offset #-1 \f~
 	ees16 f! ees d) ees4(~ ees16 d c b!) c4~
 	c a~ a8-. r r4
 	r a2 a4~
@@ -97,8 +97,8 @@ musicFloteIIMvtI = \relative c''' {
 	R1
 	a2\sf( a4-.) r
 	d!2-\tweak X-offset #-2 \sf( d4-.) r
-	r2 r4 f
-	e b c b
+	r2 r4 f(
+	e b c b)
 % Bars 106 to 110
 	r2 c,8(\sf\> e gis a)\!
 	r2 f8(\sf\> a cis d)\!
@@ -195,11 +195,11 @@ musicFloteIIMvtI = \relative c''' {
 	bes4-.) bes-. r2
 	bes4-. bes-. r a-.
 	r c-. r2
-	r r4 e(
+	r r4 e
 % Bars 206 to 210
-	d8) r e4( b8) r c4(
-	d2 g,4) e'(
-	d8) r e4( b8) r c4~
+	d8 r e4 b8 r c4
+	d2 g,4 e'
+	d8 r e4 b8 r c4~
 	c2~ c4 c(
 	e-.) d2-> d4~
 % Bars 211 to 215
@@ -373,8 +373,8 @@ musicFloteIIMvtI = \relative c''' {
 	cis-.) b2-> b4~
 % Bars 381 to 385
 	b b2 b4~(
-	b8 ais) b4.( fis'8) g4(~-\tweak X-offset #-2 \sf
-	g16 a! g fis) g4(~ g16 fis e dis) e4(
+	b8 ais) b4.( fis'8) g4~-\tweak X-offset #-1.5 \sf
+	g16 a! g fis g4(~ g16 fis e dis) e4(
 	cis) cis~ cis8-. r r4
 	r d2 d4~
 % Bars 386 to 390

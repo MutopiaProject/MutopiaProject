@@ -185,7 +185,7 @@ musicHornIIMvtI = \relative c' {
 	
 	ees8-.\f ees4 ees8( bes') bes4 bes8(\<
 % Bars 196 to 200
-	<<d2.) {s4\> s s\!} >> r4
+	<<des2.) {s4\> s s\!} >> r4
 	ees,8^\tutti ees4 ees8( g) g4 g8(
 	c4-.) c-. r2
 	ees,8 ees4 ees8( bes') bes4 bes8(

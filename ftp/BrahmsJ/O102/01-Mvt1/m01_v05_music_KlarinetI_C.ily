@@ -58,8 +58,8 @@ musicKlarinetIMvtI = \relative c''' {
 	bes ees
 	d4 r r2
 % Bars 71 to 75
-	\partcombineApart r4 r8 des8\p\<( fes4.\> ees8)\!
-	r4 r8 aes(\< fes4.\> ees8)\! \partcombineAutomatic
+	r4 r8 des8^\p^\<( fes4.^\> ees8)\!
+	r4 r8 aes(^\< fes4.^\> ees8)\!
 	R1*2
 	
 	r4 fes2->\f aes4-.
@@ -71,7 +71,7 @@ musicKlarinetIMvtI = \relative c''' {
 	fes4-.) ees-. r2
 % Bars 81 to 85
 	g8 g4 g8( f) f4 f8(
-	e4-.) \partcombineApartOnce c-. r2
+	e4-.) \once \partcombineApart c-. r2
 	bes'8 bes4 bes8( aes) aes4 aes8(
 	aes4-.) g-. r2
 	bes8 bes4 bes8( aes) aes4 aes8(
@@ -83,13 +83,13 @@ musicKlarinetIMvtI = \relative c''' {
 	f8) r aes4( fes8) r ees4(
 % Bars 91 to 95
 	f! g8 aes ees4) aes(
-	f8) r aes4( fes8) r ees4(
-	d! ees8 f ees4) c(
+	f8) r aes4( fes8) r \partcombineApart ees4(
+	d! ees8 f ees4) \partcombineAutomatic c(
 	ees-.) des2\sf des4~
 	des des2 des4(~
 % Bars 96 to 100
-	des8 c) des4.( a'8) bes4(\f~
-	bes16 aes! ges f) ges4(~ ges16 f ees d!) ees4~
+	des8 c) des4.( a'8) \partcombineApart bes4(~
+	bes16 aes! ges f) \partcombineAutomatic ges4(~ ges16 f ees d!) ees4~
 	ees ees4~ ees8-. r r4
 	r ees2 ees4~
 	ees8-. r r4 r2
@@ -276,8 +276,8 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 	
-	\partcombineApart r4 r8 cis'(_\p_\< d e_\> f)\! cis(
-	e)_\dimmarkup r r b( d) r r \partcombineAutomatic a(
+	r4 r8 cis'(_\p_\< d e_\> f)\! cis(
+	e)_\dimmarkup r r b( d) r r a(
 % Bars 281 to 285
 	c4 a fis dis')
 	e1_\crescmarkup(
@@ -300,7 +300,7 @@ musicKlarinetIMvtI = \relative c''' {
 	d2 c
 	ees2. ees4
 	c2 bes
-	g \partcombineApartOnce c,
+	g \once \partcombineApart c,
 	R1*5
 % Bars 301 to 305
 	
@@ -325,9 +325,9 @@ musicKlarinetIMvtI = \relative c''' {
 	g1~
 	g(
 	fis)(
-	f)~
+	f!)~
 % Bars 321 to 325
-	f!4\! r r2
+	f4\! r r2
 	R1*20
 % Bars 326 to 330
 	
@@ -385,18 +385,18 @@ musicKlarinetIMvtI = \relative c''' {
 	e-.) d2-> d4~
 % Bars 381 to 385
 	d f2 f4~(
-	f8 e) f4.( a8) bes4-\tweak X-offset #-2 \sf(~
+	f8 e) f4.( a8) bes4-\tweak X-offset #-1 \sf(~
 	bes16 c bes a) bes4(~ bes16 a g fis) g4(
 	e) e~ e8-. r r4
 	r f2 f4~
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \mark \default \bar "||" \key c \minor
-	fis2-\tweak X-offset #-2 \ff\trill g8( ees d c)
+	fis2-\tweak X-offset #-2 \ff\trill \partcombineApart g8( ees d c) \partcombineAutomatic
 	bes4 r8 fis' g4-. r
 	f!2\trill ees8( aes g f)
 % Bars 391 to 395
-	ees4 r8 f-. ees4-. r8 \partcombineApartOnce c-.
+	ees4 r8 f-. ees4-. r8 \once \partcombineApart c-.
 	g'8-\tweak X-offset #-2.5 \f g4 g g g8~
 	g g4 g g g8~
 	g g4 g g g8~

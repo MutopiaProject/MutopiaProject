@@ -67,7 +67,7 @@ musicOboeIIMvtI = \relative c'' {
 	aes-! r d,!-! r
 	e-! r r2
 	R1 \mark \default
-	g8 g4 g8( f) f4 f8(
+	g8\f g4 g8( f) f4 f8(
 	f4)-. e-. r2
 % Bars 81 to 85
 	bes'8 bes4 bes8( bes) bes4 bes8(
@@ -80,23 +80,23 @@ musicOboeIIMvtI = \relative c'' {
 	a4-! a-! r g-!
 	r f-! r2
 	r r4 c'(\f \mark \default
-	b!8) r c4( bes8) r a4(
+	b!8) r c4( bes8) r a4
 % Bars 91 to 95
-	b!2 c4) c(
+	b!2 c4 c(
 	b!8) r c4( bes8) r a4(
 	g8) g4 g8( a) a4 a8(
 	c4-.) bes2\sf bes4~
 	bes bes2 bes4(~
 % Bars 96 to 100
-	bes8 a) bes4.( d8) ees4\f(~
-	ees16 f! ees d) ees4(~ ees16 d c b!) c4~
+	bes8 a) bes4.( d8) ees4 -\tweak X-offset #-1 \f~
+	ees16 f! ees d ees4(~ ees16 d c b!) c4~
 	c a~ a8-. r r4
 	r a2 a4~
 	a8-. r r4 r2
 % Bars 101 to 105
 	R1
 	a2(-\tweak X-offset #-1 \sf a4-.) r
-	d2(-\tweak X-offset #-1 \sf d4-.) r
+	d!2(-\tweak X-offset #-1 \sf d4-.) r
 	r2 r4 f
 	e b c b
 % Bars 106 to 110
@@ -186,8 +186,8 @@ musicOboeIIMvtI = \relative c'' {
 	e-.) d2-> d4~
 % Bars 211 to 215
 	d d2 d4(~
-	d8 cis) d4.( a'8) bes4(\sf~
-	bes16 c! bes a) bes4(~ bes16 a  g fis) g4~
+	d8 cis) d4.( a'8) bes4\sf~
+	bes16 c! bes a bes4(~ bes16 a  g fis) g4~
 	g e4~ e8-. r r4
 	r e2 e4~
 % Bars 216 to 220
@@ -333,8 +333,8 @@ musicOboeIIMvtI = \relative c'' {
 	cis-.) b2-> b4~
 % Bars 381 to 385
 	b b2 b4(~
-	b8 ais) b4.( fis'8) g4-\tweak X-offset #-2 \sf~(
-	g16 a g fis) g4(~ g16 fis e dis) e4(
+	b8 ais) b4.( fis'8) g4-\tweak X-offset #-1 \sf~
+	g16 a g fis g4(~ g16 fis e dis) e4(
 	cis) cis~ cis8-. r r4
 	r d2 d4~
 % Bars 386 to 390

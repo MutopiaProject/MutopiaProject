@@ -42,14 +42,14 @@ musicTrumpetIMvtI = \relative c'' {
 	R1
 % Bars 61 to 65
 	c2-> bes->
-	\partcombineApartOnce d2.-> r4
+	\once \partcombineApart d2.-> r4
 	c2-> bes->
 	f'2.-> r4
 	r2 r4 g,
 % Bars 66 to 70
 	g2 g
 	e'-\tweak X-offset #-3.7 \f e 
-	f \partcombineApartOnce d
+	f \once \partcombineApart d
 	d e
 	d4 r r2
 % Bars 71 to 75
@@ -60,7 +60,7 @@ musicTrumpetIMvtI = \relative c'' {
 	bes4-.\f ees2-> ees4-.
 % Bars 76 to 80
 	ees-! r ees-! r
-	\partcombineApartOnce bes-! r r2
+	\once \partcombineApart bes-! r r2
 	R1 \mark \default
 	R1*10
 % Bars 81 to 85
@@ -75,7 +75,7 @@ musicTrumpetIMvtI = \relative c'' {
 	
 	
 	r2 r4 g(-\tweak X-offset #-2.5 \f
-	bes-.) d2-> \partcombineApartOnce bes4-.
+	bes-.) d2-> \once \partcombineApart bes4-.
 	R1*2
 % Bars 96 to 100
 	
@@ -87,7 +87,7 @@ musicTrumpetIMvtI = \relative c'' {
 	R1
 	\partcombineApart g2 g4-. \partcombineAutomatic r
 	c2-\tweak X-offset #-3.2 \sf c4-. r
-	\partcombineApartOnce bes-. r r2
+	\once \partcombineApart bes-. r r2
 	bes4( c) d2
 % Bars 106 to 110
 	bes2\sf bes4-. r
@@ -96,7 +96,7 @@ musicTrumpetIMvtI = \relative c'' {
 	r c-. d-. r
 	g,-. r g-. r
 % Bars 111 to 115
-	\partcombineApartOnce d'-. r \partcombineApartOnce d-. r \mark \default
+	\once \partcombineApart d'-. r \once \partcombineApart d-. r \mark \default
 	R1*31
 % Bars 116 to 120
 	
@@ -143,9 +143,9 @@ musicTrumpetIMvtI = \relative c'' {
 	c4 r r2
 	c2 c
 % Bars 201 to 205
-	c4 \partcombineApartOnce d r2
-	\partcombineApartOnce d4-. r r \partcombineApartOnce c-.
-	r \partcombineApartOnce bes-. r2
+	c4 \once \partcombineApart d r2
+	\once \partcombineApart d4-. r r \once \partcombineApart c-.
+	r \once \partcombineApart bes-. r2
 	R1*8
 % Bars 206 to 210
 	
@@ -177,14 +177,14 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	ees4-!-\tweak X-offset #-2 \f r r \partcombineApartOnce bes-!
+	ees4-!-\tweak X-offset #-2 \f r r \once \partcombineApart bes-!
 	ees-! r r2
 	R1*4
 % Bars 261 to 265
 	
 	
 	
-	\partcombineApartOnce bes4-. r \partcombineApartOnce bes-. r
+	\once \partcombineApart bes4-. r \once \partcombineApart bes-. r
 	ees-. r r2
 % Bars 266 to 270
 	R1*4
@@ -209,7 +209,7 @@ musicTrumpetIMvtI = \relative c'' {
 	c-. c-. g-. r
 	R1
 	c2 bes
-	\partcombineApartOnce d2. r4
+	\once \partcombineApart d2. r4
 % Bars 296 to 300
 	c2 bes
 	f'2. r4
@@ -252,7 +252,7 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 371 to 375
 	c2 c
 	d4-! d-! r2
-	\partcombineApartOnce d4-. r r \partcombineApartOnce c-.
+	\once \partcombineApart d4-. r r \once \partcombineApart c-.
 	r d-. r2
 	r2 r4 g,-\tweak X-offset #-2.5 \f~
 % Bars 376 to 380
@@ -275,7 +275,7 @@ musicTrumpetIMvtI = \relative c'' {
 	c2 g4-. r
 % Bars 391 to 395
 	g-. r g-. r
-	\partcombineApartOnce d'8-. r r4 r2
+	\once \partcombineApart d'8-. r r4 r2
 	R1*33
 % Bars 396 to 400
 	

@@ -180,7 +180,7 @@ musicHornIIIMvtI = \relative c'' {
 	
 	r2 r4 g(~\p 
 	g8 d) ees4.( b8) c4~
-	c_\dimmarkup c2 c4_\ppespr~
+	c_\dimmarkup c2 c4_\esprM~
 	c1~
 % Bars 181 to 185
 	c2( f)~

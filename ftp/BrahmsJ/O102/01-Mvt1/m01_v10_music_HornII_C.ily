@@ -120,8 +120,8 @@ musicHornIIMvtI = \relative c' {
 	
 	\mark \default
 	R1
-	r4 r8 ees8\p~ ees4.\< ees8~
-	<<ees1 {s4\> s s s\!}>>
+	r4 r8 \once \override DynamicText.extra-offset = #'(0 . 1) \override Hairpin.extra-offset = #'(0 . 1)  ees8\p\<~ ees4. ees8~
+	<<ees1 {s4\> s s s\!}>> \revert Hairpin.extra-offset %ees1\> <>\!
 % Bars 146 to 150
 	R1^\gp
 	R1
@@ -156,7 +156,7 @@ musicHornIIMvtI = \relative c' {
 	
 	ees8-.-\tweak X-offset #-2 \f ees4 ees8( bes') bes4 bes8(\<
 % Bars 196 to 200
-	<<d2.) {s4\> s s\!} >> r4
+	<<des2.) {s4\> s s\!} >> r4
 	ees,8 ees4 ees8( g) g4 g8(
 	c4-.) c r2
 	ees,8 ees4 ees8( bes') bes4 bes8(
@@ -168,10 +168,10 @@ musicHornIIMvtI = \relative c' {
 	r ees,-. r2
 	R1
 % Bars 206 to 210
-	r2 r4 c'(
-	bes2 ees,4) r
-	r2 r4 c'(
-	bes2 ees,4) r
+	r2 r4 c'
+	bes2 ees,4 r
+	r2 r4 c'
+	bes2 ees,4 r
 	r ees2\sf ees4-.
 % Bars 211 to 215
 	R1
@@ -252,7 +252,7 @@ musicHornIIMvtI = \relative c' {
 	\bar "||" \mark \default
 	c1\pp
 	r4 r8 c8~ c4. c8\<~
-	<<c1 {s4\> s s s\!}>>
+	<<c1 {s4\> s s s\!}>> %c1\!
 % Bars 316 to 320
 	R1^\gp
 	R1*2
@@ -275,7 +275,7 @@ musicHornIIMvtI = \relative c' {
 	
 	r2 r4 bes''(\p~
 	bes8 c) bes4.( a8) g4~
-	g \partcombineApartOnce g2 g4~
+	g \once \partcombineApart g2 g4~
 	g1~
 % Bars 351 to 355
 	g2( c,4) r
@@ -292,7 +292,7 @@ musicHornIIMvtI = \relative c' {
 	
 	c8\f-. c4 c8( g') g4 g8(\<
 % Bars 366 to 370
-	bes2.)\> r4\! \mark \default
+	<< bes2.) {s4\> s s\!}>> r4 \mark \default
 	c,8 c4 c8( e) e4 e8(
 	a4-.) a r2
 	c,8 c4 c8( g') g4 g8(
@@ -304,10 +304,10 @@ musicHornIIMvtI = \relative c' {
 	r c,-. r2
 	c2( c,4) r
 % Bars 376 to 380
-	r2 r4 a''(
-	g2 c,4) r
-	r2 r4 a'(
-	g2 c,4) r
+	r2 r4 a''
+	g2 c,4 r
+	r2 r4 a'
+	g2 c,4 r
 	r c2-\tweak X-offset #-1.5 \sf c4-.
 % Bars 381 to 385
 	R1

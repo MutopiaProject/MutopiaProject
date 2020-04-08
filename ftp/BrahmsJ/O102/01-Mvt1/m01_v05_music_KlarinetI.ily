@@ -344,9 +344,9 @@ musicKlarinetIMvtI = \relative c''' {
 	g1\pp~
 	g(
 	fis)(_\dimmarkup
-	f)~\>
+	f!)~\>
 % Bars 321 to 325
-	f!4\! r r2
+	f4\! r r2
 	R1*20
 % Bars 326 to 330
 	

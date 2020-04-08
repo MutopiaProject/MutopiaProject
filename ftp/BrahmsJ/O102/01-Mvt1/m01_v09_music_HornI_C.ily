@@ -11,7 +11,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 1 to 5
 	c4._\fmarc c8 c4 r
 	c4. c8 c4 r
-	\partcombineApartOnce b-. r \partcombineApartOnce bes-. r
+	\once \partcombineApart b-. r \once \partcombineApart bes-. r
 	c-. c-. \partcombineApart bes-. bes-. \partcombineAutomatic
 	R1\fermataMarkup
 % Bars 6 to 10
@@ -44,7 +44,7 @@ musicHornIMvtI = \relative c'' {
 	c'4.-\tweak X-offset #-2 \f bes8 c4 r
 	f4. e8 f4 r
 	R1
-	r2 \partcombineApartOnce c4. \partcombineApartOnce c8
+	r2 \once \partcombineApart c4. \once \partcombineApart c8
 % Bars 61 to 65
 	g'2-> f->
 	c2.-> c4
@@ -58,7 +58,7 @@ musicHornIMvtI = \relative c'' {
 	\partcombineChords ees f \partcombineAutomatic
 	g, g
 % Bars 71 to 75
-	\partcombineApartOnce c,4-. r r2
+	\once \partcombineApart c,4-. r r2
 	R1*3
 	
 	
@@ -104,7 +104,7 @@ musicHornIMvtI = \relative c'' {
 	r f-. e-. r
 	f-. r f-. r
 % Bars 111 to 115
-	\partcombineApartOnce c-. r \partcombineApartOnce c,-. r \mark \default
+	\once \partcombineApart c-. r \once \partcombineApart c,-. r \mark \default
 	R1*31
 % Bars 116 to 120
 	
@@ -120,8 +120,8 @@ musicHornIMvtI = \relative c'' {
 	
 	\mark \default
 	R1
-	r4 r8 ees8\p~ ees4.\< ees8~
-	<<ees1 {s4\> s s s\!}>>
+	r4 r8 \partcombineApart ees8~ ees4. ees8~
+	ees1 \partcombineAutomatic % ees1\> <>\!
 % Bars 146 to 150
 	R1^\gp
 	\partcombineApart ees'1~_\dolce
@@ -158,7 +158,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 196 to 200
 	e2)( ees4) r
 	\partcombineChords g8 g4 g8( f) \partcombineAutomatic f4 f8(
-	e4-.) \partcombineApartOnce c-. r2
+	e!4-.) \once \partcombineApart c-. r2
 	\partcombineChords g'8 g4 g8( f) \partcombineAutomatic f4 f8(
 	e4-.) ees-. r2
 % Bars 201 to 205
@@ -168,10 +168,10 @@ musicHornIMvtI = \relative c'' {
 	r ees-. r2
 	R1
 % Bars 206 to 210
-	r2 r4 c(
-	bes2 ees4) r
-	r2 r4 c(
-	bes2 ees4) r
+	r2 r4 \partcombineApart c(
+	bes2 ees4) \partcombineAutomatic r
+	r2 r4 \partcombineApart c(
+	bes2 ees4) \partcombineAutomatic r
 	r ees,2\sf ees4-.
 % Bars 211 to 215
 	R1
@@ -181,7 +181,7 @@ musicHornIMvtI = \relative c'' {
 	r \partcombineChords ees2 ees4~
 % Bars 216 to 220
 	ees8-. \partcombineAutomatic r r4 r ees->
-	ees-> c-> c-> \partcombineApartOnce c,-> \mark \default
+	ees-> c-> c-> \once \partcombineApart c,-> \mark \default
 	R1*7
 % Bars 221 to 225
 	
@@ -241,7 +241,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 296 to 300
 	g'2 f
 	ees2. r4
-	r \partcombineApartOnce bes-. ees-. r
+	r \once \partcombineApart bes-. ees-. r
 	R1*14
 % Bars 301 to 305
 	
@@ -251,8 +251,8 @@ musicHornIMvtI = \relative c'' {
 	
 	\bar "||" \mark \default
 	c,1\pp
-	r4 r8 c8~ c4. c8\<~
-	<<c1 {s4\> s s s\!}>>
+	r4 r8 \partcombineApart c8~ c4. c8~
+	c1 \partcombineAutomatic %<<c1 {s4\> s s s\!}>>
 % Bars 316 to 320
 	R1^\gp
 	c'1\pp~
@@ -290,11 +290,11 @@ musicHornIMvtI = \relative c'' {
 	
 	
 	
-	\partcombineChords e8-. e4 e8( d) \partcombineAutomatic d4 d8^\((
+	\partcombineChords e8-. e4 e8( d) \partcombineApart d4 d8^\((
 % Bars 366 to 370
-	des2)\! c4\) r4 \mark \default
+	des2) c4\) \partcombineAutomatic r4 \mark \default
 	\partcombineChords e8 e4 e8( d) \partcombineAutomatic d4 d8(
-	cis4-.) \partcombineApartOnce a-. r2
+	cis4-.) \once \partcombineApart a-. r2
 	\partcombineChords e'8 e4 e8( d) \partcombineAutomatic d4 d8(
 	des4-.) c-. r2
 % Bars 371 to 375
@@ -304,10 +304,10 @@ musicHornIMvtI = \relative c'' {
 	r c-. r2
 	c2( c,4) r
 % Bars 376 to 380
-	r2 r4 a'(
-	g2 c4) r
-	r2 r4 a(
-	g2 c4) r
+	r2 r4 \partcombineApart a'(
+	g2 c4) \partcombineAutomatic r
+	r2 r4 \partcombineApart a(
+	g2 c4) \partcombineAutomatic r
 	r g2-\tweak X-offset #-1.5 \sf g4-.
 % Bars 381 to 385
 	R1
@@ -318,8 +318,8 @@ musicHornIMvtI = \relative c'' {
 % Bars 386 to 390
 	g8 r r4 r2
 	R1 \bar "||" \mark \default
-	g2-\tweak X-offset #-3.5 \sf c4 r8 \partcombineApartOnce g-.
-	c4-. r8 \partcombineApartOnce g-. c4-. r
+	g2-\tweak X-offset #-3.5 \sf c4 r8 \once \partcombineApart g-.
+	c4-. r8 \once \partcombineApart g-. c4-. r
 	e2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r
@@ -341,10 +341,10 @@ musicHornIMvtI = \relative c'' {
 	
 % Bars 426 to 430
 	r4 des-.\f r d-.
-	r \partcombineApartOnce c-. r c-.
+	r \once \partcombineApart c-. r c-.
 	c-. r r2
 	r \partcombineApart bes4-. bes-. \partcombineAutomatic
-	\partcombineApartOnce c-. r \partcombineApartOnce c-. r
+	\once \partcombineApart c-. r \once \partcombineApart c-. r
 % Bar 431
 	R1\fermataMarkup \bar "|."
 }

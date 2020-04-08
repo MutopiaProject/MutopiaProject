@@ -187,7 +187,7 @@ musicHornIMvtI = \relative c'' {
 % Bars 196 to 200
 	e2)(\> ees4)\! r
 	g8^\tutti g4 g8( f) f4 f8(
-	e4-.) c-. r2
+	e!4-.) c-. r2
 	g'8 g4 g8( f) f4 f8(
 	e4-.) ees-. r2
 % Bars 201 to 205

@@ -58,9 +58,9 @@ musicKlarinetIIMvtI = \relative c''' {
 	g a
 	bes4 r r2
 % Bars 71 to 75
-	R1*4
+	R1*2
 	
-	
+	R1*2
 	
 	r4 aes2->\f ces4-.
 % Bars 76 to 80
@@ -88,8 +88,8 @@ musicKlarinetIIMvtI = \relative c''' {
 	c-.) bes2\sf bes4~
 	bes bes2 bes4(~
 % Bars 96 to 100
-	bes8 a) bes4.( f'8) ges4(\f~
-	ges16 aes! ges f) ges4(~ ges16 f ees d!) ees4~
+	bes8 a) bes4.( f'8) ges4 -\tweak X-offset #-1 \f~
+	ges16 aes! ges f ges4(~ ges16 f ees d!) ees4~
 	ees c4~ c8-. r r4
 	r c2 c4~
 	c8-. r r4 r2
@@ -156,8 +156,8 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 % Bars 166 to 170
 	r2 r4 bes_\pdolce~
-	bes8 r a4~ a8 r aes4\<~
-	aes\> f8\! r r4 bes~
+	bes8 r a4~ a8 r aes4\<(
+	aes\>) f8\! r r4 bes~
 	bes8 r a4~ a8\< r aes4~
 	aes(\dimD\> g2.)~
 % Bars 171 to 175
@@ -274,8 +274,8 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	
 	
-	R1
-	R
+	R1*2
+	
 % Bars 281 to 285
 	r2 r4 c'\p~
 	c1~
@@ -383,7 +383,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	g-.) f2-> f4~
 % Bars 381 to 385
 	f a2 a4~(
-	a8 cis) d4.( cis8) d4-\tweak X-offset #-2 \sf(~
+	a8 cis) d4.( cis8) d4-\tweak X-offset #-1 \sf(~
 	d16 c! bes a) bes4(~ bes16 a g fis) g4(
 	g) g~ g8-. r r4
 	r d'2 d4~

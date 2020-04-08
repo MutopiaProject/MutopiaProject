@@ -88,8 +88,8 @@ musicFagottoIIMvtI = \relative c {
 	f,)-. c'2\sf c4~
 	c c2 c4~
 % Bars 96 to 100
-	c c4.( \clef tenor d'8) ees4(\f~
-	ees16 f! ees d) ees4(~ ees16 d c b!) c4~
+	c c4.( \clef tenor d'8) ees4\f~
+	ees16 f! ees d ees4(~ ees16 d c b!) c4~
 	c a4~ a8-. r r4
 	r \clef bass fis,2 fis4~
 	fis8-. r r4 r c'->
@@ -215,8 +215,8 @@ musicFagottoIIMvtI = \relative c {
 	c,-.) g'2-> g4~
 % Bars 211 to 215
 	g g2 g4~
-	g f'4.( a8) bes4\sf(~
-	bes16 c! bes a) bes4(~ bes16 a g fis) g4~
+	g f'4.( a8) bes4\sf~
+	bes16 c! bes a bes4(~ bes16 a g fis) g4~
 	g c,,~ c8 r r4
 	r4 cis2 cis4~
 % Bars 216 to 220

@@ -16,14 +16,15 @@
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
 %\include "/media/Documents/Partitions/lilypond/markup.ily"
+\version "2.20.0"
 \include "./00-Common/DoubleConcerto_Header.ily"
 \include "./00-Common/DoubleConcerto_Paper.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
 \include "./00-Common/DoubleConcerto_Conductor_option.ily"
 \include "./00-Common/DoubleConcerto_StaffName.ily"
 \include "./00-Common/DoubleConcerto_markup.ily"
-%\include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ily"
-\include "./00-Common/DoubleConcerto_Format_temp.ily"
+\include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ily"
+%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 \include "./01-Mvt1/m01_v01_music_FloteI_C.ily"
 \include "./01-Mvt1/m01_v02_music_FloteII_C.ily"
 \include "./01-Mvt1/m01_v03_music_OboeI_C.ily"
@@ -66,9 +67,9 @@
 		<<
 			\new StaffGroup <<
 				\new Staff <<
-					\new Voice {
-						\displayFilterVoice
-					}
+%					\new Voice {
+%						\displayFilterVoice
+%					}
 					\new Voice {
 						\formatConductorMvtI
 					}

@@ -78,7 +78,7 @@ musicOboeIIMvtI = \relative c'' {
 	aes-! r d,!-! r
 	e-! r r2
 	R1 \mark \default
-	g8 g4 g8( f) f4 f8(
+	g8\f g4 g8( f) f4 f8(
 	f4)-. e-. r2
 % Bars 81 to 85
 	bes'8 bes4 bes8( bes) bes4 bes8(

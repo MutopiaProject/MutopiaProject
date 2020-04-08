@@ -40,6 +40,7 @@ eleven=^\markup {\tiny \number 11}
 atempo=^\markup {\italic {a tempo}}
 
 
+esprM = ^\markup {\musicglyph #"scripts.espr"}
 pespr = ^\markup {\dynamic p \musicglyph #"scripts.espr"}
 ppespr = ^\markup {\dynamic pp \musicglyph #"scripts.espr"}
 
