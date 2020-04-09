@@ -9,8 +9,8 @@ musicHornIIMvtII = \relative c' {
 	\key c \major
 	\transposition d
 % Bars 1 to 5
-	<< {g4( c2)\fermata } {s8\f\< s s s\> s s\!} >>
-	<< {d'4( g,2)\fermata} {s8\p\< s s s\> s s\!} >>
+	<< {g4( c2)} {s8 -\tweak X-offset #-2 \f\< s s\> s s s\!} >>
+	<< {d'4( g,2)} {s8\p\< s s s\> s s\!} >>
 	R2.*28
 % Bars 6 to 10
 	
@@ -48,7 +48,7 @@ musicHornIIMvtII = \relative c' {
 	\bar "||"
 	R2.*2
 	
-	g,4\f( c2)~
+	g,4\f c2~
 	c2.~
 % Bars 71 to 75
 	c4 r r

@@ -10,7 +10,7 @@ musicKlarinetIIMvtII = \relative c''' {
 	\transposition a
 % Bars 1 to 5
 	R2.\fermataMarkup
-	<< {g4( c,2)\fermata} {s8\p\< s s s\> s s\!} >>
+	<< {g4 c,2} {s8\p\< s s s\> s s\!} >>
 	R2.*5
 % Bars 6 to 10
 	
@@ -78,7 +78,7 @@ musicKlarinetIIMvtII = \relative c''' {
 % Bars 71 to 75
 	R2.*2
 	
-	bes4.\f\> r8\! r4
+	bes4. r8 r4
 	R2.*9
 % Bars 76 to 80
 	

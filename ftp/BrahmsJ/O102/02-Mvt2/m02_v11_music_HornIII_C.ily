@@ -25,7 +25,7 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	
-	r4 r \clef bass c~\p \bar "||" \mark \default
+	r4 r \clef bass \partcombineChords c~\p \bar "||" \mark \default
 % Bars 31 to 35
 	c2.~
 	c~
@@ -33,7 +33,7 @@ musicHornIIIMvtII = \relative c {
 	c2 c4~
 	c2.\<~
 % Bars 36 to 40
-	c2\> r4\!
+	c2\> \partcombineAutomatic r4\!
 	R2.*2
 	
 	\clef treble \partcombineSoloI g''2._\p~
@@ -96,7 +96,7 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	
-	<< {e,4( a2)~ } {s4\< s\> s\!}>>
+	<< {e,4( a2)~ } {s4\p\< s\> s\!}>>
 	a2.\!~
 % Bars 116 to 118
 	a~

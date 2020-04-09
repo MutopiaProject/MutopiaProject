@@ -10,7 +10,7 @@ musicFloteIMvtII = \relative c''' {
 %	\transposition a
 % Bars 1 to 5
 	R2.\fermataMarkup
-	<< { e4( a2)\fermata } {s8\p\< s s s\> s s\!} >>
+	\partcombineApart e4( a2)\fermata  \partcombineAutomatic
 	R2.*4
 	
 	
@@ -56,9 +56,9 @@ musicFloteIMvtII = \relative c''' {
 	f_\> f4 f8( g) g~\!
 	g4. r8 r4 \partcombineAutomatic
 	R2.
-	f4. f8( g) f8~
+	\partcombineApart f4. f8( g) f8~
 % Bars 46 to 50
-	\partcombineApart f f( d') b( c) g_(
+	f f( d') b( c) g_(
 	des') b( c)\> g( des')^\dimmarkup des(~\!
 	des4 c8) r r4 \partcombineAutomatic
 	R2.
@@ -68,7 +68,7 @@ musicFloteIMvtII = \relative c''' {
 	bes a) r
 	r  r \partcombineChords d(
 	e f g
-	f c) \partcombineAutomatic r
+	f \stemUp c) \partcombineAutomatic \oneVoice \stemNeutral r
 % Bars 56 to 60
 	r r cis(
 	d\< c! bes
@@ -84,9 +84,9 @@ musicFloteIMvtII = \relative c''' {
 % Bars 66 to 70
 	b2\> a4)\! \bar "||" \key d \major
 	R2.
-	r4 r fis'(_\mfcresc~
+	r4 r \partcombineApart fis'(~
 	fis g! a
-	g fis) b(~
+	g fis) \partcombineAutomatic b(~
 % Bars 71 to 75
 	b cis d)
 	e2( fis4)

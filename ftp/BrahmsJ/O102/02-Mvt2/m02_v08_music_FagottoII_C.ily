@@ -10,7 +10,7 @@ musicFagottoIIMvtII = \relative c {
 %	\transposition a
 % Bars 1 to 5
 	R2.\fermataMarkup
-	<< {e4( a,2)\fermata} {s8\p\< s s s\> s s\!} >>
+	<< {e4 a,2} {s8\p\< s s s\> s s\!} >>
 	R2.*4
 % Bars 6 to 10
 	

@@ -16,6 +16,7 @@
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
 %\include "/media/Documents/Partitions/lilypond/markup.ily"
+\version "2.20.0"
 \include "./00-Common/DoubleConcerto_Header.ily"
 \include "./00-Common/DoubleConcerto_Paper.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"

@@ -10,7 +10,7 @@ musicFagottoIMvtII = \relative c {
 %	\transposition a
 % Bars 1 to 5
 	R2.\fermataMarkup
-	<< {e4( a2)\fermata} {s8\p\< s s s\> s s\!} >>
+	\partcombineApart e4( a2)\fermata \partcombineAutomatic
 	R2.*4
 % Bars 6 to 10
 	
@@ -63,7 +63,7 @@ musicFagottoIMvtII = \relative c {
 	e f g
 	f c) \partcombineAutomatic r
 % Bars 56 to 60
-	r r \clef bass f,,(
+	r r \clef bass \partcombineApart f,,(
 	bes2.)~
 	bes2 \partcombineAutomatic r4
 	r r \partcombineChords a'(
@@ -116,7 +116,7 @@ musicFagottoIMvtII = \relative c {
 % Bars 101 to 105
 	g fis) g(
 	cis,! d e
-	d cis) \partcombineApart d'(
+	d cis) d'(
 	c2.)_\dimmarkup~
 	c4 fis,8( a d, g)~
 % Bars 106 to 110

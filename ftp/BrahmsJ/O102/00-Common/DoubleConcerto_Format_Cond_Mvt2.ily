@@ -9,8 +9,8 @@ formatConductorMvtII = {
 		  (alignment-distances . (9 10 11 13 12 10 11 12 11 11 11 11 10)))
 	s2.*10  \break
 	\overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
-		#'((Y-offset . 160)
-		  (alignment-distances . (11 14 11 12 12 12)))
+		#'((Y-offset . 162)
+		  (alignment-distances . (11 12 11 12 12 12)))
 	s2.*7  \pageBreak
 	\overrideProperty Score.NonMusicalPaperColumn.line-break-system-details
 		#'((Y-offset . 5)

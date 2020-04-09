@@ -10,7 +10,7 @@ musicKlarinetIMvtII = \relative c''' {
 	\transposition a
 % Bars 1 to 5
 	R2.\fermataMarkup
-	<< {g4( c2)\fermata} {s8\p\< s s s\> s s\!} >>
+	\partcombineApart g4( c2)\fermata \partcombineAutomatic
 	R2.*5
 % Bars 6 to 10
 	
@@ -44,10 +44,10 @@ musicKlarinetIMvtII = \relative c''' {
 	des)\> des4 des8(\! c) c(
 % Bars 41 to 45
 	bes4) r r
-	r r \partcombineAutomatic bes\p(
+	r r bes\p(
 	des4.) des8( ees) des~
 	des des( bes') g( aes) ees(
-	f8) r r4 r
+	f8) \partcombineAutomatic r r4 r
 % Bars 46 to 50
 	R2.*4
 	
@@ -78,7 +78,7 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 71 to 75
 	R2.*2
 	
-	g'4.\f\> r8\! r4
+	\partcombineChords <<g'4. {s8\f\> s s\!}>> \partcombineAutomatic r8 r4
 	R2.*9
 % Bars 76 to 80
 	
