@@ -301,8 +301,8 @@ musicFagottoIIMvtIII = \relative c {
 	e,8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" a'8(-\tweak X-offset #-9 _\pdolce g fis f
-	e[ d cis)] cis(
+	\tempo "Poco meno Allegro" a'8-\tweak X-offset #-9 _\pdolce g fis f
+	e[ d cis] cis(
 	d cis4) cis8(
 	bis cis4.)~
 % Bars 301 to 305

@@ -31,7 +31,7 @@ musicTrumpetIMvtIII = \relative c'' {
 	
 	
 	\mark \default
-	\partcombineApartOnce d2
+	\once \partcombineApart d2
 	g,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
@@ -107,8 +107,8 @@ musicTrumpetIMvtIII = \relative c'' {
 	
 	r8. d16-. d8[-. r16 d-.]
 	d8 r r8. c16
-	c8 r r8. \partcombineApartOnce g16
-	\partcombineApartOnce d'4 g,
+	c8 r r8. \once \partcombineApart g16
+	\once \partcombineApart d'4 g,
 % Bars 146 to 150
 	R2*2
 	\mark \default
@@ -152,9 +152,9 @@ musicTrumpetIMvtIII = \relative c'' {
 	g4 r8. g16
 	g4 r8. g16
 % Bars 201 to 205
-	g4 \partcombineApartOnce d
+	g4 \once \partcombineApart d
 	r8. g,16-. g8[-. r16 g-.]
-	ees'4 \partcombineApartOnce d
+	ees'4 \once \partcombineApart d
 	d c
 	\partcombineApart g c, \partcombineAutomatic
 % Bars 206 to 210

@@ -129,9 +129,9 @@ musicOboeIIMvtIII = \relative c'' {
 	
 % Bars 171 to 175
 	
-	r4 r8 a\f(
-	f') f4 e8(
-	f) f4 r8
+	r4 r8 a\f
+	f' f4 e8
+	f f4 r8
 	R2
 % Bars 176 to 180
 	r4 r8 d(\f
@@ -262,11 +262,11 @@ musicOboeIIMvtIII = \relative c'' {
 	%R2*3
 	
 	
-	r4 r8 \once \override CombineTextScript.X-offset = #-3.5 a(
-	e'4-\tweak X-offset #2 \sf\> d)\!
+	r4 r8  a %\once \override CombineTextScript.X-offset = #-3.5
+	e'4-\tweak X-offset #2 \sf\> d\!
 % Bars 321 to 325
-	a\p r8 \once \override CombineTextScript.X-offset = #-3.5 a(\pp\<
-	e'4\> dis8)\! r
+	a\p r8 \once \override CombineTextScript.X-offset = #-3.5 a\pp\<
+	e'4\> dis8\! r
 	e4(\> dis8)\! r \bar "||"
 	\tempo "Tempo primo" r4 r8 c-\tweak X-offset #-3 \f
 	a fis' dis c

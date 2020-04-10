@@ -35,7 +35,7 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	\mark \default
-	\partcombineApartOnce d2
+	\once \partcombineApart d2
 	g,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
@@ -58,7 +58,7 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	
-	\partcombineApartOnce c8 ees4 ees8~
+	\once \partcombineApart c8 ees4 ees8~
 % Bars 66 to 70
 	ees ees4 ees8\p~
 	ees c r4
@@ -170,7 +170,7 @@ musicHornIIIMvtIII = \relative c'' {
 % Bars 201 to 205
 	g4 d
 	r8. g,16-. ees8[ r16 c]
-	ees'4 \partcombineApartOnce d
+	ees'4 \once \partcombineApart d
 	d c
 	g c,
 % Bars 206 to 210
@@ -197,10 +197,10 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	
-	r4 r8 \partcombineApartOnce d'-.
+	r4 r8 \once \partcombineApart d'-.
 % Bars 231 to 235
 	g-. r r4
-	r r8 \partcombineApartOnce f-.
+	r r8 \once \partcombineApart f-.
 	bes-. r r4
 	R2*4
 % Bars 236 to 240

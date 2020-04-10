@@ -153,7 +153,7 @@ musicFagottoIMvtIII = \relative c' {
 % Bars 146 to 150
 	R2*2
 	\clef tenor \mark \default
-	r4 r8 \partcombineApart c'^\(_\ppdolce~
+	r4 r8 c'^\(_\ppdolce~
 	c c4 bes8(
 	a) a4 c8~
 % Bars 151 to 155
@@ -191,7 +191,7 @@ musicFagottoIMvtIII = \relative c' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. \partcombineApartOnce a16
+	r4 r8. \once \partcombineApart a16
 	a8( f!16) f( d) d( cis) cis(
 	f) f( d) d( bes') bes( a) a
 	g4.. g16
@@ -213,11 +213,11 @@ musicFagottoIMvtIII = \relative c' {
 	a4-> a->
 	a8-. r r4
 	e'8( d c b
-	c_\dimmarkup b a gis
+	\partcombineChords c_\dimmarkup b a gis
 % Bars 216 to 220
 	a bes a gis
-	a4 e) \bar "||" \mark \default \key a \minor
-	\partcombineApartOnce a,8-.\p r r4
+	\partcombineApart a4 e) \bar "||" \mark \default \key a \minor
+	\once \partcombineApart a,8-. \partcombineAutomatic r r4
 	R2*7
 % Bars 221 to 225
 	
@@ -256,11 +256,11 @@ musicFagottoIMvtIII = \relative c' {
 	
 	
 	
-	\clef tenor e''2-\tweak X-offset #-9.5 _\mfcresc(
+	\clef tenor \partcombineApart e''2(
 % Bars 256 to 260
 	f)(
 	d) \clef bass
-	a,16-.-\tweak X-offset #-4 \ff b-. c8-. a16-. c-. f8-.
+	\partcombineAutomatic a,16-.-\tweak X-offset #-4 \ff b-. c8-. a16-. c-. f8-.
 	a,16-. d-. gis8-. a,16-. e'-. c'-. b-.
 	a8-. e-. f-. e-. 
 % Bars 261 to 265
@@ -294,7 +294,7 @@ musicFagottoIMvtIII = \relative c' {
 	\time 3/4 fis a2)
 	gis2. \bar "||"
 % Bars 291 to 295
-	\time 4/4 \partcombineApart r4 cis,(_\pcresc d dis
+	\time 4/4 \partcombineApart r4 cis,(^\pcresc d dis
 	e fis fisis gis) \partcombineAutomatic \bar "||"
 	\time 2/4 ais8-. r r4
 	fis8-. r r4
@@ -315,7 +315,7 @@ musicFagottoIMvtIII = \relative c' {
 	r8 b4 b8 
 	r8 b4 b8
 	r8 d4 d8
-	r8 \partcombineApartOnce a4_\crescmarkup fis'8(
+	r8 \once \partcombineApart a4_\crescmarkup fis'8(
 	e d cis b
 % Bars 311 to 315
 	d a4) a'8(

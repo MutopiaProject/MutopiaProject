@@ -129,9 +129,9 @@ musicOboeIMvtIII = \relative c''' {
 	
 % Bars 171 to 175
 	
-	r4 r8 a\f(
-	a') a4 gis8(
-	a) a4 r8
+	r4 r8 \partcombineApart a(
+	a') \partcombineChords a4 gis8(
+	a) a4 \partcombineAutomatic r8
 	R2
 % Bars 176 to 180
 	r4 r8 f(\f
@@ -156,7 +156,7 @@ musicOboeIMvtIII = \relative c''' {
 	r8. c'!16-. c8[-. r16 c-.]
 	\tuplet 3/2 4 {c4( bes8) g( a bes)}
 	\tuplet 3/2 4 {bes4( a8) f( g a)}
-	e4 \partcombineApartOnce d
+	e4 \once \partcombineApart d
 % Bars 206 to 210
 	d'8(\sf c bes a)
 	bes\sf( a g f)
@@ -167,12 +167,12 @@ musicOboeIMvtIII = \relative c''' {
 	f(\sf e d c)
 	b( c b c)
 	b-. r r4
-	e8( d' c b
-	c_\dimmarkup b a gis
+	\partcombineApart e8( d' c b
+	\partcombineChords c_\dimmarkup b a gis
 % Bars 216 to 220
 	a g! fis f
-	e d c b) \bar "||" \mark \default \key a \minor
-	\partcombineApartOnce a8 r r4
+	\partcombineApart e d c b) \bar "||" \mark \default \key a \minor
+	a8 \partcombineAutomatic r r4
 	R2*17
 % Bars 221 to 225
 	
@@ -262,11 +262,11 @@ musicOboeIMvtIII = \relative c''' {
 	R2*3
 	
 	
-	r4 r8  \once \override CombineTextScript.X-offset = #-3.5 a,(
-	gis'4-\tweak X-offset #2 \sf\> fis)\!
+	r4 r8 \partcombineApart a,( % \once \override CombineTextScript.X-offset = #-3.5
+	gis'4 fis)
 % Bars 321 to 325
-	\partcombineApartOnce a, r8 a(\pp\<
-	gis'4\> fis8)\! r
+	a, \once \partcombineAutomatic r8 a(
+	gis'4 fis8) \partcombineAutomatic r
 	gis4(\> fis8)\! r \bar "||"
 	\tempo "Tempo primo" r4 r8 \partcombineApart c'(
 	a fis dis c) 

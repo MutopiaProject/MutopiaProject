@@ -234,8 +234,8 @@ musicKlarinetIIMvtIII = \relative c'' {
 	g,2(
 % Bars 256 to 260
 	f)
-	f''
-	ees8-.-\tweak X-offset #-4 \ff c-. r aes-.
+	s
+	ees''8-.-\tweak X-offset #-4 \ff c-. r aes-.
 	r f-. r ees-.
 	r ees-. r ees-.
 % Bars 261 to 265
@@ -272,8 +272,8 @@ musicKlarinetIIMvtIII = \relative c'' {
 	f!8 r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" c'8(-\tweak X-offset #-9 _\pdolce bes a aes
-	g f e) e'(
+	\tempo "Poco meno Allegro" c'8[-\tweak X-offset #-9 _\pdolce bes a aes]
+	g[ f e] e'(
 	f e4) e8(
 	dis e4.)~
 % Bars 301 to 305
@@ -298,8 +298,8 @@ musicKlarinetIIMvtIII = \relative c'' {
 	g\> f d b)\!
 	c\p r r4
 	R2
-	r4 r8 c(
-	g'4-\tweak X-offset #2 \sf\> f)\!
+	r4 r8 c
+	g'4-\tweak X-offset #2 \sf\> f\!
 % Bars 321 to 325
 	c\p r
 	R2*2

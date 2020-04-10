@@ -216,8 +216,8 @@ musicHornIMvtIII = \relative c'' {
 	R2. \bar "||"
 % Bars 291 to 295
 	\time 4/4 r2 r4 g_\pcresc
-	\partcombineApartOnce c,2 c' \bar "||" 
-	\time 2/4 \partcombineApartOnce c8-. r r4
+	\once \partcombineApart c,2 c' \bar "||" 
+	\time 2/4 \once \partcombineApart c8-. r r4
 	R2*3
 	
 % Bars 296 to 300
@@ -233,7 +233,7 @@ musicHornIMvtIII = \relative c'' {
 	r e( d c)
 	r c( d c)
 	r g'( f e)
-	r (d_\crescmarkup f d)
+	r d_\crescmarkup( f d)
 	R2
 % Bars 311 to 315
 	r8 d( f d)
@@ -248,10 +248,10 @@ musicHornIMvtIII = \relative c'' {
 	
 	\once \override CombineTextScript.X-offset = #-3.5 e4(-\tweak X-offset #2 \sf\> d)\!
 % Bars 321 to 325
-	\partcombineApartOnce c r
+	\once \partcombineApart c r
 	e(-\tweak X-offset #2.0 \pp\> d8)\! r
 	e4(\> d8)\! r \bar "||"
-	\tempo "Tempo primo" \partcombineApartOnce c4-. f-.
+	\tempo "Tempo primo" \once \partcombineApart c4-. f-.
 	R2*5
 % Bars 326 to 330
 	

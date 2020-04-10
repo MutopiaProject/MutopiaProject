@@ -51,7 +51,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	ees2(~
 	ees4 f)
 	g8-. ees-. d-. d-.
-	\partcombineApartOnce c-. r r4
+	\once \partcombineApart c-. r r4
 	R2
 % Bars 51 to 55
 	g'8-.-\tweak X-offset #-3 \p ees-. ees-. c-. 
@@ -165,8 +165,8 @@ musicKlarinetIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. \partcombineApartOnce c''16
-	\partcombineApartOnce c4.. c16
+	r4 r8. \once \partcombineApart c''16
+	\once \partcombineApart c4.. c16
 	c4.. c16
 	\tuplet 3/2 4 {c4( bes8) aes( bes c)}
 	\tuplet 3/2 4 {c4( bes8) aes( bes c)} 
@@ -234,7 +234,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	g,,,2-\tweak X-offset #-9.5 _\mfcresc(
 % Bars 256 to 260
 	aes!)(
-	aes''!)
+	<f'' aes!>) 
 	g8-.-\tweak X-offset #-4 \ff ees-. r c-.
 	r b-. r c-.
 	r c-. r c-.
@@ -265,19 +265,19 @@ musicKlarinetIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 	\bar "||"
 % Bars 291 to 295
-	\partcombineApart \time 4/4 r4 e,(_\pcresc f fis
+	\partcombineApart \time 4/4 r4 e,(^\pcresc f fis
 	g a ais b) \partcombineAutomatic \bar "||"
 	\time 2/4 cis8-.\f r r4
 	d8-. r r4
 	a8 r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" c8(-\tweak X-offset #-9 _\pdolce g' fis f
-	e d c) g'(
+	\tempo "Poco meno Allegro" \partcombineApart c8([ g' fis f]
+	e[ d c]) g'(
 	a g c g
 	aes g4.)~
 % Bars 301 to 305
-	g r8
+	g \partcombineAutomatic r8
 	R2*2
 	
 	r4 r8 d~
@@ -291,17 +291,17 @@ musicKlarinetIMvtIII = \relative c'' {
 % Bars 311 to 315
 	d f) r a(
 	g\> f e d)\!
-	\partcombineApartOnce c r r4
+	\once \partcombineApart c r r4
 	R2
 	r4 r8 c'(
 % Bars 316 to 320
 	b\> a f g)\!
 	\partcombineApart g( gis) a4(~_\crescD_\<
 	a8 ais) b4\!~
-	b8 r r \partcombineAutomatic \once \override CombineTextScript.X-offset = #-3.5 c,(
-	b'4-\tweak X-offset #2 \sf\> a)\!
+	b8 r \once \partcombineAutomatic r c,( %\once \override CombineTextScript.X-offset = #-3.5
+	b'4 a)
 % Bars 321 to 325
-	\partcombineApartOnce c, r
+	c, \partcombineAutomatic r
 	R2*2
 	\bar "||"
 	\tempo "Tempo primo" r4 r8 ees'(-\tweak X-offset #-3 \f

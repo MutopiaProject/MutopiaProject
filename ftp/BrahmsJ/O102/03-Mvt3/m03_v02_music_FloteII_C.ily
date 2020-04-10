@@ -135,8 +135,8 @@ musicFloteIIMvtIII = \relative c''' {
 	
 % Bars 171 to 175
 	
-	r4 r8 a,(\f
-	f'-.) f4 e8(
+	r4 r8 a,\f
+	f'-. f4 e8(
 	f) f4 r8
 	R2
 % Bars 176 to 180
@@ -164,7 +164,7 @@ musicFloteIIMvtIII = \relative c''' {
 	\times 2/3 {g4( f8)} \times 2/3 {d( e f)}
 	cis4 d8. d16
 % Bars 206 to 210
-	d8(\sf c!16) c( bes) bes( a) a(
+	d8( c!16) c( bes) bes( a) a(
 	bes8\sf)( a16) a( g) g( f) f(
 	e) e( f) f( e) e( f) f(
 	e8-.) r r8. a'16
@@ -213,10 +213,10 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	e''2-\tweak X-offset #-9.5 _\mfcresc(
+	e''2
 % Bars 256 to 260
-	d)(
-	b)
+	d
+	b
 	c8-.-\tweak X-offset #-4 \ff a-. r a
 	r gis-. r a-.
 	r a-. r a-.
@@ -255,8 +255,8 @@ musicFloteIIMvtIII = \relative c''' {
 	d!8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" a'8(_\pdolce g fis f
-	e d cis) r
+	\tempo "Poco meno Allegro" a'8_\pdolce g fis f
+	e[ d cis] r
 	R2
 	R2 %r8. e16( a cis e cis
 % Bars 301 to 305
@@ -274,18 +274,18 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 311 to 315
 	d a) r a'(
 	gis\> fis e gis)\!
-	a\p r r4
+	\once \partcombineApart a\p r r4
 	R2
 	r4 r8 fis'(
 % Bars 316 to 320
 	e\> d b e,)\!
 	a\p r r4 
 	R2
-	r4 r8 \once \override CombineTextScript.X-offset = #-3.5 a(
-	e'4-\tweak X-offset #2 \sf\> d)\!
+	r4 r8 a % \once \override CombineTextScript.X-offset = #-3.5
+	e'4-\tweak X-offset #2 \sf\> d\!
 % Bars 321 to 325
-	a\p r8 \once \override CombineTextScript.X-offset = #-3.5 a(\pp\<
-	e'4\> dis8)\! r
+	a\p r8 \once \override CombineTextScript.X-offset = #-3.5 a\pp\<
+	e'4\> dis8\! r
 	e4(\> dis8)\! r \bar "||"
 	\tempo "Tempo primo" a8-.-\tweak X-offset #-3 \f r dis4->~
 	dis2~
