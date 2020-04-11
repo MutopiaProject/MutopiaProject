@@ -116,21 +116,23 @@ MmrPos = #(define-music-function
 	(parser location position)
 	(number?)
 	#{
-		\once \override MultiMeasureRest.staff-position = #position
+		\once \override MultiMeasureRest.staff-position = #(- position 2)
 	#}
 )
 no = #(define-music-function
 	(parser location)
 	()
 	#{
-		\set Voice.restNumberThreshold = #0
+		%\set Voice.restNumberThreshold = #0
+		\undo \omit MultiMeasureRestNumber
 	#}
 )
 ni = #(define-music-function
 	(parser location)
 	()
 	#{
-		\set Voice.restNumberThreshold = #1
+		%\set Voice.restNumberThreshold = #1
+		\omit MultiMeasureRestNumber
 	#}
 )
 textPriority = #(define-music-function

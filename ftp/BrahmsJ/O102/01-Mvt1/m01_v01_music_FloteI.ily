@@ -49,7 +49,7 @@ musicFloteIMvtI = \relative c''' {
 		\MmrPos #-4 R
 		\MmrPos #-4 R
 % Bars 56 to 60
-		\MmrPos #-4 R \mark \default \no
+		\MmrPos #-4 R \once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default \no
 	}
 	a4.\ff-\tweak X-offset #1.5 ^\tutti g8 e4 r
 	f4. e8 c4 r

@@ -14,7 +14,7 @@ musicVioloncellMvtII = \relative c {
 		\MmrPos #-2 R2._\fermataMarkup \no
 	}
 	a8(_\pocofmadolce^\solo d e a fis d)
-	<<{\shape #'((0 . 1.5)(0 . 0.5)(0 . 0.5)(0 . 1.5)) Slur d4( g, a)} \\ {g g( d)}>>
+	<<{d4( g, a)} \\ {g g( d)}>> 
 	a'8( d e fis d b)
 % Bars 6 to 10
 	<<{d8( cis) cis( b) a4} \\ {e e  a}>>

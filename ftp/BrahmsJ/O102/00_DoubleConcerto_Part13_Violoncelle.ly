@@ -56,6 +56,7 @@
 		}
 	}
 }
+\version "2.20.0"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
 \include "./00-Common/DoubleConcerto_Parts_option.ily"
 \include "./00-Common/DoubleConcerto_VoiceName.ily"

@@ -5,7 +5,7 @@
 %#                         S E C T I O N  O P T I O N S                        #
 %###############################################################################
 generalOptions = {
-	\version "2.18.2"
+	\version "2.20.0"
 	\override TupletBracket #'bracket-visibility = ##f
 	\override Hairpin.to-barline = ##f
 	\set Score.alternativeNumberingStyle = #'numbers
