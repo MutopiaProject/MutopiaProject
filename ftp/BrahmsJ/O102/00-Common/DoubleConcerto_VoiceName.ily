@@ -299,7 +299,7 @@ nameVoiceXXI = {
 %#                           V O I C E   N A M E S                             #
 %###############################################################################
 nameVoiceXXII = {
-	\set Staff.instrumentName = #"Kontrabass"
+	\set Staff.instrumentName = #"Kontrabaß"
 	\set Staff.shortInstrumentName = #"Kb"
 	\set Staff.midiInstrument = #"contrabass"
 }

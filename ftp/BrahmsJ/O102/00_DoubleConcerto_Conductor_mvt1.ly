@@ -15,7 +15,6 @@
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-%\include "/media/Documents/Partitions/lilypond/markup.ily"
 \version "2.20.0"
 \include "./00-Common/DoubleConcerto_Header.ily"
 \include "./00-Common/DoubleConcerto_Paper.ily"
@@ -24,7 +23,6 @@
 \include "./00-Common/DoubleConcerto_StaffName.ily"
 \include "./00-Common/DoubleConcerto_markup.ily"
 \include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ily"
-%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 \include "./01-Mvt1/m01_v01_music_FloteI_C.ily"
 \include "./01-Mvt1/m01_v02_music_FloteII_C.ily"
 \include "./01-Mvt1/m01_v03_music_OboeI_C.ily"
@@ -55,7 +53,6 @@
 		subtitle = \markup { 
 			\abs-fontsize #12 \sans
 			\center-column {
-				\vspace #10
 				"Movement 1"
 			}
 		}
@@ -67,9 +64,6 @@
 		<<
 			\new StaffGroup <<
 				\new Staff <<
-%					\new Voice {
-%						\displayFilterVoice
-%					}
 					\new Voice {
 						\formatConductorMvtI
 					}
@@ -77,46 +71,39 @@
 						\timeMvtI \generalOptions \conductorOptions
 						\nameStaffImvtI
 						\partcombine \musicFloteIMvtI \musicFloteIIMvtI
-%						\musicFloteIIMvtI
 					}
 				>>
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
 					\nameStaffIImvtI
 					\partcombine \musicOboeIMvtI \musicOboeIIMvtI
-%					\musicOboeIIMvtI
 				}
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
 					\nameStaffIIImvtI
 					\partcombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
-%					\musicKlarinetIIMvtI
 				}
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
 					\nameStaffIVmvtI
 					\partcombine \musicFagottoIMvtI \musicFagottoIIMvtI
-%					\musicFagottoIMvtI
 				}
 				\new GrandStaff \with { \nameGdStaffImvtI } <<
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
 						\nameStaffVmvtI
 						\partcombine \musicHornIMvtI \musicHornIIMvtI
-%						\musicHornIIMvtI
 					}
 					\new Staff {
 						\timeMvtI \generalOptions \conductorOptions
 						\nameStaffVImvtI
 						\partcombine \musicHornIIIMvtI \musicHornIVMvtI
-%						\musicHornIVMvtI
 					}
 				>>
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions
 					\nameStaffVIImvtI
 					\partcombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
-%					\musicTrumpetIIMvtI
 				}
 				\new Staff {
 					\timeMvtI \generalOptions \conductorOptions

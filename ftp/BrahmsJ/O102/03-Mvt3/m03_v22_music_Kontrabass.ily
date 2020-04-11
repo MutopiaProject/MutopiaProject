@@ -364,7 +364,7 @@ musicKontrabassMvtIII = \relative c {
 		\MmrPos #4 R
 		\MmrPos #4 R \no
 	}
-	d4^\pizz\p r\one 
+	d4-\tweak X-offset #-2 ^\pizz\p r\one 
 % Bars 306 to 310
 	d4 r\two
 	d r\three

@@ -8,7 +8,6 @@
 	composer = \markup { 
 		\abs-fontsize #24 \bold \sans 
 		\center-column {
-			\vspace #10
 			"Johannes Brahms"
 			"1833 - 1897"
 		}
@@ -16,9 +15,8 @@
 	title = \markup { 
 		\abs-fontsize #18 \sans
 		\center-column {
-			\vspace #10
-			"Double Concerto pour Violon et Violoncelle"
-			"en la mineur Opus 102"
+			"Double Concerto for Violin and Cello"
+			"in A minor Opus 102"
 		}
 	}
 	mutopiatitle = "Concerto for Violin and Cello in A Minor"

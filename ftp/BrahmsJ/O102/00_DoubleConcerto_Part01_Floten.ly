@@ -2,61 +2,22 @@
 % Fichier :      00_DoubleConcerto_Part01_Floten.ily
 % Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
-%#                           S E C T I O N  P A P E R                          #
+%#                               H E A D E R                                   #
 %###############################################################################
-\paper {
-	ragged-last-bottom = ##f
-	ragged-bottom = ##f
-	left-margin = 16 \mm
-	bookTitleMarkup = \markup {
-		\override #'(baseline-skip . 3.5)
-		\column {
-			\override #'(baseline-skip . 3.5)
-			\column {
-				\vspace #10
-				\fill-line {
-					\huge \larger \larger \bold
-					\fromproperty #'header:composer
-				}
-				\vspace #10
-				\fill-line {
-					\large %\bold
-					\fromproperty #'header:title
-				}
-				\vspace #10
-				\fill-line {
-					\smaller %\bold
-					\fromproperty #'header:subtitle
-				}
-			}
-		}
-	}
-	oddHeaderMarkup = \markup {
-		\vspace #1
-		\on-the-fly \not-first-page \fill-line {
-			\null
-			\center-column {
-				\smaller \fromproperty #'header:subsubtitle
-				\fromproperty #'header:instrument
-				\vspace #2
-			}
-			\fromproperty #'page:page-number-string
-		}
-	}
-	evenHeaderMarkup =  \markup {
-		\vspace #1
-		\on-the-fly \not-first-page \fill-line {
-			\fromproperty #'page:page-number-string
-			\center-column {
-				\smaller \fromproperty #'header:subsubtitle
-				\fromproperty #'header:instrument
-				\vspace #2
-			}
-			\null
-		}
-	}
-}
+%
+%    Composer            : Johannes Brahms (1833 - 1897)
+%    Artwork             : Double Concerto for Violin and Violoncello 
+%                          in A minor (1st movement)
+%    Opus                : 102
+%    Year of composition : 1887
+%    Source              : Breitkopf and Härtel, 1926-27
+%
+%###############################################################################
+%#                          I N C L U D E   F I L E S                          #
+%###############################################################################
 \version "2.20.0"
+\include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_PaperParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
 \include "./00-Common/DoubleConcerto_Parts_option.ily"
 \include "./00-Common/DoubleConcerto_VoiceName.ily"
@@ -75,26 +36,13 @@
 \addQuote "cueVoiceFloteIImII" { \cueVoiceFloteIImII }
 \addQuote "cueVoiceFloteIImIII" { \cueVoiceFloteIImIII }
 \include "./00-Common/DoubleConcerto_Format_Part01_Floten.ily"
-%\include "./00-Common/DoubleConcerto_Format_temp.ily"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
 \book {
 	\header {
-		composer = \markup { \fontsize #5 \sans 
-			\center-column {
-				"Johannes Brahms"
-				"1833 - 1897"
-			}
-		}
-		title = \markup { 
-			\fontsize #5 \sans
-			\center-column {
-				"Double Concerto pour Violon et Violoncelle"
-				"en la mineur Opus 102"
-			}
-		}
-		subtitle = \markup { \fontsize #3 \sans
+		subtitle = \markup {
+			\abs-fontsize #12 \sans
 			\center-column {
 				"Part for Floten"
 			}
