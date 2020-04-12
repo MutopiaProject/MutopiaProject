@@ -15,6 +15,7 @@
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
+\version "2.20.0"
 \include "./00-Common/DoubleConcerto_Header.ily"
 \include "./00-Common/DoubleConcerto_Paper.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
@@ -201,8 +202,6 @@
 	}
 	\bookpart {
 		\header {
-			composer = ##f
-			title = ##f
 			subsubtitle = \markup {
 				"Brahms - Concerto for Violin and Cello in A Minor - 2nd movement"
 			}
@@ -295,17 +294,15 @@
 					>>
 				>>
 			>>
-	%		\header {
-	%			breakbefore = ##t
-	%		}
+			\header {
+				breakbefore = ##t
+			}
 			\layout {
 			}
 		}
 	}
 	\bookpart {
 		\header {
-			composer = ##f
-			title = ##f
 			subsubtitle = \markup {
 				"Brahms - Concerto for Violin and Cello in A Minor - 3rd movement"
 			}
@@ -403,9 +400,9 @@
 					>>
 				>>
 			>>
-	%		\header {
-	%			breakbefore = ##t
-	%		}
+			\header {
+				breakbefore = ##t
+			}
 			\layout {
 			}
 		}

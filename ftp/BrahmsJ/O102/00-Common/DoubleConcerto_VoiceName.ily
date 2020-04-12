@@ -241,7 +241,6 @@ nameVoiceXV = {
 %###############################################################################
 nameVoiceXVI = {
 	\set Staff.instrumentName = #"Solo Violin"
-	%\set Staff.shortInstrumentName = #"Solo-Vln"
 	\set Staff.shortInstrumentName = \markup {
 		\center-column {
 			\lower #1 \line { "Solo-" }
@@ -292,7 +291,7 @@ nameVoiceXX = {
 %###############################################################################
 nameVoiceXXI = {
 	\set Staff.instrumentName = #"Violoncell"
-	\set Staff.shortInstrumentName = #"Vcl"
+	\set Staff.shortInstrumentName = #"Vlc"
 	\set Staff.midiInstrument = #"cello"
 }
 %###############################################################################
@@ -300,6 +299,6 @@ nameVoiceXXI = {
 %###############################################################################
 nameVoiceXXII = {
 	\set Staff.instrumentName = #"Kontrabaß"
-	\set Staff.shortInstrumentName = #"Kb"
+	\set Staff.shortInstrumentName = #"K.B."
 	\set Staff.midiInstrument = #"contrabass"
 }
