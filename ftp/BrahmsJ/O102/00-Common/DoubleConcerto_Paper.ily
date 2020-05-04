@@ -45,12 +45,12 @@
 			\null
 			\center-column {
 				\fromproperty #'header:subsubtitle
+				\vspace #1
 			}
 			\fromproperty #'page:page-number-string
 		}
 	}
 	evenHeaderMarkup = \markup {
-		\vspace #1
 		\on-the-fly \not-first-page \fill-line {
 			\fromproperty #'page:page-number-string
 			\center-column {

@@ -45,7 +45,6 @@
 		}
 	}
 	evenHeaderMarkup = \markup {
-		\vspace #1
 		\on-the-fly \not-first-page \fill-line {
 			\fromproperty #'page:page-number-string
 			\center-column {

@@ -32,7 +32,7 @@ formatMvtIVoiceX = {
 	s1*23 \break s1*29 \break s1*6 \break s1*11 \break
 	s1*12 \break s1*15 \break s1*9 \break s1*34 \break
 	s1*39 \break s1*12 \break s1*8 \break s1*8 \pageBreak
-	s1*9 \break s1*30 \break s1*34 \break s1*10 \break
+	s1*9 \break s1*30 \break s1*32 \break s1*12 \break
 	s1*20 \break s1*11 \break s1*28 \break s1*19 \break
 	s1*8 \break s1*8 \break s1*7 \break s1*29 \pageBreak
 	s1*12 

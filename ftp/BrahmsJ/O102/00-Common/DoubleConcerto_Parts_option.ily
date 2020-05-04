@@ -15,7 +15,6 @@ generalOptions = {
 	\compressFullBarRests
 }
 partOptions = {
-%	#(set-global-staff-size 19)
 	\override Score.BarNumber #'font-size = #0.1
 	\set Score.quotedCueEventTypes = #'(note-event rest-event tie-event
 		beam-event tuplet-span-event dynamic-event articulation-event
@@ -23,6 +22,7 @@ partOptions = {
 		phrasing-slur-event beam-forbid-event tremolo-event crescendo-event 
 		decrescendo-event )
 	\set Voice.restNumberThreshold = #0
+	\override Staff.MultiMeasureRest.space-increment = 0.9
 }
 #(set-global-staff-size 19)
 \layout {
