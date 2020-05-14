@@ -3,9 +3,8 @@
 
 pianoleft = {
 \set Staff.midiInstrument = "acoustic grand"
+\global
 \clef bass
-\key ees \major
-\time 4/4
 \repeat volta 2 {
   <ees, ees>4 r r2 |
   r <ees, ees>4-. <ees, ees>-. |

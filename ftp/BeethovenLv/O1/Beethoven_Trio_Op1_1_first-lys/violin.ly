@@ -4,11 +4,9 @@
 violinMusic = {
 \set Staff.midiInstrument = "violin"
 \set Staff.instrumentName = "Violino"
+\global
 \clef treble
-\key ees \major
-\time 4/4
 \repeat volta 2 {
-  \tempo "Allegro."
   <g ees' ees''>4\f r r2 |
   r <g ees'>4-.\p <g ees'>-. |
   <g ees'>-. r r2 |

@@ -4,9 +4,8 @@
 celloMusic = {
 \set Staff.midiInstrument = "cello"
 \set Staff.instrumentName = "Violoncello"
+\global
 \clef bass
-\key ees \major
-\time 4/4
 \repeat volta 2 {
   ees4\f r r2 |
   r ees4-.\p ees4-. |

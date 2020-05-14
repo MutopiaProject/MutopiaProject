@@ -5,9 +5,8 @@ pianoright = {
 \set Staff.midiInstrument = "acoustic grand"
 \tupletSpan 4
 \override DynamicTextSpanner.style = #'none
+\global
 \clef treble
-\key ees \major
-\time 4/4
 \repeat volta 2 {
   <g bes ees'>4\f r8 ees'-.\p g'-. bes'-. ees''-. g''-. |
   bes''4-. r <g bes ees'>-.\p <g bes ees'>-. |
