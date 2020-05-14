@@ -15,7 +15,7 @@
   mutopiainstrument = "Violin, 'Cello and Piano"
   mutopiaopus = "Op. 1, No. 1"
   date = "1795"
-  source = "Breitkopf and Härtel (1862-1865)"
+  source = "Breitkopf and Härtel (1862)"
   style = "Classical"
   license = "Creative Commons Attribution-ShareAlike 4.0"
   maintainer = "Alexander Jones"
