@@ -30,17 +30,6 @@ staffDown = \change Staff = "lower"
 
 extendArpeggio = \once \override Staff.Arpeggio.positions = #'(-3 . 1)
 
-%slurPositionA = \once \override Slur.positions = #'(0 . 0)
-
-% () may be used as a shorthand for ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-% if any of the segments does not need to be changed
-
-%slurShapeA = \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) \etc
-%slurShapeA = \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur
-%{slurShapeA = \shape #'(
-             (( 0 . 0) (0 . 0) (0 . 0) (0 . 0))
-             ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-           ) Slur %}
 
 trillUnderSlur = {
   \once \override Script.avoid-slur = #'inside
@@ -868,7 +857,7 @@ dynamics = {
        (padding . 2)
        (stretchability . 30)) % defaults 1, 0, 1, 30
     
-  #(set-paper-size "letter") % for testing only
+  %#(set-paper-size "letter") % for testing only
   
   % These settings are scaled to paper-size
   top-margin = 12\mm % default 5
@@ -890,7 +879,7 @@ dynamics = {
   \layout {
     \context {
       \Score
-      % \omit BarNumber % Uncomment after editing
+      \omit BarNumber % Uncomment after editing
     }
   }
 }
