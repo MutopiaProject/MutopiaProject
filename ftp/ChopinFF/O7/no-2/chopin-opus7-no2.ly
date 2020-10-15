@@ -382,7 +382,7 @@ dynamics = {
   }
 }
 
-#(set-global-staff-size 18) % default 20
+%#(set-global-staff-size 18) % default 20
 
 % ly:expect-warning only works to supress once.  This function allows
 % you to specify the number of times a warning appears.
