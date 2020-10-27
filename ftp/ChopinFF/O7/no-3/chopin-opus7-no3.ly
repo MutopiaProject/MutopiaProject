@@ -25,42 +25,29 @@
 sd = \sustainOn 
 su = \sustainOff
 
-%arpeggioPositionA = \once \override Staff.Arpeggio.positions = #'(0 . 0)
 arpeggioPositionA = \once \override Staff.Arpeggio.positions = #'(-2 . 3)
 arpeggioPositionB = \once \override Staff.Arpeggio.positions = #'(-2 . 3)
 
-%slurPositionA = \once \override Slur.positions = #'(0 . 0)
 slurPositionA = \once \override Slur.positions = #'(0 . 0)
 slurPositionB = \once \override Slur.positions = #'(0 . 0)
-
-% () may be used as a shorthand for ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-% if any of the segments does not need to be changed
-
-%slurShapeA = \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) \etc
-%slurShapeA = \shape #'((0 . 0) (0 . 0) (0 . 0) (0 . 0)) Slur
-%{slurShapeA = \shape #'(
-             (( 0 . 0) (0 . 0) (0 . 0) (0 . 0))
-             ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-           ) Slur %}
+slurPositionC = \once \override Slur.positions = #'(0 . 1.5)
 
 tieShapeA = \shape #'((0 . 0) (0 . 0.2) (0 . 0.2) (0 . 0)) \etc
 tieShapeB = \shape #'((0 . 0) (0 . 0.2) (0 . 0.2) (0 . 0)) \etc
 tieShapeC = \shape #'((0 . 0) (0 . 0.2) (0 . 0.2) (0 . 0)) \etc
 tieShapeD = \shape #'((0 . 0) (0 . 0.2) (0 . 0.2) (0 . 0)) \etc
 tieShapeE = \shape #'((0 . 0) (0 . 0.2) (0 . 0.2) (0 . 0)) \etc
-
-tieShapeX = \shape #'(
-             (( 0 . 0) (0 . 0) (0 . 0) (0 . 0))
-             ((0 . 0) (0 . 0) (0 . 0) (0 . 0))
-           ) Tie
+tieShapeF = \shape #'((0 . 0) (0 . -0.2) (0 . -0.2) (0 . 0)) \etc
+tieShapeG = \shape #'((0 . 0) (0 . -0.2) (0 . -0.2) (0 . 0)) \etc
+tieShapeH = \shape #'((0 . 0) (0 . -0.2) (0 . -0.2) (0 . 0.2)) \etc
+tieShapeI = \shape #'((0 . 0) (0 . 0.2) (0 . 0.2) (0 . 0)) \etc
+tieShapeJ = \shape #'((0 . 0) (0 . 0.2) (0 . 0.2) (0 . 0)) \etc
 
 global = {
   \key f \minor
   \time 3/4
   \accidentalStyle piano
   \override Slur.details.accidental-collision = #1000
-  %\override TextSpanner.script-priority = #-100
-  %\override Staff.RestCollision.minimum-distance = #0.4 % needed?
 }
 
 rightHand = \relative c' {
@@ -101,7 +88,10 @@ rightHand = \relative c' {
   f8-.[ r16 g af8 bf c df] |
   \slashedGrace { df8 } f8. ef16 df4\prall c8( bf |
   af8 bf c4-!) c8( df |
-  f8)[ r16 ef]( df4\trill c8 bf |
+  f8)[ r16 ef]( 
+    \tag layout { df4\trill }
+    \tag midi { \repeat unfold 4 { ef32 df } }
+    c8 bf |
   af8 bf c2) |
   
   \barNumberCheck 33
@@ -167,7 +157,7 @@ rightHand = \relative c' {
   <d af' bf>4( q <f af bf>-> |
   <ef gf bf>4 <ef bf'> q |
   <d af' bf>4 q q |
-  <ef gf bf>4 <ef bf'> <df ef bff'>->) |
+  <ef gf bf>4 <ef bf'> <df ef bff'>-\tweak Y-offset -5 ->) |
   <c ef af>4-!( q <ef gf af>-> |
   <df f af>4 <df af'> q |
   <c gf' af> q-.) q( |
@@ -197,7 +187,10 @@ rightHand = \relative c' {
   f8[ r16 g( af8 bf c af)] |
   \tuplet 3/2 { g8 af g } f4 c'-> |
   \slashedGrace { c8 } c,8[ r16 d( ef8 f g b,)]
-  c4. c8 df8[\trill r16 c(] |
+  c4. c8 
+    \tag layout { df8[\trill }
+    \tag midi { \repeat unfold 2 { ef32 df } }
+    r16 c(] |
   
   \barNumberCheck 93
   f8)[^\markup { \italic "rubato." } r16 g( af8 bf c af)] |
@@ -259,7 +252,7 @@ leftHand = \relative c {
   r4 <bf f' df'>\arpeggio q \arpeggio |
   \repeat unfold 3 { r4 <f c' af'>\arpeggio q\arpeggio } | 
   r4 <g ef' g> <g d' g> |
-  r4 c2->~ |
+  r4 c2->\tieShapeF ~ |
   
   \barNumberCheck 25
   c4( c') c |
@@ -316,7 +309,9 @@ leftHand = \relative c {
         \arpeggioPositionB <ef' af c>\arpeggio q |
     } 
     \\ 
-    { s4 \voiceTwo af,2 | } 
+    { 
+      s4 \voiceTwo af,2 | 
+    } 
   >>   
   <df af' df>4\arpeggio <df af' f'>2_>^\markup { \italic ten. } \arpeggio |
   
@@ -329,12 +324,14 @@ leftHand = \relative c {
         \arpeggioPositionB <ef' af c> q |
     } 
     \\ 
-    { \hideNotes af,4( \unHideNotes \voiceTwo af2) | } 
+    { 
+      \hideNotes af,4( \unHideNotes \voiceTwo af2) | 
+    } 
   >>
   <df af' df>4 <df af' f'>2^\markup { \italic ten. } \arpeggio |
   <<
     { 
-      ef8[ r16 ef]~ ef4 ef~ |
+      ef8[ r16 ef]~ ef4 ef-\tieShapeG ~ |
       ef8[ r16 ef]~ ef4 s |
     }
     \\
@@ -360,7 +357,7 @@ leftHand = \relative c {
   gf4. af,8( bf c
   df8 ef) f4 gf8 f |
   \slashedGrace { f8 } ef8.( d16 ef4-!) af, |
-  f'8( ef df2) |
+  \slurPositionC f'8( ef df2) |
   
   \barNumberCheck 73
   \context Voice = "2" { f,8( e df2)~ } |
@@ -369,12 +366,12 @@ leftHand = \relative c {
     \\ 
     {}
     \\
-    { df,2. | c2._~ | <c c'_~>2. | } 
+    { df,2. | c2._~ | <c c'-\tieShapeH _~>2. | } 
   >> 
   <<
     { 
       <g'' c>2.->( | <af f'>2.->  <g c>2.-> |  <af f'>2.->) | <g c>2.->~ 
-        | q2. | q2 r4 | 
+        | q2. | q2 \tweak Y-offset 3.5 r4 | 
     }
     \\
     { 
@@ -382,7 +379,10 @@ leftHand = \relative c {
         f8 e f e c c | 
     }
     \\
-    { c'2.~ | c4 df b | c2.~ | c4 df b | c2.~ | c2. | c2.~ | c2. | }
+    { 
+      c'2.~ | c4 df b | c2.-\tieShapeI ~ | c4 df b | c2.~ | c2. | 
+        c2.-\tieShapeJ ~ | c2. | 
+    }
   >> 
   \break
   
@@ -464,7 +464,7 @@ pedal = {
   \barNumberCheck 73
   s2. |
   \repeat unfold 3 { s2\sd s8 s\su } |
-  s2.-\markup { \italic "legato." } |
+  s2.-\markup { \italic legato. } |
   s8 s\< s s\> s\! s |
   s2. |
   s8 s\< s s\> s\! s |
@@ -506,7 +506,8 @@ dynamics = {
   s2. |
   
   \barNumberCheck 25
-  s2.-\markup { \dynamic p stretto. } |
+  \tag layout { s2.-\markup { \dynamic p stretto. } } |
+  \tag midi { s2.\p }
   s2. * 2 |
   s2\< s8 s\! |
   s2.^"dolce." |
@@ -515,7 +516,8 @@ dynamics = {
   s4\> s2\! |
   
   \barNumberCheck 33
-  s2.-\markup { \dynamic p stretto. } |
+  \tag layout { s2.-\markup { \dynamic p stretto. } } |
+  \tag midi { s2.\p }
   s2. * 2 |
   s8 s16 s\< s4 s8 s\! |
   s8.\> s16\! s2 |
@@ -548,7 +550,9 @@ dynamics = {
   s2. * 15 |
   
   \barNumberCheck 73
-  s2.-\markup { \dynamic pp \whiteout \italic { ritenuto e sotto voce } } |
+  \tag layout { s2.-\markup { 
+    \dynamic pp \whiteout \italic { ritenuto e sotto voce } } } |
+  \tag midi { s2.\pp }
   s2. * 3 |
   s2.\pp |
   s2. * 7
@@ -567,15 +571,6 @@ dynamics = {
 }
 
 #(set-global-staff-size 18) % default 20
-
-% ly:expect-warning only works to supress once.  This function allows
-% you to specify the number of times a warning appears.
-#(define ly:expect-warning-times (lambda args
-   (for-each (lambda _ (apply ly:expect-warning (cdr args)))
-             (iota (car args)))))
-
-%#(ly:expect-warning-times 69 "omitting tuplet bracket")
-%#(ly:expect-warning-times 3 "stealing the entirety")
 
 \paper {
   ragged-right = ##f % set to false after editing 
@@ -597,7 +592,7 @@ dynamics = {
        (padding . 2)
        (stretchability . 30)) % defaults 1, 0, 1, 30
     
-  #(set-paper-size "letter") % for testing only
+  %#(set-paper-size "letter") % for testing only
   
   % These settings are scaled to paper-size
   top-margin = 12\mm % default 5
@@ -619,7 +614,7 @@ dynamics = {
   \layout {
     \context {
       \Score
-      %\omit BarNumber % Uncomment after editing
+      \omit BarNumber % Uncomment after editing
     }
     \context {
       \PianoStaff
