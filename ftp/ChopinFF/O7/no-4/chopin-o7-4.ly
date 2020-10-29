@@ -306,9 +306,7 @@ pedal = {
        (minimum-distance . 1)
        (padding . 2)
        (stretchability . 30)) % defaults 1, 0, 1, 30
-    
-  #(set-paper-size "letter") % for testing only
-  
+      
   % These settings are scaled to paper-size
   top-margin = 12\mm % default 5
   bottom-margin = 12\mm % default 6
