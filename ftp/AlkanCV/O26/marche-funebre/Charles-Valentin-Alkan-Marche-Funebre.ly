@@ -30,7 +30,7 @@
             }
         \score { << 
 \new PianoStaff <<
-<< \new Staff \with {
+<< \new Staff = "treble" \with {
 
 }{
 
@@ -53,7 +53,7 @@
 <bf, df>1 |
 <a, c>1 |
 bf,1) |
-\clef treble <cf' ef'>1(->\p |
+\clef treble \grace s8. <cf' ef'>1(->\p |
 <bf df'>1 |
 <a c'>1 |
 <bf df'>1) |
@@ -284,15 +284,14 @@ r1 |
 \\
 { <e b>2 <fs b e' fs'>4 <gs b e' gs'>4 \omit r1 \omit r1 }
 >>
-\key ef \minor
-\grace s8. <cf ef>1(\pp <bf, df>1 <a, c>1 <bf, df>1) <af, cf>1( <gf, bf,>1 <f, a,>1 <gf, bf,>1) <ef gf>1(-> <cf ef>1) \afterGrace {<f af>1(-> } %{ end after grace passage %}   %{ start after grace %}{<ef gf>8} %{ end after grace %} <d f>1) <gf bf>2.-> <gf bf>4 <gf bf>2( <f af>2 <ef gf>2 <d f>2) <c ds>1 <gf bf>2.-> <gf bf>4 <gf bf>2( <f af>2) r1^\markup{1} <ef gf>2( <d f>2) r1^\markup{1} ef1( <d af cf'>1)->_\markup{\italic{m.s.}} ef1( <d af cf'>1)-> ef1( <d af cf'>1)-> <d af cf'>1->_\markup{\italic{dim.}} <d af cf'>1->_\markup{\italic{dim.}} \clef bass 
+ \grace s8. <cf ef>1(\pp <bf, df>1 <a, c>1 <bf, df>1) <af, cf>1( <gf, bf,>1 <f, a,>1 <gf, bf,>1) <ef gf>1(-> <cf ef>1) \afterGrace {<f af>1(-> } %{ end after grace passage %}   %{ start after grace %}{<ef gf>8} %{ end after grace %} <d f>1) <gf bf>2.-> <gf bf>4 <gf bf>2( <f af>2 <ef gf>2 <d f>2) <c ds>1 <gf bf>2.-> <gf bf>4 <gf bf>2( <f af>2) r1^\markup{1} <ef gf>2( <d f>2) r1^\markup{1} ef1( <d af cf'>1)->_\markup{\italic{m.s.}} ef1( <d af cf'>1)-> ef1( <d af cf'>1)-> <d af cf'>1->_\markup{\italic{dim.}} <d af cf'>1->_\markup{\italic{dim.}} \clef bass 
 <<
 { <ef g bf>1\mf\set Score.connectArpeggios = ##t <ef g bf>2_\markup{\italic{dim.}} <ef af bf>2 <ef g bf>1_\markup{\italic{rall. e dim. molto}} <ef g bf>1\pp }
 \\
 { g4( f4 ef4 d4) g4( f4 ef4 d4) g4( f4 ef4 d4) g4( f4 ef4 d4) }
 >>
 <ef g bf>1\arpeggio\ppp} >>
-<< \new Staff \with {
+<< \new Staff = "bass" \with {
 
 }{
 
@@ -441,13 +440,13 @@ r1 |
 >>
 \ottava #-1 b,,4( a,,4 gs,,4 fs,,4) e,,2( ds,,2 d,,1)\ottava #0  \bar "|." %{ bar %}
 \break
-\grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4\break
+\ottava #-1 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4\break
 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4\break
 \grace {d,,16^\markup{\italic{poco cresc.}} ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {g,,16 af,,16 af,16~} %{ end grace %} <af,, af,>8 r8 <af,, af,>8 r8 <af,, af,>8 r8 r4 \grace {e,,16 f,,16 f,16~} %{ end grace %} <f,, f,>8 r8 r4 \grace {e,,16 f,,16 f,16~} %{ end grace %} <f,, f,>8 r8 r4 \grace {a,,16 bf,,16 bf,16~} %{ end grace %} <bf,, bf,>8 r8 <bf,, bf,>8 r8 <bf,, bf,>8 r8 r4\break
 \grace {f,,16 gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {f,,16 gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {bf,,16 cf,16 cf16~} %{ end grace %} <cf, cf>8 r8 <cf, cf>8 r8 <cf, cf>8 r8 r4 \grace {a,,16 bf,,16 bf,16~} %{ end grace %} <bf,, bf,>8 r8 r4 \grace {a,,16 bf,,16 bf,16~} %{ end grace %} <bf,, bf,>8 r8 r4 \grace {g,,16 af,,16 af,16~} %{ end grace %} <af,, af,>8 r8 <af,, af,>8 r8 <af,, af,>8 r8 r4 \grace {f,,16 gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {f,,16 gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {bf,,16 cf,16 cf16~} %{ end grace %} <cf, cf>8 r8 <cf, cf>8 r8 r2 \grace {a,,16 bf,,16 bf,16~} %{ end grace %} <bf,, bf,>8 r8 <bf,, bf,>8 r8 r2 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 r1 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 r1 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 r1\break
 \pageBreak
 
-\repeat volta 2{\key ef \major
+\ottava #0  \repeat volta 2{\key ef \major
 
 <<
 { ef,1_\markup{\italic{sempre }Ped.}_\accent ef,1_\accent ef,1_\accent ef,1_\accent ef,1_\accent ef,1_\accent ef,1_\accent ef,1_\accent }
@@ -549,8 +548,7 @@ r1 |
 >>
 \ottava #-1 b,,4( a,,4 gs,,4 fs,,4) e,,2( ds,,2 d,,1)\ottava #0 \break
 \bar "|." %{ bar %}
-\ottava #-1 \key ef \minor
-\grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4\break
+\ottava #-1 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4\break
 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4\break
 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {g,,16 af,,16 af,16~} %{ end grace %} <af,, af,>8 r8 <af,, af,>8 r8 <af,, af,>8 r8 r4 \grace {e,,16 f,,16 f,16~} %{ end grace %} <f,, f,>8 r8 r4 \grace {e,,16 f,,16 f,16~} %{ end grace %} <f,, f,>8 r8 r4 \grace {a,,16 bf,,16 bf,16~} %{ end grace %} <bf,, bf,>8 r8 <bf,, bf,>8 r8 <bf,, bf,>8 r8 r4\break
 \grace {f,,16 gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {f,,16 gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {bf,,16 cf,16 cf16~} %{ end grace %} <cf, cf>8 r8 <cf, cf>8 r8 <cf, cf>8 r8 r4 \grace {a,,16 bf,,16 bf,16~} %{ end grace %} <bf,, bf,>8 r8 r4 \grace {a,,16 bf,,16 bf,16~} %{ end grace %} <bf,, bf,>8 r8 r4 \grace {g,,16 af,,16 af,16~} %{ end grace %} <af,, af,>8 r8 <af,, af,>8 r8 <af,, af,>8 r8 r4 \grace {f,,16^\pp gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {f,,16 gf,,16 gf,16~} %{ end grace %} <gf,, gf,>8 r8 r4 \grace {bf,,16 cf,16 cf16~} %{ end grace %} <cf, cf>8 r8 <cf, cf>8 r8 r2 r1^\markup{1} \grace {a,,16 bf,,16 bf,16~^\markup{\italic{smorz.}}} %{ end grace %} <bf,, bf,>8 r8 <bf,, bf,>8 r8 r2 r1^\markup{1} \grace {d,,16 ef,,16 ef,16~^\ppp} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 r1 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 <ef,, ef,>8 r8 <ef,, ef,>8 r8 r4 r1 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 \grace {d,,16 ef,,16 ef,16~} %{ end grace %} <ef,, ef,>8 r8 r4 r1 r1 r1 \bar "||" %{ bar %}
