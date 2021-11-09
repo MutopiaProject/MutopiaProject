@@ -15,20 +15,7 @@
     maintainer = "Anonymous"
     opus = "Op. 45"
 }
-
-\layout {
-  \context {
-	\Staff
-	\RemoveEmptyStaves
-  }
-}
-\layout {
-  \context {
-	\Score
-	\consists "Span_arpeggio_engraver"
-  }
-}
-		\score { << 
+\paper { page-count = #6 }\layout { \context { \Staff \RemoveEmptyStaves } }\layout { \context {	\Score	\consists "Span_arpeggio_engraver" } }\score { << 
 \new PianoStaff <<
 << \new Staff = "treble" \with {
 \consists "Span_arpeggio_engraver"
@@ -335,7 +322,6 @@ r4 a,4 bf,4 <ef, ef>4 |
 \\
 { f,2.( fs,4) }
 >>
-\break
 |
 r4 g,4 a,4 <bf,, bf,>4 |
 
@@ -346,8 +332,7 @@ r4 g,4 a,4 <bf,, bf,>4 |
 >>
 |
 <f,, af,, b,,>2\arpeggio <c,, g,, c,>2\arpeggio |
-<f,, b,, d,>2\arpeggio <c,, g,, c,>4.\arpeggio r8\break
-|
+<f,, b,, d,>2\arpeggio <c,, g,, c,>4.\arpeggio r8 |
 r4 
 <<
 { af2 gf,8 gf8 |
@@ -358,8 +343,7 @@ cs4( d4 b,4 e,4) }
 { c4 df4 gf,4 |
 af,2. gs,4 |
 \omit r2 \omit r4 d,4 |
-e,2. e,4\break
-}
+e,2. e,4 }
 >>
 |
 \omit TupletNumber \tuplet 3/2 {<a,, a,>8\sustainOn <a,, a,>8_\markup{\italic{sostenuto}} <a,, a,>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<e, e>8 <e, e>8 <e, e>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<cs, cs>8 <cs, cs>8 <cs, cs>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<a,, a,>8 <a,, a,>8 <a,, a,>8} %{ end triplets %} |
@@ -396,8 +380,6 @@ e,2. e,4\break
 >>
 \omit TupletNumber \tuplet 3/2 {<d, bf,>8 <d, bf,>8 <d, bf,>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<ef, bf,>8 <ef, bf,>8 <ef, b,>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<ef, c>8 <ef, c>8 <ef, ef>8} %{ end triplets %} |
 \omit TupletNumber \tuplet 3/2 {<f, d>8 <f, d>8 <f, d>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<f, cs>8 <f, cs>8 <f, cs>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<f, c>8 <f, c>8 <f, c>8} %{ end triplets %} \omit TupletNumber \tuplet 3/2 {<f, ef>8 <f, ef>8 <f, ef>8} %{ end triplets %} \bar "||" %{ bar %}
-\pageBreak
-
 \grace {gf,,16(\sustainOn f,,16^\p} %{ end grace %} gf,,8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 |
 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 \grace {fs,,16( es,,16} %{ end grace %} fs,,8)-! r8 |
 \grace {fs,,16( es,,16} %{ end grace %} fs,,8)-! r8 \grace {fs,,16( es,,16} %{ end grace %} fs,,8)-! r8 \grace {fs,,16( es,,16} %{ end grace %} fs,,8)-! r8 \grace {fs,,16( es,,16} %{ end grace %} fs,,8)-! r8 |
@@ -422,7 +404,8 @@ e,2. e,4\break
 \grace {fs,,16( es,,16} %{ end grace %} <fs,, fs,>8)-! r8 \grace {fs,,16( es,,16} %{ end grace %} <fs,, fs,>8)-! r8 \grace {fs,,16( es,,16} %{ end grace %} <fs,, fs,>8)-! r8 \grace {fs,,16( es,,16} %{ end grace %} <fs,, fs,>8)-! r8 |
 \grace {gf,,16( f,,16} %{ end grace %} <gf,, gf,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, gf,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, gf,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, gf,>8)-! r8 |
 \grace {gf,,16( f,,16} %{ end grace %} <gf,, df,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, df,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, df,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, df,>8)-! r8 |
-\grace {gf,,16( f,,16} %{ end grace %} <gf,, bf,,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, bf,,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8\break
+\grace {gf,,16( f,,16} %{ end grace %} <gf,, bf,,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} <gf,, bf,,>8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8 \grace {gf,,16( f,,16} %{ end grace %} gf,,8)-! r8\pageBreak
+
 |
 \set Score.connectArpeggios = ##f \set Staff.connectArpeggios = ##t
 r2. r8 
@@ -480,8 +463,6 @@ r4 <ef, g,>4 <c, g,>4\arpeggio <f, a,>4\arpeggio }
 \omit r1 |
 \omit r2 \stemDown c8\stemNeutral  \stemDown bf,8\stemNeutral  \omit r4 }
 >>
-\pageBreak
-
 |
 
 <<
@@ -514,14 +495,11 @@ bf2(\! d'4.\> c'8) |
 bf2( a4\! af4) |
 g2.(\< c'8 ef'8)\! |
 ef'4(\> f2\< bf8 d'8)\! |
-f8.(\> ef16 d2 ef8 c8)\!\pageBreak
-
-|
+f8.(\> ef16 d2 ef8 c8)\! |
 <bf,, df, e,>2(\arpeggio <f,, c, f,>2\arpeggio |
 <bf,, e, g,>2\arpeggio <f,, c, f,>2)\arpeggio |
 <a,, c, gf,>2(\arpeggio <bf,, df, f,>2)\arpeggio |
-<c, ef, af,>2(\arpeggio <df, f, af,>2)\arpeggio\break
-|
+<c, ef, af,>2(\arpeggio <df, f, af,>2)\arpeggio |
 <d, f, bf,>4(\arpeggio <ef, g, bf,>4)\arpeggio <af,, bf,, f,>4(\arpeggio <g,, bf,, ef,>4)\arpeggio |
 <e, g, c>4(\arpeggio <f, a, c>4)\arpeggio <bf,, c, g,>4(\arpeggio <a,, c, f,>4)\arpeggio |
 <fs, a, d>4(\arpeggio <g, bf, d>4)\arpeggio <c, d, a,>4(\arpeggio <bf,, d, g,>4)\arpeggio |
@@ -547,4 +525,4 @@ f8.(\> ef16 d2 ef8 c8)\!\pageBreak
 <bf,, f, bf,>1\arpeggio\fermata\sustainOff  \bar ".." %{ bar %}
 } >>
 >>
->> \layout { } \midi { } }
+>> \layout { \context { \Score \override SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8) } } \midi { } }
