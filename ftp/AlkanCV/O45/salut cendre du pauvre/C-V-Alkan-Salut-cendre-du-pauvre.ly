@@ -503,7 +503,7 @@ f8.(\> ef16 d2 ef8 c8)\! |
 <d, f, bf,>4(\arpeggio <ef, g, bf,>4)\arpeggio <af,, bf,, f,>4(\arpeggio <g,, bf,, ef,>4)\arpeggio |
 <e, g, c>4(\arpeggio <f, a, c>4)\arpeggio <bf,, c, g,>4(\arpeggio <a,, c, f,>4)\arpeggio |
 <fs, a, d>4(\arpeggio <g, bf, d>4)\arpeggio <c, d, a,>4(\arpeggio <bf,, d, g,>4)\arpeggio |
-<gf, b, ef>4(\arpeggio <a, c ef>4)\arpeggio <d, ef, b,>4(\arpeggio <c, ef, a,>4)\arpeggio |
+<gs, b, ef>4(\arpeggio <a, c ef>4)\arpeggio <d, ef, b,>4(\arpeggio <c, ef, a,>4)\arpeggio |
 \set Staff.pedalSustainStyle = #'mixed <a,, c, ef, f, a,>4\arpeggio\sustainOn  <bf,, d, f, bf,>4\arpeggio\sustainOn\sustainOff  <c, ef, f, a, ef>4\arpeggio\sustainOn\sustainOff  <d, f, bf, d>4\arpeggio\sustainOn\sustainOff  |
 <c, f, a, ef f>4\arpeggio\sustainOn\sustainOff  <bf,, d, f, bf, d>4\arpeggio\sustainOn\sustainOff  <a, c ef f a>4\arpeggio\sustainOn\sustainOff  <bf, d f bf>4\arpeggio\sustainOn\sustainOff  |
 <c ef f a ef'>4\arpeggio\sustainOn\sustainOff  <d f bf d'>4\arpeggio\sustainOn\sustainOff  <c f a ef' f'>4\arpeggio\sustainOn\sustainOff  <bf, d f bf d'>4\arpeggio\sustainOn\sustainOff  |
