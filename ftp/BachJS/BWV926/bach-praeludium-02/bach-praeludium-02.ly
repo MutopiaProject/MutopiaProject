@@ -25,60 +25,70 @@ voiceone =  \relative {
   \key d \minor
   \time 3/4
 
-   d8[ a' f d a' f] |						% bar 1
+   d'8-1[ a'-4 f d a' f] |						% bar 1
    d8[ a' f d a' f] |						% bar 2
-   d[ bes' g d bes' g] |					% bar 3
+   d[ bes'-5 g d bes' g] |					% bar 3
    d[ bes' g d bes' g] |					% bar 4
-   cis,[ g' e cis g' e] |					% bar 5
-   cis[ bes' g e a g] |						% bar 6
-   f[ d f a f a] |						% bar 7
-   d[ a d f d f] |						% bar 8
-   b[( f e d c b] |						% bar 9
-   a[ gis fis  e) d' b] |					% bar 10
+   cis,-1[ g'-3 e cis g' e] |					% bar 5
+   cis[ bes' g e-1 a-4 g] |						% bar 6
+   f[ d f a f-1 a] |						% bar 7
+   d[ a-1 d f d-1 f] |						% bar 8
+   b[( f-3 e d c-3 b] |						% bar 9
+   a[ gis-3 fis  e) d'-5 b-2] |					% bar 10
   <a c\mordent>4 r r |						% bar 11
   <a c\mordent>4 r r |						% bar 12
-   a'8[( ees d c bes a] |					% bar 13
-   g[ fis e  d) c' a] |						% bar 14
-   bes[\mordent d bes g] g'4 |					% bar 15
-  r8  d[ c bes a\prall g] |					% bar 16
+   a'8[( ees-3 d c bes-3 a] |					% bar 13
+   g[ fis-3 e  d) c'-5 a-2] |						% bar 14
+   bes[\mordent d bes-2 g] g'4 |					% bar 15
+   r8  d-5[ c bes a\prall g] |					% bar 16
    a[ c a f] f'4 |						% bar 17
-  r8  c[ bes a g\prall f] |					% bar 18
-   g[ bes a g f e] |						% bar 19
-   f[ d f a d g,] |						% bar 20
+  r8  c-5[ bes a g\prall f] |					% bar 18
+   g[ bes a g f e-2] |						% bar 19
+   f[ d f-2 a d g,-1] |						% bar 20
   <<
-    {\stemUp {  cis[\mordent e cis a e' cis] } \stemNeutral }
+    {\stemUp {  cis[\mordent e cis-3 a-1 e' cis] } \stemNeutral }
     {\context Voice = "ii" { << \stemDown a4 >> } }
   >> |								% bar 21
-   a8[ e' cis a bes a] |					% bar 22
+   a8[ e' cis a bes-3 a] |					% bar 22
    g[ e' cis g e' cis] |					% bar 23
-   g[ e' cis g a g] |						% bar 24
+   g[ e' cis g a-3 g] |						% bar 24
    f[ d' bes f d' bes] |					% bar 25
    f[ d' bes f d' bes] |					% bar 26
-   fis[ c' a fis c' a] |					% bar 27
+   fis-2[ c' a fis c' a] |					% bar 27
    fis[ c' a fis c' a] |					% bar 28
-   bes[ g fis g d g] |						% bar 29
+   bes[ g-1 fis-2 g d g] |						% bar 29
    bes[ g d bes' g d] |						% bar 30
-   ees[ g fis g bes g] |					% bar 31
+   ees[ g fis g bes g-3] |					% bar 31
    ees[ bes' g ees bes' g] |					% bar 32
-   cis,[ bes' g cis, bes' g] |					% bar 33
-   cis,[ bes' g cis, a' g] |					% bar 34
+   cis,-1[ bes' g cis, bes' g] |					% bar 33
+   cis,[ bes' g cis, a'-4 g] |					% bar 34
    f[ a f d a' f] |						% bar 35
-   d[ a' f d cis d] |						% bar 36
-   e[ g e bes g' e] |						% bar 37
+   d[ a' f d cis-2 d-1] |						% bar 36
+   e-3[ g e bes-1 g' e] |						% bar 37
    bes[ g' e cis a g'] |					% bar 38
-   f16[ d c! bes] r4 r |					% bar 39
+   f16[ d c! bes-3] r4 r |					% bar 39
   r r r  |							% bar 40
-  r4 r16  d[ f a]  d,[ f a] d |					% bar 41
-   f[ a f d]  f[ d b d]  gis,[ b a gis] |			% bar 42
-  <a e' g>4.\arpeggio a'8 <a, d f>4 ~ |				% bar 43
+  r4 r16  d-1[ f a]  d,[ f a] d-1 |					% bar 41
+   f-2[ a f d]  f-4[ d b d-5]  gis,-2[ b a gis] |			% bar 42
+  <a e' g\finger \markup \tied-lyric "5~4">4.\arpeggio a'8 <a, d f-4>4 ~ |				% bar 43
    f'8[ e] <<
            { \stemUp { e4.\prall d8 } \stemNeutral }
            { \context Voice = "ii" { << \stemDown cis2 >> } }
          >> |							% bar 44
-   d8[ c! a d bes g] |	 					% bar 45
-   c[ a fis bes g e] |						% bar 46
-   a[ fis d g e cis] |						% bar 47
-  <a d\mordent fis>2. \bar "|."					% bar 48
+   d8-4[ c! a d bes g] |	 					% bar 45
+   c-5[ a fis-2 bes-4 g e] |						% bar 46
+   a-5[ fis d g-5 e-4 cis] |						% bar 47
+   <<
+     {\voiceOne \stemUp {fis2. } \stemNeutral}
+    \new Voice {
+      
+      \voiceTwo  \stemUp 
+      \once \override NoteColumn.force-hshift = #-1.5 d\mordent   }
+   {\stemDown a2. \stemNeutral }
+ 
+  
+ 
+   >> \bar "|."					% bar 48
 
 }
 
@@ -87,68 +97,74 @@ voicetwo =  \relative c {
   \key d \minor
   \time 3/4
   \clef "bass"
-
-  d4\mordent r r |						% bar 1
+\override Fingering.direction = #DOWN
+  d4\mordent-132 r r |						% bar 1
   d, r r |							% bar 2
   d'\mordent r r |						% bar 3
   d, r r |							% bar 4
   d'\mordent r r|						% bar 5
   d, r r |							% bar 6
-   d'8[ a d f d f] |						% bar 7
-   a[ f a d a d] |						% bar 8
+   d'8-2[ a d f d-5 f] |						% bar 7
+   a[ f-4 a d a-3 d] |						% bar 8
   gis,4 r r |							% bar 9
   e gis e |							% bar 10
-   a8[ e' c a e' c] |						% bar 11
-   g![ ees' c g ees' c] |					% bar 12
+   a8-3[ e' c-2 a e' c] |						% bar 11
+   g![ ees'-1 c g ees' c] |					% bar 12
   fis,4 r r |							% bar 13
-  d fis d |							% bar 14
+  d-4 fis d |							% bar 14
   g\mordent r r8 f! |						% bar 15
   e4\prall r r |						% bar 16
   f\mordent r r8 e |						% bar 17
-  d4\prall r8  f[ e d] |					% bar 18
-   e[ d cis e d cis] |						% bar 19
+  d4 r8  f-1[ e d] |					% bar 18
+   e[ d cis e-1 d cis] |						% bar 19
   d4 c! bes | 							% bar 20
-  a a' a, |							% bar 21
-  a a' a, |							% bar 22
+  a a' a,-4 |							% bar 21
+  a-5 a' a, |							% bar 22
   a a' a, |							% bar 23
   a a' a, |							% bar 24
-  bes r r |							% bar 25
-  bes bes' bes, |						% bar 26
+  bes-4 r r |							% bar 25
+  bes-5 bes' bes,-4 |						% bar 26
   a r r |							% bar 27
-  a d d, |							% bar 28
+  a-2 d d, |							% bar 28
   g r r |							% bar 29
   g g' g, |							% bar 30
-  g r r |							% bar 31
+  g-4 r r |							% bar 31
   g g' g, |							% bar 32
   a r r |							% bar 33
   a a' a, |							% bar 34
   a r r |							% bar 35
-  a a' a, |							% bar 36
+  a a' a,-1 |							% bar 36
   cis, r r |							% bar 37
-  cis cis' cis |						% bar 38
-  d a'16  g[ f e]  f[ a d, f] |					% bar 39
-  a,  d[ c bes] a  g[ f e]  d[ f a d] |				% bar 40
-   f[ a]  d,[ f] a r r8 r4 |					% bar 41
+  cis cis' cis, |						% bar 38
+  d' a'16  g-1[ f e]  f[ a d, f] |					% bar 39
+  a,  d-4[ c bes] a  g-2[ f e]  d[ f a d] |				% bar 40
+   f-2[ a]  d,-4[ f] a r r8 r4 |					% bar 41
   r r r |							% bar 42
-   cis,8[ e cis a]  d[ b] |					% bar 43
-   g[ g']  a[ g a g,] |						% bar 44
-  d'4 d' d, |							% bar 45
-  d r r |							% bar 46
+   cis,8-2[ e cis a]  d16[c bes a] |					% bar 43
+   a8[ g']  a-2[ g a-1 g,] |						% bar 44
+  d'4-3 d' d,-5 |							% bar 45
+  d-4 r r |							% bar 46
   d, d' d, |							% bar 47
-  d2. \bar "|." 						% bar 48
+  d2. \bar "|."
+   \mark \markup { \musicglyph "scripts.ufermata" } % bar 48
 }
 
 \score {
-   \context GrandStaff << 
-    \context Staff = "one" <<
+   \new GrandStaff << 
+    
+    \new Staff = "one" <<
+      \accidentalStyle piano-cautionary
       \voiceone
     >>
-    \context Staff = "two" <<
+    \new Staff = "two" \with { \consists "Mark_engraver" }<<
+       \override Staff.RehearsalMark.direction = #DOWN 
+   \override Staff.RehearsalMark.rotation = #'(180  0 0)
       \voicetwo
     >>
   >>
 
-  \layout{ line-width = 18.0 \cm }
+   \layout{ %%line-width = 17.0 \cm 
+   }
   
   \midi {
     \context {
