@@ -2,16 +2,9 @@
 %  typesetter   : Sébastien MANEN
 %  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
-%#                           T I M E   S E C T I O N                           #
+%#                       T E M P I  C O N D U C T O R S                        #
 %###############################################################################
-timeMvtI = {
-	\time 4/4
+tempiMvtI = {
+	\tempo "Allegro"
 }
-timeMvtII = {
-	\time 3/4
-	\tempo "Andante"
-}
-timeMvtIII = {
-	\time 2/4
-	\tempo "Vivace non troppo"
-}
+

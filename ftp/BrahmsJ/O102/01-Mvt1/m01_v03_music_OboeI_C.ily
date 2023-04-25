@@ -50,7 +50,7 @@ musicOboeIMvtI = \relative c'' {
 	\partCombineApart e2.-> \partCombineAutomatic e4
 	f2-> fis->
 	g2.-> g4
-	\tupletUp \times 2/3 {a2 f4} \times 2/3 {g2 e4} \tupletNeutral
+	\tupletUp \tuplet 3/2 2 {a2 f4 g2 e4} \tupletNeutral
 % Bars 66 to 70
 	f2 e
 	dis->-\tweak X-offset #-3.7 \ff dis->
@@ -80,25 +80,25 @@ musicOboeIMvtI = \relative c'' {
 	c4-! c-! r bes-!
 	r a-! r2
 	r r4 a'(\f \mark \default
-	g8) r a4( e8) r \partCombineApart f4(
+	g8) r a4( e8) r \partCombineApart \oneVoice f4(
 % Bars 91 to 95
-	g2 c,4) \partCombineAutomatic a'( 
+	g2 \voiceOne c,4) \partCombineAutomatic a'( 
 	g8) r a4( e8) r c4(
 	f8) f4 f8( f) f4 f8(
 	a4-.) g2\sf g4~
 	g g2 g4(~
 % Bars 96 to 100
-	g8 fis) g4.( fis8) \partCombineApart g4(~
-	g16 f! ees d) \partCombineAutomatic ees4(~ ees16 d c b!) c4~
+	g8 fis) g4.( fis8) \partCombineChords g4(~
+	g16 \partCombineUnisono f! ees d) \partCombineAutomatic ees4(~ ees16 d c b!) c4~
 	c c~ c8-. r r4
 	r c2 c4~
 	c8-. r r4 r2
 % Bars 101 to 105
 	R1
-	dis2(-\tweak X-offset #-1 \sf e4-.) r
-	gis2(-\tweak X-offset #-1 \sf a4-.) r
-	r2 r4 a(
-	g! f e2)
+	dis2^(-\tweak X-offset #-1 \sf e4-.) r
+	gis2^(-\tweak X-offset #-1 \sf a4-.) r
+	r2 r4 \oneVoice \shape #'((0 . 0)(1 . 0)(2.2 . 0)(3.5 . 0)) Slur a(
+	g! f \voiceOne e2)
 % Bars 106 to 110
 	r2 gis8(\sf\> a b c)\!
 	r2 cis,8(\sf\> d e f)\!
@@ -126,8 +126,8 @@ musicOboeIMvtI = \relative c'' {
 % Bars 141 to 145
 	R
 	R \mark \default
-	\partCombineAutomatic g4._\espressivo-\tweak X-offset #0 \pdolceD( f8 d2)
-	r4 r8 g(_\< f4. d8
+	\partCombineAutomatic g4.^\espressivo-\tweak X-offset #0 \pdolceD( f8 d2)
+	r4 r8 g(_\< f4. d8\!
 	g4._\> f8 d2)\!
 % Bars 146 to 150
 	R1^\gp
@@ -186,7 +186,7 @@ musicOboeIMvtI = \relative c'' {
 	g-.) f2-> f4~
 % Bars 211 to 215
 	f f2 f4(~
-	f8 e) f4.( cis'8) \partCombineApart d4(~
+	f8 e) f4.( cis'8) \partCombineApart \once \oneVoice d4(~
 	d16 c! bes a) \partCombineAutomatic bes4(~ bes16 a  g fis) g4~
 	g g4~ g8-. r r4
 	r g2 g4~
@@ -297,7 +297,7 @@ musicOboeIMvtI = \relative c'' {
 	dis)-. e(~ e16 d cis b) r4
 % Bars 346 to 350
 	R1
-	r2 r4 \partCombineApart \shape #'((0 . -3)(0 . -1.5)(0 . 0)(0 . 0)) Slur fis'4(~
+	r2 r4 \partCombineApart \once \oneVoice fis'4(~ % \shape #'((0 . -3)(0 . -1.5)(0 . 0)(0 . 0)) Slur
 	fis8 cis) d4.( ais8) b4~
 	b-\tweak X-offset #1.8 ^\dimmarkup  b2 a!4-\tweak X-offset #-2 \pp~
 	a1~(
@@ -333,8 +333,8 @@ musicOboeIMvtI = \relative c'' {
 	e-.) d2-> d4~
 % Bars 381 to 385
 	d d2 d4(~
-	d8 cis) d4.( ais'8) \partCombineApart b4~(
-	b16 a! g fis) \partCombineAutomatic g4(~ g16 fis e dis) e4~
+	d8 cis) d4.( ais'8) \partCombineApart \once \oneVoice b4~(
+	b16 a! g fis) \partCombineAutomatic g4(~ g16 fis e dis) \once \oneVoice  e4~
 	e e~ e8-. r r4
 	r f2 f4~
 % Bars 386 to 390

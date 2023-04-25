@@ -21,6 +21,7 @@
 \include "./00-Common/DoubleConcerto_NameStaff.ily"
 \include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
 \include "./01-Mvt1/m01_v01_music_FloteI_C.ily"
 \include "./01-Mvt1/m01_v02_music_FloteII_C.ily"
 \include "./01-Mvt1/m01_v03_music_OboeI_C.ily"
@@ -65,6 +66,9 @@
 %%					\new Voice {
 %%						\formatConductorMvtI
 %%					}
+%					\new Voice {
+%						\tempiMvtI
+%					}
 %					\new Voice {
 %						\timeMvtI \nameStaffImvtI
 %						\partCombine \musicFloteIMvtI \musicFloteIIMvtI

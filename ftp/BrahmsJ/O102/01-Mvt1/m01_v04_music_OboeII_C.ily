@@ -50,7 +50,7 @@ musicOboeIIMvtI = \relative c'' {
 	e'2. c4
 	b2-> a->
 	g2.-> e'4
-	\tupletUp \times 2/3 {c2 d4} \times 2/3 {b2 c4} \tupletNeutral
+	\tupletUp \tuplet 3/2 2 {c2 d4 b2 c4} \tupletNeutral
 % Bars 66 to 70
 	a2 a
 	a->-\tweak X-offset #-3.7 \ff a->
@@ -95,8 +95,8 @@ musicOboeIIMvtI = \relative c'' {
 	a8-. r r4 r2
 % Bars 101 to 105
 	R1
-	a2(-\tweak X-offset #-1 \sf a4-.) r
-	d!2(-\tweak X-offset #-1 \sf d4-.) r
+	a2_(-\tweak X-offset #-1 \sf a4-.) r
+	d!2_(-\tweak X-offset #-1 \sf d4-.) r
 	r2 r4 f
 	e b c b
 % Bars 106 to 110
@@ -368,7 +368,7 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	
-	r2 r4 a-.-\tweak X-offset #-2 \f
+	r2 r4 a-\tweak X-offset #-2 \f
 % Bars 426 to 430
 	d2 dis
 	e gis,
