@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v05_music_KlarinetI.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicKlarinetIMvtI = \relative c''' {
 	ees4. d8 g,4 r
 	ees'-. r b-. r
 	c-. ees-. f-. aes-.
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*20
 % Bars 11 to 15
@@ -29,7 +29,7 @@ musicKlarinetIMvtI = \relative c''' {
 	fis2 f)
 	e4( c2) r4
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	
@@ -71,7 +71,7 @@ musicKlarinetIMvtI = \relative c''' {
 	fes4-.) ees-. r2
 % Bars 81 to 85
 	g8 g4 g8( f) f4 f8(
-	e4-.) \once \partcombineApart c-. r2
+	e4-.) \once \partCombineApart c-. r2
 	bes'8 bes4 bes8( aes) aes4 aes8(
 	aes4-.) g-. r2
 	bes8 bes4 bes8( aes) aes4 aes8(
@@ -83,13 +83,13 @@ musicKlarinetIMvtI = \relative c''' {
 	f8) r aes4( fes8) r ees4(
 % Bars 91 to 95
 	f! g8 aes ees4) aes(
-	f8) r aes4( fes8) r \partcombineApart ees4(
-	d! ees8 f ees4) \partcombineAutomatic c(
+	f8) r aes4( fes8) r \partCombineApart ees4(
+	d! ees8 f ees4) \partCombineAutomatic c(
 	ees-.) des2\sf des4~
 	des des2 des4(~
 % Bars 96 to 100
-	des8 c) des4.( a'8) \partcombineApart bes4(~
-	bes16 aes! ges f) \partcombineAutomatic ges4(~ ges16 f ees d!) ees4~
+	des8 c) des4.( a'8) \partCombineApart bes4(~
+	bes16 aes! ges f) \partCombineAutomatic ges4(~ ges16 f ees d!) ees4~
 	ees ees4~ ees8-. r r4
 	r ees2 ees4~
 	ees8-. r r4 r2
@@ -102,9 +102,9 @@ musicKlarinetIMvtI = \relative c''' {
 % Bars 106 to 110
 	r2 ees4( f8 g)
 	r2 e8( f g aes)
-	\partcombineApart r2 r4 r16 g,( b d
+	\partCombineApart r2 r4 r16 g,( b d
 	g8-.) r f-. r r16 g,( b d g8-.) r
-	f-. \partcombineAutomatic r r4 c,16( ees! fis a c ees! fis a)
+	f-. \partCombineAutomatic r r4 c,16( ees! fis a c ees! fis a)
 % Bars 111 to 115
 	\afterGrace b1\trill( {a16[ b])} \mark \default
 	c4-. r r2
@@ -229,7 +229,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 	
-	\partcombineApart r2 r8 bes,(\p c d) \partcombineAutomatic
+	\partCombineApart r2 r8 bes,(\p c d) \partCombineAutomatic
 % Bars 236 to 240
 	r2 r8 b(_\dimmarkup cis d)
 	r cis( d e!) r d( e fis)
@@ -247,7 +247,7 @@ musicKlarinetIMvtI = \relative c''' {
 	R1*2
 	
 % Bars 251 to 255
-	\partcombineApart r8 a,_\f-. bes-. c-. des-. r r4 \partcombineAutomatic
+	\partCombineApart r8 a,_\f-. bes-. c-. des-. r r4 \partCombineAutomatic
 	R1
 	r4 r8 b-.\f c-. d-. e-. r
 	r4 r8 a,-. bes!-. c-. d-. r
@@ -300,7 +300,7 @@ musicKlarinetIMvtI = \relative c''' {
 	d2 c
 	ees2. ees4
 	c2 bes
-	g \once \partcombineApart c,
+	g \once \partCombineApart c,
 	R1*5
 % Bars 301 to 305
 	
@@ -392,11 +392,11 @@ musicKlarinetIMvtI = \relative c''' {
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \mark \default \bar "||" \key c \minor
-	fis2-\tweak X-offset #-2 \ff\trill \partcombineApart g8( ees d c) \partcombineAutomatic
+	fis2-\tweak X-offset #-2 \ff\trill \partCombineApart g8( ees d c) \partCombineAutomatic
 	bes4 r8 fis' g4-. r
 	f!2\trill ees8( aes g f)
 % Bars 391 to 395
-	ees4 r8 f-. ees4-. r8 \once \partcombineApart c-.
+	ees4 r8 f-. ees4-. r8 \once \partCombineApart c-.
 	g'8-\tweak X-offset #-2.5 \f g4 g g g8~
 	g g4 g g g8~
 	g g4 g g g8~
@@ -424,13 +424,13 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 	
-	r2 r4 \partcombineApart c-.-\tweak X-offset #-2 _\f \partcombineAutomatic
+	r2 r4 \partCombineApart c-.-\tweak X-offset #-2 _\f \partCombineAutomatic
 % Bars 426 to 430
 	aes'2 a
 	ees d
-	\partcombineApart c4-. \partcombineAutomatic r \partcombineApart c-. \partcombineAutomatic r
-	\partcombineApart c-. \partcombineAutomatic r f-. aes-.
+	\partCombineApart c4-. \partCombineAutomatic r \partCombineApart c-. \partCombineAutomatic r
+	\partCombineApart c-. \partCombineAutomatic r f-. aes-.
 	c-. r c,-. r
 % Bar 431
-	\partcombineApart c,1\fermata \bar "|."
+	\partCombineApart c,1\fermata \bar "|."
 }

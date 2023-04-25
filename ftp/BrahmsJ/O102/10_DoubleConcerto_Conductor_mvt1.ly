@@ -1,27 +1,25 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Conductor_mvt1.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
+%    work                : Double Concerto for Violin and Violoncello 
 %                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score conductor mvt I
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.22.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
-\include "./00-Common/DoubleConcerto_Paper.ily"
+\include "./00-Common/DoubleConcerto_PaperConductors.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Conductor_option.ily"
-\include "./00-Common/DoubleConcerto_StaffName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
+\include "./00-Common/DoubleConcerto_LayoutConductors.ily"
+\include "./00-Common/DoubleConcerto_NameStaff.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_Format_Cond_Mvt1.ily"
 \include "./01-Mvt1/m01_v01_music_FloteI_C.ily"
 \include "./01-Mvt1/m01_v02_music_FloteII_C.ily"
@@ -62,101 +60,87 @@
 	}
 	\score {
 		<<
-			\new StaffGroup <<
-				\new Staff <<
-					\new Voice {
-						\formatConductorMvtI
-					}
-					\new Voice {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffImvtI
-						\partcombine \musicFloteIMvtI \musicFloteIIMvtI
-					}
-				>>
-				\new Staff {
-					\timeMvtI \generalOptions \conductorOptions
-					\nameStaffIImvtI
-					\partcombine \musicOboeIMvtI \musicOboeIIMvtI
-				}
-				\new Staff {
-					\timeMvtI \generalOptions \conductorOptions
-					\nameStaffIIImvtI
-					\partcombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
-				}
-				\new Staff {
-					\timeMvtI \generalOptions \conductorOptions
-					\nameStaffIVmvtI
-					\partcombine \musicFagottoIMvtI \musicFagottoIIMvtI
-				}
-				\new GrandStaff \with { \nameGdStaffImvtI } <<
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffVmvtI
-						\partcombine \musicHornIMvtI \musicHornIIMvtI
-					}
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffVImvtI
-						\partcombine \musicHornIIIMvtI \musicHornIVMvtI
-					}
-				>>
-				\new Staff {
-					\timeMvtI \generalOptions \conductorOptions
-					\nameStaffVIImvtI
-					\partcombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
-				}
-				\new Staff {
-					\timeMvtI \generalOptions \conductorOptions
-					\nameStaffVIIImvtI
-					\musicPaukenMvtI
-				}
-			>>
-			\new Staff {
-				\timeMvtI \generalOptions \conductorOptions
-				\nameStaffIXmvtI
-				\keepWithTag #'score \musicSoloViolinMvtI
-			}
-			\new Staff {
-				\timeMvtI \generalOptions \conductorOptions
-				\nameStaffXmvtI
-				\musicSoloCelloMvtI
-			}
-			\new StaffGroup <<
-				\new GrandStaff <<
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffXImvtI
-						\musicViolinIMvtI
-					}
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffXIImvtI
-						\musicViolinIIMvtI
-					}
-				>>
-				\new Staff {
-					\timeMvtI \generalOptions \conductorOptions
-					\nameStaffXIIImvtI
-					\musicBratscheMvtI
-				}
-				\new GrandStaff <<
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffXIVmvtI
-						\musicVioloncellMvtI
-					}
-					\new Staff {
-						\timeMvtI \generalOptions \conductorOptions
-						\nameStaffXVmvtI
-						\musicKontrabassMvtI
-					}
-				>>
-			>>
+%			\new StaffGroup <<
+%				\new Staff <<
+%%					\new Voice {
+%%						\formatConductorMvtI
+%%					}
+%					\new Voice {
+%						\timeMvtI \nameStaffImvtI
+%						\partCombine \musicFloteIMvtI \musicFloteIIMvtI
+%					}
+%				>>
+%				\new Staff {
+%					\timeMvtI \nameStaffIImvtI
+%					\partCombine \musicOboeIMvtI \musicOboeIIMvtI
+%				}
+%				\new Staff {
+%					\timeMvtI \nameStaffIIImvtI
+%					\partCombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
+%				}
+%				\new Staff {
+%					\timeMvtI \nameStaffIVmvtI
+%					\partCombine \musicFagottoIMvtI \musicFagottoIIMvtI
+%				}
+%				\new GrandStaff \with { \nameGdStaffImvtI } <<
+%					\new Staff {
+%						\timeMvtI \nameStaffVmvtI
+%						\partCombine \musicHornIMvtI \musicHornIIMvtI
+%					}
+%					\new Staff {
+%						\timeMvtI \nameStaffVImvtI
+%						\partCombine \musicHornIIIMvtI \musicHornIVMvtI
+%					}
+%				>>
+%				\new Staff {
+%					\timeMvtI \nameStaffVIImvtI
+%					\partCombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
+%				}
+%				\new Staff {
+%					\timeMvtI \nameStaffVIIImvtI
+%					\musicPaukenMvtI
+%				}
+%			>>
+%			\new Staff {
+%				\timeMvtI \nameStaffIXmvtI
+%				\keepWithTag #'score \musicSoloViolinMvtI
+%			}
+%			\new Staff {
+%				\timeMvtI \nameStaffXmvtI
+%				\musicSoloCelloMvtI
+%			}
+%			\new StaffGroup <<
+%				\new GrandStaff <<
+%					\new Staff {
+%						\timeMvtI \nameStaffXImvtI
+%						\musicViolinIMvtI
+%					}
+%					\new Staff {
+%						\timeMvtI \nameStaffXIImvtI
+%						\musicViolinIIMvtI
+%					}
+%				>>
+%				\new Staff {
+%					\timeMvtI \nameStaffXIIImvtI
+%					\musicBratscheMvtI
+%				}
+%				\new GrandStaff <<
+%					\new Staff {
+%						\timeMvtI \nameStaffXIVmvtI
+%						\musicVioloncellMvtI
+%					}
+%					\new Staff {
+%						\timeMvtI \nameStaffXVmvtI
+%						\musicKontrabassMvtI
+%					}
+%				>>
+%			>>
 		>>
 		\header {
 			breakbefore = ##t
 		}
 		\layout {
+			\layoutTemp
 		}
 	}
 }

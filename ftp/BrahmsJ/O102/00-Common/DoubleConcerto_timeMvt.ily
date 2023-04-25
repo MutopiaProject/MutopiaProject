@@ -1,6 +1,9 @@
-% Project Name : Double Concerto Op102
-% Fichier :      DoubleConcerto_timeMvt.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
+%###############################################################################
+%#                           T I M E   S E C T I O N                           #
+%###############################################################################
 timeMvtI = {
 	\time 4/4
 	\tempo "Allegro"

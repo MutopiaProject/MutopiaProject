@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v11_music_HornIII.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicHornIIIMvtI = \relative c'' {
 	d4. d8 d4 r
 	bes-. r c-. r
 	g-. g-. g'-. g-.
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*20
 % Bars 11 to 15
@@ -29,7 +29,7 @@ musicHornIIIMvtI = \relative c'' {
 	cis c
 	b g4) r
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	
@@ -47,16 +47,16 @@ musicHornIIIMvtI = \relative c'' {
 	f4. f8 f4. g8
 % Bars 61 to 65
 	ees2-> e->
-	\partcombineApart d2.-> d4 \partcombineAutomatic
+	\partCombineApart d2.-> d4 \partCombineAutomatic
 	ees2-> e->
-	f2.-> \once \partcombineApart bes,4
+	f2.-> \once \partCombineApart bes,4
 	r2 r4 g
 % Bars 66 to 70
 	g2 g2
 	e'-\tweak X-offset #-3.7 \ff-> e->
-	f-> \once \partcombineApart d->
+	f-> \once \partCombineApart d->
 	d bes
-	\once \partcombineApart d4 r r2
+	\once \partCombineApart d4 r r2
 % Bars 71 to 75
 	R1*4
 	
@@ -65,7 +65,7 @@ musicHornIIIMvtI = \relative c'' {
 	bes4-.\f ees2-> ees4-.
 % Bars 76 to 80
 	ees-! r ees-! r
-	\once \partcombineApart bes-! r r2
+	\once \partCombineApart bes-! r r2
 	R1 \mark \default
 	R1*10
 % Bars 81 to 85
@@ -92,7 +92,7 @@ musicHornIIIMvtI = \relative c'' {
 	R1
 	g'2-\tweak X-offset #-1 \sf g4-. r
 	c,2-\tweak X-offset #-1 \sf c4-. r
-	\once \partcombineApart bes-. r r ees(
+	\once \partCombineApart bes-. r r ees(
 	bes c) d2
 % Bars 106 to 110
 	bes2\sf bes4-. r
@@ -101,7 +101,7 @@ musicHornIIIMvtI = \relative c'' {
 	r ees-. d-. r
 	ees-. r e-. r
 % Bars 111 to 115
-	\once \partcombineApart d-. r \once \partcombineApart d-. r \mark \default
+	\once \partCombineApart d-. r \once \partCombineApart d-. r \mark \default
 	R1*26
 % Bars 116 to 120
 	
@@ -125,7 +125,7 @@ musicHornIIIMvtI = \relative c'' {
 	f
 % Bars 146 to 150
 	R1^\gp
-	\partcombineApart bes,1~ \partcombineAutomatic
+	\partCombineApart bes,1~ \partCombineAutomatic
 	bes(
 	c)(
 	ees)
@@ -144,21 +144,21 @@ musicHornIIIMvtI = \relative c'' {
 	r2 r4 d_\pdolce~
 	d8 r d4~ d8 r c4~
 	c~ c8 r r4 d~
-	d8 r d4~ d8 r \partcombineChords d4~
-	d2. \partcombineAutomatic r4
+	d8 r d4~ d8 r \partCombineChords d4~
+	d2. \partCombineAutomatic r4
 % Bars 171 to 175
 	R1 \mark \default
 	R1*5
 % Bars 176 to 180
 	
-	r2 r4 \partcombineApart g(~
-	g8 d) ees4.( b8) \partcombineChords c4~
-	c_\dimmarkup c2 \partcombineApart c4~\<
+	r2 r4 \partCombineApart g(~
+	g8 d) ees4.( b8) \partCombineChords c4~
+	c_\dimmarkup c2 \partCombineApart c4~\<
 	<<c1~ {s4\> s\! s s }>>
 % Bars 181 to 185
 	c2( f)~
 	f1(~
-	f2 bes,) \partcombineAutomatic
+	f2 bes,) \partCombineAutomatic
 	R1*5
 % Bars 186 to 190
 	
@@ -171,9 +171,9 @@ musicHornIIIMvtI = \relative c'' {
 	r8 bes-. r8 bes-. r8 bes-. r4 \mark \default
 	R1*2
 	
-	ees8-.-\tweak X-offset #-2 \f ees4 ees8( ees) ees4 \partcombineApart ees8(
+	ees8-.-\tweak X-offset #-2 \f ees4 ees8( ees) ees4 \partCombineApart ees8(
 % Bars 196 to 200
-	c2.) \partcombineAutomatic b4\rest
+	c2.) \partCombineAutomatic b4\rest
 	ees8 ees4 ees ees ees8(
 	d4-.) d-. r2
 	ees8 ees4 ees8( ees) es4 ees8(
@@ -192,8 +192,8 @@ musicHornIIIMvtI = \relative c'' {
 	r4 ees2\sf ees4-.
 % Bars 211 to 215
 	R1
-	r2 r4 \partcombineApart bes~
-	bes bes-. \partcombineAutomatic r f'\ff~
+	r2 r4 \partCombineApart bes~
+	bes bes-. \partCombineAutomatic r f'\ff~
 	f f~ f8-. r r4
 	r f2 f4~
 % Bars 216 to 220
@@ -244,7 +244,7 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	r2 r4 c-._\mfcresc
-	g'-. r8 c,-. g'4-. r8 \once \partcombineApart c,-.
+	g'-. r8 c,-. g'4-. r8 \once \partCombineApart c,-.
 % Bars 286 to 290
 	g'4-!-\tweak X-offset #0.5 \ff r g,-! r
 	g-! r g-! r
@@ -256,11 +256,11 @@ musicHornIIIMvtI = \relative c'' {
 	ees4-. ees-. ees4.-> g8
 	f4. f8 f4. g8
 	ees2 e
-	\partcombineApart d2. d4 \partcombineAutomatic
+	\partCombineApart d2. d4 \partCombineAutomatic
 % Bars 296 to 300
 	ees2 e
 	f2. d4-.
-	\partcombineApart g-. ees-. c-. d-. \partcombineAutomatic
+	\partCombineApart g-. ees-. c-. d-. \partCombineAutomatic
 	g,2 g4 r
 	R1*13
 % Bars 301 to 305
@@ -270,9 +270,9 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 311 to 315
 	
 	\bar "||" \mark \default
-	\partcombineChords d'1~
+	\partCombineChords d'1~
 	<<d~ {s4 s s s\<}>>
-	<<d1 {s4\> s s\! s}>> \partcombineAutomatic
+	<<d1 {s4\> s s\! s}>> \partCombineAutomatic
 % Bars 316 to 320
 	R1^\gp
 	f1~
@@ -317,9 +317,9 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	
-	c8-.\f c4 c8( c) c4 \partcombineApart c8(
+	c8-.\f c4 c8( c) c4 \partCombineApart c8(
 % Bars 366 to 370
-	a2.) \partcombineAutomatic r4 \mark \default
+	a2.) \partCombineAutomatic r4 \mark \default
 	c8 c4 c c c8(
 	b4-.) b-. r2
 	a'8 a4 a8( g) g4 g8~
@@ -327,15 +327,15 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 371 to 375
 	a8 a4 a8( g) g4 g8(
 	f!4-.) d-. r2
-	d4-. r r \once \partcombineApart c-.
+	d4-. r r \once \partCombineApart c-.
 	r d-. r2
 	b4.( d8) d( g) g4->(
 % Bars 376 to 380
-	e8) r g4->( ees8) r \partcombineApart g4(
-	\once \partcombineChords e!2 d4) \partcombineAutomatic g(
-	e8) r g4( ees8) r \partcombineChords d4(
-	g2 d4) \partcombineAutomatic r
-	r \partcombineApart c2 c4-. \partcombineAutomatic
+	e8) r g4->( ees8) r \partCombineApart g4(
+	\once \partCombineChords e!2 d4) \partCombineAutomatic g(
+	e8) r g4( ees8) r \partCombineChords d4(
+	g2 d4) \partCombineAutomatic r
+	r \partCombineApart c2 c4-. \partCombineAutomatic
 % Bars 381 to 385
 	R1
 	r2 r4 g-\tweak X-offset #-3.5 \sf~
@@ -350,7 +350,7 @@ musicHornIIIMvtI = \relative c'' {
 	c!2 bes4 r8 c-.
 % Bars 391 to 395
 	bes4-. r8 c-. bes4-. r8 c-.
-	\once \partcombineApart d-. r r4 r2
+	\once \partCombineApart d-. r r4 r2
 	R1*33
 % Bars 396 to 400
 	

@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v15_music_Pauken.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicPaukenMvtI = \relative c {
 	e2\startTrillSpan_\fmarc e4\stopTrillSpan r
 	a,-. r e'-. r
 	e-. e-. a,-. a-.
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*51
 % Bars 11 to 15

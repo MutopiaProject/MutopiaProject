@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v10_music_HornII.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicHornIIMvtI = \relative c' {
 	c4. c8 c4 r
 	b' r bes r
 	c,-. c-. bes' bes
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*20
 % Bars 11 to 15
@@ -29,7 +29,7 @@ musicHornIIMvtI = \relative c' {
 	c~
 	c2. r4
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	
@@ -275,7 +275,7 @@ musicHornIIMvtI = \relative c' {
 	
 	r2 r4 bes''(\p~
 	bes8 c) bes4.( a8) g4~
-	g \once \partcombineApart g2 g4~
+	g \once \partCombineApart g2 g4~
 	g1~
 % Bars 351 to 355
 	g2( c,4) r
@@ -346,5 +346,5 @@ musicHornIIMvtI = \relative c' {
 	r bes'4 bes
 	c r c r
 % Bar 431
-	R1\fermataMarkup \bar "|."
+	R1\fermata \bar "|."
 }

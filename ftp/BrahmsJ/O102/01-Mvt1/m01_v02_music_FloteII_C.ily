@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v02_music_FloteII.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -11,9 +11,9 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 1 to 5
 	e4._\fmarc d8 b4 r
 	c4. b8 e,4 r
-	\tupletUp \times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
-	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. } \tupletNeutral
-	R1^\fermataMarkup
+	\tupletUp \tuplet 3/2 2 {fis4-. gis-. a-. gis-. a-. b-. 
+	a-. b-. c-. d-. e-. f-. } \tupletNeutral
+	R1^\fermata
 % Bars 6 to 10
 	R1*22
 % Bars 11 to 15
@@ -29,7 +29,7 @@ musicFloteIIMvtI = \relative c''' {
 	fis2 f)
 	e4( cis2) r4
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	
@@ -43,14 +43,14 @@ musicFloteIIMvtI = \relative c''' {
 	\mark \default
 	c'4.-\tweak X-offset #-2 \ff d8 c4 r
 	a4. gis8 a4 r
-	\tupletUp \once \override CombineTextScript.X-offset = #-3 \times 2/3 {b-. c-. d-.} c4.-> a8
+	\tupletUp \once \override CombineTextScript.X-offset = #-3 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->
 	e2.-> c'4
 	b2 a
 	g2. e'4
-	\times 2/3 {c2 d4} \times 2/3 {b2 c4} \tupletNeutral
+	\tuplet 3/2 2 {c2 d4 b2 c4} \tupletNeutral
 % Bars 66 to 70
 	a2 a
 	a-\tweak X-offset #-3.7 \ff-> a->
@@ -67,12 +67,12 @@ musicFloteIIMvtI = \relative c''' {
 	aes4-! r d,!-! r
 	e-! r r2
 	R1 \mark \default
-	g8\f g4 g8( f) f4 f8(
+	g8\f g4 g8( f) f4 f8_(
 	f4-.) e-. r2
 % Bars 81 to 85
-	bes'8 bes4 bes8( bes) bes4 bes8(
+	bes'8 bes4 bes8_( bes) bes4 bes8(
 	a4) a r2
-	e'8 e4 e8( d) d4 d8(
+	e'8 e4 e8( d) d4 d8_(
 	des4-.) c-. r2
 	e8 e4 e8( d) d4 d8(
 % Bars 86 to 90
@@ -95,15 +95,15 @@ musicFloteIIMvtI = \relative c''' {
 	a8-. r r4 r2
 % Bars 101 to 105
 	R1
-	a2\sf( a4-.) r
-	d!2-\tweak X-offset #-2 \sf( d4-.) r
+	a2\sf_( a4-.) r
+	d!2-\tweak X-offset #-2 \sf _( d4-.) r
 	r2 r4 f(
 	e b c b)
 % Bars 106 to 110
 	r2 c,8(\sf\> e gis a)\!
 	r2 f8(\sf\> a cis d)\!
 	r2 r4 r16 e,,( gis b
-	e8)-. r8 a, r r16 e( gis b e8)-. r
+	e8)-. r8 a,-. r r16 e( gis b e8)-. r
 	a,-. r r4 a16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace gis1\trill( {fis16[ gis]) } \mark \default
@@ -123,9 +123,9 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 131 to 135
 	
 	R1
-	r4 fis-. gis-. r
+	r4 fis gis r
 	R1
-	r4 fis-. fis-. r
+	r4 fis fis r
 % Bars 136 to 140
 	r g-. r g-.\<
 	r g-. cis-.\sf r
@@ -191,21 +191,21 @@ musicFloteIIMvtI = \relative c''' {
 	d'8 d4 d8( c) c4 c8~
 	c4-. b-. r2
 % Bars 201 to 205
-	d8 d4 d8( c) c4 c8(
-	bes4-.) bes-. r2
+	d8 d4 d8( c) c4 c8\(
+	bes4-.\) bes-. r2
 	bes4-. bes-. r a-.
 	r c-. r2
-	r r4 e
+	r r4 e\(
 % Bars 206 to 210
-	d8 r e4 b8 r c4
-	d2 g,4 e'
-	d8 r e4 b8 r c4~
+	d8\) r e4\( b8\) r c4\(
+	d2 g,4\) e'\(
+	d8\) r e4\( b8\) r c4~
 	c2~ c4 c(
 	e-.) d2-> d4~
 % Bars 211 to 215
 	d d2 d4(~
 	d8 cis) d4.( a8) bes4-\tweak X-offset #-1.5 \sf(~
-	bes16 c! bes a) bes4(~ bes16 a g fis) g4~
+	bes16 c! bes a) bes4\(~ bes16 a g fis\) g4~
 	g g~ g8-. r r4
 	r g2 g4~
 % Bars 216 to 220
@@ -254,11 +254,11 @@ musicFloteIIMvtI = \relative c''' {
 	ges( bes,)
 	c'4.-\tweak X-offset #-3 _\ffmarc bes8 g!4 r
 	aes4. g8 c,4 r
-	\times 2/3 {d!4-. e-. f-.} \times 2/3 {e-. f-. g-.}
-	\times 2/3 {f-. g-. aes-.} \times 2/3 {bes-. c-. des-.~}
+	\tuplet 3/2 2 {d!4-. e-. f-. e-. f-. g-.
+	f-. g-. aes-. bes-. c-. des-.~}
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
-	\times 2/3 {des,-. ees-. f-.} \times 2/3 {g-. aes-. bes-.~}
+	\tuplet 3/2 2 {des,-. ees-. f-. g-. aes-. bes-.~}
 	bes c,-. aes'-. f-.
 	des-. r r2 \mark #11
 	R1*9
@@ -272,7 +272,7 @@ musicFloteIIMvtI = \relative c''' {
 	r ais( cis) r r gis( b) r
 % Bars 281 to 285
 	r fis( a) dis,( fis) c!( dis) r
-	\once \override CombineTextScript.X-offset = #-3 e4-! r r2
+	e4 r r2
 	R1*3
 	
 	
@@ -284,7 +284,7 @@ musicFloteIIMvtI = \relative c''' {
 	c4.-\tweak X-offset #0.5 \ff d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
-	\once \override CombineTextScript.X-offset = #-3.5 \times 2/3 {b-. c-. d-.} c4.-> a8
+	\once \override CombineTextScript.X-offset = #-3.5 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
 	e2. c'4
@@ -299,13 +299,13 @@ musicFloteIIMvtI = \relative c''' {
 	
 	R1
 % Bars 306 to 310
-	r4 fis-.\< gis-.\sf r
+	r4 fis\< gis\sf r
 	R1
-	r4 c,-.\< fis-.\sf r
+	r4 c,\< fis\sf r
 	R1
 	r4 ees-.\< e-.\sf r
 % Bars 311 to 315
-	r a-. a2\fp\>~
+	r a a2\fp\>~
 	a4\! r r2 \bar "||" \key a \major \mark \default
 	R1*3
 	
@@ -327,10 +327,10 @@ musicFloteIIMvtI = \relative c''' {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
-	ais-.) b2( fis4)
-	r2 r4 d'(
-	dis)-. e4(~ e16 d cis b) d4\fp(~
+	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f\(
+	ais-.\) b2\( fis4\)
+	r2 r4 d'\(
+	dis\)-. e4\(~ e16 d cis b\) d4\fp(~
 % Bars 346 to 350
 	d8 g,) fis4.( e8) d4~
 	d d2(\> b4)\!
@@ -342,8 +342,8 @@ musicFloteIIMvtI = \relative c''' {
 	a1
 	d,
 % Bars 356 to 360
-	cis2 b~
-	b a~
+	cis2 b_~
+	b a_~
 	a1~
 	a4 r r2
 	R1*5
@@ -352,37 +352,37 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 	
-	gis'8-.\f gis4 gis8( fis) fis4 fis8\((\<
+	gis'8-.\f gis4 gis8\( fis\) fis4 fis8\<
 % Bars 366 to 370
-	f2)\> e4\)\! r \mark \default
-	gis8 gis4 gis8( fis!) fis4  fis8(
-	eis4-.) cis-. r2
-	b'8 b4 b8( a) a4 a8~
+	f2\> e4\! r \mark \default
+	gis8 gis4 gis8\( fis!\) fis4  fis8\(
+	eis4-.\) cis-. r2
+	b'8 b4 b8\( a\) a4 a8~
 	a4-. gis-. r2
 % Bars 371 to 375
 	b8 b4 b8( a) a4 a8(
 	g4)-. g-. r2
 	e4-. e-. r d-.
 	r cis-. r2
-	r2 r4 cis'(
+	r2 r4 cis'\(
 % Bars 376 to 380
-	b8) r cis4( gis8) r a4(
-	b2 e,4) cis'(
-	b8) r cis4( gis8) r a4(
-	a'2 e4) a,(
+	b8\) r cis4\( gis8\) r a4\(
+	b2 e,4\) cis'\(
+	b8\) r cis4\( gis8\) r a4\(
+	a'2 e4\) a,(
 	cis-.) b2-> b4~
 % Bars 381 to 385
 	b b2 b4~(
 	b8 ais) b4.( fis'8) g4~-\tweak X-offset #-1.5 \sf
-	g16 a! g fis g4(~ g16 fis e dis) e4(
+	g16 a! g fis g4\(~ g16 fis e dis\) e4(
 	cis) cis~ cis8-. r r4
 	r d2 d4~
 % Bars 386 to 390
 	d8-. r r4 r2
 	R1 \bar "||" \key a \minor \mark \default
-	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(0 . 2) dis2\ff\trill e8( c b a)
+	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(0 . 2) dis2\ff\trill e8\( c b a\)
 	g4 r8 a-. g4-. r
-	\once \override CombineTextScript.X-offset = #-4.5 gis'2\trill a8( f e d)
+	\once \override CombineTextScript.X-offset = #-4.5 gis'2\trill a8\( f e d\)
 % Bars 391 to 395
 	c4 r8 d-. c4-. r
 	R1
@@ -415,14 +415,14 @@ musicFloteIIMvtI = \relative c''' {
 	b-. c-. gis-. a-.
 	b-. b-. e,-. c'-. 
 	b-. c-. gis-. a-. 
-	a-. a-. e'-. a,-. 
-	a-. a-. e'-. a,-\tweak X-offset #-2 \f-. 
+	a-. a-. e' a, 
+	a-. a-. e' a,-\tweak X-offset #-2 \f 
 % Bars 426 to 430
 	d2 dis
 	e gis,
-	a4-. r a-. r
-	a-. r f-. a-.
+	a4 r a r
+	a r f-. a-.
 	c-. r c-. r
 % Bar 431
-	R1\fermataMarkup \bar "|."
+	R1\fermata \bar "|."
 }

@@ -1,6 +1,9 @@
-% Project Name : Double Concerto Op102
-% Fichier :	  00_DoubleConcerto_Format_Cond_Mvt1.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
+%###############################################################################
+%#                 C O N D U C T O R   S C O R E   F O R M A T                 #
+%###############################################################################
 formatConductorMvtI = {
 	\override Score.NonMusicalPaperColumn.line-break-permission = ##f
 	\override Score.NonMusicalPaperColumn.page-break-permission = ##f

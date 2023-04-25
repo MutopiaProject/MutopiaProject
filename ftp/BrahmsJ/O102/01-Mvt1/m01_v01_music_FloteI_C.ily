@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v01_music_FloteI.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -11,9 +11,9 @@ musicFloteIMvtI = \relative c''' {
 % Bars 1 to 5
 	e4._\fmarc d8 b4 r
 	c4. b8 e,4 r
-	\tupletUp \times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
-	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. } \tupletNeutral
-	R1^\fermataMarkup
+	\tupletUp \tuplet 3/2 2 {fis4-. gis-. a-. gis-. a-. b-. 
+	a-. b-. c-.  d-. e-. f-. } \tupletNeutral
+	R1^\fermata
 % Bars 6 to 10
 	R1*22
 % Bars 11 to 15
@@ -29,7 +29,7 @@ musicFloteIMvtI = \relative c''' {
 	b) cis( gis) a\<(
 	a'2\> e4)\! r
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	
@@ -43,14 +43,14 @@ musicFloteIMvtI = \relative c''' {
 	\mark \default
 	a4.-\tweak X-offset #-2 \ff g8 e4 r
 	f4. e8 c4 r
-	\tupletUp \once \override CombineTextScript.X-offset = #-3 \times 2/3 {b-. c-. d-.} c4.-> a8
+	\tupletUp \once \override CombineTextScript.X-offset = #-3 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->
-	e'2.-> \partcombineApart c4
-	b2-> a-> \partcombineAutomatic
+	e'2.-> \partCombineApart c4
+	b2-> a-> \partCombineAutomatic
 	g'2.-> g4
-	\times 2/3 {a2 f4} \times 2/3 {g2 e4} \tupletNeutral
+	\tuplet 3/2 2 {a2 f4 g2 e4} \tupletNeutral
 % Bars 66 to 70
 	f2 e
 	dis-\tweak X-offset #-3.7 \ff-> dis->
@@ -67,12 +67,12 @@ musicFloteIMvtI = \relative c''' {
 	d,!4-! r aes-! r
 	c-! r r2
 	R1 \mark \default
-	e8\f e4 e8( d) d4 d8(
+	e8\f e4 e8( d) d4 d8^(
 	des4-.) c-. r2
 % Bars 81 to 85
-	e8 e4 e8( d) d4 d8(
-	cis4) \once \partcombineApart a-. r2
-	g'8 g4 g8( f) f4 f8(
+	e8 e4 e8^( d) d4 d8(
+	cis4) \once \partCombineApart a-. r2
+	g'8 g4 g8( f) f4 f8^(
 	f4-.) e-. r2
 	g8 g4 g8( f) f4 f8(
 % Bars 86 to 90
@@ -95,19 +95,19 @@ musicFloteIMvtI = \relative c''' {
 	c8-. r r4 r2
 % Bars 101 to 105
 	R1
-	dis2( e4-.) r
-	gis2( a4-.) r
-	r2 r4 \partcombineChords a
-	g! f \once \partcombineApart e2 \partcombineAutomatic
+	dis2^( e4-.) r
+	gis2^( a4-.) r
+	r2 r4 \partCombineChords a
+	g! f \once \partCombineApart e2 \partCombineAutomatic
 % Bars 106 to 110
 	r2 gis,8(\sf\> a b c)\!
 	r2 cis8(\sf\> d e f)\!
-	\partcombineApart R1
+	\partCombineApart R1
 	e,16( gis b cis d8-.) r r4 e,16( gis b cis
-	d8-.) r r4 \partcombineAutomatic a,16( c! dis fis a c dis fis)
+	d8-.) r r4 \partCombineAutomatic a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace gis1\trill( {fis16[ gis]) } \mark \default
-	 a4-. r r2
+	\once \partCombineApart a4-. r r2
 	R1*11
 % Bars 116 to 120
 	
@@ -122,10 +122,10 @@ musicFloteIMvtI = \relative c''' {
 	R1*5
 % Bars 131 to 135
 	
-	\partcombineApart r4 e,-.\p r f-.\< \partcombineAutomatic
+	\partCombineApart r4 e,-.\p r f-.\< \partCombineAutomatic
 	r fis-. gis-.\sf r
-	\partcombineApart r e-. r f-._\< \partcombineAutomatic
-	r fis-. dis'-._\sf r
+	\partCombineApart r e-. r f-._\< \partCombineAutomatic
+	r fis-.\! \once \partCombineChords dis'^._\sf r
 % Bars 136 to 140
 	r b-. r c-.\<
 	r cis-. g'-.\sf r
@@ -140,10 +140,10 @@ musicFloteIMvtI = \relative c''' {
 	
 % Bars 146 to 150
 	R1^\gp
-	bes,,1~
+	\partCombineApart bes,,1~
 	bes(
 	a)(
-	d)
+	d) \partCombineAutomatic
 % Bars 151 to 155
 	R1*15
 % Bars 156 to 160
@@ -154,10 +154,10 @@ musicFloteIMvtI = \relative c''' {
 	r2 r4 e~_\pdolce
 	e8 r e4~ e8 r d4~
 	d4. r8 r4 e~
-	e8 r e4~ e8 r e4~
+	e8 r e4~ e8 r \partCombineChords e4~
 	e1~
 % Bars 171 to 175
-	e4\! r r2 \mark \default
+	e4\! \partCombineAutomatic r r2 \mark \default
 	r r4 c'\f(
 	cis)-. d2( a4)
 	r2 r4 f'(
@@ -191,21 +191,21 @@ musicFloteIMvtI = \relative c''' {
 	d'8 d4 d8( c) c4 c8~
 	c4-. b-. r2
 % Bars 201 to 205
-	d8 d4 d8( c) c4 c8(
-	d4-.) g-. r2
+	d8 d4 d8( c) c4 c8\(
+	d4-.\) g-. r2
 	e4-. g-. r f-.
 	r e-. r2
-	r r4 \partcombineApart e(
+	r r4 e\(
 % Bars 206 to 210
-	d8) \once \partcombineAutomatic r e4( b8) \once \partcombineAutomatic r c4(
-	d2 g,4) e'(
-	d8) \once \partcombineAutomatic r e4( b8) \partcombineAutomatic r c4(
+	d8\) r e4\( b8\) r c4\(
+	d2 g,4\) e'\(
+	d8\) r e4\( b8\) r c4(
 	c'2 g4) e(
 	g-.) f2-> f4~
 % Bars 211 to 215
-	f f2 f4(~
-	f8 e) f4.( cis8) d4-\tweak X-offset #-1.5 \sf(~
-	d16 c! bes a) bes4(~ bes16 a g fis) g4~
+	f f2 f4(~ 
+	f8 e) f4.( cis8) \partCombineApart \once \stemDown d4(~
+	d16 c! bes a) \partCombineAutomatic bes4\(~ bes16 a g fis\) g4~
 	g e'~ e8-. r r4
 	r e2 e4~
 % Bars 216 to 220
@@ -228,8 +228,8 @@ musicFloteIMvtI = \relative c''' {
 	R1*4
 % Bars 241 to 245
 	\mark \default
-	c,!1\p~
-	c4  r8 gis'-.^\marc a-. b-. c!-. r 
+	\partCombineApart c,!1~
+	c4  r8 gis'-.^\marc a-. b-. c!-. r \partCombineAutomatic
 	R1*3
 	
 % Bars 246 to 250
@@ -254,11 +254,11 @@ musicFloteIMvtI = \relative c''' {
 	bes( ges)
 	c4.-\tweak X-offset #-2 _\ffmarc bes8 g!4 r
 	aes4. g8 c,4 r
-	\times 2/3 {d!4-. e-. f-.} \times 2/3 {e-. f-. g-.}
-	\times 2/3 {f-. g-. aes-.} \times 2/3 {bes-. c-. des-.~}
+	\tuplet 3/2 2 {d!4-. e-. f-. e-. f-. g-.
+	f-. g-. aes-. bes-. c-. des-.~}
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
-	\times 2/3 {des,-. ees-. f-.} \times 2/3 {g-. aes-. bes-.~}
+	\tuplet 3/2 2 {des,-. ees-. f-. g-. aes-. bes-.~}
 	bes c,-. aes'-. f-.
 	des-. r r2 \mark #11
 	R1*9
@@ -272,7 +272,7 @@ musicFloteIMvtI = \relative c''' {
 	r cis(_\dimmarkup e) r r b( d) r
 % Bars 281 to 285
 	r a( c!) fis,( a) dis,( fis) r
-	\once \override CombineTextScript.X-offset = #-3 e4-! r r2
+	\once \partCombineApart e4-! r r2
 	R1*3
 	
 	
@@ -283,13 +283,13 @@ musicFloteIMvtI = \relative c''' {
 	gis4-! r r2 \once \override Score.RehearsalMark.X-offset = #-4 \mark \default
 	a4.-\tweak X-offset #0.5 \ff g!8 e4 r
 % Bars 291 to 295
-	f4. e8  a,4 r
-	\once \override CombineTextScript.X-offset = #-3.5 \times 2/3 {b-. c-. d-.} c4.-> a8
+	f4. e8 \once \partCombineApart a,4 r
+	\once \override CombineTextScript.X-offset = #-3.5 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
-	e'2. c4
+	e'2. \partCombineApart c4
 % Bars 296 to 300
-	b2 a
+	b2 a \partCombineAutomatic
 	g'2. r4
 	R1*7
 % Bars 301 to 305
@@ -297,15 +297,15 @@ musicFloteIMvtI = \relative c''' {
 	
 	
 	
-	 r4 e,-. -\tweak X-offset #-1 \p r f-.  
+	\partCombineApart r4 e,-. -\tweak X-offset #-1 \p r f-. \once \partCombineAutomatic
 % Bars 306 to 310
-	r  fis-. gis-.  r
-	 r e-.-\tweak X-offset #-1 \p r f-.  
-	r f-.\< a-.\sf r
+	r  fis-. gis-. \once \partCombineAutomatic r
+	r e-.-\tweak X-offset #-1 \p r f-.  
+	\partCombineAutomatic r f-.\< a-.\sf r \partCombineApart
 	 r d,-.-\tweak X-offset #-1 \p r ees-.  
-	r ees-.\< bes'-.\sf r
+	\once \partCombineAutomatic r ees-. \once \stemDown bes'-. \partCombineAutomatic r
 % Bars 311 to 315
-	r  a-. dis2\fp\>~
+	r \once \partCombineApart a-. dis2\fp\>~
 	dis4\! r r2 \bar "||" \key a \major \mark \default
 	R1*3
 	
@@ -313,7 +313,7 @@ musicFloteIMvtI = \relative c''' {
 % Bars 316 to 320
 	R1^\gp
 	cis4._\espressivo(_\pdolce b8 e,2)
-	r4 r8 cis'8( b4._\< e,8
+	r4 r8 cis'8( b4._\< e,8\!
 	cis'4._\> b8 fis4. cis'8
 	b4. fis8 b4.\! gis8
 % Bars 321 to 325
@@ -327,10 +327,10 @@ musicFloteIMvtI = \relative c''' {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
-	ais-.) b2( fis4)
-	r2 r4 d'(
-	dis)-. e4(~ e16 d cis b) fis'4\fp(~
+	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f\(
+	ais-.\) b2\( fis4\)
+	r2 r4 d'\(
+	dis\)-. e4\(~ e16 d cis b\) fis'4\fp(~
 % Bars 346 to 350
 	fis8 cis) d4.( ais8) b4~
 	b a!2(\> gis4)\!
@@ -338,51 +338,51 @@ musicFloteIMvtI = \relative c''' {
 % Bars 351 to 355
 	
 	
-	r2 cis(
+	r2 \partCombineChords cis(
 	c1
 	b
 % Bars 356 to 360
 	ais2 b
 	gis a!
 	fis1)~_\dimmarkup
-	fis4 r r2
+	fis4 \partCombineAutomatic r r2
 	R1*5
 % Bars 361 to 365
 	
 	
 	
 	
-	gis8-.\f gis4 gis8( fis) fis4 fis8\((\<
+	gis8-.\f gis4 gis8\( fis\) fis4 \partCombineUnisono fis8\((\<
 % Bars 366 to 370
-	f2)\> e4\)\! r \mark \default
-	gis8 gis4 gis8( fis!) fis4  fis8(
-	eis4-.) cis-. r2
-	b'8 b4 b8( a) a4 a8~
+	f2)\> e4\)\! \partCombineAutomatic r \mark \default
+	gis8 gis4 gis8\( fis!\) fis4  fis8\(
+	eis4-.\) cis-. r2
+	b'8 b4 b8\( a\) a4 a8~
 	a4-. gis-. r2
 % Bars 371 to 375
 	gis'8 gis4 gis8( fis) fis4 fis8(
 	b,4)-. e-. r2
 	g,4-. cis-. r fis,-.
 	r a-. r2
-	r2 r4 cis(
+	r2 r4 cis\(
 % Bars 376 to 380
-	b8) r cis4( gis8) r a4(
-	b2 e,4) cis'(
-	b8) r cis4( gis8) r a4(
-	a'2 e4) cis(
+	b8\) r cis4\( gis8\) r a4\(
+	b2 e,4\) cis'\(
+	b8\) r cis4\( gis8\) r a4\(
+	a'2 e4\) cis(
 	e-.) d2-> d4~
 % Bars 381 to 385
 	d d2 d4~(
-	d8 cis) d4.( ais'8) \partcombineApart b4(~
-	b16 a! g fis) \partcombineAutomatic g4(~ g16 fis e dis) e4~
-	e e~ e8-. r r4
+	d8 cis) d4.( ais'8) \partCombineApart \once \stemDown b4(~
+	b16 a! g fis) \partCombineAutomatic g4\(~ g16 fis e dis\) \once \stemDown  e4~
+	\once \stemDown e  e~ e8-. r r4
 	r f2 f4~
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \bar "||" \key a \minor \mark \default
-	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(0 . 2) dis2\ff\trill e8( c b a)
+	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(0 . 2) dis2\ff\trill e8\( c b a\)
 	g4 r8 dis'-. e4-. r
-	\once \override CombineTextScript.X-offset = #-4.5 gis2\trill a8( f e d)
+	\once \override CombineTextScript.X-offset = #-4.5 gis2\trill a8\( f e d\)
 % Bars 391 to 395
 	c4 r8 gis'-. a4-. r
 	R1
@@ -415,14 +415,14 @@ musicFloteIMvtI = \relative c''' {
 	b-. c-. gis-. a-.
 	b-. b-. e,-. c'-. 
 	b-. c-. gis-. a-. 
-	a'-. a-. e-. a,-. 
-	a'-. a-. e-. a,-. 
+	a'-. a-. \partCombineApart e-. a,-. \partCombineAutomatic
+	a'-. a-. \partCombineApart e-. a,-. \partCombineAutomatic 
 % Bars 426 to 430
 	a'2 a
-	 e  e
-	 a,4-.  r  a-.  r
-	 a-.  r d-. f-.
+	\once \partCombineApart e  e
+	\once \partCombineApart a,4-. r \once \partCombineApart a-.  r
+	\once \partCombineApart a-.  r d-. f-.
 	a-. r a-. r
 % Bar 431
-	R1\fermataMarkup \bar "|."
+	R1\fermata \bar "|."
 }

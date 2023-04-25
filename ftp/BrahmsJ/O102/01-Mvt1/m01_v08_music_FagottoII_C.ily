@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v08_music_FagottoII.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicFagottoIIMvtI = \relative c {
 	c4. b8 e,4 r
 	a-. r b-. r
 	c-. a-. f'-. d-.
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*21
 % Bars 11 to 15
@@ -29,7 +29,7 @@ musicFagottoIIMvtI = \relative c {
 	a1~
 	a2. r4
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	

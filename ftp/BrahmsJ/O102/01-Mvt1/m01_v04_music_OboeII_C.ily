@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v04_music_OboeII.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicOboeIIMvtI = \relative c'' {
 	c4. b8 e,4 r
 	c'-. r gis-. r
 	a-. a-. a-. a-. 
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*25
 % Bars 11 to 15
@@ -29,7 +29,7 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	
@@ -376,5 +376,5 @@ musicOboeIIMvtI = \relative c'' {
 	a r f-. a-.
 	c-. r c-. r
 % Bar 431
-	R1\fermataMarkup \bar "|."
+	R1\fermata \bar "|."
 }

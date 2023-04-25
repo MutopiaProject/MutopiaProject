@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v10_music_HornII.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -420,5 +420,5 @@ musicHornIIMvtI = \relative c' {
 	r bes'4-. bes-.
 	c-. r c-. r
 % Bar 431
-	\ni R1\fermataMarkup \bar "|."
+	\ni R1\fermata \bar "|."
 }

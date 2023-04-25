@@ -1,6 +1,9 @@
-% Project Name : Double Concerto Op102
-% Fichier :      DoubleConcerto_markup.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
+%###############################################################################
+%#                      S H O R T C U T S   S E C T I O N                      #
+%###############################################################################
 arco=^\markup {\italic arco}
 benmarc=^\markup {\italic {ben marc.}}
 benmarccresc = ^\markup {\italic {ben marc. cresc.}}

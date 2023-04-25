@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v18_music_ViolinI.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicViolinIMvtI = \relative c''' {
 	c4. b8 e,4 r
 	\tupletUp \times 2/3 {fis-. gis-. a-.} \times 2/3 {gis-. a-. b-.}
 	\times 2/3 {a-.  b-. cis-.} \times 2/3 {d-. e-. fis-.} \tupletNeutral
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*51
 % Bars 11 to 15

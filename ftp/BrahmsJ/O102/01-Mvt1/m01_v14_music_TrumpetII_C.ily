@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v14_music_TrumpetII.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicTrumpetIIMvtI = \relative c'' {
 	d4. d8 d4 r
 	g,-. r c,-. r
 	g-. g-. g'-. g-.
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*51
 % Bars 11 to 15

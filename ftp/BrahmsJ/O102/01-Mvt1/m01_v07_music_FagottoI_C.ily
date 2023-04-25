@@ -1,6 +1,6 @@
-% Project Name : Double Concerto Op102
-% Fichier :      m01_v07_music_FagottoI.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
@@ -13,7 +13,7 @@ musicFagottoIMvtI = \relative c' {
 	c4. b8 e,4 r
 	a-. r b-. r
 	c-. a-. f'-. d-.
-	R1\fermataMarkup
+	R1\fermata
 % Bars 6 to 10
 	R1*21
 % Bars 11 to 15
@@ -24,12 +24,12 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 26 to 30
 	
-	\partcombineApart r2 r4-\tweak X-offset #-1 ^\pdolce \clef tenor fis,(\<
+	\partCombineApart r2 r4-\tweak X-offset #-1 ^\pdolce \clef tenor fis,(\<
 	a2\> gis4)\! a(
 	fis'2 f
-	e cis4) \partcombineAutomatic r
+	e cis4) \partCombineAutomatic r
 % Bars 31 to 35
-	R1\fermataMarkup
+	R1\fermata
 	R1*25
 % Bars 36 to 40
 	
@@ -52,20 +52,20 @@ musicFagottoIMvtI = \relative c' {
 	\set Staff.aDueText = #"" \times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-. }
 	\times 2/3 {f2 b,4} \times 2/3 {e2 a,4} \tupletNeutral \unset Staff.aDueText
 % Bars 66 to 70
-	d2 \once \partcombineApart c \partcombineUnisono
+	d2 \once \partCombineApart c \partCombineUnisono
 	b8-.-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-. c4.\>( b8)
 	b,-.\< e-. g-. ais-. c4.(\> b8)\!
 	cis,-. e-. a!-. cis-. dis,2
-	e8-. g-. ais-. b-. b,2 \partcombineApart
+	e8-. g-. ais-. b-. b,2 \partCombineApart
 % Bars 71 to 75
 	c4 r8 bes'( des4. c8)
 	r4 r8 f8( des4. c8)
 	r4 r8 bes( des4. c8)
 	r4 r8 f( des4. c8)
-	\partcombineChords aes4-.\f bes2-> c4-.
+	\partCombineChords aes4-.\f bes2-> c4-.
 % Bars 76 to 80
-	f,-! \partcombineAutomatic r \once \partcombineApart f,-! r
-	\once \partcombineApart c'-! r r2
+	f,-! \partCombineAutomatic r \once \partCombineApart f,-! r
+	\once \partCombineApart c'-! r r2
 	R1 \mark \default
 	e'8\f e4 e8( d) d4 d8(
 	des4-.) c-. r2
@@ -88,11 +88,11 @@ musicFagottoIMvtI = \relative c' {
 	f,)-. bes2\sf bes4~
 	bes bes2 bes4~
 % Bars 96 to 100
-	bes bes4.( \clef tenor fis'8) \partcombineApart g4(~
-	g16 f! ees d) \partcombineAutomatic ees4(~ ees16 d c b!) c4~
+	bes bes4.( \clef tenor fis'8) \partCombineApart g4(~
+	g16 f! ees d) \partCombineAutomatic ees4(~ ees16 d c b!) c4~
 	c c4~ c8-. r r4
-	r \clef bass \partcombineChords a2 a4~
-	a8-. \partcombineAutomatic r r4 r c->
+	r \clef bass \partCombineChords a2 a4~
+	a8-. \partCombineAutomatic r r4 r c->
 % Bars 101 to 105
 	a-> fis-> dis-> c->
 	b2-\tweak X-offset #-1.5 \sf c4-. r
@@ -102,9 +102,9 @@ musicFagottoIMvtI = \relative c' {
 % Bars 106 to 110
 	r2 c4( d8 e)
 	r2 cis8(\sf\> d e f)\!
-	\partcombineApart r2 r4 r16 e,( gis b
+	\partCombineApart r2 r4 r16 e,( gis b
 	e8-.) r d-. r r16 e,( gis b e8-.) r
-	d-. \partcombineAutomatic r8 r4 \once \override CombineTextScript.X-offset = #-2  a,16( c! dis fis a c dis fis)
+	d-. \partCombineAutomatic r8 r4 \once \override CombineTextScript.X-offset = #-2  a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace d!1(\trill {c16[ d)]} \mark \default
 	c4-. r r2
@@ -119,10 +119,10 @@ musicFagottoIMvtI = \relative c' {
 	gis a)
 	b(_\crescpocoapoco c
 	cis d)
-	\partcombineChords bis( cis
+	\partCombineChords bis( cis
 	d f!)
 % Bars 126 to 130
-	e8-. \partcombineAutomatic r r4 r2
+	e8-. \partCombineAutomatic r r4 r2
 	R1*5
 % Bars 131 to 135
 	
@@ -174,18 +174,18 @@ musicFagottoIMvtI = \relative c' {
 % Bars 176 to 180
 	a8 e) f4.( cis8) d4~
 	d \clef bass a2\>( g4)\!
-	\partcombineApart r8 bes( a4. g8) f4~
-	f_\dimmarkup f2 \partcombineChords a4(~
+	\partCombineApart r8 bes( a4. g8) f4~
+	f_\dimmarkup f2 \partCombineChords a4(~
 	a1~
 % Bars 181 to 185
-	a2 g4) \partcombineAutomatic r
+	a2 g4) \partCombineAutomatic r
 	R1
-	r2 \partcombineChords g(
+	r2 \partCombineChords g(
 	a1
 	f!
 % Bars 186 to 190
 	e2 a
-	d, g) \partcombineAutomatic
+	d, g) \partCombineAutomatic
 	c,1_\dimmarkup~
 	c4 r r2
 	R1*3
@@ -215,8 +215,8 @@ musicFagottoIMvtI = \relative c' {
 	c,-.) f!2-> b,4~
 % Bars 211 to 215
 	b d2 f4~
-	f a4.( cis8) \partcombineApart d4(~
-	d16 c! bes a) \partcombineAutomatic bes4(~ bes16 a g fis) g4~
+	f a4.( cis8) \partCombineApart d4(~
+	d16 c! bes a) \partCombineAutomatic bes4(~ bes16 a g fis) g4~
 	g c,~ c8 r r4
 	r4 cis2 cis4~
 % Bars 216 to 220
@@ -240,7 +240,7 @@ musicFagottoIMvtI = \relative c' {
 	
 	r2 r8 \clef tenor d'8(\p e fis)
 	R1
-	\partcombineApart r2 r8 e( fis g) \partcombineAutomatic
+	\partCombineApart r2 r8 e( fis g) \partCombineAutomatic
 % Bars 236 to 240
 	\clef bass R1*6 
 	
@@ -257,7 +257,7 @@ musicFagottoIMvtI = \relative c' {
 	R1*2
 	
 % Bars 251 to 255
-	\partcombineApart r4 \clef bass r8 cis-._\f d-. e-. fis-. r \partcombineAutomatic
+	\partCombineApart r4 \clef bass r8 cis-._\f d-. e-. fis-. r \partCombineAutomatic
 	R1
 	r2 r8 gis,-.\f a-. a,-. 
 	r2 r8 fis'-. g!-. g,-.
@@ -291,9 +291,9 @@ musicFagottoIMvtI = \relative c' {
 	a2) r
 	R1
 % Bars 286 to 290
-	cis4-\tweak X-offset #-2 \ff-! r \once \partcombineChords c-! r
-	a-! r \once \partcombineChords c-! r
-	\once \partcombineChords b-! r r2
+	cis4-\tweak X-offset #-2 \ff-! r \once \partCombineChords c-! r
+	a-! r \once \partCombineChords c-! r
+	\once \partCombineChords b-! r r2
 	e,4-! r r2 \mark \default
 	a,4.-\tweak X-offset #0.5 \ff b8 c4 r
 % Bars 291 to 295
@@ -306,7 +306,7 @@ musicFagottoIMvtI = \relative c' {
 	d2 dis
 	\times 2/3 {e2 d!4} \times 2/3 {c( g) c,-.}
 	\times 2/3 {f2 d4} \times 2/3 {g2 e4} \tupletNeutral
-	a2 \once \partcombineApart f,
+	a2 \once \partCombineApart f,
 	R1*5
 % Bars 301 to 305
 	
@@ -354,14 +354,14 @@ musicFagottoIMvtI = \relative c' {
 % Bars 351 to 355
 	
 	
-	r2 \partcombineChords e,^(
+	r2 \partCombineChords e,^(
 	fis1
 	gis
 % Bars 356 to 360
 	e2 dis
 	d! cis
 	c1)~_\dimmarkup
-	c4 \partcombineAutomatic r r2
+	c4 \partCombineAutomatic r r2
 	R1*5
 % Bars 361 to 365
 	
@@ -394,10 +394,10 @@ musicFagottoIMvtI = \relative c' {
 	cis) \clef bass a~ a8-. r r4
 	r gis2 gis4~
 % Bars 386 to 390
-	gis8-. r r4 r \once \partcombineApart a->
+	gis8-. r r4 r \once \partCombineApart a->
 	e'-> c-> a-> c,-\tweak X-offset #1 -> \bar "||" \key a \minor \mark \default
 	b2-\tweak X-offset #-4 \ff c4 r8 b'-.
-	c4-. r8 \once \partcombineApart b,-. \once \partcombineApart c4-. r
+	c4-. r8 \once \partCombineApart b,-. \once \partCombineApart c4-. r
 	e2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
@@ -409,13 +409,13 @@ musicFagottoIMvtI = \relative c' {
 	R1*3
 	
 	
-	\partcombineSoloI e4\p( fis gis4. gis8)
+	\partCombineSoloI e4\p( fis gis4. gis8)
 	a8(\< c b a d4.\> c8)
 % Bars 401 to 405
 	a8(\< c b a d4.\> c8)\!
 	a4 r r2
-	\partcombineAutomatic R1
-	\partcombineChords f2( ges
+	\partCombineAutomatic R1
+	\partCombineChords f2( ges
 	g! aes)~
 % Bars 406 to 410
 	aes a~
@@ -432,11 +432,11 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	
-	r2 r4 \once \partcombineApart a-.
+	r2 r4 \once \partCombineApart a-.
 % Bars 426 to 430
-	\partcombineChords d,2 b
+	\partCombineChords d,2 b
 	c e
-	\partcombineUnisono a,4-. r  a-. r
+	\partCombineUnisono a,4-. r  a-. r
 	a-. r f'-. d-.
 	a-. r a-. r
 % Bar 431
