@@ -11,8 +11,8 @@ musicViolinIMvtI = \relative c''' {
 % Bars 1 to 5
 	e4._\fmarc d8 b4 r
 	c4. b8 e,4 r
-	\tupletUp \times 2/3 {fis-. gis-. a-.} \times 2/3 {gis-. a-. b-.}
-	\times 2/3 {a-.  b-. cis-.} \times 2/3 {d-. e-. fis-.} \tupletNeutral
+	\tupletUp \tuplet 3/2 2 {fis-. gis-. a-. gis-. a-. b-.
+	a-.  b-. cis-. d-. e-. fis-.} \tupletNeutral
 	R1\fermata
 % Bars 6 to 10
 	R1*51
@@ -38,16 +38,16 @@ musicViolinIMvtI = \relative c''' {
 	\mark \default
 	a4.-\tweak X-offset #-2 \ff g8 e4 r
 	f4. e8 a,4 r
-	\tupletUp \times 2/3 {b-. c-. d-.} c4.-> a8
+	\tupletUp \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->
-	\once \override TupletNumber.Y-offset = #6 \times 2/3 {e'2-> d4-.} \times 2/3 {c( b) c-.}
+	\once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e'2-> d4-. c( b) c-.}
 	b2-> a->
-	\once \override TupletNumber.Y-offset = #7 \times 2/3 {g'2-> f4-.} \times 2/3 {e( d) e-.}
-	\times 2/3 {d(\< c) d-.} \times 2/3 {c( b) c-.}
+	\once \override TupletNumber.Y-offset = #7 \tuplet 3/2 2 {g'2-> f4-. e( d) e-.
+	d(\< c) d-. c( b) c-.
 % Bars 66 to 70
-	\times 2/3 {b( a) r} \times 2/3 {b( a)\! r} \tupletNeutral
+	b( a) r b( a)\! r} \tupletNeutral
 	a'4.-\tweak X-offset #-3.7 \ff a,8(\< c4.\> b8)\!
 	g4. e'8(\< c4.\> b8)\!
 	a4. g'8( fis4. a,8)
@@ -56,24 +56,24 @@ musicViolinIMvtI = \relative c''' {
 	e2->\p <bes e>->
 	<aes f'!>-> <aes f'>->
 	<f' aes>\< <c g'>
-	<c aes'> <g' e'>
-	c8-.\f\< f'( aes4.\> g8)\! f-. aes,
+	<c aes'> <g' e'>\!
+	c8-.\f\<\noBeam f'( aes4.\> g8)\! f-. aes,
 % Bars 76 to 80
 	d!-. f,-. aes d,-. f-. aes,-. d-. f,-.
 	<e c'>-.\sf r r c( des)-.\sf des4 des8(
 	g)-.\sf g4 g8( d'-.)\sf d4 d8( \mark \default
 	g8)\f g4 g g g8~
-	g4. fis8(\< g a\> bes a)
+	g4. fis8(\< g a\> bes a)\!
 % Bars 81 to 85
-	g8\< g4  g g g8~
-	g4\sf~ \times 2/3 {g8 e-! f-!} \times 2/3 {cis-! d-! a-!} \times 2/3 {f-! a-! d-!}
+	g8\< g4  g g g8~\!
+	g4\sf~ \tuplet 3/2 4 {g8 e-! f-! cis-! d-! a-! f-! a-! d-!}
 	bes'8 bes4 bes bes bes8~
 	bes4. a8(\< bes c\> d c)\!
-	bes8 bes4\< bes bes bes8~
+	bes8 bes4\< bes bes bes8~\!
 % Bars 86 to 90
-	bes4~\sf \times 2/3 {bes8 gis-! a-!} \times 2/3 {fis-! g!-! d-!} \times 2/3 {ees-! b!-! c-!}
-	a'4\sf~ \times 2/3 {a8 fis-! g-! } \times 2/3 {cis,-! d-! a-! } \times 2/3 {bes-! fis-! g-!}
-	\times 2/3 {e-! f!-! gis-! } \times 2/3 {a-! b!-! c-!} \times 2/3 {e-! f!-! gis-!} \times 2/3 {a-! b!-! c-! }
+	bes4~\sf \tuplet 3/2 4 {bes8 gis-! a-! fis-! g!-! d-! ees-! b!-! c-!}
+	a'4\sf~ \tuplet 3/2 4 {a8 fis-! g-!  cis,-! d-! a-!  bes-! fis-! g-!}
+	\tuplet 3/2 4 {e-! f!-! gis-!  a-! b!-! c-! e-! f!-! gis-! a-! b!-! c-! }
 	a'16( f c a) f'( c a f) c'( a f c) a'4_\fbenmarc( \mark \default
 	g8) r a4( e8) r f4(\< 
 % Bars 91 to 95
@@ -129,10 +129,10 @@ musicViolinIMvtI = \relative c''' {
 	a r r2
 	R1
 	a,8\mf c e gis, a c f gis,
-	a\< c fis a a'\> fis dis a
+	a\< c fis a\! a'\> fis dis a\!
 % Bars 136 to 140
 	g!4\p r e8 g c dis,
-	e4 r g'8\f\> e cis g
+	e4 r g'8\f\> e cis g\!
 	fis4\p a r c!
 	r ees r c
 	r a_\dimmarkup r c
@@ -161,7 +161,7 @@ musicViolinIMvtI = \relative c''' {
 	
 % Bars 166 to 170
 	
-	e4\p r e r
+	e4\p^\pizz r e r
 	d r r2
 	e4 r e r
 	e_\dimmarkup r e r
@@ -277,11 +277,11 @@ musicViolinIMvtI = \relative c''' {
 	ges: aes: bes: aes: ges: f: ees: des:
 	c4-\tweak X-offset #-2.5 \sf-! <e,! g>^\pizz r4 <f des'>
 	<e g> q r2
-	\tupletUp \times 2/3 {d'!4\sf-.-\tweak X-offset #-2 ^\arco e!-. f-.} \times 2/3 {e-.\sf f-. g-.}
-	\times 2/3 {f_\benmarc-. g-. aes-. } \times 2/3 {bes-. c-. des~} \tupletNeutral
+	\tupletUp \tuplet 3/2 2 {d'!4\sf-.-\tweak X-offset #-2 ^\arco e!-. f-. e-.\sf f-. g-.
+	f_\benmarc-. g-. aes-.  bes-. c-. des~} \tupletNeutral
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
-	\times 2/3 {des,-. ees-. f-.} \times 2/3 {g-. aes-. bes~}
+	\tuplet 3/2 2 {des,-. ees-. f-. g-. aes-. bes~}
 	bes c,-. aes'-. f-.
 	des-. bes-. g-. ees-. \mark #11
 	c1(\fpp
@@ -311,15 +311,15 @@ musicViolinIMvtI = \relative c''' {
 	a'''4.-\tweak X-offset #0.5 \ff g8 e4 r
 % Bars 291 to 295
 	f4. e8 a,4 r
-	\tupletUp \times 2/3 {b-. c-. d-.} \tupletNeutral c4. a8
+	\tupletUp \tuplet 3/2 {b-. c-. d-.} \tupletNeutral c4. a8
 	g4. f8 e4. c'8
 	b2 a
-	\tupletUp \once \override TupletNumber.Y-offset = #6 \times 2/3 {e'2-> d4-.} \times 2/3 {c( b) c-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e'2-> d4-. c( b) c-.}
 % Bars 296 to 300
 	b2 a
-	\once \override TupletNumber.Y-offset = #7 \times 2/3 {g'2-> f4-.} \times 2/3 {e( d) e-.}
-	\once \override TupletNumber.Y-offset = #6 \times 2/3 {c( a) f-.} \times 2/3 {d( b) g-.}
-	\times 2/3 {f( e) r} \times 2/3 {e( d) r} \tupletNeutral
+	\once \override TupletNumber.Y-offset = #7 \tuplet 3/2 2 {g'2-> f4-. e( d) e-.
+	\once \override TupletNumber.Y-offset = #6 c( a) f-. d( b) g-.
+	f( e) r e( d) r} \tupletNeutral
 	b2\p b
 % Bars 301 to 305
 	c c
@@ -330,11 +330,11 @@ musicViolinIMvtI = \relative c''' {
 % Bars 306 to 310
 	R1
 	a8-\tweak X-offset #0.3 \mf^\pizz c e gis, a4 r
-	aes8\< c f aes a4\f r
+	aes8\< c f aes\! a4\f r
 	g8\p bes d fis, g4 r
 	ges8 bes ees ges g4 r
 % Bars 311 to 315
-	f,!8\< a! c f a4\fp fis
+	f,!8\< a! c f\! a4\fp fis
 	r dis r a \bar "||" \key a \major \mark \default
 	gis4 r r2
 	R1*2
@@ -356,7 +356,7 @@ musicViolinIMvtI = \relative c''' {
 	r cis-.( r cis-.)
 	r d-.( r fis-.)
 	r b,-.( r dis-.)
-	r fis2(\sf\> bis,4)
+	r fis2(\sf\> bis,4)\!
 % Bars 331 to 335
 	cis1\pp(
 	d)(
@@ -401,15 +401,15 @@ musicViolinIMvtI = \relative c''' {
 	
 % Bars 366 to 370
 	r4 r8 ais'8\f-\tweak X-offset #-6 ^\arco( b cis d cis) \mark \default
-	b8 b4 b\< b b8~
-	b4\sf~ \times 2/3 {b8 gis-! a-!} \times 2/3 {eis-! fis-! cis-!} \times 2/3 {a-! cis-! fis-! }
+	b8 b4 b\< b b8~\!
+	b4\sf~ \tuplet 3/2 4 {b8 gis-! a-! eis-! fis-! cis-! a-! cis-! fis-! }
 	d'8 d4 d d d8~
 	d4. cis8( d e fis e)
 % Bars 371 to 375
-	d8\< d4 d d d8
-	d4~\sf \times 2/3 {d8 bis-! cis-!} \times 2/3 {ais-! b-! fis-! } \times 2/3 {g-! dis-! e-! }
-	cis'4\sf~ \times 2/3 {cis8 ais-! b-! } \times 2/3 {eis,-! fis-! cis-!} \times 2/3 {d!-! ais-! b-!}
-	\times 2/3 {gis-! a!-! bis-! } \times 2/3 {cis-! dis-! e-!} \times 2/3 {gis-! a!-! bis-! } \times 2/3 {cis-! dis-! e-!}
+	d8\< d4 d d d8\!
+	d4~\sf \tuplet 3/2 4 {d8 bis-! cis-! ais-! b-! fis-!  g-! dis-! e-! }
+	cis'4\sf~ \tuplet 3/2 4 {cis8 ais-! b-!  eis,-! fis-! cis-! d!-! ais-! b-!
+	gis-! a!-! bis-!  cis-! dis-! e-! gis-! a!-! bis-!  cis-! dis-! e-!}
 	a16( e cis a) e'( cis a e) a( e cis a) cis'4(-\tweak X-offset #1 _\fbenmarc
 % Bars 376 to 380
 	b8) r cis4( gis8) r a4(\<
@@ -464,7 +464,7 @@ musicViolinIMvtI = \relative c''' {
 	b4-!) c-! r2
 	cis4-! d-! r2
 	c!4-.\f r r a\p^\pizz
-	c\< e a <e' c'>\f
+	c\< e a\! <e' c'>\f
 % Bars 421 to 425
 	<dis b'> <e c'> <c gis'> <c a'>
 	<b b'> <b b'> <<{e} \\ {e}>> <e c'>

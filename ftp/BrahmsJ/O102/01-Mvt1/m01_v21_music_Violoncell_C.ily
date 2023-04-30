@@ -42,21 +42,21 @@ musicVioloncellMvtI = \relative c' {
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\override TupletNumber.Y-offset = #2.5 \times 2/3 {f2\< b,4} \times 2/3 {e2 a,4} \tupletNeutral \revert TupletNumber.Y-offset
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.}
+	\override TupletNumber.Y-offset = #2.5 \tuplet 3/2 2 {f2\< b,4 e2 a,4} \tupletNeutral \revert TupletNumber.Y-offset
 % Bars 66 to 70
 	d2 c\!
-	b8:16-\tweak X-offset #-3.7 \ff\< dis: fis: a: c4.(\> b8)
-	b,8:16\< e: g: ais!: c4.\>( b8)\!
+	b8:16-\tweak X-offset #-3.7 \ff\< dis: fis: a:\! c4.(\> b8)\!
+	b,8:16\< e: g: ais!:\! c4.\>( b8)\!
 	cis,8:16 e: a!: cis: dis,2
 	e8:16 g: ais: b: b,2
 % Bars 71 to 75
 	c2->\p c->
 	c-> c->
 	d!\< e
-	f g
+	f g\!
 	aes4-.\f bes2-> c4-.
 % Bars 76 to 80
 	f,-. r f,-. r
@@ -117,7 +117,7 @@ musicVioloncellMvtI = \relative c' {
 	e_\crescpocoapoco r e, r
 	e' r e, r
 	e'2^\arco -\tweak DynamicText.self-alignment-X #LEFT \pcrescD\< a,
-	a d,
+	a d,\!
 % Bars 126 to 130
 	c8-.\f r r4 r r8 a'\mf-\tweak X-offset #-6 ^\pizz
 	d,4 r dis r
@@ -127,12 +127,12 @@ musicVioloncellMvtI = \relative c' {
 % Bars 131 to 135
 	e'4 r r e,
 	a8\mf c e gis, a c f gis,
-	a\< c fis a gis'\> d b gis\!
+	a\< c fis a\! gis'\> d b gis\!
 	a4 a,\p r a
 	r a' b,\f r
 % Bars 136 to 140
 	e8\p g! b dis, e4 r
-	e8\< g cis e a,,4\f r
+	e8\< g cis e\! a,,4\f r
 	d\p r r2
 	R1
 	d4_\dimmarkup r r2
@@ -304,10 +304,10 @@ musicVioloncellMvtI = \relative c' {
 	f4-.\sf r g-.\sf r
 	aes-\tweak X-offset #-1 _\benmarc-. f-. des'-. bes-.
 % Bars 266 to 270
-	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
+	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
-	\times 2/3 {c,-. d-. e!-.} \times 2/3 {f-. g-. aes-.}
-	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
+	\tuplet 3/2 2 {c,-. d-. e!-. f-. g-. aes-.}
+	\tuplet 3/2 2 {bes-. c-. des-. ees,-. f-. g-.} \mark #11
 	aes,1\fpp(
 % Bars 271 to 275
 	gis)(
@@ -338,11 +338,11 @@ musicVioloncellMvtI = \relative c' {
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\tupletUp \once \override TupletNumber.Y-offset = #6 \times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\once \override TupletNumber.Y-offset = #6 \times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4} \tupletNeutral
+	\once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( g) c,-.}
+	\tuplet 3/2 2 {f2 d4 g2 e4} \tupletNeutral
 	a2 f,
 	e\p e
 % Bars 301 to 305
@@ -352,13 +352,13 @@ musicVioloncellMvtI = \relative c' {
 	e1\>
 	a8\mf^\pizz c e gis, a c f gis,
 % Bars 306 to 310
-	a c fis\< a gis'\> d b gis\!
+	a c fis\< a\! gis'\> d b gis\!
 	a4 r a,8 c f c
-	aes4 r c'8\f\> a! fis d
+	aes4 r c'8\f\> a! fis d\!
 	g4\p r g r
 	ges\< r c, r
 % Bars 311 to 315
-	f\! r b,! r
+	f\! r b,!\f r
 	r2 b4\p r \bar "||" \key a \major \mark \default
 	e r r2
 	R1*2
@@ -413,7 +413,7 @@ musicVioloncellMvtI = \relative c' {
 	eis4_\dimmarkup r r2
 % Bars 356 to 360
 	g4 r fis r
-	f r e r
+	f r e r %%%%%%%%%%%%%%%% mesure problematique ???
 	dis r r2
 	r r4 e-\tweak X-offset #-0.7 _\pmarc
 	eis fis cis d
@@ -488,7 +488,7 @@ musicVioloncellMvtI = \relative c' {
 	c4-! c,-! r2
 	d'4-! d,-! r2
 	e'4-.\f r r a,\p^\pizz
-	c\< e a e,\f
+	c\< e a\! e,\f
 % Bars 421 to 425
 	f' e, f' e
 	d' dis e e,,

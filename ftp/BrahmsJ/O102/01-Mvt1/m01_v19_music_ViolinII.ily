@@ -282,7 +282,7 @@ musicViolinIIMvtI = \relative c'' {
 	d8_\pdolce d4 d8( c) c4\< c8(~
 	c2\> b!4)\! r
 	r2 r4 b,8-.\pp r
-	d-. r c-. r c-. r bes-. r
+	d-. r c-. r c-. r b-. r
 	bes\mf bes4 bes bes bes8(
 % Bars 251 to 255
 	g4-!) bes-! r2

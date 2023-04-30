@@ -50,7 +50,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	g2.-> g4
 	aes2-> a->
 	bes2.-> g4
-	\tupletUp \times 2/3 {c2 g4} \times 2/3 {bes2 g4} \tupletNeutral
+	\tupletUp \tuplet 3/2 2 {c2 g4 bes2 g4} \tupletNeutral
 % Bars 66 to 70
 	aes2 g
 	fis-\tweak X-offset #-3.7 \ff-> fis->
@@ -67,14 +67,14 @@ musicKlarinetIIMvtI = \relative c''' {
 	f,!-! r f-! r
 	g-! r r2
 	R1 \mark \default
-	des'8\f des4 des8( des) des4 des8(
+	des'8\f des4 des8_( des) des4 des8_(
 	des4-.) des-. r2
 % Bars 81 to 85
-	des8 des4 des8( des) des4 des8(
+	des8 des4 des8_( des) des4 des8(
 	c4-.) c r2
-	des8 des4 des8( des) des4 des8(
+	des8 des4 des8_( des) des4 des8_(
 	fes4-.) ees-. r2
-	des8 des4 des8( des) des4 des8(
+	des8 des4 des8_( des) des4 des8(
 % Bars 86 to 90
 	ees4)-! ees-! r2
 	ges,4-! ges-! r f-!
@@ -83,8 +83,8 @@ musicKlarinetIIMvtI = \relative c''' {
 	d!8) r ees4( des8) r c4
 % Bars 91 to 95
 	d!2 des4 ees(
-	d!8) r ees4( des8) r c4(
-	d! ees8 f ees4) aes,(
+	d!8) r ees4( des8) r c4
+	d! ees8 f ees4 aes,(
 	c-.) bes2\sf bes4~
 	bes bes2 bes4(~
 % Bars 96 to 100
@@ -149,14 +149,16 @@ musicKlarinetIIMvtI = \relative c''' {
 	a2(\dimD\> c)~
 	c( bes)\!
 % Bars 151 to 155
-	R1*15
+	\mmrPos #-6 R1
+	\mmrPos #-8 R
+	R1*13
 % Bars 156 to 160
 	
 % Bars 161 to 165
 	
 % Bars 166 to 170
 	r2 r4 bes_\pdolce~
-	bes8 r a4~ a8 r aes4\<(
+	bes8 r a4~ a8 r aes4\<_(
 	aes\>) f8\! r r4 bes~
 	bes8 r a4~ a8\< r aes4~
 	aes(\dimD\> g2.)~
@@ -280,7 +282,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	r2 r4 c'\p~
 	c1~
 	c
-	g2 r
+	\once \voiceOne g2 r
 	R1
 % Bars 286 to 290
 	c4-!-\tweak X-offset #-2 \ff r c-! r

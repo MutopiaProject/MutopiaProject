@@ -95,11 +95,11 @@ musicHornIMvtI = \relative c'' {
 	R1
 	\partCombineApart b,2 c4-. \partCombineAutomatic r
 	e2-\tweak X-offset #-1 \sf f4-. r
-	r2 r4 f(
+	r2 r4 \partCombineApart f(
 	ees des) c2
 % Bars 106 to 110
-	b2(\sf c4-.) r
-	e2(-\tweak X-offset #-1 \sf f4-.) r
+	b2( c4-.) \once \partCombineAutomatic r
+	e2( f4-.) \partCombineAutomatic r
 	r2 f4-. e-.
 	r f-. e-. r
 	f-. r f-. r
@@ -154,7 +154,7 @@ musicHornIMvtI = \relative c'' {
 	r c-. r c-. r c-. r4 \mark \default
 	R1*2
 	
-	\partCombineChords g'8-.-\tweak X-offset #-2 \f g4 g8( f) \partCombineAutomatic f4 f8(
+	\partCombineChords g'8-.-\tweak X-offset #-2 \f g4 g8( f) \partCombineAutomatic f4 \once \oneVoice \once \omit Flag f8( 
 % Bars 196 to 200
 	e2)( ees4) r
 	\partCombineChords g8 g4 g8( f) \partCombineAutomatic f4 f8(
@@ -172,7 +172,7 @@ musicHornIMvtI = \relative c'' {
 	bes2 ees4) \partCombineAutomatic r
 	r2 r4 \partCombineApart c(
 	bes2 ees4) \partCombineAutomatic r
-	r ees,2\sf ees4-.
+	r \partCombineApart ees,2 ees4-. \partCombineAutomatic
 % Bars 211 to 215
 	R1
 	r2 r4 fis-\tweak X-offset #-1 \sf~
@@ -211,8 +211,8 @@ musicHornIMvtI = \relative c'' {
 	
 % Bars 261 to 265
 	
-	\once \override CombineTextScript.X-offset = #-7.0 c4-!-\tweak X-offset #-1.8 \f r r ees,-!
-	c'-! r r2
+	\once \partCombineApart c4-! r r \partCombineApart ees,-!
+	c'-! \partCombineAutomatic r r2
 	R1*6
 % Bars 266 to 270
 	
@@ -227,9 +227,9 @@ musicHornIMvtI = \relative c'' {
 % Bars 281 to 285
 	
 % Bars 286 to 290
-	r2 c4-!\ff r
-	bes-! r bes-! r
-	g-! r r2
+	r2 \once \partCombineApart c4-! r
+	\once \partCombineApart bes-! r \once \partCombineApart bes-! r
+	\once \partCombineApart g-! r r2
 	c4-! r r2 \mark \default
 	c4.-\tweak X-offset #0.5 \ff bes8 c4 r
 % Bars 291 to 295
@@ -251,8 +251,8 @@ musicHornIMvtI = \relative c'' {
 	
 	\bar "||" \mark \default
 	c,1\pp
-	r4 r8 \partCombineApart c8~ c4. c8~
-	c1 \partCombineAutomatic %<<c1 {s4\> s s s\!}>>
+	r4 r8 c8~ c4. \partCombineUnisono c8\<~
+	<<c1 {s4\> s s s\!}>> \partCombineAutomatic
 % Bars 316 to 320
 	R1^\gp
 	c'1\pp~

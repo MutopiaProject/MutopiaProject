@@ -107,6 +107,8 @@ fpp = #(make-dynamic-script "fpp")
 rf = #(make-dynamic-script "rf")
 pfD = #(make-dynamic-script "pf")
 
+noFlag = \once \omit Flag
+
 % fonction
 MmrLength = #(define-music-function
 	(parser location length)
@@ -115,7 +117,7 @@ MmrLength = #(define-music-function
 		\once \override MultiMeasureRest #'minimum-length = #length
 	#}
 )
-MmrPos = #(define-music-function
+mmrPos = #(define-music-function
 	(parser location position)
 	(number?)
 	#{

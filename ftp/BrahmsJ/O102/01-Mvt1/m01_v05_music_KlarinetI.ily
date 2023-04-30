@@ -334,7 +334,7 @@ musicKlarinetIMvtI = \relative c''' {
 	r f-.\p r ges-.
 	r ges-.\< g-.\sf r
 % Bars 311 to 315
-	r aes-. a2~\fp\>
+	r aes!-. a2~\fp\>
 	a4\! r r2 \bar "||" \key c \major \mark \default
 	R1*3
 	

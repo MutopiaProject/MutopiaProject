@@ -172,7 +172,7 @@ musicKontrabassMvtI = \relative c' {
 		R
 		R
 % Bars 156 to 160
-		r2 r4 \no } \clef bass c-.^\arco(
+		r2 r4 \no } \clef bass c-.^\arco\p(
 	r cis-. r a-.)
 	r d(-. r f-.\<
 	r fis-. r d)-.\!
@@ -468,7 +468,7 @@ musicKontrabassMvtI = \relative c' {
 	e4-.\f r r2
 	R1
 % Bars 421 to 425
-	r2 r4 e^\pizz
+	r2 r4 e\f^\pizz
 	d' dis e r
 	r2 r4 e,
 	d' dis e r

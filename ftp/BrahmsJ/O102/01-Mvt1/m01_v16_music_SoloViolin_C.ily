@@ -25,21 +25,21 @@ musicSoloViolinMvtI = \relative c'' {
 	
 	r2 r4 <g! a>\p\<(
 % Bars 31 to 35
-	a'2\> e4) <fis, a>(\<
-	a'2\> e4) <f,! a>\<(
-	\times 2/3 {a'4 d,) <e, a>(} \times 2/3 {a' cis,) <dis, a'>(\!}
-	c''!2~_\piuf \times 2/3 {c4 a) fis}
-	\times 2/3 {c( a fis} \times 2/3 {c) b a}
+	a'2\> e4)\! <fis, a>(\<
+	a'2\> e4)\! <f,! a>\<(
+	\tuplet 3/2 4 {a'4 d,) <e, a>( a' cis,) <dis, a'>(\!}
+	c''!2~_\piuf \tuplet 3/2 2 {c4 a) fis
+	c( a fis c) b a}
 % Bars 36 to 40
 	\grace {gis16[( a b]} a2)( gis4) r
 	R1
-	\times 2/3 {r4 <e' bes'>( g'!~} \times 2/3 {g e) <e, g>(\<}
+	\tuplet 3/2 2 {r4 <e' bes'>( g'!~ g e) <e, g>(\<}
 	<d bes'>2\> <cis a'>4)\! r
-	\times 2/3 {r4 <fis a>( a'~} \times 2/3 {a fis) <fis, a>\<}
+	\tuplet 3/2 2 {r4 <fis a>( a'~ a fis) <fis, a>\<}
 % Bars 41 to 45
-	<e c'!>2\> \times 2/3 {<dis b'>4\! r_\crescmarkup <e b'>(}
-	<bes' d>2 \times 2/3 {<a cis>4) r <a d>(}
-	\times 2/3 {<b! a'>2 gis'4)} \times 2/3 {<c, b'>2( a'4)}
+	<e c'!>2\> \tuplet 3/2 {<dis b'>4\! r_\crescmarkup <e b'>(}
+	<bes' d>2 \tuplet 3/2 2 {<a cis>4) r <a d>( 
+	<b! a'>2 gis'4) <c, b'>2( a'4)}
 	<d, c'>4.( b'8) <e, d'>4.(\< c'8)
 	<a, e''>4.( d'8) <a, e''>4.( dis'8)
 % Bars 46 to 50
@@ -89,7 +89,7 @@ musicSoloViolinMvtI = \relative c'' {
 	R1*4
 % Bars 116 to 120
 	f''4.\f e8 a,2~
-	a4. a,8( a'4.\> g8)
+	a4. a,8( a'4.\> g8)\!
 	f(\mp a g f) a( g e f)
 	d( d' a\> f) a( g e f)\!
 	dis16(_\crescmarkup a fis' a, e' a, dis a) g'2
@@ -110,31 +110,31 @@ musicSoloViolinMvtI = \relative c'' {
 		\new Voice {\voiceTwo <e,, c'>( <c' e>~ <c a'>) <dis b'>-.\noBeam e4( gis8) a-.\noBeam } 
 	>> \oneVoice
 	<d, d'>2-> <dis dis'>->
-	<< { s8\< s s\> s s\< s s\> s\! } \\ { <e e'>4.^( \acciaccatura g'8 f8) <a,, e''>4.^( \acciaccatura a''8 f) } >> \oneVoice
+	<< { s8\< s\! s\> s\! s\< s\! s\> s\! } \\ { <e e'>4.^( \acciaccatura g'8 f8) <a,, e''>4.^( \acciaccatura a''8 f) } >> \oneVoice
 % Bars 131 to 135
 	e2.\!( gis,,,4)
-	\times 2/3 {a8\f\< c f} \times 2/3 {e\> c gis} \times 2/3 {a\< c g'!} \times 2/3 {f\> c gis!}
-	\times 2/3 {a\< c g'!} \times 2/3 {fis a c} \times 2/3 {gis'\> d b} \times 2/3 {gis d b\!}
+	\tuplet 3/2 4 {a8\f\< c f\! e\> c gis\! a\< c g'!\! f\> c gis!\! 
+	a\< c g'! fis a c\! gis'\> d b gis d b\!}
 	a4 r r2
 	R1
 % Bars 136 to 140
-	\times 2/3 {e'8\mf\< g! c} \times 2/3 {b\> g dis\!} e8 r r4
-	\times 2/3 {e8\< g d'!} \times 2/3 {cis e g} g'\f r r4
-	\times 2/3 {c,,!8(\p a eis} fis) r \times 2/3 {ees'( c gis} a) r
-	\times 2/3 {g'( ees c} a) r \times 2/3 {fis'( c a} d,) r
-	\times 2/3 {c''_\piup( a a,} \times 2/3 {a' a, a')} \times 2/3 {ees'( c a,} \times 2/3 {c' a, c')}
+	\tuplet 3/2 4 {e'8\mf\< g! c\! b\> g dis\!} e8 r r4
+	\tuplet 3/2 4 {e8\< g d'! cis e g\!} g'\f r r4
+	\tuplet 3/2 {c,,!8(\p a eis} fis) r \tuplet 3/2 {ees'( c gis} a) r
+	\tuplet 3/2 {g'( ees c} a) r \tuplet 3/2 {fis'( c a} d,) r
+	\tuplet 3/2 4 {c''_\piup( a a, a' a, a') ees'( c a, c' a, c')
 % Bars 141 to 145
-	\times 2/3 {g'( ees a,,\>} \times 2/3 {g'' ees a,,} \times 2/3 {g'' ees a,,} \times 2/3 {g'' ees a,,)}
-	\times 2/3 {fis''( c a,} \times 2/3 {fis'' c a,} \times 2/3 {fis'' c a,} \times 2/3 {fis'' c a,)\!} \mark \default
-	\times 2/3 {g''(_\pdolce f! d} \times 2/3 {g, f d)} \times 2/3 {g( f d} \times 2/3 {g, f d)}
-	g, r r4 r \times 2/3 {g'8( d' f}
-	\times 2/3 {g\> f d} \times 2/3 {g, d' f)} \times 2/3 {g( f d} \times 2/3 {g, d' f)\!}
+	g'( ees a,,\> g'' ees a,, g'' ees a,, g'' ees a,,)
+	fis''( c a, fis'' c a, fis'' c a, fis'' c a,)\! \mark \default
+	g''(_\pdolce f! d g, f d) g( f d g, f d)}
+	g, r r4 r \tuplet 3/2 4 {g'8( d' f
+	g\> f d g, d' f) g( f d g, d' f)\!}
 % Bars 146 to 150
 	R1^\gp
 	R1
-	\times 2/3 {c,8( g' bes} \times 2/3 {c g' bes)} \times 2/3 {c( bes g} \times 2/3 {c, g' bes)}
-	\times 2/3 {c( a fis} \times 2/3 {c fis gis)} \times 2/3 {a( fis c} \times 2/3 {a c fis)}
-	\times 2/3 {g( f! d} \times 2/3 {g, a d)} \times 2/3 {g( f d} \times 2/3 {b g) r}
+	\tuplet 3/2 4 {c,8( g' bes c g' bes) c( bes g c, g' bes)
+	c( a fis c fis gis) a( fis c a c fis)
+	g( f! d g, a d) g( f d b g) r}
 % Bars 151 to 155
 	R1*15
 % Bars 156 to 160
@@ -197,28 +197,28 @@ musicSoloViolinMvtI = \relative c'' {
 	\mark \default
 	<e' e'>4.\f <d d'>8 <b b'>4 r
 	<c c'>4. <b b'>8 <e, e'>4 r
-	r2 \times 2/3 {g,2 c4\<}
+	r2 \tuplet 3/2 2 {g,2 c4\<
 % Bars 221 to 225
-	\times 2/3 {e g c} e8 g c e\!
-	r2 \times 2/3 {b,,2 d4}
-	\tupletUp \times 2/3 {g\< b d} \tupletNeutral g8 b d g\!
+	e g c} e8 g c e\!
+	r2 \tuplet 3/2 2 {b,,2 d4
+	\tupletUp g\< b d} \tupletNeutral g8 b d g\!
 	R1
-	r2 \times 2/3 {\acciaccatura e,8 e'4-. \acciaccatura fis,8 fis'4-. \acciaccatura g,8 g'4~}
+	r2 \tuplet 3/2 {\acciaccatura e,8 e'4-. \acciaccatura fis,8 fis'4-. \acciaccatura g,8 g'4~}
 % Bars 226 to 230
 	g8 e b g e b g e
-	cis4 r \times 2/3 {\acciaccatura cis'8 cis'4-. \acciaccatura d,8 d'4-. \acciaccatura e,8 e'4~}
+	cis4 r \tuplet 3/2 {\acciaccatura cis'8 cis'4-. \acciaccatura d,8 d'4-. \acciaccatura e,8 e'4~}
 	e8 cis ais e cis ais e cis
-	r2 r4 \times 2/3 {d8\p( e fis)}
-	r2 r4 \times 2/3 {b8( cis d)}
+	r2 r4 \tuplet 3/2 {d8\p( e fis)}
+	r2 r4 \tuplet 3/2 {b8( cis d)}
 % Bars 231 to 235
-	r2 r4 \times 2/3 {g8( a b}
-	\times 2/3 {e, fis g} \times 2/3 {cis, d e} \times 2/3 {ais, b cis} e,4-.)
-	\times 2/3 {d8( cis b} \times 2/3 {e d cis} \times 2/3 {fis e d)} r4
-	\times 2/3 {b'8( a g} \times 2/3 {cis b ais} \times 2/3 {d cis b)} r4
-	\times 2/3 {g'8( fis e} \times 2/3 {a g fis} \times 2/3 {b a g)} r4
+	r2 r4 \tuplet 3/2 4 {g8( a b
+	e, fis g cis, d e ais, b cis} e,4-.)
+	\tuplet 3/2 4 {d8( cis b e d cis fis e d)} r4
+	\tuplet 3/2 4 {b'8( a g cis b ais d cis b)} r4
+	\tuplet 3/2 4 {g'8( fis e a g fis b a g)} r4
 % Bars 236 to 240
-	\times 2/3 {gis8(-\tweak X-offset #-1 _\piup fis eis} \times 2/3 {ais gis fis} \times 2/3 {b ais gis)} r4
-	\times 2/3 {cis8(_\dimmarkup b ais)} r4 \times 2/3 {dis8( cis b)} r4
+	\tuplet 3/2 4 {gis8(-\tweak X-offset #-1 _\piup fis eis ais gis fis b ais gis)} r4
+	\tuplet 3/2 {cis8(_\dimmarkup b ais)} r4 \tuplet 3/2 {dis8( cis b)} r4
 	dis8.(-\tweak X-offset #-1 _\dolce b16 gis eis ais b) cis8.( ais16 fis dis gis ais)
 	b8.( gis16 eis cis fis gis) ais8.( fis16 dis b eis fis)
 	gis( eis b cis dis b gis ais b_\dimmarkup gis eis fis gis eis b cis
@@ -243,8 +243,8 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 256 to 260
 	bes,4\trill bes'2\trill( ges8-.) r
 	\textPriority #+3000 \afterGrace ges'1-\tweak X-offset #-4 \ff-\tweak X-offset #-0.5 \trill-\tweak X-offset #1.5 ^\flat( {f16[ ges])}
-	f8-. r f16( a,, c f,) f( c' a f'') ges( ges, ees ges,)
-	f''( a,, c f,) f( c' a f'') f8 r r4
+	f8-. r << {\voiceOne f16_([ s c, f,)] f_([ c' s f')] ges( ges, ees ges,) } \\ {\voiceTwo s16 a s8 s a16 s s4}>> \oneVoice
+	f''16( a,, c f,) f( c' a f'') f8 r r4
 	R1*2
 % Bars 261 to 265
 	
@@ -266,7 +266,7 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 276 to 280
 	aes) aes4 aes8( c) c4 c8(
 	dis) dis4 dis8( gis) gis4 gis8\)(
-	b!\<) b4 b8( a) a4 a8~(
+	b!\<) b4 b8( a) a4 a8~(\!
 	a2\> gis4.)\! g8_\dimmarkup~
 	g4. f!8~ f4. e8~
 % Bars 281 to 285
@@ -276,7 +276,7 @@ musicSoloViolinMvtI = \relative c'' {
 	a e fis gis a b c d e a, b c d e f! g!
 	a e fis gis a e f g a e fis gis a e f g
 % Bars 286 to 290
-	a4-!-\tweak X-offset #-2 \ff <a, a'>-! r <a, c e'>-!
+	a4-!-\tweak X-offset #-2 \ff <a, a'>-! r << {a,} \\ {< c e'>^!} >>
 	r <d, f' f'>-! r <d a'' fis'>-!
 	r <g, b' g' g'>-! r2
 	r4 <e' b' gis' gis'> r2 \mark \default
@@ -294,25 +294,25 @@ musicSoloViolinMvtI = \relative c'' {
 	d4. \shape #'((0 . 1.5)(0 . -0.5)(0 . -0.5)(0 . 1.5)) Slur c'8( \tuplet 3/2 4 {b d b' d d, d,)}
 	c2. a'4(
 	c,2. b4)
-	\times 2/3 {a8\f c f} \times 2/3 {e c gis} \times 2/3 {a c g'!} \times 2/3 {f c gis!} \tupletNeutral
+	\tuplet 3/2 4 {a8\f c f e c gis a c g'! f c gis! \tupletNeutral
 % Bars 306 to 310
-	\times 2/3 {a\< c g'!} \times 2/3 {fis a c} \times 2/3 {gis'\> d b} \times 2/3 {gis d b\!}
-	a4 r \times 2/3 {a8\< c g'!} \times 2/3 {f\> c g\!}
-	aes4 r \tag #'score { \times 2/3 {a''!8\rf\> fis c} } \tag #'midi {\times 2/3 {a'!8\> fis c} }  \times 2/3 {a fis c\!}
-	bes4 r \times 2/3 {g'8 bes f'!} \times 2/3 {ees bes f}
-	ges4 r \tag #'score { \times 2/3 {g''!8\rf\> e! bes} } \tag #'midi { \times 2/3 {g'!8\> e! bes} } \times 2/3 {g e bes\!}
+	a\< c g'! fis a c\! gis'\> d b gis d b\!}
+	a4 r \tuplet 3/2 4 {a8\< c g'!\! f\> c g\!} 
+	aes4 r \tag #'score { \tuplet 3/2 {a''!8\rf\> fis c} } \tag #'midi {\tuplet 3/2 {a'!8\> fis c} }  \tuplet 3/2 {a fis c\!}
+	bes4 r \tuplet 3/2 4 {g'8 bes f'! ees bes f}
+	ges4 r \tag #'score { \tuplet 3/2 {g''!8\rf\> e! bes} } \tag #'midi { \tuplet 3/2 {g'!8\> e! bes} } \tuplet 3/2 {g e bes\!}
 % Bars 311 to 315
-	a!4 r \tag #'score { \times 2/3 {a''8\rf\> fis dis} } \tag #'midi { \times 2/3 {a'8\rf\> fis dis} } \times 2/3 {a fis dis\!}
-	\times 2/3 {a'_\dimmarkup fis dis} a8 r \times 2/3 {a fis dis} a r \bar "||" \key a \major \mark \default
-	\times 2/3 {e'''8(_\pdolce d! b} \times 2/3 {e, d b)} \times 2/3 {e( d b} \times 2/3 {e, d b)}
-	r2 r4 \times 2/3 {e8( b' d}
-	\times 2/3 {e d b} \times 2/3 {e, b' d} \tupletUp \times 2/3 {e\> d b} \tupletNeutral \times 2/3 {e, b' d)\!}
+	a!4 r \tag #'score { \tuplet 3/2 {a''8\rf\> fis dis} } \tag #'midi { \tuplet 3/2 {a'8\rf\> fis dis} } \tuplet 3/2 {a fis dis\!}
+	\tuplet 3/2 {a'_\dimmarkup fis dis} a8 r \tuplet 3/2 {a fis dis} a r \bar "||" \key a \major \mark \default
+	\tuplet 3/2 4 {e'''8(_\pdolce d! b e, d b) e( d b e, d b)}
+	r2 r4 \tuplet 3/2 4 {e8( b' d
+	e d b e, b' d \tupletUp e\> d b  \tupletNeutral e, b' d)\!}
 % Bars 316 to 320
 	R1^\gp
-	r2 \times 2/3 {a,8( e' g!} \times 2/3 {a e' g!)}
-	\times 2/3 {a( g e} \times 2/3 {a, e' g} \times 2/3 {a g e} \times 2/3 {a, e' g)}
-	\times 2/3 {a( fis! dis} \times 2/3 {a dis eis} \times 2/3 {fis dis a} \times 2/3 {fis a dis)}
-	\times 2/3 {e(_\dimmarkup d! b} \times 2/3 {e, fis b} \times 2/3 {e d b} \times 2/3 {gis fis e)}
+	r2 \tuplet 3/2 4 {a,8( e' g! a e' g!)
+	a( g e a, e' g a g e a, e' g)
+	a( fis! dis a dis eis fis dis a fis a dis)
+	e(_\dimmarkup d! b e, fis b e d b gis fis e)}
 % Bars 321 to 325
 	R1
 	r2 r4 cis''-\tweak X-offset #-2 _\dolce(
@@ -323,7 +323,7 @@ musicSoloViolinMvtI = \relative c'' {
 	a'2\> dis,4)\! e_\espr(
 	eis) fis4(~ fis8 e! d! cis)
 	e(\< d cis b ais b b' a!)
-	eis4 gis4(~ gis8 fis a,!) eis'(
+	eis4 gis4(~ gis8 fis a,!) eis'(\!
 	gis4.\> fis8) \afterGrace a,4( {b16[ a])} gis8( fis)\!
 % Bars 331 to 335
 	cis'2._\pdolce cis4
@@ -332,11 +332,11 @@ musicSoloViolinMvtI = \relative c'' {
 	fis4_\dimmarkup e! d cis
 	b) r r cis(
 % Bars 336 to 340
-	b) r4 \times 2/3 {r8-\tweak X-offset #-2.5 ^\legg e,,_\dolce( a } \times 2/3 {e' a cis}
-	\times 2/3 {d a f)} \times 2/3 {e( a cis} \times 2/3 {b f d)} \times 2/3 {cis( e a}
-	\times 2/3 {fis! dis a)} \times 2/3 {d( f a} \times 2/3 {d, b gis)} \times 2/3 {e'( a cis}
-	\times 2/3 {d a f)} \times 2/3 {e( a cis} \times 2/3 {b f d)} \times 2/3 {cis(\< e a)}
-	\times 2/3 {fis!\>( dis c\!} \times 2/3 {a c dis} \times 2/3 {fis_\dimmarkup a c} \times 2/3 {dis fis a)}
+	b) r4 \tuplet 3/2 4 {r8-\tweak X-offset #-2.5 ^\legg e,,_\dolce( a  e' a cis
+	d a f) e( a cis b f d) cis( e a
+	fis! dis a) d( f a d, b gis) e'( a cis
+	d a f) e( a cis b f d) cis(\< e a)\!
+	fis!\>( dis c\! a c dis fis_\dimmarkup a c dis fis a)}
 % Bars 341 to 345
 	cis!2.\pp <fis,, fis'>4\f( \mark \default
 	<fisis fisis'>-.) <gis gis'>(~ q16 fis' e dis) fis( e dis cis)
@@ -392,10 +392,10 @@ musicSoloViolinMvtI = \relative c'' {
 	a'4.\f g8 e2(~
 	e4. c8) e4.( d8)
 	c( e d c) e( d b c)
-	a(\< a' e c) e(\> d b c)
-	a2(~\p\< a8\> c b a)
+	a(\< a' e c)\! e(\> d b c)\!
+	a2(~\p\< a8\> c b a)\!
 % Bars 401 to 405
-	a2(~\< a8\> c b a)
+	a2(~\< a8\> c b a)\!
 	a16(\p ees c' ees, bes' ees, a ees) des'2_\crescmarkup
 	b!16( f d'! f, c' f, b f) ees'2
 	d!16( aes f' aes, ees' aes, d aes) ges'2
@@ -410,25 +410,25 @@ musicSoloViolinMvtI = \relative c'' {
 	<c c'>) q4 q8( <bes bes'>) q4 q8(
 	<a a'>4.) bes'8( a g f g)
 	<a, a'>4. bes8( a g f g)
-	a4^\pocorit r r2
-	r2 r4 a,\f(^\intempo
+	a4 r r2
+	r2 r4 a,\f(
 % Bars 416 to 420
 	a'8) a4 a8( g) g4 g8(
-	f4)~ \times 2/3 {f8 e b'!} \times 2/3 {a d c} \times 2/3 {f e a}
-	g,4~ \times 2/3 {g8\< f c'} \times 2/3 {b e d} \times 2/3 {g f b\!}
-	\times 2/3 {f' e d} \times 2/3 {c b a} \times 2/3 {f e d} \times 2/3 {c b a}
-	c,16( e a c) e,( a c e) a,( c e a) \times 2/3 {e,8-.\f dis-. e-.}
+	f4)~ \tuplet 3/2 4 {f8 e b'! a d c f e a}
+	g,4~ \tuplet 3/2 4 {g8\< f c' b e d g f b\!}
+	\tuplet 3/2 4 {f' e d c b a f e d c b a}
+	c,16( e a c) e,( a c e) a,( c e a) \tuplet 3/2 4 {e,8-.\f dis-. e-.
 % Bars 421 to 425
-	\times 2/3 {f8-. e-. f-.} \times 2/3 {e-. dis-. e-.} \times 2/3 {f8-. e-. f-.} \times 2/3 {e-. dis-. e-.} 
-	d!16( f a d) dis( fis a dis) e8-. r \times 2/3 {e,,8-. dis-. e-.}
-	\times 2/3 {f8-. e-. f-.} \times 2/3 {e-. dis-. e-.} \times 2/3 {f8-. e-. f-.} \times 2/3 {e-. dis-. e-.} 
+	f8-. e-. f-. e-. dis-. e-. f8-. e-. f-. e-. dis-. e-.}
+	d!16( f a d) dis( fis a dis) e8-. r \tuplet 3/2 4 {e,,8-. dis-. e-.
+	f8-. e-. f-. e-. dis-. e-. f8-. e-. f-. e-. dis-. e-.} 
 	d!16( f a d) dis( fis a dis) e8-. r r4
 	f,,!16( a d f) fis( a dis fis) e8-. r r4
 % Bars 426 to 430
 	r16 a, d f a4 r16 a, dis fis a4
 	r16 e, a c e4 r16 e, gis b e4
-	\times 2/3 {a,,8 c f} \times 2/3 {e c gis} \times 2/3 {a c f} \times 2/3 {e c gis}
-	\times 2/3 {a c f} \times 2/3 {e c b'} \times 2/3 {a f e'} \times 2/3 {d a f'}
+	\tuplet 3/2 4 {a,,8 c f e c gis a c f e c gis
+	a c f e c b' a f e' d a f'}
 	a4-. r <e,, c' a'>-! r
 % Bar 431
 	a,1\fermata \bar "|."

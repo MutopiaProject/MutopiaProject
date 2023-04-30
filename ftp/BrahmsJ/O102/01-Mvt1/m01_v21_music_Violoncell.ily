@@ -374,7 +374,7 @@ musicVioloncellMvtI = \relative c' {
 	g4\p r g r
 	ges\< r c, r
 % Bars 311 to 315
-	f\! r b,! r
+	f\! r b,!\f r
 	r2 b4\p r \bar "||" \key a \major \mark \default
 	e r r2
 	R1*2

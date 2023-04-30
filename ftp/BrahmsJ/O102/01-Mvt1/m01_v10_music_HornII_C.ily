@@ -95,11 +95,11 @@ musicHornIIMvtI = \relative c' {
 	R1
 	b2-\tweak X-offset #-1 \sf c4 r
 	e,2-\tweak X-offset #-1 \sf f4-. r
-	r2 r4 f'(
-	ees des) c2
+	r2 r4 f'
+	ees des c2
 % Bars 106 to 110
-	b2(\sf c4-.) r
-	e2(-\tweak X-offset #-1 \sf f4-.) r
+	b2\sf c4 r
+	e2-\tweak X-offset #-1 \sf f4 r
 	r2 bes,4-. g-.
 	r bes-. g-. r
 	bes-. r b-. r
@@ -169,10 +169,10 @@ musicHornIIMvtI = \relative c' {
 	R1
 % Bars 206 to 210
 	r2 r4 c'
-	bes2 ees,4 r
+	bes2 \once \voiceOne ees,4 r
 	r2 r4 c'
-	bes2 ees,4 r
-	r ees2\sf ees4-.
+	bes2 \once \voiceOne ees,4 r
+	r ees2\sf ees4
 % Bars 211 to 215
 	R1
 	r2 r4 c-\tweak X-offset #-1 \sf~
@@ -211,8 +211,8 @@ musicHornIIMvtI = \relative c' {
 	
 % Bars 261 to 265
 	
-	\once \override CombineTextScript.X-offset = #-7.0 c'4-!-\tweak X-offset #-1.8 \f r r ees,-!
-	c'-! r r2
+	c'4-\tweak X-offset #-1.8 \f r r ees,
+	c' r r2
 	R1*6
 % Bars 266 to 270
 	
@@ -227,9 +227,9 @@ musicHornIIMvtI = \relative c' {
 % Bars 281 to 285
 	
 % Bars 286 to 290
-	r2 c4-!\ff r
-	bes-! r bes-! r
-	g-! r r2
+	r2 c4\ff r
+	bes r bes r
+	g r r2
 	c,4-! r r2 \mark \default
 	c4.-\tweak X-offset #0.5 \ff ees8 c4 r
 % Bars 291 to 295
@@ -290,7 +290,7 @@ musicHornIIMvtI = \relative c' {
 	
 	
 	
-	c8\f-. c4 c8( g') g4 g8(\<
+	c8\f-. c4 c8( g') \voiceOne g4 \once \omit Flag g8_(\< \voiceTwo
 % Bars 366 to 370
 	<< bes2.) {s4\> s s\!}>> r4 \mark \default
 	c,8 c4 c8( e) e4 e8(
@@ -305,9 +305,9 @@ musicHornIIMvtI = \relative c' {
 	c2( c,4) r
 % Bars 376 to 380
 	r2 r4 a''
-	g2 c,4 r
+	g2 \once \voiceOne c,4 r
 	r2 r4 a'
-	g2 c,4 r
+	g2 \once \voiceOne c,4 r
 	r c2-\tweak X-offset #-1.5 \sf c4-.
 % Bars 381 to 385
 	R1

@@ -47,14 +47,14 @@ musicFagottoIIMvtI = \relative c {
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
+	\tupletUp \tuplet 3/2 2 {e2-> d!4-. c4( b) a-.}
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c-.}
-	\times 2/3 {f,2 b4} \times 2/3 {e,2 a4} \tupletNeutral
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c
+	f,2 b4 e,2 a4} \tupletNeutral
 % Bars 66 to 70
 	d,2 c'
-	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-. c4.\>( b8)
-	b,-.\< e-. g-. ais-. c4.(\> b8)\!
+	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-.\! c4.\>( b8)
+	b,-.\< e-. g-. ais-.\! c4.(\> b8)\!
 	cis,-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2
 % Bars 71 to 75
@@ -97,14 +97,14 @@ musicFagottoIIMvtI = \relative c {
 	a-> fis-> dis-> c->
 	b2-\tweak X-offset #-1.5 \sf c4-. r
 	e2-\tweak X-offset #-1 \sf f!4-. r
-	r2 r4 d'(
+	r2 r4 d'_(
 	e d c e)
 % Bars 106 to 110
 	r2 gis8(\sf\> a b c)\!
 	r2 f,8(\sf\> a g! f)\!
 	R1
 	e16( gis b cis d8-.) r r4 e,16( gis b cis
-	d8-.) r8 r4 \once \override CombineTextScript.X-offset = #-2 a,16( c! dis fis a c dis fis)
+	d8) r8 r4 \once \override CombineTextScript.X-offset = #-2 a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace b,1(\trill {a16[ b)]} \mark \default
 	a4-. r r2
@@ -140,17 +140,17 @@ musicFagottoIIMvtI = \relative c {
 	
 	\mark \default
 	g4.( a8 b2)
-	r4 r8 g8(\< a4. b8
+	r4 r8 g8(\< a4. b8\!
 	g4.\> a8 b2\!)
 % Bars 146 to 150
-	r1^\gp
+	R1^\gp
 	c,4.( d8 e2)
 	r4 r8 c8(\< d4. e8)
 	d1\dimD\>
 	g\!
 % Bars 151 to 155
 	R1
-	r2 r4 g4~_\pdolce
+	r2 r4 g4~
 	g8 r fis4~ fis8 r f4~(\<
 	f\> d8)\! r r4 g~
 	g8 r fis4~ fis8 r f4(\<~
@@ -160,7 +160,7 @@ musicFagottoIIMvtI = \relative c {
 % Bars 161 to 165
 	
 % Bars 166 to 170
-	r2 r4 g_\pdolce~
+	r2 r4 g~
 	g8 r fis4~ fis8 r f4~(\<
 	f\> d8)\! r r4 g~
 	g8 r fis4~ fis8\< r f4~
@@ -274,10 +274,10 @@ musicFagottoIIMvtI = \relative c {
 	f4-. r g-. r
 	aes-. f-. des'-. bes-.
 % Bars 266 to 270
-	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
+	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
-	\times 2/3 {c,-! d-! e!-! } \times 2/3 {f-! g-! aes-!}
-	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
+	\tuplet 3/2 2 {c,-! d-! e!-! f-! g-! aes-!
+	bes-. c-. des-. ees,-. f-. g-.} \mark #11
 	aes-. r r2
 % Bars 271 to 275
 	R1*12
@@ -300,11 +300,11 @@ musicFagottoIIMvtI = \relative c {
 	g,2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\times 2/3 {e2 d!4-.} \times 2/3 {c( b) a-.}
+	\tuplet 3/2 2 {e2 d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\times 2/3 {e2 d!4} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4}
+	\tuplet 3/2 2 {e2 d!4 c( g) c,-.
+	f2 d4 g2 e4}
 	a2 f
 	R1*5
 % Bars 301 to 305
@@ -323,7 +323,7 @@ musicFagottoIIMvtI = \relative c {
 	r f-. b,!2\fp\>~
 	b4\! r r2 \bar "||" \key a \major \mark \default
 	e4.( fis8 gis2)
-	r4 r8 e( fis4.\< gis8
+	r4 r8 e( fis4.\< gis8\!
 	e4.\> fis8\! gis2)
 % Bars 316 to 320
 	R1^\gp
@@ -405,15 +405,15 @@ musicFagottoIIMvtI = \relative c {
 	e e4 e e e8~
 	e4 e2 e4-.
 % Bars 396 to 400
-	R1*8
+	R1*3
 	
 	
-	
+	R1*4
 	
 % Bars 401 to 405
 	
 	
-	
+	R1
 	d2\pp( ees
 	e! f)~
 % Bars 406 to 410

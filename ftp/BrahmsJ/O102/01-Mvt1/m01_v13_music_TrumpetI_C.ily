@@ -9,8 +9,8 @@ musicTrumpetIMvtI = \relative c'' {
 	\key a \minor
 	\transposition d
 % Bars 1 to 5
-	d4._\fmarc d8 d4 r
-	d4. d8 d4 r
+	\partCombineApart d4. d8 d4 \partCombineAutomatic r
+	\partCombineApart d4. d8 d4 \partCombineAutomatic r
 	bes-. r c-. r
 	g-. g-. g'-. g-.
 	R1\fermata
@@ -88,12 +88,12 @@ musicTrumpetIMvtI = \relative c'' {
 	\partCombineApart g2 g4-. \partCombineAutomatic r
 	c2-\tweak X-offset #-3.2 \sf c4-. r
 	\once \partCombineApart bes-. r r2
-	bes4( c) d2
+	\partCombineApart bes4( c) d2
 % Bars 106 to 110
-	bes2\sf bes4-. r
+	bes2 bes4-. \partCombineAutomatic r
 	ees2\sf ees4-. r
-	c-. r c-. d-.
-	r c-. d-. r
+	\once \partCombineApart c-. r \partCombineApart c-. d-. \partCombineAutomatic
+	r \partCombineApart c-. d-. \partCombineAutomatic r
 	g,-. r g-. r
 % Bars 111 to 115
 	\once \partCombineApart d'-. r \once \partCombineApart d-. r \mark \default
@@ -152,8 +152,8 @@ musicTrumpetIMvtI = \relative c'' {
 % Bars 211 to 215
 	
 	
-	r2 r4 d-\tweak X-offset #-1.4 \f~
-	d d4~ d8-. r r4
+	r2 r4 \partCombineApart d~
+	d d4~ d8-. \partCombineAutomatic r r4
 	r f2 f4~
 % Bars 216 to 220
 	f8-. r r4 r2
@@ -265,7 +265,7 @@ musicTrumpetIMvtI = \relative c'' {
 	R1
 	r2 r4 g,-\tweak X-offset #-3.5 \sf~
 	g g-. r d'\f~
-	d d~ d8 r r4
+	d d~ d8-. r r4
 	r c2 c4~
 % Bars 386 to 390
 	c8-. r r4 r2

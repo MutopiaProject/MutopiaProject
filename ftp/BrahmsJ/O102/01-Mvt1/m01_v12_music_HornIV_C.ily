@@ -9,7 +9,7 @@ musicHornIVMvtI = \relative c'' {
 	\key a \minor
 	\transposition d
 % Bars 1 to 5
-	d4._\fmarc d8 d4 r
+	d4. d8 d4 r
 	d4. d8 d4 r
 	g,-. r c,-. r
 	g-. g-. g'-. g-.
@@ -92,13 +92,13 @@ musicHornIVMvtI = \relative c'' {
 	R1
 	g2-\tweak X-offset #-1 \sf g4-. r
 	c,2-\tweak X-offset #-1 \sf c4-. r
-	bes' r r ees(
-	bes c) d2
+	bes' r r ees
+	bes c d2
 % Bars 106 to 110
-	bes2\sf bes4-. r
-	ees,2-\tweak X-offset #-1 \sf ees4-. r
-	c'-. d-. ees-. d-.
-	r ees-. d-. r
+	bes2\sf bes4 r
+	ees,2-\tweak X-offset #-1 \sf ees4 r
+	c' d ees d
+	r ees d r
 	g,-. r g-. r
 % Bars 111 to 115
 	d' r d r \mark \default
@@ -142,8 +142,8 @@ musicHornIVMvtI = \relative c'' {
 	
 % Bars 166 to 170
 	r2 r4 bes~
-	bes8 r bes4~ bes8 r bes4(~\<
-	bes\> a8\!) r r4 bes~
+	bes8 r bes4~ bes8 r bes4\(~\<
+	bes\>( a8\!)\) r r4 bes~
 	bes8 r bes4~ bes8 r bes4~\<
 	<<bes2. {s4\> s s\!}>> r4
 % Bars 171 to 175
@@ -153,7 +153,7 @@ musicHornIVMvtI = \relative c'' {
 	
 	r2 r4 ees~\p 
 	ees8 d c4. b8 g4~
-	g g2 g4\pp~
+	g g2 \once \voiceOne g4\pp_~
 	g r r2
 % Bars 181 to 185
 	R1*3
@@ -173,7 +173,7 @@ musicHornIVMvtI = \relative c'' {
 	
 	c8-.-\tweak X-offset #-2 \f c4 c8( bes) bes4 bes8\<(
 % Bars 196 to 200
-	bes2\>)( a4) s4\!
+	bes2\>)( a4)\! s4
 	c8 c4 c c c8(
 	c4-.) c-. r2
 	c8 c4 c8( bes) bes4 bes8(
@@ -225,9 +225,9 @@ musicHornIVMvtI = \relative c'' {
 	R1*2
 % Bars 261 to 265
 	
-	bes4-\tweak X-offset #-1.9 \f-! r r ees-!
-	bes-! r r2
-	bes4-. r bes-. r
+	bes4-\tweak X-offset #-1.9 \f r r ees
+	bes r r2
+	bes4 r bes r
 	ees,-. r r2
 % Bars 266 to 270
 	R1*4
@@ -278,9 +278,9 @@ musicHornIVMvtI = \relative c'' {
 	g,1\pp~
 	g2(-\tweak X-offset #2 \< g')~\!
 	g1~_\dimmarkup
-	g2\> fis~
+	g2\> \once \voiceOne fis_~
 % Bars 321 to 325
-	fis4\! r r2
+	\once \voiceOne fis4\! r r2
 	r2 r4 g-\tweak X-offset #-8 _\pdolce(
 	c8) r g4( c8) r g4(
 	g,) r r g'( 
@@ -340,7 +340,7 @@ musicHornIVMvtI = \relative c'' {
 	R1
 	r2 r4 g,-\tweak X-offset #-3.5 \sf~
 	g g-. r g'\f~
-	g g~ g8 r r4
+	g g~ g8-. r r4
 	r c,2 c4~
 % Bars 386 to 390
 	c8-. r r4 r2 

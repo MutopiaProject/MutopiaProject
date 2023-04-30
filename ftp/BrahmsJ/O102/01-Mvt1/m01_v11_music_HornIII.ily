@@ -399,7 +399,7 @@ musicHornIIIMvtI = \relative c'' {
 	R1
 	r2 r4 g\sf~
 	g g-. r f'\f~
-	f f~ f8 r r4
+	f f~ f8-. r r4
 	r c2 c4~
 % Bars 386 to 390
 	c8-. r r4 r2

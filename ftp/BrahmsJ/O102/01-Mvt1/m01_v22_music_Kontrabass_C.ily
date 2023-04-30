@@ -42,14 +42,14 @@ musicKontrabassMvtI = \relative c' {
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2\< b,4} \times 2/3 {e2 a,4} \tupletNeutral
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	f2\< b,4 e2 a,4} \tupletNeutral
 % Bars 66 to 70
 	d2 c\!
-	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-. c4.(\> b8)
-	b,8\<-. e-. g-. ais!-. c4.\>( b8)\!
+	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-.\! c4.(\> b8)\!
+	b,8\<-. e-. g-. ais!-.\! c4.\>( b8)\!
 	cis,8-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2
 % Bars 71 to 75
@@ -155,7 +155,7 @@ musicKontrabassMvtI = \relative c' {
 	
 	
 % Bars 156 to 160
-	r2 r4 c-.^\arco(
+	r2 r4 c-.^\arco\p(
 	r cis-. r a-.)
 	r d(-. r f-.\<
 	r fis-. r d)-.\!
@@ -271,10 +271,10 @@ musicKontrabassMvtI = \relative c' {
 	f4-.\sf r g-.\sf r
 	aes_\benmarc-. f-. des'-. bes-.
 % Bars 266 to 270
-	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
+	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
-	\times 2/3 {c,-. d-. e!-.} \times 2/3 {f-. g-. aes-.}
-	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
+	\tuplet 3/2 2 {c,-. d-. e!-. f-. g-. aes-.
+	bes-. c-. des-. ees,-. f-. g-.} \mark #11
 	aes,1\fpp(
 % Bars 271 to 275
 	gis)(
@@ -305,11 +305,11 @@ musicKontrabassMvtI = \relative c' {
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\tupletUp \once \override TupletNumber.Y-offset = #6 \times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\once \override TupletNumber.Y-offset = #6 \times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4} \tupletNeutral
+	\once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	f2 d4 g2 e4} \tupletNeutral
 	a2 f,
 	e\p e'
 % Bars 301 to 305
@@ -441,7 +441,7 @@ musicKontrabassMvtI = \relative c' {
 	e4-.\f r r2
 	R1
 % Bars 421 to 425
-	r2 r4 e^\pizz
+	r2 r4 e\f^\pizz
 	d' dis e r
 	r2 r4 e,
 	d' dis e r

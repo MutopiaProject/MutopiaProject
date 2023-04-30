@@ -50,7 +50,7 @@ musicKlarinetIMvtI = \relative c''' {
 	g'2.-> ees4
 	d2-> c->
 	ees2.-> ees4
-	\tupletUp \times 2/3 {ees2 f4} \times 2/3 {d2 ees4} \tupletNeutral
+	\tupletUp \tuplet 3/2 2 {ees2 f4 d2 ees4} \tupletNeutral
 % Bars 66 to 70
 	c2 c
 	a-\tweak X-offset #-3.7 \ff-> a->
@@ -67,29 +67,29 @@ musicKlarinetIMvtI = \relative c''' {
 	ces,-! r ces-! r
 	bes-! r r2
 	R1 \mark \default
-	g'8\f g4 g8( f) f4 f8(
+	g'8\f g4 g8^( f) f4 f8^(
 	fes4-.) ees-. r2
 % Bars 81 to 85
-	g8 g4 g8( f) f4 f8(
+	g8 g4 g8^( f) f4 f8(
 	e4-.) \once \partCombineApart c-. r2
-	bes'8 bes4 bes8( aes) aes4 aes8(
+	bes'8 bes4 bes8^( aes) aes4 aes8^(
 	aes4-.) g-. r2
-	bes8 bes4 bes8( aes) aes4 aes8(
+	bes8 bes4 bes8^( aes) aes4 aes8(
 % Bars 86 to 90
 	ges4)-! ges-! r2
 	ees4-! ees-! r des-!
 	r c-! r2
 	r r4 aes'(\f \mark \default
-	f8) r aes4( fes8) r ees4(
+	f8) r aes4( fes8) r \once \oneVoice ees4(
 % Bars 91 to 95
 	f! g8 aes ees4) aes(
-	f8) r aes4( fes8) r \partCombineApart ees4(
+	f8) r aes4( fes8) r \partCombineApart \once \oneVoice ees4(
 	d! ees8 f ees4) \partCombineAutomatic c(
 	ees-.) des2\sf des4~
 	des des2 des4(~
 % Bars 96 to 100
-	des8 c) des4.( a'8) \partCombineApart bes4(~
-	bes16 aes! ges f) \partCombineAutomatic ges4(~ ges16 f ees d!) ees4~
+	des8 c) des4.( a'8) \partCombineChords bes4(~
+	bes16 \partCombineUnisono aes! ges f) \partCombineAutomatic ges4(~ ges16 f ees d!) ees4~
 	ees ees4~ ees8-. r r4
 	r ees2 ees4~
 	ees8-. r r4 r2
@@ -97,11 +97,11 @@ musicKlarinetIMvtI = \relative c''' {
 	R1
 	c2(-\tweak X-offset #-1 \sf c4-.) r
 	f2(-\tweak X-offset #-1 \sf f4-.) r
-	r2 r4 c'(
-	bes aes g2)
+	r2 r4 \oneVoice c'(
+	bes aes \voiceOne g2)
 % Bars 106 to 110
 	r2 ees4( f8 g)
-	r2 e8( f g aes)
+	r2 \partCombineChords e8( f g aes)
 	\partCombineApart r2 r4 r16 g,( b d
 	g8-.) r f-. r r16 g,( b d g8-.) r
 	f-. \partCombineAutomatic r r4 c,16( ees! fis a c ees! fis a)
@@ -157,10 +157,10 @@ musicKlarinetIMvtI = \relative c''' {
 % Bars 161 to 165
 	
 % Bars 166 to 170
-	r2 r4 bes'_\pdolce~
-	bes8 r c4~ c8 r ces4(
-	ees d8) r r4 bes~
-	bes8 r c4~ c8\< r ces4~
+	r2 r4 \partCombineApart bes'~
+	bes8 \partCombineAutomatic r c4~ c8 r \partCombineChords ces4\(
+	ees d8\) \partCombineAutomatic r r4 \partCombineApart bes~
+	bes8 \partCombineAutomatic r c4~ c8\< r ces4~
 	ces\dimD\>( bes2.)~
 % Bars 171 to 175
 	bes4\! r r2 \mark \default
@@ -247,7 +247,7 @@ musicKlarinetIMvtI = \relative c''' {
 	R1*2
 	
 % Bars 251 to 255
-	\partCombineApart r8 a,_\f-. bes-. c-. des-. r r4 \partCombineAutomatic
+	\partCombineApart r8 a,\f-. bes-. c-. des-. r r4 \partCombineAutomatic
 	R1
 	r4 r8 b-.\f c-. d-. e-. r
 	r4 r8 a,-. bes!-. c-. d-. r
@@ -276,13 +276,13 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 	
-	r4 r8 cis'(_\p_\< d e_\> f)\! cis(
+	\partCombineApart r4 r8 cis'(_\p_\< d e_\> f)\! cis(
 	e)_\dimmarkup r r b( d) r r a(
 % Bars 281 to 285
 	c4 a fis dis')
 	e1_\crescmarkup(
 	ees!)(
-	c2) r
+	c2) \partCombineAutomatic r
 	R1
 % Bars 286 to 290
 	g'4-!-\tweak X-offset #-2 \ff r g-! r
@@ -315,7 +315,7 @@ musicKlarinetIMvtI = \relative c''' {
 	r f-.\p r ges-.
 	r ges-.\< g-.\sf r
 % Bars 311 to 315
-	r aes-. a2~\fp\>
+	r aes!-. a2~\fp\>
 	a4\! r r2 \bar "||" \key c \major \mark \default
 	R1*3
 	
@@ -348,7 +348,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	
 % Bars 351 to 355
-	r2 f'~(
+	r2 \partCombineChords f'~(
 	f1~
 	f2 e)
 	ees1(
@@ -357,7 +357,7 @@ musicKlarinetIMvtI = \relative c''' {
 	cis2 d
 	b c!
 	a1)_\dimmarkup~
-	a4 r r2
+	a4 \partCombineAutomatic r r2
 	R1*5
 % Bars 361 to 365
 	
@@ -392,8 +392,8 @@ musicKlarinetIMvtI = \relative c''' {
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \mark \default \bar "||" \key c \minor
-	fis2-\tweak X-offset #-2 \ff\trill \partCombineApart g8( ees d c) \partCombineAutomatic
-	bes4 r8 fis' g4-. r
+	fis2-\tweak X-offset #-2 \ff\trill \partCombineApart g8( ees d c) 
+	bes4 \partCombineAutomatic r8 fis' g4-. r
 	f!2\trill ees8( aes g f)
 % Bars 391 to 395
 	ees4 r8 f-. ees4-. r8 \once \partCombineApart c-.

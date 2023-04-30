@@ -42,10 +42,10 @@ musicBratscheMvtI = \relative c'' {
 	<d d'>4. <d b'>8 <e g>4. <e c'>8
 % Bars 61 to 65
 	<d f>2-> <c fis>
-	\tupletUp \times 2/3 {<e, e'>2 d'4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \tuplet 3/2 2 {<e, e'>2 d'4-. c( b) a-.}
 	<d f>2-> <c fis>->
-	\times 2/3 {<c g'>2 f!4-.} \times 2/3 {e( d) g-.}
-	\times 2/3 {b(\< a) f-. } \times 2/3 {a( g) e-.} \tupletNeutral
+	\tuplet 3/2 2 {<c g'>2 f!4-. e( d) g-.
+	b(\< a) f-.  a( g) e-.} \tupletNeutral
 % Bars 66 to 70
 	<a, f'>2 <a e'>\!
 	<<{
@@ -59,8 +59,8 @@ musicBratscheMvtI = \relative c'' {
 	}>>
 	<<{<e g>4} \\ {b4}>> r <a dis> r
 % Bars 71 to 75
-	c,8:16\p\< e: g: bes: des4.\>( c8)
-	c,8:16\< f: aes: b!: des4.(\> c8)
+	c,8:16\p\< e: g: bes:\! des4.\>( c8)\!
+	c,8:16\< f: aes: b!:\! des4.(\> c8)\!
 	d,!8:16\< f: aes: bes: e,!: g: bes: c:
 	f,: aes: c: f: g,: bes e: g:
 	<f c'>4:\f <f des'>2: <aes c>4:
@@ -69,17 +69,17 @@ musicBratscheMvtI = \relative c'' {
 	<g e'>8-.\sf c4 c8( des8-.)\sf des4 des8~
 	des-.\sf des4 des8( b!)\sf b4 b8 \mark \default
 	g'16(\f e g e bes e g e) f( d f d bes d f d)
-	f( des bes des e c) fis fis g8:16 a: bes: a:
+	f( des bes des e[ c]) fis fis g8:16 a: bes: a:
 % Bars 81 to 85
 	g16( e g e c e g e) g( d g d bes d g d)
-	g( e a, e' \times 2/3 {g8-.) g-! a-! } \times 2/3 {e-! f-! cis-!} \times 2/3 {d-! d-! f-!} 
+	g( e a, e' \tuplet 3/2 4 {g8-.)\noBeam g-! a-!  e-! f-! cis-! d-! d-! f-!} 
 	bes16( g bes g e g bes g) bes( f bes f d f bes f)
-	bes( g des g bes c,) a' a bes8:16 c: d!: c:
+	bes( g des g bes[ c,]) a' a bes8:16 c: d!: c:
 	bes16( g bes g e g bes g) bes( f bes f d f bes f)
 % Bars 86 to 90
-	bes( g c, g' \times 2/3 {f8-.) b!-! c-!} \times 2/3 {a-! a-! b-!} \times 2/3 {c-! gis-! a-!} 
-	c16( a fis  a \times 2/3 {c8-.) a-! bes-!} \times 2/3 {a-! g-! ees-!} \times 2/3 {d-! c-! bes-!}
-	\times 2/3 {gis-! a-! b!-!} \times 2/3 {c-! d-! f-!} \times 2/3 {gis-! a-! b-!} \clef treble \times 2/3 {c-! d-! f-!}
+	bes( g c, g' \tuplet 3/2 4 {f8-.)\noBeam b!-! c-! a-! a-! b-! c-! gis-! a-!} 
+	c16( a fis  a \tuplet 3/2 4 {c8-.)\noBeam a-! bes-! a-! g-! ees-! d-! c-! bes-!
+	gis-! a-! b!-! c-! d-! f-! gis-! a-! b-! \clef treble c-! d-! f-!}
 	c16( a' f c) a( f' c a) f( c' a f) \clef alto c'4(_\fbenmarc \mark \default
 	b!16 g d b!) c'4( bes16 g des bes) a'4( 
 % Bars 91 to 95
@@ -337,11 +337,11 @@ musicBratscheMvtI = \relative c'' {
 	<f d'>-. <f b>-. <f c'>4. q8
 	<d d'>4. <d b'>8 <e g>4. <e c'>8
 	<d f>2 <c fis>
-	\tupletUp \once \override TupletNumber.Y-offset = #3.5 \times 2/3 {<e, e'>2-> d'4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \once \override TupletNumber.Y-offset = #3.5 \tuplet 3/2 2 {<e, e'>2-> d'4-. c( b) a-.}
 % Bars 296 to 300
 	<d f>2 <c fis>
-	\times 2/3 {<c g'>2-> f!4-.} \times 2/3 {e( d) g-.}
-	\times 2/3 {a( c,) f-.} \times 2/3 {g( d) e-.} \tupletNeutral
+	\tuplet 3/2 2 {<c g'>2-> f!4-. e( d) g-.
+	a( c,) f-. g( d) e-.} \tupletNeutral
 	a,2 f
 	d\p d
 % Bars 301 to 305
@@ -357,7 +357,7 @@ musicBratscheMvtI = \relative c'' {
 	r2 g'8\p^\pizz bes ees bes
 	ges4 r bes'8\< g! e! bes
 % Bars 311 to 315
-	a! c f a fis4\fp a
+	a! c f a\! fis4\fp a
 	r fis r dis \bar "||" \key a \major \mark \default
 	e4 r r2
 	R1*2
@@ -365,20 +365,20 @@ musicBratscheMvtI = \relative c'' {
 % Bars 316 to 320
 	R1^\gp
 	cis'4.(_\espressivo_\pdolce-\tweak X-offset #-5 ^\arco b8 e,2) 
-	r4 r8 cis'(\< b4. e,8
+	r4 r8 cis'(\< b4. e,8\!
 	cis'4.\> b8 fis4. cis'8
 	b4. fis8 b4.\! gis8
 % Bars 321 to 325
-	e4. d8\< b4. gis8
-	fis2.\> e4)
+	e4. d8\< b4. gis8\!
+	fis2.\> e4)\!
 	d'4\p^\pizz r d r
 	dis(_\dolce-\tweak X-offset #-5 ^\arco d b) r
 	d^\pizz r d r
 % Bars 326 to 330
-	r2 r4  \times 2/3 {g,8(-\tweak X-offset #-3 ^\arco\> cis g')\!} 
-	r4 \times 2/3 {fis,8(\> cis' f)\!} r4 \times 2/3 {e,8(\> ais cis)\!}
-	r4 \times 2/3 {d,8( fis b)} r4 \times 2/3 {fis8( b fis')}
-	r4 \times 2/3 {fis,8( a b)} r4 \times 2/3 {fis8( a dis)}
+	r2 r4  \tuplet 3/2 {g,8(-\tweak X-offset #-3 ^\arco\> cis g')\!} 
+	r4 \tuplet 3/2 {fis,8(\> cis' f)\!} r4 \tuplet 3/2 {e,8(\> ais cis)\!}
+	r4 \tuplet 3/2 {d,8( fis b)} r4 \tuplet 3/2 {fis8( b fis')}
+	r4 \tuplet 3/2 {fis,8( a b)} r4 \tuplet 3/2 {fis8( a dis)}
 	r4 fis,2.\sf\>
 % Bars 331 to 335
 	eis1\pp(
@@ -425,14 +425,14 @@ musicBratscheMvtI = \relative c'' {
 % Bars 366 to 370
 	\mark \default
 	b''16\f-\tweak X-offset #-6 ^\arco( gis b gis d gis b gis) b( fis b fis d fis b fis)
-	b( gis cis, gis' \times 2/3 {b8-!) b-! cis-!} \times 2/3 {gis-! a-! eis-! } \times 2/3 {fis-! fis-! a-!} 
+	b( gis cis, gis' \tuplet 3/2 4 {b8-!)\noBeam b-! cis-! gis-! a-! eis-!  fis-! fis-! a-!} 
 	d16( b d b gis b d b) d( a d a fis a d a)
-	d( b f b d e,) cis' cis d8:16 e: fis!: e:
+	d( b f b d[ e,)] cis' cis d8:16 e: fis!: e:
 % Bars 371 to 375
 	d16( b d b gis b d b) d( a d a fis a d a)
-	d( b e, b' \times 2/3 {a8-!) dis-! e-!} \times 2/3 {cis-! cis-! dis-!} \times 2/3 {e-! bis-! cis-!} 
-	e16( cis ais cis \times 2/3 {e8-.) cis-! d-!} \times 2/3 {cis-! b-! g-! } \times 2/3 {fis-! e-! d-!}
-	\times 2/3 {bis-! cis-! dis-!} \times 2/3 {e-! fis-! a-!} \clef treble \times 2/3 {bis-! cis-! dis-!} \times 2/3 {e-! fis-! a-!} \clef alto
+	d( b e, b' \tuplet 3/2 4 {a8-!)\noBeam dis-! e-! cis-! cis-! dis-! e-! bis-! cis-!} 
+	e16( cis ais cis \tuplet 3/2 4 {e8-.)\noBeam cis-! d-! cis-! b-! g-!  fis-! e-! d-!
+	bis-! cis-! dis-! e-! fis-! a-! \clef treble bis-! cis-! dis-! e-! fis-! a-!} \clef alto
 	e16( cis a e) cis'( a e cis) e( cis a e) a'4_\fbenmarc->(
 % Bars 376 to 380
 	fis16 dis b fis') a4->( f16 d b f') e4(
@@ -487,7 +487,7 @@ musicBratscheMvtI = \relative c'' {
 	d4-!  c-! r2
 	e4-! d-! r2
 	e4-.\f r r a\p^\pizz
-	c\< e a e,\f
+	c\< e a\! e,\f
 % Bars 421 to 425
 	f' e, <f' c'> <e c'>
 	<f a> <fis a> e e,

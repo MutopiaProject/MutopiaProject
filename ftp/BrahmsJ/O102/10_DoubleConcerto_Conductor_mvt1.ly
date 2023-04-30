@@ -61,84 +61,79 @@
 	}
 	\score {
 		<<
-%			\new StaffGroup <<
-%				\new Staff <<
-%%					\new Voice {
-%%						\formatConductorMvtI
-%%					}
-%					\new Voice {
-%						\tempiMvtI
-%					}
-%					\new Voice {
-%						\timeMvtI \nameStaffImvtI
-%						\partCombine \musicFloteIMvtI \musicFloteIIMvtI
-%					}
-%				>>
-%				\new Staff {
-%					\timeMvtI \nameStaffIImvtI
-%					\partCombine \musicOboeIMvtI \musicOboeIIMvtI
-%				}
-%				\new Staff {
-%					\timeMvtI \nameStaffIIImvtI
-%					\partCombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
-%				}
-%				\new Staff {
-%					\timeMvtI \nameStaffIVmvtI
-%					\partCombine \musicFagottoIMvtI \musicFagottoIIMvtI
-%				}
-%				\new GrandStaff \with { \nameGdStaffImvtI } <<
-%					\new Staff {
-%						\timeMvtI \nameStaffVmvtI
-%						\partCombine \musicHornIMvtI \musicHornIIMvtI
-%					}
-%					\new Staff {
-%						\timeMvtI \nameStaffVImvtI
-%						\partCombine \musicHornIIIMvtI \musicHornIVMvtI
-%					}
-%				>>
-%				\new Staff {
-%					\timeMvtI \nameStaffVIImvtI
-%					\partCombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
-%				}
-%				\new Staff {
-%					\timeMvtI \nameStaffVIIImvtI
-%					\musicPaukenMvtI
-%				}
-%			>>
-%			\new Staff {
-%				\timeMvtI \nameStaffIXmvtI
-%				\keepWithTag #'score \musicSoloViolinMvtI
-%			}
-%			\new Staff {
-%				\timeMvtI \nameStaffXmvtI
-%				\musicSoloCelloMvtI
-%			}
-%			\new StaffGroup <<
-%				\new GrandStaff <<
-%					\new Staff {
-%						\timeMvtI \nameStaffXImvtI
-%						\musicViolinIMvtI
-%					}
-%					\new Staff {
-%						\timeMvtI \nameStaffXIImvtI
-%						\musicViolinIIMvtI
-%					}
-%				>>
-%				\new Staff {
-%					\timeMvtI \nameStaffXIIImvtI
-%					\musicBratscheMvtI
-%				}
-%				\new GrandStaff <<
-%					\new Staff {
-%						\timeMvtI \nameStaffXIVmvtI
-%						\musicVioloncellMvtI
-%					}
-%					\new Staff {
-%						\timeMvtI \nameStaffXVmvtI
-%						\musicKontrabassMvtI
-%					}
-%				>>
-%			>>
+			\new StaffGroup <<
+				\new Staff <<
+					\new Voice {
+						\formatConductorMvtI
+					}
+					\new Voice {
+						\tempiMvtI
+					}
+					\new Voice {
+						\timeMvtI \nameStaffImvtI
+						\partCombine \musicFloteIMvtI \musicFloteIIMvtI
+					}
+				>>
+				\new Staff {
+					\timeMvtI \nameStaffIImvtI
+					\partCombine \musicOboeIMvtI \musicOboeIIMvtI
+				}
+				\new Staff {
+					\timeMvtI \nameStaffIIImvtI
+					\partCombine \musicKlarinetIMvtI \musicKlarinetIIMvtI
+				}
+				\new Staff {
+					\timeMvtI \nameStaffIVmvtI
+					\partCombine \musicFagottoIMvtI \musicFagottoIIMvtI
+				}
+				\new GrandStaff \with { \nameGdStaffImvtI } <<
+					\new Staff {
+						\timeMvtI \nameStaffVmvtI
+						\partCombine \musicHornIMvtI \musicHornIIMvtI
+					}
+					\new Staff {
+						\timeMvtI \nameStaffVImvtI
+						\partCombine \musicHornIIIMvtI \musicHornIVMvtI
+					}
+				>>
+				\new Staff {
+					\timeMvtI \nameStaffVIImvtI
+					\partCombine \musicTrumpetIMvtI \musicTrumpetIIMvtI
+				}
+				\new Staff {
+					\timeMvtI \nameStaffVIIImvtI
+					\musicPaukenMvtI
+				}
+			>>
+			\new Staff {
+				\timeMvtI \nameStaffIXmvtI
+				\keepWithTag #'score \musicSoloViolinMvtI
+			}
+			\new Staff {
+				\timeMvtI \nameStaffXmvtI
+				\musicSoloCelloMvtI
+			}
+			\new StaffGroup <<
+				\new GrandStaff <<
+					\new Staff {
+						\timeMvtI \nameStaffXImvtI \musicViolinIMvtI
+					}
+					\new Staff {
+						\timeMvtI \nameStaffXIImvtI \musicViolinIIMvtI
+					}
+				>>
+				\new Staff {
+					\timeMvtI \nameStaffXIIImvtI \musicBratscheMvtI
+				}
+				\new GrandStaff <<
+					\new Staff {
+						\timeMvtI \nameStaffXIVmvtI \musicVioloncellMvtI
+					}
+					\new Staff {
+						\timeMvtI \nameStaffXVmvtI \musicKontrabassMvtI
+					}
+				>>
+			>>
 		>>
 		\header {
 			breakbefore = ##t

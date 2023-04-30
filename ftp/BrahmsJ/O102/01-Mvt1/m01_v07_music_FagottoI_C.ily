@@ -47,14 +47,14 @@ musicFagottoIMvtI = \relative c' {
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis-> 
-	\tupletUp \times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
+	\tupletUp \tuplet 3/2 2 {e2-> d!4-. c4( b) a-.}
 	d2-> dis->
-	\set Staff.aDueText = #"" \times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-. }
-	\times 2/3 {f2 b,4} \times 2/3 {e2 a,4} \tupletNeutral \unset Staff.aDueText
+	\tuplet 3/2 2 {e2-> d!4-. c( g) \once \partCombineApart c,-. 
+	f2 \once \partCombineApart b,4 e2 \once \partCombineApart a,4} \tupletNeutral 
 % Bars 66 to 70
 	d2 \once \partCombineApart c \partCombineUnisono
-	b8-.-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-. c4.\>( b8)
-	b,-.\< e-. g-. ais-. c4.(\> b8)\!
+	b8-.-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-.\! c4.\>( b8)
+	b,-.\< e-. g-. ais-.\! c4.(\> b8)\!
 	cis,-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2 \partCombineApart
 % Bars 71 to 75
@@ -88,8 +88,8 @@ musicFagottoIMvtI = \relative c' {
 	f,)-. bes2\sf bes4~
 	bes bes2 bes4~
 % Bars 96 to 100
-	bes bes4.( \clef tenor fis'8) \partCombineApart g4(~
-	g16 f! ees d) \partCombineAutomatic ees4(~ ees16 d c b!) c4~
+	bes bes4.( \clef tenor fis'8) \partCombineChords g4(~
+	g16 \partCombineUnisono f! ees d) \partCombineAutomatic ees4(~ ees16 d c b!) c4~
 	c c4~ c8-. r r4
 	r \clef bass \partCombineChords a2 a4~
 	a8-. \partCombineAutomatic r r4 r c->
@@ -97,13 +97,13 @@ musicFagottoIMvtI = \relative c' {
 	a-> fis-> dis-> c->
 	b2-\tweak X-offset #-1.5 \sf c4-. r
 	e2-\tweak X-offset #-1 \sf f4-. r
-	r2 r4 f'(
-	e f) a,( gis)
+	r2 r4 \partCombineApart \oneVoice f'^(
+	e f) a,^( gis) \partCombineAutomatic
 % Bars 106 to 110
-	r2 c4( d8 e)
+	r2 \voiceOne c4( d8 e)
 	r2 cis8(\sf\> d e f)\!
 	\partCombineApart r2 r4 r16 e,( gis b
-	e8-.) r d-. r r16 e,( gis b e8-.) r
+	e8-.) r d-. \once \partCombineAutomatic r r16 e,( gis b e8-.) r
 	d-. \partCombineAutomatic r8 r4 \once \override CombineTextScript.X-offset = #-2  a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace d!1(\trill {c16[ d)]} \mark \default
@@ -140,7 +140,7 @@ musicFagottoIMvtI = \relative c' {
 	
 	\mark \default
 	b4.(_\pdolce c8 d2)
-	r4 r8 b8(\< c4. d8
+	r4 r8 b8(\< c4. d8\!
 	b4.\> c8 d2\!)
 % Bars 146 to 150
 	r1^\gp
@@ -150,20 +150,20 @@ musicFagottoIMvtI = \relative c' {
 	c( b)
 % Bars 151 to 155
 	R1
-	r2 r4 g4~_\pdolce
-	g8 r a4~ a8 r aes4~(\<
-	aes\> f8)\! r r4 g~
-	g8 r a4~ a8 r aes4(\<~
+	r2 r4 \partCombineApart g4~_\pdolce
+	g8 \partCombineAutomatic r a4~ a8 r aes4~(\<
+	aes\> f8)\! r r4 \partCombineApart g~
+	g8 \partCombineAutomatic r a4~ a8 r aes4(\<~
 % Bars 156 to 160
 	aes\> g8)\! r r2
 	R1*9
 % Bars 161 to 165
 	
 % Bars 166 to 170
-	r2 r4 g_\pdolce~
-	g8 r a4~ a8 r aes4~(\<
-	aes\> f8)\! r r4 g~
-	g8 r a!4~ a8\< r aes4~
+	r2 r4 \partCombineApart g_\pdolce~
+	g8 \partCombineAutomatic r a4~ a8 r aes4~(\<
+	aes\> f8)\! r r4 \partCombineApart g~
+	g8 \partCombineAutomatic r a!4~ a8\< r aes4~
 	aes\>( g2)\! r4
 % Bars 171 to 175
 	R1 \mark \default
@@ -215,7 +215,7 @@ musicFagottoIMvtI = \relative c' {
 	c,-.) f!2-> b,4~
 % Bars 211 to 215
 	b d2 f4~
-	f a4.( cis8) \partCombineApart d4(~
+	f a4.( cis8) \partCombineApart \once \oneVoice d4(~
 	d16 c! bes a) \partCombineAutomatic bes4(~ bes16 a g fis) g4~
 	g c,~ c8 r r4
 	r4 cis2 cis4~
@@ -275,10 +275,10 @@ musicFagottoIMvtI = \relative c' {
 	f4-. r g-. r
 	aes-. f-. des'-. bes-.
 % Bars 266 to 270
-	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
+	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
-	\times 2/3 {c,-! d-! e!-! } \times 2/3 {f-! g-! aes-!}
-	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
+	\tuplet 3/2 2 {c,-! d-! e!-! f-! g-! aes-!
+	bes-. c-. des-. ees,-. f-. g-.} \mark #11
 	c,-. r r2
 % Bars 271 to 275
 	R1*12
@@ -301,11 +301,11 @@ musicFagottoIMvtI = \relative c' {
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\tupletUp \times 2/3 {e2 d!4-.} \times 2/3 {c( b) a-.}
+	\tupletUp \tuplet 3/2 2 {e2 d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\times 2/3 {e2 d!4} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4} \tupletNeutral
+	\tuplet 3/2 2 {e2 d!4 c( g) c,-.
+	f2 d4 g2 e4} \tupletNeutral
 	a2 \once \partCombineApart f,
 	R1*5
 % Bars 301 to 305
@@ -321,10 +321,10 @@ musicFagottoIMvtI = \relative c' {
 	r bes-.\p r bes-. 
 	r bes-.\< g!\sf-. r
 % Bars 311 to 315
-	r a-. dis2~
-	dis4\! r r2 \bar "||" \key a \major \mark \default
+	r a-. \partCombineChords dis2~
+	dis4\! \partCombineAutomatic r r2 \bar "||" \key a \major \mark \default
 	gis,4._\pdolce( a8 b2)
-	r4 r8 gis( a4.\< b8
+	r4 r8 gis( a4.\< b8\!
 	gis4.\> a8\! b2)
 % Bars 316 to 320
 	R1^\gp
@@ -349,7 +349,7 @@ musicFagottoIMvtI = \relative c' {
 	dis)-. e4(~ e16 d cis b) fis'4(~\fp
 % Bars 346 to 350
 	fis8 cis) d4.( ais8) b4~
-	b \clef bass d2( b4)
+	b \clef bass \partCombineChords d2( b4) \partCombineAutomatic
 	R1*5
 % Bars 351 to 355
 	
@@ -358,7 +358,7 @@ musicFagottoIMvtI = \relative c' {
 	fis1
 	gis
 % Bars 356 to 360
-	e2 dis
+	e!2 dis
 	d! cis
 	c1)~_\dimmarkup
 	c4 \partCombineAutomatic r r2
@@ -390,8 +390,8 @@ musicFagottoIMvtI = \relative c' {
 % Bars 381 to 385
 	gis b2 d4~
 	d \clef tenor d'4.( fis8) g4(~-\tweak X-offset #-2 \sf
-	g16 a g fis) g4(~ g16 fis e dis) e4(
-	cis) \clef bass a~ a8-. r r4
+	g16 a g fis) g4(~ g16 fis e dis) \partCombineChords e4(
+	cis) \partCombineAutomatic \clef bass a~ a8-. r r4
 	r gis2 gis4~
 % Bars 386 to 390
 	gis8-. r r4 r \once \partCombineApart a->
@@ -410,9 +410,9 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	\partCombineSoloI e4\p( fis gis4. gis8)
-	a8(\< c b a d4.\> c8)
+	a8(\< c b a\! d4.\> c8)
 % Bars 401 to 405
-	a8(\< c b a d4.\> c8)\!
+	a8(\< c b a\! d4.\> c8)\!
 	a4 r r2
 	\partCombineAutomatic R1
 	\partCombineChords f2( ges
