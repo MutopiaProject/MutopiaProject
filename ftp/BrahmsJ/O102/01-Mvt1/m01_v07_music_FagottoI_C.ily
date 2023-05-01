@@ -194,7 +194,7 @@ musicFagottoIMvtI = \relative c' {
 	\mark \default
 	R1*2
 	
-	\once \override CombineTextScript.X-offset = #1 g2-\tweak X-offset #-1 \f d'\<
+	\aIIXoffset #1 g2-\tweak X-offset #-1 \f d'\<
 % Bars 196 to 200
 	g2.\> r4\!
 	g,2 b
@@ -343,7 +343,7 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
+	r2 r4 \aIIXoffset #-4 a\f(
 	ais-.) b2( fis4)
 	r2 r4 \clef tenor d'(
 	dis)-. e4(~ e16 d cis b) fis'4(~\fp
@@ -401,7 +401,7 @@ musicFagottoIMvtI = \relative c' {
 	e2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	\once \override CombineTextScript.X-offset = #0.5 e'(\f d b) c( b e,) e e~
+	\aIIXoffset #0.5 e'(\f d b) c( b e,) e e~
 	e e4 e e e8~
 	e e4 e e e8~
 	e4 e2 e4-.

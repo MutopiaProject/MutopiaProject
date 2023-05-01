@@ -104,7 +104,7 @@ musicFagottoIIMvtI = \relative c {
 	r2 \dynEO #'(-1.5 . 0.5) f,8(-\tweak X-offset -1.5 \sf\> a g! f)\!
 	R1
 	e16( gis b cis d8-.) r r4 e,16( gis b cis
-	d8) r8 r4 \once \override CombineTextScript.X-offset = #-2 a,16( c! dis fis a c dis fis)
+	d8) r8 r4 \aIIXoffset #-2 a,16( c! dis fis a c dis fis)
 % Bars 111 to 115
 	\afterGrace b,1(\trill {a16[ b)]} \mark \default
 	a4-. r r2
@@ -194,7 +194,7 @@ musicFagottoIIMvtI = \relative c {
 	\mark \default
 	R1*2
 	
-	\once \override CombineTextScript.X-offset = #1 g2-\tweak X-offset #-1 \f d'\<
+	\aIIXoffset #1 g2-\tweak X-offset #-1 \f d'\<
 % Bars 196 to 200
 	g2.\> r4\!
 	g,2 b
@@ -264,7 +264,7 @@ musicFagottoIIMvtI = \relative c {
 % Bars 256 to 260
 	ges'2( bes)
 	ees,( ees')
-	\once \override CombineTextScript.X-offset = #-3 f4.-\tweak X-offset #-2.5 _\ffmarc-> ees8 c4 r
+	\aIIXoffset #-3 f4.-\tweak X-offset #-2.5 _\ffmarc-> ees8 c4 r
 	des4.-> c8 f,4 r \clef bass
 	bes, ges2 bes4
 % Bars 261 to 265
@@ -342,7 +342,7 @@ musicFagottoIIMvtI = \relative c {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f(
+	r2 r4 \aIIXoffset #-4 a\f(
 	ais-.) b2( fis4)
 	r2 r4 \clef tenor d'(
 	dis)-. e4(~ e16 d cis b) d4(~\fp
@@ -400,7 +400,7 @@ musicFagottoIIMvtI = \relative c {
 	e,2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	\once \override CombineTextScript.X-offset = #0.5 e''(\f d b) c( b e,) e e~
+	\aIIXoffset #0.5 e''(\f d b) c( b e,) e e~
 	e e4 e e e8~
 	e e4 e e e8~
 	e4 e2 e4-.

@@ -342,7 +342,7 @@ musicOboeIMvtI = \relative c'' {
 	R1 \mark \default \bar "||" \key a \minor
 	\aIIXoffset #-5 dis2-\tweak extra-offset #'(-2 . 0.5) \ff\trill \beamOffset #'(0.5 . 0.5) e8( c b a)
 	g4 r8 dis'-. e4-. r4
-	\once \override CombineTextScript.X-offset = #-4.5 gis2\trill a8( f e d)
+	\aIIXoffset #-4.5 gis2\trill a8( f e d)
 % Bars 391 to 395
 	c4 r8 gis'-. a4-. r
 	R1

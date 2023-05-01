@@ -338,10 +338,10 @@ musicVioloncellMvtI = \relative c' {
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\tupletUp \once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
+	\tupletUp \tupletOffset #6 \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( g) c,-.}
+	\once \tupletOffset #6 \tuplet 3/2 2 {e2-> d!4-. c( g) c,-.}
 	\tuplet 3/2 2 {f2 d4 g2 e4} \tupletNeutral
 	a2 f,
 	e\p e
@@ -413,7 +413,7 @@ musicVioloncellMvtI = \relative c' {
 	eis4_\dimmarkup r r2
 % Bars 356 to 360
 	g4 r fis r
-	f r e r %%%%%%%%%%%%%%%% mesure problematique ???
+	f r e r 
 	dis r r2
 	r r4 e-\tweak X-offset #-0.7 _\pmarc
 	eis fis cis d

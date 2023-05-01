@@ -142,7 +142,7 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 171 to 175
 	\mark \default
-	r2 r4 \once \override CombineTextScript.X-offset = #-3.5 c(\f 
+	r2 r4 \aIIXoffset #-3.5 c(\f 
 	cis-.) d2( a4)
 	r2 r4 f'(
 	fis) g(~ g16 f e d) r4
@@ -340,9 +340,9 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 386 to 390
 	d8-. r r4 r2
 	R1 \mark \default \bar "||" \key a \minor
-	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(-2 . 0.5)  dis2\ff\trill e8( c b a)
+	\aIIXoffset #-5 dis2-\tweak extra-offset #'(-2 . 0.5) \ff\trill e8( c b a)
 	g4 r8 a-. g4-. r4
-	\once \override CombineTextScript.X-offset = #-4.5 gis'2\trill a8( f e d)
+	\aIIXoffset #-4.5 gis'2\trill a8( f e d)
 % Bars 391 to 395
 	c4 r8 d-. c4-. r
 	R1

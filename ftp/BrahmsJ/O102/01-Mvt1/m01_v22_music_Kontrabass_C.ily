@@ -305,10 +305,10 @@ musicKontrabassMvtI = \relative c' {
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\tupletUp \once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
+	\tupletUp \tupletOffset #6 \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	\once \tupletOffset #6 \tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
 	f2 d4 g2 e4} \tupletNeutral
 	a2 f,
 	e\p e'

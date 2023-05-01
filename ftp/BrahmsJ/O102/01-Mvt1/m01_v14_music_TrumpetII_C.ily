@@ -292,7 +292,7 @@ musicTrumpetIIMvtI = \relative c'' {
 % Bars 421 to 425
 	
 % Bars 426 to 430
-	r4 \once \override CombineTextScript.X-offset = #-3.5 g,-.\f r g-.
+	r4 \aIIXoffset #-3.5 g,-.\f r g-.
 	r d'-. r d-.
 	g,-. r g-. r
 	g-. r c,-. c-.

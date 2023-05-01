@@ -337,7 +337,7 @@ musicBratscheMvtI = \relative c'' {
 	<f d'>-. <f b>-. <f c'>4. q8
 	<d d'>4. <d b'>8 <e g>4. <e c'>8
 	<d f>2 <c fis>
-	\tupletUp \once \override TupletNumber.Y-offset = #3.5 \tuplet 3/2 2 {<e, e'>2-> d'4-. c( b) a-.}
+	\tupletUp \tupletOffset #3.5 \tuplet 3/2 2 {<e, e'>2-> d'4-. c( b) a-.}
 % Bars 296 to 300
 	<d f>2 <c fis>
 	\tuplet 3/2 2 {<c g'>2-> f!4-. e( d) g-.

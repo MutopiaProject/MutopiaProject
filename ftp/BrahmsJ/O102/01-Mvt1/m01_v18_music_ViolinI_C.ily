@@ -42,9 +42,9 @@ musicViolinIMvtI = \relative c''' {
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->
-	\once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e'2-> d4-. c( b) c-.}
+	\tupletOffset #6 \tuplet 3/2 2 {e'2-> d4-. c( b) c-.}
 	b2-> a->
-	\once \override TupletNumber.Y-offset = #7 \tuplet 3/2 2 {g'2-> f4-. e( d) e-.
+	\tupletOffset #7 \tuplet 3/2 2 {g'2-> f4-. e( d) e-.
 	d(\< c) d-. c( b) c-.
 % Bars 66 to 70
 	b( a) r b( a)\! r} \tupletNeutral
@@ -314,11 +314,11 @@ musicViolinIMvtI = \relative c''' {
 	\tupletUp \tuplet 3/2 {b-. c-. d-.} \tupletNeutral c4. a8
 	g4. f8 e4. c'8
 	b2 a
-	\tupletUp \once \override TupletNumber.Y-offset = #6 \tuplet 3/2 2 {e'2-> d4-. c( b) c-.}
+	\tupletUp \tupletOffset #6 \tuplet 3/2 2 {e'2-> d4-. c( b) c-.}
 % Bars 296 to 300
 	b2 a
-	\once \override TupletNumber.Y-offset = #7 \tuplet 3/2 2 {g'2-> f4-. e( d) e-.
-	\once \override TupletNumber.Y-offset = #6 c( a) f-. d( b) g-.
+	\tupletOffset #7 \tuplet 3/2 2 {g'2-> f4-. e( d) e-.
+	\tupletOffset #6 c( a) f-. d( b) g-.
 	f( e) r e( d) r} \tupletNeutral
 	b2\p b
 % Bars 301 to 305

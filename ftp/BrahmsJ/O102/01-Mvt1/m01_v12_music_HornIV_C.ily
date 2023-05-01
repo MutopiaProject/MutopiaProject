@@ -164,7 +164,7 @@ musicHornIVMvtI = \relative c'' {
 	
 	
 	
-	r2 r4 \once \override CombineTextScript.X-offset = #-3.5 bes_\pmamarc-.
+	r2 r4 \aIIXoffset #-3.5 bes_\pmamarc-.
 	r bes-. r bes-.
 % Bars 191 to 195
 	r8 bes-. r8 bes-. r8 bes-. r8 bes-. 

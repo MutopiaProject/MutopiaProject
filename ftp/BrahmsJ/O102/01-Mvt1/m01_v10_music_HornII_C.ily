@@ -120,8 +120,8 @@ musicHornIIMvtI = \relative c' {
 	
 	\mark \default
 	R1
-	r4 r8 \once \override DynamicText.extra-offset = #'(0 . 1) \override Hairpin.extra-offset = #'(0 . 1)  ees8\p\<~ ees4. ees8~
-	<<ees1 {s4\> s s s\!}>> \revert Hairpin.extra-offset %ees1\> <>\!
+	r4 r8 ees8-\tweak extra-offset #'(0 . 1) \p -\tweak extra-offset #'(0 . 1) \<~ ees4. ees8~
+	<<ees1 {s4\> s s s\!}>> 
 % Bars 146 to 150
 	R1^\gp
 	R1
@@ -258,7 +258,7 @@ musicHornIIMvtI = \relative c' {
 	R1*2
 	
 	g1(
-	<< c,)~ {s8 \once \override Hairpin.extra-offset = #'(0 . 3) s\> s4 s s8 s\!} >>
+	<< c,)~ {s8 s-\tweak extra-offset #'(0 . 3) \> s4 s s8 s\!} >>
 % Bars 321 to 325
 	c4\! r r2
 	R1*20

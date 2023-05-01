@@ -134,7 +134,7 @@ musicFloteIMvtI = \relative c''' {
 	c,2\pp( ees_\dimmarkup
 % Bars 141 to 145
 	g1
-	fis \once \override Score.RehearsalMark.X-offset = #0 \mark \default
+	fis \markWhiteout \mark \default
 	g4) r r2
 	R1*2
 	
@@ -280,11 +280,11 @@ musicFloteIMvtI = \relative c''' {
 	\dynEO #'(0 . 2) a'4-!\ff r e-! r
 	f-! r fis-! r
 	g-! r r2
-	gis4-! r r2 \once \override Score.RehearsalMark.X-offset = #-4 \mark \default
+	gis4-! r r2 \markXoffset #-1 \mark \default
 	\dynEO #'(0 . 2) a4.\ff g!8 e4 r
 % Bars 291 to 295
 	f4. e8 \once \partCombineApart a,4 r
-	\once \override CombineTextScript.X-offset = #-3.5 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
+	\aIIXoffset #-3.5 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
 	e'2. \partCombineApart c4
@@ -327,7 +327,7 @@ musicFloteIMvtI = \relative c''' {
 	
 % Bars 341 to 345
 	\mark \default
-	r2 r4 \once \override CombineTextScript.X-offset = #-4 a\f\(
+	r2 r4 \aIIXoffset #-4 a\f\(
 	ais-.\) b2\( fis4\)
 	r2 r4 d'\(
 	dis\)-. e4\(~ e16 d cis b\) fis'4\fp(~
@@ -382,7 +382,7 @@ musicFloteIMvtI = \relative c''' {
 	R1 \bar "||" \key a \minor \mark \default
 	\aIIXoffset #-5 \dynEO #'(0 . 2) dis2\ff\trill e8\( c b a\)
 	g4 r8 dis'-. e4-. r
-	\once \override CombineTextScript.X-offset = #-4.5 gis2\trill a8\( f e d\)
+	\aIIXoffset #-4.5 gis2\trill a8\( f e d\)
 % Bars 391 to 395
 	c4 r8 gis'-. a4-. r
 	R1
