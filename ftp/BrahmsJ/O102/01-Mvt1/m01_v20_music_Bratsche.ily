@@ -83,7 +83,7 @@ musicBratscheMvtI = \relative c'' {
 % Bars 76 to 80
 	<f aes>4-. r <aes, d!> r
 	<g e'>8-.\sf c4 c8( des8-.)\sf des4 des8~
-	des-.\sf des4 des8( b!)\sf b4 b8 \mark \default
+	des-.\sf des4 des8( b!)\sf-. b4 b8 \mark \default
 	g'16(\f e g e bes e g e) f( d f d bes d f d)
 	f( des bes des e c) fis fis g8:16 a: bes: a:
 % Bars 81 to 85

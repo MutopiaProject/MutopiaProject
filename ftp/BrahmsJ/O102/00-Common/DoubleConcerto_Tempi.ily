@@ -12,6 +12,5 @@ tempiMvtI = {
 	s1 s2.
 	% bar 415.75
 	\tempo "in tempo"
-	
 }
 

@@ -9,8 +9,8 @@ musicOboeIMvtI = \relative c'' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc d8 b4 r
-	c4. b8 e,4 r
+	\partCombineApart e4. d8 b4 \partCombineAutomatic r
+	\partCombineApart c4. b8 e,4 \partCombineAutomatic r
 	dis'-. r d-. r
 	c-. e-. d-. f-. 
 	R1\fermata
@@ -53,14 +53,14 @@ musicOboeIMvtI = \relative c'' {
 	\tupletUp \tuplet 3/2 2 {a2 f4 g2 e4} \tupletNeutral
 % Bars 66 to 70
 	f2 e
-	dis->-\tweak X-offset #-3.7 \ff dis->
+	\dynEO #'(0.8 . 2) dis->\ff dis->
 	e-> e->
 	e fis
 	b, a
 % Bars 71 to 75
 	g4-.\p r r2
 	R1
-	r4 r8 bes_\p_\<( des4. c8)
+	r4 r8 \aIIXoffset #-4 bes_\p_\<( des4. c8)
 	r4 r8 f( des4. c8)\!
 	r4 f2->\f aes4-.
 % Bars 76 to 80
@@ -103,7 +103,7 @@ musicOboeIMvtI = \relative c'' {
 	r2 gis8(\sf\> a b c)\!
 	r2 cis,8(\sf\> d e f)\!
 	R1
-	e16( gis b cis d8-.) r r4 e,16( gis b cis
+	\beamOffset #'(-0.5 . -0.5) e16( gis b cis \stemOffset #-1 d8-.) r r4 \shape #'( () ((0 . 0)(0 . -1)(0 . -2)(-0.8 . -2.7)) ) Slur e,16( gis b cis
 	d8-.) r r4 r a,16( c! dis fis)
 % Bars 111 to 115
 	\afterGrace gis1\trill( {fis16[ gis])} \mark \default
@@ -126,7 +126,7 @@ musicOboeIMvtI = \relative c'' {
 % Bars 141 to 145
 	R
 	R \mark \default
-	\partCombineAutomatic g4.^\espressivo-\tweak X-offset #0 \pdolceD( f8 d2)
+	\partCombineAutomatic \aIIXoffset #-4 g4.^\espressivo-\tweak X-offset #0 \pdolceD( f8 d2)
 	r4 r8 g(_\< f4. d8\!
 	g4._\> f8 d2)\!
 % Bars 146 to 150
@@ -142,7 +142,7 @@ musicOboeIMvtI = \relative c'' {
 	
 % Bars 171 to 175
 	\mark \default
-	r2 r4 \once \override CombineTextScript.X-offset = #-3.5 c(\f 
+	r2 r4 \aIIXoffset #-3.5 c(\f 
 	cis-.) d2( a4)
 	r2 r4 f'(
 	fis) g(~ g16 f e d) r4
@@ -151,7 +151,7 @@ musicOboeIMvtI = \relative c'' {
 	r2 r4 a'4(\p\<~
 	a8\> e)\! f4.( cis8) d4~
 	d\dimD d2 c4\pp\<(~
-	c1\>~
+	<< c1~ {s4\> s\! s s }>>
 % Bars 181 to 185
 	c2\! b)
 	\partCombineApart bes1(~
@@ -229,12 +229,12 @@ musicOboeIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	f4.->-\tweak X-offset #-2.5 _\ffmarc ees8  c4 r
+	\markEO #'(-2.5 . 1) f4.->_\ffmarc ees8  c4 r
 	des4.-> c8 f,4 r
 	R1*2
 % Bars 261 to 265
 	
-	c''4.-\tweak X-offset #-3.5 _\ffmarc bes8 g4 r
+	\markEO #'(-3.5 . 2) c''4._\ffmarc bes8 g4 r
 	aes4. g8 c,4 r
 	c-. r c-. r
 	c-. f2 des4~
@@ -326,9 +326,9 @@ musicOboeIMvtI = \relative c'' {
 	r a-. r2
 	r r4 e(
 % Bars 376 to 380
-	dis8) r e4( d8) r cis4(
-	fis gis8 a e4) e(
-	dis8) r e4( d8) r cis4(
+	dis8) r e4( d8) r \shape #'(() ((0 . -0.7)(0 . -0.7)(0 . -0.7)(0 . -0.7))) Slur cis4(
+	fis \beamOffset #'(-0.5 . -0.5) gis8 a e4) e(
+	dis8) r e4( d8) r \shape #'((0 . -0.8)(0 . -0.5)(0 . -0.5)(0 . -0.8)) Slur cis4(
 	a'2 e4) cis(
 	e-.) d2-> d4~
 % Bars 381 to 385
@@ -340,7 +340,7 @@ musicOboeIMvtI = \relative c'' {
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \mark \default \bar "||" \key a \minor
-	\once \override CombineTextScript.X-offset = #-5 \once \override DynamicText.extra-offset = #'(-2 . 0.5)  dis2\ff\trill e8( c b a)
+	\aIIXoffset #-5 dis2-\tweak extra-offset #'(-2 . 0.5) \ff\trill \beamOffset #'(0.5 . 0.5) e8( c b a)
 	g4 r8 dis'-. e4-. r4
 	\once \override CombineTextScript.X-offset = #-4.5 gis2\trill a8( f e d)
 % Bars 391 to 395

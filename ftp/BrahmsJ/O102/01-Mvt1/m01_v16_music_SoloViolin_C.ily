@@ -27,7 +27,7 @@ musicSoloViolinMvtI = \relative c'' {
 % Bars 31 to 35
 	a'2\> e4)\! <fis, a>(\<
 	a'2\> e4)\! <f,! a>\<(
-	\tuplet 3/2 4 {a'4 d,) <e, a>( a' cis,) <dis, a'>(\!}
+	\tuplet 3/2 2 {\tupletUp a'4 d,) <e, a>( a' cis,) <dis, a'>(\! \tupletNeutral }
 	c''!2~_\piuf \tuplet 3/2 2 {c4 a) fis
 	c( a fis c) b a}
 % Bars 36 to 40
@@ -35,13 +35,13 @@ musicSoloViolinMvtI = \relative c'' {
 	R1
 	\tuplet 3/2 2 {r4 <e' bes'>( g'!~ g e) <e, g>(\<}
 	<d bes'>2\> <cis a'>4)\! r
-	\tuplet 3/2 2 {r4 <fis a>( a'~ a fis) <fis, a>\<}
+	\tuplet 3/2 2 {r4 <fis a>( a'~ a fis) <fis, a>\<(}
 % Bars 41 to 45
-	<e c'!>2\> \tuplet 3/2 {<dis b'>4\! r_\crescmarkup <e b'>(}
+	<e c'!>2\> \tuplet 3/2 {<dis b'>4\!) r_\crescmarkup <e b'>(}
 	<bes' d>2 \tuplet 3/2 2 {<a cis>4) r <a d>( 
 	<b! a'>2 gis'4) <c, b'>2( a'4)}
 	<d, c'>4.( b'8) <e, d'>4.(\< c'8)
-	<a, e''>4.( d'8) <a, e''>4.( dis'8)
+	<a, e''>4.( d'8) <a, e''>4.( dis'8)\!
 % Bars 46 to 50
 	a'16\f( e c a e c a e) c'( a e c a8) r
 	r2 e'16( a c e a c e a,)
@@ -107,7 +107,7 @@ musicSoloViolinMvtI = \relative c'' {
 	<d b'>2-> <fis a>->
 	<< % bar 128
 		{ \voiceOne s2 c''8( e gis) a-.\noBeam }
-		\new Voice {\voiceTwo <e,, c'>( <c' e>~ <c a'>) <dis b'>-.\noBeam e4( gis8) a-.\noBeam } 
+		\new Voice {\voiceTwo <e,, c'>^( <c' e>~ <c a'>) <dis b'>-.\noBeam e4( gis8) a-.\noBeam } 
 	>> \oneVoice
 	<d, d'>2-> <dis dis'>->
 	<< { s8\< s\! s\> s\! s\< s\! s\> s\! } \\ { <e e'>4.^( \acciaccatura g'8 f8) <a,, e''>4.^( \acciaccatura a''8 f) } >> \oneVoice
@@ -226,13 +226,13 @@ musicSoloViolinMvtI = \relative c'' {
 	dis8) r r4 r2 \mark \default
 	a''!1\p\startTrillSpan~
 	\afterGrace a2( {gis16[\stopTrillSpan a])} c!4\trill fis,\trill
-	a\trill c,!\trill ees\trill \textPriority #+3000 a,\trill^\flat
+	a\trill c,!\trill ees\trill  a,^\flattrillmark
 	c\trill( bes\trill) \afterGrace a2\trill( {g16[ a]} 
 % Bars 246 to 250
 	b!8) r r4 r2
 	R1
 	r4 d,\trill f!\trill b,\trill
-	\textPriority #+3000 d\trill^\flat c2(\trill b8) r
+	d^\flattrillmark c2(\trill b8) r
 	bes4\f\trill bes'2\trill bes,4\trill
 % Bars 251 to 255
 	bes'\trill \afterGrace bes'2\trill( {a16[ bes]} a8) r
@@ -242,14 +242,22 @@ musicSoloViolinMvtI = \relative c'' {
 	des,4\trill des'2\trill( bes8-.) r
 % Bars 256 to 260
 	bes,4\trill bes'2\trill( ges8-.) r
-	\textPriority #+3000 \afterGrace ges'1-\tweak X-offset #-4 \ff-\tweak X-offset #-0.5 \trill-\tweak X-offset #1.5 ^\flat( {f16[ ges])}
-	f8-. r << {\voiceOne f16_([ s c, f,)] f_([ c' s f')] ges( ges, ees ges,) } \\ {\voiceTwo s16 a s8 s a16 s s4}>> \oneVoice
-	f''16( a,, c f,) f( c' a f'') f8 r r4
+	\shape #'((0 . -1)(0 . -1)(0 . -1)(0 . 0)) Slur \dynEO #'(0 . 3.5) \markEO #'(-0.5 . -0.3) \afterGrace ges'1\ff^\flattrillmark( {f16[ ges])}
+	% bar 258
+	f8-. r << {\voiceOne 
+		\shape #'((-1 . -2)(-1 . -5)(0 . -3)(0 . 0)) Slur \beamOffset #'(0 . 2) f16_([ s c, f,)] 
+		\shape #'((0 . 0)(0 . -3)(1 . -5)(1 . -2)) Slur \beamOffset #'(2 . 0) f_([ c' s f')] 
+		ges_( ges, ees ges,) } \\ {\voiceTwo s16 a s8 s a16 s s4}>> \oneVoice
+	% bar 259
+	<< {\voiceOne 
+		\beamOffset #'(-0.3 . 2) \shape #'((-1 . -2)(-1 . -5)(0 . -3)(0 . 0)) Slur f''16_([ s c, f,)] 
+		\beamOffset #'(2 . -0.3) \shape #'((0 . 0)(0 . -3)(0.5 . -5)(0.5 . -2)) Slur f_([ c' s f')] 
+		} \\ { \voiceTwo s16 a,, s8 s a16 s } >> \oneVoice f''8 r r4
 	R1*2
 % Bars 261 to 265
 	
-	r4 c16( e,! g, c,) c( g' e' c') des( f, g, g,)
-	c''( e, g, c,) c( g' e' c') c8 r r4
+	r4 \beamOffset #'(-1.5 . 0.8) c16( e,! g, c,) \beamOffset #'(0.8 . -1.5) c( g' e' c') \beamOffset #'(-1.5 . 0.8) des( f, g, g,)
+	\beamOffset #'(-1.5 . 0.8) c''( e, g, c,) \beamOffset #'(0.8 . -1.5) c( g' e' c') c8 r r4
 	R1*6
 % Bars 266 to 270
 	
@@ -271,12 +279,12 @@ musicSoloViolinMvtI = \relative c'' {
 	g4. f!8~ f4. e8~
 % Bars 281 to 285
 	e dis4 c! a fis8
-	e2_\pcrescmolto r16 e,( fis gis a b cis d)
+	\markEO #'(0 . 0.5) e2_\pcrescmolto r16 e,( fis gis a b cis d)
 	e2 r16 a,( b c! d e fis gis)
 	a e fis gis a b c d e a, b c d e f! g!
 	a e fis gis a e f g a e fis gis a e f g
 % Bars 286 to 290
-	a4-!-\tweak X-offset #-2 \ff <a, a'>-! r << {a,} \\ {< c e'>^!} >>
+	\dynEO #'(0 . 2) a4-!\ff <a, a'>-! r << {a,} \\ {< c e'>^!} >>
 	r <d, f' f'>-! r <d a'' fis'>-!
 	r <g, b' g' g'>-! r2
 	r4 <e' b' gis' gis'> r2 \mark \default
@@ -372,7 +380,7 @@ musicSoloViolinMvtI = \relative c'' {
 	>> \oneVoice cis8-. r4
 	e8_\fmarc-. e4 e e e8(
 	<d b'>) q4 q8( <a' fis'!>8-.) q4 q8
-	b'1~\startTrillSpan
+	\trillSpanPadding #5 b'1~\startTrillSpan
 % Bars 366 to 370
 	\afterGrace b2( {ais16[\stopTrillSpan b])} d16( b gis e d b gis e) \mark \default
 	R1*21
@@ -404,8 +412,8 @@ musicSoloViolinMvtI = \relative c'' {
 	f16(_\moltocrescmark aes, aes' aes, g'! aes, f' aes,) fis'( a, a' a, g' a, f' a,)
 	<a fis'> q( <a a'>) q( <a g'>) q( <a fis'>) q( <bes g'>) q( <bes bes'>) q( <bes a'>) q( <bes g'>) q(
 	<e g>) q e'-. e-. <e, g>-. q-. <<{e e} \\ {e e}>> <f a> q f' f f, f d, d
-	<d' a'>8:16 a'': <d,, a'>: <f, d'>: <<{ <d d''>8:16 d''': <d,, d'>: d,16 d} \\ {s4. d16 d}>>
-	<c a' e' e'>8\f\noBeam <e' e'>4 q8( <d d'>) q4 q8(
+	<d' a'>8:16 a'': <d,, a'>: <f, d'>: <<{ \beamOffset #'(-1 . 0) <d d''>8:16[ d''': <d,, d'>: d,16 d]} \\ {s4. d16 d}>>
+	<c a' e' e'>8-\offset X-offset 0.5 \ff\noBeam <e' e'>4 q8( <d d'>) q4 q8(
 % Bars 411 to 415
 	<c c'>) q4 q8( <bes bes'>) q4 q8(
 	<a a'>4.) bes'8( a g f g)

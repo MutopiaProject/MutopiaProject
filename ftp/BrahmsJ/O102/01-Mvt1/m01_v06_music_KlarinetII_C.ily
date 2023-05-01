@@ -53,7 +53,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	\tupletUp \tuplet 3/2 2 {c2 g4 bes2 g4} \tupletNeutral
 % Bars 66 to 70
 	aes2 g
-	fis-\tweak X-offset #-3.7 \ff-> fis->
+	fis\ff-> fis->
 	g-> g->
 	g a
 	bes4 r r2
@@ -85,7 +85,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	d!2 des4 ees(
 	d!8) r ees4( des8) r c4
 	d! ees8 f ees4 aes,(
-	c-.) bes2\sf bes4~
+	c-.) bes2-\tweak X-offset 0.5 \sf bes4~
 	bes bes2 bes4(~
 % Bars 96 to 100
 	bes8 a) bes4.( f'8) ges4 -\tweak X-offset #-1 \f~
@@ -100,7 +100,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	r2 r4 d
 	ees d ees d
 % Bars 106 to 110
-	r2 b8(\sf\> c d ees)\!
+	r2 b8(\sf-\tweak rotation #'(3  1 0) -\tweak extra-offset #'(0 . 1) \> c d ees)\!
 	r2 a,8(\sf\> c e f)\!
 	R1
 	g,16( b d e f8)-. r r4 g,16( b d e
@@ -315,7 +315,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	r des-.\p r des-.
 	r des-.\< bes-.\sf r
 % Bars 311 to 315
-	r ees-. c2~\fp\>
+	r ees-. c2~-\tweak X-offset #-2 \fp\>
 	c4\! r r2 \bar "||" \key c \major \mark \default
 	R1*3
 	
@@ -366,7 +366,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	
 	d'8-.\f d4 d d d8\<~
 % Bars 366 to 370
-	d2.\> r4\! \mark \default
+	\hairpinShorten #'(0 . 7) d2.\> r4\! \mark \default
 	d8 d4 d d d8(
 	d4-.) d-. r2
 	d8 d4 d8( c) c4 c8~
@@ -378,7 +378,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	r c!-. r2
 	r r4 c(
 % Bars 376 to 380
-	a8) r c4( aes8) r g4(
+	a8) r c4( aes8) r \shape #'(() ((0 . 1)(0 . 1)(0 . 0)(0 . 0)) ) Slur g4(
 	fis2 f4) c'(
 	a8) r c4( aes8) r g4(
 	c2.) e,4(

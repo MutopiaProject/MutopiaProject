@@ -41,7 +41,7 @@ musicFloteIIMvtI = \relative c''' {
 	
 % Bars 56 to 60
 	\mark \default
-	c'4.-\tweak X-offset #-2 \ff d8 c4 r
+	c'4.\ff d8 c4 r
 	a4. gis8 a4 r
 	\tupletUp \once \override CombineTextScript.X-offset = #-3 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
@@ -53,7 +53,7 @@ musicFloteIIMvtI = \relative c''' {
 	\tuplet 3/2 2 {c2 d4 b2 c4} \tupletNeutral
 % Bars 66 to 70
 	a2 a
-	a-\tweak X-offset #-3.7 \ff-> a->
+	a\ff-> a->
 	g-> g->
 	a a
 	g dis
@@ -88,7 +88,7 @@ musicFloteIIMvtI = \relative c''' {
 	dis)-. e(~\sf e16 d c bes) d4(~
 	d16 c bes a) bes4(~ bes16 a g fis) g4(~
 % Bars 96 to 100
-	g8 fis) g4.( d'8) ees4( -\tweak X-offset #-1 \f~
+	g8 fis) g4.( d'8) ees4(\f~
 	ees16 f! ees d) ees4(~ ees16 d c b!) c4~
 	c a~ a8-. r r4
 	r a2 a4~
@@ -96,7 +96,7 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 101 to 105
 	R1
 	a2\sf_( a4-.) r
-	d!2-\tweak X-offset #-2 \sf _( d4-.) r
+	d!2\sf _( d4-.) r
 	r2 r4 f(
 	e b c b)
 % Bars 106 to 110
@@ -247,12 +247,12 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 256 to 260
 	
 	
-	f4.-\tweak X-offset #-2.5 _\ffmarc-> ees8 c4 r
+	f4._\ffmarc-> ees8 c4 r
 	des4.-> c8 f,4 r
 	bes2( des,)
 % Bars 261 to 265
 	ges( bes,)
-	c'4.-\tweak X-offset #-3 _\ffmarc bes8 g!4 r
+	c'4._\ffmarc bes8 g!4 r
 	aes4. g8 c,4 r
 	\tuplet 3/2 2 {d!4-. e-. f-. e-. f-. g-.
 	f-. g-. aes-. bes-. c-. des-.~}
@@ -277,14 +277,14 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 % Bars 286 to 290
-	cis'4-!-\tweak X-offset #-2 \ff r c-! r
+	cis'4-!\ff r c-! r
 	a-! r c-! r
 	b-! r r2
 	d4-! r r2 \mark \default
-	c4.-\tweak X-offset #0.5 \ff d8 c4 r
+	c4.\ff d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
-	\once \override CombineTextScript.X-offset = #-3.5 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
+	\aIIXoffset #-3.5 \tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
 	e2. c'4
@@ -373,7 +373,7 @@ musicFloteIIMvtI = \relative c''' {
 	cis-.) b2-> b4~
 % Bars 381 to 385
 	b b2 b4~(
-	b8 ais) b4.( fis'8) g4~-\tweak X-offset #-1.5 \sf
+	b8 ais) b4.( fis'8) \dynEO #'(0 . 2) g4~\sf
 	g16 a! g fis g4\(~ g16 fis e dis\) e4(
 	cis) cis~ cis8-. r r4
 	r d2 d4~

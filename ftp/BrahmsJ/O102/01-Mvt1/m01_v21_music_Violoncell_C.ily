@@ -42,20 +42,20 @@ musicVioloncellMvtI = \relative c' {
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\tupletUp \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
+	\tupletUp \tuplet 3/2 2 {\tupletOffset #5.5 e2-> d!4-. c( b) a-.}
 	d2-> dis->
-	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.}
-	\override TupletNumber.Y-offset = #2.5 \tuplet 3/2 2 {f2\< b,4 e2 a,4} \tupletNeutral \revert TupletNumber.Y-offset
+	\tuplet 3/2 2 {\tupletOffset #5.5 e2-> d!4-. c( g) c,-.}
+	\tupletOffset #2.5 \tuplet 3/2 2 {f2\< b,4 e2 a,4} \tupletNeutral 
 % Bars 66 to 70
 	d2 c\!
-	b8:16-\tweak X-offset #-3.7 \ff\< dis: fis: a:\! c4.(\> b8)\!
-	b,8:16\< e: g: ais!:\! c4.\>( b8)\!
+	b8:16-\tweak X-offset #-3.7 \ff\< dis: fis: a:\! \shape #'((0 . -0.5)(0 . -0.5)(0 . -0.5)(0 . -0.5)) Slur c4.(\> b8)\!
+	b,8:16\< e: g: ais!:\! \shape #'((0 . -0.5)(0 . -0.5)(0 . -0.5)(0 . -0.5)) Slur c4.\>( b8)\!
 	cis,8:16 e: a!: cis: dis,2
 	e8:16 g: ais: b: b,2
 % Bars 71 to 75
 	c2->\p c->
 	c-> c->
-	d!\< e
+	d!-\alterBroken shorten-pair #'(()(0 . -8)) \< e
 	f g\!
 	aes4-.\f bes2-> c4-.
 % Bars 76 to 80
@@ -111,7 +111,7 @@ musicVioloncellMvtI = \relative c' {
 	r2 f,4^\pizz r8 g 
 	a4 r r2
 	a4 r r2
-	b'4\p^\pizz r b, r
+	b'4\p-\offset X-offset 0.5 ^\pizz r b, r
 % Bars 121 to 125
 	b' r b, r
 	e_\crescpocoapoco r e, r
@@ -295,14 +295,14 @@ musicVioloncellMvtI = \relative c' {
 	ees, ees'2 des4
 	ces\ff ces'2 ces,4
 	ees,1\sf
-	ees2\sf~ ees8 \clef tenor ees''-\tweak X-offset #-2.7 \ff-.[ des-. c-.] 
+	ees2-\offset X-offset #-1.3 \sf~ ees8 \clef tenor ees''-\tweak X-offset #-2.7 \ff-.[ des-. c-.] 
 	bes4 \clef bass ges2 bes4
 % Bars 261 to 265
 	ges ees2 ges4
 	bes,4-!-\tweak X-offset #-2.5 \sf r r2
 	bes4-!\sf r r8 bes'-. aes-. g-.
 	f4-.\sf r g-.\sf r
-	aes-\tweak X-offset #-1 _\benmarc-. f-. des'-. bes-.
+	\markEO #'(0 . 1.5) aes-\tweak X-offset #-1 _\benmarc-. f-. des'-. bes-.
 % Bars 266 to 270
 	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
@@ -349,7 +349,7 @@ musicVioloncellMvtI = \relative c' {
 	e e
 	fis gis
 	a( dis,)\<
-	e1\>
+	\hairpinShorten #'(0 . 2) e1\>
 	a8\mf^\pizz c e gis, a c f gis,
 % Bars 306 to 310
 	a c fis\< a\! gis'\> d b gis\!
@@ -380,7 +380,7 @@ musicVioloncellMvtI = \relative c' {
 	r ais-. r fis-.)
 	r b(-. r d-.)
 	r dis(-. r b-.)
-	r4 d,!2.\sf\>(
+	r4 \hairpinShorten #'(0 . 4) d,!2.\sf\>(
 % Bars 331 to 335
 	cis2)\pp( cis'
 	b e,)
@@ -432,7 +432,7 @@ musicVioloncellMvtI = \relative c' {
 % Bars 371 to 375
 	e,2 b'
 	e4-! a,-! r2
-	d4-! d,-! r2
+	d4-! d,^! r2
 	e'4-! r r2
 	r2 r4 a,16\f\>( cis e a\!
 % Bars 376 to 380
@@ -455,8 +455,8 @@ musicVioloncellMvtI = \relative c' {
 	e,2 f4 r8 e'-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	e'(_\sempref d b) e,( d b) c( b
-	e,) c''( b e,) e'( d4) c8(
+	e'(-\offset X-offset -1 _\sempref d b) e,(\noBeam d[ b)] c( b
+	e,)\noBeam c''( b e,) e'( d4) c8(
 	b4) a8( g4) f8( e4)
 	d( c b e)
 % Bars 396 to 400

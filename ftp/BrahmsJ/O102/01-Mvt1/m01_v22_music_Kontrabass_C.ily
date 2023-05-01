@@ -42,10 +42,10 @@ musicKontrabassMvtI = \relative c' {
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\tupletUp \tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
+	\tupletUp \tuplet 3/2 2 {\tupletOffset #5.5 e2-> d!4-. c( b) a-.}
 	d2-> dis->
-	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
-	f2\< b,4 e2 a,4} \tupletNeutral
+	\tuplet 3/2 2 {\tupletOffset #5.5 e2-> d!4-. c( g) c,-.
+	\tupletOffset #2.5 f2\< b,4 \tupletOffset #2.5 e2 a,4} \tupletNeutral
 % Bars 66 to 70
 	d2 c\!
 	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-.\! c4.(\> b8)\!
@@ -55,8 +55,8 @@ musicKontrabassMvtI = \relative c' {
 % Bars 71 to 75
 	c2->\p c->
 	c-> c->
-	d!\< e
-	f g
+	d!-\alterBroken shorten-pair #'(()(0 . -8)) \< e
+	f g\!
 	aes4-.\f bes2-> c4-.
 % Bars 76 to 80
 	f,-. r f,-. r
@@ -117,7 +117,7 @@ musicKontrabassMvtI = \relative c' {
 	e_\crescpocoapoco r e, r
 	e' r e, r
 	e'2^\arco -\tweak DynamicText.self-alignment-X #LEFT \pcrescD\< a,
-	a d
+	a d\!
 % Bars 126 to 130
 	c8-.\f r r4 r2
 	R1
@@ -316,7 +316,7 @@ musicKontrabassMvtI = \relative c' {
 	e e
 	fis gis
 	a( dis,)\<
-	e\> e,
+	\hairpinShorten #'(0 . 2) e\> e,
 	a4\p a^\pizz r a
 % Bars 306 to 310
 	r a e\f r
@@ -406,7 +406,7 @@ musicKontrabassMvtI = \relative c' {
 	e,2 f4 r8 e'-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	e,8_\sempref e4 e e e8~
+	e,8-\offset X-offset -1 _\sempref e4 e e e8~
 	e e4 e e e8~
 	e e4 e e e8~
 	e4 e2 e'4

@@ -42,9 +42,9 @@ musicSoloViolinMvtI = \relative c'' {
 	R1
 	\times 2/3 {r4 <e' bes'>( g'!~} \times 2/3 {g e) <e, g>(\<}
 	<d bes'>2\> <cis a'>4)\! r
-	\times 2/3 {r4 <fis a>( a'~} \times 2/3 {a fis) <fis, a>\<}
+	\times 2/3 {r4 <fis a>( a'~} \times 2/3 {a fis) <fis, a>\<(}
 % Bars 41 to 45
-	<e c'!>2\> \times 2/3 {<dis b'>4\! r_\crescmarkup <e b'>(}
+	<e c'!>2\> \times 2/3 {<dis b'>4\!) r_\crescmarkup <e b'>(}
 	<bes' d>2 \times 2/3 {<a cis>4) r <a d>(}
 	\times 2/3 {<b! a'>2 gis'4)} \times 2/3 {<c, b'>2( a'4)}
 	<d, c'>4.( b'8) <e, d'>4.(\< c'8)
@@ -436,7 +436,7 @@ musicSoloViolinMvtI = \relative c'' {
 	<a fis'> q( <a a'>) q( <a g'>) q( <a fis'>) q( <bes g'>) q( <bes bes'>) q( <bes a'>) q( <bes g'>) q(
 	<e g>) q e'-. e-. <e, g>-. q-. <<{e e} \\ {e e}>> <f a> q f' f f, f d, d
 	<d' a'>8:16 a'': <d,, a'>: <f, d'>: <<{ <d d''>8:16 d''': <d,, d'>: d,16 d} \\ {s4. d16 d}>>
-	<c a' e' e'>8\f\noBeam <e' e'>4 q8( <d d'>) q4 q8(
+	<c a' e' e'>8\ff\noBeam <e' e'>4 q8( <d d'>) q4 q8(
 % Bars 411 to 415
 	<c c'>) q4 q8( <bes bes'>) q4 q8(
 	<a a'>4.) bes'8( a g f g)

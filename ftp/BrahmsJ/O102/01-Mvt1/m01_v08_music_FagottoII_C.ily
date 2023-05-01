@@ -53,14 +53,14 @@ musicFagottoIIMvtI = \relative c {
 	f,2 b4 e,2 a4} \tupletNeutral
 % Bars 66 to 70
 	d,2 c'
-	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-.\! c4.\>( b8)
+	b8-\tweak X-offset #-3.7 \ff\<-. dis-. fis-. a-.\! c4.\>( b8)\!
 	b,-.\< e-. g-. ais-.\! c4.(\> b8)\!
 	cis,-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2
 % Bars 71 to 75
 	c8(\p e g bes)\< des4.(\> c8)\!
 	c,8( f aes b!)\< des4.(\> c8)\!
-	d,8(\< f aes bes) e,2
+	d,8(-\alterBroken shorten-pair #'(()(0 . -8)) \< f aes bes) e,2
 	f8( aes c f) g,2\!
 	aes,4\f bes2-> c4-.
 % Bars 76 to 80
@@ -85,7 +85,7 @@ musicFagottoIIMvtI = \relative c {
 	g2 e4) f(
 	b!8) r f4( bes8) r f4(
 	d!) c8 b! c f, f'4(
-	f,)-. c'2\sf c4~
+	f,)-. c'2-\tweak X-offset 0.5 \sf c4~
 	c c2 c4~
 % Bars 96 to 100
 	c c4.( \clef tenor d'8) ees4\f~
@@ -95,13 +95,13 @@ musicFagottoIIMvtI = \relative c {
 	fis8-. r r4 r c'->
 % Bars 101 to 105
 	a-> fis-> dis-> c->
-	b2-\tweak X-offset #-1.5 \sf c4-. r
+	b2-\tweak X-offset #-2.5 \sf c4-. r
 	e2-\tweak X-offset #-1 \sf f!4-. r
-	r2 r4 d'_(
+	r2 r4 \shape #'( () ((0 . 0.5)(0 . 0.8)(0 . 0.8)(0 . 0)) ) Slur d'_(
 	e d c e)
 % Bars 106 to 110
-	r2 gis8(\sf\> a b c)\!
-	r2 f,8(\sf\> a g! f)\!
+	r2 \dynEO #'(-1.5 . 0.5) gis8(-\tweak X-offset -1.5 \sf\> a b c)\!
+	r2 \dynEO #'(-1.5 . 0.5) f,8(-\tweak X-offset -1.5 \sf\> a g! f)\!
 	R1
 	e16( gis b cis d8-.) r r4 e,16( gis b cis
 	d8) r8 r4 \once \override CombineTextScript.X-offset = #-2 a,16( c! dis fis a c dis fis)
@@ -388,7 +388,7 @@ musicFagottoIIMvtI = \relative c {
 	a,-.) e2-> e4~
 % Bars 381 to 385
 	e e2 e4~
-	e \clef tenor b''4.( ais8) b4(~-\tweak X-offset #-2 \sf
+	e \clef tenor b''4.( ais8) b4(~\sf
 	b16 a g fis) g4(~ g16 fis e dis) e4~
 	e \clef bass a,~ a8-. r r4
 	r gis2 gis4~

@@ -44,18 +44,18 @@ musicViolinIIMvtI = \relative c'' {
 	b2-> <a c>-> 
 	\tuplet 3/2 2 {<e e'>-> d'4-. c( b) c-.}
 	b2-> <a c>->
-	\tuplet 3/2 2 {<c g'>2-> f4-. e( d) e-.
-	d(\< c) d-. c( b) c-.}
+	\tuplet 3/2 2 {\tupletOffset #4 <c g'>2-> f4-. e( d) e-.
+	d(-\tweak rotation #'(-2 1 0) \< c) d-. c( b) c-.
 % Bars 66 to 70
-	\tuplet 3/2 { \stemDown b( a) r b( a)\! r} \tupletNeutral
+	\stemUp b( a) r b( a)\! r} \tupletNeutral
 	\stemNeutral a'4.-\tweak X-offset #-3.7 \ff a,8(\< c4.\> b8\!)
 	g4. e'8(\< c4.\> b8\!) 
 	a4. g'8( fis4. a,8)
 	<< {g2:16 dis:} \\ {e: a,:} >>
 % Bars 71 to 75
-	<g e'>2->\p <g e'>->
+	<g e'>2->-\offset X-offset #-2 \p <g e'>->
 	c-> aes->
-	bes\< bes
+	bes-\alterBroken shorten-pair #'(()(0 . -8)) \< bes
 	aes <c bes'>\!
 	<c aes'>8-.\f\< f'( aes4.\> g8)\! f-. aes,-.
 % Bars 76 to 80
@@ -63,7 +63,7 @@ musicViolinIIMvtI = \relative c'' {
 	c-.\sf c4 c8( des)-.\sf des4 des8(
 	g-.)\sf g4 g8( f-.\sf) f4 f8 \mark \default
 	e'16(\f bes e bes g bes e bes) d( bes d bes f bes d bes)
-	des( bes f bes c e,) fis fis g8:16 a: bes: a:
+	des( bes f bes c[ e,)] fis fis g8:16 a: bes: a:
 % Bars 81 to 85
 	e'16( bes e bes g bes e bes) d( bes d bes g bes d bes)
 	cis( a g a \tuplet 3/2 4 {cis8-.)\noBeam cis-! d-! bes-! a-! e-! d-! f-! a-!}
@@ -71,8 +71,8 @@ musicViolinIIMvtI = \relative c'' {
 	f( des bes des e bes) f' f g8:16 a: bes: a:
 	g16( e g e bes e g e) f( d f d bes d f d)
 % Bars 86 to 90
-	ees( c bes c \tuplet 3/2 4 {ees8-!) ees-! ees-!  d-! ees-! gis,-! a-! d,-! ees-!}
-	ees'16( c a c \tuplet 3/2 4 {ees8-.) c-! d-! a-! bes-! fis-! g-! ees-! d-!}
+	ees( c bes c \tuplet 3/2 4 {ees8-!)\noBeam ees-! ees-!  d-! ees-! gis,-! a-! d,-! ees-!}
+	ees'16( c a c \tuplet 3/2 4 {ees8-.)\noBeam c-! d-! a-! bes-! fis-! g-! ees-! d-!}
 	\tuplet 3/2 4 {b!-! c-! d-! f!-! gis-! a-! b-! c-! d-! f!-! gis-! a-!} 
 	f'16( c a f) c'( a f c) a'( f c a) f'4(_\fbenmarc \mark \default
 	d16 b! g d) f'4( des16 bes g des) c'4(
@@ -91,7 +91,7 @@ musicViolinIIMvtI = \relative c'' {
 % Bars 101 to 105
 	fis,16( a  c d dis8) r c16( dis fis gis a8) r
 	<a, a'>2:16-\tweak X-offset #-4 \sf q4 r
-	gis'2:16-\tweak X-offset #-3 \sf a8: f: e: d:
+	\dynEO #'(0 . 2) gis'2:16\sf a8: f: e: d:
 	g!: c,: f: b,: e: a,: a': b,:
 	g': c,: f: b,: e: a,: e': gis,:
 % Bars 106 to 110
@@ -107,7 +107,7 @@ musicViolinIIMvtI = \relative c'' {
 	a!4 r r d8-. d-.
 	c-. c-. a-. a-. b-. b-. gis-. gis-. 
 % Bars 116 to 120
-	a\fp\>-. a-. a-. d\!-. d-. d-. d-. e->-. 
+	a-\offset X-offset -1 \fp\>-. a-. a-. d\!-. d-. d-. d-. e->-. 
 	d-. d-. d-. cis->-. a-. a-. a-. d-. 
 	d-. d-. b!-. b-. cis-. cis-. a-. a-. 
 	d d b b cis cis c c
@@ -161,7 +161,7 @@ musicViolinIIMvtI = \relative c'' {
 	
 % Bars 166 to 170
 	
-	c4-\tweak X-offset #-0.5 \p^\pizz r c r
+	c4-\tweak X-offset #-0.5 \p-\offset X-offset 0.5 ^\pizz r c r
 	c b r2
 	c4 r c r
 	c_\dimmarkup r c r
@@ -260,17 +260,17 @@ musicViolinIIMvtI = \relative c'' {
 	ees'-! c-! r b!-!
 	r8 a'_\crescmarkup-! bes-! a-! bes-! c-! des-! des,-! 
 % Bars 256 to 260
-	ees-. f-. ges-. f-. ges-. a!-. bes-. bes16-\tweak X-offset #-2 \ff bes
+	ees-. f-. ges-. f-. ges-. a!-. bes-.\noBeam bes16-\offset X-offset #-2.5 \ff bes
 	ces8:16 des: ees: des: ces: bes: aes: ges:
 	f8-. r f4^\pizz r ges
-	f f r8 a!8:16-\tweak X-offset #-4 \ff^\arco bes: c:
+	f f r8 \beamOffset #'(0.5 . 0.5) a!8:16-\tweak X-offset #-4 \ff^\arco bes: c:
 	des: a'!: bes: aes: ges: f: ees: des:
 % Bars 261 to 265
 	ees: f: ges: f: ees: des: c: bes:
 	<e,! c'>4-!-\tweak X-offset #-2.5 \sf <e c'>^\pizz r <f des'>
 	<e c'> q r8 q8:16^\arco <f c'>: <g c>:
 	<aes c>4-.\sf r <bes c>-.\sf r
-	<aes c>-.-\tweak X-offset #0.5 _\benmarc  f'2-> f,4-.
+	\markEO #'(0 . 1) <aes c>-.-\tweak X-offset #0.5 _\benmarc  f'2-> f,4-.
 % Bars 266 to 270
 	<bes, g'>-. ees'2-> ees,4-.
 	<des f>-. des'2-> <des, f>4-.
@@ -306,10 +306,10 @@ musicViolinIIMvtI = \relative c'' {
 	\tupletUp \tuplet 3/2 {b4-. c-. d-.} \tupletNeutral c4. a8
 	g4. f8 e4. c'8
 	b2 <a c>
-	\tupletUp \once \override TupletNumber.Y-offset = #3.5 \tuplet 3/2 2 {<e e'>2-> d'4-. c( b) c-.}
+	\tupletUp \tupletOffset #3.5 \tuplet 3/2 2 {<e e'>2-> d'4-. c( b) c-.} \tupletNeutral
 % Bars 296 to 300
 	b2 <a c>
-	\once \override TupletNumber.Y-offset = #4 \tuplet 3/2 2 {<c g'>2-> f4-. e( d) e-.
+	\tupletOffset #4 \tuplet 3/2 2 {<c g'>2-> f4-. e( d) e-.
 	a( f) a,-. b( g) b,-.}
 	c2 a
 	gis\p gis
@@ -317,7 +317,7 @@ musicViolinIIMvtI = \relative c'' {
 	a a
 	a4( c) b( d)
 	<< a1 {s2 s\<} >>
-	gis1\>
+	\hairpinShorten #'(0 . 4) gis1\>
 	a4\! r r2
 % Bars 306 to 310
 	R1*4
@@ -348,7 +348,7 @@ musicViolinIIMvtI = \relative c'' {
 	r fis-.( r ais,-.)
 	r b-.( r b-.)
 	r a-.( r a-.)
-	r4 bis2.\sf\>
+	r4 \hairpinShorten #'(0 . 4) bis2.\sf\>
 % Bars 331 to 335
 	gis1\pp~
 	gis2( e')~
@@ -396,13 +396,13 @@ musicViolinIIMvtI = \relative c'' {
 	gis'16( d gis d b d gis d) fis( d fis d b d fis d)
 	eis( cis b cis \tuplet 3/2 4 {eis8-!)\noBeam eis-! fis-! d-! cis-! gis-! fis-! a-! cis-!}
 	b'16( gis b gis d gis b gis) a( fis a fis d fis a fis)
-	a( f d f gis d) ais' ais b8:16 cis: d: cis:
+	a( f d f gis[ d)] ais' ais b8:16 cis: d: cis:
 % Bars 371 to 375
 	b16( gis b gis d gis b gis) a( fis a fis d fis a fis)
 	g( e d e \tuplet 3/2 4 {g8-!)\noBeam g-! g-! fis-! g-! bis,-! cis-! fis,-! g-!}
-	g'16( e cis e \tuplet 3/2 4 {g8-.) e-! fis-! cis-! d-! ais-! b-! g-! fis-!
+	g'16( e cis e \tuplet 3/2 4 {g8-.)\noBeam e-! fis-! cis-! d-! ais-! b-! g-! fis-!
 	dis-! e-! fis-! a-! bis-! cis-! dis-! e-! fis-! a-! bis-! cis-!}
-	cis16( a e cis) a'( e cis a) cis( a e cis) e'4->(-\tweak X-offset #1 _\fbenmarc
+	cis16( a e cis) a'( e cis a) cis( a e cis) \markEO #'(0.5 . 1) e'4->(_\fbenmarc
 % Bars 376 to 380
 	dis16 b fis dis) e'4->( d16 b f d) <e cis'>4(
 	<dis b'>8) q4 <dis b'^~>8_( <d b'>4) e'4(
@@ -414,17 +414,17 @@ musicViolinIIMvtI = \relative c'' {
 	d b fis e) d( fis b cis d b fis d) cis( d e fis
 	g fis e dis) e( fis g a b a g fis) g( cis e fis
 	g fis e cis) g( cis e fis g8-.) r r4
-	r f,16( b d e f e d b) f( b d e 
+	r f,16( b d e f e d b) \beamOffset #'(0.5 . 0) f( b d e 
 % Bars 386 to 390
 	f8-.) r r4 r2
 	e,16( a c e a8)-. r c,16( e a c e8-.) r \bar "||" \mark \default \key a \minor
-	a,4.\ff g8 e4 r8 dis-.
+	\dynEO #'(0 . 2) a,4.\ff g8 e4 r8 dis-.
 	e( c b) a-. g( e d) c-.
 	f'4. e8 a,4 r8 <b d>-.
 % Bars 391 to 395
 	<a c>4-. r8 <b, gis'>-. <a a'>4-. r8 a-.
-	e'8_\sempref e4 e  e8 e'( d
-	b) c( b e,) e'( d4) c8(
+	e'8_\sempref e4 e  e8\noBeam e'( d
+	b)\noBeam c( b e,) e'( d4) c8(
 	b4) a8( g4) f8( e4)
 	d( c) b b
 % Bars 396 to 400

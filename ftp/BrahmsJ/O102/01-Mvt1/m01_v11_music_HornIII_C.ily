@@ -47,7 +47,7 @@ musicHornIIIMvtI = \relative c'' {
 	f4. f8 f4. g8
 % Bars 61 to 65
 	ees2-> e->
-	\partCombineApart d2.-> d4 \partCombineAutomatic
+	\partCombineApart \stemOffset #-1.5 d2.-> d4 \partCombineAutomatic
 	ees2-> e->
 	f2.-> \once \partCombineApart bes,4
 	r2 r4 g
@@ -61,7 +61,7 @@ musicHornIIIMvtI = \relative c'' {
 	R1*4
 	
 	
-	%%%%%%%%%%%%%%%%%%%%%%%%%
+	
 	bes4-.\f ees2-> ees4-.
 % Bars 76 to 80
 	ees-! r ees-! r
@@ -164,7 +164,7 @@ musicHornIIIMvtI = \relative c'' {
 	
 	
 	
-	r2 r4 \once \override CombineTextScript.X-offset = #-3.5 bes_\pmamarc-.
+	r2 r4 \aIIXoffset #-3.5 bes_\pmamarc-.
 	r bes-. r bes-.
 % Bars 191 to 195
 	r8 bes-. r8 bes-. r8 bes-. r8 bes-. 
@@ -220,14 +220,14 @@ musicHornIIIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	g'4-\tweak X-offset #-2 \f-! r r aes-!
+	\dynEO #'(0 . 1) g'4\f-! r r aes-!
 	g-! r r2
 	R1*2
 % Bars 261 to 265
 	
-	\once \partCombineApart bes,4-! r r \partCombineApart ees-!
-	bes-! \partCombineAutomatic r r2
-	\once \partCombineApart bes4-. r \once \partCombineApart bes-. r
+	bes,4-!-\tweak X-offset #-1.9 \f r r ees-!
+	bes-! r r2
+	bes4-. r bes-. r
 	ees-. r r2
 % Bars 266 to 270
 	R1*4

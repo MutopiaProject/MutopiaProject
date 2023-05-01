@@ -9,8 +9,8 @@ musicKlarinetIMvtI = \relative c''' {
 	\key c \minor
 	\transposition a
 % Bars 1 to 5
-	g4._\fmarc f8 d4 r
-	ees4. d8 g,4 r
+	\partCombineApart g4. f8 d4 \once \partCombineAutomatic r
+	ees4. d8 g,4 \partCombineAutomatic r 
 	ees'-. r b-. r
 	c-. ees-. f-. aes-.
 	R1\fermata
@@ -53,12 +53,12 @@ musicKlarinetIMvtI = \relative c''' {
 	\tupletUp \tuplet 3/2 2 {ees2 f4 d2 ees4} \tupletNeutral
 % Bars 66 to 70
 	c2 c
-	a-\tweak X-offset #-3.7 \ff-> a->
+	a\ff-> a->
 	bes-> bes->
 	bes ees
 	d4 r r2
 % Bars 71 to 75
-	r4 r8 des8^\p^\<( fes4.^\> ees8)\!
+	r4 r8 \aIIXoffset #-4 des8^\p^\<( fes4.^\> ees8)\!
 	r4 r8 aes(^\< fes4.^\> ees8)\!
 	R1*2
 	
@@ -80,12 +80,12 @@ musicKlarinetIMvtI = \relative c''' {
 	ees4-! ees-! r des-!
 	r c-! r2
 	r r4 aes'(\f \mark \default
-	f8) r aes4( fes8) r \once \oneVoice ees4(
+	f8) r aes4( fes8) r \once \oneVoice \shape #'((0 . -2.5)(0 . -1)(0 . 0)(0 . 0)) Slur ees4(
 % Bars 91 to 95
 	f! g8 aes ees4) aes(
-	f8) r aes4( fes8) r \partCombineApart \once \oneVoice ees4(
+	f8) r aes4( fes8) r \partCombineApart \once \oneVoice \shape #'((0 . -2.5)(0 . -1)(0 . 0)(0 . 0)) Slur ees4(
 	d! ees8 f ees4) \partCombineAutomatic c(
-	ees-.) des2\sf des4~
+	ees-.) des2-\tweak X-offset 0.5 \sf des4~
 	des des2 des4(~
 % Bars 96 to 100
 	des8 c) des4.( a'8) \partCombineChords bes4(~
@@ -103,7 +103,7 @@ musicKlarinetIMvtI = \relative c''' {
 	r2 ees4( f8 g)
 	r2 \partCombineChords e8( f g aes)
 	\partCombineApart r2 r4 r16 g,( b d
-	g8-.) r f-. r r16 g,( b d g8-.) r
+	\stemOffset #-1 g8-.) r f-. r r16 g,( b d \stemOffset #-1 g8-.) r
 	f-. \partCombineAutomatic r r4 c,16( ees! fis a c ees! fis a)
 % Bars 111 to 115
 	\afterGrace b1\trill( {a16[ b])} \mark \default
@@ -285,7 +285,7 @@ musicKlarinetIMvtI = \relative c''' {
 	c2) \partCombineAutomatic r
 	R1
 % Bars 286 to 290
-	g'4-!-\tweak X-offset #-2 \ff r g-! r
+	\stemOffset #-1.5 g'4-!-\tweak X-offset #-2 \ff r g-! r
 	aes-! r a-! r
 	f-! r r2
 	f4-! r r2 \mark \default
@@ -315,7 +315,7 @@ musicKlarinetIMvtI = \relative c''' {
 	r f-.\p r ges-.
 	r ges-.\< g-.\sf r
 % Bars 311 to 315
-	r aes!-. a2~\fp\>
+	r aes!-. a2~-\tweak X-offset #-2 \fp\>
 	a4\! r r2 \bar "||" \key c \major \mark \default
 	R1*3
 	
@@ -366,7 +366,7 @@ musicKlarinetIMvtI = \relative c''' {
 	
 	f'8-.\f f4 f f f8\<~
 % Bars 366 to 370
-	f2.\> r4\! \mark \default
+	\hairpinShorten #'(0 . 7) f2.\> r4\! \mark \default
 	f8 f4 f f f8(
 	e4-.) e-. r2
 	f8 f4 f8( f) f4 f8~
@@ -392,7 +392,7 @@ musicKlarinetIMvtI = \relative c''' {
 % Bars 386 to 390
 	f8-. r r4 r2
 	R1 \mark \default \bar "||" \key c \minor
-	fis2-\tweak X-offset #-2 \ff\trill \partCombineApart g8( ees d c) 
+	fis2-\tweak X-offset #-2 \ff\trill \partCombineApart \beamOffset #'(-0.7 . -0.7) g8( ees d c) 
 	bes4 \partCombineAutomatic r8 fis' g4-. r
 	f!2\trill ees8( aes g f)
 % Bars 391 to 395

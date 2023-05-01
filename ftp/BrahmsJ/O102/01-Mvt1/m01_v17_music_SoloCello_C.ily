@@ -131,7 +131,7 @@ musicSoloCelloMvtI = \relative c, {
 	\tuplet 3/2 4 {a8\f\< c f\! e\> c gis\! a\< c g'!\! f\> c gis!\!
 	a\< c g'! fis a c\! a'\> fis dis a fis dis\!}
 % Bars 136 to 140
-	e8\mf r r4 \tuplet 3/2 4 {e8\< g d'! c\> g dis\!}
+	e8\mf r r4 \tuplet 3/2 4 {e8\< g d'!\! c\> g dis\!}
 	e8 r r4 \tuplet 3/2 4 {g'8\f\> e cis g e cis\!}
 	d8-.\p r \clef tenor \tuplet 3/2 {d'( a' c)} d,,-. r \tuplet 3/2 {a''( c ees)}
 	d,,-. r \tuplet 3/2 {a''( ees c)} d,-. r \tuplet 3/2 {fis'( c a)}
@@ -247,11 +247,11 @@ musicSoloCelloMvtI = \relative c, {
 	d2(\p a'!
 	d4) r r2
 	r4 a'\trill c\trill fis,\trill
-	\textPriority #+3000 a\trill^\flat g2(\trill fis8) r
+	a^\flattrillmark g2(\trill fis8) r
 % Bars 246 to 250
-	d'1\startTrillSpan~
+	\trillSpanPadding #5 d'1\startTrillSpan~
 	\afterGrace d2( {cis16[\stopTrillSpan d])} f!4\trill b,\trill
-	d\trill f,\trill \textPriority #+3000 aes\trill^\flat \textPriority #+3000 d,\trill^\flat
+	d\trill f,\trill aes^\flattrillmark d,^\flattrillmark
 	f\trill \afterGrace ees\trill( { d16[ ees]} d8) r r4 \clef tenor
 	g4\trill g'2\trill g,4\trill~
 % Bars 251 to 255
@@ -261,15 +261,15 @@ musicSoloCelloMvtI = \relative c, {
 	c,!4\trill c'2\trill_\crescmarkup( b8-.) r
 	bes,!4\trill bes'2\trill( des,8)-. r
 % Bars 256 to 260
-	ges,4\trill \textPriority #+3000 ges'2\trill-\tweak X-offset #2.5 ^\flat( bes,8-.) r \clef treble
-	\textPriority #+3000 \afterGrace ges''1-\tweak X-offset #-4 \ff-\tweak X-offset #-0.5 \trill-\tweak X-offset #1.5 ^\flat( {f16[ ges])}
-	f8-. r \clef bass f,,,16( c' a' f') f( a, c, f,) \stemDown c( c' ees bes') \stemNeutral
+	ges,4\trill ges'2^\flattrillmark( bes,8-.) r \clef treble
+	\shape #'((0 . -1)(0 . -0.5)(0 . 0)(0 . 0)) Slur \markEO #'(-0.5 . -0.3) \afterGrace ges''1\ff^\flattrillmark( {f16[ ges])}
+	f8-. r \clef bass \beamOffset #'(0.7 . -1.5) f,,,16( c' a' f') \beamOffset #'(-1.5 . 0.7) f( a, c, f,) \beamOffset #'(0.7 . -1.5) c( c' ees bes')
 	f,( c' a' f') f( a, c, f,) f8 r r4
 	R1*2
 % Bars 261 to 265
 	
-	r4 c16( g' e'! c') c( e, g, c,) g'( f' bes des)
-	c,,( g' e' c') c( e, g, c,) c8 r r4
+	r4 \beamOffset #'(1.5 . -0.8) c16( g' e'! c') \beamOffset #'(-0.8 . 1.5) c( e, g, c,) g'( f' bes des)
+	\beamOffset #'(1.5 . -0.8) c,,( g' e' c') \beamOffset #'(-0.8 . 1.5) c( e, g, c,) c8 r r4
 	R1*6
 % Bars 266 to 270
 	
@@ -386,7 +386,7 @@ musicSoloCelloMvtI = \relative c, {
 	e,!-. e'-. eis,-. eis'-. fis,-. fis'-. cis,-. cis'-. d,!-. d'-. dis,-. dis'-. r4
 	<e, e'>8_\fmarc \clef tenor e''4 e8( f-.) f4 f8~
 	f-. f4 f8( <b, dis>)-. q4 q8
-	d!1\startTrillSpan~
+	\trillSpanPadding #5 d!1\startTrillSpan~
 % Bars 366 to 370
 	\afterGrace d2( {cis16[\stopTrillSpan d])} \clef bass e,,16( gis b d e gis b d) \mark \default
 	R1*21

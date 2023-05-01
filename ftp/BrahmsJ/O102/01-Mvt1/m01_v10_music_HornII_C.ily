@@ -47,14 +47,14 @@ musicHornIIMvtI = \relative c' {
 	r2 c4. c8
 % Bars 61 to 65
 	g2-> d'->
-	c,2.-> c4
+	c,2.^> c4
 	g'2-> d'-> 
 	ees,2.-> ees4
 	r2 r4 c'
 % Bars 66 to 70
 	des2 c
-	g,->-\tweak X-offset #-3.7 \ff b'->
-	g,-> c'->
+	g,^>-\tweak X-offset #-3.7 \ff b'->
+	g,^> c'->
 	c, b
 	c g
 % Bars 71 to 75
@@ -67,7 +67,7 @@ musicHornIIMvtI = \relative c' {
 	e-! r e-! r
 	ees-! r r2 
 	R1 \mark \default
-	\once \override CombineTextScript.X-offset = #-4 ees'4\f ees2 ees4~
+	ees'4\f ees2 ees4~
 	ees r r2
 % Bars 81 to 85
 	ees4 ees2 ees4~

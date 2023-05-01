@@ -139,7 +139,10 @@
 			breakbefore = ##t
 		}
 		\layout {
-			\layoutTemp
+			\context {
+				\Score
+				scriptDefinitions = #my-script-alist
+			}
 		}
 	}
 }

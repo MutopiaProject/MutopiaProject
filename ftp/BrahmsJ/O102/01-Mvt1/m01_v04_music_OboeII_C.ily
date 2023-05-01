@@ -53,7 +53,7 @@ musicOboeIIMvtI = \relative c'' {
 	\tupletUp \tuplet 3/2 2 {c2 d4 b2 c4} \tupletNeutral
 % Bars 66 to 70
 	a2 a
-	a->-\tweak X-offset #-3.7 \ff a->
+	a->\ff a->
 	g-> g->
 	a a
 	g dis
@@ -151,7 +151,7 @@ musicOboeIIMvtI = \relative c'' {
 	r2 r4 f4(\p\<~
 	f8\> bes,!)\! a4.( g8) f4~
 	f\dimD f2 f4\pp\<(~
-	f1\>~
+	<< f1~ {s4\> s\! s s} >>
 % Bars 181 to 185
 	f2\! d)
 	R1
@@ -186,7 +186,7 @@ musicOboeIIMvtI = \relative c'' {
 	e-.) d2-> d4~
 % Bars 211 to 215
 	d d2 d4(~
-	d8 cis) d4.( a'8) bes4\sf~
+	d8 cis) d4.( a'8) \dynEO #'(0 . 2) bes4\sf~
 	bes16 c! bes a bes4(~ bes16 a  g fis) g4~
 	g e4~ e8-. r r4
 	r e2 e4~
@@ -229,7 +229,7 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 256 to 260
 	
 	
-	f4.->-\tweak X-offset #-2.5 _\ffmarc ees8  c4 r
+	f4.->_\ffmarc ees8  c4 r
 	des4.-> c8 f,4 r
 	R1*2
 % Bars 261 to 265
@@ -333,7 +333,7 @@ musicOboeIIMvtI = \relative c'' {
 	cis-.) b2-> b4~
 % Bars 381 to 385
 	b b2 b4(~
-	b8 ais) b4.( fis'8) g4-\tweak X-offset #-1 \sf~
+	b8 ais) b4.( fis'8) \dynEO #'(0 . 2) g4\sf~
 	g16 a g fis g4(~ g16 fis e dis) e4(
 	cis) cis~ cis8-. r r4
 	r d2 d4~

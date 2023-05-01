@@ -79,7 +79,7 @@ musicTrumpetIMvtI = \relative c'' {
 	R1*2
 % Bars 96 to 100
 	
-	r2 r4 bes\f~
+	r2 r4 bes-\tweak X-offset -1.5 \f~
 	bes bes4~ bes8-. r r4
 	r bes2 bes4~
 	bes8-. r r4 r2
@@ -178,7 +178,7 @@ musicTrumpetIMvtI = \relative c'' {
 	
 	
 	ees4-!-\tweak X-offset #-2 \f r r \once \partCombineApart bes-!
-	ees-! r r2
+	ees^! r r2
 	R1*4
 % Bars 261 to 265
 	

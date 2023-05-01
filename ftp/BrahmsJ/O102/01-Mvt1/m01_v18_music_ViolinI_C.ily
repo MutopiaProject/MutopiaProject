@@ -55,7 +55,7 @@ musicViolinIMvtI = \relative c''' {
 % Bars 71 to 75
 	e2->\p <bes e>->
 	<aes f'!>-> <aes f'>->
-	<f' aes>\< <c g'>
+	<f' aes>-\alterBroken shorten-pair #'(()(0 . -8)) \< <c g'>
 	<c aes'> <g' e'>\!
 	c8-.\f\<\noBeam f'( aes4.\> g8)\! f-. aes,
 % Bars 76 to 80
@@ -66,7 +66,7 @@ musicViolinIMvtI = \relative c''' {
 	g4. fis8(\< g a\> bes a)\!
 % Bars 81 to 85
 	g8\< g4  g g g8~\!
-	g4\sf~ \tuplet 3/2 4 {g8 e-! f-! cis-! d-! a-! f-! a-! d-!}
+	g4-\offset X-offset -1 \sf~ \tuplet 3/2 4 {g8\noBeam e-! f-! cis-! d-! a-! f-! a-! d-!}
 	bes'8 bes4 bes bes bes8~
 	bes4. a8(\< bes c\> d c)\!
 	bes8 bes4\< bes bes bes8~\!
@@ -79,7 +79,7 @@ musicViolinIMvtI = \relative c''' {
 % Bars 91 to 95
 	g2\> c,8)\! r a'4(
 	g8) r a4( e8) r f4(\<
-	f'2\> c4)\! \shape #'((0 . -1.7)(0 . -1)(0 . 0)(0 . 0)) Slur d(
+	f'2\> c4)\! d(
 	dis-!) e4(~\sf e16 d! c bes) d4(~
 	d16 c bes a) bes4(~ bes16 a g fis) g4(~
 % Bars 96 to 100
@@ -90,8 +90,8 @@ musicViolinIMvtI = \relative c''' {
 	ees8-.) r r4 r ees,,16( fis a b!
 % Bars 101 to 105
 	c8) r a16( c ees f! fis8) r dis16( fis a c)
-	dis2-\tweak X-offset #-2 \sf e8( c b a)
-	gis'2\sf a8( f e d)
+	\dynEO #'(0 . 2) dis2\sf e8( c b a)
+	\dynEO #'(0 . 2) gis'2\sf a8( f e d)
 	g!-. c,-. f-. b,-. e-. a,-. a-. b,-. 
 	g'-. c,-. f-. b,-. e-. a,-. e'-. gis,-. 
 % Bars 106 to 110
@@ -161,7 +161,7 @@ musicViolinIMvtI = \relative c''' {
 	
 % Bars 166 to 170
 	
-	e4\p^\pizz r e r
+	e4-\offset X-offset -1 \p^\pizz r e r
 	d r r2
 	e4 r e r
 	e_\dimmarkup r e r
@@ -212,7 +212,7 @@ musicViolinIMvtI = \relative c''' {
 	d2 g,4) e'(
 	d8) r e4( b8) r c4(
 	c'2 g4) a(
-	ais-!) b\sf~( b16 a g f) a4(~
+	ais-!) \dynEO #'(0 . 2) b\sf~( b16 a g f) a4(~
 % Bars 211 to 215
 	a16 g f e) f4(~ f16 e d cis) d4(~
 	d8 cis8) d4.( f,8) e,16( f g a
@@ -270,7 +270,7 @@ musicViolinIMvtI = \relative c''' {
 % Bars 256 to 260
 	ges-! aes-! bes-! a-! bes-! c-! des-! des,16-\tweak X-offset #-2 \ff[ des]
 	ees8:16 f: ges: f: ees: des: ces: bes:
-	<c,! a'!>8-. r q4^\pizz r <c bes'>
+	<c,! a'!>8-. r \stemOffset #-1 q4^\pizz r <c bes'>
 	<c a'> q r8 f'8:16^\arco-\tweak X-offset #-4 \ff g!: a:
 	bes: c: des: c: bes: aes: ges: f:
 % Bars 261 to 265
@@ -278,7 +278,7 @@ musicViolinIMvtI = \relative c''' {
 	c4-\tweak X-offset #-2.5 \sf-! <e,! g>^\pizz r4 <f des'>
 	<e g> q r2
 	\tupletUp \tuplet 3/2 2 {d'!4\sf-.-\tweak X-offset #-2 ^\arco e!-. f-. e-.\sf f-. g-.
-	f_\benmarc-. g-. aes-.  bes-. c-. des~} \tupletNeutral
+	\markEO #'(0 . 1.5) f_\benmarc-. g-. aes-.  bes-. c-. des~} \tupletNeutral
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
 	\tuplet 3/2 2 {des,-. ees-. f-. g-. aes-. bes~}
@@ -308,7 +308,7 @@ musicViolinIMvtI = \relative c''' {
 	<a f'>-! r <a fis'>-! r
 	<d, b' g'>-! r r2
 	<d b' gis'>4-! r r2 \mark \default
-	a'''4.-\tweak X-offset #0.5 \ff g8 e4 r
+	\dynEO #'(0 . 2) a'''4.\ff g8 e4 r
 % Bars 291 to 295
 	f4. e8 a,4 r
 	\tupletUp \tuplet 3/2 {b-. c-. d-.} \tupletNeutral c4. a8
@@ -325,7 +325,7 @@ musicViolinIMvtI = \relative c''' {
 	c c
 	c4( a') d,( b')
 	c,2( fis)\<
-	e1\>
+	\hairpinShorten #'(0 . 4) e1\>
 	a,4\! r r2
 % Bars 306 to 310
 	R1
@@ -408,9 +408,9 @@ musicViolinIMvtI = \relative c''' {
 % Bars 371 to 375
 	d8\< d4 d d d8\!
 	d4~\sf \tuplet 3/2 4 {d8 bis-! cis-! ais-! b-! fis-!  g-! dis-! e-! }
-	cis'4\sf~ \tuplet 3/2 4 {cis8 ais-! b-!  eis,-! fis-! cis-! d!-! ais-! b-!
+	\dynEO #'(0 . 2) cis'4\sf~ \tuplet 3/2 4 {cis8 ais-! b-!  eis,-! fis-! cis-! d!-! ais-! b-!
 	gis-! a!-! bis-!  cis-! dis-! e-! gis-! a!-! bis-!  cis-! dis-! e-!}
-	a16( e cis a) e'( cis a e) a( e cis a) cis'4(-\tweak X-offset #1 _\fbenmarc
+	a16( e cis a) e'( cis a e) a( e cis a) \markEO #'(0 . 2) cis'4(_\fbenmarc
 % Bars 376 to 380
 	b8) r cis4( gis8) r a4(\<
 	b2\> e,8)\! r cis'4(
@@ -426,13 +426,13 @@ musicViolinIMvtI = \relative c''' {
 % Bars 386 to 390
 	f8-.) r r4 r cis,,!16( e a cis
 	e8-.) r a,16( c e a c8-.) r e,16( a c e) \bar "||" \key a \minor \mark \default
-	a4.\ff g8 e4 r8 dis-.
+	\dynEO #'(0 . 2) a4.\ff g8 e4 r8 dis-.
 	e( c b) a-. g( e d) c-.
 	f'4. e8 a,4 r8 gis-.
 % Bars 391 to 395
 	a8( f e) d-. c( a g) f-.
 	e8_\sempref e4 e e e8~
-	e e''( d b) c( b e,) a(
+	e\noBeam e''( d b) c( b e,) a(
 	g c,) f( e a,) d( c f,)
 	b( f) a( e) a( d,) gis( d)
 % Bars 396 to 400

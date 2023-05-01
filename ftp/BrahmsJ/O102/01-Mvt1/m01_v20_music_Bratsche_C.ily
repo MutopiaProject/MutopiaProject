@@ -47,7 +47,7 @@ musicBratscheMvtI = \relative c'' {
 	\tuplet 3/2 2 {<c g'>2 f!4-. e( d) g-.
 	b(\< a) f-.  a( g) e-.} \tupletNeutral
 % Bars 66 to 70
-	<a, f'>2 <a e'>\!
+	\stemOffset #-1 <a, f'>2 \stemOffset #-1 <a e'>\!
 	<<{
 		<fis' a>2:16 <dis fis>:
 		<e g>: q:
@@ -59,15 +59,15 @@ musicBratscheMvtI = \relative c'' {
 	}>>
 	<<{<e g>4} \\ {b4}>> r <a dis> r
 % Bars 71 to 75
-	c,8:16\p\< e: g: bes:\! des4.\>( c8)\!
+	c,8:16-\offset X-offset #-1 \p-\tweak extra-offset #'(0 . 1) \< e: g: bes:\! des4.\>( c8)\!
 	c,8:16\< f: aes: b!:\! des4.(\> c8)\!
 	d,!8:16\< f: aes: bes: e,!: g: bes: c:
-	f,: aes: c: f: g,: bes e: g:
+	f,: aes: c: f: g,: bes e: g:\!
 	<f c'>4:\f <f des'>2: <aes c>4:
 % Bars 76 to 80
 	<f aes>4-. r <aes, d!> r
 	<g e'>8-.\sf c4 c8( des8-.)\sf des4 des8~
-	des-.\sf des4 des8( b!)\sf b4 b8 \mark \default
+	des-.\sf des4 des8( b!)\sf-. b4 b8 \mark \default
 	g'16(\f e g e bes e g e) f( d f d bes d f d)
 	f( des bes des e[ c]) fis fis g8:16 a: bes: a:
 % Bars 81 to 85
@@ -113,11 +113,11 @@ musicBratscheMvtI = \relative c'' {
 	a-. a-. fis-. fis-. gis-. gis-. e-. e-. 
 	e-. e-. fis-. fis-. gis-. gis-. <e d'>-. q-.
 % Bars 116 to 120
-	<f d'>\fp\>-. q-. q-. b-.\! a-. a-. a-. cis->-. 
+	<f d'>-\offset X-offset -1 \fp\>-. q-. q-. b-.\! a-. a-. a-. cis->-. 
 	a-. a-. a-. g->-. f-. f-. f-. bes-. 
 	a-. a-. r4 r g'8-. g-.
 	f f d d e e a, a 
-	<a fis'>4-\tweak X-offset #-1.6 \p r e8( g fis e)
+	<a fis'>4-\tweak X-offset #-1.8 \p r e8( g fis e)
 % Bars 121 to 125
 	gis2 fis8( a g fis)
 	b2_\crescpocoapoco a8( c b a) 
@@ -190,7 +190,7 @@ musicBratscheMvtI = \relative c'' {
 	<f aes>_\dimmarkup r <e g> r
 % Bars 171 to 175
 	R1 \mark \default
-	r4 <b' fis'>-.-\tweak X-offset #0.5 \mf-\tweak X-offset #-4.5 ^\arco r <e, e'>-.
+	r4 <b' fis'>-.-\tweak X-offset #0.5 \mf-\tweak X-offset #-5 ^\arco r <e, e'>-.
 	r <d' a'>-. r <a d>-.
 	r <e' b'>-. r <a, a'>-.
 	r <d b'>-. r2
@@ -294,14 +294,14 @@ musicBratscheMvtI = \relative c'' {
 	r2 r4 r8 <bes des>16-\tweak X-offset #-3.2 \ff q
 	<ces ees>8:16 <des f>: <ees ges>: <des f>: <ces ees>: <bes des>: <aes ces>: <ges bes>:
 	<f a!>8-. r <f a>4^\pizz r <c bes'>
-	<f a> q r8 <a f'>8:16-\tweak X-offset #-4 \ff^\arco <bes g'>: <c a'>:
+	<f a> q r8 \beamOffset #'(0.8 . 0.8) <a f'>8:16-\tweak X-offset #-4 \ff^\arco <bes g'>: <c a'>:
 	<des bes'>: <a'! c>: <bes des>: <aes c>: <ges bes>: <f aes>: <ees ges>: <des f>:
 % Bars 261 to 265
 	<ees ges>: <f aes>: <ges bes>: <f aes>: <ees ges>: <des f>: <c ees>: <bes des>:
-	<c e!>4-\tweak X-offset #-2.5 \sf-! <c e>^\pizz r <g f'>
+	<c e!>4-\tweak X-offset #-3 \sf-! <c e>^\pizz r <g f'>
 	<c e> q r8 c8:16^\arco d: e:
 	c4-.\sf r e-.\sf r
-	f-.-\tweak X-offset #-1 _\benmarc <c aes'>-. f-. <des bes'>->~
+	\markEO #'(0 . 1.5) f-.-\tweak X-offset #-1 _\benmarc <c aes'>-. f-. <des bes'>->~
 % Bars 266 to 270
 	q q-. <c ees>-. <c aes'>->~
 	q q-. des <bes g'>->~
@@ -348,7 +348,7 @@ musicBratscheMvtI = \relative c'' {
 	c c
 	d e
 	e( c)\<
-	d1\>
+	\hairpinShorten #'(0 . 4) d1\>
 	c4\! r r2
 % Bars 306 to 310
 	R1*3
@@ -379,7 +379,7 @@ musicBratscheMvtI = \relative c'' {
 	r4 \tuplet 3/2 {fis,8(\> cis' f)\!} r4 \tuplet 3/2 {e,8(\> ais cis)\!}
 	r4 \tuplet 3/2 {d,8( fis b)} r4 \tuplet 3/2 {fis8( b fis')}
 	r4 \tuplet 3/2 {fis,8( a b)} r4 \tuplet 3/2 {fis8( a dis)}
-	r4 fis,2.\sf\>
+	r4 \hairpinShorten #'(0 . 4) fis,2.\sf\>
 % Bars 331 to 335
 	eis1\pp(
 	e!2)( gis)
@@ -454,8 +454,8 @@ musicBratscheMvtI = \relative c'' {
 	<d'! gis>2:16 <cis a'>4 r8 gis'-.
 % Bars 391 to 395
 	a8( f e) d-. c( a g) f-.
-	e'(_\sempref d b) c( b e,) e'( d
-	b) e'( d b) c( b e,) a(
+	e'(-\offset X-offset -1 _\sempref d b) c(\noBeam b[ e,)] e'( d
+	b)\noBeam e'( d b) c( b e,) a(
 	g c,) f( e a,) d( c f,)
 	f( b) e,( a) <e a>4 <e gis>
 % Bars 396 to 400

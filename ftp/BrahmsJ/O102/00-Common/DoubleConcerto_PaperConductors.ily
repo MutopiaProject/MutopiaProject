@@ -5,21 +5,20 @@
 %#                           P A P E R  S E C T I O N                          #
 %###############################################################################
 \paper {
-	%annotate-spacing = ##t
 	ragged-last-bottom = ##t
 	ragged-bottom = ##t
 	left-margin = 16 \mm
-	first-page-number = 0
+%	first-page-number = 0
 %	indent = 0
 %	annotate-spacing = ##t
-%	slashSeparator = \markup {
-%		%\center-align
-%		\hspace #-6
-%		\vcenter \combine
-%		\beam #3.3 #0.5 #0.54
-%		\raise #1.24 \beam #3.3 #0.5 #0.54
-%	}
-%	system-separator-markup = \slashSeparator
+	slashSeparator = \markup {
+		%\center-align
+		\hspace #-6
+		\vcenter \combine
+		\beam #3.3 #0.5 #0.54
+		\raise #1.24 \beam #3.3 #0.5 #0.54
+	}
+	system-separator-markup = \slashSeparator
 	bookTitleMarkup = \markup {
 		%\override #'(baseline-skip . 3.5)
 		\column {
