@@ -39,7 +39,7 @@ musicKontrabassMvtII = \relative c' {
 	d( d d)\<
 	cis d dis
 % Bars 26 to 30
-	e fis c
+	e fis c\!
 	b\mf g a(~\dimD\>
 	a8 d) fis,4 a4(~\!
 	a8\pp d) fis,4 a4(~
@@ -72,12 +72,12 @@ musicKontrabassMvtII = \relative c' {
 % Bars 56 to 60
 	f2\p r4
 	R2.
-	r4 r bes -\tweak X-offset #-3.7 -\tweak Y-offset #-3 _\pf\>~
+	r4 r bes_\pfD\>~
 	bes2\p r4
 	R2.
 % Bars 61 to 65
 	r4 r f4\p~
-	f2._\dimmarkup~
+	\after 4 _\dimmarkup f2.~ 
 	f2.
 	des'4^\pizz r r 
 	R2.*2

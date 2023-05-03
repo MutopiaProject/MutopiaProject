@@ -10,7 +10,7 @@ musicHornIIMvtII = \relative c' {
 	\transposition d
 % Bars 1 to 5
 	<< {g4( c2)} {s8 -\tweak X-offset #-2 \f\< s s\> s s s\!} >>
-	<< {d'4( g,2)} {s8\p\< s s s\> s s\!} >>
+	<< {d'4( g,2)} {\hairpinShorten #'(-0.9 . 0.9) s8-\offset X-offset #-1 \p\< s s \hairpinShorten #'(-0.5 . 0) s\> s s\!} >>
 	R2.*28
 % Bars 6 to 10
 	
@@ -48,7 +48,7 @@ musicHornIIMvtII = \relative c' {
 	\bar "||"
 	R2.*2
 	
-	g,4(\f c2)~
+	g,4(-\tweak X-offset -2 \f c2)~
 	c2.~
 % Bars 71 to 75
 	c4 r r
@@ -77,7 +77,7 @@ musicHornIIMvtII = \relative c' {
 	
 	
 	
-	<< {g4( c2)~} {s4\p\< s\> s\!} >>
+	<< {g4( c2)~} {s4-\tweak X-offset -2 \p\< s\> s\!} >>
 	c2.~\!
 % Bars 116 to 118
 	c~

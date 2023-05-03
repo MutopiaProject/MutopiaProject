@@ -36,7 +36,7 @@ musicFagottoIMvtII = \relative c {
 	
 	
 	
-	r4 r a,4^(_\pdolce~ \mark \default \bar "||" \key f \major
+	r4 r \markEO #'(0 . 0) a,4^(_\pdolce~ \mark \default \bar "||" \key f \major
 % Bars 31 to 35
 	a bes c
 	bes a) \partCombineApart \oneVoice \shape #'((0 . -2.5)(0 . -1)(0 . 0)(0 . -0.5)) Slur d(
@@ -66,7 +66,7 @@ musicFagottoIMvtII = \relative c {
 	r r \clef bass \partCombineApart f,,(
 	bes2.)~
 	bes2 \partCombineAutomatic r4
-	r r \partCombineChords a'(
+	r r \partCombineChords \shape #'((0 . -1)(0 . -1)(0 . -1)(0 . 0)) Slur a'(
 	bes a g
 % Bars 61 to 65
 	c,2) \partCombineAutomatic r4
@@ -75,8 +75,8 @@ musicFagottoIMvtII = \relative c {
 	f ges aes
 	ges f) r
 % Bars 66 to 70
-	r r \clef bass cis\pp~ \bar "||" \key d \major
-	cis2._\crescmarkup~
+	r r \clef bass cis-\tweak X-offset 1 \pp~ \bar "||" \key d \major
+	cis2.-\tweak X-offset 0.9 _\crescmarkup~
 	cis2 a4(_\mfcresc~
 	a g a
 	g fis) b(~
@@ -116,7 +116,7 @@ musicFagottoIMvtII = \relative c {
 % Bars 101 to 105
 	g fis) g(
 	cis,! d e
-	d cis) d'(
+	d cis) \aIIXoffset -3 d'(
 	c2.)_\dimmarkup~
 	c4 fis,8( a d, g)~
 % Bars 106 to 110
@@ -131,5 +131,5 @@ musicFagottoIMvtII = \relative c {
 % Bars 116 to 118
 	
 	
-	a2.\p\fermata \bar "|."
+	\dynEO #'(0.7 . 1.5) a2.\p\fermata \bar "|."
 }

@@ -88,7 +88,7 @@ musicSoloCelloMvtII = \relative c {
 	<< {a,2 a'4\trill } {s8\startTrillSpan s s s\stopTrillSpan s4} >>
 % Bars 76 to 80
 	\afterGrace a,2(\trill\< {gis16[ a]} e'8) e,(\!
-	<g! d'>2.\dimD\>)
+	<g! d'>2.)-\offset X-offset #3 _\dimD\>
 	<gis e'>4. r8\! r4
 	a8(\f d e a fis d)
 	b4( b' a)

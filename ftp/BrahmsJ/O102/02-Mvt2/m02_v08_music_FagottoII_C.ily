@@ -10,7 +10,7 @@ musicFagottoIIMvtII = \relative c {
 %	\transposition a
 % Bars 1 to 5
 	R2.\fermata
-	<< {e4 a,2} {s8\p\< s s s\> s s\!} >>
+	<< {e4 a,2} {\hairpinShorten #'(-0.9 . 0.9) s8-\offset X-offset #-1 \p\< s s \hairpinShorten #'(-0.5 . 0) s\> s s\!} >>
 	R2.*4
 % Bars 6 to 10
 	
@@ -75,7 +75,7 @@ musicFagottoIIMvtII = \relative c {
 	des ees f
 	ees des) r
 % Bars 66 to 70
-	r r \clef bass cis,\pp~ \bar "||" \key d \major
+	r r \clef bass cis,-\tweak X-offset 1 \pp~ \bar "||" \key d \major
 	cis2.~
 	cis2 fis4(~
 	fis e fis

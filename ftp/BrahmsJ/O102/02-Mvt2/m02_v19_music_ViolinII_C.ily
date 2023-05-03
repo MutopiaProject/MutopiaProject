@@ -61,16 +61,16 @@ musicViolinIIMvtII = \relative c' {
 	aes) aes4 g aes8~
 % Bars 46 to 50
 	aes\< g4 d'8( g,) g(
-	aes) aes( g) g\! r des'-._(-\tweak X-offset #-3 _\pdolce
+	aes) aes( g) g\! r \markEO #'(-3 . 0.2) des'-._(_\pdolce
 	r des-. r c-.) r bes
 	r aes_\dimmarkup r bes r aes
 	r aes r4 r \mark \default
 % Bars 51 to 55
 	R2.
-	r4 r <g e'>-\tweak X-offset #-7 _\pocof-\tweak X-offset #2 ^\pizz
+	r4 r <g e'>-\tweak extra-offset #'(-5 . 0.5) _\pocof-\tweak X-offset #-10 ^\pizz
 	r <a f'>\p r
 	R2.
-	r4 r <aes d>-\tweak X-offset #-3 _\pf
+	r4 r <aes d>_\pf
 % Bars 56 to 60
 	r a!\p r
 	R2.
@@ -79,7 +79,7 @@ musicViolinIIMvtII = \relative c' {
 	R2.
 % Bars 61 to 65
 	r4 r g-\tweak X-offset #-1.8 \p
-	r4 a_\dimD\> r
+	r4 a-\offset X-offset -2 _\dimD\> r
 	c r des\!
 	R2.
 	r4 cis\pp r

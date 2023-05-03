@@ -75,7 +75,7 @@ musicTrumpetIMvtII = \relative c'' {
 	
 	
 	
-	<< {g4 c2~} {s4\p\< s\> s\!}>>
+	<< {g4 c2~} {s4-\tweak X-offset -2 \p\< s\> s\!}>>
 	c2.~
 % Bars 116 to 118
 	c~

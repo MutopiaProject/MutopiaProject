@@ -51,7 +51,7 @@ musicOboeIMvtII = \relative c''' {
 	r4 r cis(
 	d\< c! bes\!
 	a\> g)\! r
-	\partCombineSoloI r r a'(
+	\partCombineSoloI r r \aIIXoffset -3 a'(
 	bes a g
 % Bars 61 to 65
 	e f) r \partCombineAutomatic
@@ -59,8 +59,8 @@ musicOboeIMvtII = \relative c''' {
 % Bars 66 to 70
 	\bar "||" \key d \major
 	R2.
-	r4 r fis(~_\mfcresc
-	fis g a
+	r4 r \stemOffset #-2 fis(~_\mfcresc
+	\stemOffset #-2 fis g a
 	g fis) b(~
 % Bars 71 to 75
 	b e, fis)
@@ -90,5 +90,5 @@ musicOboeIMvtII = \relative c''' {
 % Bars 116 to 118
 	
 	
-	fis2.\fermata\p \bar "|."
+	\dynEO #'(0.7 . 1.5) fis2.\fermata\p \bar "|."
 }

@@ -24,7 +24,7 @@ musicViolinIMvtII = \relative c' {
 	c'8(_\pocofmadolce a fis dis e g)
 	a[( fis]) g[( e)] fis([ b)]
 	c( a fis dis e g)
-	g[(\< e]) e[(\! g,)]\> g[( e')]
+	g[(\< e]) e[(\! g,)]\> g[( e')]\!
 	fis[(\p d)] cis[(\< a)] a[( d)]
 % Bars 16 to 20
 	d[( b]) d[( e]) e[( fis])\!
@@ -41,7 +41,7 @@ musicViolinIMvtII = \relative c' {
 % Bars 26 to 30
 	b8( e) d4 fis8( a)\!
 	g[(\mf d]) d([ e]) e([ fis)]
-	fis4.(\dimD\> d8) cis( a)
+	fis4.(\dimD\> d8) cis( a)\!
 	fis'4.(\pp d8) cis( a)
 	d( a d) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
@@ -61,16 +61,16 @@ musicViolinIMvtII = \relative c' {
 	c c4 b c8~
 % Bars 46 to 50
 	c\< b4 aes'8( g) g(
-	aes) aes( g) g\! r g-._(-\tweak X-offset #-3 _\pdolce
+	aes) aes( g) g\! r \markEO #'(-3 . 0.2) g-._(_\pdolce
 	r g-. r aes-.) r des,
 	r c_\dimmarkup r des r d
 	r c r4 r \mark \default
 % Bars 51 to 55
 	R2.
-	r4 r bes'-\tweak X-offset #2 ^\pizz-\tweak X-offset #-7 _\pocof
+	r4 r bes'^\pizz-\tweak extra-offset #'(-5.3 . 0.5) _\pocof
 	r a\p r
 	R2.
-	r4 r f-\tweak X-offset #-3 _\pf
+	r4 r f_\pf
 % Bars 56 to 60
 	r c\p r
 	R2.
@@ -79,7 +79,7 @@ musicViolinIMvtII = \relative c' {
 	R2.
 % Bars 61 to 65
 	r4 r <bes, e>\p
-	r <a e'>\dimD\> r
+	r <a e'>-\offset X-offset -2 \dimD\> r
 	<a f'> r <aes f'>\!
 	R2.
 	r4 eis'\pp r
@@ -127,9 +127,9 @@ musicViolinIMvtII = \relative c' {
 % Bars 101 to 105
 	d2 d,4(
 	g2.)~
-	g2 fis4(
+	g2 \shape #'((0 . 0)(0 . -1)(0 . -1)(0 . 0)) Slur fis4(
 	g a g
-	fis!_\dimmarkup ees d
+	fis! \textInSlur ees-\offset X-offset 1 _\dimmarkup d
 % Bars 106 to 110
 	f! ees d~
 	d cis!) c(~

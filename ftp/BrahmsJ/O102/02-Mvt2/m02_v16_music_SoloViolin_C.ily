@@ -11,7 +11,7 @@ musicSoloViolinMvtII = \relative c' {
 % Bars 1 to 5
 	R2.\fermata 
 	R2.\fermata
-	a8(_\fespress d e a fis d)
+	\markEO #'(-1.5 . 0.8) a8(_\fespress d e a fis d)
 	b4( b' a)
 	a,8( d e fis d b)
 % Bars 6 to 10
@@ -39,7 +39,7 @@ musicSoloViolinMvtII = \relative c' {
 	a8( d e a fis\< d)
 	e(^\crescmarkup a fis d) fis[( b]
 % Bars 26 to 30
-	g e) a([ d e8. d16])
+	g e) a([ d e8. d16])\!
 	d8\f([ b)] b([ e,)] e([ a)]
 	a( fis d a) e'4
 	a8(\p fis d a) e'4
@@ -60,7 +60,7 @@ musicSoloViolinMvtII = \relative c' {
 	f8.) r16 r4 r
 % Bars 46 to 50
 	R2.
-	r4  r \tuplet 3/2 4 {r8 g,,\p( \textInSlur des'-\tweak Y-offset #-5 _\dolce
+	r4  r \tuplet 3/2 4 {r8 g,,-\offset X-offset -1.5 \p( \textInSlur des'-\tweak Y-offset #-5 _\dolce
 	f ees d! ees) c4( des8) bes4(
 	c8) aes4(\dimD\> bes8) g4( aes8) aes( d!
 	f) aes,( c f) aes,( c} f16) a,( c f\! \mark \default
@@ -78,8 +78,8 @@ musicSoloViolinMvtII = \relative c' {
 	bes, d'( bes) d,( a) c'( a) c,( g) bes'( g) bes,(
 % Bars 61 to 65
 	e,) g'( e bes a f c a) r4
-	r  r a4(\pp\<
-	c2\> des4)\!
+	r  r << \shape #'((0 . 0)(0 . -0.5)(0 . -0.5)(0 . 0)) Slur a4( {s16-\offset X-offset -1.5 \pp \hairpinShorten #'(2 . 0) s8.-\tweak extra-offset #'(0 . 2.5) \< }>>
+	\hairpinShorten #'(0 . 5) c2-\tweak extra-offset #'(0 . 2.5) \> des4)\!
 	R2.*3
 % Bars 66 to 70
 	\bar "||" \key d \major
@@ -144,7 +144,7 @@ musicSoloViolinMvtII = \relative c' {
 	e a)~ a( a') d,( d')\!
 	\acciaccatura e,8 <e e'>4\f( <a a'>2)~
 	q2._\dimmarkup~
-	q4~ \tuplet 3/2 4 {q8 <gis eis'>(-.\> <a fis'>-. <eis cis'>-. <fis d'>-. <bes, gis'!>-.)\!
+	q4~ \tuplet 3/2 4 {q8 <gis eis'>(-.\> <a fis'>-. \tupletUp <eis cis'>-. <fis d'>-. <bes, gis'!>-.)\!
 	<a a'>(-.\p <gis eis'>-. <a fis'>-.) <g d'>(-. <d b'>-. <g d'>-. <b g'>-. <d b'>-. <d d'>-.)}
 % Bars 116 to 118
 	<fis fis'>2.~

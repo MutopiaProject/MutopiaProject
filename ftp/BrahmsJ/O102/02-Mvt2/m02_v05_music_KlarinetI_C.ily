@@ -29,7 +29,7 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	
-	r4 r c'_\pdolce(~ \bar "||" \key aes \major \mark \default
+	r4 r \markEO #'(0 . 0) c'_\pdolce(~ \bar "||" \key aes \major \mark \default
 % Bars 31 to 35
 	c des ees
 	des c) \partCombineApart \oneVoice \shape #'((0 . -2.2)(0 . -2)(0 . -1)(0 . -0.5)) Slur f(
@@ -39,9 +39,9 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 36 to 40
 	g f) \shape #'((0 . 2)(0 . -1)(0 . -1)(0 . 2)) Slur bes(
 	c cis d
-	bes2) \partCombineApart bes4\pdolceD\<(
+	bes2) \partCombineApart bes4_\pdolceD_\<(
 	des!4.) des4 des8(\!
-	des)\> des4 des8(\! c) c(
+	des)_\> des4 des8(\! c) c(
 % Bars 41 to 45
 	bes4) r r
 	r r bes\p(
@@ -53,7 +53,7 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	
-	r4 r c(_\psempre~ \mark \default
+	r4 r c(-\tweak X-offset 1 _\psempre~ \mark \default
 % Bars 51 to 55
 	c des ees
 	des c) r
@@ -72,8 +72,8 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 66 to 70
 	\bar "||" \key f \major
 	R2.
-	r4 r \shape #'((0 . -1.5)(0 . -0.5)(0 . 0)(0 . 0)) Slur c(~_\mfcresc
-	c bes c
+	r4 r \shape #'((0 . -1.5)(0 . -0.5)(0 . 0)(0 . 0)) Slur \stemOffset #-2 c(~_\mfcresc
+	\stemOffset #-2 c bes c
 	bes a) r
 % Bars 71 to 75
 	R2.*2
@@ -85,12 +85,12 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 81 to 85
 	
 	
-	\partCombineSoloI r4 r8 c,(_\p_\< f g
+	\partCombineSoloI r4 r8 c,(_\p_\< f g\!
 	c_\> a f c)\! r4 \partCombineAutomatic
 	R2.
 % Bars 86 to 90
 	\partCombineSoloI r4 r8 a(_\< cis e\!
-	a_\> fis d a)\! r4 \partCombineAutomatic
+	\hairpinShorten #'(0 . 2) a_\> fis d a)\! r4 \partCombineAutomatic
 	R2.*12
 % Bars 91 to 95
 	

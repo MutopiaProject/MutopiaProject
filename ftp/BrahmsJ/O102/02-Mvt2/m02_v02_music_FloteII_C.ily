@@ -84,7 +84,7 @@ musicFloteIIMvtII = \relative c''' {
 % Bars 66 to 70
 	gis2\> fis4)\! \bar "||" \key d \major
 	R2.
-	r4 r fis'_\mfcresc~
+	r4 r \markEO #'(0 . 1) fis'_\mfcresc~
 	fis e fis
 	e d g~
 % Bars 71 to 75
@@ -103,11 +103,11 @@ musicFloteIIMvtII = \relative c''' {
 	r4 r fis,8( b)
 	d([ cis)] cis([ b)] a4
 	R2.
-	r4 r r8 fis(
+	g4\rest g\rest r8 fis(
 	b[ g)] b([ d)] d4
 % Bars 86 to 90
 	R2.
-	r4 r8 fis,( b d)
+	g,4\rest g8\rest fis( b d)
 	d([ cis)] cis([ b)] a4
 	R2.
 	fis'8([ dis)] e([ cis)] dis([ b)]

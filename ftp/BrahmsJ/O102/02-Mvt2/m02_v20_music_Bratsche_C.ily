@@ -27,7 +27,7 @@ musicBratscheMvtII = \relative c' {
 	<c, e>\<([-\tweak X-offset #-1.5 ^\div <e g>]) q([ <c e>])\> <cis e>([ <g' a>])\!
 	<fis a>4(\p <e g>\< <d fis>)
 % Bars 16 to 20
-	<d g> <<{g8([ e)] e([ fis)]} \\ {d4 d\!}>>
+	<d g> <<{\voiceOne g8([ e)] e([ fis)]\!} \new Voice {\voiceTwo d4 d}>> \oneVoice
 	<d fis>2\> <e g>4\!
 	<d fis>2_\pdim <e g>4
 	fis8( a fis) r r4
@@ -41,7 +41,7 @@ musicBratscheMvtII = \relative c' {
 % Bars 26 to 30
 	g4 c8([ a]) a([ fis])\!
 	<<{d4^\div d8([ e)] e([ fis)] } \\ {d4\mf d d}>>
-	<d fis>2\dimD\> <e g>4
+	<d fis>2\dimD\> <e g>4\!
 	<d fis>2\pp <e g>4
 	fis8( a fis) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
@@ -63,19 +63,19 @@ musicBratscheMvtII = \relative c' {
 	r f r4 r \mark \default
 % Bars 51 to 55
 	R2.
-	r4 r <e des'>-\tweak X-offset #-7 _\pocof-\tweak X-offset #2 ^\pizz
+	r4 r <e des'>-\tweak extra-offset #'(-5 . 0.5) _\pocof-\tweak X-offset #-10 ^\pizz
 	r <f c'>\p r
 	R2.
-	r4 r <d b'>-\tweak X-offset #-3 _\pf
+	r4 r <d b'>_\pf
 % Bars 56 to 60
-	r <c c'>\p <a' cis>(^\div
+	r <c c'>-\offset X-offset -0.5 \p <a' cis>(^\div
 	<bes d> <a c!>\< <g bes>\!
-	<f a>\> <e g>)\! << {c'^\pizz} \\ {ees,_\pf} >>
-	r << {bes'} \\ {d,\p} >>  <a' c>^\arco(
+	<f a>\> <e g>)\! << {c'-\offset X-offset -5 ^\pizz} \\ {ees,-\offset X-offset 1 _\pf} >>
+	r << {bes'} \\ {d,-\offset X-offset 0.8 \p} >>  <a' c>^\arco(
 	<bes d> <fis c'> <g bes>~
 % Bars 61 to 65
-	q <f! a>) <e des'>^\pizz\p
-	r <f  c'>\dimD\> r
+	q <f! a>) <e des'>-\offset X-offset -5 ^\pizz\p
+	r <f  c'>-\offset X-offset -2 \dimD\> r
 	<f ees'> r <f des'>\!
 	R2.
 	r4 gis\pp r
@@ -133,12 +133,12 @@ musicBratscheMvtII = \relative c' {
 	a2.)~
 	a2 fis4(
 	g a g
-	fis! ees_\dimmarkup d
+	fis! \textInSlur ees-\offset X-offset 1 _\dimmarkup d
 % Bars 106 to 112
 	f ees d
 	e!2) c4(
 	d2) g4~
-	g <ees g>2^\div
+	g <ees g>2-\offset X-offset -4.5 _\div
 	<<{
 		fis!4(\p e!)\< fis(
 		e) a( d)\!

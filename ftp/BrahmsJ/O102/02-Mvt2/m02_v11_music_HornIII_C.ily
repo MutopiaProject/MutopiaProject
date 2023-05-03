@@ -67,7 +67,7 @@ musicHornIIIMvtII = \relative c {
 	R2. \bar "||"
 	R2.*2
 	
-	e4\f( a2)~
+	e4-\tweak X-offset -2 \f( a2)~
 	a2.~
 % Bars 71 to 75
 	a4 r r
@@ -96,7 +96,7 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	
-	<< {e,4( a2)~ } {s4\p\< s\> s\!}>>
+	<< {e,4( a2)~ } {s4-\tweak X-offset -2 \p\< s\> s\!}>>
 	a2.\!~
 % Bars 116 to 118
 	a~

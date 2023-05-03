@@ -38,10 +38,10 @@ musicFloteIMvtII = \relative c''' {
 	
 	
 	
-	r4 r a'_\pdolce(~ \bar "||" \mark \default \key f \major
+	r4 r \markEO #'(0 . 0) a'_\pdolce(~ \bar "||" \markWhiteout \mark \default \key f \major
 % Bars 31 to 35
 	a bes c
-	bes a) \partCombineApart \oneVoice d(
+	bes a) \partCombineApart \oneVoice \shape #'((0 . -2.2)(0 . -1)(0 . 0)(0 . -0.5)) Slur d(
 	e f g
 	\voiceOne f c) \partCombineApart c,\((
 	f) e d
@@ -59,14 +59,14 @@ musicFloteIMvtII = \relative c''' {
 	\partCombineApart \oneVoice f4. \omitBeam f8( g) f8~ \voiceOne
 % Bars 46 to 50
 	f f( d') b( c) g_(
-	des') b( c)\> g( des')^\dimmarkup des(~\!
+	des') b( c)_\> g( des')^\dimmarkup des(~\!
 	des4 c8) r r4 \partCombineAutomatic
 	R2.
-	r4 r a!_\psempre(~ \mark \default
+	r4 r a!_\psempre(~ \markWhiteout \mark \default
 % Bars 51 to 55
 	a bes c
 	bes a) r
-	r r \partCombineApart \oneVoice d(
+	r r \partCombineApart \oneVoice \shape #'((0 . -2)(0 . -1.5)(0 . 0)(0 . -0.5)) Slur d(
 	e f g
 	\voiceOne f c) \partCombineAutomatic  r
 % Bars 56 to 60
@@ -102,12 +102,12 @@ musicFloteIMvtII = \relative c''' {
 % Bars 81 to 85
 	r4 r b,8( d)
 	fis([ e)] e([ d)] cis4
-	\partCombineApart a8(_\p d e_\< a d e
+	\partCombineApart a8(_\p d e_\< a d e\!
 	a_\> fis d a)\! \partCombineAutomatic r a,(
 	d[ b)] d([ e)] fis4
 % Bars 86 to 90
-	\partCombineApart a,8( d e_\< fis ais cis
-	fis_\> dis b fis\! d! fis) \partCombineAutomatic
+	\partCombineApart a,8( d e_\< fis ais cis\!
+	\hairpinShorten #'(0 . 2) fis_\> dis b fis\! d! fis) \partCombineAutomatic
 	fis([ e)] e([ d)] cis4
 	\partCombineApart c'2(\mf\> b4)\! \partCombineAutomatic
 	a8([ fis)] g[( e)] fis([ b)]
@@ -134,5 +134,5 @@ musicFloteIMvtII = \relative c''' {
 % Bars 116 to 118
 	
 	
-	d'2.\p\fermata \bar "|."
+	\dynEO #'(0.7 . 1.5) d'2.\p\fermata \bar "|."
 }

@@ -9,7 +9,6 @@ timeMvtI = {
 }
 timeMvtII = {
 	\time 3/4
-	\tempo "Andante"
 }
 timeMvtIII = {
 	\time 2/4

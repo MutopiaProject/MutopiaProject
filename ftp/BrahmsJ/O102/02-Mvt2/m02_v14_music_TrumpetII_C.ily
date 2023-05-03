@@ -48,7 +48,7 @@ musicTrumpetIIMvtII = \relative c' {
 	\bar "||"
 	R2.*2
 	
-	g4\f( c2)~
+	g4-\tweak X-offset -2 \f( c2)~
 	c2.~
 % Bars 71 to 75
 	c4 r r
@@ -75,7 +75,7 @@ musicTrumpetIIMvtII = \relative c' {
 	
 	
 	
-	\partCombineChords << {g4( c2)~ } {s4\p\< s\> s\!}>>
+	\partCombineChords << {g4( c2)~ } {s4-\tweak X-offset -2 \p\< s\> s\!}>>
 	c2.\!~
 % Bars 116 to 118
 	c~

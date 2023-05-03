@@ -10,7 +10,7 @@ musicKlarinetIIMvtII = \relative c''' {
 	\transposition a
 % Bars 1 to 5
 	R2.\fermata
-	<< {g4 c,2} {s8\p\< s s s\> s s\!} >>
+	<< {g4 c,2} {\hairpinShorten #'(-0.9 . 0.9) s8-\offset X-offset #-1 \p\< s s \hairpinShorten #'(-0.5 . 0) s\> s s\!} >>
 	R2.*5
 % Bars 6 to 10
 	
