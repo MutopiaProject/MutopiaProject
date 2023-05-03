@@ -9,8 +9,8 @@ musicOboeIIMvtII = \relative c'' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
+	R2.\fermata
+	R2.\fermata
 	R2.*28
 % Bars 6 to 10
 	
@@ -34,7 +34,7 @@ musicOboeIIMvtII = \relative c'' {
 	R
 % Bars 36 to 40
 	r4 r c
-	a g f
+	a g \voiceOne f
 	d e r
 	R2.*12
 % Bars 41 to 45
@@ -49,7 +49,7 @@ musicOboeIIMvtII = \relative c'' {
 	R2.*5
 % Bars 56 to 60
 	r4 r a(
-	bes\< a g
+	bes\< a g\!
 	f\> e)\! r
 	R2.
 	R

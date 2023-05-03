@@ -13,4 +13,7 @@ tempiMvtI = {
 	% bar 415.75
 	\tempo "in tempo"
 }
+tempiMvtII = {
+	\tempo "Andante"
+}
 

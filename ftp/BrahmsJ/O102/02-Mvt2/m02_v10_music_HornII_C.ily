@@ -48,7 +48,7 @@ musicHornIIMvtII = \relative c' {
 	\bar "||"
 	R2.*2
 	
-	g,4\f c2~
+	g,4(\f c2)~
 	c2.~
 % Bars 71 to 75
 	c4 r r

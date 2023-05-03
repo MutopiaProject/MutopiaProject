@@ -11,14 +11,14 @@
 %	first-page-number = 0
 %	indent = 0
 %	annotate-spacing = ##t
-	slashSeparator = \markup {
-		%\center-align
-		\hspace #-6
-		\vcenter \combine
-		\beam #3.3 #0.5 #0.54
-		\raise #1.24 \beam #3.3 #0.5 #0.54
-	}
-	system-separator-markup = \slashSeparator
+%	slashSeparator = \markup {
+%		%\center-align
+%		\hspace #-6
+%		\vcenter \combine
+%		\beam #3.3 #0.5 #0.54
+%		\raise #1.24 \beam #3.3 #0.5 #0.54
+%	}
+%	system-separator-markup = \slashSeparator
 	bookTitleMarkup = \markup {
 		%\override #'(baseline-skip . 3.5)
 		\column {
@@ -43,7 +43,7 @@
 		}
 	}
 	oddHeaderMarkup = \markup {
-		\on-the-fly \not-first-page \fill-line {
+		\unless \on-first-page \fill-line {
 			\null
 			\center-column {
 				\fromproperty #'header:subsubtitle
@@ -53,7 +53,7 @@
 		}
 	}
 	evenHeaderMarkup = \markup {
-		\on-the-fly \not-first-page \fill-line {
+		\unless \on-first-page \fill-line {
 			\fromproperty #'page:page-number-string
 			\center-column {
 				\fromproperty #'header:subsubtitle
@@ -65,7 +65,7 @@
 	oddFooterMarkup = \markup {
 		\column {
 			\fill-line {
-				\on-the-fly #(on-page 1) \fromproperty #'header:copyright
+				\if \on-page #1 \fromproperty #'header:copyright
 			}
 		}
 	}

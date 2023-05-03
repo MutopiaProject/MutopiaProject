@@ -9,15 +9,15 @@ musicKlarinetIIMvtII = \relative c''' {
 	\key f \major
 	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
+	R2.\fermata
 	<< {g4 c,2} {s8\p\< s s s\> s s\!} >>
 	R2.*5
 % Bars 6 to 10
 	
 	
-	d8(\p\< bes) bes(\> g)\! a4
+	d8[(\p\< bes)\!] bes([\> g)]\! a4
 	R2.
-	a8(\< f) f(\> d)\! c4
+	a8[(\< f)]\! f[(\> d)]\! c4
 % Bars 11 to 15
 	R2.*19
 % Bars 16 to 20
@@ -35,11 +35,11 @@ musicKlarinetIIMvtII = \relative c''' {
 	bes aes) des
 	bes c des
 	c2 ees,4(
-	aes) g\< f 
+	\voiceOne aes) g\< f\!
 % Bars 36 to 40
-	ees\> d\! ees(~
+	ees\> d\! ees_(_~
 	ees e f
-	aes g) r4
+	\voiceTwo aes g) r4
 	R2.
 	R
 % Bars 41 to 45

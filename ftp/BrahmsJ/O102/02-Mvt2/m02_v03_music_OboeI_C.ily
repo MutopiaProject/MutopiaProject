@@ -9,8 +9,8 @@ musicOboeIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
+	R2.\fermata
+	R2.\fermata
 	R2.*28
 % Bars 6 to 10
 	
@@ -30,12 +30,12 @@ musicOboeIMvtII = \relative c''' {
 	R2.*3
 	
 	
-	\partcombineApart r4 r a4_\pdolce(~
+	\partCombineApart r4 r a4_\pdolce(~
 	a\< g f\>
 % Bars 36 to 40
-	e d )\! \partcombineChords g(
-	f e d 
-	b c) \partcombineAutomatic r
+	e d )\! g(
+	\oneVoice f e \voiceOne d 
+	b c) \partCombineAutomatic r
 	R2.*12
 % Bars 41 to 45
 	
@@ -49,12 +49,12 @@ musicOboeIMvtII = \relative c''' {
 	R2.*5
 % Bars 56 to 60
 	r4 r cis(
-	d\< c! bes
+	d\< c! bes\!
 	a\> g)\! r
-	\partcombineSoloI r r a'(
+	\partCombineSoloI r r a'(
 	bes a g
 % Bars 61 to 65
-	e f) r \partcombineAutomatic
+	e f) r \partCombineAutomatic
 	R2.*5
 % Bars 66 to 70
 	\bar "||" \key d \major

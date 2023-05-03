@@ -9,8 +9,8 @@ musicHornIVMvtII = \relative c, {
 	\key c \major
 	\transposition f
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
+	R2.\fermata
+	R2.\fermata
 	R2.*27
 % Bars 6 to 10
 	
@@ -101,5 +101,5 @@ musicHornIVMvtII = \relative c, {
 % Bars 116 to 118
 	a~
 	a2 r4
-	R2.\fermataMarkup \bar "|."
+	R2.\fermata \bar "|."
 }

@@ -9,8 +9,8 @@ musicTrumpetIIMvtII = \relative c' {
 	\key c \major
 	\transposition d
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
+	R2.\fermata
+	R2.\fermata
 	R2.*28
 % Bars 6 to 10
 	
@@ -75,10 +75,10 @@ musicTrumpetIIMvtII = \relative c' {
 	
 	
 	
-	\partcombineChords << {g4( c2)~ } {s4\p\< s\> s\!}>>
+	\partCombineChords << {g4( c2)~ } {s4\p\< s\> s\!}>>
 	c2.\!~
 % Bars 116 to 118
 	c~
-	c2 \partcombineAutomatic r4
+	c2 \partCombineAutomatic r4
 	c2.\fermata \bar "|."
 }

@@ -30,7 +30,7 @@ musicKontrabassMvtII = \relative c' {
 	d(\p d\< d)
 % Bars 16 to 20
 	g, g' a(~\!
-	a8 d) fis,4 a(~\!
+	a8\> d) fis,4\! a(~
 	a8_\pdim d) fis,4 a4(~
 	a d,8) r r4
 	R2.
@@ -89,7 +89,7 @@ musicKontrabassMvtII = \relative c' {
 	fis,4 r r
 	R2.
 	a'4\f d r
-	r r d,_\mfcresc~
+	r r d,_\mfcresc^\arco~
 % Bars 71 to 75
 	d2^\solo d4(~
 	d cis b

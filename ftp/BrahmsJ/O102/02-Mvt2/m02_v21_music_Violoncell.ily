@@ -43,7 +43,7 @@ musicVioloncellMvtII = \relative c {
 	a d,8) r r4
 	R2.
 % Bars 21 to 25
-	<<{\times 2/3 {b'8( fis' a)} \times 2/3 {b,( fis' g)} \times 2/3 {b,( fis' b)}} \\ {b,4_\moltop b b}>>
+	<<{\times 2/3 {b'8( fis' a)} \times 2/3 {b,( e g)} \times 2/3 {b,( fis' b)}} \\ {b,4_\moltop b b}>>
 	R2.
 	<<{\times 2/3 {c,8(\< g' c)} \times 2/3 {c( e\> g)} \times 2/3 {cis,( e a)\!}} \\ {c,,4 c cis}>>
 	\times 2/3 {d8( a' fis')} \times 2/3 {d,( a' e')} \times 2/3 {d,(\< a' fis')}

@@ -9,8 +9,8 @@ musicHornIMvtII = \relative c'' {
 	\key c \major
 	\transposition d
 % Bars 1 to 5
-	\partcombineChords g4( c2)\fermata
-	\partcombineApart d4( g2)\fermata \partcombineAutomatic
+	\partCombineChords g4( c2)\fermata
+	\partCombineApart d4( \once \oneVoice g2)\fermata \partCombineAutomatic
 	R2.*28
 % Bars 6 to 10
 	
@@ -48,10 +48,10 @@ musicHornIMvtII = \relative c'' {
 	\bar "||"
 	R2.*2
 	
-	\partcombineApart g,,4( c2)~
+	g,,4(\f c2)~
 	c2.~
 % Bars 71 to 75
-	c4 \partcombineAutomatic r r
+	c4 r r
 	R2.
 	g'4.\f\> r8\! r4
 	R2.*26

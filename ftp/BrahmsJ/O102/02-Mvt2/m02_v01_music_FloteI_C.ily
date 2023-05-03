@@ -9,16 +9,16 @@ musicFloteIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	\partcombineApart e4( a2)\fermata  \partcombineAutomatic
+	R2.\fermata
+	\partCombineApart e4( \once \oneVoice a2)\fermata  \partCombineAutomatic
 	R2.*4
 	
 	
 % Bars 6 to 10
 	
-	\partcombineSoloI a,,8(_\pdolce d  e a fis d) \partcombineAutomatic
+	\partCombineSoloI a,,8(_\pdolce d  e a fis d) \partCombineAutomatic
 	R2.
-	\partcombineSoloI a8( d e fis d b) \partcombineAutomatic
+	\partCombineSoloI a8( d e fis d b) \partCombineAutomatic
 	R2.*9
 % Bars 11 to 15
 	
@@ -26,12 +26,12 @@ musicFloteIMvtII = \relative c''' {
 	
 	
 	
-	\partcombineApart r4 r8 fis'(\p a b)
-	c( a fis dis e g) \partcombineAutomatic
+	\partCombineApart r4 r8 fis'(\p a b)
+	c( a fis dis e g) \partCombineAutomatic
 % Bars 21 to 25
-	a(\p fis) g( e) fis( b)
-	\partcombineApart c( a fis dis e g) \partcombineAutomatic
-	g( e) e( g,) g( a)
+	a([\p fis]) g([ e)] fis([ b])
+	\partCombineApart c( a fis dis e g) \partCombineAutomatic
+	g[( e)] e[( g,)] g[( a)]
 	R2.*6
 % Bars 26 to 30
 	
@@ -41,42 +41,42 @@ musicFloteIMvtII = \relative c''' {
 	r4 r a'_\pdolce(~ \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	a bes c
-	bes a) \partcombineChords d(
+	bes a) \partCombineApart \oneVoice d(
 	e f g
-	f c) \partcombineAutomatic c,\((_\pdolce
-	f) e\< d
+	\voiceOne f c) \partCombineApart c,\((
+	f) e d
 % Bars 36 to 40
-	c\> b\)\! c(~
-	c cis d
-	g,2) r4
+	c b\)\! \partCombineApart c(~
+	\oneVoice c cis d
+	\voiceOne g,2) \partCombineAutomatic r4 
 	R2.*2
 	
 % Bars 41 to 45
-	\partcombineSoloI f'4._\p_\< f4 f8~
+	\partCombineSoloI f'4._\p_\< f4 f8~\!
 	f_\> f4 f8( g) g~\!
-	g4. r8 r4 \partcombineAutomatic
+	g4. r8 r4 \partCombineAutomatic
 	R2.
-	\partcombineApart f4. f8( g) f8~
+	\partCombineApart \oneVoice f4. \omitBeam f8( g) f8~ \voiceOne
 % Bars 46 to 50
 	f f( d') b( c) g_(
 	des') b( c)\> g( des')^\dimmarkup des(~\!
-	des4 c8) r r4 \partcombineAutomatic
+	des4 c8) r r4 \partCombineAutomatic
 	R2.
 	r4 r a!_\psempre(~ \mark \default
 % Bars 51 to 55
 	a bes c
 	bes a) r
-	r  r \partcombineChords d(
+	r r \partCombineApart \oneVoice d(
 	e f g
-	f \stemUp c) \partcombineAutomatic \oneVoice \stemNeutral r
+	\voiceOne f c) \partCombineAutomatic  r
 % Bars 56 to 60
 	r r cis(
-	d\< c! bes
+	d\< c! bes\!
 	a\> g\!) r
-	\partcombineSoloI r r f(
+	\partCombineSoloI r r f(
 	d dis e
 % Bars 61 to 65
-	c2) r4 \partcombineAutomatic
+	c2) r4 \partCombineAutomatic
 	R2.*3
 	
 	
@@ -84,12 +84,12 @@ musicFloteIMvtII = \relative c''' {
 % Bars 66 to 70
 	b2\> a4)\! \bar "||" \key d \major
 	R2.
-	r4 r \partcombineApart fis'(~
+	r4 r \partCombineApart fis'(~
 	fis g! a
-	g fis) \partcombineAutomatic b(~
+	g fis) \oneVoice b(~
 % Bars 71 to 75
 	b cis d)
-	e2( fis4)
+	\voiceOne e2( fis4) \partCombineAutomatic
 	g4.\f\> r8\! r4
 	R2.*5
 	
@@ -98,22 +98,22 @@ musicFloteIMvtII = \relative c''' {
 	
 	
 	r4 r d,8(\mf a)
-	b( d) d( e) fis4
+	b([ d)] d([ e)] fis4
 % Bars 81 to 85
 	r4 r b,8( d)
-	fis( e) e( d) cis4
-	\partcombineApart a8(_\p d e_\< a d e
-	a_\> fis d a)\! \partcombineAutomatic r a,(
-	d b) d( e) fis4
+	fis([ e)] e([ d)] cis4
+	\partCombineApart a8(_\p d e_\< a d e
+	a_\> fis d a)\! \partCombineAutomatic r a,(
+	d[ b)] d([ e)] fis4
 % Bars 86 to 90
-	\partcombineApart a,8( d e_\< fis ais cis
-	fis_\> dis b fis\! d! fis) \partcombineAutomatic
-	fis( e) e( d) cis4
-	\partcombineApart c'2(\mf\> b4)\! \partcombineAutomatic
-	a8( fis) g( e) fis( b)
+	\partCombineApart a,8( d e_\< fis ais cis
+	fis_\> dis b fis\! d! fis) \partCombineAutomatic
+	fis([ e)] e([ d)] cis4
+	\partCombineApart c'2(\mf\> b4)\! \partCombineAutomatic
+	a8([ fis)] g[( e)] fis([ b)]
 % Bars 91 to 95
-	\partcombineApart c!2(\> b4)\! \partcombineChords
-	bes8( g) g( e) e( a) \partcombineAutomatic
+	\partCombineApart c!2(\> b4)\! \partCombineChords
+	bes8([ g)] g([ e)] e([ a)] \partCombineAutomatic
 	R2.*7
 % Bars 96 to 100
 	
@@ -126,10 +126,10 @@ musicFloteIMvtII = \relative c''' {
 % Bars 106 to 110
 	
 % Bars 111 to 115
-	\partcombineApart r4 r d(~\f
+	\partCombineApart r4 r d(~\f
 	d cis_\dimD_\> b
 	a g e)~
-	e(\p d) r \partcombineAutomatic
+	e(\p d) r \partCombineAutomatic
 	R2.*3
 % Bars 116 to 118
 	

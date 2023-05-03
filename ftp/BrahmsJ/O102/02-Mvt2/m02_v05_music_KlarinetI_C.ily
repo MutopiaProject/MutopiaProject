@@ -9,15 +9,15 @@ musicKlarinetIMvtII = \relative c''' {
 	\key f \major
 	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	\partcombineApart g4( c2)\fermata \partcombineAutomatic
+	R2.\fermata
+	\partCombineApart g4( \oneVoice c2)\fermata \partCombineAutomatic
 	R2.*5
 % Bars 6 to 10
 	
 	
-	f,8(^\dolce\p\< d) d(\> bes)\! c4
+	f,8[(^\dolce\p\< d])\! d[(\> bes)]\! c4
 	R2.
-	f8(\< d) d(\> f,)\! e4
+	f8([\< d)]\! d[(\> f,)]\! e4
 % Bars 11 to 15
 	R2.*19
 % Bars 16 to 20
@@ -32,22 +32,22 @@ musicKlarinetIMvtII = \relative c''' {
 	r4 r c'_\pdolce(~ \bar "||" \key aes \major \mark \default
 % Bars 31 to 35
 	c des ees
-	des c) \partcombineChords f(
+	des c) \partCombineApart \oneVoice \shape #'((0 . -2.2)(0 . -2)(0 . -1)(0 . -0.5)) Slur f(
 	g aes bes 
-	aes ees) \partcombineAutomatic \shape #'((0 . 2)(0 . -.5)(0 . -.5)(0 . 2)) Slur c~(
+	\voiceOne aes ees) \partCombineAutomatic \shape #'((0 . 2)(0 . -.5)(0 . -.5)(0 . 2)) Slur c~(
 	c bes aes 
 % Bars 36 to 40
 	g f) \shape #'((0 . 2)(0 . -1)(0 . -1)(0 . 2)) Slur bes(
 	c cis d
-	bes2) \partcombineApart bes4\pdolceD\<(
-	des!4.) des4 des8(
+	bes2) \partCombineApart bes4\pdolceD\<(
+	des!4.) des4 des8(\!
 	des)\> des4 des8(\! c) c(
 % Bars 41 to 45
 	bes4) r r
 	r r bes\p(
-	des4.) des8( ees) des~
+	des4.) \oneVoice \omitBeam des8( ees) des~ \voiceOne
 	des des( bes') g( aes) ees(
-	f8) \partcombineAutomatic r r4 r
+	f8) \partCombineAutomatic r r4 r
 % Bars 46 to 50
 	R2.*4
 	
@@ -57,9 +57,9 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 51 to 55
 	c des ees
 	des c) r
-	r r \partcombineChords f(
+	r r \partCombineApart \oneVoice \shape #'((0 . -2.2)(0 . -2)(0 . -1)(0 . -0.5)) Slur f(
 	g aes bes
-	aes ees) \partcombineAutomatic r
+	\voiceOne aes ees) \partCombineAutomatic r
 % Bars 56 to 60
 	R2.*3
 	
@@ -78,19 +78,19 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 71 to 75
 	R2.*2
 	
-	\partcombineChords <<g'4. {s8\f\> s s\!}>> \partcombineAutomatic r8 r4
+	\partCombineChords <<g'4. {s8\f\> s s\!}>> \partCombineAutomatic r8 r4
 	R2.*9
 % Bars 76 to 80
 	
 % Bars 81 to 85
 	
 	
-	\partcombineSoloI r4 r8 c,(_\p_\< f g
-	c_\> a f c)\! r4 \partcombineAutomatic
+	\partCombineSoloI r4 r8 c,(_\p_\< f g
+	c_\> a f c)\! r4 \partCombineAutomatic
 	R2.
 % Bars 86 to 90
-	\partcombineSoloI r4 r8 a(_\< cis e
-	a_\> fis d a)\! r4 \partcombineAutomatic
+	\partCombineSoloI r4 r8 a(_\< cis e\!
+	a_\> fis d a)\! r4 \partCombineAutomatic
 	R2.*12
 % Bars 91 to 95
 	
@@ -103,20 +103,20 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 101 to 105
 	bes a) d(
 	e! f g
-	f e) \partcombineApart f(
+	f e) \partCombineApart f(
 	ees2.)~_\dimmarkup
 	ees4 a,8( c f, bes)~
 % Bars 106 to 110
-	bes4. r8 r4 \partcombineAutomatic
+	bes4. r8 r4 \partCombineAutomatic
 	R2.*4
 	
 	
 	
 % Bars 111 to 115
-	\partcombineSoloI r4 r f'(_\f~
+	\partCombineSoloI r4 r f'(_\f~
 	f e\dimD\> d
 	c bes) bes(~
-	bes_\p a) r \partcombineAutomatic
+	bes_\p a) r \partCombineAutomatic
 	R2.*3
 % Bars 116 to 118
 	

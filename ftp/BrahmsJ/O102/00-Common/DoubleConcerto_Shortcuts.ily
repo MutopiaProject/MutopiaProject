@@ -108,6 +108,8 @@ rf = #(make-dynamic-script "rf")
 pfD = #(make-dynamic-script "pf")
 
 noFlag = \once \omit Flag
+omitBeam = \once \omit Beam
+
 
 % fonction
 mmrLength = #(define-music-function
@@ -245,7 +247,19 @@ trillSpanPadding = #(define-music-function
 	#}
 )
 
+markXoffset = #(define-music-function
+	(offset)
+	(number?)
+	#{
+		\once \override Score.RehearsalMark.self-alignment-X = #(- offset)
+	#}
+)
 
+textInSlur = {
+	\once \override TextScript.outside-staff-priority = ##f
+	\once \override TextScript.slur-padding = #0
+	%\once \override TextScript.avoid-slur = #'around
+}
 
 #(define my-script-alist
 	(
@@ -382,14 +396,6 @@ trillSpanPadding = #(define-music-function
 %omitMMRN = \omit MultiMeasureRestNumber
 
 
-%markXoffset = #(define-music-function
-%	(offset)
-%	(number?)
-%	#{
-%		\once \override Score.RehearsalMark.self-alignment-X = #(- offset)
-%	#}
-%)
-
 %markYoffset = #(define-music-function
 %	(offset)
 %	(number?)
@@ -436,12 +442,6 @@ trillSpanPadding = #(define-music-function
 %	\revert TupletNumber.avoid-slur
 %}
 
-
-%textInSlur = {
-%	%\once \override TextScript.outside-staff-priority = 0
-%	\once \override TextScript.slur-padding = #0
-%	\once \override TextScript.avoid-slur = #'around
-%}
 
 %textOsp = #(define-music-function
 %	(prio)

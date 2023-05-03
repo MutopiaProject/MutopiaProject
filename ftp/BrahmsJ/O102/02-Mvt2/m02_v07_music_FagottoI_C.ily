@@ -9,27 +9,27 @@ musicFagottoIMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	\partcombineApart e4( a2)\fermata \partcombineAutomatic
+	R2.\fermata
+	\partCombineApart e4( \once \oneVoice a2)\fermata \partCombineAutomatic
 	R2.*4
 % Bars 6 to 10
 	
-	\partcombineApart a,8(_\pdolce d e a fis d) \partcombineAutomatic
-	d'(\< b) b(\> g)\! a4
-	\partcombineApart a,8( d e fis d b) \partcombineAutomatic
-	d'(\< b) b(\> d,)\! cis4
+	\partCombineApart a,8(_\pdolce d e a fis d) \partCombineAutomatic
+	d'[(\< b)\!] b[(\> g)]\! a4
+	\partCombineApart a,8( d e fis d b) \partCombineAutomatic
+	d'(\<[ b)\!] b[(\> d,)]\! cis4
 % Bars 11 to 15
 	R2.*8
 % Bars 16 to 20
 	
 	
 	
-	\partcombineApart r4 r8 fis(\p a b)
-	c( a fis dis e g) \partcombineAutomatic
+	\partCombineApart r4 r8 fis(\p a b)
+	c( a fis dis e g) \partCombineAutomatic
 % Bars 21 to 25
-	a(\p fis) g( e) fis( b)
-	\partcombineApart c( a fis dis e g) \partcombineAutomatic
-	g'( e) e( g,) g( a)
+	a([\p fis)] g[( e)] fis([ b])
+	\partCombineApart c( a fis dis e g) \partCombineAutomatic
+	g'[( e]) e[( g,]) g[( a])
 	R2.*6
 % Bars 26 to 30
 	
@@ -39,14 +39,14 @@ musicFagottoIMvtII = \relative c {
 	r4 r a,4^(_\pdolce~ \mark \default \bar "||" \key f \major
 % Bars 31 to 35
 	a bes c
-	bes a) \partcombineChords d(
+	bes a) \partCombineApart \oneVoice \shape #'((0 . -2.5)(0 . -1)(0 . 0)(0 . -0.5)) Slur d(
 	e f g
-	f c) \partcombineApart c(
-	f) \partcombineAutomatic g f
+	\voiceOne f c) \partCombineApart c\((
+	f) \oneVoice g f
 % Bars 36 to 40
-	e d e(
+	e \voiceOne d\) e(
 	d g g,
-	c2) r4
+	c2) \partCombineAutomatic r4
 	R2.*11
 % Bars 41 to 45
 	
@@ -59,17 +59,17 @@ musicFagottoIMvtII = \relative c {
 % Bars 51 to 55
 	a bes c 
 	bes a) r
-	r r \clef tenor \partcombineChords d(
+	r r \clef tenor \partCombineChords d(
 	e f g
-	f c) \partcombineAutomatic r
+	f c) \partCombineAutomatic r
 % Bars 56 to 60
-	r r \clef bass \partcombineApart f,,(
+	r r \clef bass \partCombineApart f,,(
 	bes2.)~
-	bes2 \partcombineAutomatic r4
-	r r \partcombineChords a'(
+	bes2 \partCombineAutomatic r4
+	r r \partCombineChords a'(
 	bes a g
 % Bars 61 to 65
-	c,2) \partcombineAutomatic r4
+	c,2) \partCombineAutomatic r4
 	R2.
 	r4 r \clef tenor f'(~\pp
 	f ges aes
@@ -90,22 +90,22 @@ musicFagottoIMvtII = \relative c {
 	
 	
 	r4 r d8(\mf a)
-	b( d) d( e) fis4
+	b([ d)] d([ e)] fis4
 % Bars 81 to 85
 	r r b,8( d)
-	fis( e) e( d) cis4
-	a,8(\p d e_\< a d e
-	a_\> fis d a fis a)\!
-	d( b) d( e) fis4
+	fis([ e)] e([ d)] cis4
+	\partCombineApart a,8(\p d e_\< a d e\!
+	\oneVoice \omitBeam a_\> fis d a fis a)\! \partCombineAutomatic
+	d([ b)] d([ e)] fis4
 % Bars 86 to 90
-	a,,8( d e fis_\< ais cis
-	fis_\> dis b fis d' fis\!)
-	fis( e) e( d) cis4
-	\partcombineApart c2(\mf\> b4)\! \partcombineAutomatic
-	a8( fis) g( e) fis( b)
+	\partCombineApart \voiceOne a,,8( d e fis_\< ais cis\!
+	\oneVoice \omitBeam fis[_\> dis b] \voiceOne fis[ d' fis\!])
+	\partCombineAutomatic fis([ e)] e[( d)] cis4
+	\partCombineApart c2(\mf\> b4)\! \partCombineAutomatic
+	a8([ fis)] g([ e]) fis([ b])
 % Bars 91 to 95
-	\partcombineApart c2(\> b4)\! \partcombineAutomatic
-	bes8( g) g( e') e( a,)
+	\partCombineApart c2(\> b4)\! \partCombineAutomatic
+	bes8([ g]) g([ e']) e([ a,])
 	R2.*7
 % Bars 96 to 100
 	
@@ -120,7 +120,7 @@ musicFagottoIMvtII = \relative c {
 	c2.)_\dimmarkup~
 	c4 fis,8( a d, g)~
 % Bars 106 to 110
-	g4. \partcombineAutomatic r8 r4
+	g4. \partCombineAutomatic r8 r4
 	R2.*5
 % Bars 111 to 115
 	

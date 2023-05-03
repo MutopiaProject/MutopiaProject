@@ -9,25 +9,25 @@ musicBratscheMvtII = \relative c' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
+	R2.\fermata
+	R2.\fermata
 	R2.
-	g8(_\pocofmadolce d) d( e) fis4
+	g8([_\pocofmadolce d]) d([ e)] fis4
 	R2.
 % Bars 6 to 10
-	fis8( e) e( d) cis4
+	fis8[( e)] e[( d)] cis4
 	R2.
-	g'8(\p d) d( g) fis4
+	g'8([\p d)] d[( g)] fis4
 	R2.
-	d8( fis) fis( e) e4
+	d8([ fis)] fis([ e)] e4
 % Bars 11 to 15
 	c'8(_\pocofmadolce a fis dis e g)
-	a( fis) g( e) fis( b)
+	a([ fis)] g([ e]) fis([ b])
 	c( a fis dis e g)
-	<c, e>\<(-\tweak X-offset #-1.5 ^\div <e g>) q( <c e>)\> <cis e>( <g' a>)
+	<c, e>\<([-\tweak X-offset #-1.5 ^\div <e g>]) q([ <c e>])\> <cis e>([ <g' a>])\!
 	<fis a>4(\p <e g>\< <d fis>)
 % Bars 16 to 20
-	<d g> <<{g8( e) e( fis)} \\ {d4 d\!}>>
+	<d g> <<{g8([ e)] e([ fis)]} \\ {d4 d\!}>>
 	<d fis>2\> <e g>4\!
 	<d fis>2_\pdim <e g>4
 	fis8( a fis) r r4
@@ -39,8 +39,8 @@ musicBratscheMvtII = \relative c' {
 	<fis a>4( <e g> <d fis>)\<
 	g8( e) fis4 a8( fis)
 % Bars 26 to 30
-	g4 c8( a) a( fis)\!
-	<<{d4^\div d8( e) e( fis) } \\ {d4\mf d d}>>
+	g4 c8([ a]) a([ fis])\!
+	<<{d4^\div d8([ e)] e([ fis)] } \\ {d4\mf d d}>>
 	<d fis>2\dimD\> <e g>4
 	<d fis>2\pp <e g>4
 	fis8( a fis) r r4 \bar "||" \mark \default \key f \major
@@ -69,9 +69,9 @@ musicBratscheMvtII = \relative c' {
 	r4 r <d b'>-\tweak X-offset #-3 _\pf
 % Bars 56 to 60
 	r <c c'>\p <a' cis>(^\div
-	<bes d> <a c!>\< <g bes>
-	<f a>\> <e g>)\! <ees c'>^\pizz_\pf
-	r <d bes'>\p <a' c>^\arco(
+	<bes d> <a c!>\< <g bes>\!
+	<f a>\> <e g>)\! << {c'^\pizz} \\ {ees,_\pf} >>
+	r << {bes'} \\ {d,\p} >>  <a' c>^\arco(
 	<bes d> <fis c'> <g bes>~
 % Bars 61 to 65
 	q <f! a>) <e des'>^\pizz\p
@@ -84,11 +84,11 @@ musicBratscheMvtII = \relative c' {
 	q_\crescmarkup <gis b> <a cis>
 	<gis b> <fis a>) 
 	<<{
-	    a(\<
+		a(\<
 		c2.)~\f
 		c2
 	} \\ {
-		s4
+		a4
 		c2.(~
 		c4 a)
 	}>> <g b>4~(
@@ -102,17 +102,17 @@ musicBratscheMvtII = \relative c' {
 	
 	
 	
-	r4 e-\tweak X-offset #-4 \mf^\pizz \times 2/3 {fis8 a d}
-	b4 \times 2/3 {b8 d g} fis4
+	r4 e-\tweak X-offset #-4 \mf^\pizz \tuplet 3/2 {fis8 a d}
+	b4 \tuplet 3/2 {b8 d g} fis4
 % Bars 81 to 85
-	r4 cis, \times 2/3 {fis8 b d}
+	r4 cis, \tuplet 3/2 {fis8 b d}
 	b4 d cis
 	R2.
-	r4 r \times 2/3 {d,8\pp a' d}
+	r4 r \tuplet 3/2 {d,8\pp a' d}
 	d4 g fis
 % Bars 86 to 90
 	R2.
-	r4 r \times 2/3 {fis,8 b d}
+	r4 r \tuplet 3/2 {fis,8 b d}
 	b4 b a
 	R2.
 	dis4\mf cis b
@@ -121,10 +121,10 @@ musicBratscheMvtII = \relative c' {
 	e4 g, e8(^\arco g)
 	<fis a>4(^\div <e g> <d fis>)\<
 	g8( e) fis4 a8( fis)
-	g4 c8( a) a( fis)\!
+	g4 c8([ a)] a([ fis)]\!
 % Bars 96 to 100
-	<<{d4^\div d8( e) e( fis) } \\ {d4\mf d d}>>
-	<d fis>2\> <e g>4
+	<<{d4^\div d8([ e]) e([ fis]) } \\ {d4\mf d d}>>
+	<d fis>2\> <e g>4\!
 	<d fis>2\pp <e g>4
 	fis8( a fis) r a4(\pp \mark \default
 	d2.)~
@@ -141,7 +141,7 @@ musicBratscheMvtII = \relative c' {
 	g <ees g>2^\div
 	<<{
 		fis!4(\p e!)\< fis(
-		e) a( d)
+		e) a( d)\!
 		<gis, e'>-\tweak X-offset #-5 ^\pizz\f <a e'>
 	} \\ {
 		d,2 d4~

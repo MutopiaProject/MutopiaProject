@@ -9,7 +9,7 @@ musicFloteIIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
+	R2.\fermata
 	<< { e4 a,2 } {s8\p\< s s s\> s s\!} >>
 	R2.*4
 	
@@ -29,9 +29,9 @@ musicFloteIIMvtII = \relative c''' {
 	R2.
 	R
 % Bars 21 to 25
-	fis8(\p dis) e( cis) dis( b)
+	fis8([\p dis]) e([ cis)] dis[( b)]
 	R2.
-	e8( g,) g( e) e4 
+	e8([ g,)] g([ e)] e4 
 	R2.*6
 % Bars 26 to 30
 	
@@ -43,10 +43,10 @@ musicFloteIIMvtII = \relative c''' {
 	f g a
 	g f) bes 
 	g a bes
-	a2 c,4\((_\pdolce
-	f) e\< d
+	a2 c,4_\pdolce
+	f e\< d\!
 % Bars 36 to 40
-	c\> b\)\! g
+	c\> b\! \once \voiceOne g
 	a ais b~
 	b c r
 	R2.*2
@@ -56,7 +56,7 @@ musicFloteIIMvtII = \relative c''' {
 	R
 	R
 	R
-	d4.\p\< d8( e) d8~
+	d4.\p\< d8( e) d8~\!
 % Bars 46 to 50
 	d\> d4 d8( c) r\!
 	R2.*2
@@ -68,10 +68,10 @@ musicFloteIIMvtII = \relative c''' {
 	g f) r
 	r  r bes
 	g a bes
-	\once \partcombineApart a2 r4
+	a2 r4
 % Bars 56 to 60
 	r r a(
-	bes\< a g
+	bes\< a g\!
 	f\> e\!) r
 	R2.
 	R
@@ -86,9 +86,9 @@ musicFloteIIMvtII = \relative c''' {
 	R2.
 	r4 r fis'_\mfcresc~
 	fis e fis
-	e d g(~
+	e d g~
 % Bars 71 to 75
-	g e fis)
+	g e fis
 	g( e' d)
 	cis4.\f\> r8\! r4
 	R2.*5
@@ -98,22 +98,22 @@ musicFloteIIMvtII = \relative c''' {
 	
 	
 	r4 r d,,8(\mf fis)
-	g( b) b( d) d4
+	g([ b)] b([ d)] d4
 % Bars 81 to 85
 	r4 r fis,8( b)
-	d( cis) cis( b) a4
+	d([ cis)] cis([ b)] a4
 	R2.
 	r4 r r8 fis(
-	b g) b( d) d4
+	b[ g)] b([ d)] d4
 % Bars 86 to 90
 	R2.
 	r4 r8 fis,( b d)
-	d( cis) cis( b) a4
+	d([ cis)] cis([ b)] a4
 	R2.
-	fis'8( dis) e( cis) dis( b)
+	fis'8([ dis)] e([ cis)] dis([ b)]
 % Bars 91 to 95
 	R2.
-	g'8( e) e( g,) g( e)
+	g'8([ e)] e([ g,)] g[( e)]
 	R2.*7
 % Bars 96 to 100
 	

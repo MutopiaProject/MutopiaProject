@@ -9,15 +9,15 @@ musicFagottoIIMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
+	R2.\fermata
 	<< {e4 a,2} {s8\p\< s s s\> s s\!} >>
 	R2.*4
 % Bars 6 to 10
 	
-	R2. %a,8(\p^\dolce d e a fis d)
-	b'8(\< g) g(\> e)\! fis4
 	R2.
-	fis8(\< d) d(\> b)\! a4
+	b'8[(\< g]\!) g([\> e)]\! fis4
+	R2.
+	fis8([\< d)]\! d([\> b)]\! a4
 % Bars 11 to 15
 	R2.*8
 % Bars 16 to 20
@@ -27,9 +27,9 @@ musicFagottoIIMvtII = \relative c {
 	R2. %r4 r8 fis(\p a b)
 	R %c( a fis dis e g)
 % Bars 21 to 25
-	fis'8(\p dis) e( cis) dis( b)
+	fis'8([\p dis]) e[( cis]) dis([ b)]
 	R2.
-	e'8( g,) g( e) e( a,)
+	e'8[( g,]) g[( e)] e[( a,)]
 	R2.*6
 % Bars 26 to 30
 	
@@ -41,11 +41,11 @@ musicFagottoIIMvtII = \relative c {
 	f g a
 	g f) bes
 	g a bes
-	a2 a4(~
-	a e'\< d
+	a2 a4~
+	\once \voiceOne a e'\< d\!
 % Bars 36 to 40
-	c\> b)\! e,(
-	d g2
+	c\> \voiceOne b\! \shape #'((0 . 2.2)(0 . 1.7)(0 . 1.7)(0 . 2)) Slur e,_(
+	\voiceTwo d g2
 	c) r4
 	R2.*11
 % Bars 41 to 45
@@ -64,8 +64,8 @@ musicFagottoIIMvtII = \relative c {
 	a2 r4
 % Bars 56 to 60
 	r r \clef bass f,(
-	bes,2.)~
-	bes2 r4
+	\once \voiceOne bes,2.)_~
+	\once \voiceOne bes2 r4
 	r r a'
 	g c c,
 % Bars 61 to 65
@@ -90,22 +90,22 @@ musicFagottoIIMvtII = \relative c {
 	
 	
 	r4 r d8(\mf fis)
-	g( b) b( d) d4
+	g([ b]) b([ d)] d4
 % Bars 81 to 85
 	r r fis,8( b)
-	d( cis) cis( b) a4
-	r4 r8 a,( d e
-	a fis d a d fis)
-	b( g) b( d) d4
+	d([ cis]) cis[( b]) a4
+	r4 r8 a, d e
+	a fis d a d fis
+	b([ g)] b[( d]) d4
 % Bars 86 to 90
-	r4 r8 fis,,( ais cis
-	fis dis b fis' b d!)
-	d( cis) cis( b) a4
+	r4 r8 fis,, ais cis
+	fis dis b fis' b d!
+	d([ cis]) cis([ b)] a4
 	R2.
-	fis8( dis) e( cis) dis( b)
+	fis8([ dis]) e([ cis]) dis([ b])
 % Bars 91 to 95
 	R2.
-	g'8( e) e( g) g( e)
+	g'8[( e)] e([ g]) g[( e)]
 	R2.*7
 % Bars 96 to 100
 	
@@ -117,10 +117,10 @@ musicFagottoIIMvtII = \relative c {
 	e d) g,(
 	a b cis
 	b a) r
-	R2. %c2.)_\dimmarkup~
-	R %c4 fis,8( a d, g)~
+	R2. 
+	R 
 % Bars 106 to 110
-	R %g4. r8 r4
+	R 
 	R2.*5
 % Bars 111 to 115
 	

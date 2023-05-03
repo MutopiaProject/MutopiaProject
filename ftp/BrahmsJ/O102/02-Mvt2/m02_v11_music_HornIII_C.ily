@@ -9,8 +9,8 @@ musicHornIIIMvtII = \relative c {
 	\key c \major
 	\transposition f
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
+	R2.\fermata
+	R2.\fermata
 	R2.*27
 % Bars 6 to 10
 	
@@ -25,7 +25,7 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	
-	r4 r \clef bass \partcombineChords c~\p \bar "||" \mark \default
+	r4 r \clef bass \partCombineChords c~\p \bar "||" \mark \default
 % Bars 31 to 35
 	c2.~
 	c~
@@ -33,15 +33,15 @@ musicHornIIIMvtII = \relative c {
 	c2 c4~
 	c2.\<~
 % Bars 36 to 40
-	c2\> \partcombineAutomatic r4\!
+	c2\> \partCombineAutomatic r4\!
 	R2.*2
 	
-	\clef treble \partcombineSoloI g''2._\p~
+	\clef treble \partCombineSoloI g''2._\p~
 	g2 e'4(
 % Bars 41 to 45
 	d2.)~
 	d2 d4(
-	g,) r r \partcombineAutomatic
+	g,) r r \partCombineAutomatic
 	R2.*7
 % Bars 46 to 50
 	
@@ -60,9 +60,9 @@ musicHornIIIMvtII = \relative c {
 % Bars 61 to 65
 	
 	
-	r4 r ees\pp~
+	r4 r \partCombineApart ees~
 	ees2.~
-	ees2 r4
+	ees2  \partCombineAutomatic r4
 % Bars 66 to 70
 	R2. \bar "||"
 	R2.*2
@@ -101,5 +101,5 @@ musicHornIIIMvtII = \relative c {
 % Bars 116 to 118
 	a~
 	a2 r4
-	R2.\fermataMarkup \bar "|."
+	R2.\fermata \bar "|."
 }

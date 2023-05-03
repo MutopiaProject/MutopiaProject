@@ -9,8 +9,8 @@ musicKontrabassMvtII = \relative c' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	R2.\fermataMarkup
-	R2.\fermataMarkup
+	R2.\fermata
+	R2.\fermata
 	R2.
 	g4(_\pocofmadolce g, d')
 	R2.
@@ -24,11 +24,11 @@ musicKontrabassMvtII = \relative c' {
 	R2.
 	b4(_\pocofmadolce b b)
 	R2.
-	c4(\< c\> cis)
+	c4(\< c\> cis)\!
 	d(\p d\< d)
 % Bars 16 to 20
 	g, g' a(~\!
-	a8 d) fis,4 a(~\!
+	a8\> d) fis,4\! a(~
 	a8_\pdim d) fis,4 a4(~
 	a d,8) r r4
 	R2.
@@ -86,7 +86,7 @@ musicKontrabassMvtII = \relative c' {
 	fis,4 r r
 	R2.
 	a'4\f d r
-	r r d,_\mfcresc~
+	r r d,_\mfcresc^\arco~
 % Bars 71 to 75
 	d2 d4(~
 	d cis b
@@ -115,11 +115,11 @@ musicKontrabassMvtII = \relative c' {
 	c,4 c' cis,\p^\arco
 	d2 d4\<
 	cis d dis
-	e fis c
+	e fis c\!
 % Bars 96 to 100
 	b\mf g a(~
 	a8\> d) fis,4 a4(~
-	a8 d) fis,4\pp a(~
+	a8 d)\! fis,4\pp a(~
 	a d8) r r4 \mark \default
 	R2.*3
 % Bars 101 to 105
@@ -135,8 +135,8 @@ musicKontrabassMvtII = \relative c' {
 	g
 	a2\p\< a4(
 % Bars 111 to 115
-	g) fis( f)
-	e8\f-\tweak X-offset #-5 ^\pizz e' a, a' r4
+	g) fis( f)\!
+	e8[\f-\tweak X-offset #-5 ^\pizz e'] a, a' r4
 	R2.
 	a,4\p d r
 	r d r
