@@ -23,7 +23,7 @@
 		\override Fingering.avoid-slur = #'around
 		%\override Script.staff-padding = #'()
 		\override Hairpin.height = #0.55
-		\override TextScript.font-size = #1
+		\override TextScript.font-size = #0
 	}
 	\context {
 		\Staff
@@ -56,8 +56,9 @@
 	}
 }
 
-layoutTemp = {
-	\compressEmptyMeasures
+layoutHorn = {
+	\set Staff.soloText = #"3."
+	\set Staff.soloIIText = #"4."
 }
 
 

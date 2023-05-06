@@ -80,7 +80,7 @@ musicSoloViolinMvtIII = \relative c''' {
 	q8 <bes g'>16-. g,-. <bes' aes'>4~->
 	q8 <bes g'>16-. g,-. <bes' g'>8( <a! fis'>16-.) c,-.
 	<a' fis'>-. ees( <fis ees'>) c( <ees c'>) a,( <c a'>8-.)
-	<b! g'>8 r r4
+	<b! g'>8-. r r4
 % Bars 66 to 70
 	R2*9
 % Bars 71 to 75
@@ -139,7 +139,7 @@ musicSoloViolinMvtIII = \relative c''' {
 	cis-. c-. b-. bes-. <<{s e,-. e-. e-.} \\ {a-._\dimmarkup e-. dis-. d-.}>>
 	<<{e-. e-. e-. e-.} \\ {cis c b bes}>> <a e'>-. e-. dis-. <d e>-.
 	cis8-. <c e>-. b <bes e>-.
-	<a e'>-. r r8. bes16
+	<a e'>-. r r8. bes16-.
 % Bars 116 to 120
 	<a e'>8-. r r4
 	R2

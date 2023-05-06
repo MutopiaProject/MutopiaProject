@@ -228,7 +228,7 @@ musicFagottoIIMvtIII = \relative c {
 	bes4.. bes16
 % Bars 201 to 205
 	f8. g16 a4
-	r8. a16-. f8[ r16 d-.]
+	r8. a16-. f8-.[ r16 d-.]
 	bes4 c
 	a' bes8. f16
 	a4 d,

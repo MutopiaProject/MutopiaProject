@@ -26,7 +26,7 @@ musicViolinIIMvtIII = \relative c'' {
 	fis-. gis-. a-. r
 	r <a, e'>-. <c e>4
 	r8 <a e'>-. <e' a>4
-	r8 <c g'> <e g>4
+	r8 <c g'>-. <e g>4
 % Bars 16 to 20
 	r8 <c g'>-. <g' c>4
 	r8 <e g> r <dis fis>

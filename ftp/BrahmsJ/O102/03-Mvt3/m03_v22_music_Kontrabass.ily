@@ -258,7 +258,7 @@ musicKontrabassMvtIII = \relative c {
 	a\sf
 	a4\sf a\sf
 	a8-. r^\solo r4
-	e8-.^\pizz^\tutti r r4
+	e8^\pizz^\tutti r r4
 	R2*2
 % Bars 216 to 220
 	

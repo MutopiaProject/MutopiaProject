@@ -22,11 +22,11 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	
 	
-	\tempo "poco rit." R2*4
+	R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*6
+	R2*6
 % Bars 36 to 40
 	
 	
@@ -67,7 +67,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 	\bar "||"
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*12
+	\timeMvtIII R2*12
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -143,7 +143,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 	e'4) r
 % Bars 191 to 195
 	e2~
-	e4 r
+	\once \voiceOne e4 r
 	R2*3
 % Bars 196 to 200
 	r4 r8. g16-\tweak X-offset #-3 \ff
@@ -186,17 +186,17 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 241 to 245
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	R2*4
 	
 	
 	
-	\tempo "in tempo" R2*8
+	R2*8
 % Bars 251 to 255
 	
 % Bars 256 to 260
 	
 	
-	g8-.-\tweak X-offset #-3 \f g-. r g-.
+	g8-.-\tweak X-offset #-2.5 \f g-. r g-.
 	r g-. r g-.
 	g-. g-. r g-.
 % Bars 261 to 265
@@ -208,7 +208,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 266 to 270
 	d'-. d-. r d-.
 	r bes-. r bes-.
-	g-. r r4
+	g r r4
 	R2*5
 % Bars 271 to 275
 	
@@ -228,10 +228,10 @@ musicTrumpetIIMvtIII = \relative c'' {
 % Bars 291 to 295
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*4
+	\timeMvtIII R2*4
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" R2
+	R2
 	r4 r8 g,\pp~
 	g2~
 	g~
@@ -251,7 +251,7 @@ musicTrumpetIIMvtIII = \relative c'' {
 	
 	
 	\bar "||"
-	\tempo "Tempo primo" g4-.-\tweak X-offset #-3 \f g'-.
+	g4-.-\tweak X-offset #-2 \f g'-.
 	R2
 % Bars 326 to 330
 	r8 g,8-. g-. g-.

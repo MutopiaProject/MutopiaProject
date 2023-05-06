@@ -39,17 +39,17 @@ musicKontrabassMvtIII = \relative c {
 	
 	
 	
-	\tempo "poco rit." R2*4
+	R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*6
+	R2*6
 % Bars 36 to 40
 	
 	
 	\mark \default
 	e,16\ff-.-\tweak X-offset #-5.5 ^\arco e'-. e,-. e'-. e,-. e'-. e,-. e'-. 
-	a,8-. c-. a-. f'-.
+	a,8-.[ c-.] a-. f'-.
 % Bars 41 to 45
 	a,-. gis'-. a,-. c'16-. b-.
 	a8-. e-. f-. e-. 
@@ -57,8 +57,8 @@ musicKontrabassMvtIII = \relative c {
 	c'-. g-. a-. g-.
 	c-. g-. aes-. g-.
 % Bars 46 to 50
-	e'->-. c-. c->-. a!-. 
-	a->-. f-. f->-. d-. 
+	e'->-.[ c-.] c->-. a!-. 
+	a->-.[ f-.] f->-. d-. 
 	c-. a-. e'-. e,-.
 	a-. r r4
 	R2*15
@@ -88,7 +88,7 @@ musicKontrabassMvtIII = \relative c {
 	bes) << a( { s8 s16 s\! }>>
 	d4) f
 % Bars 81 to 85
-	e8( c) f-.( e-.)
+	e8([ c)] f-.( e-.)
 	d( a) a4~
 	a d~
 	d f \bar "||"
@@ -97,7 +97,7 @@ musicKontrabassMvtIII = \relative c {
 	g2 g,4 \bar "||"
 	\time 4/4 a a'( d,) d
 	g2\< g,\! \bar "||"
-	\time 2/4 a8-.\f r r4
+	\timeMvtIII a8-.\f r r4
 	d8-. r r4
 % Bars 91 to 95
 	g,8-. r r4
@@ -192,7 +192,7 @@ musicKontrabassMvtIII = \relative c {
 	a d~
 	d a~
 	a d~\<
-	d g,~\>
+	d\! g,~\>
 % Bars 186 to 190
 	g\! gis~
 	gis a~
@@ -227,7 +227,7 @@ musicKontrabassMvtIII = \relative c {
 	a\sf
 	a4\sf a\sf
 	a8-. r r4
-	e8-.^\pizz r r4
+	e8^\pizz r r4
 	R2*2
 % Bars 216 to 220
 	
@@ -261,28 +261,28 @@ musicKontrabassMvtIII = \relative c {
 % Bars 241 to 245
 	
 % Bars 246 to 250
-	\tempo "poco rit." des2^\arco\pp(
+	des2^\arco\pp(
 	d!
 	ees~
 	ees)
-	\tempo "in tempo" aes,8^\pizz r r4
+	aes,8^\pizz r r4
 % Bars 251 to 255
 	R2*6
 % Bars 256 to 260
 	
 	e2\sf-\tweak X-offset #1.5 ^\arco
-	a8-.-\tweak X-offset #-4 \ff c-. a-. f'-.
+	a8-.[\ff c-.] a-. f'-.
 	a,-. gis'-. a,-. c'16-. b-.
 	a8-. e-. f-. e-.
 % Bars 261 to 265
 	a-. e-. f-. e-.
 	c'-. g-. a-. g-.
 	c-. g-. aes-. g-.
-	e'-.-> c-. c->-. a!-.
-	a->-. f-. f->-. d-. 
+	e'-.->[ c-.] c->-. a!-.
+	a->-.[ f-.] f->-. d-. 
 % Bars 266 to 270
 	c-. a-. e'-.\sf e,-.
-	a'-.\sf a,-. c'-.\sf c,-.
+	a'-.\sf[ a,-.] c'-.\sf c,-.
 	d'-. r r4
 	R2
 	e,,4(_\mfdimD\> e
@@ -303,7 +303,7 @@ musicKontrabassMvtIII = \relative c {
 	e4 e(\< 
 	g) fis(\!
 	b)\> d,\!
-	cis8( a) d-.( cis-.)
+	cis8([ a)] d-.( cis-.)
 % Bars 286 to 290
 	b( fis) fis4~
 	fis b~
@@ -313,12 +313,12 @@ musicKontrabassMvtIII = \relative c {
 % Bars 291 to 295
 	\time 4/4 fis fis'( b,)\< b
 	e2 e,\! \bar "||"
-	\time 2/4 fis8-.\f r r4
+	\timeMvtIII fis8-.\f r r4
 	b8-. r r4
 	e,8-. r r4
 % Bars 296 to 300
-	r e'8-\tweak X-offset #-5 ^\pizz\p r \bar "||"
-	\tempo "Poco meno Allegro" a,8 r r4
+	r e'8-\tweak X-offset #-6 ^\pizz\p r \bar "||"
+	a,8 r r4
 	R2*7
 % Bars 301 to 305
 	
@@ -335,7 +335,7 @@ musicKontrabassMvtIII = \relative c {
 % Bars 311 to 315
 	d r
 	d r
-	cis^\arco\p d\<
+	\markEO #'(-6 . -0.5) cis^\arco\p d\<
 	dis e\!
 	eis fis\>
 % Bars 316 to 320
@@ -348,7 +348,7 @@ musicKontrabassMvtIII = \relative c {
 	cis\p r
 	b4.\pp\> r8\!
 	b4.\> r8\! \bar "||" 
-	\tempo "Tempo primo" cis4-.-\tweak X-offset #-3 \f fis-.
+	cis4-.-\tweak X-offset #-3 \f fis-.
 	R2
 % Bars 326 to 330
 	r8 f-! e-! d-!
@@ -363,7 +363,7 @@ musicKontrabassMvtIII = \relative c {
 	e cis'4 e,8~
 	e a4 e8-.
 % Bars 336 to 340
-	a,-.-\tweak X-offset #-2.5 \f r r4
+	a,-.-\tweak X-offset #-1.5 \f r r4
 	R2
 	a8-. r r4
 	a8-. r r4

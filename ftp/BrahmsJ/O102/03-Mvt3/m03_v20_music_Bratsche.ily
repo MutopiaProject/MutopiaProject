@@ -23,9 +23,9 @@ musicBratscheMvtIII = \relative c {
 % Bars 11 to 15
 	<c e>-. e,-. a-. f'-.
 	e-. d-. c-. <a c>-.
-	<c, a'>4 r8 <a' c>
+	<c, a'>4 r8 <a' c>-.
 	<c, a'>4 r8 <c' e>-.
-	<e, c'>4 r8 <c' e>
+	<e, c'>4 r8 <c' e>-.
 % Bars 16 to 20
 	<e, c'>4 r8 <e' g>-.
 	<g, e'>4-.( <fis dis'>-.)
@@ -249,7 +249,7 @@ musicBratscheMvtIII = \relative c {
 	r <c, a'>^\div-. <c e>4
 % Bars 221 to 225
 	r8 <c a'>-. <c e>4
-	r8 <e c'>^\unis <e g>4
+	r8 <e c'>-.^\unis <e g>4
 	r8 <e c'>-. <e g>4
 	r8 <e b'> r <c c'>
 	r <e b'> r <a b>
@@ -310,7 +310,7 @@ musicBratscheMvtIII = \relative c {
 	c16 c <a f'>8 a16 a <f d'>8
 % Bars 266 to 270
 	<a e'>8-. <c a'>-. <b a'>-.\sf <b g'>-.
-	<c g'>\sf-. <c f>-. <g f'>-. <g e'>-.
+	<c g'>\sf-. <c f>-. <g f'>-.\sf <g e'>-.
 	<f a>-. r^\solo r4
 	R2
 	e'4\mf^\tutti e8(-\tweak X-offset #0 \dimD\> d)
@@ -342,7 +342,7 @@ musicBratscheMvtIII = \relative c {
 	<d! b' d a'>8-. r r4
 % Bars 296 to 300
 	r b'8\p^\pizz r8 \bar "||"
-	\tempo "Poco meno Allegro" a8-. r r4
+	\tempo "Poco meno Allegro" a8 r r4
 	R2*9
 % Bars 301 to 305
 	

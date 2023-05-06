@@ -218,7 +218,7 @@ musicHornIIIMvtIII = \relative c'' {
 	\tuplet 3/2 4 {g4( f8) ees( f g)}
 % Bars 201 to 205
 	g4 d
-	r8. g,16-. ees8[ r16 c]
+	r8. g,16-. ees8[-. r16 c]-.
 	ees'4 d
 	d c
 	g c,

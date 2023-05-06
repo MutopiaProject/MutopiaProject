@@ -26,7 +26,7 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	\mark \default
-	g2\ff
+	g2-\tweak X-offset #-1.5 \ff
 	c8-. r r4
 % Bars 41 to 45
 	R2
@@ -51,8 +51,8 @@ musicHornIMvtIII = \relative c'' {
 	ees8\f ees4 ees8~
 % Bars 66 to 70
 	ees ees4 ees8\p~
-	ees ees4_\dimmarkup ees,8~
-	ees ees4 ees8
+	ees ees4_\dimmarkup \partCombineApart ees,8~
+	ees ees4 ees8 \partCombineAutomatic
 	R2*16
 % Bars 71 to 75
 	
@@ -66,9 +66,9 @@ musicHornIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 % Bars 86 to 90
 	\bar "||"
-	\time 4/4 r2 r4 bes'\mf
-	ees,2\< ees\! \bar "||"
-	\time 2/4 R2*12
+	\time 4/4 r2 r4 \partCombineApart bes'
+	ees,2 ees \partCombineAutomatic \bar "||"
+	\timeMvtIII R2*12
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -96,8 +96,8 @@ musicHornIMvtIII = \relative c'' {
 	
 % Bars 136 to 140
 	
-	ees4\ff-> fis->
-	a4.-> r8
+	\partCombineApart ees4-> fis->
+	a4.-> \partCombineAutomatic r8
 	R2*9
 % Bars 141 to 145
 	
@@ -134,8 +134,8 @@ musicHornIMvtIII = \relative c'' {
 % Bars 201 to 205
 	
 	r8. aes'16\ff-. aes8-.[ r16 aes-.]
-	\tuplet 3/2 4 {aes4( ges8) ees( f ges)}
-	\tuplet 3/2 4 {ges4( f8) des( ees f)}
+	\tuplet 3/2 4 {aes4( ges8) ees( f ges)
+	ges4( f8) des( ees f)}
 	c4 bes
 % Bars 206 to 210
 	bes2\sf
@@ -161,20 +161,20 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	
-	r8 c'-.\p g'-. r
+	r8 \partCombineApart c'-. g'-. \partCombineAutomatic r
 	r4 r8 g,-.
 % Bars 236 to 240
-	c,-. r r4
+	\once \partCombineApart c,-. r r4
 	R2 \mark \default
 	R2*8
 % Bars 241 to 245
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	R2*4
 	
 	
 	
-	\tempo "in tempo" R2*7
+	R2*7
 % Bars 251 to 255
 	
 % Bars 256 to 260
@@ -205,9 +205,9 @@ musicHornIMvtIII = \relative c'' {
 % Bars 281 to 285
 	r4 c(_\pocof
 	b\< bes
-	a) d(~\>
-	d8 bes)\! d(-. e-.)
-	f( c) d-.( c-.)
+	a)\! d(~\>
+	d8[ bes)]\! d(-. e-.)
+	f([ c]) d-.( c-.)
 % Bars 286 to 290
 	bes( g) d'4(~
 	d8 bes) d4(~
@@ -216,13 +216,13 @@ musicHornIMvtIII = \relative c'' {
 	R2. \bar "||"
 % Bars 291 to 295
 	\time 4/4 r2 r4 g_\pcresc
-	\once \partcombineApart c,2 c' \bar "||" 
-	\time 2/4 \once \partcombineApart c8-. r r4
+	\once \partCombineApart c,2 c' \bar "||" 
+	\timeMvtIII \once \partCombineApart c8-. r r4
 	R2*3
 	
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" R2*7
+	R2*7
 % Bars 301 to 305
 	
 	
@@ -236,9 +236,9 @@ musicHornIMvtIII = \relative c'' {
 	r d_\crescmarkup( f d)
 	R2
 % Bars 311 to 315
-	r8 d( f d)
+	r8 \beamOffset #'(-0.3 . -0.3) \shape #'((0 . 0)(0 . -0.5)(0 . -0.5)(0 . 0)) Slur d( f d)
 	R2
-	c8(\p cis) d4(_\<~
+	\aIIXoffset -3 c8(\p cis) d4(_\<~
 	d8 dis) e4\!(~
 	e8_\> a g f)\!
 % Bars 316 to 320
@@ -246,22 +246,22 @@ musicHornIMvtIII = \relative c'' {
 	
 	
 	
-	\once \override CombineTextScript.X-offset = #-3.5 e4(-\tweak X-offset #2 \sf\> d)\!
+	\aIIXoffset #-3.5 e4(-\tweak X-offset #2 \sf\> d)\!
 % Bars 321 to 325
-	\once \partcombineApart c r
+	\once \partCombineApart c r
 	e(-\tweak X-offset #2.0 \pp\> d8)\! r
 	e4(\> d8)\! r \bar "||"
-	\tempo "Tempo primo" \once \partcombineApart c4-. f-.
+	\once \partCombineApart c4-. f-.
 	R2*5
 % Bars 326 to 330
 	
 	
 	
 	
-	\partcombineApart r8 c4\p c8~
+	\partCombineApart r8 c4\p c8~
 % Bars 331 to 335
 	c c4 c8~
-	c \partcombineAutomatic c4_\pcresc c8~
+	c \partCombineAutomatic c4-\tweak X-offset 1 _\pcresc c8~
 	c c4 c8~
 	c c4 c8~
 	c c4 c8

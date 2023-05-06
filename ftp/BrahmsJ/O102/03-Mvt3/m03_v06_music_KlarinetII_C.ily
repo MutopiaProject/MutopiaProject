@@ -14,7 +14,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 	
 	
-	b!4( c
+	\shape #'((0 . -2)(0 . 0.5)(0 . 0.5)(0 . -2)) Slur b!4( c
 	b! c8 d
 % Bars 11 to 15
 	ees8) r r4
@@ -27,19 +27,19 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 	
 	
-	\tempo "poco rit." c2~\pp
+	c2~\pp
 	c~
 % Bars 31 to 35
 	c~
 	c
-	\tempo "in tempo" aes(
+	aes(
 	f
 	ees8)-. r r4
 % Bars 36 to 40
 	R2*3
 	
 	\mark \default
-	b'!2\ff
+	b'!2-\tweak X-offset #0.5 \ff
 	c8-. c-. r aes-.
 % Bars 41 to 45
 	r f-.  r ees-.
@@ -54,10 +54,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	c r r4
 	R2*35
 % Bars 51 to 55
-	%g'8-.\p ees-. ees-. c-. 
-	%c-. a!-. a-. f-. 
-	%ees-. r r4
-	%R2*31
+	
 % Bars 56 to 60
 	
 % Bars 61 to 65
@@ -78,14 +75,14 @@ musicKlarinetIIMvtIII = \relative c'' {
 	\bar "||"
 	\time 4/4 R1
 	d,4( ees e f8 bes) \bar "||" 
-	\time 2/4 g8-.\f r r4
+	\timeMvtIII g8-.\f r r4
 	f8-. r r4
 % Bars 91 to 95
 	aes8-. r r4
 	R2
 	ees'8\p des c ces
 	bes aes g f\<
-	aes\> g\! r4
+	\voiceOne \omitBeam aes\> g\! r4
 % Bars 96 to 100
 	R2*5
 	
@@ -132,21 +129,21 @@ musicKlarinetIIMvtIII = \relative c'' {
 	aes) aes4 c,8(
 % Bars 151 to 155
 	aes') aes4 g8(
-	aes) aes4\) des8(
-	c) c4 aes8(
+	aes) aes4\) \voiceTwo des8
+	c c4 aes8(
 	aes) r8 r4
 	R2
 % Bars 156 to 160
-	r4 r8 ees(
-	aes) aes4 g8(
-	aes) aes4 g8(
+	r4 r8 ees
+	aes aes4 \once \voiceOne \noFlag g8
+	aes aes4 \shape #'((-0.5 . -2)(0 . -1)(0 . 0)(0 . 0)) Slur g8(
 	a) a4 r8
 	r4 r8 f8(\>
 % Bars 161 to 165
-	c') c4\! bes8(
-	ges) ges4 f8(
-	des!) des4 bes8(
-	c) c4 r8
+	c') c4\! bes8
+	s s4 \voiceOne \noFlag f8_(
+	\noFlag des!) des4 \noFlag bes8_(
+	\voiceTwo c) c4 r8
 	R2*15
 % Bars 166 to 170
 	
@@ -165,11 +162,11 @@ musicKlarinetIIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. c''16-\tweak X-offset #-3 \ff
+	r4 r8. \dynEO #'(0 . 2) c''16\ff
 	c4.. aes!16
 	aes4.. aes16
-	\tuplet 3/2 4 {aes4( g8) f( g aes)}
-	\tuplet 3/2 4 {aes4( ges8) fes( ges aes)} 
+	\tuplet 3/2 4 {aes4( g8) f( g aes)
+	aes4( ges8) fes( ges aes)} 
 % Bars 201 to 205
 	ees4 e 
 	r8. aes,16-. aes8[-. r16 aes-.]
@@ -196,20 +193,12 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 % Bars 221 to 225
 	
-	
-	%ces'16-.\p ees-. g-. ees-. bes8-. r
-	%R2
-	%ees16-. g-. bes-. g-. d8-. r
 % Bars 226 to 230
-	%R2*7
+	
 % Bars 231 to 235
 	
-	
-	%ces16\p-. ees-. g-. ees-. bes8-. r
-	%R2
-	%ees16-. g-. bes-. g-. d8-. r
 % Bars 236 to 240
-	%R2*2
+	
 	\mark \default
 	ees'4( des
 	c d!)~
@@ -221,21 +210,21 @@ musicKlarinetIIMvtIII = \relative c'' {
 	b8( dis16 e) dis8( cis16 dis)
 	cis( b a b) gis4
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
-	%d!8(_\dimmarkup cis16 d) d'4
-	%R2
-	%fis,8(_\pp eis16 fis) fis'4~
-	\tempo "in tempo" R2*5 %\tempo "in tempo" fis8 r r4
+	R2*4
+	
+	
+	
+	R2*5
 % Bars 251 to 255
 	
 	
 	
 	
-	g,2(
+	g,2
 % Bars 256 to 260
-	f)
-	s
-	ees''8-.-\tweak X-offset #-4 \ff c-. r aes-.
+	\once \voiceOne f
+	f''
+	ees8-.\ff c-. r aes-.
 	r f-. r ees-.
 	r ees-. r ees-.
 % Bars 261 to 265
@@ -265,14 +254,14 @@ musicKlarinetIIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 	\bar "||"
 % Bars 291 to 295
-	\time 4/4 R1
-	b,4(\< c cis d8 g)\! \bar "||"
-	\time 2/4 e8-.\f r r4
+	\time 4/4 \mmrPos #-6 R1
+	\shape #'((0 . 0)(0 . 1)(0 . 1)(0 . 0)) Slur b,4(\< c cis d8 g)\! \bar "||"
+	\timeMvtIII e8-.\f r r4
 	d8-. r r4
 	f!8 r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" c'8[-\tweak X-offset #-9 _\pdolce bes a aes]
+	c'8[-\tweak X-offset #-9 _\pdolce bes a aes]
 	g[ f e] e'(
 	f e4) e8(
 	dis e4.)~
@@ -284,7 +273,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	c\> b8\!) r d\p(
 % Bars 306 to 310
 	c b) r8 g(\<
-	a\> g) r8\! f'\p(
+	a\> g)\! r8 f'\p(
 	e d) r8 b(~
 	b c) r4
 	r r8 b(~
@@ -299,17 +288,17 @@ musicKlarinetIIMvtIII = \relative c'' {
 	c\p r r4
 	R2
 	r4 r8 c
-	g'4-\tweak X-offset #2 \sf\> f\!
+	g'4-\tweak X-offset #1 \sf\> f\!
 % Bars 321 to 325
-	c\p r
+	c-\offset X-offset 0.5 \p r
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" r4 r8 ees(-\tweak X-offset #-3 \f
+	r4 r8 ees(-\tweak X-offset #-3 \f
 	c a fis ees)
 % Bars 326 to 330
 	c4. c'8-.
 	c-. r b-. r
-	c-.-\tweak X-offset #-2 \p r r4
+	c-.-\tweak X-offset #1 \p r r4
 	R2*7
 % Bars 331 to 335
 	

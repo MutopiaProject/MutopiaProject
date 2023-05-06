@@ -276,7 +276,7 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 256 to 260
 	f)(
 	gis)
-	a8-.\ff c,-.^\tutti r f
+	a8-.\ff c,-.^\tutti r f-.
 	r d-. r c-.
 	r c-. r c-.
 % Bars 261 to 265

@@ -26,16 +26,16 @@ musicHornIIIMvtIII = \relative c'' {
 	ees~
 	ees~
 	ees
-	\tempo "poco rit." R2*4
+	R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*6
+	R2*6
 % Bars 36 to 40
 	
 	
 	\mark \default
-	\once \partcombineApart d2
+	\once \partCombineApart d2
 	g,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
@@ -46,7 +46,7 @@ musicHornIIIMvtIII = \relative c'' {
 % Bars 46 to 50
 	d4( bes~
 	bes c)
-	r8 \partcombineApart d-. d-. d-. \partcombineAutomatic
+	r8 \partCombineApart d-. d-. d-. \partCombineAutomatic
 	g,-. r r4
 	R2*15
 % Bars 51 to 55
@@ -58,22 +58,22 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	
-	\once \partcombineApart c8 ees4 ees8~
+	\partCombineApart c8 \oneVoice ees4 \noFlag ees8~
 % Bars 66 to 70
-	ees ees4 ees8\p~
-	ees c r4
+	\noFlag ees ees4 \noFlag ees8~
+	\voiceOne ees c \partCombineAutomatic r4
 	R2*9
 % Bars 71 to 75
 	
 % Bars 76 to 80
 	
-	\partcombineApart r4 f^\pocof(
+	\partCombineApart r4 f^\pocof(
 	e ees
 	d g
 	ees) g,(
 % Bars 81 to 85
-	bes8 d) g(-. f-.) \partcombineAutomatic
-	ees( c) g(-. b-.)
+	bes8[ d]) g(-. f-.) \partCombineAutomatic
+	ees([ c)] g(-. b-.)
 	c( ees) g4(~
 	g g,) \bar "||"
 	\time 3/4 c2 r4
@@ -81,7 +81,7 @@ musicHornIIIMvtIII = \relative c'' {
 	R2. \bar "||"
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*12
+	\timeMvtIII R2*12
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -148,16 +148,16 @@ musicHornIIIMvtIII = \relative c'' {
 	g4) r
 	c2(
 	g4) r
-	\partcombineApart c2(
+	\partCombineApart c2(
 % Bars 186 to 190
-	f4) r \partcombineAutomatic
-	d2(
-	g4) r
-	c,2(
-	e,4) r
+	f4) r \partCombineAutomatic
+	\partCombineApart d2(
+	\once \oneVoice g4) \once \partCombineAutomatic r
+	c,2
+	\voiceOne e,4 \partCombineAutomatic r
 % Bars 191 to 195
-	des'( c
-	e,) r
+	\partCombineApart des'( c
+	e,) \partCombineAutomatic r
 	R2*3
 	
 	
@@ -165,12 +165,12 @@ musicHornIIIMvtIII = \relative c'' {
 	r4 r8. g'16-\tweak X-offset #-3 \ff
 	g4.. g16
 	g4.. g16
-	\tuplet 3/2 4 {g4( f8) ees( f g)}
-	\tuplet 3/2 4 {g4( f8) ees( f g)}
+	\tuplet 3/2 4 {g4( f8) ees( f g)
+	g4( f8) ees( f g)}
 % Bars 201 to 205
 	g4 d
-	r8. g,16-. ees8[ r16 c]
-	ees'4 \once \partcombineApart d
+	r8. \partCombineApart g,16-. ees8-.[ \once \partCombineAutomatic r16 c-.] \partCombineAutomatic
+	ees'4 \once \partCombineApart d
 	d c
 	g c,
 % Bars 206 to 210
@@ -197,10 +197,10 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	
-	r4 r8 \once \partcombineApart d'-.
+	r4 r8 \once \partCombineApart d'-.
 % Bars 231 to 235
 	g-. r r4
-	r r8 \once \partcombineApart f-.
+	r r8 \once \partCombineApart f-.
 	bes-. r r4
 	R2*4
 % Bars 236 to 240
@@ -208,7 +208,7 @@ musicHornIIIMvtIII = \relative c'' {
 	\mark \default
 	R2*2
 	
-	f8_\dolce( ees16 d) f4~\<
+	f8_\dolce( ees16 d) << f4~ {s8\< s\! }>>
 % Bars 241 to 245
 	f8\>( g16 aes)\! g8( f)
 	ees2\p~
@@ -216,17 +216,17 @@ musicHornIIIMvtIII = \relative c'' {
 	R2*2
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	R2*4
 	
 	
 	
-	\tempo "in tempo" R2*8
+	R2*8
 % Bars 251 to 255
 	
 % Bars 256 to 260
 	
 	
-	g,8-\tweak X-offset #-3 \f-. g-. r g-.
+	g,8-\tweak X-offset #-2.5 \f-. g-. r g-.
 	r g-. r g-.
 	g-. bes-. r bes-.
 % Bars 261 to 265
@@ -258,17 +258,17 @@ musicHornIIIMvtIII = \relative c'' {
 % Bars 291 to 295
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*4
+	\timeMvtIII R2*4
 	
 	
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" R2
-	r4 r8 g\pp~
+	R2
+	r4 r8 g-\tweak X-offset -3 \pp~
 	g2~
 	g~
 % Bars 301 to 305
-	g4. c8~
+	g4. \partCombineApart c8~
 	c2~
 	c4 r8. g16(
 	c e g e c8) r
@@ -276,7 +276,7 @@ musicHornIIIMvtIII = \relative c'' {
 % Bars 306 to 310
 	R
 	R
-	R
+	R \partCombineAutomatic
 	c2_\crescmarkup
 	c
 % Bars 311 to 315
@@ -289,17 +289,17 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	
-	\once \override CombineTextScript.X-offset = #-3.5 <<g2 {s4-\tweak X-offset #2 \sf\> s\!}>>
+	\aIIXoffset <<g2 {s4-\tweak X-offset #2 \sf\> s\!}>>
 % Bars 321 to 325
 	g4\p r
 	<<{g4. r8} {s4-\tweak X-offset #2.5 \sf\> s\!}>>
 	<<{g4. r8} {s4-\tweak X-offset #2.5 \sf\> s\!}>> \bar "||"
-	\tempo "Tempo primo" g4-\tweak X-offset #-3 \f-. g-\tweak X-offset #-3.5 \fp~
+	g4-\tweak X-offset #-2 \f-. g-\tweak X-offset #-3.5 \fp~
 	g2~
 % Bars 326 to 330
-	g8 g-\tweak X-offset #-2.5 \f-. g-. e'-.
-	\partcombineApart \tuplet 3/2 4 {g8( d-.) d-. e( d-.) d-.}
-	g,8-. \partcombineAutomatic r r4
+	g8\noBeam g-\tweak X-offset #-2.5 \f-. g-. e'-.
+	\partCombineApart \tuplet 3/2 4 {\beamOffset #'(-0.5 . -0.5) 8( d-.) d-. \beamOffset #'(-0.5 . -0.5) e( d-.) d-.}
+	g,8-. \partCombineAutomatic r r4
 	R2*7
 % Bars 331 to 335
 	

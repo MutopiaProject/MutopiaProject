@@ -12,5 +12,11 @@ timeMvtII = {
 }
 timeMvtIII = {
 	\time 2/4
-	\tempo "Vivace non troppo"
+	\set Timing.beamExceptions = \beamExceptions {
+		8[ 8 8 8] |
+		16[ 16 16 16] 16[ 16 16 16] |
+		8[ 16 16] 8[ 8] |
+		16[ 16 16 16] 8[ 8] |
+		\tuplet 3/2 4 {4[ 8] 8[ 8 8]}
+	}
 }

@@ -22,11 +22,11 @@ musicPaukenMvtIII = \relative c {
 	
 	
 	
-	\tempo "poco rit." R2*4
+	R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*6
+	R2*6
 % Bars 36 to 40
 	
 	
@@ -67,7 +67,7 @@ musicPaukenMvtIII = \relative c {
 	\bar "||"
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*12
+	\timeMvtIII R2*12
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -169,16 +169,16 @@ musicPaukenMvtIII = \relative c {
 % Bars 241 to 245
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	R2*4
 	
 	
 	
-	\tempo "in tempo" R2*7
+	R2*7
 % Bars 251 to 255
 	
 % Bars 256 to 260
 	
-	e2\trill\f
+	\dynEO #'(0.5 . 1.2) e2\trill\f
 	a,8-. a-. r a-.
 	r a-. r a-.
 	a-. a-. r a-.
@@ -211,10 +211,10 @@ musicPaukenMvtIII = \relative c {
 % Bars 291 to 295
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*4
+	\timeMvtIII R2*4
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" R2*27
+	R2*27
 % Bars 301 to 305
 	
 % Bars 306 to 310
@@ -227,15 +227,15 @@ musicPaukenMvtIII = \relative c {
 	
 	
 	\bar "||"
-	\tempo "Tempo primo" R2*12
+	R2*12
 % Bars 326 to 330
 	
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	a2-\tweak X-offset #-2.5 \f\startTrillSpan~
+	a2\f\startTrillSpan~
 	<< a {s4 s8 s\stopTrillSpan}>>
 	a8 r r4
 	a8-. r r4
-	a2\fermata\trill \bar "|."
+	\scriptInStaff a2-\tweak extra-offset #'(0 . -1.8) \fermata-\tweak extra-offset #'(-0.5 . -1) \trill \bar "|."
 }

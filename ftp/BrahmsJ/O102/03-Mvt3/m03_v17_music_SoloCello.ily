@@ -75,7 +75,7 @@ musicSoloCelloMvtIII = \relative c' {
 	<f'  des'>4.-> <c e>16-. c,-.
 	<e' c'>4.-> <ees c'>16-. c,-.
 	<ees' c'>-. c,( <c' a'>) c,( <a' fis'>) c,( <fis ees'>8-.)
-	<g d'>8 r r4
+	<g d'>8-. r r4
 % Bars 66 to 70
 	R2*3
 	

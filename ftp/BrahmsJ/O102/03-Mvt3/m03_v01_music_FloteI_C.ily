@@ -5,7 +5,6 @@
 %#                          M U S I C   S E C T I O N                          #
 %###############################################################################
 musicFloteIMvtIII = \relative c''' {
-	\override TupletBracket.bracket-visibility = ##f
 	\clef treble
 	\key a \minor
 %	\transposition a
@@ -23,17 +22,17 @@ musicFloteIMvtIII = \relative c''' {
 	
 	
 	
-	\tempo "poco rit." R2*2
+	R2*2
 % Bars 31 to 35
-	c2\pp~
-	c(
-	\tempo "in tempo" a8) r r4
+	\dynEO #'(0 . 2) c2\pp~
+	c^(
+	a8) r r4
 	R2*5
 % Bars 36 to 40
 	
 	
-	\once \override Score.RehearsalMark.X-offset = #-3.7 \mark \default
-	\once \partcombineApart e'2
+	\mark \default
+	\once \partCombineApart e'2
 	c8-. c-. r f-.
 % Bars 41 to 45
 	r d-. r c-.
@@ -48,7 +47,7 @@ musicFloteIMvtIII = \relative c''' {
 	a-. r r4
 	R2
 % Bars 51 to 55
-	a,16-\tweak X-offset #-3 \p-. a-. c-. a-. fis-. fis-. a-. fis-. 
+	\aIIXoffset #-3  a,16\p-. a-. c-. a-. fis-. fis-. a-. fis-. 
 	d-. d-. fis-. d-. b-. b-. d-. b-. 
 	a-. c-. ees-. c-. b-. d-. a-. d-. 
 	b-. g-. r8 r4
@@ -71,19 +70,19 @@ musicFloteIMvtIII = \relative c''' {
 	R2.*2
 % Bars 86 to 90
 	\bar "||" \time 4/4
-	\partcombineApart r2 r4 fis'(\f 
-	g a ais b) \partcombineAutomatic \bar "||" \time 2/4
+	\partCombineApart r2 r4 fis'(\f 
+	g a ais b) \partCombineAutomatic \bar "||" \timeMvtIII
 	cis8-. r r4
 	a8-. r r4
 % Bars 91 to 95
-	\once \partcombineChords a'8-. r r4
+	\once \partCombineChords a'8-. r r4
 	R2*3
 	
 	
-	c,8(\p g' fis f
+	\partCombineApart \shape #'((0 . 0)(0 . 0)(0 . -0.5)(0 . -3)) Slur c,8( g' fis f 
 % Bars 96 to 100
-	e d c\< g
-	a\> g)\! r4
+	\oneVoice \omitBeam e d c g
+	\omitBeam a g) \partCombineAutomatic r4
 	R2*3
 	
 	\mark \default
@@ -97,7 +96,7 @@ musicFloteIMvtIII = \relative c''' {
 	e8-> d16-. e-. d( f) d-. b-.
 % Bars 111 to 115
 	a8 r r4
-	r a16(\p\> e') r8\!
+	r a16(\p\> e')\! r8
 	R2*6
 % Bars 116 to 120
 	
@@ -112,16 +111,16 @@ musicFloteIMvtIII = \relative c''' {
 	
 % Bars 136 to 140
 	
-	\times 2/3 {a4(\ff g8)} \times 2/3 {f( g a)}
-	\times 2/3 {a4( g8)} \times 2/3 {f( g a)}
+	\tuplet 3/2 4 {a4(\ff g8) f( g a)
+	a4( g8) f( g a)}
 	a4 e
 	R2*2
 % Bars 141 to 145
 	
 	r8. g16-. g8[-. r16 g-.]
-	\times 2/3 {g4( f8)} \times 2/3 {d( e f)}
-	\times 2/3 {f4( e8)} \times 2/3 {c( d e)}
-	b4 \once \partcombineApart a
+	\tuplet 3/2 4 {g4( f8) d( e f)
+	f4( e8) c( d e)}
+	b4 \once \partCombineApart \voiceOne a
 % Bars 146 to 150
 	R2*2
 	\mark \default
@@ -136,14 +135,14 @@ musicFloteIMvtIII = \relative c''' {
 	
 % Bars 171 to 175
 	
-	r4 r8 \partcombineApart a,(
-	a'-.) \partcombineAutomatic a4 gis8(
+	r4 r8 \partCombineApart a,(
+	\once \oneVoice \noFlag a'-.) \partCombineAutomatic a4 gis8(
 	a) a4 r8
 	R2
 % Bars 176 to 180
 	r4 r8 f'(\f
-	e) \once \partcombineApart a,4 d8(
-	c) \once \partcombineApart f,4 r8
+	e) \once \partCombineApart a,4 d8(
+	c) \once \partCombineApart f,4 r8
 	R2 \mark \default
 	R2*16
 % Bars 181 to 185
@@ -153,16 +152,16 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. \partcombineApart a'16
-	a4.. \partcombineAutomatic a16
+	r4 r8. \partCombineApart a'16
+	a4.. \partCombineAutomatic a16
 	a4.. a16
-	\times 2/3 {a4( g8)} \times 2/3 {f( g a)}
-	\times 2/3 {a4( g8)} \times 2/3 {f( g a)}
+	\tuplet 3/2 4 {a4( g8) f( g a)
+	a4( g8) f( g a)}
 % Bars 201 to 205
 	a4 e
 	r8. f16-. a8[-. r16 f-.]
-	\times 2/3 {a4( g8)} \times 2/3 {g( a bes)}
-	\times 2/3 {bes4( a8)} \times 2/3 {f( g a)}
+	\tuplet 3/2 4 {a4( g8) g( a bes)
+	bes4( a8) f( g a)}
 	e4 d8. d16
 % Bars 206 to 210
 	d8(\sf c!16) c( bes) bes( a) a(
@@ -174,8 +173,8 @@ musicFloteIMvtIII = \relative c''' {
 	f8\sf)( e16) e( d) d( c) c(
 	b) b( c) c( b) b( c) c(
 	b8-.) r r8. e16
-	e2\fp~
-	e_\dimmarkup~
+	\dynEO #'(0 . 2) e2\fp~
+	\markEO #'(0 . 2) e_\dimmarkup~
 % Bars 216 to 220
 	e~
 	e \bar "||" \mark \default \key a \minor
@@ -193,7 +192,7 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 231 to 235
 	
 % Bars 236 to 240
-	e8->_\p d16-. e-. d8-> e16-. d-.
+	\aIIXoffset #-3 e8->_\p d16-. e-. d8-> e16-. d-.
 	e8-> d16-. e-. d( f) d-. b-. \mark \default
 	g8-. r r4
 	R2*3
@@ -204,21 +203,21 @@ musicFloteIMvtIII = \relative c''' {
 	d16( c bes c) a4
 	R2*2
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	R2*4
 	
 	
 	
-	\tempo "in tempo" R2*5
+	R2*5
 % Bars 251 to 255
 	
 	
 	
 	
-	\partcombineApart e''2-\tweak X-offset #-9.5 _\mfcresc(
+	\partCombineApart \markEO #'(0 . 2) e''2_\mfcresc(
 % Bars 256 to 260
-	f)(
-	gis) \partcombineAutomatic
-	a8-.-\tweak X-offset #-4 \ff c,-. r f
+	\oneVoice f)(
+	gis) \partCombineAutomatic
+	\dynEO #'(0 . 2) a8-.\ff c,-. r f-.
 	r d-. r c-.
 	r c-. r c-.
 % Bars 261 to 265
@@ -249,22 +248,22 @@ musicFloteIMvtIII = \relative c''' {
 	R2.*2
 	\bar "||" \time 4/4
 % Bars 291 to 295
-	\partcombineApart r4 cis,(^\pcresc d dis 
-	e fis fisis gis) \bar "||" \time 2/4 \partcombineAutomatic
-	ais8-. r r4
+	\partCombineApart \voiceOne r4 cis,(^\pcresc d dis 
+	e fis fisis gis) \bar "||" \timeMvtIII 
+	\partCombineAutomatic ais8-. r r4
 	fis8-. r r4
-	fis'8-. r r4
+	\once \oneVoice \noFlag fis'8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" \partcombineApart a,8( e' dis d
-	cis[ b a]) \partcombineAutomatic r
+	\partCombineApart a,8( e' dis d
+	cis[ b a]) \partCombineAutomatic r
 	R2
-	 r8. e16( a cis e cis 
+	\partCombineApart r8. e16( a cis e cis 
 % Bars 301 to 305
-	a8) r r a(
+	a8) r r \shape #'((-0.5 . 1.5)(0 . 0)(0 . 0)(0 . -1)) Slur a(
 	b a d a
-	<< { \once \partcombineChords bes a4.)~} {s4 s_\dimmarkup} >>
-	a4.( gis!8)
+	<< {\oneVoice \noFlag bes a4.)~} {s4 s_\dimmarkup} >>
+	a4.( \noFlag gis!8) \partCombineAutomatic
 	R2*4
 % Bars 306 to 310
 	
@@ -275,30 +274,30 @@ musicFloteIMvtIII = \relative c''' {
 % Bars 311 to 315
 	eis fis) r fis'(
 	e\> d cis b)\!
-	a r r4
+	\once \partCombineApart \voiceOne a r r4
 	R2
 	r4 r8 a'(
 % Bars 316 to 320
 	gis\> fis d gis,)\!
-	\once \partcombineApart a r r4
+	\once \partCombineApart a r r4
 	R2
-	r4 r8 \partcombineApart a( %\once \override CombineTextScript.X-offset = #-3.5
-	gis'4 fis)
+	r4 r8 \partCombineApart a( 
+	\oneVoice gis'4 fis)
 % Bars 321 to 325
-	a, \partcombineAutomatic r8 \partcombineApart a(
-	gis'4 fis8) \partcombineAutomatic r
+	\voiceOne a, \partCombineAutomatic r8 \partCombineApart a(
+	\oneVoice gis'4 fis8) \partCombineAutomatic r
 	gis4(\> fis8)\! r \bar "||"
-	\tempo "Tempo primo" a,8-.-\tweak X-offset #-3 \f r dis4->~
+	a,8-.\f r dis4->~
 	dis2~
 % Bars 326 to 330
 	dis8 d-. cis-. b-.
 	cis-. r b-. r
-	\partcombineApart a-. e'4 e8~
+	\partCombineApart \voiceOne a-. e'4 e8~
 	e e4 e8~
 	e e4 e8~
 % Bars 331 to 335
 	e e4 e8~
-	e \partcombineAutomatic e4_\pcresc e8~
+	e \partCombineAutomatic \markEO #'(1 . 2) e4_\pcresc e8~
 	e e4 e8~
 	e e4 e8~
 	e e4 e8
@@ -307,5 +306,5 @@ musicFloteIMvtIII = \relative c''' {
 	R2
 	cis8-. r r4
 	cis8-. r r4
-	\once \partcombineApart a2\fermata \bar "|."
+	\once \partCombineApart a2\fermata \bar "|."
 }

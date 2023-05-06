@@ -6,23 +6,25 @@
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
-%                          in A minor (3rd movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    work                : Double Concerto for Violin and Violoncello 
+%                          in A minor (1st movement)
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score conductor mvt III
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
-\include "./00-Common/DoubleConcerto_markup.ily"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
-\include "./00-Common/DoubleConcerto_Paper.ily"
+\include "./00-Common/DoubleConcerto_PaperConductors.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Conductor_option.ily"
-\include "./00-Common/DoubleConcerto_StaffName.ily"
+\include "./00-Common/DoubleConcerto_LayoutConductors.ily"
+\include "./00-Common/DoubleConcerto_NameStaff.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_Format_Cond_Mvt3.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
 \include "./03-Mvt3/m03_v01_music_FloteI_C.ily"
 \include "./03-Mvt3/m03_v02_music_FloteII_C.ily"
 \include "./03-Mvt3/m03_v03_music_OboeI_C.ily"
@@ -68,87 +70,67 @@
 						\formatConductorMvtIII
 					}
 					\new Voice {
-						\timeMvtIII \generalOptions \conductorOptions
-						\nameStaffImvtIII
-						\partcombine \musicFloteIMvtIII \musicFloteIIMvtIII
+						\tempiMvtIII
+					}
+					\new Voice {
+						\timeMvtIII \nameStaffImvtIII
+						\partCombine \musicFloteIMvtIII \musicFloteIIMvtIII
 					}
 				>>
 				\new Staff {
-					\timeMvtIII \generalOptions \conductorOptions
-					\nameStaffIImvtIII
-					\partcombine \musicOboeIMvtIII \musicOboeIIMvtIII
+					\timeMvtIII \nameStaffIImvtIII
+					\partCombine \musicOboeIMvtIII \musicOboeIIMvtIII
 				}
 				\new Staff {
-					\timeMvtIII \generalOptions \conductorOptions
-					\nameStaffIIImvtIII
-					\partcombine \musicKlarinetIMvtIII \musicKlarinetIIMvtIII
+					\timeMvtIII \nameStaffIIImvtIII
+					\partCombine \musicKlarinetIMvtIII \musicKlarinetIIMvtIII
 				}
 				\new Staff {
-					\timeMvtIII \generalOptions \conductorOptions
-					\nameStaffIVmvtIII
-					\partcombine \musicFagottoIMvtIII \musicFagottoIIMvtIII
+					\timeMvtIII \nameStaffIVmvtIII
+					\partCombine \musicFagottoIMvtIII \musicFagottoIIMvtIII
 				}
 				\new GrandStaff \with { \nameGdStaffImvtIII } <<
 					\new Staff {
-						\timeMvtIII \generalOptions \conductorOptions
-						\nameStaffVmvtIII
-						\partcombine \musicHornIMvtIII \musicHornIIMvtIII
+						\timeMvtIII \nameStaffVmvtIII
+						\partCombine \musicHornIMvtIII \musicHornIIMvtIII
 					}
-					\new Staff {
-						\timeMvtIII \generalOptions \conductorOptionsHorn
-						\nameStaffVImvtIII
-						\partcombine \musicHornIIIMvtIII \musicHornIVMvtIII
+					\new Staff \with { \layoutHorn } {
+						\timeMvtIII \nameStaffVImvtIII
+						\partCombine \musicHornIIIMvtIII \musicHornIVMvtIII
 					}
 				>>
 				\new Staff {
-					\timeMvtIII \generalOptions \conductorOptions
-					\nameStaffVIImvtIII
-					\partcombine \musicTrumpetIMvtIII \musicTrumpetIIMvtIII
+					\timeMvtIII \nameStaffVIImvtIII
+					\partCombine \musicTrumpetIMvtIII \musicTrumpetIIMvtIII
 				}
 				\new Staff {
-					\timeMvtIII \generalOptions \conductorOptions
-					\nameStaffVIIImvtIII
-					\musicPaukenMvtIII
+					\timeMvtIII \nameStaffVIIImvtIII \musicPaukenMvtIII
 				}
 			>>
 			\new Staff {
-				\timeMvtIII \generalOptions \conductorOptions
-				\nameStaffIXmvtIII
-				\musicSoloViolinMvtIII
+				\timeMvtIII \nameStaffIXmvtIII \musicSoloViolinMvtIII
 			}
 			\new Staff {
-				\timeMvtIII \generalOptions \conductorOptions
-				\nameStaffXmvtIII
-				\musicSoloCelloMvtIII
+				\timeMvtIII \nameStaffXmvtIII \musicSoloCelloMvtIII
 			}
 			\new StaffGroup <<
 				\new GrandStaff <<
 					\new Staff {
-						\timeMvtIII \generalOptions \conductorOptions
-						\nameStaffXImvtIII
-						\musicViolinIMvtIII
+						\timeMvtIII \nameStaffXImvtIII 	\musicViolinIMvtIII
 					}
 					\new Staff {
-						\timeMvtIII \generalOptions \conductorOptions
-						\nameStaffXIImvtIII
-						\musicViolinIIMvtIII
+						\timeMvtIII \nameStaffXIImvtIII \musicViolinIIMvtIII
 					}
 				>>
 				\new Staff {
-					\timeMvtIII \generalOptions \conductorOptions
-					\nameStaffXIIImvtIII
-					\musicBratscheMvtIII
+					\timeMvtIII \nameStaffXIIImvtIII \musicBratscheMvtIII
 				}
 				\new GrandStaff <<
 					\new Staff {
-						\timeMvtIII \generalOptions \conductorOptions
-						\nameStaffXIVmvtIII
-						\musicVioloncellMvtIII
+						\timeMvtIII \nameStaffXIVmvtIII \musicVioloncellMvtIII
 					}
 					\new Staff {
-						\timeMvtIII \generalOptions \conductorOptions
-						\nameStaffXVmvtIII
-						\musicKontrabassMvtIII
+						\timeMvtIII \nameStaffXVmvtIII \musicKontrabassMvtIII
 					}
 				>>
 			>>
@@ -157,6 +139,7 @@
 			breakbefore = ##t
 		}
 		\layout {
+%			\layoutTemp
 		}
 	}
 }

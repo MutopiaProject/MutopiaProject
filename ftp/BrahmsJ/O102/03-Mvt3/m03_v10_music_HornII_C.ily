@@ -26,7 +26,7 @@ musicHornIIMvtIII = \relative c' {
 	
 	
 	\mark \default
-	c2\ff
+	c2-\tweak X-offset #-1.5 \ff
 	c8-. r r4
 % Bars 41 to 45
 	R2
@@ -68,7 +68,7 @@ musicHornIIMvtIII = \relative c' {
 	\bar "||"
 	\time 4/4 r2 r4 bes'\mf
 	ees,2\< ees\! \bar "||"
-	\time 2/4 R2*12
+	\timeMvtIII R2*12
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -96,8 +96,8 @@ musicHornIIMvtIII = \relative c' {
 	
 % Bars 136 to 140
 	
-	ees4\ff-> fis->
-	a4.-> r8
+	ees4-\offset X-offset 0.5 \ff fis
+	a4. r8
 	R2*9
 % Bars 141 to 145
 	
@@ -134,8 +134,8 @@ musicHornIIMvtIII = \relative c' {
 % Bars 201 to 205
 	
 	r8. des''16\ff-. f8-.[ r16 des-.]
-	\tuplet 3/2 4 {f4( ees8) c( des ees)}
-	\tuplet 3/2 4 {ees4( des8) bes( c des)}
+	\tuplet 3/2 4 {f4( ees8) c( des ees)
+	ees4( des8) bes( c des)}
 	a4 bes
 % Bars 206 to 210
 	bes2\sf
@@ -164,17 +164,17 @@ musicHornIIMvtIII = \relative c' {
 	r8 c''-.\p g-. r
 	r4 r8 g,-.
 % Bars 236 to 240
-	c-. r r4
+	c r r4
 	R2 \mark \default
 	R2*8
 % Bars 241 to 245
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	R2*4
 	
 	
 	
-	\tempo "in tempo" R2*7
+	R2*7
 % Bars 251 to 255
 	
 % Bars 256 to 260
@@ -203,65 +203,61 @@ musicHornIIMvtIII = \relative c' {
 % Bars 276 to 280
 	
 % Bars 281 to 285
-	%r4 c(_\pocof
-	%b\< bes
-	%a) d(~\>
-	%d8 bes)\! d(-. e-.)
-	%f( c) d-.( c-.)
+	
 % Bars 286 to 290
-	%bes( g) d'4(~
-	%d8 bes) d4(~
-	%d g,) \bar "||"
-	\time 3/4 R2.*2 %\time 3/4 g2 r4
-	%R2. \bar "||"
+	
+	
+	
+	\time 3/4 R2.*2
+	
 % Bars 291 to 295
 	\time 4/4 r2 r4 g
 	c2 c \bar "||" 
-	\time 2/4 c'8\f r r4
+	\timeMvtIII c'8\f r r4
 	R2*3
 	
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" R2*7
+	R2*7
 % Bars 301 to 305
 	
 	
 	
-	\partcombineApart r4 r8 c,8~
+	\partCombineApart r4 r8 c,8~
 	<< {c8 c4 c8} {s8 s\< s\> s\!} >> 
 % Bars 306 to 310
-	\partcombineAutomatic r \partcombineApart c4\p c8
-	\partcombineAutomatic r \partcombineApart c4 c8
-	\partcombineAutomatic r \partcombineApart c4\p c8
-	\partcombineAutomatic r \partcombineApart bes'4 bes8 \partcombineAutomatic
+	\partCombineAutomatic r \partCombineApart c4\p c8
+	\partCombineAutomatic r \partCombineApart c4 c8
+	\partCombineAutomatic r \partCombineApart c4\p c8
+	\partCombineAutomatic r \partCombineApart bes'4 bes8 \partCombineAutomatic
 	R2
 % Bars 311 to 315
 	r8 bes4 bes8
 	R2*8
-	%c8(\p cis) d4(\<~
-	%d8 dis) e4(\!~
-	%e8\> a( g f)\!
+	
+	
+	
 % Bars 316 to 320
-	%R2*4
 	
 	
 	
-	\once \override CombineTextScript.X-offset = #-3.5 c4(-\tweak X-offset #2 \sf\> bes)\!
+	
+	\aIIXoffset #-3.5 c4(-\tweak X-offset #2 \sf\> bes)\!
 % Bars 321 to 325
 	c\p r
 	c(-\tweak X-offset #2.0 \pp\> b!8)\! r
 	c4(\> b8)\! r \bar "||"
-	\tempo "Tempo primo" c4-\tweak X-offset #-3 \f b-.
+	c4-\tweak X-offset #1 \f b-.
 	R2*5
 % Bars 326 to 330
 	
 	
 	
 	
-	R2 %r8 c4\p c8~
+	R2
 % Bars 331 to 335
-	R %c c4 c8~
-	r8 c4_\pcresc c8~
+	R
+	r8 c4-\tweak X-offset 1 _\pcresc c8~
 	c c4 c8~
 	c c4 c8~
 	c c4 c8

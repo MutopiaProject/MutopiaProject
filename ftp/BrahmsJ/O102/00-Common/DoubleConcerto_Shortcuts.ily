@@ -261,6 +261,22 @@ textInSlur = {
 	%\once \override TextScript.avoid-slur = #'around
 }
 
+scriptInStaff = {
+	\once \override Script.outside-staff-priority = ##f
+	\once \override Script.slur-padding = #0
+	%\once \override Script.avoid-slur = #'around
+}
+
+
+whiteoutMarkup = {
+	\once \override Hairpin.layer = #4
+	\once \override TextScript.layer = #3
+	\once \override TextScript.whiteout = ##t
+	\once \override TextScript.whiteout-style = #'outline
+}
+
+
+
 #(define my-script-alist
 	(
 		append `(
@@ -282,6 +298,14 @@ textInSlur = {
 				(toward-stem-shift-in-column . 0.0))
 		)
 		default-script-alist)
+)
+
+beamGap = #(define-music-function
+	(gap)
+	(number?)
+	#{
+		\once \override Beam.auto-knee-gap = #gap
+	#}
 )
 
 
@@ -306,15 +330,6 @@ textInSlur = {
 %		\once \override Voice.Arpeggio.padding = #padding
 %	#}
 %)
-
-%beamGap = #(define-music-function
-%	(gap)
-%	(number?)
-%	#{
-%		\once \override Beam.auto-knee-gap = #gap
-%	#}
-%)
-
 
 %beamLeftTwoRightOne = {
 %	\set stemLeftBeamCount = #2
@@ -563,13 +578,6 @@ textInSlur = {
 %	%\once \override Score.RehearsalMark.whiteout-style = #'outline
 %}
 
-
-%whiteoutMarkup = {
-%	\once \override Hairpin.layer = #4
-%	\once \override TextScript.layer = #3
-%	\once \override TextScript.whiteout = ##t
-%	\once \override TextScript.whiteout-style = #'outline
-%}
 
 %whiteoutDynamic = {
 %	\once \override DynamicText.whiteout = ##t

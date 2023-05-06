@@ -26,16 +26,16 @@ musicHornIVMvtIII = \relative c' {
 	ees~
 	ees~
 	ees
-	\tempo "poco rit." R2*4
+	R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*6
+	R2*6
 % Bars 36 to 40
 	
 	
 	\mark \default
-	d'2\ff
+	d'2-\tweak X-offset #-1.5 \ff
 	g,,8-. g-. r g-.
 % Bars 41 to 45
 	r g-. r g-.
@@ -67,21 +67,21 @@ musicHornIVMvtIII = \relative c' {
 	
 % Bars 76 to 80
 	
-	R2 %r4 f_\pocof(
-	R %e ees
+	R2 
+	R 
 	r4 b(
 	c) r
 % Bars 81 to 85
-	R2 %bes8 d) g(-. f-.)
-	R2*3 %ees( c) g(-. b-.)
-	%c( ees) g4(~
-	\bar "||" %g g,) \bar "||"
+	R2 
+	R2*3
+	
+	\bar "||"
 	\time 3/4 R2.*2
 % Bars 86 to 90
 	\bar "||"
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*12
+	\timeMvtIII R2*12
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -148,16 +148,16 @@ musicHornIVMvtIII = \relative c' {
 	g4) r
 	c2(
 	g4) r
-	R2*2 %c2(
+	R2*2
 % Bars 186 to 190
-	%f4) r
-	d''2(
-	g,4) r
-	c,2(
+	
+	d''2
+	g,4 r
+	\voiceOne c,2_(
 	e4) r
 % Bars 191 to 195
-	des'( c
-	e,) r
+	\voiceTwo des' c
+	e, r
 	R2*3
 	
 	
@@ -165,11 +165,11 @@ musicHornIVMvtIII = \relative c' {
 	r4 r8. g16-\tweak X-offset #-3 \ff
 	g4.. ees'16
 	ees4.. ees16
-	\tuplet 3/2 4 {ees4( d8) c( d ees)}
-	\tuplet 3/2 4 {ees4( des8) ces( des ees)}
+	\tuplet 3/2 4 {ees4( d8) c( d ees)
+	ees4( des8) ces( des ees)}
 % Bars 201 to 205
 	bes4 b
-	r8. g16-. ees8[ r16 c]
+	r8. g16 ees8[ r16 c]
 	c'4 d
 	bes c,
 	g c,
@@ -208,25 +208,25 @@ musicHornIVMvtIII = \relative c' {
 	\mark \default
 	R2*4
 	
-	%f8_\dolce( ees16 d) f4~\<
+	
 % Bars 241 to 245
-	%f8\>( g16 aes)\! g8( f)
+	
 	ees,2\p~
 	ees
 	R2*2
 	
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
+	R2*4
 	
 	
 	
-	\tempo "in tempo" R2*8
+	R2*8
 % Bars 251 to 255
 	
 % Bars 256 to 260
 	
 	
-	g,8-\tweak X-offset #-3 \f-. g-. r g-.
+	g,8-\tweak X-offset #-2.5 \f-. g-. r g-.
 	r g-. r g-.
 	g-. g'-. r g-.
 % Bars 261 to 265
@@ -258,25 +258,25 @@ musicHornIVMvtIII = \relative c' {
 % Bars 291 to 295
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*4
+	\timeMvtIII R2*4
 	
 	
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" R2
-	r4 r8 g,\pp~
+	R2
+	r4 r8 g,-\tweak X-offset -3 \pp~
 	g2~
 	g~
 % Bars 301 to 305
-	g4. c8~
-	c2~
-	c~
+	g4. \voiceOne \noFlag c8_~
+	c2_~
+	\voiceTwo c~
 	c
-	\partcombineApart c
+	c
 % Bars 306 to 310
 	c
 	c
-	c \partcombineAutomatic
+	c
 	c2
 	c
 % Bars 311 to 315
@@ -289,17 +289,17 @@ musicHornIVMvtIII = \relative c' {
 	
 	
 	
-	\once \override CombineTextScript.X-offset = #-3.5 <<g2 {s4-\tweak X-offset #2 \sf\> s\!}>>
+	\aIIXoffset #-3.5 <<g2 {s4-\tweak X-offset #2 \sf\> s\!}>>
 % Bars 321 to 325
 	g4\p r
 	<<{g4. r8} {s4-\tweak X-offset #2.5 \sf\> s\!}>>
 	<<{g4. r8} {s4-\tweak X-offset #2.5 \sf\> s\!}>> \bar "||"
-	\tempo "Tempo primo" g4-\tweak X-offset #-3 \f-. g-\tweak X-offset #-3.5 \fp~
+	g4-\tweak X-offset #-2 \f-. g-\tweak X-offset #-3.5 \fp~
 	g2~
 % Bars 326 to 330
-	g8 g-\tweak X-offset #-2.5 \f-. g-. g'-.
+	g8\noBeam g-\tweak X-offset #-2.5 \f-. g-. g'-.
 	\tuplet 3/2 4 {g8( d'-.) d-. e( d-.) d-.}
-	g,8-\tweak X-offset #-2 \p r r4
+	g,8-\tweak X-offset #1 \p r r4
 	R2*7
 % Bars 331 to 335
 	

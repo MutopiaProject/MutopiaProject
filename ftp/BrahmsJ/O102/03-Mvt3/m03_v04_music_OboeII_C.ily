@@ -22,17 +22,17 @@ musicOboeIIMvtIII = \relative c'' {
 	
 	
 	
-	\tempo "poco rit." R2*4
+	R2*4
 	
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" R2*6
+	R2*6
 % Bars 36 to 40
 	
 	
 	\mark \default
-	b2\ff
+	b2-\tweak X-offset #0.5 \ff
 	c8-. a-. r a-.
 % Bars 41 to 45
 	r gis-. r a-.
@@ -47,7 +47,7 @@ musicOboeIIMvtIII = \relative c'' {
 	a-. r r4
 	R2
 % Bars 51 to 55
-	c4-\tweak X-offset #-3 \p a
+	c4-\tweak X-offset 0.5 \p a
 	fis d
 	e8-. r r4
 	R2*31
@@ -71,11 +71,11 @@ musicOboeIIMvtIII = \relative c'' {
 	
 	\time 4/4 R1*2
 	
-	\time 2/4 R2*7
+	\timeMvtIII R2*7
 % Bars 91 to 95
 	
 % Bars 96 to 100
-	r4 c'8(\p\< d
+	r4 c'8(\p\< d\!
 	f\> e)\! r4
 	R2*3
 	
@@ -84,14 +84,8 @@ musicOboeIIMvtIII = \relative c'' {
 	R2*18
 % Bars 106 to 110
 	
-	%c,8->\p b16-. c-. b8-> c16-. b-.
-	%c8-> b16-. c-. b( a') g-. fis-.
-	%e8 r r4
-	%R2*2
 % Bars 111 to 115
 	
-	%r4 a,16(\p\> e')\! r8
-	%R2*6
 % Bars 116 to 120
 	
 	
@@ -105,7 +99,7 @@ musicOboeIIMvtIII = \relative c'' {
 	
 % Bars 136 to 140
 	
-	bes4..\ff bes16
+	bes4..-\tweak X-offset 0.5 \ff bes16
 	bes4.. bes16
 	a4 a
 	R2*2
@@ -146,16 +140,16 @@ musicOboeIIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. a'16-\tweak X-offset #-3 \ff
+	r4 r8. \dynEO #'(0 . 2) a'16\ff
 	a4.. f!16
 	f4.. f16
-	\tuplet 3/2 4 {f4( e8) d( e f)}
-	\tuplet 3/2 4 {f4( ees8) des( ees f)}
+	\tuplet 3/2 4 {f4( e8) d( e f)
+	f4( ees8) des( ees f)}
 % Bars 201 to 205
 	c4 cis
 	r8. f16-. a8[-. r16 f-.]
-	\tuplet 3/2 4 {a4( g8) e( f g)}
-	\tuplet 3/2 4 {g4( f8) d( e f)}
+	\tuplet 3/2 4 {a4( g8) e( f g)
+	g4( f8) d( e f)}
 	cis4 d
 % Bars 206 to 210
 	d8(\sf c! bes a)
@@ -181,27 +175,27 @@ musicOboeIIMvtIII = \relative c'' {
 % Bars 231 to 235
 	
 % Bars 236 to 240
-	%e'8->\p d16-. e-. d8-> e16-. d-.
-	\mark \default %e8-> d16-. e-. d( f) d-. b-. \mark \default
-	R2*2 %g8-. r r4
-	%R2
-	r8 b( c\< cis
+	
+	\mark \default
+	R2*2 
+	
+	r8 b( c\< cis\!
 % Bars 241 to 245
 	d\> des c!\! bes)
 	a r r4
 	R2*3
 % Bars 246 to 250
-	\tempo "poco rit." R2*4 %\tempo "poco rit." aes8(\p g16 aes) aes,4_\dimmarkup
-	%R2
-	%aes'8( g16 aes) aes,4
-	%R2
-	\tempo "in tempo" R2*7
+	R2*4 
+	
+	
+	
+	R2*7
 % Bars 251 to 255
 	
 % Bars 256 to 260
 	
-	b2-\tweak X-offset #-3 \f
-	c8-.-\tweak X-offset #-4 \ff a-. r a-.
+	b2\f
+	c8-.-\tweak X-offset #-1.5 \ff a-. r a-.
 	r gis-. r a-.
 	r a-. r a-.
 % Bars 261 to 265
@@ -233,51 +227,39 @@ musicOboeIIMvtIII = \relative c'' {
 % Bars 291 to 295
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*4
+	\timeMvtIII R2*4
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" R2*22
+	R2*22
 	
 	
-	%r4 r8. e16(_\pdolce
+	
 % Bars 301 to 305
-	%a cis e cis a8) r
-	%R2
-	%r8. a16( d fis a fis
-	%d8) r r e(\<
-	%fis\> e)\! r gis(\p
+	
 % Bars 306 to 310
-	%fis e) r e(\<
-	%fis\> e)\! r b'(\p
-	%a gis) r e(
-	%gis_\crescmarkup fis) r4
-	%r r8 eis(
+	
 % Bars 311 to 315
-	%gis fis) r4
-	%R2
-	%e8(\p eis) fis4(~\<
-	%fis8 fisis) gis4~\!
-	%gis8\> cis( b a)\!
+	
 % Bars 316 to 320
-	%R2*3
 	
 	
-	r4 r8  a %\once \override CombineTextScript.X-offset = #-3.5
-	e'4-\tweak X-offset #2 \sf\> d\!
+	
+	r4 r8  a 
+	\dynEO #'(1 . 2) \hairpinEO #'(1 . 2) e'4\sf\> d\!
 % Bars 321 to 325
-	a\p r8 \once \override CombineTextScript.X-offset = #-3.5 a\pp\<
+	a-\offset X-offset 0.5 \p r8 a-\offset X-offset 2 \pp\<
 	e'4\> dis8\! r
 	e4(\> dis8)\! r \bar "||"
-	\tempo "Tempo primo" r4 r8 c-\tweak X-offset #-3 \f
-	a fis' dis c
+	r4 r8 c-\tweak X-offset #-3 \f
+	\beamOffset #'(0.5 . 0) a fis' dis c
 % Bars 326 to 330
 	a4. a8-.
 	\tuplet 3/2 4 {a8( e')-. e-. fis( e)-. e-.}
-	a,-\tweak X-offset #-2 \p-. r r4
-	R2 %e e4 e8~
-	R2 %e e4 e8~
+	a,-\tweak X-offset #1 \p-. r r4
+	R2
+	R2 
 % Bars 331 to 335
-	R2 %e e4 e8~
+	R2 
 	r8 e'4_\pcresc e8~
 	e e4 e8~
 	e e4 e8~

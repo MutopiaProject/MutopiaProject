@@ -14,10 +14,10 @@ musicKlarinetIMvtIII = \relative c'' {
 	
 	
 	
-	d4( f
-	d f8. aes16
+	\partCombineApart \oneVoice \shape #'((0 . -2)(0 . -0.5)(0 . 0)(0 . -1)) Slur d4( f
+	d \voiceOne \beamOffset #'(-0.5 . -0.5) f8. aes16
 % Bars 11 to 15
-	g8) r r4
+	\oneVoice \noFlag g8) \partCombineAutomatic r r4
 	R2*17
 % Bars 16 to 20
 	
@@ -27,20 +27,20 @@ musicKlarinetIMvtIII = \relative c'' {
 	
 	
 	
-	\tempo "poco rit." ees2~\pp
+	ees2~\pp
 	ees~
 % Bars 31 to 35
 	ees~
 	ees
-	\tempo "in tempo" c(
+	c(
 	aes
 	g8)-. r r4
 % Bars 36 to 40
 	R2*3
 	
 	\mark \default
-	g'2\ff
-	\partcombineApart ees8-. c-. \partcombineAutomatic r c-.
+	g'2-\tweak X-offset #0.5 \ff
+	\partCombineApart \voiceOne ees8-. c-. \partCombineAutomatic r c-.
 % Bars 41 to 45
 	r b!-.  r c-.
 	r c-. r c-.
@@ -51,11 +51,11 @@ musicKlarinetIMvtIII = \relative c'' {
 	ees2(~
 	ees4 f)
 	g8-. ees-. d-. d-.
-	\once \partcombineApart c-. r r4
+	\once \partCombineApart c-. r r4
 	R2
 % Bars 51 to 55
-	g'8-.-\tweak X-offset #-3 \p ees-. ees-. c-. 
-	c-. a!-. a-. f-. 
+	\aIIXoffset -3 g'8[-.\p ees-.] ees-.[ c-.] 
+	c-.[ a!-.] a-.[ f-.] 
 	ees-. r r4
 	R2*31
 % Bars 56 to 60
@@ -76,16 +76,16 @@ musicKlarinetIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 % Bars 86 to 90
 	\bar "||"
-	\time 4/4 \partcombineApart r4 g(-\tweak X-offset 0 ^\mfcrescD\< aes a
-	bes c cis d)\! \partcombineAutomatic \bar "||" 
-	\time 2/4 e!8-.\f r r4
+	\time 4/4 \partCombineApart r4 g(-\tweak X-offset 0 ^\mfcrescD\< aes a
+	bes c cis d)\! \partCombineAutomatic \bar "||" 
+	\timeMvtIII e!8-.\f r r4
 	f8-. r r4
 % Bars 91 to 95
 	c8-. r r4
 	R2
-	\partcombineApart ees8( bes' a! aes
-	g f ees bes\<
-	c\> bes\!) \partcombineAutomatic r4
+	\partCombineApart \shape #'( ((0 . -1.5)(0 . 0)(0 . 1)(0 . 0)) ()) Slur ees8( bes' a! aes
+	\oneVoice \omitBeam g f ees bes
+	\voiceOne c bes) \partCombineAutomatic r4
 % Bars 96 to 100
 	R2*5
 	
@@ -132,21 +132,21 @@ musicKlarinetIMvtIII = \relative c'' {
 	c) c4 ees,8(
 % Bars 151 to 155
 	c') c4 b8(
-	c) c4\) \partcombineApart fes8^\((
-	ees) ees4 des8(
+	c) c4\) \partCombineApart \oneVoice \noFlag fes8^\((
+	\noFlag ees) ees4 \voiceOne des8(
 	ces) ces4 bes8(
 	aes) aes4 g8(
 % Bars 156 to 160
-	f!) f4\) ees8^\((
-	c') c4 b8(
-	c) c4\) c,8->^\((
-	c') c4 gis8(
+	f!) f4\) \shape #'((0 . 2.5)(0 . -1)(0 . -1)(0 . 0)) PhrasingSlur ees8^\((
+	\oneVoice \noFlag c') c4 \once \voiceOne b8(
+	\noFlag c) c4\) \shape #'((0 . 2)(0 . 1)(0 . 0)(0 . 0)) Slur c,8^>^\(^(
+	\voiceOne c') c4 gis8(
 	a) a4\) f'8^\((
 % Bars 161 to 165
-	ees) ees4 des!8(_\dimmarkup
-	a) a4 bes8(
-	fes) fes4 ees8(
-	c) c4\) \partcombineAutomatic r8
+	\oneVoice \noFlag ees) ees4 \noFlag des!8(_\dimmarkup
+	<ges, a>) q4 \once \voiceOne bes8
+	fes fes4 ees8
+	c c4\) \partCombineAutomatic r8
 	R2*15
 % Bars 166 to 170
 	
@@ -165,19 +165,19 @@ musicKlarinetIMvtIII = \relative c'' {
 % Bars 191 to 195
 	
 % Bars 196 to 200
-	r4 r8. \once \partcombineApart c''16
-	\once \partcombineApart c4.. c16
+	r4 r8. \partCombineApart \voiceOne c''16
+	c4.. \partCombineAutomatic c16
 	c4.. c16
-	\tuplet 3/2 4 {c4( bes8) aes( bes c)}
-	\tuplet 3/2 4 {c4( bes8) aes( bes c)} 
+	\tuplet 3/2 4 {c4( bes8) aes( bes c)
+	c4( bes8) aes( bes c)} 
 % Bars 201 to 205
 	c4 g
 	r8. c,16-. c8[-. r16 c-.]
 	f4 bes,
 	ees aes,
-	g \partcombineApart f
+	g \partCombineApart f
 % Bars 206 to 210
-	f'8( ees! des c) \partcombineAutomatic
+	f'8( ees! des c) \partCombineAutomatic
 	f(\sf ees des c)
 	b( c b c)
 	b-. r r4
@@ -186,12 +186,12 @@ musicKlarinetIMvtIII = \relative c'' {
 	c(\sf bes  aes g)
 	fis( g fis g)
 	fis-. r r4
-	g8( f! ees d
-	ees_\dimmarkup d c b
+	\partCombineApart \oneVoice \omitBeam g8( f! ees d
+	\omitBeam ees_\dimmarkup d c b
 % Bars 216 to 220
-	c bes! a aes
+	\voiceOne c bes! a aes
 	g aes! g f) \bar "||" \mark \default \key c \minor
-	ees-.\p r r4
+	\partCombineAutomatic ees-.\p r r4
 	R2*4
 	
 % Bars 221 to 225
@@ -221,33 +221,33 @@ musicKlarinetIMvtIII = \relative c'' {
 	gis8(_\dolce fis16 gis) fis8( e16 fis)
 	e( dis cis dis) b4
 % Bars 246 to 250
-	\tempo "poco rit." R2
+	R2
 	d!8(_\dimmarkup cis16 d) d'4
 	R2
 	fis,8(-\tweak X-offset #-2 _\pp eis16 fis) fis'4~
-	\tempo "in tempo" fis8 r r4
+	fis8 r r4
 % Bars 251 to 255
 	R2*4
 	
 	
 	
-	g,,,2-\tweak X-offset #-9.5 _\mfcresc(
+	\partCombineApart g,,,2-\tweak X-offset #1 _\mfcresc^(
 % Bars 256 to 260
 	aes!)(
-	<f'' aes!>) 
-	g8-.-\tweak X-offset #-4 \ff ees-. r c-.
+	\once \oneVoice aes''!) \partCombineAutomatic
+	g8-.\ff ees-. r c-.
 	r b-. r c-.
 	r c-. r c-.
 % Bars 261 to 265
 	r c-. r c-.
-	ees-. ees-. r ees-.
+	\beamOffset #'(0.5 . 0.5) ees-. ees-. r ees-.
 	r ees-. r ees-.
 	ees2~
 	ees4( f)
 % Bars 266 to 270
 	g8-. g-. g-. g-.
 	ees-. ees-. ees-. ees-.
-	c-. r r4
+	\once \stemUp c-. r r4
 	R2*5
 % Bars 271 to 275
 	
@@ -265,19 +265,19 @@ musicKlarinetIMvtIII = \relative c'' {
 	\time 3/4 R2.*2
 	\bar "||"
 % Bars 291 to 295
-	\partcombineApart \time 4/4 r4 e,(^\pcresc f fis
-	g a ais b) \partcombineAutomatic \bar "||"
-	\time 2/4 cis8-.\f r r4
+	\partCombineApart \time 4/4 r4 \shape #'((0 . -0.5)(0 . -0.5)(0 . -0.5)(0 . -0.5)) Slur e,(^\pcresc f fis
+	g a ais b) \partCombineAutomatic \bar "||"
+	\timeMvtIII cis8-.\f r r4
 	d8-. r r4
 	a8 r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" \partcombineApart c8([ g' fis f]
+	\partCombineApart c8([ g' fis f]
 	e[ d c]) g'(
-	a g c g
+	\beamOffset #'(-0.5 . -0.5) a g c g
 	aes g4.)~
 % Bars 301 to 305
-	g \partcombineAutomatic r8
+	g \partCombineAutomatic r8
 	R2*2
 	
 	r4 r8 d~
@@ -290,26 +290,26 @@ musicKlarinetIMvtIII = \relative c'' {
 	r r8 d(~
 % Bars 311 to 315
 	d f) r a(
-	g\> f e d)\!
-	\once \partcombineApart c r r4
+	\beamOffset #'(1 . 1) g\> f e d)\!
+	\once \partCombineApart c r r4
 	R2
 	r4 r8 c'(
 % Bars 316 to 320
 	b\> a f g)\!
-	\partcombineApart g( gis) a4(~_\crescD_\<
+	\partCombineApart g( gis) a4(~_\crescD_\<
 	a8 ais) b4\!~
-	b8 r \once \partcombineAutomatic r c,( %\once \override CombineTextScript.X-offset = #-3.5
-	b'4 a)
+	b8 r \once \partCombineAutomatic r c,(
+	\oneVoice b'4 a)
 % Bars 321 to 325
-	c, \partcombineAutomatic r
+	\voiceOne c, \partCombineAutomatic r
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" r4 r8 ees'(-\tweak X-offset #-3 \f
+	r4 r8 ees'(-\tweak X-offset #-3 \f
 	c a fis ees)
 % Bars 326 to 330
 	c4. d8-.
 	e!-. r f-. r
-	e-.-\tweak X-offset #-2 \p r r4
+	e-.-\tweak X-offset #1 \p r r4
 	R2*7
 % Bars 331 to 335
 	

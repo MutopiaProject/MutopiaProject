@@ -17,7 +17,7 @@ musicViolinIIMvtIII = \relative c'' {
 	fis-. gis-. a-. r
 	r <a, e'>-. <c e>4
 	r8 <a e'>-. <e' a>4
-	r8 <c g'> <e g>4
+	r8 <c g'>-. <e g>4
 % Bars 16 to 20
 	r8 <c g'>-. <g' c>4
 	r8 <e g> r <dis fis>
@@ -34,18 +34,18 @@ musicViolinIIMvtIII = \relative c'' {
 	R2*3
 	
 	
-	\tempo "poco rit." R2*2
+	R2*2
 % Bars 31 to 35
 	r8 a'8^\pizz f' f,
 	r a e' a,
-	\tempo "in tempo" <f a> r r4
+	<f a> r r4
 	b,8 r r4
 	c8_\pmarccresc bes a b
 % Bars 36 to 40
 	c bes a b\<
 	<a f'> <b d> <a f'> <b d>\!
 	<a f' a>\f r r4 \mark \default
-	\tuplet 6/4 4 {<gis' e'>16-.\ff-\tweak X-offset #-5.5 ^\arco q-. q-. q-. q-. q-. q-. q-. q-. q-. q-. q-.}
+	\tuplet 6/4 4 {\tupletUp <gis' e'>16-.-\offset X-offset -2.5 \ff-\tweak X-offset #-5.5 ^\arco q-. q-. q-. q-. q-. q-. q-. q-. q-. q-. q-. \tupletNeutral }
 	a8->_\benmarc e'16-. e-. dis8-> d16-. d-.
 % Bars 41 to 45
 	c8-> b16-. b-. a8-> e16-. e-.
@@ -74,7 +74,7 @@ musicViolinIIMvtIII = \relative c'' {
 	r4 r8. g16\f-\tweak X-offset #-5 ^\arco(
 	g') f,( f') d,( d') g,( g') f,(
 % Bars 66 to 70
-	f') d,( d') g,,( g'8) <g, g'>8_\pdim~
+	f') d,( d') g,,( g'8)\noBeam <g, g'>8_\pdim~
 	q q4 q8
 	R2*17
 % Bars 71 to 75
@@ -95,7 +95,7 @@ musicViolinIIMvtIII = \relative c'' {
 		d\f-\tweak X-offset #-3.5 ^\div^(
 		<f a> <e g> <d f> <e g>) <e g>4.^( <d f>8)
 	}>> \bar "||"
-	\time 2/4 <cis e>8-.\f r r4
+	\timeMvtIII <cis e>8-.\f r r4
 	<a fis'>8-. r r4
 % Bars 91 to 95
 	<d, a' f'!>8-. r r4
@@ -119,7 +119,7 @@ musicViolinIIMvtIII = \relative c'' {
 	
 	r16 e,-.^\arco_\plegg b-. e-. r dis-. c-. dis-.
 	r e-. b-. e-. r dis-. fis-. a-.
-	gis8-._\dimmarkup r a-. r
+	gis8-.-\offset X-offset 0.5 _\dimmarkup r a-. r
 	gis-. r a-. r
 % Bars 111 to 115
 	a-. r r4
@@ -150,15 +150,15 @@ musicViolinIIMvtIII = \relative c'' {
 	a8-.\p[ r16 a-.] a8-.[\< r16 a-.]
 % Bars 136 to 140
 	f'8-.[ r16 f-.] f8-.[ r16 f-.]\!
-	\tuplet 3/2 4 {f4(\ff e8) d( e f)}
-	\tuplet 3/2 4 {f4( ees8) des( ees f)}
+	\tuplet 3/2 4 {f4(\ff e8) d( e f)
+	f4( ees8) des( ees f)}
 	c4 cis
 	r c,!^\pizz\p
 % Bars 141 to 145
 	cis r
 	r8. c'!16-.-\tweak X-offset #-5.5 ^\arco\ff e8-.[ r16 e-.]
-	\tuplet 3/2 4 {e4( d8) b( c d)}
-	\tuplet 3/2 4 {d4( c8) a( b c)}
+	\tuplet 3/2 4 {e4( d8) b( c d)
+	d4( c8) a( b c)}
 	gis4 a
 % Bars 146 to 150
 	R2*2
@@ -207,9 +207,9 @@ musicViolinIIMvtIII = \relative c'' {
 % Bars 201 to 205
 	a4 a
 	r8. f''16-. a8-.[ r16 f-.]
-	\tuplet 3/2 4 {a4( g8) e( f g)}
-	\tuplet 3/2 4 {g4( f8) d( e f)}
-	cis4 d8. <d d'>16
+	\tuplet 3/2 4 {a4( g8) e( f g)
+	g4( f8) d( e f)}
+	cis4 d8.\noBeam <d d'>16
 % Bars 206 to 210
 	q4..\sf <d, d'>16
 	q8\sf( c'!16) c( bes) bes( a) a(
@@ -257,17 +257,17 @@ musicViolinIIMvtIII = \relative c'' {
 	f4 r
 	R2*3
 % Bars 246 to 250
-	\tempo "poco rit." R2*2
+	R2*2
 	
-	aes,2\pp(
+	aes,2-\tweak extra-offset #'(-0.3 . 0.3) \pp(
 	g
-	\tempo "in tempo" aes8-.) r r4
+	aes8-.) r r4
 % Bars 251 to 255
 	R2*6
 % Bars 256 to 260
 	
-	\tuplet 3/2 8 {d!16\f\<[( f b] f[ b d]) b[( d f] d[ f b])}
-	a,8->-\tweak X-offset #-4 \ff e'16-. e-. dis8-> d16-. d-.
+	\tuplet 3/2 8 {d!16\f[( f\< b] f[ b d]) \tupletUp b[( d f] d[ f b])\! \tupletNeutral }
+	a,8->\ff e'16-. e-. dis8-> d16-. d-.
 	c8-> b16-. b-. a8-> e16-. e-.
 	f8 e16 e a8 e16 e
 % Bars 261 to 265
@@ -281,7 +281,7 @@ musicViolinIIMvtIII = \relative c'' {
 	<a c>-\tweak X-offset #-1.5 \sf-. q-. <g c>\sf-. q-.
 	<f a>-. r r4
 	R2
-	gis8(_\mfdimD\> a) a( b)
+	gis8(-\tweak extra-offset #'(0 . 1.5) _\mfdimD-\tweak rotation #'(-2.5 1 0) \> a) a( b)
 % Bars 271 to 275
 	e,( d) d( b)
 	b4 b\!
@@ -299,13 +299,13 @@ musicViolinIIMvtIII = \relative c'' {
 	\bar "||"
 % Bars 291 to 295
 	\time 4/4 r2 r4 r8 b'(\f
-	<d fis>\<^\div <cis e> <d fis> <cis e>) <cis e>4.( <b d>8)\! \bar "||"
-	\time 2/4 <ais cis>8-.\f r r4
+	\hairpinShorten #'(0 . 3) <d fis>\<-\offset X-offset -7 ^\div <cis e> <d fis> <cis e>) <cis e>4.( <b d>8)\! \bar "||"
+	\timeMvtIII <ais cis>8-.\f r r4
 	<fis dis'>8-.^\unis r r4
 	<b, fis' d'!>8-. r r4
 % Bars 296 to 300
-	r4 d8\p-\tweak X-offset #-5 ^\pizz r \bar "||"
-	\tempo "Poco meno Allegro" cis8 r r4
+	r4 d8\p-\tweak X-offset #-6 ^\pizz r \bar "||"
+	cis8 r r4
 	R2*17
 % Bars 301 to 305
 	
@@ -327,22 +327,22 @@ musicViolinIIMvtIII = \relative c'' {
 	e8-.\p r r4
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" e8(-\tweak X-offset #-3 _\fmarc e'16-.) e-. dis4->~
+	e8(-\tweak X-offset #-3 _\fmarc e'16-.) e-. dis4->~
 	dis2~
 % Bars 326 to 330
 	dis8 d-! cis-! <a fis'>-!
 	<a e'>-. r <gis b>-. r
-	<a cis>-.\p r r d\sfp
+	<a cis>-.-\offset X-offset 1 \p r r \dynEO #'(1 . 1) d\sfp
 	cis-. b-. a-. gis-.
 	a-. r r d-.\sfp
 % Bars 331 to 335
 	cis-. b-. a-. gis-.
 	a-. e4\p gis8~\<
-	gis a4 <e d'>8\cresc~
+	gis a4\! <e d'>8\cresc~
 	q <e cis'>4 <e d'>8~
 	q <e cis'>4 <e' d'>8-.
 % Bars 336 to 340
-	<e cis'>-.-\tweak X-offset #-2.5 \f r r4
+	<e cis'>-.-\tweak X-offset #-1.5 \f r r4
 	R2
 	<e, cis' a'>8-. r r4
 	<e cis' a'>8-. r r4

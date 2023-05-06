@@ -147,7 +147,7 @@ musicVioloncellMvtIII = \relative c {
 	}
 	r4 r8. a16-.\mf^\solo \bar "||" \key d \minor
 	a8-.[ r16 f-.] d8-.[ r16 bes-.]
-	g4.. g16-.
+	g4.. g16
 % Bars 121 to 125
 	bes4.. bes16
 	f8. g16 a4
@@ -257,7 +257,7 @@ musicVioloncellMvtIII = \relative c {
 	a\sf
 	a4\sf a\sf
 	a8-. r r4^\solo
-	e8-.^\pizz^\tutti r r4
+	e8^\pizz^\tutti r r4
 	R2*3
 % Bars 216 to 220
 	
