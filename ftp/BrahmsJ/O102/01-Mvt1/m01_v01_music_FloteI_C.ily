@@ -255,10 +255,10 @@ musicFloteIMvtI = \relative c''' {
 	\markEO #'(-2 . 2) c4._\ffmarc bes8 g!4 r
 	aes4. g8 c,4 r
 	\tuplet 3/2 2 {d!4-. e-. f-. e-. f-. g-.
-	f-. g-. aes-. bes-. c-. des-.~}
+	f-. g-. aes-. bes-. c-. des~}
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
-	\tuplet 3/2 2 {des,-. ees-. f-. g-. aes-. bes-.~}
+	\tuplet 3/2 2 {des,-. ees-. f-. g-. aes-. bes~}
 	bes c,-. aes'-. f-.
 	des-. r r2 \mark #11
 	R1*9

@@ -1,41 +1,34 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part01_Floten.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
+%    work                : Double Concerto for Violin and Violoncello 
 %                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Flote
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part01_Floten.ily"
 \include "./01-Mvt1/m01_v01_music_FloteI.ily"
 \include "./02-Mvt2/m02_v01_music_FloteI.ily"
 \include "./03-Mvt3/m03_v01_music_FloteI.ily"
 \include "./01-Mvt1/m01_v02_music_FloteII.ily"
 \include "./02-Mvt2/m02_v02_music_FloteII.ily"
 \include "./03-Mvt3/m03_v02_music_FloteII.ily"
-\addQuote "cueVoiceFloteImI" { \cueVoiceFloteImI }
-\addQuote "cueVoiceFloteImII" { \cueVoiceFloteImII }
-\addQuote "cueVoiceFloteImIII" { \cueVoiceFloteImIII }
-\addQuote "cueVoiceFloteIImI" { \cueVoiceFloteIImI }
-\addQuote "cueVoiceFloteIImII" { \cueVoiceFloteIImII }
-\addQuote "cueVoiceFloteIImIII" { \cueVoiceFloteIImIII }
-\include "./00-Common/DoubleConcerto_Format_Part01_Floten.ily"
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -51,17 +44,22 @@
 			"Brahms - Concerto for Violin and Cello in A Minor"
 		}
 		instrument = \markup {
-			"Flote"
+			"Flöte"
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceI
+				\formatFloteIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceI \musicFloteIMvtI
+				\keepWithTag #'(floteI) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFloteIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameFloteIMvtI \musicFloteIMvtI
 			}
 		>>
 		\header {
@@ -74,19 +72,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceI
+				\formatFloteIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceI \musicFloteIMvtII
+				\keepWithTag #'(floteI) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFloteIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameFloteIMvtII \musicFloteIMvtII
 			}
 		>>
 		\header {
@@ -99,19 +99,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceI
+				\formatFloteIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceI \musicFloteIMvtIII
+				\keepWithTag #'(floteI) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFloteIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameFloteIMvtIII \musicFloteIMvtIII
 			}
 		>>
 		\header {
@@ -124,19 +126,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceII
+				\formatFloteIIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceII \musicFloteIIMvtI
+				\keepWithTag #'(floteII) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFloteIIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameFloteIIMvtI \musicFloteIIMvtI
 			}
 		>>
 		\header {
@@ -149,19 +153,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceII
+				\formatFloteIIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceII \musicFloteIIMvtII
+				\keepWithTag #'(floteII) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFloteIIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameFloteIIMvtII \musicFloteIIMvtII
 			}
 		>>
 		\header {
@@ -174,19 +180,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceII
+				\formatFloteIIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceII \musicFloteIIMvtIII
+				\keepWithTag #'(floteII) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFloteIIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameFloteIIMvtIII \musicFloteIIMvtIII
 			}
 		>>
 		\header {
@@ -199,9 +207,6 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

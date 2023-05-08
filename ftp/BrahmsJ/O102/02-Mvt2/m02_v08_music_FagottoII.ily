@@ -9,7 +9,7 @@ musicFagottoIIMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceFagIImII" #UP { \ni R2._\fermataMarkup \no }
+	\cueDuring #"cueVoiceFagIImII" #UP { \ni R2._\fermata \no }
 	<< {e4( a,2)\fermata} {s8\p\< s s s\> s s\!} >>
 	R2.*5^\solo
 % Bars 6 to 10

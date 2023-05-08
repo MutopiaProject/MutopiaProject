@@ -9,7 +9,7 @@ musicKlarinetIIMvtII = \relative c''' {
 	\key f \major
 	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceKlarIImII" #DOWN {\ni R2.\fermataMarkup \no }
+	\cueDuring #"cueVoiceKlarIImII" #DOWN {\ni R2.\fermata \no }
 	<< {g4( c,2)\fermata} {s8 -\tweak X-offset #-1 \p\< s s s\> s s\!} >>
 	R2.*5^\solo
 % Bars 6 to 10

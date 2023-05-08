@@ -16,7 +16,6 @@ dolce = \markup {\italic {dolce}}
 espress = \markup {\italic {espress.}}
 espr = \markup {\italic {espr.}}
 express = \markup {\italic {express.}}
-ffsempre = \markup {\dynamic ff \italic sempre}
 flat = \markup { \tiny \flat}
 gp = \markup {G.P.}
 intempo = \markup {\italic {in tempo}}
@@ -27,6 +26,7 @@ moltocrescmark = \markup {\italic {molto cresc.}}
 moltoleggieroedolce = \markup { \italic {molto leggiero e dolce}}
 pizz = \markup {\italic pizz.}
 pocorit = \markup {\italic {poco rit.}}
+sempre = \markup {\italic sempre}
 solo = \markup {Solo}
 tutti = \markup {Tutti}
 unis = \markup {unis.}
@@ -61,6 +61,7 @@ psempre = \markup {\dynamic p \italic sempre }
 fbenmarc = \markup { \dynamic f \italic {ben marc.}}
 fespr = \markup { \dynamic f \italic espr.}
 ffmarc = \markup { \dynamic ff \italic {marc.}}
+ffsempre = \markup {\dynamic ff \italic sempre}
 fmarc = \markup { \dynamic f \italic marc.}
 fsemprepiu = \markup { \dynamic f \italic {sempre più}}
 mfcresc = \markup { \dynamic mf \italic cresc.}
@@ -126,22 +127,14 @@ mmrPos = #(define-music-function
 		\once \override MultiMeasureRest.staff-position = #(- position 2)
 	#}
 )
-no = #(define-music-function
-	(parser location)
-	()
-	#{
-		%\set Voice.restNumberThreshold = #0
-		\undo \omit MultiMeasureRestNumber
-	#}
-)
-ni = #(define-music-function
-	(parser location)
-	()
-	#{
-		%\set Voice.restNumberThreshold = #1
-		\omit MultiMeasureRestNumber
-	#}
-)
+no = {
+	\undo \omit MultiMeasureRestNumber
+}
+
+ni = {
+	\omit MultiMeasureRestNumber
+}
+
 textPriority = #(define-music-function
 	(parser location priority)
 	(number?)
@@ -276,18 +269,18 @@ whiteoutMarkup = {
 }
 
 
-
+% https://lists.gnu.org/archive/html/lilypond-user/2020-12/msg00160.html
 #(define my-script-alist
 	(
 		append `(
-			("marcato"
+			(marcato
 				(script-stencil . (feta . ("dmarcato" . "umarcato")))
 				(padding . 0.20)
 				(avoid-slur . outside)
 				;;(staff-padding . ())
 				(quantize-position . #t)
 				(side-relative-direction . ,DOWN))
-			("staccatissimo"
+			(staccatissimo
 				(avoid-slur . outside)
 				(quantize-position . #t)
 				(script-stencil . (feta . ("dstaccatissimo" . "ustaccatissimo")))
@@ -297,7 +290,7 @@ whiteoutMarkup = {
 				(toward-stem-shift . 1.0)
 				(toward-stem-shift-in-column . 0.0))
 		)
-		default-script-alist)
+	default-script-alist)
 )
 
 beamGap = #(define-music-function
@@ -308,6 +301,37 @@ beamGap = #(define-music-function
 	#}
 )
 
+InCueContext = {
+	\override Beam.beam-thickness = #0.30 % 0.30
+	\override StemTremolo.beam-thickness = #0.35 % 0.30
+	\override Beam.length-fraction = #0.67 % 0.8
+	\override Stem.length-fraction = #0.8 % 0.8
+%	\override Stem.length = #7
+%	\override Beam.length = #7
+	\set fontSize = #-3 %-3
+}
+
+OutCueContext = {
+	\revert Beam.beam-thickness
+	\revert StemTremolo.beam-thickness
+	\revert Beam.length-fraction
+	\revert Stem.length-fraction
+%	\override Stem.length = #7
+%	\override Beam.length = #7
+	\unset fontSize
+}
+
+mmrnDown = {
+	\once \override MultiMeasureRestNumber.direction = #-1 
+}
+
+tempoXoffset = #(define-music-function
+	(offset)
+	(number?)
+	#{
+		\once \override Score.MetronomeMark.X-offset = #offset
+	#}
+)
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -373,30 +397,6 @@ beamGap = #(define-music-function
 %	#}
 %)
 
-%InCueContext = {
-%	\override Beam.beam-thickness = #0.30 % 0.30
-%	\override StemTremolo.beam-thickness = #0.35 % 0.30
-%	\override Beam.length-fraction = #0.67 % 0.8
-%	\override Stem.length-fraction = #0.8 % 0.8
-%%	\override Stem.length = #7
-%%	\override Beam.length = #7
-%	\set fontSize = #-3 %-3
-%}
-
-%OutCueContext = {
-%	\revert Beam.beam-thickness
-%	\revert StemTremolo.beam-thickness
-%	\revert Beam.length-fraction
-%	\revert Stem.length-fraction
-%%	\override Stem.length = #7
-%%	\override Beam.length = #7
-%	\unset fontSize
-%}
-
-
-%mmrnDown = {
-%	\once \override MultiMeasureRestNumber.direction = #-1 
-%}
 
 %mmrMinLength = #(define-music-function
 %	(length)
@@ -467,14 +467,6 @@ beamGap = #(define-music-function
 %)
 
 %tempoDown = \once \override Score.MetronomeMark.direction = #-1 
-
-%tempoXoffset = #(define-music-function
-%	(offset)
-%	(number?)
-%	#{
-%		\once \override Score.MetronomeMark.X-offset = #offset
-%	#}
-%)
 
 %tempoExtraOffset = #(define-music-function
 %	(offset)

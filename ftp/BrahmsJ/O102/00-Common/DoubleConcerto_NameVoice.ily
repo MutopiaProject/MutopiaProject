@@ -1,20 +1,37 @@
-% Project Name : Double Concerto Op102
-% Fichier :      DoubleConcerto_VoiceName.ly
-% Generated on : Friday 02 August 2019, 19:28:01
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#                    V O I C E   N A M E   :   F L O T E N                    #
 %###############################################################################
-nameVoiceI = {
+nameFloteIMvtI = {
 	\set Staff.instrumentName = #"Flote I"
-	\set Staff.shortInstrumentName = #"Fl I"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"flute"
 }
-%###############################################################################
-%#                           V O I C E   N A M E S                             #
-%###############################################################################
-nameVoiceII = {
+nameFloteIMvtII = {
+	\set Staff.instrumentName = #"Flote I"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"flute"
+}
+nameFloteIMvtIII = {
+	\set Staff.instrumentName = #"Flote I"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"flute"
+}
+nameFloteIIMvtI = {
 	\set Staff.instrumentName = #"Flote II"
-	\set Staff.shortInstrumentName = #"Fl II"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"flute"
+}
+nameFloteIIMvtII = {
+	\set Staff.instrumentName = #"Flote II"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"flute"
+}
+nameFloteIIMvtIII = {
+	\set Staff.instrumentName = #"Flote II"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"flute"
 }
 %###############################################################################

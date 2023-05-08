@@ -10,8 +10,8 @@ musicVioloncellMvtII = \relative c {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceVlcmII" #DOWN {
-		\ni \MmrPos #-2 R2._\fermataMarkup
-		\MmrPos #-2 R2._\fermataMarkup \no
+		\ni \MmrPos #-2 R2._\fermata
+		\MmrPos #-2 R2._\fermata \no
 	}
 	a8(_\pocofmadolce^\solo d e a fis d)
 	<<{d4( g, a)} \\ {g g( d)}>> 

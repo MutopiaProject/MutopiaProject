@@ -10,8 +10,8 @@ musicTrumpetIMvtII = \relative c'' {
 	\transposition d
 % Bars 1 to 5
 	\cueDuring #"cueVoiceTptImII" #UP {
-		\ni \MmrPos #4 R2.\fermataMarkup
-		\MmrPos #4 R2.\fermataMarkup \no
+		\ni \MmrPos #4 R2.\fermata
+		\MmrPos #4 R2.\fermata \no
 	}
 	R2.*27-\tweak X-offset #-2.5 ^\solo 
 % Bars 6 to 10

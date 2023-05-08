@@ -13,7 +13,7 @@
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.22.1"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
 \include "./00-Common/DoubleConcerto_PaperConductors.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"

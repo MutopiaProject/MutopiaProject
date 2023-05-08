@@ -9,10 +9,10 @@ musicFloteIIMvtI = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc^\tutti d8 b4 r
+	e4._\fmarc-\offset X-offset #-6 ^\tutti d8 b4 r
 	c4. b8 e,4 r
-	\times 2/3 {fis4-. gis-. a-. } \times 2/3 {gis-. a-. b-. }
-	\times 2/3 {a-. b-. c-. } \times 2/3 {d-. e-. f-. }
+	\tuplet 3/2 2 {fis4-. gis-. a-.  gis-. a-. b-. 
+	a-. b-. c-.  d-. e-. f-. }
 	\textLengthOn <>_\markup {(in modo d'un recit.)} R1*18^\markup {Solo-Vlc.} \textLengthOff
 % Bars 6 to 10
 	
@@ -23,18 +23,17 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 21 to 25
 	
 	
-	\cueDuring #"cueVoiceFloteIImI" #DOWN {
-		\ni \clef bass \MmrPos #8 R1
-		R
-		R
+	\ni \clef bass \mmrPos #8 R1
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 26 to 30
-		<< R {s2^\tutti s4 \clef treble s } >>
-		R1
-		r2 r4 \no } a,(_\pdolce
+	<< \mmrPos #-7 R {s2^\tutti s4 \clef treble s } >>
+	\mmrPos #4 R1 \no 
+	\voiceOne r2 r4 \oneVoice a,(_\pdolce
 	fis2 f)
 	e4( cis2) r4
 % Bars 31 to 35
-	\textLengthOn <>_\markup {\center-column {\lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
+	\textLengthOn <>^\markup {\center-column {\lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.}}} \mmrnDown R1*21 \textLengthOff
 % Bars 36 to 40
 	
 % Bars 41 to 45
@@ -43,24 +42,22 @@ musicFloteIIMvtI = \relative c''' {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoiceFloteIImI" #DOWN {
-		\ni R1 
-		\MmrPos #-4 R
-		\MmrPos #-4 R
-		\MmrPos #-4 R
+	\ni \mmrPos #4 R1 
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 56 to 60
-		\MmrPos #-4 R \mark \default \no
-	}
-	c'4.\ff-\tweak X-offset #1.5 ^\tutti d8 c4 r
+	\mmrPos #-4 R \mark \default \no
+	c'4.\ff^\tutti d8 c4 r
 	a4. gis8 a4 r
-	\times 2/3 {b-. c-. d-.} c4.-> a8
+	\tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 % Bars 61 to 65
 	b2-> a->
 	e2.-> c'4
 	b2-> a->
 	g2. e'4
-	\times 2/3 {c2 d4} \times 2/3 {b2 c4}
+	\tuplet 3/2 2 {c2 d4 b2 c4}
 % Bars 66 to 70
 	a2 a
 	a\ff-> a->
@@ -89,11 +86,11 @@ musicFloteIIMvtI = \relative c''' {
 	c4)-! c-! r2
 	a4-! a-! r g-!
 	r f-! r2
-	r r4 a(\f \mark \default
+	r r4 a(\f \markWhiteout \mark \default
 	g8) r a4( e8) r f4(
 % Bars 91 to 95
 	g2 c,4) a'4(
-	g8) r a4( e8) r f4(\<
+	g8) r a4( e8) r \shape #'((0 . -1.5)(0 . 0.3)(0 . 0.3)(0 . -0.7)) Slur f4(\<
 	f'2\> c4)\! d(
 	dis)-. e(~\sf e16 d c bes) d4(~
 	d16 c bes a) bes4(~ bes16 a g fis) g4(~
@@ -124,13 +121,11 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceFloteIImI" #UP {
-		\ni R1
+	\ni \mmrPos #4 R1
 % Bars 121 to 125
-		R
-		R
-		R \no
-	}
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R \no
 	dis,,2_\pcresc( e
 	f! a)
 % Bars 126 to 130
@@ -138,12 +133,10 @@ musicFloteIIMvtI = \relative c''' {
 	R1*5
 % Bars 131 to 135
 	
-	\cueDuring #"cueVoiceFloteIImI" #UP {
-		\ni R1 \no
-	}
-	r4 fis-. gis-.\sf r
+	\ni \mmrPos #-4 R1 \no
+	r4 fis-.\< gis-.\sf r
 	R1
-	r4 fis-. fis-.\sf r
+	r4 fis-.\< fis-.\sf r
 % Bars 136 to 140
 	r g-. r g-.\<
 	r g-. cis-.\sf r
@@ -152,7 +145,7 @@ musicFloteIIMvtI = \relative c''' {
 	a2\pp( c_\dimmarkup
 % Bars 141 to 145
 	ees1
-	c \mark \default
+	c \markWhiteout \mark \default
 	b4) r r2
 	R1*2
 	
@@ -167,14 +160,13 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 156 to 160
 	
 % Bars 161 to 165
-	\cueDuring #"cueVoiceFloteIImI" #DOWN {
-		\ni R1
-		R
-		R
-		R
-		R
+	\ni \mmrPos #4 R1
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R \no 
 % Bars 166 to 170
-		r2 r4 \no } c~_\pdolce
+	\voiceOne r2 \oneVoice r4 c~_\pdolce
 	c8 r c4~ c8 r c4(\<
 	aes4\> g8\!) r8 r4 c~
 	c8 r c4~ c8 r c4~\<
@@ -240,11 +232,10 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 226 to 230
 	
 % Bars 231 to 235
-	\cueDuring #"cueVoiceFloteIImI" #UP {
-		\ni R1 
-		R1 
-		\MmrPos #-8 R1 
-		r2 r8 \no } b(\p a g)
+	\ni \mmrPos #-4 R1 
+	\mmrPos #-4 R1
+	\mmrPos #-8 R1 \no
+	\voiceTwo r2 r8 \oneVoice b(\p a g)
 	R1*7
 % Bars 236 to 240
 	
@@ -257,10 +248,9 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 246 to 250
 	
 % Bars 251 to 255
-	\cueDuring #"cueVoiceFloteIImI" #DOWN {
-		\ni R1
-		<< \MmrPos #-4 R {s4 s8 \clef bass s s2 }>> \clef treble
-		r2 f'4\rest r8 \no } cis'\f-.
+	\ni R1
+	<< \mmrPos #-4 R {s4 s8 \clef bass s s2 }>> \clef treble \no
+	\voiceOne r2 f'4\rest r8 \oneVoice cis'\f-.
 	d-. e-. f-. r r4 r8 b,-.
 	c!-. d-. ees-. r r2
 	R1*3
@@ -274,26 +264,25 @@ musicFloteIIMvtI = \relative c''' {
 	ges( bes,)
 	c'4._\ffmarc^\solo bes8 g!4 r
 	aes4. g8 c,4 r
-	\times 2/3 {d!4-.^\tutti e-. f-.} \times 2/3 {e-. f-. g-.}
-	\times 2/3 {f-. g-. aes-.} \times 2/3 {bes-. c-. des-.~}
+	\tuplet 3/2 2 {d!4-.^\tutti e-. f-. e-. f-. g-.
+	f-. g-. aes-. bes-. c-. des~}
 % Bars 266 to 270
 	des ees,-. c'-. aes-.
-	\times 2/3 {des,-. ees-. f-.} \times 2/3 {g-. aes-. bes-.~}
+	\tuplet 3/2 2 {des,-. ees-. f-. g-. aes-. bes~}
 	bes c,-. aes'-. f-.
 	des-. r r2 \mark #11
-	R1*5
+	R1*5^\solo
 % Bars 271 to 275
 	
 	
 	
 	
-	\cueDuring #"cueVoiceFloteIImI" #UP {
-		\ni R1
+	\ni \mmrPos #-4 R1
 % Bars 276 to 280
-		R
-		R
-		R
-		r4 r8 \no } ais'\p\<( b cis\> d)\! r
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no 
+	r4 r8 ais'\p\<( b cis\> d)\! r
 	r ais(_\dimmarkup cis) r r gis( b) r
 % Bars 281 to 285
 	r fis( a) dis,( fis) c!( dis) r
@@ -302,14 +291,14 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 % Bars 286 to 290
-	cis'4-.\ff r c-. r
-	a-. r c-. r
-	b-. r r2
-	d4-. r r2 \mark \default
-	c4.\ff-\tweak X-offset #1.5 ^\tutti d8 c4 r
+	cis'4-!\ff r c-! r
+	a-! r c-! r
+	b-! r r2
+	d4-! r r2 \mark \default
+	c4.\ff^\tutti d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
-	\times 2/3 {b-. c-. d-.} c4.-> a8
+	\tuplet 3/2 {b-. c-. d-.} c4.-> a8
 	g4. f8 e4. c'8
 	b2 a
 	e2. c'4
@@ -322,12 +311,11 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 301 to 305
 	
 	
-	\cueDuring #"cueVoiceFloteIImI" #DOWN {
-		\ni R1
-		R
-		\MmrPos #-4 R
+	\ni \mmrPos #-4 R1
+	\mmrPos #4 R
+	\mmrPos #-4 R \no
 % Bars 306 to 310
-		r4 \no } fis-.\< gis-.\sf r
+	\voiceOne r4 \oneVoice fis-.\< gis-.\sf r
 	R1
 	r4 c,-.\< fis-.\sf r
 	R1
@@ -340,7 +328,7 @@ musicFloteIIMvtI = \relative c''' {
 	
 % Bars 316 to 320
 	R1_\gp
-	\cueDuring #"cueVoiceFloteIImI" #UP {\ni R1 \no}
+	\ni \mmrPos #-4 R1 \no
 	R1*18
 % Bars 321 to 325
 	
@@ -349,15 +337,14 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	\cueDuring #"cueVoiceFloteIImI" #DOWN {
-		\ni R1
-		R
-		R
-		R
-		\MmrPos #-4 R
+	\ni \mmrPos #4 R1
+	\mmrPos #6 R
+	\mmrPos #6 R
+	\mmrPos #6 R
+	\mmrPos #-4 R
 % Bars 341 to 345
-		\MmrPos #-4 R \mark \default
-		e,2\rest e4\rest \no } a'\f(
+	\mmrPos #-4 R \no \mark \default
+	r2 r4 a\f(
 	ais-.) b2( fis4)
 	r2 r4 d'(
 	dis)-. e4(~ e16 d cis b) d4\fp(~
@@ -385,7 +372,7 @@ musicFloteIIMvtI = \relative c''' {
 	gis'8-.\f gis4 gis8( fis) fis4 fis8\((\<
 % Bars 366 to 370
 	f2)\> e4\)\! r \mark \default
-	gis8-\tweak X-offset #1.5 ^\tutti gis4 gis8( fis!) fis4  fis8(
+	gis8^\tutti gis4 gis8( fis!) fis4  fis8(
 	eis4-.) cis-. r2
 	b'8 b4 b8( a) a4 a8~
 	a4-. gis-. r2
@@ -398,7 +385,7 @@ musicFloteIIMvtI = \relative c''' {
 % Bars 376 to 380
 	b8) r cis4( gis8) r a4(
 	b2 e,4) cis'(
-	b8) r cis4( gis8) r a4(
+	b8) r cis4( gis8) r \shape #'((0 . -1.5)(0 . 0.3)(0 . 0.3)(0 . -0.7)) Slur a4(
 	a'2 e4) a,(
 	cis-.) b2-> b4~
 % Bars 381 to 385
@@ -424,11 +411,9 @@ musicFloteIIMvtI = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceFloteIImI" #UP {
-		\ni R1
+	\ni \mmrPos #-4 R1
 % Bars 401 to 405
-		R \no
-	}
+	\mmrPos #-4 R \no
 	a,2(\pp bes
 	b! c)
 	d( ees
@@ -443,15 +428,14 @@ musicFloteIIMvtI = \relative c''' {
 	R1*3
 	
 	
-	R1^\pocorit
-	r2 r4 r^\atempo
+	R1
+	r2 r4 r
 % Bars 416 to 420
-	\MmrLength #8 R1*3
+	R1*3
 	
 	
-	\cueDuring #"cueVoiceFloteIImI" #UP {
-		\ni R1
-		r2 r4 \no } c-.\f
+	\ni \mmrPos #-4 R1 \no
+	\voiceOne r2 r4 \oneVoice c-.\f
 % Bars 421 to 425
 	b-. c-. gis-. a-.
 	b-. b-. e,-. c'-. 

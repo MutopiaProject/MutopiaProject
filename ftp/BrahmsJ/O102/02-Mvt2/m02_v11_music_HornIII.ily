@@ -10,8 +10,8 @@ musicHornIIIMvtII = \relative c {
 	\transposition f
 % Bars 1 to 5
 	\mark \markup {\abs-fontsize #16 "in F"} \cueDuring #"cueVoiceHrnIIImII" #DOWN {
-		\ni R2.\fermataMarkup
-		\MmrPos #6 R2.\fermataMarkup \no
+		\ni R2.\fermata
+		\MmrPos #6 R2.\fermata \no
 	}
 	R2.*22^\solo
 % Bars 6 to 10
@@ -115,5 +115,5 @@ musicHornIIIMvtII = \relative c {
 % Bars 116 to 118
 	a~
 	a2 r4
-	\ni R2.\fermataMarkup \bar "|."
+	\ni R2.\fermata \bar "|."
 }

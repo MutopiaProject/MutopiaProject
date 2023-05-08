@@ -10,8 +10,8 @@ musicBratscheMvtII = \relative c' {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceBrmII" #UP {
-		\ni R2._\fermataMarkup
-		\clef "treble" R2._\fermataMarkup
+		\ni R2._\fermata
+		\clef "treble" R2._\fermata
 		\MmrPos #-6 R2. \clef alto \no
 	}
 	g8(_\pocofmadolce d) d( e) fis4

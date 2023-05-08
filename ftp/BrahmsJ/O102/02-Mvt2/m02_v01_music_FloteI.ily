@@ -9,9 +9,7 @@ musicFloteIMvtII = \relative c''' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring "cueVoiceFloteImII" #UP {
-		\ni \MmrPos #4 R2.\fermataMarkup 
-	}
+	\ni \mmrPos #4 R2.\fermata \no
 	<< { e4( a2)\fermata } {s8\p\< s s s\> s s\!} >>
 	R2.*4^\solo
 	
@@ -26,10 +24,9 @@ musicFloteIMvtII = \relative c''' {
 	
 % Bars 16 to 20
 	
-	\cueDuring "cueVoiceFloteImII" #DOWN {
-		\ni R2.
-		R
-		r4 r8 \no } fis'(\p a b)
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R \no
+	\voiceOne r4 r8 \oneVoice fis'(\p a b)
 	c( a fis dis e g)
 % Bars 21 to 25
 	a(\p fis) g( e) fis( b)
@@ -39,16 +36,15 @@ musicFloteIMvtII = \relative c''' {
 % Bars 26 to 30
 	
 	
-	\cueDuring "cueVoiceFloteImII" #DOWN {
-		\ni R2.
-		R
-		r4 r \no } a'_\pdolce-\tweak X-offset #-3.8 ^\tutti(~ \bar "||" \mark \default \key f \major
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R \no 
+	\voiceOne r4 r \oneVoice a'_\pdolce-\tweak X-offset #-3.8 ^\tutti(~ \bar "||" \markWhiteout \mark \default \key f \major
 % Bars 31 to 35
 	a bes c
 	bes a) d(
 	e f g
-	f c) c,\((\pdolceD\<
-	f) e d
+	f c) c,\((-\offset X-offset 0.5 \pdolceD\<
+	f) e d\!
 % Bars 36 to 40
 	c\> b\)\! c(~
 	c cis d
@@ -56,17 +52,17 @@ musicFloteIMvtII = \relative c''' {
 	R2.*2
 	
 % Bars 41 to 45
-	f'4.\p\< f4 f8~
+	f'4.\p\< f4 f8~\!
 	f\> f4 f8( g) g~\!
 	g4. r8 r4
 	R2.
-	f4.\p\< f8( g) f8~
+	f4.\p\< f8( g) f8~\!
 % Bars 46 to 50
 	f\> f( d') b( c) g(\!
 	des') b( c)\> g( des')^\dimmarkup des(~\!
 	des4 c8) r r4
 	R2.
-	r4 r a!_\psempre(~ \mark \default
+	r4 r a!_\psempre(~ \markWhiteout \mark \default
 % Bars 51 to 55
 	a bes c
 	bes a) r
@@ -75,7 +71,7 @@ musicFloteIMvtII = \relative c''' {
 	f c) r
 % Bars 56 to 60
 	r r cis(
-	d\< c! bes
+	d\< c! bes\!
 	a\> g\!) r
 	r r f(
 	d dis e
@@ -86,7 +82,7 @@ musicFloteIMvtII = \relative c''' {
 	R2.^\tutti
 	r4 r gis\p\<(
 % Bars 66 to 70
-	b2\> a4)\! \bar "||" \key d \major
+	\once \stemUp b2\> a4)\! \bar "||" \key d \major
 	R2.
 	r4 r fis'(_\mfcresc~
 	fis g! a
@@ -94,23 +90,23 @@ musicFloteIMvtII = \relative c''' {
 % Bars 71 to 75
 	b^\solo cis d)
 	e2( fis4)
-	g4.\f\> r8\! r4
+	\hairpinShorten #'(-0.3 . -1) g4.\f\> r8\! r4
 	R2.*5
 	
 % Bars 76 to 80
 	
 	
 	
-	r4 r d,8(\mf a)
+	r4 r \beamOffset #'(-0.3 . 0.5) d,8(\mf a)
 	b( d) d( e) fis4
 % Bars 81 to 85
 	r4 r b,8( d)
 	fis( e) e( d) cis4
-	a8(\p d e\< a d e
+	a8(\p d e\< a d e\!
 	a\> fis d a)\! r a,(
 	d b) d( e) fis4
 % Bars 86 to 90
-	a,8( d e\< fis ais cis
+	a,8( d e\< fis ais cis\!
 	fis\> dis b fis\! d! fis)
 	fis( e) e( d) cis4
 	c'2(\mf\> b4)\!
@@ -128,14 +124,13 @@ musicFloteIMvtII = \relative c''' {
 % Bars 101 to 105
 	
 % Bars 106 to 110
-	\cueDuring #"cueVoiceFloteImII" #UP {
-		\ni \clef bass R2.
-		R
-		R
-		R
-		<< R {s2 \clef treble s4} >>
+	\ni \clef bass \mmrPos #-4 R2.
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	<< \mmrPos #-4 R {s2 \clef treble s4} >> \no 
 % Bars 111 to 115
-		r4 r \no } d(~\f
+	r4 r d(~\f
 	d cis\dimD\> b
 	a g e)~
 	e(\p d) r

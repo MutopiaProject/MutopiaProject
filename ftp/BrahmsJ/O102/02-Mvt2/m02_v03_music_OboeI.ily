@@ -10,8 +10,8 @@ musicOboeIMvtII = \relative c''' {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceOboeImII" #DOWN {
-		\ni R2.\fermataMarkup
-		R2.\fermataMarkup \no
+		\ni R2.\fermata
+		R2.\fermata \no
 	}
 	\MmrLength #20 R2.*27 -\tweak X-offset #-2 ^\solo
 % Bars 6 to 10

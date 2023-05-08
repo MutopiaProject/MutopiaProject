@@ -10,8 +10,8 @@ musicSoloViolinMvtII = \relative c' {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceSoloVlnmII" #UP {
-		\ni R2._\fermataMarkup 
-		R2._\fermataMarkup \no
+		\ni R2._\fermata 
+		R2._\fermata \no
 	}
 	a8(_\fespress d e a fis d)
 	b4( b' a)

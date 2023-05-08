@@ -10,8 +10,8 @@ musicKontrabassMvtII = \relative c' {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceKtbmII" #UP { 
-		\ni R2._\fermataMarkup
-		R2._\fermataMarkup
+		\ni R2._\fermata
+		R2._\fermata
 		R2. \no
 	}
 	g4(_\pocofmadolce g, d')

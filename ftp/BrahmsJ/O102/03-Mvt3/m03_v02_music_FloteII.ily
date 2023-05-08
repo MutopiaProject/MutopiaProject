@@ -9,10 +9,8 @@ musicFloteIIMvtIII = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni \clef bass R2
-		R \no \clef treble
-	}
+	\ni \clef bass \mmrPos #-4 R2
+	\mmrPos #-4 R \no \clef treble
 	R2*22
 % Bars 6 to 10
 	
@@ -25,24 +23,22 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni R2
+	\ni \mmrPos #-4 R2
 % Bars 26 to 30
-		R
-		R
-		R
-		R^\pocorit
-		R \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 31 to 35
 	a2\pp~
 	a(
-	f8)^\intempo r r4
+	f8) r r4
 	R2*5
 % Bars 36 to 40
 	
 	
-	\once \override Score.RehearsalMark.X-offset = #-1.8 \mark \default
+	\mark \default
 	e'2\ff^\tutti
 	a,8-. a-. r a-.
 % Bars 41 to 45
@@ -61,7 +57,7 @@ musicFloteIIMvtIII = \relative c''' {
 	R2*3^\tutti
 	
 	
-	\MmrLength #12 R2*11^\solo
+	R2*11^\solo
 % Bars 56 to 60
 	
 % Bars 61 to 65
@@ -74,28 +70,26 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	\MmrLength #10 R2*8^\solo
+	R2*8^\solo
 	
 % Bars 71 to 75
 	
 % Bars 76 to 80
 	
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni R2
-		R
-		R
-		R
+	\ni \mmrPos #4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 81 to 85
-		R
-		R
-		R
-		R \bar "||" 
-		\time 3/4 R2.
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \bar "||" 
+	\time 3/4 \mmrPos #-4 R2.
 % Bars 86 to 90
-		R \bar "||" 
-		\time 4/4 R1 %r2 r4 fis'(\f
-	}
-	b,4(\f\< c cis d8 g)\! \bar "||" \time 2/4
+	\mmrPos #4 R \bar "||" 
+	\time 4/4 \mmrPos #4 R1 \no
+	b,4(\f\< c cis d8 g)\! \bar "||" \timeMvtIII
 	e-.\f r r4
 	fis8-. r r4
 % Bars 91 to 95
@@ -105,7 +99,7 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	c'8(\p bes a aes
 % Bars 96 to 100
-	g f e\< d
+	g f e\< d\!
 	f\> e)\! r4
 	R2*3
 	
@@ -120,22 +114,18 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	R2*7^\solo %e'8->\p d16-. e-. d8-> e16-. d-.
-	%e8-> d16-. e-. d( f) d-. b-.
+	R2*7^\solo 
+	
 % Bars 111 to 115
-	%a8 r r4
-	%r a16(\p\> e') r8\!
-	%R2*6
+	
 % Bars 116 to 120
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni \MmrPos #4 R2^\tutti
-		\MmrPos #4 R
-		R \bar "||" 
-		\key d \minor R
-		R
+	\ni \mmrPos #4 R2^\tutti
+	\mmrPos #4 R
+	\mmrPos #-4 R \bar "||" 
+	\key d \minor \mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 121 to 125
-		R
-	}
+	\mmrPos #-4 R \no
 	R2*12
 % Bars 126 to 130
 	
@@ -143,21 +133,19 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni R2
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
 % Bars 136 to 140
-		R \no
-	}
-	\times 2/3 {f'4(\ff^\tutti e8)} \times 2/3 {d( e f)}
-	\times 2/3 {f4( ees8)} \times 2/3 {des( ees f)}
+	\mmrPos #-4 R \no
+	\tuplet 3/2 4 {f'4(\ff^\tutti e8) d( e f)
+	f4( ees8) des( ees f)}
 	c4 cis
 	R2*2^\solo
 % Bars 141 to 145
 	
 	r8.^\tutti c!16-. e8[-. r16 e-.]
-	\times 2/3 {e4( d8)} \times 2/3 {b( c d)}
-	\times 2/3 {d4( c8)} \times 2/3 {a( b c)}
+	\tuplet 3/2 4 {e4( d8) b( c d)
+	d4( c8) a( b c)}
 	gis4 a^\solo
 % Bars 146 to 150
 	R2*2
@@ -170,15 +158,14 @@ musicFloteIIMvtIII = \relative c''' {
 % Bars 161 to 165
 	
 % Bars 166 to 170
-	\cueDuring #"cueVoiceFloteIImIII" #DOWN {
-		\ni R2
-		R
-		R
-		R
-		R
+	\ni R2
+	\mmrPos #6 R
+	\mmrPos #6 R
+	\mmrPos #6 R
+	\mmrPos #6 R
 % Bars 171 to 175
-		R
-		r4 r8 \no } a,(\f
+	\mmrPos #6 R \no 
+	r4 r8 a,(\f
 	f'-.) f4 e8(
 	f) f4 r8
 	R2
@@ -194,22 +181,21 @@ musicFloteIIMvtIII = \relative c''' {
 	
 % Bars 191 to 195
 	
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni R2
-		R
-		R
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 196 to 200
-		r4 \no } r8. -\tweak X-offset #-2.8 ^\tutti a'16\ff
+	r4 r8.^\tutti a'16\ff
 	a4.. f!16
 	f4.. f16
-	\times 2/3 {f4( e8)} \times 2/3 {d( e f)}
-	\times 2/3 {f4( ees8)} \times 2/3 {des( ees f)}
+	\tuplet 3/2 4 {f4( e8) d( e f)
+	f4( ees8) des( ees f)}
 % Bars 201 to 205
 	c4 cis
 	r8. c!16-. c8[-. r16 c-.]
-	\times 2/3 {c4( bes8)} \times 2/3 {e( f g)}
-	\times 2/3 {g4( f8)} \times 2/3 {d( e f)}
+	\tuplet 3/2 4 {c4( bes8) e( f g)
+	g4( f8) d( e f)}
 	cis4 d8. d16
 % Bars 206 to 210
 	d8(\sf c!16) c( bes) bes( a) a(
@@ -231,40 +217,32 @@ musicFloteIIMvtIII = \relative c''' {
 	
 % Bars 221 to 225
 	
-	%a16\p-. c-. e-. c-. g8-. r
-	%R2
-	%c16-. e-. g-. e-. b8-. r
-	%R2*11
 % Bars 226 to 230
 	
 % Bars 231 to 235
 	
 % Bars 236 to 240
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni R2 
-		R \mark \default 
-		R
-		R
-		R
+	\ni \mmrPos #-4 R2 
+	\mmrPos #-4 R \mark \default 
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 241 to 245
-		R \no
-	}
+	\mmrPos #-4 R \no
 	a,8(\p c16 d) c4
 	bes16( a g a) f4
 	R2*2
 % Bars 246 to 250
-	\MmrLength #10 R2*4^\pocorit
+	\mmrLength #2 R2*4
 	
 	
 	
-	\MmrLength #10 R2*4^\intempo
+	\mmrLength #2 R2*4
 % Bars 251 to 255
 	
 	
 	
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni \MmrPos #-6 R2 \no
-	}
+	\ni \mmrPos #-6 R2 \no
 	e''2_\mfcresc(
 % Bars 256 to 260
 	d)(
@@ -296,27 +274,25 @@ musicFloteIIMvtIII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceFloteIImIII" #UP {
-		\ni \MmrPos #-6 R2
+	\ni \mmrPos #-8 R2
 % Bars 286 to 290
-		R2
-		R
-		R \bar "||" \time 3/4
-		R2.
-		R2. \bar "||" \time 4/4
+	\mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R \bar "||" \time 3/4
+	\mmrPos #-6 R2.
+	\mmrPos #4 R2. \bar "||" \time 4/4
 % Bars 291 to 295
-		R1 \no %r4 cis,(_\pcresc d dis
-	}
-	gis,4(\< a ais b8 e) \bar "||" \time 2/4
+	\mmrPos #4 R1 \no
+	gis,4(\< a ais b8 e)\! \bar "||" \timeMvtIII
 	cis8-.\f r r4
 	dis8-. r r4
 	d!8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" a'8(_\pdolce g fis f
+	a'8(_\pdolce g fis f
 	e d cis) r
 	R2*2
-	%r8. e16( a cis e cis
+	
 % Bars 301 to 305
 	r4 r8 fis(
 	g fis4) fis8(
@@ -337,24 +313,24 @@ musicFloteIIMvtIII = \relative c''' {
 	r4 r8 fis'(
 % Bars 316 to 320
 	e\> d b e,)\!
-	a\p r r4 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	a\p r r4 
 	R2
 	r4 r8 a(
 	e'4\sf\> d)\!
 % Bars 321 to 325
-	a\p r8 a(\pp\<
-	e'4\> dis8)\! r
+	a\p r8 \hairpinShorten #'(-0.3 . -1) a(\pp\<
+	\hairpinShorten #'(1 . 0) e'4\> dis8)\! r
 	e4(\> dis8)\! r \bar "||"
-	\tempo "Tempo primo" a8-.\f r dis4->~
+	a8-.\f r dis4->~
 	dis2~
 % Bars 326 to 330
 	dis8 d-. cis-. b-.
 	a-. r gis-. r
 	a-.\p r r4
-	R2*3%e e4 e8~
-	%e e4 e8~
+	R2*3
+	
 % Bars 331 to 335
-	%e e4 e8~
+	
 	r8 e'4_\pcresc e8~
 	e e4 e8~
 	e e4 e8~

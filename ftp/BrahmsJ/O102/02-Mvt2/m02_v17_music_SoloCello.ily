@@ -10,8 +10,8 @@ musicSoloCelloMvtII = \relative c {
 %	\transposition a
 % Bars 1 to 5
 	\cueDuring #"cueVoiceSoloVlcmII" #UP {
-		\clef "treble" \ni R2._\fermataMarkup
-		R2._\fermataMarkup \no \clef bass
+		\clef "treble" \ni R2._\fermata
+		R2._\fermata \no \clef bass
 	}
 	a8(_\fespress d e a fis d)
 	b4( b' a)
