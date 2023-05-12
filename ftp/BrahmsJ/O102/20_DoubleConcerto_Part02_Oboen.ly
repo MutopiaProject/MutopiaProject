@@ -1,49 +1,43 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part02_Oboen.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
+%    work                : Double Concerto for Violin and Violoncello 
 %                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Flote
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part02_Oboen.ily"
 \include "./01-Mvt1/m01_v03_music_OboeI.ily"
 \include "./02-Mvt2/m02_v03_music_OboeI.ily"
 \include "./03-Mvt3/m03_v03_music_OboeI.ily"
 \include "./01-Mvt1/m01_v04_music_OboeII.ily"
 \include "./02-Mvt2/m02_v04_music_OboeII.ily"
 \include "./03-Mvt3/m03_v04_music_OboeII.ily"
-\include "./00-Common/DoubleConcerto_Format_Part02_Oboen.ily"
-\addQuote "cueVoiceOboeImI" { \cueVoiceOboeImI }
-\addQuote "cueVoiceOboeImII" { \cueVoiceOboeImII }
-\addQuote "cueVoiceOboeImIII" { \cueVoiceOboeImIII }
-\addQuote "cueVoiceOboeIImI" { \cueVoiceOboeIImI }
-\addQuote "cueVoiceOboeIImII" { \cueVoiceOboeIImII }
-\addQuote "cueVoiceOboeIImIII" { \cueVoiceOboeIImIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
 \book {
 	\header {
-		subtitle = \markup { \fontsize #3 \sans
+		subtitle = \markup {
+			\abs-fontsize #12 \sans
 			\center-column {
-				"Part for Oboen"
+				"Part for Oboe"
 			}
 		}
 		subsubtitle = \markup {
@@ -56,11 +50,16 @@
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceIII
+				\formatOboeIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceIII \musicOboeIMvtI
+				\keepWithTag #'(oboeI) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceOboeIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameOboeIMvtI \musicOboeIMvtI
 			}
 		>>
 		\header {
@@ -73,19 +72,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceIII
+				\formatOboeIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceIII \musicOboeIMvtII
+				\keepWithTag #'(oboeI) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceOboeIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameOboeIMvtII \musicOboeIMvtII
 			}
 		>>
 		\header {
@@ -98,19 +99,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceIII
+				\formatOboeIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceIII \musicOboeIMvtIII
+				\keepWithTag #'(oboeI) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceOboeIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameOboeIMvtIII \musicOboeIMvtIII
 			}
 		>>
 		\header {
@@ -123,19 +126,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceIV
+				\formatOboeIIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceIV \musicOboeIIMvtI
+				\keepWithTag #'(oboeII) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceOboeIIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameOboeIIMvtI \musicOboeIIMvtI
 			}
 		>>
 		\header {
@@ -148,19 +153,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceIV
+				\formatOboeIIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceIV \musicOboeIIMvtII
+				\keepWithTag #'(oboeII) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceOboeIIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameOboeIIMvtII \musicOboeIIMvtII
 			}
 		>>
 		\header {
@@ -173,19 +180,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceIV
+				\formatOboeIIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceIV \musicOboeIIMvtIII
+				\keepWithTag #'(oboeII) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceOboeIIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameOboeIIMvtIII \musicOboeIIMvtIII
 			}
 		>>
 		\header {
@@ -198,9 +207,6 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

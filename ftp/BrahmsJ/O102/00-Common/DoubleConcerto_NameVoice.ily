@@ -35,19 +35,36 @@ nameFloteIIMvtIII = {
 	\set Staff.midiInstrument = #"flute"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#                     V O I C E   N A M E   :   O B O E                       #
 %###############################################################################
-nameVoiceIII = {
+nameOboeIMvtI = {
 	\set Staff.instrumentName = #"Oboe I"
-	\set Staff.shortInstrumentName = #"Ob I"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"oboe"
 }
-%###############################################################################
-%#                           V O I C E   N A M E S                             #
-%###############################################################################
-nameVoiceIV = {
+nameOboeIMvtII = {
+	\set Staff.instrumentName = #"Oboe I"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"oboe"
+}
+nameOboeIMvtIII = {
+	\set Staff.instrumentName = #"Oboe I"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"oboe"
+}
+nameOboeIIMvtI = {
 	\set Staff.instrumentName = #"Oboe II"
-	\set Staff.shortInstrumentName = #"Ob II"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"oboe"
+}
+nameOboeIIMvtII = {
+	\set Staff.instrumentName = #"Oboe II"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"oboe"
+}
+nameOboeIIMvtIII = {
+	\set Staff.instrumentName = #"Oboe II"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"oboe"
 }
 %###############################################################################

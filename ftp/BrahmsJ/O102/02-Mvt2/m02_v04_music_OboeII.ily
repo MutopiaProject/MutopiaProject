@@ -9,10 +9,8 @@ musicOboeIIMvtII = \relative c'' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceOboeIImII" #DOWN {
-		\ni R2.\fermata
-		R2.\fermata \no
-	}
+	\ni \mmrPos #4 R2.\fermata
+	\mmrPos #4 R2.\fermata \no
 	R2.*27^\solo
 % Bars 6 to 10
 	
@@ -27,16 +25,15 @@ musicOboeIIMvtII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceOboeIImII" #UP { 
-		\ni R2.^\tutti \bar "||" \mark \default \key f \major
+	\ni \mmrPos #-4 R2.^\tutti \bar "||" \markWhiteout \mark \default \key f \major
 % Bars 31 to 35
-		R
-		R
-		R
-		R
-		R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 36 to 40
-		r4 r \no } c(_\pdolce
+	r4 r c(_\pdolce
 	a g f
 	d e) r^\solo
 	R2.*11
@@ -47,15 +44,13 @@ musicOboeIIMvtII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceOboeIImII" #UP { 
-		\ni R2. \mark \default
+	\ni \mmrPos #-4 R2. \markWhiteout \mark \default
 % Bars 51 to 55
-		R
-		R
-		R
-		R
-		R \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 56 to 60
 	r4 r a(
 	bes\< a g\!
@@ -69,10 +64,9 @@ musicOboeIIMvtII = \relative c'' {
 	R2.*2^\tutti
 	
 % Bars 66 to 70
-	\cueDuring #"cueVoiceOboeIImII" #DOWN {
-		\ni R2. \bar "||" \key d \major
-		R2.
-		r4 r \no } a(~_\mfcresc
+	\ni \mmrPos #4 R2. \bar "||" \key d \major
+	\mmrPos #4 R2. \no
+	\voiceOne r4 r \oneVoice a(~_\mfcresc
 	a e' fis
 	e d) g(~
 % Bars 71 to 75
@@ -99,15 +93,13 @@ musicOboeIIMvtII = \relative c'' {
 % Bars 106 to 110
 	
 % Bars 111 to 115
-	\cueDuring #"cueVoiceOboeIImII" #UP {
-		\ni R2.
-		R
-		R
-		R
-		R
+	\ni \mmrPos #-2 R2.
+	\mmrPos #-2 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 116 to 118
-		R
-		R \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	d2.\fermata\p \bar "|."
 }

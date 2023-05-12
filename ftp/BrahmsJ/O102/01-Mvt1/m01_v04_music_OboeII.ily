@@ -23,17 +23,15 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 21 to 25
 	
 	
-	\cueDuring #"cueVoiceOboeIImI" #DOWN {
-		\clef "bass" \MmrPos #8 \ni R1
-		R
-		R
+	\clef "bass" \mmrPos #8 \ni R1
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 26 to 30
-		<< R1 {s2 s4^\tutti \clef treble s}>>
-		R1
-		R
-		R
-		R \no
-	}
+	<< \mmrPos #6 R1 {s2 s4^\tutti \clef treble s}>>
+	\mmrPos #4 R1
+	\mmrPos #4 R
+	\mmrPos #6 R
+	\mmrPos #4 R \no
 % Bars 31 to 35
 	\textLengthOn <>_\markup {\center-column { \lower #1 \line {Solo-Viol. u.} \line {Solo-Vlc.}}} R1*21 \textLengthOff
 % Bars 36 to 40
@@ -44,15 +42,13 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		R
-		R
-		R
+	\ni \mmrPos #-6 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 56 to 60
-		R  \mark \default \no
-	}
-	c4.\ff -\tweak X-offset #1 ^\tutti d8 c4 r
+	\mmrPos #-4 R \mark \default \no
+	c4.\ff^\tutti d8 c4 r
 	a4. gis8 a4 r
 	d4-. b-. c4.-> c8
 	d4. d8 c4. c8
@@ -61,7 +57,7 @@ musicOboeIIMvtI = \relative c'' {
 	e'2.-> c4
 	b2-> a->
 	g2.-> e'4
-	\times 2/3 {c2 d4} \times 2/3 {b2 c4}
+	\tuplet 3/2 2 {c2 d4 b2 c4}
 % Bars 66 to 70
 	a2 a
 	a->\ff a->
@@ -128,15 +124,13 @@ musicOboeIIMvtI = \relative c'' {
 	
 % Bars 131 to 135
 	
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		R
-		R
-		R
+	\ni \mmrPos #-2 R1
+	\mmrPos #-2 R
+	\mmrPos #-2 R
+	\mmrPos #-2 R
 % Bars 136 to 140
-		R
-		R \no
-	}
+	\mmrPos #-2 R
+	\mmrPos #-2 R \no
 	a2\pp( c
 	ees c)
 	c1~_\dimmarkup
@@ -156,15 +150,14 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 161 to 165
 	
 % Bars 166 to 170
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		R
-		R
-		R
-		R
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 171 to 175
-		R \mark \default
-		r2 r4 \no } c(\f 
+	\mmrPos #-4 R \no \markWhiteout \mark \default
+	r2 r4 c(\f 
 	cis-.) d2( a4)
 	r2 r4 f'(
 	fis) g(~ g16 f e d) r4
@@ -172,8 +165,8 @@ musicOboeIIMvtI = \relative c'' {
 	R1
 	r2 r4 f4(~_\pespr
 	f8 bes,!)\! a4.( g8) f4~
-	f\dimD f2 f4 -\tweak X-offset #-3 \pp\<(~
-	f1\>~
+	f\dimD f2 f4 -\tweak X-offset #-1 \pp\<(~
+	\hairpinShorten #'(0 . 3) f1\>~
 % Bars 181 to 185
 	f2\! d)
 	R1*11
@@ -182,10 +175,8 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 191 to 195
 	
 	\mark \default
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		\MmrPos #-8 R \no
-	}
+	\ni \mmrPos #-4 R1
+	\mmrPos #-8 R \no
 	d'8\f-. d4 d8( c) c4 c8(\<
 % Bars 196 to 200
 	c2\>)( b4)\! r
@@ -220,10 +211,9 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 226 to 230
 	
 % Bars 231 to 235
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		R
-		r2 r8 \no } d(\p cis b)
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R \no 
+	r2 r8 d(\p cis b)
 	r2 r8 g( a b)
 	r2 r8 g'( fis e)
 % Bars 236 to 240
@@ -237,12 +227,10 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
+	\ni \mmrPos #-6 R1
 % Bars 251 to 255
-		R
-		R \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	r8 cis-.\f d-. e-. f!-. r r4
 	r8 b,-. c!-. d-. ees-. r r4
 	R1*3
@@ -272,16 +260,14 @@ musicOboeIIMvtI = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceOboeIImI" #DOWN {
-		\ni R1
-		R \no
-	}
+	\ni \mmrPos #4 R1
+	\mmrPos #4 R \no
 % Bars 286 to 290
 	cis'4\ff-! r c-! r
 	a-! r c-! r
 	b-! r r2
 	d4-! r r2 \mark \default
-	c4.\ff-\tweak X-offset #1 ^\tutti d8 c4 r
+	c4.\ff^\tutti d8 c4 r
 % Bars 291 to 295
 	a4. gis8 a4 r
 	d4-. b-. c4.-> c8
@@ -301,11 +287,9 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 311 to 315
 	
 	\mark \default \bar "||" \key a \major
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		R
-		R \no
-	}
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 316 to 320
 	R1_\gp
 	R1*19
@@ -316,15 +300,14 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		R
-		\MmrPos #-6 R
-		R
-		R
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-6 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 341 to 345
-		R \mark \default
-		r2 r4 \no } a'\f(
+	\mmrPos #-4 R \no \mark \default
+	\voiceTwo r2 r4 \oneVoice a'\f(
 	ais-.) b2( fis4)
 	r2 r4 d'(
 	dis)-. e(~ e16 d cis b) r4
@@ -343,14 +326,12 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 361 to 365
 	
 	
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni \MmrPos #-6 R1
-		\MmrPos #-6 R \no
-	}
+	\ni \mmrPos #-6 R1
+	\mmrPos #-6 R \no
 	b8-.\f b4 b8( a) a4 a8\<~
 % Bars 366 to 370
 	a2\> gis4\! r \mark \default
-	d'8 -\tweak X-offset #1 ^\tutti d4 d8( d) d4 d8(
+	d'8^\tutti d4 d8( d) d4 d8(
 	cis4-.) cis-. r2
 	b8 b4 b8( a) a4 a8(
 	a4-.) gis-. r2
@@ -389,31 +370,29 @@ musicOboeIIMvtI = \relative c'' {
 % Bars 401 to 405
 	
 % Bars 406 to 410
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
-		R
-		R
-		r2 \no } gis\f
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	r2 gis\f
 	a4-.\f r r2
 % Bars 411 to 415
 	R1*3
 	
 	
-	R1^\pocorit
-	r2 r4 r^\intempo
+	R1
+	r2 r4 r
 % Bars 416 to 420
 	R1*4
 	
 	
 	
-	\cueDuring #"cueVoiceOboeIImI" #UP {
-		\ni R1
+	\ni \mmrPos #-4 R1
 % Bars 421 to 425
-		R
-		R
-		R
-		R
-		r2 r4 \no } a-.\f
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	r2 r4 a-.\f
 % Bars 426 to 430
 	d2 dis
 	e gis,
