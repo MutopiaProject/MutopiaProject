@@ -6,36 +6,32 @@
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
+%    work                : Double Concerto for Violin and Violoncello 
 %                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Klarinete
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part03_Klarinetten.ily"
 \include "./01-Mvt1/m01_v05_music_KlarinetI.ily"
 \include "./02-Mvt2/m02_v05_music_KlarinetI.ily"
 \include "./03-Mvt3/m03_v05_music_KlarinetI.ily"
 \include "./01-Mvt1/m01_v06_music_KlarinetII.ily"
 \include "./02-Mvt2/m02_v06_music_KlarinetII.ily"
 \include "./03-Mvt3/m03_v06_music_KlarinetII.ily"
-\include "./00-Common/DoubleConcerto_Format_Part03_Klarinetten.ily"
-\addQuote "cueVoiceKlarImI" { \cueVoiceKlarImI }
-\addQuote "cueVoiceKlarImII" { \cueVoiceKlarImII }
-\addQuote "cueVoiceKlarImIII" { \cueVoiceKlarImIII }
-\addQuote "cueVoiceKlarIImI" { \cueVoiceKlarIImI }
-\addQuote "cueVoiceKlarIImII" { \cueVoiceKlarIImII }
-\addQuote "cueVoiceKlarIImIII" { \cueVoiceKlarIImIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -56,11 +52,16 @@
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceV
+				\formatKlarinetIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceV \musicKlarinetIMvtI
+				\keepWithTag #'(klarinetI) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKlarinetIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameKlarinetIMvtI \musicKlarinetIMvtI
 			}
 		>>
 		\header {
@@ -73,19 +74,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceV
+				\formatKlarinetIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceV \musicKlarinetIMvtII
+				\keepWithTag #'(klarinetI) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKlarinetIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameKlarinetIMvtII \musicKlarinetIMvtII
 			}
 		>>
 		\header {
@@ -98,19 +101,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceV
+				\formatKlarinetIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceV \musicKlarinetIMvtIII
+				\keepWithTag #'(klarinetI) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKlarinetIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameKlarinetIMvtIII \musicKlarinetIMvtIII
 			}
 		>>
 		\header {
@@ -123,19 +128,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceVI
+				\formatKlarinetIIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceVI \musicKlarinetIIMvtI
+				\keepWithTag #'(klarinetII) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKlarinetIIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameKlarinetIIMvtI \musicKlarinetIIMvtI
 			}
 		>>
 		\header {
@@ -148,59 +155,60 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceVI
+				\formatKlarinetIIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceVI \musicKlarinetIIMvtII
+				\keepWithTag #'(klarinetII) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKlarinetIIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameKlarinetIIMvtII \musicKlarinetIIMvtII
 			}
 		>>
 		\header {
-			breakbefore = ##t
+			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #3 \fill-line {
 					\fontsize #4
 					II
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceVI
+				\formatKlarinetIIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceVI \musicKlarinetIIMvtIII
+				\keepWithTag #'(klarinetII) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKlarinetIIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameKlarinetIIMvtIII \musicKlarinetIIMvtIII
 			}
 		>>
 		\header {
 			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #2.3 \fill-line {
 					\fontsize #4
 					III
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

@@ -269,7 +269,7 @@ musicKlarinetIMvtIII = \relative c'' {
 	g a ais b) \partCombineAutomatic \bar "||"
 	\timeMvtIII cis8-.\f r r4
 	d8-. r r4
-	a8 r r4
+	a8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
 	\partCombineApart c8([ g' fis f]

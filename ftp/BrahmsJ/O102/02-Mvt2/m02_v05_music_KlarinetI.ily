@@ -9,15 +9,15 @@ musicKlarinetIMvtII = \relative c''' {
 	\key f \major
 	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceKlarImII" #DOWN {\ni R2.\fermata \no } 
+	\ni R2.\fermata \no 
 	<< {g4( c2)\fermata} {s8\p\< s s s\> s s\!} >>
 	R2.*5^\solo
 % Bars 6 to 10
 	
 	
-	f,8(^\dolce\p\< d) d(\> bes)\! c4
+	\hairpinShorten #'(-0.3 . 0) f,8([^\dolce-\offset X-offset #-1 \p\< d\!]) d(\> bes)\! c4
 	R2.
-	f8(\< d) d(\> f,)\! e4
+	f8([\< d\!]) d(\> f,)\! e4
 % Bars 11 to 15
 	R2.*14
 % Bars 16 to 20
@@ -27,25 +27,24 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceKlarImII" #UP {
-		\ni \MmrPos #-6 R2.
+	\ni \mmrPos #-6 R2.
 % Bars 26 to 30
-		R
-		R
-		\MmrPos #-8 R
-		\MmrPos #-8 R
-		e'4\rest \no } b\rest -\tweak X-offset #-1 ^\tutti c_\pdolce(~ \bar "||" \key aes \major \mark \default
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-8 R
+	\mmrPos #-8 R \no
+	\voiceOne r4 r-\tweak X-offset #-1.5 ^\tutti \oneVoice c'_\pdolce(~ \bar "||" \key aes \major \markWhiteout \mark \default
 % Bars 31 to 35
 	c des ees
 	des c) f(
 	g aes bes
 	aes ees) c~(
-	c bes\< aes 
+	c bes\< aes\!
 % Bars 36 to 40
 	g\> f\!) bes(
 	c cis d
 	bes2) bes4^\solo -\tweak X-offset #0 _\pdolceD\<(
-	des!4.) des4 des8~
+	des!4.) des4 des8~\!
 	des\> des4 des8(\! c) c(
 % Bars 41 to 45
 	bes4) r r
@@ -78,10 +77,9 @@ musicKlarinetIMvtII = \relative c''' {
 	R2.*2^\tutti
 	
 % Bars 66 to 70
-	\cueDuring #"cueVoiceKlarImII" #UP { 
-		\ni R2. \bar "||" \key f \major
-		R2.
-		r4 r \no } c(~_\mfcresc
+	\ni \mmrPos #-4 R2. \bar "||" \key f \major
+	\mmrPos #-4 R2. \no
+	r4 r c(~_\mfcresc
 	c bes c
 	bes a) r
 % Bars 71 to 75
@@ -93,17 +91,16 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceKlarImII" #UP {
-		\ni R2.
-		R
+	\ni \mmrPos #-4 R2.
+	\mmrPos #-4 R
 % Bars 81 to 85
-		R
-		R
-		r4 r8 \no } c,(\p\< f g
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	r4 r8 c,(\p\< f g\!
 	c\> a f c)\! r4
 	R2.
 % Bars 86 to 90
-	r4 r8 a(\< cis e
+	r4 r8 a(\< cis e\!
 	a\> fis d a)\! r4
 	R2.*7
 % Bars 91 to 95
@@ -111,14 +108,12 @@ musicKlarinetIMvtII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceKlarImII" #UP {
-		\ni R2.
+	\ni \mmrPos #-4 R2.
 % Bars 96 to 100
-		R
-		\MmrPos #-8 R
-		\MmrPos #-8 R
-		R \mark \default \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-8 R
+	\mmrPos #-8 R
+	\mmrPos #-4 R \mark \default \no
 	a4(\pp bes c
 % Bars 101 to 105
 	bes a) d(
@@ -135,7 +130,7 @@ musicKlarinetIMvtII = \relative c''' {
 % Bars 111 to 115
 	r4 r f'(\f~
 	f e_\dimD\> d
-	c bes) bes(~
+	c bes) bes(~\!
 	bes\p a) r
 	R2.*3
 % Bars 116 to 118

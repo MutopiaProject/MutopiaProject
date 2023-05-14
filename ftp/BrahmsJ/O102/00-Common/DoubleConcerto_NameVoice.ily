@@ -68,19 +68,48 @@ nameOboeIIMvtIII = {
 	\set Staff.midiInstrument = #"oboe"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#               V O I C E   N A M E   :   K L A R I N E T E N                 #
 %###############################################################################
-nameVoiceV = {
-	\set Staff.instrumentName = #"Klarinet I"
-	\set Staff.shortInstrumentName = #"Kl I"
+nameKlarinetIMvtI = {
+	\set Staff.instrumentName = \markup {
+		\center-column { \lower #1.5 "Klarinet I" "in A" }
+	}
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"clarinet"
 }
-%###############################################################################
-%#                           V O I C E   N A M E S                             #
-%###############################################################################
-nameVoiceVI = {
-	\set Staff.instrumentName = #"Klarinet II"
-	\set Staff.shortInstrumentName = #"Kl II"
+nameKlarinetIMvtII = {
+	\set Staff.instrumentName = \markup {
+		\center-column { \lower #1.5 "Klarinet I" "in A" }
+	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"clarinet"
+}
+nameKlarinetIMvtIII = {
+	\set Staff.instrumentName = \markup {
+		\center-column { \lower #1.5 "Klarinet I" "in A" }
+	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"clarinet"
+}
+nameKlarinetIIMvtI = {
+	\set Staff.instrumentName = \markup {
+		\center-column { \lower #1.5 "Klarinet II" "in A" }
+	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"clarinet"
+}
+nameKlarinetIIMvtII = {
+	\set Staff.instrumentName = \markup {
+		\center-column { \lower #1.5 "Klarinet II" "in A" }
+	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"clarinet"
+}
+nameKlarinetIIMvtIII = {
+	\set Staff.instrumentName = \markup {
+		\center-column { \lower #1.5 "Klarinet II" "in A" }
+	}
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"clarinet"
 }
 %###############################################################################

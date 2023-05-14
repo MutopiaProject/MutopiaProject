@@ -114,14 +114,14 @@ tempiPartMvtIII = {
 	%%%%%%%%%%%%%%%%%%%%%%
 	% bar 246
 	%%%%%%%%%%%%%%%%%%%%%%
-	\tag #'(oboeI  klarinetI klarinetII fagottoI fagottoII
+	\tag #'(oboeI  klarinetI  fagottoI fagottoII
 		hornI hornII hornIII hornIV trumpetI trumpetII pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "poco rit."
 		}
 	}
-	\tag #'(floteI floteII oboeII) {
+	\tag #'(floteI floteII oboeII klarinetII) {
 		\tempoXoffset #-1
 		\tempo \markup {
 			\medium \italic "poco rit."
@@ -131,14 +131,14 @@ tempiPartMvtIII = {
 	%%%%%%%%%%%%%%%%%%%%%%
 	% bar 250
 	%%%%%%%%%%%%%%%%%%%%%%
-	\tag #'(oboeI  klarinetI klarinetII fagottoI fagottoII
+	\tag #'(oboeI  klarinetI  fagottoI fagottoII
 		hornI hornII hornIII hornIV trumpetI trumpetII pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "in tempo"
 		}
 	}
-	\tag #'(floteI floteII oboeII) {
+	\tag #'(floteI floteII oboeII klarinetII) {
 		\tempoXoffset #-1.5
 		\tempo \markup {
 			\medium \italic "in tempo"
@@ -157,9 +157,20 @@ tempiPartMvtIII = {
 	%%%%%%%%%%%%%%%%%%%%%%
 	% bar 327
 	%%%%%%%%%%%%%%%%%%%%%%
-	\tag #'(floteI floteII oboeI oboeII klarinetI klarinetII fagottoI fagottoII
+	\tag #'(floteI floteII oboeI oboeII  fagottoI fagottoII
 		hornI hornII hornIII hornIV trumpetI trumpetII pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo "Tempo primo"
+	}
+	\tag #'(klarinetI) {
+		\tempoXoffset #-3 
+		\tempo \markup {
+			\column { \lower #1.5 "Tempo" "primo" }
+		}
+	}
+	\tag #'(klarinetII) {
+		\tempo \markup {
+			\column { \lower #1.5 "Tempo" "primo" }
+		}
 	}
 }

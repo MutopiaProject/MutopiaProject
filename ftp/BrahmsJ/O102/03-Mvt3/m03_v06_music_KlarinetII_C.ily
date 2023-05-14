@@ -258,7 +258,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	\shape #'((0 . 0)(0 . 1)(0 . 1)(0 . 0)) Slur b,4(\< c cis d8 g)\! \bar "||"
 	\timeMvtIII e8-.\f r r4
 	d8-. r r4
-	f!8 r r4
+	f!8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
 	c'8[-\tweak X-offset #-9 _\pdolce bes a aes]

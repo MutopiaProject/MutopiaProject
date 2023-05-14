@@ -6,7 +6,7 @@
 %    work                : Double Concerto for Violin and Violoncello 
 %                          in A minor (1st movement)
 %    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
-%    Type of score       : Score for Flote
+%    Type of score       : Score for Oboen
 %    Typesetter          : Sébastien MANEN
 %    Date of initiation  : Thursday 20 April 2023, 19:50
 %

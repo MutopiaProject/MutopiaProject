@@ -194,7 +194,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	f'8-.-\tweak X-offset #-1 \f f4 f f f8~\<
 % Bars 196 to 200
 	f2.\> r4\!
-	f8 f4 f f f8(
+	f8-. f4 f f f8(
 	f4-.) f-. r2
 	f8 f4 f8( ees) ees4 ees8~
 	ees4-. d-. r2
@@ -393,7 +393,7 @@ musicKlarinetIIMvtI = \relative c''' {
 	d8-. r r4 r2
 	R1 \mark \default \bar "||" \key c \minor
 	c2-\tweak X-offset #-2 \ff\trill bes8( ees d c)
-	bes4 r8 c bes4-. r
+	bes4 r8 c-. bes4-. r
 	d2\trill c8( aes g f)
 % Bars 391 to 395
 	ees4 r8 b'-. c4-. r8 c

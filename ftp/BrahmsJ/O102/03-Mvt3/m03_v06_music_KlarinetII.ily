@@ -9,10 +9,8 @@ musicKlarinetIIMvtIII = \relative c'' {
 	\key c \minor
 	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni \clef "bass" R2
-		R \no
-	}
+	\ni \clef "bass" \mmrPos #-4 R2
+	\mmrPos #-4 R \no
 	R2*6 \clef treble
 % Bars 6 to 10
 	
@@ -30,19 +28,17 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
+	\ni \mmrPos #-4 R2
 % Bars 26 to 30
-		R
-		R
-		R \no
-	}
-	\tempo "poco rit." c2~\pp
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	c2~\pp
 	c~
 % Bars 31 to 35
 	c~
 	c
-	\tempo "in tempo" aes(
+	aes(
 	f
 	ees8)-. r r4
 % Bars 36 to 40
@@ -85,23 +81,21 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 % Bars 76 to 80
 	
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
-		R
-		R
-		R
+	\ni \mmrPos #-7 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 81 to 85
-		R
-		R
-		R
-		R \bar "||"
-		\time 3/4 R2.
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \bar "||"
+	\time 3/4 \mmrPos #-4 R2.
 % Bars 86 to 90
-		R \bar "||"
-		\time 4/4 R1 \no
-	}
+	\mmrPos #-4 R \bar "||"
+	\time 4/4 \mmrPos #4 R1 \no
 	d,4(\< ees e f8 bes)\! \bar "||" 
-	\time 2/4 g8-.\f r r4
+	\timeMvtIII g8-.\f r r4
 	f8-. r r4
 % Bars 91 to 95
 	aes8-. r r4
@@ -123,26 +117,19 @@ musicKlarinetIIMvtIII = \relative c'' {
 	R2*2^\tutti
 % Bars 106 to 110
 	
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
-		R
-		R^\solo \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R^\solo \no
 	R2*6
 % Bars 111 to 115
 	
-	
-	%r4 c16\p\>( g')\! r8
-	%R2*5
 % Bars 116 to 120
 	R2*2^\tutti
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2 \bar "||" \key f \minor
-		R
+	\ni \mmrPos #-4 R2 \bar "||" \key f \minor
+	\mmrPos #-4 R
 % Bars 121 to 125
-		R
-		R \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	R2*12
 % Bars 126 to 130
 	
@@ -150,12 +137,10 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
 % Bars 136 to 140
-		R \no
-	}
+	\mmrPos #-4 R \no
 	f4..\ff^\tutti f16
 	fes4.. fes16
 	ees4 e
@@ -167,7 +152,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	d c
 	b c
 % Bars 146 to 150
-	\MmrLength #10 R2*2^\solo
+	R2*2^\solo
 	\mark \default
 	r4 r8 c,-\tweak X-offset #-2 _\ppdolce\((
 	aes') aes4 g8(
@@ -201,24 +186,21 @@ musicKlarinetIIMvtIII = \relative c'' {
 	\mark \default
 	R2
 % Bars 181 to 185
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
-		R
-		R
-		R \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	R2*7
 % Bars 186 to 190
 	
 % Bars 191 to 195
 	
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
-		R
-		R
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 196 to 200
-		r4 \no } r8. c''16\ff^\tutti
+	r4 r8. c''16\ff^\tutti
 	c4.. aes!16
 	aes4.. aes16
 	\tuplet 3/2 4 {aes4( g8) f( g aes)}
@@ -249,23 +231,13 @@ musicKlarinetIIMvtIII = \relative c'' {
 	
 % Bars 221 to 225
 	
-	
-	%ces'16-.\p ees-. g-. ees-. bes8-. r
-	%R2
-	%ees16-. g-. bes-. g-. d8-. r
 % Bars 226 to 230
-	%R2*7
+	
 % Bars 231 to 235
 	
-	
-	%ces16\p-. ees-. g-. ees-. bes8-. r
-	%R2
-	%ees16-. g-. bes-. g-. d8-. r
 % Bars 236 to 240
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
-		R \mark \default \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R \mark \default \no
 	ees'4_\dolce( des
 	c d!)~
 	d8 r r4
@@ -276,18 +248,16 @@ musicKlarinetIIMvtIII = \relative c'' {
 	b8(_\dolce dis16 e) dis8( cis16 dis)
 	cis( b a b) gis4
 % Bars 246 to 250
-	\tempo "poco rit." R2*4
-	%d!8(_\dimmarkup cis16 d) d'4
-	%R2
-	%fis,8(_\pp eis16 fis) fis'4~
-	\tempo "in tempo" R2*4 %\tempo "in tempo" fis8 r r4
+	\mmrLength #2 R2*4
+	
+	
+	
+	\mmrLength #2 R2*4
 % Bars 251 to 255
 	
 	
 	
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2 \no 
-	}
+	\ni \mmrPos #-4 R2 \no 
 	g,2_\mfcresc(
 % Bars 256 to 260
 	\shape #'((0 . 2)(0 . 1)(0 . 1)(0 . 0)) Slur f)(
@@ -315,29 +285,27 @@ musicKlarinetIIMvtIII = \relative c'' {
 % Bars 276 to 280
 	
 % Bars 281 to 285
-	\cueDuring #"cueVoiceKlarIImIII" #UP {
-		\ni R2
-		R
-		R
-		R
-		R
+	\ni \mmrPos #-8 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 286 to 290
-		R
-		R
-		R \bar "||" 
-		\time 3/4 R2.
-		R \bar "||"
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \bar "||" 
+	\time 3/4 \mmrPos #-4 R2.
+	\mmrPos #-4 R \bar "||"
 % Bars 291 to 295
-		\time 4/4 \MmrPos #-6 R1 \no
-	}
+	\time 4/4 \mmrPos #4 R1 \no
 	b,4(\< c cis d8 g)\! \bar "||"
-	\time 2/4 e8-.\f r r4
+	\timeMvtIII e8-.\f r r4
 	d8-. r r4
-	f!8 r r4
+	f!8-. r r4
 % Bars 296 to 300
 	R2 \bar "||"
-	\tempo "Poco meno Allegro" c'8(_\pdolce bes a aes
-	g f e) e'(
+	c'8(_\pdolce bes a aes
+	g f e) e'(\noBeam
 	f e4) e8(
 	dis e4.)~
 % Bars 301 to 305
@@ -368,7 +336,7 @@ musicKlarinetIIMvtIII = \relative c'' {
 	c\p r
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" r4 r8 ees(\f
+	r4 r8 ees(\f
 	c a fis ees)
 % Bars 326 to 330
 	c4. c'8-.
