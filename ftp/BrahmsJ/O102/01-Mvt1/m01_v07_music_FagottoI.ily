@@ -9,7 +9,7 @@ musicFagottoIMvtI = \relative c' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc^\tutti d8 b4 r
+	e4._\fmarc-\offset X-offset #-6 ^\tutti d8 b4 r
 	c4. b8 e,4 r
 	a-. r b-. r
 	c-. a-. f'-. d-.
@@ -23,14 +23,13 @@ musicFagottoIMvtI = \relative c' {
 % Bars 21 to 25
 	
 	
-	\cueDuring #"cueVoiceFagImI" #DOWN {
-		\MmrPos #8 \ni R1
-		R
-		R
+	\mmrPos #8 \ni R1
+	R
+	R
 % Bars 26 to 30
-		<<R1 {s2 s4^\tutti \clef treble s }>>
-		r2 r4 \no } \clef bass fis,(\p\<_\dolce
-	a2\> gis4)\! a(
+	<<\mmrPos #7 R1 {s2 s4-\offset X-offset -1 ^\tutti \clef treble s }>>  \no
+	\voiceOne r2 r4 \oneVoice \clef bass \hairpinShorten #'(-0.5 . 0) fis,(-\offset X-offset -1 \p\<_\dolce
+	a2\> gis4)\! \shape #'((0 . 0)(-2 . -1)(0 . -1.5)(0 . 0)) Slur a(
 	fis'2 f
 	e cis4) r
 % Bars 31 to 35
@@ -43,35 +42,33 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoiceFagImI" #UP {
-		\ni \MmrPos #6 R1
-		R \clef "tenor"
-		R
-		<< R {s2 s4 \clef bass s } >>
+	\ni \mmrPos #-7 R1
+	\mmrPos #-4 R \clef tenor
+	\mmrPos #-4 R
+	<< \mmrPos #-4 R {s2 s4 \clef bass s } >>
 % Bars 56 to 60
-		R1 \mark \default \no
-	}
-	a,4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
+	\mmrPos #-8 R1 \mark \default \no
+	a,4.\ff^\tutti b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c4( b) a-.}
+	\tuplet 3/2 2 {e2-> d!4-. c4( b) a-.}
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 b,4} \times 2/3 {e2 a,4}
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	f2 b,4 e2 a,4}
 % Bars 66 to 70
 	d2 c
-	b8\ff\<-. dis-. fis-. a-. c4.\>( b8)
-	b,-.\< e-. g-. ais-. c4.(\> b8)\!
+	b8\ff\<-. dis-. fis-. a-.\! c4.\>( b8)
+	b,-.\< e-. g-. ais-.\! c4.(\> b8)\!
 	cis,-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2
 % Bars 71 to 75
 	c4\p r8 bes'\<( des4.\> c8\!)
 	r4 r8 f8(\< des4.\> c8)\!
 	r4 r8 bes(\< des4. c8)
-	r4 r8 f( des4. c8)
+	r4 r8 f( des4. c8)\!
 	aes4\f-. bes2-> c4-.
 % Bars 76 to 80
 	f,-! r f,-! r
@@ -89,7 +86,7 @@ musicFagottoIMvtI = \relative c' {
 	ees4-!) c-! r2 \clef bass
 	c4-! c-! r d-!
 	r f-! r2
-	c2(\f c,4) c'( \mark \default
+	c2(\f c,4) c'( \markWhiteout \mark \default
 	d8) r8 c4( des8) r c4(
 % Bars 91 to 95
 	d!2 c4) c(
@@ -122,10 +119,8 @@ musicFagottoIMvtI = \relative c' {
 % Bars 116 to 120
 	
 	
-	\cueDuring #"cueVoiceFagImI" #UP {
-		\ni \clef "treble" R1
-		R \clef bass \no
-	}
+	\ni \clef treble \mmrPos #-4 R1
+	\mmrPos #-4 R \clef bass \no
 	fis,2(\p g
 % Bars 121 to 125
 	gis a)
@@ -152,7 +147,7 @@ musicFagottoIMvtI = \relative c' {
 	
 	\mark \default
 	b4.(_\pdolce c8 d2)
-	r4 r8 b8(\< c4. d8
+	r4 r8 b8(\< c4. d8\!
 	b4.\> c8 d2\!)
 % Bars 146 to 150
 	R1_\gp
@@ -170,17 +165,16 @@ musicFagottoIMvtI = \relative c' {
 	aes\> g8)\! r r2
 	R1*4
 % Bars 161 to 165
-	\cueDuring #"cueVoiceFagImI" #UP {
-		\ni \clef "tenor" R1
-		R
-		R
-		R
-		R
+	\ni \clef tenor \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 166 to 170
-		r2 \clef bass \no } r4 g_\pdolce~
+	r2 \clef bass r4 g_\pdolce~
 	g8 r a4~ a8 r aes4~(\<
 	aes\> f8)\! r r4 g~
-	g8 r a!4~ a8\< r aes4~
+	g8 r a!4~ a8\< r aes4~\!
 	aes\>( g2)\! r4
 % Bars 171 to 175
 	R1 \mark \default
@@ -234,18 +228,18 @@ musicFagottoIMvtI = \relative c' {
 	b d2 f4~
 	f a4.( cis8) d4\sf(~
 	d16 c! bes a) bes4(~ bes16 a g fis) g4~
-	g c,~ c8 r r4
+	g c,~ c8-. r r4
 	r4 cis2 cis4~
 % Bars 216 to 220
 	cis8 r r4 r cis'->
 	cis-> e-> e-> cis-> \mark \default
-	\MmrLength #10 R1*7^\solo
+	R1*7^\solo
 % Bars 221 to 225
 	
 	
 	
 	
-	r2 e,\fp~
+	r2 e,-\offset X-offset 0.5 \fp~
 % Bars 226 to 230
 	e1
 	r2 cis\fp~
@@ -263,10 +257,9 @@ musicFagottoIMvtI = \relative c' {
 	
 % Bars 241 to 245
 	\mark \default
-	\cueDuring #"cueVoiceFagImI" #UP {
-		\ni \clef "treble" R1
-		R
-		r4 r8 \clef bass \no } gis,-._\pmarc a-. b-. c-. r
+	\ni \clef treble \mmrPos #-4 R1
+	\mmrPos #-4 R \no
+	r4 r8 \clef bass gis,-._\pmarc a-. b-. c-. r
 	R1*3
 % Bars 246 to 250
 	
@@ -293,24 +286,22 @@ musicFagottoIMvtI = \relative c' {
 	f4-. r g-. r
 	aes-. f-. des'-. bes-.
 % Bars 266 to 270
-	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
+	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
-	\times 2/3 {c,-! d-! e!-! } \times 2/3 {f-! g-! aes-!}
-	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
-	c,-.-\tweak X-offset #1.5 ^\solo r r2
+	\tuplet 3/2 2 {c,-! d-! e!-! f-! g-! aes-!
+	bes-. c-. des-. ees,-. f-. g-.} \mark #11
+	c,-.^\solo r r2
 % Bars 271 to 275
 	R1*8
 % Bars 276 to 280
 	
 	
 	
-	\cueDuring #"cueVoiceFagImI" #DOWN {
-		\ni \clef "treble" R1
-		R
+	\ni \clef treble \mmrPos #4 R1
+	\mmrPos #4 R
 % Bars 281 to 285
-		R
-		R \clef bass \no
-	}
+	\mmrPos #4 R
+	\mmrPos #4 R \clef bass \no
 	c'1(_\pcresc
 	a2) r
 	R1
@@ -319,17 +310,17 @@ musicFagottoIMvtI = \relative c' {
 	a-! r c-! r
 	b-! r r2
 	e,4-! r r2 \mark \default
-	a,4.\ff -\tweak X-offset #1 ^\tutti b8 c4 r
+	a,4.\ff^\tutti b8 c4 r
 % Bars 291 to 295
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\times 2/3 {e2 d!4-.} \times 2/3 {c( b) a-.}
+	\tuplet 3/2 2 {e2 d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\times 2/3 {e2 d!4} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4}
+	\tuplet 3/2 2 {e2 d!4 c( g) c,-.
+	f2 d4 g2 e4}
 	a2 f,
 	R1*5^\solo
 % Bars 301 to 305
@@ -348,7 +339,7 @@ musicFagottoIMvtI = \relative c' {
 	r a-. dis2\fp\>~
 	dis4\! r r2 \bar "||" \key a \major \mark \default
 	gis,4._\pdolce( a8 b2)
-	r4 r8 gis( a4.\< b8
+	r4 r8 gis( a4.\< b8\!
 	gis4.\> a8\! b2)
 % Bars 316 to 320
 	R1_\gp
@@ -364,15 +355,14 @@ musicFagottoIMvtI = \relative c' {
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	\cueDuring #"cueVoiceFagImI" #UP {
-		\ni \clef "treble" R1
-		R
-		\once \override MultiMeasureRest.staff-position = #-6 R
-		R
-		R
+	\ni \clef tenor \mmrPos #-4 R1
+	\mmrPos #-4 R
+	<< \mmrPos #-7 R {s2 s4 \clef treble s} >>
+	\mmrPos #-4 R1
+	\mmrPos #-4 R
 % Bars 341 to 345
-		R \mark \default
-		r2 r4 \clef bass \no } a\f(
+	\mmrPos #-4 R \no \mark \default
+	r2 r4 \clef bass a\f(
 	ais-.) b2( fis4)
 	r2 r4 \clef tenor d'(
 	dis)-. e4(~ e16 d cis b) fis'4(~\fp
@@ -400,7 +390,7 @@ musicFagottoIMvtI = \relative c' {
 	e,2\f b'
 % Bars 366 to 370
 	e2. r4 \mark \default
-	e,2-\tweak X-offset #1 ^\tutti gis
+	e,2^\tutti gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2
@@ -430,7 +420,7 @@ musicFagottoIMvtI = \relative c' {
 	e2 f4 r8 e-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	e'(\f d b) c( b e,) e e~
+	e'(\f d b) c(\noBeam b[ e,)] e e~
 	e e4 e e e8~
 	e e4 e e e8~
 	e4 e2 e4-.
@@ -439,9 +429,9 @@ musicFagottoIMvtI = \relative c' {
 	
 	
 	e4\p(^\solo fis gis4. gis8)
-	a8(\< c b a d4.\> c8)
+	a8(\< c b a\! d4.\> c8)\!
 % Bars 401 to 405
-	a8(\< c b a d4.\> c8)\!
+	a8(\< c b a\! d4.\> c8)\!
 	a4 r r2
 	R1
 	f2\pp( ges
@@ -456,21 +446,20 @@ musicFagottoIMvtI = \relative c' {
 	R1*3
 	
 	
-	R1^\pocorit
-	r2 r4 r^\intempo
+	R1
+	r2 r4 r
 % Bars 416 to 420
 	R1*4
 	
 	
 	
-	\cueDuring #"cueVoiceFagImI" #DOWN {
-		\ni \clef "treble" \MmrPos #-4 R1
+	\ni \clef "treble" \mmrPos #-4 R1
 % Bars 421 to 425
-		\MmrPos #-4 R
-		\MmrPos #-4 R
-		\MmrPos #-4 R
-		\MmrPos #-4 R
-		e2\rest e4\rest \clef bass \no } a,-.\f
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	e2\rest e4\rest \clef bass a,-.\f
 % Bars 426 to 430
 	d,2 b
 	c e

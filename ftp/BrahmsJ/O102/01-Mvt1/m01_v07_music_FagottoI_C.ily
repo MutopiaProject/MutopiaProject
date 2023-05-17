@@ -217,7 +217,7 @@ musicFagottoIMvtI = \relative c' {
 	b d2 f4~
 	f a4.( cis8) \partCombineApart \once \oneVoice d4(~
 	d16 c! bes a) \partCombineAutomatic bes4(~ bes16 a g fis) g4~
-	g c,~ c8 r r4
+	g c,~ c8-. r r4
 	r4 cis2 cis4~
 % Bars 216 to 220
 	cis8 r r4 r cis'->

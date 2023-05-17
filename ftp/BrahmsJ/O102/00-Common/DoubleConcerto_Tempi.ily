@@ -157,12 +157,12 @@ tempiPartMvtIII = {
 	%%%%%%%%%%%%%%%%%%%%%%
 	% bar 327
 	%%%%%%%%%%%%%%%%%%%%%%
-	\tag #'(floteI floteII oboeI oboeII  fagottoI fagottoII
+	\tag #'(floteI floteII oboeI oboeII  fagottoI 
 		hornI hornII hornIII hornIV trumpetI trumpetII pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo "Tempo primo"
 	}
-	\tag #'(klarinetI) {
+	\tag #'(klarinetI fagottoII) {
 		\tempoXoffset #-3 
 		\tempo \markup {
 			\column { \lower #1.5 "Tempo" "primo" }

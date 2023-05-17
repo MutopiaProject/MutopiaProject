@@ -1,41 +1,34 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part04_Fagotte.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
+%    work                : Double Concerto for Violin and Violoncello 
 %                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Fagotto
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part04_Fagotte.ily"
 \include "./01-Mvt1/m01_v07_music_FagottoI.ily"
 \include "./02-Mvt2/m02_v07_music_FagottoI.ily"
 \include "./03-Mvt3/m03_v07_music_FagottoI.ily"
 \include "./01-Mvt1/m01_v08_music_FagottoII.ily"
 \include "./02-Mvt2/m02_v08_music_FagottoII.ily"
 \include "./03-Mvt3/m03_v08_music_FagottoII.ily"
-\include "./00-Common/DoubleConcerto_Format_Part04_Fagotte.ily"
-\addQuote "cueVoiceFagImI" { \cueVoiceFagImI }
-\addQuote "cueVoiceFagImII" { \cueVoiceFagImII }
-\addQuote "cueVoiceFagImIII" { \cueVoiceFagImIII }
-\addQuote "cueVoiceFagIImI" { \cueVoiceFagIImI }
-\addQuote "cueVoiceFagIImII" { \cueVoiceFagIImII }
-\addQuote "cueVoiceFagIImIII" { \cueVoiceFagIImIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -56,11 +49,16 @@
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceVII
+				\formatFagottoIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceVII \musicFagottoIMvtI
+				\keepWithTag #'(fagottoI) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFagottoIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameFagottoIMvtI \musicFagottoIMvtI
 			}
 		>>
 		\header {
@@ -73,19 +71,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceVII
+				\formatFagottoIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceVII \musicFagottoIMvtII
+				\keepWithTag #'(fagottoI) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFagottoIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameFagottoIMvtII \musicFagottoIMvtII
 			}
 		>>
 		\header {
@@ -98,19 +98,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceVII
+				\formatFagottoIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceVII \musicFagottoIMvtIII
+				\keepWithTag #'(fagottoI) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFagottoIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameFagottoIMvtIII \musicFagottoIMvtIII
 			}
 		>>
 		\header {
@@ -123,19 +125,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceVIII
+				\formatFagottoIIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceVIII \musicFagottoIIMvtI
+				\keepWithTag #'(fagottoII) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFagottoIIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameFagottoIIMvtI \musicFagottoIIMvtI
 			}
 		>>
 		\header {
@@ -148,23 +152,25 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceVIII
+				\formatFagottoIIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceVIII \musicFagottoIIMvtII
+				\keepWithTag #'(fagottoII) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFagottoIIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameFagottoIIMvtII \musicFagottoIIMvtII
 			}
 		>>
 		\header {
-			breakbefore = ##t
+			breakbefore = ##f
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -173,23 +179,25 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceVIII
+				\formatFagottoIIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceVIII \musicFagottoIIMvtIII
+				\keepWithTag #'(fagottoII) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceFagottoIIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameFagottoIIMvtIII \musicFagottoIIMvtIII
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -198,9 +206,6 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

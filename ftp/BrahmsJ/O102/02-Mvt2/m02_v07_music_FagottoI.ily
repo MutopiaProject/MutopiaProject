@@ -9,30 +9,27 @@ musicFagottoIMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceFagImII" #UP {
-		\ni \MmrPos #-2 R2._\fermata \no
-	}
+	\ni \mmrPos #-2 R2._\fermata \no
 	<< {e4( a2)\fermata} {s8\p\< s s s\> s s\!} >>
 	R2.*4^\solo
 % Bars 6 to 10
 	
 	a,8(_\pdolce d e a fis d)
-	d'(\< b) b(\> g)\! a4
+	d'([\< b])\! b(\> g)\! a4
 	a,8( d e fis d b)
-	d'(\< b) b(\> d,)\! cis4
+	d'([\< b])\! b(\> d,)\! cis4
 % Bars 11 to 15
 	R2.*6
 % Bars 16 to 20
 	
-	\cueDuring #"cueVoiceFagImII" #UP {
-		\ni \MmrPos #-6 R2.
-		\MmrPos #-6 R
-		r4 \no } r8 fis(\p^\solo a b)
+	\ni \mmrPos #-6 R2.
+	\mmrPos #-6 R \no
+	r4 r8 fis(\p^\solo a b)
 	c( a fis dis e g)
 % Bars 21 to 25
-	a(\p fis) g( e) fis( b)
+	a([\p fis]) g([ e]) fis( b)
 	c( a fis dis e g)
-	g'( e) e( g,) g( a)
+	g'([ e]) e([ g,)] g( a)
 	R2.*6
 % Bars 26 to 30
 	
@@ -45,7 +42,7 @@ musicFagottoIMvtII = \relative c {
 	bes a) d(
 	e f g
 	f c) c\((
-	f) g\< f
+	f) g\< f\!
 % Bars 36 to 40
 	e\> d\)\! e(
 	d g g,
@@ -55,11 +52,10 @@ musicFagottoIMvtII = \relative c {
 	
 % Bars 46 to 50
 	
-	\cueDuring #"cueVoiceFagImII" #DOWN {
-		\ni \clef "treble" R2.
-		R
-		R
-		r4 r \clef bass \no } a'(~_\psempre \mark \default
+	\ni \clef treble \mmrPos #4 R2.
+	\mmrPos #4 R
+	\mmrPos #4 R \no
+	\voiceOne r4 r \oneVoice \clef bass a'(~_\psempre \markWhiteout \mark \default
 % Bars 51 to 55
 	a bes c 
 	bes a) r
@@ -87,7 +83,7 @@ musicFagottoIMvtII = \relative c {
 % Bars 71 to 75
 	b^\solo cis d)
 	e2( d4)
-	cis4.\f\> r8\! r4
+	\hairpinShorten #'(-0.3 . -0.5) cis4.\f\> r8\! r4
 	R2.*5
 % Bars 76 to 80
 	
@@ -97,14 +93,14 @@ musicFagottoIMvtII = \relative c {
 	b( d) d( e) fis4
 % Bars 81 to 85
 	r r b,8( d)
-	fis( e) e( d) cis4
-	a,8(\p d e\< a d e
+	fis([ e)] e( d) cis4
+	a,8(\p d e\< a d e\!
 	a\> fis d a fis a)\!
-	d( b) d( e) fis4
+	d[( b]) d( e) fis4
 % Bars 86 to 90
-	a,,8( d e fis\< ais cis
+	\shape #'((0 . -2)(0 . 1)(0 . 1)(0 . -0.5)) Slur a,,8( d e fis\< ais cis\!
 	fis\> dis b fis d' fis\!)
-	fis( e) e( d) cis4
+	fis([ e]) e( d) cis4
 	c2(\mf\> b4)\!
 	a8( fis) g( e) fis( b)
 % Bars 91 to 95
@@ -113,11 +109,9 @@ musicFagottoIMvtII = \relative c {
 	R2.*4
 % Bars 96 to 100
 	
-	\cueDuring #"cueVoiceFagImII" #UP {
-		\ni \MmrPos #-6 R2.
-		\MmrPos #-6 R
-		R \mark \default \no
-	}
+	\ni \mmrPos #-6 R2.
+	\mmrPos #-6 R
+	\mmrPos #-4 R \mark \default \no
 	fis4(\pp g a
 % Bars 101 to 105
 	g fis) g(

@@ -1,6 +1,3 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part03_Klarinetten.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################

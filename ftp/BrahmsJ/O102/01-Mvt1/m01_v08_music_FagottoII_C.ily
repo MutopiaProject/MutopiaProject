@@ -217,7 +217,7 @@ musicFagottoIIMvtI = \relative c {
 	g g2 g4~
 	g f'4.( a8) bes4\sf~
 	bes16 c! bes a bes4(~ bes16 a g fis) g4~
-	g c,,~ c8 r r4
+	g c,,~ c8-. r r4
 	r4 cis2 cis4~
 % Bars 216 to 220
 	cis8 r r4 r bes''->
