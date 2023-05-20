@@ -146,135 +146,114 @@ nameFagottoIIMvtIII = {
 	\set Staff.midiInstrument = #"bassoon"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#                     V O I C E   N A M E   :   H O R N                       #
 %###############################################################################
-nameVoiceIXmvtI = {
+nameHornIMvtI = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn I" }
-			\line { "in E" }
+			\lower #1 "Horn I"  "in E"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn I"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceIXmvtII = {
+nameHornIMvtII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn I" }
-			\line { "in D" }
+			\lower #1 "Horn I" "in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn I"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceIXmvtIII = {
+nameHornIMvtIII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn I" }
-			\line { "in E" }
+			\lower #1 "Horn I" "in E"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn I"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-%###############################################################################
-%#                           V O I C E   N A M E S                             #
-%###############################################################################
-nameVoiceXmvtI = {
+nameHornIIMvtI = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn II" }
-			\line { "in E" }
+			\lower #1 "Horn II" "in E"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn II"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceXmvtII = {
+nameHornIIMvtII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn II" }
-			\line { "in E" }
+			\lower #1 "Horn II" "in E"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn II"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceXmvtIII = {
+nameHornIIMvtIII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn II" }
-			\line { "in D" }
+			\lower #1 "Horn II" "in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn II"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-%###############################################################################
-%#                           V O I C E   N A M E S                             #
-%###############################################################################
-nameVoiceXImvtI = {
+nameHornIIIMvtI = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn III" }
-			\line { "in D" }
+			\lower #1 "Horn III" "in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn III"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceXImvtII = {
+nameHornIIIMvtII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn III" }
-			\line { "in F" }
+			\lower #1 "Horn III" "in F"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn III"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceXImvtIII = {
+nameHornIIIMvtIII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn III" }
-			\line { "in D" }
+			\lower #1 "Horn III" "in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn III"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-%###############################################################################
-%#                           V O I C E   N A M E S                             #
-%###############################################################################
-nameVoiceXIImvtI = {
+nameHornIVMvtI = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn IV" }
-			\line { "in D" }
+			\lower #1 "Horn IV" "in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn IV"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceXIImvtII = {
+nameHornIVMvtII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn IV" }
-			\line { "in F" }
+			\lower #1 "Horn IV" "in F"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn IV"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
-nameVoiceXIImvtIII = {
+nameHornIVMvtIII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Horn IV" }
-			\line { "in D" }
+			\lower #1 "Horn IV" "in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Hn IV"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trombone"
 }
 %###############################################################################

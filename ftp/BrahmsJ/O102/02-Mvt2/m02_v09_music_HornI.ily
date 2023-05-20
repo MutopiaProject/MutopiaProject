@@ -25,17 +25,15 @@ musicHornIMvtII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceHrnImII" #UP { 
-		\ni R2. \mark \default \bar "||"
+	\ni \mmrPos #-4 R2. \mark \default \bar "||"
 % Bars 31 to 35
-		R^\tutti
-		R
-		R
-		R
-		R
+	\mmrPos #-4 R^\tutti
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 36 to 40
-		R \no
-	}
+	\mmrPos #-4 R \no
 	R2.*2
 	
 	\textLengthOn R2.*12^\solo \textLengthOff
@@ -54,15 +52,13 @@ musicHornIMvtII = \relative c'' {
 % Bars 61 to 65
 	
 	
-	\cueDuring #"cueVoiceHrnImII" #UP {
-		\ni R2.
-		R-\tweak X-offset 1 ^\tutti
-		R
+	\ni \mmrPos #-4 R2.
+	\mmrPos #-4 R-\tweak X-offset 1 ^\tutti
+	\mmrPos #-4 R
 % Bars 66 to 70
-		R \bar "||"
-		R
-		R \no
-	}
+	\mmrPos #4 R \bar "||"
+	\mmrPos #4 R
+	\mmrPos #4 R \no
 	g,,4\f( c2)~
 	c2.~
 % Bars 71 to 75
@@ -83,28 +79,24 @@ musicHornIMvtII = \relative c'' {
 	
 	
 	\mark \default
-	\cueDuring #"cueVoiceHrnImII" #DOWN {
-		\ni R2.
+	\ni \mmrPos #4 R2.
 % Bars 101 to 105
-		R
-		R
-		R
-		R
-		R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 106 to 110
-		R \no
-	}
+	\mmrPos #4 R \no
 	R2.*4
 	
 	
 	
 % Bars 111 to 115
-	\cueDuring #"cueVoiceHrnImII" #DOWN {
-		\ni R2.
-		R
-		R \no
-	}
-	g,4(-\tweak X-offset #-1.5 \p\< c2\>)~
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R
+	\mmrPos #4 R \no
+	g,4(-\tweak X-offset #-1.5 \p\< \hairpinShorten #'(0 . 3) c2\>)~
 	c2.~\!
 % Bars 116 to 118
 	c~

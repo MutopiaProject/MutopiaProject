@@ -23,13 +23,11 @@ musicHornIIMvtI = \relative c' {
 % Bars 21 to 25
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #DOWN {
-		\ni \clef "bass" R1
-		R
-		R \clef treble \no
-	}
+	\ni \clef bass \mmrPos #4 R1
+	\mmrPos #4 R
+	\mmrPos #4 R \clef treble \no
 % Bars 26 to 30
-	c,,1~-\tweak X-offset #-2 \p
+	c,,1~-\tweak X-offset #-2 \p^\tutti
 	c~
 	c~
 	c~
@@ -44,15 +42,13 @@ musicHornIIMvtI = \relative c' {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni \MmrPos #-6 R1
-		R
-		R
-		R
+	\ni \mmrPos #-6 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 56 to 60
-		R \mark \default \no
-	}
-	c'4.\f-\tweak X-offset #1.5 ^\tutti ees8 c4 r
+	\mmrPos #-4 R \mark \default \no
+	c'4.\f^\tutti ees8 c4 r
 	bes'4. bes8 des4 r
 	R1
 	r2 c4. c8
@@ -88,13 +84,12 @@ musicHornIIMvtI = \relative c' {
 	
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1 \mark \default
-		R
+	\ni \mmrPos #-4 R1 \markWhiteout \mark \default
+	\mmrPos #-4 R
 % Bars 91 to 95
-		R
-		R
-		r2 r4 \no } des\f( 
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	\voiceTwo r2 r4 \oneVoice des\f( 
 	f-.) c2-> c4-.
 	R1
 % Bars 96 to 100
@@ -117,7 +112,7 @@ musicHornIIMvtI = \relative c' {
 	bes-. r b-. r
 % Bars 111 to 115
 	c-. r c,-. r \mark \default
-	\MmrLength #12 R1*26^\solo
+	R1*26^\solo
 % Bars 116 to 120
 	
 % Bars 121 to 125
@@ -129,15 +124,13 @@ musicHornIIMvtI = \relative c' {
 % Bars 136 to 140
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
-		R
-		R
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 141 to 145
-		R
-		R \mark \default
-		R1 \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R \mark \default
+	\mmrPos #-4 R1 \no
 	r4 r8 ees8\p~ ees4.\< ees8~
 	<<ees1 {s4\> s s s\!}>>
 % Bars 146 to 150
@@ -159,24 +152,21 @@ musicHornIIMvtI = \relative c' {
 	R1*5
 % Bars 176 to 180
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
-		R
-		R
-		R
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 181 to 185
-		R
-		R
-		R \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	R1*4
 	
 % Bars 186 to 190
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni \MmrPos #-8 R1
-		d'2\rest \no } r4 c,-._\pmamarc
+	\ni \mmrPos #-8 R1 \no
+	d'2\rest r4 c,-._\pmamarc
 	r c-. r c-.
 % Bars 191 to 195
 	r8 c-. r c-. r c-. r c-.
@@ -185,7 +175,7 @@ musicHornIIMvtI = \relative c' {
 	
 	ees8-.\f ees4 ees8( bes') bes4 bes8(\<
 % Bars 196 to 200
-	<<des2.) {s4\> s s\!} >> r4
+	des2.)\> r4\!
 	ees,8^\tutti ees4 ees8( g) g4 g8(
 	c4-.) c-. r2
 	ees,8 ees4 ees8( bes') bes4 bes8(
@@ -231,55 +221,48 @@ musicHornIIMvtI = \relative c' {
 	\mark \default
 	R1*4
 % Bars 246 to 250
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
-		R \no
-	}
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R \no
 	R1*10
 % Bars 251 to 255
 	
 % Bars 256 to 260
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
-		R
-		R
+	\ni \mmrPos #4 R1
+	\mmrPos #4 R
+	\mmrPos #-4 R
 % Bars 261 to 265
-		R \no
-	}
+	\mmrPos #-4 R \no
 	c'4-!\f r^\solo r ees,-!
 	c'-! r r2^\tutti
-	\MmrLength #10 R1*6
+	R1*6
 % Bars 266 to 270
 	
 	
 	
 	\mark #11
-	\MmrLength #10 R1*8^\solo
+	R1*8^\solo
 % Bars 271 to 275
 	
 % Bars 276 to 280
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni \clef "bass" \MmrPos #4 R1
-		\MmrPos #4 R
-		\MmrPos #4 R
+	\ni \clef bass \mmrPos #4 R1
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 281 to 285
-		\MmrPos #4 R
-		\MmrPos #4 R \clef treble \no
-	}
+	\mmrPos #4 R
+	\mmrPos #4 R \clef treble \no
 	R1
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
-		R
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R \no
 % Bars 286 to 290
-		r2 \no } c4-!\ff r
+	r2 c4-!\ff r
 	bes-! r bes-! r
 	g-! r r2
 	c,4-! r r2 \mark \default
-	c4.\ff -\tweak X-offset #1 ^\tutti ees8 c4 r
+	c4.\ff^\tutti ees8 c4 r
 % Bars 291 to 295
 	bes'4. bes8 des4 r
 	R1
@@ -291,7 +274,7 @@ musicHornIIMvtI = \relative c' {
 	ees,2. r4
 	r bes'-. ees,-. r
 	R1
-	R1*10^\solo
+	\mmrnDown R1*10^\solo
 % Bars 301 to 305
 	
 % Bars 306 to 310
@@ -299,12 +282,10 @@ musicHornIIMvtI = \relative c' {
 	
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
+	\ni \mmrPos #-4 R1
 % Bars 311 to 315
-		R
-		\MmrPos #4 R \bar "||" \mark \default \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #4 R \bar "||" \mark \default \no
 	c1\pp
 	r4 r8 c8~ c4. c8\<~
 	<<c1 {s4\> s s s\!}>>
@@ -316,7 +297,7 @@ musicHornIIMvtI = \relative c' {
 	c,)~\>
 % Bars 321 to 325
 	c4\! r r2
-	\MmrLength #10 R1*20
+	R1*20
 % Bars 326 to 330
 	
 % Bars 331 to 335
@@ -325,14 +306,13 @@ musicHornIIMvtI = \relative c' {
 	
 % Bars 341 to 345
 	\mark \default
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
-		R
-		R
-		R
+	\ni \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 346 to 350
-		R
-		d''2\rest \no } d4\rest bes(\p~
+	\mmrPos #4 R \no
+	d''2\rest d4\rest bes(-\offset X-offset 0.5 \p~
 	bes8 c) bes4.( a8) g4~
 	g_\dimmarkup g2 g4~
 	g1~
@@ -347,14 +327,12 @@ musicHornIIMvtI = \relative c' {
 % Bars 361 to 365
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #DOWN {
-		\ni R1
-		\MmrPos #6 R  \no
-	}
+	\ni \mmrPos #4 R1
+	\mmrPos #6 R  \no
 	c8\f-. c4 c8( g') g4 g8(\<
 % Bars 366 to 370
 	bes2.)\> r4\! \mark \default
-	c,8-\tweak X-offset #1.5 ^\tutti c4 c8( e) e4 e8(
+	c,8^\tutti c4 c8( e) e4 e8(
 	a4-.) a-. r2
 	c,8 c4 c8( g') g4 g8(
 	bes4-.) bes-. r2
@@ -374,10 +352,10 @@ musicHornIIMvtI = \relative c' {
 	R1
 	r2 r4 c'\sf~
 	c c-. r a\f~
-	a a~ a8 r r4
+	a a~ a8-. r r4
 	r g,2 g4~
 % Bars 386 to 390
-	g8 r r4 r2
+	g8-. r r4 r2
 	R1 \bar "||" \mark \default
 	g2\sf c4 r8 g'-.
 	c,4-. r8 g'-. c,4-. r
@@ -389,7 +367,7 @@ musicHornIIMvtI = \relative c' {
 	c c4 c c c8~
 	c4 c2 c4-.
 % Bars 396 to 400
-	\MmrLength #12 R1*18^\solo
+	\mmrnDown R1*18^\solo
 % Bars 401 to 405
 	
 % Bars 406 to 410
@@ -398,23 +376,22 @@ musicHornIIMvtI = \relative c' {
 	
 	
 	
-	\MmrLength #6 R1^\pocorit
-	r2 r4 r^\intempo
+	R1
+	r2 r4 r
 % Bars 416 to 420
 	R1*4
 	
 	
 	
-	\cueDuring #"cueVoiceHrnIImI" #UP {
-		\ni R1
+	\ni \mmrPos #-4 R1
 % Bars 421 to 425
-		R
-		R
-		R
-		R
-		R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 426 to 430
-		r4 \no } bes'-.\f r b-.
+	r4 bes'-.\f r b-.
 	r c-. r c,-.
 	c-. r r2
 	r bes'4-. bes-.

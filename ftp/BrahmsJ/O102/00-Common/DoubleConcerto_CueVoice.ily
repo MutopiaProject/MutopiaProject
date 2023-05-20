@@ -1425,122 +1425,122 @@ cueVoiceFagottoIIMvtIII = \relative c {
 	\voiceTwo r4 cis,(_\markup {Fag.I} d dis)
 }
 %###############################################################################
-%#                              H O R N   I  &  II                             #
+%#              C U E   V O I C E   F O R   H O R N   I   &   I I              #
 %###############################################################################
-cueVoiceHrnIMvtI = \relative c {
+cueVoiceHornIMvtI = \relative c {
 	\transposition e
-	R1*22
-	% bar 23
-	r4^\pizz <c, g' bes f'>4 e' des
-	bes g e bes(^\arco
+	s1*22
+	% bar 23 - 25
+	r4-\offset X-offset -1 ^\pizz^\markup {Solo.Vlc.} \voiceOne <c, g' bes f'>4 e' des
+	\oneVoice bes g e bes(^\arco
 	des1)
-	R1*26
-	% bar 52
-	r2 c''8(^\markup {Solo-Viol.} d16 e f g aes bes
+	s1*26
+	% bar 52 - 56
+	\voiceOne r2 c''8(^\markup {Solo-Viol.} d16 e f g aes bes
 	c) f,( g aes bes c d e f) c( d e f g aes bes
-	c) f,( g  aes bes c d e f) c d e f c des ees
-	f4-. <aes,, c'> <des des'> <f d'> 
-	<ees ees'> r <e e'> r
-	R1*32
-	% bar 89
-	r2 r4 f(_\markup {Hr.III}
+	\oneVoice c) f,( g  aes bes c d e f) c d e f c des ees
+	f4-. <aes,, c'>-. <des des'>-. <f d'>-. 
+	<ees ees'>-. \once \voiceOne r <e e'>-. \once \voiceOne r
+	s1*32
+	% bar 89 - 93
+	s2 s4 f(_\markup {Hr.III}
 	ees8) r f4( ees8) r des4(
 	ees2.) f4(
 	ees8) r f4( ees8) r des4(
-	ees2 f4) r
-	R1*44
-	% bar 138
-	aes,2(^\markup {Hr.III} ces
+	ees2 f4) s
+	s1*44
+	% bar 138 - 143
+	\voiceOne aes,2(^\markup {Hr.III} ces
 	ees d)
 	f1~
 	f~
 	f
-	g,4.(_\markup {Fag.I} aes8 bes2)
-	R1*33
-	% bar 177
-	r2 r4 f'(~^\markup {Hr.III}
+	\voiceTwo g,4.(_\markup {Fag.I} aes8 bes2)
+	s1*33
+	% bar 177 - 183
+	\voiceOne s2 s4 f'(~-\offset X-offset -4 ^\markup {Hr.III}
 	f8 c) des4.( a8) bes4~
 	bes bes2 bes4~
 	bes1~
 	bes2( ees)~
 	ees1~(
 	ees2 aes,)
-	R1*4
-	% bar 188
+	s1*4
+	% bar 188 - 189
 	f'16(^\markup {Solo-Viol.} ces aes ces aes f aes f ces f ces aes ces aes f aes)
-	f8 r r4 r2
-	R1*52
-	% bar 242
-	f''!1~\startTrillSpan^\markup {Solo-Viol.}
-	\afterGrace f2( {e16[\stopTrillSpan f])} aes4\trill d,\trill
+	f8 \voiceTwo r r4 s2
+	s1*52
+	% bar 242 - 245
+	\voiceOne f''!1~\startTrillSpan^\markup {Solo-Viol.}
+	\afterGrace f2_( {e16[\stopTrillSpan f])} aes4\trill d,\trill
 	f\trill aes,\trill ces\trill f,\trill
-	aes\trill(  ges\trill) \afterGrace f2(\trill {ees16[ f])}
-	R1*12
-	% bar 258
-	des'4.->_\markup {Ob.I} ces8 aes4 r
+	aes\trill(  ges\trill) \afterGrace f2_(\trill {ees16[ f])}
+	s1*12
+	% bar 258 - 261
+	\voiceTwo des'4.->_\markup {Ob.I} ces8 aes4 r
 	beses4. aes8 des,4 r-\tweak X-offset #-2 ^\tutti
-	beses''2^(^\markup {Fl.I} ges)
+	\oneVoice beses''2^(^\markup {Fl.I} ges)
 	ges^( eeses)
-	R1*16
-	% bar 278
+	s1*16
+	% bar 278 - 282
 	c,,1^\startTrillSpan_\markup {Pk.}
 	c
 	c
 	c
-	c4\stopTrillSpan r r2
-	R1
-	% bar 284
-	r2 r4 bes''-.-\tweak X-offset #-1 ^\markup {Hr.III}
+	\voiceTwo c4\stopTrillSpan r r2
+	s1
+	% bar 284 - 286
+	\voiceOne s2 s4 bes''-.-\tweak X-offset #-1 ^\markup {Hr.III}
 	f'-. r8 bes,-. f'4-. r8 bes,-.
-	f'4-. r r2
-	R1*23
-	% bar 310
-	r2 \tuplet 3/2 4 {ees'8\rf-\tweak X-offset #-8.5 ^\markup {Solo-Viol.} c ges ees c ges}
-	f4 r \tuplet 3/2 4 {f''8\rf d b f d b}
-	\tuplet 3/2 4 {f' d b} f f\rest \tuplet 3/2 4 {f d b} f f'\rest
-	R1*29
-	% bar 342
-	r2 r4-\tweak X-offset #-1 ^\markup {Ob.I} f'(
+	f'4-. r s2
+	s1*23
+	% bar 310 - 312
+	\oneVoice r2 \tupletUp \tuplet 3/2 4 {ees'8\rf-\tweak X-offset #-8.5 ^\markup {Solo-Viol.} c ges ees c ges}
+	\once \stemDown f4 r \tuplet 3/2 4 {f''8\rf d b f d b}
+	\tuplet 3/2 4 {f' d b} \voiceTwo f r \tuplet 3/2 4 {f d b} f r \tupletNeutral
+	s1*29
+	% bar 342 - 347
+	\voiceOne r2 r4-\tweak X-offset #-1 ^\markup {Ob.I} \shape #'((0 . -0.5)(0 . 0)(0 . 0)(0 . 0)) Slur f''(
 	fis)-. g2( d4)
 	r2 r4 bes(
-	b!) c4(~ c16 bes a g) d'4(~_\markup {Klar.I} 
+	b!) c4(~ c16 bes a g) \voiceTwo d'4(~_\markup {Klar.I} 
 	d8 a) b4.( fis8) g4~
-	g f!2 r4
-	R1*15
-	% bar 363
-	c8_\markup {Solo-Viol.} c4 c c c8(
-	<bes g'>-.) q4 q8( <f' d'>) q4 q8
-	R1*55
-	% bar 420
-	r2 r4 aes'-.-\tweak X-offset #-2 ^\markup {Fl} 
+	g f!2\laissezVibrer s4
+	s1*15
+	% bar 363 - 364
+	\oneVoice c8_\markup {Solo-Viol.} c4 c c c8(
+	<bes g'>-.) q4 q8( <f' d'>)-. q4 q8
+	s1*55
+	% bar 420 - 426
+	s2 s4 aes'-.-\tweak X-offset #-2 ^\markup {Fl} 
 	g-. aes-. e-. f-.
 	g-. g-. c,-. aes'-.
 	g-. aes-. e-. f-.
 	f-. f-. c'-. f,-.
 	f-. f-. c'-. f,-.
-	f-. r r2
+	f-. s s2
 }
-cueVoiceHrnIMvtII = \relative c {
+cueVoiceHornIMvtII = \relative c {
 	\transposition d
-	R2.*29
-	% bar 30
-	r2 g''4(~_\markup {Fl.Klar.}
+	s2.*29
+	% bar 30 - 36
+	\voiceOne s2 g''4(~_\markup {Fl.Klar.}
 	g aes bes
 	aes g) c(
 	d ees f
 	ees bes) bes\((
 	ees) d c 
 	bes a!\) r
-	R2.*26
-	% bar 63
-	r2 ees'4(~^\markup {Fag.I} 
+	s2.*26
+	% bar 63 - 68
+	\oneVoice s2 ees'4(~^\markup {Fag.I} 
 	ees fes ges
-	fes ees) fis,(_\markup {Fl.I}
+	fes ees) \voiceTwo fis,(_\markup {Fl.I}
 	a2) g4(~_\markup {Viol.I}
 	g a b
-	a g) g
-	R2.*31
-	% bar 100
+	a g) g\laissezVibrer
+	s2.*31
+	% bar 100 - 106
 	e4(_\markup {Klar.I,Fag.I} f g
 	f e) a(
 	b c d
@@ -1548,69 +1548,69 @@ cueVoiceHrnIMvtII = \relative c {
 	bes2.)~
 	bes4 e,8( g c, f)~
 	f4. r8 r4
-	R2.*4
-	% bar 111
-	r2 c'4(~_\markup {Fl.I, Klar.}
+	s2.*4
+	% bar 111 - 113
+	s2 c'4(~_\markup {Fl.I, Klar.}
 	c b a
-	g f) f
+	g f) f\laissezVibrer
 }
-cueVoiceHrnIMvtIII = \relative c {
+cueVoiceHornIMvtIII = \relative c {
 	\transposition e
-	f'8(^\markup {Solo-Vlc.} c'16-.) c-. b8( bes16-.) bes-.
+	% bar 1 - 2
+	\voiceTwo f'8(^\markup {Solo-Vlc.} c'16-.) c-. b8( bes16-.) bes-.
 	aes8( g16-.) g-. f8( c16-.) c-.
-	R2*18
-	% bar 21
-	aes'4(_\markup {Fag.I} ges
+	s2*18
+	% bar 21 - 28
+	aes'4(-\offset X-offset -3 _\markup {Fag.I} ges
 	f g!)
 	aes( a
 	bes des8 c)
-	des2^\markup {Hr.III}^(
-	des)^(
-	des)^(
+	\voiceOne des2^\markup {Hr.III}(
+	des)(
+	des)(
 	des)
-	R2*6
-	% bar 35
+	s2*6
+	% bar 35 - 38
 	c8^\markup {Viol.I}-\tweak X-offset -3 ^\pizz bes des bes
 	c bes des bes
 	<bes f'> <g ees'> <bes f'> <g ees'>
 	<f des' bes'> r r4
-	R2*22
-	% bar 61
-	r4 fes'->~^\markup {Solo-Viol.}
-	fes8 ees16-. ees,,-. fes''4->~
+	s2*22
+	% bar 61 - 64
+	s4 fes'->~^\markup {Solo-Viol.}
+	fes8\noBeam ees16-. ees,,-. fes''4->~
 	fes8 ees16-. ees,,-. ees''8( d16-.) aes,-.
 	d' ces,( ces') aes,( aes')[ f,(] f'8\noBeam)
-	R2*15
-	% bar 80
-	r4 f(^\markup {Hr.III}
-	aes8 c) f-.( ees-.)
-	des( bes) f-.( a!-.)
+	s2*15
+	% bar 80 - 85
+	s4 f(^\markup {Hr.III}
+	aes8[ c)] f-.( ees-.)
+	des([ bes]) f-.( a!-.)
 	bes( des) f4(~
 	f f,)
 	bes2 r4
-	R2.
+	s2.
 	% bar 87
-	r4-\tweak X-offset #-1 _\markup {Fag.I} c,( des) r
-	R1
-	R2*18
-	% bar 107
-	aes'8->^\markup {Ob.I} g16-. aes-. g8-> aes16-. g-.
+	\once \voiceTwo r4-\tweak X-offset #-1 _\markup {Fag.I} \oneVoice c,( des) s
+	s1 s2*18
+	% bar 107 - 109
+	\voiceOne aes'8->^\markup {Ob.I} g16-. aes-. g8-> aes16-. g-.
 	aes8-> g16-. aes-. g( f') ees-. d-.
 	c8 r r4
-	R2*8
-	% bar 118
-	r4 r8. f16-.^\markup {Solo-Viol.}
+	s2*8
+	% bar 118 - 121
+	\voiceOne r4 r8. f16-.^\markup {Solo-Viol.}
 	f8-.[ f16\rest f-.] f8-.[ f16\rest f-.] 
 	\tuplet 3/2 4 {f4( ees8) d( ees f)}
 	\tuplet 3/2 4 {f4( ees8)} r4
-	R2*12
-	% bar 134
+	s2*12
+	% bar 134 - 136
 	r8^\markup {Viol.I} des-. bes-. g'-.
 	f8-.[ f16\rest f-.] f8-.[ f16\rest f-.] 
 	f8-.[ f16\rest f-.] f8-.[ f16\rest f-.] 
-	R2*44
-	% bar 181
-	<bes,, bes'>2(^\markup {Hr.III IV}
+	s2*44
+	% bar 181 - 190
+	\voiceTwo <bes,, bes'>2(^\markup {Hr.III IV}
 	<f f'>4) r
 	<bes bes'>2(
 	<f f'>4) r
@@ -1620,66 +1620,63 @@ cueVoiceHrnIMvtIII = \relative c {
 	<f, f'>4) r
 	<bes, bes'>2(
 	d4) r
-	R2*7
-	% bar 198
-	r4 r8 r16 f'-\tweak X-offset #-4 ^\markup {Hr.III}
+	s2*7
+	% bar 198 - 201
+	\oneVoice s4 s8 s16 f'-\tweak X-offset #-4 ^\markup {Hr.III}
 	\tuplet 3/2 4 {f4( ees8) des( ees f)}
 	\tuplet 3/2 4 {f4( ees8) des( ees f)}
 	f4 c
-	R2*28
-	% bar 230
-	r4^\markup {Hr.III} r8 c
+	s2*28
+	% bar 230 - 233
+	\voiceOne r4^\markup {Hr.III} r8 c
 	f-. r r4
-	f,16^\markup {Fag.I} aes c aes ees8\noBeam ees'-.^\markup {Hr.III}
+	f,16^\markup {Fag.I} aes c aes ees8\noBeam ees'-.-\offset X-offset -1 ^\markup {Hr.III}
 	aes-. r r4
-	R2*20
+	s2*20
 	% bar 254
 	\tuplet 3/2 8 {e,,16[(^\markup {Solo-Viol.} g c] g[ c e]) c[( e g] e[ g c])}
 	\tuplet 3/2 8 {e,[( g c] g[ c e] c[ e g] e[ g c])}
-	e2\trill
-	R2*32
-	R2.*2
-	R1*2
-	R2*8
+	e2\trill\laissezVibrer
+	s2*32 s2.*2 s1*2 s2*8
 	% bar 301
-	r4 r8 bes,^\markup {Hr.III}~
+	s4 s8 bes,^\markup {Hr.III}~
 	bes2~
 	bes4 r8. f16(
-	bes d f d bes8)\noBeam c,~-\tweak X-offset #-2 _\markup {Hr.II}
-	c r r4
-	R2
+	bes d f d bes8)\noBeam c,~-\offset X-offset -1.5 _\markup {Hr.II}
+	c s s4
+	s2
 }
-cueVoiceHrnIIMvtI = \relative c {
+cueVoiceHornIIMvtI = \relative c {
 	\transposition e
-	R1*22
-	% bar 23
-	r4^\pizz <c, g' bes f'>4 e' des
+	s1*22
+	% bar 23 - 25
+	r4^\pizz \stemUp <c, g' bes f'>4 e' des \stemNeutral
 	bes g e bes(^\arco
 	des1)
-	R1*26
-	% bar 52
-	r2 c''8(^\markup {Solo-Viol.} d16 e f g aes bes
+	s1*26
+	% bar 52 - 56
+	\voiceOne r2 c''8(^\markup {Solo-Viol.} d16 e f g aes bes
 	c) f,( g aes bes c d e f) c( d e f g aes bes
-	c) f,( g  aes bes c d e f) c d e f c des ees
-	f4-. <aes,, c'> <des des'> <f d'> 
-	<ees ees'> r <e e'> r
-	R1*32
-	% bar 89
-	r2 r4 f(_\markup {Hr.III}
+	\oneVoice c) f,( g  aes bes c d e f) c d e f c des ees
+	f4-. <aes,, c'>-. <des des'>-. <f d'>-.
+	<ees ees'>-. \once \voiceOne r <e e'>-. \once \voiceOne r
+	s1*32
+	% bar 89 - 93
+	s2 s4 f(_\markup {Hr.III}
 	ees8) r f4( ees8) r des4(
 	ees2.) f4(
 	ees8) r f4( ees8) r des4(
-	ees2 f4) r
-	R1*44
-	% bar 138
-	aes,2(^\markup {Hr.III} ces
+	ees2 f4) s
+	s1*44
+	% bar 138 - 143
+	\voiceOne aes,2(^\markup {Hr.III} ces
 	ees d)
 	f1~
 	f~
 	f
-	ees4.(-\tweak X-offset #1 ^\markup {Ob.I} des8 bes2)
-	R1*33
-	% bar 177
+	ees4.(^\markup {Ob.I} des8 bes2)
+	s1*33
+	% bar 177 - 183
 	r2 r4 f'(~^\markup {Hr.III}
 	f8 c) des4.( a8) bes4~
 	bes bes2 bes4~
@@ -1687,80 +1684,80 @@ cueVoiceHrnIIMvtI = \relative c {
 	bes2( ees)~
 	ees1~(
 	ees2 aes,)
-	R1*4
-	% bar 188
-	f'16(^\markup {Solo-Viol.} ces aes ces aes f aes f ces f ces aes ces aes f aes)
-	f8 b\rest b4\rest r2
-	R1*56
-	% bar 246
-	g''2(^\markup {Hr.I} f
+	s1*4
+	% bar 188 - 189
+	f'16(-\offset X-offset #-3.5 ^\markup { \column { \lower #1.5 "Solo-" "Viol."}} ces aes ces aes f aes f ces f ces aes ces aes f aes)
+	f8 \voiceTwo r r4 s2
+	s1*56
+	% bar 246 - 247
+	\oneVoice g''2(^\markup {Hr.I} f
 	e ees4) r
-	R1*10
-	% bar 258
-	des4.->_\markup {Ob.I} ces8 aes4 r
-	beses4. aes8 des,4 r-\tweak X-offset #-2 ^\tutti
-	beses''2^(^\markup {Fl.I} ges)
+	s1*10
+	% bar 258 - 261
+	\voiceTwo des4.->_\markup {Ob.I} ces8 aes4 r
+	beses4. aes8 des,4 r_\tutti
+	\oneVoice beses''2^(^\markup {Fl.I} ges)
 	ges^( eeses)
-	R1*16
-	% bar 278
+	s1*16
+	% bar 278 - 282
 	c,,1(\startTrillSpan_\markup {Pk.}
 	c)(
 	c)(
 	c)
-	c4\stopTrillSpan d\rest d2\rest
-	R1
-	% bar 284
-	r2 r4 bes''-.-\tweak X-offset #-1 ^\markup {Hr.III}
+	\voiceTwo c4\stopTrillSpan r r2
+	s1
+	% bar 284 - 286
+	s2 s4 \voiceOne bes''-.-\tweak X-offset #-1 ^\markup {Hr.III}
 	f'-. r8 bes,-. f'4-. r8 bes,-.
-	f'4-. r r2
-	R1*23
-	% bar 310
-	r2 \tuplet 3/2 4 {ees'8\rf-\tweak X-offset #-8.5 ^\markup {Solo-Viol.} c ges ees c ges}
-	f4 r \tuplet 3/2 4 {f''8\rf d b f d b}
-	\tuplet 3/2 4 {f' d b} f f\rest \tuplet 3/2 4 {f d b} f f'\rest
-	R1*29
-	% bar 342
-	r2 r4-\tweak X-offset #-1 ^\markup {Ob.I} f'(
+	f'4-. r s2
+	s1*23
+	% bar 310 - 312
+	r2 \oneVoice \tuplet 3/2 4 {ees'8\rf-\tweak X-offset #-5 ^\markup { \column {\lower #1.5 "Solo-" "Viol." } } c ges ees c ges}
+	\once \stemDown f4 r \tuplet 3/2 4 {f''8\rf d b f d b}
+	\voiceTwo \tuplet 3/2 4 {f' d b} f r \tuplet 3/2 4 {f d b} f r
+	s1*29
+	% bar 342 - 347
+	\voiceOne r2 r4-\tweak X-offset #-1 ^\markup {Ob.I} \oneVoice f''(
 	fis)-. g2( d4)
-	r2 r4 bes(
+	\voiceTwo r2 r4 bes(
 	b!) c4(~ c16 bes a g) d'4(~_\markup {Klar.I} 
 	d8 a) b4.( fis8) g4~
-	g f!2 r4
-	R1*15
-	% bar 363
-	c8_\markup {Solo-Viol.} c4 c c c8(
+	g f!2\laissezVibrer s4
+	s1*15
+	% bar 363 - 364
+	\oneVoice c8_\markup {Solo-Viol.} c4 c c c8(
 	<bes g'>-.) q4 q8( <f' d'>) q4 q8
-	R1*55
-	% bar 420
-	r2 r4 aes'-.-\tweak X-offset #-2 ^\markup {Fl} 
+	s1*55
+	% bar 420 - 426
+	s2 s4 aes'-.-\tweak X-offset #-2 ^\markup {Fl} 
 	g-. aes-. e-. f-.
 	g-. g-. c,-. aes'-.
 	g-. aes-. e-. f-.
 	f-. f-. c'-. f,-.
 	f-. f-. c'-. f,-.
-	f-. r r2
+	f-. s s2
 }
-cueVoiceHrnIIMvtII = \relative c {
+cueVoiceHornIIMvtII = \relative c {
 	\transposition d
-	R2.*29
-	% bar 30
-	r2 g''4(~_\markup {Fl.Klar.}
+	s2.*29
+	% bar 30 - 36
+	\voiceOne s2 g''4(~_\markup {Fl.Klar.}
 	g aes bes
 	aes g) c(
 	d ees f
 	ees bes) bes\((
 	ees) d c 
 	bes a!\) r
-	R2.*26
-	% bar 63
-	r2 ees'4(~-\tweak X-offset #-1 ^\markup {Fag.I} 
+	s2.*26
+	% bar 63 - 68
+	\oneVoice s2 ees'4(~-\tweak X-offset #-1 ^\markup {Fag.I} 
 	ees fes ges
-	fes ees) fis,(_\markup {Fl.I}
+	fes ees) \voiceTwo fis,(_\markup {Fl.I}
 	a2) g4(~_\markup {Viol.I}
 	g a b
-	a g) g
-	R2.*31
-	% bar 100
+	a g) g\laissezVibrer
+	s2.*31
+	% bar 100 - 106
 	e4(_\markup {Klar.I,Fag.I} f g
 	f e) a(
 	b c d
@@ -1768,69 +1765,69 @@ cueVoiceHrnIIMvtII = \relative c {
 	bes2.)~
 	bes4 e,8( g c, f)~
 	f4. r8 r4
-	R2.*4
-	% bar 111
-	r2 c'4(~_\markup {Fl.I, Klar.}
+	s2.*4
+	% bar 111 - 113
+	s2 c'4(~_\markup {Fl.I, Klar.}
 	c b a
-	g f) f
+	g f) f\laissezVibrer
 }
-cueVoiceHrnIIMvtIII = \relative c {
+cueVoiceHornIIMvtIII = \relative c {
 	\transposition e
-	f'8(^\markup {Solo-Vlc.} c'16-.) c-. b8( bes16-.) bes-.
+	% bar 1 - 2
+	\voiceTwo f'8(^\markup {Solo-Vlc.} c'16-.) c-. b8( bes16-.) bes-.
 	aes8( g16-.) g-. f8( c16-.) c-.
-	R2*18
-	% bar 21
-	aes'4(_\markup {Fag.I} ges
+	s2*18
+	% bar 21 - 28
+	aes'4(-\offset X-offset #-4 _\markup {Fag.I} ges
 	f g!)
 	aes( a
 	bes des8 c)
-	des2^\markup {Hr.III}^(
-	des)^(
-	des)^(
-	des)
-	R2*6
-	% bar 35
+	\voiceOne des2^\markup {Hr.III}~
+	des~
+	des~
+	des
+	s2*6
+	% bar 35 - 38
 	c8^\markup {Viol.I}-\tweak X-offset -3 ^\pizz bes des bes
 	c bes des bes
 	<bes f'> <g ees'> <bes f'> <g ees'>
 	<f des' bes'> r r4
-	R2*22
-	% bar 61
-	r4 fes'->~^\markup {Solo-Viol.}
-	fes8 ees16-. ees,,-. fes''4->~
+	s2*22
+	% bar 61 - 64
+	s4 fes'->~-\offset X-offset #-5 ^\markup {\column { \lower #1.5 "Solo-" "Viol." } }
+	fes8\noBeam ees16-. ees,,-. fes''4->~
 	fes8 ees16-. ees,,-. ees''8( d16-.) aes,-.
 	d' ces,( ces') aes,( aes')[ f,(] f'8\noBeam)
-	R2*15
-	% bar 80
-	r4 f(^\markup {Hr.III}
-	aes8 c) f-.( ees-.)
-	des( bes) f-.( a!-.)
+	s2*15
+	% bar 80 - 85
+	s4 f(^\markup {Hr.III}
+	aes8[ c)] f-.( ees-.)
+	des[( bes]) f-.( a!-.)
 	bes( des) f4(~
 	f f,)
 	bes2 r4
-	R2.
+	s2.
 	% bar 87
-	r4-\tweak X-offset #-1 _\markup {Fag.I} c,( des) r
-	R1
-	R2*18
-	% bar 107
-	aes'8->^\markup {Ob.I} g16-. aes-. g8-> aes16-. g-.
+	\once \voiceTwo r4-\tweak X-offset #-1 _\markup {Fag.I} \oneVoice c,( des) s
+	s1 s2*18
+	% bar 107 - 109
+	\voiceOne aes'8->^\markup {Ob.I} g16-. aes-. g8-> aes16-. g-.
 	aes8-> g16-. aes-. g( f') ees-. d-.
 	c8 r r4
-	R2*8
-	% bar 118
-	r4 r8. f16-.^\markup {Solo-Viol.}
+	s2*8
+	% bar 118 - 121
+	r4 r8. \oneVoice f16-.^\markup {Solo-Viol.}
 	f8-.[ f16\rest f-.] f8-.[ f16\rest f-.] 
 	\tuplet 3/2 4 {f4( ees8) d( ees f)}
 	\tuplet 3/2 4 {f4( ees8)} r4
-	R2*12
-	% bar 134
+	s2*12
+	% bar 134 - 136
 	r8^\markup {Viol.I} des-. bes-. g'-.
 	f8-.[ f16\rest f-.] f8-.[ f16\rest f-.] 
 	f8-.[ f16\rest f-.] f8-.[ f16\rest f-.] 
-	R2*44
-	% bar 181
-	<bes,, bes'>2(^\markup {Hr.III IV}
+	s2*44
+	% bar 181 - 190
+	\voiceTwo <bes,, bes'>2(^\markup {Hr.III IV}
 	<f f'>4) r
 	<bes bes'>2(
 	<f f'>4) r
@@ -1840,462 +1837,456 @@ cueVoiceHrnIIMvtIII = \relative c {
 	<f, f'>4) r
 	<bes, bes'>2(
 	d4) r
-	R2*7
-	% bar 198
-	r4 r8 r16 f'-\tweak X-offset #-4 ^\markup {Hr.III}
+	s2*7
+	% bar 198 - 201
+	s4 s8 s16 \oneVoice f'-\tweak X-offset #-4 ^\markup {Hr.III}
 	\tuplet 3/2 4 {f4( ees8) des( ees f)}
 	\tuplet 3/2 4 {f4( ees8) des( ees f)}
 	f4 c
-	R2*28
-	% bar 230
-	r4 ^\markup {Hr.III} r8 c
+	s2*28
+	% bar 230 - 233
+	\voiceOne r4^\markup {Hr.III} r8 c
 	f-. r r4
-	f,16^\markup {Fag.I} aes c aes ees8\noBeam ees'-.-\tweak X-offset #-1 ^\markup {Hr.III}
-	aes-. r r4
-	R2*20
-	% bar 254
-	\tuplet 3/2 8 {e,,16[(^\markup {Solo-Viol.} g c] g[ c e]) c[( e g] e[ g c])}
-	\tuplet 3/2 8 {e,[( g c] g[ c e] c[ e g] e[ g c])}
+	f,16^\markup {Fag.I} aes c aes ees8\noBeam \oneVoice ees'-.-\tweak X-offset #-1 ^\markup {Hr.III}
+	aes-. \voiceOne r r4
+	s2*20
+	% bar 254 - 256
+	\tupletDown \tuplet 3/2 8 {e,,16[(^\markup {Solo-Viol.} g c] g[ c e]) c[( e g] e[ g c])}
+	\tuplet 3/2 8 {e,[( g c] g[ c e] c[ e g] e[ g c])} \tupletNeutral
 	e2\trill
-	R2*24
-	% bar 281
-	r4 c,(^\markup {Hr.I} 
+	s2*24
+	% bar 281 - 289
+	s4 c,(^\markup {Hr.I} 
 	b bes
 	a) d(~
-	d8 bes) d( e)
-	f( c) d( c)
+	d8[ bes]) d( e)
+	f([ c)] d( c)
 	bes( g) d'4(~
 	d8 bes) d4(~
 	d g,)
 	g2 r4
-	R2.
-	R1*2
-	R2*8
-	% bar 301
-	r4 r8 bes^\markup {Hr.III}~
+	s2. s1*2 s2*8
+	% bar 301 - 304
+	s4 s8 bes^\markup {Hr.III}~
 	bes2~
 	bes4 r8. f16(
-	bes d f d bes8)\noBeam r8
-	R2*25
-	% bar 330
+	bes d f d bes8)\noBeam s8
+	s2*25
+	% bar 330 - 332
 	r8^\markup {Hr.I} c4 c8~
 	c c4 c8~
-	c r8 r4
+	c s8 s4
 }
 %###############################################################################
-%#                             H O R N  III  &  IV                             #
+%#            C U E   V O I C E   F O R   H O R N   I I I   &   I V            #
 %###############################################################################
-cueVoiceHrnIIIMvtI = \relative c {
+cueVoiceHornIIIMvtI = \relative c {
 	\transposition d
-	R1*22
-	% bar 23
-	r4 <d, a' c g'>^\pizz fis' ees
+	s1*22
+	% bar 23 - 26
+	\voiceTwo r4 <d, a' c g'>^\pizz fis' ees
 	c a fis c^\arco(
 	ees1\espressivo
-	d2) r
-	R1*25
-	% bar 52
-	r2 d''8(^\markup {Solo-Viol.} e16 fis g a bes c
+	d2) s
+	s1*25
+	% bar 52 - 56
+	\voiceOne r2 d''8(^\markup {Solo-Viol.} e16 fis g a bes c
 	d) g,( a bes c d e fis g) d( e fis g a bes c
-	d) g,( a bes c d e fis g) d e fis g d ees f
+	\oneVoice d) g,( a bes c d e fis g) d e fis g d ees f
 	g4-. <bes,, d'>-. <ees ees'>-. <g e'>-.
-	<f f'>-. r <fis fis'>-. r
-	R1*28
-	% bar 85
-	r2 r4 r8 aes~_\markup {Viol.I}
-	aes4-\tweak X-offset #-1 ^\sf~ \tuplet 3/2 4 {aes8 fis-. g-. e-. f-. c-. des-. a!-. bes-.}
-	g'4-\tweak X-offset #-1 ^\sf~ \tuplet 3/2 4 {g8 e!-. f-. b,!-. c-. g-. aes-. e!-. f-.}
+	<f f'>-. \once \voiceOne r <fis fis'>-. \once \voiceOne r
+	s1*28
+	% bar 85 - 88
+	\voiceOne s2 s4 s8 aes~_\markup {Viol.I}
+	aes4-\tweak X-offset #-1 \sf~ \tuplet 3/2 4 {aes8 fis-. g-. e-. f-. c-. des-. a!-. bes-.}
+	g'4-\tweak X-offset #-1 \sf~ \tuplet 3/2 4 {g8 e!-. f-. b,!-. c-. g-. aes-. e!-. f-.}
 	\tuplet 3/2 4 {d-. ees-. fis-. g-. a!-. bes-. d-. ees-. fis-. g-. a!-. bes-.}
-	R1*43
-	% bar 132
+	s1*43
+	% bar 132 - 137
 	r4^\markup {Fag.I} d,-. r ees-.
 	r e-. c-.-\tweak X-offset #-1 ^\sf r
 	r d-. r ees-.
 	r e!-. g,-.-\tweak X-offset #-1 ^\sf r
-	r f-. r f-.
+	\oneVoice r f-. r f-.
 	r f-. g-.-\tweak X-offset #-1 ^\sf r
-	R1*25
-	% bar 163
-	r2 r4 r8 fis'(^\markup {Solo-Vlc.}
+	s1*25
+	% bar 163 - 166
+	\voiceOne s2 s4 s8 fis'(^\markup {Solo-Vlc.}
 	g4 f! ees d
 	c) r r d(
-	c) r r2
-	R1*21
-	% bar 189
-	g'16(^\markup {Solo-Viol.} des bes des bes g bes g des g des bes des bes g bes
-	g8) d'\rest d4\rest r2
-	R1*47
-	% bar 237
+	c) r s2
+	s1*21
+	% bar 188 - 189
+	g'16(-\offset X-offset -4 ^\markup {\column { \lower #1.5 "Solo-" "Viol." }} des bes des bes g bes g des g des bes des bes g bes
+	g8) \voiceTwo r r4 s2
+	s1*47
+	% bar 237 - 241
 	b'2(^\markup {Viol.I} cis~
 	cis4 des b cis
 	a b! gis a
 	fis) r r2
-	cis'16_(^\markup {Solo-Vlc} a fis gis a fis dis e fis dis b ais a fis dis bis)
-	R1*12
-	% bar 254
-	r2 r4 r8 g'''-.^\markup {Viol.I}
+	\oneVoice \shape #'((0 . 0)(0 . 0)(0 . 0)(0 . 0.8)) Slur cis'16_(^\markup {Solo-Vlc} a fis gis a fis dis e fis dis b ais a fis dis bis)
+	s1*12
+	% bar 254 - 257
+	\voiceOne s2 s4 s8 g'''-.^\markup {Viol.I}
 	aes-. bes-. ces-. bes-. ces-. des-. ees-. ees,-. 
-	fes-. ges-. aes-. g!-. aes-. bes-. ces-. ces,16 ces
+	fes-. ges-. aes-. g!-. aes-.[ bes-. ces-.] ces,16 ces
 	des8:16 ees: fes: ees: des: ces: beses: aes:
-	R1*20
-	% bar 278
-	d,,1\startTrillSpan~^\markup {Pk.}
+	s1*20
+	% bar 278 - 284
+	\voiceTwo d,,1\startTrillSpan~^\markup {Pk.}
 	d~
 	d~
 	d
 	d4\stopTrillSpan r r16 d'(^\markup {Solo-Viol.} e fis g a b c)
-	d2 r16 g,( a bes c d e fis)
-	g d e fis g a bes c d g, a bes r4
-	R1*25
-	% bar 310
-	r2-\tweak X-offset #-4 ^\markup {Solo-Viol.} \tuplet 3/2 4 {f'8\rf d aes f d aes}
-	g!4 r \tuplet 3/2 4 {g''8\rf e cis g e! cis} 
-	\tuplet 3/2 4 {g' e cis} g g\rest \tuplet 3/2 4 {g e cis} g g\rest
-	R1*20
-	% bar 333
-	r2 r4 r8 dis'''(-\tweak X-offset #-8 ^\markup {Solo-Viol.}
+	\voiceOne d2 r16 g,( a bes c d e fis)
+	g d e fis g a bes c d g, a bes s4
+	s1*25
+	% bar 310 - 312
+	\tupletUp \oneVoice r2-\tweak X-offset #-4 ^\markup {Solo-Viol.} \tuplet 3/2 4 {f'8\rf d aes f d aes}
+	\voiceTwo g!4 r \oneVoice \tuplet 3/2 4 {g''8\rf e cis g e! cis} 
+	\tuplet 3/2 4 {g' e cis} \voiceTwo g r \tuplet 3/2 4 {g e cis} g r \tupletNeutral
+	s1*20
+	% bar 333 - 336
+	\voiceOne s2 s4 s8 dis'''(-\tweak X-offset #-8 ^\markup {Solo-Viol.}
 	e4 d! c b
 	a) r r b(
-	a) r r2
-	R1*10
-	% bar 347
-	r2 r4 e(~^\markup {Hr.I}
-	e8 f) e4.( d8) r4
-	R1*14
-	% bar 363
-	d,8^\markup {Solo-Viol.} d4 d d d8(
-	<c a'>) q4 q8( <g' e'>) q4 q8
-	R1*55
-	% bar 420
-	r2 r4 bes'-.^\markup {Fl.}
+	a) r s2
+	s1*10
+	% bar 347 - 348
+	s2 s4 e(~^\markup {Hr.I}
+	e8 f) e4.( d8) s4
+	s1*14
+	% bar 363 - 364
+	\voiceTwo d,8^\markup {Solo-Viol.} d4 d d d8(
+	<c a'>)-. q4 q8( <g' e'>)-. q4 q8
+	s1*55
+	% bar 420 - 426
+	\voiceOne s2 s4 bes'-.-\offset X-offset #-4 ^\markup {Fl.}
 	a-. bes-. fis-. g-.
 	a-. a-. d,-. bes'-.
 	a-. bes-. fis-. g-.
 	g-. g-. d'-. g,-.
 	g-. g-. d'-. g,-.
-	g-. r r2
+	g-. s s2
 }
-cueVoiceHrnIIIMvtII = \relative c {
+cueVoiceHornIIIMvtII = \relative c {
 	\transposition f
-	e'4(_\markup {Hr.I} a2)_\fermata
+	% bar 1 - 2
+	\voiceTwo e'4(_\markup {Hr.I} a2)_\fermata
 	b4( e2)_\fermata
-	R2.*22
-	% bar 25
-	r2 cis,8(^\markup {Solo-Vlc.} fis
-	d b) e( a b a)
+	s2.*22
+	% bar 25 - 30
+	s2 cis,8(^\markup {Solo-Vlc.} fis
+	d[ b]) e( a b a)
 	a8.( f16) fis8.( b,16) b8.( e16)
+	\oneVoice e8( cis a e) b'4
 	e8( cis a e) b'4
-	e8( cis a e) b'4
-	a4. r8 r4
-	R2.*75
-	% bar 106
-	d4(~^\markup {Solo-Vlc.} \tuplet 3/2 4 {d8 cis d~ d cis d}
+	a4. \once \voiceTwo r8 s4
+	s2.*75
+	% bar 106 - 113
+	\voiceTwo d4(~^\markup {Solo-Vlc.} \tupletUp \tuplet 3/2 4 {d8 cis d~ d cis d}
 	\tuplet 3/2 4 {e cis d~} d) d4 cis8(
-	d4)(~ \tuplet 3/2 4 {d8 cis d)} bes' f
+	d4)(~ \tuplet 3/2 4 {d8 cis d)} bes' f \tupletNeutral
 	d bes f4 d
 	e8( a b! e)~ e4~
-	e e,8( e') a,( a')
+	e e,8([ e')] a,( a')
 	b4( e2)~
 	e2.
 }
-cueVoiceHrnIIIMvtIII = \relative c {
+cueVoiceHornIIIMvtIII = \relative c {
 	\transposition d
-	g''8(^\markup {Solo-Vlc.} d'16-.) d-. cis8( c16-.) c-.
+	% bar 1 - 2
+	\voiceTwo g''8(^\markup {Solo-Vlc.} d'16-.) d-. cis8( c16-.) c-.
 	bes8( a16-.) a-. g8( d16-.) d-.
-	R2*18
-	% bar 21
-	bes'4(^\markup {Fag.I} aes
+	s2*18
+	% bar 21 - 24
+	\voiceOne bes'4(^\markup {Fag.I} aes
 	g a!)
 	bes( b
 	c ees8 d)
-	R2*10
-	% bar 35
+	s2*10
+	% bar 35 - 38
 	d8^\markup {Viol.I pizz.} c ees c
 	d c ees c
 	<c g'> <a f'> <c g'> <a f'>
 	<g ees' c'> r r4
-	R2*22
-	% bar 61
-	r4 ges'->~^\markup {Solo-Viol.}
+	s2*22
+	% bar 61 - 64
+	s4 ges'->~^\markup {Solo-Viol.}
 	ges8\noBeam f16-. f,,-. ges''4->~
 	ges8 f16-. f,,-. f''8( e16-.) bes,-.
 	e'-. des,( des') bes,( bes') g,( g'8\noBeam)
-	R2*8
-	% bar 72
-	r4 g~^\markup {Solo-Vlc.}
+	s2*8
+	% bar 72 - 76
+	s4 g~^\markup {Solo-Vlc.}
 	g ees'8-.( d-.)
-	c( g) g'-.( f-.)
+	c([ g)] g'-.( f-.)
 	ees( d c) g(
-	bes a) r4
-	R2*7
-	R2.*2
-	R1*2
-	R2*16
-	% bar 105
+	bes a) s4
+	s2*7 s2.*2 s1*2 s2*16
+	% bar 105 - 110
 	g8->^\markup {Fag.I} f16-. f-. bes8-> f16-. f-.
 	ges8-> f16-. f-. bes-. d-. f-. d-.
 	bes8->^\markup {Ob.I} a16-. bes-. a8-> bes16-. a-.
 	bes8-> a16-. bes-. a( g') f-. e-.
-	d'8->-\tweak X-offset #-3.5 ^\markup {Fl.I} c16-. d-. c8-> d16-. c-.
+	\oneVoice d'8->_\markup {Fl.I} c16-. d-. c8-> d16-. c-.
 	d8-> c16-. d-. c( ees) c-. a-.
-	R2*7
-	% bar 118
-	r4 r8. g16-.^\markup {Solo-Viol.} 
+	s2*7
+	% bar 118 - 121
+	\voiceOne s4 s8. g16-.^\markup {Solo-Viol.} 
 	g8-.[ g16\rest <ees g>-.] q8-.[ g16\rest q-.]
 	\tuplet 3/2 4 {<ees g>4( <d f>8) <c ees>( <d f> <ees g>)}
 	\tuplet 3/2 4 {<ees g>4( <des f>8)} r4
-	R2*12
-	% bar 134
+	s2*12
+	% bar 134 - 136
 	r8 ees-.^\markup {Viol.I} c-. a'-.
 	g8-.[ g16\rest g-.] g8-.[ g16\rest g-.] 
-	g8-.[ g16\rest g-.] g8-. r
-	R2*37
-	% bar 174
-	r4 r8 <bes,, g'>8(^\markup {Solo-Viol.}
+	g8-.[ g16\rest g-.] g8-. s
+	s2*37
+	% bar 174 - 180
+	s4 s8 <bes,, g'>8(^\markup {Solo-Viol.}
 	<bes' g'>) q4 <a fis'>8(
 	<bes g'>) q4 <ees c'>16( g
 	<d bes'> g d bes g[ bes]) <c aes'>( ees
 	<bes g'> ees bes g) ees([ <ees' g>)] <d bes'>( <c aes'>
 	<b! g'>8)\noBeam <b d>8. <aes f'>16( <g ees'> <f d'>)
 	<d b'>16( <ees c'>) <d fis>( <ees g>) \tuplet 6/4 4 {g,16( e'! g e'! g e'!)}
-	R2*47
-	% bar 228
-	g,8(^\markup {Solo-Viol.} d'16-.) d-. cis8-.( c16-.) c-.
+	s2*47
+	% bar 228 - 230
+	\oneVoice g,8(^\markup {Solo-Viol.} d'16-.) d-. cis8-.( c16-.) c-.
 	bes8( a16-.) a-. g8( d16-. d-.)
-	ees8( d16-.) d-. g8 r
-	R2*23
-	% bar 254
-	\tuplet 3/2 8 {fis,,16([^\markup {Solo-Viol.} a d] a[ d fis]) d([ fis a] fis[ a d])}
-	\tuplet 3/2 8 {fis,[( a d] a[ d fis] d[ fis a] fis[ a d])}
-	fis2\trill
+	\voiceOne ees8( d16-.) d-. g8 s
+	s2*23
+	% bar 254 - 257
+	\voiceTwo \tupletUp \tuplet 3/2 8 {fis,,16([^\markup {Solo-Viol.} a d] a[ d fis]) d([ fis a] fis[ a d])}
+	\voiceOne \tupletDown \tuplet 3/2 8 {fis,[( a d] a[ d fis] d[ fis a] fis[ a d])} \tupletNeutral
+	fis2\trill\laissezVibrer
 	d,,,\trill-\tweak X-offset #-3 ^\markup {Pk.}
-	R2*23
-	% bar 281
-	r4 d''(^\markup {Hr.I}
+	s2*23
+	% bar 281 - 285
+	s4 d''(^\markup {Hr.I}
 	cis c
 	b) e(~
-	e8 c) e(-. fis-.)
+	e8[ c]) e(-. fis-.)
 	g r r4
-	R2*3
-	R2.*2
-	% bar 291
+	s2*3 s2.*2
+	% bar 291 - 293
 	r4^\markup {Fl.} b,( c cis
 	d e eis fis)
 	gis8-. r r4
-	R2*3
-	% bar 297
-	g,8(_\markup {Klar.I} d' cis c
-	b a g) r
+	s2*3
+	% bar 297 - 288
+	\voiceTwo g,8(_\markup {Klar.I} d' cis c
+	b a g) s
 }
-cueVoiceHrnIVMvtI = \relative c {
+cueVoiceHornIVMvtI = \relative c {
 	\transposition d
-	R1*22
-	% bar 23
-	r4 <d, a' c g'>^\pizz fis' ees
+	s1*22
+	% bar 23 - 26
+	\voiceTwo r4 <d, a' c g'>^\pizz fis' ees
 	c a fis c^\arco(
 	ees1\espressivo
-	d2) r
-	R1*25
-	% bar 52
-	r2 d''8(^\markup {Solo-Viol.} e16 fis g a bes c
+	d2) s
+	s1*25
+	% bar 52 - 56
+	\voiceOne r2 d''8(^\markup {Solo-Viol.} e16 fis g a bes c
 	d) g,( a bes c d e fis g) d( e fis g a bes c
-	d) g,( a bes c d e fis g) d e fis g d ees f
+	\oneVoice d) g,( a bes c d e fis g) d e fis g d ees f
 	g4-. <bes,, d'>-. <ees ees'>-. <g e'>-.
-	<f f'>-. r <fis fis'>-. r
-	R1*28
-	% bar 85
-	r2 r4 r8 aes~_\markup {Viol.I}
+	<f f'>-. \once \voiceOne r <fis fis'>-. \once \voiceOne r
+	s1*28
+	% bar 85 - 88
+	\voiceOne s2 s4 s8 aes~_\markup {Viol.I}
 	aes4-\tweak X-offset #-1 ^\sf~ \tuplet 3/2 4 {aes8 fis-. g-. e-. f-. c-. des-. a!-. bes-.}
 	g'4-\tweak X-offset #-1 ^\sf~ \tuplet 3/2 4 {g8 e!-. f-. b,!-. c-. g-. aes-. e!-. f-.}
 	\tuplet 3/2 4 {d-. ees-. fis-. g-. a!-. bes-. d-. ees-. fis-. g-. a!-. bes-.}
-	R1*43
-	% bar 132
+	s1*43
+	% bar 132 - 137
 	r4^\markup {Fag.I} d,-. r ees-.
-	r e-. c-.-\tweak X-offset #-1 ^\sf r
+	r e-. c-.\sf r
 	r d-. r ees-.
-	r e!-. g,-.-\tweak X-offset #-1 ^\sf r
+	r e!-. \oneVoice g,-.^\sf r
 	r f-. r f-.
-	r f-. g-.-\tweak X-offset #-1 ^\sf r
-	R1*25
-	% bar 163
-	r2 r4 r8 fis'(^\markup {Solo-Vlc.}
+	r f-. g-.^\sf r
+	s1*25
+	% bar 163 - 166
+	\voiceOne s2 s4 s8 fis'(-\offset X-offset -6 ^\markup {Solo-Vlc.}
 	g4 f! ees d
 	c) r r d(
-	c) r r2
-	R1*21
-	% bar 189!!!
-	g'16(^\markup {Solo-Viol.} des bes des bes g bes g des g des bes des bes g bes
-	g8) d'\rest d4\rest r2
-	R1*47
-	% bar 237
+	c) r s2
+	s1*21
+	% bar 189 - 190
+	\voiceTwo g'16(^\markup {Solo-Viol.} des bes des bes g bes g des g des bes des bes g bes
+	g8) r r4 s2
+	s1*47
+	% bar 237 - 241
 	b'2(^\markup {Viol.I} cis~
 	cis4 des b cis
 	a b! gis a
 	fis) r r2
-	cis'16_(^\markup {Solo-Vlc} a fis gis a fis dis e fis dis b ais a fis dis bis)
-	R1*12
-	% bar 254
-	r2 r4 r8 g'''-. -\tweak X-offset #-5 ^\markup {Viol.I}
+	\oneVoice cis'16_(^\markup {Solo-Vlc} a fis gis a fis dis e fis dis b ais a fis dis bis)
+	s1*12
+	% bar 254 - 257
+	\voiceOne s2 s4 s8 g'''-. -\tweak X-offset #-5 ^\markup {Viol.I}
 	aes-. bes-. ces-. bes-. ces-. des-. ees-. ees,-. 
-	fes-. ges-. aes-. g!-. aes-. bes-. ces-. ces,16 ces
+	fes-. ges-. aes-. g!-. aes-. bes-. ces-.\noBeam ces,16 ces
 	des8:16 ees: fes: ees: des: ces: beses: aes:
-	R1*20
-	% bar 278
-	d,,1\startTrillSpan~^\markup {Pk.}
+	s1*20
+	% bar 278 - 284
+	\voiceTwo d,,1\startTrillSpan~^\markup {Pk.}
 	d~
 	d~
 	d
-	d4\stopTrillSpan r r16 d'(^\markup {Solo-Viol.} e fis g a b c)
+	\voiceOne d4\stopTrillSpan r r16 d'(^\markup {Solo-Viol.} e fis g a b c)
 	d2 r16 g,( a bes c d e fis)
-	g d e fis g a bes c d g, a bes r4
-	R1*25
-	% bar 310
-	r2^\markup {Solo-Viol.} \tuplet 3/2 4 {f'8\rf d aes f d aes}
-	g!4 r \tuplet 3/2 4 {g''8\rf e cis g e! cis} 
-	\tuplet 3/2 4 {g' e cis} g g\rest \tuplet 3/2 4 {g e cis} g g\rest
-	R1*20
-	% bar 333
-	r2 r4 r8 dis'''(-\tweak X-offset #-8 ^\markup {Solo-Viol.}
+	g d e fis g a bes c d g, a bes s4
+	s1*25
+	% bar 310 - 312
+	r2-\offset X-offset -1.5 ^\markup {\column {\lower #1.5 "Solo-" "Viol."}} \oneVoice \tupletUp \tuplet 3/2 4 {f'8\rf d aes f d aes}
+	g4 r \tuplet 3/2 4 {g''8\rf e cis g e! cis} 
+	\tuplet 3/2 4 {g' e cis} \voiceTwo g r \tuplet 3/2 4 {g e cis} g r \tupletNeutral
+	s1*20
+	% bar 333 - 336
+	\oneVoice s2 s4 s8 dis'''(-\tweak X-offset #-5.5 ^\markup {\column {\lower #1.5 "Solo-" "Viol."}}
 	e4 d! c b
 	a) r r b(
-	a) r r2
-	R1*10
-	% bar 347
-	r2 r4 e(~^\markup {Hr.I}
-	e8 f) e4.( d8) r4
-	R1*14
-	% bar 363
-	d,8^\markup {Solo-Viol.} d4 d d d8(
-	<c a'>) q4 q8( <g' e'>) q4 q8
-	R1*55
-	% bar 420
-	r2 r4 bes'-.^\markup {Fl.}
+	a) r s2
+	s1*10
+	% bar 347 - 348
+	\voiceOne s2 s4 e(~-\offset X-offset -3.5 ^\markup {Hr.I}
+	e8 f) e4.( d8) s4
+	s1*14
+	% bar 363 - 364
+	\voiceTwo d,8^\markup {Solo-Viol.} d4 d d d8(
+	<c a'>)-. q4 q8( <g' e'>)-. q4 q8
+	s1*55
+	% bar 420 - 426
+	\voiceOne s2 s4 bes'-.-\offset X-offset -4 ^\markup {Fl.}
 	a-. bes-. fis-. g-.
 	a-. a-. d,-. bes'-.
 	a-. bes-. fis-. g-.
 	g-. g-. d'-. g,-.
 	g-. g-. d'-. g,-.
-	g-. r r2
+	g-. s s2
 }
-cueVoiceHrnIVMvtII = \relative c {
+cueVoiceHornIVMvtII = \relative c {
 	\transposition f
-	e'4(_\markup {Hr.I} a2)_\fermata
+	% bar 1 - 2
+	\voiceTwo e'4(-\offset X-offset -4 _\markup {Hr.I} a2)_\fermata
 	b4( e2)_\fermata
-	R2.*22
-	% bar 25
-	r2 cis,8(^\markup {Solo-Vlc.} fis
-	d b) e( a b a)
+	s2.*22
+	% bar 25 - 30
+	s2 cis,8(^\markup {Solo-Vlc.} fis
+	d[ b]) e( a b a)
 	a8.( f16) fis8.( b,16) b8.( e16)
 	e8( cis a e) b'4
 	e8( cis a e) b'4
-	a4. r8 r4
-	R2.*16
-	% bar 47
-	r2 d8(^\markup {Solo-Viol.} aes'
+	a4. r8 s4
+	s2.*16
+	% bar 47 - 50
+	s2 d8(^\markup {Solo-Viol.} aes'
 	\tuplet 3/2 4 {c bes a! bes) g4( aes8) f4(}
 	\tuplet 3/2 4 {g8) ees4( f8) d4( ees8) ees( a!}
 	\tuplet 3/2 4 {c) ees,( g c) ees,( g} c16) e,( g c)
-	R2.*55
-	% bar 106
-	d,4(~^\markup {Solo-Vlc.} \tuplet 3/2 4 {d8 cis d~ d cis d}
+	s2.*55
+	% bar 106 - 113
+	d,4(~^\markup {Solo-Vlc.} \tupletUp \tuplet 3/2 4 {d8 cis d~ d cis d}
 	\tuplet 3/2 4 {e cis d~} d) d4 cis8(
-	d4)(~ \tuplet 3/2 4 {d8 cis d)} bes' f
+	d4)(~ \tuplet 3/2 4 {d8 cis d)} \tupletNeutral bes' f
 	d bes f4 d
 	e8( a b! e)~ e4~
-	e e,8( e') a,( a')
+	e e,8([ e')] a,( a')
 	b4( e2)~
 	e2.~
 }
-cueVoiceHrnIVMvtIII = \relative c {
+cueVoiceHornIVMvtIII = \relative c {
 	\transposition d
-	g''8(^\markup {Solo-Vlc.} d'16-.) d-. cis8( c16-.) c-.
+	% bar 1 - 2
+	\voiceTwo g''8(^\markup {Solo-Vlc.} d'16-.) d-. cis8( c16-.) c-.
 	bes8( a16-.) a-. g8( d16-.) d-.
-	R2*18
-	% bar 21
-	bes'4(^\markup {Fag.I} aes
+	s2*18
+	% bar 21 - 24
+	\voiceOne bes'4(^\markup {Fag.I} aes
 	g a!)
 	bes( b
 	c ees8 d)
-	R2*10
-	% bar 35
+	s2*10
+	% bar 35 - 38
 	d8^\markup {Viol.I pizz.} c ees c
 	d c ees c
 	<c g'> <a f'> <c g'> <a f'>
 	<g ees' c'> r r4
-	R2*22
-	% bar 61
-	r4 ges'->~^\markup {Solo-Viol.}
+	s2*22
+	% bar 61 - 64
+	s4 ges'->~^\markup {Solo-Viol.}
 	ges8\noBeam f16-. f,,-. ges''4->~
 	ges8 f16-. f,,-. f''8( e16-.) bes,-.
 	e'-. des,( des') bes,( bes') g,( g'8\noBeam)
-	R2*12
-	% bar 77
+	s2*12
+	% bar 77 - 79
 	r4 f'(^\markup {Hr.III}
 	e ees
-	d) r
-	R2*5
-	R2.*2
-	R1*2
-	R2*16
-	% bar 105
+	d) s
+	s2*5 s2.*2 s1*2 s2*16
+	% bar 105 - 110
 	g,8->^\markup {Fag.I} f16-. f-. bes8-> f16-. f-.
 	ges8-> f16-. f-. bes-. d-. f-. d-.
 	bes8->^\markup {Ob.I} a16-. bes-. a8-> bes16-. a-.
 	bes8-> a16-. bes-. a( g') f-. e-.
-	d'8->_\markup {Fl.I} c16-. d-. c8-> d16-. c-.
+	\oneVoice d'8->_\markup {Fl.I} c16-. d-. c8-> d16-. c-.
 	d8-> c16-. d-. c( ees) c-. a-.
-	R2*7
-	% bar 118
-	r4 r8. g16-.-\tweak X-offset #-7 ^\markup {Solo-Viol.} 
+	s2*7
+	% bar 118 - 121
+	\voiceOne s4 s8. g16-.-\tweak X-offset #-7 ^\markup {Solo-Viol.} 
 	g8-.[ g16\rest <ees g>-.] q8-.[ g16\rest q-.]
-	\tuplet 3/2 4 {<ees g>4( <d f>8) <c ees>( <d f> <ees g>)}
-	\tuplet 3/2 4 {<ees g>4( <des f>8)} r4
-	R2*12
-	% bar 134
-	r8 ees-.^\markup {Viol.I} c-. a'-.
+	\tupletDown \tuplet 3/2 4 {<ees g>4( <d f>8) <c ees>( <d f> <ees g>)}
+	\tuplet 3/2 4 {<ees g>4( <des f>8)} \tupletNeutral r4
+	s2*12
+	% bar 134 - 136
+	r8 ees-.-\offset X-offset -5 ^\markup {Viol.I} c-. a'-.
 	g8-.[ g16\rest g-.] g8-.[ g16\rest g-.] 
-	g8-.[ g16\rest g-.] g8-. r
-	R2*37
-	% bar 174
-	r4 r8 <bes,, g'>8(^\markup {Solo-Viol.}
+	g8-.[ g16\rest g-.] g8-. s
+	s2*37
+	% bar 174 - 180
+	s4 s8 <bes,, g'>8(-\offset X-offset -3 ^\markup {Solo-Viol.}
 	<bes' g'>) q4 <a fis'>8(
 	<bes g'>) q4 <ees c'>16( g
 	<d bes'> g d bes g[ bes]) <c aes'>( ees
 	<bes g'> ees bes g) ees([ <ees' g>)] <d bes'>( <c aes'>
 	<b! g'>8)\noBeam <b d>8. <aes f'>16( <g ees'> <f d'>)
 	<d b'>16( <ees c'>) <d fis>( <ees g>) \tuplet 6/4 4 {g,16( e'! g e'! g e'!)}
-	R2*47
-	% bar 228
-	g,8(^\markup {Solo-Viol.} d'16-.) d-. cis8-.( c16-.) c-.
+	s2*47
+	% bar 228 - 230
+	\oneVoice g,8(^\markup {Solo-Viol.} d'16-.) d-. cis8-.( c16-.) c-.
 	bes8( a16-.) a-. g8( d16-. d-.)
-	ees8( d16-.) d-. g8 r
-	R2*9
-	% bar 240
+	\voiceOne ees8( d16-.) d-. g8 s
+	s2*9
+	% bar 240 - 241
 	f8(^\markup {Hr.III} ees16 d) f4~
 	f8( g16 aes) g8( f)
-	R2*12
-	% bar 254
-	\tuplet 3/2 8 {fis,,16([^\markup {Solo-Viol.} a d] a[ d fis]) d([ fis a] fis[ a d])}
-	\tuplet 3/2 8 {fis,[( a d] a[ d fis] d[ fis a] fis[ a d])}
-	fis2\trill
+	s2*12
+	% bar 254 - 257
+	\tupletDown \tuplet 3/2 8 {fis,,16([^\markup {Solo-Viol.} a d] a[ d fis]) d([ fis a] fis[ a d])}
+	\tuplet 3/2 8 {fis,[( a d] a[ d fis] d[ fis a] fis[ a d])} \tupletNeutral
+	fis2\trill\laissezVibrer
 	d,,,\trill-\tweak X-offset #-3 ^\markup {Pk.}
-	R2*23
-	% bar 281
-	r4 d''(^\markup {Hr.I}
+	s2*23
+	% bar 281 - 285
+	s4 d''(^\markup {Hr.I}
 	cis c
 	b) e(~
-	e8 c) e(-. fis-.)
+	e8[ c)] e(-. fis-.)
 	g r r4
-	R2*3
-	R2.*2
-	% bar 291
+	s2*3 s2.*2
+	% bar 291 - 293
 	r4^\markup {Fl.} b,( c cis
 	d e eis fis)
 	gis8-. r r4
-	R2*3
-	% bar 297
-	g,8(_\markup {Klar.I} d' cis c
-	b a g) r
+	s2*3
+	% bar 297 - 298
+	\voiceTwo g,8(_\markup {Klar.I} d' cis c
+	b a g) s
 }
 %###############################################################################
 %#                         T R U M P E T    I  &  II                           #

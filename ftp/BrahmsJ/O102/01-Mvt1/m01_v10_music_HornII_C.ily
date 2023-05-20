@@ -313,10 +313,10 @@ musicHornIIMvtI = \relative c' {
 	R1
 	r2 r4 c'-\tweak X-offset #-2 \sf~
 	c c-. r a\f~
-	a a~ a8 r r4
+	a a~ a8-. r r4
 	r g,2 g4~
 % Bars 386 to 390
-	g8 r r4 r2
+	g8-. r r4 r2
 	R1 \bar "||" \mark \default
 	g2-\tweak X-offset #-3.5 \sf c4 r8 g'
 	c,4-. r8 g' c,4-. r

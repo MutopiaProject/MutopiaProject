@@ -1,28 +1,28 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part05_Horn.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
-%                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    work                : Double Concerto for Violin and Violoncello 
+%                          in A minor
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Horn
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part05_Horn.ily"
 \include "./01-Mvt1/m01_v09_music_HornI.ily"
 \include "./02-Mvt2/m02_v09_music_HornI.ily"
 \include "./03-Mvt3/m03_v09_music_HornI.ily"
@@ -35,19 +35,6 @@
 \include "./01-Mvt1/m01_v12_music_HornIV.ily"
 \include "./02-Mvt2/m02_v12_music_HornIV.ily"
 \include "./03-Mvt3/m03_v12_music_HornIV.ily"
-\include "./00-Common/DoubleConcerto_Format_Part05_Horn.ily"
-\addQuote "cueVoiceHrnImI" { \cueVoiceHrnImI }
-\addQuote "cueVoiceHrnImII" { \cueVoiceHrnImII }
-\addQuote "cueVoiceHrnImIII" { \cueVoiceHrnImIII }
-\addQuote "cueVoiceHrnIImI" { \cueVoiceHrnIImI }
-\addQuote "cueVoiceHrnIImII" { \cueVoiceHrnIImII }
-\addQuote "cueVoiceHrnIImIII" { \cueVoiceHrnIImIII }
-\addQuote "cueVoiceHrnIIImI" { \cueVoiceHrnIIImI }
-\addQuote "cueVoiceHrnIIImII" { \cueVoiceHrnIIImII }
-\addQuote "cueVoiceHrnIIImIII" { \cueVoiceHrnIIImIII }
-\addQuote "cueVoiceHrnIVmI" { \cueVoiceHrnIVmI }
-\addQuote "cueVoiceHrnIVmII" { \cueVoiceHrnIVmII }
-\addQuote "cueVoiceHrnIVmIII" { \cueVoiceHrnIVmIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -68,11 +55,16 @@
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceIX
+				\formatHornIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceIXmvtI \musicHornIMvtI
+				\keepWithTag #'(hornI) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameHornIMvtI \musicHornIMvtI
 			}
 		>>
 		\header {
@@ -85,19 +77,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceIX
+				\formatHornIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceIXmvtII \musicHornIMvtII
+				\keepWithTag #'(hornI) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameHornIMvtII \musicHornIMvtII
 			}
 		>>
 		\header {
@@ -110,19 +104,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceIX
+				\formatHornIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceIXmvtIII \musicHornIMvtIII
+				\keepWithTag #'(hornI) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameHornIMvtIII \musicHornIMvtIII
 			}
 		>>
 		\header {
@@ -135,19 +131,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceX
+				\formatHornIIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXmvtI \musicHornIIMvtI
+				\keepWithTag #'(hornII) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameHornIIMvtI \musicHornIIMvtI
 			}
 		>>
 		\header {
@@ -160,19 +158,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceX
+				\formatHornIIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXmvtII \musicHornIIMvtII
+				\keepWithTag #'(hornII) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameHornIIMvtII \musicHornIIMvtII
 			}
 		>>
 		\header {
@@ -185,19 +185,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceX
+				\formatHornIIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXmvtIII \musicHornIIMvtIII
+				\keepWithTag #'(hornII) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameHornIIMvtIII \musicHornIIMvtIII
 			}
 		>>
 		\header {
@@ -210,19 +212,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceXI
+				\formatHornIIIMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXImvtI \musicHornIIIMvtI
+				\keepWithTag #'(hornIII) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIIIMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameHornIIIMvtI \musicHornIIIMvtI
 			}
 		>>
 		\header {
@@ -235,44 +239,48 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceXI
+				\formatHornIIIMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXImvtII \musicHornIIIMvtII
+				\keepWithTag #'(hornIII) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIIIMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameHornIIIMvtII \musicHornIIIMvtII
 			}
 		>>
 		\header {
 			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #2.5 \fill-line {
 					\fontsize #4
 					II
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceXI
+				\formatHornIIIMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXImvtIII \musicHornIIIMvtIII
+				\keepWithTag #'(hornIII) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIIIMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameHornIIIMvtIII \musicHornIIIMvtIII
 			}
 		>>
 		\header {
@@ -285,19 +293,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceXII
+				\formatHornIVMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXIImvtI \musicHornIVMvtI
+				\keepWithTag #'(hornIV) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIVMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameHornIVMvtI \musicHornIVMvtI
 			}
 		>>
 		\header {
@@ -310,44 +320,48 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceXII
+				\formatHornIVMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXIImvtII \musicHornIVMvtII
+				\keepWithTag #'(hornIV) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIVMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameHornIVMvtII \musicHornIVMvtII
 			}
 		>>
 		\header {
 			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #2.37 \fill-line {
 					\fontsize #4
 					II
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceXII
+				\formatHornIVMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXIImvtIII \musicHornIVMvtIII
+				\keepWithTag #'(hornIV) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceHornIVMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameHornIVMvtIII \musicHornIVMvtIII
 			}
 		>>
 		\header {
@@ -360,9 +374,6 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

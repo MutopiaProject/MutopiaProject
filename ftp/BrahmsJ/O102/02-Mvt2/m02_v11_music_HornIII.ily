@@ -9,10 +9,8 @@ musicHornIIIMvtII = \relative c {
 	\key c \major
 	\transposition f
 % Bars 1 to 5
-	\mark \markup {\abs-fontsize #16 "in F"} \cueDuring #"cueVoiceHrnIIImII" #DOWN {
-		\ni R2.\fermata
-		\MmrPos #6 R2.\fermata \no
-	}
+	\mark \markup {\abs-fontsize #16 "in F"} \ni \mmrPos #4 R2.\fermata
+	\mmrPos #6 R2.\fermata \no
 	R2.*22^\solo
 % Bars 6 to 10
 	
@@ -25,14 +23,13 @@ musicHornIIIMvtII = \relative c {
 	
 	
 	
-	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
-		\ni R2.
+	\ni \mmrPos #4 R2.
 % Bars 26 to 30
-		R
-		R
-		R
-		R
-		r4 r \no } \clef bass c~\p^\tutti \bar "||" \mark \default
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R \no
+	\voiceOne r4 r \oneVoice \clef bass c~\p-\offset X-offset -4 ^\tutti \bar "||" \mark \default
 % Bars 31 to 35
 	c2.~
 	c~
@@ -99,18 +96,16 @@ musicHornIIIMvtII = \relative c {
 % Bars 101 to 105
 	
 % Bars 106 to 110
-	\cueDuring #"cueVoiceHrnIIImII" #DOWN {
-		\ni R2.
-		R
-		R
-		R
-		R
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 111 to 115
-		R
-		\MmrPos #6 R
-		\MmrPos #6 R \no
-	}
-	e,4(-\tweak X-offset #-3 \p\< a2)\>~
+	\mmrPos #4 R
+	\mmrPos #6 R
+	\mmrPos #6 R \no
+	e,4(-\tweak X-offset #-1.5 \p\< \hairpinShorten #'(0 . 3.5) a2)\>~
 	a2.\!~
 % Bars 116 to 118
 	a~
