@@ -257,29 +257,60 @@ nameHornIVMvtIII = {
 	\set Staff.midiInstrument = #"trombone"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#                  V O I C E   N A M E   :   T R U M P E T                    #
 %###############################################################################
-nameVoiceXIII = {
+nameTrumpetIMvtI = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Trumpet I" }
-			\line { " in D" }
+			\lower #1 "Trumpet I" " in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Tr I"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trumpet"
 }
-%###############################################################################
-%#                           V O I C E   N A M E S                             #
-%###############################################################################
-nameVoiceXIV = {
+nameTrumpetIMvtII = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Trumpet II" }
-			\line { " in D" }
+			\lower #1 "Trumpet I" " in D"
 		}
 	}
-	\set Staff.shortInstrumentName = #"Tr II"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"trumpet"
+}
+nameTrumpetIMvtIII = {
+	\set Staff.instrumentName = \markup {
+		\center-column {
+			\lower #1 "Trumpet I" " in D"
+		}
+	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"trumpet"
+}
+nameTrumpetIIMvtI = {
+	\set Staff.instrumentName = \markup {
+		\center-column {
+			\lower #1 "Trumpet II" " in D"
+		}
+	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"trumpet"
+}
+nameTrumpetIIMvtII = {
+	\set Staff.instrumentName = \markup {
+		\center-column {
+			\lower #1 "Trumpet II" " in D"
+		}
+	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"trumpet"
+}
+nameTrumpetIIMvtIII = {
+	\set Staff.instrumentName = \markup {
+		\center-column {
+			\lower #1 "Trumpet II" " in D"
+		}
+	}
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"trumpet"
 }
 %###############################################################################

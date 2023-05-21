@@ -87,13 +87,13 @@ tempiPartMvtIII = {
 	% bar 29
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeI oboeII klarinetI klarinetII fagottoI fagottoII
-		  trumpetI trumpetII pauken soloViolin 
+		   trumpetII pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "poco rit."
 		}
 	}
-	\tag #'(hornI hornII hornIII hornIV) {
+	\tag #'(hornI hornII hornIII hornIV trumpetI) {
 		\tempoXoffset #-1
 		\tempo \markup {
 			\medium \italic "poco rit."
@@ -104,13 +104,13 @@ tempiPartMvtIII = {
 	% bar 33
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeII klarinetI klarinetII fagottoI fagottoII
-		  trumpetI trumpetII pauken soloViolin 
+		   trumpetII pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "in tempo"
 		}
 	}
-	\tag #'(oboeI hornI hornII hornIII hornIV) {
+	\tag #'(oboeI hornI hornII hornIII hornIV trumpetI) {
 		\tempoXoffset #-2
 		\tempo \markup {
 			\medium \italic "in tempo"
@@ -138,13 +138,13 @@ tempiPartMvtIII = {
 	% bar 250
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(oboeI  klarinetI  fagottoI fagottoII
-		 hornIV trumpetI trumpetII pauken soloViolin 
+		 hornIV trumpetI pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "in tempo"
 		}
 	}
-	\tag #'(floteI floteII oboeII klarinetII hornI hornII hornIII) {
+	\tag #'(floteI floteII oboeII klarinetII hornI hornII hornIII trumpetII) {
 		\tempoXoffset #-1.5
 		\tempo \markup {
 			\medium \italic "in tempo"
@@ -169,7 +169,7 @@ tempiPartMvtIII = {
 	% bar 324
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeI oboeII  fagottoI 
-		hornI hornII hornIV trumpetI trumpetII pauken soloViolin 
+		hornI hornII hornIV  pauken soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo "Tempo primo"
 	}
@@ -185,7 +185,7 @@ tempiPartMvtIII = {
 			\column { \lower #1.5 "Tempo" "primo" }
 		}
 	}
-	\tag #'(klarinetII) {
+	\tag #'(klarinetII trumpetI trumpetII) {
 		\tempo \markup {
 			\column { \lower #1.5 "Tempo" "primo" }
 		}

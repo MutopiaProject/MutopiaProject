@@ -9,10 +9,8 @@ musicTrumpetIMvtII = \relative c'' {
 	\key c \major
 	\transposition d
 % Bars 1 to 5
-	\cueDuring #"cueVoiceTptImII" #UP {
-		\ni \MmrPos #4 R2.\fermata
-		\MmrPos #4 R2.\fermata \no
-	}
+	\ni \mmrPos #4 R2.\fermata
+	\mmrPos #4 R2.\fermata \no
 	R2.*27-\tweak X-offset #-2.5 ^\solo 
 % Bars 6 to 10
 	
@@ -27,19 +25,17 @@ musicTrumpetIMvtII = \relative c'' {
 	
 	
 	
-	\cueDuring #"cueVoiceTptImII" #UP {
-		\ni R2.-\tweak X-offset #0 ^\tutti \bar "||" \mark \default
+	\ni \mmrPos #-4 R2.-\tweak X-offset #0 ^\tutti \bar "||" \mark \default
 % Bars 31 to 35
-		R
-		R
-		R
-		R
-		R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 36 to 40
-		R
-		R
-		R^\solo \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R^\solo \no
 	R2.*12
 % Bars 41 to 45
 	
@@ -56,15 +52,13 @@ musicTrumpetIMvtII = \relative c'' {
 % Bars 61 to 65
 	
 	
-	\cueDuring #"cueVoiceTptImII" #DOWN {
-		\ni R2.
-		R^\tutti
-		R
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R^\tutti
+	\mmrPos #4 R
 % Bars 66 to 70
-		R \bar "||"
-		R
-		R \no
-	}
+	\mmrPos #4 R \bar "||"
+	\mmrPos #4 R
+	\mmrPos #4 R \no
 	g4\f c2~
 	c2.~
 % Bars 71 to 75
@@ -83,25 +77,21 @@ musicTrumpetIMvtII = \relative c'' {
 	
 	
 	\mark \default
-	\cueDuring #"cueVoiceTptImII" #DOWN {
-		\ni R2.
+	\ni \mmrPos #4 R2.
 % Bars 101 to 105
-		R
-		R
-		R
-		R
-		R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 106 to 110
-		R \no
-	}
+	\mmrPos #4 R \no
 	R2.*4
 % Bars 111 to 115
-	\cueDuring #"cueVoiceTptImII" #DOWN {
-		\ni R2.
-		R
-		R \no
-	}
-	g4-\tweak X-offset #-2 \p\< c2\>~
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R
+	\mmrPos #4 R \no
+	\hairpinShorten #'(-0.7 . 0.7) g4-\tweak X-offset #-1.7 \p\< \hairpinShorten #'(-0.7 . 4) c2\>~
 	c2.\!~
 % Bars 116 to 118
 	c~
