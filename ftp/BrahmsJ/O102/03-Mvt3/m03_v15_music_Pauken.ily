@@ -9,10 +9,8 @@ musicPaukenMvtIII = \relative c {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni R2
-		R \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R \no
 	R2*18
 % Bars 6 to 10
 	
@@ -21,31 +19,27 @@ musicPaukenMvtIII = \relative c {
 % Bars 16 to 20
 	
 % Bars 21 to 25
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni R2
-		R
-		R
-		R
-		R \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 26 to 30
 	R2*3
 	
 	
-	\tempo "poco rit." \MmrLength #13 R2*4
+	\mmrLength #2 R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" \MmrLength #16 R2*2
+	\mmrLength #2 R2*2
 	
-	\cueDuring #"cueVoicePkmIII" #DOWN {
-		\ni \clef "treble" R2
+	\ni \clef treble \mmrPos #4 R2
 % Bars 36 to 40
-		R
-		R
-		R \no \mark \default \clef bass
-	}
-	\tuplet 6/4 4 {e4.:16\f-\tweak X-offset #1 ^\tutti e:}
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R \no \mark \default \clef bass
+	\tupletUp \tuplet 6/4 4 {e4.:16\f^\tutti e:} \tupletNeutral
 	a,8-. a-. r a-.
 % Bars 41 to 45
 	r a-. r a-.
@@ -87,23 +81,21 @@ musicPaukenMvtIII = \relative c {
 	
 % Bars 76 to 80
 	
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni R2
-		R
-		R
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 81 to 85
-		R
-		R
-		R
-		R \bar "||"
-		\time 3/4 R2. \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \bar "||"
+	\time 3/4 \mmrPos #-4 R2. \no
 % Bars 86 to 90
 	R2. \bar "||"
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*12
+	\timeMvtIII R2*12
 % Bars 91 to 95
 	
 % Bars 96 to 100
@@ -120,12 +112,10 @@ musicPaukenMvtIII = \relative c {
 	R2*2^\tutti
 % Bars 106 to 110
 	
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni \clef "treble" R2
-		R
-		R_\solo
-		R \no \clef bass
-	}
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R_\solo
+	\mmrPos #-4 R \no \clef bass
 % Bars 111 to 115
 	a8-.\pp r a-. r
 	r8. a16-. a8-. r
@@ -145,20 +135,18 @@ musicPaukenMvtIII = \relative c {
 	
 % Bars 136 to 140
 	
-	\cueDuring #"cueVoicePkmIII" #DOWN {
-		\ni \clef "treble" \MmrPos #-2 R2^\tutti
-		\MmrPos #-2 R
-		\MmrPos #-2 R \no \clef treble
-	}
-	\MmrLength #8 R2*2^\solo
+	\ni \clef treble \mmrPos #-4 R2^\tutti
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no \clef treble
+	R2*2^\solo
 % Bars 141 to 145
 	
-	\MmrLength #8 R2*4^\tutti
+	R2*4^\tutti
 	
 	
 	
 % Bars 146 to 150
-	\MmrLength #12 R2*2^\solo
+	R2*2^\solo
 	\mark \default
 	R2*32
 % Bars 151 to 155
@@ -178,12 +166,10 @@ musicPaukenMvtIII = \relative c {
 	\mark \default
 	R2
 % Bars 181 to 185
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni \clef "treble" \MmrPos #-10 R2
-		R
-		\MmrPos #-10 R
-		\MmrPos #-8 R \no \clef bass
-	}
+	\ni \clef treble \mmrPos #-10 R2
+	\mmrPos #-7 R
+	\mmrPos #-10 R
+	\mmrPos #-7 R \no \clef bass
 	R2*11
 % Bars 186 to 190
 	
@@ -194,17 +180,15 @@ musicPaukenMvtIII = \relative c {
 	R2*5
 % Bars 201 to 205
 	
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni \clef "treble" R2
-		R
-		R
-		\MmrPos #-8 R
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-7 R
 % Bars 206 to 210
-		R
-		R
-		R
-		R \clef bass \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \clef bass \no
 	\tuplet 6/4 4 {a4.:16\sf^\tutti a:}
 % Bars 211 to 215
 	\tuplet 6/4 4 {a4.:16\sf a:}
@@ -222,10 +206,9 @@ musicPaukenMvtIII = \relative c {
 % Bars 226 to 230
 	
 	
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni \clef "treble" R2
-		R
-		r4 r8 \clef bass \no } e'-.\p
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R \no
+	r4 r8 \clef bass e'-.\p
 % Bars 231 to 235
 	a,8-. r r4
 	r r8 e'-.
@@ -239,21 +222,19 @@ musicPaukenMvtIII = \relative c {
 % Bars 241 to 245
 	
 % Bars 246 to 250
-	\tempo "poco rit." \MmrLength #10 R2*4
+	\mmrLength #2 R2*4
 	
 	
 	
-	\tempo "in tempo" \MmrLength #10 R2*4
+	\mmrLength #2 R2*4
 % Bars 251 to 255
 	
 	
 	
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni \clef "treble" R2
-		R
+	\ni \clef treble \mmrPos #-6 R2
+	\mmrPos #-4 R
 % Bars 256 to 260
-		R \clef bass \no
-	}
+	\mmrPos #-4 R \clef bass \no
 	e2\trill\f
 	a,8-.^\tutti a-. r a-.
 	r a-. r a-.
@@ -288,20 +269,18 @@ musicPaukenMvtIII = \relative c {
 % Bars 291 to 295
 	\time 4/4 R1*2
 	\bar "||"
-	\time 2/4 R2*4
+	\timeMvtIII R2*4
 % Bars 296 to 300
 	\bar "||"
-	\tempo "Poco meno Allegro" \cueDuring #"cueVoicePkmIII" #UP {
-		\ni \clef "treble" R2
-		R
-		R
-		R
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 301 to 305
-		R
-		R
-		R
-		R
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	R2*19
 % Bars 306 to 310
 	
@@ -313,22 +292,20 @@ musicPaukenMvtIII = \relative c {
 	
 	
 	\bar "||"
-	\tempo "Tempo primo" \MmrLength #15 R2*4
+	R2*4
 	
 % Bars 326 to 330
 	
 	
-	\cueDuring #"cueVoicePkmIII" #UP {
-		\ni R2
-		R
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 331 to 335
-		R
-		R
-		R
-		R
-		R \no \clef bass
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no \clef bass
 % Bars 336 to 340
 	a2\f\startTrillSpan~
 	<< a {s4 s8 s\stopTrillSpan}>>

@@ -1,33 +1,30 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part07_Pauken.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
-%                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    work                : Double Concerto for Violin and Violoncello 
+%                          in A minor
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Trumpets
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part07_Pauken.ily"
 \include "./01-Mvt1/m01_v15_music_Pauken.ily"
 \include "./03-Mvt3/m03_v15_music_Pauken.ily"
-\include "./00-Common/DoubleConcerto_Format_Part07_Pauken.ily"
-\addQuote "cueVoicePkmI" { \cueVoicePkmI }
-\addQuote "cueVoicePkmIII" { \cueVoicePkmIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -48,11 +45,16 @@
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceXV
+				\formatPaukenMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXV \musicPaukenMvtI
+				\keepWithTag #'(pauken) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoicePaukenMvtI
+			}
+			\new Voice {
+				\timeMvtI \namePaukenMvtI \musicPaukenMvtI
 			}
 		>>
 		\header {
@@ -65,34 +67,33 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceXV
+				\formatPaukenMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXV \musicPaukenMvtIII
+				\keepWithTag #'(pauken) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoicePaukenMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \namePaukenMvtIII \musicPaukenMvtIII
 			}
 		>>
 		\header {
 			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #2.32 \fill-line {
 					\fontsize #4
 					III
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

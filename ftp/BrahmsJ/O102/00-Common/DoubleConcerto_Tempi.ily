@@ -87,13 +87,13 @@ tempiPartMvtIII = {
 	% bar 29
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeI oboeII klarinetI klarinetII fagottoI fagottoII
-		   trumpetII pauken soloViolin 
+		   trumpetII  soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "poco rit."
 		}
 	}
-	\tag #'(hornI hornII hornIII hornIV trumpetI) {
+	\tag #'(hornI hornII hornIII hornIV trumpetI pauken) {
 		\tempoXoffset #-1
 		\tempo \markup {
 			\medium \italic "poco rit."
@@ -104,13 +104,13 @@ tempiPartMvtIII = {
 	% bar 33
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeII klarinetI klarinetII fagottoI fagottoII
-		   trumpetII pauken soloViolin 
+		   trumpetII  soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "in tempo"
 		}
 	}
-	\tag #'(oboeI hornI hornII hornIII hornIV trumpetI) {
+	\tag #'(oboeI hornI hornII hornIII hornIV trumpetI pauken) {
 		\tempoXoffset #-2
 		\tempo \markup {
 			\medium \italic "in tempo"
@@ -121,13 +121,13 @@ tempiPartMvtIII = {
 	% bar 246
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(oboeI  klarinetI  fagottoI fagottoII
-		hornIII hornIV trumpetI trumpetII pauken soloViolin 
+		hornIII hornIV trumpetI trumpetII  soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "poco rit."
 		}
 	}
-	\tag #'(floteI floteII oboeII klarinetII hornI hornII) {
+	\tag #'(floteI floteII oboeII klarinetII hornI hornII pauken) {
 		\tempoXoffset #-1
 		\tempo \markup {
 			\medium \italic "poco rit."
@@ -138,13 +138,14 @@ tempiPartMvtIII = {
 	% bar 250
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(oboeI  klarinetI  fagottoI fagottoII
-		 hornIV trumpetI pauken soloViolin 
+		 hornIV trumpetI  soloViolin 
 		soloCello violinI violinII Bratsche violoncell kontrabass) {
 		\tempo \markup {
 			\medium \italic "in tempo"
 		}
 	}
-	\tag #'(floteI floteII oboeII klarinetII hornI hornII hornIII trumpetII) {
+	\tag #'(floteI floteII oboeII klarinetII hornI hornII hornIII trumpetII 
+		pauken) {
 		\tempoXoffset #-1.5
 		\tempo \markup {
 			\medium \italic "in tempo"

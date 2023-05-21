@@ -316,14 +316,22 @@ nameTrumpetIIMvtIII = {
 %###############################################################################
 %#                           V O I C E   N A M E S                             #
 %###############################################################################
-nameVoiceXV = {
+namePaukenMvtI = {
 	\set Staff.instrumentName = \markup {
 		\center-column {
-			\lower #1 \line { "Pauken" }
-			\line { "in A E" }
+			\lower #1 "Pauken" "in A E" 
 		}
 	}
-	\set Staff.shortInstrumentName = #"Pk"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"timpani"
+}
+namePaukenMvtIII = {
+	\set Staff.instrumentName = \markup {
+		\center-column {
+			\lower #1 "Pauken" "in A E" 
+		}
+	}
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"timpani"
 }
 %###############################################################################
