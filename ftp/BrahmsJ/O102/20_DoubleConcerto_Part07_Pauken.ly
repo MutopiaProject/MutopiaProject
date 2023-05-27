@@ -6,7 +6,7 @@
 %    work                : Double Concerto for Violin and Violoncello 
 %                          in A minor
 %    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
-%    Type of score       : Score for Trumpets
+%    Type of score       : Score for Pauken
 %    Typesetter          : Sébastien MANEN
 %    Date of initiation  : Thursday 20 April 2023, 19:50
 %

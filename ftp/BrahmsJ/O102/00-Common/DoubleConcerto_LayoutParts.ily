@@ -5,7 +5,6 @@
 %#                         S E C T I O N  O P T I O N S                        #
 %###############################################################################
 \layout {
-	#(layout-set-staff-size 20)
 	\set Score.alternativeNumberingStyle = #'numbers
 %	\set Score.doubleRepeatType = #":|.|:"
 	\set Score.rehearsalMarkFormatter = #format-mark-box-alphabet
@@ -44,6 +43,11 @@
 		scriptDefinitions = #my-script-alist
 	}
 }
+%layoutSoliste = \layout {
+%	#(set-global-staff-size 20)
+%	
+%}
+
 %layoutPart = \layout {
 %	\compressMMRests
 %	\compressEmptyMeasures

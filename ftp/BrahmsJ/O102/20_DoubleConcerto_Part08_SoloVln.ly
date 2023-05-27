@@ -1,43 +1,40 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part08_SoloVln.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
-%                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    work                : Double Concerto for Violin and Violoncello 
+%                          in A minor
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Solo Violin
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part08_SoloVln.ily"
 \include "./01-Mvt1/m01_v16_music_SoloViolin.ily"
 \include "./02-Mvt2/m02_v16_music_SoloViolin.ily"
 \include "./03-Mvt3/m03_v16_music_SoloViolin.ily"
-\include "./00-Common/DoubleConcerto_Format_Part08_SoloVln.ily"
-\addQuote "cueVoiceSoloVlnmI" { \cueVoiceSoloVlnmI }
-\addQuote "cueVoiceSoloVlnmII" { \cueVoiceSoloVlnmII }
-\addQuote "cueVoiceSoloVlnmIII" { \cueVoiceSoloVlnmIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
+#(set-global-staff-size 18)
 \book {
 	\header {
 		subtitle = \markup { \fontsize #3 \sans
 			\center-column {
-				"Part for SoloVln"
+				"Part for Solo Violin"
 			}
 		}
 		subsubtitle = \markup {
@@ -50,11 +47,16 @@
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceXVI
+				\formatSoloViolinMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXVI \musicSoloViolinMvtI
+				\keepWithTag #'(soloViolin) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceSoloViolinMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameSoloViolinMvtI \musicSoloViolinMvtI
 			}
 		>>
 		\header {
@@ -67,48 +69,52 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceXVI
+				\formatSoloViolinMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXVI \musicSoloViolinMvtII
+				\keepWithTag #'(soloViolin) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceSoloViolinMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameSoloViolinMvtII \musicSoloViolinMvtII
 			}
 		>>
 		\header {
-			breakbefore = ##t
+			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #2.5 \fill-line {
 					\fontsize #4
 					II
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceXVI
+				\formatSoloViolinMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXVI \musicSoloViolinMvtIII
+				\keepWithTag #'(soloViolin) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceSoloViolinMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameSoloViolinMvtIII \musicSoloViolinMvtIII
 			}
 		>>
 		\header {
-			breakbefore = ##f
+			breakbefore = ##t
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -117,9 +123,6 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

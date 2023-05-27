@@ -9,15 +9,13 @@ musicSoloViolinMvtIII = \relative c''' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	\MmrLength #18 R2*6
+	R2*6
 % Bars 6 to 10
 	
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni \clef "bass" R2
-		R
-		R
-		R \no \clef treble
-	}
+	\ni \clef bass \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no \clef treble
 % Bars 11 to 15
 	a8(\p e'16)-. e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8( e16-.) e-.
@@ -40,12 +38,12 @@ musicSoloViolinMvtIII = \relative c''' {
 	<bes d>16( <a c> <g bes> <a c>) <f a>4
 	<f' a>8( <e g>16 <f a>) <e g>4
 	<d f>16( <c e> <bes d> <c e>) <a c>4~
-	\tempo "poco rit." q8(\pp b16 c) f,4
+	q8(\pp b16 c) f,4
 	a8( gis16 a) a'4
 % Bars 31 to 35
 	a'8( gis16 a) a,,4
 	c'8( b16 c) c'4
-	\tempo "in tempo" \tuplet 3/2 8 {a16([ gis a] f[ e f] c[ b c] a[ gis a])}
+	\tuplet 3/2 8 {a16([ gis a] f[ e f] c[ b c] a[ gis a])}
 	\tuplet 3/2 8 {f([ e f] d[ cis d] b[ ais b] f[ e f])}
 	\tuplet 3/2 8 {e(_\benmarccresc d e} d8-.) \tuplet 3/2 8 {f16( d f} d8-.)
 % Bars 36 to 40
@@ -57,29 +55,28 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 41 to 45
 	
 % Bars 46 to 50
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni R2
-		R
-		R
-		r4 \no } <e c' a'>->\f
+	\ni \mmrPos #-4 R2
+	\mmrPos #-6 R
+	\mmrPos #-4 R \no
+	r4 <e c' a'>->\f
 	<d b' a'>-> <d b' gis'>->
 % Bars 51 to 55
 	<e c' a'>8-. r r4
 	R2*2
 	
-	r4 <g, d' b' aes'>->\f
+	r4 <g, d' b' aes'>->-\tweak extra-offset #'(-2.2 . 2) \f
 	<g ees' c' g'>-> <g ees' a! fis'>->
 % Bars 56 to 60
-	<g d' b' g'>8-. <d'' f!>16-. d,-. <c'  ees>4->~
-	q8 <c d>16-. d,-. <d' c'>4->~
-	q8 <d b'>16-. d,-. <d' f>-. g,,-. <c' ees>8->~
-	q <c d>16-. d,-. <d' c'>4->~
-	q8 <d b'>16-. g,,-. <d'' c'>4->~
+	<g d' b' g'>8-.\noBeam <d'' f!>16-. d,-. <c'  ees>4->~
+	q8\noBeam <c d>16-. d,-. <d' c'>4->~
+	q8\noBeam <d b'>16-. d,-. <d' f>-. g,,-. <c' ees>8->~\noBeam
+	q\noBeam <c d>16-. d,-. <d' c'>4->~
+	q8\noBeam <d b'>16-. g,,-. <d'' c'>4->~
 % Bars 61 to 65
-	q8 <d b'>16-. d,-. <bes' aes'>4->~
-	q8 <bes g'>16-. g,-. <bes' aes'>4~->
-	q8 <bes g'>16-. g,-. <bes' g'>8( <a! fis'>16-.) c,-.
-	<a' fis'>-. ees( <fis ees'>) c( <ees c'>) a,( <c a'>8-.)
+	q8\noBeam <d b'>16-. d,-. <bes' aes'>4->~
+	q8\noBeam <bes g'>16-. g,-. <bes' aes'>4~->
+	\beamOffset #'(-0.5 . 0.5) q8 <bes g'>16-. g,-. <bes' g'>8( <a! fis'>16-.) c,-.
+	<a' fis'>-. ees( <fis ees'>) c( <ees c'>) a,( <c a'>8-.)\noBeam
 	<b! g'>8-. r r4
 % Bars 66 to 70
 	R2*9
@@ -88,38 +85,37 @@ musicSoloViolinMvtIII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni \clef "bass" R2
+	\ni \clef bass \mmrPos #-4 R2
 % Bars 76 to 80
-		R
-		r4 \no \clef treble } g'(\f
+	\mmrPos #-6 R \no
+	r4 \clef treble g'(\f
 	<c e> <d g> 
 	<e c'>) <a f'>8-.( <g e'>-.)
 	<f d'>( a) <dis, b'>-.( a'-.)
 % Bars 81 to 85
 	<e g>4 <a, a'>~
 	q <a' f'>8-.( <g e'>-.)
-	<f d'>( a) <a a'>-.( <g g'>-.)
-	<f f'>( <e e'> <d d'>) a'( \bar "||"
-	\time 3/4 <e c'> <d b'>) <d b'>4.( <e c'>8)
+	<f d'>[( a)] <a a'>-.( <g g'>-.)
+	<f f'>( <e e'> <d d'>) a'(\noBeam \bar "||"
+	\time 3/4 <e c'> <d b'>) <d b'>4.( <c a'>8)
 % Bars 86 to 90
 	<b g'>2 r8 g( \bar "||"
 	\time 4/4 <e c'> <d b'> <e c'> <d b'>) <d b'>4.( <c a'>8)
 	<b g'>4 r r2 \bar "||" 
-	\time 2/4 r8 <cis' a'>16-.\f a-. <d g>8( <a e'>16-.) g
-	r8 <fis' d'>16-. d,-. <g' c!>8( <c, a'>16-.) d,-.
+	\timeMvtIII r8 <cis' a'>16-.\f a-. <d g>8( <a e'>16-.) g-.
+	r8 <fis' d'>16-. d,-. \beamOffset #'(0 . 0.5) <g' c!>8( <c, a'>16-.) d,-.
 % Bars 91 to 95
-	r8 <c'' a'>16-. d,,-. <a'' f'!>8( <f d'>16-.) d,-.
+	r8 \beamGap #2 <c'' a'>16-. d,,-. <a'' f'!>8( <f d'>16-.) d,-.
 	<d' c'>8( <c a'>16-.) d,-. <a' f'>8( <f b>16-.) g,-.
-	<e' c'>8-. \tuplet 3/2 {g''16([ bes, g']} \tuplet 3/2 8 { fis[ a, fis'] f[ aes, f']}
+	<e' c'>8-. \tuplet 3/2 8 {g''16([ bes, g'] fis[ a, fis'] f[ aes, f']}
 	\tuplet 6/4 4 {e g, e' d f, d' c e, c' g d g)}
-	c,8 g'( a b
+	c,8\noBeam g'( a b
 % Bars 96 to 100
 	c d e g
 	c2)
 	r8 \ottava #1 c,( c'4)~
 	c r
-	r8 e,( \open e'4)~ \open \mark \default
+	r8 e,( \open e'4)~ \open \markWhiteout \mark \default
 % Bars 101 to 105
 	e8 \ottava #0 r r4
 	r r8 \tuplet 3/2 8 {e,,,16_\plegg-. c'-. a-.}
@@ -128,10 +124,8 @@ musicSoloViolinMvtIII = \relative c''' {
 	a,8 r r4
 % Bars 106 to 110
 	R2
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni R2
-		R \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R \no
 	r16 gis''_\plegg-. b-. gis-. d8-. r
 	r16 gis-. b-. gis-. d-. b-. d-. f-. 
 % Bars 111 to 115
@@ -157,7 +151,7 @@ musicSoloViolinMvtIII = \relative c''' {
 	<< {
 		\voiceOne g'8( \tuplet 3/2 {f16 g f} \tuplet 6/4 4 {ees f ees d ees d)}
 		ees8( \tuplet 3/2 {d16 ees d} \tuplet 6/4 4 {c d c bes c bes)}
-		\tuplet 6/4 4 {a16(\> bes a bes\! c bes) a( bes a bes c bes)}
+		\tuplet 6/4 4 {\hairpinShorten #'(0.5 . 0) a16(\> bes a bes\! c bes) a( bes a bes c bes)}
 	}
 	\new Voice {
 		\voiceTwo g,8 s s4
@@ -165,7 +159,7 @@ musicSoloViolinMvtIII = \relative c''' {
 		g4 g
 	}
 	\new Voice {
-		\voiceThree g'2
+		\voiceFour g'2
 		s
 		s
 	} >> \oneVoice
@@ -173,8 +167,8 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 131 to 135
 	<<{
 		\voiceOne d'8( \tuplet 3/2 {c16 d c} \tuplet 6/4 4 {bes c bes a bes a)}
-		bes8( \tuplet 3/2 {a16 bes a} \tuplet 6/4 4 {g a g f g f)}
-		\tuplet 6/4 4 {e16(\> f e f\! g f e f e f g f)}
+		\shape #'((0 . -1)(0 . 0.3)(0 . 0)(0 . 0)) Slur bes8( \tuplet 3/2 {a16 bes a} \tuplet 6/4 4 {g a g f g f)}
+		\tuplet 6/4 4 {\hairpinShorten #'(0.5 . 0) e16(\> f e f\! g f e f e f g f)}
 	}
 	\new Voice {
 		\voiceTwo d,8 s s4
@@ -182,7 +176,7 @@ musicSoloViolinMvtIII = \relative c''' {
 		d4 d
 	}
 	\new Voice {
-		\voiceThree d'2
+		\voiceFour d'2
 		s
 		s
 	}>> \oneVoice
@@ -191,19 +185,15 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 136 to 140
 	f8( \tuplet 3/2 {d16 e d} \tuplet 6/4 4 {bes c! bes g a g)}
 	e8 r r4
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni R2
-		R \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R \no
 	\tuplet 3/2 4 {r8 a(\p gis a c, f)}
 % Bars 141 to 145
 	e4 r
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni R2
-		R
-		R
-		R \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 146 to 150
 	r4 \tuplet 3/2 4 {r8 bes'(\p gis}
 	\tuplet 3/2 4 {a cis, e)} a,4 \mark \default
@@ -226,26 +216,26 @@ musicSoloViolinMvtIII = \relative c''' {
 	r4 r8 bes,,,16(_\dimmarkup d
 	ees fis a c) r4
 	r4 r8 g,16( bes
-	a c f a) \cueDuring #"cueVoiceSoloVlnmIII" #UP { \ni \clef "bass" r4
-		R2
+	a c f a) \clef bass r4
+	\ni \mmrPos #-4 R2 \no
 % Bars 166 to 170
-		r4 \no \clef treble } r8 a,(\f
+	r4 \clef treble r8 a,(\f
 	<f' a>) <d a'>4 <bes gis'>8(
-	<a a'>) <f' a>4 <f d'>8(
-	<f c'>) <c f>4 <d bes'>8(
+	<a a'>) <f' a>4 <f~ d'>8^(
+	<f c'>) <c f>4 <d~ bes'>8^(
 	<d a'>)\noBeam <cis e>8. <d f>16( <f a> <e g>)
 % Bars 171 to 175
 	<d f>8 a'4 gis8(
 	a)\noBeam a8. a,16(\f a' f
 	e d cis d f a d b
-	d a f e d a) <c! a'>8(
+	d a f e d a) <c! a'>8(\noBeam
 	<c' a'>) q4 <b gis'>8(
 % Bars 176 to 180
 	<c a'>8) q4 <f d'>16( a
-	<e c'> a e c a c) <d bes'>( f
-	<c a'> f c a) f( <f' a>) <e c'>( <d bes'>
+	<e c'> a e c a c) <d bes'>([ f]
+	<c a'> f c a) f( <f' a>) <e c'>([ <d bes'>]
 	<cis a'>8)\noBeam <cis e>8. <bes g'>16(\> <a f'> <g e'>) \mark \default
-	<e cis'>( <f d'>) <e gis> <f a>\! \tuplet 6/4 4 {a,_\plegg( fis' a fis' a fis')}
+	<e cis'>( <f d'>) <e gis> <f a>\! \beamOffset #'(0.5 . 0) \tuplet 6/4 4 {a,_\plegg( fis' a fis' a fis')}
 % Bars 181 to 185
 	\tuplet 6/4 4 {a( fis a, d,, a'' fis'} a8) r
 	\tuplet 6/4 4 {a16( fis a, a, fis d) a( fis' a fis' a fis')}
@@ -269,11 +259,9 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 201 to 205
 	
 % Bars 206 to 210
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni R2
-		R
-		R \no
-	}
+	\ni \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	r8 <<{\tuplet 3/2 8 {f'16( g f d[ e d)] b'([ cis b])}} \\ {a,8[\ff d,] d'}>>
 	<cis a'>8-. r r4
 % Bars 211 to 215
@@ -290,13 +278,11 @@ musicSoloViolinMvtIII = \relative c''' {
 	
 	
 	
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni \MmrPos #-10 R2
-		\MmrPos #-10 R
+	\ni \mmrPos #-10 R2
+	\mmrPos #-10 R
 % Bars 226 to 230
-		\MmrPos #-10 R
-		\MmrPos #-10 R \no
-	}
+	\mmrPos #-8 R
+	\mmrPos #-8 R \no 
 	a8(\p e'16-.) e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8( e16-.) e-.
 	f8( e16-.) e-. a8( e16-.) e-.
@@ -315,46 +301,42 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 241 to 245
 	\tuplet 6/4 4 {g'16( d bes g bes des, a' c, f bes, g' e)}
 	c8 r \tuplet 6/4 4 {r16 a(_\moltoleggieroedolce bes c d e)}
-	\tuplet 6/4 4 {f16( g a bes a g)} \tuplet 3/2 {c( a f} c8)
+	\tuplet 6/4 4 {f16( g a bes a g)} \tuplet 3/2 {c( a f} c8)\noBeam
 	r4 \tuplet 6/4 4 {r16 f,_\piup( ges aes ges f)}
-	\tuplet 6/4 4 {bes( des ges bes aes ges)} \tuplet 3/2 {aes( f des} aes8)
+	\tuplet 6/4 4 {bes( des ges bes aes ges)} \tuplet 3/2 {aes( f des} aes8)\noBeam
 % Bars 246 to 250
-	\tempo "poco rit." r8 \tuplet 3/2 8 {bes'16( aes g aes f ces} aes8)
-	r8 \tuplet 3/2 8 {des16( ces bes ces f aes} ces8)
-	r \tuplet 3/2 8 {bes16( aes g aes ees ces} aes8)
-	r \tuplet 3/2 8 {ees16( g bes ees g bes} ees8)
-	\tempo "in tempo" \tuplet 3/2 8 {gis,,,16(\>_\marcecrescmolto fisis gis} fisis8-.)\! \tuplet 3/2 8 {b!16(\> gis b} fisis8-.)\!
+	r8 \tuplet 3/2 8 {bes'16( aes g aes f ces} aes8)\noBeam
+	r8 \tuplet 3/2 8 {des16( ces bes ces f aes} ces8)\noBeam
+	r \tuplet 3/2 8 {bes16( aes g aes ees ces} aes8)\noBeam
+	r \tuplet 3/2 8 {ees16( g bes ees g bes} ees8)\noBeam
+	\tuplet 3/2 8 {gis,,,16(\>_\marcecrescmolto fisis gis} fisis8-.)\!\noBeam \tuplet 3/2 8 {b!16(\> gis b} fisis8-.)\!\noBeam
 % Bars 251 to 255
-	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.) \tuplet 3/2 8 {dis'16(\> b dis} fisis,8-.)\!
-	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.) \tuplet 3/2 8 {gis'16(\> gis, gis'} fisis,8-.)\!
-	\tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.) \tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.)
+	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.)\noBeam \tuplet 3/2 8 {dis'16(\> b dis} fisis,8-.)\!\noBeam
+	\tuplet 3/2 8 {gis16( fisis gis} fisis8-.)\noBeam \tuplet 3/2 8 {gis'16(\> gis, gis'} fisis,8-.)\!\noBeam
+	\tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.)\noBeam \tuplet 3/2 8 {gis'16( gis, gis'} fisis,8-.)\noBeam
 	\tuplet 3/2 8 {gis16([ b e] b\<[ e gis]) e([ gis b] gis[ b e])}
 	\tuplet 3/2 8 {gis,[( b e] b[ e gis] e[ gis b] gis[ b e])\!)}
 % Bars 256 to 260
-	gis2\f\startTrillSpan~
-	\afterGrace gis {fis16[\stopTrillSpan gis]}
+	gis2\f-\tweak extra-offset #'(0 . -0.5) \startTrillSpan~
+	\afterGrace gis {fis16[ gis]\stopTrillSpan}
 	a8 r r4
 	R2*5
 % Bars 261 to 265
 	
 	
 	
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni R2
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-6 R
 % Bars 266 to 270
-		R
-		R \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 	r8  <f, d'>16-.\f d, <e' d'>8-> <e c'>16-. g,-.
-	<d' c'>8-> <d b'>16-. g,,-. <d'' b'>-. d,-. <c' a'>-. a-.
+	\stemDown <d' c'>8-> <d b'>16-. g,,-. \stemNeutral <d'' b'>-.[ d,-.] <c' a'>-. a-.
 	<gis b e>8-. r r4
 % Bars 271 to 275
-	\cueDuring #"cueVoiceSoloVlnmIII" #UP {
-		\ni \MmrPos #-6 R2
-		\MmrPos #-8 R
-		\clef "bass" R \no \clef treble \bar "||" \key a \major
-	}
+	\ni \mmrPos #-6 R2
+	\mmrPos #4 R
+	\clef bass \mmrPos #-4  R \no \clef treble \bar "||" \key a \major
 	a,4(\f b
 	cis) fis8(-. e-.)
 % Bars 276 to 280
@@ -366,41 +348,41 @@ musicSoloViolinMvtIII = \relative c''' {
 % Bars 281 to 285
 	r e\f(
 	<a cis> <b e>
-	<cis a>) <fis d'>8(-. <e cis'>-.)
-	<d b'>( fis) <bis, gis'>-.( fis'-.)
+	<cis a'>) <fis d'>8(-. <e cis'>-.)
+	<d b'>([ fis)] <bis, gis'>-.( fis'-.)
 	<cis e>4 <fis, fis'>4~
 % Bars 286 to 290
 	q <fis' d'>8-.( <e cis'>-.)
-	<<{b'8( fis)} \\ {d r}>> <fis fis'>(-. <e e'>-.)
-	<d d'>( <cis cis'> <b b'>) fis'( \bar "||"
+	<<{b'8[( fis])} \\ {d r}>> <fis fis'>(-. <e e'>-.)
+	<d d'>( <cis cis'> <b b'>) fis'(\noBeam \bar "||"
 	\time 3/4 <cis a'>_\crescmarkup <b gis'>) q4.( <a fis'>8)
 	<gis e'>4 r r8 e( \bar "||"
 % Bars 291 to 295
 	\time 4/4 <cis a'> <b gis'> <cis a'> <b gis'>) q4.( <a fis'>8)
 	<gis e'>4 r r2 \bar "||"
-	\time 2/4 r8 <ais' fis'>16-.\f fis-. <b e>8( <fis cis'>16-.) e-.
+	\timeMvtIII r8 <ais' fis'>16-.\f fis-. <b e>8( <fis cis'>16-.) e-.
 	r8 <dis' b'>16-. b-. <e a>8( <b fis'>16-.) a!-.
 	r8 <fis' fis'>16-. d,!-. <d' d'>8( <b b'>16-.) d,-.
 % Bars 296 to 300
 	<a' a'>8( <a fis'>16-.) <d,>-. <e d'>8( gis16-.) d-. \bar "||"
-	\tempo "Poco meno Allegro" <cis a'>8-. r r4
+	<cis a'>8-. r r4
 	R2
 	r8 e32(_\pdolce a cis e a4)
 	r8 e,32( a cis e a[ cis e cis] a e cis e,)
 % Bars 301 to 305
-	a( cis e cis a[ e cis b]) a( cis e cis a8) 
+	a( cis e cis a[ e cis b]) a( cis e cis a8)\noBeam
 	r8_\piup a'32( d fis a d4)
 	r8 a,32( d fis a d[ fis a fis] d a fis a,)
 	d( fis a fis d[ a fis a,)] d( fis a fis b,8)
-	r e'32( b gis\< b fis'[ b,\> a b] e b\! gis b)
+	r e'32( b gis\< b fis'[ b,\! a\> b] e b\! gis b)
 % Bars 306 to 310
 	r8 gis'32( b, e, b' fis'[ b, a b] e b gis b)
-	r8 e32(\< b gis b fis'[ d a\> d] e b gis\! b)
+	r8 e32(\< b gis b fis'[ d\! a\> d] e b gis\! b)
 	r8 b'32( d, b d a'[ d, cis d] gis d b d)
-	r8 fis32(_\crescmarkup d d, fis' a\<[ fis d, fis'] d' fis, d, fis')
-	cis'(\>[ e, d, e'] b'[ d, d, d'\!] a'[ cis, d, cis'] gis'[ b, d, b']
+	r8 fis32(_\crescmarkup d d, fis' \beamOffset #'(0.5 . 0.5) a\<[ fis d, fis'] \beamOffset #'(0.5 . 0.5) d' fis, d, fis')\!
+	\beamOffset #'(0.5 . 0.5) cis'(\>[ e, d, e'] \beamOffset #'(0.5 . 0.5) b'[ d, d, d'\!] a'[ cis, d, cis'] gis'[ b, d, b']
 % Bars 311 to 315
-	eis[ gis, d gis)] fis'([ a, d, fis'] a\<[ fis d, a''] fis'[ a, d,, gis'])
+	eis[ gis, d gis)] fis'([ a, d, fis'] a\<[ fis d, a''] fis'[ a, d,, gis'])\!
 	e'(\>[ gis, d, fis'] d'[ fis, d, e'] cis'[ e, d, d'] b'[ d, d, d'])\!
 	e'8\p\<( eis) fis4(~
 	fis8 fisis) gis4\!~
@@ -409,13 +391,13 @@ musicSoloViolinMvtIII = \relative c''' {
 	gis( fis d gis,)\!
 	a32(\p[ cis e cis)] a[ a cis a] fis\<[ fis a fis] d[ d fis d]
 	b([ dis fis dis]) b[ b dis b] gis[ gis b gis] e[ e gis e\!]
-	cis8 cis''(\f b a)
+	cis8\noBeam cis''(\f b a)
 	gis'32(\sf\> fis e d cis b a gis fis e d cis b a gis fis)\! 
 % Bars 321 to 325
 	e(\p fis gis a b cis d dis e fis gis a b cis d! e)
 	gis(\pp fis e dis cis b a gis cis b a gis fis e dis cis)
 	gis'( fis e dis cis b a gis cis b a gis fis e dis cis) \bar "||"
-	\tempo "Tempo primo" e8-. r r4
+	e8-. r r4
 	R2*2
 % Bars 326 to 330
 	

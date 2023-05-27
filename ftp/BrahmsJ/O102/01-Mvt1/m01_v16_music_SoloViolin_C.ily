@@ -110,7 +110,7 @@ musicSoloViolinMvtI = \relative c'' {
 		\new Voice {\voiceTwo <e,, c'>^( <c' e>~ <c a'>) <dis b'>-.\noBeam e4( gis8) a-.\noBeam } 
 	>> \oneVoice
 	<d, d'>2-> <dis dis'>->
-	<< { s8\< s\! s\> s\! s\< s\! s\> s\! } \\ { <e e'>4.^( \acciaccatura g'8 f8) <a,, e''>4.^( \acciaccatura a''8 f) } >> \oneVoice
+	<< { s8\< s\! s\> s\! s\< s\! s\> s\! } \\ { <e e'>4.^( \grace g'8 f8) <a,, e''>4.^( \grace a''8 f) } >> \oneVoice
 % Bars 131 to 135
 	e2.\!( gis,,,4)
 	\tuplet 3/2 4 {a8\f\< c f\! e\> c gis\! a\< c g'!\! f\> c gis!\! 

@@ -2944,136 +2944,135 @@ cueVoicePaukenMvtIII = \relative {
 	b cis4 e8-.
 }
 %###############################################################################
-%#                           S O L O - V I O L I N                             #
+%#              C U E   V O I C E   F O R   S O L O   V I O L I N              #
 %###############################################################################
-cueVoiceSoloVlnMvtI = \relative c {
+cueVoiceSoloViolinMvtI = \relative c {
+	% bar 1 - 4
 	e'''4.-\tweak X-offset #-6 ^\markup {Viol.I} d8 b4 r
 	c4. b8 e,4 r
 	\tuplet 3/2 2 {fis-. gis-. a-. gis-. a-. b-.}
 	\tuplet 3/2 2 {a-. b-. c-. d-. e-. f-.}
-	R1*21
-	% bar 26
-	r2 r4^\markup {Klar.I} cis,4(_\pdolce
+	s1*21
+	% bar 26 - 30
+	\voiceOne s2 s4^\markup {Klar.I} cis,4(_\pdolce
 	b) cis( gis) a4(
-	b2 e,4) cis''(-\tweak X-offset #-3 ^\markup {Fl.I}
-	b) cis( gis) a_(
-	a'2 e4) r
-	R1*81
-	% bar 112
-	a,,4.\f-\tweak X-offset #2 ^\markup {Solo-Vlc.} g8 e2~
+	b2 e,4) \oneVoice cis''(-\tweak X-offset #-3 ^\markup {Fl.I}
+	b) cis( gis) a(
+	a'2 e4) s
+	s1*81
+	% bar 112 - 115
+	\voiceOne a,,4.\f-\tweak X-offset #2 ^\markup {Solo-Vlc.} g8 e2~
 	e4. c8( e4. d8)
 	c( e d c) e( d b c)
 	a( a' e c) e( d b c)
-	R1*31
+	s1*31
 	% bar 147
-	\tuplet 3/2 4 {c,,8(^\markup {Solo-Vlc.} g' bes c g' bes) c( bes g c, g' bes)}
-	R1*13
-	% bar 161
-	e2.^\markup {Solo-Vlc.} e4(
+	\tupletDown \tuplet 3/2 4 {c,,8(^\markup {Solo-Vlc.} g' bes c g' bes) c( bes g c, g' bes)} \tupletNeutral
+	s1*13
+	% bar 161 - 166
+	\voiceTwo e2.^\markup {Solo-Vlc.} e4(
 	\afterGrace f2.)( {g16[ f])} e8( f)
 	g4 r8 g( gis4) r8 gis(
 	a4 g! f e
 	d) r r e(
-	d) r r2
-	R1*49
-	% bar 216
-	r2 r4 g->^\markup {Bass.}
+	d) r s2
+	s1*49
+	% bar 216 - 217
+	\oneVoice s2 s4 g->^\markup {Bass.}
 	e-> cis-> ais-> g->
-	R1*52
-	% bar 270
-	c,8\fp\(-\tweak X-offset #1 ^\markup {Solo-Vlc.} c4 c8( ees) ees4 ees8(
+	s1*52
+	% bar 270 - 273
+	\voiceOne c,8\fp\(-\tweak X-offset #1 ^\markup {Solo-Vlc.} c4 c8( ees) ees4 ees8(
 	aes) aes4 aes8( b!) b4 b8(
 	e!) e4 e8( gis) gis4 gis8(
 	b!) b4 b8( e) e4 e8\)
-	R1*23
-	% bar 297
-	\tuplet 3/2 2 {g'2->-\tweak X-offset #-5 ^\markup {Viol.I} f4-. e( d) e-.}
-	\tuplet 3/2 2 {c( a) f-. d( b) g-.}
-	\tuplet 3/2 2 {f( e) r e( d) r}
-	R1*93
-	% bar 393
-	e8 e''( d b) c( b e,) a(
-	g c,) f( e a,) d( c f,)
+	s1*23
+	% bar 297 - 299
+	\oneVoice \tuplet 3/2 2 {g'2->-\tweak X-offset #-5 ^\markup {Viol.I} f4-. e( d) e-.
+	c( a) f-. d( b) g-.
+	\voiceTwo f( e) r e( d) r}
+	s1*93
+	% bar 393 - 395
+	\oneVoice e8-\offset X-offset -2 ^\markup {Viol.I} e''([ d b]) c([ b e,]) a(
+	g c,) \voiceTwo f( e a,) d( c f,)
 	b( f) a( e) a( d,) gis( d)
 }
-cueVoiceSoloVlnMvtII = \relative c {
-	a''4(^\markup {Hr.I} d2)\fermata
-	e'4(^\markup {Fl.I} a2)\fermata
-	R2.*31
-	% bar 34
-	r4^\markup {Ob.I} r a,(~
+cueVoiceSoloViolinMvtII = \relative c {
+	% bar 1 - 2
+	\voiceOne a''4(-\offset X-offset -2 ^\markup {Hr.I} d2)\fermata
+	\oneVoice e'4(^\markup {Fl.I} a2)\fermata
+	s2.*31
+	% bar 34 - 38
+	\voiceOne r4^\markup {Ob.I} r a,(~
 	a g f
 	e d) g(
 	f e d
-	b c) r
-	R2.*69
-	% bar 108
+	b c) s
+	s2.*69
+	% bar 108 - 110
 	g,4_(~-\tweak X-offset #-6 ^\markup {Solo-Vlc.} \tuplet 3/2 4 {g8 fis g)} ees'8 bes
 	g ees bes4 g
-	a8( d e! a) r4
+	a8( d e! a) s4
 }
-cueVoiceSoloVlnMvtIII = \relative c {
-	R2*6
-	% bar 7
+cueVoiceSoloViolinMvtIII = \relative c {
+	s2*6
+	% bar 7 - 10
 	c'8---\tweak X-offset #-7 ^\markup {Solo-Vlc.} b16-. c-. b8-- c16-. b-.
 	c8-- b16-. c-. b( a') g-. fis-.
 	e8-- d16-. e-. d8-- e16-. d-.
 	e8-- d16-. e-. d( f) d-. b-.
-	R2*35
-	% bar 46
-	c''16-\tweak X-offset #-4 ^\markup {Viol.I} c e c a a c a
+	s2*35
+	% bar 46 - 49
+	c''16-\tweak X-offset #-5 ^\markup {Viol.I} c e c a a c a
 	f f a f d d f d 
 	e8-. a-. a-. gis-.
-	a-. r r4
-	R2*25
-	% bar 75
-	<f,, d'>8(^\markup {Solo-Vlc.} a) <f' a>-.( <e g>-.)
+	a-. r s4
+	s2*25
+	% bar 75 - 77
+	<< {\InCueContext d,,8[(-\offset X-offset -6 ^\markup {Solo-Vlc.} a)]} \\ { \InCueContext f4 } >>  <f' a>8-.( <e g>-.)
 	<a, f'>( <g e'> <f d'>) <d a'>(
-	<e c'> <d b'>) r4
-	R2*7
-	R2.*2
-	R1*2
-	R2*18
-	% bar 107
+	\voiceOne <e c'> <d b'>) s4
+	s2*7 s2.*2 s1*2 s2*18
+	% bar 107 - 108
 	c''8->^\markup {Ob.I} b16-. c-. b8-> c16-. b-.
 	c8-> b16-. c-. b( a') g-. fis-.
-	R2*29
-	% bar 138
-	\tuplet 3/2 4 {a4_(-\tweak X-offset #-4 ^\markup {Viol.I} g8) f_( g a)}
+	s2*29
+	% bar 138 - 139
+	\oneVoice \tuplet 3/2 4 {a4(-\tweak X-offset #-4 ^\markup {Viol.I} g8) f( g a)}
 	a4 e
-	R2*2
-	% bar 142
-	r8.-\tweak X-offset #-1 ^\markup {Viol.I} g16-. g8-.[ g16\rest g-.]
+	s2*2
+	% bar 142 - 145
+	\voiceOne r8.-\tweak X-offset #-1 ^\markup {Viol.I} g16-. g8-.[ g16\rest g-.]
 	\tuplet 3/2 4 {g4( f8) d( e f)}
 	\tuplet 3/2 4 {f4( e8) c( d e)}
 	b4 a
-	R2*18
-	% bar 164
-	r4 r8 a,,(-\tweak X-offset #-2 ^\markup {Solo-Vlc.}
+	s2*18
+	% bar 164 - 166
+	s4 s8 a,,(-\tweak X-offset #-2 ^\markup {Solo-Vlc.}
 	a') a4 gis8(
-	a) a4 r8
-	R2*39
-	% bar 206
-	d''8(\sf-\tweak X-offset #-3 ^\markup {Ob.I} c bes a)
+	a) a4 s8
+	s2*39
+	% bar 206 - 208
+	\oneVoice d''8(\sf-\tweak X-offset #-4 ^\markup {Ob.I} c bes a)
 	bes( a g f)
 	e( f e f)
-	R2*15
-	% bar 224
+	s2*15
+	% bar 224 - 227
 	c,8--^\markup {Solo-Vlc.} b16-. c-. b8-- c16-. b-.
 	c8-- b16-. c-. b( a') g-. fis-.
 	e8->^\markup {Fag.I} d16-. e-. d8-> e16-. d-.
 	e8-> d16-. e-. d( f) d-. b-.
-	R2*36
-	% bar 264
+	s2*36
+	% bar 264 - 267
 	c''16^\markup {Viol.I} c e c a! a c a
 	f f a f d d f d
 	e8-. a-. a-.\sf g-.
 	g-.\sf f-. f-.\sf e-.
-	R2*3
-	% bar 271
+	s2*3
+	% bar 271 - 273
 	b8(^\markup {Viol.I} gis) gis( e)
 	e( d4 b8)
-	r4 e,-\tweak X-offset #-2 ^\markup {Solo-Vlc.}
+	\voiceOne r4 e,-\tweak X-offset #-2 ^\markup {Solo-Vlc.}
 }
 %###############################################################################
 %#                             S O L O - C E L L O                             #

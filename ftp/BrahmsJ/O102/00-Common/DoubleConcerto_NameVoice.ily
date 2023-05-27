@@ -314,7 +314,7 @@ nameTrumpetIIMvtIII = {
 	\set Staff.midiInstrument = #"trumpet"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#                   V O I C E   N A M E   :   P A U K E N                     #
 %###############################################################################
 namePaukenMvtI = {
 	\set Staff.instrumentName = \markup {
@@ -335,16 +335,21 @@ namePaukenMvtIII = {
 	\set Staff.midiInstrument = #"timpani"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#              V O I C E   N A M E   :   S O L O   V I O L I N                #
 %###############################################################################
-nameVoiceXVI = {
+nameSoloViolinMvtI = {
 	\set Staff.instrumentName = #"Solo Violin"
-	\set Staff.shortInstrumentName = \markup {
-		\center-column {
-			\lower #1 \line { "Solo-" }
-			\line { "Vln" }
-		}
-	}
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"violin"
+}
+nameSoloViolinMvtII = {
+	\set Staff.instrumentName = #"Solo Violin"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"violin"
+}
+nameSoloViolinMvtIII = {
+	\set Staff.instrumentName = #"Solo Violin"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"violin"
 }
 %###############################################################################

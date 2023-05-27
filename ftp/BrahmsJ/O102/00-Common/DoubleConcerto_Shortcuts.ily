@@ -333,6 +333,17 @@ tempoXoffset = #(define-music-function
 	#}
 )
 
+shiftNote = \once \override NoteColumn.force-hshift = #1
+
+tupletExtraOffset = #(define-music-function
+	(offset)
+	(pair?)
+	#{
+		\once \override TupletNumber.extra-offset = #offset 
+	#}
+)
+
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -483,14 +494,6 @@ tempoXoffset = #(define-music-function
 %	#}
 %)
 
-
-%tupletExtraOffset = #(define-music-function
-%	(offset)
-%	(pair?)
-%	#{
-%		\once \override TupletNumber.extra-offset = #offset 
-%	#}
-%)
 
 %tupletAvoidSlur = \once \override TupletNumber.avoid-slur = #'ignore
 
