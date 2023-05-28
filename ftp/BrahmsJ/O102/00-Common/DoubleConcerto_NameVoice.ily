@@ -353,16 +353,21 @@ nameSoloViolinMvtIII = {
 	\set Staff.midiInstrument = #"violin"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#               V O I C E   N A M E   :   S O L O   C E L L O                 #
 %###############################################################################
-nameVoiceXVII = {
+nameSoloCelloMvtI = {
 	\set Staff.instrumentName = #"Solo Vlc"
-	\set Staff.shortInstrumentName = \markup {
-		\center-column {
-			\lower #1 \line { "Solo-" }
-			\line { "Vlc" }
-		}
-	}
+	\set Staff.shortInstrumentName = ""
+	\set Staff.midiInstrument = #"cello"
+}
+nameSoloCelloMvtII = {
+	\set Staff.instrumentName = #"Solo Vlc"
+	\set Staff.shortInstrumentName = ""
+	\set Staff.midiInstrument = #"cello"
+}
+nameSoloCelloMvtIII = {
+	\set Staff.instrumentName = #"Solo Vlc"
+	\set Staff.shortInstrumentName = ""
 	\set Staff.midiInstrument = #"cello"
 }
 %###############################################################################

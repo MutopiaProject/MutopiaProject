@@ -151,7 +151,7 @@ musicSoloCelloMvtIII = \relative c' {
 	<fis, a>4 g8.\noBeam <g, g''>16
 	q2
 	<<{g''8( \tuplet 3/2 8 {f!16 g f ees f ees d ees d)}} \\ {g,,2}>>
-	<<{\tuplet 6/4 4 {cis'16(^\> d c d\! e! d) cis( d cis d e d)}} \\ {g,,4 g}>>
+	<<{\tuplet 6/4 4 {cis'16(^\> d cis d\! e! d) cis( d cis d e d)}} \\ {g,,4 g}>>
 	\tuplet 3/2 8 {<g cis'>16( d'' cis)} r8 r8. \clef tenor <d, d''>16
 % Bars 131 to 135
 	q2

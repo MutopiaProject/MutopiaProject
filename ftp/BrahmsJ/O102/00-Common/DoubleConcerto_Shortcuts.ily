@@ -24,6 +24,7 @@ marc = \markup {\italic marc.}
 marcecrescmolto = \markup {\italic {marc. e cresc. molto}}
 moltocrescmark = \markup {\italic {molto cresc.}}
 moltoleggieroedolce = \markup { \italic {molto leggiero e dolce}}
+moltoleggiero_edolce = \markup { \italic {\column { \lower #1.5 "molto leggiero" "e dolce"}}}
 pizz = \markup {\italic pizz.}
 pocorit = \markup {\italic {poco rit.}}
 sempre = \markup {\italic sempre}
