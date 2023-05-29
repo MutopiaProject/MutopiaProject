@@ -59,7 +59,7 @@ musicViolinIMvtI = \relative c''' {
 	<c aes'> <g' e'>\!
 	c8-.\f\<\noBeam f'( aes4.\> g8)\! f-. aes,
 % Bars 76 to 80
-	d!-. f,-. aes d,-. f-. aes,-. d-. f,-.
+	d!-. f,-. aes-. d,-. f-. aes,-. d-. f,-.
 	<e c'>-.\sf r r c( des)-.\sf des4 des8(
 	g)-.\sf g4 g8( d'-.)\sf d4 d8( \mark \default
 	g8)\f g4 g g g8~

@@ -371,11 +371,21 @@ nameSoloCelloMvtIII = {
 	\set Staff.midiInstrument = #"cello"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#                 V O I C E   N A M E   :   V I O L I N   I                   #
 %###############################################################################
-nameVoiceXVIII = {
+nameViolinIMvtI = {
 	\set Staff.instrumentName = #"Violin I"
-	\set Staff.shortInstrumentName = #"Vln I"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"violin"
+}
+nameViolinIMvtII = {
+	\set Staff.instrumentName = #"Violin I"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"violin"
+}
+nameViolinIMvtIII = {
+	\set Staff.instrumentName = #"Violin I"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"violin"
 }
 %###############################################################################

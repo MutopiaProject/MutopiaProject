@@ -9,27 +9,25 @@ musicViolinIMvtII = \relative c' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceVlnImII" #UP { \ni 
-		\MmrPos #4 R2.\fermata
-		\MmrPos #-2 R2._\fermata \no
-	}
+	\ni \mmrPos #4 R2.\fermata
+	\mmrPos #-2 R2._\fermata \no
 	a8(_\pocofmadolce^\solo d e a fis d)
-	b( d) d( e) fis4
+	b([ d)] d( e) fis4
 	a,8( d e fis d b)
 % Bars 6 to 10
-	fis'( e) e( d) cis4
+	fis'([ e)] e( d) cis4
 	R2.
-	b8(\p d) d( e)  fis4
+	b8([\p d)] d( e)  fis4
 	R2.
-	b,8( d) d( e) e4
+	b,8([ d)] d( e) e4
 % Bars 11 to 15
 	c'8(_\pocofmadolce a fis dis e g)
-	a( fis) g( e) fis( b)
+	a[( fis]) g([ e)] fis( b)
 	c( a fis dis e g)
-	g(\< e) e( g,)\> g( e')
-	fis(\p d) cis(\< a) a( d)
+	g[(\< e)] e([\! g,)]\> g( e')\!
+	fis([\p d]) cis([\< a)] a( d)
 % Bars 16 to 20
-	d( b) d( e) e( fis)
+	d([ b)] d([ e)] e( fis)\!
 	fis4.(\> d8) cis( a)\!
 	fis'4._\pdim( d8) cis( a)
 	d( a d) r r4
@@ -38,28 +36,27 @@ musicViolinIMvtII = \relative c' {
 	fis4_\moltop( g fis)
 	R2.
 	e4(\< g4.\> e8)\!
-	fis8( d) cis( a) a(\< d)
+	fis8[( d)] cis([ a)] a(\< d)
 	a4 a8( d) b4
 % Bars 26 to 30
-	b8( e) d4 fis8( a)
-	g(\mf d) d( e) e( fis)
-	fis4.(\dimD\> d8) cis( a)
+	b8( e) d4 fis8( a)\!
+	g([\mf d]) d([ e]) e( fis)
+	fis4.(\dimD\> d8) cis( a)\!
 	fis'4.(\pp d8) cis( a)
 	d( a d) r r4_\tutti \bar "||" \mark \default \key f \major
 % Bars 31 to 35
 	a4^\pizz r r
 	R2.*4
 % Bars 36 to 40
-	\cueDuring #"cueVoiceVlnImII" #UP {
-		\ni R2.
-		R \no
-		r4 } e'8\p^\arco e4 e8~^\solo
+	\ni \mmrPos #-4 R2.
+	\mmrPos #-4 R \no
+	r4 e'8\p^\arco e4 e8~^\solo
 	e e4 e e8~
 	e e4 e d8~
 % Bars 41 to 45
 	d d4 d d8~
 	d d4 d e8~
-	e\< f4 e f8~
+	e\< f4 e f8~\!
 	f\> e4 c c8~\!
 	c c4 b c8~
 % Bars 46 to 50
@@ -101,29 +98,29 @@ musicViolinIMvtII = \relative c' {
 	
 	
 	
-	r4 \times 2/3 {cis8_\mf^\pizz e a} fis4
-	d \times 2/3 {d8 g b} a4
+	r4 \tuplet 3/2 {cis8_\mf^\pizz e a} fis4
+	d \tuplet 3/2 {d8 g b} a4
 % Bars 81 to 85
-	r \times 2/3 {a,8 cis fis} d4
-	d \times 2/3 {b8 d gis} a4
+	r \tuplet 3/2 {a,8 cis fis} d4
+	d \tuplet 3/2 {b8 d gis} a4
 	R2.
 	r4 r fis\pp
-	g \times 2/3 {d8 g b} d4
+	g \tuplet 3/2 {d8 g b} d4
 % Bars 86 to 90
 	R2.
 	r4 r fis,
-	d \times 2/3 {b8 d gis} a4
+	d \tuplet 3/2 {b8 d gis} a4
 	R2.
-	r4 \times 2/3 {b,8\mf e g} b4
+	r4 \tuplet 3/2 {b,8\mf e g!} b4
 % Bars 91 to 95
 	R2.
-	c,4 \times 2/3 {e8 g bes} e a,
-	fis(^\arco d) cis( a\<) a( d)
+	c,4 \tuplet 3/2 {e8 g bes} e a,
+	fis([^\arco d]) cis([ a\<]) a( d)
 	a4 a8( d) b4
-	b8( e) d4 fis8( a)
+	b8( e) d4 fis8( a)\!
 % Bars 96 to 100
-	g(\mf d) d( e) e( fis)
-	fis4.\>( e8) cis( a)
+	g([\mf d)] d([ e)] e( fis)
+	fis4.\>( e8) cis( a)\!
 	fis'4.(\pp d8) cis( a)
 	d( a d) r a'4(\pp \mark \default
 	d2.)~
@@ -140,7 +137,7 @@ musicViolinIMvtII = \relative c' {
 	bes g) r
 	r r fis'!(\p\<
 % Bars 111 to 115
-	e) a( d)
+	e) a( d)\!
 	d\f^\pizz cis r
 	R2.
 	e,4\p d r
