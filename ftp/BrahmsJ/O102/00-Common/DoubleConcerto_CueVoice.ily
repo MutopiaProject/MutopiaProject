@@ -3210,7 +3210,7 @@ cueVoiceSoloCelloMvtIII = \relative c {
 	e( d4 b8)
 }
 %###############################################################################
-%#                              V I O L I N   I                                #
+%#                 C U E   V O I C E   F O R   V I O L I N   I                 #
 %###############################################################################
 cueVoiceViolinIMvtI = \relative c {
 	s1*23
@@ -3314,88 +3314,89 @@ cueVoiceViolinIMvtIII = \relative c {
 	e d cis b)
 }
 %###############################################################################
-%#                            V I O L I N   I I                                #
+%#                C U E   V O I C E   F O R   V I O L I N   I I                #
 %###############################################################################
-cueVoiceVlnIIMvtI = \relative c {
-	R1*23
-	% bar 24
+cueVoiceViolinIIMvtI = \relative c {
+	s1*23
+	% bar 24 - 30
 	s2^\markup {Solo-Vlc.} s4 d,(
 	f1
-	e2) r4 cis'''(_\markup {Klar.I}
+	e2) r4 \voiceTwo cis'''(_\markup {Klar.I}
 	b) cis( gis) a(\<
-	b2\> e,4\!) cis''(^\markup {Fl.I}
-	b) cis( gis) a_(
-	a'2 e4) r
-	R1*21
-	% bar 52
-	r2^\markup {Solo-Viol.} e,,8( fis16 gis a b c d
+	b2\> e,4\!) \oneVoice cis''(^\markup {Fl.I}
+	b) cis( gis) a(
+	a'2 e4) \once \voiceOne r
+	s1*21
+	% bar 52 - 56
+	r2^\markup {Solo-Viol.} \stemDown e,,8( fis16 gis a b c d \stemNeutral
 	e) a,( b c d e fis gis a) e( fis gis a b c d
 	e) a,( b c d e fis gis a) e fis gis a e f g
 	a4-. <a,, c e'>-. <d, f' f'>-. <d a'' fis'>-.
 	<g, b' g' g'>-. r <e' b' gis' gis'>-. r
-	R1*103
-	% bar 160
-	r4-\tweak X-offset #-1.5 _\markup {Br.} a,2.-\tweak X-offset -1.5 \f\>
+	s1*103
+	% bar 160 - 167
+	r4-\tweak X-offset #-1.5 _\markup {Br.} << a,2. {\hairpinShorten #'(-0.3 . -1.5) s4-\tweak extra-offset #'(-1 . 0.7) \f -\tweak extra-offset #'(-1 . 0.7) \> s s\! }>>
 	gis2(-\tweak X-offset #0 _\pdimD g)~
 	g( b)
 	bes1
-	a\pp\>
-	a~
+	a\pp
+	a~\>
 	a2\! e'\rest
-	R1*56
+	s1*56
 	% bar 223
-	\tuplet 3/2 4 {g4-\tweak X-offset #-3 ^\markup {Solo-Viol.} b d} g8 b d g
-	R1*16
-	% bar 240
-	gis,16(^\markup {Solo-Viol.} eis b cis dis b gis ais b gis eis fis gis eis b cis)
+	\voiceOne \tuplet 3/2 4 {g4-\tweak X-offset #-3 ^\markup {Solo-Viol.} b d} g8 b d g
+	s1*16
+	% bar 240 - 241
+	gis,16(_\markup {Solo-Viol.} eis b cis dis b gis ais b gis eis fis gis eis b cis)
 	dis(_\markup {Solo-Vlc.} b gis ais b gis eis fis gis eis cis bis b gis eis cis)
 }
-cueVoiceVlnIIMvtII = \relative c {
+cueVoiceViolinIIMvtII = \relative c {
+	% bar 1 - 2
 	a'4(-\tweak X-offset #-3 _\markup {Hr.I} d2)_\fermata
 	e'4(^\markup {Klar.I} a2)^\fermata
-	R2.*33
-	% bar 36
-	s2 g4(^\markup {Ob.}
+	s2.*33
+	% bar 36 - 38
+	s2 \voiceOne  g4(-\offset X-offset -2 ^\markup {Ob.}
 	f e d
-	b) r2
-	R2.*68
-	% bar 107
-	s2 s8 fis,(^\markup {Solo-Vlc.}
-	g4)(~ \tuplet 3/2 4 {g8 fis g)} ees' bes
+	b) s2
+	s2.*68
+	% bar 107 - 110
+	s2 s8 fis,(-\offset X-offset -3 ^\markup {Solo-Vlc.}
+	g4)(~ \once \tupletDown \tuplet 3/2 4 {g8 fis g)} ees' bes
 	g ees bes4 g
-	a8( d e! a) r4
+	a8( d e! a)\laissezVibrer s4
 }
-cueVoiceVlnIIMvtIII = \relative c {
+cueVoiceViolinIIMvtIII = \relative c {
+	% bar 1 - 2
 	a'8-\tweak X-offset #-1 ^\p(-\tweak X-offset #-3 ^\markup {Solo-Vlc.} e'16-.) e-. dis8( d16-.) d-.
 	c8( b16-.) b-. a8( e16-.) e-.
-	R2*6
-	% bar 9
-	b''4(^\markup {Klar.I} d
+	s2*6
+	% bar 9 - 11
+	\voiceOne b''4(^\markup {Klar.I} d
 	b d8. f16
-	e8) r r4
-	R2*17
-	% bar 29
-	r8 c,-\tweak X-offset #-5 _\markup {Viol.I} a' a,
+	e8) s s4
+	s2*17
+	% bar 29 - 30
+	\voiceTwo r8 c,-\tweak X-offset #-5 _\markup {Viol.I} a' a,
 	r c c' c,
-	R2*30
-	% bar 61
-	r4 <bes' aes'>4->~^\markup {Solo-Viol.}
+	s2*30
+	% bar 61 - 64
+	\voiceOne s4 <bes' aes'>4->~^\markup {Solo-Viol.}
 	q8 <bes g'>16-.[ g,-.] <bes' aes'>4->~
 	q8 <bes g'>16-. g,-. <bes' g'>8( <a! fis'>16-.) c,
 	<a' fis'>16-. ees( <fis ees'>) c( <ees a>)[ a,]( <c a'>8)\noBeam
-	R2*19
-	% bar 84
+	s2*19
+	% bar 84 - 87
 	s4 s8 a''(_\markup {Solo-Viol.} 
 	<e c'> <d b'>) q4.( <c a'>8)
 	<b g'>2 r8 g(
-	<e c'> <d b'> <e c'> <d b'>) q4. r8
-	R1
-	R2*27
-	% bar 116
+	<e c'> <d b'> <e c'> <d b'>) q4. s8
+	s1 s2*27
+	% bar 116 - 117
 	d4\rest_\markup {Hr.III} a8-. d\rest
 	d4\rest a8-. d\rest
-	R2*54
-	% bar 172
+	s2*54
+	% bar 172 - 180
 	s4 s16 a(^\markup {Solo-Viol.} a' f
 	e d cis d f a d b
 	d a f e d[ a]) <c! a'>8(
@@ -3404,35 +3405,34 @@ cueVoiceVlnIIMvtIII = \relative c {
 	<e c'> a e c a[ c]) <d bes'>( f
 	<c a'> f c a) f[( <f' a>]) <e c'>([ <d bes'>]
 	<cis a'>8)\noBeam <cis e>8. <bes g'>16[( <a f'> <g e'>)]
-	<e cis'>( <f d'>) <e gis>( <f a>) r4
-	R2*37
-	% bar 218
-	a,8(^\markup {Solo-Vlc.} e'16-.) e-. dis8( d16-.) d-.
-	c8( b16-.) b-. a8 r
-	R2*26
-	% bar 246
-	aes''8(-\tweak X-offset #-3 ^\markup {Ob.} g16 aes) aes,4
+	<e cis'>( <f d'>) <e gis>( <f a>) s4
+	s2*37
+	% bar 218 - 219
+	\oneVoice a,8(^\markup {Solo-Vlc.} e'16-.) e-. dis8( d16-.) d-.
+	c8( b16-.) b-. a8\laissezVibrer s
+	s2*26
+	% bar 246 - 247
+	\voiceOne aes''8(-\tweak X-offset #-3 ^\markup {Ob.} g16 aes) aes,4
 	b!8(^\markup {Klar.} ais16 b) b'4
-	R2*6
-	% bar 254
-	\tuplet 3/2 8 {gis,,16[(^\markup {Solo-Viol.} b e] b[ e gis]) e([ gis b] gis[ b e])}
-	\tuplet 3/2 8 {gis,[( b e] b[ e gis] e[ gis b] gis[ b e])}
-	R2*32
-	% bar 288
+	s2*6
+	% bar 254 - 255
+	\tupletDown \tuplet 3/2 8 {gis,,16[(^\markup {Solo-Viol.} b e] b[ e gis]) e([ gis b] gis[ b e])}
+	\tuplet 3/2 8 {gis,[( b e] b[ e gis] e[ gis b] gis[ b e])} \tupletNeutral
+	s2*32
+	% bar 288 - 291
 	s4 s8 fis,(-\tweak X-offset #-7 ^\markup {Solo-Viol.}
 	<cis a'> <b gis'>) q4.( <a fis'>8)
-	<gis e'>4 r r8 e(
-	<cis a'> <b gis'> <cis a'> <b gis'>) q4. r8
-	R1
-	R2*14
+	<gis e'>4 r r8 e_(
+	<cis a'> <b gis'> <cis a'> <b gis'>) q4.\laissezVibrer s8
+	s1 s2*14
 	% bar 307
-	s4 s8 b''(-\tweak X-offset #-4 ^\markup {Ob.I}
+	s4 s8 \oneVoice b''(-\tweak X-offset #-4 ^\markup {Ob.I}
 	a gis) r e( 
 	gis fis) r d'(-\tweak X-offset #-3 ^\markup {Fl.I}
 	cis b a gis
 	eis fis) r fis'(
 	e d cis b)
-	a,4.(^\markup {Viol.I} ais8)
+	\voiceTwo a,4.(^\markup {Viol.I} ais8)
 	b4.( bis8)
 }
 %###############################################################################
