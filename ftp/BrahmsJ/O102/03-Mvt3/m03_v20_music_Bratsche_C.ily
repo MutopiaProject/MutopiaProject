@@ -43,7 +43,7 @@ musicBratscheMvtIII = \relative c {
 	f, r f a 
 	bes d f a,
 	r a\pp f' f,
-	r a f' a,
+	r a a' a,
 % Bars 31 to 35
 	r a d f
 	r e a e

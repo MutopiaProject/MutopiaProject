@@ -67,7 +67,7 @@ musicBratscheMvtI = \relative c'' {
 % Bars 76 to 80
 	<f aes>4-. r <aes, d!> r
 	<g e'>8-.\sf c4 c8( des8-.)\sf des4 des8~
-	des-.\sf des4 des8( b!)\sf-. b4 b8 \mark \default
+	des-.\sf des4 des8( b!)\sf b4 b8 \mark \default
 	g'16(\f e g e bes e g e) f( d f d bes d f d)
 	f( des bes des e[ c]) fis fis g8:16 a: bes: a:
 % Bars 81 to 85
@@ -83,7 +83,7 @@ musicBratscheMvtI = \relative c'' {
 	c16( a' f c) a( f' c a) f( c' a f) \clef alto c'4(_\fbenmarc \mark \default
 	b!16 g d b!) c'4( bes16 g des bes) a'4( 
 % Bars 91 to 95
-	<g b!>8) <g b>4 q8( <g b>4) c4(
+	<g b!>8) <g b>4 q8( <g bes>4) c4(
 	b!16 g d b!) c'4( bes16 g des bes) a'4(
 	b! c8 d) c4 <f, a>(
 	<a c>-!) <g bes>2\sf e,16( f g a
@@ -287,7 +287,7 @@ musicBratscheMvtI = \relative c'' {
 % Bars 251 to 255
 	bes4-!) g-! r2
 	f'8 f4 f f f8(
-	e4-!) g-! r cis,-!
+	d4-!) f-! r cis-!
 	c!-! ees-! r d-!
 	R1
 % Bars 256 to 260
@@ -304,7 +304,7 @@ musicBratscheMvtI = \relative c'' {
 	\markEO #'(0 . 1.5) f-.-\tweak X-offset #-1 _\benmarc <c aes'>-. f-. <des bes'>->~
 % Bars 266 to 270
 	q q-. <c ees>-. <c aes'>->~
-	q q-. des <bes g'>->~
+	q q-. des-. <bes g'>->~
 	q q-. <aes c>-. f'->~
 	f bes,-. bes-. ees,-. \mark #11
 	ees1\fpp~
@@ -451,7 +451,7 @@ musicBratscheMvtI = \relative c'' {
 	<c a'>2: <c e>: \bar "||" \key a \minor \mark \default
 	<a dis>2:16\ff <g e'>4 r8 <fis' a>-.
 	<e g>4-. r8 <fis, dis'>-. <e e'>4-. r4
-	<d'! gis>2:16 <cis a'>4 r8 gis'-.
+	<d'! gis>2:16 <c a'>4 r8 gis'-.
 % Bars 391 to 395
 	a8( f e) d-. c( a g) f-.
 	e'(-\offset X-offset -1 _\sempref d b) c(\noBeam b[ e,)] e'( d

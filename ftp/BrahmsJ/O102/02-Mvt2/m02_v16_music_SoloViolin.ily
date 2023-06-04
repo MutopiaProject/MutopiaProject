@@ -93,7 +93,7 @@ musicSoloViolinMvtII = \relative c' {
 		{
 			s2.
 			s
-			s4 \tuplet 3/2 {a'''8 \InCueContext \shiftNote fis(-. <a,, g''>-.)}
+			s4 \tuplet 3/2 {a'''8 \InCueContext \shiftNote #1 fis(-. <a,, g''>-.)}
 		} \\ {
 			\set doubleSlurs = ##t <e' e'>4\f( <a a'>2)(
 			q2.)(

@@ -12,6 +12,7 @@ crescmolto = \markup {\italic {cresc. molto}}
 crescpocoapoco = \markup {\italic {cresc. poco a poco}}
 dimmarkup = \markup {\italic dim.}
 div = \markup {div.}
+divarco = \markup {div.arco}
 dolce = \markup {\italic {dolce}}
 espress = \markup {\italic {espress.}}
 espr = \markup {\italic {espr.}}
@@ -60,6 +61,7 @@ pocofmadolce = \markup { \italic poco \dynamic f \italic {ma dolce}}
 ppdim = \markup { \dynamic pp \italic dim.}
 psempre = \markup {\dynamic p \italic sempre }
 fbenmarc = \markup { \dynamic f \italic {ben marc.}}
+fben_marc = \markup { \center-column { \lower #1.2 \line { \dynamic f \italic ben } \italic "marc."}}
 fespr = \markup { \dynamic f \italic espr.}
 ffmarc = \markup { \dynamic ff \italic {marc.}}
 ffsempre = \markup {\dynamic ff \italic sempre}
@@ -334,7 +336,13 @@ tempoXoffset = #(define-music-function
 	#}
 )
 
-shiftNote = \once \override NoteColumn.force-hshift = #1
+shiftNote = #(define-music-function
+	(shift)
+	(number?)
+	#{
+		\once \override NoteColumn.force-hshift = #shift
+	#}
+)
 
 tupletExtraOffset = #(define-music-function
 	(offset)

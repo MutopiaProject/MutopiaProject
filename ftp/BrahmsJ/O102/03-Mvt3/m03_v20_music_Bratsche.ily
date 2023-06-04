@@ -21,8 +21,8 @@ musicBratscheMvtIII = \relative c {
 	<e gis>-. <gis b>-. r <a b>-.
 	r <gis b>-. <a b>-. <a f'>-.
 % Bars 11 to 15
-	<c e>-. e,-. a-. f'-.
-	e-. d-. c-. <a c>-.
+	<c e>-.\noBeam e,-. a-. f'-.
+	e-. d-. c-. <a c>-.\noBeam
 	<c, a'>4 r8 <a' c>-.
 	<c, a'>4 r8 <c' e>-.
 	<e, c'>4 r8 <c' e>-.
@@ -42,19 +42,19 @@ musicBratscheMvtIII = \relative c {
 	bes d f c
 	f, r f a 
 	bes d f a,
-	\tempo "poco rit." r a\pp f' f,
-	r a f' a,
+	r a\pp f' f,
+	r a a' a,
 % Bars 31 to 35
 	r a d f
 	r e a e
-	\tempo "in tempo" <d, c' f> r r4
+	<d, c' f> r r4
 	<g d'>8 r r4
 	c,8_\pmarccresc g' d g
 % Bars 36 to 40
 	c, g' d g\<
 	d g d g\!
 	<d a' f'>\f r r4 \mark \default
-	\tuplet 6/4 4 {<e b'>16-.\ff-\tweak X-offset #1 ^\arco -\tweak X-offset #1 ^\tutti e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. }
+	\tuplet 6/4 4 {<e b'>16-.\ff^\arco^\tutti e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. <e, b'>-. e'-. }
 	<c e>16_\benmarc-. q-. <c a'>8-. q16-. q-. <f a>8-.
 % Bars 41 to 45
 	<d gis>16-. q-. <d b'>8-. <c e>16-. q-. <c a'>8-.
@@ -77,37 +77,35 @@ musicBratscheMvtIII = \relative c {
 % Bars 56 to 60
 	
 % Bars 61 to 65
-	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \clef "treble" R2
-		\MmrPos #-12 R
-		\MmrPos #-12 R
-		r4 r8. \clef alto \no } g16\f(^\arco^\tutti
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-11 R
+	\mmrPos #-11 R \no
+	\voiceTwo r4 r8. \oneVoice \clef alto g16\f(^\arco^\tutti
 	g') g,( f') g,( d') g,( g') g,(
 % Bars 66 to 70
-	f') g,( d') g,( g'8) <g, f'>_\pdim~
+	f') g,( d') g,( g'8)\noBeam <g, f'>_\pdim~
 	q <g d'>4 g8~\>
 	g <f g>4^\div <d g>8\!
-	R2*8
+	R2*8^\solo
 % Bars 71 to 75
 	
 % Bars 76 to 80
 	
-	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \clef "treble" R2
-		R
-		R
-		R
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 81 to 85
-		R
-		R
-		r4 \clef alto \no } \tuplet 3/2 4 {a'8\f^\pizz f' a}
-	\tuplet 3/2 4 {a, d f f, a d} \bar "||"
-	\time 3/4 \tuplet 3/2 4 {d, a' d d, a' c fis, c' d}
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	r4 \clef alto \tuplet 3/2 4 {a'8\f^\pizz f' a
+	a, d f f, a d \bar "||"
+	\time 3/4 d, a' d d, a' c fis, c' d
 % Bars 86 to 90
-	\tuplet 3/2 4 {b f'! g g, b g' g, b d} \bar "||"
-	\time 4/4 \tuplet 3/2 4 {e, c' e e, c' e f, b d} fis, r
+	b f'! g g, b g' g, b d \bar "||"
+	\time 4/4 e, c' e e, c' e f, b d} fis, r
 	a^\arco\f\<( g a g) g4.( f8)\! \bar "||"
-	\time 2/4 <e cis'>8-.\f r r4
+	\timeMvtIII <e cis'>8-.\f r r4
 	<fis d'>8-. r r4
 % Bars 91 to 95
 	<d c' f!>8-. r r4
@@ -117,12 +115,22 @@ musicBratscheMvtIII = \relative c {
 	c,8 r r4
 % Bars 96 to 100
 	R2
-	c'4.(\pp^\div^\arco <bes g'>8
-	<a fis'>4. <aes f'>8
-	<g e'>4. <f d'>8
-	<e c'>4. <d gis>8 \mark \default
+	<<{
+		c'4.(-\offset X-offset -3 ^\div^\arco g'8
+		fis4. f8
+		e4. d8
+		c4. gis8 \mark \default
+% Bars 101
+		a8)
+	} \\ {
+% Bars 97 to 100
+		c4.\pp( bes8
+		a4. aes8
+		g4. f8
+		e4. d8
 % Bars 101 to 105
-	<c a'>) r r e'\p^\pizz
+		c8)
+	}>> r r e'\p^\pizz
 	e d c c
 	a r r4
 	R2
@@ -137,10 +145,8 @@ musicBratscheMvtIII = \relative c {
 	e,-. r r4
 	R2*4
 % Bars 116 to 120
-	\cueDuring #"cueVoiceBrmIII" #DOWN {
-		\ni R2^\tutti
-		R \no
-	}
+	\ni \mmrPos #4 R2^\tutti
+	\mmrPos #4 R \no
 	r4 r8. a16\mf-.^\solo \bar "||" \key d \minor
 	a8-.[ r16 f-.] d8-.[ r16 bes-.]
 	g4.. g16
@@ -164,19 +170,19 @@ musicBratscheMvtIII = \relative c {
 	a'-.\p f-. d-.\< cis-.
 % Bars 136 to 140
 	f-. d-. bes-. g-.\!
-	\tuplet 6/4 4 {<bes d>4.:16\ff^\tutti q:}
-	\tuplet 6/4 4 {<bes des>: q:}
+	\tuplet 6/4 4 {<bes d>4.:16\ff^\tutti q:
+	<bes des>: q:}
 	<a c>4 <a cis>
 	r4^\solo a\p^\pizz
 % Bars 141 to 145
 	a r
-	r8.^\tutti <c! e>16-.\ff^\arco <c e>8-.[ r16 q-.]
-	\tuplet 6/4 4 {<a c>4.:16 <g b>:}
-	\tuplet 6/4 4 {q:} <f a>8. <e a>16
+	r8.-\offset X-offset -3 ^\tutti <c! e>16-.\ff^\arco <c e>8-.[ r16 q-.]
+	\tuplet 6/4 4 {<a c>4.:16 <g b>:
+	q:} <f a>8. <e a>16
 	<e d'>4 <e cis'>
 % Bars 146 to 150
-	r^\solo <d f>\p^\pizz
-	<cis e> r \mark \default
+	r^\solo << {f^\pizz} \\ {d\p} >>
+	<<{e} \\ {cis}>> r \mark \default
 	R2*24
 % Bars 151 to 155
 	
@@ -188,29 +194,28 @@ musicBratscheMvtIII = \relative c {
 	
 % Bars 171 to 175
 	
-	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \clef "treble" \MmrPos #-10 R2
-		\MmrPos #-8 R
-		\MmrPos #-8 R
-		R
+	\ni \clef treble \mmrPos #-10 R2
+	\mmrPos #-8 R
+	\mmrPos #-8 R
+	\mmrPos #-4 R
 % Bars 176 to 180
-		R
-		R
-		R
-		R \mark \default
-		r4 \clef alto \no } a'\pp^\arco(
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-6 R
+	\mmrPos #-4 R \mark \default \no
+	r4 \clef alto a'\pp^\arco(
 % Bars 181 to 185
 	d) a'(
 	d,) a(
 	d) a'(
 	d,) d\<(
-	fis) g(\>
+	fis)\! g(\>
 % Bars 186 to 190
 	d)\! d(
 	e,) e(
 	a) a(\pp
 	d) a'(
-	a,) b(\<
+	a,) \hairpinShorten #'(0 . 1) b(\<
 % Bars 191 to 195
 	dis\>) fis(\!
 	b,) fis(
@@ -218,16 +223,16 @@ musicBratscheMvtIII = \relative c {
 	<fis' a>) <e g>(
 	<g, e'>) q(
 % Bars 196 to 200
-	<fis a>) r8. <a a'>16\ff^\tutti
+	<fis a>) r8. <a a'>16\ff^\tutti 
 	a'8( f!16) f( d) d( cis) cis(
 	f) f( d) d( bes!) bes( d,) d
-	\tuplet 6/4 4 {<d bes'>4.:16 q:}
-	\tuplet 6/4 4 {<des bes'>4.:16 q:}
+	\tuplet 6/4 4 {<d bes'>4.:16 q:
+	<des bes'>4.:16 q:}
 % Bars 201 to 205
 	<c a'>4 <cis a'>
 	r8. <c! a'>16-. <a' c>8-.[ r16 q-.]
-	\tuplet 6/4 4 {<d f>4.:16 <g, e'>:}
-	\tuplet 6/4 4 {<c e>: <f, d'>:}
+	\tuplet 6/4 4 {<d f>4.:16 <g, e'>:
+	<c e>: <f, d'>:}
 	<e cis'>4 <d a'>8. <d' d'>16
 % Bars 206 to 210
 	q8\sf( c'!16) c( bes) bes( a) a(
@@ -246,9 +251,9 @@ musicBratscheMvtIII = \relative c {
 	\bar "||" \key a \minor \mark \default
 	c8-.\p^\arco^\solo e-. a-. f'-.
 	e-. d-. c-. r
-	r <c, a'>^\div-. <c e>4
+	r <<{a-.^\div} \\ {c,}>> <c e>4
 % Bars 221 to 225
-	r8 <c a'>-. <c e>4
+	r8 <<{a'-.} \\ {c,}>> <c e>4
 	r8 <e c'>-.^\unis <e g>4
 	r8 <e c'>-. <e g>4
 	r8 <e b'> r <c c'>
@@ -264,7 +269,7 @@ musicBratscheMvtIII = \relative c {
 		c8-.
 	}>>
 	e,-.^\unis[ a-. f'-.]
-	e-. d-. c-. <a c>-.
+	e-. d-. c-. <a c>-.\noBeam
 	<c, a'>4 r8 <a' c>8-.
 % Bars 231 to 235
 	<c, a'>4 r8 <c' e>-.
@@ -282,14 +287,26 @@ musicBratscheMvtIII = \relative c {
 	d\> des c bes!\!
 	a4 r
 	R2
-	<aes f'>4(^\div_\pdolce <c ees>
-	<bes ges'> <aes f'>)
+	<< { 
+		f'4^\div( ees
+		ges f)
 % Bars 246 to 250
-	\tempo "poco rit." <f' aes>2(
-	<ces f>)(
-	ees)\pp~^\unis
-	ees~
-	\tempo "in tempo" ees8-. r r4
+		aes2( 
+		f
+		\hideNotes ees)^\unis
+		s
+		s8 s s4
+	} \\ {
+% Bars 244 to 245
+		aes,4_\pdolce( c
+		bes aes)
+% Bars 246 to 250
+		f'2(
+		ces)( 
+		\oneVoice ees)\pp~
+		ees~
+		ees8 r r4
+	}>>
 % Bars 251 to 255
 	R2*3
 	
@@ -297,8 +314,8 @@ musicBratscheMvtIII = \relative c {
 	gis,2\p~
 	gis
 % Bars 256 to 260
-	\tuplet 3/2 8 {d16[(\f\< f b] f[ b d]) b[( d f] d[ f b])}
-	\tuplet 3/2 8 {d,,[( f b] f[ b d]) b[( d f] d[ f b])}
+	\tuplet 3/2 8 {d16[(\f\< f b] f[ b d]) b[( d f] d[ f b])
+	d,,[( f b] f[ b d]) b[( d f] d[ f b])\!}
 	<c, e>16\ff^\tutti q <c a'>8 q16 q <f a>8
 	<d gis>16 q <d b'>8 <c e>16 q <c a'>8
 	<a c>16 q <c a'>8 <a c>16 q <c a'>8 
@@ -310,7 +327,7 @@ musicBratscheMvtIII = \relative c {
 	c16 c <a f'>8 a16 a <f d'>8
 % Bars 266 to 270
 	<a e'>8-. <c a'>-. <b a'>-.\sf <b g'>-.
-	<c g'>\sf-. <c f>-. <g f'>-.\sf <g e'>-.
+	\beamOffset #'(0.5 . 0.5) <c g'>\sf-. <c f>-. <g f'>-.\sf <g e'>-.
 	<f a>-. r^\solo r4
 	R2
 	e'4\mf^\tutti e8(-\tweak X-offset #0 \dimD\> d)
@@ -322,41 +339,38 @@ musicBratscheMvtIII = \relative c {
 % Bars 276 to 280
 	
 % Bars 281 to 285
-	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \clef "treble" \MmrPos #-6 R2
-		R
-		R
-		R
-		R
+	\ni \clef treble \mmrPos #-6 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 286 to 290
-		R
-		r4 \no \clef alto } \tuplet 3/2 4 {fis8\f^\pizz d' fis}
-	\tuplet 3/2 4 {fis, b d d, fis b} \bar "||"
-	\time 3/4 \tuplet 3/2 4 {dis,_\crescmarkup fis b dis, fis b dis, a' b} 
-	\tuplet 3/2 4 {gis d'! e gis, cis e e, gis d'} \bar "||"
+	\mmrPos #-4 R \no
+	r4 \clef alto \tuplet 3/2 4 {fis8\f^\pizz d' fis
+	fis, b d d, fis b \bar "||"
+	\time 3/4 dis,_\crescmarkup fis b dis, fis b dis, a' b
+	gis d'! e gis, cis e e, gis d' \bar "||"
 % Bars 291 to 295
-	\time 4/4 \tuplet 3/2 4 {cis, a' cis cis, a' cis d, gis b} dis, r
-	fis8\f^\arco( e fis e) e4.( d!8) \bar "||"
-	\time 2/4 <cis ais'>8-.\f r r4
+	\time 4/4 cis, a' cis cis, a' cis d, gis b} dis, r
+	fis8\f^\arco(\< e fis e) e4.( d!8)\! \bar "||"
+	\timeMvtIII <cis ais'>8-.\f r r4
 	<dis b'>8-. r r4
 	<d! b' d a'>8-. r r4
 % Bars 296 to 300
 	r b'8\p^\pizz r8 \bar "||"
-	\tempo "Poco meno Allegro" a8 r r4
+	a8 r r4
 	R2*9
 % Bars 301 to 305
 	
 % Bars 306 to 310
 	
-	\cueDuring #"cueVoiceBrmIII" #UP {
-		\ni \clef "treble" R2
-		R
-		R
-		R
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 311 to 315
-		R
-		R \clef alto \no
-	}
+	\mmrPos #-4 R
+	\mmrPos #-4 R \clef alto \no
 	a4.\p^\arco( ais8)\<
 	b4.( bis8)\!
 	cis cis,4(\> fis8)~
@@ -370,7 +384,7 @@ musicBratscheMvtIII = \relative c {
 	a8-.\p r r4
 	R2*2
 	\bar "||"
-	\tempo "Tempo primo" <cis, a'>4-.\f <fis a>-.
+	<cis, a'>4-.\f <fis a>-.
 	R2
 % Bars 326 to 330
 	r8 <a a'>8-! q-! q-!
