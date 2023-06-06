@@ -224,7 +224,7 @@ musicKontrabassMvtI = \relative c' {
 	g g2 g4~
 	g g2 c4~
 	c c2 c4~
-	c c~ c8 r r4
+	c c~ c8-. r r4
 	r cis2 cis4~
 % Bars 216 to 220
 	cis8-. r r4 r g''->

@@ -42,19 +42,19 @@ musicVioloncellMvtIII = \relative c {
 	R2
 	f,8 c' f r
 	r4 f,8(_\ppsempre^\arco e16 f)
-	\tempo "poco rit." e4 d8( e16 d) 
+	e4 d8( e16 d) 
 	e4 f8( e16 f)
 % Bars 31 to 35
 	e4 d8( e16 d)
 	e4 c8( d16 c)
-	\tempo "in tempo" d2(
+	d2(
 	g)(
 	c,8) r r4
 % Bars 36 to 40
 	R2
 	d8\<^\pizz g d g\!
 	d\f r r4 \mark \default
-	\tuplet 6/4 4 {e16-.\ff-\tweak X-offset #1 ^\arco -\tweak X-offset #1 ^\tutti e'-. e,-. e'-. e,-. e'-. e,-. e'-. e,-. e'-. e,-. e'-. }
+	\tuplet 6/4 4 {e16-.\ff^\arco^\tutti e'-. e,-. e'-. e,-. e'-. e,-. e'-. e,-. e'-. e,-. e'-. }
 	a,-. b-. c8-. a16-. c-. f8-.
 % Bars 41 to 45
 	a,16-. d-. gis8-. a,16-. e'-. c'-. b-.
@@ -63,8 +63,8 @@ musicVioloncellMvtIII = \relative c {
 	c'-. g-. a-. g-.
 	c-. g-. aes-. g-.
 % Bars 46 to 50
-	e'-.-> c-. c-.-> a!-.
-	a-.-> f-. f-.-> d-.
+	e'-.->[ c-.] c-.-> a!-.
+	a-.->[ f-.] f-.-> d-.
 	c-. a-. e'-. e,-.
 	a-. r r4^\solo
 	R2
@@ -77,11 +77,10 @@ musicVioloncellMvtIII = \relative c {
 % Bars 56 to 60
 	
 % Bars 61 to 65
-	\cueDuring #"cueVoiceVlcmIII" #UP {
-		\ni \MmrPos #-8 R2
-		R
-		R \no
-		r4 r8. } g16(^\arco\f^\tutti
+	\ni \mmrPos #-8 R2
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
+	\voiceTwo r4 r8. \oneVoice g16(-\offset X-offset -0.5 ^\arco\f^\tutti
 	g,) g'( g,) g'( g,) g'( g,) g'(
 % Bars 66 to 70
 	g,) g'( g,) g'( g,8) g_\pdim~
@@ -98,20 +97,20 @@ musicVioloncellMvtIII = \relative c {
 % Bars 76 to 80
 	d f
 	g2~
-	g4\< \tuplet 3/2 4 {b8^\pizz d g}
-	\tuplet 3/2 4 {e g c a, e' cis'\!}
-	\tuplet 3/2 4 {a, f' d' f, b dis}
+	g4\< \tuplet 3/2 4 {b8^\pizz d g
+	e g c a, e' cis'\!
+	a, f' d' f, b dis
 % Bars 81 to 85
-	\tuplet 3/2 4 {g, c e f, a a,}
-	\tuplet 3/2 4 {f' a a, cis a' a,}
-	\tuplet 3/2 4 {f' a a,} d,4^\arco~
+	g, c e f, a a,
+	f' a a, cis a' a,
+	f' a a,} d,4^\arco~
 	d f \bar "||"
 	\time 3/4 fis2 d4
 % Bars 86 to 90
 	g2 g4 \bar "||"
-	\time 4/4 a a d,( d'8) d'(\f
+	\time 4/4 a a d,( d'8)\noBeam d'(\f
 	f\< e f e) e4.( d8)\! \bar "||"
-	\time 2/4 a,8-.\f r r4
+	\timeMvtIII a,8-.\f r r4
 	d8-. r r4
 % Bars 91 to 95
 	<g, d' c'>8-. r r4
@@ -141,10 +140,8 @@ musicVioloncellMvtIII = \relative c {
 	a8-. r r4
 	R2*4
 % Bars 116 to 120
-	\cueDuring #"cueVoiceVlcmIII" #DOWN {
-		\ni R2^\tutti
-		R \no
-	}
+	\ni R2^\tutti
+	R \no
 	r4 r8. a16-.\mf^\solo \bar "||" \key d \minor
 	a8-.[ r16 f-.] d8-.[ r16 bes-.]
 	g4.. g16
@@ -162,7 +159,7 @@ musicVioloncellMvtIII = \relative c {
 	r8 g'\f^\arco-. a-. a,-.
 % Bars 131 to 135
 	d-.\p r r4
-	d4\pizz\f r
+	d4^\pizz\f r
 	d d 
 	r8 d^\arco-. f-. e-.
 	a-.\p r r4
@@ -174,7 +171,7 @@ musicVioloncellMvtIII = \relative c {
 	r-\tweak X-offset #-2 ^\solo f\p^\pizz
 % Bars 141 to 145
 	a r 
-	r8. e''16-.^\arco^\tutti c8-.[ r16 a-.]
+	r8. e''16-.-\offset X-offset #-5 ^\arco^\tutti c8-.[ r16 a-.]
 	f4 g
 	e f8. c16
 	e4 a,
@@ -208,21 +205,20 @@ musicVioloncellMvtIII = \relative c {
 	
 	
 	\clef treble
-	\cueDuring #"cueVoiceVlcmIII" #UP {
-		\ni R2
-		R
+	\ni \mmrPos #-4 R2
+	\mmrPos #-6 R
 % Bars 176 to 180
-		R
-		R
-		\MmrPos #-6 R
-		R \mark \default
-		r4 \no } \clef bass d'\pp~
+	\mmrPos #-4 R
+	\mmrPos #-6 R
+	\mmrPos #-9 R
+	\mmrPos #-4 R \no \mark \default
+	r4 \clef bass d'\pp~
 % Bars 181 to 185
 	d a~
 	a d~
 	d a~
 	a d~\<
-	d g,\>~
+	d\! g,\>~
 % Bars 186 to 190
 	g\! gis~
 	gis a~
@@ -256,7 +252,7 @@ musicVioloncellMvtIII = \relative c {
 % Bars 211 to 215
 	a\sf
 	a4\sf a\sf
-	a8-. r r4^\solo
+	a8-. r r4-\offset X-offset -1 ^\solo
 	e8^\pizz^\tutti r r4
 	R2*3
 % Bars 216 to 220
@@ -296,11 +292,11 @@ musicVioloncellMvtIII = \relative c {
 	des,2\pp^\arco~
 	des
 % Bars 246 to 250
-	\tempo "poco rit." des'\pp(
+	des'\pp(
 	d!
 	ees 
 	ees,)
-	\tempo "in tempo" aes8^\pizz r r4 
+	aes8^\pizz r r4 
 % Bars 251 to 255
 	R2*3
 	
@@ -308,7 +304,7 @@ musicVioloncellMvtIII = \relative c {
 	gis2\p~^\arco
 	gis
 % Bars 256 to 260
-	\tuplet 3/2 8 {d!16(\f\<[ f b] f[ b d]) b[( d f] d[ f b])}
+	\tuplet 3/2 8 {d!16(\f\<[ f b] f[ b d]) b[( d f] d[ f b]\!)}
 	e,,2\sf
 	a16-.\ff^\tutti b-. c8-. a16-. c-. f8-.
 	a,16-. d-. gis8-. a,16-. e'-. c'-. b-.
@@ -317,16 +313,16 @@ musicVioloncellMvtIII = \relative c {
 	a-. e-. f-. e-.
 	c'-. g-. a-. g-.
 	c-. g-. aes-. g-.
-	e'->-. c-. c->-. a!-. 
-	a->-. f-. f->-. d-. 
+	e'->-.[ c-.] c->-. a!-. 
+	a->-.[ f-.] f->-. d-. 
 % Bars 266 to 272
 	c-. a-. e'\sf-. e,-.
-	a'-.\sf a,-. c'-.\sf c,-.
+	a'-.\sf[ a,-.] c'-.\sf c,-.
 	d'-. r^\solo r4
 	R2
 	<<{
-		e,,8(^\tutti fis) fis( gis)
-		gis( b) b( e)
+		e,,8([^\tutti fis)] fis( gis)
+		gis([ b)] b( e)
 		e( d4 e8)
 	} \\ {
 		e,4-\tweak X-offset #-1.5 _\mfdim( e\>
@@ -345,25 +341,25 @@ musicVioloncellMvtIII = \relative c {
 	b d
 % Bars 281 to 285
 	e2~
-	e4 \tuplet 3/2 4 {gis,8^\pizz b e}
-	\tuplet 3/2 4 {cis e a cis, e ais}
-	\tuplet 3/2 4 {d, fis b d, fis bis}
-	\tuplet 3/2 4 {e, a cis fis, d fis}
+	e4 \tuplet 3/2 4 {\once \tupletDown gis,8^\pizz b e
+	cis e a cis, e ais
+	d, fis b d, fis bis
+	e, a cis fis, d fis
 % Bars 286 to 290
-	\tuplet 3/2 4 {fis d fis fis ais, fis'}
-	\tuplet 3/2 4 {fis d fis} b,4^\arco~
+	fis d fis fis ais, fis'
+	fis d fis} b,4^\arco~
 	b d, \bar "||" \time 3/4
 	dis2_\crescmarkup b'4
 	e,2 e4 \bar "||" 
 % Bars 291 to 295
 	\time 4/4 fis fis'( b,) r8 b'(\f
-	d\< cis d cis) cis4.( b8) \bar "||"
-	\time 2/4 fis,8-.\f r r4
+	d\< cis d cis) cis4.( b8)\! \bar "||"
+	\timeMvtIII fis,8-.\f r r4
 	b8-. r r4
 	e,8-. r r4
 % Bars 296 to 300
 	r e'8\p^\pizz r \bar "||"
-	\tempo "Poco meno Allegro" a,2^\arco~
+	a,2^\arco~
 	a~
 	a~
 	a~
@@ -372,16 +368,16 @@ musicVioloncellMvtIII = \relative c {
 	d,_\piup~
 	d~
 	d
-	d'^\one
+	\startMeasureCount d'
 % Bars 306 to 310
-	d^\two
-	d^\three
-	d^\four
-	d_\crescmarkup^\five
-	d^\six
+	d
+	d
+	d
+	d_\crescmarkup
+	d
 % Bars 311 to 314
-	d^\seven
-	d^\eight
+	d
+	d \stopMeasureCount
 	cis4\p d\<
 	dis e\!
 % Bars 315 to 320
@@ -402,7 +398,7 @@ musicVioloncellMvtIII = \relative c {
 	cis4\p r4
 	b4.\pp\> r8\!
 	b4.\> r8\! \bar "||"
-	\tempo "Tempo primo" cis4-.\f fis-.
+	cis4-.\f fis-.
 	R2
 % Bars 326 to 330
 	r8 f-! e-! d-!

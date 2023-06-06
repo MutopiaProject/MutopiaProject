@@ -224,7 +224,7 @@ musicVioloncellMvtI = \relative c' {
 	f e d cis) d( e f g a g f e) f( a d e
 	f d a g) f( a d e f d a f) c4~
 	c c2 c4~
-	c c~ c8 r r4
+	c c~ c8-. r r4
 	r cis2 cis4~
 % Bars 216 to 220
 	cis8-. r r4 r g''->

@@ -3518,70 +3518,68 @@ cueVoiceBratscheMvtIII = \relative c {
 	e d cis b)
 }
 %###############################################################################
-%#                        V I O L O N C E L L                                  #
+%#               C U E   V O I C E   F O R   V I O L O N C E L L               #
 %###############################################################################
-cueVoiceVlcMvtI = \relative c {
-	R1*23
-	% bar 24
+cueVoiceVioloncellMvtI = \relative c {
+	s1*23
+	% bar 24 - 30
 	s2 s4 d,(^\markup {Solo-Vlc.}
 	f1
-	e2) r4 cis'''(^\markup {Klar.I}
+	e2) r4 \voiceOne cis'''(^\markup {Klar.I}
 	b) cis( gis) a(
 	b2 e,4) cis'(^\markup {Ob.I}
 	b) cis( gis) a(
 	a'2 e4) r
-	R1*21
-	% bar 52
+	s1*21
+	% bar 52 - 56
 	r2 e,,,8(-\tweak X-offset #-3 ^\markup {Solo-Vlc.} fis16 gis a b c d
-	e) a,( b c d e fis gis a) e( fis gis a b c d 
+	e) a,( b c \oneVoice d e fis gis a) e( fis gis a b c d 
 	e) a,( b c d e fis gis a) e fis gis a e f g 
 	a4-. a,-. <d a'>-. <d, c'>-.
 	<g, d' b'>-. r <e b' gis' d'>-. r
 }
-cueVoiceVlcMvtII = \relative c {
-	a'4^(-\tweak X-offset #-3 ^\markup {Hr.I} d2^\fermata)
-	e4^( a2)^\fermata
-	R2.*42
-	% bar 45
+cueVoiceVioloncellMvtII = \relative c {
+	% bar 1 - 2
+	a'4(-\tweak X-offset #-3 ^\markup {Hr.I} d2^\fermata)
+	e4( a2)^\fermata
+	s2.*42
+	% bar 45 - 49
 	f4(~^\markup {Solo-Vlc.} \tuplet 3/2 4 {f8 e f g e f~}
-	\tuplet 3/2 4 {f e f d' c b c) e,( g}
+	\tuplet 3/2 4 {f e f d' c b \voiceOne c) e,( g}
 	\tuplet 3/2 4 {des' c b c) e,( g des' c b)}
 	r8^\markup {Br.} ees,,-.( r ees-.) r e
-	r f r2
+	r f s2
 }
-cueVoiceVlcMvtIII = \relative c {
-	R2*60
-	% bar 61
-	s4 s8 <g f'>16-.-\tweak X-offset #-3 ^\markup {Solo-Vlc.} c,-.
+cueVoiceVioloncellMvtIII = \relative c {
+	s2*60
+	% bar 61 - 64
+	\voiceOne s4 s8 <g f'>16-.-\tweak X-offset #-3 ^\markup {Solo-Vlc.} c,-.
 	<f' des'>4.-> <c e>16-. c,-.
 	<e' c'>4.-> <ees c'>16-. c,-.
 	<ees' c'>-.\noBeam c,( <c' a'>) c,( <a' fis'>)[ c,(] <fis ees'!>8-.)
-	R2*20
-	R2.*2
-	R1*2
-	R2*27
-	% bar 116
-	a8.\rest^\markup {Pk.} a16-. a8-. a\rest
+	s2*20 s2.*2 s1*2 s2*27
+	% bar 116 - 117
+	\voiceTwo a8.\rest-\offset X-offset -2 ^\markup {Pk.} a16-. a8-. a\rest
 	a8.\rest a16-. a8-. a\rest
-	R2*56
-	% bar 174
-	s4 s8 <c'! a'>8(-\tweak X-offset #-6 ^\markup {Solo-Viol.}
+	s2*56
+	% bar 174 - 180
+	s4 s8 \oneVoice <c'! a'>8(-\tweak X-offset #-6 ^\markup {Solo-Viol.}
 	<c' a'>) q4 <b gis'>8(
 	<c a'>) q4 <f d'>16( a
 	<e c'> a e c a[ c]) <d bes'>( f
 	<c a'> f c a) f[( <f' a>)] <e c'>( <d bes'>
-	<cis a'>8)\noBeam <cis e>8. <bes g'>16( <a f'> <g e'>)
-	<e cis'>( <f d'> <e gis> <f a>) r4
+	\voiceOne <cis a'>8)\noBeam <cis e>8. <bes g'>16( <a f'> <g e'>)
+	<e cis'>( <f d'>) <e gis>( <f a>) s4
 }
 %###############################################################################
 %#                        K O N T R A B A S S                                  #
 %###############################################################################
 cueVoiceKtbMvtI = \relative c {
 	R1*23
-	% bar 24
+	% bar 24 - 30
 	s2 s4 d,(^\markup {Solo-Vlc.}
 	f1
-	e2) r4 cis'''_(^\markup {Klar.I}
+	e2) r4 \voiceOne cis'''_(^\markup {Klar.I}
 	b) cis_( gis) a_(
 	b2 e,4) cis'(^\markup {Ob.I}
 	b) cis( gis) a(

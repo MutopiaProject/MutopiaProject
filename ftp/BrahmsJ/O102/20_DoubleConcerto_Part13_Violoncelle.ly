@@ -1,35 +1,31 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part13_Violoncelle.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
-%                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    work                : Double Concerto for Violin and Violoncello 
+%                          in A minor
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Cello
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part13_Violoncelle.ily"
 \include "./01-Mvt1/m01_v21_music_Violoncell.ily"
 \include "./02-Mvt2/m02_v21_music_Violoncell.ily"
 \include "./03-Mvt3/m03_v21_music_Violoncell.ily"
-\include "./00-Common/DoubleConcerto_Format_Part13_Violoncelle.ily"
-\addQuote "cueVoiceVlcmI" { \cueVoiceVlcmI }
-\addQuote "cueVoiceVlcmII" { \cueVoiceVlcmII }
-\addQuote "cueVoiceVlcmIII" { \cueVoiceVlcmIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -50,11 +46,16 @@
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceXXI
+				\formatVioloncellMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXXI \musicVioloncellMvtI
+				\keepWithTag #'(violoncell) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceVioloncellMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameVioloncellMvtI \musicVioloncellMvtI
 			}
 		>>
 		\header {
@@ -67,19 +68,21 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceXXI
+				\formatVioloncellMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXXI \musicVioloncellMvtII
+				\keepWithTag #'(violoncell) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceVioloncellMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameVioloncellMvtII \musicVioloncellMvtII
 			}
 		>>
 		\header {
@@ -92,34 +95,33 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceXXI
+				\formatVioloncellMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXXI \musicVioloncellMvtIII
+				\keepWithTag #'(violoncell) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceVioloncellMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameVioloncellMvtIII \musicVioloncellMvtIII
 			}
 		>>
 		\header {
-			breakbefore = ##t
+			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #2 \fill-line {
 					\fontsize #4
 					III
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

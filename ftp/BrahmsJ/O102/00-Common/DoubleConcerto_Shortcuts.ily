@@ -123,6 +123,7 @@ mmrLength = #(define-music-function
 		\once \override MultiMeasureRest.space-increment = #length
 	#}
 )
+
 mmrPos = #(define-music-function
 	(position)
 	(number?)
@@ -130,6 +131,15 @@ mmrPos = #(define-music-function
 		\once \override MultiMeasureRest.staff-position = #(- position 2)
 	#}
 )
+
+mmrEO = #(define-music-function
+	(offset)
+	(pair?)
+	#{
+		\once \override MultiMeasureRest.extra-offset = #offset
+	#}
+)
+
 no = {
 	\undo \omit MultiMeasureRestNumber
 }

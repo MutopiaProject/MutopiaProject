@@ -9,7 +9,7 @@ musicVioloncellMvtI = \relative c' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc^\tutti d8 b4 r
+	e4._\fmarc-\offset X-offset -7 ^\tutti d8 b4 r
 	c4. b8 e,4 r
 	a-. r b-. r
 	c-. a-. f'-. d-. 
@@ -24,16 +24,14 @@ musicVioloncellMvtI = \relative c' {
 	
 	
 	
-	\cueDuring #"cueVoiceVlcmI" #UP {
-		\ni R1
-		\MmrPos #4 R
+	\ni \mmrPos #4 R1
+	\mmrPos #4 R
 % Bars 26 to 30
-		<<\MmrPos #-6 R1 {s2 \clef treble s^\tutti }>> 
-		R1
-		\MmrPos #-6 R
-		R
-		R \no \clef bass
-	}
+	<<\mmrPos #-7 R1 {s2 \clef treble s-\offset X-offset -3 ^\tutti }>> 
+	\mmrPos #-4 R1
+	\mmrPos #-6 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no \clef bass
 % Bars 31 to 35
 	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff
 % Bars 36 to 40
@@ -44,35 +42,33 @@ musicVioloncellMvtI = \relative c' {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoiceVlcmI" #UP {
-		\ni \MmrPos #-8 R1
-		R
-		\clef tenor R
-		R
+	\ni \mmrPos #-8 R1
+	\mmrPos #-6 R
+	\clef tenor \mmrPos #-4 R
+	\mmrPos #-4 << R {s2. \clef bass s4 } >>
 % Bars 56 to 60
-		\clef bass R \mark \default \no
-	}
-	a,4.\ff-\tweak X-offset #1.5 ^\tutti b8 c4 r
+	\mmrPos #-4 \mmrEO #'(-1.5 . 0) R1 \mark \default \no
+	a,4.\ff^\tutti b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2\< b,4} \times 2/3 {e2 a,4}
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	f2\< b,4 e2 a,4}
 % Bars 66 to 70
 	d2 c\!
-	b8:16\ff\< dis: fis: a: c4.(\> b8)
-	b,8:16\< e: g: ais!: c4.\>( b8)\!
+	b8:16\ff\< dis: fis: a:\! c4.(\> b8)\!
+	b,8:16\< e: g: ais!:\! c4.\>( b8)\!
 	cis,8:16 e: a!: cis: dis,2
 	e8:16 g: ais: b: b,2
 % Bars 71 to 75
 	c2->\p c->
 	c-> c->
 	d!\< e
-	f g
+	f g\!
 	aes4-.\f bes2-> c4-.
 % Bars 76 to 80
 	f,-. r f,-. r
@@ -90,7 +86,7 @@ musicVioloncellMvtI = \relative c' {
 	c4-! f,-! r2
 	bes4-! bes,-! r2
 	c4-! r r2
-	r r4 f16(\f\> a c f\! \mark \default
+	r r4 f16(\f\> a c f\! \markWhiteout \mark \default
 	f,8) r f16( a c f f,8) r f16( a c f)
 % Bars 91 to 95
 	f,4 e8 d e c f16( a c f
@@ -113,12 +109,12 @@ musicVioloncellMvtI = \relative c' {
 % Bars 106 to 110
 	f2\sf e8( c b a)
 	bes'2\sf a8( f e d)
-	d'( b!) e( c) f( d) e-. e,-.
+	d'([ b!)] e( c) f( d) e-. e,-.
 	r4 f8( d) e-. e,-. r4
 	f''8( d) r4 fis8( dis) r4
 % Bars 111 to 115
 	e-! r e,,-! r \mark \default
-	a4\fp\>-.-\tweak X-offset #1.4 ^\solo r8 b-. c4-.\! r
+	a4\fp\>-.^\solo r8 b-. c4-.\! r
 	r2 c,4^\pizz r8 d
 	e4 r r2
 	e4 r r2
@@ -127,13 +123,13 @@ musicVioloncellMvtI = \relative c' {
 	r2 f,4^\pizz r8 g 
 	a4 r r2
 	a4 r r2
-	b'4\p^\pizz r b, r
+	b'4\p r b, r
 % Bars 121 to 125
 	b' r b, r
 	e_\crescpocoapoco r e, r
 	e' r e, r
-	e'2^\arco -\tweak DynamicText.self-alignment-X #LEFT \pcrescD\< a,
-	a d,
+	e'2^\arco-\offset X-offset 1 \pcrescD\< a,
+	a d,\!
 % Bars 126 to 130
 	c8-.\f r r4 r r8 a'\mf^\pizz
 	d,4 r dis r
@@ -143,12 +139,12 @@ musicVioloncellMvtI = \relative c' {
 % Bars 131 to 135
 	e'4 r r e,
 	a8\mf c e gis, a c f gis,
-	a\< c fis a gis'\> d b gis\!
+	a\< c fis a\! gis'\> d b gis\!
 	a4 a,\p r a
 	r a' b,\f r
 % Bars 136 to 140
 	e8\p g! b dis, e4 r
-	e8\< g cis e a,,4\f r
+	e8\< g cis e\! a,,4\f r
 	d\p r r2
 	R1
 	d4_\dimmarkup r r2
@@ -175,9 +171,9 @@ musicVioloncellMvtI = \relative c' {
 	r cis-. r a'-.)
 	r d,(-. r f-.\<
 	r fis-. r d)-.\!
-	r f!2.\sf\>
+	r f!2.-\offset X-offset -1 \sf-\tweak extra-offset #'(0 . 0.5) \>
 % Bars 161 to 165
-	e1( -\tweak DynamicText.self-alignment-X #LEFT \pdimD
+	e1(-\offset X-offset -1.5 -\tweak extra-offset #'(0 . 1) \p -\offset X-offset 1 -\tweak extra-offset #'(-1.3 . 0.8) _\dimmarkup
 	d2 g)
 	c,( c')
 	f,1\pp\>
@@ -229,7 +225,7 @@ musicVioloncellMvtI = \relative c' {
 	g4-! c,-! r2
 	f4-! f,-! r2
 	g4-! r r2
-	r r4 c16(_\fbenmarc e g c
+	r r4 c16(-\offset X-offset -3 _\fbenmarc e g c
 % Bars 206 to 210
 	c,8-.) r c16( e g c c,8-.) r c16( e g c)
 	c4 b8 a b g c,16( e g c
@@ -240,12 +236,12 @@ musicVioloncellMvtI = \relative c' {
 	f e d cis) d( e f g a g f e) f( a d e
 	f d a g) f( a d e f d a f) c4~
 	c c2 c4~
-	c c~ c8 r r4
+	c c~ c8-. r r4
 	r cis2 cis4~
 % Bars 216 to 220
 	cis8-. r r4 r g''->
 	e-> cis-> ais-> g-> \mark \default
-	fis,2\mf-\tweak X-offset #0.5 ^\solo g4 r
+	fis,2\mf^\solo g4 r
 	b2 c!4 r
 	d,2\p e2~ 
 % Bars 221 to 225
@@ -270,7 +266,7 @@ musicVioloncellMvtI = \relative c' {
 % Bars 236 to 240
 		b
 		cis
-		gis'4(-\tweak X-offset #-3 ^\pp cis, fis b,
+		gis'4(-\tweak X-offset #-2.5 ^\pp cis, fis b,
 		eis ais, dis gis,
 		cis)
 	} \\ {
@@ -311,7 +307,7 @@ musicVioloncellMvtI = \relative c' {
 	ees, ees'2 des4
 	ces\ff ces'2 ces,4
 	ees,1\sf
-	ees2\sf~ ees8 ees''\ff-.^\tutti des-. c-.
+	ees2\sf~ ees8\noBeam ees''\ff-.^\tutti des-. c-.
 	bes4 ges2 bes4
 % Bars 261 to 265
 	ges ees2 ges4
@@ -320,11 +316,11 @@ musicVioloncellMvtI = \relative c' {
 	f4-.\sf r g-.\sf r
 	aes_\benmarc-. f-. des'-. bes-.
 % Bars 266 to 270
-	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
+	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
-	\times 2/3 {c,-. d-. e!-.} \times 2/3 {f-. g-. aes-.}
-	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
-	aes,1\fpp(-\tweak X-offset #0.5 ^\solo
+	\tuplet 3/2 2 {c,-. d-. e!-. f-. g-. aes-.
+	bes-. c-. des-. ees,-. f-. g-.} \mark #11
+	aes,1\fpp(^\solo
 % Bars 271 to 275
 	gis)(
 	e!)~
@@ -348,29 +344,29 @@ musicVioloncellMvtI = \relative c' {
 	d,-! r d-! r
 	g,-! r r2
 	e4-! r r2 \mark \default 
-	a4.\ff-\tweak X-offset #1.5 ^\tutti b8 c4 r
+	a4.\ff^\tutti b8 c4 r
 % Bars 291 to 295
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4}
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	f2 d4 g2 e4}
 	a2 f,
 	e\p^\solo e
 % Bars 301 to 305
 	e e
 	fis gis
-	a( dis,)\<
-	e1\>
+	a( \hairpinShorten #'(2 . 0) dis,)\<
+	<< e1 {\hairpinShorten #'(0 . -1) s4\> s s s\!}>>
 	a8\mf^\pizz c e gis, a c f gis,
 % Bars 306 to 310
-	a c fis\< a gis'\> d b gis\!
+	a c fis\< a\! gis'\> d b gis\!
 	a4 r a,8 c f c
-	aes4 r c'8\f\> a! fis d
+	aes4 r c'8\f\> a! fis d\!
 	g4\p r g r
 	ges\< r c, r
 % Bars 311 to 315
@@ -441,7 +437,7 @@ musicVioloncellMvtI = \relative c' {
 	
 % Bars 366 to 370
 	\mark \default
-	e2\f-\tweak X-offset #1.5 ^\arco -\tweak X-offset #1.5 ^\tutti gis
+	e2\f^\arco^\tutti gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2
@@ -471,8 +467,8 @@ musicVioloncellMvtI = \relative c' {
 	e,2 f4 r8 e'-.
 % Bars 391 to 395
 	f4-. r8 e-. f4-. r8 d-.
-	e'(_\sempref d b) e,( d b) c( b
-	e,) c''( b e,) e'( d4) c8(
+	e'(_\sempref d b) e,(\noBeam d[ b]) c( b
+	e,)\noBeam c''( b e,) e'( d4) c8(
 	b4) a8( g4) f8( e4)
 	d( c b e)
 % Bars 396 to 400
@@ -497,14 +493,14 @@ musicVioloncellMvtI = \relative c' {
 	f) f( g,) g
 	a1\fp
 	a2._\dimmarkup bes4
-	f4(\p\>^\pocorit bes2.)
-	f4(\pp a2) r4^\intempo
+	f4(\p\> bes2.)
+	f4(\pp a2) r4
 % Bars 416 to 420
 	d,2\f g
 	c4-! c,-! r2
 	d'4-! d,-! r2
 	e'4-.\f r r a,\p^\pizz
-	c\< e a e,\f
+	c\< e a\! e,\f
 % Bars 421 to 425
 	f' e, f' e
 	d' dis e e,,
@@ -518,5 +514,5 @@ musicVioloncellMvtI = \relative c' {
 	a4-. r f-. d-.
 	a-. r a-. r
 % Bar 431
-	a1\fermata \bar "|."
+	a1-\offset Y-offset 3 \fermata \bar "|."
 }

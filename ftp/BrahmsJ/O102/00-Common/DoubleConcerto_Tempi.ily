@@ -63,15 +63,21 @@ tempiPartMvtI = {
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeI oboeII klarinetI klarinetII fagottoI fagottoII
 		hornI hornII hornIII hornIV trumpetI trumpetII pauken  
-		soloCello violinI violinII bratsche violoncell kontrabass) {
+		soloCello violinI violinII bratsche  kontrabass) {
 		\tempo \markup {
 			\medium \italic "in tempo"
 		}
 	}
-	\tag #'(soloViolin) {
+	\tag #'(soloViolin ) {
 		\tempoXoffset #-2 
 		\tempo \markup {
 			\medium \italic "in tempo"
+		}
+	}
+	\tag #'(violoncell) {
+		\tempoXoffset #-2 
+		\tempo \markup {
+			\medium \italic \center-column {\lower #1.5 "in" "tempo"}
 		}
 	}
 }
@@ -163,10 +169,10 @@ tempiPartMvtIII = {
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeI oboeII klarinetI klarinetII fagottoI fagottoII
 		hornI hornII hornIII trumpetI trumpetII pauken  
-		soloCello violinI violinII  bratsche violoncell kontrabass) {
+		soloCello violinI violinII  bratsche  kontrabass) { 
 		\tempo "Poco meno Allegro"
 	}
-	\tag #'(hornIV soloViolin) {
+	\tag #'(hornIV soloViolin violoncell) {
 		\tempo \markup {
 			\column { \lower #1.5 "Poco meno" "Allegro" }
 		}
@@ -177,7 +183,7 @@ tempiPartMvtIII = {
 	%%%%%%%%%%%%%%%%%%%%%%
 	\tag #'(floteI floteII oboeI oboeII  fagottoI 
 		hornI hornII hornIV  pauken soloViolin 
-		soloCello violinI violinII  bratsche violoncell kontrabass) {
+		soloCello violinI violinII  bratsche  kontrabass) { 
 		\tempo "Tempo primo"
 	}
 	\tag #'(klarinetI fagottoII) {
@@ -192,7 +198,7 @@ tempiPartMvtIII = {
 			\column { \lower #1.5 "Tempo" "primo" }
 		}
 	}
-	\tag #'(klarinetII trumpetI trumpetII) {
+	\tag #'(klarinetII trumpetI trumpetII violoncell) {
 		\tempo \markup {
 			\column { \lower #1.5 "Tempo" "primo" }
 		}

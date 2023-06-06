@@ -9,32 +9,30 @@ musicVioloncellMvtII = \relative c {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceVlcmII" #DOWN {
-		\ni \MmrPos #-2 R2._\fermata
-		\MmrPos #-2 R2._\fermata \no
-	}
+	\ni \mmrPos #-2 R2._\fermata
+	\mmrPos #-2 R2._\fermata \no
 	a8(_\pocofmadolce^\solo d e a fis d)
 	<<{d4( g, a)} \\ {g g( d)}>> 
 	a'8( d e fis d b)
 % Bars 6 to 10
-	<<{d8( cis) cis( b) a4} \\ {e e  a}>>
+	<<{d8([ cis)] cis( b) a4} \\ {e e  a}>>
 	R2.
-	<<{\times 2/3 {g8( b d)} \times 2/3 {g,( d' e)} a,4} \\ {g\p g d}>>
+	<<{\tuplet 3/2 4 {g8( b d) g,( d' e)} a,4} \\ {g\p g d}>>
 	R2.
-	<<{\times 2/3 {e8( gis b)} \times 2/3 {e,( b' e)} e4} \\ {e, e a}>>
+	<<{\tuplet 3/2 4 {e8( gis b) e,( b' e)} e4} \\ {e, e a}>>
 % Bars 11 to 16
 	c'8(_\pocofmadolce a fis dis e g)
-	<<{fis( dis) e( cis!) dis( b)} \\ {b4 b b}>>
+	<<{fis([ dis)] e([ cis!)] dis( b)} \\ {b4 b b}>>
 	c'8( a fis dis e g)
 	<< {
-		\voiceOne c,,4\< c\> cis8( a')
-		a4(_\p a\< d)
+		\voiceOne \hairpinShorten #'(0 . -2) c,,4\< \hairpinShorten #'(2.8 . 0) c\> cis8( a')\!
+		a4(-\offset X-offset -1 _\p a\< d)
 		g, g
 	} 
 	\new Voice { 
 		\voiceTwo
 		s2 cis,4
-		d4( d d)
+		\stemOffset #-1 d4( \stemOffset #-1 d \stemOffset #-1 d)
 		s2
 	}>> \oneVoice a'4(~\!
 % Bars 17 to 20
@@ -43,15 +41,15 @@ musicVioloncellMvtII = \relative c {
 	a d,8) r r4
 	R2.
 % Bars 21 to 25
-	<<{\times 2/3 {b'8( fis' a)} \times 2/3 {b,( e g)} \times 2/3 {b,( fis' b)}} \\ {b,4_\moltop b b}>>
+	<<{\tuplet 3/2 4 {b'8( fis' a) b,( e g) b,( fis' b)}} \\ {b,4_\moltop b b}>>
 	R2.
-	<<{\times 2/3 {c,8(\< g' c)} \times 2/3 {c( e\> g)} \times 2/3 {cis,( e a)\!}} \\ {c,,4 c cis}>>
-	\times 2/3 {d8( a' fis')} \times 2/3 {d,( a' e')} \times 2/3 {d,(\< a' fis')}
-	\times 2/3 {cis,( a' e')} d4 \times 2/3 {dis,8( b' fis')}
+	<<{\tupletDown \tuplet 3/2 4 {c,8(\< g' c) \beamOffset #'(-0.5 . -0.5) c( e\> g) \beamOffset #'(-0.5 . -0.5) cis,( e a)\!} \tupletNeutral} \\ {c,,4 c cis}>>
+	\tuplet 3/2 4 {d8( a' fis') d,( a' e') d,(\< a' fis')
+	cis,( a' e')} d4 \tuplet 3/2 {dis,8( b' fis')}
 % Bars 26 to 30
-	e4 \times 2/3 {fis,8( d' a')} c,4
-	\times 2/3 {b8(\mf d g)} \times 2/3 {g,( b d)} a4(~\dimD\>
-	a8 d) fis,4 a(~
+	e4 \tuplet 3/2 {fis,8( d' a')} c,4\!
+	\tuplet 3/2 4 {b8(\mf d g) g,( b d)} a4(~\dimD\>
+	a8 d) fis,4 a(~\!
 	a8\pp d) fis,4 a(~
 	a d,8) r r4 \bar "||" \mark \default \key f \major
 % Bars 31 to 35
@@ -69,32 +67,31 @@ musicVioloncellMvtII = \relative c {
 	
 	
 	
-	\clef treble
-	\cueDuring #"cueVoiceVlcmII" #UP {
-		\ni \MmrPos #-6 R2.
+	
+	\clef tenor \ni \mmrPos #-4 R2.
 % Bars 46 to 50
-		R
-		\MmrPos #-6 R
-		\clef bass R
-		r4 \no } r8 bes'_\ppdim r b
-	r c r4 c-\tweak X-offset #-1.5 ^\pizz \once \override Score.RehearsalMark.self-alignment-X = #-1 \mark \default
+	<< \mmrPos #-6 R {s4 \clef treble s2 }>>
+	\mmrPos #-6 R2.
+	\clef bass \mmrPos #-4 R \no
+	\voiceTwo r4 \oneVoice r8 bes'_\ppdim r b
+	r c r4 c-\tweak X-offset #-3 ^\pizz \mark \default
 % Bars 51 to 55
 	f, r r
-	r r -\tweak X-offset #-5 -\tweak Y-offset #-7 _\pocof <<{ %  
+	r r -\tweak X-offset #-4.5 -\tweak Y-offset #-6.5 _\pocof <<{ %  
 		<des' bes'>^\pizz % bar 52 & 53
-		r <c a'>
+		r <c a'> r
 	} \\ {
-		f,4\> -\tweak X-offset #-5 _\arco~
-		f2\p
-	}>> r4
+		\hairpinShorten #'(0.5 . -0.5) f,4\> -\tweak X-offset #-5 _\arco~
+		f2-\offset X-offset 0.5 \p r4
+	}>>
 	R2.
 	r4 r <<{ %bar 55 & 56
 		<b aes'>
-		r <c a'!>^\p
+		r <c a'!>^\p r
 	} \\ {
 		f,4 -\tweak X-offset #-4 -\tweak Y-offset #-7 _\pf~\>
-		f2\p
-	}>> r4
+		f2\p r4
+	}>> 
 	R2.
 	r4 r <<{ % bars 58 & 59
 		fis'!
@@ -113,17 +110,17 @@ musicVioloncellMvtII = \relative c {
 		f2.~
 		f
 	}>>
-	des4-\tweak X-offset #-2 ^\pizz -\tweak X-offset #-2 ^\tutti r r
+	des4-\offset X-offset -5 ^\pizz^\tutti r r
 	r cis'\pp r
 % Bars 66 to 70
 	cis r r \bar "||" \key d \major
 	fis, r r
 	R2.
 	a'4\f d r
-	r r d,_\mfcresc^\arco~
+	r r d,_\mfcresc-\offset X-offset -2 ^\arco~
 % Bars 71 to 75
-	d2-\tweak X-offset #1 ^\solo d4(~
-	d cis b 
+	d2^\solo \stemUp d4(~
+	d \stemNeutral cis b 
 	a) a^\pizz r
 	R2.*5
 % Bars 76 to 80
@@ -142,18 +139,18 @@ musicVioloncellMvtII = \relative c {
 	R2.
 	r4 r d
 	e e, a
-	\times 2/3 {c'8\f\> a fis} \times 2/3 {dis c a} \times 2/3 {g b e\!}
-	\times 2/3 {b\mf dis fis} b4 r
+	\tuplet 3/2 4 {\once \tupletUp c'8\f\> a fis dis c a g b e\!
+	\once \tupletUp b\mf dis fis} b4 r
 % Bars 91 to 95
-	\times 2/3 {c8\f\> a fis} \times 2/3 {dis c a} \times 2/3 {g b e\!}
-	\times 2/3 {c e g} c4 \times 2/3 {cis,,!8 a' e'}
-	\times 2/3 {d, a' fis'} \times 2/3 {d, a' e'} \times 2/3 {d,\< a' fis'}
-	\times 2/3 {cis, a' e'} \times 2/3 {d, a' fis'} \times 2/3 {dis, b' fis'}
-	\times 2/3 {e, b' g'} \times 2/3 {fis, d' a'} \times 2/3 {c, fis a}
+	\tuplet 3/2 4 {\once \tupletUp c8\f\> a fis dis c a g b e\!
+	c e g} c4 \tuplet 3/2 4 {cis,,!8 a' e'
+	d, a' fis' d, a' e' d,\< a' fis'
+	cis, a' e' d, a' fis' dis, b' fis'
+	e, b' g' fis, d' a' c, fis a\!
 % Bars 96 to 100
-	\times 2/3 {b,\mf d g} \times 2/3 {g, b d} a4(~^\arco
+	\once \tupletUp b,\mf d g g, b d} a4(~^\arco
 	a8\> d) fis,4 a4(~
-	a8 d) fis,4\pp a(~
+	a8 d)\! fis,4\pp a(~
 	a d,8) r r4 \mark \default
 	R2.*3
 % Bars 101 to 105
@@ -169,8 +166,8 @@ musicVioloncellMvtII = \relative c {
 	g
 	a!2\p\< a4(
 % Bars 111 to 115
-	g) fis( f)
-	e8\f^\pizz e' a, a' r4
+	g) fis( f)\!
+	e8[\f^\pizz e'] a, a' r4
 	R2.
 	a,4\p d r
 	r d r
