@@ -289,7 +289,7 @@ musicHornIIIMvtIII = \relative c'' {
 	
 	
 	
-	\aIIXoffset <<g2 {s4-\tweak X-offset #2 \sf\> s\!}>>
+	<<g2 {s4-\tweak X-offset #2 \sf\> s\!}>>
 % Bars 321 to 325
 	g4\p r
 	<<{g4. r8} {s4-\tweak X-offset #2.5 \sf\> s\!}>>
