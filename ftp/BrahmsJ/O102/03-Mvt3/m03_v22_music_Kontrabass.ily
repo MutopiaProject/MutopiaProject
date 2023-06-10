@@ -9,7 +9,7 @@ musicKontrabassMvtIII = \relative c {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	a4\p^\pizz^\solo r 
+	a4\p^\pizz-\offset X-offset -6 ^\solo r 
 	a r 
 	c r
 	c r
@@ -39,21 +39,19 @@ musicKontrabassMvtIII = \relative c {
 	
 	
 	
-	\tempo "poco rit." \MmrLength #10 R2*4
+	R2*4
 % Bars 31 to 35
 	
 	
-	\tempo "in tempo" \cueDuring #"cueVoiceKtbmIII" #UP {
-		\ni \clef treble R2
-		R
-		\clef tenor R
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R
+	\clef tenor \mmrPos #-4 R
 % Bars 36 to 40
-		R
-		\clef bass \MmrPos #-6 R
-		R \mark \default \no
-	}
+	\mmrPos #-4 R
+	\clef bass \mmrPos #-6 R
+	\mmrPos #-4 R \mark \default \no
 	e,16\ff-.^\tutti^\arco e'-. e,-. e'-. e,-. e'-. e,-. e'-. 
-	a,8-. c-. a-. f'-.
+	a,8-.[ c-.] a-. f'-.
 % Bars 41 to 45
 	a,-. gis'-. a,-. c'16-. b-.
 	a8-. e-. f-. e-. 
@@ -61,8 +59,8 @@ musicKontrabassMvtIII = \relative c {
 	c'-. g-. a-. g-.
 	c-. g-. aes-. g-.
 % Bars 46 to 50
-	e'->-. c-. c->-. a!-. 
-	a->-. f-. f->-. d-. 
+	e'->-.[ c-.] c->-. a!-. 
+	a->-.[ f-.] f->-. d-. 
 	c-. a-. e'-. e,-.
 	a-. r r4^\solo
 	R2
@@ -75,12 +73,10 @@ musicKontrabassMvtIII = \relative c {
 % Bars 56 to 60
 	
 % Bars 61 to 65
-	\cueDuring #"cueVoiceKtbmIII" #UP {
-		\ni \MmrPos #-6 R2
-		\MmrPos #-6 R
-		\MmrPos #-6 R
-		\MmrPos #-10 R \no
-	}
+	\ni \mmrPos #-6 R2
+	\mmrPos #-6 R
+	\mmrPos #-6 R
+	\mmrPos #-10 R \no
 	g8-.\f^\tutti g'-. g,-. g'-.
 % Bars 66 to 70
 	g,-. g'-. g,-. r
@@ -101,7 +97,7 @@ musicKontrabassMvtIII = \relative c {
 	bes) a\!(
 	d) f
 % Bars 81 to 85
-	e8( c) f-.( e-.)
+	e8([ c)] f-.( e-.)
 	d( a) a4~
 	a d~
 	d f \bar "||"
@@ -110,7 +106,7 @@ musicKontrabassMvtIII = \relative c {
 	g2 g,4 \bar "||"
 	\time 4/4 a a'( d,) d
 	g2\< g,\! \bar "||"
-	\time 2/4 a8-.\f r r4
+	\timeMvtIII a8-.\f r r4
 	d8-. r r4
 % Bars 91 to 95
 	g,8-. r r4
@@ -124,7 +120,7 @@ musicKontrabassMvtIII = \relative c {
 	
 	\mark \default
 % Bars 101 to 105
-	a8-\tweak X-offset #1.5 ^\pizz r r4
+	a8^\pizz r r4
 	R2*3
 	
 	
@@ -138,16 +134,14 @@ musicKontrabassMvtIII = \relative c {
 % Bars 111 to 115
 	
 	
-	\cueDuring #"cueVoiceKtbmIII" #UP {
-		\ni R2
-		\MmrPos #4 R
-		\MmrPos #4 R
+	\ni \mmrPos #8 R2
+	\mmrPos #4 R
+	\mmrPos #4 R
 % Bars 116 to 120
-		\MmrPos #4 R
-		\MmrPos #4 R
-		<< \MmrPos #4  R {s4 s8. s16^\solo } >> \bar "||" \key d \minor
-		R2 \no 
-	}
+	\mmrPos #6 R
+	\mmrPos #4 R
+	<< \mmrPos #4  R {s4 s8. s16^\solo } >> \bar "||" \key d \minor
+	\mmrPos #-4 R2 \no 
 	g4..^\arco\mf g16
 % Bars 121 to 125
 	bes4.. bes16 
@@ -160,12 +154,12 @@ musicKontrabassMvtIII = \relative c {
 	R2*3
 	
 	
-	r8 g'^\arco\f-. a-. a,-.
+	r8 g'\f-. a-. a,-.
 % Bars 131 to 135
 	d-.\p r r4
 	R2*2
 	
-	r8 d-.\f f-. e-.
+	r8 d-.-\offset X-offset -2 \f f-. e-.
 	a-.\p r r4
 % Bars 136 to 140
 	R2
@@ -180,7 +174,7 @@ musicKontrabassMvtIII = \relative c {
 	e f8. c16
 	e4 a,
 % Bars 146 to 150
-	\MmrLength #10 R2*2^\solo
+	R2*2^\solo
 	\mark \default
 	r4 f'\pp~
 	f c~
@@ -209,21 +203,20 @@ musicKontrabassMvtIII = \relative c {
 	
 	
 	
-	\cueDuring #"cueVoiceKtbmIII" #UP {
-		\ni << \MmrPos #-6 R2 {s4 s8 \clef treble s} >>
-		R2
+	\ni << \mmrPos #-8 R2 {s4 s8 \clef treble s} >>
+	\mmrPos #-4 R2
 % Bars 176 to 180
-		R
-		R
-		R
-		R \mark \default
-		r4 \no \clef bass } d'\pp~
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \mark \default \no 
+	\voiceOne r4 \oneVoice \clef bass d'\pp~
 % Bars 181 to 185
 	d a~
 	a d~
 	d a~
 	a d~\<
-	d g,~\>
+	d\! g,~\>
 % Bars 186 to 190
 	g\! gis~
 	gis a~
@@ -293,33 +286,31 @@ musicKontrabassMvtIII = \relative c {
 	
 	
 	
-	\cueDuring #"cueVoiceKtbmIII" #UP {
-		\ni \clef treble R2
-		R \no \clef bass
-	}
+	\ni \clef treble \mmrPos #-4 R2
+	\mmrPos #-4 R \no \clef bass
 % Bars 246 to 250
-	\tempo "poco rit." des2^\arco\pp(
+	des2^\arco\pp(
 	d!
 	ees~
 	ees)
-	\tempo "in tempo" aes,8^\pizz r r4
+	aes,8^\pizz r r4
 % Bars 251 to 255
 	R2*5
 % Bars 256 to 260
-	\cueDuring #"cueVoiceKtbmIII" #UP { \ni R2 \no }
+	\ni \mmrPos #-4 R2 \no
 	e2\sf^\arco
-	a8-.\ff^\tutti c-. a-. f'-.
-	a,-. gis'-. a,-. c'16-. b-.
+	a8-.\ff^\tutti[ c-.] a-. f'-.
+	a,-.[ gis'-.] a,-. c'16-. b-.
 	a8-. e-. f-. e-.
 % Bars 261 to 265
 	a-. e-. f-. e-.
 	c'-. g-. a-. g-.
 	c-. g-. aes-. g-.
-	e'-.-> c-. c->-. a!-.
-	a->-. f-. f->-. d-. 
+	e'-.->[ c-.] c->-. a!-.
+	a->-.[ f-.] f->-. d-. 
 % Bars 266 to 270
 	c-. a-. e'-.\sf e,-.
-	a'-.\sf a,-. c'-.\sf c,-.
+	a'-.\sf[ a,-.] c'-.\sf c,-.
 	d'-. r^\solo r4
 	R2
 	e,,4(_\mf^\tutti e-\tweak X-offset #0 \dimD\>
@@ -340,7 +331,7 @@ musicKontrabassMvtIII = \relative c {
 	e4 e(\< 
 	g) fis(\!
 	b)\> d,\!
-	cis8( a) d-.( cis-.)
+	cis8([ a)] d-.( cis-.)
 % Bars 286 to 290
 	b( fis) fis4~
 	fis b~
@@ -350,30 +341,28 @@ musicKontrabassMvtIII = \relative c {
 % Bars 291 to 295
 	\time 4/4 fis fis'( b,)\< b
 	e2 e,\! \bar "||"
-	\time 2/4 fis8-.\f r r4
+	\timeMvtIII fis8-.\f r r4
 	b8-. r r4
 	e,8-. r r4
 % Bars 296 to 300
 	r e'8^\pizz\p r \bar "||"
-	\tempo "Poco meno Allegro" a,8 r r4
+	a,8 r r4
 	R2*4
 % Bars 301 to 305
 	
-	\cueDuring #"cueVoiceKtbmIII" #UP {
-		\ni \MmrPos #4 R2
-		\MmrPos #4 R
-		\MmrPos #4 R \no
-	}
-	d4-\tweak X-offset #-2 ^\pizz\p r\one 
+	\ni \mmrPos #4 R2
+	\mmrPos #4 R
+	\mmrPos #4 R \no
+	\startMeasureCount d4^\pizz\p r
 % Bars 306 to 310
-	d4 r\two
-	d r\three
-	d r\four
-	d_\crescmarkup r\five
-	d r\six
+	d4 r
+	d r
+	d r
+	d_\crescmarkup r
+	d r
 % Bars 311 to 315
-	d r\seven
-	d r\eight
+	d r
+	d r \stopMeasureCount
 	cis^\arco\p d\<
 	dis e\!
 	eis fis\>
@@ -382,12 +371,12 @@ musicKontrabassMvtIII = \relative c {
 	cis4\p d\<
 	dis e\!
 	eis\f fis
-	b,\sf\> r4\!
+	b,-\offset X-offset -2 \sf\> r4\!
 % Bars 321 to 325
 	cis\p r
-	b4.\pp\> r8\!
+	b4.-\offset X-offset -2 \pp\> r8\!
 	b4.\> r8\! \bar "||" 
-	\tempo "Tempo primo" cis4-.\f fis-.
+	cis4-.\f fis-.
 	R2
 % Bars 326 to 330
 	r8 f-! e-! d-!

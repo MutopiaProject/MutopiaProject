@@ -3572,80 +3572,78 @@ cueVoiceVioloncellMvtIII = \relative c {
 	<e cis'>( <f d'>) <e gis>( <f a>) s4
 }
 %###############################################################################
-%#                        K O N T R A B A S S                                  #
+%#               C U E   V O I C E   F O R   K O N T R A B A S S               #
 %###############################################################################
-cueVoiceKtbMvtI = \relative c {
-	R1*23
+cueVoiceKontrabassMvtI = \relative c {
+	s1*23
 	% bar 24 - 30
 	s2 s4 d,(^\markup {Solo-Vlc.}
 	f1
-	e2) r4 \voiceOne cis'''_(^\markup {Klar.I}
+	e2) r4 \voiceTwo cis'''_(^\markup {Klar.I}
 	b) cis_( gis) a_(
-	b2 e,4) cis'(^\markup {Ob.I}
+	b2 e,4) \voiceOne cis'(^\markup {Ob.I}
 	b) cis( gis) a(
 	a'2 e4) r
-	R1*21
-	% bar 52
+	s1*21
+	% bar 52 - 56
 	r2 e,,,8(-\tweak X-offset #-3 ^\markup {Solo-Vlc.} fis16 gis a b c d
 	e) a,( b c d e fis gis a) e( fis gis a b c d 
 	e) a,( b c d e fis gis a) e fis gis a e f g 
 	a4-. a,-. <d a'>-. <d, c'>-.
 	<g, d' b'>-. r <e b' gis' d'>-. r
-	R1*95
-	%bar 152
-	s2 s4 e''(-\tweak X-offset #-6 ^\markup {Solo-Vlc.}
+	s1*95
+	%bar 152 - 156
+	s2 s4 \oneVoice e''(-\tweak X-offset #-6 ^\markup {Solo-Vlc.}
 	d8) r e4( b8) r c4(
 	d2 g,4) e'(
 	d8) r e4( b8) r c4(
-	c'2 gis4) r
-	R1*83
-	% bar 240
-	gis'16(^\markup {Solo-Viol.} eis b cis dis b gis ais b gis eis fis gis eis b cis)
+	c'2 gis4) s
+	s1*83
+	% bar 240 - 244
+	\voiceOne gis'16(-\offset X-offset -4.5 ^\markup {\column {\lower #1.5 "Solo-" "Viol." }} eis b cis dis b gis ais b gis eis fis gis eis b cis)
 	dis(^\markup {Solo-Vlc.} b gis ais b gis eis fis gis eis cis bis b gis eis cis)
-	a''''1^\p~\startTrillSpan^\markup {Solo-Viol.}
-	\afterGrace a2( {gis16[\stopTrillSpan a])} c!4\trill fis,\trill
-	a\trill c,!\trill ees\trill r
-	R1*91
-	% bar 336
-	s2 s4 cis4(^\markup {Solo-Vlc.}
+	\oneVoice a''''1\p~\startTrillSpan^\markup {Solo-Viol.}
+	\afterGrace a2_( {gis16[\stopTrillSpan a])} c!4\trill fis,\trill
+	a\trill c,!\trill ees\trill s
+	s1*91
+	% bar 336 - 342
+	s2 s4 cis4(-\offset X-offset -4 ^\markup {\column { \lower #1.5 "Solo-" "Vlc." }}
 	b8) r cis4( gis8) r a4(
 	b2 e,4) cis'4(
 	b8) r cis4( gis8) r a4(
 	a'1
 	e2.) <fis fis'>4(_\markup {Solo-Viol.}
-	<fisis fisis'>-.) r4 r2
+	<fisis fisis'>-.) s4 s2
 }
-cueVoiceKtbMvtII = \relative c {
+cueVoiceKontrabassMvtII = \relative c {
+	% bar 1 - 3
 	a'4^(-\tweak X-offset #-3 ^\markup {Hr.I} d2^\fermata)
 	e4^( a2)^\fermata
-	a,,8(^\markup {Solo-Vlc.} d e a fis d)
-	R2.*45
-	% bar 49
-	d4\rest_\markup {Vlc.} d8\rest bes d\rest b
+	\voiceOne a,,8(^\markup {Solo-Vlc.} d e a fis d)
+	s2.*45
+	% bar 49 - 52
+	\voiceTwo d4\rest_\markup {Vlc.} d8\rest bes d\rest b
 	d\rest c d4\rest c_\pizz
-	f, <g''' bes>(-\tweak X-offset #-2 ^\markup {Fl.} <a c>
-	<g bes> <f a>) r
+	f, \voiceOne <g''' bes>(-\tweak X-offset #-2 ^\markup {Fl.} <a c>
+	<g bes> <f a>) s
 }
-cueVoiceKtbMvtIII = \relative c {
-	R2*32
-	% bar 33
-	c'''8(-\tweak X-offset #-7 ^\markup {Solo-Vlc.} a4 f8)
+cueVoiceKontrabassMvtIII = \relative c {
+	s2*32
+	% bar 33 - 38
+	\voiceOne c'''8(-\tweak X-offset #-7 ^\markup {Solo-Vlc.} a4 f8)
 	d( b f d)
-	e8-.\noBeam \tuplet 3/2 8 {d16( e d} f8-.) \tuplet 3/2 8 {d16( e d}
-	e8-.) \tuplet 3/2 8 {d16( e d} a'8)-. \tuplet 3/2 8 {d,16( e d}
-	d,8-.) \tuplet 3/2 8 {g,16( g' g,} d'8-.) \tuplet 3/2 8 {g,16( g' g,)}
+	e8-.\noBeam \tuplet 3/2 8 {d16( e d} f8-.)\noBeam  \tuplet 3/2 8 {d16( e d}
+	e8-.)\noBeam  \tuplet 3/2 8 {d16( e d} a'8)-.\noBeam  \tuplet 3/2 8 {d,16( e d}
+	d,8-.)\noBeam  \tuplet 3/2 8 {g,16( g' g,} d'8-.)\noBeam  \tuplet 3/2 8 {g,16( g' g,)}
 	\tuplet 6/4 4 {d'16 f' d, f' d, f' d, f' d, f' d, f'}
-	R2*22
-	% bar 61
-	<g, f'>4.->^\markup {Solo-Vlc.} <g, f'>16-. c,-.
+	s2*22
+	% bar 61 - 64
+	<g, f'>4.->-\offset X-offset -4 ^\markup {\column {\lower #1.5 "Solo-" "Vlc." }} <g, f'>16-. c,-.
 	<f' des'>4.-> <c e>16-. c,-.
 	<e' c'>4.-> <ees c'>16-. c,-.
 	<ees' c'>-.\noBeam c,( <c' a'>) c,( <a' fis'>) c,( <fis ees'>8-.)
-	R2*20
-	R2.*2
-	R1*2
-	R2*24
-	% bar 113
+	s2*20 s2.*2 s1*2 s2*24
+	% bar 113 - 119
 	a'16-.^\markup {Solo-Vlc.} e-. dis-. d-. cis-. c-. b-. bes-. 
 	a8-. e-. dis-. d-.
 	cis-. f\rest f8.\rest d16-.
@@ -3653,27 +3651,24 @@ cueVoiceKtbMvtIII = \relative c {
 	a8.\rest a16-._\markup {Pk.} a8-. a\rest
 	a4\rest a8.\rest a'16-.-\tweak X-offset #-3 ^\markup {Vlc.}
 	a8-.[ a16\rest f-.] d8-.[ d16\rest bes-.]
-	R2*54
-	% bar 174
+	s2*54
+	% bar 174 - 180
 	s4 s8 <c'! a'>8(^\markup {Solo-Viol.}
 	<c' a'>) q4 <b gis'>8(
 	<c a'>) q4 <f d'>16( a
 	<e c'> a e c a[ c]) <d bes'>( f
 	<c a'> f c a) f[( <f' a>]) <e c'>( <d bes'>
 	<cis a'>8)\noBeam <cis e>8. <bes g'>16( <a f'> <g e'>)
-	<e cis'>( <f d'>) <e gis>( <f a>) r4
-	R2*63
-	% bar 244
-	f'8(^\markup {Klar.I} ees16 f) ees8( des16 ees)
-	des( c bes c) aes4
-	R2*10
+	\voiceTwo <e cis'>( <f d'>) <e gis>( <f a>) s4
+	s2*63
+	% bar 244 - 245
+	\stemUp f'8(^\markup {Klar.I} ees16 f) ees8( des16 ees) \stemNeutral
+	\voiceOne des( c bes c) aes4 
+	s2*10
 	% bar 256
 	\tuplet 3/2 8 {d,,,!16([-\tweak X-offset #-3 ^\markup {Vlc.} f b] f[ b d]) b([ d f] d[ f b])}
-	R2*32
-	R2.*2
-	R1*2
-	R2*9
-	% bar 302
+	s2*32 s2.*2 s1*2 s2*9
+	% bar 302 - 304
 	d,,2_(-\tweak X-offset #-3 _\markup {Vlc.}
 	d)_(
 	d)

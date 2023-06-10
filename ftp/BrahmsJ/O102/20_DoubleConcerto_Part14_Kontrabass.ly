@@ -1,35 +1,31 @@
-% Project Name : Double Concerto Op102
-% Fichier :      00_DoubleConcerto_Part14_Kontrabass.ily
-% Generated on : Friday 02 August 2019, 19:28:01
 %###############################################################################
 %#                               H E A D E R                                   #
 %###############################################################################
 %
 %    Composer            : Johannes Brahms (1833 - 1897)
-%    Artwork             : Double Concerto for Violin and Violoncello 
-%                          in A minor (1st movement)
-%    Opus                : 102
-%    Year of composition : 1887
-%    Source              : Breitkopf and Härtel, 1926-27
+%    work                : Double Concerto for Violin and Violoncello 
+%                          in A minor
+%    Source              : Leipzig: Breitkopf & Härtel, 1926-27. Plate J.B. 14.
+%    Type of score       : Score for Kontrabass
+%    Typesetter          : Sébastien MANEN
+%    Date of initiation  : Thursday 20 April 2023, 19:50
 %
 %###############################################################################
 %#                          I N C L U D E   F I L E S                          #
 %###############################################################################
-\version "2.20.0"
+\version "2.24.1"
 \include "./00-Common/DoubleConcerto_Header.ily"
+\include "./00-Common/DoubleConcerto_Shortcuts.ily"
 \include "./00-Common/DoubleConcerto_PaperParts.ily"
+\include "./00-Common/DoubleConcerto_LayoutParts.ily"
 \include "./00-Common/DoubleConcerto_timeMvt.ily"
-\include "./00-Common/DoubleConcerto_Parts_option.ily"
-\include "./00-Common/DoubleConcerto_VoiceName.ily"
-\include "./00-Common/DoubleConcerto_markup.ily"
-\include "./00-Common/DoubleConcerto_cueVoice.ily"
+\include "./00-Common/DoubleConcerto_NameVoice.ily"
+\include "./00-Common/DoubleConcerto_CueVoice.ily"
+\include "./00-Common/DoubleConcerto_Tempi.ily"
+\include "./00-Common/DoubleConcerto_Format_Part14_Kontrabass.ily"
 \include "./01-Mvt1/m01_v22_music_Kontrabass.ily"
 \include "./02-Mvt2/m02_v22_music_Kontrabass.ily"
 \include "./03-Mvt3/m03_v22_music_Kontrabass.ily"
-\include "./00-Common/DoubleConcerto_Format_Part14_Kontrabass.ily"
-\addQuote "cueVoiceKtbmI" { \cueVoiceKtbmI }
-\addQuote "cueVoiceKtbmII" { \cueVoiceKtbmII }
-\addQuote "cueVoiceKtbmIII" { \cueVoiceKtbmIII }
 %###############################################################################
 %#                          S C O R E    S E C T I O N                         #
 %###############################################################################
@@ -47,14 +43,30 @@
 			"Kontrabass"
 		}
 	}
+	\pageBreak
+	\markup {
+		\vspace #24 
+		\abs-fontsize #20
+		\fill-line {
+			\center-column {
+				\line { "This page is left blank" }
+				\line { "to optimize the turns" }
+			}
+		}
+	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIVoiceXXII
+				\formatKontrabassMvtI
 			}
 			\new Voice {
-				\timeMvtI \generalOptions \partOptions
-				\nameVoiceXXII \musicKontrabassMvtI
+				\keepWithTag #'(kontrabass) \tempiPartMvtI
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKontrabassMvtI
+			}
+			\new Voice {
+				\timeMvtI \nameKontrabassMvtI \musicKontrabassMvtI
 			}
 		>>
 		\header {
@@ -67,48 +79,52 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIVoiceXXII
+				\formatKontrabassMvtII
 			}
 			\new Voice {
-				\timeMvtII \generalOptions \partOptions
-				\nameVoiceXXII \musicKontrabassMvtII
+				\keepWithTag #'(kontrabass) \tempiPartMvtII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKontrabassMvtII
+			}
+			\new Voice {
+				\timeMvtII \nameKontrabassMvtII \musicKontrabassMvtII
 			}
 		>>
 		\header {
 			breakbefore = ##f
 			piece = \markup {
-				\fill-line {
+				\vspace #2.5 \fill-line {
 					\fontsize #4
 					II
 				}
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 	\score {
 		\new Staff <<
 			\new Voice {
-				\formatMvtIIIVoiceXXII
+				\formatKontrabassMvtIII
 			}
 			\new Voice {
-				\timeMvtIII \generalOptions \partOptions
-				\nameVoiceXXII \musicKontrabassMvtIII
+				\keepWithTag #'(kontrabass) \tempiPartMvtIII
+			}
+			\new Voice {
+				\InCueContext \cueVoiceKontrabassMvtIII
+			}
+			\new Voice {
+				\timeMvtIII \nameKontrabassMvtIII \musicKontrabassMvtIII
 			}
 		>>
 		\header {
-			breakbefore = ##t
+			breakbefore = ##f
 			piece = \markup {
 				\fill-line {
 					\fontsize #4
@@ -117,9 +133,6 @@
 			}
 		}
 		\layout {
-			\context {
-				\CueVoice \layoutCueVoice
-			}
 		}
 	}
 }

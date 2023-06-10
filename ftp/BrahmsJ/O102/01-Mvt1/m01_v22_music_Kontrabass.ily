@@ -9,7 +9,7 @@ musicKontrabassMvtI = \relative c' {
 	\key a \minor
 %	\transposition a
 % Bars 1 to 5
-	e4._\fmarc^\tutti d8 b4 r
+	e4._\fmarc-\offset X-offset -6 ^\tutti d8 b4 r
 	c4. b8 e,4 r
 	a-. r b-. r
 	c-. a-. f'-. d-. 
@@ -24,16 +24,14 @@ musicKontrabassMvtI = \relative c' {
 	
 	
 	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \MmrPos #4 R1
-		\MmrPos #4 R
+	\ni \mmrPos #4 R1
+	\mmrPos #4 R
 % Bars 26 to 30
-		<< R {s2^\tutti s4 \clef treble s} >>
-		\MmrPos #4 R1
-		\MmrPos #4 R
-		R
-		R \no
-	}
+	<< \mmrPos #4 R {s2^\tutti s4 \clef treble s} >>
+	\mmrPos #4 R1
+	\mmrPos #4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 31 to 35
 	\textLengthOn <>_\markup {Solo-Viol. u. Solo-Vlc.} R1*21 \textLengthOff \clef bass
 % Bars 36 to 40
@@ -44,35 +42,33 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 51 to 55
 	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \MmrPos #-8 R1
-		R
-		\clef tenor R
-		R
+	\ni \mmrPos #-8 R1
+	\mmrPos #-4 R
+	\clef tenor \mmrPos #-4 R
+	\mmrPos #-4 R
 % Bars 56 to 60
-		\clef bass \MmrPos #-8 R \mark \default \no
-	}
-	a,4.\ff-\tweak X-offset #1 ^\tutti b8 c4 r
+	\clef bass \mmrPos #-8 R \mark \default \no
+	a,4.\ff^\tutti b8 c4 r
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 % Bars 61 to 65
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 	d2-> dis->
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2\< b,4} \times 2/3 {e2 a,4}
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	f2\< b,4 e2 a,4}
 % Bars 66 to 70
 	d2 c\!
-	b8\ff\<-. dis-. fis-. a-. c4.(\> b8)
-	b,8\<-. e-. g-. ais!-. c4.\>( b8)\!
+	b8\ff\<-. dis-. fis-. a-.\! c4.(\> b8)\!
+	b,8\<-. e-. g-. ais!-.\! c4.\>( b8)\!
 	cis,8-. e-. a!-. cis-. dis,2
 	e8-. g-. ais-. b-. b,2
 % Bars 71 to 75
 	c2->\p c->
 	c-> c->
 	d!\< e
-	f g
+	f g\!
 	aes4-.\f bes2-> c4-.
 % Bars 76 to 80
 	f,-. r f,-. r
@@ -113,12 +109,12 @@ musicKontrabassMvtI = \relative c' {
 % Bars 106 to 110
 	f2\sf e8( c b a)
 	bes'2\sf a8( f e d)
-	d'( b!) e( c) f( d) e-. e,-.
+	d'([ b!)] e( c) f( d) e-. e,-.
 	r4 f8( d) e-. e,-. r4
 	f''8( d) r4 fis8( dis) r4
 % Bars 111 to 115
 	e-! r e,,-! r \mark \default
-	a4\fp\>-.-\tweak X-offset #1.5 ^\solo r8 b-. c4-.\! r
+	a4\fp\>-.^\solo r8 b-. c4-.\! r
 	R1*3
 	
 	
@@ -132,8 +128,8 @@ musicKontrabassMvtI = \relative c' {
 	b' r b, r
 	e_\crescpocoapoco r e, r
 	e' r e, r
-	e'2^\arco -\tweak DynamicText.self-alignment-X #LEFT \pcrescD\< a,
-	a d
+	e'2^\arco\pcrescD\< a,
+	a d\!
 % Bars 126 to 130
 	c8-.\f r r4 r2
 	R1
@@ -166,19 +162,18 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 151 to 155
 	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \clef tenor R1
-		R
-		R
-		R
+	\ni \clef tenor \mmrPos #-4 R1
+	\mmrPos #-4 R
+	\mmrPos #-4 R
+	\mmrPos #-4 R \no
 % Bars 156 to 160
-		r2 r4 \no } \clef bass c-.^\arco\p(
+	r2 r4 \clef bass c-.^\arco\p(
 	r cis-. r a-.)
 	r d(-. r f-.\<
 	r fis-. r d)-.\!
 	r f!2.\sf\>
 % Bars 161 to 165
-	e1( -\tweak DynamicText.self-alignment-X #LEFT \pdimD
+	e1(-\offset X-offset #2 \pdimD
 	d2 g,)
 	c1
 	f,1\pp\>
@@ -191,7 +186,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 171 to 175
 	\mark \default
-	r4 b-.\mf^\arco r e-.
+	r4 b-.\mf r e-.
 	r d-. r f!-.
 	r e-. r a-.
 	r g-. r g,4\p~
@@ -246,7 +241,7 @@ musicKontrabassMvtI = \relative c' {
 % Bars 216 to 220
 	cis8-. r r4 r g''->
 	e-> cis-> ais-> g-> \mark \default
-	fis,2\mf-\tweak X-offset #1.2 ^\solo g4 r
+	fis,2\mf^\solo g4 r
 	b2 c!4 r
 	R1*20
 % Bars 221 to 225
@@ -260,13 +255,12 @@ musicKontrabassMvtI = \relative c' {
 	
 	
 	
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \clef treble R1
+	\ni \clef treble \mmrPos #-4 R1
 % Bars 241 to 245
-		\clef bass R \once \override Score.RehearsalMark.self-alignment-X = #1 \mark \default
-		\clef treble R
-		R
-		r2 r4 \no } \clef bass r8 cis\pp^\pizz
+	\clef bass \mmrPos #-4 R \mark \default
+	\clef treble \mmrPos #-4 R
+	\mmrPos #-4 R \no
+	r2 r4 \clef bass r8 cis\pp^\pizz
 	d ees r bes c! d r d
 % Bars 246 to 250
 	g,8 r r4 r2
@@ -293,10 +287,10 @@ musicKontrabassMvtI = \relative c' {
 	f4-.\sf r g-.\sf r
 	aes_\benmarc-. f-. des'-. bes-.
 % Bars 266 to 270
-	\times 2/3 {ees,-. f-. g-.} \times 2/3 {aes-. bes-. c~}
+	\tuplet 3/2 2 {ees,-. f-. g-. aes-. bes-. c~}
 	c des,-. bes'-. g-.
-	\times 2/3 {c,-. d-. e!-.} \times 2/3 {f-. g-. aes-.}
-	\times 2/3 {bes-. c-. des-.} \times 2/3 {ees,-. f-. g-.} \mark #11
+	\tuplet 3/2 2 {c,-. d-. e!-. f-. g-. aes-.
+	bes-. c-. des-. ees,-. f-. g-.} \mark #11
 	aes,1\fpp^\solo(
 % Bars 271 to 275
 	gis)(
@@ -321,24 +315,24 @@ musicKontrabassMvtI = \relative c' {
 	d,-! r d-! r
 	g,-! r r2
 	e4-! r r2 \mark \default 
-	a4.\ff-\tweak X-offset #1.3 ^\tutti b8 c4 r
+	a4.\ff^\tutti b8 c4 r
 % Bars 291 to 295
 	d4. e8 f4 r
 	g2 a4. f8
 	b4. g8 c4. a8
 	d2 dis
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( b) a-.}
+	\tuplet 3/2 2 {e2-> d!4-. c( b) a-.}
 % Bars 296 to 300
 	d2 dis
-	\times 2/3 {e2-> d!4-.} \times 2/3 {c( g) c,-.}
-	\times 2/3 {f2 d4} \times 2/3 {g2 e4}
+	\tuplet 3/2 2 {e2-> d!4-. c( g) c,-.
+	f2 d4 g2 e4}
 	a2 f,
 	e\p^\solo e'
 % Bars 301 to 305
 	e e
 	fis gis
-	a( dis,)\<
-	e\> e,
+	a(\< dis,)\!
+	e\> e,\!
 	a4\p a^\pizz r a
 % Bars 306 to 310
 	r a e\f r
@@ -365,15 +359,14 @@ musicKontrabassMvtI = \relative c' {
 % Bars 331 to 335
 	
 % Bars 336 to 340
-	\cueDuring #"cueVoiceKtbmI" #UP {
-		\ni \clef treble R1
-		R
-		\MmrPos #-6 R
-		R
-		R
+	\ni \clef tenor \mmrPos #-4 R1
+	\mmrPos #-4 R
+	<< \mmrPos #-6 R {s2. \clef treble s4} >>
+	\mmrPos #-4 R1
+	\mmrPos #-4 R
 % Bars 341 to 345
-		R \once \override Score.RehearsalMark.X-offset = #3 \mark \default
-		r4 \no } \clef bass gis,-.\mf^\arco r cis-.
+	\mmrPos #-4 R \no \mark \default
+	r4 \clef bass gis,-.\mf^\arco r cis-.
 	r b-. r d-.
 	r cis-. r fis-.
 	r e-. r e,\p~
@@ -403,7 +396,7 @@ musicKontrabassMvtI = \relative c' {
 	
 % Bars 366 to 370
 	\mark \default
-	e,2\f-\tweak X-offset #1.7 ^\arco-\tweak X-offset #1.7 ^\tutti gis
+	e,2\f^\arco^\tutti gis
 	cis4-! fis,-! r2
 	e2 b'
 	e4-! e-! r2
@@ -480,5 +473,5 @@ musicKontrabassMvtI = \relative c' {
 	a4-. r f-. d-.
 	a-. r a-. r
 % Bar 431
-	a1\fermata \bar "|."
+	a1-\offset Y-offset 2 \fermata \bar "|."
 }

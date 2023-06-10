@@ -9,11 +9,9 @@ musicKontrabassMvtII = \relative c' {
 	\key d \major
 %	\transposition a
 % Bars 1 to 5
-	\cueDuring #"cueVoiceKtbmII" #UP { 
-		\ni R2._\fermata
-		R2._\fermata
-		R2. \no
-	}
+	\ni \mmrPos #-4 R2._\fermata
+	\mmrPos #-4 R2._\fermata
+	\mmrPos #-4 R2. \no
 	g4(_\pocofmadolce g, d')
 	R2.
 % Bars 6 to 10
@@ -26,7 +24,7 @@ musicKontrabassMvtII = \relative c' {
 	R2.
 	b4(_\pocofmadolce b b)
 	R2.
-	c4(\< c\> cis)
+	c4(\< c\> cis)\!
 	d(\p d\< d)
 % Bars 16 to 20
 	g, g' a(~\!
@@ -41,7 +39,7 @@ musicKontrabassMvtII = \relative c' {
 	d( d d)\<
 	cis d dis
 % Bars 26 to 30
-	e fis c
+	e fis c\!
 	b\mf g a(~\dimD\>
 	a8 d) fis,4 a4(~\!
 	a8\pp d) fis,4 a4(~
@@ -63,12 +61,11 @@ musicKontrabassMvtII = \relative c' {
 	
 	
 	
-	\cueDuring #"cueVoiceKtbmII" #UP {
-		\ni R2.
-		R \mark \default
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R \mark \default
 % Bars 51 to 55
-		<< R2. {s4 \clef treble s s} >>
-		r4 r \no } \clef bass f, -\tweak X-offset #-7.3 -\tweak Y-offset #-5 _\pocof\>~
+	<< \mmrPos #-7 R2. {s4 \clef treble s s} >> \no
+	r4 r \clef bass f, -\tweak X-offset #-7.3 -\tweak Y-offset #-5 _\pocof\>~
 	f2\p r4
 	R2.
 	r4 r f4 -\tweak X-offset #-3.7 -\tweak Y-offset #-5 _\pf\>~
@@ -89,7 +86,7 @@ musicKontrabassMvtII = \relative c' {
 	fis,4 r r
 	R2.
 	a'4\f d r
-	r r d,_\mfcresc^\arco~
+	r r d,_\mfcresc-\offset X-offset -1.5 ^\arco~
 % Bars 71 to 75
 	d2^\solo d4(~
 	d cis b
@@ -118,10 +115,10 @@ musicKontrabassMvtII = \relative c' {
 	c,4 c' cis,\p^\arco
 	d2 d4\<
 	cis d dis
-	e fis c
+	e fis c\!
 % Bars 96 to 100
 	b\mf g a(~
-	a8\> d) fis,4 a4(~
+	a8\> d) fis,4 a4(~\!
 	a8 d) fis,4\pp a(~
 	a d8) r r4 \mark \default
 	R2.*3
@@ -138,8 +135,8 @@ musicKontrabassMvtII = \relative c' {
 	g
 	a2\p\< a4(
 % Bars 111 to 115
-	g) fis( f)
-	e8\f^\pizz e' a, a' r4
+	g) fis( f)\!
+	e8[\f^\pizz e'] a, a' r4
 	R2.
 	a,4\p d r
 	r d r

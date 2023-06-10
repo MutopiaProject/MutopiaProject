@@ -443,10 +443,20 @@ nameVioloncellMvtIII = {
 	\set Staff.midiInstrument = #"cello"
 }
 %###############################################################################
-%#                           V O I C E   N A M E S                             #
+%#               V O I C E   N A M E   :   K O N T R A B A S S                 #
 %###############################################################################
-nameVoiceXXII = {
+nameKontrabassMvtI = {
 	\set Staff.instrumentName = #"Kontrabaß"
-	\set Staff.shortInstrumentName = #"K.B."
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"contrabass"
+}
+nameKontrabassMvtII = {
+	\set Staff.instrumentName = #"Kontrabaß"
+	\set Staff.shortInstrumentName = #""
+	\set Staff.midiInstrument = #"contrabass"
+}
+nameKontrabassMvtIII = {
+	\set Staff.instrumentName = #"Kontrabaß"
+	\set Staff.shortInstrumentName = #""
 	\set Staff.midiInstrument = #"contrabass"
 }
