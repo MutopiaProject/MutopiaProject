@@ -99,8 +99,8 @@ melone =  \relative c'' {
 
   % bars 26-29
   r r8 r16 f bes8. aes16 |
-  g4 ~ g8. aes16 des,4 ( |
-   d8.) c16 c4 ( bes8.) aes16 |
+  g4 ~ g8. aes16 des,4 ~ |
+  des8. c16 c4 ( bes8.) aes16 |
   aes4 ~ aes8. ees16 aes8. bes16 |
 
   % bars 30-33
