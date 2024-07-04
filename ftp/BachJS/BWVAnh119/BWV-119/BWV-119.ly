@@ -73,7 +73,7 @@ lower = \relative g
   {
     g8. a16 bf4 a  | % 5
     bf4 f f8 ef    | % 6
-    d4 f ef        | % 7
+    d4 g ef        | % 7
     c4 f d         | % 8
     bf4 g' ef      | % 9
     f8 ef d ef d c | % 10
