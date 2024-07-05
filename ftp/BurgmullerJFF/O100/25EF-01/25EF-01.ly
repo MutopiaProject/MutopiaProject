@@ -34,12 +34,12 @@ vOne =  \relative c''' {
   g_ \markup{\italic "cresc."} ( f e  d) g ( f e  d)
   f-4 ( e d  c) f ( e d  c)
   b-3\< ( a c-4 b\! d c b a
-  g b c d  g4) r 
+  g b c d g,4) r
   }
   
   \repeat volta 2 {
   
-  f8-5_\p ( d c b f' d c b
+  f8'-5_\p ( d c b f' d c b
   <c-2\< e-4 >1)(
   f8-5\! ( d c b f' d c b
   <c-2 e-4>1)\<
@@ -50,7 +50,7 @@ vOne =  \relative c''' {
   }
   
   \alternative {
-    {  e2.) r4}
+    {  c2.) r4}
     { c8-3 b ( c-3 d e f g c,-1 }
   }
   
