@@ -57,7 +57,6 @@ cresD = { \set crescendoText = \markup { \italic "   cresc." } \set crescendoSpa
 % SUPPRESSION DU PointAndClick
 PDFSimple =
 #(define-music-function (parser location) ()
-   (ly:set-option 'point-and-click #f)
    (make-music 'SequentialMusic 'void #t))
 \PDFSimple
 

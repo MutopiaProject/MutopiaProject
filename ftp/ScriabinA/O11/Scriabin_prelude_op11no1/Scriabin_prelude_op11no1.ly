@@ -32,7 +32,7 @@
   ragged-bottom = ##f
   ragged-last-bottom = ##f
 }
-\pointAndClickOff
+
 
 % Definitions to override page-breaking 
 myExplicitBreak = {

@@ -21,7 +21,6 @@
 
 #(set-default-paper-size (symbol->string (*paper-size*)))
 
-#(ly:set-option 'point-and-click #f)
 
 \paper {
   %% Page breaking

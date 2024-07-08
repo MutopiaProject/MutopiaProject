@@ -24,7 +24,6 @@ onceStem =
   $music #}
 )
 
-#(ly:set-option 'point-and-click #f)
 
 \score {
   \context PianoStaff <<

@@ -29,7 +29,7 @@
  tagline = ##f
 }
 
-\pointAndClickOff
+
 
 #(define modern-accidentals-style
   `(Staff ,(make-accidental-rule 'same-octave 0)

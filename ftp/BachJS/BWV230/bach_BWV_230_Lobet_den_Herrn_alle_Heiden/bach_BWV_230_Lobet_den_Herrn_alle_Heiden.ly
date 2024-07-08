@@ -33,7 +33,6 @@
   after-title-space = #0.1
   ragged-last-bottom = ##f %% stretch and center systems of last page
   %% annotate-spacing = ##t
-  #(ly:set-option 'point-and-click #f) %% for smaller PDFs
 }
 
 \layout {

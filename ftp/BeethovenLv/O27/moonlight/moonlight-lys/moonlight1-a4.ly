@@ -1,6 +1,5 @@
 \version "2.10.16"
 
-#(ly:set-option 'point-and-click #f)
 #(set-default-paper-size "a4" )
 #(set-global-staff-size 20 )
 

@@ -7,7 +7,6 @@ between-system-padding = 1
 between-system-space = 3
   %ragged-bottom=##f
   ragged-last-bottom=##f
-#(ly:set-option 'point-and-click #f)
 }
 
 #(set-global-staff-size 18.26)

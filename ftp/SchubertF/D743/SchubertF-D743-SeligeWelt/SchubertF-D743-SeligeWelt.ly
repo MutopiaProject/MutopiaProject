@@ -25,7 +25,6 @@ between-system-padding = 10\mm
   " " { \italic "♫  Franz Schubert: Selige Welt (D.743)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Selige Welt (D.743)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

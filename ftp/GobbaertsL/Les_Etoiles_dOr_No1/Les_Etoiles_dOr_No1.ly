@@ -24,7 +24,7 @@
  tagline = ##f
 }
 
-\pointAndClickOff
+
 
 global = {
   \time 3/4

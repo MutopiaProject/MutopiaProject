@@ -17,7 +17,7 @@
 \version "2.18.2"
 %#(set-default-paper-size "letter")
 #(set-global-staff-size 17.8)
-\pointAndClickOff
+
 
 %--------Definitions
 \include "chopin-op23-ballade-1-defs.ly"

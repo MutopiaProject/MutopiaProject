@@ -1,6 +1,5 @@
 \version "2.8.0"
 
-#(ly:set-option 'point-and-click #f)
 #(set-global-staff-size 20)
 
 moveFingering = #(define-music-function (parser location shift) (pair?)

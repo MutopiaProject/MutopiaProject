@@ -23,7 +23,6 @@ line-width = 186\mm
   " " { \italic "♫  Franz Schubert: Die junge Nonne (D.828)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Die junge Nonne (D.828)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

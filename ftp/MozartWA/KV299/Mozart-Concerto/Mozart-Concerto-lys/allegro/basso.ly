@@ -1,7 +1,6 @@
 \version "2.11.45"
 #(set-global-staff-size 22)
 \include "Misdefiniciones.ly"
-#(ly:set-option 'point-and-click #f)
 
 
 \header{

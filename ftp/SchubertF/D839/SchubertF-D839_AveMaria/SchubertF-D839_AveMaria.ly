@@ -22,7 +22,6 @@
   " " { \italic "♫  Franz Schubert: Ave Maria (D 839)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Ave Maria (D 839)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

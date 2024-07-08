@@ -20,7 +20,6 @@
   " " { \italic "♫  Franz Schubert: Psalm 23 (D 706)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Psalm 23 (D 706)  ♫" } " " }
- #(ly:set-option 'point-and-click #f)
 }
 
 \header {

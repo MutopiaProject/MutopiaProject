@@ -7,7 +7,6 @@
 
 
 \version "2.10.33"
-#(ly:set-option 'point-and-click #f)
 \include "english.ly"
 
 \header {

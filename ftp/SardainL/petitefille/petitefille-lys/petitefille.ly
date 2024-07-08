@@ -1,5 +1,4 @@
 \version "2.10.0"
-#(ly:set-option 'point-and-click #f)
 \include "catalan.ly"
 
 \include "1.ly"

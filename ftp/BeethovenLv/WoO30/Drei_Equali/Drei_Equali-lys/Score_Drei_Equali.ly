@@ -16,7 +16,6 @@
 \include "Notes_Trombone4_Movement3.lyi"
 
 #(set-global-staff-size 14)
-#(ly:set-option 'point-and-click #f)
 
 \paper
 {

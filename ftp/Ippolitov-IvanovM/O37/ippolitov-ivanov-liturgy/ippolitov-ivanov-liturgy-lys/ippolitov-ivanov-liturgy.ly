@@ -1,7 +1,6 @@
 \version "2.11.26"
 
 #(set-global-staff-size 18)
-#(ly:set-option 'point-and-click #f)
 
 \paper {
 	% Note: we need fonts that contains "yat" (Unicode 0x0463), hence Times Ten Cyrillic.

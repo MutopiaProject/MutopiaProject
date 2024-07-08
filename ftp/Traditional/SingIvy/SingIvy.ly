@@ -1,4 +1,3 @@
-#(ly:set-option 'point-and-click #f)
 
 \version "2.8.3"
 

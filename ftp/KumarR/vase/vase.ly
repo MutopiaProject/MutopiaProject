@@ -20,7 +20,6 @@
  tagline = ""
 }
 
-#(ly:set-option 'point-and-click #f)
 
 md = \change Staff=right
 mg = \change Staff=left

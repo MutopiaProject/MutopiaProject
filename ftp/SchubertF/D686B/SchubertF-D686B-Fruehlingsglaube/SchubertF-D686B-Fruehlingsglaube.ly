@@ -24,7 +24,6 @@ between-system-padding = 8\mm
   " " { \italic "♫  Franz Schubert: Frühlingsglaube (D.686B)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Frühlingsglaube (D.686B)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

@@ -1,7 +1,6 @@
 % -*- coding: utf-8 -*-
 \version "2.12.3"
 
-#( ly:set-option 'point-and-click #f )
 #(use-modules (srfi srfi-39))
 #(define *use-letter-paper* (make-parameter (ly:get-option 'letter)))
 

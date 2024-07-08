@@ -23,7 +23,6 @@ line-width = 186\mm
   " " { \italic "♫  Franz Schubert: Die Liebe hat gelogen (D.751)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Die Liebe hat gelogen (D.751)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

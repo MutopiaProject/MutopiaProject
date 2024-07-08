@@ -1,6 +1,5 @@
 \version "2.9.2"
 #(use-modules (ice-9 optargs))
-#(ly:set-option 'point-and-click #f)
 
 \include "common/loop-guile.ily"
 

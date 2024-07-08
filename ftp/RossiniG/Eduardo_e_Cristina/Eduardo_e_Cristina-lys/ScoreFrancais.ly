@@ -3,7 +3,6 @@
 \include "Global.lyp"   
                   
 #(set-global-staff-size 14)  
-#(ly:set-option 'point-and-click #f)
 \paper{ 
 		#(define page-breaking ly:minimal-breaking)
     top-margin = 5\mm

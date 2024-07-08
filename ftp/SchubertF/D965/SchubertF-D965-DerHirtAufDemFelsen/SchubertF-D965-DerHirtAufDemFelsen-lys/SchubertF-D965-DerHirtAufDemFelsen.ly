@@ -25,7 +25,6 @@ oddHeaderMarkup  = \markup \fontsize #1 \fill-line {
  " " { \italic "♫  Franz Schubert: Der Hirt auf dem Felsen (D.965)  ♫" }  \fromproperty #'page:page-number-string }
 evenHeaderMarkup = \markup \fontsize #1 \fill-line {
  \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Der Hirt auf dem Felsen (D.965)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

@@ -1,7 +1,6 @@
 ﻿\version "2.11.43"
 #(set-global-staff-size 22)
 \include "Misdefiniciones.ly"
-#(ly:set-option 'point-and-click #f)
 
 \header{
           title= "Concerto in C for Flute and Harp"

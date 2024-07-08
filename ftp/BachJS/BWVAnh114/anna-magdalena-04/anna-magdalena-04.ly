@@ -23,7 +23,7 @@
  tagline = ##f
 }
 #(set-global-staff-size 21)
-\pointAndClickOff
+
 
 \version "2.19.49"
 

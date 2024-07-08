@@ -24,7 +24,6 @@ line-width = 186\mm
   " " { \italic "♫  Franz Schubert: An den Mond (D.259)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: An den Mond (D.259)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

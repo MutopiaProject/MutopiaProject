@@ -22,7 +22,6 @@ oddHeaderMarkup  = \markup \fill-line {
   " " { \italic "♫  Franz Schubert: Impromptu in As-dur (D.899-4)  ♫" }  \fromproperty #'page:page-number-string }
 evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Impromptu in As-dur (D.899-4)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 

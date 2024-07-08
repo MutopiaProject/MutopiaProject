@@ -23,7 +23,6 @@
   " " { \italic "♫  Franz Schubert: Nähe des Geliebten (D162)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Nähe des Geliebten (D162)  ♫" } " " }
- #(ly:set-option 'point-and-click #f)
 }
 
 \header {

@@ -26,7 +26,6 @@ between-system-padding = 10\mm
   " " { \italic "♫  Franz Schubert: Schwanengesang (D.744)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Schwanengesang (D.744)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

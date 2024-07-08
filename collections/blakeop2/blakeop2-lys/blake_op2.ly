@@ -1,6 +1,6 @@
 \version "2.16.0"
 \include "book-titling.ily"
-\pointAndClickOff
+
 \paper {
   %#(set-paper-size "tabloid" 'landscape)
   %#(set-paper-size "a2" 'landscape)

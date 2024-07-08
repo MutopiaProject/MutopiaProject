@@ -11,7 +11,7 @@
 
 \version "2.16.1"
 
-\pointAndClickOff
+
 %#(set-default-paper-size "letter")
 
 %----------------------- HEADERS --------------------------%

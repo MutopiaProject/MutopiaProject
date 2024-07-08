@@ -23,7 +23,6 @@
   " " { \italic "♫  Franz Schubert: Sängers Morgenlied (D163 & D165)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Sängers Morgenlied (D163 & D165)  ♫" } " " }
- #(ly:set-option 'point-and-click #f)
 }
 
 \header {

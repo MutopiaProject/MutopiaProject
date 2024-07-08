@@ -1,6 +1,5 @@
 \version "2.14.0"
 
-#(ly:set-option 'point-and-click #f)
 
 \paper { ragged-last-bottom = ##f }
 

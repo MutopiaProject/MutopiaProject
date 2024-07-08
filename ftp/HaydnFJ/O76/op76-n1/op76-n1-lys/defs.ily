@@ -2,7 +2,6 @@
 
 \version "2.18.0"
 
-#(ly:set-option 'point-and-click #f)
 
 % Some useful macros
 

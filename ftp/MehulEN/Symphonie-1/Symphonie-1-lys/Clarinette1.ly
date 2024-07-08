@@ -3,7 +3,6 @@
 \include "Global.lyp"                     
 
 #(set-global-staff-size 20)  
-#(ly:set-option 'point-and-click #f)
 
 \paper{ 
     top-margin = 5.0

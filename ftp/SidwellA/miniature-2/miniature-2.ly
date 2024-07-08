@@ -8,7 +8,6 @@
 % changes, I'd love to hear them!  My current email address can always be found
 % at my website (http://entai.co.uk).
 
-#(ly:set-option 'point-and-click #f)
 
 \header
 {

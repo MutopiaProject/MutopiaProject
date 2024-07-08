@@ -48,7 +48,7 @@
   ragged-bottom = ##t
   ragged-last-bottom = ##f
 }
-\pointAndClickOff
+
 
 
 shortStem = \once \override Stem #'length-fraction = #(magstep -4)
