@@ -9,7 +9,8 @@
   mutopiaopus = "BWV 791"
   mutopiainstrument = "Harpsichord, Piano"
   style = "Baroque"
-  source = "Unknown"
+  source = "Bach-Gesellschaft Ausgabe 1851-1899"
+  sourceurl = "https://ks15.imslp.org/files/imglnks/usimg/d/d1/IMSLP00766-BWV0791.pdf"
   copyright = "Public Domain"
   maintainer = "Olivier Vermersch"
   maintainerEmail = "olivier.vermersch (at) wanadoo.fr"
@@ -99,8 +100,8 @@ melone =  \relative c'' {
 
   % bars 26-29
   r r8 r16 f bes8. aes16 |
-  g4 ~ g8. aes16 des,4 ( |
-   d8.) c16 c4 ( bes8.) aes16 |
+  g4 ~ g8. aes16 des,4 ~ |
+  des8. c16 c4 ( bes8.) aes16 |
   aes4 ~ aes8. ees16 aes8. bes16 |
 
   % bars 30-33
