@@ -158,7 +158,7 @@ und küss sie auf den Mund.
  
  title = "Ich halte ihr die Augen zu" 
  subtitle = "" 
- composer = "Robert Volkmann (1815–1883)" 
+ composer = "Robert Volkmann (1815–1883), 1857" 
  opus = "op. 30, Nr. 3" 
  arranger = "" 
  poet = "Heinrich Heine (1797–1856), 1832 od. 33" 
@@ -168,12 +168,12 @@ und küss sie auf den Mund.
  mutopiapoet = "H. Heine (1797–1856)" 
  mutopiaopus = "Op. 30, No. 3" 
  mutopiainstrument = "Choir (TTBB)" 
- date = "1900s" 
+ date = "1857" 
  source = "Leipzig : C. F. Peters, 1907" 
  style = "Romantic" 
  license = "Creative Commons Attribution 4.0" 
  maintainer = "Klaus Rettinghaus" 
- lastupdated = "2014/March/01" 
+ lastupdated = "2017-07-07" 
  
  footer = "Mutopia-2014/03/23-1703"
  copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat{ \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #12 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2014 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans { " " \with-url #"http://creativecommons.org/licenses/by/4.0/" "Creative Commons Attribution 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
