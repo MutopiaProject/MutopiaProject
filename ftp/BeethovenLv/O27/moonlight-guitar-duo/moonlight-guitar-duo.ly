@@ -54,8 +54,6 @@
   evenFooterMarkup = \oddFooterMarkup
 }
 
-% suppress local file system path in pdf
-#(ly:set-option 'point-and-click #f)
 
 % guitar neck position indicators
 pI    = ^\markup { "I" }

@@ -1,6 +1,5 @@
 \version "2.12.1"
 \include "english.ly"
-#(ly:set-option 'point-and-click #f)
 
 \header {
 	title = "Lualåt"

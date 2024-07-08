@@ -48,8 +48,6 @@
   evenFooterMarkup = \oddFooterMarkup
 }
 
-% suppress local file system path in pdf
-\pointAndClickOff
 
 % guitar neck position indicators
 pI    = ^\markup { "I" }

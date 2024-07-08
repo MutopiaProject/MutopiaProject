@@ -1,5 +1,4 @@
 \version "2.11.0"
-#(ly:set-option 'point-and-click #f)
 \header {
   filename = "Tschaikowsky-op37,1.ly"
   title = \markup {

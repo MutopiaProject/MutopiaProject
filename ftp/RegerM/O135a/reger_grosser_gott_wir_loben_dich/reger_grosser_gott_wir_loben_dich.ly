@@ -33,7 +33,6 @@ tempoMark = #(define-music-function (parser location markp) (string?)
     after-title-space = #0.1
     between-title-space = #0.0
     ragged-last-bottom = ##f %% stretch and center systems of last page
-    #(ly:set-option 'point-and-click #f) %% for smaller PDFs
 }
 
 \layout {

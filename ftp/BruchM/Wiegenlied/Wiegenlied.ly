@@ -1,5 +1,4 @@
 #(set-global-staff-size 15.5) 
-#(ly:set-option 'point-and-click #f) 
 
 \version "2.18.0" 
 

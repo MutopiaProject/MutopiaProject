@@ -26,7 +26,7 @@
   ragged-last-bottom = ##f
   first-page-number = #2
 }
-\pointAndClickOff
+
 
 % Definitions to override page-breaking
 myBreak = {

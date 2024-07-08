@@ -1,6 +1,6 @@
 \include "version.ily"
 \include "definitions.ily"
-\pointAndClickOff
+
 
 \header {
   date = "1735"

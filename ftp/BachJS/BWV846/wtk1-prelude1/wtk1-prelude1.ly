@@ -42,7 +42,7 @@
   ragged-last-bottom = ##f
 }
 
-\pointAndClickOff
+
 
 %% 
 %% Define the left and the right hand in new variables

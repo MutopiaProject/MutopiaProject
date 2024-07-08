@@ -21,7 +21,6 @@
   " " { \italic "♫  Franz Schubert: Auf dem Wasser zu singen (D 774)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Auf dem Wasser zu singen (D 774)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

@@ -1,7 +1,7 @@
 \version "2.18.2"
 \include "changePitch.ly"
 
-\pointAndClickOff
+
 
 \header {
   title = "Tenth Regiment March"

@@ -24,7 +24,6 @@ line-width = 186\mm
   " " { \italic "♫  Franz Schubert: Jünglingswonne (D.983)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fontsize #2 \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Jünglingswonne (D.983)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

@@ -23,7 +23,6 @@ line-width = 186\mm
   " " { \italic "♫  Franz Schubert: Der Musensohn (D.764)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Der Musensohn (D.764)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

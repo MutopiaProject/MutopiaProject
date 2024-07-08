@@ -26,7 +26,6 @@ line-width = 186\mm
   " " { \italic "♫  Franz Schubert: Suleika 2 (D.717)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Suleika 2 (D.717)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

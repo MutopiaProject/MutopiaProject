@@ -20,7 +20,6 @@
   " " { \italic "♫  Franz Schubert: Impromptu in c-moll (D 899-1)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Impromptu in c-moll (D 899-1)  ♫" } " " }
- #(ly:set-option 'point-and-click #f)
 }
 
 \header {

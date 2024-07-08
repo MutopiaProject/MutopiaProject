@@ -21,7 +21,6 @@ arc = \markup { \italic "arco"}
 vl = \markup { \italic "Vcl."}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-#(ly:set-option 'point-and-click #f)
 #(set-global-staff-size 14)
 
 

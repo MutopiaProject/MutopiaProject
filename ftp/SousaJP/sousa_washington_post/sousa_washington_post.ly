@@ -5,7 +5,6 @@
 \paper {
   ragged-bottom=##f
   ragged-last-bottom=##f
-#(ly:set-option 'point-and-click #f)
 } 
 
 

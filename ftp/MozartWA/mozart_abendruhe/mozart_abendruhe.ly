@@ -25,7 +25,6 @@
     between-system-space = #0.3
     after-title-space = #0.1
     ragged-last-bottom = ##f %% stretch and center systems of last page
-    #(ly:set-option 'point-and-click #f) %% for smaller PDFs
 }
 
 \layout {

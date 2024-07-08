@@ -1,6 +1,5 @@
 \version "2.7.13"
 #(use-modules (ice-9 optargs))
-#(ly:set-option 'point-and-click #f)
 
 %% #{ ... #} syntax redefinition, in order to allow text substitution
 \include "../common/sharp-curly.ily"

@@ -1,7 +1,6 @@
 \version "2.11.35"
 
 #(set-global-staff-size 18)
-#(ly:set-option 'point-and-click #f)
 
 \paper {
 	% We need a font with the Cyrillic "yat" character (U+0463).

@@ -38,7 +38,6 @@ Text translation:
 %}
 
 #(set-global-staff-size 20)
-#(ly:set-option 'point-and-click #f)
 
 dtDown = { \once\override DynamicText #'extra-offset = #'(0 . -1) }
 hpLeftDown = { \once\override Hairpin #'extra-offset = #'(-3 . -1.5) }

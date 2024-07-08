@@ -26,7 +26,6 @@ after-title-space = 60\mm
   " " { \italic "♫  Franz Schubert: An den Mond (D.296)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: An den Mond (D.296)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

@@ -18,7 +18,6 @@
   " " { \italic "♫  Franz Schubert: Streichquartett No. 12 “Quartettsatz” in c-moll (D 703)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Streichquartett No. 12 “Quartettsatz” in c-moll (D 703)  ♫" } " " }
- #(ly:set-option 'point-and-click #f)
 }
 
 \header {

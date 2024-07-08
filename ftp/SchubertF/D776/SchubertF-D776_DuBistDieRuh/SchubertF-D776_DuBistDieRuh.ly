@@ -21,7 +21,6 @@
   " " { \italic "♫  Franz Schubert: Du bist die Ruh (D 776)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Du bist die Ruh (D 776)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

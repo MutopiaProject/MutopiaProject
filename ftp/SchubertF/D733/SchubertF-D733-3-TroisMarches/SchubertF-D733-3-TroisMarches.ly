@@ -25,7 +25,6 @@ oddHeaderMarkup  = \markup \fontsize #2 \fill-line {
   " " { \italic "♫  Franz Schubert: Trois Marches militaires (D.733-3)  ♫" }  \fromproperty #'page:page-number-string }
 evenHeaderMarkup = \markup \fontsize #2 \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Trois Marches militaires (D.733-3)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

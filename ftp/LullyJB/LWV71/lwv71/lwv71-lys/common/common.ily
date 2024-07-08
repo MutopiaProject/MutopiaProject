@@ -1,6 +1,5 @@
 \include "italiano.ly"
 \version "2.11.30"
-#(ly:set-option 'point-and-click #f)
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %% Page layout

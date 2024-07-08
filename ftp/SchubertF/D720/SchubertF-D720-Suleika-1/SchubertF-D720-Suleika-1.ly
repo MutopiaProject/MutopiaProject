@@ -25,7 +25,6 @@ oddHeaderMarkup  = \markup \fill-line {
  " " { \italic "♫  Franz Schubert: Suleika 1 (D.720)  ♫" }  \fromproperty #'page:page-number-string }
 evenHeaderMarkup =  \markup \fill-line {
  \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Suleika 1 (D.720)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

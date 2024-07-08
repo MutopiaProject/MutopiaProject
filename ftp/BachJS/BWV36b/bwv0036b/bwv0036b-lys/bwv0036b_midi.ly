@@ -2,7 +2,7 @@
 
 \include "common/version.ily"
 \include "common/definitions.ily"
-\pointAndClickOff
+
 markupInstrumentName =
 #(define-scheme-function
    (parser location text)

@@ -24,7 +24,6 @@ between-system-padding = 7\mm
   " " { \italic "♫  Franz Schubert: Fischerweise (D.881B)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup =  \markup \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Fischerweise (D.881B)  ♫" } " " }
-#(ly:set-option 'point-and-click #f)
 }
 
 \header {

@@ -1,6 +1,5 @@
 \version "2.8.0"
 
-#(ly:set-option 'point-and-click #f)
 %set to 19.5 - at 20, page breaking goes weird with letter
 #(set-global-staff-size 19.5)
 #(set-default-paper-size "a4")

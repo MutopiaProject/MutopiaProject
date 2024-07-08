@@ -25,7 +25,6 @@ indent = 5\mm
   " " { \italic "♫  Franz Schubert: Tantum ergo in Es-Dur (D.962)  ♫" }  \fromproperty #'page:page-number-string }
  evenHeaderMarkup = \markup \fontsize #3 \fill-line {
   \fromproperty #'page:page-number-string { \italic "♫  Franz Schubert: Tantum ergo in Es-Dur (D.962)  ♫" } " " }
- #(ly:set-option 'point-and-click #f)
 }
 
 \header {

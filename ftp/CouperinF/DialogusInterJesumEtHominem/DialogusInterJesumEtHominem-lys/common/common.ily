@@ -3,7 +3,6 @@
 
 %% Staff size
 #(set-global-staff-size 16)
-#(ly:set-option 'point-and-click #f)
 
 \include "common/functions.ily"
 

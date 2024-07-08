@@ -1,7 +1,6 @@
 \version "2.11.9"
 
 
-#(ly:set-option 'point-and-click #f)
 #(use-modules (srfi srfi-39))
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -55,7 +54,6 @@
 \include "book-page-layout.ily"
 \include "book-toc.ily"
 
-#(ly:set-option 'point-and-click #f)
 
 %% Staff size
 #(set-global-staff-size 18)
