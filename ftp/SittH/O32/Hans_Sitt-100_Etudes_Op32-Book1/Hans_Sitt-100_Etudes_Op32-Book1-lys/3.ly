@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-\version "2.12.3"
+\version "2.24.0"
 
 tres = \relative d'{
 	\set Staff.midiInstrument = "violin"
@@ -20,15 +20,15 @@ tres = \relative d'{
   | \bowH fis \downbow b8 (a g fis)  \noBreak
   | e4-0 (a) a,-0  \noBreak
   | b e8-4 (d cis b)  \noBreak
-  | \override Slur #'positions = #'(2.5 . 1.0) a4-0 (d) d,-0  \noBreak
-  | \override Slur #'positions = #'(1.0 . 1.0) b'8 (cis d cis b a-0)  \noBreak
+  | \override Slur.positions = #'(2.5 . 1.0) a4-0 (d) d,-0  \noBreak
+  | \override Slur.positions = #'(1.0 . 1.0) b'8 (cis d cis b a-0)  \noBreak
   | gis (fis e d-0 cis b) \break \noPageBreak
 
 %3
   | a (cis) e a-0 cis e-0  \noBreak
-  | \override Slur #'positions = #'(1.0 . 3.5) a2 (a,4-0)  \noBreak
-  | \once \override TextScript #'script-priority = #-100 \bowH a8_4 \downbow (g) fis e fis g  \noBreak
-  | \once \override TextScript #'script-priority = #-100  \override Slur #'positions = #'(1.0 . 1.0) a_0 \upbow (b) cis d e-4 cis  \noBreak
+  | \override Slur.positions = #'(1.0 . 3.5) a2 (a,4-0)  \noBreak
+  | \once \override TextScript.script-priority = #-100 \bowH a8_4 \downbow (g) fis e fis g  \noBreak
+  | \once \override TextScript.script-priority = #-100  \override Slur.positions = #'(1.0 . 1.0) a_0 \upbow (b) cis d e-4 cis  \noBreak
   | \bowH d \downbow (e-4) fis g a b  \noBreak
   | \bowXH a4 \upbow fis d  \noBreak
   | a8-4 (g fis e) fis g \break \noPageBreak
@@ -90,8 +90,8 @@ tres = \relative d'{
 %10
   | e4-0 a8 (g fis e-0)  \noBreak
   | fis4 g8 (fis e d)  \noBreak
-  | \override Slur #'positions = #'(3.8 . 1.0)  a4_0 (a') g  \noBreak
-  | \override Slur #'positions = #'(1.0 . 1.0)   fis8 (a g fis) e-4 d  \noBreak
+  | \override Slur.positions = #'(3.8 . 1.0)  a4_0 (a') g  \noBreak
+  | \override Slur.positions = #'(1.0 . 1.0)   fis8 (a g fis) e-4 d  \noBreak
   | cis (b a g) fis e  \noBreak
   | d4-0 a'8-4 (g fis e)  \noBreak
   | d2.  \bar "|."  \pageBreak

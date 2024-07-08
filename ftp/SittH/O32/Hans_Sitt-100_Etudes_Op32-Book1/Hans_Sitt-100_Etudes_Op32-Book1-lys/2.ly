@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-\version "2.12.3"
+\version "2.24.0"
 
 dois = \relative g{
 	\set Staff.midiInstrument = "violin"
@@ -34,11 +34,11 @@ dois = \relative g{
   | e-4 (d  cis b ) a-4 (g fis e) \noBreak
   | g (fis e d) d2  \noBreak
   | g4 \downbow (g,) a8 (b c d-0)  \noBreak
-  | \override Slur #'positions = #'(2.0 . 1.0)  e4 (e'-4) d8 (c b a-0)  \noBreak
+  | \override Slur.positions = #'(2.0 . 1.0)  e4 (e'-4) d8 (c b a-0)  \noBreak
   | d4 (d,) e8 (fis g a-0) \break \noPageBreak
 
 %5
-  |  \override Slur #'positions = #'(1.0 . 1.0) b4 (c8 d) e-0 (fis g a) \noBreak
+  |  \override Slur.positions = #'(1.0 . 1.0) b4 (c8 d) e-0 (fis g a) \noBreak
   | b4. (a8) a (g fis e)  \noBreak
   | g2 fis  \noBreak
   | e4.-4 (c8) a (c b a-0)  \noBreak
@@ -51,7 +51,7 @@ dois = \relative g{
   | g2 fis  \noBreak
   | d8 (e fis g) a2-4 \noBreak
   | d,8 (fis g a) b2  \noBreak
-  |  \override Slur #'positions = #'(1.0 . 1.0) a8-0 (b c d) e4.-4 (c8)  \noBreak
+  |  \override Slur.positions = #'(1.0 . 1.0) a8-0 (b c d) e4.-4 (c8)  \noBreak
   | b (c d e) fis (g a g) \break \noPageBreak
 
 %7
@@ -60,7 +60,7 @@ dois = \relative g{
   | a8 (b a g) fis (e d c) \noBreak
   | d (e-4 d c) b (a-0 g fis)  \noBreak
   | g (a-0 b c) d2 \noBreak
-  | \override Slur #'positions = #'(0.0 . 1.0) g,8 (b c d) e2-4 \break \noPageBreak
+  | \override Slur.positions = #'(0.0 . 1.0) g,8 (b c d) e2-4 \break \noPageBreak
 
 %8
   | d8 (c b a-0) g4. (f!8)  \noBreak
@@ -72,7 +72,7 @@ dois = \relative g{
 
 %9
   | g4 (g,) a8 (b c d-0)  \noBreak
-  |\override Slur #'positions = #'(1.0 . 0.0) e4 (e'-4) d8 (c b a-0)  \noBreak
+  |\override Slur.positions = #'(1.0 . 0.0) e4 (e'-4) d8 (c b a-0)  \noBreak
   | d, (e fis g) a-0 (b c d)  \noBreak
   | c  (b e-4 d) c (b a g)  \noBreak
   | g4 (g,) a8 (b c d-0)  \noBreak

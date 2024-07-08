@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-\version "2.12.3"
+\version "2.24.0"
 
 dezesseis = \relative d'{
 	\set Staff.midiInstrument = "violin"
@@ -7,11 +7,10 @@ dezesseis = \relative d'{
 	\key d \minor
 	\clef treble
 
-#(override-auto-beam-setting '(end * * * *) 1 4)
-\set tupletSpannerDuration = #(ly:make-moment 1 4)
-\override TupletBracket #'bracket-visibility = ##f
+\tupletSpan 4
+\override TupletBracket.bracket-visibility = ##f
 %1
-  | \times 2/3 {d8---0 \mf \downbow ^ \markup { \hspace #-5 \raise #-18.0 \fontsize #-1 \bold "Allegro" } f-- a---0 d-- a--_0 f-- e-- g-- a--_0 cis-- a--_0 g-- \noBreak
+  | \tuplet 3/2 {d8---0 \mf \downbow ^ \markup { \hspace #-5 \raise #-18.0 \fontsize #-1 \bold "Allegro" } f-- a---0 d-- a--_0 f-- e-- g-- a--_0 cis-- a--_0 g-- \noBreak
   | d f a-0 d f g a (gis bes) a f d \break \noPageBreak
 %2
   | a-0 cis e-0 a e-0 cis b! d e-0 gis e-0 d \noBreak

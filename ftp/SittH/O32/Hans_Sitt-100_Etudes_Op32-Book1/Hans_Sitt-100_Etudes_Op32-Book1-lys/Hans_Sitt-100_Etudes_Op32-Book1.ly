@@ -1,5 +1,13 @@
 % -*- coding: utf-8 -*-
-\version "2.12.3"
+\version "2.24.0"
+
+%{
+FIXME: Since version 2.24 lilypond prints the following programming error:
+
+  programming error: Improbable offset for stencil: inf staff space
+  Setting to zero.
+
+%}
 
 \include "defs.ly"
 \include "1.ly"
@@ -46,7 +54,7 @@ subsubtitle = "Book 1"
 oddheader = "Hans Sitt - 100 Etudes, Op. 32 - book 1"
 license = "Creative Commons Attribution-ShareAlike 2.5"
 footer = "Mutopia-2018/12/11-929"
-copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2018 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/2.5/" "Creative Commons Attribution ShareAlike 2.5 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url "http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url "http://www.lilypond.org" "LilyPond " ©" 2018 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url "http://creativecommons.org/licenses/by-sa/2.5/" "Creative Commons Attribution ShareAlike 2.5 (Unported) License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
 tagline = ##f
 }
 
@@ -61,8 +69,8 @@ last-bottom-spacing = 4\mm
 
 oddHeaderMarkup = \markup {
  \line {
- \hspace #42 \on-the-fly #not-first-page \fontsize #-3 \fromproperty #'header:oddheader
- \hspace #35 \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string
+ \hspace #42 \unless \on-first-page \fontsize #-3 \fromproperty #'header:oddheader
+ \hspace #35 \if \should-print-page-number \fromproperty #'page:page-number-string
 
     }
 }
@@ -70,8 +78,8 @@ oddHeaderMarkup = \markup {
 
 evenHeaderMarkup = \markup {
     \line {
-      \on-the-fly #print-page-number-check-first \fromproperty #'page:page-number-string
-      \hspace #42 \on-the-fly #not-first-page \fontsize #-3 \fromproperty #'header:oddheader
+      \if \should-print-page-number \fromproperty #'page:page-number-string
+      \hspace #42 \unless \on-first-page \fontsize #-3 \fromproperty #'header:oddheader
 
     }
 }
@@ -79,11 +87,11 @@ evenHeaderMarkup = \markup {
 
 oddFooterMarkup = \markup {
      \line {
-      \hspace #55 \on-the-fly #first-page \tiny \fromproperty #'header:copyright
+      \hspace #55 \if \on-first-page \tiny \fromproperty #'header:copyright
 
     }
-      \hspace #-10 \on-the-fly #not-first-page \on-the-fly #not-last-page \tiny \with-url #"http://mutopiaproject.org"  "http://mutopiaproject.org"
-      \hspace #8  \on-the-fly #last-page \fontsize #-5 \fromproperty #'header:tagline
+      \hspace #-10 \unless \on-first-page \on-the-fly #not-last-page \tiny \with-url "http://mutopiaproject.org"  "http://mutopiaproject.org"
+      \hspace #8  \if \on-last-page \fontsize #-5 \fromproperty #'header:tagline
 
   }
 
@@ -102,7 +110,7 @@ evenFooterMarkup = \oddFooterMarkup
 }
 
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 82 4)
+tempoWholesPerMinute = #(ly:make-moment 82/4)
 }
 
 \layout {  }
@@ -114,7 +122,7 @@ tempoWholesPerMinute = #(ly:make-moment 82 4)
 \dois
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 90 4)
+tempoWholesPerMinute = #(ly:make-moment 90/4)
 }
 \layout { }
 }
@@ -125,7 +133,7 @@ tempoWholesPerMinute = #(ly:make-moment 90 4)
 \tres
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 90 4)
+tempoWholesPerMinute = #(ly:make-moment 90/4)
 }
 \layout { }
 }
@@ -136,7 +144,7 @@ tempoWholesPerMinute = #(ly:make-moment 90 4)
 \quatro
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 90 4)
+tempoWholesPerMinute = #(ly:make-moment 90/4)
 }
 \layout { }
 }
@@ -146,7 +154,7 @@ tempoWholesPerMinute = #(ly:make-moment 90 4)
 \cinco
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 98 4)
+tempoWholesPerMinute = #(ly:make-moment 98/4)
 }
 \layout { }
 }
@@ -158,7 +166,7 @@ tempoWholesPerMinute = #(ly:make-moment 98 4)
 }
 
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 90 4)
+tempoWholesPerMinute = #(ly:make-moment 90/4)
 }
 \layout { }
 }
@@ -170,7 +178,7 @@ tempoWholesPerMinute = #(ly:make-moment 90 4)
 }
 
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 82 4)
+tempoWholesPerMinute = #(ly:make-moment 82/4)
 }
 \layout { }
 }
@@ -181,7 +189,7 @@ tempoWholesPerMinute = #(ly:make-moment 82 4)
 \oito
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 90 4)
+tempoWholesPerMinute = #(ly:make-moment 90/4)
 }
 \layout { }
 }
@@ -193,7 +201,7 @@ tempoWholesPerMinute = #(ly:make-moment 90 4)
   \nove
  }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 90 4)
+tempoWholesPerMinute = #(ly:make-moment 90/4)
 }
 \layout { }
 }
@@ -205,7 +213,7 @@ tempoWholesPerMinute = #(ly:make-moment 90 4)
 }
 
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 104 4)
+tempoWholesPerMinute = #(ly:make-moment 104/4)
 }
 \layout { }
 }
@@ -216,7 +224,7 @@ tempoWholesPerMinute = #(ly:make-moment 104 4)
 \onze
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 98 4)
+tempoWholesPerMinute = #(ly:make-moment 98/4)
 }
 \layout { }
 }
@@ -226,7 +234,7 @@ tempoWholesPerMinute = #(ly:make-moment 98 4)
 \doze
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 94 4)
+tempoWholesPerMinute = #(ly:make-moment 94/4)
 }
 \layout { }
 }
@@ -237,7 +245,7 @@ tempoWholesPerMinute = #(ly:make-moment 94 4)
 \treze
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 84 4)
+tempoWholesPerMinute = #(ly:make-moment 84/4)
 }
 \layout { }
 }
@@ -248,7 +256,7 @@ tempoWholesPerMinute = #(ly:make-moment 84 4)
 \quatorze
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 94 4)
+tempoWholesPerMinute = #(ly:make-moment 94/4)
 }
 \layout {
   ragged-last = ##t
@@ -261,7 +269,7 @@ tempoWholesPerMinute = #(ly:make-moment 94 4)
 \quinze
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 156 8)
+tempoWholesPerMinute = #(ly:make-moment 156/8)
 }
 \layout { }
 }
@@ -272,7 +280,7 @@ tempoWholesPerMinute = #(ly:make-moment 156 8)
 \dezesseis
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 90 4)
+tempoWholesPerMinute = #(ly:make-moment 90/4)
 }
 \layout {
   ragged-last = ##t
@@ -287,7 +295,7 @@ tempoWholesPerMinute = #(ly:make-moment 90 4)
 \dezessete
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 98 4)
+tempoWholesPerMinute = #(ly:make-moment 98/4)
 }
 \layout { }
 }
@@ -297,7 +305,7 @@ tempoWholesPerMinute = #(ly:make-moment 98 4)
 \dezoito
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 92 4)
+tempoWholesPerMinute = #(ly:make-moment 92/4)
 }
 \layout { }
 }
@@ -309,7 +317,7 @@ tempoWholesPerMinute = #(ly:make-moment 92 4)
 \dezenove
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 88 4)
+tempoWholesPerMinute = #(ly:make-moment 88/4)
 }
 \layout {
   ragged-last = ##t
@@ -321,7 +329,7 @@ tempoWholesPerMinute = #(ly:make-moment 88 4)
 \vinte
 }
 \midi {
-tempoWholesPerMinute = #(ly:make-moment 156 8)
+tempoWholesPerMinute = #(ly:make-moment 156/8)
 }
 \layout {
   ragged-last = ##t

@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-\version "2.12.3"
+\version "2.24.0"
 
 #(use-modules (srfi srfi-39))
 #(define *use-letter-paper* (make-parameter (ly:get-option 'letter)))
@@ -29,6 +29,6 @@
    empty-stencil))
 
 
-bowH =  \once \override Script #'staff-padding = #'1.6
-bowXH =  \once \override Script #'staff-padding = #'2.9
+bowH =  \once \override Script.staff-padding = #'1.6
+bowXH =  \once \override Script.staff-padding = #'2.9
 

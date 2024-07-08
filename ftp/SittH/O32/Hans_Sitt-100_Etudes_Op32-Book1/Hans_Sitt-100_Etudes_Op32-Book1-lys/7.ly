@@ -1,5 +1,5 @@
 % -*- coding: utf-8 -*-
-\version "2.12.3"
+\version "2.24.0"
 
 sete = \relative c'''{
 	\set Staff.midiInstrument = "violin"
@@ -7,18 +7,18 @@ sete = \relative c'''{
 	\key c \major
 	\clef treble
 
-\set tupletSpannerDuration = #(ly:make-moment 1 4)
-\override TupletNumber #'font-size = #'-4
-\override TupletBracket #'bracket-visibility = ##f
+\tupletSpan 4
+\override TupletNumber.font-size = #'-4
+\override TupletBracket.bracket-visibility = ##f
 %1
-  | \times 2/3 {\bowXH g8 \downbow ^ \markup { \hspace #-5 \raise #-10.0 \fontsize #-1 \bold "Andante" } ([a g] f [g f] e [f e])  \noBreak
+  | \tuplet 3/2 {\bowXH g8 \downbow ^ \markup { \hspace #-5 \raise #-10.0 \fontsize #-1 \bold "Andante" } ([a g] f [g f] e [f e])  \noBreak
   | f ([g f] e [f e] d [e d])  \noBreak
   | c ([b c] d [c d] e [d e])  \noBreak
   | d ([e d] b [c b] d [e d])\break  \noPageBreak
 %2
   | f ([g f] e [f e] d [e d])   \noBreak
   | e ([f e] d [e d] c [d c])  \noBreak
-  | \override TupletNumber #'transparent = ##t \stemDown b ([a b] c [b c] d [c d])  \noBreak
+  | \override TupletNumber.transparent = ##t \stemDown b ([a b] c [b c] d [c d])  \noBreak
   | \stemNeutral c ([d c] a [b a] c [d c]) \break   \noPageBreak
 %3
   | a' ([b a] g [a g] f [g f])  \noBreak
@@ -77,7 +77,7 @@ sete = \relative c'''{
   | c ([d c] b [a b] c [d c]) \break \noPageBreak 
 %14
   | bes' ([a g] a [g f] g [f e])  \noBreak
-  | \override Slur #'positions = #'(3.0 . 1.8)  a ([bes a] g [a g] f [g f])   \noBreak
+  | \override Slur.positions = #'(3.0 . 1.8)  a ([bes a] g [a g] f [g f])   \noBreak
   | d ([c b] c [b a] b [a g])   \noBreak
   | g ([a g] e [f e] g [a g])  \break \noPageBreak 
 %15
