@@ -1,0 +1,111 @@
+%  work         : Double Concerto Op102
+%  typesetter   : Sébastien MANEN
+%  date         : Thursday 20 April 2023, 19:50
+%###############################################################################
+%#                          M U S I C   S E C T I O N                          #
+%###############################################################################
+musicHornIVMvtII = \relative c, {
+	\clef treble
+	\key c \major
+	\transposition f
+% Bars 1 to 5
+	\mark \markup {\abs-fontsize #16 "in F"} \ni \mmrPos #4 R2.\fermata
+	\mmrPos #6 R2.\fermata \no
+	R2.*22^\solo
+% Bars 6 to 10
+	
+% Bars 11 to 15
+	
+% Bars 16 to 20
+	
+% Bars 21 to 25
+	
+	
+	
+	
+	\ni \mmrPos #4 R2.
+% Bars 26 to 30
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R \no
+	\voiceOne r4 r \oneVoice \clef bass c~\p-\offset X-offset -4 ^\tutti \bar "||" \mark \default
+% Bars 31 to 35
+	c2.~
+	c~
+	c~
+	c2 c4~
+	c2.\<~
+% Bars 36 to 40
+	c2\> r4\!
+	R2.
+	r4 r r^\solo
+	\clef treble R2.*8
+	
+	
+% Bars 41 to 45
+	
+% Bars 46 to 50
+	
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R \mark \default \no
+% Bars 51 to 55
+	\clef bass c'2.\p~
+	c2 r4
+	r r c~
+	c2.~
+	c2 r4
+% Bars 56 to 60
+	R2.*7
+% Bars 61 to 65
+	
+	
+	r4 r \clef treble ees'\pp~
+	ees2.~^\tutti
+	ees2 r4
+% Bars 66 to 70
+	R2. \bar "||"
+	R2.*2
+	
+	e4\f( a2)~
+	a2.~
+% Bars 71 to 75
+	a4^\solo r r
+	R2.
+	b4.\f\> r8\! r4
+	R2.*26
+% Bars 76 to 80
+	
+% Bars 81 to 85
+	
+% Bars 86 to 90
+	
+% Bars 91 to 95
+	
+% Bars 96 to 100
+	
+	
+	
+	\mark \default
+	R2.*6
+% Bars 101 to 105
+	
+% Bars 106 to 110
+	\ni \mmrPos #4 R2.
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+	\mmrPos #4 R
+% Bars 111 to 115
+	\mmrPos #4 R
+	\mmrPos #6 R
+	\mmrPos #6 R \no
+	\hairpinShorten #'(-0.3 . 0) e,4(-\offset X-offset -1.5 \p\< \hairpinShorten #'(0 . 3) a2)\>~
+	a2.\!~
+% Bars 116 to 118
+	a~
+	a2 r4
+	\ni R2.\fermata \bar "|."
+}
