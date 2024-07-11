@@ -1,8 +1,7 @@
-\version "2.23.7"
-
 Global = {
    \key f \major
    \time 4/4
+   \include "../global.ly"
 }
 
 Upper = \relative c'' {
@@ -71,7 +70,7 @@ Upper = \relative c'' {
   }
   %\break
 
-    \repeat volta 4 {
+  \repeat volta 4 {
       g''16
   |   << g4 \\ e \\ c >>  r16 g a b!  c8 g  e' c
         \tupletUp \tuplet 3/2 8 {
@@ -99,11 +98,10 @@ Upper = \relative c'' {
   | << { e'16 f e d } \\ \stemUp c8 \\ { \stemDown g16 a g f } >>  << { c'8. c16 } \\ { e,8 r } >>
     des'16( c b! c)  f,( c' b! c)
   | d!( c b! c)  f, aes g f  bes des bes g  e! g c bes
-  | a c f a,  << { g f' bes, e } \\ { g,8 bes } >>  << { f'4. f16\rest } \\ { c4. a16\rest } \\ { a4. d,16\rest } >>
-    }
-
-% la si do re mi fa sol
-%  a b  c  d  e  f  g
+  | a c f a,
+    << { g f' bes, e } \\ { g,8 bes } >>
+    << { f'4. f16\rest } \\ { c4. a16\rest } \\ { a4. c,16\rest } >>
+  }
 }
 
 Lower = \relative c {
@@ -134,41 +132,46 @@ Lower = \relative c {
   %5
   | bes2  a8 d  g, c
   | f, e  d c  b!16 d e f  g8 g,
-  | \tupletUp \tuplet 3/2 8 {
+  | \tupletDown\tuplet 3/2 8 {
       c16[ d e] c[ d e]
     }
-    \tupletUp \tuplet 3/2 8 {
+    \tuplet 3/2 8 {
       a,16[ b c] a[ b c]
     }
     f,8 a'  d, f
-  | \tupletUp \tuplet 3/2 8 {
+  | \tuplet 3/2 8 {
       b,!16[ c d] b[ c d]
     }
-    \tupletUp \tuplet 3/2 8 {
+    \tuplet 3/2 8 {
       g,16[ a b] g[ a b]
     }
     e,8 g'  c, e
-  | \tupletUp \tuplet 3/2 8 {
+  | \tuplet 3/2 8 {
       a,16[ b c] a[ b c]
     }
-    \tupletUp \tuplet 3/2 8 {
+    \tuplet 3/2 8 {
       fis,16[ g a] fis[ g a]
     }
     d,8 a'  fis d
   %10
   | g4  r8 g'  aes16([g fis g])  c,[g' fis g]
   | a!16([g fis g])  c,[ees d c]  f!4~  f16 f e d
-  | c e a f  g8 g,  << { c4  c8 r16 } \\ { r16 << { \stemUp c, e g } \\ { c,8.~ c8. } >> } >>
+  | c e a f  g8 g,
+    << {
+      c4  c8 c16\rest
+    } \\ {
+      r16 << { \stemUp c, e g } \\ { c,8.~ c8. } >>
+    } >>
   \break
   }
 
   \repeat volta 4 {
     r16
   | c'8~  c32 g a b!  c16 b c d
-    \tupletUp \tuplet 3/2 8 {
+    \tuplet 3/2 8 {
       e16[ d c] e[ d c]
     }
-    \tupletUp \tuplet 3/2 8 {
+    \tuplet 3/2 8 {
       g'16[ f e] g[ f e]
     }
   | c'8 g~  g8~  g32 b! a g  f8 f  f~  f32 a g f
@@ -188,22 +191,36 @@ Lower = \relative c {
   | b,!8 d  g, b!  e,4  r16 bes'' a! g
   | f16 a d bes  c8 c,  << { f4  f8 r16 } \\ { r16 << { \stemUp f, a c } \\ { f,8.~ f8. } >> } >> \partial 16
   }
-
-% la si do re mi fa sol
-%  a b  c  d  e  f  g
 }
 
 \score {
   \new PianoStaff
   <<
-    \accidentalStyle Score.piano-cautionary
-    \new Staff = "upper" \Upper
-    \new Staff = "lower" \Lower
+    \accidentalStyle Score.piano
+    \context Staff = "upper" <<
+      \set Staff.midiInstrument = #"acoustic grand"
+      \Global
+      \clef treble
+      \Upper
+    >>
+    \context Staff = "lower" <<
+      \set Staff.midiInstrument = #"acoustic grand"
+      \Global
+      \clef bass
+      \Lower
+    >>
   >>
   \header {
-    subtitle = "Allemande."
+    title = "Allemande"
   }
-  \layout { }
+  \layout {
+    \context {
+      \PianoStaff
+      \override Parentheses.font-size = #-2
+      \override TextScript.font-shape = #'italic
+      \override TextScript.font-size = #-1
+    }
+  }
   \midi {
     \tempo 4 = 50
   }

@@ -1,8 +1,7 @@
-\version "2.23.7"
-
 Global = {
   \key f \major
   \time 3/2
+  \include "../global.ly"
 }
 
 Upper = \relative c'' {
@@ -39,9 +38,6 @@ Upper = \relative c'' {
   %20
   | << f2.~ \\ { } >> << { f2 b8\rest } \\ { c,2 c8\rest } >>
   }
-
-% la si do re mi fa sol
-%  a b  c  d  e  f  g
 }
 
 Lower = \relative c {
@@ -106,22 +102,36 @@ Lower = \relative c {
        \\ { f,2.~ f2 } >>
     << a'8\rest \\ d,8\rest \\ f,8\rest >>
   }
-
-% la si do re mi fa sol
-%  a b  c  d  e  f  g
 }
 
 \score {
   \new PianoStaff
   <<
-    \accidentalStyle Score.piano-cautionary
-    \new Staff = "upper" \Upper
-    \new Staff = "lower" \Lower
+    \accidentalStyle Score.piano
+    \context Staff = "upper" <<
+      \set Staff.midiInstrument = #"acoustic grand"
+      \Global
+      \clef treble
+      \Upper
+    >>
+    \context Staff = "lower" <<
+      \set Staff.midiInstrument = #"acoustic grand"
+      \Global
+      \clef bass
+      \Lower
+    >>
   >>
   \header {
-    subtitle = "Courante."
+    title = "Courante"
   }
-  \layout { }
+  \layout {
+    \context {
+      \PianoStaff
+      \override Parentheses.font-size = #-2
+      \override TextScript.font-shape = #'italic
+      \override TextScript.font-size = #-1
+    }
+  }
   \midi {
     \tempo 2 = 90
   }

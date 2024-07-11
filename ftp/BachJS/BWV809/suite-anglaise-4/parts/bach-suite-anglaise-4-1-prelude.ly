@@ -1,12 +1,10 @@
-\version "2.23.7"
-
 Global = {
    \key f \major
    \time 4/4
+   \include "../global.ly"
 }
 
 Upper = \relative c' {
-   \clef treble
    \tempo \markup { \italic Vitement }
    %1
    | r16 c-. d-. e-.  f-. g-. a-. f-.  bes-. c-. bes-. a-.  g-. c-. bes-. c-.
@@ -16,10 +14,10 @@ Upper = \relative c' {
    | \stemUp { f16[g f e]  d^([e f a])  b,^([c d g])  c,^([d e g]) }
    | \stemUp { a,16^([ b c f])  b,^([ c d f])  g, a b e  a, b c e }
    %5
-   | f,8[a]  d8.[d16]  d16 g, a b  c d e c
+   | \stemNeutral f,8[a]  d8.[d16]  d16 g, a b  c d e c
    | f16 g f e  d g f g  e8 c  c'8. c16
-   | c8^~[c32 b c a]  b8.b16  b8 e,  a8. a16
-   | a8.[g32 f]  g8.g16  g8 c,  f8.f16
+   | \stemUp c8^~[c32 b c a]  b8.b16  b8 e,  a8. a16
+   | \stemNeutral a8.[g32 f]  g8.g16  g8 c,  f8.f16
    | f16 a g f  e f g e  f g f e  d g f g
    %10
    | e c d e  f g a f  bes c bes a  g c bes c
@@ -62,7 +60,7 @@ Upper = \relative c' {
    %35
    | g16 c a c  g c f, c'  e, c' f, c'  e, c' d, c'
    | c,16 c' d, c'  e, c' fis, c'  << { bes d, e fis } \\ g16 >>  g a a\prall g32 a
-   | b8 c  b a  << { r8 ees' d c } \\ g2~ >>
+   | bes8 c  b a  << { r8 ees' d c } \\ g2~ >>
    | << { bes8 c  d e! } \\ { g, g  f e } >>  << { a8 a } \\ { d,8 d16 e } >>  << { d'8. d16 } \\ { f,8. f16 } >>
    | << { d'8. e16 } \\ e,4 >>  << { cis'8. d16 } \\ r4 >>  << { d16 a b! cis  d e f d } \\ { r8 a,  d d } >>
    %40
@@ -94,7 +92,7 @@ Upper = \relative c' {
    | << { g' g  g g  g f  f f } \\ { \stemUp \shiftOn e e  e e  e d  d d } \\ { \stemDown a8 a  a a  a a  a a } >>
    | << { f'16 g, bes d } \\ \once \shiftOn \stemUp d16 \\ { \once \stemDown g,16 } >>
      bes16 g bes d
-     << { e8 d  d cis } \\ { d,8\rest \stemUp \shiftOn a'  a a } \\ { g8\rest \stemDown f e \shiftOn <e g> } >>
+     << { e8 d  d cis } \\ { c,8\rest \stemUp \shiftOn a'  a a } \\ { g8\rest \stemDown f e \shiftOn <e g> } >>
    %60
    | << { d'16 \change Staff = "lower" { a, b cis } } \\ { \stemUp \shiftOn a'16 } \\ { \stemDown f16 } >>
      d16 e f d  g a g f  e a g a
@@ -159,14 +157,10 @@ Upper = \relative c' {
      }
    }
    \fine
-   \pageBreak
-
-% la si do re mi fa sol
-%  a b  c  d  e  f  g
 }
 
 Lower = \relative c {
-   \clef bass
+   \stemNeutral\tieNeutral
    %1
    | r1
    %2-19
@@ -184,42 +178,46 @@ Lower = \relative c {
        \revert Stem.details.beamed-lengths
      }
      \change Staff = "lower" {
-       \stemDown a, } d8.[d16]  d8.[e16]  c8.\prall[c16]
+       \stemDown a, } \stemNeutral\tieNeutral d8.[d16]  d8.[e16]  c8.\prall[c16]
    %5
    | c16 e d c  b a g f  e4~  e16 d c b
    | a g a f  g8 g'  c,16 g' a b  c d e c
    | \change Staff = "upper" {
-       f16 g f e  d g f g  c, d e g
+       \stemDown f16 g f e  d g f g  c, d e g
      }
      \change Staff = "lower" {
        f, g a c
      }
-   | b c d f  e, f g b  a b c e  d, e f a
+   | \stemNeutral b c d f  e, f g b  a b c e  d, e f a
    | g8 c,  c'8.c16  c8.d16  bes8.\prall[bes16]
    %10
    | bes8 c16 bes  a g f e  d c d bes  c8 c,
-   | \stemUp f4  r8 { \stemDown f'  g16 c b a }  g f e d
-   | c8 f  g g,  \once \stemUp c,4  c''8.c16
+   | f4  r8 f'  g16 c b a  g f e d
+   | c8 f  g g,  c,4  c''8.c16
    | c8.d16  bes8.\prall[bes16]  bes16 c, d e  f g a f
    | bes c bes a  g c bes c  a8 f  bes8.bes16
    %15
    | bes8.c16  a8.\prall[bes16]  bes16 d, e f  g a bes g
    | c c, d e  f g a f  bes a g f  e d c bes
    | a bes c e  d e f a  g g, a bes  c a bes c
-   | \once \stemUp d,4  r8 d'8  g16 a g f  e c d e
-   | << { \stemDown f g f e  d16 c bes a  bes8[g]  c[c,] } \\ { \stemUp s4 c''8\rest c16\rest a16 g8  s8  g16 c bes c } >>
+   | d,4  r8 d'8  g16 a g f  e c d e
+   | << {
+       \stemDown f g f e  d16 c bes a  bes8[g]  c[c,]
+     } \\ {
+       \stemUp s4 c''8\rest c16\rest a16 g8  s8  g16 c bes c
+     } >>
    }
    \alternative {
      {
    %20
    | << a4 \\ { f,8\fermata  f'16 e } >>  f8 g  a bes  a g
    | << { r8 d' c bes  a bes c d } \\ { f,2~  f8 f e d } >>
-   | << g4 \\ c, >>  r16 c' b c  g c a c  g c f, c'
+   | << g4 \\ c, >> \stemNeutral r16 c' b c  g c a c  g c f, c'
    | e, c' f, c'  e, c' d, c'  c, c' d, c'  e, c' f, c'
    | << { b8 r } \\ { g[ g,] } >>  r8 g'  d r  r4
    %25
    | r16 g b d  b g b d  r c, e g  e c e g
-   | a f, a c  { \stemUp a f a c  b g b d  b g b d }
+   | a f, a c  a f a c  b g b d  b g b d
    | e,8 e'16 f  g8 g,  c,4  c'8. c16
    | c8. d16  b8. c16  c g a b  c d e c
    | f g f e  d g f g  e g a b  c d e c
@@ -254,7 +252,7 @@ Lower = \relative c {
      { \change Staff = "lower" { c b! } }
      { \change Staff = "upper" { e d e } }
      { \change Staff = "lower" { c8 e,  a a } }
-   | a8 gis16 a  b!8 b  b a16 b  c8 c~
+   | \stemNeutral a8 gis16 a  b!8 b  b a16 b  c8 c~
    | c16 c b! a  gis16 fis e gis  c,16 f! e d  c16 b! a c
    %55
    | fis,16 e' d c  b! a gis b!  c,8 c'16 d  e8 e,
@@ -263,7 +261,8 @@ Lower = \relative c {
    | cis16 a, cis e  cis a cis e  f d, f a  f d f a
    | bes4  r8 bes'  cis, d  a' a,
    %60
-   | d,4  << { r8 a'' } \\ { r8 d, } >>  << bes'4 \\ { d,8 e16 d } >>  << { r8 e } \\ { c c } >>
+   | d,4  << { r8 a'' } \\ { r8 d, } >>
+     << bes'4 \\ { d,8 e16 d } >>  << { r8 e } \\ { c c } >>
    | << { a'4  r8 g  e4  r8 fis }  \\ { c8 d16 c  bes8 bes  bes c16 bes  a8 a } >>
    | << { bes'4  r8 bes } \\ { a,8 bes16 a  g8 g'8 } >>
      << { c8 r } \\ { \stemUp a } \\ { \stemDown g8 a16 g } >>
@@ -271,11 +270,11 @@ Lower = \relative c {
    | << g16 \\ { g16 f ees d } >>  c f ees f  bes, c d ees  a, d c d
    | \stemDown g,8 bes  c a  bes c  d d,
    %65
-   | g16 d' e fis  g a bes g  c d c bes  a d c d
+   | \stemNeutral g16 d' e fis  g a bes g  c d c bes  a d c d
    | bes16 g a bes  c d ees c  f a, bes c  d ees f d
    | \change Staff = "upper" { g } \change Staff = "lower" { bes, c d }
      ees f g e!  f g f ees  d c bes d
-   | g, f' ees d  c bes a c  f, ees' d c  bes a g bes
+   | \stemNeutral g, f' ees d  c bes a c  f, ees' d c  bes a g bes
    | ees, f ees d  c bes a c  f,8 bes  f' f,
    %70
    | bes16 f' g a  bes c d bes  ees f ees d  c f ees f
@@ -294,13 +293,13 @@ Lower = \relative c {
    | e! d c bes  a g a f  c8 g''  c c
    | c8 d16 c  bes8 bes  bes8 c16 bes  a8 a
    | a8 bes16 a  g16 f e g  f bes a g  f e d f
-   | { \stemUp bes,16 d c bes  c8 c,8  f16 c d e  f g a f }
+   | bes,16 d c bes  c8 c,8  f16 c d e  f g a f
    %85
-   | c'8 c,  r8 c'  c c,  r8 c'
+   | c'8 c,  c'8\rest c  c c,  c'8\rest c
    | c8 c,  r8 c'  c c,  r8 c'
    | c8 c,  g'4\rest  << { g'16 aes bes f  e! f g c, } \\ r2 >>
-   | \stemUp bes16 c des aes  g a bes f  e8 f  c' c,
-   | \stemUp f16 r16 r8  r4 r2
+   | bes16 c des aes  g a bes f  e8 f  c' c,
+   | f16 r16 r8  r4 r2
      }
      {
    %108
@@ -308,35 +307,47 @@ Lower = \relative c {
      }
    }
    \fine
-
-% la si do re mi fa sol
-%  a b  c  d  e  f  g
 }
 
 \score {
   \new PianoStaff
   <<
-    \accidentalStyle Score.piano-cautionary
-    \new Staff = "upper" {
+    \accidentalStyle Score.piano
+    \context Staff = "upper" <<
+      \set Staff.midiInstrument = #"acoustic grand"
       \Global
+      \clef treble
       \Upper
-    }
-    \new Staff = "lower" {
+    >>
+    \context Staff = "lower" <<
+      \set Staff.midiInstrument = #"acoustic grand"
       \Global
+      \clef bass
       \Lower
-    }
+    >>
   >>
   \header {
-    composer = "Johann Sebastian Bach"
-    opus = "BWV 809"
-    subtitle = "Prélude"
+    composer = ##f % "Johann Sebastian Bach"
+    opus = ##f % "BWV 809"
     title = \markup {
-      %\override #'(font-name . "TeX Gyre Schola") {
-        "Suite IV - avec Prélude."
-      %}
+      \fill-line {
+        \center-column {
+          \line { "Suite IV – avec Prélude" }
+          \null
+          \line { "Prélude" }
+        }
+      }
+    }
+    subtitle = ##f
+  }
+  \layout {
+    \context {
+      \PianoStaff
+      \override Parentheses.font-size = #-2
+      \override TextScript.font-shape = #'italic
+      \override TextScript.font-size = #-1
     }
   }
-  \layout { }
   \midi {
     \tempo 4 = 100
   }

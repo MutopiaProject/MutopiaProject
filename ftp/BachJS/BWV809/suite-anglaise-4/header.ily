@@ -1,14 +1,12 @@
-\version "2.23.7"
-
 \header {
   composer = "Johann Sebastian Bach (1685-1750)"
   date = "Around 1713 or 1714"
 
-  footer = "Mutopia-2022/04/25-100"
+  footer = "Mutopia-2023/01/21"
 
-  lastupdated = "2022 April 25"
+  lastupdated = "2023 December 28"
   license = "Creative Commons Attribution-ShareAlike 4.0"
-  maintainerEmail = "davide.madrisan@gmail.com"
+  maintainerEmail = "d.madrisan@proton.me"
   maintainerWeb = "https://github.com/madrisan/open-scores"
 
   % Extra Mutopia Information
@@ -17,10 +15,10 @@
   mutopiainstrument = "Harpsichord, Piano"
   mutopiamaintainer = "Davide Madrisan"
   mutopiaopus = "BWV 809"
-  mutopiatitle = "Suite Anglaise no. 4 in F major"
+  mutopiatitle = "Suite Anglaise IV"
 
   opus = "BWV 809"
-  title = "Suite Anglaise 4"
+  title = "Suite Anglaise IV"
   source = "Johann Christian Bach manuscript"
   style = "Baroque"
 
@@ -32,7 +30,7 @@
         \abs-fontsize #9  "Mutopia "
         \concat {
 	  \abs-fontsize #12
-	  \with-color #white "ǀ"
+	  \with-color \coverColor "ǀ"
 	  \abs-fontsize #9 "Project "
         }
       }
@@ -49,7 +47,7 @@
     \column {
       \abs-fontsize #8
       \concat {
-	"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2022 ""by " \maintainer " — " \footer
+        "Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2022-2024 ""by " \maintainer " — " \footer
       }
       \concat {
 	\concat {
@@ -59,7 +57,7 @@
 		       " — free to distribute, modify, and perform"
           }
 	}
-	\abs-fontsize #13 \with-color #white "ǀ"
+	\abs-fontsize #13 \with-color \coverColor "ǀ"
       }
     }
   }
