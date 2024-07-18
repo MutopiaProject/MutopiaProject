@@ -36,7 +36,7 @@ quinze = \relative f'{
   | d-. f-. a-.-0 e'32-4 (d e d) cis8-. d-. \break \noPageBreak
 %8
   | f-. d-. a-. g32 (f g f) e8-. f-. \noBreak
-  | fis-. a-. b!-. e32-4 (dis e dis) cis8-. d-. \noBreak
+  | fis-. a-. b!-. e32-4 (dis e dis) cis8-. dis-. \noBreak
   | b'!-. a-. fis-. dis-. b!-. fis-. \break \noPageBreak
 %9
   | e-. \downbow g-. b!-. e-.-0 fis-. g-.  \noBreak
@@ -57,19 +57,19 @@ quinze = \relative f'{
 %13
   | f-.  a-.-0 c-. d32 (c d c) b!8-. c-.  \noBreak
   | a'-. f-. c-. d32 (c d c) b!8-. c-.  \noBreak
-  | e,-. g-. c-. d32-4 (c d c) b!8-. c-.   \noBreak
-  | bes'-. g-. c,-. d32-4 (c d c) b!8-. c-.  \break \noPageBreak
+  | e,-. g-. c-. d32 (c d c) b!8-. c-.   \noBreak
+  | bes'-. g-. c,-. d32 (c d c) b!8-. c-.  \break \noPageBreak
 %14
-  | a-. c-. f-. g32-4 (f g f) e8-. f-.   \noBreak
-  | b,!-. d-. g-. a32-4 (g a g) fis8-. g-.   \noBreak
+  | a-. c-. f-. g32 (f g f) e8-. f-.   \noBreak
+  | b,!-. d-. g-. a32 (g a g) fis8-. g-.   \noBreak
   | c,-. e-.-0 g-. bes8-. bes32 (a bes a) g8-.  \pageBreak
 %15
   | g32 (f g f) e8-.-0 e32-4 (d e d) c8-. bes-. g-.  \noBreak
   | f-. a-.-0 c-. d32 (c d c) b!8-. c-.  \noBreak
   | ees-. c-. a-.-0 f32 (ees f ees) d8-. ees-. \break \noPageBreak
 %16
-  | d-. f-. bes-. c32 (bes c bes) a8-. bes'-.  \noBreak
-  | f-. d-. b!-. c32 (b c b) a8-. b-.  \noBreak
+  | d-. f-. bes-. c32 (bes c bes) a8-. bes-.  \noBreak
+  | f'-. d-. b!-. c32 (b c b) a8-. b-.  \noBreak
   | c8-. f-. a-. bes32 (a bes a) g8-. f-. \break \noPageBreak
 %17
   | c-. e-.-0 g-. a32 (g a g) f8-. e-.  \noBreak
