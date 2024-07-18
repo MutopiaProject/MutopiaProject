@@ -1,3 +1,5 @@
+\version "2.24.0"
+
 #(ly:set-option 'old-relative)
 \header{
 	title = "Come Again"
@@ -6,12 +8,14 @@
 	opus = "Ayres and Lute Songs XVII"
 	date = "1597"
 	enteredby = "mutopia@chubb.wattle.id.au"
+	sourceurl = "https://imslp.org/wiki/Come_Again%2C_Sweet_Love_doth_Now_Invite_(Dowland%2C_John)"
+	sourceurltwo = "https://vmirror.imslp.org/files/imglnks/usimg/9/96/IMSLP420510-PMLP682488-Dowland-FBS17.pdf"
 
 	mutopiatitle="Come Again"
 	mutopiacomposer="DowlandJ"
 	mutopiainstrument="Voice (SATB)"
 	style="Renaissance"
-	copyright="Public Domain"
+	license = "Public Domain"
 	lastupdated = "2009/Aug/5"
 	maintainer = "Peter Chubb"
 	maintainerEmail = "mutopia@chubb.wattle.id.au"
@@ -19,8 +23,6 @@
  footer = "Mutopia-2009/08/05-1691"
  tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
-
-\version "2.12.0"
 
 %{
 	I've attempted here to give the flavour of the original, as
@@ -62,7 +64,7 @@ modernGlobal = {
 }
 
 OldGlobal = {
-	 \override Staff.TimeSignature   #'style = #'old4/4
+	 \override Staff.TimeSignature.style = #'old4/4
 	 \set Staff.barAuto = "0"
 }
 
@@ -82,7 +84,7 @@ OldCantusTime = {
 	\skip 2*2 \bar "|"
 	\skip 2*6 \bar "|"
 	\skip 2*4 \bar "|"
-	\skip 2*6 \bar ":|"
+	\skip 2*6 \bar ":|."
 }
 
 cantus = \relative c''{
@@ -233,7 +235,7 @@ urtext = \context ChoirStaff <<
 		 \context Lyrics = "cantus" \cantusLyrics
 
 		 \context Staff = "altus" {
-			\override Staff.TimeSignature   #'style = #'old4/4
+			\override Staff.TimeSignature.style = #'old4/4
 			\clef 	"petrucci-c2"
 			\altus
 		}
@@ -308,10 +310,7 @@ solo = \context StaffGroup <<
 	}
 	
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 100 2)
-      }
+    \tempo 2 = 100
     }
 }
 
