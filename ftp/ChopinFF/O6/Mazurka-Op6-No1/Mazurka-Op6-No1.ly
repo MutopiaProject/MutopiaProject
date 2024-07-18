@@ -1,4 +1,4 @@
-\version "2.12.2"
+\version "2.24.0"
 
 \header {
 
@@ -21,7 +21,7 @@
   moreInfo = "This file was created from a public domain scan of the work.  The source is located in the Petrucci Music Library, http://imslp.org/."
 
  footer = "Mutopia-2009/06/23-1687"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2009. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url "http://creativecommons.org/licenses/by/3.0" http://creativecommons.org/licenses/by/3.0 } } } }
 }
 
 su = \stemUp
@@ -41,58 +41,58 @@ ffz = \markup { \dynamic "ffz" }
   \set PianoStaff.connectArpeggios = ##t
   \new Staff = "up" \relative c' << { \time 3/4 \key fis \minor \clef treble
 
-    \cadenzaOn \su \once \override TextScript #'extra-offset = #'(-3.5 . 0.0)
-        fis4^\markup { ( \smaller \general-align #Y #DOWN \note #"4" #1
+    \cadenzaOn \su \once \override TextScript.extra-offset = #'(-3.5 . 0.0)
+        fis4^\markup { ( \smaller \general-align #Y #DOWN \note {4} #1
         = \smaller \general-align #Y #DOWN "132" ) }_>_\p^3_~_\( \cadenzaOff		\nb\bar"|" % 0
-    \td \times 2/3 { fis8[_( gis fis)] } eis8_\<[ fis gis8.\! d16^1]			\nb	| % 1
+    \td \tuplet 3/2 { fis8[_( gis fis)] } eis8_\<[ fis gis8.\! d16^1]			\nb	| % 1
     cis8^2\)[ b'16\rest fis^3_(] a4^5_\markup { \italic "cresc.         " }) a^4^>^~^\(	\nb	| % 2
-    \tu \times 2/3 { a8_\<^([ b a)] } gis8[ a b8.^5 s16*1/2\! fis^3]	\noPageBreak	\bk	| % 3
+    \tu \tuplet 3/2 { a8_\<^([ b a)] } gis8[ a b8.^5 s16*1/2\! fis^3]	\noPageBreak	\bk	| % 3
     e8^2_\<\)[ b'16\rest a^(] cis4*1/2) s8\! \sd cis4^3^>^~				\nb	| % 4
-    \tu \times 2/3 { cis8^([ dis_\markup { \italic "decresc." } cis)] } \su bis8[
+    \tu \tuplet 3/2 { cis8^([ dis_\markup { \italic "decresc." } cis)] } \su bis8[
         b16\rest gis^1]_( b4^3^>^~)							\nb	| % 5
-    \sd \times 2/3 { b8^([ cis b] } \su ais8)[ b16\rest fis^1] a4^3_>_~			\nb	| % 6
-    \td \times 2/3 { a8_([ b a] } gis8)[ b16\rest e,^1]_( g4^3)_(^\(	\noPageBreak	\bk	| % 7
-    \times 2/3 { gis8)_([ a g)] } fis8[ d^1] fis4^3_~					\nb	| % 8
-    \times 2/3 { fis8_\markup { \italic "rubato." }_([ gis! fis)] } eis8_\<[ fis
+    \sd \tuplet 3/2 { b8^([ cis b] } \su ais8)[ b16\rest fis^1] a4^3_>_~			\nb	| % 6
+    \td \tuplet 3/2 { a8_([ b a] } gis8)[ b16\rest e,^1]_( g4^3)_(^\(	\noPageBreak	\bk	| % 7
+    \tuplet 3/2 { gis8)_([ a g)] } fis8[ d^1] fis4^3_~					\nb	| % 8
+    \tuplet 3/2 { fis8_\markup { \italic "rubato." }_([ gis! fis)] } eis8_\<[ fis
         gis8. d16\!]									\nb	| % 9
     cis8_\markup { \italic "cresc." }\)[ b'16\rest fis]_( a4) a^>^~^\(			\nb	| % 10
-    \tu \times 2/3 { a8[ b a] } gis8[ a b8. fis16]			\noPageBreak	\bk	| % 11
+    \tu \tuplet 3/2 { a8[ b a] } gis8[ a b8. fis16]			\noPageBreak	\bk	| % 11
     e8_\<\)[ b'16\rest a]^( cis4*1/2) s8\!\> cis4^3					\nb	| % 12
     e8^5\!_\markup { \dynamic "p" \italic "   riten." }^\([ d16 cis] b4^2 cis^3\)	\nb	| % 13
     e8^\([ d16 cis] b4_\< cis\!]\)							\nb	| % 14
     e8^\([ d16 cis] b4 cis]\)								\nb	| % 15
-    \times 2/3 { b8_\markup { \dynamic \whiteout "pp" }^([ a gis)] } fis4*2   \noPageBreak\bar":|:" % 16
+    \tuplet 3/2 { b8_\markup { \dynamic \whiteout "pp" }^([ a gis)] } fis4*2   \noPageBreak\bar":..:" % 16
 
     \cadenzaOn \sd cis'4 \cadenzaOff							\nb\bar"|" % 0
-    <cis cis'>4^|_\ff cis8^3_\<^\([ gis^1 bis d!^4\!]					\nb	| % 17
+    <cis cis'>4^!_\ff cis8^3_\<^\([ gis^1 bis d!^4\!]					\nb	| % 17
     cis8.^.[ bis16^.] b4^. b^.\)							\nb	| % 18
-    <cis cis'>4^|_\ff cis8^\([ gis bis d!]						\nb	| % 19
+    <cis cis'>4^!_\ff cis8^\([ gis bis d!]						\nb	| % 19
     \su cis8[ bis] gis'4.^>_\fz fis8					\pageBreak		| % 20
-    \sd <cis eis cis'>4^|_\ffz\) cis8^\(_\<[ gis bis d!\!]				\nb	| % 21
+    \sd <cis eis cis'>4^!_\ffz\) cis8^\(_\<[ gis bis d!\!]				\nb	| % 21
     cis8.^.[ bis16^.] b4^. b^.\)							\nb	| % 22
-    <cis cis'>^|_\ffz  cis8^\(_\<[ gis bis d!\!]					\nb	| % 23
-    \override TupletBracket #'stencil = ##f \times 3/5 { cis4^._\markup
+    <cis cis'>^!_\ffz  cis8^\(_\<[ gis bis d!\!]					\nb	| % 23
+    \override TupletBracket.stencil = ##f \tuplet 5/3 { cis4^._\markup
         { \italic "rallent." } bis^. b^. \su a4._._\> gis8_.\!\) }			\nb	| % 24
-    \tu \times 2/3 { fis8_\(_\f^\markup { \bold "Tempo I." }[^( gis fis)] }
+    \tu \tuplet 3/2 { fis8_\(_\f^\markup { \bold "Tempo I." }[^( gis fis)] }
         eis8[ fis gis8._> d16]						\noPageBreak	\bk	| % 25
     cis8\)[ b'16\rest fis_(_\markup { \italic "cresc." }] a4) a^>^~^\(			\nb	| % 26
-    \times 2/3 { a8^([ b a)] } gis8[ a b8. fis16]					\nb	| % 27
+    \tuplet 3/2 { a8^([ b a)] } gis8[ a b8. fis16]					\nb	| % 27
     e8\)[ b'16\rest a^(] cis4) \sd cis^>^~						\nb	| % 28
-    \times 2/3 { cis8[^( dis cis)] } \su bis_\markup { \italic "dim." }
+    \tuplet 3/2 { cis8[^( dis cis)] } \su bis_\markup { \italic "dim." }
         [ b16\rest gis_(] b4)^~^>^\(							\nb	| % 29
-    \sd \times 2/3 { b8[ cis b] } \su ais8\)[ b16\rest fis_(] a4_>_~)	\noPageBreak	\bk	| % 30
-    \td \times 2/3 { a8_(^\([ b a)] } gis!8\)[ b16\rest e,]_( g4)_(^\(			\nb	| % 31
-    \times 2/3 { gis8)_([ a g)] } fis8_(_\<[ d] fis4)_~\!				\nb	| % 32
-    \times 2/3 { fis8_([ gis! fis)] } eis8[ fis gis8. d16]				\nb	| % 33
+    \sd \tuplet 3/2 { b8[ cis b] } \su ais8\)[ b16\rest fis_(] a4_>_~)	\noPageBreak	\bk	| % 30
+    \td \tuplet 3/2 { a8_(^\([ b a)] } gis!8\)[ b16\rest e,]_( g4)_(^\(			\nb	| % 31
+    \tuplet 3/2 { gis8)_([ a g)] } fis8_(_\<[ d] fis4)_~\!				\nb	| % 32
+    \tuplet 3/2 { fis8_([ gis! fis)] } eis8[ fis gis8. d16]				\nb	| % 33
     cis8\)[ b'16\rest  fis_(] a4) a^>^~^\(						\nb	| % 34
-    \tu \times 2/3 { a8^(_\markup { \italic "cresc." }
+    \tu \tuplet 3/2 { a8^(_\markup { \italic "cresc." }
         [ b a)] } gis8[ a b8. fis16]					\noPageBreak	\bk	| % 35
-    e8\)[ b'16\rest a^(] cis4)^|_\> cis\!						\nb	| % 36
+    e8\)[ b'16\rest a^(] cis4)^!_\> cis\!						\nb	| % 36
     e8^\(_\p_\>[ d16 cis] b4_\< cis\!\)							\nb	| % 37
     e8^\([ d16 cis] b4 cis\)								\nb	| % 38
     e8^\([ d16 cis] b4_\< cis\)								\nb	| % 39
-    \times 2/3 { b8\!_\markup { \whiteout \dynamic "pp" }^([ a gis)] }
-        fis4*2								\noPageBreak   \bk\bar":|" % 40
+    \tuplet 3/2 { b8\!_\markup { \whiteout \dynamic "pp" }^([ a gis)] }
+        fis4*2								\noPageBreak   \bk\bar":|." % 40
 
     \cadenzaOn \su \slurDown \acciaccatura gis'8 \sd <fis cis'>4^4_\f_\> s\!\cadenzaOff	\nb\bar"|" % 0
     \su \acciaccatura gis8 \sd <fis d'^5>8_\markup { \italic "scherz." }[ \su
@@ -102,8 +102,8 @@ ffz = \markup { \dynamic "ffz" }
         \acciaccatura gis8 \sd <fis cis'>4 \su \acciaccatura gis8 \sd <fis fis'>4^>_\fz	\nb	| % 42
     \su \acciaccatura gis8 \sd <fis d'>8[ \su \acciaccatura gis8 \sd <fis cis'>] \su
         \acciaccatura gis8 \sd <fis b>4 \su \acciaccatura gis8 \sd <fis d'>4		\nb	| % 43
-    \su \slurUp #(set-octavation 1) \set Staff.ottavation = #"8" \acciaccatura
-        <fis cis'>8 \sd cis''^. #(set-octavation 0) b,,8\rest cis2^>_\fz\noPageBreak	\bk	| % 44
+    \su \slurUp \ottava #1 \set Staff.ottavation = #"8" \acciaccatura
+        <fis cis'>8 \sd cis''^. \ottava 0 b,,8\rest cis2^>_\fz\noPageBreak	\bk	| % 44
     \slurDown \su \acciaccatura d8 \sd <cis gis'>8[ \su \acciaccatura d8 \sd <cis b'>] \su
         \acciaccatura d8 \sd <cis a'>4 \su \acciaccatura d8 \sd <cis gis'>4		\nb	| % 45
     \su \acciaccatura d8 \sd <cis fis>8[ \su \acciaccatura d8 \sd <cis gis'>] \su
@@ -118,8 +118,8 @@ ffz = \markup { \dynamic "ffz" }
         \acciaccatura gis8 \sd <fis cis'>4 \su \acciaccatura gis8 \sd <fis fis'>4^>_\fz	\nb	| % 50
     \su \acciaccatura gis8 \sd <fis d'>8[ \su \acciaccatura gis8 \sd <fis cis'>] \su
         \acciaccatura gis8 \sd <fis b>4 \su \acciaccatura gis8 \sd <fis d'>4		\nb	| % 51
-    \su \slurUp #(set-octavation 1) \set Staff.ottavation = #"8" \acciaccatura
-        <fis cis'>8 \sd cis''^. #(set-octavation 0) b,,8\rest cis2^>_\fz		\nb	| % 52
+    \su \slurUp \ottava 1 \set Staff.ottavation = #"8" \acciaccatura
+        <fis cis'>8 \sd cis''^. \ottava 0 b,,8\rest cis2^>_\fz		\nb	| % 52
     \slurDown \su \acciaccatura d8 \sd <cis gis'>8[ \su \acciaccatura d8 \sd <cis b'>] \su
         \acciaccatura d8 \sd <cis a'>4 \su \acciaccatura d8 \sd <cis gis'>4\noPageBreak	\bk	| % 53
     \su \acciaccatura d8 \sd <cis fis>8[ \su \acciaccatura d8 \sd <cis gis'>] \su
@@ -130,23 +130,23 @@ ffz = \markup { \dynamic "ffz" }
     \slurDown \su \acciaccatura cis8 \sd <bis gis'>8^>[_\markup { \italic "riten." }
         \su \acciaccatura cis8 \sd <bis gis'>^>] \su \acciaccatura cis8 \sd <b gis'>4^>
         \su \acciaccatura a8 <gis cis>4^>						\nb	| % 56
-    \tu \times 2/3 { fis8_\(^\markup { \italic "a tempo." }[^( gis fis)] }
+    \tu \tuplet 3/2 { fis8_\(^\markup { \italic "a tempo." }[^( gis fis)] }
         eis8[ fis gis8. d16]								\nb	| % 57
     cis8\)[ b'16\rest fis_(] a4) a^>^~					\noPageBreak	\bk	| % 58
-    \times 2/3 { a8_(^\([ b a)] } \tu gis8[ a b8. fis16]				\nb	| % 59
+    \tuplet 3/2 { a8_(^\([ b a)] } \tu gis8[ a b8. fis16]				\nb	| % 59
     e8\)[ b'16\rest a^(] cis4) \su cis^>^~^\(						\nb	| % 60
-    \td\sd \times 2/3 { cis8_([ dis cis)] } \su bis8[ b16\rest gis] b4^>^~^\(		\nb	| % 61
-    \sd \times 2/3 { b8_([ cis b)] }\su ais8\)[ b16\rest fis_(] a4^>)_~^\(		\nb	| % 62
-    \times 2/3 { a8_([  b a)] } gis8[ b16\rest e,_(] g4)^>_(^\(	\noPageBreak		\bk	| % 63
-    \times 2/3 { gis8)_([ a g)] } fis!_([ d] fis4_~)					\nb	| % 64
-    \times 2/3 { fis8[ gis! fis] } eis8[ fis gis8. d16]					\nb	| % 65
+    \td\sd \tuplet 3/2 { cis8_([ dis cis)] } \su bis8[ b16\rest gis] b4^>^~		\nb	| % 61
+    \sd \tuplet 3/2 { b8_([ cis b)] }\su ais8\)[ b16\rest fis_(] a4^>)_~^\(		\nb	| % 62
+    \tuplet 3/2 { a8_([  b a)] } gis8[ b16\rest e,_(] g4)^>_(	\noPageBreak		\bk	| % 63
+    \tuplet 3/2 { gis8)_([ a g)] } fis!_([ d] fis4_~)					\nb	| % 64
+    \tuplet 3/2 { fis8[ gis! fis] } eis8[ fis gis8. d16]					\nb	| % 65
     cis8\)[ b'16\rest fis_(] a4) a^>^~							\nb	| % 66
-    \times 2/3 { a8^\(_([ b a)] }  gis8[a b8. fis16]			\noPageBreak	\bk	| % 67
-    e8\)[  b'16\rest a^(] cis4^|) cis							\nb	| % 68
+    \tuplet 3/2 { a8^\(_([ b a)] }  gis8[a b8. fis16]			\noPageBreak	\bk	| % 67
+    e8\)[  b'16\rest a^(] cis4^!) cis							\nb	| % 68
     e8^\([ d16 cis] b4 cis\)								\nb	| % 69
     e8^\([ d16 cis] b4 cis\)								\nb	| % 70
     e8^\([ d16 cis] b4 cis\)								\nb	| % 71
-    \tu \times 2/3 { b8^( a gis) } fis2^\fermata					\nb\bar"|." % 72
+    \tu \tuplet 3/2 { b8^( a gis) } fis2^\fermata					\nb\bar"|." % 72
 
   } \\ \relative c' {
 
@@ -166,7 +166,7 @@ ffz = \markup { \dynamic "ffz" }
     f^1 f e_>											| % 13
     f f e											| % 14
     fis!2 eis4_>										| % 15
-    fis2*3/2										  \bar":|:"% 16
+    fis2*3/2										  \bar":..:"% 16
 
     \cadenzaOn s4 \cadenzaOff								   \bar"|" % 0
     s2.												| % 17
@@ -248,17 +248,17 @@ ffz = \markup { \dynamic "ffz" }
     <d, a'> <d a'> <a a'^~>									| % 13
     <d a'> <d a'> <a a'^~>									| % 14
     \su a'4 gis2										| % 15
-    \tu \times 2/3 { d'8^([ cis b)] } a4*2						  \bar":|:"% 16
+    \tu \tuplet 3/2 { d'8^([ cis b)] } a4*2						  \bar":..:"% 16
 
     \cadenzaOn d,4\rest	\cadenzaOff								| % 0
-    <cis, cis'>4^|\sn gis''8_5\sf[ cis_3 dis_2 fis_1]						| % 17
+    <cis, cis'>4^!\sn gis''8_5\sf[ cis_3 dis_2 fis_1]						| % 17
     eis8.[ dis16] d4^1 f\rest									| % 18
-    <cis,, cis'>^|\sn gis''8[ cis dis\sf fis]							| % 19
+    <cis,, cis'>^!\sn gis''8[ cis dis\sf fis]							| % 19
     eis8[ dis] d4 f\rest									| % 20
-    <cis,, cis'>^| gis''8[ cis dis fis]								| % 21
+    <cis,, cis'>^! gis''8[ cis dis fis]								| % 21
     eis8.[ dis16] d4 f\rest									| % 22
-    <cis,, cis'>^| gis''8[ cis dis fis]								| % 23
-    \override TupletBracket #'stencil = ##f \times 3/5 { eis4^\( dis d cis b }			| % 24
+    <cis,, cis'>^! gis''8[ cis dis fis]								| % 23
+    \override TupletBracket.stencil = ##f \tuplet 5/3 { eis4^\( dis d cis b }			| % 24
     \sd a4 gis\) <cis, eis b'>									| % 25
     \su fis,4 \sd <fis' cis'> <fis cis'>							| % 26
     \su e, \sd <e' b'> e^~									| % 27
@@ -274,7 +274,7 @@ ffz = \markup { \dynamic "ffz" }
     <d, a'> <d a'> <a a'^~>									| % 37
     <d a'> <d a'> <a a'^~>									| % 38
     \su a' gis2											| % 39
-    \times 2/3 { d'8^([ cis b)] } a4*2								| % 40
+    \tuplet 3/2 { d'8^([ cis b)] } a4*2								| % 40
     \cadenzaOn d,4\rest s \cadenzaOff								| % 0
     \su fis,8_.[\sn fis'_.] \clef treble d''4\rest b^>^\( \sf					| % 41
     <cis,^4 a'^1>8[ <b^5 gis'^1>] <cis^4 a'^1>4\) \clef bass \sd fis,^1^>\sn			| % 42
@@ -307,7 +307,7 @@ ffz = \markup { \dynamic "ffz" }
     <d, a'> <d  a'> <a a'^~>									| % 69
     <d a'> <d a'> <a a'^~>									| % 70
     \su a' gis2											| % 71
-    \tu \times 2/3 { d'8^([ cis b)] } a2^\fermata						| % 72
+    \tu \tuplet 3/2 { d'8^([ cis b)] } a2^\fermata						| % 72
 
   } \\ \relative c' {
 
@@ -327,7 +327,7 @@ ffz = \markup { \dynamic "ffz" }
     s												| % 13
     s												| % 14
     d2 <cis cis'>4										| % 15
-    fis2*3/2										  \bar":|:"% 16
+    fis2*3/2										  \bar":..:"% 16
 
     \cadenzaOn s4 \cadenzaOff								   \bar"|"% 0
     s4 \sd gis2_~										| % 17
@@ -394,6 +394,8 @@ ffz = \markup { \dynamic "ffz" }
 
 \layout { }
 
-\midi { }
+\midi { 
+  \tempo 4=132
+}
 
 }
