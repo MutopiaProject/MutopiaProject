@@ -169,7 +169,7 @@ bassus = \relative c'{
 		       r2 g2 g a b g d'1 r2
 		       d2 g, b
 		       a2. a4 d1
-		       b1 c2. c4 d2. d4 e2. d4 fis2. fis4 g2 g, g a b
+		       b1 c2. c4 d2. d4 e2. e4 fis2. fis4 g2 g, g a b
 		       c d b c4 d e2 d2. d4 g,1
 }
 bassusLyrics = \lyricmode{
