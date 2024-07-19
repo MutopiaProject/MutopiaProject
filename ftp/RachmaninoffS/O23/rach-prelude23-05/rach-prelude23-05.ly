@@ -127,7 +127,7 @@ RHone = \relative c' {
   s8 <b d>16[ q q8] s4 q8 s q |
   \override Rest.staff-position = 2
   s8 <b d>16[ q q8] s r <g' b>16[ q q8] r |
-  r8 q16[ q q8] r r <g c g'>16[ q q8] r |
+  r8 <b d>16[ q q8] r r <g c g'>16[ q q8] r |
   r8 <fis d' fis>16[ q q8] r s <g, d' e>8 s <b d e> |
   r8 <d fis d'>16[ q q8] s s <g, d' e> s <b d e> |
   r8 <d fis d'>16[ q q8]
