@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 \header {
   title = "Capricho Árabe"
   composer = "Francisco Tárrega"
@@ -14,22 +14,22 @@
   enteredby =   "Glen Larsen, Franck Decrock"
 
   footer = "Mutopia-2020/01/20-1951"
-  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url #"http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " ©" 2014 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
+  copyright = \markup {\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0) \right-column {\with-url "http://www.MutopiaProject.org" {\abs-fontsize #9  "Mutopia " \concat {\abs-fontsize #12 \with-color #white "ǀ" \abs-fontsize #9 "Project "}}}\override #'(font-name . "DejaVu Sans, Bold") \override #'(baseline-skip . 0 ) \center-column {\abs-fontsize #11.9 \with-color #grey \bold {"ǀ" "ǀ"}}\override #'(font-name . "DejaVu Sans,sans-serif") \override #'(baseline-skip . 0) \column { \abs-fontsize #8 \concat {"Typeset using " \with-url "http://www.lilypond.org" "LilyPond " ©" 2014 ""by " \maintainer " — " \footer}\concat {\concat {\abs-fontsize #8 { \with-url "http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License" " — free to distribute, modify, and perform" }}\abs-fontsize #13 \with-color #white "ǀ" }}}
   tagline = ##f
 }
 
 \paper {
   % add space between composer/opus markup and first staff
-  markup-system-spacing #'padding = #3
+  markup-system-spacing.padding = #3
   % add a little space between composer and opus
-  markup-markup-spacing #'padding = #1.2
+  markup-markup-spacing.padding = #1.2
   top-margin = 7\mm
   bottom-margin = 6\mm
 }
 
 %% http://lsr.di.unimi.it/LSR/Item?id=616
 stringNumberSpanner =
-  #(define-music-function (parser location StringNumber) (string?)
+  #(define-music-function (StringNumber) (string?)
     #{
       \override TextSpanner.style = #'dashed-line
       \override TextSpanner.dash-period = #2.0
@@ -40,7 +40,7 @@ stringNumberSpanner =
 
 % hide string numbers across a span of music
 hideStrNo =
-  #(define-music-function (parser location arg) (ly:music?)
+  #(define-music-function (arg) (ly:music?)
     #{
       \omit Voice.StringNumber
       $arg
@@ -48,7 +48,7 @@ hideStrNo =
     #})
 
 tspanner =
-  #(define-music-function (parser location arg) (string?)
+  #(define-music-function (arg) (string?)
     #{
       \override TextSpanner.style = #'dashed-line
       \override TextSpanner.dash-period = #2.0
@@ -74,12 +74,12 @@ bbarre =
                        (ly:music-property last-element 'articulations))))))
    #{
        \textSpannerUp
-       \once \override TextSpanner #'font-size = #-2
-       \once \override TextSpanner #'font-shape = #'upright
-       \once \override TextSpanner #'staff-padding = #3
-       \once \override TextSpanner #'style = #'line
-       \once \override TextSpanner #'to-barline = ##f
-       \once \override TextSpanner #'bound-details =
+       \once \override TextSpanner.font-size = #-2
+       \once \override TextSpanner.font-shape = #'upright
+       \once \override TextSpanner.staff-padding = #3
+       \once \override TextSpanner.style = #'line
+       \once \override TextSpanner.to-barline = ##f
+       \once \override TextSpanner.bound-details =
             #`((left
                 (text . ,#{ \markup{\concat{ #str " " }} #})
                 (Y . 0)
@@ -98,19 +98,19 @@ bbarre =
 %{
   \context {
     \Voice
-    \override StringNumber #'stencil = ##f
+    \override StringNumber.stencil = ##f
   }
 %}
   \context {
     \Staff
-    \override Fingering #'staff-padding = #'()
-    \override Fingering #'add-stem-support = ##t
+    \override Fingering.staff-padding = #'()
+    \override Fingering.add-stem-support = ##t
     \mergeDifferentlyDottedOn
     \mergeDifferentlyHeadedOn
   }
   \context {
     \Dynamics
-    \override DynamicTextSpanner #'style = #'none
+    \override DynamicTextSpanner.style = #'none
   }
 }
 
@@ -299,7 +299,7 @@ lowerVoicePartE = {
   e4 a \harmonicsOn \hideStrNo <e\5>2-\markup{\italic {\fontsize #-2 {\halign #-0.5 "harm. 7"}}} \harmonicsOff |
   \set minimumFret=#0
   a,1
-}|
+}
 lowerVoicePartF = {
   s2 |
   g4 g, e r |
