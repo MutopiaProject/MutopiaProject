@@ -11,8 +11,10 @@
  mutopiainstrument = "Violin, String"
  date = "1725"
  source = "Performers' Facsimiles"
+ sourceurl = "https://imslp.org/wiki/Violin_Concerto_in_F_minor%2C_RV_297_(Vivaldi%2C_Antonio)"
+ sourceurltwo = "https://ks15.imslp.org/files/imglnks/usimg/5/57/IMSLP747644-PMLP126435-00._Concerto_for_Violin_in_F_minor,_RV297_-_Conductor_Score.pdf"
  style = "Baroque"
- copyright = "Creative Commons Attribution-ShareAlike 3.0"
+ license = "Creative Commons Attribution-ShareAlike 3.0"
  maintainer = "Anonymous" % John Williams (don't say it...)
  maintainerEmail = "smailliw@gmail.com"
  lastupdated = "2010/Jan/31"
