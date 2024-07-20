@@ -1,4 +1,4 @@
-\version "2.16.0"
+\version "2.24.3"
 
 \include "2.ly"
 
@@ -9,7 +9,7 @@ iiCelloGlobal =   {
   % Time signature: To get the right C symbol, we need 2/2,
   % then baseMoment needs to be modified to group notes correctly.
   \time 2/2
-  \set Timing.baseMoment = #(ly:make-moment 1 4)
+  \set Timing.baseMoment = #(ly:make-moment 1/4)
 
   \repeat "volta" 2 {
     \partial 16

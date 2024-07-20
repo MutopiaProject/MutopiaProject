@@ -1,5 +1,5 @@
 % Movement 5, Sarabande 
-\version "2.16.0"
+\version "2.24.3"
 
 % Notes:
 % Measure 30: the c' and e' of the first chord are according to Werner Icking's edition quarters, not eighths 
@@ -17,7 +17,7 @@ vA =  {
   \stemDown
   d'4  cis'4  b4  |
   % 6
-  <g' b>2  <fis' ais>4  |
+  <g' a>2  <fis' ais>4  |
   % 7
   <b fis'>4 g'2
   % 8, prima volta
