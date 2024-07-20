@@ -6,9 +6,11 @@
   mutopiaopus = "L75"
   mutopiainstrument = "Piano"
   source = "E. Fromont (1905)"
+  sourceurl = "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"
+  sourceurltwo = "https://ks15.imslp.org/files/imglnks/usimg/d/d5/IMSLP83536-SIBLEY1802.12331.d9f9-39087013813482piano.pdf"
   % Plate E. 1404 F.  IMSLP #02907
   style = "Modern"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Keith OHara"
   title = "Suite Bergamasque – Clair de Lune"
   composer = "Claude Debussy"
