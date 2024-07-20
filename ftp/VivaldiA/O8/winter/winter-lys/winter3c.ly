@@ -111,8 +111,8 @@ r aes aes, |
 r aes' bes |
 % 120
 \mark "N"
-#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
-#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = 1, 1, 1
 ees,4 r8 |
 R4.*3
 bes'32 bes bes bes 	bes bes bes bes 	bes bes bes bes |

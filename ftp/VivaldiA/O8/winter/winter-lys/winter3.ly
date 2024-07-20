@@ -166,8 +166,8 @@ r c,16 ( d  ees8) |
 r aes16 ( g  f8) |
 % 120
 \mark "N"
-#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
-#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = 1, 1, 1
 % "the wind Borea and all the winds"
 ees32_"Solo"^\markup{\translate #'(1 . 0) "Il Vento Borea e tutti li Venti"} bes c d?	ees f g aes	bes aes g f |  % vivaldi had des; changed to d based on key (bes harmonic minor and) d in following measures
 ees d c bes	c bes aes g	aes g f ees |

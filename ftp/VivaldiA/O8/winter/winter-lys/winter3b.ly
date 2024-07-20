@@ -122,8 +122,8 @@ r aes,16( bes c8) |
 r f16( ees d8) | % vivaldi had f e(nat) des; should be f ees d(nat) based on current key (ees major) and measure 115
 % 120
 \mark "N"
-#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
-#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = 1, 1, 1
 ees4 r8
 R4.*3
 des32 des des des 	des des des des 	des des des des |
