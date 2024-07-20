@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 
 \header {
   mutopiatitle = "Suite Bergamasque: Clair de Lune"
@@ -6,14 +6,16 @@
   mutopiaopus = "L75"
   mutopiainstrument = "Piano"
   source = "E. Fromont (1905)"
+  sourceurl = "https://imslp.org/wiki/Suite_bergamasque_(Debussy,_Claude)"
+  sourceurltwo = "https://ks15.imslp.org/files/imglnks/usimg/d/d5/IMSLP83536-SIBLEY1802.12331.d9f9-39087013813482piano.pdf"
   % Plate E. 1404 F.  IMSLP #02907
   style = "Modern"
-  copyright = "Public Domain"
+  license = "Public Domain"
   maintainer = "Keith OHara"
   title = "Suite Bergamasque – Clair de Lune"
   composer = "Claude Debussy"
  footer = "Mutopia-2010/12/21-1778"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url "http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
 }
 
 \paper {
@@ -24,10 +26,9 @@
   bottom-margin =12
   %}
   #(layout-set-staff-size 18)
-  between-system-padding = 1
   ragged-last-bottom = ##f
 }
-% Definitios to override page-breaking 
+% Definitios to override page-breaking
 myExplicitBreak = {
   \break
 }
@@ -39,22 +40,22 @@ myExplicitPageBreak = {
 
 % restrain the slope of the beams
 oflat = {
-  \once\override Beam #'damping = #3
+  \once\override Beam.damping = #3
 }
 % Change staff
 cu = { \change Staff = "upper" }
 cl = { \change Staff = "lower" }
 % Suspend collision resolution so notes line up
-lu = {\once \override NoteColumn #'ignore-collision = ##t }
+lu = {\once \override NoteColumn.ignore-collision = ##t }
 % simpler sustain commands
-sd =  s8\sustainOn 
+sd =  s8\sustainOn
 su =  s8\sustainOff
 sv =  s8\sustainOff\sustainOn
 
 \parallelMusic #'(rhUpRed rhDownGreen lhUpBlue lhDownGrey)
 {
   \tempo"Andante très expressif"
-  \slurUp \phrasingSlurUp 
+  \slurUp \phrasingSlurUp
   r8\pp \cl <f af>\( \cu <f' af> ~ <f af> 4. <df f>4.\) ~ |
   \stemDown \tieDown s8*9 |
   \dynamicUp \stemUp r8 \lu <f af>4 ~ <f af>2. |
@@ -65,7 +66,7 @@ sv =  s8\sustainOff\sustainOn
   <gf bff>2.~<gf bff>4. |
   s8*9 |
 
-  <c ef>8\( <bf df> <c ef> \stemUp\tieUp\times 3/2 {df f~} \times 3/2 {f df~} |
+  <c ef>8\( <bf df> <c ef> \stemUp\tieUp\tuplet 2/3 {df f~} \tuplet 2/3 {f df~} |
   s4.  bf'2._~ |
   <f af>2.~<f af>4. |
   s8*9 |
@@ -93,14 +94,14 @@ sv =  s8\sustainOff\sustainOn
   ef8 df ef df4. c4. |
   bf2. af4.|
   af2. gf4. |
-  f2. \times 3/2 {ef8 af,~} |
+  f2. \tuplet 2/3 {ef8 af,~} |
 
   \barNumberCheck#9
 
   r8 <f, af>4 \stemNeutral\tieNeutral <f'' af>4. <df f>\) ~ |
   s8*9 |
   s8*9 \clef treble |
-  \stemNeutral \once\override Beam #'positions = #'(3 . 3.5)
+  \stemNeutral \once\override Beam.positions = #'(3 . 3.5)
   <df, af'>8 \cu <f' af> \cl \clef treble <f' af>~<f af>2. |
 
   \stemUp\tieUp <df f>8\( ef f ef2.\) ~ |
@@ -118,92 +119,92 @@ sv =  s8\sustainOff\sustainOn
   r8 <df, gf bf df>4 ~ <df gf bf df>2. |
   <gf df'>2. s4. |
 
-  df8\( <df df,>\< <ef ef,> \times 3/2 {<bf' bf,>\! <af af,>~} \times 3/2 {<af af,> <f f,>} |
+  df8\( <df df,>\< <ef ef,> \tuplet 2/3 {<bf' bf,>\! <af af,>~} \tuplet 2/3 {<af af,> <f f,>} |
   s8 af4 f'2. |
   r8 <f cf'>4 <cf' df f>4.~<cf df f>8 r r |
   \tieDown af2.~af4. |
 
-  f8 ef f \times 3/2 {ef df\>~} \times 3/2 {df[ bf]\)} s8*0\! |
+  f8 ef f \tuplet 2/3 {ef df\>~} \tuplet 2/3 {df[ bf]\)} s8*0\! |
   r8 <f, bf>4~<f bf>2. |
-  \tieUp r8 ef4 ~ \times 3/2 {ef8 df8 ~} df4. |
+  \tieUp r8 ef4 ~ \tuplet 2/3 {ef8 df8 ~} df4. |
   <<bf2. {s8 <f' bf>4~<f bf>2.}>> |
 }
-rhUp = \relative c' \rhUpRed 
-rhDown = \relative c' \rhDownGreen 
+rhUp = \relative c' \rhUpRed
+rhDown = \relative c' \rhDownGreen
 lhUp = \relative c' \lhUpBlue
 lhDown= \relative c' \lhDownGrey
 
 \parallelMusic #'(rhUpRed rhDownGreen lhUpBlue lhDownGrey)
 {
   \barNumberCheck#15
-  \tempo"Tempo rubato" 
+  \tempo"Tempo rubato"
   \stemNeutral \tieNeutral
-  \times 3/2 {r8  <f bf f'>--(~} <f bf f'> <ef bf' ef>-- <ef bf' ef>-- 
+  \tuplet 2/3 {r8  <f bf f'>--(~} <f bf f'> <ef bf' ef>-- <ef bf' ef>--
   %{ %} <ef bf' ef>-- <df bf' df>-- <df bf' df>-- |
   s8*9 |
   \tieNeutral
-  \times 3/2 {r8\pp \clef treble <f gf bf>--~} <f gf bf> <ef gf bf>-- <ef gf bf>--
+  \tuplet 2/3 {r8\pp \clef treble <f gf bf>--~} <f gf bf> <ef gf bf>-- <ef gf bf>--
   %{ %}  <ef gf bf>-- <df gf bf>-- <df gf bf>-- |
   <ef ef,>2. s4. |
 
-  <df bf' df>8-- <c gf' bf c>-- <c gf' bf c>-- 
-  %{ %} \times 3/2 {<c gf' bf c>-- <df bf' df>--} <bf gf' bf>4.--)|
+  <df bf' df>8-- <c gf' bf c>-- <c gf' bf c>--
+  %{ %} \tuplet 2/3 {<c gf' bf c>-- <df bf' df>--} <bf gf' bf>4.--)|
   s8*9 |
-  <df gf bf>8-- <c gf' bf>-- <c gf' bf>-- 
-  %{ %} \times 3/2 {<c gf' bf>-- <df gf bf>--} <bf df gf>4.--|
+  <df gf bf>8-- <c gf' bf>-- <c gf' bf>--
+  %{ %} \tuplet 2/3 {<c gf' bf>-- <df gf bf>--} <bf df gf>4.--|
   s8*9 |
 
-  \times 3/2 {r8 <f' bf f'>--\(~} <f bf f'> <gf bf gf'>-- <f bf f'>--
+  \tuplet 2/3 {r8 <f' bf f'>--\(~} <f bf f'> <gf bf gf'>-- <f bf f'>--
   %{ %} <ef bf' ef>-- <f bf f'>-- <ef bf' ef>-- |
   \cl\stemUp bf2. s4. \cu\stemDown |
-  \times 3/2 {r8 \clef treble <f' gf bf>--~} <f gf bf> <gf bf ef>-- <f gf bf>--
+  \tuplet 2/3 {r8 \clef treble <f' gf bf>--~} <f gf bf> <gf bf ef>-- <f gf bf>--
   %{ %}  <ef gf bf>-- <f gf bf>-- <ef gf bf>-- |
   \clef bass <ef ef,>2. s4. |
 
-  <df bf' df>8-- <ef bf' ef>-- <df bf' df>-- \times3/2{
+  <df bf' df>8-- <ef bf' ef>-- <df bf' df>-- \tuplet2/3{
     <bf' c>-- \acciaccatura{\slurUp ef}<df, bf' df>--
   } <bf gf' bf>4.--\)~|
   s8*9 |
-  <df gf bf>8-- <ef gf bf>-- <df gf bf>-- 
-  %{ %} \times 3/2 {<c gf' bf>-- <df gf bf>--} <bf ef gf>4.--|
+  <df gf bf>8-- <ef gf bf>-- <df gf bf>--
+  %{ %} \tuplet 2/3 {<c gf' bf>-- <df gf bf>--} <bf ef gf>4.--|
   s8*9 |
 
   \barNumberCheck#19
 
-  \times 9/6 { <bf gf' bf>8[( <gf gf'> 
+  \tuplet 6/9 { <bf gf' bf>8[( <gf gf'>
   %{ %} <af ef' af> <c c'> <bf gf' bf> <gf gf'>]) } |
   s8*9^\markup\italic"peu à peu,  cresc. et animé . . ." |
-  r8*9/6 \stemDown \times 9/6 {gf8[ af c bf gf] } |
+  r8*9/6 \stemDown \tuplet 6/9 {gf8[ af c bf gf] } |
   << { \clef bass <af af,>2. s4.}
   %{ %} {s4*9/6 \stemUp <c' ef>4*9/6 <ef gf>4*9/6 } >> |
 
-  r8 <gf c ef gf>-- <gf c ef gf>-- 
+  r8 <gf c ef gf>-- <gf c ef gf>--
   %{ %} <gf c ef gf>-- <gf c ef gf>-- <af c ef af>-- <gf c ef gf>4.-- |
   s8*9 |
-  \stemUp r8 \stemNeutral <gf c ef>--_( <gf c ef>-- 
+  \stemUp r8 \stemNeutral <gf c ef>--_( <gf c ef>--
   %{ %} <gf c ef>-- <gf c ef>-- <af c ef>-- <gf c ef>4.--) |
-  \stemDown <bff, bff,>2. s4. |
+  \stemDown <a,, a,>2. s4. |
 
-  \stemUp 
-  r8*9/6 \times 9/6 {<gf gf'>8[( <af af'> <df df'> <bf bf'> <gf gf'>]) } |
+  \stemUp
+  r8*9/6 \tuplet 6/9 {<gf gf'>8[( <af af'> <df df'> <bf bf'> <gf gf'>]) } |
   s8*9/6 df''4. s8*9/6 gf4*9/6 |
-  \stemUp r8*9/6 \stemDown \times 9/6 {gf8[ af df bf gf] } |
-  << { <bf bf,>2. s4.} 
+  \stemUp r8*9/6 \stemDown \tuplet 6/9 {gf8[ af df bf gf] } |
+  << { <bf bf,>2. s4.}
   %{ %} {s8*9/6 \stemUp <bf' df>4. s8*9/6 <df gf>4*9/6 } >> |
 
   \stemNeutral
-  r8 <gf bf ef gf>-- <gf bf ef gf>-- 
+  r8 <gf bf ef gf>-- <gf bf ef gf>--
   %{ %} <gf bf ef gf>-- <gf bf ef gf>-- <af c f af>-- <gf bf ef gf>4.-- |
   s8*9 |
-  \stemUp r8 \stemNeutral <gf bf ef>--_( <gf bf ef>-- 
+  \stemUp r8 \stemNeutral <gf bf ef>--_( <gf bf ef>--
   %{ %} <gf bf ef>-- <gf bf ef>-- <af c f>-- <gf bf ef>4.--) |
-  \stemDown <af, af,>2. s4. |
+  \stemDown <c, c,>2. s4. |
 
-  \stemUp 
-  r8*9/6 \times 9/6 {<gf gf'>8[( <af af'> <ef' ef'> <df df'> <bf bf'>]) } |
+  \stemUp
+  r8*9/6 \tuplet 6/9 {<gf gf'>8[( <af af'> <ef' ef'> <df df'> <bf bf'>]) } |
   s8*9/6 <bf, df>4.*9/6 <gf' bf>4*9/6 |
-  \stemUp r8*9/6 \stemDown \times 9/6 {gf8[ af ef' df bf] } |
-  << { <df df,>2. s4.} 
+  \stemUp r8*9/6 \stemDown \tuplet 6/9 {gf8[ af ef' df bf] } |
+  << { <df df,>2. s4.}
   %{ %} {s8*9/6 \stemUp <bf' df>4.*9/6 <gf' bf>4*9/6 } >> |
 
   \stemNeutral
@@ -238,15 +239,15 @@ lhDown= {\lhDown \relative c, \lhDownGrey }
   \stemUp
   <f af>2.( <af cf>4 df8 ) |
   s8*9 \pp|
-  \slurDown \phrasingSlurDown \dynamicUp \stemNeutral  
+  \slurDown \phrasingSlurDown \dynamicUp \stemNeutral
   \clef bass df16\( af' df f\cu af df\)
   %{ %} \cl f,,\( c' f\cu af c f\) \cl af,,\( ff' af\cu cf ff af\) \cl |
-  \clef bass \mergeDifferentlyDottedOn 
+  \clef bass \mergeDifferentlyDottedOn
   df4. f af |
 
   <f, af>2.( <af cf>4 af8 ) |
   s8*9 |
-  df,,,16\( af' df f\cu af df\) 
+  df,,,16\( af' df f\cu af df\)
   %{ %} \cl f,,\( c' f\cu af c f\) \cl af,,\( ff' af\cu cf af' ff\) \cl |
   df,4. f af |
 
@@ -280,12 +281,12 @@ lhDown= {\lhDown \relative c, \lhDownGrey }
 
   bf'2. af4.) |
   s8*9 |
-  \clef treble \stemNeutral d16\( gf bf\cu bf gf' bf\)\cl 
+  \clef treble \stemNeutral d16\( gf bf\cu bf gf' bf\)\cl
   %{%} ef,,\( gf bf\cu bf gf' bf\)\cl c,,\( e af\cu c e af\)\cl |
   d4. ef af, |
 
   <f af>2.( <af cf>4 df8) |
-  s8 \once\override TextScript #'outside-staff-priority = ##f 
+  s8 \once\override TextScript.outside-staff-priority = ##f
   %{%} s1^\markup\italic"cresc." |
   \clef bass df,,,16\( af' df f\cu af df\)\cl
   %{%} af,\( c f af\cu c f\)\cl  cf,\( ff af\cu cf ff af\)\cl |
@@ -295,7 +296,7 @@ lhDown= {\lhDown \relative c, \lhDownGrey }
   s8*9 |
   df,,,16\( af' df f\cu af df\)\cl
   %{ %} af,\( c f af\cu c f\)\cl  cf,\( ff af\cu cf af' ff\)\cl |
-  df,4. f af | 
+  df,4. f af |
   % Use flats so the reader can recognize this as d flat minor,
   %  the same as in the previous measure
 
@@ -334,7 +335,7 @@ lhDown= {\lhDown \relative c, \lhDownGrey }
   b4. a gs |
 
   \ottava #1
-  <cs e>8\( <b ds> <a cs> \times 3/2{<gs b> <fs a> ~} <fs a> <e gs> <ds fs>\) |
+  <cs e>8\( <b ds> <a cs> \tuplet 2/3{<gs b> <fs a> ~} <fs a> <e gs> <ds fs>\) |
   s8*9 \f \ottava #0 |
   fs,,16^( cs' e fs a cs e fs e cs a fs) e( fs e cs a fs) |
   \mergeDifferentlyHeadedOn \mergeDifferentlyDottedOn fs2. ~ fs4. |
@@ -357,7 +358,7 @@ lhDown= {\lhDown \relative c' \lhDownGrey }
   \tempo"Calmato" \key df \major \tieUp
   <df ef>2.( <ef gf>4 <ef gf bf>8) |
 	      \slurDown gf4(\pp af8 bf4 df8 c4.) |
-  \key df \major 
+  \key df \major
   af16( ef' af, ef' af, ef' af, ef' af, ef' af, ef' af, ef' af, ef' af, ef' |
   s8*9 |
 
@@ -409,11 +410,11 @@ lhDown= {\lhDown \relative c' \lhDownGrey }
 \parallelMusic #'(rhUpRed rhDownGreen lhUpBlue lhDownGrey)
 {
   \barNumberCheck#51
-  \tempo"a Tempo 1º" \newSpacingSection 
+  \tempo"a Tempo 1º" \newSpacingSection
   \stemNeutral
   r4._\markup\dynamic"ppp" \ottava #1 <f af>4.\( f4. ~ |
   \stemDown \tieDown s8*9 |
-  \stemUp 
+  \stemUp
   f16_\( af c f af c \cu\hideNotes af'4.\) \unHideNotes\cl r4. |
   f2._- f4._- |
 
@@ -423,7 +424,7 @@ lhDown= {\lhDown \relative c' \lhDownGrey }
   f2._- f4._- |
 
   \stemUp
-  <c ef>8\( <bf df> <c ef> \times 3/2 {<bf df> <df f>~} \times 3/2 {<df f> <bf df>~} |
+  <c ef>8\( <bf df> <c ef> \tuplet 2/3 {<bf df> <df f>~} \tuplet 2/3 {<df f> <bf df>~} |
   s4.  bf'2._~ |
   f,16( af bf df f af) r4.  r4.|
   f2._- f4._- |
@@ -456,14 +457,14 @@ lhDown= {\lhDown \relative c' \lhDownGrey }
   ef8 <bf df> <c ef> <bf df>4. <af c>4. |
   s8*9 |
   f16( af bf df f af) r4. \clef bass <gf, c>4. |
-  f2. \times 3/2{ef8 af,} |
+  f2. \tuplet 2/3{ef8 af,} |
 
   \barNumberCheck#59
 
   \ottava #0
   r8 <f, af>4 \stemNeutral <f'' af>4. <df f>\) ~ |
   s8*9 |
-  \stemNeutral\tieUp \once\override Beam #'positions = #'(3 . 3.5)
+  \stemNeutral\tieUp \once\override Beam.positions = #'(3 . 3.5)
   <df, af'>8[ \cu <f' af> \cl \clef treble <f' af>]~<f af>2. |
   s4. cf'2._> |
 
@@ -494,7 +495,7 @@ lhDown= {\lhDown \relative c' \lhDownGrey }
 
   r8 bf( c <c f>4. <af gf c,>4.) |
   s8 <gf c,>4( af4.) s |
-  \times 3/2 {af,8\( ef'8}\clef treble \stemNeutral af''4. \clef bass af,,\) |
+  \tuplet 2/3 {af,8\( ef'8}\clef treble \stemNeutral af''4. \clef bass af,,\) |
   af,,2. s4. |
 
 }
@@ -548,40 +549,40 @@ rhDown = {\rhDown \relative c'' \rhDownGreen}
 lhUp = {\lhUp \relative c, \lhUpBlue }
 lhDown= {\lhDown \relative c, \lhDownGrey }
 
-\score { 
+\score {
   \new PianoStaff
   <<
-    \override Score.SpacingSpanner #'shortest-duration-space = #1.7
+    \override Score.SpacingSpanner.shortest-duration-space = #1.7
     % The 'piano' accidental style has extraNaturals false by default
     %\set PianoStaff.extraNatural = ##f
-    #(set-accidental-style 'piano 'Score)
+    \accidentalStyle Score.piano
     \set PianoStaff.printKeyCancellation = ##f
-    \override PianoStaff.DynamicLineSpanner #'staff-padding = #2
-    \override PianoStaff.DynamicText #'self-alignment-X = #LEFT
-    \new Staff = "upper" << 
+    \override PianoStaff.DynamicLineSpanner.staff-padding = #2
+    \override PianoStaff.DynamicText.self-alignment-X = #LEFT
+    \new Staff = "upper" <<
       \key df \major
       \time 9/8
-      \override PianoStaff.PhrasingSlur #'height-limit = #5 
+      \override PianoStaff.PhrasingSlur.height-limit = #5
       \new Voice = "red" {
-	%{colorize } \override NoteHead #'color = #red %}
+	%{colorize } \override NoteHead.color = #red %}
 	\rhUp
       }
       \new Voice = "green" {
-	%{colorize } \override NoteHead #'color = #green %}
+	%{colorize } \override NoteHead.color = #green %}
 	\rhDown
       }
       \new Voice = "dynamics" {
       }
     >>
-    \new Staff = "lower" << 
+    \new Staff = "lower" <<
       \key df \major
       \time 9/8
       \new Voice = "blue" {
-	%{colorize } \override NoteHead #'color = #blue %}
+	%{colorize } \override NoteHead.color = #blue %}
 	\lhUp
       }
       \new Voice = "grey" {
-	%{colorize } \override NoteHead #'color = #grey %}
+	%{colorize } \override NoteHead.color = #grey %}
 	\lhDown
 	\bar "|."
       }
