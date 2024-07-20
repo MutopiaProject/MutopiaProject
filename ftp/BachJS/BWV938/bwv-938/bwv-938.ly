@@ -1,23 +1,17 @@
-\version "2.11.62"
+\version "2.20.0"
 
 \paper {
-    page-top-space = #0.0
-    %indent = 0.0
-    line-width = 18.0\cm
     ragged-bottom = ##f
     ragged-last-bottom = ##f
 }
-
-% #(set-default-paper-size "a4")
 
 #(set-global-staff-size 19)
 
 \header {
         title = "Praeludium Nr. 6"
         subtitle = "\"Sechs kleine Präludien\""
-        piece = "Bwv 938"
         mutopiatitle = "Praeludium Nr. 6"
-        composer = "Johann Sebastian Bach (165-1750)"
+        composer = "Johann Sebastian Bach (1685-1750)"
         mutopiacomposer = "BachJS"
         opus = "BWV 938"
         date = "1717-1723?"
@@ -29,7 +23,7 @@
 		maintainerWeb = "http://www.roxele.de/"
         maintainerEmail = "dl1sdz (at) gmail.com"
  footer = "Mutopia-2008/11/06-1592"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
+ tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-align { \small \line { Sheet music from \with-url "http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url "http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Copyright © 2008. \hspace #0.5 Reference: \footer } } \line { \teeny \line { Licensed under the Creative Commons Attribution-ShareAlike 3.0 (Unported) License, for details see: \hspace #-0.5 \with-url "http://creativecommons.org/licenses/by-sa/3.0" http://creativecommons.org/licenses/by-sa/3.0 } } } }
 	}
 
      soprano =   \relative e' {
@@ -56,7 +50,7 @@
 		 }
 			\alternative {
 				{ b4. \mordent }
-				{ b4. \mordent  }
+				{ b4. \mordent }
 			} | % 20
 			
 
@@ -107,7 +101,7 @@ bass = \relative e {
 			e8-\mordent [ e, ] r8 | % 1
 			r16 e'16 [ g b g e ] | % 2
 			b'8-\mordent [ b, ] r8 | % 3
-			r16 b'16 [ dis fis cis b ]  | % 4
+			r16 b'16 [ dis fis dis b ]  | % 4
 			e8 [ g e ] | % 5
 			c8 [ a c ] | % 6
 			d8 [ fis d ] | % 7
