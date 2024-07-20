@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.19.82"
 ViolinoPrimoWinterThree =  {
 \clef violin
 \key f \minor
@@ -19,15 +19,15 @@ bes8 ( aes  g) |
 aes ( g  f) |
 bes8 ( aes  g) |
 % 30
-aes-| ( aes-|  aes)-| |
-a-| ( a-|  a)-| |
-bes-| ( bes-|  bes)-| |
-b-| ( b-|  b)-| |
-c-| ( c-|  c)-| |
+aes-! ( aes-!  aes)-! |
+a-! ( a-!  a)-! |
+bes-! ( bes-!  bes)-! |
+b-! ( b-!  b)-! |
+c-! ( c-!  c)-! |
 % 35
-c-| ( c-|  c)-| |
-c-| ( c-|  c)-| |
-c-| ( c-|  c)-| |
+c-! ( c-!  c)-! |
+c-! ( c-!  c)-! |
+c-! ( c-!  c)-! |
 bes-. ( bes-.  bes)-. |
 aes4 r8 |
 % 40
@@ -165,7 +165,7 @@ f4.^\fermata
 }
 \bar "||"
 
-} 
+}
 
 
 %\score {

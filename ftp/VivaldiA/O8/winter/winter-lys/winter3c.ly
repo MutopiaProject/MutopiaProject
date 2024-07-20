@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.19.82"
 AltoViolaWinterThree =  {
 \clef alto
 \key f \minor
@@ -19,28 +19,28 @@ e8 ( f  g) |
 f4. |
 e8 ( f  g) |
 % 30
-f-| ( f-|  f)-| |
-ees-| ( ees-|  ees)-| |
-des-| ( des-|  des)-| |
-des-| ( des-|  des)-| |
-c-| ( c'-|  c)-| |
+f-! ( f-!  f)-! |
+ees-! ( ees-!  ees)-! |
+des-! ( des-!  des)-! |
+des-! ( des-!  des)-! |
+c-! ( c'-!  c)-! |
 % 35
-bes-| ( bes-|  bes)-| |
-aes-| ( aes-|  aes)-| |
-g-| ( g-|  g)-| |
+bes-! ( bes-!  bes)-! |
+aes-! ( aes-!  aes)-! |
+g-! ( g-!  g)-! |
 g-. ( g-.  e)-. |
 c4. ~ |
 % 40
 \mark "H"
 c4. ~ |
 c4. |
-e8-| ( e-|  e)-| |
-e-| ( e-|  e)-| |
-f-| ( f-|  f)-| |
+e8-! ( e-!  e)-! |
+e-! ( e-!  e)-! |
+f-! ( f-!  f)-! |
 % 45
-f-| ( f-|  f)-| |
-f-| ( f-|  f)-| |
-e-| ( e-|  e)-| |
+f-! ( f-!  f)-! |
+f-! ( f-!  f)-! |
+e-! ( e-!  e)-! |
 c8 des'16 c bes aes |
 g f e d c bes |
 % 50
@@ -78,7 +78,7 @@ b ~ |
 b ~ |
 b |
 \mark "L"
-bes8 r r32 b' c d |
+b8 r r32 b' c d |
 % 90
 f,8 r r32 d ees f |
 g,8 r r32 b c d |
@@ -93,7 +93,7 @@ ees16 ( f g8  aes) |
 bes4 bes,8 |
 % 105
 ees4 ees8 |
-bes4 r8 |
+bes r r |
 ees r r |
 bes r r |
 bes ees r |
@@ -156,9 +156,8 @@ aes4.^\fermata
 \bar "||"
 }
 
-} 
+}
 
 %\score {
 %\AltoViolaWinterThree
 %}
-
