@@ -17,7 +17,7 @@ vA =  {
   \stemDown
   d'4  cis'4  b4  |
   % 6
-  <g' b>2  <fis' ais>4  |
+  <g' a>2  <fis' ais>4  |
   % 7
   <b fis'>4 g'2
   % 8, prima volta
