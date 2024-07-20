@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 
 VioloncelloWinterThree =  {
 \clef bass
@@ -126,7 +126,7 @@ f d b |
 g4 r8 |
 \mark "M"
 \newSpacingSection
-%\override Staff.MultiMeasureRest   #'minimum-length = #48
+%\override Staff.MultiMeasureRest.minimum-length = #48
 R4.*19 |
 % 120
 \mark "N"

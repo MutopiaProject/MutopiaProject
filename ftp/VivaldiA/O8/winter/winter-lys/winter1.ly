@@ -1,4 +1,4 @@
-\version "2.19.82"
+\version "2.24.3"
 #(define smalltrill '((font-relative-size . -1) (music "scripts.trill")))
 
 ViolinoPrincipaleWinterOne =  {
@@ -26,7 +26,7 @@ d8-.\trill \(  d\)-.\trill d-.\trill \(  d\)-.\trill	d8-.\trill \(  d\)-.\trill 
 }
 \mark "B"
 \newSpacingSection
-\override Voice.SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 8)
+\override Voice.SpacingSpanner.common-shortest-duration = #(ly:make-moment 1 8)
 \relative f'' {
 c32_"Solo"^\markup{\translate #'(1 . 0) "Orrido Vento"} c' c g	g ees ees c	c c' c g	g ees ees c
 c c' bes aes 	g f ees d!	c c' bes aes 	g f ees d! |

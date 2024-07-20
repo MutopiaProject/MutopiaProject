@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 ViolinoPrimoWinterOne =  {
 \clef violin
 \key f \minor
@@ -32,7 +32,7 @@ r1 |
 des'!8-. \(  des\)-. des-. \(  des\)-.	e!8-. \(  e\)-. e-. \(  e\)-. |
 % 20
 \newSpacingSection
-\override Voice.SpacingSpanner #'common-shortest-duration = #(ly:make-moment 1 8)
+\override Voice.SpacingSpanner.common-shortest-duration = #(ly:make-moment 1/8)
 f16 \( f,-. f-.  f\)-.	f-. \( f-. f-.  f\)-. 
 f-. \( f-. f-.  f\)-.	f-. \( f-. f-.  f\)-. |
 f-. \( f-. f-.  f\)-.	f-. \( f-. f-.  f\)-. 
