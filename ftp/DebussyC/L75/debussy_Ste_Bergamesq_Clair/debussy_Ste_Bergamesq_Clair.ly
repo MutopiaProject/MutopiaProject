@@ -182,7 +182,7 @@ lhDown= \relative c' \lhDownGrey
   s8*9 |
   \stemUp r8 \stemNeutral <gf c ef>--_( <gf c ef>-- 
   %{ %} <gf c ef>-- <gf c ef>-- <af c ef>-- <gf c ef>4.--) |
-  \stemDown <bff, bff,>2. s4. |
+  \stemDown <a,, a,>2. s4. |
 
   \stemUp 
   r8*9/6 \times 9/6 {<gf gf'>8[( <af af'> <df df'> <bf bf'> <gf gf'>]) } |
@@ -197,7 +197,7 @@ lhDown= \relative c' \lhDownGrey
   s8*9 |
   \stemUp r8 \stemNeutral <gf bf ef>--_( <gf bf ef>-- 
   %{ %} <gf bf ef>-- <gf bf ef>-- <af c f>-- <gf bf ef>4.--) |
-  \stemDown <af, af,>2. s4. |
+  \stemDown <c, c,>2. s4. |
 
   \stemUp 
   r8*9/6 \times 9/6 {<gf gf'>8[( <af af'> <ef' ef'> <df df'> <bf bf'>]) } |
