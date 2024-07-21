@@ -10,7 +10,7 @@
   mutopiatitle = "Stoit yavir nad vodoiu [The maple stands above the water]"
   license = "Public Domain"
   source = "ИЗ РЕПЕРТУАРА И. С. ПАТОРЖИНСКОГО / УКРАИНСКИЕ / НАРОДНЫЕ / ПЕСНИ / ДЛЯ БАСА / В СОПРОВОЖДЕНИИ ФОРТЕПИАНО / ГОСУДАРСТВЕННОЕ МУЗЫКАЛЬНОЕ ИЗДАТЕЛЬСТВО / Москва 1963"
-  style = "Romanticism"
+  style = "Romantic"
 }
 
 \layout {
