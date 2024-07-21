@@ -1,4 +1,4 @@
-\version "2.16.2"
+\version "2.24.3"
 
 \header {
   title = "Стоїть явір над водою"
@@ -34,8 +34,8 @@
 
 \paper {
   indent = 0
-  markup-system-spacing #'basic-distance = #0
-  system-system-spacing #'stretchability = #10
+  markup-system-spacing.basic-distance = #0
+  system-system-spacing.stretchability = #10
 }
 
 showMultiRests = { % http://lsr.di.unimi.it/LSR/Item?id=312
@@ -92,7 +92,7 @@ melody = \relative c {
     \barNumberCheck 21
 
   \showMultiRests R2*3 |
-  R2^\markup \musicglyph #"scripts.ufermata" |
+  R2^\markup \musicglyph "scripts.ufermata" |
 }
 
 firstStanza = \lyricmode {
@@ -238,7 +238,7 @@ lower = \relative c, {
 }
 
 dynamics = {
-  \override DynamicTextSpanner #'style = #'none
+  \override DynamicTextSpanner.style = #'none
 
   s8-#(make-dynamic-script (markup #:dynamic "p" #:normal-text #:italic "legato")) s4. |
   s2*3 |
