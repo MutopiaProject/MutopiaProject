@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 \header {
   composer = "Johann Sebastian Bach (1685-1750)"
   date = "Around 1713 or 1714"

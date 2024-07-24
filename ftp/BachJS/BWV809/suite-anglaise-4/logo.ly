@@ -1,3 +1,5 @@
+\version "2.24.3"
+
 \markup {
   \fill-line {
     \center-column {
