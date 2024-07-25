@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 ViolinoPrincipaleWinterThree =  {
 
 \clef violin
@@ -42,15 +42,15 @@ bes8 ( aes  g) |
 aes ( g  f) |
 bes8 ( aes  g) |
 % 30
-aes-| ( aes-|  aes)-| |
-a!-| ( a-|  a)-| |
-bes-| ( bes-|  bes)-| |
-b!-| ( b-|  b)-| |
-c-| ( c-|  c)-| |
+aes-! ( aes-!  aes)-! |
+a!-! ( a-!  a)-! |
+bes-! ( bes-!  bes)-! |
+b!-! ( b-!  b)-! |
+c-! ( c-!  c)-! |
 % 35
-c-| ( c-|  c)-| |
-c-| ( c-|  c)-| |
-c-| ( c-|  c)-| |
+c-! ( c-!  c)-! |
+c-! ( c-!  c)-! |
+c-! ( c-!  c)-! |
 bes-. ( bes-.  bes)-. |
 aes4 r8 |
 % 40
@@ -95,29 +95,29 @@ d c d ees f d! |
 bes' aes g f ees d |
 c b c d ees c |
 aes' g f ees d c |
-b des32 (  c) b16 des, g, b'! |
-c ees32 (  des) c16 des, g, c' |
+b d32 (  c) b16 d, g, b'! |
+c ees32 (  d) c16 d, g, c' |
 % 75
-des f32 (  ees) des16 des, g, des'' |
-ees g32 (  f) ees16 des, g, ees'' |
-des f32 (  ees) des16 des, g, des'' |
-b' des32 (  c) b16 f g,, f'' |
-b des32 (  c) b16 f g,, b''! |
+d f32 (  ees) d16 d, g, d'' |
+ees g32 (  f) ees16 d, g, ees'' |
+d f32 (  ees) d16 d, g, d'' |
+b' d32 (  c) b16 f g,, f'' |
+b d32 (  c) b16 f g,, b''! |
 % 80
 \set tupletSpannerDuration = #(ly:make-moment 1 8)
 \times 2/3 {
- c[ ( b  c) ]  b[ ( aes  b) ]  aes[ ( g  aes) ] |
- g[ ( f  g) ]  f[ ( ees  f) ]  ees[ ( des  ees) ] |
- des[ ( c  des) ]  c[ ( b  c) ]  b![ ( a  b) ] |
+ c[ ( b  c) ]  b[ ( a  b) ]  aes[ ( g  aes) ] |
+ g[ ( f  g) ]  f[ ( ees  f) ]  ees[ ( d  ees) ] |
+ d[ ( c  d) ]  c[ ( b  c) ]  b![ ( a  b) ] |
  aes![ ( g  aes) ]  g[ ( f  g) ]  f[ ( ees  f) ] |
- ees[ ( d  ees) ]  d![ ( c  d) ]  c[ ( b  c) ] | 
+ ees[ ( d  ees) ]  d![ ( c  d) ]  c[ ( b  c) ] |
 }
 % 85
-<< \context Voice = VB { \voiceTwo 
-< g des' b'? >8_"Tutti" s4  % vivaldi ommitted nat on b; viola has b nat
+<< \context Voice = VB { \voiceTwo
+< g d' b'? >8_"Tutti" s4  % vivaldi ommitted nat on b; viola has b nat
   }
   \context Voice = VA { \voiceOne
-f''16 ( ees d c b!  a) 
+f''16 ( ees d c b!  a)
   }
 >>
 g16 ( a b? c d  ees) | % vivaldi forgot to mark the b natural in this measure
@@ -166,8 +166,8 @@ r c,16 ( d  ees8) |
 r aes16 ( g  f8) |
 % 120
 \mark "N"
-#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
-#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = 1, 1, 1
 % "the wind Borea and all the winds"
 ees32_"Solo"^\markup{\translate #'(1 . 0) "Il Vento Borea e tutti li Venti"} bes c d?	ees f g aes	bes aes g f |  % vivaldi had des; changed to d based on key (bes harmonic minor and) d in following measures
 ees d c bes	c bes aes g	aes g f ees |
@@ -176,7 +176,7 @@ g ees f g	aes bes c d	ees f g aes |
 f f f f 	f f f f 	f f f f |
 % 125
 e f g f 	e! f e d	c d! c b |
-c b c d 	e d e f 	g aes b? g | % vivaldi was missing nat on upper b
+c b c d 	e d e f 	g aes bes? g | % vivaldi was missing nat on upper b
 aes aes aes aes	aes aes aes aes	aes aes aes aes |
 aes bes c bes	aes bes aes g	f g f ees |
 des des des des	des des des des	des des des des |
@@ -212,7 +212,7 @@ f4.^\fermata
 \bar "||"
 }
 
-} 
+}
 
 %\score {
 %\ViolinoPrincipaleWinterThree

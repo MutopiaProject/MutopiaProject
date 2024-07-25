@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 % TODO:
 % figure out how to avoid printing words on top of the other parts' notes
 % figure out how to wrap the text at the end of the line
@@ -22,7 +22,7 @@
 % Quest'è 'l verno, mà tal, che gioja apporte. 
 
 SonnetWinterOne = \new Voice {
-\override TextScript #'outside-staff-priority = #9999
+\override TextScript.outside-staff-priority = #9999
 % mark "A" : measure 1
 s1^\markup {"Aggiacciato tremar trà nevi algenti"}
 \noBreak
@@ -42,14 +42,14 @@ s1*16
 }
 
 SonnetWinterTwo = \new Voice {
-\override TextScript #'outside-staff-priority = #9999
+\override TextScript.outside-staff-priority = #9999
 % mark "E" : 
 s1^\markup {"Passar al foco i di quieti e contenti Mentre la pioggio fuor bagna ben cento;"}
 s1*17
 }
 
 SonnetWinterThree = \new Voice {
-\override TextScript #'outside-staff-priority = #9999
+\override TextScript.outside-staff-priority = #9999
 % mark "F" : measure 1
 s4.^\markup {"Caminar Sopra'l giaccio,"}
 s4.*23

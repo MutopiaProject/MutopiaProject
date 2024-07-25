@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 \include "winter1.ly"
 \include "winter1a.ly"
 \include "winter1b.ly"
@@ -25,7 +25,7 @@
 \score {<<
 	\set Score.skipBars = ##t
 	% doesn't change mark size?
-	%\override Score.RehearsalMark   #'font-size = #10
+	%\override Score.RehearsalMark.font-size = #10
 % part=cello
 	\context Staff = "cello" <<
 		\set Staff.instrumentName = \markup { \column { "Organo e" "Violoncello" } }

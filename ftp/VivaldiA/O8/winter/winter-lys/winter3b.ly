@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 ViolinoSecondoWinterThree =  {
 \clef violin
 \key f \minor
@@ -19,28 +19,28 @@ g ( f  e) |
 c' ( bes  aes) |
 g ( f  e) |
 % 30
-f-| ( f-|  f)-| |
-f-| ( f-|  f)-| |
-f-| ( f-|  f)-| |
-f-| ( f-|  f)-| |
-e-| ( c-|  c)-| |
+f-! ( f-!  f)-! |
+f-! ( f-!  f)-! |
+f-! ( f-!  f)-! |
+f-! ( f-!  f)-! |
+e-! ( c-!  c)-! |
 % 35
-des-| ( des-|  des)-| |
-d-| ( d-|  d)-| |
-ees-| ( ees-|  ees)-| |
+des-! ( des-!  des)-! |
+d-! ( d-!  d)-! |
+ees-! ( ees-!  ees)-! |
 e-. ( e-.  e)-. |
 f4 r8 |
 % 40
 \mark "H"
 f16 ees des c bes aes |
 g f e d c8 |
-bes''-| \( bes-|  bes\)-| |
-bes-| \( bes-|  bes\)-| |
-aes-| \( aes-|  aes\)-| |
+bes''-! \( bes-!  bes\)-! |
+bes-! \( bes-!  bes\)-! |
+aes-! \( aes-!  aes\)-! |
 % 45
-aes-| \( aes-|  aes\)-| |
-g-| \( g-|  g\)-| |
-g-| \( g-|  g\)-| |
+aes-! \( aes-!  aes\)-! |
+g-! \( g-!  g\)-! |
+g-! \( g-!  g\)-! |
 f16^"Cader à terra" ees des c bes aes |
 g f e d c bes |
 % 50
@@ -119,11 +119,11 @@ r f16( ees d8) |
 ees4 r8
 ees( f g) |
 r aes,16( bes c8) |
-r f16( ees d8) | % vivaldi had f e(nat) des; should be f ees d(nat) based on current key (ees major) and measure 115 
+r f16( ees d8) | % vivaldi had f e(nat) des; should be f ees d(nat) based on current key (ees major) and measure 115
 % 120
 \mark "N"
-#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
-#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = 1, 1, 1
 ees4 r8
 R4.*3
 des32 des des des 	des des des des 	des des des des |
@@ -159,9 +159,8 @@ f4.^\fermata
 }
 \bar "||"
 
-} 
+}
 
 %\score {
 %\ViolinoSecondoWinterThree
 %}
-
