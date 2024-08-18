@@ -12,7 +12,7 @@ musicViolinIMvtI = \relative c''' {
 	e4._\fmarc-\offset X-offset -6 ^\tutti d8 b4 r
 	c4. b8 e,4 r
 	\tuplet 3/2 2 {fis-. gis-. a-. gis-. a-. b-.
-	a-.  b-. cis-. d-. e-. fis-.}
+	a-.  b-. c-. d-. e-. f-.}
 	\textLengthOn <>_\markup {(in modo d'un recit.)} R1*19^\markup {Solo-Vlc.}
 % Bars 6 to 10
 	

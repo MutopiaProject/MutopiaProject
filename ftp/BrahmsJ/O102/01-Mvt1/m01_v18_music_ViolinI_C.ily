@@ -12,7 +12,7 @@ musicViolinIMvtI = \relative c''' {
 	e4._\fmarc d8 b4 r
 	c4. b8 e,4 r
 	\tupletUp \tuplet 3/2 2 {fis-. gis-. a-. gis-. a-. b-.
-	a-.  b-. cis-. d-. e-. fis-.} \tupletNeutral
+	a-.  b-. c-. d-. e-. f-.} \tupletNeutral
 	R1\fermata
 % Bars 6 to 10
 	R1*51
