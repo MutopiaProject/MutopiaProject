@@ -1,4 +1,4 @@
-\version "2.19.21"
+\version "2.24.0"
 \language "english"
 
 \header {
@@ -7,9 +7,9 @@
   composer     = "Erik Satie (1866-1925)"
   dedication   = "à Roland MANUEL"
   style        = "Avant-garde"
-  license      = "Creative Commons Attribution-ShareAlike 4.0"
+  license      = "Creative Commons Attribution-ShareAlike 4.0 International"
   enteredby    = "Knute Snortum"
-  lastupdated  = "2015-Jun-12"
+  lastupdated  = "2023-May-17"
   date         = "1914"
   source       = "Paris: Rouart, Lerolle & Cie., 1916. Plate R.L. 10,166 & Cie."
 
@@ -22,7 +22,7 @@
   maintainerWeb      = "http://www.musicwithknute.com/"
 
  footer = "Mutopia-2015/06/22-2021"
- copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url #"http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url #"http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url #"http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
+ copyright =  \markup { \override #'(baseline-skip . 0 ) \right-column { \sans \bold \with-url "http://www.MutopiaProject.org" { \abs-fontsize #9  "Mutopia " \concat { \abs-fontsize #12 \with-color #white \char ##x01C0 \abs-fontsize #9 "Project " } } } \override #'(baseline-skip . 0 ) \center-column { \abs-fontsize #11.9 \with-color #grey \bold { \char ##x01C0 \char ##x01C0 } } \override #'(baseline-skip . 0 ) \column { \abs-fontsize #8 \sans \concat { " Typeset using " \with-url "http://www.lilypond.org" "LilyPond " \char ##x00A9 " " 2015 " by " \maintainer " " \char ##x2014 " " \footer } \concat { \concat { \abs-fontsize #8 \sans{ " " \with-url "http://creativecommons.org/licenses/by-sa/4.0/" "Creative Commons Attribution ShareAlike 4.0 International License " \char ##x2014 " free to distribute, modify, and perform" } } \abs-fontsize #13 \with-color #white \char ##x01C0 } } }
  tagline = ##f
 }
 
@@ -462,7 +462,7 @@ lower = {
 
 \markup {
   \column {
-    \line { Translations by \with-url #"http://translate.google.com" { "Google Translate" } and some research }
+    \line { Translations by \with-url "http://translate.google.com" { "Google Translate" } and some research }
     \line { \null }
     \line { Title: }
     \line { \hspace #2 \bold { Les Trois Valses Distinguées du Précieux Dégoûté } - Three Distinguished Waltzes of a Precious Fop }
@@ -471,8 +471,8 @@ lower = {
     \line { \hspace #2 \bold { Sa Taille } - His Waist }
     \line { \null }
     \line { Preamble: }
-    \line { \hspace #2 Those who damage the reputation or fortune of others, rather than losing a good word, deserve  }
-    \line { \hspace #2 ignominious punishment. This has not been said, and I dare to say. (The BRUYERE "The Characters" }
+    \line { \hspace #2 Those who harm the reputation or fortune of others, rather than restraining a clever remark, deserve }
+    \line { \hspace #2 an infamous punishment. This has not been said, and I dare to say. (The BRUYERE "The Characters" }
     \line { \hspace #2 or The Mores of This Century, according to the edition of Messrs. C. SERVOIS and A. REBELLIAU) }
     \line { \null }
     \line { Text: }
