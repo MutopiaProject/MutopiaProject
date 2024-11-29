@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 ViolinoPrimoWinterThree =  {
 \clef violin
 \key f \minor
@@ -19,15 +19,15 @@ bes8 ( aes  g) |
 aes ( g  f) |
 bes8 ( aes  g) |
 % 30
-aes-| ( aes-|  aes)-| |
-a-| ( a-|  a)-| |
-bes-| ( bes-|  bes)-| |
-b-| ( b-|  b)-| |
-c-| ( c-|  c)-| |
+aes-! ( aes-!  aes)-! |
+a-! ( a-!  a)-! |
+bes-! ( bes-!  bes)-! |
+b-! ( b-!  b)-! |
+c-! ( c-!  c)-! |
 % 35
-c-| ( c-|  c)-| |
-c-| ( c-|  c)-| |
-c-| ( c-|  c)-| |
+c-! ( c-!  c)-! |
+c-! ( c-!  c)-! |
+c-! ( c-!  c)-! |
 bes-. ( bes-.  bes)-. |
 aes4 r8 |
 % 40
@@ -122,8 +122,8 @@ r c,16 ( d  ees8) |
 r aes16 ( g  f8) |
 % 120
 \mark "N"
-#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
-#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = 1, 1, 1
 ees4 r8 |
 R4.*3 |
 f32 f f f 	f f f f 	f f f f |
@@ -165,7 +165,7 @@ f4.^\fermata
 }
 \bar "||"
 
-} 
+}
 
 
 %\score {

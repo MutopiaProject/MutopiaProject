@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 \include "winter1.ly"
 \include "winter1a.ly"
 \include "winter1b.ly"
@@ -32,7 +32,7 @@
 \score {<<
 	\set Score.skipBars = ##t
 	% doesn't change mark size?
-	%\override Score.RehearsalMark   #'font-size = #10
+	%\override Score.RehearsalMark.font-size = #10
 % part=solo
 	\new Staff = "solo" 
 	\with { \consists Mark_engraver }
@@ -76,10 +76,7 @@
 % part=x
 	
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 140 4)
-      }
+    \tempo 4 = 140
     }
 
 
@@ -140,10 +137,7 @@
 % part=x
 	
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 46 4)
-      }
+    \tempo 4 = 46
     }
 
 
@@ -162,7 +156,7 @@
 \score {<<
 	\set Score.skipBars = ##t
 % part=solo
-	\override Score.PaperColumn #'keep-inside-line = ##t
+	\override Score.PaperColumn.keep-inside-line = ##t
 	\new Staff = "solo" 
 	\with { \consists Mark_engraver }
 	<<
@@ -205,10 +199,7 @@
 % part=x
 	
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 150 8)
-      }
+    \tempo 4. = 50
     }
 
 

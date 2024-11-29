@@ -1,4 +1,4 @@
-\version "2.12.3"
+\version "2.24.3"
 
 VioloncelloWinterThree =  {
 \clef bass
@@ -126,12 +126,12 @@ f d b |
 g4 r8 |
 \mark "M"
 \newSpacingSection
-%\override Staff.MultiMeasureRest   #'minimum-length = #48
+%\override Staff.MultiMeasureRest.minimum-length = #48
 R4.*19 |
 % 120
 \mark "N"
-#(override-auto-beam-setting '(end 1 32 3 8 )  1 8)
-#(override-auto-beam-setting '(end 1 32 3 8 )  2 8)
+\set Timing.beamExceptions = #'()
+\set Timing.beatStructure = 1, 1, 1
 ees'4 r8 |
 R4.*3
 bes32^"Venti" bes bes bes 	bes bes bes bes 	bes bes bes bes |
