@@ -15,6 +15,7 @@
 	copyright = "Public Domain"
 	maintainer = "Ludovic Sardain"
 	maintainerEmail = "ludovicsardain@hotmail.com"
+	opus = "RCT 6, No. 14"
 
 	
  footer = "Mutopia-2013/02/21-407"

@@ -11,6 +11,7 @@
 	mutopiacomposer = "RameauJP"
 	mutopiainstrument = "Harpsichord, Piano"
 	date = "1724"
+	opus = "RCT 3, No. 1"
 	source = "Durand, 1895"
 	style = "Baroque"
 	copyright = "Public Domain"
