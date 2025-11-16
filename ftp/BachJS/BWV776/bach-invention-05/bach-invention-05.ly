@@ -97,7 +97,7 @@ voicetwo =  \relative c {
   ees8[ aes g\prall f]  e16[ f g f]  e8[ d] |
   c[ e g bes] ~  bes16[ g aes bes]  c8[ bes] |
   aes16[ bes aes g]  aes[ bes g aes]  f[ f' ees f]  des[ ees c des] |
-  bes[ des c bes]  bes[ c aes bes]  g[ f' e d]  e[ f d e] |
+  bes[ des c des]  bes[ c aes bes]  g[ f' e d]  e[ f d e] |
   f,[ f' ees! des!]  ees[ f des ees]  c[ f ees des]  c[ des bes c] |
   a[ des c bes]  a[ bes g a]  c,[ bes'  a g]  a[ bes g a] |
   bes8[ bes,16 a]  bes8[ c] des4\mordent ees |
