@@ -17,7 +17,7 @@ soloViolinBC =  \relative c' {
     %12
     a( g  a) f c f bes( a  bes) g e g c( bes  c) a f a d( c  d) bes c d |
     e,8 c' f, ~ f d e f16( e  f) a e g f( g a bes  c) a |
-    f( e  f) bes d, f e( f g a  bes) g e( d  e) a c, e d( e f g  a) f |
+    f( es  f) bes d, f e( f g a  bes) g e( d  e) a c, e d( e f g  a) f |
     d( c  d) g bes, d c( d e f  g) e c( bes  c) f bes,8-. a(  bes) g |
     f4 r8 d-. c-. bes-. a16(  c) d bes c8-. bes'-. a-. g-. |
     f d'4 ~ d8 e f c4. ~ c8 e f |
@@ -56,7 +56,7 @@ soloViolinBC =  \relative c' {
     es d f bes4 d,8 ~ d c e a4 c,8 ~ |
     c bes d g4 bes,8 ~ bes a r d,-. c-. bes-. |
     a16(  c) d bes c8-. bes'-. a-. g-. f c''4\p ~ c16 bes a bes c a |
-    f( e  f) bes d, f e( f g a  bes) g e( d  e) a c, e d( e f g  a) f |
+    f( es  f) bes d, f e( f g a  bes) g e( d  e) a c, e d( e f g  a) f |
     d( c  d) g bes, d c( d e f  g) e  c[( bes  c) f] bes,8-.\f a(  bes) g |
     f4. r r2. |
     \bar "|."
