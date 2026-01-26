@@ -1,24 +1,39 @@
 \header{
-    title = "Belle qui tiens ma vie"
-    composer = "Thoinot Arbeau"
-    date = "1588"
-    opus = "Orchésographie"
+  title = "Belle qui tiens ma vie"
+  subtitle = "Basse Danse"
+  composer = "Thoinot Arbeau (1519—1595)"
+  date = "1588"
+  opus = "Orchésographie"
 
-    mutopiatitle = "Pavan: Belle qui tiens ma Vie"
-    mutopiacomposer = "ArbeauT"
-    mutopiainstrument="Voice (SATB)"
-    style = "Renaissance"
-    copyright="Public Domain"
-    source = "http://memory.loc.gov/cgi-bin/ampage?collId=musdi&fileName=219/musdi219.db&recNum=61"
-    maintainer="Peter Chubb"
-    maintainerEmail="mutopia@chubb.wattle.id.au"
-    lastupdated="2009/Mar/28"
- footer = "Mutopia-2009/08/05-1"
- tagline = \markup { \override #'(box-padding . 1.0) \override #'(baseline-skip . 2.7) \box \center-column { \small \line { Sheet music from \with-url #"http://www.MutopiaProject.org" \line { \teeny www. \hspace #-1.0 MutopiaProject \hspace #-1.0 \teeny .org \hspace #0.5 } • \hspace #0.5 \italic Free to download, with the \italic freedom to distribute, modify and perform. } \line { \small \line { Typeset using \with-url #"http://www.LilyPond.org" \line { \teeny www. \hspace #-1.0 LilyPond \hspace #-1.0 \teeny .org } by \maintainer \hspace #-1.0 . \hspace #0.5 Reference: \footer } } \line { \teeny \line { This sheet music has been placed in the public domain by the typesetter, for details see: \hspace #-0.5 \with-url #"http://creativecommons.org/licenses/publicdomain" http://creativecommons.org/licenses/publicdomain } } } }
+  mutopiatitle = "Pavan: Belle qui tiens ma Vie"
+  mutopiacomposer = "T. Arbeau (1519--1595)"
+  mutopiainstrument="Voice (SATB)"
+  style = "Renaissance"
+  copyright = "Public Domain"
+  source = "http://memory.loc.gov/cgi-bin/ampage?collId=musdi&fileName=219/musdi219.db&recNum=61"
+  maintainer = "Peter Chubb"
+  maintainerEmail = "mutopia@chubb.wattle.id.au"
+  lastupdated = "2026/Jan/26"
 }
+
+\include "articulate.ly"
 
 %{
 	$Log: arbeau.ly,v $
+	Revision 1.13  2026/01/25 22:40:12  peterc
+	Update to Lily 2.24
+
+	Revision 1.12  2018/07/01 06:59:26  peterc
+	Summary: Updated to Lily 2.19
+
+	Also adjusted spacing between tampbour staff and rest of system.
+
+	Revision 1.11  2018/06/30 21:06:15  peterc
+	Summary: Update to 2.21.
+
+	Revision 1.10  2013/08/20 05:05:57  peterc
+	Updated; made recorder score fit on one page.
+
 	Revision 1.9  2009-08-05 04:28:54  peterc
 	Thanks to Neil Puttock for the correct (weird) syntax for the system
 	start delimiters.
@@ -44,25 +59,31 @@
 	
 %}
 
-\version "2.12.0"
+\version "2.24.0"
 
-global={\key f \major % not really
-    \time 2/4 % bars are to match against dance steps.
+global={
+  \key f \major % not really
+  \time 2/4 % bars are to match against dance steps.
 }
 
 %
 % Drum rhythm
 %
 tambour =  {
-    \override NoteHead   #'style = #'cross
+    \override NoteHead.style = #'cross
     \stemUp
-    \repeat unfold 32 {
-           f4 f8 f8 
+    \repeat volta 2 {
+      \repeat unfold 8 {
+	f4 f8 f8
+      }
+    }
+    \repeat unfold 16 {
+      f4 f8 f8
     }
 }
 
 Superius =  \relative c'' {
-    \repeat unfold 2 {
+    \repeat volta 2 {
     g2 g4 fis |
     g a bes2 |
     bes4 d c bes |
@@ -77,31 +98,31 @@ Superius =  \relative c'' {
 }
 
 ContratenorShift = \relative c' {
-    \repeat unfold 2 {
+    \repeat volta 2 {
         s2 s4 s |
         s s s2 |
         s4 s s s |
         s s s2
     }
     s2 s4 s |
-    s s s2 |    
+    s s s2 |
 
-    \override NoteColumn   #'force-hshift = #1.15
+    \override NoteColumn.force-hshift = #1.15
     s2
-    \override NoteColumn   #'force-hshift = #0.0 
+    \override NoteColumn.force-hshift = #0.0
     s4 s |
     s s s2 |
     s2 s4 s|
     s s s2 |
-    \override NoteColumn   #'force-hshift = #1.15
-    s2 
-    \override NoteColumn   #'force-hshift = #0.0 
+    \override NoteColumn.force-hshift = #1.15
+    s2
+    \override NoteColumn.force-hshift = #0.0
     s4 s |
     s s s2
 }
 
 Contratenor = \relative c' {
-    \repeat unfold 2 {
+    \repeat volta 2 {
         d2 d4 d |
         d f f2 |
         f4 f e f |
@@ -113,13 +134,13 @@ Contratenor = \relative c' {
     d d b2
     bes?2 f'4 f|
     d es d2 |
-    f2 
+    f2
     e4 d |
     d d d2
 }
 
 Tenor=\relative c' {
-    \repeat unfold 2 {
+    \repeat volta 2 {
         bes2 bes4 a |
         bes c d2 |
         d4 bes g d' |
@@ -134,7 +155,7 @@ Tenor=\relative c' {
 }
 
 Bassus = \relative c' {
-    \repeat unfold 2 {
+    \repeat volta 2 {
         g2 g4 d |
         g f bes,2 |
         bes4 bes c d |
@@ -148,6 +169,29 @@ Bassus = \relative c' {
     }
 }
 
+% Rearranged to fit recorder parts
+verseOneA=\lyricmode{
+  <<
+    \new Lyrics {
+      \set stanza = #"1. "
+      Bel -- le qui |
+      tiens ma vi -- |
+      e cap -- | tiv  -- e
+      dans tes yeux | }
+    \new Lyrics = v {
+      Qui m'as l'am -- |
+      e ra -- vi -- |
+      e D'un sou -- ris gra -- ci -- eux, |
+    }
+  >>
+  \context Lyrics = v \repeat unfold 2 {
+        Viens tôt me |
+        se -- cou -- rir
+        ou me fau -- |
+        dra mou -- rir
+    }
+}
+
 verseOne=\lyricmode{
   \set stanza = #"1. "
     Bel -- le qui |
@@ -155,11 +199,11 @@ verseOne=\lyricmode{
     e cap -- tiv -- e |
     dans tes yeux |
     Qui m'as l'am -- |
-    e ra -- vi -- | 
+    e ra -- vi -- |
     e D'un sou -- ris gra -- ci -- eux, |
     \repeat unfold 2 {
         Viens tôt me |
-        se -- cou -- rir 
+        se -- cou -- rir
         ou me fau -- |
         dra mou -- rir
     }
@@ -174,12 +218,12 @@ verseTwo=\lyricmode{
      prés de toi |
     Quand tes yeux |
     je re -- gard -- |
-    e 
+    e
     Je me perds |
     de -- dans moi,
-    \repeat unfold 2 { 
+    \repeat unfold 2 {
         Car tes per -- | fect -- i -- ons
-        Chang -- ent mes | act -- i -- ons. 
+        Chang -- ent mes | act -- i -- ons.
     }
 }
 
@@ -189,7 +233,7 @@ verseThree=\lyricmode{
     Et tes di -- vins pro -- pos
     Ont é --  chauff -- é la gla -- ce
     Qui me ge -- lait les os,
-    \repeat unfold 2 { 
+    \repeat unfold 2 {
         Et ont    rem -- pli mon coeur
         D'une am -- our -- reuse ar -- deur.
     }
@@ -218,7 +262,7 @@ verseFive=\lyricmode{
         Pour mon mal a -- pais -- er
         Don -- ne moi un bai -- ser
     }
-    
+
 }
 
 verseSix=\lyricmode{
@@ -258,9 +302,9 @@ words = \context Lyrics <<
 
 choirscore = {
   \context StaffGroup \with { \remove "System_start_delimiter_engraver"
-			    \remove "Span_bar_engraver" } 
+			    \remove "Span_bar_engraver" }
   <<
-    \context RhythmicStaff = "tambour"  { 
+    \unfoldRepeats \context RhythmicStaff = "tambour"  {
       \set RhythmicStaff.midiInstrument = "melodic tom"
       \set RhythmicStaff.instrumentName = "Tambour"
       \tambour
@@ -273,8 +317,8 @@ choirscore = {
       \set ChoirStaff.midiInstrument = "recorder"
       \context Staff=T {
 	\global \clef treble
-	\unset Staff.melismaBusyProperties 
-	<<
+	\unset Staff.melismaBusyProperties
+	\unfoldRepeats <<
 	  \context Voice = Superius { \voiceOne\Superius}
 	  \context Voice = Contratenor <<
 	    \context Voice = CT {\voiceTwo \Contratenor}
@@ -284,7 +328,7 @@ choirscore = {
 	\bar "|."
       }
       \lyricsto Superius \words
-      \context Staff=B {
+      \unfoldRepeats \context Staff=B {
 	\global \clef bass
 	<<
 	  \context Voice = Tenor {\voiceOne\Tenor}
@@ -299,7 +343,7 @@ choirscore = {
 
 recorderscore=  % for recorder + drum
 <<
-  \context RhythmicStaff = "tambour"  { 
+  \context RhythmicStaff = "tambour"  {
     \set RhythmicStaff.midiInstrument = "melodic tom"
     \set RhythmicStaff.instrumentName = "Tambour"
     \tambour
@@ -308,24 +352,24 @@ recorderscore=  % for recorder + drum
     systemStartDelimiterHierarchy =
       #'(SystemStartBar (SystemStartBracket a b c d))
     } <<
-    \context Staff ="D" { 
-      \set Staff.instrumentName = "Descant" 
+    \context Staff ="D" {
+      \set Staff.instrumentName = "Descant"
       \set Staff.midiInstrument = "recorder"
       \global\clef "G^8"
       \transpose c c' \Superius  \bar "|."
-    }
-    \context Staff ="Tr" { 
-      \set Staff.instrumentName = "Treble" 
+    } \addlyrics \verseOneA
+    \context Staff ="Tr" {
+      \set Staff.instrumentName = "Treble"
       \set Staff.midiInstrument = "recorder"
       \global\clef "G"\transpose c c' \Contratenor   \bar "|."
     }
-    \context Staff ="T" { 
-      \set Staff.instrumentName = "Tenor" 
+    \context Staff ="T" {
+      \set Staff.instrumentName = "Tenor"
       \set Staff.midiInstrument = "recorder"
       \global\clef "G"\transpose c c' \Tenor   \bar "|."
     }
-    \context Staff ="B"  { 
-      \set Staff.instrumentName = "Bass" 
+    \context Staff ="B"  {
+      \set Staff.instrumentName = "Bass"
       \set Staff.midiInstrument = "recorder"
       \global\clef "F"\transpose c c \Bassus   \bar "|."
     }
@@ -333,32 +377,35 @@ recorderscore=  % for recorder + drum
 >>
 
 
-\score { 
+\score {
   % Uncomment just one of \choirscore or \recorderscore.
-%   \choirscore 
+%   \choirscore
   \recorderscore
 
   \layout {
     \context{ \RhythmicStaff
-	      \override Clef #'stencil = ##f
-	      \override TimeSignature #'stencil = ##f
-	      \override StaffSymbol #'stencil = ##f
+	      \override Clef.stencil = ##f
+	      \override TimeSignature.stencil = ##f
+	      \override StaffSymbol.stencil = ##f
 	      \consists "Instrument_name_engraver"
-	      \override BarLine #'transparent = ##t
+	      \override BarLine.transparent = ##t
+	      \override VerticalAxisGroup.staff-staff-spacing.basic-distance = #1
 	    }
     \context{ \Staff
-	      \override TimeSignature #'stencil = ##f
+	      \override TimeSignature.stencil = ##f
 	    }
-    \context { \Score 
+    \context { \Score
 	       \remove "System_start_delimiter_engraver"
     }
     indent = 10.0\mm
   }
-    
+
+}
+
+\score {
+  \unfoldRepeats \articulate \recorderscore
+
   \midi {
-    \context {
-      \Score
-      tempoWholesPerMinute = #(ly:make-moment 80 2)
-    }
+    \tempo 2 = 60
   }
 }
