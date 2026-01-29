@@ -1,4 +1,4 @@
-\version "2.18.2"
+\version "2.24.0"
 
 %--------Definitions for Chopin Ballade 1
 staffUp = \change Staff = "upper"
@@ -49,7 +49,7 @@ hideTempo = \set Score.tempoHideNote = ##t
 %-----------"Hairpins with added text"
 %----------- author = "Janek Warchoł and unknown author"
 hairpinWithText =
-#(define-music-function (parser location text horiz-align vert-align)
+#(define-music-function (text horiz-align vert-align)
    (markup? number-or-string? number?)
    #{
      \once \override Hairpin.height = #(if (> 1 (abs vert-align)) 1.1 0.6666)
@@ -132,9 +132,9 @@ agitato = \markup \italic \larger \raise #2.5 "agitato"
 leggiero = \markup \italic \larger "leggiero"
 conForza = \markup \italic \larger \whiteout "   con forza"
 pPesante = \markup { \whiteout { \dynamic "p" \italic \smaller "(pesante)" } }
-fzSforzato = \markup { \whiteout { \dynamic "fz" \raise #0.4 \musicglyph #"scripts.sforzato" } }
-fzSforzatoHi = \markup { \whiteout { \dynamic "fz" \raise #0.9 \musicglyph #"scripts.sforzato" } }
-sfSforzato = \markup { \whiteout \dynamic "sf" \raise #0.4 \musicglyph #"scripts.sforzato"  }
+fzSforzato = \markup { \whiteout { \dynamic "fz" \raise #0.4 \musicglyph "scripts.sforzato" } }
+fzSforzatoHi = \markup { \whiteout { \dynamic "fz" \raise #0.9 \musicglyph "scripts.sforzato" } }
+sfSforzato = \markup { \whiteout \dynamic "sf" \raise #0.4 \musicglyph "scripts.sforzato"  }
 crescTxt = \markup \italic \larger "cresc."
 crescTiny = \markup \italic \small \rotate #5.0  "cresc."
 crescTinyB = \markup \italic \small \rotate #4.0  "cresc."
@@ -164,74 +164,74 @@ crescTwo = \markup \center-align \italic \larger "cresc.  "
 pocoRiten = \markup \italic \larger "poco riten."
 piuAnimato = \markup \italic \larger "più animato"
 tenTxt = \markup { \center-align  \italic "  ten." }
-sharpPrall = \markup \override #'(baseline-skip . 1.7) \center-column { \teeny \musicglyph #"accidentals.sharp" \musicglyph #"scripts.prall" }
-sharpTxt = \markup \fontsize #-1.0 \musicglyph #"accidentals.sharp"
-flatTxt = \markup \fontsize #-1.0 \musicglyph #"accidentals.flat"
-naturalTxt = \markup \fontsize #-1.0 \musicglyph #"accidentals.natural"
-bassClefTxt = \markup \musicglyph #"clefs.F_change"
+sharpPrall = \markup \override #'(baseline-skip . 1.7) \center-column { \teeny \musicglyph "accidentals.sharp" \musicglyph "scripts.prall" }
+sharpTxt = \markup \fontsize #-1.0 \musicglyph "accidentals.sharp"
+flatTxt = \markup \fontsize #-1.0 \musicglyph "accidentals.flat"
+naturalTxt = \markup \fontsize #-1.0 \musicglyph "accidentals.natural"
+bassClefTxt = \markup \musicglyph "clefs.F_change"
 
 ritenSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic "ritenuto    " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
-  \override TextSpanner #'(bound-details left stencil-align-dir-y) = #CENTER
+  \override TextSpanner.bound-details.left.text = \markup { \italic "ritenuto    " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.04
   \override TextSpanner.dash-period = #14.0
   \override TextSpanner.thickness = 2.1
   \override TextSpanner.avoid-slur = #'inside
   \override TextSpanner.outside-staff-priority = ##f
   \override TextSpanner.staff-padding = 3.0
-  \override TextSpanner #'bound-details #'right #'padding = #4.0
-  \override TextSpanner #'bound-details #'right-broken #'padding = #0.5
+  \override TextSpanner.bound-details.right.padding = #4.0
+  \override TextSpanner.bound-details.right-broken.padding = #0.5
 }
 menoFSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic "poco    a    poco    meno  " \dynamic "f" "    " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \italic "poco    a    poco    meno  " \dynamic "f" "    " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \override TextSpanner.staff-padding = 5.5
 }
 nullSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { " " }
+  \override TextSpanner.bound-details.left.text = \markup { " " }
   \override TextSpanner.staff-padding = 3.9
 }
 piuPianoSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic "  sempre    più " \dynamic "p" "   " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \italic "  sempre    più " \dynamic "p" "   " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
 }
 calandoSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup \center-align { \italic "     calando  " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup \center-align { \italic "     calando  " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \override TextSpanner.staff-padding = 3.1
 }
 piuDimSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \whiteout \italic "  più  dimin.   e riten.  " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \whiteout \italic "  più  dimin.   e riten.  " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \override TextSpanner.staff-padding = 0.0
-  \override TextSpanner #'(bound-details left stencil-align-dir-y) = #CENTER
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-fraction = #0.04
   \override TextSpanner.dash-period = #8.0
   \override TextSpanner.thickness = 2.1
 }
 semprePiuPSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic "sempre più " \dynamic "p" "  " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \italic "sempre più " \dynamic "p" "  " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \override TextSpanner.dash-period = #14.0
   \override TextSpanner.dash-fraction = #0.04
   \override TextSpanner.dash-period = #8.0
-  \override TextSpanner #'(bound-details left stencil-align-dir-y) = #CENTER
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.thickness = 2.1
   \override TextSpanner.staff-padding = 0.0
-  \once \override TextSpanner #'direction = #DOWN
+  \once \override TextSpanner.direction = #DOWN
   \once \override TextSpanner.extra-offset = #'( 0.4 . -1 )
 }
 eRallSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic "e  rall. " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
-  \once \override TextSpanner #'direction = #DOWN
+  \override TextSpanner.bound-details.left.text = \markup { \italic "e  rall. " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
+  \once \override TextSpanner.direction = #DOWN
   \once \override TextSpanner.extra-offset = #'( 0 . -1 )
 }
 sempreCrescSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic "sempre cresc." }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
-  \override TextSpanner #'(bound-details left stencil-align-dir-y) = #CENTER
+  \override TextSpanner.bound-details.left.text = \markup { \italic "sempre cresc." }
+  \override TextSpanner.bound-details.left-broken.text = ##f
+  \override TextSpanner.bound-details.left.stencil-align-dir-y = #CENTER
   \override TextSpanner.dash-period = #14.0
   \override TextSpanner.dash-fraction = #0.04
   \override TextSpanner.dash-period = #8.0
@@ -240,15 +240,15 @@ sempreCrescSpanner = {
   \once \override TextSpanner.extra-offset = #'(0 . -2.8)
 }
 semprePiuCrescSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic "sempre più cresc.   " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \italic "sempre più cresc.   " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \once \override TextSpanner.outside-staff-priority = ##f
   \once \override TextSpanner.padding = 0.0
   \once \alterBroken extra-offset #'((0 . -3.4) (0 . -2.7)) TextSpanner
 }
 dimPiuRallentSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic \larger "dim. e più rallent.    " }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \italic \larger "dim. e più rallent.    " }
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \override TextSpanner.dash-period = #14.0
   \override TextSpanner.dash-fraction = #0.04
   \override TextSpanner.dash-period = #8.0
@@ -256,28 +256,28 @@ dimPiuRallentSpanner = {
   \once \override TextSpanner.extra-offset = #'( 0.3 . -1.4 )
 }
 sforzatoSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \concat { \dynamic "sf" \raise #0.4 \musicglyph #"scripts.sforzato" "  " } }
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \concat { \dynamic "sf" \raise #0.4 \musicglyph "scripts.sforzato" "  " } }
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \override TextSpanner.dash-period = #14.0
   \override TextSpanner.dash-fraction = #0.04
   \override TextSpanner.dash-period = #8.0
   \once \override TextSpanner.extra-offset = #'( -1.9 . 0.7 )
 }
 pocoRitenSpanner = {
-  \override TextSpanner #'(bound-details left text) = \markup { \italic \larger \whiteout "poco riten.  " }
-  \override TextSpanner #'(bound-details right text) = \accelerando
-  \override TextSpanner #'(bound-details right stencil-align-dir-y) = #CENTER
-  \override TextSpanner #'(bound-details left-broken text) = ##f
+  \override TextSpanner.bound-details.left.text = \markup { \italic \larger \whiteout "poco riten.  " }
+  \override TextSpanner.bound-details.right.text = \accelerando
+  \override TextSpanner.bound-details.right.stencil-align-dir-y = #CENTER
+  \override TextSpanner.bound-details.left-broken.text = ##f
   \override TextSpanner.outside-staff-priority = ##f
   \override TextSpanner.staff-padding = 2.9
 }
 ppSpanner = {
   \override TextSpanner.staff-padding = 0.2
-  \override TextSpanner #'(bound-details left text) = ##f
-  \override TextSpanner #'(bound-details right text) = \markup { " " \dynamic "pp" }
+  \override TextSpanner.bound-details.left.text = ##f
+  \override TextSpanner.bound-details.right.text = \markup { " " \dynamic "pp" }
   \override TextSpanner.avoid-slur = #'inside
   \override TextSpanner.outside-staff-priority = ##f
-  \override TextSpanner #'(bound-details right stencil-align-dir-y) = #UP
+  \override TextSpanner.bound-details.right.stencil-align-dir-y = #UP
   \once \override TextSpanner.extra-offset = #'(-1 . 0.4 )
 }
 setDynTxtSpanStyle = {
@@ -287,8 +287,8 @@ setDynTxtSpanStyle = {
   \override DynamicTextSpanner.thickness = 2.1
 }
 
-setRestDirDown = \override Rest #'direction = #down
-setRestDirUp = \override Rest #'direction = #up
+setRestDirDown = \override Rest.direction = #down
+setRestDirUp = \override Rest.direction = #up
 doubleSlursOn = \set doubleSlurs = ##t
 doubleSlursOff = \set doubleSlurs = ##f
 connectArpeggio = \set Staff.connectArpeggios = ##t
@@ -342,15 +342,15 @@ alignBeamSix = \once \override Beam.positions = #'(-2.5 . -2.5)
 alignBeamSep = \once \override Beam.positions = #'( 1.8 . -0.6)
 alignBeamOct = \once \override Beam.positions = #'( 4.2 . 2.2)
 
-moveNoteOne = \once \override NoteColumn #'force-hshift = #0.8
-moveNoteTwo = \once \override NoteColumn #'force-hshift = #1.5
-moveNoteTre = \once \override NoteColumn #'force-hshift = #-0.7
-moveNoteQtr = \once \override NoteColumn #'force-hshift = #2.0
-moveNoteCin = \once \override NoteColumn #'force-hshift = #-0.1
-moveNoteSix = \once \override NoteColumn #'force-hshift = #0.3
-moveNoteSep = \once \override NoteColumn #'force-hshift = #1.3
-moveNoteOct = \once \override NoteColumn #'force-hshift = #-3
-moveNoteNov = \once \override NoteColumn #'force-hshift = #0.4
+moveNoteOne = \once \override NoteColumn.force-hshift = #0.8
+moveNoteTwo = \once \override NoteColumn.force-hshift = #1.5
+moveNoteTre = \once \override NoteColumn.force-hshift = #-0.7
+moveNoteQtr = \once \override NoteColumn.force-hshift = #2.0
+moveNoteCin = \once \override NoteColumn.force-hshift = #-0.1
+moveNoteSix = \once \override NoteColumn.force-hshift = #0.3
+moveNoteSep = \once \override NoteColumn.force-hshift = #1.3
+moveNoteOct = \once \override NoteColumn.force-hshift = #-3
+moveNoteNov = \once \override NoteColumn.force-hshift = #0.4
 
 
 shortStemOne = \once \override Stem.length-fraction = #(magstep -4)
@@ -366,7 +366,7 @@ hideAccidental = \once \override Voice.Accidental.stencil = ##f
 
 halfNotehead = {
   \once \override NoteHead.stencil = #ly:text-interface::print
-  \once \override NoteHead.text = \markup \musicglyph #"noteheads.s2"
+  \once \override NoteHead.text = \markup \musicglyph "noteheads.s2"
 }
 smallNotehead = \once \override NoteHead.font-size = #-3
 
@@ -1046,22 +1046,23 @@ posOttavaA = {
        \override Staff.OttavaBracket.outside-staff-priority = ##f
 }
 posOttavaB = {
-  \setOttavaStyle
-  %Pierre Perol-Schneider's angled ottava contribution
-  \once \override Staff.OttavaBracket.stencil = #ly:line-spanner::print
-  \once \override Staff.OttavaBracket.bound-details =
+  %\setOttavaStyle
+  % https://wiki.lilypond.community/wiki/Modifying_the_ottava_spanner_slope
+  \override Staff.OttavaBracket.stencil = #ly:line-spanner::print
+  \override Staff.OttavaBracket.bound-details =
     #`((left . ((Y . 0)
                 (attach-dir . ,LEFT)
                 (padding . 0)
                 (stencil-align-dir-y . ,CENTER)))
-       (right . ((Y . 3)
+       (right . ((Y . 4.0) ; Change the number here
                  (padding . 0)
                  (attach-dir . ,RIGHT)
-                 (text . ,(make-draw-dashed-line-markup (cons 0 -1.2))))))
-  \once \override Staff.OttavaBracket.left-bound-info =
-     #ly:line-spanner::calc-left-bound-info-and-text
-  \once \override Staff.OttavaBracket.right-bound-info =
-     #ly:line-spanner::calc-right-bound-info
+                 (text . ,(make-draw-dashed-line-markup
+                           (cons 0 -1.2))))))
+  \override Staff.OttavaBracket.left-bound-info =
+     #ly:horizontal-line-spanner::calc-left-bound-info-and-text
+  \override Staff.OttavaBracket.right-bound-info =
+     #ly:horizontal-line-spanner::calc-right-bound-info
 }
 posOttavaC = { \alterBroken staff-padding #'( 4.5 5.7 ) Staff.OttavaBracket }
 posOttavaD = { 
@@ -1092,7 +1093,7 @@ trebleToBass = {
   \once \override Staff.TimeSignature.text = \markup {
     \hspace #1.2
     \raise #1
-    \musicglyph #"clefs.F_change"
+    \musicglyph "clefs.F_change"
   }
   \once \override Staff.TimeSignature.stencil = #(lambda (grob)
     (append-markup grob (ly:time-signature::print grob)))
@@ -1100,24 +1101,24 @@ trebleToBass = {
 
 %-----Janek's squeeze functions
 squeezeNotation = {
-  \override Staff.AccidentalPlacement #'right-padding = #-0.05
-  \override Staff.Accidental #'stencil =
+  \override Staff.AccidentalPlacement.right-padding = #-0.05
+  \override Staff.Accidental.stencil =
   #(lambda (grob)
      (ly:stencil-scale (ly:accidental-interface::print grob) 0.92 1))
-  \override Staff.NoteHead #'stencil =
+  \override Staff.NoteHead.stencil =
   #(lambda (grob)
      (ly:stencil-scale (ly:note-head::print grob) 0.96 1.02))
 }
 squeezeNotationTwo = {
-  \override Staff.AccidentalPlacement #'right-padding = #-0.05
+  \override Staff.AccidentalPlacement.right-padding = #-0.05
 }
 squeezeNotationTre = {
-  \override Staff.AccidentalPlacement #'right-padding = #-0.15
-  \override Staff.AccidentalPlacement #'left-padding = #-0.15
-  \override Staff.Accidental #'stencil =
+  \override Staff.AccidentalPlacement.right-padding = #-0.15
+  \override Staff.AccidentalPlacement.left-padding = #-0.15
+  \override Staff.Accidental.stencil =
   #(lambda (grob)
      (ly:stencil-scale (ly:accidental-interface::print grob) 0.92 1))
-  \override Staff.NoteHead #'stencil =
+  \override Staff.NoteHead.stencil =
   #(lambda (grob)
      (ly:stencil-scale (ly:note-head::print grob) 0.96 1.02))
 }
@@ -1157,11 +1158,11 @@ chordMarkupA = \markup {
          \remove "Time_signature_engraver"
      }
      {
-        \override Staff.AccidentalPlacement #'right-padding = #-0.05
-        \override Staff.Accidental #'stencil =
+        \override Staff.AccidentalPlacement.right-padding = #-0.05
+        \override Staff.Accidental.stencil =
             #(lambda (grob)
             (ly:stencil-scale (ly:accidental-interface::print grob) 0.92 1))
-        \override Staff.NoteHead #'stencil =
+        \override Staff.NoteHead.stencil =
             #(lambda (grob)
             (ly:stencil-scale (ly:note-head::print grob) 0.96 1.02))
         \key g \minor <dis''b'!a'>4
