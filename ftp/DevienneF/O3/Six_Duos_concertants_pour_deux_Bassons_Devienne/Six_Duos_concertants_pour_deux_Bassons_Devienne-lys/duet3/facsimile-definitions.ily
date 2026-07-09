@@ -1,0 +1,3 @@
+\include "score-definitions.ily"
+
+
