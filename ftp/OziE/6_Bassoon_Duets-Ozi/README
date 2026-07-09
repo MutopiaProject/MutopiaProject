@@ -1,0 +1,11 @@
+Warnings/Messages I've ignored:
+
+6-Bassoon-Duets-Ozi-Facsimile-1-to-3.ly	:
+ignoring 'warning: no viable initial configuration found: may not find good beam slope', can't find good way to notate original beams.
+
+
+6-Bassoon-Duets-Ozi-Urtext-1-to-3.ly,
+6-Bassoon-Duets-Ozi-Urtext-Fagot-One-1-to-3.ly,
+6-Bassoon-Duets-Ozi-Urtext-Fagot-Two-1-to-3.ly:
+ignoring warnings from manual volta brackets:
+'warning: already have a volta spanner, ending that one prematurely'
