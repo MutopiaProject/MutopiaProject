@@ -39,7 +39,7 @@ vOne =  \relative c''' {
   
   \repeat volta 2 {
   
-  f8'-5_\p ( d c b f' d c b
+  f'8-5_\p ( d c b f' d c b
   <c-2\< e-4 >1)(
   f8-5\! ( d c b f' d c b
   <c-2 e-4>1)\<
